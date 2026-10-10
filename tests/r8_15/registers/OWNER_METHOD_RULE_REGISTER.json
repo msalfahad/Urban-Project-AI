@@ -1,0 +1,89 @@
+{
+ "SCHEMA": "URBAN_R8_15_OWNER_METHOD_RULE_REGISTER_V1",
+ "file": "data/registry/URBAN_OWNER_METHOD_RULES.json",
+ "rules": [
+  {
+   "rule_id": "URBAN-WET-SERVICE-MARBLE-THRESHOLD",
+   "version": 1,
+   "authority": [
+    "PROJECT_OWNER",
+    "URBAN_OWNER_METHOD"
+   ],
+   "received": "R8.15 brief §7-§14 (Mohammad promoted it to an Urban rule)",
+   "scope": {
+    "applies_to": "every Urban project unless a project specification explicitly overrides it",
+    "revision_scoped": false
+   },
+   "applicability": [
+    "BATHROOM",
+    "KITCHEN",
+    "WASHING_LAUNDRY_ROOM",
+    "IRONING_ROOM"
+   ],
+   "applicability_rule": "a doorway serving such a room: either side carries the room type through an authoritative, TRADE-SCOPED room-type map (never raw text alone)",
+   "not_applicable_to": [
+    "bedroom doors",
+    "living-room doors",
+    "general dry <-> dry doors",
+    "external entrances (unless separate project evidence exists)",
+    "PAINTRY / pantry (not named by the owner)"
+   ],
+   "measurement": {
+    "clear_width": "SOURCE (the doorway strip)",
+    "depth": "SOURCE (the doorway strip)",
+    "rise_mm": 20,
+    "rise_is": "VERTICAL height above the adjoining finished floor",
+    "extent": "the FULL CLEAR DOOR OPENING WIDTH x the physical threshold depth"
+   },
+   "trade": "MARBLE_THRESHOLD",
+   "function": "WATER_CONTAINMENT_BARRIER",
+   "floor_interfaces": {
+    "wet": "wet floor tile ends at the wet-side marble edge",
+    "dry": "dry porcelain ends at the dry-side marble edge",
+    "marble": "owns the complete threshold footprint (no half tile inside it)"
+   },
+   "supersedes_in_scope": [
+    "QORTUBA-NEW-DRY-WET-TRANSITION-AT-DOOR-PLANE-OWNER-001@v1 where the rule applies (the split stays in force for any dry / wet door the rule does not cover)"
+   ],
+   "never": [
+    "a waterproofing extent change",
+    "a slope",
+    "a drainage",
+    "a material rate or price",
+    "20 mm as a horizontal width or depth",
+    "a universal horizontal depth",
+    "a hydraulic claim"
+   ],
+   "ref": "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1"
+  }
+ ],
+ "room_type_map_for_marble": {
+  "BATH": [
+   "BATHROOM",
+   "US-01 + QP-07 + R8.13 §4: BATH is a bathroom"
+  ],
+  "PAINTRY": [
+   "PANTRY_SERVICE_ROOM",
+   "QP-07 names PAINTRY a kitchen / preparation zone FOR THE CERAMIC TAKEOFF only; the owner did not name pantry for the marble rule"
+  ],
+  "dry rooms": [
+   "DRY_INTERNAL_ROOM",
+   "class rule QORTUBA-SPACE-CLASS@v2: not a bathroom, kitchen, laundry or ironing room"
+  ],
+  "outside the unit": [
+   null,
+   "no apartment room type"
+  ]
+ },
+ "kitchen_ironing_laundry_in_this_plan": "no door of the selected plan serves a KITCHEN, IRONING or WASHING / LAUNDRY room (no such labels; PAINTRY has no doorway)",
+ "supersession": "the R8.14 dry / wet 50 / 50 split is superseded ONLY where this rule applies (all three BATH doors); the split fact stays in force for any dry / wet door the rule does not cover",
+ "never": [
+  "a waterproofing extent change",
+  "a slope",
+  "a drainage",
+  "a material rate or price",
+  "20 mm as a horizontal width or depth",
+  "a universal horizontal depth",
+  "a hydraulic claim"
+ ]
+}

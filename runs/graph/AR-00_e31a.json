@@ -1,0 +1,1505 @@
+{
+  "correspondence": [
+    {
+      "area_difference_m2": -825.28,
+      "face_id": "FACE-0001",
+      "overlap_ratio": 1.0,
+      "raster_area_m2": 1806.352,
+      "raster_region_ids": [
+        1,
+        273,
+        2,
+        161,
+        688,
+        686,
+        684,
+        351,
+        456,
+        771,
+        772,
+        364,
+        816,
+        292,
+        352,
+        171,
+        977,
+        560,
+        346,
+        630,
+        845,
+        293,
+        528,
+        355,
+        671,
+        499,
+        976,
+        338,
+        673,
+        813,
+        672,
+        159,
+        812,
+        764,
+        302,
+        577,
+        163,
+        361,
+        692,
+        811,
+        282,
+        588,
+        658,
+        509,
+        480,
+        662,
+        814,
+        332,
+        160,
+        652,
+        363,
+        570,
+        356,
+        488,
+        394,
+        914,
+        759,
+        518,
+        520,
+        654,
+        360,
+        333,
+        918,
+        299,
+        691,
+        974,
+        978,
+        3,
+        155,
+        14,
+        73,
+        12,
+        13,
+        1003,
+        1002,
+        971,
+        84,
+        75,
+        36,
+        74,
+        972,
+        76,
+        79,
+        43,
+        975,
+        979,
+        973,
+        82,
+        980,
+        42,
+        40,
+        78,
+        77,
+        44
+      ],
+      "raster_space_ids": [
+        "BED-01",
+        "BED-02",
+        "BED-03",
+        "BED-04",
+        "BED-NW",
+        "BTH-01",
+        "BTH-02",
+        "BTH-04",
+        "BTH-05",
+        "BTH-06",
+        "COR-02",
+        "COR-03",
+        "IRN-01",
+        "KIT-01",
+        "MAID-01",
+        "MAID-02",
+        "MAID-03",
+        "MAID-04",
+        "MAID-05",
+        "MBTH-01",
+        "MBTH-02",
+        "MBTH-03",
+        "MBTH-04",
+        "MCOR-01",
+        "OPEN-01",
+        "REC-01",
+        "REC-02",
+        "SAL-NW",
+        "SHF-01",
+        "SRV-01",
+        "STA-01",
+        "STR-01",
+        "TRC-01",
+        "TRC-02",
+        "WSH-01"
+      ],
+      "relationship": "MANY_TO_MANY",
+      "vector_area_m2": 981.073,
+      "why": "several faces and several regions overlap each other; neither representation is a refinement of the other"
+    },
+    {
+      "area_difference_m2": -1070.396,
+      "face_id": "FACE-0003",
+      "overlap_ratio": 1.0,
+      "raster_area_m2": 1071.987,
+      "raster_region_ids": [
+        3,
+        1,
+        13,
+        2,
+        14,
+        12,
+        351,
+        456
+      ],
+      "raster_space_ids": [
+        "COR-02",
+        "MAID-03"
+      ],
+      "relationship": "MANY_TO_MANY",
+      "vector_area_m2": 1.59,
+      "why": "several faces and several regions overlap each other; neither representation is a refinement of the other"
+    },
+    {
+      "area_difference_m2": -1071.831,
+      "face_id": "FACE-0005",
+      "overlap_ratio": 1.0,
+      "raster_area_m2": 1071.987,
+      "raster_region_ids": [
+        3,
+        1,
+        13,
+        2,
+        14,
+        12,
+        351,
+        456
+      ],
+      "raster_space_ids": [
+        "COR-02",
+        "MAID-03"
+      ],
+      "relationship": "MANY_TO_MANY",
+      "vector_area_m2": 0.155,
+      "why": "several faces and several regions overlap each other; neither representation is a refinement of the other"
+    },
+    {
+      "area_difference_m2": -1165.395,
+      "face_id": "FACE-0007",
+      "overlap_ratio": 1.0,
+      "raster_area_m2": 1166.762,
+      "raster_region_ids": [
+        3,
+        1,
+        13,
+        273,
+        2,
+        14,
+        12,
+        570,
+        577
+      ],
+      "raster_space_ids": [
+        "OPEN-01",
+        "SHF-01"
+      ],
+      "relationship": "MANY_TO_MANY",
+      "vector_area_m2": 1.367,
+      "why": "several faces and several regions overlap each other; neither representation is a refinement of the other"
+    },
+    {
+      "area_difference_m2": -755.179,
+      "face_id": "FACE-0014",
+      "overlap_ratio": 1.0,
+      "raster_area_m2": 755.18,
+      "raster_region_ids": [
+        3,
+        1,
+        2
+      ],
+      "raster_space_ids": [],
+      "relationship": "MANY_TO_MANY",
+      "vector_area_m2": 0.001,
+      "why": "several faces and several regions overlap each other; neither representation is a refinement of the other"
+    },
+    {
+      "area_difference_m2": -755.179,
+      "face_id": "FACE-0023",
+      "overlap_ratio": 1.0,
+      "raster_area_m2": 755.18,
+      "raster_region_ids": [
+        3,
+        1,
+        2
+      ],
+      "raster_space_ids": [],
+      "relationship": "MANY_TO_MANY",
+      "vector_area_m2": 0.0,
+      "why": "several faces and several regions overlap each other; neither representation is a refinement of the other"
+    },
+    {
+      "area_difference_m2": null,
+      "face_id": "(region 37)",
+      "overlap_ratio": null,
+      "raster_area_m2": 0.592,
+      "raster_region_ids": [
+        37
+      ],
+      "raster_space_ids": [],
+      "relationship": "RASTER_ONLY",
+      "vector_area_m2": 0.0,
+      "why": "the segmentation found this region and the vector graph produced no face over it"
+    },
+    {
+      "area_difference_m2": null,
+      "face_id": "(region 39)",
+      "overlap_ratio": null,
+      "raster_area_m2": 0.455,
+      "raster_region_ids": [
+        39
+      ],
+      "raster_space_ids": [],
+      "relationship": "RASTER_ONLY",
+      "vector_area_m2": 0.0,
+      "why": "the segmentation found this region and the vector graph produced no face over it"
+    },
+    {
+      "area_difference_m2": null,
+      "face_id": "(region 41)",
+      "overlap_ratio": null,
+      "raster_area_m2": 0.331,
+      "raster_region_ids": [
+        41
+      ],
+      "raster_space_ids": [],
+      "relationship": "RASTER_ONLY",
+      "vector_area_m2": 0.0,
+      "why": "the segmentation found this region and the vector graph produced no face over it"
+    },
+    {
+      "area_difference_m2": null,
+      "face_id": "(region 80)",
+      "overlap_ratio": null,
+      "raster_area_m2": 4.174,
+      "raster_region_ids": [
+        80
+      ],
+      "raster_space_ids": [
+        "BTH-03"
+      ],
+      "relationship": "RASTER_ONLY",
+      "vector_area_m2": 0.0,
+      "why": "the segmentation found this region and the vector graph produced no face over it"
+    },
+    {
+      "area_difference_m2": null,
+      "face_id": "(region 1023)",
+      "overlap_ratio": null,
+      "raster_area_m2": 2.689,
+      "raster_region_ids": [
+        1023
+      ],
+      "raster_space_ids": [],
+      "relationship": "RASTER_ONLY",
+      "vector_area_m2": 0.0,
+      "why": "the segmentation found this region and the vector graph produced no face over it"
+    },
+    {
+      "area_difference_m2": null,
+      "face_id": "(region 1024)",
+      "overlap_ratio": null,
+      "raster_area_m2": 5.206,
+      "raster_region_ids": [
+        1024
+      ],
+      "raster_space_ids": [],
+      "relationship": "RASTER_ONLY",
+      "vector_area_m2": 0.0,
+      "why": "the segmentation found this region and the vector graph produced no face over it"
+    },
+    {
+      "area_difference_m2": null,
+      "face_id": "(region 1025)",
+      "overlap_ratio": null,
+      "raster_area_m2": 7.808,
+      "raster_region_ids": [
+        1025
+      ],
+      "raster_space_ids": [],
+      "relationship": "RASTER_ONLY",
+      "vector_area_m2": 0.0,
+      "why": "the segmentation found this region and the vector graph produced no face over it"
+    },
+    {
+      "area_difference_m2": null,
+      "face_id": "(region 1026)",
+      "overlap_ratio": null,
+      "raster_area_m2": 25.408,
+      "raster_region_ids": [
+        1026
+      ],
+      "raster_space_ids": [],
+      "relationship": "RASTER_ONLY",
+      "vector_area_m2": 0.0,
+      "why": "the segmentation found this region and the vector graph produced no face over it"
+    },
+    {
+      "area_difference_m2": null,
+      "face_id": "(region 1027)",
+      "overlap_ratio": null,
+      "raster_area_m2": 5.755,
+      "raster_region_ids": [
+        1027
+      ],
+      "raster_space_ids": [],
+      "relationship": "RASTER_ONLY",
+      "vector_area_m2": 0.0,
+      "why": "the segmentation found this region and the vector graph produced no face over it"
+    },
+    {
+      "area_difference_m2": null,
+      "face_id": "(region 1028)",
+      "overlap_ratio": null,
+      "raster_area_m2": 5.776,
+      "raster_region_ids": [
+        1028
+      ],
+      "raster_space_ids": [],
+      "relationship": "RASTER_ONLY",
+      "vector_area_m2": 0.0,
+      "why": "the segmentation found this region and the vector graph produced no face over it"
+    },
+    {
+      "area_difference_m2": null,
+      "face_id": "(region 1029)",
+      "overlap_ratio": null,
+      "raster_area_m2": 5.755,
+      "raster_region_ids": [
+        1029
+      ],
+      "raster_space_ids": [],
+      "relationship": "RASTER_ONLY",
+      "vector_area_m2": 0.0,
+      "why": "the segmentation found this region and the vector graph produced no face over it"
+    },
+    {
+      "area_difference_m2": null,
+      "face_id": "(region 1064)",
+      "overlap_ratio": null,
+      "raster_area_m2": 2.485,
+      "raster_region_ids": [
+        1064
+      ],
+      "raster_space_ids": [],
+      "relationship": "RASTER_ONLY",
+      "vector_area_m2": 0.0,
+      "why": "the segmentation found this region and the vector graph produced no face over it"
+    },
+    {
+      "area_difference_m2": null,
+      "face_id": "(region 1065)",
+      "overlap_ratio": null,
+      "raster_area_m2": 4.81,
+      "raster_region_ids": [
+        1065
+      ],
+      "raster_space_ids": [],
+      "relationship": "RASTER_ONLY",
+      "vector_area_m2": 0.0,
+      "why": "the segmentation found this region and the vector graph produced no face over it"
+    }
+  ],
+  "eligibility": {
+    "blocked_sample": [
+      {
+        "affected_space_ids": [],
+        "ambiguous_stitches": 1,
+        "component_id": "GC-0005",
+        "edges": 6,
+        "independent_cycles": 0,
+        "reasons": [
+          "no independent cycle: this component is a tree and bounds no face however much wall it holds"
+        ],
+        "rejected_clusters": 0,
+        "termini": 4,
+        "total_length_m": 11.52,
+        "unresolved_termini": 1,
+        "verdict": "FACE_BLOCKED"
+      },
+      {
+        "affected_space_ids": [],
+        "ambiguous_stitches": 0,
+        "component_id": "GC-0006",
+        "edges": 3,
+        "independent_cycles": 0,
+        "reasons": [
+          "no independent cycle: this component is a tree and bounds no face however much wall it holds"
+        ],
+        "rejected_clusters": 0,
+        "termini": 2,
+        "total_length_m": 10.22,
+        "unresolved_termini": 0,
+        "verdict": "FACE_BLOCKED"
+      },
+      {
+        "affected_space_ids": [],
+        "ambiguous_stitches": 0,
+        "component_id": "GC-0007",
+        "edges": 3,
+        "independent_cycles": 0,
+        "reasons": [
+          "no independent cycle: this component is a tree and bounds no face however much wall it holds"
+        ],
+        "rejected_clusters": 0,
+        "termini": 2,
+        "total_length_m": 7.6,
+        "unresolved_termini": 0,
+        "verdict": "FACE_BLOCKED"
+      },
+      {
+        "affected_space_ids": [],
+        "ambiguous_stitches": 0,
+        "component_id": "GC-0008",
+        "edges": 1,
+        "independent_cycles": 0,
+        "reasons": [
+          "no independent cycle: this component is a tree and bounds no face however much wall it holds"
+        ],
+        "rejected_clusters": 0,
+        "termini": 2,
+        "total_length_m": 6.25,
+        "unresolved_termini": 1,
+        "verdict": "FACE_BLOCKED"
+      },
+      {
+        "affected_space_ids": [],
+        "ambiguous_stitches": 14,
+        "component_id": "GC-0009",
+        "edges": 9,
+        "independent_cycles": 0,
+        "reasons": [
+          "no independent cycle: this component is a tree and bounds no face however much wall it holds"
+        ],
+        "rejected_clusters": 0,
+        "termini": 3,
+        "total_length_m": 6.2,
+        "unresolved_termini": 0,
+        "verdict": "FACE_BLOCKED"
+      }
+    ],
+    "by_verdict": {
+      "FACE_BLOCKED": 103,
+      "FACE_ELIGIBLE": 1,
+      "FACE_HYPOTHESIS_ONLY": 11
+    },
+    "eligible": [
+      {
+        "affected_space_ids": [],
+        "ambiguous_stitches": 0,
+        "component_id": "GC-0012",
+        "edges": 4,
+        "independent_cycles": 1,
+        "reasons": [],
+        "rejected_clusters": 0,
+        "termini": 0,
+        "total_length_m": 4.9,
+        "unresolved_termini": 0,
+        "verdict": "FACE_ELIGIBLE"
+      }
+    ],
+    "hypothesis_only": [
+      {
+        "affected_space_ids": [
+          "BED-01",
+          "BED-02",
+          "BED-03",
+          "BED-04",
+          "BED-NW",
+          "BTH-04",
+          "BTH-05",
+          "BTH-06",
+          "COR-02",
+          "COR-03",
+          "IRN-01",
+          "KIT-01",
+          "MAID-01",
+          "MAID-02",
+          "MAID-03",
+          "MAID-04",
+          "MAID-05",
+          "MBTH-01",
+          "MBTH-02",
+          "MBTH-03",
+          "MBTH-04",
+          "MCOR-01",
+          "OPEN-01",
+          "REC-01",
+          "REC-02",
+          "SAL-NW",
+          "SHF-01",
+          "SRV-01",
+          "STA-01",
+          "STR-01",
+          "TRC-01",
+          "WSH-01"
+        ],
+        "ambiguous_stitches": 2,
+        "component_id": "GC-0001",
+        "edges": 8,
+        "independent_cycles": 1,
+        "reasons": [
+          "2 unresolved terminus/termini on this component: a face here may be bounded by a wall end nobody has classified",
+          "2 ambiguous stitch reference(s): closing this component may depend on a gap that has not been resolved"
+        ],
+        "rejected_clusters": 0,
+        "termini": 2,
+        "total_length_m": 129.0,
+        "unresolved_termini": 2,
+        "verdict": "FACE_HYPOTHESIS_ONLY"
+      },
+      {
+        "affected_space_ids": [
+          "MAID-03"
+        ],
+        "ambiguous_stitches": 20,
+        "component_id": "GC-0002",
+        "edges": 21,
+        "independent_cycles": 1,
+        "reasons": [
+          "1 unresolved terminus/termini on this component: a face here may be bounded by a wall end nobody has classified",
+          "20 ambiguous stitch reference(s): closing this component may depend on a gap that has not been resolved"
+        ],
+        "rejected_clusters": 0,
+        "termini": 8,
+        "total_length_m": 22.1,
+        "unresolved_termini": 1,
+        "verdict": "FACE_HYPOTHESIS_ONLY"
+      },
+      {
+        "affected_space_ids": [],
+        "ambiguous_stitches": 55,
+        "component_id": "GC-0003",
+        "edges": 31,
+        "independent_cycles": 17,
+        "reasons": [
+          "55 ambiguous stitch reference(s): closing this component may depend on a gap that has not been resolved"
+        ],
+        "rejected_clusters": 0,
+        "termini": 0,
+        "total_length_m": 15.15,
+        "unresolved_termini": 0,
+        "verdict": "FACE_HYPOTHESIS_ONLY"
+      },
+      {
+        "affected_space_ids": [],
+        "ambiguous_stitches": 42,
+        "component_id": "GC-0004",
+        "edges": 22,
+        "independent_cycles": 12,
+        "reasons": [
+          "42 ambiguous stitch reference(s): closing this component may depend on a gap that has not been resolved"
+        ],
+        "rejected_clusters": 0,
+        "termini": 0,
+        "total_length_m": 14.91,
+        "unresolved_termini": 0,
+        "verdict": "FACE_HYPOTHESIS_ONLY"
+      },
+      {
+        "affected_space_ids": [],
+        "ambiguous_stitches": 4,
+        "component_id": "GC-0024",
+        "edges": 3,
+        "independent_cycles": 1,
+        "reasons": [
+          "4 ambiguous stitch reference(s): closing this component may depend on a gap that has not been resolved"
+        ],
+        "rejected_clusters": 0,
+        "termini": 1,
+        "total_length_m": 2.96,
+        "unresolved_termini": 0,
+        "verdict": "FACE_HYPOTHESIS_ONLY"
+      },
+      {
+        "affected_space_ids": [],
+        "ambiguous_stitches": 6,
+        "component_id": "GC-0025",
+        "edges": 5,
+        "independent_cycles": 2,
+        "reasons": [
+          "6 ambiguous stitch reference(s): closing this component may depend on a gap that has not been resolved"
+        ],
+        "rejected_clusters": 0,
+        "termini": 0,
+        "total_length_m": 2.87,
+        "unresolved_termini": 0,
+        "verdict": "FACE_HYPOTHESIS_ONLY"
+      },
+      {
+        "affected_space_ids": [],
+        "ambiguous_stitches": 4,
+        "component_id": "GC-0032",
+        "edges": 4,
+        "independent_cycles": 1,
+        "reasons": [
+          "4 ambiguous stitch reference(s): closing this component may depend on a gap that has not been resolved"
+        ],
+        "rejected_clusters": 0,
+        "termini": 2,
+        "total_length_m": 2.08,
+        "unresolved_termini": 0,
+        "verdict": "FACE_HYPOTHESIS_ONLY"
+      },
+      {
+        "affected_space_ids": [],
+        "ambiguous_stitches": 3,
+        "component_id": "GC-0036",
+        "edges": 3,
+        "independent_cycles": 2,
+        "reasons": [
+          "3 ambiguous stitch reference(s): closing this component may depend on a gap that has not been resolved"
+        ],
+        "rejected_clusters": 0,
+        "termini": 0,
+        "total_length_m": 1.95,
+        "unresolved_termini": 0,
+        "verdict": "FACE_HYPOTHESIS_ONLY"
+      },
+      {
+        "affected_space_ids": [],
+        "ambiguous_stitches": 1,
+        "component_id": "GC-0043",
+        "edges": 7,
+        "independent_cycles": 1,
+        "reasons": [
+          "1 unresolved terminus/termini on this component: a face here may be bounded by a wall end nobody has classified",
+          "1 ambiguous stitch reference(s): closing this component may depend on a gap that has not been resolved"
+        ],
+        "rejected_clusters": 0,
+        "termini": 2,
+        "total_length_m": 1.75,
+        "unresolved_termini": 1,
+        "verdict": "FACE_HYPOTHESIS_ONLY"
+      },
+      {
+        "affected_space_ids": [],
+        "ambiguous_stitches": 4,
+        "component_id": "GC-0044",
+        "edges": 6,
+        "independent_cycles": 1,
+        "reasons": [
+          "4 ambiguous stitch reference(s): closing this component may depend on a gap that has not been resolved"
+        ],
+        "rejected_clusters": 0,
+        "termini": 2,
+        "total_length_m": 1.69,
+        "unresolved_termini": 0,
+        "verdict": "FACE_HYPOTHESIS_ONLY"
+      }
+    ]
+  },
+  "envelope": {
+    "by_classification": {
+      "EXTERNAL": 8,
+      "INTERNAL": 1,
+      "UNRESOLVED": 255
+    },
+    "by_family_count": {
+      "0": 81,
+      "1": 142,
+      "2": 41
+    },
+    "edges": 264,
+    "no_evidence": 81,
+    "note": "EXTERNAL requires two independent evidence families. Raster free space never classifies alone: a terrace, a light well and an unclosed room all reach the sheet border, and a courtyard reaches nothing while being outside",
+    "sample": [
+      {
+        "classification": "UNRESOLVED",
+        "edge_id": "WE-0001",
+        "evidence": [
+          "LIES_ON_AN_UNBOUNDED_FACE"
+        ],
+        "families": [
+          "PLANAR"
+        ],
+        "separation_mm": 200.0,
+        "validated": false,
+        "why": "one evidence family only \u2014 a hypothesis, not a classification, and it is reported as UNRESOLVED-adjacent rather than counted as proof"
+      },
+      {
+        "classification": "UNRESOLVED",
+        "edge_id": "WE-0002",
+        "evidence": [
+          "SEPARATION_IN_THE_PARTITION_BAND"
+        ],
+        "families": [
+          "GEOMETRY"
+        ],
+        "separation_mm": 100.0,
+        "validated": false,
+        "why": "no two independent families agree. Thickness alone is evidence, never a classification: a 250 mm internal party wall exists and so does a 200 mm external one"
+      },
+      {
+        "classification": "UNRESOLVED",
+        "edge_id": "WE-0003",
+        "evidence": [
+          "SEPARATION_IN_THE_PARTITION_BAND"
+        ],
+        "families": [
+          "GEOMETRY"
+        ],
+        "separation_mm": 100.0,
+        "validated": false,
+        "why": "no two independent families agree. Thickness alone is evidence, never a classification: a 250 mm internal party wall exists and so does a 200 mm external one"
+      },
+      {
+        "classification": "UNRESOLVED",
+        "edge_id": "WE-0004",
+        "evidence": [
+          "SEPARATION_IN_THE_PARTITION_BAND"
+        ],
+        "families": [
+          "GEOMETRY"
+        ],
+        "separation_mm": 100.0,
+        "validated": false,
+        "why": "no two independent families agree. Thickness alone is evidence, never a classification: a 250 mm internal party wall exists and so does a 200 mm external one"
+      },
+      {
+        "classification": "UNRESOLVED",
+        "edge_id": "WE-0005",
+        "evidence": [],
+        "families": [],
+        "separation_mm": 148.7,
+        "validated": false,
+        "why": "no two independent families agree. Thickness alone is evidence, never a classification: a 250 mm internal party wall exists and so does a 200 mm external one"
+      },
+      {
+        "classification": "UNRESOLVED",
+        "edge_id": "WE-0006",
+        "evidence": [],
+        "families": [],
+        "separation_mm": 148.7,
+        "validated": false,
+        "why": "no two independent families agree. Thickness alone is evidence, never a classification: a 250 mm internal party wall exists and so does a 200 mm external one"
+      },
+      {
+        "classification": "UNRESOLVED",
+        "edge_id": "WE-0007",
+        "evidence": [
+          "SEPARATION_IN_THE_PARTITION_BAND"
+        ],
+        "families": [
+          "GEOMETRY"
+        ],
+        "separation_mm": 100.0,
+        "validated": false,
+        "why": "no two independent families agree. Thickness alone is evidence, never a classification: a 250 mm internal party wall exists and so does a 200 mm external one"
+      },
+      {
+        "classification": "UNRESOLVED",
+        "edge_id": "WE-0008",
+        "evidence": [
+          "SEPARATION_IN_THE_PARTITION_BAND"
+        ],
+        "families": [
+          "GEOMETRY"
+        ],
+        "separation_mm": 100.0,
+        "validated": false,
+        "why": "no two independent families agree. Thickness alone is evidence, never a classification: a 250 mm internal party wall exists and so does a 200 mm external one"
+      }
+    ],
+    "single_family_only": 142,
+    "validated": 9
+  },
+  "faces": {
+    "bounded_faces": 6,
+    "by_orientation": {
+      "CLOCKWISE": 10,
+      "COUNTERCLOCKWISE": 17
+    },
+    "by_status": {
+      "CANDIDATE": 27
+    },
+    "faces": 27,
+    "faces_with_holes": 1,
+    "half_edges": 232,
+    "micro_faces": 3,
+    "total_bounded_area_m2": 984.186,
+    "unbounded_faces": 8,
+    "unbounded_unresolved": 13,
+    "unclosed_walks": 8
+  },
+  "false_split_control": {
+    "by_relationship": {
+      "MANY_TO_MANY": 6,
+      "RASTER_ONLY": 13
+    },
+    "faces": 19,
+    "raster_only": [
+      [],
+      [],
+      [],
+      [
+        "BTH-03"
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "raster_spaces_reproduced_one_to_one": [],
+    "vector_splits_of_a_KNOWN_BROKEN_space": [],
+    "vector_splits_of_a_STABLE_raster_space": [],
+    "verdict": "no stable raster space was split by a vector face"
+  },
+  "graph": {
+    "COMPLEX_JUNCTION": 45,
+    "CONTINUATION": 22,
+    "CORNER_OVERLAP": 4,
+    "CROSS_JUNCTION": 0,
+    "L_JUNCTION": 34,
+    "TERMINUS": 228,
+    "TRUE_CROSS_JUNCTION": 1,
+    "T_JUNCTION": 8,
+    "UNRESOLVED_JUNCTION": 0,
+    "ambiguous_clusters": 0,
+    "duplicate_removed_length_mm": 23210.3,
+    "duplicate_resolutions": 85,
+    "edge_splits_performed": 25,
+    "edges": 264,
+    "graph_components": 115,
+    "length_accounted_mm": 387057.3,
+    "length_difference_mm": 0.2,
+    "micro_edges": 6,
+    "micro_edges_collapsible": 2,
+    "node_merges": 86,
+    "nodes": 342,
+    "over_spread_clusters": 0,
+    "post_split_total_length_mm": 363847.0,
+    "pre_split_total_length_mm": 387057.1,
+    "rejected_clusters": 0,
+    "subdivided_clusters": 26
+  },
+  "hard_cases": {
+    "BED-04": {
+      "can_a_cycle_exist": false,
+      "repaired": false,
+      "sides": [
+        {
+          "distance_mm": 442.8,
+          "likely_cause": "MISSING_WALL_PAIR: the wall covers 1798 mm of a 6218 mm side, leaving 4420 mm uncovered",
+          "nearest_cap_id": "EC-00013",
+          "nearest_edge_id": "WE-0049",
+          "nearest_stitch_id": "ST-00005",
+          "separation_mm": 148.7,
+          "side": "north",
+          "status": "GAP_IN_THE_RUN"
+        },
+        {
+          "distance_mm": null,
+          "likely_cause": "MISSING_WALL_PAIR: no wall pair on this axis within 2000 mm that overlaps this side at all. The face lines may exist in the drawing without having paired into a wall",
+          "nearest_cap_id": "",
+          "nearest_edge_id": "",
+          "nearest_stitch_id": "",
+          "separation_mm": null,
+          "side": "south",
+          "status": "NO_WALL_PAIR_FOUND"
+        },
+        {
+          "distance_mm": 1275.4,
+          "likely_cause": "WALL_END: the run covering this side ends at an unresolved terminus. Nearest continuation WE-0049 at 794.8235184321559 mm",
+          "nearest_cap_id": "EC-00009",
+          "nearest_edge_id": "WE-0135",
+          "nearest_stitch_id": "ST-00026",
+          "separation_mm": 148.7,
+          "side": "west",
+          "status": "WALL_ENDS_AT_AN_UNRESOLVED_TERMINUS"
+        },
+        {
+          "distance_mm": 15.9,
+          "likely_cause": "WALL_END: the run covering this side ends at an unresolved terminus. Nearest continuation WE-0042 at 1054.2826773433942 mm",
+          "nearest_cap_id": "EC-00108",
+          "nearest_edge_id": "WE-0120",
+          "nearest_stitch_id": "ST-00026",
+          "separation_mm": 200.0,
+          "side": "east",
+          "status": "WALL_ENDS_AT_AN_UNRESOLVED_TERMINUS"
+        }
+      ],
+      "sides_missing": 4,
+      "sides_with_a_wall": 0,
+      "space_id": "BED-04",
+      "summary": "0 of 4 sides have a wall run covering them. No local cycle can close: north; south; west; east unaccounted for.",
+      "why_not_repaired": "the raster region says where to look, never what to find. Nothing here creates geometry, and the printed dimension is used only afterwards, to validate a candidate the graph produced on its own"
+    },
+    "BTH-01": {
+      "can_a_cycle_exist": false,
+      "repaired": false,
+      "sides": [
+        {
+          "distance_mm": null,
+          "likely_cause": "MISSING_WALL_PAIR: no wall pair on this axis within 2000 mm that overlaps this side at all. The face lines may exist in the drawing without having paired into a wall",
+          "nearest_cap_id": "",
+          "nearest_edge_id": "",
+          "nearest_stitch_id": "",
+          "separation_mm": null,
+          "side": "north",
+          "status": "NO_WALL_PAIR_FOUND"
+        },
+        {
+          "distance_mm": null,
+          "likely_cause": "MISSING_WALL_PAIR: no wall pair on this axis within 2000 mm that overlaps this side at all. The face lines may exist in the drawing without having paired into a wall",
+          "nearest_cap_id": "",
+          "nearest_edge_id": "",
+          "nearest_stitch_id": "",
+          "separation_mm": null,
+          "side": "south",
+          "status": "NO_WALL_PAIR_FOUND"
+        },
+        {
+          "distance_mm": 1947.3,
+          "likely_cause": "",
+          "nearest_cap_id": "EC-00045",
+          "nearest_edge_id": "WE-0114-A",
+          "nearest_stitch_id": "ST-00026",
+          "separation_mm": 200.0,
+          "side": "west",
+          "status": "WALL_PRESENT"
+        },
+        {
+          "distance_mm": 529.7,
+          "likely_cause": "",
+          "nearest_cap_id": "EC-00045",
+          "nearest_edge_id": "WE-0114-A",
+          "nearest_stitch_id": "ST-00026",
+          "separation_mm": 200.0,
+          "side": "east",
+          "status": "WALL_PRESENT"
+        }
+      ],
+      "sides_missing": 2,
+      "sides_with_a_wall": 2,
+      "space_id": "BTH-01",
+      "summary": "2 of 4 sides have a wall run covering them. No local cycle can close: north; south unaccounted for.",
+      "why_not_repaired": "the raster region says where to look, never what to find. Nothing here creates geometry, and the printed dimension is used only afterwards, to validate a candidate the graph produced on its own"
+    },
+    "BTH-02": {
+      "can_a_cycle_exist": false,
+      "repaired": false,
+      "sides": [
+        {
+          "distance_mm": null,
+          "likely_cause": "MISSING_WALL_PAIR: no wall pair on this axis within 2000 mm that overlaps this side at all. The face lines may exist in the drawing without having paired into a wall",
+          "nearest_cap_id": "",
+          "nearest_edge_id": "",
+          "nearest_stitch_id": "",
+          "separation_mm": null,
+          "side": "north",
+          "status": "NO_WALL_PAIR_FOUND"
+        },
+        {
+          "distance_mm": null,
+          "likely_cause": "MISSING_WALL_PAIR: no wall pair on this axis within 2000 mm that overlaps this side at all. The face lines may exist in the drawing without having paired into a wall",
+          "nearest_cap_id": "",
+          "nearest_edge_id": "",
+          "nearest_stitch_id": "",
+          "separation_mm": null,
+          "side": "south",
+          "status": "NO_WALL_PAIR_FOUND"
+        },
+        {
+          "distance_mm": 1947.3,
+          "likely_cause": "",
+          "nearest_cap_id": "EC-00006",
+          "nearest_edge_id": "WE-0114-A",
+          "nearest_stitch_id": "ST-00026",
+          "separation_mm": 200.0,
+          "side": "west",
+          "status": "WALL_PRESENT"
+        },
+        {
+          "distance_mm": 669.7,
+          "likely_cause": "",
+          "nearest_cap_id": "EC-00006",
+          "nearest_edge_id": "WE-0114-A",
+          "nearest_stitch_id": "ST-00026",
+          "separation_mm": 200.0,
+          "side": "east",
+          "status": "WALL_PRESENT"
+        }
+      ],
+      "sides_missing": 2,
+      "sides_with_a_wall": 2,
+      "space_id": "BTH-02",
+      "summary": "2 of 4 sides have a wall run covering them. No local cycle can close: north; south unaccounted for.",
+      "why_not_repaired": "the raster region says where to look, never what to find. Nothing here creates geometry, and the printed dimension is used only afterwards, to validate a candidate the graph produced on its own"
+    },
+    "BTH-03": {
+      "can_a_cycle_exist": false,
+      "repaired": false,
+      "sides": [
+        {
+          "distance_mm": null,
+          "likely_cause": "MISSING_WALL_PAIR: no wall pair on this axis within 2000 mm that overlaps this side at all. The face lines may exist in the drawing without having paired into a wall",
+          "nearest_cap_id": "",
+          "nearest_edge_id": "",
+          "nearest_stitch_id": "",
+          "separation_mm": null,
+          "side": "north",
+          "status": "NO_WALL_PAIR_FOUND"
+        },
+        {
+          "distance_mm": null,
+          "likely_cause": "MISSING_WALL_PAIR: no wall pair on this axis within 2000 mm that overlaps this side at all. The face lines may exist in the drawing without having paired into a wall",
+          "nearest_cap_id": "",
+          "nearest_edge_id": "",
+          "nearest_stitch_id": "",
+          "separation_mm": null,
+          "side": "south",
+          "status": "NO_WALL_PAIR_FOUND"
+        },
+        {
+          "distance_mm": 1947.3,
+          "likely_cause": "",
+          "nearest_cap_id": "EC-00102",
+          "nearest_edge_id": "WE-0114-A",
+          "nearest_stitch_id": "ST-00026",
+          "separation_mm": 200.0,
+          "side": "west",
+          "status": "WALL_PRESENT"
+        },
+        {
+          "distance_mm": 130.3,
+          "likely_cause": "",
+          "nearest_cap_id": "EC-00102",
+          "nearest_edge_id": "WE-0114-A",
+          "nearest_stitch_id": "ST-00026",
+          "separation_mm": 200.0,
+          "side": "east",
+          "status": "WALL_PRESENT"
+        }
+      ],
+      "sides_missing": 2,
+      "sides_with_a_wall": 2,
+      "space_id": "BTH-03",
+      "summary": "2 of 4 sides have a wall run covering them. No local cycle can close: north; south unaccounted for.",
+      "why_not_repaired": "the raster region says where to look, never what to find. Nothing here creates geometry, and the printed dimension is used only afterwards, to validate a candidate the graph produced on its own"
+    },
+    "WSH-01": {
+      "can_a_cycle_exist": false,
+      "repaired": false,
+      "sides": [
+        {
+          "distance_mm": 659.3,
+          "likely_cause": "MISSING_WALL_PAIR: the wall covers 333 mm of a 1730 mm side, leaving 1397 mm uncovered",
+          "nearest_cap_id": "EC-00005",
+          "nearest_edge_id": "WE-0028",
+          "nearest_stitch_id": "ST-00005",
+          "separation_mm": 151.4,
+          "side": "north",
+          "status": "GAP_IN_THE_RUN"
+        },
+        {
+          "distance_mm": 518.0,
+          "likely_cause": "MISSING_WALL_PAIR: the wall covers 333 mm of a 1730 mm side, leaving 1397 mm uncovered",
+          "nearest_cap_id": "EC-00005",
+          "nearest_edge_id": "WE-0030",
+          "nearest_stitch_id": "ST-00005",
+          "separation_mm": 148.7,
+          "side": "south",
+          "status": "GAP_IN_THE_RUN"
+        },
+        {
+          "distance_mm": 407.7,
+          "likely_cause": "",
+          "nearest_cap_id": "EC-00002",
+          "nearest_edge_id": "WE-0129",
+          "nearest_stitch_id": "ST-00026",
+          "separation_mm": 148.7,
+          "side": "west",
+          "status": "WALL_PRESENT"
+        },
+        {
+          "distance_mm": 1322.3,
+          "likely_cause": "",
+          "nearest_cap_id": "EC-00007",
+          "nearest_edge_id": "WE-0129",
+          "nearest_stitch_id": "ST-00026",
+          "separation_mm": 148.7,
+          "side": "east",
+          "status": "WALL_PRESENT"
+        }
+      ],
+      "sides_missing": 2,
+      "sides_with_a_wall": 2,
+      "space_id": "WSH-01",
+      "summary": "2 of 4 sides have a wall run covering them. No local cycle can close: north; south unaccounted for.",
+      "why_not_repaired": "the raster region says where to look, never what to find. Nothing here creates geometry, and the printed dimension is used only afterwards, to validate a candidate the graph produced on its own"
+    }
+  },
+  "largest_faces": [
+    {
+      "area_m2": 981.073,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0001-F",
+        "HE-WE-0099-F",
+        "HE-WE-0022-R",
+        "HE-WE-0114-C-R",
+        "HE-WE-0114-B-R",
+        "HE-WE-0114-A-R"
+      ],
+      "component_id": "GC-0001",
+      "edge_validation_summary": {
+        "PROBABLE": 6
+      },
+      "face_id": "FACE-0001",
+      "geometry_confidence": "",
+      "half_edges": 6,
+      "holes": [
+        "FACE-0003",
+        "FACE-0005",
+        "FACE-0007"
+      ],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 128.4,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0001",
+        "WE-0022",
+        "WE-0099",
+        "WE-0114-A",
+        "WE-0114-B",
+        "WE-0114-C"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 1.59,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0014-A-F",
+        "HE-WE-0125-F",
+        "HE-WE-0020-D-R",
+        "HE-WE-0123-R"
+      ],
+      "component_id": "GC-0002",
+      "edge_validation_summary": {
+        "PROBABLE": 4
+      },
+      "face_id": "FACE-0003",
+      "geometry_confidence": "",
+      "half_edges": 4,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 4.9,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0014-A",
+        "WE-0020-D",
+        "WE-0123",
+        "WE-0125"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 1.367,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0040-R",
+        "HE-WE-0111-R",
+        "HE-WE-0048-F",
+        "HE-WE-0137-F"
+      ],
+      "component_id": "GC-0012",
+      "edge_validation_summary": {
+        "PROBABLE": 4
+      },
+      "face_id": "FACE-0007",
+      "geometry_confidence": "",
+      "half_edges": 4,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 4.9,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0040",
+        "WE-0048",
+        "WE-0111",
+        "WE-0137"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 0.155,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0019-A-R",
+        "HE-WE-0020-A-F",
+        "HE-WE-0020-B-F",
+        "HE-WE-0020-C-F",
+        "HE-WE-0020-D-F",
+        "HE-WE-0020-E-F",
+        "HE-WE-0019-E-R",
+        "HE-WE-0019-D-R",
+        "HE-WE-0019-C-R",
+        "HE-WE-0019-B-R"
+      ],
+      "component_id": "GC-0002",
+      "edge_validation_summary": {
+        "PROBABLE": 10
+      },
+      "face_id": "FACE-0005",
+      "geometry_confidence": "",
+      "half_edges": 10,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "WALL_CAVITY",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 6.7,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0019-A",
+        "WE-0019-B",
+        "WE-0019-C",
+        "WE-0019-D",
+        "WE-0019-E",
+        "WE-0020-A",
+        "WE-0020-B",
+        "WE-0020-C",
+        "WE-0020-D",
+        "WE-0020-E"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 0.001,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0182-F",
+        "HE-WE-0189-R",
+        "HE-WE-0187-F",
+        "HE-WE-0184-R"
+      ],
+      "component_id": "GC-0025",
+      "edge_validation_summary": {
+        "PROBABLE": 4
+      },
+      "face_id": "FACE-0014",
+      "geometry_confidence": "",
+      "half_edges": 4,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "WALL_CAVITY",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 2.27,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0182",
+        "WE-0184",
+        "WE-0187",
+        "WE-0189"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    },
+    {
+      "area_m2": 0.0,
+      "blockers": [],
+      "boundary_half_edges": [
+        "HE-WE-0221-R",
+        "HE-WE-0235-F",
+        "HE-WE-0232-R",
+        "HE-WE-0228-F"
+      ],
+      "component_id": "GC-0047",
+      "edge_validation_summary": {
+        "PROBABLE": 4
+      },
+      "face_id": "FACE-0023",
+      "geometry_confidence": "",
+      "half_edges": 4,
+      "holes": [],
+      "kind": "BOUNDED_FACE",
+      "micro_class": "UNRESOLVED",
+      "orientation": "COUNTERCLOCKWISE",
+      "perimeter_m": 1.3,
+      "provenance": {},
+      "releasable": false,
+      "source_wall_edge_ids": [
+        "WE-0221",
+        "WE-0228",
+        "WE-0232",
+        "WE-0235"
+      ],
+      "status": "CANDIDATE",
+      "topology_boundary_candidate_ids": []
+    }
+  ],
+  "micro_faces": {
+    "by_class": {
+      "UNRESOLVED": 1,
+      "WALL_CAVITY": 2
+    },
+    "classified": 3,
+    "deleted": 0,
+    "detail": [
+      {
+        "area_m2": 0.1554,
+        "aspect_ratio": 65.2,
+        "deleted": false,
+        "face_id": "FACE-0005",
+        "micro_class": "WALL_CAVITY",
+        "short_side_mm": 51.4,
+        "why": "51 mm across and 65 times longer than wide: this is the space between two wall faces, not a room"
+      },
+      {
+        "area_m2": 0.0005,
+        "aspect_ratio": 10.8,
+        "deleted": false,
+        "face_id": "FACE-0014",
+        "micro_class": "WALL_CAVITY",
+        "short_side_mm": 58.1,
+        "why": "58 mm across and 11 times longer than wide: this is the space between two wall faces, not a room"
+      },
+      {
+        "area_m2": 0.0003,
+        "aspect_ratio": 7.8,
+        "deleted": false,
+        "face_id": "FACE-0023",
+        "micro_class": "UNRESOLVED",
+        "short_side_mm": 43.3,
+        "why": "too small to be floor and not explained by a cavity, shaft, sliver or duplicate. Held for review, not deleted"
+      }
+    ]
+  },
+  "positive_controls": [
+    {
+      "raster_area_m2": 3.295,
+      "result": "NOT_REPRODUCED",
+      "room_type": "BATHROOM",
+      "space_id": "BTH-05",
+      "vector_area_m2": 981.073,
+      "vector_face_id": "FACE-0001",
+      "why": "the smallest vector face containing this room's centroid is 981 m2 \u2014 it contains the room rather than being it. No face bounds this room"
+    },
+    {
+      "raster_area_m2": 24.642,
+      "result": "NOT_REPRODUCED",
+      "room_type": "BEDROOM",
+      "space_id": "BED-01",
+      "vector_area_m2": 981.073,
+      "vector_face_id": "FACE-0001",
+      "why": "the smallest vector face containing this room's centroid is 981 m2 \u2014 it contains the room rather than being it. No face bounds this room"
+    },
+    {
+      "raster_area_m2": 4.09,
+      "result": "NOT_REPRODUCED",
+      "room_type": "STORE",
+      "space_id": "STR-01",
+      "vector_area_m2": 981.073,
+      "vector_face_id": "FACE-0001",
+      "why": "the smallest vector face containing this room's centroid is 981 m2 \u2014 it contains the room rather than being it. No face bounds this room"
+    },
+    {
+      "raster_area_m2": 127.723,
+      "result": "NOT_REPRODUCED",
+      "room_type": "SALOON",
+      "space_id": "OPEN-01",
+      "vector_area_m2": 981.073,
+      "vector_face_id": "FACE-0001",
+      "why": "the smallest vector face containing this room's centroid is 981 m2 \u2014 it contains the room rather than being it. No face bounds this room"
+    }
+  ],
+  "printed_dimension_comparison": {
+    "BED-04-bathroom": {
+      "candidate": null,
+      "printed_area_m2": 4.8,
+      "printed_perimeter_m": 9.2,
+      "space_id": "BED-04 bathroom",
+      "verdict": "NO_CANDIDATE_GENERATED",
+      "why": "the graph produced no face here. The printed dimension is NOT used to manufacture one"
+    },
+    "WSH-01": {
+      "area_difference_m2": 977.473,
+      "candidate_area_m2": 981.073,
+      "candidate_perimeter_m": 128.4,
+      "printed_area_m2": 3.6,
+      "printed_perimeter_m": 7.8,
+      "space_id": "WSH-01",
+      "verdict": "DIFFERS_FROM_PRINTED",
+      "why": "compared after generation. A difference is a finding about the candidate, not a licence to adjust it"
+    }
+  },
+  "status": {
+    "E31A_ENGINE_DEVELOPMENT_STATUS": "READY_FOR_DIAGNOSTIC_RUN",
+    "PROJECT_TOPOLOGY_RELEASE_STATUS": "BLOCKED",
+    "blockers": [
+      "failing gates: G3-TERMINI, G5-EXPLAINED-DISCONNECTS, G8-CYCLES-IN-REAL-ROOMS",
+      "11 component(s) can only produce hypothesis faces"
+    ],
+    "by_verdict": {
+      "FACE_BLOCKED": 103,
+      "FACE_ELIGIBLE": 1,
+      "FACE_HYPOTHESIS_ONLY": 11
+    },
+    "components_blocked": 103,
+    "components_eligible": 1,
+    "components_hypothesis_only": 11,
+    "why": "every face this engine produces is unreleasable by construction; migration to a measurement basis is explicit and has not happened"
+  },
+  "unclosed_walks": [
+    {
+      "half_edges": 2,
+      "started_at": "HE-WE-0109-F",
+      "why": "the next-chain did not return to its start, so this boundary does not close. It is NOT joined up: a face invented that way bounds a room the building has not got"
+    },
+    {
+      "half_edges": 2,
+      "started_at": "HE-WE-0166-F",
+      "why": "the next-chain did not return to its start, so this boundary does not close. It is NOT joined up: a face invented that way bounds a room the building has not got"
+    },
+    {
+      "half_edges": 2,
+      "started_at": "HE-WE-0176-R",
+      "why": "the next-chain did not return to its start, so this boundary does not close. It is NOT joined up: a face invented that way bounds a room the building has not got"
+    },
+    {
+      "half_edges": 2,
+      "started_at": "HE-WE-0197-F",
+      "why": "the next-chain did not return to its start, so this boundary does not close. It is NOT joined up: a face invented that way bounds a room the building has not got"
+    },
+    {
+      "half_edges": 2,
+      "started_at": "HE-WE-0211-F",
+      "why": "the next-chain did not return to its start, so this boundary does not close. It is NOT joined up: a face invented that way bounds a room the building has not got"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+ "SCHEMA": "URBAN_R8_8_SOURCE_SUBPART_IDENTITY_SCHEMA_V1",
+ "key": "revision_id | H<source handle> | insert path ('/'-joined, MINSERT cells as '<handle>[c,r]') | realised kind | source sub-part",
+ "source_sub_part": {
+  "LINE": "0",
+  "ARC": "0",
+  "CIRCLE": "0",
+  "ELLIPSE": "0",
+  "LWPOLYLINE": "span index i (vertex i -> i+1), degenerate spans keep their index and realise nothing; a bulged span is ARC (or ELLIPTICAL_ARC under a non-uniform map) with the SAME index",
+  "curve converted under transform": "same source entity + same sub-part; the realised kind (ELLIPTICAL_ARC) is the conversion role",
+  "MINSERT": "source insert + grid-cell label in the insert path + child + sub-part",
+  "K2 (ezdxf) exploded parts": "None: ezdxf's virtual_entities() does not name the source span -> key None -> METHOD_INPUT_INCOMPLETE"
+ },
+ "where_set": "the kernels (K1 kernel.py, K2 kernel_ezdxf.py) record Lineage.sub_part from source structure while walking the entity; canonical_build copies it; nothing counts realised output",
+ "never": [
+  "an ordinal over realised output",
+  "a coordinate hash",
+  "nearest entity",
+  "sorted-by-coordinate index"
+ ],
+ "missing": "key None -> METHOD_INPUT_INCOMPLETE (missing parts.source_part_id)",
+ "proof": [
+  "tests/r8_8/test_r8_8_subpart_identity.py: shuffle, unrelated insertion, degenerate span, MINSERT cells, missing sub-part, K2 span indices"
+ ]
+}

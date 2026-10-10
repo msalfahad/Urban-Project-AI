@@ -1,0 +1,112 @@
+{
+ "baseline": "303df68",
+ "code": {
+  "engine/source/delta_release.py": "7b0f72a6f5138b3e0f8515c80a42a38a2cfc035c8fb4c138aa64a4fd5c9708b9",
+  "engine/source/rebar_unit_mass.py": "81d63a85da8e64600d0c49a6662bcc49655f46dc71603654b3e1438c5b146eb8",
+  "engine/source/stair_geometry.py": "d9bc4eaf96ae4eb966c6c0141d7a041ae24ec8ecd385e36afaa958c728e897ed",
+  "engine/source/stair_riser_schedule.py": "d2a5d0dd584354d9c6d4d4b403808dd1384b61cad35ce717e02dfaa215eea7f0",
+  "engine/source/stair_scenario_checks.py": "aec8209d2617c916a960319a52710fd0a07ced071ff0e081491d73dc9645d82c",
+  "research/alsenan_stairs_s8_7b/build_s8_7b.py": "3d01f0ee759d4b292301cb4eae9d8f155240a2354d9618a4e12a0bfcb54b83cd",
+  "research/external_engine_lab/alsenan_structural_s1.py": "e3ecd25490cd433540e317454ffdbaadf17c19799f49eb1df9afcb928aa494cb"
+ },
+ "date": "2026-10-10",
+ "drawing_sha256": {
+  "P7757 sections PDF": "1e7087d3e61bbb682c9107193c97550a2837e5198bde0ee311319bf7f4a08459",
+  "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+  "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "ST7757.pdf": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ },
+ "engine_commit_stamp": "303df68+code:f766bafc50a50887",
+ "frozen_baselines": {
+  "AD1": "e2497cc75181393000187b7e657fa8485a4c0f365b4614bed983d0bc6c0ca5b4",
+  "D1.1": "3ecb642e2141f5a9af11453870696b104a11cfb519d65a9e3f505cbff7c73a74",
+  "D1.2": "f256d6a25edf93029c6ba1c8cf9bc336790fd8d9cf7a5045e8395942986a9554",
+  "PRE-S7": "fb3a1c62a8e525b663853d03d43e067f1839026aea149399491bd4cf98f0ad09",
+  "PRE-S7.1": "3a67a8641ce4ea836334e02532af82b9a3bb01be8efdba4f093eee44d92c1ef6",
+  "PRE-S8": "1c8daf59926540941efbf5f749e8e175fe64b7efeb6d7acff0bfbefbb034849d",
+  "S4": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+  "S4.1": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+  "S5": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+  "S5.1": "595d64b1bf5c8e0ef7b5bebfaf3ea4063dd884356390c84b4c8aac77cddb5a88",
+  "S6": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+  "S6.1": "c4744888ed2207ebff47c0a895e706d7e381b5f905b694eb92e3d1cdc411c0b2",
+  "S7": "b23f97b6db334e641c38c498bf23b46236d68f4fcc26a6eafde1f3bfc156d175",
+  "S7A": "5b256cef99dc57934c76249c28814d5ce07c74caf308aabdbf90e0e8f0adcee1",
+  "S8.1": "e99d83a750b64541f5b3174b853d24209f30e46574fafafe56cfa3fd0d88e354",
+  "S8.1A": "890c1c42f03715b6b26d88744852fe388ca419fd7c6e3f0214e137dc5c1a473e",
+  "S8.2": "749affe72ec80083715f01b790b96bb5fca31685a93f952369ec7d4469f3494d",
+  "S8.2A": "76fda44b41695a2a79c7e030388ba2282a93f09552bcd67e06c32aee09551f9d",
+  "S8.3": "92bfe9c0b2b7fea189bb37759f93759ea4a6cf5108738af1390468bda6ee92da",
+  "S8.3A": "cf83c809495496f421f2c85d46c4f497757a66dbbea607a77208555695e73505",
+  "S8.4": "45fd614f0c22adceec27ac0657ae1135f59f4c40dde811c56c2d7121527d85f1",
+  "S8.5": "522287d416f30d3eb0499017ea1a32c87bf530ca6bd6de5356fb5ed1e0e662fa",
+  "S8.6": "9861d791de738722ce53907894c1ff7691923c007411021eb092a2c58616ba9e",
+  "S8.6A": "fe59a4b11a7bd86d7fbb3addf6e7138925d2214256fbb8e4e0673af2b3e5abb8",
+  "S8.7": "ee523cc9d23ed1ecd15f6092fc00abb736ede09bc6e89eb2c81bf75da5c89779",
+  "S8.7A": "cb10bef01070a7968a99a7a5510fe8a96588c4b3853461b5fcb3315798cf1e0a",
+  "S8.8": "fd1655dc3f60dde6ec1fc54495087de44e2ed25d5724ff8648a9f0729bb57cdb"
+ },
+ "inputs": {
+  "research/alsenan_lintels_s8_6/03_ARCH_STRUCTURAL_REGISTRATION.csv": "c940b3aee459ee06381ef033bf8511a2a474b740528846838fb05343ef3b03eb",
+  "research/alsenan_stairs_s8_7/06_PLAN_AND_INCLINED_GEOMETRY.csv": "9ca9c8724027dd1628bbe660490b094ee92018b04e2dfbc17096860c440ddeb4",
+  "research/alsenan_stairs_s8_7/07_CONCRETE_QTO.csv": "a11a5d3e72debdc1e9945744d56d6c57c39e4f9f899a008c2a6b926060074eee",
+  "research/alsenan_stairs_s8_7/08_REBAR_ANNOTATION_BINDING.csv": "a08c24728527ae23bc0170cbb15ecc062bf65c0af0456e50658e37e5efa9c3cd",
+  "research/alsenan_stairs_s8_7/09_REBAR_QTO.csv": "c888fe7989a7feb4e3b48d24c813d229df6444548be454a84336d35d63fcbac7",
+  "research/alsenan_stairs_s8_7/10_OWNERSHIP_AUDIT.csv": "655d8dc3f0c50545482a4eb4c1539f38b002e4c66b2ebc70b39eb87f932091d1",
+  "research/alsenan_stairs_s8_7/11_S7_STAIR_ADJACENT_RECOMPUTE.csv": "0f2214ff584088dca2ec7be71c7b5bc878a14cd66598bf032f563a76dbe5a7ca",
+  "research/alsenan_stairs_s8_7/16_S8_7_SUMMARY.json": "5f0fa7db2c1dcd809a41e2b6a593ff54ea488456ca9a47b3a84aaee9847bf161",
+  "research/alsenan_stairs_s8_7a/01_RISER_COUNT_COMPARISON.csv": "3caa593d73958b3837985f7988f427e3f83922e5680d3e36667b2bddaf48bb01",
+  "research/alsenan_stairs_s8_7a/12_RELEASE_SUMMARY.json": "c8b4dc9f37d7fe45e477bf28fe4970fae2ff79bf64aa60e15603d120c7c3a805",
+  "research/alsenan_superstructure_beam_rebar_s6/SUPERSTRUCTURE_BEAM_OCCURRENCES.csv": "613fa422d310192c7729dc073ffbd23016d1346969567b6a94b1e64720181690"
+ },
+ "layer_over": [
+  "research/alsenan_stairs_s8_7 (frozen; unchanged)",
+  "research/alsenan_stairs_s8_7a (frozen; unchanged)"
+ ],
+ "outputs": {
+  "00_README.md": "decc61a45d6723928c1831f4cd5fb7d5ce925d8302e7c3757b05e91cb87c78a1",
+  "01_OWNER_SCENARIO_ASSUMPTION_REGISTER.csv": "d9fa4732a1ba30df0ac1fb47ea6e345ed325fa46a60b50911aaa63fadb8266ac",
+  "02_RISER_CALCULATION_TABLE.csv": "7a937d04fe690b84e0d9338971803ce1ad8491348ff021f3f51d430e3861270f",
+  "03_RISER_SETTING_OUT_SCHEDULE.csv": "851635bb8c1759c69c35ebf496fa2722dbf4f38426b5e6c938b81559d284a000",
+  "04_LANDING_ELEVATION_RECONCILIATION.csv": "6a719a93533a25df8362f53f7036752aeca6b91c25a6e5e6338e5569169961ce",
+  "05_STRUCTURAL_ARCHITECTURAL_CONFLICT_MATRIX.csv": "033608ab4b91987d724d8ae31ace3037cb6fde005cf3b0d5a3f70f925ca5733e",
+  "06_BEAM_INTERFERENCE_AUDIT.csv": "82a2284a0535bf7b28ca0aaaa55fce647f924dd64bc398823346c27d905224ab",
+  "07_FIRST_LAST_RISER_FINISH_BUILDUP.csv": "26cf5c6b0868a64914ae6a66ca11464062af0a05535f3bbe6a52cc8df507c0a5",
+  "08_WAIST_THICKNESS_CONCRETE_SENSITIVITY.csv": "e8892035f348727eb742ae333561660c2e8ab170f86c59adc7f69ca65bcd9048",
+  "09_REINFORCEMENT_OWNERSHIP_AUDIT.csv": "6a098ea13603b923836ba64bd5b9900283fb03a3af24505de0c29a6824763ff9",
+  "10_ENGINEER_RFI_REGISTER.csv": "eab28f7f9389cd76e13437615ad690b71015c4667d0aa65ccc4e9edb80ea9475",
+  "11_CONSERVATION_NO_DOUBLE_COUNT_CHECKS.csv": "814944a6b947f23c17ef3786390109e364d1517af28a9c72f315f3849e52eced",
+  "12_PLAN_RISER_LINE_EVIDENCE.csv": "e905da725e9df3d3ed850d364faead1f7f1a0643405433b2f78f9426cb14e198",
+  "13_SECTION_AND_DETAIL_EVIDENCE.csv": "bc6a834ac97910b4bbf78e5bf1bb0bc7ca42b7f34fb670865c0902b5ec6b4a46",
+  "14_RELEASE_SUMMARY.json": "e404fa6aaeef9a72e3c46e6b08915c0da497e0ac59765027486f32e56e50332e",
+  "15_PROVENANCE.jsonl": "9efb70cda50d31e54a8b5e9e45f8930cdc01e9c6c40f3bf7fdda2da3e7f53cb0"
+ },
+ "references_read": [],
+ "register_indexes": {
+  "S1": {
+   "index_sha256": "bff6694f05762498c897e2e8da95f70747af133ba652eb47470a03241aa7cc51",
+   "registers_verified": 21
+  },
+  "S2": {
+   "index_sha256": "a966dec798dfc4dbb1beaf16ed8a52d41d90eaad0a072c38d56b4dc53f395b01",
+   "registers_verified": 12
+  },
+  "S3": {
+   "index_sha256": "50fd1ec80048424df7feddd7477a1473db1d9bf7fabf152fd6a837e3366f98cb",
+   "registers_verified": 11
+  },
+  "S3.1": {
+   "index_sha256": "8a771cb688b04128c351aab7880afd5dc353c4df98e3f62910fcd18c06763661",
+   "registers_verified": 12
+  }
+ },
+ "release_delta": {
+  "concrete_m3": 0.0,
+  "kg": 0.0
+ },
+ "round": "S8_7B",
+ "rule": "frozen before any earlier Urban, contractor or third-party stair figure is read; the comparison after it explains differences and never changes a frozen quantity",
+ "s8_7_manifest_sha256": "ee523cc9d23ed1ecd15f6092fc00abb736ede09bc6e89eb2c81bf75da5c89779",
+ "s8_7a_manifest_sha256": "cb10bef01070a7968a99a7a5510fe8a96588c4b3853461b5fcb3315798cf1e0a",
+ "state": "FROZEN_BEFORE_COMPARISON"
+}

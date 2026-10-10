@@ -1,0 +1,76 @@
+{
+ "SCHEMA": "URBAN_R8_13_SEMANTIC_SPACE_CLASS_REGISTER_V1",
+ "rule": {
+  "id": "QORTUBA-SPACE-CLASS@v2",
+  "authority": "PROJECT_OWNER_RULE (owner rule store + R8.13 owner finish facts)",
+  "refs": [
+   "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: US-01 WET_SERVICE_ROOM_CERAMIC",
+   "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: QP-07 QORTUBA_CERAMIC_SERVICE_ROOMS = BATH x3 + PAINTRY",
+   "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: QP-14 QORTUBA_DRY_FLOOR_FINISH = PORCELAIN",
+   "data/registry/OWNER_FINISH_FACTS.json: QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1"
+  ],
+  "scope": {
+   "project": "QORTUBA",
+   "region": "RC:MODEL_SPACE:4267:540:1649",
+   "plan": "PLAN_VARIANT_4_SELECTED",
+   "revision": "QORTUBA_REV_NEW"
+  },
+  "by_label": {
+   "BATH": "WET_SERVICE_ROOM",
+   "PAINTRY": "SERVICE_ROOM"
+  },
+  "otherwise_class": "DRY_INTERNAL_ROOM",
+  "scope_labels": [
+   "BED.ROOM",
+   "DRESS",
+   "HALL",
+   "M.B.ROOM",
+   "whgm"
+  ]
+ },
+ "supersedes": "QORTUBA-SPACE-CLASS@v1 (BATH -> WET_ROOM renamed WET_SERVICE_ROOM; PAINTRY keeps SERVICE_ROOM under QP-07; DRY_INTERNAL_ROOM unchanged)",
+ "classes": {
+  "DRY_INTERNAL_ROOM": "floor porcelain (QP-14) + skirting lm; object footprints INCLUDED (R8.13)",
+  "WET_SERVICE_ROOM": "floor + wall ceramic / porcelain to 3.20 m (this Qortuba revision only)",
+  "SERVICE_ROOM": "PAINTRY: QP-07 kitchen / preparation zone - floor + wall ceramic; the 3.20 m reaches it through QP-07 (the owner's KITCHEN)",
+  "PASSAGE": "an OPEN_PASSAGE_SITE strip (inside a site; audited per row)",
+  "THRESHOLD": "a door-threshold site (separate site; audited per row)",
+  "OBSTACLE_INTERIOR": "the interior of a proven obstacle (no finish trade)"
+ },
+ "owner_room_types": {
+  "BATHROOM": {
+   "labels": [
+    "BATH"
+   ],
+   "class": "WET_SERVICE_ROOM",
+   "authority": "US-01 + QP-07 + R8.13 §4"
+  },
+  "KITCHEN": {
+   "labels": [
+    "PAINTRY"
+   ],
+   "class": "SERVICE_ROOM",
+   "authority": "QP-07 (the owner named PAINTRY the preparation / kitchen service zone); PAINTRY keeps its QP-07 rule and class"
+  },
+  "IRONING_ROOM": {
+   "labels": [],
+   "class": "WET_SERVICE_ROOM",
+   "authority": "R8.13 §4 (no such label in this plan)"
+  },
+  "WASHING_LAUNDRY_ROOM": {
+   "labels": [],
+   "class": "WET_SERVICE_ROOM",
+   "authority": "R8.13 §4 (no such label in this plan)"
+  }
+ },
+ "floor_treatment_by_class": {
+  "WET_SERVICE_ROOM": "CERAMIC_WET_FLOOR",
+  "SERVICE_ROOM": "CERAMIC_SERVICE_FLOOR",
+  "DRY_INTERNAL_ROOM": "PORCELAIN_DRY_FLOOR"
+ },
+ "never": [
+  "word similarity ('BATHROOM' ~ 'BATH' is NOT how BATH is mapped: the exact label text is listed)",
+  "a universal English classifier",
+  "a raw label as a trade identity"
+ ]
+}

@@ -1,0 +1,7050 @@
+{
+ "claim_application_log": [],
+ "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+ "flags": [
+  {
+   "affected_facts": [
+    "section",
+    "reinforcement"
+   ],
+   "answer_options": [
+    {
+     "answer": "centre-to-centre",
+     "effect": "classes: BM-GROUND_BEAMS-GB-BL002-2038=GB_LT_5M, BM-GROUND_BEAMS-GB-BL005-14438=GB_LT_5M, BM-GROUND_BEAMS-GB-BL008-9062=GB_LT_5M, BM-GROUND_BEAMS-GB-BL011-12362=GB_GT_5M, BM-GROUND_BEAMS-GB-BL020-9788=GB_LT_5M, BM-GROUND_BEAMS-GB-BL027-17038=GB_LT_5M, BM-GROUND_BEAMS-GB-BL028-17038=GB_LT_5M, BM-GROUND_BEAMS-GB-BL036-27612=GB_LT_5M, BM-GROUND_BEAMS-GB-BL037-28583=GB_LT_5M"
+    },
+    {
+     "answer": "clear span",
+     "effect": "classes: BM-GROUND_BEAMS-GB-BL002-2038=GB_LT_2_5M, BM-GROUND_BEAMS-GB-BL005-14438=GB_LT_2_5M, BM-GROUND_BEAMS-GB-BL008-9062=GB_LT_2_5M, BM-GROUND_BEAMS-GB-BL011-12362=GB_LT_5M, BM-GROUND_BEAMS-GB-BL020-9788=GB_LT_2_5M, BM-GROUND_BEAMS-GB-BL027-17038=GB_LT_2_5M, BM-GROUND_BEAMS-GB-BL028-17038=GB_LT_2_5M, BM-GROUND_BEAMS-GB-BL036-27612=GB_LT_2_5M, BM-GROUND_BEAMS-GB-BL037-28583=GB_LT_2_5M"
+    }
+   ],
+   "context": {
+    "class_by_basis": {
+     "BM-GROUND_BEAMS-GB-BL002-2038": {
+      "centre-to-centre": "GB_LT_5M",
+      "clear span": "GB_LT_2_5M"
+     },
+     "BM-GROUND_BEAMS-GB-BL005-14438": {
+      "centre-to-centre": "GB_LT_5M",
+      "clear span": "GB_LT_2_5M"
+     },
+     "BM-GROUND_BEAMS-GB-BL008-9062": {
+      "centre-to-centre": "GB_LT_5M",
+      "clear span": "GB_LT_2_5M"
+     },
+     "BM-GROUND_BEAMS-GB-BL011-12362": {
+      "centre-to-centre": "GB_GT_5M",
+      "clear span": "GB_LT_5M"
+     },
+     "BM-GROUND_BEAMS-GB-BL020-9788": {
+      "centre-to-centre": "GB_LT_5M",
+      "clear span": "GB_LT_2_5M"
+     },
+     "BM-GROUND_BEAMS-GB-BL027-17038": {
+      "centre-to-centre": "GB_LT_5M",
+      "clear span": "GB_LT_2_5M"
+     },
+     "BM-GROUND_BEAMS-GB-BL028-17038": {
+      "centre-to-centre": "GB_LT_5M",
+      "clear span": "GB_LT_2_5M"
+     },
+     "BM-GROUND_BEAMS-GB-BL036-27612": {
+      "centre-to-centre": "GB_LT_5M",
+      "clear span": "GB_LT_2_5M"
+     },
+     "BM-GROUND_BEAMS-GB-BL037-28583": {
+      "centre-to-centre": "GB_LT_5M",
+      "clear span": "GB_LT_2_5M"
+     }
+    }
+   },
+   "current_interpretation": null,
+   "detector": "basis_dependent_class",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "P13 ground-beam typical details (<2.5 / <5 / >5 m):basis",
+   "element_ids": [
+    "BM-GROUND_BEAMS-GB-BL002-2038",
+    "BM-GROUND_BEAMS-GB-BL005-14438",
+    "BM-GROUND_BEAMS-GB-BL008-9062",
+    "BM-GROUND_BEAMS-GB-BL011-12362",
+    "BM-GROUND_BEAMS-GB-BL020-9788",
+    "BM-GROUND_BEAMS-GB-BL027-17038",
+    "BM-GROUND_BEAMS-GB-BL028-17038",
+    "BM-GROUND_BEAMS-GB-BL036-27612",
+    "BM-GROUND_BEAMS-GB-BL037-28583"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-001",
+   "flag_key": "1ec82c958b0067f8",
+   "floor": null,
+   "generic_rule_candidate": "Length basis for length-banded typical details (c/c vs clear).",
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by basis_dependent_class",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "P13 ground-beam typical details (<2.5 / <5 / >5 m): 9 beam(s) change class depending on the length basis (centre-to-centre / clear span).",
+   "issue_type": "AMBIGUOUS_APPLICABILITY",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 26.899,
+   "question_for_engineer": "P13 ground-beam typical details (<2.5 / <5 / >5 m): is the length measured centre-to-centre or clear span?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": null,
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN"
+    },
+    {
+     "drawing": "ST7757.pdf",
+     "page": 13,
+     "sheet_title": "ground beam details"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam",
+   "where_to_check": "ST7757.dxf, GROUND BEAMS PLAN, p.3; ST7757.pdf, ground beam details, p.13"
+  },
+  {
+   "affected_facts": [
+    "occurrence"
+   ],
+   "answer_options": [
+    {
+     "answer": "unused",
+     "effect": "no change"
+    },
+    {
+     "answer": "used at a location",
+     "effect": "occurrence(s) added there"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "zero occurrences (a schedule row never creates an occurrence)",
+   "detector": "orphan_definitions",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "SBT:B.W",
+   "element_ids": [
+    "B.W"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-002",
+   "flag_key": "78951c949f917b16",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by orphan_definitions",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "PLAN_MEMBER_TAG",
+   "issue_summary": "Schedule row B.W (beam) is defined but no plan occurrence carries this mark.",
+   "issue_type": "AMBIGUOUS_APPLICABILITY",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": null,
+   "question_for_engineer": "Schedule row B.W has no occurrence on the plans. Is it unused, or is a mark missing on a plan?",
+   "release_effect": "NO_QUANTITY_IMPACT",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "LOW",
+   "source_a": {
+    "description": "schedule row",
+    "value": "20x60"
+   },
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "1FA5",
+     "page": 10,
+     "sheet_title": "schedule (simple beam)",
+     "text": "B.W"
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null,
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (simple beam), p.10"
+  },
+  {
+   "affected_facts": [
+    "occurrence"
+   ],
+   "answer_options": [
+    {
+     "answer": "unused",
+     "effect": "no change"
+    },
+    {
+     "answer": "used at a location",
+     "effect": "occurrence(s) added there"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "zero occurrences (a schedule row never creates an occurrence)",
+   "detector": "orphan_definitions",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "SBT:B10",
+   "element_ids": [
+    "B10"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-003",
+   "flag_key": "e224152ffc9933b3",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by orphan_definitions",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "PLAN_MEMBER_TAG",
+   "issue_summary": "Schedule row B10 (beam) is defined but no plan occurrence carries this mark.",
+   "issue_type": "AMBIGUOUS_APPLICABILITY",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": null,
+   "question_for_engineer": "Schedule row B10 has no occurrence on the plans. Is it unused, or is a mark missing on a plan?",
+   "release_effect": "NO_QUANTITY_IMPACT",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "LOW",
+   "source_a": {
+    "description": "schedule row",
+    "value": "20x75"
+   },
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "1ED0",
+     "page": 10,
+     "sheet_title": "schedule (simple beam)",
+     "text": "B10"
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null,
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (simple beam), p.10"
+  },
+  {
+   "affected_facts": [
+    "occurrence"
+   ],
+   "answer_options": [
+    {
+     "answer": "unused",
+     "effect": "no change"
+    },
+    {
+     "answer": "used at a location",
+     "effect": "occurrence(s) added there"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "zero occurrences (a schedule row never creates an occurrence)",
+   "detector": "orphan_definitions",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "SBT:B12",
+   "element_ids": [
+    "B12"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-004",
+   "flag_key": "818fb14acce4f41a",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by orphan_definitions",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "PLAN_MEMBER_TAG",
+   "issue_summary": "Schedule row B12 (beam) is defined but no plan occurrence carries this mark.",
+   "issue_type": "AMBIGUOUS_APPLICABILITY",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": null,
+   "question_for_engineer": "Schedule row B12 has no occurrence on the plans. Is it unused, or is a mark missing on a plan?",
+   "release_effect": "NO_QUANTITY_IMPACT",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "LOW",
+   "source_a": {
+    "description": "schedule row",
+    "value": "25x75"
+   },
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "1EE6",
+     "page": 10,
+     "sheet_title": "schedule (simple beam)",
+     "text": "B12"
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null,
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (simple beam), p.10"
+  },
+  {
+   "affected_facts": [
+    "side_bars"
+   ],
+   "answer_options": [
+    {
+     "answer": "2Ø12 / 3Ø12 / 4Ø12 per face",
+     "effect": "side bars added"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "occurrences counted; quantities depending on the rule held back",
+   "detector": "rule_dependent_elements",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "P8-N21:BEAM",
+   "element_ids": [
+    "BM-GF_ROOF-CB7-BL003-479",
+    "BM-GF_ROOF-CB7-BL003-47A",
+    "BM-GF_ROOF-CB8-BL024-69F",
+    "BM-GF_ROOF-CB8-BL024-6A0",
+    "BM-GF_ROOF-CB3-BL022-493",
+    "BM-GF_ROOF-CB3-BL022-494",
+    "BM-GF_ROOF-CB3-BL022-495",
+    "BM-GF_ROOF-CB1-BL007-4E1",
+    "BM-GF_ROOF-CB6-BL004-47C",
+    "BM-GF_ROOF-CB6-BL004-47B",
+    "BM-GF_ROOF-CB1-BL007-4E2",
+    "BM-1F_ROOF-CB11-BL024-6DA",
+    "BM-1F_ROOF-CB11-BL024-6DB",
+    "BM-1F_ROOF-CB11-BL024-6DC",
+    "BM-1F_ROOF-CB12-BL003-6DD",
+    "BM-1F_ROOF-CB12-BL003-6DE"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-005",
+   "flag_key": "0aff62f6c534cd91",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by rule_dependent_elements",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "16 beam occurrence(s) depend on P8-N21 (Side bars 2Ø12 / 3Ø12 / 4Ø12 in beams deeper than 60 cm, according to the beam width, unless stated otherwise.), whose method is not established (BLOCKED_METHOD).",
+   "issue_type": "ENGINEERING_METHOD_REQUIRED",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 86.389,
+   "question_for_engineer": "Beams deeper than 60 cm without side bars in their schedule row (CB1, CB11, CB12, CB3, CB6, CB7, CB8): how many 12 mm side bars per face?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "P8-N21",
+    "value": "Side bars 2Ø12 / 3Ø12 / 4Ø12 in beams deeper than 60 cm, according to the beam width, unless stated otherwise."
+   },
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 8,
+     "sheet_title": "rule P8-N21"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam",
+   "where_to_check": "ST7757.pdf, rule P8-N21, p.8"
+  },
+  {
+   "affected_facts": [
+    "geometry"
+   ],
+   "answer_options": [],
+   "context": {},
+   "current_interpretation": "occurrence counted; measurement held back",
+   "detector": "blocked_geometry",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "BEAM:2",
+   "element_ids": [
+    "BM-GROUND_BEAMS-GB-BA001",
+    "BM-GROUND_BEAMS-GB-BA002"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-006",
+   "flag_key": "7363ffa80a294641",
+   "floor": "GROUND_BEAMS",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by blocked_geometry",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "2 beams: curved ground-beam span - support length not measured.",
+   "issue_type": "MISSING_DIMENSION",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 8.093,
+   "question_for_engineer": "Confirm the curved ground beam's supports and length (pool edge).",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "LOW",
+   "source_a": null,
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam",
+   "where_to_check": "ST7757.dxf, GROUND BEAMS PLAN, p.3"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "none",
+     "effect": "no change"
+    },
+    {
+     "answer": "listed beams",
+     "effect": "+5 cm width on those beams"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "occurrences counted; quantities depending on the rule held back",
+   "detector": "rule_dependent_elements",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "P8-N11:BEAM",
+   "element_ids": [
+    "BM-GF_ROOF-CB7-BL003-479",
+    "BM-GF_ROOF-CB7-BL003-47A",
+    "BM-GF_ROOF-B1-BL047-6A1",
+    "BM-GF_ROOF-CB8-BL024-69F",
+    "BM-GF_ROOF-CB8-BL024-6A0",
+    "BM-GF_ROOF-B1-BL012-50E",
+    "BM-GF_ROOF-B1-BL008-478",
+    "BM-GF_ROOF-CB3-BL022-493",
+    "BM-GF_ROOF-CB3-BL022-494",
+    "BM-GF_ROOF-CB3-BL022-495",
+    "BM-GF_ROOF-B3-BL022-1827",
+    "BM-GF_ROOF-B4-BL022-497",
+    "BM-GF_ROOF-B5-BL022-498",
+    "BM-GF_ROOF-CA-BL015-69E",
+    "BM-GF_ROOF-B4-BL010-508",
+    "BM-GF_ROOF-B4-BL009-49B:b4>v",
+    "BM-GF_ROOF-CB5-BL008-475",
+    "BM-GF_ROOF-CB1-BL007-4E1",
+    "BM-GF_ROOF-B27-BL002-532",
+    "BM-GF_ROOF-B9-BL011-5BD",
+    "BM-GF_ROOF-B26-BL014-4CC",
+    "BM-GF_ROOF-CB4-BL016-45C",
+    "BM-GF_ROOF-B22-BL013-496",
+    "BM-GF_ROOF-B1-BL004-476",
+    "BM-GF_ROOF-B1-BL004-477",
+    "BM-GF_ROOF-CB6-BL004-47C",
+    "BM-GF_ROOF-CB6-BL004-47B",
+    "BM-GF_ROOF-B21-BL001-468",
+    "BM-GF_ROOF-B29-BL039-465",
+    "BM-GF_ROOF-CB5-BL017-474",
+    "BM-GF_ROOF-B7-BA001-47D:b7>v",
+    "BM-GF_ROOF-CB4-BL016-45B",
+    "BM-GF_ROOF-B2-BL005-485",
+    "BM-GF_ROOF-B1-BL023-466",
+    "BM-GF_ROOF-B3-BL032-462",
+    "BM-GF_ROOF-B4-BL045-4DB",
+    "BM-GF_ROOF-B4-BL025-46B",
+    "BM-GF_ROOF-B28-BL026-46C",
+    "BM-GF_ROOF-B1-BL048-430",
+    "BM-GF_ROOF-B14-BL036-45F",
+    "BM-GF_ROOF-B20-BL020-453:b20>v",
+    "BM-GF_ROOF-B13-BL042-467",
+    "BM-GF_ROOF-B7-BL028-4B6",
+    "BM-GF_ROOF-B17-BL044-432",
+    "BM-GF_ROOF-B1-BL027-4B7",
+    "BM-GF_ROOF-B1-BL037-45E",
+    "BM-GF_ROOF-B7-BA003-470",
+    "BM-GF_ROOF-CB1-BL007-4E2",
+    "BM-GF_ROOF-B11-BL023-444",
+    "BM-GF_ROOF-B7-BA005-471",
+    "BM-GF_ROOF-B3-BL027-448",
+    "BM-GF_ROOF-B7-BA004-46F",
+    "BM-GF_ROOF-B2-BL028-449",
+    "BM-GF_ROOF-B2-BL016-492",
+    "BM-GF_ROOF-B16-BL030-473",
+    "BM-GF_ROOF-B4-BL040-446",
+    "BM-GF_ROOF-B1-BL040-445",
+    "BM-GF_ROOF-B7-BA002-46E",
+    "BM-GF_ROOF-B1-BL034-447",
+    "BM-GF_ROOF-B7-BA004-4D2",
+    "BM-GF_ROOF-B24-BL043-1814:B24>v",
+    "BM-GF_ROOF-CB2-BL038-42A",
+    "BM-GF_ROOF-CB2-BL038-42B",
+    "BM-GF_ROOF-B3-BL033-6B7",
+    "BM-1F_ROOF-CB11-BL024-6DA",
+    "BM-1F_ROOF-CB11-BL024-6DB",
+    "BM-1F_ROOF-CB11-BL024-6DC",
+    "BM-1F_ROOF-B4-BL011-711",
+    "BM-1F_ROOF-CB10-BL001-717",
+    "BM-1F_ROOF-CB13-BL004-76A",
+    "BM-1F_ROOF-CB12-BL003-6DD",
+    "BM-1F_ROOF-B18-BL008-6ED",
+    "BM-1F_ROOF-B5-BL007-6EC",
+    "BM-1F_ROOF-B25-BL006-6D1",
+    "BM-1F_ROOF-CB13-BL004-76B",
+    "BM-1F_ROOF-CB10-BL001-718",
+    "BM-1F_ROOF-B4-BA002-1828",
+    "BM-1F_ROOF-B4-BL025-6D9",
+    "BM-1F_ROOF-B11-BL025-6D8",
+    "BM-1F_ROOF-B4-BA001-1829",
+    "BM-1F_ROOF-B1-BL014-6D0",
+    "BM-1F_ROOF-B19-BL029-6CF",
+    "BM-1F_ROOF-B7-BL027-6CC",
+    "BM-1F_ROOF-B23-BL009-74B",
+    "BM-1F_ROOF-B7-BL017-6CD",
+    "BM-1F_ROOF-B4-BL032-6B5",
+    "BM-1F_ROOF-B1-BL016-6CE",
+    "BM-1F_ROOF-B1-BL028-6CB",
+    "BM-1F_ROOF-CB12-BL003-6DE",
+    "BM-1F_ROOF-B6-BL014-6C5",
+    "BM-1F_ROOF-B5-BL022-6C4",
+    "BM-1F_ROOF-B2-BL017-6CA",
+    "BM-1F_ROOF-B2-BL019-6BA",
+    "BM-1F_ROOF-B2-BL016-6C9",
+    "BM-1F_ROOF-CB9-BL023-6C6",
+    "BM-1F_ROOF-CB9-BL023-6C7",
+    "BM-1F_ROOF-CB9-BL023-6C8",
+    "BM-1F_ROOF-B3-BL023-6B9",
+    "BM-2F_ROOF-B2-BL006-790",
+    "BM-2F_ROOF-B1-BL006-78F",
+    "BM-2F_ROOF-B2-BL006-78E",
+    "BM-2F_ROOF-B2-BL010-78A",
+    "BM-2F_ROOF-B2-BL010-775",
+    "BM-2F_ROOF-B1-BL003-78C",
+    "BM-2F_ROOF-B1-BL002-78B",
+    "BM-2F_ROOF-B3-BL008-774",
+    "BM-2F_ROOF-B1-BL011-78D",
+    "BM-2F_ROOF-B7-BL001-7A1",
+    "BM-2F_ROOF-B15-BL004-7A9",
+    "BM-2F_ROOF-B3-BL002-79B",
+    "BM-2F_ROOF-B3-BL003-79C",
+    "BM-2F_ROOF-B3-BL007-79D",
+    "BM-2F_ROOF-B8-BL007-79E"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-007",
+   "flag_key": "eb5de37b31778d5d",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by rule_dependent_elements",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "113 beam occurrence(s) depend on P8-N11 (Beams crossed by service pipes are widened by 5 cm.), whose extent is not established (BLOCKED_METHOD).",
+   "issue_type": "MISSING_DIMENSION",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 389.327,
+   "question_for_engineer": "Which beams are crossed by service pipes (drainage, water, electrical, AC) and must be widened by 5 cm?",
+   "release_effect": "LOWER_BOUND",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "P8-N11",
+    "value": "Beams crossed by service pipes are widened by 5 cm."
+   },
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 8,
+     "sheet_title": "rule P8-N11"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK"
+   ],
+   "unit": "m beam",
+   "where_to_check": "ST7757.pdf, rule P8-N11, p.8"
+  },
+  {
+   "affected_facts": [
+    "member_type",
+    "section",
+    "reinforcement"
+   ],
+   "answer_options": [
+    {
+     "answer": "a schedule type",
+     "effect": "size and bars from that row"
+    },
+    {
+     "answer": "not a structural member",
+     "effect": "removed from the count"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "geometry counted; size and bars unknown",
+   "detector": "untyped_members",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "BEAM:1F_ROOF:dome ring (curved)",
+   "element_ids": [
+    "BM-1F_ROOF-UNTAGGED-BA003",
+    "BM-1F_ROOF-UNTAGGED-BA004",
+    "BM-1F_ROOF-UNTAGGED-BA005",
+    "BM-1F_ROOF-UNTAGGED-BA006",
+    "BM-1F_ROOF-UNTAGGED-BA007",
+    "BM-1F_ROOF-UNTAGGED-BA008"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-008",
+   "flag_key": "d8bd77cbe0931ce3",
+   "floor": "1F_ROOF",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by untyped_members",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "6 beam member(s) at 1F_ROOF are drawn without a type mark (dome ring (curved)).",
+   "issue_type": "MISSING_SCHEDULE",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 9.521,
+   "question_for_engineer": "These beam members at 1F_ROOF carry no mark. Which type is each (or are they not structural members)?",
+   "release_effect": "AUDIT_ONLY",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": null,
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam",
+   "where_to_check": "ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5"
+  },
+  {
+   "affected_facts": [
+    "member_type",
+    "section",
+    "reinforcement"
+   ],
+   "answer_options": [
+    {
+     "answer": "a schedule type",
+     "effect": "size and bars from that row"
+    },
+    {
+     "answer": "not a structural member",
+     "effect": "removed from the count"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "geometry counted; size and bars unknown",
+   "detector": "untyped_members",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "BEAM:1F_ROOF:no mark",
+   "element_ids": [
+    "BM-1F_ROOF-UNTAGGED-BL002-8912",
+    "BM-1F_ROOF-UNTAGGED-BL005-9062",
+    "BM-1F_ROOF-UNTAGGED-BL005-11912",
+    "BM-1F_ROOF-UNTAGGED-BL010-12388",
+    "BM-1F_ROOF-UNTAGGED-BL010-15888",
+    "BM-1F_ROOF-UNTAGGED-BL012-12638",
+    "BM-1F_ROOF-UNTAGGED-BL013-12638",
+    "BM-1F_ROOF-UNTAGGED-BL018-16004",
+    "BM-1F_ROOF-UNTAGGED-BL020-16087",
+    "BM-1F_ROOF-UNTAGGED-BL021-16482",
+    "BM-1F_ROOF-UNTAGGED-BL030-26861",
+    "BM-1F_ROOF-UNTAGGED-BL031-26861",
+    "BM-1F_ROOF-UNTAGGED-BL033-30758"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-009",
+   "flag_key": "fa00f0a097c290bb",
+   "floor": "1F_ROOF",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by untyped_members",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "13 beam member(s) at 1F_ROOF are drawn without a type mark (no mark).",
+   "issue_type": "MISSING_SCHEDULE",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 46.021,
+   "question_for_engineer": "These beam members at 1F_ROOF carry no mark. Which type is each (or are they not structural members)?",
+   "release_effect": "AUDIT_ONLY",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": null,
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam",
+   "where_to_check": "ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5"
+  },
+  {
+   "affected_facts": [
+    "member_type",
+    "section",
+    "reinforcement"
+   ],
+   "answer_options": [
+    {
+     "answer": "a schedule type",
+     "effect": "size and bars from that row"
+    },
+    {
+     "answer": "not a structural member",
+     "effect": "removed from the count"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "geometry counted; size and bars unknown",
+   "detector": "untyped_members",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "BEAM:2F_ROOF:no mark",
+   "element_ids": [
+    "BM-2F_ROOF-UNTAGGED-BL005-14112"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-010",
+   "flag_key": "4ec1c5894e430286",
+   "floor": "2F_ROOF",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by untyped_members",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "1 beam member(s) at 2F_ROOF are drawn without a type mark (no mark).",
+   "issue_type": "MISSING_SCHEDULE",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 3.25,
+   "question_for_engineer": "These beam members at 2F_ROOF carry no mark. Which type is each (or are they not structural members)?",
+   "release_effect": "AUDIT_ONLY",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": null,
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 6,
+     "sheet_title": "SECOND FLOOR ROOF SLAB"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam",
+   "where_to_check": "ST7757.dxf, SECOND FLOOR ROOF SLAB, p.6"
+  },
+  {
+   "affected_facts": [
+    "member_type",
+    "section",
+    "reinforcement"
+   ],
+   "answer_options": [
+    {
+     "answer": "a schedule type",
+     "effect": "size and bars from that row"
+    },
+    {
+     "answer": "not a structural member",
+     "effect": "removed from the count"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "geometry counted; size and bars unknown",
+   "detector": "untyped_members",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "BEAM:GF_ROOF:no mark",
+   "element_ids": [
+    "BM-GF_ROOF-UNTAGGED-BL021-12388",
+    "BM-GF_ROOF-UNTAGGED-BL021-15888",
+    "BM-GF_ROOF-UNTAGGED-BL029-16412",
+    "BM-GF_ROOF-UNTAGGED-BL031-16567",
+    "BM-GF_ROOF-UNTAGGED-BL046-31108"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-011",
+   "flag_key": "4608c7ba30e258d8",
+   "floor": "GF_ROOF",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by untyped_members",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "5 beam member(s) at GF_ROOF are drawn without a type mark (no mark).",
+   "issue_type": "MISSING_SCHEDULE",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 11.489,
+   "question_for_engineer": "These beam members at GF_ROOF carry no mark. Which type is each (or are they not structural members)?",
+   "release_effect": "AUDIT_ONLY",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": null,
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "1",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam",
+   "where_to_check": "ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule width (cm)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn width (cm)",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "45.0",
+      "40.0"
+     ]
+    ]
+   },
+   "current_interpretation": "45.0 (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "BEAM:B21:OVERRIDE",
+   "element_ids": [
+    "BM-GF_ROOF-B21-BL001-468"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-012",
+   "flag_key": "9fe58a7ccf5d017e",
+   "floor": "GF_ROOF",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "1 beam occurrence(s) of type B21: schedule width (cm) differs from drawn width (cm) (45.0 vs 40.0).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 7.768,
+   "question_for_engineer": "For beam type B21: does the schedule width (cm) govern, or the drawn width (cm) (45.0 vs 40.0)?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule width (cm)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 10,
+     "sheet_title": "schedule (simple beam)",
+     "text": "B21"
+    },
+    "value": 45.0
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn width (cm)",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "468",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "B21",
+     "xy_mm": [
+      28103,
+      12422
+     ]
+    },
+    "value": 40.0
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 10,
+     "sheet_title": "schedule (simple beam)",
+     "text": "B21"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "468",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "B21",
+     "xy_mm": [
+      28103,
+      12422
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (simple beam), p.10; ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule width (cm)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn width (cm)",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "25.0",
+      "20.0"
+     ]
+    ]
+   },
+   "current_interpretation": "25.0 (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "BEAM:B29:OVERRIDE",
+   "element_ids": [
+    "BM-GF_ROOF-B29-BL039-465"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-013",
+   "flag_key": "3fd2b05822e5c5e8",
+   "floor": "GF_ROOF",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "1 beam occurrence(s) of type B29: schedule width (cm) differs from drawn width (cm) (25.0 vs 20.0).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 7.21,
+   "question_for_engineer": "For beam type B29: does the schedule width (cm) govern, or the drawn width (cm) (25.0 vs 20.0)?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule width (cm)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 10,
+     "sheet_title": "schedule (simple beam)",
+     "text": "B29"
+    },
+    "value": 25.0
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn width (cm)",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "465",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "B29",
+     "xy_mm": [
+      23682,
+      12602
+     ]
+    },
+    "value": 20.0
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 10,
+     "sheet_title": "schedule (simple beam)",
+     "text": "B29"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "465",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "B29",
+     "xy_mm": [
+      23682,
+      12602
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (simple beam), p.10; ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule width (cm)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn width (cm)",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "25.0",
+      "20.0"
+     ]
+    ]
+   },
+   "current_interpretation": "25.0 (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "BEAM:B6:OVERRIDE",
+   "element_ids": [
+    "BM-1F_ROOF-B6-BL014-6C5"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-014",
+   "flag_key": "84d518bac75d8660",
+   "floor": "1F_ROOF",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "1 beam occurrence(s) of type B6: schedule width (cm) differs from drawn width (cm) (25.0 vs 20.0).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 4.729,
+   "question_for_engineer": "For beam type B6: does the schedule width (cm) govern, or the drawn width (cm) (25.0 vs 20.0)?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule width (cm)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 10,
+     "sheet_title": "schedule (simple beam)",
+     "text": "B6"
+    },
+    "value": 25.0
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn width (cm)",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "6C5",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "B6",
+     "xy_mm": [
+      24665,
+      18398
+     ]
+    },
+    "value": 20.0
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 10,
+     "sheet_title": "schedule (simple beam)",
+     "text": "B6"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "6C5",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "B6",
+     "xy_mm": [
+      24665,
+      18398
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (simple beam), p.10; ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule width (cm)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn width (cm)",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "25.0",
+      "20.0"
+     ]
+    ]
+   },
+   "current_interpretation": "25.0 (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "BEAM:CB10:OVERRIDE",
+   "element_ids": [
+    "BM-1F_ROOF-CB10-BL001-717",
+    "BM-1F_ROOF-CB10-BL001-718"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-015",
+   "flag_key": "59633063ff619eab",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "2 beam occurrence(s) of type CB10: schedule width (cm) differs from drawn width (cm) (25.0 vs 20.0).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 7.025,
+   "question_for_engineer": "For beam type CB10: does the schedule width (cm) govern, or the drawn width (cm) (25.0 vs 20.0)?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule width (cm)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 10,
+     "sheet_title": "schedule (simple beam)",
+     "text": "CB10"
+    },
+    "value": 25.0
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn width (cm)",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "717",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "CB10",
+     "xy_mm": [
+      12138,
+      9903
+     ]
+    },
+    "value": 20.0
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 10,
+     "sheet_title": "schedule (simple beam)",
+     "text": "CB10"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "717",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "CB10",
+     "xy_mm": [
+      12138,
+      9903
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "718",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "CB10",
+     "xy_mm": [
+      12138,
+      13663
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (simple beam), p.10; ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule width (cm)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn width (cm)",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "20.0",
+      "25.0"
+     ]
+    ]
+   },
+   "current_interpretation": "20.0 (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "BEAM:CB2:OVERRIDE",
+   "element_ids": [
+    "BM-GF_ROOF-CB2-BL038-42A",
+    "BM-GF_ROOF-CB2-BL038-42B"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-016",
+   "flag_key": "64b8735fef6cf21f",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "2 beam occurrence(s) of type CB2: schedule width (cm) differs from drawn width (cm) (20.0 vs 25.0).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 7.77,
+   "question_for_engineer": "For beam type CB2: does the schedule width (cm) govern, or the drawn width (cm) (20.0 vs 25.0)?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule width (cm)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 10,
+     "sheet_title": "schedule (simple beam)",
+     "text": "CB2"
+    },
+    "value": 20.0
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn width (cm)",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "42A",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB2",
+     "xy_mm": [
+      20953,
+      20890
+     ]
+    },
+    "value": 25.0
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 10,
+     "sheet_title": "schedule (simple beam)",
+     "text": "CB2"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "42A",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB2",
+     "xy_mm": [
+      20953,
+      20890
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "42B",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB2",
+     "xy_mm": [
+      25130,
+      20890
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (simple beam), p.10; ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4"
+  },
+  {
+   "affected_facts": [
+    "member_type",
+    "section",
+    "reinforcement"
+   ],
+   "answer_options": [
+    {
+     "answer": "CB3",
+     "effect": "size and bars from CB3"
+    },
+    {
+     "answer": "B3",
+     "effect": "size and bars from B3"
+    },
+    {
+     "answer": "two separate members",
+     "effect": "split the outline; both rows apply"
+    }
+   ],
+   "context": {},
+   "current_interpretation": null,
+   "detector": "competing_tags",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "BM-GF_ROOF-CB3-BL022-494+BM-GF_ROOF-B3-BL022-1827",
+   "element_ids": [
+    "BM-GF_ROOF-CB3-BL022-494+BM-GF_ROOF-B3-BL022-1827"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-017",
+   "flag_key": "7be96afb858df9b1",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by competing_tags",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "One drawn beam carries 2 different type marks (CB3, B3); both marks sit on the same drawn span.",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 3.35,
+   "question_for_engineer": "This beam is marked CB3 and B3. Which type is it - or is it two members drawn as one?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "HIGH",
+   "source_a": {
+    "description": "mark 1",
+    "value": "CB3"
+   },
+   "source_b": {
+    "description": "mark 2",
+    "value": "B3"
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "494",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB3",
+     "xy_mm": [
+      25635,
+      8415
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "1827",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "B3",
+     "xy_mm": [
+      25171,
+      9058
+     ]
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam",
+   "where_to_check": "ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4"
+  },
+  {
+   "affected_facts": [
+    "span_assignment"
+   ],
+   "answer_options": [
+    {
+     "answer": "the tagged plan spans",
+     "effect": "schedule bars assigned to the drawn spans; schedule spans need correction"
+    },
+    {
+     "answer": "include the adjacent span(s)",
+     "effect": "the member is longer than tagged"
+    }
+   ],
+   "context": {},
+   "current_interpretation": null,
+   "detector": "span_mismatches",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "CBO-GFRS-CB4-BL016",
+   "element_ids": [
+    "CBO-GFRS-CB4-BL016"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-018",
+   "flag_key": "e5acbe35fcc3d54f",
+   "floor": "GF_ROOF",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by span_mismatches",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "beam CB4: schedule spans [3.3, 3.7] but plan spans [2.724, 3.75] (SPAN_LENGTH_CONFLICT).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 6.474,
+   "question_for_engineer": "Which plan members form CB4 (schedule spans [3.3, 3.7])?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "schedule spans",
+    "value": [
+     3.3,
+     3.7
+    ]
+   },
+   "source_b": {
+    "description": "plan spans",
+    "value": [
+     2.724,
+     3.75
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "45C",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB4"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "45B",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB4"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "2933",
+     "page": 11,
+     "sheet_title": "schedule (continuous beam)",
+     "text": "CB4"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (continuous beam), p.11; ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4"
+  },
+  {
+   "affected_facts": [
+    "span_assignment"
+   ],
+   "answer_options": [
+    {
+     "answer": "the tagged plan spans",
+     "effect": "schedule bars assigned to the drawn spans; schedule spans need correction"
+    },
+    {
+     "answer": "include the adjacent span(s)",
+     "effect": "the member is longer than tagged"
+    }
+   ],
+   "context": {},
+   "current_interpretation": null,
+   "detector": "span_mismatches",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "CBO-GFRS-CB5-BL008",
+   "element_ids": [
+    "CBO-GFRS-CB5-BL008"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-019",
+   "flag_key": "56e725132bd3d588",
+   "floor": "GF_ROOF",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by span_mismatches",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "beam CB5: schedule spans [2.5, 4.5] but plan spans [2.85] (SPAN_COUNT_CONFLICT).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 2.85,
+   "question_for_engineer": "Which plan members form CB5 (schedule spans [2.5, 4.5])?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "schedule spans",
+    "value": [
+     2.5,
+     4.5
+    ]
+   },
+   "source_b": {
+    "description": "plan spans",
+    "value": [
+     2.85
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "475",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB5"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "299F",
+     "page": 11,
+     "sheet_title": "schedule (continuous beam)",
+     "text": "CB5"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (continuous beam), p.11; ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4"
+  },
+  {
+   "affected_facts": [
+    "span_assignment"
+   ],
+   "answer_options": [
+    {
+     "answer": "the tagged plan spans",
+     "effect": "schedule bars assigned to the drawn spans; schedule spans need correction"
+    },
+    {
+     "answer": "include the adjacent span(s)",
+     "effect": "the member is longer than tagged"
+    }
+   ],
+   "context": {},
+   "current_interpretation": null,
+   "detector": "span_mismatches",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "CBO-GFRS-CB5-BL017",
+   "element_ids": [
+    "CBO-GFRS-CB5-BL017"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-020",
+   "flag_key": "8ef91483105ddbe2",
+   "floor": "GF_ROOF",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by span_mismatches",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "beam CB5: schedule spans [2.5, 4.5] but plan spans [4.2] (SPAN_COUNT_CONFLICT).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 4.2,
+   "question_for_engineer": "Which plan members form CB5 (schedule spans [2.5, 4.5])?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "schedule spans",
+    "value": [
+     2.5,
+     4.5
+    ]
+   },
+   "source_b": {
+    "description": "plan spans",
+    "value": [
+     4.2
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "474",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB5"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "299F",
+     "page": 11,
+     "sheet_title": "schedule (continuous beam)",
+     "text": "CB5"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (continuous beam), p.11; ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4"
+  },
+  {
+   "affected_facts": [
+    "span_assignment"
+   ],
+   "answer_options": [
+    {
+     "answer": "the tagged plan spans",
+     "effect": "schedule bars assigned to the drawn spans; schedule spans need correction"
+    },
+    {
+     "answer": "include the adjacent span(s)",
+     "effect": "the member is longer than tagged"
+    },
+    {
+     "answer": "extension as computed",
+     "effect": "[3.825, 6.545, 6.95]"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "would match if extended: [3.825, 6.545, 6.95]",
+   "detector": "span_mismatches",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "CBO-GFRS-CB8-BL024",
+   "element_ids": [
+    "CBO-GFRS-CB8-BL024"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-021",
+   "flag_key": "ab4eaad06cdd358b",
+   "floor": "GF_ROOF",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by span_mismatches",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "beam CB8: schedule spans [3.7, 6.4, 6.8] but plan spans [6.545, 6.95] (SPAN_COUNT_CONFLICT).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 13.495,
+   "question_for_engineer": "Which plan members form CB8 (schedule spans [3.7, 6.4, 6.8])?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "schedule spans",
+    "value": [
+     3.7,
+     6.4,
+     6.8
+    ]
+   },
+   "source_b": {
+    "description": "plan spans",
+    "value": [
+     6.545,
+     6.95
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "69F",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB8"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "6A0",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "CB8"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "2574",
+     "page": 11,
+     "sheet_title": "schedule (continuous beam)",
+     "text": "CB8"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (continuous beam), p.11; ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4"
+  },
+  {
+   "affected_facts": [
+    "section",
+    "reinforcement"
+   ],
+   "answer_options": [
+    {
+     "answer": "row 2ABA",
+     "effect": "use {'BOT-B': '10', 'BOT-D': '16', 'D': '8', 'H': '50', 'STI-B': '10', 'TOP-B': '20', 'TOP-D': '18', 'W': '100'}"
+    },
+    {
+     "answer": "row 1FBB",
+     "effect": "use {'BOT-B': '10', 'BOT-D': '18', 'D': '8', 'H': '50', 'STI-B': '10', 'TOP-B': '10', 'TOP-D': '18', 'W': '80'}"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "drawn width 987 mm fits B = 100 cm (geometry hint only, not applied)",
+   "detector": "duplicate_definitions",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "SBT:SB2",
+   "element_ids": [
+    "BM-FOUNDATION-SB2-BD003"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-022",
+   "flag_key": "136ed013b3085f74",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by duplicate_definitions",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "Schedule key SB2 is defined 2 times with different values.",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 5.11,
+   "question_for_engineer": "Schedule key SB2 appears twice. Which row is valid?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "HIGH",
+   "source_a": {
+    "description": "row 2ABA",
+    "value": {
+     "BOT-B": "10",
+     "BOT-D": "16",
+     "D": "8",
+     "H": "50",
+     "STI-B": "10",
+     "TOP-B": "20",
+     "TOP-D": "18",
+     "W": "100"
+    }
+   },
+   "source_b": {
+    "description": "row 1FBB",
+    "value": {
+     "BOT-B": "10",
+     "BOT-D": "18",
+     "D": "8",
+     "H": "50",
+     "STI-B": "10",
+     "TOP-B": "10",
+     "TOP-D": "18",
+     "W": "80"
+    }
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "2ABA",
+     "page": 10,
+     "sheet_title": "schedule (strap beam)",
+     "text": "SB2"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "1FBB",
+     "page": 10,
+     "sheet_title": "schedule (strap beam)",
+     "text": "SB2"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (strap beam), p.10"
+  },
+  {
+   "affected_facts": [
+    "member_assignment",
+    "member_type"
+   ],
+   "answer_options": [
+    {
+     "answer": "BL013",
+     "effect": "B6 assigned to BL013"
+    },
+    {
+     "answer": "BA002",
+     "effect": "B6 assigned to BA002"
+    },
+    {
+     "answer": "BL009",
+     "effect": "B6 assigned to BL009"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "counted as a mark occurrence; member not assigned",
+   "detector": "ambiguous_bindings",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "BM-1F_ROOF-B6-UNBOUND-6BD",
+   "element_ids": [
+    "BM-1F_ROOF-B6-UNBOUND-6BD"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-023",
+   "flag_key": "19f766b53714dd1c",
+   "floor": "1F_ROOF",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by ambiguous_bindings",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "Mark B6 sits between 3 members at similar distance; the member it names is not certain.",
+   "issue_type": "UNBOUND_OCCURRENCE",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": null,
+   "question_for_engineer": "Which member does mark B6 refer to?",
+   "release_effect": "AUDIT_ONLY",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "mark",
+    "value": "B6"
+   },
+   "source_b": {
+    "description": "candidate members",
+    "value": [
+     "BL013",
+     "BA002",
+     "BL009"
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "6BD",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "B6",
+     "xy_mm": [
+      14483,
+      15161
+     ]
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null,
+   "where_to_check": "ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5"
+  },
+  {
+   "affected_facts": [
+    "member_assignment",
+    "member_type"
+   ],
+   "answer_options": [
+    {
+     "answer": "BL031",
+     "effect": "B6 assigned to BL031"
+    },
+    {
+     "answer": "BA005",
+     "effect": "B6 assigned to BA005"
+    },
+    {
+     "answer": "BA006",
+     "effect": "B6 assigned to BA006"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "counted as a mark occurrence; member not assigned",
+   "detector": "ambiguous_bindings",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "BM-1F_ROOF-B6-UNBOUND-6D4",
+   "element_ids": [
+    "BM-1F_ROOF-B6-UNBOUND-6D4"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-024",
+   "flag_key": "81855f7056b6f094",
+   "floor": "1F_ROOF",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by ambiguous_bindings",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "Mark B6 sits between 3 members at similar distance; the member it names is not certain.",
+   "issue_type": "UNBOUND_OCCURRENCE",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": null,
+   "question_for_engineer": "Which member does mark B6 refer to?",
+   "release_effect": "AUDIT_ONLY",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "mark",
+    "value": "B6"
+   },
+   "source_b": {
+    "description": "candidate members",
+    "value": [
+     "BL031",
+     "BA005",
+     "BA006"
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "6D4",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "B6",
+     "xy_mm": [
+      29103,
+      15184
+     ]
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null,
+   "where_to_check": "ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5"
+  },
+  {
+   "affected_facts": [
+    "member_assignment",
+    "member_type"
+   ],
+   "answer_options": [
+    {
+     "answer": "BA007",
+     "effect": "B6 assigned to BA007"
+    },
+    {
+     "answer": "BA008",
+     "effect": "B6 assigned to BA008"
+    },
+    {
+     "answer": "BL030",
+     "effect": "B6 assigned to BL030"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "counted as a mark occurrence; member not assigned",
+   "detector": "ambiguous_bindings",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "BM-1F_ROOF-B6-UNBOUND-6D7",
+   "element_ids": [
+    "BM-1F_ROOF-B6-UNBOUND-6D7"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-025",
+   "flag_key": "c38041be901de6d9",
+   "floor": "1F_ROOF",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by ambiguous_bindings",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "Mark B6 sits between 3 members at similar distance; the member it names is not certain.",
+   "issue_type": "UNBOUND_OCCURRENCE",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": null,
+   "question_for_engineer": "Which member does mark B6 refer to?",
+   "release_effect": "AUDIT_ONLY",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "mark",
+    "value": "B6"
+   },
+   "source_b": {
+    "description": "candidate members",
+    "value": [
+     "BA007",
+     "BA008",
+     "BL030"
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "6D7",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "B6",
+     "xy_mm": [
+      29103,
+      10512
+     ]
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null,
+   "where_to_check": "ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5"
+  },
+  {
+   "affected_facts": [
+    "member_assignment",
+    "member_type"
+   ],
+   "answer_options": [
+    {
+     "answer": "BL012",
+     "effect": "B6 assigned to BL012"
+    },
+    {
+     "answer": "BA003",
+     "effect": "B6 assigned to BA003"
+    },
+    {
+     "answer": "BA004",
+     "effect": "B6 assigned to BA004"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "counted as a mark occurrence; member not assigned",
+   "detector": "ambiguous_bindings",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "BM-1F_ROOF-B6-UNBOUND-76C",
+   "element_ids": [
+    "BM-1F_ROOF-B6-UNBOUND-76C"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-026",
+   "flag_key": "fa4a8793251b7e29",
+   "floor": "1F_ROOF",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by ambiguous_bindings",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "Mark B6 sits between 3 members at similar distance; the member it names is not certain.",
+   "issue_type": "UNBOUND_OCCURRENCE",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": null,
+   "question_for_engineer": "Which member does mark B6 refer to?",
+   "release_effect": "AUDIT_ONLY",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "mark",
+    "value": "B6"
+   },
+   "source_b": {
+    "description": "candidate members",
+    "value": [
+     "BL012",
+     "BA003",
+     "BA004"
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "76C",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "B6",
+     "xy_mm": [
+      14622,
+      9800
+     ]
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null,
+   "where_to_check": "ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5"
+  },
+  {
+   "affected_facts": [
+    "member_assignment",
+    "member_type"
+   ],
+   "answer_options": [
+    {
+     "answer": "BL029",
+     "effect": "B1 assigned to BL029"
+    },
+    {
+     "answer": "BL016",
+     "effect": "B1 assigned to BL016"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "counted as a mark occurrence; member not assigned",
+   "detector": "ambiguous_bindings",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "BM-GF_ROOF-B1-UNBOUND-45D",
+   "element_ids": [
+    "BM-GF_ROOF-B1-UNBOUND-45D"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-027",
+   "flag_key": "52d31e9fcfdccc19",
+   "floor": "GF_ROOF",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by ambiguous_bindings",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "Mark B1 sits between 2 members at similar distance; the member it names is not certain.",
+   "issue_type": "UNBOUND_OCCURRENCE",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": null,
+   "question_for_engineer": "Which member does mark B1 refer to?",
+   "release_effect": "AUDIT_ONLY",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "mark",
+    "value": "B1"
+   },
+   "source_b": {
+    "description": "candidate members",
+    "value": [
+     "BL029",
+     "BL016"
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "45D",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "B1",
+     "xy_mm": [
+      16626,
+      16532
+     ]
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null,
+   "where_to_check": "ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4"
+  },
+  {
+   "affected_facts": [
+    "member_assignment",
+    "member_type"
+   ],
+   "answer_options": [
+    {
+     "answer": "BL031",
+     "effect": "B8 assigned to BL031"
+    },
+    {
+     "answer": "BA004",
+     "effect": "B8 assigned to BA004"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "counted as a mark occurrence; member not assigned",
+   "detector": "ambiguous_bindings",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "BM-GF_ROOF-B8-UNBOUND-472",
+   "element_ids": [
+    "BM-GF_ROOF-B8-UNBOUND-472"
+   ],
+   "element_type": "BEAM",
+   "flag_id": "STR-BEA-028",
+   "flag_key": "501e2bea96ca6ee3",
+   "floor": "GF_ROOF",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by ambiguous_bindings",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "Mark B8 sits between 2 members at similar distance; the member it names is not certain.",
+   "issue_type": "UNBOUND_OCCURRENCE",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": null,
+   "question_for_engineer": "Which member does mark B8 refer to?",
+   "release_effect": "AUDIT_ONLY",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "mark",
+    "value": "B8"
+   },
+   "source_b": {
+    "description": "candidate members",
+    "value": [
+     "BL031",
+     "BA004"
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "472",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "B8",
+     "xy_mm": [
+      30868,
+      18194
+     ]
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null,
+   "where_to_check": "ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4"
+  },
+  {
+   "affected_facts": [
+    "boq_item"
+   ],
+   "answer_options": [
+    {
+     "answer": "column stopping at FOUNDATION",
+     "effect": "stays in the column count"
+    },
+    {
+     "answer": "foundation stub / pedestal",
+     "effect": "moves to the foundation item"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "counted as column occurrences at FOUNDATION only",
+   "detector": "single_level_members",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "CN:FOUNDATION",
+   "element_ids": [
+    "COL-CN-X16-Y03-FOUNDATION",
+    "COL-CN-X?-Y?@24058-12787-FOUNDATION",
+    "COL-CN-X?-Y?@28583-12787-FOUNDATION",
+    "COL-CN-X15-Y?@31208-15726-FOUNDATION",
+    "COL-CN-X?-Y?@29108-18112-FOUNDATION",
+    "COL-CN-X?-Y10@31108-20498-FOUNDATION"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-001",
+   "flag_key": "27de4e7a2881df97",
+   "floor": "FOUNDATION",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by single_level_members",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "PLAN_MEMBER_TAG",
+   "issue_summary": "Type CN occurs only at FOUNDATION (6 occurrence(s)) while other columns continue upward.",
+   "issue_type": "AMBIGUOUS_APPLICABILITY",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 6,
+   "question_for_engineer": "Is CN a column that stops at FOUNDATION, or a short stub / pedestal that belongs to the foundation item?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "LOW",
+   "source_a": null,
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "text": "CN"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "CN"
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FOUNDATION PLAN, p.2"
+  },
+  {
+   "affected_facts": [
+    "transverse_count"
+   ],
+   "answer_options": [
+    {
+     "answer": "tie sets per metre",
+     "effect": "each level has all ties of the band"
+    },
+    {
+     "answer": "single ties per metre",
+     "effect": "the count is shared between the ties of a level"
+    }
+   ],
+   "context": {},
+   "current_interpretation": null,
+   "detector": "transverse_rules",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "P9-COL-TIES:per_metre",
+   "element_ids": [
+    "COL-C10-X15-Y01-FOUNDATION",
+    "COL-C10-X15-Y01-GF",
+    "COL-C11-X06-Y04-FOUNDATION",
+    "COL-C11-X06-Y04-GF",
+    "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+    "COL-C11-X?-Y01@17913-7462-GF",
+    "COL-C5-X05-Y04-FOUNDATION",
+    "COL-C5-X05-Y04-GF",
+    "COL-C5-X11-Y10-FOUNDATION",
+    "COL-C5-X11-Y10-GF",
+    "COL-C5-X14-Y02-FOUNDATION",
+    "COL-C5-X14-Y02-GF",
+    "COL-C6-X08-Y04-1F",
+    "COL-C6-X08-Y04-FOUNDATION",
+    "COL-C6-X08-Y04-GF",
+    "COL-C8-X12-Y02-1F",
+    "COL-C8-X12-Y02-FOUNDATION",
+    "COL-C8-X12-Y02-GF",
+    "COL-C8-X15-Y06-1F",
+    "COL-C8-X15-Y06-FOUNDATION",
+    "COL-C8-X15-Y06-GF",
+    "COL-C9-X10-Y07-1F",
+    "COL-C9-X10-Y07-2F",
+    "COL-C9-X10-Y07-FOUNDATION",
+    "COL-C9-X10-Y07-GF",
+    "COL-C9-X13-Y08-1F",
+    "COL-C9-X13-Y08-FOUNDATION",
+    "COL-C9-X13-Y08-GF",
+    "COL-P.C-X08-Y02-1F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-002",
+   "flag_key": "2e23673c1966908b",
+   "floor": null,
+   "generic_rule_candidate": "Per-metre transverse counts on multi-tie arrangements: the consultant's reading may become a generic convention after review.",
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by transverse_rules",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "ST. OF COLUMN- 6Ø8/m (column ties) gives a count per metre, but 2 band(s) use more than one closed tie per level; whether the count is of tie SETS or of single ties is not stated.",
+   "issue_type": "AMBIGUOUS_APPLICABILITY",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 29,
+   "question_for_engineer": "ST. OF COLUMN- 6Ø8/m (column ties): is the per-metre count the number of tie sets (all closed ties at one level) or the number of single ties?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "HIGH",
+   "source_a": {
+    "description": "rule",
+    "value": "ST. OF COLUMN- 6Ø8/m (column ties)"
+   },
+   "source_b": {
+    "description": "ties per level in the multi-tie bands",
+    "value": {
+     "TIE_50_LT_L_LT_80": 2,
+     "TIE_80_LT_L_LT_120": 3
+    }
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.pdf, DETAILS OF COLUMN REINFORCEMENT (schedule sheet), p.9"
+  },
+  {
+   "affected_facts": [
+    "tie_size"
+   ],
+   "answer_options": [
+    {
+     "answer": "scale the sketch",
+     "effect": "tie sizes from the sketch fractions"
+    },
+    {
+     "answer": "specific bar grouping",
+     "effect": "tie sizes from the stated grouping"
+    }
+   ],
+   "context": {},
+   "current_interpretation": null,
+   "detector": "detail_count_mismatches",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "TIE_50_LT_L_LT_80:10:8",
+   "element_ids": [
+    "COL-C5-X14-Y02-FOUNDATION",
+    "COL-C5-X05-Y04-FOUNDATION",
+    "COL-C5-X11-Y10-FOUNDATION",
+    "COL-C5-X14-Y02-GF",
+    "COL-C5-X05-Y04-GF",
+    "COL-C5-X11-Y10-GF",
+    "COL-C6-X08-Y04-FOUNDATION",
+    "COL-C6-X08-Y04-GF",
+    "COL-C9-X10-Y07-2F",
+    "COL-C10-X15-Y01-FOUNDATION",
+    "COL-C10-X15-Y01-GF"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-003",
+   "flag_key": "d36751d764ff7264",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by detail_count_mismatches",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "Type C10 (FOUNDATION), C10 (GF), C5 (FOUNDATION), C5 (GF), C6 (FOUNDATION), C6 (GF), C9 (2F) has 10 main bars but the detail sketch for its band shows 8; which bars each tie encloses is not shown.",
+   "issue_type": "AMBIGUOUS_APPLICABILITY",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 11,
+   "question_for_engineer": "For C10 (FOUNDATION), C10 (GF), C5 (FOUNDATION), C5 (GF), C6 (FOUNDATION), C6 (GF), C9 (2F) (10 bars): which bars does each overlapping tie enclose?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "LOW",
+   "source_a": {
+    "description": "schedule bars",
+    "value": 10
+   },
+   "source_b": {
+    "description": "bars in band sketch",
+    "value": 8
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.pdf, DETAILS OF COLUMN REINFORCEMENT (schedule sheet), p.9"
+  },
+  {
+   "affected_facts": [
+    "tie_size"
+   ],
+   "answer_options": [
+    {
+     "answer": "scale the sketch",
+     "effect": "tie sizes from the sketch fractions"
+    },
+    {
+     "answer": "specific bar grouping",
+     "effect": "tie sizes from the stated grouping"
+    }
+   ],
+   "context": {},
+   "current_interpretation": null,
+   "detector": "detail_count_mismatches",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "TIE_80_LT_L_LT_120:14:12",
+   "element_ids": [
+    "COL-C9-X10-Y07-FOUNDATION",
+    "COL-C9-X13-Y08-FOUNDATION",
+    "COL-C9-X10-Y07-GF",
+    "COL-C9-X13-Y08-GF",
+    "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+    "COL-C11-X06-Y04-FOUNDATION",
+    "COL-C11-X?-Y01@17913-7462-GF",
+    "COL-C11-X06-Y04-GF"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-004",
+   "flag_key": "42c6b2ed898daffb",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by detail_count_mismatches",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "Type C11 (FOUNDATION), C11 (GF), C9 (FOUNDATION), C9 (GF) has 14 main bars but the detail sketch for its band shows 12; which bars each tie encloses is not shown.",
+   "issue_type": "AMBIGUOUS_APPLICABILITY",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 8,
+   "question_for_engineer": "For C11 (FOUNDATION), C11 (GF), C9 (FOUNDATION), C9 (GF) (14 bars): which bars does each overlapping tie enclose?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "LOW",
+   "source_a": {
+    "description": "schedule bars",
+    "value": 14
+   },
+   "source_b": {
+    "description": "bars in band sketch",
+    "value": 12
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.pdf, DETAILS OF COLUMN REINFORCEMENT (schedule sheet), p.9"
+  },
+  {
+   "affected_facts": [
+    "tie_size"
+   ],
+   "answer_options": [
+    {
+     "answer": "scale the sketch",
+     "effect": "tie sizes from the sketch fractions"
+    },
+    {
+     "answer": "specific bar grouping",
+     "effect": "tie sizes from the stated grouping"
+    }
+   ],
+   "context": {},
+   "current_interpretation": null,
+   "detector": "detail_count_mismatches",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "TIE_L_LE_50:6:4",
+   "element_ids": [
+    "COL-C1-X09-Y09-1F",
+    "COL-C1-X09-Y09-2F",
+    "COL-C2-X09-Y07-2F",
+    "COL-C2-X10-Y09-2F",
+    "COL-C2-X08-Y10-2F",
+    "COL-C2-X09-Y10-2F",
+    "COL-C3-X05-Y02-1F",
+    "COL-C3-X08-Y09-1F",
+    "COL-C3-X08-Y09-2F",
+    "COL-C5-X11-Y10-2F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-005",
+   "flag_key": "b8c903ac066763f7",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by detail_count_mismatches",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "Type C1 (1F), C1 (2F), C2 (2F), C3 (1F), C3 (2F), C5 (2F) has 6 main bars but the detail sketch for its band shows 4; which bars each tie encloses is not shown.",
+   "issue_type": "AMBIGUOUS_APPLICABILITY",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 10,
+   "question_for_engineer": "For C1 (1F), C1 (2F), C2 (2F), C3 (1F), C3 (2F), C5 (2F) (6 bars): which bars does each overlapping tie enclose?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "LOW",
+   "source_a": {
+    "description": "schedule bars",
+    "value": 6
+   },
+   "source_b": {
+    "description": "bars in band sketch",
+    "value": 4
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.pdf, DETAILS OF COLUMN REINFORCEMENT (schedule sheet), p.9"
+  },
+  {
+   "affected_facts": [
+    "tie_size"
+   ],
+   "answer_options": [
+    {
+     "answer": "scale the sketch",
+     "effect": "tie sizes from the sketch fractions"
+    },
+    {
+     "answer": "specific bar grouping",
+     "effect": "tie sizes from the stated grouping"
+    }
+   ],
+   "context": {},
+   "current_interpretation": null,
+   "detector": "detail_count_mismatches",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "TIE_L_LE_50:8:4",
+   "element_ids": [
+    "COL-C-X01-Y01-FOUNDATION",
+    "COL-C-X06-Y01-FOUNDATION",
+    "COL-C-X16-Y01-FOUNDATION",
+    "COL-C-X01-Y05-FOUNDATION",
+    "COL-C-X02-Y05-FOUNDATION",
+    "COL-C-X01-Y01-GF",
+    "COL-C-X06-Y01-GF",
+    "COL-C-X16-Y01-GF",
+    "COL-C-X01-Y05-GF",
+    "COL-C-X02-Y05-GF",
+    "COL-C1-X09-Y09-FOUNDATION",
+    "COL-C1-X09-Y09-GF",
+    "COL-C2-X09-Y07-FOUNDATION",
+    "COL-C2-X10-Y09-FOUNDATION",
+    "COL-C2-X08-Y10-FOUNDATION",
+    "COL-C2-X09-Y10-FOUNDATION",
+    "COL-C2-X09-Y07-GF",
+    "COL-C2-X10-Y09-GF",
+    "COL-C2-X08-Y10-GF",
+    "COL-C2-X09-Y10-GF",
+    "COL-C2-X09-Y07-1F",
+    "COL-C2-X10-Y09-1F",
+    "COL-C2-X08-Y10-1F",
+    "COL-C2-X09-Y10-1F",
+    "COL-C3-X04-Y01-FOUNDATION",
+    "COL-C3-X12-Y01-FOUNDATION",
+    "COL-C3-X05-Y02-FOUNDATION",
+    "COL-C3-X03-Y04-FOUNDATION",
+    "COL-C3-X16-Y06-FOUNDATION",
+    "COL-C3-X08-Y09-FOUNDATION",
+    "COL-C3-X04-Y01-GF",
+    "COL-C3-X12-Y01-GF",
+    "COL-C3-X05-Y02-GF",
+    "COL-C3-X03-Y04-GF",
+    "COL-C3-X16-Y06-GF",
+    "COL-C3-X08-Y09-GF",
+    "COL-C4-X13-Y10-FOUNDATION",
+    "COL-C4-X15-Y10-FOUNDATION",
+    "COL-C4-X13-Y10-GF",
+    "COL-C4-X15-Y10-GF",
+    "COL-C4-X13-Y10-1F",
+    "COL-C4-X15-Y10-1F",
+    "COL-C5-X14-Y02-1F",
+    "COL-C5-X05-Y04-1F",
+    "COL-C5-X11-Y10-1F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-006",
+   "flag_key": "467b2591ed2a06e1",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by detail_count_mismatches",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "Type C (FOUNDATION), C (GF), C1 (FOUNDATION), C1 (GF), C2 (1F), C2 (FOUNDATION), C2 (GF), C3 (FOUNDATION), C3 (GF), C4 (1F), C4 (FOUNDATION), C4 (GF), C5 (1F) has 8 main bars but the detail sketch for its band shows 4; which bars each tie encloses is not shown.",
+   "issue_type": "AMBIGUOUS_APPLICABILITY",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 45,
+   "question_for_engineer": "For C (FOUNDATION), C (GF), C1 (FOUNDATION), C1 (GF), C2 (1F), C2 (FOUNDATION), C2 (GF), C3 (FOUNDATION), C3 (GF), C4 (1F), C4 (FOUNDATION), C4 (GF), C5 (1F) (8 bars): which bars does each overlapping tie enclose?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "LOW",
+   "source_a": {
+    "description": "schedule bars",
+    "value": 8
+   },
+   "source_b": {
+    "description": "bars in band sketch",
+    "value": 4
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.pdf, DETAILS OF COLUMN REINFORCEMENT (schedule sheet), p.9"
+  },
+  {
+   "affected_facts": [
+    "transverse_zone"
+   ],
+   "answer_options": [
+    {
+     "answer": "floor-to-floor",
+     "effect": "largest tie count"
+    },
+    {
+     "answer": "clear height",
+     "effect": "fewer ties; needs beam depths per face"
+    },
+    {
+     "answer": "clear height + joint",
+     "effect": "between the two"
+    }
+   ],
+   "context": {},
+   "current_interpretation": null,
+   "detector": "transverse_rules",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "P9-COL-TIES:zone",
+   "element_ids": [
+    "COL-C10-X15-Y01-FOUNDATION",
+    "COL-C10-X15-Y01-GF",
+    "COL-C-X01-Y01-FOUNDATION",
+    "COL-C-X01-Y01-GF",
+    "COL-C3-X04-Y01-FOUNDATION",
+    "COL-C3-X04-Y01-GF",
+    "COL-C-X06-Y01-FOUNDATION",
+    "COL-C-X06-Y01-GF",
+    "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+    "COL-C11-X?-Y01@17913-7462-GF",
+    "COL-C3-X12-Y01-FOUNDATION",
+    "COL-C3-X12-Y01-GF",
+    "COL-C-X16-Y01-FOUNDATION",
+    "COL-C-X16-Y01-GF",
+    "COL-P.C-X08-Y02-1F",
+    "COL-C8-X12-Y02-FOUNDATION",
+    "COL-C8-X12-Y02-GF",
+    "COL-C8-X12-Y02-1F",
+    "COL-P.C-X15-Y02-1F",
+    "COL-C5-X14-Y02-FOUNDATION",
+    "COL-C5-X14-Y02-GF",
+    "COL-C5-X14-Y02-1F",
+    "COL-C3-X05-Y02-FOUNDATION",
+    "COL-C3-X05-Y02-GF",
+    "COL-C3-X05-Y02-1F",
+    "COL-CN-X16-Y03-FOUNDATION",
+    "COL-C5-X05-Y04-FOUNDATION",
+    "COL-C5-X05-Y04-GF",
+    "COL-C5-X05-Y04-1F",
+    "COL-C3-X03-Y04-FOUNDATION",
+    "COL-C3-X03-Y04-GF",
+    "COL-C11-X06-Y04-FOUNDATION",
+    "COL-C11-X06-Y04-GF",
+    "COL-C6-X08-Y04-FOUNDATION",
+    "COL-C6-X08-Y04-GF",
+    "COL-C6-X08-Y04-1F",
+    "COL-CN-X?-Y?@24058-12787-FOUNDATION",
+    "COL-CN-X?-Y?@28583-12787-FOUNDATION",
+    "COL-C-X01-Y05-FOUNDATION",
+    "COL-C-X01-Y05-GF",
+    "COL-C-X02-Y05-FOUNDATION",
+    "COL-C-X02-Y05-GF",
+    "COL-C3-X16-Y06-FOUNDATION",
+    "COL-C3-X16-Y06-GF",
+    "COL-C8-X15-Y06-FOUNDATION",
+    "COL-C8-X15-Y06-GF",
+    "COL-C8-X15-Y06-1F",
+    "COL-C2-X09-Y07-FOUNDATION",
+    "COL-C2-X09-Y07-GF",
+    "COL-C2-X09-Y07-1F",
+    "COL-C2-X09-Y07-2F",
+    "COL-CN-X15-Y?@31208-15726-FOUNDATION",
+    "COL-C9-X10-Y07-FOUNDATION",
+    "COL-C9-X10-Y07-GF",
+    "COL-C9-X10-Y07-1F",
+    "COL-C9-X10-Y07-2F",
+    "COL-P.C-X?-Y?@24888-15994-2F",
+    "COL-C7-X07-Y?@15888-16162-FOUNDATION",
+    "COL-C7-X07-Y?@15888-16162-GF",
+    "COL-C7-X07-Y?@15888-16162-1F",
+    "COL-C9-X13-Y08-FOUNDATION",
+    "COL-C9-X13-Y08-GF",
+    "COL-C9-X13-Y08-1F",
+    "COL-C3-X08-Y09-FOUNDATION",
+    "COL-C3-X08-Y09-GF",
+    "COL-C3-X08-Y09-1F",
+    "COL-C3-X08-Y09-2F",
+    "COL-C1-X09-Y09-FOUNDATION",
+    "COL-C1-X09-Y09-GF",
+    "COL-C1-X09-Y09-1F",
+    "COL-C1-X09-Y09-2F",
+    "COL-C2-X10-Y09-FOUNDATION",
+    "COL-C2-X10-Y09-GF",
+    "COL-C2-X10-Y09-1F",
+    "COL-C2-X10-Y09-2F",
+    "COL-CN-X?-Y?@29108-18112-FOUNDATION",
+    "COL-CN-X?-Y10@31108-20498-FOUNDATION",
+    "COL-C2-X08-Y10-FOUNDATION",
+    "COL-C2-X08-Y10-GF",
+    "COL-C2-X08-Y10-1F",
+    "COL-C2-X08-Y10-2F",
+    "COL-C2-X09-Y10-FOUNDATION",
+    "COL-C2-X09-Y10-GF",
+    "COL-C2-X09-Y10-1F",
+    "COL-C2-X09-Y10-2F",
+    "COL-C5-X11-Y10-FOUNDATION",
+    "COL-C5-X11-Y10-GF",
+    "COL-C5-X11-Y10-1F",
+    "COL-C5-X11-Y10-2F",
+    "COL-C4-X13-Y10-FOUNDATION",
+    "COL-C4-X13-Y10-GF",
+    "COL-C4-X13-Y10-1F",
+    "COL-C4-X15-Y10-FOUNDATION",
+    "COL-C4-X15-Y10-GF",
+    "COL-C4-X15-Y10-1F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-007",
+   "flag_key": "db724c886670c21a",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by transverse_rules",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "ST. OF COLUMN- 6Ø8/m (column ties) gives ties per metre but not over which height: full storey height, clear height below the beams, or including the joint.",
+   "issue_type": "ENGINEERING_METHOD_REQUIRED",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 95,
+   "question_for_engineer": "Over which vertical length are the column ties counted: floor-to-floor, clear height between slab and beam soffit, or clear height plus the beam-column joint?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "HIGH",
+   "source_a": {
+    "description": "rule",
+    "value": "ST. OF COLUMN- 6Ø8/m (column ties)"
+   },
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.pdf, DETAILS OF COLUMN REINFORCEMENT (schedule sheet), p.9"
+  },
+  {
+   "affected_facts": [
+    "transverse_arrangement"
+   ],
+   "answer_options": [
+    {
+     "answer": "50cm < L < 80cm",
+     "effect": "use band TIE_50_LT_L_LT_80"
+    },
+    {
+     "answer": "80cm < L < 120cm",
+     "effect": "use band TIE_80_LT_L_LT_120"
+    }
+   ],
+   "context": {},
+   "current_interpretation": null,
+   "detector": "band_gaps",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "P9-COL-BAND:80.0",
+   "element_ids": [
+    "COL-C7-X07-Y?@15888-16162-FOUNDATION",
+    "COL-C7-X07-Y?@15888-16162-GF",
+    "COL-C7-X07-Y?@15888-16162-1F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-008",
+   "flag_key": "647c4db1d77bc7d9",
+   "floor": null,
+   "generic_rule_candidate": "At an exact band limit that no printed band includes, the consultant's answer may be proposed as a generic boundary convention (review required).",
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by band_gaps",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "column tie rule (arrangement by long side L): value 80.0 cm (C7) is on a limit no band includes.",
+   "issue_type": "RULE_GAP",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 3,
+   "question_for_engineer": "column tie rule (arrangement by long side L): which band applies where the value is exactly 80.0 cm?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "HIGH",
+   "source_a": {
+    "description": "rule bands",
+    "value": [
+     "L ≤ 50cm",
+     "50cm < L < 80cm",
+     "80cm < L < 120cm"
+    ]
+   },
+   "source_b": {
+    "description": "member value",
+    "value": "80.0 cm"
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BAA",
+     "page": 9,
+     "sheet_title": "DETAILS OF COLUMN REINFORCEMENT (schedule sheet)",
+     "text": "ST. OF COLUMN- 6%%c8/m"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.pdf, DETAILS OF COLUMN REINFORCEMENT (schedule sheet), p.9"
+  },
+  {
+   "affected_facts": [
+    "member_type"
+   ],
+   "answer_options": [
+    {
+     "answer": "type C3",
+     "effect": "section and bars from the C3 schedule row"
+    },
+    {
+     "answer": "type C",
+     "effect": "section and bars from the C schedule row"
+    }
+   ],
+   "context": {
+    "shared_definition_fields": [
+     "reinforcement",
+     "section"
+    ],
+    "supporting_evidence": []
+   },
+   "current_interpretation": "type C3 used provisionally",
+   "detector": "type_conflicts",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLPOS-X04-Y01-7988-7462",
+   "element_ids": [
+    "COL-C3-X04-Y01-FOUNDATION",
+    "COL-C3-X04-Y01-GF"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-009",
+   "flag_key": "f7f8ae2918e238b6",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by type_conflicts",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": "TAG_CONFLICT",
+   "issue_summary": "column at grid X04/Y01: equal-authority sources give different types (C3 vs C).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 2,
+   "question_for_engineer": "Which type is correct for this column (at grid X04/Y01): C3 or C?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "HIGH",
+   "source_a": {
+    "description": "COLUMN & AXIS PLAN tag",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "100A",
+     "layer": "S-TEXT",
+     "page": 1,
+     "sheet_title": "COLUMN & AXIS PLAN",
+     "text": "C3"
+    },
+    "value": "C3"
+   },
+   "source_b": {
+    "description": "GROUND BEAMS PLAN tag",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "20D",
+     "layer": "S-TEXT",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN",
+     "text": "C"
+    },
+    "value": "C"
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "100A",
+     "layer": "S-TEXT",
+     "page": 1,
+     "sheet_title": "COLUMN & AXIS PLAN",
+     "text": "C3"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "1681",
+     "layer": "S-TEXT",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "text": "C3"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "20D",
+     "layer": "S-TEXT",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN",
+     "text": "C"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf, COLUMN & AXIS PLAN, p.1; ST7757.dxf, FOUNDATION PLAN, p.2; ST7757.dxf, GROUND BEAMS PLAN, p.3"
+  },
+  {
+   "affected_facts": [
+    "member_type",
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "type C8",
+     "effect": "section and bars from the C8 schedule row"
+    },
+    {
+     "answer": "type C7",
+     "effect": "section and bars from the C7 schedule row; the corroborating evidence agrees"
+    }
+   ],
+   "context": {
+    "shared_definition_fields": [
+     "reinforcement"
+    ],
+    "supporting_evidence": [
+     {
+      "authority": "DRAWN_GEOMETRY",
+      "description": "axis-plan size label 30X80 matches the C7 schedule section",
+      "source_ref": {
+       "drawing": "ST7757.dxf",
+       "layer": "S-TEXT",
+       "page": 1,
+       "sheet_title": "COLUMN & AXIS PLAN",
+       "text": "30X80"
+      },
+      "value": "C7"
+     }
+    ]
+   },
+   "current_interpretation": "type C8 used provisionally",
+   "detector": "type_conflicts",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLPOS-X12-Y02-24308-8912",
+   "element_ids": [
+    "COL-C8-X12-Y02-FOUNDATION",
+    "COL-C8-X12-Y02-GF",
+    "COL-C8-X12-Y02-1F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-010",
+   "flag_key": "e3be1b4bfeb1d55c",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by type_conflicts",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": "TAG_CONFLICT",
+   "issue_summary": "column at grid X12/Y02: equal-authority sources give different types (C8 vs C7).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 3,
+   "question_for_engineer": "Which type is correct for this column (at grid X12/Y02): C8 or C7?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "HIGH",
+   "source_a": {
+    "description": "COLUMN & AXIS PLAN tag",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "101A",
+     "layer": "S-TEXT",
+     "page": 1,
+     "sheet_title": "COLUMN & AXIS PLAN",
+     "text": "C8"
+    },
+    "value": "C8"
+   },
+   "source_b": {
+    "description": "GROUND BEAMS PLAN tag",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "24E",
+     "layer": "S-TEXT",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN",
+     "text": "C7"
+    },
+    "value": "C7"
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "101A",
+     "layer": "S-TEXT",
+     "page": 1,
+     "sheet_title": "COLUMN & AXIS PLAN",
+     "text": "C8"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "10E1",
+     "layer": "S-TEXT",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "text": "C8"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "24E",
+     "layer": "S-TEXT",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN",
+     "text": "C7"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "layer": "S-TEXT",
+     "page": 1,
+     "sheet_title": "COLUMN & AXIS PLAN",
+     "text": "30X80"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT",
+    "CONCRETE",
+    "FORMWORK"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf, COLUMN & AXIS PLAN, p.1; ST7757.dxf, FOUNDATION PLAN, p.2; ST7757.dxf, GROUND BEAMS PLAN, p.3"
+  },
+  {
+   "affected_facts": [
+    "occurrence"
+   ],
+   "answer_options": [
+    {
+     "answer": "exists",
+     "effect": "keep"
+    },
+    {
+     "answer": "does not exist",
+     "effect": "remove from the count"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "counted (present on the other plans)",
+   "detector": "presence_gaps",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLPOS-X?-Y?-29108-18112",
+   "element_ids": [
+    "COLPOS-X?-Y?-29108-18112"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-011",
+   "flag_key": "5f49f5bc706c6d18",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by presence_gaps",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "DRAWN_GEOMETRY",
+   "issue_summary": "column CN is drawn on FOUNDATION PLAN, GROUND BEAMS PLAN but not on COLUMN & AXIS PLAN.",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 1,
+   "question_for_engineer": "Does this column exist (it is missing on COLUMN & AXIS PLAN)?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "LOW",
+   "source_a": {
+    "description": "drawn on",
+    "value": [
+     "FOUNDATION PLAN",
+     "GROUND BEAMS PLAN"
+    ]
+   },
+   "source_b": {
+    "description": "missing on",
+    "value": [
+     "COLUMN & AXIS PLAN"
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "180A",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "17BA",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN"
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf, FOUNDATION PLAN, p.2; ST7757.dxf, GROUND BEAMS PLAN, p.3"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule section (storey band)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn outline",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "[30.0, 50.0]",
+      "[20.0, 50.0]"
+     ]
+    ]
+   },
+   "current_interpretation": "[30.0, 50.0] (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLUMN:C1:OVERRIDE",
+   "element_ids": [
+    "COL-C1-X09-Y09-FOUNDATION"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-012",
+   "flag_key": "b4adc58ed35e8d09",
+   "floor": "FOUNDATION",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "1 column occurrence(s) of type C1: schedule section (storey band) differs from drawn outline ([30.0, 50.0] vs [20.0, 50.0]).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 1,
+   "question_for_engineer": "For column type C1: does the schedule section (storey band) govern, or the drawn outline ([30.0, 50.0] vs [20.0, 50.0])?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule section (storey band)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C1"
+    },
+    "value": [
+     30.0,
+     50.0
+    ]
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn outline",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "1099",
+     "layer": "S-COL.BON",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "xy_mm": [
+      19688,
+      17362
+     ]
+    },
+    "value": [
+     20.0,
+     50.0
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C1"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "1099",
+     "layer": "S-COL.BON",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "xy_mm": [
+      19688,
+      17362
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FOUNDATION PLAN, p.2"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule section (storey band)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn outline",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "[30.0, 50.0]",
+      "[20.0, 50.0]"
+     ]
+    ]
+   },
+   "current_interpretation": "[30.0, 50.0] (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLUMN:C2:OVERRIDE",
+   "element_ids": [
+    "COL-C2-X09-Y07-FOUNDATION",
+    "COL-C2-X10-Y09-FOUNDATION"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-013",
+   "flag_key": "af638353ff477a4c",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "2 column occurrence(s) of type C2: schedule section (storey band) differs from drawn outline ([30.0, 50.0] vs [20.0, 50.0]).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 2,
+   "question_for_engineer": "For column type C2: does the schedule section (storey band) govern, or the drawn outline ([30.0, 50.0] vs [20.0, 50.0])?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule section (storey band)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C2"
+    },
+    "value": [
+     30.0,
+     50.0
+    ]
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn outline",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "1096",
+     "layer": "S-COL.BON",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "xy_mm": [
+      19688,
+      15662
+     ]
+    },
+    "value": [
+     20.0,
+     50.0
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C2"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "1096",
+     "layer": "S-COL.BON",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "xy_mm": [
+      19688,
+      15662
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "1093",
+     "layer": "S-COL.BON",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "xy_mm": [
+      21688,
+      17362
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FOUNDATION PLAN, p.2"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule section (storey band)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn outline",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "[20.0, 50.0]",
+      "[25.0, 50.0]"
+     ],
+     [
+      "[25.0, 50.0]",
+      "[20.0, 40.0]"
+     ],
+     [
+      "[25.0, 50.0]",
+      "[20.0, 50.0]"
+     ]
+    ]
+   },
+   "current_interpretation": "[25.0, 50.0] (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLUMN:C3:OVERRIDE",
+   "element_ids": [
+    "COL-C3-X04-Y01-GF",
+    "COL-C3-X16-Y06-GF",
+    "COL-C3-X08-Y09-1F",
+    "COL-C3-X08-Y09-2F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-014",
+   "flag_key": "9959b2794f775d09",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "4 column occurrence(s) of type C3: schedule section (storey band) differs from drawn outline ([20.0, 50.0] vs [25.0, 50.0]; [25.0, 50.0] vs [20.0, 40.0]; [25.0, 50.0] vs [20.0, 50.0]).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 4,
+   "question_for_engineer": "For column type C3: does the schedule section (storey band) govern, or the drawn outline ([20.0, 50.0] vs [25.0, 50.0]; [25.0, 50.0] vs [20.0, 40.0]; [25.0, 50.0] vs [20.0, 50.0])?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule section (storey band)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C3"
+    },
+    "value": [
+     25.0,
+     50.0
+    ]
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn outline",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "350",
+     "layer": "S-COL.BON",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "xy_mm": [
+      7938,
+      7412
+     ]
+    },
+    "value": [
+     20.0,
+     40.0
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C3"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "350",
+     "layer": "S-COL.BON",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "xy_mm": [
+      7938,
+      7412
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "344",
+     "layer": "S-COL.BON",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "xy_mm": [
+      33158,
+      14962
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "691",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      17013,
+      17362
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "424",
+     "layer": "S-COL.BON",
+     "page": 6,
+     "sheet_title": "SECOND FLOOR ROOF SLAB",
+     "xy_mm": [
+      17013,
+      17362
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule section (storey band)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn outline",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "[20.0, 50.0]",
+      "[25.0, 50.0]"
+     ],
+     [
+      "[30.0, 50.0]",
+      "[25.0, 50.0]"
+     ]
+    ]
+   },
+   "current_interpretation": "[20.0, 50.0] (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLUMN:C4:OVERRIDE",
+   "element_ids": [
+    "COL-C4-X13-Y10-1F",
+    "COL-C4-X15-Y10-FOUNDATION",
+    "COL-C4-X15-Y10-1F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-015",
+   "flag_key": "43aec3f474f6b35f",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "3 column occurrence(s) of type C4: schedule section (storey band) differs from drawn outline ([20.0, 50.0] vs [25.0, 50.0]; [30.0, 50.0] vs [25.0, 50.0]).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 3,
+   "question_for_engineer": "For column type C4: does the schedule section (storey band) govern, or the drawn outline ([20.0, 50.0] vs [25.0, 50.0]; [30.0, 50.0] vs [25.0, 50.0])?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule section (storey band)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C4"
+    },
+    "value": [
+     20.0,
+     50.0
+    ]
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn outline",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "697",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      27458,
+      20687
+     ]
+    },
+    "value": [
+     25.0,
+     50.0
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C4"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "697",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      27458,
+      20687
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "108D",
+     "layer": "S-COL.BON",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "xy_mm": [
+      31508,
+      20687
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "676",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      31508,
+      20687
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule section (storey band)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn outline",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "[20.0, 50.0]",
+      "[20.0, 60.0]"
+     ],
+     [
+      "[20.0, 50.0]",
+      "[25.0, 60.0]"
+     ]
+    ]
+   },
+   "current_interpretation": "[20.0, 50.0] (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLUMN:C5:OVERRIDE",
+   "element_ids": [
+    "COL-C5-X14-Y02-1F",
+    "COL-C5-X05-Y04-1F",
+    "COL-C5-X11-Y10-1F",
+    "COL-C5-X11-Y10-2F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-016",
+   "flag_key": "d03616d862033e55",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "4 column occurrence(s) of type C5: schedule section (storey band) differs from drawn outline ([20.0, 50.0] vs [20.0, 60.0]; [20.0, 50.0] vs [25.0, 60.0]).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 4,
+   "question_for_engineer": "For column type C5: does the schedule section (storey band) govern, or the drawn outline ([20.0, 50.0] vs [20.0, 60.0]; [20.0, 50.0] vs [25.0, 60.0])?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule section (storey band)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C5"
+    },
+    "value": [
+     20.0,
+     50.0
+    ]
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn outline",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "694",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      27658,
+      8937
+     ]
+    },
+    "value": [
+     25.0,
+     60.0
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C5"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "694",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      27658,
+      8937
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "685",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      12588,
+      11912
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "673",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      23558,
+      20687
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "415",
+     "layer": "S-COL.BON",
+     "page": 6,
+     "sheet_title": "SECOND FLOOR ROOF SLAB",
+     "xy_mm": [
+      23558,
+      20712
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule section (storey band)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn outline",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "[20.0, 60.0]",
+      "[25.0, 70.0]"
+     ]
+    ]
+   },
+   "current_interpretation": "[20.0, 60.0] (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLUMN:C6:OVERRIDE",
+   "element_ids": [
+    "COL-C6-X08-Y04-1F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-017",
+   "flag_key": "717770985d307b9f",
+   "floor": "1F",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "1 column occurrence(s) of type C6: schedule section (storey band) differs from drawn outline ([20.0, 60.0] vs [25.0, 70.0]).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 1,
+   "question_for_engineer": "For column type C6: does the schedule section (storey band) govern, or the drawn outline ([20.0, 60.0] vs [25.0, 70.0])?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule section (storey band)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C6"
+    },
+    "value": [
+     20.0,
+     60.0
+    ]
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn outline",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "688",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      17013,
+      12362
+     ]
+    },
+    "value": [
+     25.0,
+     70.0
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C6"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "688",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      17013,
+      12362
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule section (storey band)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn outline",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "[20.0, 80.0]",
+      "[25.0, 80.0]"
+     ]
+    ]
+   },
+   "current_interpretation": "[20.0, 80.0] (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLUMN:C7:OVERRIDE",
+   "element_ids": [
+    "COL-C7-X07-Y?@15888-16162-1F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-018",
+   "flag_key": "66e7e7b066d378bc",
+   "floor": "1F",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "1 column occurrence(s) of type C7: schedule section (storey band) differs from drawn outline ([20.0, 80.0] vs [25.0, 80.0]).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 1,
+   "question_for_engineer": "For column type C7: does the schedule section (storey band) govern, or the drawn outline ([20.0, 80.0] vs [25.0, 80.0])?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule section (storey band)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C7"
+    },
+    "value": [
+     20.0,
+     80.0
+    ]
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn outline",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "68E",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      15888,
+      16187
+     ]
+    },
+    "value": [
+     25.0,
+     80.0
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C7"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "68E",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      15888,
+      16187
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule section (storey band)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn outline",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "[20.0, 90.0]",
+      "[25.0, 80.0]"
+     ],
+     [
+      "[25.0, 90.0]",
+      "[25.0, 80.0]"
+     ],
+     [
+      "[30.0, 90.0]",
+      "[30.0, 80.0]"
+     ]
+    ]
+   },
+   "current_interpretation": "[30.0, 90.0] (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLUMN:C8:OVERRIDE",
+   "element_ids": [
+    "COL-C8-X12-Y02-FOUNDATION",
+    "COL-C8-X12-Y02-GF",
+    "COL-C8-X12-Y02-1F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-019",
+   "flag_key": "ce59876118cdbe17",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "3 column occurrence(s) of type C8: schedule section (storey band) differs from drawn outline ([20.0, 90.0] vs [25.0, 80.0]; [25.0, 90.0] vs [25.0, 80.0]; [30.0, 90.0] vs [30.0, 80.0]).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 3,
+   "question_for_engineer": "For column type C8: does the schedule section (storey band) govern, or the drawn outline ([20.0, 90.0] vs [25.0, 80.0]; [25.0, 90.0] vs [25.0, 80.0]; [30.0, 90.0] vs [30.0, 80.0])?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule section (storey band)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C8"
+    },
+    "value": [
+     30.0,
+     90.0
+    ]
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn outline",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "10E0",
+     "layer": "S-COL.BON",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "xy_mm": [
+      24308,
+      8912
+     ]
+    },
+    "value": [
+     30.0,
+     80.0
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C8"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "10E0",
+     "layer": "S-COL.BON",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "xy_mm": [
+      24308,
+      8912
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "380",
+     "layer": "S-COL.BON",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "xy_mm": [
+      24308,
+      8937
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "69A",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      24308,
+      8937
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FOUNDATION PLAN, p.2"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule section (storey band)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn outline",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "[20.0, 90.0]",
+      "[20.0, 100.0]"
+     ],
+     [
+      "[20.0, 90.0]",
+      "[25.0, 100.0]"
+     ],
+     [
+      "[30.0, 100.0]",
+      "[25.0, 100.0]"
+     ]
+    ]
+   },
+   "current_interpretation": "[30.0, 100.0] (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLUMN:C9:OVERRIDE",
+   "element_ids": [
+    "COL-C9-X10-Y07-FOUNDATION",
+    "COL-C9-X10-Y07-1F",
+    "COL-C9-X13-Y08-1F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-020",
+   "flag_key": "af7c64702ffc823c",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "3 column occurrence(s) of type C9: schedule section (storey band) differs from drawn outline ([20.0, 90.0] vs [20.0, 100.0]; [20.0, 90.0] vs [25.0, 100.0]; [30.0, 100.0] vs [25.0, 100.0]).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 3,
+   "question_for_engineer": "For column type C9: does the schedule section (storey band) govern, or the drawn outline ([20.0, 90.0] vs [20.0, 100.0]; [20.0, 90.0] vs [25.0, 100.0]; [30.0, 100.0] vs [25.0, 100.0])?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule section (storey band)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C9"
+    },
+    "value": [
+     30.0,
+     100.0
+    ]
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn outline",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "1090",
+     "layer": "S-COL.BON",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "xy_mm": [
+      21713,
+      15912
+     ]
+    },
+    "value": [
+     25.0,
+     100.0
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C9"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "1090",
+     "layer": "S-COL.BON",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "xy_mm": [
+      21713,
+      15912
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "679",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      21713,
+      15912
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "667",
+     "layer": "S-COL.BON",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "xy_mm": [
+      27308,
+      16587
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FOUNDATION PLAN, p.2"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule section (storey band)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn outline",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "[20.0, 50.0]",
+      "[20.0, 40.0]"
+     ]
+    ]
+   },
+   "current_interpretation": "[20.0, 50.0] (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLUMN:C:OVERRIDE",
+   "element_ids": [
+    "COL-C-X01-Y01-GF",
+    "COL-C-X06-Y01-GF",
+    "COL-C-X16-Y01-GF",
+    "COL-C-X01-Y05-GF",
+    "COL-C-X02-Y05-GF"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-021",
+   "flag_key": "7a6e886ffef87d2e",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "5 column occurrence(s) of type C: schedule section (storey band) differs from drawn outline ([20.0, 50.0] vs [20.0, 40.0]).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 5,
+   "question_for_engineer": "For column type C: does the schedule section (storey band) govern, or the drawn outline ([20.0, 50.0] vs [20.0, 40.0])?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule section (storey band)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C"
+    },
+    "value": [
+     20.0,
+     50.0
+    ]
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn outline",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "34D",
+     "layer": "S-COL.BON",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "xy_mm": [
+      2088,
+      7412
+     ]
+    },
+    "value": [
+     20.0,
+     40.0
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "C"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "34D",
+     "layer": "S-COL.BON",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "xy_mm": [
+      2088,
+      7412
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "359",
+     "layer": "S-COL.BON",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "xy_mm": [
+      14088,
+      7412
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "347",
+     "layer": "S-COL.BON",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "xy_mm": [
+      33158,
+      7512
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "34A",
+     "layer": "S-COL.BON",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "xy_mm": [
+      1988,
+      13812
+     ]
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "356",
+     "layer": "S-COL.BON",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "xy_mm": [
+      4788,
+      13912
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule section (storey band)",
+     "effect": "current quantity stands"
+    },
+    {
+     "answer": "drawn outline",
+     "effect": "concrete / formwork / bars follow it; the other source needs revision"
+    }
+   ],
+   "context": {
+    "value_pairs": [
+     [
+      "[20, 50]",
+      "[20.0, 40.0]"
+     ]
+    ]
+   },
+   "current_interpretation": "[20, 50] (MEMBER_SCHEDULE) used",
+   "detector": "section_overrides",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "COLUMN:P.C:OVERRIDE",
+   "element_ids": [
+    "COL-P.C-X?-Y?@24888-15994-2F"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-022",
+   "flag_key": "449179aaaf9557b4",
+   "floor": "2F",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by section_overrides",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "1 column occurrence(s) of type P.C: schedule section (storey band) differs from drawn outline ([20, 50] vs [20.0, 40.0]).",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 1,
+   "question_for_engineer": "For column type P.C: does the schedule section (storey band) govern, or the drawn outline ([20, 50] vs [20.0, 40.0])?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "authority": "MEMBER_SCHEDULE",
+    "description": "schedule section (storey band)",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "P.C"
+    },
+    "value": [
+     20,
+     50
+    ]
+   },
+   "source_b": {
+    "authority": "DRAWN_GEOMETRY",
+    "description": "drawn outline",
+    "source_ref": {
+     "drawing": "ST7757.dxf",
+     "handle": "778",
+     "layer": "S-COL.BON",
+     "page": 6,
+     "sheet_title": "SECOND FLOOR ROOF SLAB",
+     "xy_mm": [
+      24888,
+      15994
+     ]
+    },
+    "value": [
+     20.0,
+     40.0
+    ]
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (column)",
+     "text": "P.C"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "778",
+     "layer": "S-COL.BON",
+     "page": 6,
+     "sheet_title": "SECOND FLOOR ROOF SLAB",
+     "xy_mm": [
+      24888,
+      15994
+     ]
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, SECOND FLOOR ROOF SLAB, p.6"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "schedule is correct",
+     "effect": "no quantity change"
+    },
+    {
+     "answer": "increase to 25",
+     "effect": "concrete, formwork and ties increase"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "schedule value kept (member-specific design)",
+   "detector": "minimum_shortfalls",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "P9-COL-TMIN:GF:20.0",
+   "element_ids": [
+    "COL-C-X01-Y01-GF",
+    "COL-C-X06-Y01-GF",
+    "COL-C-X16-Y01-GF",
+    "COL-C-X01-Y05-GF",
+    "COL-C-X02-Y05-GF",
+    "COL-C2-X09-Y07-GF",
+    "COL-C1-X09-Y09-GF",
+    "COL-C2-X10-Y09-GF",
+    "COL-C2-X08-Y10-GF",
+    "COL-C2-X09-Y10-GF"
+   ],
+   "element_type": "COLUMN",
+   "flag_id": "STR-COL-023",
+   "flag_key": "a3a97eb1eb84ffeb",
+   "floor": "GF",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by minimum_shortfalls",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "MEMBER_SCHEDULE",
+   "issue_summary": "10 column occurrence(s) (C, C1, C2) at GF: schedule gives 20.0 cm but minimum column thickness for the storey height (p.9) requires at least 25.",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 10,
+   "question_for_engineer": "The schedule gives 20.0 where the general rule asks for at least 25. Is the schedule correct, or must the section increase?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "minimum column thickness for the storey height (p.9)",
+    "value": 25
+   },
+   "source_b": {
+    "description": "schedule value",
+    "value": 20.0
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1BEF",
+     "page": 9,
+     "sheet_title": "rule P9-COL-TMIN"
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences",
+   "where_to_check": "ST7757.pdf, rule P9-COL-TMIN, p.9"
+  },
+  {
+   "affected_facts": [
+    "section"
+   ],
+   "answer_options": [
+    {
+     "answer": "yes",
+     "effect": "dome zones use 100 mm"
+    },
+    {
+     "answer": "no",
+     "effect": "per answer"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "occurrences counted; quantities depending on the rule held back",
+   "detector": "rule_dependent_elements",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "P7-DOME:DOME",
+   "element_ids": [
+    "SP-1F_ROOF_SLAB-13",
+    "SP-1F_ROOF_SLAB-14",
+    "SP-1F_ROOF_SLAB-15",
+    "SP-1F_ROOF_SLAB-16",
+    "SP-1F_ROOF_SLAB-17",
+    "SP-1F_ROOF_SLAB-18",
+    "SP-1F_ROOF_SLAB-19",
+    "SP-1F_ROOF_SLAB-20"
+   ],
+   "element_type": "DOME",
+   "flag_id": "STR-DOM-001",
+   "flag_key": "5f494d530f357b05",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by rule_dependent_elements",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "8 dome occurrence(s) depend on P7-DOME (Dome reinforcement.), whose applicability is not established (CANDIDATE).",
+   "issue_type": "AMBIGUOUS_APPLICABILITY",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 30.278,
+   "question_for_engineer": "Does the dome detail (100 mm shell, ring beam) apply to both domes on the first-floor roof?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "P7-DOME",
+    "value": "Dome reinforcement."
+   },
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "page": 7,
+     "sheet_title": "DETAILS (pool / dome)",
+     "text": "DETAIL OF DOME"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "SEE DETAIL"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m2 plan",
+   "where_to_check": "ST7757.dxf, DETAILS (pool / dome), p.7; ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5"
+  },
+  {
+   "affected_facts": [
+    "BOXED"
+   ],
+   "answer_options": [
+    {
+     "answer": "box / cage bars: a + b bars in the two directions",
+     "effect": "extra bar set per footing"
+    },
+    {
+     "answer": "top mesh counts",
+     "effect": "a top layer is added"
+    },
+    {
+     "answer": "column starter / dowel count",
+     "effect": "starter bars only"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "component held back; other bars of the same members stay releasable",
+   "detector": "unresolved_semantics",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "FOOTING:BOXED",
+   "element_ids": [
+    "FTG-F-1888-7312",
+    "FTG-F15-7088-7312",
+    "FTG-F-13638-7312",
+    "FTG-F11-16163-7312",
+    "FTG-CONFLICT_F_F10-30008-7312",
+    "FTG-F5-26458-7912",
+    "FTG-F3-11838-8262",
+    "FTG-F6-15938-11062",
+    "FTG-F3-5538-11362",
+    "FTG-F-1888-13312",
+    "FTG-F-4288-13462",
+    "FTG-F9-25608-15262",
+    "FTG-F2-16188-19612",
+    "FTG-F2-18888-19612",
+    "FTG-F5-22358-19612",
+    "FTG-F4-26358-19662",
+    "FTG-F4-30408-19687"
+   ],
+   "element_type": "FOOTING",
+   "flag_id": "STR-FOO-001",
+   "flag_key": "0ce7fd48490c22ff",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by unresolved_semantics",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "The schedule field 'BOXED' is printed for 11 type(s) (e.g. F=3+4, F10=3+5, F11=3+8, F15=3+4) but its meaning is not stated.",
+   "issue_type": "AMBIGUOUS_APPLICABILITY",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 17,
+   "question_for_engineer": "What does the schedule field 'BOXED' mean (bar count, bar size, shape and position)?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "field BOXED",
+    "value": {
+     "F": "3+4",
+     "F10": "3+5",
+     "F11": "3+8",
+     "F15": "3+4",
+     "F2": "3+4",
+     "F3": "3+4",
+     "F4": "3+4",
+     "F5": "3+4",
+     "F6": "3+5",
+     "F7": "3+6",
+     "F9": "3+8"
+    }
+   },
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 9,
+     "sheet_title": "schedule (footing)",
+     "text": "BOXED"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr",
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (footing), p.9"
+  },
+  {
+   "affected_facts": [
+    "occurrence"
+   ],
+   "answer_options": [
+    {
+     "answer": "unused",
+     "effect": "no change"
+    },
+    {
+     "answer": "used at a location",
+     "effect": "occurrence(s) added there"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "zero occurrences (a schedule row never creates an occurrence)",
+   "detector": "orphan_definitions",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "FT:F7",
+   "element_ids": [
+    "F7"
+   ],
+   "element_type": "FOOTING",
+   "flag_id": "STR-FOO-002",
+   "flag_key": "36d8f2d72bb3889a",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by orphan_definitions",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": "PLAN_MEMBER_TAG",
+   "issue_summary": "Schedule row F7 (footing) is defined but no plan occurrence carries this mark.",
+   "issue_type": "AMBIGUOUS_APPLICABILITY",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": null,
+   "question_for_engineer": "Schedule row F7 has no occurrence on the plans. Is it unused, or is a mark missing on a plan?",
+   "release_effect": "NO_QUANTITY_IMPACT",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "LOW",
+   "source_a": {
+    "description": "schedule row",
+    "value": "300x250x50"
+   },
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "handle": "1CCC",
+     "page": 9,
+     "sheet_title": "schedule (footing)",
+     "text": "F7"
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null,
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (footing), p.9"
+  },
+  {
+   "affected_facts": [
+    "lower_ground_beam"
+   ],
+   "answer_options": [
+    {
+     "answer": "difference <= 2.5 m",
+     "effect": "no lower ground beam"
+    },
+    {
+     "answer": "difference > 2.5 m",
+     "effect": "lower ground beams added"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "occurrences counted; quantities depending on the rule held back",
+   "detector": "rule_dependent_elements",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "P13-FOOTING-DEEP:FOOTING",
+   "element_ids": [
+    "FTG-F-1888-7312",
+    "FTG-F15-7088-7312",
+    "FTG-F-13638-7312",
+    "FTG-F11-16163-7312",
+    "FTG-F14-22408-7312",
+    "FTG-CONFLICT_F_F10-30008-7312",
+    "FTG-F5-26458-7912",
+    "FTG-F3-11838-8262",
+    "FTG-F13-11188-10712",
+    "FTG-FN-32258-10812",
+    "FTG-F6-15938-11062",
+    "FTG-F3-5538-11362",
+    "FTG-FN-23558-12287",
+    "FTG-FN-28083-12287",
+    "FTG-F8-29258-13262",
+    "FTG-F-1888-13312",
+    "FTG-F-4288-13462",
+    "FTG-FF-18688-14112",
+    "FTG-F12-13688-14562",
+    "FTG-F9-25608-15262",
+    "FTG-FN-28608-17612",
+    "FTG-F2-16188-19612",
+    "FTG-F2-18888-19612",
+    "FTG-F5-22358-19612",
+    "FTG-F4-26358-19662",
+    "FTG-F4-30408-19687"
+   ],
+   "element_type": "FOOTING",
+   "flag_id": "STR-FOO-003",
+   "flag_key": "d3278910db378e02",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by rule_dependent_elements",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "26 footing occurrence(s) depend on P13-FOOTING-DEEP (Where the upper ground beam is more than 2.5 m above the footing, an additional LOWER ground beam is provided.), whose dimension is not established (BLOCKED_METHOD).",
+   "issue_type": "MISSING_DIMENSION",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 26,
+   "question_for_engineer": "What is the founding level? (A lower ground beam is required where the ground beam is more than 2.5 m above the footing.)",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "P13-FOOTING-DEEP",
+    "value": "Where the upper ground beam is more than 2.5 m above the footing, an additional LOWER ground beam is provided."
+   },
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 13,
+     "sheet_title": "rule P13-FOOTING-DEEP"
+    },
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "1E11",
+     "page": 9,
+     "sheet_title": "rule P9-SOIL"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr",
+   "where_to_check": "ST7757.pdf, rule P13-FOOTING-DEEP, p.13; ST7757.pdf, rule P9-SOIL, p.9"
+  },
+  {
+   "affected_facts": [
+    "overlap"
+   ],
+   "answer_options": [
+    {
+     "answer": "separate",
+     "effect": "deduct the overlap once"
+    },
+    {
+     "answer": "combined",
+     "effect": "one member; redefine its size"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "both counted; overlap volume must not be counted twice",
+   "detector": "geometry_overlaps",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "FT:180F+FT:180C",
+   "element_ids": [
+    "FT:180F",
+    "FT:180C"
+   ],
+   "element_type": "FOOTING",
+   "flag_id": "STR-FOO-004",
+   "flag_key": "aba3d83e7ea30f33",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by geometry_overlaps",
+     "to": "PROVISIONAL_INTERPRETATION"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "Two footing outlines overlap by 0.14 m2 plan.",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 0.14,
+   "question_for_engineer": "Are these two separate members or one combined member?",
+   "release_effect": "PROVISIONAL",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "LOW",
+   "source_a": null,
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "180F",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "180C",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN"
+    }
+   ],
+   "status": "PROVISIONAL_INTERPRETATION",
+   "trade": [
+    "CONCRETE"
+   ],
+   "unit": "m2 plan",
+   "where_to_check": "ST7757.dxf, FOUNDATION PLAN, p.2"
+  },
+  {
+   "affected_facts": [
+    "member_type",
+    "section",
+    "reinforcement"
+   ],
+   "answer_options": [
+    {
+     "answer": "F",
+     "effect": "size and bars from F"
+    },
+    {
+     "answer": "F10",
+     "effect": "size and bars from F10"
+    },
+    {
+     "answer": "two separate members",
+     "effect": "split the outline; both rows apply"
+    }
+   ],
+   "context": {},
+   "current_interpretation": null,
+   "detector": "competing_tags",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "FTG-CONFLICT_F_F10-30008-7312",
+   "element_ids": [
+    "FTG-CONFLICT_F_F10-30008-7312"
+   ],
+   "element_type": "FOOTING",
+   "flag_id": "STR-FOO-005",
+   "flag_key": "e67c027c86dbf9c4",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by competing_tags",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "One drawn footing carries 2 different type marks (F, F10); one outline holding columns C, C10.",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 1,
+   "question_for_engineer": "This footing is marked F and F10. Which type is it - or is it two members drawn as one?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "HIGH",
+   "source_a": {
+    "description": "mark 1",
+    "value": "F"
+   },
+   "source_b": {
+    "description": "mark 2",
+    "value": "F10"
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "1B1B",
+     "layer": "S-FOOTINGS",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "10A5",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "text": "F"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "handle": "168B",
+     "page": 2,
+     "sheet_title": "FOUNDATION PLAN",
+     "text": "F10"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr",
+   "where_to_check": "ST7757.dxf, FOUNDATION PLAN, p.2"
+  },
+  {
+   "affected_facts": [
+    "extent"
+   ],
+   "answer_options": [
+    {
+     "answer": "all cells inside the building",
+     "effect": "167.636 m2 plan"
+    },
+    {
+     "answer": "only marked cells",
+     "effect": "smaller area"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "occurrences counted; quantities depending on the rule held back",
+   "detector": "rule_dependent_elements",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "P3-GROUND-SLAB:GROUND_SLAB",
+   "element_ids": [
+    "SP-GBP-02",
+    "SP-GBP-03",
+    "SP-GBP-04",
+    "SP-GBP-05",
+    "SP-GBP-06",
+    "SP-GBP-07",
+    "SP-GBP-08",
+    "SP-GBP-09",
+    "SP-GBP-10",
+    "SP-GBP-11",
+    "SP-GBP-13",
+    "SP-GBP-14",
+    "SP-GBP-15",
+    "SP-GBP-16",
+    "SP-GBP-17",
+    "SP-GBP-18",
+    "SP-GBP-19",
+    "SP-GBP-20",
+    "SP-GBP-21",
+    "SP-GBP-22",
+    "SP-GBP-23"
+   ],
+   "element_type": "GROUND_SLAB",
+   "flag_id": "STR-GRO-001",
+   "flag_key": "515de8776e3953a2",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by rule_dependent_elements",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "21 ground slab occurrence(s) depend on P3-GROUND-SLAB (Ground slab note: 10 cm, 5Ø10/m each way.), whose extent is not established (CANDIDATE).",
+   "issue_type": "MISSING_DIMENSION",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 167.636,
+   "question_for_engineer": "Which areas receive the 10 cm ground slab (5Ø10/m each way): every cell inside the ground beams, or only the cells marked with the note?",
+   "release_effect": "LOWER_BOUND",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "P3-GROUND-SLAB",
+    "value": "Ground slab note: 10 cm, 5Ø10/m each way."
+   },
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 3,
+     "sheet_title": "rule P3-GROUND-SLAB"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m2 plan",
+   "where_to_check": "ST7757.pdf, rule P3-GROUND-SLAB, p.3"
+  },
+  {
+   "affected_facts": [
+    "geometry"
+   ],
+   "answer_options": [
+    {
+     "answer": "depth given",
+     "effect": "pit walls measured"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "occurrences counted; quantities depending on the rule held back",
+   "detector": "rule_dependent_elements",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "P14-LIFT:LIFT_PIT",
+   "element_ids": [
+    "SPC-LIFT_PIT"
+   ],
+   "element_type": "LIFT_PIT",
+   "flag_id": "STR-LIF-001",
+   "flag_key": "c0af7d1d647143b9",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by rule_dependent_elements",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "1 lift pit occurrence(s) depend on P14-LIFT (Lift pit on the FF raft: 20 cm walls with 6Ø12/m and 6Ø16/m, pit depth by the lift manufacturer.), whose dimension is not established (BLOCKED_METHOD).",
+   "issue_type": "MISSING_DIMENSION",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": null,
+   "question_for_engineer": "What is the lift-pit depth below the lift footing (manufacturer / engineer)?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "P14-LIFT",
+    "value": "Lift pit on the FF raft: 20 cm walls with 6Ø12/m and 6Ø16/m, pit depth by the lift manufacturer."
+   },
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 14,
+     "sheet_title": "rule P14-LIFT"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null,
+   "where_to_check": "ST7757.pdf, rule P14-LIFT, p.14"
+  },
+  {
+   "affected_facts": [
+    "occurrence"
+   ],
+   "answer_options": [
+    {
+     "answer": "positions + size given",
+     "effect": "occurrences created"
+    },
+    {
+     "answer": "not required here",
+     "effect": "population closed as not applicable"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "required population recorded; no geometry",
+   "detector": "required_not_drawn",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "BM-GF-LIFT_TIE",
+   "element_ids": [
+    "BM-GF-LIFT_TIE"
+   ],
+   "element_type": "LIFT_TIE_BEAM",
+   "flag_id": "STR-LIF-002",
+   "flag_key": "714c3838a3ff7408",
+   "floor": "GF",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by required_not_drawn",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "Lift tie beams at 3.00 m height around the lift shaft when the storey is higher than 4.30 m. requires lift tie beam (storey height > 4.30 m) but none is drawn.",
+   "issue_type": "MISSING_DETAIL",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": null,
+   "question_for_engineer": "Lift tie beams at 3.00 m height around the lift shaft when the storey is higher than 4.30 m.: where are these lift tie beams, and what size and bars?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "P8-N19",
+    "value": "Lift tie beams at 3.00 m height around the lift shaft when the storey is higher than 4.30 m."
+   },
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 8,
+     "sheet_title": "rule P8-N19"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null,
+   "where_to_check": "ST7757.pdf, rule P8-N19, p.8"
+  },
+  {
+   "affected_facts": [
+    "occurrence"
+   ],
+   "answer_options": [
+    {
+     "answer": "positions + size given",
+     "effect": "occurrences created"
+    },
+    {
+     "answer": "not required here",
+     "effect": "population closed as not applicable"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "required population recorded; no geometry",
+   "detector": "required_not_drawn",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "BM-ALL-LINTEL-POPULATION",
+   "element_ids": [
+    "BM-ALL-LINTEL-POPULATION"
+   ],
+   "element_type": "LINTEL",
+   "flag_id": "STR-LIN-001",
+   "flag_key": "26b352250deb3515",
+   "floor": "ALL",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by required_not_drawn",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "Lintels by opening width; width = wall width; 40 cm minimum bearing each side. requires lintel (one lintel per architectural opening, type by opening width) but none is drawn.",
+   "issue_type": "MISSING_DETAIL",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": null,
+   "question_for_engineer": "Lintels by opening width; width = wall width; 40 cm minimum bearing each side.: where are these lintels, and what size and bars?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "P13-LINTEL",
+    "value": "Lintels by opening width; width = wall width; 40 cm minimum bearing each side."
+   },
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 13,
+     "sheet_title": "rule P13-LINTEL"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null,
+   "where_to_check": "ST7757.pdf, rule P13-LINTEL, p.13"
+  },
+  {
+   "affected_facts": [
+    "geometry"
+   ],
+   "answer_options": [],
+   "context": {},
+   "current_interpretation": "occurrence counted; measurement held back",
+   "detector": "blocked_geometry",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "PARAPET:3",
+   "element_ids": [
+    "SPC-PARAPET-GFRS",
+    "SPC-PARAPET-FFRS",
+    "SPC-PARAPET-SFRS"
+   ],
+   "element_type": "PARAPET",
+   "flag_id": "STR-PAR-001",
+   "flag_key": "61c354ba0d2c1a1d",
+   "floor": "GF_ROOF_SLAB",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by blocked_geometry",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "3 parapets: parapet height / length follow the architectural drawings (not on the structural set).",
+   "issue_type": "MISSING_DIMENSION",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": null,
+   "question_for_engineer": "Give the parapet height and the roof edges that carry a parapet.",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "LOW",
+   "source_a": null,
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB",
+     "text": "PARAPET, BEFORE CASTING"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "page": 5,
+     "sheet_title": "FIRST FLOOR ROOF SLAB",
+     "text": "PARAPET, BEFORE CASTING"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "page": 6,
+     "sheet_title": "SECOND FLOOR ROOF SLAB",
+     "text": "PARAPET, BEFORE CASTING"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null,
+   "where_to_check": "ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5; ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4; ST7757.dxf, SECOND FLOOR ROOF SLAB, p.6"
+  },
+  {
+   "affected_facts": [
+    "detailing"
+   ],
+   "answer_options": [
+    {
+     "answer": "yes",
+     "effect": "detail extras added"
+    },
+    {
+     "answer": "no",
+     "effect": "plain column only"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "occurrences counted; quantities depending on the rule held back",
+   "detector": "rule_dependent_elements",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "P15-PLANTED:PLANTED_COLUMN",
+   "element_ids": [
+    "SPC-PLANTED_COLUMN-GFRS-544",
+    "SPC-PLANTED_COLUMN-GFRS-548",
+    "SPC-PLANTED_COLUMN-FFRS-77C"
+   ],
+   "element_type": "PLANTED_COLUMN",
+   "flag_id": "STR-PLA-001",
+   "flag_key": "34791ab66c22ba3f",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by rule_dependent_elements",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "3 planted column occurrence(s) depend on P15-PLANTED (Beam carrying a planted column: 4Ø16 extra, column bars anchored 100 into the beam.), whose applicability is not established (CANDIDATE).",
+   "issue_type": "AMBIGUOUS_APPLICABILITY",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": null,
+   "question_for_engineer": "Does the p.15 detail (Beam carrying a planted column: 4Ø16 extra, column bars anchored 100 into the beam.) apply to each of these columns, and do they use the normal tie bands?",
+   "release_effect": "LOWER_BOUND",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "P15-PLANTED",
+    "value": "Beam carrying a planted column: 4Ø16 extra, column bars anchored 100 into the beam."
+   },
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 15,
+     "sheet_title": "rule P15-PLANTED"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null,
+   "where_to_check": "ST7757.pdf, rule P15-PLANTED, p.15"
+  },
+  {
+   "affected_facts": [
+    "geometry"
+   ],
+   "answer_options": [],
+   "context": {},
+   "current_interpretation": "occurrence counted; measurement held back",
+   "detector": "blocked_geometry",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "SPC-POOL",
+   "element_ids": [
+    "SPC-POOL"
+   ],
+   "element_type": "POOL",
+   "flag_id": "STR-POO-001",
+   "flag_key": "04fac09f25bfada6",
+   "floor": "GROUND",
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by blocked_geometry",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "pool SPC-POOL: pool lengths and depths are 'AS PER ARCH' on the detail.",
+   "issue_type": "MISSING_DIMENSION",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": null,
+   "question_for_engineer": "Provide the pool plan and section (lengths, depths, slope) from the architect.",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "LOW",
+   "source_a": null,
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.dxf",
+     "page": 7,
+     "sheet_title": "DETAILS (pool / dome)",
+     "text": "DETAIL OF SWIMMING POOL"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "page": 3,
+     "sheet_title": "GROUND BEAMS PLAN",
+     "text": "swimming pool"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null,
+   "where_to_check": "ST7757.dxf, DETAILS (pool / dome), p.7; ST7757.dxf, GROUND BEAMS PLAN, p.3"
+  },
+  {
+   "affected_facts": [
+    "section",
+    "reinforcement"
+   ],
+   "answer_options": [
+    {
+     "answer": "TYPICAL BOUNDARY WALL: (20x30) R.C columns 4Ø14; GROUND BEAM (20x40); 2Ø14 (T&B); Ø8/20 STIRRUPS; 3Ø16 (T&B); 7Ø12; 4Ø12",
+     "effect": "P14-BOUNDARY"
+    },
+    {
+     "answer": "20x60 ['4', '16']",
+     "effect": "schedule row B.W"
+    }
+   ],
+   "context": {},
+   "current_interpretation": null,
+   "detector": "rule_conflicts",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "P14-BOUNDARY+SBT:B.W",
+   "element_ids": [
+    "P14-BOUNDARY+SBT:B.W"
+   ],
+   "element_type": "PROJECT_RULE",
+   "flag_id": "STR-PRO-001",
+   "flag_key": "9f4190b119901d1b",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by rule_conflicts",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "boundary wall definition: P14-BOUNDARY says TYPICAL BOUNDARY WALL: (20x30) R.C columns 4Ø14; GROUND BEAM (20x40); 2Ø14 (T&B); Ø8/20 STIRRUPS; 3Ø16 (T&B); 7Ø12; 4Ø12, schedule row B.W says 20x60 ['4', '16'].",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": null,
+   "question_for_engineer": "boundary wall definition: which value governs, TYPICAL BOUNDARY WALL: (20x30) R.C columns 4Ø14; GROUND BEAM (20x40); 2Ø14 (T&B); Ø8/20 STIRRUPS; 3Ø16 (T&B); 7Ø12; 4Ø12 or 20x60 ['4', '16']?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "LOW",
+   "source_a": {
+    "rule_ref": "P14-BOUNDARY",
+    "source_ref": {
+     "drawing": "ST7757.pdf",
+     "page": 14,
+     "sheet_title": "rule P14-BOUNDARY"
+    },
+    "value": "TYPICAL BOUNDARY WALL: (20x30) R.C columns 4Ø14; GROUND BEAM (20x40); 2Ø14 (T&B); Ø8/20 STIRRUPS; 3Ø16 (T&B); 7Ø12; 4Ø12"
+   },
+   "source_b": {
+    "rule_ref": "schedule row B.W",
+    "source_ref": {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 10,
+     "sheet_title": "schedule (simple beam)",
+     "text": "B.W"
+    },
+    "value": "20x60 ['4', '16']"
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 14,
+     "sheet_title": "rule P14-BOUNDARY"
+    },
+    {
+     "drawing": "ST7757.dxf / ST7757.pdf",
+     "page": 10,
+     "sheet_title": "schedule (simple beam)",
+     "text": "B.W"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "REINFORCEMENT"
+   ],
+   "unit": null,
+   "where_to_check": "ST7757.dxf / ST7757.pdf, schedule (simple beam), p.10; ST7757.pdf, rule P14-BOUNDARY, p.14"
+  },
+  {
+   "affected_facts": [
+    "formwork rule"
+   ],
+   "answer_options": [
+    {
+     "answer": "formwork >= 14 days",
+     "effect": "P8-N17"
+    },
+    {
+     "answer": "formwork >= 21 days",
+     "effect": "P1-NOTE-C"
+    }
+   ],
+   "context": {},
+   "current_interpretation": null,
+   "detector": "rule_conflicts",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "P8-N17+P1-NOTE-C",
+   "element_ids": [
+    "P8-N17+P1-NOTE-C"
+   ],
+   "element_type": "PROJECT_RULE",
+   "flag_id": "STR-PRO-002",
+   "flag_key": "e25b5038443ecc4e",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by rule_conflicts",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "formwork rule: P8-N17 says formwork >= 14 days, P1-NOTE-C says formwork >= 21 days.",
+   "issue_type": "SOURCE_CONFLICT",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": null,
+   "question_for_engineer": "formwork rule: which value governs, formwork >= 14 days or formwork >= 21 days?",
+   "release_effect": "NO_QUANTITY_IMPACT",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "LOW",
+   "source_a": {
+    "rule_ref": "P8-N17",
+    "source_ref": {
+     "drawing": "ST7757.pdf",
+     "page": 8,
+     "sheet_title": "rule P8-N17"
+    },
+    "value": "formwork >= 14 days"
+   },
+   "source_b": {
+    "rule_ref": "P1-NOTE-C",
+    "source_ref": {
+     "drawing": "ST7757.pdf",
+     "handle": "7E",
+     "page": 1,
+     "sheet_title": "rule P1-NOTE-C"
+    },
+    "value": "formwork >= 21 days"
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 8,
+     "sheet_title": "rule P8-N17"
+    },
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "7E",
+     "page": 1,
+     "sheet_title": "rule P1-NOTE-C"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "OTHER"
+   ],
+   "unit": null,
+   "where_to_check": "ST7757.pdf, rule P1-NOTE-C, p.1; ST7757.pdf, rule P8-N17, p.8"
+  },
+  {
+   "affected_facts": [
+    "top_over_supports"
+   ],
+   "answer_options": [
+    {
+     "answer": "minimum where no top bar drawn",
+     "effect": "added only where missing"
+    },
+    {
+     "answer": "replaces p.15",
+     "effect": "one rule for all supports"
+    },
+    {
+     "answer": "both apply",
+     "effect": "both bar sets"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "occurrences counted; quantities depending on the rule held back",
+   "detector": "rule_dependent_elements",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "P4-6-NOTE-2:SLAB",
+   "element_ids": [
+    "SP-GF_ROOF_SLAB-02",
+    "SP-GF_ROOF_SLAB-04",
+    "SP-GF_ROOF_SLAB-05",
+    "SP-GF_ROOF_SLAB-06",
+    "SP-GF_ROOF_SLAB-07",
+    "SP-GF_ROOF_SLAB-08",
+    "SP-GF_ROOF_SLAB-10",
+    "SP-GF_ROOF_SLAB-11",
+    "SP-GF_ROOF_SLAB-12",
+    "SP-GF_ROOF_SLAB-14",
+    "SP-GF_ROOF_SLAB-15",
+    "SP-GF_ROOF_SLAB-16",
+    "SP-GF_ROOF_SLAB-17",
+    "SP-GF_ROOF_SLAB-18",
+    "SP-GF_ROOF_SLAB-19",
+    "SP-GF_ROOF_SLAB-20",
+    "SP-GF_ROOF_SLAB-22",
+    "SP-GF_ROOF_SLAB-23",
+    "SP-GF_ROOF_SLAB-24",
+    "SP-GF_ROOF_SLAB-25",
+    "SP-GF_ROOF_SLAB-26",
+    "SP-GF_ROOF_SLAB-27",
+    "SP-GF_ROOF_SLAB-29",
+    "SP-GF_ROOF_SLAB-30",
+    "SP-GF_ROOF_SLAB-31",
+    "SP-GF_ROOF_SLAB-32",
+    "SP-GF_ROOF_SLAB-33",
+    "SP-GF_ROOF_SLAB-34",
+    "SP-1F_ROOF_SLAB-02",
+    "SP-1F_ROOF_SLAB-03",
+    "SP-1F_ROOF_SLAB-04",
+    "SP-1F_ROOF_SLAB-05",
+    "SP-1F_ROOF_SLAB-07",
+    "SP-1F_ROOF_SLAB-08",
+    "SP-1F_ROOF_SLAB-09",
+    "SP-1F_ROOF_SLAB-11",
+    "SP-1F_ROOF_SLAB-12",
+    "SP-1F_ROOF_SLAB-21",
+    "SP-1F_ROOF_SLAB-22",
+    "SP-1F_ROOF_SLAB-23",
+    "SP-1F_ROOF_SLAB-24",
+    "SP-1F_ROOF_SLAB-25",
+    "SP-2F_ROOF_SLAB-01",
+    "SP-2F_ROOF_SLAB-02",
+    "SP-2F_ROOF_SLAB-03",
+    "SP-2F_ROOF_SLAB-04",
+    "SP-2F_ROOF_SLAB-06",
+    "SP-2F_ROOF_SLAB-07",
+    "SP-2F_ROOF_SLAB-08"
+   ],
+   "element_type": "SLAB",
+   "flag_id": "STR-SLA-001",
+   "flag_key": "bb9f906f38e1222a",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by rule_dependent_elements",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "49 slab occurrence(s) depend on P4-6-NOTE-2 (Top steel 5Ø10/m over beams for the slabs, length one third of the span, in both directions.), whose applicability is not established (CANDIDATE).",
+   "issue_type": "AMBIGUOUS_APPLICABILITY",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 370.501,
+   "question_for_engineer": "The plan note asks for 5Ø10/m top bars over beams for one third of the span, and p.15 gives top-bar extensions of 0.25L / 0.30L. Is the plan note a minimum where no top bar is drawn, or does it replace p.15?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "P4-6-NOTE-2",
+    "value": "Top steel 5Ø10/m over beams for the slabs, length one third of the span, in both directions."
+   },
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "handle": "D8",
+     "page": 4,
+     "sheet_title": "rule P4-6-NOTE-2"
+    },
+    {
+     "drawing": "ST7757.pdf",
+     "page": 15,
+     "sheet_title": "rule P15-SLAB-ON-BEAMS"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "m2 plan",
+   "where_to_check": "ST7757.pdf, rule P15-SLAB-ON-BEAMS, p.15; ST7757.pdf, rule P4-6-NOTE-2, p.4"
+  },
+  {
+   "affected_facts": [
+    "temperature_steel"
+   ],
+   "answer_options": [
+    {
+     "answer": "row 150",
+     "effect": "use the lower row"
+    },
+    {
+     "answer": "row 175",
+     "effect": "use the next higher row"
+    },
+    {
+     "answer": "a stated value",
+     "effect": "use the consultant's value"
+    }
+   ],
+   "context": {},
+   "current_interpretation": null,
+   "detector": "table_gaps",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "P15-TEMP-TABLE:160",
+   "element_ids": [
+    "SP-GF_ROOF_SLAB-02",
+    "SP-GF_ROOF_SLAB-04",
+    "SP-GF_ROOF_SLAB-05",
+    "SP-GF_ROOF_SLAB-06",
+    "SP-GF_ROOF_SLAB-07",
+    "SP-GF_ROOF_SLAB-08",
+    "SP-GF_ROOF_SLAB-10",
+    "SP-GF_ROOF_SLAB-11",
+    "SP-GF_ROOF_SLAB-12",
+    "SP-GF_ROOF_SLAB-14",
+    "SP-GF_ROOF_SLAB-15",
+    "SP-GF_ROOF_SLAB-16",
+    "SP-GF_ROOF_SLAB-17",
+    "SP-GF_ROOF_SLAB-18",
+    "SP-GF_ROOF_SLAB-19",
+    "SP-GF_ROOF_SLAB-20",
+    "SP-GF_ROOF_SLAB-22",
+    "SP-GF_ROOF_SLAB-23",
+    "SP-GF_ROOF_SLAB-24",
+    "SP-GF_ROOF_SLAB-25",
+    "SP-GF_ROOF_SLAB-26",
+    "SP-GF_ROOF_SLAB-27",
+    "SP-GF_ROOF_SLAB-29",
+    "SP-GF_ROOF_SLAB-30",
+    "SP-GF_ROOF_SLAB-31",
+    "SP-GF_ROOF_SLAB-32",
+    "SP-GF_ROOF_SLAB-33",
+    "SP-GF_ROOF_SLAB-34",
+    "SP-1F_ROOF_SLAB-02",
+    "SP-1F_ROOF_SLAB-03",
+    "SP-1F_ROOF_SLAB-04",
+    "SP-1F_ROOF_SLAB-05",
+    "SP-1F_ROOF_SLAB-07",
+    "SP-1F_ROOF_SLAB-08",
+    "SP-1F_ROOF_SLAB-09",
+    "SP-1F_ROOF_SLAB-11",
+    "SP-1F_ROOF_SLAB-12",
+    "SP-1F_ROOF_SLAB-21",
+    "SP-1F_ROOF_SLAB-22",
+    "SP-1F_ROOF_SLAB-23",
+    "SP-1F_ROOF_SLAB-24",
+    "SP-1F_ROOF_SLAB-25",
+    "SP-2F_ROOF_SLAB-03",
+    "SP-2F_ROOF_SLAB-04",
+    "SP-2F_ROOF_SLAB-06",
+    "SP-2F_ROOF_SLAB-07",
+    "SP-2F_ROOF_SLAB-08"
+   ],
+   "element_type": "SLAB",
+   "flag_id": "STR-SLA-002",
+   "flag_key": "93a601ca94b38bfe",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by table_gaps",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "temperature reinforcement table (p.15) has no row for 160 mm (47 element(s)); rows are [100, 125, 150, 175, 200, 250, 300].",
+   "issue_type": "RULE_GAP",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 356.866,
+   "question_for_engineer": "temperature reinforcement table (p.15): which value applies for 160 mm?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "table rows",
+    "value": [
+     100,
+     125,
+     150,
+     175,
+     200,
+     250,
+     300
+    ]
+   },
+   "source_b": {
+    "description": "required key",
+    "value": 160
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 15,
+     "sheet_title": "rule P15-TEMP-TABLE"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "m2 plan",
+   "where_to_check": "ST7757.pdf, rule P15-TEMP-TABLE, p.15"
+  },
+  {
+   "affected_facts": [
+    "temperature_steel"
+   ],
+   "answer_options": [
+    {
+     "answer": "row 175",
+     "effect": "use the lower row"
+    },
+    {
+     "answer": "row 200",
+     "effect": "use the next higher row"
+    },
+    {
+     "answer": "a stated value",
+     "effect": "use the consultant's value"
+    }
+   ],
+   "context": {},
+   "current_interpretation": null,
+   "detector": "table_gaps",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "P15-TEMP-TABLE:180",
+   "element_ids": [
+    "SP-2F_ROOF_SLAB-01",
+    "SP-2F_ROOF_SLAB-02"
+   ],
+   "element_type": "SLAB",
+   "flag_id": "STR-SLA-003",
+   "flag_key": "97ea70eb6bb59173",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by table_gaps",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "temperature reinforcement table (p.15) has no row for 180 mm (2 element(s)); rows are [100, 125, 150, 175, 200, 250, 300].",
+   "issue_type": "RULE_GAP",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 13.635,
+   "question_for_engineer": "temperature reinforcement table (p.15): which value applies for 180 mm?",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "table rows",
+    "value": [
+     100,
+     125,
+     150,
+     175,
+     200,
+     250,
+     300
+    ]
+   },
+   "source_b": {
+    "description": "required key",
+    "value": 180
+   },
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 15,
+     "sheet_title": "rule P15-TEMP-TABLE"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "REINFORCEMENT"
+   ],
+   "unit": "m2 plan",
+   "where_to_check": "ST7757.pdf, rule P15-TEMP-TABLE, p.15"
+  },
+  {
+   "affected_facts": [
+    "detailing",
+    "geometry"
+   ],
+   "answer_options": [
+    {
+     "answer": "typical detail applies",
+     "effect": "stair bars from p.16 per flight"
+    },
+    {
+     "answer": "stair-specific detail",
+     "effect": "needs the stair drawing"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "occurrences counted; quantities depending on the rule held back",
+   "detector": "rule_dependent_elements",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "P16-STAIR:STAIR",
+   "element_ids": [
+    "SP-GF_ROOF_SLAB-03",
+    "SP-GF_ROOF_SLAB-21",
+    "SP-GF_ROOF_SLAB-28",
+    "SP-1F_ROOF_SLAB-01",
+    "SP-GBP-12"
+   ],
+   "element_type": "STAIR",
+   "flag_id": "STR-STA-001",
+   "flag_key": "65534aa4c34bf9a0",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by rule_dependent_elements",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "5 stair occurrence(s) depend on P16-STAIR (Typical stair and stair-beam reinforcement (N.T.S.).), whose applicability is not established (BLOCKED_METHOD).",
+   "issue_type": "AMBIGUOUS_APPLICABILITY",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": 56.327,
+   "question_for_engineer": "Does the typical stair detail (p.16) apply to each stair on the plans, including the stair inside the void? Please give flight / landing levels and waist thickness.",
+   "release_effect": "BLOCKED",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "P16-STAIR",
+    "value": "Typical stair and stair-beam reinforcement (N.T.S.)."
+   },
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 16,
+     "sheet_title": "rule P16-STAIR"
+    },
+    {
+     "drawing": "ST7757.dxf",
+     "page": 4,
+     "sheet_title": "GROUND FLOOR ROOF SLAB"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m2 plan",
+   "where_to_check": "ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4; ST7757.pdf, rule P16-STAIR, p.16"
+  },
+  {
+   "affected_facts": [
+    "detailing"
+   ],
+   "answer_options": [
+    {
+     "answer": "yes",
+     "effect": "detail extras added"
+    },
+    {
+     "answer": "no",
+     "effect": "plain column only"
+    }
+   ],
+   "context": {},
+   "current_interpretation": "occurrences counted; quantities depending on the rule held back",
+   "detector": "rule_dependent_elements",
+   "discipline": "STRUCTURAL",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_id": "P15-TWISTED:TURN_COLUMN",
+   "element_ids": [
+    "SPC-TURN_COLUMN-GFRS-31F",
+    "SPC-TURN_COLUMN-GFRS-324"
+   ],
+   "element_type": "TURN_COLUMN",
+   "flag_id": "STR-TUR-001",
+   "flag_key": "96f29219d648bddc",
+   "floor": null,
+   "generic_rule_candidate": null,
+   "history": [
+    {
+     "at": null,
+     "by": "ENGINE",
+     "note": "raised by rule_dependent_elements",
+     "to": "OPEN"
+    }
+   ],
+   "interpretation_authority": null,
+   "issue_summary": "2 turn column occurrence(s) depend on P15-TWISTED (Twisted (turned) column: spiral ties 6Ø8/m over 1 m each side of the floor, 4Ø16 extra.), whose applicability is not established (CANDIDATE).",
+   "issue_type": "AMBIGUOUS_APPLICABILITY",
+   "project_id": "ALSENAN-ST7757",
+   "project_specific": true,
+   "quantity_affected": null,
+   "question_for_engineer": "Does the p.15 detail (Twisted (turned) column: spiral ties 6Ø8/m over 1 m each side of the floor, 4Ø16 extra.) apply to each of these columns, and do they use the normal tie bands?",
+   "release_effect": "LOWER_BOUND",
+   "resolution": null,
+   "resolution_source": null,
+   "resolved_at": null,
+   "resolved_by": null,
+   "severity": "MEDIUM",
+   "source_a": {
+    "description": "P15-TWISTED",
+    "value": "Twisted (turned) column: spiral ties 6Ø8/m over 1 m each side of the floor, 4Ø16 extra."
+   },
+   "source_b": null,
+   "source_refs": [
+    {
+     "drawing": "ST7757.pdf",
+     "page": 15,
+     "sheet_title": "rule P15-TWISTED"
+    }
+   ],
+   "status": "OPEN",
+   "trade": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null,
+   "where_to_check": "ST7757.pdf, rule P15-TWISTED, p.15"
+  }
+ ],
+ "project_id": "ALSENAN-ST7757"
+}

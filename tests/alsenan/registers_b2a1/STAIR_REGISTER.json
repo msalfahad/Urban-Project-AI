@@ -1,0 +1,306 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_B2A1_STAIR_V2",
+ "policy": "STAIR_CONCRETE_V2",
+ "known_inputs": {
+  "tread_going_m": {
+   "value": 0.3,
+   "authority": "SOURCE (ST7757.pdf p.16 typical section prints 30; plan tread spacing 300 mm)"
+  },
+  "flight_width_m": {
+   "values": [
+    1.15,
+    2.8
+   ],
+   "authority": "SOURCE_PLAN_MEASURED (tread-line length on the architectural plans)"
+  },
+  "observed_tread_line_runs": [
+   {
+    "floor": "GF",
+    "layer": "2",
+    "linetype": "UNIFORM_DASH",
+    "tread_lines": 4,
+    "width_m": 1.15
+   },
+   {
+    "floor": "GF",
+    "layer": "2",
+    "linetype": "UNIFORM_DASH",
+    "tread_lines": 4,
+    "width_m": 1.15
+   },
+   {
+    "floor": "GF",
+    "layer": "2",
+    "linetype": "UNIFORM_DASH",
+    "tread_lines": 7,
+    "width_m": 1.15
+   },
+   {
+    "floor": "GF",
+    "layer": "2",
+    "linetype": "UNIFORM_DASH",
+    "tread_lines": 5,
+    "width_m": 2.8
+   },
+   {
+    "floor": "GF",
+    "layer": "5",
+    "linetype": "CONTINUOUS",
+    "tread_lines": 4,
+    "width_m": 1.15
+   },
+   {
+    "floor": "GF",
+    "layer": "5",
+    "linetype": "CONTINUOUS",
+    "tread_lines": 7,
+    "width_m": 1.15
+   },
+   {
+    "floor": "GF",
+    "layer": "5",
+    "linetype": "CONTINUOUS",
+    "tread_lines": 6,
+    "width_m": 1.15
+   },
+   {
+    "floor": "GF",
+    "layer": "5",
+    "linetype": "CONTINUOUS",
+    "tread_lines": 5,
+    "width_m": 2.8
+   },
+   {
+    "floor": "1F",
+    "layer": "2",
+    "linetype": "UNIFORM_DASH",
+    "tread_lines": 5,
+    "width_m": 1.15
+   },
+   {
+    "floor": "1F",
+    "layer": "2",
+    "linetype": "UNIFORM_DASH",
+    "tread_lines": 11,
+    "width_m": 1.15
+   },
+   {
+    "floor": "1F",
+    "layer": "5",
+    "linetype": "CONTINUOUS",
+    "tread_lines": 5,
+    "width_m": 1.15
+   },
+   {
+    "floor": "1F",
+    "layer": "5",
+    "linetype": "CONTINUOUS",
+    "tread_lines": 11,
+    "width_m": 1.15
+   }
+  ],
+  "tread_count": {
+   "authority": "CANDIDATE",
+   "why": "tread lines shown on a plan cut are not a certified tread count per flight (part of each flight is above the cut or dashed)"
+  }
+ },
+ "unknown_inputs": {
+  "riser_count": "not printed (no stair section with counted risers)",
+  "riser_height_m": "not printed",
+  "waist_thickness_m": "not printed ('THICK' without a value on p.16)",
+  "landing_thickness_m": "not printed",
+  "landing_area_m2": "not established"
+ },
+ "result": {
+  "name": "STAIR",
+  "policy": "STAIR_CONCRETE_V2",
+  "state": "BLOCKED_INPUT_MISSING",
+  "missing": [
+   "flight 10: riser_count",
+   "flight 10: riser_height_m",
+   "flight 10: tread_count",
+   "flight 10: waist_thickness_m",
+   "flight 11: riser_count",
+   "flight 11: riser_height_m",
+   "flight 11: tread_count",
+   "flight 11: waist_thickness_m",
+   "flight 12: riser_count",
+   "flight 12: riser_height_m",
+   "flight 12: tread_count",
+   "flight 12: waist_thickness_m",
+   "flight 1: riser_count",
+   "flight 1: riser_height_m",
+   "flight 1: tread_count",
+   "flight 1: waist_thickness_m",
+   "flight 2: riser_count",
+   "flight 2: riser_height_m",
+   "flight 2: tread_count",
+   "flight 2: waist_thickness_m",
+   "flight 3: riser_count",
+   "flight 3: riser_height_m",
+   "flight 3: tread_count",
+   "flight 3: waist_thickness_m",
+   "flight 4: riser_count",
+   "flight 4: riser_height_m",
+   "flight 4: tread_count",
+   "flight 4: waist_thickness_m",
+   "flight 5: riser_count",
+   "flight 5: riser_height_m",
+   "flight 5: tread_count",
+   "flight 5: waist_thickness_m",
+   "flight 6: riser_count",
+   "flight 6: riser_height_m",
+   "flight 6: tread_count",
+   "flight 6: waist_thickness_m",
+   "flight 7: riser_count",
+   "flight 7: riser_height_m",
+   "flight 7: tread_count",
+   "flight 7: waist_thickness_m",
+   "flight 8: riser_count",
+   "flight 8: riser_height_m",
+   "flight 8: tread_count",
+   "flight 8: waist_thickness_m",
+   "flight 9: riser_count",
+   "flight 9: riser_height_m",
+   "flight 9: tread_count",
+   "flight 9: waist_thickness_m",
+   "landing 1: area_m2",
+   "landing 1: thickness_m"
+  ],
+  "volume_m3": null,
+  "never": [
+   "steps x tread x riser",
+   "tread_count inferred from riser_count"
+  ]
+ },
+ "evidence": {
+  "tread_going_cm": 30,
+  "source": "ST7757.pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION (N.T.S.); architectural tread runs (A3 STAIR_REGISTER: going 300 mm, flight widths 1150 / 2800 mm)",
+  "waist": "NOT_PRINTED ('THICK' without value)",
+  "riser": "NOT_PRINTED",
+  "landing_thickness": "NOT_PRINTED",
+  "stair_beam": "G.B 30 wide on 10 cm blinding 50 wide (typical)",
+  "riser_count": "not proved (tread lines are not risers; a count from the storey height would be an assumption)"
+ },
+ "never": "steps x 0.30 x 0.15",
+ "never_inferred": [
+  "tread_count from riser_count",
+  "riser_count from tread_count or tread lines",
+  "riser_count from the storey height"
+ ],
+ "a3_tread_runs": {
+  "GF": [
+   {
+    "floor": "GF",
+    "layer": "2",
+    "tread_lines": 4,
+    "going_mm": 300.0,
+    "width_mm": 1150.0,
+    "role": "STAIR_GEOMETRY",
+    "linetype_class": "UNIFORM_DASH"
+   },
+   {
+    "floor": "GF",
+    "layer": "2",
+    "tread_lines": 4,
+    "going_mm": 300.0,
+    "width_mm": 1150.0,
+    "role": "STAIR_GEOMETRY",
+    "linetype_class": "UNIFORM_DASH"
+   },
+   {
+    "floor": "GF",
+    "layer": "2",
+    "tread_lines": 7,
+    "going_mm": 300.0,
+    "width_mm": 1150.0,
+    "role": "STAIR_GEOMETRY",
+    "linetype_class": "UNIFORM_DASH"
+   },
+   {
+    "floor": "GF",
+    "layer": "2",
+    "tread_lines": 5,
+    "going_mm": 300.0,
+    "width_mm": 2800.0,
+    "role": "STAIR_GEOMETRY",
+    "linetype_class": "UNIFORM_DASH"
+   },
+   {
+    "floor": "GF",
+    "layer": "5",
+    "tread_lines": 4,
+    "going_mm": 300.0,
+    "width_mm": 1150.0,
+    "role": "STAIR_GEOMETRY",
+    "linetype_class": "CONTINUOUS"
+   },
+   {
+    "floor": "GF",
+    "layer": "5",
+    "tread_lines": 7,
+    "going_mm": 300.0,
+    "width_mm": 1150.0,
+    "role": "STAIR_GEOMETRY",
+    "linetype_class": "CONTINUOUS"
+   },
+   {
+    "floor": "GF",
+    "layer": "5",
+    "tread_lines": 6,
+    "going_mm": 300.0,
+    "width_mm": 1150.0,
+    "role": "STAIR_GEOMETRY",
+    "linetype_class": "CONTINUOUS"
+   },
+   {
+    "floor": "GF",
+    "layer": "5",
+    "tread_lines": 5,
+    "going_mm": 300.0,
+    "width_mm": 2800.0,
+    "role": "STAIR_GEOMETRY",
+    "linetype_class": "CONTINUOUS"
+   }
+  ],
+  "1F": [
+   {
+    "floor": "1F",
+    "layer": "2",
+    "tread_lines": 5,
+    "going_mm": 300.0,
+    "width_mm": 1150.0,
+    "role": "STAIR_GEOMETRY",
+    "linetype_class": "UNIFORM_DASH"
+   },
+   {
+    "floor": "1F",
+    "layer": "2",
+    "tread_lines": 11,
+    "going_mm": 300.0,
+    "width_mm": 1150.0,
+    "role": "STAIR_GEOMETRY",
+    "linetype_class": "UNIFORM_DASH"
+   },
+   {
+    "floor": "1F",
+    "layer": "5",
+    "tread_lines": 5,
+    "going_mm": 300.0,
+    "width_mm": 1150.0,
+    "role": "STAIR_GEOMETRY",
+    "linetype_class": "CONTINUOUS"
+   },
+   {
+    "floor": "1F",
+    "layer": "5",
+    "tread_lines": 11,
+    "going_mm": 300.0,
+    "width_mm": 1150.0,
+    "role": "STAIR_GEOMETRY",
+    "linetype_class": "CONTINUOUS"
+   }
+  ],
+  "2F": []
+ }
+}

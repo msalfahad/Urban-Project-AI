@@ -1,0 +1,82 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_REBAR_GATE_TRANSITIONS_V3",
+ "rows": [
+  {
+   "gate": "G11",
+   "final_state": "PASS",
+   "evidence": "two-layer FTB: both layers x both directions, bars per metre over side - 2 x cover (never an absolute count); FF straight mesh consumed",
+   "proving_test": "tests/alsenan_rebar_truth/test_rebar_truth_r3.py::test_G11_two_layer_footing_quantity_consumer"
+  },
+  {
+   "gate": "G13",
+   "final_state": "PASS",
+   "evidence": "SB1 / SB3 strap consumer (bottom / top / stirrups); SB2 BLOCKED SOURCE_CONFLICT (no row chosen)",
+   "proving_test": "tests/alsenan_rebar_truth/test_rebar_truth_r3.py::test_G13_strap_rebar_quantity_consumer"
+  },
+  {
+   "gate": "G15",
+   "final_state": "XFAIL",
+   "evidence": "ground-slab scope: Q-S4 open; the bound cell is released as provisional with a BLOCKED scope remainder - min -> max is not used",
+   "proving_test": "tests/alsenan_rebar_truth/test_rebar_truth_r3.py::test_G15_ground_zone_not_bound_by_minimum_area"
+  },
+  {
+   "gate": "G23",
+   "final_state": "XFAIL",
+   "evidence": "stair detail applicability not proved (p.16 typical 0.00 / +2.00 / +4.00 vs rises 4.50 / 4.20)",
+   "proving_test": "tests/alsenan_rebar_truth/test_rebar_truth_r3.py::test_G23_stair_rebar_bound_to_typical_layout"
+  },
+  {
+   "gate": "G24",
+   "final_state": "PASS",
+   "evidence": "continuous-beam component accounting: every CB occurrence has a component matrix with a state per bar role / span",
+   "proving_test": "tests/alsenan_rebar_truth/test_rebar_truth_r3.py::test_G24_cb_component_accounting"
+  },
+  {
+   "gate": "G25",
+   "final_state": "PASS",
+   "evidence": "rebar mass conservation",
+   "proving_test": "tests/alsenan_rebar_truth/test_rebar_truth_r3.py::test_G25_rebar_mass_conservation"
+  },
+  {
+   "gate": "G26",
+   "final_state": "PASS",
+   "evidence": "source provenance on every quantity component",
+   "proving_test": "tests/alsenan_rebar_truth/test_rebar_truth_r3.py::test_G26_rebar_source_provenance"
+  },
+  {
+   "gate": "G27",
+   "final_state": "PASS",
+   "evidence": "no benchmark leakage into the rebar builders",
+   "proving_test": "tests/alsenan_rebar_truth/test_rebar_truth_r3.py::test_G27_no_benchmark_leakage"
+  },
+  {
+   "gate": "G28",
+   "final_state": "PASS",
+   "evidence": "no kg/m3 quantity production",
+   "proving_test": "tests/alsenan_rebar_truth/test_rebar_truth_r3.py::test_G28_no_ratio_quantity"
+  },
+  {
+   "gate": "G29",
+   "final_state": "PASS",
+   "evidence": "no duplicate component / occurrence",
+   "proving_test": "tests/alsenan_rebar_truth/test_rebar_truth_r3.py::test_G29_no_duplicate_component"
+  },
+  {
+   "gate": "G30",
+   "final_state": "PASS",
+   "evidence": "no incomplete population marked complete",
+   "proving_test": "tests/alsenan_rebar_truth/test_rebar_truth_r3.py::test_G30_no_incomplete_population_complete"
+  },
+  {
+   "gate": "G31",
+   "final_state": "PASS",
+   "evidence": "every reinforced-concrete occurrence has a rebar population",
+   "proving_test": "tests/alsenan_rebar_truth/test_rebar_truth_r3.py::test_G31_every_rc_occurrence_has_rebar"
+  }
+ ],
+ "round2_superseded": [
+  "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G11_two_layer_footing_quantity_consumer (xfail -> R3 PASS)",
+  "tests/alsenan_control_plane/test_control_plane_r2_gates.py::test_G13_strap_rebar_quantity_consumer (xfail -> R3 PASS)"
+ ],
+ "invariants_clean": true
+}

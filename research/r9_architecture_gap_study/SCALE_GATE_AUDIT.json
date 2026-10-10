@@ -1,0 +1,56 @@
+{
+ "basis": "pack + Urban HEAD code + local donors at DONORS.lock commits (U-C4N cdb10638, OpenTakeoff e6d2251c) + RoomGraph / aec-qto / Rebar-Takeoff verified at pinned commits (LICENSE, README, docs, manifests read; no code copied) + christiannp forensic package",
+ "pack": "Urban_BOQ_Research_Pack_2026-10-07.zip",
+ "pack_scale_states_mapping": {
+  "auto_verified": "VERIFIED (Urban needs >= 2 independent evidence kinds)",
+  "candidate": "UNCONFIRMED or PROVISIONAL",
+  "conflicted": "CONFLICT",
+  "human_verified": "CONFIRMED_BY_HUMAN (bound to the source hash)",
+  "unknown": "BLOCKED / no frame"
+ },
+ "pack_sha256": "166a7341ebd9dc2d258d1c97e422ec67880782d86303c89cf76111d82d9e5331",
+ "pack_status": "DELIVERED and read in full (23 files)",
+ "sources": {
+  "DXF_DWG": {
+   "dimlfac_unit_conflicts": "act_measurement / defpoint ratio families (unit_evidence); CONFLICT on > 0.5 % disagreement",
+   "drawing_scale": "REGION_MEASUREMENT_TRANSFORM per region (enlarged details are region scales)",
+   "gap": "none",
+   "known_dimension_calibration": "checked-dimension residual census",
+   "page_scale": "scale notes recorded as observations, never model-space truth",
+   "physical_units": "UNIT_CONTEXT from >= 2 independent evidence kinds (frame.py frozen rule); INSUNITS is a DECLARATION only",
+   "true_gate": "YES (canonical_input fail-closed + frame status)",
+   "verification_status": "VERIFIED / CONFIRMED_BY_HUMAN / PROVISIONAL / UNCONFIRMED / CONFLICT / BLOCKED"
+  },
+  "IFC": {
+   "dimlfac_unit_conflicts": "n/a",
+   "drawing_scale": "n/a",
+   "gap": "only when an IFC project arrives (DEFER)",
+   "known_dimension_calibration": "n/a",
+   "page_scale": "n/a",
+   "physical_units": "not supported",
+   "true_gate": "NO (no IFC route)",
+   "verification_status": "n/a"
+  },
+  "RASTER_PDF": {
+   "dimlfac_unit_conflicts": "n/a",
+   "drawing_scale": "per sheet / crop",
+   "gap": "raster claims enter only as evidence / claims; keep",
+   "known_dimension_calibration": "yes",
+   "page_scale": "nominal scale only as a check",
+   "physical_units": "raster_evidence.calibrate from >= 2 printed dimensions",
+   "true_gate": "YES (evidence lane)",
+   "verification_status": "measurement grades + cross-sheet checks"
+  },
+  "VECTOR_PDF": {
+   "dimlfac_unit_conflicts": "n/a",
+   "drawing_scale": "per-sheet calibration; vector/raster frame transform proved (frames.py)",
+   "gap": "no hard rule that a PDF-derived length needs a VERIFIED page frame before it enters a quantity (R9-SC-02)",
+   "known_dimension_calibration": "printed dimensions measured on the page",
+   "page_scale": "printed scale as evidence",
+   "physical_units": "page units -> calibration object (calibration_v2: UNIFORM / XY / AFFINE)",
+   "true_gate": "PARTIAL",
+   "verification_status": "calibration object state; NOT an enforced UNIT_CONTEXT at quantity time"
+  }
+ },
+ "v1_commit": "a75b845"
+}

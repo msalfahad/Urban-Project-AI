@@ -1,0 +1,373 @@
+{
+ "rule": "candidate regions with contradictions; min -> max never used",
+ "notes": [
+  "T=10cm",
+  "T=10cm"
+ ],
+ "footprints": [
+  {
+   "footprint": "FP-1",
+   "outer_m2": 227.719,
+   "cells": [
+    {
+     "area_m2": 42.81,
+     "texts": [
+      "+1.00",
+      "+1.00",
+      "+0.30",
+      "C9",
+      "C2",
+      "C1",
+      "C6",
+      "******"
+     ],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 24.395,
+     "texts": [
+      "+1.00",
+      "C3",
+      "C8",
+      "CN/FN",
+      "CN/FN"
+     ],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 14.773,
+     "texts": [
+      "T=10cm",
+      "5%%c10/m E.W."
+     ],
+     "holds_slab_note": true
+    },
+    {
+     "area_m2": 14.771,
+     "texts": [
+      "C5",
+      "CN/FN"
+     ],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 14.391,
+     "texts": [
+      "C11"
+     ],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 11.467,
+     "texts": [
+      "+1.00",
+      "C",
+      "C11"
+     ],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 10.763,
+     "texts": [
+      "C4",
+      "C9",
+      "CN"
+     ],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 8.358,
+     "texts": [
+      "C7"
+     ],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 7.981,
+     "texts": [
+      "C3"
+     ],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 5.928,
+     "texts": [
+      "C10"
+     ],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 4.108,
+     "texts": [],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 3.545,
+     "texts": [],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 3.248,
+     "texts": [],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 2.057,
+     "texts": [
+      "C2"
+     ],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 2.047,
+     "texts": [
+      "CN"
+     ],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 1.657,
+     "texts": [
+      "C5"
+     ],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 0.298,
+     "texts": [],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 0.154,
+     "texts": [],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 0.049,
+     "texts": [],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 0.044,
+     "texts": [],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 0.044,
+     "texts": [],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 0.031,
+     "texts": [],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 0.031,
+     "texts": [],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 0.024,
+     "texts": [],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 0.0,
+     "texts": [],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 0.0,
+     "texts": [],
+     "holds_slab_note": false
+    }
+   ],
+   "cells_total_m2": 172.974,
+   "note_cells_m2": 14.773,
+   "candidates": [
+    {
+     "id": "A_NOTE_CELL_ONLY",
+     "area_m2": 14.773,
+     "audit_kg": 91.2,
+     "contradiction": "25 other closed cells (158.2 m2) have no slab note and no alternative floor construction printed"
+    },
+    {
+     "id": "B_ALL_CELLS",
+     "area_m2": 172.974,
+     "audit_kg": 1067.7,
+     "contradiction": "one note per footprint does not state 'typical'; cells may be voids / courtyards / pits"
+    },
+    {
+     "id": "C_ALL_CELLS_ABOVE_0.5M2",
+     "area_m2": 172.299,
+     "audit_kg": 1063.6,
+     "contradiction": "slivers dropped as drawing gaps; the other cells hold only column / footing tags and level marks (+1.00, and +0.30 in one cell) - no floor designation"
+    }
+   ],
+   "level_marks_in_cells": [
+    "+0.30",
+    "+1.00"
+   ],
+   "decision": "UNRESOLVED (Q-S4 narrowed)"
+  },
+  {
+   "footprint": "FP-2",
+   "outer_m2": 60.557,
+   "cells": [
+    {
+     "area_m2": 22.93,
+     "texts": [
+      "+0.30",
+      "C",
+      "C",
+      "T=10cm",
+      "5%%c10/m E.W."
+     ],
+     "holds_slab_note": true
+    },
+    {
+     "area_m2": 6.866,
+     "texts": [
+      "+0.30",
+      "C"
+     ],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 6.85,
+     "texts": [
+      "C5"
+     ],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 3.11,
+     "texts": [],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 2.656,
+     "texts": [],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 1.435,
+     "texts": [],
+     "holds_slab_note": false
+    },
+    {
+     "area_m2": 1.136,
+     "texts": [
+      "+0.30"
+     ],
+     "holds_slab_note": false
+    }
+   ],
+   "cells_total_m2": 44.983,
+   "note_cells_m2": 22.93,
+   "candidates": [
+    {
+     "id": "A_NOTE_CELL_ONLY",
+     "area_m2": 22.93,
+     "audit_kg": 141.5,
+     "contradiction": "6 other closed cells (22.05 m2) have no slab note and no alternative floor construction printed"
+    },
+    {
+     "id": "B_ALL_CELLS",
+     "area_m2": 44.983,
+     "audit_kg": 277.7,
+     "contradiction": "one note per footprint does not state 'typical'; cells may be voids / courtyards / pits"
+    },
+    {
+     "id": "C_ALL_CELLS_ABOVE_0.5M2",
+     "area_m2": 44.983,
+     "audit_kg": 277.7,
+     "contradiction": "slivers dropped as drawing gaps; the other cells hold only column / footing tags and level marks (+1.00, and +0.30 in one cell) - no floor designation"
+    }
+   ],
+   "level_marks_in_cells": [
+    "+0.30"
+   ],
+   "decision": "UNRESOLVED (Q-S4 narrowed)"
+  }
+ ],
+ "round3_scope": [
+  {
+   "zone": "ZONE-1",
+   "note": "T=10cm, 5Ø10/m E.W.",
+   "bound_cell_outer_m2": 103.443,
+   "slab_m2": 70.40589,
+   "footprints": [
+    {
+     "id": "FP-1",
+     "area_m2": 227.719,
+     "bounds": [
+      92817,
+      35948,
+      112189,
+      49998
+     ]
+    },
+    {
+     "id": "FP-2",
+     "area_m2": 60.557,
+     "bounds": [
+      80817,
+      36298,
+      91619,
+      45549
+     ]
+    }
+   ],
+   "scope": "AMBIGUOUS_NESTED_CANDIDATES",
+   "positive_evidence_checked": [
+    "slab note position",
+    "closed cell / footprint outlines",
+    "structural layer (1 / 2)",
+    "drawing title"
+   ],
+   "evidence_found": "the note lies inside nested closed cells; no boundary, callout or hatch selects one",
+   "decision": "BLOCKED_SCOPE (Q-S4): the bound smallest cell is kept as a LOWER BOUND; min -> max is not used"
+  },
+  {
+   "zone": "ZONE-2",
+   "note": "T=10cm, 5Ø10/m E.W.",
+   "bound_cell_outer_m2": 60.557,
+   "slab_m2": 44.983,
+   "footprints": [
+    {
+     "id": "FP-1",
+     "area_m2": 227.719,
+     "bounds": [
+      92817,
+      35948,
+      112189,
+      49998
+     ]
+    },
+    {
+     "id": "FP-2",
+     "area_m2": 60.557,
+     "bounds": [
+      80817,
+      36298,
+      91619,
+      45549
+     ]
+    }
+   ],
+   "scope": "ESTABLISHED_SOLE_CANDIDATE",
+   "positive_evidence_checked": [
+    "slab note position",
+    "closed cell / footprint outlines",
+    "structural layer (1 / 2)",
+    "drawing title"
+   ],
+   "evidence_found": "the note's smallest closed cell IS a whole ground-beam footprint",
+   "decision": "scope = the footprint"
+  }
+ ],
+ "g15": "XFAIL",
+ "SCHEMA": "URBAN_ALSENAN_GROUND_SLAB_SCOPE_V2"
+}

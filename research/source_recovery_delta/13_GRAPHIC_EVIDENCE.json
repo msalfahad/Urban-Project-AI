@@ -1,0 +1,1028 @@
+{
+ "evidence": {
+  "E-ARCH-01": {
+   "channel": "DXF_TEXT (architectural)",
+   "facts": {
+    "build_up_texts": 0,
+    "level_marks": {
+     "+0.15": 8,
+     "+0.30": 5,
+     "+1.00": 5,
+     "+4.30": 2,
+     "+5.50": 6,
+     "+9.70": 3
+    }
+   },
+   "handles": [],
+   "id": "E-ARCH-01",
+   "reading": "the architectural DXF carries level marks only (+0.15 / +0.30 / +1.00 / ±0.00); no floor build-up, no section and no ground-beam depth",
+   "source": "P7757.dxf"
+  },
+  "E-DXF-01": {
+   "channel": "DXF_BLOCK_TEMPLATE",
+   "facts": {
+    "BOXED_values": {
+     "F": "3+4",
+     "F10": "3+5",
+     "F11": "3+8",
+     "F15": "3+4",
+     "F2": "3+4",
+     "F3": "3+4",
+     "F4": "3+4",
+     "F5": "3+4",
+     "F6": "3+5",
+     "F7": "3+6",
+     "F9": "3+8",
+     "FN": ""
+    },
+    "FTB_BOXED_defaults": [
+     "TOP",
+     "BOT"
+    ],
+    "FT_BOXED_default": "3+-",
+    "FT_diameter_glyphs": 2
+   },
+   "handles": [
+    "1C79",
+    "1C95",
+    "1CA0",
+    "1CAB",
+    "1CB6",
+    "1CC1",
+    "1CCC",
+    "1CD7",
+    "1CE2",
+    "1CED",
+    "1CF8",
+    "2B13"
+   ],
+   "id": "E-DXF-01",
+   "reading": "the BOXED column has no diameter glyph and no count / diameter pair; the leading '3' is template text; two-layer rows hold layer labels; FN cleared the default",
+   "source": "ST7757.dxf blocks FT / FTB"
+  },
+  "E-DXF-02": {
+   "channel": "DXF_TEXT_ALL",
+   "facts": {
+    "probe_hits": {
+     "ANCHOR": [],
+     "BOX": [
+      "BOXED"
+     ],
+     "CANTILEVER": [],
+     "CONCENTR": [],
+     "CURV": [],
+     "DEVELOP": [],
+     "HOOK": [],
+     "LAP": [],
+     "LEG": [],
+     "RING": [],
+     "SPLICE": []
+    },
+    "texts_scanned": 3301
+   },
+   "handles": [],
+   "id": "E-DXF-02",
+   "reading": "no TEXT / MTEXT / ATTRIB / ATTDEF in the drawing defines boxed bars, hooks, anchorage, development, laps, concentrated load, link legs, cantilever or ring-beam detailing; 'BOXED' occurs only as the schedule header",
+   "source": "ST7757.dxf modelspace + 420 blocks + ATTRIBs"
+  },
+  "E-DXF-03": {
+   "channel": "DXF_BLOCK_GEOMETRY",
+   "facts": {
+    "icons": {
+     "STR2": {
+      "closed_rectangles": 2,
+      "hook_tick_lines": 4,
+      "rect_heights": [
+       800
+      ],
+      "rect_widths": [
+       267,
+       800
+      ]
+     },
+     "str3": {
+      "closed_rectangles": 3,
+      "hook_tick_lines": 6,
+      "rect_heights": [
+       900
+      ],
+      "rect_widths": [
+       180,
+       180,
+       900
+      ]
+     }
+    },
+    "placements": [
+     {
+      "dy": 310.8,
+      "handle": "1FDA",
+      "icon": "STR2",
+      "row": "B19",
+      "row_handle": "1F33"
+     },
+     {
+      "dy": 336.2,
+      "handle": "1FE6",
+      "icon": "STR2",
+      "row": "SB1",
+      "row_handle": "1FB0"
+     },
+     {
+      "dy": 310.8,
+      "handle": "26FF",
+      "icon": "STR2",
+      "row": "B17",
+      "row_handle": "1F1D"
+     },
+     {
+      "dy": 310.8,
+      "handle": "2701",
+      "icon": "STR2",
+      "row": "B20",
+      "row_handle": "1F3E"
+     },
+     {
+      "dy": 310.8,
+      "handle": "2702",
+      "icon": "STR2",
+      "row": "B21",
+      "row_handle": "1F49"
+     },
+     {
+      "dy": 310.8,
+      "handle": "2703",
+      "icon": "STR2",
+      "row": "B22",
+      "row_handle": "1F54"
+     },
+     {
+      "dy": 310.8,
+      "handle": "2704",
+      "icon": "STR2",
+      "row": "B23",
+      "row_handle": "1F5F"
+     },
+     {
+      "dy": 310.8,
+      "handle": "2705",
+      "icon": "STR2",
+      "row": "B24",
+      "row_handle": "1F6A"
+     },
+     {
+      "dy": 310.8,
+      "handle": "2706",
+      "icon": "STR2",
+      "row": "B25",
+      "row_handle": "1F75"
+     },
+     {
+      "dy": 310.8,
+      "handle": "2707",
+      "icon": "STR2",
+      "row": "B26",
+      "row_handle": "1F80"
+     },
+     {
+      "dy": 322.0,
+      "handle": "2AC5",
+      "icon": "str3",
+      "row": "SB2",
+      "row_handle": "2ABA"
+     },
+     {
+      "dy": 336.2,
+      "handle": "2B11",
+      "icon": "STR2",
+      "row": "SB3",
+      "row_handle": "2B06"
+     }
+    ]
+   },
+   "handles": [
+    "1FDA",
+    "1FE6",
+    "26FF",
+    "2701",
+    "2702",
+    "2703",
+    "2704",
+    "2705",
+    "2706",
+    "2707",
+    "2AC5",
+    "2B11"
+   ],
+   "id": "E-DXF-03",
+   "reading": "STR2 = an outer closed rectangle + one inner closed rectangle of the same height, each with a pair of hook ticks at a top corner (2 links, 4 vertical legs); str3 = outer + two inner (3 links, 6 legs). Same symbol as the labelled closed links of the p.13 sections (closed rectangle + corner hook). Inner-link width is not dimensioned.",
+   "source": "ST7757.dxf blocks STR2 / str3, SBT REMARKS column (p.10)"
+  },
+  "E-DXF-04": {
+   "channel": "DXF_SHEET_EXTENT",
+   "facts": {
+    "rows": {
+     "1FBB": {
+      "BOT": "10Ø18",
+      "H": "50",
+      "TOP": "10Ø18",
+      "W": "80",
+      "inside_sheet_frame": false,
+      "y": -9112
+     },
+     "2ABA": {
+      "BOT": "10Ø16",
+      "H": "50",
+      "TOP": "20Ø18",
+      "W": "100",
+      "inside_sheet_frame": true,
+      "y": -5242
+     }
+    },
+    "sheet_frame_y": [
+     -7596,
+     20434
+    ]
+   },
+   "handles": [
+    "1FBB",
+    "2ABA",
+    "1B2D"
+   ],
+   "id": "E-DXF-04",
+   "reading": "row 2ABA (100x50) lies inside the schedules sheet frame and is the only SB2 row on the issued PDF p.10; row 1FBB (80x50) lies below the frame in model space and is not on the issued sheet",
+   "source": "ST7757.dxf SBT rows 1FBB / 2ABA, DEFPOINTS sheet frame 1B2D (SCHEDULES 1, PDF p.10)"
+  },
+  "E-DXF-05": {
+   "channel": "DXF_GEOMETRY",
+   "facts": {
+    "pit_wall_inner_mm": 1800,
+    "pit_wall_outer_mm": 2200,
+    "wall_thickness_mm": 200,
+    "walls": 4
+   },
+   "handles": [
+    "10EA",
+    "10EB",
+    "1676",
+    "1B2B"
+   ],
+   "id": "E-DXF-05",
+   "reading": "the lift pit is a closed square of four 20 cm bearing walls (inner 1.80 m, outer 2.20 m); the p.14 section cuts two of them",
+   "source": "ST7757.dxf foundation plan: S-BW polylines 10EA / 10EB around tag 1676 'FF', footing outline 1B2B"
+  },
+  "E-DXF-06": {
+   "channel": "DXF_DIMENSION_MEASUREMENT",
+   "facts": {
+    "drawn_ratio": {
+     "0.15L": 0.0918,
+     "0.22 Ln": 0.2593,
+     "0.3 Ln2": 0.3257
+    },
+    "measured_mm": {
+     "0.15L": [
+      419.63
+     ],
+     "0.22 Ln": [
+      1436.32
+     ],
+     "0.3 Ln2": [
+      1803.98
+     ],
+     "7.5cm": [
+      694.18,
+      697.15
+     ],
+     "L": [
+      4569.25
+     ],
+     "Ln": [
+      5538.46
+     ]
+    }
+   },
+   "handles": [
+    "2785",
+    "20C6",
+    "222D",
+    "2798",
+    "20D9",
+    "225A",
+    "2282"
+   ],
+   "id": "E-DXF-06",
+   "reading": "the drawn lengths do not reproduce the printed factors (drawn 0.2593 Ln for '0.22 Ln', 0.0918 L for '0.15L', 697 mm for '7.5cm'): the figures are N.T.S., so neither '0.3 Ln2' in the 2-span figure nor the span meant by '0.15L' can be read off by scale",
+   "source": "ST7757.dxf CB typical figures (C-BEAM2 / C-BEAM3 headers, pp.11-12)"
+  },
+  "E-DXF-07": {
+   "channel": "DXF_TEXT",
+   "facts": {
+    "B3_row": {
+     "BOTTOM": "4Ø16",
+     "H": 40,
+     "STIRRUPS": "6Ø8/m",
+     "TOP": "2Ø12",
+     "W": 20
+    },
+    "with_stair_tags": {
+     "1826": {
+      "distance": 695,
+      "tag": "1827"
+     },
+     "6B6": {
+      "distance": 695,
+      "tag": "6B7"
+     },
+     "6B8": {
+      "distance": 695,
+      "tag": "6B9"
+     }
+    }
+   },
+   "handles": [
+    "6B6",
+    "6B7",
+    "6B8",
+    "6B9",
+    "1826",
+    "1827"
+   ],
+   "id": "E-DXF-07",
+   "reading": "every '(With Stair)' qualifier sits beside a B3 tag; B3 = 20x40, 4Ø16 bottom, 2Ø12 top, 6Ø8/m",
+   "source": "ST7757.dxf plan tags + SBT row B3"
+  },
+  "E-DXF-08": {
+   "channel": "DXF_TEXT (legacy Arabic decoded, engine.source.legacy_text)",
+   "facts": {
+    "1B33": {
+     "layer": "S-TEXT.SCH",
+     "state": "PARTIAL_DECODE",
+     "text": "?? اجهاد التربة المصمم عليه"
+    },
+    "1C64": {
+     "layer": "S-TEXT.SCH",
+     "state": "DECODED",
+     "text": "قاعددة مصعددد"
+    },
+    "1E0E": {
+     "layer": "S-TEXT.SCH",
+     "state": "PARTIAL_DECODE",
+     "text": "?? مياه جوفية علي عمق م"
+    },
+    "1E10": {
+     "layer": "S-TEXT.SCH",
+     "state": "PARTIAL_DECODE",
+     "text": "? ? صممت الاساساتلتتحمل ارضي ? اول ? ثاني"
+    },
+    "1E11": {
+     "layer": "S-TEXT.SCH",
+     "state": "PARTIAL_DECODE",
+     "text": "?? منسوب الحفر لا يقل عن"
+    },
+    "1E12": {
+     "layer": "S-TEXT.SCH",
+     "state": "PARTIAL_DECODE",
+     "text": "من منس?وب ارض القسيمة الحالي"
+    },
+    "B8": {
+     "layer": "S-NOTE",
+     "state": "PARTIAL_DECODE",
+     "text": "? وجوب صب الشناجات الخارجية جهة الجار ز فوق و تحت طابوق ءسود مبني من منسوب الاساس"
+    },
+    "C8": {
+     "layer": "S-TITLE TEXT",
+     "state": "DECODED",
+     "text": "الشيناجات"
+    }
+   },
+   "handles": [
+    "1B33",
+    "1C64",
+    "1E0E",
+    "1E10",
+    "1E11",
+    "1E12",
+    "B8",
+    "C8"
+   ],
+   "id": "E-DXF-08",
+   "reading": "B8: exterior ground beams on the neighbour side are cast above and below a block wall built from foundation level (no depth, no bars); 1C64: FF REMARKS = 'lift base'; soil notes give founding / soil data only. None defines GB depth, development or a concentrated load.",
+   "source": "ST7757.dxf S-NOTE / S-TEXT.SCH texts"
+  },
+  "E-DXF-09": {
+   "channel": "DXF_TEXT + neighbourhood",
+   "facts": {
+    "marks": {
+     "165A": {
+      "layer": "S-TEXT",
+      "text": "******",
+      "xy": [
+       99807,
+       40800
+      ]
+     },
+     "165B": {
+      "layer": "S-TEXT",
+      "text": "******",
+      "xy": [
+       96151,
+       44446
+      ]
+     }
+    },
+    "other_star_texts": [
+     "*   ,{,F wF Hgakh{hJ Hgohv{dm {im Hg{hv .  t,R , jpJ 'hf,R Xs,] lfkD lK lks,F HBshS",
+     "*   ,{,F wF {ldU HBsrT fslh:m  )  16   sL (  lhgL d`:v obT `g; ",
+     "*   u]L t; a]HJ HgoaF gbsrT ,Hg:lvHJ rfG lv,v tjvM >lkdm BjrG uK   21   d,L",
+     "*  4.7 m    H    4.3 m ",
+     "*  5 m    H    4.7 m ",
+     "*  FOR",
+     "*  H   4.3 m ",
+     "*  H  =  HIEGHT OF FLOOR",
+     "*  L=LENGTH OF COLUMN.",
+     "*  ST. OF COLUMN- 6%%C8/m",
+     "*  T  =   THICKNESS OF COLUMN"
+    ]
+   },
+   "handles": [
+    "165A",
+    "165B"
+   ],
+   "id": "E-DXF-09",
+   "reading": "both marks sit at ground-beam junctions next to underlay strokes on layer '2'; the set has no legend for them; every other '*' text is a note bullet",
+   "source": "ST7757.dxf GBP sheet"
+  },
+  "E-DXF-10": {
+   "channel": "DXF_ATTRIB",
+   "facts": {
+    "F": {
+     "BOXED": "3+4",
+     "handle": "1C79"
+    },
+    "F10": {
+     "BOXED": "3+5",
+     "handle": "1CE2"
+    }
+   },
+   "handles": [
+    "1C79",
+    "1CE2"
+   ],
+   "id": "E-DXF-10",
+   "reading": "no new project source bears on the F / F10 occurrence conflict",
+   "source": "ST7757.dxf FT rows F / F10"
+  },
+  "E-PDF-01": {
+   "channel": "PDF_VECTOR (S-REIN.D) + visual label reading",
+   "facts": {
+    "DEEP": {
+     "bottom_bar_dots_in_section": 7,
+     "boxed_inverted_U": {
+      "hooks": 0,
+      "legs": [
+       [
+        [
+         450.8,
+         1038.0
+        ],
+        [
+         520.8,
+         1038.0
+        ]
+       ],
+       [
+        [
+         450.8,
+         884.9
+        ],
+        [
+         520.8,
+         884.9
+        ]
+       ]
+      ],
+      "top": [
+       [
+        520.8,
+        1038.0
+       ],
+       [
+        520.8,
+        884.9
+       ]
+      ]
+     },
+     "leader_on_boxed_bar": [
+      {
+       "end": [
+        520.4,
+        902.4
+       ],
+       "far": [
+        505.1,
+        894.5
+       ],
+       "layer": "S-TEXT.D"
+      }
+     ],
+     "leader_on_long_bar": [
+      {
+       "end": [
+        450.8,
+        1020.8
+       ],
+       "far": [
+        460.7,
+        1030.0
+       ],
+       "layer": "S-TEXT.D"
+      }
+     ],
+     "long_bar_U": {
+      "base": [
+       [
+        450.8,
+        1035.4
+       ],
+       [
+        450.8,
+        887.4
+       ]
+      ],
+      "hooks_45deg": [
+       [
+        [
+         515.3,
+         1035.4
+        ],
+        [
+         518.6,
+         1032.2
+        ]
+       ],
+       [
+        [
+         515.3,
+         887.4
+        ],
+        [
+         518.6,
+         890.7
+        ]
+       ]
+      ],
+      "leg_length_pt": [
+       64.6,
+       64.6
+      ],
+      "legs": [
+       [
+        [
+         450.8,
+         887.4
+        ],
+        [
+         515.3,
+         887.4
+        ]
+       ],
+       [
+        [
+         450.8,
+         1035.4
+        ],
+        [
+         515.3,
+         1035.4
+        ]
+       ]
+      ]
+     }
+    },
+    "SHALLOW": {
+     "bottom_bar_dots_in_section": 7,
+     "boxed_inverted_U": {
+      "hooks": 0,
+      "legs": [
+       [
+        [
+         422.4,
+         543.6
+        ],
+        [
+         519.8,
+         543.6
+        ]
+       ],
+       [
+        [
+         422.4,
+         332.4
+        ],
+        [
+         519.8,
+         332.4
+        ]
+       ]
+      ],
+      "top": [
+       [
+        519.8,
+        543.6
+       ],
+       [
+        519.8,
+        332.4
+       ]
+      ]
+     },
+     "leader_on_boxed_bar": [
+      {
+       "end": [
+        519.0,
+        356.1
+       ],
+       "far": [
+        507.2,
+        347.6
+       ],
+       "layer": "S-TEXT.D"
+      }
+     ],
+     "leader_on_long_bar": [
+      {
+       "end": [
+        422.4,
+        520.5
+       ],
+       "far": [
+        436.2,
+        533.3
+       ],
+       "layer": "S-TEXT.D"
+      }
+     ],
+     "long_bar_U": {
+      "base": [
+       [
+        422.4,
+        540.8
+       ],
+       [
+        422.4,
+        335.3
+       ]
+      ],
+      "hooks_45deg": [
+       [
+        [
+         512.1,
+         540.8
+        ],
+        [
+         516.6,
+         536.2
+        ]
+       ],
+       [
+        [
+         512.1,
+         335.3
+        ],
+        [
+         516.6,
+         339.9
+        ]
+       ]
+      ],
+      "leg_length_pt": [
+       89.6,
+       89.6
+      ],
+      "legs": [
+       [
+        [
+         422.4,
+         335.3
+        ],
+        [
+         512.1,
+         335.3
+        ]
+       ],
+       [
+        [
+         422.4,
+         540.8
+        ],
+        [
+         512.1,
+         540.8
+        ]
+       ]
+      ]
+     }
+    }
+   },
+   "handles": [
+    "p13:S-REIN.D"
+   ],
+   "id": "E-PDF-01",
+   "page": 13,
+   "reading": "in BOTH footing details the bar labelled 'Long bars' is one drawn U: its bottom run shares exact vertices with two vertical legs that rise to just under the top bar and end in 45° hooks. The bar labelled 'Boxed bars.' is an inverted U: top run under the top face with two legs down to the bottom-bar level, no hooks. Short bars are drawn only as dots (seen in section). Leg and hook lengths are not dimensioned.",
+   "source": "ST7757.pdf p.13 'TYP. DETAIL OF ISOLATED FOOTING' (with and without the >2.5 m lower ground beam)"
+  },
+  "E-PDF-02": {
+   "channel": "PDF_VECTOR (S-REIN.D + leader strokes)",
+   "facts": {
+    "GB_EXTERIOR (30 x FOLLOW ARCH)": {
+     "bbox_pt": [
+      95.9,
+      385.0,
+      231.5,
+      420.4
+     ],
+     "hook_branches": 2,
+     "label_leaders_on_link": 1,
+     "links": 1,
+     "topology_degree_counts": {
+      "1": 2,
+      "2": 18,
+      "3": 2
+     }
+    },
+    "GB_GT_5M (30x60)": {
+     "bbox_pt": [
+      225.4,
+      526.8,
+      303.4,
+      562.4
+     ],
+     "hook_branches": 2,
+     "label_leaders_on_link": 1,
+     "links": 1,
+     "topology_degree_counts": {
+      "1": 2,
+      "2": 18,
+      "3": 2
+     }
+    },
+    "GB_LT_2_5M (30x30)": {
+     "bbox_pt": [
+      95.9,
+      526.8,
+      131.4,
+      562.4
+     ],
+     "hook_branches": 1,
+     "label_leaders_on_link": 0,
+     "links": 1,
+     "topology_degree_counts": {
+      "1": 1,
+      "2": 19,
+      "3": 1
+     }
+    },
+    "GB_LT_5M (30x40)": {
+     "bbox_pt": [
+      167.0,
+      239.4,
+      216.6,
+      275.0
+     ],
+     "hook_branches": 1,
+     "label_leaders_on_link": 1,
+     "links": 1,
+     "topology_degree_counts": {
+      "1": 1,
+      "2": 19,
+      "3": 1
+     }
+    }
+   },
+   "handles": [
+    "p13:S-REIN.D"
+   ],
+   "id": "E-PDF-02",
+   "page": 13,
+   "reading": "each of the four sections draws exactly one closed link (2 vertical legs) with a hook (one or two short strokes) at one corner; the >5 m, <5 m and exterior links each carry one label leader (Ø8/15cm); the <2.5 m (30x30) link has NO label leader - its diameter and spacing are not printed. Hook extension is not dimensioned.",
+   "source": "ST7757.pdf p.13 ground-beam sections (1:20)"
+  },
+  "E-PDF-03": {
+   "channel": "PDF_VECTOR (S-REIN.D + leader strokes) + visual / OCR label",
+   "facts": {
+    "bars_per_cut_wall": [
+     {
+      "bottom": 2,
+      "top": 2,
+      "wall_band_y": [
+       833.6,
+       854.2
+      ]
+     },
+     {
+      "bottom": 2,
+      "top": 2,
+      "wall_band_y": [
+       1030.7,
+       1051.1
+      ]
+     }
+    ],
+    "footing_loop_topology": {
+     "2": 20
+    },
+    "ocr_raw": [
+     "2 916",
+     "2 616"
+    ],
+    "two_16_leaders": [
+     [
+      [
+       561.9,
+       1033.5
+      ],
+      [
+       561.9,
+       1048.5
+      ]
+     ],
+     [
+      [
+       519.0,
+       1033.1
+      ],
+      [
+       519.0,
+       1048.5
+      ]
+     ]
+    ]
+   },
+   "handles": [
+    "p14:S-REIN.D"
+   ],
+   "id": "E-PDF-03",
+   "page": 14,
+   "reading": "the two '2 Ø16' leaders end on two bar dots each: the pair at the footing TOP mesh level and the pair at the BOTTOM mesh level, both inside the footprint of the cut pit wall (between its two vertical bar lines); the other cut wall repeats the same 2 + 2 dots unlabelled. They are wall-base bars inside the footing, running along the wall (seen in section), not footing-side bars. Their length is not dimensioned. The two-layer footing bars are drawn as one closed rounded loop, but the schedule gives 6/m top against 9/m bottom, so the loop cannot pair the layers bar for bar.",
+   "source": "ST7757.pdf p.14 'DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT)'"
+  },
+  "E-PDF-04": {
+   "channel": "PDF_VECTOR (S-REIN.D)",
+   "facts": {
+    "end_support_top_bar_legs": [
+     {
+      "bottom_bar_levels_x": [
+       676.4,
+       679.0
+      ],
+      "gap_to_bottom_bar_pt": 0.8,
+      "leg_foot_x": 678.2,
+      "page": 11,
+      "top_level_x": 692.2
+     },
+     {
+      "bottom_bar_levels_x": [
+       676.4,
+       679.0
+      ],
+      "gap_to_bottom_bar_pt": 0.8,
+      "leg_foot_x": 677.2,
+      "page": 11,
+      "top_level_x": 692.2
+     },
+     {
+      "bottom_bar_levels_x": [
+       676.4,
+       679.0
+      ],
+      "gap_to_bottom_bar_pt": 0.8,
+      "leg_foot_x": 678.2,
+      "page": 11,
+      "top_level_x": 692.2
+     },
+     {
+      "bottom_bar_levels_x": [
+       676.4,
+       679.0
+      ],
+      "gap_to_bottom_bar_pt": 0.8,
+      "leg_foot_x": 677.2,
+      "page": 11,
+      "top_level_x": 692.2
+     },
+     {
+      "bottom_bar_levels_x": [
+       654.9,
+       658.1
+      ],
+      "gap_to_bottom_bar_pt": 1.1,
+      "leg_foot_x": 656.0,
+      "page": 12,
+      "top_level_x": 674.0
+     },
+     {
+      "bottom_bar_levels_x": [
+       654.9,
+       658.1
+      ],
+      "gap_to_bottom_bar_pt": 1.1,
+      "leg_foot_x": 657.0,
+      "page": 12,
+      "top_level_x": 674.0
+     }
+    ]
+   },
+   "handles": [
+    "p11:S-REIN.D",
+    "p12:S-REIN.D"
+   ],
+   "id": "E-PDF-04",
+   "page": "11-12",
+   "reading": "in all three CB typical figures the top bar at each END support turns down in one 90° leg whose foot ends at the bottom-bar level (within 2.3 pt); bottom bars are drawn straight. The figures are N.T.S. (E-DXF-06), so the leg is bound to the section depth, not to a printed length.",
+   "source": "ST7757.pdf p.11 (two 2-span typicals) and p.12 (3-span typical)"
+  },
+  "E-PDF-05": {
+   "channel": "PDF_VECTOR (S-REIN.D) + visual",
+   "facts": {
+    "bbox_pt": [
+     123.4,
+     638.9,
+     163.0,
+     675.8
+    ],
+    "closed_links": 1,
+    "topology": {
+     "2": 20
+    }
+   },
+   "handles": [
+    "p15:S-REIN.D"
+   ],
+   "id": "E-PDF-05",
+   "page": 15,
+   "reading": "the typical beam section draws one closed rectangular link (2 legs) with hook ticks at the top corners; no inner link. Same convention as the labelled p.13 sections.",
+   "source": "ST7757.pdf p.15 'TYP. SLAB ON BEAMS DETAIL' beam section ('BEAM SIZE & REINF. SEE SCHEDULE')"
+  },
+  "E-PDF-06": {
+   "channel": "PDF_VECTOR render (pypdf strokes, scratchpad) read visually + tesseract OCR cross-check",
+   "facts": {
+    "p13_labels": [
+     "Long bars",
+     "Short bars",
+     "Boxed bars.",
+     "Ø8/15cm",
+     "3Ø14 x3 (30x30)"
+    ],
+    "p15_BEAM_CARRYING_PLANTED_COL": {
+     "callouts": [
+      "4Ø16",
+      "DEPTH",
+      "STIRRUPS",
+      "10 10",
+      "100 (along the planted column)"
+     ],
+     "geometry": "two hooked extra rows under the planted column, extending DEPTH (beam depth) past each column face; one '4Ø16' leader touches BOTH rows; extra stirrups at 10 cm under the column",
+     "ocr_raw": [
+      "4916",
+      "DEPTH",
+      "STIRRUPS"
+     ]
+    },
+    "p16_TYPICAL_DETAIL_OF_STAIR_BEAM": {
+     "callouts": [
+      "2Ø12 (top, twice)",
+      "4Ø16 (bottom)",
+      "6Ø8/m (twice)",
+      "AS PER SCH. (depth)"
+     ],
+     "geometry": "cranked beam column-to-column following the flight; top bar turned down into the column at one end, bottom bar turned up with a hook at the other; N.T.S.",
+     "ocr_raw": [
+      "2912",
+      "2612",
+      "4916",
+      "608/m",
+      "648 /m"
+     ]
+    }
+   },
+   "handles": [
+    "p13",
+    "p14",
+    "p15",
+    "p16"
+   ],
+   "id": "E-PDF-06",
+   "page": "13-16",
+   "reading": "label text on the detail sheets is plotted strokes; the words were read from a render of the vector strokes and cross-checked by OCR (Ø is read as 9 / 6 / 0 by OCR). Bindings (which bar a label points to) come from the vector leaders above.",
+   "source": "ST7757.pdf pp.13-16"
+  }
+ },
+ "inputs": {
+  "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+  "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "ST7757.pdf": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ },
+ "pdf_reader": "pypdf (pure Python, read-only, vector strokes per optional-content layer); no PyMuPDF, engine PDF stack untouched; renders for visual reading kept outside the repository",
+ "policy": "SOURCE_RECOVERY_DELTA_V1"
+}

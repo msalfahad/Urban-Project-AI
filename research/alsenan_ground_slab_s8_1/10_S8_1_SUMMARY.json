@@ -1,0 +1,94 @@
+{
+ "baseline": "73f62c3",
+ "blocked_area_m2": 129.77058448889008,
+ "blocked_by_lane": {
+  "BLOCKED_UNQUANTIFIED": 54,
+  "SOURCE_CONFLICT": 2
+ },
+ "blocked_cells": 19,
+ "blocked_records": 56,
+ "concrete_by_zone_m3": {
+  "GS-ZONE-1690": 1.4893125000000058,
+  "GS-ZONE-169D": 2.2965398163397444
+ },
+ "concrete_m3": 3.78585231633975,
+ "date": "2026-10-08",
+ "engine_commit": "73f62c3+code:16df2247dc793719",
+ "faces": {
+  "blocked": 19,
+  "measured": 2,
+  "total": 21
+ },
+ "frozen_baselines": {
+  "AD1": "e2497cc75181393000187b7e657fa8485a4c0f365b4614bed983d0bc6c0ca5b4",
+  "D1.1": "3ecb642e2141f5a9af11453870696b104a11cfb519d65a9e3f505cbff7c73a74",
+  "D1.2": "f256d6a25edf93029c6ba1c8cf9bc336790fd8d9cf7a5045e8395942986a9554",
+  "PRE-S7": "fb3a1c62a8e525b663853d03d43e067f1839026aea149399491bd4cf98f0ad09",
+  "PRE-S7.1": "3a67a8641ce4ea836334e02532af82b9a3bb01be8efdba4f093eee44d92c1ef6",
+  "PRE-S8": "1c8daf59926540941efbf5f749e8e175fe64b7efeb6d7acff0bfbefbb034849d",
+  "S4": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+  "S4.1": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+  "S5": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+  "S5.1": "595d64b1bf5c8e0ef7b5bebfaf3ea4063dd884356390c84b4c8aac77cddb5a88",
+  "S6": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+  "S6.1": "c4744888ed2207ebff47c0a895e706d7e381b5f905b694eb92e3d1cdc411c0b2",
+  "S7": "b23f97b6db334e641c38c498bf23b46236d68f4fcc26a6eafde1f3bfc156d175",
+  "S7A": "5b256cef99dc57934c76249c28814d5ce07c74caf308aabdbf90e0e8f0adcee1"
+ },
+ "included_area_m2": 37.85852316339751,
+ "lanes": {
+  "PROJECT_BASIS_QTO": 4
+ },
+ "policy": "S8_1_GROUND_SLAB_RESTRICTED_V1",
+ "reconciliation": {
+  "concrete": {
+   "PARENT": true,
+   "ZONE": true
+  },
+  "mass": {
+   "DIA": true,
+   "DIRECTION": true,
+   "LANE": true,
+   "PARENT": true,
+   "ZONE": true
+  },
+  "pre_s8_population": {
+   "COLUMN OCCURRENCES (all storeys incl. the foundation storey)": true,
+   "FOOTING OCCURRENCES": true
+  },
+  "strips_kg_equal": true
+ },
+ "references_read": [],
+ "round": "S8_1",
+ "s7_total_kg": 3802.015364542223,
+ "s7_unchanged": true,
+ "s8_families_started": [
+  "GROUND_SLAB (two source-zoned cells only)"
+ ],
+ "state": "RESTRICTED_S8_1_PROJECT_BASIS",
+ "total_kg": 233.69458742837932,
+ "x_kg": 116.84729371418968,
+ "x_length_m": 189.29261581698728,
+ "y_kg": 116.84729371418965,
+ "y_length_m": 189.29261581698725,
+ "zones": {
+  "GS-ZONE-1690": {
+   "arc_chords_replaced": 0,
+   "area_m2": 14.89312500000006,
+   "callout": "T=10cm / 5Ø10/m E.W.",
+   "levels": [],
+   "marker": "1690",
+   "panel_id": "SP-GBP-08"
+  },
+  "GS-ZONE-169D": {
+   "arc_chords_replaced": 17,
+   "area_m2": 22.965398163397445,
+   "callout": "T=10cm / 5Ø10/m E.W.",
+   "levels": [
+    "+0.30"
+   ],
+   "marker": "169D",
+   "panel_id": "SP-GBP-14"
+  }
+ }
+}

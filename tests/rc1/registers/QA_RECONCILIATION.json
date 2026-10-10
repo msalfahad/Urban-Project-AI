@@ -1,0 +1,419 @@
+{
+ "SCHEMA": "URBAN_QORTUBA_RC1_QA_RECONCILIATION_V1",
+ "canonical_model": {
+  "state": "PASS",
+  "errors": [],
+  "items": 21,
+  "aliases": 34,
+  "measure_pairs": [
+   [
+    "MRB-01",
+    "MRB-02"
+   ],
+   [
+    "SGD-01",
+    "SGD-02"
+   ],
+   [
+    "WIN-01",
+    "WIN-02"
+   ]
+  ],
+  "digest_ok": true
+ },
+ "room_matrix": {
+  "state": "PASS",
+  "not_reconciled": [],
+  "unplaced": [],
+  "reconciliation": {
+   "FLR-01": {
+    "column_sum": 111.89878900000002,
+    "item_qty": 111.8988,
+    "additive": true,
+    "reconciles": true
+   },
+   "FLR-02": {
+    "column_sum": 17.7425,
+    "item_qty": 17.7425,
+    "additive": true,
+    "reconciles": true
+   },
+   "FLR-03": {
+    "column_sum": 11.685,
+    "item_qty": 11.685,
+    "additive": true,
+    "reconciles": true
+   },
+   "MRB-01": {
+    "column_sum": 0.51,
+    "item_qty": 0.51,
+    "additive": true,
+    "reconciles": true
+   },
+   "MRB-02": {
+    "column_sum": 3.4000000000000004,
+    "item_qty": 3.4,
+    "additive": true,
+    "reconciles": true
+   },
+   "CLG-01": {
+    "column_sum": 140.637,
+    "item_qty": 140.637,
+    "additive": true,
+    "reconciles": true
+   },
+   "PLS-01": {
+    "column_sum": 307.361518,
+    "item_qty": 307.361518,
+    "additive": true,
+    "reconciles": true
+   },
+   "PLS-02": {
+    "column_sum": 1.510248,
+    "item_qty": 1.510248,
+    "additive": true,
+    "reconciles": true
+   },
+   "PNT-01": {
+    "column_sum": 307.361518,
+    "item_qty": 307.361518,
+    "additive": true,
+    "reconciles": true
+   },
+   "WTL-01": {
+    "column_sum": 127.693512,
+    "item_qty": 127.693512,
+    "additive": true,
+    "reconciles": true
+   },
+   "WTP-01": {
+    "column_sum": 127.693512,
+    "item_qty": 127.693512,
+    "additive": true,
+    "reconciles": true
+   },
+   "SKT-01": {
+    "column_sum": 94.136819,
+    "item_qty": 94.13682,
+    "additive": true,
+    "reconciles": true
+   },
+   "HPR-01": {
+    "column_sum": 94.136819,
+    "item_qty": 94.13682,
+    "additive": true,
+    "reconciles": true
+   },
+   "WPF-01": {
+    "column_sum": 29.427500000000002,
+    "item_qty": 29.4275,
+    "additive": true,
+    "reconciles": true
+   },
+   "WPU-01": {
+    "column_sum": 44.2,
+    "item_qty": 44.2,
+    "additive": true,
+    "reconciles": true
+   }
+  }
+ },
+ "floor_partition": {
+  "items": [
+   "FLR-01",
+   "FLR-02",
+   "FLR-03",
+   "MRB-01"
+  ],
+  "keys": 15,
+  "in_two_items": {},
+  "in_no_item": [],
+  "extra": [],
+  "physical_floor_m2": 141.836289,
+  "finish_items_sum_m2": 141.8363,
+  "difference_m2": 1.1e-05,
+  "within_row_rounding": true,
+  "state": "PASS"
+ },
+ "physical_surface_identity": {
+  "checks": {
+   "wall_plane_vs_column_vs_duct_vs_reveals (R8.19 guard)": "PASS",
+   "all_wall_surfaces_once (R8.18 guard, 190 surfaces)": "PASS",
+   "below_sill_and_above_opening_vs_wall": "PASS",
+   "passage_soffit_vs_ceiling": "PASS",
+   "threshold_vs_floor_finish": "PASS",
+   "duct_footprint_vs_floor_and_ceiling": "PASS"
+  },
+  "state": "PASS",
+  "soffit": [
+   {
+    "strip": "OP-997f14d12b8e9bc1",
+    "excluded_m2": -0.239289
+   }
+  ],
+  "soffit_reveals": [
+   {
+    "opening": "OP-997f14d12b8e9bc1",
+    "surface": "TOP_REVEAL",
+    "owner_site": "SITE-77a2130eb275604c",
+    "area_m2": 0.239289,
+    "finish": "PLASTER_AND_PAINT"
+   }
+  ],
+  "compatible_trades_on_one_surface": [
+   "PLASTER + PAINT (dry faces)",
+   "WALL_TILE + WALL_TILE_PREP (wet faces)",
+   "FLOOR finish + WATERPROOFING membrane (wet floors)",
+   "SKIRTING + HIDDEN_PROFILE (one path, two materials)"
+  ]
+ },
+ "openings": {
+  "state": "PASS",
+  "errors": [],
+  "records": 17,
+  "schedules": {
+   "internal_doors": [
+    "I1443",
+    "I1471",
+    "I1561",
+    "I1988",
+    "I2044",
+    "I841"
+   ],
+   "internal_door_count": 6,
+   "entrance_doors": [
+    "I677"
+   ],
+   "entrance_door_count": 1,
+   "sliding_glazed_doors": [
+    "SGD-H533"
+   ],
+   "windows": [
+    "W-H1020",
+    "W-H1026",
+    "W-H1319",
+    "W-H1325",
+    "W-H1342",
+    "W-H1518"
+   ],
+   "window_count": 6,
+   "open_passages": [
+    "OP-997f14d12b8e9bc1",
+    "OP-9e0fd219ca5cd391"
+   ],
+   "out_of_scope": [
+    "I1028"
+   ],
+   "conflicts": []
+  },
+  "digest": "0462d68c14f43585bfc72d5998e68c472eb877905fcb278b58e162d451347275"
+ },
+ "regression_vs_r8_20": {
+  "rows": {
+   "Q-13": {
+    "R8.20": 111.8988,
+    "RC1": 111.8988,
+    "canonical": "FLR-01",
+    "unchanged": true
+   },
+   "Q-11": {
+    "R8.20": 17.7425,
+    "RC1": 17.7425,
+    "canonical": "FLR-02",
+    "unchanged": true
+   },
+   "Q-12": {
+    "R8.20": 11.685,
+    "RC1": 11.685,
+    "canonical": "FLR-03",
+    "unchanged": true
+   },
+   "Q-14": {
+    "R8.20": 140.637,
+    "RC1": 140.637,
+    "canonical": "CLG-01",
+    "unchanged": true
+   },
+   "DRY_WALL_PLASTER": {
+    "R8.20": 307.361518,
+    "RC1": 307.361518,
+    "canonical": "PLS-01",
+    "unchanged": true
+   },
+   "WET_SERVICE_REVEAL_PLASTER": {
+    "R8.20": 1.510248,
+    "RC1": 1.510248,
+    "canonical": "PLS-02",
+    "unchanged": true
+   },
+   "DRY_WALL_PAINT": {
+    "R8.20": 307.361518,
+    "RC1": 307.361518,
+    "canonical": "PNT-01",
+    "unchanged": true
+   },
+   "WET_SERVICE_WALL_TILE": {
+    "R8.20": 127.693512,
+    "RC1": 127.693512,
+    "canonical": "WTL-01",
+    "unchanged": true
+   },
+   "WET_WALL_TILE_PREP": {
+    "R8.20": 127.693512,
+    "RC1": 127.693512,
+    "canonical": "WTP-01",
+    "unchanged": true
+   },
+   "SKIRTING": {
+    "R8.20": 94.13682,
+    "RC1": 94.13682,
+    "canonical": "SKT-01",
+    "unchanged": true
+   },
+   "HIDDEN_PROFILE": {
+    "R8.20": 94.13682,
+    "RC1": 94.13682,
+    "canonical": "HPR-01",
+    "unchanged": true
+   },
+   "MARBLE_THRESHOLD_PLAN_AREA_M2": {
+    "R8.20": 0.51,
+    "RC1": 0.51,
+    "canonical": "MRB-01",
+    "unchanged": true
+   },
+   "MARBLE_THRESHOLD_LENGTH_LM": {
+    "R8.20": 3.4,
+    "RC1": 3.4,
+    "canonical": "MRB-02",
+    "unchanged": true
+   },
+   "WATERPROOFING_FLOOR_M2": {
+    "R8.20": 29.4275,
+    "RC1": 29.4275,
+    "canonical": "WPF-01",
+    "unchanged": true
+   },
+   "WATERPROOFING_UPTURN_LM": {
+    "R8.20": 44.2,
+    "RC1": 44.2,
+    "canonical": "WPU-01",
+    "unchanged": true
+   },
+   "Q-03": {
+    "R8.20": 17.7425,
+    "RC1": null,
+    "canonical": "alias in FLR-02 (MISLABELLED) + OWNER-RULES-V1 meaning in WPF-01",
+    "unchanged": true,
+    "not_a_summary_line": true
+   },
+   "Q-03P": {
+    "R8.20": 11.685,
+    "RC1": null,
+    "canonical": "alias in FLR-03 (MISLABELLED) + OWNER-RULES-V1 meaning in WPF-01",
+    "unchanged": true,
+    "not_a_summary_line": true
+   }
+  },
+  "all_unchanged": true,
+  "covers_all_17_r8_20_rows": true,
+  "r8_20": true
+ },
+ "trade_breakdowns": {
+  "FLR-01": {
+   "qty": 111.8988,
+   "breakdown_sum": 111.898789
+  },
+  "FLR-02": {
+   "qty": 17.7425,
+   "breakdown_sum": 17.7425
+  },
+  "FLR-03": {
+   "qty": 11.685,
+   "breakdown_sum": 11.685
+  },
+  "MRB-01": {
+   "qty": 0.51,
+   "breakdown_sum": 0.51
+  },
+  "MRB-02": {
+   "qty": 3.4,
+   "breakdown_sum": 3.4
+  },
+  "CLG-01": {
+   "qty": 140.637,
+   "breakdown_sum": 140.637
+  },
+  "PLS-01": {
+   "qty": 307.361518,
+   "breakdown_sum": 307.361518
+  },
+  "PLS-02": {
+   "qty": 1.510248,
+   "breakdown_sum": 1.510248
+  },
+  "PNT-01": {
+   "qty": 307.361518,
+   "breakdown_sum": 307.361518
+  },
+  "WTL-01": {
+   "qty": 127.693512,
+   "breakdown_sum": 127.693512
+  },
+  "WTP-01": {
+   "qty": 127.693512,
+   "breakdown_sum": 127.693512
+  },
+  "SKT-01": {
+   "qty": 94.13682,
+   "breakdown_sum": 94.136819
+  },
+  "HPR-01": {
+   "qty": 94.13682,
+   "breakdown_sum": 94.136819
+  },
+  "WPF-01": {
+   "qty": 29.4275,
+   "breakdown_sum": 29.4275
+  },
+  "WPU-01": {
+   "qty": 44.2,
+   "breakdown_sum": 44.2
+  },
+  "DOR-01": {
+   "qty": 6,
+   "breakdown_sum": 6
+  },
+  "DOR-02": {
+   "qty": 1,
+   "breakdown_sum": 1
+  },
+  "SGD-01": {
+   "qty": 1,
+   "breakdown_sum": 1
+  },
+  "SGD-02": {
+   "qty": 6.05,
+   "breakdown_sum": 6.05
+  },
+  "WIN-01": {
+   "qty": 6,
+   "breakdown_sum": 6
+  },
+  "WIN-02": {
+   "qty": 16.053897,
+   "breakdown_sum": 16.053897
+  }
+ },
+ "per_room_wall_conservation": true,
+ "door_count_cross_check": {
+  "thresholds": 8,
+  "entrance": 1,
+  "out_of_scope": 1,
+  "internal": 6,
+  "consistent": true
+ },
+ "xlsx": "PASS",
+ "rc1_blocked": false,
+ "state": "PASS"
+}

@@ -1,0 +1,59 @@
+{
+  "project": "23010",
+  "fixture_version": "1.0",
+  "description": "Project 23010, second floor, AR-00 rev MAR.2023. The first fully audited run of this system. Frozen after Run 1 was scored READY_WITH_RESTRICTIONS.",
+  "why_this_file_exists": "The golden data itself — a client drawing and a client's manual measurements — is gitignored. This manifest records in git WHAT the fixture pins and which exact bytes it pins them to, so a fixture cannot be swapped without the change showing up in a diff.",
+  "data_location": "data/golden/23010/ (gitignored)",
+  "required_files": [
+    "inputs/AR-00_MAR2023.pdf",
+    "inputs/space_map_23010_2f.json",
+    "site_benchmark.json"
+  ],
+  "input_sha256": {
+    "inputs/AR-00_MAR2023.pdf": "bddb175c39834594def9178995b37df78e78df0d8d62ac731be44464a47bfa74",
+    "inputs/space_map_23010_2f.json": "09921ad6eb9e5c1a3286624adedbf4ae8f503b02705347f125f4c876c865c32b",
+    "site_benchmark.json": "e8d43f65eece9ab24f53012e922a252cf4bb1bff00cd673d96260612b26fdd0d"
+  },
+  "invariants_pinned": [
+    "a1_unaccounted_spaces",
+    "a2_unaccounted_spaces",
+    "accepted_geometry_mutations",
+    "benchmark_leakage_count",
+    "default_fallback_violations",
+    "geometry_mutation_attempts_a1",
+    "geometry_mutation_attempts_a2",
+    "quantity_released_despite_semantic_conflict",
+    "unsupported_assumption_count",
+    "zone_key_exists",
+    "zone_ontology_defined"
+  ],
+  "expectations_pinned": [
+    "a1_apartment_correct",
+    "a1_false_in_scope",
+    "a1_label_strict_correct",
+    "a1_label_with_alternatives",
+    "a1_scope_correct",
+    "a2_apartment_correct",
+    "a2_false_in_scope",
+    "a2_label_strict_correct",
+    "a2_label_with_alternatives",
+    "a2_scope_correct",
+    "apartment_excluded",
+    "apartment_scored",
+    "e25_wall_trace_total_m",
+    "engine_full_scope_m2",
+    "engine_wet_m2",
+    "false_agreement_count",
+    "false_disagreement_count",
+    "geometry_sha256",
+    "space_count"
+  ],
+  "known_open_defects": [
+    "BED-04",
+    "OPEN-01",
+    "WSH-01",
+    "irregular_rooms"
+  ],
+  "drift_log": [],
+  "bump_rules": "An expectation may move only with a fixture version bump whose drift_log entry carries root_cause, not_project_specific, projects_reviewed and date. An invariant may never move."
+}

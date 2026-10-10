@@ -1,0 +1,43 @@
+{
+ "populations": {
+  "beam_residue": {
+   "after": {
+    "CANDIDATE_QUANTIFIED": 16,
+    "UNQUANTIFIED": 8
+   },
+   "before": "BLOCKED (technical 0; GF / 1F residue BUDGET only)",
+   "count": 24,
+   "duplicates_removed": 1
+  },
+  "column_occurrences_without_technical_concrete": {
+   "after": {
+    "BOUNDED_QUANTIFIED": 36,
+    "MEASURED_COMPLETE": 59
+   },
+   "before": 47
+  },
+  "ground_beam_exterior_spans": {
+   "after": {
+    "BOUNDED_QUANTIFIED": 28
+   },
+   "before": "BLOCKED (technical 0)",
+   "count": 28
+  },
+  "ground_slab_unlabelled_cells": {
+   "after": "CANDIDATE_QUANTIFIED",
+   "before": "not measured",
+   "count": 9
+  },
+  "slab_conflict_openings": {
+   "after": "SOURCE_CONFLICT scenario",
+   "count": 1
+  },
+  "wall_bands_ambiguous": {
+   "after": "CANDIDATE length + provisional face area",
+   "before": "reported, never measured",
+   "count": 12
+  }
+ },
+ "previously_blocked_recovered": 113,
+ "still_unquantified": 8
+}

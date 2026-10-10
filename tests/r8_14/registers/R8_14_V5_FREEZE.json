@@ -1,0 +1,94 @@
+{
+ "SCHEMA": "URBAN_R8_14_V5_FREEZE_V1",
+ "recommendation_written_first": {
+  "file": "research/external_engine_lab/r8_14_recommendation.json",
+  "sha256": "e229ee56d4436c335324dc1dfea7015eb71678a05e4975085039cf4993963864",
+  "committed_in": "926eb243dda5c0af559244f298a17683061fa67a"
+ },
+ "frozen_commit": "926eb243dda5c0af559244f298a17683061fa67a",
+ "wall_band_policy": {
+  "id": "WALL_BAND_POLICY_V5",
+  "digest": "d1ff58e755bb88f4bbb7a9813427b7ac6f054ece851df7d9a048866641f3e6d3"
+ },
+ "closure_policy": {
+  "id": "TOPOLOGY_CLOSURE_POLICY_V1",
+  "digest": "46742c570b4d8a036fd6b7446f28055bfd4e1adbff51966e800e5986ca99ccb2",
+  "changed": false
+ },
+ "supersedes": {
+  "wall_band_policy": {
+   "id": "WALL_BAND_POLICY_V4",
+   "digest": "8ed1a5cff22b8057457b05622a3f3f25ee14add57eb3c1ae9b88af35f25741fc"
+  },
+  "freeze": "tests/r8_13/registers/R8_13_V4_FREEZE.json"
+ },
+ "engine_file_sha256": {
+  "engine/source/wall_bands.py": "1e8e8a592df961f5943f956466bbf326841d9dba0ca62d2b9191af48d34ce511",
+  "engine/source/topology_closures.py": "ccb2e52c16c592272ee3d717bba6954f3267f759bb5bf4746c8c269fc2a2cd66",
+  "engine/source/room_topology.py": "cf4da710d09cd029aecac8a847874640945329f35df575d192be23eaf19d51af"
+ },
+ "synthetic_test_sha256": {
+  "tests/r8_14/test_r8_14_wall_band_v5.py": "dd6d18bf890666b64fdfed8ed141292c7d0b4fdfd1fd215b9241cc4110188ace",
+  "tests/r8_13/test_r8_13_wall_band_v4.py": "2d013dc590b9a081da881db0e012e4899141e5a8f7a39217d31c227d4b2aa6ed",
+  "tests/r8_12/test_r8_12_fragment_bands.py": "be24a5db551eece31429662d1bf58c87569c155f7e14d15ad9ce9281f13d8cea",
+  "tests/r8_11/test_r8_11_wall_bands.py": "248e92c87d3c4068a7b665ac706296f1236b4a8bcc4b427ac741b9b320513cfa",
+  "tests/r8_11/test_r8_11_amendment_a1.py": "fc10129a0bad33d40836d62e0f2bf3ea28927e392e77c1ebffa132578442bf2b",
+  "tests/r8_11/test_r8_11_second_family.py": "1c4711d8629a7d121f361ba464b0b08d617f7b5600f4d10438950b648e3b7d2d"
+ },
+ "synthetic_test_digest": "12b073db86ca04bbccdbcb5a7a86d5642822c26643cbb6a7093433874c2743a6",
+ "v5_synthetic_tests": [
+  "test_square_run_equal_to_its_separation_is_not_elongated_and_says_why",
+  "test_a_run_within_tolerance_either_side_of_equality_is_the_same_boundary_case",
+  "test_a_run_longer_by_a_clear_margin_is_a_band_and_a_shorter_one_is_not_elongated",
+  "test_float_noise_cannot_flip_the_decision",
+  "test_legitimate_long_bands_are_untouched",
+  "test_an_isolated_nested_rectangle_is_a_geometric_candidate_never_physical_authority",
+  "test_a_loop_connected_to_the_wall_network_is_not_isolated_and_isolation_fails_closed",
+  "test_the_same_geometry_inside_a_detail_block_occurrence_never_becomes_physical_authority",
+  "test_a_shaft_like_obstacle_with_positive_authority_is_physical",
+  "test_furniture_and_window_frame_rectangles_make_no_band",
+  "test_h2430_class_h2431_class_and_h1316_class_regressions",
+  "test_v3_d2_false_band_and_v4_chain_id_collision_regressions",
+  "test_everything_above_is_order_independent",
+  "test_v5_policy_record"
+ ],
+ "v5_synthetic_test_count": 14,
+ "superseded_frozen_tests": {
+  "tests/r8_13/test_r8_13_wall_band_v4.py": {
+   "previous_sha256": "5a8cd84e11dd99527d606586d69b066819ce7ce5a5ede01c4a7c0f50fa60a3f5",
+   "r8_14_sha256": "2d013dc590b9a081da881db0e012e4899141e5a8f7a39217d31c227d4b2aa6ed",
+   "change": "policy-version assertion only (WALL_BAND_POLICY_V4 -> V5; for the V4 test also the history length 4 -> 5): no behaviour expectation edited"
+  },
+  "tests/r8_12/test_r8_12_fragment_bands.py": {
+   "previous_sha256": "ef8d669b9f68e40e6ceb62814aea0a6f151152434540247bf4341306b30aeace",
+   "r8_14_sha256": "be24a5db551eece31429662d1bf58c87569c155f7e14d15ad9ce9281f13d8cea",
+   "change": "policy-version assertion only (WALL_BAND_POLICY_V4 -> V5; for the V4 test also the history length 4 -> 5): no behaviour expectation edited"
+  },
+  "tests/r8_11/test_r8_11_amendment_a1.py": {
+   "previous_sha256": "27ff7ffea16b8d2b1b7a1e8934ea7b077b5a7827044f53272fb6217e852d46a8",
+   "r8_14_sha256": "fc10129a0bad33d40836d62e0f2bf3ea28927e392e77c1ebffa132578442bf2b",
+   "change": "policy-version assertion only (WALL_BAND_POLICY_V4 -> V5; for the V4 test also the history length 4 -> 5): no behaviour expectation edited"
+  }
+ },
+ "qortuba_before_freeze": {
+  "new_revision_v5_runs": 0,
+  "v5_qortuba_outputs_inspected": 0,
+  "v4_inspection_for_root_cause": "V4 (R8.13) runs of the recorded observations only: the H2060 / H2061 ring (contacts, layers, roles, the containing site) and the threshold doors - never a V5 candidate",
+  "pass_fail_regressions_run_against_v5": "the pre-existing R8.8-R8.13 suites, incl. an OLD-revision real-fixture order-independence test; pass / fail only"
+ },
+ "owner_facts_available_to_v5": false,
+ "timestamp_metadata": {
+  "frozen_at_utc": "2026-10-01T22:17:03+00:00",
+  "in_digest": false
+ },
+ "order": [
+  "recommendation",
+  "V5 design",
+  "synthetic fixtures",
+  "freeze policy + digest",
+  "commit",
+  "THEN the blind Qortuba run",
+  "THEN thresholds / soffit / skirting and the rows"
+ ],
+ "rule": "no post-result edit inside WALL_BAND_POLICY_V5; a defect found after the blind run is the next round"
+}

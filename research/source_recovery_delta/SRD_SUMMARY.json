@@ -1,0 +1,111 @@
+{
+ "candidate_counts": {
+  "cb_hook_lb": 14,
+  "ft_long": 20,
+  "ft_short": 20,
+  "ftb_bottom": 10,
+  "s5_core_topology_only": 4,
+  "sp_icon_lb": 7,
+  "sp_single_lb": 80
+ },
+ "candidates": {
+  "S4": 5,
+  "S5": 3,
+  "S6": 5
+ },
+ "frozen_baselines": {
+  "S4": {
+   "engine_commit_stamp": "e3633af+code:0d11810b780ae8f8",
+   "manifest": "S4_FREEZE_MANIFEST.json",
+   "manifest_sha256": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+   "package": "research/alsenan_footing_rebar_s4",
+   "state": "FROZEN_BEFORE_ANY_REFERENCE_COMPARISON"
+  },
+  "S5": {
+   "engine_commit_stamp": "cab778a+code:2dc78fc0ff285ba2",
+   "manifest": "S5_FREEZE_MANIFEST.json",
+   "manifest_sha256": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+   "package": "research/alsenan_ground_system_rebar_s5",
+   "state": "FROZEN_BEFORE_REFERENCE_COMPARISON"
+  },
+  "S6": {
+   "engine_commit_stamp": "d39f5f6+code:add76dd5f5e9c59a",
+   "manifest": "S6_FREEZE_MANIFEST.json",
+   "manifest_sha256": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+   "package": "research/alsenan_superstructure_beam_rebar_s6",
+   "state": "FROZEN_BEFORE_REFERENCE_COMPARISON"
+  }
+ },
+ "inputs": {
+  "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+  "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "ST7757.pdf": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ },
+ "items": 57,
+ "items_by_stage": {
+  "S4": 14,
+  "S5": 18,
+  "S6": 25
+ },
+ "kg_recalculated": false,
+ "new_source_items": [
+  "S4-03",
+  "S4-07",
+  "S4-12",
+  "S4-13",
+  "S4-14",
+  "S5-01",
+  "S5-04",
+  "S5-08",
+  "S5-11",
+  "S5-18",
+  "S6-02",
+  "S6-04",
+  "S6-05",
+  "S6-09",
+  "S6-10",
+  "S6-14",
+  "S6-15"
+ ],
+ "newly_resolved": [
+  "S4-03",
+  "S4-07",
+  "S4-12",
+  "S5-01",
+  "S5-04",
+  "S5-18",
+  "S6-02",
+  "S6-04",
+  "S6-05",
+  "S6-14",
+  "S6-15"
+ ],
+ "pending_conflicts": 13,
+ "policy": "SOURCE_RECOVERY_DELTA_V1",
+ "round": "SOURCE_RECOVERY_DELTA_S4_S5_S6",
+ "s7_started": false,
+ "terminal_by_stage": {
+  "S4": {
+   "PENDING_ENGINEER_CLARIFICATION": 1,
+   "SOURCE_EXPECTED_NOT_LOCATED": 9,
+   "SOURCE_FOUND_DERIVED": 3,
+   "SOURCE_FOUND_EXPLICIT": 1
+  },
+  "S5": {
+   "SOURCE_CONFLICT": 3,
+   "SOURCE_EXPECTED_NOT_LOCATED": 12,
+   "SOURCE_FOUND_DERIVED": 3
+  },
+  "S6": {
+   "SOURCE_CONFLICT": 3,
+   "SOURCE_EXPECTED_NOT_LOCATED": 14,
+   "SOURCE_FOUND_DERIVED": 6,
+   "SOURCE_FOUND_EXPLICIT": 2
+  }
+ },
+ "withdrawn_interpretations": [
+  "S4-12",
+  "S4-13",
+  "S4-14"
+ ]
+}

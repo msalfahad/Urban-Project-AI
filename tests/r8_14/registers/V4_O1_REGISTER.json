@@ -1,0 +1,128 @@
+{
+ "SCHEMA": "URBAN_R8_14_V4_O1_REGISTER_V1",
+ "observation": "H2060 (2100 x 400 mm) with H2061 nested 100 mm inside it: closed LWPOLYLINEs on layer WALL (GR-05 TOPOLOGY_BOUNDARY), touching no other admitted segment; a dashed X (H2062 / H2065, hidden layer, GR-16 PRESENTATION_OVERHEAD) inside the inner one",
+ "generic_test": "isolated closed loop: a closed single-entity loop whose segments touch no admitted segment of another entity (within eps_n) - no thickness, size or location test",
+ "v5_band_state": {
+  "geometric_candidates": [
+   {
+    "band_id": "WB-1f25031a72c046df",
+    "faces": [
+     "2060",
+     "2061"
+    ],
+    "width_mm": 100.0,
+    "authority": {
+     "state": "WALL_BAND_GEOMETRIC_CANDIDATE",
+     "why": "ISOLATED_CLOSED_LOOP",
+     "entities": [
+      "QORTUBA_REV_NEW|H2060||SEGMENT",
+      "QORTUBA_REV_NEW|H2061||SEGMENT"
+     ]
+    }
+   },
+   {
+    "band_id": "WB-58b032f7787ee215",
+    "faces": [
+     "2060",
+     "2061"
+    ],
+    "width_mm": 100.0,
+    "authority": {
+     "state": "WALL_BAND_GEOMETRIC_CANDIDATE",
+     "why": "ISOLATED_CLOSED_LOOP",
+     "entities": [
+      "QORTUBA_REV_NEW|H2060||SEGMENT",
+      "QORTUBA_REV_NEW|H2061||SEGMENT"
+     ]
+    }
+   },
+   {
+    "band_id": "WB-7a4329bf22b71dce",
+    "faces": [
+     "2060",
+     "2061"
+    ],
+    "width_mm": 100.0,
+    "authority": {
+     "state": "WALL_BAND_GEOMETRIC_CANDIDATE",
+     "why": "ISOLATED_CLOSED_LOOP",
+     "entities": [
+      "QORTUBA_REV_NEW|H2060||SEGMENT",
+      "QORTUBA_REV_NEW|H2061||SEGMENT"
+     ]
+    }
+   },
+   {
+    "band_id": "WB-9829fe007133f3cf",
+    "faces": [
+     "2060",
+     "2061"
+    ],
+    "width_mm": 100.0,
+    "authority": {
+     "state": "WALL_BAND_GEOMETRIC_CANDIDATE",
+     "why": "ISOLATED_CLOSED_LOOP",
+     "entities": [
+      "QORTUBA_REV_NEW|H2060||SEGMENT",
+      "QORTUBA_REV_NEW|H2061||SEGMENT"
+     ]
+    }
+   }
+  ],
+  "isolated_loops": [
+   "2060",
+   "2061"
+  ],
+  "physical_authority_entities": [
+   "7116",
+   "7117",
+   "7118",
+   "7119"
+  ]
+ },
+ "distinction": {
+  "GEOMETRIC_BAND_CANDIDATE": "parallel faces at a wall-like width (recorded; no ends, closures, passages or paired-face corroboration)",
+  "PHYSICAL_WALL_BAND_ESTABLISHED": "requires positive physical authority for the entity (an applied part claim) or contact with the wall network"
+ },
+ "room_area_effect": [
+  {
+   "site": "SITE-5f1762f1a93b91ca",
+   "labels": [
+    "BED.ROOM",
+    "yvtmk,L"
+   ],
+   "site_area_m2": 19.2725,
+   "hole_area_m2": 0.84,
+   "holes_only_isolated_loops": true,
+   "entities": [
+    "2060"
+   ],
+   "rows": [
+    "Q-13",
+    "Q-14"
+   ]
+  },
+  {
+   "site": "SITE-fa55b66bc141aa56",
+   "labels": [],
+   "site_area_m2": 0.46,
+   "hole_area_m2": 0.38,
+   "holes_only_isolated_loops": true,
+   "entities": [
+    "2061"
+   ],
+   "rows": []
+  }
+ ],
+ "material": true,
+ "rows_affected": [
+  "Q-13",
+  "Q-14"
+ ],
+ "counterfactual_if_not_an_obstacle": {
+  "Q-13": 112.9938,
+  "Q-14": 141.627
+ },
+ "state": "UNRESOLVED - NON-AUTHORITATIVE: the hole stays as TS01 computes it (role admission is not changed after a blind run); OBSTACLE_AUTHORITY_UNPROVEN release blocker on each affected row",
+ "next": "R8.15: role-admission authority for isolated closed loops on wall layers (frozen, blind)"
+}

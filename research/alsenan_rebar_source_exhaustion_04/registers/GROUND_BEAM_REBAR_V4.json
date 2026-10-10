@@ -1,0 +1,3745 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_GROUND_BEAM_REBAR_V4",
+ "GROUND_BEAM_DETAIL_REGISTER": [
+  {
+   "detail": "GT5",
+   "applicability_condition": "> 5 m without concentrated load",
+   "section_mm": [
+    300.0,
+    600.0
+   ],
+   "top_bars": [
+    3,
+    16
+   ],
+   "lower_layer_1": [
+    3,
+    16
+   ],
+   "lower_layer_2": [
+    3,
+    16
+   ],
+   "side_reinforcement": null,
+   "stirrups": [
+    8,
+    150
+   ],
+   "claim_id": "P13-GB-GT5M",
+   "source_page": 13,
+   "source_crop": [
+    592,
+    530,
+    720,
+    694
+   ],
+   "crop_hash": "7a13fa639574e3e2cf48d61baf6221abc6c019f54ef45f3782ca077a0692664d",
+   "interpretation_state": "CROSS_VERIFIED_SOURCE"
+  },
+  {
+   "detail": "LT5",
+   "applicability_condition": "< 5 m without concentrated load",
+   "section_mm": [
+    300.0,
+    400.0
+   ],
+   "top_bars": [
+    3,
+    14
+   ],
+   "lower_layer_1": [
+    3,
+    14
+   ],
+   "lower_layer_2": [
+    3,
+    14
+   ],
+   "side_reinforcement": null,
+   "stirrups": [
+    8,
+    150
+   ],
+   "claim_id": "P13-GB-LT5M",
+   "source_page": 13,
+   "source_crop": [
+    887,
+    610,
+    1011,
+    763
+   ],
+   "crop_hash": "6327c465d35c42717cbd90ca58112cb7748b85dffeb5baa7edc73e7c6957bcbd",
+   "interpretation_state": "CROSS_VERIFIED_SOURCE"
+  },
+  {
+   "detail": "LT2_5",
+   "applicability_condition": "< 2.5 m without concentrated load",
+   "section_mm": [
+    300.0,
+    300.0
+   ],
+   "top_bars": [
+    3,
+    14
+   ],
+   "lower_layer_1": [
+    3,
+    14
+   ],
+   "lower_layer_2": [
+    3,
+    14
+   ],
+   "side_reinforcement": null,
+   "stirrups": "DRAWN, NOT PRINTED",
+   "claim_id": "P13-GB-LT2_5M-BARS",
+   "source_page": 13,
+   "source_crop": [
+    592,
+    700,
+    720,
+    812
+   ],
+   "crop_hash": "3c47255fb912da08ca30a6e75462e587785064836796609d4360b85d4e98c497",
+   "interpretation_state": "CROSS_VERIFIED_SOURCE"
+  },
+  {
+   "detail": "EXT",
+   "applicability_condition": "exterior wall",
+   "section_mm": [
+    300.0,
+    "FOLLOW ARCH."
+   ],
+   "top_bars": [
+    3,
+    16
+   ],
+   "lower_layer_1": [
+    3,
+    16
+   ],
+   "lower_layer_2": [
+    3,
+    16
+   ],
+   "side_reinforcement": [
+    2,
+    12,
+    0.3
+   ],
+   "stirrups": [
+    8,
+    150
+   ],
+   "claim_id": "P13-GB-EXTERIOR",
+   "source_page": 13,
+   "source_crop": [
+    740,
+    560,
+    884,
+    812
+   ],
+   "crop_hash": "9ae93a258fb3ad1629772e8001f503f5ab2602533a43401294844dcd784708f8",
+   "interpretation_state": "CROSS_VERIFIED_SOURCE"
+  }
+ ],
+ "binding_rule": "length category from the clear span AND a centreline-basis length (clear + 0.25 m) - ambiguous when they differ; exterior when the span lies on a ground-beam footprint outline (cross-layer, DXF); V3 'adjacent to the ZONE-1 cell' flag kept as second evidence; a component is VERIFIED only when every candidate detail gives the same bars",
+ "q_r3_14": "RESOLVED: the two lower rows are real (dot rows 3/3/3); never de-duplicated",
+ "occurrences": [
+  {
+   "span": "GB-022",
+   "band": "H2000+H252",
+   "length_m": 3.375,
+   "v3_exterior_flag": true,
+   "footprint_edge": true,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "EXT"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 50.907654,
+   "provisional_kg": 30.29529,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 16.0,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 16.0,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 16.0,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 23,
+     "verified_kg": 2.907654,
+     "provisional_kg": 18.29529
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 12.0
+    }
+   ]
+  },
+  {
+   "span": "GB-021",
+   "band": "H2000+H252",
+   "length_m": 6.245,
+   "v3_exterior_flag": true,
+   "footprint_edge": true,
+   "length_categories": [
+    "GT5"
+   ],
+   "candidates": [
+    "EXT"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 94.127407,
+   "provisional_kg": 54.883423,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 29.605926,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 29.605926,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 29.605926,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 42,
+     "verified_kg": 5.30963,
+     "provisional_kg": 32.678978
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 22.204444
+    }
+   ]
+  },
+  {
+   "span": "GB-020",
+   "band": "H2000+H252",
+   "length_m": 6.65,
+   "v3_exterior_flag": true,
+   "footprint_edge": true,
+   "length_categories": [
+    "GT5"
+   ],
+   "candidates": [
+    "EXT"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 100.266667,
+   "provisional_kg": 58.594532,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 31.525926,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 31.525926,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 31.525926,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 45,
+     "verified_kg": 5.688889,
+     "provisional_kg": 34.950087
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 23.644444
+    }
+   ]
+  },
+  {
+   "span": "GB-023",
+   "band": "H2000+H252",
+   "length_m": 1.4,
+   "v3_exterior_flag": true,
+   "footprint_edge": true,
+   "length_categories": [
+    "LT2_5"
+   ],
+   "candidates": [
+    "EXT"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 21.175309,
+   "provisional_kg": 13.431596,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 6.637037,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 6.637037,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 6.637037,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 10,
+     "verified_kg": 1.264198,
+     "provisional_kg": 8.453818
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 4.977778
+    }
+   ]
+  },
+  {
+   "span": "GB-003",
+   "band": "H1987+H368",
+   "length_m": 6.22,
+   "v3_exterior_flag": true,
+   "footprint_edge": true,
+   "length_categories": [
+    "GT5"
+   ],
+   "candidates": [
+    "EXT"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 93.771852,
+   "provisional_kg": 54.794534,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 29.487407,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 29.487407,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 29.487407,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 42,
+     "verified_kg": 5.30963,
+     "provisional_kg": 32.678978
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 22.115556
+    }
+   ]
+  },
+  {
+   "span": "GB-004",
+   "band": "H1987+H368",
+   "length_m": 3.6,
+   "v3_exterior_flag": false,
+   "footprint_edge": true,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "EXT",
+    "LT5"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.034074,
+   "provisional_kg": 83.052326,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 17.066667
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 17.066667
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 17.066667
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 24,
+     "verified_kg": 3.034074,
+     "provisional_kg": 19.052326
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 12.8
+    }
+   ]
+  },
+  {
+   "span": "GB-005",
+   "band": "H1987+H368",
+   "length_m": 3.35,
+   "v3_exterior_flag": false,
+   "footprint_edge": true,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "EXT",
+    "LT5"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 2.907654,
+   "provisional_kg": 77.850845,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 15.881481
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 15.881481
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 15.881481
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 23,
+     "verified_kg": 2.907654,
+     "provisional_kg": 18.29529
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 11.911111
+    }
+   ]
+  },
+  {
+   "span": "GB-012",
+   "band": "H1995+H265",
+   "length_m": 2.7,
+   "v3_exterior_flag": true,
+   "footprint_edge": true,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "EXT"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 40.675556,
+   "provisional_kg": 24.110108,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 12.8,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 12.8,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 12.8,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 18,
+     "verified_kg": 2.275556,
+     "provisional_kg": 14.510108
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 9.6
+    }
+   ]
+  },
+  {
+   "span": "GB-011",
+   "band": "H1995+H265",
+   "length_m": 9.5,
+   "v3_exterior_flag": true,
+   "footprint_edge": true,
+   "length_categories": [
+    "GT5"
+   ],
+   "candidates": [
+    "EXT"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 143.201975,
+   "provisional_kg": 83.111554,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 45.037037,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 45.037037,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 45.037037,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 64,
+     "verified_kg": 8.090864,
+     "provisional_kg": 49.333776
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 33.777778
+    }
+   ]
+  },
+  {
+   "span": "GB-018",
+   "band": "H1999+H388",
+   "length_m": 3.27,
+   "v3_exterior_flag": false,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "LT5"
+   ],
+   "primary_detail": "LT5",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 42.907407,
+   "provisional_kg": 2.115044,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 11.868889,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 11.868889,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 11.868889,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 22,
+     "verified_kg": 7.300741,
+     "provisional_kg": 2.115044
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-019",
+   "band": "H1999+H388",
+   "length_m": 3.05,
+   "v3_exterior_flag": false,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "LT5"
+   ],
+   "primary_detail": "LT5",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 40.18,
+   "provisional_kg": 2.037513,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 11.07037,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 11.07037,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 11.07037,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 21,
+     "verified_kg": 6.968889,
+     "provisional_kg": 2.037513
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-017",
+   "band": "H1999+H388",
+   "length_m": 5.15,
+   "v3_exterior_flag": true,
+   "footprint_edge": false,
+   "length_categories": [
+    "GT5"
+   ],
+   "candidates": [
+    "EXT",
+    "GT5"
+   ],
+   "primary_detail": "GT5",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 77.669136,
+   "provisional_kg": 16.001947,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 24.414815,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 24.414815,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 24.414815,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 35,
+     "verified_kg": 4.424691,
+     "provisional_kg": 16.001947
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-028",
+   "band": "H2004+H248",
+   "length_m": 5.53,
+   "v3_exterior_flag": false,
+   "footprint_edge": true,
+   "length_categories": [
+    "GT5"
+   ],
+   "candidates": [
+    "EXT",
+    "GT5"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 83.32642,
+   "provisional_kg": 48.556019,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 26.216296,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 26.216296,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 26.216296,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 37,
+     "verified_kg": 4.677531,
+     "provisional_kg": 28.893797
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 19.662222
+    }
+   ]
+  },
+  {
+   "span": "GB-029",
+   "band": "H2004+H248",
+   "length_m": 4.3,
+   "v3_exterior_flag": false,
+   "footprint_edge": true,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "EXT",
+    "LT5"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.666173,
+   "provisional_kg": 99.281952,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 20.385185
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 20.385185
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 20.385185
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 29,
+     "verified_kg": 3.666173,
+     "provisional_kg": 22.837507
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 15.288889
+    }
+   ]
+  },
+  {
+   "span": "GB-042",
+   "band": "H2016+H253",
+   "length_m": 3.85,
+   "v3_exterior_flag": true,
+   "footprint_edge": true,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "EXT"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 58.042469,
+   "provisional_kg": 34.255287,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 18.251852,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 18.251852,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 18.251852,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 26,
+     "verified_kg": 3.286914,
+     "provisional_kg": 20.566398
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 13.688889
+    }
+   ]
+  },
+  {
+   "span": "GB-043",
+   "band": "H2016+H253",
+   "length_m": 3.25,
+   "v3_exterior_flag": true,
+   "footprint_edge": true,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "EXT"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 49.003457,
+   "provisional_kg": 29.093809,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 15.407407,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 15.407407,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 15.407407,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 22,
+     "verified_kg": 2.781235,
+     "provisional_kg": 17.538253
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 11.555556
+    }
+   ]
+  },
+  {
+   "span": "GB-014",
+   "band": "H1997+H375",
+   "length_m": 5.37,
+   "v3_exterior_flag": true,
+   "footprint_edge": false,
+   "length_categories": [
+    "GT5"
+   ],
+   "candidates": [
+    "EXT",
+    "GT5"
+   ],
+   "primary_detail": "GT5",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 80.924444,
+   "provisional_kg": 16.442934,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 25.457778,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 25.457778,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 25.457778,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 36,
+     "verified_kg": 4.551111,
+     "provisional_kg": 16.442934
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-015",
+   "band": "H1997+H375",
+   "length_m": 1.886669,
+   "v3_exterior_flag": true,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT2_5"
+   ],
+   "candidates": [
+    "EXT",
+    "LT2_5"
+   ],
+   "primary_detail": "LT2_5",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "PROVISIONAL",
+   "verified_kg": 0.0,
+   "provisional_kg": 24.083482,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 6.84791
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 6.84791
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 6.84791
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PROVISIONAL",
+     "dia_mm": 8,
+     "count": 13,
+     "verified_kg": 0.0,
+     "provisional_kg": 3.539753
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-049",
+   "band": "H2023+H2024",
+   "length_m": 3.525,
+   "v3_exterior_flag": true,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "EXT",
+    "LT5"
+   ],
+   "primary_detail": "LT5",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.034074,
+   "provisional_kg": 45.583807,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 12.794444
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 12.794444
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 12.794444
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 24,
+     "verified_kg": 3.034074,
+     "provisional_kg": 7.200474
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-050",
+   "band": "H2023+H2024",
+   "length_m": 3.525,
+   "v3_exterior_flag": true,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "EXT",
+    "LT5"
+   ],
+   "primary_detail": "LT5",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.034074,
+   "provisional_kg": 45.583807,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 12.794444
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 12.794444
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 12.794444
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 24,
+     "verified_kg": 3.034074,
+     "provisional_kg": 7.200474
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-037",
+   "band": "H2012+H2013",
+   "length_m": 3.525,
+   "v3_exterior_flag": true,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "EXT",
+    "LT5"
+   ],
+   "primary_detail": "LT5",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.034074,
+   "provisional_kg": 45.583807,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 12.794444
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 12.794444
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 12.794444
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 24,
+     "verified_kg": 3.034074,
+     "provisional_kg": 7.200474
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-038",
+   "band": "H2012+H2013",
+   "length_m": 3.525,
+   "v3_exterior_flag": true,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "EXT",
+    "LT5"
+   ],
+   "primary_detail": "LT5",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.034074,
+   "provisional_kg": 45.583807,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 12.794444
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 12.794444
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 12.794444
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 24,
+     "verified_kg": 3.034074,
+     "provisional_kg": 7.200474
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-044",
+   "band": "H2017+H2018",
+   "length_m": 6.72,
+   "v3_exterior_flag": true,
+   "footprint_edge": false,
+   "length_categories": [
+    "GT5"
+   ],
+   "candidates": [
+    "EXT",
+    "GT5"
+   ],
+   "primary_detail": "GT5",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 101.262222,
+   "provisional_kg": 20.411816,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 31.857778,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 31.857778,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 31.857778,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 45,
+     "verified_kg": 5.688889,
+     "provisional_kg": 20.411816
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-030",
+   "band": "H2005+H310",
+   "length_m": 6.4,
+   "v3_exterior_flag": false,
+   "footprint_edge": true,
+   "length_categories": [
+    "GT5"
+   ],
+   "candidates": [
+    "EXT",
+    "GT5"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 96.458272,
+   "provisional_kg": 56.19157,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 30.340741,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 30.340741,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 30.340741,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 43,
+     "verified_kg": 5.436049,
+     "provisional_kg": 33.436015
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 22.755556
+    }
+   ]
+  },
+  {
+   "span": "GB-026",
+   "band": "H2002+H317",
+   "length_m": 5.9,
+   "v3_exterior_flag": false,
+   "footprint_edge": true,
+   "length_categories": [
+    "GT5"
+   ],
+   "candidates": [
+    "EXT",
+    "GT5"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 88.967901,
+   "provisional_kg": 52.142684,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 27.97037,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 27.97037,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 27.97037,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 40,
+     "verified_kg": 5.05679,
+     "provisional_kg": 31.164906
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 20.977778
+    }
+   ]
+  },
+  {
+   "span": "GB-031",
+   "band": "H2006+H318",
+   "length_m": 5.1,
+   "v3_exterior_flag": false,
+   "footprint_edge": true,
+   "length_categories": [
+    "GT5"
+   ],
+   "candidates": [
+    "EXT",
+    "GT5"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 76.831605,
+   "provisional_kg": 44.756022,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 24.177778,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 24.177778,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 24.177778,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 34,
+     "verified_kg": 4.298272,
+     "provisional_kg": 26.622688
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 18.133333
+    }
+   ]
+  },
+  {
+   "span": "GB-008",
+   "band": "H1993+H266",
+   "length_m": 4.6,
+   "v3_exterior_flag": true,
+   "footprint_edge": true,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "EXT"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 69.341235,
+   "provisional_kg": 40.707135,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 21.807407,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 21.807407,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 21.807407,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 31,
+     "verified_kg": 3.919012,
+     "provisional_kg": 24.35158
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 16.355556
+    }
+   ]
+  },
+  {
+   "span": "GB-024",
+   "band": "H2001+H267",
+   "length_m": 2.3,
+   "v3_exterior_flag": false,
+   "footprint_edge": true,
+   "length_categories": [
+    "LT2_5",
+    "LT5"
+   ],
+   "candidates": [
+    "EXT",
+    "LT2_5",
+    "LT5"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "PROVISIONAL",
+   "verified_kg": 0.0,
+   "provisional_kg": 54.58963,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 10.903704
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 10.903704
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 10.903704
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PROVISIONAL",
+     "dia_mm": 8,
+     "count": 16,
+     "verified_kg": 0.0,
+     "provisional_kg": 13.700741
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 8.177778
+    }
+   ]
+  },
+  {
+   "span": "GB-025",
+   "band": "H2001+H267",
+   "length_m": 1.5,
+   "v3_exterior_flag": false,
+   "footprint_edge": true,
+   "length_categories": [
+    "LT2_5"
+   ],
+   "candidates": [
+    "EXT",
+    "LT2_5"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "PROVISIONAL",
+   "verified_kg": 0.0,
+   "provisional_kg": 35.531852,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 7.111111
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 7.111111
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 7.111111
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PROVISIONAL",
+     "dia_mm": 8,
+     "count": 10,
+     "verified_kg": 0.0,
+     "provisional_kg": 8.865185
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 5.333333
+    }
+   ]
+  },
+  {
+   "span": "GB-032",
+   "band": "H2007+H320",
+   "length_m": 4.3,
+   "v3_exterior_flag": false,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "LT5"
+   ],
+   "primary_detail": "LT5",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 56.445926,
+   "provisional_kg": 2.657754,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 15.607407,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 15.607407,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 15.607407,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 29,
+     "verified_kg": 9.623704,
+     "provisional_kg": 2.657754
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-027",
+   "band": "H2003+H319",
+   "length_m": 4.3,
+   "v3_exterior_flag": false,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "LT5"
+   ],
+   "primary_detail": "LT5",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 56.445926,
+   "provisional_kg": 2.657754,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 15.607407,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 15.607407,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 15.607407,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 29,
+     "verified_kg": 9.623704,
+     "provisional_kg": 2.657754
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-046",
+   "band": "H2020+H381",
+   "length_m": 4.272293,
+   "v3_exterior_flag": false,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "LT5"
+   ],
+   "primary_detail": "LT5",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 56.144227,
+   "provisional_kg": 2.657754,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 15.506841,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 15.506841,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 15.506841,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 29,
+     "verified_kg": 9.623704,
+     "provisional_kg": 2.657754
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-051",
+   "band": "H2025+H2026",
+   "length_m": 4.225,
+   "v3_exterior_flag": false,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "LT5"
+   ],
+   "primary_detail": "LT5",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 55.629259,
+   "provisional_kg": 2.657754,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 15.335185,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 15.335185,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 15.335185,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 29,
+     "verified_kg": 9.623704,
+     "provisional_kg": 2.657754
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-036",
+   "band": "H2011+H376",
+   "length_m": 3.8,
+   "v3_exterior_flag": true,
+   "footprint_edge": true,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "EXT"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 57.331358,
+   "provisional_kg": 34.07751,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 18.014815,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 18.014815,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 18.014815,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 26,
+     "verified_kg": 3.286914,
+     "provisional_kg": 20.566398
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 13.511111
+    }
+   ]
+  },
+  {
+   "span": "GB-048",
+   "band": "H2022+H374",
+   "length_m": 3.75,
+   "v3_exterior_flag": true,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "EXT",
+    "LT5"
+   ],
+   "primary_detail": "LT5",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.160494,
+   "provisional_kg": 48.31677,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 13.611111
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 13.611111
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 13.611111
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 25,
+     "verified_kg": 3.160494,
+     "provisional_kg": 7.483436
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-039",
+   "band": "H2014+H373",
+   "length_m": 3.75,
+   "v3_exterior_flag": true,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "EXT",
+    "LT5"
+   ],
+   "primary_detail": "LT5",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.160494,
+   "provisional_kg": 48.31677,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 13.611111
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 13.611111
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 13.611111
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 25,
+     "verified_kg": 3.160494,
+     "provisional_kg": 7.483436
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-045",
+   "band": "H2019+H380",
+   "length_m": 3.227707,
+   "v3_exterior_flag": true,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "EXT",
+    "LT5"
+   ],
+   "primary_detail": "LT5",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 2.781235,
+   "provisional_kg": 41.780693,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 11.715381
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 11.715381
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 11.715381
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 22,
+     "verified_kg": 2.781235,
+     "provisional_kg": 6.63455
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-041",
+   "band": "H2015+H276",
+   "length_m": 0.3,
+   "v3_exterior_flag": false,
+   "footprint_edge": true,
+   "length_categories": [
+    "LT2_5"
+   ],
+   "candidates": [
+    "EXT",
+    "LT2_5"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "PROVISIONAL",
+   "verified_kg": 0.0,
+   "provisional_kg": 7.751111,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 1.422222
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 1.422222
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 1.422222
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PROVISIONAL",
+     "dia_mm": 8,
+     "count": 2,
+     "verified_kg": 0.0,
+     "provisional_kg": 2.417778
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 1.066667
+    }
+   ]
+  },
+  {
+   "span": "GB-040",
+   "band": "H2015+H276",
+   "length_m": 2.625,
+   "v3_exterior_flag": true,
+   "footprint_edge": true,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "EXT"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 39.608889,
+   "provisional_kg": 23.843442,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 12.444444,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 12.444444,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 12.444444,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 18,
+     "verified_kg": 2.275556,
+     "provisional_kg": 14.510108
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 9.333333
+    }
+   ]
+  },
+  {
+   "span": "GB-053",
+   "band": "H311+H312",
+   "length_m": 2.45,
+   "v3_exterior_flag": false,
+   "footprint_edge": true,
+   "length_categories": [
+    "LT2_5",
+    "LT5"
+   ],
+   "candidates": [
+    "EXT",
+    "LT2_5",
+    "LT5"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "PROVISIONAL",
+   "verified_kg": 0.0,
+   "provisional_kg": 58.062222,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 11.614815
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 11.614815
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 11.614815
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PROVISIONAL",
+     "dia_mm": 8,
+     "count": 17,
+     "verified_kg": 0.0,
+     "provisional_kg": 14.506667
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 8.711111
+    }
+   ]
+  },
+  {
+   "span": "GB-010",
+   "band": "H1994+H325",
+   "length_m": 0.4,
+   "v3_exterior_flag": true,
+   "footprint_edge": true,
+   "length_categories": [
+    "LT2_5"
+   ],
+   "candidates": [
+    "EXT"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 6.068148,
+   "provisional_kg": 4.576787,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 1.896296,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 1.896296,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 1.896296,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 3,
+     "verified_kg": 0.379259,
+     "provisional_kg": 3.154565
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 1.422222
+    }
+   ]
+  },
+  {
+   "span": "GB-009",
+   "band": "H1994+H325",
+   "length_m": 2.3,
+   "v3_exterior_flag": true,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT2_5",
+    "LT5"
+   ],
+   "candidates": [
+    "EXT",
+    "LT2_5",
+    "LT5"
+   ],
+   "primary_detail": "LT2_5",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "PROVISIONAL",
+   "verified_kg": 0.0,
+   "provisional_kg": 29.342716,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 8.348148
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 8.348148
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 8.348148
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PROVISIONAL",
+     "dia_mm": 8,
+     "count": 16,
+     "verified_kg": 0.0,
+     "provisional_kg": 4.298272
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-054",
+   "band": "H350+H351",
+   "length_m": 3.0,
+   "v3_exterior_flag": false,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "LT5"
+   ],
+   "primary_detail": "LT5",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 39.303704,
+   "provisional_kg": 1.959983,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 10.888889,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 10.888889,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 10.888889,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 20,
+     "verified_kg": 6.637037,
+     "provisional_kg": 1.959983
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-007",
+   "band": "H1992+H349",
+   "length_m": 2.9,
+   "v3_exterior_flag": false,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT5"
+   ],
+   "candidates": [
+    "LT5"
+   ],
+   "primary_detail": "LT5",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 38.214815,
+   "provisional_kg": 1.959983,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 10.525926,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 10.525926,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 10.525926,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 20,
+     "verified_kg": 6.637037,
+     "provisional_kg": 1.959983
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-055",
+   "band": "H382+H383",
+   "length_m": 2.466843,
+   "v3_exterior_flag": false,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT2_5",
+    "LT5"
+   ],
+   "candidates": [
+    "LT2_5",
+    "LT5"
+   ],
+   "primary_detail": "LT2_5",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 26.861179,
+   "provisional_kg": 4.551111,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 8.953726,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 8.953726,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 8.953726,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PROVISIONAL",
+     "dia_mm": 8,
+     "count": 17,
+     "verified_kg": 0.0,
+     "provisional_kg": 4.551111
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-033",
+   "band": "H2008+H322",
+   "length_m": 2.45,
+   "v3_exterior_flag": false,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT2_5",
+    "LT5"
+   ],
+   "candidates": [
+    "LT2_5",
+    "LT5"
+   ],
+   "primary_detail": "LT2_5",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 26.677778,
+   "provisional_kg": 4.551111,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 8.892593,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 8.892593,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 8.892593,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PROVISIONAL",
+     "dia_mm": 8,
+     "count": 17,
+     "verified_kg": 0.0,
+     "provisional_kg": 4.551111
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-013",
+   "band": "H1996+H348",
+   "length_m": 2.4,
+   "v3_exterior_flag": true,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT2_5",
+    "LT5"
+   ],
+   "candidates": [
+    "EXT",
+    "LT2_5",
+    "LT5"
+   ],
+   "primary_detail": "LT2_5",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "PROVISIONAL",
+   "verified_kg": 0.0,
+   "provisional_kg": 30.431605,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 8.711111
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 8.711111
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PROVISIONAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 8.711111
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PROVISIONAL",
+     "dia_mm": 8,
+     "count": 16,
+     "verified_kg": 0.0,
+     "provisional_kg": 4.298272
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-058",
+   "band": "H6157+H6158",
+   "length_m": 2.1,
+   "v3_exterior_flag": false,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT2_5"
+   ],
+   "candidates": [
+    "LT2_5"
+   ],
+   "primary_detail": "LT2_5",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 22.866667,
+   "provisional_kg": 3.792593,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 7.622222,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 7.622222,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 7.622222,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PROVISIONAL",
+     "dia_mm": 8,
+     "count": 14,
+     "verified_kg": 0.0,
+     "provisional_kg": 3.792593
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-057",
+   "band": "H386+H387",
+   "length_m": 2.073244,
+   "v3_exterior_flag": false,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT2_5"
+   ],
+   "candidates": [
+    "LT2_5"
+   ],
+   "primary_detail": "LT2_5",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 22.575324,
+   "provisional_kg": 3.792593,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 7.525108,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 7.525108,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 7.525108,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PROVISIONAL",
+     "dia_mm": 8,
+     "count": 14,
+     "verified_kg": 0.0,
+     "provisional_kg": 3.792593
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-034",
+   "band": "H2009+H316",
+   "length_m": 1.45,
+   "v3_exterior_flag": false,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT2_5"
+   ],
+   "candidates": [
+    "LT2_5"
+   ],
+   "primary_detail": "LT2_5",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 15.788889,
+   "provisional_kg": 2.781235,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 5.262963,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 5.262963,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 5.262963,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PROVISIONAL",
+     "dia_mm": 8,
+     "count": 10,
+     "verified_kg": 0.0,
+     "provisional_kg": 2.781235
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-006",
+   "band": "H1991+H389",
+   "length_m": 0.85,
+   "v3_exterior_flag": true,
+   "footprint_edge": true,
+   "length_categories": [
+    "LT2_5"
+   ],
+   "candidates": [
+    "EXT"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 12.847407,
+   "provisional_kg": 8.447896,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 4.02963,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 4.02963,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 4.02963,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 6,
+     "verified_kg": 0.758519,
+     "provisional_kg": 5.425673
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 3.022222
+    }
+   ]
+  },
+  {
+   "span": "GB-059",
+   "band": "H6161+H6162",
+   "length_m": 1.3,
+   "v3_exterior_flag": false,
+   "footprint_edge": true,
+   "length_categories": [
+    "LT2_5"
+   ],
+   "candidates": [
+    "EXT",
+    "LT2_5"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "PROVISIONAL",
+   "verified_kg": 0.0,
+   "provisional_kg": 31.17037,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 6.162963
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 6.162963
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 6.162963
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PROVISIONAL",
+     "dia_mm": 8,
+     "count": 9,
+     "verified_kg": 0.0,
+     "provisional_kg": 8.059259
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 4.622222
+    }
+   ]
+  },
+  {
+   "span": "GB-052",
+   "band": "H2047+H367",
+   "length_m": 1.25,
+   "v3_exterior_flag": false,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT2_5"
+   ],
+   "candidates": [
+    "LT2_5"
+   ],
+   "primary_detail": "LT2_5",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 13.611111,
+   "provisional_kg": 2.528395,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 4.537037,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 4.537037,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 4.537037,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PROVISIONAL",
+     "dia_mm": 8,
+     "count": 9,
+     "verified_kg": 0.0,
+     "provisional_kg": 2.528395
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-047",
+   "band": "H2021+H379",
+   "length_m": 1.2,
+   "v3_exterior_flag": false,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT2_5"
+   ],
+   "candidates": [
+    "LT2_5"
+   ],
+   "primary_detail": "LT2_5",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 13.066667,
+   "provisional_kg": 2.275556,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 4.355556,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 4.355556,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 4.355556,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PROVISIONAL",
+     "dia_mm": 8,
+     "count": 8,
+     "verified_kg": 0.0,
+     "provisional_kg": 2.275556
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-035",
+   "band": "H2010+H321",
+   "length_m": 1.2,
+   "v3_exterior_flag": false,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT2_5"
+   ],
+   "candidates": [
+    "LT2_5"
+   ],
+   "primary_detail": "LT2_5",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 13.066667,
+   "provisional_kg": 2.275556,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 4.355556,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 4.355556,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 4.355556,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PROVISIONAL",
+     "dia_mm": 8,
+     "count": 8,
+     "verified_kg": 0.0,
+     "provisional_kg": 2.275556
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-056",
+   "band": "H384+H385",
+   "length_m": 0.788981,
+   "v3_exterior_flag": false,
+   "footprint_edge": false,
+   "length_categories": [
+    "LT2_5"
+   ],
+   "candidates": [
+    "LT2_5"
+   ],
+   "primary_detail": "LT2_5",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 8.591126,
+   "provisional_kg": 1.769877,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 2.863709,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 2.863709,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 14,
+     "count": 3,
+     "verified_kg": 2.863709,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PROVISIONAL",
+     "dia_mm": 8,
+     "count": 6,
+     "verified_kg": 0.0,
+     "provisional_kg": 1.769877
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "NOT_REQUIRED",
+     "dia_mm": null,
+     "count": null,
+     "verified_kg": 0.0,
+     "provisional_kg": 0.0
+    }
+   ]
+  },
+  {
+   "span": "GB-016",
+   "band": "H1998+H263",
+   "length_m": 0.363932,
+   "v3_exterior_flag": false,
+   "footprint_edge": true,
+   "length_categories": [
+    "LT2_5"
+   ],
+   "candidates": [
+    "EXT",
+    "LT2_5"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "PROVISIONAL",
+   "verified_kg": 0.0,
+   "provisional_kg": 9.693606,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 1.725307
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 1.725307
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 1.725307
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PROVISIONAL",
+     "dia_mm": 8,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 3.223704
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 1.29398
+    }
+   ]
+  },
+  {
+   "span": "GB-001",
+   "band": "ARC:H313+H314",
+   "length_m": 1.806416,
+   "v3_exterior_flag": false,
+   "footprint_edge": true,
+   "length_categories": [
+    "LT2_5"
+   ],
+   "candidates": [
+    "EXT",
+    "LT2_5"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "AMBIGUOUS_GOVERNING_DETAIL",
+   "release_state": "PROVISIONAL",
+   "verified_kg": 0.0,
+   "provisional_kg": 43.397025,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 8.56375
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 8.56375
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PROVISIONAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 0.0,
+     "provisional_kg": 8.56375
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PROVISIONAL",
+     "dia_mm": 8,
+     "count": 13,
+     "verified_kg": 0.0,
+     "provisional_kg": 11.282963
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 6.422812
+    }
+   ]
+  },
+  {
+   "span": "GB-002",
+   "band": "ARC:H343+H344",
+   "length_m": 6.179941,
+   "v3_exterior_flag": true,
+   "footprint_edge": true,
+   "length_categories": [
+    "GT5"
+   ],
+   "candidates": [
+    "EXT"
+   ],
+   "primary_detail": "EXT",
+   "applicability": "ESTABLISHED",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 93.202124,
+   "provisional_kg": 54.652102,
+   "components": [
+    {
+     "role": "TOP",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 29.297498,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_1",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 29.297498,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "LOWER_2",
+     "state": "PARTIAL",
+     "dia_mm": 16,
+     "count": 3,
+     "verified_kg": 29.297498,
+     "provisional_kg": 0.0
+    },
+    {
+     "role": "STIRRUPS",
+     "state": "PARTIAL",
+     "dia_mm": 8,
+     "count": 42,
+     "verified_kg": 5.30963,
+     "provisional_kg": 32.678978
+    },
+    {
+     "role": "SIDE_BARS",
+     "state": "PROVISIONAL",
+     "dia_mm": 12,
+     "count": 4,
+     "verified_kg": 0.0,
+     "provisional_kg": 21.973124
+    }
+   ]
+  }
+ ],
+ "summary": {
+  "spans": 59,
+  "by_primary": {
+   "EXT": 29,
+   "LT5": 15,
+   "GT5": 3,
+   "LT2_5": 12
+  },
+  "by_applicability": {
+   "ESTABLISHED": 30,
+   "AMBIGUOUS_GOVERNING_DETAIL": 29
+  },
+  "v3_vs_footprint_disagreements": 27,
+  "verified_kg": 2114.234598,
+  "provisional_kg": 1755.387763
+ }
+}

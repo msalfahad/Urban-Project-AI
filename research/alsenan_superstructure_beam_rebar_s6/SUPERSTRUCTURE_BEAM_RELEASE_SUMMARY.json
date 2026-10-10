@@ -1,0 +1,465 @@
+{
+ "CONTINUOUS_BEAM_BLOCKED_MODELLED_KG": 0.0,
+ "CONTINUOUS_BEAM_BLOCKED_UNQUANTIFIED_COMPONENTS": 162,
+ "CONTINUOUS_BEAM_LOWER_BOUND_KNOWN_KG": 805.6851037037036,
+ "CONTINUOUS_BEAM_PROVISIONAL_KG": 0.0,
+ "CONTINUOUS_BEAM_VERIFIED_KG": 0.0,
+ "MID_KNOWN_KG": 265.2091037037037,
+ "SIMPLE_BEAM_BLOCKED_MODELLED_KG": 0.0,
+ "SIMPLE_BEAM_BLOCKED_UNQUANTIFIED_COMPONENTS": 516,
+ "SIMPLE_BEAM_LOWER_BOUND_KNOWN_KG": 2824.464197530866,
+ "SIMPLE_BEAM_PROVISIONAL_KG": 0.0,
+ "SIMPLE_BEAM_VERIFIED_KG": 0.0,
+ "STIRRUP_COUNT_KNOWN": {
+  "records": 83,
+  "stirrups_lower_bound": 1756
+ },
+ "STIRRUP_MASS_KNOWN": {
+  "kg": 0.0,
+  "records": 0
+ },
+ "accurate_summary": {
+  "categories": {
+   "BEAMS": {
+    "blocked_modelled_kg": 0.0,
+    "blocked_modelled_parts": 0,
+    "blocked_unquantified_parts": 678,
+    "category": "BEAMS",
+    "components": {
+     "ANCHORAGE": {
+      "BLOCKED_UNQUANTIFIED": 408.0
+     },
+     "BEAM_BOTTOM_BAR": {
+      "BLOCKED_UNQUANTIFIED": 32.0,
+      "LOWER_BOUND": 2640.9804197530866
+     },
+     "BEAM_EXTRA_BAR": {
+      "BLOCKED_UNQUANTIFIED": 33.0,
+      "LOWER_BOUND": 265.2091037037037
+     },
+     "BEAM_SIDE_BAR": {
+      "BLOCKED_UNQUANTIFIED": 39.0
+     },
+     "BEAM_STIRRUP": {
+      "BLOCKED_UNQUANTIFIED": 118.0
+     },
+     "BEAM_TOP_BAR": {
+      "BLOCKED_UNQUANTIFIED": 45.0,
+      "LOWER_BOUND": 723.9597777777776
+     },
+     "SPECIAL_DETAIL_BAR": {
+      "BLOCKED_UNQUANTIFIED": 3.0
+     }
+    },
+    "lower_bound_kg": 3630.1493012345695,
+    "lower_bound_parts": 165,
+    "official_status": "PARTIAL",
+    "projected_kg": 3630.1493012345695,
+    "provisional_kg": 0.0,
+    "provisional_parts": 0,
+    "released_kg": 3630.1493012345695,
+    "released_parts": 165,
+    "verified_kg": 0.0
+   }
+  },
+  "product": "ACCURATE_BOQ_REBAR",
+  "project": {
+   "blocked_modelled_kg": 0.0,
+   "blocked_unquantified_parts": 678,
+   "final_rebar": "FINAL_REBAR_NOT_ESTABLISHED",
+   "final_rebar_kg": null,
+   "lower_bound_kg": 3630.1493012345695,
+   "projected_kg": 3630.1493012345695,
+   "provisional_kg": 0.0,
+   "released_kg": 3630.1493012345695,
+   "verified_kg": 0.0
+  },
+  "rule": "states are never merged; an incomplete quantity is never completed by an estimate",
+  "states": [
+   "VERIFIED",
+   "LOWER_BOUND",
+   "PROVISIONAL",
+   "BLOCKED_MODELLED",
+   "BLOCKED_UNQUANTIFIED"
+  ]
+ },
+ "bar_runs": {
+  "by_role_state": {
+   "CONTINUOUS_BEAM:BOTTOM_MAIN:BLOCKED_UNQUANTIFIED": 13,
+   "CONTINUOUS_BEAM:BOTTOM_MAIN:LOWER_BOUND": 14,
+   "CONTINUOUS_BEAM:MID_TOP:BLOCKED_UNQUANTIFIED": 6,
+   "CONTINUOUS_BEAM:MID_TOP:LOWER_BOUND": 9,
+   "CONTINUOUS_BEAM:TOP_MAIN:BLOCKED_UNQUANTIFIED": 26,
+   "SIMPLE_BEAM:BOTTOM_MAIN:BLOCKED_UNQUANTIFIED": 18,
+   "SIMPLE_BEAM:BOTTOM_MAIN:LOWER_BOUND": 71,
+   "SIMPLE_BEAM:TOP_MAIN:BLOCKED_UNQUANTIFIED": 18,
+   "SIMPLE_BEAM:TOP_MAIN:LOWER_BOUND": 71
+  },
+  "released": 165,
+  "total": 246
+ },
+ "component_population": {
+  "CONTINUOUS_BEAM:BOTTOM_MAIN:BLOCKED_UNQUANTIFIED": 14,
+  "CONTINUOUS_BEAM:BOTTOM_MAIN:LOWER_BOUND": 14,
+  "CONTINUOUS_BEAM:BOTTOM_SUPPORT:NOT_APPLICABLE": 13,
+  "CONTINUOUS_BEAM:DEVELOPMENT_1:BLOCKED_UNQUANTIFIED": 13,
+  "CONTINUOUS_BEAM:DEVELOPMENT_2:BLOCKED_UNQUANTIFIED": 13,
+  "CONTINUOUS_BEAM:HANGER:BLOCKED_UNQUANTIFIED": 13,
+  "CONTINUOUS_BEAM:HOOK_1:BLOCKED_UNQUANTIFIED": 13,
+  "CONTINUOUS_BEAM:HOOK_2:BLOCKED_UNQUANTIFIED": 13,
+  "CONTINUOUS_BEAM:MID_BOTTOM:NOT_APPLICABLE": 13,
+  "CONTINUOUS_BEAM:MID_TOP:BLOCKED_UNQUANTIFIED": 7,
+  "CONTINUOUS_BEAM:MID_TOP:LOWER_BOUND": 9,
+  "CONTINUOUS_BEAM:OPENING_EXTRA_BOTTOM:NOT_APPLICABLE": 13,
+  "CONTINUOUS_BEAM:OPENING_EXTRA_SIDE:NOT_APPLICABLE": 13,
+  "CONTINUOUS_BEAM:OPENING_EXTRA_STIRRUP:NOT_APPLICABLE": 13,
+  "CONTINUOUS_BEAM:OPENING_EXTRA_TOP:NOT_APPLICABLE": 13,
+  "CONTINUOUS_BEAM:OTHER_EXPLICIT_EXTRA:NOT_APPLICABLE": 13,
+  "CONTINUOUS_BEAM:SIDE_REBAR:BLOCKED_UNQUANTIFIED": 7,
+  "CONTINUOUS_BEAM:SIDE_REBAR:NOT_APPLICABLE": 6,
+  "CONTINUOUS_BEAM:STIRRUP_CORE_PATH:BLOCKED_UNQUANTIFIED": 29,
+  "CONTINUOUS_BEAM:STIRRUP_COUNT:BLOCKED_UNQUANTIFIED": 17,
+  "CONTINUOUS_BEAM:STIRRUP_COUNT:LOWER_BOUND": 12,
+  "CONTINUOUS_BEAM:TOP_MAIN:BLOCKED_UNQUANTIFIED": 27,
+  "CONTINUOUS_BEAM:TOP_SUPPORT:BLOCKED_UNQUANTIFIED": 13,
+  "SIMPLE_BEAM:BOTTOM_MAIN:BLOCKED_UNQUANTIFIED": 18,
+  "SIMPLE_BEAM:BOTTOM_MAIN:LOWER_BOUND": 71,
+  "SIMPLE_BEAM:BOTTOM_SUPPORT:NOT_APPLICABLE": 89,
+  "SIMPLE_BEAM:DEVELOPMENT_1:BLOCKED_UNQUANTIFIED": 89,
+  "SIMPLE_BEAM:DEVELOPMENT_2:BLOCKED_UNQUANTIFIED": 89,
+  "SIMPLE_BEAM:HANGER:NOT_APPLICABLE": 89,
+  "SIMPLE_BEAM:HOOK_1:BLOCKED_UNQUANTIFIED": 89,
+  "SIMPLE_BEAM:HOOK_2:BLOCKED_UNQUANTIFIED": 89,
+  "SIMPLE_BEAM:MID_BOTTOM:NOT_APPLICABLE": 89,
+  "SIMPLE_BEAM:MID_TOP:NOT_APPLICABLE": 89,
+  "SIMPLE_BEAM:OPENING_EXTRA_BOTTOM:NOT_APPLICABLE": 89,
+  "SIMPLE_BEAM:OPENING_EXTRA_SIDE:NOT_APPLICABLE": 89,
+  "SIMPLE_BEAM:OPENING_EXTRA_STIRRUP:NOT_APPLICABLE": 89,
+  "SIMPLE_BEAM:OPENING_EXTRA_TOP:NOT_APPLICABLE": 89,
+  "SIMPLE_BEAM:OTHER_EXPLICIT_EXTRA:BLOCKED_UNQUANTIFIED": 3,
+  "SIMPLE_BEAM:OTHER_EXPLICIT_EXTRA:NOT_APPLICABLE": 86,
+  "SIMPLE_BEAM:SIDE_REBAR:BLOCKED_UNQUANTIFIED": 32,
+  "SIMPLE_BEAM:SIDE_REBAR:NOT_APPLICABLE": 57,
+  "SIMPLE_BEAM:STIRRUP_CORE_PATH:BLOCKED_UNQUANTIFIED": 89,
+  "SIMPLE_BEAM:STIRRUP_COUNT:BLOCKED_UNQUANTIFIED": 18,
+  "SIMPLE_BEAM:STIRRUP_COUNT:LOWER_BOUND": 71,
+  "SIMPLE_BEAM:TOP_MAIN:BLOCKED_UNQUANTIFIED": 18,
+  "SIMPLE_BEAM:TOP_MAIN:LOWER_BOUND": 71,
+  "SIMPLE_BEAM:TOP_SUPPORT:NOT_APPLICABLE": 89
+ },
+ "components_by_state": {
+  "BLOCKED_UNQUANTIFIED": 713,
+  "LOWER_BOUND": 248,
+  "NOT_APPLICABLE": 1041
+ },
+ "conservation": {
+  "all_pass": true,
+  "checks": {
+   "accurate_summary_reconciles": true,
+   "bar_run_ids_unique_and_each_declared_run_terminates_once": true,
+   "bbs_length_equals_known_length": true,
+   "bbs_net_kg_equals_known_parts_kg": true,
+   "blocked_and_non_mass_components_carry_no_kg": true,
+   "component_kg_equals_occurrence_known_kg": true,
+   "component_length_equals_occurrence_known_length": true,
+   "component_records_unique": true,
+   "every_component_passes_the_contract": true,
+   "every_component_terminates_per_occurrence": true,
+   "every_mass_component_is_one_accurate_part": true,
+   "every_released_quantity_traces_to_rebar_tokens": true,
+   "no_verified_complete_bar": true,
+   "occurrence_kg_equals_project_known_kg": true,
+   "one_bar_run_per_source_frame_bar": true,
+   "population_reconciles": true,
+   "stirrup_records_one_per_span": true
+  },
+  "population_by_component_state": {
+   "BOTTOM_MAIN": {
+    "BLOCKED_UNQUANTIFIED": 32,
+    "LOWER_BOUND": 85
+   },
+   "BOTTOM_SUPPORT": {
+    "NOT_APPLICABLE": 102
+   },
+   "DEVELOPMENT_1": {
+    "BLOCKED_UNQUANTIFIED": 102
+   },
+   "DEVELOPMENT_2": {
+    "BLOCKED_UNQUANTIFIED": 102
+   },
+   "HANGER": {
+    "BLOCKED_UNQUANTIFIED": 13,
+    "NOT_APPLICABLE": 89
+   },
+   "HOOK_1": {
+    "BLOCKED_UNQUANTIFIED": 102
+   },
+   "HOOK_2": {
+    "BLOCKED_UNQUANTIFIED": 102
+   },
+   "MID_BOTTOM": {
+    "NOT_APPLICABLE": 102
+   },
+   "MID_TOP": {
+    "BLOCKED_UNQUANTIFIED": 7,
+    "LOWER_BOUND": 9,
+    "NOT_APPLICABLE": 89
+   },
+   "OPENING_EXTRA_BOTTOM": {
+    "NOT_APPLICABLE": 102
+   },
+   "OPENING_EXTRA_SIDE": {
+    "NOT_APPLICABLE": 102
+   },
+   "OPENING_EXTRA_STIRRUP": {
+    "NOT_APPLICABLE": 102
+   },
+   "OPENING_EXTRA_TOP": {
+    "NOT_APPLICABLE": 102
+   },
+   "OTHER_EXPLICIT_EXTRA": {
+    "BLOCKED_UNQUANTIFIED": 3,
+    "NOT_APPLICABLE": 99
+   },
+   "SIDE_REBAR": {
+    "BLOCKED_UNQUANTIFIED": 39,
+    "NOT_APPLICABLE": 63
+   },
+   "STIRRUP_CORE_PATH": {
+    "BLOCKED_UNQUANTIFIED": 118
+   },
+   "STIRRUP_COUNT": {
+    "BLOCKED_UNQUANTIFIED": 35,
+    "LOWER_BOUND": 83
+   },
+   "TOP_MAIN": {
+    "BLOCKED_UNQUANTIFIED": 45,
+    "LOWER_BOUND": 71
+   },
+   "TOP_SUPPORT": {
+    "BLOCKED_UNQUANTIFIED": 13,
+    "NOT_APPLICABLE": 89
+   }
+  },
+  "population_by_state": {
+   "BLOCKED_UNQUANTIFIED": 713,
+   "LOWER_BOUND": 248,
+   "NOT_APPLICABLE": 1041
+  },
+  "project_known_kg": 3630.1493012345686
+ },
+ "context": {
+  "CALCULATION_ROUND": "S6",
+  "DRAWING_ID": "ST7757",
+  "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "ENGINE_COMMIT": "d39f5f6+code:add76dd5f5e9c59a",
+  "PROJECT_ID": "ALSENAN",
+  "REGISTER_VERSION": "SUPERSTRUCTURE_BEAM_REBAR_REGISTER_V1",
+  "REVISION": "ALSENAN_ST7757_DXF",
+  "unit_mass": {
+   "authority": "Urban project default (R3); S6 brief 22",
+   "method": "D2_OVER_162"
+  }
+ },
+ "diameter_distribution": {
+  "12": {
+   "kg": 283.53066666666666,
+   "length_m": 318.972
+  },
+  "14": {
+   "kg": 243.50701234567904,
+   "length_m": 201.266
+  },
+  "16": {
+   "kg": 844.0623407407406,
+   "length_m": 534.1332
+  },
+  "18": {
+   "kg": 2071.9678,
+   "length_m": 1035.9839
+  },
+  "20": {
+   "kg": 187.08148148148146,
+   "length_m": 75.768
+  }
+ },
+ "families": {
+  "CONTINUOUS_BEAM": {
+   "BLOCKED_MODELLED_KG": 0.0,
+   "BLOCKED_UNQUANTIFIED_COMPONENTS": 162,
+   "BLOCKED_UNQUANTIFIED_COUNT_RECORDS": 17,
+   "LOWER_BOUND_KNOWN_KG": 805.6851037037036,
+   "MID_KNOWN_KG": 265.2091037037037,
+   "PROVISIONAL_KG": 0.0,
+   "VERIFIED_KG": 0.0,
+   "blocked_unquantified_by_component": {
+    "BOTTOM_MAIN": 14,
+    "DEVELOPMENT_1": 13,
+    "DEVELOPMENT_2": 13,
+    "HANGER": 13,
+    "HOOK_1": 13,
+    "HOOK_2": 13,
+    "MID_TOP": 7,
+    "SIDE_REBAR": 7,
+    "STIRRUP_CORE_PATH": 29,
+    "STIRRUP_COUNT": 17,
+    "TOP_MAIN": 27,
+    "TOP_SUPPORT": 13
+   },
+   "candidate_invariant_releases": 4,
+   "final": "FINAL NOT ESTABLISHED",
+   "kg_by_component": {
+    "BOTTOM_MAIN": 540.476,
+    "MID_TOP": 265.2091037037037
+   },
+   "kg_by_diameter": {
+    "14": 31.196666666666673,
+    "16": 209.28663703703705,
+    "18": 565.2017999999999
+   },
+   "known_straight_length_m": 440.8251,
+   "length_by_diameter_m": {
+    "14": 25.785000000000004,
+    "16": 132.43920000000003,
+    "18": 282.60089999999997
+   },
+   "occurrences": 13,
+   "occurrences_by_state": {
+    "BLOCKED": 6,
+    "LOWER_BOUND": 7
+   },
+   "released_by_component": {
+    "BOTTOM_MAIN": 14,
+    "MID_TOP": 9,
+    "STIRRUP_COUNT": 12
+   },
+   "stirrup_count_lower_bound_total": 404,
+   "stirrup_counts_quantified": 12,
+   "stirrup_masses_quantified": 0,
+   "subfamily": "CONTINUOUS_BEAM"
+  },
+  "SIMPLE_BEAM": {
+   "BLOCKED_MODELLED_KG": 0.0,
+   "BLOCKED_UNQUANTIFIED_COMPONENTS": 516,
+   "BLOCKED_UNQUANTIFIED_COUNT_RECORDS": 18,
+   "LOWER_BOUND_KNOWN_KG": 2824.464197530866,
+   "MID_KNOWN_KG": 0,
+   "PROVISIONAL_KG": 0.0,
+   "VERIFIED_KG": 0.0,
+   "blocked_unquantified_by_component": {
+    "BOTTOM_MAIN": 18,
+    "DEVELOPMENT_1": 89,
+    "DEVELOPMENT_2": 89,
+    "HOOK_1": 89,
+    "HOOK_2": 89,
+    "OTHER_EXPLICIT_EXTRA": 3,
+    "SIDE_REBAR": 32,
+    "STIRRUP_CORE_PATH": 89,
+    "STIRRUP_COUNT": 18,
+    "TOP_MAIN": 18
+   },
+   "candidate_invariant_releases": 0,
+   "final": "FINAL NOT ESTABLISHED",
+   "kg_by_component": {
+    "BOTTOM_MAIN": 2100.504419753087,
+    "TOP_MAIN": 723.9597777777776
+   },
+   "kg_by_diameter": {
+    "12": 283.53066666666666,
+    "14": 212.31034567901236,
+    "16": 634.7757037037038,
+    "18": 1506.7659999999998,
+    "20": 187.08148148148146
+   },
+   "known_straight_length_m": 1725.2980000000005,
+   "length_by_diameter_m": {
+    "12": 318.972,
+    "14": 175.481,
+    "16": 401.6940000000001,
+    "18": 753.3829999999999,
+    "20": 75.768
+   },
+   "occurrences": 89,
+   "occurrences_by_state": {
+    "BLOCKED": 18,
+    "LOWER_BOUND": 71
+   },
+   "released_by_component": {
+    "BOTTOM_MAIN": 71,
+    "STIRRUP_COUNT": 71,
+    "TOP_MAIN": 71
+   },
+   "stirrup_count_lower_bound_total": 1352,
+   "stirrup_counts_quantified": 71,
+   "stirrup_masses_quantified": 0,
+   "subfamily": "SIMPLE_BEAM"
+  }
+ },
+ "final_superstructure_beam_rebar": "FINAL SUPERSTRUCTURE BEAM REBAR NOT ESTABLISHED",
+ "headline": "KNOWN SOURCE-DERIVED SUPERSTRUCTURE BEAM REBAR",
+ "headline_lines": [
+  "KNOWN SOURCE-DERIVED SUPERSTRUCTURE BEAM REBAR",
+  "FINAL SUPERSTRUCTURE BEAM REBAR NOT ESTABLISHED"
+ ],
+ "known_source_derived_superstructure_beam_rebar_kg": 3630.1493012345695,
+ "object_conservation": {
+  "by_terminal": {
+   "GEOMETRY_WITHOUT_TAG": 38,
+   "IN_S6_OCCURRENCE": 237,
+   "NOT_REBAR_APPLICABLE": 9,
+   "OUT_OF_SCOPE_FAMILY": 2
+  },
+  "objects": 286,
+  "tags": 119
+ },
+ "occurrences": 102,
+ "policy": "SUPERSTRUCTURE_BEAM_REBAR_S6_V1",
+ "provenance": {
+  "accurate_parts": 843,
+  "contract": "rebar_provenance generic identity (ELEMENT_FAMILY BEAM) + S6 fields (ELEMENT_SUBFAMILY, CB_GROUP_ID, SPAN_INDEX, BAR_RUN_ID, ...)",
+  "records": 2002,
+  "validated": 2002
+ },
+ "questions_open": [
+  "Q1",
+  "Q2",
+  "Q3",
+  "Q4",
+  "Q5",
+  "Q6",
+  "Q7",
+  "Q8",
+  "Q9",
+  "R1",
+  "R2",
+  "R3",
+  "R4",
+  "R5",
+  "R6"
+ ],
+ "scope_check": {
+  "narrower_than_pre_s6": [],
+  "s6_1_release_candidates": 2,
+  "widened": 0
+ },
+ "stamp": {
+  "CALCULATION_ROUND": "S6",
+  "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "ENGINE_COMMIT": "d39f5f6+code:add76dd5f5e9c59a",
+  "REGISTER_VERSION": "SUPERSTRUCTURE_BEAM_REBAR_REGISTER_V1"
+ },
+ "token_conservation": {
+  "by_terminal": {
+   "CONSUMED_BY_BLOCKED_COMPONENT_ONLY": 80,
+   "CONSUMED_BY_RELEASED_COMPONENT": 107,
+   "EXCLUDED_DESIGN_LOAD": 30,
+   "EXCLUDED_NOT_REBAR": 140,
+   "NO_S6_OCCURRENCE": 9,
+   "RETAINED_BLOCKED_SEMANTICS": 48,
+   "RETAINED_UNBOUND_IN_BLOCKED_OCCURRENCE": 1
+  },
+  "tokens": 415
+ },
+ "total_source_derived_straight_length_m": 2166.1231,
+ "untagged_geometry": 38
+}

@@ -1,0 +1,268 @@
+{
+ "authority_decisions": {
+  "applied_here": [
+   "AD-4",
+   "AD-5",
+   "AD-6",
+   "AD-8"
+  ],
+  "decisions": [
+   "AD-1",
+   "AD-2",
+   "AD-3",
+   "AD-4",
+   "AD-5",
+   "AD-6",
+   "AD-7",
+   "AD-8",
+   "AD-9"
+  ],
+  "manifest_sha256": "e2497cc75181393000187b7e657fa8485a4c0f365b4614bed983d0bc6c0ca5b4",
+  "q2_analysis_promoted": false,
+  "q2_prior_analysis": "CLAUDE_ENGINEERING_ANALYSIS",
+  "round": "AD1"
+ },
+ "baseline_head": "59f2083",
+ "combined": {
+  "corrected_kg": 9080.59663423457,
+  "corrected_kg_link_only": 9127.96330123457,
+  "d1_kg": 10527.482906172841,
+  "frozen_s4_s5_s6_kg": 8717.74715308642,
+  "scope": "footings (S4.1) + superstructure beams (S6.1A) + ground system (S5.1A)"
+ },
+ "correction_policy": {
+  "authority_states": [
+   "SOURCE_DERIVED_CUT_LENGTH",
+   "PROVEN_LOWER_BOUND",
+   "MODELLED_POLYGONAL_EQUIVALENT",
+   "QA_ONLY",
+   "REJECT_FOR_MASS"
+  ],
+  "fields": [
+   "ORIGINAL_DELTA_COMPONENT_ID",
+   "ORIGINAL_KG",
+   "CORRECTION_REASON",
+   "SOURCE_EVIDENCE",
+   "NEW_AUTHORITY_STATE",
+   "NEW_RELEASE_STATE",
+   "CORRECTION_KG",
+   "RETAINED_KG"
+  ],
+  "geometry": {
+   "corner": "sharp 2R vs arc (pi / 2) R",
+   "rounded_loop": "2W + 2T - (8 - 2 pi) R",
+   "sharp_loop": "2W + 2T"
+  },
+  "record_type": "CORRECTION_ERRATA",
+  "retaining_states": [
+   "SOURCE_DERIVED_CUT_LENGTH",
+   "PROVEN_LOWER_BOUND"
+  ],
+  "rules": [
+   "an erratum never adds steel",
+   "only a source-derived cut length or a proven lower bound keeps kg",
+   "unknown hooks / closures never prove a lower bound",
+   "original known + corrections == corrected known"
+  ]
+ },
+ "engine_commit": "d39f5f6+code:add76dd5f5e9c59a+delta:d7ce0d2d09810083+audit:29e444219c8a17de",
+ "flags": {
+  "external_code_used": false,
+  "frozen_outputs_changed": false,
+  "hook_length_used_as_proof": false,
+  "normal_delta_rule_changed": false,
+  "plotted_scale_used": false,
+  "pre_s7_started": false,
+  "q2_analysis_promoted": false,
+  "references_read": []
+ },
+ "frozen": {
+  "AD1": {
+   "engine_commit_stamp": null,
+   "files_checked": 26,
+   "manifest": "research/ad1_authority_decisions/AD1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "e2497cc75181393000187b7e657fa8485a4c0f365b4614bed983d0bc6c0ca5b4",
+   "round": "AD1"
+  },
+  "S4": {
+   "engine_commit_stamp": "e3633af+code:0d11810b780ae8f8",
+   "files_checked": 25,
+   "manifest": "research/alsenan_footing_rebar_s4/S4_FREEZE_MANIFEST.json",
+   "manifest_sha256": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+   "round": "S4"
+  },
+  "S4.1": {
+   "engine_commit_stamp": "e3633af+code:0d11810b780ae8f8+delta:06346dac56faa12d",
+   "files_checked": 13,
+   "manifest": "research/alsenan_footing_rebar_s4_1/S4_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+   "round": "S4.1"
+  },
+  "S5": {
+   "engine_commit_stamp": "cab778a+code:2dc78fc0ff285ba2",
+   "files_checked": 31,
+   "manifest": "research/alsenan_ground_system_rebar_s5/S5_FREEZE_MANIFEST.json",
+   "manifest_sha256": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+   "round": "S5"
+  },
+  "S5.1": {
+   "engine_commit_stamp": "cab778a+code:2dc78fc0ff285ba2+delta:42f0849057343fb6",
+   "files_checked": 17,
+   "manifest": "research/alsenan_ground_system_rebar_s5_1/S5_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "595d64b1bf5c8e0ef7b5bebfaf3ea4063dd884356390c84b4c8aac77cddb5a88",
+   "round": "S5.1"
+  },
+  "S6": {
+   "engine_commit_stamp": "d39f5f6+code:add76dd5f5e9c59a",
+   "files_checked": 33,
+   "manifest": "research/alsenan_superstructure_beam_rebar_s6/S6_FREEZE_MANIFEST.json",
+   "manifest_sha256": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+   "round": "S6"
+  },
+  "S6.1": {
+   "engine_commit_stamp": "d39f5f6+code:add76dd5f5e9c59a+delta:d7ce0d2d09810083",
+   "files_checked": 18,
+   "manifest": "research/alsenan_superstructure_beam_rebar_s6_1/S6_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "c4744888ed2207ebff47c0a895e706d7e381b5f905b694eb92e3d1cdc411c0b2",
+   "round": "S6.1"
+  }
+ },
+ "mathematics": {
+  "conclusion": "L_rounded < L_sharp for every R > 0; the sharp path is a MODELLED_POLYGONAL_EQUIVALENT, not a lower bound",
+  "deficit_per_link": "(8 - 2 pi) R = 1.7168 R",
+  "lower_bound_would_need": [
+   "project-source R or R_max",
+   "exact (or minimum) envelope",
+   "the deficit deducted; hooks / closure taken as zero"
+  ],
+  "rounded_loop": "2W + 2T - (8 - 2 pi) R",
+  "second_reason": "P8-N22 cover is a minimum: the cover-reduced envelope is an upper bound",
+  "sharp_loop": "2W + 2T"
+ },
+ "owner_question": "the issued set gives no bend radius / hook / closure and prints a minimum cover; link mass needs these as a versioned project claim. The same minimum-cover reading bears on the cover-reduced footing lengths of frozen S4 (not changed here).",
+ "policy": "STIRRUP_AUTHORITY_AUDIT_V1",
+ "revision": 2,
+ "revision_1_commit": "35567e2",
+ "round": "D1.1",
+ "s4_1": {
+  "known_kg": 3629.599506172839,
+  "link_paths": 0
+ },
+ "s5_1": {
+  "ad1_correction_kg": -47.366667,
+  "ad1_corrections": 6,
+  "ad1_spans": [
+   "GSO-142-7D8-1",
+   "GSO-15D-7C8-1"
+  ],
+  "conservation": {
+   "all_pass": true,
+   "checks": {
+    "no_positive_correction": true,
+    "original_plus_correction_is_corrected": true,
+    "retained_plus_removed_is_original": true
+   },
+   "corrected_known": 1436.231678679013,
+   "correction_kg": -114.62197564197534,
+   "original_known": 1550.8536543209882
+  },
+  "conservation_link_only": {
+   "all_pass": true,
+   "checks": {
+    "no_positive_correction": true,
+    "original_plus_correction_is_corrected": true,
+    "retained_plus_removed_is_original": true
+   },
+   "corrected_known": 1483.598345679013,
+   "correction_kg": -67.2553086419753,
+   "original_known": 1550.8536543209882
+  },
+  "corrected_known_kg": 1436.231678679013,
+  "corrected_known_kg_link_only": 1483.598345679013,
+  "corrections": 6,
+  "d1_known_kg": 1550.8536543209882,
+  "frozen_s5_known_kg": 1457.9983456790123,
+  "link_core_path_kg_released": 67.2553086419753,
+  "link_kg_retained": 0.0,
+  "link_kg_retracted": 67.2553086419753,
+  "other_retained_kg": {
+   "through_support": 25.600000000000005
+  }
+ },
+ "s6_1": {
+  "conservation": {
+   "all_pass": true,
+   "checks": {
+    "no_positive_correction": true,
+    "original_plus_correction_is_corrected": true,
+    "retained_plus_removed_is_original": true
+   },
+   "corrected_known": 4014.7654493827176,
+   "correction_kg": -1332.2642962962966,
+   "original_known": 5347.029745679014
+  },
+  "corrected_known_kg": 4014.7654493827176,
+  "corrections": 88,
+  "d1_known_kg": 5347.029745679014,
+  "frozen_s6_known_kg": 3630.1493012345695,
+  "link_core_path_kg_released": 1332.2642962962966,
+  "link_kg_retained": 0.0,
+  "link_kg_retracted": 1332.2642962962966,
+  "other_retained_kg": {
+   "longitudinal_base_bars": 372.6062716049383,
+   "planted_column_extra": 12.009876543209876
+  },
+  "stirrup_counts_retained": {
+   "BM-1F_ROOF-B3-BL023-6B9#1": 15,
+   "BM-GF_ROOF-B26-BL014-4CC#1": 74,
+   "BM-GF_ROOF-B3-BL033-6B7#1": 15,
+   "CBO-GFRS-CB7-BL003#1": 39,
+   "CBO-GFRS-CB7-BL003#2": 41
+  }
+ },
+ "source_search": {
+  "bend_radius_in_source": false,
+  "closure_in_source": false,
+  "drawn_link_corners": {
+   "p13 GB_EXTERIOR (30 x FOLLOW ARCH)": "ROUNDED (chorded arcs)",
+   "p13 GB_GT_5M (30x60)": "ROUNDED (chorded arcs)",
+   "p13 GB_LT_2_5M (30x30)": "ROUNDED (chorded arcs)",
+   "p13 GB_LT_5M (30x40)": "ROUNDED (chorded arcs)",
+   "p15 TYP. SLAB ON BEAMS beam section": "ROUNDED (chorded arcs)"
+  },
+  "dxf_texts_scanned": 4055,
+  "findings": {
+   "BEND_DIAMETER": "SOURCE_EXPECTED_NOT_LOCATED - no text, note or dimension",
+   "BEND_RADIUS": "SOURCE_EXPECTED_NOT_LOCATED - the issued sections draw the corners bent (chorded arcs) but no radius, diameter or mandrel is printed; no radial dimension exists; P8-N03 forbids scaling",
+   "CENTRELINE_BEND_GEOMETRY": "SOURCE_EXPECTED_NOT_LOCATED - drawn, not dimensioned",
+   "CLOSURE_LAP": "SOURCE_EXPECTED_NOT_LOCATED - the only lap note in the set is p.15 'LAP LENGTH FOR ALL TEMPERATURE BARS SHALL BE 40xDIA' (slab temperature bars); note 9 70D / 40D is for starters",
+   "COVER_SEMANTICS": "p.8 note 22 prints a MINIMUM cover (>= 2.5 / >= 7 cm): the cover-reduced link envelope is an UPPER envelope, not an exact or minimum size",
+   "GENERAL_BENDING_NOTE": "SOURCE_EXPECTED_NOT_LOCATED - p.8 notes 1-24 carry none",
+   "HOOK_ANGLE": "SOURCE_EXPECTED_NOT_LOCATED - hook ticks / corner hook drawn; no angle printed",
+   "HOOK_LENGTH_EXTENSION": "SOURCE_EXPECTED_NOT_LOCATED - no text or dimension; project rule register HOOKS_AND_BENDS = NO_PROJECT_SOURCE",
+   "LINK_FABRICATION_NOTE": "SOURCE_EXPECTED_NOT_LOCATED - no standard-link, bending-schedule or bending note"
+  },
+  "hook_length_in_source": false,
+  "radial_dimensions": 0
+ },
+ "topology_count_diameter": {
+  "by_topology": {
+   "SINGLE_CLOSED_LINK_2_LEG": 168,
+   "STR2_OUTER_PLUS_ONE_INNER_4_LEG": 11,
+   "STR3_OUTER_PLUS_TWO_INNER_6_LEG": 1
+  },
+  "cut_length_blocked": 180,
+  "hook_extension_blocked": 180,
+  "hook_shape": {
+   "NOT_ESTABLISHED": 29,
+   "SOURCE_EXPLICIT_SHAPE_ONLY": 151
+  },
+  "stirrup_sets": 180,
+  "topology_state": {
+   "CANDIDATE_ONLY": 18,
+   "ESTABLISHED": 162
+  },
+  "with_count": 116,
+  "with_diameter": 149
+ }
+}

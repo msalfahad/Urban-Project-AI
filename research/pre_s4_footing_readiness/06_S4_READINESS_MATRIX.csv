@@ -1,0 +1,19 @@
+ITEM,SOURCE_AVAILABLE,SEMANTICS_AVAILABLE,GEOMETRY_AVAILABLE,FORMULA_AVAILABLE,TESTED,S4_STATUS,EVIDENCE,BLOCKER_OR_CONDITION
+footing occurrence census,YES,YES,YES,N/A,YES,READY,"26 outlines / 27 tags, conservation True; 25 established + F/F10 conflict",F/F10 SOURCE_CONFLICT -> that occurrence REBAR_BLOCKED; F3 OQ-11 -> F3 occurrences PROVISIONAL until answered
+schedule binding (header position),YES,YES,YES,N/A,YES,READY,"22/22 schedule (sub-)rows bound by drawn header; W->L, H->W, DEPHT->H confirmed",
+bottom short bars,YES,YES,YES,YES,YES,READY,"FT SH-B/SH-D absolute counts; FTB SH-B-B/SH-B-D per metre; bar_from_cells parity OK on every cell pair; direction: SHORT bars span W, distributed along L (counts give equal spacing both ways, diagnostic)",per-metre FTB counts: the end-bar convention (+1) stays PROVISIONAL until stated
+bottom long bars,YES,YES,YES,YES,YES,READY,FT LO-B/LO-D; FTB LO-B-B/LO-B-D per metre; as short bars,as short bars
+top short bars,YES (FTB only),YES,YES,YES,YES,READY_LOWER_BOUND,"FTB SH-T-B/SH-T-D per metre (F8, F12, F13, F14, FF); single-layer FT footings have no top mesh",top-layer end detail (bend down / hook) not drawn -> core length only; end detail BLOCKED
+top long bars,YES (FTB only),YES,YES,YES,YES,READY_LOWER_BOUND,FTB LO-T-B/LO-T-D,as top short bars
+BOXED,YES (value + detail),NO,"PARTIAL (shape drawn, not dimensioned)",NO,YES,BLOCKED_COMPONENT,11 values 3+4/3+5/3+6/3+8 + FN empty; semantics UNRESOLVED after source exhaustion (04),owner / engineer answer to Q-R3-6; until then BLOCKED_UNQUANTIFIED on 12 footing types (FT incl. FN)
+starters / dowels,"YES (p.13 40Ø, min 30 cm foot)",YES,YES,YES,YES,NOT_APPLICABLE,column starters are owned by COLUMN_REBAR (S3.1 lap / starter register); S4 must not count them again,
+cover,YES (p.8 note 22: 7 cm soil contact),YES,N/A,YES,PARTIAL,READY,R4 visual claim P08_NOTE_22_COVER (OCR + review),S4 records COVER rule id on every bar
+bar length,YES,YES,YES,YES,PARTIAL,READY,bottom bars straight between side legs (p.13): length = footing dimension - 2 x cover,
+hooks,YES (none drawn on bottom bars),YES,YES,YES,PARTIAL,READY,p.13 draws straight bottom bars; FTB top-bar ends not drawn,FTB top-bar end detail -> lower bound
+anchorage,YES (note 9),YES,N/A,N/A,NO,NOT_APPLICABLE,footing mesh bars end at cover; anchorage applies to starters (column engine),
+laps,YES (note 9),YES,YES,YES,PARTIAL,NOT_APPLICABLE,longest footing bar 4.46 m (FF 460 cm - 2 x 7) < 12 m stock: no lap,re-check if a longer footing appears
+unit mass,YES,YES,N/A,YES (D^2/162),YES,READY,rebar_model.kgm / rebar_unit_mass,
+waste,NO (owner / estimating parameter),NO,N/A,YES (waste_procurement),YES,PROVISIONAL_ONLY,kept out of the accurate net quantity,owner waste % for procurement view
+procurement,NO,NO,N/A,YES (bbs_optimiser 12 m stock),YES,PROVISIONAL_ONLY,"cutting / stock optimisation is a procurement view, never the accurate net",
+provenance,YES,YES,N/A,N/A,YES,READY,accurate_boq_rebar.validate_s4_part / summarise_s4 (contract 05),
+release states,YES,YES,N/A,N/A,YES,READY,footing_rebar_guard.footing_release: VERIFIED / LOWER_BOUND / PROVISIONAL / BLOCKED,

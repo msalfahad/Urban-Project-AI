@@ -1,0 +1,912 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_B1_ARCHITECTURAL_COMPARISON_V1",
+ "rooms": {
+  "rooms": [
+   {
+    "floor": "GF",
+    "manual_room": "استقبال+طعام",
+    "manual_room_en": "reception + dining",
+    "class": "DRY",
+    "manual_area_m2": 137.5,
+    "manual_perimeter_m": 58.16,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-095"
+   },
+   {
+    "floor": "GF",
+    "manual_room": "غرفه نوم رئيسيه",
+    "manual_room_en": "master bedroom",
+    "class": "DRY",
+    "manual_area_m2": 16.66,
+    "manual_perimeter_m": 21.71,
+    "bucket": "URBAN_REVIEW_REQUIRED",
+    "urban_room": "MASTER BED ROOM",
+    "urban_area_m2": 16.54964,
+    "row": "CMP-096"
+   },
+   {
+    "floor": "GF",
+    "manual_room": "مدخل",
+    "manual_room_en": "entrance hall",
+    "class": "DRY",
+    "manual_area_m2": 10.46,
+    "manual_perimeter_m": 14.76,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-097"
+   },
+   {
+    "floor": "GF",
+    "manual_room": "ديوانيه",
+    "manual_room_en": "diwaniya",
+    "class": "DRY",
+    "manual_area_m2": 24.84,
+    "manual_perimeter_m": 20.0,
+    "bucket": "URBAN_REVIEW_REQUIRED",
+    "urban_room": "DEWANEYA / Wash",
+    "urban_area_m2": 24.940332,
+    "row": "CMP-098"
+   },
+   {
+    "floor": "GF",
+    "manual_room": "سايق",
+    "manual_room_en": "driver's room",
+    "class": "DRY",
+    "manual_area_m2": 7.87,
+    "manual_perimeter_m": 12.5,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-099"
+   },
+   {
+    "floor": "1F",
+    "manual_room": "معيشه",
+    "manual_room_en": "living",
+    "class": "DRY",
+    "manual_area_m2": 38.96,
+    "manual_perimeter_m": 43.78,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-100"
+   },
+   {
+    "floor": "1F",
+    "manual_room": "غرفه نوم 1",
+    "manual_room_en": "bedroom 1",
+    "class": "DRY",
+    "manual_area_m2": 17.29,
+    "manual_perimeter_m": 22.89,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-101"
+   },
+   {
+    "floor": "1F",
+    "manual_room": "غرفه نوم 2",
+    "manual_room_en": "bedroom 2",
+    "class": "DRY",
+    "manual_area_m2": 19.46,
+    "manual_perimeter_m": 21.4,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-102"
+   },
+   {
+    "floor": "1F",
+    "manual_room": "غرفه نوم 3",
+    "manual_room_en": "bedroom 3",
+    "class": "DRY",
+    "manual_area_m2": 18.25,
+    "manual_perimeter_m": 17.3,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-103"
+   },
+   {
+    "floor": "1F",
+    "manual_room": "غرفه نوم 4",
+    "manual_room_en": "bedroom 4",
+    "class": "DRY",
+    "manual_area_m2": 19.0,
+    "manual_perimeter_m": 17.45,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-104"
+   },
+   {
+    "floor": "ROOF",
+    "manual_room": "غرفه خادمه",
+    "manual_room_en": "maid's room",
+    "class": "DRY",
+    "manual_area_m2": 19.58,
+    "manual_perimeter_m": 19.3,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-105"
+   },
+   {
+    "floor": "ROOF",
+    "manual_room": "طرقه",
+    "manual_room_en": "corridor",
+    "class": "DRY",
+    "manual_area_m2": 7.7,
+    "manual_perimeter_m": 13.6,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-106"
+   },
+   {
+    "floor": "GF",
+    "manual_room": "مغسله الديوانيه",
+    "manual_room_en": "diwaniya washroom",
+    "class": "WET",
+    "manual_area_m2": 4.73,
+    "manual_perimeter_m": 9.5,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-107"
+   },
+   {
+    "floor": "GF",
+    "manual_room": "مغسله الديوانيه",
+    "manual_room_en": "diwaniya washroom",
+    "class": "WET",
+    "manual_area_m2": 1.7,
+    "manual_perimeter_m": 5.3,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-108"
+   },
+   {
+    "floor": "GF",
+    "manual_room": "حمامات",
+    "manual_room_en": "bathrooms",
+    "class": "WET",
+    "manual_area_m2": 3.7,
+    "manual_perimeter_m": 7.6,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-109"
+   },
+   {
+    "floor": "GF",
+    "manual_room": "حمامات",
+    "manual_room_en": "bathrooms",
+    "class": "WET",
+    "manual_area_m2": 2.3,
+    "manual_perimeter_m": 6.7,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-110"
+   },
+   {
+    "floor": "GF",
+    "manual_room": "حمامات",
+    "manual_room_en": "bathrooms",
+    "class": "WET",
+    "manual_area_m2": 2.67,
+    "manual_perimeter_m": 7.4,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-111"
+   },
+   {
+    "floor": "GF",
+    "manual_room": "حمامات",
+    "manual_room_en": "bathrooms",
+    "class": "WET",
+    "manual_area_m2": 2.36,
+    "manual_perimeter_m": 6.2,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-112"
+   },
+   {
+    "floor": "GF",
+    "manual_room": "مطبخ",
+    "manual_room_en": "kitchen",
+    "class": "WET",
+    "manual_area_m2": 9.55,
+    "manual_perimeter_m": 14.35,
+    "bucket": "URBAN_CERTIFIED",
+    "urban_room": "KITCHEN",
+    "urban_area_m2": 9.63,
+    "row": "CMP-113"
+   },
+   {
+    "floor": "GF",
+    "manual_room": "حمام",
+    "manual_room_en": "bathroom",
+    "class": "WET",
+    "manual_area_m2": 1.95,
+    "manual_perimeter_m": 5.58,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-115"
+   },
+   {
+    "floor": "GF",
+    "manual_room": "حمام",
+    "manual_room_en": "bathroom",
+    "class": "WET",
+    "manual_area_m2": 3.37,
+    "manual_perimeter_m": 7.5,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-116"
+   },
+   {
+    "floor": "GF",
+    "manual_room": "مغسله",
+    "manual_room_en": "washroom",
+    "class": "WET",
+    "manual_area_m2": 3.15,
+    "manual_perimeter_m": 7.2,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-117"
+   },
+   {
+    "floor": "1F",
+    "manual_room": "حمام",
+    "manual_room_en": "bathroom",
+    "class": "WET",
+    "manual_area_m2": 4.72,
+    "manual_perimeter_m": 8.7,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-118"
+   },
+   {
+    "floor": "1F",
+    "manual_room": "حمام",
+    "manual_room_en": "bathroom",
+    "class": "WET",
+    "manual_area_m2": 3.6,
+    "manual_perimeter_m": 7.6,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-119"
+   },
+   {
+    "floor": "1F",
+    "manual_room": "حمام",
+    "manual_room_en": "bathroom",
+    "class": "WET",
+    "manual_area_m2": 2.59,
+    "manual_perimeter_m": 6.48,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-120"
+   },
+   {
+    "floor": "1F",
+    "manual_room": "حمام",
+    "manual_room_en": "bathroom",
+    "class": "WET",
+    "manual_area_m2": 5.0,
+    "manual_perimeter_m": 9.0,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-121"
+   },
+   {
+    "floor": "1F",
+    "manual_room": "حمام",
+    "manual_room_en": "bathroom",
+    "class": "WET",
+    "manual_area_m2": 5.0,
+    "manual_perimeter_m": 8.9,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-122"
+   },
+   {
+    "floor": "1F",
+    "manual_room": "غسيل",
+    "manual_room_en": "laundry",
+    "class": "WET",
+    "manual_area_m2": 10.0,
+    "manual_perimeter_m": 16.85,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-123"
+   },
+   {
+    "floor": "ROOF",
+    "manual_room": "حمام",
+    "manual_room_en": "bathroom",
+    "class": "WET",
+    "manual_area_m2": 5.62,
+    "manual_perimeter_m": 9.75,
+    "bucket": "URBAN_NOT_DETECTED",
+    "urban_room": null,
+    "urban_area_m2": null,
+    "row": "CMP-124"
+   }
+  ],
+  "value_coincidences": [
+   {
+    "floor": "GF",
+    "urban_room": "W.C",
+    "urban_area_m2": 2.675221,
+    "urban_perimeter_m": 7.414038,
+    "nearest_manual_row": "FIN:سيراميك:46",
+    "nearest_manual_label": "حمامات",
+    "nearest_manual_area_m2": 2.67,
+    "nearest_manual_perimeter_m": 7.4,
+    "area_pct": 0.195543,
+    "use": "VALUE_COINCIDENCE - LOW confidence; not a match, not in any metric"
+   },
+   {
+    "floor": "GF",
+    "urban_room": "W.C",
+    "urban_area_m2": 1.95,
+    "urban_perimeter_m": 5.6,
+    "nearest_manual_row": "FIN:سيراميك:49",
+    "nearest_manual_label": "حمام",
+    "nearest_manual_area_m2": 1.95,
+    "nearest_manual_perimeter_m": 5.58,
+    "area_pct": 0.0,
+    "use": "VALUE_COINCIDENCE - LOW confidence; not a match, not in any metric"
+   },
+   {
+    "floor": "GF",
+    "urban_room": "W.C",
+    "urban_area_m2": 2.3625,
+    "urban_perimeter_m": 6.2,
+    "nearest_manual_row": "FIN:سيراميك:47",
+    "nearest_manual_label": "حمامات",
+    "nearest_manual_area_m2": 2.36,
+    "nearest_manual_perimeter_m": 6.2,
+    "area_pct": 0.105932,
+    "use": "VALUE_COINCIDENCE - LOW confidence; not a match, not in any metric"
+   },
+   {
+    "floor": "GF",
+    "urban_room": "W.C",
+    "urban_area_m2": 3.375,
+    "urban_perimeter_m": 7.5,
+    "nearest_manual_row": "FIN:سيراميك:50",
+    "nearest_manual_label": "حمام",
+    "nearest_manual_area_m2": 3.37,
+    "nearest_manual_perimeter_m": 7.5,
+    "area_pct": 0.148368,
+    "use": "VALUE_COINCIDENCE - LOW confidence; not a match, not in any metric"
+   },
+   {
+    "floor": "1F",
+    "urban_room": "BATH",
+    "urban_area_m2": 5.0225,
+    "urban_perimeter_m": 9.0,
+    "nearest_manual_row": "FIN:سيراميك:58",
+    "nearest_manual_label": "حمام",
+    "nearest_manual_area_m2": 5.0,
+    "nearest_manual_perimeter_m": 9.0,
+    "area_pct": 0.45,
+    "use": "VALUE_COINCIDENCE - LOW confidence; not a match, not in any metric"
+   },
+   {
+    "floor": "1F",
+    "urban_room": "BATH",
+    "urban_area_m2": 4.725,
+    "urban_perimeter_m": 8.7,
+    "nearest_manual_row": "FIN:سيراميك:55",
+    "nearest_manual_label": "حمام",
+    "nearest_manual_area_m2": 4.72,
+    "nearest_manual_perimeter_m": 8.7,
+    "area_pct": 0.105932,
+    "use": "VALUE_COINCIDENCE - LOW confidence; not a match, not in any metric"
+   },
+   {
+    "floor": "1F",
+    "urban_room": "MASTER BED ROOM",
+    "urban_area_m2": 16.34,
+    "urban_perimeter_m": 16.2,
+    "nearest_manual_row": "FIN:سيراميك:22",
+    "nearest_manual_label": "غرفه نوم 1",
+    "nearest_manual_area_m2": 17.29,
+    "nearest_manual_perimeter_m": 22.89,
+    "area_pct": -5.494505,
+    "use": "VALUE_COINCIDENCE - LOW confidence; not a match, not in any metric"
+   },
+   {
+    "floor": "1F",
+    "urban_room": "BATH",
+    "urban_area_m2": 3.5775,
+    "urban_perimeter_m": 7.6,
+    "nearest_manual_row": "FIN:سيراميك:56",
+    "nearest_manual_label": "حمام",
+    "nearest_manual_area_m2": 3.6,
+    "nearest_manual_perimeter_m": 7.6,
+    "area_pct": -0.625,
+    "use": "VALUE_COINCIDENCE - LOW confidence; not a match, not in any metric"
+   }
+  ],
+  "floors": {
+   "GF": {
+    "manual_m2": 232.81,
+    "urban_certified_m2": 19.992721,
+    "coverage": 0.085876
+   },
+   "1F": {
+    "manual_m2": 143.87,
+    "urban_certified_m2": 29.665,
+    "coverage": 0.206193
+   },
+   "ROOF": {
+    "manual_m2": 32.9,
+    "urban_certified_m2": null,
+    "coverage": null
+   }
+  },
+  "buckets": {
+   "URBAN_NOT_DETECTED": 26,
+   "URBAN_REVIEW_REQUIRED": 2,
+   "URBAN_CERTIFIED": 1
+  }
+ },
+ "ceilings": [
+  "CMP-136"
+ ],
+ "walls": {
+  "paint_plaster_method": {
+   "paint_heights_m": [
+    0.2,
+    3.4,
+    3.5,
+    3.6,
+    5.4,
+    12.9
+   ],
+   "rooms": [
+    {
+     "label": "الديوانية",
+     "label_en": "diwaniya",
+     "height_m": 3.6,
+     "length_m": 20.0,
+     "m2": 72.0
+    },
+    {
+     "label": "غرفة السائق",
+     "label_en": "driver's room",
+     "height_m": 3.6,
+     "length_m": 12.5,
+     "m2": 45.0
+    },
+    {
+     "label": "غرفة",
+     "label_en": "room",
+     "height_m": 3.6,
+     "length_m": 21.05,
+     "m2": 75.78
+    },
+    {
+     "label": "صالة",
+     "label_en": "hall",
+     "height_m": 3.6,
+     "length_m": 54.25,
+     "m2": 195.3
+    },
+    {
+     "label": "حائط درج",
+     "label_en": "stair wall",
+     "height_m": 3.6,
+     "length_m": 11.25,
+     "m2": 40.5
+    },
+    {
+     "label": "مغسلة",
+     "label_en": "washroom",
+     "height_m": 3.6,
+     "length_m": 6.75,
+     "m2": 24.3
+    },
+    {
+     "label": "غرفة رئيسية  1  دور اول",
+     "label_en": "main room 1, first floor",
+     "height_m": 3.4,
+     "length_m": 17.5,
+     "m2": 59.5
+    },
+    {
+     "label": "غرفة رئيسية 2",
+     "label_en": "main room 2",
+     "height_m": 3.4,
+     "length_m": 17.3,
+     "m2": 58.82
+    },
+    {
+     "label": "غرفة رئسية 3",
+     "label_en": "main room 3",
+     "height_m": 3.4,
+     "length_m": 22.3,
+     "m2": 75.82000000000001
+    },
+    {
+     "label": "غرفة رئيسية 4",
+     "label_en": "main room 4",
+     "height_m": 3.4,
+     "length_m": 21.9,
+     "m2": 74.46
+    },
+    {
+     "label": "معيشة",
+     "label_en": "living",
+     "height_m": 3.5,
+     "length_m": 40.25,
+     "m2": 140.875
+    },
+    {
+     "label": "ممر مغاسل",
+     "label_en": "washroom corridor",
+     "height_m": 3.4,
+     "length_m": 9.35,
+     "m2": 31.79
+    },
+    {
+     "label": "درج الخدمات   لشواحط الدرج",
+     "label_en": "(no glossary entry - see original)",
+     "height_m": null,
+     "length_m": 20.2,
+     "m2": 24.24
+    },
+    {
+     "label": "درج الصالة",
+     "label_en": "hall stair",
+     "height_m": null,
+     "length_m": 7.5,
+     "m2": 15.75
+    },
+    {
+     "label": "غرفة خدامة    السطح",
+     "label_en": "maid's room, roof",
+     "height_m": 3.4,
+     "length_m": 18.9,
+     "m2": 64.25999999999999
+    },
+    {
+     "label": "ممر",
+     "label_en": "corridor",
+     "height_m": 3.4,
+     "length_m": 9.0,
+     "m2": 30.599999999999998
+    },
+    {
+     "label": "حوائط     بيت الدرج",
+     "label_en": "stairwell walls",
+     "height_m": 12.9,
+     "length_m": 14.8,
+     "m2": 190.92000000000002
+    },
+    {
+     "label": "تابع",
+     "label_en": "continued",
+     "height_m": 5.4,
+     "length_m": 2.5,
+     "m2": 13.5
+    },
+    {
+     "label": "شرشوب أبواب",
+     "label_en": "door lintel bands",
+     "height_m": 0.2,
+     "length_m": 5.7,
+     "m2": 15.96
+    }
+   ],
+   "opening_deduction": "openings listed once (paint 116.495 m2) and deducted at half (58.2475)",
+   "plaster_vs_paint": "plaster gross excludes the stair-soffit rows that paint includes",
+   "inferred_height_rule": "GF 3.6 m (= 4.50 - 0.90), 1F / roof 3.4 m (= 4.20 - 0.80), living 3.5 m, stairwell 12.9 m - a clear height under a false ceiling, not in the source"
+  }
+ },
+ "blockwork": {
+  "floors": [
+   {
+    "floor": "GF",
+    "manual_length_m": {
+     "EXTERNAL": 78.55,
+     "INTERNAL_150": 47.53,
+     "INTERNAL_200": 8.2
+    },
+    "manual_total_m": 134.28,
+    "urban_T150_m": 26.054482,
+    "urban_T200_m": 34.381162,
+    "urban_total_m": 60.435644,
+    "coverage": 0.450072,
+    "manual_heights_m": [
+     3.25,
+     3.5,
+     4.0
+    ]
+   },
+   {
+    "floor": "1F",
+    "manual_length_m": {
+     "EXTERNAL": 62.47,
+     "INTERNAL_150": 57.14,
+     "INTERNAL_200": 8.2
+    },
+    "manual_total_m": 127.81,
+    "urban_T150_m": 41.013013,
+    "urban_T200_m": 24.963392,
+    "urban_total_m": 65.976405,
+    "coverage": 0.516207,
+    "manual_heights_m": [
+     3.45,
+     3.7,
+     5.5
+    ]
+   },
+   {
+    "floor": "ROOF",
+    "manual_length_m": {
+     "EXTERNAL": 27.9,
+     "INTERNAL_150": 32.8,
+     "INTERNAL_200": 8.2
+    },
+    "manual_total_m": 68.9,
+    "urban_T150_m": 8.7,
+    "urban_T200_m": 19.898394,
+    "urban_total_m": 28.598394,
+    "coverage": 0.415071,
+    "manual_heights_m": [
+     1.0,
+     3.45,
+     3.7
+    ]
+   }
+  ],
+  "non_building_rows": [
+   {
+    "label": "السور",
+    "label_en": "boundary fence wall",
+    "subtrade": "INTERNAL_150:FENCE",
+    "m2": 74.4
+   },
+   {
+    "label": "الدروه",
+    "label_en": "parapet",
+    "subtrade": "INTERNAL_150:PARAPET",
+    "m2": 66.0
+   },
+   {
+    "label": "الدروه",
+    "label_en": "parapet",
+    "subtrade": "INTERNAL_150:PARAPET",
+    "m2": 77.13000000000001
+   }
+  ]
+ },
+ "aluminium": {
+  "salon": {
+   "rows": [
+    "CMP-155",
+    "CMP-156",
+    "CMP-157"
+   ],
+   "manual_width_m": 6.33,
+   "manual_height_m": 4.3,
+   "manual_area_m2": 27.218999999999998,
+   "urban_area_m2": 23.1045,
+   "attributable_to_height_m2": -4.1145,
+   "width_attributable_m2": 0.0
+  },
+  "master_bedroom_curved": {
+   "row": "CMP-158",
+   "manual_length_m": 6.57,
+   "manual_height_m": 4.3,
+   "urban_bases_m": {
+    "inner_arc": 6.6577,
+    "mean_arc (Urban)": 6.7248,
+    "outer_arc": 6.7918,
+    "chord": 4.7497
+   },
+   "pct_vs_manual": {
+    "inner_arc": 1.334855,
+    "mean_arc (Urban)": 2.356164,
+    "outer_arc": 3.375951,
+    "chord": -27.70624
+   },
+   "bases_within_tolerance": [],
+   "closest_basis": "inner_arc",
+   "classification": "CLOSEST_TO_INNER_ARC_OUTSIDE_TOLERANCE",
+   "identity_confidence": "MEDIUM"
+  },
+  "first_floor_curved": {
+   "manual_length_m": 3.15,
+   "urban_mean_m": 3.1506,
+   "urban_arcs_m": [
+    3.1018000000000003,
+    3.0743,
+    3.1369000000000002,
+    3.2895
+   ],
+   "identity_confidence": "LOW"
+  },
+  "windows": [
+   {
+    "floor": "GF",
+    "urban_widths_m": [
+     0.6,
+     0.6,
+     0.6,
+     0.9,
+     0.9,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.0,
+     1.2,
+     1.5,
+     1.5,
+     1.9549,
+     1.9549
+    ],
+    "manual_widths_m": [
+     0.6,
+     0.6,
+     0.6,
+     0.6,
+     1.0,
+     1.2,
+     1.5,
+     1.5,
+     1.95,
+     1.95
+    ],
+    "paired": 9,
+    "urban_only": [
+     0.9,
+     0.9,
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "manual_only": [
+     0.6
+    ],
+    "urban_only_equal_to_manual_door_widths": [
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "row": "CMP-161"
+   },
+   {
+    "floor": "1F",
+    "urban_widths_m": [
+     0.5,
+     0.6,
+     0.6,
+     0.6,
+     1.0,
+     1.0,
+     1.0,
+     1.2,
+     1.5523,
+     1.5523,
+     1.5523,
+     2.4498
+    ],
+    "manual_widths_m": [
+     0.6,
+     0.6,
+     0.6,
+     0.6,
+     0.6,
+     0.6,
+     1.0,
+     1.2,
+     1.55,
+     1.55,
+     1.55,
+     2.45
+    ],
+    "paired": 9,
+    "urban_only": [
+     0.5,
+     1.0,
+     1.0
+    ],
+    "manual_only": [
+     0.6,
+     0.6,
+     0.6
+    ],
+    "urban_only_equal_to_manual_door_widths": [],
+    "row": "CMP-162"
+   },
+   {
+    "floor": "ROOF",
+    "urban_widths_m": [
+     0.6,
+     1.0,
+     1.0,
+     1.2,
+     1.2
+    ],
+    "manual_widths_m": [
+     0.6,
+     1.0,
+     1.2,
+     1.2
+    ],
+    "paired": 4,
+    "urban_only": [
+     1.0
+    ],
+    "manual_only": [],
+    "urban_only_equal_to_manual_door_widths": [
+     1.0
+    ],
+    "row": "CMP-163"
+   }
+  ],
+  "doors": {
+   "urban_door_symbols": 24,
+   "manual_aluminium_doors": 5.0
+  }
+ },
+ "reception": {
+  "manual_zone_row": "FIN:سيراميك:13",
+  "manual_zone_area_m2": 137.5,
+  "manual_zone_perimeter_m": 58.16,
+  "manual_treatment": "ONE closed room 'reception + dining' (saloon included, no separate row) with its own perimeter; the entrance hall is a separate room (10.46 m2) - the manual assumes the zone is closed at the entrance",
+  "manual_tall_walls": [
+   {
+    "label": "حوائط     بيت الدرج",
+    "height_m": 12.9,
+    "m2": 190.92000000000002
+   },
+   {
+    "label": "تابع",
+    "height_m": 5.4,
+    "m2": 13.5
+   }
+  ],
+  "urban": "zone open at the west entrance (OQ3-A1); double height corroborated, extent blocked"
+ },
+ "master_bedroom": {
+  "manual_area_m2": 16.66,
+  "manual_perimeter_m": 21.71,
+  "urban_candidate_m2": 16.54964,
+  "box_m2": 0.73,
+  "manual_minus_urban_m2": 0.11036,
+  "likely_treatment": "NO_DEDUCTION",
+  "reasoning": "the manual area is not smaller than the Urban candidate site, so the 0.73 m2 box is not deducted in the manual (consistent with WARDROBE / JOINERY with floor finish under it)",
+  "classification": "WARDROBE/JOINERY (probable, MEDIUM) - Urban topology unchanged, OQ3-A2 carried"
+ },
+ "marble": {
+  "stairs_rows_m2": 143.64,
+  "cover_total_m2": 295.44
+ }
+}

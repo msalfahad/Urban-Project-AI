@@ -1,0 +1,95 @@
+{
+ "claims": [
+  {
+   "claim_id": "ALS-S3-CLAIM-001",
+   "date": "2026-10-06",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_filter": {},
+   "evidence_attachment": null,
+   "fact": "TIE_RATE_SEMANTICS",
+   "flag_keys": [
+    "2e23673c1966908b"
+   ],
+   "kind": "ADJUDICATION",
+   "project_id": "ALSENAN-ST7757",
+   "promotion_state": "PROJECT_ONLY",
+   "scope_note": "'ST. OF COLUMN- 6Ø8/m' = six complete tie levels (sets) per metre: 1 link per level -> 6 links/m, 2 -> 12 links/m, 3 -> 18 links/m. Applies to this project's tie rule only; not a generic reading of 'n Ø d/m'.",
+   "source_office": null,
+   "source_person": "Mohammad (Urban Projects)",
+   "supersedes": null,
+   "value": "SETS_PER_M"
+  },
+  {
+   "claim_id": "ALS-S3-CLAIM-002",
+   "date": "2026-10-06",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "element_filter": {},
+   "evidence_attachment": null,
+   "fact": "TIE_TOPOLOGY_BAND",
+   "flag_keys": [
+    "647c4db1d77bc7d9"
+   ],
+   "kind": "ADJUDICATION",
+   "project_id": "ALSENAN-ST7757",
+   "promotion_state": "PROJECT_ONLY",
+   "scope_note": "A column whose long side is exactly on the printed limit between the 2-link and 3-link bands uses the 3-link arrangement on this project. Generic code keeps the RULE_GAP for any other project, revision or value.",
+   "source_office": null,
+   "source_person": "Mohammad (Urban Projects)",
+   "supersedes": null,
+   "value": {
+    "band_id": "TIE_80_LT_L_LT_120",
+    "long_side_mm": 800
+   }
+  }
+ ],
+ "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+ "project_evidence": [
+  {
+   "census_check": {
+    "C": 10,
+    "C1": 4,
+    "C10": 2,
+    "C11": 4,
+    "C2": 16,
+    "C3": 15,
+    "C4": 6,
+    "C5": 10,
+    "C6": 3,
+    "C7": 3,
+    "C8": 6,
+    "C9": 7,
+    "CN": 6,
+    "P.C": 3
+   },
+   "date": "2026-10-06",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "engine_logic": false,
+   "evidence_id": "ALS-S3-EV-001",
+   "kind": "HUMAN_VERIFICATION",
+   "promotion_state": "PROJECT_ONLY",
+   "source_person": "Mohammad (Urban Projects)",
+   "statement": "All column-type counts in the S1 census were checked manually and accepted."
+  },
+  {
+   "agrees_with_census": true,
+   "census_check": {
+    "CN_continuing_above": 0,
+    "CN_occurrences_by_floor": {
+     "FOUNDATION": 6
+    },
+    "CN_on_axis_plan": 5,
+    "CN_on_foundation_plan": 6
+   },
+   "date": "2026-10-06",
+   "drawing_revision": "ST7757.dxf sha256 9f9d1179 (S1 frozen census)",
+   "engine_logic": false,
+   "evidence_id": "ALS-S3-EV-002",
+   "kind": "HUMAN_VERIFICATION",
+   "promotion_state": "PROJECT_ONLY",
+   "source_person": "Mohammad (Urban Projects)",
+   "statement": "The axis / column plan shows 5 CN and the foundation plan shows 6 CN. This does not mean six CN continue upward: the sixth CN is a foundation-level occurrence unless a source says otherwise."
+  }
+ ],
+ "project_id": "ALSENAN-ST7757",
+ "s2_claim_store_untouched": true
+}

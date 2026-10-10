@@ -1,0 +1,23 @@
+RECORD,ID,WHAT,VALUE,UNIT,STATE,BASIS,SOURCE
+LEVEL,LV-01,LOWEST_FOUNDATION_LEVEL,,,BLOCKED_UNQUANTIFIED,"founding level <= -1.50 (minimum excavation 1.5 m below the plot level, p.9 note 1); no founding level is printed for FF","ST7757.pdf p.9 note 1: excavation >= 1.5 m below the existing plot level; plot level ±0.00 (P7757 SECTION A-A VE-AA-01) -> founding level <= -1.50 (minimum, not a printed level)"
+LEVEL,LV-02,FF_FOOTING_TOP (= PIT FLOOR),,,BLOCKED_UNQUANTIFIED,founding level + 0.55 m (schedule depth 55 cm); the founding level is not printed,FF schedule 2B1E DEPHT 55; p.14
+LEVEL,LV-03,PIT_BOTTOM,,,BLOCKED_UNQUANTIFIED,the pit floor is the FF top (p.14 draws no pit slab),"ST7757.pdf p.14 'DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT)' (typical section, visual)"
+LEVEL,LV-04,PIT_WALL_TOP,,,BLOCKED_UNQUANTIFIED,top of the slab on grade = GF FFL +1.00 less the floor finish (not printed),"ST7757.pdf p.14 'DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT)' (typical section, visual); S1 GF FFL"
+LEVEL,LV-05,PIT_DEPTH,,,BLOCKED_UNQUANTIFIED,'As Per Lift Manufactures recommendations' (footing top to wall top),"ST7757.pdf p.14 'DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT)' (typical section, visual)"
+LEVEL,LV-06,GF_FFL (lowest stop),1,,PRINTED,printed,ST7757 p.3 '+1.00' marks inside the building + VE-AA-04
+LEVEL,LV-07,1F_FFL (stop),5.5,,PRINTED_ARCH,printed,P7757 SECTION A-A VE-AA-05
+LEVEL,LV-08,2F_FFL (top stop),9.7,,PRINTED,printed,"ST7757 p.6 '+9.70' roof marks (3F4, 3F6) + VE-AA-06"
+LEVEL,LV-09,ROOF over the shaft,13.9,,PRINTED_ARCH,printed; the roof slab panel SP-2F_ROOF_SLAB-03 (160) covers the shaft,P7757 SECTION A-A VE-AA-07
+LEVEL,LV-10,TRAVEL (lowest to top stop),8.7,,DERIVED,2F FFL - GF FFL,"LV-06, LV-08"
+LEVEL,LV-11,TOP_STOREY (top stop to roof level),4.2,,DERIVED,the headroom the manufacturer needs is not stated; no overrun is labelled,"LV-08, LV-09"
+LEVEL,LV-12,OVERRUN / MACHINE ROOM,,,NOT_IN_SOURCE,none labelled or levelled,all plans / sections
+PLAN,GE-01,INSIDE_CLEAR_OUTLINE (pit internal area),3.24,m2,ESTABLISHED,S-BW FP 10EA = GBP 7BE; architectural 1800 x 1800 on GF / 1F / 2F,"[19787.904, 15611.856, 21587.904, 17411.856]"
+PLAN,GE-02,GROSS_OUTER_OUTLINE,4.84,m2,ESTABLISHED,S-BW FP 10EB = GBP 7C2,"[19587.904, 15411.856, 21787.904, 17611.856]"
+PLAN,GE-03,"WALL_RING (outer - inner, corners once)",1.6,m2,ESTABLISHED,GE-02 - GE-01,
+PLAN,GE-04,INSIDE_PERIMETER,7.2,m,ESTABLISHED,4 x 1.80,
+PLAN,GE-05,OUTER_PERIMETER,8.8,m,ESTABLISHED,4 x 2.20,
+PLAN,GE-06,CENTRELINE_PERIMETER,8,m,ESTABLISHED,4 x 2.00; x 0.20 = the ring,
+PLAN,GE-07,WALL_THICKNESS,200,mm,ESTABLISHED,"S-BW offsets; architectural 200 (GF 672, 1F D62 / E94, 2F 13CB / 142F / 1538); p.14 '20'",
+PLAN,GE-08,FF_FOOTING_FOOTPRINT,20.7,m2,ESTABLISHED,FP 1B2B 4600 x 4500 = schedule 460 x 450,"[18687.697, 14111.998, 23287.697, 18611.998]"
+PLAN,GE-09,GROUND_SLAB_VOID (S8.1A RG-04),,m2,ESTABLISHED,see 11 (equal to GE-01),
+PLAN,GE-10,PIT_VOID_VOLUME,,m3,BLOCKED,GE-01 x pit depth (LV-05 blocked),

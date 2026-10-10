@@ -1,0 +1,53 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A2_OWNER_QUESTIONS_V1",
+ "questions": [
+  {
+   "id": "OQ2-S1",
+   "group": "STRUCTURAL",
+   "question": "Footing tag 'F' at the east strap-beam end of the foundation plan sits on an outline drawn 1.50 x 1.40 m, while the footing schedule gives type F as 90 x 80 cm. Which governs for that footing: the drawn outline or the scheduled type?",
+   "evidence": "STRUCTURAL_FOOTING_REGISTER completion F = COUNT_MISMATCH (3 orphan F tags, 2 outlines of the scheduled size)",
+   "unblocks": [
+    "footings F (3 occurrences)"
+   ]
+  },
+  {
+   "id": "OQ2-S2",
+   "group": "STRUCTURAL",
+   "question": "Footing F10 is scheduled as 280 x 140 cm but no outline of that size is drawn at its tag (the drawn outline there is 1.05 x 1.40 m beside a strap beam). Is F10 a combined footing with its neighbour, or is the schedule size the one to build?",
+   "evidence": "completion F10 = NO_TEMPLATE_CANDIDATE",
+   "unblocks": [
+    "footing F10"
+   ]
+  },
+  {
+   "id": "OQ2-A1",
+   "group": "ARCHITECTURAL",
+   "question": "Ground floor: the saloon / reception / master-bedroom zone opens to the court and the pool terrace with no door or glazing drawn in those openings. Are these openings open by design (no door, no glazing)?",
+   "evidence": "the labels SALOON / RECEPTION / MASTER BED ROOM lie in the site connected to the exterior",
+   "unblocks": [
+    "room separation of the GF reception zone (geometry only)"
+   ]
+  },
+  {
+   "id": "OQ2-A2",
+   "group": "ARCHITECTURAL",
+   "question": "Several single lines on the mixed layer that also carries counters, stairs and drains bound the kitchen and the pantry. Are they fixed counters / joinery (floor finish runs under them?) or partitions?",
+   "evidence": "KITCHEN / pantry sites TOPOLOGY_ROLE_UNRESOLVED by those lines",
+   "unblocks": [
+    "KITCHEN and PANTRY room areas"
+   ]
+  }
+ ],
+ "not_asked_again": [
+  "additional DWG",
+  "structural revision",
+  "door / window schedule",
+  "finish schedule",
+  "founding / ground-beam / slab levels"
+ ],
+ "never_asked": [
+  "expected quantities",
+  "freelancer BOQ",
+  "web-app report"
+ ]
+}

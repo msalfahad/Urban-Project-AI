@@ -1,0 +1,79 @@
+{
+ "SCHEMA": "URBAN_R8_10_P7757_SHADOW_V1",
+ "purpose": "second drawing family: attack the generic assumptions; NOT a quantity round; no P7757 published output changes",
+ "unit": {
+  "state": "UNIT_UNRESOLVED",
+  "candidate": "mm (INSUNITS 4, DIMLFAC 0.1, door leaf radii) - a candidate, never adopted",
+  "owner_question": "NOT ASKED"
+ },
+ "effective_layer": {
+  "layer0_children_inside_inserts": 3328,
+  "differs_from_source": 3328,
+  "reading": "unchanged from R8.9: the effective layer decides the role of 3328 parts"
+ },
+ "network_grade": {
+  "state": "NOT_EVALUATED: NETWORK needs the authored band eps_r, which needs a unit",
+  "risk_for_this_family": "single-letter layers (W) hold both wall faces and other linework; a W-layer claim would make NETWORK the only admission path - the self-dimension conflict and a wall-band model would be needed before any W claim is reviewed"
+ },
+ "building_assembly_v2": {
+  "contexts": {
+   "SYMBOL_OCCURRENCE": 92
+  },
+  "r8_9": {
+   "SYMBOL_OCCURRENCE": 92
+  },
+  "reading": "no occurrence becomes an assembly under either rule: P7757 draws its plans in model space; the door blocks are symbols"
+ },
+ "text_tags_v2": {
+  "r8_10": {
+   "ROOM_LABEL_CANDIDATE | TR-06": 59,
+   "ROOM_LABEL_ESTABLISHED | TR-03": 22,
+   "ROOM_LABEL_ESTABLISHED | TR-04": 34,
+   "ROOM_LABEL_CANDIDATE | TR-10": 1,
+   "UNKNOWN_TEXT_ROLE | TR-99": 106,
+   "LEVEL_MARK | TR-08": 1,
+   "GENERAL_NOTE | TR-09": 50
+  },
+  "r8_9": {
+   "GENERAL_NOTE | TR-09": 50,
+   "LEVEL_MARK | TR-08": 1,
+   "ROOM_LABEL_CANDIDATE | TR-06": 55,
+   "ROOM_LABEL_CANDIDATE | TR-10": 1,
+   "ROOM_LABEL_ESTABLISHED | TR-03": 26,
+   "ROOM_LABEL_ESTABLISHED | TR-04": 34,
+   "UNKNOWN_TEXT_ROLE | TR-99": 106
+  },
+  "reading": "TR-03 now needs repeated family use: tags whose composition carries one room name only fall back to candidates; the family evidence (TR-04) is kept"
+ },
+ "cryptic_layers": {
+  "top_layers_by_parts": {
+   "5": 4440,
+   "W": 2446,
+   "1": 1398,
+   "D": 487,
+   "2": 253,
+   "TOI": 215,
+   "ST": 32,
+   "4": 7
+  },
+  "reading": "single-letter / numeric layer names: the generic exact-token lexicon admits none of them - fail closed; source-scoped claims, not a bigger lexicon, are the mechanism"
+ },
+ "door_symbol_family": {
+  "blocks": [
+   "D115",
+   "D120",
+   "D200",
+   "D315",
+   "d220"
+  ],
+  "count": 5,
+  "reading": "doors are blocks named by a size code (D###) on layer D; no door signature is proven (GR door evidence needs leaf + swing structure inside the block)"
+ },
+ "duplicate_occurrences": {
+  "groups": 0,
+  "occurrences": 0,
+  "examples": [],
+  "reading": "no exact duplicate insert in this family: the detector reports none (a negative result, not an assumption)"
+ },
+ "ts01_certificate": "UNIT_UNRESOLVED"
+}

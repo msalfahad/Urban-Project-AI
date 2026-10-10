@@ -1,0 +1,869 @@
+{
+ "frozen_before_benchmark": true,
+ "policy": {
+  "cb_states": [
+   "MATCH_CONFIRMED",
+   "SPAN_LENGTH_CONFLICT",
+   "SPAN_COUNT_CONFLICT",
+   "TAG_WITH_NO_MEMBER",
+   "MEMBER_WITH_NO_TAG",
+   "BLOCKED"
+  ],
+  "policy_id": "STRUCTURAL_CENSUS_V1",
+  "precedence": [
+   "LOCAL_PANEL_NOTE",
+   "FLOOR_SPECIFIC_NOTE",
+   "PROJECT_DEFAULT"
+  ],
+  "principles": [
+   "plan decides occurrence; schedule only defines",
+   "no default overrides a local note",
+   "a value is never rounded into a table row it does not match",
+   "every plan object ends in one terminal state"
+  ],
+  "rule_states": [
+   "EXACT_RULE",
+   "RULE_NOT_EXACT_MATCH",
+   "BLOCKED_METHOD"
+  ],
+  "terminal_states": [
+   "COUNTED_AND_DEFINED",
+   "COUNTED_DEFINITION_PARTIAL",
+   "COUNTED_BLOCKED",
+   "NOT_IN_SCOPE"
+  ]
+ },
+ "register": "CONTINUOUS_BEAM_OCCURRENCE_REGISTER",
+ "round": "S1",
+ "rows": [
+  {
+   "cb_id": "CBO-GFRS-CB1-BL007",
+   "drawn_width_mm": [
+    350.0
+   ],
+   "extension_check": null,
+   "floor": "GF_ROOF",
+   "match_state": "MATCH_CONFIRMED",
+   "plan_span_count": 2,
+   "plan_spans": [
+    {
+     "cc_m": 7.45,
+     "clear_m": 7.0,
+     "end": "COLUMN",
+     "member": "BL007",
+     "s0": 7511.9,
+     "s1": 14961.9,
+     "start": "COLUMN",
+     "tag_handle": "4E1"
+    },
+    {
+     "cc_m": 5.6,
+     "clear_m": 5.1,
+     "end": "BEAM_CORNER",
+     "member": "BL007",
+     "s0": 14961.9,
+     "s1": 20561.9,
+     "start": "COLUMN",
+     "tag_handle": "4E2"
+    }
+   ],
+   "schedule_B_cm": 35.0,
+   "schedule_H_cm": 75.0,
+   "schedule_definition_exists": true,
+   "schedule_row": "2851",
+   "schedule_spans_m": [
+    7.5,
+    5.7
+   ],
+   "sheet": "GFRS",
+   "tags": [
+    {
+     "binding": "BOUND",
+     "handle": "4E1",
+     "member": "BL007"
+    },
+    {
+     "binding": "BOUND",
+     "handle": "4E2",
+     "member": "BL007"
+    }
+   ],
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "CB1"
+  },
+  {
+   "cb_id": "CBO-GFRS-CB2-BL038",
+   "drawn_width_mm": [
+    250.0
+   ],
+   "extension_check": null,
+   "floor": "GF_ROOF",
+   "match_state": "MATCH_CONFIRMED",
+   "plan_span_count": 2,
+   "plan_spans": [
+    {
+     "cc_m": 3.87,
+     "clear_m": 3.47,
+     "end": "COLUMN",
+     "member": "BL038",
+     "s0": 19687.9,
+     "s1": 23557.9,
+     "start": "COLUMN",
+     "tag_handle": "42A"
+    },
+    {
+     "cc_m": 3.9,
+     "clear_m": 3.35,
+     "end": "COLUMN",
+     "member": "BL038",
+     "s0": 23557.9,
+     "s1": 27457.9,
+     "start": "COLUMN",
+     "tag_handle": "42B"
+    }
+   ],
+   "schedule_B_cm": 20.0,
+   "schedule_H_cm": 50.0,
+   "schedule_definition_exists": true,
+   "schedule_row": "28C7",
+   "schedule_spans_m": [
+    4.0,
+    4.0
+   ],
+   "sheet": "GFRS",
+   "tags": [
+    {
+     "binding": "BOUND",
+     "handle": "42A",
+     "member": "BL038"
+    },
+    {
+     "binding": "BOUND",
+     "handle": "42B",
+     "member": "BL038"
+    }
+   ],
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "CB2"
+  },
+  {
+   "cb_id": "CBO-GFRS-CB3-BL022",
+   "drawn_width_mm": [
+    200.0
+   ],
+   "extension_check": null,
+   "floor": "GF_ROOF",
+   "match_state": "MATCH_CONFIRMED",
+   "plan_span_count": 3,
+   "plan_spans": [
+    {
+     "cc_m": 3.67,
+     "clear_m": 3.02,
+     "end": "COLUMN",
+     "member": "BL022",
+     "s0": 20637.9,
+     "s1": 24307.9,
+     "start": "BEAM_CROSSING",
+     "tag_handle": "493"
+    },
+    {
+     "cc_m": 3.35,
+     "clear_m": 2.65,
+     "end": "COLUMN",
+     "member": "BL022",
+     "s0": 24307.9,
+     "s1": 27657.9,
+     "start": "COLUMN",
+     "tag_handle": "494"
+    },
+    {
+     "cc_m": 3.816,
+     "clear_m": 3.191,
+     "end": "BEAM_CARRIED_BY",
+     "member": "BL022",
+     "s0": 27657.9,
+     "s1": 31474.414,
+     "start": "COLUMN",
+     "tag_handle": "495"
+    }
+   ],
+   "schedule_B_cm": 20.0,
+   "schedule_H_cm": 75.0,
+   "schedule_definition_exists": true,
+   "schedule_row": "2344",
+   "schedule_spans_m": [
+    3.4,
+    3.3,
+    3.8
+   ],
+   "sheet": "GFRS",
+   "tags": [
+    {
+     "binding": "BOUND",
+     "handle": "493",
+     "member": "BL022"
+    },
+    {
+     "binding": "BOUND",
+     "handle": "494",
+     "member": "BL022"
+    },
+    {
+     "binding": "BOUND",
+     "handle": "495",
+     "member": "BL022"
+    }
+   ],
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "CB3"
+  },
+  {
+   "cb_id": "CBO-GFRS-CB4-BL016",
+   "drawn_width_mm": [
+    200.0
+   ],
+   "extension_check": null,
+   "floor": "GF_ROOF",
+   "match_state": "SPAN_LENGTH_CONFLICT",
+   "plan_span_count": 2,
+   "plan_spans": [
+    {
+     "cc_m": 2.724,
+     "clear_m": 2.374,
+     "end": "COLUMN",
+     "member": "BL016",
+     "s0": 9637.5,
+     "s1": 12361.9,
+     "start": null,
+     "tag_handle": "45C"
+    },
+    {
+     "cc_m": 3.75,
+     "clear_m": 3.2,
+     "end": "BEAM_CROSSING",
+     "member": "BL016",
+     "s0": 12361.9,
+     "s1": 16111.9,
+     "start": "COLUMN",
+     "tag_handle": "45B"
+    }
+   ],
+   "schedule_B_cm": 20.0,
+   "schedule_H_cm": 50.0,
+   "schedule_definition_exists": true,
+   "schedule_row": "2933",
+   "schedule_spans_m": [
+    3.3,
+    3.7
+   ],
+   "sheet": "GFRS",
+   "tags": [
+    {
+     "binding": "BOUND",
+     "handle": "45C",
+     "member": "BL016"
+    },
+    {
+     "binding": "BOUND",
+     "handle": "45B",
+     "member": "BL016"
+    }
+   ],
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL",
+   "type": "CB4"
+  },
+  {
+   "cb_id": "CBO-GFRS-CB5-BL008",
+   "drawn_width_mm": [
+    200.0
+   ],
+   "extension_check": null,
+   "floor": "GF_ROOF",
+   "match_state": "SPAN_COUNT_CONFLICT",
+   "plan_span_count": 1,
+   "plan_spans": [
+    {
+     "cc_m": 2.85,
+     "clear_m": 2.3,
+     "end": "COLUMN",
+     "member": "BL008",
+     "s0": 9061.9,
+     "s1": 11911.9,
+     "start": "COLUMN",
+     "tag_handle": "475"
+    }
+   ],
+   "schedule_B_cm": 20.0,
+   "schedule_H_cm": 40.0,
+   "schedule_definition_exists": true,
+   "schedule_row": "299F",
+   "schedule_spans_m": [
+    2.5,
+    4.5
+   ],
+   "sheet": "GFRS",
+   "tags": [
+    {
+     "binding": "BOUND",
+     "handle": "475",
+     "member": "BL008"
+    }
+   ],
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL",
+   "type": "CB5"
+  },
+  {
+   "cb_id": "CBO-GFRS-CB5-BL017",
+   "drawn_width_mm": [
+    200.0
+   ],
+   "extension_check": null,
+   "floor": "GF_ROOF",
+   "match_state": "SPAN_COUNT_CONFLICT",
+   "plan_span_count": 1,
+   "plan_spans": [
+    {
+     "cc_m": 4.2,
+     "clear_m": 3.7,
+     "end": "BEAM_CORNER",
+     "member": "BL017",
+     "s0": 11911.9,
+     "s1": 16111.9,
+     "start": "COLUMN",
+     "tag_handle": "474"
+    }
+   ],
+   "schedule_B_cm": 20.0,
+   "schedule_H_cm": 40.0,
+   "schedule_definition_exists": true,
+   "schedule_row": "299F",
+   "schedule_spans_m": [
+    2.5,
+    4.5
+   ],
+   "sheet": "GFRS",
+   "tags": [
+    {
+     "binding": "BOUND",
+     "handle": "474",
+     "member": "BL017"
+    }
+   ],
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL",
+   "type": "CB5"
+  },
+  {
+   "cb_id": "CBO-GFRS-CB6-BL004",
+   "drawn_width_mm": [
+    200.0
+   ],
+   "extension_check": null,
+   "floor": "GF_ROOF",
+   "match_state": "MATCH_CONFIRMED",
+   "plan_span_count": 2,
+   "plan_spans": [
+    {
+     "cc_m": 4.35,
+     "clear_m": 4.0,
+     "end": "COLUMN",
+     "member": "BL004",
+     "s0": 1987.9,
+     "s1": 6337.9,
+     "start": "BEAM_CARRIED_BY",
+     "tag_handle": "47C"
+    },
+    {
+     "cc_m": 6.225,
+     "clear_m": 5.85,
+     "end": "COLUMN",
+     "member": "BL004",
+     "s0": 6337.9,
+     "s1": 12562.9,
+     "start": "COLUMN",
+     "tag_handle": "47B"
+    }
+   ],
+   "schedule_B_cm": 20.0,
+   "schedule_H_cm": 75.0,
+   "schedule_definition_exists": true,
+   "schedule_row": "2A04",
+   "schedule_spans_m": [
+    4.4,
+    6.3
+   ],
+   "sheet": "GFRS",
+   "tags": [
+    {
+     "binding": "BOUND",
+     "handle": "47C",
+     "member": "BL004"
+    },
+    {
+     "binding": "BOUND",
+     "handle": "47B",
+     "member": "BL004"
+    }
+   ],
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "CB6"
+  },
+  {
+   "cb_id": "CBO-GFRS-CB7-BL003",
+   "drawn_width_mm": [
+    200.0
+   ],
+   "extension_check": null,
+   "floor": "GF_ROOF",
+   "match_state": "MATCH_CONFIRMED",
+   "plan_span_count": 2,
+   "plan_spans": [
+    {
+     "cc_m": 5.85,
+     "clear_m": 5.45,
+     "end": "COLUMN",
+     "member": "BL003",
+     "s0": 2087.9,
+     "s1": 7937.9,
+     "start": "COLUMN",
+     "tag_handle": "479"
+    },
+    {
+     "cc_m": 6.15,
+     "clear_m": 5.75,
+     "end": "COLUMN",
+     "member": "BL003",
+     "s0": 7937.9,
+     "s1": 14087.9,
+     "start": "COLUMN",
+     "tag_handle": "47A"
+    }
+   ],
+   "schedule_B_cm": 20.0,
+   "schedule_H_cm": 75.0,
+   "schedule_definition_exists": true,
+   "schedule_row": "22EC",
+   "schedule_spans_m": [
+    6.0,
+    6.1
+   ],
+   "sheet": "GFRS",
+   "tags": [
+    {
+     "binding": "BOUND",
+     "handle": "479",
+     "member": "BL003"
+    },
+    {
+     "binding": "BOUND",
+     "handle": "47A",
+     "member": "BL003"
+    }
+   ],
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "CB7"
+  },
+  {
+   "cb_id": "CBO-GFRS-CB8-BL024",
+   "drawn_width_mm": [
+    300.0
+   ],
+   "extension_check": {
+    "extended_spans_cc_m": [
+     3.825,
+     6.545,
+     6.95
+    ],
+    "state_if_extended": "MATCH_CONFIRMED",
+    "with_adjacent_untagged_spans": [
+     3.825
+    ]
+   },
+   "floor": "GF_ROOF",
+   "match_state": "SPAN_COUNT_CONFLICT",
+   "plan_span_count": 2,
+   "plan_spans": [
+    {
+     "cc_m": 6.545,
+     "clear_m": 5.745,
+     "end": "COLUMN",
+     "member": "BL024",
+     "s0": 17912.9,
+     "s1": 24457.9,
+     "start": "COLUMN",
+     "tag_handle": "69F"
+    },
+    {
+     "cc_m": 6.95,
+     "clear_m": 6.35,
+     "end": "COLUMN",
+     "member": "BL024",
+     "s0": 24457.9,
+     "s1": 31407.9,
+     "start": "COLUMN",
+     "tag_handle": "6A0"
+    }
+   ],
+   "schedule_B_cm": 30.0,
+   "schedule_H_cm": 75.0,
+   "schedule_definition_exists": true,
+   "schedule_row": "2574",
+   "schedule_spans_m": [
+    3.7,
+    6.4,
+    6.8
+   ],
+   "sheet": "GFRS",
+   "tags": [
+    {
+     "binding": "BOUND",
+     "handle": "69F",
+     "member": "BL024"
+    },
+    {
+     "binding": "BOUND",
+     "handle": "6A0",
+     "member": "BL024"
+    }
+   ],
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL",
+   "type": "CB8"
+  },
+  {
+   "cb_id": "CBO-FFRS-CB10-BL001",
+   "drawn_width_mm": [
+    200.0
+   ],
+   "extension_check": null,
+   "floor": "1F_ROOF",
+   "match_state": "MATCH_CONFIRMED",
+   "plan_span_count": 2,
+   "plan_spans": [
+    {
+     "cc_m": 2.85,
+     "clear_m": 2.3,
+     "end": "COLUMN",
+     "member": "BL001",
+     "s0": 9061.9,
+     "s1": 11911.9,
+     "start": "COLUMN",
+     "tag_handle": "717"
+    },
+    {
+     "cc_m": 4.175,
+     "clear_m": 3.65,
+     "end": "BEAM_CORNER",
+     "member": "BL001",
+     "s0": 11911.9,
+     "s1": 16086.9,
+     "start": "COLUMN",
+     "tag_handle": "718"
+    }
+   ],
+   "schedule_B_cm": 25.0,
+   "schedule_H_cm": 50.0,
+   "schedule_definition_exists": true,
+   "schedule_row": "23F0",
+   "schedule_spans_m": [
+    3.0,
+    4.1
+   ],
+   "sheet": "FFRS",
+   "tags": [
+    {
+     "binding": "BOUND",
+     "handle": "717",
+     "member": "BL001"
+    },
+    {
+     "binding": "BOUND",
+     "handle": "718",
+     "member": "BL001"
+    }
+   ],
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "CB10"
+  },
+  {
+   "cb_id": "CBO-FFRS-CB11-BL024",
+   "drawn_width_mm": [
+    300.0
+   ],
+   "extension_check": null,
+   "floor": "1F_ROOF",
+   "match_state": "MATCH_CONFIRMED",
+   "plan_span_count": 3,
+   "plan_spans": [
+    {
+     "cc_m": 7.458,
+     "clear_m": 6.708,
+     "end": "COLUMN",
+     "member": "BL024",
+     "s0": 16849.6,
+     "s1": 24307.9,
+     "start": "COLUMN",
+     "tag_handle": "6DA"
+    },
+    {
+     "cc_m": 3.35,
+     "clear_m": 2.65,
+     "end": "COLUMN",
+     "member": "BL024",
+     "s0": 24307.9,
+     "s1": 27657.9,
+     "start": "COLUMN",
+     "tag_handle": "6DB"
+    },
+    {
+     "cc_m": 3.85,
+     "clear_m": 3.3,
+     "end": "COLUMN",
+     "member": "BL024",
+     "s0": 27657.9,
+     "s1": 31507.9,
+     "start": "COLUMN",
+     "tag_handle": "6DC"
+    }
+   ],
+   "schedule_B_cm": 30.0,
+   "schedule_H_cm": 75.0,
+   "schedule_definition_exists": true,
+   "schedule_row": "26C1",
+   "schedule_spans_m": [
+    7.1,
+    3.2,
+    3.7
+   ],
+   "sheet": "FFRS",
+   "tags": [
+    {
+     "binding": "BOUND",
+     "handle": "6DA",
+     "member": "BL024"
+    },
+    {
+     "binding": "BOUND",
+     "handle": "6DB",
+     "member": "BL024"
+    },
+    {
+     "binding": "BOUND",
+     "handle": "6DC",
+     "member": "BL024"
+    }
+   ],
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "CB11"
+  },
+  {
+   "cb_id": "CBO-FFRS-CB12-BL003",
+   "drawn_width_mm": [
+    250.0
+   ],
+   "extension_check": null,
+   "floor": "1F_ROOF",
+   "match_state": "MATCH_CONFIRMED",
+   "plan_span_count": 2,
+   "plan_spans": [
+    {
+     "cc_m": 6.175,
+     "clear_m": 5.525,
+     "end": "COLUMN",
+     "member": "BL003",
+     "s0": 8911.9,
+     "s1": 15086.9,
+     "start": "COLUMN",
+     "tag_handle": "6DD"
+    },
+    {
+     "cc_m": 5.6,
+     "clear_m": 5.025,
+     "end": "COLUMN",
+     "member": "BL003",
+     "s0": 15086.9,
+     "s1": 20686.9,
+     "start": "COLUMN",
+     "tag_handle": "6DE"
+    }
+   ],
+   "schedule_B_cm": 25.0,
+   "schedule_H_cm": 75.0,
+   "schedule_definition_exists": true,
+   "schedule_row": "2469",
+   "schedule_spans_m": [
+    6.1,
+    5.5
+   ],
+   "sheet": "FFRS",
+   "tags": [
+    {
+     "binding": "BOUND",
+     "handle": "6DD",
+     "member": "BL003"
+    },
+    {
+     "binding": "BOUND",
+     "handle": "6DE",
+     "member": "BL003"
+    }
+   ],
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "CB12"
+  },
+  {
+   "cb_id": "CBO-FFRS-CB13-BL004",
+   "drawn_width_mm": [
+    300.0
+   ],
+   "extension_check": null,
+   "floor": "1F_ROOF",
+   "match_state": "MATCH_CONFIRMED",
+   "plan_span_count": 2,
+   "plan_spans": [
+    {
+     "cc_m": 3.45,
+     "clear_m": 2.9,
+     "end": "COLUMN",
+     "member": "BL004",
+     "s0": 8911.9,
+     "s1": 12361.9,
+     "start": "COLUMN",
+     "tag_handle": "76A"
+    },
+    {
+     "cc_m": 3.725,
+     "clear_m": 3.15,
+     "end": "BEAM_CARRIED_BY",
+     "member": "BL004",
+     "s0": 12361.9,
+     "s1": 16086.9,
+     "start": "COLUMN",
+     "tag_handle": "76B"
+    }
+   ],
+   "schedule_B_cm": 30.0,
+   "schedule_H_cm": 50.0,
+   "schedule_definition_exists": true,
+   "schedule_row": "24DF",
+   "schedule_spans_m": [
+    3.7,
+    3.6
+   ],
+   "sheet": "FFRS",
+   "tags": [
+    {
+     "binding": "BOUND",
+     "handle": "76A",
+     "member": "BL004"
+    },
+    {
+     "binding": "BOUND",
+     "handle": "76B",
+     "member": "BL004"
+    }
+   ],
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "CB13"
+  },
+  {
+   "cb_id": "CBO-FFRS-CB9-BL023",
+   "drawn_width_mm": [
+    200.0
+   ],
+   "extension_check": null,
+   "floor": "1F_ROOF",
+   "match_state": "MATCH_CONFIRMED",
+   "plan_span_count": 3,
+   "plan_spans": [
+    {
+     "cc_m": 3.87,
+     "clear_m": 3.47,
+     "end": "COLUMN",
+     "member": "BL023",
+     "s0": 19687.9,
+     "s1": 23557.9,
+     "start": "COLUMN",
+     "tag_handle": "6C6"
+    },
+    {
+     "cc_m": 3.9,
+     "clear_m": 3.35,
+     "end": "COLUMN",
+     "member": "BL023",
+     "s0": 23557.9,
+     "s1": 27457.9,
+     "start": "COLUMN",
+     "tag_handle": "6C7"
+    },
+    {
+     "cc_m": 4.05,
+     "clear_m": 3.55,
+     "end": "COLUMN",
+     "member": "BL023",
+     "s0": 27457.9,
+     "s1": 31507.9,
+     "start": "COLUMN",
+     "tag_handle": "6C8"
+    }
+   ],
+   "schedule_B_cm": 20.0,
+   "schedule_H_cm": 50.0,
+   "schedule_definition_exists": true,
+   "schedule_row": "2619",
+   "schedule_spans_m": [
+    4.1,
+    4.0,
+    3.7
+   ],
+   "sheet": "FFRS",
+   "tags": [
+    {
+     "binding": "BOUND",
+     "handle": "6C6",
+     "member": "BL023"
+    },
+    {
+     "binding": "BOUND",
+     "handle": "6C7",
+     "member": "BL023"
+    },
+    {
+     "binding": "BOUND",
+     "handle": "6C8",
+     "member": "BL023"
+    }
+   ],
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "type": "CB9"
+  }
+ ],
+ "source": {
+  "drawing": "ST7757.dxf",
+  "dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "pdf": "ST7757.pdf",
+  "pdf_sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ },
+ "summary": {
+  "by_state": {
+   "MATCH_CONFIRMED": 10,
+   "SPAN_COUNT_CONFLICT": 3,
+   "SPAN_LENGTH_CONFLICT": 1
+  },
+  "by_type_floor": {
+   "CB10|1F_ROOF": 1,
+   "CB11|1F_ROOF": 1,
+   "CB12|1F_ROOF": 1,
+   "CB13|1F_ROOF": 1,
+   "CB1|GF_ROOF": 1,
+   "CB2|GF_ROOF": 1,
+   "CB3|GF_ROOF": 1,
+   "CB4|GF_ROOF": 1,
+   "CB5|GF_ROOF": 2,
+   "CB6|GF_ROOF": 1,
+   "CB7|GF_ROOF": 1,
+   "CB8|GF_ROOF": 1,
+   "CB9|1F_ROOF": 1
+  },
+  "groups": 14,
+  "never_forced": true
+ }
+}

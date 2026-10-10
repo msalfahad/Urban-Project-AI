@@ -1,0 +1,1430 @@
+{
+ "records": [
+  {
+   "attempts": [
+    {
+     "level": "LOCAL_DIMENSION",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SCHEDULE",
+     "rank": 2,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "DETAIL",
+     "rank": 3,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SAME_MARK_ELSEWHERE",
+     "rank": 4,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES_SECTION_GEOMETRY",
+     "rank": 5,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PROJECT_TYPICAL",
+     "rank": 6,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "BOUNDED_CANDIDATE",
+     "rank": 7,
+     "ref": null,
+     "result": "FOUND"
+    }
+   ],
+   "authority": "PROVISIONAL",
+   "consultant_question": "Please confirm the exterior ground-beam depth (and embedment below natural ground) for the spans marked 'FOLLOW ARCH.'",
+   "current_quantity": 0.0,
+   "element": "28 exterior ground-beam spans",
+   "fact_origin": "DERIVED",
+   "flag_id": "GB-EXT-DEPTH",
+   "high_scenario": 43.01673363,
+   "kind": "MISSING_DEPTH",
+   "known_facts": {
+    "B_m": 0.3,
+    "length_m": 110.299,
+    "spans": 28
+   },
+   "low_scenario": 29.780815589999996,
+   "needs_consultant": true,
+   "next_automated_method": "UNKNOWN",
+   "provisional_quantity": 33.089795099999996,
+   "quantity_impact": 33.089795099999996,
+   "result": "RESOLVED_PROVISIONAL",
+   "search_text": "FOLLOW ARCH / GROUND BEAM / G.B",
+   "successful_method": "BOUNDED_CANDIDATE",
+   "unknown_fact": "exterior ground-beam depth ('FOLLOW ARCH.' - outer ground to GF slab level, not printed)",
+   "where_to_look": "ST7757 p.13 typical ground-beam sections; architectural elevations (ground +-0.00, GF +1.00)",
+   "why_blocked": "depth not dimensioned on the plan or in the schedule"
+  },
+  {
+   "attempts": [
+    {
+     "level": "PRINTED_IN_REGION",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SECTION_OR_DETAIL",
+     "rank": 2,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SAME_SHEET_TYPICAL_LABEL",
+     "rank": 3,
+     "ref": null,
+     "result": "FOUND"
+    }
+   ],
+   "authority": "PROVISIONAL",
+   "consultant_question": "Does 'T=10cm, 5Ø10/m E.W.' apply to every ground-floor slab panel between the ground beams, or only to the two labelled zones?",
+   "current_quantity": 11.528,
+   "element": "ground-slab cells without a T= label",
+   "fact_origin": "SOURCE_FACT",
+   "flag_id": "GSLAB-LABEL-SCOPE",
+   "high_scenario": 21.701160000000005,
+   "kind": "LABEL_SCOPE",
+   "known_facts": {
+    "candidate_area_m2": 101.737,
+    "candidate_cells": 9,
+    "labels_on_sheet": [
+     "T=10cm"
+    ]
+   },
+   "low_scenario": 21.701160000000005,
+   "needs_consultant": true,
+   "next_automated_method": "PROJECT_GENERAL_RULE",
+   "provisional_quantity": 21.701160000000005,
+   "quantity_impact": 10.173160000000005,
+   "result": "RESOLVED_PROVISIONAL",
+   "search_text": "T=10cm / E.W. / GROUND SLAB / SLAB ON GRADE",
+   "successful_method": "SAME_SHEET_TYPICAL_LABEL",
+   "unknown_fact": "whether the printed slab note applies to every cell between ground beams",
+   "where_to_look": "ST7757 GROUND BEAMS PLAN (zone notes), general notes, GF architectural plan (floor build-up)",
+   "why_blocked": "the thickness / mesh note is printed inside two zones only"
+  },
+  {
+   "attempts": [
+    {
+     "level": "EXPLICIT_LOCAL_HEIGHT",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "ARCHITECTURAL_LEVEL_ELEVATION",
+     "rank": 2,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "STRUCTURAL_INTERVAL_MINUS_MEMBER",
+     "rank": 3,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "FLOOR_TO_FLOOR_MINUS_STRUCTURE",
+     "rank": 4,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "ROOM_HEIGHT_NOTE",
+     "rank": 5,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PROJECT_DEFAULT_FINISH_HEIGHT",
+     "rank": 6,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "URBAN_PROVISIONAL_SCENARIO",
+     "rank": 7,
+     "ref": null,
+     "result": "FOUND"
+    }
+   ],
+   "authority": "PROVISIONAL",
+   "consultant_question": "Please confirm the founding level (or neck height) used for the foundation-storey columns.",
+   "current_quantity": 0.0,
+   "element": "36 foundation-storey columns / necks",
+   "fact_origin": "URBAN_PROVISIONAL",
+   "flag_id": "COL-FOUNDATION-INTERVAL",
+   "high_scenario": 15.748000000000001,
+   "kind": "MISSING_HEIGHT",
+   "known_facts": {
+    "interval_basis": "GF FFL +1.00 minus founding level <= -1.50 minus footing depth"
+   },
+   "low_scenario": 12.628,
+   "needs_consultant": true,
+   "next_automated_method": "UNKNOWN",
+   "provisional_quantity": 12.628,
+   "quantity_impact": 12.628,
+   "result": "RESOLVED_PROVISIONAL",
+   "search_text": "FOUNDING LEVEL / SOIL REPORT",
+   "successful_method": "URBAN_PROVISIONAL_SCENARIO",
+   "unknown_fact": "founding level",
+   "where_to_look": "ST7757 general notes (p.1/p.8)",
+   "why_blocked": "general note leaves the founding level to site"
+  },
+  {
+   "attempts": [
+    {
+     "level": "NEARBY_TAG",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES",
+     "rank": 2,
+     "ref": null,
+     "result": "FOUND"
+    }
+   ],
+   "authority": "PROVISIONAL",
+   "consultant_question": null,
+   "current_quantity": 0.0,
+   "element": "CA",
+   "fact_origin": "CANDIDATE",
+   "flag_id": "BEAM-RES-GF-00-CA",
+   "high_scenario": 0.1173,
+   "kind": "UNBOUND_MEMBER",
+   "known_facts": {
+    "floor": "GF",
+    "length_m": 1.15
+   },
+   "low_scenario": 0.0997,
+   "needs_consultant": false,
+   "next_automated_method": "CONTINUITY_WITH_ADJACENT_SPAN",
+   "provisional_quantity": 0.1173,
+   "quantity_impact": 0.1173,
+   "result": "RESOLVED_PROVISIONAL",
+   "search_text": "CA",
+   "successful_method": "PAIRED_FACES",
+   "unknown_fact": "binding",
+   "where_to_look": "ST7757 beam plans",
+   "why_blocked": "TAG_INSIDE_SUPPORT"
+  },
+  {
+   "attempts": [
+    {
+     "level": "NEARBY_TAG",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES",
+     "rank": 2,
+     "ref": null,
+     "result": "FOUND"
+    }
+   ],
+   "authority": "PROVISIONAL",
+   "consultant_question": null,
+   "current_quantity": 0.0,
+   "element": "CB8",
+   "fact_origin": "CANDIDATE",
+   "flag_id": "BEAM-RES-GF-01-CB8",
+   "high_scenario": 2.3001,
+   "kind": "UNBOUND_MEMBER",
+   "known_facts": {
+    "floor": "GF",
+    "length_m": 12.995
+   },
+   "low_scenario": 1.9551,
+   "needs_consultant": false,
+   "next_automated_method": "CONTINUITY_WITH_ADJACENT_SPAN",
+   "provisional_quantity": 2.3001,
+   "quantity_impact": 2.3001,
+   "result": "RESOLVED_PROVISIONAL",
+   "search_text": "CB8",
+   "successful_method": "PAIRED_FACES",
+   "unknown_fact": "binding",
+   "where_to_look": "ST7757 beam plans",
+   "why_blocked": "SPAN_COUNT_MISMATCH"
+  },
+  {
+   "attempts": [
+    {
+     "level": "NEARBY_TAG",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES",
+     "rank": 2,
+     "ref": null,
+     "result": "FOUND"
+    }
+   ],
+   "authority": "PROVISIONAL",
+   "consultant_question": null,
+   "current_quantity": 0.0,
+   "element": "CB3",
+   "fact_origin": "CANDIDATE",
+   "flag_id": "BEAM-RES-GF-03-CB3",
+   "high_scenario": 1.2105,
+   "kind": "UNBOUND_MEMBER",
+   "known_facts": {
+    "floor": "GF",
+    "length_m": 10.259
+   },
+   "low_scenario": 0.4924,
+   "needs_consultant": false,
+   "next_automated_method": "CONTINUITY_WITH_ADJACENT_SPAN",
+   "provisional_quantity": 1.2105,
+   "quantity_impact": 1.2105,
+   "result": "RESOLVED_PROVISIONAL",
+   "search_text": "CB3",
+   "successful_method": "PAIRED_FACES",
+   "unknown_fact": "binding",
+   "where_to_look": "ST7757 beam plans",
+   "why_blocked": "BAND_TYPE_CONFLICT"
+  },
+  {
+   "attempts": [
+    {
+     "level": "NEARBY_TAG",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES",
+     "rank": 2,
+     "ref": null,
+     "result": "FOUND"
+    }
+   ],
+   "authority": "PROVISIONAL",
+   "consultant_question": null,
+   "current_quantity": 0.0,
+   "element": "CB6",
+   "fact_origin": "CANDIDATE",
+   "flag_id": "BEAM-RES-GF-04-CB6",
+   "high_scenario": 1.1918,
+   "kind": "UNBOUND_MEMBER",
+   "known_facts": {
+    "floor": "GF",
+    "length_m": 10.1
+   },
+   "low_scenario": 1.013,
+   "needs_consultant": false,
+   "next_automated_method": "CONTINUITY_WITH_ADJACENT_SPAN",
+   "provisional_quantity": 1.1918,
+   "quantity_impact": 1.1918,
+   "result": "RESOLVED_PROVISIONAL",
+   "search_text": "CB6",
+   "successful_method": "PAIRED_FACES",
+   "unknown_fact": "binding",
+   "where_to_look": "ST7757 beam plans",
+   "why_blocked": "SPAN_COUNT_MISMATCH"
+  },
+  {
+   "attempts": [
+    {
+     "level": "NEARBY_TAG",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES",
+     "rank": 2,
+     "ref": null,
+     "result": "FOUND"
+    }
+   ],
+   "authority": "PROVISIONAL",
+   "consultant_question": null,
+   "current_quantity": 0.0,
+   "element": "CB5",
+   "fact_origin": "CANDIDATE",
+   "flag_id": "BEAM-RES-GF-05-CB5",
+   "high_scenario": 0.1176,
+   "kind": "UNBOUND_MEMBER",
+   "known_facts": {
+    "floor": "GF",
+    "length_m": 2.45
+   },
+   "low_scenario": 0.1,
+   "needs_consultant": false,
+   "next_automated_method": "CONTINUITY_WITH_ADJACENT_SPAN",
+   "provisional_quantity": 0.1176,
+   "quantity_impact": 0.1176,
+   "result": "RESOLVED_PROVISIONAL",
+   "search_text": "CB5",
+   "successful_method": "PAIRED_FACES",
+   "unknown_fact": "binding",
+   "where_to_look": "ST7757 beam plans",
+   "why_blocked": "SPAN_COUNT_MISMATCH"
+  },
+  {
+   "attempts": [
+    {
+     "level": "NEARBY_TAG",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES",
+     "rank": 2,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "COLUMN_ENDPOINTS",
+     "rank": 3,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+     "rank": 4,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SCHEDULE_WIDTH_MATCH",
+     "rank": 5,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SAME_TYPE_MEDIAN_LENGTH",
+     "rank": 6,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "UNKNOWN",
+     "rank": 7,
+     "result": "TERMINAL_UNKNOWN"
+    }
+   ],
+   "authority": "BLOCKED",
+   "consultant_question": null,
+   "current_quantity": 0.0,
+   "element": "CB2",
+   "fact_origin": "CANDIDATE",
+   "flag_id": "BEAM-RES-GF-06-CB2",
+   "high_scenario": null,
+   "kind": "UNBOUND_MEMBER",
+   "known_facts": {
+    "floor": "GF",
+    "length_m": null
+   },
+   "low_scenario": null,
+   "needs_consultant": false,
+   "next_automated_method": "CONTINUITY_WITH_ADJACENT_SPAN",
+   "provisional_quantity": null,
+   "quantity_impact": null,
+   "result": "STILL_BLOCKED",
+   "search_text": "CB2",
+   "successful_method": "UNKNOWN",
+   "unknown_fact": "binding",
+   "where_to_look": "ST7757 beam plans",
+   "why_blocked": "NO_BAND_ADJACENT_TO_TAG"
+  },
+  {
+   "attempts": [
+    {
+     "level": "NEARBY_TAG",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES",
+     "rank": 2,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "COLUMN_ENDPOINTS",
+     "rank": 3,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+     "rank": 4,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SCHEDULE_WIDTH_MATCH",
+     "rank": 5,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SAME_TYPE_MEDIAN_LENGTH",
+     "rank": 6,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "UNKNOWN",
+     "rank": 7,
+     "result": "TERMINAL_UNKNOWN"
+    }
+   ],
+   "authority": "BLOCKED",
+   "consultant_question": null,
+   "current_quantity": 0.0,
+   "element": "CB2",
+   "fact_origin": "CANDIDATE",
+   "flag_id": "BEAM-RES-GF-07-CB2",
+   "high_scenario": null,
+   "kind": "UNBOUND_MEMBER",
+   "known_facts": {
+    "floor": "GF",
+    "length_m": null
+   },
+   "low_scenario": null,
+   "needs_consultant": false,
+   "next_automated_method": "CONTINUITY_WITH_ADJACENT_SPAN",
+   "provisional_quantity": null,
+   "quantity_impact": null,
+   "result": "STILL_BLOCKED",
+   "search_text": "CB2",
+   "successful_method": "UNKNOWN",
+   "unknown_fact": "binding",
+   "where_to_look": "ST7757 beam plans",
+   "why_blocked": "NO_BAND_ADJACENT_TO_TAG"
+  },
+  {
+   "attempts": [
+    {
+     "level": "NEARBY_TAG",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES",
+     "rank": 2,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "COLUMN_ENDPOINTS",
+     "rank": 3,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+     "rank": 4,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SCHEDULE_WIDTH_MATCH",
+     "rank": 5,
+     "ref": null,
+     "result": "FOUND"
+    }
+   ],
+   "authority": "PROVISIONAL",
+   "consultant_question": null,
+   "current_quantity": 0.0,
+   "element": "B1",
+   "fact_origin": "CANDIDATE",
+   "flag_id": "BEAM-RES-GF-08-B1",
+   "high_scenario": 0.1233,
+   "kind": "UNBOUND_MEMBER",
+   "known_facts": {
+    "floor": "GF",
+    "length_m": 1.545
+   },
+   "low_scenario": 0.0,
+   "needs_consultant": false,
+   "next_automated_method": "CONTINUITY_WITH_ADJACENT_SPAN",
+   "provisional_quantity": 0.0742,
+   "quantity_impact": 0.0742,
+   "result": "RESOLVED_PROVISIONAL",
+   "search_text": "B1",
+   "successful_method": "SCHEDULE_WIDTH_MATCH",
+   "unknown_fact": "binding",
+   "where_to_look": "ST7757 beam plans",
+   "why_blocked": "NO_BAND_ADJACENT_TO_TAG"
+  },
+  {
+   "attempts": [
+    {
+     "level": "NEARBY_TAG",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES",
+     "rank": 2,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "COLUMN_ENDPOINTS",
+     "rank": 3,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+     "rank": 4,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SCHEDULE_WIDTH_MATCH",
+     "rank": 5,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SAME_TYPE_MEDIAN_LENGTH",
+     "rank": 6,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "UNKNOWN",
+     "rank": 7,
+     "result": "TERMINAL_UNKNOWN"
+    }
+   ],
+   "authority": "BLOCKED",
+   "consultant_question": null,
+   "current_quantity": 0.0,
+   "element": "B29",
+   "fact_origin": "CANDIDATE",
+   "flag_id": "BEAM-RES-GF-09-B29",
+   "high_scenario": null,
+   "kind": "UNBOUND_MEMBER",
+   "known_facts": {
+    "floor": "GF",
+    "length_m": null
+   },
+   "low_scenario": null,
+   "needs_consultant": false,
+   "next_automated_method": "CONTINUITY_WITH_ADJACENT_SPAN",
+   "provisional_quantity": null,
+   "quantity_impact": null,
+   "result": "STILL_BLOCKED",
+   "search_text": "B29",
+   "successful_method": "UNKNOWN",
+   "unknown_fact": "binding",
+   "where_to_look": "ST7757 beam plans",
+   "why_blocked": "NO_BAND_ADJACENT_TO_TAG"
+  },
+  {
+   "attempts": [
+    {
+     "level": "NEARBY_TAG",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES",
+     "rank": 2,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "COLUMN_ENDPOINTS",
+     "rank": 3,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+     "rank": 4,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SCHEDULE_WIDTH_MATCH",
+     "rank": 5,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SAME_TYPE_MEDIAN_LENGTH",
+     "rank": 6,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "UNKNOWN",
+     "rank": 7,
+     "result": "TERMINAL_UNKNOWN"
+    }
+   ],
+   "authority": "BLOCKED",
+   "consultant_question": null,
+   "current_quantity": 0.0,
+   "element": "B21",
+   "fact_origin": "CANDIDATE",
+   "flag_id": "BEAM-RES-GF-10-B21",
+   "high_scenario": null,
+   "kind": "UNBOUND_MEMBER",
+   "known_facts": {
+    "floor": "GF",
+    "length_m": null
+   },
+   "low_scenario": null,
+   "needs_consultant": false,
+   "next_automated_method": "CONTINUITY_WITH_ADJACENT_SPAN",
+   "provisional_quantity": null,
+   "quantity_impact": null,
+   "result": "STILL_BLOCKED",
+   "search_text": "B21",
+   "successful_method": "UNKNOWN",
+   "unknown_fact": "binding",
+   "where_to_look": "ST7757 beam plans",
+   "why_blocked": "NO_BAND_AT_SCHEDULED_BREADTH"
+  },
+  {
+   "attempts": [
+    {
+     "level": "NEARBY_TAG",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES",
+     "rank": 2,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "COLUMN_ENDPOINTS",
+     "rank": 3,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+     "rank": 4,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SCHEDULE_WIDTH_MATCH",
+     "rank": 5,
+     "ref": null,
+     "result": "FOUND"
+    }
+   ],
+   "authority": "PROVISIONAL",
+   "consultant_question": null,
+   "current_quantity": 0.0,
+   "element": "B7",
+   "fact_origin": "CANDIDATE",
+   "flag_id": "BEAM-RES-GF-11-B7",
+   "high_scenario": 0.5214,
+   "kind": "UNBOUND_MEMBER",
+   "known_facts": {
+    "floor": "GF",
+    "length_m": 1.7
+   },
+   "low_scenario": 0.0,
+   "needs_consultant": false,
+   "next_automated_method": "CONTINUITY_WITH_ADJACENT_SPAN",
+   "provisional_quantity": 0.2006,
+   "quantity_impact": 0.2006,
+   "result": "RESOLVED_PROVISIONAL",
+   "search_text": "B7",
+   "successful_method": "SCHEDULE_WIDTH_MATCH",
+   "unknown_fact": "binding",
+   "where_to_look": "ST7757 beam plans",
+   "why_blocked": "NO_BAND_AT_SCHEDULED_BREADTH"
+  },
+  {
+   "attempts": [
+    {
+     "level": "NEARBY_TAG",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES",
+     "rank": 2,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "COLUMN_ENDPOINTS",
+     "rank": 3,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+     "rank": 4,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SCHEDULE_WIDTH_MATCH",
+     "rank": 5,
+     "ref": null,
+     "result": "FOUND"
+    }
+   ],
+   "authority": "PROVISIONAL",
+   "consultant_question": null,
+   "current_quantity": 0.0,
+   "element": "B7",
+   "fact_origin": "CANDIDATE",
+   "flag_id": "BEAM-RES-GF-12-B7",
+   "high_scenario": 0.5214,
+   "kind": "UNBOUND_MEMBER",
+   "known_facts": {
+    "floor": "GF",
+    "length_m": 1.7
+   },
+   "low_scenario": 0.0,
+   "needs_consultant": false,
+   "next_automated_method": "CONTINUITY_WITH_ADJACENT_SPAN",
+   "provisional_quantity": 0.2006,
+   "quantity_impact": 0.2006,
+   "result": "RESOLVED_PROVISIONAL",
+   "search_text": "B7",
+   "successful_method": "SCHEDULE_WIDTH_MATCH",
+   "unknown_fact": "binding",
+   "where_to_look": "ST7757 beam plans",
+   "why_blocked": "NO_BAND_PARALLEL_TO_TAG"
+  },
+  {
+   "attempts": [
+    {
+     "level": "NEARBY_TAG",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES",
+     "rank": 2,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "COLUMN_ENDPOINTS",
+     "rank": 3,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+     "rank": 4,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SCHEDULE_WIDTH_MATCH",
+     "rank": 5,
+     "ref": null,
+     "result": "FOUND"
+    }
+   ],
+   "authority": "PROVISIONAL",
+   "consultant_question": null,
+   "current_quantity": 0.0,
+   "element": "B7",
+   "fact_origin": "CANDIDATE",
+   "flag_id": "BEAM-RES-GF-13-B7",
+   "high_scenario": 0.5214,
+   "kind": "UNBOUND_MEMBER",
+   "known_facts": {
+    "floor": "GF",
+    "length_m": 1.7
+   },
+   "low_scenario": 0.0,
+   "needs_consultant": false,
+   "next_automated_method": "CONTINUITY_WITH_ADJACENT_SPAN",
+   "provisional_quantity": 0.2006,
+   "quantity_impact": 0.2006,
+   "result": "RESOLVED_PROVISIONAL",
+   "search_text": "B7",
+   "successful_method": "SCHEDULE_WIDTH_MATCH",
+   "unknown_fact": "binding",
+   "where_to_look": "ST7757 beam plans",
+   "why_blocked": "NO_BAND_PARALLEL_TO_TAG"
+  },
+  {
+   "attempts": [
+    {
+     "level": "NEARBY_TAG",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES",
+     "rank": 2,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "COLUMN_ENDPOINTS",
+     "rank": 3,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+     "rank": 4,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SCHEDULE_WIDTH_MATCH",
+     "rank": 5,
+     "ref": null,
+     "result": "FOUND"
+    }
+   ],
+   "authority": "PROVISIONAL",
+   "consultant_question": null,
+   "current_quantity": 0.0,
+   "element": "B7",
+   "fact_origin": "CANDIDATE",
+   "flag_id": "BEAM-RES-GF-14-B7",
+   "high_scenario": 0.5214,
+   "kind": "UNBOUND_MEMBER",
+   "known_facts": {
+    "floor": "GF",
+    "length_m": 1.7
+   },
+   "low_scenario": 0.0,
+   "needs_consultant": false,
+   "next_automated_method": "CONTINUITY_WITH_ADJACENT_SPAN",
+   "provisional_quantity": 0.2006,
+   "quantity_impact": 0.2006,
+   "result": "RESOLVED_PROVISIONAL",
+   "search_text": "B7",
+   "successful_method": "SCHEDULE_WIDTH_MATCH",
+   "unknown_fact": "binding",
+   "where_to_look": "ST7757 beam plans",
+   "why_blocked": "NO_BAND_PARALLEL_TO_TAG"
+  },
+  {
+   "attempts": [
+    {
+     "level": "NEARBY_TAG",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES",
+     "rank": 2,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "COLUMN_ENDPOINTS",
+     "rank": 3,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+     "rank": 4,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SCHEDULE_WIDTH_MATCH",
+     "rank": 5,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SAME_TYPE_MEDIAN_LENGTH",
+     "rank": 6,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "UNKNOWN",
+     "rank": 7,
+     "result": "TERMINAL_UNKNOWN"
+    }
+   ],
+   "authority": "BLOCKED",
+   "consultant_question": null,
+   "current_quantity": 0.0,
+   "element": "CB5",
+   "fact_origin": "CANDIDATE",
+   "flag_id": "BEAM-RES-GF-15-CB5",
+   "high_scenario": null,
+   "kind": "UNBOUND_MEMBER",
+   "known_facts": {
+    "floor": "GF",
+    "length_m": null
+   },
+   "low_scenario": null,
+   "needs_consultant": false,
+   "next_automated_method": "CONTINUITY_WITH_ADJACENT_SPAN",
+   "provisional_quantity": null,
+   "quantity_impact": null,
+   "result": "STILL_BLOCKED",
+   "search_text": "CB5",
+   "successful_method": "UNKNOWN",
+   "unknown_fact": "binding",
+   "where_to_look": "ST7757 beam plans",
+   "why_blocked": "NO_BAND_ADJACENT_TO_TAG"
+  },
+  {
+   "attempts": [
+    {
+     "level": "NEARBY_TAG",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES",
+     "rank": 2,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "COLUMN_ENDPOINTS",
+     "rank": 3,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+     "rank": 4,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SCHEDULE_WIDTH_MATCH",
+     "rank": 5,
+     "ref": null,
+     "result": "FOUND"
+    }
+   ],
+   "authority": "PROVISIONAL",
+   "consultant_question": null,
+   "current_quantity": 0.0,
+   "element": "B7",
+   "fact_origin": "CANDIDATE",
+   "flag_id": "BEAM-RES-GF-16-B7",
+   "high_scenario": 0.5214,
+   "kind": "UNBOUND_MEMBER",
+   "known_facts": {
+    "floor": "GF",
+    "length_m": 1.7
+   },
+   "low_scenario": 0.0,
+   "needs_consultant": false,
+   "next_automated_method": "CONTINUITY_WITH_ADJACENT_SPAN",
+   "provisional_quantity": 0.2006,
+   "quantity_impact": 0.2006,
+   "result": "RESOLVED_PROVISIONAL",
+   "search_text": "B7",
+   "successful_method": "SCHEDULE_WIDTH_MATCH",
+   "unknown_fact": "binding",
+   "where_to_look": "ST7757 beam plans",
+   "why_blocked": "NO_BAND_ADJACENT_TO_TAG"
+  },
+  {
+   "attempts": [
+    {
+     "level": "NEARBY_TAG",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES",
+     "rank": 2,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "COLUMN_ENDPOINTS",
+     "rank": 3,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+     "rank": 4,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SCHEDULE_WIDTH_MATCH",
+     "rank": 5,
+     "ref": null,
+     "result": "FOUND"
+    }
+   ],
+   "authority": "PROVISIONAL",
+   "consultant_question": null,
+   "current_quantity": 0.0,
+   "element": "B4",
+   "fact_origin": "CANDIDATE",
+   "flag_id": "BEAM-RES-GF-17-B4",
+   "high_scenario": 0.306,
+   "kind": "UNBOUND_MEMBER",
+   "known_facts": {
+    "floor": "GF",
+    "length_m": 3.906
+   },
+   "low_scenario": 0.0,
+   "needs_consultant": false,
+   "next_automated_method": "CONTINUITY_WITH_ADJACENT_SPAN",
+   "provisional_quantity": 0.2656,
+   "quantity_impact": 0.2656,
+   "result": "RESOLVED_PROVISIONAL",
+   "search_text": "B4",
+   "successful_method": "SCHEDULE_WIDTH_MATCH",
+   "unknown_fact": "binding",
+   "where_to_look": "ST7757 beam plans",
+   "why_blocked": "NO_BAND_ADJACENT_TO_TAG"
+  },
+  {
+   "attempts": [
+    {
+     "level": "NEARBY_TAG",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES",
+     "rank": 2,
+     "ref": null,
+     "result": "FOUND"
+    }
+   ],
+   "authority": "PROVISIONAL",
+   "consultant_question": null,
+   "current_quantity": 0.0,
+   "element": "CB12",
+   "fact_origin": "CANDIDATE",
+   "flag_id": "BEAM-RES-1F-18-CB12",
+   "high_scenario": 0.7781,
+   "kind": "UNBOUND_MEMBER",
+   "known_facts": {
+    "floor": "1F",
+    "length_m": 5.275
+   },
+   "low_scenario": 0.6614,
+   "needs_consultant": false,
+   "next_automated_method": "CONTINUITY_WITH_ADJACENT_SPAN",
+   "provisional_quantity": 0.7781,
+   "quantity_impact": 0.7781,
+   "result": "RESOLVED_PROVISIONAL",
+   "search_text": "CB12",
+   "successful_method": "PAIRED_FACES",
+   "unknown_fact": "binding",
+   "where_to_look": "ST7757 beam plans",
+   "why_blocked": "SPAN_COUNT_MISMATCH"
+  },
+  {
+   "attempts": [
+    {
+     "level": "NEARBY_TAG",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES",
+     "rank": 2,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "COLUMN_ENDPOINTS",
+     "rank": 3,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+     "rank": 4,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SCHEDULE_WIDTH_MATCH",
+     "rank": 5,
+     "ref": null,
+     "result": "FOUND"
+    }
+   ],
+   "authority": "PROVISIONAL",
+   "consultant_question": null,
+   "current_quantity": 0.0,
+   "element": "B6",
+   "fact_origin": "CANDIDATE",
+   "flag_id": "BEAM-RES-1F-19-B6",
+   "high_scenario": 0.3716,
+   "kind": "UNBOUND_MEMBER",
+   "known_facts": {
+    "floor": "1F",
+    "length_m": 4.236
+   },
+   "low_scenario": 0.0,
+   "needs_consultant": false,
+   "next_automated_method": "CONTINUITY_WITH_ADJACENT_SPAN",
+   "provisional_quantity": 0.3601,
+   "quantity_impact": 0.3601,
+   "result": "RESOLVED_PROVISIONAL",
+   "search_text": "B6",
+   "successful_method": "SCHEDULE_WIDTH_MATCH",
+   "unknown_fact": "binding",
+   "where_to_look": "ST7757 beam plans",
+   "why_blocked": "NO_BAND_ADJACENT_TO_TAG"
+  },
+  {
+   "attempts": [
+    {
+     "level": "NEARBY_TAG",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES",
+     "rank": 2,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "COLUMN_ENDPOINTS",
+     "rank": 3,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+     "rank": 4,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SCHEDULE_WIDTH_MATCH",
+     "rank": 5,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SAME_TYPE_MEDIAN_LENGTH",
+     "rank": 6,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "UNKNOWN",
+     "rank": 7,
+     "result": "TERMINAL_UNKNOWN"
+    }
+   ],
+   "authority": "BLOCKED",
+   "consultant_question": null,
+   "current_quantity": 0.0,
+   "element": "CB12",
+   "fact_origin": "CANDIDATE",
+   "flag_id": "BEAM-RES-1F-20-CB12",
+   "high_scenario": null,
+   "kind": "UNBOUND_MEMBER",
+   "known_facts": {
+    "floor": "1F",
+    "length_m": null
+   },
+   "low_scenario": null,
+   "needs_consultant": false,
+   "next_automated_method": "CONTINUITY_WITH_ADJACENT_SPAN",
+   "provisional_quantity": null,
+   "quantity_impact": null,
+   "result": "STILL_BLOCKED",
+   "search_text": "CB12",
+   "successful_method": "UNKNOWN",
+   "unknown_fact": "binding",
+   "where_to_look": "ST7757 beam plans",
+   "why_blocked": "NO_BAND_ADJACENT_TO_TAG"
+  },
+  {
+   "attempts": [
+    {
+     "level": "NEARBY_TAG",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES",
+     "rank": 2,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "COLUMN_ENDPOINTS",
+     "rank": 3,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+     "rank": 4,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SCHEDULE_WIDTH_MATCH",
+     "rank": 5,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SAME_TYPE_MEDIAN_LENGTH",
+     "rank": 6,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "UNKNOWN",
+     "rank": 7,
+     "result": "TERMINAL_UNKNOWN"
+    }
+   ],
+   "authority": "BLOCKED",
+   "consultant_question": null,
+   "current_quantity": 0.0,
+   "element": "CB10",
+   "fact_origin": "CANDIDATE",
+   "flag_id": "BEAM-RES-1F-21-CB10",
+   "high_scenario": null,
+   "kind": "UNBOUND_MEMBER",
+   "known_facts": {
+    "floor": "1F",
+    "length_m": null
+   },
+   "low_scenario": null,
+   "needs_consultant": false,
+   "next_automated_method": "CONTINUITY_WITH_ADJACENT_SPAN",
+   "provisional_quantity": null,
+   "quantity_impact": null,
+   "result": "STILL_BLOCKED",
+   "search_text": "CB10",
+   "successful_method": "UNKNOWN",
+   "unknown_fact": "binding",
+   "where_to_look": "ST7757 beam plans",
+   "why_blocked": "NO_BAND_ADJACENT_TO_TAG"
+  },
+  {
+   "attempts": [
+    {
+     "level": "NEARBY_TAG",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES",
+     "rank": 2,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "COLUMN_ENDPOINTS",
+     "rank": 3,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+     "rank": 4,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SCHEDULE_WIDTH_MATCH",
+     "rank": 5,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SAME_TYPE_MEDIAN_LENGTH",
+     "rank": 6,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "UNKNOWN",
+     "rank": 7,
+     "result": "TERMINAL_UNKNOWN"
+    }
+   ],
+   "authority": "BLOCKED",
+   "consultant_question": null,
+   "current_quantity": 0.0,
+   "element": "CB10",
+   "fact_origin": "CANDIDATE",
+   "flag_id": "BEAM-RES-1F-22-CB10",
+   "high_scenario": null,
+   "kind": "UNBOUND_MEMBER",
+   "known_facts": {
+    "floor": "1F",
+    "length_m": null
+   },
+   "low_scenario": null,
+   "needs_consultant": false,
+   "next_automated_method": "CONTINUITY_WITH_ADJACENT_SPAN",
+   "provisional_quantity": null,
+   "quantity_impact": null,
+   "result": "STILL_BLOCKED",
+   "search_text": "CB10",
+   "successful_method": "UNKNOWN",
+   "unknown_fact": "binding",
+   "where_to_look": "ST7757 beam plans",
+   "why_blocked": "NO_BAND_ADJACENT_TO_TAG"
+  },
+  {
+   "attempts": [
+    {
+     "level": "NEARBY_TAG",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES",
+     "rank": 2,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "COLUMN_ENDPOINTS",
+     "rank": 3,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+     "rank": 4,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SCHEDULE_WIDTH_MATCH",
+     "rank": 5,
+     "ref": null,
+     "result": "FOUND"
+    }
+   ],
+   "authority": "PROVISIONAL",
+   "consultant_question": null,
+   "current_quantity": 0.0,
+   "element": "B4",
+   "fact_origin": "CANDIDATE",
+   "flag_id": "BEAM-RES-1F-23-B4",
+   "high_scenario": 0.306,
+   "kind": "UNBOUND_MEMBER",
+   "known_facts": {
+    "floor": "1F",
+    "length_m": 3.906
+   },
+   "low_scenario": 0.0,
+   "needs_consultant": false,
+   "next_automated_method": "CONTINUITY_WITH_ADJACENT_SPAN",
+   "provisional_quantity": 0.2656,
+   "quantity_impact": 0.2656,
+   "result": "RESOLVED_PROVISIONAL",
+   "search_text": "B4",
+   "successful_method": "SCHEDULE_WIDTH_MATCH",
+   "unknown_fact": "binding",
+   "where_to_look": "ST7757 beam plans",
+   "why_blocked": "NO_BAND_PARALLEL_TO_TAG"
+  },
+  {
+   "attempts": [
+    {
+     "level": "NEARBY_TAG",
+     "rank": 1,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "PAIRED_FACES",
+     "rank": 2,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "COLUMN_ENDPOINTS",
+     "rank": 3,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "CONTINUITY_WITH_ADJACENT_SPAN",
+     "rank": 4,
+     "result": "NOT_FOUND"
+    },
+    {
+     "level": "SCHEDULE_WIDTH_MATCH",
+     "rank": 5,
+     "ref": null,
+     "result": "FOUND"
+    }
+   ],
+   "authority": "PROVISIONAL",
+   "consultant_question": null,
+   "current_quantity": 0.0,
+   "element": "B4",
+   "fact_origin": "CANDIDATE",
+   "flag_id": "BEAM-RES-1F-24-B4",
+   "high_scenario": 0.306,
+   "kind": "UNBOUND_MEMBER",
+   "known_facts": {
+    "floor": "1F",
+    "length_m": 3.906
+   },
+   "low_scenario": 0.0,
+   "needs_consultant": false,
+   "next_automated_method": "CONTINUITY_WITH_ADJACENT_SPAN",
+   "provisional_quantity": 0.2656,
+   "quantity_impact": 0.2656,
+   "result": "RESOLVED_PROVISIONAL",
+   "search_text": "B4",
+   "successful_method": "SCHEDULE_WIDTH_MATCH",
+   "unknown_fact": "binding",
+   "where_to_look": "ST7757 beam plans",
+   "why_blocked": "NO_BAND_PARALLEL_TO_TAG"
+  }
+ ]
+}

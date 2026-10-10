@@ -1,0 +1,16 @@
+ITEM,SOURCE,CELLS,AREA_M2,STATE,QUANTITY
+S8.1 measured zones,S8.1 01 / 08 (frozen),2,37.858523163397,MEASURED (S8.1 PROJECT_BASIS_QTO),"S8.1 frozen: 3.785852 m3, 233.694587 kg"
+S8.1 blocked faces,S8.1 01 / 06 (frozen),19,129.77058448889,BLOCKED_UNQUANTIFIED,"none (unknown, not zero)"
+recovered ground-slab candidates,this round 01,5,29.059914928246,BLOCKED_UNQUANTIFIED,"none (unknown, not zero)"
+revised blocked ground-slab area,sum,24,158.830499417136,BLOCKED_UNQUANTIFIED,none
+remaining unclassified area,this round 01,1,0.000000381545,CLASSIFICATION_BLOCKED,none
+S8.1A-B-S8.1A-RG-01-CONCRETE_THICKNESS,this round: component record (repeats its cell's area; not additive),1,11.92367212,BLOCKED_UNQUANTIFIED,none
+S8.1A-B-S8.1A-RG-01-MESH,this round: component record (repeats its cell's area; not additive),1,11.92367212,BLOCKED_UNQUANTIFIED,none
+S8.1A-B-S8.1A-RG-03-CONCRETE_THICKNESS,this round: component record (repeats its cell's area; not additive),1,10.9742004,BLOCKED_UNQUANTIFIED,none
+S8.1A-B-S8.1A-RG-03-MESH,this round: component record (repeats its cell's area; not additive),1,10.9742004,BLOCKED_UNQUANTIFIED,none
+S8.1A-B-S8.1A-RG-05-CONCRETE_THICKNESS,this round: component record (repeats its cell's area; not additive),1,2.721161,BLOCKED_UNQUANTIFIED,none
+S8.1A-B-S8.1A-RG-05-MESH,this round: component record (repeats its cell's area; not additive),1,2.721161,BLOCKED_UNQUANTIFIED,none
+S8.1A-B-S8.1A-RG-06-CONCRETE_THICKNESS,this round: component record (repeats its cell's area; not additive),1,2.253381408246,BLOCKED_UNQUANTIFIED,none
+S8.1A-B-S8.1A-RG-06-MESH,this round: component record (repeats its cell's area; not additive),1,2.253381408246,BLOCKED_UNQUANTIFIED,none
+S8.1A-B-S8.1A-RG-08-CONCRETE_THICKNESS,this round: component record (repeats its cell's area; not additive),1,1.1875,BLOCKED_UNQUANTIFIED,none
+S8.1A-B-S8.1A-RG-08-MESH,this round: component record (repeats its cell's area; not additive),1,1.1875,BLOCKED_UNQUANTIFIED,none

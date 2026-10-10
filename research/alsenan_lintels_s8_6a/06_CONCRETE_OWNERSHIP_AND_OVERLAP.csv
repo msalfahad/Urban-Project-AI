@@ -1,0 +1,16 @@
+SHARED_BETWEEN,AREA_MM2,M3,FROZEN_OWNER,CORRECTED_OWNER,STATE,NOTE
+"[""LT-OP-1F-017"", ""LT-OP-1F-018""]",22500,0.0045,LT-OP-1F-017,LT-OP-1F-018,RELEASED_WITH_OWNER,"one physical prism, one released owner; the blocked partner's conditional geometry excludes it"
+"[""LT-OP-1F-003""]",,0.048,LT-OP-1F-003,LT-OP-1F-003,RELEASED,gross 0.048 m3; net of shared volumes owned elsewhere
+"[""LT-OP-1F-014""]",,0.048,LT-OP-1F-014,LT-OP-1F-014,RELEASED,gross 0.048 m3; net of shared volumes owned elsewhere
+"[""LT-OP-1F-017""]",,0.039292802,LT-OP-1F-017,,CONDITIONAL_GEOMETRY_ONLY,gross 0.043792802 m3; net of shared volumes owned elsewhere
+"[""LT-OP-1F-018""]",,0.054,LT-OP-1F-018,LT-OP-1F-018,RELEASED,gross 0.054 m3; net of shared volumes owned elsewhere
+"[""LT-OP-1F-020""]",,0.051,LT-OP-1F-020,LT-OP-1F-020,RELEASED,gross 0.051 m3; net of shared volumes owned elsewhere
+"[""LT-OP-1F-021""]",,0.063,LT-OP-1F-021,LT-OP-1F-021,RELEASED,gross 0.063 m3; net of shared volumes owned elsewhere
+"[""LT-OP-GF-005""]",,0.042723447,LT-OP-GF-005,,CONDITIONAL_GEOMETRY_ONLY,gross 0.042723447 m3; net of shared volumes owned elsewhere
+"[""LT-OP-GF-008""]",,0.048,LT-OP-GF-008,LT-OP-GF-008,RELEASED,gross 0.048 m3; net of shared volumes owned elsewhere
+"[""LT-OP-GF-013""]",,0.06002,LT-OP-GF-013,,CONDITIONAL_GEOMETRY_ONLY,gross 0.06002 m3; net of shared volumes owned elsewhere
+"[""LT-OP-GF-014""]",,0.092,LT-OP-GF-014,,CONDITIONAL_GEOMETRY_ONLY,gross 0.092 m3; net of shared volumes owned elsewhere
+"[""LT-OP-GF-018""]",,0.06002,LT-OP-GF-018,,CONDITIONAL_GEOMETRY_ONLY,gross 0.06002 m3; net of shared volumes owned elsewhere
+"[""LT-OP-GF-021""]",,0.043515,LT-OP-GF-021,,CONDITIONAL_GEOMETRY_ONLY,gross 0.043515 m3; net of shared volumes owned elsewhere
+"[""LT-OP-GF-028""]",,0.054,LT-OP-GF-028,LT-OP-GF-028,RELEASED,gross 0.054 m3; net of shared volumes owned elsewhere
+"[""LT-OP-GF-029""]",,0.041690432,LT-OP-GF-029,,CONDITIONAL_GEOMETRY_ONLY,gross 0.041690432 m3; net of shared volumes owned elsewhere

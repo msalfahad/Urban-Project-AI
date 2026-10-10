@@ -1,0 +1,32 @@
+RECORD,ROW_ID,WIDTH_PRINTED,WIDTH_LO_CM,WIDTH_HI_CM,BOUNDS,SIZE_PRINTED,B,D_CM,BOTTOM_PRINTED,BOTTOM_N,BOTTOM_DIA_MM,TOP_PRINTED,TOP_N,TOP_DIA_MM,STIRRUPS_PRINTED,STIRRUP_RATE_PER_M,STIRRUP_DIA_MM,NOTE_PRINTED,HEADER_PRINTED,SOURCE
+SCHEDULE_ROW,L1,0 -100,0,100,"inclusive integer cm, as printed",B x 20,wall width (note),20,2Ø12,2,12,2Ø10,2,10,5Ø8/M,5,8,B-WIDTH OF THE BLOCK WALL,OPENING WIDTH (IN CM) | LINTEL SIZE (IN CM) | BOTT. BARS | TOP. BARS | STIR. | NOTES,ST7757.pdf p.13 LINTEL SCHEDULE (VIS-P13-SCHEDULE; no vector text on p.13)
+SCHEDULE_ROW,L2,101 - 200,101,200,"inclusive integer cm, as printed",B x 20,wall width (note),20,2Ø14,2,14,2Ø12,2,12,5Ø8/M,5,8,WIDTH OF LINTEL THE SAME OF WIDTH OF WALL.,OPENING WIDTH (IN CM) | LINTEL SIZE (IN CM) | BOTT. BARS | TOP. BARS | STIR. | NOTES,ST7757.pdf p.13 LINTEL SCHEDULE (VIS-P13-SCHEDULE; no vector text on p.13)
+SCHEDULE_ROW,L3,201 - 300,201,300,"inclusive integer cm, as printed",B x 30,wall width (note),30,3Ø16,3,16,3Ø14,3,14,5Ø8/M,5,8,,OPENING WIDTH (IN CM) | LINTEL SIZE (IN CM) | BOTT. BARS | TOP. BARS | STIR. | NOTES,ST7757.pdf p.13 LINTEL SCHEDULE (VIS-P13-SCHEDULE; no vector text on p.13)
+SCHEDULE_ROW,L4,301 - 500,301,500,"inclusive integer cm, as printed",B x 40,wall width (note),40,3Ø18,3,18,3Ø14,3,14,5Ø8/M,5,8,,OPENING WIDTH (IN CM) | LINTEL SIZE (IN CM) | BOTT. BARS | TOP. BARS | STIR. | NOTES,ST7757.pdf p.13 LINTEL SCHEDULE (VIS-P13-SCHEDULE; no vector text on p.13)
+SCHEDULE_ROW,L5,501 - 750,501,750,"inclusive integer cm, as printed",B x 55,wall width (note),55,4Ø18,4,18,3Ø14,3,14,5Ø8/M,5,8,,OPENING WIDTH (IN CM) | LINTEL SIZE (IN CM) | BOTT. BARS | TOP. BARS | STIR. | NOTES,ST7757.pdf p.13 LINTEL SCHEDULE (VIS-P13-SCHEDULE; no vector text on p.13)
+UNCOVERED_INTERVAL,GAP-100-101,100 < w < 101,100,101,open interval: no row,,,,,,,,,,,,,,,between L1 and L2
+UNCOVERED_INTERVAL,GAP-200-201,200 < w < 201,200,201,open interval: no row,,,,,,,,,,,,,,,between L2 and L3
+UNCOVERED_INTERVAL,GAP-300-301,300 < w < 301,300,301,open interval: no row,,,,,,,,,,,,,,,between L3 and L4
+UNCOVERED_INTERVAL,GAP-500-501,500 < w < 501,500,501,open interval: no row,,,,,,,,,,,,,,,between L4 and L5
+UNCOVERED_INTERVAL,ABOVE-750,w > 750,750,,no row above the last band,,,,,,,,,,,,,,,after L5
+BOUNDARY_CASE,W0,0 mm,,,NOT_POSITIVE,,,,,,,,,,,,,,,
+BOUNDARY_CASE,W1,1 mm,,,IN_ROW,,,,,,,,,,,,,,,L1
+BOUNDARY_CASE,W999.9,999.9 mm,,,IN_ROW,,,,,,,,,,,,,,,L1
+BOUNDARY_CASE,W1000,1000 mm,,,IN_ROW,,,,,,,,,,,,,,,L1
+BOUNDARY_CASE,W1000.5,1000.5 mm,,,BOUNDARY_GAP,,,,,,,,,,,,,,,L1/L2
+BOUNDARY_CASE,W1001,1001 mm,,,BOUNDARY_GAP,,,,,,,,,,,,,,,L1/L2
+BOUNDARY_CASE,W1010,1010 mm,,,IN_ROW,,,,,,,,,,,,,,,L2
+BOUNDARY_CASE,W2000,2000 mm,,,IN_ROW,,,,,,,,,,,,,,,L2
+BOUNDARY_CASE,W2005,2005 mm,,,BOUNDARY_GAP,,,,,,,,,,,,,,,L2/L3
+BOUNDARY_CASE,W2010,2010 mm,,,IN_ROW,,,,,,,,,,,,,,,L3
+BOUNDARY_CASE,W3000,3000 mm,,,IN_ROW,,,,,,,,,,,,,,,L3
+BOUNDARY_CASE,W3010,3010 mm,,,IN_ROW,,,,,,,,,,,,,,,L4
+BOUNDARY_CASE,W5000,5000 mm,,,IN_ROW,,,,,,,,,,,,,,,L4
+BOUNDARY_CASE,W5010,5010 mm,,,IN_ROW,,,,,,,,,,,,,,,L5
+BOUNDARY_CASE,W7500,7500 mm,,,IN_ROW,,,,,,,,,,,,,,,L5
+BOUNDARY_CASE,W7500.1,7500.1 mm,,,ABOVE_SCHEDULE,,,,,,,,,,,,,,,
+BOUNDARY_CASE,W7510,7510 mm,,,ABOVE_SCHEDULE,,,,,,,,,,,,,,,
+DETAIL_READING,MIN-BEARING,MIN.40cm,,,400 mm each side,,,,,,,,,,,,,,,VIS-P13-DETAIL
+VISUAL_RECORD,VIS-P13-SCHEDULE,"LINTEL SCHEDULE: header and five rows (opening width bands in cm, section B x D, bottom / top bars, stirrups, notes)",,,see 02_LINTEL_SCHEDULE_TRANSCRIPTION.csv,,,,,,,,,,,,,,,ST7757.pdf p.13 @ 400 dpi (render kept outside git)
+VISUAL_RECORD,VIS-P13-DETAIL,LINTEL DETAIL (elevation),,,"'MIN.40cm' bearing at each end; 'TOB BARS' (sic) / 'BOTTOM BARS' / 'STIRRUPS' called out; the bar ends are drawn bent down / up into the bearing but no bend length is printed; stirrups drawn schematically near the ends only, no spacing printed beyond the schedule's '5Ø8/M'",,,,,,,,,,,,,,,ST7757.pdf p.13 @ 400 dpi (render kept outside git)
+VISUAL_RECORD,VIS-P13-SECT22,SECT (2-2) (THROUGH LINTEL),,,section B x D; two top and two bottom bars drawn; one closed stirrup drawn with hooks; no cover and no hook length printed,,,,,,,,,,,,,,,ST7757.pdf p.13 @ 400 dpi (render kept outside git)

@@ -1,0 +1,130 @@
+{
+ "SCHEMA": "URBAN_R8_13_BLIND_COMPARISON_V1",
+ "order": "blind record committed (c522916) before this comparison",
+ "lab_reproduces_blind": {
+  "closures": true,
+  "passages": true,
+  "topology_digest": true
+ },
+ "counts": {
+  "R8.12_V3": {
+   "chains": 149,
+   "assemblies": 76,
+   "established": 49,
+   "spans": 64,
+   "closures": 2,
+   "authorised": 2,
+   "passages": 6
+  },
+  "R8.13_V4": {
+   "chains": 149,
+   "assemblies": 55,
+   "established": 48,
+   "spans": 63,
+   "closures": 2,
+   "authorised": 2,
+   "passages": 5
+  }
+ },
+ "h2430": {
+  "band": "WB-0644b40d07c861d6",
+  "faces": [
+   "470",
+   "471",
+   "477"
+  ],
+  "intervals": [
+   [
+    "WALL_BAND_SPAN",
+    []
+   ],
+   [
+    "OBSTACLE_OVERLAP",
+    [
+     "718",
+     "718"
+    ]
+   ],
+   [
+    "WALL_BAND_SPAN",
+    []
+   ]
+  ],
+  "ends": [
+   "RECEIVING_FACE_JUNCTION",
+   "ALIGNED_FREE_END"
+  ],
+  "closure_v4": {
+   "closure_id": "TC-1013dbb787e56f65",
+   "release": "AUTHORISED_FOR_SHADOW",
+   "geometry": [
+    109773.7561,
+    15029.7196,
+    109773.7561,
+    15049.7196
+   ],
+   "material": "NONE"
+  },
+  "separated_m2": [
+   0.3813
+  ],
+  "same_geometry_as_v3": true,
+  "same_area_as_v3": true,
+  "support": "SELF_SUPPORTED (one run; the H718 column interval inside it)"
+ },
+ "h2431": {
+  "closure_v4": {
+   "closure_id": "TC-5f9f2014f83ab0d4",
+   "release": "AUTHORISED_FOR_SHADOW",
+   "geometry": [
+    109893.4009,
+    15029.7196,
+    109893.4009,
+    15049.7196
+   ],
+   "material": "NONE"
+  },
+  "separated_m2": [
+   0.6494
+  ],
+  "same_geometry_as_v3": true,
+  "same_area_as_v3": true,
+  "passage_open": {
+   "passage": "OP-997f14d12b8e9bc1",
+   "width_mm": 1196.45,
+   "thickness_mm": 200.0
+  }
+ },
+ "h1316": {
+  "closures_with_1316": [],
+  "classification": "NOT_WALL_CAP (unchanged)"
+ },
+ "hall_m2": {
+  "R8.12": 42.7993,
+  "R8.13": 42.7993
+ },
+ "labelled_site_areas_unchanged": true,
+ "ids": "band / closure / passage / site ids changed (version bump: band ids from chain ids) - geometry is compared, old ids are never forced",
+ "passages": {
+  "R8.12": [
+   "OP-093029c38dbf1727",
+   "OP-46ccf3d3e3fe033c",
+   "OP-6b56e2bbc42301c5",
+   "OP-6f53bf7dcea4496a",
+   "OP-a38c9a827025e4a9",
+   "OP-f4493d47a122d06a"
+  ],
+  "R8.13": [
+   "OP-0165f08fad9e3b42",
+   "OP-35e4f04842d93fd7",
+   "OP-997f14d12b8e9bc1",
+   "OP-9e0fd219ca5cd391",
+   "OP-a136ccb3608d1bff"
+  ]
+ },
+ "topology_digest": {
+  "R8.12": "12547d2d834b6ca4898be83877540a9869bcdacbf663123f9aa91fc189485616",
+  "R8.13": "fb2d46ed2f49e42f2060872c517ec368b5cf8c814019d36fd17679cdcd71683a",
+  "changed_because": "the wall-band policy (V3 -> V4) is a TS01 input"
+ }
+}

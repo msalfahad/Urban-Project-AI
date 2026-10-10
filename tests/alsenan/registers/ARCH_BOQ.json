@@ -1,0 +1,1489 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_ARCH_BOQ_V1",
+ "columns": [
+  "ITEM CODE",
+  "DISCIPLINE",
+  "TRADE",
+  "FLOOR",
+  "ROOM/ELEMENT",
+  "DESCRIPTION AR",
+  "DESCRIPTION EN",
+  "QTY",
+  "UNIT",
+  "STATUS",
+  "SOURCE",
+  "RULE",
+  "BLOCKER"
+ ],
+ "rows": [
+  {
+   "item": "A-FLR-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "FLOOR",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "مساحة الأرضيات الصافية",
+   "en": "Net floor area per room",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "TS01 certified room site",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 60 sites on GF, 0 certified (largest 0.138 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x60, TOPOLOGY_ROLE_UNRESOLVED x33, UNKNOWN_OBJECT_IN_SITE x27)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1"
+   ]
+  },
+  {
+   "item": "A-FLR-02-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "FLOOR_FINISH",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "تبليط الأرضيات",
+   "en": "Floor finish (tiles / porcelain / marble)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1 (only where cabinetry is identified)",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 60 sites on GF, 0 certified (largest 0.138 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x60, TOPOLOGY_ROLE_UNRESOLVED x33, UNKNOWN_OBJECT_IN_SITE x27)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "FINISH_SCHEDULE_ABSENT: no finish schedule in the source - OQ-F1"
+   ]
+  },
+  {
+   "item": "A-CLG-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "CEILING",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "الأسقف (جبس / صبغ)",
+   "en": "Ceiling finish",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "ceiling = certified room footprint",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 60 sites on GF, 0 certified (largest 0.138 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x60, TOPOLOGY_ROLE_UNRESOLVED x33, UNKNOWN_OBJECT_IN_SITE x27)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "FINISH_SCHEDULE_ABSENT: no finish schedule in the source - OQ-F1"
+   ]
+  },
+  {
+   "item": "A-SKT-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "SKIRTING",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "وزرة",
+   "en": "Skirting",
+   "qty": null,
+   "unit": "lm",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "URBAN-SKIRTING-OPENING-METHOD@v1; US-02 (none in fully tiled rooms); US-08",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 60 sites on GF, 0 certified (largest 0.138 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x60, TOPOLOGY_ROLE_UNRESOLVED x33, UNKNOWN_OBJECT_IN_SITE x27)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "OPENING_ROLE_NOT_ADMITTED: 13 door-signature candidates on GF (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2",
+    "FINISH_SCHEDULE_ABSENT: no finish schedule in the source - OQ-F1"
+   ]
+  },
+  {
+   "item": "A-HPR-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "HIDDEN_PROFILE",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "بروفايل مخفي",
+   "en": "Hidden profile (same path as skirting)",
+   "qty": null,
+   "unit": "lm",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "US-08",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 60 sites on GF, 0 certified (largest 0.138 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x60, TOPOLOGY_ROLE_UNRESOLVED x33, UNKNOWN_OBJECT_IN_SITE x27)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "OPENING_ROLE_NOT_ADMITTED: 13 door-signature candidates on GF (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2",
+    "FINISH_SCHEDULE_ABSENT: no finish schedule in the source - OQ-F1"
+   ]
+  },
+  {
+   "item": "A-BLK-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "طابوق (حسب السماكة)",
+   "en": "Blockwork by wall-band thickness",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "wall bands by thickness (never 'paired lines = wall')",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 60 sites on GF, 0 certified (largest 0.138 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x60, TOPOLOGY_ROLE_UNRESOLVED x33, UNKNOWN_OBJECT_IN_SITE x27)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "WALL_BAND_THICKNESS_NOT_ESTABLISHED: 0 bands, 0 ESTABLISHED",
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1",
+    "OPENING_ROLE_NOT_ADMITTED: 13 door-signature candidates on GF (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2"
+   ]
+  },
+  {
+   "item": "A-PLS-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "INTERNAL_PLASTER",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "لياسة داخلية",
+   "en": "Internal plaster (exposed faces - openings + reveals + columns)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "URBAN-WALL-FINISH-HEIGHT-METHOD@v1; US-06; URBAN-REVEAL-FINISH-METHOD@v1; URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 60 sites on GF, 0 certified (largest 0.138 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x60, TOPOLOGY_ROLE_UNRESOLVED x33, UNKNOWN_OBJECT_IN_SITE x27)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1",
+    "OPENING_ROLE_NOT_ADMITTED: 13 door-signature candidates on GF (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2"
+   ]
+  },
+  {
+   "item": "A-PNT-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "INTERNAL_PAINT",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "صبغ داخلي",
+   "en": "Internal paint (dry rooms only)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "URBAN-WALL-FINISH-HEIGHT-METHOD@v1 (no dry paint in wet rooms)",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 60 sites on GF, 0 certified (largest 0.138 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x60, TOPOLOGY_ROLE_UNRESOLVED x33, UNKNOWN_OBJECT_IN_SITE x27)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1",
+    "OPENING_ROLE_NOT_ADMITTED: 13 door-signature candidates on GF (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2",
+    "WET_IDENTITY_LABEL_ONLY: 9 wet-label candidates (BATH, KITCHEN, W.C, Wash) with no certified room to host them; sanitary sheet is supporting evidence only"
+   ]
+  },
+  {
+   "item": "A-WTL-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WALL_TILE",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "سيراميك جدران",
+   "en": "Wall tiles (wet / service rooms)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "US-01 wet ceramic",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 60 sites on GF, 0 certified (largest 0.138 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x60, TOPOLOGY_ROLE_UNRESOLVED x33, UNKNOWN_OBJECT_IN_SITE x27)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1",
+    "OPENING_ROLE_NOT_ADMITTED: 13 door-signature candidates on GF (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2",
+    "WET_IDENTITY_LABEL_ONLY: 9 wet-label candidates (BATH, KITCHEN, W.C, Wash) with no certified room to host them; sanitary sheet is supporting evidence only",
+    "FINISH_SCHEDULE_ABSENT: no finish schedule in the source - OQ-F1"
+   ]
+  },
+  {
+   "item": "A-WTP-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "TILE_PREP",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "تجهيز للسيراميك",
+   "en": "Tile preparation (separate from plaster)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "US-01",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 60 sites on GF, 0 certified (largest 0.138 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x60, TOPOLOGY_ROLE_UNRESOLVED x33, UNKNOWN_OBJECT_IN_SITE x27)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1",
+    "OPENING_ROLE_NOT_ADMITTED: 13 door-signature candidates on GF (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2",
+    "WET_IDENTITY_LABEL_ONLY: 9 wet-label candidates (BATH, KITCHEN, W.C, Wash) with no certified room to host them; sanitary sheet is supporting evidence only"
+   ]
+  },
+  {
+   "item": "A-WPF-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WATERPROOFING",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "عزل مائي أرضيات",
+   "en": "Waterproofing membrane = wet / service floor area",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "US-04 / US-14 (wet identity not from label text alone)",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 60 sites on GF, 0 certified (largest 0.138 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x60, TOPOLOGY_ROLE_UNRESOLVED x33, UNKNOWN_OBJECT_IN_SITE x27)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "WET_IDENTITY_LABEL_ONLY: 9 wet-label candidates (BATH, KITCHEN, W.C, Wash) with no certified room to host them; sanitary sheet is supporting evidence only"
+   ]
+  },
+  {
+   "item": "A-WPU-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WATERPROOFING",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "عزل مائي جوانب 15 سم",
+   "en": "Waterproofing upturn 0.15 m on the gross perimeter (doorway not deducted)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "US-05",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 60 sites on GF, 0 certified (largest 0.138 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x60, TOPOLOGY_ROLE_UNRESOLVED x33, UNKNOWN_OBJECT_IN_SITE x27)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "WET_IDENTITY_LABEL_ONLY: 9 wet-label candidates (BATH, KITCHEN, W.C, Wash) with no certified room to host them; sanitary sheet is supporting evidence only"
+   ]
+  },
+  {
+   "item": "A-MRB-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "MARBLE",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "رخام عتبات",
+   "en": "Marble thresholds (wet / service doors)",
+   "qty": null,
+   "unit": "lm",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 60 sites on GF, 0 certified (largest 0.138 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x60, TOPOLOGY_ROLE_UNRESOLVED x33, UNKNOWN_OBJECT_IN_SITE x27)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "OPENING_ROLE_NOT_ADMITTED: 13 door-signature candidates on GF (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2",
+    "WET_IDENTITY_LABEL_ONLY: 9 wet-label candidates (BATH, KITCHEN, W.C, Wash) with no certified room to host them; sanitary sheet is supporting evidence only"
+   ]
+  },
+  {
+   "item": "A-STR-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "STAIRS",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "درج (قوائم ونوائم)",
+   "en": "Stair treads / risers / landings",
+   "qty": null,
+   "unit": "no.",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "deterministic stair geometry only",
+   "blockers": [
+    "STAIR_ROLE_NOT_ESTABLISHED: 4 stair-arrow blocks observed; tread / riser lines have no role authority; nothing counted"
+   ]
+  },
+  {
+   "item": "A-STR-02-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "STAIR_FINISH",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "تكسية الدرج ووزرة الدرج",
+   "en": "Stair finish + stair skirting",
+   "qty": null,
+   "unit": "lm",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "deterministic stair geometry only",
+   "blockers": [
+    "FINISH_SCHEDULE_ABSENT: no finish schedule in the source - OQ-F1",
+    "STAIR_ROLE_NOT_ESTABLISHED: 4 stair-arrow blocks observed; tread / riser lines have no role authority; nothing counted"
+   ]
+  },
+  {
+   "item": "A-HRL-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "HANDRAIL",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "درابزين",
+   "en": "Handrails / balustrades",
+   "qty": null,
+   "unit": "lm",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "deterministic stair geometry only",
+   "blockers": [
+    "STAIR_ROLE_NOT_ESTABLISHED: 4 stair-arrow blocks observed; tread / riser lines have no role authority; nothing counted"
+   ]
+  },
+  {
+   "item": "A-DOR-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "INTERNAL_DOORS",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "أبواب داخلية",
+   "en": "Internal doors (US-13: PVC)",
+   "qty": null,
+   "unit": "no.",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "OPENING_REGISTER_V1; US-13",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 60 sites on GF, 0 certified (largest 0.138 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x60, TOPOLOGY_ROLE_UNRESOLVED x33, UNKNOWN_OBJECT_IN_SITE x27)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "OPENING_ROLE_NOT_ADMITTED: 13 door-signature candidates on GF (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2"
+   ]
+  },
+  {
+   "item": "A-DOR-02-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "EXTERNAL_DOORS",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "أبواب خارجية",
+   "en": "External / entrance doors",
+   "qty": null,
+   "unit": "no.",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "OPENING_REGISTER_V1; US-13",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 60 sites on GF, 0 certified (largest 0.138 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x60, TOPOLOGY_ROLE_UNRESOLVED x33, UNKNOWN_OBJECT_IN_SITE x27)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "OPENING_ROLE_NOT_ADMITTED: 13 door-signature candidates on GF (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2"
+   ]
+  },
+  {
+   "item": "A-ALU-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "ALUMINIUM",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "ألمنيوم (أبواب وشبابيك خارجية)",
+   "en": "Aluminium exterior openings (US-13)",
+   "qty": null,
+   "unit": "no.",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "OPENING_REGISTER_V1; US-13",
+   "blockers": [
+    "OPENING_ROLE_NOT_ADMITTED: 13 door-signature candidates on GF (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2",
+    "GLAZING_ROLE_NOT_ESTABLISHED: no window / glazing layer role; window existence not proved - OQ-A1"
+   ]
+  },
+  {
+   "item": "A-WIN-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WINDOWS",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "شبابيك",
+   "en": "Windows",
+   "qty": null,
+   "unit": "no.",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "OPENING_REGISTER_V1; US-11 (no default window height)",
+   "blockers": [
+    "GLAZING_ROLE_NOT_ESTABLISHED: no window / glazing layer role; window existence not proved - OQ-A1"
+   ]
+  },
+  {
+   "item": "A-GLZ-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "GLAZING",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "زجاج",
+   "en": "Glazing",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "OPENING_REGISTER_V1 (no material from appearance)",
+   "blockers": [
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1",
+    "GLAZING_ROLE_NOT_ESTABLISHED: no window / glazing layer role; window existence not proved - OQ-A1"
+   ]
+  },
+  {
+   "item": "A-PAS-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "PASSAGES",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "فتحات بدون أبواب",
+   "en": "Passages / doorless openings",
+   "qty": null,
+   "unit": "no.",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "US-16 / US-17",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 60 sites on GF, 0 certified (largest 0.138 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x60, TOPOLOGY_ROLE_UNRESOLVED x33, UNKNOWN_OBJECT_IN_SITE x27)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "OPENING_ROLE_NOT_ADMITTED: 13 door-signature candidates on GF (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2"
+   ]
+  },
+  {
+   "item": "A-REV-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "REVEALS",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "جوانب الفتحات",
+   "en": "Opening reveals",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "URBAN-REVEAL-FINISH-METHOD@v1; US-07",
+   "blockers": [
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1",
+    "OPENING_ROLE_NOT_ADMITTED: 13 door-signature candidates on GF (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2"
+   ]
+  },
+  {
+   "item": "A-COL-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "EXPOSED_COLUMNS",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "أعمدة ظاهرة",
+   "en": "Exposed column faces",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 60 sites on GF, 0 certified (largest 0.138 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x60, TOPOLOGY_ROLE_UNRESOLVED x33, UNKNOWN_OBJECT_IN_SITE x27)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1"
+   ]
+  },
+  {
+   "item": "A-DCT-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "SHAFTS_DUCTS",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "مناور ودكتات",
+   "en": "Shafts / ducts finishes",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1 (owner physical authority required)",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 60 sites on GF, 0 certified (largest 0.138 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x60, TOPOLOGY_ROLE_UNRESOLVED x33, UNKNOWN_OBJECT_IN_SITE x27)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1"
+   ]
+  },
+  {
+   "item": "A-FLR-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "FLOOR",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "مساحة الأرضيات الصافية",
+   "en": "Net floor area per room",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "TS01 certified room site",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 40 sites on 1F, 0 certified (largest 0.125 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x40, TOPOLOGY_ROLE_UNRESOLVED x21, UNKNOWN_OBJECT_IN_SITE x19)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1"
+   ]
+  },
+  {
+   "item": "A-FLR-02-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "FLOOR_FINISH",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "تبليط الأرضيات",
+   "en": "Floor finish (tiles / porcelain / marble)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1 (only where cabinetry is identified)",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 40 sites on 1F, 0 certified (largest 0.125 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x40, TOPOLOGY_ROLE_UNRESOLVED x21, UNKNOWN_OBJECT_IN_SITE x19)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "FINISH_SCHEDULE_ABSENT: no finish schedule in the source - OQ-F1"
+   ]
+  },
+  {
+   "item": "A-CLG-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "CEILING",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "الأسقف (جبس / صبغ)",
+   "en": "Ceiling finish",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "ceiling = certified room footprint",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 40 sites on 1F, 0 certified (largest 0.125 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x40, TOPOLOGY_ROLE_UNRESOLVED x21, UNKNOWN_OBJECT_IN_SITE x19)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "FINISH_SCHEDULE_ABSENT: no finish schedule in the source - OQ-F1"
+   ]
+  },
+  {
+   "item": "A-SKT-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "SKIRTING",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "وزرة",
+   "en": "Skirting",
+   "qty": null,
+   "unit": "lm",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "URBAN-SKIRTING-OPENING-METHOD@v1; US-02 (none in fully tiled rooms); US-08",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 40 sites on 1F, 0 certified (largest 0.125 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x40, TOPOLOGY_ROLE_UNRESOLVED x21, UNKNOWN_OBJECT_IN_SITE x19)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "OPENING_ROLE_NOT_ADMITTED: 10 door-signature candidates on 1F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2",
+    "FINISH_SCHEDULE_ABSENT: no finish schedule in the source - OQ-F1"
+   ]
+  },
+  {
+   "item": "A-HPR-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "HIDDEN_PROFILE",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "بروفايل مخفي",
+   "en": "Hidden profile (same path as skirting)",
+   "qty": null,
+   "unit": "lm",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "US-08",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 40 sites on 1F, 0 certified (largest 0.125 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x40, TOPOLOGY_ROLE_UNRESOLVED x21, UNKNOWN_OBJECT_IN_SITE x19)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "OPENING_ROLE_NOT_ADMITTED: 10 door-signature candidates on 1F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2",
+    "FINISH_SCHEDULE_ABSENT: no finish schedule in the source - OQ-F1"
+   ]
+  },
+  {
+   "item": "A-BLK-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "طابوق (حسب السماكة)",
+   "en": "Blockwork by wall-band thickness",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "wall bands by thickness (never 'paired lines = wall')",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 40 sites on 1F, 0 certified (largest 0.125 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x40, TOPOLOGY_ROLE_UNRESOLVED x21, UNKNOWN_OBJECT_IN_SITE x19)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "WALL_BAND_THICKNESS_NOT_ESTABLISHED: 0 bands, 0 ESTABLISHED",
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1",
+    "OPENING_ROLE_NOT_ADMITTED: 10 door-signature candidates on 1F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2"
+   ]
+  },
+  {
+   "item": "A-PLS-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "INTERNAL_PLASTER",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "لياسة داخلية",
+   "en": "Internal plaster (exposed faces - openings + reveals + columns)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "URBAN-WALL-FINISH-HEIGHT-METHOD@v1; US-06; URBAN-REVEAL-FINISH-METHOD@v1; URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 40 sites on 1F, 0 certified (largest 0.125 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x40, TOPOLOGY_ROLE_UNRESOLVED x21, UNKNOWN_OBJECT_IN_SITE x19)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1",
+    "OPENING_ROLE_NOT_ADMITTED: 10 door-signature candidates on 1F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2"
+   ]
+  },
+  {
+   "item": "A-PNT-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "INTERNAL_PAINT",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "صبغ داخلي",
+   "en": "Internal paint (dry rooms only)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "URBAN-WALL-FINISH-HEIGHT-METHOD@v1 (no dry paint in wet rooms)",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 40 sites on 1F, 0 certified (largest 0.125 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x40, TOPOLOGY_ROLE_UNRESOLVED x21, UNKNOWN_OBJECT_IN_SITE x19)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1",
+    "OPENING_ROLE_NOT_ADMITTED: 10 door-signature candidates on 1F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2",
+    "WET_IDENTITY_LABEL_ONLY: 6 wet-label candidates (BATH, LAUNDRY, W.C) with no certified room to host them; sanitary sheet is supporting evidence only"
+   ]
+  },
+  {
+   "item": "A-WTL-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WALL_TILE",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "سيراميك جدران",
+   "en": "Wall tiles (wet / service rooms)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "US-01 wet ceramic",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 40 sites on 1F, 0 certified (largest 0.125 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x40, TOPOLOGY_ROLE_UNRESOLVED x21, UNKNOWN_OBJECT_IN_SITE x19)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1",
+    "OPENING_ROLE_NOT_ADMITTED: 10 door-signature candidates on 1F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2",
+    "WET_IDENTITY_LABEL_ONLY: 6 wet-label candidates (BATH, LAUNDRY, W.C) with no certified room to host them; sanitary sheet is supporting evidence only",
+    "FINISH_SCHEDULE_ABSENT: no finish schedule in the source - OQ-F1"
+   ]
+  },
+  {
+   "item": "A-WTP-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "TILE_PREP",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "تجهيز للسيراميك",
+   "en": "Tile preparation (separate from plaster)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "US-01",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 40 sites on 1F, 0 certified (largest 0.125 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x40, TOPOLOGY_ROLE_UNRESOLVED x21, UNKNOWN_OBJECT_IN_SITE x19)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1",
+    "OPENING_ROLE_NOT_ADMITTED: 10 door-signature candidates on 1F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2",
+    "WET_IDENTITY_LABEL_ONLY: 6 wet-label candidates (BATH, LAUNDRY, W.C) with no certified room to host them; sanitary sheet is supporting evidence only"
+   ]
+  },
+  {
+   "item": "A-WPF-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WATERPROOFING",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "عزل مائي أرضيات",
+   "en": "Waterproofing membrane = wet / service floor area",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "US-04 / US-14 (wet identity not from label text alone)",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 40 sites on 1F, 0 certified (largest 0.125 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x40, TOPOLOGY_ROLE_UNRESOLVED x21, UNKNOWN_OBJECT_IN_SITE x19)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "WET_IDENTITY_LABEL_ONLY: 6 wet-label candidates (BATH, LAUNDRY, W.C) with no certified room to host them; sanitary sheet is supporting evidence only"
+   ]
+  },
+  {
+   "item": "A-WPU-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WATERPROOFING",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "عزل مائي جوانب 15 سم",
+   "en": "Waterproofing upturn 0.15 m on the gross perimeter (doorway not deducted)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "US-05",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 40 sites on 1F, 0 certified (largest 0.125 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x40, TOPOLOGY_ROLE_UNRESOLVED x21, UNKNOWN_OBJECT_IN_SITE x19)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "WET_IDENTITY_LABEL_ONLY: 6 wet-label candidates (BATH, LAUNDRY, W.C) with no certified room to host them; sanitary sheet is supporting evidence only"
+   ]
+  },
+  {
+   "item": "A-MRB-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "MARBLE",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "رخام عتبات",
+   "en": "Marble thresholds (wet / service doors)",
+   "qty": null,
+   "unit": "lm",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 40 sites on 1F, 0 certified (largest 0.125 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x40, TOPOLOGY_ROLE_UNRESOLVED x21, UNKNOWN_OBJECT_IN_SITE x19)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "OPENING_ROLE_NOT_ADMITTED: 10 door-signature candidates on 1F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2",
+    "WET_IDENTITY_LABEL_ONLY: 6 wet-label candidates (BATH, LAUNDRY, W.C) with no certified room to host them; sanitary sheet is supporting evidence only"
+   ]
+  },
+  {
+   "item": "A-STR-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "STAIRS",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "درج (قوائم ونوائم)",
+   "en": "Stair treads / risers / landings",
+   "qty": null,
+   "unit": "no.",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "deterministic stair geometry only",
+   "blockers": [
+    "STAIR_ROLE_NOT_ESTABLISHED: 3 stair-arrow blocks observed; tread / riser lines have no role authority; nothing counted"
+   ]
+  },
+  {
+   "item": "A-STR-02-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "STAIR_FINISH",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "تكسية الدرج ووزرة الدرج",
+   "en": "Stair finish + stair skirting",
+   "qty": null,
+   "unit": "lm",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "deterministic stair geometry only",
+   "blockers": [
+    "FINISH_SCHEDULE_ABSENT: no finish schedule in the source - OQ-F1",
+    "STAIR_ROLE_NOT_ESTABLISHED: 3 stair-arrow blocks observed; tread / riser lines have no role authority; nothing counted"
+   ]
+  },
+  {
+   "item": "A-HRL-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "HANDRAIL",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "درابزين",
+   "en": "Handrails / balustrades",
+   "qty": null,
+   "unit": "lm",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "deterministic stair geometry only",
+   "blockers": [
+    "STAIR_ROLE_NOT_ESTABLISHED: 3 stair-arrow blocks observed; tread / riser lines have no role authority; nothing counted"
+   ]
+  },
+  {
+   "item": "A-DOR-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "INTERNAL_DOORS",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "أبواب داخلية",
+   "en": "Internal doors (US-13: PVC)",
+   "qty": null,
+   "unit": "no.",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "OPENING_REGISTER_V1; US-13",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 40 sites on 1F, 0 certified (largest 0.125 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x40, TOPOLOGY_ROLE_UNRESOLVED x21, UNKNOWN_OBJECT_IN_SITE x19)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "OPENING_ROLE_NOT_ADMITTED: 10 door-signature candidates on 1F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2"
+   ]
+  },
+  {
+   "item": "A-DOR-02-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "EXTERNAL_DOORS",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "أبواب خارجية",
+   "en": "External / entrance doors",
+   "qty": null,
+   "unit": "no.",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "OPENING_REGISTER_V1; US-13",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 40 sites on 1F, 0 certified (largest 0.125 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x40, TOPOLOGY_ROLE_UNRESOLVED x21, UNKNOWN_OBJECT_IN_SITE x19)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "OPENING_ROLE_NOT_ADMITTED: 10 door-signature candidates on 1F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2"
+   ]
+  },
+  {
+   "item": "A-ALU-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "ALUMINIUM",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "ألمنيوم (أبواب وشبابيك خارجية)",
+   "en": "Aluminium exterior openings (US-13)",
+   "qty": null,
+   "unit": "no.",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "OPENING_REGISTER_V1; US-13",
+   "blockers": [
+    "OPENING_ROLE_NOT_ADMITTED: 10 door-signature candidates on 1F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2",
+    "GLAZING_ROLE_NOT_ESTABLISHED: no window / glazing layer role; window existence not proved - OQ-A1"
+   ]
+  },
+  {
+   "item": "A-WIN-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WINDOWS",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "شبابيك",
+   "en": "Windows",
+   "qty": null,
+   "unit": "no.",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "OPENING_REGISTER_V1; US-11 (no default window height)",
+   "blockers": [
+    "GLAZING_ROLE_NOT_ESTABLISHED: no window / glazing layer role; window existence not proved - OQ-A1"
+   ]
+  },
+  {
+   "item": "A-GLZ-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "GLAZING",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "زجاج",
+   "en": "Glazing",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "OPENING_REGISTER_V1 (no material from appearance)",
+   "blockers": [
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1",
+    "GLAZING_ROLE_NOT_ESTABLISHED: no window / glazing layer role; window existence not proved - OQ-A1"
+   ]
+  },
+  {
+   "item": "A-PAS-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "PASSAGES",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "فتحات بدون أبواب",
+   "en": "Passages / doorless openings",
+   "qty": null,
+   "unit": "no.",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "US-16 / US-17",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 40 sites on 1F, 0 certified (largest 0.125 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x40, TOPOLOGY_ROLE_UNRESOLVED x21, UNKNOWN_OBJECT_IN_SITE x19)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "OPENING_ROLE_NOT_ADMITTED: 10 door-signature candidates on 1F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2"
+   ]
+  },
+  {
+   "item": "A-REV-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "REVEALS",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "جوانب الفتحات",
+   "en": "Opening reveals",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "URBAN-REVEAL-FINISH-METHOD@v1; US-07",
+   "blockers": [
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1",
+    "OPENING_ROLE_NOT_ADMITTED: 10 door-signature candidates on 1F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2"
+   ]
+  },
+  {
+   "item": "A-COL-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "EXPOSED_COLUMNS",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "أعمدة ظاهرة",
+   "en": "Exposed column faces",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 40 sites on 1F, 0 certified (largest 0.125 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x40, TOPOLOGY_ROLE_UNRESOLVED x21, UNKNOWN_OBJECT_IN_SITE x19)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1"
+   ]
+  },
+  {
+   "item": "A-DCT-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "SHAFTS_DUCTS",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "مناور ودكتات",
+   "en": "Shafts / ducts finishes",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1 (owner physical authority required)",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 40 sites on 1F, 0 certified (largest 0.125 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x40, TOPOLOGY_ROLE_UNRESOLVED x21, UNKNOWN_OBJECT_IN_SITE x19)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1"
+   ]
+  },
+  {
+   "item": "A-FLR-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "FLOOR",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "مساحة الأرضيات الصافية",
+   "en": "Net floor area per room",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "TS01 certified room site",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 18 sites on 2F, 0 certified (largest 0.07 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x18, UNKNOWN_OBJECT_IN_SITE x14, TOPOLOGY_ROLE_UNRESOLVED x4)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1"
+   ]
+  },
+  {
+   "item": "A-FLR-02-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "FLOOR_FINISH",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "تبليط الأرضيات",
+   "en": "Floor finish (tiles / porcelain / marble)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1 (only where cabinetry is identified)",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 18 sites on 2F, 0 certified (largest 0.07 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x18, UNKNOWN_OBJECT_IN_SITE x14, TOPOLOGY_ROLE_UNRESOLVED x4)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "FINISH_SCHEDULE_ABSENT: no finish schedule in the source - OQ-F1"
+   ]
+  },
+  {
+   "item": "A-CLG-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "CEILING",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "الأسقف (جبس / صبغ)",
+   "en": "Ceiling finish",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "ceiling = certified room footprint",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 18 sites on 2F, 0 certified (largest 0.07 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x18, UNKNOWN_OBJECT_IN_SITE x14, TOPOLOGY_ROLE_UNRESOLVED x4)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "FINISH_SCHEDULE_ABSENT: no finish schedule in the source - OQ-F1"
+   ]
+  },
+  {
+   "item": "A-SKT-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "SKIRTING",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "وزرة",
+   "en": "Skirting",
+   "qty": null,
+   "unit": "lm",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "URBAN-SKIRTING-OPENING-METHOD@v1; US-02 (none in fully tiled rooms); US-08",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 18 sites on 2F, 0 certified (largest 0.07 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x18, UNKNOWN_OBJECT_IN_SITE x14, TOPOLOGY_ROLE_UNRESOLVED x4)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "OPENING_ROLE_NOT_ADMITTED: 3 door-signature candidates on 2F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2",
+    "FINISH_SCHEDULE_ABSENT: no finish schedule in the source - OQ-F1"
+   ]
+  },
+  {
+   "item": "A-HPR-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "HIDDEN_PROFILE",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "بروفايل مخفي",
+   "en": "Hidden profile (same path as skirting)",
+   "qty": null,
+   "unit": "lm",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "US-08",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 18 sites on 2F, 0 certified (largest 0.07 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x18, UNKNOWN_OBJECT_IN_SITE x14, TOPOLOGY_ROLE_UNRESOLVED x4)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "OPENING_ROLE_NOT_ADMITTED: 3 door-signature candidates on 2F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2",
+    "FINISH_SCHEDULE_ABSENT: no finish schedule in the source - OQ-F1"
+   ]
+  },
+  {
+   "item": "A-BLK-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "طابوق (حسب السماكة)",
+   "en": "Blockwork by wall-band thickness",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "wall bands by thickness (never 'paired lines = wall')",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 18 sites on 2F, 0 certified (largest 0.07 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x18, UNKNOWN_OBJECT_IN_SITE x14, TOPOLOGY_ROLE_UNRESOLVED x4)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "WALL_BAND_THICKNESS_NOT_ESTABLISHED: 0 bands, 0 ESTABLISHED",
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1",
+    "OPENING_ROLE_NOT_ADMITTED: 3 door-signature candidates on 2F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2"
+   ]
+  },
+  {
+   "item": "A-PLS-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "INTERNAL_PLASTER",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "لياسة داخلية",
+   "en": "Internal plaster (exposed faces - openings + reveals + columns)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "URBAN-WALL-FINISH-HEIGHT-METHOD@v1; US-06; URBAN-REVEAL-FINISH-METHOD@v1; URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 18 sites on 2F, 0 certified (largest 0.07 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x18, UNKNOWN_OBJECT_IN_SITE x14, TOPOLOGY_ROLE_UNRESOLVED x4)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1",
+    "OPENING_ROLE_NOT_ADMITTED: 3 door-signature candidates on 2F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2"
+   ]
+  },
+  {
+   "item": "A-PNT-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "INTERNAL_PAINT",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "صبغ داخلي",
+   "en": "Internal paint (dry rooms only)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "URBAN-WALL-FINISH-HEIGHT-METHOD@v1 (no dry paint in wet rooms)",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 18 sites on 2F, 0 certified (largest 0.07 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x18, UNKNOWN_OBJECT_IN_SITE x14, TOPOLOGY_ROLE_UNRESOLVED x4)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1",
+    "OPENING_ROLE_NOT_ADMITTED: 3 door-signature candidates on 2F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2",
+    "WET_IDENTITY_LABEL_ONLY: 1 wet-label candidates (W.C) with no certified room to host them; sanitary sheet is supporting evidence only"
+   ]
+  },
+  {
+   "item": "A-WTL-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WALL_TILE",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "سيراميك جدران",
+   "en": "Wall tiles (wet / service rooms)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "US-01 wet ceramic",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 18 sites on 2F, 0 certified (largest 0.07 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x18, UNKNOWN_OBJECT_IN_SITE x14, TOPOLOGY_ROLE_UNRESOLVED x4)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1",
+    "OPENING_ROLE_NOT_ADMITTED: 3 door-signature candidates on 2F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2",
+    "WET_IDENTITY_LABEL_ONLY: 1 wet-label candidates (W.C) with no certified room to host them; sanitary sheet is supporting evidence only",
+    "FINISH_SCHEDULE_ABSENT: no finish schedule in the source - OQ-F1"
+   ]
+  },
+  {
+   "item": "A-WTP-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "TILE_PREP",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "تجهيز للسيراميك",
+   "en": "Tile preparation (separate from plaster)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "US-01",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 18 sites on 2F, 0 certified (largest 0.07 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x18, UNKNOWN_OBJECT_IN_SITE x14, TOPOLOGY_ROLE_UNRESOLVED x4)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1",
+    "OPENING_ROLE_NOT_ADMITTED: 3 door-signature candidates on 2F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2",
+    "WET_IDENTITY_LABEL_ONLY: 1 wet-label candidates (W.C) with no certified room to host them; sanitary sheet is supporting evidence only"
+   ]
+  },
+  {
+   "item": "A-WPF-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WATERPROOFING",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "عزل مائي أرضيات",
+   "en": "Waterproofing membrane = wet / service floor area",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "US-04 / US-14 (wet identity not from label text alone)",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 18 sites on 2F, 0 certified (largest 0.07 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x18, UNKNOWN_OBJECT_IN_SITE x14, TOPOLOGY_ROLE_UNRESOLVED x4)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "WET_IDENTITY_LABEL_ONLY: 1 wet-label candidates (W.C) with no certified room to host them; sanitary sheet is supporting evidence only"
+   ]
+  },
+  {
+   "item": "A-WPU-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WATERPROOFING",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "عزل مائي جوانب 15 سم",
+   "en": "Waterproofing upturn 0.15 m on the gross perimeter (doorway not deducted)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "US-05",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 18 sites on 2F, 0 certified (largest 0.07 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x18, UNKNOWN_OBJECT_IN_SITE x14, TOPOLOGY_ROLE_UNRESOLVED x4)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "WET_IDENTITY_LABEL_ONLY: 1 wet-label candidates (W.C) with no certified room to host them; sanitary sheet is supporting evidence only"
+   ]
+  },
+  {
+   "item": "A-MRB-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "MARBLE",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "رخام عتبات",
+   "en": "Marble thresholds (wet / service doors)",
+   "qty": null,
+   "unit": "lm",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 18 sites on 2F, 0 certified (largest 0.07 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x18, UNKNOWN_OBJECT_IN_SITE x14, TOPOLOGY_ROLE_UNRESOLVED x4)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "OPENING_ROLE_NOT_ADMITTED: 3 door-signature candidates on 2F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2",
+    "WET_IDENTITY_LABEL_ONLY: 1 wet-label candidates (W.C) with no certified room to host them; sanitary sheet is supporting evidence only"
+   ]
+  },
+  {
+   "item": "A-STR-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "STAIRS",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "درج (قوائم ونوائم)",
+   "en": "Stair treads / risers / landings",
+   "qty": null,
+   "unit": "no.",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "deterministic stair geometry only",
+   "blockers": [
+    "STAIR_ROLE_NOT_ESTABLISHED: 2 stair-arrow blocks observed; tread / riser lines have no role authority; nothing counted"
+   ]
+  },
+  {
+   "item": "A-STR-02-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "STAIR_FINISH",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "تكسية الدرج ووزرة الدرج",
+   "en": "Stair finish + stair skirting",
+   "qty": null,
+   "unit": "lm",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "deterministic stair geometry only",
+   "blockers": [
+    "FINISH_SCHEDULE_ABSENT: no finish schedule in the source - OQ-F1",
+    "STAIR_ROLE_NOT_ESTABLISHED: 2 stair-arrow blocks observed; tread / riser lines have no role authority; nothing counted"
+   ]
+  },
+  {
+   "item": "A-HRL-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "HANDRAIL",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "درابزين",
+   "en": "Handrails / balustrades",
+   "qty": null,
+   "unit": "lm",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "deterministic stair geometry only",
+   "blockers": [
+    "STAIR_ROLE_NOT_ESTABLISHED: 2 stair-arrow blocks observed; tread / riser lines have no role authority; nothing counted"
+   ]
+  },
+  {
+   "item": "A-DOR-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "INTERNAL_DOORS",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "أبواب داخلية",
+   "en": "Internal doors (US-13: PVC)",
+   "qty": null,
+   "unit": "no.",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "OPENING_REGISTER_V1; US-13",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 18 sites on 2F, 0 certified (largest 0.07 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x18, UNKNOWN_OBJECT_IN_SITE x14, TOPOLOGY_ROLE_UNRESOLVED x4)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "OPENING_ROLE_NOT_ADMITTED: 3 door-signature candidates on 2F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2"
+   ]
+  },
+  {
+   "item": "A-DOR-02-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "EXTERNAL_DOORS",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "أبواب خارجية",
+   "en": "External / entrance doors",
+   "qty": null,
+   "unit": "no.",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "OPENING_REGISTER_V1; US-13",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 18 sites on 2F, 0 certified (largest 0.07 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x18, UNKNOWN_OBJECT_IN_SITE x14, TOPOLOGY_ROLE_UNRESOLVED x4)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "OPENING_ROLE_NOT_ADMITTED: 3 door-signature candidates on 2F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2"
+   ]
+  },
+  {
+   "item": "A-ALU-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "ALUMINIUM",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "ألمنيوم (أبواب وشبابيك خارجية)",
+   "en": "Aluminium exterior openings (US-13)",
+   "qty": null,
+   "unit": "no.",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "OPENING_REGISTER_V1; US-13",
+   "blockers": [
+    "OPENING_ROLE_NOT_ADMITTED: 3 door-signature candidates on 2F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2",
+    "GLAZING_ROLE_NOT_ESTABLISHED: no window / glazing layer role; window existence not proved - OQ-A1"
+   ]
+  },
+  {
+   "item": "A-WIN-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WINDOWS",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "شبابيك",
+   "en": "Windows",
+   "qty": null,
+   "unit": "no.",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "OPENING_REGISTER_V1; US-11 (no default window height)",
+   "blockers": [
+    "GLAZING_ROLE_NOT_ESTABLISHED: no window / glazing layer role; window existence not proved - OQ-A1"
+   ]
+  },
+  {
+   "item": "A-GLZ-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "GLAZING",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "زجاج",
+   "en": "Glazing",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "OPENING_REGISTER_V1 (no material from appearance)",
+   "blockers": [
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1",
+    "GLAZING_ROLE_NOT_ESTABLISHED: no window / glazing layer role; window existence not proved - OQ-A1"
+   ]
+  },
+  {
+   "item": "A-PAS-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "PASSAGES",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "فتحات بدون أبواب",
+   "en": "Passages / doorless openings",
+   "qty": null,
+   "unit": "no.",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "US-16 / US-17",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 18 sites on 2F, 0 certified (largest 0.07 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x18, UNKNOWN_OBJECT_IN_SITE x14, TOPOLOGY_ROLE_UNRESOLVED x4)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "OPENING_ROLE_NOT_ADMITTED: 3 door-signature candidates on 2F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2"
+   ]
+  },
+  {
+   "item": "A-REV-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "REVEALS",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "جوانب الفتحات",
+   "en": "Opening reveals",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "URBAN-REVEAL-FINISH-METHOD@v1; US-07",
+   "blockers": [
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1",
+    "OPENING_ROLE_NOT_ADMITTED: 3 door-signature candidates on 2F (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2"
+   ]
+  },
+  {
+   "item": "A-COL-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "EXPOSED_COLUMNS",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "أعمدة ظاهرة",
+   "en": "Exposed column faces",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 18 sites on 2F, 0 certified (largest 0.07 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x18, UNKNOWN_OBJECT_IN_SITE x14, TOPOLOGY_ROLE_UNRESOLVED x4)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1"
+   ]
+  },
+  {
+   "item": "A-DCT-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "SHAFTS_DUCTS",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "مناور ودكتات",
+   "en": "Shafts / ducts finishes",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1 (owner physical authority required)",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 18 sites on 2F, 0 certified (largest 0.07 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x18, UNKNOWN_OBJECT_IN_SITE x14, TOPOLOGY_ROLE_UNRESOLVED x4)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "HEIGHT_NOT_ESTABLISHED: sections exist only as raster (PDF 07-12 pp. 4-5); vector elevations give finished-floor marks only; no slab / finish build-up; 3.15 / 3.20 never reused - OQ-S1"
+   ]
+  },
+  {
+   "item": "A-PLS-02-EXT",
+   "discipline": "ARCHITECTURAL",
+   "trade": "EXTERNAL_PLASTER",
+   "floor": "EXTERNAL",
+   "element": "ALL FACADES",
+   "ar": "لياسة خارجية",
+   "en": "External plaster (elevations)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf NW / SE elevations; PDF 01-06 p.6, 07-12 pp.1-3 (raster)",
+   "rule": "exposed external faces - openings + reveals",
+   "blockers": [
+    "OPENING_ROLE_NOT_ADMITTED: 13 door-signature candidates on GF (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2",
+    "ELEVATION_SET_INCOMPLETE: NE / SW elevations exist only as raster (PDF 07-12 pp. 1, 3); no wall height / opening register for the facades"
+   ]
+  },
+  {
+   "item": "A-PNT-02-EXT",
+   "discipline": "ARCHITECTURAL",
+   "trade": "EXTERNAL_PAINT",
+   "floor": "EXTERNAL",
+   "element": "ALL FACADES",
+   "ar": "صبغ خارجي",
+   "en": "External paint (elevations)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf NW / SE elevations; PDF 01-06 p.6, 07-12 pp.1-3 (raster)",
+   "rule": "exposed external faces - openings + reveals",
+   "blockers": [
+    "OPENING_ROLE_NOT_ADMITTED: 13 door-signature candidates on GF (block arcs on layer D; no DOOR role, no reviewed claim); no door / window schedule - OQ-A2",
+    "ELEVATION_SET_INCOMPLETE: NE / SW elevations exist only as raster (PDF 07-12 pp. 1, 3); no wall height / opening register for the facades"
+   ]
+  }
+ ],
+ "complete": 0,
+ "blocked": 77
+}

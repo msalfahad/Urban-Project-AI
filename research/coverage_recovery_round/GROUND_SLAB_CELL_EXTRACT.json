@@ -1,0 +1,455 @@
+{
+ "bands": 55,
+ "cells": [
+  {
+   "area_m2": 11.4665,
+   "cell_id": "FP1-C94480_38779:X",
+   "eff_width_mm": 1550.6,
+   "footprint_area_m2": 227.7191,
+   "footprint_id": "FP-1",
+   "labels": [
+    "+1.00",
+    "C",
+    "C11"
+   ],
+   "parent_area_m2": 11.4665,
+   "parent_cell": "FP1-C94480_38779",
+   "parent_released_m2": 0.0,
+   "part": "EXTENSION"
+  },
+  {
+   "area_m2": 4.1082,
+   "cell_id": "FP1-C95274_43121:R",
+   "eff_width_mm": 839.1,
+   "footprint_area_m2": 227.7191,
+   "footprint_id": "FP-1",
+   "labels": [],
+   "parent_area_m2": 4.1082,
+   "parent_cell": "FP1-C95274_43121",
+   "parent_released_m2": 4.1082,
+   "part": "RELEASED_ZONE_PART"
+  },
+  {
+   "area_m2": 14.3908,
+   "cell_id": "FP1-C97826_38800:R",
+   "eff_width_mm": 1783.8,
+   "footprint_area_m2": 227.7191,
+   "footprint_id": "FP-1",
+   "labels": [
+    "C11"
+   ],
+   "parent_area_m2": 14.3908,
+   "parent_cell": "FP1-C97826_38800",
+   "parent_released_m2": 14.3908,
+   "part": "RELEASED_ZONE_PART"
+  },
+  {
+   "area_m2": 42.5596,
+   "cell_id": "FP1-C99368_44772:X",
+   "eff_width_mm": 1142.0,
+   "footprint_area_m2": 227.7191,
+   "footprint_id": "FP-1",
+   "labels": [
+    "+1.00",
+    "+1.00",
+    "+0.30",
+    "C9",
+    "C2",
+    "C1",
+    "C6",
+    "******"
+   ],
+   "parent_area_m2": 42.5596,
+   "parent_cell": "FP1-C99368_44772",
+   "parent_released_m2": 0.0,
+   "part": "EXTENSION"
+  },
+  {
+   "area_m2": 2.0567,
+   "cell_id": "FP1-C99443_48723:X",
+   "eff_width_mm": 710.2,
+   "footprint_area_m2": 227.7191,
+   "footprint_id": "FP-1",
+   "labels": [
+    "C2"
+   ],
+   "parent_area_m2": 2.0567,
+   "parent_cell": "FP1-C99443_48723",
+   "parent_released_m2": 0.0,
+   "part": "EXTENSION"
+  },
+  {
+   "area_m2": 0.0313,
+   "cell_id": "FP1-C100461_49470:X",
+   "eff_width_mm": 79.4,
+   "footprint_area_m2": 227.7191,
+   "footprint_id": "FP-1",
+   "labels": [],
+   "parent_area_m2": 0.0313,
+   "parent_cell": "FP1-C100461_49470",
+   "parent_released_m2": 0.0,
+   "part": "EXTENSION"
+  },
+  {
+   "area_m2": 0.024,
+   "cell_id": "FP1-C100769_46437:X",
+   "eff_width_mm": 64.2,
+   "footprint_area_m2": 227.7191,
+   "footprint_id": "FP-1",
+   "labels": [],
+   "parent_area_m2": 0.024,
+   "parent_cell": "FP1-C100769_46437",
+   "parent_released_m2": 0.0,
+   "part": "EXTENSION"
+  },
+  {
+   "area_m2": 8.3401,
+   "cell_id": "FP1-C101329_39533:R",
+   "eff_width_mm": 516.9,
+   "footprint_area_m2": 227.7191,
+   "footprint_id": "FP-1",
+   "labels": [
+    "C7"
+   ],
+   "parent_area_m2": 8.3401,
+   "parent_cell": "FP1-C101329_39533",
+   "parent_released_m2": 8.3401,
+   "part": "RELEASED_ZONE_PART"
+  },
+  {
+   "area_m2": 1.6567,
+   "cell_id": "FP1-C101862_49002:X",
+   "eff_width_mm": 577.8,
+   "footprint_area_m2": 227.7191,
+   "footprint_id": "FP-1",
+   "labels": [
+    "C5"
+   ],
+   "parent_area_m2": 1.6567,
+   "parent_cell": "FP1-C101862_49002",
+   "parent_released_m2": 0.0,
+   "part": "EXTENSION"
+  },
+  {
+   "area_m2": 0.0443,
+   "cell_id": "FP1-C102547_48392:X",
+   "eff_width_mm": 87.2,
+   "footprint_area_m2": 227.7191,
+   "footprint_id": "FP-1",
+   "labels": [],
+   "parent_area_m2": 0.0443,
+   "parent_cell": "FP1-C102547_48392",
+   "parent_released_m2": 0.0,
+   "part": "EXTENSION"
+  },
+  {
+   "area_m2": 0.0443,
+   "cell_id": "FP1-C102989_48417:X",
+   "eff_width_mm": 87.2,
+   "footprint_area_m2": 227.7191,
+   "footprint_id": "FP-1",
+   "labels": [],
+   "parent_area_m2": 0.0443,
+   "parent_cell": "FP1-C102989_48417",
+   "parent_released_m2": 0.0,
+   "part": "EXTENSION"
+  },
+  {
+   "area_m2": 0.1537,
+   "cell_id": "FP1-C103104_47834:X",
+   "eff_width_mm": 162.4,
+   "footprint_area_m2": 227.7191,
+   "footprint_id": "FP-1",
+   "labels": [],
+   "parent_area_m2": 0.1537,
+   "parent_cell": "FP1-C103104_47834",
+   "parent_released_m2": 0.0,
+   "part": "EXTENSION"
+  },
+  {
+   "area_m2": 7.9815,
+   "cell_id": "FP1-C103193_37244:R",
+   "eff_width_mm": 960.0,
+   "footprint_area_m2": 227.7191,
+   "footprint_id": "FP-1",
+   "labels": [
+    "C3"
+   ],
+   "parent_area_m2": 7.9815,
+   "parent_cell": "FP1-C103193_37244",
+   "parent_released_m2": 7.9815,
+   "part": "RELEASED_ZONE_PART"
+  },
+  {
+   "area_m2": 3.2477,
+   "cell_id": "FP1-C103968_46573:X",
+   "eff_width_mm": 890.8,
+   "footprint_area_m2": 227.7191,
+   "footprint_id": "FP-1",
+   "labels": [],
+   "parent_area_m2": 3.2477,
+   "parent_cell": "FP1-C103968_46573",
+   "parent_released_m2": 0.0,
+   "part": "EXTENSION"
+  },
+  {
+   "area_m2": 3.5448,
+   "cell_id": "FP1-C104062_48671:X",
+   "eff_width_mm": 862.4,
+   "footprint_area_m2": 227.7191,
+   "footprint_id": "FP-1",
+   "labels": [],
+   "parent_area_m2": 3.5448,
+   "parent_cell": "FP1-C104062_48671",
+   "parent_released_m2": 0.0,
+   "part": "EXTENSION"
+  },
+  {
+   "area_m2": 14.7729,
+   "cell_id": "FP1-C105243_43724:R",
+   "eff_width_mm": 1824.9,
+   "footprint_area_m2": 227.7191,
+   "footprint_id": "FP-1",
+   "labels": [
+    "T=10cm",
+    "5%%c10/m E.W."
+   ],
+   "parent_area_m2": 14.7729,
+   "parent_cell": "FP1-C105243_43724",
+   "parent_released_m2": 14.7729,
+   "part": "RELEASED_ZONE_PART"
+  },
+  {
+   "area_m2": 14.7709,
+   "cell_id": "FP1-C105255_39922:R",
+   "eff_width_mm": 1870.9,
+   "footprint_area_m2": 227.7191,
+   "footprint_id": "FP-1",
+   "labels": [
+    "CN/FN",
+    "C5"
+   ],
+   "parent_area_m2": 14.7709,
+   "parent_cell": "FP1-C105255_39922",
+   "parent_released_m2": 14.7709,
+   "part": "RELEASED_ZONE_PART"
+  },
+  {
+   "area_m2": 10.7626,
+   "cell_id": "FP1-C106807_47795:X",
+   "eff_width_mm": 1311.4,
+   "footprint_area_m2": 227.7191,
+   "footprint_id": "FP-1",
+   "labels": [
+    "C4",
+    "C9",
+    "CN"
+   ],
+   "parent_area_m2": 10.7626,
+   "parent_cell": "FP1-C106807_47795",
+   "parent_released_m2": 0.0,
+   "part": "EXTENSION"
+  },
+  {
+   "area_m2": 0.0312,
+   "cell_id": "FP1-C108346_45596:X",
+   "eff_width_mm": 70.3,
+   "footprint_area_m2": 227.7191,
+   "footprint_id": "FP-1",
+   "labels": [],
+   "parent_area_m2": 0.0312,
+   "parent_cell": "FP1-C108346_45596",
+   "parent_released_m2": 0.0,
+   "part": "EXTENSION"
+  },
+  {
+   "area_m2": 2.0466,
+   "cell_id": "FP1-C108563_44764:X",
+   "eff_width_mm": 642.8,
+   "footprint_area_m2": 227.7191,
+   "footprint_id": "FP-1",
+   "labels": [
+    "CN"
+   ],
+   "parent_area_m2": 2.0466,
+   "parent_cell": "FP1-C108563_44764",
+   "parent_released_m2": 0.0,
+   "part": "EXTENSION"
+  },
+  {
+   "area_m2": 5.9279,
+   "cell_id": "FP1-C109378_37253:R",
+   "eff_width_mm": 927.0,
+   "footprint_area_m2": 227.7191,
+   "footprint_id": "FP-1",
+   "labels": [
+    "C10"
+   ],
+   "parent_area_m2": 5.9279,
+   "parent_cell": "FP1-C109378_37253",
+   "parent_released_m2": 5.9279,
+   "part": "RELEASED_ZONE_PART"
+  },
+  {
+   "area_m2": 24.3953,
+   "cell_id": "FP1-C109773_41038:X",
+   "eff_width_mm": 2363.9,
+   "footprint_area_m2": 227.7191,
+   "footprint_id": "FP-1",
+   "labels": [
+    "CN/FN",
+    "CN/FN",
+    "+1.00",
+    "C3",
+    "C8"
+   ],
+   "parent_area_m2": 24.3953,
+   "parent_cell": "FP1-C109773_41038",
+   "parent_released_m2": 0.0,
+   "part": "EXTENSION"
+  },
+  {
+   "area_m2": 0.0487,
+   "cell_id": "FP1-C110037_49765:X",
+   "eff_width_mm": 105.5,
+   "footprint_area_m2": 227.7191,
+   "footprint_id": "FP-1",
+   "labels": [],
+   "parent_area_m2": 0.0487,
+   "parent_cell": "FP1-C110037_49765",
+   "parent_released_m2": 0.0,
+   "part": "EXTENSION"
+  },
+  {
+   "area_m2": 0.2977,
+   "cell_id": "FP1-C111387_44098:X",
+   "eff_width_mm": 229.5,
+   "footprint_area_m2": 227.7191,
+   "footprint_id": "FP-1",
+   "labels": [],
+   "parent_area_m2": 0.2977,
+   "parent_cell": "FP1-C111387_44098",
+   "parent_released_m2": 0.0,
+   "part": "EXTENSION"
+  },
+  {
+   "area_m2": 22.9301,
+   "cell_id": "FP2-C83002_39670:R",
+   "eff_width_mm": 2356.2,
+   "footprint_area_m2": 60.5572,
+   "footprint_id": "FP-2",
+   "labels": [
+    "+0.30",
+    "C",
+    "C",
+    "T=10cm",
+    "5%%c10/m E.W."
+   ],
+   "parent_area_m2": 22.9301,
+   "parent_cell": "FP2-C83002_39670",
+   "parent_released_m2": 22.9301,
+   "part": "RELEASED_ZONE_PART"
+  },
+  {
+   "area_m2": 3.1103,
+   "cell_id": "FP2-C85943_37723:R",
+   "eff_width_mm": 864.9,
+   "footprint_area_m2": 60.5572,
+   "footprint_id": "FP-2",
+   "labels": [],
+   "parent_area_m2": 3.1103,
+   "parent_cell": "FP2-C85943_37723",
+   "parent_released_m2": 3.1103,
+   "part": "RELEASED_ZONE_PART"
+  },
+  {
+   "area_m2": 2.6562,
+   "cell_id": "FP2-C85947_40016:R",
+   "eff_width_mm": 805.9,
+   "footprint_area_m2": 60.5572,
+   "footprint_id": "FP-2",
+   "labels": [],
+   "parent_area_m2": 2.6562,
+   "parent_cell": "FP2-C85947_40016",
+   "parent_released_m2": 2.6562,
+   "part": "RELEASED_ZONE_PART"
+  },
+  {
+   "area_m2": 6.8658,
+   "cell_id": "FP2-C87768_38799:R",
+   "eff_width_mm": 1164.5,
+   "footprint_area_m2": 60.5572,
+   "footprint_id": "FP-2",
+   "labels": [
+    "+0.30",
+    "C"
+   ],
+   "parent_area_m2": 6.8658,
+   "parent_cell": "FP2-C87768_38799",
+   "parent_released_m2": 6.8658,
+   "part": "RELEASED_ZONE_PART"
+  },
+  {
+   "area_m2": 1.4352,
+   "cell_id": "FP2-C89468_37248:R",
+   "eff_width_mm": 599.0,
+   "footprint_area_m2": 60.5572,
+   "footprint_id": "FP-2",
+   "labels": [],
+   "parent_area_m2": 1.4352,
+   "parent_cell": "FP2-C89468_37248",
+   "parent_released_m2": 1.4352,
+   "part": "RELEASED_ZONE_PART"
+  },
+  {
+   "area_m2": 6.8495,
+   "cell_id": "FP2-C90093_39548:R",
+   "eff_width_mm": 1305.7,
+   "footprint_area_m2": 60.5572,
+   "footprint_id": "FP-2",
+   "labels": [
+    "C5"
+   ],
+   "parent_area_m2": 6.8495,
+   "parent_cell": "FP2-C90093_39548",
+   "parent_released_m2": 6.8495,
+   "part": "RELEASED_ZONE_PART"
+  },
+  {
+   "area_m2": 1.1357,
+   "cell_id": "FP2-C90843_37248:R",
+   "eff_width_mm": 529.2,
+   "footprint_area_m2": 60.5572,
+   "footprint_id": "FP-2",
+   "labels": [
+    "+0.30"
+   ],
+   "parent_area_m2": 1.1357,
+   "parent_cell": "FP2-C90843_37248",
+   "parent_released_m2": 1.1357,
+   "part": "RELEASED_ZONE_PART"
+  }
+ ],
+ "columns": 36,
+ "released_zones": [
+  {
+   "area_m2": 70.4059,
+   "kind": "V3A_ZONE"
+  },
+  {
+   "area_m2": 44.9829,
+   "kind": "V3B_ZONE"
+  }
+ ],
+ "rule": "cells = founded footprint - 300 mm bands (layers 1+2, arcs) - columns - single structural lines; RELEASED_ZONE_PART = inside the V3a / V3b T= zones",
+ "sheet_bounds": [
+  78930.0,
+  29036.0,
+  114124.0,
+  57066.0
+ ],
+ "source": {
+  "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+  "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+ }
+}

@@ -1,0 +1,1127 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_SOURCE_MANIFEST_V1",
+ "zips": {
+  "58e923eb-Plans_Part1_CAD_Structural.zip": {
+   "sha256": "f5d183340b2601bf1508127daa2e3ae6beab82b42a8f7527b269ccfe24284b00",
+   "bytes": 8333111,
+   "members": [
+    {
+     "name": "P7757.dwg",
+     "bytes": 2655476,
+     "date_time": [
+      2026,
+      6,
+      18,
+      18,
+      8,
+      46
+     ]
+    },
+    {
+     "name": "P7757.dxf",
+     "bytes": 17227946,
+     "date_time": [
+      2026,
+      10,
+      1,
+      6,
+      27,
+      48
+     ]
+    },
+    {
+     "name": "P7757_Architectural.dwf",
+     "bytes": 2655253,
+     "date_time": [
+      2026,
+      6,
+      18,
+      18,
+      9,
+      50
+     ]
+    },
+    {
+     "name": "ST7757.dwg",
+     "bytes": 491151,
+     "date_time": [
+      2026,
+      6,
+      18,
+      18,
+      9,
+      50
+     ]
+    },
+    {
+     "name": "ST7757.dxf",
+     "bytes": 3153037,
+     "date_time": [
+      2026,
+      10,
+      1,
+      6,
+      28,
+      26
+     ]
+    },
+    {
+     "name": "ST7757.pdf",
+     "bytes": 2219156,
+     "date_time": [
+      2026,
+      6,
+      18,
+      18,
+      11,
+      18
+     ]
+    },
+    {
+     "name": "sanitary-7757.pdf",
+     "bytes": 674366,
+     "date_time": [
+      2026,
+      6,
+      18,
+      18,
+      13,
+      26
+     ]
+    }
+   ]
+  },
+  "4eb9afb0-Plans_Part2_Architectural_PDF_01-06.zip": {
+   "sha256": "d98a26f6b7bfaafee87c1d20f4142f6c6184c8449b4009bba1ce8ed50dd9a71c",
+   "bytes": 18310565,
+   "members": [
+    {
+     "name": "P7757_Architectural_Plan_Pages_01-06.pdf",
+     "bytes": 19015776,
+     "date_time": [
+      2026,
+      10,
+      2,
+      23,
+      13,
+      54
+     ]
+    }
+   ]
+  },
+  "6e3da136-Plans_Part3_Architectural_PDF_07-12.zip": {
+   "sha256": "4658c268ac5a8b40ec6f7cb8c7a911d4b45bf19c023a8ce3a54165fb7ea131bb",
+   "bytes": 17760720,
+   "members": [
+    {
+     "name": "P7757_Architectural_Plan_Pages_07-12.pdf",
+     "bytes": 18512718,
+     "date_time": [
+      2026,
+      10,
+      2,
+      23,
+      13,
+      54
+     ]
+    }
+   ]
+  }
+ },
+ "files": [
+  {
+   "file": "P7757.dwg",
+   "discipline": "ARCHITECTURAL",
+   "declared_role": "CAD_NATIVE",
+   "sha256": "7f61f3acdd62d62dc745f8b522f8136cb41c575df36ec6d9f27c2fe48fea41e3",
+   "bytes": 2655476,
+   "type": "DWG",
+   "cad_version": "AC1018",
+   "release": "R2004",
+   "content": "native DWG: readable only through a pinned decoder decode",
+   "decoded_by": "pinned LibreDWG decode (data/runs/cad_convert)",
+   "insunits_declared": 4,
+   "dimlfac": 0.1,
+   "last_saved_by": null,
+   "decode_entities": 78286,
+   "authority": "NATIVE_ORIGINAL (read through the pinned decode only)",
+   "resolved_units": null,
+   "pdf_sheets": null,
+   "pdf_sheets_in_dxf": null
+  },
+  {
+   "file": "P7757.dxf",
+   "discipline": "ARCHITECTURAL",
+   "declared_role": "CAD_EXCHANGE",
+   "sha256": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+   "bytes": 17227946,
+   "type": "DXF",
+   "cad_version": "AC1032",
+   "release": "R2018",
+   "maintenance": 228,
+   "insunits_declared": 4,
+   "insunits_name": "millimetre",
+   "measurement": 1,
+   "dimlfac": 0.1,
+   "dimscale": 1.0,
+   "ltscale": 1000.0,
+   "last_saved_by": "Msalf",
+   "tdcreate": "2025-02-09T21:07:00",
+   "tdupdate": "2026-10-01T21:27:47",
+   "header_dates_basis": "raw DXF HEADER values (ezdxf restamps $TDCREATE on load)",
+   "fingerprint_guid": "{E12D90F9-A2A5-4941-895E-5CEAC9199519}",
+   "version_guid": "{1A3823AC-6C2E-4A68-85D9-599976ECAB39}",
+   "codepage": "ANSI_1252",
+   "extents": [
+    [
+     -388976.076,
+     -811916.464
+    ],
+    [
+     -118759.253,
+     -783886.131
+    ]
+   ],
+   "layouts": [
+    {
+     "name": "Layout1",
+     "entities": 0
+    },
+    {
+     "name": "Model",
+     "entities": 5966
+    }
+   ],
+   "modelspace_entities": 5966,
+   "entity_counts": {
+    "ARC": 83,
+    "ARC_DIMENSION": 1,
+    "CIRCLE": 47,
+    "DIMENSION": 388,
+    "HATCH": 88,
+    "INSERT": 145,
+    "LINE": 4988,
+    "LWPOLYLINE": 114,
+    "RTEXT": 3,
+    "TEXT": 109
+   },
+   "blocks": 442,
+   "layers": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "ARNOTE",
+    "CC",
+    "D",
+    "DEFPOINTS",
+    "LEVEL",
+    "S-COL.BON",
+    "ST",
+    "TE",
+    "TEXT",
+    "TOI",
+    "W",
+    "stamp"
+   ],
+   "authority": "CANONICAL_ARCHITECTURAL (geometry = P7757.dwg, reconciled)",
+   "resolved_units": {
+    "status": "VERIFIED",
+    "native_to_mm": 0.999999999999863
+   },
+   "pdf_sheets": null,
+   "pdf_sheets_in_dxf": null
+  },
+  {
+   "file": "P7757_Architectural.dwf",
+   "discipline": "ARCHITECTURAL",
+   "declared_role": "DWF_PUBLISH",
+   "sha256": "7d440a57aa8930566a4028ff5e91ee819df1007fad3bd986d4db743f100d735f",
+   "bytes": 2655253,
+   "type": "DWF",
+   "header": "(DWF V06.20)",
+   "reader": "NONE (W2D streams unread)",
+   "authority": "UNREAD (no W2D reader)",
+   "resolved_units": null,
+   "pdf_sheets": null,
+   "pdf_sheets_in_dxf": null
+  },
+  {
+   "file": "P7757_Architectural_Plan_Pages_01-06.pdf",
+   "discipline": "ARCHITECTURAL",
+   "declared_role": "PDF_PLOT",
+   "sha256": "80b6a80428990db4dfa86aa343ed2c7cb429709459d564f0dac92362480a9b00",
+   "bytes": 19015776,
+   "type": "PDF",
+   "pages": 6,
+   "metadata": {
+    "format": "PDF 1.4",
+    "producer": "pypdf"
+   },
+   "page_census": [
+    {
+     "page": 1,
+     "size_pt": [
+      842.0,
+      1192.0
+     ],
+     "size_mm": [
+      297.0,
+      420.5
+     ],
+     "images": 1,
+     "image_px": [
+      [
+       4672,
+       6624
+      ]
+     ],
+     "vector_paths": 0,
+     "text_chars": 0,
+     "text": "",
+     "lane": "RASTER"
+    },
+    {
+     "page": 2,
+     "size_pt": [
+      842.0,
+      1192.0
+     ],
+     "size_mm": [
+      297.0,
+      420.5
+     ],
+     "images": 1,
+     "image_px": [
+      [
+       4672,
+       6624
+      ]
+     ],
+     "vector_paths": 0,
+     "text_chars": 0,
+     "text": "",
+     "lane": "RASTER"
+    },
+    {
+     "page": 3,
+     "size_pt": [
+      842.0,
+      1192.0
+     ],
+     "size_mm": [
+      297.0,
+      420.5
+     ],
+     "images": 1,
+     "image_px": [
+      [
+       4672,
+       6624
+      ]
+     ],
+     "vector_paths": 0,
+     "text_chars": 0,
+     "text": "",
+     "lane": "RASTER"
+    },
+    {
+     "page": 4,
+     "size_pt": [
+      842.0,
+      1192.0
+     ],
+     "size_mm": [
+      297.0,
+      420.5
+     ],
+     "images": 1,
+     "image_px": [
+      [
+       4672,
+       6624
+      ]
+     ],
+     "vector_paths": 0,
+     "text_chars": 0,
+     "text": "",
+     "lane": "RASTER"
+    },
+    {
+     "page": 5,
+     "size_pt": [
+      842.0,
+      1192.0
+     ],
+     "size_mm": [
+      297.0,
+      420.5
+     ],
+     "images": 1,
+     "image_px": [
+      [
+       4672,
+       6624
+      ]
+     ],
+     "vector_paths": 0,
+     "text_chars": 0,
+     "text": "",
+     "lane": "RASTER"
+    },
+    {
+     "page": 6,
+     "size_pt": [
+      842.0,
+      1192.0
+     ],
+     "size_mm": [
+      297.0,
+      420.5
+     ],
+     "images": 1,
+     "image_px": [
+      [
+       4672,
+       6624
+      ]
+     ],
+     "vector_paths": 0,
+     "text_chars": 0,
+     "text": "",
+     "lane": "RASTER"
+    }
+   ],
+   "lanes": {
+    "RASTER": 6
+   },
+   "text_layer": false,
+   "authority": "SUPPORTING_RASTER (localisation only)",
+   "resolved_units": null,
+   "pdf_sheets": [
+    "AREA PLANS - GROUND FLOOR + 1st FLOOR (municipal area calculation)",
+    "AREA PLAN - 2nd FLOOR + TOTAL FLOORS AREA",
+    "GROUND FLOOR PLAN 1:100",
+    "1st FLOOR PLAN 1:100",
+    "2nd FLOOR PLAN 1:100",
+    "SOUTH EAST ELEVATION 1:100"
+   ],
+   "pdf_sheets_in_dxf": {
+    "3": "GF",
+    "4": "1F",
+    "5": "2F",
+    "6": "SE_ELEVATION"
+   }
+  },
+  {
+   "file": "P7757_Architectural_Plan_Pages_07-12.pdf",
+   "discipline": "ARCHITECTURAL",
+   "declared_role": "PDF_PLOT",
+   "sha256": "281a0c3f8c1cdd8f2a78528513b66d14ba4793e981e2d8059423faf6e6162f99",
+   "bytes": 18512718,
+   "type": "PDF",
+   "pages": 6,
+   "metadata": {
+    "format": "PDF 1.4",
+    "producer": "pypdf"
+   },
+   "page_census": [
+    {
+     "page": 1,
+     "size_pt": [
+      842.0,
+      1192.0
+     ],
+     "size_mm": [
+      297.0,
+      420.5
+     ],
+     "images": 1,
+     "image_px": [
+      [
+       4672,
+       6624
+      ]
+     ],
+     "vector_paths": 0,
+     "text_chars": 0,
+     "text": "",
+     "lane": "RASTER"
+    },
+    {
+     "page": 2,
+     "size_pt": [
+      842.0,
+      1192.0
+     ],
+     "size_mm": [
+      297.0,
+      420.5
+     ],
+     "images": 1,
+     "image_px": [
+      [
+       4672,
+       6624
+      ]
+     ],
+     "vector_paths": 0,
+     "text_chars": 0,
+     "text": "",
+     "lane": "RASTER"
+    },
+    {
+     "page": 3,
+     "size_pt": [
+      842.0,
+      1192.0
+     ],
+     "size_mm": [
+      297.0,
+      420.5
+     ],
+     "images": 1,
+     "image_px": [
+      [
+       4672,
+       6624
+      ]
+     ],
+     "vector_paths": 0,
+     "text_chars": 0,
+     "text": "",
+     "lane": "RASTER"
+    },
+    {
+     "page": 4,
+     "size_pt": [
+      842.0,
+      1192.0
+     ],
+     "size_mm": [
+      297.0,
+      420.5
+     ],
+     "images": 1,
+     "image_px": [
+      [
+       4672,
+       6624
+      ]
+     ],
+     "vector_paths": 0,
+     "text_chars": 0,
+     "text": "",
+     "lane": "RASTER"
+    },
+    {
+     "page": 5,
+     "size_pt": [
+      842.0,
+      1192.0
+     ],
+     "size_mm": [
+      297.0,
+      420.5
+     ],
+     "images": 1,
+     "image_px": [
+      [
+       4672,
+       6624
+      ]
+     ],
+     "vector_paths": 0,
+     "text_chars": 0,
+     "text": "",
+     "lane": "RASTER"
+    },
+    {
+     "page": 6,
+     "size_pt": [
+      842.0,
+      1192.0
+     ],
+     "size_mm": [
+      297.0,
+      420.5
+     ],
+     "images": 1,
+     "image_px": [
+      [
+       4672,
+       6624
+      ]
+     ],
+     "vector_paths": 0,
+     "text_chars": 0,
+     "text": "",
+     "lane": "RASTER"
+    }
+   ],
+   "lanes": {
+    "RASTER": 6
+   },
+   "text_layer": false,
+   "authority": "SUPPORTING_RASTER (localisation only)",
+   "resolved_units": null,
+   "pdf_sheets": [
+    "SOUTH WEST ELEVATION 1:100",
+    "NORTH WEST ELEVATION 1:100",
+    "NORTH EAST ELEVATION 1:100",
+    "SECTION 1:100",
+    "SECTION 1:100",
+    "FENCE ELEVATION + FENCE SECTION"
+   ],
+   "pdf_sheets_in_dxf": {
+    "2": "NW_ELEVATION"
+   }
+  },
+  {
+   "file": "ST7757.dwg",
+   "discipline": "STRUCTURAL",
+   "declared_role": "CAD_NATIVE",
+   "sha256": "3f7a556c69786834c16c355504437b5abcd1f5aa3a9625b33a2c5b14213f0227",
+   "bytes": 491151,
+   "type": "DWG",
+   "cad_version": "AC1027",
+   "release": "R2013",
+   "content": "native DWG: readable only through a pinned decoder decode",
+   "authority": "NATIVE_ORIGINAL (identity to the DXF NOT VERIFIED)",
+   "resolved_units": null,
+   "pdf_sheets": null,
+   "pdf_sheets_in_dxf": null
+  },
+  {
+   "file": "ST7757.dxf",
+   "discipline": "STRUCTURAL",
+   "declared_role": "CAD_EXCHANGE",
+   "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "bytes": 3153037,
+   "type": "DXF",
+   "cad_version": "AC1032",
+   "release": "R2018",
+   "maintenance": 228,
+   "insunits_declared": 4,
+   "insunits_name": "millimetre",
+   "measurement": 0,
+   "dimlfac": 0.1,
+   "dimscale": 0.0,
+   "ltscale": 1000.0,
+   "last_saved_by": "Msalf",
+   "tdcreate": "2026-04-29T07:13:38",
+   "tdupdate": "2026-10-01T21:28:25",
+   "header_dates_basis": "raw DXF HEADER values (ezdxf restamps $TDCREATE on load)",
+   "fingerprint_guid": "{D09FAD02-D4CA-4CFC-9146-C1312B7FAE04}",
+   "version_guid": "{F4F815F0-B904-A145-B108-BD1890A55C40}",
+   "codepage": "ANSI_1252",
+   "extents": [
+    [
+     -75967.728,
+     -14447.747
+    ],
+    [
+     205657.355,
+     57066.432
+    ]
+   ],
+   "layouts": [
+    {
+     "name": "DETAILS",
+     "entities": 0
+    },
+    {
+     "name": "Model",
+     "entities": 4473
+    }
+   ],
+   "modelspace_entities": 4473,
+   "entity_counts": {
+    "ARC": 73,
+    "CIRCLE": 38,
+    "DIMENSION": 377,
+    "HATCH": 236,
+    "INSERT": 181,
+    "LINE": 1907,
+    "LWPOLYLINE": 687,
+    "MTEXT": 8,
+    "POINT": 1,
+    "RTEXT": 10,
+    "SOLID": 62,
+    "TEXT": 890,
+    "WIPEOUT": 3
+   },
+   "blocks": 420,
+   "layers": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "D",
+    "DEFPOINTS",
+    "LEVEL",
+    "N-ARROW",
+    "REIN",
+    "S-AXIS",
+    "S-BEAM",
+    "S-BOUN",
+    "S-BW",
+    "S-COL.BON",
+    "S-COL.HAT",
+    "S-DATE",
+    "S-DIM",
+    "S-DIM.D",
+    "S-DIM.SCH",
+    "S-DIM1",
+    "S-EXTL.D",
+    "S-FOOTINGS",
+    "S-HAT",
+    "S-HAT-SLAB",
+    "S-HAT.BAT",
+    "S-INSU.D",
+    "S-LINE.SCH",
+    "S-NOTE",
+    "S-OPENING",
+    "S-PLAH.D",
+    "S-REIN-CORNER",
+    "S-REIN-SLAB",
+    "S-REIN.D",
+    "S-SEC-TEXT",
+    "S-SEC.LINE",
+    "S-SECRH.D",
+    "S-SHEET.LO",
+    "S-STAMP",
+    "S-TEXT",
+    "S-TEXT-CORNER",
+    "S-TEXT-SLAB",
+    "S-TEXT.D",
+    "S-TEXT.SCH",
+    "S-TITLE TEXT",
+    "ST",
+    "TEXT",
+    "W"
+   ],
+   "authority": "CANONICAL_STRUCTURAL (geometry, schedules, labels)",
+   "resolved_units": {
+    "status": "PROVISIONAL",
+    "native_to_mm": 1.0
+   },
+   "pdf_sheets": null,
+   "pdf_sheets_in_dxf": null
+  },
+  {
+   "file": "ST7757.pdf",
+   "discipline": "STRUCTURAL",
+   "declared_role": "PDF_PLOT",
+   "sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3",
+   "bytes": 2219156,
+   "type": "PDF",
+   "pages": 16,
+   "metadata": {
+    "format": "PDF 1.6",
+    "title": "DETAILS (4)",
+    "creator": "AutoCAD Architecture 2014 - English 2014 (19.1s (LMS Tech))",
+    "producer": "pdfplot11.hdi 11.1.18.0",
+    "creationDate": "D:20260506120424",
+    "modDate": "D:20260506120424"
+   },
+   "page_census": [
+    {
+     "page": 1,
+     "size_pt": [
+      1191.0,
+      842.0
+     ],
+     "size_mm": [
+      420.2,
+      297.0
+     ],
+     "images": 0,
+     "image_px": [],
+     "vector_paths": 8394,
+     "text_chars": 37,
+     "text": "May 06, 2026 | May 06, 2025 | ST - 7757",
+     "lane": "VECTOR"
+    },
+    {
+     "page": 2,
+     "size_pt": [
+      1191.0,
+      842.0
+     ],
+     "size_mm": [
+      420.2,
+      297.0
+     ],
+     "images": 0,
+     "image_px": [],
+     "vector_paths": 5953,
+     "text_chars": 37,
+     "text": "May 06, 2026 | May 06, 2025 | ST - 7757",
+     "lane": "VECTOR"
+    },
+    {
+     "page": 3,
+     "size_pt": [
+      1191.0,
+      842.0
+     ],
+     "size_mm": [
+      420.2,
+      297.0
+     ],
+     "images": 0,
+     "image_px": [],
+     "vector_paths": 8338,
+     "text_chars": 37,
+     "text": "May 06, 2026 | May 06, 2025 | ST - 7757",
+     "lane": "VECTOR"
+    },
+    {
+     "page": 4,
+     "size_pt": [
+      1191.0,
+      842.0
+     ],
+     "size_mm": [
+      420.2,
+      297.0
+     ],
+     "images": 0,
+     "image_px": [],
+     "vector_paths": 8687,
+     "text_chars": 37,
+     "text": "May 06, 2026 | May 06, 2025 | ST - 7757",
+     "lane": "VECTOR"
+    },
+    {
+     "page": 5,
+     "size_pt": [
+      1191.0,
+      842.0
+     ],
+     "size_mm": [
+      420.2,
+      297.0
+     ],
+     "images": 0,
+     "image_px": [],
+     "vector_paths": 7261,
+     "text_chars": 37,
+     "text": "May 06, 2026 | May 06, 2025 | ST - 7757",
+     "lane": "VECTOR"
+    },
+    {
+     "page": 6,
+     "size_pt": [
+      1191.0,
+      842.0
+     ],
+     "size_mm": [
+      420.2,
+      297.0
+     ],
+     "images": 0,
+     "image_px": [],
+     "vector_paths": 6453,
+     "text_chars": 37,
+     "text": "May 06, 2026 | May 06, 2025 | ST - 7757",
+     "lane": "VECTOR"
+    },
+    {
+     "page": 7,
+     "size_pt": [
+      1191.0,
+      842.0
+     ],
+     "size_mm": [
+      420.2,
+      297.0
+     ],
+     "images": 0,
+     "image_px": [],
+     "vector_paths": 7135,
+     "text_chars": 37,
+     "text": "May 06, 2026 | May 06, 2025 | ST - 7757",
+     "lane": "VECTOR"
+    },
+    {
+     "page": 8,
+     "size_pt": [
+      1191.0,
+      842.0
+     ],
+     "size_mm": [
+      420.2,
+      297.0
+     ],
+     "images": 2,
+     "image_px": [
+      [
+       3966,
+       2491
+      ],
+      [
+       3931,
+       2491
+      ]
+     ],
+     "vector_paths": 3330,
+     "text_chars": 0,
+     "text": "",
+     "lane": "MIXED"
+    },
+    {
+     "page": 9,
+     "size_pt": [
+      1191.0,
+      842.0
+     ],
+     "size_mm": [
+      420.2,
+      297.0
+     ],
+     "images": 0,
+     "image_px": [],
+     "vector_paths": 6201,
+     "text_chars": 68,
+     "text": "Schedule  of Columns | Schedule  of  Footings | May 06, 2026 | ST - 7757",
+     "lane": "VECTOR"
+    },
+    {
+     "page": 10,
+     "size_pt": [
+      1191.0,
+      842.0
+     ],
+     "size_mm": [
+      420.2,
+      297.0
+     ],
+     "images": 0,
+     "image_px": [],
+     "vector_paths": 3540,
+     "text_chars": 49,
+     "text": "Schedule of Simple Beams | May 06, 2026 | ST - 7757",
+     "lane": "VECTOR"
+    },
+    {
+     "page": 11,
+     "size_pt": [
+      1191.0,
+      842.0
+     ],
+     "size_mm": [
+      420.2,
+      297.0
+     ],
+     "images": 0,
+     "image_px": [],
+     "vector_paths": 5011,
+     "text_chars": 0,
+     "text": "",
+     "lane": "VECTOR"
+    },
+    {
+     "page": 12,
+     "size_pt": [
+      1191.0,
+      842.0
+     ],
+     "size_mm": [
+      420.2,
+      297.0
+     ],
+     "images": 0,
+     "image_px": [],
+     "vector_paths": 2959,
+     "text_chars": 0,
+     "text": "",
+     "lane": "VECTOR"
+    },
+    {
+     "page": 13,
+     "size_pt": [
+      1191.0,
+      842.0
+     ],
+     "size_mm": [
+      420.2,
+      297.0
+     ],
+     "images": 0,
+     "image_px": [],
+     "vector_paths": 8092,
+     "text_chars": 23,
+     "text": "May 06, 2026 | ST - 7757",
+     "lane": "VECTOR"
+    },
+    {
+     "page": 14,
+     "size_pt": [
+      1191.0,
+      842.0
+     ],
+     "size_mm": [
+      420.2,
+      297.0
+     ],
+     "images": 0,
+     "image_px": [],
+     "vector_paths": 8450,
+     "text_chars": 23,
+     "text": "May 06, 2026 | ST - 7757",
+     "lane": "VECTOR"
+    },
+    {
+     "page": 15,
+     "size_pt": [
+      1191.0,
+      842.0
+     ],
+     "size_mm": [
+      420.2,
+      297.0
+     ],
+     "images": 0,
+     "image_px": [],
+     "vector_paths": 4570,
+     "text_chars": 23,
+     "text": "May 06, 2026 | ST - 7757",
+     "lane": "VECTOR"
+    },
+    {
+     "page": 16,
+     "size_pt": [
+      1191.0,
+      842.0
+     ],
+     "size_mm": [
+      420.2,
+      297.0
+     ],
+     "images": 0,
+     "image_px": [],
+     "vector_paths": 4779,
+     "text_chars": 23,
+     "text": "May 06, 2026 | ST - 7757",
+     "lane": "VECTOR"
+    }
+   ],
+   "lanes": {
+    "VECTOR": 15,
+    "MIXED": 1
+   },
+   "text_layer": true,
+   "authority": "CORROBORATING_VECTOR_PLOT",
+   "resolved_units": null,
+   "pdf_sheets": [
+    "COLUMN & AXIS PLAN",
+    "FOUNDATION PLAN",
+    "GROUND BEAMS PLAN",
+    "GROUND FLOOR ROOF SLAB",
+    "FIRST FLOOR ROOF SLAB",
+    "SECOND FLOOR ROOF SLAB",
+    "DETAIL OF SWIMMING POOL + DETAIL OF DOME",
+    "RECOMMENDATIONS (raster image)",
+    "SCHEDULES (columns, footings)",
+    "SCHEDULE OF SIMPLE BEAMS",
+    "SCHEDULE OF CONTINUOUS BEAMS (2 SPAN) x2",
+    "SCHEDULE OF CONTINUOUS BEAMS (THREE SPAN)",
+    "TYPICAL DETAILS (footing, lintel, ground beams)",
+    "TYPICAL DETAILS (parapet, lift pit, boundary wall)",
+    "TYPICAL DETAILS (twisted columns, slab on beams, planted column)",
+    "TYPICAL DETAILS (stairs)"
+   ],
+   "pdf_sheets_in_dxf": null
+  },
+  {
+   "file": "sanitary-7757.pdf",
+   "discipline": "SANITARY_SUPPORTING",
+   "declared_role": "PDF_PLOT",
+   "sha256": "116736870983e63a9bf80e778fe2fc098e333148cce5337190a1ac3398d82596",
+   "bytes": 674366,
+   "type": "PDF",
+   "pages": 3,
+   "metadata": {
+    "format": "PDF 1.7",
+    "creator": "PDF-XChange Editor 10.1.3.383",
+    "producer": "PDF-XChange Core API SDK (10.1.3.383)",
+    "creationDate": "D:20260505121758+03'00'",
+    "modDate": "D:20260505121854+03'00'"
+   },
+   "page_census": [
+    {
+     "page": 1,
+     "size_pt": [
+      1191.0,
+      842.0
+     ],
+     "size_mm": [
+      420.2,
+      297.0
+     ],
+     "images": 0,
+     "image_px": [],
+     "vector_paths": 20354,
+     "text_chars": 0,
+     "text": "",
+     "lane": "VECTOR"
+    },
+    {
+     "page": 2,
+     "size_pt": [
+      1191.0,
+      842.0
+     ],
+     "size_mm": [
+      420.2,
+      297.0
+     ],
+     "images": 0,
+     "image_px": [],
+     "vector_paths": 17981,
+     "text_chars": 0,
+     "text": "",
+     "lane": "VECTOR"
+    },
+    {
+     "page": 3,
+     "size_pt": [
+      1191.0,
+      842.0
+     ],
+     "size_mm": [
+      420.2,
+      297.0
+     ],
+     "images": 0,
+     "image_px": [],
+     "vector_paths": 13342,
+     "text_chars": 0,
+     "text": "",
+     "lane": "VECTOR"
+    }
+   ],
+   "lanes": {
+    "VECTOR": 3
+   },
+   "text_layer": false,
+   "authority": "SUPPORTING_EVIDENCE_ONLY",
+   "resolved_units": null,
+   "pdf_sheets": [
+    "SANITARY SHEET 1",
+    "SANITARY SHEET 2",
+    "SANITARY SHEET 3"
+   ],
+   "pdf_sheets_in_dxf": null
+  }
+ ],
+ "originals": "kept as delivered; workspace copies are hash-addressed",
+ "pdf_sheet_identification": "VISION_OBSERVATION by the agent (localisation only)"
+}

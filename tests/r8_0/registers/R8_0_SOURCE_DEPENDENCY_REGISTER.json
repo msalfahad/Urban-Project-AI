@@ -1,0 +1,17 @@
+{
+  "SCHEMA": "R8_0_SOURCE_DEPENDENCY_REGISTER_V1",
+  "scope": "engine/source/** (checked by tests/r8_0/test_r8_0_import_boundaries.py B-5/B-6)",
+  "third_party_allowed": ["ezdxf", "shapely", "numpy"],
+  "pins": {
+    "ezdxf": {"version": "1.4.4", "licence": "MIT", "role": "D2/K2 route only; R8.1: K1 kernel_ocs is a clean Urban AAA and does not import ezdxf (ezdxf.math.OCS is a test oracle)"},
+    "shapely": {"version": "2.1.2", "licence": "BSD-3-Clause (GEOS LGPL-2.1, dynamically linked)", "role": "geometry kernel (existing); R8.8: engine/source/topology_crosscheck.py only (independent GEOS cross-check of TS01, never an authority)"},
+    "numpy": {"version": "as installed", "licence": "BSD-3-Clause", "role": "numeric arrays (existing)"}
+  },
+  "forbidden": ["scipy", "mcp", "fastmcp", "autocad_mcp", "autocad_mcp_pro", "opentakeoff", "win32com", "pythoncom", "comtypes", "research", "tests", "requests", "httpx"],
+  "decoder_binaries": {
+    "note": "DECODER_BINARY_PIN (R8 A9): sha256 of each decoder binary is recorded here in R8.1 when the route is built; a route with no pin is UNTRUSTED",
+    "libredwg_dwgread": null,
+    "oda_file_converter": null,
+    "libredwg_dwg2dxf": null
+  }
+}

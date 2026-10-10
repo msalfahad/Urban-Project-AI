@@ -1,0 +1,99 @@
+{
+ "rows": [
+  {
+   "evidence": "REPORT_EXPLICIT",
+   "failure_modes": [
+    "drawn spans longer than the schedule are silently cut",
+    "two CBs of one mark on one plan collapse to one",
+    "width tie broken by length picks the wrong strip"
+   ],
+   "id": "R1",
+   "oracle_only": false,
+   "production_candidate": "partly: occurrence-once + width-first ranking; the cap becomes a SPAN_LENGTH_CONFLICT check, never a truncation",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)",
+   "rule": "continuous beam allocated once per plan, capped at schedule total span; width match preferred, then length",
+   "tests": [
+    "test_cb_allocated_once_per_plan",
+    "test_cb_span_excess_is_conflict_not_truncation",
+    "test_cb_width_match_ranks_before_length"
+   ],
+   "unsafe_heuristic": "capping hides a missing support or a span-count conflict",
+   "useful_generic_idea": "yes: a continuous beam is one occurrence per plan, bounded by its schedule"
+  },
+  {
+   "evidence": "REPORT_EXPLICIT",
+   "failure_modes": [
+    "continuation through a column into a different member",
+    "collinear but offset strips merged"
+   ],
+   "id": "R2",
+   "oracle_only": false,
+   "production_candidate": "as CANDIDATE continuity with a width check and an end condition (support / column) - never VERIFIED",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)",
+   "rule": "CB may continue collinearly into an adjacent unlabeled strip",
+   "tests": [
+    "test_collinear_continuation_requires_same_width",
+    "test_continuation_stops_at_support_with_new_tag",
+    "test_continuation_is_candidate_not_verified"
+   ],
+   "unsafe_heuristic": "an unlabelled collinear strip may be a different beam (lintel, edge beam)",
+   "useful_generic_idea": "yes: collinear continuation is real evidence of one member"
+  },
+  {
+   "evidence": "REPORT_EXPLICIT",
+   "failure_modes": [
+    "two real 1.5 m beams with the same mark merged",
+    "the same tag 2.1 m apart counted twice"
+   ],
+   "id": "R3",
+   "oracle_only": true,
+   "production_candidate": "no; de-duplicate by shared strip geometry, not distance",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)",
+   "rule": "same-mark labels < 2 m apart are merged",
+   "tests": [
+    "test_same_mark_on_same_strip_is_one_occurrence",
+    "test_same_mark_on_different_strips_is_two_occurrences_regardless_of_distance"
+   ],
+   "unsafe_heuristic": "a fixed 2 m distance is drawing-scale dependent and merges two short beams",
+   "useful_generic_idea": "partly: repeated tags of one member exist"
+  },
+  {
+   "evidence": "REPORT_EXPLICIT",
+   "failure_modes": [
+    "finish lines at beam width pass the gate",
+    "re-assignment across the plan to a distant same-width label"
+   ],
+   "id": "R4",
+   "oracle_only": false,
+   "production_candidate": "yes as a gate: WIDTH_MISMATCH recorded on the binding, re-assignment only to a label that is also geometrically adjacent, tolerance from drawing units",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)",
+   "rule": "if schedule width differs from drawn strip width by > 60 mm, the strip is assigned to the matching-width label instead",
+   "tests": [
+    "test_width_mismatch_flags_binding",
+    "test_reassignment_requires_adjacency",
+    "test_width_tolerance_scales_with_units"
+   ],
+   "unsafe_heuristic": "silently re-assigning to another label can bind a strip to a label that is elsewhere; 60 mm is a fixed tolerance",
+   "useful_generic_idea": "yes: drawn width vs schedule width is strong binding evidence"
+  },
+  {
+   "evidence": "REPORT_EXPLICIT",
+   "failure_modes": [
+    "a missing strip is hidden by stretching others",
+    "labels of different sections share one strip's length",
+    "rebar inherits the wrong length"
+   ],
+   "id": "R5",
+   "oracle_only": true,
+   "production_candidate": "NO - reject for production; unallocated length stays a CANDIDATE residue with identity (Urban beam_occurrence_recovery)",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)",
+   "rule": "remaining strip length is shared equally among simple labels",
+   "tests": [
+    "test_unallocated_strip_length_is_residue_not_shared",
+    "test_no_label_receives_length_without_geometry"
+   ],
+   "unsafe_heuristic": "arithmetic allocation: assigns length to labels without geometry; any error is spread invisibly across members",
+   "useful_generic_idea": "no"
+  }
+ ]
+}

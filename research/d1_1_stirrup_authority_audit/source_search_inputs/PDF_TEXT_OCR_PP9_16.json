@@ -1,0 +1,119 @@
+{
+ "keywords": [
+  "BEND",
+  "BENT",
+  "RADIU",
+  "HOOK",
+  "LAP",
+  "SPLIC",
+  "ANCHOR",
+  "DEVELOP",
+  "STIRR",
+  "LINK",
+  "TIE",
+  "CUT",
+  "SHAPE",
+  "MANDREL",
+  "CRANK",
+  "OVERLAP",
+  "EXTEN",
+  "DIA",
+  "135",
+  "40X",
+  "70X"
+ ],
+ "method": "pp.9-16 text layers (S-TEXT.D, S-TEXT.SCH, S-DIM.D, 0, S-TEXT) rendered from the vector strokes with the pure-python pypdf renderer at 3.0 px/pt, rotated 90, then tesseract 5 'eng' --psm 11; raw OCR lines kept. OCR is a search aid only: a hit is re-read on the render, a non-hit is backed by the DXF text sweep",
+ "pages": {
+  "10": {
+   "hits": {
+    "STIRR": [
+     "STIRRUPS/m"
+    ]
+   },
+   "ocr_lines": 250,
+   "png_sha256": "ae82ce6336d679c2cd99cbf856f332d59751bf09b38d412b610ebea87484f7c0"
+  },
+  "11": {
+   "hits": {},
+   "ocr_lines": 170,
+   "png_sha256": "07dc39fee982b528b570261e6da7e8f431ec2d76187c466001fd617192f2b28a"
+  },
+  "12": {
+   "hits": {},
+   "ocr_lines": 104,
+   "png_sha256": "ba53e70fe0e09c8aedb3170440732dc5c1a35251b390c865392e12e8df08c470"
+  },
+  "13": {
+   "hits": {
+    "STIRR": [
+     "Column stirrups",
+     "Column. stirrups",
+     "STIRRUPS"
+    ]
+   },
+   "ocr_lines": 153,
+   "png_sha256": "055a4f14a26628e0eb80278ca04e304043d94791e9a6c208c40bf5506a5c650e"
+  },
+  "14": {
+   "hits": {
+    "STIRR": [
+     "$8/20_STIRRUPS"
+    ]
+   },
+   "ocr_lines": 129,
+   "png_sha256": "85389f7ff66bc1643e592c3517bf8be3871aaed847c0dec7ea6d576c4d58a91b"
+  },
+  "15": {
+   "hits": {
+    "40X": [
+     "BARS SHALL BE 40xDIA."
+    ],
+    "ANCHOR": [
+     "TOP ANCHOR BARS. FOR SIZE"
+    ],
+    "DIA": [
+     "BARS SHALL BE 40xDIA."
+    ],
+    "EXTEN": [
+     "EXTEND 50% OF TOP REINF."
+    ],
+    "LAP": [
+     "1. LAP LENGHT FOR ALL TEMPERATUERE"
+    ],
+    "STIRR": [
+     "STIRRUPS",
+     "Spiral Stirrups"
+    ]
+   },
+   "ocr_lines": 138,
+   "png_sha256": "d2dda4c67bc12cc1b3ebb2792075769e464233c3a1a40ca5fdf62dabaffa7b0d"
+  },
+  "16": {
+   "hits": {
+    "LAP": [
+     "be lap"
+    ],
+    "STIRR": [
+     "3.NO.610 STIRR. AT 5cm c/c",
+     "3.NO.810 STIRR. AT 5cm c/c",
+     "STIRR.810/10em"
+    ]
+   },
+   "ocr_lines": 148,
+   "png_sha256": "8d769e287dd69e0b39f71882af9fd644eb84bcc6d87c56e2379a5f79de6c554f"
+  },
+  "9": {
+   "hits": {},
+   "ocr_lines": 403,
+   "png_sha256": "22b9e6cfb17ec5c62a92d9a7583799d1f3c8eb38f765ac31a1f659824771c644"
+  }
+ },
+ "pdf_sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3",
+ "reviewed": {
+  "STIRR hits": "schedule header 'STIRRUPS/m', column stirrup labels, 'Spiral Stirrups' (turned column), opening-in-beam '3 NO. Ø10 STIRR. AT 5cm c/c' - counts / spacings only, no bend or hook geometry",
+  "p15 '40xDIA'": "note 1 of the slab temperature notes: 'LAP LENGTH FOR ALL TEMPERATURE BARS SHALL BE 40xDIA' - slab temperature bars only",
+  "p15 'TOP ANCHOR BARS' / 'EXTEND 50% OF TOP REINF.'": "slab-on-beam typical (slab bars), not links",
+  "p16 'be lap'": "OCR noise from the word 'LANDING' (stair detail render re-read visually)"
+ },
+ "source": "ST7757.pdf"
+}

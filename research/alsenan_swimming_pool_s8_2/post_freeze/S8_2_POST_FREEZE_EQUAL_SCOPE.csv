@@ -1,0 +1,8 @@
+ITEM,S8_2,OLD_URBAN_V3B,FREELANCER_QS,STATE
+pool base footprint,"10.935564 m2 (exact D-shape, CAD_GEOMETRY + stated 350)",6.8250 m2 (3.50 x 1.95),10.8 m2,S8.2 ESTABLISHED; references differ by geometry
+wall plan band,2.356726 m2 (exact; centre-line 11.783628 m),10.10 m x 0.20,12 m x 0.20,S8.2 ESTABLISHED
+wall height / depth,NOT_ESTABLISHED ('AS PER ARCH'),"1.15 m (raster claim, POOL CANDIDATE binding)",1.8 m (no source),BLOCKED in S8.2; references disagree
+base thickness scope,40 cm on the deep base only; slope and shallow not dimensioned,0.40 everywhere,0.40 everywhere,BLOCKED in S8.2
+base reinforcement notation,"deep 7Ø14/m (+6Ø14/m transverse), slope 6Ø12/m, shallow 6Ø12/m",7Ø14/m top and bottom both ways everywhere,unseparated,NOTATION_SCOPE
+"pump room, steps",NOT_SHOWN_IN_SOURCE,none,"pump walls 1.08, room floor 2.4, steps 0.228 m3",SCOPE
+released quantity,"0 m3, 0 kg (totals unknown)","5.053 m3, 585.738 kg","12.348 m3, 1.5 t",no equal-scope released quantity exists

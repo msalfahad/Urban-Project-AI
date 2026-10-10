@@ -1,0 +1,771 @@
+{
+ "SCHEMA": "URBAN_R8_17_OPENING_REVEAL_REGISTER_V1",
+ "policy": "WALL_FACE_SURFACE_POLICY_V1",
+ "reveals": [
+  {
+   "opening": "I1028",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "threshold_class": "OUTSIDE_MEASURED_SCOPE",
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I1028",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "threshold_class": "OUTSIDE_MEASURED_SCOPE",
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I1028",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.15,
+   "width_m": 1.0,
+   "area_m2": 0.15,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "threshold_class": "OUTSIDE_MEASURED_SCOPE",
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I1443",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "threshold_class": "URBAN_WET_SERVICE_MARBLE_RULE",
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I1443",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "threshold_class": "URBAN_WET_SERVICE_MARBLE_RULE",
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I1443",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.15,
+   "width_m": 0.8,
+   "area_m2": 0.12,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "threshold_class": "URBAN_WET_SERVICE_MARBLE_RULE",
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I1471",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "threshold_class": "DRY_DRY_CONTINUOUS_PORCELAIN",
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "I1471",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "threshold_class": "DRY_DRY_CONTINUOUS_PORCELAIN",
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "I1471",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.15,
+   "width_m": 1.0,
+   "area_m2": 0.15,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "threshold_class": "DRY_DRY_CONTINUOUS_PORCELAIN",
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "I1561",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "threshold_class": "URBAN_WET_SERVICE_MARBLE_RULE",
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I1561",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "threshold_class": "URBAN_WET_SERVICE_MARBLE_RULE",
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I1561",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.15,
+   "width_m": 0.8,
+   "area_m2": 0.12,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "threshold_class": "URBAN_WET_SERVICE_MARBLE_RULE",
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I1988",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "threshold_class": "DRY_DRY_CONTINUOUS_PORCELAIN",
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "I1988",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "threshold_class": "DRY_DRY_CONTINUOUS_PORCELAIN",
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "I1988",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.15,
+   "width_m": 1.0,
+   "area_m2": 0.15,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "threshold_class": "DRY_DRY_CONTINUOUS_PORCELAIN",
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "I2044",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "threshold_class": "URBAN_WET_SERVICE_MARBLE_RULE",
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I2044",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "threshold_class": "URBAN_WET_SERVICE_MARBLE_RULE",
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I2044",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.15,
+   "width_m": 0.8,
+   "area_m2": 0.12,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "threshold_class": "URBAN_WET_SERVICE_MARBLE_RULE",
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I677",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "threshold_class": "MAIN_ENTRANCE_MARBLE_EXPLICIT",
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I677",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "threshold_class": "MAIN_ENTRANCE_MARBLE_EXPLICIT",
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I677",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.15,
+   "width_m": 1.0,
+   "area_m2": 0.15,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "threshold_class": "MAIN_ENTRANCE_MARBLE_EXPLICIT",
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "I841",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "threshold_class": "DRY_DRY_CONTINUOUS_PORCELAIN",
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "I841",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "threshold_class": "DRY_DRY_CONTINUOUS_PORCELAIN",
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "I841",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.15,
+   "width_m": 1.0,
+   "area_m2": 0.15,
+   "depth_basis": "SOURCE (door strip thickness)",
+   "state": "COMPUTED",
+   "kind": "DOOR",
+   "threshold_class": "DRY_DRY_CONTINUOUS_PORCELAIN",
+   "height_authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (glazed strip thickness)",
+   "state": "COMPUTED",
+   "kind": "SLIDING_GLAZED_DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "SERVICE_ROOM"
+   ],
+   "height_authority": "QP-12 owner: the HALL / PAINTRY glazed opening 2.750 x 2.200 (same occurrence: glazing H533 / H542, 2.75 m, in both revisions) + QP-23 corroborating; floor contact from QORTUBA-NEW-HALL-PAINTRY-SLIDING-GLASS-DOOR-OWNER-001@v1",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.15,
+   "height_m": 2.2,
+   "area_m2": 0.33,
+   "depth_basis": "SOURCE (glazed strip thickness)",
+   "state": "COMPUTED",
+   "kind": "SLIDING_GLAZED_DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "SERVICE_ROOM"
+   ],
+   "height_authority": "QP-12 owner: the HALL / PAINTRY glazed opening 2.750 x 2.200 (same occurrence: glazing H533 / H542, 2.75 m, in both revisions) + QP-23 corroborating; floor contact from QORTUBA-NEW-HALL-PAINTRY-SLIDING-GLASS-DOOR-OWNER-001@v1",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.15,
+   "width_m": 2.75,
+   "area_m2": 0.4125,
+   "depth_basis": "SOURCE (glazed strip thickness)",
+   "state": "COMPUTED",
+   "kind": "SLIDING_GLAZED_DOOR",
+   "rooms": [
+    "DRY_INTERNAL_ROOM",
+    "SERVICE_ROOM"
+   ],
+   "height_authority": "QP-12 owner: the HALL / PAINTRY glazed opening 2.750 x 2.200 (same occurrence: glazing H533 / H542, 2.75 m, in both revisions) + QP-23 corroborating; floor contact from QORTUBA-NEW-HALL-PAINTRY-SLIDING-GLASS-DOOR-OWNER-001@v1",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "OP-997f14d12b8e9bc1",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.2,
+   "height_m": 2.2,
+   "area_m2": 0.44,
+   "depth_basis": "SOURCE (band thickness)",
+   "state": "COMPUTED",
+   "kind": "OPEN_PASSAGE_WITH_HEAD",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QORTUBA-NEW-OPEN-PASSAGE-SOFFIT-NOT-CEILING-OWNER-001@v1",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)",
+   "non_physical_sides": []
+  },
+  {
+   "opening": "OP-997f14d12b8e9bc1",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.2,
+   "height_m": 2.2,
+   "area_m2": 0.44,
+   "depth_basis": "SOURCE (band thickness)",
+   "state": "COMPUTED",
+   "kind": "OPEN_PASSAGE_WITH_HEAD",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QORTUBA-NEW-OPEN-PASSAGE-SOFFIT-NOT-CEILING-OWNER-001@v1",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)",
+   "non_physical_sides": []
+  },
+  {
+   "opening": "OP-997f14d12b8e9bc1",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.2,
+   "width_m": 1.196447,
+   "area_m2": 0.239289,
+   "depth_basis": "SOURCE (band thickness)",
+   "state": "COMPUTED",
+   "kind": "OPEN_PASSAGE_WITH_HEAD",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QORTUBA-NEW-OPEN-PASSAGE-SOFFIT-NOT-CEILING-OWNER-001@v1",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)",
+   "non_physical_sides": []
+  },
+  {
+   "opening": "OP-9e0fd219ca5cd391",
+   "surface": "LEFT_JAMB",
+   "state": "BLOCKED",
+   "depth_basis": "SOURCE (band thickness)",
+   "kind": "OPEN_PASSAGE_FULL_HEIGHT",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QORTUBA-NEW-MB-DRESS-PASSAGE-FULL-HEIGHT-OWNER-001@v1",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)",
+   "non_physical_sides": [
+    "RIGHT"
+   ]
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1020||SEGMENT",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.25,
+   "height_m": 1.5,
+   "area_m2": 0.375,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1020||SEGMENT",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.25,
+   "height_m": 1.5,
+   "area_m2": 0.375,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1020||SEGMENT",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.25,
+   "width_m": 1.342287,
+   "area_m2": 0.335572,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1026||SEGMENT",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.25,
+   "height_m": 1.5,
+   "area_m2": 0.375,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1026||SEGMENT",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.25,
+   "height_m": 1.5,
+   "area_m2": 0.375,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1026||SEGMENT",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.25,
+   "width_m": 1.697515,
+   "area_m2": 0.424379,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1319||SEGMENT",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.25,
+   "height_m": 1.5,
+   "area_m2": 0.375,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1319||SEGMENT",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.25,
+   "height_m": 1.5,
+   "area_m2": 0.375,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1319||SEGMENT",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.25,
+   "width_m": 1.205359,
+   "area_m2": 0.30134,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1325||SEGMENT",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.25,
+   "height_m": 1.5,
+   "area_m2": 0.375,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1325||SEGMENT",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.25,
+   "height_m": 1.5,
+   "area_m2": 0.375,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1325||SEGMENT",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.25,
+   "width_m": 2.5,
+   "area_m2": 0.625,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1342||SEGMENT",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.25,
+   "height_m": 1.5,
+   "area_m2": 0.375,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "SERVICE_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1342||SEGMENT",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.25,
+   "height_m": 1.5,
+   "area_m2": 0.375,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "SERVICE_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1342||SEGMENT",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.25,
+   "width_m": 1.610992,
+   "area_m2": 0.402748,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "SERVICE_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "NOT_ESTABLISHED (a wet / service or outside-unit side: tile vs plaster not stated)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1518||SEGMENT",
+   "surface": "LEFT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.25,
+   "height_m": 1.5,
+   "area_m2": 0.375,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1518||SEGMENT",
+   "surface": "RIGHT_JAMB",
+   "class": "JAMB_REVEAL",
+   "depth_m": 0.25,
+   "height_m": 1.5,
+   "area_m2": 0.375,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  },
+  {
+   "opening": "QORTUBA_REV_NEW|H1518||SEGMENT",
+   "surface": "TOP_REVEAL",
+   "class": "HEAD_REVEAL",
+   "depth_m": 0.25,
+   "width_m": 2.346444,
+   "area_m2": 0.586611,
+   "depth_basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+   "state": "COMPUTED",
+   "kind": "WINDOW",
+   "rooms": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "height_authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state",
+   "trade": "PLASTER (US-07 add-back; source depth first); PAINT only where the paint row applies (US-07)"
+  }
+ ],
+ "count": 49,
+ "by_trade": {
+  "PLASTER": 9.572191,
+  "NOT_ESTABLISHED": 6.185248
+ },
+ "blocked": [
+  "OP-9e0fd219ca5cd391 LEFT_JAMB"
+ ],
+ "skirting": "independent: door / sliding-door jambs carry ZERO skirting while their reveal surfaces exist",
+ "depth": {
+  "depth_m": 0.25,
+  "basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source",
+  "doors / passages / sliding door": "SOURCE (strip / band thickness)"
+ },
+ "never": [
+  "the sill as a reveal (US-07)",
+  "a non-physical passage side as a jamb (V3-O1)",
+  "a reveal counted per room"
+ ],
+ "double_count_guard": {
+  "surfaces": 184,
+  "duplicates": [],
+  "state": "PASS"
+ }
+}

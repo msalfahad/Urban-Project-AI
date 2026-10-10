@@ -1,0 +1,30 @@
+{
+ "classes": {
+  "GEOMETRY_INPUT": 2,
+  "NOT_COMPARABLE": 1,
+  "NO_DIFFERENCE": 5,
+  "NTS_BASIS": 2,
+  "POPULATION": 6,
+  "SCOPE": 1,
+  "SURFACE_BASIS": 1
+ },
+ "frozen_manifest_sha256": "92bfe9c0b2b7fea189bb37759f93759ea4a6cf5108738af1390468bda6ee92da",
+ "frozen_quantities_unchanged": true,
+ "headline": {
+  "freelancer_all_dome_m3": 6.78,
+  "old_urban_all_dome_m3": 7.523,
+  "old_urban_terrace_rebar_kg": 1325.877218,
+  "old_urban_terrace_shells_m3": 4.68,
+  "old_urban_tower_rebar_kg": 728.349696,
+  "s8_3_concrete_m3": 5.081361321,
+  "s8_3_reinforcement_kg": 602.111303562
+ },
+ "references": [
+  "research/alsenan_control_plane_02/registers/ALSENAN_CONTROL_V2_CANDIDATE.json",
+  "research/alsenan_multi_engine_comparison/FREELANCER_CATEGORY_LINEAGE.json",
+  "research/alsenan_multi_engine_comparison/MULTI_ENGINE_CONCRETE_COMPARISON.json",
+  "research/R9_1_CHRIS_POST_FREEZE/02_OBJECT_GAP_REGISTER.csv"
+ ],
+ "round": "S8_3_POST_FREEZE",
+ "rows": 18
+}

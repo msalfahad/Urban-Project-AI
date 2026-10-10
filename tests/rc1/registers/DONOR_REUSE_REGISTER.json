@@ -1,0 +1,34 @@
+{
+ "SCHEMA": "URBAN_QORTUBA_RC1_DONOR_REUSE_REGISTER_V1",
+ "lock": "research/external_engine_lab/DONORS.lock",
+ "searched_before_writing": [
+  "UC4N labels.plain / snapshot / diff",
+  "BM readback diff / digests",
+  "SL COM readback",
+  "PW server",
+  "OT schedule scan / scale gating / detectRooms"
+ ],
+ "COPY_ADAPT": [],
+ "CLEAN_REIMPLEMENTED": [
+  "no-silent-row-drop readback (OT principle)",
+  "field-level cell readback (BM pattern)",
+  "deterministic zip re-pack of the workbook (fixed entry timestamps) so a rebuild is byte-identical"
+ ],
+ "BENCHMARK_ONLY": [
+  "OpenTakeoff detectRooms / One-Click",
+  "puran-water/autocad-mcp server"
+ ],
+ "REJECTED": [
+  "OpenTakeoff detectRooms / One-Click quantities as any authority",
+  "any donor / MCP output as a quantity",
+  "U-C4N unit_of (inferred units) and silent OCS identity",
+  "warn-not-block on mixed scale",
+  "workbook formulas or sheet totals"
+ ],
+ "DEFERRED": {
+  "UC4N labels.plain": "NONE. labels.plain does not materially help: room / opening extraction already uses decoded TEXT, and the garbled Qortuba labels ('whgm', 'jpqdV') are an SHX font-encoding effect labels.plain does not decode; the donor clone is not present and fetching code for no gain is not justified",
+  "BM / SL native readback oracle": "route B lab oracle only",
+  "OT PDF lane": "after the first blind-villa intake"
+ },
+ "duplicating_full_engines": false
+}

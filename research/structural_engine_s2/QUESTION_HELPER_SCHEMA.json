@@ -1,0 +1,72 @@
+{
+ "consultant_block": [
+  "PLAIN_LANGUAGE_ISSUE",
+  "WHY_IT_MATTERS",
+  "WHERE_TO_LOOK",
+  "WHAT_THE_DRAWING_SAYS",
+  "ENGINE_CURRENT_INTERPRETATION",
+  "QUESTION_TO_CONSULTANT",
+  "QUANTITY_BOQ_IMPACT"
+ ],
+ "glossary_terms": [
+  "band",
+  "boxed",
+  "continuous beam",
+  "cover",
+  "footing",
+  "ground beam",
+  "lift",
+  "neck column",
+  "per metre",
+  "pit",
+  "planted column",
+  "schedule",
+  "section",
+  "slab",
+  "span",
+  "stirrup",
+  "strap beam",
+  "t&b",
+  "tag",
+  "temperature steel",
+  "tie"
+ ],
+ "help_block": [
+  "WHAT_DOES_THIS_MEAN",
+  "TERMS_EXPLAINED",
+  "WHY_DOES_IT_MATTER",
+  "WHERE_SHOULD_I_LOOK",
+  "WHAT_TO_SEARCH_IN_AUTOCAD",
+  "WHAT_WOULD_EACH_ANSWER_CHANGE",
+  "WHAT_TO_ASK_THE_ENGINEERING_OFFICE"
+ ],
+ "issue_plain_language": {
+  "AMBIGUOUS_APPLICABILITY": "A rule or note exists but it is not clear where or how it applies.",
+  "ENGINEERING_METHOD_REQUIRED": "The drawings give the requirement but not the method to measure it; the engineer must state the method.",
+  "MISSING_DETAIL": "Something is required by a note or rule but is not drawn or detailed.",
+  "MISSING_DIMENSION": "A size or length needed to measure this is not given.",
+  "MISSING_SCHEDULE": "This member has no schedule row, so its size and bars are not defined.",
+  "REVISION_CONFLICT": "Two drawing revisions disagree.",
+  "RULE_GAP": "A drawing rule does not cover this exact case (for example a value sits exactly on a limit).",
+  "SOURCE_CONFLICT": "Two places on the drawings say different things about the same thing.",
+  "UNBOUND_OCCURRENCE": "A member drawn on the plan cannot be tied to one type mark with certainty.",
+  "UNIT_CONFLICT": "Two sources use different units for the same value."
+ },
+ "policy_id": "QUESTION_HELPER_V1",
+ "rules": [
+  "generated only from the flag and its source references",
+  "no structural vocabulary assumed: every glossary term found in the flag text is explained",
+  "AutoCAD steps come from the references (text, handle, layer, coordinates)"
+ ],
+ "schema": "QUESTION_HELPER_SCHEMA",
+ "source_ref_fields": [
+  "drawing",
+  "page",
+  "sheet_title",
+  "layer",
+  "handle",
+  "text",
+  "xy_mm",
+  "sheet_origin"
+ ]
+}

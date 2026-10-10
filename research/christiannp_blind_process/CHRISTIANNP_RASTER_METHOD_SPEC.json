@@ -1,0 +1,62 @@
+{
+ "NOT_HELD": [
+  "exact grid origin",
+  "bounding region",
+  "line / arc rasterisation implementation",
+  "stroke thickness",
+  "flood-fill seed and code",
+  "class assignment rules",
+  "edge-cell allocation",
+  "exact cell list",
+  "tolerances",
+  "raw script"
+ ],
+ "REPORT_EXPLICIT": {
+  "cell_mm": 50,
+  "classes": [
+   "SLAB_LABELLED",
+   "BEAM_INTERIOR",
+   "OPENING",
+   "UNRESOLVED_ENCLOSED",
+   "EDGE_LINE_CELLS"
+  ],
+  "output_class_areas": "present in the report per the owner; values not yet imported",
+  "outside": "exterior flood fill",
+  "primitives": "layer-1 lines + arcs",
+  "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)"
+ },
+ "convergence_tests": [
+  "test_raster_area_converges_25_to_10mm (< 0.5 % per class)",
+  "test_component_count_stable_from_50mm",
+  "test_origin_shift_within_edge_band (perimeter x cell / 2)",
+  "test_flood_fill_leak_through_one_cell_gap_detected",
+  "test_thin_void_below_cell_size_reported_unresolved",
+  "test_edge_line_cells_reported_not_allocated"
+ ],
+ "recommendation": "rebuild an INDEPENDENT Urban raster oracle; do not copy unseen donor code",
+ "risks": [
+  "edge cells: about +/- perimeter x cell/2 per boundary (1.7 m2 on 70 m at 50 mm)",
+  "gaps under one cell close; thin voids vanish",
+  "arc quantisation",
+  "single-pixel leaks flood rooms",
+  "text / hatch strokes become walls unless layer-filtered",
+  "grid-origin dependence"
+ ],
+ "urban_oracle_design": {
+  "area": "cells x cell^2 per class; EDGE_LINE_CELLS reported separately, never silently allocated",
+  "authority": "ORACLE_ONLY - compared with Urban vector areas; never a production quantity",
+  "classes": [
+   "SLAB_LABELLED",
+   "BEAM_INTERIOR",
+   "OPENING",
+   "UNRESOLVED_ENCLOSED",
+   "EDGE_LINE_CELLS",
+   "OUTSIDE"
+  ],
+  "grid": "axis-aligned to the sheet frame; run at 100 / 50 / 25 / 10 mm and at two origins (0, half a cell)",
+  "input": "layer-filtered K2 primitives of one slab sheet (lines + arcs), region frame from the sheet register",
+  "outputs": "per class: area, perimeter, connected components, per resolution and origin",
+  "outside": "4-connected flood fill from the frame border",
+  "stroke": "Bresenham + arc sampling at <= cell/2 chord error; stroke width = 1 cell (recorded)"
+ }
+}

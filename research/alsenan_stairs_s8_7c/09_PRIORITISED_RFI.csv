@@ -1,0 +1,9 @@
+PRIORITY,TO,QUESTION,STATUS
+P1,architect,"GF -> 1F arrangement: section A-A draws 10 + 5-riser turn + 12 = 27 risers (166.667 mm) to the printed +3.50; the structural GF roof sheet draws 12 + 4 + 12 = 28 (landing +3.571, foot 600 mm south); the architectural GF plan draws 10 + 4 + 11 = 25. Confirm which arrangement governs. If it is the section's, redraw the plans' turn with five winder treads (four radial risers) and confirm the 218.5 mm walking-line going (600 mm from the fan centre) is acceptable.",OPEN
+P1,engineer,"B20 at the GF -> 1F head: every 12-riser upper flight at 300 goings (structural sheet, section A-A) puts the last riser 200 mm inside B20. Choose: lower / crank B20 locally under the top tread (about one riser), or let the architect shorten the upper goings to <= 272.7 mm (or 281.8 mm with no arrival strip).",OPEN
+P1,engineer,Round stair beam CA (30 x 50) crosses the straight flight over the tread at +3.411: if it sits at the 1F floor it leaves about 1.59 m headroom. State its level (support under the flight or an error).,OPEN
+P2,owner,Riser preference: 27 risers = 166.667 mm and 28 = 160.714 mm are both above 160 mm. Accept one of them; 27 is the count that matches the printed +3.50 with equal risers.,OPEN
+P2,architect / engineer,"1F -> 2F: the owner's 27 needs the architectural four-riser winder turn; the structural sheet and section A-A draw a flat quarter. Confirm the winders, their structural form and the landing level (+7.989 with 27; section scales +7.69).",OPEN
+P2,engineer,Structural waist and landing thickness (p.16 'THICK' has no value).,OPEN
+P3,architect,"Marble bedding / adhesive (is it inside the 30 mm?) and the floor build-ups at GF, 1F and 2F (they set the first and last concrete risers).",OPEN
+P3,engineer,"Applicable typical bars, anchorage and laps; whether the 'With Stair' B3 / CB3 beams are the p.16 cranked stair beam.",OPEN

@@ -1,0 +1,91 @@
+{
+ "SCHEMA": "URBAN_R8_16_I1471_SOURCE_AUDIT_V1",
+ "door_occurrence": "I1471",
+ "door_symbol": {
+  "swing_part": "QORTUBA_REV_NEW|H684|1471|ELLIPTICAL_ARC|0",
+  "hinge": [
+   109683.96,
+   15589.72
+  ],
+  "radius_mm": 882.4,
+  "layers": [
+   "DOOR"
+  ]
+ },
+ "closure_a": "CLOSURE|I1471|A",
+ "jamb_caps": [
+  {
+   "cap": "1472",
+   "layer": "WALL",
+   "geometry_mm": [
+    1096780.8,
+    155947.2,
+    1096780.8,
+    155747.2
+   ],
+   "length_mm": 200.0
+  },
+  {
+   "cap": "1473",
+   "layer": "WALL",
+   "geometry_mm": [
+    1097780.8,
+    155897.2,
+    1097780.8,
+    155747.2
+   ],
+   "length_mm": 150.0
+  }
+ ],
+ "hosting_bands": [
+  {
+   "band": "WB-2c6e6cc37179fbc6",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "518",
+    "523"
+   ],
+   "thickness_mm": 150.0,
+   "ends": [
+    "OPENING_JAMB",
+    "RECEIVING_FACE_JUNCTION"
+   ]
+  },
+  {
+   "band": "WB-d0fa2ebe87cedccd",
+   "state": "WALL_BAND_ESTABLISHED",
+   "faces": [
+    "519",
+    "525"
+   ],
+   "thickness_mm": 200.0,
+   "ends": [
+    "JUNCTION_OR_CONTINUATION",
+    "OPENING_JAMB"
+   ]
+  }
+ ],
+ "face_lines_mm": {
+  "H523 (150 wall, HALL face)": "y = 15574.72",
+  "H525 (200 wall, HALL face)": "y = 15574.72",
+  "H518 (150 wall, M.B face)": "y = 15589.72",
+  "H519 (200 wall, M.B face)": "y = 15594.72"
+ },
+ "cause": "LEGITIMATE STAGGERED CONSTRUCTION: a 200 mm wall (WB-d0fa, H519 / H525) meets a 150 mm wall (WB-2c6e, H518 / H523) at the door, flush on the HALL side; the 50 mm step is on the M.B.ROOM side. Each band is ESTABLISHED on its own parallel faces - not drafting noise, not a finish offset. Closure A (closed leaf on the 150 mm wall's M.B face) meets cap H1473 at its END but cap H1472 in its MIDDLE, so the R8.9 end-point rule never formed closure B",
+ "v2_result": {
+  "closure_b": "CLOSURE|I1471|B",
+  "rule": "OFFSET_JAMB_CAPS",
+  "evidence": {
+   "rule": "OFFSET_JAMB_CAPS",
+   "depth": 15.00000000095315,
+   "stagger": 5.000000000118234,
+   "side": -1
+  },
+  "width_mm": 1000.0
+ },
+ "strip_site": {
+  "threshold": "THRESHOLD-d4633eabc844b274",
+  "site": "SITE-befd4d1f269dd310",
+  "area_m2": 0.15
+ }
+}

@@ -1,0 +1,165 @@
+{
+ "SCHEMA": "URBAN_REBAR_COVERAGE_V1",
+ "coverage": {
+  "ITEM_pct": 93.75,
+  "BAR_SET_pct": 99.5,
+  "POPULATION_pct": 87.5,
+  "WEIGHT_TECHNICAL_OF_COMMERCIAL_pct": 77.76,
+  "WEIGHT_COVERAGE_ESTIMATE_note": "commercial net weight over the populations with geometry; blocked populations (stairs, boxed footing bars) have no weight and are listed"
+ },
+ "bbs_technical": {
+  "used_kg": 13986.21,
+  "purchased_kg": 15323.555,
+  "unused_kg": 1337.344,
+  "reused_kg": 7549.579,
+  "effective_waste_pct": 8.727
+ },
+ "bbs_commercial": {
+  "used_kg": 26034.675,
+  "purchased_kg": 27537.481,
+  "unused_kg": 1502.806,
+  "reused_kg": 14974.875,
+  "effective_waste_pct": 5.457
+ },
+ "bbs_by_dia": {
+  "8": {
+   "stock_m": 12.0,
+   "pieces": 5749,
+   "purchased_bars": 764,
+   "purchased_m": 9168.0,
+   "used_m": 9044.749752,
+   "reused_offcut_m": 7685.63628,
+   "unused_offcut_m": 123.250248,
+   "effective_waste_pct": 1.3444,
+   "longest_offcut_m": 1.55628,
+   "kg_per_m": 0.3951,
+   "used_kg": 3573.234,
+   "purchased_kg": 3621.926,
+   "unused_kg": 48.691,
+   "reused_kg": 3036.301
+  },
+  "10": {
+   "stock_m": 12.0,
+   "pieces": 1897,
+   "purchased_bars": 573,
+   "purchased_m": 6876.0,
+   "used_m": 6766.922814,
+   "reused_offcut_m": 3802.154157,
+   "unused_offcut_m": 109.077186,
+   "effective_waste_pct": 1.5863,
+   "longest_offcut_m": 7.3731,
+   "kg_per_m": 0.6173,
+   "used_kg": 4177.113,
+   "purchased_kg": 4244.444,
+   "unused_kg": 67.332,
+   "reused_kg": 2347.009
+  },
+  "12": {
+   "stock_m": 12.0,
+   "pieces": 1324,
+   "purchased_bars": 319,
+   "purchased_m": 3828.0,
+   "used_m": 3780.9621,
+   "reused_offcut_m": 2305.242642,
+   "unused_offcut_m": 47.0379,
+   "effective_waste_pct": 1.2288,
+   "longest_offcut_m": 2.1,
+   "kg_per_m": 0.8889,
+   "used_kg": 3360.855,
+   "purchased_kg": 3402.667,
+   "unused_kg": 41.811,
+   "reused_kg": 2049.105
+  },
+  "14": {
+   "stock_m": 12.0,
+   "pieces": 785,
+   "purchased_bars": 199,
+   "purchased_m": 2388.0,
+   "used_m": 2332.578578,
+   "reused_offcut_m": 1444.855482,
+   "unused_offcut_m": 55.421422,
+   "effective_waste_pct": 2.3208,
+   "longest_offcut_m": 9.573081,
+   "kg_per_m": 1.2099,
+   "used_kg": 2822.132,
+   "purchased_kg": 2889.185,
+   "unused_kg": 67.053,
+   "reused_kg": 1748.097
+  },
+  "16": {
+   "stock_m": 12.0,
+   "pieces": 1292,
+   "purchased_bars": 560,
+   "purchased_m": 6720.0,
+   "used_m": 6060.147641,
+   "reused_offcut_m": 3080.977001,
+   "unused_offcut_m": 659.852359,
+   "effective_waste_pct": 9.8192,
+   "longest_offcut_m": 7.244,
+   "kg_per_m": 1.5802,
+   "used_kg": 9576.53,
+   "purchased_kg": 10619.259,
+   "unused_kg": 1042.73,
+   "reused_kg": 4868.704
+  },
+  "18": {
+   "stock_m": 12.0,
+   "pieces": 220,
+   "purchased_bars": 115,
+   "purchased_m": 1380.0,
+   "used_m": 1262.405641,
+   "reused_offcut_m": 462.829697,
+   "unused_offcut_m": 117.594359,
+   "effective_waste_pct": 8.5213,
+   "longest_offcut_m": 4.631702,
+   "kg_per_m": 2.0,
+   "used_kg": 2524.811,
+   "purchased_kg": 2760.0,
+   "unused_kg": 235.189,
+   "reused_kg": 925.659
+  }
+ },
+ "policy": {
+  "policy_id": "BBS_OPTIMISER_V1",
+  "stock_m": 12.0,
+  "hook_basis": "ACI 318-19 Table 25.3.1 (standard hooks, deformed bars in tension) and Table 25.3.2 (stirrup / tie hooks)",
+  "hook_verified": false,
+  "hooks": {
+   "90": {
+    "tail_db": 12,
+    "tail_min_mm": 0,
+    "bend_d_db": "by db",
+    "table": "25.3.1",
+    "use": "longitudinal bar end anchorage"
+   },
+   "180": {
+    "tail_db": 4,
+    "tail_min_mm": 65,
+    "bend_d_db": "by db",
+    "table": "25.3.1",
+    "use": "longitudinal bar end anchorage"
+   },
+   "135_TIE": {
+    "tail_db": 6,
+    "tail_min_mm": 75,
+    "bend_d_db": "by db",
+    "table": "25.3.2",
+    "use": "closed stirrup / tie hook"
+   },
+   "90_TIE": {
+    "tail_db": 6,
+    "tail_min_mm": 75,
+    "bend_d_db": "by db",
+    "table": "25.3.2",
+    "use": "stirrup / tie hook (db <= 16)"
+   }
+  },
+  "rule": "hook addition = tail + bend arc at the centreline - (inside radius + db); cutting = first-fit decreasing on stock bars with offcut reuse; waste = unused offcut / purchased",
+  "never": [
+   "internet BBS constants",
+   "a hook class CODE_METHOD while the edition is unverified",
+   "a piece longer than the stock without its laps"
+  ],
+  "digest": "baea0bac26beaa06b8f31c4617b9dd555e8e3871078980b938f4796ec5ee36ca"
+ }
+}

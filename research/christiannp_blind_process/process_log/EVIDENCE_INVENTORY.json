@@ -1,0 +1,278 @@
+{
+ "AWAITING_REPORT_FILE": [
+  "raster output class areas",
+  "full unresolved-rebar list (quoted with 'etc.')",
+  "footing occurrence table",
+  "stair breakdown (A9 values)",
+  "plaster / wall-face composition",
+  "column occurrence lists per floor"
+ ],
+ "NOT_HELD": [
+  "chronological MCP session / tool-call transcript",
+  "MCP tool names and arguments per step",
+  "active AutoCAD document per step",
+  "raw LISP history",
+  "local scripts",
+  "raw entity dumps",
+  "raw wall pairs",
+  "raw raster cells",
+  "raw beam allocations",
+  "per-object handle lists",
+  "failed attempts / retries"
+ ],
+ "REPORT_EXPLICIT": {
+  "assumptions": {
+   "A1": "GF slab t = 0.20",
+   "A10": "wall height = floor-to-floor - slab thickness",
+   "A11": "ceiling = net slab above",
+   "A12": "structural levels = architectural FFL",
+   "A13": "door leaf height 2.10",
+   "A14": "floor / ceiling area from slab net area",
+   "A15": "roof waterproofing = SFRS slab only, no upturns",
+   "A2": "GF column base +/-0.00",
+   "A3": "foundation neck height 1.00",
+   "A4": "2F roof top +13.90",
+   "A5": "ground-beam depth 0.60",
+   "A6": "blinding 0.10 + 0.10 projection",
+   "A7": "ground slab = GF gross outline",
+   "A8": "CN continued through FOU + GR",
+   "A9": "stair waist / landing assumptions"
+  },
+  "beam_rules": {
+   "R1": "continuous beam allocated once per plan, capped at schedule total span; width match preferred, then length",
+   "R2": "CB may continue collinearly into an adjacent unlabeled strip",
+   "R3": "same-mark labels < 2 m apart are merged",
+   "R4": "if schedule width differs from drawn strip width by > 60 mm, the strip is assigned to the matching-width label instead",
+   "R5": "remaining strip length is shared equally among simple labels"
+  },
+  "raster": {
+   "cell_mm": 50,
+   "classes": [
+    "SLAB_LABELLED",
+    "BEAM_INTERIOR",
+    "OPENING",
+    "UNRESOLVED_ENCLOSED",
+    "EDGE_LINE_CELLS"
+   ],
+   "outside": "exterior flood fill",
+   "primitives": "layer-1 lines + arcs"
+  },
+  "unresolved_rebar": [
+   "continuous-beam T/M fields",
+   "BOXED footing bars",
+   "ground-beam reinforcement",
+   "missing slab direction",
+   "slab top bars without extent",
+   "CN reinforcement",
+   "CB MID/support bars",
+   "top hangers",
+   "stair reinforcement"
+  ],
+  "values": {
+   "BEAMS_1F_m3": {
+    "quoted_in": "owner brief S3.1 section 16",
+    "value": 18.562
+   },
+   "BEAMS_2F_m3": {
+    "quoted_in": "owner brief S3.1 section 16",
+    "value": 2.823
+   },
+   "BEAMS_GF_m3": {
+    "quoted_in": "owner brief S3.1 section 16",
+    "value": 25.206
+   },
+   "BLOCK_150_m": {
+    "quoted_in": "owner brief coverage-recovery sections 5-6",
+    "value": 79.971
+   },
+   "BLOCK_200_m": {
+    "quoted_in": "owner brief coverage-recovery sections 5-6",
+    "value": 183.497
+   },
+   "BUA_m2": {
+    "quoted_in": "owner brief S3.1 section 16",
+    "value": 598.708
+   },
+   "COL_1F_m3": {
+    "quoted_in": "owner brief S3.1 section 16",
+    "value": 8.888
+   },
+   "COL_2F_m3": {
+    "quoted_in": "owner brief S3.1 section 16",
+    "value": 3.377
+   },
+   "COL_FOU_m3": {
+    "quoted_in": "owner brief S3.1 section 16",
+    "value": 6.15
+   },
+   "COL_GF_m3": {
+    "quoted_in": "owner brief S3.1 section 16",
+    "value": 26.235
+   },
+   "FOOTINGS_m3": {
+    "quoted_in": "owner brief S3.1 section 16",
+    "value": 65.669
+   },
+   "GBP_LENGTH_m": {
+    "quoted_in": "owner brief evidence correction",
+    "value": 200.036
+   },
+   "GBP_PAIRED_STRIPS": {
+    "quoted_in": "owner brief evidence correction",
+    "value": 42
+   },
+   "GBP_RAW_LINES": {
+    "quoted_in": "owner brief evidence correction",
+    "value": 85
+   },
+   "GBP_STRIP_WIDTH_mm": {
+    "quoted_in": "owner brief evidence correction",
+    "value": 300
+   },
+   "GB_DEPTH_A5_m": {
+    "quoted_in": "owner brief evidence correction",
+    "value": 0.6
+   },
+   "GROUND_BEAMS_m3": {
+    "quoted_in": "owner brief evidence correction",
+    "value": 36.006
+   },
+   "GROUND_SLAB_AREA_m2": {
+    "quoted_in": "owner brief forensic handoff",
+    "value": 324.038
+   },
+   "GROUND_SLAB_T_m": {
+    "quoted_in": "owner brief forensic handoff",
+    "value": 0.1
+   },
+   "GROUND_SLAB_m3": {
+    "quoted_in": "owner brief S3.1 section 16",
+    "value": 32.404
+   },
+   "NET_REBAR_t": {
+    "quoted_in": "owner brief S3.1 section 16",
+    "value": 22.916
+   },
+   "NET_SLAB_1F_m2": {
+    "quoted_in": "owner brief S3.1 section 16",
+    "value": 179.325
+   },
+   "NET_SLAB_2F_m2": {
+    "quoted_in": "owner brief S3.1 section 16",
+    "value": 55.275
+   },
+   "NET_SLAB_GF_m2": {
+    "quoted_in": "owner brief S3.1 section 16",
+    "value": 290.555
+   },
+   "NET_SLAB_TOTAL_m2": {
+    "quoted_in": "owner brief coverage-recovery sections 5-6",
+    "value": 525.155
+   },
+   "RASTER_CELL_mm": {
+    "quoted_in": "owner brief evidence correction",
+    "value": 50
+   },
+   "SLABS_1F_m3": {
+    "quoted_in": "owner brief S3.1 section 16",
+    "value": 28.692
+   },
+   "SLABS_2F_m3": {
+    "quoted_in": "owner brief S3.1 section 16",
+    "value": 9.95
+   },
+   "SLABS_GF_m3": {
+    "quoted_in": "owner brief S3.1 section 16",
+    "value": 58.111
+   },
+   "STAIRS_m3": {
+    "quoted_in": "owner brief S3.1 section 16",
+    "value": 5.048
+   },
+   "STRAPS_m3": {
+    "quoted_in": "owner brief S3.1 section 16",
+    "value": 6.053
+   },
+   "TOTAL_RC_m3": {
+    "quoted_in": "owner brief S3.1 section 16",
+    "value": 333.173
+   },
+   "WALL_FACES_GROSS_m2": {
+    "quoted_in": "owner brief coverage-recovery sections 5-6",
+    "value": 2364.7
+   }
+  }
+ },
+ "classes": [
+  "REPORT_EXPLICIT",
+  "URBAN_FROZEN",
+  "ARITHMETIC_INFERENCE",
+  "NOT_HELD"
+ ],
+ "report_file": {
+  "name": "CHRISTIANNP_ALSENAN_BLIND_FULL_BOQ.md",
+  "status": "NOT YET IN THIS ENVIRONMENT - REPORT_EXPLICIT items are imported from the owner's quotations; scripts/verify_report_quotes.py checks them when the file is placed in process_log/"
+ },
+ "urban_versions": {
+  "CR": {
+   "CALCULATION_ROUND": "COVERAGE_RECOVERY (CR.3)",
+   "DRAWING_SHA": {
+    "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+    "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+   },
+   "ENGINE_COMMIT": "680264d",
+   "REGISTER_VERSION": "research/coverage_recovery_round/QUANTITY_SCENARIOS.json@d6a32b862f1f6bf3"
+  },
+  "CR_DASH": {
+   "CALCULATION_ROUND": "COVERAGE_RECOVERY (CR.3)",
+   "DRAWING_SHA": {
+    "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+    "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+   },
+   "ENGINE_COMMIT": "680264d",
+   "REGISTER_VERSION": "research/coverage_recovery_round/QUANTITY_COVERAGE_DASHBOARD.json@818f4b8643e7b456"
+  },
+  "CR_WALLS": {
+   "CALCULATION_ROUND": "COVERAGE_RECOVERY (CR.3)",
+   "DRAWING_SHA": {
+    "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+    "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+   },
+   "ENGINE_COMMIT": "680264d",
+   "REGISTER_VERSION": "research/coverage_recovery_round/WALL_FACE_PAIR_EXTRACT.json@2639799cb9d6bc75"
+  },
+  "OPN": {
+   "CALCULATION_ROUND": "R5 (arch truth 05)",
+   "DRAWING_SHA": {
+    "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4"
+   },
+   "ENGINE_COMMIT": "8f44252",
+   "REGISTER_VERSION": "research/alsenan_arch_truth_05/registers/OPENING_EVIDENCE_REGISTER_V3.json@073422a7a53e7316"
+  },
+  "S1L": {
+   "CALCULATION_ROUND": "S1",
+   "DRAWING_SHA": {
+    "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+    "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+   },
+   "ENGINE_COMMIT": "606efec",
+   "REGISTER_VERSION": "research/alsenan_structural_census_s1/STRUCTURAL_LEVEL_REGISTER.json@53d54f501f0fcab6"
+  },
+  "V3B": {
+   "CALCULATION_ROUND": "V3b",
+   "DRAWING_SHA": {
+    "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+   },
+   "ENGINE_COMMIT": "66dd3fb",
+   "REGISTER_VERSION": "tests/alsenan/registers_v3b/BOQ_LINES_V3B.json@b241c38b543b4abf"
+  },
+  "V3G": {
+   "CALCULATION_ROUND": "V3",
+   "DRAWING_SHA": {
+    "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+   },
+   "ENGINE_COMMIT": "1381aa6",
+   "REGISTER_VERSION": "tests/alsenan/registers_v3/GROUND_STRUCTURE_REGISTER.json@c3e87460a6924115"
+  }
+ }
+}

@@ -1,0 +1,18 @@
+ITEM_ID,DOME,FAMILY,LANE,DIAMETER_MM,EQUIVALENT_LENGTH_M,UNIT_MASS_KG_M,KG,RELEASED,BASIS,STILL_MISSING,NOTE
+RQ-DOME-A-SHELL_MERIDIONAL,DOME-A,SHELL_MERIDIONAL,PROJECT_BASIS_QTO,12,169.343804127,0.888888889,150.527825891,True,"rate density over the shell mid-surface: area / 0.150 m (continuous, unrounded); one mesh as drawn","fabrication count, crown curtailment, laps","no lap, hook, anchorage or second mesh included"
+RQ-DOME-A-SHELL_HOOP,DOME-A,SHELL_HOOP,PROJECT_BASIS_QTO,12,169.343804127,0.888888889,150.527825891,True,"rate density over the shell mid-surface: area / 0.150 m (continuous, unrounded); one mesh as drawn","fabrication count, crown curtailment, laps","no lap, hook, anchorage or second mesh included"
+RQ-DOME-A-SHELL_ANCHORAGE,DOME-A,SHELL_ANCHORAGE,BLOCKED_UNQUANTIFIED,12,,0.888888889,,False,,leg length into the ring follows the 'AS PER ARCH' depth; the detail is N.I.S,
+RQ-DOME-A-RING_TOP,DOME-A,RING_TOP,SOURCE_CONFLICT,16,,1.580246914,,False,,ring centreline radius: plan 2311.1 vs detail 2111.1 (CF-S8.3-02); laps and continuity through the framing junctions; dome A ring segments also tagged B4 (2T12 / 4T16 schedule) (CF-S8.3-04),count stated (3); length only as sensitivity
+RQ-DOME-A-RING_BOTTOM,DOME-A,RING_BOTTOM,SOURCE_CONFLICT,18,,2,,False,,ring centreline radius: plan 2311.1 vs detail 2111.1 (CF-S8.3-02); laps and continuity through the framing junctions; dome A ring segments also tagged B4 (2T12 / 4T16 schedule) (CF-S8.3-04),count stated (3); length only as sensitivity
+RQ-DOME-A-RING_SIDE,DOME-A,RING_SIDE,BLOCKED_UNQUANTIFIED,14,,1.209876543,,False,,rows at 20 cm over a depth 'AS PER ARCH',
+RQ-DOME-A-RING_LINKS,DOME-A,RING_LINKS,BLOCKED_UNQUANTIFIED,8,,0.395061728,,False,,link size follows the ring depth; 8 / m along the ring is stated,
+RQ-DOME-A-RING_LAPS,DOME-A,RING_LAPS_AND_JUNCTIONS,BLOCKED_UNQUANTIFIED,,,,,False,,no lap or junction detail with the framing beams and columns,
+RQ-DOME-B-SHELL_MERIDIONAL,DOME-B,SHELL_MERIDIONAL,PROJECT_BASIS_QTO,12,169.343804127,0.888888889,150.527825891,True,"rate density over the shell mid-surface: area / 0.150 m (continuous, unrounded); one mesh as drawn","fabrication count, crown curtailment, laps","no lap, hook, anchorage or second mesh included"
+RQ-DOME-B-SHELL_HOOP,DOME-B,SHELL_HOOP,PROJECT_BASIS_QTO,12,169.343804127,0.888888889,150.527825891,True,"rate density over the shell mid-surface: area / 0.150 m (continuous, unrounded); one mesh as drawn","fabrication count, crown curtailment, laps","no lap, hook, anchorage or second mesh included"
+RQ-DOME-B-SHELL_ANCHORAGE,DOME-B,SHELL_ANCHORAGE,BLOCKED_UNQUANTIFIED,12,,0.888888889,,False,,leg length into the ring follows the 'AS PER ARCH' depth; the detail is N.I.S,
+RQ-DOME-B-RING_TOP,DOME-B,RING_TOP,SOURCE_CONFLICT,16,,1.580246914,,False,,ring centreline radius: plan 2311.1 vs detail 2111.1 (CF-S8.3-02); laps and continuity through the framing junctions,count stated (3); length only as sensitivity
+RQ-DOME-B-RING_BOTTOM,DOME-B,RING_BOTTOM,SOURCE_CONFLICT,18,,2,,False,,ring centreline radius: plan 2311.1 vs detail 2111.1 (CF-S8.3-02); laps and continuity through the framing junctions,count stated (3); length only as sensitivity
+RQ-DOME-B-RING_SIDE,DOME-B,RING_SIDE,BLOCKED_UNQUANTIFIED,14,,1.209876543,,False,,rows at 20 cm over a depth 'AS PER ARCH',
+RQ-DOME-B-RING_LINKS,DOME-B,RING_LINKS,BLOCKED_UNQUANTIFIED,8,,0.395061728,,False,,link size follows the ring depth; 8 / m along the ring is stated,
+RQ-DOME-B-RING_LAPS,DOME-B,RING_LAPS_AND_JUNCTIONS,BLOCKED_UNQUANTIFIED,,,,,False,,no lap or junction detail with the framing beams and columns,
+RQ-DOME-TOWER,DOME-TOWER,ALL,SOURCE_CONFLICT,,,,,False,,no structural dome (CF-S8.3-01),

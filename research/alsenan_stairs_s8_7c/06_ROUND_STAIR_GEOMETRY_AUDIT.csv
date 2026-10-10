@@ -1,0 +1,13 @@
+ID,ITEM,VALUE,STATUS,EVIDENCE
+R-01,foot level,+1.00 inferred,INFERRED_NOT_PRINTED,no level is printed inside the light well; the nearest printed GF levels are '+1.00' 1.8 m and 2.5 m away (S8.7B 13)
+R-02,riser count,28 = 12 curved + 11 straight / corner landing / 5,MEASURED_DRAWING_FACT,GF roof sheet and architectural 1F plan agree; the GF plan's second view draws 4 in the short flight
+R-03,finished riser,160.7142857 mm (if +1.00 -> +5.50 and equal),INFERRED_NOT_PRINTED,both ends' levels
+R-04,curved flight: radial risers,12 from 177.78 to 263.49 deg,MEASURED_DRAWING_FACT,angular pitch 7.79 - 7.79 deg (mean 7.791)
+R-05,curved flight: goings,inner 215 / walking line 293 / outer 371 mm,MEASURED_DRAWING_FACT,tread ends at r 1580 - 2730 (tread lines 1150); the S-OPENING arcs at r 1530.5 / 2780.5 (1250)
+R-06,straight flight,"11 risers at 300, x 23757.9 -> 26757.9, width 1150 (tread lines)",MEASURED_DRAWING_FACT,1200 to the void edge (S-OPENING 2D0 at y 10211.9) is the alternative width
+R-07,corner landing,1150 x 1200 less column 374 (0.0275 m2); level +4.696 if equal risers,INFERRED_NOT_PRINTED,not printed; no section cuts this stair
+R-08,short flight and arrival,"5 risers y 10211.9 -> 11411.9 to +5.50; arrival plate C-T1 (S8.7, released)",PRINTED_ON_DRAWING,'+5.50' printed at the arrival on the architectural 1F plan (D16)
+R-09,stair zone at the 1F floor,SP-GF_ROOF_SLAB-21 (STAIR_IN_VOID_ZONE) and -28 (STAIR_FLIGHT_ZONE),FROZEN_RECORD,"they cover the straight flight, the corner landing and the short flight: no 1F slab over them"
+R-10,beam CA,"30 x 50, across the straight flight between risers 15 and 16 (x 24357.9 - 24657.9)",REQUIRES_ENGINEER_CONFIRMATION,its level is not stated; at the 1F floor it would leave about 1.59 m over the tread below; as a support under the flight it would be a stair beam (not drawn as such)
+R-11,south edge beam,B3 '(With Stair)' 20 x 40 on line BL022 along the straight flight,UNVERIFIED_ENGINEERING_INTERPRETATION,possibly the p.16 cranked stair beam; not drawn as cranked; owned by S6 (BLOCKED)
+R-12,main-stair landing levels,not applied,RULE,the round stair keeps its own levels

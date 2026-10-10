@@ -1,0 +1,71 @@
+{
+ "SCHEMA": "URBAN_R8_17_HALL_PAINTRY_SLIDING_DOOR_REGISTER_V1",
+ "fact": "QORTUBA-NEW-HALL-PAINTRY-SLIDING-GLASS-DOOR-OWNER-001@v1",
+ "binding": "APPLIES",
+ "source": {
+  "glazing_lines": [
+   "H533 (x = 1095980.8)",
+   "H542 (x = 1096080.8, on the HALL face)"
+  ],
+  "wall": "150 mm (faces x = 1095930.8 / 1096080.8)",
+  "length_mm": 2750.0,
+  "closures": [
+   "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F1",
+   "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F2",
+   "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F1",
+   "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F2"
+  ],
+  "strip_sites": "two unlabelled TS01 sites between the face closures (the glazing tracks)",
+  "old_revision": "the same handles H533 / H542 and the same 2.75 m width"
+ },
+ "classification": {
+  "physical_class": "SLIDING_GLAZED_DOOR",
+  "floor_contact": "OPENING_TO_FLOOR",
+  "path_class": "SLIDING_GLAZED_DOOR_TO_FLOOR",
+  "window_fact": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001 does NOT apply (resolution order: physical class first)"
+ },
+ "skirting": {
+  "HALL_excluded_lm": 2.75,
+  "payable_lm": 0.0,
+  "PAINTRY": "NO_SKIRTING (full wall tile)",
+  "R8.16": "WITHHELD 2.75 lm (FLOOR_CONTACT_UNPROVEN) -> now EXCLUDED_AS_FLOOR_REACHING_DOOR"
+ },
+ "jambs": [
+  {
+   "opening": "GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0",
+   "length_lm": 0.15,
+   "skirting_lm": 0.0
+  },
+  {
+   "opening": "GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0",
+   "length_lm": 0.15,
+   "skirting_lm": 0.0
+  }
+ ],
+ "jamb_note": "both jambs (150 mm wall ends) bound the strip sites, not HALL: zero skirting by rule, nothing subtracted twice",
+ "hidden_profile": "excluded across the 2.75 m (same path, US-08)",
+ "wall_face": {
+  "PAINTRY": {
+   "opening": "GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0",
+   "kind": "SLIDING_GLAZED_DOOR",
+   "width_m": 2.75,
+   "height_m": 2.2,
+   "height_authority": "QP-12 owner: the HALL / PAINTRY glazed opening 2.750 x 2.200 (same occurrence: glazing H533 / H542, 2.75 m, in both revisions) + QP-23 corroborating; floor contact from QORTUBA-NEW-HALL-PAINTRY-SLIDING-GLASS-DOOR-OWNER-001@v1",
+   "sill_m": 0.0,
+   "sill_authority": "reaches the floor",
+   "sources": [
+    "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F1",
+    "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F2"
+   ],
+   "state": "COMPUTED",
+   "contained": true,
+   "gross_plane_m2": 8.8,
+   "deduction_m2": 6.05,
+   "lintel_m2": 2.75
+  },
+  "height_authority": "QP-12 owner: the HALL / PAINTRY glazed opening 2.750 x 2.200 (same occurrence: glazing H533 / H542, 2.75 m, in both revisions) + QP-23 corroborating; floor contact from QORTUBA-NEW-HALL-PAINTRY-SLIDING-GLASS-DOOR-OWNER-001@v1",
+  "low_wall": "NONE (the opening reaches the floor: sill 0)"
+ },
+ "ceiling_q14": "unchanged: no trade or topology change touches the ceiling",
+ "marble": "NONE (dry <-> service glazed door; no marble rule or explicit evidence applies)"
+}

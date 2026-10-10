@@ -1,0 +1,46 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_ARCH_R5_BLOCKWORK_LENGTH",
+ "floors": {
+  "GF": {
+   "MASONRY_100_m": 0.0,
+   "MASONRY_150_m": 27.97629,
+   "MASONRY_200_m": 81.214877,
+   "OTHER_MASONRY_m": 0.0,
+   "BLOCKED_MATERIAL_m": 0.0,
+   "AMBIGUOUS_BLOCKED_m": 10.354087,
+   "RC_IN_BAND_m": 20.587906,
+   "EXCLUDED_m": 0.205503,
+   "material_state": "PROVISIONAL",
+   "material_authority": "ARCH_WALL_LAYER + STRUCTURAL_NEGATIVE (registered, not an RC element) + URBAN_CONVENTION (non-structural villa walls are concrete block) - no block label / legend in the source",
+   "release": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  "1F": {
+   "MASONRY_100_m": 0.0,
+   "MASONRY_150_m": 46.255871,
+   "MASONRY_200_m": 47.86713,
+   "OTHER_MASONRY_m": 0.0,
+   "BLOCKED_MATERIAL_m": 0.0,
+   "AMBIGUOUS_BLOCKED_m": 9.946942,
+   "RC_IN_BAND_m": 12.101787,
+   "EXCLUDED_m": 0.405503,
+   "material_state": "PROVISIONAL",
+   "material_authority": "ARCH_WALL_LAYER + STRUCTURAL_NEGATIVE (registered, not an RC element) + URBAN_CONVENTION (non-structural villa walls are concrete block) - no block label / legend in the source",
+   "release": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  "2F": {
+   "MASONRY_100_m": 0.0,
+   "MASONRY_150_m": 8.7,
+   "MASONRY_200_m": 25.092568,
+   "OTHER_MASONRY_m": 0.0,
+   "BLOCKED_MATERIAL_m": 0.0,
+   "AMBIGUOUS_BLOCKED_m": 3.25,
+   "RC_IN_BAND_m": 2.728716,
+   "EXCLUDED_m": 0.205503,
+   "material_state": "PROVISIONAL",
+   "material_authority": "ARCH_WALL_LAYER + STRUCTURAL_NEGATIVE (registered, not an RC element) + URBAN_CONVENTION (non-structural villa walls are concrete block) - no block label / legend in the source",
+   "release": "VERIFIED_PARTIAL_LOWER_BOUND"
+  }
+ },
+ "reconciliation": "wall-layer run = masonry 100 / 150 / 200 / other + RC in band + blocked material + ambiguous + excluded (inside the plate); openings / transitions / glazing are separate candidates (WALL_SEGMENT_LEDGER_V2.total_wall_candidate_by_floor)",
+ "rule": "unresolved segments never become blockwork"
+}

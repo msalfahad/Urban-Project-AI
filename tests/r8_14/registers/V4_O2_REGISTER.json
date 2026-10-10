@@ -1,0 +1,19 @@
+{
+ "SCHEMA": "URBAN_R8_14_V4_O2_REGISTER_V1",
+ "observation": "a square run (run == ratio x separation; pair 545 / 549 old revision, 150 x 150 mm) was decided by binary floating-point noise at the elongation equality (V3 and V4)",
+ "v5_rule": "V5: elongated only when length - elongation_ratio x separation > eps_r (raw overlap pre-check and local run alike); within eps_r of equality -> NOT elongated (ELONGATION_BOUNDARY_CASE, fail closed)",
+ "implementation": "wall_bands._elongated(length, d, eps_r) -> True / None / False; the raw pre-check treats None as not elongated (no run is formed); a local run at the boundary is UNSUPPORTED with reason ELONGATION_BOUNDARY_CASE",
+ "synthetic_tests": [
+  "test_square_run_equal_to_its_separation_is_not_elongated_and_says_why",
+  "test_a_run_within_tolerance_either_side_of_equality_is_the_same_boundary_case",
+  "test_a_run_longer_by_a_clear_margin_is_a_band_and_a_shorter_one_is_not_elongated"
+ ],
+ "blind_result": {
+  "NEW_K2_boundary_cases": [],
+  "OLD_K1_boundary_cases": [],
+  "pair_545_549": "no band in either revision under V5 (the only band on 549 is 546 / 549)"
+ },
+ "observability_gap": "raw-stage ties are dropped as 'not elongated' without a record; boundary_cases counts local-run ties only - recorded for R8.15 (no effect on any row)",
+ "material": false,
+ "state": "RESOLVED (deterministic, fail closed)"
+}

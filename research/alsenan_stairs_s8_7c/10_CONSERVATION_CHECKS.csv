@@ -1,0 +1,16 @@
+CHECK_ID,CHECK,RESULT,DETAIL
+C01,"all 28 earlier freezes (S4 ... S8.8, S8.7A, S8.7B) verify before and after the build",PASS,28 manifests
+C02,release delta 0 m3 / 0 kg; S8.7's frozen release unchanged,PASS,
+C03,"every cited position re-read from the drawings by handle (positions, column 36B, the three radials and their fan centre)",PASS,fan centre rms miss 1.64 mm
+C04,"section A-A along the plan direction: landing 1.2 m deep, upper runs 3.3 m, five dashed winder treads in the GF -> 1F turn and none in the 1F -> 2F turn",PASS,"{""arrival_plan_y"": 16112.210071986194, ""foot_plan_y"": 16728.115758356955, ""landing_depth_mm"": 1195.8306281769087, ""south_wall_plan_y"": 15604.246619309277, ""turn_dashed_levels_m"": [2.671, 2.836, 3.005, 3.171, 3.336], ""turn_solid_levels_m"": [3.306], ""upper_run_mm"": 3299.6459280138065}"
+C05,every alternative's levels close on +1.00 / +5.50 with equal risers,PASS,
+C06,section A-A's GF -> 1F 27 (B-27-S) reaches the printed +3.50 exactly; no 28-riser arrangement can,PASS,
+C07,every 12-riser upper flight at 300 goings is 200 mm inside B20; 272.7 mm goings clear it by 100 mm,PASS,
+C08,concrete: waist + step wedges = section integral on every flight; the S8.7 landing never in a new total,PASS,asserted per row in the build
+C09,GROSS = NET + deductions on every row,PASS,
+C10,"no quantity in a released lane; typical-only bars, anchorage and laps blocked",PASS,
+C11,the 1F -> 2F plan holds at most 24 risers with a flat quarter and exactly 27 with the four-riser turn,PASS,
+C12,the round stair keeps its own levels (no main-stair level applied),PASS,
+C13,"diagrams are schematic SVG built from coordinates (no render, crop or drawing image)",PASS,
+C14,section A-A's five dashed turn treads sit at the levels after risers 10 - 14 of 27 equal risers (each within 15 mm); only the section arrangement (B-27-S and its modified B-27-SM) matches them,PASS,"{""dashed_m"": [2.671, 2.836, 3.005, 3.171, 3.336], ""matching"": [""B-27-S"", ""B-27-SM""]}"
+C15,no strip of unsettled ownership enters a total,PASS,

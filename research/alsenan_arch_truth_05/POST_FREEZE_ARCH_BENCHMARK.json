@@ -1,0 +1,885 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_ARCH_R5_POST_FREEZE_BENCHMARK",
+ "use": "FINDING_ONLY",
+ "frozen_index_sha256": "7ecf48c8400b45dcc952545d15571a4119b46bbe810ac7960edcbb34aea8ff74",
+ "registers_hash_verified": 22,
+ "agree_rule": "|engine - human| <= 5.0 % (rooms: or <= 0.25 m2)",
+ "benchmark_source": "tests/alsenan/registers_b1/BENCHMARK_NORMALISED.json (records parsed in Phase B1)",
+ "engine_totals": {
+  "floor_internal_m2": 456.836,
+  "floor_internal_ex_stair_m2": 442.196,
+  "floor_by_finish": {
+   "DRY_PORCELAIN_TILE": 205.01,
+   "EXTERNAL_FINISH": 0,
+   "MARBLE_STAIR_FINISH": 14.64,
+   "NONE": 0,
+   "UNKNOWN_MATERIAL_MEASURABLE": 164.385,
+   "WET_CERAMIC": 72.801
+  },
+  "skirting_included_m": 176.992,
+  "skirting_blocked_region_m": 102.363,
+  "skirting_blocked_glazing_m": 35.15784,
+  "wp_floor_m2": 72.801,
+  "wp_upturn_path_m": 139.526,
+  "wall_tile_net_m2": 366.574,
+  "plaster_net_m2": 778.469,
+  "paint_net_m2": 531.553,
+  "blockwork_m2_by_class": {
+   "MASONRY_150": 303.213,
+   "MASONRY_200": 572.562
+  },
+  "blockwork_m2": 875.775,
+  "blockwork_around_openings_m2": 46.86,
+  "ceiling_m2_by_state": {
+   "NOT_IN_SCOPE": 0.0,
+   "PROVISIONAL": 149.249,
+   "VERIFIED_COMPLETE": 276.941
+  },
+  "ceiling_m2": 426.19,
+  "facade_net_m2": 400.009,
+  "handrail_m": {
+   "state": "BLOCKED",
+   "why": "no handrail / balustrade geometry on the plans"
+  },
+  "stair_skirting_m": {
+   "state": "BLOCKED",
+   "why": "stair-side wall path not separated"
+  }
+ },
+ "rows": [
+  {
+   "benchmark_id": "FIN:الغلاف:15",
+   "benchmark": "FLOOR / ALL",
+   "benchmark_qty": 409.58,
+   "benchmark_formula": "=B15",
+   "engine_qty": 442.196,
+   "engine_basis": "FLOOR_FINISH_REGISTER_V2 internal (VC + PROV) minus MARBLE_STAIR_FINISH",
+   "diff_pct": 8.0,
+   "classification": "DIFFERENT_SCOPE",
+   "why": "benchmark = named dry rooms + wet rooms only; engine internal (stair excluded) also carries the GF-Z04 mixed zone as one 121.5 m2 region, the unlabelled 2F region (18.6), recovered unlabelled GF regions and UNASSIGNED wall-band pieces; raw delta 8.0 %. Room-level rows below."
+  },
+  {
+   "benchmark_id": "FIN:الغلاف:18",
+   "benchmark": "FLOOR / POOL",
+   "benchmark_qty": 21.0,
+   "benchmark_formula": "=B18",
+   "engine_qty": null,
+   "engine_basis": "not measured",
+   "diff_pct": null,
+   "classification": "DIFFERENT_SCOPE",
+   "why": "pool is NOT_IN_SCOPE for the internal floor engine (recovered as EXTERNAL 8.57 m2 region only)"
+  },
+  {
+   "benchmark_id": "FIN:الغلاف:22",
+   "benchmark": "FLOOR / EXTERNAL_YARD",
+   "benchmark_qty": 151.8,
+   "benchmark_formula": "=B22",
+   "engine_qty": null,
+   "engine_basis": "not measured",
+   "diff_pct": null,
+   "classification": "DIFFERENT_SCOPE",
+   "why": "external yard is not measured in Round 5"
+  },
+  {
+   "benchmark_id": "FIN:الغلاف:27",
+   "benchmark": "WATERPROOFING / WET_ROOM:FLOOR",
+   "benchmark_qty": 72.01,
+   "benchmark_formula": "=B27",
+   "engine_qty": 72.801,
+   "engine_basis": "WATERPROOFING_REGISTER_V2 floor membrane VC + PROV",
+   "diff_pct": 1.1,
+   "classification": "AGREES",
+   "why": "wet + service floors (kitchen, pantry, laundry) incl. the PROVISIONAL recovered 1F BATH"
+  },
+  {
+   "benchmark_id": "FIN:الغلاف:28",
+   "benchmark": "WATERPROOFING / WET_ROOM:UPTURN",
+   "benchmark_qty": 144.61,
+   "benchmark_formula": "=B28",
+   "engine_qty": 139.526,
+   "engine_basis": "WATERPROOFING_REGISTER_V2 upturn path VC + PROV",
+   "diff_pct": -3.5,
+   "classification": "AGREES",
+   "why": "compared as path length: the human row is perimeter x 1.0 m reported in m.t (QA UNIT_AMBIGUITY, numerically the perimeter); engine path counts door crossings (not deducted), upturn 0.15 m"
+  },
+  {
+   "benchmark_id": "FIN:الغلاف:29",
+   "benchmark": "WATERPROOFING / ROOF:FLOOR",
+   "benchmark_qty": 285.0,
+   "benchmark_formula": "=B29",
+   "engine_qty": null,
+   "engine_basis": "not measured",
+   "diff_pct": null,
+   "classification": "DIFFERENT_SCOPE",
+   "why": "roof waterproofing is a separate method not re-measured in Round 5"
+  },
+  {
+   "benchmark_id": "FIN:الغلاف:30",
+   "benchmark": "WATERPROOFING / ROOF:UPTURN",
+   "benchmark_qty": 194.0,
+   "benchmark_formula": "=B30",
+   "engine_qty": null,
+   "engine_basis": "not measured",
+   "diff_pct": null,
+   "classification": "DIFFERENT_SCOPE",
+   "why": "roof waterproofing is a separate method not re-measured in Round 5"
+  },
+  {
+   "benchmark_id": "FIN:الغلاف:16",
+   "benchmark": "SKIRTING / ALL",
+   "benchmark_qty": 282.85,
+   "benchmark_formula": "=B16",
+   "engine_qty": 176.992,
+   "engine_basis": "SKIRTING_PATH_REGISTER_V3 VC + LOWER_BOUND",
+   "diff_pct": -37.4,
+   "classification": "UNRESOLVED",
+   "why": "engine released path 176.992 m is a lower bound (ENGINE_LOW, -37.4 %); released + region-blocked = 279.355 m (-1.2 %), + glazing-blocked 35.15784 m. The human figure equals the dry cornice figure (282.85) - one perimeter reused for two trades."
+  },
+  {
+   "benchmark_id": "FIN:الغلاف:23",
+   "benchmark": "SKIRTING / EXTERNAL_YARD",
+   "benchmark_qty": 81.32,
+   "benchmark_formula": "=B23",
+   "engine_qty": null,
+   "engine_basis": "not measured",
+   "diff_pct": null,
+   "classification": "DIFFERENT_SCOPE",
+   "why": "yard not measured"
+  },
+  {
+   "benchmark_id": "FIN:الغلاف:25",
+   "benchmark": "SKIRTING / STAIR",
+   "benchmark_qty": 29.87,
+   "benchmark_formula": "=B25",
+   "engine_qty": null,
+   "engine_basis": "BLOCKED",
+   "diff_pct": null,
+   "classification": "UNRESOLVED",
+   "why": "stair skirting BLOCKED in STAIR_ARCHITECTURAL_REGISTER"
+  },
+  {
+   "benchmark_id": "FIN:الغلاف:17",
+   "benchmark": "WALL_TILE / WET_ROOMS",
+   "benchmark_qty": 433.83,
+   "benchmark_formula": "=B17-D17",
+   "engine_qty": 366.574,
+   "engine_basis": "WALL_TILE_REGISTER_V2 net (PROVISIONAL)",
+   "diff_pct": -15.5,
+   "classification": "DIFFERENT_METHOD",
+   "why": "human cover = B17-D17 and equals the plaster sheet subtotal 'bathrooms and kitchens' (spatter coat, 433.83) - a backing-coat area, not a tile area; engine = full-height tile to the finished ceiling, openings deducted, reveals added (direction ENGINE_LOW, -15.5 %)"
+  },
+  {
+   "benchmark_id": "FIN:الغلاف:19",
+   "benchmark": "WALL_TILE / POOL",
+   "benchmark_qty": 19.8,
+   "benchmark_formula": "=B19",
+   "engine_qty": null,
+   "engine_basis": "not measured",
+   "diff_pct": null,
+   "classification": "DIFFERENT_SCOPE",
+   "why": "pool NOT_IN_SCOPE"
+  },
+  {
+   "benchmark_id": "FIN:الغلاف:34+36",
+   "benchmark": "CEILING / GYPSUM DRY + WET",
+   "benchmark_qty": 409.58,
+   "benchmark_formula": "=B34 (+) =B36",
+   "engine_qty": 426.19,
+   "engine_basis": "CEILING_AREA_REGISTER_V2 VC + PROV (void, stair well, shaft excluded)",
+   "diff_pct": 4.1,
+   "classification": "AGREES",
+   "why": "human gypsum dry + wet equals the human floor total 409.58 (floor areas reused); engine ceiling is its own register; agreement is numeric, scope differs as for FLOOR"
+  },
+  {
+   "benchmark_id": "FIN:الغلاف:35+37",
+   "benchmark": "CEILING / CORNICE DRY + WET",
+   "benchmark_qty": 427.46,
+   "benchmark_formula": "=B35 (+) =B37",
+   "engine_qty": null,
+   "engine_basis": "not a Round-5 trade",
+   "diff_pct": null,
+   "classification": "DIFFERENT_SCOPE",
+   "why": "cornice not measured in Round 5; note human cornice dry = skirting 282.85 and cornice wet = WP upturn 144.61"
+  },
+  {
+   "benchmark_id": "FIN:الغلاف:39",
+   "benchmark": "RAILING / INTERNAL",
+   "benchmark_qty": 18.95,
+   "benchmark_formula": "=B39",
+   "engine_qty": null,
+   "engine_basis": "BLOCKED",
+   "diff_pct": null,
+   "classification": "UNRESOLVED",
+   "why": "handrail BLOCKED (no railing source geometry admitted in Round 5)"
+  },
+  {
+   "benchmark_id": "BLK:الغلاف:19",
+   "benchmark": "BLOCKWORK / ALL",
+   "benchmark_qty": 1260.689,
+   "benchmark_formula": "=SUM(E15:E18)",
+   "engine_qty": 875.775,
+   "engine_basis": "BLOCKWORK_AREA_REGISTER_V2 (PROVISIONAL)",
+   "diff_pct": -30.5,
+   "classification": "ENGINE_LOW",
+   "why": "engine net masonry (one face x height to beam/slab soffit) 875.775 m2 + around openings 46.86 m2 (PROV). Part DIFFERENT_SCOPE: engine excludes boundary walls, parapets and roof structures outside the floor plate; the 150 mm row below is the large gap."
+  },
+  {
+   "benchmark_id": "BLK:الغلاف:15+17",
+   "benchmark": "BLOCKWORK / EXTERNAL + 20 cm",
+   "benchmark_qty": 643.441,
+   "benchmark_formula": "=B15 (+) =B17-D17",
+   "engine_qty": 572.562,
+   "engine_basis": "MASONRY_200 net",
+   "diff_pct": -11.0,
+   "classification": "ENGINE_LOW",
+   "why": "human splits external / 20 cm; engine classifies by measured band width only (external 20 cm by convention)"
+  },
+  {
+   "benchmark_id": "BLK:الغلاف:16",
+   "benchmark": "BLOCKWORK / 15 cm",
+   "benchmark_qty": 617.248,
+   "benchmark_formula": "=B16",
+   "engine_qty": 303.213,
+   "engine_basis": "MASONRY_150 net",
+   "diff_pct": -50.9,
+   "classification": "ENGINE_LOW",
+   "why": "engine 150 mm centreline 82.9 m vs roughly 150-160 m implied by the human area; candidate causes (not tested): partitions on non-wall layers, 23.55 m ambiguous width, both faces vs one face basis"
+  },
+  {
+   "benchmark_id": "PLS:الفاتورة:16",
+   "benchmark": "PLASTER / INTERNAL_WALL",
+   "benchmark_qty": 1151.138,
+   "benchmark_formula": null,
+   "engine_qty": 778.469,
+   "engine_basis": "PLASTER_PAINT_REGISTER_V2 net",
+   "diff_pct": -32.4,
+   "classification": "ENGINE_LOW",
+   "why": "engine plaster excludes wet full-tile walls (NIS) and uses the Urban height method; the human sheet subtotal path (1209.385 / 1249.375 less 116.495 deductions) is not reproducible from the cover formula alone"
+  },
+  {
+   "benchmark_id": "PNT:الفاتورة:16",
+   "benchmark": "PAINT / INTERNAL_WALL",
+   "benchmark_qty": 1191.128,
+   "benchmark_formula": null,
+   "engine_qty": 531.553,
+   "engine_basis": "PLASTER_PAINT_REGISTER_V2 net",
+   "diff_pct": -55.4,
+   "classification": "ENGINE_LOW",
+   "why": "engine paint excludes wet full-tile walls (NIS) and uses the Urban height method; the human sheet subtotal path (1209.385 / 1249.375 less 116.495 deductions) is not reproducible from the cover formula alone"
+  },
+  {
+   "benchmark_id": "PLS:الفاتورة:25",
+   "benchmark": "PLASTER / EXTERNAL",
+   "benchmark_qty": 1469.967,
+   "benchmark_formula": null,
+   "engine_qty": 400.009,
+   "engine_basis": "PLASTER_PAINT_REGISTER_V2 external_facade",
+   "diff_pct": -72.8,
+   "classification": "DIFFERENT_SCOPE",
+   "why": "engine facade = registered floor-plate envelope only (PROVISIONAL); boundary / party walls, parapets, plinth, roof annex and finish system are not in Round 5"
+  }
+ ],
+ "room_rows": [
+  {
+   "benchmark_id": "FIN:سيراميك:13",
+   "floor": "GF",
+   "benchmark_label": "reception + dining",
+   "benchmark_qty": 137.5,
+   "engine_region": "TR:GF:SITE-67547ed37daadb5a:RB-684fc26661ba7dfc",
+   "engine_labels": [
+    "SALOON",
+    "RECEPTION",
+    "DINING",
+    "Wash"
+   ],
+   "engine_class": "MIXED_UNRESOLVED",
+   "engine_m2": 121.512,
+   "diff_pct": -11.6,
+   "classification": "DIFFERENT_SCOPE",
+   "why": "engine region is MIXED_UNRESOLVED ['SALOON', 'RECEPTION', 'DINING', 'Wash'] (wash lobby inside; not split)"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:14",
+   "floor": "GF",
+   "benchmark_label": "master bedroom",
+   "benchmark_qty": 16.66,
+   "engine_region": "TR:GF:SITE-dda89794d15dfb61:R",
+   "engine_labels": [
+    "MASTER BED ROOM"
+   ],
+   "engine_class": "DRY",
+   "engine_m2": 16.558,
+   "diff_pct": -0.6,
+   "classification": "AGREES",
+   "why": "matched by room name"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:15",
+   "floor": "GF",
+   "benchmark_label": "entrance hall",
+   "benchmark_qty": 10.46,
+   "engine_region": null,
+   "engine_labels": null,
+   "engine_class": null,
+   "engine_m2": null,
+   "diff_pct": null,
+   "classification": "UNRESOLVED",
+   "why": "room name not present as an engine label (likely inside a mixed / unassigned region)"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:16",
+   "floor": "GF",
+   "benchmark_label": "diwaniya",
+   "benchmark_qty": 24.84,
+   "engine_region": "TR:GF:SITE-810cacd9be443703:R",
+   "engine_labels": [
+    "DEWANEYA"
+   ],
+   "engine_class": "DRY",
+   "engine_m2": 24.939,
+   "diff_pct": 0.4,
+   "classification": "AGREES",
+   "why": "matched by room name"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:17",
+   "floor": "GF",
+   "benchmark_label": "driver's room",
+   "benchmark_qty": 7.87,
+   "engine_region": "TR:GF:RR:GF:RB-a1191769a247d0ff:R",
+   "engine_labels": [
+    "DRIVER"
+   ],
+   "engine_class": "DRY",
+   "engine_m2": 7.875,
+   "diff_pct": 0.1,
+   "classification": "AGREES",
+   "why": "matched by room name"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:21",
+   "floor": "1F",
+   "benchmark_label": "living",
+   "benchmark_qty": 38.96,
+   "engine_region": "TR:1F:SITE-60a08def069f0e48:R",
+   "engine_labels": [
+    "LIVING AREA"
+   ],
+   "engine_class": "DRY",
+   "engine_m2": 63.662,
+   "diff_pct": 63.4,
+   "classification": "DIFFERENT_SCOPE",
+   "why": "engine LIVING AREA includes the landing / corridor around the void (void excluded)"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:28",
+   "floor": "2F",
+   "benchmark_label": "maid's room",
+   "benchmark_qty": 19.58,
+   "engine_region": "TR:2F:SITE-2e3bac611a8fb491:R",
+   "engine_labels": [
+    "MAID R."
+   ],
+   "engine_class": "DRY",
+   "engine_m2": 19.35,
+   "diff_pct": -1.2,
+   "classification": "AGREES",
+   "why": "matched by room name"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:29",
+   "floor": "2F",
+   "benchmark_label": "corridor",
+   "benchmark_qty": 7.7,
+   "engine_region": null,
+   "engine_labels": null,
+   "engine_class": null,
+   "engine_m2": null,
+   "diff_pct": null,
+   "classification": "UNRESOLVED",
+   "why": "room name not present as an engine label (likely inside a mixed / unassigned region)"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:22",
+   "floor": "1F",
+   "benchmark_label": "bedroom 1",
+   "benchmark_qty": 17.29,
+   "engine_region": "TR:1F:SITE-3cde308552cf977c:R",
+   "engine_labels": [
+    "MASTER BED ROOM"
+   ],
+   "engine_class": "DRY",
+   "engine_m2": 16.34,
+   "diff_pct": -5.5,
+   "classification": "ENGINE_LOW",
+   "why": "one-to-one area assignment within floor + family (generic labels)"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:23",
+   "floor": "1F",
+   "benchmark_label": "bedroom 2",
+   "benchmark_qty": 19.46,
+   "engine_region": "TR:1F:SITE-da154e7546d18013:R",
+   "engine_labels": [
+    "MASTER BED ROOM"
+   ],
+   "engine_class": "DRY",
+   "engine_m2": 19.05,
+   "diff_pct": -2.1,
+   "classification": "AGREES",
+   "why": "one-to-one area assignment within floor + family (generic labels)"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:24",
+   "floor": "1F",
+   "benchmark_label": "bedroom 3",
+   "benchmark_qty": 18.25,
+   "engine_region": "TR:1F:SITE-c46cb88cea7decbb:R",
+   "engine_labels": [
+    "MASTER BED ROOM"
+   ],
+   "engine_class": "DRY",
+   "engine_m2": 18.215,
+   "diff_pct": -0.2,
+   "classification": "AGREES",
+   "why": "one-to-one area assignment within floor + family (generic labels)"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:25",
+   "floor": "1F",
+   "benchmark_label": "bedroom 4",
+   "benchmark_qty": 19.0,
+   "engine_region": "TR:1F:SITE-22b96446836c3d8d:R",
+   "engine_labels": [
+    "MASTER BED ROOM"
+   ],
+   "engine_class": "DRY",
+   "engine_m2": 19.021,
+   "diff_pct": 0.1,
+   "classification": "AGREES",
+   "why": "one-to-one area assignment within floor + family (generic labels)"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:55",
+   "floor": "1F",
+   "benchmark_label": "bathroom",
+   "benchmark_qty": 4.72,
+   "engine_region": "TR:1F:SITE-2f6cf2b5bebbd966:R",
+   "engine_labels": [
+    "BATH"
+   ],
+   "engine_class": "WET",
+   "engine_m2": 4.725,
+   "diff_pct": 0.1,
+   "classification": "AGREES",
+   "why": "one-to-one area assignment within floor + family (generic labels)"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:56",
+   "floor": "1F",
+   "benchmark_label": "bathroom",
+   "benchmark_qty": 3.6,
+   "engine_region": "TR:1F:SITE-cdc894c0f0fd69c9:R",
+   "engine_labels": [
+    "BATH"
+   ],
+   "engine_class": "WET",
+   "engine_m2": 3.578,
+   "diff_pct": -0.6,
+   "classification": "AGREES",
+   "why": "one-to-one area assignment within floor + family (generic labels)"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:57",
+   "floor": "1F",
+   "benchmark_label": "bathroom",
+   "benchmark_qty": 2.59,
+   "engine_region": null,
+   "engine_labels": null,
+   "engine_class": null,
+   "engine_m2": null,
+   "diff_pct": null,
+   "classification": "UNRESOLVED",
+   "why": "no engine region of this family on this floor within the match window"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:58",
+   "floor": "1F",
+   "benchmark_label": "bathroom",
+   "benchmark_qty": 5.0,
+   "engine_region": "TR:1F:SITE-16f76cd141ed8273:R",
+   "engine_labels": [
+    "BATH"
+   ],
+   "engine_class": "WET",
+   "engine_m2": 5.022,
+   "diff_pct": 0.4,
+   "classification": "AGREES",
+   "why": "one-to-one area assignment within floor + family (generic labels)"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:59",
+   "floor": "1F",
+   "benchmark_label": "bathroom",
+   "benchmark_qty": 5.0,
+   "engine_region": "TR:1F:RR:1F:RB-5757373d9f615fe5:R",
+   "engine_labels": [
+    "BATH"
+   ],
+   "engine_class": "WET",
+   "engine_m2": 5.022,
+   "diff_pct": 0.4,
+   "classification": "AGREES",
+   "why": "one-to-one area assignment within floor + family (generic labels)"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:60",
+   "floor": "1F",
+   "benchmark_label": "laundry",
+   "benchmark_qty": 10.0,
+   "engine_region": "TR:1F:SITE-69e2d39bee49fa7e:R",
+   "engine_labels": [
+    "LAUNDRY"
+   ],
+   "engine_class": "SERVICE",
+   "engine_m2": 10.151,
+   "diff_pct": 1.5,
+   "classification": "AGREES",
+   "why": "one-to-one area assignment within floor + family (generic labels)"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:63",
+   "floor": "2F",
+   "benchmark_label": "bathroom",
+   "benchmark_qty": 5.62,
+   "engine_region": "TR:2F:SITE-ae46ec7518ab613e:R",
+   "engine_labels": [
+    "W.C"
+   ],
+   "engine_class": "WET",
+   "engine_m2": 5.55,
+   "diff_pct": -1.2,
+   "classification": "AGREES",
+   "why": "one-to-one area assignment within floor + family (generic labels)"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:42",
+   "floor": "GF",
+   "benchmark_label": "diwaniya washroom",
+   "benchmark_qty": 4.73,
+   "engine_region": null,
+   "engine_labels": null,
+   "engine_class": null,
+   "engine_m2": null,
+   "diff_pct": null,
+   "classification": "UNRESOLVED",
+   "why": "no engine region of this family on this floor within the match window"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:43",
+   "floor": "GF",
+   "benchmark_label": "diwaniya washroom",
+   "benchmark_qty": 1.7,
+   "engine_region": null,
+   "engine_labels": null,
+   "engine_class": null,
+   "engine_m2": null,
+   "diff_pct": null,
+   "classification": "UNRESOLVED",
+   "why": "no engine region of this family on this floor within the match window"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:44",
+   "floor": "GF",
+   "benchmark_label": "bathrooms",
+   "benchmark_qty": 3.7,
+   "engine_region": "TR:GF:SITE-714889aea3e329c7:R",
+   "engine_labels": [
+    "BATH"
+   ],
+   "engine_class": "WET",
+   "engine_m2": 3.718,
+   "diff_pct": 0.5,
+   "classification": "AGREES",
+   "why": "one-to-one area assignment within floor + family (generic labels)"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:45",
+   "floor": "GF",
+   "benchmark_label": "bathrooms",
+   "benchmark_qty": 2.3,
+   "engine_region": "TR:GF:SITE-ce2d2c3a4b7da280:R",
+   "engine_labels": [
+    "W.C"
+   ],
+   "engine_class": "WET",
+   "engine_m2": 2.362,
+   "diff_pct": 2.7,
+   "classification": "AGREES",
+   "why": "one-to-one area assignment within floor + family (generic labels)"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:46",
+   "floor": "GF",
+   "benchmark_label": "bathrooms",
+   "benchmark_qty": 2.67,
+   "engine_region": "TR:GF:SITE-9810548752edbe40:R",
+   "engine_labels": [
+    "W.C"
+   ],
+   "engine_class": "WET",
+   "engine_m2": 2.675,
+   "diff_pct": 0.2,
+   "classification": "AGREES",
+   "why": "one-to-one area assignment within floor + family (generic labels)"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:47",
+   "floor": "GF",
+   "benchmark_label": "bathrooms",
+   "benchmark_qty": 2.36,
+   "engine_region": "TR:GF:SITE-5191e28052b00088:R",
+   "engine_labels": [
+    "W.C"
+   ],
+   "engine_class": "WET",
+   "engine_m2": 2.368,
+   "diff_pct": 0.3,
+   "classification": "AGREES",
+   "why": "one-to-one area assignment within floor + family (generic labels)"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:48",
+   "floor": "GF",
+   "benchmark_label": "kitchen",
+   "benchmark_qty": 9.55,
+   "engine_region": "TR:GF:SITE-88d9dbffd47c417a:R",
+   "engine_labels": [
+    "KITCHEN"
+   ],
+   "engine_class": "SERVICE",
+   "engine_m2": 9.63,
+   "diff_pct": 0.8,
+   "classification": "AGREES",
+   "why": "one-to-one area assignment within floor + family (generic labels)"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:49",
+   "floor": "GF",
+   "benchmark_label": "bathroom",
+   "benchmark_qty": 1.95,
+   "engine_region": "TR:GF:SITE-9b585230d0877a35:R",
+   "engine_labels": [
+    "W.C"
+   ],
+   "engine_class": "WET",
+   "engine_m2": 1.95,
+   "diff_pct": 0.0,
+   "classification": "AGREES",
+   "why": "one-to-one area assignment within floor + family (generic labels)"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:50",
+   "floor": "GF",
+   "benchmark_label": "bathroom",
+   "benchmark_qty": 3.37,
+   "engine_region": "TR:GF:SITE-eac7a1be6566b2d0:R",
+   "engine_labels": [
+    "W.C"
+   ],
+   "engine_class": "WET",
+   "engine_m2": 3.375,
+   "diff_pct": 0.1,
+   "classification": "AGREES",
+   "why": "one-to-one area assignment within floor + family (generic labels)"
+  },
+  {
+   "benchmark_id": "FIN:سيراميك:51",
+   "floor": "GF",
+   "benchmark_label": "washroom",
+   "benchmark_qty": 3.15,
+   "engine_region": "TR:GF:SITE-0e9a7a85e795446f:R",
+   "engine_labels": [
+    "Wash"
+   ],
+   "engine_class": "WET",
+   "engine_m2": 3.132,
+   "diff_pct": -0.6,
+   "classification": "AGREES",
+   "why": "one-to-one area assignment within floor + family (generic labels)"
+  },
+  {
+   "benchmark_id": null,
+   "floor": "GF",
+   "benchmark_label": null,
+   "benchmark_qty": null,
+   "engine_region": "TR:GF:SITE-67547ed37daadb5a:RB-23b287a0c67d534d",
+   "engine_labels": [
+    "PANTRY"
+   ],
+   "engine_class": "SERVICE",
+   "engine_m2": 9.542,
+   "diff_pct": null,
+   "classification": "DIFFERENT_SCOPE",
+   "why": "engine region with no human row"
+  },
+  {
+   "benchmark_id": null,
+   "floor": "GF",
+   "benchmark_label": null,
+   "benchmark_qty": null,
+   "engine_region": "TR:GF:SITE-67547ed37daadb5a:RB-8abd79017bc6a05f",
+   "engine_labels": [],
+   "engine_class": "UNASSIGNED",
+   "engine_m2": 2.163,
+   "diff_pct": null,
+   "classification": "DIFFERENT_SCOPE",
+   "why": "engine region with no human row"
+  },
+  {
+   "benchmark_id": null,
+   "floor": "GF",
+   "benchmark_label": null,
+   "benchmark_qty": null,
+   "engine_region": "TR:GF:SITE-67547ed37daadb5a:RB-201bbf12ec484dd8",
+   "engine_labels": [],
+   "engine_class": "UNASSIGNED",
+   "engine_m2": 1.963,
+   "diff_pct": null,
+   "classification": "DIFFERENT_SCOPE",
+   "why": "engine region with no human row"
+  },
+  {
+   "benchmark_id": null,
+   "floor": "GF",
+   "benchmark_label": null,
+   "benchmark_qty": null,
+   "engine_region": "TR:GF:SITE-67547ed37daadb5a:RB-18e242d6704a250c",
+   "engine_labels": [],
+   "engine_class": "UNASSIGNED",
+   "engine_m2": 1.95,
+   "diff_pct": null,
+   "classification": "DIFFERENT_SCOPE",
+   "why": "engine region with no human row"
+  },
+  {
+   "benchmark_id": null,
+   "floor": "GF",
+   "benchmark_label": null,
+   "benchmark_qty": null,
+   "engine_region": "TR:GF:SITE-67547ed37daadb5a:RB-8967ffcbc40202e6",
+   "engine_labels": [],
+   "engine_class": "UNASSIGNED",
+   "engine_m2": 1.567,
+   "diff_pct": null,
+   "classification": "DIFFERENT_SCOPE",
+   "why": "engine region with no human row"
+  },
+  {
+   "benchmark_id": null,
+   "floor": "GF",
+   "benchmark_label": null,
+   "benchmark_qty": null,
+   "engine_region": "TR:GF:RR:GF:RB-2365eaef717b0fe9:R",
+   "engine_labels": [],
+   "engine_class": "UNKNOWN",
+   "engine_m2": 5.0,
+   "diff_pct": null,
+   "classification": "DIFFERENT_SCOPE",
+   "why": "engine region with no human row"
+  },
+  {
+   "benchmark_id": null,
+   "floor": "GF",
+   "benchmark_label": null,
+   "benchmark_qty": null,
+   "engine_region": "TR:GF:RR:GF:RB-d86c0e084612ae59:R",
+   "engine_labels": [],
+   "engine_class": "UNKNOWN",
+   "engine_m2": 1.253,
+   "diff_pct": null,
+   "classification": "DIFFERENT_SCOPE",
+   "why": "engine region with no human row"
+  },
+  {
+   "benchmark_id": null,
+   "floor": "1F",
+   "benchmark_label": null,
+   "benchmark_qty": null,
+   "engine_region": "TR:1F:SITE-aa3f3d9cc41ec54a:R",
+   "engine_labels": [],
+   "engine_class": "UNKNOWN",
+   "engine_m2": 2.97,
+   "diff_pct": null,
+   "classification": "DIFFERENT_SCOPE",
+   "why": "engine region with no human row"
+  },
+  {
+   "benchmark_id": null,
+   "floor": "2F",
+   "benchmark_label": null,
+   "benchmark_qty": null,
+   "engine_region": "TR:2F:SITE-22c718c6fc156ebe:R",
+   "engine_labels": [],
+   "engine_class": "UNKNOWN",
+   "engine_m2": 18.6,
+   "diff_pct": null,
+   "classification": "DIFFERENT_SCOPE",
+   "why": "engine region with no human row"
+  }
+ ],
+ "human_lines": [
+  {
+   "source": "FIN:رخام+حوش:H44",
+   "classification": "HUMAN_FORMULA_ERROR",
+   "finding": "total =SUM(H13:H41) contains H13 (151.8) which is also reported separately on the cover (B24, B22) - double count candidate"
+  },
+  {
+   "source": "FIN:نعلات العازل للحمامات",
+   "classification": "DIFFERENT_METHOD",
+   "finding": "upturn computed as perimeter x 1.0 m (m2) but reported in m.t (numerically equal)"
+  },
+  {
+   "source": "FIN cover rows 16 / 35",
+   "classification": "DIFFERENT_METHOD",
+   "finding": "skirting 282.85 lm = dry cornice 282.85 lm: one perimeter used for two trades"
+  },
+  {
+   "source": "FIN cover rows 27 / 36",
+   "classification": "DIFFERENT_METHOD",
+   "finding": "wet gypsum ceiling 72.01 = wet-room floor waterproofing 72.01 = wet floor area"
+  },
+  {
+   "source": "FIN cover rows 28 / 37",
+   "classification": "DIFFERENT_METHOD",
+   "finding": "wet cornice 144.61 = WP upturn 144.61"
+  },
+  {
+   "source": "FIN cover row 17 / PLS sheet subtotal 'bathrooms and kitchens'",
+   "classification": "DIFFERENT_METHOD",
+   "finding": "wall tile 433.83 = the plaster spatter-coat subtotal; a backing area, not a tile area"
+  }
+ ],
+ "counts": {
+  "rows": {
+   "AGREES": 3,
+   "ENGINE_HIGH": 0,
+   "ENGINE_LOW": 5,
+   "DIFFERENT_SCOPE": 9,
+   "DIFFERENT_METHOD": 1,
+   "HUMAN_FORMULA_ERROR": 0,
+   "UNRESOLVED": 3
+  },
+  "room_rows": {
+   "AGREES": 21,
+   "ENGINE_HIGH": 0,
+   "ENGINE_LOW": 1,
+   "DIFFERENT_SCOPE": 11,
+   "DIFFERENT_METHOD": 0,
+   "HUMAN_FORMULA_ERROR": 0,
+   "UNRESOLVED": 5
+  }
+ },
+ "rule": "post-freeze finding only; no engine code or register changed after this comparison",
+ "comparison_script_note": "first run printed duplicate rows for unnamed dry rooms and forced a PANTRY 9.54 vs washroom 4.73 pairing; the reporting script (not the engine) was corrected: duplicates removed, area pairing capped at 25 %"
+}

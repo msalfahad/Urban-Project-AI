@@ -1,0 +1,169 @@
+{
+ "SCHEMA": "URBAN_QORTUBA_PAINTRY_FLOOR_RESOLUTION_V1",
+ "site": "SITE-8c1c7563d5252c50",
+ "row": "Q-12",
+ "canonical_item": "FLR-03",
+ "trail": [
+  {
+   "step": "fixture geometry observed",
+   "objects": [
+    {
+     "key": "QORTUBA_REV_NEW|H478||SEGMENT|0",
+     "observed_class": "SANITARY_FIXTURE",
+     "layer": "FIXTURE",
+     "geometry": [
+      109403.0817,
+      15109.7196,
+      109523.0817,
+      15109.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H482||SEGMENT|0",
+     "observed_class": "SANITARY_FIXTURE",
+     "layer": "FIXTURE",
+     "geometry": [
+      109403.0817,
+      15384.7196,
+      109593.0817,
+      15384.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H532||SEGMENT|0",
+     "observed_class": "SANITARY_FIXTURE",
+     "layer": "FIXTURE",
+     "geometry": [
+      109403.0817,
+      15384.7196,
+      109403.0817,
+      15109.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H536||SEGMENT|0",
+     "observed_class": "SANITARY_FIXTURE",
+     "layer": "FIXTURE",
+     "geometry": [
+      109523.0817,
+      15109.7196,
+      109523.0817,
+      15049.7196
+     ]
+    },
+    {
+     "key": "QORTUBA_REV_NEW|H541||SEGMENT|0",
+     "observed_class": "SANITARY_FIXTURE",
+     "layer": "FIXTURE",
+     "geometry": [
+      109513.0817,
+      15459.7196,
+      109513.0817,
+      15384.7196
+     ]
+    }
+   ]
+  },
+  {
+   "step": "cabinet interpretation relevant to the floor finish",
+   "authority": [
+    "QORTUBA-NEW-PAINTRY-COUNTER-CABINETRY-OWNER-001@v1"
+   ],
+   "bindings": [
+    {
+     "fact_id": "QORTUBA-NEW-PAINTRY-COUNTER-CABINETRY-OWNER-001@v1",
+     "binding": "APPLIES",
+     "parts": [
+      {
+       "key": "QORTUBA_REV_NEW|H478||SEGMENT|0",
+       "state": "APPLIES"
+      },
+      {
+       "key": "QORTUBA_REV_NEW|H482||SEGMENT|0",
+       "state": "APPLIES"
+      },
+      {
+       "key": "QORTUBA_REV_NEW|H532||SEGMENT|0",
+       "state": "APPLIES"
+      },
+      {
+       "key": "QORTUBA_REV_NEW|H536||SEGMENT|0",
+       "state": "APPLIES"
+      },
+      {
+       "key": "QORTUBA_REV_NEW|H541||SEGMENT|0",
+       "state": "APPLIES"
+      }
+     ],
+     "object_keys": [
+      "QORTUBA_REV_NEW|H478||SEGMENT|0",
+      "QORTUBA_REV_NEW|H482||SEGMENT|0",
+      "QORTUBA_REV_NEW|H532||SEGMENT|0",
+      "QORTUBA_REV_NEW|H536||SEGMENT|0",
+      "QORTUBA_REV_NEW|H541||SEGMENT|0"
+     ],
+     "accepts_roles": [
+      "SANITARY_FIXTURE"
+     ],
+     "object_class": "LATER_INSTALLED_CABINETRY"
+    }
+   ],
+   "object_class": [
+    "LATER_INSTALLED_CABINETRY"
+   ]
+  },
+  {
+   "step": "owner sequencing method",
+   "authority": [
+    "URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1"
+   ],
+   "rejected": [
+    {
+     "policy": "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1",
+     "why": [
+      "space classes ['DRY_INTERNAL_ROOM'] do not include SERVICE_ROOM",
+      "explicitly excluded: is_not: a rule for wet / service floors"
+     ]
+    }
+   ]
+  },
+  {
+   "step": "floor finish continues underneath",
+   "treatment": "FOOTPRINT_INCLUDED"
+  },
+  {
+   "step": "no deduction",
+   "deducted_m2": 0.0,
+   "outline_faces_m2_not_deducted": [
+    0.6,
+    5.44,
+    5.645
+   ]
+  }
+ ],
+ "state": "RESOLVED",
+ "flr03": {
+  "qty": 11.685,
+  "unit": "m2",
+  "status": "COMPUTED_SHADOW_COMPLETE",
+  "blockers": [
+   "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+   "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+  ],
+  "notes": [
+   "object footprint RESOLVED on SITE-8c1c7563d5252c50 by URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1 with object identity QORTUBA-NEW-PAINTRY-COUNTER-CABINETRY-OWNER-001@v1: FOOTPRINT_INCLUDED (no deduction)"
+  ]
+ },
+ "resolved_blockers": [
+  {
+   "blocker": "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+   "resolved_by": [
+    "QORTUBA-NEW-PAINTRY-COUNTER-CABINETRY-OWNER-001@v1",
+    "URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1"
+   ]
+  }
+ ],
+ "site_area_m2": 11.685,
+ "geometry_changed": false,
+ "hardcoded_value": false
+}

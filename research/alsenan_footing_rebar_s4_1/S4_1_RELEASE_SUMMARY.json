@@ -1,0 +1,157 @@
+{
+ "boxed": {
+  "blocked": 21,
+  "boxed_kg": "BLOCKED_UNQUANTIFIED",
+  "existence_explicit_shape_found": 16,
+  "fn_existence_not_located": 4,
+  "pending_engineer": 1
+ },
+ "conservation": {
+  "all_pass": true,
+  "baseline_known": 3629.5995061728395,
+  "carried_known": 3629.599506172839,
+  "checks": {
+   "baseline_plus_delta_is_new": true,
+   "frozen_known_carried": true,
+   "no_negative_delta": true
+  },
+  "delta_known": 0.0,
+  "new_known": 3629.599506172839
+ },
+ "context": {
+  "ENGINE_COMMIT": "e3633af+code:0d11810b780ae8f8+delta:06346dac56faa12d",
+  "FROZEN_BASELINE": {
+   "engine_commit_stamp": "e3633af+code:0d11810b780ae8f8",
+   "files_checked": 25,
+   "manifest": "research/alsenan_footing_rebar_s4/S4_FREEZE_MANIFEST.json",
+   "manifest_sha256": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+   "round": "S4"
+  },
+  "PDF_SHA": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3",
+  "POLICY": "FOOTING_REBAR_S4_1_DELTA_V1",
+  "ROUND": "S4.1"
+ },
+ "delta_known_kg": 0.0,
+ "delta_rows": 337,
+ "evidence": {
+  "leg_top_gap_to_boxed_run_pt": {
+   "DEEP": 5.5,
+   "SHALLOW": 7.7
+  }
+ },
+ "flags": {
+  "frozen_outputs_changed": false,
+  "kg_from_shape_only_graphic": false,
+  "plotted_scale_used": false,
+  "pre_s7_started": false,
+  "references_read": [],
+  "verified_created": false
+ },
+ "frozen_components": 157,
+ "frozen_s4": {
+  "components_by_state": {
+   "BLOCKED_UNQUANTIFIED": 24,
+   "LOWER_BOUND": 20,
+   "NOT_APPLICABLE": 73,
+   "VERIFIED": 40
+  },
+  "known_kg": 3629.5995061728395,
+  "lower_bound_known_kg": 2742.5061728395062,
+  "verified_kg": 887.0933333333332
+ },
+ "graphic_evidence_policy": {
+  "classes": [
+   "GRAPHIC_EXPLICIT_DIMENSIONED",
+   "GRAPHIC_DERIVED_FROM_SOURCE_GEOMETRY",
+   "GRAPHIC_EXPLICIT_SHAPE_ONLY",
+   "GRAPHIC_NTS_OR_UNDIMENSIONED"
+  ],
+  "derivation_conditions": [
+   "ENDPOINTS_DETERMINISTIC",
+   "DIMENSIONS_FROM_PROJECT_SOURCE",
+   "DERIVATION_REPRODUCIBLE",
+   "NO_CONTRADICTING_PROJECT_SOURCE"
+  ],
+  "length_bases_allowed": [
+   "PRINTED_DIMENSION",
+   "PROJECT_SOURCE_GEOMETRY"
+  ],
+  "length_bases_refused": [
+   "PLOTTED_SCALE"
+  ],
+  "no_graphic": "NO_GRAPHIC_EVIDENCE",
+  "policy": "GRAPHIC_EVIDENCE_POLICY_V1",
+  "portion_states": [
+   "KNOWN_STRAIGHT_SEGMENT",
+   "DERIVED_LOWER_BOUND",
+   "SHAPE_FOUND_LENGTH_BLOCKED",
+   "BLOCKED_UNQUANTIFIED"
+  ],
+  "rules": {
+   "A": "GRAPHIC_EXPLICIT_DIMENSIONED may produce quantity (from the printed dimension)",
+   "B": "GRAPHIC_DERIVED_FROM_SOURCE_GEOMETRY may produce quantity only if the endpoints are deterministic, the dimensions come from project-source geometry, the derivation is reproducible and no project source contradicts it",
+   "C": "GRAPHIC_EXPLICIT_SHAPE_ONLY may establish shape, connectivity, topology, component identity and applicability, but may NOT create an undimensioned bar length or kg",
+   "D": "GRAPHIC_NTS_OR_UNDIMENSIONED is interpretation / QA evidence only",
+   "SCALE": "a plotted-scale reading is never a length basis; an N.T.S. typical detail is never measured by its plot"
+  }
+ },
+ "headline": "S4.1 KNOWN FOOTING REBAR = FROZEN S4 KNOWN + 0 (state corrections only)",
+ "long_bar_portions": {
+  "BEND_ARC_1:SHAPE_FOUND_LENGTH_BLOCKED": 20,
+  "BEND_ARC_2:SHAPE_FOUND_LENGTH_BLOCKED": 20,
+  "END_HOOK_1:SHAPE_FOUND_LENGTH_BLOCKED": 20,
+  "END_HOOK_2:SHAPE_FOUND_LENGTH_BLOCKED": 20,
+  "END_TREATMENT_1:BLOCKED_UNQUANTIFIED": 5,
+  "END_TREATMENT_2:BLOCKED_UNQUANTIFIED": 5,
+  "STRAIGHT_RUN:KNOWN_STRAIGHT_SEGMENT": 25,
+  "UPTURN_LEG_1:SHAPE_FOUND_LENGTH_BLOCKED": 20,
+  "UPTURN_LEG_2:SHAPE_FOUND_LENGTH_BLOCKED": 20
+ },
+ "policy": "FOOTING_REBAR_S4_1_DELTA_V1",
+ "round": "S4.1",
+ "s4_1_complete_bar_kg": {
+  "LOWER_BOUND": 3629.599506172839,
+  "VERIFIED": 0.0
+ },
+ "s4_1_components_by_state": {
+  "BLOCKED_UNQUANTIFIED": 23,
+  "LOWER_BOUND": 60,
+  "NOT_APPLICABLE": 73,
+  "TRANSFERRED_OUT": 1
+ },
+ "s4_1_kg_by_component_and_state": {
+  "FOOTING_BOTTOM_LONG": {
+   "LOWER_BOUND": 1266.0123456790125
+  },
+  "FOOTING_BOTTOM_SHORT": {
+   "LOWER_BOUND": 1227.1501234567902
+  },
+  "FOOTING_TOP_LONG": {
+   "LOWER_BOUND": 568.2064197530865
+  },
+  "FOOTING_TOP_SHORT": {
+   "LOWER_BOUND": 568.2306172839507
+  }
+ },
+ "s4_1_known_kg": 3629.599506172839,
+ "s4_1_known_straight_segment_kg_formerly_verified": 887.0933333333332,
+ "state_only_changes": {
+  "VERIFIED_to_LOWER_BOUND_long": 20,
+  "VERIFIED_to_LOWER_BOUND_short": 20,
+  "boxed_shape_facet": 20,
+  "ownership_transfers": 1,
+  "two_layer_bottom_end_treatment_facet": 10
+ },
+ "state_transitions": {
+  "BLOCKED_UNQUANTIFIED -> TRANSFERRED_OUT": 1,
+  "VERIFIED -> LOWER_BOUND": 40
+ },
+ "transfers_to_s8": [
+  "FOCC-1B2B:OTHER_EXPLICIT_EXTRA"
+ ],
+ "unresolved": {
+  "carried_from_s4": 44,
+  "new_portion_rows": 180,
+  "rows": 224
+ }
+}

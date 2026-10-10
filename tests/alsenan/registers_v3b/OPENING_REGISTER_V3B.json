@@ -1,0 +1,4235 @@
+{
+ "SCHEMA": "URBAN_OPENING_V3B_V1",
+ "heights": [
+  {
+   "id": "GF-D-641",
+   "floor": "GF",
+   "kind": "DOUBLE_LEAF_DOOR",
+   "width_m": 2.0,
+   "candidates": [],
+   "height_m": 2.237,
+   "state": "NO_WIDTH_MATCH",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "BLOCKED",
+   "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+   "range_m": [
+    1.939,
+    2.725
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "GF-D-E820",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "candidates": [
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      4738,
+      3085,
+      4867,
+      3419
+     ],
+     "w_cm": 82.5,
+     "h_cm": 213.7,
+     "sill_cm": 21.7
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      1642,
+      3076,
+      1772,
+      3436
+     ],
+     "w_cm": 82.4,
+     "h_cm": 228.1,
+     "sill_cm": 26.6
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      1276,
+      3084,
+      1397,
+      3418
+     ],
+     "w_cm": 76.7,
+     "h_cm": 211.6,
+     "sill_cm": 38.0
+    }
+   ],
+   "height_m": 2.137,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "PARTIAL",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "range_m": [
+    2.116,
+    2.281
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "GF-D-I1023",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": null,
+   "height_m": null,
+   "state": "NO_WIDTH",
+   "technical": "BLOCKED",
+   "commercial": null,
+   "candidates": [],
+   "sill_m": 0.0
+  },
+  {
+   "id": "GF-D-I350",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "candidates": [
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      3967,
+      3044,
+      4129,
+      3450
+     ],
+     "w_cm": 102.6,
+     "h_cm": 257.2,
+     "sill_cm": 25.3
+    },
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      1072,
+      3048,
+      1236,
+      3461
+     ],
+     "w_cm": 104.9,
+     "h_cm": 264.2,
+     "sill_cm": -5.1
+    }
+   ],
+   "height_m": 2.607,
+   "state": "RASTER_TYPE_MATCH",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "RASTER_DERIVED",
+   "commercial": null,
+   "range_m": [
+    2.572,
+    2.642
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "GF-D-I402",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "candidates": [
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      3967,
+      3044,
+      4129,
+      3450
+     ],
+     "w_cm": 102.6,
+     "h_cm": 257.2,
+     "sill_cm": 25.3
+    },
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      1072,
+      3048,
+      1236,
+      3461
+     ],
+     "w_cm": 104.9,
+     "h_cm": 264.2,
+     "sill_cm": -5.1
+    }
+   ],
+   "height_m": 2.607,
+   "state": "RASTER_TYPE_MATCH",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "RASTER_DERIVED",
+   "commercial": null,
+   "range_m": [
+    2.572,
+    2.642
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "GF-D-I414",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "candidates": [
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      4738,
+      3085,
+      4867,
+      3419
+     ],
+     "w_cm": 82.5,
+     "h_cm": 213.7,
+     "sill_cm": 21.7
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      1642,
+      3076,
+      1772,
+      3436
+     ],
+     "w_cm": 82.4,
+     "h_cm": 228.1,
+     "sill_cm": 26.6
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      1276,
+      3084,
+      1397,
+      3418
+     ],
+     "w_cm": 76.7,
+     "h_cm": 211.6,
+     "sill_cm": 38.0
+    }
+   ],
+   "height_m": 2.137,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "PARTIAL",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "range_m": [
+    2.116,
+    2.281
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "GF-D-I437",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 0.9,
+   "candidates": [
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      2316,
+      3121,
+      2461,
+      3455
+     ],
+     "w_cm": 91.9,
+     "h_cm": 211.6,
+     "sill_cm": 22.2
+    },
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      3169,
+      3083,
+      3315,
+      3418
+     ],
+     "w_cm": 93.4,
+     "h_cm": 214.3,
+     "sill_cm": 22.4
+    },
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      5710,
+      3087,
+      5855,
+      3421
+     ],
+     "w_cm": 92.8,
+     "h_cm": 213.7,
+     "sill_cm": 20.5
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      2759,
+      2974,
+      2902,
+      3309
+     ],
+     "w_cm": 90.6,
+     "h_cm": 212.2,
+     "sill_cm": 107.1
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      3190,
+      2975,
+      3334,
+      3309
+     ],
+     "w_cm": 91.2,
+     "h_cm": 211.6,
+     "sill_cm": 107.1
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      653,
+      3084,
+      799,
+      3418
+     ],
+     "w_cm": 92.5,
+     "h_cm": 211.6,
+     "sill_cm": 38.0
+    },
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      3187,
+      2977,
+      3332,
+      3311
+     ],
+     "w_cm": 91.9,
+     "h_cm": 211.7,
+     "sill_cm": 107.1
+    },
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      3456,
+      2977,
+      3600,
+      3330
+     ],
+     "w_cm": 91.3,
+     "h_cm": 223.7,
+     "sill_cm": 95.1
+    },
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      647,
+      3086,
+      790,
+      3420
+     ],
+     "w_cm": 90.6,
+     "h_cm": 211.7,
+     "sill_cm": 38.0
+    }
+   ],
+   "height_m": 2.117,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "PARTIAL",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "range_m": [
+    2.116,
+    2.237
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "GF-D-I495",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "candidates": [
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      4738,
+      3085,
+      4867,
+      3419
+     ],
+     "w_cm": 82.5,
+     "h_cm": 213.7,
+     "sill_cm": 21.7
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      1642,
+      3076,
+      1772,
+      3436
+     ],
+     "w_cm": 82.4,
+     "h_cm": 228.1,
+     "sill_cm": 26.6
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      1276,
+      3084,
+      1397,
+      3418
+     ],
+     "w_cm": 76.7,
+     "h_cm": 211.6,
+     "sill_cm": 38.0
+    }
+   ],
+   "height_m": 2.137,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "PARTIAL",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "range_m": [
+    2.116,
+    2.281
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "GF-D-I711",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "candidates": [
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      3967,
+      3044,
+      4129,
+      3450
+     ],
+     "w_cm": 102.6,
+     "h_cm": 257.2,
+     "sill_cm": 25.3
+    },
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      1072,
+      3048,
+      1236,
+      3461
+     ],
+     "w_cm": 104.9,
+     "h_cm": 264.2,
+     "sill_cm": -5.1
+    }
+   ],
+   "height_m": 2.607,
+   "state": "RASTER_TYPE_MATCH",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "RASTER_DERIVED",
+   "commercial": null,
+   "range_m": [
+    2.572,
+    2.642
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "GF-D-I754",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "candidates": [
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      3967,
+      3044,
+      4129,
+      3450
+     ],
+     "w_cm": 102.6,
+     "h_cm": 257.2,
+     "sill_cm": 25.3
+    },
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      1072,
+      3048,
+      1236,
+      3461
+     ],
+     "w_cm": 104.9,
+     "h_cm": 264.2,
+     "sill_cm": -5.1
+    }
+   ],
+   "height_m": 2.607,
+   "state": "RASTER_TYPE_MATCH",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "RASTER_DERIVED",
+   "commercial": null,
+   "range_m": [
+    2.572,
+    2.642
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "GF-D-I800",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 0.828,
+   "candidates": [
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      4738,
+      3085,
+      4867,
+      3419
+     ],
+     "w_cm": 82.5,
+     "h_cm": 213.7,
+     "sill_cm": 21.7
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      1642,
+      3076,
+      1772,
+      3436
+     ],
+     "w_cm": 82.4,
+     "h_cm": 228.1,
+     "sill_cm": 26.6
+    }
+   ],
+   "height_m": 2.209,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "PARTIAL",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "range_m": [
+    2.137,
+    2.281
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "GF-D-I801",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "candidates": [
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      4738,
+      3085,
+      4867,
+      3419
+     ],
+     "w_cm": 82.5,
+     "h_cm": 213.7,
+     "sill_cm": 21.7
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      1642,
+      3076,
+      1772,
+      3436
+     ],
+     "w_cm": 82.4,
+     "h_cm": 228.1,
+     "sill_cm": 26.6
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      1276,
+      3084,
+      1397,
+      3418
+     ],
+     "w_cm": 76.7,
+     "h_cm": 211.6,
+     "sill_cm": 38.0
+    }
+   ],
+   "height_m": 2.137,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "PARTIAL",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "range_m": [
+    2.116,
+    2.281
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "GF-D-I825",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 0.797,
+   "candidates": [
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      4738,
+      3085,
+      4867,
+      3419
+     ],
+     "w_cm": 82.5,
+     "h_cm": 213.7,
+     "sill_cm": 21.7
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      1642,
+      3076,
+      1772,
+      3436
+     ],
+     "w_cm": 82.4,
+     "h_cm": 228.1,
+     "sill_cm": 26.6
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      1276,
+      3084,
+      1397,
+      3418
+     ],
+     "w_cm": 76.7,
+     "h_cm": 211.6,
+     "sill_cm": 38.0
+    }
+   ],
+   "height_m": 2.137,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "PARTIAL",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "range_m": [
+    2.116,
+    2.281
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "GF-D-I830",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "candidates": [
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      3967,
+      3044,
+      4129,
+      3450
+     ],
+     "w_cm": 102.6,
+     "h_cm": 257.2,
+     "sill_cm": 25.3
+    },
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      1072,
+      3048,
+      1236,
+      3461
+     ],
+     "w_cm": 104.9,
+     "h_cm": 264.2,
+     "sill_cm": -5.1
+    }
+   ],
+   "height_m": 2.607,
+   "state": "RASTER_TYPE_MATCH",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "RASTER_DERIVED",
+   "commercial": null,
+   "range_m": [
+    2.572,
+    2.642
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "GF-W01",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 0.9,
+   "candidates": [
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      3435,
+      3046,
+      3576,
+      3120
+     ],
+     "w_cm": 89.3,
+     "h_cm": 46.9,
+     "sill_cm": 234.4
+    },
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      2316,
+      3121,
+      2461,
+      3455
+     ],
+     "w_cm": 91.9,
+     "h_cm": 211.6,
+     "sill_cm": 22.2
+    },
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      3263,
+      3327,
+      3411,
+      3475
+     ],
+     "w_cm": 93.8,
+     "h_cm": 93.8,
+     "sill_cm": 9.5
+    },
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      3169,
+      3083,
+      3315,
+      3418
+     ],
+     "w_cm": 93.4,
+     "h_cm": 214.3,
+     "sill_cm": 22.4
+    },
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      5710,
+      3087,
+      5855,
+      3421
+     ],
+     "w_cm": 92.8,
+     "h_cm": 213.7,
+     "sill_cm": 20.5
+    },
+    {
+     "sheet": "ARCH-P08-NW-ELEV",
+     "box_px": [
+      3342,
+      2953,
+      3475,
+      3028
+     ],
+     "w_cm": 84.3,
+     "h_cm": 47.5,
+     "sill_cm": 291.4
+    },
+    {
+     "sheet": "ARCH-P08-NW-ELEV",
+     "box_px": [
+      3342,
+      3043,
+      3475,
+      3118
+     ],
+     "w_cm": 84.3,
+     "h_cm": 47.5,
+     "sill_cm": 234.4
+    },
+    {
+     "sheet": "ARCH-P08-NW-ELEV",
+     "box_px": [
+      3213,
+      3162,
+      3346,
+      3279
+     ],
+     "w_cm": 84.3,
+     "h_cm": 74.1,
+     "sill_cm": 132.4
+    },
+    {
+     "sheet": "ARCH-P08-NW-ELEV",
+     "box_px": [
+      3342,
+      3163,
+      3475,
+      3279
+     ],
+     "w_cm": 84.3,
+     "h_cm": 73.5,
+     "sill_cm": 132.4
+    },
+    {
+     "sheet": "ARCH-P08-NW-ELEV",
+     "box_px": [
+      3992,
+      3320,
+      4130,
+      3438
+     ],
+     "w_cm": 87.4,
+     "h_cm": 74.8,
+     "sill_cm": 31.7
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      2759,
+      2974,
+      2902,
+      3309
+     ],
+     "w_cm": 90.6,
+     "h_cm": 212.2,
+     "sill_cm": 107.1
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      3190,
+      2975,
+      3334,
+      3309
+     ],
+     "w_cm": 91.2,
+     "h_cm": 211.6,
+     "sill_cm": 107.1
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      653,
+      3084,
+      799,
+      3418
+     ],
+     "w_cm": 92.5,
+     "h_cm": 211.6,
+     "sill_cm": 38.0
+    },
+    {
+     "sheet": "ARCH-P10-SECTION-AA",
+     "box_px": [
+      2000,
+      2938,
+      2144,
+      3161
+     ],
+     "w_cm": 91.5,
+     "h_cm": 141.7,
+     "sill_cm": 207.8
+    },
+    {
+     "sheet": "ARCH-P10-SECTION-AA",
+     "box_px": [
+      2997,
+      2953,
+      3130,
+      3027
+     ],
+     "w_cm": 84.5,
+     "h_cm": 47.0,
+     "sill_cm": 293.0
+    },
+    {
+     "sheet": "ARCH-P10-SECTION-AA",
+     "box_px": [
+      3849,
+      2957,
+      3999,
+      3097
+     ],
+     "w_cm": 95.3,
+     "h_cm": 89.0,
+     "sill_cm": 248.5
+    },
+    {
+     "sheet": "ARCH-P10-SECTION-AA",
+     "box_px": [
+      2997,
+      3043,
+      3130,
+      3117
+     ],
+     "w_cm": 84.5,
+     "h_cm": 47.0,
+     "sill_cm": 235.8
+    },
+    {
+     "sheet": "ARCH-P10-SECTION-AA",
+     "box_px": [
+      2997,
+      3162,
+      3130,
+      3279
+     ],
+     "w_cm": 84.5,
+     "h_cm": 74.4,
+     "sill_cm": 132.8
+    },
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      3187,
+      2977,
+      3332,
+      3311
+     ],
+     "w_cm": 91.9,
+     "h_cm": 211.7,
+     "sill_cm": 107.1
+    },
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      3456,
+      2977,
+      3600,
+      3330
+     ],
+     "w_cm": 91.3,
+     "h_cm": 223.7,
+     "sill_cm": 95.1
+    },
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      647,
+      3086,
+      790,
+      3420
+     ],
+     "w_cm": 90.6,
+     "h_cm": 211.7,
+     "sill_cm": 38.0
+    }
+   ],
+   "height_m": 0.938,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "PARTIAL",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    0.469,
+    2.237
+   ],
+   "sill_m": 0.071
+  },
+  {
+   "id": "GF-W02",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.5,
+   "candidates": [
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      4381,
+      2540,
+      4623,
+      2822
+     ],
+     "w_cm": 153.3,
+     "h_cm": 178.7,
+     "sill_cm": 423.2
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      1816,
+      2817,
+      2056,
+      3436
+     ],
+     "w_cm": 152.1,
+     "h_cm": 392.2,
+     "sill_cm": 26.6
+    }
+   ],
+   "height_m": 2.854,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "PARTIAL",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    1.787,
+    3.922
+   ],
+   "sill_m": 1.249
+  },
+  {
+   "id": "GF-W03",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "candidates": [
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      4234,
+      2370,
+      4389,
+      2821
+     ],
+     "w_cm": 98.2,
+     "h_cm": 285.7,
+     "sill_cm": 423.8
+    },
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      3967,
+      3044,
+      4129,
+      3450
+     ],
+     "w_cm": 102.6,
+     "h_cm": 257.2,
+     "sill_cm": 25.3
+    },
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      1072,
+      3048,
+      1236,
+      3461
+     ],
+     "w_cm": 104.9,
+     "h_cm": 264.2,
+     "sill_cm": -5.1
+    },
+    {
+     "sheet": "ARCH-P10-SECTION-AA",
+     "box_px": [
+      3849,
+      2957,
+      3999,
+      3097
+     ],
+     "w_cm": 95.3,
+     "h_cm": 89.0,
+     "sill_cm": 248.5
+    }
+   ],
+   "height_m": 2.607,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "PARTIAL",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    0.89,
+    2.857
+   ],
+   "sill_m": 0.369
+  },
+  {
+   "id": "GF-W04",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "candidates": [
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      4234,
+      2370,
+      4389,
+      2821
+     ],
+     "w_cm": 98.2,
+     "h_cm": 285.7,
+     "sill_cm": 423.8
+    },
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      3967,
+      3044,
+      4129,
+      3450
+     ],
+     "w_cm": 102.6,
+     "h_cm": 257.2,
+     "sill_cm": 25.3
+    },
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      1072,
+      3048,
+      1236,
+      3461
+     ],
+     "w_cm": 104.9,
+     "h_cm": 264.2,
+     "sill_cm": -5.1
+    },
+    {
+     "sheet": "ARCH-P10-SECTION-AA",
+     "box_px": [
+      3849,
+      2957,
+      3999,
+      3097
+     ],
+     "w_cm": 95.3,
+     "h_cm": 89.0,
+     "sill_cm": 248.5
+    }
+   ],
+   "height_m": 2.607,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "PARTIAL",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    0.89,
+    2.857
+   ],
+   "sill_m": 0.369
+  },
+  {
+   "id": "GF-W05",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 0.9,
+   "candidates": [
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      3435,
+      3046,
+      3576,
+      3120
+     ],
+     "w_cm": 89.3,
+     "h_cm": 46.9,
+     "sill_cm": 234.4
+    },
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      2316,
+      3121,
+      2461,
+      3455
+     ],
+     "w_cm": 91.9,
+     "h_cm": 211.6,
+     "sill_cm": 22.2
+    },
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      3263,
+      3327,
+      3411,
+      3475
+     ],
+     "w_cm": 93.8,
+     "h_cm": 93.8,
+     "sill_cm": 9.5
+    },
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      3169,
+      3083,
+      3315,
+      3418
+     ],
+     "w_cm": 93.4,
+     "h_cm": 214.3,
+     "sill_cm": 22.4
+    },
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      5710,
+      3087,
+      5855,
+      3421
+     ],
+     "w_cm": 92.8,
+     "h_cm": 213.7,
+     "sill_cm": 20.5
+    },
+    {
+     "sheet": "ARCH-P08-NW-ELEV",
+     "box_px": [
+      3342,
+      2953,
+      3475,
+      3028
+     ],
+     "w_cm": 84.3,
+     "h_cm": 47.5,
+     "sill_cm": 291.4
+    },
+    {
+     "sheet": "ARCH-P08-NW-ELEV",
+     "box_px": [
+      3342,
+      3043,
+      3475,
+      3118
+     ],
+     "w_cm": 84.3,
+     "h_cm": 47.5,
+     "sill_cm": 234.4
+    },
+    {
+     "sheet": "ARCH-P08-NW-ELEV",
+     "box_px": [
+      3213,
+      3162,
+      3346,
+      3279
+     ],
+     "w_cm": 84.3,
+     "h_cm": 74.1,
+     "sill_cm": 132.4
+    },
+    {
+     "sheet": "ARCH-P08-NW-ELEV",
+     "box_px": [
+      3342,
+      3163,
+      3475,
+      3279
+     ],
+     "w_cm": 84.3,
+     "h_cm": 73.5,
+     "sill_cm": 132.4
+    },
+    {
+     "sheet": "ARCH-P08-NW-ELEV",
+     "box_px": [
+      3992,
+      3320,
+      4130,
+      3438
+     ],
+     "w_cm": 87.4,
+     "h_cm": 74.8,
+     "sill_cm": 31.7
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      2759,
+      2974,
+      2902,
+      3309
+     ],
+     "w_cm": 90.6,
+     "h_cm": 212.2,
+     "sill_cm": 107.1
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      3190,
+      2975,
+      3334,
+      3309
+     ],
+     "w_cm": 91.2,
+     "h_cm": 211.6,
+     "sill_cm": 107.1
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      653,
+      3084,
+      799,
+      3418
+     ],
+     "w_cm": 92.5,
+     "h_cm": 211.6,
+     "sill_cm": 38.0
+    },
+    {
+     "sheet": "ARCH-P10-SECTION-AA",
+     "box_px": [
+      2000,
+      2938,
+      2144,
+      3161
+     ],
+     "w_cm": 91.5,
+     "h_cm": 141.7,
+     "sill_cm": 207.8
+    },
+    {
+     "sheet": "ARCH-P10-SECTION-AA",
+     "box_px": [
+      2997,
+      2953,
+      3130,
+      3027
+     ],
+     "w_cm": 84.5,
+     "h_cm": 47.0,
+     "sill_cm": 293.0
+    },
+    {
+     "sheet": "ARCH-P10-SECTION-AA",
+     "box_px": [
+      3849,
+      2957,
+      3999,
+      3097
+     ],
+     "w_cm": 95.3,
+     "h_cm": 89.0,
+     "sill_cm": 248.5
+    },
+    {
+     "sheet": "ARCH-P10-SECTION-AA",
+     "box_px": [
+      2997,
+      3043,
+      3130,
+      3117
+     ],
+     "w_cm": 84.5,
+     "h_cm": 47.0,
+     "sill_cm": 235.8
+    },
+    {
+     "sheet": "ARCH-P10-SECTION-AA",
+     "box_px": [
+      2997,
+      3162,
+      3130,
+      3279
+     ],
+     "w_cm": 84.5,
+     "h_cm": 74.4,
+     "sill_cm": 132.8
+    },
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      3187,
+      2977,
+      3332,
+      3311
+     ],
+     "w_cm": 91.9,
+     "h_cm": 211.7,
+     "sill_cm": 107.1
+    },
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      3456,
+      2977,
+      3600,
+      3330
+     ],
+     "w_cm": 91.3,
+     "h_cm": 223.7,
+     "sill_cm": 95.1
+    },
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      647,
+      3086,
+      790,
+      3420
+     ],
+     "w_cm": 90.6,
+     "h_cm": 211.7,
+     "sill_cm": 38.0
+    }
+   ],
+   "height_m": 0.938,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "PARTIAL",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    0.469,
+    2.237
+   ],
+   "sill_m": 0.071
+  },
+  {
+   "id": "GF-W06",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "candidates": [
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      2798,
+      2852,
+      2895,
+      3174
+     ],
+     "w_cm": 61.5,
+     "h_cm": 204.0,
+     "sill_cm": 200.2
+    },
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      3480,
+      2956,
+      3570,
+      3030
+     ],
+     "w_cm": 57.0,
+     "h_cm": 46.9,
+     "sill_cm": 291.4
+    },
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      3480,
+      3165,
+      3568,
+      3282
+     ],
+     "w_cm": 55.8,
+     "h_cm": 74.1,
+     "sill_cm": 131.8
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      1513,
+      3037,
+      1605,
+      3150
+     ],
+     "w_cm": 58.3,
+     "h_cm": 71.6,
+     "sill_cm": 207.8
+    }
+   ],
+   "height_m": 0.729,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "PARTIAL",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    0.469,
+    2.04
+   ],
+   "sill_m": 1.04
+  },
+  {
+   "id": "GF-W07",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "candidates": [
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      2798,
+      2852,
+      2895,
+      3174
+     ],
+     "w_cm": 61.5,
+     "h_cm": 204.0,
+     "sill_cm": 200.2
+    },
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      3480,
+      2956,
+      3570,
+      3030
+     ],
+     "w_cm": 57.0,
+     "h_cm": 46.9,
+     "sill_cm": 291.4
+    },
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      3480,
+      3165,
+      3568,
+      3282
+     ],
+     "w_cm": 55.8,
+     "h_cm": 74.1,
+     "sill_cm": 131.8
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      1513,
+      3037,
+      1605,
+      3150
+     ],
+     "w_cm": 58.3,
+     "h_cm": 71.6,
+     "sill_cm": 207.8
+    }
+   ],
+   "height_m": 0.729,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "PARTIAL",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    0.469,
+    2.04
+   ],
+   "sill_m": 1.04
+  },
+  {
+   "id": "GF-W08",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "candidates": [
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      2798,
+      2852,
+      2895,
+      3174
+     ],
+     "w_cm": 61.5,
+     "h_cm": 204.0,
+     "sill_cm": 200.2
+    },
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      3480,
+      2956,
+      3570,
+      3030
+     ],
+     "w_cm": 57.0,
+     "h_cm": 46.9,
+     "sill_cm": 291.4
+    },
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      3480,
+      3165,
+      3568,
+      3282
+     ],
+     "w_cm": 55.8,
+     "h_cm": 74.1,
+     "sill_cm": 131.8
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      1513,
+      3037,
+      1605,
+      3150
+     ],
+     "w_cm": 58.3,
+     "h_cm": 71.6,
+     "sill_cm": 207.8
+    }
+   ],
+   "height_m": 0.729,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "PARTIAL",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    0.469,
+    2.04
+   ],
+   "sill_m": 1.04
+  },
+  {
+   "id": "GF-W09",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 6.332,
+   "height_m": 3.65,
+   "state": "PRINTED",
+   "grade": "PRINTED",
+   "confidence": "H",
+   "technical": "RASTER_DERIVED",
+   "commercial": null,
+   "source": "OWNER FACT V3a (salon glazing 6.33 x 3.65)",
+   "candidates": [],
+   "sill_m": null
+  },
+  {
+   "id": "GF-W10",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.2,
+   "candidates": [
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      3580,
+      2728,
+      3773,
+      2828
+     ],
+     "w_cm": 122.3,
+     "h_cm": 63.4,
+     "sill_cm": 419.4
+    },
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      4044,
+      2730,
+      4237,
+      3056
+     ],
+     "w_cm": 123.5,
+     "h_cm": 208.5,
+     "sill_cm": 254.0
+    },
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      4044,
+      3053,
+      4237,
+      3460
+     ],
+     "w_cm": 123.5,
+     "h_cm": 260.4,
+     "sill_cm": -4.5
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      1232,
+      2714,
+      1427,
+      2806
+     ],
+     "w_cm": 123.5,
+     "h_cm": 58.3,
+     "sill_cm": 425.8
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      2269,
+      2821,
+      2461,
+      3056
+     ],
+     "w_cm": 121.6,
+     "h_cm": 148.9,
+     "sill_cm": 267.4
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      2269,
+      2821,
+      2465,
+      3462
+     ],
+     "w_cm": 124.2,
+     "h_cm": 406.1,
+     "sill_cm": 10.1
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      2272,
+      3053,
+      2465,
+      3462
+     ],
+     "w_cm": 122.3,
+     "h_cm": 259.1,
+     "sill_cm": 10.1
+    },
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      2739,
+      2635,
+      2931,
+      3335
+     ],
+     "w_cm": 121.7,
+     "h_cm": 443.7,
+     "sill_cm": 91.9
+    }
+   ],
+   "height_m": 2.338,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "PARTIAL",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    0.583,
+    4.437
+   ],
+   "sill_m": 0.729
+  },
+  {
+   "id": "GF-W11",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "candidates": [
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      4234,
+      2370,
+      4389,
+      2821
+     ],
+     "w_cm": 98.2,
+     "h_cm": 285.7,
+     "sill_cm": 423.8
+    },
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      3967,
+      3044,
+      4129,
+      3450
+     ],
+     "w_cm": 102.6,
+     "h_cm": 257.2,
+     "sill_cm": 25.3
+    },
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      1072,
+      3048,
+      1236,
+      3461
+     ],
+     "w_cm": 104.9,
+     "h_cm": 264.2,
+     "sill_cm": -5.1
+    },
+    {
+     "sheet": "ARCH-P10-SECTION-AA",
+     "box_px": [
+      3849,
+      2957,
+      3999,
+      3097
+     ],
+     "w_cm": 95.3,
+     "h_cm": 89.0,
+     "sill_cm": 248.5
+    }
+   ],
+   "height_m": 2.607,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "PARTIAL",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    0.89,
+    2.857
+   ],
+   "sill_m": 0.369
+  },
+  {
+   "id": "GF-W12",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.5,
+   "candidates": [
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      4381,
+      2540,
+      4623,
+      2822
+     ],
+     "w_cm": 153.3,
+     "h_cm": 178.7,
+     "sill_cm": 423.2
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      1816,
+      2817,
+      2056,
+      3436
+     ],
+     "w_cm": 152.1,
+     "h_cm": 392.2,
+     "sill_cm": 26.6
+    }
+   ],
+   "height_m": 2.854,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "PARTIAL",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    1.787,
+    3.922
+   ],
+   "sill_m": 1.249
+  },
+  {
+   "id": "GF-W13",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "candidates": [
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      4234,
+      2370,
+      4389,
+      2821
+     ],
+     "w_cm": 98.2,
+     "h_cm": 285.7,
+     "sill_cm": 423.8
+    },
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      3967,
+      3044,
+      4129,
+      3450
+     ],
+     "w_cm": 102.6,
+     "h_cm": 257.2,
+     "sill_cm": 25.3
+    },
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      1072,
+      3048,
+      1236,
+      3461
+     ],
+     "w_cm": 104.9,
+     "h_cm": 264.2,
+     "sill_cm": -5.1
+    },
+    {
+     "sheet": "ARCH-P10-SECTION-AA",
+     "box_px": [
+      3849,
+      2957,
+      3999,
+      3097
+     ],
+     "w_cm": 95.3,
+     "h_cm": 89.0,
+     "sill_cm": 248.5
+    }
+   ],
+   "height_m": 2.607,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "PARTIAL",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    0.89,
+    2.857
+   ],
+   "sill_m": 0.369
+  },
+  {
+   "id": "GF-W14",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "candidates": [
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      4234,
+      2370,
+      4389,
+      2821
+     ],
+     "w_cm": 98.2,
+     "h_cm": 285.7,
+     "sill_cm": 423.8
+    },
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      3967,
+      3044,
+      4129,
+      3450
+     ],
+     "w_cm": 102.6,
+     "h_cm": 257.2,
+     "sill_cm": 25.3
+    },
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      1072,
+      3048,
+      1236,
+      3461
+     ],
+     "w_cm": 104.9,
+     "h_cm": 264.2,
+     "sill_cm": -5.1
+    },
+    {
+     "sheet": "ARCH-P10-SECTION-AA",
+     "box_px": [
+      3849,
+      2957,
+      3999,
+      3097
+     ],
+     "w_cm": 95.3,
+     "h_cm": 89.0,
+     "sill_cm": 248.5
+    }
+   ],
+   "height_m": 2.607,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "PARTIAL",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    0.89,
+    2.857
+   ],
+   "sill_m": 0.369
+  },
+  {
+   "id": "GF-W15",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.955,
+   "candidates": [],
+   "height_m": 2.063,
+   "state": "NO_WIDTH_MATCH",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    0.469,
+    4.83
+   ],
+   "sill_m": null
+  },
+  {
+   "id": "GF-W16",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.955,
+   "candidates": [],
+   "height_m": 2.063,
+   "state": "NO_WIDTH_MATCH",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    0.469,
+    4.83
+   ],
+   "sill_m": null
+  },
+  {
+   "id": "1F-D-I3054",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "candidates": [
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      3759,
+      2268,
+      3889,
+      2603
+     ],
+     "w_cm": 82.4,
+     "h_cm": 212.3,
+     "sill_cm": 555.9
+    },
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      4409,
+      2269,
+      4537,
+      2603
+     ],
+     "w_cm": 81.1,
+     "h_cm": 211.7,
+     "sill_cm": 555.9
+    },
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      4681,
+      2270,
+      4810,
+      2604
+     ],
+     "w_cm": 81.8,
+     "h_cm": 211.7,
+     "sill_cm": 555.2
+    }
+   ],
+   "height_m": 2.117,
+   "state": "RASTER_TYPE_MATCH",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "RASTER_DERIVED",
+   "commercial": null,
+   "range_m": [
+    2.117,
+    2.123
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "1F-D-I3055",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 0.9,
+   "candidates": [
+    {
+     "sheet": "ARCH-P10-SECTION-AA",
+     "box_px": [
+      3158,
+      2277,
+      3304,
+      2611
+     ],
+     "w_cm": 92.8,
+     "h_cm": 212.3,
+     "sill_cm": 557.3
+    }
+   ],
+   "height_m": 2.123,
+   "state": "RASTER_TYPE_MATCH_SINGLE",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "PARTIAL",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "range_m": [
+    2.123,
+    2.123
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "1F-D-I3090",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "candidates": [
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      3759,
+      2268,
+      3889,
+      2603
+     ],
+     "w_cm": 82.4,
+     "h_cm": 212.3,
+     "sill_cm": 555.9
+    },
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      4409,
+      2269,
+      4537,
+      2603
+     ],
+     "w_cm": 81.1,
+     "h_cm": 211.7,
+     "sill_cm": 555.9
+    },
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      4681,
+      2270,
+      4810,
+      2604
+     ],
+     "w_cm": 81.8,
+     "h_cm": 211.7,
+     "sill_cm": 555.2
+    }
+   ],
+   "height_m": 2.117,
+   "state": "RASTER_TYPE_MATCH",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "RASTER_DERIVED",
+   "commercial": null,
+   "range_m": [
+    2.117,
+    2.123
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "1F-D-I3096",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 0.9,
+   "candidates": [
+    {
+     "sheet": "ARCH-P10-SECTION-AA",
+     "box_px": [
+      3158,
+      2277,
+      3304,
+      2611
+     ],
+     "w_cm": 92.8,
+     "h_cm": 212.3,
+     "sill_cm": 557.3
+    }
+   ],
+   "height_m": 2.123,
+   "state": "RASTER_TYPE_MATCH_SINGLE",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "PARTIAL",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "range_m": [
+    2.123,
+    2.123
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "1F-D-I3098",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 0.9,
+   "candidates": [
+    {
+     "sheet": "ARCH-P10-SECTION-AA",
+     "box_px": [
+      3158,
+      2277,
+      3304,
+      2611
+     ],
+     "w_cm": 92.8,
+     "h_cm": 212.3,
+     "sill_cm": 557.3
+    }
+   ],
+   "height_m": 2.123,
+   "state": "RASTER_TYPE_MATCH_SINGLE",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "PARTIAL",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "range_m": [
+    2.123,
+    2.123
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "1F-D-I3115",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "candidates": [
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      3759,
+      2268,
+      3889,
+      2603
+     ],
+     "w_cm": 82.4,
+     "h_cm": 212.3,
+     "sill_cm": 555.9
+    },
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      4409,
+      2269,
+      4537,
+      2603
+     ],
+     "w_cm": 81.1,
+     "h_cm": 211.7,
+     "sill_cm": 555.9
+    },
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      4681,
+      2270,
+      4810,
+      2604
+     ],
+     "w_cm": 81.8,
+     "h_cm": 211.7,
+     "sill_cm": 555.2
+    }
+   ],
+   "height_m": 2.117,
+   "state": "RASTER_TYPE_MATCH",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "RASTER_DERIVED",
+   "commercial": null,
+   "range_m": [
+    2.117,
+    2.123
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "1F-D-I3118",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "candidates": [
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      3759,
+      2268,
+      3889,
+      2603
+     ],
+     "w_cm": 82.4,
+     "h_cm": 212.3,
+     "sill_cm": 555.9
+    },
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      4409,
+      2269,
+      4537,
+      2603
+     ],
+     "w_cm": 81.1,
+     "h_cm": 211.7,
+     "sill_cm": 555.9
+    },
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      4681,
+      2270,
+      4810,
+      2604
+     ],
+     "w_cm": 81.8,
+     "h_cm": 211.7,
+     "sill_cm": 555.2
+    }
+   ],
+   "height_m": 2.117,
+   "state": "RASTER_TYPE_MATCH",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "RASTER_DERIVED",
+   "commercial": null,
+   "range_m": [
+    2.117,
+    2.123
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "1F-D-I3121",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "candidates": [
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      2973,
+      2268,
+      3125,
+      2602
+     ],
+     "w_cm": 96.3,
+     "h_cm": 211.7,
+     "sill_cm": 556.5
+    }
+   ],
+   "height_m": 2.117,
+   "state": "RASTER_TYPE_MATCH_SINGLE",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "PARTIAL",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "range_m": [
+    2.117,
+    2.117
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "1F-D-I3122",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "candidates": [
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      2973,
+      2268,
+      3125,
+      2602
+     ],
+     "w_cm": 96.3,
+     "h_cm": 211.7,
+     "sill_cm": 556.5
+    }
+   ],
+   "height_m": 2.117,
+   "state": "RASTER_TYPE_MATCH_SINGLE",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "PARTIAL",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "range_m": [
+    2.117,
+    2.117
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "1F-D-I4532",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "candidates": [
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      3759,
+      2268,
+      3889,
+      2603
+     ],
+     "w_cm": 82.4,
+     "h_cm": 212.3,
+     "sill_cm": 555.9
+    },
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      4409,
+      2269,
+      4537,
+      2603
+     ],
+     "w_cm": 81.1,
+     "h_cm": 211.7,
+     "sill_cm": 555.9
+    },
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      4681,
+      2270,
+      4810,
+      2604
+     ],
+     "w_cm": 81.8,
+     "h_cm": 211.7,
+     "sill_cm": 555.2
+    }
+   ],
+   "height_m": 2.117,
+   "state": "RASTER_TYPE_MATCH",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "RASTER_DERIVED",
+   "commercial": null,
+   "range_m": [
+    2.117,
+    2.123
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "1F-W01",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "candidates": [
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      2798,
+      2095,
+      2895,
+      2466
+     ],
+     "w_cm": 61.5,
+     "h_cm": 235.0,
+     "sill_cm": 648.7
+    },
+    {
+     "sheet": "ARCH-P08-NW-ELEV",
+     "box_px": [
+      3464,
+      1748,
+      3566,
+      2441
+     ],
+     "w_cm": 64.6,
+     "h_cm": 439.0,
+     "sill_cm": 663.3
+    },
+    {
+     "sheet": "ARCH-P08-NW-ELEV",
+     "box_px": [
+      2693,
+      2271,
+      2792,
+      2602
+     ],
+     "w_cm": 62.7,
+     "h_cm": 209.7,
+     "sill_cm": 561.3
+    },
+    {
+     "sheet": "ARCH-P08-NW-ELEV",
+     "box_px": [
+      2816,
+      2271,
+      2915,
+      2602
+     ],
+     "w_cm": 62.7,
+     "h_cm": 209.7,
+     "sill_cm": 561.3
+    },
+    {
+     "sheet": "ARCH-P08-NW-ELEV",
+     "box_px": [
+      3138,
+      2271,
+      3236,
+      2602
+     ],
+     "w_cm": 62.1,
+     "h_cm": 209.7,
+     "sill_cm": 561.3
+    }
+   ],
+   "height_m": 2.097,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "PARTIAL",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    2.097,
+    4.39
+   ],
+   "sill_m": 0.113
+  },
+  {
+   "id": "1F-W02",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 1.552,
+   "candidates": [],
+   "height_m": 2.097,
+   "state": "NO_WIDTH_MATCH",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    0.537,
+    4.39
+   ],
+   "sill_m": null
+  },
+  {
+   "id": "1F-W03",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "candidates": [
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      5330,
+      2528,
+      5479,
+      2620
+     ],
+     "w_cm": 94.4,
+     "h_cm": 58.3,
+     "sill_cm": 543.6
+    },
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      2973,
+      2268,
+      3125,
+      2602
+     ],
+     "w_cm": 96.3,
+     "h_cm": 211.7,
+     "sill_cm": 556.5
+    }
+   ],
+   "height_m": 1.35,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "PARTIAL",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    0.583,
+    2.117
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "1F-W04",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "candidates": [
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      5330,
+      2528,
+      5479,
+      2620
+     ],
+     "w_cm": 94.4,
+     "h_cm": 58.3,
+     "sill_cm": 543.6
+    },
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      2973,
+      2268,
+      3125,
+      2602
+     ],
+     "w_cm": 96.3,
+     "h_cm": 211.7,
+     "sill_cm": 556.5
+    }
+   ],
+   "height_m": 1.35,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "PARTIAL",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    0.583,
+    2.117
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "1F-W05",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "candidates": [
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      5330,
+      2528,
+      5479,
+      2620
+     ],
+     "w_cm": 94.4,
+     "h_cm": 58.3,
+     "sill_cm": 543.6
+    },
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      2973,
+      2268,
+      3125,
+      2602
+     ],
+     "w_cm": 96.3,
+     "h_cm": 211.7,
+     "sill_cm": 556.5
+    }
+   ],
+   "height_m": 1.35,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "PARTIAL",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    0.583,
+    2.117
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "1F-W06",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "candidates": [
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      2798,
+      2095,
+      2895,
+      2466
+     ],
+     "w_cm": 61.5,
+     "h_cm": 235.0,
+     "sill_cm": 648.7
+    },
+    {
+     "sheet": "ARCH-P08-NW-ELEV",
+     "box_px": [
+      3464,
+      1748,
+      3566,
+      2441
+     ],
+     "w_cm": 64.6,
+     "h_cm": 439.0,
+     "sill_cm": 663.3
+    },
+    {
+     "sheet": "ARCH-P08-NW-ELEV",
+     "box_px": [
+      2693,
+      2271,
+      2792,
+      2602
+     ],
+     "w_cm": 62.7,
+     "h_cm": 209.7,
+     "sill_cm": 561.3
+    },
+    {
+     "sheet": "ARCH-P08-NW-ELEV",
+     "box_px": [
+      2816,
+      2271,
+      2915,
+      2602
+     ],
+     "w_cm": 62.7,
+     "h_cm": 209.7,
+     "sill_cm": 561.3
+    },
+    {
+     "sheet": "ARCH-P08-NW-ELEV",
+     "box_px": [
+      3138,
+      2271,
+      3236,
+      2602
+     ],
+     "w_cm": 62.1,
+     "h_cm": 209.7,
+     "sill_cm": 561.3
+    }
+   ],
+   "height_m": 2.097,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "PARTIAL",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    2.097,
+    4.39
+   ],
+   "sill_m": 0.113
+  },
+  {
+   "id": "1F-W07",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "candidates": [
+    {
+     "sheet": "ARCH-P06-SE-ELEV",
+     "box_px": [
+      2798,
+      2095,
+      2895,
+      2466
+     ],
+     "w_cm": 61.5,
+     "h_cm": 235.0,
+     "sill_cm": 648.7
+    },
+    {
+     "sheet": "ARCH-P08-NW-ELEV",
+     "box_px": [
+      3464,
+      1748,
+      3566,
+      2441
+     ],
+     "w_cm": 64.6,
+     "h_cm": 439.0,
+     "sill_cm": 663.3
+    },
+    {
+     "sheet": "ARCH-P08-NW-ELEV",
+     "box_px": [
+      2693,
+      2271,
+      2792,
+      2602
+     ],
+     "w_cm": 62.7,
+     "h_cm": 209.7,
+     "sill_cm": 561.3
+    },
+    {
+     "sheet": "ARCH-P08-NW-ELEV",
+     "box_px": [
+      2816,
+      2271,
+      2915,
+      2602
+     ],
+     "w_cm": 62.7,
+     "h_cm": 209.7,
+     "sill_cm": 561.3
+    },
+    {
+     "sheet": "ARCH-P08-NW-ELEV",
+     "box_px": [
+      3138,
+      2271,
+      3236,
+      2602
+     ],
+     "w_cm": 62.1,
+     "h_cm": 209.7,
+     "sill_cm": 561.3
+    }
+   ],
+   "height_m": 2.097,
+   "state": "RASTER_AMBIGUOUS",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "PARTIAL",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    2.097,
+    4.39
+   ],
+   "sill_m": 0.113
+  },
+  {
+   "id": "1F-W08",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 1.552,
+   "candidates": [],
+   "height_m": 2.097,
+   "state": "NO_WIDTH_MATCH",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    0.537,
+    4.39
+   ],
+   "sill_m": null
+  },
+  {
+   "id": "1F-W09",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 1.552,
+   "candidates": [],
+   "height_m": 2.097,
+   "state": "NO_WIDTH_MATCH",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    0.537,
+    4.39
+   ],
+   "sill_m": null
+  },
+  {
+   "id": "1F-W10",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 0.5,
+   "candidates": [
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      2324,
+      2217,
+      2407,
+      2329
+     ],
+     "w_cm": 53.1,
+     "h_cm": 71.6,
+     "sill_cm": 719.0
+    },
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      2576,
+      2218,
+      2657,
+      2330
+     ],
+     "w_cm": 51.8,
+     "h_cm": 71.6,
+     "sill_cm": 718.4
+    },
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      2969,
+      2218,
+      3049,
+      2330
+     ],
+     "w_cm": 51.2,
+     "h_cm": 71.6,
+     "sill_cm": 718.4
+    },
+    {
+     "sheet": "ARCH-P08-NW-ELEV",
+     "box_px": [
+      4001,
+      2512,
+      4081,
+      2611
+     ],
+     "w_cm": 50.7,
+     "h_cm": 62.7,
+     "sill_cm": 555.6
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      2391,
+      2219,
+      2472,
+      2331
+     ],
+     "w_cm": 51.3,
+     "h_cm": 71.0,
+     "sill_cm": 726.7
+    },
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      2623,
+      2219,
+      2705,
+      2331
+     ],
+     "w_cm": 52.0,
+     "h_cm": 71.0,
+     "sill_cm": 726.7
+    }
+   ],
+   "height_m": 0.713,
+   "state": "RASTER_TYPE_MATCH",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "RASTER_DERIVED",
+   "commercial": null,
+   "range_m": [
+    0.627,
+    0.716
+   ],
+   "sill_m": 1.687
+  },
+  {
+   "id": "1F-W11",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 1.2,
+   "candidates": [
+    {
+     "sheet": "ARCH-P08-NW-ELEV",
+     "box_px": [
+      3900,
+      2134,
+      4081,
+      2507
+     ],
+     "w_cm": 114.7,
+     "h_cm": 236.3,
+     "sill_cm": 621.5
+    }
+   ],
+   "height_m": 2.363,
+   "state": "RASTER_TYPE_MATCH_SINGLE",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "PARTIAL",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "range_m": [
+    2.363,
+    2.363
+   ],
+   "sill_m": 0.715
+  },
+  {
+   "id": "1F-W12",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 2.45,
+   "candidates": [],
+   "height_m": 2.097,
+   "state": "NO_WIDTH_MATCH",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    0.537,
+    4.39
+   ],
+   "sill_m": null
+  },
+  {
+   "id": "2F-D-I4794",
+   "floor": "2F",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "candidates": [],
+   "height_m": 2.123,
+   "state": "NO_WIDTH_MATCH",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "BLOCKED",
+   "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+   "range_m": [
+    2.123,
+    2.123
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "2F-D-I4795",
+   "floor": "2F",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "candidates": [],
+   "height_m": 2.123,
+   "state": "NO_WIDTH_MATCH",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "BLOCKED",
+   "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+   "range_m": [
+    2.123,
+    2.123
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "2F-D-I4802",
+   "floor": "2F",
+   "kind": "DOOR",
+   "width_m": 0.9,
+   "candidates": [
+    {
+     "sheet": "ARCH-P11-SECTION-BB",
+     "box_px": [
+      3031,
+      1606,
+      3175,
+      1941
+     ],
+     "w_cm": 91.3,
+     "h_cm": 212.3,
+     "sill_cm": 975.5
+    }
+   ],
+   "height_m": 2.123,
+   "state": "RASTER_TYPE_MATCH_SINGLE",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "PARTIAL",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "range_m": [
+    2.123,
+    2.123
+   ],
+   "sill_m": 0.0
+  },
+  {
+   "id": "2F-W01",
+   "floor": "2F",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "candidates": [
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      3031,
+      1604,
+      3185,
+      1697
+     ],
+     "w_cm": 97.6,
+     "h_cm": 58.9,
+     "sill_cm": 1128.4
+    }
+   ],
+   "height_m": 0.589,
+   "state": "RASTER_TYPE_MATCH_SINGLE",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "PARTIAL",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "range_m": [
+    0.589,
+    0.589
+   ],
+   "sill_m": 1.584
+  },
+  {
+   "id": "2F-W02",
+   "floor": "2F",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "candidates": [
+    {
+     "sheet": "ARCH-P09-NE-ELEV",
+     "box_px": [
+      3031,
+      1604,
+      3185,
+      1697
+     ],
+     "w_cm": 97.6,
+     "h_cm": 58.9,
+     "sill_cm": 1128.4
+    }
+   ],
+   "height_m": 0.589,
+   "state": "RASTER_TYPE_MATCH_SINGLE",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "PARTIAL",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "range_m": [
+    0.589,
+    0.589
+   ],
+   "sill_m": 1.584
+  },
+  {
+   "id": "2F-W03",
+   "floor": "2F",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "candidates": [],
+   "height_m": 1.439,
+   "state": "NO_WIDTH_MATCH",
+   "grade": "SCALED",
+   "confidence": "L",
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "range_m": [
+    0.589,
+    3.497
+   ],
+   "sill_m": null
+  },
+  {
+   "id": "2F-W04",
+   "floor": "2F",
+   "kind": "WINDOW",
+   "width_m": 1.2,
+   "candidates": [
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      2575,
+      1556,
+      2758,
+      1780
+     ],
+     "w_cm": 117.1,
+     "h_cm": 143.3,
+     "sill_cm": 1070.2
+    }
+   ],
+   "height_m": 1.433,
+   "state": "RASTER_TYPE_MATCH_SINGLE",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "PARTIAL",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "range_m": [
+    1.433,
+    1.433
+   ],
+   "sill_m": 1.002
+  },
+  {
+   "id": "2F-W05",
+   "floor": "2F",
+   "kind": "WINDOW",
+   "width_m": 1.2,
+   "candidates": [
+    {
+     "sheet": "ARCH-P07-SW-ELEV",
+     "box_px": [
+      2575,
+      1556,
+      2758,
+      1780
+     ],
+     "w_cm": 117.1,
+     "h_cm": 143.3,
+     "sill_cm": 1070.2
+    }
+   ],
+   "height_m": 1.433,
+   "state": "RASTER_TYPE_MATCH_SINGLE",
+   "grade": "SCALED",
+   "confidence": "M",
+   "technical": "PARTIAL",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "range_m": [
+    1.433,
+    1.433
+   ],
+   "sill_m": 1.002
+  }
+ ],
+ "areas": [
+  {
+   "id": "GF-D-641",
+   "floor": "GF",
+   "kind": "DOUBLE_LEAF_DOOR",
+   "width_m": 2.0,
+   "height_m": 2.237,
+   "sill_m": 0.0,
+   "area_m2": 4.474,
+   "technical": "BLOCKED",
+   "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+   "confidence": "M",
+   "state": "NO_WIDTH_MATCH",
+   "low_m2": 3.878,
+   "high_m2": 5.45,
+   "source": null,
+   "candidates": 0
+  },
+  {
+   "id": "GF-D-E820",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "height_m": 2.137,
+   "sill_m": 0.0,
+   "area_m2": 1.7096,
+   "technical": "BLOCKED",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "confidence": "M",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 1.6928,
+   "high_m2": 1.8248,
+   "source": null,
+   "candidates": 3
+  },
+  {
+   "id": "GF-D-I1023",
+   "floor": "GF",
+   "kind": "DOOR",
+   "state": "NO_WIDTH"
+  },
+  {
+   "id": "GF-D-I350",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "height_m": 2.607,
+   "sill_m": 0.0,
+   "area_m2": 2.607,
+   "technical": "RASTER_DERIVED",
+   "commercial": null,
+   "confidence": "M",
+   "state": "RASTER_TYPE_MATCH",
+   "low_m2": 2.572,
+   "high_m2": 2.642,
+   "source": null,
+   "candidates": 2
+  },
+  {
+   "id": "GF-D-I402",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "height_m": 2.607,
+   "sill_m": 0.0,
+   "area_m2": 2.607,
+   "technical": "RASTER_DERIVED",
+   "commercial": null,
+   "confidence": "M",
+   "state": "RASTER_TYPE_MATCH",
+   "low_m2": 2.572,
+   "high_m2": 2.642,
+   "source": null,
+   "candidates": 2
+  },
+  {
+   "id": "GF-D-I414",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "height_m": 2.137,
+   "sill_m": 0.0,
+   "area_m2": 1.7096,
+   "technical": "BLOCKED",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "confidence": "M",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 1.6928,
+   "high_m2": 1.8248,
+   "source": null,
+   "candidates": 3
+  },
+  {
+   "id": "GF-D-I437",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 0.9,
+   "height_m": 2.117,
+   "sill_m": 0.0,
+   "area_m2": 1.9053,
+   "technical": "BLOCKED",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "confidence": "M",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 1.9044,
+   "high_m2": 2.0133,
+   "source": null,
+   "candidates": 9
+  },
+  {
+   "id": "GF-D-I495",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "height_m": 2.137,
+   "sill_m": 0.0,
+   "area_m2": 1.7096,
+   "technical": "BLOCKED",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "confidence": "M",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 1.6928,
+   "high_m2": 1.8248,
+   "source": null,
+   "candidates": 3
+  },
+  {
+   "id": "GF-D-I711",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "height_m": 2.607,
+   "sill_m": 0.0,
+   "area_m2": 2.607,
+   "technical": "RASTER_DERIVED",
+   "commercial": null,
+   "confidence": "M",
+   "state": "RASTER_TYPE_MATCH",
+   "low_m2": 2.572,
+   "high_m2": 2.642,
+   "source": null,
+   "candidates": 2
+  },
+  {
+   "id": "GF-D-I754",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "height_m": 2.607,
+   "sill_m": 0.0,
+   "area_m2": 2.607,
+   "technical": "RASTER_DERIVED",
+   "commercial": null,
+   "confidence": "M",
+   "state": "RASTER_TYPE_MATCH",
+   "low_m2": 2.572,
+   "high_m2": 2.642,
+   "source": null,
+   "candidates": 2
+  },
+  {
+   "id": "GF-D-I800",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 0.828,
+   "height_m": 2.209,
+   "sill_m": 0.0,
+   "area_m2": 1.8291,
+   "technical": "BLOCKED",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "confidence": "M",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 1.7694,
+   "high_m2": 1.8887,
+   "source": null,
+   "candidates": 2
+  },
+  {
+   "id": "GF-D-I801",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "height_m": 2.137,
+   "sill_m": 0.0,
+   "area_m2": 1.7096,
+   "technical": "BLOCKED",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "confidence": "M",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 1.6928,
+   "high_m2": 1.8248,
+   "source": null,
+   "candidates": 3
+  },
+  {
+   "id": "GF-D-I825",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 0.797,
+   "height_m": 2.137,
+   "sill_m": 0.0,
+   "area_m2": 1.7032,
+   "technical": "BLOCKED",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "confidence": "M",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 1.6865,
+   "high_m2": 1.818,
+   "source": null,
+   "candidates": 3
+  },
+  {
+   "id": "GF-D-I830",
+   "floor": "GF",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "height_m": 2.607,
+   "sill_m": 0.0,
+   "area_m2": 2.607,
+   "technical": "RASTER_DERIVED",
+   "commercial": null,
+   "confidence": "M",
+   "state": "RASTER_TYPE_MATCH",
+   "low_m2": 2.572,
+   "high_m2": 2.642,
+   "source": null,
+   "candidates": 2
+  },
+  {
+   "id": "GF-W01",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 0.9,
+   "height_m": 0.938,
+   "sill_m": 0.071,
+   "area_m2": 0.8442,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 0.4221,
+   "high_m2": 2.0133,
+   "source": null,
+   "candidates": 21
+  },
+  {
+   "id": "GF-W02",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.5,
+   "height_m": 2.854,
+   "sill_m": 1.249,
+   "area_m2": 4.281,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 2.6805,
+   "high_m2": 5.883,
+   "source": null,
+   "candidates": 2
+  },
+  {
+   "id": "GF-W03",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "height_m": 2.607,
+   "sill_m": 0.369,
+   "area_m2": 2.607,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 0.89,
+   "high_m2": 2.857,
+   "source": null,
+   "candidates": 4
+  },
+  {
+   "id": "GF-W04",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "height_m": 2.607,
+   "sill_m": 0.369,
+   "area_m2": 2.607,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 0.89,
+   "high_m2": 2.857,
+   "source": null,
+   "candidates": 4
+  },
+  {
+   "id": "GF-W05",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 0.9,
+   "height_m": 0.938,
+   "sill_m": 0.071,
+   "area_m2": 0.8442,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 0.4221,
+   "high_m2": 2.0133,
+   "source": null,
+   "candidates": 21
+  },
+  {
+   "id": "GF-W06",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "height_m": 0.729,
+   "sill_m": 1.04,
+   "area_m2": 0.4374,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 0.2814,
+   "high_m2": 1.224,
+   "source": null,
+   "candidates": 4
+  },
+  {
+   "id": "GF-W07",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "height_m": 0.729,
+   "sill_m": 1.04,
+   "area_m2": 0.4374,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 0.2814,
+   "high_m2": 1.224,
+   "source": null,
+   "candidates": 4
+  },
+  {
+   "id": "GF-W08",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "height_m": 0.729,
+   "sill_m": 1.04,
+   "area_m2": 0.4374,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 0.2814,
+   "high_m2": 1.224,
+   "source": null,
+   "candidates": 4
+  },
+  {
+   "id": "GF-W09",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 6.332,
+   "height_m": 3.65,
+   "sill_m": null,
+   "area_m2": 23.1118,
+   "technical": "RASTER_DERIVED",
+   "commercial": null,
+   "confidence": "H",
+   "state": "PRINTED",
+   "low_m2": 23.1118,
+   "high_m2": 23.1118,
+   "source": "OWNER FACT V3a (salon glazing 6.33 x 3.65)",
+   "candidates": 0
+  },
+  {
+   "id": "GF-W10",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.2,
+   "height_m": 2.338,
+   "sill_m": 0.729,
+   "area_m2": 2.8056,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 0.6996,
+   "high_m2": 5.3244,
+   "source": null,
+   "candidates": 8
+  },
+  {
+   "id": "GF-W11",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "height_m": 2.607,
+   "sill_m": 0.369,
+   "area_m2": 2.607,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 0.89,
+   "high_m2": 2.857,
+   "source": null,
+   "candidates": 4
+  },
+  {
+   "id": "GF-W12",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.5,
+   "height_m": 2.854,
+   "sill_m": 1.249,
+   "area_m2": 4.281,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 2.6805,
+   "high_m2": 5.883,
+   "source": null,
+   "candidates": 2
+  },
+  {
+   "id": "GF-W13",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "height_m": 2.607,
+   "sill_m": 0.369,
+   "area_m2": 2.607,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 0.89,
+   "high_m2": 2.857,
+   "source": null,
+   "candidates": 4
+  },
+  {
+   "id": "GF-W14",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "height_m": 2.607,
+   "sill_m": 0.369,
+   "area_m2": 2.607,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 0.89,
+   "high_m2": 2.857,
+   "source": null,
+   "candidates": 4
+  },
+  {
+   "id": "GF-W15",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.955,
+   "height_m": 2.063,
+   "sill_m": null,
+   "area_m2": 4.0332,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "NO_WIDTH_MATCH",
+   "low_m2": 0.9169,
+   "high_m2": 9.4427,
+   "source": null,
+   "candidates": 0
+  },
+  {
+   "id": "GF-W16",
+   "floor": "GF",
+   "kind": "WINDOW",
+   "width_m": 1.955,
+   "height_m": 2.063,
+   "sill_m": null,
+   "area_m2": 4.0332,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "NO_WIDTH_MATCH",
+   "low_m2": 0.9169,
+   "high_m2": 9.4427,
+   "source": null,
+   "candidates": 0
+  },
+  {
+   "id": "1F-D-I3054",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "height_m": 2.117,
+   "sill_m": 0.0,
+   "area_m2": 1.6936,
+   "technical": "RASTER_DERIVED",
+   "commercial": null,
+   "confidence": "M",
+   "state": "RASTER_TYPE_MATCH",
+   "low_m2": 1.6936,
+   "high_m2": 1.6984,
+   "source": null,
+   "candidates": 3
+  },
+  {
+   "id": "1F-D-I3055",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 0.9,
+   "height_m": 2.123,
+   "sill_m": 0.0,
+   "area_m2": 1.9107,
+   "technical": "BLOCKED",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "confidence": "M",
+   "state": "RASTER_TYPE_MATCH_SINGLE",
+   "low_m2": 1.9107,
+   "high_m2": 1.9107,
+   "source": null,
+   "candidates": 1
+  },
+  {
+   "id": "1F-D-I3090",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "height_m": 2.117,
+   "sill_m": 0.0,
+   "area_m2": 1.6936,
+   "technical": "RASTER_DERIVED",
+   "commercial": null,
+   "confidence": "M",
+   "state": "RASTER_TYPE_MATCH",
+   "low_m2": 1.6936,
+   "high_m2": 1.6984,
+   "source": null,
+   "candidates": 3
+  },
+  {
+   "id": "1F-D-I3096",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 0.9,
+   "height_m": 2.123,
+   "sill_m": 0.0,
+   "area_m2": 1.9107,
+   "technical": "BLOCKED",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "confidence": "M",
+   "state": "RASTER_TYPE_MATCH_SINGLE",
+   "low_m2": 1.9107,
+   "high_m2": 1.9107,
+   "source": null,
+   "candidates": 1
+  },
+  {
+   "id": "1F-D-I3098",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 0.9,
+   "height_m": 2.123,
+   "sill_m": 0.0,
+   "area_m2": 1.9107,
+   "technical": "BLOCKED",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "confidence": "M",
+   "state": "RASTER_TYPE_MATCH_SINGLE",
+   "low_m2": 1.9107,
+   "high_m2": 1.9107,
+   "source": null,
+   "candidates": 1
+  },
+  {
+   "id": "1F-D-I3115",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "height_m": 2.117,
+   "sill_m": 0.0,
+   "area_m2": 1.6936,
+   "technical": "RASTER_DERIVED",
+   "commercial": null,
+   "confidence": "M",
+   "state": "RASTER_TYPE_MATCH",
+   "low_m2": 1.6936,
+   "high_m2": 1.6984,
+   "source": null,
+   "candidates": 3
+  },
+  {
+   "id": "1F-D-I3118",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "height_m": 2.117,
+   "sill_m": 0.0,
+   "area_m2": 1.6936,
+   "technical": "RASTER_DERIVED",
+   "commercial": null,
+   "confidence": "M",
+   "state": "RASTER_TYPE_MATCH",
+   "low_m2": 1.6936,
+   "high_m2": 1.6984,
+   "source": null,
+   "candidates": 3
+  },
+  {
+   "id": "1F-D-I3121",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "height_m": 2.117,
+   "sill_m": 0.0,
+   "area_m2": 2.117,
+   "technical": "BLOCKED",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "confidence": "M",
+   "state": "RASTER_TYPE_MATCH_SINGLE",
+   "low_m2": 2.117,
+   "high_m2": 2.117,
+   "source": null,
+   "candidates": 1
+  },
+  {
+   "id": "1F-D-I3122",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "height_m": 2.117,
+   "sill_m": 0.0,
+   "area_m2": 2.117,
+   "technical": "BLOCKED",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "confidence": "M",
+   "state": "RASTER_TYPE_MATCH_SINGLE",
+   "low_m2": 2.117,
+   "high_m2": 2.117,
+   "source": null,
+   "candidates": 1
+  },
+  {
+   "id": "1F-D-I4532",
+   "floor": "1F",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "height_m": 2.117,
+   "sill_m": 0.0,
+   "area_m2": 1.6936,
+   "technical": "RASTER_DERIVED",
+   "commercial": null,
+   "confidence": "M",
+   "state": "RASTER_TYPE_MATCH",
+   "low_m2": 1.6936,
+   "high_m2": 1.6984,
+   "source": null,
+   "candidates": 3
+  },
+  {
+   "id": "1F-W01",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "height_m": 2.097,
+   "sill_m": 0.113,
+   "area_m2": 1.2582,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 1.2582,
+   "high_m2": 2.634,
+   "source": null,
+   "candidates": 5
+  },
+  {
+   "id": "1F-W02",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 1.552,
+   "height_m": 2.097,
+   "sill_m": null,
+   "area_m2": 3.2545,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "NO_WIDTH_MATCH",
+   "low_m2": 0.8334,
+   "high_m2": 6.8133,
+   "source": null,
+   "candidates": 0
+  },
+  {
+   "id": "1F-W03",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "height_m": 1.35,
+   "sill_m": 0.0,
+   "area_m2": 1.35,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 0.583,
+   "high_m2": 2.117,
+   "source": null,
+   "candidates": 2
+  },
+  {
+   "id": "1F-W04",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "height_m": 1.35,
+   "sill_m": 0.0,
+   "area_m2": 1.35,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 0.583,
+   "high_m2": 2.117,
+   "source": null,
+   "candidates": 2
+  },
+  {
+   "id": "1F-W05",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "height_m": 1.35,
+   "sill_m": 0.0,
+   "area_m2": 1.35,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 0.583,
+   "high_m2": 2.117,
+   "source": null,
+   "candidates": 2
+  },
+  {
+   "id": "1F-W06",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "height_m": 2.097,
+   "sill_m": 0.113,
+   "area_m2": 1.2582,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 1.2582,
+   "high_m2": 2.634,
+   "source": null,
+   "candidates": 5
+  },
+  {
+   "id": "1F-W07",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "height_m": 2.097,
+   "sill_m": 0.113,
+   "area_m2": 1.2582,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "RASTER_AMBIGUOUS",
+   "low_m2": 1.2582,
+   "high_m2": 2.634,
+   "source": null,
+   "candidates": 5
+  },
+  {
+   "id": "1F-W08",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 1.552,
+   "height_m": 2.097,
+   "sill_m": null,
+   "area_m2": 3.2545,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "NO_WIDTH_MATCH",
+   "low_m2": 0.8334,
+   "high_m2": 6.8133,
+   "source": null,
+   "candidates": 0
+  },
+  {
+   "id": "1F-W09",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 1.552,
+   "height_m": 2.097,
+   "sill_m": null,
+   "area_m2": 3.2545,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "NO_WIDTH_MATCH",
+   "low_m2": 0.8334,
+   "high_m2": 6.8133,
+   "source": null,
+   "candidates": 0
+  },
+  {
+   "id": "1F-W10",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 0.5,
+   "height_m": 0.713,
+   "sill_m": 1.687,
+   "area_m2": 0.3565,
+   "technical": "RASTER_DERIVED",
+   "commercial": null,
+   "confidence": "M",
+   "state": "RASTER_TYPE_MATCH",
+   "low_m2": 0.3135,
+   "high_m2": 0.358,
+   "source": null,
+   "candidates": 6
+  },
+  {
+   "id": "1F-W11",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 1.2,
+   "height_m": 2.363,
+   "sill_m": 0.715,
+   "area_m2": 2.8356,
+   "technical": "BLOCKED",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "confidence": "M",
+   "state": "RASTER_TYPE_MATCH_SINGLE",
+   "low_m2": 2.8356,
+   "high_m2": 2.8356,
+   "source": null,
+   "candidates": 1
+  },
+  {
+   "id": "1F-W12",
+   "floor": "1F",
+   "kind": "WINDOW",
+   "width_m": 2.45,
+   "height_m": 2.097,
+   "sill_m": null,
+   "area_m2": 5.1377,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "NO_WIDTH_MATCH",
+   "low_m2": 1.3157,
+   "high_m2": 10.7555,
+   "source": null,
+   "candidates": 0
+  },
+  {
+   "id": "2F-D-I4794",
+   "floor": "2F",
+   "kind": "DOOR",
+   "width_m": 1.0,
+   "height_m": 2.123,
+   "sill_m": 0.0,
+   "area_m2": 2.123,
+   "technical": "BLOCKED",
+   "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+   "confidence": "M",
+   "state": "NO_WIDTH_MATCH",
+   "low_m2": 2.123,
+   "high_m2": 2.123,
+   "source": null,
+   "candidates": 0
+  },
+  {
+   "id": "2F-D-I4795",
+   "floor": "2F",
+   "kind": "DOOR",
+   "width_m": 0.8,
+   "height_m": 2.123,
+   "sill_m": 0.0,
+   "area_m2": 1.6984,
+   "technical": "BLOCKED",
+   "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+   "confidence": "M",
+   "state": "NO_WIDTH_MATCH",
+   "low_m2": 1.6984,
+   "high_m2": 1.6984,
+   "source": null,
+   "candidates": 0
+  },
+  {
+   "id": "2F-D-I4802",
+   "floor": "2F",
+   "kind": "DOOR",
+   "width_m": 0.9,
+   "height_m": 2.123,
+   "sill_m": 0.0,
+   "area_m2": 1.9107,
+   "technical": "BLOCKED",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "confidence": "M",
+   "state": "RASTER_TYPE_MATCH_SINGLE",
+   "low_m2": 1.9107,
+   "high_m2": 1.9107,
+   "source": null,
+   "candidates": 1
+  },
+  {
+   "id": "2F-W01",
+   "floor": "2F",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "height_m": 0.589,
+   "sill_m": 1.584,
+   "area_m2": 0.589,
+   "technical": "BLOCKED",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "confidence": "M",
+   "state": "RASTER_TYPE_MATCH_SINGLE",
+   "low_m2": 0.589,
+   "high_m2": 0.589,
+   "source": null,
+   "candidates": 1
+  },
+  {
+   "id": "2F-W02",
+   "floor": "2F",
+   "kind": "WINDOW",
+   "width_m": 1.0,
+   "height_m": 0.589,
+   "sill_m": 1.584,
+   "area_m2": 0.589,
+   "technical": "BLOCKED",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "confidence": "M",
+   "state": "RASTER_TYPE_MATCH_SINGLE",
+   "low_m2": 0.589,
+   "high_m2": 0.589,
+   "source": null,
+   "candidates": 1
+  },
+  {
+   "id": "2F-W03",
+   "floor": "2F",
+   "kind": "WINDOW",
+   "width_m": 0.6,
+   "height_m": 1.439,
+   "sill_m": null,
+   "area_m2": 0.8634,
+   "technical": "BLOCKED",
+   "commercial": "BUDGET_ESTIMATE",
+   "confidence": "L",
+   "state": "NO_WIDTH_MATCH",
+   "low_m2": 0.3534,
+   "high_m2": 2.0982,
+   "source": null,
+   "candidates": 0
+  },
+  {
+   "id": "2F-W04",
+   "floor": "2F",
+   "kind": "WINDOW",
+   "width_m": 1.2,
+   "height_m": 1.433,
+   "sill_m": 1.002,
+   "area_m2": 1.7196,
+   "technical": "BLOCKED",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "confidence": "M",
+   "state": "RASTER_TYPE_MATCH_SINGLE",
+   "low_m2": 1.7196,
+   "high_m2": 1.7196,
+   "source": null,
+   "candidates": 1
+  },
+  {
+   "id": "2F-W05",
+   "floor": "2F",
+   "kind": "WINDOW",
+   "width_m": 1.2,
+   "height_m": 1.433,
+   "sill_m": 1.002,
+   "area_m2": 1.7196,
+   "technical": "BLOCKED",
+   "commercial": "PROVISIONAL_SOURCE_DERIVED",
+   "confidence": "M",
+   "state": "RASTER_TYPE_MATCH_SINGLE",
+   "low_m2": 1.7196,
+   "high_m2": 1.7196,
+   "source": null,
+   "candidates": 1
+  }
+ ]
+}

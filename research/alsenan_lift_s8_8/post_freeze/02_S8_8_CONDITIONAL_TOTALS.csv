@@ -1,0 +1,7 @@
+COMPONENT,RELEASED_M3,M3_PER_M_HEIGHT,SENSITIVITY,OWNED_ELSEWHERE_M3,NOTE
+LIFT-01-PIT-WALL-S,0,0.36,SENSITIVITY_ONLY: wall from the FF top at the -1.50 minimum founding (-0.95) to +1.00 -> 0.702 m3 (not a quantity: the depth is the manufacturer's),,conditional coefficients and sensitivity are context only; never a quantity
+LIFT-01-PIT-WALL-N,0,0.36,SENSITIVITY_ONLY: wall from the FF top at the -1.50 minimum founding (-0.95) to +1.00 -> 0.702 m3 (not a quantity: the depth is the manufacturer's),,conditional coefficients and sensitivity are context only; never a quantity
+LIFT-01-PIT-WALL-W,0,0.24,SENSITIVITY_ONLY: wall from the FF top at the -1.50 minimum founding (-0.95) to +1.00 -> 0.468 m3 (not a quantity: the depth is the manufacturer's),,conditional coefficients and sensitivity are context only; never a quantity
+LIFT-01-PIT-WALL-E,0,0.14,SENSITIVITY_ONLY: wall from the FF top at the -1.50 minimum founding (-0.95) to +1.00 -> 0.273 m3 (not a quantity: the depth is the manufacturer's),,conditional coefficients and sensitivity are context only; never a quantity
+LIFT-01-PIT-WALLS (all),0,1.1,SENSITIVITY_ONLY: 2.145 m3 on the reading above (never released),,conditional coefficients and sensitivity are context only; never a quantity
+LIFT-01-FTG (FF),0,,,11.385,computed for the record; the footing family owns it; never a quantity of S8.8

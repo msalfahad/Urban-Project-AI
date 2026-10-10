@@ -1,0 +1,124 @@
+{
+ "SCHEMA": "URBAN_R8_8_TOPOLOGY_CROSSCHECK_V1",
+ "check": "TOPOLOGY_CROSSCHECK_GEOS_V1",
+ "role": "independent QA of TS01 (GEOS node + polygonize on straight admitted items); never an authority",
+ "runs": {
+  "OLD_K1": {
+   "check": "TOPOLOGY_CROSSCHECK_GEOS_V1",
+   "grid_cell": 0.0001047180170717649,
+   "grid_phases": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     0.5,
+     0.5
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     0.0,
+     0.5
+    ]
+   ],
+   "containment_tolerance": 0.0002094360341435298,
+   "unclaimed_geos_faces": [],
+   "geos": {
+    "shapely": "2.1.2",
+    "geos": "3.13.1"
+   },
+   "geos_faces_phase0": 75,
+   "counts": {
+    "AGREES": 75,
+    "DISAGREES": 0,
+    "NOT_APPLICABLE_CURVE": 0
+   },
+   "agreed_in_phase": {
+    "0": 75
+   },
+   "state": "AGREES",
+   "disagreements": {}
+  },
+  "OLD_K2": {
+   "check": "TOPOLOGY_CROSSCHECK_GEOS_V1",
+   "grid_cell": 0.00010471801707176491,
+   "grid_phases": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     0.5,
+     0.5
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     0.0,
+     0.5
+    ]
+   ],
+   "containment_tolerance": 0.00020943603414352982,
+   "unclaimed_geos_faces": [],
+   "geos": {
+    "shapely": "2.1.2",
+    "geos": "3.13.1"
+   },
+   "geos_faces_phase0": 75,
+   "counts": {
+    "AGREES": 75,
+    "DISAGREES": 0,
+    "NOT_APPLICABLE_CURVE": 0
+   },
+   "agreed_in_phase": {
+    "0": 75
+   },
+   "state": "AGREES",
+   "disagreements": {}
+  },
+  "NEW_K2": {
+   "check": "TOPOLOGY_CROSSCHECK_GEOS_V1",
+   "grid_cell": 0.00010471801707176491,
+   "grid_phases": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     0.5,
+     0.5
+    ],
+    [
+     0.5,
+     0.0
+    ],
+    [
+     0.0,
+     0.5
+    ]
+   ],
+   "containment_tolerance": 0.00020943603414352982,
+   "unclaimed_geos_faces": [],
+   "geos": {
+    "shapely": "2.1.2",
+    "geos": "3.13.1"
+   },
+   "geos_faces_phase0": 67,
+   "counts": {
+    "AGREES": 67,
+    "DISAGREES": 0,
+    "NOT_APPLICABLE_CURVE": 0
+   },
+   "agreed_in_phase": {
+    "0": 67
+   },
+   "state": "AGREES",
+   "disagreements": {}
+  }
+ }
+}

@@ -1,0 +1,88 @@
+{
+ "SCHEMA": "URBAN_R8_9_ENGINEERING_ACTION_REGISTER_V2",
+ "rule": "work Urban does itself",
+ "actions": [
+  {
+   "action_id": "ESTABLISH_NEW_DWG_SOURCE_IDENTITY",
+   "from": "R8.7 owner register",
+   "status": "OPEN",
+   "what": "compare DWG e4babbc2 with DXF df0e1d69 with a pinned decoder that reads AutoCAD 2018 (AC1032) object sections; re-anchor only on SAME_EXACT_SOURCE_REVISION",
+   "state_now": "SOURCE_IDENTITY = NOT_ESTABLISHED (not forced)",
+   "critical_path_for_topology": false
+  },
+  {
+   "action_id": "OBTAIN_PINNED_AC1032_DECODER",
+   "from": "R8.7 owner register (ALLOW_DECODER_INSTALL_IN_ENVIRONMENT)",
+   "status": "OPEN",
+   "what": "environment / tooling: a newer LibreDWG build or the ODA File Converter, pinned by hash; the cloud network policy currently denies github.com and ftp.gnu.org",
+   "owner_action": false,
+   "unpinned_download": "never"
+  },
+  {
+   "action_id": "ANCHOR_SELECTED_PLAN_TO_EXACT_NEW_DWG",
+   "from": "R8.7 owner register",
+   "status": "BLOCKED_BY_ESTABLISH_NEW_DWG_SOURCE_IDENTITY",
+   "what": "re-anchor the four new-revision owner claims (supersede, keep history)"
+  },
+  {
+   "action_id": "ROLE_EVIDENCE_FOR_UNKNOWN_GEOMETRY",
+   "status": "PARTLY_DONE_R8_9 (role authority, consequence check, source-scoped claims; FIRNTUR / SF3 remain candidates)",
+   "what": "unknown-role geometry blocks Qortuba rooms: 0 (6 parts), FIRNTUR (10 parts), MY BLOCKS$0$PM (81 parts), RCC (4 parts)",
+   "options": [
+    "a reviewed, revision-scoped role claim (needs an authority path; NOT requested from the owner in R8.8)",
+    "structural evidence rules that do not use the layer name alone"
+   ],
+   "never": "fuzzy layer-name matching ('FIRNTUR' ~ 'FURNITURE') or a project-specific lexicon entry"
+  },
+  {
+   "action_id": "SEMANTIC_SUBDIVISION_OF_CONNECTED_SPACES",
+   "status": "DONE_R8_9 (semantic_zones; subdivision only from authored evidence)",
+   "what": "physically connected spaces with two room stamps (old: M.B.ROOM + DRESS; new: HALL + BED.ROOM + BATH) are REVIEW_REQUIRED; a subdivision needs source evidence (a drawn threshold, a finish boundary) - never wet-wins / first / largest / alphabetical"
+  },
+  {
+   "action_id": "TS01_SECOND_DRAWING_FAMILY_SHADOW",
+   "status": "DONE_R8_9 (P7757_R8_9_SHADOW)",
+   "what": "run TS01 shadow on P7757 to test the door / glazing closure rules on a second drafting style (no change to its published outputs)"
+  },
+  {
+   "action_id": "ADMIT_BLOCK_HOSTED_BUILDING_GEOMETRY",
+   "status": "DONE_R8_9 (building-assembly occurrence contexts, GR-17)",
+   "what": "an evidence rule for walls inside an insert occurrence whose block definition is a building assembly (F-R88-18); until then such plans fail closed"
+  },
+  {
+   "action_id": "RETIRE_QS01_FOR_ROUND1_ROWS",
+   "status": "NOT_NOW",
+   "what": "QS01 stays research/legacy; no migration while TS01 rows are blocked"
+  },
+  {
+   "action_id": "DERIVE_DOOR_REACH_FROM_SYMBOL_GEOMETRY",
+   "status": "PROPOSED",
+   "what": "replace the fixed 0.25 x radius reach by the door symbol's own frame / jamb geometry; Qortuba doors need 1/15 of the radius and no rejected hypothesis closes within a radius"
+  },
+  {
+   "action_id": "P7757_SOURCE_SCOPED_ROLE_EVIDENCE",
+   "status": "PROPOSED",
+   "what": "P7757 layers W / D / TOI / ST / 5 / 1: source-scoped role evidence (network connectivity, paired faces, door signatures inside the D### door blocks) leading to reviewed claims for that source only"
+  },
+  {
+   "action_id": "P7757_INPUT_COMPLETENESS",
+   "status": "OPEN",
+   "what": "P7757 canonical input misses 6 part layers and 181 text values (METHOD_INPUT_INCOMPLETE even with a unit): decode-level investigation"
+  },
+  {
+   "action_id": "WALL_CORE_OBSTACLE_INTERIOR",
+   "status": "PROPOSED",
+   "what": "identify the two faces of one wall as one obstacle (source object / paired-face evidence) so its core can be OBSTACLE_INTERIOR; columns are done"
+  },
+  {
+   "action_id": "PLACEMENT_EVIDENCE_IN_THE_KERNELS",
+   "status": "PROPOSED",
+   "what": "move ACIS / spline placement evidence from the lab into the kernels as a recorded capability"
+  },
+  {
+   "action_id": "OBTAIN_QORTUBA_XREF_FILES",
+   "status": "ALTERNATIVE_TO_OWNER_REVIEW",
+   "what": "if the project folder (..\\Autocad blocks\\) is ever available, read the two xrefs instead of asking"
+  }
+ ]
+}

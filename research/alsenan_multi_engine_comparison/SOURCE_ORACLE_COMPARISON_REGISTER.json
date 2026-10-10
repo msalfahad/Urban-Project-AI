@@ -1,0 +1,610 @@
+{
+ "fields": [
+  "comparison_id",
+  "element_id",
+  "fact_type",
+  "urban_value",
+  "urban_source_refs",
+  "urban_status",
+  "oracle_name",
+  "oracle_value",
+  "oracle_refs",
+  "oracle_status",
+  "difference",
+  "difference_percent",
+  "basis_match",
+  "result",
+  "note"
+ ],
+ "register": "SOURCE_ORACLE_COMPARISON_REGISTER",
+ "rows": [
+  {
+   "basis_match": true,
+   "comparison_id": "SOC-a9d531b2d2bb",
+   "difference": 2.23299999999999,
+   "difference_percent": 3.4703011842227798,
+   "element_id": "ALSENAN",
+   "fact_type": "FOOTINGS_CONCRETE_M3",
+   "note": null,
+   "oracle_name": "UC4N",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (U-C4N blind AutoCAD MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 66.579,
+   "result": "CLOSE",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "LOWER_BOUND (blocked components: URBAN:C-FTG-FF10)",
+   "urban_value": 64.346
+  },
+  {
+   "basis_match": true,
+   "comparison_id": "SOC-55184a9c1caa",
+   "difference": 2.73,
+   "difference_percent": 80.48349056603774,
+   "element_id": "ALSENAN",
+   "fact_type": "STRAP_BEAMS_CONCRETE_M3",
+   "note": null,
+   "oracle_name": "UC4N",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (U-C4N blind AutoCAD MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 6.122,
+   "result": "CONFLICT",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "VERIFIED",
+   "urban_value": 3.392
+  },
+  {
+   "basis_match": true,
+   "comparison_id": "SOC-d964a9982508",
+   "difference": 24.760000000000005,
+   "difference_percent": 220.1867496665185,
+   "element_id": "ALSENAN",
+   "fact_type": "GROUND_BEAMS_CONCRETE_M3",
+   "note": null,
+   "oracle_name": "UC4N",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (U-C4N blind AutoCAD MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 36.005,
+   "result": "CONFLICT",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "LOWER_BOUND (blocked components: URBAN:C-GB-EXT)",
+   "urban_value": 11.245
+  },
+  {
+   "basis_match": true,
+   "comparison_id": "SOC-b142502dd608",
+   "difference": 20.644,
+   "difference_percent": 178.9063177051737,
+   "element_id": "ALSENAN",
+   "fact_type": "GROUND_SLAB_CONCRETE_M3",
+   "note": null,
+   "oracle_name": "UC4N",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (U-C4N blind AutoCAD MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 32.183,
+   "result": "CONFLICT",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "LOWER_BOUND",
+   "urban_value": 11.539000000000001
+  },
+  {
+   "basis_match": true,
+   "comparison_id": "SOC-abb90cd32f53",
+   "difference": 13.254000000000005,
+   "difference_percent": 35.26219171522071,
+   "element_id": "ALSENAN",
+   "fact_type": "BEAM_DOWNSTAND_TOTAL_M3",
+   "note": null,
+   "oracle_name": "UC4N",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (U-C4N blind AutoCAD MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 50.841,
+   "result": "CONFLICT",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "LOWER_BOUND",
+   "urban_value": 37.586999999999996
+  },
+  {
+   "basis_match": true,
+   "comparison_id": "SOC-86152b46ea02",
+   "difference": 14.25699999999999,
+   "difference_percent": 17.507859318204133,
+   "element_id": "ALSENAN",
+   "fact_type": "SLAB_TOTAL_M3",
+   "note": null,
+   "oracle_name": "UC4N",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (U-C4N blind AutoCAD MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 95.689,
+   "result": "CONFLICT",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "VERIFIED",
+   "urban_value": 81.432
+  },
+  {
+   "basis_match": true,
+   "comparison_id": "SOC-76f1cbeaa9ff",
+   "difference": -4.730392000000052,
+   "difference_percent": -0.7949004328726238,
+   "element_id": "ALSENAN",
+   "fact_type": "BUILT_UP_GROSS_M2",
+   "note": null,
+   "oracle_name": "UC4N",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (U-C4N blind AutoCAD MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 590.362,
+   "result": "MATCH",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "VERIFIED",
+   "urban_value": 595.092392
+  },
+  {
+   "basis_match": true,
+   "comparison_id": "SOC-660e2f6b028e",
+   "difference": 14.636762000000033,
+   "difference_percent": 5.288072248214548,
+   "element_id": "ALSENAN",
+   "fact_type": "NET_SLAB_AREA_GF_M2",
+   "note": null,
+   "oracle_name": "UC4N",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (U-C4N blind AutoCAD MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 291.425,
+   "result": "CONFLICT",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "VERIFIED",
+   "urban_value": 276.788238
+  },
+  {
+   "basis_match": false,
+   "comparison_id": "SOC-349e192c6261",
+   "difference": null,
+   "difference_percent": null,
+   "element_id": "ALSENAN",
+   "fact_type": "COLUMNS_GF_M3",
+   "note": "measurement basis differs",
+   "oracle_name": "UC4N",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (U-C4N blind AutoCAD MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 26.235,
+   "result": "NOT_COMPARABLE",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "LOWER_BOUND (blocked components: URBAN:C-COL-GF-RES)",
+   "urban_value": 13.42
+  },
+  {
+   "basis_match": true,
+   "comparison_id": "SOC-ea5874b68112",
+   "difference": 1.483573000000007,
+   "difference_percent": 0.8739679107380975,
+   "element_id": "ALSENAN",
+   "fact_type": "NET_SLAB_AREA_1F_M2",
+   "note": null,
+   "oracle_name": "UC4N",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (U-C4N blind AutoCAD MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 171.235,
+   "result": "MATCH",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "VERIFIED",
+   "urban_value": 169.751427
+  },
+  {
+   "basis_match": false,
+   "comparison_id": "SOC-1f32f0c97e02",
+   "difference": null,
+   "difference_percent": null,
+   "element_id": "ALSENAN",
+   "fact_type": "COLUMNS_1F_M3",
+   "note": "measurement basis differs",
+   "oracle_name": "UC4N",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (U-C4N blind AutoCAD MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 8.888,
+   "result": "NOT_COMPARABLE",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "LOWER_BOUND (blocked components: URBAN:C-COL-1F-RES)",
+   "urban_value": 6.755
+  },
+  {
+   "basis_match": true,
+   "comparison_id": "SOC-7117b58796bd",
+   "difference": 0.1116090000000014,
+   "difference_percent": 0.20117562529886887,
+   "element_id": "ALSENAN",
+   "fact_type": "NET_SLAB_AREA_2F_M2",
+   "note": null,
+   "oracle_name": "UC4N",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (U-C4N blind AutoCAD MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 55.59,
+   "result": "MATCH",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "VERIFIED",
+   "urban_value": 55.478391
+  },
+  {
+   "basis_match": false,
+   "comparison_id": "SOC-608b91ce129a",
+   "difference": null,
+   "difference_percent": null,
+   "element_id": "ALSENAN",
+   "fact_type": "COLUMNS_2F_M3",
+   "note": "measurement basis differs",
+   "oracle_name": "UC4N",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (U-C4N blind AutoCAD MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 3.797,
+   "result": "NOT_COMPARABLE",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "LOWER_BOUND (blocked components: URBAN:C-COL-2F-RES)",
+   "urban_value": 2.962
+  },
+  {
+   "basis_match": false,
+   "comparison_id": "SOC-27d368e27052",
+   "difference": null,
+   "difference_percent": null,
+   "element_id": "ALSENAN",
+   "fact_type": "NET_REBAR_T",
+   "note": "oracle incomplete or unavailable - not a value",
+   "oracle_name": "UC4N",
+   "oracle_refs": [],
+   "oracle_status": "INCOMPLETE",
+   "oracle_value": null,
+   "result": "ORACLE_UNAVAILABLE",
+   "urban_source_refs": [],
+   "urban_status": "BBS_INCOMPLETE",
+   "urban_value": null
+  },
+  {
+   "basis_match": true,
+   "comparison_id": "SOC-938cbe545620",
+   "difference": 1.3229999999999933,
+   "difference_percent": 2.056071861498762,
+   "element_id": "ALSENAN",
+   "fact_type": "FOOTINGS_CONCRETE_M3",
+   "note": null,
+   "oracle_name": "CHRISTIANNP",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (christiannp blind MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 65.669,
+   "result": "CLOSE",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "LOWER_BOUND (blocked components: URBAN:C-FTG-FF10)",
+   "urban_value": 64.346
+  },
+  {
+   "basis_match": true,
+   "comparison_id": "SOC-07b2b08cdc34",
+   "difference": 2.661,
+   "difference_percent": 78.44929245283019,
+   "element_id": "ALSENAN",
+   "fact_type": "STRAP_BEAMS_CONCRETE_M3",
+   "note": null,
+   "oracle_name": "CHRISTIANNP",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (christiannp blind MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 6.053,
+   "result": "CONFLICT",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "VERIFIED",
+   "urban_value": 3.392
+  },
+  {
+   "basis_match": true,
+   "comparison_id": "SOC-a60a936f0eb6",
+   "difference": 24.761000000000003,
+   "difference_percent": 220.1956425077813,
+   "element_id": "ALSENAN",
+   "fact_type": "GROUND_BEAMS_CONCRETE_M3",
+   "note": null,
+   "oracle_name": "CHRISTIANNP",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (christiannp blind MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 36.006,
+   "result": "CONFLICT",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "LOWER_BOUND (blocked components: URBAN:C-GB-EXT)",
+   "urban_value": 11.245
+  },
+  {
+   "basis_match": true,
+   "comparison_id": "SOC-d2305b75c06a",
+   "difference": 20.865000000000002,
+   "difference_percent": 180.8215616604558,
+   "element_id": "ALSENAN",
+   "fact_type": "GROUND_SLAB_CONCRETE_M3",
+   "note": null,
+   "oracle_name": "CHRISTIANNP",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (christiannp blind MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 32.404,
+   "result": "CONFLICT",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "LOWER_BOUND",
+   "urban_value": 11.539000000000001
+  },
+  {
+   "basis_match": true,
+   "comparison_id": "SOC-ac1a662bcd08",
+   "difference": 9.004000000000005,
+   "difference_percent": 23.95509085588104,
+   "element_id": "ALSENAN",
+   "fact_type": "BEAM_DOWNSTAND_TOTAL_M3",
+   "note": null,
+   "oracle_name": "CHRISTIANNP",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (christiannp blind MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 46.591,
+   "result": "CONFLICT",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "LOWER_BOUND",
+   "urban_value": 37.586999999999996
+  },
+  {
+   "basis_match": true,
+   "comparison_id": "SOC-7ab7292b8bf6",
+   "difference": 15.320999999999998,
+   "difference_percent": 18.81447096964338,
+   "element_id": "ALSENAN",
+   "fact_type": "SLAB_TOTAL_M3",
+   "note": null,
+   "oracle_name": "CHRISTIANNP",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (christiannp blind MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 96.753,
+   "result": "CONFLICT",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "VERIFIED",
+   "urban_value": 81.432
+  },
+  {
+   "basis_match": true,
+   "comparison_id": "SOC-c21fe3d60a2f",
+   "difference": 3.615607999999952,
+   "difference_percent": 0.6075708660714909,
+   "element_id": "ALSENAN",
+   "fact_type": "BUILT_UP_GROSS_M2",
+   "note": null,
+   "oracle_name": "CHRISTIANNP",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (christiannp blind MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 598.708,
+   "result": "MATCH",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "VERIFIED",
+   "urban_value": 595.092392
+  },
+  {
+   "basis_match": true,
+   "comparison_id": "SOC-509cb629722c",
+   "difference": 13.766762000000028,
+   "difference_percent": 4.973752533516265,
+   "element_id": "ALSENAN",
+   "fact_type": "NET_SLAB_AREA_GF_M2",
+   "note": null,
+   "oracle_name": "CHRISTIANNP",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (christiannp blind MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 290.555,
+   "result": "CLOSE",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "VERIFIED",
+   "urban_value": 276.788238
+  },
+  {
+   "basis_match": false,
+   "comparison_id": "SOC-4c6506065651",
+   "difference": null,
+   "difference_percent": null,
+   "element_id": "ALSENAN",
+   "fact_type": "COLUMNS_GF_M3",
+   "note": "measurement basis differs",
+   "oracle_name": "CHRISTIANNP",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (christiannp blind MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 26.235,
+   "result": "NOT_COMPARABLE",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "LOWER_BOUND (blocked components: URBAN:C-COL-GF-RES)",
+   "urban_value": 13.42
+  },
+  {
+   "basis_match": true,
+   "comparison_id": "SOC-b7ba8ce8d743",
+   "difference": 9.573572999999982,
+   "difference_percent": 5.639759953240323,
+   "element_id": "ALSENAN",
+   "fact_type": "NET_SLAB_AREA_1F_M2",
+   "note": null,
+   "oracle_name": "CHRISTIANNP",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (christiannp blind MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 179.325,
+   "result": "CONFLICT",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "VERIFIED",
+   "urban_value": 169.751427
+  },
+  {
+   "basis_match": false,
+   "comparison_id": "SOC-2ae509dc3bce",
+   "difference": null,
+   "difference_percent": null,
+   "element_id": "ALSENAN",
+   "fact_type": "COLUMNS_1F_M3",
+   "note": "measurement basis differs",
+   "oracle_name": "CHRISTIANNP",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (christiannp blind MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 8.888,
+   "result": "NOT_COMPARABLE",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "LOWER_BOUND (blocked components: URBAN:C-COL-1F-RES)",
+   "urban_value": 6.755
+  },
+  {
+   "basis_match": true,
+   "comparison_id": "SOC-5c78a8c87d14",
+   "difference": -0.20339100000000343,
+   "difference_percent": -0.3666130115417432,
+   "element_id": "ALSENAN",
+   "fact_type": "NET_SLAB_AREA_2F_M2",
+   "note": null,
+   "oracle_name": "CHRISTIANNP",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (christiannp blind MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 55.275,
+   "result": "MATCH",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "VERIFIED",
+   "urban_value": 55.478391
+  },
+  {
+   "basis_match": false,
+   "comparison_id": "SOC-e0718a601959",
+   "difference": null,
+   "difference_percent": null,
+   "element_id": "ALSENAN",
+   "fact_type": "COLUMNS_2F_M3",
+   "note": "measurement basis differs",
+   "oracle_name": "CHRISTIANNP",
+   "oracle_refs": [
+    "owner brief S3.1 §16 (christiannp blind MCP run)"
+   ],
+   "oracle_status": "OK",
+   "oracle_value": 3.377,
+   "result": "NOT_COMPARABLE",
+   "urban_source_refs": [
+    "V3b BOQ lines / B2A1 slab register"
+   ],
+   "urban_status": "LOWER_BOUND (blocked components: URBAN:C-COL-2F-RES)",
+   "urban_value": 2.962
+  },
+  {
+   "basis_match": false,
+   "comparison_id": "SOC-992163966c7d",
+   "difference": null,
+   "difference_percent": null,
+   "element_id": "ALSENAN",
+   "fact_type": "NET_REBAR_T",
+   "note": "oracle incomplete or unavailable - not a value",
+   "oracle_name": "CHRISTIANNP",
+   "oracle_refs": [],
+   "oracle_status": "INCOMPLETE",
+   "oracle_value": null,
+   "result": "ORACLE_UNAVAILABLE",
+   "urban_source_refs": [],
+   "urban_status": "BBS_INCOMPLETE",
+   "urban_value": null
+  }
+ ],
+ "rule": "no oracle value changes an Urban value; rows are review evidence only",
+ "summary": {
+  "CLOSE": 3,
+  "CONFLICT": 12,
+  "MATCH": 5,
+  "NOT_COMPARABLE": 6,
+  "ORACLE_UNAVAILABLE": 2
+ }
+}

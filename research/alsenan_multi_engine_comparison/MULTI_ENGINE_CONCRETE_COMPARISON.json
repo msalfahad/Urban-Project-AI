@@ -1,0 +1,1341 @@
+{
+ "frame_groups": [
+  {
+   "categories": [
+    "COLUMNS_GF",
+    "BEAMS_GF",
+    "SLABS_GF"
+   ],
+   "group_id": "FRAME_GF",
+   "plus_urban": [
+    "JOINTS_GF"
+   ],
+   "why": "beam gross vs downstand and slab net vs full depth reallocate the same concrete within a floor"
+  },
+  {
+   "categories": [
+    "COLUMNS_1F",
+    "BEAMS_1F",
+    "SLABS_1F"
+   ],
+   "group_id": "FRAME_1F",
+   "plus_urban": [
+    "JOINTS_1F"
+   ],
+   "why": "same"
+  },
+  {
+   "categories": [
+    "COLUMNS_2F",
+    "BEAMS_2F",
+    "SLABS_2F"
+   ],
+   "group_id": "FRAME_2F",
+   "plus_urban": [
+    "JOINTS_2F"
+   ],
+   "why": "same"
+  },
+  {
+   "categories": [
+    "STRAP_BEAMS",
+    "GROUND_BEAMS",
+    "GROUND_SLAB"
+   ],
+   "group_id": "GROUND_ZONE",
+   "why": "straps / perimeter beam / ground beams / ground slab are split differently across the QS categories"
+  }
+ ],
+ "rows": [
+  {
+   "CHRISTIANNP": 65.669,
+   "FREELANCER_QS": 65.634,
+   "UC4N": 66.579,
+   "URBAN": 64.346,
+   "URBAN_STATUS": "LOWER_BOUND (blocked components: URBAN:C-FTG-FF10)",
+   "category": "FOUNDATIONS",
+   "likely_cause": "Urban is a lower bound: F/F10 conflict outline and one more footing blocked; freelancer resolves F/F10 (F x4 + F10 x1)",
+   "measurement_basis": "PAD_LxWxH_SCHEDULE",
+   "normalized": {},
+   "review_required": true,
+   "section": "C",
+   "source_references": [
+    "V3b C-FTG",
+    "freelancer القواعد!I13:I28"
+   ],
+   "subcategory": "isolated / combined footings",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": -1.323,
+     "difference_percent": -2.015,
+     "status": "DIRECTLY_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": -1.288,
+     "difference_percent": -1.962,
+     "status": "DIRECTLY_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": -2.233,
+     "difference_percent": -3.354,
+     "status": "DIRECTLY_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": 6.053,
+   "FREELANCER_QS": 3.392,
+   "UC4N": 6.122,
+   "URBAN": 3.392,
+   "URBAN_STATUS": "VERIFIED",
+   "category": "STRAP_BEAMS",
+   "likely_cause": "Urban = freelancer; both oracles ~1.8x - likely strap length basis (oracle may measure into the footings) or extra strap population - verify with the oracle handles",
+   "measurement_basis": "STRAP_BAND",
+   "normalized": {},
+   "review_required": true,
+   "section": "D",
+   "source_references": [
+    "V3b C-STR",
+    "freelancer STB1-3"
+   ],
+   "subcategory": "foundation straps",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": -2.661,
+     "difference_percent": -43.962,
+     "status": "DIRECTLY_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": -0.0,
+     "difference_percent": -0.015,
+     "status": "DIRECTLY_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": -2.73,
+     "difference_percent": -44.593,
+     "status": "DIRECTLY_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": 36.006,
+   "FREELANCER_QS": 46.584,
+   "UC4N": 36.005,
+   "URBAN": 11.245,
+   "URBAN_STATUS": "LOWER_BOUND (blocked components: URBAN:C-GB-EXT)",
+   "category": "GROUND_BEAMS",
+   "likely_cause": "Urban exterior ground beams BLOCKED (depth 'follow arch'); freelancer 30x60 on all runs incl. a perimeter beam filed under foundations",
+   "measurement_basis": "GB_SPAN_x_SECTION",
+   "normalized": {},
+   "review_required": true,
+   "section": "E",
+   "source_references": [
+    "V3b C-GB-INT / C-GB-EXT",
+    "freelancer الشناجات + الشناج المحيط"
+   ],
+   "subcategory": "interior + exterior (+ perimeter in QS)",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": -24.761,
+     "difference_percent": -68.769,
+     "status": "DIRECTLY_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": -24.76,
+     "difference_percent": -68.768,
+     "status": "DIRECTLY_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": 32.404,
+   "FREELANCER_QS": 29.55,
+   "UC4N": 32.183,
+   "URBAN": 11.539,
+   "URBAN_STATUS": "LOWER_BOUND",
+   "category": "GROUND_SLAB",
+   "likely_cause": "Urban computed only two closed zones (115 m2 gross / T=10); the others take ~295-320 m2 - ground slab extent is the largest real gap (S2 STR-GRO-001)",
+   "measurement_basis": "AREA_x_T",
+   "normalized": {},
+   "review_required": true,
+   "section": "F",
+   "source_references": [
+    "V3b C-GSLAB-ZONE-1/2",
+    "freelancer الشناجات!B11"
+   ],
+   "subcategory": "ground slab",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": -20.865,
+     "difference_percent": -64.39,
+     "status": "DIRECTLY_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": -18.011,
+     "difference_percent": -60.951,
+     "status": "DIRECTLY_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": -20.644,
+     "difference_percent": -64.146,
+     "status": "DIRECTLY_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": 6.15,
+   "FREELANCER_QS": 8.805,
+   "UC4N": 6.15,
+   "URBAN": null,
+   "URBAN_STATUS": "LOWER_BOUND (blocked components: URBAN:C-NECK)",
+   "category": "COLUMNS_NECKS",
+   "likely_cause": "freelancer: section x clear height below beams (3.75 / 3.45), necks 1.5 m assumed; Urban: clear height, joint separate, some occurrences blocked; oracle height basis not declared - not comparable",
+   "measurement_basis": "COLUMN volume (height basis differs per engine)",
+   "normalized": {},
+   "review_required": true,
+   "section": "G",
+   "source_references": [
+    "V3b C-NECK",
+    "freelancer 'الحوائط + الأعمدة'"
+   ],
+   "subcategory": "FOUNDATION",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": 26.235,
+   "FREELANCER_QS": 17.438,
+   "UC4N": 26.235,
+   "URBAN": 13.42,
+   "URBAN_STATUS": "LOWER_BOUND (blocked components: URBAN:C-COL-GF-RES)",
+   "category": "COLUMNS_NECKS",
+   "likely_cause": "freelancer: section x clear height below beams (3.75 / 3.45), necks 1.5 m assumed; Urban: clear height, joint separate, some occurrences blocked; oracle height basis not declared - not comparable",
+   "measurement_basis": "COLUMN volume (height basis differs per engine)",
+   "normalized": {},
+   "review_required": true,
+   "section": "G",
+   "source_references": [
+    "V3b C-COL-GF",
+    "freelancer 'الحوائط + الأعمدة'"
+   ],
+   "subcategory": "GF",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": -4.018,
+     "difference_percent": -23.039,
+     "status": "DIRECTLY_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": 8.888,
+   "FREELANCER_QS": 7.728,
+   "UC4N": 8.888,
+   "URBAN": 6.755,
+   "URBAN_STATUS": "LOWER_BOUND (blocked components: URBAN:C-COL-1F-RES)",
+   "category": "COLUMNS_NECKS",
+   "likely_cause": "freelancer: section x clear height below beams (3.75 / 3.45), necks 1.5 m assumed; Urban: clear height, joint separate, some occurrences blocked; oracle height basis not declared - not comparable",
+   "measurement_basis": "COLUMN volume (height basis differs per engine)",
+   "normalized": {},
+   "review_required": true,
+   "section": "G",
+   "source_references": [
+    "V3b C-COL-1F",
+    "freelancer 'الحوائط + الأعمدة'"
+   ],
+   "subcategory": "1F",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": -0.973,
+     "difference_percent": -12.591,
+     "status": "DIRECTLY_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": 3.377,
+   "FREELANCER_QS": 3.381,
+   "UC4N": 3.797,
+   "URBAN": 2.962,
+   "URBAN_STATUS": "LOWER_BOUND (blocked components: URBAN:C-COL-2F-RES)",
+   "category": "COLUMNS_NECKS",
+   "likely_cause": "freelancer: section x clear height below beams (3.75 / 3.45), necks 1.5 m assumed; Urban: clear height, joint separate, some occurrences blocked; oracle height basis not declared - not comparable",
+   "measurement_basis": "COLUMN volume (height basis differs per engine)",
+   "normalized": {},
+   "review_required": true,
+   "section": "G",
+   "source_references": [
+    "V3b C-COL-2F",
+    "freelancer 'الحوائط + الأعمدة'"
+   ],
+   "subcategory": "2F",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": -0.419,
+     "difference_percent": -12.393,
+     "status": "DIRECTLY_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": 109.552,
+   "FREELANCER_QS": 93.44,
+   "UC4N": null,
+   "URBAN": 80.998,
+   "URBAN_STATUS": "LOWER_BOUND (columns / beams partial)",
+   "category": "FRAME_NORMALISED",
+   "likely_cause": "union removes the beam gross / downstand / slab allocation difference; oracle columns height basis undeclared so the oracle union stays not comparable",
+   "measurement_basis": "COLUMNS + JOINTS + BEAMS + SLABS of the floor (allocation-free)",
+   "normalized": {},
+   "review_required": true,
+   "section": "H",
+   "source_references": [
+    "comparison_scope normalisation group FRAME_GF"
+   ],
+   "subcategory": "GF",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": -12.442,
+     "difference_percent": -13.316,
+     "status": "COMPARABLE_AFTER_NORMALIZATION"
+    },
+    "UC4N": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": 56.142,
+   "FREELANCER_QS": 43.955,
+   "UC4N": null,
+   "URBAN": 48.359,
+   "URBAN_STATUS": "LOWER_BOUND (columns / beams partial)",
+   "category": "FRAME_NORMALISED",
+   "likely_cause": "union removes the beam gross / downstand / slab allocation difference; oracle columns height basis undeclared so the oracle union stays not comparable",
+   "measurement_basis": "COLUMNS + JOINTS + BEAMS + SLABS of the floor (allocation-free)",
+   "normalized": {},
+   "review_required": true,
+   "section": "H",
+   "source_references": [
+    "comparison_scope normalisation group FRAME_1F"
+   ],
+   "subcategory": "1F",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": 4.404,
+     "difference_percent": 10.019,
+     "status": "COMPARABLE_AFTER_NORMALIZATION"
+    },
+    "UC4N": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": 16.15,
+   "FREELANCER_QS": 16.934,
+   "UC4N": null,
+   "URBAN": 16.013,
+   "URBAN_STATUS": "LOWER_BOUND (columns / beams partial)",
+   "category": "FRAME_NORMALISED",
+   "likely_cause": "union removes the beam gross / downstand / slab allocation difference; oracle columns height basis undeclared so the oracle union stays not comparable",
+   "measurement_basis": "COLUMNS + JOINTS + BEAMS + SLABS of the floor (allocation-free)",
+   "normalized": {},
+   "review_required": true,
+   "section": "H",
+   "source_references": [
+    "comparison_scope normalisation group FRAME_2F"
+   ],
+   "subcategory": "2F",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": -0.921,
+     "difference_percent": -5.441,
+     "status": "COMPARABLE_AFTER_NORMALIZATION"
+    },
+    "UC4N": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": 25.206,
+   "FREELANCER_QS": 42.883,
+   "UC4N": null,
+   "URBAN": 21.414,
+   "URBAN_STATUS": "LOWER_BOUND (blocked components: URBAN:C-BEAM-GF-RES)",
+   "category": "BEAMS",
+   "likely_cause": "freelancer gross depth vs Urban downstand: NOT_COMPARABLE alone - see FRAME_NORMALISED; oracle downstand is the same convention as Urban",
+   "measurement_basis": "per engine (see basis)",
+   "normalized": {},
+   "review_required": true,
+   "section": "H",
+   "source_references": [
+    "V3b C-BEAM-GF",
+    "freelancer كمرات"
+   ],
+   "subcategory": "GF",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": -3.792,
+     "difference_percent": -15.044,
+     "status": "DIRECTLY_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": 58.111,
+   "FREELANCER_QS": 33.12,
+   "UC4N": null,
+   "URBAN": 44.286,
+   "URBAN_STATUS": "VERIFIED",
+   "category": "SLABS",
+   "likely_cause": "freelancer net of beams vs Urban full depth on the net plate; oracle slab / oracle net area implies 0.200 m average thickness vs printed 0.16 m - oracle slab basis to verify",
+   "measurement_basis": "per engine (see basis)",
+   "normalized": {},
+   "review_required": true,
+   "section": "I",
+   "source_references": [
+    "V3b C-SLAB-GF",
+    "B2A1 SLAB_REGION_REGISTER"
+   ],
+   "subcategory": "GF",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": -13.825,
+     "difference_percent": -23.791,
+     "status": "DIRECTLY_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": 18.562,
+   "FREELANCER_QS": 17.027,
+   "UC4N": null,
+   "URBAN": 13.523,
+   "URBAN_STATUS": "LOWER_BOUND (blocked components: URBAN:C-BEAM-1F-RES)",
+   "category": "BEAMS",
+   "likely_cause": "freelancer gross depth vs Urban downstand: NOT_COMPARABLE alone - see FRAME_NORMALISED; oracle downstand is the same convention as Urban",
+   "measurement_basis": "per engine (see basis)",
+   "normalized": {},
+   "review_required": true,
+   "section": "H",
+   "source_references": [
+    "V3b C-BEAM-1F",
+    "freelancer كمرات"
+   ],
+   "subcategory": "1F",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": -5.039,
+     "difference_percent": -27.147,
+     "status": "DIRECTLY_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": 28.692,
+   "FREELANCER_QS": 19.2,
+   "UC4N": null,
+   "URBAN": 27.16,
+   "URBAN_STATUS": "VERIFIED",
+   "category": "SLABS",
+   "likely_cause": "freelancer net of beams vs Urban full depth on the net plate; oracle slab / oracle net area implies 0.160 m average thickness vs printed 0.16 m - oracle slab basis to verify",
+   "measurement_basis": "per engine (see basis)",
+   "normalized": {},
+   "review_required": true,
+   "section": "I",
+   "source_references": [
+    "V3b C-SLAB-1F",
+    "B2A1 SLAB_REGION_REGISTER"
+   ],
+   "subcategory": "1F",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": -1.532,
+     "difference_percent": -5.339,
+     "status": "DIRECTLY_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": 2.823,
+   "FREELANCER_QS": 6.056,
+   "UC4N": null,
+   "URBAN": 2.65,
+   "URBAN_STATUS": "VERIFIED",
+   "category": "BEAMS",
+   "likely_cause": "freelancer gross depth vs Urban downstand: NOT_COMPARABLE alone - see FRAME_NORMALISED; oracle downstand is the same convention as Urban",
+   "measurement_basis": "per engine (see basis)",
+   "normalized": {},
+   "review_required": true,
+   "section": "H",
+   "source_references": [
+    "V3b C-BEAM-2F",
+    "freelancer كمرات"
+   ],
+   "subcategory": "2F",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": -0.173,
+     "difference_percent": -6.128,
+     "status": "DIRECTLY_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": 9.95,
+   "FREELANCER_QS": 7.497,
+   "UC4N": null,
+   "URBAN": 9.986,
+   "URBAN_STATUS": "VERIFIED",
+   "category": "SLABS",
+   "likely_cause": "freelancer net of beams vs Urban full depth on the net plate; oracle slab / oracle net area implies 0.180 m average thickness vs printed 0.18 m - oracle slab basis to verify",
+   "measurement_basis": "per engine (see basis)",
+   "normalized": {},
+   "review_required": true,
+   "section": "I",
+   "source_references": [
+    "V3b C-SLAB-2F",
+    "B2A1 SLAB_REGION_REGISTER"
+   ],
+   "subcategory": "2F",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": 0.036,
+     "difference_percent": 0.362,
+     "status": "DIRECTLY_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": 46.591,
+   "FREELANCER_QS": 65.966,
+   "UC4N": 50.841,
+   "URBAN": 37.587,
+   "URBAN_STATUS": "LOWER_BOUND (residue blocked)",
+   "category": "BEAMS",
+   "likely_cause": "same convention as both oracles; freelancer gross depth only comparable inside FRAME_NORMALISED",
+   "measurement_basis": "BEAM_DOWNSTAND_ONLY",
+   "normalized": {},
+   "review_required": true,
+   "section": "H",
+   "source_references": [],
+   "subcategory": "all floors",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": -9.004,
+     "difference_percent": -19.326,
+     "status": "DIRECTLY_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": -13.254,
+     "difference_percent": -26.07,
+     "status": "DIRECTLY_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": 96.753,
+   "FREELANCER_QS": 59.817,
+   "UC4N": 95.689,
+   "URBAN": 81.432,
+   "URBAN_STATUS": "VERIFIED",
+   "category": "SLABS",
+   "likely_cause": "both oracles ~15 m3 above Urban on the same declared convention: implied thickness / area basis differs - real disagreement to review",
+   "measurement_basis": "SLAB_FULL_DEPTH",
+   "normalized": {},
+   "review_required": true,
+   "section": "I",
+   "source_references": [],
+   "subcategory": "all floors",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": -15.321,
+     "difference_percent": -15.835,
+     "status": "DIRECTLY_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": -14.257,
+     "difference_percent": -14.899,
+     "status": "DIRECTLY_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": 5.048,
+   "FREELANCER_QS": 15.053,
+   "UC4N": 5.325,
+   "URBAN": null,
+   "URBAN_STATUS": "LOWER_BOUND (blocked components: URBAN:C-STAIR)",
+   "category": "STAIRS",
+   "likely_cause": "Urban stairs BLOCKED (riser / waist inputs); freelancer 0.28 m slab-equivalent; oracle basis undeclared",
+   "measurement_basis": "STAIR",
+   "normalized": {},
+   "review_required": true,
+   "section": "J",
+   "source_references": [],
+   "subcategory": "all stairs",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": null,
+   "FREELANCER_QS": 6.78,
+   "UC4N": null,
+   "URBAN": 7.523,
+   "URBAN_STATUS": "VERIFIED",
+   "category": "DOME",
+   "likely_cause": "freelancer 3 x (1.0 x 22.6 x 0.1); Urban shell 2 pi R h t per dome; rings blocked",
+   "measurement_basis": "DOME_SHELL",
+   "normalized": {},
+   "review_required": true,
+   "section": "K",
+   "source_references": [
+    "V3b C-DOME-SHELL-*",
+    "freelancer السلم!B13"
+   ],
+   "subcategory": "dome shells",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": 0.743,
+     "difference_percent": 10.959,
+     "status": "DIRECTLY_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": null,
+   "FREELANCER_QS": 12.348,
+   "UC4N": null,
+   "URBAN": 5.053,
+   "URBAN_STATUS": "VERIFIED",
+   "category": "POOL",
+   "likely_cause": "freelancer adds pump-room walls + room floor and a 10.8 m2 x 0.4 base; Urban walls 10.10 x 0.20 x 1.15 + base 3.50 x 1.95 x 0.40 - scope and depth differ",
+   "measurement_basis": "POOL",
+   "normalized": {},
+   "review_required": true,
+   "section": "L",
+   "source_references": [
+    "V3b C-POOL",
+    "freelancer حمام السباحة"
+   ],
+   "subcategory": "pool",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": null,
+   "FREELANCER_QS": 2.4,
+   "UC4N": null,
+   "URBAN": null,
+   "URBAN_STATUS": "LOWER_BOUND (blocked components: URBAN:C-SWALL)",
+   "category": "SPECIAL_RC",
+   "likely_cause": "freelancer counts 20 cm lift walls (8 m x 1.5 m); Urban structural walls BLOCKED - population to confirm",
+   "measurement_basis": "WALL",
+   "normalized": {},
+   "review_required": true,
+   "section": "M",
+   "source_references": [],
+   "subcategory": "structural / lift walls",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": null,
+   "FREELANCER_QS": 7.56,
+   "UC4N": null,
+   "URBAN": null,
+   "URBAN_STATUS": "LOWER_BOUND (blocked components: URBAN:C-BWALL)",
+   "category": "SPECIAL_RC",
+   "likely_cause": "Urban boundary wall BLOCKED; freelancer 42 m x 30x60",
+   "measurement_basis": "BOUNDARY",
+   "normalized": {},
+   "review_required": true,
+   "section": "M",
+   "source_references": [],
+   "subcategory": "boundary wall beam",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    }
+   }
+  },
+  {
+   "CHRISTIANNP": 333.173,
+   "FREELANCER_QS": 352.436,
+   "UC4N": 337.812,
+   "URBAN": 253.217,
+   "URBAN_STATUS": "LOWER_BOUND (blocked populations)",
+   "category": "TOTAL_CONCRETE",
+   "likely_cause": "totals combine different scopes and blocked Urban populations - shown, never compared as %",
+   "measurement_basis": "ALL RC (bases differ)",
+   "normalized": {},
+   "review_required": true,
+   "section": "N",
+   "source_references": [
+    "freelancer ورقة1!F24"
+   ],
+   "subcategory": "reinforced concrete",
+   "vs": {
+    "CHRISTIANNP": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "FREELANCER": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    },
+    "UC4N": {
+     "difference": null,
+     "difference_percent": null,
+     "status": "NOT_COMPARABLE"
+    }
+   }
+  }
+ ],
+ "urban_view": {
+  "categories": {
+   "BEAMS_1F": {
+    "by_state": {
+     "LOWER_BOUND": 13.523
+    },
+    "category": "BEAMS_1F",
+    "components": [
+     "URBAN:C-BEAM-1F",
+     "URBAN:C-BEAM-1F-RES"
+    ],
+    "components_without_value": [
+     "URBAN:C-BEAM-1F-RES"
+    ],
+    "excluded_components": [],
+    "included_components": [
+     "BEAM_DOWNSTAND_1F"
+    ],
+    "measurement_basis": "BEAM_DOWNSTAND_ONLY",
+    "overlap_policy": "slab over beam in SLABS",
+    "quantity": 13.523
+   },
+   "BEAMS_2F": {
+    "by_state": {
+     "VERIFIED": 2.65
+    },
+    "category": "BEAMS_2F",
+    "components": [
+     "URBAN:C-BEAM-2F"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "BEAM_DOWNSTAND_2F"
+    ],
+    "measurement_basis": "BEAM_DOWNSTAND_ONLY",
+    "overlap_policy": "slab over beam in SLABS",
+    "quantity": 2.65
+   },
+   "BEAMS_GF": {
+    "by_state": {
+     "LOWER_BOUND": 21.414
+    },
+    "category": "BEAMS_GF",
+    "components": [
+     "URBAN:C-BEAM-GF",
+     "URBAN:C-BEAM-GF-RES"
+    ],
+    "components_without_value": [
+     "URBAN:C-BEAM-GF-RES"
+    ],
+    "excluded_components": [],
+    "included_components": [
+     "BEAM_DOWNSTAND_GF"
+    ],
+    "measurement_basis": "BEAM_DOWNSTAND_ONLY",
+    "overlap_policy": "slab over beam in SLABS",
+    "quantity": 21.414
+   },
+   "BOUNDARY": {
+    "by_state": {},
+    "category": "BOUNDARY",
+    "components": [
+     "URBAN:C-BWALL"
+    ],
+    "components_without_value": [
+     "URBAN:C-BWALL"
+    ],
+    "excluded_components": [],
+    "included_components": [
+     "BOUNDARY_GROUND_BEAM"
+    ],
+    "measurement_basis": "BOUNDARY_WALL_BEAM",
+    "overlap_policy": "separate from building",
+    "quantity": 0.0
+   },
+   "COLUMNS_1F": {
+    "by_state": {
+     "LOWER_BOUND": 6.755
+    },
+    "category": "COLUMNS_1F",
+    "components": [
+     "URBAN:C-COL-1F",
+     "URBAN:C-COL-1F-RES"
+    ],
+    "components_without_value": [
+     "URBAN:C-COL-1F-RES"
+    ],
+    "excluded_components": [],
+    "included_components": [
+     "COLUMN_1F"
+    ],
+    "measurement_basis": "COLUMN_CLEAR_HEIGHT_JOINT_SEPARATE",
+    "overlap_policy": "joint separate",
+    "quantity": 6.755
+   },
+   "COLUMNS_2F": {
+    "by_state": {
+     "LOWER_BOUND": 2.962
+    },
+    "category": "COLUMNS_2F",
+    "components": [
+     "URBAN:C-COL-2F",
+     "URBAN:C-COL-2F-RES"
+    ],
+    "components_without_value": [
+     "URBAN:C-COL-2F-RES"
+    ],
+    "excluded_components": [],
+    "included_components": [
+     "COLUMN_2F"
+    ],
+    "measurement_basis": "COLUMN_CLEAR_HEIGHT_JOINT_SEPARATE",
+    "overlap_policy": "joint separate",
+    "quantity": 2.962
+   },
+   "COLUMNS_GF": {
+    "by_state": {
+     "LOWER_BOUND": 13.42
+    },
+    "category": "COLUMNS_GF",
+    "components": [
+     "URBAN:C-COL-GF",
+     "URBAN:C-COL-GF-RES"
+    ],
+    "components_without_value": [
+     "URBAN:C-COL-GF-RES"
+    ],
+    "excluded_components": [],
+    "included_components": [
+     "COLUMN_GF"
+    ],
+    "measurement_basis": "COLUMN_CLEAR_HEIGHT_JOINT_SEPARATE",
+    "overlap_policy": "joint separate",
+    "quantity": 13.42
+   },
+   "DOME": {
+    "by_state": {
+     "VERIFIED": 7.523
+    },
+    "category": "DOME",
+    "components": [
+     "URBAN:C-DOME-SHELL-12EB",
+     "URBAN:C-DOME-SHELL-1300",
+     "URBAN:C-DOME-SHELL-2F33"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "DOME"
+    ],
+    "measurement_basis": "DOME_SHELL_AREA_x_T",
+    "overlap_policy": "ring separate",
+    "quantity": 7.523
+   },
+   "DOME_RING": {
+    "by_state": {},
+    "category": "DOME_RING",
+    "components": [
+     "URBAN:C-DOME-RING-12EB",
+     "URBAN:C-DOME-RING-1300",
+     "URBAN:C-DOME-RING-2F33"
+    ],
+    "components_without_value": [
+     "URBAN:C-DOME-RING-12EB",
+     "URBAN:C-DOME-RING-1300",
+     "URBAN:C-DOME-RING-2F33"
+    ],
+    "excluded_components": [],
+    "included_components": [
+     "DOME_RING_BEAM"
+    ],
+    "measurement_basis": "RING_BEAM",
+    "overlap_policy": "separate",
+    "quantity": 0.0
+   },
+   "FOOTINGS": {
+    "by_state": {
+     "LOWER_BOUND": 64.346
+    },
+    "category": "FOOTINGS",
+    "components": [
+     "URBAN:C-FTG",
+     "URBAN:C-FTG-FF10"
+    ],
+    "components_without_value": [
+     "URBAN:C-FTG-FF10"
+    ],
+    "excluded_components": [],
+    "included_components": [
+     "FOOTING"
+    ],
+    "measurement_basis": "PAD_LxWxH_SCHEDULE",
+    "overlap_policy": "pads only",
+    "quantity": 64.346
+   },
+   "GROUND_BEAMS": {
+    "by_state": {
+     "VERIFIED": 11.245
+    },
+    "category": "GROUND_BEAMS",
+    "components": [
+     "URBAN:C-GB-INT",
+     "URBAN:C-GB-EXT"
+    ],
+    "components_without_value": [
+     "URBAN:C-GB-EXT"
+    ],
+    "excluded_components": [],
+    "included_components": [
+     "GROUND_BEAM",
+     "GROUND_BEAM_EXTERIOR"
+    ],
+    "measurement_basis": "GB_SPAN_x_SECTION",
+    "overlap_policy": "interior + exterior",
+    "quantity": 11.245
+   },
+   "GROUND_SLAB": {
+    "by_state": {
+     "LOWER_BOUND": 11.539000000000001
+    },
+    "category": "GROUND_SLAB",
+    "components": [
+     "URBAN:C-GSLAB-ZONE-1",
+     "URBAN:C-GSLAB-ZONE-2"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "GROUND_SLAB"
+    ],
+    "measurement_basis": "SLAB_ZONE_AREA_x_T",
+    "overlap_policy": "zones minus beam bands / columns",
+    "quantity": 11.539000000000001
+   },
+   "JOINTS": {
+    "by_state": {
+     "VERIFIED": 3.214
+    },
+    "category": "JOINTS",
+    "components": [
+     "URBAN:C-JNT-GF",
+     "URBAN:C-JNT-1F",
+     "URBAN:C-JNT-2F"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "JOINT_GF",
+     "JOINT_1F",
+     "JOINT_2F"
+    ],
+    "measurement_basis": "COLUMN_SECTION_x_BEAM_DOWNSTAND",
+    "overlap_policy": "own component",
+    "quantity": 3.214
+   },
+   "LINTELS": {
+    "by_state": {
+     "VERIFIED": 4.7490000000000006
+    },
+    "category": "LINTELS",
+    "components": [
+     "URBAN:C-LINT-GF",
+     "URBAN:C-LINT-1F",
+     "URBAN:C-LINT-2F"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "LINTEL"
+    ],
+    "measurement_basis": "LINTEL_SCHEDULE",
+    "overlap_policy": "separate",
+    "quantity": 4.7490000000000006
+   },
+   "NECKS": {
+    "by_state": {},
+    "category": "NECKS",
+    "components": [
+     "URBAN:C-NECK"
+    ],
+    "components_without_value": [
+     "URBAN:C-NECK"
+    ],
+    "excluded_components": [],
+    "included_components": [
+     "COLUMN_NECK"
+    ],
+    "measurement_basis": "NECK_SECTION_x_HEIGHT",
+    "overlap_policy": "footing top to ground beam",
+    "quantity": 0.0
+   },
+   "PLAIN_CONCRETE": {
+    "by_state": {
+     "PROVISIONAL": 28.828,
+     "VERIFIED": 0.795
+    },
+    "category": "PLAIN_CONCRETE",
+    "components": [
+     "URBAN:C-POOL-BLD",
+     "URBAN:C-BLD-FULL"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "PLAIN_CONCRETE"
+    ],
+    "measurement_basis": "BLINDING",
+    "overlap_policy": "not reinforced",
+    "quantity": 29.623
+   },
+   "POOL": {
+    "by_state": {
+     "VERIFIED": 5.053
+    },
+    "category": "POOL",
+    "components": [
+     "URBAN:C-POOL"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "POOL"
+    ],
+    "measurement_basis": "POOL_WALLS_BASE",
+    "overlap_policy": "pool only",
+    "quantity": 5.053
+   },
+   "SLABS_1F": {
+    "by_state": {
+     "VERIFIED": 27.16
+    },
+    "category": "SLABS_1F",
+    "components": [
+     "URBAN:C-SLAB-1F"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "SLAB_FULL_1F"
+    ],
+    "measurement_basis": "SLAB_FULL_DEPTH_NET_PLATE",
+    "overlap_policy": "full depth incl. over beams",
+    "quantity": 27.16
+   },
+   "SLABS_2F": {
+    "by_state": {
+     "VERIFIED": 9.986
+    },
+    "category": "SLABS_2F",
+    "components": [
+     "URBAN:C-SLAB-2F"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "SLAB_FULL_2F"
+    ],
+    "measurement_basis": "SLAB_FULL_DEPTH_NET_PLATE",
+    "overlap_policy": "full depth incl. over beams",
+    "quantity": 9.986
+   },
+   "SLABS_GF": {
+    "by_state": {
+     "VERIFIED": 44.286
+    },
+    "category": "SLABS_GF",
+    "components": [
+     "URBAN:C-SLAB-GF"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "SLAB_FULL_GF"
+    ],
+    "measurement_basis": "SLAB_FULL_DEPTH_NET_PLATE",
+    "overlap_policy": "full depth incl. over beams",
+    "quantity": 44.286
+   },
+   "STAIRS": {
+    "by_state": {},
+    "category": "STAIRS",
+    "components": [
+     "URBAN:C-STAIR"
+    ],
+    "components_without_value": [
+     "URBAN:C-STAIR"
+    ],
+    "excluded_components": [],
+    "included_components": [
+     "STAIR"
+    ],
+    "measurement_basis": "STAIR_WAIST_STEPS_LANDINGS",
+    "overlap_policy": "separate",
+    "quantity": 0.0
+   },
+   "STRAP_BEAMS": {
+    "by_state": {
+     "VERIFIED": 3.392
+    },
+    "category": "STRAP_BEAMS",
+    "components": [
+     "URBAN:C-STR"
+    ],
+    "components_without_value": [],
+    "excluded_components": [],
+    "included_components": [
+     "STRAP_BEAM"
+    ],
+    "measurement_basis": "STRAP_BAND",
+    "overlap_policy": "between footings",
+    "quantity": 3.392
+   },
+   "STRUCTURAL_WALLS": {
+    "by_state": {},
+    "category": "STRUCTURAL_WALLS",
+    "components": [
+     "URBAN:C-SWALL"
+    ],
+    "components_without_value": [
+     "URBAN:C-SWALL"
+    ],
+    "excluded_components": [],
+    "included_components": [
+     "STRUCTURAL_WALL"
+    ],
+    "measurement_basis": "WALL",
+    "overlap_policy": "separate",
+    "quantity": 0.0
+   }
+  },
+  "unmapped_components": [],
+  "view_id": "URBAN_PHYSICAL_VIEW"
+ }
+}

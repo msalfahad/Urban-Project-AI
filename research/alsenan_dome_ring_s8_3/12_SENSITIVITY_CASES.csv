@@ -1,0 +1,20 @@
+CASE_ID,CASE,VALUE,UNIT,BASIS,LANE,IN_OFFICIAL_TOTAL
+SA-DOME-A-RING-PLAN-50,"DOME-A ring concrete, plan position, depth 0.50 m",0.755256384,m3,plan area inside the bay x depth (B4 row),SENSITIVITY_ONLY,False
+SA-DOME-A-RING-PLAN-130,"DOME-A ring concrete, plan position, depth 1.30 m",1.963666598,m3,plan area inside the bay x depth (architectural drum),SENSITIVITY_ONLY,False
+SA-DOME-A-RINGBARS-PLAN,DOME-A ring top 3T16 + bottom 3T18 as closed circles (plan position),155.966471416,kg,3 x 2 pi r_c each (symmetric bars: cover cancels); no laps,SENSITIVITY_ONLY,False
+SA-DOME-A-RING-DETAIL-50,"DOME-A ring concrete, detail position, depth 0.50 m",1.142227476,m3,plan area inside the bay x depth (B4 row),SENSITIVITY_ONLY,False
+SA-DOME-A-RING-DETAIL-130,"DOME-A ring concrete, detail position, depth 1.30 m",2.969791437,m3,plan area inside the bay x depth (architectural drum),SENSITIVITY_ONLY,False
+SA-DOME-A-RINGBARS-DETAIL,DOME-A ring top 3T16 + bottom 3T18 as closed circles (detail position),142.469258534,kg,3 x 2 pi r_c each (symmetric bars: cover cancels); no laps,SENSITIVITY_ONLY,False
+SA-DOME-B-RING-PLAN-50,"DOME-B ring concrete, plan position, depth 0.50 m",0.899735652,m3,plan area inside the bay x depth (B4 row),SENSITIVITY_ONLY,False
+SA-DOME-B-RING-PLAN-130,"DOME-B ring concrete, plan position, depth 1.30 m",2.339312694,m3,plan area inside the bay x depth (architectural drum),SENSITIVITY_ONLY,False
+SA-DOME-B-RINGBARS-PLAN,DOME-B ring top 3T16 + bottom 3T18 as closed circles (plan position),155.966471416,kg,3 x 2 pi r_c each (symmetric bars: cover cancels); no laps,SENSITIVITY_ONLY,False
+SA-DOME-B-RING-DETAIL-50,"DOME-B ring concrete, detail position, depth 0.50 m",1.310815059,m3,plan area inside the bay x depth (B4 row),SENSITIVITY_ONLY,False
+SA-DOME-B-RING-DETAIL-130,"DOME-B ring concrete, detail position, depth 1.30 m",3.408119154,m3,plan area inside the bay x depth (architectural drum),SENSITIVITY_ONLY,False
+SA-DOME-B-RINGBARS-DETAIL,DOME-B ring top 3T16 + bottom 3T18 as closed circles (detail position),142.469258534,kg,3 x 2 pi r_c each (symmetric bars: cover cancels); no laps,SENSITIVITY_ONLY,False
+SA-SHELL-RISE-185,one shell with rise 1.85 m,2.48304068,m3,section B-B / SE readings,SENSITIVITY_ONLY,False
+SA-SHELL-RISE-193,one shell with rise 1.93 m,2.57599149,m3,section B-B / SE readings,SENSITIVITY_ONLY,False
+SA-SHELL-CHORD-4822,one shell if the chord were the plan ring's outer diameter,2.824934497,m3,CF-S8.3-02,SENSITIVITY_ONLY,False
+SA-MESH-AREA_IN,"one shell mesh, both directions, on the inrados surface",286.216948216,kg,instead of the mid-surface,SENSITIVITY_ONLY,False
+SA-MESH-AREA_OUT,"one shell mesh, both directions, on the outrados surface",316.266692253,kg,instead of the mid-surface,SENSITIVITY_ONLY,False
+SA-MESH-TWO,one shell with two meshes (S1's 'two layers'): kg for that one shell,602.111303562,kg,CF-S8.3-07; the released single mesh is half of it,SENSITIVITY_ONLY,False
+SA-TOWER-SHELL,tower dome if it were an RC shell like the terrace domes (t 0.10 assumed),2.844907341,m3,printed architectural chord 4.41 and rise 2.15; the terrace thickness assumed,SENSITIVITY_ONLY,False

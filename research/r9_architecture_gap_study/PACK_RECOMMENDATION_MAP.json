@@ -1,0 +1,197 @@
+{
+ "basis": "pack + Urban HEAD code + local donors at DONORS.lock commits (U-C4N cdb10638, OpenTakeoff e6d2251c) + RoomGraph / aec-qto / Rebar-Takeoff verified at pinned commits (LICENSE, README, docs, manifests read; no code copied) + christiannp forensic package",
+ "pack": "Urban_BOQ_Research_Pack_2026-10-07.zip",
+ "pack_sha256": "166a7341ebd9dc2d258d1c97e422ec67880782d86303c89cf76111d82d9e5331",
+ "pack_status": "DELIVERED and read in full (23 files)",
+ "rows": [
+  {
+   "pack_ref": "01 #1 facts vs rules",
+   "rows": [
+    "R9-QF-01",
+    "R9-QF-02"
+   ]
+  },
+  {
+   "pack_ref": "01 #2 provenance receipt",
+   "rows": [
+    "R9-PR-01",
+    "R9-PR-07",
+    "R9-EX-01"
+   ]
+  },
+  {
+   "pack_ref": "01 #3 scale gate",
+   "rows": [
+    "R9-SC-01",
+    "R9-SC-02",
+    "R9-SC-03"
+   ]
+  },
+  {
+   "pack_ref": "01 #4 Shapely / Clipper2 topology layer",
+   "rows": [
+    "R9-GB-01",
+    "R9-GB-02"
+   ]
+  },
+  {
+   "pack_ref": "01 #5 RoomGraph",
+   "rows": [
+    "R9-RG-01",
+    "R9-RG-02",
+    "R9-RG-03",
+    "R9-RG-04",
+    "R9-RG-05",
+    "R9-RG-06",
+    "R9-RG-07",
+    "R9-RG-08",
+    "R9-RG-09"
+   ]
+  },
+  {
+   "pack_ref": "01 #6 rebar evidence ladder",
+   "rows": [
+    "R9-RB-01",
+    "R9-RT-02",
+    "R9-RT-05"
+   ]
+  },
+  {
+   "pack_ref": "01 #7 ambiguity reduces totals",
+   "rows": [
+    "R9-ST-01"
+   ]
+  },
+  {
+   "pack_ref": "01 #8 declarative profiles + golden",
+   "rows": [
+    "R9-RE-01",
+    "R9-RE-02",
+    "R9-RE-03"
+   ]
+  },
+  {
+   "pack_ref": "01 #9 permissive PDF stack / PyMuPDF",
+   "rows": [
+    "R9-LIC-01",
+    "R9-PDF-01"
+   ]
+  },
+  {
+   "pack_ref": "01 #10 IFC adapter",
+   "rows": [
+    "R9-SC-04"
+   ]
+  },
+  {
+   "pack_ref": "01 #11 revision / cross-sheet identity",
+   "rows": [
+    "R9-REV-01"
+   ]
+  },
+  {
+   "pack_ref": "01 #12 one math library",
+   "rows": [
+    "R9-OT-01"
+   ]
+  },
+  {
+   "pack_ref": "01 #13 rebar layers / OR-Tools",
+   "rows": [
+    "R9-RB-02",
+    "R9-RB-03",
+    "R9-QF-03"
+   ]
+  },
+  {
+   "pack_ref": "01 #14 formwork contact",
+   "rows": [
+    "R9-FW-01"
+   ]
+  },
+  {
+   "pack_ref": "01 #15 native AutoCAD challenger",
+   "rows": [
+    "(existing cad_oracle; no row)"
+   ]
+  },
+  {
+   "pack_ref": "01 #16 explain quantity",
+   "rows": [
+    "R9-EX-01"
+   ]
+  },
+  {
+   "pack_ref": "01 #17 multi-standard recomputation",
+   "rows": [
+    "R9-QF-02",
+    "R9-RE-01"
+   ]
+  },
+  {
+   "pack_ref": "01 #18 benchmark product",
+   "rows": [
+    "R9-BM-01"
+   ]
+  },
+  {
+   "pack_ref": "03 F factorised confidence / statuses",
+   "rows": [
+    "R9-ST-01",
+    "R9-PR-02"
+   ]
+  },
+  {
+   "pack_ref": "04 R9.1-R9.8, R10.0-R10.3",
+   "rows": [
+    "R9-PR-01",
+    "R9-SC-02",
+    "R9-GB-01",
+    "R9-RG-09",
+    "R9-RE-01",
+    "R9-RT-05",
+    "R9-RB-02",
+    "R9-REV-01",
+    "R9-PDF-01",
+    "R9-SC-04",
+    "R9-FW-01",
+    "R9-RB-03",
+    "R9-MCP-01"
+   ]
+  },
+  {
+   "pack_ref": "05 donors cad-ai-agent / ConMCP / tianzheng / Plansight",
+   "rows": [
+    "R9-AG-01",
+    "R9-SV-01",
+    "R9-PDF-01"
+   ]
+  },
+  {
+   "pack_ref": "06 licence gate",
+   "rows": [
+    "R9-LIC-01",
+    "R9-LIC-02"
+   ]
+  },
+  {
+   "pack_ref": "07 metrics / taxonomy / blind protocol",
+   "rows": [
+    "R9-BM-01"
+   ]
+  },
+  {
+   "pack_ref": "14 F review priority",
+   "rows": [
+    "R9-RV-01"
+   ]
+  },
+  {
+   "pack_ref": "14 G correction corpus",
+   "rows": [
+    "R9-PR-03"
+   ]
+  }
+ ],
+ "v1_commit": "a75b845"
+}

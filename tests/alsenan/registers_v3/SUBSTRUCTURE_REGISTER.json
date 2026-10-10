@@ -1,0 +1,173 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_V3_SUBSTRUCTURE_V1",
+ "footing_wp": [
+  {
+   "type": "FN",
+   "wp_m2": 2.2,
+   "membrane_m2": 1.44,
+   "formula": "2 x (1.00 + 1.00) x 0.30 + 1.00 x 1.00"
+  },
+  {
+   "type": "FN",
+   "wp_m2": 2.2,
+   "membrane_m2": 1.44,
+   "formula": "2 x (1.00 + 1.00) x 0.30 + 1.00 x 1.00"
+  },
+  {
+   "type": "F5",
+   "wp_m2": 8.64,
+   "membrane_m2": 5.98,
+   "formula": "2 x (2.40 + 2.10) x 0.40 + 2.40 x 2.10"
+  },
+  {
+   "type": "F4",
+   "wp_m2": 7.76,
+   "membrane_m2": 5.28,
+   "formula": "2 x (2.20 + 2.00) x 0.40 + 2.20 x 2.00"
+  },
+  {
+   "type": "F4",
+   "wp_m2": 7.76,
+   "membrane_m2": 5.28,
+   "formula": "2 x (2.20 + 2.00) x 0.40 + 2.20 x 2.00"
+  },
+  {
+   "type": "F5",
+   "wp_m2": 8.64,
+   "membrane_m2": 5.98,
+   "formula": "2 x (2.40 + 2.10) x 0.40 + 2.40 x 2.10"
+  },
+  {
+   "type": "F2",
+   "wp_m2": 5.75,
+   "membrane_m2": 3.99,
+   "formula": "2 x (1.90 + 1.70) x 0.35 + 1.90 x 1.70"
+  },
+  {
+   "type": "F2",
+   "wp_m2": 5.75,
+   "membrane_m2": 3.99,
+   "formula": "2 x (1.90 + 1.70) x 0.35 + 1.90 x 1.70"
+  },
+  {
+   "type": "FF",
+   "wp_m2": 30.71,
+   "membrane_m2": 22.56,
+   "formula": "2 x (4.60 + 4.50) x 0.55 + 4.60 x 4.50"
+  },
+  {
+   "type": "F9",
+   "wp_m2": 15.89,
+   "membrane_m2": 10.44,
+   "formula": "2 x (3.40 + 2.70) x 0.55 + 3.40 x 2.70"
+  },
+  {
+   "type": "F",
+   "wp_m2": 1.74,
+   "membrane_m2": 1.1,
+   "formula": "2 x (0.90 + 0.80) x 0.30 + 0.90 x 0.80"
+  },
+  {
+   "type": "F",
+   "wp_m2": 1.74,
+   "membrane_m2": 1.1,
+   "formula": "2 x (0.90 + 0.80) x 0.30 + 0.90 x 0.80"
+  },
+  {
+   "type": "F",
+   "wp_m2": 1.74,
+   "membrane_m2": 1.1,
+   "formula": "2 x (0.90 + 0.80) x 0.30 + 0.90 x 0.80"
+  },
+  {
+   "type": "F",
+   "wp_m2": 1.74,
+   "membrane_m2": 1.1,
+   "formula": "2 x (0.90 + 0.80) x 0.30 + 0.90 x 0.80"
+  },
+  {
+   "type": "F14",
+   "wp_m2": 19.64,
+   "membrane_m2": 14.0,
+   "formula": "2 x (3.80 + 3.30) x 0.50 + 3.80 x 3.30"
+  },
+  {
+   "type": "F11",
+   "wp_m2": 10.25,
+   "membrane_m2": 6.29,
+   "formula": "2 x (3.50 + 1.50) x 0.50 + 3.50 x 1.50"
+  },
+  {
+   "type": "FN",
+   "wp_m2": 2.2,
+   "membrane_m2": 1.44,
+   "formula": "2 x (1.00 + 1.00) x 0.30 + 1.00 x 1.00"
+  },
+  {
+   "type": "F6",
+   "wp_m2": 10.52,
+   "membrane_m2": 6.72,
+   "formula": "2 x (2.60 + 2.20) x 0.50 + 2.60 x 2.20"
+  },
+  {
+   "type": "F3",
+   "wp_m2": 4.04,
+   "membrane_m2": 2.88,
+   "formula": "2 x (1.60 + 1.40) x 0.30 + 1.60 x 1.40"
+  },
+  {
+   "type": "F3",
+   "wp_m2": 4.04,
+   "membrane_m2": 2.88,
+   "formula": "2 x (1.60 + 1.40) x 0.30 + 1.60 x 1.40"
+  },
+  {
+   "type": "FN",
+   "wp_m2": 2.2,
+   "membrane_m2": 1.44,
+   "formula": "2 x (1.00 + 1.00) x 0.30 + 1.00 x 1.00"
+  },
+  {
+   "type": "F12",
+   "wp_m2": 24.72,
+   "membrane_m2": 15.64,
+   "formula": "2 x (4.40 + 3.20) x 0.70 + 4.40 x 3.20"
+  },
+  {
+   "type": "F13",
+   "wp_m2": 17.02,
+   "membrane_m2": 11.7,
+   "formula": "2 x (4.30 + 2.40) x 0.50 + 4.30 x 2.40"
+  },
+  {
+   "type": "F8",
+   "wp_m2": 22.0,
+   "membrane_m2": 15.96,
+   "formula": "2 x (4.00 + 3.60) x 0.50 + 4.00 x 3.60"
+  },
+  {
+   "type": "F15",
+   "wp_m2": 4.04,
+   "membrane_m2": 2.4,
+   "formula": "2 x (1.80 + 1.00) x 0.40 + 1.80 x 1.00"
+  }
+ ],
+ "footing_wp_m2": 222.93,
+ "footing_membrane_m2": 152.13,
+ "ground_beam_wp_m2": 74.969484,
+ "ground_beam_blinding_m3": 4.424836,
+ "wp_rule": "p.13: two layers liquid waterproofing on all surfaces in contact with earth (footing sides + top; ground beam sides); the column-neck area on the footing top is not deducted (necks BLOCKED)",
+ "dome": {
+  "surface_m2": 26.685002,
+  "concrete_m3": 2.6685,
+  "radius_m": 2.235289,
+  "formula": "2 pi R h, R = (a2 + h2) / 2h = 2.235; x 0.10",
+  "count": null,
+  "status": "REVIEW",
+  "why": "p.7 detail is N.T.S. and its plan location / number is not bound"
+ },
+ "pool": {
+  "status": "BLOCKED",
+  "why": "p.7 section gives walls 20 / base 40 / 10 cm plain concrete; depths 'as per arch.' are not printed in the architectural set"
+ }
+}

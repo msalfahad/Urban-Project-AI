@@ -1,0 +1,30 @@
+{
+ "SCHEMA": "URBAN_R8_18_WATERPROOFING_POLICY_V1",
+ "policy": {
+  "policy_id": "WATERPROOFING_POLICY_V1",
+  "rows": [
+   "WATERPROOFING_FLOOR_M2",
+   "WATERPROOFING_UPTURN_LM"
+  ],
+  "floor": "the wet-room TS01 site area",
+  "upturn_path": "the GROSS site boundary (doorways NOT deducted; holes included by default)",
+  "never": [
+   "the skirting path",
+   "a doorway deduction",
+   "a marble-threshold modification without an explicit rule",
+   "a perimeter from a room polygon outside the certified topology"
+  ],
+  "digest": "16e1955b9443bf4b39fdc1ef9e287acea5e536e6165a27f712d06638cc9f5c90"
+ },
+ "method": {
+  "policy": "WATERPROOFING_POLICY_V1",
+  "upturn_height_m": 0.15,
+  "upturn_authority": "US-04 (0.15 m upturn) + US-05 (doorway not deducted)",
+  "include_holes": true,
+  "classes": {
+   "WET_SERVICE_ROOM": "US-14 bathroom",
+   "SERVICE_ROOM": "US-14 pantry / preparation kitchen + QP-13 (PAINTRY, GROSS perimeter)"
+  }
+ },
+ "recommendation": "YES, same round, own frozen policy (WATERPROOFING_POLICY_V1): floor membrane = wet-room TS01 floor area; upturn path = the GROSS site boundary (doorway / sliding-door / column / window lines all included; internal obstacle perimeters included); 0.15 m; independent of skirting, wall tile and marble."
+}

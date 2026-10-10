@@ -1,0 +1,39 @@
+{
+ "SCHEMA": "URBAN_R8_9_EFFECTIVE_LAYER_REGISTER_V1",
+ "rule": "AutoCAD layer-0 semantics through the whole insert chain; source layer kept; role reads the effective layer (canonical_input.effective_layer)",
+ "r8_8_gap": "CONFIRMED in code: geometry_role.admit() took an optional insert_layers map that TS01 never supplied, and it looked at the top-level insert only (no nesting); fixed at the canonical record",
+ "runs": {
+  "OLD_K1": {
+   "records_by_authority": {
+    "SOURCE_LAYER": 1118
+   },
+   "texts_by_authority": {
+    "SOURCE_LAYER": 61
+   },
+   "layer0_children_inside_inserts": 0,
+   "effective_differs_from_source": 0
+  },
+  "OLD_K2": {
+   "records_by_authority": {
+    "SOURCE_LAYER": 1118
+   },
+   "texts_by_authority": {
+    "SOURCE_LAYER": 61
+   },
+   "layer0_children_inside_inserts": 0,
+   "effective_differs_from_source": 0
+  },
+  "NEW_K2": {
+   "records_by_authority": {
+    "SOURCE_LAYER": 1363
+   },
+   "texts_by_authority": {
+    "SOURCE_LAYER": 61
+   },
+   "layer0_children_inside_inserts": 0,
+   "effective_differs_from_source": 0
+  }
+ },
+ "qortuba_effect": "none in either revision: no layer-0 child inside an insert in the selected region (the gap was latent here; it would decide roles in a drawing whose blocks are authored on layer 0)",
+ "tests": "tests/r8_9/test_r8_9_effective_layer.py (A-F on K1 and K2)"
+}

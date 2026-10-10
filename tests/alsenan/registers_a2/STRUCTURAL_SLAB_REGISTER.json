@@ -1,0 +1,65 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A2_SLABS_V1",
+ "slabs": {
+  "GF_ROOF_SLAB": {
+   "thickness_labels_cm": {
+    "16": 4
+   },
+   "reinforcement_labels": {
+    "10Ø16": 1,
+    "11Ø18": 2,
+    "3Ø16/Top": 1,
+    "3Ø18": 1,
+    "5Ø10": 2,
+    "5Ø10/m": 35,
+    "6Ø10/m": 12,
+    "6Ø14/m": 1,
+    "7Ø10/m": 6,
+    "7Ø12/m": 1,
+    "8Ø16": 1,
+    "8Ø16/m": 6
+   },
+   "footprint_m2": null,
+   "volume_m3": null,
+   "blocker": "SLAB_OUTLINE_NOT_ESTABLISHED: no closed slab-edge outline with role authority; openings and beam / slab overlap not resolved"
+  },
+  "1F_ROOF_SLAB": {
+   "thickness_labels_cm": {
+    "16": 2
+   },
+   "reinforcement_labels": {
+    "11Ø18": 2,
+    "3Ø18": 1,
+    "5Ø10": 1,
+    "5Ø10/m": 17,
+    "6Ø10/m": 6,
+    "7Ø10/m": 3,
+    "8Ø10/m": 1,
+    "8Ø16": 1,
+    "8Ø16/m": 3
+   },
+   "footprint_m2": null,
+   "volume_m3": null,
+   "blocker": "SLAB_OUTLINE_NOT_ESTABLISHED: no closed slab-edge outline with role authority; openings and beam / slab overlap not resolved"
+  },
+  "2F_ROOF_SLAB": {
+   "thickness_labels_cm": {
+    "18": 2
+   },
+   "reinforcement_labels": {
+    "4Ø16/Top": 1,
+    "5Ø10/m": 7,
+    "5Ø18/Top": 1,
+    "6Ø10/m": 2,
+    "6Ø12/m": 2,
+    "6Ø14/m": 1,
+    "7Ø10/m": 1,
+    "7Ø14/m": 1
+   },
+   "footprint_m2": null,
+   "volume_m3": null,
+   "blocker": "SLAB_OUTLINE_NOT_ESTABLISHED: no closed slab-edge outline with role authority; openings and beam / slab overlap not resolved"
+  }
+ },
+ "double_count_rule": "beams below a slab are measured below the slab soffit only"
+}

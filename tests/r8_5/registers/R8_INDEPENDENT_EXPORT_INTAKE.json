@@ -1,0 +1,384 @@
+{
+ "SCHEMA": "URBAN_R8_INDEPENDENT_EXPORT_INTAKE_V1",
+ "INDEPENDENT_REAL_RECONCILIATION": "BLOCKED_EXTERNAL_INPUT",
+ "requirements_for_the_real_route": {
+  "tool": [
+   "AUTOCAD",
+   "ODA_FILE_CONVERTER"
+  ],
+  "exported_from_sha256": "7f61f3acdd62d62dc745f8b522f8136cb41c575df36ec6d9f27c2fe48fea41e3",
+  "forbidden_operations": [
+   "EDIT",
+   "EXPLODE",
+   "PURGE",
+   "AUDIT",
+   "RESCALE",
+   "CLEAN",
+   "RECOVER",
+   "BIND",
+   "OVERKILL"
+  ],
+  "autocad_2018_dxf_requires": "AC1032",
+  "verification_before_qualification": [
+   "HANDLE_IDENTITY",
+   "ENTITY_CENSUS",
+   "BLOCK_LINEAGE",
+   "CUSTOM_CLASSES",
+   "GEOMETRY"
+  ],
+  "oda_note": "ODA is parser-independent but is NOT assumed to preserve source handles: handle identity, entity census, block lineage, custom classes and geometry are verified from the file"
+ },
+ "sources": [
+  {
+   "file": "b5a96463-P77572.dwg",
+   "role": "ARCHITECTURAL_SOURCE",
+   "sha256": "7f61f3acdd62d62dc745f8b522f8136cb41c575df36ec6d9f27c2fe48fea41e3",
+   "bytes": 2655476,
+   "matches_expected_sha256": true,
+   "use": "primary source"
+  },
+  {
+   "file": "1926bdd8-ST77572.dwg",
+   "role": "STRUCTURAL_SOURCE",
+   "sha256": "3f7a556c69786834c16c355504437b5abcd1f5aa3a9625b33a2c5b14213f0227",
+   "bytes": 491151,
+   "matches_expected_sha256": true,
+   "use": "corroborating structural evidence only"
+  },
+  {
+   "file": "73763f3d-p7757_part_1_pages_1-6.pdf",
+   "role": "SUPPORTING_VISUAL_EVIDENCE",
+   "sha256": "fa1014325242100f099c5a2dcf3499e207721e250c6112ffc74f3891d2edc0f0",
+   "bytes": 19015896,
+   "matches_expected_sha256": null,
+   "use": "supporting visual / document evidence only; never a substitute for the CAD parser route"
+  },
+  {
+   "file": "4028d553-p7757_part_2_pages_7-12.pdf",
+   "role": "SUPPORTING_VISUAL_EVIDENCE",
+   "sha256": "31aab2cc3aba13a210c7f60857743de918a310ffccb82f37a06166c27c79491a",
+   "bytes": 18512838,
+   "matches_expected_sha256": null,
+   "use": "supporting visual / document evidence only; never a substitute for the CAD parser route"
+  },
+  {
+   "file": "cbbbed0b-sanitary-7757.pdf",
+   "role": "SUPPORTING_VISUAL_EVIDENCE",
+   "sha256": "116736870983e63a9bf80e778fe2fc098e333148cce5337190a1ac3398d82596",
+   "bytes": 674366,
+   "matches_expected_sha256": null,
+   "use": "supporting visual / document evidence only; never a substitute for the CAD parser route"
+  },
+  {
+   "file": "811667aa-ST7757.pdf",
+   "role": "SUPPORTING_VISUAL_EVIDENCE",
+   "sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3",
+   "bytes": 2219156,
+   "matches_expected_sha256": null,
+   "use": "supporting visual / document evidence only; never a substitute for the CAD parser route"
+  }
+ ],
+ "exports": [
+  {
+   "file": "cfff361a-P77573.dxf",
+   "role": "ARCHITECTURAL",
+   "bytes": 2800038,
+   "header": {
+    "$ACADVER": "AC1018",
+    "$LASTSAVEDBY": "ezdxf",
+    "$INSUNITS": 4,
+    "$HANDSEED": "4C01"
+   },
+   "admission": {
+    "file_sha256": "3f6839a898abd3977c8a64f14e45d2791eb4733b7519db2906a599d768fa301c",
+    "status": "DIAGNOSTIC_NONQUALIFYING_CONVERSION",
+    "reasons": [
+     "written by 'ezdxf': a library that cannot read DWG; the DWG decoder upstream is not in the file",
+     "declared tool 'AI_CONVERSION (undocumented DWG reader, written with ezdxf)' is not AutoCAD or the ODA File Converter",
+     "export operations not documented: cannot show that nothing was edited, exploded, purged, audited, rescaled or cleaned"
+    ],
+    "writer_in_file": "ezdxf",
+    "declared": {
+     "tool": "AI_CONVERSION (undocumented DWG reader, written with ezdxf)",
+     "tool_version": null,
+     "requested_format": null,
+     "exported_from_sha256": "7f61f3acdd62d62dc745f8b522f8136cb41c575df36ec6d9f27c2fe48fea41e3",
+     "operations": null,
+     "exported_by": "owner-supplied; converted by an AI tool, not AutoCAD",
+     "owner_statement": "kept units in millimetres, matched source CAD version, validated with no audit errors, DIMENSION entities kept editable"
+    },
+    "parser_independence": "NOT_ESTABLISHED",
+    "qualifies_anything": false
+   },
+   "classification": "DIAGNOSTIC_NONQUALIFYING_CONVERSION",
+   "modified": false,
+   "repaired": false,
+   "normalised": false,
+   "diagnostic_verification_against_D1": {
+    "HANDLE_IDENTITY": {
+     "verdict": "NOT_VERIFIED",
+     "compared": 5966,
+     "inconsistent": 5748,
+     "examples": [
+      {
+       "handle": "7D",
+       "d1": [
+        "LWPOLYLINE",
+        "1"
+       ],
+       "dxf": null
+      },
+      {
+       "handle": "81",
+       "d1": [
+        "LWPOLYLINE",
+        "1"
+       ],
+       "dxf": null
+      },
+      {
+       "handle": "82",
+       "d1": [
+        "LWPOLYLINE",
+        "1"
+       ],
+       "dxf": null
+      },
+      {
+       "handle": "83",
+       "d1": [
+        "LWPOLYLINE",
+        "1"
+       ],
+       "dxf": null
+      },
+      {
+       "handle": "84",
+       "d1": [
+        "LWPOLYLINE",
+        "1"
+       ],
+       "dxf": null
+      },
+      {
+       "handle": "85",
+       "d1": [
+        "LINE",
+        "1"
+       ],
+       "dxf": null
+      },
+      {
+       "handle": "86",
+       "d1": [
+        "LINE",
+        "5"
+       ],
+       "dxf": null
+      },
+      {
+       "handle": "8A",
+       "d1": [
+        "LINE",
+        "1"
+       ],
+       "dxf": null
+      },
+      {
+       "handle": "8B",
+       "d1": [
+        "LINE",
+        "1"
+       ],
+       "dxf": null
+      },
+      {
+       "handle": "8C",
+       "d1": [
+        "LINE",
+        "1"
+       ],
+       "dxf": null
+      }
+     ]
+    },
+    "ENTITY_CENSUS": {
+     "verdict": "NOT_VERIFIED",
+     "differing_keys": 46,
+     "examples": [
+      [
+       [
+        "MODEL",
+        "ARC",
+        "4"
+       ],
+       0,
+       3
+      ],
+      [
+       [
+        "MODEL",
+        "ARC",
+        "5"
+       ],
+       34,
+       42
+      ],
+      [
+       [
+        "MODEL",
+        "ARC",
+        "D"
+       ],
+       28,
+       35
+      ],
+      [
+       [
+        "MODEL",
+        "ARC",
+        "TOI"
+       ],
+       0,
+       8
+      ],
+      [
+       [
+        "MODEL",
+        "CIRCLE",
+        "LEVEL"
+       ],
+       0,
+       2
+      ],
+      [
+       [
+        "MODEL",
+        "CIRCLE",
+        "TOI"
+       ],
+       0,
+       6
+      ],
+      [
+       [
+        "MODEL",
+        "DIMENSION",
+        "0"
+       ],
+       0,
+       388
+      ],
+      [
+       [
+        "MODEL",
+        "DIMENSION",
+        "4"
+       ],
+       367,
+       0
+      ],
+      [
+       [
+        "MODEL",
+        "DIMENSION",
+        "D"
+       ],
+       2,
+       0
+      ],
+      [
+       [
+        "MODEL",
+        "DIMENSION",
+        "S-COL.BON"
+       ],
+       19,
+       0
+      ]
+     ]
+    },
+    "BLOCK_LINEAGE": {
+     "verdict": "NOT_VERIFIED",
+     "differing_blocks": 422,
+     "examples": [
+      "*D1",
+      "*D10",
+      "*D100",
+      "*D101",
+      "*D102",
+      "*D103",
+      "*D104",
+      "*D105",
+      "*D106",
+      "*D107"
+     ]
+    },
+    "CUSTOM_CLASSES": {
+     "verdict": "NOT_VERIFIED",
+     "missing": [
+      "ARC_DIMENSION",
+      "RTEXT",
+      "SORTENTSTABLE"
+     ]
+    },
+    "GEOMETRY": {
+     "verdict": "NOT_RUN",
+     "note": "K1-vs-K2 reconciliation runs only after admission"
+    },
+    "handle_keyed_comparison_possible": false
+   },
+   "diagnostic_counts": {
+    "d1_model_entities": 5966,
+    "dxf_model_entities": 10792,
+    "dxf_model_types": {
+     "LINE": 7348,
+     "POINT": 1166,
+     "INSERT": 931,
+     "MTEXT": 389,
+     "DIMENSION": 388,
+     "TEXT": 177,
+     "LWPOLYLINE": 139,
+     "ARC": 109,
+     "HATCH": 90,
+     "CIRCLE": 55
+    }
+   }
+  },
+  {
+   "file": "9ce6e188-ST77573.dxf",
+   "role": "STRUCTURAL",
+   "bytes": 2859483,
+   "header": {
+    "$ACADVER": "AC1027",
+    "$LASTSAVEDBY": "ezdxf",
+    "$INSUNITS": 4,
+    "$HANDSEED": "51DA"
+   },
+   "admission": {
+    "file_sha256": "7ae8ee8dbed8f25c7886014b144940b45c50744c1e54a7ce248395d06bae4b17",
+    "status": "DIAGNOSTIC_NONQUALIFYING_CONVERSION",
+    "reasons": [
+     "written by 'ezdxf': a library that cannot read DWG; the DWG decoder upstream is not in the file",
+     "declared tool 'AI_CONVERSION (undocumented DWG reader, written with ezdxf)' is not AutoCAD or the ODA File Converter",
+     "export operations not documented: cannot show that nothing was edited, exploded, purged, audited, rescaled or cleaned"
+    ],
+    "writer_in_file": "ezdxf",
+    "declared": {
+     "tool": "AI_CONVERSION (undocumented DWG reader, written with ezdxf)",
+     "tool_version": null,
+     "requested_format": null,
+     "exported_from_sha256": "3f7a556c69786834c16c355504437b5abcd1f5aa3a9625b33a2c5b14213f0227",
+     "operations": null,
+     "exported_by": "owner-supplied; converted by an AI tool, not AutoCAD"
+    },
+    "parser_independence": "NOT_ESTABLISHED",
+    "qualifies_anything": false
+   },
+   "classification": "DIAGNOSTIC_NONQUALIFYING_CONVERSION",
+   "modified": false,
+   "repaired": false,
+   "normalised": false
+  }
+ ]
+}

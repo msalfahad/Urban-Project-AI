@@ -1,0 +1,117 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_V3B_MISMATCH_REGISTER_V1",
+ "tolerance": 0.1,
+ "cases": [
+  {
+   "case": "MM-01",
+   "benchmark": "SKIRTING / ALL",
+   "classification": "SCOPE",
+   "classification_basis": "pre-declared candidate cause (written before the comparison), not proven",
+   "urban_evidence": "['Skirting'] technical 312.300 / commercial 312.300 lm",
+   "benchmark_evidence": "cover total 282.85 lm (STATED)",
+   "diff_commercial_pct": 10.4,
+   "inspect_next": "wet rooms carry no skirting in V3b (full tile)",
+   "against": "FREELANCER (B1 cover totals)"
+  },
+  {
+   "case": "MM-02",
+   "benchmark": "WALL_TILE / WET_ROOMS",
+   "classification": "OPENING DEDUCTION",
+   "classification_basis": "pre-declared candidate cause (written before the comparison), not proven",
+   "urban_evidence": "['Wall tile (net)'] technical 26.360 / commercial 369.123 m²",
+   "benchmark_evidence": "cover total 433.83 m² (STATED)",
+   "diff_commercial_pct": -14.9,
+   "inspect_next": "V3b is NET of openings + reveals; check the benchmark tile height and deduction rule",
+   "against": "FREELANCER (B1 cover totals)"
+  },
+  {
+   "case": "MM-03",
+   "benchmark": "WATERPROOFING / WET_ROOM:FLOOR",
+   "classification": "SCOPE",
+   "classification_basis": "pre-declared candidate cause (written before the comparison), not proven",
+   "urban_evidence": "['WP floor'] technical 58.237 / commercial 58.237 m²",
+   "benchmark_evidence": "cover total 72.01 m² (STATED)",
+   "diff_commercial_pct": -19.1,
+   "inspect_next": "V3b floor m2 only (upturn split into lm); check the benchmark room list",
+   "against": "FREELANCER (B1 cover totals)"
+  },
+  {
+   "case": "MM-04",
+   "benchmark": "WATERPROOFING / ROOF:FLOOR",
+   "classification": "HEIGHT",
+   "classification_basis": "pre-declared candidate cause (written before the comparison), not proven",
+   "urban_evidence": "['Roof waterproofing'] technical 364.031 / commercial 364.031 m²",
+   "benchmark_evidence": "cover total 285.0 m² (STATED)",
+   "diff_commercial_pct": 27.7,
+   "inspect_next": "V3b includes a 0.20 upturn area; benchmark lists the upturn separately in lm",
+   "against": "FREELANCER (B1 cover totals)"
+  },
+  {
+   "case": "MM-05",
+   "benchmark": "RAILING / INTERNAL",
+   "classification": "MISSING POPULATION",
+   "classification_basis": "pre-declared candidate cause (written before the comparison), not proven",
+   "urban_evidence": "['Gallery railing'] technical 14.290 / commercial 14.290 lm",
+   "benchmark_evidence": "cover total 18.95 lm (STATED)",
+   "diff_commercial_pct": -24.6,
+   "inspect_next": "stair handrail is in a separate provisional V3b line (S-RAIL)",
+   "against": "FREELANCER (B1 cover totals)"
+  },
+  {
+   "case": "MM-06",
+   "benchmark": "BLOCKWORK / ALL",
+   "classification": "OPENING DEDUCTION",
+   "classification_basis": "pre-declared candidate cause (written before the comparison), not proven",
+   "urban_evidence": "['Blockwork 200 mm', 'Blockwork 150 mm', 'Blockwork OVER OPENINGS', 'Parapet blockwork'] technical 703.024 / commercial 801.075 m²",
+   "benchmark_evidence": "cover total 1260.6895 m² (STATED)",
+   "diff_commercial_pct": -36.5,
+   "inspect_next": "V3b measures wall pieces between openings + over / below openings; boundary wall separate",
+   "against": "FREELANCER (B1 cover totals)"
+  },
+  {
+   "case": "MM-07",
+   "benchmark": "PLASTER / INTERNAL_WALL",
+   "classification": "PAYABLE vs TECHNICAL",
+   "classification_basis": "pre-declared candidate cause (written before the comparison), not proven",
+   "urban_evidence": "['Rough plaster'] technical 0.000 / commercial 1367.565 m²",
+   "benchmark_evidence": "cover total 1151.1375 m² (INFERRED_FROM_TRADE (B1 unit cell blank))",
+   "diff_commercial_pct": 18.8,
+   "inspect_next": "V3b dry rooms only (wet faces = spatter + tile prep, OD-V3B-4), NET of openings; plaster to the soffit",
+   "against": "FREELANCER (B1 cover totals)"
+  },
+  {
+   "case": "MM-08",
+   "benchmark": "BLINDING / PLAIN",
+   "classification": "SCOPE",
+   "classification_basis": "pre-declared candidate cause (written before the comparison), not proven",
+   "urban_evidence": "['Plain concrete (blinding)'] technical 29.623 / commercial 29.623 m³",
+   "benchmark_evidence": "cover total 47.05500000000001 m³ (STATED)",
+   "diff_commercial_pct": -37.0,
+   "inspect_next": "V3b = owner full-footprint method (OD-V3B-1); local detail alternative published",
+   "against": "FREELANCER (B1 cover totals)"
+  },
+  {
+   "case": "MM-09",
+   "benchmark": "OTHER_CONCRETE / ALL_REINFORCED",
+   "classification": "MISSING POPULATION",
+   "classification_basis": "pre-declared candidate cause (written before the comparison), not proven",
+   "urban_evidence": "['Reinforced concrete'] technical 253.217 / commercial 316.058 m³",
+   "benchmark_evidence": "cover total 352.436075 m³ (STATED)",
+   "diff_commercial_pct": -10.3,
+   "inspect_next": "residue / provisional items (necks, exterior GB, stairs) are commercial only",
+   "against": "FREELANCER (B1 cover totals)"
+  },
+  {
+   "case": "MM-10",
+   "benchmark": "REBAR / ALL",
+   "classification": "PROCUREMENT vs NET",
+   "classification_basis": "pre-declared candidate cause (written before the comparison), not proven",
+   "urban_evidence": "['Rebar - net design weight (straight + hooks)'] technical 20.651 / commercial 26.240 t",
+   "benchmark_evidence": "cover total 44.19 t (STATED)",
+   "diff_commercial_pct": -40.6,
+   "inspect_next": "V3b NET excludes laps and waste; compare with R-BBS purchased; check the benchmark kg/m3 basis",
+   "against": "FREELANCER (B1 cover totals)"
+  }
+ ],
+ "rule": "one MISMATCH_CASE per comparison beyond tolerance; classification = pre-declared candidate (SCOPE / UNIT / MATERIAL / REVISION / GEOMETRY / OPENING DEDUCTION / HEIGHT / MISSING POPULATION / PROCUREMENT vs NET / PAYABLE vs TECHNICAL / BENCHMARK ERROR / URBAN ENGINE ERROR / UNRESOLVED)"
+}

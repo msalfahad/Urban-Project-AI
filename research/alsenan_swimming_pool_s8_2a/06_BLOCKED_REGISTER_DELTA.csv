@@ -1,0 +1,10 @@
+BLOCKED_ID,S8_2_REASON,S8_2A_REASON,STATE
+CQ-04:WALL_HEIGHT,wall height above the base top ('AS PER ARCH' 1931 / 1993; varies from the deep to the shallow end),"wall top +0.30 established (NW elevation); the base top under this run is not: the elevation states 1.15 at one plane and draws a flat floor, the structural detail draws deep / slope / shallow",STILL_BLOCKED (narrowed)
+CQ-05:WALL_HEIGHT,wall height above the base top ('AS PER ARCH' 1931 / 1993; varies from the deep to the shallow end),"wall top +0.30 established (NW elevation); the base top under this run is not: the elevation states 1.15 at one plane and draws a flat floor, the structural detail draws deep / slope / shallow",STILL_BLOCKED (narrowed)
+CQ-06:WALL_HEIGHT,wall height above the base top ('AS PER ARCH' 1931 / 1993; varies from the deep to the shallow end),"wall top +0.30 established (NW elevation); the base top under this run is not: the elevation states 1.15 at one plane and draws a flat floor, the structural detail draws deep / slope / shallow",STILL_BLOCKED (narrowed)
+CQ-07:WALL_HEIGHT,wall height above the base top ('AS PER ARCH' 1931 / 1993; varies from the deep to the shallow end),"wall top +0.30 established (NW elevation); the base top under this run is not: the elevation states 1.15 at one plane and draws a flat floor, the structural detail draws deep / slope / shallow",STILL_BLOCKED (narrowed)
+CQ-01:PL-BASE-DEEP,plan extent of the deep zone,plan extent of the deep zone (no new evidence),STILL_BLOCKED (unchanged)
+CQ-02:PL-BASE-SLOPE,"plan extent, rise, thickness","plan extent, rise, thickness (no new evidence)",STILL_BLOCKED (unchanged)
+CQ-03:PL-BASE-SHALLOW,"plan extent, thickness","plan extent, thickness (no new evidence)",STILL_BLOCKED (unchanged)
+ALL_FAMILIES:BAR_RUN_AND_WIDTH,distribution width / bar run not established,unchanged for the base; for the walls the top is known but the height by run is not,STILL_BLOCKED
+ALL_FAMILIES:LAPS_ANCHORAGE_BENDS,drawn only on the NTS detail,unchanged: an architectural elevation carries no bar detail,STILL_BLOCKED

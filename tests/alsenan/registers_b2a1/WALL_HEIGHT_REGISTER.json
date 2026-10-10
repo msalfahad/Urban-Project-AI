@@ -1,0 +1,4694 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_B2A_WALL_HEIGHT_V1",
+ "policy": {
+  "policy_id": "ARCHITECTURAL_FINISH_HEIGHT_V1",
+  "ceiling_allowance_m": 0.15,
+  "quantities": [
+   "BLOCKWORK",
+   "PLASTER",
+   "PAINT",
+   "WALL_TILE"
+  ],
+  "terminations": [
+   "BEAM_SOFFIT",
+   "SLAB_SOFFIT",
+   "UNKNOWN"
+  ],
+  "never": [
+   "a hard-coded paint height",
+   "a fixed 3.00 m wet tile",
+   "a structural value written from a finish"
+  ],
+  "digest": "fe80f997cf2707b36b97e5e165d7b2a83ca1014e8c1efd70cede0ed529223afb"
+ },
+ "rows": [
+  {
+   "floor": "GF",
+   "site": "SITE-88d9dbffd47c417a",
+   "room": "KITCHEN",
+   "wet": true,
+   "room_controlling_soffit_cm": 75,
+   "faces": [
+    {
+     "edge": 0,
+     "length_m": 0.05,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 1,
+     "length_m": 0.4,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 2,
+     "length_m": 0.55,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "CB6",
+      "D_cm": 75
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "basis": "interval - CB6 75 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 2.0625
+    },
+    {
+     "edge": 4,
+     "length_m": 1.4,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "CB6",
+      "D_cm": 75
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "basis": "interval - CB6 75 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 5.25
+    },
+    {
+     "edge": 6,
+     "length_m": 0.6,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "CB6",
+      "D_cm": 75
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "basis": "interval - CB6 75 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 2.25
+    },
+    {
+     "edge": 7,
+     "length_m": 3.0,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 8,
+     "length_m": 1.65,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 7.161
+    },
+    {
+     "edge": 9,
+     "length_m": 1.5,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 10,
+     "length_m": 1.05,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "CB7",
+      "D_cm": 75
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "basis": "interval - CB7 75 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 3.9375
+    },
+    {
+     "edge": 11,
+     "length_m": 0.1,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "B1",
+      "D_cm": 40.0
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.1,
+       "state": "COMPUTED",
+       "basis": "interval - B1 40.0 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.1,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 0.41
+    },
+    {
+     "edge": 12,
+     "length_m": 1.0,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "B1",
+      "D_cm": 40.0
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.1,
+       "state": "COMPUTED",
+       "basis": "interval - B1 40.0 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.1,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 4.1
+    },
+    {
+     "edge": 13,
+     "length_m": 0.2,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "B1",
+      "D_cm": 40.0
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.1,
+       "state": "COMPUTED",
+       "basis": "interval - B1 40.0 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.1,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 0.82
+    },
+    {
+     "edge": 15,
+     "length_m": 0.5,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 2.17
+    },
+    {
+     "edge": 17,
+     "length_m": 2.3,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "B1",
+      "D_cm": 40.0
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.1,
+       "state": "COMPUTED",
+       "basis": "interval - B1 40.0 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.1,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 9.43
+    }
+   ],
+   "faces_terminated": 10,
+   "faces_total": 14,
+   "plaster_gross_computed_faces_m2": 37.591,
+   "faces_blocked": [
+    0,
+    1,
+    7,
+    9
+   ],
+   "room_plaster_state": "PARTIAL (blocked faces listed; never totalled as the room)",
+   "paint": "BLOCKED_FLOOR_BUILDUP",
+   "wall_tile": "BLOCKED_FLOOR_BUILDUP"
+  },
+  {
+   "floor": "GF",
+   "site": "SITE-9810548752edbe40",
+   "room": "W.C",
+   "wet": true,
+   "room_controlling_soffit_cm": 40.0,
+   "faces": [
+    {
+     "edge": 0,
+     "length_m": 0.143546,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "B1",
+      "D_cm": 40.0
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.1,
+       "state": "COMPUTED",
+       "basis": "interval - B1 40.0 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.1,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 0.58854
+    },
+    {
+     "edge": 1,
+     "length_m": 0.867238,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 2,
+     "length_m": 0.8,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 3,
+     "length_m": 0.060737,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 4,
+     "length_m": 2.355244,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 5,
+     "length_m": 2.887272,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 6,
+     "length_m": 0.3,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "B1",
+      "D_cm": 40.0
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.1,
+       "state": "COMPUTED",
+       "basis": "interval - B1 40.0 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.1,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 1.23
+    }
+   ],
+   "faces_terminated": 2,
+   "faces_total": 7,
+   "plaster_gross_computed_faces_m2": 1.81854,
+   "faces_blocked": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "room_plaster_state": "PARTIAL (blocked faces listed; never totalled as the room)",
+   "paint": "BLOCKED_FLOOR_BUILDUP",
+   "wall_tile": "BLOCKED_FLOOR_BUILDUP"
+  },
+  {
+   "floor": "GF",
+   "site": "SITE-9b585230d0877a35",
+   "room": "W.C",
+   "wet": true,
+   "room_controlling_soffit_cm": 75,
+   "faces": [
+    {
+     "edge": 0,
+     "length_m": 1.5,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "CB7",
+      "D_cm": 75
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "basis": "interval - CB7 75 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 5.625
+    },
+    {
+     "edge": 1,
+     "length_m": 1.3,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 2,
+     "length_m": 1.5,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 6.51
+    },
+    {
+     "edge": 3,
+     "length_m": 0.070267,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 0.304959
+    },
+    {
+     "edge": 4,
+     "length_m": 0.8,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 3.472
+    },
+    {
+     "edge": 5,
+     "length_m": 0.429733,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": null
+    }
+   ],
+   "faces_terminated": 4,
+   "faces_total": 6,
+   "plaster_gross_computed_faces_m2": 15.911959,
+   "faces_blocked": [
+    1,
+    5
+   ],
+   "room_plaster_state": "PARTIAL (blocked faces listed; never totalled as the room)",
+   "paint": "BLOCKED_FLOOR_BUILDUP",
+   "wall_tile": "BLOCKED_FLOOR_BUILDUP"
+  },
+  {
+   "floor": "GF",
+   "site": "SITE-ce2d2c3a4b7da280",
+   "room": "W.C",
+   "wet": true,
+   "room_controlling_soffit_cm": 40.0,
+   "faces": [
+    {
+     "edge": 0,
+     "length_m": 0.230893,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "B2",
+      "D_cm": 40.0
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.1,
+       "state": "COMPUTED",
+       "basis": "interval - B2 40.0 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.1,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 0.94666
+    },
+    {
+     "edge": 1,
+     "length_m": 1.45,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "B2",
+      "D_cm": 40.0
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.1,
+       "state": "COMPUTED",
+       "basis": "interval - B2 40.0 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.1,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 5.945
+    },
+    {
+     "edge": 2,
+     "length_m": 0.052961,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 3,
+     "length_m": 0.797039,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 3.45915
+    },
+    {
+     "edge": 4,
+     "length_m": 0.5,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 2.17
+    },
+    {
+     "edge": 5,
+     "length_m": 1.75,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 7.595
+    },
+    {
+     "edge": 6,
+     "length_m": 0.375,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 1.6275
+    },
+    {
+     "edge": 8,
+     "length_m": 0.5,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 2.17
+    },
+    {
+     "edge": 10,
+     "length_m": 0.334677,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 1.452497
+    },
+    {
+     "edge": 12,
+     "length_m": 0.069107,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "B2",
+      "D_cm": 40.0
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.1,
+       "state": "COMPUTED",
+       "basis": "interval - B2 40.0 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.1,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 0.28334
+    }
+   ],
+   "faces_terminated": 9,
+   "faces_total": 10,
+   "plaster_gross_computed_faces_m2": 25.649147,
+   "faces_blocked": [
+    2
+   ],
+   "room_plaster_state": "PARTIAL (blocked faces listed; never totalled as the room)",
+   "paint": "BLOCKED_FLOOR_BUILDUP",
+   "wall_tile": "BLOCKED_FLOOR_BUILDUP"
+  },
+  {
+   "floor": "GF",
+   "site": "SITE-dda89794d15dfb61",
+   "room": "MASTER BED ROOM",
+   "wet": false,
+   "room_controlling_soffit_cm": 75.0,
+   "faces": [
+    {
+     "edge": 0,
+     "length_m": 0.5,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 2,
+     "length_m": 0.97,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 4.2098
+    },
+    {
+     "edge": 3,
+     "length_m": 2.15,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 4,
+     "length_m": 0.15,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.651
+    },
+    {
+     "edge": 6,
+     "length_m": 0.8,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 3.472
+    },
+    {
+     "edge": 7,
+     "length_m": 0.372664,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 1.617361
+    },
+    {
+     "edge": 8,
+     "length_m": 1.256041,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 5.451218
+    },
+    {
+     "edge": 9,
+     "length_m": 0.961845,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 4.174406
+    },
+    {
+     "edge": 10,
+     "length_m": 0.559057,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 2.426309
+    },
+    {
+     "edge": 11,
+     "length_m": 1.0,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 4.34
+    },
+    {
+     "edge": 12,
+     "length_m": 1.260943,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 13,
+     "length_m": 0.1,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "B13",
+      "D_cm": 75.0
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "basis": "interval - B13 75.0 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.375
+    },
+    {
+     "edge": 14,
+     "length_m": 1.0,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 15,
+     "length_m": 0.1,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "B17",
+      "D_cm": 75.0
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "basis": "interval - B17 75.0 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.375
+    },
+    {
+     "edge": 16,
+     "length_m": 1.762863,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "B17",
+      "D_cm": 75.0
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "basis": "interval - B17 75.0 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 6.610736
+    },
+    {
+     "edge": 17,
+     "length_m": 0.217762,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "B17",
+      "D_cm": 75.0
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "basis": "interval - B17 75.0 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.816608
+    },
+    {
+     "edge": 18,
+     "length_m": 0.217762,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 19,
+     "length_m": 0.217762,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.945088
+    },
+    {
+     "edge": 20,
+     "length_m": 0.217762,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.945088
+    },
+    {
+     "edge": 21,
+     "length_m": 0.217762,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.945088
+    },
+    {
+     "edge": 22,
+     "length_m": 0.217762,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.945088
+    },
+    {
+     "edge": 23,
+     "length_m": 0.217762,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.945088
+    },
+    {
+     "edge": 24,
+     "length_m": 0.217762,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.945088
+    },
+    {
+     "edge": 25,
+     "length_m": 0.217762,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.945088
+    },
+    {
+     "edge": 26,
+     "length_m": 0.217762,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.945088
+    },
+    {
+     "edge": 27,
+     "length_m": 0.217762,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.945088
+    },
+    {
+     "edge": 28,
+     "length_m": 0.217762,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.945088
+    },
+    {
+     "edge": 29,
+     "length_m": 0.217762,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.945088
+    },
+    {
+     "edge": 30,
+     "length_m": 0.217762,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.945088
+    },
+    {
+     "edge": 31,
+     "length_m": 0.217762,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.945088
+    },
+    {
+     "edge": 32,
+     "length_m": 0.217762,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.945088
+    },
+    {
+     "edge": 33,
+     "length_m": 0.217762,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.945088
+    },
+    {
+     "edge": 34,
+     "length_m": 0.217762,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.945088
+    },
+    {
+     "edge": 35,
+     "length_m": 0.217762,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.945088
+    },
+    {
+     "edge": 36,
+     "length_m": 0.217762,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 37,
+     "length_m": 0.217762,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "B24",
+      "D_cm": 75.0
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "basis": "interval - B24 75.0 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.816608
+    },
+    {
+     "edge": 38,
+     "length_m": 0.217762,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "B24",
+      "D_cm": 75.0
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "basis": "interval - B24 75.0 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.816608
+    },
+    {
+     "edge": 39,
+     "length_m": 0.217762,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "B24",
+      "D_cm": 75.0
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "basis": "interval - B24 75.0 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.816608
+    },
+    {
+     "edge": 40,
+     "length_m": 0.091681,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "B24",
+      "D_cm": 75.0
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "basis": "interval - B24 75.0 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.343804
+    },
+    {
+     "edge": 41,
+     "length_m": 3.35,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "B24",
+      "D_cm": 75.0
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "basis": "interval - B24 75.0 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 12.5625
+    }
+   ],
+   "faces_terminated": 34,
+   "faces_total": 40,
+   "plaster_gross_computed_faces_m2": 65.942062,
+   "faces_blocked": [
+    0,
+    3,
+    12,
+    14,
+    18,
+    36
+   ],
+   "room_plaster_state": "PARTIAL (blocked faces listed; never totalled as the room)",
+   "paint": "BLOCKED_FLOOR_BUILDUP",
+   "wall_tile": "NOT_APPLICABLE"
+  },
+  {
+   "floor": "GF",
+   "site": "SITE-eac7a1be6566b2d0",
+   "room": "W.C",
+   "wet": true,
+   "room_controlling_soffit_cm": 75,
+   "faces": [
+    {
+     "edge": 0,
+     "length_m": 1.5,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "CB7",
+      "D_cm": 75
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "basis": "interval - CB7 75 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.75,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 5.625
+    },
+    {
+     "edge": 1,
+     "length_m": 2.25,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 2,
+     "length_m": 0.626385,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 2.718511
+    },
+    {
+     "edge": 3,
+     "length_m": 0.8,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.34,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 3.472
+    },
+    {
+     "edge": 4,
+     "length_m": 0.073615,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 5,
+     "length_m": 2.25,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "B4",
+      "D_cm": 50.0
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.5,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.0,
+       "state": "COMPUTED",
+       "basis": "interval - B4 50.0 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.0,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 9.0
+    }
+   ],
+   "faces_terminated": 4,
+   "faces_total": 6,
+   "plaster_gross_computed_faces_m2": 20.815511,
+   "faces_blocked": [
+    1,
+    4
+   ],
+   "room_plaster_state": "PARTIAL (blocked faces listed; never totalled as the room)",
+   "paint": "BLOCKED_FLOOR_BUILDUP",
+   "wall_tile": "BLOCKED_FLOOR_BUILDUP"
+  },
+  {
+   "floor": "1F",
+   "site": "SITE-16f76cd141ed8273",
+   "room": "BATH",
+   "wet": true,
+   "room_controlling_soffit_cm": 50.0,
+   "faces": [
+    {
+     "edge": 0,
+     "length_m": 0.3,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 1,
+     "length_m": 0.725,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "B4",
+      "D_cm": 50.0
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.7,
+       "state": "COMPUTED",
+       "basis": "interval - B4 50.0 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.7,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 2.6825
+    },
+    {
+     "edge": 3,
+     "length_m": 0.5,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "B4",
+      "D_cm": 50.0
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.7,
+       "state": "COMPUTED",
+       "basis": "interval - B4 50.0 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.7,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 1.85
+    },
+    {
+     "edge": 5,
+     "length_m": 0.725,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "B4",
+      "D_cm": 50.0
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.7,
+       "state": "COMPUTED",
+       "basis": "interval - B4 50.0 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.7,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 2.6825
+    },
+    {
+     "edge": 6,
+     "length_m": 2.45,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 7,
+     "length_m": 0.077167,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "neither a beam nor a closed slab plate is over the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 8,
+     "length_m": 0.8,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "neither a beam nor a closed slab plate is over the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 9,
+     "length_m": 1.172833,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "neither a beam nor a closed slab plate is over the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 10,
+     "length_m": 2.15,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.04,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.04,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 8.686
+    }
+   ],
+   "faces_terminated": 4,
+   "faces_total": 9,
+   "plaster_gross_computed_faces_m2": 15.901,
+   "faces_blocked": [
+    0,
+    6,
+    7,
+    8,
+    9
+   ],
+   "room_plaster_state": "PARTIAL (blocked faces listed; never totalled as the room)",
+   "paint": "BLOCKED_FLOOR_BUILDUP",
+   "wall_tile": "BLOCKED_FLOOR_BUILDUP"
+  },
+  {
+   "floor": "1F",
+   "site": "SITE-2f6cf2b5bebbd966",
+   "room": "BATH",
+   "wet": true,
+   "room_controlling_soffit_cm": 75,
+   "faces": [
+    {
+     "edge": 0,
+     "length_m": 0.275,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "CB12",
+      "D_cm": 75
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.45,
+       "state": "COMPUTED",
+       "basis": "interval - CB12 75 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.45,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 0.94875
+    },
+    {
+     "edge": 1,
+     "length_m": 0.867302,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "CB12",
+      "D_cm": 75
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.45,
+       "state": "COMPUTED",
+       "basis": "interval - CB12 75 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.45,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 2.992192
+    },
+    {
+     "edge": 4,
+     "length_m": 0.4,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "CB12",
+      "D_cm": 75
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.45,
+       "state": "COMPUTED",
+       "basis": "interval - CB12 75 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.45,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 1.38
+    },
+    {
+     "edge": 5,
+     "length_m": 0.05,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "CB12",
+      "D_cm": 75
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.45,
+       "state": "COMPUTED",
+       "basis": "interval - CB12 75 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.45,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 0.1725
+    },
+    {
+     "edge": 6,
+     "length_m": 0.457698,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "CB12",
+      "D_cm": 75
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.45,
+       "state": "COMPUTED",
+       "basis": "interval - CB12 75 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.45,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 1.579058
+    },
+    {
+     "edge": 7,
+     "length_m": 2.25,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 8,
+     "length_m": 0.10926,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.04,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.04,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 0.441411
+    },
+    {
+     "edge": 9,
+     "length_m": 0.8,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 10,
+     "length_m": 1.19074,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 11,
+     "length_m": 2.25,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": null
+    }
+   ],
+   "faces_terminated": 6,
+   "faces_total": 10,
+   "plaster_gross_computed_faces_m2": 7.513911,
+   "faces_blocked": [
+    7,
+    9,
+    10,
+    11
+   ],
+   "room_plaster_state": "PARTIAL (blocked faces listed; never totalled as the room)",
+   "paint": "BLOCKED_FLOOR_BUILDUP",
+   "wall_tile": "BLOCKED_FLOOR_BUILDUP"
+  },
+  {
+   "floor": "1F",
+   "site": "SITE-3cde308552cf977c",
+   "room": "MASTER BED ROOM",
+   "wet": false,
+   "room_controlling_soffit_cm": 75.0,
+   "faces": [
+    {
+     "edge": 0,
+     "length_m": 1.0,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 1,
+     "length_m": 1.575,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "B5",
+      "D_cm": 50.0
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.7,
+       "state": "COMPUTED",
+       "basis": "interval - B5 50.0 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.7,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 5.8275
+    },
+    {
+     "edge": 2,
+     "length_m": 0.5,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 3,
+     "length_m": 1.0,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.04,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.04,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 4.04
+    },
+    {
+     "edge": 4,
+     "length_m": 2.3,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.04,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.04,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 9.292
+    },
+    {
+     "edge": 5,
+     "length_m": 4.3,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 6,
+     "length_m": 2.842767,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 7,
+     "length_m": 0.9,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 8,
+     "length_m": 0.057233,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.04,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.04,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": 0.231221
+    },
+    {
+     "edge": 9,
+     "length_m": 1.725,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": true
+      },
+      "WALL_TILE": {
+       "height_m": 0.0,
+       "state": "NOT_APPLICABLE (dry room)"
+      }
+     },
+     "plaster_gross_m2": null
+    }
+   ],
+   "faces_terminated": 4,
+   "faces_total": 10,
+   "plaster_gross_computed_faces_m2": 19.390721,
+   "faces_blocked": [
+    0,
+    2,
+    5,
+    6,
+    7,
+    9
+   ],
+   "room_plaster_state": "PARTIAL (blocked faces listed; never totalled as the room)",
+   "paint": "BLOCKED_FLOOR_BUILDUP",
+   "wall_tile": "NOT_APPLICABLE"
+  },
+  {
+   "floor": "1F",
+   "site": "SITE-cdc894c0f0fd69c9",
+   "room": "BATH",
+   "wet": true,
+   "room_controlling_soffit_cm": 50,
+   "faces": [
+    {
+     "edge": 1,
+     "length_m": 0.45,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.04,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.04,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 1.818
+    },
+    {
+     "edge": 2,
+     "length_m": 1.75,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.04,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.04,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 7.07
+    },
+    {
+     "edge": 3,
+     "length_m": 2.0,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.04,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.04,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 8.08
+    },
+    {
+     "edge": 4,
+     "length_m": 0.10926,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.04,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.04,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 0.441411
+    },
+    {
+     "edge": 5,
+     "length_m": 0.8,
+     "termination": {
+      "type": "SLAB_SOFFIT",
+      "member": "SLAB",
+      "D_cm": 16
+     },
+     "heights": {
+      "termination": "SLAB_SOFFIT",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 4.04,
+       "state": "COMPUTED",
+       "basis": "interval - SLAB 16 cm"
+      },
+      "PLASTER": {
+       "height_m": 4.04,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 3.232
+    },
+    {
+     "edge": 6,
+     "length_m": 0.89074,
+     "termination": {
+      "type": "UNKNOWN",
+      "why": "a band covers only part of the wall line",
+      "D_cm": null
+     },
+     "heights": {
+      "termination": "UNKNOWN",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PLASTER": {
+       "height_m": null,
+       "state": "BLOCKED_TERMINATION_UNKNOWN"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": null
+    },
+    {
+     "edge": 7,
+     "length_m": 0.55,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "CB9",
+      "D_cm": 50
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.7,
+       "state": "COMPUTED",
+       "basis": "interval - CB9 50 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.7,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 2.035
+    },
+    {
+     "edge": 8,
+     "length_m": 0.05,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "CB9",
+      "D_cm": 50
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.7,
+       "state": "COMPUTED",
+       "basis": "interval - CB9 50 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.7,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 0.185
+    },
+    {
+     "edge": 9,
+     "length_m": 0.5,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "CB9",
+      "D_cm": 50
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.7,
+       "state": "COMPUTED",
+       "basis": "interval - CB9 50 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.7,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 1.85
+    },
+    {
+     "edge": 10,
+     "length_m": 0.05,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "CB9",
+      "D_cm": 50
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.7,
+       "state": "COMPUTED",
+       "basis": "interval - CB9 50 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.7,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 0.185
+    },
+    {
+     "edge": 11,
+     "length_m": 0.4,
+     "termination": {
+      "type": "BEAM_SOFFIT",
+      "member": "CB9",
+      "D_cm": 50
+     },
+     "heights": {
+      "termination": "BEAM_SOFFIT",
+      "interval_m": 4.2,
+      "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+      "BLOCKWORK": {
+       "height_m": 3.7,
+       "state": "COMPUTED",
+       "basis": "interval - CB9 50 cm"
+      },
+      "PLASTER": {
+       "height_m": 3.7,
+       "state": "COMPUTED",
+       "method": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1"
+      },
+      "PAINT": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "applies": false
+      },
+      "WALL_TILE": {
+       "height_m": null,
+       "state": "BLOCKED_FLOOR_BUILDUP",
+       "formula": "interval - build-up above - D_ctrl - 0.150",
+       "method": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+      }
+     },
+     "plaster_gross_m2": 1.48
+    }
+   ],
+   "faces_terminated": 10,
+   "faces_total": 11,
+   "plaster_gross_computed_faces_m2": 26.376411,
+   "faces_blocked": [
+    6
+   ],
+   "room_plaster_state": "PARTIAL (blocked faces listed; never totalled as the room)",
+   "paint": "BLOCKED_FLOOR_BUILDUP",
+   "wall_tile": "BLOCKED_FLOOR_BUILDUP"
+  }
+ ],
+ "paint_blocker": "floor build-up above each storey is not in the source (owner action)",
+ "net_of_openings": "BLOCKED (opening heights are blocked; gross face areas published)",
+ "mbr": {
+  "site": "SITE-dda89794d15dfb61",
+  "a3_status": "REVIEW_REQUIRED",
+  "a3_issues": [
+   "TOPOLOGY_ROLE_UNRESOLVED"
+  ],
+  "unknown_parts": [
+   "ALSENAN_P7757_DXF|H751||SEGMENT|0",
+   "ALSENAN_P7757_DXF|H753||SEGMENT|0",
+   "ALSENAN_P7757_DXF|H815||SEGMENT|0",
+   "ALSENAN_P7757_DXF|H816||SEGMENT|0"
+  ],
+  "released": [
+   {
+    "part": "ALSENAN_P7757_DXF|H751||SEGMENT|0",
+    "role": "WARDROBE_FRONT",
+    "fact": "OF-B2A-C",
+    "length_mm": 1461.8,
+    "depth_from_room_face_mm": 500.0
+   },
+   {
+    "part": "ALSENAN_P7757_DXF|H753||SEGMENT|0",
+    "role": "WARDROBE_DIAGONAL (symbol)",
+    "fact": "OF-B2A-C",
+    "length_mm": 1545.0
+   },
+   {
+    "part": "ALSENAN_P7757_DXF|H815||SEGMENT|0",
+    "role": "DOOR_FRAME_TICK",
+    "rule": "door layer, <= 200 mm, at a jamb end of a closed door's closure line",
+    "closure": "CLOSURE|E820|B",
+    "length_mm": 50.0
+   },
+   {
+    "part": "ALSENAN_P7757_DXF|H816||SEGMENT|0",
+    "role": "DOOR_FRAME_TICK",
+    "rule": "door layer, <= 200 mm, at a jamb end of a closed door's closure line",
+    "closure": "CLOSURE|E820|B",
+    "length_mm": 50.0
+   }
+  ],
+  "residual_unknown": [],
+  "state": "CERTIFIED_WITH_OWNER_FACT",
+  "floor_area_m2": 16.54964,
+  "candidate_area_m2": 16.54964,
+  "perimeter_m": 21.534453,
+  "wardrobe_treatment": "FIXED_JOINERY: floor finish continues under it (URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1); no wall face, no partition, no area deduction; wall finish behind it not deducted (no rule)"
+ },
+ "gf_open_site": {
+  "owner_fact": "OF-B2A-A",
+  "zone_labels": [
+   "SALOON",
+   "RECEPTION",
+   "DINING"
+  ],
+  "sites_holding_labels": [],
+  "state": "NOT_CLOSED (no certified site holds the zone labels)",
+  "rule": "no wall is invented between the zones and no exterior door is invented at the entry (OF-B2A-A, section 16); the open zone closes only from source boundaries",
+  "exterior_entry": "UNRESOLVED (no door / screen in the source at the entry; none invented)"
+ },
+ "reception": {
+  "owner_fact": "OF-B2A-B",
+  "registration": "REGISTERED",
+  "labels": 1,
+  "state": "REGION_FROM_SLAB_OPENING",
+  "label_on_slab_sheet": [
+   64027.841,
+   40796.44
+  ],
+  "area_m2": 27.075767,
+  "perimeter_m": 25.01263,
+  "region": {
+   "kind": "DOUBLE_HEIGHT_FINISH_REGION",
+   "plan_span": "GF ROOF SLAB opening (VOID) holding the projected RECEPTION label",
+   "area_m2": 27.075767,
+   "span_state": "COMPUTED",
+   "paint_height": "BLOCKED (double-height wall faces need the upper ceiling and the void edge condition)",
+   "rule": "the plan span is evidence; finish heights are not assumed single-storey"
+  },
+  "note": "the opening includes whatever the slab void spans (stair / gallery edge); the zone's own floor area inside the open site is not split from it without a source boundary"
+ }
+}

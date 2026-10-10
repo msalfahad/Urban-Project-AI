@@ -1,0 +1,48 @@
+{
+ "SCHEMA": "URBAN_R8_10_ROLE_AUTHORITY_ADVERSARIAL_V1",
+ "network_review_states": {
+  "NEW_K2": {
+   "NETWORK_BOUNDARY_CANDIDATE": 197,
+   "NETWORK_BOUNDARY_ESTABLISHED": 4
+  },
+  "OLD_K1": {
+   "NETWORK_BOUNDARY_CANDIDATE": 213
+  }
+ },
+ "near_misses": {
+  "NEW_K2": [
+   {
+    "source": "1316",
+    "origin": "UNKNOWN",
+    "gap_mm": [
+     1.4,
+     1.4
+    ],
+    "sites": {
+     "SITE-17f5f8c97fc16343": "CHANGES_AREA"
+    }
+   },
+   {
+    "source": "2431",
+    "origin": "GR-13",
+    "gap_mm": [
+     9.19
+    ],
+    "sites": {
+     "SITE-27d6688454aaf8de": "CHANGES_AREA"
+    }
+   }
+  ],
+  "OLD_K1": [],
+  "band_mm": 50.0,
+  "basis": "REVIEW-ONLY engine method parameter: an opening narrower than 50 mm is not a passage, door or window in any building trade, so a boundary end stopping within 50 mm of another boundary is a drafting near-miss or a joint; its consequence is reviewed, never silently measured. It can only withhold a site; it never joins geometry in the authority arrangement and never certifies"
+ },
+ "finding_dimension_coincidence": "rejected as a conflict signal: five old-revision walls (H1323, H1516, H2060 x2, H462) are dimensioned corner to corner; coincidence = being measured",
+ "tests": "tests/r8_10/test_r8_10_adversarial.py (A-F, A2, near-miss, consequence-is-not-authority)",
+ "verdict": {
+  "NETWORK alone": "NOT sufficient against A / B / C on single-line drawings: recorded as NETWORK_BOUNDARY_CANDIDATE (residual risk, stated)",
+  "corroborated": "NETWORK_BOUNDARY_ESTABLISHED when it separates two different label occurrences or a reviewed claim names it",
+  "contrary": "NETWORK_ROLE_CONFLICT for a self-dimensioned line (its own length printed at its middle)",
+  "next": "a wall-band model (paired faces, measured thickness population of THIS drawing) is the missing authority to make CANDIDATE blocking without false positives (R8.11)"
+ }
+}

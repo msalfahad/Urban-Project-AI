@@ -1,0 +1,368 @@
+{
+ "footer": "Rough kg/m3 values are Urban estimating/sanity heuristics and are not a substitute for bar-by-bar reinforcement takeoff.",
+ "oracle_net_rebar": [
+  {
+   "answer": "INCOMPLETE",
+   "net_rebar_t": 22.619,
+   "oracle": "UC4N",
+   "state": "KNOWN_INCOMPLETE"
+  },
+  {
+   "answer": "INCOMPLETE",
+   "net_rebar_t": 22.916,
+   "oracle": "CHRISTIANNP",
+   "state": "KNOWN_INCOMPLETE"
+  }
+ ],
+ "rough": {
+  "categories": {
+   "BEAMS": {
+    "actual_blocked_components": [
+     "R-BEAM_RESIDUE-1F",
+     "R-BEAM_RESIDUE-GF",
+     "R-BEAM_SIDE_BARS-1F",
+     "R-BEAM_SIDE_BARS-2F_ROOF",
+     "R-BEAM_SIDE_BARS-GF"
+    ],
+    "actual_complete": false,
+    "actual_provisional_kg": 0.0,
+    "actual_released_kg": 4115.881,
+    "blocked_concrete_m3": 0.0,
+    "category": "BEAMS",
+    "comparison_state": "BBS_INCOMPLETE_SIDE_BY_SIDE",
+    "lower_bound_concrete_m3": 34.937,
+    "modelled_concrete_m3": 37.586999999999996,
+    "occurrences": 8,
+    "provisional_concrete_m3": 0.0,
+    "ratio_kg_per_m3": 150,
+    "ratio_state": "CONFIGURED",
+    "released_concrete_m3": 37.586999999999996,
+    "rough_reference_kg_modelled_basis": 5638.049999999999,
+    "rough_reference_kg_released_basis": 5638.049999999999,
+    "use": "SANITY_CHECK_ONLY",
+    "verified_concrete_m3": 2.65
+   },
+   "FOUNDATIONS_RELATED": {
+    "actual_blocked_components": [
+     "R-COLUMN_STARTERS-GF",
+     "R-FOOTING_F_F10-GF"
+    ],
+    "actual_complete": false,
+    "actual_provisional_kg": 0.0,
+    "actual_released_kg": 1132.674,
+    "blocked_concrete_m3": 0.0,
+    "category": "FOUNDATIONS_RELATED",
+    "comparison_state": "BBS_INCOMPLETE_SIDE_BY_SIDE",
+    "lower_bound_concrete_m3": 64.346,
+    "modelled_concrete_m3": 67.738,
+    "occurrences": 4,
+    "provisional_concrete_m3": 0.0,
+    "ratio_kg_per_m3": 75,
+    "ratio_state": "CONFIGURED",
+    "released_concrete_m3": 67.738,
+    "rough_reference_kg_modelled_basis": 5080.35,
+    "rough_reference_kg_released_basis": 5080.35,
+    "use": "SANITY_CHECK_ONLY",
+    "verified_concrete_m3": 3.392
+   },
+   "GROUND_BEAMS_AND_GROUND_SLAB": {
+    "actual_blocked_components": [
+     "R-GROUND_BEAM_EXT-GF"
+    ],
+    "actual_complete": false,
+    "actual_provisional_kg": 0.0,
+    "actual_released_kg": 1973.615,
+    "blocked_concrete_m3": 0.0,
+    "category": "GROUND_BEAMS_AND_GROUND_SLAB",
+    "comparison_state": "BBS_INCOMPLETE_SIDE_BY_SIDE",
+    "lower_bound_concrete_m3": 11.539000000000001,
+    "modelled_concrete_m3": 22.784,
+    "occurrences": 5,
+    "provisional_concrete_m3": 0.0,
+    "ratio_kg_per_m3": 130,
+    "ratio_state": "CONFIGURED",
+    "released_concrete_m3": 22.784,
+    "rough_reference_kg_modelled_basis": 2961.92,
+    "rough_reference_kg_released_basis": 2961.92,
+    "use": "SANITY_CHECK_ONLY",
+    "verified_concrete_m3": 11.245
+   },
+   "SLABS": {
+    "actual_blocked_components": [],
+    "actual_complete": false,
+    "actual_provisional_kg": 0.0,
+    "actual_released_kg": 4876.895,
+    "blocked_concrete_m3": 0.0,
+    "category": "SLABS",
+    "comparison_state": "BBS_INCOMPLETE_SIDE_BY_SIDE",
+    "lower_bound_concrete_m3": 0.0,
+    "modelled_concrete_m3": 81.432,
+    "occurrences": 3,
+    "provisional_concrete_m3": 0.0,
+    "ratio_kg_per_m3": 90,
+    "ratio_state": "CONFIGURED",
+    "released_concrete_m3": 81.432,
+    "rough_reference_kg_modelled_basis": 7328.88,
+    "rough_reference_kg_released_basis": 7328.88,
+    "use": "SANITY_CHECK_ONLY",
+    "verified_concrete_m3": 81.432
+   },
+   "STAIRS_AND_DOME": {
+    "actual_blocked_components": [
+     "R-STAIRS-GF"
+    ],
+    "actual_complete": false,
+    "actual_provisional_kg": 0.0,
+    "actual_released_kg": 2054.227,
+    "blocked_concrete_m3": 0.0,
+    "category": "STAIRS_AND_DOME",
+    "comparison_state": "BBS_INCOMPLETE_SIDE_BY_SIDE",
+    "lower_bound_concrete_m3": 0.0,
+    "modelled_concrete_m3": 7.523,
+    "occurrences": 4,
+    "provisional_concrete_m3": 0.0,
+    "ratio_kg_per_m3": 179,
+    "ratio_state": "CONFIGURED",
+    "released_concrete_m3": 7.523,
+    "rough_reference_kg_modelled_basis": 1346.617,
+    "rough_reference_kg_released_basis": 1346.617,
+    "use": "SANITY_CHECK_ONLY",
+    "verified_concrete_m3": 7.523
+   },
+   "SWIMMING_POOL": {
+    "actual_bbs_kg": 585.738,
+    "actual_blocked_components": [],
+    "actual_complete": true,
+    "actual_provisional_kg": 0.0,
+    "actual_released_kg": 585.738,
+    "blocked_concrete_m3": 0.0,
+    "category": "SWIMMING_POOL",
+    "comparison_state": "BBS_COMPLETE_VARIANCE",
+    "delta_kg": -25.674999999999955,
+    "delta_percent": -4.199289187505001,
+    "lower_bound_concrete_m3": 0.0,
+    "modelled_concrete_m3": 5.053,
+    "occurrences": 1,
+    "provisional_concrete_m3": 0.0,
+    "ratio_kg_per_m3": 121,
+    "ratio_state": "CONFIGURED",
+    "released_concrete_m3": 5.053,
+    "rough_reference_kg_modelled_basis": 611.413,
+    "rough_reference_kg_released_basis": 611.413,
+    "use": "SANITY_CHECK_ONLY",
+    "verified_concrete_m3": 5.053
+   },
+   "WALLS_AND_COLUMNS": {
+    "actual_blocked_components": [
+     "S3.1 blocked modelled 258.508 kg",
+     "S3.1 unquantified blocked parts 51"
+    ],
+    "actual_complete": false,
+    "actual_provisional_kg": 1354.814,
+    "actual_released_kg": 5874.884,
+    "blocked_concrete_m3": 0.0,
+    "category": "WALLS_AND_COLUMNS",
+    "comparison_state": "BBS_INCOMPLETE_SIDE_BY_SIDE",
+    "lower_bound_concrete_m3": 23.137,
+    "modelled_concrete_m3": 26.351,
+    "occurrences": 10,
+    "provisional_concrete_m3": 0.0,
+    "ratio_kg_per_m3": 200,
+    "ratio_state": "CONFIGURED",
+    "released_concrete_m3": 26.351,
+    "rough_reference_kg_modelled_basis": 5270.2,
+    "rough_reference_kg_released_basis": 5270.2,
+    "use": "SANITY_CHECK_ONLY",
+    "verified_concrete_m3": 3.214
+   }
+  },
+  "excluded": [
+   {
+    "element_class": "PLAIN_CONCRETE",
+    "occurrence_id": "URBAN:C-POOL-BLD",
+    "why": "plain concrete is not reinforced"
+   },
+   {
+    "element_class": "PLAIN_CONCRETE",
+    "occurrence_id": "URBAN:C-BLD-FULL",
+    "why": "plain concrete is not reinforced"
+   }
+  ],
+  "footer": "Rough kg/m3 values are Urban estimating/sanity heuristics and are not a substitute for bar-by-bar reinforcement takeoff.",
+  "policy_id": "ROUGH_REBAR_SANITY_V1",
+  "profile_id": "URBAN_ROUGH_REBAR_PROFILE_V1",
+  "unassigned": [
+   {
+    "classifier_basis": "EXPLICIT",
+    "concrete_m3": 2.726,
+    "concrete_state": "VERIFIED",
+    "element_class": "LINTEL",
+    "occurrence_id": "URBAN:C-LINT-GF",
+    "state": "ROUGH_RATIO_NOT_CONFIGURED"
+   },
+   {
+    "classifier_basis": "EXPLICIT",
+    "concrete_m3": 1.493,
+    "concrete_state": "VERIFIED",
+    "element_class": "LINTEL",
+    "occurrence_id": "URBAN:C-LINT-1F",
+    "state": "ROUGH_RATIO_NOT_CONFIGURED"
+   },
+   {
+    "classifier_basis": "EXPLICIT",
+    "concrete_m3": 0.53,
+    "concrete_state": "VERIFIED",
+    "element_class": "LINTEL",
+    "occurrence_id": "URBAN:C-LINT-2F",
+    "state": "ROUGH_RATIO_NOT_CONFIGURED"
+   }
+  ]
+ },
+ "rows": [
+  {
+   "actual_blocked_components": [
+    "R-BEAM_RESIDUE-1F",
+    "R-BEAM_RESIDUE-GF",
+    "R-BEAM_SIDE_BARS-1F",
+    "R-BEAM_SIDE_BARS-2F_ROOF",
+    "R-BEAM_SIDE_BARS-GF"
+   ],
+   "actual_complete": false,
+   "actual_provisional_kg": 0.0,
+   "actual_released_kg": 4115.881,
+   "category": "BEAMS",
+   "comparison_state": "BBS_INCOMPLETE_SIDE_BY_SIDE",
+   "freelancer_concrete_m3": 65.965875,
+   "freelancer_steel_t": 9.89,
+   "note": "rough = Urban concrete x owner ratio; the ratio was calibrated on the freelancer convention (beam gross depth), so on Urban physical volumes BEAMS read low and SLABS high - compare BEAMS+SLABS together",
+   "rough_ratio_kg_per_m3": 150,
+   "rough_reference_kg_modelled": 5638.05,
+   "rough_reference_kg_released": 5638.05,
+   "urban_blocked_concrete_m3_known": 0.0,
+   "urban_modelled_concrete_m3": 37.587,
+   "urban_released_concrete_m3": 37.587
+  },
+  {
+   "actual_blocked_components": [
+    "R-COLUMN_STARTERS-GF",
+    "R-FOOTING_F_F10-GF"
+   ],
+   "actual_complete": false,
+   "actual_provisional_kg": 0.0,
+   "actual_released_kg": 1132.674,
+   "category": "FOUNDATIONS_RELATED",
+   "comparison_state": "BBS_INCOMPLETE_SIDE_BY_SIDE",
+   "freelancer_concrete_m3": 77.63050000000001,
+   "freelancer_steel_t": 5.8,
+   "note": "rough = Urban concrete x owner ratio; the ratio was calibrated on the freelancer convention (beam gross depth), so on Urban physical volumes BEAMS read low and SLABS high - compare BEAMS+SLABS together",
+   "rough_ratio_kg_per_m3": 75,
+   "rough_reference_kg_modelled": 5080.35,
+   "rough_reference_kg_released": 5080.35,
+   "urban_blocked_concrete_m3_known": 0.0,
+   "urban_modelled_concrete_m3": 67.738,
+   "urban_released_concrete_m3": 67.738
+  },
+  {
+   "actual_blocked_components": [
+    "R-GROUND_BEAM_EXT-GF"
+   ],
+   "actual_complete": false,
+   "actual_provisional_kg": 0.0,
+   "actual_released_kg": 1973.615,
+   "category": "GROUND_BEAMS_AND_GROUND_SLAB",
+   "comparison_state": "BBS_INCOMPLETE_SIDE_BY_SIDE",
+   "freelancer_concrete_m3": 75.09,
+   "freelancer_steel_t": 9.75,
+   "note": "rough = Urban concrete x owner ratio; the ratio was calibrated on the freelancer convention (beam gross depth), so on Urban physical volumes BEAMS read low and SLABS high - compare BEAMS+SLABS together",
+   "rough_ratio_kg_per_m3": 130,
+   "rough_reference_kg_modelled": 2961.92,
+   "rough_reference_kg_released": 2961.92,
+   "urban_blocked_concrete_m3_known": 0.0,
+   "urban_modelled_concrete_m3": 22.784,
+   "urban_released_concrete_m3": 22.784
+  },
+  {
+   "actual_blocked_components": [],
+   "actual_complete": false,
+   "actual_provisional_kg": 0.0,
+   "actual_released_kg": 4876.895,
+   "category": "SLABS",
+   "comparison_state": "BBS_INCOMPLETE_SIDE_BY_SIDE",
+   "freelancer_concrete_m3": 59.81739999999999,
+   "freelancer_steel_t": 5.4,
+   "note": "rough = Urban concrete x owner ratio; the ratio was calibrated on the freelancer convention (beam gross depth), so on Urban physical volumes BEAMS read low and SLABS high - compare BEAMS+SLABS together",
+   "rough_ratio_kg_per_m3": 90,
+   "rough_reference_kg_modelled": 7328.88,
+   "rough_reference_kg_released": 7328.88,
+   "urban_blocked_concrete_m3_known": 0.0,
+   "urban_modelled_concrete_m3": 81.432,
+   "urban_released_concrete_m3": 81.432
+  },
+  {
+   "actual_blocked_components": [
+    "R-STAIRS-GF"
+   ],
+   "actual_complete": false,
+   "actual_provisional_kg": 0.0,
+   "actual_released_kg": 2054.227,
+   "category": "STAIRS_AND_DOME",
+   "comparison_state": "BBS_INCOMPLETE_SIDE_BY_SIDE",
+   "freelancer_concrete_m3": 21.8328,
+   "freelancer_steel_t": 3.9,
+   "note": "rough = Urban concrete x owner ratio; the ratio was calibrated on the freelancer convention (beam gross depth), so on Urban physical volumes BEAMS read low and SLABS high - compare BEAMS+SLABS together",
+   "rough_ratio_kg_per_m3": 179,
+   "rough_reference_kg_modelled": 1346.617,
+   "rough_reference_kg_released": 1346.617,
+   "urban_blocked_concrete_m3_known": 0.0,
+   "urban_modelled_concrete_m3": 7.523,
+   "urban_released_concrete_m3": 7.523
+  },
+  {
+   "actual_blocked_components": [],
+   "actual_complete": true,
+   "actual_provisional_kg": 0.0,
+   "actual_released_kg": 585.738,
+   "category": "SWIMMING_POOL",
+   "comparison_state": "BBS_COMPLETE_VARIANCE",
+   "freelancer_concrete_m3": 12.348,
+   "freelancer_steel_t": 1.5,
+   "note": "rough = Urban concrete x owner ratio; the ratio was calibrated on the freelancer convention (beam gross depth), so on Urban physical volumes BEAMS read low and SLABS high - compare BEAMS+SLABS together",
+   "rough_ratio_kg_per_m3": 121,
+   "rough_reference_kg_modelled": 611.413,
+   "rough_reference_kg_released": 611.413,
+   "urban_blocked_concrete_m3_known": 0.0,
+   "urban_modelled_concrete_m3": 5.053,
+   "urban_released_concrete_m3": 5.053
+  },
+  {
+   "actual_blocked_components": [
+    "S3.1 blocked modelled 258.508 kg",
+    "S3.1 unquantified blocked parts 51"
+   ],
+   "actual_complete": false,
+   "actual_provisional_kg": 1354.814,
+   "actual_released_kg": 5874.884,
+   "category": "WALLS_AND_COLUMNS",
+   "comparison_state": "BBS_INCOMPLETE_SIDE_BY_SIDE",
+   "freelancer_concrete_m3": 39.7515,
+   "freelancer_steel_t": 7.95,
+   "note": "rough = Urban concrete x owner ratio; the ratio was calibrated on the freelancer convention (beam gross depth), so on Urban physical volumes BEAMS read low and SLABS high - compare BEAMS+SLABS together",
+   "rough_ratio_kg_per_m3": 200,
+   "rough_reference_kg_modelled": 5270.2,
+   "rough_reference_kg_released": 5270.2,
+   "urban_blocked_concrete_m3_known": 0.0,
+   "urban_modelled_concrete_m3": 26.351,
+   "urban_released_concrete_m3": 26.351
+  }
+ ],
+ "s3_1_column_headline": {
+  "BLOCKED_MODELLED_KG": 258.508,
+  "LOWER_BOUND_KG": 2509.906,
+  "MODELLED_SUM_NOT_FINAL_KG": 7488.205,
+  "PROVISIONAL_KG": 1354.814,
+  "UNQUANTIFIED_BLOCKED_PARTS": 51,
+  "VERIFIED_KG": 3364.978,
+  "rule": "no single 'final column rebar' figure: the modelled sum includes provisional and blocked parts",
+  "unit_mass": "kg/m = d^2 / 162"
+ }
+}

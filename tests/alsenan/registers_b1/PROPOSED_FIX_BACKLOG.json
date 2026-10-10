@@ -1,0 +1,184 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_B1_PROPOSED_FIX_BACKLOG_V1",
+ "items": [
+  {
+   "id": "FIX-B1-01",
+   "priority": "P1",
+   "title": "Opening type from plan symbol alone (window vs glazed door)",
+   "evidence": "GF: Urban-only straight widths equal the manual aluminium external-door width; window counts are published COMPLETE",
+   "proposed_fix": "publish the glazed-opening COUNT as complete but its window / door TYPE as BLOCKED unless a sill / head / door-swing / elevation fact proves it (generic OPENING_TYPE_AUTHORITY)",
+   "materiality": "MEDIUM",
+   "generic": "HIGH",
+   "silent_error_risk": "HIGH",
+   "ease": "MEDIUM",
+   "trades": [
+    "WINDOWS",
+    "DOORS",
+    "ALUMINIUM",
+    "PAINT",
+    "PLASTER",
+    "BLOCKWORK"
+   ]
+  },
+  {
+   "id": "FIX-B1-02",
+   "priority": "P1",
+   "title": "Column / wall clear height method as a declared, owner-approved rule",
+   "evidence": "manual heights = floor-to-floor - 0.75 m (beam soffit) for columns, 3.6 / 3.4 m for walls",
+   "proposed_fix": "a versioned HEIGHT_METHOD fact (e.g. column = storey height - main beam depth) applied only when the owner approves it; never inferred from the benchmark",
+   "materiality": "HIGH",
+   "generic": "HIGH",
+   "silent_error_risk": "LOW",
+   "ease": "HIGH",
+   "trades": [
+    "STRUCTURAL CONCRETE",
+    "BLOCKWORK",
+    "PLASTER",
+    "PAINT",
+    "TILE"
+   ]
+  },
+  {
+   "id": "FIX-B1-03",
+   "priority": "P1",
+   "title": "Simple-beam binding: mark beside its band",
+   "evidence": "Urban measured 1 simple band (B24); the manual measures every beam",
+   "proposed_fix": "bind a mark to the parallel band whose breadth equals the scheduled B and whose centre line is within one band width, ambiguity-guarded (refuse when two bands qualify)",
+   "materiality": "HIGH",
+   "generic": "HIGH",
+   "silent_error_risk": "MEDIUM",
+   "ease": "MEDIUM",
+   "trades": [
+    "STRUCTURAL CONCRETE"
+   ]
+  },
+  {
+   "id": "FIX-B1-04",
+   "priority": "P1",
+   "title": "Slab-edge outline + void deduction",
+   "evidence": "manual slab areas 207 / 120 / 45.19 m2; Urban SLAB_OUTLINE_NOT_ESTABLISHED",
+   "proposed_fix": "slab-edge role inference on the structural plans (closed outline on the slab layer, void labels and opening hatches subtracted), beam/slab overlap rule declared",
+   "materiality": "HIGH",
+   "generic": "HIGH",
+   "silent_error_risk": "LOW",
+   "ease": "MEDIUM",
+   "trades": [
+    "STRUCTURAL CONCRETE"
+   ]
+  },
+  {
+   "id": "FIX-B1-05",
+   "priority": "P2",
+   "title": "CURVED_OPENING_MEASUREMENT_POLICY",
+   "evidence": "GF manual 6.57 m is below every Urban arc (closest: inner 6.658 m); 1F manual 3.15 m equals the mean",
+   "proposed_fix": "publish all bases (inner / centre / outer / chord) and let a declared policy pick the commercial basis; do not choose from this benchmark",
+   "materiality": "LOW",
+   "generic": "MEDIUM",
+   "silent_error_risk": "MEDIUM",
+   "ease": "HIGH",
+   "trades": [
+    "ALUMINIUM"
+   ]
+  },
+  {
+   "id": "FIX-B1-06",
+   "priority": "P2",
+   "title": "Open-zone closure at the GF entrance (reception / dining / saloon)",
+   "evidence": "manual treats the zone as one closed room (137.5 m2) plus a separate entrance room (10.46 m2)",
+   "proposed_fix": "closure only from an owner answer (OQ3-A1) or a proven door / screen symbol; then certify",
+   "materiality": "HIGH",
+   "generic": "MEDIUM",
+   "silent_error_risk": "LOW",
+   "ease": "HIGH",
+   "trades": [
+    "FLOOR",
+    "CEILING",
+    "SKIRTING",
+    "PAINT",
+    "PLASTER"
+   ]
+  },
+  {
+   "id": "FIX-B1-07",
+   "priority": "P2",
+   "title": "Room certification for multi-label and split-label sites",
+   "evidence": "dewaneya, GF master bedroom, 1F laundry / bedrooms are measured by the manual; Urban blocks them",
+   "proposed_fix": "separate label sites by proven single-line partitions / joinery; certify sites whose only issue is an inferred wardrobe box (OQ3-A2)",
+   "materiality": "HIGH",
+   "generic": "HIGH",
+   "silent_error_risk": "LOW",
+   "ease": "LOW",
+   "trades": [
+    "FLOOR",
+    "CEILING",
+    "SKIRTING"
+   ]
+  },
+  {
+   "id": "FIX-B1-08",
+   "priority": "P3",
+   "title": "Continuous-beam length per floor and per occurrence",
+   "evidence": "the manual reports CBs per floor with drawn lengths; Urban reports one schedule row",
+   "proposed_fix": "report CB occurrences per slab sheet and both length bases (schedule span / measured)",
+   "materiality": "LOW",
+   "generic": "MEDIUM",
+   "silent_error_risk": "LOW",
+   "ease": "HIGH",
+   "trades": [
+    "STRUCTURAL CONCRETE"
+   ]
+  },
+  {
+   "id": "FIX-B1-09",
+   "priority": "P3",
+   "title": "Blinding / ground slab / ground beams / perimeter strap items",
+   "evidence": "manual carries them; Urban has no item",
+   "proposed_fix": "add the items with source-based extents (footprint offset rule declared) or BLOCKED rows",
+   "materiality": "HIGH",
+   "generic": "HIGH",
+   "silent_error_risk": "MEDIUM (missing item = silent omission)",
+   "ease": "MEDIUM",
+   "trades": [
+    "STRUCTURAL CONCRETE"
+   ]
+  },
+  {
+   "id": "FIX-B1-10",
+   "priority": "P4",
+   "title": "Rebar tonnage",
+   "evidence": "manual = typed allowances (75-200 kg/m3)",
+   "proposed_fix": "SOURCE_IMPOSSIBLE without bar schedules (cutting lengths, laps, hooks); keep fail-closed",
+   "materiality": "HIGH",
+   "generic": "-",
+   "silent_error_risk": "LOW",
+   "ease": "-",
+   "trades": [
+    "REBAR"
+   ]
+  },
+  {
+   "id": "FIX-B1-11",
+   "priority": "P4",
+   "title": "Finish heights / neck height / ground-beam extents",
+   "evidence": "manual heights and round ground-beam lengths are not in the source",
+   "proposed_fix": "SOURCE_IMPOSSIBLE without levels / false-ceiling heights: owner method facts only",
+   "materiality": "HIGH",
+   "generic": "-",
+   "silent_error_risk": "LOW",
+   "ease": "-",
+   "trades": [
+    "PAINT",
+    "PLASTER",
+    "TILE",
+    "BLOCKWORK",
+    "STRUCTURAL CONCRETE"
+   ]
+  }
+ ],
+ "ranking": "A materiality, B generic usefulness, C silent-error risk, D ease, E trades affected",
+ "source_impossible": [
+  "FIX-B1-10",
+  "FIX-B1-11"
+ ],
+ "implemented": "NONE - Phase B1 changes no engine"
+}

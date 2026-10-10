@@ -1,0 +1,18 @@
+CHECK_ID,CHECK,RESULT,DETAIL
+K-01,"every frozen stage (S4-S8.3A, PRE-S7-PRE-S8) and the S8.3 errata verify before and after",PASS,"20 manifests, 3 errata files"
+K-02,"S7 stays 3,802.015 kg",PASS,3802.015364542223
+K-03,the ~20.1 kg of S7 top steel at the tank edges is traced by unique id and stays S7,PASS,"20.087448558 kg over 10 strip ends, items ['S7-0217', 'S7-0228', 'S7-0284', 'S7-0307']"
+K-04,S8.4 releases nothing on a support and nothing beyond a panel face,PASS,all eight families run face to face inside the panels
+K-05,every one of the 22 S7 items excluded to the tank region has exactly one S8.4 terminal,PASS,22 items
+K-06,every one of the 33 PRE-S7.1 transfers to the region has an S8.4 terminal,PASS,33 transfers
+K-07,the 12 PRE-S7 panel components (8 mesh + 4 temperature) all terminate,PASS,"['CMP-0235', 'CMP-0236', 'CMP-0237', 'CMP-0238', 'CMP-0241', 'CMP-0242', 'CMP-0243', 'CMP-0244']"
+K-08,"two panels, one parent; the parent carries no quantity; each panel is counted once",PASS,"cloud encloses ['SP-2F_ROOF_SLAB-01', 'SP-2F_ROOF_SLAB-02']"
+K-09,each layer's strips cover its panel exactly and released + stop zones = full,PASS,8 families
+K-10,"(T&B) gives two faces per callout; directions come from the callouts' own bars, never from (T&B)",PASS,4 callouts x 2 faces = 8 families
+K-11,"T 18 is a thickness: no Ø18 family, both tags inside their panels and nowhere else on the sheet",PASS,"tags ['7B1', '1A7B']"
+K-12,every panel edge lies on drawn beam-face or column linework; the panels do not overlap,PASS,
+K-13,the S7 adjacent steel lies in S7 panels only,PASS,03 / 04 / 06
+K-14,no other S8 stage released a quantity in the two panels,PASS,S8.3 releases on the 1F roof only
+K-15,the framing beams keep their S6 occurrences (S6 frozen; S8.4 adds no beam quantity),PASS,"{'BL002': ['BM-2F_ROOF-B1-BL002-78B', 'BM-2F_ROOF-B3-BL002-79B', 'SPAN:SFRS:BL002:14112-15762'], 'BL003': ['BM-2F_ROOF-B1-BL003-78C', 'BM-2F_ROOF-B3-BL003-79C', 'SPAN:SFRS:BL003:14112-15662'], 'BL004': ['BM-2F_ROOF-B15-BL004-7A9', 'SPAN:SFRS:BL004:14112-17362'], 'BL007': ['BM-2F_ROOF-B3-BL007-79D', 'BM-2F_ROOF-B8-BL007-79E', 'SPAN:SFRS:BL007:23558-24888'], 'BL008': ['BM-2F_ROOF-B3-BL008-774'], 'BL011': ['BM-2F_ROOF-B1-BL011-78D']}"
+K-16,"no tank member, base or wall is invented",PASS,"structural tank texts [('SFRS', '1A85', 'WATER TANK PLACE')]; architectural []"
+K-17,"no client drawing, render or crop in the package",PASS,

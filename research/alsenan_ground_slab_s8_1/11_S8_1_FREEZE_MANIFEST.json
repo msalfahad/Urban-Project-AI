@@ -1,0 +1,67 @@
+{
+ "baseline": "73f62c3",
+ "code": {
+  "engine/source/delta_release.py": "7b0f72a6f5138b3e0f8515c80a42a38a2cfc035c8fb4c138aa64a4fd5c9708b9",
+  "engine/source/ground_slab_qto.py": "5316356f7a99ef6774492edb7689cbd99bade946b100e694d7df385c9cd92eb5",
+  "engine/source/rebar_unit_mass.py": "81d63a85da8e64600d0c49a6662bcc49655f46dc71603654b3e1438c5b146eb8",
+  "engine/source/slab_rebar_qto.py": "90a7e969835293bfe9abca0307cfb947933e041b2e7f38a4d30ba3776ef3f4ca",
+  "research/alsenan_ground_slab_s8_1/build_s8_1.py": "2c66c0dd1e6c9619bdee4eee24f914f01ef943bc8e83241b60f1a7819624f725",
+  "research/external_engine_lab/alsenan_structural_s1.py": "e3ecd25490cd433540e317454ffdbaadf17c19799f49eb1df9afcb928aa494cb"
+ },
+ "date": "2026-10-08",
+ "drawing_sha256": {
+  "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+ },
+ "engine_commit_stamp": "73f62c3+code:16df2247dc793719",
+ "frozen_baselines": {
+  "AD1": "e2497cc75181393000187b7e657fa8485a4c0f365b4614bed983d0bc6c0ca5b4",
+  "D1.1": "3ecb642e2141f5a9af11453870696b104a11cfb519d65a9e3f505cbff7c73a74",
+  "D1.2": "f256d6a25edf93029c6ba1c8cf9bc336790fd8d9cf7a5045e8395942986a9554",
+  "PRE-S7": "fb3a1c62a8e525b663853d03d43e067f1839026aea149399491bd4cf98f0ad09",
+  "PRE-S7.1": "3a67a8641ce4ea836334e02532af82b9a3bb01be8efdba4f093eee44d92c1ef6",
+  "PRE-S8": "1c8daf59926540941efbf5f749e8e175fe64b7efeb6d7acff0bfbefbb034849d",
+  "S4": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+  "S4.1": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+  "S5": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+  "S5.1": "595d64b1bf5c8e0ef7b5bebfaf3ea4063dd884356390c84b4c8aac77cddb5a88",
+  "S6": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+  "S6.1": "c4744888ed2207ebff47c0a895e706d7e381b5f905b694eb92e3d1cdc411c0b2",
+  "S7": "b23f97b6db334e641c38c498bf23b46236d68f4fcc26a6eafde1f3bfc156d175",
+  "S7A": "5b256cef99dc57934c76249c28814d5ce07c74caf308aabdbf90e0e8f0adcee1"
+ },
+ "inputs": {
+  "research/alsenan_column_rebar_s3_1/COLUMN_RELEASE_REGISTER.json": "c3bf53516ba97622039bccf706ebaa6fa3f9c511cfc29e88b38d8d138d06d412",
+  "research/alsenan_column_rebar_s3_1/INDEX.json": "8a771cb688b04128c351aab7880afd5dc353c4df98e3f62910fcd18c06763661",
+  "research/alsenan_footing_rebar_s4/FOOTING_REBAR_OCCURRENCES.csv": "2d0f8d8ae85247f4caddc86bb2a6f5ef631106c0d5df2729875983b1e854ba4f",
+  "research/alsenan_slab_rebar_s7/02_S7_BLOCKED_ITEMS.csv": "6e610438d55df3194e46412d2703484ee13ac4c030583d1f9dfb189353abd744",
+  "research/alsenan_slab_rebar_s7/05_S7_PANEL_SUMMARY.csv": "0b458cb74ee1494647d688eebdd20e27b97f0131eb6d0b1dbb19871b92066784",
+  "research/alsenan_slab_rebar_s7/09_S7_PROJECT_SUMMARY.json": "6cb75650d35fd82ab27f10bef636d8879199ca0808dd54cc2af1d35860e69b44",
+  "research/alsenan_structural_census_s1/BEAM_OCCURRENCE_REGISTER.json": "4af4ca569a3cda4c7fb7c30729db818e27f9727b6fe061aaa1436b9e3a5f4bc0",
+  "research/alsenan_structural_census_s1/COLUMN_OCCURRENCE_REGISTER.json": "fb3f2d0c45bc1fbee9f04709d9e06040fbeb7eb5e80f8038a76f8840da048f88",
+  "research/alsenan_structural_census_s1/FOOTING_DEFINITION_REGISTER.json": "197e122719ca1e5d68033720c5e9cba333813d67bc9484b74864b29c845b7ae7",
+  "research/alsenan_structural_census_s1/FOOTING_OCCURRENCE_REGISTER.json": "96341bd2c7bc159f695c3a552e1df3763db6baf693cca9b2bedaf1b031106ea8",
+  "research/alsenan_structural_census_s1/SLAB_PANEL_REGISTER.json": "ea0cbe1b5e8d6f6b94eae60fd5c55a708886095a0cda3101d0acbe06229c9c4c",
+  "research/alsenan_structural_census_s1/SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER.json": "870800ec87b1ea39eb95636bfeae124a6e47c1779d926b8427c1e997e85ee8a5",
+  "research/alsenan_structural_census_s1/STRUCTURAL_LEVEL_REGISTER.json": "53d54f501f0fcab6f3825d16a4c1a939c9fc5e094d410eb8e9f3875f6fc3ca6b",
+  "research/alsenan_structural_census_s1/STRUCTURAL_PROJECT_RULE_REGISTER.json": "3268bce3ef31c21ee93b0d7f9ab9b50195e0d0ae659699422c6927abcdf528d2",
+  "research/pre_s8_structural_completeness/02_STRUCTURAL_ELEMENT_CENSUS.csv": "a24db6efc7855c2a1f2eaff5e9739397b03f3f62d79ffaa7376a8609ead51e12"
+ },
+ "outputs": {
+  "00_README.md": "1d9e842455c3f2910c792812aef202f9176a3289255b66206f12615e13bdaaed",
+  "01_GROUND_SLAB_POPULATION_AND_ZONE_REGISTER.csv": "bdd9459281f41bd4bb3db352b28e22b1481d9ef8a054dcf8ecd369af4a371abf",
+  "02_SOURCE_RULE_REGISTER.csv": "cfdffd61264c36e410318e4b202df6c116ae1c12728fb7cb2b35786354b8735c",
+  "03_CONCRETE_QTO.csv": "8dfd8f88f1b717d6fb45725ce25f3d578607412131fbacb12f882e2a6e70c587",
+  "04_REINFORCEMENT_XY_QTO.csv": "0433d53d328e870c62249e981af241e5bb48cd5a912aa29d3b54bab0d3296877",
+  "05_REINFORCEMENT_STRIPS.csv": "8141b0f9af9f7b8e682207215b01f54831fbf9a9c2e1c511c1085edab884e00f",
+  "06_BLOCKED_UNRESOLVED_COMPONENTS.csv": "c24905a6db652ee7d9509a9001b9e1fa3c8e95bb6d3825213512916892921208",
+  "07_OVERLAP_AND_OWNERSHIP_AUDIT.csv": "a20b6c2a141fad3012c0b86c328153582a08c2b8d0f101b1108af0afe36233d9",
+  "08_FLOOR_ZONE_SUMMARY.csv": "673cec160fbeffac9ab9b19939d3b4aa2bc89e20718518fbf4968d3e3efa407b",
+  "09_PROVENANCE.jsonl": "105cfd6b601c44fb1d32928b8dde830b9c603a74993b9fd63f7e25dc9e554f13",
+  "10_S8_1_SUMMARY.json": "5d2a100254cd7ae43bfb9c6bfc91300f24b4c619c43995c10cc610e998bad0fd",
+  "12_PRE_S8_POPULATION_RECONCILIATION.csv": "080e5aa04a8b1db32b8e76a4f7f4456fd9c8d9366428ac50748fa35e9c1fb24a"
+ },
+ "references_read": [],
+ "round": "S8_1",
+ "rule": "S8.1 quantifies the two source-zoned ground-slab cells only; every other cell is blocked; the comparison with earlier figures runs after this manifest is committed",
+ "state": "FROZEN_BEFORE_COMPARISON"
+}

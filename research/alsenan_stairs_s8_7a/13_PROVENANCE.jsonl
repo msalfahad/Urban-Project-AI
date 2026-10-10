@@ -1,0 +1,62 @@
+{"kind": "DRAWN_COUNT", "record": "COUNT:A1:STRUCTURAL GF roof sheet (GFRS)", "total": 28}
+{"kind": "DRAWN_COUNT", "record": "COUNT:A1:ARCHITECTURAL GF plan", "total": 25}
+{"kind": "DRAWN_COUNT (upper flight only)", "record": "COUNT:A1:P7757 architectural sections PDF sheet 4, SECTION A-A (visual, re-read at 600 dpi in this round)", "total": null}
+{"kind": "OWNER_SCENARIO", "record": "COUNT:A1:OWNER SCENARIO A", "total": 28}
+{"kind": "OWNER_SCENARIO", "record": "COUNT:A1:OWNER SCENARIO B", "total": 29}
+{"kind": "ARITHMETIC", "record": "COUNT:A1:counts in the owner range (150 - 160 mm)", "total": [29, 30]}
+{"kind": "DRAWN_COUNT", "record": "COUNT:A2:STRUCTURAL 1F roof sheet (FFRS)", "total": 24}
+{"kind": "DRAWN_COUNT", "record": "COUNT:A2:ARCHITECTURAL 1F plan", "total": 27}
+{"kind": "DRAWN_COUNT", "record": "COUNT:A2:ARCHITECTURAL 2F plan (repeated view)", "total": 24}
+{"kind": "DRAWN_COUNT (upper flight only)", "record": "COUNT:A2:P7757 architectural sections PDF sheet 4, SECTION A-A (visual, re-read at 600 dpi in this round)", "total": null}
+{"kind": "OWNER_SCENARIO", "record": "COUNT:A2:OWNER SCENARIO A", "total": 27}
+{"kind": "OWNER_SCENARIO", "record": "COUNT:A2:OWNER SCENARIO B", "total": 26}
+{"kind": "ARITHMETIC", "record": "COUNT:A2:counts in the owner range (150 - 160 mm)", "total": [27, 28]}
+{"kind": "DRAWN_COUNT", "record": "COUNT:C:GFRS", "total": 28}
+{"kind": "DRAWN_COUNT", "record": "COUNT:C:ARCH-1F", "total": 28}
+{"kind": "DRAWN_COUNT (second view)", "record": "COUNT:C:ARCH-GF", "total": 27}
+{"kind": "DRAWN_COUNT", "record": "COUNT:B:GBP", "total": 4}
+{"kind": "DRAWN_COUNT", "record": "COUNT:D:GBP", "total": 5}
+{"kind": "DRAWN_COUNT", "record": "COUNT:B:ARCH-GF", "total": 4}
+{"kind": "DRAWN_COUNT", "record": "COUNT:D:ARCH-GF", "total": 5}
+{"lane": "OWNER_SCENARIO", "m3": 1.037005434, "method": "stair_geometry.straight_flight, plumb cuts at the first and last riser line", "record": "CONCRETE:A1-OWNER_A-28:A1-F1"}
+{"lane": "OWNER_SCENARIO", "m3": 0.411049775, "method": "plane-equivalent A x (t / cos(pitch) + h / 2), walking line at mid-width (approximation: the winder soffit is not drawn)", "record": "CONCRETE:A1-OWNER_A-28:A1-W1"}
+{"lane": "OWNER_SCENARIO", "m3": 0.2304, "method": "flat plate: outline x 160", "record": "CONCRETE:A1-OWNER_A-28:A1-L1"}
+{"lane": "OWNER_SCENARIO", "m3": 1.037005434, "method": "stair_geometry.straight_flight, plumb cuts at the first and last riser line", "record": "CONCRETE:A1-OWNER_A-28:A1-F2"}
+{"lane": "BLOCKED_UNQUANTIFIED", "m3": null, "method": "no drawing places the extra / missing riser: no per-flight geometry", "record": "CONCRETE:A1-OWNER_B-29:A1 (allocation not drawn)"}
+{"lane": "SOURCE_CONFLICT", "m3": 0.896153092, "method": "stair_geometry.straight_flight, plumb cuts at the first and last riser line", "record": "CONCRETE:A1-ARCH_GF-25:A1-F1"}
+{"lane": "SOURCE_CONFLICT", "m3": 0.437019763, "method": "plane-equivalent A x (t / cos(pitch) + h / 2), walking line at mid-width (approximation: the winder soffit is not drawn)", "record": "CONCRETE:A1-ARCH_GF-25:A1-W1"}
+{"lane": "SOURCE_CONFLICT", "m3": 0.2304, "method": "flat plate: outline x 160", "record": "CONCRETE:A1-ARCH_GF-25:A1-L1"}
+{"lane": "SOURCE_CONFLICT", "m3": 0.995725658, "method": "stair_geometry.straight_flight, plumb cuts at the first and last riser line", "record": "CONCRETE:A1-ARCH_GF-25:A1-F2"}
+{"lane": "OWNER_SCENARIO", "m3": 1.021710804, "method": "stair_geometry.straight_flight, plumb cuts at the first and last riser line", "record": "CONCRETE:A2-OWNER_A-27:A2-F1"}
+{"lane": "OWNER_SCENARIO", "m3": 0.404252546, "method": "plane-equivalent A x (t / cos(pitch) + h / 2), walking line at mid-width (approximation: the winder soffit is not drawn)", "record": "CONCRETE:A2-OWNER_A-27:A2-W1"}
+{"lane": "OWNER_SCENARIO", "m3": 0.2304, "method": "flat plate: outline x 160", "record": "CONCRETE:A2-OWNER_A-27:A2-L1"}
+{"lane": "OWNER_SCENARIO", "m3": 0.928828003, "method": "stair_geometry.straight_flight, plumb cuts at the first and last riser line", "record": "CONCRETE:A2-OWNER_A-27:A2-F2"}
+{"lane": "OWNER_SCENARIO", "m3": 0.0192, "method": "flat plate (released by S8.7)", "record": "CONCRETE:A2-OWNER_A-27:A2-T1"}
+{"lane": "BLOCKED_UNQUANTIFIED", "m3": null, "method": "no drawing places the extra / missing riser: no per-flight geometry", "record": "CONCRETE:A2-OWNER_B-26:A2 (allocation not drawn)"}
+{"lane": "SOURCE_CONFLICT", "m3": 1.080021043, "method": "stair_geometry.straight_flight, plumb cuts at the first and last riser line", "record": "CONCRETE:A2-FFRS-24:A2-F1"}
+{"lane": "SOURCE_CONFLICT", "m3": 0.24, "method": "flat plate: outline x 160", "record": "CONCRETE:A2-FFRS-24:A2-W1 (flat quarter)"}
+{"lane": "SOURCE_CONFLICT", "m3": 0.2304, "method": "flat plate: outline x 160", "record": "CONCRETE:A2-FFRS-24:A2-L1"}
+{"lane": "SOURCE_CONFLICT", "m3": 0.981837311, "method": "stair_geometry.straight_flight, plumb cuts at the first and last riser line", "record": "CONCRETE:A2-FFRS-24:A2-F2"}
+{"lane": "SOURCE_CONFLICT", "m3": 0.0192, "method": "flat plate (released by S8.7)", "record": "CONCRETE:A2-FFRS-24:A2-T1"}
+{"lane": "OWNER_SCENARIO", "m3": 2.095770973, "method": "plane-equivalent A x (t / cos(pitch) + h / 2) over the S8.7 plan outline (approximation for the curved part)", "record": "CONCRETE:C-DRAWN-28:C-F1"}
+{"lane": "OWNER_SCENARIO", "m3": 0.2164, "method": "flat plate: outline x 160", "record": "CONCRETE:C-DRAWN-28:C-L1"}
+{"lane": "OWNER_SCENARIO", "m3": 0.377092885, "method": "stair_geometry.straight_flight, plumb cuts at the first and last riser line", "record": "CONCRETE:C-DRAWN-28:C-F2"}
+{"lane": "OWNER_SCENARIO", "m3": 0.266982788, "method": "flat plate (released by S8.7)", "record": "CONCRETE:C-DRAWN-28:C-T1"}
+{"lane": "OWNER_SCENARIO", "m3": 2.715460643, "method": "sum of the rows above", "record": "CONCRETE:A1-OWNER_A-28:TOTAL (whole stair, incl. the S8.7 plates)"}
+{"lane": "OWNER_SCENARIO", "m3": 2.485060643, "method": "sum of the rows not released by S8.7; never released by S8.7A", "record": "CONCRETE:A1-OWNER_A-28:TOTAL NOT RELEASED (scenario only)"}
+{"lane": "SOURCE_CONFLICT", "m3": 2.559298513, "method": "sum of the rows above", "record": "CONCRETE:A1-ARCH_GF-25:TOTAL (whole stair, incl. the S8.7 plates)"}
+{"lane": "SOURCE_CONFLICT", "m3": 2.328898513, "method": "sum of the rows not released by S8.7; never released by S8.7A", "record": "CONCRETE:A1-ARCH_GF-25:TOTAL NOT RELEASED (scenario only)"}
+{"lane": "OWNER_SCENARIO", "m3": 2.604391353, "method": "sum of the rows above", "record": "CONCRETE:A2-OWNER_A-27:TOTAL (whole stair, incl. the S8.7 plates)"}
+{"lane": "OWNER_SCENARIO", "m3": 2.585191353, "method": "sum of the rows not released by S8.7; never released by S8.7A", "record": "CONCRETE:A2-OWNER_A-27:TOTAL NOT RELEASED (scenario only)"}
+{"lane": "SOURCE_CONFLICT", "m3": 2.551458354, "method": "sum of the rows above", "record": "CONCRETE:A2-FFRS-24:TOTAL (whole stair, incl. the S8.7 plates)"}
+{"lane": "SOURCE_CONFLICT", "m3": 2.532258354, "method": "sum of the rows not released by S8.7; never released by S8.7A", "record": "CONCRETE:A2-FFRS-24:TOTAL NOT RELEASED (scenario only)"}
+{"lane": "OWNER_SCENARIO", "m3": 2.956246646, "method": "sum of the rows above", "record": "CONCRETE:C-DRAWN-28:TOTAL (whole stair, incl. the S8.7 plates)"}
+{"lane": "OWNER_SCENARIO", "m3": 2.689263858, "method": "sum of the rows not released by S8.7; never released by S8.7A", "record": "CONCRETE:C-DRAWN-28:TOTAL NOT RELEASED (scenario only)"}
+{"record": "OWNER_IMAGE:IMG-1", "shows": "sanitary drawing set p.3 of 3 (2F plan, +9.70): main stair arriving from 1F; west flight 12 / east flight 11 tread lines; the NW quarter drawn flat (rounded handrail, no winder lines); up-path arrows", "state": "SUPPORTING_VISUAL_EVIDENCE (not a registered input; not committed)", "use": "agrees with the architectural 2F DXF view (no radial lines on that view)"}
+{"record": "OWNER_IMAGE:IMG-2", "shows": "sanitary drawing set p.1 of 3 (GF plan, +1.00 / +0.30): main stair with three radial winder lines in the NW quarter, the break symbol on the west flight, the +0.30 lobby door at the north", "state": "SUPPORTING_VISUAL_EVIDENCE (not a registered input; not committed)", "use": "agrees with the architectural GF DXF view"}
+{"record": "OWNER_IMAGE:IMG-3", "shows": "sanitary drawing set p.2 of 3 (1F plan, +5.50): main stair 1F -> 2F with three radial winder lines, the break symbol on the west flight, the up-path ending at the south end of the east flight", "state": "SUPPORTING_VISUAL_EVIDENCE (not a registered input; not committed)", "use": "agrees with the architectural 1F DXF view"}
+{"record": "OWNER_IMAGE:IMG-4", "shows": "sanitary drawing set p.2 of 3 (1F plan): the round (light-well) stair around the VOID: curved flight, straight flight along the south edge, corner landing, short flight north with the up arrow, +5.50", "state": "SUPPORTING_VISUAL_EVIDENCE (not a registered input; not committed)", "use": "agrees with the architectural 1F DXF view"}
+{"record": "OWNER_IMAGE:IMG-5", "shows": "ST7757 p.16 crop: TYPICAL STEEL LAYOUT-STAIR SECTION (N.I.S.), TYPICAL DETAIL FOR OPENING IN BEAM, DETAIL OF RIBS SOLID PART, TORSION STEEL FOR RIBS", "state": "SUPPORTING_VISUAL_EVIDENCE (not a registered input; not committed)", "use": "typical only; the same page S8.7 read"}
+{"record": "OWNER_IMAGE:IMG-6", "shows": "ST7757 p.16 crop: TYPICAL DETAIL OF STAIR BEAM and the upper part of the typical stair section (+4.00 / +3.95 S.S.L at the head beam)", "state": "SUPPORTING_VISUAL_EVIDENCE (not a registered input; not committed)", "use": "typical only"}
+{"record": "OWNER_IMAGE:IMG-7", "shows": "ST7757 p.16 crop: TYPICAL DETAIL OF STAIR BEAM (cranked beam column to column: 2Ø12 top, 4Ø16 bottom, 6Ø8/m stirrups, depth AS PER SCH.)", "state": "SUPPORTING_VISUAL_EVIDENCE (not a registered input; not committed)", "use": "typical only"}
+{"1F_FFL_M": 5.5, "2F_FFL_M": 9.7, "BEDDING": "included only if explicitly confirmed", "GF_FFL_M": 1.0, "LANDING": "approximately halfway; actual levels from drawings or approval", "MARBLE_MM": 30.0, "PREFERRED_RISER_MM": [150.0, 160.0], "RISE_1F_2F_MM": 4200.0, "RISE_GF_1F_MM": 4500.0, "WAIST_SENSITIVITY_MM": 160.0, "record": "OWNER_INFORMATION", "scenarios": {"A1": {"A": 28, "B": 29}, "A2": {"A": 27, "B": 26}}, "state": "OWNER_SCENARIO"}

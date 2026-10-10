@@ -1,0 +1,65 @@
+ITEM,KIND,PAGE,S1_STATUS,SCOPE,TEXT,S8_1_ROLE,REASON
+P1-NOTE-A,PROJECT_RULE,1,EXACT_RULE,"[""SUSPENDED_SLAB""]",All roofs / slabs cast 16 cm thick unless stated otherwise.,EXCLUDED_SUSPENDED_SLAB_RULE,16 cm roof / slab default; suspended slabs only
+P1-NOTE-B,PROJECT_RULE,1,CANDIDATE,"[""GROUND_BEAM_EXTERIOR"", ""BOUNDARY""]",External ground beams on the neighbour side cast above and below a black-brick wall built up from foundation level.,NOT_THIS_ELEMENT,"scope GROUND_BEAM_EXTERIOR,BOUNDARY is not the ground slab"
+P1-NOTE-C,PROJECT_RULE,1,SOURCE_CONFLICT,"[""FORMWORK""]",Do not strip slab / beam formwork before 21 days.,NOT_THIS_ELEMENT,scope FORMWORK is not the ground slab
+P10-SBT-REMARKS,PROJECT_RULE,10,CANDIDATE,"[""SIMPLE_BEAM""]",Beam schedule REMARKS give side bars per beam type (pairs at a vertical spacing); a box symbol marks some rows.,NOT_THIS_ELEMENT,scope SIMPLE_BEAM is not the ground slab
+P11-12-CB-TYPICAL,PROJECT_RULE,11,CANDIDATE,"[""CONTINUOUS_BEAM""]","Continuous-beam figure: support top bars to 0.22 Ln (0.3 Ln2 at an end span), first stirrup 7.5 cm, bottom bar stop 0.15 L.",NOT_THIS_ELEMENT,scope CONTINUOUS_BEAM is not the ground slab
+P13-FOOTING-DEEP,PROJECT_RULE,13,BLOCKED_METHOD,"[""GROUND_BEAM""]","Where the upper ground beam is more than 2.5 m above the footing, an additional LOWER ground beam is provided.",NOT_THIS_ELEMENT,scope GROUND_BEAM is not the ground slab
+P13-FOOTING-TYP,PROJECT_RULE,13,CANDIDATE,"[""FOOTING""]","Isolated footing: bottom long + short bars, a BOXED bar cage, column starters with a minimum 30 cm foot, max 10 cm, 40Ø projection.",NOT_THIS_ELEMENT,scope FOOTING is not the ground slab
+P13-GB-EXT,PROJECT_RULE,13,EXACT_RULE,"[""GROUND_BEAM""]",Ground beams under exterior walls (outer normal ground level to GF slab level).,INTERFACE_RULE,ground beams run to the ground-floor slab level: the slab is measured to the beam faces and the concrete over the beam width belongs to the beam
+P13-GB-GT5,PROJECT_RULE,13,EXACT_RULE,"[""GROUND_BEAM""]",Ground beam > 5 m.,INTERFACE_RULE,ground beams bound the zones; their concrete and steel are owned elsewhere
+P13-GB-LT2_5,PROJECT_RULE,13,CANDIDATE,"[""GROUND_BEAM""]",Ground beam < 2.5 m.,INTERFACE_RULE,ground beams bound the zones; their concrete and steel are owned elsewhere
+P13-GB-LT5,PROJECT_RULE,13,EXACT_RULE,"[""GROUND_BEAM""]",Ground beam < 5 m.,INTERFACE_RULE,ground beams bound the zones; their concrete and steel are owned elsewhere
+P13-LINTEL,PROJECT_RULE,13,EXACT_RULE,"[""LINTEL""]",Lintels by opening width; width = wall width; 40 cm minimum bearing each side.,NOT_THIS_ELEMENT,scope LINTEL is not the ground slab
+P14-BOUNDARY,PROJECT_RULE,14,SOURCE_CONFLICT,"[""BOUNDARY_WALL""]",Boundary wall typical detail.,NOT_THIS_ELEMENT,scope BOUNDARY_WALL is not the ground slab
+P14-LIFT,PROJECT_RULE,14,BLOCKED_METHOD,"[""LIFT_PIT""]","Lift pit on the FF raft: 20 cm walls with 6Ø12/m and 6Ø16/m, pit depth by the lift manufacturer.",CHECK_APPLIED,"the lift pit sits on the FF footing, outside both zones (07)"
+P14-PARAPETS,PROJECT_RULE,14,CANDIDATE,"[""PARAPET""]",Parapet sections.,NOT_THIS_ELEMENT,scope PARAPET is not the ground slab
+P15-CASEMENT,PROJECT_RULE,15,CANDIDATE,"[""BEAM""]",Beam in casement with column.,NOT_THIS_ELEMENT,scope BEAM is not the ground slab
+P15-PLANTED,PROJECT_RULE,15,CANDIDATE,"[""PLANTED_COLUMN"", ""BEAM""]","Beam carrying a planted column: 4Ø16 extra, column bars anchored 100 into the beam.",NOT_THIS_ELEMENT,"scope PLANTED_COLUMN,BEAM is not the ground slab"
+P15-SLAB-ON-BEAMS,PROJECT_RULE,15,EXACT_RULE,"[""SUSPENDED_SLAB""]","Slab-on-beam typical: top anchor 0.25 L1 at a non-continuous support; 0.30 x max(L1, L2) at a continuous support; 50% of top bars extend into the adjacent slab; 50% of bottom bars stop 0.125 L short of a continuous support, the balance continues.",EXCLUDED_SUSPENDED_SLAB_RULE,50/50 split and 0.125 L curtailment of suspended slabs
+P15-TEMP-NOTES,PROJECT_RULE,15,CANDIDATE,"[""SUSPENDED_SLAB""]",Temperature bars lap 40D; top temp bars x2000 across beams parallel to main bars (1000 at spandrels); use the larger top bars where adjacent spans differ.,EXCLUDED_SUSPENDED_SLAB_RULE,temperature-bar laps and extents of suspended slabs
+P15-TEMP-TABLE,PROJECT_RULE,15,EXACT_RULE,"[""SUSPENDED_SLAB""]",Temperature reinforcement by slab thickness.,EXCLUDED_SUSPENDED_SLAB_RULE,temperature steel by suspended-slab thickness
+P15-TWISTED,PROJECT_RULE,15,CANDIDATE,"[""TURN_COLUMN""]","Twisted (turned) column: spiral ties 6Ø8/m over 1 m each side of the floor, 4Ø16 extra.",NOT_THIS_ELEMENT,scope TURN_COLUMN is not the ground slab
+P16-BEAM-OPENING,PROJECT_RULE,16,CANDIDATE,"[""BEAM""]",Opening in beam detail.,NOT_THIS_ELEMENT,scope BEAM is not the ground slab
+P16-RIBS,PROJECT_RULE,16,CANDIDATE,"[""RIBBED_SLAB""]",Rib solid-part torsion steel.,NOT_THIS_ELEMENT,scope RIBBED_SLAB is not the ground slab
+P16-STAIR,PROJECT_RULE,16,BLOCKED_METHOD,"[""STAIR"", ""STAIR_BEAM""]",Typical stair and stair-beam reinforcement (N.T.S.).,NOT_THIS_ELEMENT,"scope STAIR,STAIR_BEAM is not the ground slab"
+P3-GROUND-SLAB,PROJECT_RULE,3,CANDIDATE,"[""GROUND_SLAB""]","Ground slab note: 10 cm, 5Ø10/m each way.",APPLIED_IN_THE_TWO_MARKED_CELLS,sizes thickness (T=10cm) and mesh (5Ø10/m E.W.) of the cell each marker sits in; not extended to unmarked cells
+P3-LEGEND,PROJECT_RULE,3,EXACT_RULE,"[""ALL_PLANS""]",Plan legend (pp.3-6).,CHECK_APPLIED,no legend hatch (sunken / foam / bearing wall / open to below) inside the zones
+P4-6-NOTE-1,PROJECT_RULE,4,EXACT_RULE,"[""PARAPET"", ""PROJECTION""]",Check parapet / projection details against architecture before casting.,NOT_THIS_ELEMENT,"scope PARAPET,PROJECTION is not the ground slab"
+P4-6-NOTE-2,PROJECT_RULE,4,CANDIDATE,"[""SUSPENDED_SLAB_SUPPORT_TOP""]","Top steel 5Ø10/m over beams for the slabs, length one third of the span, in both directions.",EXCLUDED_SUSPENDED_SLAB_RULE,top bars over beams (1/3 span) belong to the elevated slabs (S7)
+P7-DOME,PROJECT_RULE,7,CANDIDATE,"[""DOME""]",Dome reinforcement.,NOT_THIS_ELEMENT,scope DOME is not the ground slab
+P7-POOL,PROJECT_RULE,7,CANDIDATE,"[""POOL""]",Swimming pool reinforcement (not in scope - N.I.S).,CHECK_APPLIED,the pool lies outside both zones (07)
+P8-N01,PROJECT_RULE,8,EXACT_RULE,"[""ALL""]",Drawings are for guidance; not for construction until reviewed by the supervising engineer.,GENERAL,drawings are for guidance until reviewed (no quantity effect)
+P8-N02,PROJECT_RULE,8,EXACT_RULE,"[""ALL""]","Structural, architectural and services drawings complement each other; any discrepancy goes to the supervising engineer.",GENERAL,discrepancies go to the supervising engineer (the conflicts in 06 are for that review)
+P8-N03,PROJECT_RULE,8,EXACT_RULE,"[""ALL""]",Use printed dimensions; do not scale the drawings.,CHECK_APPLIED,"printed axis dimension chains agree with the CAD axis spacing; the beam-face offsets from the axes are drawn, not printed, so the plan authority stays PROJECT_GEOMETRY"
+P8-N04,PROJECT_RULE,8,EXACT_RULE,"[""SLAB"", ""BEAM"", ""WALL""]",All architectural / services openings must appear on the structural drawings; refer to the engineer for details.,CHECK_APPLIED,"no opening, pit or void is drawn in either zone, and openings must appear on the structural drawings: no deduction"
+P8-N05,PROJECT_RULE,8,EXACT_RULE,"[""CONCRETE""]",All concrete ready-mix.,DESCRIPTOR_ONLY,"ready-mix concrete (specification, no quantity effect)"
+P8-N06,PROJECT_RULE,8,EXACT_RULE,"[""CONCRETE""]","f'c >= 300 kg/cm2 reinforced, 150 kg/cm2 plain, unless the engineer raises some beams / columns.",DESCRIPTOR_ONLY,f'c >= 300 kg/cm2 for reinforced concrete (BOQ description)
+P8-N07,PROJECT_RULE,8,EXACT_RULE,"[""CONCRETE""]",Concrete cube testing.,DESCRIPTOR_ONLY,cube testing (specification)
+P8-N08,PROJECT_RULE,8,EXACT_RULE,"[""REBAR""]","Reinforcing steel yield >= 4200 kg/cm2, tested before delivery.",DESCRIPTOR_ONLY,steel yield >= 4200 kg/cm2 (BOQ description)
+P8-N09,PROJECT_RULE,8,EXACT_RULE,"[""COLUMN_STARTER"", ""STARTER""]","Development length of STARTER bars >= 70 D in tension zones, >= 40 D in compression zones.",NOT_THIS_ELEMENT,"scope COLUMN_STARTER,STARTER is not the ground slab"
+P8-N10,PROJECT_RULE,8,EXACT_RULE,"[""FOOTING""]",No foundations on fill; verify soil capacity by test.,NOT_THIS_ELEMENT,scope FOOTING is not the ground slab
+P8-N11,PROJECT_RULE,8,BLOCKED_METHOD,"[""BEAM""]",Beams crossed by service pipes are widened by 5 cm.,NOT_THIS_ELEMENT,scope BEAM is not the ground slab
+P8-N12,PROJECT_RULE,8,EXACT_RULE,"[""FOOTING""]",Confirm founding level with architect / soil test.,NOT_THIS_ELEMENT,scope FOOTING is not the ground slab
+P8-N13,PROJECT_RULE,8,EXACT_RULE,"[""SUBSTRUCTURE""]",Sulphate-resisting cement for concrete in contact with soil / groundwater.,DESCRIPTOR_ONLY,sulphate-resisting cement for concrete in contact with soil (BOQ description)
+P8-N14,PROJECT_RULE,8,EXACT_RULE,"[""SUBSTRUCTURE""]",Dewatering when groundwater is present.,NOT_THIS_ELEMENT,scope SUBSTRUCTURE is not the ground slab
+P8-N15,PROJECT_RULE,8,EXACT_RULE,"[""SUBSTRUCTURE""]",Excavation support study.,NOT_THIS_ELEMENT,scope SUBSTRUCTURE is not the ground slab
+P8-N16,PROJECT_RULE,8,EXACT_RULE,"[""PLAIN_CONCRETE""]",Plain concrete mix 1:3:6 ready-mix.,NOT_APPLIED,plain-concrete mix; no plain concrete / blinding is drawn under the zones (06)
+P8-N17,PROJECT_RULE,8,SOURCE_CONFLICT,"[""FORMWORK""]",Formwork stripping not before 14 days (with re-propping for long-span beams).,NOT_THIS_ELEMENT,scope FORMWORK is not the ground slab
+P8-N18,PROJECT_RULE,8,EXACT_RULE,"[""SUSPENDED_SLAB""]",Normal suspended slabs are 16 cm thick unless stated otherwise.,EXCLUDED_SUSPENDED_SLAB_RULE,16 cm applies to suspended slabs and is never applied to ground slabs
+P8-N19,PROJECT_RULE,8,EXACT_RULE,"[""LIFT_SHAFT_COLUMNS""]",Lift tie beams at 3.00 m height around the lift shaft when the storey is higher than 4.30 m.,NOT_THIS_ELEMENT,scope LIFT_SHAFT_COLUMNS is not the ground slab
+P8-N20,PROJECT_RULE,8,EXACT_RULE,"[""WALL""]",Walls containing columns are built to the column thickness.,NOT_THIS_ELEMENT,scope WALL is not the ground slab
+P8-N21,PROJECT_RULE,8,BLOCKED_METHOD,"[""BEAM_D_GT_60""]","Side bars 2Ø12 / 3Ø12 / 4Ø12 in beams deeper than 60 cm, according to the beam width, unless stated otherwise.",NOT_THIS_ELEMENT,scope BEAM_D_GT_60 is not the ground slab
+P8-N22,PROJECT_RULE,8,EXACT_RULE,"[""COLUMN"", ""SLAB"", ""BEAM"", ""SUBSTRUCTURE""]",Cover >= 2.5 cm columns / slabs / beams; >= 7 cm in contact with soil.,SOURCE_CONFLICT_RECORDED,"cover >= 7 cm in contact with soil and >= 2.5 cm for slabs cannot both hold in a 100 mm slab with a mesh of two Ø10 layers (70 + 10 + 10 + 25 = 115 mm); bar position is a conflict, the face-to-face run does not use a cover"
+P8-N23,PROJECT_RULE,8,EXACT_RULE,"[""FORMWORK""]",Camber formwork of large slabs / long beams at mid-span.,NOT_THIS_ELEMENT,scope FORMWORK is not the ground slab
+P8-N24,PROJECT_RULE,8,EXACT_RULE,"[""ALL""]",Coordinate HVAC and structure.,GENERAL,services coordination
+P9-COL-BAND-1,PROJECT_RULE,9,EXACT_RULE,"[""COLUMN""]",L ≤ 50 cm: one closed perimeter tie.,NOT_THIS_ELEMENT,scope COLUMN is not the ground slab
+P9-COL-BAND-2,PROJECT_RULE,9,EXACT_RULE,"[""COLUMN""]",50 < L < 80 cm: two overlapping closed ties.,NOT_THIS_ELEMENT,scope COLUMN is not the ground slab
+P9-COL-BAND-3,PROJECT_RULE,9,EXACT_RULE,"[""COLUMN""]",80 < L < 120 cm: two overlapping closed ties + one small central tie.,NOT_THIS_ELEMENT,scope COLUMN is not the ground slab
+P9-COL-L,PROJECT_RULE,9,EXACT_RULE,"[""COLUMN""]",L is the long side of the column section (tie topology selector).,NOT_THIS_ELEMENT,scope COLUMN is not the ground slab
+P9-COL-TIES,PROJECT_RULE,9,EXACT_RULE,"[""COLUMN""]","Column ties Ø8, 6 per metre (all column types).",NOT_THIS_ELEMENT,scope COLUMN is not the ground slab
+P9-COL-TMIN,PROJECT_RULE,9,EXACT_RULE,"[""COLUMN""]",Minimum column thickness by floor height.,NOT_THIS_ELEMENT,scope COLUMN is not the ground slab
+P9-SOIL,PROJECT_RULE,9,EXACT_RULE,"[""FOOTING""]",Excavation >= 1.5 m below existing plot level; design soil stress 2.20 kg/cm2; foundations designed for GF + 1F + 2F; groundwater at 4.5 m depth.,CHECK_APPLIED,founding level <= -1.50 (excavation >= 1.5 m): footing tops lie below the zones (07)
+MARKER 1690,SOURCE_MARKER (TT1 block),3,PRINTED,"[""SP-GBP-08""]",T=10cm / 5Ø10/m E.W.,ZONE_DEFINITION,"circle centre (24758.225, 14360.548) (r 500.0) lies in SP-GBP-08 only"
+MARKER 169D,SOURCE_MARKER (TT1 block),3,PRINTED,"[""SP-GBP-14""]",T=10cm / 5Ø10/m E.W.,ZONE_DEFINITION,"circle centre (2720.568, 9642.497) (r 500.0) lies in SP-GBP-14 only"
+TEXT_EXHAUSTION,SOURCE_SEARCH,all sheets,SEARCHED,"[""ST7757.dxf TEXT / MTEXT / ATTRIB / block texts""]","{""DET: 10cm PLAIN CONCRETE."": 1, ""GBP: 5Ø10/m E.W."": 2, ""GBP: T=10cm"": 2}",SOURCE_EXHAUSTION,the only ground-slab texts are the two TT1 markers on GBP; the details-sheet plain-concrete text belongs to the pool; no Arabic ground-slab note

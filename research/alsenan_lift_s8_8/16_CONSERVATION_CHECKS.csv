@@ -1,0 +1,16 @@
+CHECK_ID,CHECK,RESULT,DETAIL
+C01,one physical shaft: every inside-face view groups into one; the other S-BW outline is the S8.2 pool,PASS,"[[""FP"", ""GBP"", ""GFRS"", ""FFRS"", ""SFRS"", ""ARCH-GF"", ""ARCH-1F"", ""ARCH-2F""], [""GBP-POOL-7C5""]]"
+C02,"inside 1800 x 1800, walls 200 on every side; architectural 1800 / 200 on GF / 1F / 2F",PASS,
+C03,net wall pieces + column overlaps = the ring exactly; net = S8.1A RG-12..15,PASS,"net 1.1 m2, columns 0.5 m2"
+C04,the 3.24 m2 ground-slab opening = the pit internal area = the GF / 1F roof voids = the roof panel,PASS,
+C05,the whole shaft stands on the FF footing; walls start at its top (no shared volume),PASS,
+C06,FF drawn 4600 x 4500 = schedule 460 x 450 (depth 55),PASS,
+C07,every overlap check passes,PASS,[]
+C08,no concrete and no kg released; every pit-wall quantity is blocked,PASS,
+C09,"the three S8.6 landing openings sit in the S wall at the architectural jambs, 1000 wide, none in the RC pit wall",PASS,
+C10,P8-N19: GF triggered only floor to floor; 1F and 2F never triggered,PASS,
+C11,"12 S6 beam occurrences on the shaft walls, four per roof level",PASS,
+C12,every component in the ownership audit has exactly one of the six states,PASS,
+C13,PRE-S8 read through whitelists only; no firewalled column bound; references_read empty,PASS,"{""PRE_S8_CENSUS"": [""ELEMENT_ID"", ""ROW_KIND"", ""PARENT_ELEMENT"", ""ELEMENT_FAMILY"", ""FLOOR"", ""SOURCE_PAGE"", ""DXF_HANDLES"", ""PHYSICAL_GEOMETRY"", ""EXISTING_STAGE_OWNER"", ""NEW_S8_OWNER"", ""S8_SCOPE"", ""SOURCE_AUTHORITY"", ""MISSING_INFORMATION"", ""CONFLICT"", ""QA_STATE""], ""PRE_S8_INTERFACES"": [""INTERFACE"", ""SIDE_A"", ""SIDE_B"", ""RISK"", ""STATE""], ""PRE_S8_EXHAUSTION"": [""S8_CANDIDATE"", ""CH_PLAN"", ""CH_SECTION"", ""CH_TYPICAL_DETAIL"", ""CH_NOTES_EN"", ""CH_ARCHITECTURE"", ""DIMENSIONED_EVIDENCE"", ""SCHEMATIC_NTS_EVIDENCE"", ""MISSING"", ""READINESS"", ""RULE""]}"
+C14,"all 25 earlier freezes, the S8.3 errata and the S1 / S2 / S3 / S3.1 register indexes verify",PASS,25 manifests
+C15,"the S4 FF bars and the S3.1 starters are read, not re-counted; the S4.1-T01 bars land here blocked",PASS,

@@ -1,0 +1,147 @@
+{
+ "SCHEMA": "URBAN_R8_17_V4_FREEZE_V1",
+ "recommendation_written_first": {
+  "file": "research/external_engine_lab/r8_17_recommendation.json",
+  "commit": "88d5ac1",
+  "sha256": "5b8819293075fcc5d90f4620538653ef52bef2170b9893bea0212ecc09f8ed5c"
+ },
+ "frozen_commit": "e636c7721f46aa7960700292ab0e15c5debf86d1",
+ "wall_contact_path_policy": {
+  "id": "WALL_CONTACT_PATH_POLICY_V4",
+  "digest": "0426020a17326bfed5d4f3e92e5b4b738cee9908844f5dcb6a26fa2760b72d8a"
+ },
+ "opening_physical_class_policy": {
+  "id": "OPENING_PHYSICAL_CLASS_POLICY_V1",
+  "digest": "b36b0219d439227f39dec9c22ec75a5aed40f23503d804f42f03e5d817abf80f"
+ },
+ "owner_method_fact_policy": {
+  "id": "OWNER_METHOD_FACT_POLICY_V4",
+  "digest": "48329f815f98440b6074ea35c4838d05a0ac3e20bdd3c71364dd301f5880fc3a"
+ },
+ "unchanged": {
+  "wall_contact_path_policy_v3": [
+   "WALL_CONTACT_PATH_POLICY_V3",
+   "d2e6263a794acbd406b9903261640a6b8a786dff4f23607d6d3c1ebccfebbc99"
+  ],
+  "wall_contact_path_policy_v2": [
+   "WALL_CONTACT_PATH_POLICY_V2",
+   "5b5d6e5ec6397cf1c09fa678c95197db971f0867ae741becb9ac3b51bfc0c5b3"
+  ],
+  "door_opening_closure_policy": [
+   "DOOR_OPENING_CLOSURE_POLICY_V2",
+   "23142e50a6f92ac4e540e973ba580d067e2983f6bb15b72d83c98a5666e7a790"
+  ],
+  "wall_band_policy": [
+   "WALL_BAND_POLICY_V5",
+   "d1ff58e755bb88f4bbb7a9813427b7ac6f054ece851df7d9a048866641f3e6d3"
+  ],
+  "topology_closure_policy": [
+   "TOPOLOGY_CLOSURE_POLICY_V1",
+   "46742c570b4d8a036fd6b7446f28055bfd4e1adbff51966e800e5986ca99ccb2"
+  ],
+  "topology_tolerance_policy": [
+   "TOPOLOGY_TOLERANCE_POLICY_V1",
+   "263d2adf1d1770e1db963ac9bfde852dcedbdbd77e0040730322848c49acb450"
+  ]
+ },
+ "engine_file_sha256": {
+  "engine/source/wall_contact_path.py": "2ac4ea72512ba670b3ea20e351d7e3eb2cd675c4babb5d1cd244f4e2363c0f50",
+  "engine/source/opening_facts.py": "f985a49f3661f440094004b958cab63e74bddbcd0d6b9623c895d6c179166b96"
+ },
+ "facts_sha256": {
+  "data/registry/OWNER_PHYSICAL_FACTS.json": "a49923884fbcda8ee85b5f76cb849a62d58b100e328495d66515d10100d03cbf",
+  "data/registry/OWNER_METHOD_FACTS.json": "3ae8337ef05cb5c9163306a59407669e8c8a5b17904980735c436576f4a03f5a",
+  "data/registry/URBAN_OWNER_METHOD_RULES.json": "d9649aa7ff04d3d1a4334e7d39d1d8d1834d1847c7a4cb46627d081345e7e487"
+ },
+ "blind_script_sha256": "704c0ddaef84a1d93ef96e952e3a140959c7c5bee611cd1904b7c0ce032efde4",
+ "synthetic_test_sha256": {
+  "tests/r8_17/test_r8_17_skirting_v4.py": "0367a02ae0d5fb63834a169e32668dfe8f2aac7b121647f25eae2fcf18cc9d2f"
+ },
+ "synthetic_tests": [
+  "test_01_doorless_opening_with_two_physical_jambs_counts_both_once",
+  "test_02_one_jamb_and_one_continuous_face_counts_the_jamb_and_keeps_the_face",
+  "test_03_the_continuous_wall_face_stays_payable_and_is_only_annotated",
+  "test_04_a_topology_closure_record_can_never_consume_real_wall",
+  "test_05_a_non_physical_jamb_record_can_never_consume_wall",
+  "test_06_installed_door_physical_jambs_exist_but_skirting_is_zero",
+  "test_07_a_sliding_glass_door_to_the_floor_breaks_the_path_and_its_jambs_are_zero",
+  "test_08_a_normal_window_above_the_floor_keeps_payable_continuity",
+  "test_09_floor_reaching_glazing_has_no_continuity_and_a_door_class_is_never_a_window",
+  "test_10_a_wet_full_wall_tile_room_has_no_skirting",
+  "test_11_an_authorised_duct_face_is_payable_and_an_unauthorised_one_withheld",
+  "test_12_a_column_face_is_its_own_class_on_the_path",
+  "test_13_shuffled_input_gives_the_same_v4_measurement",
+  "test_14_hall_lobby_analogue_both_jambs_from_band_ends_closure_zero",
+  "test_15_mb_dress_analogue_one_cap_jamb_and_the_continuous_face_on_the_path",
+  "test_16_i1471_analogue_offset_door_stops_with_zero_jambs_on_both_sides",
+  "test_17_h2430_h2431_analogue_v4_never_touches_topology_and_closures_stay_zero",
+  "test_18_h1316_analogue_glazing_without_authority_is_withheld_never_wall_and_no_closure",
+  "test_19_v3_d2_false_passage_analogue_creates_no_passage_jamb",
+  "test_20_an_opening_fact_maps_only_its_own_bound_parts_and_only_when_it_applies"
+ ],
+ "synthetic_test_count": 20,
+ "qortuba_method": {
+  "method_id": "QORTUBA-NEW-SKIRTING-METHOD",
+  "version": 3,
+  "supersedes": "QORTUBA-NEW-SKIRTING-METHOD@v2 (R8.16, WALL_CONTACT_PATH_POLICY_V3)",
+  "scope": {
+   "project": "QORTUBA",
+   "source_revision_id": "QORTUBA_REV_NEW",
+   "rows": "dry tiled rooms (Q-13 sites)"
+  },
+  "system": "QP-06: hidden skirting + hidden profile on one payable path (US-08)",
+  "parameters": {
+   "door": "STOP_AT_OPENING_NO_JAMB",
+   "doorless_jambs": "INCLUDED",
+   "obstacle_faces": "INCLUDED",
+   "column_faces": "INCLUDED"
+  },
+  "rules": [
+   "1 dry / internal tiled room -> skirting on all eligible real wall contact",
+   "2 wardrobes / joinery / furniture do not deduct",
+   "3 authorised duct faces at floor contact are eligible",
+   "4 normal window above floor -> skirting continues below (SKIRTING_CONTINUITY_UNDER_WINDOW)",
+   "5 full-height floor opening -> no skirting across",
+   "5b floor-reaching sliding glazed door -> zero across and zero jambs (a door)",
+   "6 installed door -> stop at opening, no jamb return",
+   "7 doorless opening -> physical side jambs included",
+   "8 no skirting in full-wall-tile rooms",
+   "9 topology closure always zero material",
+   "10 no room-perimeter shortcut",
+   "11 only a physical jamb may replace wall contact; a continuous wall face stays payable"
+  ],
+  "authority": {
+   "rooms": "QORTUBA-NEW-DRY-ROOM-SKIRTING-ALL-REAL-WALLS-OWNER-001@v1 + QORTUBA-NEW-NO-SKIRTING-FULL-WALL-TILE-ROOMS-OWNER-001@v1",
+   "windows": "QORTUBA-NEW-SKIRTING-WINDOW-FLOOR-CONTACT-OWNER-001@v1 (supersedes QP-09 in scope) + QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v1 (sill ~1.00 m, normal windows only)",
+   "door": "URBAN-SKIRTING-OPENING-METHOD@v1 DOOR_PRESENT",
+   "doorless_jambs": "URBAN-SKIRTING-OPENING-METHOD@v1 DOORLESS_OPENING",
+   "obstacle_faces": "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1 + owner 'all real walls' + rule-store section E",
+   "column_faces": "rule-store section E ('a column is not an opening')",
+   "sliding_glazed_door": "QORTUBA-NEW-HALL-PAINTRY-SLIDING-GLASS-DOOR-OWNER-001@v1 + URBAN-SKIRTING-OPENING-METHOD@v1 DOOR_PRESENT",
+   "path_policy": "WALL_CONTACT_PATH_POLICY_V4"
+  },
+  "never": [
+   "93.98682 / 94.13682 / 96.73682 / 96.88682 / 84.795214 / 76.389 / 9.091605 / 0.15 / 2.75 as a target",
+   "a room polygon perimeter"
+  ],
+  "ref": "QORTUBA-NEW-SKIRTING-METHOD@v3",
+  "digest": "b33f9fdda1aa0e07583e41bae0013f9ea02f2e884d3987b292f9230a52a94d60"
+ },
+ "qortuba_before_freeze": {
+  "skirting_v4_measurements_on_qortuba": 0,
+  "note": "the only Qortuba reads before the freeze were source-geometry probes of the glazed opening, the wet-site boundaries and the passages (no V4 measurement, no total)"
+ },
+ "timestamp_metadata": {
+  "in_digest": false
+ },
+ "order": [
+  "recommendation (88d5ac1)",
+  "V4 + opening facts + owner facts + synthetic tests + blind script (e636c77)",
+  "THIS freeze",
+  "commit",
+  "THEN the blind Qortuba V4 skirting run",
+  "THEN rebuild / compare with R8.16"
+ ],
+ "rule": "no post-result edit inside the frozen V4 policy or the v3 method; any later amendment is recorded here with its reason",
+ "amendments": []
+}

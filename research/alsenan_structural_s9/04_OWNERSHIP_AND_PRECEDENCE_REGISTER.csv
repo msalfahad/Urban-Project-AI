@@ -1,0 +1,55 @@
+TRADE,FAMILY,VERSION,KIND,QUANTITY,UNIT,RUNNING_VALUE,AUTHORITATIVE,SUPERSEDED,WHY
+REBAR,COLUMNS,S3,BASELINE,5867.78,kg,5867.78,False,True,"exact-density unit mass; superseded by S3.1 (d2 / 162, blocked transitions)"
+REBAR,COLUMNS,S3.1,SUPERSEDING,5874.853,kg,5874.853,False,True,VERIFIED + LOWER_BOUND parts (summary 5874.884; parts are rounded to 1 g)
+REBAR,COLUMNS,S9-C01,CORRECTION,-1217.128,kg,4657.725,True,False,tie core paths and hook allowances are not lower bounds (D1.1 mathematics); moved to conditional
+REBAR,FOOTINGS,S4,BASELINE,3629.599506173,kg,3629.599506173,False,True,VERIFIED + LOWER_BOUND straight bars
+REBAR,FOOTINGS,S4.1,DELTA,0,kg,3629.599506173,True,False,"end treatments recorded, no kg"
+REBAR,FOOTINGS,D1.2,STATE_ONLY,,kg,3629.599506173,False,False,LOWER_BOUND -> PROJECT_BASIS_NUMERIC at the 70 mm minimum cover; kg unchanged
+REBAR,GROUND_BEAMS,S5,BASELINE,1457.998345679,kg,1457.998345679,False,True,known source-derived straight bars
+REBAR,GROUND_BEAMS,S5.1,DELTA,92.855308642,kg,1550.853654321,False,True,through-support runs + link core paths
+REBAR,GROUND_BEAMS,AD1,CORRECTION,-47.366667,kg,1503.486987321,False,True,authority decisions (6 bars retracted)
+REBAR,GROUND_BEAMS,D1.1,CORRECTION,-67.255307,kg,1436.231680321,True,False,link core paths retracted
+REBAR,GROUND_BEAMS,D1.2,STATE_ONLY,,kg,1436.231680321,False,False,cover authority confirmed; no kg
+REBAR,BEAMS,S6,BASELINE,3630.149301235,kg,3630.149301235,False,True,known source-derived straight bars
+REBAR,BEAMS,S6.1,DELTA,1716.880444444,kg,5347.029745679,False,True,base bars + link core paths + planted-column extra
+REBAR,BEAMS,D1.1,CORRECTION,-1332.264297,kg,4014.765448679,True,False,link core paths retracted
+REBAR,BEAMS,D1.2,STATE_ONLY,,kg,4014.765448679,False,False,cover authority confirmed; no kg
+REBAR,SLABS,S7,BASELINE,3802.015364542,kg,3802.015364542,True,False,restricted project-basis slab bars (PRE-S7 / PRE-S7.1 carry no kg)
+REBAR,SLABS,S7A,QA_ONLY,,kg,3802.015364542,False,False,top-extent sensitivity; no release
+REBAR,GROUND_SLAB,S8.1,BASELINE,233.694587428,kg,233.694587428,True,False,two source-zoned cells
+REBAR,GROUND_SLAB,S8.1A,NO_CHANGE,,kg,233.694587428,False,False,population / cover audit; nothing released
+REBAR,POOL,S8.2,BASELINE,0,kg,0,True,False,all blocked
+REBAR,POOL,S8.2A,NO_CHANGE,,kg,0,False,False,elevation binding; nothing released
+REBAR,DOMES,S8.3,BASELINE,602.111303562,kg,602.111303562,True,False,shell meshes
+REBAR,DOMES,S8.3-ERRATA,NO_CHANGE,,kg,602.111303562,False,False,a blocked junction family added; no kg
+REBAR,DOMES,S8.3A,QA_ONLY,,kg,602.111303562,False,False,mesh scenarios; frozen value unchanged
+REBAR,WATER_TANK_ROOF,S8.4,BASELINE,361.208564815,kg,361.208564815,True,False,two roof panels
+REBAR,SPECIAL_COLUMNS,S8.5,BASELINE,0,kg,0,True,False,nothing incremental: owned by S3.1 / S6.1
+REBAR,LINTELS,S8.6,BASELINE,96.427279858,kg,96.427279858,False,True,14 schedule-bound lintels
+REBAR,LINTELS,S8.6A,SUPERSEDING,49.589037037,kg,49.589037037,True,False,release authority: 7 retained (never added to S8.6)
+REBAR,STAIRS,S8.7,BASELINE,59.020862261,kg,59.020862261,True,False,three plates
+REBAR,STAIRS,S8.7A,NO_CHANGE,,kg,59.020862261,False,False,riser / finish correction layer: 0 delta
+REBAR,STAIRS,S8.7B,NO_CHANGE,,kg,59.020862261,False,False,owner scenario: 0 delta
+REBAR,STAIRS,S8.7C,NO_CHANGE,,kg,59.020862261,False,False,design resolution study: 0 delta
+REBAR,LIFT,S8.8,BASELINE,0,kg,0,True,False,pit walls / tie beam blocked
+CONCRETE,GROUND_SLAB,S8.1,BASELINE,3.785852316,m3,3.785852316,True,False,two cells
+CONCRETE,GROUND_SLAB,S8.1A,NO_CHANGE,,m3,3.785852316,False,False,candidates not released
+CONCRETE,POOL,S8.2,BASELINE,0,m3,0,True,False,blocked
+CONCRETE,POOL,S8.2A,NO_CHANGE,,m3,0,False,False,nothing released
+CONCRETE,DOMES,S8.3,BASELINE,5.081361321,m3,5.081361321,True,False,two shells
+CONCRETE,WATER_TANK_ROOF,S8.4,BASELINE,2.4543,m3,2.4543,True,False,two roof panels
+CONCRETE,LINTELS,S8.6,BASELINE,0.745261681,m3,0.745261681,False,True,14 lintels
+CONCRETE,LINTELS,S8.6A,SUPERSEDING,0.366,m3,0.366,True,False,7 retained; one shared corner re-owned
+CONCRETE,STAIRS,S8.7,BASELINE,0.516582788,m3,0.516582788,True,False,three plates
+CONCRETE,STAIRS,S8.7A-C,NO_CHANGE,,m3,0.516582788,False,False,0 delta
+CONCRETE,LIFT,S8.8,BASELINE,0,m3,0,True,False,blocked
+CONCRETE,FOOTINGS,S1 / S2 census,BASELINE,0,m3,0,False,True,"counted / sized, no m3 in any frozen stage (0 here means nothing released, not zero concrete)"
+CONCRETE,FOOTINGS,S9,DELTA,64.304,m3,64.304,True,False,S9-RR1 concrete release (10_S9_DELTA_REGISTER)
+CONCRETE,COLUMNS,S1 / S2 census,BASELINE,0,m3,0,False,True,"counted / sized, no m3 in any frozen stage (0 here means nothing released, not zero concrete)"
+CONCRETE,COLUMNS,S9,DELTA,20.5845,m3,20.5845,True,False,S9-RR1 concrete release (10_S9_DELTA_REGISTER)
+CONCRETE,GROUND_BEAMS,S1 / S2 census,BASELINE,0,m3,0,False,True,"counted / sized, no m3 in any frozen stage (0 here means nothing released, not zero concrete)"
+CONCRETE,GROUND_BEAMS,S9,DELTA,3.8791,m3,3.8791,True,False,S9-RR1 concrete release (10_S9_DELTA_REGISTER)
+CONCRETE,SLABS,S1 / S2 census,BASELINE,0,m3,0,False,True,"counted / sized, no m3 in any frozen stage (0 here means nothing released, not zero concrete)"
+CONCRETE,SLABS,S9,DELTA,57.09856,m3,57.09856,True,False,S9-RR1 concrete release (10_S9_DELTA_REGISTER)
+CONCRETE,BEAMS,S1 / S2 census,BASELINE,0,m3,0,True,False,"counted / sized, no m3 in any frozen stage (0 here means nothing released, not zero concrete)"
+CONCRETE,BEAMS,S9,NO_CHANGE,,m3,0,False,False,"nothing released by S9; not measured as zero: 33 BLOCKED_UNQUANTIFIED, 108 CONDITIONAL_NOT_RELEASED, 8 EXCLUDED_OWNED_BY_OTHER_FAMILY, 9 SOURCE_CONFLICT (02)"

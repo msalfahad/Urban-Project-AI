@@ -1,0 +1,73 @@
+{
+ "SCHEMA": "URBAN_R8_18_WALL_HEIGHT_AUTHORITY_POLICY_V1",
+ "policy": {
+  "policy_id": "WALL_HEIGHT_AUTHORITY_POLICY_V1",
+  "ranks": {
+   "SOURCE_FINISH_HEIGHT": 1,
+   "SECTION_CLEAR_HEIGHT": 2,
+   "DERIVED_CLEAR_HEIGHT": 3,
+   "OWNER_PROJECT_FACT": 4,
+   "PERMITTED_PROJECT_DEFAULT": 5
+  },
+  "not_a_wall_height": [
+   "FLOOR_TO_FLOOR",
+   "LEVEL",
+   "SLAB_TO_SLAB"
+  ],
+  "derivation_components": [
+   "beam_or_soffit_zone",
+   "ceiling_service_decor_zone",
+   "floor_buildup",
+   "other"
+  ],
+  "derivation": "gross vertical height - each required deduction, each with its own source authority; one unknown required component -> BLOCKED at rank 3 (never filled by a default)",
+  "scope": "project + revision + floor / zone + trade (+ space classes)",
+  "never": [
+   "a company-wide wall height constant",
+   "floor-to-floor alone as a wall height",
+   "an owner rationale as a formula",
+   "one trade's height clipped to another's",
+   "a height transferred to another floor, revision or project"
+  ],
+  "digest": "e7cc4cd65687dd7b2363415030c5795dc498f0a305ce3345dab804d5b60cf803"
+ },
+ "urban_rule": {
+  "rule_id": "URBAN-WALL-FINISH-HEIGHT-METHOD",
+  "version": 1,
+  "authority": [
+   "PROJECT_OWNER",
+   "URBAN_OWNER_METHOD"
+  ],
+  "received": "R8.18 brief §1, §3",
+  "scope": {
+   "applies_to": "every Urban project",
+   "revision_scoped": false
+  },
+  "method": {
+   "principle": "WALL FINISH HEIGHT IS NOT A COMPANY-WIDE NUMBER: it is established per floor / measurement scope and per trade",
+   "hierarchy": [
+    "explicit source wall / finish height",
+    "section / elevation clear height",
+    "derived clear height from authoritative vertical components",
+    "project / source-bound owner fact",
+    "permitted project default",
+    "BLOCKED"
+   ],
+   "derivation_evidence": [
+    "floor-to-floor / level",
+    "beam depth",
+    "suspended / decorative ceiling depth",
+    "floor build-up / finishing depth",
+    "other vertical constraints"
+   ]
+  },
+  "never": [
+   "URBAN_DEFAULT_WALL_HEIGHT",
+   "a wall height from floor-to-floor alone",
+   "one floor's height on another",
+   "a derivation with an unknown component"
+  ]
+ },
+ "no_company_constant": "no URBAN_DEFAULT_WALL_HEIGHT (or equivalent) exists in engine/ or the rule store",
+ "future_derivation": "gross vertical height from source levels (finished-floor to finished-floor, or slab to slab with the build-up as a component) MINUS each established deduction (beam / soffit zone where the finish stops at it, ceiling / service / decor zone, floor build-up when the gross is slab-based) - each component carrying its own source and authority; the result carries formula, components, state. Floor-to-floor alone is never a wall height."
+}

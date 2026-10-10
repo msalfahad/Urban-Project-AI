@@ -1,0 +1,113 @@
+SOURCE,HANDLE,KIND,LAYER,CONTENT,USED_FOR,STATE
+ST7757.dxf FP,10EA,LWPOLYLINE,S-BW,"[19787.904, 15611.856, 21587.904, 17411.856]",shaft inside face (foundation plan),VERIFIED_IN_DXF
+ST7757.dxf FP,10EB,LWPOLYLINE,S-BW,"[19587.904, 15411.856, 21787.904, 17611.856]",shaft outside face (foundation plan),VERIFIED_IN_DXF
+ST7757.dxf GBP,7BE,LWPOLYLINE,S-BW,"[19787.904, 15611.856, 21587.904, 17411.856]",shaft inside face (ground-beam plan),VERIFIED_IN_DXF
+ST7757.dxf GBP,7C2,LWPOLYLINE,S-BW,"[19587.904, 15411.856, 21787.904, 17611.856]",shaft outside face (ground-beam plan),VERIFIED_IN_DXF
+ST7757.dxf FP,1B2B,LWPOLYLINE,S-FOOTINGS,"[18687.697, 14111.998, 23287.697, 18611.998]",FF footing outline,VERIFIED_IN_DXF
+ST7757.dxf FP,1096,LWPOLYLINE,S-COL.BON,"[19587.904, 15411.856, 19787.904, 15911.856]",SW lift column (FP),VERIFIED_IN_DXF
+ST7757.dxf FP,1099,LWPOLYLINE,S-COL.BON,"[19587.904, 17111.856, 19787.904, 17611.856]",NW lift column (FP),VERIFIED_IN_DXF
+ST7757.dxf FP,1090,LWPOLYLINE,S-COL.BON,"[21587.904, 15411.856, 21837.904, 16411.856]",SE lift column (FP),VERIFIED_IN_DXF
+ST7757.dxf FP,1093,LWPOLYLINE,S-COL.BON,"[21587.904, 17111.856, 21787.904, 17611.856]",NE lift column (FP),VERIFIED_IN_DXF
+ST7757.dxf GBP,1F2,LWPOLYLINE,S-COL.BON,"[19587.904, 15411.856, 19787.904, 15911.856]",SW lift column (GBP),VERIFIED_IN_DXF
+ST7757.dxf GBP,1F5,LWPOLYLINE,S-COL.BON,"[19587.904, 17111.856, 19787.904, 17611.856]",NW lift column (GBP),VERIFIED_IN_DXF
+ST7757.dxf GBP,1EC,LWPOLYLINE,S-COL.BON,"[21587.904, 15411.856, 21837.904, 16411.856]",SE lift column (GBP),VERIFIED_IN_DXF
+ST7757.dxf GBP,1EF,LWPOLYLINE,S-COL.BON,"[21587.904, 17111.856, 21787.904, 17611.856]",NE lift column (GBP),VERIFIED_IN_DXF
+ST7757.dxf GFRS,33E,LWPOLYLINE,S-COL.BON,"[19587.904, 15411.856, 19787.904, 15911.856]",SW lift column (GFRS),VERIFIED_IN_DXF
+ST7757.dxf GFRS,341,LWPOLYLINE,S-COL.BON,"[19587.904, 17111.856, 19787.904, 17611.856]",NW lift column (GFRS),VERIFIED_IN_DXF
+ST7757.dxf GFRS,338,LWPOLYLINE,S-COL.BON,"[21587.904, 15411.856, 21837.904, 16411.856]",SE lift column (GFRS),VERIFIED_IN_DXF
+ST7757.dxf GFRS,33B,LWPOLYLINE,S-COL.BON,"[21587.904, 17111.856, 21787.904, 17611.856]",NE lift column (GFRS),VERIFIED_IN_DXF
+ST7757.dxf FFRS,67F,LWPOLYLINE,S-COL.BON,"[19587.904, 15411.856, 19787.904, 15911.856]",SW lift column (FFRS),VERIFIED_IN_DXF
+ST7757.dxf FFRS,682,LWPOLYLINE,S-COL.BON,"[19587.904, 17111.856, 19787.904, 17611.856]",NW lift column (FFRS),VERIFIED_IN_DXF
+ST7757.dxf FFRS,679,LWPOLYLINE,S-COL.BON,"[21587.904, 15411.856, 21837.904, 16411.856]",SE lift column (FFRS),VERIFIED_IN_DXF
+ST7757.dxf FFRS,67C,LWPOLYLINE,S-COL.BON,"[21587.904, 17111.856, 21787.904, 17611.856]",NE lift column (FFRS),VERIFIED_IN_DXF
+ST7757.dxf SFRS,41E,LWPOLYLINE,S-COL.BON,"[19587.904, 15411.856, 19787.904, 15911.856]",SW lift column (SFRS),VERIFIED_IN_DXF
+ST7757.dxf SFRS,421,LWPOLYLINE,S-COL.BON,"[19587.904, 17111.856, 19787.904, 17611.856]",NW lift column (SFRS),VERIFIED_IN_DXF
+ST7757.dxf SFRS,418,LWPOLYLINE,S-COL.BON,"[21587.904, 15411.856, 21787.904, 16111.856]",SE lift column (SFRS),VERIFIED_IN_DXF
+ST7757.dxf SFRS,41B,LWPOLYLINE,S-COL.BON,"[21587.904, 17111.856, 21787.904, 17611.856]",NE lift column (SFRS),VERIFIED_IN_DXF
+ST7757.dxf GFRS,54F,LINE,S-OPENING,"[[19787.904, 15611.856], [21587.904, 17411.856]]",shaft void cross (GF roof),VERIFIED_IN_DXF
+ST7757.dxf GFRS,550,LINE,S-OPENING,"[[19787.904, 17411.856], [21587.904, 15611.856]]",shaft void cross (GF roof),VERIFIED_IN_DXF
+ST7757.dxf FFRS,73F,LINE,S-OPENING,"[[19787.904, 17411.856], [21587.904, 15611.856]]",shaft void cross (1F roof),VERIFIED_IN_DXF
+ST7757.dxf FFRS,740,LINE,S-OPENING,"[[21587.904, 17411.856], [19787.904, 15611.856]]",shaft void cross (1F roof),VERIFIED_IN_DXF
+ST7757.dxf FP,1676,TEXT,S-TEXT,FF,footing tag inside the shaft,VERIFIED_IN_DXF
+ST7757.dxf FP,109A,TEXT,S-TEXT,C9,SE column tag,VERIFIED_IN_DXF
+ST7757.dxf FP,109B,TEXT,S-TEXT,C2,SW column tag,VERIFIED_IN_DXF
+ST7757.dxf FP,109C,TEXT,S-TEXT,C2,NE column tag,VERIFIED_IN_DXF
+ST7757.dxf FP,109D,TEXT,S-TEXT,C1,NW column tag,VERIFIED_IN_DXF
+ST7757.dxf GFRS,45E,TEXT,S-TEXT,B1,"beam tag, N side (GF roof)",VERIFIED_IN_DXF
+ST7757.dxf GFRS,45F,TEXT,S-TEXT,B14,"beam tag, S side (GF roof)",VERIFIED_IN_DXF
+ST7757.dxf GFRS,4B6,TEXT,S-TEXT,B7,"beam tag, W side (GF roof)",VERIFIED_IN_DXF
+ST7757.dxf GFRS,4B7,TEXT,S-TEXT,B1,"beam tag, E side (GF roof)",VERIFIED_IN_DXF
+ST7757.dxf FFRS,6CB,TEXT,S-TEXT,B1,"beam tag, N side (1F roof)",VERIFIED_IN_DXF
+ST7757.dxf FFRS,6CC,TEXT,S-TEXT,B7,"beam tag, S side (1F roof)",VERIFIED_IN_DXF
+ST7757.dxf FFRS,6CD,TEXT,S-TEXT,B7,"beam tag, W side (1F roof)",VERIFIED_IN_DXF
+ST7757.dxf FFRS,6CE,TEXT,S-TEXT,B1,"beam tag, E side (1F roof)",VERIFIED_IN_DXF
+ST7757.dxf SFRS,78A,TEXT,S-TEXT,B2,"beam tag, S side (2F roof)",VERIFIED_IN_DXF
+ST7757.dxf SFRS,78B,TEXT,S-TEXT,B1,"beam tag, E side (2F roof)",VERIFIED_IN_DXF
+ST7757.dxf SFRS,78C,TEXT,S-TEXT,B1,"beam tag, W side (2F roof)",VERIFIED_IN_DXF
+ST7757.dxf SFRS,78D,TEXT,S-TEXT,B1,"beam tag, N side (2F roof)",VERIFIED_IN_DXF
+ST7757.dxf SFRS,791,TEXT,S-TEXT-SLAB,5%%c10/m,roof slab bars over the shaft (2F roof),VERIFIED_IN_DXF
+ST7757.dxf SFRS,793,TEXT,S-TEXT-SLAB,5%%c10/m,roof slab bars over the shaft (2F roof),VERIFIED_IN_DXF
+ST7757.dxf GBP,7C5,LWPOLYLINE,S-BW,pool shell outline,the only other S-BW outline: S8.2 SPC-POOL (not a lift),VERIFIED_IN_DXF
+ST7757.dxf GBP,7C6,LWPOLYLINE,S-BW,pool shell outline,the only other S-BW outline: S8.2 SPC-POOL (not a lift),VERIFIED_IN_DXF
+ST7757.dxf schedule (p.9),2B1E,INSERT FTB,S-TEXT.SCH,"{""DEPHT"": ""55"", ""FO-TY"": ""FF"", ""H"": ""450"", ""LO-B-B"": ""9"", ""LO-B-D"": ""14/m"", ""LO-T-B"": ""6"", ""LO-T-D"": ""14/m"", ""SH-B-B"": ""9"", ""SH-B-D"": ""14/m"", ""SH-T-B"": ""6"", ""SH-T-D"": ""14/m"", ""W"": ""460""}",FF footing schedule row,VERIFIED_IN_DXF
+ST7757.dxf schedule (p.9),1C64,TEXT,S-TEXT.SCH,legacy-encoded remark (not reproduced),FF remark 'lift base' (PRE-S8 decoding),RECORDED
+P7757.dxf GF plan (registered by S8.6),216,LINE,1,"[[19787.904, 17411.856], [19787.904, 15611.856]]",inside face W,VERIFIED_IN_DXF
+P7757.dxf GF plan (registered by S8.6),212,LINE,1,"[[21587.904, 17411.856], [21587.904, 15611.856]]",inside face E,VERIFIED_IN_DXF
+P7757.dxf GF plan (registered by S8.6),219,LINE,1,"[[21587.904, 17411.856], [19787.904, 17411.856]]",inside face N,VERIFIED_IN_DXF
+P7757.dxf GF plan (registered by S8.6),21E,LINE,1,"[[20187.904, 15611.856], [19787.904, 15611.856]]","inside face S, W of the door",VERIFIED_IN_DXF
+P7757.dxf GF plan (registered by S8.6),21D,LINE,1,"[[21587.904, 15611.856], [21187.904, 15611.856]]","inside face S, E of the door",VERIFIED_IN_DXF
+P7757.dxf GF plan (registered by S8.6),21C,LINE,1,"[[19587.904, 17611.856], [19587.904, 15611.856]]",outside face W,VERIFIED_IN_DXF
+P7757.dxf GF plan (registered by S8.6),BB,LINE,1,"[[20187.904, 15411.856], [19587.904, 15411.856]]","outside face S, W of the door",VERIFIED_IN_DXF
+P7757.dxf GF plan (registered by S8.6),20D,LINE,1,"[[21787.904, 15411.856], [21187.904, 15411.856]]","outside face S, E of the door",VERIFIED_IN_DXF
+P7757.dxf GF plan (registered by S8.6),226,LINE,1,"[[20187.904, 15411.856], [20187.904, 15611.856]]",door jamb W,VERIFIED_IN_DXF
+P7757.dxf GF plan (registered by S8.6),227,LINE,1,"[[21187.904, 15411.856], [21187.904, 15611.856]]",door jamb E,VERIFIED_IN_DXF
+P7757.dxf GF plan (registered by S8.6),666,DIMENSION,4,1800,inside width E-W,VERIFIED_IN_DXF
+P7757.dxf GF plan (registered by S8.6),67D,DIMENSION,4,1800,inside depth N-S,VERIFIED_IN_DXF
+P7757.dxf GF plan (registered by S8.6),672,DIMENSION,4,200,wall N,VERIFIED_IN_DXF
+P7757.dxf 1F plan (registered by S8.6),B13,LINE,1,"[[19787.904, 17411.856], [19787.904, 15611.856]]",inside face W,VERIFIED_IN_DXF
+P7757.dxf 1F plan (registered by S8.6),B11,LINE,1,"[[21587.904, 17411.856], [21587.904, 15611.856]]",inside face E,VERIFIED_IN_DXF
+P7757.dxf 1F plan (registered by S8.6),B15,LINE,1,"[[21587.904, 17411.856], [19787.904, 17411.856]]",inside face N,VERIFIED_IN_DXF
+P7757.dxf 1F plan (registered by S8.6),B1A,LINE,1,"[[20187.904, 15611.856], [19787.904, 15611.856]]","inside face S, W of the door",VERIFIED_IN_DXF
+P7757.dxf 1F plan (registered by S8.6),B19,LINE,1,"[[21587.904, 15611.856], [21187.904, 15611.856]]","inside face S, E of the door",VERIFIED_IN_DXF
+P7757.dxf 1F plan (registered by S8.6),B06,LINE,1,"[[21787.904, 17611.856], [21787.904, 15611.856]]",outside face E,VERIFIED_IN_DXF
+P7757.dxf 1F plan (registered by S8.6),B14,LINE,1,"[[21787.904, 17611.856], [19787.904, 17611.856]]",outside face N,VERIFIED_IN_DXF
+P7757.dxf 1F plan (registered by S8.6),B96,LINE,1,"[[20187.904, 15411.856], [20187.904, 15611.856]]",door jamb W,VERIFIED_IN_DXF
+P7757.dxf 1F plan (registered by S8.6),B97,LINE,1,"[[21187.904, 15411.856], [21187.904, 15611.856]]",door jamb E,VERIFIED_IN_DXF
+P7757.dxf 1F plan (registered by S8.6),D31,DIMENSION,4,1800,inside depth N-S,VERIFIED_IN_DXF
+P7757.dxf 1F plan (registered by S8.6),D3D,DIMENSION,4,1800,inside width E-W,VERIFIED_IN_DXF
+P7757.dxf 1F plan (registered by S8.6),D62,DIMENSION,4,200,wall N,VERIFIED_IN_DXF
+P7757.dxf 1F plan (registered by S8.6),E94,DIMENSION,4,200,wall E,VERIFIED_IN_DXF
+P7757.dxf 2F plan (registered by S8.6),1297,LINE,1,"[[19787.904, 17411.856], [19787.904, 15611.856]]",inside face W,VERIFIED_IN_DXF
+P7757.dxf 2F plan (registered by S8.6),1293,LINE,1,"[[21587.904, 17411.856], [21587.904, 15611.856]]",inside face E,VERIFIED_IN_DXF
+P7757.dxf 2F plan (registered by S8.6),1299,LINE,1,"[[21587.904, 17411.856], [19787.904, 17411.856]]",inside face N,VERIFIED_IN_DXF
+P7757.dxf 2F plan (registered by S8.6),129C,LINE,1,"[[20187.904, 15611.856], [19787.904, 15611.856]]","inside face S, W of the door",VERIFIED_IN_DXF
+P7757.dxf 2F plan (registered by S8.6),129B,LINE,1,"[[21587.904, 15611.856], [21187.904, 15611.856]]","inside face S, E of the door",VERIFIED_IN_DXF
+P7757.dxf 2F plan (registered by S8.6),128A,LINE,1,"[[20187.904, 15411.856], [19587.904, 15411.856]]","outside face S, W of the door",VERIFIED_IN_DXF
+P7757.dxf 2F plan (registered by S8.6),1289,LINE,1,"[[21587.904, 15411.856], [21187.904, 15411.856]]","outside face S, E of the door",VERIFIED_IN_DXF
+P7757.dxf 2F plan (registered by S8.6),12AE,LINE,1,"[[20187.904, 15411.856], [20187.904, 15611.856]]",door jamb W,VERIFIED_IN_DXF
+P7757.dxf 2F plan (registered by S8.6),12AF,LINE,1,"[[21187.904, 15411.856], [21187.904, 15611.856]]",door jamb E,VERIFIED_IN_DXF
+P7757.dxf 2F plan (registered by S8.6),139A,DIMENSION,4,1800,inside depth N-S,VERIFIED_IN_DXF
+P7757.dxf 2F plan (registered by S8.6),13A6,DIMENSION,4,1800,inside width E-W,VERIFIED_IN_DXF
+P7757.dxf 2F plan (registered by S8.6),13CB,DIMENSION,4,200,wall N,VERIFIED_IN_DXF
+P7757.dxf 2F plan (registered by S8.6),142F,DIMENSION,4,200,wall E,VERIFIED_IN_DXF
+P7757.dxf 2F plan (registered by S8.6),1538,DIMENSION,4,200,wall S,VERIFIED_IN_DXF
+"ST7757.pdf p.14 'DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT)' (typical section, visual)",visual,PDF_RASTER,,see 07,"pit section, wall bars, pit depth note",VISUAL_RECORD (renders not committed)
+S1 rule register P8-N19 (p.8),-,EXACT_RULE,,Lift tie beams at 3.00 m height around the lift shaft when the storey is higher than 4.30 m.,LIFT_TIE_BEAM required where storey height > 4.30 m; at +3.00 m,PROJECT_DEFAULT
+S1 rule register P14-LIFT (p.14),-,BLOCKED_METHOD,,"Lift pit on the FF raft: 20 cm walls with 6Ø12/m and 6Ø16/m, pit depth by the lift manufacturer.","LIFT_PIT: walls 200 mm, 6Ø12/m + 6Ø16/m; depth BLOCKED (manufacturer)",TYPICAL_DETAIL
+S1 rule register P9-SOIL (p.9),-,EXACT_RULE,,Excavation >= 1.5 m below existing plot level; design soil stress 2.20 kg/cm2; foundations designed for GF + 1F + 2F; groundwater at 4.5 m depth.,founding depth >= 1.5 m; q_allow 2.20 kg/cm2,PROJECT_DEFAULT
+S1 rule register P8-N18 (p.8),-,EXACT_RULE,,Normal suspended slabs are 16 cm thick unless stated otherwise.,NORMAL_SUSPENDED_SLAB_THICKNESS = 160 mm; precedence LOCAL PANEL NOTE > FLOOR NOTE > PROJECT DEFAULT,PROJECT_DEFAULT
+S1 special occurrence register,SPC-LIFT_PIT,LIFT_PIT,,BLOCKED / COUNTED_BLOCKED,lift family record,READ
+S1 special occurrence register,SPC-LIFT_TIE_BEAM-GF,LIFT_TIE_BEAM,,BLOCKED / COUNTED_BLOCKED,lift family record,READ
+S2 component release,FTG-FF-18688-14112,CONCRETE,,VERIFIED (nr),existing component record,READ
+S2 component release,FTG-FF-18688-14112,MAIN_BARS,,VERIFIED (nr),existing component record,READ
+S2 component release,FTG-FF-18688-14112,BOXED,,VERIFIED (nr),existing component record,READ
+S2 component release,FTG-FF-18688-14112,LOWER_GROUND_BEAM,,BLOCKED (nr),existing component record,READ
+S2 component release,BM-GF-LIFT_TIE,CONCRETE,,BLOCKED (m beam),existing component record,READ
+S2 component release,BM-GF-LIFT_TIE,MAIN_BARS,,BLOCKED (m beam),existing component record,READ
+S2 component release,BM-GF-LIFT_TIE,SIDE_BARS,,BLOCKED (m beam),existing component record,READ
+S2 component release,SP-2F_ROOF_SLAB-03,CONCRETE,,VERIFIED (m2 plan),existing component record,READ
+S2 component release,SP-2F_ROOF_SLAB-03,BOTTOM_AND_MAIN_BARS,,VERIFIED (m2 plan),existing component record,READ
+S2 component release,SP-2F_ROOF_SLAB-03,TOP_OVER_SUPPORTS,,BLOCKED (m2 plan),existing component record,READ
+S2 component release,SP-2F_ROOF_SLAB-03,TEMPERATURE_STEEL,,BLOCKED (m2 plan),existing component record,READ
+S3 column flags,STR-COL-013,section_overrides,,"[30.0, 50.0] (MEMBER_SCHEDULE) used",foundation-storey column width,READ
+S8.1A question register,Q-S8.1A-05,LIFT_PIT,,"Pit depth is 'by the lift manufacturer' (P14-LIFT): needed by the lift-pit family, not by the ground slab.",pit depth (handed to the lift family),OPEN (lift-pit family)

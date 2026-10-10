@@ -1,0 +1,36 @@
+ITEM_ID,STAGE,TOPIC,FROZEN_ROWS_LINKED,WHERE_SEARCHED,ASK
+S4-01,S4,BOXED value meaning ('3+4' / '3+5' / '3+6' / '3+8'),16,"ST7757.dxf all TEXT/MTEXT/ATTRIB/ATTDEF/DIMENSION + 420 block definitions (E-DXF-02) | FT block template | p.8 notes 1-24 (raster; S1 transcription P8-N01..N24, R4 OCR) | p.13 both footing details (vector) | p.9 schedule plot",engineer to point to the sheet / note that defines '3+n' (claimed to be in the set)
+S4-02,S4,BOXED bar diameter,16,ST7757.dxf all TEXT/MTEXT/ATTRIB/ATTDEF/DIMENSION + 420 block definitions (E-DXF-02) | FT block template | p.13 labels (visual + OCR),engineer: diameter of the boxed bar
+S4-04,S4,BOXED orientation (which plan direction / both),16,p.13 both details | p.9 schedule,engineer: direction(s) of the boxed bars
+S4-05,S4,FN blank BOXED cell,4,ST7757.dxf all TEXT/MTEXT/ATTRIB/ATTDEF/DIMENSION + 420 block definitions (E-DXF-02) | FT block template | p.9 REMARKS,engineer: does FN have boxed bars
+S4-08,S4,FF '2Ø16': extent / length and number of walls,1,p.14 | foundation plan pit walls (DXF S-BW 10EA / 10EB),engineer: bar length / lap at the pit corners and whether all four walls carry 2 + 2 Ø16
+S4-10,S4,Per-metre two-layer counts: +1 edge bar,20,"ST7757.dxf all TEXT/MTEXT/ATTRIB/ATTDEF/DIMENSION + 420 block definitions (E-DXF-02) | p.8 notes 1-24 (raster; S1 transcription P8-N01..N24, R4 OCR) | p.14",engineer or S4.1 lower bound kept
+S4-11,S4,Two-layer top-bar end treatment,10,p.14 loop (vector) | FTB rates,engineer: end treatment of two-layer bars
+S4-13,S4,Single-layer FT bottom SHORT bars: end treatment (frozen VERIFIED straight),20,p.13 both details,S4.1: BOTTOM_SHORT VERIFIED -> LOWER_BOUND (end shape not established); engineer to confirm
+S4-14,S4,Two-layer bottom bars: end treatment (frozen STRAIGHT),10,p.13 | p.14,S4.1: add END_TREATMENT to the missing facets (state stays LOWER_BOUND)
+S5-02,S5,GB development / anchorage at END supports and into footings,6,"ST7757.dxf all TEXT/MTEXT/ATTRIB/ATTDEF/DIMENSION + 420 block definitions (E-DXF-02) | p.8 notes 1-24 (raster; S1 transcription P8-N01..N24, R4 OCR) | pp.13-16",engineer: anchorage of GB / strap bars at end supports and into footings
+S5-03,S5,GB longitudinal hooks / bends,124,ST7757.dxf all TEXT/MTEXT/ATTRIB/ATTDEF/DIMENSION + 420 block definitions (E-DXF-02) | pp.13-16,engineer
+S5-05,S5,GB stirrup hook shape / extension,124,p.13 sections,engineer: hook angle and extension
+S5-06,S5,Exterior ground-beam depth (FOLLOW ARCH),22,P7757.dxf all texts | P7757 raster PDFs (pre-S5.1) | ST7757 note B8 | p.13 section,engineer: GF slab (structural) level or floor build-up
+S5-08,S5,<2.5 m detail: stirrup diameter / rate,30,p.13 (vector leaders),engineer: link of the <2.5 m section
+S5-09,S5,Detail precedence below 2.5 m ('<2.5 m' vs '<5 m'),105,ST7757.dxf all TEXT/MTEXT/ATTRIB/ATTDEF/DIMENSION + 420 block definitions (E-DXF-02) | p.13 titles,engineer
+S5-10,S5,'without concentrated load' definition,210,"ST7757.dxf all TEXT/MTEXT/ATTRIB/ATTDEF/DIMENSION + 420 block definitions (E-DXF-02) | p.8 notes 1-24 (raster; S1 transcription P8-N01..N24, R4 OCR) | pp.13-16",engineer
+S5-12,S5,Unidentified '******' symbols,42,ST7757.dxf all TEXT/MTEXT/ATTRIB/ATTDEF/DIMENSION + 420 block definitions (E-DXF-02),engineer
+S5-13,S5,Support / termination of 1811-1812,2,foundation / GB plans | p.14 boundary wall,engineer
+S5-14,S5,GB side reinforcement '2Ø12/30cm' (exterior section),44,p.13,engineer (with S5-06)
+S5-15,S5,Length basis of the p.13 titles,43,ST7757.dxf all TEXT/MTEXT/ATTRIB/ATTDEF/DIMENSION + 420 block definitions (E-DXF-02) | p.13,engineer
+S5-17,S5,Partly exterior / slab-edge spans: which section,52,ST7757.dxf all TEXT/MTEXT/ATTRIB/ATTDEF/DIMENSION + 420 block definitions (E-DXF-02) | p.13,engineer
+S6-01,S6,Beam longitudinal development / anchorage,204,"ST7757.dxf all TEXT/MTEXT/ATTRIB/ATTDEF/DIMENSION + 420 block definitions (E-DXF-02) | p.8 notes 1-24 (raster; S1 transcription P8-N01..N24, R4 OCR) | pp.11-16",engineer
+S6-03,S6,Simple-beam (SBT) bar-end hooks / bends,178,p.10 | pp.13-16,engineer
+S6-06,S6,Inner-link width of the STR2 rows,9,STR2 block,engineer
+S6-07,S6,Stirrup hook extension,118,p.13 / p.15 / icons,engineer
+S6-08,S6,CB upper / hanger row,26,pp.11-12 (vector + DXF),engineer
+S6-09,S6,'0.3 Ln2' in the 2-span typicals / undimensioned left-end bar,13,C-BEAM templates (DXF dimensions),engineer
+S6-10,S6,'0.15L' in the 3-span typical,0,C-BEAM3 template,engineer
+S6-11,S6,"Side bars '2Ø12/30cm', '2Ø16/20cm', '2Ø14/20cm' semantics",39,p.10 REMARKS | p.11-12 MIDDLE REINT. | p.13,engineer
+S6-13,S6,Cantilever CA detail,0,ST7757.dxf all TEXT/MTEXT/ATTRIB/ATTDEF/DIMENSION + 420 block definitions (E-DXF-02) | pp.13-16,engineer
+S6-16,S6,Curved / ring beam reinforcement (dome-ring arcs),0,ST7757.dxf all TEXT/MTEXT/ATTRIB/ATTDEF/DIMENSION + 420 block definitions (E-DXF-02) | pp.13-16,engineer
+S6-20,S6,"CB reading direction (CB2, CB7, CB13)",0,ST7757.dxf all TEXT/MTEXT/ATTRIB/ATTDEF/DIMENSION + 420 block definitions (E-DXF-02),engineer
+S6-21,S6,"Binding candidates (445, 45D, 474, 476, 78F)",0,plan tags,engineer
+S6-22,S6,38 untagged spans / arcs,38,plans,engineer
+S6-23,S6,SBT bars uncurtailed support face to support face,0,p.10,engineer confirmation

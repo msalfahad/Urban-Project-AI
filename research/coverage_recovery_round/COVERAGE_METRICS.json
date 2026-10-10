@@ -1,0 +1,268 @@
+{
+ "anomalies": {
+  "by_state": {
+   "CONSERVATION_FAILURE": 4,
+   "COVERAGE_ANOMALY": 4,
+   "OK": 11
+  },
+  "findings": [
+   {
+    "check_id": "GROUND_SLAB_FOOTPRINT",
+    "covered": 115.38999999999999,
+    "expected": 217.012,
+    "min_ratio": 0.8,
+    "ratio": 0.532,
+    "state": "COVERAGE_ANOMALY",
+    "unexplained": 101.622,
+    "what": "ground slab area vs founded footprint net of beams / columns"
+   },
+   {
+    "check_id": "GROUND_SLAB_FOOTPRINT_AFTER",
+    "covered": 217.012,
+    "expected": 217.012,
+    "min_ratio": 0.8,
+    "ratio": 1.0,
+    "state": "OK",
+    "unexplained": 0.0,
+    "what": "ground slab area vs founded footprint net of beams / columns"
+   },
+   {
+    "check_id": "COLUMN_CONCRETE_GF_BEFORE",
+    "emitted": 25,
+    "missing": 5,
+    "occurrences": 30,
+    "state": "CONSERVATION_FAILURE",
+    "what": "V3b technical column concrete records vs S1 occurrences"
+   },
+   {
+    "check_id": "COLUMN_CONCRETE_GF_AFTER",
+    "emitted": 30,
+    "missing": 0,
+    "occurrences": 30,
+    "state": "OK",
+    "what": "concrete geometry records vs S1 occurrences"
+   },
+   {
+    "check_id": "COLUMN_CONCRETE_1F_BEFORE",
+    "emitted": 15,
+    "missing": 5,
+    "occurrences": 20,
+    "state": "CONSERVATION_FAILURE",
+    "what": "V3b technical column concrete records vs S1 occurrences"
+   },
+   {
+    "check_id": "COLUMN_CONCRETE_1F_AFTER",
+    "emitted": 20,
+    "missing": 0,
+    "occurrences": 20,
+    "state": "OK",
+    "what": "concrete geometry records vs S1 occurrences"
+   },
+   {
+    "check_id": "COLUMN_CONCRETE_2F_BEFORE",
+    "emitted": 8,
+    "missing": 1,
+    "occurrences": 9,
+    "state": "CONSERVATION_FAILURE",
+    "what": "V3b technical column concrete records vs S1 occurrences"
+   },
+   {
+    "check_id": "COLUMN_CONCRETE_2F_AFTER",
+    "emitted": 9,
+    "missing": 0,
+    "occurrences": 9,
+    "state": "OK",
+    "what": "concrete geometry records vs S1 occurrences"
+   },
+   {
+    "check_id": "COLUMN_CONCRETE_FOUNDATION_BEFORE",
+    "emitted": 0,
+    "missing": 36,
+    "occurrences": 36,
+    "state": "CONSERVATION_FAILURE",
+    "what": "V3b technical column concrete records vs S1 occurrences"
+   },
+   {
+    "check_id": "COLUMN_CONCRETE_FOUNDATION_AFTER",
+    "emitted": 36,
+    "missing": 0,
+    "occurrences": 36,
+    "state": "OK",
+    "what": "concrete geometry records vs S1 occurrences"
+   },
+   {
+    "check_id": "WALLS_GF|150",
+    "covered": 26.094,
+    "expected": 23.719,
+    "min_ratio": 0.8,
+    "ratio": 1.1,
+    "state": "OK",
+    "unexplained": 0.0,
+    "what": "classified wall length vs paired wall-face length"
+   },
+   {
+    "check_id": "WALLS_GF|200",
+    "covered": 38.861,
+    "expected": 64.598,
+    "min_ratio": 0.8,
+    "ratio": 0.602,
+    "state": "COVERAGE_ANOMALY",
+    "unexplained": 25.737,
+    "what": "classified wall length vs paired wall-face length"
+   },
+   {
+    "check_id": "WALLS_1F|150",
+    "covered": 42.713,
+    "expected": 33.165,
+    "min_ratio": 0.8,
+    "ratio": 1.288,
+    "state": "OK",
+    "unexplained": 0.0,
+    "what": "classified wall length vs paired wall-face length"
+   },
+   {
+    "check_id": "WALLS_1F|200",
+    "covered": 28.881,
+    "expected": 30.353,
+    "min_ratio": 0.8,
+    "ratio": 0.952,
+    "state": "OK",
+    "unexplained": 0.0,
+    "what": "classified wall length vs paired wall-face length"
+   },
+   {
+    "check_id": "WALLS_2F|150",
+    "covered": 8.7,
+    "expected": 6.555,
+    "min_ratio": 0.8,
+    "ratio": 1.327,
+    "state": "OK",
+    "unexplained": 0.0,
+    "what": "classified wall length vs paired wall-face length"
+   },
+   {
+    "check_id": "WALLS_2F|200",
+    "covered": 21.998,
+    "expected": 16.665,
+    "min_ratio": 0.8,
+    "ratio": 1.32,
+    "state": "OK",
+    "unexplained": 0.0,
+    "what": "classified wall length vs paired wall-face length"
+   },
+   {
+    "check_id": "BEAMS_GF",
+    "covered": 41,
+    "expected": 59,
+    "min_ratio": 0.8,
+    "ratio": 0.695,
+    "state": "COVERAGE_ANOMALY",
+    "unexplained": 18,
+    "what": "quantified beam occurrences vs beam tags"
+   },
+   {
+    "check_id": "BEAMS_1F",
+    "covered": 26,
+    "expected": 33,
+    "min_ratio": 0.8,
+    "ratio": 0.788,
+    "state": "COVERAGE_ANOMALY",
+    "unexplained": 7,
+    "what": "quantified beam occurrences vs beam tags"
+   },
+   {
+    "check_id": "BEAMS_2F_ROOF",
+    "covered": 15,
+    "expected": 15,
+    "min_ratio": 0.8,
+    "ratio": 1.0,
+    "state": "OK",
+    "unexplained": 0.0,
+    "what": "quantified beam occurrences vs beam tags"
+   }
+  ]
+ },
+ "trades": [
+  {
+   "basis": "ratios of the engine's own terminal records; no reference quantity used",
+   "bbs_pct": null,
+   "geometry_pct": {
+    "depth": 52.5,
+    "length": 100.0,
+    "width": 100.0
+   },
+   "occurrences": 59,
+   "population_pct": 52.5,
+   "quantity_official_pct_of_best": 22.7,
+   "quantity_provisional_pct": 52.5,
+   "semantic_pct": 100.0,
+   "source_authority_pct": 52.5,
+   "trade": "GROUND_BEAMS_BEFORE",
+   "unquantified_components": 0
+  },
+  {
+   "basis": "ratios of the engine's own terminal records; no reference quantity used",
+   "bbs_pct": null,
+   "geometry_pct": {
+    "depth": 52.5,
+    "length": 100.0,
+    "width": 100.0
+   },
+   "occurrences": 59,
+   "population_pct": 100.0,
+   "quantity_official_pct_of_best": 22.7,
+   "quantity_provisional_pct": 100.0,
+   "semantic_pct": 100.0,
+   "source_authority_pct": 52.5,
+   "trade": "GROUND_BEAMS_AFTER",
+   "unquantified_components": 0
+  },
+  {
+   "basis": "ratios of the engine's own terminal records; no reference quantity used",
+   "bbs_pct": null,
+   "geometry_pct": {
+    "area": 100.0,
+    "thickness": 60.9
+   },
+   "occurrences": 23,
+   "population_pct": 100.0,
+   "quantity_official_pct_of_best": 53.1,
+   "quantity_provisional_pct": 100.0,
+   "semantic_pct": 60.9,
+   "source_authority_pct": 60.9,
+   "trade": "GROUND_SLAB_AFTER",
+   "unquantified_components": 0
+  },
+  {
+   "basis": "ratios of the engine's own terminal records; no reference quantity used",
+   "bbs_pct": null,
+   "geometry_pct": {
+    "interval": 62.1,
+    "section": 100.0
+   },
+   "occurrences": 95,
+   "population_pct": 100.0,
+   "quantity_official_pct_of_best": 72.4,
+   "quantity_provisional_pct": 100.0,
+   "semantic_pct": 100.0,
+   "source_authority_pct": 62.1,
+   "trade": "COLUMNS_AFTER",
+   "unquantified_components": 0
+  },
+  {
+   "basis": "ratios of the engine's own terminal records; no reference quantity used",
+   "bbs_pct": null,
+   "geometry_pct": {
+    "length": 66.7
+   },
+   "occurrences": 24,
+   "population_pct": 66.7,
+   "quantity_official_pct_of_best": null,
+   "quantity_provisional_pct": 66.7,
+   "semantic_pct": 0.0,
+   "source_authority_pct": 0.0,
+   "trade": "BEAM_RESIDUE_AFTER",
+   "unquantified_components": 0
+  }
+ ]
+}

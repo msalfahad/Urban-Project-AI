@@ -1,0 +1,216 @@
+{
+ "SCHEMA": "URBAN_R8_12_DECISION_REGISTER_V1",
+ "recommendation_before_coding": {
+  "SCHEMA": "URBAN_R8_12_RECOMMENDATION_BEFORE_CODING_V1",
+  "written": "before any R8.12 Qortuba run; committed with the frozen WALL_BAND_POLICY_V3",
+  "1_whole_face_pairing": "Mostly, but it is TWO limitations: (a) mutual nearest over the whole face - H477 has two equally near partners (H470, H471) and the tie goes to H470; (b) the H470 / H477 strip is crossed by column H718, and V2 rejects the WHOLE band for any crossing. Fixing (a) alone does not establish H2430.",
+  "2_local_model_correct": "Yes, but local pairing alone also fixes the wrong thing silently: end classification and the closure purity test need to know that H470 and H471 are ONE face. Local spans need strict face chains next to them.",
+  "3_model": "C - both: strict FACE CHAINS (numeric contiguity, typed nodes) for end classification, purity and provenance; LOCAL INTERVAL PAIRING (local mutual nearest per elementary interval) for spans; crossings SUBDIVIDE a strip (obstacle overlap / node) instead of rejecting it.",
+  "4_unsafe_failure_mode": "Local pairing turns an unlabelled SLICE of a room into a band: a room's floor and ceiling walls are locally mutual nearest wherever nothing lies between them. Also: chains joined by near-collinearity or the 50 mm review band, and the strip between two column sides read as an empty band.",
+  "5_openings_not_merged": "Fragments join only when their end points coincide within eps_n (numeric equivalence, ~0.001 mm here) on the same supporting line, the same occurrence and with no opening / glazing segment ending at the joint. Any real gap breaks the chain; the 50 mm review band is never continuity.",
+  "6_chain_stops": {
+   "door_opening": "gap -> break",
+   "window_opening": "gap or glazing at the joint -> OPENING_BREAK",
+   "drafting_gap": "break (only a topology closure may bridge it, never a chain)",
+   "t_junction": "NODE - the face continues (subdivision, not an end)",
+   "branch": "NODE",
+   "crossing_wall": "the strip interval becomes CROSSING_WALL_NODE; the face chain is not cut",
+   "column": "the strip interval becomes OBSTACLE_OVERLAP; neighbouring intervals stay spans"
+  },
+  "7_blind_possible": "Yes: every fixture is a generic case (fragment pairs, gaps, openings, T-junctions, columns, duplicates, orientation, re-segmentation) frozen before the Qortuba run.",
+  "8_disagree_with_prompt": [
+   "'chain break at T_JUNCTION' would break H470 / H471 exactly at the 7117 junction - a T-junction must be a node",
+   "elongation must stay on the raw CHAIN overlap, never per span (a short span beside a column would fail)",
+   "band / closure ids change with the policy version; regressions must compare geometry, not ids"
+  ],
+  "9_new_risk": "If the H2430 closure is authorised, the H2430 role conflict disappears and the ONLY Q-13 issue left may be the floor object-footprint rule (SF3 / FIRNTUR are material to the floor only through it): the sole-blocker test must be a counterfactual over both answers, not a scan of blocker labels.",
+  "10_after_r8_12": "R8.13: the DWG <-> DXF source anchor (the release blocker on every new-revision row), the REVIEWED closure release level as a signed record, then the one owner floor question if it is the sole Q-13 blocker; move the row / release digests and owner physical facts fully into engine provenance."
+ },
+ "order": [
+  "recommendation written (r8_12_recommendation.json)",
+  "V3 + synthetic tests committed: b72d866b590c",
+  "freeze record committed",
+  "blind run committed (BLIND_QORTUBA_RESULT.json)",
+  "owner fact compared afterwards",
+  "rows rebuilt"
+ ],
+ "decisions": [
+  {
+   "id": "R812-D01",
+   "decision": "WALL_BAND_POLICY_V3: chains + local spans + assemblies, frozen before Qortuba"
+  },
+  {
+   "id": "R812-D02",
+   "decision": "TOPOLOGY_CLOSURE_POLICY_V1 unchanged (digest identical)"
+  },
+  {
+   "id": "R812-D03",
+   "decision": "the owner fact is CORROBORATING_ONLY for topology and rows; APPLIED for passage attributes (release layer); no owner role claim"
+  },
+  {
+   "id": "R812-D04",
+   "decision": "digest hierarchy TOPOLOGY / ROW_AUTHORITY / RELEASE_INPUT"
+  },
+  {
+   "id": "R812-D05",
+   "decision": "V3-D1 and V3-D2 recorded for R8.13; V3 not edited after the blind run"
+  },
+  {
+   "id": "R812-D06",
+   "decision": "Q-14 COMPUTED_SHADOW (not FINAL); Q-13: one owner question"
+  }
+ ],
+ "rows": {
+  "Q-03": [
+   "COMPUTED_SHADOW",
+   17.7425
+  ],
+  "Q-03P": [
+   "COMPUTED_SHADOW",
+   11.685
+  ],
+  "Q-11": [
+   "COMPUTED_SHADOW",
+   17.7425
+  ],
+  "Q-12": [
+   "COMPUTED_SHADOW",
+   11.685
+  ],
+  "Q-13": [
+   "BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_TRADE_RULE",
+   null
+  ],
+  "Q-14": [
+   "COMPUTED_SHADOW",
+   141.0263
+  ]
+ },
+ "gates": {
+  "MIGRATION_PLANNING_READY": "YES",
+  "MIGRATION_EXECUTION_READY": "NO",
+  "PRODUCTION_MIGRATION": "NO"
+ },
+ "answers": {
+  "1_model": "C - FACE CHAINS (strict numeric contiguity, typed nodes) + LOCAL BAND SPANS (local mutual nearest per elementary interval) + WALL-BAND ASSEMBLIES; crossings subdivide a strip",
+  "2_safer_than_collinear_merging": "a chain joins only touching fragments (eps_n, same occurrence, no opening at the joint); pairing never needs a chain to bridge anything; a gap of any size stays a gap; every span keeps exact source intervals",
+  "3_openings_not_merged": "gap -> no join; glazing / opening closure at a touching joint -> OPENING_BREAK; the 50 mm review band is never continuity (tests B, C, D, opening break)",
+  "4_branches_t_junctions": "BRANCH_NODE / CROSSING_NODE on the chain (the face continues); a crossing wall's core is a CROSSING_WALL_NODE interval of the strip",
+  "5_one_face_many_fragments": "YES: local pairing per elementary interval (test: one face against two opening-broken chains -> two bands)",
+  "6_span_identity": "YES: revision + region + source ENTITIES + extent along the canonical direction (no ordinals, no ranks)",
+  "7_reordering": "NO change: synthetic shuffles and the Qortuba shuffles ({'seed_5': True, 'seed_17': True})",
+  "8_column_718": "YES: only [109443.08-109583.08] is OBSTACLE_OVERLAP by H718; the spans either side stay valid",
+  "9_blind_h2430": {
+   "band": "WB-87c8552f83e32a2d",
+   "faces": [
+    "470",
+    "471",
+    "477"
+   ],
+   "intervals": [
+    [
+     "WALL_BAND_SPAN",
+     [
+      109308.081745,
+      109443.081745
+     ]
+    ],
+    [
+     "OBSTACLE_OVERLAP",
+     [
+      109443.081745,
+      109583.081745
+     ]
+    ],
+    [
+     "WALL_BAND_SPAN",
+     [
+      109583.081745,
+      109773.756121
+     ]
+    ]
+   ],
+   "ends": [
+    [
+     "RECEIVING_FACE_JUNCTION",
+     []
+    ],
+    [
+     "ALIGNED_FREE_END",
+     [
+      {
+       "source": "2430",
+       "role": "DIMENSION_GRAPHICS",
+       "grade": "WALL_END_CAP_PROVEN",
+       "gap_mm": [
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    ]
+   ],
+   "closure": {
+    "closure_id": "TC-502c8a0e35d1d748",
+    "release": "AUTHORISED_FOR_SHADOW",
+    "geometry": [
+     109773.7561,
+     15029.7196,
+     109773.7561,
+     15049.7196
+    ],
+    "material": "NONE"
+   },
+   "separated": [
+    {
+     "area_m2": 0.3813,
+     "pure_band_interior": true,
+     "boundary": [
+      "470",
+      "471",
+      "477",
+      "718",
+      "TCLOSURE|TC-502c8a0e35d1d748"
+     ]
+    }
+   ]
+  },
+  "10_owner_fact_in_blind_test": "NO ({\"owner_fact_used\": false, \"expected_h2430_given\": false, \"expected_q14_given\": false, \"historical_totals_given\": false, \"inputs\": [\"canonical inputs (both revisions)\", \"R8.10 TS01 claims (7116-7119, xref occurrences)\", \"the frozen engine\"]})",
+  "11_owner_fact_agrees": "YES: {'ENGINE_ESTABLISHED_OWNER_AGREES': 7}",
+  "12_fallback_role_claim": "NOT REQUIRED (the engine established H2430 itself)",
+  "13_west_core_0_3813": "separated by TC-502c8a0e35d1d748 (zero material, pure band interior 0.3813 m2); HALL 43.180638 -> 42.7993 m2",
+  "14_h2431": "TC-9f4609652793df15 AUTHORISED_FOR_SHADOW, geometry [109893.4009, 15029.7196, 109893.4009, 15049.7196] (face end points; same as R8.11: True), 0.6494 m2",
+  "15_h1316": "NOT_WALL_CAP; closures touching it: []",
+  "16_passage_open": "YES: DETECTED: OP-46ccf3d3e3fe033c (band WB-7b3ad095cb4bcecb end -> BANDEND|WB-87c8552f83e32a2d|1); nothing crosses it",
+  "17_passage_width": "1196.45 mm engine-measured (owner record 1196.45 mm)",
+  "18_q14": "COMPUTED_SHADOW 141.0263 m2 (SHADOW, not FINAL)",
+  "19_q14_blocker": "none for SHADOW; release blockers: SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED; PASSAGE_SOFFIT_ALLOCATION: the OP-OWNER-HALL-LOBBY strip (0.2393 m2) lies inside the ceiling footprint but its top is a soffit at 2.2 m (owner): ceiling vs reveal allocation rule required; SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed",
+  "20_q13_blockers": [
+   "ROLE_AUTHORITY:TOPOLOGY_ROLE_UNRESOLVED",
+   "TRADE_RULE:OBJECT_FOOTPRINT_POLICY_UNRESOLVED",
+   "TRADE_RULE:OBJECT_FOOTPRINT_POLICY_UNRESOLVED:1663"
+  ],
+  "21_wardrobe_floor_sole": "YES: {\"YES_WHOLE_ROOM\": {\"state\": \"COMPUTED_SHADOW\", \"blocker_classes\": [], \"value_recorded\": false}, \"NO_FOOTPRINT_DEDUCTED\": {\"state\": \"BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_TRADE_RULE\", \"blocker_classes\": [\"ROLE_AUTHORITY\", \"TRADE_RULE\"], \"value_recorded\": false}}",
+  "22_digest_hierarchy": {
+   "TOPOLOGY_RUN_INPUT_DIGEST": "everything that can change TS01 physical topology (= RUN_INPUT_DIGEST)",
+   "ROW_AUTHORITY_DIGEST": "topology digest + trade rules + semantic class rules + footprint policies + row claims + owner facts APPLIED to the row + row method",
+   "RELEASE_INPUT_DIGEST": "row authority digest + source-anchor state + review states + release policy + release blockers + owner facts applied at release"
+  },
+  "23_fact_changes_topology_digest": "NO - never an input of TS01 -> TOPOLOGY digest unchanged by construction",
+  "24_fact_changes_row_digest": "NO in R8.12 (corroborating only); it changes the Q-14 RELEASE digest - in R8.11 the same fact classified the H2430 blocker, i.e. it WAS row authority (row_input_digest); in R8.12 the engine resolved H2430 and the fact left the row layer",
+  "25_owner_facts_generic": "PARTLY: engine/source/owner_facts.py (fact model, binding, six outcomes, engine/owner matrix, policy digest); the row computation that consumes them is still lab code (E-R8.13-06)",
+  "26_constants_in_policy": "YES for wall_bands (PARAMS; AST-checked); closure-id rounding found in topology_closures (identity only) -> E-R8.13-05",
+  "27_new_silent_error": [
+   "chain ids of the parallel sides of ONE closed polyline with the same extent collide (H2060, H2061: rectangles): the id uses entity + extent, not the supporting-line offset. Effect: only these already-ambiguous rectangles; no closure, no row. Fix in R8.13 (add the offset / sub-part set to the chain id) with a version bump - NOT inside the frozen V3",
+   "elongation is tested on the raw CHAIN overlap; one pair (574 / 584, 1.80 m apart) is locally mutual-nearest over only 150 mm and still forms a 'band' in an unlabelled site outside the apartment, with a false 6.0 m passage record. No closure, no row. Fix in R8.13: test elongation on the LOCAL RUN (spans + overlaps + nodes) - NOT inside the frozen V3",
+   "local pairing can turn an unlabelled slice of a room into a band (found and guarded BEFORE the freeze: a label in the raw pair strip rejects the pair)"
+  ],
+  "28_r8_13": "R8.13: the DWG <-> DXF source anchor (the release blocker on every new-revision row), the REVIEWED closure release level as a signed record, then the one owner floor question if it is the sole Q-13 blocker; move the row / release digests and owner physical facts fully into engine provenance.; fix V3-D1 / V3-D2 as WALL_BAND_POLICY_V4 under the same freeze protocol",
+  "29_disagree_with_chatgpt": [
+   "'chain break at T_JUNCTION' would break H470 / H471 exactly at the 7117 junction - a T-junction must be a node",
+   "elongation must stay on the raw CHAIN overlap, never per span (a short span beside a column would fail)",
+   "band / closure ids change with the policy version; regressions must compare geometry, not ids",
+   "the owner fact should NOT stay in the row layer once the engine resolves the same reading - it becomes corroboration (outside the row digest) and only its passage attributes stay applied (release layer)"
+  ]
+ }
+}

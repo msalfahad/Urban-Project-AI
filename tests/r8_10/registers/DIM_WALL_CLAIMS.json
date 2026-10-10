@@ -1,0 +1,312 @@
+{
+ "SCHEMA": "URBAN_R8_10_DIM_WALL_CLAIMS_V1",
+ "claim_status": {
+  "claim_id": "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001",
+  "version": 1,
+  "scope_state": "APPLIES",
+  "state": "APPLIES",
+  "parts": [
+   {
+    "part": "QORTUBA_REV_NEW|H7116||SEGMENT|0",
+    "state": "APPLIES"
+   },
+   {
+    "part": "QORTUBA_REV_NEW|H7117||SEGMENT|0",
+    "state": "APPLIES"
+   },
+   {
+    "part": "QORTUBA_REV_NEW|H7118||SEGMENT|0",
+    "state": "APPLIES"
+   },
+   {
+    "part": "QORTUBA_REV_NEW|H7119||SEGMENT|0",
+    "state": "APPLIES"
+   }
+  ],
+  "applied_parts": [
+   "QORTUBA_REV_NEW|H7116||SEGMENT|0",
+   "QORTUBA_REV_NEW|H7117||SEGMENT|0",
+   "QORTUBA_REV_NEW|H7118||SEGMENT|0",
+   "QORTUBA_REV_NEW|H7119||SEGMENT|0"
+  ]
+ },
+ "effect": {
+  "claim": "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001",
+  "parts": [
+   {
+    "handle": "7116",
+    "source_layer": "DIM",
+    "role_now": "TOPOLOGY_BOUNDARY",
+    "rule": "CLAIM:QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001@v1",
+    "role_before": "DIMENSION_GRAPHICS",
+    "authority_grade": "NETWORK",
+    "connected_ends": 2
+   },
+   {
+    "handle": "7117",
+    "source_layer": "DIM",
+    "role_now": "TOPOLOGY_BOUNDARY",
+    "rule": "CLAIM:QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001@v1",
+    "role_before": "DIMENSION_GRAPHICS",
+    "authority_grade": "NETWORK",
+    "connected_ends": 2
+   },
+   {
+    "handle": "7118",
+    "source_layer": "DIM",
+    "role_now": "TOPOLOGY_BOUNDARY",
+    "rule": "CLAIM:QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001@v1",
+    "role_before": "DIMENSION_GRAPHICS",
+    "authority_grade": "NETWORK",
+    "connected_ends": 2
+   },
+   {
+    "handle": "7119",
+    "source_layer": "DIM",
+    "role_now": "TOPOLOGY_BOUNDARY",
+    "rule": "CLAIM:QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001@v1",
+    "role_before": "DIMENSION_GRAPHICS",
+    "authority_grade": "NETWORK",
+    "connected_ends": 2
+   }
+  ],
+  "before_r8_9": [
+   {
+    "site": "SITE-2201f5d1b83158c0",
+    "area_m2": 68.66,
+    "stamps": [
+     [
+      "BED.ROOM",
+      "yvtmk,L"
+     ],
+     [
+      "BATH",
+      "plHL"
+     ],
+     [
+      "HALL",
+      "whgm"
+     ]
+    ],
+    "issues": [
+     "MULTIPLE_SEMANTIC_LABELS",
+     "NEAR_MISS_BOUNDARY_GAP",
+     "OPENING_CLOSURE_UNRESOLVED",
+     "ROLE_CONFLICT_SEPARATOR",
+     "TOPOLOGY_ROLE_UNRESOLVED",
+     "XREF_MISSING_POTENTIALLY_CONTRIBUTING"
+    ]
+   }
+  ],
+  "after": [
+   {
+    "site": "SITE-27d6688454aaf8de",
+    "area_m2": 43.83,
+    "stamps": [
+     [
+      "HALL",
+      "whgm"
+     ]
+    ],
+    "physical_status": "REVIEW_REQUIRED",
+    "issues": [
+     "NEAR_MISS_BOUNDARY_GAP",
+     "ROLE_CONFLICT_SEPARATOR",
+     "TOPOLOGY_ROLE_UNRESOLVED"
+    ]
+   },
+   {
+    "site": "SITE-43b62cf905c844ed",
+    "area_m2": 0.12,
+    "stamps": [],
+    "physical_status": "CERTIFIED",
+    "issues": []
+   },
+   {
+    "site": "SITE-5f1762f1a93b91ca",
+    "area_m2": 19.2725,
+    "stamps": [
+     [
+      "BED.ROOM",
+      "yvtmk,L"
+     ]
+    ],
+    "physical_status": "CERTIFIED",
+    "issues": []
+   },
+   {
+    "site": "SITE-6009ea7257f53688",
+    "area_m2": 0.2175,
+    "stamps": [],
+    "physical_status": "CERTIFIED",
+    "issues": []
+   },
+   {
+    "site": "SITE-a2b19efc492a6d0b",
+    "area_m2": 5.1,
+    "stamps": [
+     [
+      "BATH",
+      "plHL"
+     ]
+    ],
+    "physical_status": "CERTIFIED",
+    "issues": []
+   }
+  ],
+  "opening_adjacency": [
+   {
+    "opening": "I1471",
+    "sites": [
+     "SITE-27d6688454aaf8de",
+     "SITE-a6405850100155ac"
+    ]
+   },
+   {
+    "opening": "I1561",
+    "sites": [
+     "SITE-27d6688454aaf8de",
+     "SITE-fe8ed5548fb4310e"
+    ]
+   },
+   {
+    "opening": "I1988",
+    "sites": [
+     "SITE-27d6688454aaf8de",
+     "SITE-daca396d6d730e60"
+    ]
+   },
+   {
+    "opening": "I2044",
+    "sites": [
+     "SITE-27d6688454aaf8de",
+     "SITE-a2b19efc492a6d0b"
+    ]
+   },
+   {
+    "opening": "I677",
+    "sites": [
+     "SITE-27d6688454aaf8de",
+     "SITE-788f30878ba9d2b3"
+    ]
+   },
+   {
+    "opening": "I841",
+    "sites": [
+     "SITE-27d6688454aaf8de",
+     "SITE-5f1762f1a93b91ca"
+    ]
+   }
+  ],
+  "other_dim_layer_parts": {
+   "DIMENSION_GRAPHICS": 5
+  },
+  "other_dim_parts_admitted": 0,
+  "reading": "BATH (5.1 m2, the 7116 / 7117 side) and BED.ROOM (19.2725 m2, the 7118 / 7119 side) are separate physical sites again; the HALL is no longer merged with them. Every other DIM-layer part keeps its dimension role"
+ },
+ "old_revision": {
+  "claim_id": "QORTUBA-NEW-DIM-LINES-7116-7119-ARE-WALLS-OWNER-001",
+  "version": 1,
+  "scope_state": "SOURCE_SCOPE_MISMATCH",
+  "state": "SOURCE_SCOPE_MISMATCH",
+  "parts": [
+   {
+    "part": "QORTUBA_REV_NEW|H7116||SEGMENT|0",
+    "state": "SOURCE_SCOPE_MISMATCH"
+   },
+   {
+    "part": "QORTUBA_REV_NEW|H7117||SEGMENT|0",
+    "state": "SOURCE_SCOPE_MISMATCH"
+   },
+   {
+    "part": "QORTUBA_REV_NEW|H7118||SEGMENT|0",
+    "state": "SOURCE_SCOPE_MISMATCH"
+   },
+   {
+    "part": "QORTUBA_REV_NEW|H7119||SEGMENT|0",
+    "state": "SOURCE_SCOPE_MISMATCH"
+   }
+  ],
+  "applied_parts": []
+ },
+ "hall_lobby_caps": {
+  "caps": [
+   {
+    "handle": "2430",
+    "layer": "DIM",
+    "role": "DIMENSION_GRAPHICS",
+    "geometry": [
+     109773.76,
+     15029.72,
+     109773.76,
+     15049.72
+    ],
+    "length_mm": 200.0
+   },
+   {
+    "handle": "2431",
+    "layer": "DIM",
+    "role": "DIMENSION_GRAPHICS",
+    "geometry": [
+     109893.45,
+     15030.64,
+     109893.45,
+     15049.72
+    ],
+    "length_mm": 190.8
+   }
+  ],
+  "old_revision": "the old revision capped this wall band on the WALL layer at x = 109808.08 (H553); the new revision moved the passage and drew both caps on DIM",
+  "passage_between_caps_mm": 1196.9,
+  "owner_rule_corroboration": "QP-17: the owner identified a 1.200 m open passage between the Hall and the Lobby (old revision); QP-18: OPEN_PASSAGE_FULL_HEIGHT",
+  "h2430": "an exact wall-end cap; excluded by layer, so the HALL site includes the wall core it closes (ROLE_CONFLICT_SEPARATOR; the diagnostic arrangement separates a 0.3813 m2 core)",
+  "h2431": "9.2 mm short of the face it should meet: even a claim could not close it without editing geometry; the NEAR_MISS check (R8.10) now flags the leak that was silent",
+  "near_miss": [
+   {
+    "source": "QORTUBA_REV_NEW|H2431||SEGMENT|0",
+    "origin": "GR-13",
+    "admitted": false,
+    "gaps_native": [
+     0.918558558
+    ],
+    "targets": [
+     "QORTUBA_REV_NEW|H2296||SEGMENT|0"
+    ]
+   }
+  ],
+  "leak_areas": {
+   "exclusion_group_pockets_m2": [
+    2.3914,
+    0.3813
+   ],
+   "exclusion_group_reading": "the HALL's exclusion group is H2430 (DIM cap: the 0.3813 m2 wall core) and H1663 (B-FURNI dining set touching the wall: the 2.3914 m2 pocket - an object against a wall, a trade note, never a wall)",
+   "h2431_near_miss_pockets_m2": [
+    0.6493
+   ]
+  },
+  "hall_issues": [
+   "NEAR_MISS_BOUNDARY_GAP",
+   "ROLE_CONFLICT_SEPARATOR",
+   "TOPOLOGY_ROLE_UNRESOLVED"
+  ],
+  "hall_exclusion_consequence": {
+   "effect": "CHANGES_AREA",
+   "sources": [
+    "QORTUBA_REV_NEW|H1663||ARC|1",
+    "QORTUBA_REV_NEW|H1663||ARC|3",
+    "QORTUBA_REV_NEW|H1663||ARC|5",
+    "QORTUBA_REV_NEW|H1663||ARC|7",
+    "QORTUBA_REV_NEW|H1663||SEGMENT|0",
+    "QORTUBA_REV_NEW|H1663||SEGMENT|2",
+    "QORTUBA_REV_NEW|H1663||SEGMENT|4",
+    "QORTUBA_REV_NEW|H1663||SEGMENT|6",
+    "QORTUBA_REV_NEW|H2430||SEGMENT|0"
+   ],
+   "origins": [
+    "GR-09",
+    "GR-13"
+   ]
+  },
+  "not_claimed": "the owner's DIM-wall claim names 7116-7119 only; it is not extended to these caps"
+ }
+}

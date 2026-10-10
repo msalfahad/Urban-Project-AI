@@ -1,0 +1,4347 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_STRUCTURAL_SOURCE_COVERAGE_V1",
+ "source": "ST7757.dxf (sha256 9f9d1179...) / ST7757.pdf (sha256 74da1523...)",
+ "states": [
+  "CONSUMED_COMPLETE",
+  "CONSUMED_PARTIAL",
+  "UNREAD",
+  "NOT_RELEVANT",
+  "SOURCE_CONFLICT"
+ ],
+ "counts": {
+  "CONSUMED_COMPLETE": 24,
+  "CONSUMED_PARTIAL": 61,
+  "NOT_RELEVANT": 2,
+  "SOURCE_CONFLICT": 1,
+  "UNREAD": 13
+ },
+ "rows": [
+  {
+   "object": "FOOTING F",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF FOOTINGS",
+   "bbox_anchor": [
+    138454.3,
+    5995.6
+   ],
+   "dxf_handle": "1C79",
+   "block": "FT",
+   "row_ids": [
+    "F"
+   ],
+   "parser": "alsenan_phase_a.footing_schedule (PDF text)",
+   "consumer": "alsenan_phase_a3._rebar -> alsenan_v3_structure.footing_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "DEPHT",
+    "SH-B",
+    "SH-D",
+    "LO-B",
+    "LO-D"
+   ],
+   "fields_unread": [
+    "BOXED"
+   ],
+   "value_unread": {
+    "BOXED": "3+4"
+   },
+   "reason": "BOXED column (boxed / starter bar count, e.g. '3+4') never parsed; no BLOCKED row is written either - SILENT",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "footings of type F",
+   "defect": "SD-08"
+  },
+  {
+   "object": "FOOTING F2",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF FOOTINGS",
+   "bbox_anchor": [
+    138451.3,
+    5474.5
+   ],
+   "dxf_handle": "1C95",
+   "block": "FT",
+   "row_ids": [
+    "F2"
+   ],
+   "parser": "alsenan_phase_a.footing_schedule (PDF text)",
+   "consumer": "alsenan_phase_a3._rebar -> alsenan_v3_structure.footing_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "DEPHT",
+    "SH-B",
+    "SH-D",
+    "LO-B",
+    "LO-D"
+   ],
+   "fields_unread": [
+    "BOXED"
+   ],
+   "value_unread": {
+    "BOXED": "3+4"
+   },
+   "reason": "BOXED column (boxed / starter bar count, e.g. '3+4') never parsed; no BLOCKED row is written either - SILENT",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "footings of type F2",
+   "defect": "SD-08"
+  },
+  {
+   "object": "FOOTING F3",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF FOOTINGS",
+   "bbox_anchor": [
+    138451.3,
+    4953.4
+   ],
+   "dxf_handle": "1CA0",
+   "block": "FT",
+   "row_ids": [
+    "F3"
+   ],
+   "parser": "alsenan_phase_a.footing_schedule (PDF text)",
+   "consumer": "alsenan_phase_a3._rebar -> alsenan_v3_structure.footing_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "DEPHT",
+    "SH-B",
+    "SH-D",
+    "LO-B",
+    "LO-D"
+   ],
+   "fields_unread": [
+    "BOXED"
+   ],
+   "value_unread": {
+    "BOXED": "3+4"
+   },
+   "reason": "BOXED column (boxed / starter bar count, e.g. '3+4') never parsed; no BLOCKED row is written either - SILENT",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "footings of type F3",
+   "defect": "SD-08"
+  },
+  {
+   "object": "FOOTING F4",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF FOOTINGS",
+   "bbox_anchor": [
+    138451.3,
+    4432.3
+   ],
+   "dxf_handle": "1CAB",
+   "block": "FT",
+   "row_ids": [
+    "F4"
+   ],
+   "parser": "alsenan_phase_a.footing_schedule (PDF text)",
+   "consumer": "alsenan_phase_a3._rebar -> alsenan_v3_structure.footing_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "DEPHT",
+    "SH-B",
+    "SH-D",
+    "LO-B",
+    "LO-D"
+   ],
+   "fields_unread": [
+    "BOXED"
+   ],
+   "value_unread": {
+    "BOXED": "3+4"
+   },
+   "reason": "BOXED column (boxed / starter bar count, e.g. '3+4') never parsed; no BLOCKED row is written either - SILENT",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "footings of type F4",
+   "defect": "SD-08"
+  },
+  {
+   "object": "FOOTING F5",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF FOOTINGS",
+   "bbox_anchor": [
+    138451.3,
+    3911.1
+   ],
+   "dxf_handle": "1CB6",
+   "block": "FT",
+   "row_ids": [
+    "F5"
+   ],
+   "parser": "alsenan_phase_a.footing_schedule (PDF text)",
+   "consumer": "alsenan_phase_a3._rebar -> alsenan_v3_structure.footing_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "DEPHT",
+    "SH-B",
+    "SH-D",
+    "LO-B",
+    "LO-D"
+   ],
+   "fields_unread": [
+    "BOXED"
+   ],
+   "value_unread": {
+    "BOXED": "3+4"
+   },
+   "reason": "BOXED column (boxed / starter bar count, e.g. '3+4') never parsed; no BLOCKED row is written either - SILENT",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "footings of type F5",
+   "defect": "SD-08"
+  },
+  {
+   "object": "FOOTING F6",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF FOOTINGS",
+   "bbox_anchor": [
+    138451.3,
+    3390.0
+   ],
+   "dxf_handle": "1CC1",
+   "block": "FT",
+   "row_ids": [
+    "F6"
+   ],
+   "parser": "alsenan_phase_a.footing_schedule (PDF text)",
+   "consumer": "alsenan_phase_a3._rebar -> alsenan_v3_structure.footing_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "DEPHT",
+    "SH-B",
+    "SH-D",
+    "LO-B",
+    "LO-D"
+   ],
+   "fields_unread": [
+    "BOXED"
+   ],
+   "value_unread": {
+    "BOXED": "3+5"
+   },
+   "reason": "BOXED column (boxed / starter bar count, e.g. '3+4') never parsed; no BLOCKED row is written either - SILENT",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "footings of type F6",
+   "defect": "SD-08"
+  },
+  {
+   "object": "FOOTING F7",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF FOOTINGS",
+   "bbox_anchor": [
+    138451.3,
+    2868.9
+   ],
+   "dxf_handle": "1CCC",
+   "block": "FT",
+   "row_ids": [
+    "F7"
+   ],
+   "parser": "alsenan_phase_a.footing_schedule (PDF text)",
+   "consumer": "alsenan_phase_a3._rebar -> alsenan_v3_structure.footing_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "DEPHT",
+    "SH-B",
+    "SH-D",
+    "LO-B",
+    "LO-D"
+   ],
+   "fields_unread": [
+    "BOXED"
+   ],
+   "value_unread": {
+    "BOXED": "3+6"
+   },
+   "reason": "BOXED column (boxed / starter bar count, e.g. '3+4') never parsed; no BLOCKED row is written either - SILENT",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "footings of type F7",
+   "defect": "SD-08"
+  },
+  {
+   "object": "FOOTING F9",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF FOOTINGS",
+   "bbox_anchor": [
+    138451.3,
+    1305.5
+   ],
+   "dxf_handle": "1CD7",
+   "block": "FT",
+   "row_ids": [
+    "F9"
+   ],
+   "parser": "alsenan_phase_a.footing_schedule (PDF text)",
+   "consumer": "alsenan_phase_a3._rebar -> alsenan_v3_structure.footing_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "DEPHT",
+    "SH-B",
+    "SH-D",
+    "LO-B",
+    "LO-D"
+   ],
+   "fields_unread": [
+    "BOXED"
+   ],
+   "value_unread": {
+    "BOXED": "3+8"
+   },
+   "reason": "BOXED column (boxed / starter bar count, e.g. '3+4') never parsed; no BLOCKED row is written either - SILENT",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "footings of type F9",
+   "defect": "SD-08"
+  },
+  {
+   "object": "FOOTING F10",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF FOOTINGS",
+   "bbox_anchor": [
+    138451.3,
+    784.4
+   ],
+   "dxf_handle": "1CE2",
+   "block": "FT",
+   "row_ids": [
+    "F10"
+   ],
+   "parser": "alsenan_phase_a.footing_schedule (PDF text)",
+   "consumer": "alsenan_phase_a3._rebar -> alsenan_v3_structure.footing_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "DEPHT",
+    "SH-B",
+    "SH-D",
+    "LO-B",
+    "LO-D"
+   ],
+   "fields_unread": [
+    "BOXED"
+   ],
+   "value_unread": {
+    "BOXED": "3+5"
+   },
+   "reason": "BOXED column (boxed / starter bar count, e.g. '3+4') never parsed; no BLOCKED row is written either - SILENT",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "footings of type F10",
+   "defect": "SD-08"
+  },
+  {
+   "object": "FOOTING F11",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF FOOTINGS",
+   "bbox_anchor": [
+    138451.3,
+    263.3
+   ],
+   "dxf_handle": "1CED",
+   "block": "FT",
+   "row_ids": [
+    "F11"
+   ],
+   "parser": "alsenan_phase_a.footing_schedule (PDF text)",
+   "consumer": "alsenan_phase_a3._rebar -> alsenan_v3_structure.footing_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "DEPHT",
+    "SH-B",
+    "SH-D",
+    "LO-B",
+    "LO-D"
+   ],
+   "fields_unread": [
+    "BOXED"
+   ],
+   "value_unread": {
+    "BOXED": "3+8"
+   },
+   "reason": "BOXED column (boxed / starter bar count, e.g. '3+4') never parsed; no BLOCKED row is written either - SILENT",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "footings of type F11",
+   "defect": "SD-08"
+  },
+  {
+   "object": "FOOTING F15",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF FOOTINGS",
+   "bbox_anchor": [
+    138451.3,
+    -3384.6
+   ],
+   "dxf_handle": "2B13",
+   "block": "FT",
+   "row_ids": [
+    "F15"
+   ],
+   "parser": "alsenan_phase_a.footing_schedule (PDF text)",
+   "consumer": "alsenan_phase_a3._rebar -> alsenan_v3_structure.footing_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "DEPHT",
+    "SH-B",
+    "SH-D",
+    "LO-B",
+    "LO-D"
+   ],
+   "fields_unread": [
+    "BOXED"
+   ],
+   "value_unread": {
+    "BOXED": "3+4"
+   },
+   "reason": "BOXED column (boxed / starter bar count, e.g. '3+4') never parsed; no BLOCKED row is written either - SILENT",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "footings of type F15",
+   "defect": "SD-08"
+  },
+  {
+   "object": "FOOTING FN",
+   "state": "CONSUMED_COMPLETE",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF FOOTINGS",
+   "bbox_anchor": [
+    138451.3,
+    -4948.0
+   ],
+   "dxf_handle": "1CF8",
+   "block": "FT",
+   "row_ids": [
+    "FN"
+   ],
+   "parser": "alsenan_phase_a.footing_schedule (PDF text)",
+   "consumer": "alsenan_phase_a3._rebar -> alsenan_v3_structure.footing_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "DEPHT",
+    "SH-B",
+    "SH-D",
+    "LO-B",
+    "LO-D"
+   ],
+   "fields_unread": [],
+   "value_unread": {},
+   "reason": "all bar fields consumed",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "footings of type FN",
+   "defect": null
+  },
+  {
+   "object": "FOOTING F8",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF FOOTINGS (two-layer rows)",
+   "bbox_anchor": [
+    138451.3,
+    2347.8
+   ],
+   "dxf_handle": "2AF6",
+   "block": "FTB",
+   "row_ids": [
+    "F8"
+   ],
+   "parser": "alsenan_phase_a.footing_schedule (PDF text)",
+   "consumer": "alsenan_phase_a3._rebar -> alsenan_v3_structure.footing_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "DEPHT",
+    "SH-T-B",
+    "SH-T-D",
+    "LO-T-B",
+    "LO-T-D"
+   ],
+   "fields_misread": [
+    "SH-T-D per_m",
+    "LO-T-D per_m",
+    "SH-B-* / LO-B-* (BOT layer -> 'boxed')"
+   ],
+   "fields_unread": [
+    "BOXED-T",
+    "BOXED-B"
+   ],
+   "schedule_values": {
+    "W": "400",
+    "H": "360",
+    "DEPHT": "50",
+    "SH-T-B": "6",
+    "SH-T-D": "14/m",
+    "LO-T-B": "6",
+    "LO-T-D": "14/m",
+    "SH-B-B": "9",
+    "SH-B-D": "14/m",
+    "LO-B-B": "9",
+    "LO-B-D": "14/m",
+    "BOXED-T": "TOP",
+    "BOXED-B": "BOT"
+   },
+   "a3_definition": {
+    "bars": {
+     "long_bars": [
+      {
+       "count": 6,
+       "dia_mm": 14,
+       "per_m": true
+      }
+     ],
+     "short_bars": [
+      {
+       "count": 6,
+       "dia_mm": 14,
+       "per_m": true
+      }
+     ]
+    },
+    "boxed": [
+     "9 Ø 14/m"
+    ],
+    "definition": "COMPUTED_SHADOW_COMPLETE"
+   },
+   "reason": "TOP layer read as the bottom mesh with per_m ignored (count used as an absolute bar count); the BOT layer is routed to 'boxed' and emitted as BLOCKED 'boxed bar shape not dimensioned'",
+   "provenance": "DXF ATTRIB values; PDF p.9 shows TOP / BOT layer labels",
+   "affected_population": "footings of type F8",
+   "defect": "D2"
+  },
+  {
+   "object": "FOOTING F12",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF FOOTINGS (two-layer rows)",
+   "bbox_anchor": [
+    138451.3,
+    -257.9
+   ],
+   "dxf_handle": "2A5E",
+   "block": "FTB",
+   "row_ids": [
+    "F12"
+   ],
+   "parser": "alsenan_phase_a.footing_schedule (PDF text)",
+   "consumer": "alsenan_phase_a3._rebar -> alsenan_v3_structure.footing_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "DEPHT",
+    "SH-T-B",
+    "SH-T-D",
+    "LO-T-B",
+    "LO-T-D"
+   ],
+   "fields_misread": [
+    "SH-T-D per_m",
+    "LO-T-D per_m",
+    "SH-B-* / LO-B-* (BOT layer -> 'boxed')"
+   ],
+   "fields_unread": [
+    "BOXED-T",
+    "BOXED-B"
+   ],
+   "schedule_values": {
+    "W": "440",
+    "H": "320",
+    "DEPHT": "70",
+    "SH-T-B": "10",
+    "SH-T-D": "14/m",
+    "LO-T-B": "10",
+    "LO-T-D": "14/m",
+    "SH-B-B": "9",
+    "SH-B-D": "16/m",
+    "LO-B-B": "9",
+    "LO-B-D": "16/m",
+    "BOXED-T": "TOP",
+    "BOXED-B": "BOT"
+   },
+   "a3_definition": {
+    "bars": {
+     "long_bars": [
+      {
+       "count": 10,
+       "dia_mm": 14,
+       "per_m": true
+      }
+     ],
+     "short_bars": [
+      {
+       "count": 10,
+       "dia_mm": 14,
+       "per_m": true
+      }
+     ]
+    },
+    "boxed": [
+     "9 Ø 16/m"
+    ],
+    "definition": "COMPUTED_SHADOW_COMPLETE"
+   },
+   "reason": "TOP layer read as the bottom mesh with per_m ignored (count used as an absolute bar count); the BOT layer is routed to 'boxed' and emitted as BLOCKED 'boxed bar shape not dimensioned'",
+   "provenance": "DXF ATTRIB values; PDF p.9 shows TOP / BOT layer labels",
+   "affected_population": "footings of type F12",
+   "defect": "D2"
+  },
+  {
+   "object": "FOOTING F13",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF FOOTINGS (two-layer rows)",
+   "bbox_anchor": [
+    138451.3,
+    -1300.1
+   ],
+   "dxf_handle": "2A98",
+   "block": "FTB",
+   "row_ids": [
+    "F13"
+   ],
+   "parser": "alsenan_phase_a.footing_schedule (PDF text)",
+   "consumer": "alsenan_phase_a3._rebar -> alsenan_v3_structure.footing_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "DEPHT",
+    "SH-T-B",
+    "SH-T-D",
+    "LO-T-B",
+    "LO-T-D"
+   ],
+   "fields_misread": [
+    "SH-T-D per_m",
+    "LO-T-D per_m",
+    "SH-B-* / LO-B-* (BOT layer -> 'boxed')"
+   ],
+   "fields_unread": [
+    "BOXED-T",
+    "BOXED-B"
+   ],
+   "schedule_values": {
+    "W": "430",
+    "H": "240",
+    "DEPHT": "50",
+    "SH-T-B": "7",
+    "SH-T-D": "14/m",
+    "LO-T-B": "7",
+    "LO-T-D": "14/m",
+    "SH-B-B": "8",
+    "SH-B-D": "16/m",
+    "LO-B-B": "8",
+    "LO-B-D": "16/m",
+    "BOXED-T": "TOP",
+    "BOXED-B": "BOT"
+   },
+   "a3_definition": {
+    "bars": {
+     "long_bars": [
+      {
+       "count": 7,
+       "dia_mm": 14,
+       "per_m": true
+      }
+     ],
+     "short_bars": [
+      {
+       "count": 7,
+       "dia_mm": 14,
+       "per_m": true
+      }
+     ]
+    },
+    "boxed": [
+     "8 Ø 16/m"
+    ],
+    "definition": "COMPUTED_SHADOW_COMPLETE"
+   },
+   "reason": "TOP layer read as the bottom mesh with per_m ignored (count used as an absolute bar count); the BOT layer is routed to 'boxed' and emitted as BLOCKED 'boxed bar shape not dimensioned'",
+   "provenance": "DXF ATTRIB values; PDF p.9 shows TOP / BOT layer labels",
+   "affected_population": "footings of type F13",
+   "defect": "D2"
+  },
+  {
+   "object": "FOOTING F14",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF FOOTINGS (two-layer rows)",
+   "bbox_anchor": [
+    138451.3,
+    -2342.4
+   ],
+   "dxf_handle": "2AD5",
+   "block": "FTB",
+   "row_ids": [
+    "F14"
+   ],
+   "parser": "alsenan_phase_a.footing_schedule (PDF text)",
+   "consumer": "alsenan_phase_a3._rebar -> alsenan_v3_structure.footing_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "DEPHT",
+    "SH-T-B",
+    "SH-T-D",
+    "LO-T-B",
+    "LO-T-D"
+   ],
+   "fields_misread": [
+    "SH-T-D per_m",
+    "LO-T-D per_m",
+    "SH-B-* / LO-B-* (BOT layer -> 'boxed')"
+   ],
+   "fields_unread": [
+    "BOXED-T",
+    "BOXED-B"
+   ],
+   "schedule_values": {
+    "W": "380",
+    "H": "330",
+    "DEPHT": "50",
+    "SH-T-B": "6",
+    "SH-T-D": "14/m",
+    "LO-T-B": "6",
+    "LO-T-D": "14/m",
+    "SH-B-B": "9",
+    "SH-B-D": "14/m",
+    "LO-B-B": "9",
+    "LO-B-D": "14/m",
+    "BOXED-T": "TOP",
+    "BOXED-B": "BOT"
+   },
+   "a3_definition": {
+    "bars": {
+     "long_bars": [
+      {
+       "count": 6,
+       "dia_mm": 14,
+       "per_m": true
+      }
+     ],
+     "short_bars": [
+      {
+       "count": 6,
+       "dia_mm": 14,
+       "per_m": true
+      }
+     ]
+    },
+    "boxed": [
+     "9 Ø 14/m"
+    ],
+    "definition": "COMPUTED_SHADOW_COMPLETE"
+   },
+   "reason": "TOP layer read as the bottom mesh with per_m ignored (count used as an absolute bar count); the BOT layer is routed to 'boxed' and emitted as BLOCKED 'boxed bar shape not dimensioned'",
+   "provenance": "DXF ATTRIB values; PDF p.9 shows TOP / BOT layer labels",
+   "affected_population": "footings of type F14",
+   "defect": "D2"
+  },
+  {
+   "object": "FOOTING FF",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF FOOTINGS (two-layer rows)",
+   "bbox_anchor": [
+    138451.3,
+    -3905.7
+   ],
+   "dxf_handle": "2B1E",
+   "block": "FTB",
+   "row_ids": [
+    "FF"
+   ],
+   "parser": "alsenan_phase_a.footing_schedule (PDF text)",
+   "consumer": "alsenan_phase_a3._rebar -> alsenan_v3_structure.footing_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "DEPHT"
+   ],
+   "fields_misread": [
+    "SH-T-*",
+    "LO-T-*",
+    "SH-B-*",
+    "LO-B-*"
+   ],
+   "fields_unread": [
+    "BOXED-T",
+    "BOXED-B"
+   ],
+   "schedule_values": {
+    "W": "460",
+    "H": "450",
+    "DEPHT": "55",
+    "SH-T-B": "6",
+    "SH-T-D": "14/m",
+    "LO-T-B": "6",
+    "LO-T-D": "14/m",
+    "SH-B-B": "9",
+    "SH-B-D": "14/m",
+    "LO-B-B": "9",
+    "LO-B-D": "14/m",
+    "BOXED-T": "TOP",
+    "BOXED-B": "BOT"
+   },
+   "a3_definition": {
+    "bars": {},
+    "boxed": null,
+    "definition": "BLOCKED"
+   },
+   "reason": "the merged two-layer cell '6 9 Ø Ø 14/m 14/m' is read as one string; bars={} and definition BLOCKED, so no rebar row and no BLOCKED population row is emitted for the one FF (lift footing) occurrence",
+   "provenance": "DXF ATTRIB values; PDF p.9 shows TOP / BOT layer labels",
+   "affected_population": "footings of type FF",
+   "defect": "D3"
+  },
+  {
+   "object": "FOOTING REMARKS column",
+   "state": "UNREAD",
+   "source_file": "ST7757.pdf",
+   "page": 9,
+   "title": "SCHEDULE OF FOOTINGS - REMARKS",
+   "row_ids": [
+    "FF"
+   ],
+   "value_unread": {
+    "FF": "rHu}]M lwu}}] (legacy Arabic font; = 'lift footing')"
+   },
+   "parser": null,
+   "consumer": null,
+   "fields_unread": [
+    "REMARKS"
+   ],
+   "reason": "REMARKS never parsed; FF is the lift footing (p.14 lift detail)",
+   "provenance": "PDF text",
+   "affected_population": "FF (1 occurrence)",
+   "defect": "D3"
+  },
+  {
+   "object": "BEAM B1",
+   "state": "CONSUMED_COMPLETE",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    17606.0
+   ],
+   "dxf_handle": [
+    "1E5C"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B1"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [],
+   "value_unread": {},
+   "schedule_values": [
+    {
+     "BEAM": "B1",
+     "W": "20",
+     "H": "40",
+     "BOT-B": "2",
+     "BOT-D": "14",
+     "TOP-B": "2",
+     "TOP-D": "12",
+     "STI-B": "6",
+     "D": "8"
+    }
+   ],
+   "reason": "BOT / TOP / stirrups consumed",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B1",
+   "defect": null
+  },
+  {
+   "object": "BEAM B2",
+   "state": "CONSUMED_COMPLETE",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    16934.0
+   ],
+   "dxf_handle": [
+    "1E78"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B2"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [],
+   "value_unread": {},
+   "schedule_values": [
+    {
+     "BEAM": "B2",
+     "W": "20",
+     "H": "40",
+     "BOT-B": "3",
+     "BOT-D": "16",
+     "TOP-B": "2",
+     "TOP-D": "12",
+     "STI-B": "6",
+     "D": "8"
+    }
+   ],
+   "reason": "BOT / TOP / stirrups consumed",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B2",
+   "defect": null
+  },
+  {
+   "object": "BEAM B3",
+   "state": "CONSUMED_COMPLETE",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    16262.0
+   ],
+   "dxf_handle": [
+    "1E83"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B3"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [],
+   "value_unread": {},
+   "schedule_values": [
+    {
+     "BEAM": "B3",
+     "W": "20",
+     "H": "40",
+     "BOT-B": "4",
+     "BOT-D": "16",
+     "TOP-B": "2",
+     "TOP-D": "12",
+     "STI-B": "6",
+     "D": "8"
+    }
+   ],
+   "reason": "BOT / TOP / stirrups consumed",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B3",
+   "defect": null
+  },
+  {
+   "object": "BEAM B4",
+   "state": "CONSUMED_COMPLETE",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    15590.0
+   ],
+   "dxf_handle": [
+    "1E8E"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B4"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [],
+   "value_unread": {},
+   "schedule_values": [
+    {
+     "BEAM": "B4",
+     "W": "20",
+     "H": "50",
+     "BOT-B": "4",
+     "BOT-D": "16",
+     "TOP-B": "2",
+     "TOP-D": "12",
+     "STI-B": "6",
+     "D": "8"
+    }
+   ],
+   "reason": "BOT / TOP / stirrups consumed",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B4",
+   "defect": null
+  },
+  {
+   "object": "BEAM B5",
+   "state": "CONSUMED_COMPLETE",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    14918.0
+   ],
+   "dxf_handle": [
+    "1E99"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B5"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [],
+   "value_unread": {},
+   "schedule_values": [
+    {
+     "BEAM": "B5",
+     "W": "20",
+     "H": "50",
+     "BOT-B": "4",
+     "BOT-D": "18",
+     "TOP-B": "2",
+     "TOP-D": "12",
+     "STI-B": "6",
+     "D": "8"
+    }
+   ],
+   "reason": "BOT / TOP / stirrups consumed",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B5",
+   "defect": null
+  },
+  {
+   "object": "BEAM B6",
+   "state": "CONSUMED_COMPLETE",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    14246.0
+   ],
+   "dxf_handle": [
+    "1EA4"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B6"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [],
+   "value_unread": {},
+   "schedule_values": [
+    {
+     "BEAM": "B6",
+     "W": "25",
+     "H": "50",
+     "BOT-B": "5",
+     "BOT-D": "18",
+     "TOP-B": "2",
+     "TOP-D": "12",
+     "STI-B": "6",
+     "D": "8"
+    }
+   ],
+   "reason": "BOT / TOP / stirrups consumed",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B6",
+   "defect": null
+  },
+  {
+   "object": "BEAM B7",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    13574.0
+   ],
+   "dxf_handle": [
+    "1EAF"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B7"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [
+    "REMARKS"
+   ],
+   "value_unread": {
+    "REMARKS": "2Ø12/30cm"
+   },
+   "schedule_values": [
+    {
+     "BEAM": "B7",
+     "W": "20",
+     "H": "75",
+     "BOT-B": "3",
+     "BOT-D": "16",
+     "TOP-B": "2",
+     "TOP-D": "12",
+     "STI-B": "6",
+     "D": "8"
+    }
+   ],
+   "reason": "REMARKS side bars '2Ø12/30cm' captured as a string by _simple_beam_library but never consumed; side bars are emitted as a BLOCKED / provisional 2..4 range instead",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B7",
+   "defect": "SD-11"
+  },
+  {
+   "object": "BEAM B8",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    12902.0
+   ],
+   "dxf_handle": [
+    "1EBA"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B8"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [
+    "REMARKS"
+   ],
+   "value_unread": {
+    "REMARKS": "2Ø12/30cm"
+   },
+   "schedule_values": [
+    {
+     "BEAM": "B8",
+     "W": "20",
+     "H": "75",
+     "BOT-B": "4",
+     "BOT-D": "16",
+     "TOP-B": "2",
+     "TOP-D": "12",
+     "STI-B": "6",
+     "D": "8"
+    }
+   ],
+   "reason": "REMARKS side bars '2Ø12/30cm' captured as a string by _simple_beam_library but never consumed; side bars are emitted as a BLOCKED / provisional 2..4 range instead",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B8",
+   "defect": "SD-11"
+  },
+  {
+   "object": "BEAM B9",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    12230.0
+   ],
+   "dxf_handle": [
+    "1EC5"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B9"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [
+    "REMARKS"
+   ],
+   "value_unread": {
+    "REMARKS": "2Ø12/30cm"
+   },
+   "schedule_values": [
+    {
+     "BEAM": "B9",
+     "W": "20",
+     "H": "75",
+     "BOT-B": "4",
+     "BOT-D": "18",
+     "TOP-B": "2",
+     "TOP-D": "12",
+     "STI-B": "6",
+     "D": "8"
+    }
+   ],
+   "reason": "REMARKS side bars '2Ø12/30cm' captured as a string by _simple_beam_library but never consumed; side bars are emitted as a BLOCKED / provisional 2..4 range instead",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B9",
+   "defect": "SD-11"
+  },
+  {
+   "object": "BEAM B10",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    11558.0
+   ],
+   "dxf_handle": [
+    "1ED0"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B10"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [
+    "REMARKS"
+   ],
+   "value_unread": {
+    "REMARKS": "2Ø12/30cm"
+   },
+   "schedule_values": [
+    {
+     "BEAM": "B10",
+     "W": "20",
+     "H": "75",
+     "BOT-B": "5",
+     "BOT-D": "18",
+     "TOP-B": "2",
+     "TOP-D": "12",
+     "STI-B": "6",
+     "D": "8"
+    }
+   ],
+   "reason": "REMARKS side bars '2Ø12/30cm' captured as a string by _simple_beam_library but never consumed; side bars are emitted as a BLOCKED / provisional 2..4 range instead",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B10",
+   "defect": "SD-11"
+  },
+  {
+   "object": "BEAM B11",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    10886.0
+   ],
+   "dxf_handle": [
+    "1EDB"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B11"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [
+    "REMARKS"
+   ],
+   "value_unread": {
+    "REMARKS": "2Ø12/30cm"
+   },
+   "schedule_values": [
+    {
+     "BEAM": "B11",
+     "W": "20",
+     "H": "75",
+     "BOT-B": "6",
+     "BOT-D": "18",
+     "TOP-B": "2",
+     "TOP-D": "12",
+     "STI-B": "6",
+     "D": "8"
+    }
+   ],
+   "reason": "REMARKS side bars '2Ø12/30cm' captured as a string by _simple_beam_library but never consumed; side bars are emitted as a BLOCKED / provisional 2..4 range instead",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B11",
+   "defect": "SD-11"
+  },
+  {
+   "object": "BEAM B12",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    10214.0
+   ],
+   "dxf_handle": [
+    "1EE6"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B12"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [
+    "REMARKS"
+   ],
+   "value_unread": {
+    "REMARKS": "2Ø12/30cm"
+   },
+   "schedule_values": [
+    {
+     "BEAM": "B12",
+     "W": "25",
+     "H": "75",
+     "BOT-B": "6",
+     "BOT-D": "18",
+     "TOP-B": "2",
+     "TOP-D": "14",
+     "STI-B": "6",
+     "D": "8"
+    }
+   ],
+   "reason": "REMARKS side bars '2Ø12/30cm' captured as a string by _simple_beam_library but never consumed; side bars are emitted as a BLOCKED / provisional 2..4 range instead",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B12",
+   "defect": "SD-11"
+  },
+  {
+   "object": "BEAM B13",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    9542.0
+   ],
+   "dxf_handle": [
+    "1EF1"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B13"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [
+    "REMARKS"
+   ],
+   "value_unread": {
+    "REMARKS": "2Ø12/30cm"
+   },
+   "schedule_values": [
+    {
+     "BEAM": "B13",
+     "W": "25",
+     "H": "75",
+     "BOT-B": "7",
+     "BOT-D": "18",
+     "TOP-B": "2",
+     "TOP-D": "14",
+     "STI-B": "7",
+     "D": "8"
+    }
+   ],
+   "reason": "REMARKS side bars '2Ø12/30cm' captured as a string by _simple_beam_library but never consumed; side bars are emitted as a BLOCKED / provisional 2..4 range instead",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B13",
+   "defect": "SD-11"
+  },
+  {
+   "object": "BEAM B14",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    8870.0
+   ],
+   "dxf_handle": [
+    "1EFC"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B14"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [
+    "REMARKS"
+   ],
+   "value_unread": {
+    "REMARKS": "2Ø12/30cm"
+   },
+   "schedule_values": [
+    {
+     "BEAM": "B14",
+     "W": "20",
+     "H": "75",
+     "BOT-B": "4",
+     "BOT-D": "18",
+     "TOP-B": "2",
+     "TOP-D": "12",
+     "STI-B": "7",
+     "D": "8"
+    }
+   ],
+   "reason": "REMARKS side bars '2Ø12/30cm' captured as a string by _simple_beam_library but never consumed; side bars are emitted as a BLOCKED / provisional 2..4 range instead",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B14",
+   "defect": "SD-11"
+  },
+  {
+   "object": "BEAM B15",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    8198.0
+   ],
+   "dxf_handle": [
+    "1F07"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B15"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [
+    "REMARKS"
+   ],
+   "value_unread": {
+    "REMARKS": "2Ø12/30cm"
+   },
+   "schedule_values": [
+    {
+     "BEAM": "B15",
+     "W": "20",
+     "H": "120",
+     "BOT-B": "4",
+     "BOT-D": "16",
+     "TOP-B": "6",
+     "TOP-D": "18",
+     "STI-B": "10",
+     "D": "8"
+    }
+   ],
+   "reason": "REMARKS side bars '2Ø12/30cm' captured as a string by _simple_beam_library but never consumed; side bars are emitted as a BLOCKED / provisional 2..4 range instead",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B15",
+   "defect": "SD-11"
+  },
+  {
+   "object": "BEAM B16",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    7526.0
+   ],
+   "dxf_handle": [
+    "1F12"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B16"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [
+    "REMARKS"
+   ],
+   "value_unread": {
+    "REMARKS": "2Ø16/20cm"
+   },
+   "schedule_values": [
+    {
+     "BEAM": "B16",
+     "W": "30",
+     "H": "75",
+     "BOT-B": "5",
+     "BOT-D": "18",
+     "TOP-B": "3",
+     "TOP-D": "14",
+     "STI-B": "10",
+     "D": "10"
+    }
+   ],
+   "reason": "REMARKS side bars '2Ø16/20cm' captured as a string by _simple_beam_library but never consumed; side bars are emitted as a BLOCKED / provisional 2..4 range instead",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B16",
+   "defect": "SD-11"
+  },
+  {
+   "object": "BEAM B17",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    6854.0
+   ],
+   "dxf_handle": [
+    "1F1D"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B17"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [
+    "REMARKS"
+   ],
+   "value_unread": {
+    "REMARKS": "2Ø12/30cm"
+   },
+   "schedule_values": [
+    {
+     "BEAM": "B17",
+     "W": "45",
+     "H": "75",
+     "BOT-B": "10",
+     "BOT-D": "18",
+     "TOP-B": "4",
+     "TOP-D": "14",
+     "STI-B": "6",
+     "D": "8"
+    }
+   ],
+   "reason": "REMARKS side bars '2Ø12/30cm' captured as a string by _simple_beam_library but never consumed; side bars are emitted as a BLOCKED / provisional 2..4 range instead",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B17",
+   "defect": "SD-11"
+  },
+  {
+   "object": "BEAM B18",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    6182.0
+   ],
+   "dxf_handle": [
+    "1F28"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B18"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [
+    "REMARKS"
+   ],
+   "value_unread": {
+    "REMARKS": "2Ø12/30cm"
+   },
+   "schedule_values": [
+    {
+     "BEAM": "B18",
+     "W": "35",
+     "H": "75",
+     "BOT-B": "10",
+     "BOT-D": "18",
+     "TOP-B": "3",
+     "TOP-D": "14",
+     "STI-B": "5",
+     "D": "8"
+    }
+   ],
+   "reason": "REMARKS side bars '2Ø12/30cm' captured as a string by _simple_beam_library but never consumed; side bars are emitted as a BLOCKED / provisional 2..4 range instead",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B18",
+   "defect": "SD-11"
+  },
+  {
+   "object": "BEAM B19",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    5510.0
+   ],
+   "dxf_handle": [
+    "1F33"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B19"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [
+    "REMARKS"
+   ],
+   "value_unread": {
+    "REMARKS": "2Ø14/20cm"
+   },
+   "schedule_values": [
+    {
+     "BEAM": "B19",
+     "W": "40",
+     "H": "75",
+     "BOT-B": "11",
+     "BOT-D": "18",
+     "TOP-B": "4",
+     "TOP-D": "14",
+     "STI-B": "10",
+     "D": "10"
+    }
+   ],
+   "reason": "REMARKS side bars '2Ø14/20cm' captured as a string by _simple_beam_library but never consumed; side bars are emitted as a BLOCKED / provisional 2..4 range instead",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B19",
+   "defect": "SD-11"
+  },
+  {
+   "object": "BEAM B20",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    4838.0
+   ],
+   "dxf_handle": [
+    "1F3E"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B20"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [
+    "REMARKS"
+   ],
+   "value_unread": {
+    "REMARKS": "2Ø12/30cm"
+   },
+   "schedule_values": [
+    {
+     "BEAM": "B20",
+     "W": "40",
+     "H": "75",
+     "BOT-B": "11",
+     "BOT-D": "18",
+     "TOP-B": "11",
+     "TOP-D": "18",
+     "STI-B": "10",
+     "D": "8"
+    }
+   ],
+   "reason": "REMARKS side bars '2Ø12/30cm' captured as a string by _simple_beam_library but never consumed; side bars are emitted as a BLOCKED / provisional 2..4 range instead",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B20",
+   "defect": "SD-11"
+  },
+  {
+   "object": "BEAM B21",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    4166.0
+   ],
+   "dxf_handle": [
+    "1F49"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B21"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [
+    "REMARKS"
+   ],
+   "value_unread": {
+    "REMARKS": "2Ø12/30cm"
+   },
+   "schedule_values": [
+    {
+     "BEAM": "B21",
+     "W": "45",
+     "H": "75",
+     "BOT-B": "12",
+     "BOT-D": "18",
+     "TOP-B": "4",
+     "TOP-D": "14",
+     "STI-B": "10",
+     "D": "10"
+    }
+   ],
+   "reason": "REMARKS side bars '2Ø12/30cm' captured as a string by _simple_beam_library but never consumed; side bars are emitted as a BLOCKED / provisional 2..4 range instead",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B21",
+   "defect": "SD-11"
+  },
+  {
+   "object": "BEAM B22",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    3494.0
+   ],
+   "dxf_handle": [
+    "1F54"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B22"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [
+    "REMARKS"
+   ],
+   "value_unread": {
+    "REMARKS": "2Ø12/30cm"
+   },
+   "schedule_values": [
+    {
+     "BEAM": "B22",
+     "W": "50",
+     "H": "75",
+     "BOT-B": "14",
+     "BOT-D": "18",
+     "TOP-B": "5",
+     "TOP-D": "14",
+     "STI-B": "5",
+     "D": "8"
+    }
+   ],
+   "reason": "REMARKS side bars '2Ø12/30cm' captured as a string by _simple_beam_library but never consumed; side bars are emitted as a BLOCKED / provisional 2..4 range instead",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B22",
+   "defect": "SD-11"
+  },
+  {
+   "object": "BEAM B23",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    2822.0
+   ],
+   "dxf_handle": [
+    "1F5F"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B23"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [
+    "REMARKS"
+   ],
+   "value_unread": {
+    "REMARKS": "2Ø12/30cm"
+   },
+   "schedule_values": [
+    {
+     "BEAM": "B23",
+     "W": "45",
+     "H": "75",
+     "BOT-B": "11",
+     "BOT-D": "18",
+     "TOP-B": "11",
+     "TOP-D": "18",
+     "STI-B": "10",
+     "D": "8"
+    }
+   ],
+   "reason": "REMARKS side bars '2Ø12/30cm' captured as a string by _simple_beam_library but never consumed; side bars are emitted as a BLOCKED / provisional 2..4 range instead",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B23",
+   "defect": "SD-11"
+  },
+  {
+   "object": "BEAM B24",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    2150.0
+   ],
+   "dxf_handle": [
+    "1F6A"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B24"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [
+    "REMARKS"
+   ],
+   "value_unread": {
+    "REMARKS": "2Ø12/30cm"
+   },
+   "schedule_values": [
+    {
+     "BEAM": "B24",
+     "W": "50",
+     "H": "75",
+     "BOT-B": "5",
+     "BOT-D": "16",
+     "TOP-B": "10",
+     "TOP-D": "18",
+     "STI-B": "5",
+     "D": "8"
+    }
+   ],
+   "reason": "REMARKS side bars '2Ø12/30cm' captured as a string by _simple_beam_library but never consumed; side bars are emitted as a BLOCKED / provisional 2..4 range instead",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B24",
+   "defect": "SD-11"
+  },
+  {
+   "object": "BEAM B25",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    1478.0
+   ],
+   "dxf_handle": [
+    "1F75"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B25"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [
+    "REMARKS"
+   ],
+   "value_unread": {
+    "REMARKS": "2Ø12/30cm"
+   },
+   "schedule_values": [
+    {
+     "BEAM": "B25",
+     "W": "55",
+     "H": "75",
+     "BOT-B": "15",
+     "BOT-D": "18",
+     "TOP-B": "5",
+     "TOP-D": "14",
+     "STI-B": "6",
+     "D": "8"
+    }
+   ],
+   "reason": "REMARKS side bars '2Ø12/30cm' captured as a string by _simple_beam_library but never consumed; side bars are emitted as a BLOCKED / provisional 2..4 range instead",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B25",
+   "defect": "SD-11"
+  },
+  {
+   "object": "BEAM B26",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    806.0
+   ],
+   "dxf_handle": [
+    "1F80"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B26"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [
+    "REMARKS"
+   ],
+   "value_unread": {
+    "REMARKS": "2Ø16/20cm"
+   },
+   "schedule_values": [
+    {
+     "BEAM": "B26",
+     "W": "65",
+     "H": "85",
+     "BOT-B": "19",
+     "BOT-D": "18",
+     "TOP-B": "6",
+     "TOP-D": "14",
+     "STI-B": "10",
+     "D": "10"
+    }
+   ],
+   "reason": "REMARKS side bars '2Ø16/20cm' captured as a string by _simple_beam_library but never consumed; side bars are emitted as a BLOCKED / provisional 2..4 range instead",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B26",
+   "defect": "SD-11"
+  },
+  {
+   "object": "BEAM B27",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    134.0
+   ],
+   "dxf_handle": [
+    "1F8B"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B27"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [
+    "REMARKS"
+   ],
+   "value_unread": {
+    "REMARKS": "2Ø16/20cm"
+   },
+   "schedule_values": [
+    {
+     "BEAM": "B27",
+     "W": "90",
+     "H": "85",
+     "BOT-B": "22",
+     "BOT-D": "20",
+     "TOP-B": "9",
+     "TOP-D": "16",
+     "STI-B": "10",
+     "D": "10"
+    }
+   ],
+   "reason": "REMARKS side bars '2Ø16/20cm' captured as a string by _simple_beam_library but never consumed; side bars are emitted as a BLOCKED / provisional 2..4 range instead",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B27",
+   "defect": "SD-11"
+  },
+  {
+   "object": "BEAM B28",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    -538.0
+   ],
+   "dxf_handle": [
+    "1F96"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B28"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [
+    "REMARKS"
+   ],
+   "value_unread": {
+    "REMARKS": "2Ø12/30cm"
+   },
+   "schedule_values": [
+    {
+     "BEAM": "B28",
+     "W": "25",
+     "H": "75",
+     "BOT-B": "3",
+     "BOT-D": "16",
+     "TOP-B": "2",
+     "TOP-D": "14",
+     "STI-B": "10",
+     "D": "10"
+    }
+   ],
+   "reason": "REMARKS side bars '2Ø12/30cm' captured as a string by _simple_beam_library but never consumed; side bars are emitted as a BLOCKED / provisional 2..4 range instead",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B28",
+   "defect": "SD-11"
+  },
+  {
+   "object": "BEAM B29",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    -1210.0
+   ],
+   "dxf_handle": [
+    "2A47"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B29"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [
+    "REMARKS"
+   ],
+   "value_unread": {
+    "REMARKS": "2Ø12/30cm"
+   },
+   "schedule_values": [
+    {
+     "BEAM": "B29",
+     "W": "25",
+     "H": "75",
+     "BOT-B": "7",
+     "BOT-D": "18",
+     "TOP-B": "2",
+     "TOP-D": "14",
+     "STI-B": "5",
+     "D": "8"
+    }
+   ],
+   "reason": "REMARKS side bars '2Ø12/30cm' captured as a string by _simple_beam_library but never consumed; side bars are emitted as a BLOCKED / provisional 2..4 range instead",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B29",
+   "defect": "SD-11"
+  },
+  {
+   "object": "BEAM CA",
+   "state": "CONSUMED_COMPLETE",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    -1882.0
+   ],
+   "dxf_handle": [
+    "2A53"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "CA"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [],
+   "value_unread": {},
+   "schedule_values": [
+    {
+     "BEAM": "CA",
+     "W": "30",
+     "H": "50",
+     "BOT-B": "5",
+     "BOT-D": "18",
+     "TOP-B": "5",
+     "TOP-D": "18",
+     "STI-B": "8",
+     "D": "8"
+    }
+   ],
+   "reason": "BOT / TOP / stirrups consumed",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type CA",
+   "defect": null
+  },
+  {
+   "object": "BEAM B.W",
+   "state": "CONSUMED_COMPLETE",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    -3898.0
+   ],
+   "dxf_handle": [
+    "1FA5"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "B.W"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [],
+   "value_unread": {},
+   "schedule_values": [
+    {
+     "BEAM": "B.W",
+     "W": "20",
+     "H": "60",
+     "BOT-B": "4",
+     "BOT-D": "16",
+     "TOP-B": "2",
+     "TOP-D": "14",
+     "STI-B": "7",
+     "D": "8"
+    }
+   ],
+   "reason": "BOT / TOP / stirrups consumed",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "beam occurrences of type B.W",
+   "defect": null
+  },
+  {
+   "object": "STRAP SB1",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    -4570.0
+   ],
+   "dxf_handle": [
+    "1FB0"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "SB1"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar (filtered out)",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [],
+   "value_unread": {},
+   "schedule_values": [
+    {
+     "BEAM": "SB1",
+     "W": "70",
+     "H": "50",
+     "BOT-B": "7",
+     "BOT-D": "16",
+     "TOP-B": "13",
+     "TOP-D": "18",
+     "STI-B": "8",
+     "D": "8"
+    }
+   ],
+   "reason": "definition parsed (element=STRAP) but alsenan_v3_structure.beam_rebar filters element=='BEAM' - no rebar row, no BLOCKED row",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "strap occurrences of type SB1",
+   "defect": "D4"
+  },
+  {
+   "object": "STRAP SB2",
+   "state": "SOURCE_CONFLICT",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    -5242.0
+   ],
+   "dxf_handle": [
+    "2ABA",
+    "1FBB"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "SB2"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar (filtered out)",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [],
+   "value_unread": {},
+   "schedule_values": [
+    {
+     "BEAM": "SB2",
+     "W": "100",
+     "H": "50",
+     "BOT-B": "10",
+     "BOT-D": "16",
+     "TOP-B": "20",
+     "TOP-D": "18",
+     "STI-B": "10",
+     "D": "8"
+    },
+    {
+     "BEAM": "SB2",
+     "W": "80",
+     "H": "50",
+     "BOT-B": "10",
+     "BOT-D": "18",
+     "TOP-B": "10",
+     "TOP-D": "18",
+     "STI-B": "10",
+     "D": "8"
+    }
+   ],
+   "reason": "2 schedule rows carry the name SB2 with different sections / bars (100x50; 80x50); the A3 parser keeps one (W={'bottom': '10 Ø 16', 'top': '20 Ø 18', 'stirrups': '10 Ø 8'}) without recording the conflict",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "strap occurrences of type SB2",
+   "defect": "SD-12"
+  },
+  {
+   "object": "STRAP SB3",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 10,
+   "title": "SCHEDULE OF SIMPLE BEAMS",
+   "bbox_anchor": [
+    105724.5,
+    -5914.0
+   ],
+   "dxf_handle": [
+    "2B06"
+   ],
+   "block": "SBT",
+   "row_ids": [
+    "SB3"
+   ],
+   "parser": "alsenan_phase_a3._simple_beam_library (CAD table)",
+   "consumer": "alsenan_v3_structure.beam_rebar (filtered out)",
+   "fields_read": [
+    "W",
+    "H",
+    "BOT-B",
+    "BOT-D",
+    "TOP-B",
+    "TOP-D",
+    "STI-B",
+    "D"
+   ],
+   "fields_unread": [],
+   "value_unread": {},
+   "schedule_values": [
+    {
+     "BEAM": "SB3",
+     "W": "50",
+     "H": "40",
+     "BOT-B": "5",
+     "BOT-D": "16",
+     "TOP-B": "5",
+     "TOP-D": "18",
+     "STI-B": "7",
+     "D": "8"
+    }
+   ],
+   "reason": "definition parsed (element=STRAP) but alsenan_v3_structure.beam_rebar filters element=='BEAM' - no rebar row, no BLOCKED row",
+   "provenance": "DXF ATTRIB + S-TEXT.SCH TEXT",
+   "affected_population": "strap occurrences of type SB3",
+   "defect": "D4"
+  },
+  {
+   "object": "CONTINUOUS BEAM CB7",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 11,
+   "title": "CONTINUES BEAMS (2 SPAN)",
+   "bbox_anchor": [
+    20737.0,
+    6975.8
+   ],
+   "dxf_handle": "22EC",
+   "block": "C-BEAM2",
+   "row_ids": [
+    "CB7"
+   ],
+   "parser": "alsenan_phase_a3.CB_TRANSCRIPTION (hand-read from the PDF; 'text drawn as vector glyphs')",
+   "consumer": "alsenan_phase_a3._beams (concrete BLOCKED) ; rebar: none",
+   "fields_read": [
+    "W",
+    "H",
+    "L1-M",
+    "L2-M"
+   ],
+   "fields_unread": [
+    "BOT1-B",
+    "BOT1-D",
+    "BOT2-B",
+    "BOT2-D",
+    "MID-B",
+    "MID-D",
+    "STR1-B",
+    "STR1-D",
+    "STR2-B",
+    "STR2-D"
+   ],
+   "fields_not_relevant": [
+    "T/M-1",
+    "T/M-2"
+   ],
+   "schedule_values": {
+    "BEAM-NAME": "CB7",
+    "W": "20",
+    "H": "75",
+    "L1-M": "6.0",
+    "L2-M": "6.1",
+    "T/M-1": "3.5",
+    "T/M-2": "3.5",
+    "BOT1-B": "3",
+    "BOT1-D": "16",
+    "BOT2-B": "3",
+    "BOT2-D": "16",
+    "MID-B": "5",
+    "MID-D": "18",
+    "STR1-B": "7",
+    "STR1-D": "8",
+    "STR2-B": "7",
+    "STR2-D": "8"
+   },
+   "reason": "every reinforcement attribute is present as a DXF ATTRIB but was never read; T/M-n are design loads (t/m), not bars",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "CB occurrences of type CB7",
+   "defect": "D1"
+  },
+  {
+   "object": "CONTINUOUS BEAM CB1",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 11,
+   "title": "CONTINUES BEAMS (2 SPAN)",
+   "bbox_anchor": [
+    -1020.1,
+    6975.8
+   ],
+   "dxf_handle": "2851",
+   "block": "C-BEAM2",
+   "row_ids": [
+    "CB1"
+   ],
+   "parser": "alsenan_phase_a3.CB_TRANSCRIPTION (hand-read from the PDF; 'text drawn as vector glyphs')",
+   "consumer": "alsenan_phase_a3._beams (concrete BLOCKED) ; rebar: none",
+   "fields_read": [
+    "W",
+    "H",
+    "L1-M",
+    "L2-M"
+   ],
+   "fields_unread": [
+    "BOT1-B",
+    "BOT1-D",
+    "BOT2-B",
+    "BOT2-D",
+    "MID-B",
+    "MID-D",
+    "STR1-B",
+    "STR1-D",
+    "STR2-B",
+    "STR2-D"
+   ],
+   "fields_not_relevant": [
+    "T/M-1",
+    "T/M-2"
+   ],
+   "schedule_values": {
+    "BEAM-NAME": "CB1",
+    "W": "35",
+    "H": "75",
+    "L1-M": "7.5",
+    "L2-M": "5.7",
+    "T/M-1": "3.0",
+    "T/M-2": "2.5",
+    "BOT1-B": "4",
+    "BOT1-D": "18",
+    "BOT2-B": "5",
+    "BOT2-D": "18",
+    "MID-B": "8",
+    "MID-D": "18",
+    "STR1-B": "5",
+    "STR1-D": "8",
+    "STR2-B": "9",
+    "STR2-D": "10"
+   },
+   "reason": "every reinforcement attribute is present as a DXF ATTRIB but was never read; T/M-n are design loads (t/m), not bars",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "CB occurrences of type CB1",
+   "defect": "D1"
+  },
+  {
+   "object": "CONTINUOUS BEAM CB10",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 11,
+   "title": "CONTINUES BEAMS (2 SPAN)",
+   "bbox_anchor": [
+    20737.0,
+    1644.9
+   ],
+   "dxf_handle": "23F0",
+   "block": "C-BEAM2",
+   "row_ids": [
+    "CB10"
+   ],
+   "parser": "alsenan_phase_a3.CB_TRANSCRIPTION (hand-read from the PDF; 'text drawn as vector glyphs')",
+   "consumer": "alsenan_phase_a3._beams (concrete BLOCKED) ; rebar: none",
+   "fields_read": [
+    "W",
+    "H",
+    "L1-M",
+    "L2-M"
+   ],
+   "fields_unread": [
+    "BOT1-B",
+    "BOT1-D",
+    "BOT2-B",
+    "BOT2-D",
+    "MID-B",
+    "MID-D",
+    "STR1-B",
+    "STR1-D",
+    "STR2-B",
+    "STR2-D"
+   ],
+   "fields_not_relevant": [
+    "T/M-1",
+    "T/M-2"
+   ],
+   "schedule_values": {
+    "BEAM-NAME": "CB10",
+    "W": "25",
+    "H": "50",
+    "L1-M": "3.0",
+    "L2-M": "4.1",
+    "T/M-1": "3.9",
+    "T/M-2": "4.2",
+    "BOT1-B": "3",
+    "BOT1-D": "16",
+    "BOT2-B": "4",
+    "BOT2-D": "18",
+    "MID-B": "4",
+    "MID-D": "18",
+    "STR1-B": "6",
+    "STR1-D": "8",
+    "STR2-B": "6",
+    "STR2-D": "8"
+   },
+   "reason": "every reinforcement attribute is present as a DXF ATTRIB but was never read; T/M-n are design loads (t/m), not bars",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "CB occurrences of type CB10",
+   "defect": "D1"
+  },
+  {
+   "object": "CONTINUOUS BEAM CB2",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 11,
+   "title": "CONTINUES BEAMS (2 SPAN)",
+   "bbox_anchor": [
+    -1020.1,
+    1644.9
+   ],
+   "dxf_handle": "28C7",
+   "block": "C-BEAM2",
+   "row_ids": [
+    "CB2"
+   ],
+   "parser": "alsenan_phase_a3.CB_TRANSCRIPTION (hand-read from the PDF; 'text drawn as vector glyphs')",
+   "consumer": "alsenan_phase_a3._beams (concrete BLOCKED) ; rebar: none",
+   "fields_read": [
+    "W",
+    "H",
+    "L1-M",
+    "L2-M"
+   ],
+   "fields_unread": [
+    "BOT1-B",
+    "BOT1-D",
+    "BOT2-B",
+    "BOT2-D",
+    "MID-B",
+    "MID-D",
+    "STR1-B",
+    "STR1-D",
+    "STR2-B",
+    "STR2-D"
+   ],
+   "fields_not_relevant": [
+    "T/M-1",
+    "T/M-2"
+   ],
+   "schedule_values": {
+    "BEAM-NAME": "CB2",
+    "W": "20",
+    "H": "50",
+    "L1-M": "4.0",
+    "L2-M": "4.0",
+    "T/M-1": "3.0",
+    "T/M-2": "3.0",
+    "BOT1-B": "3",
+    "BOT1-D": "16",
+    "BOT2-B": "3",
+    "BOT2-D": "14",
+    "MID-B": "4",
+    "MID-D": "16",
+    "STR1-B": "6",
+    "STR1-D": "8",
+    "STR2-B": "6",
+    "STR2-D": "8"
+   },
+   "reason": "every reinforcement attribute is present as a DXF ATTRIB but was never read; T/M-n are design loads (t/m), not bars",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "CB occurrences of type CB2",
+   "defect": "D1"
+  },
+  {
+   "object": "CONTINUOUS BEAM CB12",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 11,
+   "title": "CONTINUES BEAMS (2 SPAN)",
+   "bbox_anchor": [
+    20737.0,
+    -3686.0
+   ],
+   "dxf_handle": "2469",
+   "block": "C-BEAM2",
+   "row_ids": [
+    "CB12"
+   ],
+   "parser": "alsenan_phase_a3.CB_TRANSCRIPTION (hand-read from the PDF; 'text drawn as vector glyphs')",
+   "consumer": "alsenan_phase_a3._beams (concrete BLOCKED) ; rebar: none",
+   "fields_read": [
+    "W",
+    "H",
+    "L1-M",
+    "L2-M"
+   ],
+   "fields_unread": [
+    "BOT1-B",
+    "BOT1-D",
+    "BOT2-B",
+    "BOT2-D",
+    "MID-B",
+    "MID-D",
+    "STR1-B",
+    "STR1-D",
+    "STR2-B",
+    "STR2-D"
+   ],
+   "fields_not_relevant": [
+    "T/M-1",
+    "T/M-2"
+   ],
+   "schedule_values": {
+    "BEAM-NAME": "CB12",
+    "W": "25",
+    "H": "75",
+    "L1-M": "6.1",
+    "L2-M": "5.5",
+    "T/M-1": "4.7",
+    "T/M-2": "4.2",
+    "BOT1-B": "5",
+    "BOT1-D": "18",
+    "BOT2-B": "3",
+    "BOT2-D": "16",
+    "MID-B": "6",
+    "MID-D": "18",
+    "STR1-B": "9",
+    "STR1-D": "8",
+    "STR2-B": "7",
+    "STR2-D": "8"
+   },
+   "reason": "every reinforcement attribute is present as a DXF ATTRIB but was never read; T/M-n are design loads (t/m), not bars",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "CB occurrences of type CB12",
+   "defect": "D1"
+  },
+  {
+   "object": "CONTINUOUS BEAM CB4",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 11,
+   "title": "CONTINUES BEAMS (2 SPAN)",
+   "bbox_anchor": [
+    -1020.1,
+    -3686.0
+   ],
+   "dxf_handle": "2933",
+   "block": "C-BEAM2",
+   "row_ids": [
+    "CB4"
+   ],
+   "parser": "alsenan_phase_a3.CB_TRANSCRIPTION (hand-read from the PDF; 'text drawn as vector glyphs')",
+   "consumer": "alsenan_phase_a3._beams (concrete BLOCKED) ; rebar: none",
+   "fields_read": [
+    "W",
+    "H",
+    "L1-M",
+    "L2-M"
+   ],
+   "fields_unread": [
+    "BOT1-B",
+    "BOT1-D",
+    "BOT2-B",
+    "BOT2-D",
+    "MID-B",
+    "MID-D",
+    "STR1-B",
+    "STR1-D",
+    "STR2-B",
+    "STR2-D"
+   ],
+   "fields_not_relevant": [
+    "T/M-1",
+    "T/M-2"
+   ],
+   "schedule_values": {
+    "BEAM-NAME": "CB4",
+    "W": "20",
+    "H": "50",
+    "L1-M": "3.3",
+    "L2-M": "3.7",
+    "T/M-1": "4.8",
+    "T/M-2": "4.5",
+    "BOT1-B": "3",
+    "BOT1-D": "14",
+    "BOT2-B": "3",
+    "BOT2-D": "16",
+    "MID-B": "4",
+    "MID-D": "16",
+    "STR1-B": "6",
+    "STR1-D": "8",
+    "STR2-B": "8",
+    "STR2-D": "8"
+   },
+   "reason": "every reinforcement attribute is present as a DXF ATTRIB but was never read; T/M-n are design loads (t/m), not bars",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "CB occurrences of type CB4",
+   "defect": "D1"
+  },
+  {
+   "object": "CONTINUOUS BEAM CB13",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 11,
+   "title": "CONTINUES BEAMS (2 SPAN)",
+   "bbox_anchor": [
+    20737.0,
+    -9016.9
+   ],
+   "dxf_handle": "24DF",
+   "block": "C-BEAM2",
+   "row_ids": [
+    "CB13"
+   ],
+   "parser": "alsenan_phase_a3.CB_TRANSCRIPTION (hand-read from the PDF; 'text drawn as vector glyphs')",
+   "consumer": "alsenan_phase_a3._beams (concrete BLOCKED) ; rebar: none",
+   "fields_read": [
+    "W",
+    "H",
+    "L1-M",
+    "L2-M"
+   ],
+   "fields_unread": [
+    "BOT1-B",
+    "BOT1-D",
+    "BOT2-B",
+    "BOT2-D",
+    "MID-B",
+    "MID-D",
+    "STR1-B",
+    "STR1-D",
+    "STR2-B",
+    "STR2-D"
+   ],
+   "fields_not_relevant": [
+    "T/M-1",
+    "T/M-2"
+   ],
+   "schedule_values": {
+    "BEAM-NAME": "CB13",
+    "W": "30",
+    "H": "50",
+    "L1-M": "3.7",
+    "L2-M": "3.6",
+    "T/M-1": "5.1",
+    "T/M-2": "4.5",
+    "BOT1-B": "4",
+    "BOT1-D": "16",
+    "BOT2-B": "4",
+    "BOT2-D": "18",
+    "MID-B": "5",
+    "MID-D": "18",
+    "STR1-B": "7",
+    "STR1-D": "8",
+    "STR2-B": "7",
+    "STR2-D": "10"
+   },
+   "reason": "every reinforcement attribute is present as a DXF ATTRIB but was never read; T/M-n are design loads (t/m), not bars",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "CB occurrences of type CB13",
+   "defect": "D1"
+  },
+  {
+   "object": "CONTINUOUS BEAM CB5",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 11,
+   "title": "CONTINUES BEAMS (2 SPAN)",
+   "bbox_anchor": [
+    -1020.1,
+    -9016.9
+   ],
+   "dxf_handle": "299F",
+   "block": "C-BEAM2",
+   "row_ids": [
+    "CB5"
+   ],
+   "parser": "alsenan_phase_a3.CB_TRANSCRIPTION (hand-read from the PDF; 'text drawn as vector glyphs')",
+   "consumer": "alsenan_phase_a3._beams (concrete BLOCKED) ; rebar: none",
+   "fields_read": [
+    "W",
+    "H",
+    "L1-M",
+    "L2-M"
+   ],
+   "fields_unread": [
+    "BOT1-B",
+    "BOT1-D",
+    "BOT2-B",
+    "BOT2-D",
+    "MID-B",
+    "MID-D",
+    "STR1-B",
+    "STR1-D",
+    "STR2-B",
+    "STR2-D"
+   ],
+   "fields_not_relevant": [
+    "T/M-1",
+    "T/M-2"
+   ],
+   "schedule_values": {
+    "BEAM-NAME": "CB5",
+    "W": "20",
+    "H": "40",
+    "L1-M": "2.5",
+    "L2-M": "4.5",
+    "T/M-1": "3.7",
+    "T/M-2": "4.5",
+    "BOT1-B": "3",
+    "BOT1-D": "14",
+    "BOT2-B": "4",
+    "BOT2-D": "16",
+    "MID-B": "4",
+    "MID-D": "16",
+    "STR1-B": "7",
+    "STR1-D": "8",
+    "STR2-B": "7",
+    "STR2-D": "8"
+   },
+   "reason": "every reinforcement attribute is present as a DXF ATTRIB but was never read; T/M-n are design loads (t/m), not bars",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "CB occurrences of type CB5",
+   "defect": "D1"
+  },
+  {
+   "object": "CONTINUOUS BEAM CB6",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 11,
+   "title": "CONTINUES BEAMS (2 SPAN)",
+   "bbox_anchor": [
+    -1020.1,
+    -14347.7
+   ],
+   "dxf_handle": "2A04",
+   "block": "C-BEAM2",
+   "row_ids": [
+    "CB6"
+   ],
+   "parser": "alsenan_phase_a3.CB_TRANSCRIPTION (hand-read from the PDF; 'text drawn as vector glyphs')",
+   "consumer": "alsenan_phase_a3._beams (concrete BLOCKED) ; rebar: none",
+   "fields_read": [
+    "W",
+    "H",
+    "L1-M",
+    "L2-M"
+   ],
+   "fields_unread": [
+    "BOT1-B",
+    "BOT1-D",
+    "BOT2-B",
+    "BOT2-D",
+    "MID-B",
+    "MID-D",
+    "STR1-B",
+    "STR1-D",
+    "STR2-B",
+    "STR2-D"
+   ],
+   "fields_not_relevant": [
+    "T/M-1",
+    "T/M-2"
+   ],
+   "schedule_values": {
+    "BEAM-NAME": "CB6",
+    "W": "20",
+    "H": "75",
+    "L1-M": "4.4",
+    "L2-M": "6.3",
+    "T/M-1": "3.7",
+    "T/M-2": "3.9",
+    "BOT1-B": "3",
+    "BOT1-D": "16",
+    "BOT2-B": "4",
+    "BOT2-D": "18",
+    "MID-B": "4",
+    "MID-D": "18",
+    "STR1-B": "5",
+    "STR1-D": "8",
+    "STR2-B": "6",
+    "STR2-D": "8"
+   },
+   "reason": "every reinforcement attribute is present as a DXF ATTRIB but was never read; T/M-n are design loads (t/m), not bars",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "CB occurrences of type CB6",
+   "defect": "D1"
+  },
+  {
+   "object": "CONTINUOUS BEAM CB3",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 12,
+   "title": "CONTINUES BEAMS (3 SPAN)",
+   "bbox_anchor": [
+    58970.7,
+    6975.8
+   ],
+   "dxf_handle": "2344",
+   "block": "C-BEAM3",
+   "row_ids": [
+    "CB3"
+   ],
+   "parser": "alsenan_phase_a3.CB_TRANSCRIPTION (hand-read from the PDF; 'text drawn as vector glyphs')",
+   "consumer": "alsenan_phase_a3._beams (concrete BLOCKED) ; rebar: none",
+   "fields_read": [
+    "W",
+    "H",
+    "L1-M",
+    "L2-M",
+    "L3-M"
+   ],
+   "fields_unread": [
+    "BOT1-B",
+    "BOT1-D",
+    "BOT2-B",
+    "BOT2-D",
+    "BOT3-B",
+    "BOT3-D",
+    "STR1-B",
+    "STR1-D",
+    "STR2-B",
+    "STR2-D",
+    "STR3-B",
+    "STR3-D"
+   ],
+   "fields_not_relevant": [
+    "T/M-1",
+    "T/M-2",
+    "T/M-3"
+   ],
+   "schedule_values": {
+    "BEAM-NAME": "CB3",
+    "W": "20",
+    "H": "75",
+    "L1-M": "3.4",
+    "L2-M": "3.3",
+    "L3-M": "3.8",
+    "T/M-1": "3.8",
+    "T/M-2": "3.8",
+    "T/M-3": "5.0",
+    "BOT1-B": "3",
+    "BOT1-D": "16",
+    "BOT2-B": "3",
+    "BOT2-D": "16",
+    "BOT3-B": "3",
+    "BOT3-D": "16",
+    "MID1-B": "",
+    "MID1-D": "",
+    "MID2-B": "",
+    "MID2-D": "",
+    "STR1-B": "5",
+    "STR1-D": "8",
+    "STR2-B": "5",
+    "STR2-D": "8",
+    "STR3-B": "9",
+    "STR3-D": "8"
+   },
+   "reason": "every reinforcement attribute is present as a DXF ATTRIB but was never read; T/M-n are design loads (t/m), not bars",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "CB occurrences of type CB3",
+   "defect": "D1"
+  },
+  {
+   "object": "CONTINUOUS BEAM CB8",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 12,
+   "title": "CONTINUES BEAMS (3 SPAN)",
+   "bbox_anchor": [
+    58970.7,
+    1644.9
+   ],
+   "dxf_handle": "2574",
+   "block": "C-BEAM3",
+   "row_ids": [
+    "CB8"
+   ],
+   "parser": "alsenan_phase_a3.CB_TRANSCRIPTION (hand-read from the PDF; 'text drawn as vector glyphs')",
+   "consumer": "alsenan_phase_a3._beams (concrete BLOCKED) ; rebar: none",
+   "fields_read": [
+    "W",
+    "H",
+    "L1-M",
+    "L2-M",
+    "L3-M"
+   ],
+   "fields_unread": [
+    "BOT1-B",
+    "BOT1-D",
+    "BOT2-B",
+    "BOT2-D",
+    "BOT3-B",
+    "BOT3-D",
+    "MID2-B",
+    "MID2-D",
+    "STR1-B",
+    "STR1-D",
+    "STR2-B",
+    "STR2-D",
+    "STR3-B",
+    "STR3-D"
+   ],
+   "fields_not_relevant": [
+    "T/M-1",
+    "T/M-2",
+    "T/M-3"
+   ],
+   "schedule_values": {
+    "BEAM-NAME": "CB8",
+    "W": "30",
+    "H": "75",
+    "L1-M": "3.7",
+    "L2-M": "6.4",
+    "L3-M": "6.8",
+    "T/M-1": "3.3",
+    "T/M-2": "3.3",
+    "T/M-3": "3.3",
+    "BOT1-B": "3",
+    "BOT1-D": "14",
+    "BOT2-B": "7",
+    "BOT2-D": "18",
+    "BOT3-B": "4",
+    "BOT3-D": "16",
+    "MID1-B": "",
+    "MID1-D": "",
+    "MID2-B": "6",
+    "MID2-D": "18",
+    "STR1-B": "5",
+    "STR1-D": "8",
+    "STR2-B": "8",
+    "STR2-D": "8",
+    "STR3-B": "5",
+    "STR3-D": "8"
+   },
+   "reason": "every reinforcement attribute is present as a DXF ATTRIB but was never read; T/M-n are design loads (t/m), not bars",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "CB occurrences of type CB8",
+   "defect": "D1"
+  },
+  {
+   "object": "CONTINUOUS BEAM CB9",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 12,
+   "title": "CONTINUES BEAMS (3 SPAN)",
+   "bbox_anchor": [
+    58970.7,
+    -3686.0
+   ],
+   "dxf_handle": "2619",
+   "block": "C-BEAM3",
+   "row_ids": [
+    "CB9"
+   ],
+   "parser": "alsenan_phase_a3.CB_TRANSCRIPTION (hand-read from the PDF; 'text drawn as vector glyphs')",
+   "consumer": "alsenan_phase_a3._beams (concrete BLOCKED) ; rebar: none",
+   "fields_read": [
+    "W",
+    "H",
+    "L1-M",
+    "L2-M",
+    "L3-M"
+   ],
+   "fields_unread": [
+    "BOT1-B",
+    "BOT1-D",
+    "BOT2-B",
+    "BOT2-D",
+    "BOT3-B",
+    "BOT3-D",
+    "MID1-B",
+    "MID1-D",
+    "MID2-B",
+    "MID2-D",
+    "STR1-B",
+    "STR1-D",
+    "STR2-B",
+    "STR2-D",
+    "STR3-B",
+    "STR3-D"
+   ],
+   "fields_not_relevant": [
+    "T/M-1",
+    "T/M-2",
+    "T/M-3"
+   ],
+   "schedule_values": {
+    "BEAM-NAME": "CB9",
+    "W": "20",
+    "H": "50",
+    "L1-M": "4.1",
+    "L2-M": "4.0",
+    "L3-M": "3.7",
+    "T/M-1": "3.7",
+    "T/M-2": "3.7",
+    "T/M-3": "4.0",
+    "BOT1-B": "4",
+    "BOT1-D": "16",
+    "BOT2-B": "3",
+    "BOT2-D": "14",
+    "BOT3-B": "3",
+    "BOT3-D": "14",
+    "MID1-B": "4",
+    "MID1-D": "18",
+    "MID2-B": "3",
+    "MID2-D": "16",
+    "STR1-B": "7",
+    "STR1-D": "8",
+    "STR2-B": "10",
+    "STR2-D": "8",
+    "STR3-B": "6",
+    "STR3-D": "8"
+   },
+   "reason": "every reinforcement attribute is present as a DXF ATTRIB but was never read; T/M-n are design loads (t/m), not bars",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "CB occurrences of type CB9",
+   "defect": "D1"
+  },
+  {
+   "object": "CONTINUOUS BEAM CB11",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "page": 12,
+   "title": "CONTINUES BEAMS (3 SPAN)",
+   "bbox_anchor": [
+    58970.7,
+    -9016.9
+   ],
+   "dxf_handle": "26C1",
+   "block": "C-BEAM3",
+   "row_ids": [
+    "CB11"
+   ],
+   "parser": "alsenan_phase_a3.CB_TRANSCRIPTION (hand-read from the PDF; 'text drawn as vector glyphs')",
+   "consumer": "alsenan_phase_a3._beams (concrete BLOCKED) ; rebar: none",
+   "fields_read": [
+    "W",
+    "H",
+    "L1-M",
+    "L2-M",
+    "L3-M"
+   ],
+   "fields_unread": [
+    "BOT1-B",
+    "BOT1-D",
+    "BOT2-B",
+    "BOT2-D",
+    "BOT3-B",
+    "BOT3-D",
+    "MID1-B",
+    "MID1-D",
+    "MID2-B",
+    "MID2-D",
+    "STR1-B",
+    "STR1-D",
+    "STR2-B",
+    "STR2-D",
+    "STR3-B",
+    "STR3-D"
+   ],
+   "fields_not_relevant": [
+    "T/M-1",
+    "T/M-2",
+    "T/M-3"
+   ],
+   "schedule_values": {
+    "BEAM-NAME": "CB11",
+    "W": "30",
+    "H": "75",
+    "L1-M": "7.1",
+    "L2-M": "3.2",
+    "L3-M": "3.7",
+    "T/M-1": "4.1",
+    "T/M-2": "3.8",
+    "T/M-3": "3.8",
+    "BOT1-B": "6",
+    "BOT1-D": "18",
+    "BOT2-B": "4",
+    "BOT2-D": "16",
+    "BOT3-B": "4",
+    "BOT3-D": "16",
+    "MID1-B": "8",
+    "MID1-D": "18",
+    "MID2-B": "4",
+    "MID2-D": "16",
+    "STR1-B": "10",
+    "STR1-D": "8",
+    "STR2-B": "6",
+    "STR2-D": "8",
+    "STR3-B": "5",
+    "STR3-D": "8"
+   },
+   "reason": "every reinforcement attribute is present as a DXF ATTRIB but was never read; T/M-n are design loads (t/m), not bars",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "CB occurrences of type CB11",
+   "defect": "D1"
+  },
+  {
+   "object": "COLUMN C",
+   "state": "CONSUMED_COMPLETE",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF COLUMNS",
+   "bbox_anchor": [
+    155848.1,
+    17627.1
+   ],
+   "dxf_handle": "1D03",
+   "block": "CGT",
+   "row_ids": [
+    "C"
+   ],
+   "parser": "alsenan_phase_a3 column library",
+   "consumer": "alsenan_v3_structure.column_rebar",
+   "fields_read": [
+    "FOU.W",
+    "FOU.H",
+    "FOU.R",
+    "FOU.D",
+    "GR.W",
+    "GR.H",
+    "GR.R",
+    "GR.D",
+    "1ST.W",
+    "1ST.H",
+    "1ST.R",
+    "1ST.D",
+    "2ND.W",
+    "2ND.H",
+    "2ND.R",
+    "2ND.D"
+   ],
+   "fields_not_relevant": [
+    "LOAD"
+   ],
+   "reason": "sections and bars per storey band consumed (matches p.9)",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "column occurrences of type C",
+   "defect": null
+  },
+  {
+   "object": "COLUMN C1",
+   "state": "CONSUMED_COMPLETE",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF COLUMNS",
+   "bbox_anchor": [
+    155848.1,
+    17106.0
+   ],
+   "dxf_handle": "1D32",
+   "block": "CGT",
+   "row_ids": [
+    "C1"
+   ],
+   "parser": "alsenan_phase_a3 column library",
+   "consumer": "alsenan_v3_structure.column_rebar",
+   "fields_read": [
+    "FOU.W",
+    "FOU.H",
+    "FOU.R",
+    "FOU.D",
+    "GR.W",
+    "GR.H",
+    "GR.R",
+    "GR.D",
+    "1ST.W",
+    "1ST.H",
+    "1ST.R",
+    "1ST.D",
+    "2ND.W",
+    "2ND.H",
+    "2ND.R",
+    "2ND.D"
+   ],
+   "fields_not_relevant": [
+    "LOAD"
+   ],
+   "reason": "sections and bars per storey band consumed (matches p.9)",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "column occurrences of type C1",
+   "defect": null
+  },
+  {
+   "object": "COLUMN C2",
+   "state": "CONSUMED_COMPLETE",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF COLUMNS",
+   "bbox_anchor": [
+    155848.1,
+    16584.9
+   ],
+   "dxf_handle": "1D46",
+   "block": "CGT",
+   "row_ids": [
+    "C2"
+   ],
+   "parser": "alsenan_phase_a3 column library",
+   "consumer": "alsenan_v3_structure.column_rebar",
+   "fields_read": [
+    "FOU.W",
+    "FOU.H",
+    "FOU.R",
+    "FOU.D",
+    "GR.W",
+    "GR.H",
+    "GR.R",
+    "GR.D",
+    "1ST.W",
+    "1ST.H",
+    "1ST.R",
+    "1ST.D",
+    "2ND.W",
+    "2ND.H",
+    "2ND.R",
+    "2ND.D"
+   ],
+   "fields_not_relevant": [
+    "LOAD"
+   ],
+   "reason": "sections and bars per storey band consumed (matches p.9)",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "column occurrences of type C2",
+   "defect": null
+  },
+  {
+   "object": "COLUMN C3",
+   "state": "CONSUMED_COMPLETE",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF COLUMNS",
+   "bbox_anchor": [
+    155848.1,
+    16063.7
+   ],
+   "dxf_handle": "1D5A",
+   "block": "CGT",
+   "row_ids": [
+    "C3"
+   ],
+   "parser": "alsenan_phase_a3 column library",
+   "consumer": "alsenan_v3_structure.column_rebar",
+   "fields_read": [
+    "FOU.W",
+    "FOU.H",
+    "FOU.R",
+    "FOU.D",
+    "GR.W",
+    "GR.H",
+    "GR.R",
+    "GR.D",
+    "1ST.W",
+    "1ST.H",
+    "1ST.R",
+    "1ST.D",
+    "2ND.W",
+    "2ND.H",
+    "2ND.R",
+    "2ND.D"
+   ],
+   "fields_not_relevant": [
+    "LOAD"
+   ],
+   "reason": "sections and bars per storey band consumed (matches p.9)",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "column occurrences of type C3",
+   "defect": null
+  },
+  {
+   "object": "COLUMN C4",
+   "state": "CONSUMED_COMPLETE",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF COLUMNS",
+   "bbox_anchor": [
+    155848.1,
+    15542.6
+   ],
+   "dxf_handle": "1D6E",
+   "block": "CGT",
+   "row_ids": [
+    "C4"
+   ],
+   "parser": "alsenan_phase_a3 column library",
+   "consumer": "alsenan_v3_structure.column_rebar",
+   "fields_read": [
+    "FOU.W",
+    "FOU.H",
+    "FOU.R",
+    "FOU.D",
+    "GR.W",
+    "GR.H",
+    "GR.R",
+    "GR.D",
+    "1ST.W",
+    "1ST.H",
+    "1ST.R",
+    "1ST.D",
+    "2ND.W",
+    "2ND.H",
+    "2ND.R",
+    "2ND.D"
+   ],
+   "fields_not_relevant": [
+    "LOAD"
+   ],
+   "reason": "sections and bars per storey band consumed (matches p.9)",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "column occurrences of type C4",
+   "defect": null
+  },
+  {
+   "object": "COLUMN C5",
+   "state": "CONSUMED_COMPLETE",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF COLUMNS",
+   "bbox_anchor": [
+    155848.1,
+    15021.5
+   ],
+   "dxf_handle": "1D82",
+   "block": "CGT",
+   "row_ids": [
+    "C5"
+   ],
+   "parser": "alsenan_phase_a3 column library",
+   "consumer": "alsenan_v3_structure.column_rebar",
+   "fields_read": [
+    "FOU.W",
+    "FOU.H",
+    "FOU.R",
+    "FOU.D",
+    "GR.W",
+    "GR.H",
+    "GR.R",
+    "GR.D",
+    "1ST.W",
+    "1ST.H",
+    "1ST.R",
+    "1ST.D",
+    "2ND.W",
+    "2ND.H",
+    "2ND.R",
+    "2ND.D"
+   ],
+   "fields_not_relevant": [
+    "LOAD"
+   ],
+   "reason": "sections and bars per storey band consumed (matches p.9)",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "column occurrences of type C5",
+   "defect": null
+  },
+  {
+   "object": "COLUMN C6",
+   "state": "CONSUMED_COMPLETE",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF COLUMNS",
+   "bbox_anchor": [
+    155848.1,
+    14500.4
+   ],
+   "dxf_handle": "1D96",
+   "block": "CGT",
+   "row_ids": [
+    "C6"
+   ],
+   "parser": "alsenan_phase_a3 column library",
+   "consumer": "alsenan_v3_structure.column_rebar",
+   "fields_read": [
+    "FOU.W",
+    "FOU.H",
+    "FOU.R",
+    "FOU.D",
+    "GR.W",
+    "GR.H",
+    "GR.R",
+    "GR.D",
+    "1ST.W",
+    "1ST.H",
+    "1ST.R",
+    "1ST.D",
+    "2ND.W",
+    "2ND.H",
+    "2ND.R",
+    "2ND.D"
+   ],
+   "fields_not_relevant": [
+    "LOAD"
+   ],
+   "reason": "sections and bars per storey band consumed (matches p.9)",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "column occurrences of type C6",
+   "defect": null
+  },
+  {
+   "object": "COLUMN C7",
+   "state": "CONSUMED_COMPLETE",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF COLUMNS",
+   "bbox_anchor": [
+    155848.1,
+    13979.3
+   ],
+   "dxf_handle": "1DAA",
+   "block": "CGT",
+   "row_ids": [
+    "C7"
+   ],
+   "parser": "alsenan_phase_a3 column library",
+   "consumer": "alsenan_v3_structure.column_rebar",
+   "fields_read": [
+    "FOU.W",
+    "FOU.H",
+    "FOU.R",
+    "FOU.D",
+    "GR.W",
+    "GR.H",
+    "GR.R",
+    "GR.D",
+    "1ST.W",
+    "1ST.H",
+    "1ST.R",
+    "1ST.D",
+    "2ND.W",
+    "2ND.H",
+    "2ND.R",
+    "2ND.D"
+   ],
+   "fields_not_relevant": [
+    "LOAD"
+   ],
+   "reason": "sections and bars per storey band consumed (matches p.9)",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "column occurrences of type C7",
+   "defect": null
+  },
+  {
+   "object": "COLUMN C8",
+   "state": "CONSUMED_COMPLETE",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF COLUMNS",
+   "bbox_anchor": [
+    155848.1,
+    13458.1
+   ],
+   "dxf_handle": "1DBE",
+   "block": "CGT",
+   "row_ids": [
+    "C8"
+   ],
+   "parser": "alsenan_phase_a3 column library",
+   "consumer": "alsenan_v3_structure.column_rebar",
+   "fields_read": [
+    "FOU.W",
+    "FOU.H",
+    "FOU.R",
+    "FOU.D",
+    "GR.W",
+    "GR.H",
+    "GR.R",
+    "GR.D",
+    "1ST.W",
+    "1ST.H",
+    "1ST.R",
+    "1ST.D",
+    "2ND.W",
+    "2ND.H",
+    "2ND.R",
+    "2ND.D"
+   ],
+   "fields_not_relevant": [
+    "LOAD"
+   ],
+   "reason": "sections and bars per storey band consumed (matches p.9)",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "column occurrences of type C8",
+   "defect": null
+  },
+  {
+   "object": "COLUMN C9",
+   "state": "CONSUMED_COMPLETE",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF COLUMNS",
+   "bbox_anchor": [
+    155848.1,
+    12937.0
+   ],
+   "dxf_handle": "1DD2",
+   "block": "CGT",
+   "row_ids": [
+    "C9"
+   ],
+   "parser": "alsenan_phase_a3 column library",
+   "consumer": "alsenan_v3_structure.column_rebar",
+   "fields_read": [
+    "FOU.W",
+    "FOU.H",
+    "FOU.R",
+    "FOU.D",
+    "GR.W",
+    "GR.H",
+    "GR.R",
+    "GR.D",
+    "1ST.W",
+    "1ST.H",
+    "1ST.R",
+    "1ST.D",
+    "2ND.W",
+    "2ND.H",
+    "2ND.R",
+    "2ND.D"
+   ],
+   "fields_not_relevant": [
+    "LOAD"
+   ],
+   "reason": "sections and bars per storey band consumed (matches p.9)",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "column occurrences of type C9",
+   "defect": null
+  },
+  {
+   "object": "COLUMN C10",
+   "state": "CONSUMED_COMPLETE",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF COLUMNS",
+   "bbox_anchor": [
+    155848.1,
+    12415.9
+   ],
+   "dxf_handle": "1DE6",
+   "block": "CGT",
+   "row_ids": [
+    "C10"
+   ],
+   "parser": "alsenan_phase_a3 column library",
+   "consumer": "alsenan_v3_structure.column_rebar",
+   "fields_read": [
+    "FOU.W",
+    "FOU.H",
+    "FOU.R",
+    "FOU.D",
+    "GR.W",
+    "GR.H",
+    "GR.R",
+    "GR.D",
+    "1ST.W",
+    "1ST.H",
+    "1ST.R",
+    "1ST.D",
+    "2ND.W",
+    "2ND.H",
+    "2ND.R",
+    "2ND.D"
+   ],
+   "fields_not_relevant": [
+    "LOAD"
+   ],
+   "reason": "sections and bars per storey band consumed (matches p.9)",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "column occurrences of type C10",
+   "defect": null
+  },
+  {
+   "object": "COLUMN C11",
+   "state": "CONSUMED_COMPLETE",
+   "source_file": "ST7757.dxf",
+   "page": 9,
+   "title": "SCHEDULE OF COLUMNS",
+   "bbox_anchor": [
+    155848.1,
+    11894.8
+   ],
+   "dxf_handle": "1DFA",
+   "block": "CGT",
+   "row_ids": [
+    "C11"
+   ],
+   "parser": "alsenan_phase_a3 column library",
+   "consumer": "alsenan_v3_structure.column_rebar",
+   "fields_read": [
+    "FOU.W",
+    "FOU.H",
+    "FOU.R",
+    "FOU.D",
+    "GR.W",
+    "GR.H",
+    "GR.R",
+    "GR.D",
+    "1ST.W",
+    "1ST.H",
+    "1ST.R",
+    "1ST.D",
+    "2ND.W",
+    "2ND.H",
+    "2ND.R",
+    "2ND.D"
+   ],
+   "fields_not_relevant": [
+    "LOAD"
+   ],
+   "reason": "sections and bars per storey band consumed (matches p.9)",
+   "provenance": "DXF ATTRIB values",
+   "affected_population": "column occurrences of type C11",
+   "defect": null
+  },
+  {
+   "object": "TEXT 'P.C 20x70'",
+   "state": "UNREAD",
+   "source_file": "ST7757.dxf",
+   "layer": "S-TEXT-SLAB",
+   "occurrences": 1,
+   "page": 4,
+   "title": "loose drawing text",
+   "parser": null,
+   "consumer": null,
+   "reason": "planted column (on slab) - no consumer; no concrete, no rebar, no BLOCKED row",
+   "provenance": "DXF TEXT",
+   "affected_population": "planted column (on slab) - no consumer; no concrete, no rebar, no BLOCKED row",
+   "defect": "SD-13"
+  },
+  {
+   "object": "TEXT 'P.C 20x50'",
+   "state": "UNREAD",
+   "source_file": "ST7757.dxf",
+   "layer": "S-TEXT-SLAB",
+   "occurrences": 2,
+   "page": 4,
+   "title": "loose drawing text",
+   "parser": null,
+   "consumer": null,
+   "reason": "planted column x2 - no consumer",
+   "provenance": "DXF TEXT",
+   "affected_population": "planted column x2 - no consumer",
+   "defect": "SD-13"
+  },
+  {
+   "object": "TEXT '10%%C16'",
+   "state": "UNREAD",
+   "source_file": "ST7757.dxf",
+   "layer": "S-TEXT-SLAB",
+   "occurrences": 1,
+   "page": 4,
+   "title": "loose drawing text",
+   "parser": null,
+   "consumer": null,
+   "reason": "planted-column bars (P.C 20x70)",
+   "provenance": "DXF TEXT",
+   "affected_population": "planted-column bars (P.C 20x70)",
+   "defect": "SD-13"
+  },
+  {
+   "object": "TEXT '8%%C16'",
+   "state": "UNREAD",
+   "source_file": "ST7757.dxf",
+   "layer": "S-TEXT-SLAB",
+   "occurrences": 2,
+   "page": 4,
+   "title": "loose drawing text",
+   "parser": null,
+   "consumer": null,
+   "reason": "planted-column bars (P.C 20x50)",
+   "provenance": "DXF TEXT",
+   "affected_population": "planted-column bars (P.C 20x50)",
+   "defect": "SD-13"
+  },
+  {
+   "object": "TEXT '(T&B)'",
+   "state": "UNREAD",
+   "source_file": "ST7757.dxf",
+   "layer": "S-TEXT-SLAB",
+   "occurrences": 4,
+   "page": 6,
+   "title": "loose drawing text",
+   "parser": null,
+   "consumer": null,
+   "reason": "top-and-bottom qualifier on 2F slab bars - the slab binder reads the bar text, not the qualifier (layer count unproved)",
+   "provenance": "DXF TEXT",
+   "affected_population": "top-and-bottom qualifier on 2F slab bars - the slab binder reads the bar text, not the qualifier (layer count unproved)",
+   "defect": "SD-14"
+  },
+  {
+   "object": "TEXT '11%%C18'",
+   "state": "UNREAD",
+   "source_file": "ST7757.dxf",
+   "layer": "S-TEXT-SLAB",
+   "occurrences": 4,
+   "page": 5,
+   "title": "loose drawing text",
+   "parser": null,
+   "consumer": null,
+   "reason": "section B-B bars (p.5) - not bound to any member",
+   "provenance": "DXF TEXT",
+   "affected_population": "section B-B bars (p.5) - not bound to any member",
+   "defect": "SD-15"
+  },
+  {
+   "object": "TEXT '3%%C18'",
+   "state": "UNREAD",
+   "source_file": "ST7757.dxf",
+   "layer": "S-TEXT-SLAB",
+   "occurrences": 2,
+   "page": 5,
+   "title": "loose drawing text",
+   "parser": null,
+   "consumer": null,
+   "reason": "section B-B bars (p.5)",
+   "provenance": "DXF TEXT",
+   "affected_population": "section B-B bars (p.5)",
+   "defect": "SD-15"
+  },
+  {
+   "object": "TEXT '2%%C12/30cm'",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "layer": "S-TEXT.SCH",
+   "occurrences": 19,
+   "page": 10,
+   "title": "loose drawing text",
+   "parser": "see reason",
+   "consumer": "see reason",
+   "reason": "simple-beam REMARKS side bars (see BEAM rows)",
+   "provenance": "DXF TEXT",
+   "affected_population": "simple-beam REMARKS side bars (see BEAM rows)",
+   "defect": "SD-11"
+  },
+  {
+   "object": "TEXT '2%%C16/20cm'",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "layer": "S-TEXT.SCH",
+   "occurrences": 3,
+   "page": 10,
+   "title": "loose drawing text",
+   "parser": "see reason",
+   "consumer": "see reason",
+   "reason": "simple-beam REMARKS side bars",
+   "provenance": "DXF TEXT",
+   "affected_population": "simple-beam REMARKS side bars",
+   "defect": "SD-11"
+  },
+  {
+   "object": "TEXT '2%%C14/20cm'",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.dxf",
+   "layer": "S-TEXT.SCH",
+   "occurrences": 1,
+   "page": 10,
+   "title": "loose drawing text",
+   "parser": "see reason",
+   "consumer": "see reason",
+   "reason": "simple-beam REMARKS side bars",
+   "provenance": "DXF TEXT",
+   "affected_population": "simple-beam REMARKS side bars",
+   "defect": "SD-11"
+  },
+  {
+   "object": "TEXT '2%%C12'",
+   "state": "UNREAD",
+   "source_file": "ST7757.dxf",
+   "layer": "S-TEXT.SCH",
+   "occurrences": 7,
+   "page": 11,
+   "title": "loose drawing text",
+   "parser": null,
+   "consumer": null,
+   "reason": "continuous-beam side bars (CB schedules, split text '2Ø12' + '30cm')",
+   "provenance": "DXF TEXT",
+   "affected_population": "continuous-beam side bars (CB schedules, split text '2Ø12' + '30cm')",
+   "defect": "D1"
+  },
+  {
+   "object": "TEXT '*  ST. OF COLUMN- 6%%C8/m'",
+   "state": "CONSUMED_COMPLETE",
+   "source_file": "ST7757.dxf",
+   "layer": "S-TEXT.D",
+   "occurrences": 1,
+   "page": 9,
+   "title": "loose drawing text",
+   "parser": "see reason",
+   "consumer": "see reason",
+   "reason": "column ties 6Ø8/m",
+   "provenance": "DXF TEXT",
+   "affected_population": "column ties 6Ø8/m",
+   "defect": null
+  },
+  {
+   "object": "p.3 slab on grade 5Ø10/m E.W., T = 10 cm",
+   "state": "CONSUMED_COMPLETE",
+   "source_file": "ST7757.pdf",
+   "page": 3,
+   "title": "p.3 slab on grade 5Ø10/m E.W., T = 10 cm",
+   "parser": "manual / V3b lane",
+   "consumer": "see reason",
+   "reason": "ground slab mesh (alsenan_v3_structure ground)",
+   "provenance": "PDF page (vector or raster)",
+   "affected_population": "ground slab mesh (alsenan_v3_structure ground)",
+   "defect": null
+  },
+  {
+   "object": "p.7 pool + dome details",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.pdf",
+   "page": 7,
+   "title": "p.7 pool + dome details",
+   "parser": "manual / V3b lane",
+   "consumer": "see reason",
+   "reason": "V3b pool / dome populations (DERIVED + provisional)",
+   "provenance": "PDF page (vector or raster)",
+   "affected_population": "V3b pool / dome populations (DERIVED + provisional)",
+   "defect": null
+  },
+  {
+   "object": "p.8 RECOMMENDATIONS notes 1-24 (raster image)",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.pdf",
+   "page": 8,
+   "title": "p.8 RECOMMENDATIONS notes 1-24 (raster image)",
+   "parser": "manual / V3b lane",
+   "consumer": "see reason",
+   "reason": "note 21 (side bars by width) read by hand; the rest unread - raster",
+   "provenance": "PDF page (vector or raster)",
+   "affected_population": "note 21 (side bars by width) read by hand; the rest unread - raster",
+   "defect": "SD-16"
+  },
+  {
+   "object": "p.13 lintel detail + schedule",
+   "state": "CONSUMED_COMPLETE",
+   "source_file": "ST7757.pdf",
+   "page": 13,
+   "title": "p.13 lintel detail + schedule",
+   "parser": "manual / V3b lane",
+   "consumer": "see reason",
+   "reason": "lintel bars by width",
+   "provenance": "PDF page (vector or raster)",
+   "affected_population": "lintel bars by width",
+   "defect": null
+  },
+  {
+   "object": "p.13 ground beam sections",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.pdf",
+   "page": 13,
+   "title": "p.13 ground beam sections",
+   "parser": "manual / V3b lane",
+   "consumer": "see reason",
+   "reason": "ground-beam bars consumed; hooks BLOCKED_DETAILING",
+   "provenance": "PDF page (vector or raster)",
+   "affected_population": "ground-beam bars consumed; hooks BLOCKED_DETAILING",
+   "defect": null
+  },
+  {
+   "object": "p.14 lift with isolated footing",
+   "state": "UNREAD",
+   "source_file": "ST7757.pdf",
+   "page": 14,
+   "title": "p.14 lift with isolated footing",
+   "parser": null,
+   "consumer": null,
+   "reason": "lift pit / FF footing detail - no consumer",
+   "provenance": "PDF page (vector or raster)",
+   "affected_population": "lift pit / FF footing detail - no consumer",
+   "defect": "D3"
+  },
+  {
+   "object": "p.14 boundary wall, parapets",
+   "state": "CONSUMED_PARTIAL",
+   "source_file": "ST7757.pdf",
+   "page": 14,
+   "title": "p.14 boundary wall, parapets",
+   "parser": "manual / V3b lane",
+   "consumer": "see reason",
+   "reason": "V3b BOUNDARY_WALL provisional",
+   "provenance": "PDF page (vector or raster)",
+   "affected_population": "V3b BOUNDARY_WALL provisional",
+   "defect": null
+  },
+  {
+   "object": "p.15 temperature reinforcement schedule",
+   "state": "UNREAD",
+   "source_file": "ST7757.pdf",
+   "page": 15,
+   "title": "p.15 temperature reinforcement schedule",
+   "parser": null,
+   "consumer": null,
+   "reason": "no consumer; slab top steel population unknown",
+   "provenance": "PDF page (vector or raster)",
+   "affected_population": "no consumer; slab top steel population unknown",
+   "defect": "SD-16"
+  },
+  {
+   "object": "p.15 twisted column / beam in casement / slab on beams",
+   "state": "NOT_RELEVANT",
+   "source_file": "ST7757.pdf",
+   "page": 15,
+   "title": "p.15 twisted column / beam in casement / slab on beams",
+   "parser": null,
+   "consumer": null,
+   "reason": "typical details; no tagged occurrence found on the plans (unproved - see owner question Q-S5)",
+   "provenance": "PDF page (vector or raster)",
+   "affected_population": "typical details; no tagged occurrence found on the plans (unproved - see owner question Q-S5)",
+   "defect": null
+  },
+  {
+   "object": "p.15 planted column detail",
+   "state": "UNREAD",
+   "source_file": "ST7757.pdf",
+   "page": 15,
+   "title": "p.15 planted column detail",
+   "parser": null,
+   "consumer": null,
+   "reason": "planted columns P.C on p.4 have no consumer",
+   "provenance": "PDF page (vector or raster)",
+   "affected_population": "planted columns P.C on p.4 have no consumer",
+   "defect": "SD-13"
+  },
+  {
+   "object": "p.16 stair beam + stair steel layout (8Ø16/m, 6Ø14/m, Ø12/20 ...)",
+   "state": "UNREAD",
+   "source_file": "ST7757.pdf",
+   "page": 16,
+   "title": "p.16 stair beam + stair steel layout (8Ø16/m, 6Ø14/m, Ø12/20 ...)",
+   "parser": null,
+   "consumer": null,
+   "reason": "V3b STAIRS rebar BLOCKED 'no callout bound' although the typical layout is printed",
+   "provenance": "PDF page (vector or raster)",
+   "affected_population": "V3b STAIRS rebar BLOCKED 'no callout bound' although the typical layout is printed",
+   "defect": "SD-17"
+  },
+  {
+   "object": "p.16 opening in beam, ribs / torsion",
+   "state": "NOT_RELEVANT",
+   "source_file": "ST7757.pdf",
+   "page": 16,
+   "title": "p.16 opening in beam, ribs / torsion",
+   "parser": null,
+   "consumer": null,
+   "reason": "typical details",
+   "provenance": "PDF page (vector or raster)",
+   "affected_population": "typical details",
+   "defect": null
+  }
+ ],
+ "rule": "every schedule block, every reinforcement text and every structural PDF page has exactly one state; UNREAD / CONSUMED_PARTIAL / SOURCE_CONFLICT name the defect that leaves it so"
+}

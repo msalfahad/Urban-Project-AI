@@ -1,0 +1,83 @@
+{
+ "baseline": "974bff2",
+ "code": {
+  "engine/source/delta_release.py": "7b0f72a6f5138b3e0f8515c80a42a38a2cfc035c8fb4c138aa64a4fd5c9708b9",
+  "engine/source/lintel_release_audit.py": "54b29015096888bf30066b33f69ec5ff81a60311c40a9badb6a137188cc1de9c",
+  "engine/source/rebar_unit_mass.py": "81d63a85da8e64600d0c49a6662bcc49655f46dc71603654b3e1438c5b146eb8",
+  "research/alsenan_lintels_s8_6a/build_s8_6a.py": "f424bf613484f4b0597afd3bf76a98f76728ed70551d9d7a7a52076ce472f325",
+  "research/external_engine_lab/alsenan_structural_s1.py": "e3ecd25490cd433540e317454ffdbaadf17c19799f49eb1df9afcb928aa494cb"
+ },
+ "corrected": {
+  "by_floor": {
+   "1F": {
+    "kg_by_dia": {
+     "10": 8.024691358,
+     "12": 15.2,
+     "14": 4.960493827,
+     "8": 8.32
+    },
+    "m3": 0.264
+   },
+   "2F": {
+    "kg_by_dia": {
+     "10": 0.0,
+     "12": 0.0,
+     "14": 0.0,
+     "8": 0.0
+    },
+    "m3": 0.0
+   },
+   "GF": {
+    "kg_by_dia": {
+     "10": 4.074074074,
+     "12": 5.866666667,
+     "14": 0.0,
+     "8": 3.143111111
+    },
+    "m3": 0.102
+   }
+  },
+  "kg": 49.589037037,
+  "lintels": 7,
+  "m3": 0.366
+ },
+ "corrects": "research/alsenan_lintels_s8_6 (frozen; unchanged)",
+ "date": "2026-10-10",
+ "drawing_sha256": {
+  "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+  "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+ },
+ "engine_commit_stamp": "974bff2+code:34d3aace68075085",
+ "inputs": {
+  "research/alsenan_lintels_s8_6/01_OPENING_CENSUS.csv": "afd7f5ee31d4110affedb1d85fc7d6a4aecad9f528ffd89278c46f543d4c25bc",
+  "research/alsenan_lintels_s8_6/02_LINTEL_SCHEDULE_TRANSCRIPTION.csv": "5d5baf166700d1d5968c5420f37118ae27836f61a2eeae88ed658f40e25936d7",
+  "research/alsenan_lintels_s8_6/03_ARCH_STRUCTURAL_REGISTRATION.csv": "c940b3aee459ee06381ef033bf8511a2a474b740528846838fb05343ef3b03eb",
+  "research/alsenan_lintels_s8_6/04_OPENING_LINTEL_BINDING_MATRIX.csv": "9d5f8465c96928052be12a0460a8006d78eb48a5a0e613e11f73986487e9e921",
+  "research/alsenan_lintels_s8_6/05_BEAM_OVERLAP_AUDIT.csv": "a9328469970d81e105a893d983f646ec13e9b652e278ae35f23b9a2771b7b299",
+  "research/alsenan_lintels_s8_6/06_LINTEL_CONCRETE_QTO.csv": "df0c4766c758523357d6c8685f602357857717b5db46d8a913950103de493eb6",
+  "research/alsenan_lintels_s8_6/07_LINTEL_REBAR_QTO.csv": "a3490d6f9b2bb180c172baa6c615edcdb69f15d45cacbf78cc34b45fb13378f5",
+  "research/alsenan_lintels_s8_6/14_S8_6_SUMMARY.json": "9961269aee9fd8a3ea0889e022033a8b5f3eeac4a17d5b424039d800a26fc459",
+  "research/alsenan_lintels_s8_6/15_S8_6_FREEZE_MANIFEST.json": "9861d791de738722ce53907894c1ff7691923c007411021eb092a2c58616ba9e",
+  "research/alsenan_lintels_s8_6/post_freeze/01_POST_FREEZE_COMPARISON.csv": "75f745bc3558e7ec2190c2f43443d95b09621bf02a08d8b1f8f5438c64a80851",
+  "research/alsenan_structural_census_s1/STRUCTURAL_PROJECT_RULE_REGISTER.json": "3268bce3ef31c21ee93b0d7f9ab9b50195e0d0ae659699422c6927abcdf528d2"
+ },
+ "outputs": {
+  "00_README.md": "f3d59f9e65b41ea93e4b9bee772e8da35fe48749f61f6026ad10a719dd81f00c",
+  "01_RELEASE_AUTHORITY_REGISTER.csv": "338f1ccc65e2f7926dab20d2b94d53c844561c1373e2a7b22330cda0e535f0d7",
+  "02_SIX_CASE_INVESTIGATION.csv": "1f57bc61203d1f1a570e1efff3668ac105ec1f6a0d5f6014793d40590f998f7c",
+  "03_BEARING_AND_COLUMN_CONNECTION_AUDIT.csv": "d7d742cb20e962aa1899bb94c247960662ff29d69e396720ce853472f76c9b76",
+  "04_COVER_AND_STIRRUP_AUTHORITY.csv": "4bc3a9650206812d3d49ae8e2374196d4e5bc81c8a1e2a557b9d13fb944a0604",
+  "05_CORRECTED_ELIGIBLE_RELEASE_VIEW.csv": "45681fa409d629c23083624e19d76d390dbee5d9ae558d65976e109f2d99575d",
+  "06_CONCRETE_OWNERSHIP_AND_OVERLAP.csv": "6916b6ccf1063cd35f8260d84115f83aaa344b4e61037e8f23d5c2df2950cdae",
+  "07_REINFORCEMENT_RECLASSIFICATION.csv": "11c8473dcdf706e0d5c7354014f2630c02c86061564c2e1b34a345eae30d36df",
+  "08_OPENING_CENSUS_VERIFICATION.csv": "a1cbf5fbf8992048cf078d4d4e38f46bda633cd1fa22ad4120b833e20fbf7672",
+  "09_QUANTITY_RECONCILIATION.csv": "b49165a9f6ec1ac88be1ae1f4905e37f661b1a7113014cd6802351256ead028b",
+  "10_PREVIOUS_FREEZE_VERIFICATION.csv": "0d67bf587bb41f06e88da29d45b6d5c4f9d3f016b89ec86de3e3714715fd1db7",
+  "11_S8_6A_SUMMARY.json": "003449622c4aa8618e1ccd33d87028dbc190aa1eede582116a4903346ecd541d"
+ },
+ "references_read": [],
+ "round": "S8_6A",
+ "rule": "the frozen S8.6 figures stay as history; this layer changes lanes only, with a reason for each, and never selects a quantity from a post-freeze reference",
+ "s8_6_manifest_sha256": "9861d791de738722ce53907894c1ff7691923c007411021eb092a2c58616ba9e",
+ "state": "DATED_CORRECTION_LAYER"
+}

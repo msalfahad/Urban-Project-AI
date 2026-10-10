@@ -1,0 +1,125 @@
+{
+ "authority": "URBAN_OWNER_DECISION (AD2 + PRE-S7.1 brief)",
+ "baseline_head": "9f89ab6",
+ "decision_set": "AD2",
+ "decisions": [
+  {
+   "brief_section": "§1",
+   "decision": "Three lanes: SOURCE_DERIVED_PHYSICAL, PROJECT_BASIS_QTO, BLOCKED_UNQUANTIFIED. PROJECT_BASIS_QTO is never VERIFIED_PHYSICAL or AS_BUILT.",
+   "id": "AD2-D01",
+   "name": "QUANTITY_AUTHORITY_LANES"
+  },
+  {
+   "brief_section": "§2",
+   "decision": "N bars/m over W m = N x W equivalent bars, unrounded, no +1, no ceil / floor. PHYSICAL_BBS_BAR_COUNT stays UNRESOLVED unless a project-source count convention exists.",
+   "id": "AD2-D02",
+   "name": "RATE_DENSITY_QTO"
+  },
+  {
+   "brief_section": "§3",
+   "decision": "'NØD' without '/m' is EXPLICIT_COUNT only when bound to a discrete bar group / support-bar graphic / finite reinforcement object. A clear count may release with its length blocked.",
+   "id": "AD2-D03",
+   "name": "EXPLICIT_COUNT_BINDING"
+  },
+  {
+   "brief_section": "§4",
+   "decision": "A source-stated 50% continue / 50% stop is an exact 0.5 / 0.5 density split for QTO. Which physical bars stop (and an odd count) stays a BBS question.",
+   "id": "AD2-D04",
+   "name": "FIFTY_PERCENT_DENSITY_SPLIT"
+  },
+  {
+   "brief_section": "§5",
+   "decision": "Rules are compared by bar-role identity first. Different families coexist; the same family takes LOCAL / FLOOR-SPECIFIC PLAN NOTE > GENERIC TYPICAL DETAIL, never summed; the loser is OVERRIDDEN_PROJECT_SOURCE. Unresolved identity blocks that top family only.",
+   "id": "AD2-D05",
+   "name": "BAR_ROLE_IDENTITY_FIRST"
+  },
+  {
+   "brief_section": "§6",
+   "decision": "Where plan note 2 governs and its origin is not explicit: URBAN_QTO_TOP_OVER_SUPPORT_EXTENT_V1 = 1/3 x CLEAR_SPAN from the SUPPORT FACE into the panel, authority URBAN_OWNER_MEASUREMENT_RULE (not PROJECT_SOURCE_EXPLICIT).",
+   "id": "AD2-D06",
+   "name": "ONE_THIRD_SPAN_BASIS"
+  },
+  {
+   "brief_section": "§7",
+   "decision": "160 mm (and 180 mm): TABLE_NO_EXACT_ROW, BLOCKED_UNQUANTIFIED. A blocked temperature component blocks nothing else.",
+   "id": "AD2-D07",
+   "name": "TEMPERATURE_NO_INTERPOLATION"
+  },
+  {
+   "brief_section": "§8",
+   "decision": "The two water-tank panels and their T 18 / local reinforcement go to S8_SPECIAL_STRUCTURE / WATER_TANK_SUPPORT_REGION (ownership transfer, nothing lost).",
+   "id": "AD2-D08",
+   "name": "WATER_TANK_TO_S8"
+  },
+  {
+   "brief_section": "§9",
+   "decision": "The light-well / void + stair + T 16 + 8Ø16/m face goes to S8_SPECIAL_STRUCTURE / STAIR_LIGHTWELL_REGION with SOURCE_CONFLICT_PRESERVED.",
+   "id": "AD2-D09",
+   "name": "LIGHTWELL_TO_S8"
+  },
+  {
+   "brief_section": "§10",
+   "decision": "Different callouts across a continuous support: LEFT_PANEL_BAR_RUN and RIGHT_PANEL_BAR_RUN to the support face; continuation / lap / splice / development / transition blocked. Nothing chosen by majority, size, rate or nearest value.",
+   "id": "AD2-D10",
+   "name": "MISMATCH_SPLIT"
+  },
+  {
+   "brief_section": "§11",
+   "decision": "A local '/Top' callout bound to a support overrides the general top rule for the same role at that location (LOCAL_SOURCE_OVERRIDE / GENERAL_RULE_SUPERSEDED_FOR_ROLE); not additive without evidence of a second family.",
+   "id": "AD2-D11",
+   "name": "LOCAL_TOP_OVERRIDE"
+  },
+  {
+   "brief_section": "§12",
+   "decision": "A sunken panel keeps its normal mesh in S7; SUNKEN_STEP_VERTICAL_REBAR, SUNKEN_EDGE_EXTRA and LEVEL_CHANGE_DETAIL are separate and blocked unless specified.",
+   "id": "AD2-D12",
+   "name": "SUNKEN_MESH_RETAINED"
+  },
+  {
+   "brief_section": "§13",
+   "decision": "The dense hatch is classified by geometry, not by the hatch: outside the perimeter and attached along one support -> CANTILEVER_CANDIDATE; a strip filling a support band -> BEARING_WALL_CANDIDATE; otherwise CLASSIFICATION_BLOCKED.",
+   "id": "AD2-D13",
+   "name": "DENSE_HATCH_BY_GEOMETRY"
+  },
+  {
+   "brief_section": "§14",
+   "decision": "Irregular panels are measured by local bar lines: strips per bar direction, clipped to support faces and openings; the local clear run (and the local L of a span rule) is URBAN_QTO_LOCAL_BAR_LINE_V1. No bounding rectangle.",
+   "id": "AD2-D14",
+   "name": "LOCAL_BAR_LINE_MODEL"
+  },
+  {
+   "brief_section": "§15",
+   "decision": "No structural slab beyond (outside, void, open to below, no slab) -> NON_CONTINUOUS; a physical slab beyond that is blocked / special / transferred / at another level / over a non-beam support -> CONTINUITY_UNRESOLVED. Excluded ownership is not physical absence.",
+   "id": "AD2-D15",
+   "name": "PHYSICAL_CONTINUITY"
+  },
+  {
+   "brief_section": "§16",
+   "decision": "'40 CL.' and any callout whose binding is not proven stay unresolved; no quantity depends on them; nothing is read from graphic scale.",
+   "id": "AD2-D16",
+   "name": "AMBIGUOUS_CALLOUTS_UNRESOLVED"
+  },
+  {
+   "brief_section": "§17",
+   "decision": "25 mm is MINIMUM_PROJECT_COVER (D1.2). Any quantity using it as a number is PROJECT_BASIS_QTO, never SOURCE_EXACT or AS_BUILT.",
+   "id": "AD2-D17",
+   "name": "MINIMUM_COVER_IS_PROJECT_BASIS"
+  }
+ ],
+ "frozen_pre_s7": "fb3a1c62a8e525b663853d03d43e067f1839026aea149399491bd4cf98f0ad09",
+ "lanes": [
+  "SOURCE_DERIVED_PHYSICAL",
+  "PROJECT_BASIS_QTO",
+  "BLOCKED_UNQUANTIFIED"
+ ],
+ "never": [
+  "VERIFIED_PHYSICAL",
+  "AS_BUILT",
+  "SOURCE_EXACT"
+ ],
+ "no_kg": true,
+ "urban_rules": {
+  "URBAN_QTO_LOCAL_BAR_LINE_V1": "local clear run along each bar line; local L for span rules on irregular panels (AD2-D14)",
+  "URBAN_QTO_TOP_OVER_SUPPORT_EXTENT_V1": "1/3 x local clear span from the support face into the panel (AD2-D06)"
+ }
+}

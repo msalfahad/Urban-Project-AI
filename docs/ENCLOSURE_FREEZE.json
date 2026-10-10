@@ -1,0 +1,32 @@
+{
+ "ALGORITHM": "SUPPORTED_LINE_ARRANGEMENT_FLOOD_FILL_V1",
+ "ALGORITHM_FREEZE_HASH": "01ff128e7ffdab820805dce1",
+ "frozen_parameters": {
+  "NEIGHBOURHOOD_MARGIN_MM": {
+   "value": 1000.0,
+   "why": "a room's wall lies outside its free-space region by at most the wall's thickness. 1 m covers any wall a drawing of this kind carries, with room to spare"
+  },
+  "COLLINEAR_JOIN_MM": {
+   "value": 1.0,
+   "why": "two collinear pieces closer than this are one line interrupted by plotting noise. Two orders of magnitude above the measured coordinate-noise floor and above the 0.05 mm snap grid"
+  },
+  "JUNCTION_REACH_MM": {
+   "value": 2.0,
+   "why": "the only tolerance that can CLOSE anything, so it is deliberately tight: a hairline plotting gap at a junction, never a missing wall or a doorway"
+  },
+  "MIN_CELL_MM": {
+   "value": 1.0,
+   "why": "below this an arrangement cell is a sliver"
+  },
+  "MIN_ENCLOSURE_M2": {
+   "value": 0.05,
+   "why": "below this a filled area is not a space"
+  },
+  "how_these_were_set": "from geometry and from the drawing medium's measured noise floor, on synthetic fixtures, BEFORE any real drawing was evaluated. None may be changed because a real drawing scores better unless the same change is justified synthetically"
+ },
+ "synthetic_fixtures": 14,
+ "synthetic_passed": 14,
+ "refusals_delivered": "4/4",
+ "raster_contour_error_total_m2": 11.518,
+ "frozen_before": "ANY evaluation of AR-00 or any other real drawing"
+}

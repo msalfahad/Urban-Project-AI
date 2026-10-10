@@ -1,0 +1,152 @@
+{
+ "SCHEMA": "URBAN_R8_15_OPENING_REVEAL_REGISTER_V1",
+ "policy": {
+  "policy_id": "OPENING_REVEAL_POLICY_V2",
+  "surfaces": [
+   "LEFT_JAMB",
+   "RIGHT_JAMB",
+   "TOP_SOFFIT"
+  ],
+  "depth_basis": [
+   "SOURCE_PHYSICAL_DEPTH",
+   "METHOD_DEFAULT_FALLBACK",
+   "DEPTH_UNRESOLVED"
+  ],
+  "depth_rule": "a measured source depth always wins; a method default is fallback-only (else counterfactual)",
+  "head": [
+   "WITH_HEAD",
+   "FULL_HEIGHT",
+   "HEAD_NOT_ESTABLISHED"
+  ],
+  "never": [
+   "a soffit and a ceiling over one footprint",
+   "a jamb surface from a topology closure alone",
+   "a jamb counted as room wall face and as reveal",
+   "paint without authority",
+   "a head height transferred from another revision",
+   "a default depth over a measured one",
+   "a top soffit on a FULL_HEIGHT passage"
+  ],
+  "digest": "b497095c12ae3e5ef6c04dc4d0a5babdeb43f8dbba34072526f52728c83ff379"
+ },
+ "passages": {
+  "OP-997f14d12b8e9bc1": {
+   "head": "WITH_HEAD",
+   "surfaces": [
+    {
+     "surface": "LEFT_JAMB",
+     "opening": "OP-997f14d12b8e9bc1",
+     "depth_m": 0.19999999999989088,
+     "height_m": 2.2,
+     "height_basis": "WITH_HEAD: 2.20 m (owner passage fact)",
+     "depth_basis": "SOURCE_PHYSICAL_DEPTH",
+     "area_m2": 0.43999999999975997,
+     "area_at_default_depth_m2": 0.55,
+     "authority": "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1: H2430 REAL_WALL_END",
+     "finish": "PLASTER",
+     "trade": "PLASTER"
+    },
+    {
+     "surface": "RIGHT_JAMB",
+     "opening": "OP-997f14d12b8e9bc1",
+     "depth_m": 0.19999999999989088,
+     "height_m": 2.2,
+     "height_basis": "WITH_HEAD: 2.20 m (owner passage fact)",
+     "depth_basis": "SOURCE_PHYSICAL_DEPTH",
+     "area_m2": 0.43999999999975997,
+     "area_at_default_depth_m2": 0.55,
+     "authority": "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1: H2431 REAL_WALL_END",
+     "finish": "PLASTER",
+     "trade": "PLASTER"
+    },
+    {
+     "surface": "TOP_SOFFIT",
+     "opening": "OP-997f14d12b8e9bc1",
+     "width_m": 1.1964473101380282,
+     "depth_m": 0.19999999999989088,
+     "depth_basis": "SOURCE_PHYSICAL_DEPTH",
+     "height_m": 2.2,
+     "area_m2": 0.23928946204185486,
+     "footprint_m2": 0.23928946204185486,
+     "area_at_default_depth_m2": 0.29911182753450705,
+     "finish": "PLASTER",
+     "trade": "PLASTER",
+     "authority": [
+      "QORTUBA-NEW-OPEN-PASSAGE-REVEALS-PLASTERED-OWNER-001@v1",
+      "QORTUBA-NEW-OPEN-PASSAGE-SOFFIT-NOT-CEILING-OWNER-001@v1",
+      "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1"
+     ]
+    }
+   ],
+   "missing": [],
+   "ownership": {
+    "CEILING_EXCLUDES_M2": 0.23928946204185486,
+    "CEILING_STATE": "SOFFIT_FOOTPRINT_REMOVED",
+    "ROOM_WALL_FACE_LOSES": {
+     "width_m": 1.1964473101380282,
+     "height_m": 2.2,
+     "per_side_m2": 2.632184082303662,
+     "sides": 2
+    },
+    "PAINT": "NOT_AUTHORISED (a separate trade authority)"
+   },
+   "depth": {
+    "depth_m": 0.19999999999989088,
+    "basis": "SOURCE_PHYSICAL_DEPTH",
+    "default_m": 0.25,
+    "default_ref": "US-07 PLASTER_AND_PAINT_REVEALS_AT_0_25_M",
+    "default_used": false
+   }
+  },
+  "OP-9e0fd219ca5cd391": {
+   "head": "FULL_HEIGHT",
+   "surfaces": [
+    {
+     "surface": "LEFT_JAMB",
+     "opening": "OP-9e0fd219ca5cd391",
+     "depth_m": 0.15000000000101862,
+     "height_m": 3.0,
+     "height_basis": "FULL_HEIGHT -> the applicable wall height (US-17); QP-03 internal plaster height 3.00 m (Qortuba project value, not re-confirmed for this revision)",
+     "depth_basis": "SOURCE_PHYSICAL_DEPTH",
+     "area_m2": 0.45000000000305584,
+     "area_at_default_depth_m2": 0.75,
+     "authority": "source: drawn band-end cap (jamb face of WB-8549cc78e5a3af40); QORTUBA-NEW-MB-DRESS-PASSAGE-FULL-HEIGHT-OWNER-001@v1",
+     "finish": null,
+     "trade": null
+    }
+   ],
+   "missing": [
+    {
+     "surface": "RIGHT_JAMB",
+     "state": "ABUTS_CONTINUOUS_WALL_FACE (H518)"
+    },
+    {
+     "surface": "TOP_SOFFIT",
+     "state": "NO_HEAD_FULL_HEIGHT"
+    }
+   ],
+   "ownership": {
+    "CEILING_EXCLUDES_M2": 0.0,
+    "CEILING_STATE": "CEILING_CONTINUES",
+    "ROOM_WALL_FACE_LOSES": {
+     "width_m": 1.199999999999891,
+     "height_m": 3.0,
+     "per_side_m2": 3.599999999999673,
+     "sides": 2
+    },
+    "PAINT": "NOT_AUTHORISED (a separate trade authority)"
+   },
+   "depth": {
+    "depth_m": 0.15000000000101862,
+    "basis": "SOURCE_PHYSICAL_DEPTH",
+    "default_m": 0.25,
+    "default_ref": "US-07 PLASTER_AND_PAINT_REVEALS_AT_0_25_M",
+    "default_used": false
+   }
+  }
+ },
+ "paint": "NOT ASSUMED",
+ "plaster_quantity": "NOT PRODUCED (no wall face-set row; the reveal surfaces are recorded once for R8.16)",
+ "door_reveals": "not in this register (doors carry US-07 left / right / top reveals in the R8.16 face-set engine)",
+ "double_count_guard": "PASS"
+}

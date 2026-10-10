@@ -1,0 +1,1467 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_BBS_V3",
+ "policy": "REBAR_MODEL_V1",
+ "stock_m": 12.0,
+ "by_dia": {
+  "8": {
+   "stock_m": 12.0,
+   "pieces": 4148,
+   "purchased_bars": 447,
+   "purchased_m": 5364.0,
+   "used_m": 5328.02,
+   "reused_offcut_m": 4660.3,
+   "unused_offcut_m": 35.98,
+   "effective_waste_pct": 0.6708,
+   "longest_offcut_m": 7.0,
+   "kg_per_m": 0.395062,
+   "net_kg": 2104.89679,
+   "used_kg": 2104.89679,
+   "purchased_kg": 2119.111111,
+   "waste_kg": 14.214321
+  },
+  "10": {
+   "stock_m": 12.0,
+   "pieces": 1804,
+   "purchased_bars": 466,
+   "purchased_m": 5592.0,
+   "used_m": 5530.4575,
+   "reused_offcut_m": 3663.3833,
+   "unused_offcut_m": 61.5425,
+   "effective_waste_pct": 1.1005,
+   "longest_offcut_m": 1.3962,
+   "kg_per_m": 0.617284,
+   "net_kg": 3413.862654,
+   "used_kg": 3413.862654,
+   "purchased_kg": 3451.851852,
+   "waste_kg": 37.989198
+  },
+  "12": {
+   "stock_m": 12.0,
+   "pieces": 1168,
+   "purchased_bars": 256,
+   "purchased_m": 3072.0,
+   "used_m": 3030.729274,
+   "reused_offcut_m": 1917.173278,
+   "unused_offcut_m": 41.270726,
+   "effective_waste_pct": 1.3434,
+   "longest_offcut_m": 6.68,
+   "kg_per_m": 0.888889,
+   "net_kg": 2693.981641,
+   "used_kg": 2693.981577,
+   "purchased_kg": 2730.666667,
+   "waste_kg": 36.68509
+  },
+  "14": {
+   "stock_m": 12.0,
+   "pieces": 1203,
+   "purchased_bars": 317,
+   "purchased_m": 3804.0,
+   "used_m": 3733.563219,
+   "reused_offcut_m": 2464.645973,
+   "unused_offcut_m": 70.436781,
+   "effective_waste_pct": 1.8517,
+   "longest_offcut_m": 10.8,
+   "kg_per_m": 1.209877,
+   "net_kg": 4502.922413,
+   "used_kg": 4517.150561,
+   "purchased_kg": 4602.37037,
+   "waste_kg": 85.219809
+  },
+  "16": {
+   "stock_m": 12.0,
+   "pieces": 963,
+   "purchased_bars": 379,
+   "purchased_m": 4548.0,
+   "used_m": 4134.628961,
+   "reused_offcut_m": 2308.556966,
+   "unused_offcut_m": 413.371039,
+   "effective_waste_pct": 9.0891,
+   "longest_offcut_m": 7.244,
+   "kg_per_m": 1.580247,
+   "net_kg": 6097.080827,
+   "used_kg": 6533.734654,
+   "purchased_kg": 7186.962963,
+   "waste_kg": 653.228309
+  },
+  "18": {
+   "stock_m": 12.0,
+   "pieces": 239,
+   "purchased_bars": 106,
+   "purchased_m": 1272.0,
+   "used_m": 1202.523622,
+   "reused_offcut_m": 531.185988,
+   "unused_offcut_m": 69.476378,
+   "effective_waste_pct": 5.462,
+   "longest_offcut_m": 6.964,
+   "kg_per_m": 2.0,
+   "net_kg": 2382.367244,
+   "used_kg": 2405.047244,
+   "purchased_kg": 2544.0,
+   "waste_kg": 138.952756
+  }
+ },
+ "total": {
+  "net_kg": 21195.111569,
+  "used_kg": 21668.673481,
+  "purchased_kg": 22634.962963,
+  "waste_kg": 966.289482,
+  "waste_pct": 4.269013
+ },
+ "excluded": [
+  {
+   "comp_id": "POP:FOOTING:F#1|BOTTOM_SHORT",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:FOOTING:F#1|BOTTOM_LONG",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:FOOTING:FF#10|TOP_LEGS",
+   "state": "PROVISIONAL",
+   "population_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "comp_id": "POP:FOOTING:F10#19|BOTTOM_SHORT",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:FOOTING:F10#19|BOTTOM_LONG",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:STRAP:SB1:H6946|BOTTOM",
+   "state": "PARTIAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:STRAP:SB1:H6946|TOP",
+   "state": "PARTIAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:STRAP:SB1:H6946|STIRRUPS",
+   "state": "PARTIAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB1:H1249|CONTINUOUS_TOP|2|2752",
+   "state": "PROVISIONAL",
+   "population_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB1:H1249|SUPPORT_TOP|S1|2763",
+   "state": "PROVISIONAL",
+   "population_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB1:H1249|CONTINUOUS_TOP|1|2764",
+   "state": "PROVISIONAL",
+   "population_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB3:H1171|CONTINUOUS_TOP|3|203C",
+   "state": "PROVISIONAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB3:H1171|BOTTOM|3|203D",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB3:H1171|BOTTOM|1|2059",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB3:H1171|CONTINUOUS_TOP|1|2196",
+   "state": "PROVISIONAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB3:H1171|BOTTOM|2|219B",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB3:H1171|SUPPORT_TOP|S1|219C",
+   "state": "PROVISIONAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB3:H1171|STIRRUPS|S1",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB3:H1171|STIRRUPS|S2",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB3:H1171|STIRRUPS|S3",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB4:H1116|BOTTOM|1|28E7",
+   "state": "PARTIAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB4:H1116|BOTTOM|2|2906",
+   "state": "PARTIAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB4:H1116|CONTINUOUS_TOP|2|2907",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB4:H1116|SUPPORT_TOP|S1|290A",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB4:H1116|CONTINUOUS_TOP|1|290B",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB4:H1116|STIRRUPS|S1",
+   "state": "PARTIAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB4:H1116|STIRRUPS|S2",
+   "state": "PARTIAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB5:H1140|BOTTOM|1|2953",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB5:H1140|BOTTOM|2|2972",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB5:H1140|CONTINUOUS_TOP|2|2973",
+   "state": "PROVISIONAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB5:H1140|SUPPORT_TOP|S1|2976",
+   "state": "PROVISIONAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB5:H1140|CONTINUOUS_TOP|1|2977",
+   "state": "PROVISIONAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB5:H1140|STIRRUPS|S1",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB5:H1140|STIRRUPS|S2",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB6:H1148|BOTTOM|1|29B5",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB6:H1148|BOTTOM|2|29D4",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB6:H1148|CONTINUOUS_TOP|2|29D5",
+   "state": "PROVISIONAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB6:H1148|SUPPORT_TOP|S1|29D8",
+   "state": "PROVISIONAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB6:H1148|CONTINUOUS_TOP|1|29D9",
+   "state": "PROVISIONAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB6:H1148|STIRRUPS|S1",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB6:H1148|STIRRUPS|S2",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB7:H1145|CONTINUOUS_TOP|2|2093",
+   "state": "PROVISIONAL",
+   "population_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB7:H1145|SUPPORT_TOP|S1|20A4",
+   "state": "PROVISIONAL",
+   "population_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB7:H1145|CONTINUOUS_TOP|1|20A5",
+   "state": "PROVISIONAL",
+   "population_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB8:H1695|CONTINUOUS_TOP|3|24FD",
+   "state": "PROVISIONAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB8:H1695|BOTTOM|3|24FE",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB8:H1695|SUPPORT_TOP|S2|24FF",
+   "state": "PROVISIONAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB8:H1695|BOTTOM|1|2503",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB8:H1695|SPAN_TOP|1|2514",
+   "state": "PROVISIONAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB8:H1695|BOTTOM|2|2518",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB8:H1695|CONTINUOUS_TOP|2|2519",
+   "state": "PROVISIONAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB8:H1695|STIRRUPS|S1",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB8:H1695|STIRRUPS|S2",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:GF:CB8:H1695|STIRRUPS|S3",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:1F:CB9:H1734|CONTINUOUS_TOP|3|25A4",
+   "state": "PROVISIONAL",
+   "population_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "comp_id": "POP:CB:1F:CB9:H1734|SUPPORT_TOP|S2|25A6",
+   "state": "PROVISIONAL",
+   "population_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "comp_id": "POP:CB:1F:CB9:H1734|CONTINUOUS_TOP|1|25BB",
+   "state": "PROVISIONAL",
+   "population_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "comp_id": "POP:CB:1F:CB9:H1734|CONTINUOUS_TOP|2|25C0",
+   "state": "PROVISIONAL",
+   "population_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "comp_id": "POP:CB:1F:CB9:H1734|SUPPORT_TOP|S1|25C1",
+   "state": "PROVISIONAL",
+   "population_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "comp_id": "POP:CB:1F:CB11:H1754|CONTINUOUS_TOP|3|2649",
+   "state": "PROVISIONAL",
+   "population_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "comp_id": "POP:CB:1F:CB11:H1754|SUPPORT_TOP|S2|264B",
+   "state": "PROVISIONAL",
+   "population_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "comp_id": "POP:CB:1F:CB11:H1754|CONTINUOUS_TOP|1|2660",
+   "state": "PROVISIONAL",
+   "population_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "comp_id": "POP:CB:1F:CB11:H1754|CONTINUOUS_TOP|2|2665",
+   "state": "PROVISIONAL",
+   "population_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "comp_id": "POP:CB:1F:CB11:H1754|SUPPORT_TOP|S1|2666",
+   "state": "PROVISIONAL",
+   "population_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "comp_id": "POP:CB:1F:CB12:H1758|BOTTOM|1|2410",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:1F:CB12:H1758|BOTTOM|2|242F",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:1F:CB12:H1758|CONTINUOUS_TOP|2|2430",
+   "state": "PROVISIONAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:1F:CB12:H1758|SUPPORT_TOP|S1|2433",
+   "state": "PROVISIONAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:1F:CB12:H1758|CONTINUOUS_TOP|1|2434",
+   "state": "PROVISIONAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:1F:CB12:H1758|STIRRUPS|S1",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:1F:CB12:H1758|STIRRUPS|S2",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:CB:1F:CB13:H1898|CONTINUOUS_TOP|2|24A9",
+   "state": "PROVISIONAL",
+   "population_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "comp_id": "POP:CB:1F:CB13:H1898|SUPPORT_TOP|S1|24AC",
+   "state": "PROVISIONAL",
+   "population_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "comp_id": "POP:CB:1F:CB13:H1898|CONTINUOUS_TOP|1|24AD",
+   "state": "PROVISIONAL",
+   "population_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "comp_id": "POP:COLUMN:GF:C8:H4122|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:GF:C8:H4122|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:GF:C5:H4124|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:GF:C5:H4124|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:GF:C4:H4199|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:GF:C4:H4199|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:GF:C9:H4203|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:GF:C9:H4203|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:GF:C8:H4205|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:GF:C8:H4205|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:1F:C3:H4102|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:1F:C3:H4102|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:1F:C3:H4106|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:1F:C3:H4106|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:1F:C3:H4110|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:1F:C3:H4110|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:1F:C5:H4112|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:1F:C5:H4112|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:1F:C3:H4120|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:1F:C3:H4120|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:1F:C4:H4199|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:1F:C4:H4199|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:1F:C3:H4207|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:1F:C3:H4207|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C3:H4102|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C3:H4102|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C3:H4106|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C3:H4106|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C3:H4110|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C3:H4110|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C5:H4112|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C5:H4112|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C6:H4116|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C6:H4116|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C3:H4120|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C3:H4120|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C8:H4122|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C8:H4122|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C5:H4124|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C5:H4124|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C7:H4189|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C7:H4189|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C4:H4197|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C4:H4197|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C4:H4199|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C4:H4199|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C9:H4203|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C9:H4203|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C8:H4205|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C8:H4205|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C3:H4207|VERTICAL",
+   "state": "COMPLETE",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:COLUMN:2F:C3:H4207|TIES",
+   "state": "PARTIAL",
+   "population_state": "BLOCKED"
+  },
+  {
+   "comp_id": "POP:SLAB:2F|79F",
+   "state": "PROVISIONAL",
+   "population_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "comp_id": "POP:SLAB:2F|7A2",
+   "state": "PROVISIONAL",
+   "population_state": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "comp_id": "POP:GROUND_SLAB:ZONE-1|MESH_X",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:GROUND_SLAB:ZONE-1|MESH_Y",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:GROUND_SLAB:ZONE-2|MESH_X",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:GROUND_SLAB:ZONE-2|MESH_Y",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0000|GB-022 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0001|GB-022 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0002|GB-022 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0003|GB-022 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0004|GB-021 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0005|GB-021 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0006|GB-021 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0007|GB-021 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0008|GB-020 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0009|GB-020 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0010|GB-020 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0011|GB-020 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0012|GB-023 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0013|GB-023 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0014|GB-023 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0015|GB-023 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0016|GB-003 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0017|GB-003 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0018|GB-003 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0019|GB-003 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0020|GB-012 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0021|GB-012 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0022|GB-012 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0023|GB-012 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0024|GB-011 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0025|GB-011 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0026|GB-011 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0027|GB-011 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0028|GB-017 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0029|GB-017 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0030|GB-017 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0031|GB-017 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0032|GB-042 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0033|GB-042 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0034|GB-042 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0035|GB-042 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0036|GB-043 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0037|GB-043 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0038|GB-043 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0039|GB-043 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0040|GB-014 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0041|GB-014 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0042|GB-014 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0043|GB-014 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0044|GB-015 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0045|GB-015 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0046|GB-015 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0047|GB-015 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0048|GB-049 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0049|GB-049 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0050|GB-049 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0051|GB-049 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0052|GB-050 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0053|GB-050 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0054|GB-050 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0055|GB-050 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0056|GB-037 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0057|GB-037 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0058|GB-037 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0059|GB-037 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0060|GB-038 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0061|GB-038 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0062|GB-038 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0063|GB-038 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0064|GB-044 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0065|GB-044 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0066|GB-044 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0067|GB-044 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0068|GB-008 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0069|GB-008 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0070|GB-008 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0071|GB-008 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0072|GB-036 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0073|GB-036 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0074|GB-036 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0075|GB-036 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0076|GB-048 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0077|GB-048 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0078|GB-048 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0079|GB-048 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0080|GB-039 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0081|GB-039 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0082|GB-039 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0083|GB-039 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0084|GB-045 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0085|GB-045 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0086|GB-045 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0087|GB-045 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0088|GB-040 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0089|GB-040 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0090|GB-040 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0091|GB-040 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0092|GB-010 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0093|GB-010 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0094|GB-010 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0095|GB-010 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0096|GB-009 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0097|GB-009 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0098|GB-009 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0099|GB-009 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0100|GB-013 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0101|GB-013 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0102|GB-013 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0103|GB-013 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0104|GB-006 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0105|GB-006 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0106|GB-006 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0107|GB-006 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0108|GB-002 top 3Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0109|GB-002 bottom 6Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0110|GB-002 side 2Ø12 @30",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:GROUND_BEAM_EXT|0111|GB-002 links Ø8/15",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:BEAM_RESIDUE|0000|B1:ALSENAN_ST7757_DXF|H1117||TEXT|0",
+   "state": "PROVISIONAL",
+   "population_state": "BUDGET"
+  },
+  {
+   "comp_id": "POP:CARRIED:BEAM_RESIDUE|0001|B7:ALSENAN_ST7757_DXF|H1134||TEXT|0",
+   "state": "PROVISIONAL",
+   "population_state": "BUDGET"
+  },
+  {
+   "comp_id": "POP:CARRIED:BEAM_RESIDUE|0002|B7:ALSENAN_ST7757_DXF|H1135||TEXT|0",
+   "state": "PROVISIONAL",
+   "population_state": "BUDGET"
+  },
+  {
+   "comp_id": "POP:CARRIED:BEAM_RESIDUE|0003|B7:ALSENAN_ST7757_DXF|H1136||TEXT|0",
+   "state": "PROVISIONAL",
+   "population_state": "BUDGET"
+  },
+  {
+   "comp_id": "POP:CARRIED:BEAM_RESIDUE|0004|B7:ALSENAN_ST7757_DXF|H1137||TEXT|0",
+   "state": "PROVISIONAL",
+   "population_state": "BUDGET"
+  },
+  {
+   "comp_id": "POP:CARRIED:BEAM_RESIDUE|0005|B7:ALSENAN_ST7757_DXF|H1154|1149|TEXT|0",
+   "state": "PROVISIONAL",
+   "population_state": "BUDGET"
+  },
+  {
+   "comp_id": "POP:CARRIED:BEAM_RESIDUE|0006|B4:ALSENAN_ST7757_DXF|H1184|1179|TEXT|0",
+   "state": "PROVISIONAL",
+   "population_state": "BUDGET"
+  },
+  {
+   "comp_id": "POP:CARRIED:BEAM_RESIDUE|0007|B6:ALSENAN_ST7757_DXF|H1733||TEXT|0",
+   "state": "PROVISIONAL",
+   "population_state": "BUDGET"
+  },
+  {
+   "comp_id": "POP:CARRIED:BEAM_RESIDUE|0008|B4:ALSENAN_ST7757_DXF|H6184||TEXT|0",
+   "state": "PROVISIONAL",
+   "population_state": "BUDGET"
+  },
+  {
+   "comp_id": "POP:CARRIED:BEAM_RESIDUE|0009|B4:ALSENAN_ST7757_DXF|H6185||TEXT|0",
+   "state": "PROVISIONAL",
+   "population_state": "BUDGET"
+  },
+  {
+   "comp_id": "POP:CARRIED:BOUNDARY_WALL|0000|B.W bottom 4Ø16",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:BOUNDARY_WALL|0001|B.W top 2Ø14",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:BOUNDARY_WALL|0002|B.W links 7Ø8/m",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:FOOTING_F_F10|0000|F10 long 10Ø14 (selected basis)",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:FOOTING_F_F10|0001|F10 short 20Ø14 (selected basis)",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  },
+  {
+   "comp_id": "POP:CARRIED:COLUMN_STARTERS|0000|necks / starters (all footings)",
+   "state": "PROVISIONAL",
+   "population_state": "PROVISIONAL"
+  }
+ ],
+ "ineligible_included": [],
+ "rule": "only COMPLETE / PARTIAL components of VERIFIED_COMPLETE / LOWER_BOUND populations, verified length and verified count; laps only where a run exceeds the stock and a lap authority exists",
+ "included_components": 826,
+ "excluded_by_population": {
+  "POP:CARRIED:BEAM_RESIDUE": 10,
+  "POP:CARRIED:BOUNDARY_WALL": 3,
+  "POP:CARRIED:COLUMN_STARTERS": 1,
+  "POP:CARRIED:FOOTING_F_F10": 2,
+  "POP:CARRIED:GROUND_BEAM_EXT": 112,
+  "POP:CB:1F:CB11:H1754": 5,
+  "POP:CB:1F:CB12:H1758": 7,
+  "POP:CB:1F:CB13:H1898": 3,
+  "POP:CB:1F:CB9:H1734": 5,
+  "POP:CB:GF:CB1:H1249": 3,
+  "POP:CB:GF:CB3:H1171": 9,
+  "POP:CB:GF:CB4:H1116": 7,
+  "POP:CB:GF:CB5:H1140": 7,
+  "POP:CB:GF:CB6:H1148": 7,
+  "POP:CB:GF:CB7:H1145": 3,
+  "POP:CB:GF:CB8:H1695": 10,
+  "POP:COLUMN:1F:C3:H4102": 2,
+  "POP:COLUMN:1F:C3:H4106": 2,
+  "POP:COLUMN:1F:C3:H4110": 2,
+  "POP:COLUMN:1F:C3:H4120": 2,
+  "POP:COLUMN:1F:C3:H4207": 2,
+  "POP:COLUMN:1F:C4:H4199": 2,
+  "POP:COLUMN:1F:C5:H4112": 2,
+  "POP:COLUMN:2F:C3:H4102": 2,
+  "POP:COLUMN:2F:C3:H4106": 2,
+  "POP:COLUMN:2F:C3:H4110": 2,
+  "POP:COLUMN:2F:C3:H4120": 2,
+  "POP:COLUMN:2F:C3:H4207": 2,
+  "POP:COLUMN:2F:C4:H4197": 2,
+  "POP:COLUMN:2F:C4:H4199": 2,
+  "POP:COLUMN:2F:C5:H4112": 2,
+  "POP:COLUMN:2F:C5:H4124": 2,
+  "POP:COLUMN:2F:C6:H4116": 2,
+  "POP:COLUMN:2F:C7:H4189": 2,
+  "POP:COLUMN:2F:C8:H4122": 2,
+  "POP:COLUMN:2F:C8:H4205": 2,
+  "POP:COLUMN:2F:C9:H4203": 2,
+  "POP:COLUMN:GF:C4:H4199": 2,
+  "POP:COLUMN:GF:C5:H4124": 2,
+  "POP:COLUMN:GF:C8:H4122": 2,
+  "POP:COLUMN:GF:C8:H4205": 2,
+  "POP:COLUMN:GF:C9:H4203": 2,
+  "POP:FOOTING:F#1": 2,
+  "POP:FOOTING:F10#19": 2,
+  "POP:FOOTING:FF#10": 1,
+  "POP:GROUND_SLAB:ZONE-1": 2,
+  "POP:GROUND_SLAB:ZONE-2": 2,
+  "POP:SLAB:2F": 2,
+  "POP:STRAP:SB1:H6946": 3
+ },
+ "lap_rule": "LAP-TENSION-70D"
+}

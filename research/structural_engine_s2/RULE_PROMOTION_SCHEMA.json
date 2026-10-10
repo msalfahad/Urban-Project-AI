@@ -1,0 +1,28 @@
+{
+ "fields": [
+  "rule_id",
+  "statement",
+  "condition",
+  "consequence",
+  "source_claims",
+  "projects",
+  "state",
+  "history",
+  "proposer"
+ ],
+ "policy_id": "RULE_PROMOTION_V1",
+ "rules": [
+  "every project claim is PROJECT_ONLY; nothing is promoted automatically",
+  "a GENERIC_CANDIDATE is a project-free statement citing its source claims",
+  "project terms (marks, ids, names) are rejected from the candidate text",
+  "GENERIC_APPROVED needs a written review by someone other than the proposer",
+  "engine code consumes GENERIC_APPROVED rules only; rejected candidates stay on record"
+ ],
+ "schema": "RULE_PROMOTION_SCHEMA",
+ "states": [
+  "PROJECT_ONLY",
+  "GENERIC_CANDIDATE",
+  "GENERIC_APPROVED",
+  "REJECTED"
+ ]
+}

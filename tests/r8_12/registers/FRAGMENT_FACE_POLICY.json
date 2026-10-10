@@ -1,0 +1,114 @@
+{
+ "SCHEMA": "URBAN_R8_12_FRAGMENT_FACE_POLICY_V1",
+ "policy": {
+  "policy_id": "WALL_BAND_POLICY_V3",
+  "model": [
+   "FACE_CHAIN (strict contiguity, typed nodes)",
+   "LOCAL BAND SPAN (local mutual nearest per elementary interval)",
+   "WALL_BAND_ASSEMBLY (spans + obstacle overlaps + nodes of one chain pair)"
+  ],
+  "params": {
+   "chain_join": "collinear within eps_n both ways; end points coincident within eps_n (touching); same occurrence path; TOPOLOGY_BOUNDARY on both sides; NO opening / glazing segment end within eps_r of the joint (OPENING_BREAK). A gap of any size, including inside the 50 mm review band, is never joined",
+   "duplicate": "collinear fragments overlapping by more than eps_n are ONE chain with a DUPLICATE interval; a span over a duplicate interval is AMBIGUOUS",
+   "parallel": "|cross(u_a, u_b)| x overlap <= eps_r",
+   "overlap_min": "eps_r",
+   "separation_min": "eps_r",
+   "elongation_ratio": 1.0,
+   "elongation_basis": "the raw overlap of the two CHAINS (never a sub-interval)",
+   "local_mutual_nearest": "evaluated at the middle of every elementary interval (breakpoints: projections of all parallel overlapping chains of both chains, both sides)",
+   "one_side_margin": "eps_r",
+   "nearest_tie": "eps_r (a tie between two chains is never paired)",
+   "strip": "a label anywhere in the RAW strip of the chain pair (the whole chain overlap) rejects the pair - local pairing must never turn an unlabelled slice of a room into a band; labels or arcs in the local strip reject the run; crossings subdivide it",
+   "id_coordinate_decimals": 6,
+   "canonical_direction_guard": 1e-09,
+   "eps_n_default_ratio_of_eps_r": 0.001,
+   "full_width_margin_in_eps_r": 2.0,
+   "numeric_guards": {
+    "ray_parallel": 1e-15,
+    "segment_length_floor": 1e-12,
+    "clip_parameter": 1e-12
+   },
+   "pair_search": "exhaustive over admitted faces (no direction buckets, no neighbourhood window)",
+   "review_band": "role_authority.NEAR_MISS_REVIEW_BAND_MM / unit - cap grading only, never a join"
+  },
+  "interval_classes": [
+   "WALL_BAND_SPAN",
+   "OBSTACLE_OVERLAP",
+   "CROSSING_WALL_NODE",
+   "ENCLOSED_NODE",
+   "AMBIGUOUS_CENTRELINE",
+   "AMBIGUOUS_DUPLICATE",
+   "AMBIGUOUS_PAIRED_BOTH_SIDES"
+  ],
+  "chain_nodes": [
+   "CONTINUOUS_JOIN",
+   "BRANCH_NODE",
+   "CROSSING_NODE",
+   "OPENING_BREAK",
+   "DUPLICATE_OVERLAP"
+  ],
+  "ends": [
+   "JUNCTION_OR_CONTINUATION",
+   "RECEIVING_FACE_JUNCTION",
+   "OPENING_JAMB",
+   "CAPPED",
+   "ALIGNED_FREE_END"
+  ],
+  "caps": [
+   "WALL_END_CAP_PROVEN",
+   "WALL_END_CAP_CANDIDATE",
+   "NOT_WALL_CAP",
+   "UNRESOLVED"
+  ],
+  "never": [
+   "thickness",
+   "area",
+   "nearest parallel pair alone",
+   "coordinates alone",
+   "material identity",
+   "a join across any gap",
+   "the 50 mm review band as continuity",
+   "whole-face disqualification by geometry outside the local interval"
+  ],
+  "history": [
+   "V1 (R8.11 freeze 5895981): whole-face pairing",
+   "V2 (R8.11 amendment A1): RECEIVING_FACE_JUNCTION",
+   "V3 (R8.12): face chains + local spans + assemblies + OPENING_JAMB; A1 kept"
+  ],
+  "means": "TOPOLOGY_OBSTACLE_GEOMETRY, not MASONRY_CONFIRMED",
+  "digest": "ecd6ba5fe51bc89924adf79ba5f790b2b9b9e33abfbd2b97c5ce31dab2c3ae39"
+ },
+ "freeze": {
+  "SCHEMA": "URBAN_R8_12_FRAGMENT_BAND_FREEZE_V1",
+  "frozen_commit": "b72d866b590c4d73be873342bcf9c7ee138f1c5f",
+  "wall_band_policy": {
+   "id": "WALL_BAND_POLICY_V3",
+   "digest": "ecd6ba5fe51bc89924adf79ba5f790b2b9b9e33abfbd2b97c5ce31dab2c3ae39"
+  },
+  "closure_policy": {
+   "id": "TOPOLOGY_CLOSURE_POLICY_V1",
+   "digest": "46742c570b4d8a036fd6b7446f28055bfd4e1adbff51966e800e5986ca99ccb2"
+  },
+  "engine_file_sha256": {
+   "engine/source/wall_bands.py": "bf501b6f8df03ff76a2de2cc844f1bb28c4912d434a5556f576b452881dd1c31",
+   "engine/source/topology_closures.py": "ccb2e52c16c592272ee3d717bba6954f3267f759bb5bf4746c8c269fc2a2cd66",
+   "engine/source/room_topology.py": "220504c99a52d6a45e172a566d4fe4acf00015706be2ede8cffcca98436adf2f"
+  },
+  "synthetic_test_sha256": {
+   "tests/r8_12/test_r8_12_fragment_bands.py": "77b05d4f5c719c2809f3592d39de3ae0b2032aafbdb774c6ea7d57581aaf8404",
+   "tests/r8_11/test_r8_11_wall_bands.py": "248e92c87d3c4068a7b665ac706296f1236b4a8bcc4b427ac741b9b320513cfa",
+   "tests/r8_11/test_r8_11_amendment_a1.py": "32d3642e2cdb1adcdc3b9ad54361f12bb740271d376787347b864e4553c919c9",
+   "tests/r8_11/test_r8_11_second_family.py": "1c4711d8629a7d121f361ba464b0b08d617f7b5600f4d10438950b648e3b7d2d"
+  },
+  "synthetic_test_digest": "9dcaff20b52fde6a2a349a4d9275b5cdcdddc980a073342877d8a840b1b2bb9c",
+  "qortuba_runs_before_freeze": 0,
+  "order": [
+   "design",
+   "synthetic fixtures",
+   "freeze policy + digest",
+   "commit",
+   "THEN the blind Qortuba run"
+  ],
+  "rule": "no post-result edit inside WALL_BAND_POLICY_V3; an independent defect found after the blind run is the NEXT amendment / round"
+ }
+}

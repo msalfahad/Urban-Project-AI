@@ -1,0 +1,23 @@
+FIELD,ARCH_R8_RUN_AND_REPORT_ROW,STRUCTURAL_S1_CENSUS_ROW,STRUCTURAL_V3B_BOQ_LINE,COVERAGE_SCENARIO_PART
+project,YES run manifest (revision bound),YES register header,YES file schema,YES round
+drawing hash,YES source_anchor_sha256,"PARTIAL drawing name, sha in INDEX",NO,YES freeze input / extract sha
+revision,YES source_revision_id,PARTIAL,NO,NO
+sheet/layout/page,YES region_id / frame_id,YES sheets / page,NO,PARTIAL (extract)
+source handles / bbox,YES sites / surface ids,YES handles,NO (free-text trace),PARTIAL (part ids; pairs have handles)
+raw text,YES texts in canonical input,YES raw_attributes,NO,NO
+geometry method,YES method id + contract version,PARTIAL,PARTIAL formula text,YES module
+unit context / scale,YES unit_claim_id + native_to_mm,PARTIAL (umm),NO,NO
+rule/profile id,YES rule_ids + policy digests,YES rule register ids,PARTIAL authority text,PARTIAL (why)
+formula,YES (method),PARTIAL,YES formula,PARTIAL
+inputs,YES canonical_input_digest,YES,PARTIAL details,YES freeze inputs
+measurement state,PARTIAL (release status),PARTIAL (terminal_state),PARTIAL status,YES measurement_state
+authority state,YES authority_digest,YES type_authority,PARTIAL authority,YES authority_state
+release state,YES release_state,NO,YES release (technical / commercial),YES derived
+scenario bounds,NO,NO,PARTIAL commercial low / high,YES
+confidence factors,NO (by design: authority levels),NO,PARTIAL confidence letter,NO
+conflicts,YES blockers / root questions,YES conflict states,PARTIAL status,YES SOURCE_CONFLICT
+remediation attempts,PARTIAL owner queue,PARTIAL review queue,NO,YES remediation records
+machine-original geometry,YES source immutable,YES,n/a,YES
+human-reviewed geometry,"NO (claims only, by design)",NO,NO,NO
+validation results,YES gates / cross-checks,YES conservation,PARTIAL,YES anomalies
+version stamp,YES code_commit + CODE_BOUND_DIGEST,PARTIAL (INDEX),NO,PARTIAL (freeze)

@@ -1,0 +1,1218 @@
+{
+ "SCHEMA": "URBAN_R8_5_ACTIVE_PATH_DEFECT_V1",
+ "defect_id": "ADAPTER-LWPOLYLINE-CLOSED-BIT",
+ "status": "REPORTED_NOT_FIXED",
+ "location": {
+  "file": "research/qs_wall_treatment_01/pa09/alrashed/geometry.py",
+  "function": "_segments",
+  "line": 89,
+  "reads": "flag & 1"
+ },
+ "reference_reading": {
+  "file": "engine/cad_adapter.py",
+  "line": 645,
+  "reads": "flag & 0x200 (512)"
+ },
+ "mechanism": "the decoded LWPOLYLINE closed bit is 512; the project reader tests bit 1, so a closed wall or column outline loses its closing edge and the grid can merge or split cells across it",
+ "affected_closed_outlines": {
+  "total_on_wall_or_column_layers": 175,
+  "by_layer": {
+   "col.str": 170,
+   "WALL-EWAN": 5
+  }
+ },
+ "dropped_closing_edges_in_floor_windows": {
+  "BASEMENT": {
+   "col.str": 24
+  },
+  "GROUND": {
+   "col.str": 25
+  },
+  "FIRST": {
+   "col.str": 7
+  }
+ },
+ "dropped_closing_edges_total": 56,
+ "defect_only_counterfactual": {
+  "method": "adapter functions unchanged except that `_segments` sees the closed bit; patched in memory and restored",
+  "rooms_compared": 149,
+  "states": {
+   "WITHIN_NUMERIC_TOLERANCE": 18,
+   "AREA_CHANGED": 6,
+   "UNCHANGED": 91,
+   "ONLY_WHEN_CORRECTED": 14,
+   "ONLY_IN_ADAPTER": 20
+  },
+  "closure_residual_m2": {
+   "BASEMENT": [
+    -0.0004,
+    -0.0004
+   ],
+   "GROUND": [
+    0.000132,
+    0.000466
+   ],
+   "FIRST": [
+    0.000209,
+    0.000109
+   ]
+  },
+  "changed": [
+   {
+    "floor": "BASEMENT",
+    "bbox": [
+     401.7269,
+     152.7332,
+     412.4269,
+     170.8831
+    ],
+    "adapter_room_ref": "BA-000",
+    "name": null,
+    "state": "WITHIN_NUMERIC_TOLERANCE",
+    "adapter_area_m2": 6.0904,
+    "corrected_area_m2": 6.0905,
+    "delta_m2": 0.0001
+   },
+   {
+    "floor": "BASEMENT",
+    "bbox": [
+     401.7269,
+     166.9331,
+     428.8069,
+     174.5332
+    ],
+    "adapter_room_ref": "BA-001",
+    "name": "CAR PARKING",
+    "state": "AREA_CHANGED",
+    "adapter_area_m2": 140.9111,
+    "corrected_area_m2": 140.9107,
+    "delta_m2": -0.0004
+   },
+   {
+    "floor": "BASEMENT",
+    "bbox": [
+     404.3269,
+     170.6831,
+     410.4069,
+     170.8831
+    ],
+    "adapter_room_ref": "BA-019",
+    "name": null,
+    "state": "WITHIN_NUMERIC_TOLERANCE",
+    "adapter_area_m2": 1.2161,
+    "corrected_area_m2": 1.2162,
+    "delta_m2": 0.0001
+   },
+   {
+    "floor": "BASEMENT",
+    "bbox": [
+     410.0569,
+     157.7331,
+     410.2569,
+     162.2832
+    ],
+    "adapter_room_ref": null,
+    "name": null,
+    "state": "ONLY_WHEN_CORRECTED",
+    "adapter_area_m2": null,
+    "corrected_area_m2": 0.9101,
+    "delta_m2": null
+   },
+   {
+    "floor": "BASEMENT",
+    "bbox": [
+     410.0569,
+     157.7331,
+     410.2569,
+     162.4832
+    ],
+    "adapter_room_ref": "BA-029",
+    "name": null,
+    "state": "ONLY_IN_ADAPTER",
+    "adapter_area_m2": 0.9501,
+    "corrected_area_m2": null,
+    "delta_m2": null
+   },
+   {
+    "floor": "BASEMENT",
+    "bbox": [
+     410.2569,
+     165.1831,
+     417.9569,
+     167.8332
+    ],
+    "adapter_room_ref": "BA-040",
+    "name": null,
+    "state": "WITHIN_NUMERIC_TOLERANCE",
+    "adapter_area_m2": 20.4054,
+    "corrected_area_m2": 20.4053,
+    "delta_m2": -0.0001
+   },
+   {
+    "floor": "BASEMENT",
+    "bbox": [
+     410.6569,
+     164.9831,
+     413.9069,
+     165.1831
+    ],
+    "adapter_room_ref": "BA-046",
+    "name": null,
+    "state": "WITHIN_NUMERIC_TOLERANCE",
+    "adapter_area_m2": 0.6499,
+    "corrected_area_m2": 0.65,
+    "delta_m2": 0.0001
+   },
+   {
+    "floor": "BASEMENT",
+    "bbox": [
+     411.3069,
+     168.0331,
+     418.1569,
+     170.8831
+    ],
+    "adapter_room_ref": "BA-047",
+    "name": null,
+    "state": "WITHIN_NUMERIC_TOLERANCE",
+    "adapter_area_m2": 1.9,
+    "corrected_area_m2": 1.9001,
+    "delta_m2": 0.0001
+   },
+   {
+    "floor": "BASEMENT",
+    "bbox": [
+     415.9569,
+     160.7832,
+     416.5569,
+     162.3832
+    ],
+    "adapter_room_ref": "BA-068",
+    "name": null,
+    "state": "ONLY_IN_ADAPTER",
+    "adapter_area_m2": 0.4,
+    "corrected_area_m2": null,
+    "delta_m2": null
+   },
+   {
+    "floor": "BASEMENT",
+    "bbox": [
+     417.9569,
+     152.9331,
+     418.1569,
+     160.7832
+    ],
+    "adapter_room_ref": "BA-084",
+    "name": null,
+    "state": "WITHIN_NUMERIC_TOLERANCE",
+    "adapter_area_m2": 1.5698,
+    "corrected_area_m2": 1.5699,
+    "delta_m2": 0.0001
+   },
+   {
+    "floor": "BASEMENT",
+    "bbox": [
+     417.9569,
+     160.7832,
+     418.1569,
+     162.3832
+    ],
+    "adapter_room_ref": "BA-085",
+    "name": null,
+    "state": "ONLY_IN_ADAPTER",
+    "adapter_area_m2": 0.32,
+    "corrected_area_m2": null,
+    "delta_m2": null
+   },
+   {
+    "floor": "BASEMENT",
+    "bbox": [
+     417.9569,
+     166.2332,
+     418.1569,
+     167.8332
+    ],
+    "adapter_room_ref": null,
+    "name": null,
+    "state": "ONLY_WHEN_CORRECTED",
+    "adapter_area_m2": null,
+    "corrected_area_m2": 0.32,
+    "delta_m2": null
+   },
+   {
+    "floor": "BASEMENT",
+    "bbox": [
+     417.9569,
+     166.2332,
+     418.1569,
+     168.0331
+    ],
+    "adapter_room_ref": "BA-089",
+    "name": null,
+    "state": "ONLY_IN_ADAPTER",
+    "adapter_area_m2": 0.3599,
+    "corrected_area_m2": null,
+    "delta_m2": null
+   },
+   {
+    "floor": "BASEMENT",
+    "bbox": [
+     418.1569,
+     152.9331,
+     428.8069,
+     166.7331
+    ],
+    "adapter_room_ref": "BA-092",
+    "name": "HALL",
+    "state": "AREA_CHANGED",
+    "adapter_area_m2": 146.97,
+    "corrected_area_m2": 146.7697,
+    "delta_m2": -0.2003
+   },
+   {
+    "floor": "BASEMENT",
+    "bbox": [
+     419.2573,
+     166.7331,
+     420.9569,
+     166.9331
+    ],
+    "adapter_room_ref": null,
+    "name": null,
+    "state": "ONLY_WHEN_CORRECTED",
+    "adapter_area_m2": null,
+    "corrected_area_m2": 0.34,
+    "delta_m2": null
+   },
+   {
+    "floor": "BASEMENT",
+    "bbox": [
+     419.2573,
+     166.7331,
+     421.1569,
+     166.9331
+    ],
+    "adapter_room_ref": "BA-095",
+    "name": null,
+    "state": "ONLY_IN_ADAPTER",
+    "adapter_area_m2": 0.38,
+    "corrected_area_m2": null,
+    "delta_m2": null
+   },
+   {
+    "floor": "BASEMENT",
+    "bbox": [
+     425.5569,
+     152.7332,
+     429.0069,
+     156.1832
+    ],
+    "adapter_room_ref": "BA-099",
+    "name": null,
+    "state": "WITHIN_NUMERIC_TOLERANCE",
+    "adapter_area_m2": 1.3397,
+    "corrected_area_m2": 1.3398,
+    "delta_m2": 0.0001
+   },
+   {
+    "floor": "BASEMENT",
+    "bbox": [
+     428.8069,
+     161.3832,
+     429.0069,
+     166.4831
+    ],
+    "adapter_room_ref": "BA-104",
+    "name": null,
+    "state": "WITHIN_NUMERIC_TOLERANCE",
+    "adapter_area_m2": 1.0198,
+    "corrected_area_m2": 1.0199,
+    "delta_m2": 0.0001
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     361.4059,
+     170.8832,
+     363.1059,
+     174.7332
+    ],
+    "adapter_room_ref": "GR-012",
+    "name": null,
+    "state": "WITHIN_NUMERIC_TOLERANCE",
+    "adapter_area_m2": 6.5448,
+    "corrected_area_m2": 6.5449,
+    "delta_m2": 0.0001
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     361.6059,
+     159.7332,
+     367.7359,
+     174.5331
+    ],
+    "adapter_room_ref": "GR-015",
+    "name": "HALL",
+    "state": "ONLY_IN_ADAPTER",
+    "adapter_area_m2": 84.179,
+    "corrected_area_m2": null,
+    "delta_m2": null
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     361.6059,
+     159.7332,
+     367.7359,
+     174.5332
+    ],
+    "adapter_room_ref": null,
+    "name": "HALL",
+    "state": "ONLY_WHEN_CORRECTED",
+    "adapter_area_m2": null,
+    "corrected_area_m2": 84.1791,
+    "delta_m2": null
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     363.1059,
+     173.2332,
+     363.7059,
+     174.7332
+    ],
+    "adapter_room_ref": "GR-020",
+    "name": null,
+    "state": "ONLY_IN_ADAPTER",
+    "adapter_area_m2": 0.38,
+    "corrected_area_m2": null,
+    "delta_m2": null
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     363.3059,
+     154.2331,
+     370.1059,
+     154.4331
+    ],
+    "adapter_room_ref": "GR-021",
+    "name": null,
+    "state": "AREA_CHANGED",
+    "adapter_area_m2": 1.3599,
+    "corrected_area_m2": 1.3597,
+    "delta_m2": -0.0002
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     363.7059,
+     174.5331,
+     369.7059,
+     174.7332
+    ],
+    "adapter_room_ref": "GR-022",
+    "name": null,
+    "state": "ONLY_IN_ADAPTER",
+    "adapter_area_m2": 1.2003,
+    "corrected_area_m2": null,
+    "delta_m2": null
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     363.7059,
+     174.5332,
+     369.7059,
+     174.7332
+    ],
+    "adapter_room_ref": null,
+    "name": null,
+    "state": "ONLY_WHEN_CORRECTED",
+    "adapter_area_m2": null,
+    "corrected_area_m2": 1.2001,
+    "delta_m2": null
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     367.7359,
+     158.0435,
+     367.9359,
+     162.2832
+    ],
+    "adapter_room_ref": null,
+    "name": null,
+    "state": "ONLY_WHEN_CORRECTED",
+    "adapter_area_m2": null,
+    "corrected_area_m2": 0.848,
+    "delta_m2": null
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     367.7359,
+     158.0435,
+     367.9359,
+     162.4832
+    ],
+    "adapter_room_ref": "GR-025",
+    "name": null,
+    "state": "ONLY_IN_ADAPTER",
+    "adapter_area_m2": 0.888,
+    "corrected_area_m2": null,
+    "delta_m2": null
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     367.7359,
+     164.9831,
+     379.8859,
+     167.9831
+    ],
+    "adapter_room_ref": "GR-028",
+    "name": null,
+    "state": "WITHIN_NUMERIC_TOLERANCE",
+    "adapter_area_m2": 34.3292,
+    "corrected_area_m2": 34.3293,
+    "delta_m2": 0.0001
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     367.7359,
+     167.9831,
+     368.6859,
+     174.5331
+    ],
+    "adapter_room_ref": "GR-029",
+    "name": null,
+    "state": "ONLY_IN_ADAPTER",
+    "adapter_area_m2": 1.1025,
+    "corrected_area_m2": null,
+    "delta_m2": null
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     367.7359,
+     167.9831,
+     368.6859,
+     174.5332
+    ],
+    "adapter_room_ref": null,
+    "name": null,
+    "state": "ONLY_WHEN_CORRECTED",
+    "adapter_area_m2": null,
+    "corrected_area_m2": 1.1025,
+    "delta_m2": null
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     367.8859,
+     171.2831,
+     370.1059,
+     174.5331
+    ],
+    "adapter_room_ref": "GR-032",
+    "name": "BATH",
+    "state": "ONLY_IN_ADAPTER",
+    "adapter_area_m2": 6.3959,
+    "corrected_area_m2": null,
+    "delta_m2": null
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     367.8859,
+     171.2831,
+     370.1059,
+     174.5332
+    ],
+    "adapter_room_ref": null,
+    "name": "BATH",
+    "state": "ONLY_WHEN_CORRECTED",
+    "adapter_area_m2": null,
+    "corrected_area_m2": 6.396,
+    "delta_m2": null
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     369.6859,
+     167.9831,
+     372.9404,
+     168.1331
+    ],
+    "adapter_room_ref": "GR-044",
+    "name": null,
+    "state": "WITHIN_NUMERIC_TOLERANCE",
+    "adapter_area_m2": 0.4882,
+    "corrected_area_m2": 0.4881,
+    "delta_m2": -0.0001
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     369.7059,
+     173.2332,
+     370.3059,
+     174.7332
+    ],
+    "adapter_room_ref": "GR-046",
+    "name": null,
+    "state": "ONLY_IN_ADAPTER",
+    "adapter_area_m2": 0.38,
+    "corrected_area_m2": null,
+    "delta_m2": null
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     370.7059,
+     154.2331,
+     375.1059,
+     154.4331
+    ],
+    "adapter_room_ref": "GR-055",
+    "name": null,
+    "state": "WITHIN_NUMERIC_TOLERANCE",
+    "adapter_area_m2": 0.8799,
+    "corrected_area_m2": 0.8798,
+    "delta_m2": -0.0001
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     370.7059,
+     173.0331,
+     375.1059,
+     173.2332
+    ],
+    "adapter_room_ref": "GR-056",
+    "name": null,
+    "state": "WITHIN_NUMERIC_TOLERANCE",
+    "adapter_area_m2": 0.8803,
+    "corrected_area_m2": 0.8802,
+    "delta_m2": -0.0001
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     373.6359,
+     160.7832,
+     374.2359,
+     162.3832
+    ],
+    "adapter_room_ref": "GR-069",
+    "name": null,
+    "state": "ONLY_IN_ADAPTER",
+    "adapter_area_m2": 0.4032,
+    "corrected_area_m2": null,
+    "delta_m2": null
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     373.8374,
+     160.9832,
+     375.6359,
+     162.7831
+    ],
+    "adapter_room_ref": null,
+    "name": null,
+    "state": "ONLY_WHEN_CORRECTED",
+    "adapter_area_m2": null,
+    "corrected_area_m2": 3.2372,
+    "delta_m2": null
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     373.8381,
+     160.9832,
+     375.6359,
+     162.7831
+    ],
+    "adapter_room_ref": "GR-071",
+    "name": null,
+    "state": "ONLY_IN_ADAPTER",
+    "adapter_area_m2": 3.2358,
+    "corrected_area_m2": null,
+    "delta_m2": null
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     375.2359,
+     160.7832,
+     375.8359,
+     162.3832
+    ],
+    "adapter_room_ref": "GR-087",
+    "name": null,
+    "state": "ONLY_IN_ADAPTER",
+    "adapter_area_m2": 0.4,
+    "corrected_area_m2": null,
+    "delta_m2": null
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     375.7059,
+     173.0331,
+     379.8359,
+     173.2332
+    ],
+    "adapter_room_ref": "GR-090",
+    "name": null,
+    "state": "WITHIN_NUMERIC_TOLERANCE",
+    "adapter_area_m2": 0.8263,
+    "corrected_area_m2": 0.8262,
+    "delta_m2": -0.0001
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     376.0959,
+     168.1331,
+     379.8359,
+     173.0331
+    ],
+    "adapter_room_ref": "GR-095",
+    "name": "BED ROOM",
+    "state": "WITHIN_NUMERIC_TOLERANCE",
+    "adapter_area_m2": 18.326,
+    "corrected_area_m2": 18.3261,
+    "delta_m2": 0.0001
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     377.1494,
+     167.8506,
+     380.0359,
+     174.5332
+    ],
+    "adapter_room_ref": null,
+    "name": null,
+    "state": "ONLY_WHEN_CORRECTED",
+    "adapter_area_m2": null,
+    "corrected_area_m2": 1.733,
+    "delta_m2": null
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     377.1494,
+     167.8506,
+     380.4359,
+     174.7332
+    ],
+    "adapter_room_ref": "GR-101",
+    "name": null,
+    "state": "ONLY_IN_ADAPTER",
+    "adapter_area_m2": 1.853,
+    "corrected_area_m2": null,
+    "delta_m2": null
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     377.8359,
+     154.2331,
+     384.5859,
+     154.4331
+    ],
+    "adapter_room_ref": "GR-102",
+    "name": null,
+    "state": "AREA_CHANGED",
+    "adapter_area_m2": 1.3499,
+    "corrected_area_m2": 1.3497,
+    "delta_m2": -0.0002
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     380.0359,
+     166.6831,
+     384.9859,
+     174.5331
+    ],
+    "adapter_room_ref": "GR-108",
+    "name": "M.BED ROOM",
+    "state": "ONLY_IN_ADAPTER",
+    "adapter_area_m2": 31.92,
+    "corrected_area_m2": null,
+    "delta_m2": null
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     380.0359,
+     166.6831,
+     384.9859,
+     174.5332
+    ],
+    "adapter_room_ref": null,
+    "name": "M.BED ROOM",
+    "state": "ONLY_WHEN_CORRECTED",
+    "adapter_area_m2": null,
+    "corrected_area_m2": 31.9201,
+    "delta_m2": null
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     380.4359,
+     174.5331,
+     384.5859,
+     174.7332
+    ],
+    "adapter_room_ref": "GR-109",
+    "name": null,
+    "state": "ONLY_IN_ADAPTER",
+    "adapter_area_m2": 0.8302,
+    "corrected_area_m2": null,
+    "delta_m2": null
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     380.4359,
+     174.5332,
+     384.5859,
+     174.7332
+    ],
+    "adapter_room_ref": null,
+    "name": null,
+    "state": "ONLY_WHEN_CORRECTED",
+    "adapter_area_m2": null,
+    "corrected_area_m2": 0.8301,
+    "delta_m2": null
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     384.5859,
+     154.4331,
+     385.1859,
+     174.7332
+    ],
+    "adapter_room_ref": "GR-123",
+    "name": null,
+    "state": "ONLY_IN_ADAPTER",
+    "adapter_area_m2": 4.1388,
+    "corrected_area_m2": null,
+    "delta_m2": null
+   },
+   {
+    "floor": "GROUND",
+    "bbox": [
+     384.9859,
+     154.4331,
+     385.1859,
+     174.5332
+    ],
+    "adapter_room_ref": null,
+    "name": null,
+    "state": "ONLY_WHEN_CORRECTED",
+    "adapter_area_m2": null,
+    "corrected_area_m2": 4.0188,
+    "delta_m2": null
+   },
+   {
+    "floor": "FIRST",
+    "bbox": [
+     325.6937,
+     159.5831,
+     330.4271,
+     162.2831
+    ],
+    "adapter_room_ref": null,
+    "name": null,
+    "state": "ONLY_WHEN_CORRECTED",
+    "adapter_area_m2": null,
+    "corrected_area_m2": 1.4469,
+    "delta_m2": null
+   },
+   {
+    "floor": "FIRST",
+    "bbox": [
+     325.6937,
+     159.5831,
+     330.4271,
+     162.4831
+    ],
+    "adapter_room_ref": "FI-000",
+    "name": null,
+    "state": "ONLY_IN_ADAPTER",
+    "adapter_area_m2": 1.4869,
+    "corrected_area_m2": null,
+    "delta_m2": null
+   },
+   {
+    "floor": "FIRST",
+    "bbox": [
+     325.6937,
+     164.1302,
+     333.7938,
+     168.1832
+    ],
+    "adapter_room_ref": "FI-002",
+    "name": null,
+    "state": "AREA_CHANGED",
+    "adapter_area_m2": 2.9913,
+    "corrected_area_m2": 2.9514,
+    "delta_m2": -0.0399
+   },
+   {
+    "floor": "FIRST",
+    "bbox": [
+     325.8938,
+     159.7831,
+     330.4271,
+     162.2831
+    ],
+    "adapter_room_ref": "FI-003",
+    "name": "MECH.ROOM",
+    "state": "AREA_CHANGED",
+    "adapter_area_m2": 11.3331,
+    "corrected_area_m2": 11.3333,
+    "delta_m2": 0.0002
+   },
+   {
+    "floor": "FIRST",
+    "bbox": [
+     325.8938,
+     162.4831,
+     333.5938,
+     167.9831
+    ],
+    "adapter_room_ref": "FI-005",
+    "name": null,
+    "state": "WITHIN_NUMERIC_TOLERANCE",
+    "adapter_area_m2": 28.4052,
+    "corrected_area_m2": 28.4051,
+    "delta_m2": -0.0001
+   },
+   {
+    "floor": "FIRST",
+    "bbox": [
+     326.2937,
+     162.2831,
+     329.5437,
+     162.4831
+    ],
+    "adapter_room_ref": "FI-008",
+    "name": null,
+    "state": "WITHIN_NUMERIC_TOLERANCE",
+    "adapter_area_m2": 0.6501,
+    "corrected_area_m2": 0.65,
+    "delta_m2": -0.0001
+   },
+   {
+    "floor": "FIRST",
+    "bbox": [
+     331.7937,
+     159.7831,
+     333.5938,
+     162.7831
+    ],
+    "adapter_room_ref": "FI-025",
+    "name": "HEATERS",
+    "state": "WITHIN_NUMERIC_TOLERANCE",
+    "adapter_area_m2": 5.4003,
+    "corrected_area_m2": 5.4002,
+    "delta_m2": -0.0001
+   }
+  ]
+ },
+ "r8_5_cross_reference": {
+  "status": "RUN",
+  "native_checks": {
+   "CHANGED_NATIVE_AREA": 6,
+   "SAME_NATIVE_AREA": 92,
+   "NATIVE_WITHIN_NUMERIC_TOLERANCE": 18,
+   "CHANGED_NATIVE_TOPOLOGY": 19
+  },
+  "changed_rooms": [
+   {
+    "floor": "BASEMENT",
+    "room_ref": "BA-092",
+    "r8_5_native_check": "CHANGED_NATIVE_AREA",
+    "r8_5_canonical_native_area": 146.7697,
+    "adapter_area_m2": 146.97,
+    "defect_only_corrected_area_m2": 146.7697,
+    "defect_only_state": "AREA_CHANGED",
+    "explained_by_defect_alone": true
+   },
+   {
+    "floor": "BASEMENT",
+    "room_ref": "BA-001",
+    "r8_5_native_check": "CHANGED_NATIVE_AREA",
+    "r8_5_canonical_native_area": 140.9107,
+    "adapter_area_m2": 140.9111,
+    "defect_only_corrected_area_m2": 140.9107,
+    "defect_only_state": "AREA_CHANGED",
+    "explained_by_defect_alone": true
+   },
+   {
+    "floor": "BASEMENT",
+    "room_ref": "BA-029",
+    "r8_5_native_check": "CHANGED_NATIVE_TOPOLOGY",
+    "r8_5_canonical_native_area": null,
+    "adapter_area_m2": 0.9501,
+    "defect_only_corrected_area_m2": null,
+    "defect_only_state": "ONLY_IN_ADAPTER",
+    "explained_by_defect_alone": true
+   },
+   {
+    "floor": "BASEMENT",
+    "room_ref": "BA-068",
+    "r8_5_native_check": "CHANGED_NATIVE_TOPOLOGY",
+    "r8_5_canonical_native_area": null,
+    "adapter_area_m2": 0.4,
+    "defect_only_corrected_area_m2": null,
+    "defect_only_state": "ONLY_IN_ADAPTER",
+    "explained_by_defect_alone": true
+   },
+   {
+    "floor": "BASEMENT",
+    "room_ref": "BA-095",
+    "r8_5_native_check": "CHANGED_NATIVE_TOPOLOGY",
+    "r8_5_canonical_native_area": null,
+    "adapter_area_m2": 0.38,
+    "defect_only_corrected_area_m2": null,
+    "defect_only_state": "ONLY_IN_ADAPTER",
+    "explained_by_defect_alone": true
+   },
+   {
+    "floor": "BASEMENT",
+    "room_ref": "BA-089",
+    "r8_5_native_check": "CHANGED_NATIVE_TOPOLOGY",
+    "r8_5_canonical_native_area": null,
+    "adapter_area_m2": 0.3599,
+    "defect_only_corrected_area_m2": null,
+    "defect_only_state": "ONLY_IN_ADAPTER",
+    "explained_by_defect_alone": true
+   },
+   {
+    "floor": "GROUND",
+    "room_ref": "GR-015",
+    "r8_5_native_check": "CHANGED_NATIVE_TOPOLOGY",
+    "r8_5_canonical_native_area": null,
+    "adapter_area_m2": 84.179,
+    "defect_only_corrected_area_m2": null,
+    "defect_only_state": "ONLY_IN_ADAPTER",
+    "explained_by_defect_alone": true
+   },
+   {
+    "floor": "GROUND",
+    "room_ref": "GR-108",
+    "r8_5_native_check": "CHANGED_NATIVE_TOPOLOGY",
+    "r8_5_canonical_native_area": null,
+    "adapter_area_m2": 31.92,
+    "defect_only_corrected_area_m2": null,
+    "defect_only_state": "ONLY_IN_ADAPTER",
+    "explained_by_defect_alone": true
+   },
+   {
+    "floor": "GROUND",
+    "room_ref": "GR-032",
+    "r8_5_native_check": "CHANGED_NATIVE_TOPOLOGY",
+    "r8_5_canonical_native_area": null,
+    "adapter_area_m2": 6.3959,
+    "defect_only_corrected_area_m2": null,
+    "defect_only_state": "ONLY_IN_ADAPTER",
+    "explained_by_defect_alone": true
+   },
+   {
+    "floor": "GROUND",
+    "room_ref": "GR-123",
+    "r8_5_native_check": "CHANGED_NATIVE_TOPOLOGY",
+    "r8_5_canonical_native_area": null,
+    "adapter_area_m2": 4.1388,
+    "defect_only_corrected_area_m2": null,
+    "defect_only_state": "ONLY_IN_ADAPTER",
+    "explained_by_defect_alone": true
+   },
+   {
+    "floor": "GROUND",
+    "room_ref": "GR-071",
+    "r8_5_native_check": "CHANGED_NATIVE_TOPOLOGY",
+    "r8_5_canonical_native_area": null,
+    "adapter_area_m2": 3.2358,
+    "defect_only_corrected_area_m2": null,
+    "defect_only_state": "ONLY_IN_ADAPTER",
+    "explained_by_defect_alone": true
+   },
+   {
+    "floor": "GROUND",
+    "room_ref": "GR-101",
+    "r8_5_native_check": "CHANGED_NATIVE_TOPOLOGY",
+    "r8_5_canonical_native_area": null,
+    "adapter_area_m2": 1.853,
+    "defect_only_corrected_area_m2": null,
+    "defect_only_state": "ONLY_IN_ADAPTER",
+    "explained_by_defect_alone": true
+   },
+   {
+    "floor": "GROUND",
+    "room_ref": "GR-021",
+    "r8_5_native_check": "CHANGED_NATIVE_AREA",
+    "r8_5_canonical_native_area": 1.3597,
+    "adapter_area_m2": 1.3599,
+    "defect_only_corrected_area_m2": 1.3597,
+    "defect_only_state": "AREA_CHANGED",
+    "explained_by_defect_alone": true
+   },
+   {
+    "floor": "GROUND",
+    "room_ref": "GR-102",
+    "r8_5_native_check": "CHANGED_NATIVE_AREA",
+    "r8_5_canonical_native_area": 1.3497,
+    "adapter_area_m2": 1.3499,
+    "defect_only_corrected_area_m2": 1.3497,
+    "defect_only_state": "AREA_CHANGED",
+    "explained_by_defect_alone": true
+   },
+   {
+    "floor": "GROUND",
+    "room_ref": "GR-022",
+    "r8_5_native_check": "CHANGED_NATIVE_TOPOLOGY",
+    "r8_5_canonical_native_area": null,
+    "adapter_area_m2": 1.2003,
+    "defect_only_corrected_area_m2": null,
+    "defect_only_state": "ONLY_IN_ADAPTER",
+    "explained_by_defect_alone": true
+   },
+   {
+    "floor": "GROUND",
+    "room_ref": "GR-029",
+    "r8_5_native_check": "CHANGED_NATIVE_TOPOLOGY",
+    "r8_5_canonical_native_area": null,
+    "adapter_area_m2": 1.1025,
+    "defect_only_corrected_area_m2": null,
+    "defect_only_state": "ONLY_IN_ADAPTER",
+    "explained_by_defect_alone": true
+   },
+   {
+    "floor": "GROUND",
+    "room_ref": "GR-025",
+    "r8_5_native_check": "CHANGED_NATIVE_TOPOLOGY",
+    "r8_5_canonical_native_area": null,
+    "adapter_area_m2": 0.888,
+    "defect_only_corrected_area_m2": null,
+    "defect_only_state": "ONLY_IN_ADAPTER",
+    "explained_by_defect_alone": true
+   },
+   {
+    "floor": "GROUND",
+    "room_ref": "GR-109",
+    "r8_5_native_check": "CHANGED_NATIVE_TOPOLOGY",
+    "r8_5_canonical_native_area": null,
+    "adapter_area_m2": 0.8302,
+    "defect_only_corrected_area_m2": null,
+    "defect_only_state": "ONLY_IN_ADAPTER",
+    "explained_by_defect_alone": true
+   },
+   {
+    "floor": "GROUND",
+    "room_ref": "GR-069",
+    "r8_5_native_check": "CHANGED_NATIVE_TOPOLOGY",
+    "r8_5_canonical_native_area": null,
+    "adapter_area_m2": 0.4032,
+    "defect_only_corrected_area_m2": null,
+    "defect_only_state": "ONLY_IN_ADAPTER",
+    "explained_by_defect_alone": true
+   },
+   {
+    "floor": "GROUND",
+    "room_ref": "GR-087",
+    "r8_5_native_check": "CHANGED_NATIVE_TOPOLOGY",
+    "r8_5_canonical_native_area": null,
+    "adapter_area_m2": 0.4,
+    "defect_only_corrected_area_m2": null,
+    "defect_only_state": "ONLY_IN_ADAPTER",
+    "explained_by_defect_alone": true
+   },
+   {
+    "floor": "GROUND",
+    "room_ref": "GR-020",
+    "r8_5_native_check": "CHANGED_NATIVE_TOPOLOGY",
+    "r8_5_canonical_native_area": null,
+    "adapter_area_m2": 0.38,
+    "defect_only_corrected_area_m2": null,
+    "defect_only_state": "ONLY_IN_ADAPTER",
+    "explained_by_defect_alone": true
+   },
+   {
+    "floor": "GROUND",
+    "room_ref": "GR-046",
+    "r8_5_native_check": "CHANGED_NATIVE_TOPOLOGY",
+    "r8_5_canonical_native_area": null,
+    "adapter_area_m2": 0.38,
+    "defect_only_corrected_area_m2": null,
+    "defect_only_state": "ONLY_IN_ADAPTER",
+    "explained_by_defect_alone": true
+   },
+   {
+    "floor": "FIRST",
+    "room_ref": "FI-003",
+    "r8_5_native_check": "CHANGED_NATIVE_AREA",
+    "r8_5_canonical_native_area": 11.3333,
+    "adapter_area_m2": 11.3331,
+    "defect_only_corrected_area_m2": 11.3333,
+    "defect_only_state": "AREA_CHANGED",
+    "explained_by_defect_alone": true
+   },
+   {
+    "floor": "FIRST",
+    "room_ref": "FI-002",
+    "r8_5_native_check": "CHANGED_NATIVE_AREA",
+    "r8_5_canonical_native_area": 2.9514,
+    "adapter_area_m2": 2.9913,
+    "defect_only_corrected_area_m2": 2.9514,
+    "defect_only_state": "AREA_CHANGED",
+    "explained_by_defect_alone": true
+   },
+   {
+    "floor": "FIRST",
+    "room_ref": "FI-000",
+    "r8_5_native_check": "CHANGED_NATIVE_TOPOLOGY",
+    "r8_5_canonical_native_area": null,
+    "adapter_area_m2": 1.4869,
+    "defect_only_corrected_area_m2": null,
+    "defect_only_state": "ONLY_IN_ADAPTER",
+    "explained_by_defect_alone": true
+   }
+  ],
+  "explained_by_defect_alone": 25,
+  "not_explained": 0,
+  "not_found": 0
+ },
+ "coincidence_with_protected_value": {
+  "room": "BA-092",
+  "adapter_area_m2": 146.97,
+  "defect_only_corrected_area_m2": 146.7697,
+  "note": "the corrected value 146.7697 is the column-net figure on the R8.3 anti-calibration list; the closing edges of the col.str outlines are what deduct the column footprints from the room. Whether columns are deducted from this room is an UNDECIDED trade-rule question: correcting the reader would silently decide it. The defect fix and the column-deduction decision must be taken separately, the decision first, by its owner.",
+  "decides_trade_rule": false
+ },
+ "no_change_attestation": {
+  "geometry_py_sha256_before": "533e734fb619a81ae2da5d3b1ad5dff756541c52a801a4a249998edff7cc623b",
+  "geometry_py_sha256_after": "533e734fb619a81ae2da5d3b1ad5dff756541c52a801a4a249998edff7cc623b",
+  "geometry_py_unchanged": true,
+  "published_boqs_changed": false,
+  "frozen_quantities_changed": false,
+  "owner_answers_changed": false,
+  "benchmark_truth_changed": false
+ },
+ "required_before_any_fix": [
+  "owner decision on column deduction for the affected rooms (trade rule; R9 scope, not R8)",
+  "fix through the migration path (canonical K1 geometry), not by editing the adapter in place",
+  "re-issue of any affected quantity under a new version with supersession, never an overwrite"
+ ]
+}

@@ -1,0 +1,2124 @@
+{
+ "frozen_before_benchmark": true,
+ "policy": {
+  "cb_states": [
+   "MATCH_CONFIRMED",
+   "SPAN_LENGTH_CONFLICT",
+   "SPAN_COUNT_CONFLICT",
+   "TAG_WITH_NO_MEMBER",
+   "MEMBER_WITH_NO_TAG",
+   "BLOCKED"
+  ],
+  "policy_id": "STRUCTURAL_CENSUS_V1",
+  "precedence": [
+   "LOCAL_PANEL_NOTE",
+   "FLOOR_SPECIFIC_NOTE",
+   "PROJECT_DEFAULT"
+  ],
+  "principles": [
+   "plan decides occurrence; schedule only defines",
+   "no default overrides a local note",
+   "a value is never rounded into a table row it does not match",
+   "every plan object ends in one terminal state"
+  ],
+  "rule_states": [
+   "EXACT_RULE",
+   "RULE_NOT_EXACT_MATCH",
+   "BLOCKED_METHOD"
+  ],
+  "terminal_states": [
+   "COUNTED_AND_DEFINED",
+   "COUNTED_DEFINITION_PARTIAL",
+   "COUNTED_BLOCKED",
+   "NOT_IN_SCOPE"
+  ]
+ },
+ "register": "COLUMN_DEFINITION_REGISTER",
+ "round": "S1",
+ "rows": [
+  {
+   "B_cm": 30.0,
+   "D_cm": 50.0,
+   "L_cm": 50.0,
+   "T_cm": 30.0,
+   "column_type": "C",
+   "definition_id": "CDEF-C-FOUNDATION",
+   "link_topology": {
+    "band": "TIE_L_LE_50",
+    "bars_drawn_in_detail": 4,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 1,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "raw": [
+     "8",
+     "16"
+    ]
+   },
+   "plan_occurrences": 5,
+   "schedule_band_key": "FOU",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D03",
+    "page": 9,
+    "raw_attributes": {
+     "FOU.D": "16",
+     "FOU.H": "50",
+     "FOU.R": "8",
+     "FOU.W": "30"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "FOUNDATION",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "L_cm": 50.0,
+   "T_cm": 20.0,
+   "column_type": "C",
+   "definition_id": "CDEF-C-GF",
+   "link_topology": {
+    "band": "TIE_L_LE_50",
+    "bars_drawn_in_detail": 4,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 1,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "raw": [
+     "8",
+     "16"
+    ]
+   },
+   "plan_occurrences": 5,
+   "schedule_band_key": "GR",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D03",
+    "page": 9,
+    "raw_attributes": {
+     "GR.D": "16",
+     "GR.H": "50",
+     "GR.R": "8",
+     "GR.W": "20"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "GF",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "column_type": "C",
+   "definition_id": "CDEF-C-1F",
+   "plan_occurrences": 0,
+   "schedule_band_key": "1ST",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D03",
+    "page": 9
+   },
+   "state": "NO_BAND_IN_SCHEDULE",
+   "storey_band": "1F"
+  },
+  {
+   "column_type": "C",
+   "definition_id": "CDEF-C-2F",
+   "plan_occurrences": 0,
+   "schedule_band_key": "2ND",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D03",
+    "page": 9
+   },
+   "state": "NO_BAND_IN_SCHEDULE",
+   "storey_band": "2F"
+  },
+  {
+   "B_cm": 30.0,
+   "D_cm": 50.0,
+   "L_cm": 50.0,
+   "T_cm": 30.0,
+   "column_type": "C1",
+   "definition_id": "CDEF-C1-FOUNDATION",
+   "link_topology": {
+    "band": "TIE_L_LE_50",
+    "bars_drawn_in_detail": 4,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 1,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "raw": [
+     "8",
+     "16"
+    ]
+   },
+   "plan_occurrences": 1,
+   "schedule_band_key": "FOU",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D32",
+    "page": 9,
+    "raw_attributes": {
+     "FOU.D": "16",
+     "FOU.H": "50",
+     "FOU.R": "8",
+     "FOU.W": "30"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "FOUNDATION",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "L_cm": 50.0,
+   "T_cm": 20.0,
+   "column_type": "C1",
+   "definition_id": "CDEF-C1-GF",
+   "link_topology": {
+    "band": "TIE_L_LE_50",
+    "bars_drawn_in_detail": 4,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 1,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "raw": [
+     "8",
+     "16"
+    ]
+   },
+   "plan_occurrences": 1,
+   "schedule_band_key": "GR",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D32",
+    "page": 9,
+    "raw_attributes": {
+     "GR.D": "16",
+     "GR.H": "50",
+     "GR.R": "8",
+     "GR.W": "20"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "GF",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "L_cm": 50.0,
+   "T_cm": 20.0,
+   "column_type": "C1",
+   "definition_id": "CDEF-C1-1F",
+   "link_topology": {
+    "band": "TIE_L_LE_50",
+    "bars_drawn_in_detail": 4,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 1,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 6,
+    "dia_mm": 16,
+    "raw": [
+     "6",
+     "16"
+    ]
+   },
+   "plan_occurrences": 1,
+   "schedule_band_key": "1ST",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D32",
+    "page": 9,
+    "raw_attributes": {
+     "1ST.D": "16",
+     "1ST.H": "50",
+     "1ST.R": "6",
+     "1ST.W": "20"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "1F",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "L_cm": 50.0,
+   "T_cm": 20.0,
+   "column_type": "C1",
+   "definition_id": "CDEF-C1-2F",
+   "link_topology": {
+    "band": "TIE_L_LE_50",
+    "bars_drawn_in_detail": 4,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 1,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 6,
+    "dia_mm": 16,
+    "raw": [
+     "6",
+     "16"
+    ]
+   },
+   "plan_occurrences": 1,
+   "schedule_band_key": "2ND",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D32",
+    "page": 9,
+    "raw_attributes": {
+     "2ND.D": "16",
+     "2ND.H": "50",
+     "2ND.R": "6",
+     "2ND.W": "20"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "2F",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 30.0,
+   "D_cm": 50.0,
+   "L_cm": 50.0,
+   "T_cm": 30.0,
+   "column_type": "C2",
+   "definition_id": "CDEF-C2-FOUNDATION",
+   "link_topology": {
+    "band": "TIE_L_LE_50",
+    "bars_drawn_in_detail": 4,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 1,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "raw": [
+     "8",
+     "16"
+    ]
+   },
+   "plan_occurrences": 4,
+   "schedule_band_key": "FOU",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D46",
+    "page": 9,
+    "raw_attributes": {
+     "FOU.D": "16",
+     "FOU.H": "50",
+     "FOU.R": "8",
+     "FOU.W": "30"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "FOUNDATION",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "L_cm": 50.0,
+   "T_cm": 20.0,
+   "column_type": "C2",
+   "definition_id": "CDEF-C2-GF",
+   "link_topology": {
+    "band": "TIE_L_LE_50",
+    "bars_drawn_in_detail": 4,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 1,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "raw": [
+     "8",
+     "16"
+    ]
+   },
+   "plan_occurrences": 4,
+   "schedule_band_key": "GR",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D46",
+    "page": 9,
+    "raw_attributes": {
+     "GR.D": "16",
+     "GR.H": "50",
+     "GR.R": "8",
+     "GR.W": "20"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "GF",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "L_cm": 50.0,
+   "T_cm": 20.0,
+   "column_type": "C2",
+   "definition_id": "CDEF-C2-1F",
+   "link_topology": {
+    "band": "TIE_L_LE_50",
+    "bars_drawn_in_detail": 4,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 1,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "raw": [
+     "8",
+     "16"
+    ]
+   },
+   "plan_occurrences": 4,
+   "schedule_band_key": "1ST",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D46",
+    "page": 9,
+    "raw_attributes": {
+     "1ST.D": "16",
+     "1ST.H": "50",
+     "1ST.R": "8",
+     "1ST.W": "20"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "1F",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "L_cm": 50.0,
+   "T_cm": 20.0,
+   "column_type": "C2",
+   "definition_id": "CDEF-C2-2F",
+   "link_topology": {
+    "band": "TIE_L_LE_50",
+    "bars_drawn_in_detail": 4,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 1,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 6,
+    "dia_mm": 16,
+    "raw": [
+     "6",
+     "16"
+    ]
+   },
+   "plan_occurrences": 4,
+   "schedule_band_key": "2ND",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D46",
+    "page": 9,
+    "raw_attributes": {
+     "2ND.D": "16",
+     "2ND.H": "50",
+     "2ND.R": "6",
+     "2ND.W": "20"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "2F",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 30.0,
+   "D_cm": 50.0,
+   "L_cm": 50.0,
+   "T_cm": 30.0,
+   "column_type": "C3",
+   "definition_id": "CDEF-C3-FOUNDATION",
+   "link_topology": {
+    "band": "TIE_L_LE_50",
+    "bars_drawn_in_detail": 4,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 1,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "raw": [
+     "8",
+     "16"
+    ]
+   },
+   "plan_occurrences": 6,
+   "schedule_band_key": "FOU",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D5A",
+    "page": 9,
+    "raw_attributes": {
+     "FOU.D": "16",
+     "FOU.H": "50",
+     "FOU.R": "8",
+     "FOU.W": "30"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "FOUNDATION",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 25.0,
+   "D_cm": 50.0,
+   "L_cm": 50.0,
+   "T_cm": 25.0,
+   "column_type": "C3",
+   "definition_id": "CDEF-C3-GF",
+   "link_topology": {
+    "band": "TIE_L_LE_50",
+    "bars_drawn_in_detail": 4,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 1,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "raw": [
+     "8",
+     "16"
+    ]
+   },
+   "plan_occurrences": 6,
+   "schedule_band_key": "GR",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D5A",
+    "page": 9,
+    "raw_attributes": {
+     "GR.D": "16",
+     "GR.H": "50",
+     "GR.R": "8",
+     "GR.W": "25"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "GF",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "L_cm": 50.0,
+   "T_cm": 20.0,
+   "column_type": "C3",
+   "definition_id": "CDEF-C3-1F",
+   "link_topology": {
+    "band": "TIE_L_LE_50",
+    "bars_drawn_in_detail": 4,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 1,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 6,
+    "dia_mm": 16,
+    "raw": [
+     "6",
+     "16"
+    ]
+   },
+   "plan_occurrences": 2,
+   "schedule_band_key": "1ST",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D5A",
+    "page": 9,
+    "raw_attributes": {
+     "1ST.D": "16",
+     "1ST.H": "50",
+     "1ST.R": "6",
+     "1ST.W": "20"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "1F",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "L_cm": 50.0,
+   "T_cm": 20.0,
+   "column_type": "C3",
+   "definition_id": "CDEF-C3-2F",
+   "link_topology": {
+    "band": "TIE_L_LE_50",
+    "bars_drawn_in_detail": 4,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 1,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 6,
+    "dia_mm": 16,
+    "raw": [
+     "6",
+     "16"
+    ]
+   },
+   "plan_occurrences": 1,
+   "schedule_band_key": "2ND",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D5A",
+    "page": 9,
+    "raw_attributes": {
+     "2ND.D": "16",
+     "2ND.H": "50",
+     "2ND.R": "6",
+     "2ND.W": "20"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "2F",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 30.0,
+   "D_cm": 50.0,
+   "L_cm": 50.0,
+   "T_cm": 30.0,
+   "column_type": "C4",
+   "definition_id": "CDEF-C4-FOUNDATION",
+   "link_topology": {
+    "band": "TIE_L_LE_50",
+    "bars_drawn_in_detail": 4,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 1,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "raw": [
+     "8",
+     "16"
+    ]
+   },
+   "plan_occurrences": 2,
+   "schedule_band_key": "FOU",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D6E",
+    "page": 9,
+    "raw_attributes": {
+     "FOU.D": "16",
+     "FOU.H": "50",
+     "FOU.R": "8",
+     "FOU.W": "30"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "FOUNDATION",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 25.0,
+   "D_cm": 50.0,
+   "L_cm": 50.0,
+   "T_cm": 25.0,
+   "column_type": "C4",
+   "definition_id": "CDEF-C4-GF",
+   "link_topology": {
+    "band": "TIE_L_LE_50",
+    "bars_drawn_in_detail": 4,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 1,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "raw": [
+     "8",
+     "16"
+    ]
+   },
+   "plan_occurrences": 2,
+   "schedule_band_key": "GR",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D6E",
+    "page": 9,
+    "raw_attributes": {
+     "GR.D": "16",
+     "GR.H": "50",
+     "GR.R": "8",
+     "GR.W": "25"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "GF",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "L_cm": 50.0,
+   "T_cm": 20.0,
+   "column_type": "C4",
+   "definition_id": "CDEF-C4-1F",
+   "link_topology": {
+    "band": "TIE_L_LE_50",
+    "bars_drawn_in_detail": 4,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 1,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "raw": [
+     "8",
+     "16"
+    ]
+   },
+   "plan_occurrences": 2,
+   "schedule_band_key": "1ST",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D6E",
+    "page": 9,
+    "raw_attributes": {
+     "1ST.D": "16",
+     "1ST.H": "50",
+     "1ST.R": "8",
+     "1ST.W": "20"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "1F",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "L_cm": 50.0,
+   "T_cm": 20.0,
+   "column_type": "C4",
+   "definition_id": "CDEF-C4-2F",
+   "link_topology": {
+    "band": "TIE_L_LE_50",
+    "bars_drawn_in_detail": 4,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 1,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 6,
+    "dia_mm": 16,
+    "raw": [
+     "6",
+     "16"
+    ]
+   },
+   "plan_occurrences": 0,
+   "schedule_band_key": "2ND",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D6E",
+    "page": 9,
+    "raw_attributes": {
+     "2ND.D": "16",
+     "2ND.H": "50",
+     "2ND.R": "6",
+     "2ND.W": "20"
+    }
+   },
+   "state": "DEFINED_NO_PLAN_OCCURRENCE",
+   "storey_band": "2F",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 30.0,
+   "D_cm": 60.0,
+   "L_cm": 60.0,
+   "T_cm": 30.0,
+   "column_type": "C5",
+   "definition_id": "CDEF-C5-FOUNDATION",
+   "link_topology": {
+    "band": "TIE_50_LT_L_LT_80",
+    "bars_drawn_in_detail": 8,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 2,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 10,
+    "dia_mm": 16,
+    "raw": [
+     "10",
+     "16"
+    ]
+   },
+   "plan_occurrences": 3,
+   "schedule_band_key": "FOU",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D82",
+    "page": 9,
+    "raw_attributes": {
+     "FOU.D": "16",
+     "FOU.H": "60",
+     "FOU.R": "10",
+     "FOU.W": "30"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "FOUNDATION",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 25.0,
+   "D_cm": 60.0,
+   "L_cm": 60.0,
+   "T_cm": 25.0,
+   "column_type": "C5",
+   "definition_id": "CDEF-C5-GF",
+   "link_topology": {
+    "band": "TIE_50_LT_L_LT_80",
+    "bars_drawn_in_detail": 8,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 2,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 10,
+    "dia_mm": 16,
+    "raw": [
+     "10",
+     "16"
+    ]
+   },
+   "plan_occurrences": 3,
+   "schedule_band_key": "GR",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D82",
+    "page": 9,
+    "raw_attributes": {
+     "GR.D": "16",
+     "GR.H": "60",
+     "GR.R": "10",
+     "GR.W": "25"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "GF",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "L_cm": 50.0,
+   "T_cm": 20.0,
+   "column_type": "C5",
+   "definition_id": "CDEF-C5-1F",
+   "link_topology": {
+    "band": "TIE_L_LE_50",
+    "bars_drawn_in_detail": 4,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 1,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "raw": [
+     "8",
+     "16"
+    ]
+   },
+   "plan_occurrences": 3,
+   "schedule_band_key": "1ST",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D82",
+    "page": 9,
+    "raw_attributes": {
+     "1ST.D": "16",
+     "1ST.H": "50",
+     "1ST.R": "8",
+     "1ST.W": "20"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "1F",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "L_cm": 50.0,
+   "T_cm": 20.0,
+   "column_type": "C5",
+   "definition_id": "CDEF-C5-2F",
+   "link_topology": {
+    "band": "TIE_L_LE_50",
+    "bars_drawn_in_detail": 4,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 1,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 6,
+    "dia_mm": 16,
+    "raw": [
+     "6",
+     "16"
+    ]
+   },
+   "plan_occurrences": 1,
+   "schedule_band_key": "2ND",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D82",
+    "page": 9,
+    "raw_attributes": {
+     "2ND.D": "16",
+     "2ND.H": "50",
+     "2ND.R": "6",
+     "2ND.W": "20"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "2F",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 30.0,
+   "D_cm": 70.0,
+   "L_cm": 70.0,
+   "T_cm": 30.0,
+   "column_type": "C6",
+   "definition_id": "CDEF-C6-FOUNDATION",
+   "link_topology": {
+    "band": "TIE_50_LT_L_LT_80",
+    "bars_drawn_in_detail": 8,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 2,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 10,
+    "dia_mm": 16,
+    "raw": [
+     "10",
+     "16"
+    ]
+   },
+   "plan_occurrences": 1,
+   "schedule_band_key": "FOU",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D96",
+    "page": 9,
+    "raw_attributes": {
+     "FOU.D": "16",
+     "FOU.H": "70",
+     "FOU.R": "10",
+     "FOU.W": "30"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "FOUNDATION",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 25.0,
+   "D_cm": 70.0,
+   "L_cm": 70.0,
+   "T_cm": 25.0,
+   "column_type": "C6",
+   "definition_id": "CDEF-C6-GF",
+   "link_topology": {
+    "band": "TIE_50_LT_L_LT_80",
+    "bars_drawn_in_detail": 8,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 2,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 10,
+    "dia_mm": 16,
+    "raw": [
+     "10",
+     "16"
+    ]
+   },
+   "plan_occurrences": 1,
+   "schedule_band_key": "GR",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D96",
+    "page": 9,
+    "raw_attributes": {
+     "GR.D": "16",
+     "GR.H": "70",
+     "GR.R": "10",
+     "GR.W": "25"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "GF",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 20.0,
+   "D_cm": 60.0,
+   "L_cm": 60.0,
+   "T_cm": 20.0,
+   "column_type": "C6",
+   "definition_id": "CDEF-C6-1F",
+   "link_topology": {
+    "band": "TIE_50_LT_L_LT_80",
+    "bars_drawn_in_detail": 8,
+    "bars_in_schedule_vs_detail": "SAME",
+    "closed_ties_per_set": 2,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "raw": [
+     "8",
+     "16"
+    ]
+   },
+   "plan_occurrences": 1,
+   "schedule_band_key": "1ST",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D96",
+    "page": 9,
+    "raw_attributes": {
+     "1ST.D": "16",
+     "1ST.H": "60",
+     "1ST.R": "8",
+     "1ST.W": "20"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "1F",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "L_cm": 50.0,
+   "T_cm": 20.0,
+   "column_type": "C6",
+   "definition_id": "CDEF-C6-2F",
+   "link_topology": {
+    "band": "TIE_L_LE_50",
+    "bars_drawn_in_detail": 4,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 1,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "raw": [
+     "8",
+     "16"
+    ]
+   },
+   "plan_occurrences": 0,
+   "schedule_band_key": "2ND",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1D96",
+    "page": 9,
+    "raw_attributes": {
+     "2ND.D": "16",
+     "2ND.H": "50",
+     "2ND.R": "8",
+     "2ND.W": "20"
+    }
+   },
+   "state": "DEFINED_NO_PLAN_OCCURRENCE",
+   "storey_band": "2F",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 30.0,
+   "D_cm": 80.0,
+   "L_cm": 80.0,
+   "T_cm": 30.0,
+   "column_type": "C7",
+   "definition_id": "CDEF-C7-FOUNDATION",
+   "link_topology": {
+    "band": null,
+    "bars_drawn_in_detail": null,
+    "bars_in_schedule_vs_detail": null,
+    "closed_ties_per_set": null,
+    "state": "BOUNDARY_GAP"
+   },
+   "longitudinal_bars": {
+    "count": 12,
+    "dia_mm": 16,
+    "raw": [
+     "12",
+     "16"
+    ]
+   },
+   "plan_occurrences": 1,
+   "schedule_band_key": "FOU",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1DAA",
+    "page": 9,
+    "raw_attributes": {
+     "FOU.D": "16",
+     "FOU.H": "80",
+     "FOU.R": "12",
+     "FOU.W": "30"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "FOUNDATION",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 25.0,
+   "D_cm": 80.0,
+   "L_cm": 80.0,
+   "T_cm": 25.0,
+   "column_type": "C7",
+   "definition_id": "CDEF-C7-GF",
+   "link_topology": {
+    "band": null,
+    "bars_drawn_in_detail": null,
+    "bars_in_schedule_vs_detail": null,
+    "closed_ties_per_set": null,
+    "state": "BOUNDARY_GAP"
+   },
+   "longitudinal_bars": {
+    "count": 12,
+    "dia_mm": 16,
+    "raw": [
+     "12",
+     "16"
+    ]
+   },
+   "plan_occurrences": 1,
+   "schedule_band_key": "GR",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1DAA",
+    "page": 9,
+    "raw_attributes": {
+     "GR.D": "16",
+     "GR.H": "80",
+     "GR.R": "12",
+     "GR.W": "25"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "GF",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 20.0,
+   "D_cm": 80.0,
+   "L_cm": 80.0,
+   "T_cm": 20.0,
+   "column_type": "C7",
+   "definition_id": "CDEF-C7-1F",
+   "link_topology": {
+    "band": null,
+    "bars_drawn_in_detail": null,
+    "bars_in_schedule_vs_detail": null,
+    "closed_ties_per_set": null,
+    "state": "BOUNDARY_GAP"
+   },
+   "longitudinal_bars": {
+    "count": 10,
+    "dia_mm": 16,
+    "raw": [
+     "10",
+     "16"
+    ]
+   },
+   "plan_occurrences": 1,
+   "schedule_band_key": "1ST",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1DAA",
+    "page": 9,
+    "raw_attributes": {
+     "1ST.D": "16",
+     "1ST.H": "80",
+     "1ST.R": "10",
+     "1ST.W": "20"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "1F",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 20.0,
+   "D_cm": 60.0,
+   "L_cm": 60.0,
+   "T_cm": 20.0,
+   "column_type": "C7",
+   "definition_id": "CDEF-C7-2F",
+   "link_topology": {
+    "band": "TIE_50_LT_L_LT_80",
+    "bars_drawn_in_detail": 8,
+    "bars_in_schedule_vs_detail": "SAME",
+    "closed_ties_per_set": 2,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "raw": [
+     "8",
+     "16"
+    ]
+   },
+   "plan_occurrences": 0,
+   "schedule_band_key": "2ND",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1DAA",
+    "page": 9,
+    "raw_attributes": {
+     "2ND.D": "16",
+     "2ND.H": "60",
+     "2ND.R": "8",
+     "2ND.W": "20"
+    }
+   },
+   "state": "DEFINED_NO_PLAN_OCCURRENCE",
+   "storey_band": "2F",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 30.0,
+   "D_cm": 90.0,
+   "L_cm": 90.0,
+   "T_cm": 30.0,
+   "column_type": "C8",
+   "definition_id": "CDEF-C8-FOUNDATION",
+   "link_topology": {
+    "band": "TIE_80_LT_L_LT_120",
+    "bars_drawn_in_detail": 12,
+    "bars_in_schedule_vs_detail": "SAME",
+    "closed_ties_per_set": 3,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 12,
+    "dia_mm": 16,
+    "raw": [
+     "12",
+     "16"
+    ]
+   },
+   "plan_occurrences": 2,
+   "schedule_band_key": "FOU",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1DBE",
+    "page": 9,
+    "raw_attributes": {
+     "FOU.D": "16",
+     "FOU.H": "90",
+     "FOU.R": "12",
+     "FOU.W": "30"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "FOUNDATION",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 25.0,
+   "D_cm": 90.0,
+   "L_cm": 90.0,
+   "T_cm": 25.0,
+   "column_type": "C8",
+   "definition_id": "CDEF-C8-GF",
+   "link_topology": {
+    "band": "TIE_80_LT_L_LT_120",
+    "bars_drawn_in_detail": 12,
+    "bars_in_schedule_vs_detail": "SAME",
+    "closed_ties_per_set": 3,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 12,
+    "dia_mm": 16,
+    "raw": [
+     "12",
+     "16"
+    ]
+   },
+   "plan_occurrences": 2,
+   "schedule_band_key": "GR",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1DBE",
+    "page": 9,
+    "raw_attributes": {
+     "GR.D": "16",
+     "GR.H": "90",
+     "GR.R": "12",
+     "GR.W": "25"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "GF",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 20.0,
+   "D_cm": 90.0,
+   "L_cm": 90.0,
+   "T_cm": 20.0,
+   "column_type": "C8",
+   "definition_id": "CDEF-C8-1F",
+   "link_topology": {
+    "band": "TIE_80_LT_L_LT_120",
+    "bars_drawn_in_detail": 12,
+    "bars_in_schedule_vs_detail": "SAME",
+    "closed_ties_per_set": 3,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 12,
+    "dia_mm": 16,
+    "raw": [
+     "12",
+     "16"
+    ]
+   },
+   "plan_occurrences": 2,
+   "schedule_band_key": "1ST",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1DBE",
+    "page": 9,
+    "raw_attributes": {
+     "1ST.D": "16",
+     "1ST.H": "90",
+     "1ST.R": "12",
+     "1ST.W": "20"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "1F",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 20.0,
+   "D_cm": 70.0,
+   "L_cm": 70.0,
+   "T_cm": 20.0,
+   "column_type": "C8",
+   "definition_id": "CDEF-C8-2F",
+   "link_topology": {
+    "band": "TIE_50_LT_L_LT_80",
+    "bars_drawn_in_detail": 8,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 2,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 10,
+    "dia_mm": 16,
+    "raw": [
+     "10",
+     "16"
+    ]
+   },
+   "plan_occurrences": 0,
+   "schedule_band_key": "2ND",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1DBE",
+    "page": 9,
+    "raw_attributes": {
+     "2ND.D": "16",
+     "2ND.H": "70",
+     "2ND.R": "10",
+     "2ND.W": "20"
+    }
+   },
+   "state": "DEFINED_NO_PLAN_OCCURRENCE",
+   "storey_band": "2F",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 30.0,
+   "D_cm": 100.0,
+   "L_cm": 100.0,
+   "T_cm": 30.0,
+   "column_type": "C9",
+   "definition_id": "CDEF-C9-FOUNDATION",
+   "link_topology": {
+    "band": "TIE_80_LT_L_LT_120",
+    "bars_drawn_in_detail": 12,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 3,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 14,
+    "dia_mm": 16,
+    "raw": [
+     "14",
+     "16"
+    ]
+   },
+   "plan_occurrences": 2,
+   "schedule_band_key": "FOU",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1DD2",
+    "page": 9,
+    "raw_attributes": {
+     "FOU.D": "16",
+     "FOU.H": "100",
+     "FOU.R": "14",
+     "FOU.W": "30"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "FOUNDATION",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 25.0,
+   "D_cm": 100.0,
+   "L_cm": 100.0,
+   "T_cm": 25.0,
+   "column_type": "C9",
+   "definition_id": "CDEF-C9-GF",
+   "link_topology": {
+    "band": "TIE_80_LT_L_LT_120",
+    "bars_drawn_in_detail": 12,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 3,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 14,
+    "dia_mm": 16,
+    "raw": [
+     "14",
+     "16"
+    ]
+   },
+   "plan_occurrences": 2,
+   "schedule_band_key": "GR",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1DD2",
+    "page": 9,
+    "raw_attributes": {
+     "GR.D": "16",
+     "GR.H": "100",
+     "GR.R": "14",
+     "GR.W": "25"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "GF",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 20.0,
+   "D_cm": 90.0,
+   "L_cm": 90.0,
+   "T_cm": 20.0,
+   "column_type": "C9",
+   "definition_id": "CDEF-C9-1F",
+   "link_topology": {
+    "band": "TIE_80_LT_L_LT_120",
+    "bars_drawn_in_detail": 12,
+    "bars_in_schedule_vs_detail": "SAME",
+    "closed_ties_per_set": 3,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 12,
+    "dia_mm": 16,
+    "raw": [
+     "12",
+     "16"
+    ]
+   },
+   "plan_occurrences": 2,
+   "schedule_band_key": "1ST",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1DD2",
+    "page": 9,
+    "raw_attributes": {
+     "1ST.D": "16",
+     "1ST.H": "90",
+     "1ST.R": "12",
+     "1ST.W": "20"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "1F",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 20.0,
+   "D_cm": 70.0,
+   "L_cm": 70.0,
+   "T_cm": 20.0,
+   "column_type": "C9",
+   "definition_id": "CDEF-C9-2F",
+   "link_topology": {
+    "band": "TIE_50_LT_L_LT_80",
+    "bars_drawn_in_detail": 8,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 2,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 10,
+    "dia_mm": 16,
+    "raw": [
+     "10",
+     "16"
+    ]
+   },
+   "plan_occurrences": 1,
+   "schedule_band_key": "2ND",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1DD2",
+    "page": 9,
+    "raw_attributes": {
+     "2ND.D": "16",
+     "2ND.H": "70",
+     "2ND.R": "10",
+     "2ND.W": "20"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "2F",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 30.0,
+   "D_cm": 70.0,
+   "L_cm": 70.0,
+   "T_cm": 30.0,
+   "column_type": "C10",
+   "definition_id": "CDEF-C10-FOUNDATION",
+   "link_topology": {
+    "band": "TIE_50_LT_L_LT_80",
+    "bars_drawn_in_detail": 8,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 2,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 10,
+    "dia_mm": 16,
+    "raw": [
+     "10",
+     "16"
+    ]
+   },
+   "plan_occurrences": 1,
+   "schedule_band_key": "FOU",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1DE6",
+    "page": 9,
+    "raw_attributes": {
+     "FOU.D": "16",
+     "FOU.H": "70",
+     "FOU.R": "10",
+     "FOU.W": "30"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "FOUNDATION",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 25.0,
+   "D_cm": 70.0,
+   "L_cm": 70.0,
+   "T_cm": 25.0,
+   "column_type": "C10",
+   "definition_id": "CDEF-C10-GF",
+   "link_topology": {
+    "band": "TIE_50_LT_L_LT_80",
+    "bars_drawn_in_detail": 8,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 2,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 10,
+    "dia_mm": 16,
+    "raw": [
+     "10",
+     "16"
+    ]
+   },
+   "plan_occurrences": 1,
+   "schedule_band_key": "GR",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1DE6",
+    "page": 9,
+    "raw_attributes": {
+     "GR.D": "16",
+     "GR.H": "70",
+     "GR.R": "10",
+     "GR.W": "25"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "GF",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "column_type": "C10",
+   "definition_id": "CDEF-C10-1F",
+   "plan_occurrences": 0,
+   "schedule_band_key": "1ST",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1DE6",
+    "page": 9
+   },
+   "state": "NO_BAND_IN_SCHEDULE",
+   "storey_band": "1F"
+  },
+  {
+   "column_type": "C10",
+   "definition_id": "CDEF-C10-2F",
+   "plan_occurrences": 0,
+   "schedule_band_key": "2ND",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1DE6",
+    "page": 9
+   },
+   "state": "NO_BAND_IN_SCHEDULE",
+   "storey_band": "2F"
+  },
+  {
+   "B_cm": 30.0,
+   "D_cm": 110.0,
+   "L_cm": 110.0,
+   "T_cm": 30.0,
+   "column_type": "C11",
+   "definition_id": "CDEF-C11-FOUNDATION",
+   "link_topology": {
+    "band": "TIE_80_LT_L_LT_120",
+    "bars_drawn_in_detail": 12,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 3,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 14,
+    "dia_mm": 16,
+    "raw": [
+     "14",
+     "16"
+    ]
+   },
+   "plan_occurrences": 2,
+   "schedule_band_key": "FOU",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1DFA",
+    "page": 9,
+    "raw_attributes": {
+     "FOU.D": "16",
+     "FOU.H": "110",
+     "FOU.R": "14",
+     "FOU.W": "30"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "FOUNDATION",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 25.0,
+   "D_cm": 110.0,
+   "L_cm": 110.0,
+   "T_cm": 25.0,
+   "column_type": "C11",
+   "definition_id": "CDEF-C11-GF",
+   "link_topology": {
+    "band": "TIE_80_LT_L_LT_120",
+    "bars_drawn_in_detail": 12,
+    "bars_in_schedule_vs_detail": "DIFFERENT_COUNT_DISTRIBUTION_BLOCKED",
+    "closed_ties_per_set": 3,
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 14,
+    "dia_mm": 16,
+    "raw": [
+     "14",
+     "16"
+    ]
+   },
+   "plan_occurrences": 2,
+   "schedule_band_key": "GR",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1DFA",
+    "page": 9,
+    "raw_attributes": {
+     "GR.D": "16",
+     "GR.H": "110",
+     "GR.R": "14",
+     "GR.W": "25"
+    }
+   },
+   "state": "DEFINED",
+   "storey_band": "GF",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "per_metre_semantics": "BLOCKED_METHOD (tie set vs single tie not stated)",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "column_type": "C11",
+   "definition_id": "CDEF-C11-1F",
+   "plan_occurrences": 0,
+   "schedule_band_key": "1ST",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1DFA",
+    "page": 9
+   },
+   "state": "NO_BAND_IN_SCHEDULE",
+   "storey_band": "1F"
+  },
+  {
+   "column_type": "C11",
+   "definition_id": "CDEF-C11-2F",
+   "plan_occurrences": 0,
+   "schedule_band_key": "2ND",
+   "source_row": {
+    "block": "CGT",
+    "insert_handle": "1DFA",
+    "page": 9
+   },
+   "state": "NO_BAND_IN_SCHEDULE",
+   "storey_band": "2F"
+  },
+  {
+   "B_cm": 30.0,
+   "D_cm": 30.0,
+   "L_cm": 30.0,
+   "T_cm": 30.0,
+   "column_type": "CN",
+   "definition_id": "CDEF-CN-FOUNDATION",
+   "link_topology": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 4,
+    "dia_mm": 14,
+    "raw": [
+     "30",
+     "30",
+     "4",
+     "%%C",
+     "14"
+    ]
+   },
+   "other_bands": "dash (absent) in the PDF row",
+   "plan_occurrences": 6,
+   "schedule_band_key": "FOU (loose texts, not a CGT block row)",
+   "source_row": {
+    "handles": [
+     "1B82",
+     "1B88",
+     "1B84",
+     "1B86",
+     "1B87",
+     "1B85"
+    ],
+    "page": 9
+   },
+   "state": "DEFINED",
+   "storey_band": "FOUNDATION",
+   "tie_rule": {
+    "dia_mm": 8,
+    "per_m": 6,
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 20,
+   "D_cm": 70,
+   "column_type": "P.C",
+   "definition_id": "CDEF-P.C-COLPOS-X08-Y02-16850-8912-1F",
+   "link_topology": {
+    "band": "TIE_50_LT_L_LT_80",
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 10,
+    "dia_mm": 16,
+    "text_handle": "543"
+   },
+   "plan_occurrences": 1,
+   "schedule_band_key": "PLAN_LABEL (no schedule row)",
+   "source_row": {
+    "label_handle": "544",
+    "sheet": "GFRS",
+    "text": "P.C 20x70"
+   },
+   "state": "DEFINED_BY_PLAN_LABEL",
+   "storey_band": "1F",
+   "tie_rule": {
+    "applicability_to_planted": "UNRESOLVED",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 20,
+   "D_cm": 50,
+   "column_type": "P.C",
+   "definition_id": "CDEF-P.C-COLPOS-X15-Y02-31508-8912-1F",
+   "link_topology": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "text_handle": "547"
+   },
+   "plan_occurrences": 1,
+   "schedule_band_key": "PLAN_LABEL (no schedule row)",
+   "source_row": {
+    "label_handle": "548",
+    "sheet": "GFRS",
+    "text": "P.C 20x50"
+   },
+   "state": "DEFINED_BY_PLAN_LABEL",
+   "storey_band": "1F",
+   "tie_rule": {
+    "applicability_to_planted": "UNRESOLVED",
+    "rule_id": "P9-COL-TIES"
+   }
+  },
+  {
+   "B_cm": 20,
+   "D_cm": 50,
+   "column_type": "P.C",
+   "definition_id": "CDEF-P.C-COLPOS-X?-Y?-24888-15994-2F",
+   "link_topology": {
+    "band": "TIE_L_LE_50",
+    "state": "EXACT_RULE"
+   },
+   "longitudinal_bars": {
+    "count": 8,
+    "dia_mm": 16,
+    "text_handle": "77D"
+   },
+   "plan_occurrences": 1,
+   "schedule_band_key": "PLAN_LABEL (no schedule row)",
+   "source_row": {
+    "label_handle": "77C",
+    "sheet": "FFRS",
+    "text": "P.C 20x50"
+   },
+   "state": "DEFINED_BY_PLAN_LABEL",
+   "storey_band": "2F",
+   "tie_rule": {
+    "applicability_to_planted": "UNRESOLVED",
+    "rule_id": "P9-COL-TIES"
+   }
+  }
+ ],
+ "source": {
+  "drawing": "ST7757.dxf",
+  "dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "pdf": "ST7757.pdf",
+  "pdf_sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ },
+ "summary": {
+  "by_state": {
+   "DEFINED": 39,
+   "DEFINED_BY_PLAN_LABEL": 3,
+   "DEFINED_NO_PLAN_OCCURRENCE": 4,
+   "NO_BAND_IN_SCHEDULE": 6
+  },
+  "definitions": 52,
+  "occurrences_without_band": [],
+  "schedule_types": [
+   "C",
+   "C1",
+   "C2",
+   "C3",
+   "C4",
+   "C5",
+   "C6",
+   "C7",
+   "C8",
+   "C9",
+   "C10",
+   "C11"
+  ]
+ }
+}

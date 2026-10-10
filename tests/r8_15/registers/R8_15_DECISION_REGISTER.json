@@ -1,0 +1,197 @@
+{
+ "SCHEMA": "URBAN_R8_15_DECISION_REGISTER_V1",
+ "recommendation_before_coding": {
+  "SCHEMA": "URBAN_R8_15_RECOMMENDATION_BEFORE_CODING_V1",
+  "written": "after inspecting the engine, the R8.14 registers, the rule store and the Qortuba room boundaries; before any R8.15 code and before any skirting quantity",
+  "inspected": [
+   "H2060 / H2061: closed LWPOLYLINEs on WALL (GR-05) - TS01 ALREADY realises H2060 as a 2.10 x 0.40 m hole in the BED.ROOM site; the V5 band is a GEOMETRIC_BAND_CANDIDATE; the dashed X (H2062 / H2065) is hidden-layer presentation (GR-16)",
+   "M.B.ROOM / DRESS passage OP-9e0fd219ca5cd391 (1200 x 150 mm): ONE jamb face (the band-end cap of WB-8549, 150 mm, a drawn admitted segment); its other side is the continuous face of wall H518 - not a jamb",
+   "Hall / Lobby passage OP-997f14d12b8e9bc1: its two jamb faces are zero-material TOPOLOGY_CLOSURE edges (H2430 / H2431 owner-confirmed wall ends)",
+   "door jambs: the reveal faces of every door belong to the threshold site, never to a room boundary - a room path already ends at the jamb corners",
+   "windows: every dry-room window is a WINDOW-layer line lying ON the wall face line (edge roles GLAZING_BOUNDARY + TOPOLOGY_BOUNDARY, class OTHER in R8.14); the HALL / PAINTRY glazed opening (2.75 m) is a CLOSURE|GLAZED edge",
+   "rule store (owner_rules.py): QP-09 'the clear WIDTH of every door, sliding door and window comes off the hidden skirting and hidden profile path, whether or not wall stands below the opening. The question is closed and is not asked again'; QP-06 hidden skirting + hidden profile on one payable path (US-08); the section-E method deducts opening widths only and keeps column faces ('a column is not an opening'); no rule adds a jamb return; US-10 'an actual drawing dimension is never overwritten by a default'",
+   "QP-18 (old revision) says the OPPOSITE of the new owner facts for both passages (Hall / Lobby full height, M.B.ROOM / DRESS with head) - the transfer bar of R8.14 was right",
+   "R8.13 OWNER_ROOM_TYPES maps KITCHEN -> PAINTRY through QP-07, whose scope is the CERAMIC takeoff; PAINTRY has no doorway in the selected plan (only the 2.75 m glazed opening to the HALL)",
+   "seven threshold sites: three BATH <-> dry doors, two BED.ROOM <-> HALL, the flat entrance (HALL <-> common landing), one landing <-> outside door"
+  ],
+  "1_three_facts_resolve_owner_blockers": "YES for the three OWNER blockers - OBSTACLE_AUTHORITY_UNPROVEN (H2060 / H2061), PASSAGE_HEAD_CONDITION_NOT_ESTABLISHED (M.B.ROOM / DRESS) and UNIT_BOUNDARY_THRESHOLD (entrance) - provided each fact binds to exact new-revision source parts (fingerprints). They do NOT touch SOURCE_ANCHOR, SHADOW_ONLY, OBJECT_FOOTPRINT_IMPLICIT (Q-03P / Q-12) or the closure-release items.",
+  "2_duct_positive_authority": "YES, as OWNER PHYSICAL OBSTACLE AUTHORITY bound to the H2060 and H2061 segment fingerprints, in an OBSTACLE_AUTHORITY domain only. It is NOT a topology role change: TS01 already realises the hole, so for topology the fact is CORROBORATING_ONLY and the topology digest does not move; for obstacle authority (floor / ceiling exclusion, wall-contact class) it is APPLIED. The V5 band stays a GEOMETRIC_BAND_CANDIDATE. The dashed X is recorded as corroborating presentation and is not a bound part. Never 'closed rectangle + X = duct'.",
+  "3_mb_dress_ceiling": "YES: FULL_HEIGHT (no head, no soffit) means the normal ceiling continues through the 0.18 m2 passage footprint - INCLUDED, no deduction. The passage stays physically open; its one jamb face remains a reveal record without a top.",
+  "4_entrance_marble": "A part-bound owner THRESHOLD finish fact on the entrance door (its symbol parts). The existing threshold OPENING_SITE is allocated WHOLE to MARBLE_THRESHOLD_EXPLICIT (one region = the strip, counted once), in none of the six rows, carried as its own MARBLE_THRESHOLD BOQ item. Porcelain ends at the apartment-side face closure; the landing finish begins at the far face. The rise is NOT stated for the entrance: rise = NOT_STATED (the 20 mm belongs to the Urban wet / service rule; a photograph is not dimension authority) and no water-containment function is claimed there.",
+  "5_urban_rule_model": "A versioned Urban owner METHOD rule (URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1) in its own Urban rule registry (not revision-scoped), evaluated by a generic engine module on (a) a door threshold site with resolved strip geometry and (b) an authoritative owner ROOM TYPE of either side in {BATHROOM, KITCHEN, WASHING_LAUNDRY_ROOM, IRONING_ROOM}. It yields the marble evidence record that door_transition.allocate already turns into MARBLE_THRESHOLD_EXPLICIT (DOOR_TRANSITION_POLICY_V1 unchanged). Room types come from a project room-type map whose entries carry a TRADE SCOPE: QP-07's PAINTRY = kitchen equivalence is scoped to the ceramic takeoff, so it is NOT marble authority (moot here: PAINTRY has no doorway). Where the rule applies it supersedes the R8.14 dry / wet split in scope (the split fact stays in force for any dry / wet door the rule does not cover).",
+  "6_two_cm_vertical": "YES: threshold_rise_mm = 20 is an elevation attribute of the marble element above the adjoining finished floor; it is never a plan dimension, never a depth and never a volume input.",
+  "7_footprint_from_strip": "YES: the threshold OPENING_SITE is source-measured - width = the face-closure length (the structural opening between the jamb caps: 800 / 1000 mm), depth = the separation of the two face closures (the wall thickness, 150 mm), and door_transition already checks width x depth = site area within eps_r x perimeter. Caveat recorded: the door blocks are schematic, so a frame-reduced leaf clear width is not drawn; the marble spans the doorway strip. Unresolved strip geometry -> the marble quantity is blocked.",
+  "8_skirting_freeze_without_owner": "YES. The rule store already closes what ChatGPT leaves open: QP-09 deducts EVERY window, sliding door and glazed width whether or not wall stands below; the section-E method deducts opening widths only and keeps column faces; no rule adds a return. Policy: PHYSICAL_PATH (what touches the floor) kept apart from the SKIRTING_MEASUREMENT_REGION (method parameters). Published basis: real wall faces + column faces + owner-authorised duct faces; doors, passages, glazed openings and windows (QP-09) off; topology closures zero; jamb returns NOT added (no rule adds one) with the RETURN_TO_FRAME counterfactual recorded and one owner question prepared at the END only if it is material. Freeze + synthetic tests + blind Qortuba run before any number.",
+  "9_disagreements_with_chatgpt": [
+   "Windows (section 19): 'a normal window above floor does not break floor-level skirting' is the right PHYSICAL statement but the wrong Qortuba MEASUREMENT: the owner closed this question in QP-09 (deduct every window width whether or not wall stands below). Following the brief would overstate Qortuba skirting by every window width. Physical path and measurement region must stay separate.",
+   "Duct role admission (section 25): no TS01 role change is needed or wanted - the hole already exists; the owner fact is obstacle AUTHORITY, not geometry. Re-running TS01 would only move digests without changing a site.",
+   "Room types (section 28): the rule must read a TRADE-SCOPED room-type map. R8.13 maps PAINTRY to KITCHEN through QP-07, but QP-07 is scoped to the ceramic takeoff; reading that map naively would put marble on a PAINTRY doorway.",
+   "Entrance (section 5): the 20 mm rise and the water-containment function belong to the Urban wet / service rule - they must not be copied onto the entrance marble, whose fact states neither.",
+   "Inconsistent jambs (found in R8.14 code, never published): WALL_CONTACT_PATH_POLICY_V1 would have counted the M.B.ROOM / DRESS passage jamb cap (150 mm) as REAL_WALL_FACE while the Hall / Lobby jambs (topology closures) count zero - the same physical condition treated two ways. V2 classes every passage jamb face as OPENING_JAMB.",
+   "US-07 (section 23): no judgement call is needed - US-10 (SOURCE_DIMENSIONS_OVERRIDE_DEFAULTS) already makes 0.25 m a fallback that never overrides a measured 0.20 m; the 0.25 m reading is kept as a counterfactual only.",
+   "'Clear door opening width' (section 7): the source gives the structural opening between the jamb caps, not a leaf clear width; the register must say which width it uses."
+  ],
+  "10_r8_16": "R8.16: (1) the wall face-set engine for plaster / paint / wall ceramic (US-06 full-opening deductions, US-07 reveals as fallback, the 3.20 m wet / service height) - the reveal records of R8.15 feed it; (2) waterproofing (US-04 / US-14: membrane + 0.15 m upturn on the GROSS perimeter, doorways not deducted) as its own path, never the skirting path; (3) the hidden profile (US-08) as the second row on the frozen skirting path; (4) a second-project regression of the marble rule and the skirting path (genericity); (5) source anchor / cross-route / human review for the two closures."
+ },
+ "order": [
+  "recommendation (4471a71)",
+  "facts + rule + engine + synthetic tests (e3705b7)",
+  "skirting freeze record (eed6464)",
+  "blind Qortuba skirting run committed (873fc3a)",
+  "rows / registers afterwards"
+ ],
+ "decisions": [
+  {
+   "id": "R815-D01",
+   "decision": "duct = source-bound owner OBSTACLE authority; no topology change"
+  },
+  {
+   "id": "R815-D02",
+   "decision": "M.B.ROOM / DRESS FULL_HEIGHT -> ceiling continues; QP-18 unused"
+  },
+  {
+   "id": "R815-D03",
+   "decision": "entrance = MARBLE_THRESHOLD_EXPLICIT (whole strip, own BOQ row, no rise / water claim)"
+  },
+  {
+   "id": "R815-D04",
+   "decision": "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1 on a trade-scoped room-type map; supersedes the 50 / 50 split only where it applies"
+  },
+  {
+   "id": "R815-D05",
+   "decision": "WALL_CONTACT_PATH_POLICY_V2 + QORTUBA-NEW-SKIRTING-METHOD@v1 frozen, blind; QP-09 window deduction; NO_RETURN with counterfactual"
+  },
+  {
+   "id": "R815-D06",
+   "decision": "US-07 0.25 m fallback-only under US-10"
+  },
+  {
+   "id": "R815-D07",
+   "decision": "door I1471 (no closure B): disclosed release blocker + counterfactual, no post-result topology edit"
+  }
+ ],
+ "gates": {
+  "MIGRATION_PLANNING_READY": "YES",
+  "MIGRATION_EXECUTION_READY": "NO",
+  "PRODUCTION_MIGRATION": "NO"
+ },
+ "answers": {
+  "1_duct_authorised": "YES: QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1 binds all eight H2060 / H2061 segments -> ['OWNER_PHYSICAL_OBSTACLE']",
+  "2_084_excluded_floor_and_ceiling": "YES: {'H2060 outer loop (shoelace)': 0.84, 'TS01 BED.ROOM hole': 0.84, 'agree': True} (floor Q-13 and ceiling Q-14)",
+  "3_mb_dress_full_height_authoritative": "YES: QORTUBA-NEW-MB-DRESS-PASSAGE-FULL-HEIGHT-OWNER-001@v1",
+  "4_mb_dress_ceiling_included": "YES: CEILING_CONTINUES (OP-9e0fd219ca5cd391, 1200.0 x 150.0 mm)",
+  "5_hall_soffit_excluded": "YES: SOFFIT_EXCLUDED_FROM_CEILING (0.239289 m2)",
+  "6_entrance_explicit_marble": "YES: THRESHOLD-bfcea08375237224 = MARBLE_THRESHOLD_EXPLICIT (QORTUBA-NEW-MAIN-ENTRANCE-MARBLE-OWNER-001@v1)",
+  "7_q13_entrance_porcelain": "NO: 0.0 m2",
+  "8_marble_count": 4,
+  "9_from_urban_rule": [
+   "THRESHOLD-cf12fcdfd3e6a4a6",
+   "THRESHOLD-28f50f8dc18c1e90",
+   "THRESHOLD-f9846605acbce828"
+  ],
+  "10_from_explicit_evidence": [
+   "THRESHOLD-bfcea08375237224"
+  ],
+  "11_full_door_width": "YES: width = the face-closure length (the doorway opening between the jamb caps: THRESHOLD-cf12fcdfd3e6a4a6 800.0 mm, THRESHOLD-bfcea08375237224 1000.0 mm, THRESHOLD-28f50f8dc18c1e90 800.0 mm, THRESHOLD-f9846605acbce828 800.0 mm)",
+  "12_20mm_vertical": "YES: vertical_rise_mm = 20 on the three rule thresholds; NOT_STATED on the entrance",
+  "13_horizontal_depth": "the separation of the two face closures = wall thickness at the doorway: 150.0 mm (source)",
+  "14_wet_tile_stops": "YES: no CERAMIC_WET_FLOOR region remains in any threshold (0)",
+  "15_dry_porcelain_stops": "YES: no PORCELAIN region inside a marble strip (0)",
+  "16_marble_double_counted": "NO: one region per marble strip, counted only in the MARBLE_THRESHOLD row; every threshold reconciles: True",
+  "17_q03_q11": {
+   "Q-03": 17.7425,
+   "Q-11": 17.7425
+  },
+  "18_q13": 111.8988,
+  "19_q14": 140.787,
+  "20_skirting_computed": "YES (SHADOW): COMPUTED_SHADOW, frozen policy + method, blind run reproduced: True",
+  "21_skirting_total_and_provenance": {
+   "lm": 84.795214,
+   "components_lm": {
+    "REAL_WALL_FACE": 76.345214,
+    "COLUMN_FACE": 3.45,
+    "OBSTACLE_FACE": 5.0
+   },
+   "excluded_lm": {
+    "DOOR_OPENING": 9.4,
+    "GLAZED_OPENING": 2.75,
+    "WINDOW_OPENING": 9.091605,
+    "OPENING_JAMB": 0.35,
+    "TOPOLOGY_CLOSURE": 0.2
+   },
+   "method": "QORTUBA-NEW-SKIRTING-METHOD@v1",
+   "policy": "WALL_CONTACT_PATH_POLICY_V2",
+   "freeze": "e3705b753ebd"
+  },
+  "22_remaining_skirting_blocker": [
+   "JAMB_RETURN_METHOD_INFERRED: NO_RETURN from the rule-store method (no rule adds a return); returns to the frame would add 1.75 lm",
+   "DOOR_REVEAL_INSIDE_ROOM_SITE: door I1471: its two jamb caps (0.3 lm) are on the path as wall face (against NO_RETURN)"
+  ],
+  "23_behind_wardrobes": "YES (furniture / wardrobes / joinery are never site boundaries)",
+  "24_stops_at_doors_passages": "YES: doors, passages, glazed openings and (QP-09) windows are off the path; topology closures are zero",
+  "25_duct_contact_path": "YES: 5.0 lm OBSTACLE_FACE, included only because the duct has owner physical authority (without it: withheld, no number)",
+  "26_wet_rooms_no_skirting": [
+   "['BATH']: NO_SKIRTING_FULL_WALL_TILE",
+   "['PAINTRY']: NO_SKIRTING_FULL_WALL_TILE",
+   "['BATH']: NO_SKIRTING_FULL_WALL_TILE",
+   "['BATH']: NO_SKIRTING_FULL_WALL_TILE"
+  ],
+  "27_us07_fallback_only": "US-07 0.25 m becomes FALLBACK-ONLY: used where no source reveal depth exists; where the wall thickness at the opening is source-measured, the source depth governs and 0.25 m is kept as a counterfactual",
+  "28_topology_version_bump": "NO: WALL_BAND_POLICY_V5 and TOPOLOGY_CLOSURE_POLICY_V1 unchanged; the topology digest equals the frozen blind V5 digest. Versioned: OWNER_PHYSICAL_FACT_POLICY_V2, OPENING_REVEAL_POLICY_V2, WALL_CONTACT_PATH_POLICY_V2 (frozen), new OBSTACLE_AUTHORITY_POLICY_V1 / MARBLE_THRESHOLD_POLICY_V1",
+  "29_h2430_h2431_regress": "NO: closures reproduce the blind V5 record ({'closures': True, 'topology_digest': True})",
+  "30_source_anchor": "NOT_ESTABLISHED",
+  "31_release_blockers_remaining": {
+   "Q-03": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-03P": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-11": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-12": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-13": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-14": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "DOOR_REVEAL_INSIDE_ROOM_SITE: door I1471 (1000.0 x 150.0 mm) has no second face closure; its 0.15 m2 head reveal is counted as ceiling",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "SKIRTING": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "JAMB_RETURN_METHOD_INFERRED: NO_RETURN from the rule-store method (no rule adds a return); returns to the frame would add 1.75 lm",
+    "DOOR_REVEAL_INSIDE_ROOM_SITE: door I1471: its two jamb caps (0.3 lm) are on the path as wall face (against NO_RETURN)",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "MARBLE_THRESHOLD": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ]
+  },
+  "32_new_silent_error": [
+   "door I1471 (1000.0 x 150.0 mm, HALL <-> M.B.ROOM) has only ONE face closure: its two wall faces are offset at the door, so the frozen closure policy never forms closure B. Its 0.15 m2 reveal lies inside the HALL site - counted as normal CEILING in Q-14 since R8.13, its 0.3 lm of jamb caps on the skirting path, and a wet door in the same condition would silently miss its marble threshold. Carried as DOOR_REVEAL_INSIDE_ROOM_SITE with counterfactual Q-14 = 140.637",
+   "the Hall / Lobby passage record lists only one of its two jamb faces (V2-O1): no value effect, the return counterfactual adds it explicitly"
+  ],
+  "33_r8_16": "R8.16: (1) the wall face-set engine for plaster / paint / wall ceramic (US-06 full-opening deductions, US-07 reveals as fallback, the 3.20 m wet / service height) - the reveal records of R8.15 feed it; (2) waterproofing (US-04 / US-14: membrane + 0.15 m upturn on the GROSS perimeter, doorways not deducted) as its own path, never the skirting path; (3) the hidden profile (US-08) as the second row on the frozen skirting path; (4) a second-project regression of the marble rule and the skirting path (genericity); (5) source anchor / cross-route / human review for the two closures. Plus: a frozen closure-B rule for door jambs with offset faces (I1471), blind, before any further ceiling / marble release.",
+  "34_disagreements": [
+   "Windows (section 19): 'a normal window above floor does not break floor-level skirting' is the right PHYSICAL statement but the wrong Qortuba MEASUREMENT: the owner closed this question in QP-09 (deduct every window width whether or not wall stands below). Following the brief would overstate Qortuba skirting by every window width. Physical path and measurement region must stay separate.",
+   "Duct role admission (section 25): no TS01 role change is needed or wanted - the hole already exists; the owner fact is obstacle AUTHORITY, not geometry. Re-running TS01 would only move digests without changing a site.",
+   "Room types (section 28): the rule must read a TRADE-SCOPED room-type map. R8.13 maps PAINTRY to KITCHEN through QP-07, but QP-07 is scoped to the ceramic takeoff; reading that map naively would put marble on a PAINTRY doorway.",
+   "Entrance (section 5): the 20 mm rise and the water-containment function belong to the Urban wet / service rule - they must not be copied onto the entrance marble, whose fact states neither.",
+   "Inconsistent jambs (found in R8.14 code, never published): WALL_CONTACT_PATH_POLICY_V1 would have counted the M.B.ROOM / DRESS passage jamb cap (150 mm) as REAL_WALL_FACE while the Hall / Lobby jambs (topology closures) count zero - the same physical condition treated two ways. V2 classes every passage jamb face as OPENING_JAMB.",
+   "US-07 (section 23): no judgement call is needed - US-10 (SOURCE_DIMENSIONS_OVERRIDE_DEFAULTS) already makes 0.25 m a fallback that never overrides a measured 0.20 m; the 0.25 m reading is kept as a counterfactual only.",
+   "'Clear door opening width' (section 7): the source gives the structural opening between the jamb caps, not a leaf clear width; the register must say which width it uses."
+  ]
+ }
+}

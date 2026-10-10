@@ -1,0 +1,1001 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_V3_ROOMS_V1",
+ "rule": {
+  "min_area_m2": 1.0,
+  "min_effective_width_m": 0.6
+ },
+ "floors": {
+  "GF": {
+   "NOT_ROOM_LIKE": 171,
+   "OBSTACLE_INTERIOR": 4,
+   "OPENING_STRIP": 2,
+   "OPEN_PLAN_ZONE": 2,
+   "OUTSIDE_BUILDING": 2,
+   "ROOM": 8,
+   "UNNAMED_ROOM": 3
+  },
+  "1F": {
+   "NOT_ROOM_LIKE": 148,
+   "OPEN_PLAN_ZONE": 1,
+   "OUTSIDE_BUILDING": 2,
+   "ROOM": 8,
+   "UNNAMED_ROOM": 2
+  },
+  "2F": {
+   "NOT_ROOM_LIKE": 55,
+   "OUTSIDE_BUILDING": 2,
+   "ROOM": 2,
+   "UNNAMED_ROOM": 2
+  }
+ },
+ "rows": [
+  {
+   "id": "GF-R01",
+   "floor": "GF",
+   "site": "SITE-0bb9132c5c034229",
+   "class": "UNNAMED_ROOM",
+   "room_class": "SHAFT",
+   "name_en": "UNKNOWN",
+   "name_ar": "",
+   "decode_states": [],
+   "name_basis": null,
+   "contains_stair": false,
+   "label_occurrences": [],
+   "area_m2": 3.24,
+   "perimeter_m": 7.2,
+   "effective_width_m": 0.9,
+   "status": "COMPUTED_REVIEW",
+   "site_status": "REVIEW_REQUIRED",
+   "physical_status": "REVIEW_REQUIRED",
+   "issues": [
+    "TOPOLOGY_ROLE_UNRESOLVED"
+   ],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 0.5,
+    "OPENING_BOUNDARY": 0.5,
+    "STRUCTURAL_OBSTACLE": 0.85,
+    "TOPOLOGY_BOUNDARY": 5.35
+   },
+   "shaft_evidence": "same position and size on 1F, 2F, GF"
+  },
+  {
+   "id": "GF-R02",
+   "floor": "GF",
+   "site": "SITE-0e9a7a85e795446f",
+   "class": "ROOM",
+   "room_class": "WET",
+   "name_en": "",
+   "name_ar": "مغسلة",
+   "decode_states": [
+    "DECODED"
+   ],
+   "name_basis": "ESTABLISHED_ROOM_LABEL",
+   "contains_stair": false,
+   "label_occurrences": [
+    "I496"
+   ],
+   "area_m2": 3.1325,
+   "perimeter_m": 7.2,
+   "effective_width_m": 0.87,
+   "status": "COMPUTED_REVIEW",
+   "site_status": "REVIEW_REQUIRED",
+   "physical_status": "CERTIFIED",
+   "issues": [
+    "LABEL_OCCURRENCE_SPLIT"
+   ],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 0.5,
+    "OPENING_BOUNDARY": 1.3,
+    "STRUCTURAL_OBSTACLE": 0.4,
+    "TOPOLOGY_BOUNDARY": 5.0
+   }
+  },
+  {
+   "id": "GF-R03",
+   "floor": "GF",
+   "site": "SITE-5191e28052b00088",
+   "class": "ROOM",
+   "room_class": "WET",
+   "name_en": "W.C",
+   "name_ar": "مرحاض",
+   "decode_states": [
+    "DECODED"
+   ],
+   "name_basis": "ESTABLISHED_ROOM_LABEL",
+   "contains_stair": false,
+   "label_occurrences": [
+    "I802"
+   ],
+   "area_m2": 2.367609,
+   "perimeter_m": 6.809808,
+   "effective_width_m": 0.695,
+   "status": "COMPUTED_REVIEW",
+   "site_status": "REVIEW_REQUIRED",
+   "physical_status": "REVIEW_REQUIRED",
+   "issues": [
+    "GEOS_CROSSCHECK_DISAGREES"
+   ],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 0.6,
+    "OPENING_BOUNDARY": 0.813798,
+    "STRUCTURAL_OBSTACLE": 0.63,
+    "TOPOLOGY_BOUNDARY": 4.766011
+   }
+  },
+  {
+   "id": "GF-Z04",
+   "floor": "GF",
+   "site": "SITE-67547ed37daadb5a",
+   "class": "OPEN_PLAN_ZONE",
+   "room_class": "DRY",
+   "name_en": "PANTRY / SALOON / RECEPTION / Wash / DINING / GARDEN",
+   "name_ar": "تحضير / صالون / استقبال / مغسلة / طعام / حديقة",
+   "decode_states": [
+    "DECODED",
+    "DECODED",
+    "DECODED",
+    "DECODED",
+    "DECODED",
+    "DECODED"
+   ],
+   "name_basis": "ESTABLISHED_ROOM_LABEL",
+   "contains_stair": true,
+   "label_occurrences": [
+    "I376",
+    "I383",
+    "I389",
+    "I673",
+    "I709",
+    "I785"
+   ],
+   "area_m2": 155.655211,
+   "perimeter_m": 121.003866,
+   "effective_width_m": 2.573,
+   "status": "COMPUTED_REVIEW",
+   "site_status": "REVIEW_REQUIRED",
+   "physical_status": "REVIEW_REQUIRED",
+   "issues": [
+    "MULTIPLE_SEMANTIC_LABELS",
+    "TOPOLOGY_ROLE_UNRESOLVED"
+   ],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 7.793066,
+    "OPENING_BOUNDARY": 17.128855,
+    "STRUCTURAL_OBSTACLE": 9.104189,
+    "TOPOLOGY_BOUNDARY": 78.277756
+   }
+  },
+  {
+   "id": "GF-R05",
+   "floor": "GF",
+   "site": "SITE-714889aea3e329c7",
+   "class": "UNNAMED_ROOM",
+   "room_class": "WET",
+   "name_en": "BATH",
+   "name_ar": "حمام",
+   "decode_states": [],
+   "name_basis": "BILINGUAL_CANDIDATE_TEXTS_IN_SITE (TR-V3-B on loose texts; REVIEW)",
+   "contains_stair": false,
+   "label_occurrences": [],
+   "area_m2": 3.717683,
+   "perimeter_m": 7.624665,
+   "effective_width_m": 0.975,
+   "status": "COMPUTED_REVIEW",
+   "site_status": "REVIEW_REQUIRED",
+   "physical_status": "CERTIFIED",
+   "issues": [
+    "TEXT_ROLE_UNRESOLVED_IN_SITE",
+    "UNKNOWN_OBJECT_IN_SITE"
+   ],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 0.3,
+    "OPENING_BOUNDARY": 1.1,
+    "TOPOLOGY_BOUNDARY": 6.224665
+   }
+  },
+  {
+   "id": "GF-Z06",
+   "floor": "GF",
+   "site": "SITE-810cacd9be443703",
+   "class": "OPEN_PLAN_ZONE",
+   "room_class": "DRY",
+   "name_en": "DEWANEYA / Wash",
+   "name_ar": "ديوانية",
+   "decode_states": [
+    "DECODED"
+   ],
+   "name_basis": "ESTABLISHED_ROOM_LABEL",
+   "contains_stair": false,
+   "label_occurrences": [
+    "I431",
+    "I496"
+   ],
+   "area_m2": 24.940332,
+   "perimeter_m": 20.127876,
+   "effective_width_m": 2.478,
+   "status": "COMPUTED_REVIEW",
+   "site_status": "REVIEW_REQUIRED",
+   "physical_status": "CERTIFIED",
+   "issues": [
+    "LABEL_OCCURRENCE_SPLIT",
+    "MULTIPLE_SEMANTIC_LABELS"
+   ],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 2.45492,
+    "OPENING_BOUNDARY": 3.45492,
+    "STRUCTURAL_OBSTACLE": 0.525,
+    "TOPOLOGY_BOUNDARY": 13.693037
+   }
+  },
+  {
+   "id": "GF-R07",
+   "floor": "GF",
+   "site": "SITE-88d9dbffd47c417a",
+   "class": "ROOM",
+   "room_class": "SERVICE",
+   "name_en": "KITCHEN",
+   "name_ar": "مطبخ",
+   "decode_states": [
+    "DECODED"
+   ],
+   "name_basis": "ESTABLISHED_ROOM_LABEL",
+   "contains_stair": false,
+   "label_occurrences": [
+    "I630"
+   ],
+   "area_m2": 9.63,
+   "perimeter_m": 14.5,
+   "effective_width_m": 1.328,
+   "status": "COMPUTED",
+   "site_status": "CERTIFIED",
+   "physical_status": "CERTIFIED",
+   "issues": [],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 0.75,
+    "OPENING_BOUNDARY": 1.75,
+    "STRUCTURAL_OBSTACLE": 1.05,
+    "TOPOLOGY_BOUNDARY": 10.95
+   }
+  },
+  {
+   "id": "GF-T08",
+   "floor": "GF",
+   "site": "SITE-92d772778d0e5bef",
+   "class": "OPENING_STRIP",
+   "room_class": "UNKNOWN",
+   "name_en": "UNKNOWN",
+   "name_ar": "",
+   "decode_states": [],
+   "name_basis": null,
+   "contains_stair": false,
+   "label_occurrences": [],
+   "area_m2": 0.4,
+   "perimeter_m": 4.4,
+   "effective_width_m": 0.182,
+   "status": "COMPUTED",
+   "site_status": "CERTIFIED",
+   "physical_status": "CERTIFIED",
+   "issues": [],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "OPENING_BOUNDARY": 4.0,
+    "TOPOLOGY_BOUNDARY": 0.4
+   }
+  },
+  {
+   "id": "GF-R09",
+   "floor": "GF",
+   "site": "SITE-9810548752edbe40",
+   "class": "ROOM",
+   "room_class": "WET",
+   "name_en": "W.C",
+   "name_ar": "مرحاض",
+   "decode_states": [
+    "DECODED"
+   ],
+   "name_basis": "ESTABLISHED_ROOM_LABEL",
+   "contains_stair": false,
+   "label_occurrences": [
+    "I803"
+   ],
+   "area_m2": 2.675221,
+   "perimeter_m": 7.414038,
+   "effective_width_m": 0.722,
+   "status": "COMPUTED",
+   "site_status": "CERTIFIED",
+   "physical_status": "CERTIFIED",
+   "issues": [],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "OPENING_BOUNDARY": 0.8,
+    "STRUCTURAL_OBSTACLE": 0.071773,
+    "TOPOLOGY_BOUNDARY": 6.542264
+   }
+  },
+  {
+   "id": "GF-R10",
+   "floor": "GF",
+   "site": "SITE-9b585230d0877a35",
+   "class": "ROOM",
+   "room_class": "WET",
+   "name_en": "W.C",
+   "name_ar": "مرحاض",
+   "decode_states": [
+    "DECODED"
+   ],
+   "name_basis": "ESTABLISHED_ROOM_LABEL",
+   "contains_stair": false,
+   "label_occurrences": [
+    "I456"
+   ],
+   "area_m2": 1.95,
+   "perimeter_m": 5.6,
+   "effective_width_m": 0.696,
+   "status": "COMPUTED",
+   "site_status": "CERTIFIED",
+   "physical_status": "CERTIFIED",
+   "issues": [],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "OPENING_BOUNDARY": 0.8,
+    "TOPOLOGY_BOUNDARY": 4.8
+   }
+  },
+  {
+   "id": "GF-T11",
+   "floor": "GF",
+   "site": "SITE-a797936abec0d1a7",
+   "class": "OPENING_STRIP",
+   "room_class": "UNKNOWN",
+   "name_en": "UNKNOWN",
+   "name_ar": "",
+   "decode_states": [],
+   "name_basis": null,
+   "contains_stair": false,
+   "label_occurrences": [],
+   "area_m2": 0.12,
+   "perimeter_m": 1.9,
+   "effective_width_m": 0.126,
+   "status": "COMPUTED_REVIEW",
+   "site_status": "REVIEW_REQUIRED",
+   "physical_status": "REVIEW_REQUIRED",
+   "issues": [
+    "TOPOLOGY_ROLE_UNRESOLVED"
+   ],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "OPENING_BOUNDARY": 1.6,
+    "TOPOLOGY_BOUNDARY": 0.3
+   }
+  },
+  {
+   "id": "GF-R12",
+   "floor": "GF",
+   "site": "SITE-b2553428a3dc90a0",
+   "class": "UNNAMED_ROOM",
+   "room_class": "UNKNOWN",
+   "name_en": "UNKNOWN",
+   "name_ar": "",
+   "decode_states": [],
+   "name_basis": null,
+   "contains_stair": true,
+   "label_occurrences": [],
+   "area_m2": 14.64,
+   "perimeter_m": 22.2,
+   "effective_width_m": 1.319,
+   "status": "COMPUTED_REVIEW",
+   "site_status": "REVIEW_REQUIRED",
+   "physical_status": "REVIEW_REQUIRED",
+   "issues": [
+    "OPENING_CLOSURE_UNRESOLVED",
+    "TOPOLOGY_ROLE_UNRESOLVED"
+   ],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 1.498437,
+    "OPENING_BOUNDARY": 2.400165,
+    "STRUCTURAL_OBSTACLE": 1.8,
+    "TOPOLOGY_BOUNDARY": 16.501398
+   }
+  },
+  {
+   "id": "GF-R13",
+   "floor": "GF",
+   "site": "SITE-ce2d2c3a4b7da280",
+   "class": "ROOM",
+   "room_class": "WET",
+   "name_en": "W.C",
+   "name_ar": "مرحاض",
+   "decode_states": [
+    "DECODED"
+   ],
+   "name_basis": "ESTABLISHED_ROOM_LABEL",
+   "contains_stair": false,
+   "label_occurrences": [
+    "I730"
+   ],
+   "area_m2": 2.3625,
+   "perimeter_m": 6.2,
+   "effective_width_m": 0.762,
+   "status": "COMPUTED",
+   "site_status": "CERTIFIED",
+   "physical_status": "CERTIFIED",
+   "issues": [],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 0.6,
+    "OPENING_BOUNDARY": 0.797039,
+    "STRUCTURAL_OBSTACLE": 0.15,
+    "TOPOLOGY_BOUNDARY": 4.652961
+   }
+  },
+  {
+   "id": "GF-R14",
+   "floor": "GF",
+   "site": "SITE-dda89794d15dfb61",
+   "class": "ROOM",
+   "room_class": "DRY",
+   "name_en": "MASTER BED ROOM",
+   "name_ar": "غرفةنومرئيسية",
+   "decode_states": [
+    "DECODED"
+   ],
+   "name_basis": "ESTABLISHED_ROOM_LABEL",
+   "contains_stair": false,
+   "label_occurrences": [
+    "I771"
+   ],
+   "area_m2": 16.54964,
+   "perimeter_m": 21.534453,
+   "effective_width_m": 1.537,
+   "status": "COMPUTED_REVIEW",
+   "site_status": "REVIEW_REQUIRED",
+   "physical_status": "REVIEW_REQUIRED",
+   "issues": [
+    "TOPOLOGY_ROLE_UNRESOLVED"
+   ],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 5.10186,
+    "OPENING_BOUNDARY": 1.8,
+    "STRUCTURAL_OBSTACLE": 1.8,
+    "TOPOLOGY_BOUNDARY": 12.832594
+   }
+  },
+  {
+   "id": "GF-R15",
+   "floor": "GF",
+   "site": "SITE-eac7a1be6566b2d0",
+   "class": "ROOM",
+   "room_class": "WET",
+   "name_en": "W.C",
+   "name_ar": "مرحاض",
+   "decode_states": [
+    "DECODED"
+   ],
+   "name_basis": "ESTABLISHED_ROOM_LABEL",
+   "contains_stair": false,
+   "label_occurrences": [
+    "I503"
+   ],
+   "area_m2": 3.375,
+   "perimeter_m": 7.5,
+   "effective_width_m": 0.9,
+   "status": "COMPUTED",
+   "site_status": "CERTIFIED",
+   "physical_status": "CERTIFIED",
+   "issues": [],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "OPENING_BOUNDARY": 0.8,
+    "TOPOLOGY_BOUNDARY": 6.7
+   }
+  },
+  {
+   "id": "1F-R01",
+   "floor": "1F",
+   "site": "SITE-16f76cd141ed8273",
+   "class": "ROOM",
+   "room_class": "WET",
+   "name_en": "BATH",
+   "name_ar": "حمام",
+   "decode_states": [
+    "DECODED"
+   ],
+   "name_basis": "ESTABLISHED_ROOM_LABEL",
+   "contains_stair": false,
+   "label_occurrences": [
+    "I3119"
+   ],
+   "area_m2": 5.0225,
+   "perimeter_m": 9.0,
+   "effective_width_m": 1.116,
+   "status": "COMPUTED",
+   "site_status": "CERTIFIED",
+   "physical_status": "CERTIFIED",
+   "issues": [],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 0.3,
+    "OPENING_BOUNDARY": 1.1,
+    "STRUCTURAL_OBSTACLE": 0.15,
+    "TOPOLOGY_BOUNDARY": 7.45
+   }
+  },
+  {
+   "id": "1F-R02",
+   "floor": "1F",
+   "site": "SITE-195dbe4bca9e732e",
+   "class": "UNNAMED_ROOM",
+   "room_class": "SHAFT",
+   "name_en": "UNKNOWN",
+   "name_ar": "",
+   "decode_states": [],
+   "name_basis": null,
+   "contains_stair": false,
+   "label_occurrences": [],
+   "area_m2": 3.24,
+   "perimeter_m": 7.2,
+   "effective_width_m": 0.9,
+   "status": "COMPUTED_REVIEW",
+   "site_status": "REVIEW_REQUIRED",
+   "physical_status": "REVIEW_REQUIRED",
+   "issues": [
+    "TOPOLOGY_ROLE_UNRESOLVED"
+   ],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 0.5,
+    "OPENING_BOUNDARY": 0.5,
+    "STRUCTURAL_OBSTACLE": 0.85,
+    "TOPOLOGY_BOUNDARY": 5.35
+   },
+   "shaft_evidence": "same position and size on 1F, 2F, GF"
+  },
+  {
+   "id": "1F-R03",
+   "floor": "1F",
+   "site": "SITE-22b96446836c3d8d",
+   "class": "ROOM",
+   "room_class": "DRY",
+   "name_en": "MASTER BED ROOM",
+   "name_ar": "غرفةنومرئيسية",
+   "decode_states": [
+    "DECODED"
+   ],
+   "name_basis": "ESTABLISHED_ROOM_LABEL",
+   "contains_stair": false,
+   "label_occurrences": [
+    "I3072"
+   ],
+   "area_m2": 19.016545,
+   "perimeter_m": 22.15067,
+   "effective_width_m": 1.717,
+   "status": "COMPUTED_REVIEW",
+   "site_status": "REVIEW_REQUIRED",
+   "physical_status": "REVIEW_REQUIRED",
+   "issues": [
+    "NEAR_MISS_BOUNDARY_GAP",
+    "TOPOLOGY_ROLE_UNRESOLVED"
+   ],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 3.289498,
+    "OPENING_BOUNDARY": 1.7,
+    "STRUCTURAL_OBSTACLE": 1.7,
+    "TOPOLOGY_BOUNDARY": 15.461172
+   }
+  },
+  {
+   "id": "1F-R04",
+   "floor": "1F",
+   "site": "SITE-2f6cf2b5bebbd966",
+   "class": "ROOM",
+   "room_class": "WET",
+   "name_en": "BATH",
+   "name_ar": "حمام",
+   "decode_states": [
+    "DECODED"
+   ],
+   "name_basis": "ESTABLISHED_ROOM_LABEL",
+   "contains_stair": false,
+   "label_occurrences": [
+    "I3089"
+   ],
+   "area_m2": 4.725,
+   "perimeter_m": 8.7,
+   "effective_width_m": 1.086,
+   "status": "COMPUTED",
+   "site_status": "CERTIFIED",
+   "physical_status": "CERTIFIED",
+   "issues": [],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 0.25,
+    "OPENING_BOUNDARY": 1.033651,
+    "STRUCTURAL_OBSTACLE": 0.45,
+    "TOPOLOGY_BOUNDARY": 6.966349
+   }
+  },
+  {
+   "id": "1F-R05",
+   "floor": "1F",
+   "site": "SITE-3cde308552cf977c",
+   "class": "ROOM",
+   "room_class": "DRY",
+   "name_en": "MASTER BED ROOM",
+   "name_ar": "غرفةنومرئيسية",
+   "decode_states": [
+    "DECODED"
+   ],
+   "name_basis": "ESTABLISHED_ROOM_LABEL",
+   "contains_stair": false,
+   "label_occurrences": [
+    "I3080"
+   ],
+   "area_m2": 16.34,
+   "perimeter_m": 16.2,
+   "effective_width_m": 2.017,
+   "status": "COMPUTED",
+   "site_status": "CERTIFIED",
+   "physical_status": "CERTIFIED",
+   "issues": [],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 0.5,
+    "OPENING_BOUNDARY": 1.4,
+    "STRUCTURAL_OBSTACLE": 0.5,
+    "TOPOLOGY_BOUNDARY": 13.8
+   }
+  },
+  {
+   "id": "1F-Z06",
+   "floor": "1F",
+   "site": "SITE-60a08def069f0e48",
+   "class": "OPEN_PLAN_ZONE",
+   "room_class": "DRY",
+   "name_en": "VOID / LIVING AREA",
+   "name_ar": "منور / معيشة",
+   "decode_states": [
+    "DECODED",
+    "DECODED"
+   ],
+   "name_basis": "ESTABLISHED_ROOM_LABEL",
+   "contains_stair": true,
+   "label_occurrences": [
+    "I2938",
+    "I2951"
+   ],
+   "area_m2": 79.666379,
+   "perimeter_m": 98.777591,
+   "effective_width_m": 1.613,
+   "status": "COMPUTED_REVIEW",
+   "site_status": "REVIEW_REQUIRED",
+   "physical_status": "REVIEW_REQUIRED",
+   "issues": [
+    "MULTIPLE_SEMANTIC_LABELS",
+    "TOPOLOGY_ROLE_UNRESOLVED"
+   ],
+   "voids": [
+    "1F-V01"
+   ],
+   "void_area_m2": 16.005,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 4.42848,
+    "OPENING_BOUNDARY": 13.52616,
+    "STRUCTURAL_OBSTACLE": 3.875,
+    "TOPOLOGY_BOUNDARY": 76.947951
+   }
+  },
+  {
+   "id": "1F-R07",
+   "floor": "1F",
+   "site": "SITE-69e2d39bee49fa7e",
+   "class": "ROOM",
+   "room_class": "SERVICE",
+   "name_en": "LAUNDRY",
+   "name_ar": "غسيل",
+   "decode_states": [
+    "DECODED"
+   ],
+   "name_basis": "ESTABLISHED_ROOM_LABEL",
+   "contains_stair": false,
+   "label_occurrences": [
+    "I3037"
+   ],
+   "area_m2": 10.151,
+   "perimeter_m": 16.94,
+   "effective_width_m": 1.198,
+   "status": "COMPUTED",
+   "site_status": "CERTIFIED",
+   "physical_status": "CERTIFIED",
+   "issues": [],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 0.3,
+    "OPENING_BOUNDARY": 2.0,
+    "STRUCTURAL_OBSTACLE": 1.35,
+    "TOPOLOGY_BOUNDARY": 13.29
+   }
+  },
+  {
+   "id": "1F-R08",
+   "floor": "1F",
+   "site": "SITE-aa3f3d9cc41ec54a",
+   "class": "UNNAMED_ROOM",
+   "room_class": "UNKNOWN",
+   "name_en": "UNKNOWN",
+   "name_ar": "",
+   "decode_states": [],
+   "name_basis": null,
+   "contains_stair": false,
+   "label_occurrences": [],
+   "area_m2": 2.97,
+   "perimeter_m": 6.9,
+   "effective_width_m": 0.861,
+   "status": "COMPUTED_REVIEW",
+   "site_status": "REVIEW_REQUIRED",
+   "physical_status": "REVIEW_REQUIRED",
+   "issues": [
+    "TOPOLOGY_ROLE_UNRESOLVED"
+   ],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 0.5,
+    "OPENING_BOUNDARY": 1.3,
+    "STRUCTURAL_OBSTACLE": 0.025,
+    "TOPOLOGY_BOUNDARY": 5.075
+   }
+  },
+  {
+   "id": "1F-R09",
+   "floor": "1F",
+   "site": "SITE-c46cb88cea7decbb",
+   "class": "ROOM",
+   "room_class": "DRY",
+   "name_en": "MASTER BED ROOM",
+   "name_ar": "غرفةنومرئيسية",
+   "decode_states": [
+    "DECODED"
+   ],
+   "name_basis": "ESTABLISHED_ROOM_LABEL",
+   "contains_stair": false,
+   "label_occurrences": [
+    "I3120"
+   ],
+   "area_m2": 18.215,
+   "perimeter_m": 17.4,
+   "effective_width_m": 2.094,
+   "status": "COMPUTED",
+   "site_status": "CERTIFIED",
+   "physical_status": "CERTIFIED",
+   "issues": [],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 1.55232,
+    "OPENING_BOUNDARY": 1.8,
+    "STRUCTURAL_OBSTACLE": 0.855866,
+    "TOPOLOGY_BOUNDARY": 13.191814
+   }
+  },
+  {
+   "id": "1F-R10",
+   "floor": "1F",
+   "site": "SITE-cdc894c0f0fd69c9",
+   "class": "ROOM",
+   "room_class": "WET",
+   "name_en": "BATH",
+   "name_ar": "حمام",
+   "decode_states": [
+    "DECODED"
+   ],
+   "name_basis": "ESTABLISHED_ROOM_LABEL",
+   "contains_stair": false,
+   "label_occurrences": [
+    "I3073"
+   ],
+   "area_m2": 3.5775,
+   "perimeter_m": 7.6,
+   "effective_width_m": 0.941,
+   "status": "COMPUTED",
+   "site_status": "CERTIFIED",
+   "physical_status": "CERTIFIED",
+   "issues": [],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 0.6,
+    "OPENING_BOUNDARY": 0.8,
+    "STRUCTURAL_OBSTACLE": 0.5,
+    "TOPOLOGY_BOUNDARY": 5.7
+   }
+  },
+  {
+   "id": "1F-R11",
+   "floor": "1F",
+   "site": "SITE-da154e7546d18013",
+   "class": "ROOM",
+   "room_class": "DRY",
+   "name_en": "MASTER BED ROOM",
+   "name_ar": "غرفةنومرئيسية",
+   "decode_states": [
+    "DECODED"
+   ],
+   "name_basis": "ESTABLISHED_ROOM_LABEL",
+   "contains_stair": false,
+   "label_occurrences": [
+    "I2958"
+   ],
+   "area_m2": 19.05,
+   "perimeter_m": 17.7,
+   "effective_width_m": 2.153,
+   "status": "COMPUTED",
+   "site_status": "CERTIFIED",
+   "physical_status": "CERTIFIED",
+   "issues": [],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 1.224887,
+    "OPENING_BOUNDARY": 3.024887,
+    "STRUCTURAL_OBSTACLE": 2.0,
+    "TOPOLOGY_BOUNDARY": 11.450226
+   }
+  },
+  {
+   "id": "2F-R01",
+   "floor": "2F",
+   "site": "SITE-22c718c6fc156ebe",
+   "class": "UNNAMED_ROOM",
+   "room_class": "UNKNOWN",
+   "name_en": "UNKNOWN",
+   "name_ar": "",
+   "decode_states": [],
+   "name_basis": null,
+   "contains_stair": false,
+   "label_occurrences": [],
+   "area_m2": 18.6,
+   "perimeter_m": 22.0,
+   "effective_width_m": 1.691,
+   "status": "COMPUTED_REVIEW",
+   "site_status": "REVIEW_REQUIRED",
+   "physical_status": "REVIEW_REQUIRED",
+   "issues": [
+    "TOPOLOGY_ROLE_UNRESOLVED"
+   ],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 2.1,
+    "OPENING_BOUNDARY": 3.0,
+    "STRUCTURAL_OBSTACLE": 1.5,
+    "TOPOLOGY_BOUNDARY": 15.4
+   }
+  },
+  {
+   "id": "2F-R02",
+   "floor": "2F",
+   "site": "SITE-2e3bac611a8fb491",
+   "class": "ROOM",
+   "room_class": "DRY",
+   "name_en": "MAID R.",
+   "name_ar": "غرفةخادمة",
+   "decode_states": [
+    "DECODED"
+   ],
+   "name_basis": "ESTABLISHED_ROOM_LABEL",
+   "contains_stair": false,
+   "label_occurrences": [
+    "I4796"
+   ],
+   "area_m2": 19.35,
+   "perimeter_m": 18.9,
+   "effective_width_m": 2.048,
+   "status": "COMPUTED",
+   "site_status": "CERTIFIED",
+   "physical_status": "CERTIFIED",
+   "issues": [],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 1.2,
+    "OPENING_BOUNDARY": 1.7,
+    "STRUCTURAL_OBSTACLE": 1.1,
+    "TOPOLOGY_BOUNDARY": 14.9
+   }
+  },
+  {
+   "id": "2F-R03",
+   "floor": "2F",
+   "site": "SITE-ae46ec7518ab613e",
+   "class": "ROOM",
+   "room_class": "WET",
+   "name_en": "W.C",
+   "name_ar": "مرحاض",
+   "decode_states": [
+    "DECODED"
+   ],
+   "name_basis": "ESTABLISHED_ROOM_LABEL",
+   "contains_stair": false,
+   "label_occurrences": [
+    "I4790"
+   ],
+   "area_m2": 5.55,
+   "perimeter_m": 9.7,
+   "effective_width_m": 1.144,
+   "status": "COMPUTED",
+   "site_status": "CERTIFIED",
+   "physical_status": "CERTIFIED",
+   "issues": [],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 0.3,
+    "OPENING_BOUNDARY": 1.1,
+    "STRUCTURAL_OBSTACLE": 0.175,
+    "TOPOLOGY_BOUNDARY": 8.125
+   }
+  },
+  {
+   "id": "2F-R04",
+   "floor": "2F",
+   "site": "SITE-fd5fd08ac9eb9313",
+   "class": "UNNAMED_ROOM",
+   "room_class": "SHAFT",
+   "name_en": "UNKNOWN",
+   "name_ar": "",
+   "decode_states": [],
+   "name_basis": null,
+   "contains_stair": false,
+   "label_occurrences": [],
+   "area_m2": 3.24,
+   "perimeter_m": 7.2,
+   "effective_width_m": 0.9,
+   "status": "COMPUTED_REVIEW",
+   "site_status": "REVIEW_REQUIRED",
+   "physical_status": "REVIEW_REQUIRED",
+   "issues": [
+    "TOPOLOGY_ROLE_UNRESOLVED"
+   ],
+   "voids": [],
+   "void_area_m2": 0,
+   "boundary_role_lengths_m": {
+    "GLAZING_BOUNDARY": 0.5,
+    "OPENING_BOUNDARY": 0.5,
+    "STRUCTURAL_OBSTACLE": 0.7,
+    "TOPOLOGY_BOUNDARY": 5.5
+   },
+   "shaft_evidence": "same position and size on 1F, 2F, GF"
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+  "project": "P7757",
+  "version": "1.1.0",
+  "updated": "2026-09-17",
+  "what_this_is": "the ASK OWNER end of the priority order, written down. Every question the engine reached and could not answer from the drawings or the rule library, with what would settle it. Nothing on this list is guessed meanwhile",
+  "open": [
+    {
+      "id": "ORR-001",
+      "subject": "QS Rule Pack — Finishes V1, CERAMIC section",
+      "question": "the section as received ends in an ellipsis after the floor drain. Which ceramic rules follow it?",
+      "why_it_matters": "what arrived is recorded as UP-CER-001..008. What did not arrive is not invented, so any rule after the ellipsis is missing from the library",
+      "status": "TRUNCATED_AS_RECEIVED"
+    },
+    {
+      "id": "ORR-002",
+      "subject": "QS Rule Pack — Finishes V1, STAIRS section",
+      "question": "the section ends in an ellipsis after the railing rule. Which stair rules follow it?",
+      "why_it_matters": "recorded so far: the commercial step basis, the landing, توشيح zigzag and sloped, and the railing",
+      "status": "TRUNCATED_AS_RECEIVED"
+    },
+    {
+      "id": "ORR-003",
+      "subject": "QS Rule Pack — Finishes V1, WATERPROOFING section",
+      "question": "the section ends in an ellipsis after the shower rule. Which waterproofing rules follow it?",
+      "why_it_matters": "recorded so far: the wet floor, the 0.15 m upturn, the doorway continuation and the shower",
+      "status": "TRUNCATED_AS_RECEIVED"
+    },
+    {
+      "id": "ORR-004",
+      "subject": "P7757 pantry — the applicable tiled walls",
+      "question": "which wall or walls are the pantry units fitted along?",
+      "why_it_matters": "the label resolves to no physical space; the sanitary plan shows drainage at the pantry (2.22 lm within 1.5 m) but the linework names no host wall. Without the wall set there is no tiled area",
+      "what_would_settle_it": "the sanitary DWG with its text and layers, or the wall named directly",
+      "status": "PANTRY_TILE_WALLS_REQUIRE_OWNER_REVIEW"
+    },
+    {
+      "id": "ORR-005",
+      "subject": "P7757 pantry — the wall tile height",
+      "question": "FULL WALL is confirmed; what is the tileable height in metres for this project?",
+      "why_it_matters": "UP-PANTRY-004 forbids a universal height, so the area cannot be computed from the run alone",
+      "what_would_settle_it": "a section, a specification, or the project height",
+      "status": "OWNER_RULE_REQUEST"
+    },
+    {
+      "id": "ORR-006",
+      "subject": "P7757 stairs — the step rise",
+      "question": "what is the floor-to-floor rise and the number of risers for PS-STAIR-002?",
+      "why_it_matters": "the tread build-up is now an owner default (30 mm), so the VISIBLE riser needs only the rise. The set carries eight level marks and two sections, and this engine cannot place them",
+      "what_would_settle_it": "the section sheet in a source this engine decodes, or the two levels named",
+      "status": "RISER_HEIGHT_NOT_ESTABLISHED"
+    },
+    {
+      "id": "ORR-007",
+      "subject": "Stair skirting measurement convention",
+      "question": "for a توشيح, is the quantity taken along the zigzag or along the rake for a given stair — and which applies to P7757?",
+      "why_it_matters": "UP-STAIR-010 and UP-STAIR-011 both exist because both are used. Which one a stair takes is a project answer",
+      "status": "OWNER_RULE_REQUEST"
+    },
+    {
+      "id": "ORR-008",
+      "subject": "Wet rooms of P7757",
+      "question": "which rooms are wet, and which of them take FULL wall ceramic?",
+      "why_it_matters": "UP-CER-004 makes the floor skirting of a full-wall-ceramic wet room ZERO. Without the list, neither the skirting nor the waterproofing can be measured",
+      "status": "OWNER_RULE_REQUEST"
+    },
+    {
+      "id": "ORR-009",
+      "subject": "Ground floor open zone — the pool's curved intrusion",
+      "question": "how much of the pool's circular segment falls inside the SALON: the whole of it, or half?",
+      "why_it_matters": "the take-off deducts half (1.2448 m2) and the benchmark behaves as though the whole segment (2.4897 m2) were deducted. That one fraction accounts for 1.2448 of the 1.2867 m2 gap and leaves 0.0418 m2, which is 137.5418 rounded to 137.5",
+      "what_would_settle_it": "the drawing at the pool edge, or the scope note that says which face the SALON is measured to there",
+      "status": "REQUIRES_SCOPE_BASIS_RECONCILIATION",
+      "do_not": "no fraction is adopted to close the gap. engine.finishes_rules refuses a curved intrusion whose applicable fraction is not established"
+    }
+  ],
+  "answered": [
+    {
+      "id": "ORR-000",
+      "subject": "the elevator threshold depth",
+      "answer": "1.10 m x 0.50 m fallback, with the drawn door width preferred over 1.10 m where it is known",
+      "rule_id": "UP-ELEV-005",
+      "answered_on": "2026-09-17"
+    }
+  ]
+}

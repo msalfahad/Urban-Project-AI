@@ -1,0 +1,18 @@
+{
+ "authorises_assumptions": false,
+ "claim_id": "PEC-CLAIM-2026-10-08-01",
+ "effect": "workflow only: a component not found is SOURCE_EXPECTED_NOT_LOCATED and the issued set is exhausted again; only explicit source conflicts go back to the engineer",
+ "frozen_quantities_changed": false,
+ "kind": "PROJECT_ENGINEER_CLAIM",
+ "pending_separately": [
+  "F / F10 (and other known drawing conflicts)"
+ ],
+ "recorded": "2026-10-08",
+ "round": "SOURCE_RECOVERY_DELTA_S4_S5_S6",
+ "scope": "ST7757 structural set (DXF + issued PDF) and the architectural set where the structure points to it (FOLLOW ARCH / AS PER ARCH)",
+ "statement": "The project engineer has confirmed that the required construction / reinforcement information is contained within the issued construction plan set.",
+ "supersedes": null,
+ "version": 1,
+ "workflow_new": "not found -> SOURCE_EXPECTED_NOT_LOCATED -> exhaust the issued plan set -> only explicit source conflicts go back to the engineer",
+ "workflow_old": "not found -> engineer required"
+}

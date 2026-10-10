@@ -1,0 +1,189 @@
+{
+ "SCHEMA": "URBAN_R8_15_SKIRTING_PATH_POLICY_V1",
+ "policy": {
+  "policy_id": "WALL_CONTACT_PATH_POLICY_V2",
+  "extends": "WALL_CONTACT_PATH_POLICY_V1",
+  "classes": [
+   "OPENING_JAMB",
+   "TOPOLOGY_CLOSURE",
+   "GLAZED_OPENING",
+   "DOOR_OPENING",
+   "OBSTACLE_FACE",
+   "UNPROVEN_OBSTACLE",
+   "WINDOW_OPENING",
+   "COLUMN_FACE",
+   "REAL_WALL_FACE",
+   "OTHER"
+  ],
+  "physical_contact": [
+   "REAL_WALL_FACE",
+   "COLUMN_FACE",
+   "OBSTACLE_FACE",
+   "OPENING_JAMB"
+  ],
+  "method_parameters": {
+   "window_treatment": [
+    "DEDUCT_EVERY_WINDOW_WIDTH",
+    "FOLLOW_WALL_BELOW"
+   ],
+   "jamb_return": [
+    "NO_RETURN",
+    "RETURN_TO_FRAME",
+    "UNRESOLVED"
+   ],
+   "obstacle_faces": [
+    "INCLUDED",
+    "EXCLUDED",
+    "UNRESOLVED"
+   ],
+   "column_faces": [
+    "INCLUDED",
+    "EXCLUDED",
+    "UNRESOLVED"
+   ]
+  },
+  "always_off": [
+   "DOOR_OPENING",
+   "TOPOLOGY_CLOSURE"
+  ],
+  "withheld": [
+   "UNPROVEN_OBSTACLE",
+   "OTHER"
+  ],
+  "full_wall_tile": "NO_SKIRTING_FULL_WALL_TILE",
+  "incomplete": "any withheld length -> no number for that room",
+  "never": [
+   "a room polygon perimeter",
+   "skirting across a door or an open passage",
+   "skirting on a topology closure",
+   "a furniture / wardrobe deduction",
+   "skirting in a full-wall-tile room",
+   "a jamb return without a RETURN method",
+   "a window rule from a layer name alone",
+   "a published quantity without a frozen, blind-tested policy"
+  ],
+  "digest": "5b5d6e5ec6397cf1c09fa678c95197db971f0867ae741becb9ac3b51bfc0c5b3"
+ },
+ "freeze": {
+  "SCHEMA": "URBAN_R8_15_SKIRTING_FREEZE_V1",
+  "recommendation_written_first": {
+   "file": "research/external_engine_lab/r8_15_recommendation.json",
+   "sha256": "fbf63bb15a2c849308eb77dfb84b00bc3fd4ff91508173e5fdb3ad88155cf96b",
+   "committed_in": "4471a71"
+  },
+  "frozen_commit": "e3705b753ebdee3548715cb91f4681ab0fa39610",
+  "wall_contact_path_policy": {
+   "id": "WALL_CONTACT_PATH_POLICY_V2",
+   "digest": "5b5d6e5ec6397cf1c09fa678c95197db971f0867ae741becb9ac3b51bfc0c5b3"
+  },
+  "wall_band_policy_unchanged": {
+   "id": "WALL_BAND_POLICY_V5",
+   "digest": "d1ff58e755bb88f4bbb7a9813427b7ac6f054ece851df7d9a048866641f3e6d3"
+  },
+  "closure_policy_unchanged": {
+   "id": "TOPOLOGY_CLOSURE_POLICY_V1",
+   "digest": "46742c570b4d8a036fd6b7446f28055bfd4e1adbff51966e800e5986ca99ccb2"
+  },
+  "engine_file_sha256": {
+   "engine/source/wall_contact_path.py": "87466cf3ab334c0a9b1d5a4ab80a03695127ad6b132d714e690be744355326d7",
+   "engine/source/obstacle_authority.py": "fbd8bffed6039c888e7dc4abb2f005bd33c63274e917f3b3b778c2c05ed7cb77"
+  },
+  "synthetic_test_sha256": {
+   "tests/r8_15/test_r8_15_skirting_v2.py": "5ec477159afae5465c7040190b5f353988d2f50f37321a4c1662c12fe64f9c95",
+   "tests/r8_15/test_r8_15_duct.py": "e35aae558425c6de9c5a541c1dd094c5119a6073a02452b902f8972672b1c60e"
+  },
+  "synthetic_tests": [
+   "test_a_dry_room_wall_path_is_measured_from_its_real_walls",
+   "test_a_wardrobe_and_loose_furniture_do_not_remove_the_path",
+   "test_a_door_breaks_the_path",
+   "test_an_open_passage_breaks_the_path_and_its_closure_jambs_count_zero",
+   "test_a_drawn_jamb_cap_at_a_passage_is_a_jamb_not_room_wall_face",
+   "test_topology_closure_has_zero_length_on_every_method",
+   "test_a_full_wall_tile_room_has_no_skirting_even_with_a_real_path",
+   "test_the_duct_face_is_handled_explicitly",
+   "test_a_window_above_the_floor_does_not_break_the_physical_path",
+   "test_a_full_height_opening_breaks_the_path_and_unknown_is_withheld",
+   "test_an_owner_deduct_every_window_method_removes_the_width_whether_or_not_wall_stands_below",
+   "test_column_faces_carry_skirting_and_unknown_roles_are_withheld",
+   "test_the_physical_path_and_the_measurement_region_stay_separate"
+  ],
+  "qortuba_method": {
+   "method_id": "QORTUBA-NEW-SKIRTING-METHOD",
+   "version": 1,
+   "scope": {
+    "project": "QORTUBA",
+    "source_revision_id": "QORTUBA_REV_NEW",
+    "rows": "dry tiled rooms (Q-13 sites)"
+   },
+   "system": "QP-06: Qortuba uses the HIDDEN skirting + hidden profile system (one payable path, US-08)",
+   "parameters": {
+    "window_treatment": "DEDUCT_EVERY_WINDOW_WIDTH",
+    "jamb_return": "NO_RETURN",
+    "obstacle_faces": "INCLUDED",
+    "column_faces": "INCLUDED"
+   },
+   "authority": {
+    "rooms": "QORTUBA-NEW-DRY-ROOM-SKIRTING-ALL-REAL-WALLS-OWNER-001@v1 (all real walls of tiled dry rooms; no wardrobe / joinery / furniture deduction; stops at doors, passages, gaps) + QORTUBA-NEW-NO-SKIRTING-FULL-WALL-TILE-ROOMS-OWNER-001@v1 (US-02)",
+    "window_treatment": "QP-09 QORTUBA_SKIRTING_WINDOW_DEDUCTION = DEDUCT_EVERY_WINDOW_WIDTH ('the clear WIDTH of every door, sliding door and window comes off the hidden skirting and hidden profile path, whether or not wall stands below the opening. The question is closed and is not asked again')",
+    "jamb_return": "NO_RETURN: the rule-store method measures along room faces and deducts opening WIDTHS only (QP-09, section E); no Urban or Qortuba rule adds a return; returns are recorded as a counterfactual, never assumed",
+    "obstacle_faces": "INCLUDED only for faces with owner PHYSICAL obstacle authority (QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1): the owner skirting fact runs on all real walls, and the rule-store section E keeps skirting on every non-opening (a column 'is not an opening')",
+    "column_faces": "INCLUDED: rule-store section E ('a column face is not an opening, so the skirting runs across it')"
+   },
+   "never": [
+    "QP-10 / QP-11 (76.389 lm, old revision) as a target or comparison",
+    "a room polygon perimeter"
+   ],
+   "ref": "QORTUBA-NEW-SKIRTING-METHOD@v1",
+   "digest": "1d1ba24e1213bf4b75df2cce7f1b07665f442eea9a7c0cadd3206c3da9fcf2f2"
+  },
+  "qortuba_before_freeze": {
+   "v2_skirting_measurements_on_qortuba": 0,
+   "inspected_before_freeze": "the R8.15 section-0 inspection read the R8.14 classification of the dry-room boundary edges (class, sources, roles, length per edge) to find the window / jamb / duct conditions - no V2 class, no method and no total was computed on Qortuba",
+   "historical_value_seen": "QP-10 = 76.389 lm (OLD revision, rule store) was read while searching the rule store - it is never a target, never compared"
+  },
+  "timestamp_metadata": {
+   "frozen_at_utc": "2026-10-02T11:08:12+00:00",
+   "in_digest": false
+  },
+  "order": [
+   "recommendation",
+   "policy V2 + method parameters from the rule store",
+   "synthetic tests",
+   "freeze",
+   "commit",
+   "THEN the blind Qortuba skirting run",
+   "THEN marble / floor / ceiling rows and registers"
+  ],
+  "rule": "no post-result edit inside WALL_CONTACT_PATH_POLICY_V2 or the frozen Qortuba method; a defect found after the blind run is the next round",
+  "synthetic_test_count": 13
+ },
+ "method": {
+  "method_id": "QORTUBA-NEW-SKIRTING-METHOD",
+  "version": 1,
+  "scope": {
+   "project": "QORTUBA",
+   "source_revision_id": "QORTUBA_REV_NEW",
+   "rows": "dry tiled rooms (Q-13 sites)"
+  },
+  "system": "QP-06: Qortuba uses the HIDDEN skirting + hidden profile system (one payable path, US-08)",
+  "parameters": {
+   "window_treatment": "DEDUCT_EVERY_WINDOW_WIDTH",
+   "jamb_return": "NO_RETURN",
+   "obstacle_faces": "INCLUDED",
+   "column_faces": "INCLUDED"
+  },
+  "authority": {
+   "rooms": "QORTUBA-NEW-DRY-ROOM-SKIRTING-ALL-REAL-WALLS-OWNER-001@v1 (all real walls of tiled dry rooms; no wardrobe / joinery / furniture deduction; stops at doors, passages, gaps) + QORTUBA-NEW-NO-SKIRTING-FULL-WALL-TILE-ROOMS-OWNER-001@v1 (US-02)",
+   "window_treatment": "QP-09 QORTUBA_SKIRTING_WINDOW_DEDUCTION = DEDUCT_EVERY_WINDOW_WIDTH ('the clear WIDTH of every door, sliding door and window comes off the hidden skirting and hidden profile path, whether or not wall stands below the opening. The question is closed and is not asked again')",
+   "jamb_return": "NO_RETURN: the rule-store method measures along room faces and deducts opening WIDTHS only (QP-09, section E); no Urban or Qortuba rule adds a return; returns are recorded as a counterfactual, never assumed",
+   "obstacle_faces": "INCLUDED only for faces with owner PHYSICAL obstacle authority (QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1): the owner skirting fact runs on all real walls, and the rule-store section E keeps skirting on every non-opening (a column 'is not an opening')",
+   "column_faces": "INCLUDED: rule-store section E ('a column face is not an opening, so the skirting runs across it')"
+  },
+  "never": [
+   "QP-10 / QP-11 (76.389 lm, old revision) as a target or comparison",
+   "a room polygon perimeter"
+  ],
+  "ref": "QORTUBA-NEW-SKIRTING-METHOD@v1",
+  "digest": "1d1ba24e1213bf4b75df2cce7f1b07665f442eea9a7c0cadd3206c3da9fcf2f2"
+ }
+}

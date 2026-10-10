@@ -1,0 +1,226 @@
+{
+ "SCHEMA": "URBAN_QORTUBA_RC1_FREEZE_DIGEST_AUDIT_V1",
+ "schema": {
+  "SCHEMA": {
+   "class": "TEXT"
+  },
+  "name": {
+   "class": "TEXT"
+  },
+  "frozen": {
+   "class": "BOOLEAN",
+   "why": "the freeze decision itself (all RC1 gates pass)"
+  },
+  "release_status": {
+   "class": "TEXT"
+  },
+  "contractual_approval": {
+   "class": "BOOLEAN",
+   "why": "RC1 is a reference / shadow freeze, never a contract"
+  },
+  "canonical_dxf_sha256": {
+   "class": "SHA256"
+  },
+  "dwg_sha256": {
+   "class": "SHA256"
+  },
+  "dwg_dxf_anchor": {
+   "class": "TEXT"
+  },
+  "selected_plan_scope": {
+   "class": "TEXT"
+  },
+  "code_commit": {
+   "class": "GIT_COMMIT"
+  },
+  "run_id": {
+   "class": "SHA256"
+  },
+  "source_canonical_input_digest": {
+   "class": "SHA256"
+  },
+  "topology_input_digest": {
+   "class": "SHA256"
+  },
+  "topology_result_digest": {
+   "class": "SHA256"
+  },
+  "topology_policy_digest": {
+   "class": "SHA256"
+  },
+  "room_register_digest": {
+   "class": "SHA256"
+  },
+  "owner_fact_and_rule_files_sha256": {
+   "class": "SHA256_MAP"
+  },
+  "engine_policies": {
+   "class": "SHA256_MAP"
+  },
+  "inherited_freezes": {
+   "class": "GIT_COMMIT_MAP"
+  },
+  "row_digests": {
+   "class": "SHA256_MAP"
+  },
+  "opening_digest": {
+   "class": "SHA256"
+  },
+  "surface_digest": {
+   "class": "SHA256"
+  },
+  "trade_item_digests": {
+   "class": "SHA256_MAP"
+  },
+  "canonical_boq_digest": {
+   "class": "SHA256"
+  },
+  "xlsx_content_digest": {
+   "class": "SHA256"
+  },
+  "xlsx_file_sha256": {
+   "class": "SHA256"
+  },
+  "open_items": {
+   "class": "LIST"
+  },
+  "open_owner_question": {
+   "class": "OPTIONAL",
+   "why": "text of an open owner question, or NONE when nothing is open"
+  },
+  "test_results": {
+   "class": "OPTIONAL",
+   "why": "filled by the package from the ONE full suite run on the final commit (the suite runs after the registers are committed)"
+  },
+  "after_freeze": {
+   "class": "TEXT"
+  },
+  "freeze_schema": {
+   "class": "TEXT"
+  }
+ },
+ "validation": {
+  "policy": "FREEZE_SCHEMA_V1",
+  "state": "PASS",
+  "errors": [],
+  "fields": 31,
+  "classes": {
+   "SCHEMA": "TEXT",
+   "name": "TEXT",
+   "frozen": "BOOLEAN",
+   "release_status": "TEXT",
+   "contractual_approval": "BOOLEAN",
+   "canonical_dxf_sha256": "SHA256",
+   "dwg_sha256": "SHA256",
+   "dwg_dxf_anchor": "TEXT",
+   "selected_plan_scope": "TEXT",
+   "code_commit": "GIT_COMMIT",
+   "run_id": "SHA256",
+   "source_canonical_input_digest": "SHA256",
+   "topology_input_digest": "SHA256",
+   "topology_result_digest": "SHA256",
+   "topology_policy_digest": "SHA256",
+   "room_register_digest": "SHA256",
+   "owner_fact_and_rule_files_sha256": "SHA256_MAP",
+   "engine_policies": "SHA256_MAP",
+   "inherited_freezes": "GIT_COMMIT_MAP",
+   "row_digests": "SHA256_MAP",
+   "opening_digest": "SHA256",
+   "surface_digest": "SHA256",
+   "trade_item_digests": "SHA256_MAP",
+   "canonical_boq_digest": "SHA256",
+   "xlsx_content_digest": "SHA256",
+   "xlsx_file_sha256": "SHA256",
+   "open_items": "LIST",
+   "open_owner_question": "OPTIONAL",
+   "test_results": "OPTIONAL",
+   "after_freeze": "TEXT",
+   "freeze_schema": "TEXT"
+  }
+ },
+ "rc1_76a9771_findings": [
+  {
+   "field": "topology_digest",
+   "was": "false",
+   "class": "INVALID (boolean placeholder)",
+   "cause": "rc1_registers copied ctx['reproduces']['topology_digest'] - an R8.13-era reproduction FLAG (lab run-input digest == the R8.13 V4 blind digest), false since WALL_BAND_POLICY_V5 changed the run input; wrong field and wrong type",
+   "now": {
+    "topology_input_digest": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+    "topology_result_digest": "b451464314ef01c6de500858a5d0316978356627497229660a4b7ff3051da706"
+   }
+  },
+  {
+   "field": "row_digests",
+   "was": "{'TOPOLOGY_DIGEST': 'SAME', ...}",
+   "class": "INVALID (comparison flags)",
+   "cause": "the R8.20 regression's SAME / CHANGED comparison was stored instead of the digests",
+   "now": "the three layer digests per row (TOPOLOGY_RUN_INPUT / ROW_AUTHORITY / RELEASE_INPUT)"
+  },
+  {
+   "field": "dwg_known_sha256_prefix",
+   "was": "e4babbc2ded1",
+   "class": "INCOMPLETE (12-character prefix)",
+   "cause": "a display prefix reused as the identity",
+   "now": {
+    "dwg_sha256": "e4babbc2ded14d8b01d64fbfd4b373e6a09ba60c4490a56e6305a82c9e47171f"
+   }
+  },
+  {
+   "field": "code_commit",
+   "was": "missing",
+   "class": "MISSING",
+   "now": "7402880"
+  },
+  {
+   "field": "test_results",
+   "was": "a placeholder string",
+   "class": "UNDECLARED OPTIONAL",
+   "now": "declared OPTIONAL (PACKAGE_FILLED) in the schema"
+  }
+ ],
+ "old_values_source": "git 76a9771:tests/rc1/registers/QORTUBA_RC1_FREEZE.json",
+ "old_values": {
+  "topology_digest": false,
+  "row_digests": {
+   "Q-03": {
+    "TOPOLOGY_DIGEST": "SAME",
+    "ROW_AUTHORITY_DIGEST": "SAME",
+    "RELEASE_INPUT_DIGEST": "SAME"
+   },
+   "Q-03P": {
+    "TOPOLOGY_DIGEST": "SAME",
+    "ROW_AUTHORITY_DIGEST": "SAME",
+    "RELEASE_INPUT_DIGEST": "SAME"
+   },
+   "Q-11": {
+    "TOPOLOGY_DIGEST": "SAME",
+    "ROW_AUTHORITY_DIGEST": "SAME",
+    "RELEASE_INPUT_DIGEST": "SAME"
+   },
+   "Q-12": {
+    "TOPOLOGY_DIGEST": "SAME",
+    "ROW_AUTHORITY_DIGEST": "SAME",
+    "RELEASE_INPUT_DIGEST": "SAME"
+   },
+   "Q-13": {
+    "TOPOLOGY_DIGEST": "SAME",
+    "ROW_AUTHORITY_DIGEST": "SAME",
+    "RELEASE_INPUT_DIGEST": "SAME"
+   },
+   "Q-14": {
+    "TOPOLOGY_DIGEST": "SAME",
+    "ROW_AUTHORITY_DIGEST": "SAME",
+    "RELEASE_INPUT_DIGEST": "SAME"
+   }
+  },
+  "dwg_known_sha256_prefix": "e4babbc2ded1"
+ },
+ "intentional_booleans": {
+  "frozen": "the freeze decision itself (all RC1 gates pass)",
+  "contractual_approval": "RC1 is a reference / shadow freeze, never a contract"
+ },
+ "optional": {
+  "open_owner_question": "text of an open owner question, or NONE when nothing is open",
+  "test_results": "filled by the package from the ONE full suite run on the final commit (the suite runs after the registers are committed)"
+ }
+}

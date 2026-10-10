@@ -1,0 +1,60 @@
+{
+ "SCHEMA": "URBAN_R8_13_WET_SERVICE_FINISH_SCOPE_V1",
+ "fact": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1",
+ "statement": {
+  "text": "bathrooms, ironing rooms, washing / laundry rooms and the kitchen: FLOOR ceramic / porcelain AND WALL ceramic / porcelain to 3.20 m",
+  "owner_room_types": [
+   "BATHROOM",
+   "IRONING_ROOM",
+   "WASHING_LAUNDRY_ROOM",
+   "KITCHEN"
+  ],
+  "floor": "CERAMIC_OR_PORCELAIN",
+  "wall": "CERAMIC_OR_PORCELAIN",
+  "wall_finish_height_m": 3.2,
+  "values": [
+   {
+    "trade": "WALL_TILE",
+    "attribute": "HEIGHT_M",
+    "value": 3.2
+   }
+  ],
+  "this_case_only": "3.20 m is ONLY for this Qortuba selected revision: NOT an Urban default; it does not transfer to P7757, Al Rashed or any future villa",
+  "quantities": "NONE in R8.13: no tested wall-ceramic face-set path exists for this revision; never gross perimeter x 3.20"
+ },
+ "scope": {
+  "project": "QORTUBA",
+  "source_revision_id": "QORTUBA_REV_NEW",
+  "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+  "region_id": "RC:MODEL_SPACE:4267:540:1649",
+  "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+  "plan": "PLAN_VARIANT_4_SELECTED",
+  "space_classes": [
+   "WET_SERVICE_ROOM",
+   "SERVICE_ROOM"
+  ]
+ },
+ "transfer_forbidden": [
+  "the old Qortuba revision",
+  "any other Qortuba revision, region or plan variant",
+  "the DWG (identity NOT_ESTABLISHED)",
+  "P7757",
+  "Al Rashed",
+  "any future villa or project",
+  "an Urban default"
+ ],
+ "wall_finish_height_m": 3.2,
+ "applies_to_labels": {
+  "BATH": "WET_SERVICE_ROOM",
+  "PAINTRY": "SERVICE_ROOM via QP-07"
+ },
+ "quantity": "NOT_COMPUTED: no tested wall-ceramic face-set path for this revision; never gross perimeter x 3.20",
+ "supersession": [
+  {
+   "rule": "QP-01 QORTUBA_WALL_TILE_HEIGHT = 3.00 m",
+   "relation": "SUPERSEDED_IN_SCOPE",
+   "scope": "the selected NEW revision (QORTUBA_REV_NEW, DXF df0e1d69...) wet / service rooms only; QP-01 stays in force for the old revision",
+   "why": "a CHANGE of value (3.00 -> 3.20 m): versioned, scoped supersession - never two in-force heights"
+  }
+ ]
+}

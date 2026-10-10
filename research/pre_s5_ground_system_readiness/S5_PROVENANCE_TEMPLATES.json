@@ -1,0 +1,2073 @@
+{
+ "context": {
+  "CALCULATION_ROUND": "PRE_S5",
+  "DRAWING_ID": "ST7757.dxf",
+  "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+  "PROJECT_ID": "ALSENAN-ST7757",
+  "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+  "REVISION": "ALSENAN_ST7757_DXF"
+ },
+ "extra_fields": [
+  "START_NODE",
+  "END_NODE",
+  "GEOMETRY_HANDLES",
+  "DETAIL_ID",
+  "DETAIL_APPLICABILITY_STATE"
+ ],
+ "fields": [
+  "PROJECT_ID",
+  "DRAWING_ID",
+  "DRAWING_SHA",
+  "REVISION",
+  "SHEET_REGION",
+  "SOURCE_HANDLES",
+  "SOURCE_TEXT",
+  "COMPONENT",
+  "RULE_ID",
+  "CONVENTION_ID",
+  "MEASUREMENT_STATE",
+  "AUTHORITY_STATE",
+  "RELEASE_STATE",
+  "FORMULA",
+  "INPUTS",
+  "ENGINE_COMMIT",
+  "REGISTER_VERSION",
+  "CALCULATION_ROUND",
+  "ELEMENT_OCCURRENCE_ID",
+  "ELEMENT_MARK",
+  "ELEMENT_FAMILY",
+  "START_NODE",
+  "END_NODE",
+  "GEOMETRY_HANDLES",
+  "DETAIL_ID",
+  "DETAIL_APPLICABILITY_STATE"
+ ],
+ "templates": [
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "PROJECT_GENERAL_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-107-7CE-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:17BD+17BD"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "107",
+    "7CE"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "114+115+7DF"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "PROJECT_GENERAL_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-109-7CB-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:234+234"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "109",
+    "7CB"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D0+FC"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "PROJECT_GENERAL_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-109-7CB-2",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1DC+1DC"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "109",
+    "7CB"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:234+234"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "PROJECT_GENERAL_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-10A-7C9-1",
+   "END_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "145+7CA"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "10A",
+    "7C9"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:218+218"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "CANDIDATE_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-10B-7D1-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:22C+22C"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "10B",
+    "7D1"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D4+F8"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "CANDIDATE_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-10B-7D1-2",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:223+223"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "10B",
+    "7D1"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:22C+22C"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "PROJECT_GENERAL_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-114-115-7DF-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:238+238"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "114",
+    "115",
+    "7DF"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7E7+7E8"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "PROJECT_GENERAL_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-114-115-7DF-2",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1FC+1FC"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "114",
+    "115",
+    "7DF"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:238+238"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "CANDIDATE_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-GT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-136-7D5-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:204+204"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "136",
+    "7D5"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:207+207"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "CANDIDATE_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-137-138-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:214+214"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "137",
+    "138"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:204+204"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "EXPLICIT_LENGTH_CONDITION",
+   "DETAIL_ID": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-13C-7D9-1",
+   "END_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "13F+7D3"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "13C",
+    "7D9"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "13E+7D6"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "CANDIDATE_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-GT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-13D-7D2-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:223+223"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "13D",
+    "7D2"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:211+211"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "CANDIDATE_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-GT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-13E-7D6-1",
+   "END_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "ARC:139+13A"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "13E",
+    "7D6"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D4+F8"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "EXPLICIT_LENGTH_CONDITION",
+   "DETAIL_ID": [
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-13F-7D3-1",
+   "END_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "13D+7D2"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "13F",
+    "7D3"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:20B+20B"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "EXPLICIT_LENGTH_CONDITION",
+   "DETAIL_ID": [
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-140-7D7-1",
+   "END_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "13D+7D2"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "140",
+    "7D7"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D4+F8"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "EXPLICIT_LENGTH_CONDITION",
+   "DETAIL_ID": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-141-7DA-1",
+   "END_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "142+7D8"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "141",
+    "7DA"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D4+F8"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "CANDIDATE_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-142-7D8-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:22C+22C"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "142",
+    "7D8"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "140+7D7"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "PROJECT_GENERAL_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-145-7CA-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:220+220"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "145",
+    "7CA"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "10A+7C9"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "PROJECT_GENERAL_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-145-7CA-2",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:228+228"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "145",
+    "7CA"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:220+220"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "CANDIDATE_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-15C-7CC-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1F2+1F2"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "15C",
+    "7CC"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "109+7CB"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "EXPLICIT_LENGTH_CONDITION",
+   "DETAIL_ID": [
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-15D-7C8-1",
+   "END_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "170+7C3"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "15D",
+    "7C8"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "FREE_END",
+    "refs": [
+     null
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "EXPLICIT_LENGTH_CONDITION",
+   "DETAIL_ID": [
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-15E-15F-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1E0+1E0"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "15E",
+    "15F"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1F5+1F5"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "EXPLICIT_LENGTH_CONDITION",
+   "DETAIL_ID": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-16F-7FF-1",
+   "END_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "15D+7C8"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "16F",
+    "7FF"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "15E+15F"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "PROJECT_GENERAL_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-170-7C3-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1E4+1E4"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "170",
+    "7C3"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1DC+1DC"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "PROJECT_GENERAL_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-170-7C3-2",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:241+241"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "170",
+    "7C3"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1E4+1E4"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "PROJECT_GENERAL_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-170-7C3-3",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:17C0+17C0"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "170",
+    "7C3"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:241+241"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "CANDIDATE_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-175-7DE-1",
+   "END_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "170+7C3"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "175",
+    "7DE"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "177+7CD"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "CANDIDATE_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-176-7E6-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1E4+1E4"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "176",
+    "7E6"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "177+7CD"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "CANDIDATE_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-GT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-177-7CD-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:245+245"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "177",
+    "7CD"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "FREE_END",
+    "refs": [
+     null
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "CANDIDATE_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-177-7CD-2",
+   "END_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "ARC:157+158"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "177",
+    "7CD"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:245+245"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "PROJECT_GENERAL_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-178-7DB-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:230+230"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "178",
+    "7DB"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "145+7CA"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "EXPLICIT_LENGTH_CONDITION",
+   "DETAIL_ID": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-17B-7E5-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:23C+23C"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "17B",
+    "7E5"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D0+FC"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "EXPLICIT_LENGTH_CONDITION",
+   "DETAIL_ID": [
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-17C-7E3-1",
+   "END_NODE": {
+    "kind": "FREE_END",
+    "refs": [
+     null
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "17C",
+    "7E3"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7E1+7E2"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "EXPLICIT_LENGTH_CONDITION",
+   "DETAIL_ID": [
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-17D-7E4-1",
+   "END_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7E1+7E2"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "17D",
+    "7E4"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7D0+FC"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "CANDIDATE_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-17E-17F-1",
+   "END_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "176+7E6"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "17E",
+    "17F"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1EF+1EF"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "CANDIDATE_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-180-181-1",
+   "END_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "180D+180E"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "180",
+    "181"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "176+7E6"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "CANDIDATE_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-180D-180E-1",
+   "END_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "175+7DE"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "180D",
+    "180E"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "176+7E6"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "CANDIDATE_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-1811-1812-1",
+   "END_NODE": {
+    "kind": "FREE_END",
+    "refs": [
+     null
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "1811",
+    "1812"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "FREE_END",
+    "refs": [
+     null
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "CANDIDATE_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-182-183-1",
+   "END_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "17E+17F"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "182",
+    "183"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "170+7C3"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "EXPLICIT_LENGTH_CONDITION",
+   "DETAIL_ID": [
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-184-7CF-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:24D+24D"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "184",
+    "7CF"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "17D+7E4"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "EXPLICIT_LENGTH_CONDITION",
+   "DETAIL_ID": [
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-184-7CF-2",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:23C+23C"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "184",
+    "7CF"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:24D+24D"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "CANDIDATE_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-GT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-184-7CF-3",
+   "END_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7E0+FD"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "184",
+    "7CF"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:23C+23C"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "PROJECT_GENERAL_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-185-7C7-1",
+   "END_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "109+7CB"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "185",
+    "7C7"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:230+230"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "PROJECT_GENERAL_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-7D0-FC-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:249+249"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "7D0",
+    "FC"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "FREE_END",
+    "refs": [
+     null
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "PROJECT_GENERAL_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-7D0-FC-2",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:251+251"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "7D0",
+    "FC"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:249+249"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "PROJECT_GENERAL_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-7D0-FC-3",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:255+255"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "7D0",
+    "FC"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:251+251"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "PROJECT_GENERAL_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-7D0-FC-4",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:200+200"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "7D0",
+    "FC"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:255+255"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "CANDIDATE_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-GT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-7D4-F8-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:20B+20B"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "7D4",
+    "F8"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "FREE_END",
+    "refs": [
+     null
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "CANDIDATE_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-7D4-F8-2",
+   "END_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "10B+7D1"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "7D4",
+    "F8"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:20B+20B"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "EXPLICIT_LENGTH_CONDITION",
+   "DETAIL_ID": [
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-7DC-7DD-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:7F5+7F5"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "7DC",
+    "7DD"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:24D+24D"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "EXPLICIT_LENGTH_CONDITION",
+   "DETAIL_ID": [
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-7DC-7DD-2",
+   "END_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "177+7CD"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "7DC",
+    "7DD"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:7F5+7F5"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "PROJECT_GENERAL_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-7E0-FD-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:809+809"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "7E0",
+    "FD"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:200+200"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "PROJECT_GENERAL_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-7E0-FD-2",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:1FC+1FC"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "7E0",
+    "FD"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:809+809"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "EXPLICIT_LENGTH_CONDITION",
+   "DETAIL_ID": [
+    "P13-GB-GT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-7E1-7E2-1",
+   "END_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "7DC+7DD"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "7E1",
+    "7E2"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:228+228"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "CANDIDATE_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-7E7-7E8-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:7ED+7ED"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "7E7",
+    "7E8"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "184+7CF"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "CANDIDATE_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-7E7-7E8-2",
+   "END_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "177+7CD"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "7E7",
+    "7E8"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:7ED+7ED"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "EXPLICIT_LENGTH_CONDITION",
+   "DETAIL_ID": [
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-7E9-7EA-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:7ED+7ED"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "7E9",
+    "7EA"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:7F5+7F5"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "CANDIDATE_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR",
+    "P13-GB-LT2_5M",
+    "P13-GB-LT5M"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-A-139-13A-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:214+214"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "139",
+    "13A"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "13E+7D6"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "PROJECT_GENERAL_DETAIL",
+   "DETAIL_ID": [
+    "P13-GB-EXTERIOR"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "GROUND_BEAM",
+   "ELEMENT_MARK": "GB (typical p.13)",
+   "ELEMENT_OCCURRENCE_ID": "GSO-A-157-158-1",
+   "END_NODE": {
+    "kind": "COLUMN",
+    "refs": [
+     "COL:17BD+17BD"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "157",
+    "158"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "BEAM_JUNCTION",
+    "refs": [
+     "170+7C3"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "EXPLICIT_MARK_MATCH",
+   "DETAIL_ID": [
+    "SBT:1FB0"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "STRAP_BEAM",
+   "ELEMENT_MARK": "SB1",
+   "ELEMENT_OCCURRENCE_ID": "SOCC-1689-1B1C",
+   "END_NODE": {
+    "kind": "FOOTING",
+    "refs": [
+     "FOCC-1B24"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "1689",
+    "1B1C",
+    "1B1D:SB1>v"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "FOOTING",
+    "refs": [
+     "FOCC-1B1B"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "SOURCE_CONFLICT",
+   "DETAIL_ID": [
+    "SBT:1FBB",
+    "SBT:2ABA"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "STRAP_BEAM",
+   "ELEMENT_MARK": "SB2",
+   "ELEMENT_OCCURRENCE_ID": "SOCC-1B08-1B09",
+   "END_NODE": {
+    "kind": "FOOTING",
+    "refs": [
+     "FOCC-1B07"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "1B08",
+    "1B09",
+    "1B12:sb2>v"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "FOOTING",
+    "refs": [
+     "FOCC-1B19"
+    ]
+   }
+  },
+  {
+   "CALCULATION_ROUND": "PRE_S5",
+   "DETAIL_APPLICABILITY_STATE": "EXPLICIT_MARK_MATCH",
+   "DETAIL_ID": [
+    "SBT:2B06"
+   ],
+   "DRAWING_ID": "ST7757.dxf",
+   "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "ELEMENT_FAMILY": "STRAP_BEAM",
+   "ELEMENT_MARK": "SB3",
+   "ELEMENT_OCCURRENCE_ID": "SOCC-1B26-1B27",
+   "END_NODE": {
+    "kind": "FOOTING",
+    "refs": [
+     "FOCC-1B2A"
+    ]
+   },
+   "ENGINE_COMMIT": "6b2b41b+code:9b2e5732c1c2bb3a",
+   "GEOMETRY_HANDLES": [
+    "1B26",
+    "1B27",
+    "1B28"
+   ],
+   "PROJECT_ID": "ALSENAN-ST7757",
+   "REGISTER_VERSION": "GROUND_SYSTEM_READINESS_V1",
+   "REVISION": "ALSENAN_ST7757_DXF",
+   "START_NODE": {
+    "kind": "FOOTING",
+    "refs": [
+     "FOCC-166B"
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,1014 @@
+{
+ "frozen_before_benchmark": true,
+ "policy": {
+  "cb_states": [
+   "MATCH_CONFIRMED",
+   "SPAN_LENGTH_CONFLICT",
+   "SPAN_COUNT_CONFLICT",
+   "TAG_WITH_NO_MEMBER",
+   "MEMBER_WITH_NO_TAG",
+   "BLOCKED"
+  ],
+  "policy_id": "STRUCTURAL_CENSUS_V1",
+  "precedence": [
+   "LOCAL_PANEL_NOTE",
+   "FLOOR_SPECIFIC_NOTE",
+   "PROJECT_DEFAULT"
+  ],
+  "principles": [
+   "plan decides occurrence; schedule only defines",
+   "no default overrides a local note",
+   "a value is never rounded into a table row it does not match",
+   "every plan object ends in one terminal state"
+  ],
+  "rule_states": [
+   "EXACT_RULE",
+   "RULE_NOT_EXACT_MATCH",
+   "BLOCKED_METHOD"
+  ],
+  "terminal_states": [
+   "COUNTED_AND_DEFINED",
+   "COUNTED_DEFINITION_PARTIAL",
+   "COUNTED_BLOCKED",
+   "NOT_IN_SCOPE"
+  ]
+ },
+ "register": "FOOTING_DEFINITION_REGISTER",
+ "round": "S1",
+ "rows": [
+  {
+   "D_cm": 30.0,
+   "L_cm": 90.0,
+   "W_cm": 80.0,
+   "boxed": {
+    "interpretation": "BLOCKED_SEMANTICS",
+    "raw_boxed_value": "3+4"
+   },
+   "components": [
+    {
+     "component": "BOTTOM_SHORT",
+     "count": 8,
+     "count_mode": "ABSOLUTE_COUNT",
+     "dia_mm": 12,
+     "layer": "SINGLE"
+    },
+    {
+     "component": "BOTTOM_LONG",
+     "count": 7,
+     "count_mode": "ABSOLUTE_COUNT",
+     "dia_mm": 12,
+     "layer": "SINGLE"
+    }
+   ],
+   "conflict_candidate_occurrences": 1,
+   "definition_id": "FDEF-F",
+   "element": "FOOTING",
+   "footing_type": "F",
+   "plan_occurrences": 4,
+   "remarks": [
+    "BOXED value captured raw; its meaning (e.g. starter / box bars) is not established"
+   ],
+   "source_row": {
+    "block": "FT",
+    "insert_handle": "1C79",
+    "page": 9,
+    "raw_attributes": {
+     "BOXED": "3+4",
+     "DEPHT": "30",
+     "FO-TY": "F",
+     "H": "80",
+     "LO-B": "7",
+     "LO-D": "12",
+     "SH-B": "8",
+     "SH-D": "12",
+     "W": "90"
+    }
+   },
+   "state": "DEFINED"
+  },
+  {
+   "D_cm": 35.0,
+   "L_cm": 190.0,
+   "W_cm": 170.0,
+   "boxed": {
+    "interpretation": "BLOCKED_SEMANTICS",
+    "raw_boxed_value": "3+4"
+   },
+   "components": [
+    {
+     "component": "BOTTOM_SHORT",
+     "count": 13,
+     "count_mode": "ABSOLUTE_COUNT",
+     "dia_mm": 12,
+     "layer": "SINGLE"
+    },
+    {
+     "component": "BOTTOM_LONG",
+     "count": 13,
+     "count_mode": "ABSOLUTE_COUNT",
+     "dia_mm": 12,
+     "layer": "SINGLE"
+    }
+   ],
+   "conflict_candidate_occurrences": 0,
+   "definition_id": "FDEF-F2",
+   "element": "FOOTING",
+   "footing_type": "F2",
+   "plan_occurrences": 2,
+   "remarks": [
+    "BOXED value captured raw; its meaning (e.g. starter / box bars) is not established"
+   ],
+   "source_row": {
+    "block": "FT",
+    "insert_handle": "1C95",
+    "page": 9,
+    "raw_attributes": {
+     "BOXED": "3+4",
+     "DEPHT": "35",
+     "FO-TY": "F2",
+     "H": "170",
+     "LO-B": "13",
+     "LO-D": "12",
+     "SH-B": "13",
+     "SH-D": "12",
+     "W": "190"
+    }
+   },
+   "state": "DEFINED"
+  },
+  {
+   "D_cm": 30.0,
+   "L_cm": 160.0,
+   "W_cm": 140.0,
+   "boxed": {
+    "interpretation": "BLOCKED_SEMANTICS",
+    "raw_boxed_value": "3+4"
+   },
+   "components": [
+    {
+     "component": "BOTTOM_SHORT",
+     "count": 8,
+     "count_mode": "ABSOLUTE_COUNT",
+     "dia_mm": 12,
+     "layer": "SINGLE"
+    },
+    {
+     "component": "BOTTOM_LONG",
+     "count": 8,
+     "count_mode": "ABSOLUTE_COUNT",
+     "dia_mm": 12,
+     "layer": "SINGLE"
+    }
+   ],
+   "conflict_candidate_occurrences": 0,
+   "definition_id": "FDEF-F3",
+   "element": "FOOTING",
+   "footing_type": "F3",
+   "plan_occurrences": 2,
+   "remarks": [
+    "BOXED value captured raw; its meaning (e.g. starter / box bars) is not established"
+   ],
+   "source_row": {
+    "block": "FT",
+    "insert_handle": "1CA0",
+    "page": 9,
+    "raw_attributes": {
+     "BOXED": "3+4",
+     "DEPHT": "30",
+     "FO-TY": "F3",
+     "H": "140",
+     "LO-B": "8",
+     "LO-D": "12",
+     "SH-B": "8",
+     "SH-D": "12",
+     "W": "160"
+    }
+   },
+   "state": "DEFINED"
+  },
+  {
+   "D_cm": 40.0,
+   "L_cm": 220.0,
+   "W_cm": 200.0,
+   "boxed": {
+    "interpretation": "BLOCKED_SEMANTICS",
+    "raw_boxed_value": "3+4"
+   },
+   "components": [
+    {
+     "component": "BOTTOM_SHORT",
+     "count": 18,
+     "count_mode": "ABSOLUTE_COUNT",
+     "dia_mm": 12,
+     "layer": "SINGLE"
+    },
+    {
+     "component": "BOTTOM_LONG",
+     "count": 17,
+     "count_mode": "ABSOLUTE_COUNT",
+     "dia_mm": 12,
+     "layer": "SINGLE"
+    }
+   ],
+   "conflict_candidate_occurrences": 0,
+   "definition_id": "FDEF-F4",
+   "element": "FOOTING",
+   "footing_type": "F4",
+   "plan_occurrences": 2,
+   "remarks": [
+    "BOXED value captured raw; its meaning (e.g. starter / box bars) is not established"
+   ],
+   "source_row": {
+    "block": "FT",
+    "insert_handle": "1CAB",
+    "page": 9,
+    "raw_attributes": {
+     "BOXED": "3+4",
+     "DEPHT": "40",
+     "FO-TY": "F4",
+     "H": "200",
+     "LO-B": "17",
+     "LO-D": "12",
+     "SH-B": "18",
+     "SH-D": "12",
+     "W": "220"
+    }
+   },
+   "state": "DEFINED"
+  },
+  {
+   "D_cm": 40.0,
+   "L_cm": 240.0,
+   "W_cm": 210.0,
+   "boxed": {
+    "interpretation": "BLOCKED_SEMANTICS",
+    "raw_boxed_value": "3+4"
+   },
+   "components": [
+    {
+     "component": "BOTTOM_SHORT",
+     "count": 22,
+     "count_mode": "ABSOLUTE_COUNT",
+     "dia_mm": 12,
+     "layer": "SINGLE"
+    },
+    {
+     "component": "BOTTOM_LONG",
+     "count": 20,
+     "count_mode": "ABSOLUTE_COUNT",
+     "dia_mm": 12,
+     "layer": "SINGLE"
+    }
+   ],
+   "conflict_candidate_occurrences": 0,
+   "definition_id": "FDEF-F5",
+   "element": "FOOTING",
+   "footing_type": "F5",
+   "plan_occurrences": 2,
+   "remarks": [
+    "BOXED value captured raw; its meaning (e.g. starter / box bars) is not established"
+   ],
+   "source_row": {
+    "block": "FT",
+    "insert_handle": "1CB6",
+    "page": 9,
+    "raw_attributes": {
+     "BOXED": "3+4",
+     "DEPHT": "40",
+     "FO-TY": "F5",
+     "H": "210",
+     "LO-B": "20",
+     "LO-D": "12",
+     "SH-B": "22",
+     "SH-D": "12",
+     "W": "240"
+    }
+   },
+   "state": "DEFINED"
+  },
+  {
+   "D_cm": 50.0,
+   "L_cm": 260.0,
+   "W_cm": 220.0,
+   "boxed": {
+    "interpretation": "BLOCKED_SEMANTICS",
+    "raw_boxed_value": "3+5"
+   },
+   "components": [
+    {
+     "component": "BOTTOM_SHORT",
+     "count": 24,
+     "count_mode": "ABSOLUTE_COUNT",
+     "dia_mm": 12,
+     "layer": "SINGLE"
+    },
+    {
+     "component": "BOTTOM_LONG",
+     "count": 22,
+     "count_mode": "ABSOLUTE_COUNT",
+     "dia_mm": 12,
+     "layer": "SINGLE"
+    }
+   ],
+   "conflict_candidate_occurrences": 0,
+   "definition_id": "FDEF-F6",
+   "element": "FOOTING",
+   "footing_type": "F6",
+   "plan_occurrences": 1,
+   "remarks": [
+    "BOXED value captured raw; its meaning (e.g. starter / box bars) is not established"
+   ],
+   "source_row": {
+    "block": "FT",
+    "insert_handle": "1CC1",
+    "page": 9,
+    "raw_attributes": {
+     "BOXED": "3+5",
+     "DEPHT": "50",
+     "FO-TY": "F6",
+     "H": "220",
+     "LO-B": "22",
+     "LO-D": "12",
+     "SH-B": "24",
+     "SH-D": "12",
+     "W": "260"
+    }
+   },
+   "state": "DEFINED"
+  },
+  {
+   "D_cm": 50.0,
+   "L_cm": 300.0,
+   "W_cm": 250.0,
+   "boxed": {
+    "interpretation": "BLOCKED_SEMANTICS",
+    "raw_boxed_value": "3+6"
+   },
+   "components": [
+    {
+     "component": "BOTTOM_SHORT",
+     "count": 24,
+     "count_mode": "ABSOLUTE_COUNT",
+     "dia_mm": 14,
+     "layer": "SINGLE"
+    },
+    {
+     "component": "BOTTOM_LONG",
+     "count": 21,
+     "count_mode": "ABSOLUTE_COUNT",
+     "dia_mm": 14,
+     "layer": "SINGLE"
+    }
+   ],
+   "conflict_candidate_occurrences": 0,
+   "definition_id": "FDEF-F7",
+   "element": "FOOTING",
+   "footing_type": "F7",
+   "plan_occurrences": 0,
+   "remarks": [
+    "BOXED value captured raw; its meaning (e.g. starter / box bars) is not established"
+   ],
+   "source_row": {
+    "block": "FT",
+    "insert_handle": "1CCC",
+    "page": 9,
+    "raw_attributes": {
+     "BOXED": "3+6",
+     "DEPHT": "50",
+     "FO-TY": "F7",
+     "H": "250",
+     "LO-B": "21",
+     "LO-D": "14",
+     "SH-B": "24",
+     "SH-D": "14",
+     "W": "300"
+    }
+   },
+   "state": "SCHEDULE_ROW_WITHOUT_PLAN_OCCURRENCE"
+  },
+  {
+   "D_cm": 50.0,
+   "L_cm": 400.0,
+   "W_cm": 360.0,
+   "boxed": {
+    "interpretation": "NOT_A_FIELD (BOXED-T/B are the layer labels TOP/BOT)",
+    "raw_boxed_value": null
+   },
+   "components": [
+    {
+     "component": "TOP_short",
+     "count": 6,
+     "count_mode": "BARS_PER_METRE",
+     "dia_mm": 14,
+     "layer": "TOP"
+    },
+    {
+     "component": "TOP_long",
+     "count": 6,
+     "count_mode": "BARS_PER_METRE",
+     "dia_mm": 14,
+     "layer": "TOP"
+    },
+    {
+     "component": "BOTTOM_short",
+     "count": 9,
+     "count_mode": "BARS_PER_METRE",
+     "dia_mm": 14,
+     "layer": "BOTTOM"
+    },
+    {
+     "component": "BOTTOM_long",
+     "count": 9,
+     "count_mode": "BARS_PER_METRE",
+     "dia_mm": 14,
+     "layer": "BOTTOM"
+    }
+   ],
+   "conflict_candidate_occurrences": 0,
+   "definition_id": "FDEF-F8",
+   "element": "FOOTING_2_LAYER",
+   "footing_type": "F8",
+   "plan_occurrences": 1,
+   "remarks": [
+    "two-layer footing: all four bar fields are bars PER METRE"
+   ],
+   "source_row": {
+    "block": "FTB",
+    "insert_handle": "2AF6",
+    "page": 9,
+    "raw_attributes": {
+     "BOXED-B": "BOT",
+     "BOXED-T": "TOP",
+     "DEPHT": "50",
+     "FO-TY": "F8",
+     "H": "360",
+     "LO-B-B": "9",
+     "LO-B-D": "14/m",
+     "LO-T-B": "6",
+     "LO-T-D": "14/m",
+     "SH-B-B": "9",
+     "SH-B-D": "14/m",
+     "SH-T-B": "6",
+     "SH-T-D": "14/m",
+     "W": "400"
+    }
+   },
+   "state": "DEFINED"
+  },
+  {
+   "D_cm": 55.0,
+   "L_cm": 340.0,
+   "W_cm": 270.0,
+   "boxed": {
+    "interpretation": "BLOCKED_SEMANTICS",
+    "raw_boxed_value": "3+8"
+   },
+   "components": [
+    {
+     "component": "BOTTOM_SHORT",
+     "count": 28,
+     "count_mode": "ABSOLUTE_COUNT",
+     "dia_mm": 14,
+     "layer": "SINGLE"
+    },
+    {
+     "component": "BOTTOM_LONG",
+     "count": 24,
+     "count_mode": "ABSOLUTE_COUNT",
+     "dia_mm": 14,
+     "layer": "SINGLE"
+    }
+   ],
+   "conflict_candidate_occurrences": 0,
+   "definition_id": "FDEF-F9",
+   "element": "FOOTING",
+   "footing_type": "F9",
+   "plan_occurrences": 1,
+   "remarks": [
+    "BOXED value captured raw; its meaning (e.g. starter / box bars) is not established"
+   ],
+   "source_row": {
+    "block": "FT",
+    "insert_handle": "1CD7",
+    "page": 9,
+    "raw_attributes": {
+     "BOXED": "3+8",
+     "DEPHT": "55",
+     "FO-TY": "F9",
+     "H": "270",
+     "LO-B": "24",
+     "LO-D": "14",
+     "SH-B": "28",
+     "SH-D": "14",
+     "W": "340"
+    }
+   },
+   "state": "DEFINED"
+  },
+  {
+   "D_cm": 50.0,
+   "L_cm": 280.0,
+   "W_cm": 140.0,
+   "boxed": {
+    "interpretation": "BLOCKED_SEMANTICS",
+    "raw_boxed_value": "3+5"
+   },
+   "components": [
+    {
+     "component": "BOTTOM_SHORT",
+     "count": 20,
+     "count_mode": "ABSOLUTE_COUNT",
+     "dia_mm": 14,
+     "layer": "SINGLE"
+    },
+    {
+     "component": "BOTTOM_LONG",
+     "count": 10,
+     "count_mode": "ABSOLUTE_COUNT",
+     "dia_mm": 14,
+     "layer": "SINGLE"
+    }
+   ],
+   "conflict_candidate_occurrences": 1,
+   "definition_id": "FDEF-F10",
+   "element": "FOOTING",
+   "footing_type": "F10",
+   "plan_occurrences": 0,
+   "remarks": [
+    "BOXED value captured raw; its meaning (e.g. starter / box bars) is not established"
+   ],
+   "source_row": {
+    "block": "FT",
+    "insert_handle": "1CE2",
+    "page": 9,
+    "raw_attributes": {
+     "BOXED": "3+5",
+     "DEPHT": "50",
+     "FO-TY": "F10",
+     "H": "140",
+     "LO-B": "10",
+     "LO-D": "14",
+     "SH-B": "20",
+     "SH-D": "14",
+     "W": "280"
+    }
+   },
+   "state": "DEFINED_CONFLICT_CANDIDATE_ONLY"
+  },
+  {
+   "D_cm": 50.0,
+   "L_cm": 350.0,
+   "W_cm": 150.0,
+   "boxed": {
+    "interpretation": "BLOCKED_SEMANTICS",
+    "raw_boxed_value": "3+8"
+   },
+   "components": [
+    {
+     "component": "BOTTOM_SHORT",
+     "count": 32,
+     "count_mode": "ABSOLUTE_COUNT",
+     "dia_mm": 14,
+     "layer": "SINGLE"
+    },
+    {
+     "component": "BOTTOM_LONG",
+     "count": 14,
+     "count_mode": "ABSOLUTE_COUNT",
+     "dia_mm": 14,
+     "layer": "SINGLE"
+    }
+   ],
+   "conflict_candidate_occurrences": 0,
+   "definition_id": "FDEF-F11",
+   "element": "FOOTING",
+   "footing_type": "F11",
+   "plan_occurrences": 1,
+   "remarks": [
+    "BOXED value captured raw; its meaning (e.g. starter / box bars) is not established"
+   ],
+   "source_row": {
+    "block": "FT",
+    "insert_handle": "1CED",
+    "page": 9,
+    "raw_attributes": {
+     "BOXED": "3+8",
+     "DEPHT": "50",
+     "FO-TY": "F11",
+     "H": "150",
+     "LO-B": "14",
+     "LO-D": "14",
+     "SH-B": "32",
+     "SH-D": "14",
+     "W": "350"
+    }
+   },
+   "state": "DEFINED"
+  },
+  {
+   "D_cm": 70.0,
+   "L_cm": 440.0,
+   "W_cm": 320.0,
+   "boxed": {
+    "interpretation": "NOT_A_FIELD (BOXED-T/B are the layer labels TOP/BOT)",
+    "raw_boxed_value": null
+   },
+   "components": [
+    {
+     "component": "TOP_short",
+     "count": 10,
+     "count_mode": "BARS_PER_METRE",
+     "dia_mm": 14,
+     "layer": "TOP"
+    },
+    {
+     "component": "TOP_long",
+     "count": 10,
+     "count_mode": "BARS_PER_METRE",
+     "dia_mm": 14,
+     "layer": "TOP"
+    },
+    {
+     "component": "BOTTOM_short",
+     "count": 9,
+     "count_mode": "BARS_PER_METRE",
+     "dia_mm": 16,
+     "layer": "BOTTOM"
+    },
+    {
+     "component": "BOTTOM_long",
+     "count": 9,
+     "count_mode": "BARS_PER_METRE",
+     "dia_mm": 16,
+     "layer": "BOTTOM"
+    }
+   ],
+   "conflict_candidate_occurrences": 0,
+   "definition_id": "FDEF-F12",
+   "element": "FOOTING_2_LAYER",
+   "footing_type": "F12",
+   "plan_occurrences": 1,
+   "remarks": [
+    "two-layer footing: all four bar fields are bars PER METRE"
+   ],
+   "source_row": {
+    "block": "FTB",
+    "insert_handle": "2A5E",
+    "page": 9,
+    "raw_attributes": {
+     "BOXED-B": "BOT",
+     "BOXED-T": "TOP",
+     "DEPHT": "70",
+     "FO-TY": "F12",
+     "H": "320",
+     "LO-B-B": "9",
+     "LO-B-D": "16/m",
+     "LO-T-B": "10",
+     "LO-T-D": "14/m",
+     "SH-B-B": "9",
+     "SH-B-D": "16/m",
+     "SH-T-B": "10",
+     "SH-T-D": "14/m",
+     "W": "440"
+    }
+   },
+   "state": "DEFINED"
+  },
+  {
+   "D_cm": 50.0,
+   "L_cm": 430.0,
+   "W_cm": 240.0,
+   "boxed": {
+    "interpretation": "NOT_A_FIELD (BOXED-T/B are the layer labels TOP/BOT)",
+    "raw_boxed_value": null
+   },
+   "components": [
+    {
+     "component": "TOP_short",
+     "count": 7,
+     "count_mode": "BARS_PER_METRE",
+     "dia_mm": 14,
+     "layer": "TOP"
+    },
+    {
+     "component": "TOP_long",
+     "count": 7,
+     "count_mode": "BARS_PER_METRE",
+     "dia_mm": 14,
+     "layer": "TOP"
+    },
+    {
+     "component": "BOTTOM_short",
+     "count": 8,
+     "count_mode": "BARS_PER_METRE",
+     "dia_mm": 16,
+     "layer": "BOTTOM"
+    },
+    {
+     "component": "BOTTOM_long",
+     "count": 8,
+     "count_mode": "BARS_PER_METRE",
+     "dia_mm": 16,
+     "layer": "BOTTOM"
+    }
+   ],
+   "conflict_candidate_occurrences": 0,
+   "definition_id": "FDEF-F13",
+   "element": "FOOTING_2_LAYER",
+   "footing_type": "F13",
+   "plan_occurrences": 1,
+   "remarks": [
+    "two-layer footing: all four bar fields are bars PER METRE"
+   ],
+   "source_row": {
+    "block": "FTB",
+    "insert_handle": "2A98",
+    "page": 9,
+    "raw_attributes": {
+     "BOXED-B": "BOT",
+     "BOXED-T": "TOP",
+     "DEPHT": "50",
+     "FO-TY": "F13",
+     "H": "240",
+     "LO-B-B": "8",
+     "LO-B-D": "16/m",
+     "LO-T-B": "7",
+     "LO-T-D": "14/m",
+     "SH-B-B": "8",
+     "SH-B-D": "16/m",
+     "SH-T-B": "7",
+     "SH-T-D": "14/m",
+     "W": "430"
+    }
+   },
+   "state": "DEFINED"
+  },
+  {
+   "D_cm": 50.0,
+   "L_cm": 380.0,
+   "W_cm": 330.0,
+   "boxed": {
+    "interpretation": "NOT_A_FIELD (BOXED-T/B are the layer labels TOP/BOT)",
+    "raw_boxed_value": null
+   },
+   "components": [
+    {
+     "component": "TOP_short",
+     "count": 6,
+     "count_mode": "BARS_PER_METRE",
+     "dia_mm": 14,
+     "layer": "TOP"
+    },
+    {
+     "component": "TOP_long",
+     "count": 6,
+     "count_mode": "BARS_PER_METRE",
+     "dia_mm": 14,
+     "layer": "TOP"
+    },
+    {
+     "component": "BOTTOM_short",
+     "count": 9,
+     "count_mode": "BARS_PER_METRE",
+     "dia_mm": 14,
+     "layer": "BOTTOM"
+    },
+    {
+     "component": "BOTTOM_long",
+     "count": 9,
+     "count_mode": "BARS_PER_METRE",
+     "dia_mm": 14,
+     "layer": "BOTTOM"
+    }
+   ],
+   "conflict_candidate_occurrences": 0,
+   "definition_id": "FDEF-F14",
+   "element": "FOOTING_2_LAYER",
+   "footing_type": "F14",
+   "plan_occurrences": 1,
+   "remarks": [
+    "two-layer footing: all four bar fields are bars PER METRE"
+   ],
+   "source_row": {
+    "block": "FTB",
+    "insert_handle": "2AD5",
+    "page": 9,
+    "raw_attributes": {
+     "BOXED-B": "BOT",
+     "BOXED-T": "TOP",
+     "DEPHT": "50",
+     "FO-TY": "F14",
+     "H": "330",
+     "LO-B-B": "9",
+     "LO-B-D": "14/m",
+     "LO-T-B": "6",
+     "LO-T-D": "14/m",
+     "SH-B-B": "9",
+     "SH-B-D": "14/m",
+     "SH-T-B": "6",
+     "SH-T-D": "14/m",
+     "W": "380"
+    }
+   },
+   "state": "DEFINED"
+  },
+  {
+   "D_cm": 40.0,
+   "L_cm": 180.0,
+   "W_cm": 100.0,
+   "boxed": {
+    "interpretation": "BLOCKED_SEMANTICS",
+    "raw_boxed_value": "3+4"
+   },
+   "components": [
+    {
+     "component": "BOTTOM_SHORT",
+     "count": 15,
+     "count_mode": "ABSOLUTE_COUNT",
+     "dia_mm": 12,
+     "layer": "SINGLE"
+    },
+    {
+     "component": "BOTTOM_LONG",
+     "count": 8,
+     "count_mode": "ABSOLUTE_COUNT",
+     "dia_mm": 12,
+     "layer": "SINGLE"
+    }
+   ],
+   "conflict_candidate_occurrences": 0,
+   "definition_id": "FDEF-F15",
+   "element": "FOOTING",
+   "footing_type": "F15",
+   "plan_occurrences": 1,
+   "remarks": [
+    "BOXED value captured raw; its meaning (e.g. starter / box bars) is not established"
+   ],
+   "source_row": {
+    "block": "FT",
+    "insert_handle": "2B13",
+    "page": 9,
+    "raw_attributes": {
+     "BOXED": "3+4",
+     "DEPHT": "40",
+     "FO-TY": "F15",
+     "H": "100",
+     "LO-B": "8",
+     "LO-D": "12",
+     "SH-B": "15",
+     "SH-D": "12",
+     "W": "180"
+    }
+   },
+   "state": "DEFINED"
+  },
+  {
+   "D_cm": 55.0,
+   "L_cm": 460.0,
+   "W_cm": 450.0,
+   "boxed": {
+    "interpretation": "NOT_A_FIELD (BOXED-T/B are the layer labels TOP/BOT)",
+    "raw_boxed_value": null
+   },
+   "components": [
+    {
+     "component": "TOP_short",
+     "count": 6,
+     "count_mode": "BARS_PER_METRE",
+     "dia_mm": 14,
+     "layer": "TOP"
+    },
+    {
+     "component": "TOP_long",
+     "count": 6,
+     "count_mode": "BARS_PER_METRE",
+     "dia_mm": 14,
+     "layer": "TOP"
+    },
+    {
+     "component": "BOTTOM_short",
+     "count": 9,
+     "count_mode": "BARS_PER_METRE",
+     "dia_mm": 14,
+     "layer": "BOTTOM"
+    },
+    {
+     "component": "BOTTOM_long",
+     "count": 9,
+     "count_mode": "BARS_PER_METRE",
+     "dia_mm": 14,
+     "layer": "BOTTOM"
+    }
+   ],
+   "conflict_candidate_occurrences": 0,
+   "definition_id": "FDEF-FF",
+   "element": "FOOTING_2_LAYER",
+   "footing_type": "FF",
+   "plan_occurrences": 1,
+   "remarks": [
+    "two-layer footing: all four bar fields are bars PER METRE",
+    "FF = lift footing (REMARKS, legacy Arabic text in the PDF); see p.14"
+   ],
+   "source_row": {
+    "block": "FTB",
+    "insert_handle": "2B1E",
+    "page": 9,
+    "raw_attributes": {
+     "BOXED-B": "BOT",
+     "BOXED-T": "TOP",
+     "DEPHT": "55",
+     "FO-TY": "FF",
+     "H": "450",
+     "LO-B-B": "9",
+     "LO-B-D": "14/m",
+     "LO-T-B": "6",
+     "LO-T-D": "14/m",
+     "SH-B-B": "9",
+     "SH-B-D": "14/m",
+     "SH-T-B": "6",
+     "SH-T-D": "14/m",
+     "W": "460"
+    }
+   },
+   "state": "DEFINED"
+  },
+  {
+   "D_cm": 30.0,
+   "L_cm": 100.0,
+   "W_cm": 100.0,
+   "boxed": {
+    "interpretation": "NOT_PRINTED",
+    "raw_boxed_value": ""
+   },
+   "components": [
+    {
+     "component": "BOTTOM_SHORT",
+     "count": 8,
+     "count_mode": "ABSOLUTE_COUNT",
+     "dia_mm": 12,
+     "layer": "SINGLE"
+    },
+    {
+     "component": "BOTTOM_LONG",
+     "count": 8,
+     "count_mode": "ABSOLUTE_COUNT",
+     "dia_mm": 12,
+     "layer": "SINGLE"
+    }
+   ],
+   "conflict_candidate_occurrences": 0,
+   "definition_id": "FDEF-FN",
+   "element": "FOOTING",
+   "footing_type": "FN",
+   "plan_occurrences": 4,
+   "remarks": [],
+   "source_row": {
+    "block": "FT",
+    "insert_handle": "1CF8",
+    "page": 9,
+    "raw_attributes": {
+     "BOXED": "",
+     "DEPHT": "30",
+     "FO-TY": "FN",
+     "H": "100",
+     "LO-B": "8",
+     "LO-D": "12",
+     "SH-B": "8",
+     "SH-D": "12",
+     "W": "100"
+    }
+   },
+   "state": "DEFINED"
+  }
+ ],
+ "source": {
+  "drawing": "ST7757.dxf",
+  "dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "pdf": "ST7757.pdf",
+  "pdf_sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ },
+ "summary": {
+  "boxed_values": {
+   "F": "3+4",
+   "F10": "3+5",
+   "F11": "3+8",
+   "F15": "3+4",
+   "F2": "3+4",
+   "F3": "3+4",
+   "F4": "3+4",
+   "F5": "3+4",
+   "F6": "3+5",
+   "F7": "3+6",
+   "F9": "3+8",
+   "FN": ""
+  },
+  "by_element": {
+   "FOOTING": 12,
+   "FOOTING_2_LAYER": 5
+  },
+  "definitions": 17,
+  "without_plan_occurrence": [
+   "F7"
+  ]
+ }
+}

@@ -1,0 +1,13 @@
+ID,PARAMETER,VALUE,STATUS,EVIDENCE,USE_IN_S8_7B
+O-01,Main stair GF -> 1F riser count,28,PROVISIONAL_OWNER_SCENARIO,owner decision (S8.7B brief); drawn only by the structural GF roof sheet (12 + 4 + 12),evaluated against the drawings in 04 / 05 / 06; not approved
+O-02,Main stair 1F -> 2F riser count,27,PROVISIONAL_OWNER_SCENARIO,owner decision (S8.7B brief); drawn only by the architectural 1F plan (12 + 4 + 11),evaluated against the drawings in 04 / 05 / 06; not approved
+O-03,Structural stair waist thickness,UNKNOWN,REQUIRES_ENGINEER_CONFIRMATION,p.16 'THICK' without a value; the plan '16' tags are zone tags,150 / 160 / 175 / 200 mm evaluated as research sensitivity only (08)
+O-04,Marble / stair finish,30 mm,PROVISIONAL_OWNER_SCENARIO,owner decision (S8.7B brief),"kept separate from bedding / adhesive, which is not stated (07 shows bedding 0 / 20 / 30 illustratively)"
+O-05,Marble bedding / adhesive,NOT STATED,REQUIRES_ENGINEER_CONFIRMATION,no drawing or owner statement,never assumed to be inside the 30 mm
+O-06,Finished floor levels,"GF +1.00, 1F +5.50, 2F +9.70",SOURCE_VERIFIED,"printed: GF plan ['40F', '411', '413', 'A74'], 1F plan ['D16', 'D18', 'D1B', 'D1D', '1251'], 2F plan ['134E', '1350', '1352']; section A-A level chain; owner statement",established datums
+O-07,Floor-to-floor rises,4500 / 4200 mm,SOURCE_VERIFIED,derived from O-06,established
+O-08,Preferred riser range,150 - 160 mm,OWNER_PREFERENCE,owner statement,28 risers give 160.714 mm: 0.714 mm above the preferred maximum -> TOLERANCE_DECISION_REQUIRED
+O-09,Round (light-well) stair,28 risers as drawn,DRAWN_ARRANGEMENT_EVALUATED,the structural GF roof sheet and the architectural 1F plan both draw 12 curved + 11 straight / landing / 5,the owner's main-stair decisions are NOT an approval of the round stair
+O-10,Landing position,approximately halfway (owner statement),OWNER_STATEMENT,owner statement,not used to set any level: levels come from the drawings (04)
+O-11,Lower / upper floor build-ups (screed + tile),NOT STATED,REQUIRES_ENGINEER_CONFIRMATION,no drawing,30 / 50 / 80 / 100 mm evaluated illustratively (07)
+O-12,Release delta of this layer,"0 m3 concrete, 0 kg reinforcement",RULE,S8.7B brief,"S8.7's frozen release (0.516582788 m3, 59.020862261 kg) is unchanged"

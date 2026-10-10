@@ -1,0 +1,1546 @@
+{
+ "SCHEMA": "ALSENAN_R4_VISUAL_EVIDENCE_CAPTURE_V1",
+ "policy": "PDF_VECTOR_EVIDENCE_V1",
+ "drawing": "ST7757.pdf",
+ "drawing_sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3",
+ "dpi": 200,
+ "page_size_pt": [
+  1191,
+  842
+ ],
+ "scale_note": "pages are at printed size (A3): a 30 cm section at 1:20 measures 42.5 pt",
+ "crops_dir_not_in_git": "data/evidence/alsenan_r4_crops",
+ "crops": {
+  "P08_NOTE_09_DEVELOPMENT": {
+   "crop_id": "P08_NOTE_09_DEVELOPMENT",
+   "page": 8,
+   "bbox_pt": [
+    590,
+    625,
+    1180,
+    690
+   ],
+   "dpi": 220,
+   "width_px": 1804,
+   "height_px": 200,
+   "crop_hash": "9e04bfb0ced8a464d248c192a8d3c88a67c56c644eaa4e760bcc526e53481f25",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "ara+eng",
+    "psm": 6,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 220,
+      "crop_hash": "9e04bfb0ced8a464d248c192a8d3c88a67c56c644eaa4e760bcc526e53481f25",
+      "text": "9 يجب ان لايقل طول رباط اشاير حديد التسليح ‎(Development Length)‏ عن (70) مرة\nقطر السيخ بمناطق الشد » (40) مرة قطر السيخ ناطق الضغط .\n6 بحس عدم ‎al cus‏ أساسات عل ‎ol‏ دفاكن ‎Coste‏ عل ‎al) Jag)‏ التأكد م. حيد ‎Soe)‏\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "3f8cdfd33efd593323e2ef4587fa76c8933862fa2b227832aa63d1e574a53a7e",
+      "text": "9 يجب ان لايقل طول رباط اشاير حديد التسليح ‎(Development Length)‏ عن (70) مرة\nقطر السيخ بمناطق الشد » (40) مرة قطر السيخ ناطق الضغط .\n‎af as ale cs 101‏ أساسات ‎les oof le‏ مخ عل ‎Bene || lak‏ البأأكد ‎al dgm eo‏\n"
+     }
+    ],
+    "text": "9 يجب ان لايقل طول رباط اشاير حديد التسليح ‎(Development Length)‏ عن (70) مرة\nقطر السيخ بمناطق الشد » (40) مرة قطر السيخ ناطق الضغط .\n6 بحس عدم ‎al cus‏ أساسات عل ‎ol‏ دفاكن ‎Coste‏ عل ‎al) Jag)‏ التأكد م. حيد ‎Soe)‏\n\n9 يجب ان لايقل طول رباط اشاير حديد التسليح ‎(Development Length)‏ عن (70) مرة\nقطر السيخ بمناطق الشد » (40) مرة قطر السيخ ناطق الضغط .\n‎af as ale cs 101‏ أساسات ‎les oof le‏ مخ عل ‎Bene || lak‏ البأأكد ‎al dgm eo‏\n"
+   },
+   "geometry": {}
+  },
+  "P08_NOTES_18_21": {
+   "crop_id": "P08_NOTES_18_21",
+   "page": 8,
+   "bbox_pt": [
+    120,
+    470,
+    600,
+    628
+   ],
+   "dpi": 220,
+   "width_px": 1468,
+   "height_px": 483,
+   "crop_hash": "03d50735d323a8e58b9db78a1e5154b7b18d55d372090583aacaabbdf5a6e170",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "ara+eng",
+    "psm": 6,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 220,
+      "crop_hash": "03d50735d323a8e58b9db78a1e5154b7b18d55d372090583aacaabbdf5a6e170",
+      "text": "‎ele .8‏ بلاطات الاسقف العادية 16 سم مالم ‎BIE SA‏ ذلك .\n\n‏9. يتم عمل جسور لربط اعمدة المصعد على ارتفاع 3.0077 اذا كان ارتفاع الدور أكثر من ‎4.30M‏\n‏وذلك حول بيت المصعد .\n\n‏0. تنفذ جميع ا حوائط المتضمنة اعمدة بنفس ‎Sle‏ الاعمدة المتضمنة ‎UB‏\n\n‏1. يتم أستخدام حديد اضائي جانبي ) 12 © 8112:2© 12:3 4©8) ‎G‏ الجسور ذات العمق أكبر من\n0 سم حسب عرض الجسر مالم يذكر خلاف ذلك.\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "1973906116fb142c192eb112ed66caf073d6b3fdcdf2b7a11580df653f137ee8",
+      "text": "8. ممك بلاطات الاسقف العادية 6 سم ما ‎١‏ يذكر خلاف ذلك .\n\n9. يتم عمل جسور لربط اعمدة المصعد على ارتفاع 3.0077 اذاكان ارتفاع الدور أكثر من 4.3017\nوذلك حول بيت المصعد .\n\n0. تنفذ جميع الحوائط المتضمنة اعمدة بنفس معأكة الاعمدة المتضمنة ‎UB‏\n\n1. يتم أستخدام حديد اضائي جانبي ( 12 12:26 12:3 40( ني الجسور ذات العمق أكبر من\n0 سم حسب عرض الجسر مالم يذكر خلاف ذلك.\n"
+     }
+    ],
+    "text": "‎ele .8‏ بلاطات الاسقف العادية 16 سم مالم ‎BIE SA‏ ذلك .\n\n‏9. يتم عمل جسور لربط اعمدة المصعد على ارتفاع 3.0077 اذا كان ارتفاع الدور أكثر من ‎4.30M‏\n‏وذلك حول بيت المصعد .\n\n‏0. تنفذ جميع ا حوائط المتضمنة اعمدة بنفس ‎Sle‏ الاعمدة المتضمنة ‎UB‏\n\n‏1. يتم أستخدام حديد اضائي جانبي ) 12 © 8112:2© 12:3 4©8) ‎G‏ الجسور ذات العمق أكبر من\n0 سم حسب عرض الجسر مالم يذكر خلاف ذلك.\n\n8. ممك بلاطات الاسقف العادية 6 سم ما ‎١‏ يذكر خلاف ذلك .\n\n9. يتم عمل جسور لربط اعمدة المصعد على ارتفاع 3.0077 اذاكان ارتفاع الدور أكثر من 4.3017\nوذلك حول بيت المصعد .\n\n0. تنفذ جميع الحوائط المتضمنة اعمدة بنفس معأكة الاعمدة المتضمنة ‎UB‏\n\n1. يتم أستخدام حديد اضائي جانبي ( 12 12:26 12:3 40( ني الجسور ذات العمق أكبر من\n0 سم حسب عرض الجسر مالم يذكر خلاف ذلك.\n"
+   },
+   "geometry": {}
+  },
+  "P08_NOTE_22_COVER": {
+   "crop_id": "P08_NOTE_22_COVER",
+   "page": 8,
+   "bbox_pt": [
+    120,
+    625,
+    600,
+    668
+   ],
+   "dpi": 220,
+   "width_px": 1468,
+   "height_px": 133,
+   "crop_hash": "b4f99045460437bdb25c38d1494e83fab3a7a8e0694e8118b83940753cc8a89c",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "ara+eng",
+    "psm": 6,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 220,
+      "crop_hash": "b4f99045460437bdb25c38d1494e83fab3a7a8e0694e8118b83940753cc8a89c",
+      "text": "3 € 58 . .7 5\n22 جه أن لا ‎ely [ay‏ الغطاء ‎ght‏ عن 2.5 سم 2خ الأعمدة والبلاطات والجسور وعن سم يُ\nيحب ‎ve‏ و\n‎ol. 2‏ المللاصقة للتربة.\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "080890b864f1d5f7ee6b2767799662bfa8fe5ebe8379cb58ebe2283060f3d9e5",
+      "text": "2. يجب أن لا يقل ‎cle‏ الغطاء ‎Glad‏ عن 2.5 سم في الأعمدة والبلاطات والجسور وعن #7سم ‎GB‏\n‏الخ سانة المللاصقة للتربة.\n"
+     }
+    ],
+    "text": "3 € 58 . .7 5\n22 جه أن لا ‎ely [ay‏ الغطاء ‎ght‏ عن 2.5 سم 2خ الأعمدة والبلاطات والجسور وعن سم يُ\nيحب ‎ve‏ و\n‎ol. 2‏ المللاصقة للتربة.\n\n2. يجب أن لا يقل ‎cle‏ الغطاء ‎Glad‏ عن 2.5 سم في الأعمدة والبلاطات والجسور وعن #7سم ‎GB‏\n‏الخ سانة المللاصقة للتربة.\n"
+   },
+   "geometry": {}
+  },
+  "P13_GB_GT5M": {
+   "crop_id": "P13_GB_GT5M",
+   "page": 13,
+   "bbox_pt": [
+    592,
+    530,
+    720,
+    694
+   ],
+   "dpi": 200,
+   "width_px": 356,
+   "height_px": 456,
+   "crop_hash": "7a13fa639574e3e2cf48d61baf6221abc6c019f54ef45f3782ca077a0692664d",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 11,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 200,
+      "crop_hash": "7a13fa639574e3e2cf48d61baf6221abc6c019f54ef45f3782ca077a0692664d",
+      "text": "3016\n\n98/15cm\n\nive)\n\n3016\n\nT\n\n3016\n\nrT\n\n“|\n\nho\n\n30\n\nrob\n\nGround Beams.\n\nMore than 5m length\n\n(1:20)\n\nwithout concentrated load\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "f75ce99b1b84662c11ad2888c44b7895d939bd1154fc13683455fee17dfa94e7",
+      "text": "5016\n\n08/15cm\n\n3616\n\nb 2\n\n3616\n\n4\n\nS el.\n\nq\n\n“|\n\n“TI\n\n30\n\nof\n\nGround Beams\n\nMore than 5m _ length\n\n(1:20)\n\nwithout concentrated load\n"
+     }
+    ],
+    "text": "3016\n\n98/15cm\n\nive)\n\n3016\n\nT\n\n3016\n\nrT\n\n“|\n\nho\n\n30\n\nrob\n\nGround Beams.\n\nMore than 5m length\n\n(1:20)\n\nwithout concentrated load\n\n5016\n\n08/15cm\n\n3616\n\nb 2\n\n3616\n\n4\n\nS el.\n\nq\n\n“|\n\n“TI\n\n30\n\nof\n\nGround Beams\n\nMore than 5m _ length\n\n(1:20)\n\nwithout concentrated load\n"
+   },
+   "geometry": {
+    "bar_dots": {
+     "dot_count": 9,
+     "rows": [
+      {
+       "y_pt": 541.07,
+       "count": 3
+      },
+      {
+       "y_pt": 608.48,
+       "count": 3
+      },
+      {
+       "y_pt": 614.15,
+       "count": 3
+      }
+     ],
+     "dots": [
+      [
+       631.16,
+       541.12
+      ],
+      [
+       631.16,
+       608.32
+      ],
+      [
+       631.16,
+       613.96
+      ],
+      [
+       645.68,
+       540.97
+      ],
+      [
+       646.64,
+       608.8
+      ],
+      [
+       646.64,
+       614.53
+      ],
+      [
+       661.73,
+       541.12
+      ],
+      [
+       661.73,
+       608.32
+      ],
+      [
+       661.73,
+       613.96
+      ]
+     ]
+    },
+    "section_rects": [
+     {
+      "x0": 625.16,
+      "y0": 535.0,
+      "w_pt": 42.48,
+      "h_pt": 85.08,
+      "w_mm_at_1_20": 300,
+      "h_mm_at_1_20": 600
+     }
+    ]
+   }
+  },
+  "P13_GB_LT5M": {
+   "crop_id": "P13_GB_LT5M",
+   "page": 13,
+   "bbox_pt": [
+    887,
+    610,
+    1011,
+    763
+   ],
+   "dpi": 200,
+   "width_px": 346,
+   "height_px": 426,
+   "crop_hash": "6327c465d35c42717cbd90ca58112cb7748b85dffeb5baa7edc73e7c6957bcbd",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 11,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 200,
+      "crop_hash": "6327c465d35c42717cbd90ca58112cb7748b85dffeb5baa7edc73e7c6957bcbd",
+      "text": "3014\n\n98/15cm\n\n3014\n\n3014\n\n=\n\n—\n\n4 |\n\nbod\n\n30\n\nfol\n\nGround Beams.\n\nLess than 5m length\n\n(20)\n\nwithout concentrated load\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "9cf3a353c8a271d5947ab6e4d52a014d6805e72a71b082d96cc7daecef662adb",
+      "text": "3014\n\n98/15cm\n\n3614\n\nhs 4\n\n3014\n\nB)\n\nz\n\n|\n\n|\n\n_\n\nL ok —30\n\n; 0\n\n|\n\nGround Beams.\n\nLess than 5m length\n\n(1:20)\n\nwithout concentrated load\n"
+     }
+    ],
+    "text": "3014\n\n98/15cm\n\n3014\n\n3014\n\n=\n\n—\n\n4 |\n\nbod\n\n30\n\nfol\n\nGround Beams.\n\nLess than 5m length\n\n(20)\n\nwithout concentrated load\n\n3014\n\n98/15cm\n\n3614\n\nhs 4\n\n3014\n\nB)\n\nz\n\n|\n\n|\n\n_\n\nL ok —30\n\n; 0\n\n|\n\nGround Beams.\n\nLess than 5m length\n\n(1:20)\n\nwithout concentrated load\n"
+   },
+   "geometry": {
+    "bar_dots": {
+     "dot_count": 9,
+     "rows": [
+      {
+       "y_pt": 627.92,
+       "count": 3
+      },
+      {
+       "y_pt": 666.96,
+       "count": 3
+      },
+      {
+       "y_pt": 672.66,
+       "count": 3
+      }
+     ],
+     "dots": [
+      [
+       918.56,
+       628.0
+      ],
+      [
+       918.56,
+       666.76
+      ],
+      [
+       918.56,
+       672.49
+      ],
+      [
+       933.11,
+       627.76
+      ],
+      [
+       933.68,
+       673.0
+      ],
+      [
+       934.04,
+       667.36
+      ],
+      [
+       949.16,
+       628.0
+      ],
+      [
+       949.16,
+       666.76
+      ],
+      [
+       949.16,
+       672.49
+      ]
+     ]
+    },
+    "section_rects": [
+     {
+      "x0": 912.56,
+      "y0": 621.88,
+      "w_pt": 42.48,
+      "h_pt": 56.76,
+      "w_mm_at_1_20": 300,
+      "h_mm_at_1_20": 400
+     }
+    ]
+   }
+  },
+  "P13_GB_LT2_5M": {
+   "crop_id": "P13_GB_LT2_5M",
+   "page": 13,
+   "bbox_pt": [
+    592,
+    700,
+    720,
+    812
+   ],
+   "dpi": 200,
+   "width_px": 356,
+   "height_px": 312,
+   "crop_hash": "3c47255fb912da08ca30a6e75462e587785064836796609d4360b85d4e98c497",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 11,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 200,
+      "crop_hash": "3c47255fb912da08ca30a6e75462e587785064836796609d4360b85d4e98c497",
+      "text": "3014\n\nie)\n\nio)\n\n3014\n\nmi\n\n3014\n\na\n\na\n\nS el\n\n+ |\n\n\"hob\n\n0\n\nbiol\n\nGround Beams\n\nLess than 2.5m length (1:20)\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "abc0619a7d87121a359268b62d4c3c51137bf7bb544952d021cd5e8a6e05bc38",
+      "text": "3614\n\n3914\n\nhs 4\n\n3014\n\ni=)\n\na\n\n4\n\n—\n\n|\n\n|\n\na\n\n|\n\nho\n\n30\n\n‘od\n\nGround Beams.\n\nLess than 2.5m length (1:20)\n"
+     }
+    ],
+    "text": "3014\n\nie)\n\nio)\n\n3014\n\nmi\n\n3014\n\na\n\na\n\nS el\n\n+ |\n\n\"hob\n\n0\n\nbiol\n\nGround Beams\n\nLess than 2.5m length (1:20)\n\n3614\n\n3914\n\nhs 4\n\n3014\n\ni=)\n\na\n\n4\n\n—\n\n|\n\n|\n\na\n\n|\n\nho\n\n30\n\n‘od\n\nGround Beams.\n\nLess than 2.5m length (1:20)\n"
+   },
+   "geometry": {
+    "bar_dots": {
+     "dot_count": 9,
+     "rows": [
+      {
+       "y_pt": 713.12,
+       "count": 3
+      },
+      {
+       "y_pt": 737.99,
+       "count": 3
+      },
+      {
+       "y_pt": 743.64,
+       "count": 3
+      }
+     ],
+     "dots": [
+      [
+       631.16,
+       713.2
+      ],
+      [
+       631.16,
+       737.8
+      ],
+      [
+       631.16,
+       743.44
+      ],
+      [
+       645.68,
+       712.96
+      ],
+      [
+       646.64,
+       738.37
+      ],
+      [
+       646.64,
+       744.04
+      ],
+      [
+       661.73,
+       713.2
+      ],
+      [
+       661.73,
+       737.8
+      ],
+      [
+       661.73,
+       743.44
+      ]
+     ]
+    },
+    "section_rects": []
+   }
+  },
+  "P13_GB_EXTERIOR": {
+   "crop_id": "P13_GB_EXTERIOR",
+   "page": 13,
+   "bbox_pt": [
+    740,
+    560,
+    884,
+    812
+   ],
+   "dpi": 200,
+   "width_px": 401,
+   "height_px": 701,
+   "crop_hash": "9ae93a258fb3ad1629772e8001f503f5ab2602533a43401294844dcd784708f8",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 11,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 200,
+      "crop_hash": "9ae93a258fb3ad1629772e8001f503f5ab2602533a43401294844dcd784708f8",
+      "text": "Ground Floor\n\nslab level\n\n3016\n\nNZ\n\n2612/30cm\n\n=?\n\n68/15cm\n\n6916\n\nKl\n\nOuter Normal\n\n<\n\neS\n\n> [A\n\n4\n\n] ground level\n\n“ho\n\n5\n\nA\n\nfiat\n\nGround Beams.\n\nfor exterior walls\n\n(1:20)\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "de417fc38759fc3b2ec10a379772a2dda8be890fbe94596e6051e3c241c8d91b",
+      "text": "Ground Floor\n\nslab level\n\n3016\n\n‘@-\n\nA\n\nNZ\n\n2612/30cm\n\nYN\n\n$8/15¢em\n\n6916\n\nhd\n\nee 9g\n\nOuter Normal\n\nq\n\n— —\n\na\n\n| ground level\n\nbio\n\n50\n\n‘od\n\nGround Beams.\n\nfor exterior walls\n\n(1:20)\n"
+     }
+    ],
+    "text": "Ground Floor\n\nslab level\n\n3016\n\nNZ\n\n2612/30cm\n\n=?\n\n68/15cm\n\n6916\n\nKl\n\nOuter Normal\n\n<\n\neS\n\n> [A\n\n4\n\n] ground level\n\n“ho\n\n5\n\nA\n\nfiat\n\nGround Beams.\n\nfor exterior walls\n\n(1:20)\n\nGround Floor\n\nslab level\n\n3016\n\n‘@-\n\nA\n\nNZ\n\n2612/30cm\n\nYN\n\n$8/15¢em\n\n6916\n\nhd\n\nee 9g\n\nOuter Normal\n\nq\n\n— —\n\na\n\n| ground level\n\nbio\n\n50\n\n‘od\n\nGround Beams.\n\nfor exterior walls\n\n(1:20)\n"
+   },
+   "geometry": {
+    "bar_dots": {
+     "dot_count": 13,
+     "rows": [
+      {
+       "y_pt": 612.93,
+       "count": 3
+      },
+      {
+       "y_pt": 646.48,
+       "count": 2
+      },
+      {
+       "y_pt": 677.05,
+       "count": 2
+      },
+      {
+       "y_pt": 737.99,
+       "count": 3
+      },
+      {
+       "y_pt": 743.64,
+       "count": 3
+      }
+     ],
+     "dots": [
+      [
+       773.03,
+       613.0
+      ],
+      [
+       773.03,
+       646.48
+      ],
+      [
+       773.03,
+       677.05
+      ],
+      [
+       773.03,
+       737.8
+      ],
+      [
+       773.03,
+       743.44
+      ],
+      [
+       787.64,
+       612.79
+      ],
+      [
+       788.51,
+       738.37
+      ],
+      [
+       788.51,
+       744.04
+      ],
+      [
+       803.6,
+       613.0
+      ],
+      [
+       803.6,
+       646.48
+      ],
+      [
+       803.6,
+       677.05
+      ],
+      [
+       803.6,
+       737.8
+      ],
+      [
+       803.6,
+       743.44
+      ]
+     ]
+    },
+    "section_rects": [
+     {
+      "x0": 767.12,
+      "y0": 606.88,
+      "w_pt": 42.48,
+      "h_pt": 142.68,
+      "w_mm_at_1_20": 300,
+      "h_mm_at_1_20": 1007
+     }
+    ]
+   }
+  },
+  "P13_LINTEL_SCHEDULE": {
+   "crop_id": "P13_LINTEL_SCHEDULE",
+   "page": 13,
+   "bbox_pt": [
+    173,
+    655,
+    419,
+    792
+   ],
+   "dpi": 200,
+   "width_px": 684,
+   "height_px": 381,
+   "crop_hash": "09e0be45a8139eac860e57595c047dc2a340be5b51ceaae82fc017839850e8b1",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 11,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 200,
+      "crop_hash": "09e0be45a8139eac860e57595c047dc2a340be5b51ceaae82fc017839850e8b1",
+      "text": "LINTEL SCHEDULE\n\nOPENING\n\nUNTEL\n\nREINFORCEMENT\n\nBOTT.\n\nTOP.\n\n(neu) (Cc)\n\nBARS\n\nBARS\n\nSTIR.\n\n(NOTES.)\n\n0 -100\n\nBx 20\n\n2912\n\n2910\n\n5 98/M |B-WIDTH OF THE BLOCK WALL\n\nWIDTH OF LINTEL THE\n\n101 - 200) B x 20\n\n2914\n\n2912\n\n5 98/M\n\nSAME OF WIDTH OF WALL,\n\n201 - 300] Bx 30\n\n39 16\n\n3914\n\n5 98/M\n\n301 - 500] B x 40\n\n39 18\n\n3914\n\n5 98/M\n\n501 - 750] B x 55\n\n4918\n\n3914\n\n5 98/M\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "ff04995c2802ecdac6742be06983139272f02494fbdd5a763b002c97db7766f2",
+      "text": "LINTEL SCHEDULE\n\nOPENING\n\nLINTEL\n\nREINFORCEMENT\n\nWl\n\n!\n\nBOTT.\n\nTOP.\n\nSTIR.\n\n(NOTES.)\n\n(IN CM) |( IN CM)\n\nBARS\n\nBARS\n\n0 -100\n\nBx 20\n\n29 12\n\n29 10\n\n5 98/M |B-WIDTH OF THE BLOCK WALL\n\nWIDTH OF LINTEL THE\n\n101 - 200\n\nB x 20\n\n29 14\n\n2 912\n\n5 98/M\n\nSAME OF WIDTH OF WALL.\n\n201 - 300\n\nB x 30\n\n39 16\n\n39 14\n\n5 98/M\n\n301 - 500\n\nB x 40\n\n39 18\n\n39 14\n\n5 98/M\n\n901 - 750\n\nBx 55\n\n49 18\n\n39 14\n\n5 98/M\n"
+     }
+    ],
+    "text": "LINTEL SCHEDULE\n\nOPENING\n\nUNTEL\n\nREINFORCEMENT\n\nBOTT.\n\nTOP.\n\n(neu) (Cc)\n\nBARS\n\nBARS\n\nSTIR.\n\n(NOTES.)\n\n0 -100\n\nBx 20\n\n2912\n\n2910\n\n5 98/M |B-WIDTH OF THE BLOCK WALL\n\nWIDTH OF LINTEL THE\n\n101 - 200) B x 20\n\n2914\n\n2912\n\n5 98/M\n\nSAME OF WIDTH OF WALL,\n\n201 - 300] Bx 30\n\n39 16\n\n3914\n\n5 98/M\n\n301 - 500] B x 40\n\n39 18\n\n3914\n\n5 98/M\n\n501 - 750] B x 55\n\n4918\n\n3914\n\n5 98/M\n\nLINTEL SCHEDULE\n\nOPENING\n\nLINTEL\n\nREINFORCEMENT\n\nWl\n\n!\n\nBOTT.\n\nTOP.\n\nSTIR.\n\n(NOTES.)\n\n(IN CM) |( IN CM)\n\nBARS\n\nBARS\n\n0 -100\n\nBx 20\n\n29 12\n\n29 10\n\n5 98/M |B-WIDTH OF THE BLOCK WALL\n\nWIDTH OF LINTEL THE\n\n101 - 200\n\nB x 20\n\n29 14\n\n2 912\n\n5 98/M\n\nSAME OF WIDTH OF WALL.\n\n201 - 300\n\nB x 30\n\n39 16\n\n39 14\n\n5 98/M\n\n301 - 500\n\nB x 40\n\n39 18\n\n39 14\n\n5 98/M\n\n901 - 750\n\nBx 55\n\n49 18\n\n39 14\n\n5 98/M\n"
+   },
+   "geometry": {
+    "horizontal_rules_pt": [
+     658.2,
+     674.4,
+     686.0,
+     703.1,
+     720.0,
+     736.8,
+     753.6,
+     770.6,
+     787.4
+    ]
+   }
+  },
+  "P13_LINTEL_DETAIL": {
+   "crop_id": "P13_LINTEL_DETAIL",
+   "page": 13,
+   "bbox_pt": [
+    62,
+    505,
+    419,
+    640
+   ],
+   "dpi": 200,
+   "width_px": 992,
+   "height_px": 376,
+   "crop_hash": "99a31316491c80d112cfc78f1990fcf753c20dfee47463376f081c5905f30bb4",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 11,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 200,
+      "crop_hash": "99a31316491c80d112cfc78f1990fcf753c20dfee47463376f081c5905f30bb4",
+      "text": "MIN.40cm\n\nTOB BARS\n\npo\n\nMIN.40em\n\nnl\n\ntt\n\n|__|\n\n—\n\nCL\n\n|\n\nL]\n\nBOTTOM BARS\n\nSTIRRUPS\n\n||\n\n|_|\n\neo)\n\nLINTEL DETAIL.\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "f973e9926abb7516fcc452e8cf8b44795557803a63315ab9443ef6357f44efe5",
+      "text": "po\n\nP MIN.40cm, TOB BARS\n\ntt\n\nMIN.40cm\n\n|__|\n\n|_|\n\n|\n\n|\n\nBOTTOM BARS\n\nSTIRRUPS\n\n—_\n\n»O\n\nLINTEL DETAIL.\n"
+     }
+    ],
+    "text": "MIN.40cm\n\nTOB BARS\n\npo\n\nMIN.40em\n\nnl\n\ntt\n\n|__|\n\n—\n\nCL\n\n|\n\nL]\n\nBOTTOM BARS\n\nSTIRRUPS\n\n||\n\n|_|\n\neo)\n\nLINTEL DETAIL.\n\npo\n\nP MIN.40cm, TOB BARS\n\ntt\n\nMIN.40cm\n\n|__|\n\n|_|\n\n|\n\n|\n\nBOTTOM BARS\n\nSTIRRUPS\n\n—_\n\n»O\n\nLINTEL DETAIL.\n"
+   },
+   "geometry": {}
+  },
+  "P13_FOOTING_TYPICAL": {
+   "crop_id": "P13_FOOTING_TYPICAL",
+   "page": 13,
+   "bbox_pt": [
+    510,
+    20,
+    1001,
+    517
+   ],
+   "dpi": 200,
+   "width_px": 1365,
+   "height_px": 1382,
+   "crop_hash": "8b189ee3074a007adc13be7991b8b4784b8e16b0eb243be1c2846c0ce065d672",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 11,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 200,
+      "crop_hash": "8b189ee3074a007adc13be7991b8b4784b8e16b0eb243be1c2846c0ce065d672",
+      "text": "Ground beam reinforcements.\n\nCOMPACTED SOIL\n\nWell graded clean compacted fill\n\nColumn_reinforcement\n\nfrom excavation material.\n\nColumn stirrups.\n\n3\n\nTwo layers liquid water proofing to be\n\nx\n\n+\n\n/ applied to all surface in contact with earth\n\n\\\n\nBoxed bars.\n\nMin. 30cm},\n\nMax. 10cm\n\nS\n\nShort_bars\n\nLong bars\n\n2\n\n2\n\n2\n\n4\n\niz oe\n\n<a\n\nho\n\nLx W\n\nrok\n\nSem Screed\n\nWater proofing membran\n\n10cm Plain con.\n\nTYP. DETAIL OF ISOLATED FOOTING.\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "992b5a767bbbba897aa03a563316c0b97e95c5696ae29f42402886d795b7cd4d",
+      "text": "—\n\n2\n\nGround beam reinforcements.\n\nCOMPACTED SOIL\n\nColumn reinforcement\n\nWell graded clean compacted fill\n\nfrom excavation material.\n\nColumn stirrups.\n\nTwo layers liquid water proofing to be\n\naS\n\nx\n\n[ome to all surface in contact with earth\n\n\\\n\nBoxed bars.\n\nMin. 30cm L\n\nMax. 10cm\n\nShort bars\n\nLong bars\n\nponnnennnnsnsenananennaneeeennenennnnsnnnnneenneennnnnnsennnsesnns\n\npannneeennneeennnnennnanesenenerennenannnnsen\n\nIOS IDOE OEE\n\nq\n\n4\n\n+4\n\nq\n\ni\n\nv4\n\n4\n\n4\n\nA\n\n|\n\n;\n\nLx W\n\nTah\n\nSem Screed\n\nWater proofing membrane\n\n10cm Plain con.\n\nTYP. DETAIL OF ISOLATED FOOTING.\n"
+     }
+    ],
+    "text": "Ground beam reinforcements.\n\nCOMPACTED SOIL\n\nWell graded clean compacted fill\n\nColumn_reinforcement\n\nfrom excavation material.\n\nColumn stirrups.\n\n3\n\nTwo layers liquid water proofing to be\n\nx\n\n+\n\n/ applied to all surface in contact with earth\n\n\\\n\nBoxed bars.\n\nMin. 30cm},\n\nMax. 10cm\n\nS\n\nShort_bars\n\nLong bars\n\n2\n\n2\n\n2\n\n4\n\niz oe\n\n<a\n\nho\n\nLx W\n\nrok\n\nSem Screed\n\nWater proofing membran\n\n10cm Plain con.\n\nTYP. DETAIL OF ISOLATED FOOTING.\n\n—\n\n2\n\nGround beam reinforcements.\n\nCOMPACTED SOIL\n\nColumn reinforcement\n\nWell graded clean compacted fill\n\nfrom excavation material.\n\nColumn stirrups.\n\nTwo layers liquid water proofing to be\n\naS\n\nx\n\n[ome to all surface in contact with earth\n\n\\\n\nBoxed bars.\n\nMin. 30cm L\n\nMax. 10cm\n\nShort bars\n\nLong bars\n\nponnnennnnsnsenananennaneeeennenennnnsnnnnneenneennnnnnsennnsesnns\n\npannneeennneeennnnennnanesenenerennenannnnsen\n\nIOS IDOE OEE\n\nq\n\n4\n\n+4\n\nq\n\ni\n\nv4\n\n4\n\n4\n\nA\n\n|\n\n;\n\nLx W\n\nTah\n\nSem Screed\n\nWater proofing membrane\n\n10cm Plain con.\n\nTYP. DETAIL OF ISOLATED FOOTING.\n"
+   },
+   "geometry": {}
+  },
+  "P13_FOOTING_DEEP": {
+   "crop_id": "P13_FOOTING_DEEP",
+   "page": 13,
+   "bbox_pt": [
+    39,
+    26,
+    497,
+    497
+   ],
+   "dpi": 200,
+   "width_px": 1273,
+   "height_px": 1309,
+   "crop_hash": "76d184df106a7ba7b5c572223fd1a9bc8e7d50f8145f5211680c95b59f8ad5b2",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 11,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 200,
+      "crop_hash": "76d184df106a7ba7b5c572223fd1a9bc8e7d50f8145f5211680c95b59f8ad5b2",
+      "text": "J\n\na\n\n2\n\n42.\n\nct\n\nUpper Ground beam witramen/\n\nColumn_reinforcement\n\nWell graded clean compacted fill\n\nfrom excavation material.\n\nColumn stirrups.\n\nite)\n\n4,\n\nTwo layers liquid water proofing to be\n\nN\n\napplied to all surface in contact with earth.\n\nLower Ground beam reinforcements.\n\ny\n\nA]\n\n_—_—__—_\n\n__4\n\n___—_—_\n\nBoxed_bars.\n\nMax. 10cm\n\nShort_bars\n\nLong bars\n\n2\n\nInsulation membrane\n\nite)\n\nS\n\n*«\n\n4\n\nSem _ Screed\n\nTYP. DETAIL OF ISOLATED FOOTING.\n\nInsulation membrane\n\n(WITH OUT BASEMENT)\n\n10cm Plain con.\n\n(When the level difference between upper\n\nground beam and footing is more than 2.5m)\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "2a05585605345f7986615813051d96c442d42d2893375ea77c86ff730276b435",
+      "text": "J\n\nN\n\nD\n\no\n\n\\\n\nxo.\n\nUpper Ground beam sitocenerhs/_\n\nColumn _ reinforcement\n\nWell graded clean compacted fill\n\nfrom excavation material.\n\nColumn stirrups.\n\n4,\n\nTwo layers liquid water proofing to be\n\napplied to all surface in contact with earth.\n\nLower Ground beam reinforcements.\n\n4\n\n|\n\n|__—\n\nA\n\n— — — — — J\n\n— —\n\neee\n\nBoxed _ bars.\n\nMax. 10cm\n\nShort bars\n\nLong bars\n\nInsulation membrane\n\nat\n\nLie\n\nSem Screed\n\nTYP. DETAIL OF ISOLATED FOOTING.\n\nInsulation membrane\n\n(WITH OUT BASEMENT)\n\n10cm Plain con.\n\n(When the level difference between upper\n\nground beam and footing is more than 2.5m)\n"
+     }
+    ],
+    "text": "J\n\na\n\n2\n\n42.\n\nct\n\nUpper Ground beam witramen/\n\nColumn_reinforcement\n\nWell graded clean compacted fill\n\nfrom excavation material.\n\nColumn stirrups.\n\nite)\n\n4,\n\nTwo layers liquid water proofing to be\n\nN\n\napplied to all surface in contact with earth.\n\nLower Ground beam reinforcements.\n\ny\n\nA]\n\n_—_—__—_\n\n__4\n\n___—_—_\n\nBoxed_bars.\n\nMax. 10cm\n\nShort_bars\n\nLong bars\n\n2\n\nInsulation membrane\n\nite)\n\nS\n\n*«\n\n4\n\nSem _ Screed\n\nTYP. DETAIL OF ISOLATED FOOTING.\n\nInsulation membrane\n\n(WITH OUT BASEMENT)\n\n10cm Plain con.\n\n(When the level difference between upper\n\nground beam and footing is more than 2.5m)\n\nJ\n\nN\n\nD\n\no\n\n\\\n\nxo.\n\nUpper Ground beam sitocenerhs/_\n\nColumn _ reinforcement\n\nWell graded clean compacted fill\n\nfrom excavation material.\n\nColumn stirrups.\n\n4,\n\nTwo layers liquid water proofing to be\n\napplied to all surface in contact with earth.\n\nLower Ground beam reinforcements.\n\n4\n\n|\n\n|__—\n\nA\n\n— — — — — J\n\n— —\n\neee\n\nBoxed _ bars.\n\nMax. 10cm\n\nShort bars\n\nLong bars\n\nInsulation membrane\n\nat\n\nLie\n\nSem Screed\n\nTYP. DETAIL OF ISOLATED FOOTING.\n\nInsulation membrane\n\n(WITH OUT BASEMENT)\n\n10cm Plain con.\n\n(When the level difference between upper\n\nground beam and footing is more than 2.5m)\n"
+   },
+   "geometry": {}
+  },
+  "P13_STARTER_40D": {
+   "crop_id": "P13_STARTER_40D",
+   "page": 13,
+   "bbox_pt": [
+    780,
+    215,
+    830,
+    300
+   ],
+   "dpi": 400,
+   "width_px": 279,
+   "height_px": 473,
+   "crop_hash": "5655eb9a8b0f4665417a1bfbe275084cbbe31be5a1556ce323aa773f83a16194",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 11,
+    "rotate_deg": 270,
+    "passes": [
+     {
+      "dpi": 300,
+      "crop_hash": "0e16d75228e31c7e73e07ae00b892fbc6c3de9b4a7fea4a35ed45941e5cb4fd0",
+      "text": "40 9\n"
+     },
+     {
+      "dpi": 400,
+      "crop_hash": "5655eb9a8b0f4665417a1bfbe275084cbbe31be5a1556ce323aa773f83a16194",
+      "text": "—— 40 @\n"
+     }
+    ],
+    "text": "40 9\n\n—— 40 @\n"
+   },
+   "geometry": {}
+  },
+  "P14_LIFT_FOOTING": {
+   "crop_id": "P14_LIFT_FOOTING",
+   "page": 14,
+   "bbox_pt": [
+    26,
+    26,
+    471,
+    412
+   ],
+   "dpi": 200,
+   "width_px": 1237,
+   "height_px": 1073,
+   "crop_hash": "581c93c5c58a910a4bc83bb92a283b1e9d7eded0da0c954a37c739f9ad67d3ec",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 11,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 200,
+      "crop_hash": "581c93c5c58a910a4bc83bb92a283b1e9d7eded0da0c954a37c739f9ad67d3ec",
+      "text": "G\n\n)\n\nLift door\n\nAS PER PLAN\n\nFPL\n\nae\n\n2612\n\npep @\n\nep @\n\nWell graded clean\n\nSlab on grade.\n\ncompacted fill from\n\nexcavation material.\n\nep @\n\n6912/m\n\nProtection Board\n\nWater proofing membrane\n\n6012/m\n\np @\n\n6016/m\n\nfF\n\nHH 6616/m\n\nAS PER, SCHEDULE\n\n20,\n\nAS ARCH\n\n20,\n\nHAAS PER SCHEDULE\n\n2 16 fF\n\nAS PER SCH.\n\nlu\n\nJ\n\n(2\n\nwo\n\na\n\nar oe YL\n\nv\n\ns\n\nL)\n\ne\n\no\n\nioe\n\na\n\n2 916\n\niad\n\n@\n\ncy\n\no © @\n\n2\n\nwn\n\nWL,\n\na\n\n¢\n\n4\n\n4\n\n[F\n\nas\n\nace\n\n4\n\nae\n\n4\n\n4\n\n2\n\n]\n\nDETAIL OF LIFT WITH ISOLATED FOOTING (witout BaseMeNT)\n\nSem Screed\n\nWater proofing membrane\n\n(loyee ody GU) pBLall 95 devel! Bel Abas alyais)\n\n10cm Plain con.\n\n5612/m\n\n&\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "6cac29bf2a16f271d8393869991f1de64d92a5aa642515ec934c8989d02aec79",
+      "text": "GC\n\n)\n\nLift door\n\nAS PER PLAN\n\nF.F.L\n\nSo\n\n2612\n\nSZ,\n\n[re\n\nSY,\n\nLSZ,\n\nPp @\n\nPp @\n\nSlab on grade.\n\nWell graded clean\n\ncompacted fill from\n\nexcavation material.\n\npep @\n\n6012/m\n\nProtection Board\n\nWater proofing membrane\n\n6612/m\n\nPp @\n\n6916/m\n\nL\n\n1 6016/m\n\nAS PER, SCHEDULE\n\n20\n\nAS ARCH.\n\n20\n\nmHAS PER SCHEDULE\n\n2 016 fs\n\nAS PER SCH.\n\ntC)\n\ntL)\n\n(2\n\nCO\n\n2 616\n\nroy\n\nym\n\n[|\n\n4\n\nq\n\n4\n\n4\n\n[F\n\na\n\n.\n\n4c\n\n‘a\n\nae.\n\n4\n\na\n\nDETAIL\n\nOF LIFT WITH ISOLATED FOOTING (without BASEMENT)\n\nScm Screed\n\nWater proofing membrane\n\n(lope joe GU) Lull gd teraall Bul) Aas alyais)\n\n10cm Plain con.\n\n5612/m x\n"
+     }
+    ],
+    "text": "G\n\n)\n\nLift door\n\nAS PER PLAN\n\nFPL\n\nae\n\n2612\n\npep @\n\nep @\n\nWell graded clean\n\nSlab on grade.\n\ncompacted fill from\n\nexcavation material.\n\nep @\n\n6912/m\n\nProtection Board\n\nWater proofing membrane\n\n6012/m\n\np @\n\n6016/m\n\nfF\n\nHH 6616/m\n\nAS PER, SCHEDULE\n\n20,\n\nAS ARCH\n\n20,\n\nHAAS PER SCHEDULE\n\n2 16 fF\n\nAS PER SCH.\n\nlu\n\nJ\n\n(2\n\nwo\n\na\n\nar oe YL\n\nv\n\ns\n\nL)\n\ne\n\no\n\nioe\n\na\n\n2 916\n\niad\n\n@\n\ncy\n\no © @\n\n2\n\nwn\n\nWL,\n\na\n\n¢\n\n4\n\n4\n\n[F\n\nas\n\nace\n\n4\n\nae\n\n4\n\n4\n\n2\n\n]\n\nDETAIL OF LIFT WITH ISOLATED FOOTING (witout BaseMeNT)\n\nSem Screed\n\nWater proofing membrane\n\n(loyee ody GU) pBLall 95 devel! Bel Abas alyais)\n\n10cm Plain con.\n\n5612/m\n\n&\n\nGC\n\n)\n\nLift door\n\nAS PER PLAN\n\nF.F.L\n\nSo\n\n2612\n\nSZ,\n\n[re\n\nSY,\n\nLSZ,\n\nPp @\n\nPp @\n\nSlab on grade.\n\nWell graded clean\n\ncompacted fill from\n\nexcavation material.\n\npep @\n\n6012/m\n\nProtection Board\n\nWater proofing membrane\n\n6612/m\n\nPp @\n\n6916/m\n\nL\n\n1 6016/m\n\nAS PER, SCHEDULE\n\n20\n\nAS ARCH.\n\n20\n\nmHAS PER SCHEDULE\n\n2 016 fs\n\nAS PER SCH.\n\ntC)\n\ntL)\n\n(2\n\nCO\n\n2 616\n\nroy\n\nym\n\n[|\n\n4\n\nq\n\n4\n\n4\n\n[F\n\na\n\n.\n\n4c\n\n‘a\n\nae.\n\n4\n\na\n\nDETAIL\n\nOF LIFT WITH ISOLATED FOOTING (without BASEMENT)\n\nScm Screed\n\nWater proofing membrane\n\n(lope joe GU) Lull gd teraall Bul) Aas alyais)\n\n10cm Plain con.\n\n5612/m x\n"
+   },
+   "geometry": {
+    "bar_dots": {
+     "dot_count": 48,
+     "rows": [
+      {
+       "y_pt": 109.65,
+       "count": 4
+      },
+      {
+       "y_pt": 139.83,
+       "count": 4
+      },
+      {
+       "y_pt": 176.97,
+       "count": 4
+      },
+      {
+       "y_pt": 209.44,
+       "count": 4
+      },
+      {
+       "y_pt": 243.27,
+       "count": 4
+      },
+      {
+       "y_pt": 279.99,
+       "count": 14
+      },
+      {
+       "y_pt": 322.96,
+       "count": 14
+      }
+     ],
+     "dots": [
+      [
+       93.06,
+       322.95
+      ],
+      [
+       93.16,
+       280.05
+      ],
+      [
+       115.82,
+       279.99
+      ],
+      [
+       115.82,
+       322.96
+      ],
+      [
+       142.34,
+       109.65
+      ],
+      [
+       142.34,
+       139.83
+      ],
+      [
+       142.34,
+       176.97
+      ],
+      [
+       142.34,
+       209.44
+      ],
+      [
+       142.34,
+       243.27
+      ],
+      [
+       142.34,
+       279.99
+      ],
+      [
+       142.34,
+       322.96
+      ],
+      [
+       157.27,
+       279.99
+      ],
+      [
+       157.6,
+       109.65
+      ],
+      [
+       157.6,
+       139.83
+      ],
+      [
+       157.6,
+       176.97
+      ],
+      [
+       157.6,
+       209.44
+      ],
+      [
+       157.6,
+       243.27
+      ],
+      [
+       157.75,
+       322.96
+      ],
+      [
+       175.99,
+       279.99
+      ],
+      [
+       175.99,
+       322.96
+      ],
+      [
+       208.05,
+       279.99
+      ],
+      [
+       208.05,
+       322.96
+      ],
+      [
+       236.61,
+       279.99
+      ],
+      [
+       237.31,
+       322.96
+      ],
+      [
+       266.7,
+       279.99
+      ],
+      [
+       266.7,
+       322.96
+      ],
+      [
+       294.81,
+       279.99
+      ],
+      [
+       294.81,
+       322.96
+      ],
+      [
+       320.9,
+       279.99
+      ],
+      [
+       320.9,
+       322.96
+      ],
+      [
+       339.26,
+       109.65
+      ],
+      [
+       339.26,
+       139.83
+      ],
+      [
+       339.26,
+       176.97
+      ],
+      [
+       339.26,
+       209.44
+      ],
+      [
+       339.26,
+       243.27
+      ],
+      [
+       339.3,
+       279.99
+      ],
+      [
+       339.3,
+       322.96
+      ],
+      [
+       354.43,
+       279.99
+      ],
+      [
+       354.69,
+       109.65
+      ],
+      [
+       354.69,
+       139.83
+      ],
+      [
+       354.69,
+       176.97
+      ],
+      [
+       354.69,
+       209.44
+      ],
+      [
+       354.69,
+       243.27
+      ],
+      [
+       354.91,
+       322.96
+      ],
+      [
+       378.52,
+       279.99
+      ],
+      [
+       378.52,
+       322.96
+      ],
+      [
+       404.01,
+       279.98
+      ],
+      [
+       404.01,
+       322.95
+      ]
+     ]
+    }
+   }
+  },
+  "P14_BOUNDARY_WALL_PLAN": {
+   "crop_id": "P14_BOUNDARY_WALL_PLAN",
+   "page": 14,
+   "bbox_pt": [
+    458,
+    170,
+    760,
+    330
+   ],
+   "dpi": 200,
+   "width_px": 840,
+   "height_px": 445,
+   "crop_hash": "87b7414e43aaa9e9b65c203d3e23affb667f23e166f79e8e8fe6910721f93c37",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 11,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 200,
+      "crop_hash": "87b7414e43aaa9e9b65c203d3e23affb667f23e166f79e8e8fe6910721f93c37",
+      "text": "ane\n\noq\n\n|\n\n|\n\nGROUND BEAM\n\n(20x40)\n\nI\n\n(20x30) R.C ]\n\nSEE ARCH PLAN\n\nCOLUMNS 4614\n\nod\n\nTYPICAL BOUNDARY WALL Gs)! 16)\n\n(PLAN)\n\n(N.S)\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "700e7749c9abdc69eb2fcdec6a1f79bc64b41704f153daf978bd1f8c4283e7eb",
+      "text": "ane\n\noq\n\n|\n\nGROUND BEAM\n\n(20x40)\n\n_\n\nBRS\n\nsy\n\n_\n\n_\n\nI ceseteteececeee\n\nI\n\n(20x30) R.C ]\n\nSEE ARCH PLAN\n\nCOLUMNS 4414\n\nO4\n\nTYPICAL BOUNDARY WALL (+! 16.)\n\n(PLAN)\n\n(N.I.S)\n"
+     }
+    ],
+    "text": "ane\n\noq\n\n|\n\n|\n\nGROUND BEAM\n\n(20x40)\n\nI\n\n(20x30) R.C ]\n\nSEE ARCH PLAN\n\nCOLUMNS 4614\n\nod\n\nTYPICAL BOUNDARY WALL Gs)! 16)\n\n(PLAN)\n\n(N.S)\n\nane\n\noq\n\n|\n\nGROUND BEAM\n\n(20x40)\n\n_\n\nBRS\n\nsy\n\n_\n\n_\n\nI ceseteteececeee\n\nI\n\n(20x30) R.C ]\n\nSEE ARCH PLAN\n\nCOLUMNS 4414\n\nO4\n\nTYPICAL BOUNDARY WALL (+! 16.)\n\n(PLAN)\n\n(N.I.S)\n"
+   },
+   "geometry": {}
+  },
+  "P14_BOUNDARY_WALL_SECTION": {
+   "crop_id": "P14_BOUNDARY_WALL_SECTION",
+   "page": 14,
+   "bbox_pt": [
+    775,
+    20,
+    1015,
+    455
+   ],
+   "dpi": 200,
+   "width_px": 668,
+   "height_px": 1209,
+   "crop_hash": "01cbb9e9792825a32fbcec0ea2eb5a6b4270368f6565e94f7a551fb761d6410f",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 11,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 200,
+      "crop_hash": "01cbb9e9792825a32fbcec0ea2eb5a6b4270368f6565e94f7a551fb761d6410f",
+      "text": "20\n\nI\n\nU\n\n(20 x 30)\n\nCOLUMN 4614\n\nPLAIN CONC.\n\nN.G. LEVEL.\n\nT\n\n|\n\n2614 (T&B)\n\n|\n\n=\n\n98/20_STIRRUPS\n\n(6B)\n\n+\n\n3016 (T&B)\n\n1 — — |\n\n——__ +\n\nY\n\nw\n\noa\n\nY Brick Wall\n\noy\n\n“a\n\nno\n\nait2\n\n7912\n\n2014 (T&B)\n\n98/20_STIRRUPS\n\n3016 (T&B)\n\n(6.8)\n\nfo)\n\n—\n\n4\n\na\n\n4912 (B.W)\n\n|:\n\n80:\n\nok\n\nTYPICAL BOUNDARY WALL\n\nSECTION (A-A)\n\n(N.S)\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "5c2a0bf94054d3a740e54cdf9e5c22fae3a4e624cd5ec835a325ab3a320f9b87",
+      "text": "ri\n\n( 20 x 30 )\n\nCOLUMN 4614\n\nPLAIN CONC.\n\n|\n\nN.G. LEVEL.\n\nWwW\n\n2614 (T&B)\n\n=e\n\n—\n\n98/20 STIRRUPS\n\n(G.B)\n\n3616 (T&B)\n\n_=— =)\n\n——_\n\nY\n\nBrick Wall\n\n|\n\nua\n\naed\n\nrz\n\n7912\n\n2014 (T&B)\n\n98/20 STIRRUPS\n\n3616 (T&B)\n\n(cB)\n\n—\n\nay\n\ngq 4\n\ng4\n\n|\n\n4912 (BW)\n\n80\n\nof\n\nTYPICAL BOUNDARY WALL\n\nSECTION (A~A)\n\n(N.S)\n"
+     }
+    ],
+    "text": "20\n\nI\n\nU\n\n(20 x 30)\n\nCOLUMN 4614\n\nPLAIN CONC.\n\nN.G. LEVEL.\n\nT\n\n|\n\n2614 (T&B)\n\n|\n\n=\n\n98/20_STIRRUPS\n\n(6B)\n\n+\n\n3016 (T&B)\n\n1 — — |\n\n——__ +\n\nY\n\nw\n\noa\n\nY Brick Wall\n\noy\n\n“a\n\nno\n\nait2\n\n7912\n\n2014 (T&B)\n\n98/20_STIRRUPS\n\n3016 (T&B)\n\n(6.8)\n\nfo)\n\n—\n\n4\n\na\n\n4912 (B.W)\n\n|:\n\n80:\n\nok\n\nTYPICAL BOUNDARY WALL\n\nSECTION (A-A)\n\n(N.S)\n\nri\n\n( 20 x 30 )\n\nCOLUMN 4614\n\nPLAIN CONC.\n\n|\n\nN.G. LEVEL.\n\nWwW\n\n2614 (T&B)\n\n=e\n\n—\n\n98/20 STIRRUPS\n\n(G.B)\n\n3616 (T&B)\n\n_=— =)\n\n——_\n\nY\n\nBrick Wall\n\n|\n\nua\n\naed\n\nrz\n\n7912\n\n2014 (T&B)\n\n98/20 STIRRUPS\n\n3616 (T&B)\n\n(cB)\n\n—\n\nay\n\ngq 4\n\ng4\n\n|\n\n4912 (BW)\n\n80\n\nof\n\nTYPICAL BOUNDARY WALL\n\nSECTION (A~A)\n\n(N.S)\n"
+   },
+   "geometry": {}
+  },
+  "P14_PARAPETS": {
+   "crop_id": "P14_PARAPETS",
+   "page": 14,
+   "bbox_pt": [
+    60,
+    410,
+    1000,
+    812
+   ],
+   "dpi": 200,
+   "width_px": 2612,
+   "height_px": 1118,
+   "crop_hash": "272e0f9b06103c6b0afa84ad101b2593f23ef33e865650f649cf24b5158a5fab",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 11,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 200,
+      "crop_hash": "272e0f9b06103c6b0afa84ad101b2593f23ef33e865650f649cf24b5158a5fab",
+      "text": "uJ\n\nL\n\n<=\n\n5612/m\n\n80\n\n#10:\n\n_\n\n_\n\n=\n\nJ\n\nTYPICAL BOUNDARY WAL\n\nSECTION (A-A)\n\n(N.S)\n\nfad\n\nir]\n\n9)\n\nme)\n\n=\n\n|“\n\nc\n\n<\n\n(18 oF oF oF\n\n5910/m\n\n*\n\nfT\n\nio)\n\nx\n\n=\n\n3\n\ncr)\n\na\n\nir]\n\nle\n\nr\n\nY, Brick Wall\n\n6910/m\n\n6912/m\n\nun\n\n5610/m\n\no\n\n=\n\nN\\A\n\n/\\y\n\n6612/m\n\nMUST BE MORE THAN THE T\n\n6912/m\n\nHEIGHT OF ROOF FINISHING\n\nb al\n\nc\n\n7\n\nq\n\nFf\n\noa\n\n_—\n\n6012/m\n\noe 9 e ¢ ¢« «\n\nle\n\nr\n\n5610/m\n\nAS PER SLAB\n\noP\n\ni\n\n+\n\n*\n\nb off wi\n\na\n\nAS PER PLAN\n\nSEE DETAIL FOR\n\n—\n\nBEAM\n\nteal |\n\n|\n\nof\n\n60\n\nTYPICAL DETAIL OF PARAPET\n\nDETAIL OF PARAPET SECTION\n\nVA.\n\nSECTION\n\nhadiah1 2+b\\ Finaliob\\ YEARS 2013-2019\\ VILLA\\ 7757-FATMA ALSNYAN\\17757.dwa\n\nDETAILS (2)\n\nMay 06. 2026 - 12:04pm\n\nAQO8-PC\n\nDETAIL OF PARAPET SECTION\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "7e7be99eefdb39e4858454b7a13011737dfeb851024efc6969d88df2c24e5621",
+      "text": "|\n\nnet\n\n5612/m\n\n80\n\na1 O\n\nTYPICAL BOUNDARY WAL\n\nSECTION (A~A)\n\n(N.S)\n\na OC\n\nnet\n\n9910/m\n\nre\n\nTe .\n\n€ -.3\n\n6612/m\n\nCf\n\nY Brick Wall\n\n6410/m\n\n6612/m\n\n5610/m\n\n5610/m\n\no\n\na\n\n6612/m\n\nMUST BE MORE THAN THE a)\n\n6912/m\n\nHEIGHT OF ROOF FINISHING\n\n1° e\n\nNy\n\n(2)\n\n—\n\n6612/m\n\noOo—\n\n2 2 2 2 2 2 2\n\n5910/m\n\nAS PER SLAB\n\nCI\n\nO\n\nrT\n\nL\n\nica)\n\nw e\n\nuu\n\nac\n\nAS PER PLAN\n\nSEE DETAIL FOR\n\nBEAM\n\n“i\n\ntt\n\n— ia\n\n10 a\n\n60\n\n—\n\n—\n\nTYPICAL DETAIL OF PARAPET\n\nDETAIL OF PARAPET SECTION.\n\nUa.\n\nSECTION.\n\nhadiah1 2tb\\ Finaliob\\ YEARS 2013-2019\\ VILLA\\ 7757-FATMA ALSNYAN\\17757.dwa\n\nDETAILS (2)\n\nMav 06. 2026 - 12:04om\n\nA008-PC\n\nDETAIL OF PARAPET SECTION.\n"
+     }
+    ],
+    "text": "uJ\n\nL\n\n<=\n\n5612/m\n\n80\n\n#10:\n\n_\n\n_\n\n=\n\nJ\n\nTYPICAL BOUNDARY WAL\n\nSECTION (A-A)\n\n(N.S)\n\nfad\n\nir]\n\n9)\n\nme)\n\n=\n\n|“\n\nc\n\n<\n\n(18 oF oF oF\n\n5910/m\n\n*\n\nfT\n\nio)\n\nx\n\n=\n\n3\n\ncr)\n\na\n\nir]\n\nle\n\nr\n\nY, Brick Wall\n\n6910/m\n\n6912/m\n\nun\n\n5610/m\n\no\n\n=\n\nN\\A\n\n/\\y\n\n6612/m\n\nMUST BE MORE THAN THE T\n\n6912/m\n\nHEIGHT OF ROOF FINISHING\n\nb al\n\nc\n\n7\n\nq\n\nFf\n\noa\n\n_—\n\n6012/m\n\noe 9 e ¢ ¢« «\n\nle\n\nr\n\n5610/m\n\nAS PER SLAB\n\noP\n\ni\n\n+\n\n*\n\nb off wi\n\na\n\nAS PER PLAN\n\nSEE DETAIL FOR\n\n—\n\nBEAM\n\nteal |\n\n|\n\nof\n\n60\n\nTYPICAL DETAIL OF PARAPET\n\nDETAIL OF PARAPET SECTION\n\nVA.\n\nSECTION\n\nhadiah1 2+b\\ Finaliob\\ YEARS 2013-2019\\ VILLA\\ 7757-FATMA ALSNYAN\\17757.dwa\n\nDETAILS (2)\n\nMay 06. 2026 - 12:04pm\n\nAQO8-PC\n\nDETAIL OF PARAPET SECTION\n\n|\n\nnet\n\n5612/m\n\n80\n\na1 O\n\nTYPICAL BOUNDARY WAL\n\nSECTION (A~A)\n\n(N.S)\n\na OC\n\nnet\n\n9910/m\n\nre\n\nTe .\n\n€ -.3\n\n6612/m\n\nCf\n\nY Brick Wall\n\n6410/m\n\n6612/m\n\n5610/m\n\n5610/m\n\no\n\na\n\n6612/m\n\nMUST BE MORE THAN THE a)\n\n6912/m\n\nHEIGHT OF ROOF FINISHING\n\n1° e\n\nNy\n\n(2)\n\n—\n\n6612/m\n\noOo—\n\n2 2 2 2 2 2 2\n\n5910/m\n\nAS PER SLAB\n\nCI\n\nO\n\nrT\n\nL\n\nica)\n\nw e\n\nuu\n\nac\n\nAS PER PLAN\n\nSEE DETAIL FOR\n\nBEAM\n\n“i\n\ntt\n\n— ia\n\n10 a\n\n60\n\n—\n\n—\n\nTYPICAL DETAIL OF PARAPET\n\nDETAIL OF PARAPET SECTION.\n\nUa.\n\nSECTION.\n\nhadiah1 2tb\\ Finaliob\\ YEARS 2013-2019\\ VILLA\\ 7757-FATMA ALSNYAN\\17757.dwa\n\nDETAILS (2)\n\nMav 06. 2026 - 12:04om\n\nA008-PC\n\nDETAIL OF PARAPET SECTION.\n"
+   },
+   "geometry": {}
+  },
+  "P15_TEMPERATURE_TABLE": {
+   "crop_id": "P15_TEMPERATURE_TABLE",
+   "page": 15,
+   "bbox_pt": [
+    530,
+    471,
+    676,
+    620
+   ],
+   "dpi": 200,
+   "width_px": 406,
+   "height_px": 415,
+   "crop_hash": "92c2b8f0790694267b8e704f0a0fecc1e1f10317d25be8fbc08d9530fc618c23",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 11,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 200,
+      "crop_hash": "92c2b8f0790694267b8e704f0a0fecc1e1f10317d25be8fbc08d9530fc618c23",
+      "text": "TEMPERATURE REINFORCEMENT\n\nSCHEDULE\n\nSLAB THICK\n\nREINFORCEMENT\n\n100\n\nY10\n\n®\n\n200\n\n125\n\nY10\n\n200\n\n150\n\nY10\n\n200\n\n175\n\nY12\n\n200\n\n200\n\nY12\n\n200\n\n250\n\nY12\n\n200\n\n300\n\nY12\n\n200\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "2e3dc13f66e47c6dde79c8be8db71b41966a24330420efb403bc6a74bca06041",
+      "text": "TEMPERATURE REINFORCEMENT\n\nSCHEDULE\n\nSLAB THICK\n\nREINFORCEMENT\n\n100\n\nY10\n\n)\n\n200\n\n125\n\nY10\n\n200\n\n150\n\nY10\n\n200\n\n175\n\nY12\n\n200\n\n200\n\nY12\n\n200\n\n250\n\nY12\n\n200\n\n300\n\nY12\n\n200\n"
+     }
+    ],
+    "text": "TEMPERATURE REINFORCEMENT\n\nSCHEDULE\n\nSLAB THICK\n\nREINFORCEMENT\n\n100\n\nY10\n\n®\n\n200\n\n125\n\nY10\n\n200\n\n150\n\nY10\n\n200\n\n175\n\nY12\n\n200\n\n200\n\nY12\n\n200\n\n250\n\nY12\n\n200\n\n300\n\nY12\n\n200\n\nTEMPERATURE REINFORCEMENT\n\nSCHEDULE\n\nSLAB THICK\n\nREINFORCEMENT\n\n100\n\nY10\n\n)\n\n200\n\n125\n\nY10\n\n200\n\n150\n\nY10\n\n200\n\n175\n\nY12\n\n200\n\n200\n\nY12\n\n200\n\n250\n\nY12\n\n200\n\n300\n\nY12\n\n200\n"
+   },
+   "geometry": {
+    "horizontal_rules_pt": [
+     504.3,
+     518.6,
+     532.8,
+     547.1,
+     561.4,
+     575.7,
+     590.0,
+     604.2
+    ]
+   }
+  },
+  "P15_TEMPERATURE_NOTES": {
+   "crop_id": "P15_TEMPERATURE_NOTES",
+   "page": 15,
+   "bbox_pt": [
+    676,
+    471,
+    845,
+    610
+   ],
+   "dpi": 200,
+   "width_px": 471,
+   "height_px": 387,
+   "crop_hash": "57eec7d108f70bceec217329fe5272a98f853a6155f98753e85de4ff75c3da1b",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 6,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 200,
+      "crop_hash": "57eec7d108f70bceec217329fe5272a98f853a6155f98753e85de4ff75c3da1b",
+      "text": "NOTE:\n\n1. LAP LENGHT FOR ALL TEMPERATUERE\nBARS SHALL BE 40xDIA.\n\n2. WHERE BEAMS ARE PARALLEL TO MAIN\nSLAB REINFORCEMENT PROVIDE TEMP.\nREINF. X 2000 TOP OF SLAB AT RIGHT\nANGLES TO BEAMS. 1000 # SPANDREL\n\n3. WHERE TOP REINF. DIFFERS BETWEEN\nADJACENT SPANS USE LAGER REINF.\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "40829074eba665c8abcc26f1f668ffdfbb237be17d073d81f4ce996cc5ac0ab0",
+      "text": "NOTE:\n\n1. LAP LENGHT FOR ALL TEMPERATUERE\nBARS SHALL BE 40xDIA.\n\n2. WHERE BEAMS ARE PARALLEL TO MAIN\nSLAB REINFORCEMENT PROVIDE TEMP.\nREINF. X 2000 TOP OF SLAB AT RIGHT\nANGLES TO BEAMS. 1000 9 SPANDREL\n\n3. WHERE TOP REINF. DIFFERS BETWEEN\nADJACENT SPANS USE LAGER REINF.\n"
+     }
+    ],
+    "text": "NOTE:\n\n1. LAP LENGHT FOR ALL TEMPERATUERE\nBARS SHALL BE 40xDIA.\n\n2. WHERE BEAMS ARE PARALLEL TO MAIN\nSLAB REINFORCEMENT PROVIDE TEMP.\nREINF. X 2000 TOP OF SLAB AT RIGHT\nANGLES TO BEAMS. 1000 # SPANDREL\n\n3. WHERE TOP REINF. DIFFERS BETWEEN\nADJACENT SPANS USE LAGER REINF.\n\nNOTE:\n\n1. LAP LENGHT FOR ALL TEMPERATUERE\nBARS SHALL BE 40xDIA.\n\n2. WHERE BEAMS ARE PARALLEL TO MAIN\nSLAB REINFORCEMENT PROVIDE TEMP.\nREINF. X 2000 TOP OF SLAB AT RIGHT\nANGLES TO BEAMS. 1000 9 SPANDREL\n\n3. WHERE TOP REINF. DIFFERS BETWEEN\nADJACENT SPANS USE LAGER REINF.\n"
+   },
+   "geometry": {}
+  },
+  "P15_SLAB_ON_BEAMS": {
+   "crop_id": "P15_SLAB_ON_BEAMS",
+   "page": 15,
+   "bbox_pt": [
+    110,
+    600,
+    720,
+    812
+   ],
+   "dpi": 200,
+   "width_px": 1695,
+   "height_px": 590,
+   "crop_hash": "a1f293e5aa4b9377f09da0e92e1f4a788cf7105f9c388f3b48f1d306b8d4e9ce",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 11,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 200,
+      "crop_hash": "a1f293e5aa4b9377f09da0e92e1f4a788cf7105f9c388f3b48f1d306b8d4e9ce",
+      "text": "tlt\n\nTOP ANCHOR BARS. FOR SIZE\n\n—_—\n\nBOTTOM BARS. FOR SIZE &\n\n300\n\nY12 @ 200\n\n& SPACING SEE SCHEDULE\n\n& SPACING SEE SCHDULE\n\nOR PLA\n\nOR PLAN\n\n¢ BEAM\n\n25°L1”\n\nTEMP. REINFORCING\n\n30°L1\n\nOR .30°L2\n\nF TOP REINF.\n\nSLAB\n\nLE\n\n_—————\n\nres\n\nacne\n\n_\n\n19)\n\n7\n\n7\n\nOF\n\nOF\n\n2\n\n2\n\n2\n\n2\n\n2\n\n2\n\n2\n\ne\n\ne\n\nJ\n\n40 CL\n\nFOR SIZE THICKNESS |\n\nee\n\nSEE PLAN\n\nBEAM SIZE & REIN\n\nSe\n\nSEE SHEDULE\n\nSTOP 50% OF BOT. REINF.\n\nBALANCE CONTINUOUS\n\n| 125°L1\n\n125 e\n\nL1\n\n\"9\n\nNON CONTINUOUS SUPPORT\n\nCLEAR SPAN\n\nCLEAR SPAN\n\nTYP STAB ON BEAMS DETATI,\n\nCONTINUOUS SUPPORT\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "72ee678c39dbee8d1b208c1d4dc4df1ff8c69ea0f1f30d864628c9c6cbfdf530",
+      "text": "ENAMEL\n\nTOP ANCHOR BARS. FOR SIZE\n\n300\n\nY12 @ 200\n\n{+\n\nBOTTOM BARS. FOR SIZE &\n\n& SPACING SEE SCHDULE\n\n& SPACING SEE SCHEDULE\n\nOR PLAN\n\n¢ BEAM\n\n.25°L1”\n\n\\\n\nTEMP. REINFORCING\n\nJ\n\n.30°L1” OR .30°L2”\n\n)F TOP REINF.\n\nSLAB\n\n| WHICHEVER LARGER\n\nLE\n\na |\n\ns+\n\n10)\n\n©.\n\n2\n\n2\n\n2\n\n...? \\S\n\ne ° e ° e or\n\n40 CL\n\nAjo\n\nFOR SIZE THICKNESS\n\n—\n\nin\n\nSEE PLAN\n\nBEAM SIZE & rene. \\ |\n\nSEE SHEDULE\n\nSTOP 50% OF BOT. REINF.\n\nBALANCE CONTINUOUS\n\n.125°L1” L\n\n\"1 ”\n\n\"19 ”\n\nNON CONTINUOUS SUPPORT\n\nCLEAR SPAN\n\nCLEAR SPAN\n\nTYP STAR ON BEAMS DETATI,\n\nCONTINUOUS SUPPORT\n"
+     }
+    ],
+    "text": "tlt\n\nTOP ANCHOR BARS. FOR SIZE\n\n—_—\n\nBOTTOM BARS. FOR SIZE &\n\n300\n\nY12 @ 200\n\n& SPACING SEE SCHEDULE\n\n& SPACING SEE SCHDULE\n\nOR PLA\n\nOR PLAN\n\n¢ BEAM\n\n25°L1”\n\nTEMP. REINFORCING\n\n30°L1\n\nOR .30°L2\n\nF TOP REINF.\n\nSLAB\n\nLE\n\n_—————\n\nres\n\nacne\n\n_\n\n19)\n\n7\n\n7\n\nOF\n\nOF\n\n2\n\n2\n\n2\n\n2\n\n2\n\n2\n\n2\n\ne\n\ne\n\nJ\n\n40 CL\n\nFOR SIZE THICKNESS |\n\nee\n\nSEE PLAN\n\nBEAM SIZE & REIN\n\nSe\n\nSEE SHEDULE\n\nSTOP 50% OF BOT. REINF.\n\nBALANCE CONTINUOUS\n\n| 125°L1\n\n125 e\n\nL1\n\n\"9\n\nNON CONTINUOUS SUPPORT\n\nCLEAR SPAN\n\nCLEAR SPAN\n\nTYP STAB ON BEAMS DETATI,\n\nCONTINUOUS SUPPORT\n\nENAMEL\n\nTOP ANCHOR BARS. FOR SIZE\n\n300\n\nY12 @ 200\n\n{+\n\nBOTTOM BARS. FOR SIZE &\n\n& SPACING SEE SCHDULE\n\n& SPACING SEE SCHEDULE\n\nOR PLAN\n\n¢ BEAM\n\n.25°L1”\n\n\\\n\nTEMP. REINFORCING\n\nJ\n\n.30°L1” OR .30°L2”\n\n)F TOP REINF.\n\nSLAB\n\n| WHICHEVER LARGER\n\nLE\n\na |\n\ns+\n\n10)\n\n©.\n\n2\n\n2\n\n2\n\n...? \\S\n\ne ° e ° e or\n\n40 CL\n\nAjo\n\nFOR SIZE THICKNESS\n\n—\n\nin\n\nSEE PLAN\n\nBEAM SIZE & rene. \\ |\n\nSEE SHEDULE\n\nSTOP 50% OF BOT. REINF.\n\nBALANCE CONTINUOUS\n\n.125°L1” L\n\n\"1 ”\n\n\"19 ”\n\nNON CONTINUOUS SUPPORT\n\nCLEAR SPAN\n\nCLEAR SPAN\n\nTYP STAR ON BEAMS DETATI,\n\nCONTINUOUS SUPPORT\n"
+   },
+   "geometry": {
+    "dimension_lines": {
+     "state": "MEASURED",
+     "L1_pt": 283.6,
+     "ticks": {
+      "L1": [
+       228.9,
+       512.5
+      ],
+      "L2_start": 555.0
+     },
+     "ratio_125_L1": 0.1202,
+     "len_125_L2_pt": 33.9,
+     "ratio_25_L1": 0.2602,
+     "ratio_30_L1": 0.3494,
+     "lines": {
+      "d25": {
+       "y_pt": 649.7,
+       "x0_pt": 228.7,
+       "x1_pt": 302.5,
+       "width": 0.48
+      },
+      "d30": {
+       "y_pt": 657.3,
+       "x0_pt": 416.1,
+       "x1_pt": 515.2,
+       "width": 0.48
+      }
+     }
+    }
+   }
+  },
+  "P15_SLAB_TOP_NONCONTINUOUS": {
+   "crop_id": "P15_SLAB_TOP_NONCONTINUOUS",
+   "page": 15,
+   "bbox_pt": [
+    190,
+    630,
+    340,
+    660
+   ],
+   "dpi": 300,
+   "width_px": 626,
+   "height_px": 125,
+   "crop_hash": "61165c4b896ec59b9549518a599e5a11509834c45478bd6d60b4f4d0002f11fb",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 6,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 300,
+      "crop_hash": "61165c4b896ec59b9549518a599e5a11509834c45478bd6d60b4f4d0002f11fb",
+      "text": "OR PLAN\n25°L1” TEMP. RI\n|\n"
+     }
+    ],
+    "text": "OR PLAN\n25°L1” TEMP. RI\n|\n"
+   },
+   "geometry": {}
+  },
+  "P15_SLAB_TOP_CONTINUOUS": {
+   "crop_id": "P15_SLAB_TOP_CONTINUOUS",
+   "page": 15,
+   "bbox_pt": [
+    400,
+    630,
+    560,
+    670
+   ],
+   "dpi": 300,
+   "width_px": 668,
+   "height_px": 167,
+   "crop_hash": "b4cbd09dc2cea36ad066322476d4d7e685aa65ce06ea61633b5cda53203c3148",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 11,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 300,
+      "crop_hash": "b4cbd09dc2cea36ad066322476d4d7e685aa65ce06ea61633b5cda53203c3148",
+      "text": "¢ BEAM\n\n72\n\n.30°L1” OR .30°L2”\n\neo\n\n| WHICHEVER LARGER 1\n"
+     }
+    ],
+    "text": "¢ BEAM\n\n72\n\n.30°L1” OR .30°L2”\n\neo\n\n| WHICHEVER LARGER 1\n"
+   },
+   "geometry": {}
+  },
+  "P15_SLAB_BOTTOM_STOP": {
+   "crop_id": "P15_SLAB_BOTTOM_STOP",
+   "page": 15,
+   "bbox_pt": [
+    380,
+    735,
+    620,
+    770
+   ],
+   "dpi": 300,
+   "width_px": 1001,
+   "height_px": 147,
+   "crop_hash": "25364a6127d47f47324e6e2f18f70a5e867eded7be50af9d7b201188203437e0",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 6,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 300,
+      "crop_hash": "25364a6127d47f47324e6e2f18f70a5e867eded7be50af9d7b201188203437e0",
+      "text": "OF BOT. REINF, <—=—\nCONTINUOUS .125°L1” .125°L2”\n"
+     }
+    ],
+    "text": "OF BOT. REINF, <—=—\nCONTINUOUS .125°L1” .125°L2”\n"
+   },
+   "geometry": {}
+  },
+  "P15_TWISTED_COLUMN": {
+   "crop_id": "P15_TWISTED_COLUMN",
+   "page": 15,
+   "bbox_pt": [
+    30,
+    20,
+    500,
+    580
+   ],
+   "dpi": 200,
+   "width_px": 1306,
+   "height_px": 1557,
+   "crop_hash": "e6b68fa8a276d219b36048d39c9d6b0ec774abbaf7ad35703e494deb7322fd82",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 11,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 200,
+      "crop_hash": "e6b68fa8a276d219b36048d39c9d6b0ec774abbaf7ad35703e494deb7322fd82",
+      "text": "|\n\nCOLUMN\n\nCOLUMN\n\nIN FIRST\n\nIN FIRST\n\n4916 EXTRA\n\n4916 EXTRA\n\n-\n\nN\n\nTe)\n\ni2.\n\nYT)\n\nFIT.\n\nSpiral Stirrups\n\nSpiral Stirrups\n\nCOLUMN\n\nCOLUMN\n\n|\n\n668/m\n\n648/m\n\n|\n\nIN GROUND\n\nIN GROUND\n\n—\n\nCOLUMN\n\nIN FIRST\n\nSpiral Stirrups\n\nSpiral Stirrups\n\n698/m\n\n698/m\n\na\n\nCOLUMN\n\n=\n\nIN GROUND\n\nCOLL\n\nIN GRC\n\njt\n\ni\n\ni\n\nTYP. DETAIL OF\n\nTWISTED\n\nTYP. DETAIL OF TWISTED\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "ea318d00340dcce5cc8ccb18954d746ebfa81ca8f8314ec8a0124107fb6be2c4",
+      "text": "C\n\nCOLUMN\n\nCOLUMN\n\nIN FIRST\n\nIN FIRST\n\n4916 EXTRA\n\n4016 EXTRA\n\nRe\n\n||\n\ntt df\n\na\n\nSpiral Stirrups\n\nSpiral Stirrups\n\nCOLUMN\n\n648/m\n\n698/m\n\nCOLUMN\n\nIN GROUND\n\nIN GROUND\n\n(\n\ns\n\nf\n\n.\n\nee\n\nCOLUMN\n\nIN FIRST\n\nSpiral Stirrups\n\nSpiral Stirrups\n\n668/m\n\n698/m\n\n—\n\n=\n\nCOLUMN\n\nIN GROUND\n\nCOLL\n\nIN GRC\n\n—\n\n_—\n\ni\n\nTYP. DETAIL OF TWISTED\n\nTYP. DETAIL OF TWISTED\n"
+     }
+    ],
+    "text": "|\n\nCOLUMN\n\nCOLUMN\n\nIN FIRST\n\nIN FIRST\n\n4916 EXTRA\n\n4916 EXTRA\n\n-\n\nN\n\nTe)\n\ni2.\n\nYT)\n\nFIT.\n\nSpiral Stirrups\n\nSpiral Stirrups\n\nCOLUMN\n\nCOLUMN\n\n|\n\n668/m\n\n648/m\n\n|\n\nIN GROUND\n\nIN GROUND\n\n—\n\nCOLUMN\n\nIN FIRST\n\nSpiral Stirrups\n\nSpiral Stirrups\n\n698/m\n\n698/m\n\na\n\nCOLUMN\n\n=\n\nIN GROUND\n\nCOLL\n\nIN GRC\n\njt\n\ni\n\ni\n\nTYP. DETAIL OF\n\nTWISTED\n\nTYP. DETAIL OF TWISTED\n\nC\n\nCOLUMN\n\nCOLUMN\n\nIN FIRST\n\nIN FIRST\n\n4916 EXTRA\n\n4016 EXTRA\n\nRe\n\n||\n\ntt df\n\na\n\nSpiral Stirrups\n\nSpiral Stirrups\n\nCOLUMN\n\n648/m\n\n698/m\n\nCOLUMN\n\nIN GROUND\n\nIN GROUND\n\n(\n\ns\n\nf\n\n.\n\nee\n\nCOLUMN\n\nIN FIRST\n\nSpiral Stirrups\n\nSpiral Stirrups\n\n668/m\n\n698/m\n\n—\n\n=\n\nCOLUMN\n\nIN GROUND\n\nCOLL\n\nIN GRC\n\n—\n\n_—\n\ni\n\nTYP. DETAIL OF TWISTED\n\nTYP. DETAIL OF TWISTED\n"
+   },
+   "geometry": {}
+  },
+  "P15_BEAM_IN_CASEMENT": {
+   "crop_id": "P15_BEAM_IN_CASEMENT",
+   "page": 15,
+   "bbox_pt": [
+    520,
+    20,
+    960,
+    440
+   ],
+   "dpi": 200,
+   "width_px": 1223,
+   "height_px": 1168,
+   "crop_hash": "abb331c2927da6981897463233e78396881caac00e1f535fe54af89626d93fee",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 11,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 200,
+      "crop_hash": "abb331c2927da6981897463233e78396881caac00e1f535fe54af89626d93fee",
+      "text": "AS PER PLAN\n\nAS PER PLAN\n\n648/m\n\n698/m\n\n5918\n\n5618\n\n——\n\n——} _4\n\nCOLUMN\n\nCOLUMN\n\n|\n\n|\n\n| 4\n\n|\n\n| _4\n\n1-20-47 AS. PER -PLAN\n\n|\n\n|\n\nAS PER PLAN\n\n|\n\n|\n\n20\n\n|\n\nAS PER PLAN\n\n|\n\n)\n\nBEAM _IN CASEMENT\n\nBEAM _IN CASEMENT\n\nWITH COLUMN\n\nWITH COLUMN\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "24a20f5abb28ea3899038b14a0d165f116674fbf4dbc34f8d865bcb28bb0d957",
+      "text": "AS PER PLAN\n\nAS PER PLAN\n\n698/m\n\n698/m\n\n5918\n\n5918\n\n——  —__\n\neS eee\n\n—J —\n\nCOLUMN\n\nCOLUMN\n\n|\n\n|\n\n|\n\n|\n\n|\n\n|\n\n|\n\n|\n\n|\n\nA 20-4 AS. PER PLAN\n\n|\n\nAS PER PLAN\n\n|\n\n20\n\n|\n\nAS PER PLAN\n\n|\n\n|\n\nBEAM IN CASEMENT\n\nBEAM IN CASEMENT\n\nWITH COLUMN\n\nWITH COLUMN\n"
+     }
+    ],
+    "text": "AS PER PLAN\n\nAS PER PLAN\n\n648/m\n\n698/m\n\n5918\n\n5618\n\n——\n\n——} _4\n\nCOLUMN\n\nCOLUMN\n\n|\n\n|\n\n| 4\n\n|\n\n| _4\n\n1-20-47 AS. PER -PLAN\n\n|\n\n|\n\nAS PER PLAN\n\n|\n\n|\n\n20\n\n|\n\nAS PER PLAN\n\n|\n\n)\n\nBEAM _IN CASEMENT\n\nBEAM _IN CASEMENT\n\nWITH COLUMN\n\nWITH COLUMN\n\nAS PER PLAN\n\nAS PER PLAN\n\n698/m\n\n698/m\n\n5918\n\n5918\n\n——  —__\n\neS eee\n\n—J —\n\nCOLUMN\n\nCOLUMN\n\n|\n\n|\n\n|\n\n|\n\n|\n\n|\n\n|\n\n|\n\n|\n\nA 20-4 AS. PER PLAN\n\n|\n\nAS PER PLAN\n\n|\n\n20\n\n|\n\nAS PER PLAN\n\n|\n\n|\n\nBEAM IN CASEMENT\n\nBEAM IN CASEMENT\n\nWITH COLUMN\n\nWITH COLUMN\n"
+   },
+   "geometry": {}
+  },
+  "P15_PLANTED_COLUMN": {
+   "crop_id": "P15_PLANTED_COLUMN",
+   "page": 15,
+   "bbox_pt": [
+    760,
+    445,
+    1010,
+    800
+   ],
+   "dpi": 200,
+   "width_px": 695,
+   "height_px": 987,
+   "crop_hash": "61a33fcc6aad168e944b81c55efe57f5f5deabd1bb48d3ef7577e779a748429e",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 11,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 200,
+      "crop_hash": "61a33fcc6aad168e944b81c55efe57f5f5deabd1bb48d3ef7577e779a748429e",
+      "text": "ALL TEMPERATUERE\n\n}OxDIA.\n\n——~\n\n- PARALLEL TO MAIN\n\nENT PROVIDE TEMP.\n\n)P OF SLAB AT RIGHT\n\n3. 1000 6 SPANDREL\n\n. DIFFERS BETWEEN\n\nUSE LAGER REINF.\n\n4616\n\nDEPTH\n\nSTIRRUPS\n\n101\n\n—U\n\nBEAM CARRYING PLANTED COL. DETAIL.\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "97b613edbaa5d956f8a1e466ac4b154088cb46bb132ce00cfd5bfc6d9c597106",
+      "text": "ALL TEMPERATUERE\n\nfoN\n\nLOxDIA.\n\n- PARALLEL TO MAIN\n\nENT PROVIDE TEMP.\n\n)P OF SLAB AT RIGHT\n\n5. 1000 @ SPANDREL\n\nio)\n\n(2)\n\n—\n\n. DIFFERS BETWEEN\n\nUSE LAGER REINF.\n\n4916\n\nDEPTH\n\nSTIRRUPS\n\n1010\n\n—U\n\n—U\n\nBEAM CARRYING PLANTED\n\nCOL. DETAIL.\n"
+     }
+    ],
+    "text": "ALL TEMPERATUERE\n\n}OxDIA.\n\n——~\n\n- PARALLEL TO MAIN\n\nENT PROVIDE TEMP.\n\n)P OF SLAB AT RIGHT\n\n3. 1000 6 SPANDREL\n\n. DIFFERS BETWEEN\n\nUSE LAGER REINF.\n\n4616\n\nDEPTH\n\nSTIRRUPS\n\n101\n\n—U\n\nBEAM CARRYING PLANTED COL. DETAIL.\n\nALL TEMPERATUERE\n\nfoN\n\nLOxDIA.\n\n- PARALLEL TO MAIN\n\nENT PROVIDE TEMP.\n\n)P OF SLAB AT RIGHT\n\n5. 1000 @ SPANDREL\n\nio)\n\n(2)\n\n—\n\n. DIFFERS BETWEEN\n\nUSE LAGER REINF.\n\n4916\n\nDEPTH\n\nSTIRRUPS\n\n1010\n\n—U\n\n—U\n\nBEAM CARRYING PLANTED\n\nCOL. DETAIL.\n"
+   },
+   "geometry": {}
+  },
+  "P16_STAIR_SECTION": {
+   "crop_id": "P16_STAIR_SECTION",
+   "page": 16,
+   "bbox_pt": [
+    144,
+    118,
+    995,
+    812
+   ],
+   "dpi": 200,
+   "width_px": 2364,
+   "height_px": 1929,
+   "crop_hash": "03df073c5dd24059adbf0f8eee323efe53b70606998057d7f59c935a0d338595",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 11,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 200,
+      "crop_hash": "03df073c5dd24059adbf0f8eee323efe53b70606998057d7f59c935a0d338595",
+      "text": "aie A\n\nePN\n\na /\n\nST\n\n2912\n\nx /\n\no/\n\n1912\n\nW\n\n698/m\n\na\n\nro)\n\n98/15\n\na\n\nBEAM\n\nnO\n\nASF\n\na\n\n4916\n\n698/m\n\nCOLUMN\n\nTYPICAL DETAIL OF STAIR BEAM\n\nVA 8616/m\n\n30\n\n0\n\ni\n\n\\s\n\n»\n\n8916/m\n\nsue |\n\n612/20cem\n\n£2\n\n2612\n\n6912/m\n\n98/15\n\nLANDING\n\ni\n\n+\n\n[SSL +2.00)\n\nBZ\n\n912/20em\n\n28\n\n22.\n\n2\n\n2\n\n2\n\nFa\n\noe\n\n4916\n\n\\V__8616/m\n\ngy\n\n6912/m\n\n6612/m\n\npF __4\n\nO74\n\nAS1\n\nret\n\n8016/m\n\n8016/m\n\n2612\n\n6912/m\n\nLANDING\n\n6614/m\n\n1912\n\nBEAM\n\nRIB\n\nro)\n\n[SSL +2.00)\n\n98/15\n\n1912\n\nwi\n\nAS2|\n\nEe\n\n912/20cm\n\n| Ras\n\n4916 \\/ 8616/m\n\nNR\n\n98/15\n\nte+o.05.4\n\noy >\n\nDETAIL OF RIBS SOLID PAR’\n\nSON\n\nSEC\n\nT=E\n\nAS1\n\nAS2 ™\n\n30\n\n4916\n\n698\n\n/c\n\nSTIRR.610/10cm\n\n3_NO.910 STIRR. AT Scm c/c\n\nGe\n\n20\n\n35\n\n4916\n\n798\n\nmi\n\n6916/m\n\nRA)\n\nABOVE THE OPENING [ADJACENT TO OPENING (EXTRA)\n\na\n\n40\n\n4916\n\n898\n\nsoy\n\n45\n\n4918\n\n8910\n\n3020 EXTRA\n\n20cm MIN. ABOVE\n\n50\n\n6916\n\n9910\n\no\n\noa\n\nTHE OPENING,\n\n6916/m\n\n5S\n\n6918\n\n10910\n\nLL\n\na\n\n60\n\n6918\n\n10910\n\n=\n\nSi\n\n=100:\n\n{e)\n\ncc\n\n35cm MAX.\n\n-0.05\n\nLL\n\nTORSION STEEL FOR RIBS\n\nceEEEEE | |\n\n15cm MIN. BELOW\n\nTHE OPENING,\n\nA\n\nSTIRP. 910/10cm\n\nSTRP.610/ 10cm\n\nOPENING WIDTH\n\n100cm\n\nG.B\n\ncMAFSTIRP.210/10cemSTIRP.910/100em4\n\nI— 39\n\nTYPICAL STEEL LAYOUT-STAIR SECTION\n\n98/15cem\n\nDETAIL FOR OPENING IN BEAM\n\nNALS.\n\n2014/30cm\n\nq\n\n4916\n\n(NLS)\n\nEo J\n\n} 55}\n\nARS 2013-2019\\ VILLA\\ 7757-FATMA ALSNYAN\\ 17757.dwa\n\nDETAILS (4)\n\nMay 06. 2026 - 12:04pm\n\nAQO8-PC\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "cf755ac041c47caf25a3299be3d4c29f37bc7adfbc524c4872bbf79fe5b054e1",
+      "text": "~~\n\na\n\n2612\n\n1912\n\n698/m\n\n98/15\n\n------ Hf\n\nZz\n\nBEAM\n\nZa\n\n4916\n\n668/m\n\nCOLUMN\n\na\n\nZ\n\n8\n\nTYPICAL DETAIL OF STAIR BEAM\n\n30\n\n:\n\n016/m\n\na\n\n%\n\n-\n\nOy\n\n\\<\n\n\\\n\n1912\n\nra\n\n8916/m\n\n1°20\n\n6614/m _\n\n¢12/20cm\n\n08/15\n\n2612\n\n6912/m\n\nape\n\n(2)\n\nr\n\nLANDING\n\n+\n\n[(S-S.L_+2.00)\n\nZ\n\n012/20cm\n\nAN\n\n=\n\nL\n\noe\n\n\\*\n\nV/ wre V 8616/m\n\n®\n\n6612/m\n\n6612/m\n\n[{—E—\n\n7\n\n6a 14\n\nAS1\n\n7\n\nF204\n\n2912\n\n6412/m\n\n8016/m\n\n8616/m\n\nLANDING\n\nRIB\n\nr\n\noO\n\n6014/m\n\n1912\n\nBEAM\n\n+\n\n[SSL +2.00)\n\n98/15\n\nDas\n\n1912\n\nAS2 |\n\n912/20cm\n\nETE\n\n98/15\n\n+-po.05.+\n\nSS\n\n\"75>\n\nDETAIL OF RIBS SOLID PAR’\n\nSEC.\n\nT=E\n\nAS1\n\nAS2 /M\n\n30\n\n4916\n\n698\n\n/c\n\nSTIRR.910/10cm\n\n3.NO.610 STIRR. AT 5cm c/c\n\noan\n\n35\n\n4916\n\n768\n\nRA) ABOVE THE OPENING [ADJACENT TO OPENING (EXTRA)\n\naN ee\n\nxs\n\n6616/m\n\n40\n\n4916\n\n848\n\noa\n\n45\n\n4918\n\n8410\n\n3020 EXTRA\n\n20cm MIN. ABOVE\n\n30\n\n6916\n\n9910\n\n|\n\n|\n\nTHE OPENING.\n\n-_ g X\n\n6916/m\n\n95\n\n6918\n\n10910\n\na\n\n60\n\n6918\n\n10610\n\n=\n\n=100\n\nax\n\nx\n\n35cm MAX.\n\na\n\n$12/20cm\n\n15cm MIN. BELOW\n\nTORSION STEEL FOR RIBS\n\nFEEL\n\n__ THE OPENING.\n\ncA\n\n~\n\nSTIRP. 610/10cm\n\nSTRP.910/10cm\n\n100cm\n\nDN\n\nOPENING WIDTH\n\nG.B\n\nCMA-STIRP.810/10cm#STIRP.910/10cm+\n\nTYPICAL STEEL LAYOUT-STAIR SECTION.\n\n2014/30cm\n\n98/15cm\n\nJETAIL FOR OPENING IN BEAM.\n\nNLS.\n\n(N.S)\n\n4916\n\nran\n\ni\n\not\n\nARS 2013-2019\\ VILLA\\ 7757-FATMA ALSNYAN\\17757.dwa\n\nDETAILS (4)\n\nMav 06. 2026 - 12:04om\n\nA008-PC\n"
+     }
+    ],
+    "text": "aie A\n\nePN\n\na /\n\nST\n\n2912\n\nx /\n\no/\n\n1912\n\nW\n\n698/m\n\na\n\nro)\n\n98/15\n\na\n\nBEAM\n\nnO\n\nASF\n\na\n\n4916\n\n698/m\n\nCOLUMN\n\nTYPICAL DETAIL OF STAIR BEAM\n\nVA 8616/m\n\n30\n\n0\n\ni\n\n\\s\n\n»\n\n8916/m\n\nsue |\n\n612/20cem\n\n£2\n\n2612\n\n6912/m\n\n98/15\n\nLANDING\n\ni\n\n+\n\n[SSL +2.00)\n\nBZ\n\n912/20em\n\n28\n\n22.\n\n2\n\n2\n\n2\n\nFa\n\noe\n\n4916\n\n\\V__8616/m\n\ngy\n\n6912/m\n\n6612/m\n\npF __4\n\nO74\n\nAS1\n\nret\n\n8016/m\n\n8016/m\n\n2612\n\n6912/m\n\nLANDING\n\n6614/m\n\n1912\n\nBEAM\n\nRIB\n\nro)\n\n[SSL +2.00)\n\n98/15\n\n1912\n\nwi\n\nAS2|\n\nEe\n\n912/20cm\n\n| Ras\n\n4916 \\/ 8616/m\n\nNR\n\n98/15\n\nte+o.05.4\n\noy >\n\nDETAIL OF RIBS SOLID PAR’\n\nSON\n\nSEC\n\nT=E\n\nAS1\n\nAS2 ™\n\n30\n\n4916\n\n698\n\n/c\n\nSTIRR.610/10cm\n\n3_NO.910 STIRR. AT Scm c/c\n\nGe\n\n20\n\n35\n\n4916\n\n798\n\nmi\n\n6916/m\n\nRA)\n\nABOVE THE OPENING [ADJACENT TO OPENING (EXTRA)\n\na\n\n40\n\n4916\n\n898\n\nsoy\n\n45\n\n4918\n\n8910\n\n3020 EXTRA\n\n20cm MIN. ABOVE\n\n50\n\n6916\n\n9910\n\no\n\noa\n\nTHE OPENING,\n\n6916/m\n\n5S\n\n6918\n\n10910\n\nLL\n\na\n\n60\n\n6918\n\n10910\n\n=\n\nSi\n\n=100:\n\n{e)\n\ncc\n\n35cm MAX.\n\n-0.05\n\nLL\n\nTORSION STEEL FOR RIBS\n\nceEEEEE | |\n\n15cm MIN. BELOW\n\nTHE OPENING,\n\nA\n\nSTIRP. 910/10cm\n\nSTRP.610/ 10cm\n\nOPENING WIDTH\n\n100cm\n\nG.B\n\ncMAFSTIRP.210/10cemSTIRP.910/100em4\n\nI— 39\n\nTYPICAL STEEL LAYOUT-STAIR SECTION\n\n98/15cem\n\nDETAIL FOR OPENING IN BEAM\n\nNALS.\n\n2014/30cm\n\nq\n\n4916\n\n(NLS)\n\nEo J\n\n} 55}\n\nARS 2013-2019\\ VILLA\\ 7757-FATMA ALSNYAN\\ 17757.dwa\n\nDETAILS (4)\n\nMay 06. 2026 - 12:04pm\n\nAQO8-PC\n\n~~\n\na\n\n2612\n\n1912\n\n698/m\n\n98/15\n\n------ Hf\n\nZz\n\nBEAM\n\nZa\n\n4916\n\n668/m\n\nCOLUMN\n\na\n\nZ\n\n8\n\nTYPICAL DETAIL OF STAIR BEAM\n\n30\n\n:\n\n016/m\n\na\n\n%\n\n-\n\nOy\n\n\\<\n\n\\\n\n1912\n\nra\n\n8916/m\n\n1°20\n\n6614/m _\n\n¢12/20cm\n\n08/15\n\n2612\n\n6912/m\n\nape\n\n(2)\n\nr\n\nLANDING\n\n+\n\n[(S-S.L_+2.00)\n\nZ\n\n012/20cm\n\nAN\n\n=\n\nL\n\noe\n\n\\*\n\nV/ wre V 8616/m\n\n®\n\n6612/m\n\n6612/m\n\n[{—E—\n\n7\n\n6a 14\n\nAS1\n\n7\n\nF204\n\n2912\n\n6412/m\n\n8016/m\n\n8616/m\n\nLANDING\n\nRIB\n\nr\n\noO\n\n6014/m\n\n1912\n\nBEAM\n\n+\n\n[SSL +2.00)\n\n98/15\n\nDas\n\n1912\n\nAS2 |\n\n912/20cm\n\nETE\n\n98/15\n\n+-po.05.+\n\nSS\n\n\"75>\n\nDETAIL OF RIBS SOLID PAR’\n\nSEC.\n\nT=E\n\nAS1\n\nAS2 /M\n\n30\n\n4916\n\n698\n\n/c\n\nSTIRR.910/10cm\n\n3.NO.610 STIRR. AT 5cm c/c\n\noan\n\n35\n\n4916\n\n768\n\nRA) ABOVE THE OPENING [ADJACENT TO OPENING (EXTRA)\n\naN ee\n\nxs\n\n6616/m\n\n40\n\n4916\n\n848\n\noa\n\n45\n\n4918\n\n8410\n\n3020 EXTRA\n\n20cm MIN. ABOVE\n\n30\n\n6916\n\n9910\n\n|\n\n|\n\nTHE OPENING.\n\n-_ g X\n\n6916/m\n\n95\n\n6918\n\n10910\n\na\n\n60\n\n6918\n\n10610\n\n=\n\n=100\n\nax\n\nx\n\n35cm MAX.\n\na\n\n$12/20cm\n\n15cm MIN. BELOW\n\nTORSION STEEL FOR RIBS\n\nFEEL\n\n__ THE OPENING.\n\ncA\n\n~\n\nSTIRP. 610/10cm\n\nSTRP.910/10cm\n\n100cm\n\nDN\n\nOPENING WIDTH\n\nG.B\n\nCMA-STIRP.810/10cm#STIRP.910/10cm+\n\nTYPICAL STEEL LAYOUT-STAIR SECTION.\n\n2014/30cm\n\n98/15cm\n\nJETAIL FOR OPENING IN BEAM.\n\nNLS.\n\n(N.S)\n\n4916\n\nran\n\ni\n\not\n\nARS 2013-2019\\ VILLA\\ 7757-FATMA ALSNYAN\\17757.dwa\n\nDETAILS (4)\n\nMav 06. 2026 - 12:04om\n\nA008-PC\n"
+   },
+   "geometry": {}
+  },
+  "P16_STAIR_BEAM": {
+   "crop_id": "P16_STAIR_BEAM",
+   "page": 16,
+   "bbox_pt": [
+    39,
+    26,
+    524,
+    262
+   ],
+   "dpi": 200,
+   "width_px": 1348,
+   "height_px": 656,
+   "crop_hash": "8a1daf2737acacaef4d6b8a5ae43b771a5a123b6fb74ea812a66b6198f556af4",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 11,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 200,
+      "crop_hash": "8a1daf2737acacaef4d6b8a5ae43b771a5a123b6fb74ea812a66b6198f556af4",
+      "text": "J\n\n2612\n\na)\n\nSd\n\nNoy /\n\nL on\n\nZN\n\nSd\n\nQ/\n\nST\n\n2912\n\nx /\n\no/\n\n698/m\n\nro)\n\nCOLUMN\n\n —\n\ni\n\n4916\n\n698/m\n\nCOLUMN\n\nTYPICAL DETAIL OF STAIR BEAM\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "a898effe8369081c9cf1299d4da7f4bababe2cf8f70b5cb056e932698ee08371",
+      "text": "J\n\n2612\n\n|\n\n~ |\n\n| a\n\nSPN\n\n~ |\n\nS|\n\n2612\n\n698/m\n\nCOLUMN\n\na aw —~——_—___}}]1 q\n\n4916\n\n668/m\n\nCOLUMN\n\nTYPICAL DETAIL OF STAIR BEAM\n"
+     }
+    ],
+    "text": "J\n\n2612\n\na)\n\nSd\n\nNoy /\n\nL on\n\nZN\n\nSd\n\nQ/\n\nST\n\n2912\n\nx /\n\no/\n\n698/m\n\nro)\n\nCOLUMN\n\n —\n\ni\n\n4916\n\n698/m\n\nCOLUMN\n\nTYPICAL DETAIL OF STAIR BEAM\n\nJ\n\n2612\n\n|\n\n~ |\n\n| a\n\nSPN\n\n~ |\n\nS|\n\n2612\n\n698/m\n\nCOLUMN\n\na aw —~——_—___}}]1 q\n\n4916\n\n668/m\n\nCOLUMN\n\nTYPICAL DETAIL OF STAIR BEAM\n"
+   },
+   "geometry": {}
+  },
+  "P16_OPENING_IN_BEAM": {
+   "crop_id": "P16_OPENING_IN_BEAM",
+   "page": 16,
+   "bbox_pt": [
+    26,
+    569,
+    452,
+    760
+   ],
+   "dpi": 200,
+   "width_px": 1184,
+   "height_px": 532,
+   "crop_hash": "c5029e5ea217673cd0456abd62bf471c59a5dca4db568b935e75b4cf5bf4e8d5",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 11,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 200,
+      "crop_hash": "c5029e5ea217673cd0456abd62bf471c59a5dca4db568b935e75b4cf5bf4e8d5",
+      "text": "STIRR.610/10cm\n\n3_NO.910 STIRR. AT Sem c/c\n\n3_NO.910 STIRR. AT Sem c/c\n\nADJACENT TO OPENING (EXTRA\n\nABOVE THE OPENING [ADJACENT TO OPENING (EXTRA)\n\na\n\n3020 EXTRA\n\n20cm MIN. ABOVE\n\no\n\noa\n\nTHE OPENING.\n\nLL\n\na\n\nSi\n\n=100:\n\n{e)\n\n=\n\n35cm MAX.\n\ncc\n\nLL\n\nTET\n\n15cm MIN. BELOW\n\nTHE OPENING.\n\n3920 EXTRA\n\nSTIRP. 910/10cm\n\nSTRP.610/ 10cm\n\nOPENING WIDTH\n\n100cm\n\nKSTIRP.610/10cm—4ESTIRP.910/10cm#STIRP.910/ 10cm\n\nTYPICAL STEEL LAY\n\nTYPICAL DETAIL FOR OPENING IN BEAM.\n\n(NLS)\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "081b4f9990a61f58e0e9fb70e2e901a0f121180e1e7c49e17c19f6c63f2eb827",
+      "text": "3.NO.10 STIRR. AT 5cm c/c\n\nSTIRR.910/10cm\n\n3.NO.910 STIRR. AT Scm c/c\n\nADJACENT TO OPENING (EXTRA\n\nABOVE THE OPENING [ADJACENT TO OPENING (EXTRA)\n\naN ee\n\n3020 EXTRA\n\n20cm MIN. ABOVE\n\n|\n\nap\n\nap\n\n|\n\nTHE OPENING.\n\na\n\n=\n\n=100\n\nax\n\n35cm MAX.\n\n~M5cm MIN. BELOW\n\nFEEL\n\n__ THE OPENING.\n\n3920 EXTRA\n\nSTIRP. 610/10cm\n\nSTRP.910/10cm\n\nOPENING WIDTH\n\n100cm\n\nKSTIRP.610/10cm—+ESTIRP.910/ 10cm STIRP.910/1 Ocm—\n\nTYPICAL STEEL LAY\n\nTYPICAL DETAIL FOR OPENING IN BEAM.\n\n(N.S)\n"
+     }
+    ],
+    "text": "STIRR.610/10cm\n\n3_NO.910 STIRR. AT Sem c/c\n\n3_NO.910 STIRR. AT Sem c/c\n\nADJACENT TO OPENING (EXTRA\n\nABOVE THE OPENING [ADJACENT TO OPENING (EXTRA)\n\na\n\n3020 EXTRA\n\n20cm MIN. ABOVE\n\no\n\noa\n\nTHE OPENING.\n\nLL\n\na\n\nSi\n\n=100:\n\n{e)\n\n=\n\n35cm MAX.\n\ncc\n\nLL\n\nTET\n\n15cm MIN. BELOW\n\nTHE OPENING.\n\n3920 EXTRA\n\nSTIRP. 910/10cm\n\nSTRP.610/ 10cm\n\nOPENING WIDTH\n\n100cm\n\nKSTIRP.610/10cm—4ESTIRP.910/10cm#STIRP.910/ 10cm\n\nTYPICAL STEEL LAY\n\nTYPICAL DETAIL FOR OPENING IN BEAM.\n\n(NLS)\n\n3.NO.10 STIRR. AT 5cm c/c\n\nSTIRR.910/10cm\n\n3.NO.910 STIRR. AT Scm c/c\n\nADJACENT TO OPENING (EXTRA\n\nABOVE THE OPENING [ADJACENT TO OPENING (EXTRA)\n\naN ee\n\n3020 EXTRA\n\n20cm MIN. ABOVE\n\n|\n\nap\n\nap\n\n|\n\nTHE OPENING.\n\na\n\n=\n\n=100\n\nax\n\n35cm MAX.\n\n~M5cm MIN. BELOW\n\nFEEL\n\n__ THE OPENING.\n\n3920 EXTRA\n\nSTIRP. 610/10cm\n\nSTRP.910/10cm\n\nOPENING WIDTH\n\n100cm\n\nKSTIRP.610/10cm—+ESTIRP.910/ 10cm STIRP.910/1 Ocm—\n\nTYPICAL STEEL LAY\n\nTYPICAL DETAIL FOR OPENING IN BEAM.\n\n(N.S)\n"
+   },
+   "geometry": {}
+  },
+  "P16_RIBS_TORSION": {
+   "crop_id": "P16_RIBS_TORSION",
+   "page": 16,
+   "bbox_pt": [
+    812,
+    419,
+    982,
+    668
+   ],
+   "dpi": 200,
+   "width_px": 473,
+   "height_px": 693,
+   "crop_hash": "43c5babb66a653a6148138c9ab089a6907cd2d401b89d726155d7a5588d34331",
+   "ocr": {
+    "engine": "tesseract 5.3.4",
+    "lang": "eng",
+    "psm": 6,
+    "rotate_deg": 0,
+    "passes": [
+     {
+      "dpi": 200,
+      "crop_hash": "43c5babb66a653a6148138c9ab089a6907cd2d401b89d726155d7a5588d34331",
+      "text": "BEAM a i RB :\nHe :\ntec\n{\n4e+o.05L\nDETAIL OF RIBS SOLID P/\n| a | 30 | 406 | 6s |\n| 8 | 35 | ame | 78 |\n| > | 45 | ae | soo |\n| © | so | ese | soo |\n|e | ss | ese | 10010 |\nLc | 60 | eae | 10010 |\nTORSION STEEL FOR RIBS\n"
+     },
+     {
+      "dpi": 300,
+      "crop_hash": "e1f9438fbac64532c5788bbeee3e43430e56a62e4a1c6ecb2a4dd2b884ab2af7",
+      "text": ". Wye.\nit °\nTe\nL\n\n+-pb0.05L\nDETAIL OF RIBS SOLID P/\n| a | 30 | aie | 698 |\n| B | 35 | ase | 798 |\n| op | 45 | ais | seo |\n| ce | so | 616 | 9010 |\n| Ff | ss | esis | 10910 |\n| c | 60 | evs | 1010 |\nTORSION STEEL FOR RIBS\n"
+     }
+    ],
+    "text": "BEAM a i RB :\nHe :\ntec\n{\n4e+o.05L\nDETAIL OF RIBS SOLID P/\n| a | 30 | 406 | 6s |\n| 8 | 35 | ame | 78 |\n| > | 45 | ae | soo |\n| © | so | ese | soo |\n|e | ss | ese | 10010 |\nLc | 60 | eae | 10010 |\nTORSION STEEL FOR RIBS\n\n. Wye.\nit °\nTe\nL\n\n+-pb0.05L\nDETAIL OF RIBS SOLID P/\n| a | 30 | aie | 698 |\n| B | 35 | ase | 798 |\n| op | 45 | ais | seo |\n| ce | so | 616 | 9010 |\n| Ff | ss | esis | 10910 |\n| c | 60 | evs | 1010 |\nTORSION STEEL FOR RIBS\n"
+   },
+   "geometry": {}
+  }
+ }
+}

@@ -1,0 +1,121 @@
+{
+ "flag_counts": {
+  "01_Columns": {
+   "AMBIGUOUS_MATCH": 3,
+   "SOURCE_CONFLICT": 5
+  },
+  "02_Column_Chains": {
+   "AMBIGUOUS_MATCH": 1,
+   "SOURCE_CONFLICT": 2
+  },
+  "03_Footings": {
+   "MISSING_SCHEDULE_DEFINITION": 1,
+   "SOURCE_CONFLICT": 3
+  },
+  "04_Simple_Beams": {
+   "AMBIGUOUS_MATCH": 6,
+   "BLOCKED": 25,
+   "MISSING_SCHEDULE_DEFINITION": 25,
+   "SOURCE_CONFLICT": 4
+  },
+  "05_Continuous_Beams": {
+   "SOURCE_CONFLICT": 11
+  },
+  "06_Ground_Strap_Beams": {
+   "AMBIGUOUS_MATCH": 9,
+   "BLOCKED": 4,
+   "SOURCE_CONFLICT": 1
+  },
+  "07_Slabs": {
+   "BLOCKED": 5
+  },
+  "08_Special_Elements": {
+   "BLOCKED": 12,
+   "SOURCE_CONFLICT": 1
+  },
+  "09_Pool": {},
+  "10_Review_Questions": {}
+ },
+ "flags": [
+  "SOURCE_CONFLICT",
+  "BLOCKED",
+  "AMBIGUOUS_MATCH",
+  "MISSING_SCHEDULE_DEFINITION"
+ ],
+ "id_cross_check": {
+  "01_Columns": {
+   "drawing_labels": 95,
+   "label_not_in_workbook": [],
+   "missing_on_drawing": [],
+   "workbook_ids": 95
+  },
+  "03_Footings": {
+   "drawing_labels": 26,
+   "label_not_in_workbook": [],
+   "missing_on_drawing": [],
+   "workbook_ids": 26
+  },
+  "04_Simple_Beams": {
+   "drawing_labels": 115,
+   "label_not_in_workbook": [],
+   "missing_on_drawing": [],
+   "workbook_ids": 115
+  },
+  "05_Continuous_Beams": {
+   "drawing_labels": 29,
+   "label_not_in_workbook": [],
+   "missing_on_drawing": [],
+   "workbook_ids": 29
+  },
+  "06_Ground_Strap_Beams": {
+   "drawing_labels": 65,
+   "label_not_in_workbook": [],
+   "missing_on_drawing": [],
+   "workbook_ids": 65
+  },
+  "07_Slabs": {
+   "drawing_labels": 91,
+   "label_not_in_workbook": [],
+   "missing_on_drawing": [],
+   "workbook_ids": 91
+  }
+ },
+ "no_rebar_kg": true,
+ "not_drawable_by_design": {
+  "rows": [
+   "BM-GF-LIFT_TIE",
+   "BM-ALL-LINTEL-POPULATION"
+  ],
+  "why": "required by rule / population not drawn on any plan (listed in 06_Ground_Strap_Beams)"
+ },
+ "outputs": {
+  "ALSENAN_STRUCTURAL_CENSUS_REVIEW.xlsx": "5358331961d30ec2d346662949c13e2007b0d5db834f641c33a19dc712de58bb",
+  "ALSENAN_STRUCTURAL_CENSUS_VISUAL_REVIEW.pdf": "617a4946fdcd8c938b9ef66f6a1ff54073c897ddf46163d040d999414c5530e3"
+ },
+ "purpose": "human review of the frozen census before any reinforcement calculation",
+ "registers_consumed": {
+  "BEAM_DEFINITION_REGISTER": "6b490b8a17aab326a3233d7090c219d35f61e60c83ee290391cfa0f0a69df249",
+  "BEAM_OCCURRENCE_REGISTER": "4af4ca569a3cda4c7fb7c30729db818e27f9727b6fe061aaa1436b9e3a5f4bc0",
+  "BEAM_TYPE_FLOOR_MATRIX": "226d0061d7cf371fb0be3ce7a9cf39dfc8c0d3409c79369f93b0047516f0d4be",
+  "COLUMN_DEFINITION_REGISTER": "e74aeaf2957d7ad9d9c80025f694b869ccfe435c00b436a2c2926b57613677fa",
+  "COLUMN_OCCURRENCE_REGISTER": "fb3f2d0c45bc1fbee9f04709d9e06040fbeb7eb5e80f8038a76f8840da048f88",
+  "COLUMN_TIE_TOPOLOGY_RULES": "c82f9559e65e1fc05f31171857815e49c4c9563766a0cce038b69e72ed846548",
+  "COLUMN_TYPE_FLOOR_MATRIX": "bd4f4fcca6dd9bb7b4606da6a77a2a0bc577b3f077a2649e1cd59fa926e807d0",
+  "COLUMN_VERTICAL_CHAIN_REGISTER": "0397e1981a5a439ade43edc39b1902cdc192571e5273f6302c9c363f20ca6e1d",
+  "CONTINUOUS_BEAM_OCCURRENCE_REGISTER": "45639780e85ee870d2c0941d79d71033d39825efa82c930bc8d6a44487030edc",
+  "FOOTING_DEFINITION_REGISTER": "197e122719ca1e5d68033720c5e9cba333813d67bc9484b74864b29c845b7ae7",
+  "FOOTING_OCCURRENCE_REGISTER": "96341bd2c7bc159f695c3a552e1df3763db6baf693cca9b2bedaf1b031106ea8",
+  "FOOTING_REQUIRED_COMPONENT_REGISTER": "e856b67791d846bd21a8f7a8c2f26810429b3f4b209c77a3e720a4054dd00b19",
+  "POOL_STRUCTURAL_REGISTER": "c5d6a847ad70f2ae71f181755e462a026441c77b6911c972a8809c46fdf6e53f",
+  "SLAB_PANEL_REGISTER": "ea0cbe1b5e8d6f6b94eae60fd5c55a708886095a0cda3101d0acbe06229c9c4c",
+  "SLAB_REBAR_SOURCE_REGISTER": "44ae9ed13c31fac539f6283b88bdc1d56ba286663841a147452a8f5fc9339dda",
+  "SLAB_RULE_APPLICATION_MAP": "73d6395c7cf57836561c72d8605e91c145171899fcb81c2e97c00e2e4a67a260",
+  "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER": "870800ec87b1ea39eb95636bfeae124a6e47c1779d926b8427c1e997e85ee8a5",
+  "STRUCTURAL_LEVEL_REGISTER": "53d54f501f0fcab6f3825d16a4c1a939c9fc5e094d410eb8e9f3875f6fc3ca6b",
+  "STRUCTURAL_OCCURRENCE_CONSERVATION_REGISTER": "b9d209aa82c679f67b7c94516220f403534e59ca22c02c40ab854d198d3d2221",
+  "STRUCTURAL_PROJECT_RULE_REGISTER": "3268bce3ef31c21ee93b0d7f9ab9b50195e0d0ae659699422c6927abcdf528d2",
+  "STRUCTURAL_REVIEW_QUEUE": "b4b1e54071849bd37053405863552bcdeae94255032a461ed2eaa35fd235dbca"
+ },
+ "round": "S1",
+ "workbook_formulas": "RECALCULATED (1157 formulas, 0 errors)"
+}

@@ -1,0 +1,29 @@
+{
+ "SCHEMA": "URBAN_R8_20_PDF_ENGINE_ROADMAP_V1",
+ "start": "as a main track AFTER (1) the controlled re-export is ingested and (2) the first unseen-villa CAD blind run is frozen and compared - target R8.22",
+ "principle": "PDF / schedule / note / section / elevation evidence feeds the SAME SOURCE -> OBSERVATION -> CLAIM -> EVIDENCE -> GEOMETRY -> TRADE -> QTO pipeline; no second BOQ calculator",
+ "stages": [
+  {
+   "stage": 1,
+   "what": "sections / elevations: clear and finish heights as WALL_HEIGHT_AUTHORITY rank 1-2 candidates (replaces owner height facts where the drawings state them)"
+  },
+  {
+   "stage": 2,
+   "what": "door / window schedules: opening heights and sills as source facts (replaces QP-21 / QP-22 owner parameters where scheduled)"
+  },
+  {
+   "stage": 3,
+   "what": "finish schedules / notes: trade rules per room class as source claims"
+  },
+  {
+   "stage": 4,
+   "what": "PDF-only plans with CONFIRMED scale as a geometry route (cross-route to CAD)"
+  }
+ ],
+ "donor_mechanisms": "OpenTakeoff: scale must be confirmed before any quantity; mixed scale blocks; schedule rows never dropped silently",
+ "never": [
+  "a PDF quantity that bypasses the claim / evidence layer",
+  "an unconfirmed scale",
+  "OCR text as authority without its source anchor"
+ ]
+}

@@ -1,0 +1,7 @@
+FLOOR,ITEM,V3B_LINE,V3B_QTY,V3B_DETAIL_SUM,S8_6_RELEASED,S8_6_SENSITIVITY,DOUBLE_COUNT_M3,NOTE
+1F,CONCRETE_M3,C-LINT-1F,1.493,1.493,0.303293,1.601959,0,
+2F,CONCRETE_M3,C-LINT-2F,0.53,0.53,0,0.484574,0,
+GF,CONCRETE_M3,C-LINT-GF,2.726,2.726,0.441969,2.145184,0.212,
+1F,REBAR_KG,R-LINTELS-1F,190.642,,42.230981,,,"66 bar sets (0 blocked); hooks 15.7 kg; laps 0.0 kg (procurement, not in net)"
+2F,REBAR_KG,R-LINTELS-2F_ROOF,62.049,,0,,,"24 bar sets (0 blocked); hooks 5.5 kg; laps 0.0 kg (procurement, not in net)"
+GF,REBAR_KG,R-LINTELS-GF,329.787,,54.196299,,,"87 bar sets (0 blocked); hooks 23.2 kg; laps 0.0 kg (procurement, not in net)"

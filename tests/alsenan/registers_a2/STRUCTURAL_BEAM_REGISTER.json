@@ -1,0 +1,530 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A2_BEAMS_V1",
+ "beams": [
+  {
+   "type": "B1",
+   "breadth_cm": 20.0,
+   "depth_cm": 40.0,
+   "section_m2": 0.08,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 12,
+    "1F_ROOF_SLAB": 3,
+    "2F_ROOF_SLAB": 4,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B2",
+   "breadth_cm": 20.0,
+   "depth_cm": 40.0,
+   "section_m2": 0.08,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 3,
+    "1F_ROOF_SLAB": 3,
+    "2F_ROOF_SLAB": 4,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B3",
+   "breadth_cm": 20.0,
+   "depth_cm": 40.0,
+   "section_m2": 0.08,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 4,
+    "1F_ROOF_SLAB": 1,
+    "2F_ROOF_SLAB": 4,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B4",
+   "breadth_cm": 20.0,
+   "depth_cm": 50.0,
+   "section_m2": 0.1,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 6,
+    "1F_ROOF_SLAB": 5,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B5",
+   "breadth_cm": 20.0,
+   "depth_cm": 50.0,
+   "section_m2": 0.1,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 1,
+    "1F_ROOF_SLAB": 2,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B6",
+   "breadth_cm": 25.0,
+   "depth_cm": 50.0,
+   "section_m2": 0.125,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 0,
+    "1F_ROOF_SLAB": 5,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B7",
+   "breadth_cm": 20.0,
+   "depth_cm": 75.0,
+   "section_m2": 0.15,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 7,
+    "1F_ROOF_SLAB": 2,
+    "2F_ROOF_SLAB": 1,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B8",
+   "breadth_cm": 20.0,
+   "depth_cm": 75.0,
+   "section_m2": 0.15,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 1,
+    "1F_ROOF_SLAB": 0,
+    "2F_ROOF_SLAB": 1,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B9",
+   "breadth_cm": 20.0,
+   "depth_cm": 75.0,
+   "section_m2": 0.15,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 1,
+    "1F_ROOF_SLAB": 0,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B10",
+   "breadth_cm": 20.0,
+   "depth_cm": 75.0,
+   "section_m2": 0.15,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 0,
+    "1F_ROOF_SLAB": 0,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B11",
+   "breadth_cm": 20.0,
+   "depth_cm": 75.0,
+   "section_m2": 0.15,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 1,
+    "1F_ROOF_SLAB": 1,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B12",
+   "breadth_cm": 25.0,
+   "depth_cm": 75.0,
+   "section_m2": 0.1875,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 0,
+    "1F_ROOF_SLAB": 0,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B13",
+   "breadth_cm": 25.0,
+   "depth_cm": 75.0,
+   "section_m2": 0.1875,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 1,
+    "1F_ROOF_SLAB": 0,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B14",
+   "breadth_cm": 20.0,
+   "depth_cm": 75.0,
+   "section_m2": 0.15,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 1,
+    "1F_ROOF_SLAB": 0,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B15",
+   "breadth_cm": 20.0,
+   "depth_cm": 120.0,
+   "section_m2": 0.24,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 0,
+    "1F_ROOF_SLAB": 0,
+    "2F_ROOF_SLAB": 1,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B16",
+   "breadth_cm": 30.0,
+   "depth_cm": 75.0,
+   "section_m2": 0.225,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 1,
+    "1F_ROOF_SLAB": 0,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B17",
+   "breadth_cm": 45.0,
+   "depth_cm": 75.0,
+   "section_m2": 0.3375,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 1,
+    "1F_ROOF_SLAB": 0,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B18",
+   "breadth_cm": 35.0,
+   "depth_cm": 75.0,
+   "section_m2": 0.2625,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 0,
+    "1F_ROOF_SLAB": 1,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B19",
+   "breadth_cm": 40.0,
+   "depth_cm": 75.0,
+   "section_m2": 0.3,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 0,
+    "1F_ROOF_SLAB": 1,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B20",
+   "breadth_cm": 40.0,
+   "depth_cm": 75.0,
+   "section_m2": 0.3,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 1,
+    "1F_ROOF_SLAB": 0,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B21",
+   "breadth_cm": 45.0,
+   "depth_cm": 75.0,
+   "section_m2": 0.3375,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 1,
+    "1F_ROOF_SLAB": 0,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B22",
+   "breadth_cm": 50.0,
+   "depth_cm": 75.0,
+   "section_m2": 0.375,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 1,
+    "1F_ROOF_SLAB": 0,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B23",
+   "breadth_cm": 45.0,
+   "depth_cm": 75.0,
+   "section_m2": 0.3375,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 0,
+    "1F_ROOF_SLAB": 1,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B24",
+   "breadth_cm": 50.0,
+   "depth_cm": 75.0,
+   "section_m2": 0.375,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 1,
+    "1F_ROOF_SLAB": 0,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B25",
+   "breadth_cm": 55.0,
+   "depth_cm": 75.0,
+   "section_m2": 0.4125,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 0,
+    "1F_ROOF_SLAB": 1,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B26",
+   "breadth_cm": 65.0,
+   "depth_cm": 85.0,
+   "section_m2": 0.5525,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 1,
+    "1F_ROOF_SLAB": 0,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B27",
+   "breadth_cm": 90.0,
+   "depth_cm": 85.0,
+   "section_m2": 0.765,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 1,
+    "1F_ROOF_SLAB": 0,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B28",
+   "breadth_cm": 25.0,
+   "depth_cm": 75.0,
+   "section_m2": 0.1875,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 1,
+    "1F_ROOF_SLAB": 0,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B29",
+   "breadth_cm": 25.0,
+   "depth_cm": 75.0,
+   "section_m2": 0.1875,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 1,
+    "1F_ROOF_SLAB": 0,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "CA",
+   "breadth_cm": 30.0,
+   "depth_cm": 50.0,
+   "section_m2": 0.15,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 1,
+    "1F_ROOF_SLAB": 0,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "B.W",
+   "breadth_cm": 20.0,
+   "depth_cm": 60.0,
+   "section_m2": 0.12,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 0,
+    "1F_ROOF_SLAB": 0,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "SB1",
+   "breadth_cm": 70.0,
+   "depth_cm": 50.0,
+   "section_m2": 0.35,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 0,
+    "1F_ROOF_SLAB": 0,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "SB2",
+   "breadth_cm": 100.0,
+   "depth_cm": 50.0,
+   "section_m2": 0.5,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 0,
+    "1F_ROOF_SLAB": 0,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  },
+  {
+   "type": "SB3",
+   "breadth_cm": 50.0,
+   "depth_cm": 40.0,
+   "section_m2": 0.2,
+   "tags_per_sheet": {
+    "GF_ROOF_SLAB": 0,
+    "1F_ROOF_SLAB": 0,
+    "2F_ROOF_SLAB": 0,
+    "GROUND_BEAMS": 0
+   },
+   "length_m": null,
+   "length_blocker": "BEAM_PLAN_EXTENT_NOT_PROVED: a beam tag names a type; the drawn beam band between supports is not established as an element (no beam-edge role)"
+  }
+ ],
+ "tag_counts": {
+  "GF_ROOF_SLAB": {
+   "B1": 12,
+   "B11": 1,
+   "B13": 1,
+   "B14": 1,
+   "B16": 1,
+   "B17": 1,
+   "B2": 3,
+   "B20": 1,
+   "B21": 1,
+   "B22": 1,
+   "B24": 1,
+   "B26": 1,
+   "B27": 1,
+   "B28": 1,
+   "B29": 1,
+   "B3": 4,
+   "B4": 6,
+   "B5": 1,
+   "B7": 7,
+   "B8": 1,
+   "B9": 1,
+   "CA": 1
+  },
+  "1F_ROOF_SLAB": {
+   "B1": 3,
+   "B11": 1,
+   "B18": 1,
+   "B19": 1,
+   "B2": 3,
+   "B23": 1,
+   "B25": 1,
+   "B3": 1,
+   "B4": 5,
+   "B5": 2,
+   "B6": 5,
+   "B7": 2
+  },
+  "2F_ROOF_SLAB": {
+   "B1": 4,
+   "B15": 1,
+   "B2": 4,
+   "B3": 4,
+   "B7": 1,
+   "B8": 1
+  },
+  "GROUND_BEAMS": {}
+ }
+}

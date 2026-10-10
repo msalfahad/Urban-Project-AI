@@ -1,0 +1,215 @@
+{
+ "SCHEMA": "URBAN_R8_20_BOQ_REPORT_SCHEMA_V1",
+ "policy": {
+  "policy_id": "BOQ_REPORT_LAYER_V1",
+  "columns": [
+   "ITEM_CODE",
+   "TRADE",
+   "DESCRIPTION_AR",
+   "DESCRIPTION_EN",
+   "LOCATION_FLOOR",
+   "ROOM_ZONE",
+   "QTY",
+   "UNIT",
+   "STATUS",
+   "SOURCE",
+   "RULE_AUTHORITY",
+   "NOTES_BLOCKERS"
+  ],
+  "statuses": [
+   "COMPUTED_SHADOW_COMPLETE",
+   "AUTHORISED_SUBTOTAL",
+   "BLOCKED",
+   "RELEASED"
+  ],
+  "trace": [
+   "run_id",
+   "source_revision",
+   "trade_row",
+   "sites",
+   "surface_ids",
+   "authority_digest",
+   "rule_ids",
+   "owner_facts",
+   "release_state"
+  ],
+  "quantity": "copied verbatim from one evidence field (complete / authorised_subtotal) or null",
+  "never": [
+   "a calculation, sum or rounding in the report",
+   "a price",
+   "a subtotal or blocked value shown as approved",
+   "RELEASED without a release record",
+   "a row without its trace",
+   "a manual edit"
+  ],
+  "digest": "490643341259b2c6ce045bc58ccac589c84c84c04681a6e7eef9ce4a4bb92b25"
+ },
+ "columns": [
+  "ITEM_CODE",
+  "TRADE",
+  "DESCRIPTION_AR",
+  "DESCRIPTION_EN",
+  "LOCATION_FLOOR",
+  "ROOM_ZONE",
+  "QTY",
+  "UNIT",
+  "STATUS",
+  "SOURCE",
+  "RULE_AUTHORITY",
+  "NOTES_BLOCKERS"
+ ],
+ "statuses": {
+  "COMPUTED_SHADOW_COMPLETE": "evidence row COMPLETE, no unresolved contributor - SHADOW, not approved",
+  "AUTHORISED_SUBTOTAL": "authorised subtotal only - never approved",
+  "BLOCKED": "no quantity",
+  "RELEASED": "only with a release record (none exists)"
+ },
+ "trace": [
+  "run_id",
+  "source_revision",
+  "trade_row",
+  "sites",
+  "surface_ids",
+  "authority_digest",
+  "rule_ids",
+  "owner_facts",
+  "release_state"
+ ],
+ "items": {
+  "Q-03": {
+   "item_code": "QOR-R819-Q-03",
+   "trade": "ARCHITECTURAL_FLOOR_FINISH",
+   "trade_name_ar": "تشطيب أرضيات",
+   "description_ar": "أرضيات سيراميك - المناطق الرطبة (الحمامات)",
+   "description_en": "Wet-room ceramic floor (CERAMIC_WET_FLOOR), row Q-03"
+  },
+  "Q-03P": {
+   "item_code": "QOR-R819-Q-03P",
+   "trade": "ARCHITECTURAL_FLOOR_FINISH",
+   "trade_name_ar": "تشطيب أرضيات",
+   "description_ar": "أرضيات سيراميك - غرفة التحضير (PAINTRY)",
+   "description_en": "Service ceramic floor (CERAMIC_SERVICE_FLOOR), row Q-03P"
+  },
+  "Q-11": {
+   "item_code": "QOR-R819-Q-11",
+   "trade": "ARCHITECTURAL_FLOOR_FINISH",
+   "trade_name_ar": "تشطيب أرضيات",
+   "description_ar": "أرضيات سيراميك - المناطق الرطبة (البند Q-11)",
+   "description_en": "Wet-room ceramic floor (CERAMIC_WET_FLOOR), row Q-11"
+  },
+  "Q-12": {
+   "item_code": "QOR-R819-Q-12",
+   "trade": "ARCHITECTURAL_FLOOR_FINISH",
+   "trade_name_ar": "تشطيب أرضيات",
+   "description_ar": "أرضيات سيراميك - غرفة التحضير (البند Q-12)",
+   "description_en": "Service ceramic floor (CERAMIC_SERVICE_FLOOR), row Q-12"
+  },
+  "Q-13": {
+   "item_code": "QOR-R819-Q-13",
+   "trade": "ARCHITECTURAL_FLOOR_FINISH",
+   "trade_name_ar": "تشطيب أرضيات",
+   "description_ar": "أرضيات بورسلين - المناطق الجافة",
+   "description_en": "Dry-room porcelain floor (PORCELAIN_DRY_FLOOR), row Q-13"
+  },
+  "Q-14": {
+   "item_code": "QOR-R819-Q-14",
+   "trade": "CEILING",
+   "trade_name_ar": "أسقف",
+   "description_ar": "أسقف - حسب المساحة",
+   "description_en": "Ceiling by area, row Q-14"
+  },
+  "DRY_WALL_PLASTER": {
+   "item_code": "QOR-R819-DRY-WALL-PLASTER",
+   "trade": "PLASTER_INTERNAL",
+   "trade_name_ar": "لياسة داخلية",
+   "description_ar": "لياسة داخلية للجدران والأعمدة والدكت المكشوف - المناطق الجافة حتى 3.15 م",
+   "description_en": "Internal plaster - dry rooms (walls, exposed columns, duct, reveals) to 3.15 m"
+  },
+  "WET_SERVICE_REVEAL_PLASTER": {
+   "item_code": "QOR-R819-WET-SERVICE-REVEAL-PLASTER",
+   "trade": "PLASTER_INTERNAL",
+   "trade_name_ar": "لياسة داخلية",
+   "description_ar": "لياسة جوانب الفتحات - الحمامات وغرفة التحضير",
+   "description_en": "Plaster to reveals owned by wet / service rooms"
+  },
+  "DRY_WALL_PAINT": {
+   "item_code": "QOR-R819-DRY-WALL-PAINT",
+   "trade": "PAINT",
+   "trade_name_ar": "دهانات",
+   "description_ar": "دهانات داخلية للجدران والأعمدة والدكت المكشوف - المناطق الجافة حتى 3.15 م",
+   "description_en": "Internal paint - dry rooms (walls, exposed columns, duct, reveals) to 3.15 m"
+  },
+  "WET_SERVICE_WALL_TILE": {
+   "item_code": "QOR-R819-WET-SERVICE-WALL-TILE",
+   "trade": "ARCHITECTURAL_WALL_FINISH",
+   "trade_name_ar": "تشطيب حوائط",
+   "description_ar": "تكسيات جدران بورسلين / سيراميك - المناطق الرطبة حتى 3.20 م",
+   "description_en": "Porcelain / ceramic wall tile - wet / service rooms (walls, exposed columns) to 3.20 m"
+  },
+  "WET_WALL_TILE_PREP": {
+   "item_code": "QOR-R819-WET-WALL-TILE-PREP",
+   "trade": "ARCHITECTURAL_WALL_FINISH",
+   "trade_name_ar": "تشطيب حوائط",
+   "description_ar": "تحضير الجدران تحت التكسيات - المناطق الرطبة",
+   "description_en": "Wall preparation under the wall tile - wet / service rooms"
+  },
+  "SKIRTING": {
+   "item_code": "QOR-R819-SKIRTING",
+   "trade": "SKIRTING_PROFILE",
+   "trade_name_ar": "نعلة وبروفايل",
+   "description_ar": "نعلة مخفية - المناطق الجافة",
+   "description_en": "Hidden skirting - dry rooms"
+  },
+  "HIDDEN_PROFILE": {
+   "item_code": "QOR-R819-HIDDEN-PROFILE",
+   "trade": "SKIRTING_PROFILE",
+   "trade_name_ar": "نعلة وبروفايل",
+   "description_ar": "بروفايل ألمنيوم مخفي للنعلة",
+   "description_en": "Hidden aluminium skirting profile"
+  },
+  "MARBLE_THRESHOLD_PLAN_AREA_M2": {
+   "item_code": "QOR-R819-MARBLE-THRESHOLD-PLAN-AREA-M2",
+   "trade": "MARBLE_STONE",
+   "trade_name_ar": "رخام وحجر",
+   "description_ar": "عتبات رخام - المساحة",
+   "description_en": "Marble thresholds - plan area"
+  },
+  "MARBLE_THRESHOLD_LENGTH_LM": {
+   "item_code": "QOR-R819-MARBLE-THRESHOLD-LENGTH-LM",
+   "trade": "MARBLE_STONE",
+   "trade_name_ar": "رخام وحجر",
+   "description_ar": "عتبات رخام - الطول",
+   "description_en": "Marble thresholds - length"
+  },
+  "WATERPROOFING_FLOOR_M2": {
+   "item_code": "QOR-R819-WATERPROOFING-FLOOR-M2",
+   "trade": "WATERPROOFING",
+   "trade_name_ar": "عزل مائي",
+   "description_ar": "عزل مائي لأرضيات المناطق الرطبة",
+   "description_en": "Waterproofing membrane - wet-room floors"
+  },
+  "WATERPROOFING_UPTURN_LM": {
+   "item_code": "QOR-R819-WATERPROOFING-UPTURN-LM",
+   "trade": "WATERPROOFING",
+   "trade_name_ar": "عزل مائي",
+   "description_ar": "رفرف عزل مائي بارتفاع 15 سم على محيط المناطق الرطبة",
+   "description_en": "Waterproofing upturn 0.15 m - gross wet-room perimeter"
+  }
+ },
+ "trade_registry": "data/registry/trades.json",
+ "pricing": null,
+ "calculates": false,
+ "evidence_mapping": {
+  "policy_id": "BOQ_EVIDENCE_MAPPING_V1",
+  "release_only": [
+   "SOURCE_ANCHOR",
+   "SHADOW_ONLY"
+  ],
+  "rule": "any other blocker is QUANTITY_AFFECTING (fail closed) and keeps the row out of COMPUTED_SHADOW_COMPLETE",
+  "never": [
+   "a quantity-affecting gap shown as a complete quantity",
+   "an unknown blocker treated as release-only"
+  ],
+  "digest": "976162ee3f85239b72e2337619735fce8db112cabedd84bd0e6b7bbf4a3e2c8b"
+ }
+}

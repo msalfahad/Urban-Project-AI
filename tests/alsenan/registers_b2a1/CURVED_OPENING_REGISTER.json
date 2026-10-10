@@ -1,0 +1,103 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_B2A_CURVED_V1",
+ "rows": [
+  {
+   "id": "GF-CG01",
+   "floor": "GF",
+   "host_labels": [
+    "MASTER BED ROOM"
+   ],
+   "bases_m": {
+    "MIN_RADIUS_ARC": 6.657684,
+    "MID_BAND_ARC": 6.724723,
+    "MAX_RADIUS_ARC": 6.791763,
+    "CHORD": 4.613025,
+    "INNER": 6.657684,
+    "CENTRE": 6.724723,
+    "OUTER": 6.791763
+   },
+   "aliases": {
+    "INNER": "MIN_RADIUS_ARC",
+    "CENTRE": "MID_BAND_ARC",
+    "OUTER": "MAX_RADIUS_ARC"
+   },
+   "orientation": {
+    "state": "ESTABLISHED",
+    "room_side": "MAX_RADIUS",
+    "ROOM_SIDE_ARC": 6791.763,
+    "EXTERIOR_SIDE_ARC": 6657.684
+   },
+   "side_probe": {
+    "state": "ESTABLISHED",
+    "probes": {
+     "MIN_RADIUS": {
+      "site": null,
+      "room": false
+     },
+     "MAX_RADIUS": {
+      "site": "SITE-dda89794d15dfb61",
+      "room": true
+     }
+    },
+    "offset_mm": 300.0
+   },
+   "commercial_m": 6.657684,
+   "commercial_basis": "MIN_RADIUS_ARC",
+   "authority": "URBAN_CURVED_ALUMINIUM_INNER_FACE_METHOD@v1",
+   "a3_developed_length_m": 6.7248,
+   "height": "BLOCKED_HEIGHT (no head / sill printed; the salon owner height is not transferred)",
+   "area_m2": null
+  },
+  {
+   "id": "1F-CG01",
+   "floor": "1F",
+   "host_labels": [
+    "VOID / LAUNDRY / MASTER BED ROOM"
+   ],
+   "bases_m": {
+    "MIN_RADIUS_ARC": 3.101796,
+    "MID_BAND_ARC": 3.195648,
+    "MAX_RADIUS_ARC": 3.289499,
+    "CHORD": 2.804489,
+    "INNER": 3.101796,
+    "CENTRE": 3.195648,
+    "OUTER": 3.289499
+   },
+   "aliases": {
+    "INNER": "MIN_RADIUS_ARC",
+    "CENTRE": "MID_BAND_ARC",
+    "OUTER": "MAX_RADIUS_ARC"
+   },
+   "orientation": {
+    "state": "ESTABLISHED",
+    "room_side": "MAX_RADIUS",
+    "ROOM_SIDE_ARC": 3289.499,
+    "EXTERIOR_SIDE_ARC": 3101.796
+   },
+   "side_probe": {
+    "state": "ESTABLISHED",
+    "probes": {
+     "MIN_RADIUS": {
+      "site": null,
+      "room": false
+     },
+     "MAX_RADIUS": {
+      "site": "SITE-8bddd8c3b8b698ad",
+      "room": true
+     }
+    },
+    "offset_mm": 300.0
+   },
+   "commercial_m": 3.101796,
+   "commercial_basis": "MIN_RADIUS_ARC",
+   "authority": "URBAN_CURVED_ALUMINIUM_INNER_FACE_METHOD@v1",
+   "a3_developed_length_m": 3.1506,
+   "height": "BLOCKED_HEIGHT (no head / sill printed; the salon owner height is not transferred)",
+   "area_m2": null
+  }
+ ],
+ "method": "URBAN_CURVED_ALUMINIUM_INNER_FACE_METHOD@v1",
+ "policy": "CURVED_OPENING_V1_1",
+ "override": null,
+ "rule": "geometric bases named by radius; ROOM_SIDE / EXTERIOR_SIDE only where a probe establishes them"
+}

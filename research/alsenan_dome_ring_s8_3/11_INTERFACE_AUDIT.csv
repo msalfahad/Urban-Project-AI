@@ -1,0 +1,8 @@
+INTERFACE,SIDE_A,SIDE_B,CONCRETE,BARS,STATE
+SHELL -> RING,S8.3 shell (above the springing plane),S8.3 ring (below it),split at the springing plane: disjoint,shell bars anchor into the ring (blocked),OWNED_ONCE
+RING -> FRAMING BEAMS,S8.3 ring: annulus inside the bay,straight framing bands (S6 occurrences),plan partition at the bay faces: each point of the annulus is inside the bay (ring) or inside a framing band (beam); 04 reconciles both readings exactly,different families; no bar counted on both sides,OWNED_ONCE (no frozen beam concrete stage)
+RING SEGMENTS -> S6 ARCS,8 drawn ring segments,S6 BA001-BA008,-,0 kg in S6 / S6.1 on all eight,TRANSFERRED (05)
+DOME OPENING -> S7 SLAB,"dome-zone faces SP-1F_ROOF_SLAB-13, SP-1F_ROOF_SLAB-14, SP-1F_ROOF_SLAB-15, SP-1F_ROOF_SLAB-16, SP-1F_ROOF_SLAB-17, SP-1F_ROOF_SLAB-18, SP-1F_ROOF_SLAB-19, SP-1F_ROOF_SLAB-20",S7,no slab inside the dome circle,S7 release items on those faces: 0,NOT_DOUBLE_COUNTED
+S7 TOP-SUPPORT BARS AT THE DOME BAYS,S7 slab top-support extensions at the beams framing each dome bay,S8.3,-,"43.113236 kg in S7 (DOME-A 24.976329, DOME-B 18.136907); role SLAB_TOP_SUPPORT of the adjacent panels; continuity END_UNRESOLVED in S7A",STAYS_WITH_S7: neither added to nor subtracted from S8.3
+TOWER DOME -> S7 SLAB,architectural tower dome,S7 ['SP-2F_ROOF_SLAB-04'],flat slab unchanged,S7 release items there: 8,UNCHANGED (CF-S8.3-01)
+RING -> COLUMNS,S8.3 ring,columns at the ring (04),column outlines stay with the column stage,-,OWNED_ONCE

@@ -1,0 +1,25 @@
+{
+ "SCHEMA": "URBAN_R8_14_SOFFIT_ALLOCATION_POLICY_V1",
+ "rule": "CEILING = ceiling region - OPEN_PASSAGE_SOFFIT_FOOTPRINT (WITH_HEAD); FULL_HEIGHT -> ceiling continues; head unknown -> UNRESOLVED_HEAD_CONDITION (release blocker)",
+ "fact": [
+  "QORTUBA-NEW-OPEN-PASSAGE-SOFFIT-NOT-CEILING-OWNER-001@v1",
+  "QORTUBA-NEW-OPEN-PASSAGE-REVEALS-PLASTERED-OWNER-001@v1"
+ ],
+ "hall_lobby_audit": {
+  "strip": "OP-997f14d12b8e9bc1",
+  "kind": "OPEN_PASSAGE",
+  "location": "INSIDE_SITE",
+  "area_m2": 0.239289,
+  "sides": {
+   "SITE-fdfa89fe0f5809a4": "CEILING_BY_AREA"
+  },
+  "trade": "CEILING",
+  "contribution_m2": -0.239289,
+  "state": "SOFFIT_EXCLUDED_FROM_CEILING",
+  "in_row_total": false
+ },
+ "footprint_m2_from_source": 0.23928946204185486,
+ "derived_from": "the passage strip polygon (band end points of H2430 / H2431 closures) - never a target value",
+ "q14_exclusion_m2": 0.239289,
+ "double_count_guard": "PASS (one owner per footprint)"
+}

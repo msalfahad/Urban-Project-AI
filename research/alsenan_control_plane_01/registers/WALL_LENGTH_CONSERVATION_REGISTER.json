@@ -1,0 +1,117 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_WALL_LENGTH_CONSERVATION_V1",
+ "rows": [
+  {
+   "floor": "GF",
+   "established_m_by_width_mm": {
+    "150": 26.094,
+    "200": 38.861,
+    "920": 14.035
+   },
+   "ambiguous_m_by_width_mm": {
+    "150": 0.894,
+    "200": 29.768,
+    "400": 1.4
+   },
+   "established_m": 78.99,
+   "established_excl_920_m": 64.955,
+   "ambiguous_m": 32.062,
+   "blockwork_rows_m": {
+    "150|COMPUTED": 26.094,
+    "200|BLOCKED": 2.65,
+    "200|COMPUTED": 36.211,
+    "920|EXCLUDED": 14.035
+   },
+   "blockwork_counted_m": 64.955,
+   "topology_boundary_not_in_any_band_m": 112.747,
+   "admitted_not_in_any_band_m_by_role": {
+    "GLAZING_BOUNDARY": 116.355,
+    "STRUCTURAL_OBSTACLE": 70.033,
+    "TOPOLOGY_BOUNDARY": 112.747
+   },
+   "conservation": {
+    "established_excl_920 - blockwork_counted": 0.0,
+    "ambiguous_with_no_row": 32.062
+   },
+   "band_counts": {
+    "WALL_BAND_ESTABLISHED": 55,
+    "WALL_BAND_AMBIGUOUS": 9
+   }
+  },
+  {
+   "floor": "1F",
+   "established_m_by_width_mm": {
+    "150": 42.713,
+    "200": 28.881,
+    "920": 14.035
+   },
+   "ambiguous_m_by_width_mm": {
+    "200": 14.568
+   },
+   "established_m": 85.629,
+   "established_excl_920_m": 71.594,
+   "ambiguous_m": 14.568,
+   "blockwork_rows_m": {
+    "150|BLOCKED": 1.436,
+    "150|COMPUTED": 33.337,
+    "150|PARTIAL": 7.941,
+    "200|COMPUTED": 28.881,
+    "920|EXCLUDED": 14.035
+   },
+   "blockwork_counted_m": 71.595,
+   "topology_boundary_not_in_any_band_m": 50.765,
+   "admitted_not_in_any_band_m_by_role": {
+    "GLAZING_BOUNDARY": 73.926,
+    "STRUCTURAL_OBSTACLE": 47.599,
+    "TOPOLOGY_BOUNDARY": 50.765
+   },
+   "conservation": {
+    "established_excl_920 - blockwork_counted": -0.001,
+    "ambiguous_with_no_row": 14.568
+   },
+   "band_counts": {
+    "WALL_BAND_ESTABLISHED": 50,
+    "WALL_BAND_AMBIGUOUS": 4
+   }
+  },
+  {
+   "floor": "2F",
+   "established_m_by_width_mm": {
+    "150": 8.7,
+    "200": 21.998,
+    "920": 14.035
+   },
+   "ambiguous_m_by_width_mm": {},
+   "established_m": 44.733,
+   "established_excl_920_m": 30.698,
+   "ambiguous_m": 0,
+   "blockwork_rows_m": {
+    "150|COMPUTED": 8.7,
+    "200|COMPUTED": 21.998,
+    "920|EXCLUDED": 14.035
+   },
+   "blockwork_counted_m": 30.698,
+   "topology_boundary_not_in_any_band_m": 24.309,
+   "admitted_not_in_any_band_m_by_role": {
+    "GLAZING_BOUNDARY": 23.12,
+    "STRUCTURAL_OBSTACLE": 106.403,
+    "TOPOLOGY_BOUNDARY": 24.309
+   },
+   "conservation": {
+    "established_excl_920 - blockwork_counted": 0.0,
+    "ambiguous_with_no_row": 0
+   },
+   "band_counts": {
+    "WALL_BAND_ESTABLISHED": 19
+   }
+  }
+ ],
+ "totals": {
+  "ambiguous_m": 46.63,
+  "blockwork_counted_m": 167.25,
+  "established_excl_920_m": 167.25,
+  "established_m": 209.35,
+  "topology_boundary_not_in_any_band_m": 187.82
+ },
+ "rule": "admitted boundary length = established bands + ambiguous bands + unpaired boundary; every metre must end in a blockwork row, a BLOCKED row or a NOT_WALL classification. Today ambiguous bands and unpaired TOPOLOGY_BOUNDARY length end nowhere (SD-07)"
+}

@@ -1,0 +1,627 @@
+{
+ "SCHEMA": "URBAN_RASTER_EVIDENCE_V1",
+ "policy": {
+  "policy_id": "RASTER_EVIDENCE_V1",
+  "rule": "a raster sheet is evidence only after >= 2 printed dimensions measured on it agree within 1 %; printed values are grade PRINTED (H), calibrated measurements grade SCALED (M); a raster width must match the exact plan width within 3 % before any height from that sheet is used",
+  "never": [
+   "a scaled value from an uncalibrated sheet",
+   "OCR text without its located dimension line",
+   "a raster height whose plan width check failed"
+  ],
+  "digest": "c7f1f6f77a60428026500229cbc91fc8c8a1fb6b094db60d1f09e6a6658fef0a"
+ },
+ "sheets": {
+  "ARCH-P06-SE-ELEV": {
+   "state": "CALIBRATED",
+   "why": null,
+   "px_per_cm": 1.578445,
+   "worst_rel_dev": 1.7e-05,
+   "nominal_rel_dev": 0.003421,
+   "ground_row": 3490,
+   "matched_levels": [
+    [
+     0,
+     3490
+    ],
+    [
+     100,
+     3336
+    ],
+    [
+     970,
+     1957
+    ],
+    [
+     1390,
+     1296
+    ],
+    [
+     1440,
+     1217
+    ]
+   ],
+   "observations": [
+    {
+     "ref": "0 -> 100 cm",
+     "printed_cm": 100,
+     "px": 154.0,
+     "px_per_cm": 1.54,
+     "rel_dev": -0.024356,
+     "px_residual": -3.844474,
+     "agrees": true
+    },
+    {
+     "ref": "0 -> 970 cm",
+     "printed_cm": 970,
+     "px": 1533.0,
+     "px_per_cm": 1.580412,
+     "rel_dev": 0.001247,
+     "px_residual": 1.908598,
+     "agrees": true
+    },
+    {
+     "ref": "0 -> 1390 cm",
+     "printed_cm": 1390,
+     "px": 2194.0,
+     "px_per_cm": 1.578417,
+     "rel_dev": -1.7e-05,
+     "px_residual": -0.038194,
+     "agrees": true
+    },
+    {
+     "ref": "0 -> 1440 cm",
+     "printed_cm": 1440,
+     "px": 2273.0,
+     "px_per_cm": 1.578472,
+     "rel_dev": 1.7e-05,
+     "px_residual": 0.039568,
+     "agrees": true
+    }
+   ],
+   "sha256_pdf": "80b6a80428990db4dfa86aa343ed2c7cb429709459d564f0dac92362480a9b00",
+   "image_sha256": "0cb36abd038fe27067f5685483bca1abac838ffd21ba12c98fca521de516e9a3"
+  },
+  "ARCH-P07-SW-ELEV": {
+   "state": "CALIBRATED",
+   "why": null,
+   "px_per_cm": 1.563252,
+   "worst_rel_dev": 3.7e-05,
+   "nominal_rel_dev": -0.006238,
+   "ground_row": 3453,
+   "matched_levels": [
+    [
+     0,
+     3453
+    ],
+    [
+     550,
+     2596
+    ],
+    [
+     970,
+     1936
+    ],
+    [
+     1390,
+     1280
+    ],
+    [
+     1440,
+     1202
+    ]
+   ],
+   "observations": [
+    {
+     "ref": "0 -> 550 cm",
+     "printed_cm": 550,
+     "px": 857.0,
+     "px_per_cm": 1.558182,
+     "rel_dev": -0.003243,
+     "px_residual": -2.788544,
+     "agrees": true
+    },
+    {
+     "ref": "0 -> 970 cm",
+     "printed_cm": 970,
+     "px": 1517.0,
+     "px_per_cm": 1.563918,
+     "rel_dev": 0.000426,
+     "px_residual": 0.645658,
+     "agrees": true
+    },
+    {
+     "ref": "0 -> 1390 cm",
+     "printed_cm": 1390,
+     "px": 2173.0,
+     "px_per_cm": 1.563309,
+     "rel_dev": 3.7e-05,
+     "px_residual": 0.079861,
+     "agrees": true
+    },
+    {
+     "ref": "0 -> 1440 cm",
+     "printed_cm": 1440,
+     "px": 2251.0,
+     "px_per_cm": 1.563194,
+     "rel_dev": -3.7e-05,
+     "px_residual": -0.082734,
+     "agrees": true
+    }
+   ],
+   "sha256_pdf": "281a0c3f8c1cdd8f2a78528513b66d14ba4793e981e2d8059423faf6e6162f99",
+   "image_sha256": "20bcbadc2d48a681fef96a146bcd649f69431c6308df6ac1166b1c07bf27b011"
+  },
+  "ARCH-P08-NW-ELEV": {
+   "state": "CALIBRATED",
+   "why": null,
+   "px_per_cm": 1.578417,
+   "worst_rel_dev": 0.000405,
+   "nominal_rel_dev": 0.003403,
+   "ground_row": 3488,
+   "matched_levels": [
+    [
+     0,
+     3488
+    ],
+    [
+     100,
+     3328
+    ],
+    [
+     550,
+     2622
+    ],
+    [
+     970,
+     1955
+    ],
+    [
+     1390,
+     1294
+    ],
+    [
+     1440,
+     1216
+    ]
+   ],
+   "observations": [
+    {
+     "ref": "0 -> 100 cm",
+     "printed_cm": 100,
+     "px": 160.0,
+     "px_per_cm": 1.6,
+     "rel_dev": 0.013674,
+     "px_residual": 2.158273,
+     "agrees": true
+    },
+    {
+     "ref": "0 -> 550 cm",
+     "printed_cm": 550,
+     "px": 866.0,
+     "px_per_cm": 1.574545,
+     "rel_dev": -0.002453,
+     "px_residual": -2.129496,
+     "agrees": true
+    },
+    {
+     "ref": "0 -> 970 cm",
+     "printed_cm": 970,
+     "px": 1533.0,
+     "px_per_cm": 1.580412,
+     "rel_dev": 0.001264,
+     "px_residual": 1.935252,
+     "agrees": true
+    },
+    {
+     "ref": "0 -> 1390 cm",
+     "printed_cm": 1390,
+     "px": 2194.0,
+     "px_per_cm": 1.578417,
+     "rel_dev": 0.0,
+     "px_residual": 0.0,
+     "agrees": true
+    },
+    {
+     "ref": "0 -> 1440 cm",
+     "printed_cm": 1440,
+     "px": 2272.0,
+     "px_per_cm": 1.577778,
+     "rel_dev": -0.000405,
+     "px_residual": -0.920863,
+     "agrees": true
+    }
+   ],
+   "sha256_pdf": "281a0c3f8c1cdd8f2a78528513b66d14ba4793e981e2d8059423faf6e6162f99",
+   "image_sha256": "d340efee6b9b4d1282d589823fb7290bd6957b77ba85159122a9c6fff38b61af"
+  },
+  "ARCH-P09-NE-ELEV": {
+   "state": "CALIBRATED",
+   "why": null,
+   "px_per_cm": 1.578384,
+   "worst_rel_dev": 5.6e-05,
+   "nominal_rel_dev": 0.003382,
+   "ground_row": 3478,
+   "matched_levels": [
+    [
+     0,
+     3478
+    ],
+    [
+     550,
+     2612
+    ],
+    [
+     970,
+     1947
+    ],
+    [
+     1390,
+     1284
+    ],
+    [
+     1440,
+     1205
+    ]
+   ],
+   "observations": [
+    {
+     "ref": "0 -> 550 cm",
+     "printed_cm": 550,
+     "px": 866.0,
+     "px_per_cm": 1.574545,
+     "rel_dev": -0.002432,
+     "px_residual": -2.11114,
+     "agrees": true
+    },
+    {
+     "ref": "0 -> 970 cm",
+     "printed_cm": 970,
+     "px": 1531.0,
+     "px_per_cm": 1.578351,
+     "rel_dev": -2.1e-05,
+     "px_residual": -0.032374,
+     "agrees": true
+    },
+    {
+     "ref": "0 -> 1390 cm",
+     "printed_cm": 1390,
+     "px": 2194.0,
+     "px_per_cm": 1.578417,
+     "rel_dev": 2.1e-05,
+     "px_residual": 0.046392,
+     "agrees": true
+    },
+    {
+     "ref": "0 -> 1440 cm",
+     "printed_cm": 1440,
+     "px": 2273.0,
+     "px_per_cm": 1.578472,
+     "rel_dev": 5.6e-05,
+     "px_residual": 0.127197,
+     "agrees": true
+    }
+   ],
+   "sha256_pdf": "281a0c3f8c1cdd8f2a78528513b66d14ba4793e981e2d8059423faf6e6162f99",
+   "image_sha256": "37321f84a5b91f66dae22357af5e186ba9c485f29573327f27c8a8ef8a0c9297"
+  },
+  "ARCH-P10-SECTION-AA": {
+   "state": "CALIBRATED",
+   "why": null,
+   "px_per_cm": 1.573611,
+   "worst_rel_dev": 0.0,
+   "nominal_rel_dev": 0.000348,
+   "ground_row": 3488,
+   "matched_levels": [
+    [
+     0,
+     3488
+    ],
+    [
+     100,
+     3330
+    ],
+    [
+     550,
+     2624
+    ],
+    [
+     970,
+     1964
+    ],
+    [
+     1390,
+     1298
+    ],
+    [
+     1440,
+     1222
+    ]
+   ],
+   "observations": [
+    {
+     "ref": "0 -> 100 cm",
+     "printed_cm": 100,
+     "px": 158.0,
+     "px_per_cm": 1.58,
+     "rel_dev": 0.00406,
+     "px_residual": 0.638889,
+     "agrees": true
+    },
+    {
+     "ref": "0 -> 550 cm",
+     "printed_cm": 550,
+     "px": 864.0,
+     "px_per_cm": 1.570909,
+     "rel_dev": -0.001717,
+     "px_residual": -1.486111,
+     "agrees": true
+    },
+    {
+     "ref": "0 -> 970 cm",
+     "printed_cm": 970,
+     "px": 1524.0,
+     "px_per_cm": 1.571134,
+     "rel_dev": -0.001574,
+     "px_residual": -2.402778,
+     "agrees": true
+    },
+    {
+     "ref": "0 -> 1390 cm",
+     "printed_cm": 1390,
+     "px": 2190.0,
+     "px_per_cm": 1.57554,
+     "rel_dev": 0.001225,
+     "px_residual": 2.680556,
+     "agrees": true
+    },
+    {
+     "ref": "0 -> 1440 cm",
+     "printed_cm": 1440,
+     "px": 2266.0,
+     "px_per_cm": 1.573611,
+     "rel_dev": 0.0,
+     "px_residual": 0.0,
+     "agrees": true
+    }
+   ],
+   "sha256_pdf": "281a0c3f8c1cdd8f2a78528513b66d14ba4793e981e2d8059423faf6e6162f99",
+   "image_sha256": "6a4eacf1304c6f40c532082dfba4a4e82952f574be806eb7a354ba4a9bebfe13"
+  },
+  "ARCH-P11-SECTION-BB": {
+   "state": "CALIBRATED",
+   "why": null,
+   "px_per_cm": 1.577698,
+   "worst_rel_dev": 5.1e-05,
+   "nominal_rel_dev": 0.002946,
+   "ground_row": 3480,
+   "matched_levels": [
+    [
+     0,
+     3480
+    ],
+    [
+     100,
+     3319
+    ],
+    [
+     550,
+     2614
+    ],
+    [
+     970,
+     1952
+    ],
+    [
+     1390,
+     1287
+    ],
+    [
+     1440,
+     1208
+    ]
+   ],
+   "observations": [
+    {
+     "ref": "0 -> 100 cm",
+     "printed_cm": 100,
+     "px": 161.0,
+     "px_per_cm": 1.61,
+     "rel_dev": 0.020474,
+     "px_residual": 3.230216,
+     "agrees": true
+    },
+    {
+     "ref": "0 -> 550 cm",
+     "printed_cm": 550,
+     "px": 866.0,
+     "px_per_cm": 1.574545,
+     "rel_dev": -0.001998,
+     "px_residual": -1.733813,
+     "agrees": true
+    },
+    {
+     "ref": "0 -> 970 cm",
+     "printed_cm": 970,
+     "px": 1528.0,
+     "px_per_cm": 1.575258,
+     "rel_dev": -0.001547,
+     "px_residual": -2.366906,
+     "agrees": true
+    },
+    {
+     "ref": "0 -> 1390 cm",
+     "printed_cm": 1390,
+     "px": 2193.0,
+     "px_per_cm": 1.577698,
+     "rel_dev": 0.0,
+     "px_residual": 0.0,
+     "agrees": true
+    },
+    {
+     "ref": "0 -> 1440 cm",
+     "printed_cm": 1440,
+     "px": 2272.0,
+     "px_per_cm": 1.577778,
+     "rel_dev": 5.1e-05,
+     "px_residual": 0.115108,
+     "agrees": true
+    }
+   ],
+   "sha256_pdf": "281a0c3f8c1cdd8f2a78528513b66d14ba4793e981e2d8059423faf6e6162f99",
+   "image_sha256": "942e6927b2806e957f77bdbf8abe5042b3de3131ec189b612b42f140c92766cd"
+  }
+ },
+ "printed_claims": [
+  {
+   "sheet_sha256": "281a0c3f8c1cdd8f2a78528513b66d14ba4793e981e2d8059423faf6e6162f99",
+   "sheet_ref": "ARCH-P08-NW-ELEV",
+   "box_px": [
+    3000,
+    2400,
+    4400,
+    3500
+   ],
+   "quantity": "CURVED_GLAZING_HEIGHT",
+   "value_cm": 430,
+   "grade": "PRINTED",
+   "confidence": "H",
+   "authority": "RASTER_DERIVED",
+   "evidence": "430 (+ 20 head) over 269 wide",
+   "calibration": null,
+   "check": null,
+   "claim_id": "6034f96242912927",
+   "binds": "MASTER BEDROOM CURVED GLAZING"
+  },
+  {
+   "sheet_sha256": "281a0c3f8c1cdd8f2a78528513b66d14ba4793e981e2d8059423faf6e6162f99",
+   "sheet_ref": "ARCH-P08-NW-ELEV",
+   "box_px": [
+    3700,
+    3300,
+    4300,
+    3800
+   ],
+   "quantity": "SUNKEN_ELEMENT_DEPTH",
+   "value_cm": 115,
+   "grade": "PRINTED",
+   "confidence": "H",
+   "authority": "RASTER_DERIVED",
+   "evidence": "115 pit + 70 step below the +0.15 deck",
+   "calibration": null,
+   "check": null,
+   "claim_id": "c3044a74df96292e",
+   "binds": "POOL CANDIDATE (to be matched to the p.3 pool outline)"
+  },
+  {
+   "sheet_sha256": "80b6a80428990db4dfa86aa343ed2c7cb429709459d564f0dac92362480a9b00",
+   "sheet_ref": "ARCH-P06-SE-ELEV",
+   "box_px": [
+    2600,
+    850,
+    3500,
+    1250
+   ],
+   "quantity": "DOME_SPAN",
+   "value_cm": 441,
+   "grade": "PRINTED",
+   "confidence": "H",
+   "authority": "RASTER_DERIVED",
+   "evidence": "441 span / 215 rise",
+   "calibration": null,
+   "check": null,
+   "claim_id": "427c5cdc8f6a7f82",
+   "binds": "TOWER ROOF DOME"
+  },
+  {
+   "sheet_sha256": "80b6a80428990db4dfa86aa343ed2c7cb429709459d564f0dac92362480a9b00",
+   "sheet_ref": "ARCH-P06-SE-ELEV",
+   "box_px": [
+    2600,
+    850,
+    3500,
+    1250
+   ],
+   "quantity": "DOME_RISE",
+   "value_cm": 215,
+   "grade": "PRINTED",
+   "confidence": "H",
+   "authority": "RASTER_DERIVED",
+   "evidence": "215",
+   "calibration": null,
+   "check": null,
+   "claim_id": "0cdac87768c84fa0",
+   "binds": "TOWER ROOF DOME"
+  },
+  {
+   "sheet_sha256": "281a0c3f8c1cdd8f2a78528513b66d14ba4793e981e2d8059423faf6e6162f99",
+   "sheet_ref": "ARCH-P08-NW-ELEV",
+   "box_px": [
+    2600,
+    1450,
+    3400,
+    1900
+   ],
+   "quantity": "DOME_RISE",
+   "value_cm": 172,
+   "grade": "PRINTED",
+   "confidence": "H",
+   "authority": "RASTER_DERIVED",
+   "evidence": "172",
+   "calibration": null,
+   "check": null,
+   "claim_id": "876a16e17d70e143",
+   "binds": "TERRACE DOME (2F)"
+  },
+  {
+   "sheet_sha256": "281a0c3f8c1cdd8f2a78528513b66d14ba4793e981e2d8059423faf6e6162f99",
+   "sheet_ref": "ARCH-P12-FENCE",
+   "box_px": [
+    4400,
+    1700,
+    5300,
+    2300
+   ],
+   "quantity": "FENCE_HEIGHT",
+   "value_cm": 265,
+   "grade": "PRINTED",
+   "confidence": "H",
+   "authority": "RASTER_DERIVED",
+   "evidence": "265 = 215 + 50",
+   "calibration": null,
+   "check": null,
+   "claim_id": "57ca102f03f4f685",
+   "binds": "BOUNDARY WALL (fence section)"
+  },
+  {
+   "sheet_sha256": "281a0c3f8c1cdd8f2a78528513b66d14ba4793e981e2d8059423faf6e6162f99",
+   "sheet_ref": "ARCH-P12-FENCE",
+   "box_px": [
+    1400,
+    1300,
+    3900,
+    1800
+   ],
+   "quantity": "FENCE_FRONT_RUN",
+   "value_cm": 1499,
+   "grade": "PRINTED",
+   "confidence": "H",
+   "authority": "RASTER_DERIVED",
+   "evidence": "580 + 250 + 81 + 195 + 115 + 195 + 83",
+   "calibration": null,
+   "check": null,
+   "claim_id": "62a4a888e7a749d8",
+   "binds": "FRONT FENCE RUN (plan 1:100)"
+  }
+ ],
+ "raster_openings": 155,
+ "dome_count": {
+  "value": 3,
+  "sheets": [
+   "ARCH-P11-SECTION-BB",
+   "ARCH-P06-SE-ELEV",
+   "ARCH-P07-SW-ELEV",
+   "ARCH-P09-NE-ELEV"
+  ],
+  "text": "two domes on the 2F terrace (+9.70) and one on the tower roof (+13.90)"
+ }
+}

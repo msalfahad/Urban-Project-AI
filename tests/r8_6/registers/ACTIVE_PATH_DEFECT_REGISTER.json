@@ -1,0 +1,153 @@
+{
+ "SCHEMA": "URBAN_R8_6_ACTIVE_PATH_DEFECT_REGISTER_V1",
+ "defects": [
+  {
+   "defect_kind": "ACTIVE_PATH_DEFECT",
+   "defect_id": "ADAPTER-LWPOLYLINE-CLOSED-BIT",
+   "version": 2,
+   "supersedes_version": {
+    "version": 1,
+    "register": "tests/r8_5/registers/R8_ADAPTER_DEFECT_CLOSED_FLAG.json"
+   },
+   "affected_source_hash": "299c61b1df7660384e027d44c0a29d8b64c92995843c0517cea05d485974660c",
+   "code_location": {
+    "file": "research/qs_wall_treatment_01/pa09/alrashed/geometry.py",
+    "function": "_segments",
+    "line": 89,
+    "reads": "flag & 1"
+   },
+   "reference_reading": {
+    "file": "engine/cad_adapter.py",
+    "line": 645,
+    "reads": "flag & 0x200 (512)"
+   },
+   "current_code_sha256": "533e734fb619a81ae2da5d3b1ad5dff756541c52a801a4a249998edff7cc623b",
+   "code_sha256_when_measured": "533e734fb619a81ae2da5d3b1ad5dff756541c52a801a4a249998edff7cc623b",
+   "code_unchanged_since_measured": true,
+   "source_evidence": {
+    "closed_outlines_bit_512": {
+     "total_on_wall_or_column_layers": 175,
+     "by_layer": {
+      "col.str": 170,
+      "WALL-EWAN": 5
+     }
+    },
+    "dropped_closing_edges": {
+     "BASEMENT": {
+      "col.str": 24
+     },
+     "GROUND": {
+      "col.str": 25
+     },
+     "FIRST": {
+      "col.str": 7
+     }
+    },
+    "dropped_closing_edges_total": 56
+   },
+   "geometry_effect": "each closed col.str outline loses its closing edge; the reader's grid merges or splits cells across the missing edge",
+   "affected_rooms": {
+    "explained_by_defect_alone": 25,
+    "by_r8_5_class": {
+     "CHANGED_NATIVE_AREA": 6,
+     "CHANGED_NATIVE_TOPOLOGY": 19
+    },
+    "rooms": [
+     "BA-092",
+     "BA-001",
+     "BA-029",
+     "BA-068",
+     "BA-095",
+     "BA-089",
+     "GR-015",
+     "GR-108",
+     "GR-032",
+     "GR-123",
+     "GR-071",
+     "GR-101",
+     "GR-021",
+     "GR-102",
+     "GR-022",
+     "GR-029",
+     "GR-025",
+     "GR-109",
+     "GR-069",
+     "GR-087",
+     "GR-020",
+     "GR-046",
+     "FI-003",
+     "FI-002",
+     "FI-000"
+    ]
+   },
+   "quantity_effect": [
+    {
+     "room": "BA-001",
+     "name": "CAR PARKING",
+     "adapter_area_m2": 140.9111,
+     "with_closed_bit_m2": 140.9107,
+     "delta_m2": -0.0004
+    },
+    {
+     "room": "BA-092",
+     "name": "HALL",
+     "adapter_area_m2": 146.97,
+     "with_closed_bit_m2": 146.7697,
+     "delta_m2": -0.2003
+    },
+    {
+     "room": "GR-021",
+     "name": null,
+     "adapter_area_m2": 1.3599,
+     "with_closed_bit_m2": 1.3597,
+     "delta_m2": -0.0002
+    },
+    {
+     "room": "GR-102",
+     "name": null,
+     "adapter_area_m2": 1.3499,
+     "with_closed_bit_m2": 1.3497,
+     "delta_m2": -0.0002
+    },
+    {
+     "room": "FI-002",
+     "name": null,
+     "adapter_area_m2": 2.9913,
+     "with_closed_bit_m2": 2.9514,
+     "delta_m2": -0.0399
+    },
+    {
+     "room": "FI-003",
+     "name": "MECH.ROOM",
+     "adapter_area_m2": 11.3331,
+     "with_closed_bit_m2": 11.3333,
+     "delta_m2": 0.0002
+    }
+   ],
+   "trade_rule_interaction": {
+    "room": "BA-092",
+    "values": [
+     146.97,
+     146.7697
+    ],
+    "chosen": null,
+    "status": "TRADE_DEDUCTION_RULE_UNDECIDED"
+   },
+   "questions": {
+    "SOURCE_GEOMETRY": {
+     "question": "is the column physically a closed polygon?",
+     "answer": "YES",
+     "basis": "LWPOLYLINE flag bit 512 set (175 outlines); the canonical reader and cad_adapter both read 0x200"
+    },
+    "TRADE_METHOD": {
+     "question": "is the column footprint deducted from floor-finish billing?",
+     "answer": "UNDECIDED",
+     "owner_action": "DECIDE_COLUMN_DEDUCTION_METHOD"
+    }
+   },
+   "separation_rule": "a future geometry fix must emit the column footprint inside a room as its own quantity (gross room area and column footprint area, both carried), so that the trade rule - not the fix - decides whether it is deducted",
+   "fix_status": "NOT_APPLIED",
+   "active_reader_changed": false
+  }
+ ]
+}

@@ -1,0 +1,114 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_B2A_OWNER_FACTS_V1",
+ "facts": [
+  {
+   "id": "OF-B2A-A",
+   "class": "PROJECT_OWNER_FACT",
+   "scope": {
+    "floor": "GF",
+    "labels": [
+     "DINING",
+     "RECEPTION",
+     "SALOON"
+    ]
+   },
+   "fact": {
+    "internal_doors": 0,
+    "open_to_each_other": true
+   },
+   "statement": "GF Dining, Reception and Salon are open to each other; no internal doors",
+   "use": "one physical site, several semantic zones; no wall is invented between them"
+  },
+  {
+   "id": "OF-B2A-B",
+   "class": "PROJECT_OWNER_FACT",
+   "scope": {
+    "floor": "GF",
+    "label": "RECEPTION"
+   },
+   "fact": {
+    "double_height": "ENTIRE_RECEPTION"
+   },
+   "statement": "the entire Reception is double height",
+   "use": "a DOUBLE_HEIGHT_FINISH_REGION inside the open site"
+  },
+  {
+   "id": "OF-B2A-C",
+   "class": "PROJECT_OWNER_FACT",
+   "alias": "ALSENAN_MBR_WARDROBE_OWNER_FACT",
+   "scope": {
+    "floor": "GF",
+    "label": "MASTER BED ROOM"
+   },
+   "fact": {
+    "box_mm": [
+     500,
+     1460
+    ],
+    "role": "WARDROBE / FIXED_JOINERY"
+   },
+   "statement": "the 0.50 x 1.46 m box in the GF master bedroom is a wardrobe (fixed joinery); it does not split the room",
+   "method": "URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1"
+  },
+  {
+   "id": "OF-B2A-D",
+   "class": "PROJECT_OWNER_FACT",
+   "scope": {
+    "floor": "GF",
+    "label": "SALOON",
+    "element": "sea-view opening"
+   },
+   "fact": {
+    "material": "ALUMINIUM_GLASS"
+   },
+   "statement": "the Salon sea-view opening is aluminium + glass",
+   "carries": "OF-A3-SALON-MATERIAL"
+  },
+  {
+   "id": "OF-B2A-E",
+   "class": "SOURCE_EVIDENCE",
+   "scope": {
+    "floor": "GF",
+    "label": "SALOON",
+    "element": "sea-view opening"
+   },
+   "fact": {
+    "width_m": 6.33
+   },
+   "statement": "Salon opening width 6.33 m is source-correlated (printed 633 + CAD gap)"
+  },
+  {
+   "id": "OF-B2A-F",
+   "class": "OWNER_DERIVED_PROJECT_DIMENSION",
+   "scope": {
+    "floor": "GF",
+    "label": "SALOON",
+    "element": "sea-view opening"
+   },
+   "fact": {
+    "height_m": 3.65,
+    "status": "PROVISIONAL"
+   },
+   "statement": "Salon aluminium height 3.65 m is provisional, not final authority",
+   "carries": "OF-A3-SALON-HEIGHT"
+  }
+ ],
+ "carried_from_a3": [
+  "OF-A3-SALON-MATERIAL",
+  "OF-A3-SALON-HEIGHT",
+  "OF-A3-RECEPTION-DOUBLE-HEIGHT",
+  "OF-A3-MASTER-BED-GLAZING"
+ ],
+ "no_fact": {
+  "F_F10": "no owner fact: SOURCE_CONFLICT stays BLOCKED",
+  "benchmark": "no benchmark statement is a fact"
+ },
+ "classes": [
+  "PROJECT_OWNER_FACT",
+  "URBAN_OWNER_METHOD",
+  "SOURCE_EVIDENCE",
+  "OWNER_DERIVED_PROJECT_DIMENSION",
+  "UNRESOLVED"
+ ],
+ "rule": "project facts are scoped to Alsenan and never travel; benchmark observations are never facts"
+}

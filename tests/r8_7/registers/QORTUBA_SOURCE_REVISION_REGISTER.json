@@ -1,0 +1,188 @@
+{
+ "SCHEMA": "URBAN_R8_7_QORTUBA_SOURCE_REVISION_REGISTER_V1",
+ "rule": "a measurement consumes exactly one revision; revisions are never mixed (canonical_input SOURCE_REVISION_MISMATCH)",
+ "revisions": {
+  "QORTUBA_REV_OLD": {
+   "status": "HISTORICAL_VALIDATED_REVISION",
+   "anchor_kind": "EXACT_SOURCE",
+   "dwg_sha256": "2ec3a9c8b66eb2e129275b87010f4a8d79d7e5bdcc31c1897c14fd7e5647d355",
+   "unit": {
+    "native_to_mm": 10.0,
+    "claim": "QORTUBA-NATIVE-UNIT-OWNER-001",
+    "state": "CONFIRMED_BY_HUMAN (exact source)"
+   },
+   "plan_count": 1,
+   "tracked_plan": "one SECOND FLOOR PLAN (title handle 0x1AC, frame occurrence H156)",
+   "proof": {
+    "R8_6_six_row_canonical_rebuild": "VALID_FOR_REVISION_OLD",
+    "classification_now": "SUPERSEDED_SOURCE_BASELINE",
+    "useful_for": [
+     "revision delta analysis",
+     "regression history",
+     "explaining what changed"
+    ],
+    "is_not": "CURRENT_QORTUBA_QUANTITY_TRUTH",
+    "reproduced_through_the_contract": {
+     "Q-03": 17.8625,
+     "Q-03P": 11.685,
+     "Q-11": 17.8625,
+     "Q-12": 11.685,
+     "Q-13": 108.9625,
+     "Q-14": 138.51
+    }
+   }
+  },
+  "QORTUBA_REV_NEW": {
+   "status": "OWNER_SELECTED_CURRENT_REVISION",
+   "anchor_kind": "DERIVED_PENDING_SOURCE",
+   "scope_label": "QORTUBA_NEW_REVISION_PENDING_DWG",
+   "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+   "matching_original_dwg": "PENDING_EXTERNAL_INPUT",
+   "relationship_to_old": [
+    "SAME_DRAWING_LINEAGE",
+    "LATER_REVISION",
+    "OWNER_SELECTED_CURRENT_REVISION"
+   ],
+   "lineage_evidence": {
+    "fingerprintguid_equal": true,
+    "versionguid_equal": false,
+    "added_editing_time_seconds": 45537.0
+   },
+   "converter": "CONVERTER_UNKNOWN (not asked again)",
+   "parser_independence": "NOT_ESTABLISHED",
+   "plan_count": 4,
+   "plan_variants": {
+    "PLAN_VARIANT_4_SELECTED": {
+     "frame_occurrence": "156",
+     "extent": [
+      108360.1146563,
+      13671.64751193179,
+      112440.1146563,
+      16521.64751193179
+     ]
+    },
+    "PLAN_VARIANT_3": {
+     "frame_occurrence": "4713",
+     "extent": [
+      108184.3426826965,
+      17964.38800850303,
+      112264.3426826965,
+      20814.38800850303
+     ]
+    },
+    "PLAN_VARIANT_2": {
+     "frame_occurrence": "9244",
+     "extent": [
+      108264.3426826965,
+      21781.10436881724,
+      112344.3426826965,
+      24631.10436881724
+     ]
+    },
+    "PLAN_VARIANT_1": {
+     "frame_occurrence": "13728",
+     "extent": [
+      108279.8066243163,
+      25507.8166811322,
+      112359.8066243163,
+      28357.8166811322
+     ]
+    }
+   },
+   "selected": {
+    "variant": "PLAN_VARIANT_4_SELECTED",
+    "rank": "bottom-most / 4 of 4",
+    "title_handle": "0x1AC",
+    "region_id": "RC:MODEL_SPACE:4267:540:1649",
+    "frame_occurrence": "156",
+    "measurement_clip": [
+     108360.1146563,
+     13671.64751193179,
+     112440.1146563,
+     16521.64751193179
+    ],
+    "claim": "QORTUBA-PLAN-SELECTION-OWNER-001"
+   },
+   "unit": {
+    "native_to_mm": 10.0,
+    "claim": "QORTUBA-NEW-REVISION-NATIVE-UNIT-OWNER-001",
+    "state": "OWNER_CONFIRMED_PENDING_EXACT_DWG_ANCHOR"
+   },
+   "region_classification": {
+    "ALTERNATE_PLAN_VARIANT:dimensions": 300,
+    "ALTERNATE_PLAN_VARIANT:parts": 3358,
+    "ALTERNATE_PLAN_VARIANT:texts": 183,
+    "ANNOTATION:dimensions": 1325,
+    "ANNOTATION:texts": 897,
+    "BLOCK_SAMPLE:parts": 725348,
+    "OUTSIDE_SELECTED_MEASUREMENT_REGION:parts": 56,
+    "SELECTED_MEASUREMENT_REGION:dimensions": 102,
+    "SELECTED_MEASUREMENT_REGION:parts": 1363,
+    "SELECTED_MEASUREMENT_REGION:texts": 61
+   },
+   "allowed_use": "SHADOW / DIAGNOSTIC only until the matching DWG is anchored",
+   "when_the_dwg_arrives": [
+    "hash it",
+    "compare it to DXF df0e1d69 (identity, handles, fidelity)",
+    "re-anchor revision identity",
+    "re-anchor the plan selection",
+    "re-anchor the unit claim (supersede, history kept)",
+    "re-anchor the Q-14 scoped claim",
+    "re-measure the canonical quantities on the DWG"
+   ],
+   "variants_from_R8_6A": [
+    "PLAN_VARIANT_4_SELECTED_CANDIDATE",
+    "PLAN_VARIANT_3",
+    "PLAN_VARIANT_2",
+    "PLAN_VARIANT_1"
+   ],
+   "candidate_original_dwg": {
+    "sha256": "e4babbc2ded14d8b01d64fbfd4b373e6a09ba60c4490a56e6305a82c9e47171f",
+    "bytes": 35110771,
+    "state": "RECEIVED",
+    "source_identity_verdict": "NOT_ESTABLISHED",
+    "why": "the pinned decoder could not read the DWG's Header, Classes and AcDbObjects sections (Failed to decode file: data/inputs/by_sha256/e4babbc2ded14d8b01d64fbfd4b373e6a09ba60c4490a56e6305a82c9e47171f.dwg 0x940; Failed to read compressed AcDbObjects section; Failed to read compressed Classes section; Failed to read compressed Header section); FINGERPRINTGUID, VERSIONGUID, HANDSEED, INSUNITS, entity handles, census, block records, INSERT lineage, the four plans, title 0x1AC and the selected plan geometry cannot be compared",
+    "partial_evidence": {
+     "file_version": {
+      "dwg": "AC1032",
+      "dxf": "AC1032",
+      "equal": true
+     },
+     "LASTSAVEDBY": {
+      "dwg_summary_info": "Msalf",
+      "dxf": "Msalf",
+      "equal": true
+     },
+     "TDCREATE": {
+      "dwg_summary_info_julian": 2460087.2710185186,
+      "dxf_TDUCREATE": 2460087.271018519,
+      "equal": true
+     },
+     "TDINDWG": {
+      "dwg_summary_info_days": 56.67957175925926,
+      "dxf_days": 56.6810185185,
+      "dxf_minus_dwg_seconds": 125.0
+     },
+     "TDUPDATE": {
+      "dwg_summary_info_julian_local": 2461170.817465278,
+      "dxf_local": 2461315.403958333
+     },
+     "last_saved_by_application": {
+      "saved_at": "2026-05-09T19:37:09",
+      "saved_by": "Msalf",
+      "product": "AutoCAD 2023",
+      "build": "T.53.0.0",
+      "registry_version": "24.2",
+      "trusted_dwg": "This file is a Trusted DWG last saved by an Autodesk application or Autodesk licensed application."
+     }
+    },
+    "anchor_promoted": false,
+    "to_establish": [
+     "a DWG decoder that reads AutoCAD 2018-format (AC1032) object sections, pinned and recorded (a newer LibreDWG build or the ODA File Converter); the environment currently denies github.com and ftp.gnu.org, so none can be installed here",
+     "then run the full comparison and re-anchor only on SAME_EXACT_SOURCE_REVISION"
+    ]
+   }
+  }
+ },
+ "region_candidate_note": "the region candidate's recorded bounds lie ~36 units inside the frame's corner marks; the measurement clip is the frame occurrence's own extent; clipping to the candidate bounds cuts the frame occurrence and is refused (REVIEW_REQUIRED)"
+}

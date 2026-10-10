@@ -1,0 +1,3550 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_ARCH_R5_OPENINGS_V3",
+ "rows": [
+  {
+   "id": "GF-D-641",
+   "floor": "GF",
+   "type": "INTERNAL_DOOR",
+   "r2_kind": "DOUBLE_LEAF_DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 2.0,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.237,
+    "state": "PROVISIONAL",
+    "authority": "BUDGET",
+    "ref": "R2 PROVISIONAL_GEOMETRIC_INFERENCE / NO_WIDTH_MATCH"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 4.474,
+    "state": "PROVISIONAL"
+   },
+   "function": {
+    "value": "INTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H527||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:GF:SITE-67547ed37daadb5a:RB-684fc26661ba7dfc",
+    "TR:GF:SITE-67547ed37daadb5a:RB-684fc26661ba7dfc"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -145083.7,
+     -797660.7
+    ],
+    [
+     -144149.9,
+     -797653.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-D-E820",
+   "floor": "GF",
+   "type": "INTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.8,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.137,
+    "state": "PROVISIONAL",
+    "authority": "SCALED_SOURCE_SINGLE",
+    "ref": "R2 PROVISIONAL_SOURCE_DERIVED / RASTER_AMBIGUOUS"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 1.7096,
+    "state": "PROVISIONAL"
+   },
+   "function": {
+    "value": "INTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H741||SEGMENT|0|0.0",
+    "class": "MASONRY_150",
+    "width_mm": 150.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:GF:SITE-dda89794d15dfb61:R",
+    "TR:GF:SITE-714889aea3e329c7:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -136139.0,
+     -793993.5
+    ],
+    [
+     -136829.0,
+     -793993.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-D-I1023",
+   "floor": "GF",
+   "type": "EXTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": null,
+    "state": "BLOCKED"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": null,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "EXTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H696||SEGMENT|0|200.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:GF:SITE-b2553428a3dc90a0:R",
+    "OUTSIDE_PLATE"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -142699.9,
+     -791993.5
+    ],
+    [
+     -143589.9,
+     -791993.5
+    ]
+   ],
+   "lintel_depth_m": null
+  },
+  {
+   "id": "GF-D-I350",
+   "floor": "GF",
+   "type": "EXTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.0,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.607,
+    "state": "VERIFIED_COMPLETE",
+    "authority": "CROSS_VERIFIED_REPEATED_TYPE",
+    "ref": "R2 RASTER_DERIVED / RASTER_TYPE_MATCH"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 2.607,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "function": {
+    "value": "EXTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H268||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "OUTSIDE_PLATE",
+    "TR:GF:SITE-810cacd9be443703:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -159712.0,
+     -798793.5
+    ],
+    [
+     -158822.0,
+     -798793.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-D-I402",
+   "floor": "GF",
+   "type": "INTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.0,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.607,
+    "state": "VERIFIED_COMPLETE",
+    "authority": "CROSS_VERIFIED_REPEATED_TYPE",
+    "ref": "R2 RASTER_DERIVED / RASTER_TYPE_MATCH"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 2.607,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "function": {
+    "value": "INTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H164||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:GF:SITE-88d9dbffd47c417a:R",
+    "UNCLOSED"
+   ],
+   "adjacency_state": "BLOCKED",
+   "geometry": [
+    [
+     -149639.9,
+     -804933.5
+    ],
+    [
+     -149639.9,
+     -804043.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-D-I414",
+   "floor": "GF",
+   "type": "INTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.8,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.137,
+    "state": "PROVISIONAL",
+    "authority": "SCALED_SOURCE_SINGLE",
+    "ref": "R2 PROVISIONAL_SOURCE_DERIVED / RASTER_AMBIGUOUS"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 1.7096,
+    "state": "PROVISIONAL"
+   },
+   "function": {
+    "value": "INTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H304||SEGMENT|0|0.0",
+    "class": "MASONRY_150",
+    "width_mm": 150.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:GF:SITE-9b585230d0877a35:R",
+    "TR:GF:RR:GF:RB-a1191769a247d0ff:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -152339.9,
+     -803923.8
+    ],
+    [
+     -152339.9,
+     -804613.8
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-D-I437",
+   "floor": "GF",
+   "type": "EXTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.9,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.117,
+    "state": "PROVISIONAL",
+    "authority": "SCALED_SOURCE_SINGLE",
+    "ref": "R2 PROVISIONAL_SOURCE_DERIVED / RASTER_AMBIGUOUS"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 1.9053,
+    "state": "PROVISIONAL"
+   },
+   "function": {
+    "value": "EXTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H286||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:GF:RR:GF:RB-a1191769a247d0ff:R",
+    "OUTSIDE_PLATE"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -152649.9,
+     -800593.5
+    ],
+    [
+     -153439.9,
+     -800593.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-D-I495",
+   "floor": "GF",
+   "type": "INTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.8,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.137,
+    "state": "PROVISIONAL",
+    "authority": "SCALED_SOURCE_SINGLE",
+    "ref": "R2 PROVISIONAL_SOURCE_DERIVED / RASTER_AMBIGUOUS"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 1.7096,
+    "state": "PROVISIONAL"
+   },
+   "function": {
+    "value": "INTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H277||SEGMENT|0|0.0",
+    "class": "MASONRY_150",
+    "width_mm": 150.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:GF:SITE-0e9a7a85e795446f:R",
+    "TR:GF:SITE-eac7a1be6566b2d0:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -155756.2,
+     -802843.5
+    ],
+    [
+     -155066.2,
+     -802843.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-D-I711",
+   "floor": "GF",
+   "type": "INTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.0,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.607,
+    "state": "VERIFIED_COMPLETE",
+    "authority": "CROSS_VERIFIED_REPEATED_TYPE",
+    "ref": "R2 RASTER_DERIVED / RASTER_TYPE_MATCH"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 2.607,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "function": {
+    "value": "INTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H527||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:GF:SITE-67547ed37daadb5a:RB-684fc26661ba7dfc",
+    "TR:GF:SITE-b2553428a3dc90a0:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -142699.9,
+     -797193.5
+    ],
+    [
+     -143589.9,
+     -797193.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-D-I754",
+   "floor": "GF",
+   "type": "INTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.0,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.607,
+    "state": "VERIFIED_COMPLETE",
+    "authority": "CROSS_VERIFIED_REPEATED_TYPE",
+    "ref": "R2 RASTER_DERIVED / RASTER_TYPE_MATCH"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 2.607,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "function": {
+    "value": "INTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H738||SEGMENT|0|0.0",
+    "class": "RC_COLUMN_INTERFACE",
+    "width_mm": 150.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:GF:SITE-dda89794d15dfb61:R",
+    "TR:GF:SITE-67547ed37daadb5a:RB-684fc26661ba7dfc"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -137520.8,
+     -795993.5
+    ],
+    [
+     -136630.8,
+     -795993.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-D-I800",
+   "floor": "GF",
+   "type": "INTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.828,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.209,
+    "state": "PROVISIONAL",
+    "authority": "SCALED_SOURCE_SINGLE",
+    "ref": "R2 PROVISIONAL_SOURCE_DERIVED / RASTER_AMBIGUOUS"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 1.829052,
+    "state": "PROVISIONAL"
+   },
+   "function": {
+    "value": "INTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H796||SEGMENT|0|131.8",
+    "class": "MASONRY_150",
+    "width_mm": 150.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:GF:SITE-5191e28052b00088:R",
+    "TR:GF:SITE-67547ed37daadb5a:RB-684fc26661ba7dfc"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -139006.4,
+     -793603.7
+    ],
+    [
+     -138518.5,
+     -793115.8
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-D-I801",
+   "floor": "GF",
+   "type": "INTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.8,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.137,
+    "state": "PROVISIONAL",
+    "authority": "SCALED_SOURCE_SINGLE",
+    "ref": "R2 PROVISIONAL_SOURCE_DERIVED / RASTER_AMBIGUOUS"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 1.7096,
+    "state": "PROVISIONAL"
+   },
+   "function": {
+    "value": "INTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H795||SEGMENT|0|0.0",
+    "class": "MASONRY_150",
+    "width_mm": 150.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:GF:SITE-67547ed37daadb5a:RB-684fc26661ba7dfc",
+    "TR:GF:SITE-9810548752edbe40:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -139259.8,
+     -793857.1
+    ],
+    [
+     -139747.7,
+     -794345.0
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-D-I825",
+   "floor": "GF",
+   "type": "INTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.797,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.137,
+    "state": "PROVISIONAL",
+    "authority": "SCALED_SOURCE_SINGLE",
+    "ref": "R2 PROVISIONAL_SOURCE_DERIVED / RASTER_AMBIGUOUS"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 1.703189,
+    "state": "PROVISIONAL"
+   },
+   "function": {
+    "value": "INTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H690||SEGMENT|0|0.0",
+    "class": "MASONRY_150",
+    "width_mm": 150.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:GF:SITE-ce2d2c3a4b7da280:R",
+    "TR:GF:SITE-b2553428a3dc90a0:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -142229.9,
+     -793743.5
+    ],
+    [
+     -141539.9,
+     -793743.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-D-I830",
+   "floor": "GF",
+   "type": "INTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.0,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.607,
+    "state": "VERIFIED_COMPLETE",
+    "authority": "CROSS_VERIFIED_REPEATED_TYPE",
+    "ref": "R2 RASTER_DERIVED / RASTER_TYPE_MATCH"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 2.607,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "function": {
+    "value": "INTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H344||SEGMENT|0|0.0",
+    "class": "RC_COLUMN_INTERFACE",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:GF:SITE-67547ed37daadb5a:RB-23b287a0c67d534d",
+    "TR:GF:RR:GF:RB-2365eaef717b0fe9:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -145440.7,
+     -800593.5
+    ],
+    [
+     -146330.7,
+     -800593.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-W01",
+   "floor": "GF",
+   "type": "GLAZED_DOOR_CANDIDATE",
+   "r2_kind": "WINDOW",
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.9,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": 0.071,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "GLAZED_DOOR_CANDIDATE",
+    "state": "BLOCKED"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H286||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "OUTSIDE_PLATE",
+    "TR:GF:RR:GF:RB-a1191769a247d0ff:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -153489.9,
+     -800493.5
+    ],
+    [
+     -152589.9,
+     -800493.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-W02",
+   "floor": "GF",
+   "type": "GLAZED_DOOR_CANDIDATE",
+   "r2_kind": "WINDOW",
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.5,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": 1.249,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "GLAZED_DOOR_CANDIDATE",
+    "state": "BLOCKED"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H283||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "OUTSIDE_PLATE",
+    "TR:GF:SITE-88d9dbffd47c417a:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -151739.9,
+     -800493.5
+    ],
+    [
+     -150239.9,
+     -800493.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-W03",
+   "floor": "GF",
+   "type": "GLAZED_DOOR_CANDIDATE",
+   "r2_kind": "WINDOW",
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.0,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": 0.369,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "GLAZED_DOOR_CANDIDATE",
+    "state": "BLOCKED"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H266||SEGMENT|0|200.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "OUTSIDE_PLATE",
+    "TR:GF:SITE-810cacd9be443703:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -159772.0,
+     -798693.5
+    ],
+    [
+     -158772.0,
+     -798693.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-W04",
+   "floor": "GF",
+   "type": "GLAZED_DOOR_CANDIDATE",
+   "r2_kind": "WINDOW",
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.0,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": 0.369,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "GLAZED_DOOR_CANDIDATE",
+    "state": "BLOCKED"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H187||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:GF:SITE-0bb9132c5c034229:R",
+    "TR:GF:SITE-67547ed37daadb5a:RB-684fc26661ba7dfc"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -141939.9,
+     -797093.5
+    ],
+    [
+     -140939.9,
+     -797093.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-W05",
+   "floor": "GF",
+   "type": "GLAZED_DOOR_CANDIDATE",
+   "r2_kind": "WINDOW",
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.9,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": 0.071,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "GLAZED_DOOR_CANDIDATE",
+    "state": "BLOCKED"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H696||SEGMENT|0|200.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "OUTSIDE_PLATE",
+    "TR:GF:SITE-b2553428a3dc90a0:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -143586.7,
+     -791893.5
+    ],
+    [
+     -142686.7,
+     -791893.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-W06",
+   "floor": "GF",
+   "type": "WINDOW",
+   "r2_kind": "WINDOW",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.6,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": 1.04,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "WINDOW",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H685||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "OUTSIDE_PLATE",
+    "TR:GF:SITE-ce2d2c3a4b7da280:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -141964.9,
+     -791893.5
+    ],
+    [
+     -141364.9,
+     -791893.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-W07",
+   "floor": "GF",
+   "type": "WINDOW",
+   "r2_kind": "WINDOW",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.6,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": 1.04,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "WINDOW",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H691||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "OUTSIDE_PLATE",
+    "TR:GF:SITE-5191e28052b00088:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -139469.9,
+     -791893.5
+    ],
+    [
+     -138869.9,
+     -791893.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-W08",
+   "floor": "GF",
+   "type": "WINDOW",
+   "r2_kind": "WINDOW",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.6,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": 1.04,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "WINDOW",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H626||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "OUTSIDE_PLATE",
+    "TR:GF:SITE-714889aea3e329c7:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -137869.9,
+     -791893.5
+    ],
+    [
+     -137269.9,
+     -791893.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-W09",
+   "floor": "GF",
+   "type": "GLAZED_DOOR_CANDIDATE",
+   "r2_kind": "WINDOW",
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 6.332,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 3.65,
+    "state": "VERIFIED_COMPLETE",
+    "authority": "EXACT_SOURCE",
+    "ref": "R2 RASTER_DERIVED / PRINTED"
+   },
+   "sill_m": null,
+   "area": {
+    "area_m2": 23.1118,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "function": {
+    "value": "GLAZED_DOOR_CANDIDATE",
+    "state": "BLOCKED"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H140||SEGMENT|0|0.0",
+    "class": "RC_COLUMN_INTERFACE",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:GF:SITE-67547ed37daadb5a:RB-684fc26661ba7dfc",
+    "OUTSIDE_PLATE"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -128969.9,
+     -804393.5
+    ],
+    [
+     -128969.9,
+     -798062.0
+    ]
+   ],
+   "lintel_depth_m": 0.55
+  },
+  {
+   "id": "GF-W10",
+   "floor": "GF",
+   "type": "GLAZED_DOOR_CANDIDATE",
+   "r2_kind": "WINDOW",
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.2,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": 0.729,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "GLAZED_DOOR_CANDIDATE",
+    "state": "BLOCKED"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H155||SEGMENT|0|200.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "OUTSIDE_PLATE",
+    "TR:GF:SITE-b2553428a3dc90a0:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -145139.9,
+     -794243.5
+    ],
+    [
+     -145139.9,
+     -793043.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-W11",
+   "floor": "GF",
+   "type": "GLAZED_DOOR_CANDIDATE",
+   "r2_kind": "WINDOW",
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.0,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": 0.369,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "GLAZED_DOOR_CANDIDATE",
+    "state": "BLOCKED"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H160||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "UNCLOSED",
+    "TR:GF:SITE-67547ed37daadb5a:RB-23b287a0c67d534d"
+   ],
+   "adjacency_state": "BLOCKED",
+   "geometry": [
+    [
+     -148139.9,
+     -804993.5
+    ],
+    [
+     -148139.9,
+     -803993.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-W12",
+   "floor": "GF",
+   "type": "GLAZED_DOOR_CANDIDATE",
+   "r2_kind": "WINDOW",
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.5,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": 1.249,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "GLAZED_DOOR_CANDIDATE",
+    "state": "BLOCKED"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H159||SEGMENT|0|200.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "UNCLOSED",
+    "TR:GF:SITE-67547ed37daadb5a:RB-201bbf12ec484dd8"
+   ],
+   "adjacency_state": "BLOCKED",
+   "geometry": [
+    [
+     -148139.9,
+     -802943.5
+    ],
+    [
+     -148139.9,
+     -801443.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-W13",
+   "floor": "GF",
+   "type": "GLAZED_DOOR_CANDIDATE",
+   "r2_kind": "WINDOW",
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.0,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": 0.369,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "GLAZED_DOOR_CANDIDATE",
+    "state": "BLOCKED"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H162||SEGMENT|0|200.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:GF:SITE-88d9dbffd47c417a:R",
+    "UNCLOSED"
+   ],
+   "adjacency_state": "BLOCKED",
+   "geometry": [
+    [
+     -149539.9,
+     -804993.5
+    ],
+    [
+     -149539.9,
+     -803993.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-W14",
+   "floor": "GF",
+   "type": "GLAZED_DOOR_CANDIDATE",
+   "r2_kind": "WINDOW",
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.0,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": 0.369,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "GLAZED_DOOR_CANDIDATE",
+    "state": "BLOCKED"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H296||SEGMENT|0|0.0",
+    "class": "MASONRY_150",
+    "width_mm": 150.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:GF:SITE-810cacd9be443703:R",
+    "TR:GF:SITE-0e9a7a85e795446f:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -155964.9,
+     -802143.5
+    ],
+    [
+     -155964.9,
+     -801143.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-W15",
+   "floor": "GF",
+   "type": "GLAZED_DOOR_CANDIDATE",
+   "r2_kind": "WINDOW",
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.955,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": null,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "GLAZED_DOOR_CANDIDATE",
+    "state": "BLOCKED"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H264||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "OUTSIDE_PLATE",
+    "TR:GF:SITE-810cacd9be443703:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -160139.9,
+     -804460.6
+    ],
+    [
+     -160139.9,
+     -802505.6
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "GF-W16",
+   "floor": "GF",
+   "type": "GLAZED_DOOR_CANDIDATE",
+   "r2_kind": "WINDOW",
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.955,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": null,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "GLAZED_DOOR_CANDIDATE",
+    "state": "BLOCKED"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "GF|ALSENAN_P7757_DXF|H265||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "OUTSIDE_PLATE",
+    "TR:GF:SITE-810cacd9be443703:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -160139.9,
+     -801360.6
+    ],
+    [
+     -160139.9,
+     -799405.6
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "1F-D-I3054",
+   "floor": "1F",
+   "type": "INTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.8,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.117,
+    "state": "VERIFIED_COMPLETE",
+    "authority": "CROSS_VERIFIED_REPEATED_TYPE",
+    "ref": "R2 RASTER_DERIVED / RASTER_TYPE_MATCH"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 1.6936,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "function": {
+    "value": "INTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "1F|ALSENAN_P7757_DXF|H2817||SEGMENT|0|0.0",
+    "class": "MASONRY_150",
+    "width_mm": 150.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:1F:SITE-cdc894c0f0fd69c9:R",
+    "TR:1F:SITE-aa3f3d9cc41ec54a:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -181572.5,
+     -793624.3
+    ],
+    [
+     -181572.5,
+     -792934.3
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "1F-D-I3055",
+   "floor": "1F",
+   "type": "INTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.9,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.123,
+    "state": "PROVISIONAL",
+    "authority": "SCALED_SOURCE_SINGLE",
+    "ref": "R2 PROVISIONAL_SOURCE_DERIVED / RASTER_TYPE_MATCH_SINGLE"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 1.9107,
+    "state": "PROVISIONAL"
+   },
+   "function": {
+    "value": "INTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "1F|ALSENAN_P7757_DXF|H2844||SEGMENT|0|0.0",
+    "class": "MASONRY_150",
+    "width_mm": 150.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:1F:SITE-22b96446836c3d8d:R",
+    "TR:1F:SITE-60a08def069f0e48:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -178925.2,
+     -798243.5
+    ],
+    [
+     -178135.2,
+     -798243.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "1F-D-I3090",
+   "floor": "1F",
+   "type": "INTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.8,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.117,
+    "state": "VERIFIED_COMPLETE",
+    "authority": "CROSS_VERIFIED_REPEATED_TYPE",
+    "ref": "R2 RASTER_DERIVED / RASTER_TYPE_MATCH"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 1.6936,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "function": {
+    "value": "INTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "1F|ALSENAN_P7757_DXF|H3085||SEGMENT|0|0.0",
+    "class": "MASONRY_150",
+    "width_mm": 150.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:1F:SITE-2f6cf2b5bebbd966:R",
+    "TR:1F:SITE-22b96446836c3d8d:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -177672.5,
+     -796312.8
+    ],
+    [
+     -177672.5,
+     -797002.8
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "1F-D-I3096",
+   "floor": "1F",
+   "type": "INTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.9,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.123,
+    "state": "PROVISIONAL",
+    "authority": "SCALED_SOURCE_SINGLE",
+    "ref": "R2 PROVISIONAL_SOURCE_DERIVED / RASTER_TYPE_MATCH_SINGLE"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 1.9107,
+    "state": "PROVISIONAL"
+   },
+   "function": {
+    "value": "INTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "1F|ALSENAN_P7757_DXF|H2776||SEGMENT|0|0.0",
+    "class": "MASONRY_150",
+    "width_mm": 150.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:1F:SITE-60a08def069f0e48:R",
+    "TR:1F:SITE-3cde308552cf977c:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -179889.7,
+     -798243.5
+    ],
+    [
+     -180679.7,
+     -798243.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "1F-D-I3098",
+   "floor": "1F",
+   "type": "INTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.9,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.123,
+    "state": "PROVISIONAL",
+    "authority": "SCALED_SOURCE_SINGLE",
+    "ref": "R2 PROVISIONAL_SOURCE_DERIVED / RASTER_TYPE_MATCH_SINGLE"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 1.9107,
+    "state": "PROVISIONAL"
+   },
+   "function": {
+    "value": "INTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "1F|ALSENAN_P7757_DXF|H2813||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:1F:SITE-60a08def069f0e48:R",
+    "TR:1F:SITE-69e2d39bee49fa7e:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -184017.5,
+     -796993.5
+    ],
+    [
+     -184807.5,
+     -796993.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "1F-D-I3115",
+   "floor": "1F",
+   "type": "INTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.8,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.117,
+    "state": "VERIFIED_COMPLETE",
+    "authority": "CROSS_VERIFIED_REPEATED_TYPE",
+    "ref": "R2 RASTER_DERIVED / RASTER_TYPE_MATCH"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 1.6936,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "function": {
+    "value": "INTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "1F|ALSENAN_P7757_DXF|H3112||SEGMENT|0|0.0",
+    "class": "MASONRY_150",
+    "width_mm": 150.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:1F:SITE-16f76cd141ed8273:R",
+    "TR:1F:SITE-da154e7546d18013:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -192379.7,
+     -801143.5
+    ],
+    [
+     -193069.7,
+     -801143.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "1F-D-I3118",
+   "floor": "1F",
+   "type": "INTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.8,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.117,
+    "state": "VERIFIED_COMPLETE",
+    "authority": "CROSS_VERIFIED_REPEATED_TYPE",
+    "ref": "R2 RASTER_DERIVED / RASTER_TYPE_MATCH"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 1.6936,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "function": {
+    "value": "INTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "1F|ALSENAN_P7757_DXF|H3100||SEGMENT|0|0.0",
+    "class": "MASONRY_150",
+    "width_mm": 150.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:1F:RR:1F:RB-5757373d9f615fe5:R",
+    "TR:1F:SITE-c46cb88cea7decbb:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -190042.5,
+     -803453.7
+    ],
+    [
+     -190042.5,
+     -802763.7
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "1F-D-I3121",
+   "floor": "1F",
+   "type": "INTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.0,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.117,
+    "state": "PROVISIONAL",
+    "authority": "SCALED_SOURCE_SINGLE",
+    "ref": "R2 PROVISIONAL_SOURCE_DERIVED / RASTER_TYPE_MATCH_SINGLE"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 2.117,
+    "state": "PROVISIONAL"
+   },
+   "function": {
+    "value": "INTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "1F|ALSENAN_P7757_DXF|H3103||SEGMENT|0|2550.0",
+    "class": "MASONRY_150",
+    "width_mm": 150.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:1F:SITE-60a08def069f0e48:R",
+    "TR:1F:SITE-da154e7546d18013:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -190042.5,
+     -796678.7
+    ],
+    [
+     -190042.5,
+     -797568.7
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "1F-D-I3122",
+   "floor": "1F",
+   "type": "INTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.0,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.117,
+    "state": "PROVISIONAL",
+    "authority": "SCALED_SOURCE_SINGLE",
+    "ref": "R2 PROVISIONAL_SOURCE_DERIVED / RASTER_TYPE_MATCH_SINGLE"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 2.117,
+    "state": "PROVISIONAL"
+   },
+   "function": {
+    "value": "INTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "1F|ALSENAN_P7757_DXF|H2793||SEGMENT|0|0.0",
+    "class": "MASONRY_150",
+    "width_mm": 150.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:1F:SITE-60a08def069f0e48:R",
+    "TR:1F:SITE-c46cb88cea7decbb:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -189744.0,
+     -798593.5
+    ],
+    [
+     -188854.0,
+     -798593.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "1F-D-I4532",
+   "floor": "1F",
+   "type": "INTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.8,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.117,
+    "state": "VERIFIED_COMPLETE",
+    "authority": "CROSS_VERIFIED_REPEATED_TYPE",
+    "ref": "R2 RASTER_DERIVED / RASTER_TYPE_MATCH"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 1.6936,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "function": {
+    "value": "INTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "1F|ALSENAN_P7757_DXF|H2767||SEGMENT|0|150.0",
+    "class": "MASONRY_150",
+    "width_mm": 150.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:1F:SITE-69e2d39bee49fa7e:R",
+    "UNCLOSED"
+   ],
+   "adjacency_state": "BLOCKED",
+   "geometry": [
+    [
+     -183855.8,
+     -793793.5
+    ],
+    [
+     -184545.8,
+     -793793.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "1F-W01",
+   "floor": "1F",
+   "type": "GLAZED_DOOR_CANDIDATE",
+   "r2_kind": "WINDOW",
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.6,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": 0.113,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "GLAZED_DOOR_CANDIDATE",
+    "state": "BLOCKED"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "1F|ALSENAN_P7757_DXF|H2783||SEGMENT|0|200.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:1F:SITE-16f76cd141ed8273:R",
+    "OUTSIDE_PLATE"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -193567.5,
+     -803693.5
+    ],
+    [
+     -192967.5,
+     -803693.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "1F-W02",
+   "floor": "1F",
+   "type": "GLAZED_DOOR_CANDIDATE",
+   "r2_kind": "WINDOW",
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.552,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": null,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "GLAZED_DOOR_CANDIDATE",
+    "state": "BLOCKED"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "1F|ALSENAN_P7757_DXF|H2786||SEGMENT|0|1600.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:1F:SITE-c46cb88cea7decbb:R",
+    "OUTSIDE_PLATE"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -188843.7,
+     -803693.5
+    ],
+    [
+     -187291.4,
+     -803693.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "1F-W03",
+   "floor": "1F",
+   "type": "GLAZED_DOOR_CANDIDATE",
+   "r2_kind": "WINDOW",
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.0,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "GLAZED_DOOR_CANDIDATE",
+    "state": "BLOCKED"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "1F|ALSENAN_P7757_DXF|H2814||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:1F:SITE-195dbe4bca9e732e:R",
+    "TR:1F:SITE-60a08def069f0e48:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -186792.5,
+     -797093.5
+    ],
+    [
+     -185792.5,
+     -797093.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "1F-W04",
+   "floor": "1F",
+   "type": "GLAZED_DOOR_CANDIDATE",
+   "r2_kind": "WINDOW",
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.0,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "GLAZED_DOOR_CANDIDATE",
+    "state": "BLOCKED"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "1F|ALSENAN_P7757_DXF|H2769||SEGMENT|0|0.0",
+    "class": "MASONRY_150",
+    "width_mm": 150.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:1F:SITE-aa3f3d9cc41ec54a:R",
+    "TR:1F:SITE-3cde308552cf977c:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -181272.5,
+     -793868.5
+    ],
+    [
+     -180272.5,
+     -793868.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "1F-W05",
+   "floor": "1F",
+   "type": "GLAZED_DOOR_CANDIDATE",
+   "r2_kind": "WINDOW",
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.0,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "GLAZED_DOOR_CANDIDATE",
+    "state": "BLOCKED"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "1F|ALSENAN_P7757_DXF|H2765||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "OUTSIDE_PLATE",
+    "TR:1F:SITE-60a08def069f0e48:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -188492.5,
+     -791893.5
+    ],
+    [
+     -187492.5,
+     -791893.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "1F-W06",
+   "floor": "1F",
+   "type": "GLAZED_DOOR_CANDIDATE",
+   "r2_kind": "WINDOW",
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.6,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": 0.113,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "GLAZED_DOOR_CANDIDATE",
+    "state": "BLOCKED"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "1F|ALSENAN_P7757_DXF|H2764||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "OUTSIDE_PLATE",
+    "TR:1F:SITE-69e2d39bee49fa7e:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -186817.5,
+     -791893.5
+    ],
+    [
+     -186217.5,
+     -791893.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "1F-W07",
+   "floor": "1F",
+   "type": "GLAZED_DOOR_CANDIDATE",
+   "r2_kind": "WINDOW",
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.6,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": 0.113,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "GLAZED_DOOR_CANDIDATE",
+    "state": "BLOCKED"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "1F|ALSENAN_P7757_DXF|H2762||SEGMENT|0|0.0",
+    "class": "RC_COLUMN_INTERFACE",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "OUTSIDE_PLATE",
+    "TR:1F:SITE-cdc894c0f0fd69c9:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -182722.5,
+     -791893.5
+    ],
+    [
+     -182122.5,
+     -791893.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "1F-W08",
+   "floor": "1F",
+   "type": "GLAZED_DOOR_CANDIDATE",
+   "r2_kind": "WINDOW",
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.552,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": null,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "GLAZED_DOOR_CANDIDATE",
+    "state": "BLOCKED"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "1F|ALSENAN_P7757_DXF|H2909||SEGMENT|0|200.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:1F:SITE-60a08def069f0e48:R",
+    "OUTSIDE_PLATE"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -175322.5,
+     -802798.7
+    ],
+    [
+     -175322.5,
+     -801246.3
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "1F-W09",
+   "floor": "1F",
+   "type": "GLAZED_DOOR_CANDIDATE",
+   "r2_kind": "WINDOW",
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.552,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": null,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "GLAZED_DOOR_CANDIDATE",
+    "state": "BLOCKED"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "1F|ALSENAN_P7757_DXF|H2911||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:1F:SITE-60a08def069f0e48:R",
+    "OUTSIDE_PLATE"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -175322.5,
+     -800753.1
+    ],
+    [
+     -175322.5,
+     -799200.8
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "1F-W10",
+   "floor": "1F",
+   "type": "WINDOW",
+   "r2_kind": "WINDOW",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.5,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 0.713,
+    "state": "VERIFIED_COMPLETE",
+    "authority": "CROSS_VERIFIED_REPEATED_TYPE",
+    "ref": "R2 RASTER_DERIVED / RASTER_TYPE_MATCH"
+   },
+   "sill_m": 1.687,
+   "area": {
+    "area_m2": 0.3565,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "function": {
+    "value": "WINDOW",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "1F|ALSENAN_P7757_DXF|H2913||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:1F:SITE-2f6cf2b5bebbd966:R",
+    "OUTSIDE_PLATE"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -175322.5,
+     -797101.2
+    ],
+    [
+     -175322.5,
+     -796601.2
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "1F-W11",
+   "floor": "1F",
+   "type": "GLAZED_DOOR_CANDIDATE",
+   "r2_kind": "WINDOW",
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.2,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.363,
+    "state": "PROVISIONAL",
+    "authority": "SCALED_SOURCE_SINGLE",
+    "ref": "R2 PROVISIONAL_SOURCE_DERIVED / RASTER_TYPE_MATCH_SINGLE"
+   },
+   "sill_m": 0.715,
+   "area": {
+    "area_m2": 2.8356,
+    "state": "PROVISIONAL"
+   },
+   "function": {
+    "value": "GLAZED_DOOR_CANDIDATE",
+    "state": "BLOCKED"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "1F|ALSENAN_P7757_DXF|H2800||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "OUTSIDE_PLATE",
+    "TR:1F:SITE-60a08def069f0e48:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -189992.5,
+     -794243.5
+    ],
+    [
+     -189992.5,
+     -793043.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "1F-W12",
+   "floor": "1F",
+   "type": "GLAZED_DOOR_CANDIDATE",
+   "r2_kind": "WINDOW",
+   "flags": [
+    "GLAZED_DOOR_CANDIDATE"
+   ],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 2.45,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": null,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "GLAZED_DOOR_CANDIDATE",
+    "state": "BLOCKED"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "1F|ALSENAN_P7757_DXF|H2874||SEGMENT|0|2800.0",
+    "class": "RC_COLUMN_INTERFACE",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "OUTSIDE_PLATE",
+    "TR:1F:SITE-da154e7546d18013:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -194392.5,
+     -799775.3
+    ],
+    [
+     -194392.5,
+     -797325.5
+    ]
+   ],
+   "lintel_depth_m": 0.3
+  },
+  {
+   "id": "2F-D-I4794",
+   "floor": "2F",
+   "type": "EXTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.0,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.123,
+    "state": "PROVISIONAL",
+    "authority": "BUDGET",
+    "ref": "R2 PROVISIONAL_GEOMETRIC_INFERENCE / NO_WIDTH_MATCH"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 2.123,
+    "state": "PROVISIONAL"
+   },
+   "function": {
+    "value": "EXTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "2F|ALSENAN_P7757_DXF|H4737||SEGMENT|0|0.0",
+    "class": "MASONRY_150",
+    "width_mm": 150.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:2F:SITE-22c718c6fc156ebe:R",
+    "OUTSIDE_PLATE"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -234269.4,
+     -798593.5
+    ],
+    [
+     -233379.4,
+     -798593.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "2F-D-I4795",
+   "floor": "2F",
+   "type": "INTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.8,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.123,
+    "state": "PROVISIONAL",
+    "authority": "BUDGET",
+    "ref": "R2 PROVISIONAL_GEOMETRIC_INFERENCE / NO_WIDTH_MATCH"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 1.6984,
+    "state": "PROVISIONAL"
+   },
+   "function": {
+    "value": "INTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "2F|ALSENAN_P7757_DXF|H4751||SEGMENT|0|0.0",
+    "class": "MASONRY_150",
+    "width_mm": 150.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:2F:SITE-ae46ec7518ab613e:R",
+    "TR:2F:SITE-2e3bac611a8fb491:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -230195.2,
+     -794684.2
+    ],
+    [
+     -230195.2,
+     -793994.2
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "2F-D-I4802",
+   "floor": "2F",
+   "type": "INTERNAL_DOOR",
+   "r2_kind": "DOOR",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.9,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 2.123,
+    "state": "PROVISIONAL",
+    "authority": "SCALED_SOURCE_SINGLE",
+    "ref": "R2 PROVISIONAL_SOURCE_DERIVED / RASTER_TYPE_MATCH_SINGLE"
+   },
+   "sill_m": 0.0,
+   "area": {
+    "area_m2": 1.9107,
+    "state": "PROVISIONAL"
+   },
+   "function": {
+    "value": "INTERNAL_DOOR",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "2F|ALSENAN_P7757_DXF|H4749||SEGMENT|0|2200.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:2F:SITE-22c718c6fc156ebe:R",
+    "TR:2F:SITE-2e3bac611a8fb491:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -230045.2,
+     -798281.9
+    ],
+    [
+     -230045.2,
+     -797491.9
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "2F-W01",
+   "floor": "2F",
+   "type": "WINDOW",
+   "r2_kind": "WINDOW",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.0,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 0.589,
+    "state": "PROVISIONAL",
+    "authority": "SCALED_SOURCE_SINGLE",
+    "ref": "R2 PROVISIONAL_SOURCE_DERIVED / RASTER_TYPE_MATCH_SINGLE"
+   },
+   "sill_m": 1.584,
+   "area": {
+    "area_m2": 0.589,
+    "state": "PROVISIONAL"
+   },
+   "function": {
+    "value": "WINDOW",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "2F|ALSENAN_P7757_DXF|H4764||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "TR:2F:SITE-fd5fd08ac9eb9313:R",
+    "TR:2F:SITE-22c718c6fc156ebe:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -231645.2,
+     -797093.5
+    ],
+    [
+     -230645.2,
+     -797093.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "2F-W02",
+   "floor": "2F",
+   "type": "WINDOW",
+   "r2_kind": "WINDOW",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.0,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 0.589,
+    "state": "PROVISIONAL",
+    "authority": "SCALED_SOURCE_SINGLE",
+    "ref": "R2 PROVISIONAL_SOURCE_DERIVED / RASTER_TYPE_MATCH_SINGLE"
+   },
+   "sill_m": 1.584,
+   "area": {
+    "area_m2": 0.589,
+    "state": "PROVISIONAL"
+   },
+   "function": {
+    "value": "WINDOW",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "2F|ALSENAN_P7757_DXF|H4727||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "OUTSIDE_PLATE",
+    "TR:2F:SITE-22c718c6fc156ebe:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -233345.2,
+     -791893.5
+    ],
+    [
+     -232345.2,
+     -791893.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "2F-W03",
+   "floor": "2F",
+   "type": "WINDOW",
+   "r2_kind": "WINDOW",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 0.6,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": null,
+    "state": "BLOCKED",
+    "authority": "BLOCKED",
+    "ref": null
+   },
+   "sill_m": null,
+   "area": {
+    "area_m2": null,
+    "state": "BLOCKED",
+    "why": "an opening area needs an established width AND height"
+   },
+   "function": {
+    "value": "WINDOW",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "2F|ALSENAN_P7757_DXF|H4726||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "OUTSIDE_PLATE",
+    "TR:2F:SITE-ae46ec7518ab613e:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -231670.2,
+     -791893.5
+    ],
+    [
+     -231070.2,
+     -791893.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "2F-W04",
+   "floor": "2F",
+   "type": "WINDOW",
+   "r2_kind": "WINDOW",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.2,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 1.433,
+    "state": "PROVISIONAL",
+    "authority": "SCALED_SOURCE_SINGLE",
+    "ref": "R2 PROVISIONAL_SOURCE_DERIVED / RASTER_TYPE_MATCH_SINGLE"
+   },
+   "sill_m": 1.002,
+   "area": {
+    "area_m2": 1.7196,
+    "state": "PROVISIONAL"
+   },
+   "function": {
+    "value": "WINDOW",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "2F|ALSENAN_P7757_DXF|H4725||SEGMENT|0|0.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "OUTSIDE_PLATE",
+    "TR:2F:SITE-2e3bac611a8fb491:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -229775.2,
+     -791893.5
+    ],
+    [
+     -228575.2,
+     -791893.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  },
+  {
+   "id": "2F-W05",
+   "floor": "2F",
+   "type": "WINDOW",
+   "r2_kind": "WINDOW",
+   "flags": [],
+   "count": {
+    "value": 1,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "width": {
+    "m": 1.2,
+    "state": "VERIFIED_COMPLETE"
+   },
+   "height": {
+    "m": 1.433,
+    "state": "PROVISIONAL",
+    "authority": "SCALED_SOURCE_SINGLE",
+    "ref": "R2 PROVISIONAL_SOURCE_DERIVED / RASTER_TYPE_MATCH_SINGLE"
+   },
+   "sill_m": 1.002,
+   "area": {
+    "area_m2": 1.7196,
+    "state": "PROVISIONAL"
+   },
+   "function": {
+    "value": "WINDOW",
+    "state": "VERIFIED_COMPLETE"
+   },
+   "material": {
+    "value": "BY_SPEC",
+    "state": "BLOCKED",
+    "why": "no door / window schedule or specification in the source"
+   },
+   "host_wall": {
+    "piece": "2F|ALSENAN_P7757_DXF|H4743||SEGMENT|0|200.0",
+    "class": "MASONRY_200",
+    "width_mm": 200.0
+   },
+   "host_state": "VERIFIED_COMPLETE",
+   "room_adjacency": [
+    "OUTSIDE_PLATE",
+    "TR:2F:SITE-22c718c6fc156ebe:R"
+   ],
+   "adjacency_state": "VERIFIED_COMPLETE",
+   "geometry": [
+    [
+     -234845.2,
+     -794243.5
+    ],
+    [
+     -234845.2,
+     -793043.5
+    ]
+   ],
+   "lintel_depth_m": 0.2
+  }
+ ],
+ "height_ladder": [
+  "EXACT_SOURCE",
+  "TYPE_SCHEDULE_SOURCE",
+  "CROSS_VERIFIED_REPEATED_TYPE",
+  "OWNER_PROJECT_FACT",
+  "SCALED_SOURCE_SINGLE",
+  "URBAN_FALLBACK",
+  "BUDGET",
+  "BLOCKED"
+ ],
+ "counts": {
+  "count": {
+   "VERIFIED_COMPLETE": 60
+  },
+  "width": {
+   "VERIFIED_COMPLETE": 59,
+   "BLOCKED": 1
+  },
+  "height": {
+   "PROVISIONAL": 21,
+   "BLOCKED": 27,
+   "VERIFIED_COMPLETE": 12
+  },
+  "area": {
+   "PROVISIONAL": 21,
+   "BLOCKED": 27,
+   "VERIFIED_COMPLETE": 12
+  },
+  "function": {
+   "VERIFIED_COMPLETE": 36,
+   "BLOCKED": 24
+  },
+  "material": {
+   "BLOCKED": 60
+  }
+ },
+ "types": {
+  "INTERNAL_DOOR": 23,
+  "EXTERNAL_DOOR": 4,
+  "GLAZED_DOOR_CANDIDATE": 24,
+  "WINDOW": 9
+ },
+ "height_authority": {
+  "BUDGET": 3,
+  "SCALED_SOURCE_SINGLE": 18,
+  "BLOCKED": 27,
+  "CROSS_VERIFIED_REPEATED_TYPE": 11,
+  "EXACT_SOURCE": 1
+ },
+ "rule": "count / width / height / function / material / host / adjacency each carry their own state; area only with width AND height; NO DEFAULT WINDOW HEIGHT; a glazed door candidate is never collapsed"
+}

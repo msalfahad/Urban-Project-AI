@@ -1,0 +1,19 @@
+ROW_ID,ROW_KIND,ITEM,COMPONENT_ID,VALUE,UNIT,AUTHORITY,M3,LANE,MISSING,NOTE
+CG-01,GEOMETRY,water outline (inner S-BW 7C5),,8.578838175125,m2,CAD_GEOMETRY,,GEOMETRY_ESTABLISHED,[],3.10 x 3.10 D-shape: rectangle 1.55 x 3.10 + semicircle R1.55 (exact arc)
+CG-02,GEOMETRY,structural outline (outer S-BW 7C6) = base footprint,,10.935563750809,m2,CAD_GEOMETRY,,GEOMETRY_ESTABLISHED,[],3.50 x 3.50 D-shape: rectangle 1.75 x 3.50 + semicircle R1.75; stated 350 N-S on the architectural plan
+CG-03,GEOMETRY,wall plan band (outline minus water),,2.356725575685,m2,CAD_GEOMETRY,,GEOMETRY_ESTABLISHED,[],uniform 200 mm band (stated 20 cm in the section); tiled exactly by the four wall runs
+CG-04,GEOMETRY,PL-WALL-RUN-E band,,0.7,m2,CAD_GEOMETRY,,GEOMETRY_ESTABLISHED,[],"inner face 3.100000 m, outer face 3.900000 m"
+CG-05,GEOMETRY,PL-WALL-RUN-N band,,0.31,m2,CAD_GEOMETRY,,GEOMETRY_ESTABLISHED,[],"inner face 1.550000 m, outer face 1.550000 m"
+CG-06,GEOMETRY,PL-WALL-RUN-S band,,0.31,m2,CAD_GEOMETRY,,GEOMETRY_ESTABLISHED,[],"inner face 1.550000 m, outer face 1.550000 m"
+CG-07,GEOMETRY,PL-WALL-RUN-W band,,1.036725575685,m2,CAD_GEOMETRY,,GEOMETRY_ESTABLISHED,[],"inner face 4.869469 m, outer face 5.497787 m"
+CG-08,GEOMETRY,water perimeter / outer perimeter,,"[11.069468613064197, 12.497787143782134]",m,CAD_GEOMETRY,,GEOMETRY_ESTABLISHED,[],exact lines and arcs
+CQ-01,QUANTITY,deep-end base: plan extent x 0.40,PL-BASE-DEEP,,m3,,,BLOCKED_UNQUANTIFIED,"[""plan extent of the deep zone ('AS PER ARCH' 1985; not printed in the architectural set)""]","thickness stated (40, dimension 193F); the zone's plan area is not"
+CQ-02,QUANTITY,sloping base,PL-BASE-SLOPE,,m3,,,BLOCKED_UNQUANTIFIED,"[""plan extent and rise ('AS PER ARCH' 1977)"", ""thickness (drawn only)""]",a plane slab: V = A x t / cos(theta)
+CQ-03,QUANTITY,shallow-end base,PL-BASE-SHALLOW,,m3,,,BLOCKED_UNQUANTIFIED,"[""plan extent ('AS PER ARCH' 1969)"", ""thickness (drawn equal to 40, not dimensioned)""]",
+CQ-04,QUANTITY,PL-WALL-RUN-E: band x height above the base top,PL-WALL-RUN-E,,m3,,,BLOCKED_UNQUANTIFIED,"[""wall height above the base top ('AS PER ARCH' 1931 / 1993; varies from the deep to the shallow end)""]",band 0.700000 m2 established; the deep / shallow end is not identified on plan
+CQ-05,QUANTITY,PL-WALL-RUN-N: band x height above the base top,PL-WALL-RUN-N,,m3,,,BLOCKED_UNQUANTIFIED,"[""wall height above the base top ('AS PER ARCH' 1931 / 1993; varies from the deep to the shallow end)""]",band 0.310000 m2 established; the deep / shallow end is not identified on plan
+CQ-06,QUANTITY,PL-WALL-RUN-S: band x height above the base top,PL-WALL-RUN-S,,m3,,,BLOCKED_UNQUANTIFIED,"[""wall height above the base top ('AS PER ARCH' 1931 / 1993; varies from the deep to the shallow end)""]",band 0.310000 m2 established; the deep / shallow end is not identified on plan
+CQ-07,QUANTITY,PL-WALL-RUN-W: band x height above the base top,PL-WALL-RUN-W,,m3,,,BLOCKED_UNQUANTIFIED,"[""wall height above the base top ('AS PER ARCH' 1931 / 1993; varies from the deep to the shallow end)""]",band 1.036726 m2 established; the deep / shallow end is not identified on plan
+CO-01,OWNERSHIP_RULE,wall / base intersection,PL-BASE,,,pool_qto.wall_base_split,,RULE,[],"STRUCTURAL_FOOTPRINT x BASE_THICKNESS (wall footprint below the base top included); WALL_BAND x HEIGHT_ABOVE_BASE_TOP; the band x base-thickness prism is owned once, by the BASE"
+CO-02,OWNERSHIP_RULE,east wall on the boundary-wall line,PL-WALL-RUN-E,,,GBP S-BW / S-BOUN,,RULE,[],the S-BOUN boundary wall stops at the pool corners (plan overlap 0 m2); the pool owns the east wall between its corners; any wall above court level on that line is not pool
+CO-03,OWNERSHIP_RULE,curved ground beam round the pool,,499.907474866553,mm clear,GBP layer 1,,RULE,[],ground-beam arcs 157 / 158 (S5 / S6 owned) lie outside the pool outline: no shared concrete

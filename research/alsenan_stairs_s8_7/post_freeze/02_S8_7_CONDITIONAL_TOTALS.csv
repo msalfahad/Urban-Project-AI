@@ -1,0 +1,5 @@
+STAIR_ID,RELEASED_M3,SENSITIVITY_LOW_M3,SENSITIVITY_HIGH_M3,RELEASED_PLUS_SENSITIVITY_LOW,RELEASED_PLUS_SENSITIVITY_HIGH,NOT_COMPUTED,NOTE
+ST-A,0.2496,4.073112,4.258467,4.322712,4.508067,"[""A1-W1"", ""A2-W1""]",sensitivity is context for the comparison only; it is never a quantity
+ST-B,0,0,0,0,0,"[""B-F1""]",sensitivity is context for the comparison only; it is never a quantity
+ST-C,0.266983,0.630166,0.630166,0.897149,0.897149,"[""C-F1""]",sensitivity is context for the comparison only; it is never a quantity
+ST-D,0,0,0,0,0,"[""D-F1""]",sensitivity is context for the comparison only; it is never a quantity

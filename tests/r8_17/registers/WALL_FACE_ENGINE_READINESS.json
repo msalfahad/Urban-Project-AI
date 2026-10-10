@@ -1,0 +1,33 @@
+{
+ "SCHEMA": "URBAN_R8_17_WALL_FACE_ENGINE_READINESS_V1",
+ "implemented": true,
+ "frozen": "e0d2781be307071ccc85cad2578529d920446beb",
+ "blind_run": true,
+ "trades": {
+  "WALL_TILE": {
+   "state": "BLOCKED",
+   "blockers": [
+    "AREA_RECONCILIATION_FAILED",
+    "WF-O1: the engine's second-form area check omits the wall plane across a window - the PAINTRY (the only wet / service room with a window) fails closed",
+    "WET_REVEAL_TREATMENT_NOT_ESTABLISHED (owner question)"
+   ]
+  },
+  "PLASTER": {
+   "state": "BLOCKED",
+   "blockers": [
+    "DRY_WALL_HEIGHT_NOT_ESTABLISHED (owner question)",
+    "WF-O1 (every dry room has a window)"
+   ]
+  },
+  "PAINT": {
+   "state": "BLOCKED",
+   "blockers": [
+    "DRY_WALL_HEIGHT_NOT_ESTABLISHED (owner question)",
+    "WF-O1",
+    "column / duct paint authority not stated"
+   ]
+  }
+ },
+ "ready_for_publication": false,
+ "next": "R8.18: WALL_FACE_SURFACE_POLICY_V2 (WF-O1 fixed, the blind-script wiring of R8.17 folded into the frozen lab path) -> synthetic -> freeze -> blind; then the owner's height and reveal answers"
+}

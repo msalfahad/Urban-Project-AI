@@ -1,0 +1,183 @@
+{
+ "SCHEMA": "URBAN_QORTUBA_RC1_CEILING_REGISTER_V1",
+ "item": {
+  "qty": 140.637,
+  "unit": "m2",
+  "status": "COMPUTED_SHADOW_COMPLETE",
+  "room_breakdown": [
+   {
+    "key": "SITE-1c4abf65f9b5db1e",
+    "label": "BATH (1) [1c4abf65]",
+    "qty": 8.5525,
+    "kind": "ROOM",
+    "site_area_m2": 8.5525,
+    "inside_effects": []
+   },
+   {
+    "key": "SITE-5f1762f1a93b91ca",
+    "label": "BED.ROOM (1) [5f1762f1]",
+    "qty": 19.2725,
+    "kind": "ROOM",
+    "site_area_m2": 19.2725,
+    "inside_effects": []
+   },
+   {
+    "key": "SITE-77a2130eb275604c",
+    "label": "HALL / whgm",
+    "qty": 42.41,
+    "kind": "ROOM",
+    "site_area_m2": 42.649289,
+    "inside_effects": [
+     {
+      "strip": "OP-997f14d12b8e9bc1",
+      "effect_m2": -0.239289,
+      "state": "SOFFIT_EXCLUDED_FROM_CEILING"
+     }
+    ]
+   },
+   {
+    "key": "SITE-8c1c7563d5252c50",
+    "label": "PAINTRY",
+    "qty": 11.685,
+    "kind": "ROOM",
+    "site_area_m2": 11.685,
+    "inside_effects": []
+   },
+   {
+    "key": "SITE-a2b19efc492a6d0b",
+    "label": "BATH (2) [a2b19efc]",
+    "qty": 5.1,
+    "kind": "ROOM",
+    "site_area_m2": 5.1,
+    "inside_effects": []
+   },
+   {
+    "key": "SITE-a6405850100155ac",
+    "label": "DRESS / M.B.ROOM",
+    "qty": 33.2,
+    "kind": "ROOM",
+    "site_area_m2": 33.2,
+    "inside_effects": []
+   },
+   {
+    "key": "SITE-daca396d6d730e60",
+    "label": "BED.ROOM (2) [daca396d]",
+    "qty": 16.327,
+    "kind": "ROOM",
+    "site_area_m2": 16.327,
+    "inside_effects": []
+   },
+   {
+    "key": "SITE-fe8ed5548fb4310e",
+    "label": "BATH (3) [fe8ed554]",
+    "qty": 4.09,
+    "kind": "ROOM",
+    "site_area_m2": 4.09,
+    "inside_effects": []
+   }
+  ]
+ },
+ "row_breakdown": {
+  "entries": [
+   {
+    "key": "SITE-1c4abf65f9b5db1e",
+    "kind": "ROOM",
+    "zones": [
+     "BATH"
+    ],
+    "qty": 8.5525,
+    "site_area_m2": 8.5525,
+    "inside_effects": []
+   },
+   {
+    "key": "SITE-5f1762f1a93b91ca",
+    "kind": "ROOM",
+    "zones": [
+     "BED.ROOM"
+    ],
+    "qty": 19.2725,
+    "site_area_m2": 19.2725,
+    "inside_effects": []
+   },
+   {
+    "key": "SITE-77a2130eb275604c",
+    "kind": "ROOM",
+    "zones": [
+     "HALL",
+     "whgm"
+    ],
+    "qty": 42.410000000000004,
+    "site_area_m2": 42.649289,
+    "inside_effects": [
+     {
+      "strip": "OP-997f14d12b8e9bc1",
+      "effect_m2": -0.239289,
+      "state": "SOFFIT_EXCLUDED_FROM_CEILING"
+     }
+    ]
+   },
+   {
+    "key": "SITE-8c1c7563d5252c50",
+    "kind": "ROOM",
+    "zones": [
+     "PAINTRY"
+    ],
+    "qty": 11.685,
+    "site_area_m2": 11.685,
+    "inside_effects": []
+   },
+   {
+    "key": "SITE-a2b19efc492a6d0b",
+    "kind": "ROOM",
+    "zones": [
+     "BATH"
+    ],
+    "qty": 5.1,
+    "site_area_m2": 5.1,
+    "inside_effects": []
+   },
+   {
+    "key": "SITE-a6405850100155ac",
+    "kind": "ROOM",
+    "zones": [
+     "DRESS",
+     "M.B.ROOM"
+    ],
+    "qty": 33.2,
+    "site_area_m2": 33.2,
+    "inside_effects": []
+   },
+   {
+    "key": "SITE-daca396d6d730e60",
+    "kind": "ROOM",
+    "zones": [
+     "BED.ROOM"
+    ],
+    "qty": 16.327,
+    "site_area_m2": 16.327,
+    "inside_effects": []
+   },
+   {
+    "key": "SITE-fe8ed5548fb4310e",
+    "kind": "ROOM",
+    "zones": [
+     "BATH"
+    ],
+    "qty": 4.09,
+    "site_area_m2": 4.09,
+    "inside_effects": []
+   }
+  ],
+  "sum": 140.63700000000003,
+  "value": 140.637,
+  "reconciles": true,
+  "tol": 5e-05
+ },
+ "handled": {
+  "BED.ROOM duct": "0.84 m2 footprint outside the site (built obstacle)",
+  "Hall / Lobby passage soffit": "excluded from the ceiling, counted once as the passage TOP_REVEAL",
+  "M.B.ROOM / DRESS passage": "full height: the ceiling continues",
+  "door strips": "their top is the door head reveal, never ceiling"
+ },
+ "regression_target_not_calibration": 140.637
+}

@@ -1,0 +1,2249 @@
+{
+ "christiannp_pairs": "NOT_PRESERVED_IN_THIS_ENVIRONMENT - the sealed run's raw pair list is not in the report as quoted and no raw output was delivered; no row below is a donor row",
+ "christiannp_parameters": {
+  "columns": "NOT_HELD",
+  "curved_walls": "NOT_HELD",
+  "de_duplication": "NOT_HELD",
+  "false_positive_prevention": "NOT_HELD",
+  "finish_lines": "NOT_HELD",
+  "intersections": "NOT_HELD",
+  "line_types": "NOT_HELD",
+  "nearest_pair_rule": "NOT_HELD",
+  "openings": "NOT_HELD",
+  "overlap_threshold": "NOT_HELD",
+  "parallel_tolerance": "NOT_HELD",
+  "short_segments": "NOT_HELD",
+  "source_layers": "NOT_HELD",
+  "t_junctions": "NOT_HELD",
+  "width_buckets": "NOT_HELD"
+ },
+ "reading": "the report's 200 mm length sits within 1.4 m of Urban's UNCLASSIFIED Method-B gross: ARITHMETIC_INFERENCE that the donor total is raw pairing before classification",
+ "report_m": {
+  "150": 79.971,
+  "200": 183.497
+ },
+ "report_minus_method_b_gross_m": {
+  "150": -5.757,
+  "200": -1.4
+ },
+ "rows": [
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2767||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2771||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.597,
+   "parts_m": {
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 0.572
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2768||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2772||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.5,
+   "parts_m": {
+    "PAIRED_WALL": 0.5
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2769||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2774||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 2.0,
+   "parts_m": {
+    "OPENING_SPAN": 1.147,
+    "PAIRED_WALL": 0.853
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2776||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2811||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 2.843,
+   "parts_m": {
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 2.818
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2793||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2795||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 2.562,
+   "parts_m": {
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 2.537
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2807||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2808||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 5.0,
+   "parts_m": {
+    "PAIRED_WALL": 5.0
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2809||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2843||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 2.25,
+   "parts_m": {
+    "OPENING_SPAN": 0.825,
+    "PAIRED_WALL": 1.425
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2809||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2844||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.263,
+   "parts_m": {
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 0.238
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2810||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2845||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.637,
+   "parts_m": {
+    "OPENING_SPAN": 0.637,
+    "PAIRED_WALL": 0.0
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2815||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2827||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 2.1,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.381,
+    "OPENING_SPAN": 0.815,
+    "PAIRED_WALL": 0.904
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2815||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2829||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 2.05,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.48,
+    "PAIRED_WALL": 1.569
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2816||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2829||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 1.8,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.056,
+    "PAIRED_WALL": 1.744
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2817||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2819||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.891,
+   "parts_m": {
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 0.866
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2821||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2823||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 1.8,
+   "parts_m": {
+    "PAIRED_WALL": 1.8
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2824||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2831||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 3.05,
+   "parts_m": {
+    "OPENING_SPAN": 1.38,
+    "PAIRED_WALL": 1.67
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2824||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2832||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 1.05,
+   "parts_m": {
+    "OPENING_SPAN": 0.615,
+    "PAIRED_WALL": 0.435
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2825||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2830||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 1.8,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.056,
+    "OPENING_SPAN": 0.715,
+    "PAIRED_WALL": 1.03
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H3081||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H3083||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.5,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.056,
+    "PAIRED_WALL": 0.445
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H3082||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H3084||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 2.116,
+   "parts_m": {
+    "OPENING_SPAN": 1.356,
+    "PAIRED_WALL": 0.76
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H3085||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H3087||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 1.191,
+   "parts_m": {
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 1.166
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H3100||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H3102||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 1.57,
+   "parts_m": {
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 1.545
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H3102||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H3103||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 2.4,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.711,
+    "OPENING_SPAN": 0.915,
+    "PAIRED_WALL": 0.774
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H3103||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H3105||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.825,
+   "parts_m": {
+    "OPENING_SPAN": 0.79,
+    "PAIRED_WALL": 0.035
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H3106||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H3107||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 2.45,
+   "parts_m": {
+    "OPENING_SPAN": 0.74,
+    "PAIRED_WALL": 1.71
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H3110||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H3113||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 2.05,
+   "parts_m": {
+    "OPENING_SPAN": 0.428,
+    "PAIRED_WALL": 1.622
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H3112||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H3114||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 1.173,
+   "parts_m": {
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 1.148
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2760||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2914||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.628,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.055,
+    "OPENING_SPAN": 0.573
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2761||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2766||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 4.2,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.661,
+    "OPENING_SPAN": 0.775,
+    "PAIRED_WALL": 2.764
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2761||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2847||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.55,
+   "parts_m": {
+    "PAIRED_WALL": 0.55
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2761||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2848||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 1.65,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.005,
+    "PAIRED_WALL": 1.645
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "COLUMN_OVERLAP_POLICY",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2762||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2846||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.85,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.456,
+    "PAIRED_WALL": 0.395
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2763||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2778||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.87,
+   "parts_m": {
+    "PAIRED_WALL": 0.87
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2763||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2779||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.875,
+   "parts_m": {
+    "PAIRED_WALL": 0.875
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2764||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2780||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.375,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.006,
+    "PAIRED_WALL": 0.369
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2765||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2782||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 1.4,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.005,
+    "PAIRED_WALL": 1.395
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2783||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2788||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.725,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.005,
+    "PAIRED_WALL": 0.72
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2785||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2789||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.725,
+   "parts_m": {
+    "PAIRED_WALL": 0.725
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2786||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2790||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 1.049,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.117,
+    "OPENING_SPAN": 0.565,
+    "PAIRED_WALL": 0.367
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2786||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H3109||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 1.45,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.444,
+    "OPENING_SPAN": 0.715,
+    "PAIRED_WALL": 0.291
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2787||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2791||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 1.049,
+   "parts_m": {
+    "PAIRED_WALL": 1.049
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2787||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2796||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 10.673,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 1.728,
+    "OPENING_SPAN": 0.825,
+    "PAIRED_WALL": 8.12
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2787||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2797||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 1.1,
+   "parts_m": {
+    "PAIRED_WALL": 1.1
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2787||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2798||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 1.0,
+   "parts_m": {
+    "PAIRED_WALL": 1.0
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2787||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2799||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 1.1,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.305,
+    "OPENING_SPAN": 0.794
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2800||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2803||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 1.05,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.305,
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 0.72
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "DUPLICATE_FACE",
+   "confidence": "REJECT",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2800||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H3157||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 1.05,
+   "parts_m": {
+    "DUPLICATE_FACE": 1.05
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2801||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2804||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 2.05,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.511,
+    "OPENING_SPAN": 1.539
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2802||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2804||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.343,
+   "parts_m": {
+    "OPENING_SPAN": 0.343,
+    "PAIRED_WALL": 0.0
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2812||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2839||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.235,
+   "parts_m": {
+    "OPENING_SPAN": 0.235
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2813||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2840||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.335,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.056,
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 0.255
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2813||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2841||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.4,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.005,
+    "PAIRED_WALL": 0.395
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2814||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2842||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.4,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.006,
+    "PAIRED_WALL": 0.395
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "COLUMN_OVERLAP_POLICY",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2822||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2833||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 1.8,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 1.111,
+    "PAIRED_WALL": 0.689
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2834||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2838||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 3.0,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.311,
+    "PAIRED_WALL": 2.689
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2835||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2838||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 1.8,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.611,
+    "PAIRED_WALL": 1.189
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2836||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2837||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 1.8,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.011,
+    "PAIRED_WALL": 1.789
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2874||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2878||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 2.45,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.305,
+    "OPENING_SPAN": 2.144
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2874||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2879||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 1.218,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.606,
+    "OPENING_SPAN": 0.613
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2875||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2880||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.832,
+   "parts_m": {
+    "OPENING_SPAN": 0.832
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2909||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2917||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.795,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.005,
+    "OPENING_SPAN": 0.789
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "DUPLICATE_FACE",
+   "confidence": "REJECT",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2909||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2918||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.795,
+   "parts_m": {
+    "DUPLICATE_FACE": 0.795
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2911||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2919||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.493,
+   "parts_m": {
+    "OPENING_SPAN": 0.493,
+    "PAIRED_WALL": 0.0
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2912||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2920||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.807,
+   "parts_m": {
+    "OPENING_SPAN": 0.807,
+    "PAIRED_WALL": 0.0
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "COLUMN_OVERLAP_POLICY",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2912||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2921||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 1.142,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.873,
+    "OPENING_SPAN": 0.269
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2913||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2922||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.458,
+   "parts_m": {
+    "OPENING_SPAN": 0.458,
+    "PAIRED_WALL": 0.0
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2914||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H2923||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 0.875,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.056,
+    "OPENING_SPAN": 0.82
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H2924||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H3108||SEGMENT|0",
+   "floor": "1F",
+   "overlap_length_m": 4.2,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.811,
+    "OPENING_SPAN": 3.389
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H4736||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H4738||SEGMENT|0",
+   "floor": "2F",
+   "overlap_length_m": 0.416,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.028,
+    "OPENING_SPAN": 0.388
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H4737||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H4739||SEGMENT|0",
+   "floor": "2F",
+   "overlap_length_m": 3.084,
+   "parts_m": {
+    "OPENING_SPAN": 0.64,
+    "PAIRED_WALL": 2.444
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H4737||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H4740||SEGMENT|0",
+   "floor": "2F",
+   "overlap_length_m": 3.0,
+   "parts_m": {
+    "OPENING_SPAN": 0.815,
+    "PAIRED_WALL": 2.185
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H4747||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H4751||SEGMENT|0",
+   "floor": "2F",
+   "overlap_length_m": 1.951,
+   "parts_m": {
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 1.926
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H4748||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H4752||SEGMENT|0",
+   "floor": "2F",
+   "overlap_length_m": 0.249,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.005,
+    "OPENING_SPAN": 0.244
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H4724||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H4729||SEGMENT|0",
+   "floor": "2F",
+   "overlap_length_m": 1.53,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.606,
+    "PAIRED_WALL": 0.924
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H4725||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H4730||SEGMENT|0",
+   "floor": "2F",
+   "overlap_length_m": 0.27,
+   "parts_m": {
+    "PAIRED_WALL": 0.27
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H4725||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H4731||SEGMENT|0",
+   "floor": "2F",
+   "overlap_length_m": 0.875,
+   "parts_m": {
+    "PAIRED_WALL": 0.875
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H4726||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H4732||SEGMENT|0",
+   "floor": "2F",
+   "overlap_length_m": 0.375,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.006,
+    "PAIRED_WALL": 0.369
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H4727||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H4734||SEGMENT|0",
+   "floor": "2F",
+   "overlap_length_m": 1.4,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.005,
+    "PAIRED_WALL": 1.395
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H4742||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H4744||SEGMENT|0",
+   "floor": "2F",
+   "overlap_length_m": 0.343,
+   "parts_m": {
+    "OPENING_SPAN": 0.343,
+    "PAIRED_WALL": 0.0
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H4743||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H4792||SEGMENT|0",
+   "floor": "2F",
+   "overlap_length_m": 1.05,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.305,
+    "OPENING_SPAN": 0.745
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H4744||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H4791||SEGMENT|0",
+   "floor": "2F",
+   "overlap_length_m": 4.2,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 1.181,
+    "OPENING_SPAN": 3.019
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H4745||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H4763||SEGMENT|0",
+   "floor": "2F",
+   "overlap_length_m": 0.4,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.005,
+    "PAIRED_WALL": 0.395
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H4746||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H4764||SEGMENT|0",
+   "floor": "2F",
+   "overlap_length_m": 0.4,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.006,
+    "PAIRED_WALL": 0.395
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "COLUMN_OVERLAP_POLICY",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H4749||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H4755||SEGMENT|0",
+   "floor": "2F",
+   "overlap_length_m": 1.8,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.811,
+    "OPENING_SPAN": 0.206,
+    "PAIRED_WALL": 0.783
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H4749||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H4756||SEGMENT|0",
+   "floor": "2F",
+   "overlap_length_m": 0.248,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.005,
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 0.218
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H4753||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H4754||SEGMENT|0",
+   "floor": "2F",
+   "overlap_length_m": 6.45,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.411,
+    "PAIRED_WALL": 6.039
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H4758||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H4762||SEGMENT|0",
+   "floor": "2F",
+   "overlap_length_m": 3.0,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.311,
+    "PAIRED_WALL": 2.689
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H4759||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H4762||SEGMENT|0",
+   "floor": "2F",
+   "overlap_length_m": 1.8,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.611,
+    "PAIRED_WALL": 1.189
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H4760||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H4761||SEGMENT|0",
+   "floor": "2F",
+   "overlap_length_m": 1.8,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.011,
+    "OPENING_SPAN": 0.665,
+    "PAIRED_WALL": 1.124
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H189||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H735||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.893,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.056,
+    "PAIRED_WALL": 0.838
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H190||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H736||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.962,
+   "parts_m": {
+    "OPENING_SPAN": 0.915,
+    "PAIRED_WALL": 0.047
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H210||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H524||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.794,
+   "parts_m": {
+    "OPENING_SPAN": 0.146,
+    "PAIRED_WALL": 0.648
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H277||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H279||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.626,
+   "parts_m": {
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 0.601
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H295||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H297||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 2.25,
+   "parts_m": {
+    "OPENING_SPAN": 0.715,
+    "PAIRED_WALL": 1.535
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H295||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H298||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.55,
+   "parts_m": {
+    "OPENING_SPAN": 0.55
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H296||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H299||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.55,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.056,
+    "PAIRED_WALL": 0.494
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H301||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H303||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 2.25,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.005,
+    "PAIRED_WALL": 2.244
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H302||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H303||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 2.1,
+   "parts_m": {
+    "PAIRED_WALL": 2.1
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H304||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H306||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.43,
+   "parts_m": {
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 0.405
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H305||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H310||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 3.0,
+   "parts_m": {
+    "OPENING_SPAN": 1.2,
+    "PAIRED_WALL": 1.8
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H308||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H309||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.3,
+   "parts_m": {
+    "PAIRED_WALL": 1.3
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H528||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H545||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.637,
+   "parts_m": {
+    "PAIRED_WALL": 1.637
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H529||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H545||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.1,
+   "parts_m": {
+    "PAIRED_WALL": 1.1
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H688||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H690||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.5,
+   "parts_m": {
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 0.475
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H733||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H734||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 2.0,
+   "parts_m": {
+    "OPENING_SPAN": 0.715,
+    "PAIRED_WALL": 1.285
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H737||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H739||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.559,
+   "parts_m": {
+    "OPENING_SPAN": 0.559
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H738||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H740||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 4.024,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 1.011,
+    "OPENING_SPAN": 0.563,
+    "PAIRED_WALL": 2.45
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H741||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H743||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.279,
+   "parts_m": {
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 0.254
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H792||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H793||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.256,
+   "parts_m": {
+    "PAIRED_WALL": 1.256
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H795||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H799||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.867,
+   "parts_m": {
+    "OPENING_SPAN": 0.121,
+    "PAIRED_WALL": 0.746
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H804||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H805||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.279,
+   "parts_m": {
+    "PAIRED_WALL": 1.279
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H806||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H807||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 2.355,
+   "parts_m": {
+    "OPENING_SPAN": 1.132,
+    "PAIRED_WALL": 1.223
+   },
+   "width_mm": 150.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H133||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H273||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.05,
+   "parts_m": {
+    "OPENING_SPAN": 0.915,
+    "PAIRED_WALL": 0.135
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H133||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H274||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.5,
+   "parts_m": {
+    "PAIRED_WALL": 1.5
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H133||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H275||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.75,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.255,
+    "PAIRED_WALL": 1.494
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H133||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H276||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.5,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.006,
+    "PAIRED_WALL": 1.494
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H133||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H281||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 3.83,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.035,
+    "PAIRED_WALL": 3.795
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H138||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H260||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 15.97,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 2.338,
+    "PAIRED_WALL": 13.632
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H139||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H181||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.7,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.206,
+    "PAIRED_WALL": 0.494
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "COLUMN_OVERLAP_POLICY",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H140||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H182||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.468,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.305,
+    "PAIRED_WALL": 0.163
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H148||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H151||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.45,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.005,
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 0.419
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H154||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H166||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 2.8,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.206,
+    "PAIRED_WALL": 2.595
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H155||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H663||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.05,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.305,
+    "OPENING_SPAN": 0.745
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H156||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H664||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 2.05,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.511,
+    "OPENING_SPAN": 1.539
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H157||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H171||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.4,
+   "parts_m": {
+    "OPENING_SPAN": 0.4
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H157||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H664||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.3,
+   "parts_m": {
+    "OPENING_SPAN": 0.292,
+    "PAIRED_WALL": 0.008
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "COLUMN_OVERLAP_POLICY",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H158||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H172||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.8,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.505,
+    "OPENING_SPAN": 0.294
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H159||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H174||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.85,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.056,
+    "PAIRED_WALL": 0.794
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H160||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H175||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.05,
+   "parts_m": {
+    "PAIRED_WALL": 1.05
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H162||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H164||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 3.4,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.916,
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 2.458
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H187||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H542||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.4,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.006,
+    "OPENING_SPAN": 0.395
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H224||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H226||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.8,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.711,
+    "PAIRED_WALL": 1.089
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "COLUMN_OVERLAP_POLICY",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H224||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H227||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.8,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.706,
+    "PAIRED_WALL": 0.095
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "COLUMN_OVERLAP_POLICY",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H225||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H226||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.8,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.706,
+    "PAIRED_WALL": 0.095
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "DUPLICATE_FACE",
+   "confidence": "REJECT",
+   "face_handle_a": "ALSENAN_P7757_DXF|H225||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H227||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.8,
+   "parts_m": {
+    "DUPLICATE_FACE": 0.8
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H259||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H260||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 15.97,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 2.338,
+    "PAIRED_WALL": 13.632
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H263||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H292||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.633,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.005,
+    "PAIRED_WALL": 0.627
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H264||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H293||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.145,
+   "parts_m": {
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 1.12
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H265||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H294||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.612,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.205,
+    "OPENING_SPAN": 0.407
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H266||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H312||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.268,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.005,
+    "OPENING_SPAN": 0.262
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H268||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H313||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.632,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.406,
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 1.202
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H282||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H288||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.6,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.056,
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 0.519
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H283||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H289||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.6,
+   "parts_m": {
+    "OPENING_SPAN": 0.53,
+    "PAIRED_WALL": 0.07
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H287||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H291||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.45,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.305,
+    "PAIRED_WALL": 1.145
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H296||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H300||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.5,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.005,
+    "PAIRED_WALL": 0.494
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "MEDIUM",
+   "face_handle_a": "ALSENAN_P7757_DXF|H334||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H335||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.5,
+   "parts_m": {
+    "OPENING_SPAN": 0.715,
+    "PAIRED_WALL": 0.785
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "COLUMN_OVERLAP_POLICY",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H344||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H346||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.659,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.905,
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 0.729
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H525||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H541||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.4,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.005,
+    "PAIRED_WALL": 0.395
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "DUPLICATE_FACE",
+   "confidence": "REJECT",
+   "face_handle_a": "ALSENAN_P7757_DXF|H526||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H542||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.4,
+   "parts_m": {
+    "DUPLICATE_FACE": 0.4
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H527||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H544||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.4,
+   "parts_m": {
+    "OPENING_SPAN": 0.94,
+    "PAIRED_WALL": 0.46
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "COLUMN_OVERLAP_POLICY",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H530||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H546||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.8,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 1.111,
+    "PAIRED_WALL": 0.689
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H532||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H539||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.75,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.305,
+    "OPENING_SPAN": 1.444
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H534||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H540||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.8,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.611,
+    "OPENING_SPAN": 0.715,
+    "PAIRED_WALL": 0.474
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H535||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H537||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.3,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.005,
+    "PAIRED_WALL": 0.294
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H536||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H537||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.35,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.006,
+    "PAIRED_WALL": 1.345
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H622||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H696||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.453,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.005,
+    "OPENING_SPAN": 0.078,
+    "PAIRED_WALL": 1.369
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H625||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H698||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.375,
+   "parts_m": {
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 0.35
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H626||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H699||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.27,
+   "parts_m": {
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 0.245
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H627||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H700||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.23,
+   "parts_m": {
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 1.205
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H628||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H700||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 5.02,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.517,
+    "OPENING_SPAN": 2.25,
+    "PAIRED_WALL": 2.254
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "DUPLICATE_FACE",
+   "confidence": "REJECT",
+   "face_handle_a": "ALSENAN_P7757_DXF|H683||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H696||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.453,
+   "parts_m": {
+    "DUPLICATE_FACE": 1.453
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "OPENING_SPAN",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H685||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H697||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.375,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.005,
+    "OPENING_SPAN": 0.369
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "DUPLICATE_FACE",
+   "confidence": "REJECT",
+   "face_handle_a": "ALSENAN_P7757_DXF|H686||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H698||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.375,
+   "parts_m": {
+    "DUPLICATE_FACE": 0.375
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H691||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H698||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 1.271,
+   "parts_m": {
+    "OPENING_SPAN": 0.025,
+    "PAIRED_WALL": 1.246
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "COLUMN_OVERLAP_POLICY",
+   "confidence": "LOW",
+   "face_handle_a": "ALSENAN_P7757_DXF|H692||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H699||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 0.58,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.58
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "DUPLICATE_FACE",
+   "confidence": "REJECT",
+   "face_handle_a": "ALSENAN_P7757_DXF|H693||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H700||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 5.02,
+   "parts_m": {
+    "DUPLICATE_FACE": 5.02
+   },
+   "width_mm": 200.0
+  },
+  {
+   "accepted_reason": "PAIRED_WALL",
+   "confidence": "HIGH",
+   "face_handle_a": "ALSENAN_P7757_DXF|H822||SEGMENT|0",
+   "face_handle_b": "ALSENAN_P7757_DXF|H823||SEGMENT|0",
+   "floor": "GF",
+   "overlap_length_m": 2.65,
+   "parts_m": {
+    "COLUMN_OVERLAP_POLICY": 0.011,
+    "PAIRED_WALL": 2.639
+   },
+   "width_mm": 200.0
+  }
+ ],
+ "urban_method_b": {
+  "classifier": "engine.source.wall_band_reconciliation.classify (unchanged)",
+  "column_layer": "S-COL.BON",
+  "opening_layers": [
+   "D",
+   "W"
+  ],
+  "rule": "Method B: nearest parallel faces of the wall layer at the nominal width +/- 15 mm, overlap > 200 mm",
+  "source_dxf_sha256": {
+   "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+   "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+  },
+  "wall_layer": "1"
+ },
+ "urban_method_b_gross_m": {
+  "150": 85.728,
+  "200": 184.897
+ },
+ "urban_method_b_totals_m": {
+  "1F|150": {
+   "COLUMN_OVERLAP_POLICY": 1.739,
+   "OPENING_SPAN": 10.562,
+   "PAIRED_WALL": 33.165
+  },
+  "1F|200": {
+   "COLUMN_OVERLAP_POLICY": 9.371,
+   "DUPLICATE_FACE": 1.845,
+   "OPENING_SPAN": 17.029,
+   "PAIRED_WALL": 30.353
+  },
+  "2F|150": {
+   "COLUMN_OVERLAP_POLICY": 0.033,
+   "OPENING_SPAN": 2.112,
+   "PAIRED_WALL": 6.555
+  },
+  "2F|200": {
+   "COLUMN_OVERLAP_POLICY": 4.275,
+   "OPENING_SPAN": 5.002,
+   "PAIRED_WALL": 16.665
+  },
+  "ALL|150": {
+   "COLUMN_OVERLAP_POLICY": 2.899,
+   "OPENING_SPAN": 19.39,
+   "PAIRED_WALL": 63.439
+  },
+  "ALL|200": {
+   "COLUMN_OVERLAP_POLICY": 28.819,
+   "DUPLICATE_FACE": 9.893,
+   "OPENING_SPAN": 34.57,
+   "PAIRED_WALL": 111.615
+  },
+  "GF|150": {
+   "COLUMN_OVERLAP_POLICY": 1.128,
+   "OPENING_SPAN": 6.715,
+   "PAIRED_WALL": 23.719
+  },
+  "GF|200": {
+   "COLUMN_OVERLAP_POLICY": 15.173,
+   "DUPLICATE_FACE": 8.048,
+   "OPENING_SPAN": 12.54,
+   "PAIRED_WALL": 64.598
+  }
+ },
+ "urban_version": {
+  "CALCULATION_ROUND": "COVERAGE_RECOVERY (CR.3)",
+  "DRAWING_SHA": {
+   "P7757.dxf": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+   "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+  },
+  "ENGINE_COMMIT": "680264d",
+  "REGISTER_VERSION": "research/coverage_recovery_round/WALL_FACE_PAIR_EXTRACT.json@2639799cb9d6bc75"
+ }
+}

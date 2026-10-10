@@ -1,0 +1,93 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_B1_F_F10_FORENSIC_V1",
+ "source": {
+  "outline": "RING:ALSENAN_ST7757_DXF|H6939|",
+  "drawn_mm": [
+   3250.0,
+   1400.0
+  ],
+  "marks_inside": [
+   {
+    "type": "F",
+    "key": "ALSENAN_ST7757_DXF|H4261||TEXT|0"
+   },
+   {
+    "type": "F10",
+    "key": "ALSENAN_ST7757_DXF|H5771||TEXT|0"
+   }
+  ],
+  "explicit_local_dimensions": [],
+  "scheduled_depths_cm": {
+   "F": 30.0,
+   "F10": 50.0
+  },
+  "F_marks_outside_the_outline": 4
+ },
+ "urban_a3": {
+  "state": "BLOCKED (SOURCE_CONFLICT_COMBINED_OUTLINE)",
+  "owner_question": "OQ3-S1"
+ },
+ "manual": {
+  "F_rows": [
+   "RC:القواعد:13"
+  ],
+  "F_count": 4.0,
+  "F10_rows": [
+   "RC:القواعد:21"
+  ],
+  "F10_count": 1.0,
+  "F10_m3": 1.96,
+  "F10_dims_m": [
+   1.4,
+   2.8,
+   0.5
+  ],
+  "location_stated": false
+ },
+ "approaches": {
+  "A_SEPARATE_SCHEDULED": {
+   "m3": 2.176,
+   "basis": "F10 + F, each at its schedule size"
+  },
+  "B_COMBINED_ENVELOPE_AT_F10_DEPTH": {
+   "m3": 2.275,
+   "basis": "drawn envelope 3.25 x 1.4 x F10 depth"
+  },
+  "B_COMBINED_ENVELOPE_AT_F_DEPTH": {
+   "m3": 1.365,
+   "basis": "drawn envelope 3.25 x 1.4 x F depth"
+  },
+  "C_OVERLAP_DEDUCTED": {
+   "m3": 2.068,
+   "basis": "A minus the plan overlap 0.45 m x the narrower width x the shallower depth (geometry assumed: F inside the east end)"
+  },
+  "E_F_ABSORBED_INTO_F10": {
+   "m3": 1.96,
+   "basis": "F10 at its schedule size; the F mark not counted"
+  }
+ },
+ "approaches_matching_manual_m3": [
+  "E_F_ABSORBED_INTO_F10"
+ ],
+ "manual_method": "E_F_ABSORBED_INTO_F10",
+ "manual_method_confidence": "MEDIUM",
+ "reasoning": [
+  "the manual F count (4.0) equals the Urban F tags OUTSIDE the combined outline (4)",
+  "the manual F10 volume (1.96 m3) equals approach(es) ['E_F_ABSORBED_INTO_F10']",
+  "the manual gives no location, so which F it dropped is inferred, not read"
+ ],
+ "against_source": [
+  "two independent type marks exist inside one outline",
+  "one 3.25 x 1.4 m envelope is drawn",
+  "no explicit local dimension binds either mark",
+  "the scheduled depths differ (30 / 50 cm)",
+  "the manual value equals neither the drawn envelope nor two scheduled footings"
+ ],
+ "classification": {
+  "primary": "MANUAL_ASSUMPTION_NOT_IN_SOURCE",
+  "secondary": [
+   "SOURCE_GAP"
+  ]
+ },
+ "urban_change": "NONE - Phase A3 stays blocked; OQ3-S1 carried forward with this evidence"
+}

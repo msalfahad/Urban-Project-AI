@@ -1,0 +1,44 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_B1_OWNER_QUESTIONS_V1",
+ "new": [
+  {
+   "id": "OQ-B1-1",
+   "group": "ALUMINIUM",
+   "question": "Salon sea-view opening: your derived height is 3.65 m; the freelancer measured both ground-floor pool windows at 4.30 m. Which height applies to the salon aluminium (23.10 m2 at 3.65 m, 27.22 m2 at 4.30 m)?",
+   "impact": "4.11 m2 of salon aluminium",
+   "evidence": "ARCHITECTURAL_COMPARISON.aluminium.salon"
+  },
+  {
+   "id": "OQ-B1-2",
+   "group": "OPENINGS",
+   "question": "Ground floor: the drawing shows five 1.00 m glazed openings in external walls; the freelancer lists four 1.00 x 2.40 m aluminium doors and one 1.00 m window. Are four of them glazed aluminium doors?",
+   "impact": "window vs door count and areas",
+   "evidence": "ARCHITECTURAL_COMPARISON.aluminium.windows[GF]"
+  },
+  {
+   "id": "OQ-B1-3",
+   "group": "ALUMINIUM",
+   "question": "For curved aluminium glazing, on which line do you price the length - inside face, centre line or outside face of the frame?",
+   "impact": "master-bedroom curved glazing basis (6.66 / 6.72 / 6.79 m)",
+   "evidence": "ARCHITECTURAL_COMPARISON.aluminium.master_bedroom_curved"
+  }
+ ],
+ "carried_forward": [
+  {
+   "id": "OQ3-S1",
+   "new_evidence": "the freelancer counts F10 once at its schedule size (1.96 m3) and does not count the F inside the same outline (F count 4 = F tags outside the outline)"
+  },
+  {
+   "id": "OQ3-A1",
+   "new_evidence": "the freelancer treats reception + dining (+ saloon) as one closed room of 137.5 m2 and the entrance hall as a separate 10.46 m2 room"
+  },
+  {
+   "id": "OQ3-A2",
+   "new_evidence": "the freelancer master-bedroom area 16.66 m2 is not smaller than Urban's 16.55 m2 candidate: the 0.50 x 1.46 m box is not deducted (wardrobe-like)"
+  }
+ ],
+ "never_asked": [
+  "expected quantities",
+  "files (no extra DWG / schedules / levels)"
+ ]
+}

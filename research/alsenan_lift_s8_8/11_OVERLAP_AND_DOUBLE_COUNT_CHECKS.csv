@@ -1,0 +1,12 @@
+CHECK_ID,CHECK,OVERLAP_M2,RESULT,DETAIL
+OV-01,net pit-wall pieces vs the four lift columns,0,PASS,columns take 0.5 m2 of the ring once
+OV-02,net pit-wall pieces vs S5 ground-beam bands (GBP),0.0000144,PASS,"{""BL010"": 1.32e-05, ""BL033"": 1.2e-06}"
+OV-03,ground-beam bands that reach the ring do so inside a column,0,PASS,"{""BL010"": 1.32e-05, ""BL033"": 1.2e-06, ""BL036"": 0.001594314}"
+OV-04,"pit walls vs the FF footing: plan inside, volume shared none (walls start at the footing top)",0,PASS,
+OV-05,S8.7 stair elements vs the shaft outline (shared core),0,PASS,ST-A bay east edge x 19587.904 = the shaft outside face W: touch only
+OV-06,S8.1A pit-wall cells RG-12..15 = the four net pieces (ground slab excludes them once),0,PASS,"{""S8.1A-RG-12"": 0.36, ""S8.1A-RG-13"": 0.36, ""S8.1A-RG-14"": 0.24, ""S8.1A-RG-15"": 0.14}"
+OV-07,"S8.1A RG-04 = the pit internal area (the ground-slab opening is the shaft void, not the footing)",0,PASS,RG-04 3.24 m2
+OV-08,no S1 / S7 slab panel spans the shaft at +5.50 or +9.70,0,PASS,[]
+OV-09,S6 beams on the shaft walls sit at +5.50 / +9.70 / +13.90; nothing in the pit and nothing at +4.00,0,PASS,12 occurrences
+OV-10,p.14 footing mats stay with S4; S8.8 adds no base mesh (PRE-S8 'LIFT WALL -> PIT BASE'),0,PASS,"no pit slab, no second footing"
+OV-11,S3.1 starters (Ø16 column bars) and the 6Ø16/m wall verticals are different bars,0,PASS,starters are inside the columns; the wall pieces exclude the columns

@@ -1,0 +1,4657 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_ARCH_R5_FLOOR_CONSERVATION",
+ "floors": {
+  "GF": {
+   "plate_m2": 322.411424,
+   "plate_source": "ST7757 slab outline registered to P7757 (b2a registration)",
+   "architect_area_sheet_m2": 319.99,
+   "architect_area_sheet_after_deduction_m2": 319.99,
+   "plate_minus_architect_m2": 2.421424,
+   "conservation": {
+    "plate_m2": 322.411424,
+    "sum_m2": 322.411418,
+    "unaccounted_m2": 6e-06,
+    "by_component_m2": {
+     "COLUMN": 0.337499,
+     "EXTERNAL_SPACE": 18.128049,
+     "INTERNAL_SPACE": 231.451321,
+     "OPENING_STRIP": 0.52,
+     "RECOVERED_SPACE": 14.128047,
+     "SHAFT": 3.24,
+     "SLIVER": 5.089633,
+     "UNRESOLVED_BLOCKED": 32.179982,
+     "WALL_BAND": 17.336887
+    }
+   },
+   "violations": [],
+   "route_a_site_area_outside_plate_m2": 0.000586,
+   "internal_floor_area_m2": 245.579368,
+   "internal_by_class_m2": {
+    "DRY": 49.371848,
+    "WET": 19.580513,
+    "SERVICE": 19.171909,
+    "UNKNOWN": 6.253049,
+    "STAIR": 14.63999,
+    "MIXED_UNRESOLVED": 121.511633,
+    "UNASSIGNED": 15.050427
+   },
+   "sum_room_zone_internal_m2": 245.57939,
+   "internal_reconciles": true
+  },
+  "1F": {
+   "plate_m2": 217.200553,
+   "plate_source": "ST7757 slab outline registered to P7757 (b2a registration)",
+   "architect_area_sheet_m2": 211.44,
+   "architect_area_sheet_after_deduction_m2": 208.2,
+   "plate_minus_architect_m2": 5.760553,
+   "conservation": {
+    "plate_m2": 217.200553,
+    "sum_m2": 217.200553,
+    "unaccounted_m2": 0.0,
+    "by_component_m2": {
+     "INTERNAL_SPACE": 162.733862,
+     "RECOVERED_SPACE": 5.022499,
+     "SHAFT": 3.24,
+     "SLIVER": 3.361041,
+     "UNRESOLVED_BLOCKED": 7.611467,
+     "VOID": 18.879658,
+     "WALL_BAND": 16.352026
+    }
+   },
+   "violations": [],
+   "route_a_site_area_outside_plate_m2": 5.6e-05,
+   "internal_floor_area_m2": 167.756361,
+   "internal_by_class_m2": {
+    "DRY": 136.287862,
+    "WET": 18.347499,
+    "SERVICE": 10.151,
+    "UNKNOWN": 2.97,
+    "STAIR": 0.0,
+    "MIXED_UNRESOLVED": 0.0,
+    "UNASSIGNED": 0.0
+   },
+   "sum_room_zone_internal_m2": 167.75636,
+   "internal_reconciles": true
+  },
+  "2F": {
+   "plate_m2": 55.478383,
+   "plate_source": "ST7757 slab outline registered to P7757 (b2a registration)",
+   "architect_area_sheet_m2": 55.08,
+   "architect_area_sheet_after_deduction_m2": 55.08,
+   "plate_minus_architect_m2": 0.398383,
+   "conservation": {
+    "plate_m2": 55.478383,
+    "sum_m2": 55.478383,
+    "unaccounted_m2": 0.0,
+    "by_component_m2": {
+     "INTERNAL_SPACE": 43.5,
+     "SHAFT": 3.24,
+     "SLIVER": 1.002431,
+     "UNRESOLVED_BLOCKED": 0.398473,
+     "WALL_BAND": 7.337479
+    }
+   },
+   "violations": [],
+   "route_a_site_area_outside_plate_m2": 9e-05,
+   "internal_floor_area_m2": 43.5,
+   "internal_by_class_m2": {
+    "DRY": 19.35,
+    "WET": 5.55,
+    "SERVICE": 0.0,
+    "UNKNOWN": 18.6,
+    "STAIR": 0.0,
+    "MIXED_UNRESOLVED": 0.0,
+    "UNASSIGNED": 0.0
+   },
+   "sum_room_zone_internal_m2": 43.5,
+   "internal_reconciles": true
+  }
+ },
+ "residuals": [
+  {
+   "id": "UR:GF:0:0",
+   "floor": "GF",
+   "area_m2": 23.347249,
+   "point": [
+    -148239.9,
+    -798793.5
+   ],
+   "labels_inside": [],
+   "state": "UNRESOLVED_BLOCKED",
+   "why": "plate area that neither Route A nor Route B closes (open to a neighbour / outside across an unclosed gap); accounted, never dropped"
+  },
+  {
+   "id": "UR:GF:1:0",
+   "floor": "GF",
+   "area_m2": 8.628367,
+   "point": [
+    -132656.5,
+    -794569.8
+   ],
+   "labels_inside": [],
+   "state": "UNRESOLVED_BLOCKED",
+   "why": "plate area that neither Route A nor Route B closes (open to a neighbour / outside across an unclosed gap); accounted, never dropped"
+  },
+  {
+   "id": "UR:GF:2:0",
+   "floor": "GF",
+   "area_m2": 0.056251,
+   "point": [
+    -130719.9,
+    -805406.1
+   ],
+   "labels_inside": [],
+   "state": "UNRESOLVED_BLOCKED",
+   "why": "plate area that neither Route A nor Route B closes (open to a neighbour / outside across an unclosed gap); accounted, never dropped"
+  },
+  {
+   "id": "UR:GF:3:0",
+   "floor": "GF",
+   "area_m2": 0.043749,
+   "point": [
+    -138569.9,
+    -791706.0
+   ],
+   "labels_inside": [],
+   "state": "UNRESOLVED_BLOCKED",
+   "why": "plate area that neither Route A nor Route B closes (open to a neighbour / outside across an unclosed gap); accounted, never dropped"
+  },
+  {
+   "id": "UR:GF:4:0",
+   "floor": "GF",
+   "area_m2": 0.031249,
+   "point": [
+    -130619.9,
+    -791731.0
+   ],
+   "labels_inside": [],
+   "state": "UNRESOLVED_BLOCKED",
+   "why": "plate area that neither Route A nor Route B closes (open to a neighbour / outside across an unclosed gap); accounted, never dropped"
+  },
+  {
+   "id": "UR:GF:5:0",
+   "floor": "GF",
+   "area_m2": 0.031249,
+   "point": [
+    -134669.9,
+    -791731.0
+   ],
+   "labels_inside": [],
+   "state": "UNRESOLVED_BLOCKED",
+   "why": "plate area that neither Route A nor Route B closes (open to a neighbour / outside across an unclosed gap); accounted, never dropped"
+  },
+  {
+   "id": "UR:GF:6:0",
+   "floor": "GF",
+   "area_m2": 0.021868,
+   "point": [
+    -155752.4,
+    -800331.0
+   ],
+   "labels_inside": [],
+   "state": "UNRESOLVED_BLOCKED",
+   "why": "plate area that neither Route A nor Route B closes (open to a neighbour / outside across an unclosed gap); accounted, never dropped"
+  },
+  {
+   "id": "UR:GF:7:0",
+   "floor": "GF",
+   "area_m2": 0.019999,
+   "point": [
+    -157339.9,
+    -798543.5
+   ],
+   "labels_inside": [],
+   "state": "UNRESOLVED_BLOCKED",
+   "why": "plate area that neither Route A nor Route B closes (open to a neighbour / outside across an unclosed gap); accounted, never dropped"
+  },
+  {
+   "id": "UR:1F:0:0",
+   "floor": "1F",
+   "area_m2": 4.156637,
+   "point": [
+    -175037.3,
+    -797942.0
+   ],
+   "labels_inside": [],
+   "state": "UNRESOLVED_BLOCKED",
+   "why": "plate area that neither Route A nor Route B closes (open to a neighbour / outside across an unclosed gap); accounted, never dropped"
+  },
+  {
+   "id": "UR:1F:1:0",
+   "floor": "1F",
+   "area_m2": 0.582585,
+   "point": [
+    -175048.4,
+    -792563.8
+   ],
+   "labels_inside": [],
+   "state": "UNRESOLVED_BLOCKED",
+   "why": "plate area that neither Route A nor Route B closes (open to a neighbour / outside across an unclosed gap); accounted, never dropped"
+  },
+  {
+   "id": "UR:1F:2:0",
+   "floor": "1F",
+   "area_m2": 2.765998,
+   "point": [
+    -184457.5,
+    -792918.5
+   ],
+   "labels_inside": [
+    "W.C"
+   ],
+   "state": "UNRESOLVED_BLOCKED",
+   "why": "plate area that neither Route A nor Route B closes (open to a neighbour / outside across an unclosed gap); accounted, never dropped"
+  },
+  {
+   "id": "UR:1F:3:0",
+   "floor": "1F",
+   "area_m2": 0.043749,
+   "point": [
+    -183422.5,
+    -791706.0
+   ],
+   "labels_inside": [],
+   "state": "UNRESOLVED_BLOCKED",
+   "why": "plate area that neither Route A nor Route B closes (open to a neighbour / outside across an unclosed gap); accounted, never dropped"
+  },
+  {
+   "id": "UR:1F:4:0",
+   "floor": "1F",
+   "area_m2": 0.031249,
+   "point": [
+    -175472.5,
+    -791731.0
+   ],
+   "labels_inside": [],
+   "state": "UNRESOLVED_BLOCKED",
+   "why": "plate area that neither Route A nor Route B closes (open to a neighbour / outside across an unclosed gap); accounted, never dropped"
+  },
+  {
+   "id": "UR:1F:5:0",
+   "floor": "1F",
+   "area_m2": 0.031249,
+   "point": [
+    -179522.5,
+    -791731.0
+   ],
+   "labels_inside": [],
+   "state": "UNRESOLVED_BLOCKED",
+   "why": "plate area that neither Route A nor Route B closes (open to a neighbour / outside across an unclosed gap); accounted, never dropped"
+  },
+  {
+   "id": "UR:2F:0:0",
+   "floor": "2F",
+   "area_m2": 0.271908,
+   "point": [
+    -234970.1,
+    -795276.4
+   ],
+   "labels_inside": [],
+   "state": "UNRESOLVED_BLOCKED",
+   "why": "plate area that neither Route A nor Route B closes (open to a neighbour / outside across an unclosed gap); accounted, never dropped"
+  },
+  {
+   "id": "UR:2F:1:0",
+   "floor": "2F",
+   "area_m2": 0.086566,
+   "point": [
+    -234982.6,
+    -792509.3
+   ],
+   "labels_inside": [],
+   "state": "UNRESOLVED_BLOCKED",
+   "why": "plate area that neither Route A nor Route B closes (open to a neighbour / outside across an unclosed gap); accounted, never dropped"
+  },
+  {
+   "id": "UR:2F:2:0",
+   "floor": "2F",
+   "area_m2": 0.039999,
+   "point": [
+    -228275.1,
+    -791693.5
+   ],
+   "labels_inside": [],
+   "state": "UNRESOLVED_BLOCKED",
+   "why": "plate area that neither Route A nor Route B closes (open to a neighbour / outside across an unclosed gap); accounted, never dropped"
+  }
+ ],
+ "components": [
+  {
+   "id": "PS:GF:SITE-00d6c09bbc2becc3",
+   "component": "SLIVER",
+   "area_m2": 0.097746,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-013c8e3ceb8f664c",
+   "component": "WALL_BAND",
+   "area_m2": 0.075,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-014640e0e19b40b4",
+   "component": "WALL_BAND",
+   "area_m2": 0.06,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-0173dbd8b5878ccb",
+   "component": "WALL_BAND",
+   "area_m2": 0.1,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-0250d13a009f6fd1",
+   "component": "WALL_BAND",
+   "area_m2": 0.0225,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-041fce353231e6ce",
+   "component": "WALL_BAND",
+   "area_m2": 0.16,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-0601b2973c111c35",
+   "component": "WALL_BAND",
+   "area_m2": 0.082419,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-09406b823a6289dd",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-09c0d7a387468fab",
+   "component": "WALL_BAND",
+   "area_m2": 0.039999,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-0bb9132c5c034229:R",
+   "component": "SHAFT",
+   "area_m2": 3.24,
+   "class": "SHAFT",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-0e9a7a85e795446f:R",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 3.1325,
+   "class": "WET",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-0f16e5f864f6d2ba",
+   "component": "SLIVER",
+   "area_m2": 0.006,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-0f67ba411eaf5209",
+   "component": "COLUMN",
+   "area_m2": 0.075,
+   "class": "COLUMN",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-15b1a3af250c49c4",
+   "component": "WALL_BAND",
+   "area_m2": 0.04,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-16db32a5f58eb679",
+   "component": "SLIVER",
+   "area_m2": 0.0025,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-17ddc536bba1fcb5",
+   "component": "SLIVER",
+   "area_m2": 0.12,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-17f8c327774b5a3f",
+   "component": "WALL_BAND",
+   "area_m2": 0.098,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-1a36740b1a930ff4",
+   "component": "SLIVER",
+   "area_m2": 0.0055,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-1acc2c06b280425f",
+   "component": "SLIVER",
+   "area_m2": 0.097746,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-1b51ee0227cd05f7",
+   "component": "SLIVER",
+   "area_m2": 0.05,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-1d8ebf32aecf495c",
+   "component": "WALL_BAND",
+   "area_m2": 0.04,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-1df4f656d3ceb9d8",
+   "component": "SLIVER",
+   "area_m2": 0.02,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-1e875e9a5787bb43",
+   "component": "WALL_BAND",
+   "area_m2": 0.08,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-1fd8d6760e5b0f6d",
+   "component": "WALL_BAND",
+   "area_m2": 0.24,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-216947b37a1e90bb",
+   "component": "SLIVER",
+   "area_m2": 0.02,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-219d93fb4be09fe1",
+   "component": "WALL_BAND",
+   "area_m2": 0.1,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-21fda2ec4a39558f",
+   "component": "SLIVER",
+   "area_m2": 0.08,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-22eeb45d0e3b5451",
+   "component": "SLIVER",
+   "area_m2": 0.38,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-2526e8cf91479116",
+   "component": "WALL_BAND",
+   "area_m2": 0.049975,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-252cdcfb760541b4",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-27346366566c3bad",
+   "component": "SLIVER",
+   "area_m2": 0.056,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-273bc9c6ccabb991",
+   "component": "SLIVER",
+   "area_m2": 0.0025,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-275e31ff5f3588c3",
+   "component": "WALL_BAND",
+   "area_m2": 0.084,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-2b7c74f3552da8e8",
+   "component": "WALL_BAND",
+   "area_m2": 0.049999,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-2e6e28a84c71bfa9",
+   "component": "WALL_BAND",
+   "area_m2": 0.04,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-314d4124a9219a6e",
+   "component": "WALL_BAND",
+   "area_m2": 0.229016,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-3403d4b4d220eea6",
+   "component": "SLIVER",
+   "area_m2": 0.02,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-3496992f58fc4320",
+   "component": "WALL_BAND",
+   "area_m2": 0.476424,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-34f586f4582e7048",
+   "component": "SLIVER",
+   "area_m2": 0.047998,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-361e376c88b206d2",
+   "component": "WALL_BAND",
+   "area_m2": 0.08,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-36a40102bd7fe49b",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-36ec89510a0b819a",
+   "component": "SLIVER",
+   "area_m2": 0.062,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-39b2055cadb292d9",
+   "component": "WALL_BAND",
+   "area_m2": 0.045,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-3b4e38007b466730",
+   "component": "WALL_BAND",
+   "area_m2": 0.056,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-3e789365cafdd64f",
+   "component": "WALL_BAND",
+   "area_m2": 0.108,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-3eae180adccb4bd2",
+   "component": "SLIVER",
+   "area_m2": 0.249263,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-41e14f1883840a6f",
+   "component": "WALL_BAND",
+   "area_m2": 0.088,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-420b695a0186f380",
+   "component": "WALL_BAND",
+   "area_m2": 0.26,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-424d569ab14ec5fd",
+   "component": "SLIVER",
+   "area_m2": 0.036,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-42a3c9afc2819e42",
+   "component": "SLIVER",
+   "area_m2": 0.02,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-44f7e7bf4ab067d8",
+   "component": "SLIVER",
+   "area_m2": 0.0045,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-45b60423ec5c0676",
+   "component": "WALL_BAND",
+   "area_m2": 0.12,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-47a15632b395b719",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-499ccaee8f5b18c9",
+   "component": "WALL_BAND",
+   "area_m2": 0.46,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-49e157b176687a24",
+   "component": "WALL_BAND",
+   "area_m2": 0.798368,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-49fdb585faf9269c",
+   "component": "SLIVER",
+   "area_m2": 8.3e-05,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-4a2aaf333af125cd",
+   "component": "WALL_BAND",
+   "area_m2": 0.06,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-4a606d2d650db148",
+   "component": "WALL_BAND",
+   "area_m2": 0.058,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-4a8de4518b537660",
+   "component": "WALL_BAND",
+   "area_m2": 0.21,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-4c9cb4bbb12c075d",
+   "component": "WALL_BAND",
+   "area_m2": 0.04,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-4d83f9619797aaa7",
+   "component": "SLIVER",
+   "area_m2": 0.005,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-4dab2b6f70a686a6",
+   "component": "WALL_BAND",
+   "area_m2": 0.056029,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-506782cfa8a99c21",
+   "component": "WALL_BAND",
+   "area_m2": 0.15,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-5149eae5cc55f165",
+   "component": "SLIVER",
+   "area_m2": 0.003493,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-5172fbe900ab5078",
+   "component": "SLIVER",
+   "area_m2": 0.097746,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-5191e28052b00088:R",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 2.367609,
+   "class": "WET",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-53cbed92360d03b5",
+   "component": "SLIVER",
+   "area_m2": 0.195492,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-541d11db02f8dfbe",
+   "component": "SLIVER",
+   "area_m2": 0.056,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-55729a7462413d02",
+   "component": "SLIVER",
+   "area_m2": 0.097746,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-5b83d7e384e997d7",
+   "component": "SLIVER",
+   "area_m2": 0.0025,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-5c12d45a41a2f341",
+   "component": "WALL_BAND",
+   "area_m2": 0.074998,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-5c15e8457972f571",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-64fbe81712f80c6c",
+   "component": "WALL_BAND",
+   "area_m2": 0.04,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-659f8d0beeb60aca",
+   "component": "WALL_BAND",
+   "area_m2": 0.615,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-66a645e673e3c68e",
+   "component": "WALL_BAND",
+   "area_m2": 1.27,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:REMAINDER",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.182026,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-684fc26661ba7dfc",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 121.511633,
+   "class": "MIXED_UNRESOLVED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-095f7eb1e4af3ab3",
+   "component": "EXTERNAL_SPACE",
+   "area_m2": 9.554,
+   "class": "EXTERNAL",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-23b287a0c67d534d",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 9.541909,
+   "class": "SERVICE",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-8abd79017bc6a05f",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 2.163169,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-201bbf12ec484dd8",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 1.963089,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-18e242d6704a250c",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 1.95,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-8967ffcbc40202e6",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 1.567255,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-4b807cebcd6ef4f4",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.460954,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-3cd2bbdea3963bcf",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.437577,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-f901bbe26ba35d9b",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.437515,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-3ad8b11bcf042854",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.321594,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-37490ae2d7a37cb8",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.291732,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-4519512c56f3980d",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.228039,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-35a4aec53827d6f7",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.190851,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-ff4aea0c094e96d2",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.190851,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-3dbbfa2e5d35b978",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.19085,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-811fb5bfbc744c05",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.190838,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-5a3279669104ed04",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.190817,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-546bfdc59acc5e41",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.190793,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-bdcdf28a4ecd67a4",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.190785,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-d1210829c302a3bd",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.19077,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-7158670e6fb047e5",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.190732,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-f668567e7bcd1884",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.190707,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-64c2e3ea64dc12ab",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.18879,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-33e208cd68a969a2",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.18879,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-400aeea24dee5aea",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.181518,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-7e21145f2a79f71c",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.175819,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-310b5f35c58d0c0d",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.1725,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-4045da915833d218",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.1725,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-41690e1e34b71c76",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.1725,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-7e773ba998d5973f",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.1725,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-88d597adddde9dcc",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.1725,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-e5c2a247a8b9be77",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.1725,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-51a4990e8a1fb646",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.169112,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-b78f2a39435a5f21",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.1675,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-13463f491824476b",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.1675,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-83f9cd0fe45b9d42",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.1575,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-c33dab2f410c01f9",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.1575,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-678c344cfb9f3d30",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.150159,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-f3da97170c572673",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.14583,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-d1043112e0fa1617",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.131539,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-b6cbf3d43e69af61",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.070205,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-67547ed37daadb5a:RB-090ba7999539c951",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 0.052724,
+   "class": "UNASSIGNED",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-676e4724a429c599",
+   "component": "COLUMN",
+   "area_m2": 0.1,
+   "class": "COLUMN",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-682a86bc78c8b4ce",
+   "component": "WALL_BAND",
+   "area_m2": 0.132,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-6ad3af9c2c06df4a",
+   "component": "WALL_BAND",
+   "area_m2": 0.0395,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-6e7b13cb97d5f2fc",
+   "component": "SLIVER",
+   "area_m2": 0.02,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-6fc36ca2275a9e07",
+   "component": "SLIVER",
+   "area_m2": 0.12,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-70434c22b03c8f83",
+   "component": "SLIVER",
+   "area_m2": 0.0035,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-714889aea3e329c7:R",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 3.717683,
+   "class": "WET",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-7245e8064290a7cf",
+   "component": "WALL_BAND",
+   "area_m2": 0.15,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-756e006cfa39227b",
+   "component": "SLIVER",
+   "area_m2": 0.042,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-77337a865728fde0",
+   "component": "WALL_BAND",
+   "area_m2": 0.08,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-77bfc2e6f52d5991",
+   "component": "WALL_BAND",
+   "area_m2": 0.048,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-782cf11c69f8d060",
+   "component": "SLIVER",
+   "area_m2": 0.036,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-7ba5ff408ed2cb1a",
+   "component": "WALL_BAND",
+   "area_m2": 0.072915,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-7bb584576805c2b2",
+   "component": "SLIVER",
+   "area_m2": 0.002083,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-7bf44b4ab59e8bc2",
+   "component": "SLIVER",
+   "area_m2": 0.0048,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-7dfbfe7aeb6cce50",
+   "component": "WALL_BAND",
+   "area_m2": 0.709985,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-7f05a61462bf1174",
+   "component": "SLIVER",
+   "area_m2": 0.0055,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-8090e7d508e20fb1",
+   "component": "SLIVER",
+   "area_m2": 0.047998,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-810cacd9be443703:R",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 24.939126,
+   "class": "DRY",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-814e80c6d6a3650f",
+   "component": "WALL_BAND",
+   "area_m2": 0.049999,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-8278924c17538df1",
+   "component": "WALL_BAND",
+   "area_m2": 0.059999,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-83536f865710f4f7",
+   "component": "WALL_BAND",
+   "area_m2": 0.099975,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-8367930c401d504d",
+   "component": "WALL_BAND",
+   "area_m2": 0.0625,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-83dfc6f0c75e278c",
+   "component": "WALL_BAND",
+   "area_m2": 0.08,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-84bdd324ff926deb",
+   "component": "SLIVER",
+   "area_m2": 0.017,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-85b78069eff4c5a4",
+   "component": "COLUMN",
+   "area_m2": 0.062499,
+   "class": "COLUMN",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-87378c6e66e46932",
+   "component": "WALL_BAND",
+   "area_m2": 0.04,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-875da9b62e7b101b",
+   "component": "WALL_BAND",
+   "area_m2": 0.0475,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-88d9dbffd47c417a:R",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 9.63,
+   "class": "SERVICE",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-88e3486f388c92a1",
+   "component": "WALL_BAND",
+   "area_m2": 0.03998,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-8a4d18b82e3e7ea3",
+   "component": "WALL_BAND",
+   "area_m2": 0.045,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-8a6b10e3c7831d3a",
+   "component": "WALL_BAND",
+   "area_m2": 0.031471,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-8b847674cc5570d3",
+   "component": "SLIVER",
+   "area_m2": 0.003,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-8f18aeace4b67be1",
+   "component": "SLIVER",
+   "area_m2": 0.195492,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-8f384be8930fa6a4",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-90901c48b54a0389",
+   "component": "WALL_BAND",
+   "area_m2": 0.04,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-90dd2e00595c384f",
+   "component": "WALL_BAND",
+   "area_m2": 0.075,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-92d772778d0e5bef",
+   "component": "OPENING_STRIP",
+   "area_m2": 0.4,
+   "class": "OPENING_STRIP",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-93c8b79664b2b8f8",
+   "component": "WALL_BAND",
+   "area_m2": 1.149,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-9810548752edbe40:R",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 2.675221,
+   "class": "WET",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-99305f2c0da1bc54",
+   "component": "SLIVER",
+   "area_m2": 0.006,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-99343b6944880269",
+   "component": "SLIVER",
+   "area_m2": 0.0025,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-99c2230fb46f80cb",
+   "component": "SLIVER",
+   "area_m2": 0.062,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-9a3590f4d0ca7db7",
+   "component": "SLIVER",
+   "area_m2": 0.006,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-9b585230d0877a35:R",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 1.95,
+   "class": "WET",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-9c2c5bf236040c63",
+   "component": "SLIVER",
+   "area_m2": 0.249263,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-9c662e1d2a4aae9c",
+   "component": "COLUMN",
+   "area_m2": 0.1,
+   "class": "COLUMN",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-9ceb03e9fde4a75b",
+   "component": "WALL_BAND",
+   "area_m2": 0.14,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-9d5b673cba6164e1",
+   "component": "SLIVER",
+   "area_m2": 0.006,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-a232f6cd353962e3",
+   "component": "WALL_BAND",
+   "area_m2": 0.273692,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-a5140910e0614229",
+   "component": "WALL_BAND",
+   "area_m2": 0.026917,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-a5326d03d1d75071",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-a797936abec0d1a7",
+   "component": "OPENING_STRIP",
+   "area_m2": 0.12,
+   "class": "OPENING_STRIP",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-a7f941ab542724a6",
+   "component": "WALL_BAND",
+   "area_m2": 0.09,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-a8725e753653e76e",
+   "component": "WALL_BAND",
+   "area_m2": 0.0315,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-aa990cd2ab6d2511",
+   "component": "WALL_BAND",
+   "area_m2": 0.04,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-aaf92ae28b022c5a",
+   "component": "WALL_BAND",
+   "area_m2": 0.126597,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-ab7f7fc6d9ab3929",
+   "component": "WALL_BAND",
+   "area_m2": 0.04,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-abd5c3c3a7cec405",
+   "component": "SLIVER",
+   "area_m2": 0.056,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-b0d2c9e579b11efd",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-b2553428a3dc90a0:R",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 14.63999,
+   "class": "STAIR",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-b34378da15c94b14",
+   "component": "SLIVER",
+   "area_m2": 0.119994,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-b38120b88582b133",
+   "component": "WALL_BAND",
+   "area_m2": 0.0225,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-b387c6c71ba7b033",
+   "component": "SLIVER",
+   "area_m2": 0.026,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-b3c87e1778d15182",
+   "component": "WALL_BAND",
+   "area_m2": 0.06,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-b45bd81bed95a9f7",
+   "component": "SLIVER",
+   "area_m2": 1.5e-05,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-b784d8277cf2aa3a",
+   "component": "SLIVER",
+   "area_m2": 0.506212,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-b7a7b2540f2c91e9",
+   "component": "SLIVER",
+   "area_m2": 0.026,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-bb8ba1039f577d30",
+   "component": "SLIVER",
+   "area_m2": 0.255263,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-bd6bfe5db7e89ba5",
+   "component": "SLIVER",
+   "area_m2": 0.02,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-bdde47205abab62d",
+   "component": "SLIVER",
+   "area_m2": 0.0025,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-c0b488d2ab5f56ee",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-c1c7e5cb6d0c8ec1",
+   "component": "SLIVER",
+   "area_m2": 0.006,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-c37ebd4d4eb93ca8",
+   "component": "SLIVER",
+   "area_m2": 0.05,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-c3b56648872f8912",
+   "component": "SLIVER",
+   "area_m2": 0.06,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-c4734b2cc5d9c4f0",
+   "component": "WALL_BAND",
+   "area_m2": 0.49999,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-c6ad1d286f392cb9",
+   "component": "SLIVER",
+   "area_m2": 0.15,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-c88fdd1560c8979b",
+   "component": "WALL_BAND",
+   "area_m2": 0.059999,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-c990b23b9c92a8fb",
+   "component": "WALL_BAND",
+   "area_m2": 0.02,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-ca08ec87357473b7",
+   "component": "WALL_BAND",
+   "area_m2": 0.033676,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-ca842b172ffcbe96",
+   "component": "SLIVER",
+   "area_m2": 0.0,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-cab2dc62ad8d3326",
+   "component": "WALL_BAND",
+   "area_m2": 0.083971,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-cc4fe6fed683f0fc",
+   "component": "WALL_BAND",
+   "area_m2": 0.04,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-ce2d2c3a4b7da280:R",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 2.3625,
+   "class": "WET",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-ce98fb89a3dd863b",
+   "component": "WALL_BAND",
+   "area_m2": 0.04,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-cec629777d176883",
+   "component": "WALL_BAND",
+   "area_m2": 0.072,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-cf7eefad6f67867f",
+   "component": "WALL_BAND",
+   "area_m2": 0.039999,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-cfc01cd32bb6eb61",
+   "component": "WALL_BAND",
+   "area_m2": 0.53,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-d04fb624af6a1690",
+   "component": "SLIVER",
+   "area_m2": 0.015,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-db2095c494cb4f52",
+   "component": "WALL_BAND",
+   "area_m2": 0.132,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-db58453f35a71b2d",
+   "component": "SLIVER",
+   "area_m2": 0.056,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-db7b72390cb1d3e3",
+   "component": "WALL_BAND",
+   "area_m2": 0.04,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-dc3b71842cb17fef",
+   "component": "WALL_BAND",
+   "area_m2": 0.04,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-dda89794d15dfb61:R",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 16.557724,
+   "class": "DRY",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-df0b06053a1fe360",
+   "component": "SLIVER",
+   "area_m2": 0.06,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-e1268530d15cb7a6",
+   "component": "WALL_BAND",
+   "area_m2": 2.692495,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-e4e52b4e500f441d",
+   "component": "WALL_BAND",
+   "area_m2": 0.06,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-e6df16ac9be38278",
+   "component": "WALL_BAND",
+   "area_m2": 0.0405,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-e8da949e4ccf5747",
+   "component": "SLIVER",
+   "area_m2": 0.829703,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-e93f04eadf1ee5a7",
+   "component": "WALL_BAND",
+   "area_m2": 0.072,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-e9ad37caa089abae",
+   "component": "WALL_BAND",
+   "area_m2": 0.0225,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-e9f0b96e25e06e27",
+   "component": "SLIVER",
+   "area_m2": 0.1,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:SITE-eac7a1be6566b2d0:R",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 3.375,
+   "class": "WET",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-eb9389e7d3c390d8",
+   "component": "WALL_BAND",
+   "area_m2": 1.28,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-ec54d13ee3a18d9e",
+   "component": "WALL_BAND",
+   "area_m2": 0.22,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-ece5073967f40719",
+   "component": "SLIVER",
+   "area_m2": 0.047998,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-f295cb112481f744",
+   "component": "WALL_BAND",
+   "area_m2": 0.02,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-f2a1ccdecfa30bda",
+   "component": "WALL_BAND",
+   "area_m2": 0.109998,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-f5cc021d27d2e314",
+   "component": "SLIVER",
+   "area_m2": 0.006,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-f79873459c7c709c",
+   "component": "WALL_BAND",
+   "area_m2": 0.105,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-f7b1712f8a02b2e4",
+   "component": "WALL_BAND",
+   "area_m2": 0.0225,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-f827488842220469",
+   "component": "SLIVER",
+   "area_m2": 0.006,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-fc62e8b1fc167be7",
+   "component": "SLIVER",
+   "area_m2": 0.026,
+   "class": "SLIVER",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:GF:SITE-fdde6b2775fbc73e",
+   "component": "WALL_BAND",
+   "area_m2": 0.0495,
+   "class": "WALL_BAND",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:RR:GF:RB-2365eaef717b0fe9:R",
+   "component": "RECOVERED_SPACE",
+   "area_m2": 5.0,
+   "class": "UNKNOWN",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:RR:GF:RB-a1191769a247d0ff:R",
+   "component": "RECOVERED_SPACE",
+   "area_m2": 7.874998,
+   "class": "DRY",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:RR:GF:RB-682db83b9b101479:R",
+   "component": "EXTERNAL_SPACE",
+   "area_m2": 8.574049,
+   "class": "EXTERNAL",
+   "floor": "GF"
+  },
+  {
+   "id": "TR:GF:RR:GF:RB-d86c0e084612ae59:R",
+   "component": "RECOVERED_SPACE",
+   "area_m2": 1.253049,
+   "class": "UNKNOWN",
+   "floor": "GF"
+  },
+  {
+   "id": "UR:GF:0:0",
+   "component": "UNRESOLVED_BLOCKED",
+   "area_m2": 23.347249,
+   "class": "UNCLOSED_PLATE_AREA",
+   "floor": "GF"
+  },
+  {
+   "id": "UR:GF:1:0",
+   "component": "UNRESOLVED_BLOCKED",
+   "area_m2": 8.628367,
+   "class": "UNCLOSED_PLATE_AREA",
+   "floor": "GF"
+  },
+  {
+   "id": "UR:GF:2:0",
+   "component": "UNRESOLVED_BLOCKED",
+   "area_m2": 0.056251,
+   "class": "UNCLOSED_PLATE_AREA",
+   "floor": "GF"
+  },
+  {
+   "id": "UR:GF:3:0",
+   "component": "UNRESOLVED_BLOCKED",
+   "area_m2": 0.043749,
+   "class": "UNCLOSED_PLATE_AREA",
+   "floor": "GF"
+  },
+  {
+   "id": "UR:GF:4:0",
+   "component": "UNRESOLVED_BLOCKED",
+   "area_m2": 0.031249,
+   "class": "UNCLOSED_PLATE_AREA",
+   "floor": "GF"
+  },
+  {
+   "id": "UR:GF:5:0",
+   "component": "UNRESOLVED_BLOCKED",
+   "area_m2": 0.031249,
+   "class": "UNCLOSED_PLATE_AREA",
+   "floor": "GF"
+  },
+  {
+   "id": "UR:GF:6:0",
+   "component": "UNRESOLVED_BLOCKED",
+   "area_m2": 0.021868,
+   "class": "UNCLOSED_PLATE_AREA",
+   "floor": "GF"
+  },
+  {
+   "id": "UR:GF:7:0",
+   "component": "UNRESOLVED_BLOCKED",
+   "area_m2": 0.019999,
+   "class": "UNCLOSED_PLATE_AREA",
+   "floor": "GF"
+  },
+  {
+   "id": "PS:1F:SITE-0060834cdcadbaed",
+   "component": "WALL_BAND",
+   "area_m2": 0.064,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-027ab49fa75bc499",
+   "component": "SLIVER",
+   "area_m2": 0.0035,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-02939243659edc61",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-02c7cb9e8e74fb98",
+   "component": "WALL_BAND",
+   "area_m2": 0.12,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-02e618f6458dff81",
+   "component": "SLIVER",
+   "area_m2": 0.124186,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-056857dc6ca72ce8",
+   "component": "SLIVER",
+   "area_m2": 0.018076,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-05b41631e7790d51",
+   "component": "SLIVER",
+   "area_m2": 0.004,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-061b2cf77776ff6e",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-0761c3b5b38b350c",
+   "component": "WALL_BAND",
+   "area_m2": 0.09375,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-09436d822e77d54e",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-0abc9bb4896b7404",
+   "component": "SLIVER",
+   "area_m2": 0.02,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-10b57f2e473c118e",
+   "component": "WALL_BAND",
+   "area_m2": 0.187422,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-143ad3c4845ab803",
+   "component": "WALL_BAND",
+   "area_m2": 2.09,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-15af1cdbe2228ae3",
+   "component": "SLIVER",
+   "area_m2": 0.006,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-1680dcf3721930be",
+   "component": "SLIVER",
+   "area_m2": 0.048,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "TR:1F:SITE-16f76cd141ed8273:R",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 5.0225,
+   "class": "WET",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-17dfd2abc208b7bf",
+   "component": "WALL_BAND",
+   "area_m2": 0.048,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "TR:1F:SITE-195dbe4bca9e732e:R",
+   "component": "SHAFT",
+   "area_m2": 3.24,
+   "class": "SHAFT",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-1a19646e729878cf",
+   "component": "SLIVER",
+   "area_m2": 0.016,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-1ac86dc2f98ca7a3",
+   "component": "WALL_BAND",
+   "area_m2": 0.0225,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-1b2942f922e2c672",
+   "component": "SLIVER",
+   "area_m2": 0.006001,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-1c0db07b3e045a47",
+   "component": "SLIVER",
+   "area_m2": 0.003924,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-1d626b4094963aba",
+   "component": "WALL_BAND",
+   "area_m2": 0.0315,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-1ee3a47980b1a647",
+   "component": "WALL_BAND",
+   "area_m2": 0.08,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-227f7ffb593965ca",
+   "component": "WALL_BAND",
+   "area_m2": 0.766397,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "TR:1F:SITE-22b96446836c3d8d:R",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 19.02119,
+   "class": "DRY",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-22f6836cf3151f7c",
+   "component": "WALL_BAND",
+   "area_m2": 0.0555,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-23a19cd1b9967fe6",
+   "component": "SLIVER",
+   "area_m2": 0.016,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-23d1f056aa3eee32",
+   "component": "SLIVER",
+   "area_m2": 0.006,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-27322a8c6a64dbf3",
+   "component": "SLIVER",
+   "area_m2": 0.02,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-2873557f0ac9790f",
+   "component": "WALL_BAND",
+   "area_m2": 0.66,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-28c15610a545119a",
+   "component": "SLIVER",
+   "area_m2": 0.02,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-28fcf3dd7a47375a",
+   "component": "SLIVER",
+   "area_m2": 0.006,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-2d68bebe1021351c",
+   "component": "WALL_BAND",
+   "area_m2": 0.049999,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-2e9fc844f6b7bc5d",
+   "component": "WALL_BAND",
+   "area_m2": 0.279994,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-2ed6bd31a3f74443",
+   "component": "WALL_BAND",
+   "area_m2": 0.217392,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-2f24a85c0d0ea07a",
+   "component": "WALL_BAND",
+   "area_m2": 0.0475,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "TR:1F:SITE-2f6cf2b5bebbd966:R",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 4.725,
+   "class": "WET",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-340ee5ce6d715d9b",
+   "component": "WALL_BAND",
+   "area_m2": 0.079998,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-346769134b742324",
+   "component": "SLIVER",
+   "area_m2": 0.00625,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-34a188ab18d41ba1",
+   "component": "WALL_BAND",
+   "area_m2": 0.074998,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-359639e7f6bf7a33",
+   "component": "SLIVER",
+   "area_m2": 0.006,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-3637349660cd8b19",
+   "component": "SLIVER",
+   "area_m2": 0.064093,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-37cf1d16e9ac642e",
+   "component": "WALL_BAND",
+   "area_m2": 0.123648,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-3ccd13cbca870cdc",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "TR:1F:SITE-3cde308552cf977c:R",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 16.34,
+   "class": "DRY",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-3f5d06a9b31b75cb",
+   "component": "WALL_BAND",
+   "area_m2": 0.36,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-4137cd97434c3bd5",
+   "component": "WALL_BAND",
+   "area_m2": 0.083579,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-415211eacdce1fc5",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-415d83ad0cc06e16",
+   "component": "WALL_BAND",
+   "area_m2": 0.0525,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-419eaf6ff471d839",
+   "component": "SLIVER",
+   "area_m2": 0.006,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-428839cd6aa3345d",
+   "component": "WALL_BAND",
+   "area_m2": 0.145,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-435ce9ad4c9270be",
+   "component": "SLIVER",
+   "area_m2": 0.058093,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-438f0f7b51cc44d5",
+   "component": "WALL_BAND",
+   "area_m2": 0.0315,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-45f6e3556fd35412",
+   "component": "WALL_BAND",
+   "area_m2": 0.08,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-47479e2a3ad4bceb",
+   "component": "WALL_BAND",
+   "area_m2": 2.993768,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-48a3a6fee978de75",
+   "component": "WALL_BAND",
+   "area_m2": 0.0475,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-49e797eb3f6a9d06",
+   "component": "WALL_BAND",
+   "area_m2": 0.035,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-4a0c1825863be60e",
+   "component": "SLIVER",
+   "area_m2": 0.06,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-4b014a39341de6d4",
+   "component": "WALL_BAND",
+   "area_m2": 0.06375,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-4b3a429b0f6f900e",
+   "component": "SLIVER",
+   "area_m2": 0.026,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-4dd502bd0d5fc050",
+   "component": "WALL_BAND",
+   "area_m2": 0.0675,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-4e95da4fdf763704",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-4eac0e6f33f146e4",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-51d9a8e26858e65c",
+   "component": "WALL_BAND",
+   "area_m2": 0.01875,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-51dda3f3108e66e9",
+   "component": "WALL_BAND",
+   "area_m2": 0.158975,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-530347cdb82d2549",
+   "component": "WALL_BAND",
+   "area_m2": 0.075,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-53130dcdef4b8368",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-54badb32ddbf99a9",
+   "component": "WALL_BAND",
+   "area_m2": 0.072,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-5707ed99eddd9d3c",
+   "component": "SLIVER",
+   "area_m2": 0.122489,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-57c4e195fedf7472",
+   "component": "WALL_BAND",
+   "area_m2": 0.0195,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-57f121a087dd37c0",
+   "component": "WALL_BAND",
+   "area_m2": 1.08499,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-5839fdee3a9f839d",
+   "component": "WALL_BAND",
+   "area_m2": 0.15,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-5a41f7862a3f1b3c",
+   "component": "WALL_BAND",
+   "area_m2": 0.24,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-5b78488a844b02f3",
+   "component": "WALL_BAND",
+   "area_m2": 0.202346,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-5bd86486986bbb03",
+   "component": "WALL_BAND",
+   "area_m2": 0.062499,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-5c42e5f68acb57a0",
+   "component": "SLIVER",
+   "area_m2": 0.036,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-604d4b2b32a1a3ec",
+   "component": "SLIVER",
+   "area_m2": 0.0175,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "TR:1F:SITE-60a08def069f0e48:1F-V01",
+   "component": "VOID",
+   "area_m2": 16.005,
+   "class": "VOID",
+   "floor": "1F"
+  },
+  {
+   "id": "TR:1F:SITE-60a08def069f0e48:R",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 63.661671,
+   "class": "DRY",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-67b5240b33ef2df1",
+   "component": "SLIVER",
+   "area_m2": 0.124186,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "TR:1F:SITE-69e2d39bee49fa7e:R",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 10.151,
+   "class": "SERVICE",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-6c6c043b3b590c4b",
+   "component": "SLIVER",
+   "area_m2": 0.122489,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-6efab850b94f4108",
+   "component": "SLIVER",
+   "area_m2": 0.006,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-6fc6387f2b05ffa9",
+   "component": "SLIVER",
+   "area_m2": 0.02,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-72e7af3137d2b68e",
+   "component": "WALL_BAND",
+   "area_m2": 0.089881,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-7a070000cd858433",
+   "component": "SLIVER",
+   "area_m2": 0.1,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-7a450d11a115f25d",
+   "component": "SLIVER",
+   "area_m2": 0.079996,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-7bb6e76a44ccc937",
+   "component": "SLIVER",
+   "area_m2": 0.058093,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-7f9b7f9c9ec77e01",
+   "component": "SLIVER",
+   "area_m2": 0.003,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-83148ac7ddc433b8",
+   "component": "WALL_BAND",
+   "area_m2": 0.07,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-84c419a73eab13dc",
+   "component": "WALL_BAND",
+   "area_m2": 0.071999,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-8550286d54c75c94",
+   "component": "WALL_BAND",
+   "area_m2": 0.06,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-8659de487ae656cb",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-86e93126fdb43f2b",
+   "component": "SLIVER",
+   "area_m2": 0.05,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-8bedd87cd08df9d1",
+   "component": "SLIVER",
+   "area_m2": 0.047998,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-8d18cbeaf145ea7c",
+   "component": "WALL_BAND",
+   "area_m2": 0.06,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-8e54c4e94e93026a",
+   "component": "SLIVER",
+   "area_m2": 0.0025,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-930a71ac89639822",
+   "component": "SLIVER",
+   "area_m2": 0.004,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-93b26d31e5dd03e4",
+   "component": "SLIVER",
+   "area_m2": 0.037384,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-983efb3b1e2ed482",
+   "component": "WALL_BAND",
+   "area_m2": 0.02,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-99f4e4ce0cc9fa3c",
+   "component": "SLIVER",
+   "area_m2": 0.15,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-9a652f4d3c9612b7",
+   "component": "SLIVER",
+   "area_m2": 0.06,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-9dd4733ea723ffb5",
+   "component": "SLIVER",
+   "area_m2": 0.000119,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-9ea388b201e984de",
+   "component": "SLIVER",
+   "area_m2": 0.058093,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-9f869f37a48e1cbe",
+   "component": "SLIVER",
+   "area_m2": 0.0035,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-a1ef45f4a7849f24",
+   "component": "WALL_BAND",
+   "area_m2": 0.064,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-a24e6db55ef56787",
+   "component": "WALL_BAND",
+   "area_m2": 0.52125,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-a27df643475154df",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-a435cc859fdb7232",
+   "component": "WALL_BAND",
+   "area_m2": 0.036,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-a63b76d82936dff5",
+   "component": "SLIVER",
+   "area_m2": 0.0025,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-a71f83265d0d8f61",
+   "component": "WALL_BAND",
+   "area_m2": 0.53,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "TR:1F:SITE-aa3f3d9cc41ec54a:R",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 2.97,
+   "class": "UNKNOWN",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-ac2cbe483d5f12d5",
+   "component": "WALL_BAND",
+   "area_m2": 0.049999,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-afa559877d710c04",
+   "component": "WALL_BAND",
+   "area_m2": 0.15,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-b0758667f2e8e3a4",
+   "component": "SLIVER",
+   "area_m2": 0.005,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-b3ae5cd01329b321",
+   "component": "WALL_BAND",
+   "area_m2": 0.761001,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-b44c0fe2e7c32fb2",
+   "component": "WALL_BAND",
+   "area_m2": 0.07,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-b5fe3936c51ed55c",
+   "component": "WALL_BAND",
+   "area_m2": 0.059999,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-b65a12c3a6e5a6cf",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-b6cb824ab4eac6fb",
+   "component": "SLIVER",
+   "area_m2": 0.026,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-b82a4071532463bf",
+   "component": "SLIVER",
+   "area_m2": 0.058093,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-baf8769ecbdbd180",
+   "component": "SLIVER",
+   "area_m2": 0.026,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-bb295c64d3066dba",
+   "component": "SLIVER",
+   "area_m2": 0.058093,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-bb64243f6618a746",
+   "component": "SLIVER",
+   "area_m2": 0.042,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-bc60f7559f53d537",
+   "component": "WALL_BAND",
+   "area_m2": 0.027,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-c0dc2f2882ccdddb",
+   "component": "SLIVER",
+   "area_m2": 0.02,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-c18c2885673de8fd",
+   "component": "SLIVER",
+   "area_m2": 0.058093,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-c28fd0c22e8a735c",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "TR:1F:SITE-c46cb88cea7decbb:R",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 18.215,
+   "class": "DRY",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-c59aa28d7f9fcd62",
+   "component": "WALL_BAND",
+   "area_m2": 0.015,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-c6a7e80b9f5e20eb",
+   "component": "WALL_BAND",
+   "area_m2": 0.096,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-c990dafb69743619",
+   "component": "SLIVER",
+   "area_m2": 0.244977,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-cc957d7a86b362da",
+   "component": "SLIVER",
+   "area_m2": 0.003,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "TR:1F:SITE-cdc894c0f0fd69c9:R",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 3.5775,
+   "class": "WET",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-d26f30a45f4a773d",
+   "component": "SLIVER",
+   "area_m2": 0.036,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-d4af414d2ad99ac2",
+   "component": "WALL_BAND",
+   "area_m2": 0.709985,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-d842e65c763ab629",
+   "component": "SLIVER",
+   "area_m2": 0.237,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-d8ebd1055df5adc7",
+   "component": "SLIVER",
+   "area_m2": 0.05,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-d988dc136cdcbe67",
+   "component": "WALL_BAND",
+   "area_m2": 0.0525,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-da13bf9ad3c08141",
+   "component": "WALL_BAND",
+   "area_m2": 0.14,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "TR:1F:SITE-da154e7546d18013:R",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 19.05,
+   "class": "DRY",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-e2920ab954ad7737",
+   "component": "SLIVER",
+   "area_m2": 0.006,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-e42826f87f590edf",
+   "component": "SLIVER",
+   "area_m2": 0.376953,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-e78aa649c2b76fd7",
+   "component": "SLIVER",
+   "area_m2": 0.064093,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-e98a691209ee2e11",
+   "component": "WALL_BAND",
+   "area_m2": 0.09,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-e9a632cf407f7cf6",
+   "component": "SLIVER",
+   "area_m2": 0.02,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-ec385482682582ae",
+   "component": "SLIVER",
+   "area_m2": 0.064093,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-ed75b102436f24db",
+   "component": "WALL_BAND",
+   "area_m2": 0.036,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-ee99dbf457836fde",
+   "component": "WALL_BAND",
+   "area_m2": 0.04,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-f164be7bc1411b53",
+   "component": "WALL_BAND",
+   "area_m2": 0.096,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-f27d83ccea1dfac9",
+   "component": "SLIVER",
+   "area_m2": 0.002497,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-f3d2787baa8499de",
+   "component": "SLIVER",
+   "area_m2": 0.12,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-f43550435b059688",
+   "component": "SLIVER",
+   "area_m2": 0.124186,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-f9f3118d610eb8c1",
+   "component": "SLIVER",
+   "area_m2": 0.015,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-fa65bbb87c13c6cd",
+   "component": "SLIVER",
+   "area_m2": 0.047998,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-fad9bd015b11ffe1",
+   "component": "SLIVER",
+   "area_m2": 0.006,
+   "class": "SLIVER",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-fb0cfbeb79d6c392",
+   "component": "WALL_BAND",
+   "area_m2": 0.06,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-fb38cdfa6174c607",
+   "component": "WALL_BAND",
+   "area_m2": 0.098655,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:1F:SITE-ffb888ce09700b75",
+   "component": "WALL_BAND",
+   "area_m2": 0.54,
+   "class": "WALL_BAND",
+   "floor": "1F"
+  },
+  {
+   "id": "TR:1F:RR:1F:RB-5757373d9f615fe5:R",
+   "component": "RECOVERED_SPACE",
+   "area_m2": 5.022499,
+   "class": "WET",
+   "floor": "1F"
+  },
+  {
+   "id": "UR:1F:0:0",
+   "component": "UNRESOLVED_BLOCKED",
+   "area_m2": 4.156637,
+   "class": "UNCLOSED_PLATE_AREA",
+   "floor": "1F"
+  },
+  {
+   "id": "UR:1F:1:0:VOID",
+   "component": "VOID",
+   "area_m2": 2.874658,
+   "class": "VOID_OUTLINE_IN_UNCLOSED_AREA",
+   "floor": "1F"
+  },
+  {
+   "id": "UR:1F:1:0",
+   "component": "UNRESOLVED_BLOCKED",
+   "area_m2": 0.582585,
+   "class": "UNCLOSED_PLATE_AREA",
+   "floor": "1F"
+  },
+  {
+   "id": "UR:1F:2:0",
+   "component": "UNRESOLVED_BLOCKED",
+   "area_m2": 2.765998,
+   "class": "UNCLOSED_PLATE_AREA",
+   "floor": "1F"
+  },
+  {
+   "id": "UR:1F:3:0",
+   "component": "UNRESOLVED_BLOCKED",
+   "area_m2": 0.043749,
+   "class": "UNCLOSED_PLATE_AREA",
+   "floor": "1F"
+  },
+  {
+   "id": "UR:1F:4:0",
+   "component": "UNRESOLVED_BLOCKED",
+   "area_m2": 0.031249,
+   "class": "UNCLOSED_PLATE_AREA",
+   "floor": "1F"
+  },
+  {
+   "id": "UR:1F:5:0",
+   "component": "UNRESOLVED_BLOCKED",
+   "area_m2": 0.031249,
+   "class": "UNCLOSED_PLATE_AREA",
+   "floor": "1F"
+  },
+  {
+   "id": "PS:2F:SITE-01d98910baf05939",
+   "component": "WALL_BAND",
+   "area_m2": 0.2,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-06e40616cbb8a775",
+   "component": "SLIVER",
+   "area_m2": 0.036,
+   "class": "SLIVER",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-0715f4586f73b11d",
+   "component": "SLIVER",
+   "area_m2": 0.095995,
+   "class": "SLIVER",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-144b5e3e10e157b0",
+   "component": "SLIVER",
+   "area_m2": 0.05,
+   "class": "SLIVER",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-188cf37a3919c0f3",
+   "component": "SLIVER",
+   "area_m2": 0.006,
+   "class": "SLIVER",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-22a44024d49147dd",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "TR:2F:SITE-22c718c6fc156ebe:R",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 18.6,
+   "class": "UNKNOWN",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-250e67cdad4fd201",
+   "component": "SLIVER",
+   "area_m2": 0.079996,
+   "class": "SLIVER",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-28cbc51877eaa295",
+   "component": "SLIVER",
+   "area_m2": 0.02,
+   "class": "SLIVER",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-28d5a43bf5ae9d9d",
+   "component": "SLIVER",
+   "area_m2": 0.044,
+   "class": "SLIVER",
+   "floor": "2F"
+  },
+  {
+   "id": "TR:2F:SITE-2e3bac611a8fb491:R",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 19.35,
+   "class": "DRY",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-31e224870baf6a2f",
+   "component": "WALL_BAND",
+   "area_m2": 2.381346,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-31fcb5074c148aa8",
+   "component": "WALL_BAND",
+   "area_m2": 1.109649,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-325dffe7a7e1f834",
+   "component": "WALL_BAND",
+   "area_m2": 0.15,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-3701a63d7cb4ccb2",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-3b4aa55ce4083ed3",
+   "component": "SLIVER",
+   "area_m2": 0.047998,
+   "class": "SLIVER",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-3c014062649f8b68",
+   "component": "SLIVER",
+   "area_m2": 0.05,
+   "class": "SLIVER",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-3fede37bdf7a19ba",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-41bb9640c13a6e89",
+   "component": "SLIVER",
+   "area_m2": 0.06,
+   "class": "SLIVER",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-459b2b093132b93f",
+   "component": "SLIVER",
+   "area_m2": 0.006,
+   "class": "SLIVER",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-45cfa19bdf9d127d",
+   "component": "WALL_BAND",
+   "area_m2": 0.059998,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-489744a0246aae2c",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-4b42ddcc0cdc1f6d",
+   "component": "WALL_BAND",
+   "area_m2": 0.02,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-4d34e3cd7dd3193c",
+   "component": "SLIVER",
+   "area_m2": 0.042,
+   "class": "SLIVER",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-50babc5fc724fc07",
+   "component": "SLIVER",
+   "area_m2": 0.1,
+   "class": "SLIVER",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-50ff37b6c2383423",
+   "component": "SLIVER",
+   "area_m2": 0.119942,
+   "class": "SLIVER",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-5c85e820a0460d40",
+   "component": "WALL_BAND",
+   "area_m2": 0.08,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-62615a96ddbd7392",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-716187f2057a35f6",
+   "component": "WALL_BAND",
+   "area_m2": 0.24,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-726750676972a1be",
+   "component": "SLIVER",
+   "area_m2": 0.06,
+   "class": "SLIVER",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-72b51104aa9ef259",
+   "component": "WALL_BAND",
+   "area_m2": 0.06,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-73e232b05b067315",
+   "component": "SLIVER",
+   "area_m2": 0.05,
+   "class": "SLIVER",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-766d112dac1af01a",
+   "component": "WALL_BAND",
+   "area_m2": 0.049999,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-7ac9b8c6b084245d",
+   "component": "WALL_BAND",
+   "area_m2": 0.08,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-83b9aa32fc7fdfcf",
+   "component": "WALL_BAND",
+   "area_m2": 0.54,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-91b3e09136d9de6e",
+   "component": "WALL_BAND",
+   "area_m2": 0.07,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-99a7f9fe39863125",
+   "component": "WALL_BAND",
+   "area_m2": 0.708995,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-9ddccbb6006177f5",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-a1e23e66fe0800ee",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-a939c8936681aaa2",
+   "component": "SLIVER",
+   "area_m2": 0.006,
+   "class": "SLIVER",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-ab6f5d72d565fc0e",
+   "component": "WALL_BAND",
+   "area_m2": 0.04,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-ab8340cca4f20687",
+   "component": "WALL_BAND",
+   "area_m2": 0.15,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-ac22d965480bcfee",
+   "component": "WALL_BAND",
+   "area_m2": 0.04,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "TR:2F:SITE-ae46ec7518ab613e:R",
+   "component": "INTERNAL_SPACE",
+   "area_m2": 5.55,
+   "class": "WET",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-b476ccbab30b06c4",
+   "component": "WALL_BAND",
+   "area_m2": 0.074998,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-b5310ad326224990",
+   "component": "SLIVER",
+   "area_m2": 0.044,
+   "class": "SLIVER",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-b747fcfac69c9337",
+   "component": "SLIVER",
+   "area_m2": 0.0025,
+   "class": "SLIVER",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-bb66c93ef46ab605",
+   "component": "WALL_BAND",
+   "area_m2": 0.0225,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-c0b7eae3f80988f5",
+   "component": "WALL_BAND",
+   "area_m2": 0.05,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-cc770225a932b03d",
+   "component": "WALL_BAND",
+   "area_m2": 0.36,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-d013902dbda86139",
+   "component": "WALL_BAND",
+   "area_m2": 0.06,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-d2fc82c3215541ba",
+   "component": "WALL_BAND",
+   "area_m2": 0.07,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-d36603b48eb356a0",
+   "component": "WALL_BAND",
+   "area_m2": 0.04,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-e0186d6d080d9d6a",
+   "component": "WALL_BAND",
+   "area_m2": 0.049999,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-e1471a06625dc25b",
+   "component": "SLIVER",
+   "area_m2": 0.026,
+   "class": "SLIVER",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-e9f7576eb88caf57",
+   "component": "SLIVER",
+   "area_m2": 0.036,
+   "class": "SLIVER",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-f1054fcdb6682310",
+   "component": "SLIVER",
+   "area_m2": 0.02,
+   "class": "SLIVER",
+   "floor": "2F"
+  },
+  {
+   "id": "PS:2F:SITE-f62938fa6f8110be",
+   "component": "WALL_BAND",
+   "area_m2": 0.279994,
+   "class": "WALL_BAND",
+   "floor": "2F"
+  },
+  {
+   "id": "TR:2F:SITE-fd5fd08ac9eb9313:R",
+   "component": "SHAFT",
+   "area_m2": 3.24,
+   "class": "SHAFT",
+   "floor": "2F"
+  },
+  {
+   "id": "UR:2F:0:0",
+   "component": "UNRESOLVED_BLOCKED",
+   "area_m2": 0.271908,
+   "class": "UNCLOSED_PLATE_AREA",
+   "floor": "2F"
+  },
+  {
+   "id": "UR:2F:1:0",
+   "component": "UNRESOLVED_BLOCKED",
+   "area_m2": 0.086566,
+   "class": "UNCLOSED_PLATE_AREA",
+   "floor": "2F"
+  },
+  {
+   "id": "UR:2F:2:0",
+   "component": "UNRESOLVED_BLOCKED",
+   "area_m2": 0.039999,
+   "class": "UNCLOSED_PLATE_AREA",
+   "floor": "2F"
+  }
+ ],
+ "room_table": [
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-0bb9132c5c034229:R",
+   "room": "SHAFT",
+   "class": "SHAFT",
+   "raw_area_m2": 3.24,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.0,
+   "finish_class": "NONE",
+   "internal": false,
+   "state": "NOT_IN_SCOPE",
+   "source": "ROUTE_A_SITE / SHAFT_EVIDENCE (same footprint every storey)"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-0e9a7a85e795446f:R",
+   "room": "Wash",
+   "class": "WET",
+   "raw_area_m2": 3.1325,
+   "excluded_m2": 0.0,
+   "net_area_m2": 3.1325,
+   "finish_class": "WET_CERAMIC",
+   "internal": true,
+   "state": "VERIFIED_COMPLETE",
+   "source": "ROUTE_A_SITE / SINGLE_CLASS_SPACE (BILINGUAL_TWIN_PLACEMENT)"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-5191e28052b00088:R",
+   "room": "W.C",
+   "class": "WET",
+   "raw_area_m2": 2.367609,
+   "excluded_m2": 0.0,
+   "net_area_m2": 2.367609,
+   "finish_class": "WET_CERAMIC",
+   "internal": true,
+   "state": "VERIFIED_COMPLETE",
+   "source": "ROUTE_A_SITE / SINGLE_CLASS_SPACE"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:REMAINDER",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.182026,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.182026,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / REMAINDER_OF_SPLIT (slivers below 0.05 m2 / outside every Route B face)"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-684fc26661ba7dfc",
+   "room": "SALOON / RECEPTION / DINING / Wash",
+   "class": "MIXED_UNRESOLVED",
+   "raw_area_m2": 121.511633,
+   "excluded_m2": 0.0,
+   "net_area_m2": 121.511633,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_HOLDS_SEVERAL_CLASSES"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-095f7eb1e4af3ab3",
+   "room": "GARDEN",
+   "class": "EXTERNAL",
+   "raw_area_m2": 9.554,
+   "excluded_m2": 0.0,
+   "net_area_m2": 9.554,
+   "finish_class": "EXTERNAL_FINISH",
+   "internal": false,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / SPLIT_BY_POSITIVE_SOURCE_BOUNDARY + LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-23b287a0c67d534d",
+   "room": "PANTRY",
+   "class": "SERVICE",
+   "raw_area_m2": 9.541909,
+   "excluded_m2": 0.0,
+   "net_area_m2": 9.541909,
+   "finish_class": "WET_CERAMIC",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / SPLIT_BY_POSITIVE_SOURCE_BOUNDARY + LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-8abd79017bc6a05f",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 2.16317,
+   "excluded_m2": 0.0,
+   "net_area_m2": 2.16317,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-201bbf12ec484dd8",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 1.963089,
+   "excluded_m2": 0.0,
+   "net_area_m2": 1.963089,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-18e242d6704a250c",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 1.95,
+   "excluded_m2": 0.0,
+   "net_area_m2": 1.95,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-8967ffcbc40202e6",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 1.567258,
+   "excluded_m2": 0.0,
+   "net_area_m2": 1.567258,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-4b807cebcd6ef4f4",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.460954,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.460954,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-3cd2bbdea3963bcf",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.437577,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.437577,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-f901bbe26ba35d9b",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.437515,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.437515,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-3ad8b11bcf042854",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.321594,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.321594,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-37490ae2d7a37cb8",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.291732,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.291732,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-4519512c56f3980d",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.228043,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.228043,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-35a4aec53827d6f7",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.190851,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.190851,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-ff4aea0c094e96d2",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.190851,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.190851,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-3dbbfa2e5d35b978",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.19085,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.19085,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-811fb5bfbc744c05",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.190838,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.190838,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-5a3279669104ed04",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.190817,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.190817,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-546bfdc59acc5e41",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.190793,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.190793,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-bdcdf28a4ecd67a4",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.190785,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.190785,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-d1210829c302a3bd",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.19077,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.19077,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-7158670e6fb047e5",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.190732,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.190732,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-f668567e7bcd1884",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.190707,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.190707,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-64c2e3ea64dc12ab",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.18879,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.18879,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-33e208cd68a969a2",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.18879,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.18879,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-400aeea24dee5aea",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.181518,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.181518,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-7e21145f2a79f71c",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.175819,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.175819,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-310b5f35c58d0c0d",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.1725,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.1725,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-4045da915833d218",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.1725,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.1725,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-41690e1e34b71c76",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.1725,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.1725,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-7e773ba998d5973f",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.1725,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.1725,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-88d597adddde9dcc",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.1725,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.1725,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-e5c2a247a8b9be77",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.1725,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.1725,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-51a4990e8a1fb646",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.169112,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.169112,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-b78f2a39435a5f21",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.1675,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.1675,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-13463f491824476b",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.1675,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.1675,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-83f9cd0fe45b9d42",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.1575,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.1575,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-c33dab2f410c01f9",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.1575,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.1575,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-678c344cfb9f3d30",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.150159,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.150159,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-f3da97170c572673",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.14583,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.14583,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-d1043112e0fa1617",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.131539,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.131539,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-b6cbf3d43e69af61",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.070205,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.070205,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-67547ed37daadb5a:RB-090ba7999539c951",
+   "room": "UNASSIGNED",
+   "class": "UNASSIGNED",
+   "raw_area_m2": 0.052724,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.052724,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_A_SITE / SPLIT_BY_ROUTE_B_FACE / PIECE_OF_SPLIT_SPACE_WITHOUT_LABEL"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-714889aea3e329c7:R",
+   "room": "BATH",
+   "class": "WET",
+   "raw_area_m2": 3.717683,
+   "excluded_m2": 0.0,
+   "net_area_m2": 3.717683,
+   "finish_class": "WET_CERAMIC",
+   "internal": true,
+   "state": "VERIFIED_COMPLETE",
+   "source": "ROUTE_A_SITE / SINGLE_CLASS_SPACE"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-810cacd9be443703:R",
+   "room": "DEWANEYA",
+   "class": "DRY",
+   "raw_area_m2": 24.939126,
+   "excluded_m2": 0.0,
+   "net_area_m2": 24.939126,
+   "finish_class": "DRY_PORCELAIN_TILE",
+   "internal": true,
+   "state": "VERIFIED_COMPLETE",
+   "source": "ROUTE_A_SITE / SINGLE_CLASS_SPACE"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-88d9dbffd47c417a:R",
+   "room": "KITCHEN",
+   "class": "SERVICE",
+   "raw_area_m2": 9.63,
+   "excluded_m2": 0.0,
+   "net_area_m2": 9.63,
+   "finish_class": "WET_CERAMIC",
+   "internal": true,
+   "state": "VERIFIED_COMPLETE",
+   "source": "ROUTE_A_SITE / SINGLE_CLASS_SPACE"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-9810548752edbe40:R",
+   "room": "W.C",
+   "class": "WET",
+   "raw_area_m2": 2.675221,
+   "excluded_m2": 0.0,
+   "net_area_m2": 2.675221,
+   "finish_class": "WET_CERAMIC",
+   "internal": true,
+   "state": "VERIFIED_COMPLETE",
+   "source": "ROUTE_A_SITE / SINGLE_CLASS_SPACE"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-9b585230d0877a35:R",
+   "room": "W.C",
+   "class": "WET",
+   "raw_area_m2": 1.95,
+   "excluded_m2": 0.0,
+   "net_area_m2": 1.95,
+   "finish_class": "WET_CERAMIC",
+   "internal": true,
+   "state": "VERIFIED_COMPLETE",
+   "source": "ROUTE_A_SITE / SINGLE_CLASS_SPACE"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-b2553428a3dc90a0:R",
+   "room": "STAIR",
+   "class": "STAIR",
+   "raw_area_m2": 14.64,
+   "excluded_m2": 0.0,
+   "net_area_m2": 14.64,
+   "finish_class": "MARBLE_STAIR_FINISH",
+   "internal": true,
+   "state": "VERIFIED_COMPLETE",
+   "source": "ROUTE_A_SITE / UNLABELLED_SPACE"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-ce2d2c3a4b7da280:R",
+   "room": "W.C",
+   "class": "WET",
+   "raw_area_m2": 2.3625,
+   "excluded_m2": 0.0,
+   "net_area_m2": 2.3625,
+   "finish_class": "WET_CERAMIC",
+   "internal": true,
+   "state": "VERIFIED_COMPLETE",
+   "source": "ROUTE_A_SITE / SINGLE_CLASS_SPACE"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-dda89794d15dfb61:R",
+   "room": "MASTER BED ROOM",
+   "class": "DRY",
+   "raw_area_m2": 16.557724,
+   "excluded_m2": 0.0,
+   "net_area_m2": 16.557724,
+   "finish_class": "DRY_PORCELAIN_TILE",
+   "internal": true,
+   "state": "VERIFIED_COMPLETE",
+   "source": "ROUTE_A_SITE / SINGLE_CLASS_SPACE"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:SITE-eac7a1be6566b2d0:R",
+   "room": "W.C",
+   "class": "WET",
+   "raw_area_m2": 3.375,
+   "excluded_m2": 0.0,
+   "net_area_m2": 3.375,
+   "finish_class": "WET_CERAMIC",
+   "internal": true,
+   "state": "VERIFIED_COMPLETE",
+   "source": "ROUTE_A_SITE / SINGLE_CLASS_SPACE"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:RR:GF:RB-2365eaef717b0fe9:R",
+   "room": "UNKNOWN",
+   "class": "UNKNOWN",
+   "raw_area_m2": 5.0,
+   "excluded_m2": 0.0,
+   "net_area_m2": 5.0,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_B_RECOVERED / UNLABELLED_SPACE"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:RR:GF:RB-a1191769a247d0ff:R",
+   "room": "DRIVER",
+   "class": "DRY",
+   "raw_area_m2": 7.874998,
+   "excluded_m2": 0.0,
+   "net_area_m2": 7.874998,
+   "finish_class": "DRY_PORCELAIN_TILE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_B_RECOVERED / SINGLE_CLASS_SPACE"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:RR:GF:RB-682db83b9b101479:R",
+   "room": "swimming pool",
+   "class": "EXTERNAL",
+   "raw_area_m2": 8.574049,
+   "excluded_m2": 0.0,
+   "net_area_m2": 8.574049,
+   "finish_class": "EXTERNAL_FINISH",
+   "internal": false,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_B_RECOVERED / SINGLE_CLASS_SPACE"
+  },
+  {
+   "floor": "GF",
+   "region": "TR:GF:RR:GF:RB-d86c0e084612ae59:R",
+   "room": "UNKNOWN",
+   "class": "UNKNOWN",
+   "raw_area_m2": 1.253049,
+   "excluded_m2": 0.0,
+   "net_area_m2": 1.253049,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_B_RECOVERED / UNLABELLED_SPACE"
+  },
+  {
+   "floor": "1F",
+   "region": "TR:1F:SITE-16f76cd141ed8273:R",
+   "room": "BATH",
+   "class": "WET",
+   "raw_area_m2": 5.0225,
+   "excluded_m2": 0.0,
+   "net_area_m2": 5.0225,
+   "finish_class": "WET_CERAMIC",
+   "internal": true,
+   "state": "VERIFIED_COMPLETE",
+   "source": "ROUTE_A_SITE / SINGLE_CLASS_SPACE"
+  },
+  {
+   "floor": "1F",
+   "region": "TR:1F:SITE-195dbe4bca9e732e:R",
+   "room": "SHAFT",
+   "class": "SHAFT",
+   "raw_area_m2": 3.24,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.0,
+   "finish_class": "NONE",
+   "internal": false,
+   "state": "NOT_IN_SCOPE",
+   "source": "ROUTE_A_SITE / SHAFT_EVIDENCE (same footprint every storey)"
+  },
+  {
+   "floor": "1F",
+   "region": "TR:1F:SITE-22b96446836c3d8d:R",
+   "room": "MASTER BED ROOM",
+   "class": "DRY",
+   "raw_area_m2": 19.02119,
+   "excluded_m2": 0.0,
+   "net_area_m2": 19.02119,
+   "finish_class": "DRY_PORCELAIN_TILE",
+   "internal": true,
+   "state": "VERIFIED_COMPLETE",
+   "source": "ROUTE_A_SITE / SINGLE_CLASS_SPACE"
+  },
+  {
+   "floor": "1F",
+   "region": "TR:1F:SITE-2f6cf2b5bebbd966:R",
+   "room": "BATH",
+   "class": "WET",
+   "raw_area_m2": 4.725,
+   "excluded_m2": 0.0,
+   "net_area_m2": 4.725,
+   "finish_class": "WET_CERAMIC",
+   "internal": true,
+   "state": "VERIFIED_COMPLETE",
+   "source": "ROUTE_A_SITE / SINGLE_CLASS_SPACE"
+  },
+  {
+   "floor": "1F",
+   "region": "TR:1F:SITE-3cde308552cf977c:R",
+   "room": "MASTER BED ROOM",
+   "class": "DRY",
+   "raw_area_m2": 16.34,
+   "excluded_m2": 0.0,
+   "net_area_m2": 16.34,
+   "finish_class": "DRY_PORCELAIN_TILE",
+   "internal": true,
+   "state": "VERIFIED_COMPLETE",
+   "source": "ROUTE_A_SITE / SINGLE_CLASS_SPACE"
+  },
+  {
+   "floor": "1F",
+   "region": "TR:1F:SITE-60a08def069f0e48:1F-V01",
+   "room": "VOID",
+   "class": "VOID",
+   "raw_area_m2": 16.005,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.0,
+   "finish_class": "NONE",
+   "internal": false,
+   "state": "NOT_IN_SCOPE",
+   "source": "ROUTE_A_SITE / VOID_OUTLINE_EVIDENCE (V3 void: X-rect / arcs)"
+  },
+  {
+   "floor": "1F",
+   "region": "TR:1F:SITE-60a08def069f0e48:R",
+   "room": "LIVING AREA",
+   "class": "DRY",
+   "raw_area_m2": 63.661671,
+   "excluded_m2": 0.0,
+   "net_area_m2": 63.661671,
+   "finish_class": "DRY_PORCELAIN_TILE",
+   "internal": true,
+   "state": "VERIFIED_COMPLETE",
+   "source": "ROUTE_A_SITE / SINGLE_CLASS_SPACE"
+  },
+  {
+   "floor": "1F",
+   "region": "TR:1F:SITE-69e2d39bee49fa7e:R",
+   "room": "LAUNDRY",
+   "class": "SERVICE",
+   "raw_area_m2": 10.151,
+   "excluded_m2": 0.0,
+   "net_area_m2": 10.151,
+   "finish_class": "WET_CERAMIC",
+   "internal": true,
+   "state": "VERIFIED_COMPLETE",
+   "source": "ROUTE_A_SITE / SINGLE_CLASS_SPACE"
+  },
+  {
+   "floor": "1F",
+   "region": "TR:1F:SITE-aa3f3d9cc41ec54a:R",
+   "room": "UNKNOWN",
+   "class": "UNKNOWN",
+   "raw_area_m2": 2.97,
+   "excluded_m2": 0.0,
+   "net_area_m2": 2.97,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "VERIFIED_COMPLETE",
+   "source": "ROUTE_A_SITE / UNLABELLED_SPACE"
+  },
+  {
+   "floor": "1F",
+   "region": "TR:1F:SITE-c46cb88cea7decbb:R",
+   "room": "MASTER BED ROOM",
+   "class": "DRY",
+   "raw_area_m2": 18.215,
+   "excluded_m2": 0.0,
+   "net_area_m2": 18.215,
+   "finish_class": "DRY_PORCELAIN_TILE",
+   "internal": true,
+   "state": "VERIFIED_COMPLETE",
+   "source": "ROUTE_A_SITE / SINGLE_CLASS_SPACE"
+  },
+  {
+   "floor": "1F",
+   "region": "TR:1F:SITE-cdc894c0f0fd69c9:R",
+   "room": "BATH",
+   "class": "WET",
+   "raw_area_m2": 3.5775,
+   "excluded_m2": 0.0,
+   "net_area_m2": 3.5775,
+   "finish_class": "WET_CERAMIC",
+   "internal": true,
+   "state": "VERIFIED_COMPLETE",
+   "source": "ROUTE_A_SITE / SINGLE_CLASS_SPACE"
+  },
+  {
+   "floor": "1F",
+   "region": "TR:1F:SITE-da154e7546d18013:R",
+   "room": "MASTER BED ROOM",
+   "class": "DRY",
+   "raw_area_m2": 19.05,
+   "excluded_m2": 0.0,
+   "net_area_m2": 19.05,
+   "finish_class": "DRY_PORCELAIN_TILE",
+   "internal": true,
+   "state": "VERIFIED_COMPLETE",
+   "source": "ROUTE_A_SITE / SINGLE_CLASS_SPACE"
+  },
+  {
+   "floor": "1F",
+   "region": "TR:1F:RR:1F:RB-5757373d9f615fe5:R",
+   "room": "BATH",
+   "class": "WET",
+   "raw_area_m2": 5.022499,
+   "excluded_m2": 0.0,
+   "net_area_m2": 5.022499,
+   "finish_class": "WET_CERAMIC",
+   "internal": true,
+   "state": "PROVISIONAL",
+   "source": "ROUTE_B_RECOVERED / SINGLE_CLASS_SPACE"
+  },
+  {
+   "floor": "2F",
+   "region": "TR:2F:SITE-22c718c6fc156ebe:R",
+   "room": "UNKNOWN",
+   "class": "UNKNOWN",
+   "raw_area_m2": 18.6,
+   "excluded_m2": 0.0,
+   "net_area_m2": 18.6,
+   "finish_class": "UNKNOWN_MATERIAL_MEASURABLE",
+   "internal": true,
+   "state": "VERIFIED_COMPLETE",
+   "source": "ROUTE_A_SITE / UNLABELLED_SPACE"
+  },
+  {
+   "floor": "2F",
+   "region": "TR:2F:SITE-2e3bac611a8fb491:R",
+   "room": "MAID R.",
+   "class": "DRY",
+   "raw_area_m2": 19.35,
+   "excluded_m2": 0.0,
+   "net_area_m2": 19.35,
+   "finish_class": "DRY_PORCELAIN_TILE",
+   "internal": true,
+   "state": "VERIFIED_COMPLETE",
+   "source": "ROUTE_A_SITE / SINGLE_CLASS_SPACE"
+  },
+  {
+   "floor": "2F",
+   "region": "TR:2F:SITE-ae46ec7518ab613e:R",
+   "room": "W.C",
+   "class": "WET",
+   "raw_area_m2": 5.55,
+   "excluded_m2": 0.0,
+   "net_area_m2": 5.55,
+   "finish_class": "WET_CERAMIC",
+   "internal": true,
+   "state": "VERIFIED_COMPLETE",
+   "source": "ROUTE_A_SITE / SINGLE_CLASS_SPACE"
+  },
+  {
+   "floor": "2F",
+   "region": "TR:2F:SITE-fd5fd08ac9eb9313:R",
+   "room": "SHAFT",
+   "class": "SHAFT",
+   "raw_area_m2": 3.24,
+   "excluded_m2": 0.0,
+   "net_area_m2": 0.0,
+   "finish_class": "NONE",
+   "internal": false,
+   "state": "NOT_IN_SCOPE",
+   "source": "ROUTE_A_SITE / SHAFT_EVIDENCE (same footprint every storey)"
+  }
+ ],
+ "external_kept_apart": [
+  "GARDEN",
+  "POOL",
+  "COURT",
+  "ROOF terraces",
+  "VOID",
+  "SHAFT"
+ ],
+ "rule": "registered floor plate = sum of classified components; residual plate area is UNRESOLVED_BLOCKED (listed), never dropped; external areas never enter internal floor totals"
+}
