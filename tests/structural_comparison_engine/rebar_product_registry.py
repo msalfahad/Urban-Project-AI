@@ -54,6 +54,7 @@ ACCURATE_MODULES = (
     "engine/source/shaft_geometry.py",          # S8.8 shaft rings, wall pieces, openings, storeys, tie-beam triggers
     "engine/source/stair_riser_schedule.py",    # S8.7A riser pairing, uniform risers, finished vs structural levels
     "engine/source/stair_scenario_checks.py",   # S8.7B landing reach, setting out, finish datums, exact flight integral
+    "engine/source/stair_fit_checks.py",        # S8.7C run ends, beam-band clearance, riser capacity, transition levels
     "engine/bbs_steel.py",
 )
 # project builders that produce accurate reinforcement registers
@@ -99,6 +100,7 @@ ACCURATE_BUILDERS = (
     "research/alsenan_lift_s8_8/build_s8_8.py",  # S8.8 lift pit, shaft walls, tie beam (blind, frozen)
     "research/alsenan_stairs_s8_7a/build_s8_7a.py",  # S8.7A stair riser / finish correction layer (no release)
     "research/alsenan_stairs_s8_7b/build_s8_7b.py",  # S8.7B owner stair scenario / engineering reconciliation (no release)
+    "research/alsenan_stairs_s8_7c/build_s8_7c.py",  # S8.7C stair design resolution study (no release)
 )
 ROUGH_MODULES = (
     "engine/source/rough_rebar_sanity.py",
