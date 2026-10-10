@@ -1,0 +1,711 @@
+{
+ "synthetic_evaluation": {
+  "dev_1-6_clean_at_938b0d1": {
+   "drawings": 6,
+   "end_to_end_success": 6,
+   "max_abs_error": {
+    "BEAMS_BELOW_SLAB": 0.0,
+    "BEAMS_TOTAL_DEPTH": 0.0,
+    "COLUMNS": 0.0,
+    "FOOTINGS": 0.0,
+    "SLABS": 0.0,
+    "STEEL_BEAMS": 0.0,
+    "STEEL_COLUMNS_MAIN": 0.0,
+    "STEEL_FOOTINGS": 0.0
+   },
+   "mean_abs_error": {
+    "BEAMS_BELOW_SLAB": 0.0,
+    "BEAMS_TOTAL_DEPTH": 0.0,
+    "COLUMNS": 0.0,
+    "FOOTINGS": 0.0,
+    "SLABS": 0.0,
+    "STEEL_BEAMS": 0.0,
+    "STEEL_COLUMNS_MAIN": 0.0,
+    "STEEL_FOOTINGS": 0.0
+   },
+   "within_5pct": {
+    "BEAMS_BELOW_SLAB": 6,
+    "BEAMS_TOTAL_DEPTH": 6,
+    "COLUMNS": 6,
+    "FOOTINGS": 6,
+    "SLABS": 6,
+    "STEEL_BEAMS": 6,
+    "STEEL_COLUMNS_MAIN": 6,
+    "STEEL_FOOTINGS": 6
+   },
+   "detect": {
+    "detect_footings": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 78,
+     "true": 78,
+     "pred": 78
+    },
+    "detect_beams": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 232,
+     "true": 232,
+     "pred": 232
+    },
+    "detect_panels": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 70,
+     "true": 70,
+     "pred": 70
+    }
+   },
+   "slab_area": {
+    "truth_m2": 1244.06,
+    "engine_panel_m2": 1244.06,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0
+   },
+   "slab_loss_unreported_drawings": 0,
+   "mean_seconds": 0.165,
+   "defects": false
+  },
+  "dev_1-6_defects_at_938b0d1": {
+   "drawings": 6,
+   "end_to_end_success": 6,
+   "max_abs_error": {
+    "BEAMS_BELOW_SLAB": 0.0,
+    "BEAMS_TOTAL_DEPTH": 0.0,
+    "COLUMNS": 0.0,
+    "FOOTINGS": 0.0,
+    "SLABS": 0.0,
+    "STEEL_BEAMS": 0.0,
+    "STEEL_COLUMNS_MAIN": 0.0,
+    "STEEL_FOOTINGS": 0.0
+   },
+   "mean_abs_error": {
+    "BEAMS_BELOW_SLAB": 0.0,
+    "BEAMS_TOTAL_DEPTH": 0.0,
+    "COLUMNS": 0.0,
+    "FOOTINGS": 0.0,
+    "SLABS": 0.0,
+    "STEEL_BEAMS": 0.0,
+    "STEEL_COLUMNS_MAIN": 0.0,
+    "STEEL_FOOTINGS": 0.0
+   },
+   "within_5pct": {
+    "BEAMS_BELOW_SLAB": 6,
+    "BEAMS_TOTAL_DEPTH": 6,
+    "COLUMNS": 6,
+    "FOOTINGS": 6,
+    "SLABS": 6,
+    "STEEL_BEAMS": 6,
+    "STEEL_COLUMNS_MAIN": 6,
+    "STEEL_FOOTINGS": 6
+   },
+   "detect": {
+    "detect_footings": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 78,
+     "true": 78,
+     "pred": 78
+    },
+    "detect_beams": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 232,
+     "true": 232,
+     "pred": 232
+    },
+    "detect_panels": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 70,
+     "true": 70,
+     "pred": 70
+    }
+   },
+   "slab_area": {
+    "truth_m2": 1244.06,
+    "engine_panel_m2": 1244.06,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0
+   },
+   "slab_loss_unreported_drawings": 0,
+   "mean_seconds": 0.2,
+   "defects": true
+  },
+  "dev_1-6_hard_at_938b0d1": {
+   "drawings": 6,
+   "end_to_end_success": 6,
+   "max_abs_error": {
+    "BEAMS_BELOW_SLAB": 0.0,
+    "BEAMS_TOTAL_DEPTH": 0.0,
+    "COLUMNS": 0.0,
+    "FOOTINGS": 0.0,
+    "SLABS": 0.0,
+    "STEEL_BEAMS": 0.0,
+    "STEEL_COLUMNS_MAIN": 0.0,
+    "STEEL_FOOTINGS": 0.0
+   },
+   "mean_abs_error": {
+    "BEAMS_BELOW_SLAB": 0.0,
+    "BEAMS_TOTAL_DEPTH": 0.0,
+    "COLUMNS": 0.0,
+    "FOOTINGS": 0.0,
+    "SLABS": 0.0,
+    "STEEL_BEAMS": 0.0,
+    "STEEL_COLUMNS_MAIN": 0.0,
+    "STEEL_FOOTINGS": 0.0
+   },
+   "within_5pct": {
+    "BEAMS_BELOW_SLAB": 6,
+    "BEAMS_TOTAL_DEPTH": 6,
+    "COLUMNS": 6,
+    "FOOTINGS": 6,
+    "SLABS": 6,
+    "STEEL_BEAMS": 6,
+    "STEEL_COLUMNS_MAIN": 6,
+    "STEEL_FOOTINGS": 6
+   },
+   "detect": {
+    "detect_footings": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 78,
+     "true": 78,
+     "pred": 78
+    },
+    "detect_beams": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 232,
+     "true": 232,
+     "pred": 232
+    },
+    "detect_panels": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 70,
+     "true": 70,
+     "pred": 70
+    }
+   },
+   "slab_area": {
+    "truth_m2": 1244.06,
+    "engine_panel_m2": 1244.06,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0
+   },
+   "slab_loss_unreported_drawings": 0,
+   "mean_seconds": 0.214,
+   "defects": "hard"
+  },
+  "heldout_set1_101-110_clean_at_69f6d8c": {
+   "drawings": 10,
+   "end_to_end_success": 10,
+   "max_abs_error": {
+    "BEAMS_BELOW_SLAB": 0.0,
+    "BEAMS_TOTAL_DEPTH": 0.0,
+    "COLUMNS": 0.0,
+    "FOOTINGS": 0.0,
+    "SLABS": 0.0,
+    "STEEL_BEAMS": 0.0,
+    "STEEL_COLUMNS_MAIN": 0.0,
+    "STEEL_FOOTINGS": 0.0
+   },
+   "mean_abs_error": {
+    "BEAMS_BELOW_SLAB": 0.0,
+    "BEAMS_TOTAL_DEPTH": 0.0,
+    "COLUMNS": 0.0,
+    "FOOTINGS": 0.0,
+    "SLABS": 0.0,
+    "STEEL_BEAMS": 0.0,
+    "STEEL_COLUMNS_MAIN": 0.0,
+    "STEEL_FOOTINGS": 0.0
+   },
+   "within_5pct": {
+    "BEAMS_BELOW_SLAB": 10,
+    "BEAMS_TOTAL_DEPTH": 10,
+    "COLUMNS": 10,
+    "FOOTINGS": 10,
+    "SLABS": 10,
+    "STEEL_BEAMS": 10,
+    "STEEL_COLUMNS_MAIN": 10,
+    "STEEL_FOOTINGS": 10
+   },
+   "detect": {
+    "detect_footings": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 156,
+     "true": 156,
+     "pred": 156
+    },
+    "detect_beams": {
+     "recall": 1.0,
+     "precision": 0.979,
+     "matched": 466,
+     "true": 466,
+     "pred": 476
+    },
+    "detect_panels": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 154,
+     "true": 154,
+     "pred": 154
+    }
+   },
+   "slab_area": null,
+   "slab_loss_unreported_drawings": null,
+   "mean_seconds": 0.178,
+   "defects": false
+  },
+  "heldout_set2_201-220_clean_at_2b92e25": {
+   "drawings": 20,
+   "end_to_end_success": 20,
+   "max_abs_error": {
+    "BEAMS_BELOW_SLAB": 0.0,
+    "BEAMS_TOTAL_DEPTH": 0.0,
+    "COLUMNS": 0.0,
+    "FOOTINGS": 0.0,
+    "SLABS": 0.0,
+    "STEEL_BEAMS": 0.0,
+    "STEEL_COLUMNS_MAIN": 0.0,
+    "STEEL_FOOTINGS": 0.0
+   },
+   "mean_abs_error": {
+    "BEAMS_BELOW_SLAB": 0.0,
+    "BEAMS_TOTAL_DEPTH": 0.0,
+    "COLUMNS": 0.0,
+    "FOOTINGS": 0.0,
+    "SLABS": 0.0,
+    "STEEL_BEAMS": 0.0,
+    "STEEL_COLUMNS_MAIN": 0.0,
+    "STEEL_FOOTINGS": 0.0
+   },
+   "within_5pct": {
+    "BEAMS_BELOW_SLAB": 20,
+    "BEAMS_TOTAL_DEPTH": 20,
+    "COLUMNS": 20,
+    "FOOTINGS": 20,
+    "SLABS": 20,
+    "STEEL_BEAMS": 20,
+    "STEEL_COLUMNS_MAIN": 20,
+    "STEEL_FOOTINGS": 20
+   },
+   "detect": {
+    "detect_footings": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 280,
+     "true": 280,
+     "pred": 280
+    },
+    "detect_beams": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 808,
+     "true": 808,
+     "pred": 808
+    },
+    "detect_panels": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 260,
+     "true": 260,
+     "pred": 260
+    }
+   },
+   "slab_area": null,
+   "slab_loss_unreported_drawings": null,
+   "mean_seconds": 0.18,
+   "defects": false
+  },
+  "heldout_set2_201-220_defects_at_2b92e25": {
+   "drawings": 20,
+   "end_to_end_success": 20,
+   "max_abs_error": {
+    "BEAMS_BELOW_SLAB": 0.0,
+    "BEAMS_TOTAL_DEPTH": 0.0,
+    "COLUMNS": 0.0,
+    "FOOTINGS": 0.0,
+    "SLABS": 0.0,
+    "STEEL_BEAMS": 0.0,
+    "STEEL_COLUMNS_MAIN": 0.0,
+    "STEEL_FOOTINGS": 0.0
+   },
+   "mean_abs_error": {
+    "BEAMS_BELOW_SLAB": 0.0,
+    "BEAMS_TOTAL_DEPTH": 0.0,
+    "COLUMNS": 0.0,
+    "FOOTINGS": 0.0,
+    "SLABS": 0.0,
+    "STEEL_BEAMS": 0.0,
+    "STEEL_COLUMNS_MAIN": 0.0,
+    "STEEL_FOOTINGS": 0.0
+   },
+   "within_5pct": {
+    "BEAMS_BELOW_SLAB": 20,
+    "BEAMS_TOTAL_DEPTH": 20,
+    "COLUMNS": 20,
+    "FOOTINGS": 20,
+    "SLABS": 20,
+    "STEEL_BEAMS": 20,
+    "STEEL_COLUMNS_MAIN": 20,
+    "STEEL_FOOTINGS": 20
+   },
+   "detect": {
+    "detect_footings": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 280,
+     "true": 280,
+     "pred": 280
+    },
+    "detect_beams": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 808,
+     "true": 808,
+     "pred": 808
+    },
+    "detect_panels": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 260,
+     "true": 260,
+     "pred": 260
+    }
+   },
+   "slab_area": null,
+   "slab_loss_unreported_drawings": null,
+   "mean_seconds": 0.228,
+   "defects": true
+  },
+  "heldout_set3_301-320_clean_at_938b0d1": {
+   "drawings": 20,
+   "end_to_end_success": 20,
+   "max_abs_error": {
+    "BEAMS_BELOW_SLAB": 0.0,
+    "BEAMS_TOTAL_DEPTH": 0.0,
+    "COLUMNS": 0.0,
+    "FOOTINGS": 0.0,
+    "SLABS": 0.0,
+    "STEEL_BEAMS": 0.0,
+    "STEEL_COLUMNS_MAIN": 0.0,
+    "STEEL_FOOTINGS": 0.0
+   },
+   "mean_abs_error": {
+    "BEAMS_BELOW_SLAB": 0.0,
+    "BEAMS_TOTAL_DEPTH": 0.0,
+    "COLUMNS": 0.0,
+    "FOOTINGS": 0.0,
+    "SLABS": 0.0,
+    "STEEL_BEAMS": 0.0,
+    "STEEL_COLUMNS_MAIN": 0.0,
+    "STEEL_FOOTINGS": 0.0
+   },
+   "within_5pct": {
+    "BEAMS_BELOW_SLAB": 20,
+    "BEAMS_TOTAL_DEPTH": 20,
+    "COLUMNS": 20,
+    "FOOTINGS": 20,
+    "SLABS": 20,
+    "STEEL_BEAMS": 20,
+    "STEEL_COLUMNS_MAIN": 20,
+    "STEEL_FOOTINGS": 20
+   },
+   "detect": {
+    "detect_footings": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 279,
+     "true": 279,
+     "pred": 279
+    },
+    "detect_beams": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 816,
+     "true": 816,
+     "pred": 816
+    },
+    "detect_panels": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 260,
+     "true": 260,
+     "pred": 260
+    }
+   },
+   "slab_area": {
+    "truth_m2": 4721.608,
+    "engine_panel_m2": 4721.606,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0
+   },
+   "slab_loss_unreported_drawings": 0,
+   "mean_seconds": 0.153,
+   "defects": false
+  },
+  "heldout_set3_301-320_defects_at_938b0d1": {
+   "drawings": 20,
+   "end_to_end_success": 20,
+   "max_abs_error": {
+    "BEAMS_BELOW_SLAB": 0.0,
+    "BEAMS_TOTAL_DEPTH": 0.0,
+    "COLUMNS": 0.0,
+    "FOOTINGS": 0.0,
+    "SLABS": 0.0,
+    "STEEL_BEAMS": 0.0,
+    "STEEL_COLUMNS_MAIN": 0.0,
+    "STEEL_FOOTINGS": 0.0
+   },
+   "mean_abs_error": {
+    "BEAMS_BELOW_SLAB": 0.0,
+    "BEAMS_TOTAL_DEPTH": 0.0,
+    "COLUMNS": 0.0,
+    "FOOTINGS": 0.0,
+    "SLABS": 0.0,
+    "STEEL_BEAMS": 0.0,
+    "STEEL_COLUMNS_MAIN": 0.0,
+    "STEEL_FOOTINGS": 0.0
+   },
+   "within_5pct": {
+    "BEAMS_BELOW_SLAB": 20,
+    "BEAMS_TOTAL_DEPTH": 20,
+    "COLUMNS": 20,
+    "FOOTINGS": 20,
+    "SLABS": 20,
+    "STEEL_BEAMS": 20,
+    "STEEL_COLUMNS_MAIN": 20,
+    "STEEL_FOOTINGS": 20
+   },
+   "detect": {
+    "detect_footings": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 279,
+     "true": 279,
+     "pred": 279
+    },
+    "detect_beams": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 816,
+     "true": 816,
+     "pred": 816
+    },
+    "detect_panels": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 260,
+     "true": 260,
+     "pred": 260
+    }
+   },
+   "slab_area": {
+    "truth_m2": 4721.608,
+    "engine_panel_m2": 4721.606,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0
+   },
+   "slab_loss_unreported_drawings": 0,
+   "mean_seconds": 0.197,
+   "defects": true
+  },
+  "heldout_set3_301-320_hard_at_938b0d1": {
+   "drawings": 20,
+   "end_to_end_success": 20,
+   "max_abs_error": {
+    "BEAMS_BELOW_SLAB": 0.0,
+    "BEAMS_TOTAL_DEPTH": 0.0,
+    "COLUMNS": 0.0,
+    "FOOTINGS": 0.0,
+    "SLABS": 0.0,
+    "STEEL_BEAMS": 0.0,
+    "STEEL_COLUMNS_MAIN": 0.0,
+    "STEEL_FOOTINGS": 0.0
+   },
+   "mean_abs_error": {
+    "BEAMS_BELOW_SLAB": 0.0,
+    "BEAMS_TOTAL_DEPTH": 0.0,
+    "COLUMNS": 0.0,
+    "FOOTINGS": 0.0,
+    "SLABS": 0.0,
+    "STEEL_BEAMS": 0.0,
+    "STEEL_COLUMNS_MAIN": 0.0,
+    "STEEL_FOOTINGS": 0.0
+   },
+   "within_5pct": {
+    "BEAMS_BELOW_SLAB": 20,
+    "BEAMS_TOTAL_DEPTH": 20,
+    "COLUMNS": 20,
+    "FOOTINGS": 20,
+    "SLABS": 20,
+    "STEEL_BEAMS": 20,
+    "STEEL_COLUMNS_MAIN": 20,
+    "STEEL_FOOTINGS": 20
+   },
+   "detect": {
+    "detect_footings": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 279,
+     "true": 279,
+     "pred": 279
+    },
+    "detect_beams": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 816,
+     "true": 816,
+     "pred": 816
+    },
+    "detect_panels": {
+     "recall": 1.0,
+     "precision": 1.0,
+     "matched": 260,
+     "true": 260,
+     "pred": 260
+    }
+   },
+   "slab_area": {
+    "truth_m2": 4721.608,
+    "engine_panel_m2": 4721.606,
+    "risk_m2": 0,
+    "missing_m2": 0.0,
+    "silent_missing_m2": 0.0
+   },
+   "slab_loss_unreported_drawings": 0,
+   "mean_seconds": 0.198,
+   "defects": "hard"
+  }
+ },
+ "alsenan_generic": {
+  "items": 952,
+  "coverage_risk_by_kind": {
+   "FOOTING_NO_OUTLINE": 4,
+   "BAND_UNBOUND": 15,
+   "MARK_TAG_UNBOUND": 7,
+   "MARK_AMBIGUOUS": 4,
+   "OPENING_DEDUCTED": 5,
+   "BAND_MULTIPLE_MARKS": 1,
+   "SLAB_OPEN_BOUNDARY_FACE": 1,
+   "SLAB_UNENCLOSED_BAND_SIDE": 2,
+   "SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 39,
+   "SCHEDULE_DUPLICATE_MARK": 1
+  },
+  "rebar_register_by_state": {
+   "MISSING_DATA": 161,
+   "PROVISIONAL_MODEL": 254
+  },
+  "sheets": [
+   {
+    "sheet_id": "SH01",
+    "role": "DETAIL",
+    "storey": "ALL"
+   },
+   {
+    "sheet_id": "SH02",
+    "role": "SLAB_PLAN",
+    "storey": "2F"
+   },
+   {
+    "sheet_id": "SH03",
+    "role": "SCHEDULE",
+    "storey": "ALL"
+   },
+   {
+    "sheet_id": "SH04",
+    "role": "SLAB_PLAN",
+    "storey": "1F"
+   },
+   {
+    "sheet_id": "SH05",
+    "role": "SCHEDULE",
+    "storey": "ALL"
+   },
+   {
+    "sheet_id": "SH06",
+    "role": "SLAB_PLAN",
+    "storey": "GF"
+   },
+   {
+    "sheet_id": "SH07",
+    "role": "SCHEDULE",
+    "storey": "ALL"
+   },
+   {
+    "sheet_id": "SH08",
+    "role": "GROUND_BEAM_PLAN",
+    "storey": "GROUND"
+   },
+   {
+    "sheet_id": "SH09",
+    "role": "SCHEDULE",
+    "storey": "ALL"
+   },
+   {
+    "sheet_id": "SH10",
+    "role": "FOUNDATION_PLAN",
+    "storey": "FOUNDATION"
+   },
+   {
+    "sheet_id": "SH11",
+    "role": "SCHEDULE",
+    "storey": "ALL"
+   },
+   {
+    "sheet_id": "SH12",
+    "role": "COLUMN_PLAN",
+    "storey": "ALL"
+   }
+  ],
+  "reinforcement_completeness_89": {
+   "components": 89,
+   "by_generic_state": {
+    "PROVISIONAL_MODEL": 11,
+    "TAG_NOT_FOUND": 2,
+    "TAG_NOT_BOUND_BY_GENERIC": 5,
+    "MISSING_DATA": 46,
+    "NO_GENERIC_BAND": 1,
+    "OUTSIDE_SCOPE": 6,
+    "NO_GENERIC_BAND_AT_STATIONS": 9,
+    "NO_UNIQUE_GENERIC_BAND": 8,
+    "NO_GEOMETRY_IN_ID": 1
+   },
+   "by_family_and_state": {
+    "BEAMS|MISSING_DATA": 18,
+    "BEAMS|NO_GENERIC_BAND_AT_STATIONS": 9,
+    "BEAMS|NO_UNIQUE_GENERIC_BAND": 8,
+    "BEAMS|PROVISIONAL_MODEL": 11,
+    "BEAMS|TAG_NOT_BOUND_BY_GENERIC": 5,
+    "BEAMS|TAG_NOT_FOUND": 2,
+    "GROUND_BEAMS|MISSING_DATA": 28,
+    "GROUND_BEAMS|NO_GENERIC_BAND": 1,
+    "GROUND_BEAMS|NO_GEOMETRY_IN_ID": 1,
+    "LIFT|OUTSIDE_SCOPE": 6
+   },
+   "generic_bar_model_kg": 740.785
+  },
+  "ground_slab_audit": {
+   "rows": 25,
+   "by_class": {
+    "BOTH_NOT_SLAB": 1,
+    "MATCHED_SLAB": 19,
+    "GENERIC_NO_FACE_REPORTED": 1,
+    "GENERIC_COUNTS_EXCLUDED_ZONE": 1,
+    "GENERIC_CLASS_BEAM": 1,
+    "GENERIC_ONLY_FACE": 1,
+    "GENERIC_ONLY_FACE_WITH_COLUMNS_INSIDE": 1
+   },
+   "m1_ground_slab_area_m2": 167.629,
+   "generic_panel_area_m2": 222.04
+  }
+ }
+}
