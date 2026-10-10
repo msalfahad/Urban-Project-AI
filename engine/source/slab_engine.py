@@ -40,6 +40,13 @@ from engine.source import topology as TP
 POLICY_ID = "SLAB_ENGINE_V1"
 OPENING_WORDS = ("VOID", "OPEN", "OPENING", "SHAFT", "DUCT", "LIFT", "ELEVATOR", "STAIR", "SKY", "COURT",
                  "فتحة", "منور", "مصعد", "درج", "فراغ")
+# outputs carry the matched keyword in English, never the source text (no free text from a client drawing)
+KEYWORD_EN = {"فتحة": "OPENING", "منور": "LIGHTWELL", "مصعد": "LIFT", "درج": "STAIR", "فراغ": "VOID"}
+
+
+def opening_keywords(text):
+    t = DM.normalize(text).upper()
+    return sorted({KEYWORD_EN.get(w, w) for w in OPENING_WORDS if w in t})
 THK_RX = (re.compile(r"^(?:T|S|THK|TH|SLAB)\s*[=:]?\s*(\d{2,3}(?:\.\d+)?)\s*(CM|MM)?$", re.I),
           re.compile(r"^(?:سمك)\s*[=:]?\s*(\d{2,3})\s*(سم|مم)?$"))
 
@@ -163,7 +170,7 @@ def panels(ents, edge_layers, band_pieces, column_boxes, unit_m, *, default_t_m=
         faces.append({"face_id": st["site_id"], "class": cls, "area_m2": st["area"] * unit_m ** 2,
                       "perimeter_m": st["perimeter"] * unit_m, "point": pt, "polygon": poly,
                       "thickness_tags": sorted({t["t_m"] for t in tg}), "tag_ids": [t["text_id"] for t in tg],
-                      "opening_labels": [DM.normalize(t["value"]) for t in inside_txt][:3],
+                      "opening_labels": sorted({k for t in inside_txt for k in opening_keywords(t["value"])}),
                       "holes": st["holes"], "touches_band": touches_band, "open_boundary": open_b,
                       "stub_source_ids": stub_edge[:6]})
     sheet_vals = sorted({t["t_m"] for t in tags if any(f["class"] == "PANEL" and

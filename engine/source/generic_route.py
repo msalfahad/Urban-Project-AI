@@ -38,13 +38,14 @@ TIE_NOTE = re.compile(r"(?:ST\.?|TIES?|STIRRUPS?|LINKS?)\s*(?:OF\s*COLUMNS?)?\s*
                       re.I)
 
 
-def merge_conventions(generic, profile=None):
-    """The generic set with a project profile's conventions added or overriding by id (the profile wins)."""
+def merge_conventions(generic, profile=None, overrides=None):
+    """The generic set with a project profile's conventions added or overriding by id (the profile wins); then the
+    person's --set overrides (recorded as overridden_from)."""
     by = {c["id"]: c for c in generic["conventions"]}
     for c in (profile or {}).get("conventions", []):
         by[c["id"]] = c
     name = generic.get("set", "GENERIC") + ("+" + profile["profile"] if profile else "")
-    return PE.Conventions({"set": name, "conventions": [by[k] for k in sorted(by)]})
+    return PE.Conventions({"set": name, "conventions": [by[k] for k in sorted(by)]}, overrides)
 
 
 def storey_heights(conv):
