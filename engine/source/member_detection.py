@@ -384,7 +384,7 @@ def outline_share(ents, layer):
     return sum(1 for x in segs if x["id"].rsplit(":", 1)[0] in srcs) / len(segs)
 
 
-def score_edge_layers(ents, widths_native, tol_native, beam_marks, max_outline_share=0.5):
+def score_edge_layers(ents, widths_native, tol_native, beam_marks, max_outline_share=0.5, min_face_native=None):
     """layer -> number of beam marks that sit in or beside a parallel pair at a scheduled width on that layer.
     A layer whose segments are mostly closed member outlines (columns, footings) is never an edge layer."""
     cand = sorted({s["layer"] for s in ents["segments"]
@@ -397,8 +397,10 @@ def score_edge_layers(ents, widths_native, tol_native, beam_marks, max_outline_s
         if len(faces) < 2 or len(faces) > 6000:
             continue
         polys = []
+        mf = min_face_native if min_face_native is not None else 25 * tol_native
         for w in widths_native:
-            r = GN.pair_straight(faces, width=w, tol=tol_native, admitted_layers={lay})
+            r = GN.pair_straight(faces, width=w, tol=tol_native, admitted_layers={lay}, min_face=mf, min_overlap=mf,
+                                 join_tol=tol_native / 12.0)
             polys += [b["polygon"] for b in r["bands"]]
         if not polys:
             continue
@@ -417,7 +419,7 @@ def beam_bands(ents, layers, widths_native, tol_native, min_face_native):
     faces = _faces(ents, layers)
     for w in sorted(set(widths_native)):
         r = GN.pair_straight(faces, width=w, tol=tol_native, admitted_layers=set(layers), min_face=min_face_native,
-                             min_overlap=min_face_native)
+                             min_overlap=min_face_native, join_tol=tol_native / 12.0)
         for b in r["bands"]:
             bands.append(dict(b, width_native=w, kind="STRAIGHT"))
         conflicts += [dict(c, width_native=w) for c in r["conflicts"]]

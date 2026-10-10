@@ -275,6 +275,9 @@ def from_text_table(texts, *, row_tol, col_pad):
 
 
 def _finish(rows, fam_vals, warnings, form):
+    for fam in ("BEAM", "CONTINUOUS_BEAM", "GROUND_BEAM", "STRAP_BEAM", "LINTEL"):
+        if fam in fam_vals and "H" not in fam_vals[fam] and "D" in fam_vals[fam]:
+            fam_vals[fam]["H"] = fam_vals[fam].pop("D")
     fams = {}
     for fam, vals in fam_vals.items():
         unit, share, shares = infer_unit(fam, vals)
@@ -283,7 +286,11 @@ def _finish(rows, fam_vals, warnings, form):
                      "unit_basis": "INFERRED_FROM_PLAUSIBLE_MEMBER_SIZES"}
         if share < 0.8:
             warnings.append(f"{fam}: no unit fits the schedule values cleanly (best {unit}, {share:.0%})")
+    depth_families = ("BEAM", "CONTINUOUS_BEAM", "GROUND_BEAM", "STRAP_BEAM", "LINTEL")
     for r in rows:
+        if r["family"] in depth_families and "H" not in r.get("dims_raw", {}) and "D" in r.get("dims_raw", {}):
+            r["dims_raw"]["H"] = r["dims_raw"].pop("D")            # a beam's DEPTH is its section depth H
+            r["depth_tag"] = "D"
         u = fams.get(r["family"], {}).get("unit_m")
         r["dims_m"] = {k: v * u for k, v in r.get("dims_raw", {}).items()} if u else {}
         for st in r["by_storey"].values():

@@ -138,7 +138,7 @@ def detect(intake):
                 widths_m = sorted(set(widths_m) | set(width_modes(E, cand, u)))
             widths = [w / u for w in widths_m]
             bm = [m for m in MD.marks(E["texts"]) if m["family"] in fams]
-            sc = MD.score_edge_layers(E, widths, tol, bm) if widths else {}
+            sc = MD.score_edge_layers(E, widths, tol, bm, min_face_native=0.3 / u) if widths else {}
             if not sc and widths:                     # unmarked network (typical ground beams): densest pair layer
                 cnt = {}
                 for lay in sorted(cand):
@@ -146,8 +146,9 @@ def detect(intake):
                         continue
                     faces = MD._faces(E, {lay})
                     if 2 <= len(faces) <= 6000:
-                        cnt[lay] = sum(len(GN.pair_straight(faces, width=w, tol=tol, admitted_layers={lay})["bands"])
-                                       for w in widths)
+                        cnt[lay] = sum(len(GN.pair_straight(faces, width=w, tol=tol, admitted_layers={lay},
+                                                            min_face=0.3 / u, min_overlap=0.3 / u,
+                                                            join_tol=0.001 / u)["bands"]) for w in widths)
                 sc = {k: v for k, v in cnt.items() if v >= 5}
             lays = {l for l, v in sc.items() if v >= max(2, 0.2 * max(sc.values()))} if sc else set()
             cols = column_boxes(E, lib, u)
