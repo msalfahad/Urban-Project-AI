@@ -1,0 +1,46 @@
+{
+ "a_28_minus_s8_7b_owner_28_max_m3": 1.49e-07,
+ "classes": {
+  "AUTHORITY": 1,
+  "METHOD": 1,
+  "METHOD + MISSED_OBJECT": 1,
+  "METHOD + SCOPE": 1,
+  "NOT_COMPARABLE": 2,
+  "NO_DIFFERENCE": 1,
+  "SCOPE": 1
+ },
+ "frozen_manifest_sha256": "c019d21f2d52e365ff1282dcee4c0fda7617a51ca7597dd9b37636159378eac3",
+ "main_stair_with_b_27_s_m3_by_waist": {
+  "150": 4.947431,
+  "160": 5.165363,
+  "175": 5.49226,
+  "200": 6.037088
+ },
+ "most_consistent_gf_1f": "B-27-S",
+ "other_manifests_sha256": [
+  "ee523cc9d23ed1ecd15f6092fc00abb736ede09bc6e89eb2c81bf75da5c89779",
+  "cb10bef01070a7968a99a7a5510fe8a96588c4b3853461b5fcb3315798cf1e0a",
+  "f291af32d52feb520523aec96d7cf2974526723e43e3a7f383fc854bf700c506"
+ ],
+ "release_delta": {
+  "concrete_m3": 0.0,
+  "kg": 0.0
+ },
+ "round": "S8_7C_POST_FREEZE",
+ "rows": 8,
+ "rule": "explains differences only; no frozen quantity is changed, no arrangement is chosen, nothing is released",
+ "v3b_c_stair_commercial_m3": 5.2312,
+ "v3b_gf_1f_method_m3": 2.8088,
+ "v3b_method_reproduced_m3": 5.2312,
+ "v3b_reproduced_exactly": true,
+ "v3b_risers": {
+  "A1": 26,
+  "A2": 24
+ },
+ "whole_gf_1f_gross_m3_at_160": {
+  "A-28": 2.702085068,
+  "B-27-S": 2.573669636,
+  "B-27-SM": 2.493898014,
+  "REF-25": 2.543305215
+ }
+}
