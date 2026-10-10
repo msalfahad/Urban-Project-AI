@@ -157,11 +157,13 @@ def detect(intake):
             if lays:                                   # drafting noise: duplicates, broken faces, ends short of a face
                 segs, h1 = CH.merge_collinear(E["segments"], lays, gap=CH.GAP_M / u, off_tol=0.5e-3 / u)
                 tgt = [(p[j], p[(j + 1) % 4]) for c in cols for p in [MD.box_poly(c)] for j in range(4)]
-                segs, h2 = CH.extend_dangling(segs, lays, tgt, snap=CH.SNAP_M / u, eps=0.5e-3 / u)
+                wide = CH.WIDE_SNAP_FRACTION * min(widths_m) / u if widths_m else None
+                segs, h2 = CH.extend_dangling(segs, lays, tgt, snap=CH.SNAP_M / u, eps=0.5e-3 / u, wide_snap=wide)
                 E = dict(E, segments=segs)
                 heal = h1 + h2
             rec["heal"] = {"merged": sum(1 for h in heal if h["code"] == "HEAL_MERGE"),
-                           "extended": sum(1 for h in heal if h["code"] == "HEAL_EXTEND"), "log": heal[:200]}
+                           "extended": sum(1 for h in heal if h["code"] == "HEAL_EXTEND"),
+                           "extended_wide": [h for h in heal if h["code"] == "HEAL_EXTEND_WIDE"], "log": heal[:200]}
             bands, conf = MD.beam_bands(E, lays, widths, tol, 0.3 / u) if lays else ([], [])
             bands = MD.split_at_supports(bands, cols, 0.05 / u)
             widths_of = {(r["family"], r["mark"]): r["dims_m"].get("W") for r in S["rows"]}
@@ -421,9 +423,20 @@ def items_from(D, conv, heights=None):
             if m["state"] in ("TAG_UNBOUND", "AMBIGUOUS", "TYPE_NOT_IN_SCHEDULE"):
                 risk.append({"KIND": "MARK_" + m["state"], "WHERE": sid, "DETAIL": f"{m['mark']} at "
                                                                                     f"{round(m['x'])},{round(m['y'])}"})
+        for h in rec.get("heal", {}).get("extended_wide", []):
+            risk.append({"KIND": "HEAL_EXTEND_WIDE", "WHERE": sid,
+                         "DETAIL": f"face {h['id']} end extended {h['by'] * u * 1000:.1f} mm to {h['to']}"})
         slab = rec.get("slab")
         if slab:
             sfam = "GROUND_SLAB" if ground else "SLABS"
+            for x in slab.get("unenclosed_sides", []):
+                risk.append({"KIND": "SLAB_UNENCLOSED_BAND_SIDE", "WHERE": sid,
+                             "DETAIL": f"{x['band_id']} side at {round(x['side_mid'][0])},{round(x['side_mid'][1])}: "
+                                       f"no closed slab cell although a band lies {x['facing_band_at_m']:.2f} m away"})
+            for f in slab["faces"]:
+                if f["class"] == "OPEN_BOUNDARY":
+                    risk.append({"KIND": "SLAB_OPEN_BOUNDARY_FACE", "WHERE": sid,
+                                 "DETAIL": f"{f['face_id']} {f['area_m2']:.2f} m2 (panel leaked into a beam strip)"})
             for f in slab["faces"]:
                 if f["class"] != "PANEL":
                     if f["class"] == "OPENING":

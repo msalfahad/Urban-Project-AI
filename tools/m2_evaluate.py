@@ -3,6 +3,8 @@
     python3 -I tools/m2_evaluate.py OUT.json SEED [SEED ...] [--defects]   (drawings go to a temporary folder)
 
 --defects draws the same designs with drafting noise (tools/synthetic_villa.py DEFECTS); the truth is unchanged.
+--hard-defects widens the face-end gaps beyond the snap tolerance: measures whether the loss is REPORTED (risk area)
+or silent (silent_missing_m2).
 
 Per drawing: runtime, components detected, detection precision / recall by position (footings, beams, slab panels),
 quantity error by family (concrete and steel), unresolved / exception counts, end-to-end success. The truth never
@@ -123,6 +125,13 @@ def evaluate(seed, work, defects=False):
         if r.get("slab"):
             pan += [f for f in r["slab"]["faces"] if f["class"] == "PANEL"]
     hit = sum(1 for t in tc["panels"] if any(MD.point_in_poly(t["at"][0], t["at"][1], f["polygon"]) for f in pan))
+    risk_area = sum(r["slab"].get("risk_area_m2", 0.0) for r in D["sheets"].values() if r.get("slab"))
+    true_area = sum(t["area"] for t in tc["panels"])
+    eng_area = sum(f["area_m2"] for f in pan)
+    rec["slab_area"] = {"truth_m2": round(true_area, 3), "engine_panel_m2": round(eng_area, 3),
+                        "risk_m2": round(risk_area, 3),
+                        "missing_m2": round(max(0.0, true_area - eng_area), 3),
+                        "silent_missing_m2": round(max(0.0, true_area - eng_area - risk_area), 3)}
     rec["detect_panels"] = {"true": len(tc["panels"]), "pred": len(pan), "matched": hit,
                             "recall": hit / len(tc["panels"]) if tc["panels"] else None,
                             "precision": min(hit, len(pan)) / len(pan) if pan else None}
@@ -131,6 +140,13 @@ def evaluate(seed, work, defects=False):
         cnt[i["category"]] = cnt.get(i["category"], 0) + 1
     rec["categories"] = cnt
     rec["coverage_risk"] = len(risk)
+    rk = {}
+    for x in risk:
+        rk[x["KIND"]] = rk.get(x["KIND"], 0) + 1
+    rec["coverage_risk_kinds"] = rk
+    slab_flags = sum(v for k, v in rk.items() if k in ("SLAB_UNENCLOSED_BAND_SIDE", "SLAB_OPEN_BOUNDARY_FACE",
+                                                        "HEAL_EXTEND_WIDE") or k.startswith("CELL_"))
+    rec["slab_area"]["loss_reported"] = rec["slab_area"]["missing_m2"] <= 1.0 or slab_flags > 0
     rec["rebar_register"] = {s: sum(1 for x in reg if x["REBAR_STATE"] == s) for s in GR.REBAR_STATES}
     rec["manual_inputs"] = prof.get("manual_inputs", 0)
     return rec
@@ -154,13 +170,16 @@ def summarize(recs):
         p = sum(r[d]["pred"] for r in ok)
         out[d] = {"recall": round(m / t, 4) if t else None, "precision": round(min(m, p) / p, 4) if p else None,
                   "matched": m, "true": t, "pred": p}
+    out["slab_area"] = {k: round(sum(r["slab_area"][k] for r in ok), 3) for k in
+                        ("truth_m2", "engine_panel_m2", "risk_m2", "missing_m2", "silent_missing_m2")}
+    out["slab_loss_unreported_drawings"] = sum(1 for r in ok if not r["slab_area"]["loss_reported"])
     out["mean_seconds"] = round(sum(r["seconds"] for r in ok) / max(1, len(ok)), 3)
     return out
 
 
 def main(argv):
-    defects = "--defects" in argv
-    argv = [a for a in argv if a != "--defects"]
+    defects = "hard" if "--hard-defects" in argv else ("--defects" in argv)
+    argv = [a for a in argv if a not in ("--defects", "--hard-defects")]
     out = Path(argv[0])
     seeds = [int(s) for s in argv[1:]]
     with tempfile.TemporaryDirectory() as td:

@@ -13,7 +13,8 @@ curved beam, an opening bay.
 DEFECTS (generate(..., defects=True)): the same design drawn the way real drawings arrive - beam faces broken into
 collinear pieces, duplicated lines, face ends stopping short of (gap <= 2 mm) or running into (<= 20 mm) the column,
 footing outlines as loose lines, grid axes with bubbles and labels, linear dimensions, MTEXT tags with formatting
-codes, tags pushed further off the face, solid hatches in the columns. The truth is unchanged: the defects are
+codes, tags pushed further off the face, solid hatches in the columns. defects="hard" widens the end gaps to 6-15 mm,
+beyond any snap tolerance: the engine must then REPORT the open faces, not guess them. The truth is unchanged: the defects are
 drafting noise, not design changes (a face that stops 2 mm short still means a beam from face to face).
 
 Conventions the truth uses are the generic convention set's BASE values (cover, anchorage, lap, hook table), stated
@@ -365,8 +366,9 @@ def write_dxf(D, path):
         if DF:
             ln = math.hypot(x1 - x0, y1 - y0)
             ux, uy = (x1 - x0) / ln, (y1 - y0) / ln
-            e0 = RD.choice([0.0, -RD.uniform(0.0005, 0.002), RD.uniform(0.002, 0.02)])
-            e1 = RD.choice([0.0, -RD.uniform(0.0005, 0.002), RD.uniform(0.002, 0.02)])
+            g0, g1 = (0.006, 0.015) if DF == "hard" else (0.0005, 0.002)     # "hard": gaps beyond any snap
+            e0 = RD.choice([0.0, -RD.uniform(g0, g1), RD.uniform(0.002, 0.02)])
+            e1 = RD.choice([0.0, -RD.uniform(g0, g1), RD.uniform(0.002, 0.02)])
             for e in (e0, e1):
                 if e < 0:
                     note("END_GAP")
@@ -504,7 +506,7 @@ def generate(out_dir, seed, defects=False):
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
     D = design(seed)
-    D["var"]["defects"] = bool(defects)
+    D["var"]["defects"] = defects if defects == "hard" else bool(defects)
     dxf = write_dxf(D, out / f"villa_{seed}.dxf")
     T = truth(D)
     T["defects_applied"] = D.get("defects_applied", {})

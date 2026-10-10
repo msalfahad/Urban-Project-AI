@@ -19,6 +19,9 @@ Thickness, per panel: a printed tag inside it (T=16, T 16, S=160, THK 200, سم�
 sheet prints the same value the untagged panels take it as SHEET_UNIFORM (provisional); otherwise the convention's
 default with provenance CONVENTION. A panel with no thickness evidence and no default is UNRESOLVED.
 
+Unenclosed band sides: a straight band side that borders no bounded face although another band lies beyond it is a
+slab cell that failed to close (the leak reached the outside); it is reported (unenclosed_sides), never ignored.
+
 Uncovered / uncertain cells: a PANEL with no thickness tag inside it on a sheet whose tags differ, and any face
 enclosed by bands but holding neither panel evidence nor an opening label, are COVERAGE_RISK cells - reported with
 their area so a missing slab (or a missing opening label) is visible, never silently counted as slab or as nothing.
@@ -182,6 +185,7 @@ def panels(ents, edge_layers, band_pieces, column_boxes, unit_m, *, default_t_m=
         f["volume_m3"] = f["area_m2"] * f["t_m"] if f["t_m"] else None
         f["coverage_risk"] = f["t_basis"] in ("CONVENTION_DEFAULT", "NO_THICKNESS", "CONFLICTING_TAGS") or \
             f["open_boundary"]
+    unenclosed = _unenclosed_sides(faces, band_pieces, unit_m, column_boxes)
     summ = Counter(f["class"] for f in faces)
     area = {c: sum(f["area_m2"] for f in faces if f["class"] == c) for c in summ}
     return {"policy": POLICY_ID, "faces": faces, "counts": dict(summ), "area_m2": area,
@@ -190,7 +194,74 @@ def panels(ents, edge_layers, band_pieces, column_boxes, unit_m, *, default_t_m=
             "risk_area_m2": sum(f["area_m2"] for f in faces if (f["class"] == "PANEL" and f.get("coverage_risk"))
                                 or f["class"] == "OPEN_BOUNDARY"),
             "open_boundary_area_m2": sum(f["area_m2"] for f in faces if f["class"] == "OPEN_BOUNDARY"),
+            "unenclosed_sides": unenclosed,
             "arrangement": {"nodes": len(arr.nodes), "edges": len(arr.edges), "sites": len(sites)}}
+
+
+def _ray_hits_poly(p, d, poly, max_s):
+    best = None
+    for k in range(len(poly)):
+        (x1, y1), (x2, y2) = poly[k], poly[(k + 1) % len(poly)]
+        ex, ey = x2 - x1, y2 - y1
+        den = d[0] * ey - d[1] * ex
+        if abs(den) < 1e-12:
+            continue
+        wx, wy = x1 - p[0], y1 - p[1]
+        s_ = (wx * ey - wy * ex) / den
+        t = (wx * d[1] - wy * d[0]) / den
+        if 0 < s_ <= max_s and -1e-9 <= t <= 1 + 1e-9 and (best is None or s_ < best):
+            best = s_
+    return best
+
+
+def _unenclosed_sides(faces, band_pieces, unit_m, column_boxes=()):
+    """A straight band's long side that borders NO bounded face although the band network continues beyond it (a
+    ray from the side meets another band): a slab cell there failed to close - most often a face end that stops short
+    of its support by more than CAD heal bridges - and its area is silently missing unless reported. One record per
+    such side; the area is not estimated (the cell boundary is exactly what is unknown)."""
+    if not band_pieces:
+        return []
+    d0 = 0.01 / unit_m
+    xs = [x for b in band_pieces for x, _ in b["polygon"]]
+    ys = [y for b in band_pieces for _, y in b["polygon"]]
+    span = math.hypot(max(xs) - min(xs), max(ys) - min(ys))
+    boxes = []
+    for f in faces:
+        px = [x for x, _ in f["polygon"]]
+        py = [y for _, y in f["polygon"]]
+        boxes.append((min(px), min(py), max(px), max(py), f))
+    out = []
+    for b in band_pieces:
+        if b.get("kind") != "STRAIGHT" or len(b["polygon"]) != 4:
+            continue
+        poly = b["polygon"]
+        cx = sum(x for x, _ in poly) / 4
+        cy = sum(y for _, y in poly) / 4
+        sides = sorted(((math.dist(poly[k], poly[(k + 1) % 4]), k) for k in range(4)), reverse=True)[:2]
+        for _, k in sides:
+            (x1, y1), (x2, y2) = poly[k], poly[(k + 1) % 4]
+            mx, my = (x1 + x2) / 2, (y1 + y2) / 2
+            L = math.hypot(x2 - x1, y2 - y1)
+            nx, ny = -(y2 - y1) / L, (x2 - x1) / L
+            if nx * (mx - cx) + ny * (my - cy) < 0:
+                nx, ny = -nx, -ny
+            p = (mx + nx * d0, my + ny * d0)
+            if any(bx0 <= p[0] <= bx1 and by0 <= p[1] <= by1 and MD.point_in_poly(p[0], p[1], f["polygon"])
+                   for bx0, by0, bx1, by1, f in boxes):
+                continue
+            hit = [h for o in band_pieces if o is not b for h in [_ray_hits_poly(p, (nx, ny), o["polygon"], span)]
+                   if h is not None]
+            if not hit:
+                continue
+            # the region between this side and the facing band must be boxed in: from its middle, rays along the
+            # band direction meet a member both ways (a bay), not open space (an exterior side facing a far member)
+            q = (p[0] + nx * min(hit) / 2, p[1] + ny * min(hit) / 2)
+            obst = [o["polygon"] for o in band_pieces] + [MD.box_poly(c) for c in column_boxes]
+            lat = [any(_ray_hits_poly(q, (sx * (x2 - x1) / L, sx * (y2 - y1) / L), o, span) for o in obst)
+                   for sx in (1, -1)]
+            if all(lat):
+                out.append({"band_id": b.get("band_id"), "side_mid": (mx, my), "facing_band_at_m": min(hit) * unit_m})
+    return out
 
 
 def policy_record():

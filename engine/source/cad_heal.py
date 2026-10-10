@@ -10,9 +10,11 @@ and is lost) and a duplicated line doubles a band. Two repairs, both bounded by 
         faces separated by a column (a gap of the column width) never merge because the gap is far above tolerance.
         The merged segment keeps the id of its first piece and lists every source id in `merged_ids`.
 
-    extend_dangling(segments, layers, targets, snap, eps)
+    extend_dangling(segments, layers, targets, snap, eps, wide_snap)
         an endpoint touching nothing (no other segment or target edge within eps) is extended along its own
-        direction to the first segment / target edge within `snap`. Overshoots are left alone: the column box
+        direction to the first segment / target edge within `snap`; up to `wide_snap` (WIDE_SNAP_FRACTION of the
+        narrowest scheduled member width on the sheet) the extension is still made but logged HEAL_EXTEND_WIDE and
+        carried to the coverage-risk register. Overshoots are left alone: the column box
         and the band split at supports already give the column its footprint.
 
 Nothing is invented: a gap wider than `snap` stays open, and the slab engine then reports the leaked face as a
@@ -27,6 +29,7 @@ from collections import defaultdict
 POLICY_ID = "CAD_HEAL_V1"
 GAP_M = 0.003          # collinear pieces closer than this are one line
 SNAP_M = 0.005         # a dangling end closer than this to a line is drawn to it
+WIDE_SNAP_FRACTION = 0.10   # ... and up to this fraction of the narrowest member width, but then REPORTED
 ANG_TOL = 1e-3         # rad
 
 
@@ -131,9 +134,12 @@ def _ray_hit(p, d, a, b):
     return s
 
 
-def extend_dangling(segments, layers, targets, *, snap, eps):
-    """targets: extra edges [((x1, y1), (x2, y2)), ...] (column box sides). Returns (segments', log)."""
-    cell = max(snap * 4, eps * 10)
+def extend_dangling(segments, layers, targets, *, snap, eps, wide_snap=None):
+    """targets: extra edges [((x1, y1), (x2, y2)), ...] (column box sides). Returns (segments', log).
+    An extension longer than `snap` but within `wide_snap` is made and logged HEAL_EXTEND_WIDE (a coverage risk:
+    the gap is larger than drafting noise usually is, but far smaller than any member - the face meant to meet)."""
+    reach = max(snap, wide_snap or 0.0)
+    cell = max(reach * 4, eps * 10)
     grid = defaultdict(list)
     edges = []
     for s in segments:
@@ -144,8 +150,8 @@ def extend_dangling(segments, layers, targets, *, snap, eps):
     for i, (a, b, _) in enumerate(edges):
         x0, x1 = sorted((a[0], b[0]))
         y0, y1 = sorted((a[1], b[1]))
-        for gx in range(int(math.floor((x0 - snap) / cell)), int(math.floor((x1 + snap) / cell)) + 1):
-            for gy in range(int(math.floor((y0 - snap) / cell)), int(math.floor((y1 + snap) / cell)) + 1):
+        for gx in range(int(math.floor((x0 - reach) / cell)), int(math.floor((x1 + reach) / cell)) + 1):
+            for gy in range(int(math.floor((y0 - reach) / cell)), int(math.floor((y1 + reach) / cell)) + 1):
                 grid[(gx, gy)].append(i)
 
     def near(p):
@@ -169,17 +175,19 @@ def extend_dangling(segments, layers, targets, *, snap, eps):
             best = None
             for i in cand:
                 h = _ray_hit(p, d, edges[i][0], edges[i][1])
-                if h is not None and h <= snap and (best is None or h < best[0]):
+                if h is not None and h <= reach and (best is None or h < best[0]):
                     best = (h, edges[i][2])
             if best:
                 pts[end] = (p[0] + d[0] * best[0], p[1] + d[1] * best[0])
                 moved = True
-                log.append({"code": "HEAL_EXTEND", "id": s["id"], "end": end, "by": best[0], "to": best[1]})
+                log.append({"code": "HEAL_EXTEND" if best[0] <= snap else "HEAL_EXTEND_WIDE", "id": s["id"],
+                            "end": end, "by": best[0], "to": best[1], "at": pts[end]})
         out.append(dict(s, a=pts[0], b=pts[1]) if moved else s)
     return out, log
 
 
 def policy_record():
-    return {"policy": POLICY_ID, "gap_m": GAP_M, "snap_m": SNAP_M, "ang_tol_rad": ANG_TOL,
+    return {"policy": POLICY_ID, "gap_m": GAP_M, "snap_m": SNAP_M, "wide_snap_fraction": WIDE_SNAP_FRACTION,
+            "ang_tol_rad": ANG_TOL,
             "rule": "merge collinear pieces and duplicates within GAP_M; extend a dangling end to the first line "
                     "within SNAP_M; wider gaps stay open and are reported, never closed by guess"}
