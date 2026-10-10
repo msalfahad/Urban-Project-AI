@@ -135,6 +135,13 @@ def evaluate(seed, work, defects=False):
     rec["detect_panels"] = {"true": len(tc["panels"]), "pred": len(pan), "matched": hit,
                             "recall": hit / len(tc["panels"]) if tc["panels"] else None,
                             "precision": min(hit, len(pan)) / len(pan) if pan else None}
+    # range sanity: no provisional item's high may exceed twice its base without a named reason (a polluted range is
+    # invisible to a base-only comparison - M2 synthetic-demo finding)
+    rec["range_ratio_max"] = {}
+    for i in items:
+        if i["category"] == "PROVISIONAL" and i["base"]:
+            k = f"{i['trade']}:{i['family']}"
+            rec["range_ratio_max"][k] = round(max(rec["range_ratio_max"].get(k, 0.0), i["high"] / i["base"]), 4)
     cnt = {}
     for i in items:
         cnt[i["category"]] = cnt.get(i["category"], 0) + 1
@@ -173,6 +180,10 @@ def summarize(recs):
     out["slab_area"] = {k: round(sum(r["slab_area"][k] for r in ok), 3) for k in
                         ("truth_m2", "engine_panel_m2", "risk_m2", "missing_m2", "silent_missing_m2")}
     out["slab_loss_unreported_drawings"] = sum(1 for r in ok if not r["slab_area"]["loss_reported"])
+    out["range_ratio_max"] = {}
+    for r in ok:
+        for k, v in r.get("range_ratio_max", {}).items():
+            out["range_ratio_max"][k] = max(out["range_ratio_max"].get(k, 0.0), v)
     out["mean_seconds"] = round(sum(r["seconds"] for r in ok) / max(1, len(ok)), 3)
     return out
 

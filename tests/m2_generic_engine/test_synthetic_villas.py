@@ -28,6 +28,8 @@ HYGIENE = re.compile(r"[؀-ۿ]{3,}")
 
 def _ok(rec, tol=1e-5):
     assert rec["ok"], rec.get("error")
+    for k, v in rec["range_ratio_max"].items():                  # a provisional range is never polluted
+        assert v <= 2.0, (rec["seed"], k, v)
     for fam, q in rec["quantities"].items():
         assert q["error"] is None or abs(q["error"]) <= tol, (rec["seed"], fam, q)
     for k in ("detect_footings", "detect_beams", "detect_panels"):

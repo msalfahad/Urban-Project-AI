@@ -308,8 +308,29 @@ def column_occurrences(sheet, ents, lib, unit_m, size_tol_m=0.02, max_column_m=2
     """A column mark binds to the column-sized outline (<= max_column_m) that CONTAINS it, else to the nearest one
     within max(3 text heights, 0.6 m); two outlines equally near -> AMBIGUOUS (no drawn section)."""
     ms = [m for m in marks(ents["texts"]) if m["family"] == "COLUMN"]
+
+    def sizes(fam):
+        out = set()
+        for (f, _), row in lib.items():
+            if f == fam and row:
+                for b in list(row.get("by_storey", {}).values()) + [{"dims_m": row.get("dims_m", {})}]:
+                    W, H = b["dims_m"].get("W"), b["dims_m"].get("H")
+                    if W and H:
+                        out.add((min(W, H), max(W, H)))
+        return out
+    csz, fsz = sizes("COLUMN"), sizes("FOOTING")
+
+    def is_footing(r):
+        """an outline on a footing layer, or at a scheduled footing size and no column size, is never a column's
+        drawn section (a combined C/F mark sits inside its footing) - M2 synthetic-demo finding"""
+        if _layer_role(r["layer"]) == "FOOTING":
+            return True
+        d = sorted(((r["box"][2] - r["box"][0]) * unit_m, (r["box"][3] - r["box"][1]) * unit_m))
+        hit = lambda S: any(abs(d[0] - a) <= size_tol_m and abs(d[1] - b) <= size_tol_m for a, b in S)  # noqa: E731
+        return hit(fsz) and not hit(csz)
     rects = [r for r in candidate_rects(ents, unit_m)
-             if max(r["box"][2] - r["box"][0], r["box"][3] - r["box"][1]) * unit_m <= max_column_m]
+             if max(r["box"][2] - r["box"][0], r["box"][3] - r["box"][1]) * unit_m <= max_column_m and
+             not is_footing(r)]
     out = []
     for m in ms:
         gap = max(3 * (m["h"] or 0), 0.6 / unit_m)

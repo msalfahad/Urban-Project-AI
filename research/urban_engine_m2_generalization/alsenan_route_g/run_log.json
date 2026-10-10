@@ -1,0 +1,89 @@
+{
+ "manual_interventions_during_run": 0,
+ "outputs": {
+  "files": [
+   "ASSUMPTIONS.csv",
+   "BLOCKERS.csv",
+   "BOQ_REPORT.html",
+   "CONTRACTOR_BOQ.csv",
+   "COVERAGE_RISK.csv",
+   "EXCEPTIONS.csv",
+   "FAMILY_SUMMARY.csv",
+   "FLOOR_SUMMARY.csv",
+   "INVENTORY.json",
+   "OVERLAYS.html",
+   "PROFILE_TEMPLATE.json",
+   "PROVISIONAL_REGISTER.csv",
+   "REBAR_COMPLETENESS.csv",
+   "SENSITIVITY.csv",
+   "STEEL_BY_DIAMETER.csv",
+   "SUMMARY.json",
+   "UNRESOLVED_REGISTER.csv",
+   "VERIFIED_REGISTER.csv",
+   "overlays/SH02_SLAB_PLAN_2F.svg",
+   "overlays/SH04_SLAB_PLAN_1F.svg",
+   "overlays/SH06_SLAB_PLAN_GF.svg",
+   "overlays/SH08_GROUND_BEAM_PLAN_GROUND.svg",
+   "overlays/SH10_FOUNDATION_PLAN_FOUNDATION.svg"
+  ],
+  "overlays_pdf": {
+   "html_sha256": "8c28b84904a59ab5105bf3192f911fd9bdc91d56bbc8eb681adf65ff22142b1c",
+   "pages": 5,
+   "pdf": "VISUAL_QA_OVERLAYS.pdf"
+  },
+  "pdf": {
+   "html_sha256": "e3aa71cf54302639a2cd9bd00bf2eda7c6f6191567abebf782f716918021f3f3",
+   "pages": 6,
+   "pdf": "BOQ_REPORT.pdf"
+  },
+  "xlsx": {
+   "bytes": 163666,
+   "content_digest": "381bf3e62c08b295a995de38729ac56c98a3fe00f41435bb60c2a6047b4162ea",
+   "file_sha256": "17404e088bd2b126a5e1d83acd3b76d52551442cdcc7c2aee639bd3d37a48e7d",
+   "path": "research/urban_engine_m2_generalization/alsenan_route_g/STRUCTURAL_BOQ.xlsx",
+   "sheets": [
+    "README",
+    "BOQ_CONCRETE",
+    "BOQ_PLAIN_CONCRETE",
+    "BOQ_REINFORCEMENT",
+    "BY_FLOOR",
+    "VERIFIED",
+    "PROVISIONAL",
+    "UNRESOLVED",
+    "ASSUMPTIONS",
+    "SENSITIVITY",
+    "EXCEPTIONS",
+    "NOT_DETECTED",
+    "COVERAGE_RISK",
+    "REBAR_COMPLETENESS"
+   ]
+  }
+ },
+ "seconds_compute": 3.475,
+ "steps": [
+  {
+   "seconds": 0.0,
+   "step": "1 accept"
+  },
+  {
+   "seconds": 0.884,
+   "step": "2 inventory"
+  },
+  {
+   "seconds": 2.137,
+   "step": "3-5 generic detection, quantities, conventions"
+  },
+  {
+   "seconds": 0.451,
+   "step": "6 checks, exceptions and sensitivity"
+  },
+  {
+   "seconds": 0.057,
+   "step": "7 registers and report"
+  },
+  {
+   "seconds": 4.113,
+   "step": "8 export"
+  }
+ ]
+}

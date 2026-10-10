@@ -1,0 +1,87 @@
+{
+ "manual_interventions_during_run": 0,
+ "outputs": {
+  "files": [
+   "ASSUMPTIONS.csv",
+   "BLOCKERS.csv",
+   "BOQ_REPORT.html",
+   "CONTRACTOR_BOQ.csv",
+   "COVERAGE_RISK.csv",
+   "EXCEPTIONS.csv",
+   "FAMILY_SUMMARY.csv",
+   "FLOOR_SUMMARY.csv",
+   "INVENTORY.json",
+   "OVERLAYS.html",
+   "PROFILE_TEMPLATE.json",
+   "PROVISIONAL_REGISTER.csv",
+   "REBAR_COMPLETENESS.csv",
+   "SENSITIVITY.csv",
+   "STEEL_BY_DIAMETER.csv",
+   "SUMMARY.json",
+   "UNRESOLVED_REGISTER.csv",
+   "VERIFIED_REGISTER.csv",
+   "overlays/SH01_FOUNDATION_PLAN_FOUNDATION.svg",
+   "overlays/SH02_SLAB_PLAN_GF.svg",
+   "overlays/SH03_SLAB_PLAN_1F.svg"
+  ],
+  "overlays_pdf": {
+   "html_sha256": "6cb5bd041ddf30c168b2b976f4c0863711b07370d6abcc54e6432dfc69fe7df3",
+   "pages": 3,
+   "pdf": "VISUAL_QA_OVERLAYS.pdf"
+  },
+  "pdf": {
+   "html_sha256": "c4c54077fe0cd26242dca95ab51dd195ec6cf33cfe662e569d6c17342d951253",
+   "pages": 4,
+   "pdf": "BOQ_REPORT.pdf"
+  },
+  "xlsx": {
+   "bytes": 50318,
+   "content_digest": "7a8510d0eaef77b2b529e32bd68ecdffdcfbde201ad0b5df680b6d40150a25d0",
+   "file_sha256": "fa732c2a638afaf90b25fe9db9839a446ddf39b9b0a630e83810f8a9ddca98a3",
+   "path": "research/urban_engine_m2_generalization/synthetic_demo_villa_7/STRUCTURAL_BOQ.xlsx",
+   "sheets": [
+    "README",
+    "BOQ_CONCRETE",
+    "BOQ_PLAIN_CONCRETE",
+    "BOQ_REINFORCEMENT",
+    "BY_FLOOR",
+    "VERIFIED",
+    "PROVISIONAL",
+    "UNRESOLVED",
+    "ASSUMPTIONS",
+    "SENSITIVITY",
+    "EXCEPTIONS",
+    "NOT_DETECTED",
+    "COVERAGE_RISK",
+    "REBAR_COMPLETENESS"
+   ]
+  }
+ },
+ "seconds_compute": 0.517,
+ "steps": [
+  {
+   "seconds": 0.0,
+   "step": "1 accept"
+  },
+  {
+   "seconds": 0.314,
+   "step": "2 inventory"
+  },
+  {
+   "seconds": 0.158,
+   "step": "3-5 generic detection, quantities, conventions"
+  },
+  {
+   "seconds": 0.044,
+   "step": "6 checks, exceptions and sensitivity"
+  },
+  {
+   "seconds": 0.014,
+   "step": "7 registers and report"
+  },
+  {
+   "seconds": 2.214,
+   "step": "8 export"
+  }
+ ]
+}

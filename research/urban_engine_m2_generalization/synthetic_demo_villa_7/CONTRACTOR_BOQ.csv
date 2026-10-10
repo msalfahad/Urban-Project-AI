@@ -1,0 +1,20 @@
+ITEM,SECTION,FAMILY,DESCRIPTION,UNIT,VERIFIED,PROVISIONAL_LOW,PROVISIONAL_BASE,PROVISIONAL_HIGH,PLANNING_LOW,PLANNING_BASE,PLANNING_HIGH,N_VERIFIED,N_PROVISIONAL,N_UNRESOLVED,UNRESOLVED_EXPOSURE_LOW,UNRESOLVED_EXPOSURE_HIGH,EVIDENCE
+A.01,A CONCRETE,FOOTINGS,Reinforced concrete in isolated / combined footings,m3,0.0,16.656,16.656,16.656,16.656,16.656,16.656,0,12,0,,,
+A.02,A CONCRETE,COLUMNS,Reinforced concrete in columns and foundation necks,m3,0.0,12.54,12.54,12.54,12.54,12.54,12.54,0,24,0,,,
+A.03,A CONCRETE,BEAMS,Reinforced concrete in suspended beams,m3,0.0,10.40375,10.40375,13.73295,10.40375,10.40375,13.73295,0,24,10,4.76875,4.76875,
+A.04,A CONCRETE,SLABS,Reinforced concrete in suspended slabs,m3,0.0,25.5512,25.5512,25.5512,25.5512,25.5512,25.5512,0,10,0,,,
+B.01,B REINFORCEMENT,ALL,"High-yield bar reinforcement, 8 mm",kg,0.0,239.811439898,262.519588047,270.088970763,239.811439898,262.519588047,270.088970763,,,,,,
+B.02,B REINFORCEMENT,ALL,"High-yield bar reinforcement, 12 mm",kg,0.0,538.844444444,592.071111111,681.785863111,538.844444444,592.071111111,681.785863111,,,,,,
+B.03,B REINFORCEMENT,ALL,"High-yield bar reinforcement, 16 mm",kg,0.0,1778.536296296,1972.717037037,2057.671111111,1778.536296296,1972.717037037,2057.671111111,,,,,,
+B.UN,B REINFORCEMENT,ALL,Reinforcement with no bar model (unresolved; not in any total),kg,,,,,,,,,,0,,,
+C.01,C NOT DETECTED (COVERAGE RISK),CANTILEVER_PORTIONS,"CANTILEVER_PORTIONS: no label found on the drawing, and the generic engine cannot detect this family - confirm it is absent before using the totals",-,,,,,,,,,,,,,NO_LABEL_FOUND
+C.02,C NOT DETECTED (COVERAGE RISK),COLUMN_NECKS,"COLUMN_NECKS: no label found on the drawing, and the generic engine cannot detect this family - confirm it is absent before using the totals",-,,,,,,,,,,,,,NO_LABEL_FOUND
+C.03,C NOT DETECTED (COVERAGE RISK),DOMES,"DOMES: no label found on the drawing, and the generic engine cannot detect this family - confirm it is absent before using the totals",-,,,,,,,,,,,,,NO_LABEL_FOUND
+C.04,C NOT DETECTED (COVERAGE RISK),LIFT,"LIFT: no label found on the drawing, and the generic engine cannot detect this family - confirm it is absent before using the totals",-,,,,,,,,,,,,,NO_LABEL_FOUND
+C.05,C NOT DETECTED (COVERAGE RISK),LINTELS,"LINTELS: no label found on the drawing, and the generic engine cannot detect this family - confirm it is absent before using the totals",-,,,,,,,,,,,,,NO_LABEL_FOUND
+C.06,C NOT DETECTED (COVERAGE RISK),PARAPETS,"PARAPETS: no label found on the drawing, and the generic engine cannot detect this family - confirm it is absent before using the totals",-,,,,,,,,,,,,,NO_LABEL_FOUND
+C.07,C NOT DETECTED (COVERAGE RISK),PLAIN_CONCRETE,"PLAIN_CONCRETE: no label found on the drawing, and the generic engine cannot detect this family - confirm it is absent before using the totals",-,,,,,,,,,,,,,NO_LABEL_FOUND
+C.08,C NOT DETECTED (COVERAGE RISK),POOL,"POOL: no label found on the drawing, and the generic engine cannot detect this family - confirm it is absent before using the totals",-,,,,,,,,,,,,,NO_LABEL_FOUND
+C.09,C NOT DETECTED (COVERAGE RISK),STAIRS,"STAIRS: no label found on the drawing, and the generic engine cannot detect this family - confirm it is absent before using the totals",-,,,,,,,,,,,,,NO_LABEL_FOUND
+C.10,C NOT DETECTED (COVERAGE RISK),WALLS,"WALLS: no label found on the drawing, and the generic engine cannot detect this family - confirm it is absent before using the totals",-,,,,,,,,,,,,,NO_LABEL_FOUND
+C.11,C NOT DETECTED (COVERAGE RISK),WATER_TANK,"WATER_TANK: no label found on the drawing, and the generic engine cannot detect this family - confirm it is absent before using the totals",-,,,,,,,,,,,,,NO_LABEL_FOUND
