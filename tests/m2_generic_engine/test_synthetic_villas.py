@@ -20,7 +20,7 @@ from engine.source import member_detection as MD            # noqa: E402
 from tools import m2_evaluate as EV                         # noqa: E402
 from tools import synthetic_villa as SV                     # noqa: E402
 from tools import urban_intake as UI                        # noqa: E402
-from tools import urban_structural_boq as CLI               # noqa: E402
+from tools import urban_boq_m2 as CLI                       # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 HYGIENE = re.compile(r"[؀-ۿ]{3,}")
@@ -120,3 +120,16 @@ def test_route_g_end_to_end(tmp_path):
             assert not HYGIENE.search(p.read_text(encoding="utf-8")), p.name
     states = {r["REBAR_STATE"] for r in csv.DictReader((out / "REBAR_COMPLETENESS.csv").open())}
     assert states <= set(GR.REBAR_STATES)
+    nd = s["not_detected_families"]
+    assert set(nd) == set(GR.SCOPE_WORDS) and set(nd.values()) <= {"LABELS_FOUND", "NO_LABEL_FOUND"}
+    boq = list(csv.DictReader((out / "CONTRACTOR_BOQ.csv").open()))
+    assert sum(1 for b in boq if b["SECTION"].startswith("C")) == len(GR.SCOPE_WORDS)
+
+
+def test_frozen_m1_cli_is_untouched():
+    """M2 extends the M1 pipeline from a new module; the frozen M1 CLI must stay byte-identical to its freeze."""
+    import hashlib
+    man = json.loads((ROOT / "research/alsenan_m1_usable_boq/06_M1_FREEZE_MANIFEST.json").read_text())
+    want = man["code"]["tools/urban_structural_boq.py"]
+    got = hashlib.sha256((ROOT / "tools/urban_structural_boq.py").read_bytes()).hexdigest()
+    assert got == (want if isinstance(want, str) else want.get("sha256"))

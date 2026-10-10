@@ -194,6 +194,43 @@ def _common(**kw):
     return kw
 
 
+# families the generic engine does not quantify yet: drawing evidence makes them NOT_DETECTED lines (coverage risk)
+SCOPE_WORDS = {
+    "STAIRS": ("STAIR", "FLIGHT", "LANDING", "درج", "سلم"),
+    "LINTELS": ("LINTEL", "عتب"),
+    "LIFT": ("LIFT", "ELEVATOR", "مصعد"),
+    "POOL": ("POOL", "SWIMMING", "مسبح"),
+    "WATER_TANK": ("WATER TANK", "TANK", "خزان"),
+    "DOMES": ("DOME", "قبة"),
+    "PARAPETS": ("PARAPET", "دروة"),
+    "PLAIN_CONCRETE": ("BLINDING", "PLAIN CONCRETE", "P.C.", "خرسانة عادية", "نظافة"),
+    "WALLS": ("BOUNDARY WALL", "RETAINING", "SHEAR WALL", "سور", "جدار"),
+    "CANTILEVER_PORTIONS": ("CANTILEVER", "كابولي"),
+    "COLUMN_NECKS": ("NECK", "رقبة"),
+}
+SCOPE_EN = {"درج": "STAIR", "سلم": "STAIR", "عتب": "LINTEL", "مصعد": "LIFT", "مسبح": "POOL", "خزان": "TANK",
+            "قبة": "DOME", "دروة": "PARAPET", "خرسانة عادية": "PLAIN CONCRETE", "نظافة": "BLINDING",
+            "سور": "BOUNDARY WALL", "جدار": "WALL", "كابولي": "CANTILEVER", "رقبة": "NECK"}
+
+
+def scope_scan(D):
+    """{family: {keywords (English), n_texts, sheets}} for families outside the generic scope that the drawing
+    mentions. Evidence is the matched keyword only - never the text itself."""
+    out = {}
+    for t in D["model"]["texts"]:
+        u = t["norm"].upper()
+        for fam, words in SCOPE_WORDS.items():
+            hit = [w for w in words if w.upper() in u]
+            if hit:
+                r = out.setdefault(fam, {"keywords": set(), "n_texts": 0, "sheets": set()})
+                r["keywords"].update(SCOPE_EN.get(w, w) for w in hit)
+                r["n_texts"] += 1
+                if t.get("sheet"):
+                    r["sheets"].add(t["sheet"])
+    return {f: {"keywords": sorted(r["keywords"]), "n_texts": r["n_texts"], "sheets": sorted(r["sheets"])}
+            for f, r in sorted(out.items())}
+
+
 def items_from(D, conv, heights=None):
     heights = heights or {}
     u = D["unit_m"]
@@ -483,6 +520,10 @@ def items_from(D, conv, heights=None):
             risk.append({"KIND": "SHEET_ROLE_UNKNOWN", "WHERE": sh["sheet_id"], "DETAIL": "no title matched"})
     for c in D["schedule"]["conflicts"]:
         risk.append({"KIND": "SCHEDULE_DUPLICATE_MARK", "WHERE": c["family"], "DETAIL": c["mark"]})
+    for fam, ev in scope_scan(D).items():
+        risk.append({"KIND": "FAMILY_NOT_QUANTIFIED", "WHERE": fam,
+                     "DETAIL": f"{ev['n_texts']} labels ({', '.join(ev['keywords'])}) on {', '.join(ev['sheets'])}; "
+                               f"the generic engine has no detector for this family - not in any total"})
     return items, register, risk
 
 

@@ -2,7 +2,6 @@
 
     python3 -m tools.urban_structural_boq run --drawings ST.dxf ST.pdf --out OUT [--conventions C.json]
                                              [--set ID=VALUE ...] [--profile P.json] [--no-pdf] [--no-xlsx]
-                                             [--route auto|A|B|G|C]
     python3 -m tools.urban_structural_boq inventory --drawings NEW.dxf --out OUT     (inventory + profile template)
 
 The eight steps (each one is timed in run_log.json):
@@ -12,12 +11,8 @@ The eight steps (each one is timed in run_log.json):
     3 extract    ROUTE A, a drawing set the project registry knows (by sha256): the frozen S1 - S9A stage registers
                  of that project are replayed through its adapter (nothing is re-measured, the stage manifests are
                  verified first). ROUTE B, a new drawing set with a person-confirmed profile: footing and column
-                 outlines, tags and schedule rows are extracted live (engine.source.profile_takeoff). ROUTE G (M2,
-                 the default for an unknown set): the generic engine (engine.source.generic_route) reads sheets,
-                 schedules, footings, columns, beams, slabs and bars from the DXF with no project register; an
-                 optional generic profile adds printed values the drawing lacks (storey heights); --route G forces
-                 it on a known set too. ROUTE C (--route C): the inventory and a profile template only; every
-                 family is UNRESOLVED.
+                 outlines, tags and schedule rows are extracted live (engine.source.profile_takeoff). ROUTE C, no
+                 profile: the inventory and a profile template only; every family is UNRESOLVED.
     4 quantify   VERIFIED (released rows only) and source-complete quantities
     5 conventions PROVISIONAL quantities under the convention set (JSON; --set overrides one value, reversibly)
     6 check      one owner per component (no double counting), the low <= base <= high order, unresolved never in a
@@ -211,31 +206,6 @@ def route_known(entry, conv_path, overrides):
             "exceptions": [], "adapter": entry["adapter"]}
 
 
-GENERIC_CONVENTIONS = "engine/profiles/URBAN_M2_GENERIC_CONVENTIONS_V1.json"
-
-
-def route_generic(inputs, conv_path, overrides, profile):
-    """ROUTE G (M2): the generic engine on any DXF - sheets, schedules, members, slabs and bars read from the drawing
-    with no project register; the profile (optional) only adds printed values the drawing does not carry."""
-    from engine.source import generic_route as GR
-    from tools import urban_intake as UI
-    dxf = next((r for r in inputs if r["kind"] == "DXF" and "error" not in r), None)
-    I = UI.read(dxf["path"])
-    D = GR.detect(I)
-    generic = json.loads((ROOT / (conv_path or GENERIC_CONVENTIONS)).read_text(encoding="utf-8"))
-
-    def build(ov):
-        conv = GR.merge_conventions(generic, profile, ov)
-        items, reg, risk = GR.items_from(D, conv, GR.storey_heights(conv))
-        return conv, items, reg, risk
-    conv, items, reg, risk = build(overrides)
-    exc = [{"EXCEPTION_ID": f"CR-{k:04d}", "KIND": "COVERAGE_RISK:" + r["KIND"], "FAMILY": "", "SHEET": r["WHERE"],
-            "DETAIL": str(r["DETAIL"])[:300], "LOCATION": ""} for k, r in enumerate(risk, 1)]
-    return {"items": items, "conv": conv, "coverage": [], "rebuild": lambda ov: build(dict(overrides, **ov))[1],
-            "frozen": [], "exceptions": exc, "adapter": None, "generic": {"D": D, "register": reg, "risk": risk,
-                                                                         "intake": I}}
-
-
 def route_profile(profile, docs, invs):
     sha = profile.get("drawing_sha256")
     doc = docs.get(sha) if sha else (next(iter(docs.values())) if len(docs) == 1 else None)
@@ -332,9 +302,8 @@ def boq_lines(items):
     return lines
 
 
-def compute(drawings, *, conventions=None, overrides=None, profile=None, project=None, route="auto"):
-    """Steps 1 - 7 in memory. Returns the result dict (no file written).
-    route: auto (A for a known set, B with a takeoff profile, else G), or force A / B / G."""
+def compute(drawings, *, conventions=None, overrides=None, profile=None, project=None):
+    """Steps 1 - 7 in memory. Returns the result dict (no file written)."""
     log, t0 = [], time.perf_counter()
 
     def step(name, t):
@@ -347,22 +316,13 @@ def compute(drawings, *, conventions=None, overrides=None, profile=None, project
     t = step("2 inventory", t)
     known = [KNOWN_PROJECTS[i["sha256"]] for i in inputs if i["sha256"] in KNOWN_PROJECTS]
     overrides = dict(overrides or {})
-    prof = None
-    if profile:
-        prof = json.loads(Path(profile).read_text(encoding="utf-8")) if not isinstance(profile, dict) else profile
-    takeoff_profile = bool(prof and (prof.get("families") or prof.get("sheets")))
-    want = route.upper()[:1] if route and route != "auto" else None
-    if want == "A" or (want is None and known and not prof):
-        if not known:
-            raise PipelineError("route A needs a drawing set the project registry knows")
+    if known and not profile:
         res = route_known(known[0], conventions, overrides)
         route = "A_FROZEN_STAGE_REPLAY"
-    elif want == "B" or (want is None and takeoff_profile):
+    elif profile:
+        prof = json.loads(Path(profile).read_text(encoding="utf-8")) if not isinstance(profile, dict) else profile
         res = route_profile(prof, docs, invs)
         route = "B_PROFILE_TAKEOFF"
-    elif want in (None, "G"):
-        res = route_generic(inputs, conventions, overrides, prof)
-        route = "G_GENERIC_ENGINE"
     else:
         res = route_profile({"profile": "NO_PROFILE", "units_to_mm": None}, docs, invs)
         route = "C_INVENTORY_ONLY"
@@ -392,13 +352,7 @@ def compute(drawings, *, conventions=None, overrides=None, profile=None, project
         "rule": "planning = verified + provisional base; low / high sum each item's own low / high; unresolved "
                 "items are never added",
     }
-    if res.get("generic"):
-        g = res["generic"]
-        summary["coverage_risk_by_kind"] = dict(sorted(Counter(r["KIND"] for r in g["risk"]).items()))
-        summary["rebar_completeness"] = dict(sorted(Counter(r["REBAR_STATE"] for r in g["register"]).items()))
-        summary["sheets"] = [{k: sh[k] for k in ("sheet_id", "role", "storey")} for sh in g["D"]["model"]["sheets"]]
     return {"summary": summary, "items": items, "conv": res["conv"], "coverage": res["coverage"], "exceptions": exc,
-            "generic": res.get("generic"),
             "sensitivity": sens, "inventories": invs, "inputs": inputs, "log": log,
             "seconds": round(time.perf_counter() - t0, 3), "boq": boq_lines(items),
             "family": PE.rollup(items, ("trade", "family")),
@@ -447,14 +401,6 @@ def files(R, *, as_of):
     }
     if R["coverage"]:
         out["COVERAGE.csv"] = csv_text(R["coverage"])
-    if R.get("generic"):
-        g = R["generic"]
-        out["COVERAGE_RISK.csv"] = csv_text(g["risk"], ["KIND", "WHERE", "DETAIL"])
-        out["REBAR_COMPLETENESS.csv"] = csv_text(g["register"])
-        from tools import m2_overlay as OV
-        for name, svg in OV.sheet_svgs(g["D"]).items():
-            out[f"overlays/{name}.svg"] = svg
-        out["OVERLAYS.html"] = OV.html(g["D"], banner=BANNER)
     out["BOQ_REPORT.html"] = REPORT.html(R, as_of=as_of, banner=BANNER)
     return out
 
@@ -560,7 +506,6 @@ def write_all(R, out, *, as_of, pdf=True, xlsx=True, created=None):
     t = time.perf_counter()
     fs = files(R, as_of=as_of)
     for name, text in fs.items():
-        (out / name).parent.mkdir(parents=True, exist_ok=True)
         (out / name).write_text(text, encoding="utf-8")
     R["log"].append({"step": "7 registers and report", "seconds": round(time.perf_counter() - t, 3)})
     res = {"files": sorted(fs)}
@@ -572,8 +517,6 @@ def write_all(R, out, *, as_of, pdf=True, xlsx=True, created=None):
         XL.validate(out / "STRUCTURAL_BOQ.xlsx", model)
     if pdf:
         res["pdf"] = print_pdf(out / "BOQ_REPORT.html", out / "BOQ_REPORT.pdf")
-        if (out / "OVERLAYS.html").exists():
-            res["overlays_pdf"] = print_pdf(out / "OVERLAYS.html", out / "VISUAL_QA_OVERLAYS.pdf")
     R["log"].append({"step": "8 export", "seconds": round(time.perf_counter() - t, 3)})
     (out / "run_log.json").write_text(_jdump({"steps": R["log"], "seconds_compute": R["seconds"],
                                               "manual_interventions_during_run": 0,
@@ -629,7 +572,6 @@ def main(argv=None):
             p.add_argument("--conventions")
             p.add_argument("--set", action="append", default=[], metavar="ID=VALUE")
             p.add_argument("--profile")
-            p.add_argument("--route", default="auto", choices=["auto", "A", "B", "G", "C"])
             p.add_argument("--no-pdf", action="store_true")
             p.add_argument("--no-xlsx", action="store_true")
             p.add_argument("--as-of", default=datetime.now().strftime("%Y-%m-%d"))
@@ -643,7 +585,7 @@ def main(argv=None):
         (out / "PROFILE_TEMPLATE.json").write_text(_jdump(DI.profile_template(invs[0])), encoding="utf-8")
         print(json.dumps({"inventory": str(out / "INVENTORY.json"), "frames": [len(i["frames"]) for i in invs]}))
         return 0
-    R = compute(a.drawings, conventions=a.conventions, overrides=parse_sets(a.set), profile=a.profile, route=a.route)
+    R = compute(a.drawings, conventions=a.conventions, overrides=parse_sets(a.set), profile=a.profile)
     res = write_all(R, a.out, as_of=a.as_of, pdf=not a.no_pdf, xlsx=not a.no_xlsx)
     s = R["summary"]
     print(json.dumps({"route": s["route"], "concrete_m3": {k: round(s["totals"]["CONCRETE"][k], 3) for k in
