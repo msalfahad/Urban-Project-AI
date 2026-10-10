@@ -1,0 +1,21 @@
+STOREY_RUN,STAIR,SOURCE,VIEW,KIND,FLIGHT_1_RISERS,FLIGHT_1_PARTS,TURN_RADIAL,TURN_CLOSING,TURN_RISERS,FLIGHT_2_RISERS,TOTAL_RISERS,UNIFORM_RISER_MM,BLONDEL_2R_PLUS_G_MM,IN_OWNER_RANGE_150_160,HALF_LANDING_FFL_M_IF_UNIFORM,NOTE
+A1,main (service) stair GF -> 1F,STRUCTURAL GF roof sheet (GFRS),GFRS,DRAWN_COUNT,12,,3,1,4,12,28,160.714286,621.428571,False,3.571429,
+A1,main (service) stair GF -> 1F,ARCHITECTURAL GF plan,ARCH-GF,DRAWN_COUNT,10,,3,1,4,11,25,180,660,False,3.52,
+A1,main (service) stair GF -> 1F,"P7757 architectural sections PDF sheet 4, SECTION A-A (visual, re-read at 600 dpi in this round)",SECTION A-A,DRAWN_COUNT (upper flight only),,,,,,12,,,,,,"upper flight GF -> 1F cut: 12 risers, 11 treads (11 goings = the 3.30 m of the structural plan)"
+A1,main (service) stair GF -> 1F,OWNER SCENARIO A,-,OWNER_SCENARIO,,,,,,,28,160.714286,621.428571,False,,
+A1,main (service) stair GF -> 1F,OWNER SCENARIO B,-,OWNER_SCENARIO,,,,,,,29,155.172414,610.344828,True,,
+A1,main (service) stair GF -> 1F,counts in the owner range (150 - 160 mm),-,ARITHMETIC,,,,,,,"[29, 30]",,,,,
+A2,main (service) stair 1F -> 2F,STRUCTURAL 1F roof sheet (FFRS),FFRS,DRAWN_COUNT,12,,0,1,1,11,24,175,650,False,7.775,
+A2,main (service) stair 1F -> 2F,ARCHITECTURAL 1F plan,ARCH-1F,DRAWN_COUNT,12,,3,1,4,11,27,155.555556,611.111111,True,7.988889,
+A2,main (service) stair 1F -> 2F,ARCHITECTURAL 2F plan (repeated view),ARCH-2F,DRAWN_COUNT,12,,0,1,1,11,24,175,650,False,7.775,
+A2,main (service) stair 1F -> 2F,"P7757 architectural sections PDF sheet 4, SECTION A-A (visual, re-read at 600 dpi in this round)",SECTION A-A,DRAWN_COUNT (upper flight only),,,,,,12,,,,,,"upper flight 1F -> 2F cut: 12 risers, 11 treads"
+A2,main (service) stair 1F -> 2F,OWNER SCENARIO A,-,OWNER_SCENARIO,,,,,,,27,155.555556,611.111111,True,,
+A2,main (service) stair 1F -> 2F,OWNER SCENARIO B,-,OWNER_SCENARIO,,,,,,,26,161.538462,623.076923,False,,
+A2,main (service) stair 1F -> 2F,counts in the owner range (150 - 160 mm),-,ARITHMETIC,,,,,,,"[27, 28]",,,,,
+C,round (light-well) stair GF -> 1F,GFRS,GFRS,DRAWN_COUNT,23,curved 12 + straight 11,,,,5,28,160.714286,621.428571,False,4.696429,
+C,round (light-well) stair GF -> 1F,ARCH-1F,ARCH-1F,DRAWN_COUNT,23,curved 12 + straight 11,,,,5,28,160.714286,621.428571,False,4.696429,
+C,round (light-well) stair GF -> 1F,ARCH-GF,ARCH-GF,DRAWN_COUNT (second view),23,curved 12 + straight 11,,,,4,27,166.666667,633.333333,False,4.833333,
+B,lobby steps +1.00 -> +0.30,GBP,GBP,DRAWN_COUNT,,,,,,,4,175,,,,
+D,entrance steps +0.15 -> +1.00,GBP,GBP,DRAWN_COUNT,,,,,,,5,170,,,,
+B,lobby steps +1.00 -> +0.30,ARCH-GF,ARCH-GF,DRAWN_COUNT,,,,,,,4,175,,,,
+D,entrance steps +0.15 -> +1.00,ARCH-GF,ARCH-GF,DRAWN_COUNT,,,,,,,5,170,,,,

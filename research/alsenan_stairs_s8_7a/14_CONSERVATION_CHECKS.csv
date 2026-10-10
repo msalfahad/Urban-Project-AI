@@ -1,0 +1,11 @@
+CHECK_ID,CHECK,RESULT,DETAIL
+C01,the independent recount reproduces every S8.7 primary straight count,PASS,"{""GFRS:A1-F1"": true, ""GFRS:A1-F2"": true, ""FFRS:A2-F1"": true, ""FFRS:A2-F2"": true}"
+C02,"architectural flights: the 1F plan draws every riser as a nosing / riser-face pair; single lines occur only where one line per riser is drawn (overhead or above the cut on the GF plan, the first riser of the repeated 2F view); no riser holds more than three lines",PASS,"{""ARCH-2F:A2-F1"": 1, ""ARCH-GF:A1-F1"": 2, ""ARCH-GF:A1-F2"": 4, ""ARCH-GF:B-F1"": 4, ""ARCH-GF:C-F1"": 5, ""ARCH-GF:C-F2"": 4}"
+C03,owner scenario A = a complete drawn arrangement (GF -> 1F: GFRS 28; 1F -> 2F: ARCH-1F 27),PASS,
+C04,every riser schedule closes on the top floor level,PASS,
+C05,first / last concrete risers: closed form = schedule; concrete risers sum to SSL_top - SSL_bottom,PASS,
+C06,S8.7 released concrete and bars reproduced exactly from the drawings,PASS,
+C07,nothing new released: scenario quantities are OWNER_SCENARIO / SOURCE_CONFLICT / BLOCKED only,PASS,
+C08,"all 26 earlier freezes (incl. S8.7 and S8.8), the S8.3 errata and the register indexes verify",PASS,26 manifests
+C09,the light-well stair counts 28 on both primary views,PASS,"[28, 28]"
+C10,each owner image is recorded as supporting evidence only,PASS,
