@@ -60,6 +60,12 @@ ACCURATE_MODULES = (
     "engine/source/provisional_estimate.py",       # M1 VERIFIED / PROVISIONAL / UNRESOLVED items, conventions, rollups
     "engine/source/drawing_inventory.py",          # M1 generic DXF inventory (sheets, layers, tags, outlines; no kg)
     "engine/source/profile_takeoff.py",            # M1 footings / columns of a new project from a confirmed profile
+    "engine/source/drawing_model.py",              # M2 normalized drawing model: sheets, roles, storeys, units, labels
+    "engine/source/schedule_reader.py",            # M2 schedules from attribute rows / text tables (units inferred)
+    "engine/source/member_detection.py",           # M2 footings, columns, beam / ground-beam bands, bindings, ownership
+    "engine/source/slab_engine.py",                # M2 slab panels, openings, thickness, coverage-risk cells
+    "engine/source/bar_shapes.py",                 # M2 developed bar lengths: diameter-aware bends and hooks
+    "engine/source/generic_route.py",              # M2 generic route: drawings -> items, rebar completeness, coverage risk
     "engine/bbs_steel.py",
 )
 # project builders that produce accurate reinforcement registers
