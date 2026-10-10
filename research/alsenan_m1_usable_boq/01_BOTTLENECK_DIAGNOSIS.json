@@ -1,0 +1,547 @@
+{
+ "A_fully_measured_VERIFIED": {
+  "BEAMS": {
+   "exposure_m3_high": 0,
+   "kg_base": 4014.765444,
+   "kg_high": 4014.765444,
+   "m3_base": 0,
+   "m3_high": 0,
+   "m3_low": 0,
+   "n": 172
+  },
+  "COLUMNS": {
+   "exposure_m3_high": 0,
+   "kg_base": 4657.725,
+   "kg_high": 4657.725,
+   "m3_base": 20.5845,
+   "m3_high": 20.5845,
+   "m3_low": 20.5845,
+   "n": 142
+  },
+  "DOMES": {
+   "exposure_m3_high": 0,
+   "kg_base": 602.111304,
+   "kg_high": 602.111304,
+   "m3_base": 5.081361,
+   "m3_high": 5.081361,
+   "m3_low": 5.081361,
+   "n": 6
+  },
+  "FOOTINGS": {
+   "exposure_m3_high": 0,
+   "kg_base": 3629.599513,
+   "kg_high": 3629.599513,
+   "m3_base": 64.304,
+   "m3_high": 64.304,
+   "m3_low": 64.304,
+   "n": 85
+  },
+  "GROUND_BEAMS": {
+   "exposure_m3_high": 0,
+   "kg_base": 1436.23167,
+   "kg_high": 1436.23167,
+   "m3_base": 3.8791,
+   "m3_high": 3.8791,
+   "m3_low": 3.8791,
+   "n": 133
+  },
+  "GROUND_SLAB": {
+   "exposure_m3_high": 0,
+   "kg_base": 233.694587,
+   "kg_high": 233.694587,
+   "m3_base": 3.785852,
+   "m3_high": 3.785852,
+   "m3_low": 3.785852,
+   "n": 6
+  },
+  "LINTELS": {
+   "exposure_m3_high": 0,
+   "kg_base": 49.589037,
+   "kg_high": 49.589037,
+   "m3_base": 0.366,
+   "m3_high": 0.366,
+   "m3_low": 0.366,
+   "n": 28
+  },
+  "SLABS": {
+   "exposure_m3_high": 0,
+   "kg_base": 3802.015365,
+   "kg_high": 3802.015365,
+   "m3_base": 57.09856,
+   "m3_high": 57.09856,
+   "m3_low": 57.09856,
+   "n": 523
+  },
+  "STAIRS": {
+   "exposure_m3_high": 0,
+   "kg_base": 59.020862,
+   "kg_high": 59.020862,
+   "m3_base": 0.516583,
+   "m3_high": 0.516583,
+   "m3_low": 0.516583,
+   "n": 7
+  },
+  "WATER_TANK_ROOF": {
+   "exposure_m3_high": 0,
+   "kg_base": 361.208565,
+   "kg_high": 361.208565,
+   "m3_base": 2.4543,
+   "m3_high": 2.4543,
+   "m3_low": 2.4543,
+   "n": 10
+  }
+ },
+ "B_calculated_blocked_only_by_a_convention_or_approval": {
+  "BEAMS": {
+   "exposure_m3_high": 0,
+   "kg_base": 1475.223556,
+   "kg_high": 1522.876643,
+   "m3_base": 63.842902,
+   "m3_high": 79.966797,
+   "m3_low": 63.051739,
+   "n": 121
+  },
+  "COLUMNS": {
+   "exposure_m3_high": 0,
+   "kg_base": 2830.459,
+   "kg_high": 2880.682333,
+   "m3_base": 13.8615,
+   "m3_high": 15.7305,
+   "m3_low": 12.9,
+   "n": 37
+  },
+  "DOMES": {
+   "exposure_m3_high": 0,
+   "kg_base": 311.932943,
+   "kg_high": 311.932943,
+   "m3_base": 0,
+   "m3_high": 0,
+   "m3_low": 0,
+   "n": 4
+  },
+  "FOOTINGS": {
+   "exposure_m3_high": 0,
+   "kg_base": 0,
+   "kg_high": 0,
+   "m3_base": 1.96,
+   "m3_high": 1.96,
+   "m3_low": 0.216,
+   "n": 1
+  },
+  "GROUND_BEAMS": {
+   "exposure_m3_high": 0,
+   "kg_base": 79.81827,
+   "kg_high": 84.005924,
+   "m3_base": 3.18046,
+   "m3_high": 3.41374,
+   "m3_low": 2.78987,
+   "n": 14
+  },
+  "GROUND_SLAB": {
+   "exposure_m3_high": 0,
+   "kg_base": 801.104938,
+   "kg_high": 801.104938,
+   "m3_base": 12.977876,
+   "m3_high": 12.977876,
+   "m3_low": 12.977876,
+   "n": 38
+  },
+  "LINTELS": {
+   "exposure_m3_high": 0,
+   "kg_base": 522.091117,
+   "kg_high": 522.091117,
+   "m3_base": 4.610978,
+   "m3_high": 4.610978,
+   "m3_low": 4.231717,
+   "n": 65
+  }
+ },
+ "C_incomplete_geometry_one_assumed_dimension": {
+  "CANTILEVER_PORTIONS": {
+   "exposure_m3_high": 0,
+   "kg_base": 0,
+   "kg_high": 0,
+   "m3_base": 0.736375,
+   "m3_high": 0.736375,
+   "m3_low": 0.736375,
+   "n": 7
+  },
+  "COLUMNS": {
+   "exposure_m3_high": 0,
+   "kg_base": 0,
+   "kg_high": 0,
+   "m3_base": 12.7365,
+   "m3_high": 15.8565,
+   "m3_low": 12.234,
+   "n": 36
+  },
+  "DOMES": {
+   "exposure_m3_high": 0,
+   "kg_base": 0,
+   "kg_high": 0,
+   "m3_base": 1.654992,
+   "m3_high": 6.377911,
+   "m3_low": 1.654992,
+   "n": 2
+  },
+  "GROUND_BEAMS": {
+   "exposure_m3_high": 0,
+   "kg_base": 0,
+   "kg_high": 0,
+   "m3_base": 29.19267,
+   "m3_high": 33.67692,
+   "m3_low": 19.26927,
+   "n": 37
+  },
+  "LIFT": {
+   "exposure_m3_high": 0,
+   "kg_base": 0,
+   "kg_high": 0,
+   "m3_base": 2.145,
+   "m3_high": 2.695,
+   "m3_low": 2.145,
+   "n": 4
+  },
+  "PLAIN_CONCRETE": {
+   "exposure_m3_high": 0,
+   "kg_base": 0,
+   "kg_high": 0,
+   "m3_base": 9.9747,
+   "m3_high": 9.9747,
+   "m3_low": 9.9747,
+   "n": 1
+  },
+  "POOL": {
+   "exposure_m3_high": 0,
+   "kg_base": 0,
+   "kg_high": 0,
+   "m3_base": 7.08446,
+   "m3_high": 7.437969,
+   "m3_low": 6.495279,
+   "n": 5
+  },
+  "STAIRS": {
+   "exposure_m3_high": 0,
+   "kg_base": 0,
+   "kg_high": 0,
+   "m3_base": 8.544412,
+   "m3_high": 11.618399,
+   "m3_low": 7.044992,
+   "n": 12
+  }
+ },
+ "D_no_defensible_geometry_UNRESOLVED": {
+  "BEAMS": {
+   "exposure_m3_high": 11.566456,
+   "kg_base": 0,
+   "kg_high": 0,
+   "m3_base": 0,
+   "m3_high": 0,
+   "m3_low": 0,
+   "n": 27
+  },
+  "BOUNDARY_WALL": {
+   "exposure_m3_high": 0,
+   "kg_base": 0,
+   "kg_high": 0,
+   "m3_base": 0,
+   "m3_high": 0,
+   "m3_low": 0,
+   "n": 1
+  },
+  "CANTILEVER_PORTIONS": {
+   "exposure_m3_high": 0,
+   "kg_base": 0,
+   "kg_high": 0,
+   "m3_base": 0,
+   "m3_high": 0,
+   "m3_low": 0,
+   "n": 7
+  },
+  "COLUMNS": {
+   "exposure_m3_high": 0,
+   "kg_base": 0,
+   "kg_high": 0,
+   "m3_base": 0,
+   "m3_high": 0,
+   "m3_low": 0,
+   "n": 2
+  },
+  "DOMES": {
+   "exposure_m3_high": 2.844907,
+   "kg_base": 0,
+   "kg_high": 0,
+   "m3_base": 0,
+   "m3_high": 0,
+   "m3_low": 0,
+   "n": 10
+  },
+  "FOOTINGS": {
+   "exposure_m3_high": 0,
+   "kg_base": 0,
+   "kg_high": 0,
+   "m3_base": 0,
+   "m3_high": 0,
+   "m3_low": 0,
+   "n": 6
+  },
+  "GROUND_BEAMS": {
+   "exposure_m3_high": 4.45794,
+   "kg_base": 0,
+   "kg_high": 0,
+   "m3_base": 0,
+   "m3_high": 0,
+   "m3_low": 0,
+   "n": 8
+  },
+  "LIFT": {
+   "exposure_m3_high": 0,
+   "kg_base": 0,
+   "kg_high": 0,
+   "m3_base": 0,
+   "m3_high": 0,
+   "m3_low": 0,
+   "n": 2
+  },
+  "LINTELS": {
+   "exposure_m3_high": 0,
+   "kg_base": 0,
+   "kg_high": 0,
+   "m3_base": 0,
+   "m3_high": 0,
+   "m3_low": 0,
+   "n": 9
+  },
+  "PARAPETS": {
+   "exposure_m3_high": 0,
+   "kg_base": 0,
+   "kg_high": 0,
+   "m3_base": 0,
+   "m3_high": 0,
+   "m3_low": 0,
+   "n": 3
+  },
+  "PLAIN_CONCRETE": {
+   "exposure_m3_high": 13.069,
+   "kg_base": 0,
+   "kg_high": 0,
+   "m3_base": 0,
+   "m3_high": 0,
+   "m3_low": 0,
+   "n": 1
+  },
+  "POOL": {
+   "exposure_m3_high": 0,
+   "kg_base": 0,
+   "kg_high": 0,
+   "m3_base": 0,
+   "m3_high": 0,
+   "m3_low": 0,
+   "n": 1
+  },
+  "SLABS": {
+   "exposure_m3_high": 2.44248,
+   "kg_base": 0,
+   "kg_high": 0,
+   "m3_base": 0,
+   "m3_high": 0,
+   "m3_low": 0,
+   "n": 6
+  },
+  "STAIRS": {
+   "exposure_m3_high": 0,
+   "kg_base": 0,
+   "kg_high": 0,
+   "m3_base": 0,
+   "m3_high": 0,
+   "m3_low": 0,
+   "n": 1
+  },
+  "WATER_TANK_ROOF": {
+   "exposure_m3_high": 0,
+   "kg_base": 0,
+   "kg_high": 0,
+   "m3_base": 0,
+   "m3_high": 0,
+   "m3_low": 0,
+   "n": 2
+  }
+ },
+ "E_never_detected_by_S1_S9": [
+  {
+   "FOUND_BY": "S9A (after S1 - S9)",
+   "M1": "7 PROVISIONAL at the 16 cm project default; the 8th is CA's own hatch, counted in the CA beam",
+   "WHAT": "8 hatched cantilever portions (bands)"
+  },
+  {
+   "FOUND_BY": "S9A BO-04",
+   "M1": "one PROVISIONAL item",
+   "WHAT": "10 beam-to-beam corner squares"
+  },
+  {
+   "FOUND_BY": "excluded by every link model (S5.1, S6.1)",
+   "M1": "PROVISIONAL hook allowance (LINK_HOOK_ALLOWANCE_MM)",
+   "WHAT": "link and tie hooks of beams and ground beams"
+  },
+  {
+   "FOUND_BY": "S9A",
+   "M1": "the high end of the ground-beam ranges",
+   "WHAT": "the deeper-section reading of overlapping p.13 ground-beam titles"
+  },
+  {
+   "FOUND_BY": "M1 drawing inventory (03)",
+   "M1": "listed as detection gaps; not measured",
+   "WHAT": "drawn layers with geometry that no stage's code names: 1 (S-SHEET.LO)"
+  }
+ ],
+ "F_depending_on_manual_approval": [
+  {
+   "BLOCKER": "RELEASE_RULE_APPROVAL",
+   "KG_BASE": 66.37,
+   "M3_BASE": 2.25,
+   "N_ITEMS": 6,
+   "WHY_IT_IS_ONLY_APPROVAL": "columns whose drawn section equals the schedule, held only by S2's PROVISIONAL minimum-thickness state (5 GF columns among them)"
+  },
+  {
+   "BLOCKER": "NOTE_SCOPE",
+   "KG_BASE": 801.104938,
+   "M3_BASE": 12.977876,
+   "N_ITEMS": 38,
+   "WHY_IT_IS_ONLY_APPROVAL": "19 slab-on-grade faces: the printed note 'T=10cm, 5D10/m E.W.' applies; only its scope needs a yes"
+  },
+  {
+   "BLOCKER": "BEARING_NOT_CONFIRMED",
+   "KG_BASE": 522.091117,
+   "M3_BASE": 4.610978,
+   "N_ITEMS": 65,
+   "WHY_IT_IS_ONLY_APPROVAL": "lintels S8.6A modelled; release waits for a bearing confirmation"
+  },
+  {
+   "BLOCKER": "TIE_LINK_HOOK_RULE",
+   "KG_BASE": 2772.169826,
+   "M3_BASE": 0,
+   "N_ITEMS": 8,
+   "WHY_IT_IS_ONLY_APPROVAL": "beam / ground-beam links and column ties fully modelled; D1.1 retracted them because hooks and bend radius are not printed (an authority rule, not missing geometry)"
+  },
+  {
+   "BLOCKER": "LAP_ANCHORAGE_RULE",
+   "KG_BASE": 1288.452,
+   "M3_BASE": 0,
+   "N_ITEMS": 5,
+   "WHY_IT_IS_ONLY_APPROVAL": "column laps, anchorages and starters modelled with the printed rule; release waits for approval of that rule"
+  }
+ ],
+ "G_five_biggest_causes_concrete": [
+  {
+   "BLOCKER": "BEAM_DEPTH_CONVENTION",
+   "FAMILIES": [
+    "BEAMS"
+   ],
+   "M3_UPPER": 72.07030049999997,
+   "N_PROVISIONAL": 109,
+   "N_UNRESOLVED": 0,
+   "PROVISIONAL_M3_BASE": 57.69428915210906
+  },
+  {
+   "BLOCKER": "SECTION_CONFLICT",
+   "FAMILIES": [
+    "BEAMS",
+    "COLUMNS",
+    "FOOTINGS",
+    "GROUND_BEAMS"
+   ],
+   "M3_UPPER": 24.25149649999999,
+   "N_PROVISIONAL": 32,
+   "N_UNRESOLVED": 0,
+   "PROVISIONAL_M3_BASE": 20.634612500000006
+  },
+  {
+   "BLOCKER": "GB_EXTERIOR_DEPTH",
+   "FAMILIES": [
+    "GROUND_BEAMS"
+   ],
+   "M3_UPPER": 23.14710000000001,
+   "N_PROVISIONAL": 23,
+   "N_UNRESOLVED": 0,
+   "PROVISIONAL_M3_BASE": 20.832390000000004
+  },
+  {
+   "BLOCKER": "NOT_PRINTED",
+   "FAMILIES": [
+    "PLAIN_CONCRETE"
+   ],
+   "M3_UPPER": 23.0437,
+   "N_PROVISIONAL": 1,
+   "N_UNRESOLVED": 1,
+   "PROVISIONAL_M3_BASE": 9.9747
+  },
+  {
+   "BLOCKER": "FOUNDING_LEVEL",
+   "FAMILIES": [
+    "COLUMNS",
+    "GROUND_BEAMS",
+    "LIFT"
+   ],
+   "M3_UPPER": 18.551500000000008,
+   "N_PROVISIONAL": 40,
+   "N_UNRESOLVED": 1,
+   "PROVISIONAL_M3_BASE": 14.881499999999999
+  }
+ ],
+ "G_five_biggest_causes_steel": [
+  {
+   "BLOCKER": "TIE_LINK_HOOK_RULE",
+   "FAMILIES": [
+    "BEAMS",
+    "COLUMNS",
+    "GROUND_BEAMS"
+   ],
+   "KG_UPPER": 2873.0085669629634,
+   "N_PROVISIONAL": 8,
+   "N_UNRESOLVED": 0,
+   "PROVISIONAL_KG_BASE": 2772.1698262222226
+  },
+  {
+   "BLOCKER": "LAP_ANCHORAGE_RULE",
+   "FAMILIES": [
+    "COLUMNS"
+   ],
+   "KG_UPPER": 1288.4520000000002,
+   "N_PROVISIONAL": 5,
+   "N_UNRESOLVED": 0,
+   "PROVISIONAL_KG_BASE": 1288.4520000000002
+  },
+  {
+   "BLOCKER": "NOTE_SCOPE",
+   "FAMILIES": [
+    "GROUND_SLAB"
+   ],
+   "KG_UPPER": 801.104938271605,
+   "N_PROVISIONAL": 38,
+   "N_UNRESOLVED": 0,
+   "PROVISIONAL_KG_BASE": 801.104938271605
+  },
+  {
+   "BLOCKER": "BEARING_NOT_CONFIRMED",
+   "FAMILIES": [
+    "LINTELS"
+   ],
+   "KG_UPPER": 522.091117121,
+   "N_PROVISIONAL": 65,
+   "N_UNRESOLVED": 0,
+   "PROVISIONAL_KG_BASE": 522.091117121
+  },
+  {
+   "BLOCKER": "DOME_RING_DEPTH",
+   "FAMILIES": [
+    "DOMES"
+   ],
+   "KG_UPPER": 311.932942832,
+   "N_PROVISIONAL": 6,
+   "N_UNRESOLVED": 0,
+   "PROVISIONAL_KG_BASE": 311.932942832
+  }
+ ],
+ "H_pipeline_parts_that_run_on_a_new_villa": "see 04_AUTOMATION_AUDIT.csv",
+ "as_of": "2026-10-10"
+}

@@ -36,3 +36,6 @@ research/alsenan_structural_census_s1/review/*.pdf
 research/alsenan_column_rebar_s3/review/*.pdf
 # S9A visual QA PDF: printed from the frozen HTML, embeds client plan geometry (like the review PDFs)
 research/alsenan_structural_s9a/visual/*.pdf
+# M1 BOQ: the PDF is printed from the frozen HTML; the run log holds machine timings (not frozen)
+research/alsenan_m1_usable_boq/boq/*.pdf
+research/alsenan_m1_usable_boq/boq/run_log.json

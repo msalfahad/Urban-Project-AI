@@ -1,0 +1,114 @@
+{
+ "adapter": "research/alsenan_m1_usable_boq/alsenan_adapter.py",
+ "as_of": "2026-10-10",
+ "concrete_rc": {
+  "N_PROVISIONAL": 336,
+  "N_UNRESOLVED": 52,
+  "N_UNRESOLVED_WITH_EXPOSURE": 39,
+  "N_VERIFIED": 126,
+  "PLANNING_BASE": 320.5983809024707,
+  "PLANNING_HIGH": 355.1292210887144,
+  "PLANNING_LOW": 303.8173661335493,
+  "PROVISIONAL_BASE": 162.5281244764706,
+  "PROVISIONAL_HIGH": 197.05896466271435,
+  "PROVISIONAL_LOW": 145.7471097075492,
+  "UNRESOLVED_EXPOSURE_HIGH": 21.311783690999995,
+  "UNRESOLVED_EXPOSURE_LOW": 9.15759672,
+  "VERIFIED": 158.07025642600007
+ },
+ "conventions": {
+  "digest": "42aa86fc899f885e8dfa16ae419f62d5feec3a8d8a9473feb81b853947a3f568",
+  "n": 34,
+  "overrides": {},
+  "set": "ALSENAN_M1_PROVISIONAL_CONVENTIONS_V1"
+ },
+ "exceptions_by_kind": {
+  "CONFLICT_RESOLVED_BY_CONVENTION": 14,
+  "LOW_CONFIDENCE_PROVISIONAL": 85,
+  "UNRESOLVED": 86
+ },
+ "frozen_manifests_verified": [
+  "research/alsenan_structural_s9/16_S9_FREEZE_MANIFEST.json",
+  "research/alsenan_structural_s9a/18_S9A_CORRECTION_MANIFEST.json",
+  "research/alsenan_stairs_s8_7b/16_S8_7B_FREEZE_MANIFEST.json",
+  "research/alsenan_dome_ring_s8_3/16_S8_3_FREEZE_MANIFEST.json",
+  "research/alsenan_swimming_pool_s8_2a/12_S8_2A_FREEZE_MANIFEST.json",
+  "research/alsenan_superstructure_beam_rebar_s6/S6_FREEZE_MANIFEST.json",
+  "research/d1_1_stirrup_authority_audit/D1_1_FREEZE_MANIFEST.json"
+ ],
+ "inputs": [
+  {
+   "bytes": 3153037,
+   "file": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079.dxf",
+   "kind": "DXF",
+   "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+  },
+  {
+   "bytes": 2219156,
+   "file": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3.pdf",
+   "kind": "PDF",
+   "pages": 16,
+   "sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3",
+   "text_layer": true
+  }
+ ],
+ "n_exceptions": 185,
+ "n_items": 1582,
+ "plain_concrete": {
+  "N_PROVISIONAL": 1,
+  "N_UNRESOLVED": 1,
+  "N_UNRESOLVED_WITH_EXPOSURE": 1,
+  "N_VERIFIED": 0,
+  "PLANNING_BASE": 9.9747,
+  "PLANNING_HIGH": 9.9747,
+  "PLANNING_LOW": 9.9747,
+  "PROVISIONAL_BASE": 9.9747,
+  "PROVISIONAL_HIGH": 9.9747,
+  "PROVISIONAL_LOW": 9.9747,
+  "UNRESOLVED_EXPOSURE_HIGH": 13.069,
+  "UNRESOLVED_EXPOSURE_LOW": 6.5345,
+  "VERIFIED": 0.0
+ },
+ "policy": "URBAN_STRUCTURAL_BOQ_M1",
+ "project": "ST7757 villa (structural set)",
+ "route": "A_FROZEN_STAGE_REPLAY",
+ "rule": "planning = verified + provisional base; low / high sum each item's own low / high; unresolved items are never added",
+ "steel_t": {
+  "PLANNING_BASE": 24.866591171093823,
+  "PLANNING_HIGH": 24.9686552451679,
+  "PLANNING_LOW": 24.533404523107603,
+  "VERIFIED": 18.845961346646995
+ },
+ "totals": {
+  "CONCRETE": {
+   "N_PROVISIONAL": 337,
+   "N_UNRESOLVED": 53,
+   "N_UNRESOLVED_WITH_EXPOSURE": 40,
+   "N_VERIFIED": 126,
+   "PLANNING_BASE": 330.5730809024707,
+   "PLANNING_HIGH": 365.1039210887144,
+   "PLANNING_LOW": 313.79206613354927,
+   "PROVISIONAL_BASE": 172.5028244764706,
+   "PROVISIONAL_HIGH": 207.03366466271436,
+   "PROVISIONAL_LOW": 155.72180970754923,
+   "UNRESOLVED_EXPOSURE_HIGH": 34.380783691,
+   "UNRESOLVED_EXPOSURE_LOW": 15.692096720000002,
+   "VERIFIED": 158.07025642600007
+  },
+  "REINFORCEMENT": {
+   "N_PROVISIONAL": 47,
+   "N_UNRESOLVED": 33,
+   "N_UNRESOLVED_WITH_EXPOSURE": 0,
+   "N_VERIFIED": 986,
+   "PLANNING_BASE": 24866.591171093824,
+   "PLANNING_HIGH": 24968.655245167898,
+   "PLANNING_LOW": 24533.4045231076,
+   "PROVISIONAL_BASE": 6020.629824446828,
+   "PROVISIONAL_HIGH": 6122.693898520903,
+   "PROVISIONAL_LOW": 5687.443176460606,
+   "UNRESOLVED_EXPOSURE_HIGH": null,
+   "UNRESOLVED_EXPOSURE_LOW": null,
+   "VERIFIED": 18845.961346646996
+  }
+ }
+}

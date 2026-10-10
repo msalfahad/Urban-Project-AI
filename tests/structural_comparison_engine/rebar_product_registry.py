@@ -57,6 +57,9 @@ ACCURATE_MODULES = (
     "engine/source/stair_fit_checks.py",        # S8.7C run ends, beam-band clearance, riser capacity, transition levels
     "engine/source/structural_reconciliation.py",  # S9 version precedence, single owner, lane-safe totals, polygon area
     "engine/source/structural_completeness.py",    # S9A plan overlap, hatch spacing, beam depth readings, length class
+    "engine/source/provisional_estimate.py",       # M1 VERIFIED / PROVISIONAL / UNRESOLVED items, conventions, rollups
+    "engine/source/drawing_inventory.py",          # M1 generic DXF inventory (sheets, layers, tags, outlines; no kg)
+    "engine/source/profile_takeoff.py",            # M1 footings / columns of a new project from a confirmed profile
     "engine/bbs_steel.py",
 )
 # project builders that produce accurate reinforcement registers
@@ -106,6 +109,9 @@ ACCURATE_BUILDERS = (
     "research/alsenan_structural_s9/build_s9.py",  # S9 whole-building structural BOQ reconciliation (blind, frozen)
     "research/alsenan_structural_s9a/build_s9a.py",  # S9A completeness correction layer over S9 (no release)
     "research/alsenan_structural_s9a/visual_s9a.py",  # S9A report and figures (loaded by build_s9a; reads L only)
+    "research/alsenan_m1_usable_boq/build_m1.py",  # M1 provisional planning estimate over the frozen stages (no release)
+    "research/alsenan_m1_usable_boq/alsenan_adapter.py",  # M1 frozen S1 - S9A registers as V / P / U items
+    "tools/urban_structural_boq.py",  # M1 one-command pipeline (drawings -> BOQ, exceptions, Excel, PDF)
 )
 ROUGH_MODULES = (
     "engine/source/rough_rebar_sanity.py",
