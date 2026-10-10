@@ -1,0 +1,74 @@
+ITEM,STATE,REASON,SENSITIVITY_ONLY,QUESTION
+A1-F1 concrete,SOURCE_CONFLICT,riser count and run differ between the structural plan (12 risers from 16162) and the architectural plan (10 from 16712); waist from the zone tag only,"[{""HANDRAIL_PATH_LENGTH_m"": 3.72076626, ""INCLINED_WAIST_SURFACE_AREA_m2"": 4.464919512, ""inclined_waist_length_mm"": 3720.766260127, ""m3_flight_only"": 1.023762122, ""reading"": ""STRUCTURAL_PLAN (12 straight + 4 winder risers in 2.50 m)"", ""riser_mm"": 156.25, ""risers"": 12, ""run_mm"": 3300.0}, {""HANDRAIL_PATH_LENGTH_m"": 3.14211842, ""INCLINED_WAIST_SURFACE_AREA_m2"": 3.770542104, ""inclined_waist_length_mm"": 3142.118419676, ""m3_flight_only"": 0.892572451, ""reading"": ""ARCH_PLAN (10 straight + 4 winder risers in 2.50 m)"", ""riser_mm"": 178.571428571, ""risers"": 10, ""run_mm"": 2700.0}]",Q-ST-01
+A1-W1 concrete,BLOCKED_UNQUANTIFIED,winder soffit form (flat slab under the winders or warped soffit) and the level of each winder are not stated,[],Q-ST-06
+A1-F2 concrete,SOURCE_CONFLICT,"riser count and run differ: structural plan and SECTION A-A 12 risers / 3.30 m, architectural plan 11 / 3.00 m","[{""HANDRAIL_PATH_LENGTH_m"": 3.775064385, ""INCLINED_WAIST_SURFACE_AREA_m2"": 4.473162793, ""inclined_waist_length_mm"": 3727.635660651, ""m3_flight_only"": 1.05423938, ""reading"": ""STRUCTURAL_PLAN_AND_SECTION (12 risers in 2.00 m)"", ""riser_mm"": 166.666666667, ""risers"": 12, ""run_mm"": 3300.0}, {""HANDRAIL_PATH_LENGTH_m"": 3.507960251, ""INCLINED_WAIST_SURFACE_AREA_m2"": 4.146829268, ""inclined_waist_length_mm"": 3455.691056331, ""m3_flight_only"": 1.000074501, ""reading"": ""ARCH_PLAN (11 risers in 2.00 m)"", ""riser_mm"": 181.818181818, ""risers"": 11, ""run_mm"": 3000.0}]",Q-ST-01
+A2-F1 concrete,BLOCKED_UNQUANTIFIED,"the 1F -> 2F half-landing level is not printed, so the rise of the flight is unknown","[{""HANDRAIL_PATH_LENGTH_m"": 3.717243769, ""INCLINED_WAIST_SURFACE_AREA_m2"": 4.460692522, ""inclined_waist_length_mm"": 3717.243768516, ""m3_flight_only"": 1.021710804, ""reading"": ""UNIFORM_RISER (12 + 4 + 11 = 27 risers in 4.20 m; half-landing level not printed)"", ""riser_mm"": 155.555555556, ""risers"": 12, ""run_mm"": 3300.0}]",Q-ST-03
+A2-W1 concrete,SOURCE_CONFLICT,the structural 1F roof sheet draws no winder lines (one riser line 5E2) where the architectural 1F plan draws four winder risers; levels not printed,[],Q-ST-04
+A2-L1 concrete,BLOCKED_UNQUANTIFIED,the 1F -> 2F half-landing level is not printed (scaled only): the volume is blocked although it does not depend on the level,"[{""m3_flight_only"": 0.2304, ""reading"": ""PLATE (level-independent outline x zone tag 160)""}]",Q-ST-03
+A2-F2 concrete,BLOCKED_UNQUANTIFIED,half-landing level not printed; SECTION A-A draws 12 risers where both plans draw 11,"[{""HANDRAIL_PATH_LENGTH_m"": 3.379312517, ""INCLINED_WAIST_SURFACE_AREA_m2"": 4.002437467, ""inclined_waist_length_mm"": 3335.364555601, ""m3_flight_only"": 0.928354439, ""reading"": ""UNIFORM_RISER (27 risers in 4.20 m)"", ""riser_mm"": 155.555555556, ""risers"": 11, ""run_mm"": 3000.0}]",Q-ST-05
+B-F1 concrete,BLOCKED_UNQUANTIFIED,"steps on grade: no structural section, thickness or bars for them (concrete, masonry or fill not stated)",[],Q-ST-07
+C-F1 concrete,BLOCKED_UNQUANTIFIED,"the corner landing level is not printed; curved flight; beam CA (S1 BM-GF_ROOF-CA-BL015-69E, outline 54E) crosses the straight part on the GF roof sheet at a level not stated",[],Q-ST-03
+C-L1 concrete,BLOCKED_UNQUANTIFIED,the corner landing level is not printed: the volume is blocked although it does not depend on the level,"[{""m3_flight_only"": 0.2164, ""reading"": ""PLATE (level-independent outline x zone tag 160)""}]",Q-ST-03
+C-F2 concrete,BLOCKED_UNQUANTIFIED,"the corner landing level is not printed, so the rise of the short flight is unknown","[{""HANDRAIL_PATH_LENGTH_m"": 1.361346872, ""INCLINED_WAIST_SURFACE_AREA_m2"": 2.042020308, ""inclined_waist_length_mm"": 1701.6835901, ""m3_flight_only"": 0.413766106, ""reading"": ""UNIFORM_RISER (28 risers in 4.50 m; corner landing level not printed)"", ""riser_mm"": 160.714285714, ""risers"": 5, ""run_mm"": 1200.0}]",Q-ST-03
+D-F1 concrete,BLOCKED_UNQUANTIFIED,"external steps on grade: no structural section, thickness or bars",[],Q-ST-07
+A1-L1 LANDING_TOP (p.16 6Ø12/m),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+A1-L1 TOP_JUNCTION_BENT (p.16 6Ø14/m),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+A1-L1 ANCHORAGE_AND_CONTINUATION (-),BLOCKED_UNQUANTIFIED,anchorage into the supports and continuation into the flight are not stated (no length is made from generic practice),,
+A2-T1 LANDING_BOTTOM_TRANSVERSE (-),NOT_IN_SOURCE,no callout or bar line crosses this plate in the other direction,,
+A2-T1 LANDING_TOP (p.16 6Ø12/m),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+A2-T1 TOP_JUNCTION_BENT (p.16 6Ø14/m),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+A2-T1 ANCHORAGE_AND_CONTINUATION (-),BLOCKED_UNQUANTIFIED,anchorage into the supports and continuation into the flight are not stated (no length is made from generic practice),,
+C-T1 LANDING_BOTTOM_TRANSVERSE (-),NOT_IN_SOURCE,no callout or bar line crosses this plate in the other direction,,
+C-T1 LANDING_TOP (p.16 6Ø12/m),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+C-T1 TOP_JUNCTION_BENT (p.16 6Ø14/m),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+C-T1 ANCHORAGE_AND_CONTINUATION (-),BLOCKED_UNQUANTIFIED,anchorage into the supports and continuation into the flight are not stated (no length is made from generic practice),,
+A2-L1 LANDING_BOTTOM (two directions) (FFRS 749 + 747),BLOCKED_UNQUANTIFIED,"level not printed (landing blocked); sensitivity 36.408888889 kg (rate density, both directions)",,Q-ST-03
+C-L1 LANDING_BOTTOM (two directions) (GFRS 537 + 53D),BLOCKED_UNQUANTIFIED,"level not printed (landing blocked); sensitivity 34.19654321 kg (rate density, both directions)",,Q-ST-03
+A1-F1 MAIN_BOTTOM (GFRS 490),SOURCE_CONFLICT,the flight geometry is in conflict (07),,Q-ST-01
+A1-F1 DISTRIBUTION_TRANSVERSE (p.16 Ø12/20cm),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+A1-F1 STEP_BAR (p.16 Ø8/15),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+A1-F1 NOSING_CORNER_BAR (p.16 1Ø12),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+A1-F1 TOP_JUNCTION_BENT (p.16 6Ø14/m),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+A1-F2 MAIN_BOTTOM (GFRS 491),SOURCE_CONFLICT,the flight geometry is in conflict (07),,Q-ST-01
+A1-F2 DISTRIBUTION_TRANSVERSE (p.16 Ø12/20cm),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+A1-F2 STEP_BAR (p.16 Ø8/15),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+A1-F2 NOSING_CORNER_BAR (p.16 1Ø12),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+A1-F2 TOP_JUNCTION_BENT (p.16 6Ø14/m),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+A2-F1 MAIN_BOTTOM (FFRS 748),BLOCKED_UNQUANTIFIED,the flight geometry is blocked (07),,Q-ST-03
+A2-F1 DISTRIBUTION_TRANSVERSE (p.16 Ø12/20cm),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+A2-F1 STEP_BAR (p.16 Ø8/15),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+A2-F1 NOSING_CORNER_BAR (p.16 1Ø12),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+A2-F1 TOP_JUNCTION_BENT (p.16 6Ø14/m),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+A2-F2 MAIN_BOTTOM (FFRS 749),BLOCKED_UNQUANTIFIED,the flight geometry is blocked (07),,Q-ST-05
+A2-F2 DISTRIBUTION_TRANSVERSE (p.16 Ø12/20cm),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+A2-F2 STEP_BAR (p.16 Ø8/15),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+A2-F2 NOSING_CORNER_BAR (p.16 1Ø12),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+A2-F2 TOP_JUNCTION_BENT (p.16 6Ø14/m),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+C-F1 MAIN_BOTTOM (GFRS 5BC + 537),BLOCKED_UNQUANTIFIED,the flight geometry is blocked (07),,Q-ST-03
+C-F1 DISTRIBUTION_TRANSVERSE (p.16 Ø12/20cm),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+C-F1 STEP_BAR (p.16 Ø8/15),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+C-F1 NOSING_CORNER_BAR (p.16 1Ø12),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+C-F1 TOP_JUNCTION_BENT (p.16 6Ø14/m),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+C-F2 MAIN_BOTTOM (GFRS 53D),BLOCKED_UNQUANTIFIED,the flight geometry is blocked (07),,Q-ST-03
+C-F2 DISTRIBUTION_TRANSVERSE (p.16 Ø12/20cm),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+C-F2 STEP_BAR (p.16 Ø8/15),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+C-F2 NOSING_CORNER_BAR (p.16 1Ø12),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+C-F2 TOP_JUNCTION_BENT (p.16 6Ø14/m),BLOCKED_UNQUANTIFIED,"typical detail only: no plan callout, note or reference",,Q-ST-08
+A1-F1 STARTER_FROM_GROUND_BEAM (p.16 6Ø16/m),BLOCKED_UNQUANTIFIED,typical detail only; no ground beam is drawn at the foot of the flight,,Q-ST-08
+C-F1 STARTER_FROM_GROUND_BEAM (p.16 6Ø16/m),BLOCKED_UNQUANTIFIED,typical detail only; no ground beam is drawn at the foot of the flight,,Q-ST-08
+A1-W1 WINDER_TURN_BARS (GFRS 490 / 48F),BLOCKED_UNQUANTIFIED,winder soffit form not stated,,Q-ST-06
+A2-W1 WINDER_TURN_BARS (FFRS 748 / 747),BLOCKED_UNQUANTIFIED,winder soffit form not stated,,Q-ST-04
+B-F1 NONE_SHOWN (-),NOT_IN_SOURCE,no reinforcement drawn or noted,,Q-ST-07
+D-F1 NONE_SHOWN (-),NOT_IN_SOURCE,no reinforcement drawn or noted,,Q-ST-07
+Q-ST-01,QUESTION_FOR_THE_ENGINEER,"Main stair GF -> 1F: the structural GF roof plan draws 12 + 12 risers (first riser at y 16162 / 16112), the architectural GF plan 10 + 11 (from 16712 / 16412). SECTION A-A draws 12 in the upper flight. Which riser count and which start line govern?",,Q-ST-01
+Q-ST-02,QUESTION_FOR_THE_ENGINEER,"State the waist thickness of the flights (p.16 'THICK' has no value). Is the zone tag 'T' / '16' the waist, the landing, or both?",,Q-ST-02
+Q-ST-03,QUESTION_FOR_THE_ENGINEER,"State the 1F -> 2F half-landing level (SECTION A-A draws it about 2.00 m below +9.70, unprinted) and the light-well corner landing level.",,Q-ST-03
+Q-ST-04,QUESTION_FOR_THE_ENGINEER,The structural 1F roof sheet draws no winder lines in the 1F -> 2F turn (only 5E2) while the architectural 1F plan draws four winder risers: confirm the turn.,,Q-ST-04
+Q-ST-05,QUESTION_FOR_THE_ENGINEER,SECTION A-A draws 12 risers in the 1F -> 2F upper flight where both plans draw 11.,,Q-ST-05
+Q-ST-06,QUESTION_FOR_THE_ENGINEER,Winder turns: is the soffit under the winders a flat slab at the landing level or warped?,,Q-ST-06
+Q-ST-07,QUESTION_FOR_THE_ENGINEER,"Lobby steps (+1.00 -> +0.30) and entrance steps (+0.15 -> +1.00): concrete on grade, masonry or fill? No section, thickness or bar is drawn.",,Q-ST-07
+Q-ST-08,QUESTION_FOR_THE_ENGINEER,"Which p.16 bars apply to these stairs (6Ø14/m, 6Ø12/m, Ø12/20cm, Ø8/15, 1Ø12, 6Ø16/m)? Only 8Ø16/m is called out on the plans.",,Q-ST-08
+Q-ST-09,QUESTION_FOR_THE_ENGINEER,"'B3 (With Stair)' beams (GFRS 6B6, FFRS 6B8; CB3 middle span on GFRS, PEC-13): are they the half-landing / corner-landing beams at the landing level (SECTION A-A draws a downstand there)? S6 owns them and keeps them blocked.",,Q-ST-09
+Q-ST-10,QUESTION_FOR_THE_ENGINEER,"Beam CA (S1 BM-GF_ROOF-CA-BL015-69E, outline 54E, 300 wide) crosses the light-well straight flight on the GF roof sheet: does it support the flight, or is it a roof beam over it (about 1.3 m headroom there)?",,Q-ST-10
+Q-ST-11,QUESTION_FOR_THE_ENGINEER,The single diagonals SW of the GF stair start (2F1D / 2F1E) and across the 2F NE landing quadrant (2F1F / 2F20; FFRS 648) carry no stated meaning.,,Q-ST-11
+Q-ST-12,QUESTION_FOR_THE_ENGINEER,Entrance steps: is the top of the steps the +1.00 porch (nearest printed mark 1C0)?,,Q-ST-12

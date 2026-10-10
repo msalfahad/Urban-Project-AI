@@ -1,0 +1,15 @@
+INTERFACE,FROZEN_OWNER,WHAT,S8_7,QUANTITY_MOVED,STATE
+S7 slab zones -> S8.7,S7 (EXCLUDED_SPECIAL_STRUCTURE / CLASSIFICATION_BLOCKED),"SP-GF_ROOF_SLAB-03, -21, -28, SP-1F_ROOF_SLAB-01",every zone mapped to its elements (03),0,TRANSFERRED_TO_S8_7 (no S7 figure changes)
+S7 top extensions at stair-adjacent supports,S7 (released),"75 strip ends, 71.895327413 kg (recomputed from 04_S7_BAR_RUNS: 75 runs, diameters ['10'])",every extension lies in its S7 panel; S8.7 releases no top bar at any of these supports,0,OWNED_ONCE_BY_S7
+S6 'With Stair' beam,S6 / S6.1,BM-GF_ROOF-B3-BL033-6B7: north edge of the GF -> 1F bay (A1-W1 / A1-L1),"p.16 'TYPICAL DETAIL OF STAIR BEAM' read (2Ø12 top, 4Ø16 bottom, 6Ø8/m, depth AS PER SCH.): evidence for the beam family; nothing is added here (Q-ST-09)",0,OWNED_BY_S6_NOT_READDED
+S6 'With Stair' beam,S6 / S6.1,BM-1F_ROOF-B3-BL023-6B9: north edge of the 1F -> 2F bay (A2-W1 / A2-L1),"p.16 'TYPICAL DETAIL OF STAIR BEAM' read (2Ø12 top, 4Ø16 bottom, 6Ø8/m, depth AS PER SCH.): evidence for the beam family; nothing is added here (Q-ST-09)",0,OWNED_BY_S6_NOT_READDED
+S6 'With Stair' beam,S6 / S6.1,CBO-GFRS-CB3-BL022: south edge of the light-well straight flight and corner landing,"p.16 'TYPICAL DETAIL OF STAIR BEAM' read (2Ø12 top, 4Ø16 bottom, 6Ø8/m, depth AS PER SCH.): evidence for the beam family; nothing is added here (Q-ST-09)",0,OWNED_BY_S6_NOT_READDED
+S6 beam CA,S6 / S6.1,BM-GF_ROOF-CA-BL015-69E: beam CA across the light-well straight flight (Q-ST-10),"p.16 'TYPICAL DETAIL OF STAIR BEAM' read (2Ø12 top, 4Ø16 bottom, 6Ø8/m, depth AS PER SCH.): evidence for the beam family; nothing is added here (Q-ST-09)",0,OWNED_BY_S6_NOT_READDED
+A1-L1 supports,S6 beams / S1 columns,"[{""beam_line"": ""BL028"", ""overlap_m2"": 0.0, ""touch"": true}, {""beam_line"": ""BL033"", ""overlap_m2"": 0.0, ""touch"": true}]",the plate stops at every beam and column face,0,NO_OVERLAP
+A2-T1 supports,S6 beams / S1 columns,"[{""beam_line"": ""BL009"", ""overlap_m2"": 0.0, ""touch"": true}, {""beam_line"": ""BL017"", ""overlap_m2"": 0.0, ""touch"": true}]",the plate stops at every beam and column face,0,NO_OVERLAP
+C-T1 supports,S6 beams / S1 columns,"[{""beam_line"": ""BL001"", ""overlap_m2"": 0.0, ""touch"": true}, {""beam_line"": ""BL039"", ""overlap_m2"": 0.0, ""touch"": true}]",the plate stops at every beam and column face,0,NO_OVERLAP
+S8.1 ground slab,S8.1 (excluded),SP-GBP-12 8.37232788 m2; SP-GBP-01 outside the building,"GBP-12 = repeated view of C-F1 + hall floor; SP-GBP-01 holds ST-D (04, 03)",0,RECONCILED
+S8.1A recovered stair bay,"S8.1A (excluded, stair family)",S8.1A-RG-02 11.52 m2; Q-S8.1A-03,ground view of the main stair bay: ST-B + A1-F1 (repeated) + +1.00 / +0.30 floors + the central wall (04); not a second staircase,0,RECONCILED
+S8.6 slab openings,S8.6 (no lintel),8 slab openings,"5 connected to stairs, 3 voids not stairs (03)",0,RECONCILED
+S8.6 / S8.6A lintels,S8.6A,no lintel is reopened,untouched,0,UNCHANGED
+2F roof over the main stair,S7 (SP-2F_ROOF_SLAB-01 / -06),no stair rises above +9.70 (SFRS has no tread line),nothing,0,NOT_STAIR
