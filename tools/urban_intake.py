@@ -97,8 +97,9 @@ def read_dxf(path):
                         "path": list(c.lineage.instance_path)})
     for e in g.elliptical_arcs:
         lay, _ = _eff_layer(e.lineage.layer, e.lineage.instance_path, il)
-        ell.append({"id": e.lineage.obs_id, "layer": lay, "c": e.center, "u": e.axis_u, "v": e.axis_v,
-                    "t0": e.start_param, "t1": e.end_param, "full": e.full})
+        ell.append({"id": _uid(e.lineage), "layer": lay, "c": e.center, "u": e.axis_u, "v": e.axis_v,
+                    "t0": e.t0, "t1": e.t1, "s": e.start, "e": e.end, "dir": e.direction, "full": e.full,
+                    "path": list(e.lineage.instance_path)})
     texts = []
     n = 0
     for e in disassemble.recursive_decompose(doc.modelspace()):

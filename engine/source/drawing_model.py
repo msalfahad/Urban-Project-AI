@@ -111,6 +111,12 @@ def classify_title(texts):
     best, ev = None, []
     for t in texts:
         u = normalize(t).upper()
+        if re.match(r"^\s*(SCHEDULE|TABLE|جدول)\b", u) or re.match(r"^\s*جدول", u):
+            # a title that OPENS with a schedule word is a schedule, whatever members it lists ("schedule of
+            # footings ..." must not read as a foundation plan) - M2 component-test finding
+            ev.append({"text_match": "LEADING_SCHEDULE_WORD", "role": "SCHEDULE", "storey": "ALL", "weight": 99})
+            best = ("SCHEDULE", "ALL", 99)
+            continue
         for role, storey, w, pats in SHEET_LEXICON:
             for p in pats:
                 if re.search(p, u):
