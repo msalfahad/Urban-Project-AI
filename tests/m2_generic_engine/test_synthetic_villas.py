@@ -135,3 +135,19 @@ def test_frozen_m1_cli_is_untouched():
     want = man["code"]["tools/urban_structural_boq.py"]
     got = hashlib.sha256((ROOT / "tools/urban_structural_boq.py").read_bytes()).hexdigest()
     assert got == (want if isinstance(want, str) else want.get("sha256"))
+
+
+def test_cached_intake_is_reused_and_outputs_are_deterministic(tmp_path):
+    dxf = SV.generate(tmp_path, 12)
+    prof = tmp_path / "villa_12.profile.json"
+    outs = []
+    for k in (1, 2):
+        out = tmp_path / f"o{k}"
+        assert CLI.main(["run", "--drawings", str(dxf), "--profile", str(prof), "--out", str(out), "--no-pdf",
+                         "--no-xlsx", "--cache", str(tmp_path / "cache"), "--as-of", "2026-10-10"]) == 0
+        outs.append(out)
+    s1, s2 = (json.loads((o / "SUMMARY.json").read_text()) for o in outs)
+    assert (s1.pop("intake_cache"), s2.pop("intake_cache")) == ("CACHE_MISS_STORED", "CACHE_HIT")
+    assert s1 == s2
+    for name in ("PROVISIONAL_REGISTER.csv", "COVERAGE_RISK.csv", "REBAR_COMPLETENESS.csv", "CONTRACTOR_BOQ.csv"):
+        assert (outs[0] / name).read_bytes() == (outs[1] / name).read_bytes(), name

@@ -2,6 +2,7 @@
 
     python3 -I tools/urban_boq_m2.py run --drawings NEW.dxf --out OUT [--profile P.json] [--route auto|A|B|G|C]
                                        [--conventions C.json] [--set ID=VALUE ...] [--no-pdf] [--no-xlsx]
+                                       [--cache DIR]
 
 tools/urban_structural_boq.py (M1) is frozen (research/alsenan_m1_usable_boq/06_M1_FREEZE_MANIFEST.json) and is
 used here unchanged: routes A / B / C are delegated to it as they are. This module adds:
@@ -45,11 +46,41 @@ GENERIC_CONVENTIONS = "engine/profiles/URBAN_M2_GENERIC_CONVENTIONS_V1.json"
 BANNER = M1.BANNER
 
 
-def route_generic(inputs, conv_path, overrides, profile):
+def _code_digest():
+    """digest of the code an intake depends on: a cached intake is reused only by the same code."""
+    import hashlib
+    h = hashlib.sha256()
+    for rel in ("tools/urban_intake.py", "engine/source/cad/kernel_ezdxf.py", "engine/source/realised.py"):
+        p = ROOT / rel
+        if p.exists():
+            h.update(p.read_bytes())
+    return h.hexdigest()[:16]
+
+
+def cached_intake(dxf, cache_dir=None):
+    """the intake of one DXF, from the cache when the same file (sha256) was read by the same code before. The
+    cache holds this tool's own pickles only (never a downloaded file); delete the folder to clear it."""
+    if not cache_dir:
+        return UI.read(dxf["path"]), "NO_CACHE"
+    import pickle
+    c = Path(cache_dir)
+    c.mkdir(parents=True, exist_ok=True)
+    key = c / f"intake_{dxf['sha256'][:24]}_{_code_digest()}.pkl"
+    if key.exists():
+        with key.open("rb") as fh:
+            return pickle.load(fh), "CACHE_HIT"
+    I = UI.read(dxf["path"])
+    with key.open("wb") as fh:
+        pickle.dump(I, fh)
+    return I, "CACHE_MISS_STORED"
+
+
+def route_generic(inputs, conv_path, overrides, profile, cache_dir=None):
     dxf = next((r for r in inputs if r["kind"] == "DXF" and "error" not in r), None)
     if dxf is None:
-        raise M1.PipelineError("route G needs a readable DXF")
-    I = UI.read(dxf["path"])
+        raise M1.PipelineError("route G needs a readable DXF (a DWG must be converted to DXF first; a PDF alone "
+                               "carries no measurable geometry here)")
+    I, cache_state = cached_intake(dxf, cache_dir)
     D = GR.detect(I)
     generic = json.loads((ROOT / (conv_path or GENERIC_CONVENTIONS)).read_text(encoding="utf-8"))
 
@@ -62,7 +93,7 @@ def route_generic(inputs, conv_path, overrides, profile):
             "DETAIL": str(r["DETAIL"])[:300], "LOCATION": ""} for k, r in enumerate(risk, 1)]
     return {"items": items, "conv": conv, "coverage": [], "rebuild": lambda ov: build(dict(overrides, **ov))[1],
             "frozen": [], "exceptions": exc, "adapter": None,
-            "generic": {"D": D, "register": reg, "risk": risk}}
+            "generic": {"D": D, "register": reg, "risk": risk, "intake_cache": cache_state}}
 
 
 def not_detected_lines(risk):
@@ -78,7 +109,7 @@ def not_detected_lines(risk):
     return out
 
 
-def compute(drawings, *, conventions=None, overrides=None, profile=None, project=None, route="auto"):
+def compute(drawings, *, conventions=None, overrides=None, profile=None, project=None, route="auto", cache_dir=None):
     prof = None
     if profile:
         prof = json.loads(Path(profile).read_text(encoding="utf-8")) if not isinstance(profile, dict) else profile
@@ -100,7 +131,7 @@ def compute(drawings, *, conventions=None, overrides=None, profile=None, project
     invs, _ = M1.inventories(inputs)
     t = step("2 inventory", t)
     overrides = dict(overrides or {})
-    res = route_generic(inputs, conventions, overrides, prof)
+    res = route_generic(inputs, conventions, overrides, prof, cache_dir)
     t = step("3-5 generic detection, quantities, conventions", t)
     items = res["items"]
     PE.check(items, res["conv"])
@@ -130,6 +161,7 @@ def compute(drawings, *, conventions=None, overrides=None, profile=None, project
         "rebar_completeness": dict(sorted(Counter(r["REBAR_STATE"] for r in g["register"]).items())),
         "not_detected_families": {b["FAMILY"]: b["EVIDENCE"] for b in boq if b["SECTION"].startswith("C")},
         "sheets": [{k: sh[k] for k in ("sheet_id", "role", "storey")} for sh in g["D"]["model"]["sheets"]],
+        "intake_cache": g["intake_cache"],
         "rule": "planning = verified + provisional base; low / high sum each item's own low / high; unresolved "
                 "items and not-detected families are never added; a new project is never VERIFIED",
     }
@@ -225,9 +257,10 @@ def main(argv=None):
     p.add_argument("--no-pdf", action="store_true")
     p.add_argument("--no-xlsx", action="store_true")
     p.add_argument("--as-of", default=datetime.now().strftime("%Y-%m-%d"))
+    p.add_argument("--cache", help="folder for cached intakes (by drawing sha256 and code digest); optional")
     a = ap.parse_args(argv)
     R = compute(a.drawings, conventions=a.conventions, overrides=M1.parse_sets(a.set), profile=a.profile,
-                route=a.route)
+                route=a.route, cache_dir=a.cache)
     writer = write_all if R.get("generic") else M1.write_all
     res = writer(R, a.out, as_of=a.as_of, pdf=not a.no_pdf, xlsx=not a.no_xlsx)
     s = R["summary"]
