@@ -135,21 +135,25 @@ def candidate_rects(ents, unit_m):
             continue
         by_layer[s["layer"]].append((s["id"], s["a"][0], s["a"][1], s["b"][0], s["b"][1]))
     eps = 0.5e-3 / unit_m
-    keyf = lambda b: tuple(round(v * unit_m * 1000) for v in b)            # noqa: E731 - 1 mm grid
-    uniq, seen = [], set()
-    for r in rects:
-        if keyf(r["box"]) not in seen:
-            seen.add(keyf(r["box"]))
-            uniq.append(r)
-    rects = uniq
+    tol = 1e-3 / unit_m                    # the same outline drawn twice (a polyline and its four lines) within 1 mm;
+    cell = 5e-3 / unit_m                   # a 1 mm GRID key split twins lying across a rounding boundary (M3)
+    index = defaultdict(list)
+
+    def dup(b):
+        gx, gy = int(math.floor(b[0] / cell)), int(math.floor(b[1] / cell))
+        for i in (gx - 1, gx, gx + 1):
+            for j in (gy - 1, gy, gy + 1):
+                if any(all(abs(p - q) <= tol for p, q in zip(b, o)) for o in index[(i, j)]):
+                    return True
+        index[(gx, gy)].append(b)
+        return False
+    rects = [r for r in rects if not dup(r["box"])]
     for lay, segs in by_layer.items():
         if len(segs) > 4000:
             continue
         for r in Q.rectangles(segs, eps=eps):
-            k = keyf(r["bounds"])
-            if k in seen:
+            if dup(r["bounds"]):
                 continue
-            seen.add(k)
             rects.append({"box": r["bounds"], "layer": lay, "source": "LINES:" + ",".join(r["edge_keys"][:4]),
                           "origin": "LINES"})
     return rects
@@ -407,7 +411,7 @@ def footings(sheet, ents, lib, unit_m, size_tol_m=0.02, max_footing_m=8.0):
 # ------------------------------------------------------------------ columns
 def column_occurrences(sheet, ents, lib, unit_m, size_tol_m=0.02, max_column_m=2.0):
     """A column mark binds to the column-sized outline (<= max_column_m) that CONTAINS it, else to the nearest one
-    within max(3 text heights, 0.6 m); two outlines equally near -> AMBIGUOUS (no drawn section)."""
+    within max(3 text heights, 1.0 m); two outlines equally near -> AMBIGUOUS (no drawn section)."""
     ms = [m for m in marks(ents["texts"]) if m["family"] == "COLUMN"]
 
     def sizes(fam):
@@ -434,8 +438,8 @@ def column_occurrences(sheet, ents, lib, unit_m, size_tol_m=0.02, max_column_m=2
              not is_footing(r)]
     out = []
     for m in ms:
-        gap = max(3 * (m["h"] or 0), 0.6 / unit_m)
-        cand = sorted((dist_point_poly(m["x"], m["y"], box_poly(r["box"])), r["source"], r) for r in rects)
+        gap = max(3 * (m["h"] or 0), 1.0 / unit_m)       # column-plan labels sit beside their column (M3: 0.5 -
+        cand = sorted((dist_point_poly(m["x"], m["y"], box_poly(r["box"])), r["source"], r) for r in rects)  # 1 m)
         cand = [c for c in cand if c[0] <= gap]
         r, binding = None, "NO_OUTLINE"
         if cand:
@@ -462,13 +466,21 @@ def column_storeys(occ, heights, size_tol_m=0.02):
                                "TYPE_NOT_IN_SCHEDULE", piece_id=o["member_id"]))
             continue
         bands = row["by_storey"] or {"ALL": {"dims_m": row.get("dims_m", {}), "bars": row.get("bars", [])}}
+
+        def same(dr, B, H):
+            return abs(dr[0] - min(B, H)) <= size_tol_m and abs(dr[1] - max(B, H)) <= size_tol_m
+        # a plan draws ONE section per column (often its lowest band): a drawn size equal to ANY band of the type is
+        # consistent with every band (M3: the column plan's foundation-size outlines were read as GF conflicts)
+        any_band = bool(o["drawn_m"]) and any(same(o["drawn_m"], b2["dims_m"].get("W"), b2["dims_m"].get("H"))
+                                              for b2 in bands.values() if b2["dims_m"].get("W") and
+                                              b2["dims_m"].get("H"))
         for st, b in sorted(bands.items()):
             B, H = b["dims_m"].get("W"), b["dims_m"].get("H")
             if not (B and H):
                 continue
             match = None
             if o["drawn_m"]:
-                match = abs(o["drawn_m"][0] - min(B, H)) <= size_tol_m and abs(o["drawn_m"][1] - max(B, H)) <= size_tol_m
+                match = same(o["drawn_m"], B, H) or any_band
             h = heights.get(st)
             pieces.append(dict(o, piece_id=f"{o['member_id']}|{st}", storey=st, section_m=(B, H),
                                bars=b.get("bars", []), height_m=h, drawn_match=match,

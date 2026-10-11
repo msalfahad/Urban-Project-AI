@@ -273,6 +273,18 @@
    "provenance": "ENGINEERING_JUDGEMENT",
    "source": "the two labelled schedule types",
    "rationale": "One physical footing carries two type labels and no outline settles it: it is quantified once, at the larger type (the conservative reading), with the smaller as the low bound. An RFI settles the type."
+  },
+  {
+   "id": "NECK_HEIGHT_EXPOSURE_M",
+   "title": "Foundation neck height when the founding level is not printed (exposure only)",
+   "kind": "number",
+   "unit": "m",
+   "base": 1.5,
+   "low": 0.5,
+   "high": 2.5,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "typical villa necks",
+   "rationale": "Only an exposure for an UNRESOLVED neck (never added to a total); a neck is measured only with the printed founding depth and neck top level of the project (profile)."
   }
  ]
 }

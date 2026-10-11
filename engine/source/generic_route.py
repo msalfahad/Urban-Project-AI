@@ -77,7 +77,25 @@ def column_boxes(ents, lib, unit_m, tol_m=0.02):
         if any(abs(d[0] - a) <= tol_m and abs(d[1] - b) <= tol_m for a, b in sizes) or \
                 (d[1] <= 1.5 and any(MD._contains(bx, m["x"], m["y"]) for m in cmarks)):
             out.append(bx)
-    return sorted(set(out))
+    uniq = []
+    for b in sorted(set(out)):                 # twins within 1 mm are one column (M3)
+        if not any(all(abs(p - q) <= 1e-3 / unit_m for p, q in zip(b, o)) for o in uniq):
+            uniq.append(b)
+    return uniq
+
+
+def _schedule_marks(texts, lib):
+    """plan marks with the family their schedule row has: a token whose pattern family has no row but which IS a row
+    of another family takes that family (CA: a cantilever beam row, a column by pattern) - M3"""
+    by_mark = defaultdict(set)
+    for fam, mk in lib:
+        by_mark[mk].add(fam)
+    out = []
+    for m in MD.marks(texts):
+        if (m["family"], m["mark"]) not in lib and len(by_mark.get(m["mark"], ())) == 1:
+            m = dict(m, family=next(iter(by_mark[m["mark"]])), family_from_schedule=True)
+        out.append(m)
+    return out
 
 
 def width_modes(ents, layers_ok, unit_m, lo_m=0.15, hi_m=1.0, min_count=4):
@@ -139,7 +157,7 @@ def detect(intake):
             if sh["role"] == "GROUND_BEAM_PLAN":
                 widths_m = sorted(set(widths_m) | set(width_modes(E, cand, u)))
             widths = [w / u for w in widths_m]
-            bm = [m for m in MD.marks(E["texts"]) if m["family"] in fams]
+            bm = [m for m in _schedule_marks(E["texts"], lib) if m["family"] in fams]
             sc = MD.score_edge_layers(E, widths, tol, bm, min_face_native=0.3 / u) if widths else {}
             if not sc and widths:                     # unmarked network (typical ground beams): densest pair layer
                 cnt = {}
@@ -154,6 +172,12 @@ def detect(intake):
                 sc = {k: v for k, v in cnt.items() if v >= 5}
             lays = {l for l, v in sc.items() if v >= max(2, 0.2 * max(sc.values()))} if sc else set()
             cols = column_boxes(E, lib, u)
+            # every column-sized outline on the layers that carry the column boxes, at any size: storey-presence
+            # evidence only (a column drawn at a size no schedule band prints is still a column) - M3
+            clay = {r["layer"] for r in MD.candidate_rects(E, u) if tuple(r["box"]) in {tuple(c) for c in cols}}
+            rec["column_presence"] = [r["box"] for r in MD.candidate_rects(E, u) if r["layer"] in clay and
+                                      0.15 <= min(r["box"][2] - r["box"][0], r["box"][3] - r["box"][1]) * u and
+                                      max(r["box"][2] - r["box"][0], r["box"][3] - r["box"][1]) * u <= 1.5]
             heal = []
             if lays:                                   # drafting noise: duplicates, broken faces, ends short of a face
                 segs, h1 = CH.merge_collinear(E["segments"], lays, gap=CH.GAP_M / u, off_tol=0.5e-3 / u)
@@ -356,9 +380,43 @@ def items_from(D, conv, heights=None):
         for sid, rec in sorted(D["sheets"].items()):
             if rec["sheet"]["role"] == "FOUNDATION_PLAN":
                 occ += rec.get("columns", [])
+    fsheets = [rec for _, rec in sorted(D["sheets"].items()) if rec["sheet"]["role"] == "FOUNDATION_PLAN"]
+    necks_from_foundation = bool(fsheets) and any(r["sheet"]["role"] == "COLUMN_PLAN" for r in D["sheets"].values())
+    if necks_from_foundation:
+        _neck_items(items, reg, risk, fsheets, conv, covers, tie_rule, src_file)
+    # storey presence: a column piece counts at a storey only if that storey's roof-slab plan shows a column outline
+    # at the occurrence's position (sheets share local coordinates: world - sheet origin). A schedule band alone is
+    # no evidence (M3: every type with a 2F band was counted on a partial 2F).
+    slab_cols = {}
+    for rec in D["sheets"].values():
+        if rec["sheet"]["role"] == "SLAB_PLAN" and (rec.get("column_boxes") or rec.get("column_presence")):
+            o_ = rec["sheet"].get("origin") or (0.0, 0.0)
+            slab_cols.setdefault(rec["sheet"]["storey"], []).extend(
+                ((c[0] + c[2]) / 2 - o_[0], (c[1] + c[3]) / 2 - o_[1]) for c in
+                list(rec.get("column_boxes", [])) + list(rec.get("column_presence", [])))
+    origin_of = {sid: (rec["sheet"].get("origin") or (0.0, 0.0)) for sid, rec in D["sheets"].items()}
     for p in MD.column_storeys(occ, heights):
         cid = p["piece_id"]
         st = p["storey"]
+        if necks_from_foundation and st == "FOUNDATION":
+            continue                         # necks are measured on the foundation plan, over their own footing
+        if st in slab_cols and p.get("state") == "MEASURED":
+            if p.get("box"):
+                o_ = origin_of.get(p["sheet"], (0.0, 0.0))
+                cx = (p["box"][0] + p["box"][2]) / 2 - o_[0]
+                cy = (p["box"][1] + p["box"][3]) / 2 - o_[1]
+                near = min(math.hypot(cx - a, cy - b) for a, b in slab_cols[st]) * u
+                if near > 0.25:
+                    reg(cid, "COLUMNS", st, "EXPLICIT_NONE", f"no column outline on the {st} roof-slab plan at this "
+                                                           f"position (nearest {near:.2f} m)")
+                    risk.append({"KIND": "COLUMN_ABSENT_ON_STOREY_PLAN", "WHERE": f"{st} {p['mark']}",
+                                 "DETAIL": f"{cid}: schedule band {st} exists but the {st} roof-slab plan shows no "
+                                           f"column here; not counted"})
+                    continue
+            else:
+                risk.append({"KIND": "COLUMN_STOREY_PRESENCE_UNVERIFIED", "WHERE": f"{st} {p['mark']}",
+                             "DETAIL": f"{cid}: no column outline bound on the column plan; counted on the schedule "
+                                       f"band alone"})
         common = dict(component_id=cid, trade="CONCRETE", family="COLUMNS", storey=st,
                       source=f"{src_file} {p['sheet']} mark {p['mark']}; schedule storey band {st}",
                       dimensions={"section_m": p.get("section_m"), "drawn_m": p.get("drawn_m"),
@@ -366,10 +424,16 @@ def items_from(D, conv, heights=None):
                       double_count_risk="the column owns its footprint; beams split at its outline")
         if p["state"] != "MEASURED":
             exp = p.get("section_m")
+            hts = sorted(h for h in heights.values() if h)
+            dr = p.get("drawn_m")                # a type with no schedule row: the drawn section gives an exposure
+            el = dr[0] * dr[1] * hts[0] if (dr and hts and not exp) else None
+            eh = dr[0] * dr[1] * sum(hts) if (dr and hts and not exp) else None
             items.append(PE.item(item_id=f"U-C:{cid}", category="UNRESOLVED", support="NO_GEOMETRY", confidence="LOW",
                                  blocker="STOREY_HEIGHT_NOT_PRINTED" if p["state"] == "NO_HEIGHT" else p["state"],
-                                 expression=(f"{exp[0]:g} x {exp[1]:g} x storey height" if exp else "B x H x height"),
-                                 **common))
+                                 exposure_low=el, exposure_high=eh,
+                                 expression=(f"{exp[0]:g} x {exp[1]:g} x storey height" if exp else
+                                             (f"drawn {dr[0]:g} x {dr[1]:g} x one to all storey heights (exposure "
+                                              f"only)" if dr else "B x H x height")), **common))
             reg(cid, "COLUMNS", st, "MISSING_DATA", "storey height not in the profile" if p["state"] == "NO_HEIGHT"
                 else p["state"])
             continue
@@ -572,6 +636,112 @@ def items_from(D, conv, heights=None):
                      "DETAIL": f"{ev['n_texts']} labels ({', '.join(ev['keywords'])}) on {', '.join(ev['sheets'])}; "
                                f"the generic engine has no detector for this family - not in any total"})
     return items, register, risk
+
+
+def _neck_items(items, reg, risk, fsheets, conv, covers, tie_rule, src_file):
+    """Foundation necks: every column occurrence on the foundation plan, over the footing it stands on (the footing
+    whose outline holds it, else the footing type named in a combined C/F label). Height = neck top level + founding
+    depth - that footing's depth, both printed project values (profile: NECK_TOP_LEVEL_M, FOUNDING_DEPTH_M; the
+    founding range gives low / high). Section and main bars: the schedule's FOUNDATION band. Without the two printed
+    values, or without a footing, a neck is UNRESOLVED with an exposure (NECK_HEIGHT_EXPOSURE_M), never a quantity."""
+    have = "FOUNDING_DEPTH_M" in conv.items and "NECK_TOP_LEVEL_M" in conv.items
+    for rec in fsheets:
+        sid = rec["sheet"]["sheet_id"]
+        fts = rec.get("footings", [])
+        lib_texts = {}
+        for f in fts:
+            lib_texts.setdefault(f.get("mark"), []).append(f)
+        for o in rec.get("columns", []):
+            cid = f"NECK:{o['member_id']}"
+            x, y = o["mark_at"]
+            p = ((o["box"][0] + o["box"][2]) / 2, (o["box"][1] + o["box"][3]) / 2) if o.get("box") else (x, y)
+            host = [f for f in fts if f.get("box") and MD._contains(f["box"], p[0], p[1]) and
+                    f["state"] in ("CONFIRMED", "SIZE_MISMATCH", "TYPE_BY_SIZE_MATCH")]
+            how = "OUTLINE_HOLDS_THE_COLUMN"
+            if not host:                     # a combined C/F label names the footing (same text)
+                host = [f for f in fts if f.get("schedule_m") and math.dist(f.get("mark_at", (1e18, 1e18)), (x, y))
+                        <= 1e-6 and f["state"] not in ("LABEL_TYPE_CONFLICT_SECONDARY",)]
+                how = "COMBINED_LABEL"
+            row = o.get("row") or {}
+            band = (row.get("by_storey") or {}).get("FOUNDATION")
+            sec = (band or {}).get("dims_m", {})
+            common = dict(component_id=cid, trade="CONCRETE", family="COLUMNS", storey="FOUNDATION",
+                          source=f"{src_file} {sid} mark {o['mark']}; schedule FOUNDATION band; footing "
+                                 f"{host[0]['mark'] if host else 'not found'}",
+                          dimensions={"section_m": [sec.get("W"), sec.get("H")], "footing": host[0]["member_id"]
+                                      if host else None, "footing_binding": how if host else None},
+                          double_count_risk="a neck runs from its footing top to the neck top; the column above "
+                                            "starts there; beams split at its outline")
+            fd = (host[0].get("schedule_m") or [None, None, None])[2] if host else None
+            if not (sec.get("W") and sec.get("H")) or fd is None or not have:
+                why = ("no FOUNDATION band in the schedule for " + o["mark"]) if not (sec.get("W") and sec.get("H")) \
+                    else ("no footing found under the column" if fd is None else
+                          "founding depth / neck top level not printed (profile)")
+                area = (sec.get("W") or 0) * (sec.get("H") or 0) or (
+                    (o["drawn_m"][0] * o["drawn_m"][1]) if o.get("drawn_m") else 0)
+                el, _, eh = _trip(conv, "NECK_HEIGHT_EXPOSURE_M") if "NECK_HEIGHT_EXPOSURE_M" in conv.items else \
+                    (None, None, None)
+                items.append(PE.item(item_id=f"U-C:{cid}", category="UNRESOLVED", support="NO_GEOMETRY",
+                                     confidence="LOW", blocker="NECK_HEIGHT" if (sec.get("W") and fd is not None)
+                                     else "NECK_SECTION_OR_FOOTING",
+                                     exposure_low=area * el if (area and el) else None,
+                                     exposure_high=area * eh if (area and eh) else None,
+                                     assumptions=["NECK_HEIGHT_EXPOSURE_M"] if (area and el) else [],
+                                     expression=f"section x (neck top + founding depth - footing depth): {why}",
+                                     **common))
+                reg(cid, "COLUMNS", "FOUNDATION", "MISSING_DATA", why)
+                risk.append({"KIND": "NECK_UNRESOLVED", "WHERE": f"{sid} {o['mark']}", "DETAIL": f"{cid}: {why}"})
+                continue
+            top = conv.base("NECK_TOP_LEVEL_M")
+            dl, db, dh = _trip(conv, "FOUNDING_DEPTH_M")
+            hs = sorted(top + d - fd for d in (dl, db, dh))
+            B, H = sec["W"], sec["H"]
+            hb = top + db - fd
+            if hb <= 0:
+                reg(cid, "COLUMNS", "FOUNDATION", "EXPLICIT_NONE", "footing reaches the neck top")
+                continue
+            asm = ["NECK_TOP_LEVEL_M", "FOUNDING_DEPTH_M"]
+            items.append(PE.item(item_id=f"P-C:{cid}", category="PROVISIONAL", low=B * H * hs[0], base=B * H * hb,
+                                 high=B * H * hs[-1], formula="section x (neck top + founding depth - footing depth)",
+                                 assumptions=asm, support="ONE_ASSUMED_DIMENSION", confidence="MEDIUM",
+                                 blocker="FOUNDING_LEVEL", **common))
+            main = [b for b in band.get("bars", []) if b.get("count") and b.get("dia_mm")]
+            if not main:
+                reg(cid, "COLUMNS", "FOUNDATION", "MISSING_DATA", "no main bars in the FOUNDATION band")
+                continue
+            lap = _trip(conv, "COLUMN_LAP_D")
+            tot = 0.0
+            for bb in main:
+                d = bb["dia_mm"]
+                vals = sorted(bb["count"] * BS.mass_kg(h + x * d / 1000.0, d) for h in hs for x in lap)
+                base = bb["count"] * BS.mass_kg(hb + lap[1] * d / 1000.0, d)
+                items.append(PE.item(item_id=f"P-S:{cid}:MAIN:D{d:g}", component_id=cid, trade="REINFORCEMENT",
+                                     family="COLUMNS", storey="FOUNDATION", category="PROVISIONAL", low=vals[0],
+                                     base=base, high=vals[-1], dia_mm=d, source=common["source"],
+                                     formula="count x (neck height + lap) x d^2/162", assumptions=asm + ["COLUMN_LAP_D"],
+                                     support="CONVENTION_ONLY", confidence="MEDIUM", blocker="LAP_ANCHORAGE_RULE"))
+                tot += base
+            if tie_rule:
+                n, d = tie_rule
+                lens = []
+                for cv in covers["COLUMN"]:
+                    try:
+                        lens.append(BS.closed_link(B, H, cv, d)["developed_m"])
+                    except ValueError:
+                        continue
+                if lens:
+                    lens.sort()
+                    v = [n * h * BS.mass_kg(ln, d) for h in hs for ln in lens]
+                    base = n * hb * BS.mass_kg(lens[len(lens) // 2], d)
+                    items.append(PE.item(item_id=f"P-S:{cid}:TIES:D{d:g}", component_id=cid, trade="REINFORCEMENT",
+                                         family="COLUMNS", storey="FOUNDATION", category="PROVISIONAL",
+                                         low=min(v), base=base, high=max(v), dia_mm=d, source="printed tie note",
+                                         formula="n/m x neck height x closed link x d^2/162",
+                                         assumptions=asm + ["REBAR_COVER_COLUMN_M", "REBAR_HOOK_STANDARD"],
+                                         support="CONVENTION_ONLY", confidence="MEDIUM", blocker="TIE_LINK_HOOK_RULE"))
+                    tot += base
+            reg(cid, "COLUMNS", "FOUNDATION", "PROVISIONAL_MODEL", "neck: FOUNDATION band bars" +
+                (" + printed tie note" if tie_rule else ""), tot)
 
 
 def _gb_class(conv, b):

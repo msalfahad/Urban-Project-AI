@@ -135,6 +135,13 @@ def infer_unit(family, values):
     return best, shares[best], shares
 
 
+BEAM_LIKE = ("BEAM", "CONTINUOUS_BEAM", "STRAP_BEAM", "GROUND_BEAM", "LINTEL")
+
+
+def _kind(fam):
+    return "BEAM_LIKE" if fam in BEAM_LIKE else fam
+
+
 def from_attribute_rows(attributes, inserts=None, sheet_of=None):
     """attributes: [{owner, tag, value, x, y}] -> {families: {...}, rows: [...], conflicts, warnings}."""
     by_owner = defaultdict(dict)
@@ -157,12 +164,25 @@ def from_attribute_rows(attributes, inserts=None, sheet_of=None):
         for t in tags:
             p, s = _split_tag(t)
             stems[p].add(s)
+        # the table's own family: the majority family of its marks. A row whose mark pattern disagrees (CA in a beam
+        # table reads as a column by pattern) takes the table's family (M3)
+        tfams = [DM.mark_family(m)[0] for _, v in members for m in re.split(r"[/,]", DM.normalize(v.get(mf, "")))
+                 if m.strip()]
+        tfams = [f for f in tfams if f]
+        kinds = [_kind(f) for f in tfams]
+        tkind = max(set(kinds), key=kinds.count) if kinds else None
+        table_fam = None
+        if tkind and kinds.count(tkind) >= 0.7 * len(kinds):            # the table is of one member kind ...
+            same = [f for f in tfams if _kind(f) == tkind]
+            table_fam = max(set(same), key=same.count)                  # ... and its most common family
         for owner, vals in sorted(members, key=lambda m: str(m[0])):
             mark_raw = vals.get(mf, "")
             for mark in [m for m in re.split(r"[/,]", DM.normalize(mark_raw)) if m.strip()]:
                 fam, mk = DM.mark_family(mark)
                 if fam is None:
                     continue
+                if table_fam and _kind(fam) != _kind(table_fam):     # only across member kinds (a column mark in
+                    fam = table_fam                                    # a beam table), never between beam sub-families
                 row = {"mark": mk, "family": fam, "source": f"INSERT {owner}", "mark_tag": mf,
                        "position": pos.get(owner), "sheet": sheet_of(*pos[owner]) if sheet_of and owner in pos else None,
                        "tag_set": list(tags), "by_storey": {}, "raw": dict(vals)}
