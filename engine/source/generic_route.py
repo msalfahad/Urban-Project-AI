@@ -279,6 +279,9 @@ def detect(intake, *, typical_widths_m=None):
                                                             join_tol=0.001 / u)["bands"]) for w in widths)
                 sc = {k: v for k, v in cnt.items() if v >= 5}
             lays = {l for l, v in sc.items() if v >= max(2, 0.2 * max(sc.values()))} if sc else set()
+            # M3: a layer NAMED for beams joins on any mark it carries (one inclined transfer beam on its own layer is
+            # still a beam: B27 on ST7757 GF)
+            lays |= {l for l, v in sc.items() if v >= 1 and MD._layer_role(l) == "BEAM"}
             cols = column_boxes(E, lib, u)
             # every column-sized outline on the layers that carry the column boxes, at any size: storey-presence
             # evidence only (a column drawn at a size no schedule band prints is still a column) - M3
@@ -305,13 +308,36 @@ def detect(intake, *, typical_widths_m=None):
                     widths_of[(r["family"], r["mark"])].add(r["dims_m"]["W"])
             widths_of = {k: tuple(sorted(v)) for k, v in widths_of.items()}
             bound = MD.bind_marks(bands, bm, widths_of, u)
-            inh = MD.inherit_sections(bands, bound, lib, 1.0 / u)
+            inh = MD.inherit_sections(bands, bound, lib, 1.0 / u, supports=cols + [
+                b for b in rec["column_presence"] if not any(max(abs(b[k] - c[k]) for k in range(4)) <= tol
+                                                             for c in cols)])
             rec.update(edge_layers=sorted(lays), layer_scores=sc, widths_m=widths_m, width_basis=basis,
                        column_boxes=cols,
                        bands=bands, band_conflicts=conf, marks=bound, inherited=inh)
-            slab = SE.panels(E, lays, bands, cols, u, region_id=sh["sheet_id"]) if lays else None
+            # M3: every drawn column outline bounds the slab cells (a column at a size no schedule band prints still
+            # closes a cell and owns its footprint); bands are still split at the schedule-sized boxes only
+            extra = [b for b in rec["column_presence"] if not any(max(abs(b[k] - c[k]) for k in range(4)) <= tol
+                                                                  for c in cols)]
+            rec["slab_column_boxes"] = cols + extra
+            slab = SE.panels(E, lays, bands, cols + extra, u, region_id=sh["sheet_id"]) if lays else None
+            SE.classify_regions(slab, E, lays, bands, cols + extra, u, ground=sh["role"] == "GROUND_BEAM_PLAN")
             rec["slab"] = slab
-            rec["band_sides"] = SE.band_sides(slab["faces"], bands, u, cols) if slab else {}
+            rec["band_sides"] = SE.band_sides(slab["faces"], bands, u, cols + extra) if slab else {}
+            # M3: an edge beam with one drawn face (the outer face undrawn), from its mark and scheduled width
+            sf_b, sf_m = MD.single_face_beams(E, lays, bound, widths_of, bands, slab["faces"] if slab else [], cols, u) \
+                if lays else ([], {})
+            if sf_b:
+                for k, b in enumerate(sf_b, 1):
+                    b["band_id"] = f"BANDSF{k:02d}"
+                pieces = MD.split_at_supports(sf_b, cols, 0.05 / u)
+                for mi, v in sf_m.items():
+                    ids = {b["band_id"] for b in v["bands"]}
+                    own = [p_["band_id"] for p_ in pieces if p_["parent"] in ids]
+                    bound[mi] = dict(bound[mi], state="BOUND_SINGLE_FACE", band=own[0] if own else None, bands=own,
+                                     single_face=v["face"])
+                bands = bands + pieces
+                rec["bands"] = bands
+            rec["single_face_bands"] = [b["band_id"] for b in bands if b.get("rule") == "SINGLE_FACE_INFERRED"]
             t = slab["uniform_t_m"] if slab and slab.get("uniform_t_m") else None
             rec["beams"] = MD.beam_quantities(bands, bound + inh, lib, [], u, t)
             rec["texts"] = E["texts"]
@@ -688,7 +714,20 @@ def items_from(D, conv, heights=None, evidence=None):
                                       "junction_deductions": len(b.get("junction_deductions", []))},
                           double_count_risk="column footprint split out; junction squares owned by one band; slab "
                                             "panels stop at band faces")
-            if b["state"] == "BOUND" and b.get("depth_m"):
+            if b["state"] == "BOUND" and b.get("depth_m") and "SINGLE_FACE" in (b.get("binding") or ""):
+                A, Bv = b["v_total_depth"], b.get("v_below_slab")
+                lo, base, hi = PE.by_choice(conv, "BEAM_DEPTH_READING", {"TOTAL_DEPTH": A, "BELOW_SLAB": Bv if Bv
+                                                                          is not None else A})
+                items.append(PE.item(item_id=f"P-C:{cid}", category="PROVISIONAL", low=lo, base=base, high=hi,
+                                     formula="drawn face length x scheduled width x H (the opposite face is not "
+                                             "drawn: placed at the scheduled width toward the mark)",
+                                     assumptions=["BEAM_DEPTH_READING"], support="ONE_ASSUMED_DIMENSION",
+                                     confidence="LOW", blocker="SINGLE_FACE_BEAM", **common))
+                _beam_bars(items, reg, b, cid, fam, st, common["source"], covers["BEAM"], conv, hook_std)
+                risk.append({"KIND": "BEAM_SINGLE_FACE_INFERRED", "WHERE": sid,
+                             "DETAIL": f"{cid} {b.get('mark')}: one face drawn; the second placed at the scheduled "
+                                       f"width {b['width_m']:.2f} m"})
+            elif b["state"] == "BOUND" and b.get("depth_m"):
                 inh = "INHERITED" in (b.get("binding") or "")
                 if inh and _cv(conv, "COLLINEAR_INHERITANCE") == "OFF":
                     items.append(PE.item(item_id=f"U-C:{cid}", category="UNRESOLVED", support="NO_GEOMETRY",
@@ -787,14 +826,73 @@ def items_from(D, conv, heights=None, evidence=None):
             for f in slab["faces"]:
                 if f["class"] == "OPEN_BOUNDARY":
                     risk.append({"KIND": "SLAB_OPEN_BOUNDARY_FACE", "WHERE": sid,
-                                 "DETAIL": f"{f['face_id']} {f['area_m2']:.2f} m2 (panel leaked into a beam strip)"})
+                                 "DETAIL": f"{f['face_id']} {f['area_m2']:.2f} m2 (panel leaked into a beam strip; "
+                                           f"{f.get('recovered_panel_m2', 0):.2f} m2 recovered as panel = face - "
+                                           "beam bands - columns)"})
             for f in slab["faces"]:
+                if f["class"] == "OPEN_BOUNDARY" and f.get("region") in ("STRUCTURAL_SLAB", "GROUND_SLAB"):
+                    cid = f"{sfam}:{st}:{f['face_id']}"
+                    A = f["recovered_panel_m2"]
+                    common = dict(component_id=cid, trade="CONCRETE", family=sfam, storey=st,
+                                  source=f"{src_file} {sid} face {f['face_id']} (open boundary, beam bands subtracted)",
+                                  dimensions={"area_m2": round(A, 4), "face_area_m2": round(f["area_m2"], 4),
+                                              "t_m": f.get("t_m"), "t_basis": f.get("t_basis"),
+                                              "region": f["region"]},
+                                  double_count_risk="the beam bands and column outlines inside the face are "
+                                                    "subtracted (they are the beams' and columns')")
+                    if f.get("t_m"):
+                        v = A * f["t_m"]
+                        items.append(PE.item(item_id=f"P-C:{cid}", category="PROVISIONAL", low=v, base=v, high=v,
+                                             formula="(face area - beam bands - columns) x thickness",
+                                             assumptions=["FROZEN:PRINTED_THICKNESS"] if f["t_basis"] ==
+                                             "PRINTED_IN_PANEL" else ["SLAB_SHEET_UNIFORM_THICKNESS"],
+                                             support="CONVENTION_ONLY", confidence="LOW",
+                                             blocker="OPEN_BOUNDARY_RECOVERED", **common))
+                        reg(cid, sfam, st, "MISSING_DATA", "panel recovered from an open-boundary face: the bar tags "
+                                                           "of the leaked cells cannot be assigned to one panel")
+                    else:
+                        tl, _, th = _trip(conv, "SLAB_THICKNESS_EXPOSURE_M")
+                        items.append(PE.item(item_id=f"U-C:{cid}", category="UNRESOLVED", support="NO_GEOMETRY",
+                                             confidence="LOW", blocker="SLAB_THICKNESS_" + f["t_basis"],
+                                             assumptions=["SLAB_THICKNESS_EXPOSURE_M"], exposure_low=A * tl,
+                                             exposure_high=A * th, expression=f"{A:.3f} m2 x t", **common))
+                        reg(cid, sfam, st, "MISSING_DATA", "slab thickness not established")
+                    continue
                 if f["class"] != "PANEL":
                     if f["class"] == "OPENING":
                         risk.append({"KIND": "OPENING_DEDUCTED", "WHERE": sid,
                                      "DETAIL": f"{f['face_id']} {f['area_m2']:.2f} m2 {f['opening_labels']}"})
                     continue
                 cid = f"{sfam}:{st}:{f['face_id']}"
+                if f.get("free_columns") and f.get("region") != "UNRESOLVED":
+                    risk.append({"KIND": "SLAB_PANEL_FREE_COLUMN", "WHERE": sid,
+                                 "DETAIL": f"{cid} {f['area_m2']:.2f} m2 holds {len(f['free_columns'])} column(s) on "
+                                           "no beam (a flat-slab zone; counted)"})
+                if f.get("treads") and f.get("region") != "STAIR_ZONE":
+                    risk.append({"KIND": "SLAB_PANEL_STAIR_LINES", "WHERE": sid,
+                                 "DETAIL": f"{cid} {f['area_m2']:.2f} m2: {f['treads']['kind']} of "
+                                           f"{f['treads']['n']} tread lines over part of the cell (counted)"})
+                if f.get("region") in ("STAIR_ZONE", "UNRESOLVED"):
+                    tl, _, th = _trip(conv, "SLAB_THICKNESS_EXPOSURE_M")
+                    t_ = f.get("t_m")
+                    lo_t, hi_t = (t_, t_) if t_ else (tl, th)
+                    common = dict(component_id=cid, trade="CONCRETE", family=sfam, storey=st,
+                                  source=f"{src_file} {sid} face {f['face_id']} (beam-face bounded)",
+                                  dimensions={"area_m2": round(f["area_m2"], 4), "t_m": t_, "region": f["region"],
+                                              "free_columns": len(f.get("free_columns") or [])},
+                                  double_count_risk="not counted: the cell is a stair zone or holds free-standing "
+                                                    "columns")
+                    kind = "SLAB_STAIR_ZONE" if f["region"] == "STAIR_ZONE" else "SLAB_CELL_FREE_COLUMNS"
+                    items.append(PE.item(item_id=f"U-C:{cid}", category="UNRESOLVED", support="NO_GEOMETRY",
+                                         confidence="LOW", blocker=kind,
+                                         assumptions=[] if t_ else ["SLAB_THICKNESS_EXPOSURE_M"],
+                                         exposure_low=f["area_m2"] * lo_t, exposure_high=f["area_m2"] * hi_t,
+                                         expression=f"{f['area_m2']:.3f} m2 x t: {f['region_reason']}", **common))
+                    reg(cid, sfam, st, "MISSING_DATA", f"{f['region'].lower()} cell not counted as slab "
+                                                       f"({f['region_reason']})")
+                    risk.append({"KIND": kind, "WHERE": sid, "DETAIL": f"{cid} {f['area_m2']:.2f} m2: "
+                                                                      f"{f['region_reason']}"})
+                    continue
                 common = dict(component_id=cid, trade="CONCRETE", family=sfam, storey=st,
                               source=f"{src_file} {sid} face {f['face_id']} (beam-face bounded)",
                               dimensions={"area_m2": round(f["area_m2"], 4), "t_m": f.get("t_m"),

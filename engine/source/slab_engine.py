@@ -333,6 +333,170 @@ def band_sides(faces, band_pieces, unit_m, column_boxes=()):
     return out
 
 
+STAIR_MIN_TREADS = 5           # a flight or a winder fan of at least five tread lines
+STAIR_ZONE_SHARE = 0.25        # treads over a quarter of a cell: the cell is a stair zone, its slab not separable
+REGIONS = ("STRUCTURAL_SLAB", "GROUND_SLAB", "STAIR_ZONE", "OPENING", "BEAM_STRIP", "COLUMN", "DETAIL",
+           "UNRESOLVED")
+
+
+def _hull(pts):
+    pts = sorted(set(pts))
+    if len(pts) < 3:
+        return pts
+
+    def cross(o, a, b):
+        return (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0])
+    lo, up = [], []
+    for q in pts:
+        while len(lo) >= 2 and cross(lo[-2], lo[-1], q) <= 0:
+            lo.pop()
+        lo.append(q)
+    for q in reversed(pts):
+        while len(up) >= 2 and cross(up[-2], up[-1], q) <= 0:
+            up.pop()
+        up.append(q)
+    return lo[:-1] + up[:-1]
+
+
+def tread_family(face_poly, segs, unit_m, min_n=STAIR_MIN_TREADS):
+    """Stair treads drawn inside a face (non-edge, non-annotation lines 0.4 - 2.5 m wholly inside it):
+        FLIGHT   at least min_n parallel lines, consecutive spacing 0.18 - 0.40 m (a going)
+        WINDER   at least min_n lines whose extensions meet near one point (within 0.2 m), fanning over 30 degrees
+    -> {kind, n, hull_m2, segment_ids} or None. Geometry only; a stair label is never required."""
+    inside = []
+    for sg in segs:
+        L = math.dist(sg["a"], sg["b"]) * unit_m
+        if not (0.4 <= L <= 2.5):
+            continue
+        if all(MD.point_in_poly(x, y, face_poly) for x, y in (sg["a"], sg["b"],
+                                                               ((sg["a"][0] + sg["b"][0]) / 2,
+                                                                (sg["a"][1] + sg["b"][1]) / 2))):
+            inside.append(sg)
+    found = None
+    groups = {}
+    for sg in inside:
+        ang = math.degrees(math.atan2(sg["b"][1] - sg["a"][1], sg["b"][0] - sg["a"][0])) % 180.0
+        groups.setdefault(round(ang / 3.0), []).append(sg)
+    for g in groups.values():
+        if len(g) < min_n:
+            continue
+        dx, dy = g[0]["b"][0] - g[0]["a"][0], g[0]["b"][1] - g[0]["a"][1]
+        n = math.hypot(dx, dy)
+        offs = sorted((sg["a"][0] * -dy / n + sg["a"][1] * dx / n) * unit_m for sg in g)
+        run = best = 0
+        for a, b in zip(offs, offs[1:]):
+            run = run + 1 if 0.18 <= b - a <= 0.40 else 0
+            best = max(best, run)
+        if best + 1 >= min_n:
+            found = ("FLIGHT", g)
+            break
+    if found is None and len(inside) >= min_n:
+        a00 = a01 = a11 = b0 = b1 = 0.0
+        for sg in inside:
+            dx, dy = sg["b"][0] - sg["a"][0], sg["b"][1] - sg["a"][1]
+            n = math.hypot(dx, dy)
+            nx, ny = -dy / n, dx / n
+            c = nx * sg["a"][0] + ny * sg["a"][1]
+            a00, a01, a11, b0, b1 = a00 + nx * nx, a01 + nx * ny, a11 + ny * ny, b0 + nx * c, b1 + ny * c
+        det = a00 * a11 - a01 * a01
+        if abs(det) > 1e-12:
+            px, py = (b0 * a11 - a01 * b1) / det, (a00 * b1 - a01 * b0) / det
+            near = []
+            for sg in inside:
+                dx, dy = sg["b"][0] - sg["a"][0], sg["b"][1] - sg["a"][1]
+                if abs((px - sg["a"][0]) * dy - (py - sg["a"][1]) * dx) / math.hypot(dx, dy) * unit_m <= 0.2:
+                    near.append(sg)
+            angs = sorted(math.degrees(math.atan2((sg["a"][1] + sg["b"][1]) / 2 - py,
+                                                  (sg["a"][0] + sg["b"][0]) / 2 - px)) for sg in near)
+            if len(near) >= min_n and angs[-1] - angs[0] >= 30.0:
+                found = ("WINDER", near)
+    if found is None:
+        return None
+    kind, g = found
+    hull = _hull([q for sg in g for q in (sg["a"], sg["b"])])
+    return {"kind": kind, "n": len(g), "hull_m2": MD.poly_area(hull) * unit_m ** 2 if len(hull) >= 3 else 0.0,
+            "segment_ids": [sg["id"] for sg in g][:40]}
+
+
+def open_boundary_panel(face, band_pieces, column_boxes, unit_m):
+    """the panel part of an OPEN_BOUNDARY face (a panel leaked into a beam strip): face area minus its overlap with
+    the (convex) band pieces and column outlines, junction squares counted once (pairwise overlaps added back)."""
+    F = face["polygon"]
+    clips = [b["polygon"] for b in band_pieces if b.get("kind") == "STRAIGHT"] + \
+        [MD.box_poly(c) for c in column_boxes]
+    parts = []
+    for q in clips:
+        c = MD.clip_convex(F, q)
+        if len(c) >= 3 and MD.poly_area(c) > 0:
+            parts.append((c, q))
+    cut = sum(MD.poly_area(c) for c, _ in parts)
+    for i, (ci, qi) in enumerate(parts):
+        for cj, qj in parts[i + 1:]:
+            cc = MD.clip_convex(ci, qj)
+            if len(cc) >= 3:
+                cut -= MD.poly_area(cc)
+    return max(abs(MD.poly_area(F)) - cut, 0.0) * unit_m ** 2
+
+
+def classify_regions(slab, ents, edge_layers, band_pieces, column_boxes, unit_m, *, ground=False):
+    """M3: every face of a plan gets a region class, from the face class plus two generic checks:
+        free-standing columns   a column outline inside a PANEL that touches no beam band. On a ground-beam plan a
+                                column stands on a beam junction or its own footing, so the cell is UNRESOLVED (not
+                                counted: a missing beam, another level or another element); on a suspended slab it is
+                                a flat-slab zone, counted, with a coverage risk.
+        stair treads            a tread family (tread_family) covering at least STAIR_ZONE_SHARE of a PANEL makes it
+                                a STAIR_ZONE (not counted as slab); a smaller family is a coverage risk.
+    PANEL -> STRUCTURAL_SLAB / GROUND_SLAB, BEAM and OPEN_BOUNDARY -> BEAM_STRIP (an open-boundary face is a leak,
+    never slab), OPENING, COLUMN, DETAIL. Faces keep their area; nothing is deleted."""
+    if not slab:
+        return slab
+    segs = [sg for sg in ents["segments"] if sg["layer"] not in edge_layers and
+            MD._layer_role(sg["layer"]) not in MD.ANNOTATION_ROLES + ("COLUMN", "FOOTING")]
+    for f in slab["faces"]:
+        f["free_columns"], f["treads"] = [], None
+        if f["class"] == "PANEL":
+            for c in column_boxes:
+                cx, cy = (c[0] + c[2]) / 2, (c[1] + c[3]) / 2
+                if MD.point_in_poly(cx, cy, f["polygon"]):       # the outer cycle: a column hole lies inside it
+                    if not any(MD.overlap_area(MD.box_poly(c), b["polygon"]) > 0 for b in band_pieces):
+                        f["free_columns"].append(tuple(round(v, 1) for v in c))
+            f["treads"] = tread_family(f["polygon"], segs, unit_m)
+        cls = f["class"]
+        share = (f["treads"]["hull_m2"] / f["area_m2"]) if f["treads"] and f["area_m2"] else 0.0
+        if cls == "PANEL" and share >= STAIR_ZONE_SHARE:
+            f["region"], f["region_reason"] = "STAIR_ZONE", f"{f['treads']['kind']} of {f['treads']['n']} treads " \
+                                                            f"over {share:.0%} of the cell"
+        elif cls == "PANEL" and f["free_columns"] and ground:
+            f["region"], f["region_reason"] = "UNRESOLVED", f"{len(f['free_columns'])} free-standing column(s) " \
+                                                            "inside a ground-slab cell"
+        elif cls == "PANEL":
+            f["region"] = "GROUND_SLAB" if ground else "STRUCTURAL_SLAB"
+            f["region_reason"] = "beam-face bounded cell"
+        elif cls == "OPEN_BOUNDARY":
+            net = open_boundary_panel(f, band_pieces, column_boxes, unit_m)
+            f["recovered_panel_m2"] = net
+            if net > 0.5:
+                tg = sorted({t["t_m"] for t in _thickness_tags(ents["texts"], 150e-3 / unit_m)
+                             if MD.point_in_poly(t["x"], t["y"], f["polygon"])})
+                if len(tg) == 1:
+                    f["t_m"], f["t_basis"] = tg[0], "PRINTED_IN_PANEL"
+                elif not tg and slab.get("uniform_t_m"):
+                    f["t_m"], f["t_basis"] = slab["uniform_t_m"], "SHEET_UNIFORM"
+                else:
+                    f["t_m"], f["t_basis"] = None, "CONFLICTING_TAGS" if tg else "NO_THICKNESS"
+                f["region"] = "GROUND_SLAB" if ground else "STRUCTURAL_SLAB"
+                f["region_reason"] = (f"open-boundary face {f['area_m2']:.2f} m2: the panel is the face minus its beam "
+                                      f"bands and columns ({net:.2f} m2)")
+            else:
+                f["region"], f["region_reason"] = "BEAM_STRIP", "leaked beam strip (no panel left after the bands)"
+        elif cls == "BEAM":
+            f["region"], f["region_reason"] = "BEAM_STRIP", "inside a beam band"
+        else:
+            f["region"], f["region_reason"] = cls, cls.lower()
+    slab["regions_m2"] = {r: sum(f["area_m2"] for f in slab["faces"] if f.get("region") == r) for r in REGIONS}
+    return slab
+
+
 def policy_record():
     return {"policy": POLICY_ID, "classes": ["BEAM", "COLUMN", "OPENING", "PANEL", "DETAIL", "OPEN_BOUNDARY"],
             "rule": "a face is slab only with band adjacency and no opening evidence; thickness printed > sheet "

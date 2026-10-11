@@ -548,6 +548,80 @@ def score_edge_layers(ents, widths_native, tol_native, beam_marks, max_outline_s
     return score
 
 
+def shared_face_parts(faces, conflicts, width, min_len):
+    """M3: a face with a partner at the band width on BOTH sides over a common interval is ambiguous there, and the
+    pairing drops the whole strip. The part of a strip where the shared face has no partner on its other side is not
+    ambiguous: it is returned as a band (rule SHARED_FACE_UNAMBIGUOUS_PART); the common part stays a conflict."""
+    by = {f["handle"]: GN._face(f) for f in faces}
+    strips = []
+    for c in conflicts:
+        if c.get("reason") != "SHARED_FACE_AMBIGUOUS" or c.get("detail") not in by:
+            continue
+        hs = c["detail"]
+        other = next((h for h in c["faces"] if h != hs), None)
+        if other not in by:
+            continue
+        g, o = by[hs], by[other]
+        uu = GN._canon_axis(g["u"])
+        n = (-uu[1], uu[0])
+        side = 1 if GN._proj(o["p0"], n) > GN._proj(g["p0"], n) else -1
+        strips.append({"shared": hs, "other": other, "side": side, "t0": c["t0"], "t1": c["t1"], "u": uu, "n": n,
+                       "offs": sorted((GN._proj(g["p0"], n), GN._proj(o["p0"], n)))})
+    out = []
+    for s_ in strips:
+        cuts = [(x["t0"], x["t1"]) for x in strips if x["shared"] == s_["shared"] and x["side"] != s_["side"]]
+        for t0, t1 in GN._subtract((s_["t0"], s_["t1"]), cuts):
+            if t1 - t0 < min_len:
+                continue
+            uu, n = s_["u"], s_["n"]
+            lo, hi = s_["offs"]
+            poly = [(uu[0] * t0 + n[0] * lo, uu[1] * t0 + n[1] * lo), (uu[0] * t1 + n[0] * lo, uu[1] * t1 + n[1] * lo),
+                    (uu[0] * t1 + n[0] * hi, uu[1] * t1 + n[1] * hi), (uu[0] * t0 + n[0] * hi, uu[1] * t0 + n[1] * hi)]
+            out.append({"kind": "STRAIGHT", "u": uu, "n": n, "t0": t0, "t1": t1, "lo_off": lo, "hi_off": hi,
+                        "width": hi - lo, "length": t1 - t0, "handles": sorted([s_["shared"], s_["other"]]),
+                        "faces_a": [s_["shared"]], "faces_b": [s_["other"]], "strips": 1,
+                        "rule": "SHARED_FACE_UNAMBIGUOUS_PART", "state": "ACCEPTED", "polygon": poly,
+                        "width_native": width})
+    return out
+
+
+def intervening_parts(faces, conflicts, width, tol, min_len):
+    """M3: a strip with a parallel face strictly between its two faces is dropped whole by the pairing, even when
+    that face overlaps it over a few millimetres (ST7757 1F: a 10 mm overlap removed a 14.3 m continuous beam). The
+    parts of the strip that no intervening face overlaps are returned as bands (rule INTERVENING_FACE_PART); the
+    overlapped parts stay conflicts."""
+    by = {f["handle"]: GN._face(f) for f in faces}
+    out, seen = [], set()
+    for c in conflicts:
+        if c.get("reason") != "INTERVENING_FACE":
+            continue
+        key = (tuple(sorted(c["faces"])), round(c["t0"], 3), round(c["t1"], 3))
+        if key in seen or not all(h in by for h in c["faces"]):
+            continue
+        seen.add(key)
+        a, b = by[c["faces"][0]], by[c["faces"][1]]
+        uu = GN._canon_axis(a["u"])
+        n = (-uu[1], uu[0])
+        lo, hi = sorted((GN._proj(a["p0"], n), GN._proj(b["p0"], n)))
+        cuts = []
+        for g in by.values():
+            if g["handle"] in c["faces"] or abs(g["u"][0] * uu[1] - g["u"][1] * uu[0]) > 0.01:
+                continue
+            og = GN._proj(g["p0"], n)
+            if lo + tol < og < hi - tol:
+                cuts.append(GN._interval(g, uu))
+        for t0, t1 in GN._subtract((c["t0"], c["t1"]), cuts):
+            if t1 - t0 < min_len:
+                continue
+            poly = [(uu[0] * t0 + n[0] * lo, uu[1] * t0 + n[1] * lo), (uu[0] * t1 + n[0] * lo, uu[1] * t1 + n[1] * lo),
+                    (uu[0] * t1 + n[0] * hi, uu[1] * t1 + n[1] * hi), (uu[0] * t0 + n[0] * hi, uu[1] * t0 + n[1] * hi)]
+            out.append({"kind": "STRAIGHT", "u": uu, "n": n, "t0": t0, "t1": t1, "lo_off": lo, "hi_off": hi,
+                        "width": hi - lo, "length": t1 - t0, "handles": sorted(c["faces"]), "faces_a": [c["faces"][0]],
+                        "faces_b": [c["faces"][1]], "strips": 1, "rule": "INTERVENING_FACE_PART", "state": "ACCEPTED",
+                        "polygon": poly, "width_native": width})
+    return out
+
+
 def beam_bands(ents, layers, widths_native, tol_native, min_face_native):
     bands, conflicts = [], []
     faces = _faces(ents, layers)
@@ -556,6 +630,9 @@ def beam_bands(ents, layers, widths_native, tol_native, min_face_native):
                              min_overlap=min_face_native, join_tol=tol_native / 12.0)
         for b in r["bands"]:
             bands.append(dict(b, width_native=w, kind="STRAIGHT"))
+        # a recovered part is at least five widths long (a beam, not the stub of a junction)
+        bands += shared_face_parts(faces, r["conflicts"], w, max(min_face_native, 5 * w))
+        bands += intervening_parts(faces, r["conflicts"], w, tol_native, max(min_face_native, 5 * w))
         conflicts += [dict(c, width_native=w) for c in r["conflicts"]]
     arcs = _arcs(ents, layers)
     for w in sorted(set(widths_native)):
@@ -680,8 +757,25 @@ def split_at_supports(bands, column_boxes, min_piece_native):
     return out
 
 
-def collinear_neighbours(bands, max_gap_native, angle_tol_deg=1.0, offset_tol_native=None):
-    """band -> [bands on the same axis line, same width, separated by at most max_gap_native] (straight only)."""
+def _gap_on_support(a, b, supports):
+    """True when one support outline fills the whole gap between two collinear bands (it spans the gap along the
+    axis and lies across the band line): the beam line continues over a column, the gap is no discontinuity."""
+    t_lo, t_hi = sorted((a["t1"], b["t0"]) if a["t1"] <= b["t0"] else (b["t1"], a["t0"]))
+    lo, hi = (a["lo_off"] + b["lo_off"]) / 2, (a["hi_off"] + b["hi_off"]) / 2
+    u, n = a["u"], (-a["u"][1], a["u"][0])
+    slack = 0.25 * abs(hi - lo)                  # drafting noise: the outline may stop a quarter width short
+    for c in supports or ():
+        pts = box_poly(c)
+        ts = [x * u[0] + y * u[1] for x, y in pts]
+        ns = [x * n[0] + y * n[1] for x, y in pts]
+        if min(ts) <= t_lo + slack and max(ts) >= t_hi - slack and min(ns) < max(lo, hi) and max(ns) > min(lo, hi):
+            return True
+    return False
+
+
+def collinear_neighbours(bands, max_gap_native, angle_tol_deg=1.0, offset_tol_native=None, supports=None):
+    """band -> [bands on the same axis line, same width, separated by at most max_gap_native - or by a gap one support
+    outline fills (M3)] (straight only)."""
     out = defaultdict(list)
     st = [b for b in bands if b["kind"] == "STRAIGHT"]
     for i, a in enumerate(st):
@@ -694,16 +788,18 @@ def collinear_neighbours(bands, max_gap_native, angle_tol_deg=1.0, offset_tol_na
             if abs(a["lo_off"] - b["lo_off"]) > tol or abs(a["hi_off"] - b["hi_off"]) > tol:
                 continue
             gap = max(b["t0"] - a["t1"], a["t0"] - b["t1"])
-            if 0 <= gap <= max_gap_native or gap < 0:
+            if 0 <= gap <= max_gap_native or gap < 0 or (gap <= 3 * max_gap_native and supports and
+                                                        _gap_on_support(a, b, supports)):
                 out[a["band_id"]].append(b["band_id"])
                 out[b["band_id"]].append(a["band_id"])
     return out
 
 
-def inherit_sections(bands, bound, lib, max_gap_native, span_counts=None):
+def inherit_sections(bands, bound, lib, max_gap_native, span_counts=None, supports=None):
     """Untagged bands collinear with a bound band (same width, across a support gap) inherit its mark as
-    INHERITED_ALONG_LINE; continuous-beam marks spread up to their scheduled span count. Returns extra bindings."""
-    nb = collinear_neighbours(bands, max_gap_native)
+    INHERITED_ALONG_LINE; continuous-beam marks spread up to their scheduled span count. Returns extra bindings.
+    supports (M3): column outlines - a gap one of them fills is bridged whatever its length (up to 3 x max_gap)."""
+    nb = collinear_neighbours(bands, max_gap_native, supports=supports)
     owner = {}
     for m in bound:
         for bid in m.get("bands", []):
@@ -764,6 +860,94 @@ def deduct_support_plan(bands, support_polys, unit_m, min_clear_m=0.3):
                    net_plan_m2=net * unit_m ** 2, clear_length_m=clear)
         (keep if clear >= min_clear_m else inside).append(rec)
     return keep, inside
+
+
+def single_face_beams(ents, layers, marks, widths_of, bands, faces, supports, unit_m, *, angle_tol=12.0):
+    """M3: a scheduled beam mark that binds no band, beside ONE edge-layer face whose other side is a slab panel and
+    whose mark side is open (no slab cell and no other face within the scheduled width): an edge beam whose outer
+    face is not drawn. The band is the face offset by the scheduled width toward the mark, over the face length,
+    minus the stretches existing bands already own, split at supports. Returned as bands (rule SINGLE_FACE_INFERRED)
+    with the mark bound to them (binding SINGLE_FACE_INFERRED): one assumed dimension (the undrawn face), never more.
+    Anything less clear (two candidate faces, a panel on the mark side, no panel behind the face) is left unbound."""
+    segs = [s_ for s_ in _faces(ents, layers) if math.dist(s_["p0"], s_["p1"]) * unit_m >= 1.0]
+    panels = [f["polygon"] for f in faces if f["class"] == "PANEL"]
+    new_b, rebound, used = [], {}, set()
+    for mi, m in enumerate(marks):
+        if m["state"] != "TAG_UNBOUND":
+            continue
+        ws = widths_of.get((m["family"], m["mark"]))
+        ws = [w for w in (ws if isinstance(ws, (list, tuple, set)) else (ws,)) if w]
+        if len(ws) != 1:
+            continue
+        W = ws[0] / unit_m
+        rot = math.radians(m.get("rot") or 0.0)
+        cands = []
+        for f in segs:
+            dx, dy = f["p1"][0] - f["p0"][0], f["p1"][1] - f["p0"][1]
+            L = math.hypot(dx, dy)
+            ux, uy = dx / L, dy / L
+            d_ang = abs(((math.degrees(math.atan2(uy, ux)) - math.degrees(rot)) + 90.0) % 180.0 - 90.0)
+            if d_ang > angle_tol:
+                continue
+            t = (m["x"] - f["p0"][0]) * ux + (m["y"] - f["p0"][1]) * uy
+            if not (0.0 <= t <= L):
+                continue
+            off = (m["x"] - f["p0"][0]) * -uy + (m["y"] - f["p0"][1]) * ux      # signed, + = left of the face
+            if abs(off) <= W + max(m["h"] * 2.5, 1.5 * W):
+                cands.append((abs(off), f, 1.0 if off > 0 else -1.0, (ux, uy), L))
+        cands.sort(key=lambda c: (c[0], -c[4]))
+        lines = []                                     # collinear duplicates (drawn twice, healed pieces) are one line
+        for c in cands:
+            if not any(abs(c[0] - x[0]) <= 0.01 / unit_m and c[2] == x[2] for x in lines):
+                lines.append(c)
+        if len(lines) != 1:
+            continue                                   # no face, or several faces in reach: not decided here
+        _, f, sg, (ux, uy), L = cands[0]
+        nx, ny = -uy * sg, ux * sg                     # toward the mark
+        mid = ((f["p0"][0] + f["p1"][0]) / 2, (f["p0"][1] + f["p1"][1]) / 2)
+        e = 0.02 / unit_m
+        behind = (mid[0] - nx * e, mid[1] - ny * e)
+        front = (mid[0] + nx * W / 2, mid[1] + ny * W / 2)
+        back = [q for q in panels if point_in_poly(behind[0], behind[1], q)]
+        if not back or 2 * poly_area(back[0]) / sum(math.dist(back[0][k], back[0][(k + 1) % len(back[0])])
+                                                    for k in range(len(back[0]))) < 3 * W:
+            continue                                   # the face is no slab edge (or the "slab" is a thin strip)
+        if any(point_in_poly(front[0], front[1], q) for q in panels):
+            continue                                   # a slab cell on the mark side: not an undrawn face
+        if f["handle"] in used:
+            key = next(k for k, v in rebound.items() if v["face"] == f["handle"])
+            rebound[mi] = dict(rebound[key])
+            continue
+        # stretches of the face line already owned by an existing band at this offset
+        t_axis = lambda p: p[0] * ux + p[1] * uy
+        t0, t1 = sorted((t_axis(f["p0"]), t_axis(f["p1"])))
+        full = [f["p0"], f["p1"], (f["p1"][0] + nx * W, f["p1"][1] + ny * W), (f["p0"][0] + nx * W, f["p0"][1] + ny * W)]
+        cuts = []
+        for b in bands:
+            if b.get("kind") == "STRAIGHT" and overlap_area(full, b["polygon"]) > (0.01 / unit_m) ** 2:
+                ts = [t_axis(q) for q in b["polygon"]]
+                cuts.append((min(ts), max(ts)))
+        pieces = GN._subtract((t0, t1), cuts)
+        o0 = f["p0"][0] * -uy + f["p0"][1] * ux                 # face offset on the left normal
+        lo, hi = sorted((o0, o0 + sg * W))
+        out = []
+        for a, b in pieces:
+            if (b - a) * unit_m < 0.3:
+                continue
+            nn = (-uy, ux)
+            poly = [(ux * a + nn[0] * lo, uy * a + nn[1] * lo), (ux * b + nn[0] * lo, uy * b + nn[1] * lo),
+                    (ux * b + nn[0] * hi, uy * b + nn[1] * hi), (ux * a + nn[0] * hi, uy * a + nn[1] * hi)]
+            out.append({"kind": "STRAIGHT", "u": (ux, uy), "n": nn, "t0": a, "t1": b, "lo_off": lo, "hi_off": hi,
+                        "width": W, "length": b - a, "handles": [f["handle"]], "faces_a": [f["handle"]],
+                        "faces_b": [], "strips": 1, "rule": "SINGLE_FACE_INFERRED", "state": "ACCEPTED",
+                        "polygon": poly, "width_native": W})
+        if not out:
+            continue
+        used.add(f["handle"])
+        rebound[mi] = {"face": f["handle"], "bands": out}
+    for b in [b for v in {id(v["bands"]): v for v in rebound.values()}.values() for b in v["bands"]]:
+        new_b.append(b)
+    return new_b, rebound
 
 
 def band_length_native(b):
