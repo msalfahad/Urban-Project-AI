@@ -31,7 +31,7 @@ ROOT = Path(__file__).resolve().parents[2]
 V3 = ROOT / "engine/profiles/URBAN_M4_GENERIC_CONVENTIONS_V3.json"
 
 
-def _set(path):
+def _set(path, conflict=False):
     doc = ezdxf.new("R2018")
     doc.header["$INSUNITS"] = 4
     m = doc.modelspace()
@@ -62,6 +62,8 @@ def _set(path):
     beam(0, 200, 15000 - 200, 300)
     T("CB1", 1500, -60)
     T("CB1", 6000, -60)
+    if conflict:                                  # a second, different mark printed on CB1's second span
+        T("B1", 6800, -60)
     # B1 simple beam on y = 6000: columns 0 / 5000 / 10000, faces through
     for x in (0, 5000, 10000):
         col(x, 6000)
@@ -183,3 +185,26 @@ def test_bar_mass_is_conserved_and_partial_missing_recorded(run):
     st = {r["COMPONENT_ID"]: r["REBAR_STATE"] for r in reg}
     assert all(st[f"BEAMS:GF:{p}"] == "PARTIAL_MISSING" for p in ln["pieces"])        # no through top bars printed
     assert sum(1 for i in items if i["item_id"].startswith("U-S:") and "TOP_THROUGH" in i["item_id"]) >= 3
+
+
+def test_a_mapped_span_with_two_marks_keeps_its_line_bars_as_exposure(tmp_path):
+    """CB1's second span also carries 'B1': the section stays unresolved (a printed conflict is preserved), and the
+    bars the line allocates to that span are held as exposure - never dropped (bar mass conserved)."""
+    I = UI.read(_set(tmp_path / "cbx.dxf", conflict=True))
+    conv = GR.merge_conventions(json.loads(V3.read_text()), {"profile": "T", "conventions": []})
+    D = GR.detect(I)
+    items, reg, risk = GR.items_from(D, conv, {})
+    PE.check(items, conv)
+    rec = next(r for r in D["sheets"].values() if r["sheet"]["role"] == "SLAB_PLAN")
+    ln = _line(rec, "CB1")
+    span2 = next(s for s in ln["spans"] if s["index"] == 2)["pieces"]
+    band = next(b for b in rec["beams"] if b["band_id"] == span2[0])
+    assert band["state"] == "MULTIPLE_MARKS"
+    held = [i for i in items if i.get("blocker") == "CB_SPAN_SECTION_UNRESOLVED"]
+    assert held and all(i["component_id"].endswith(span2[0]) and i["category"] == "UNRESOLVED" for i in held)
+    assert any(r["KIND"] == "CB_SPAN_MARK_CONFLICT" for r in risk)
+    groups = sum(x["mass_kg"][1] for x in ln["groups"])
+    pieces = sum(i["base"] for i in items if i["trade"] == "REINFORCEMENT" and i["category"] == "PROVISIONAL" and
+                 ":CB_" in i["item_id"] and any(i["component_id"].endswith(p) for p in ln["pieces"]))
+    pieces += sum(i["dimensions"]["allocated_kg_base"] for i in held)
+    assert abs(groups - pieces) < 1e-6

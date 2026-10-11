@@ -94,3 +94,50 @@ def test_blinding_overlap_needs_registration():
     two = [(X + 600, 600, X + 900, 900), (X + 600 + 30000, 600, X + 900 + 30000, 900)]
     r = GR._blinding_overlap(_D(two), [(1.7, 5.7, BAND, "SH2")], (0.1,))
     assert r["state"] == "NOT_REGISTERED" and r["area_m2"] == (0.0, 0.0, 0.0)
+
+
+def test_member_inside_a_face_hole_and_crossing_members_are_deducted_once():
+    # face 4 x 3 with a 1 x 1 hole at (1000..2000, 1000..2000); a column 0.4 inside the hole (not in the face);
+    # a band 4.0 x 0.10 at y 2500..2600 crossed by a second band 0.10 x 3.0 at x 3000..3100 (crossing 0.01 m2)
+    face = {"face_id": "F1", "class": "PANEL", "polygon": _rect(0, 0, 4000, 3000), "area_m2": 11.0, "t_m": 0.16,
+            "t_basis": "PRINTED_IN_PANEL", "hole_polygons": [_rect(1000, 1000, 2000, 2000)]}
+    rec = {"bands": [{"kind": "STRAIGHT", "polygon": _rect(0, 2500, 4000, 2600)},
+                     {"kind": "STRAIGHT", "polygon": _rect(3000, 0, 3100, 3000)}],
+           "column_boxes": [(1300, 1300, 1700, 1700)]}
+    slab = {"faces": [face]}
+    GR._slab_m4(slab, rec, 0.001, _conv(), False, [], "SH1")
+    assert face["member_overlap_m2"] == pytest.approx(0.40 + 0.30 - 0.01)
+    assert face["area_m2"] == pytest.approx(11.0 - 0.69)
+
+
+def test_convex_union_is_exact_where_four_outlines_meet():
+    sq = [_rect(0, 0, 2, 2), _rect(1, 0, 3, 2), _rect(0, 1, 2, 3), _rect(1, 1, 3, 3)]
+    area, pair, deepest = GR._convex_union_area(sq)
+    assert area == pytest.approx(9.0) and deepest == 4
+    assert GR._convex_union_area([_rect(0, 0, 1, 1), _rect(5, 5, 6, 6)])[0] == pytest.approx(2.0)
+
+
+def test_blinding_union_counts_each_square_metre_once():
+    # the strip of test_blinding_overlap_on_footing_blinding, plus a second strip crossing it over the first
+    # footing: x 700..800 (0.10 wide) from y -50000.. on the ground-beam plan; p = 0.10
+    cross = {"kind": "STRAIGHT", "u": (0.0, 1.0), "lo_off": -(X + 800.0), "hi_off": -(X + 700.0), "t0": 0.0,
+             "t1": 3000.0}
+    strips = [(1.71, 5.7, BAND, "SH2"), (0.3, 3.0, cross, "SH2")]
+    r = GR._blinding_union(_D(COLS), [(1.5, 1.5)] * 3, [None] * 3, strips, [{}, {}], (0.10,))
+    assert r["state"] == "REGISTERED"
+    shapely = pytest.importorskip("shapely.geometry")
+    from shapely.ops import unary_union
+    s1 = shapely.box(900, 500, 6600, 1000)                           # first strip +- p
+    s2 = shapely.box(600, 0, 900, 3000)                              # crossing strip +- p (x 600..900)
+    F = unary_union([shapely.box(-100, -100, 1600, 1600), shapely.box(5900, -100, 7600, 1600),
+                     shapely.box(-100, 5900, 1600, 7600)])
+    beams = unary_union([s1, s2]).difference(F).area * 1e-6
+    # the footings here have no placed outline (foot_box None): their blinding is added whole, the strips are
+    # still registered on the foundation plan through the ground-beam columns
+    assert r["free_footings"] == 3
+    assert r["placed_union_m2"][0] == pytest.approx(unary_union([s1, s2]).area * 1e-6)
+    assert r["strip_strip_m2"][0] == pytest.approx(s1.intersection(s2).area * 1e-6)
+    placed = GR._blinding_union(_D(COLS), [(1.5, 1.5)] * 3, [(0, 0, 1500, 1500), (6000, 0, 7500, 1500),
+                                                            (0, 6000, 1500, 7500)], strips, [{}, {}], (0.10,))
+    assert placed["beams_m2"][0] == pytest.approx(beams)
+    assert placed["footings_m2"][0] == pytest.approx(F.area * 1e-6)

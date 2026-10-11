@@ -46,3 +46,9 @@ research/urban_engine_m2_generalization/**/*.pdf
 research/urban_engine_m3_recovery/**/crops/
 research/urban_engine_m3_recovery/**/*.png
 research/urban_engine_m3_recovery/**/*.pdf
+# M4: generated workbooks / PDFs, the machine run log, review sheets with crops (client drawing content)
+research/urban_engine_m4_correctness/**/*.pdf
+research/urban_engine_m4_correctness/**/*.png
+research/urban_engine_m4_correctness/**/crops/
+research/urban_engine_m4_correctness/**/run_log.json
+research/urban_engine_m4_correctness/.m3_snapshot.json

@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 import time
 from collections import Counter
@@ -40,7 +41,10 @@ from engine.source import family_coverage as FC           # noqa: E402
 from engine.source import arch_evidence as AE             # noqa: E402
 from engine.source import generic_route as GR             # noqa: E402
 from engine.source import provisional_estimate as PE      # noqa: E402
+from engine.source import ocr_review as OR                # noqa: E402
 from tools import m2_overlay as OV                        # noqa: E402
+from tools import m4_overlay as OV4                       # noqa: E402
+from tools import m4_reports as MR                        # noqa: E402
 from tools import urban_intake as UI                      # noqa: E402
 from tools import urban_structural_boq as M1              # noqa: E402
 
@@ -168,7 +172,7 @@ def missing_steel_html(rc):
 
 
 def compute(drawings, *, conventions=None, overrides=None, profile=None, project=None, route="auto", cache_dir=None,
-            evidence=None, arch=None):
+            evidence=None, arch=None, evidence_review=None):
     prof = None
     if profile:
         prof = json.loads(Path(profile).read_text(encoding="utf-8")) if not isinstance(profile, dict) else profile
@@ -191,8 +195,15 @@ def compute(drawings, *, conventions=None, overrides=None, profile=None, project
     t = step("2 inventory", t)
     overrides = dict(overrides or {})
     ev = load_evidence(evidence) if isinstance(evidence, (str, Path)) else evidence
+    review = None
+    if ev and evidence_review:                 # M4: a second reading checks every OCR record; never promotes one
+        rd = json.loads(Path(evidence_review).read_text(encoding="utf-8")) if isinstance(evidence_review, (str, Path)) \
+            else evidence_review
+        review = OR.review(ev, rd.get("readings", rd))
+        ev = OR.apply(ev, review)
     arch_in = M1.accept(arch) if arch else []
     res = route_generic(inputs, conventions, overrides, prof, cache_dir, evidence=ev, arch=arch_in)
+    res["generic"]["ocr_review"] = review
     t = step("3-5 generic detection, quantities, conventions", t)
     items = res["items"]
     PE.check(items, res["conv"])
@@ -236,6 +247,7 @@ def compute(drawings, *, conventions=None, overrides=None, profile=None, project
             "ground_beam_classes": dict(sorted(Counter(v["class"] for v in g["arch"]["bands"].values()).items()))},
         "continuous_beam_lines": dict(sorted(Counter(ln["state"] for r in g["D"]["sheets"].values()
                                                      for ln in r.get("cb_lines", [])).items())),
+        "ocr_review": None if review is None else dict(sorted(Counter(x["outcome"] for x in review).items())),
         "detail_evidence": None if not ev else {
             "document": ev.get("document"), "records": dict(sorted(Counter(r["state"] for r in ev["records"]).items())),
             "ground_beam_details": [{"detail_id": d["detail_id"], "condition": d["condition"], "ocr": d["ocr"],
@@ -277,6 +289,90 @@ def files(R, *, as_of):
         for name, svg in OV.sheet_svgs(g["D"]).items():
             out[f"overlays/{name}.svg"] = svg
         out["OVERLAYS.html"] = OV.html(g["D"], banner=BANNER)
+        if is_m4(R):
+            out.update(m4_files(R))
+    return out
+
+
+def is_m4(R):
+    """the M4 registers follow the M4 conventions (V3): an M2 / M3 run writes exactly what it wrote before."""
+    return bool(R.get("generic")) and "CB_SPAN_MATCH_TOL_M" in R["conv"].items
+
+
+def m4_tables(R):
+    g = R["generic"]
+    D, items, arch = g["D"], R["items"], g.get("arch")
+    if "m4_tables" not in g:
+        reg = MR.missing_register(D, items, g["register"], arch, g.get("previous_register"))
+        g["m4_tables"] = {
+            "MISSING_REINFORCEMENT_REGISTER": reg, "MISSING_REINFORCEMENT_SUMMARY": MR.missing_summary(reg),
+            "UNRESOLVED_CONCRETE_EXCEPTIONS": MR.unresolved_concrete(D, items, arch),
+            "CB_LINES": MR.cb_lines(D), "CB_PHYSICAL_BARS": MR.cb_bars(D),
+            "ARCH_GB_EXTERIOR": MR.gb_exterior(D, items, arch) if arch else [],
+            "LINTEL_OPENINGS": MR.lintels(arch, items) if arch else [],
+            "SLAB_FACES": MR.slab_faces(D, items), "OCR_DERIVED_ITEMS": MR.ocr_items(items),
+            "CONFLICTS": MR.conflicts(g["risk"]),
+            "OCR_REVIEW": [dict(x, applies_to="; ".join(f"{a} {b}" for a, b in x["applies_to"]))
+                           for x in (g.get("ocr_review") or [])]}
+    return g["m4_tables"]
+
+
+def m4_files(R):
+    g = R["generic"]
+    D, items, arch = g["D"], R["items"], g.get("arch")
+    out = {f"{k}.csv": M1.csv_text(v) for k, v in m4_tables(R).items() if v}
+    T = m4_tables(R)
+    loc = MR.locate(D, arch)
+    polys = {k: v["poly"] for k, v in loc.items()}
+    by_sheet = {}
+    for r in T["UNRESOLVED_CONCRETE_EXCEPTIONS"]:
+        by_sheet.setdefault(r["SHEET"], []).append(r)
+    secs = []
+    exc = [(f"{sid}: numbered unresolved concrete (UNRESOLVED_CONCRETE_EXCEPTIONS.csv NO)",
+            OV4.exceptions_svg(D["sheets"][sid], rows, polys)) for sid, rows in sorted(by_sheet.items())
+           if sid in D["sheets"]]
+    secs.append(("Unresolved concrete - numbered locations", "red: section or label unresolved; amber: lintel need "
+                 "unresolved (beam over the opening). The number is the NO column of the exception register.", exc))
+    secs.append(("Continuous beams - spans and supports", "pieces by span-matching state (green forward, blue "
+                 "reversed / inherited by the printed span sequence, amber ambiguous direction, red count or length "
+                 "conflict); labels are mark.span", [(sid, OV4.cb_svg(rec)) for sid, rec in sorted(D["sheets"].items())
+                                                      if rec.get("cb_lines")]))
+    gbs = [(sid, OV4.gb_exterior_svg(rec, arch, items)) for sid, rec in sorted(D["sheets"].items())
+           if rec["sheet"]["role"] == "GROUND_BEAM_PLAN"]
+    secs.append(("Exterior ground beams", "blue: exterior wall evidenced (exterior depth); amber: exterior wall but the "
+                 "inside level gives no deeper section (class section, conflict); orange: perimeter without a wall; "
+                 "red: no architectural registration; the printed inside level is shown", gbs))
+    secs.append(("Slab thickness basis", "green-mint: project default; teal: printed in the panel; pale teal: "
+                 "sheet-uniform; orange: no thickness; pink outline: member overlap deducted; numbers in cm",
+                 [(sid, OV4.slab_svg(rec)) for sid, rec in sorted(D["sheets"].items()) if rec.get("slab")]))
+    if "BLINDING_PROJECTION_M" in R["conv"].items:
+        secs.append(("Blinding footprints", "orange: footing blinding (footing + projection); blue: ground / strap "
+                     "beam strips registered onto the foundation plan; their overlap is deducted once",
+                     [("FOUNDATION", OV4.blinding_svg(D, R["conv"].base("BLINDING_PROJECTION_M")))]))
+    lint = []
+    for st, L in sorted(((arch or {}).get("lintels") or {}).items()):
+        sid = next((s for s, r in D["sheets"].items() if r["sheet"]["role"] == "SLAB_PLAN" and
+                    r["sheet"]["storey"] == st), None)
+        if sid:
+            lint.append((f"{st} openings on {sid}", OV4.lintel_svg(D["sheets"][sid], L["openings"],
+                                                                  L["registration"], items, st)))
+    if lint:
+        secs.append(("Lintels", "green: measured (no beam over the opening); amber: a beam covers the opening (need "
+                     "unresolved); red: outside the schedule", lint))
+    secs.append(("Stair zones", "drawn tread lines inside each stair zone", [(sid, OV4.stair_svg(rec)) for sid, rec
+                                                                             in sorted(D["sheets"].items())]))
+    rows = T["MISSING_REINFORCEMENT_SUMMARY"]
+    tbl = "<table><tr><th>by</th><th>value</th><th>components</th><th>concrete without full bars m3</th></tr>" + \
+        "".join(f"<tr><td>{r['BY']}</td><td>{r['VALUE']}</td><td>{r['COMPONENTS']}</td>"
+                f"<td>{r['CONCRETE_WITHOUT_FULL_BARS_M3']:.2f}</td></tr>" for r in rows) + "</table>"
+    secs.append(("Missing reinforcement", "counts and the concrete left without bar data - never kg by ratio" + tbl,
+                 []))
+    out["M4_VISUAL_QA.html"] = OV4.html(secs, banner=BANNER)
+    for title, _, svgs in secs:
+        for cap, svg in svgs:
+            if svg:
+                key = re.sub(r"[^A-Za-z0-9]+", "_", f"{title.split(' - ')[0]}_{cap.split(':')[0]}").strip("_")
+                out[f"overlays_m4/{key}.svg"] = svg
     return out
 
 
@@ -305,6 +401,23 @@ def workbook_model(R):
                               "widths": {0: 18, 1: 12},
                               "note": "Components without a full bar quantity, by family and storey: counts, never "
                                       "0 kg, and in no total."}
+    if is_m4(R):
+        notes = {"MISSING_REINFORCEMENT_REGISTER": "One row per component without a full bar quantity: what is "
+                                                   "missing, what detail would supply it. Counts, never kg by ratio.",
+                 "UNRESOLVED_CONCRETE_EXCEPTIONS": "Every unresolved concrete item, numbered as on the M4 visual QA "
+                                                   "overlay. Exposure only: in no total.",
+                 "CB_LINES": "Continuous-beam lines: printed span sequence against the drawn spans.",
+                 "ARCH_GB_EXTERIOR": "Perimeter ground beams: the architectural plan decides the exterior detail.",
+                 "LINTEL_OPENINGS": "Architectural openings and the lintel outcome of each.",
+                 "OCR_DERIVED_ITEMS": "Quantities built on OCR-read typical details (unreviewed, never verified).",
+                 "OCR_REVIEW": "A second reading of every OCR record. It never promotes a record.",
+                 "CONFLICTS": "Two readings of the source that disagree: read before use."}
+        for name, rows in m4_tables(R).items():
+            if name not in notes or not rows:
+                continue
+            hdr = list(rows[0].keys())
+            model[name[:31]] = {"kind": "TABLE", "header": hdr,
+                                "rows": [[M1._cell(r.get(k)) for k in hdr] for r in rows], "note": notes[name]}
     model["REBAR_COMPLETENESS"] = {"kind": "TABLE", "header": rk,
                                    "rows": [[M1._cell(r.get(k)) for k in rk] for r in rc["rows"]],
                                    "wrap_cols": [4], "widths": {0: 40, 4: 70},
@@ -333,6 +446,8 @@ def write_all(R, out, *, as_of, pdf=True, xlsx=True, created=None):
         res["pdf"] = M1.print_pdf(out / "BOQ_REPORT.html", out / "BOQ_REPORT.pdf")
         if (out / "OVERLAYS.html").exists():
             res["overlays_pdf"] = M1.print_pdf(out / "OVERLAYS.html", out / "VISUAL_QA_OVERLAYS.pdf")
+        if (out / "M4_VISUAL_QA.html").exists():
+            res["m4_visual_qa_pdf"] = M1.print_pdf(out / "M4_VISUAL_QA.html", out / "M4_VISUAL_QA.pdf")
     R["log"].append({"step": "8 export", "seconds": round(time.perf_counter() - t, 3)})
     (out / "run_log.json").write_text(M1._jdump({"steps": R["log"], "seconds_compute": R["seconds"],
                                                  "manual_interventions_during_run": 0, "outputs": res}),
@@ -358,9 +473,12 @@ def main(argv=None):
                                       "in the same schema): typical-detail bars the DXF does not carry")
     p.add_argument("--arch", nargs="+", help="architectural DXF with the ground-floor plan (M4): which perimeter "
                                               "ground beams carry an exterior wall, and the floor levels inside")
+    p.add_argument("--evidence-review", help="independent readings of the OCR records (M4, ocr_review): a record "
+                                              "the second reading contradicts is rejected; none is promoted")
     a = ap.parse_args(argv)
     R = compute(a.drawings, conventions=a.conventions, overrides=M1.parse_sets(a.set), profile=a.profile,
-                route=a.route, cache_dir=a.cache, evidence=a.evidence, arch=a.arch)
+                route=a.route, cache_dir=a.cache, evidence=a.evidence, arch=a.arch,
+                evidence_review=a.evidence_review)
     writer = write_all if R.get("generic") else M1.write_all
     res = writer(R, a.out, as_of=a.as_of, pdf=not a.no_pdf, xlsx=not a.no_xlsx)
     s = R["summary"]

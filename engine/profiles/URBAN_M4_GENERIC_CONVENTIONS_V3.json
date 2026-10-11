@@ -53,7 +53,7 @@
   },
   {
    "id": "BLINDING_OVERLAP",
-   "title": "Blinding under a ground beam where it runs over a footing",
+   "title": "Blinding where outlines overlap (beam strip on a footing, strips at a junction, footing projections)",
    "kind": "choice",
    "options": [
     "DEDUCT"
@@ -61,7 +61,7 @@
    "base": "DEDUCT",
    "provenance": "STANDARD_PRACTICE",
    "source": "one blinding layer under footings and beams",
-   "rationale": "The beam strip (band + projection) that lies on a footing's blinding (footing + projection) is deducted from the beam blinding: the layer is cast once. The plans are registered on the columns landing in the footings; without a registration the overlap is a coverage risk."
+   "rationale": "The blinding layer is cast once: its plan is the union of the footing outlines (+ projection) and the beam strips (band + projection each side), registered on the foundation plan by the columns landing in the footings, computed exactly by inclusion-exclusion of the convex outlines. An outline without a place (a footing by its label only, a curved band) is added whole. Without a registration the overlap is a coverage risk."
   },
   {
    "id": "BLINDING_PROJECTION_M",

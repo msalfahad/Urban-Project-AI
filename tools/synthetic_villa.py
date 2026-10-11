@@ -22,6 +22,16 @@ design (a separate random stream, so the M2 variants draw exactly as before): a 
 some line-end beams, from outside the end column to 10 mm past its face (it made M2 drop the whole strip), and one
 footing drawn by its label only (no outline). The truth is unchanged: the beam still runs face to face, the footing is still its schedule size.
 
+M4 VARIANT (generate(..., m4=True)): the source-evidence cases of M4, from the design (no random draw, so the other
+variants draw exactly as before): on odd seeds the untagged span of line 0 is a different beam, B7 (same width, 0.10
+deeper, a schedule row with no label on the plan) - alignment is then the wrong evidence for its section; and the
+second x line is one continuous beam CB1 (0.10 deeper than its line type) labelled on its first span only, whose
+schedule row prints the span sequence (L1-M ... axis to axis) and per-span bottom / support / stirrup bars; on seeds
+2, 3 mod 4 with three or more spans the line's last span is another beam, B8 (0.20 deeper, unlabelled), past the
+printed sequence - alignment would carry CB1's section onto it. The truth
+holds CB1's concrete on every span; CB1's bars are a physical-bar model, so they stay out of STEEL_BEAMS (scored
+separately as CB_CONCRETE / CB_SPANS).
+
 Conventions the truth uses are the generic convention set's BASE values (cover, anchorage, lap, hook table), stated
 in the truth file, so the comparison isolates detection, geometry and parsing.
 """
@@ -117,7 +127,7 @@ def design(seed):
            "opening": True}
     return {"seed": seed, "xs": xs, "ys": ys, "cols": cols, "ctypes": [f"C{c + 1}" for c in ctypes],
             "btypes": [f"B{b + 1}" for b in btypes], "ftypes": [f"F{f + 1}" for f in ftypes], "var": var,
-            "slab_t": {"GF": 0.16, "1F": 0.16}, "heights": {"GF": 4.0, "1F": 3.6}, "R": R}
+            "slab_t": {"GF": 0.16, "1F": 0.16}, "heights": {"GF": 4.0, "1F": 3.6}, "R": R, "m4": {}}
 
 
 def _dim(col, axis):
@@ -162,6 +172,25 @@ def beams_of(D):
         cand = [b for b in out if b["axis"] == "y" and b["B"] >= 0.25]
         if cand:
             cand[0]["drawn_B"] = round(cand[0]["B"] - 0.05, 3)                   # drawn narrower than scheduled
+    if D["var"].get("m4"):
+        if D["seed"] % 2 == 1 and len(line0) >= 2:      # the untagged span is another beam of the same width
+            u = line0[1]
+            u["type"], u["H"] = "B7", round(u["H"] + 0.10, 3)
+            D["m4"]["B7"] = (u["B"], u["H"])
+        cb = [b for b in out if b["axis"] == "x" and b["line"] == 1]
+        tail = None
+        if len(cb) >= 3 and D["seed"] % 4 in (2, 3):     # the line continues past the printed spans as another beam
+            tail = cb.pop()
+            tail["type"], tail["H"], tail["tagged"] = "B8", round(tail["H"] + 0.20, 3), False
+        if len(cb) >= 2:
+            B, H = cb[0]["B"], round(cb[0]["H"] + 0.10, 3)
+            for n, b in enumerate(cb):
+                b["type"], b["B"], b["H"], b["drawn_B"], b["cb"] = "CB1", B, H, B, True
+                b["tagged"] = n == 0
+            D["m4"]["CB1"] = (B, H, [round(b["b"]["x"] - b["a"]["x"], 3) for b in cb])
+            if tail is not None:
+                tail["B"] = tail["drawn_B"] = B
+                D["m4"]["B8"] = (B, tail["H"])
     for b in out:
         b["mid_design"] = ((b["a"]["x"] + b["b"]["x"]) / 2, (b["a"]["y"] + b["b"]["y"]) / 2)
     return out
@@ -183,6 +212,17 @@ def schedule_rows(D):
         rows["BEAM"].append({"mark": b, "B": B, "H": H, "bot": (3, 16), "top": (2, 12), "sti": (5, 8)})
     if D["var"]["curved"]:
         rows["BEAM"].append({"mark": "B9", "B": 0.2, "H": 0.5, "bot": (2, 14), "top": (2, 12), "sti": (5, 8)})
+    rows["CB"] = []
+    if D["var"].get("m4"):
+        beams_of(D)                                       # fills D["m4"]
+        for mk in ("B7", "B8"):
+            if mk in D["m4"]:
+                B, H = D["m4"][mk]
+                rows["BEAM"].append({"mark": mk, "B": B, "H": H, "bot": (3, 16), "top": (2, 12), "sti": (5, 8)})
+        if "CB1" in D["m4"]:
+            B, H, spans = D["m4"]["CB1"]
+            rows["CB"].append({"mark": "CB1", "B": B, "H": H, "spans": spans, "bot": [(3, 16)] * len(spans),
+                               "mid": [(3, 16)] * (len(spans) - 1), "str": [(5, 8)] * len(spans)})
     return rows
 
 
@@ -202,6 +242,8 @@ def truth(D):
     sched_b = {r["mark"]: r for r in rows["BEAM"]}
     t = {"FOOTINGS": 0.0, "COLUMNS": 0.0, "BEAMS_TOTAL_DEPTH": 0.0, "BEAMS_BELOW_SLAB": 0.0, "SLABS": 0.0,
          "STEEL_FOOTINGS": 0.0, "STEEL_COLUMNS_MAIN": 0.0, "STEEL_BEAMS": 0.0}
+    if D["var"].get("m4"):
+        t.update(CB_CONCRETE=0.0, CB_SPANS=0)
     comp = {"footings": [], "columns": [], "beams": [], "panels": []}
     fr = {r["mark"]: r for r in rows["FOOTING"]}
     for c in D["cols"]:
@@ -228,8 +270,17 @@ def truth(D):
         for bm in beams:
             sb = sched_b.get(bm["type"])
             comp["beams"].append({"storey": st, "axis": bm["axis"], "a": (bm["a"]["x"], bm["a"]["y"]),
-                                  "b": (bm["b"]["x"], bm["b"]["y"]), "type": bm["type"], "in_schedule": bool(sb),
-                                  "at": to_drawing(D, st, *bm["mid_design"]), "tagged": bm["tagged"]})
+                                  "b": (bm["b"]["x"], bm["b"]["y"]), "type": bm["type"],
+                                  "in_schedule": bool(sb) or bool(bm.get("cb")),
+                                  "at": to_drawing(D, st, *bm["mid_design"]), "tagged": bm["tagged"]}
+                                 | ({"cb": bool(bm.get("cb")), "B": bm["B"], "H": bm["H"], "clear": bm["clear"]}
+                                    if D["var"].get("m4") else {}))
+            if bm.get("cb"):                              # M4: the continuous beam's concrete; its bars are scored apart
+                t["BEAMS_TOTAL_DEPTH"] += bm["B"] * bm["H"] * bm["clear"]
+                t["BEAMS_BELOW_SLAB"] += bm["B"] * (bm["H"] + tt) * bm["clear"]
+                t["CB_CONCRETE"] += bm["B"] * bm["H"] * bm["clear"]
+                t["CB_SPANS"] += 1
+                continue
             if not sb:
                 continue
             t["BEAMS_TOTAL_DEPTH"] += sb["B"] * sb["H"] * bm["clear"]
@@ -478,6 +529,17 @@ def write_dxf(D, path):
         place(bb, T["beam"], [r["mark"], f"{r['B'] * u:g}", f"{r['H'] * u:g}", r["bot"][0], r["bot"][1], r["top"][0],
                               r["top"][1], r["sti"][0], r["sti"][1]], y)
         y -= 0.6
+    for r in rows["CB"]:                                  # M4: a continuous beam prints its span sequence
+        n = len(r["spans"])
+        tags = (["BEAM-NAME", T["beam"][1], T["beam"][2]] + [f"L{k}-M" for k in range(1, n + 1)] +
+                [x for k in range(1, n + 1) for x in (f"BOT{k}-B", f"BOT{k}-D")] +
+                [x for k in range(1, n) for x in (f"MID{k}-B", f"MID{k}-D")] +
+                [x for k in range(1, n + 1) for x in (f"STR{k}-B", f"STR{k}-D")])
+        vals = ([r["mark"], f"{r['B'] * u:g}", f"{r['H'] * u:g}"] + [f"{x:.2f}" for x in r["spans"]] +
+                [x for nb, d in r["bot"] for x in (nb, d)] + [x for nb, d in r["mid"] for x in (nb, d)] +
+                [x for nb, d in r["str"] for x in (nb, d)])
+        place(row_block(f"CB_ROW_{r['mark']}", tags), tags, vals, y)
+        y -= 0.6
     doc.saveas(path)
     D["defects_applied"] = dict(applied, **m3_applied)
     return path
@@ -518,12 +580,13 @@ def profile(D):
                             for k, h in D["heights"].items()]}
 
 
-def generate(out_dir, seed, defects=False, m3=False):
+def generate(out_dir, seed, defects=False, m3=False, m4=False):
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
     D = design(seed)
     D["var"]["defects"] = defects if defects == "hard" else bool(defects)
     D["var"]["m3"] = bool(m3)
+    D["var"]["m4"] = bool(m4)
     dxf = write_dxf(D, out / f"villa_{seed}.dxf")
     T = truth(D)
     T["defects_applied"] = D.get("defects_applied", {})
@@ -533,6 +596,7 @@ def generate(out_dir, seed, defects=False, m3=False):
 
 
 if __name__ == "__main__":
-    args = [a for a in sys.argv[1:] if a not in ("--defects", "--m3")]
+    args = [a for a in sys.argv[1:] if a not in ("--defects", "--m3", "--m4")]
     for sd in args[1:]:
-        print(generate(args[0], int(sd), defects="--defects" in sys.argv, m3="--m3" in sys.argv))
+        print(generate(args[0], int(sd), defects="--defects" in sys.argv, m3="--m3" in sys.argv,
+                       m4="--m4" in sys.argv))

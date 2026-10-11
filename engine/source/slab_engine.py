@@ -167,7 +167,14 @@ def panels(ents, edge_layers, band_pieces, column_boxes, unit_m, *, default_t_m=
             if host and st["area"] > 1.5 * abs(MD.poly_area(host[0]["polygon"])):
                 cls = "OPEN_BOUNDARY"              # a panel leaked into the beam strip through an unclosed end
         tg = [t for t in tags if MD.point_in_poly(t["x"], t["y"], poly)] if cls == "PANEL" else []
+        # M4: the hole rings and the number of arc edges travel with the face (an independent area check needs them;
+        # the polygon is the node ring, a chord of every arc edge)
+        hole_polys = [[arr.nodes[arr.edges[ei]["n0"]] if fw else arr.nodes[arr.edges[ei]["n1"]] for ei, fw in hc]
+                      for hc in st.get("hole_cycles", [])]
+        n_arc = sum(1 for c in [st["cycle"]] + list(st.get("hole_cycles", [])) for ei, _ in c
+                    if arr.edges[ei]["kind"] == "A")
         faces.append({"face_id": st["site_id"], "class": cls, "area_m2": st["area"] * unit_m ** 2,
+                      "hole_polygons": hole_polys, "arc_edges": n_arc,
                       "perimeter_m": st["perimeter"] * unit_m, "point": pt, "polygon": poly,
                       "thickness_tags": sorted({t["t_m"] for t in tg}), "tag_ids": [t["text_id"] for t in tg],
                       "opening_labels": sorted({k for t in inside_txt for k in opening_keywords(t["value"])}),

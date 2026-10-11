@@ -84,13 +84,20 @@ def coverage(D, items, risk, scan, evidence=None):
                 ev.append(f"{via_sched} plan marks bound through their schedule table's family")
             state, where = ("COUNTED_IN_PARENT", "BEAMS / SLABS") if (via_sched or lab) else (None, "")
             reason = "measured inside the beam and slab families; no separate cantilever line"
-        elif fam == "LINTELS":
-            if caps.get("LINTEL"):
+        elif fam in ("LINTELS", "STAIRS"):
+            if fam == "LINTELS" and caps.get("LINTEL"):
                 ev.append(f"{caps['LINTEL']} lintel captions in the detail evidence")
-        elif fam == "STAIRS":
-            if stair:
+            if fam == "STAIRS" and stair:
                 ev.append(f"{len(stair)} stair zones ({sum(f['area_m2'] for f in stair):.2f} m2) found by their tread "
                           "lines and excluded from the slabs")
+            p, u = fam_items[(fam, "PROVISIONAL")], fam_items[(fam, "UNRESOLVED")]
+            if p or u:                                # M4: measured from the architectural openings / drawn treads
+                ev.append(f"{p} measured, {u} unresolved")
+                state = "PARTLY_QUANTIFIED" if u or not p else "QUANTIFIED"
+                state = "DETECTED_NOT_QUANTIFIED" if not p else state
+                where = fam
+                reason = ("openings of the architectural plans bound to the printed lintel schedule" if fam == "LINTELS"
+                          else "stair runs from the drawn treads, the storey rise and the waist")
         elif fam == "DOMES":
             if arcs:
                 nb = sum(1 for b in arcs if b.get("state") == "BOUND")

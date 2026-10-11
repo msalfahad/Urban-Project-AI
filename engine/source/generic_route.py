@@ -917,7 +917,30 @@ def items_from(D, conv, heights=None, evidence=None, arch=None):
                                      exposure_low=b["net_plan_m2"] * hl, exposure_high=b["net_plan_m2"] * hh,
                                      expression=f"{b['net_plan_m2']:.3f} m2 x H (H not established; "
                                                 f"{hl:g} - {hh:g} m at this width)", **common))
-                reg(cid, fam, st, "MISSING_DATA", "no section for the band (" + b["state"] + ")")
+                cbx = (cbm or {}).get("steel", {}).get(b["band_id"])
+                if cbx:
+                    # M4: a span the printed sequence of a continuous beam maps, but whose section is unresolved (two
+                    # marks on it): the bars the line allocates to it are held as exposure, never dropped
+                    kg = [0.0, 0.0]
+                    for (role, d), (lo, mid, hi) in sorted(cbx["values"].items()):
+                        if hi <= 0:
+                            continue
+                        kg = [kg[0] + lo, kg[1] + hi]
+                        items.append(PE.item(item_id=f"U-S:{cid}:CB_{role}:D{d:g}", component_id=cid,
+                                             trade="REINFORCEMENT", family=fam, storey=st, category="UNRESOLVED",
+                                             support="NO_GEOMETRY", confidence="LOW",
+                                             blocker="CB_SPAN_SECTION_UNRESOLVED", dia_mm=d,
+                                             exposure_low=lo, exposure_high=hi,
+                                             dimensions={"allocated_kg_base": round(mid, 6)},
+                                             source=f"{common['source']}; continuous-beam line {cbx['line']}",
+                                             expression=f"{role.lower()} bars the line {cbx['line']} allocates to this "
+                                                        f"span; the band's section is unresolved ({b['state']})"))
+                    risk.append({"KIND": "CB_SPAN_MARK_CONFLICT", "WHERE": sid,
+                                 "DETAIL": f"{cid}: the printed span sequence of line {cbx['line']} maps this band, "
+                                           f"which also carries {', '.join(b.get('marks') or [])} - section "
+                                           f"unresolved; its line bars {kg[0]:.1f} - {kg[1]:.1f} kg held as exposure"})
+                reg(cid, fam, st, "MISSING_DATA", "no section for the band (" + b["state"] + ")" +
+                    ("; continuous-beam bars held as exposure" if cbx else ""))
                 risk.append({"KIND": "BAND_" + b["state"], "WHERE": f"{sid}", "DETAIL": cid})
         for m in rec.get("marks", []):
             if m["state"] in ("TAG_UNBOUND", "AMBIGUOUS", "TYPE_NOT_IN_SCHEDULE"):
@@ -1178,7 +1201,7 @@ def _blinding_items(D, items, reg, risk, conv, src_file):
         return
     t_ = _trip(conv, "BLINDING_THICKNESS_M") if "BLINDING_THICKNESS_M" in conv.items else None
     under = _cv(conv, "BLINDING_UNDER", "FOOTINGS_ONLY")
-    foot, strips, n_f, n_s, skipped = [], [], 0, 0, 0
+    foot, foot_box, strips, strip_rec, n_f, n_s, skipped = [], [], [], [], 0, 0, 0
     for sid, rec in sorted(D["sheets"].items()):
         for f in rec.get("footings", []):
             dims = None
@@ -1198,25 +1221,35 @@ def _blinding_items(D, items, reg, risk, conv, src_file):
             if dims:
                 foot.append(dims)
                 n_f += 1
+                # M4: a drawn outline places the footing (its blinding can overlap a neighbour's or a beam strip's)
+                foot_box.append(f["box"] if f.get("box") and f.get("drawn_m") and dims == f["drawn_m"][:2] and
+                                rec["sheet"]["role"] == "FOUNDATION_PLAN" else None)
         if rec["sheet"]["role"] == "GROUND_BEAM_PLAN":
             bpoly = {x["band_id"]: x for x in rec.get("bands", [])}
             for b in rec.get("beams", []):
                 strips.append((b["net_plan_m2"], b["length_m"], bpoly.get(b["band_id"]), sid))
+                strip_rec.append(b)
                 n_s += 1
         for b in (rec.get("straps") or {}).get("bands", []):
             strips.append((b["net_plan_m2"], b["length_m"], b if b.get("u") else None, sid))
+            strip_rec.append(b)
             n_s += 1
     fA = [sum((L + 2 * p) * (W + 2 * p) for L, W in foot) for p in p_]
     sA = [sum(s[0] + 2 * p * s[1] for s in strips) for p in p_]
     overlap = None
     if "BLINDING_OVERLAP" in conv.items and under == "FOOTINGS_AND_GROUND_BEAMS":
-        overlap = _blinding_overlap(D, strips, p_)       # M4: the strip that runs over a footing is counted once
+        overlap = _blinding_union(D, foot, foot_box, strips, strip_rec, p_)   # M4: each square metre once
+        D["blinding_overlap"] = overlap                  # kept for the visual QA (registration shift per sheet)
         if overlap and overlap["state"] == "REGISTERED":
-            sA = [a - o for a, o in zip(sA, overlap["area_m2"])]
+            fA, sA = list(overlap["footings_m2"]), list(overlap["beams_m2"])
             risk.append({"KIND": "BLINDING_OVERLAP_DEDUCTED", "WHERE": "FOUNDATION",
-                         "DETAIL": f"{overlap['area_m2'][1]:.2f} m2 of ground / strap beam blinding lies on footing "
-                                   f"blinding ({overlap['strips_over_footings']} strips; plans registered on "
-                                   f"{overlap['matched']} footings): deducted from the beam blinding"})
+                         "DETAIL": f"blinding plan = union of the footing and beam-strip outlines: "
+                                   f"{overlap['area_m2'][1]:.2f} m2 of beam strip on footing blinding, "
+                                   f"{overlap['strip_strip_m2'][1]:.2f} m2 where strips cross, "
+                                   f"{overlap['footing_footing_m2'][1]:.2f} m2 where footing projections meet, each "
+                                   f"counted once ({overlap['strips_over_footings']} strips; plans registered on "
+                                   f"{overlap['matched']} footings; {overlap['free_strips']} strips and "
+                                   f"{overlap['free_footings']} footings without a placed outline added whole)"})
         elif overlap:
             risk.append({"KIND": "BLINDING_OVERLAP_NOT_ESTABLISHED", "WHERE": "FOUNDATION",
                          "DETAIL": f"the ground-beam and foundation plans could not be registered ({overlap['state']}):"
@@ -1257,6 +1290,165 @@ def _blinding_items(D, items, reg, risk, conv, src_file):
     if skipped:
         risk.append({"KIND": "BLINDING_FOOTING_WITHOUT_SIZE", "WHERE": "FOUNDATION",
                      "DETAIL": f"{skipped} footing records without a size: no blinding counted for them"})
+
+
+def _convex_union_area(polys):
+    """area of the union of convex polygons by inclusion-exclusion over every group of mutually overlapping
+    polygons (the intersection of convex polygons is convex, so each term is one clip): exact. Bounding boxes prune
+    the pairs. -> (area, sum of the pairwise overlaps, largest group of outlines meeting at one place)."""
+    bb = [(min(x for x, _ in q), min(y for _, y in q), max(x for x, _ in q), max(y for _, y in q)) for q in polys]
+    n = len(polys)
+    nb = defaultdict(set)
+    for i in range(n):
+        for j in range(i + 1, n):
+            if bb[i][0] < bb[j][2] and bb[j][0] < bb[i][2] and bb[i][1] < bb[j][3] and bb[j][1] < bb[i][3]:
+                nb[i].add(j)
+                nb[j].add(i)
+    total, pair, deepest = 0.0, 0.0, 1
+
+    def grow(c, members, cand):
+        nonlocal total, pair, deepest
+        for k in sorted(cand):
+            t = MD.clip_convex(c, polys[k])
+            if len(t) < 3:
+                continue
+            a = MD.poly_area(t)
+            if a <= 1e-12:
+                continue
+            m = members + 1
+            total += a if m % 2 else -a
+            pair += a if m == 2 else 0.0
+            deepest = max(deepest, m)
+            grow(t, m, {x for x in cand & nb[k] if x > k})
+    for i in range(n):
+        total += MD.poly_area(polys[i])
+        grow(polys[i], 1, {j for j in nb[i] if j > i})
+    return total, pair, deepest
+
+
+def _overlap_with_union(poly, convex):
+    """area of poly ∩ union(convex polygons): inclusion-exclusion over the groups of mutually overlapping convex
+    polygons that touch poly (each term clips poly by one convex intersection)."""
+    cand = [q for q in convex if MD.overlap_area(poly, q) > 1e-12]
+    total = 0.0
+
+    def grow(c, m, rest):
+        nonlocal total
+        for k in rest:
+            t = MD.clip_convex(c, cand[k])
+            if len(t) < 3 or MD.poly_area(t) <= 1e-12:
+                continue
+            a = MD.overlap_area(poly, t)
+            total += a if (m + 1) % 2 else -a
+            grow(t, m + 1, [x for x in rest if x > k])
+    for i, q in enumerate(cand):
+        total += MD.overlap_area(poly, q)
+        grow(q, 1, list(range(i + 1, len(cand))))
+    return total
+
+
+def _register_on_foundation(D):
+    """the translation of the ground-beam plan onto the foundation plan (column centres landing in the footings,
+    a centre-difference vote on a 0.05 m grid) -> (state, shift {sheet: (dx, dy)}, matched footings)."""
+    fp = next((r for r in D["sheets"].values() if r["sheet"]["role"] == "FOUNDATION_PLAN"), None)
+    gb = next((r for r in D["sheets"].values() if r["sheet"]["role"] == "GROUND_BEAM_PLAN"), None)
+    if fp is None:
+        return "NO_FOUNDATION_PLAN", {}, 0
+    u = D["unit_m"]
+    boxes = [f["box"] for f in fp.get("footings", []) if f.get("box")]
+    shift = {fp["sheet"]["sheet_id"]: (0.0, 0.0)}
+    if gb is None:
+        return "REGISTERED", shift, len(boxes)
+    cols = gb.get("column_boxes", [])
+    votes = Counter()
+    g = 0.05 / u
+    for fb in boxes:
+        fc = ((fb[0] + fb[2]) / 2, (fb[1] + fb[3]) / 2)
+        for c in cols:
+            cc = ((c[0] + c[2]) / 2, (c[1] + c[3]) / 2)
+            votes[(round((fc[0] - cc[0]) / g) * g, round((fc[1] - cc[1]) / g) * g)] += 1
+    if not votes:
+        return "NO_COMMON_MEMBERS", {}, 0
+    (dx, dy), n1 = votes.most_common(1)[0]
+    n2 = votes.most_common(2)[1][1] if len(votes) > 1 else 0
+    hit = sum(1 for fb in boxes if any(fb[0] <= (c[0] + c[2]) / 2 + dx <= fb[2] and
+                                       fb[1] <= (c[1] + c[3]) / 2 + dy <= fb[3] for c in cols))
+    if hit < 0.6 * max(1, len(boxes)) or n1 < 2 * max(1, n2):
+        return "NOT_REGISTERED", {}, hit
+    shift[gb["sheet"]["sheet_id"]] = (dx, dy)
+    return "REGISTERED", shift, hit
+
+
+def _strip_outline(b, band, pn, dx, dy):
+    """the blinding strip of a beam (its band +- p sideways) in the foundation frame, CCW; None when the band has no
+    straight frame or four-cornered outline."""
+    if band is not None and band.get("kind", "STRAIGHT") == "STRAIGHT" and band.get("u"):
+        uu, nn = band["u"], (-band["u"][1], band["u"][0])
+        lo, hi = band["lo_off"] - pn, band["hi_off"] + pn
+        return [(uu[0] * t_ + nn[0] * o + dx, uu[1] * t_ + nn[1] * o + dy)
+                for t_, o in ((band["t0"], lo), (band["t1"], lo), (band["t1"], hi), (band["t0"], hi))]
+    poly = b.get("polygon")
+    if not poly or len(poly) != 4 or b.get("kind", "STRAIGHT") != "STRAIGHT":
+        return None
+    e = max(range(4), key=lambda i: math.dist(poly[i], poly[(i + 1) % 4]))
+    (ax, ay), (bx, by) = poly[e], poly[(e + 1) % 4]
+    L = math.hypot(bx - ax, by - ay)
+    ux, uy = (bx - ax) / L, (by - ay) / L
+    nx, ny = -uy, ux
+    ts = [x * ux + y * uy for x, y in poly]
+    os_ = [x * nx + y * ny for x, y in poly]
+    t0, t1, o0, o1 = min(ts), max(ts), min(os_) - pn, max(os_) + pn
+    return [(ux * t_ + nx * o + dx, uy * t_ + ny * o + dy) for t_, o in ((t0, o0), (t1, o0), (t1, o1), (t0, o1))]
+
+
+def _blinding_union(D, foot, foot_box, strips, strip_rec, p_):
+    """M4: the blinding plan as the union of the footing outlines (+ p) and the beam strips (band +- p), each
+    registered on the foundation plan: an area under two outlines (a strip on a footing, two strips at a junction,
+    two footings' projections) is counted once. Outlines without a place (a footing by its label only, a curved
+    band) are added whole. -> {state, footings_m2, beams_m2 (per p), area_m2 (strip on footing), strip_strip_m2,
+    footing_footing_m2, ...}"""
+    state, shift, matched = _register_on_foundation(D)
+    if state != "REGISTERED":
+        return {"state": state, "area_m2": (0.0, 0.0, 0.0), "matched": matched}
+    u = D["unit_m"]
+    fpos = [(b, dims) for b, dims in zip(foot_box, foot) if b]
+    ffree = [dims for b, dims in zip(foot_box, foot) if not b]
+    res = {k: [] for k in ("footings_m2", "beams_m2", "area_m2", "strip_strip_m2", "footing_footing_m2",
+                           "placed_footing_union_m2", "placed_union_m2")}
+    over, free_s, quad = set(), 0, 0
+    for p in p_:
+        pn = p / u
+        F = [[(b[0] - pn, b[1] - pn), (b[2] + pn, b[1] - pn), (b[2] + pn, b[3] + pn), (b[0] - pn, b[3] + pn)]
+             for b, _ in fpos]
+        S, add_s = [], 0.0
+        free_s = 0
+        for k, ((net, length, band, sid), b) in enumerate(zip(strips, strip_rec)):
+            q = _strip_outline(b, band, pn, *shift[sid]) if sid in shift else None
+            if q is None:
+                add_s += net + 2 * p * length
+                free_s += 1
+                continue
+            if sum(q[i][0] * q[(i + 1) % 4][1] - q[(i + 1) % 4][0] * q[i][1] for i in range(4)) < 0:
+                q = q[::-1]
+            S.append(q)
+            if any(MD.overlap_area(q, f) > 1e-12 for f in F):
+                over.add(k)
+        uf, _, _ = _convex_union_area(F)
+        ua, _, deep = _convex_union_area(F + S)
+        us, _, _ = _convex_union_area(S)
+        quad = max(quad, deep)
+        fA = uf * u * u + sum((L + 2 * p) * (W + 2 * p) for L, W in ffree)
+        tot = ua * u * u + sum((L + 2 * p) * (W + 2 * p) for L, W in ffree) + add_s
+        res["footings_m2"].append(fA)
+        res["beams_m2"].append(tot - fA)
+        res["area_m2"].append((us + uf - ua) * u * u)        # strip area lying on footing blinding
+        res["strip_strip_m2"].append((sum(MD.poly_area(q) for q in S) - us) * u * u)
+        res["footing_footing_m2"].append((sum(MD.poly_area(f) for f in F) - uf) * u * u)
+        res["placed_footing_union_m2"].append(uf * u * u)
+        res["placed_union_m2"].append(ua * u * u)
+    return dict({k: tuple(v) for k, v in res.items()}, state="REGISTERED", shift=shift, matched=matched,
+                strips_over_footings=len(over), free_strips=free_s, free_footings=len(ffree),
+                most_outlines_at_one_place=quad)
 
 
 def _blinding_overlap(D, strips, p_):
@@ -1309,7 +1501,8 @@ def _blinding_overlap(D, strips, p_):
                 over.add(k)
             tot += a
         out.append(tot)
-    return {"state": "REGISTERED", "area_m2": tuple(out), "strips_over_footings": len(over), "matched": matched}
+    return {"state": "REGISTERED", "area_m2": tuple(out), "strips_over_footings": len(over), "matched": matched,
+            "shift": shift}
 
 
 def _gb_class(conv, b):
@@ -1516,7 +1709,9 @@ def _slab_m4(slab, rec, u, conv, ground, risk, sid):
         if f["class"] not in ("PANEL",):
             continue
         poly = f["polygon"]
-        ov = (sum(MD.overlap_area(poly, q) for q in bands) + sum(MD.overlap_area(poly, q) for q in cols)) * u * u
+        # a band crossing a column inside the face counts once; a member inside a hole of the face is not in it
+        ov = (_overlap_with_union(poly, bands + cols) -
+              sum(_overlap_with_union(h, bands + cols) for h in (f.get("hole_polygons") or []) if len(h) >= 3)) * u * u
         if ov > 1e-4:
             f["area_gross_m2"] = f["area_m2"]
             f["member_overlap_m2"] = ov
