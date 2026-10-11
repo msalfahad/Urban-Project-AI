@@ -189,4 +189,6 @@ OTHER_REBAR_AWARE = (
     # coverage-recovery round: concrete / geometry modules that mention reinforcement only to exclude it
     "engine/source/column_concrete_geometry.py", "engine/source/physical_measurement_state.py",
     "engine/source/coverage_metrics.py",
+    # M6: the completeness engine names rebar only to treat rebar drawing (layers, bar symbols) as annotation
+    "engine/source/concrete_completeness.py",
 )

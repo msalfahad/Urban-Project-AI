@@ -39,12 +39,14 @@ from engine.source import detail_evidence as DE           # noqa: E402
 from engine.source import drawing_inventory as DI         # noqa: E402
 from engine.source import family_coverage as FC           # noqa: E402
 from engine.source import arch_evidence as AE             # noqa: E402
+from engine.source import concrete_completeness as CC     # noqa: E402
 from engine.source import generic_route as GR             # noqa: E402
 from engine.source import provisional_estimate as PE      # noqa: E402
 from engine.source import ocr_review as OR                # noqa: E402
 from tools import m2_overlay as OV                        # noqa: E402
 from tools import m4_overlay as OV4                       # noqa: E402
 from tools import m4_reports as MR                        # noqa: E402
+from tools import m6_completeness_report as CRV           # noqa: E402
 from tools import urban_intake as UI                      # noqa: E402
 from tools import urban_structural_boq as M1              # noqa: E402
 
@@ -124,7 +126,7 @@ def route_generic(inputs, conv_path, overrides, profile, cache_dir=None, evidenc
     return {"items": items, "conv": conv, "coverage": [], "rebuild": lambda ov: build(dict(overrides, **ov))[1],
             "frozen": [], "exceptions": exc, "adapter": None,
             "generic": {"D": D, "register": reg, "risk": risk, "intake_cache": cache_state, "evidence": evidence,
-                        "arch": ae}}
+                        "arch": ae, "intake": I}}
 
 
 def not_detected_lines(cov):
@@ -137,6 +139,23 @@ def not_detected_lines(cov):
             (f"; needs {c['NEEDED']}" if c["NEEDED"] else "")
         out.append({"ITEM": f"C.{k:02d}", "SECTION": "C FAMILY COVERAGE (NOT DETECTED / NOT QUANTIFIED)",
                     "FAMILY": c["FAMILY"], "DESCRIPTION": text, "UNIT": "-", "EVIDENCE": c["STATE"]})
+    return out
+
+
+def completeness_lines(CR):
+    """BOQ section E (M6): every open completeness finding the reviewer must close - what the drawing shows that the
+    takeoff does not hold. A question, never a quantity: the volume range is shown only where a printed section or
+    thickness binds to drawn geometry, and nothing here enters a total."""
+    out = []
+    rows = [f for f in CR["findings"] if f["KIND"] != "UNRESOLVED_ITEMS" and f["SEVERITY"] in ("HIGH", "MEDIUM")]
+    for k, f in enumerate(rows, 1):
+        mag = ", ".join(f"{a} {b}" for a, b in sorted(f["MAGNITUDE"].items()) if not isinstance(b, (list, dict)))
+        out.append({"ITEM": f"E.{k:03d}", "SECTION": "E COMPLETENESS EXCEPTIONS (REVIEW - NOT IN ANY TOTAL)",
+                    "FAMILY": f["FAMILY"], "UNIT": "m3" if f["VOLUME_HIGH_M3"] is not None else "-",
+                    "DESCRIPTION": f"[{f['SEVERITY']}] {f['KIND']} {f['SHEET']} {f['STOREY']}: {f['EVIDENCE']}"
+                                   + (f"; {mag}" if mag else "") + f"; action: {f['ACTION']} ({f['FINDING_ID']})",
+                    "EVIDENCE": f["KIND"], "UNRESOLVED_EXPOSURE_LOW": f["VOLUME_LOW_M3"],
+                    "UNRESOLVED_EXPOSURE_HIGH": f["VOLUME_HIGH_M3"]})
     return out
 
 
@@ -172,7 +191,10 @@ def missing_steel_html(rc):
 
 
 def compute(drawings, *, conventions=None, overrides=None, profile=None, project=None, route="auto", cache_dir=None,
-            evidence=None, arch=None, evidence_review=None):
+            evidence=None, arch=None, evidence_review=None, completeness=False):
+    """completeness (M6): also run engine.source.concrete_completeness over the route's own records - every
+    structural signal of the drawing (linework, labels, schedule rows, storeys, notes) that no item explains becomes
+    a located finding (BOQ section E, COMPLETENESS_*.csv). Off by default so that frozen M2-M5 runs reproduce."""
     prof = None
     if profile:
         prof = json.loads(Path(profile).read_text(encoding="utf-8")) if not isinstance(profile, dict) else profile
@@ -218,7 +240,13 @@ def compute(drawings, *, conventions=None, overrides=None, profile=None, project
     g["rebar_completeness"] = rcomp
     cov = FC.coverage(g["D"], items, g["risk"], GR.scope_scan(g["D"]), g.get("evidence"))
     g["family_coverage"] = cov
-    boq = M1.boq_lines(items) + not_detected_lines(cov) + missing_steel_lines(rcomp)
+    CR = None
+    if completeness:
+        CR = CC.assess(g["D"], g.get("intake"), items, risk=g["risk"], heights=GR.storey_heights(res["conv"]),
+                       family_coverage=cov)
+        g["completeness"] = CR
+    boq = M1.boq_lines(items) + not_detected_lines(cov) + missing_steel_lines(rcomp) + \
+        (completeness_lines(CR) if CR else [])
     summary = {
         "policy": POLICY_ID, "route": "G_GENERIC_ENGINE",
         "project": known[0]["project"] if known else (project or "new project"),
@@ -255,6 +283,12 @@ def compute(drawings, *, conventions=None, overrides=None, profile=None, project
         "rule": "planning = verified + provisional base; low / high sum each item's own low / high; unresolved "
                 "items and not-detected families are never added; a new project is never VERIFIED",
     }
+    if CR:
+        summary["completeness"] = {k: CR["scores"][k] for k in (
+            "geometry_explained_pct", "labels_consumed_pct", "schedule_rows_placed_pct", "members_itemized_pct",
+            "column_outlines_itemized_pct", "findings_by_severity", "findings_by_kind", "scope_states",
+            "unresolved_exposure_m3", "finding_volume_m3", "findings_without_volume")}
+        summary["completeness"]["policy"] = CR["policy"]
     return {"summary": summary, "items": items, "conv": res["conv"], "coverage": [], "exceptions": exc,
             "sensitivity": sens, "inventories": invs, "inputs": inputs, "log": log,
             "seconds": round(time.perf_counter() - t0, 3), "boq": boq, "generic": g,
@@ -286,6 +320,21 @@ def files(R, *, as_of):
             h = out["BOQ_REPORT.html"]
             out["BOQ_REPORT.html"] = (h.replace(tail, missing_steel_html(rc) + tail) if tail in h else
                                       h + missing_steel_html(rc))
+        CR = g.get("completeness")
+        if CR:
+            fk = ["FINDING_ID", "SEVERITY", "KIND", "FAMILY", "CONFIDENCE", "SHEET", "STOREY", "BOX_M", "EVIDENCE",
+                  "MAGNITUDE", "VOLUME_LOW_M3", "VOLUME_HIGH_M3", "VOLUME_BASIS", "ITEMS", "REFS", "ACTION"]
+            out["COMPLETENESS_FINDINGS.csv"] = M1.csv_text([{k: f.get(k) for k in fk} for f in CR["findings"]], fk)
+            sk = sorted({k for r in CR["signals"] for k in r})
+            out["COMPLETENESS_SIGNALS.csv"] = M1.csv_text([{k: r.get(k) for k in sk} for r in CR["signals"]], sk)
+            out["COMPLETENESS_SCOPE.csv"] = M1.csv_text(CR["scope"])
+            out["COMPLETENESS_SUMMARY.json"] = M1._jdump({"policy": CR["policy"], "scores": CR["scores"],
+                                                          "geometry_stats": CR["geometry_stats"],
+                                                          "populations": CR["populations"], "rule": CR["rule"]})
+            svgs = CRV.sheet_svgs(g["D"], g.get("intake"), CR)
+            for name, svg in svgs.items():
+                out[f"completeness/{name}.svg"] = svg
+            out["COMPLETENESS_REVIEW.html"] = CRV.html(CR, svgs, banner=BANNER)
         for name, svg in OV.sheet_svgs(g["D"]).items():
             out[f"overlays/{name}.svg"] = svg
         out["OVERLAYS.html"] = OV.html(g["D"], banner=BANNER)
@@ -418,6 +467,21 @@ def workbook_model(R):
             hdr = list(rows[0].keys())
             model[name[:31]] = {"kind": "TABLE", "header": hdr,
                                 "rows": [[M1._cell(r.get(k)) for k in hdr] for r in rows], "note": notes[name]}
+    CR = g.get("completeness")
+    if CR:
+        fk = ["FINDING_ID", "SEVERITY", "KIND", "FAMILY", "SHEET", "STOREY", "EVIDENCE", "VOLUME_LOW_M3",
+              "VOLUME_HIGH_M3", "ACTION"]
+        model["COMPLETENESS"] = {"kind": "TABLE", "header": fk,
+                                 "rows": [[M1._cell(f.get(k)) for k in fk] for f in CR["findings"]],
+                                 "wrap_cols": [6, 9], "widths": {0: 14, 2: 26, 6: 90, 9: 60},
+                                 "note": "What the drawing shows that the takeoff does not hold (M6 completeness "
+                                         "engine): a review list, never a quantity, in no total."}
+        sk = ["FAMILY", "POPULATION", "STATE", "MEASURED_ITEMS", "UNRESOLVED_ITEMS", "OPEN_FINDINGS",
+              "FINDING_VOLUME_LOW_M3", "FINDING_VOLUME_HIGH_M3", "FINDINGS_WITHOUT_VOLUME"]
+        model["SCOPE_CHECKLIST"] = {"kind": "TABLE", "header": sk,
+                                    "rows": [[M1._cell(r.get(k)) for k in sk] for r in CR["scope"]],
+                                    "note": "Every concrete population of a villa and its state. "
+                                            "NO_EVIDENCE_CONFIRM_ABSENT is not absence: confirm it."}
     model["REBAR_COMPLETENESS"] = {"kind": "TABLE", "header": rk,
                                    "rows": [[M1._cell(r.get(k)) for k in rk] for r in rc["rows"]],
                                    "wrap_cols": [4], "widths": {0: 40, 4: 70},
@@ -446,6 +510,8 @@ def write_all(R, out, *, as_of, pdf=True, xlsx=True, created=None):
         res["pdf"] = M1.print_pdf(out / "BOQ_REPORT.html", out / "BOQ_REPORT.pdf")
         if (out / "OVERLAYS.html").exists():
             res["overlays_pdf"] = M1.print_pdf(out / "OVERLAYS.html", out / "VISUAL_QA_OVERLAYS.pdf")
+        if (out / "COMPLETENESS_REVIEW.html").exists():
+            res["completeness_pdf"] = M1.print_pdf(out / "COMPLETENESS_REVIEW.html", out / "COMPLETENESS_REVIEW.pdf")
         if (out / "M4_VISUAL_QA.html").exists():
             res["m4_visual_qa_pdf"] = M1.print_pdf(out / "M4_VISUAL_QA.html", out / "M4_VISUAL_QA.pdf")
     R["log"].append({"step": "8 export", "seconds": round(time.perf_counter() - t, 3)})
@@ -475,10 +541,11 @@ def main(argv=None):
                                               "ground beams carry an exterior wall, and the floor levels inside")
     p.add_argument("--evidence-review", help="independent readings of the OCR records (M4, ocr_review): a record "
                                               "the second reading contradicts is rejected; none is promoted")
+    p.add_argument("--no-completeness", action="store_true", help="skip the M6 completeness pass (route G)")
     a = ap.parse_args(argv)
     R = compute(a.drawings, conventions=a.conventions, overrides=M1.parse_sets(a.set), profile=a.profile,
                 route=a.route, cache_dir=a.cache, evidence=a.evidence, arch=a.arch,
-                evidence_review=a.evidence_review)
+                evidence_review=a.evidence_review, completeness=not a.no_completeness)
     writer = write_all if R.get("generic") else M1.write_all
     res = writer(R, a.out, as_of=a.as_of, pdf=not a.no_pdf, xlsx=not a.no_xlsx)
     s = R["summary"]
@@ -487,6 +554,7 @@ def main(argv=None):
                                                            "PLANNING_HIGH")},
                       "unresolved": {t: s["totals"][t]["N_UNRESOLVED"] for t in s["totals"]},
                       "not_detected": s.get("not_detected_families"),
+                      "completeness_findings": (s.get("completeness") or {}).get("findings_by_severity"),
                       "exceptions": s["n_exceptions"], "outputs": len(res["files"])}, indent=1))
     return 0
 
