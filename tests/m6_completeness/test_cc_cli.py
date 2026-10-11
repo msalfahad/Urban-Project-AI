@@ -46,7 +46,7 @@ def test_cli_writes_the_completeness_outputs(villa, tmp_path):
     e = [r for r in boq if r["SECTION"].startswith("E COMPLETENESS")]
     assert e and all(not r["PLANNING_BASE"] for r in e)              # never in a total
     s = json.loads((tmp_path / "on" / "SUMMARY.json").read_text(encoding="utf-8"))
-    assert s["completeness"]["policy"] == "CONCRETE_COMPLETENESS_V1"
+    assert s["completeness"]["policy"] == "CONCRETE_COMPLETENESS_V2"
     for name in FILES + ("CONTRACTOR_BOQ.csv",):
         assert not ARABIC.search((tmp_path / "on" / name).read_text(encoding="utf-8")), name
 

@@ -26,6 +26,13 @@ ELEMENTS (each in the truth file with its sheet, its box in sheet-local metres a
   EXTRA_STOREY     the first-floor roof plan drawn again as a second-floor plan (no schedule band for it)
 DISTRACTORS (must not become findings): level marks, section marks, a north arrow, a general-notes block naming
   families in prose, the plot line repeated on every plan.
+V2 CASES (generate(..., m6v2=True); off by default, drawn from a separate random stream after every V1 element, so a
+  V1 drawing is unchanged):
+  HATCHED_BEAM     a patterned fill over part of a measured beam band (a cantilever portion), on a hatch-named layer
+  HATCHED_PANEL    a patterned fill over part of a measured slab panel (a sunken / dropped area)
+                   either with a legend swatch off the building (same pattern and layer, its meaning written beside)
+  PIT_IN_FOOTING   pit walls (outer and inner outline; the inner one sometimes broken at the corners) drawn inside a
+                   measured footing outline
 
 Layer names, label spellings, note words (English / Arabic), sizes and positions vary by seed. The truth is the list
 above as drawn; it never reads the engine. Synthetic drawings share the generator author's drafting assumptions:
@@ -94,6 +101,20 @@ DEPENDENCY_NOTES = ["AS PER ARCH.", "LEVEL AS PER ARCH", "SEE DETAIL 3", "FOLLOW
 NOTE = {"BOUNDARY_WALL": ["BOUNDARY WALL", "FENCE WALL", None, None], "POOL": ["SWIMMING POOL", "POOL", None],
         "LIFT_PIT": ["LIFT PIT", "LIFT", "ELEVATOR", None], "WATER_TANK": ["WATER TANK", "TANK", None],
         "DOME": ["DOME", None], "STAIR": ["UP", "STAIR", None], "SUNKEN_SLAB": ["SUNKEN SLAB -0.30", "SUNK", None]}
+# V2 cases (generate(..., m6v2=True))
+FAMILY.update({"HATCHED_BEAM": "CANTILEVER", "HATCHED_PANEL": "SLAB_STEP", "PIT_IN_FOOTING": "LIFT"})
+EXPECT.update({"HATCHED_BEAM": ("HATCH_ON_MEASURED_MEMBER", "DRAWN_NOT_MEASURED"),
+               "HATCHED_PANEL": ("HATCH_ON_MEASURED_MEMBER", "DRAWN_NOT_MEASURED"),
+               "PIT_IN_FOOTING": ("DRAWN_NOT_MEASURED",)})
+HATCH_LAYERS = ["S-HATCH", "S-HAT.CANT", "HATCH-SLAB", "S-FILL"]
+HATCH_LAYERS_HELDOUT = ["S-CANT-FILL", "FILL-2", "HT-1"]
+HATCH_PATTERNS = ["ANSI31", "ANSI37", "NET"]
+HATCH_PATTERNS_HELDOUT = ["AR-CONC", "DOTS", "ANSI32"]
+LEGEND = {"CANTILEVER": ["CANTILEVER", "CANTILEVER SLAB"], "SLAB_STEP": ["SUNKEN SLAB", "DROP SLAB"]}
+LEGEND_HELDOUT = {"CANTILEVER": ["OVERHANG", "SLAB PROJECTION"], "SLAB_STEP": ["RECESSED SLAB", "DEPRESSED AREA"]}
+PIT_LAYERS_EXTRA = ["S-WALL", "S-BW"]
+PIT_LAYERS_EXTRA_HELDOUT = ["RC-WALL", "WALL-PIT"]
+V2_KINDS = ("HATCHED_BEAM", "HATCHED_PANEL", "PIT_IN_FOOTING")
 ALL_KINDS = ("PLANTED_COLUMN", "BOUNDARY_WALL", "POOL", "LIFT_PIT", "WATER_TANK", "DOME", "STAIR", "SUNKEN_SLAB",
              "UNKNOWN_OUTLINE", "SCHEDULE_ORPHAN", "LABEL_ORPHAN", "DEPENDENCY_NOTE", "COLUMN_GAP", "SCHEDULE_UNREAD")
 
@@ -127,9 +148,10 @@ def _box_local(sh, x0, y0, x1, y1):
     return (round(min(a[0], b[0]), 3), round(min(a[1], b[1]), 3), round(max(a[0], b[0]), 3), round(max(a[1], b[1]), 3))
 
 
-def generate(out_dir, seed, defects=False, vocabulary="dev", hard=False):
+def generate(out_dir, seed, defects=False, vocabulary="dev", hard=False, m6v2=False):
     """vocabulary "heldout": layer names, note words and planted-column spellings the development seeds never use;
-    hard: rebar symbols and section marks drawn on numbered layers inside the plans (distractors)."""
+    hard: rebar symbols and section marks drawn on numbered layers inside the plans (distractors);
+    m6v2: also the V2 cases (hatched beam / panel portions with or without a legend, pit walls in a footing)."""
     import ezdxf
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
@@ -433,6 +455,10 @@ def generate(out_dir, seed, defects=False, vocabulary="dev", hard=False):
                                dxfattribs={"layer": D["var"]["layers"]["sched"]})
         ins.add_auto_attribs(dict(zip(tags, [key, f"{0.2 * u:g}", f"{0.6 * u:g}", "4", "16", "2", "14", "7", "8"])))
         add("SCHEDULE_UNREAD", "SCHED", None, token=key)
+    # ---------------------------------------------------------------- V2 cases (separate stream, after V1)
+    if m6v2:
+        _v2_cases(seed, D, msp, layer, line, rect, text, add, take_bay, bay, F, G, T, top, s, xs, ys, X, Y,
+                  vocabulary, LAY, NOTES_, R)
     # ---------------------------------------------------------------- distractors
     for key in ("GF", "1F"):
         if variant["missing_storey"] and key == "1F":
@@ -516,6 +542,9 @@ def generate(out_dir, seed, defects=False, vocabulary="dev", hard=False):
                 c.dxf.text = "SECOND FLOOR ROOF SLAB"
             msp.add_entity(c)
         add("EXTRA_STOREY", "2F", None, storey="2F")
+        for el in truth:                          # a V2 case on the copied plan is drawn on the second floor too
+            if el["kind"] in V2_KINDS and el["sheet"] == "1F" and el.get("box"):
+                el.setdefault("also", []).append({"storey": "2F", "box": el["box"]})
     doc.saveas(str(path))
     T_ = SV.truth(D)
     heights = dict(D["heights"])
@@ -542,6 +571,7 @@ def generate(out_dir, seed, defects=False, vocabulary="dev", hard=False):
                        "storeys": [st for st in ("GF", "1F") if st in heights and
                                    not (st == "1F" and variant["missing_storey"])]} for c in D["cols"]]
     m6 = {"seed": seed, "defects": bool(defects), "vocabulary": vocabulary, "hard": bool(hard), "variant": variant,
+          "m6v2": bool(m6v2),
           "elements": truth, "distractors": distract,
           "design_columns": design_columns, "column_gap_box": gone,
           "base_known": base_known, "plot_local": {k: _box_local(_Sheet(D, k), *plot) for k in ("FOUNDATION", "GF",
@@ -551,6 +581,92 @@ def generate(out_dir, seed, defects=False, vocabulary="dev", hard=False):
     (out / f"villa_m6_{seed}.truth.json").write_text(json.dumps(T_, indent=1, ensure_ascii=False, default=str))
     (out / f"villa_m6_{seed}.profile.json").write_text(json.dumps(prof, indent=1))
     return path
+
+
+def _v2_cases(seed, D, msp, layer, line, rect, text, add, take_bay, bay, F, G, T, top, s, xs, ys, X, Y,
+              vocabulary, LAY, NOTES_, R):
+    """the V2 cases, from their own random stream (the V1 stream R is read only for the note helper's choices)."""
+    R2 = random.Random(seed * 40503 + 29)
+    held = vocabulary == "heldout"
+    kinds = [k for k in V2_KINDS if R2.random() < 0.6] or [R2.choice(V2_KINDS[:2])]
+    hl = R2.choice(HATCH_LAYERS_HELDOUT if held else HATCH_LAYERS)
+    pats = R2.sample(HATCH_PATTERNS_HELDOUT if held else HATCH_PATTERNS, 2)      # one pattern per meaning
+    legend = R2.random() < 0.5
+    LEG = LEGEND_HELDOUT if held else LEGEND
+    th = 0.15 * s
+
+    def fill(sh, x0, y0, x1, y1, pat):
+        ht = msp.add_hatch(color=7, dxfattribs={"layer": layer(hl)})
+        ht.set_pattern_fill(pat, scale=0.02 * s)
+        ht.paths.add_polyline_path([sh.P(x0, y0), sh.P(x1, y0), sh.P(x1, y1), sh.P(x0, y1)], is_closed=True)
+
+    def legend_swatch(sh, fam, pat, row):             # off the building, below its right corner, meaning beside
+        lx, ly = X + 0.8, -1.4 - 0.7 * row
+        fill(sh, lx, ly, lx + 0.6, ly + 0.4, pat)
+        msp.add_text(R2.choice(LEG[fam]), dxfattribs={"layer": D["var"]["layers"]["text"], "height": th}) \
+            .set_placement(sh.P(lx + 0.8, ly + 0.1))
+
+    if "HATCHED_BEAM" in kinds:
+        key, sh = (top, T) if R2.random() < 0.5 else ("GF", G)
+        beams = [b for b in SV.beams_of(D) if b["clear"] >= 2.0]
+        if beams:
+            bm = R2.choice(beams)
+            a, b = bm["a"], bm["b"]
+            hw = bm["drawn_B"] / 2
+            L = R2.uniform(0.8, min(2.0, bm["clear"] - 0.6))
+            if bm["axis"] == "x":
+                x0 = a["x"] + SV._dim(a, "x") / 2 + R2.choice([0.0, bm["clear"] - L])       # at one end of the span
+                box = (x0, a["y"] - hw, x0 + L, a["y"] + hw)
+            else:
+                y0 = a["y"] + SV._dim(a, "y") / 2 + R2.choice([0.0, bm["clear"] - L])
+                box = (a["x"] - hw, y0, a["x"] + hw, y0 + L)
+            fill(sh, *box, pats[0])
+            if legend:
+                legend_swatch(sh, "CANTILEVER", pats[0], 0)
+            add("HATCHED_BEAM", key, _box_local(sh, *box), layer=hl, pattern=pats[0], legend=legend, beam=bm["type"],
+                magnitude={"area_m2": round(L * 2 * hw, 3)})
+    if "HATCHED_PANEL" in kinds:
+        key, sh = (top, T) if R2.random() < 0.5 else ("GF", G)
+        bb = take_bay(key)
+        if bb:
+            bx0, by0, bx1, by1 = bay(*bb)
+            w_ = R2.uniform(1.0, max(1.1, min(2.2, bx1 - bx0 - 1.2)))
+            h_ = R2.uniform(1.0, max(1.1, min(2.0, by1 - by0 - 1.2)))
+            x0, y0 = bx0 + 0.6, by0 + 0.6
+            fill(sh, x0, y0, x0 + w_, y0 + h_, pats[1])
+            if legend:
+                legend_swatch(sh, "SLAB_STEP", pats[1], 1)
+            add("HATCHED_PANEL", key, _box_local(sh, x0, y0, x0 + w_, y0 + h_), layer=hl, pattern=pats[1],
+                legend=legend, magnitude={"area_m2": round(w_ * h_, 3)})
+    if "PIT_IN_FOOTING" in kinds:
+        rows = {r["mark"]: r for r in SV.schedule_rows(D)["FOOTING"]}
+        cols = sorted(D["cols"], key=lambda c: (-rows[c["ftg"]]["L"] * rows[c["ftg"]]["W"], c["i"], c["j"]))
+        c = cols[0]
+        f = rows[c["ftg"]]
+        if min(f["L"], f["W"]) >= 1.2:
+            lay = R2.choice((LAYERS_HELDOUT["LIFT_PIT"] + PIT_LAYERS_EXTRA_HELDOUT) if held else
+                            (LAYERS["LIFT_PIT"] + PIT_LAYERS_EXTRA))
+            ax, ay = (f["L"] - 0.3) / 2, (f["W"] - 0.3) / 2
+            t = R2.choice([0.15, 0.2])
+            cx, cy = c["x"], c["y"]
+            rect(F, cx - ax, cy - ay, cx + ax, cy + ay, lay)
+            broken = R2.random() < 0.5
+            ix0, iy0, ix1, iy1 = cx - ax + t, cy - ay + t, cx + ax - t, cy + ay - t
+            if broken:                                    # inner faces stop short of the corners (columns there)
+                g = 0.1
+                line(F, (ix0 + g, iy0), (ix1 - g, iy0), lay)
+                line(F, (ix0 + g, iy1), (ix1 - g, iy1), lay)
+                line(F, (ix0, iy0 + g), (ix0, iy1 - g), lay)
+                line(F, (ix1, iy0 + g), (ix1, iy1 - g), lay)
+            else:
+                rect(F, ix0, iy0, ix1, iy1, lay)
+            nt = R2.choice(list(NOTES_.get("LIFT_PIT", [None])) + [None, None])
+            if nt:
+                text(F, nt, cx - 0.3, cy + 0.1, h=th)
+            add("PIT_IN_FOOTING", "FOUNDATION", _box_local(F, cx - ax, cy - ay, cx + ax, cy + ay), layer=lay,
+                note=bool(nt), broken=broken, footing=c["ftg"],
+                magnitude={"outer_area_m2": round(4 * ax * ay, 3),
+                           "inner_area_m2": round((2 * ax - 2 * t) * (2 * ay - 2 * t), 3)})
 
 
 def _entity_point(e):

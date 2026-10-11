@@ -27,6 +27,22 @@ LEDGERS (each signal gets one terminal state; nothing is dropped)
   COVERAGE   slab regions the route excluded or could not resolve (detail, unresolved, stair zone, open boundary).
   UNRESOLVED items the route holds as UNRESOLVED, with their exposure.
 
+V2 (post-discovery; V1 stays frozen at commit 090a470 and its blind run is never overwritten):
+  - a hatch is a region marker, not annotation: hatches are read whatever their layer is called; a hatch is the
+    member's own fill only when it is the plan's column fill (pattern or layer of the fills found inside columns);
+    any other patterned fill lying on measured members is HATCH_ON_MEASURED_MEMBER (that part is marked as something
+    the member's item may not be: a cantilever portion, a step, a void, another material), named by the drawing's
+    own legend swatch when one is drawn; elsewhere it is a HATCH_REGION group; a fill bounded by another
+    unexplained group is that group's fill (evidence, not a second finding); a fill over the whole plan is reported
+    LOW as a layer under / round the building (SITE_FILL: blinding, soil, paving).
+  - a footing explains only what is drawn on footing / column layers inside it (a pit, a tank or walls drawn inside
+    a footing are not the footing).
+  - a mark the route saw and could not bind (AMBIGUOUS, TAG_UNBOUND) is consumed by proximity only by a measured
+    member that carries the same mark - an unmarked, unresolved band beside it is the question, not the answer.
+  - a ring (or a closed outline whose inner faces stop at columns) on a substructure plan, inside the building,
+    enclosing a pit-sized area is a pit: lift or tank (candidates beside what the layer / notes say, never decided by
+    size alone).
+
 Every finding has a stable id, a location (sheet, storey, box in sheet-local metres), evidence (counts, layer names,
 English keywords, structural tokens - never free text), a plan magnitude, a volume only when a printed section or
 thickness binds to it (never a ratio), a severity and the action that closes it. The report scores the run: share of
@@ -45,7 +61,7 @@ from engine.source import drawing_inventory as DI
 from engine.source import drawing_model as DM
 from engine.source import member_detection as MD
 
-POLICY_ID = "CONCRETE_COMPLETENESS_V1"
+POLICY_ID = "CONCRETE_COMPLETENESS_V2"
 
 PARAMS = {
     "EXPLAIN_TOL_M": 0.03,          # a line within this distance of a member footprint edge is that member's line
@@ -66,6 +82,11 @@ PARAMS = {
     "DEPENDENCY_MEMBER_M": 1.5,     # a dependency note this close to a member is that member's note
     "DEPENDENCY_NOTE_MAX_CHARS": 40,  # longer text is a general note (a signal, not a finding)
     "STAIR_TREAD_M": (0.22, 0.36),  # parallel tread spacing that makes a group of lines a stair flight
+    # V2
+    "HATCH_ON_MEMBER_SHARE": 0.5,   # a fill this much on measured members is a mark on those members
+    "LEGEND_SWATCH_MAX_M2": 1.5,    # a legend swatch is a small fill off the building with its meaning written beside
+    "LEGEND_TEXT_M": 3.0,
+    "PIT_INNER_M2": (1.0, 9.0),     # a ring on a substructure plan enclosing this much is a pit (lift / tank)
 }
 
 PLAN_ROLES = ("FOUNDATION_PLAN", "GROUND_BEAM_PLAN", "SLAB_PLAN", "COLUMN_PLAN")
@@ -171,6 +192,9 @@ ACTION = {
     "MEMBER_OUTLINE_SUSPECT": "a column mark bound to an outline far larger than its schedule section: the outline is "
                               "probably another element (pit, footing, detail) - confirm the column and that element",
     "UNRESOLVED_ITEMS": "items the route holds as UNRESOLVED: answer the blocker to release them",
+    "HATCH_ON_MEASURED_MEMBER": "a patterned fill on a measured member marks that part as something its item may not "
+                                "be (a cantilever portion, a step, a void, another material): read the legend / "
+                                "section and confirm the item measures it as that",
 }
 
 
@@ -199,6 +223,21 @@ def annotation_layer(layer):
     if DI.role_guess(layer) in ANNOTATION_ROLES:
         return True
     return any(t in ANNOTATION_TOKENS for t in _tokens(layer))
+
+
+# V2: a hatch is read on any layer except one that names text, dimensions, frames, grids, rebar or a table
+HATCH_ANNOTATION_TOKENS = ANNOTATION_TOKENS - {"HATCH", "HAT"}
+
+
+def hatch_drawn(layer):
+    if DI.role_guess(layer) in ("TEXT", "DIMENSION", "FRAME", "GRID", "REBAR"):
+        return False
+    return not any(t in HATCH_ANNOTATION_TOKENS for t in _tokens(layer))
+
+
+def footing_content_layer(layer):
+    """V2: what a footing's footprint explains - its own lines and the column / neck drawn on it, nothing else."""
+    return DI.role_guess(layer) in ("FOOTING", "COLUMN") or layer_family(layer) in ("FOOTINGS", "COLUMNS")
 
 
 def layer_family(layer):
@@ -535,11 +574,13 @@ def _footprint_index(ms, tol):
     return edges, solids
 
 
-def _explained_by(x, y, edges, solids, tol):
+def _explained_by(x, y, edges, solids, tol, layer=None):
     for a, b, m in edges.near(x, y, tol):
         if _seg_dist(x, y, a, b) <= tol:
             return m
     for m in solids.near(x, y, 0.0):
+        if m["kind"] == "FOOTING" and layer is not None and not footing_content_layer(layer):
+            continue                                   # V2: a pit / tank / wall drawn inside a footing is not it
         if MD.point_in_poly(x, y, m["poly"]):
             return m
     return None
@@ -724,7 +765,8 @@ def geometry_ledger(D, intake, members, consumed, p, notes_words):
         ms = members.get(sid, [])
         ents = _entities(D, intake, sid)
         p.setdefault("_ents", {})[sid] = ents
-        drawn = [e for e in ents if not annotation_layer(e["layer"])]
+        drawn = [e for e in ents if (hatch_drawn(e["layer"]) if e["type"] == "HATCH" else
+                                     not annotation_layer(e["layer"]))]
         stats["entities"] += len(ents)
         stats["annotation_entities"] += len(ents) - len(drawn)
         if not ms:
@@ -763,6 +805,14 @@ def geometry_ledger(D, intake, members, consumed, p, notes_words):
                                    "opening_m2": round(m.get("area_m2") or 0, 3)}, refs=m["mid"]))
         group_of = {osid: _sheet_group(orec["sheet"]["role"]) for osid, orec in _plan_sheets(D)}
         opening_own = _opening_symbols(ms, drawn, u, p)
+        fills = [e for e in drawn if e["type"] == "HATCH"]
+        col_fill = _column_fill(fills, solids, p["EXPLAINED_SHARE"])
+        legend, swatches = _legend_swatches([e for e in ents if e["type"] == "HATCH"], ms, texts, notes_words, u, p)
+        mgrid = _Grid(max(5.0 / u, 1e-6))
+        for m in ms:
+            mgrid.add(_bbox(m["poly"]), m)
+        held = lambda m: bool(consumed.get((sid, m["mid"]))) or m["kind"] == "COLUMN_BOX"     # noqa: E731
+        hatched = []
         for e in drawn:
             stats["drawn_entities"] += 1
             stats["drawn_length_m"] += e["len"] * u
@@ -773,6 +823,30 @@ def geometry_ledger(D, intake, members, consumed, p, notes_words):
             if not any(_in_box(plan_area, x, y) for x, y in e["pts"]):
                 e["state"] = "OUTSIDE_PLAN_AREA"
                 stats["outside_plan_length_m"] += e["len"] * u
+                continue
+            if e["type"] == "HATCH":
+                stats["fills"] += 1
+                if id(e) in swatches:
+                    e["state"] = "LEGEND_SWATCH"
+                    continue
+                pts = _hatch_samples(e)
+                lay = e["layer"]
+                own = (e["pattern"] in col_fill["patterns"] or lay in col_fill["layers"]) if col_fill else \
+                    e["pattern"] in ("SOLID", "")
+                sol, _ = _share_in(pts, solids, lambda m: m["kind"] != "FOOTING" or footing_content_layer(lay))
+                incol = _share_in(pts, solids, lambda m: m["kind"] in ("COLUMN", "COLUMN_BOX") and
+                                  not m.get("suspect"))[0] if col_fill is None else 0.0
+                if (own and sol >= p["EXPLAINED_SHARE"]) or incol >= p["EXPLAINED_SHARE"]:
+                    e["state"] = "EXPLAINED_BY_MEMBER"
+                    stats["fills_explained"] += 1
+                    continue
+                on, hit = _share_in(pts, mgrid, held)
+                if on >= p["HATCH_ON_MEMBER_SHARE"]:
+                    e["state"] = "HATCH_ON_MEASURED_MEMBER"
+                    hatched.append((e, hit))
+                    continue
+                e["state"] = "UNEXPLAINED"
+                unexplained.append(e)
                 continue
             ok = _explained_share(e, edges, solids, tol)
             if ok >= p["EXPLAINED_SHARE"]:
@@ -786,8 +860,8 @@ def geometry_ledger(D, intake, members, consumed, p, notes_words):
                 if osid == sid or group_of[osid] != group_of[sid]:
                     continue
                 oe, osol = idx["exact"]
-                if sum(1 for x, y in lp if _explained_by(x, y, oe, osol, p["EXPLAIN_TOL_M"])) / len(lp) >= \
-                        p["EXPLAINED_SHARE"]:
+                if sum(1 for x, y in lp if _explained_by(x, y, oe, osol, p["EXPLAIN_TOL_M"], e["layer"])) / \
+                        len(lp) >= p["EXPLAINED_SHARE"]:
                     e["state"] = "CONTEXT_OF_OTHER_SHEET"
                     e["context_of"] = osid
                     break
@@ -799,6 +873,7 @@ def geometry_ledger(D, intake, members, consumed, p, notes_words):
         curves = [e for e in drawn if e["type"] in ("CIRCLE", "ARC")]
         outside = [e for e in drawn if e.get("state") == "OUTSIDE_PLAN_AREA" and e["type"] == "LINE"]
         unexplained = _split_outline_loops(unexplained, plan_box, u, signals, sid, sh, org, outside)
+        here = []
         for grp in _clusters(unexplained, p["CLUSTER_GAP_M"] / u):
             lpts = [((x - org[0]) * u, (y - org[1]) * u) for e in grp for x, y in e["pts"]]
             sig, fnd = _describe_group(D, sid, sh, org, grp, ms, bldg, tg, p, notes_words, u, consumed, curves,
@@ -819,14 +894,21 @@ def geometry_ledger(D, intake, members, consumed, p, notes_words):
                 stats["context_length_m"] += sig["LINEWORK_M"]
                 signals.append(sig)
                 continue
-            pending.append((sid, sh, sig, fnd))
+            here.append((sid, sh, sig, fnd, grp))
+        by_mid = {m["mid"]: m for m in ms}
+        for e, hit in hatched:
+            here.append((sid, sh) + _hatch_on_member(D, sid, sh, org, e, hit, by_mid, consumed, legend, tg, p,
+                                                     notes_words, u) + ([e],))
+        pending.extend(x[:4] for x in _merge_fills(here, signals, u))
     # the same drawing repeated on several sheets (plot line, boundary wall, a lower roof outline): one finding
     order = {sid: (SHEET_PRIORITY.index(rec["sheet"]["role"]), STOREY_ORDER.index(rec["sheet"]["storey"])
                    if rec["sheet"]["storey"] in STOREY_ORDER else 99, sid) for sid, rec in _plan_sheets(D)}
     pending.sort(key=lambda x: order[x[0]])
     kept = []
     for sid, sh, sig, fnd in pending:
-        twin = next((k for k in kept if k[2]["LAYER"] == sig["LAYER"] and (
+        own = sig["STATE"] == "HATCH_ON_MEASURED_MEMBER" and sh["role"] == "SLAB_PLAN"     # V2: per storey member
+        twin = next((k for k in kept if k[2]["LAYER"] == sig["LAYER"] and not (
+            own and (k[1]["role"] != "SLAB_PLAN" or k[1].get("storey") != sh.get("storey"))) and (
             (k[2]["SHAPE"] == sig["SHAPE"] and all(abs(a - b) <= 0.3 for a, b in zip(k[2]["BOX_M"], sig["BOX_M"])) and
              abs(k[2]["LINEWORK_M"] - sig["LINEWORK_M"]) <= 0.05 * max(k[2]["LINEWORK_M"], 1e-9)) or
             (k[2]["FAMILY_GUESS"] == sig["FAMILY_GUESS"] != "UNKNOWN" and (
@@ -867,6 +949,42 @@ def _iou(a, b):
     if inter == 0.0:                                   # thin boxes (a line): compare the extents instead
         return 1.0 if all(abs(x - y) <= 0.3 for x, y in zip(a, b)) else 0.0
     return inter / ua
+
+
+def _merge_fills(here, signals, u):
+    """V2: a fill bounded by another unexplained group of the same sheet (a pool or pit outline and its hatch, a
+    block fill along a wall strip) is that group's fill - evidence on its finding, not a second finding: the fill
+    lies in the group's box (at most four times the fill's) and half its boundary runs within 0.3 m of the group's
+    lines. A fill round the whole plan is never another group's fill."""
+    area = lambda b: max((b[2] - b[0]) * (b[3] - b[1]), 1e-9)                # noqa: E731
+
+    def bounded(fill_grp, grp):
+        pts = []
+        for h in fill_grp:
+            if h["type"] == "HATCH":
+                k = len(h["ring"])
+                pts += list(h["ring"]) + [((h["ring"][i][0] + h["ring"][(i + 1) % k][0]) / 2,
+                                           (h["ring"][i][1] + h["ring"][(i + 1) % k][1]) / 2) for i in range(k)]
+        lines = [e for e in grp if e["type"] != "HATCH"]
+        return pts and lines and sum(1 for x, y in pts if _dist_to_group(x, y, lines) * u <= 0.3) >= 0.5 * len(pts)
+    hosts = [x for x in here if x[2]["SHAPE"] != "HATCH_REGION" and x[3] is not None]
+    keep = []
+    for x in here:
+        sig = x[2]
+        if sig["SHAPE"] == "HATCH_REGION" and sig["STATE"] != "SITE_FILL":
+            big = next((h for h in hosts if _inside_box(sig["BOX_M"], _grow(h[2]["BOX_M"], 0.3)) and
+                        area(h[2]["BOX_M"]) <= 4.0 * area(sig["BOX_M"]) and bounded(x[4], h[4])), None)
+            if big:
+                mag = sig["MAGNITUDE"]
+                pat = ",".join(mag.get("patterns") or [mag.get("pattern") or "fill"])
+                sig["STATE"] = "FILL_OF_DRAWN_GROUP"
+                sig["CONTEXT_OF"] = big[2]["LAYER"]
+                big[3]["EVIDENCE"] += f"; filled ({sig['LAYER']} {pat}, {mag.get('hatch_area_m2', 0):.2f} m2)"
+                big[3]["MAGNITUDE"] = dict(big[3]["MAGNITUDE"], fill_m2=mag.get("hatch_area_m2"))
+                signals.append(sig)
+                continue
+        keep.append(x)
+    return keep
 
 
 def _opening_symbols(ms, drawn, u, p):
@@ -935,16 +1053,141 @@ def _split_outline_loops(ents, plan_box, u, signals, sid, sh, org, outside=()):
     return [e for e in ents if id(e) not in drop] + extra
 
 
+# ---------------------------------------------------------------------- V2 hatches
+def _hatch_samples(e, n=6):
+    """sample points of a fill: a grid inside its ring; a thin fill (a strip) adds its vertices and edge midpoints."""
+    if "samples" in e:
+        return e["samples"]
+    ring, b = e["ring"], e["box"]
+    pts = []
+    for i in range(n):
+        for j in range(n):
+            x = b[0] + (b[2] - b[0]) * (i + 0.5) / n
+            y = b[1] + (b[3] - b[1]) * (j + 0.5) / n
+            if MD.point_in_poly(x, y, ring):
+                pts.append((x, y))
+    if len(pts) < 4:
+        k = len(ring)
+        pts += list(ring) + [((ring[i][0] + ring[(i + 1) % k][0]) / 2, (ring[i][1] + ring[(i + 1) % k][1]) / 2)
+                             for i in range(k)]
+    e["samples"] = pts
+    return pts
+
+
+def _share_in(pts, grid, keep):
+    """share of the points inside a member of the grid that keep(m) accepts, and the member ids hit."""
+    hit = Counter()
+    for x, y in pts:
+        cand = [m for m in grid.near(x, y, 0.0) if keep(m) and MD.point_in_poly(x, y, m["poly"])]
+        if cand:
+            cand.sort(key=lambda m: (m["kind"] == "FACE", m["mid"]))      # a band / column / footing before a face
+            hit[cand[0]["mid"]] += 1
+    return (sum(hit.values()) / len(pts) if pts else 0.0), hit
+
+
+def _column_fill(hatches, solids, share):
+    """the fill this plan uses for its column sections: patterns / layers of fills lying inside column outlines
+    (at least two fills and a quarter of them), or None when no fill lies in a column."""
+    col = lambda m: m["kind"] in ("COLUMN", "COLUMN_BOX") and not m.get("suspect")        # noqa: E731
+    pc, lc, n = Counter(), Counter(), 0
+    for h in hatches:
+        sh, _ = _share_in(_hatch_samples(h), solids, col)
+        if sh >= share:
+            n += 1
+            pc[h["pattern"]] += 1
+            lc[h["layer"]] += 1
+    if not n:
+        return None
+    return {"patterns": {k for k, v in pc.items() if v >= 2 and v >= 0.25 * n},
+            "layers": {k for k, v in lc.items() if v >= 2 and v >= 0.25 * n}}
+
+
+def _legend_swatches(hatches, ms, texts, words, u, p):
+    """a legend swatch: a small fill off the building, another fill of the same pattern and layer elsewhere on the
+    sheet, and a short note beside it naming one family. -> ({(pattern, layer): (family, note)}, swatch ids)."""
+    bb = None
+    for m in ms:
+        bb = _union_box(bb, _bbox(m["poly"]))
+    out, ids = {}, set()
+    for h in hatches:
+        if h["area"] * u * u > p["LEGEND_SWATCH_MAX_M2"] or bb is None:
+            continue
+        cx, cy = (h["box"][0] + h["box"][2]) / 2, (h["box"][1] + h["box"][3]) / 2
+        if _in_box(bb, cx, cy):
+            continue
+        if not any(o is not h and o["pattern"] == h["pattern"] and o["layer"] == h["layer"] for o in hatches):
+            continue
+        votes, note = Counter(), None
+        for t in texts:
+            if len(t["norm"]) > p["DEPENDENCY_NOTE_MAX_CHARS"] or section_label(t["norm"]):
+                continue
+            if _dist_to_group(t["x"], t["y"], [h]) * u <= p["LEGEND_TEXT_M"]:
+                for f in note_families(t["norm"], words):
+                    votes[f] += 1
+                    note = note or t
+        if votes:
+            ranked = votes.most_common()
+            if len(ranked) == 1 or ranked[0][1] > ranked[1][1]:
+                out[(h["pattern"], h["layer"])] = (ranked[0][0], _ascii(note["norm"], 30))
+                ids.add(id(h))
+    return out, ids
+
+
+HATCH_CANDIDATES = {"SLABS": ("CANTILEVER", "SLAB_STEP", "OPENING"), "SUBSTRUCTURE": ("LIFT", "WATER_TANK",
+                                                                                       "SLAB_STEP")}
+
+
+def _hatch_on_member(D, sid, sh, org, e, hit, by_mid, consumed, legend, tg, p, words, u):
+    """HATCH_ON_MEASURED_MEMBER: a fill that is not the column fill, lying on measured members."""
+    hosts = [by_mid[k] for k, _ in hit.most_common() if k in by_mid]
+    host = hosts[0]
+    a = e["area"] * u * u
+    box = _local_box(e["box"], org, u)
+    near = []
+    r = p["TEXT_NEAR_M"] / u
+    gb = _grow(e["box"], r)
+    for t in tg.near((gb[0] + gb[2]) / 2, (gb[1] + gb[3]) / 2, max(gb[2] - gb[0], gb[3] - gb[1]) / 2 + r):
+        if len(t["norm"]) <= p["DEPENDENCY_NOTE_MAX_CHARS"] and not section_label(t["norm"]) and \
+                _dist_to_group(t["x"], t["y"], [e]) <= r:
+            near.append(t)
+    kw = sorted({f for t in near for f in note_families(t["norm"], words)})
+    leg = legend.get((e["pattern"], e["layer"]))
+    group = _sheet_group(sh["role"])
+    fam, conf, cands = None, "LOW", ()
+    if leg:
+        fam, conf = leg[0], "HIGH"
+    elif len(kw) == 1:
+        fam, conf = kw[0], "MEDIUM"
+    else:
+        cands = tuple(kw) or HATCH_CANDIDATES.get(group, HATCH_CANDIDATES["SLABS"])
+    items = []
+    for hm in hosts:
+        items += (consumed.get((sid, hm["mid"])) or {}).get("items", [])
+    marks = sorted({str(hm.get("mark")) for hm in hosts if hm.get("mark")})
+    held = f"{host['kind'].lower()} {host['mid']}" + (f" (measured as {', '.join(marks)})" if marks else "")
+    ev = (f"layer {_ascii(e['layer'], 40)}: a {e['pattern'] or 'fill'} fill of {a:.2f} m2 on {held}" +
+          (f" and {len(hosts) - 1} more member(s)" if len(hosts) > 1 else "") +
+          ("; not the plan's column fill" if host["kind"] in ("COLUMN", "COLUMN_BOX") else "") +
+          (f"; legend: {leg[1]}" if leg else "") + (f"; notes: {', '.join(kw)}" if kw else "") +
+          (f"; could be {' or '.join(cands)}" if cands else ""))
+    mag = {"hatch_area_m2": round(a, 3), "pattern": e["pattern"], "host": host["mid"],
+           "host_share": round(sum(hit.values()) / max(len(_hatch_samples(e)), 1), 3)}
+    sig = {"LEDGER": "GEOMETRY", "SHEET": sid, "STOREY": sh.get("storey"), "LAYER": _ascii(e["layer"], 40),
+           "SHAPE": "HATCH_REGION", "N_ENTITIES": 1, "LINEWORK_M": 0.0, "BOX_M": box, "POSITION": "ON_MEMBER",
+           "FAMILY_GUESS": fam or "UNKNOWN", "CONFIDENCE": conf, "KEYWORDS": ",".join(kw),
+           "MARKS_NEAR": ",".join(marks)[:80], "MAGNITUDE": mag, "CANDIDATES": "|".join(cands),
+           "ENTITY_IDS": e["eid"], "STATE": "HATCH_ON_MEASURED_MEMBER", "MEMBER": host["mid"]}
+    fnd = _finding("HATCH_ON_MEASURED_MEMBER", sid, sh, box, "MEDIUM", family=fam, confidence=conf, evidence=ev,
+                   magnitude=mag, items=sorted(set(items)), refs=e["eid"], layer=e["layer"])
+    return sig, fnd
+
+
 def _explained_share(e, edges, solids, tol):
     if e["type"] == "CIRCLE":
         hit = next((m for m in solids.near(*e["c"]) if m["kind"] in ("COLUMN", "COLUMN_BOX") and
                     MD.point_in_poly(e["c"][0], e["c"][1], m["poly"])), None)
-        return 1.0 if hit else sum(1 for x, y in e["pts"] if _explained_by(x, y, edges, solids, tol)) / 4.0
-    if e["type"] == "HATCH":
-        cx = sum(x for x, _ in e["ring"]) / len(e["ring"])
-        cy = sum(y for _, y in e["ring"]) / len(e["ring"])
-        return 1.0 if any(MD.point_in_poly(cx, cy, m["poly"]) for m in solids.near(cx, cy)) else 0.0
-    return sum(1 for x, y in e["pts"] if _explained_by(x, y, edges, solids, tol)) / len(e["pts"])
+        return 1.0 if hit else sum(1 for x, y in e["pts"] if _explained_by(x, y, edges, solids, tol, e["layer"])) / 4.0
+    return sum(1 for x, y in e["pts"] if _explained_by(x, y, edges, solids, tol, e["layer"])) / len(e["pts"])
 
 
 def _describe_group(D, sid, sh, org, grp, ms, bldg, tg, p, words, u, consumed=None, curves=(),
@@ -1037,6 +1280,16 @@ def _describe_group(D, sid, sh, org, grp, ms, bldg, tg, p, words, u, consumed=No
         fam_votes["OPENING"] += 3                     # the drafting symbol of a slab opening
     if tr:
         fam_votes["STAIRS"] += 2
+    cx, cy = (box[0] + box[2]) / 2, (box[1] + box[3]) / 2
+    inside = any(MD.point_in_poly(cx, cy, m["poly"]) for m in bldg if m["kind"] == "FACE") or \
+        _in_box(_bbox([pt for m in bldg for pt in m["poly"]]), cx, cy)
+    pit_a = mag.get("inner_area_m2") if shape == "RING" else mag.get("area_m2") if shape == "CLOSED_AREA" else None
+    pit = pit_a is not None and sh["role"] in ("FOUNDATION_PLAN", "GROUND_BEAM_PLAN") and inside and \
+        p["PIT_INNER_M2"][0] <= pit_a <= p["PIT_INNER_M2"][1]
+    if pit:                                          # V2: walls round a pit - a lift or a tank, never decided by size
+        mag.update(pit=True)
+        fam_votes["LIFT"] += 2
+        fam_votes["WATER_TANK"] += 2
     if radial and radial["spokes"] >= 6:
         mag.update(radial_spokes=radial["spokes"], radial_r_m=round(radial["r"] * u, 3))
         if shape in ("CURVED", "LINEWORK", "CLOSED_AREA", "STRIP"):
@@ -1052,9 +1305,6 @@ def _describe_group(D, sid, sh, org, grp, ms, bldg, tg, p, words, u, consumed=No
             conf = "HIGH" if score >= 5 else "MEDIUM" if score >= 2 else "LOW"
         else:
             cands = top
-    cx, cy = (box[0] + box[2]) / 2, (box[1] + box[3]) / 2
-    inside = any(MD.point_in_poly(cx, cy, m["poly"]) for m in bldg if m["kind"] == "FACE") or \
-        _in_box(_bbox([pt for m in bldg for pt in m["poly"]]), cx, cy)
     sig = {"LEDGER": "GEOMETRY", "SHEET": sid, "STOREY": sh.get("storey"), "LAYER": _ascii(layer, 40),
            "SHAPE": shape, "N_ENTITIES": len(grp), "LINEWORK_M": round(linework, 3),
            "BOX_M": _local_box(box, org, u), "POSITION": "INSIDE_BUILDING" if inside else "OUTSIDE_BUILDING",
@@ -1078,6 +1328,20 @@ def _describe_group(D, sid, sh, org, grp, ms, bldg, tg, p, words, u, consumed=No
             (plan_box[0], plan_box[3]))):
         sig["STATE"] = "PLOT_OR_OUTLINE"
         return sig, None
+    pb_area = (plan_box[2] - plan_box[0]) * (plan_box[3] - plan_box[1]) if plan_box else 0.0
+    if plan_box and shape == "HATCH_REGION" and (sum(h["area"] for h in hatches) >= 0.5 * pb_area or any(all(
+            MD.point_in_poly(x, y, h["ring"]) for x, y in ((plan_box[0], plan_box[1]), (plan_box[2], plan_box[1]),
+                                                          (plan_box[2], plan_box[3]), (plan_box[0], plan_box[3])))
+            for h in hatches)):
+        # V2: a fill round the whole plan is a layer under / round the building (blinding, soil, paving) - LOW
+        sig["STATE"] = "SITE_FILL"
+        a = mag["hatch_area_m2"]
+        return sig, _finding("DRAWN_NOT_MEASURED", sid, sh, _local_box(box, org, u), "LOW", family=None,
+                             confidence="LOW", evidence=f"layer {_ascii(layer, 40)}: a {','.join(mag['patterns'])} "
+                                                        f"fill of {a:.1f} m2 round the whole plan: a layer under or "
+                                                        "round the building (blinding, soil, paving) - confirm "
+                                                        "whether it is concrete and whether the takeoff holds it",
+                             magnitude=mag, refs=sig["ENTITY_IDS"], layer=layer)
     if minor and not kw:
         sig["STATE"] = "MINOR_UNEXPLAINED"
         return sig, None
@@ -1329,18 +1593,27 @@ def label_ledger(D, items, members, consumed, p):
                 cands = [m for m in mg.near(t["x"], t["y"], near_r) if MD.dist_point_poly(t["x"], t["y"], m["poly"])
                          <= near_r and _family_match(fam, m)]
                 held = [m for m in cands if consumed.get((sid, m["mid"])) or m["kind"] in ("COLUMN_BOX",)]
-                same = [m for m in held if not m.get("mark") or not mark or m.get("mark") == mark or
-                        (mark and m.get("mark") and mark in str(m.get("mark")).split("/"))]
+                carries = lambda m: bool(mark and m.get("mark") and (m.get("mark") == mark or      # noqa: E731
+                                                                     mark in str(m.get("mark")).split("/")))
+                if rs is not None:          # V2: the route saw this mark and could not bind it - only a member that
+                    same = [m for m in held if carries(m)]     # carries the same mark consumes it, never a bare band
+                else:
+                    same = [m for m in held if not m.get("mark") or not mark or carries(m)]
                 if same:
                     state, reason, holder = "CONSUMED_BY_PROXIMITY", f"beside {same[0]['kind'].lower()} " \
                                                                      f"{same[0]['mid']}", same[0]
-                elif held:
-                    state, reason, holder = "MEMBER_CONFLICT", f"on {held[0]['kind'].lower()} {held[0]['mid']} " \
-                                                               f"measured as {held[0].get('mark')}", held[0]
+                elif held and (rs is None or any(m.get("mark") for m in held)):
+                    hm = next((m for m in held if m.get("mark")), held[0])
+                    state, reason, holder = "MEMBER_CONFLICT", (f"route state {rs}; " if rs else "") + \
+                        f"on {hm['kind'].lower()} {hm['mid']} measured as {hm.get('mark')}", hm
                 else:
                     state = "NOT_CONSUMED"
                     reason = (f"route state {rs}" if rs else "no member of its family within "
                               f"{p['LABEL_MEMBER_M']:g} m")
+                    if rs is not None and held:
+                        reason += f"; beside unmarked {held[0]['kind'].lower()} {held[0]['mid']} held " + \
+                            ("unresolved" if (consumed.get((sid, held[0]["mid"])) or {}).get("cats") == {"UNRESOLVED"}
+                             else "without this mark")
                     if fam and mark and t.get("mark_family") in SCHEDULED_FAMILIES and \
                             (t["mark_family"], mark) not in lib and not any(k[1] == mark for k in lib):
                         reason += "; no schedule row"
@@ -1380,8 +1653,8 @@ def schedule_ledger(D, label_signals, intake=None):
     S = D.get("schedule") or {}
     placed = Counter()
     for s in label_signals:
-        if s["STATE"].startswith("CONSUMED") and s["TOKEN"]:
-            placed[s["TOKEN"]] += 1
+        if s["TOKEN"] and (s["STATE"].startswith("CONSUMED") or str(s["REASON"]).startswith("route state")):
+            placed[s["TOKEN"]] += 1            # V2: a mark drawn on a plan and left unbound is placed (and reported)
     for sid, rec in _plan_sheets(D):
         for b in rec.get("beams", []) or []:
             if b.get("mark"):

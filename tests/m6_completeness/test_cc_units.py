@@ -120,6 +120,6 @@ def test_suspect_column_outline():
 
 def test_policy_names_every_kind_and_no_ratio():
     rec = CC.policy_record()
-    assert rec["policy"] == "CONCRETE_COMPLETENESS_V1" and "NO_EVIDENCE_CONFIRM_ABSENT" in rec["rule"]
+    assert rec["policy"] == "CONCRETE_COMPLETENESS_V2" and "NO_EVIDENCE_CONFIRM_ABSENT" in rec["rule"]
     src = (ROOT / "engine/source/concrete_completeness.py").read_text(encoding="utf-8")
     assert "kg/m3" not in src.replace("never a kg/m3", "") and "KG_PER_M3" not in src

@@ -1,6 +1,7 @@
 """M6 EVALUATION - the completeness engine on synthetic villas against what the generator drew.
 
-    python3 -I tools/m6_evaluate.py OUT.json SEED [SEED ...] [--defects] [--conventions C.json]
+    python3 -I tools/m6_evaluate.py OUT.json SEED [SEED ...] [--defects | --mixed] [--hard] [--heldout-vocabulary]
+                                    [--v2-cases] [--conventions C.json]
 
 For each seed: tools/synthetic_villa_m6 draws a villa with injected completeness cases and distractors; the CLI runs
 route G with the completeness pass; every drawn element is matched to the findings that should report it (kind,
@@ -71,6 +72,19 @@ def _hits(el, findings, items):
     return out
 
 
+def _family_state(el, fam):
+    return ("NA" if not el.get("family") or el["family"] in ("UNKNOWN",) else
+            "RIGHT" if el["family"] in fam or (el["family"] == "PLANTED_COLUMN" and "COLUMNS" in fam) else
+            "UNKNOWN" if fam and set(fam) <= {"UNKNOWN"} else "WRONG" if fam else "NA")
+
+
+def _iou(a, b):
+    ix = max(0.0, min(a[2], b[2]) - max(a[0], b[0]))
+    iy = max(0.0, min(a[3], b[3]) - max(a[1], b[1]))
+    ua = (a[2] - a[0]) * (a[3] - a[1]) + (b[2] - b[0]) * (b[3] - b[1]) - ix * iy
+    return ix * iy / ua if ua > 0 else (1.0 if _touch(a, b, 0.05) else 0.0)
+
+
 def _route_column_errors(items, truth):
     """design columns (position, storey) the route holds no column item for: (x, y, storey) in sheet-local m.
     A column item is placed by its label position (within 1.5 m of the design column)."""
@@ -115,11 +129,12 @@ def _measured_as_panel(el, D):
     return False
 
 
-def evaluate(seed, work, defects=False, conventions=CONVENTIONS, vocabulary="dev", hard=False):
+def evaluate(seed, work, defects=False, conventions=CONVENTIONS, vocabulary="dev", hard=False, m6v2=False):
     t0 = time.perf_counter()
-    rec = {"seed": seed, "defects": bool(defects), "vocabulary": vocabulary, "hard": bool(hard), "ok": False}
+    rec = {"seed": seed, "defects": bool(defects), "vocabulary": vocabulary, "hard": bool(hard), "m6v2": bool(m6v2),
+           "ok": False}
     try:
-        dxf = SM6.generate(work, seed, defects=defects, vocabulary=vocabulary, hard=hard)
+        dxf = SM6.generate(work, seed, defects=defects, vocabulary=vocabulary, hard=hard, m6v2=m6v2)
         base_truth = json.loads((Path(work) / f"villa_m6_{seed}.truth.json").read_text(encoding="utf-8"))
         truth = base_truth["m6"]
         R = CLI.compute([str(dxf)], profile=str(Path(work) / f"villa_m6_{seed}.profile.json"), route="G",
@@ -138,11 +153,13 @@ def evaluate(seed, work, defects=False, conventions=CONVENTIONS, vocabulary="dev
         for f in h:
             used.add(f["FINDING_ID"])
         fam = sorted({f["FAMILY"] for f in h})
-        fam_state = ("NA" if not el.get("family") or el["family"] in ("UNKNOWN",) else
-                     "RIGHT" if el["family"] in fam or (el["family"] == "PLANTED_COLUMN" and "COLUMNS" in fam) else
-                     "UNKNOWN" if fam and set(fam) <= {"UNKNOWN"} else "WRONG" if fam else "NA")
+        fam_state = _family_state(el, fam)
+        best = max((f for f in h if f.get("BOX_M") and el.get("box")), key=lambda f: _iou(el["box"], f["BOX_M"]),
+                   default=None)                 # the finding that sits on the element (a plot-wide box hits all)
+        fam_best = _family_state(el, [best["FAMILY"]]) if best else fam_state
         els.append({"id": el["id"], "kind": el["kind"], "detected": bool(h), "by": sorted({f["KIND"] for f in h}),
                     "family": el.get("family"), "family_found": fam, "family_state": fam_state,
+                    "family_state_best": fam_best,
                     "note": el.get("note"), "layer": el.get("layer")})
     for bk in truth["base_known"]:
         for f in F:
@@ -192,6 +209,7 @@ def evaluate(seed, work, defects=False, conventions=CONVENTIONS, vocabulary="dev
 def summarise(recs):
     by = defaultdict(lambda: Counter())
     fam = Counter()
+    fam_best = Counter()
     fps = Counter()
     for r in recs:
         if not r.get("ok"):
@@ -201,6 +219,7 @@ def summarise(recs):
             by[e["kind"]]["detected"] += int(e["detected"])
             if e["detected"]:
                 fam[e["family_state"]] += 1
+                fam_best[e.get("family_state_best", e["family_state"])] += 1
         for f in r["false_findings"]:
             fps[f["kind"]] += 1
     n_el = sum(v["n"] for v in by.values())
@@ -211,6 +230,7 @@ def summarise(recs):
             "recall_by_kind": {k: {"n": v["n"], "detected": v["detected"],
                                    "recall": round(v["detected"] / v["n"], 3)} for k, v in sorted(by.items())},
             "family_of_detected": dict(sorted(fam.items())),
+            "family_of_detected_best_match": dict(sorted(fam_best.items())),
             "route_column_errors": sum(r.get("route_errors", 0) for r in ok),
             "route_errors_reported_findings": sum(len(r.get("route_errors_reported", [])) for r in ok),
             "false_findings": sum(fps.values()),
@@ -231,7 +251,7 @@ def main(argv):
         for sd in seeds:
             recs.append(evaluate(sd, td, defects="--defects" in argv or (sd % 2 == 1 and "--mixed" in argv),
                                  conventions=conv, vocabulary="heldout" if "--heldout-vocabulary" in argv else "dev",
-                                 hard="--hard" in argv))
+                                 hard="--hard" in argv, m6v2="--v2-cases" in argv))
     res = {"summary": summarise(recs), "drawings": recs}
     Path(out).write_text(json.dumps(res, indent=1, default=str), encoding="utf-8")
     print(json.dumps(res["summary"], indent=1))

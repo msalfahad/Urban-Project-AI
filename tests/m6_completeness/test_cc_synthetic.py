@@ -28,6 +28,18 @@ def test_every_injected_element_reported_and_nothing_else(tmp_path, seed, defect
     assert len(wrong) <= 1, wrong
 
 
+@pytest.mark.parametrize("seed,defects", [(1, True), (6, False), (10, False)])
+def test_v2_cases_hatches_and_pits_are_reported(tmp_path, seed, defects):
+    """V2 cases (hatched beam / panel portions, pit walls inside a footing; seed 10 also copies its 1F plan to 2F)
+    on top of every V1 element: all reported, nothing else."""
+    rec = EV.evaluate(seed, tmp_path, defects=defects, hard=True, m6v2=True)
+    assert rec["ok"], rec.get("error")
+    v2 = [e for e in rec["elements"] if e["kind"] in ("HATCHED_BEAM", "HATCHED_PANEL", "PIT_IN_FOOTING")]
+    assert v2 and all(e["detected"] for e in v2), v2
+    assert all(e["detected"] for e in rec["elements"])
+    assert rec["false_findings"] == [], rec["false_findings"]
+
+
 def test_a_plain_villa_has_no_actionable_finding(tmp_path):
     dxf = SV.generate(tmp_path, 5)
     R = CLI.compute([str(dxf)], profile=str(tmp_path / "villa_5.profile.json"), route="G", completeness=True)
