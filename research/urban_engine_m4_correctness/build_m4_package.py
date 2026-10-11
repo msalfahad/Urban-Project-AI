@@ -62,7 +62,7 @@ def _csv(rows, fields=None):
     w = csv.DictWriter(b, fieldnames=fields, extrasaction="ignore", lineterminator="\n")
     w.writeheader()
     for r in rows:
-        w.writerow({k: (round(v, 4) if isinstance(v, float) else v) for k, v in r.items()})
+        w.writerow({k: (round(v, 4) + 0.0 if isinstance(v, float) else v) for k, v in r.items()})   # never -0.0
     return b.getvalue()
 
 

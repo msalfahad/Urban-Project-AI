@@ -266,11 +266,11 @@
   }
  },
  "m3_seconds": {
-  "intake": 1.273,
-  "detect": 1.096,
-  "items": 0.041
+  "intake": 1.289,
+  "detect": 0.918,
+  "items": 0.043
  },
- "m4_seconds": 5.855,
+ "m4_seconds": 5.481,
  "heldout": {
   "clean_M3": {
    "drawings": 40,

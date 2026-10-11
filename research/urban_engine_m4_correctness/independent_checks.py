@@ -25,6 +25,8 @@ def _poly(p):
 
 def _row(cid, subject, method, shared, eng, ind, tol, note=""):
     diff = None if eng is None or ind is None else eng - ind
+    if diff is not None and abs(diff) < 1e-9:                 # summation order never shows as a sign
+        diff = 0.0
     ok = diff is not None and abs(diff) <= tol
     return {"CHECK_ID": cid, "SUBJECT": subject, "METHOD": method, "SHARED_WITH_ENGINE": shared,
             "ENGINE": eng, "INDEPENDENT": ind, "DIFF": diff, "TOLERANCE": tol,
@@ -167,7 +169,7 @@ def cb_allocation(D, items):
             if not ln.get("groups"):
                 continue
             g = sum((x.get("mass_kg") or (0, 0, 0))[1] for x in ln["groups"])
-            p = sum(pieces.get(pid, 0.0) for pid in {q for s in ln["spans"] for q in s["pieces"]})
+            p = sum(pieces.get(pid, 0.0) for pid in sorted({q for s in ln["spans"] for q in s["pieces"]}))
             out.append(_row("IC-06", f"{ln['line_id']}: bar mass shared to the pieces", "sum over piece items (measured "
                             "+ held as exposure on an unresolved span) vs sum over physical groups", "allocation shares",
                             p, g, 1e-6))
