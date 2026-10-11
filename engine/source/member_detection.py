@@ -165,30 +165,79 @@ def _contains(box, x, y):
 
 
 # ------------------------------------------------------------------ footings
+def closed_polygons(ents, eps):
+    """Closed, NON-rectangular polygons drawn as one polyline (consecutive spans of one source, end meeting start):
+    a footing clipped where it meets its neighbour, an L-shaped outline. Rectangles are left to closed_rectangles."""
+    by_src = defaultdict(list)
+    for s in ents["segments"]:
+        if _layer_role(s["layer"]) in ANNOTATION_ROLES:
+            continue
+        src, _, sub = s["id"].rpartition(":")
+        if sub.isdigit():
+            by_src[src].append((int(sub), s))
+    out = []
+    for src, ss in by_src.items():
+        if len(ss) < 5:
+            continue
+        ss = [s for _, s in sorted(ss, key=lambda x: x[0])]
+        chain = all(math.dist(ss[k]["b"], ss[k + 1]["a"]) <= eps for k in range(len(ss) - 1))
+        if not chain or math.dist(ss[-1]["b"], ss[0]["a"]) > eps:
+            continue
+        poly = [tuple(s["a"]) for s in ss]
+        xs, ys = [p[0] for p in poly], [p[1] for p in poly]
+        out.append({"box": (min(xs), min(ys), max(xs), max(ys)), "layer": ss[0]["layer"], "source": src,
+                    "origin": "POLYGON", "polygon": poly})
+    return out
+
+
 def footings(sheet, ents, lib, unit_m, size_tol_m=0.02, max_footing_m=8.0):
     ms = [m for m in marks(ents["texts"]) if m["family"] == "FOOTING"]
-    rects = [r for r in candidate_rects(ents, unit_m)                                 # footing-sized only
+    seen_m, uniq_m = set(), []
+    for m in ms:                                      # the same mark twice at one place (text + block copy) is one
+        k = (m["mark"], round(m["x"] * unit_m, 1), round(m["y"] * unit_m, 1))
+        if k not in seen_m:
+            seen_m.add(k)
+            uniq_m.append(m)
+    ms = uniq_m
+    rects = [r for r in candidate_rects(ents, unit_m) + closed_polygons(ents, 0.5e-3 / unit_m)   # footing-sized only
              if min(r["box"][2] - r["box"][0], r["box"][3] - r["box"][1]) * unit_m >= 0.4 and
              max(r["box"][2] - r["box"][0], r["box"][3] - r["box"][1]) * unit_m <= max_footing_m]
     # schedule-size templates around each mark: outlines interrupted where straps / ground beams enter
     segs_all = [(x["id"], x["a"][0], x["a"][1], x["b"][0], x["b"][1]) for x in ents["segments"]
                 if _layer_role(x["layer"]) not in ANNOTATION_ROLES]
+    layer_of = {x["id"]: x["layer"] for x in ents["segments"]}
     seen = {tuple(round(v, 1) for v in r["box"]) for r in rects}
     for m in ms:
         row = lib.get(("FOOTING", m["mark"]))
         if row is None or not (row["dims_m"].get("W") and row["dims_m"].get("H")):
             continue
         Lm, Wm = row["dims_m"]["W"], row["dims_m"]["H"]
-        w = max(Lm, Wm) / unit_m * 1.1
+        w = max(Lm, Wm) / unit_m * 1.6              # an outline may lie up to half its long side beside its label
         win = [g for g in segs_all if min(g[1], g[3]) <= m["x"] + w and max(g[1], g[3]) >= m["x"] - w and
                min(g[2], g[4]) <= m["y"] + w and max(g[2], g[4]) >= m["y"] - w]
-        for t in Q.template_outlines(win, Lm * 1000, Wm * 1000, unit_m * 1000, eps=0.5e-3 / unit_m):
+        by_lay = defaultdict(list)                  # templates are one layer's linework (M3: a collinear column
+        for g in win:                               # face on another layer shifted the strap-entry gap ends)
+            by_lay[layer_of[g[0]]].append(g)
+        temps = [t for lay in sorted(by_lay) for t in
+                 Q.template_outlines(by_lay[lay], Lm * 1000, Wm * 1000, unit_m * 1000, eps=0.5e-3 / unit_m)]
+        tol = 1e-3 / unit_m
+        for t in temps:
             k = tuple(round(v, 1) for v in t["bounds"])
-            if k in seen or not _contains(t["bounds"], m["x"], m["y"]):
-                continue
+            if k in seen or any(all(abs(a - b) <= tol for a, b in zip(t["bounds"], r["box"])) for r in rects):
+                continue                            # the same outline as a found rectangle (within 1 mm)
+            bind_to = None
+            if not _contains(t["bounds"], m["x"], m["y"]):
+                # a schedule-size outline next to (not around) its label: bound only when it holds no footing mark,
+                # lies within half its own long side of this label, and no other footing mark is nearer to it
+                tb = box_poly(t["bounds"])
+                d0 = dist_point_poly(m["x"], m["y"], tb)
+                if any(_contains(t["bounds"], o["x"], o["y"]) for o in ms) or d0 > 0.5 * max(Lm, Wm) / unit_m or \
+                        any(dist_point_poly(o["x"], o["y"], tb) < d0 for o in ms if o is not m):
+                    continue
+                bind_to = m["text_id"]
             seen.add(k)
             rects.append({"box": t["bounds"], "layer": "TEMPLATE", "origin": "TEMPLATE_" + t["state"],
-                          "source": "TEMPLATE:" + ",".join(f"{v:.1f}" for v in t["bounds"])})
+                          "source": "TEMPLATE:" + ",".join(f"{v:.1f}" for v in t["bounds"]), "bind_to": bind_to})
     by_rect = defaultdict(list)
     out = []
     for m in ms:
@@ -202,22 +251,45 @@ def footings(sheet, ents, lib, unit_m, size_tol_m=0.02, max_footing_m=8.0):
                                          (r["box"][3] - r["box"][1]) * unit_m))[0] - sz[0]) <= size_tol_m and
                           abs(sorted(((r["box"][2] - r["box"][0]) * unit_m,
                                       (r["box"][3] - r["box"][1]) * unit_m))[1] - sz[1]) <= size_tol_m)
-            near = [n for n in near if n[0] <= gap]
+            near = [n for n in near if n[0] <= gap or n[2].get("bind_to") == m["text_id"]]
             if len(near) == 1 or (len(near) > 1 and near[1][0] - near[0][0] > max(m["h"] or 0, 0.05 / unit_m)):
                 inside = [near[0][2]]
         if not inside:
-            out.append({"member_id": f"FTG:{sheet['sheet_id']}:{m['text_id']}", "mark": m["mark"],
-                        "state": "NO_OUTLINE", "sheet": sheet["sheet_id"], "mark_at": (m["x"], m["y"])})
+            rec = {"member_id": f"FTG:{sheet['sheet_id']}:{m['text_id']}", "mark": m["mark"],
+                   "state": "NO_OUTLINE", "sheet": sheet["sheet_id"], "mark_at": (m["x"], m["y"]),
+                   "storey": "FOUNDATION"}
+            d = (row or {}).get("dims_m", {}) if row else {}
+            if row is not None and d.get("W") and d.get("H") and d.get("D"):
+                # a LABEL-ONLY occurrence: the mark and its schedule type are certain, the outline is not found.
+                # Quantity at schedule size, provisional; the drawn evidence around the label is recorded.
+                w = max(d["W"], d["H"]) / unit_m
+                ev = [g for g in segs_all if math.dist((g[1], g[2]), (m["x"], m["y"])) <= w or
+                      math.dist((g[3], g[4]), (m["x"], m["y"])) <= w]
+                rec.update(state="LABEL_ONLY", schedule_m=[d["W"], d["H"], d["D"]], schedule_source=row["source"],
+                           bars=row.get("bars", []), volume_schedule=d["W"] * d["H"] * d["D"],
+                           evidence={"segments_within_footing_size": len(ev)})
+            out.append(rec)
             continue
-        r = min(inside, key=lambda r: ((r["box"][2] - r["box"][0]) * (r["box"][3] - r["box"][1]), r["source"]))
+        def fits(r):                                    # an outline of the label's own schedule size wins (M3: the
+            if row is None or not (row["dims_m"].get("W") and row["dims_m"].get("H")):   # FF label also sat in a
+                return False                                                              # smaller nested outline)
+            dd = sorted(((r["box"][2] - r["box"][0]) * unit_m, (r["box"][3] - r["box"][1]) * unit_m))
+            sz = sorted((row["dims_m"]["W"], row["dims_m"]["H"]))
+            return abs(dd[0] - sz[0]) <= size_tol_m and abs(dd[1] - sz[1]) <= size_tol_m
+        r = min(inside, key=lambda r: (not fits(r), (r["box"][2] - r["box"][0]) * (r["box"][3] - r["box"][1]),
+                                       r["source"]))
         by_rect[r["source"]].append((m, r))
     for src, lst in sorted(by_rect.items()):
         r = lst[0][1]
         b = r["box"]
         drawn = sorted(((b[2] - b[0]) * unit_m, (b[3] - b[1]) * unit_m))
         mks = sorted({m["mark"] for m, _ in lst})
+        pa = (poly_area(r["polygon"]) if r.get("polygon") else (b[2] - b[0]) * (b[3] - b[1])) * unit_m ** 2
         base = {"sheet": sheet["sheet_id"], "box": b, "outline": src, "drawn_m": drawn, "layer": r["layer"],
-                "mark_at": (lst[0][0]["x"], lst[0][0]["y"]), "storey": "FOUNDATION"}
+                "mark_at": (lst[0][0]["x"], lst[0][0]["y"]), "storey": "FOUNDATION", "plan_area_m2": pa,
+                "outline_kind": r.get("origin"), "polygon": r.get("polygon"),
+                "binding": "LABEL_OUTSIDE_NEAREST_OUTLINE" if r.get("bind_to") else
+                ("LABEL_INSIDE" if any(_contains(b, m["x"], m["y"]) for m, _ in lst) else "LABEL_NEAR_OUTLINE")}
         if len(mks) > 1:
             out.append(dict(base, member_id=f"FTG:{sheet['sheet_id']}:{src}", mark="/".join(mks),
                             state="COMBINED_OUTLINE"))
@@ -237,7 +309,34 @@ def footings(sheet, ents, lib, unit_m, size_tol_m=0.02, max_footing_m=8.0):
                         outline_origin=r.get("origin"),
                         schedule_m=[L, W, D], schedule_source=row["source"], bars=row.get("bars", []),
                         volume_schedule=(L * W * D) if (L and W and D) else None,
-                        volume_drawn=(drawn[0] * drawn[1] * D) if D else None))
+                        volume_drawn=(drawn[0] * drawn[1] * D) if D else None,
+                        volume_polygon=(pa * D) if (D and r.get("polygon")) else None))
+    # a label-only occurrence next to a found outline of the SAME type may be a second label of that footing:
+    # ambiguous, never counted twice
+    for f in out:
+        if f["state"] != "LABEL_ONLY":
+            continue
+        w = max(f["schedule_m"][:2]) / unit_m
+        twin = [g for g in out if g.get("box") and g.get("mark") == f["mark"] and
+                dist_point_poly(f["mark_at"][0], f["mark_at"][1], box_poly(g["box"])) <= w]
+        if twin:
+            f["state"] = "LABEL_NEAR_SAME_TYPE_OUTLINE"
+            f["twin"] = twin[0]["member_id"]
+    # two label-only marks of DIFFERENT types within one footing's long side of each other, with no outline found:
+    # one physical footing labelled twice (or a combined one) - a type conflict, quantified once, never twice
+    lo_ = [f for f in out if f["state"] == "LABEL_ONLY"]
+    for i, a in enumerate(lo_):
+        for b in lo_[i + 1:]:
+            if a["mark"] == b["mark"] or a["state"] != "LABEL_ONLY" or b["state"] != "LABEL_ONLY":
+                continue
+            w = max(max(a["schedule_m"][:2]), max(b["schedule_m"][:2])) / unit_m
+            if math.dist(a["mark_at"], b["mark_at"]) <= w:
+                pair = sorted([a, b], key=lambda f: f["member_id"])
+                pair[0]["state"], pair[1]["state"] = "LABEL_TYPE_CONFLICT", "LABEL_TYPE_CONFLICT_SECONDARY"
+                pair[0]["conflict_with"] = pair[1]["member_id"]
+                pair[0]["candidates"] = {f["mark"]: {"schedule_m": f["schedule_m"], "volume": f["volume_schedule"],
+                                                     "bars": f.get("bars", [])} for f in pair}
+                pair[1]["conflict_with"] = pair[0]["member_id"]
     # outlines holding only a column mark: a footing type by a UNIQUE schedule size match (LOW confidence, inferred)
     taken = {f.get("outline") for f in out}
     cmarks = [m for m in marks(ents["texts"]) if m["family"] == "COLUMN"]
@@ -283,7 +382,9 @@ def footings(sheet, ents, lib, unit_m, size_tol_m=0.02, max_footing_m=8.0):
     q.sort(key=lambda f: f["member_id"])
     for i, a in enumerate(q):
         for b in q[i + 1:]:
-            ov = overlap_area(box_poly(a["box"]), box_poly(b["box"])) * unit_m ** 2
+            ov = overlap_area(a.get("polygon") or box_poly(a["box"]), box_poly(b["box"])) * unit_m ** 2
+            if b.get("polygon") and not a.get("polygon"):
+                ov = overlap_area(b["polygon"], box_poly(a["box"])) * unit_m ** 2
             if ov <= 1e-6:
                 continue
             aa = (a["box"][2] - a["box"][0]) * (a["box"][3] - a["box"][1]) * unit_m ** 2

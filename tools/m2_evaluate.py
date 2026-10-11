@@ -30,7 +30,7 @@ from engine.source import provisional_estimate as PE     # noqa: E402
 from tools import synthetic_villa as SV                  # noqa: E402
 from tools import urban_intake as UI                     # noqa: E402
 
-GENERIC = ROOT / "engine" / "profiles" / "URBAN_M2_GENERIC_CONVENTIONS_V1.json"
+GENERIC = ROOT / "engine" / "profiles" / "URBAN_M3_GENERIC_CONVENTIONS_V2.json"
 
 
 def _centroid(p):

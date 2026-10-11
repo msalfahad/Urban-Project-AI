@@ -61,17 +61,21 @@ def test_benchmark_positions_carry_no_values():
                                                                    "NO_GENERIC_VALUE"}
 
 
-@pytest.mark.skipif(not ST_DXF.exists(), reason="private ST7757 drawing not present")
-def test_alsenan_generic_reproduces():
-    spec = importlib.util.spec_from_file_location("m2rep", PKG / "build_m2_reports.py")
-    B = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(B)
-    I, D, conv, items, reg, risk = B.run_generic(ST_DXF)
-    comp = {(r["TRADE"], r["FAMILY"]): r for r in B.comparison(items, D, risk)}
-    frozen = {(r["TRADE"], r["FAMILY"]): r for r in csv.DictReader((PKG / "04_ALSENAN_GENERIC_VS_FROZEN.csv").open())}
-    for k, r in frozen.items():
-        assert comp[k]["GENERIC_PROVISIONAL_BASE"] == pytest.approx(float(r["GENERIC_PROVISIONAL_BASE"]), abs=1e-5), k
-    gs = B.ground_slab_audit(D)
-    assert sum(1 for r in gs if r["AUDIT_CLASS"] == "MATCHED_SLAB") == 19
-    assert not any(r["AUDIT_CLASS"] == "GENERIC_NO_FACE_SILENT" for r in gs)
-    assert all(i["category"] != "VERIFIED" for i in items)                  # a generic run never releases VERIFIED
+# M2 evidence is frozen: the files written by build_m2_reports at the M2 commit are pinned byte for byte. The live
+# reproduction of the M2 comparison moved to tests/m3_recovery (the engine has changed since M2, deliberately; the
+# M2 numbers remain the record of the M2 engine, reproducible at commit c5123a7).
+M2_PINS = {
+    "04_ALSENAN_GENERIC_VS_FROZEN.csv": "57cac71f8ab8c6e7481bc13efc0ffe563497c335f51f0db6336f0d2faa1f659f",
+    "05_REINFORCEMENT_COMPLETENESS_89.csv": "7889dd08a8016b10f2bd58c8d26f1cdbbbbc59134e4efbded6375545d67c0002",
+    "06_GROUND_SLAB_GAP_AUDIT.csv": "3e557ccc44924a5732a543aac3338f440144175790d541abde99de478ad951fe",
+    "07_ALSENAN_COVERAGE_RISK.csv": "5daa9758ac4cf4cb76df2d723ac560652c8c340be3b606ab0a99a4613ab009dc",
+    "09_BENCHMARK_POSITIONS.csv": "9eaae1365bb28bf665f021ca7a22acda7bc9c5fa83cb3934177f9863f32014bb",
+    "08_ACCURACY_COVERAGE_METRICS.json": "754b5c078a7a773e1f05f31fdd3ab15f5c09ddaabda90df74d2c7ca1e914ae84",
+    "10_STAIR_SCENARIOS.csv": "75589d9671a8473282b91820019ba83d11cfe53c51427bfc2edc0948a2132410",
+}
+
+
+def test_m2_evidence_is_frozen():
+    import hashlib
+    for name, sha in M2_PINS.items():
+        assert hashlib.sha256((PKG / name).read_bytes()).hexdigest() == sha, name

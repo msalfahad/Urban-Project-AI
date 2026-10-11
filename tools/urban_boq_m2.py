@@ -42,7 +42,7 @@ from tools import urban_intake as UI                      # noqa: E402
 from tools import urban_structural_boq as M1              # noqa: E402
 
 POLICY_ID = "URBAN_BOQ_M2"
-GENERIC_CONVENTIONS = "engine/profiles/URBAN_M2_GENERIC_CONVENTIONS_V1.json"
+GENERIC_CONVENTIONS = "engine/profiles/URBAN_M3_GENERIC_CONVENTIONS_V2.json"
 BANNER = M1.BANNER
 
 

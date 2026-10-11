@@ -1,0 +1,278 @@
+{
+ "set": "URBAN_M3_GENERIC_CONVENTIONS_V2",
+ "note": "V1 (M2) plus the M3 conventions. V1 stays as committed so that M2 evidence reproduces at its commit; route G uses V2.",
+ "conventions": [
+  {
+   "id": "BEAM_DEPTH_READING",
+   "title": "What the schedule beam depth H is measured from",
+   "kind": "choice",
+   "options": [
+    "TOTAL_DEPTH",
+    "BELOW_SLAB"
+   ],
+   "base": "TOTAL_DEPTH",
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "beam schedule (datum not printed on most Kuwait villa schedules)",
+   "rationale": "TOTAL_DEPTH (B x H x L, the slab strip inside H) is the usual schedule convention; BELOW_SLAB (B x (H + t) x L) is the alternative and sets each beam's high end."
+  },
+  {
+   "id": "WIDTH_CONFLICT_SECTION",
+   "title": "Width of a beam drawn at another width than its schedule",
+   "kind": "choice",
+   "options": [
+    "SCHEDULE",
+    "DRAWN"
+   ],
+   "base": "SCHEDULE",
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "drawn band width vs schedule row",
+   "rationale": "The schedule is the design table; the drawn width is the alternative."
+  },
+  {
+   "id": "COLLINEAR_INHERITANCE",
+   "title": "Untagged span collinear with a tagged span across a support",
+   "kind": "choice",
+   "options": [
+    "ALLOW",
+    "OFF"
+   ],
+   "base": "ALLOW",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "drawing convention: one tag per beam line",
+   "rationale": "An untagged span on the same line, same width, across a column inherits the tagged section (LOW confidence). OFF leaves it UNRESOLVED."
+  },
+  {
+   "id": "FOOTING_SIZE_MISMATCH",
+   "title": "Footing drawn at another plan size than its schedule",
+   "kind": "choice",
+   "options": [
+    "SCHEDULE",
+    "DRAWN"
+   ],
+   "base": "SCHEDULE",
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "drawn outline vs schedule row",
+   "rationale": "Schedule as base; the drawn size is the alternative."
+  },
+  {
+   "id": "COLUMN_SECTION_MISMATCH",
+   "title": "Column drawn at another section than its schedule",
+   "kind": "choice",
+   "options": [
+    "SCHEDULE",
+    "DRAWN"
+   ],
+   "base": "SCHEDULE",
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "drawn outline vs schedule storey band",
+   "rationale": "Schedule as base; drawn as the alternative."
+  },
+  {
+   "id": "SLAB_SHEET_UNIFORM_THICKNESS",
+   "title": "Untagged panels take the sheet's single printed thickness",
+   "kind": "choice",
+   "options": [
+    "APPLY"
+   ],
+   "base": "APPLY",
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "every thickness tag on the sheet prints the same value",
+   "rationale": "When all printed tags agree the sheet value applies to untagged panels."
+  },
+  {
+   "id": "SLAB_THICKNESS_EXPOSURE_M",
+   "title": "Thickness range for a panel with no printed thickness (exposure only)",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.16,
+   "low": 0.12,
+   "high": 0.25,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "Kuwait villa slab range",
+   "rationale": "Used only for the UNRESOLVED exposure range; never in a total."
+  },
+  {
+   "id": "UNTAGGED_BEAM_DEPTH_RANGE_M",
+   "title": "Depth range for an untagged beam band with no schedule row at its width (exposure only)",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.5,
+   "low": 0.3,
+   "high": 0.9,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "villa beam depths",
+   "rationale": "Used only for the UNRESOLVED exposure; when schedule rows exist at the band width their depth range is used instead."
+  },
+  {
+   "id": "GB_DEPTH_EXPOSURE_M",
+   "title": "Depth range for an unmarked ground beam (exposure only)",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.6,
+   "low": 0.3,
+   "high": 1.0,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "villa ground beams",
+   "rationale": "Used only for the UNRESOLVED exposure range; never in a total."
+  },
+  {
+   "id": "REBAR_HOOK_STANDARD",
+   "title": "Code table for bends and hooks",
+   "kind": "choice",
+   "options": [
+    "ACI_318_19"
+   ],
+   "base": "ACI_318_19",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "engine.source.bbs_optimiser ACI 318-19 Tables 25.3.1 / 25.3.2 (not verified against a project document)",
+   "rationale": "Diameter-aware bend diameters and hook tails; PROVISIONAL_CODE_METHOD."
+  },
+  {
+   "id": "REBAR_COVER_BEAM_M",
+   "title": "Beam cover to links",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.025,
+   "low": 0.02,
+   "high": 0.04,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "typical general notes",
+   "rationale": "Overridden by a printed cover in the profile."
+  },
+  {
+   "id": "REBAR_COVER_COLUMN_M",
+   "title": "Column cover to ties",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.04,
+   "low": 0.025,
+   "high": 0.05,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "typical general notes",
+   "rationale": "Overridden by a printed cover in the profile."
+  },
+  {
+   "id": "REBAR_COVER_FOOTING_M",
+   "title": "Footing cover",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.05,
+   "low": 0.05,
+   "high": 0.075,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "typical general notes",
+   "rationale": "Overridden by a printed cover in the profile."
+  },
+  {
+   "id": "BEAM_BAR_ANCHORAGE_D",
+   "title": "Beam main-bar extension into each support, in bar diameters",
+   "kind": "number",
+   "unit": "d",
+   "base": 40,
+   "low": 0,
+   "high": 50,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "typical anchorage",
+   "rationale": "Bottom and top bars run the clear span plus this anchorage at both ends; 0 is the bare clear span."
+  },
+  {
+   "id": "COLUMN_LAP_D",
+   "title": "Column main-bar lap per storey, in bar diameters",
+   "kind": "number",
+   "unit": "d",
+   "base": 50,
+   "low": 40,
+   "high": 60,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "typical lap",
+   "rationale": "Each storey's main bars run the storey height plus one lap."
+  },
+  {
+   "id": "FOOTING_BAR_END",
+   "title": "Footing bar ends",
+   "kind": "choice",
+   "options": [
+    "STRAIGHT",
+    "HOOKED_90"
+   ],
+   "base": "STRAIGHT",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "footing details",
+   "rationale": "Straight between covers as base; 90 deg hooks at both ends as the high end."
+  },
+  {
+   "id": "SLAB_MESH_DIRECTIONS",
+   "title": "Directions of a slab mesh tag that does not say each way",
+   "kind": "number",
+   "unit": "directions",
+   "base": 1,
+   "low": 1,
+   "high": 2,
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "slab bar tag without E.W.",
+   "rationale": "A tag without E.W. covers one direction as base; both directions as the high end."
+  },
+  {
+   "id": "FOOTING_TYPE_FROM_SIZE",
+   "title": "Footing outline with only a column mark",
+   "kind": "choice",
+   "options": [
+    "UNIQUE_SIZE_MATCH"
+   ],
+   "base": "UNIQUE_SIZE_MATCH",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "drawn outline vs footing schedule sizes",
+   "rationale": "When exactly one footing type has the drawn plan size, the outline is that type (LOW confidence; an RFI confirms it)."
+  },
+  {
+   "id": "SLAB_NOTE_MESH_SCOPE",
+   "title": "A sheet's single each-way mesh note applies to untagged panels",
+   "kind": "choice",
+   "options": [
+    "APPLY"
+   ],
+   "base": "APPLY",
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "printed sheet note 'n Ø d /m E.W.'",
+   "rationale": "One each-way mesh note on the sheet and no tag inside the panel: the note applies (scope confirmed by RFI)."
+  },
+  {
+   "id": "GB_LENGTH_BASIS",
+   "title": "Span length that selects a typical ground-beam class",
+   "kind": "choice",
+   "options": [
+    "CLEAR",
+    "CENTRE_TO_CENTRE"
+   ],
+   "base": "CENTRE_TO_CENTRE",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "typical section titles by span",
+   "rationale": "Span conventionally means centre to centre; the clear-length class is the alternative."
+  },
+  {
+   "id": "FOOTING_LABEL_ONLY",
+   "title": "Footing mark with a schedule row but no outline found",
+   "kind": "choice",
+   "options": [
+    "SCHEDULE_SIZE"
+   ],
+   "base": "SCHEDULE_SIZE",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "footing schedule size of the labelled type",
+   "rationale": "The label and its schedule type are certain; the outline is not found. The quantity is the schedule size, PROVISIONAL and LOW confidence, with a coverage-risk record; a second label next to an outline of the same type stays unresolved (never counted twice)."
+  },
+  {
+   "id": "FOOTING_LABEL_CONFLICT",
+   "title": "Two footing types labelled at one footing with no outline",
+   "kind": "choice",
+   "options": [
+    "LARGER",
+    "SMALLER"
+   ],
+   "base": "LARGER",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "the two labelled schedule types",
+   "rationale": "One physical footing carries two type labels and no outline settles it: it is quantified once, at the larger type (the conservative reading), with the smaller as the low bound. An RFI settles the type."
+  }
+ ]
+}

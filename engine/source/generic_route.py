@@ -257,12 +257,59 @@ def items_from(D, conv, heights=None):
                           "none found (outline overlap checked)")
             ded = sum(o["area_m2"] for o in f.get("overlaps", []) if o.get("deduct")) * \
                 (f.get("schedule_m") or [0, 0, 0])[2] if f.get("schedule_m") else 0.0
-            if f["state"] == "CONFIRMED" and f.get("volume_schedule"):
-                v = f["volume_schedule"] - ded
+            if f["state"] == "CONFIRMED" and f.get("volume_polygon"):
+                v = f["volume_polygon"] - ded
                 items.append(PE.item(item_id=f"P-C:{cid}", category="PROVISIONAL", low=v, base=v, high=v,
-                                     formula="L x W x D (schedule; drawn outline confirms L x W) - overlap",
+                                     formula="drawn polygon area x D (schedule); the outline is clipped where it "
+                                             "meets a neighbour, and the clipped part belongs to the neighbour",
                                      assumptions=["FROZEN:SOURCE_COMPLETE"], support="SOURCE_COMPLETE_UNREVIEWED",
                                      confidence="HIGH", blocker="NOT_REVIEWED", **common))
+            elif f["state"] == "CONFIRMED" and f.get("volume_schedule"):
+                v = f["volume_schedule"] - ded
+                outside = f.get("binding") == "LABEL_OUTSIDE_NEAREST_OUTLINE"
+                items.append(PE.item(item_id=f"P-C:{cid}", category="PROVISIONAL", low=v, base=v, high=v,
+                                     formula="L x W x D (schedule; drawn outline confirms L x W) - overlap" +
+                                     ("; the label sits outside its outline (nearest unclaimed outline)"
+                                      if outside else ""),
+                                     assumptions=["FROZEN:SOURCE_COMPLETE"], support="SOURCE_COMPLETE_UNREVIEWED",
+                                     confidence="MEDIUM" if outside else "HIGH", blocker="NOT_REVIEWED", **common))
+            elif f["state"] in ("LABEL_ONLY", "LABEL_TYPE_CONFLICT") and not all(
+                    k in conv.items for k in ("FOOTING_LABEL_ONLY", "FOOTING_LABEL_CONFLICT")):
+                # a convention set without the M3 label rules (e.g. V1): the M2 behaviour, unresolved
+                items.append(PE.item(item_id=f"U-C:{cid}", category="UNRESOLVED", support="NO_GEOMETRY",
+                                     confidence="LOW", blocker="NO_OUTLINE", expression="L x W x D", **common))
+                reg(cid, "FOOTINGS", "FOUNDATION", "MISSING_DATA", "NO_OUTLINE")
+                risk.append({"KIND": "FOOTING_NO_OUTLINE", "WHERE": f"{sid} {f.get('mark')}", "DETAIL": cid})
+                continue
+            elif f["state"] == "LABEL_TYPE_CONFLICT":
+                vals = {k: c["volume"] for k, c in sorted(f["candidates"].items())}
+                lo, b, hi = PE.by_choice(conv, "FOOTING_LABEL_CONFLICT", {"LARGER": max(vals.values()),
+                                                                          "SMALLER": min(vals.values())})
+                items.append(PE.item(item_id=f"P-C:{cid}", category="PROVISIONAL", low=lo, base=b, high=hi,
+                                     formula="one footing labelled with two types and no outline found: the larger "
+                                             "or the smaller schedule type (" + ", ".join(f"{k} {v:.3f} m3" for k, v
+                                                                                      in vals.items()) + ")",
+                                     assumptions=["FOOTING_LABEL_CONFLICT"], support="CONVENTION_ONLY",
+                                     confidence="LOW", blocker="SOURCE_CONFLICT", **common))
+                risk.append({"KIND": "FOOTING_LABEL_TYPE_CONFLICT", "WHERE": f"{sid} {'/'.join(vals)}",
+                             "DETAIL": f"{cid} and {f['conflict_with']}: quantified once"})
+                reg(cid, "FOOTINGS", "FOUNDATION", "MISSING_DATA", "footing type conflict: bars of which type")
+                continue
+            elif f["state"] == "LABEL_TYPE_CONFLICT_SECONDARY":
+                reg(cid, "FOOTINGS", "FOUNDATION", "OUTSIDE_SCOPE",
+                    f"second label of {f['conflict_with']} (quantified there once)")
+                continue
+            elif f["state"] == "LABEL_ONLY" and f.get("volume_schedule"):
+                v = f["volume_schedule"]
+                items.append(PE.item(item_id=f"P-C:{cid}", category="PROVISIONAL", low=v, base=v, high=v,
+                                     formula="L x W x D of the labelled schedule type; the physical outline was "
+                                             "NOT found, so its position and plan size are not confirmed",
+                                     assumptions=["FOOTING_LABEL_ONLY"], support="ONE_ASSUMED_DIMENSION",
+                                     confidence="LOW", blocker="OUTLINE_NOT_CONFIRMED", **common))
+                risk.append({"KIND": "FOOTING_LABEL_ONLY", "WHERE": f"{sid} {f.get('mark')}",
+                             "DETAIL": f"{cid}: schedule-size quantity, outline not found "
+                                       f"({f['evidence']['segments_within_footing_size']} footing-size segments "
+                                       f"near the label)"})
             elif f["state"] == "TYPE_BY_SIZE_MATCH" and f.get("volume_schedule"):
                 v = f["volume_schedule"] - ded
                 items.append(PE.item(item_id=f"P-C:{cid}", category="PROVISIONAL", low=v, base=v, high=v,
@@ -552,8 +599,11 @@ def _gb_class(conv, b):
 
 
 def _footing_bars(f, bars, cover_trip, conv, hook_std):
-    L, W = sorted((f["drawn_m"] if f["state"] != "CONFIRMED" else
-                   sorted(f["schedule_m"][:2])), reverse=True)[:2] if f.get("drawn_m") else (None, None)
+    if f["state"] == "LABEL_ONLY" and f.get("schedule_m"):
+        L, W = sorted(f["schedule_m"][:2], reverse=True)
+    else:
+        L, W = sorted((f["drawn_m"] if f["state"] != "CONFIRMED" else
+                       sorted(f["schedule_m"][:2])), reverse=True)[:2] if f.get("drawn_m") else (None, None)
     if not (L and W):
         return None
     out = defaultdict(lambda: [0.0, 0.0, 0.0])

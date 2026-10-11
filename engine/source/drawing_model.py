@@ -64,7 +64,7 @@ LABEL_WORDS = {
 }
 # plan-mark tag families: (family, regex on the normalized mark)
 TAG_FAMILIES = (
-    ("FOOTING", r"^(F|PF|CF|FC)(\d{1,3}[A-Z]?|N)?$"),
+    ("FOOTING", r"^(F|PF|CF|FC|FF|IF)(-?\d{1,3}[A-Z]?|N)?$"),          # M3: FF (a schedule type) and F-1 forms
     ("COLUMN", r"^(C|CN|TC|SC)\d{0,3}[A-Z]?$"),
     ("GROUND_BEAM", r"^(GB|TB|G\.B)\d{0,3}[A-Z]?$"),
     ("STRAP_BEAM", r"^(SB|STB|STR)\d{1,3}[A-Z]?$"),
