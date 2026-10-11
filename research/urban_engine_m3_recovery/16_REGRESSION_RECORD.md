@@ -72,5 +72,6 @@
 | R30 | Builder `KeyError 'TRADE'`. | `FAMILY_SUMMARY` uses lowercase keys. |
 | R31 | The dashboard failed its own hygiene check on an output folder name. | Folder renamed `st7757_route_g`; SVGs inlined. |
 | R32 | The synthetic stub was too short to have any effect (under the 0.3 m minimum face). | 0.41 m at line-end columns. |
+| R33 | The full suite at `0aba317` failed the anti-calibration boundary (`tests/r8_1/test_r8_1_boundaries.py::test_project_names_appear_only_as_field_audit_evidence_never_in_logic`): the WP4 redaction rule in `engine/source/detail_evidence.py` carried the project's title-block tokens. | The engine keeps the generic rule (file paths, Arabic-script source text). The project's words are the caller's `--redact` patterns, recorded in the evidence file. The p.13 evidence was re-extracted with them: records, details and notes are identical. Tests: `test_m3_detail_evidence.py::test_validation_and_redaction`, `::test_st7757_ground_beam_details`. |
 
 These are guarded by `test_m3_reports.py` (the package checks) and the M2 suite.

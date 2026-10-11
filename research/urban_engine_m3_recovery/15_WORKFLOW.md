@@ -56,7 +56,8 @@ python3 -I tools/pdf_evidence.py check --evidence EVID/DETAIL_EVIDENCE.json
 **What gets written:**
 - Every record carries its page, region (points and pixels), raw text, confidence, the reads and its crop file name.
 - Crops go to `EVID/crops/` and are never committed.
-- Owner, title-block and file-path text is dropped before recording; only the count is kept.
+- File paths and Arabic-script source text are dropped before recording by the engine's generic rule. The project's owner and title-block words are passed with `--redact` and recorded in `redact_patterns`; the engine itself carries no project token. Only the count of dropped tokens is kept.
+- For ST7757 the command was `--pages 13 --dpi 300 --redact '(?i)ALS[EY]?N[YA]?AN' 'YEARS[ ]2013' '7757-[A-Z]'`.
 
 **Using the evidence:** pass it to the BOQ run:
 

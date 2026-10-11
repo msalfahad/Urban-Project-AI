@@ -18,8 +18,10 @@ rules, never the reader:
                             the top count -> TOP, counts under it -> BOTTOM (layers summed), Ø/spacing -> LINKS,
                             count Ø/spacing -> SIDE. A detail with one count only has no defensible TOP / BOTTOM split
                             and is left ROLE_UNRESOLVED.
-    redact(text)            owner / title-block text never enters a record: the hygiene pattern and any project
-                            redaction pattern drop the token, and only the count of dropped tokens is kept.
+    redact(text, extra)     owner / title-block text never enters a record: the generic rule (a file path, or a
+                            run of source text in Arabic script) and the project's redaction patterns (extra; the
+                            caller supplies the owner and title-block words, never this module) drop the token, and
+                            only the count of dropped tokens is kept.
 
 States: NATIVE_TEXT (a text layer), OCR_UNREVIEWED (two OCR reads agree), OCR_REJECTED_AMBIGUOUS / _UNPARSED /
 _DISAGREE, MANUALLY_CONFIRMED (a person transcribed or confirmed it). OCR-derived values are never promoted to
@@ -38,7 +40,7 @@ DIA_GLYPHS = "Ø6098¢%$oOc"           # what OCR prints for the diameter sign (
 STATES = ("NATIVE_TEXT", "OCR_UNREVIEWED", "OCR_REJECTED_AMBIGUOUS", "OCR_REJECTED_UNPARSED",
           "OCR_REJECTED_DISAGREE", "MANUALLY_CONFIRMED")
 USABLE = ("NATIVE_TEXT", "OCR_UNREVIEWED", "MANUALLY_CONFIRMED")
-HYGIENE = re.compile(r"YEARS 2013|7757-[A-Z]|[؀-ۿ]{3,}")
+HYGIENE = re.compile(r"[؀-ۿ]{3,}")      # source text in Arabic script (generic); project words come from the caller
 PATHLIKE = re.compile(r"\\|/[A-Za-z]|\.(dwg|dxf|pdf)\b", re.I)
 MEMBER_WORDS = (("GROUND_BEAM", r"GROUND\s*BEAMS?|TIE\s*BEAMS?|G\.?\s*B\b"), ("STRAP_BEAM", r"STRAP"),
                 ("LINTEL", r"LINTEL|LNTEL"), ("FOOTING", r"FOOTING"), ("COLUMN", r"COLUMN"),

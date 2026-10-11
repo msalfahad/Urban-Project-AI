@@ -9,6 +9,7 @@ on a vector-glyph page each glyph shape votes page-wide, and a read that contrad
 from __future__ import annotations
 
 import json
+import re
 import shutil
 from pathlib import Path
 
@@ -18,6 +19,7 @@ from engine.source import detail_evidence as DE
 
 ROOT = Path(__file__).resolve().parents[2]
 ST_PDF = ROOT / "data/inputs/by_sha256/74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3.pdf"
+ST_REDACT = [r"(?i)ALS[EY]?N[YA]?AN", r"YEARS[ ]2013", r"7757-[A-Z]"]     # the ST7757 owner / title-block words
 
 
 @pytest.mark.parametrize("text,expect", [
@@ -69,10 +71,13 @@ def test_validation_and_redaction():
     bad_who = DE.manual_record("EV-2", page=1, region=(0, 0, 1, 1), text="3Ø16", by="", on="")
     ocr_one = dict(ok, record_id="EV-3", method="OCR_TESSERACT", state="OCR_UNREVIEWED", reads=[{"text": "3Ø16"}])
     owner = dict(ok, record_id="EV-4", raw_text="YEARS 2013")
-    ev = {"schema": DE.SCHEMA, "records": [ok, bad_who, ocr_one, owner], "details": []}
+    script = dict(ok, record_id="EV-5", raw_text="\u0645\u062e\u0637\u0637")      # Arabic-script source text
+    ev = {"schema": DE.SCHEMA, "records": [ok, bad_who, ocr_one, owner, script], "details": []}
     probs = " ".join(DE.validate(ev))
     assert "EV-1" not in probs and "EV-2: a confirmation" in probs and "EV-3: an accepted OCR" in probs
-    assert "EV-4: raw text" in probs
+    # the generic rule catches source script; the owner's words are the project's redaction patterns, not the engine's
+    assert "EV-5: raw text" in probs and "EV-4" not in probs
+    assert "EV-4: raw text" in " ".join(DE.validate(dict(ev, redact_patterns=ST_REDACT)))
     assert DE.redact(r"\\server\job\T7757.dwg") and DE.redact("x", [r"^x$"]) and not DE.redact("3Ø16")
 
 
@@ -135,10 +140,17 @@ def test_raster_pdf_ocr_needs_unanimous_reads(tmp_path):
 @pytest.mark.skipif(not (ST_PDF.exists() and shutil.which("tesseract")), reason="private ST7757 PDF / tesseract")
 def test_st7757_ground_beam_details(tmp_path):
     pymupdf, PEV = _pdf_tools()
-    ev = PEV.extract(ST_PDF, tmp_path / "ev", pages=[13], redact_patterns=[r"(?i)ALS[EY]?N[YA]?AN"])
+    # the project's owner / title-block words are the caller's (engine/source carries no project token)
+    ev = PEV.extract(ST_PDF, tmp_path / "ev", pages=[13], redact_patterns=ST_REDACT)
     assert not ev["validation"]
     text = json.dumps(ev, ensure_ascii=False)
     assert not DE.HYGIENE.search(text) and "dwg" not in text.lower()
+    assert not re.search(r"YEARS 2013|7757-[A-Z]|(?i:als[ey]?n[ya]?an)", text)
+    assert ev["pages"][0]["dropped_tokens"] > 0
+    committed = json.loads((ROOT / "research/urban_engine_m3_recovery/evidence/DETAIL_EVIDENCE.json").read_text())
+    assert committed["redact_patterns"] == ST_REDACT
+    assert {k: ev[k] for k in ("records", "details", "notes")} == {k: committed[k] for k in ("records", "details",
+                                                                                             "notes")}
     # the 3 / 5 confusion: no accepted record says 5 bars, and every accepted count read was glyph-verified
     acc = [r for r in ev["records"] if r["state"] == "OCR_UNREVIEWED"]
     assert not any(r["parsed"].get("count") == 5 for r in acc)

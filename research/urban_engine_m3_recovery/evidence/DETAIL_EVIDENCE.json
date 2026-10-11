@@ -19,7 +19,9 @@
   "image_check": "VECTOR_GLYPH_CONSENSUS (vector-glyph pages), else UNANIMOUS_READS"
  },
  "redact_patterns": [
-  "(?i)ALS[EY]?N[YA]?AN"
+  "(?i)ALS[EY]?N[YA]?AN",
+  "YEARS[ ]2013",
+  "7757-[A-Z]"
  ],
  "pages": [
   {
