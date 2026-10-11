@@ -1,0 +1,16 @@
+RFI,TO,QUESTION,SCOPE
+RFI-M4-01,STRUCTURAL,"Continuous beams: the schedule prints no top bars running through the beam. Which top continuous bars apply (count, diameter, laps)?",24 beam pieces (role CB_TOP_THROUGH)
+RFI-M4-02,STRUCTURAL,Continuous beams: support top bars are blank in some schedule cells. Are they omitted or missing?,4 beam pieces (CB_SUPPORT_TOP)
+RFI-M4-03,STRUCTURAL,Beam spans with no label that continue a labelled beam across a support: confirm each span's mark and section.,10 spans (UNRESOLVED_CONCRETE_EXCEPTIONS)
+RFI-M4-04,STRUCTURAL,"Continuous-beam lines whose printed span list does not fit the drawn spans, or whose direction is ambiguous: which end is span 1, and how many spans?","AMBIGUOUS_DIRECTION 2, MATCH_REVERSED 1, MATCH_SYMMETRIC 1, SPAN_COUNT_CONFLICT 1"
+RFI-M4-05,STRUCTURAL,A beam span printed with two different marks (a continuous-beam mark and a simple-beam mark): which applies?,1 span(s)
+RFI-M4-06,STRUCTURAL,Exterior ground beams under an annex / court floor level: the exterior detail's depth from that level is not deeper than the class section. Which section applies?,13 bands
+RFI-M4-07,STRUCTURAL,Ground-beam links of the class under 5 m: the OCR read was rejected; the second reading gives Ø8/15cm. Please confirm (a person's confirmation lifts it).,record EV-0007; 31 ground beams miss links in total
+RFI-M4-08,STRUCTURAL,Ground-beam links of the class under 2.5 m: no notation is printed in the detail.,LINKS role of the < 2.5 m class
+RFI-M4-09,STRUCTURAL,Project default slab thickness: the general note read by local OCR gives 16 cm. Please confirm; it applies to every panel without its own tag.,70 panels
+RFI-M4-10,STRUCTURAL,"Blinding: confirm the 10 cm plain concrete under ground beams and straps as well as under footings, and the 10 cm projection.",BLINDING_UNDER / BLINDING_PROJECTION_M
+RFI-M4-11,ARCHITECTURAL,"Openings under a beam: is there masonry between the head of the opening and the beam soffit (a lintel), or does the beam act as the lintel?",46 openings
+RFI-M4-12,STRUCTURAL,Stairs: the waist thickness and the riser count of each flight (the plan holds part of each stair only).,2 stair zones
+RFI-M4-13,STRUCTURAL,Column necks / column types without a schedule row.,13 columns
+RFI-M4-14,STRUCTURAL,Slab panels without a bar tag inside the panel.,25 panels
+RFI-M4-15,STRUCTURAL,A footing labelled with two types and no outline: which type?,1 footing

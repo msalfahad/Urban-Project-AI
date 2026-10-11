@@ -84,6 +84,19 @@ def m3_snapshot(m3_root):
     return res
 
 
+def m3_register(cache=None):
+    """the M3 rebar register per component: the M3 conventions (V2) and profile through the current engine, whose
+    M3 behaviour is gated off the M4 conventions; accepted only when its state counts equal the M3 commit's own
+    snapshot (checked by the caller)."""
+    from engine.source import generic_route as GR
+    I, _ = CLI.cached_intake(CLI.M1.accept([str(DRAWING)])[0], cache)
+    conv = GR.merge_conventions(json.loads((ROOT / "engine/profiles/URBAN_M3_GENERIC_CONVENTIONS_V2.json")
+                                           .read_text()), json.loads((M3PKG / "profile_st7757_m3.json").read_text()))
+    D = GR.detect(I, typical_widths_m=GR.typical_gb_widths(conv))
+    items, reg, risk = GR.items_from(D, conv, GR.storey_heights(conv), evidence=json.loads(EVIDENCE.read_text()))
+    return reg
+
+
 def m4_run(cache=None):
     return CLI.compute([str(DRAWING)], profile=str(PROFILE), route="G", cache_dir=cache, evidence=str(EVIDENCE),
                        arch=[str(ARCH)], evidence_review=str(READINGS))
@@ -387,6 +400,10 @@ def main(argv):
     m3 = m3_snapshot(Path(a["--m3-root"]).resolve())
     R = m4_run(a.get("--cache"))
     g = R["generic"]
+    reg3 = m3_register(a.get("--cache"))
+    if dict(sorted(Counter(r["REBAR_STATE"] for r in reg3).items())) != dict(sorted(m3["rebar_states"].items())):
+        raise SystemExit("the M3 replay does not reproduce the M3 commit's rebar states")
+    g["previous_register"] = reg3
     T = dict(CLI.m4_tables(R))
     ev = json.loads(EVIDENCE.read_text())
     T["OCR_REVIEW_SHEET"] = ocr_sheet(R, ev)

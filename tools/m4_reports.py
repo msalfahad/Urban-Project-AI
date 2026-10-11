@@ -148,9 +148,12 @@ def missing_register(D, items, reg, arch=None, prev_reg=None):
         cs = conc.get(cid, [])
         c = next((i for i in cs if i["category"] in ("PROVISIONAL", "VERIFIED")), cs[0] if cs else None)
         ss = steel.get(cid, [])
-        roles = sorted({i["item_id"].split(":")[-1] for i in ss if i["category"] == "UNRESOLVED"})
+        roles = sorted({(i["item_id"].split(":")[-2] if re.match(r"^D\d", i["item_id"].split(":")[-1]) else
+                         i["item_id"].split(":")[-1]) for i in ss if i["category"] == "UNRESOLVED"})
         roles = [re.sub(r"\d+$", "", x) if x.startswith("CB_SUPPORT_TOP") else x for x in roles]
         roles = sorted(set(roles)) or ["ALL"]
+        if c and c["category"] == "UNRESOLVED":          # no section: every bar of the component is unknown
+            roles = ["ALL"]
         kg = [sum(i[k] or 0.0 for i in ss if i["category"] == "PROVISIONAL") for k in ("low", "base", "high")]
         band = cid.split(":")[-1]
         line = cb.get(band) if r["FAMILY"] == "BEAMS" else None

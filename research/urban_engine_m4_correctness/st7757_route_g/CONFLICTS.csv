@@ -1,0 +1,45 @@
+KIND,WHERE,DETAIL
+FOOTING_LABEL_TYPE_CONFLICT,SH10 F/F10,FTG:SH10:T652:10A5 and FTG:SH10:T788:168B: quantified once
+BEAM_UNLABELLED_SPAN_ACROSS_SUPPORT,SH02,"BEAMS:2F:BAND0001.3: collinear with B8 across a support, no label, no printed span sequence (alternative 0.169 m3)"
+BEAM_UNLABELLED_SPAN_ACROSS_SUPPORT,SH02,"BEAMS:2F:BAND0006.1: collinear with B15 across a support, no label, no printed span sequence (alternative 0.744 m3)"
+BEAM_UNLABELLED_SPAN_ACROSS_SUPPORT,SH02,"BEAMS:2F:BAND0008.1: collinear with B1 across a support, no label, no printed span sequence (alternative 0.112 m3)"
+BEAM_UNLABELLED_SPAN_ACROSS_SUPPORT,SH02,"BEAMS:2F:BAND0011.1: collinear with B1 across a support, no label, no printed span sequence (alternative 0.112 m3)"
+SLAB_THICKNESS_SHEET_TAG_VS_PROJECT_DEFAULT,SH02,"SITE-29936e52e9c9bb32 3.24 m2: untagged; the sheet's one printed tag gives 0.180 m, the project default 0.160 m (default used)"
+SLAB_THICKNESS_SHEET_TAG_VS_PROJECT_DEFAULT,SH02,"SITE-3ec9bc2fe28ad7a4 15.00 m2: untagged; the sheet's one printed tag gives 0.180 m, the project default 0.160 m (default used)"
+SLAB_THICKNESS_SHEET_TAG_VS_PROJECT_DEFAULT,SH02,"SITE-6d9a092e74ae2689 0.09 m2: untagged; the sheet's one printed tag gives 0.180 m, the project default 0.160 m (default used)"
+SLAB_THICKNESS_SHEET_TAG_VS_PROJECT_DEFAULT,SH02,"SITE-9020cd1f745a1792 0.27 m2: untagged; the sheet's one printed tag gives 0.180 m, the project default 0.160 m (default used)"
+SLAB_THICKNESS_SHEET_TAG_VS_PROJECT_DEFAULT,SH02,"SITE-d475d4d7db56ceb9 3.60 m2: untagged; the sheet's one printed tag gives 0.180 m, the project default 0.160 m (default used)"
+SLAB_THICKNESS_SHEET_TAG_VS_PROJECT_DEFAULT,SH02,"SITE-f9f3066dd0714584 7.25 m2: untagged; the sheet's one printed tag gives 0.180 m, the project default 0.160 m (default used)"
+SLAB_THICKNESS_SHEET_TAG_VS_PROJECT_DEFAULT,SH02,"SITE-fbb544778990fa6f 2.16 m2: untagged; the sheet's one printed tag gives 0.180 m, the project default 0.160 m (default used)"
+BEAM_UNLABELLED_SPAN_ACROSS_SUPPORT,SH04,"BEAMS:1F:BAND0005.1: collinear with B2 across a support, no label, no printed span sequence (alternative 0.064 m3)"
+BEAM_UNLABELLED_SPAN_ACROSS_SUPPORT,SH04,"BEAMS:1F:BAND0031.1: collinear with B23 across a support, no label, no printed span sequence (alternative 1.013 m3)"
+MARK_AMBIGUOUS,SH04,"CB10 at 13619,38939"
+MARK_AMBIGUOUS,SH04,"CB10 at 13619,42699"
+STAIR_ZONE_PARTIAL,SH04,SITE-b845e1e78b1f74a8: riser 0.221 m from rise 4.20 m over 19 risers lies outside 0.14 - 0.20 m - the zone holds part of a stair; slab-zone exposure kept
+CB_SPAN_MARK_CONFLICT,SH06,"BEAMS:GF:BAND0019.2: the printed span sequence of line SH06:CB3:1 maps this band, which also carries BEAM/B3, CONTINUOUS_BEAM/CB3 - section unresolved; its line bars 29.5 - 30.4 kg held as exposure"
+BAND_MULTIPLE_MARKS,SH06,BEAMS:GF:BAND0019.2
+BEAM_UNLABELLED_SPAN_ACROSS_SUPPORT,SH06,"BEAMS:GF:BAND0043.1: collinear with B20 across a support, no label, no printed span sequence (alternative 0.900 m3)"
+BEAM_UNLABELLED_SPAN_ACROSS_SUPPORT,SH06,"BEAMS:GF:BAND0046.2: collinear with B24 across a support, no label, no printed span sequence (alternative 0.563 m3)"
+BEAM_UNLABELLED_SPAN_ACROSS_SUPPORT,SH06,"BEAMS:GF:BAND0047.1: collinear with B26 across a support, no label, no printed span sequence (alternative 0.683 m3)"
+BEAM_UNLABELLED_SPAN_ACROSS_SUPPORT,SH06,"BEAMS:GF:BAND0048.2: collinear with B27 across a support, no label, no printed span sequence (alternative 0.841 m3)"
+MARK_AMBIGUOUS,SH06,"B7 at 72446,48068"
+MARK_AMBIGUOUS,SH06,"B7 at 71869,48792"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0001.1: exterior wall on the band; floor level 0.30 gives an exterior depth 0.20 m, not deeper than the class section 0.40 m - source conflict, class section as base"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0001.2: exterior wall on the band; floor level 0.30 gives an exterior depth 0.20 m, not deeper than the class section 0.40 m - source conflict, class section as base"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0001.3: exterior wall on the band; floor level 0.30 gives an exterior depth 0.20 m, not deeper than the class section 0.40 m - source conflict, class section as base"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0001.4: exterior wall on the band; floor level 0.15 gives an exterior depth 0.05 m, not deeper than the class section 0.40 m - source conflict, class section as base"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0006.3: exterior wall on the band; floor level 0.30 gives an exterior depth 0.20 m, not deeper than the class section 0.40 m - source conflict, class section as base"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0011.1: exterior wall on the band; floor level 0.15 gives an exterior depth 0.05 m, not deeper than the class section 0.40 m - source conflict, class section as base"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0011.4: exterior wall on the band, but the printed floor level 0.0 gives no depth below it - class section"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0012.1: exterior wall on the band; floor level 0.30 gives an exterior depth 0.20 m, not deeper than the class section 0.30 m - source conflict, class section as base"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0012.2: exterior wall on the band; floor level 0.30 gives an exterior depth 0.20 m, not deeper than the class section 0.40 m - source conflict, class section as base"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0013.2: exterior wall on the band; floor level 0.30 gives an exterior depth 0.20 m, not deeper than the class section 0.60 m - source conflict, class section as base"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0015: exterior wall on the band; floor level 0.30 gives an exterior depth 0.20 m, not deeper than the class section 0.60 m - source conflict, class section as base"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0016: exterior wall on the band; floor level 0.30 gives an exterior depth 0.20 m, not deeper than the class section 0.60 m - source conflict, class section as base"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0017.2: exterior wall on the band; floor level 0.30 gives an exterior depth 0.20 m, not deeper than the class section 0.30 m - source conflict, class section as base"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0025.2: exterior wall on the band, but the printed floor level 0.0 gives no depth below it - class section"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0035: exterior wall on the band; floor level 0.30 gives an exterior depth 0.20 m, not deeper than the class section 0.40 m - source conflict, class section as base"
+GB_PERIMETER_NO_WALL,SH08,GROUND_BEAMS:GROUND:BAND0042: perimeter band with no wall drawn on it in the architectural plan - the exterior detail ('for exterior walls') does not apply; class section
+STAIR_ZONE_PARTIAL,SH08,SITE-4df8fcd99d130701: riser 0.111 m from rise 1.00 m over 9 risers lies outside 0.14 - 0.20 m - the zone holds part of a stair; slab-zone exposure kept
+LINTEL_OPENING_ABOVE_SCHEDULE,GF,LINTELS:GF:OP-003: opening 11.22 m in a 0.20 m wall - outside the lintel schedule's bands (not measured)
+SCHEDULE_DUPLICATE_MARK,STRAP_BEAM,SB2
