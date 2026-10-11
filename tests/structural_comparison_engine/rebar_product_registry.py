@@ -66,6 +66,11 @@ ACCURATE_MODULES = (
     "engine/source/slab_engine.py",                # M2 slab panels, openings, thickness, coverage-risk cells
     "engine/source/bar_shapes.py",                 # M2 developed bar lengths: diameter-aware bends and hooks
     "engine/source/generic_route.py",              # M2 generic route: drawings -> items, rebar completeness, coverage risk
+    "engine/source/continuous_beams.py",           # M4 continuous-beam span matching, physical bar groups, allocation
+    "engine/source/arch_evidence.py",              # M4 architectural plan registration, wall cover, openings (no kg)
+    "engine/source/lintel_measure.py",             # M4 masonry openings -> lintel schedule rows, lengths, bars
+    "engine/source/stair_measure.py",              # M4 stair runs from drawn treads, riser rule, concrete (no kg)
+    "engine/source/ocr_review.py",                 # M4 second reading of OCR detail records; never promotes (no kg)
     "engine/bbs_steel.py",
 )
 # project builders that produce accurate reinforcement registers

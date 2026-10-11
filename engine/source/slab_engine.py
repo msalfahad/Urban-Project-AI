@@ -415,7 +415,8 @@ def tread_family(face_poly, segs, unit_m, min_n=STAIR_MIN_TREADS):
     kind, g = found
     hull = _hull([q for sg in g for q in (sg["a"], sg["b"])])
     return {"kind": kind, "n": len(g), "hull_m2": MD.poly_area(hull) * unit_m ** 2 if len(hull) >= 3 else 0.0,
-            "segment_ids": [sg["id"] for sg in g][:40]}
+            "segment_ids": [sg["id"] for sg in g][:40],
+            "lines": [(tuple(sg["a"]), tuple(sg["b"])) for sg in g]}          # M4: the tread geometry itself
 
 
 def open_boundary_panel(face, band_pieces, column_boxes, unit_m):

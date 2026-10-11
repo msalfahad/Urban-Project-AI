@@ -29,9 +29,12 @@ from engine.source import provisional_estimate as PE
 from engine.source import schedule_grammar as SG
 from engine.source import schedule_reader as SR
 from engine.source import cad_heal as CH
+from engine.source import continuous_beams as CBM
 from engine.source import detail_evidence as DE
 from engine.source import family_coverage as FC
 from engine.source import slab_engine as SE
+from engine.source import stair_measure as SM
+from engine.source import lintel_measure as LMS
 
 POLICY_ID = "GENERIC_ROUTE_V1"
 LINK_ROLES = ("STI", "STR", "LINK", "TIE", "ST")
@@ -396,9 +399,11 @@ def scope_scan(D):
             for f, r in sorted(out.items())}
 
 
-def items_from(D, conv, heights=None, evidence=None):
+def items_from(D, conv, heights=None, evidence=None, arch=None):
     """evidence: a detail-evidence document (engine.source.detail_evidence schema; tools/pdf_evidence.py or a manual
-    transcription) - typical ground-beam bars come from it, OCR-derived ones as PROVISIONAL / LOW."""
+    transcription) - typical ground-beam bars come from it, OCR-derived ones as PROVISIONAL / LOW.
+    arch (M4): arch_evidence.gb_exterior(D, architectural intake) - which perimeter ground beams carry an exterior wall
+    and the floor level printed inside each."""
     heights = heights or {}
     gb_details = DE.ground_beam_details(evidence) if evidence else []
     u = D["unit_m"]
@@ -705,7 +710,24 @@ def items_from(D, conv, heights=None, evidence=None):
         fam = "GROUND_BEAMS" if ground else "BEAMS"
         st = sh["storey"]
         lib = D["lib"]
+        cbm = _cb_model(D, rec, conv, covers["BEAM"], hook_std) if not ground and "CB_SPAN_MATCH_TOL_M" in \
+            conv.items else None
+        rec["cb_lines"] = cbm["lines"] if cbm else []
+        slab_t = (rec.get("slab") or {}).get("uniform_t_m")
         for b in rec["beams"]:
+            ev = (cbm or {}).get("band", {}).get(b["band_id"])
+            if ev and ev["inherited"]:
+                # M4: a span of a matched continuous-beam line (printed span sequence) takes the mark
+                row = lib.get(("CONTINUOUS_BEAM", ev["mark"]))
+                H = (row or {}).get("dims_m", {}).get("H")
+                if b["state"] == "UNBOUND" and H:
+                    b = dict(b, state="BOUND", mark=ev["mark"], family="CONTINUOUS_BEAM", depth_m=H,
+                             schedule_width_m=row["dims_m"].get("W"), bars=row.get("bars", []),
+                             schedule_source=row["source"], binding="INHERITED_BY_SPAN_SEQUENCE",
+                             v_total_depth=b["net_plan_m2"] * H,
+                             v_below_slab=b["net_plan_m2"] * (H + slab_t) if slab_t is not None else None)
+                elif "INHERITED" in (b.get("binding") or ""):
+                    b = dict(b, binding="INHERITED_BY_SPAN_SEQUENCE")
             cid = f"{fam}:{st}:{b['band_id']}"
             common = dict(component_id=cid, trade="CONCRETE", family=fam, storey=st,
                           source=f"{src_file} {sid} band faces {','.join(map(str, b['handles'][:2]))}"
@@ -736,6 +758,32 @@ def items_from(D, conv, heights=None, evidence=None):
                                          **common))
                     reg(cid, fam, st, "MISSING_DATA", "untagged span")
                     continue
+                if inh and _cv(conv, "COLLINEAR_INHERITANCE") == "SPAN_EVIDENCE_ONLY" and \
+                        b.get("binding") != "INHERITED_BY_SPAN_SEQUENCE":
+                    # M4: alignment alone never carries a section across a support; the neighbour's section is an
+                    # alternative, the schedule depths at the drawn width the exposure
+                    rows_w = [r["dims_m"]["H"] for r in D["schedule"]["rows"] if r["family"] in MD.BEAM_FAMILIES and
+                              r["dims_m"].get("W") and abs(r["dims_m"]["W"] - b["width_m"]) <= 0.015 and
+                              r["dims_m"].get("H")]
+                    hl, hh = (min(rows_w), max(rows_w)) if rows_w else (b["depth_m"], b["depth_m"])
+                    alt = b["v_total_depth"]
+                    common["dimensions"].update(alternative_as_neighbour_m3=round(alt, 4),
+                                                neighbour_mark=b.get("mark"))
+                    items.append(PE.item(item_id=f"U-C:{cid}", category="UNRESOLVED", support="NO_GEOMETRY",
+                                         confidence="LOW", blocker="UNLABELLED_SPAN_ACROSS_SUPPORT",
+                                         assumptions=["COLLINEAR_INHERITANCE"],
+                                         exposure_low=b["net_plan_m2"] * min(hl, b["depth_m"]),
+                                         exposure_high=b["net_plan_m2"] * max(hh, b["depth_m"]),
+                                         expression=f"{b['net_plan_m2']:.3f} m2 x H: no label on this span; the "
+                                                    f"collinear {b.get('mark')} across the support gives "
+                                                    f"{alt:.3f} m3 (alternative), the schedule depths at "
+                                                    f"{b['width_m']:.2f} m give {hl:g} - {hh:g} m", **common))
+                    reg(cid, fam, st, "MISSING_DATA", f"unlabelled span across a support (the collinear "
+                                                      f"{b.get('mark')} is not evidence of its section)")
+                    risk.append({"KIND": "BEAM_UNLABELLED_SPAN_ACROSS_SUPPORT", "WHERE": sid,
+                                 "DETAIL": f"{cid}: collinear with {b.get('mark')} across a support, no label, no "
+                                           f"printed span sequence (alternative {alt:.3f} m3)"})
+                    continue
                 A, Bv = b["v_total_depth"], b.get("v_below_slab")
                 asm = ["BEAM_DEPTH_READING"] + (["COLLINEAR_INHERITANCE"] if inh else [])
                 vals = {"TOTAL_DEPTH": A, "BELOW_SLAB": Bv if Bv is not None else A}
@@ -750,11 +798,17 @@ def items_from(D, conv, heights=None, evidence=None):
                 else:
                     lo, base, hi = PE.by_choice(conv, "BEAM_DEPTH_READING", vals)
                     conf, blk = ("LOW" if inh else "MEDIUM"), "BEAM_DEPTH_CONVENTION"
+                if b.get("binding") == "INHERITED_BY_SPAN_SEQUENCE":
+                    asm = [a for a in asm if a != "COLLINEAR_INHERITANCE"] + ["CB_SPAN_MATCH_TOL_M"]
+                    conf = "MEDIUM" if conf == "LOW" and "WIDTH_CONFLICT" not in (b.get("binding") or "") else conf
                 items.append(PE.item(item_id=f"P-C:{cid}", category="PROVISIONAL", low=lo, base=base, high=hi,
                                      formula="net plan (B x L - column - junction) x H  |  x (H + t)",
                                      assumptions=asm, support="CONVENTION_ONLY", confidence=conf, blocker=blk,
                                      **common))
-                _beam_bars(items, reg, b, cid, fam, st, common["source"], covers["BEAM"], conv, hook_std)
+                if cbm is not None and b.get("family") == "CONTINUOUS_BEAM":
+                    _cb_bars(items, reg, b, cid, fam, st, common["source"], cbm)
+                else:
+                    _beam_bars(items, reg, b, cid, fam, st, common["source"], covers["BEAM"], conv, hook_std)
             elif ground and b["state"] == "UNBOUND" and "GB_TYPICAL_SECTIONS" in conv.items:
                 cls = _gb_class(conv, b)
                 if cls is None:
@@ -765,8 +819,41 @@ def items_from(D, conv, heights=None, evidence=None):
                     continue
                 sides = rec.get("band_sides", {}).get(b["band_id"], [])
                 common["dimensions"].update(binding="BOUND_TYPICAL_CLASS", sides=sides)
-                ext = _gb_exterior(conv, b) if "OUTSIDE" in sides else None
-                if "OUTSIDE" in sides and ext is None:
+                ext_mode = _cv(conv, "GB_EXTERIOR_EVIDENCE", "PERIMETER")
+                av = ((arch or {}).get("bands") or {}).get(b["band_id"]) if ext_mode != "PERIMETER" else None
+                acls = (av or {}).get("class", "NOT_REGISTERED")
+                if ext_mode != "PERIMETER" and "OUTSIDE" in sides:
+                    common["dimensions"].update(arch_class=acls, wall_cover=(av or {}).get("wall_cover"),
+                                                arch_floor_level_m=(av or {}).get("floor_level_m"))
+                ext = _gb_exterior(conv, b, (av or {}).get("floor_level_m"), m4=ext_mode != "PERIMETER") \
+                    if "OUTSIDE" in sides else None
+                ext_case = None                       # M4: EVIDENCED / CANDIDATE / NO_WALL / SHALLOWER / NONE
+                if ext is not None and ext_mode != "PERIMETER":
+                    cls_h = cls["classes"][cls["basis"]]["H"]
+                    if acls == "PERIMETER_NO_WALL":
+                        ext_case = "NO_WALL"
+                    elif acls != "EXTERIOR_WALL":
+                        ext_case = "CANDIDATE"
+                    elif ext.get("none") or ext["depth"][1] <= cls_h:
+                        ext_case = "SHALLOWER"
+                    else:
+                        ext_case = "EVIDENCED"
+                    if ext_case in ("NO_WALL",) or ext.get("none"):
+                        if ext_case == "SHALLOWER":
+                            risk.append({"KIND": "GB_EXTERIOR_SHALLOWER_THAN_CLASS", "WHERE": sid,
+                                         "DETAIL": f"{cid}: exterior wall on the band, but the printed floor level "
+                                                   f"{ext.get('floor_m')} gives no depth below it - class section"})
+                        ext = None
+                    elif ext_case == "SHALLOWER":
+                        risk.append({"KIND": "GB_EXTERIOR_SHALLOWER_THAN_CLASS", "WHERE": sid,
+                                     "DETAIL": f"{cid}: exterior wall on the band; floor level {ext['floor_m']:.2f} "
+                                               f"gives an exterior depth {ext['depth'][1]:.2f} m, not deeper than the "
+                                               f"class section {cls_h:.2f} m - source conflict, class section as base"})
+                if ext_case == "NO_WALL":
+                    risk.append({"KIND": "GB_PERIMETER_NO_WALL", "WHERE": sid,
+                                 "DETAIL": f"{cid}: perimeter band with no wall drawn on it in the architectural plan "
+                                           "- the exterior detail ('for exterior walls') does not apply; class section"})
+                if "OUTSIDE" in sides and ext is None and ext_case is None:
                     risk.append({"KIND": "GB_EXTERIOR_DEPTH_NOT_ESTABLISHED", "WHERE": sid,
                                  "DETAIL": f"{cid}: perimeter band; no printed exterior detail / levels in the profile"
                                            " - the typical class section is used"})
@@ -778,15 +865,37 @@ def items_from(D, conv, heights=None, evidence=None):
                 if ext:
                     e_lo, e_b, e_hi = (b["net_plan_m2"] * d for d in ext["depth"])
                     exterior = _cv(conv, "GB_EXTERIOR_CANDIDATE", "EXTERIOR") == "EXTERIOR"
-                    lo, hi = min(lo, e_lo), max(hi, e_hi)
+                    if ext_case is not None:
+                        exterior = ext_case == "EVIDENCED"
+                    if ext_case != "SHALLOWER":           # a conflicting exterior reading never sets the range
+                        lo, hi = min(lo, e_lo), max(hi, e_hi)
                     base = e_b if exterior else base
                     asm += ext["assumptions"]
                     formula = ("perimeter band (one side on the outside of the ground-beam network): net plan x "
                                "(floor level - build-up - outer ground level), the printed exterior detail; the typical"
                                " class section gives the low end")
                     blk = "GB_EXTERIOR_DEPTH"
+                    if ext_case == "CANDIDATE":
+                        formula = ("perimeter band, no architectural wall evidence: the typical class section is the "
+                                   "base; the printed exterior detail (floor level - build-up - outer ground) is the "
+                                   "high alternative")
+                        blk = "GB_EXTERIOR_NOT_EVIDENCED"
+                    elif ext_case == "SHALLOWER":
+                        formula = ("exterior wall on the band (architectural plan), but the exterior depth from the "
+                                   "printed floor level is not deeper than the class section: the class section (source "
+                                   "conflict, RFI)")
+                        blk = "GB_EXTERIOR_LEVEL_CONFLICT"
+                    elif ext_case == "EVIDENCED":
+                        asm = asm + ["GB_EXTERIOR_EVIDENCE"]
+                        formula = ("exterior wall on the band (architectural plan, wall cover "
+                                   f"{(av or {}).get('wall_cover')}): net plan x (floor level "
+                                   f"{ext['floor_m']:.2f} - build-up - outer ground level), the printed exterior "
+                                   "detail; the class section gives the low end")
                     note += f"; exterior depth {ext['depth'][1]:.2f} m ({ext['depth'][0]:.2f} - {ext['depth'][2]:.2f})"
                     H_bars = ext["depth"][1] if exterior else None
+                    if ext_case == "SHALLOWER":            # the exterior detail's bars govern ('for exterior walls'),
+                        H_bars = cls["classes"][cls["basis"]]["H"]   # at the class depth the concrete takes
+                        ext = dict(ext, depth=(H_bars, H_bars, H_bars))
                 items.append(PE.item(item_id=f"P-C:{cid}", category="PROVISIONAL", low=lo, base=base, high=hi,
                                      formula=formula, assumptions=asm, support="CONVENTION_ONLY", confidence="LOW",
                                      blocker=blk, limitations=note, **common))
@@ -818,6 +927,8 @@ def items_from(D, conv, heights=None, evidence=None):
             risk.append({"KIND": "HEAL_EXTEND_WIDE", "WHERE": sid,
                          "DETAIL": f"face {h['id']} end extended {h['by'] * u * 1000:.1f} mm to {h['to']}"})
         slab = rec.get("slab")
+        if slab and "SLAB_DEDUCT_MEMBER_OVERLAP" in conv.items:
+            _slab_m4(slab, rec, u, conv, ground, risk, sid)
         if slab:
             sfam = "GROUND_SLAB" if ground else "SLABS"
             for x in slab.get("unenclosed_sides", []):
@@ -873,6 +984,9 @@ def items_from(D, conv, heights=None, evidence=None):
                     risk.append({"KIND": "SLAB_PANEL_STAIR_LINES", "WHERE": sid,
                                  "DETAIL": f"{cid} {f['area_m2']:.2f} m2: {f['treads']['kind']} of "
                                            f"{f['treads']['n']} tread lines over part of the cell (counted)"})
+                if f.get("region") == "STAIR_ZONE" and "STAIR_RISER_RULE" in conv.items and \
+                        _stair_items(items, reg, risk, f, sid, st, ground, conv, u, src_file):
+                    continue
                 if f.get("region") in ("STAIR_ZONE", "UNRESOLVED"):
                     tl, _, th = _trip(conv, "SLAB_THICKNESS_EXPOSURE_M")
                     t_ = f.get("t_m")
@@ -902,10 +1016,14 @@ def items_from(D, conv, heights=None, evidence=None):
                 if f.get("t_m"):
                     printed = f["t_basis"] == "PRINTED_IN_PANEL"
                     v = f["volume_m3"]
+                    if f.get("member_overlap_m2"):
+                        common["dimensions"].update(area_gross_m2=round(f["area_gross_m2"], 4),
+                                                    member_overlap_deducted_m2=round(f["member_overlap_m2"], 4))
                     items.append(PE.item(item_id=f"P-C:{cid}", category="PROVISIONAL", low=v, base=v, high=v,
-                                         formula="face area x thickness",
+                                         formula="face area (members' overlap deducted) x thickness",
                                          assumptions=["FROZEN:PRINTED_THICKNESS"] if printed else
-                                         ["SLAB_SHEET_UNIFORM_THICKNESS"],
+                                         (["SLAB_PROJECT_DEFAULT_THICKNESS_M"] if f["t_basis"] == "PROJECT_DEFAULT"
+                                          else ["SLAB_SHEET_UNIFORM_THICKNESS"]),
                                          support="SOURCE_COMPLETE_UNREVIEWED" if printed else "CONVENTION_ONLY",
                                          confidence="HIGH" if printed else "MEDIUM", blocker="NOT_REVIEWED",
                                          **common))
@@ -920,6 +1038,8 @@ def items_from(D, conv, heights=None, evidence=None):
                     reg(cid, sfam, st, "MISSING_DATA", "slab thickness not established")
                     risk.append({"KIND": "CELL_" + f["t_basis"], "WHERE": sid, "DETAIL": f"{cid} {f['area_m2']:.2f} m2"})
     _blinding_items(D, items, reg, risk, conv, src_file)
+    if arch and arch.get("lintels") and "LINTEL_SCHEDULE" in conv.items:
+        _lintel_items(items, reg, risk, arch["lintels"], conv, covers["BEAM"], hook_std)
     # ---------------------------------------------------------------- coverage risk: schedule rows never used
     used = set()
     for i in items:
@@ -1079,14 +1199,28 @@ def _blinding_items(D, items, reg, risk, conv, src_file):
                 foot.append(dims)
                 n_f += 1
         if rec["sheet"]["role"] == "GROUND_BEAM_PLAN":
+            bpoly = {x["band_id"]: x for x in rec.get("bands", [])}
             for b in rec.get("beams", []):
-                strips.append((b["net_plan_m2"], b["length_m"]))
+                strips.append((b["net_plan_m2"], b["length_m"], bpoly.get(b["band_id"]), sid))
                 n_s += 1
         for b in (rec.get("straps") or {}).get("bands", []):
-            strips.append((b["net_plan_m2"], b["length_m"]))
+            strips.append((b["net_plan_m2"], b["length_m"], b if b.get("u") else None, sid))
             n_s += 1
     fA = [sum((L + 2 * p) * (W + 2 * p) for L, W in foot) for p in p_]
-    sA = [sum(a + 2 * p * L for a, L in strips) for p in p_]
+    sA = [sum(s[0] + 2 * p * s[1] for s in strips) for p in p_]
+    overlap = None
+    if "BLINDING_OVERLAP" in conv.items and under == "FOOTINGS_AND_GROUND_BEAMS":
+        overlap = _blinding_overlap(D, strips, p_)       # M4: the strip that runs over a footing is counted once
+        if overlap and overlap["state"] == "REGISTERED":
+            sA = [a - o for a, o in zip(sA, overlap["area_m2"])]
+            risk.append({"KIND": "BLINDING_OVERLAP_DEDUCTED", "WHERE": "FOUNDATION",
+                         "DETAIL": f"{overlap['area_m2'][1]:.2f} m2 of ground / strap beam blinding lies on footing "
+                                   f"blinding ({overlap['strips_over_footings']} strips; plans registered on "
+                                   f"{overlap['matched']} footings): deducted from the beam blinding"})
+        elif overlap:
+            risk.append({"KIND": "BLINDING_OVERLAP_NOT_ESTABLISHED", "WHERE": "FOUNDATION",
+                         "DETAIL": f"the ground-beam and foundation plans could not be registered ({overlap['state']}):"
+                                   " the beam blinding over footings may be counted twice"})
     parts = [("FOOTINGS", fA, n_f, "(L + 2p)(W + 2p) x t under each footing")]
     if under == "FOOTINGS_AND_GROUND_BEAMS":
         parts.append(("GROUND_BEAMS", sA, n_s, "(net plan + 2p x clear length) x t under each ground / strap beam"))
@@ -1100,7 +1234,9 @@ def _blinding_items(D, items, reg, risk, conv, src_file):
         cid = f"PLAIN_CONCRETE:FOUNDATION:BLINDING_{name}"
         common = dict(component_id=cid, trade="CONCRETE", family="PLAIN_CONCRETE", storey="FOUNDATION",
                       source=f"{src_file}: {n} {name.lower().replace('_', ' ')} quantified on the plans",
-                      dimensions={"members": n, "plan_m2_base": round(A[1], 3)},
+                      dimensions={"members": n, "plan_m2_base": round(A[1], 3)} | (
+                          {"overlap_with_footing_blinding_m2": round(overlap["area_m2"][1], 3)}
+                          if name == "GROUND_BEAMS" and overlap and overlap["state"] == "REGISTERED" else {}),
                       double_count_risk="beam blinding stops at the footing faces (the clear length); the projection "
                                         "zones of adjacent members may overlap slightly")
         if t_:
@@ -1121,6 +1257,59 @@ def _blinding_items(D, items, reg, risk, conv, src_file):
     if skipped:
         risk.append({"KIND": "BLINDING_FOOTING_WITHOUT_SIZE", "WHERE": "FOUNDATION",
                      "DETAIL": f"{skipped} footing records without a size: no blinding counted for them"})
+
+
+def _blinding_overlap(D, strips, p_):
+    """M4: the area of ground / strap beam blinding strips (band +- p) lying on footing blinding (footing + p), at
+    each projection p. The ground-beam plan is registered on the foundation plan by its column outlines landing in
+    the footings (centre-difference vote): -> {state, area_m2 (per p), strips_over_footings, matched}."""
+    fp = next((r for r in D["sheets"].values() if r["sheet"]["role"] == "FOUNDATION_PLAN"), None)
+    gb = next((r for r in D["sheets"].values() if r["sheet"]["role"] == "GROUND_BEAM_PLAN"), None)
+    if fp is None:
+        return None
+    u = D["unit_m"]
+    boxes = [f["box"] for f in fp.get("footings", []) if f.get("box")]
+    shift = {fp["sheet"]["sheet_id"]: (0.0, 0.0)}
+    matched = len(boxes)
+    if gb is not None:
+        cols = gb.get("column_boxes", [])
+        votes = Counter()
+        g = 0.05 / u
+        for fb in boxes:
+            fc = ((fb[0] + fb[2]) / 2, (fb[1] + fb[3]) / 2)
+            for c in cols:
+                cc = ((c[0] + c[2]) / 2, (c[1] + c[3]) / 2)
+                votes[(round((fc[0] - cc[0]) / g) * g, round((fc[1] - cc[1]) / g) * g)] += 1
+        if not votes:
+            return {"state": "NO_COMMON_MEMBERS", "area_m2": (0.0, 0.0, 0.0)}
+        (dx, dy), n1 = votes.most_common(1)[0]
+        n2 = votes.most_common(2)[1][1] if len(votes) > 1 else 0
+        hit = sum(1 for fb in boxes if any(fb[0] <= (c[0] + c[2]) / 2 + dx <= fb[2] and
+                                           fb[1] <= (c[1] + c[3]) / 2 + dy <= fb[3] for c in cols))
+        matched = hit
+        if hit < 0.6 * max(1, len(boxes)) or n1 < 2 * max(1, n2):
+            return {"state": "NOT_REGISTERED", "area_m2": (0.0, 0.0, 0.0), "matched": hit}
+        shift[gb["sheet"]["sheet_id"]] = (dx, dy)
+    out, over = [], set()
+    for p in p_:
+        pn = p / u
+        foot = [[(b[0] - pn, b[1] - pn), (b[2] + pn, b[1] - pn), (b[2] + pn, b[3] + pn), (b[0] - pn, b[3] + pn)]
+                for b in boxes]
+        tot = 0.0
+        for k, (_, _, band, sid) in enumerate(strips):
+            if band is None or band.get("kind", "STRAIGHT") != "STRAIGHT" or sid not in shift:
+                continue
+            dx, dy = shift[sid]
+            uu, nn = band["u"], (-band["u"][1], band["u"][0])
+            lo, hi = band["lo_off"] - pn, band["hi_off"] + pn
+            q = [(uu[0] * t_ + nn[0] * o + dx, uu[1] * t_ + nn[1] * o + dy)
+                 for t_, o in ((band["t0"], lo), (band["t1"], lo), (band["t1"], hi), (band["t0"], hi))]
+            a = sum(MD.overlap_area(q, f) for f in foot) * u * u
+            if a > 1e-6:
+                over.add(k)
+            tot += a
+        out.append(tot)
+    return {"state": "REGISTERED", "area_m2": tuple(out), "strips_over_footings": len(over), "matched": matched}
 
 
 def _gb_class(conv, b):
@@ -1152,10 +1341,11 @@ def _gb_class(conv, b):
             "table": classes}
 
 
-def _gb_exterior(conv, b):
+def _gb_exterior(conv, b, floor_m=None, m4=False):
     """the exterior ground-beam depth from printed levels: floor level - build-up - outer ground level (low = lowest
     floor, highest build-up and ground; high the opposite). None unless the profile prints the exterior detail and
-    both levels, and the band's width is the detail's."""
+    both levels, and the band's width is the detail's. floor_m (M4): the floor level printed on the architectural plan
+    inside this band, replacing the profile's single ground-floor level."""
     need = ("GB_EXTERIOR_DETAIL", "GF_FLOOR_LEVEL_M", "OUTER_GROUND_LEVEL_M", "GB_EXTERIOR_BUILDUP_M")
     if not all(k in conv.items for k in need):
         return None
@@ -1163,11 +1353,20 @@ def _gb_exterior(conv, b):
     if det.get("W") and abs(det["W"] - b["width_m"]) > STRAP_WIDTH_TOL_M:
         return None
     f, g, bu = _trip(conv, "GF_FLOOR_LEVEL_M"), _trip(conv, "OUTER_GROUND_LEVEL_M"), _trip(conv, "GB_EXTERIOR_BUILDUP_M")
+    if floor_m is not None:
+        f = (floor_m, floor_m, floor_m)
     d = (f[0] - bu[2] - g[2], f[1] - bu[1] - g[1], f[2] - bu[0] - g[0])
-    if d[0] <= 0:
-        return None
-    return {"depth": d, "detail": det, "assumptions": ["GB_EXTERIOR_CANDIDATE", "GB_EXTERIOR_DETAIL", "GF_FLOOR_LEVEL_M",
-                                                       "OUTER_GROUND_LEVEL_M", "GB_EXTERIOR_BUILDUP_M"]}
+    if not m4:
+        if d[0] <= 0:
+            return None
+    elif d[2] <= 0:
+        return {"depth": d, "detail": det, "none": True, "floor_m": f[1], "assumptions": []}
+    elif d[0] <= 0:
+        d = (0.0, max(d[1], 0.0), d[2])
+    return {"depth": d, "detail": det, "floor_m": f[1],
+            "assumptions": ["GB_EXTERIOR_CANDIDATE", "GB_EXTERIOR_DETAIL",
+                            "OUTER_GROUND_LEVEL_M", "GB_EXTERIOR_BUILDUP_M"] +
+                           ([] if floor_m is not None else ["GF_FLOOR_LEVEL_M"])}
 
 
 def _detail_bar_mass(det_bars, L, W, H, cover_trip, conv, hook_std):
@@ -1300,6 +1499,316 @@ def _footing_bars(f, bars, cover_trip, conv, hook_std):
         return None
     return (sum(v[0] for v in out.values()), sum(v[1] for v in out.values()), sum(v[2] for v in out.values()),
             {d: tuple(v) for d, v in out.items()})
+
+
+def _slab_m4(slab, rec, u, conv, ground, risk, sid):
+    """M4, in place on the sheet's slab faces: (1) a face's overlap with beam bands and column outlines is deducted
+    (the members own it - never counted twice); (2) an untagged panel takes the project's printed default thickness
+    before the sheet-uniform extension of one panel's tag. The original area and basis are kept on the face."""
+    if slab.get("_m4"):
+        return
+    slab["_m4"] = True
+    bands = [b["polygon"] for b in rec.get("bands", []) if b["kind"] == "STRAIGHT"]
+    cols = [MD.box_poly(c) for c in rec.get("slab_column_boxes", rec.get("column_boxes", []))]
+    dflt = _cv(conv, "SLAB_PROJECT_DEFAULT_THICKNESS_M") if not ground else None
+    first = _cv(conv, "SLAB_UNTAGGED_THICKNESS_SOURCE", "PROJECT_DEFAULT_FIRST")
+    for f in slab["faces"]:
+        if f["class"] not in ("PANEL",):
+            continue
+        poly = f["polygon"]
+        ov = (sum(MD.overlap_area(poly, q) for q in bands) + sum(MD.overlap_area(poly, q) for q in cols)) * u * u
+        if ov > 1e-4:
+            f["area_gross_m2"] = f["area_m2"]
+            f["member_overlap_m2"] = ov
+            f["area_m2"] = max(f["area_m2"] - ov, 0.0)
+            risk.append({"KIND": "SLAB_FACE_MEMBER_OVERLAP_DEDUCTED", "WHERE": sid,
+                         "DETAIL": f"{f['face_id']}: {ov:.3f} m2 of the face lies in beam bands / column outlines "
+                                   "(deducted: the members own it)"})
+        if dflt and f.get("t_basis") == "SHEET_UNIFORM" and first == "PROJECT_DEFAULT_FIRST":
+            if f.get("t_m") is not None and abs(f["t_m"] - dflt) > 1e-6:
+                risk.append({"KIND": "SLAB_THICKNESS_SHEET_TAG_VS_PROJECT_DEFAULT", "WHERE": sid,
+                             "DETAIL": f"{f['face_id']} {f['area_m2']:.2f} m2: untagged; the sheet's one printed tag "
+                                       f"gives {f['t_m']:.3f} m, the project default {dflt:.3f} m (default used)"})
+            f["t_sheet_uniform_m"] = f.get("t_m")
+            f["t_m"], f["t_basis"] = dflt, "PROJECT_DEFAULT"
+        if f.get("t_m"):
+            f["volume_m3"] = f["area_m2"] * f["t_m"]
+
+
+def _stair_items(items, reg, risk, f, sid, st, ground, conv, u, src_file):
+    """M4: a stair zone measured as a stair (stair_measure) from its drawn treads, the rise of its storey and the
+    waist: PROVISIONAL with a printed waist (profile STAIR_WAIST_M), else UNRESOLVED with the waist range as the
+    exposure. A zone whose riser height falls outside the diagnostic band holds part of a stair: False (the caller
+    keeps the slab-zone exposure)."""
+    tr = f.get("treads") or {}
+    if not tr.get("lines"):
+        return False
+    run = SM.flight([{"a": a, "b": b} for a, b in tr["lines"]], u)
+    if run is None:
+        return False
+    if ground:
+        if not all(k in conv.items for k in ("GF_FLOOR_LEVEL_M", "OUTER_GROUND_LEVEL_M")):
+            return False
+        rise = conv.base("GF_FLOOR_LEVEL_M") - conv.base("OUTER_GROUND_LEVEL_M")
+    else:
+        if f"STOREY_HEIGHT_{st}" not in conv.items:
+            return False
+        rise = conv.base(f"STOREY_HEIGHT_{st}")
+    rule = _cv(conv, "STAIR_RISER_RULE", "LINES_PLUS_ONE")
+    printed = "STAIR_WAIST_M" in conv.items
+    waists = _trip(conv, "STAIR_WAIST_M") if printed else _trip(conv, "STAIR_WAIST_EXPOSURE_M")
+    qs = [SM.quantities(f["area_m2"], run, rise, w, riser_rule=rule) for w in waists]
+    if any(q["state"] != "MEASURED" for q in qs):
+        risk.append({"KIND": "STAIR_ZONE_PARTIAL", "WHERE": sid,
+                     "DETAIL": f"{f['face_id']}: {qs[0].get('why')} - the zone holds part of a stair; slab-zone "
+                               "exposure kept"})
+        return False
+    cid = f"STAIRS:{st}:{f['face_id']}"
+    q = qs[1]
+    if q["overflow_m2"] > 0.01:
+        risk.append({"KIND": "STAIR_FLIGHT_EXCEEDS_ZONE", "WHERE": sid,
+                     "DETAIL": f"{f['face_id']}: the flight's plan ({q['flight_plan_m2']:.2f} m2) exceeds the zone "
+                               f"({f['area_m2']:.2f} m2) - part of the flight lies outside the zone (landing 0)"})
+    common = dict(component_id=cid, trade="CONCRETE", family="STAIRS", storey=st,
+                  source=f"{src_file} {sid} stair zone {f['face_id']}: {run['n_lines']} drawn tread lines ({run['kind']})",
+                  dimensions={"kind": run["kind"], "tread_lines": run["n_lines"], "risers": q["risers"],
+                              "riser_m": round(q["riser_m"], 4), "going_m": round(run["going_m"], 4),
+                              "width_m": round(run["width_m"], 4), "flight_plan_m2": round(q["flight_plan_m2"], 4),
+                              "landing_m2": round(q["landing_m2"], 4), "zone_m2": round(f["area_m2"], 4),
+                              "rise_m": rise, "tread_finish_m2": round(q["tread_m2"], 4),
+                              "riser_finish_m2": round(q["riser_face_m2"], 4)},
+                  double_count_risk="the zone is not counted as slab; landing beams on the plan are the beams'")
+    asm = ["STAIR_RISER_RULE"] + (["STAIR_WAIST_M"] if printed else ["STAIR_WAIST_EXPOSURE_M"]) + \
+        (["GF_FLOOR_LEVEL_M", "OUTER_GROUND_LEVEL_M"] if ground else [f"STOREY_HEIGHT_{st}"])
+    if printed:
+        items.append(PE.item(item_id=f"P-C:{cid}", category="PROVISIONAL", low=qs[0]["total_m3"],
+                             base=q["total_m3"], high=qs[2]["total_m3"], formula=q["basis"] + "; landings x waist",
+                             assumptions=asm, support="CONVENTION_ONLY", confidence="LOW",
+                             blocker="STAIR_GEOMETRY_FROM_PLAN", **common))
+    else:
+        items.append(PE.item(item_id=f"U-C:{cid}", category="UNRESOLVED", support="NO_GEOMETRY", confidence="LOW",
+                             blocker="STAIR_WAIST_NOT_PRINTED", assumptions=asm,
+                             exposure_low=qs[0]["total_m3"], exposure_high=qs[2]["total_m3"],
+                             expression=f"{q['basis']}; landings x waist; waist {waists[0]:g} - {waists[2]:g} m "
+                                        "(not printed)", **common))
+    reg(cid, "STAIRS", st, "MISSING_DATA", "stair bars need the stair section's bar details")
+    return True
+
+
+def _lintel_items(items, reg, risk, lintels, conv, cover_trip, hook_std):
+    """M4: lintels over the jambed openings of the architectural plans, bound to the printed lintel schedule by
+    opening width. An opening with no structural beam over it carries masonry up to the slab: PROVISIONAL. Under a
+    beam the need depends on the head height against the beam soffit (LINTEL_UNDER_BEAM, UNRESOLVED by default);
+    an opening outside the schedule's bands is reported, never measured."""
+    rows = conv["LINTEL_SCHEDULE"].get("rows") or []
+    if not rows:
+        return
+    bearing = _trip(conv, "LINTEL_BEARING_M")
+    under = _cv(conv, "LINTEL_UNDER_BEAM", "UNRESOLVED")
+    cnt = Counter()
+    for st, rec in sorted(lintels.items()):
+        if rec.get("registration", {}).get("state") != "REGISTERED":
+            risk.append({"KIND": "LINTEL_PLAN_NOT_REGISTERED", "WHERE": st,
+                         "DETAIL": f"architectural {st} plan: {len(rec.get('openings', []))} openings, the plan is not "
+                                   "registered on the slab above - lintel need not decided"})
+            continue
+        for op in rec["openings"]:
+            res = LMS.lintel(op, rows, bearing_m=bearing, cover_m=tuple(sorted(cover_trip, reverse=True)))
+            cid = f"LINTELS:{st}:{op['opening_id']}"
+            over = op.get("beam_over", "NONE")
+            if res["state"] != "MEASURED":
+                cnt[res["state"]] += 1
+                risk.append({"KIND": "LINTEL_OPENING_" + res["state"], "WHERE": st,
+                             "DETAIL": f"{cid}: opening {op['width_m']:.2f} m in a {op['wall_t_m']:.2f} m wall - "
+                                       "outside the lintel schedule's bands (not measured)"})
+                continue
+            common = dict(component_id=cid, trade="CONCRETE", family="LINTELS", storey=st,
+                          source=f"architectural plan {rec['arch_sheet']} wall band {op['band_id']} (layer "
+                                 f"{op['layer']}); lintel schedule row {res['row']}",
+                          dimensions={"opening_m": round(op["width_m"], 3), "wall_t_m": round(op["wall_t_m"], 3),
+                                      "D_m": res["D_m"], "length_m": round(res["length_m"][1], 3),
+                                      "jambs": f"{op['start_jamb']}/{op['end_jamb']}", "beam_over": over},
+                          double_count_risk="an opening under a beam is not given a lintel unless LINTEL_UNDER_BEAM "
+                                            "says so")
+            needed = over == "NONE" or (over == "FULL" and under == "REQUIRED")
+            if over == "FULL" and under == "NOT_REQUIRED":
+                cnt["UNDER_BEAM_NOT_REQUIRED"] += 1
+                continue
+            lo, b_, hi = res["concrete_m3"]
+            if needed:
+                cnt["MEASURED"] += 1
+                items.append(PE.item(item_id=f"P-C:{cid}", category="PROVISIONAL", low=lo, base=b_, high=hi,
+                                     formula="B (wall) x D (schedule row) x (opening + bearing on each masonry jamb)",
+                                     assumptions=["LINTEL_SCHEDULE", "LINTEL_BEARING_M"] +
+                                                 (["LINTEL_UNDER_BEAM"] if over == "FULL" else []),
+                                     support="CONVENTION_ONLY", confidence="LOW", blocker="LINTEL_OPENING_FROM_ARCH",
+                                     **common))
+                tot = 0.0
+                for role, n, d, L3 in res["bars"]:
+                    m3 = sorted(n * BS.mass_kg(x, d) for x in L3)
+                    items.append(PE.item(item_id=f"P-S:{cid}:{role}:D{d:g}", component_id=cid,
+                                         trade="REINFORCEMENT", family="LINTELS", storey=st, category="PROVISIONAL",
+                                         low=m3[0], base=n * BS.mass_kg(L3[1], d), high=m3[2], dia_mm=d,
+                                         source=common["source"], formula="count x (lintel length - 2 cover)",
+                                         assumptions=["LINTEL_SCHEDULE", "LINTEL_BEARING_M", "REBAR_COVER_BEAM_M"],
+                                         support="CONVENTION_ONLY", confidence="LOW", blocker="LAP_ANCHORAGE_RULE"))
+                    tot += n * BS.mass_kg(L3[1], d)
+                s_ = res.get("stirrups")
+                if s_:
+                    vals = []
+                    for k, cv in enumerate(sorted(cover_trip, reverse=True)):
+                        try:
+                            ln = BS.closed_link(res["B_m"], res["D_m"], cv, s_["dia_mm"], table=hook_std)["developed_m"]
+                        except ValueError:
+                            continue
+                        vals.append(s_["count"][k] * BS.mass_kg(ln, s_["dia_mm"]))
+                    if len(vals) == 3:
+                        v3 = sorted(vals)
+                        items.append(PE.item(item_id=f"P-S:{cid}:STIRRUPS:D{s_['dia_mm']:g}", component_id=cid,
+                                             trade="REINFORCEMENT", family="LINTELS", storey=st,
+                                             category="PROVISIONAL", low=v3[0], base=vals[1], high=v3[2],
+                                             dia_mm=s_["dia_mm"], source=common["source"],
+                                             formula="ceil(rate x length) closed links",
+                                             assumptions=["LINTEL_SCHEDULE", "REBAR_COVER_BEAM_M",
+                                                          "REBAR_HOOK_STANDARD"],
+                                             support="CONVENTION_ONLY", confidence="LOW", blocker="TIE_LINK_HOOK_RULE"))
+                        tot += vals[1]
+                reg(cid, "LINTELS", st, "PROVISIONAL_MODEL", "lintel schedule bars", tot)
+            else:
+                cnt["UNDER_BEAM_UNRESOLVED" if over == "FULL" else "PARTIAL_BEAM_UNRESOLVED"] += 1
+                items.append(PE.item(item_id=f"U-C:{cid}", category="UNRESOLVED", support="NO_GEOMETRY",
+                                     confidence="LOW", blocker="LINTEL_NEED_UNDER_BEAM" if over == "FULL" else
+                                     "LINTEL_PARTIAL_BEAM", assumptions=["LINTEL_SCHEDULE", "LINTEL_UNDER_BEAM"],
+                                     exposure_low=0.0, exposure_high=hi,
+                                     expression=f"a beam runs over the opening ({over}): a separate lintel only if the "
+                                                f"head is below the beam soffit; {b_:.3f} m3 if it is", **common))
+                reg(cid, "LINTELS", st, "MISSING_DATA", "lintel need not established (beam over the opening)")
+    risk.append({"KIND": "LINTEL_SUMMARY", "WHERE": "ARCH",
+                 "DETAIL": ", ".join(f"{k} {v}" for k, v in sorted(cnt.items()))})
+
+
+def _cb_model(D, rec, conv, cover_trip, hook_std):
+    """M4: the continuous-beam lines of one plan (continuous_beams): spans matched to the printed span sequence, the
+    physical bar groups of each matched line and their mass shared out to the pieces once. -> {lines, band, steel}."""
+    u = D["unit_m"]
+    rows = {r["mark"]: r for r in D["schedule"]["rows"] if r["family"] == "CONTINUOUS_BEAM"}
+    kw = dict(tol_m=_cv(conv, "CB_SPAN_MATCH_TOL_M"), tol_rel=_cv(conv, "CB_SPAN_MATCH_TOL_REL", 0.10),
+              margin_m=_cv(conv, "CB_DIRECTION_MARGIN_M", 0.25), basis=_cv(conv, "CB_PRINTED_SPAN_BASIS", "AXIS"))
+    bkw = dict(anchorage_d=_trip(conv, "BEAM_BAR_ANCHORAGE_D"), support_frac=_trip(conv, "CB_SUPPORT_BAR_EXTENT_FRAC"),
+               support_basis=_cv(conv, "CB_SUPPORT_BAR_SPAN_BASIS", "CLEAR"),
+               bottom_ext_m=_trip(conv, "CB_BOTTOM_EXTENSION_M"), lap_d=_trip(conv, "BEAM_LAP_D"),
+               stock_m=_cv(conv, "BAR_STOCK_LENGTH_M", 12.0))
+    out = {"lines": [], "band": {}, "steel": {}}
+    marks = sorted({m["mark"] for m in rec.get("marks", []) if m.get("family") == "CONTINUOUS_BEAM" and
+                    str(m.get("state", "")).startswith("BOUND")})
+    for mk in marks:
+        row = rows.get(mk)
+        if row is None:
+            continue
+        P = CBM.printed_spans(row)
+        W, H = row["dims_m"].get("W"), row["dims_m"].get("H")
+
+        def link_kg(g, W=W, H=H):
+            vals = []
+            for cv in cover_trip:
+                try:
+                    vals.append(BS.closed_link(W, H, cv, g["dia_mm"], table=hook_std)["developed_m"] *
+                                BS.kg_per_m(g["dia_mm"]))
+                except (ValueError, TypeError):
+                    pass
+            return tuple(sorted(vals)) if len(vals) == 3 else (0.0, 0.0, 0.0)
+        for k, ln in enumerate(CBM.lines(rec, mk, u), 1):
+            m = CBM.match(ln, P, **kw)
+            lid = f"{rec['sheet']['sheet_id']}:{mk}:{k}"
+            entry = {"line_id": lid, "mark": mk, "state": m["state"], "direction": m.get("direction"),
+                     "decided_by": m.get("decided_by"), "printed_m": P, "residuals": m.get("residuals"),
+                     "pieces": [p_["band_id"] for p_ in ln["pieces"]], "inherited": m.get("inherited", []),
+                     "spans": [{k_: v for k_, v in s.items() if k_ not in ("piece_extents",)} for s in m["spans"]],
+                     "best_attempt": m.get("best_attempt"), "groups": [], "missing": []}
+            out["lines"].append(entry)
+            for s in m["spans"]:
+                for pid in s["pieces"]:
+                    out["band"][pid] = {"mark": mk, "line": lid, "state": m["state"],
+                                        "inherited": pid in m.get("inherited", [])}
+            for p_ in ln["pieces"]:                          # a line not mapped to the spans still names its state
+                out["band"].setdefault(p_["band_id"], {"mark": mk, "line": lid, "state": m["state"],
+                                                       "inherited": False})
+            if m["state"] not in CBM.MAPPED or not (W and H):
+                continue
+            readings = [m["spans"]] + ([m["alternative_spans"]] if m.get("alternative_spans") else [])
+            allocs = []
+            for spans in readings:
+                pb = CBM.physical_bars(dict(m, spans=spans), row, **bkw)
+                al, totals = CBM.allocate(pb["groups"], spans, link_kg)
+                allocs.append((al, totals, pb, spans))
+            if len(allocs) == 2:
+                tb = [sum(v[1] for _, v in a[1]) for a in allocs]
+                larger = _cv(conv, "CB_AMBIGUOUS_DIRECTION_BASE", "LARGER") == "LARGER"
+                base_i = (0 if tb[0] >= tb[1] else 1) if larger else (0 if tb[0] <= tb[1] else 1)
+            else:
+                base_i = 0
+            al0, totals0, pb0, spans0 = allocs[base_i]
+            entry["groups"] = [{k_: v for k_, v in g.items()} | {"mass_kg": dict(totals0).get(g["bar_id"])}
+                               for g in pb0["groups"]]
+            entry["missing"] = pb0["missing"]
+            by_ix = {s["index"]: s for s in spans0}
+            for pid in {p_ for s in spans0 for p_ in s["pieces"]}:
+                keys = set().union(*[set(a[0].get(pid, {})) for a in allocs])
+                vals = {}
+                for key in keys:
+                    v = [a[0].get(pid, {}).get(key, [0.0, 0.0, 0.0]) for a in allocs]
+                    vals[key] = (min(x[0] for x in v), v[base_i][1], max(x[2] for x in v))
+                miss = []
+                for role, j, why in pb0["missing"]:
+                    ix = [j] if role in ("BOTTOM", "STIRRUP") else ([j, j + 1] if role == "SUPPORT_TOP" else
+                                                                    list(by_ix))
+                    if any(pid in by_ix[i]["pieces"] for i in ix if i in by_ix):
+                        miss.append((role, j, why))
+                out["steel"][pid] = {"line": lid, "state": m["state"], "values": vals, "missing": miss,
+                                     "ambiguous": len(allocs) == 2, "decided_by": m.get("decided_by")}
+    return out
+
+
+def _cb_bars(items, reg, b, cid, fam, st, source, cbm):
+    """M4: the bars of one piece of a continuous-beam line from its line's physical bar groups (shared out once)."""
+    s = cbm["steel"].get(b["band_id"])
+    ev = cbm["band"].get(b["band_id"])
+    if s is None:
+        why = f"continuous-beam span sequence {ev['state']}" if ev else "the piece is on no continuous-beam line"
+        reg(cid, fam, st, "MISSING_DATA", f"continuous-beam bars are per span; {why} (line not mapped to the "
+                                          "schedule spans)")
+        return
+    tot = 0.0
+    blk = "CB_SPAN_DIRECTION_AMBIGUOUS" if s["ambiguous"] else "LAP_ANCHORAGE_RULE"
+    for (role, d), (lo, base, hi) in sorted(s["values"].items()):
+        if base <= 0 and hi <= 0:
+            continue
+        items.append(PE.item(item_id=f"P-S:{cid}:CB_{role}:D{d:g}", component_id=cid, trade="REINFORCEMENT",
+                             family=fam, storey=st, category="PROVISIONAL", low=lo, base=base, high=hi, dia_mm=d,
+                             source=f"{source}; continuous-beam line {s['line']} ({s['state']})",
+                             formula={"BOTTOM": "count x (clear span + extension at each support)",
+                                      "SUPPORT_TOP": "count x (support + fraction x span each side), shared by span",
+                                      "STIRRUP": "(rate x clear span + 1) closed links",
+                                      "TOP_THROUGH": "count x (whole line + anchorage + laps), shared by span",
+                                      "TOP_SPAN": "count x (clear span + anchorage)"}.get(role, role),
+                             assumptions=["BEAM_BAR_ANCHORAGE_D", "CB_SUPPORT_BAR_EXTENT_FRAC", "CB_BOTTOM_EXTENSION_M",
+                                          "REBAR_COVER_BEAM_M", "CB_SPAN_MATCH_TOL_M"] +
+                                         (["CB_AMBIGUOUS_DIRECTION_BASE"] if s["ambiguous"] else []),
+                             support="CONVENTION_ONLY", confidence="LOW" if s["ambiguous"] else "MEDIUM",
+                             blocker=blk))
+        tot += base
+    for role, j, why in s["missing"]:
+        items.append(PE.item(item_id=f"U-S:{cid}:CB_{role}{j or ''}", component_id=cid, trade="REINFORCEMENT",
+                             family=fam, storey=st, category="UNRESOLVED", support="NO_GEOMETRY", confidence="LOW",
+                             blocker="CB_ROLE_" + why, source=f"{source}; continuous-beam line {s['line']}",
+                             expression=f"{role.lower().replace('_', ' ')}{' ' + str(j) if j else ''}: "
+                                        f"{'the schedule cell is empty' if why == 'EMPTY_CELL' else 'not printed in the schedule'}"))
+    miss = sorted({f"{r}{j or ''}" for r, j, _ in s["missing"]})
+    reg(cid, fam, st, "PARTIAL_MISSING" if miss else "PROVISIONAL_MODEL",
+        f"continuous-beam model ({s['state'].lower()}"
+        + (", direction by lower residual" if s.get("decided_by") == "LOWER_RESIDUAL" else "")
+        + (", reading with the larger mass as base" if s["ambiguous"] else "") + ")"
+        + (f"; missing: {', '.join(miss)}" if miss else ""), tot)
 
 
 def _beam_bars(items, reg, b, cid, fam, st, source, cover_trip, conv, hook_std):

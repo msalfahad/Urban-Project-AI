@@ -1,0 +1,324 @@
+{
+ "profile": "ST7757_M4",
+ "confirmed_by": "values typed from the printed drawings (the person-confirmed project profile of the generic route); M3 adds two printed foundation values transcribed from the drawing set (the PDF general notes have no text layer, so they are typed here, not read by the engine)",
+ "drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+ "manual_inputs": 17,
+ "conventions": [
+  {
+   "id": "STOREY_HEIGHT_GF",
+   "title": "Storey height GF (floor to floor)",
+   "kind": "number",
+   "unit": "m",
+   "base": 4.5,
+   "low": 4.5,
+   "high": 4.5,
+   "provenance": "PRINTED_VALUE",
+   "source": "P7757 architectural section VE-AA-09 (printed floor-to-floor)",
+   "rationale": "Typed from the printed section."
+  },
+  {
+   "id": "STOREY_HEIGHT_1F",
+   "title": "Storey height 1F (floor to floor)",
+   "kind": "number",
+   "unit": "m",
+   "base": 4.2,
+   "low": 4.2,
+   "high": 4.2,
+   "provenance": "PRINTED_VALUE",
+   "source": "P7757 architectural section VE-AA-09 (printed floor-to-floor)",
+   "rationale": "Typed from the printed section."
+  },
+  {
+   "id": "STOREY_HEIGHT_2F",
+   "title": "Storey height 2F (floor to floor)",
+   "kind": "number",
+   "unit": "m",
+   "base": 4.2,
+   "low": 4.2,
+   "high": 4.2,
+   "provenance": "PRINTED_VALUE",
+   "source": "P7757 architectural section VE-AA-09 (printed floor-to-floor)",
+   "rationale": "Typed from the printed section."
+  },
+  {
+   "id": "GB_TYPICAL_SECTIONS",
+   "title": "Typical ground-beam sections by span (ST7757 p.13 titles)",
+   "kind": "choice",
+   "options": [
+    "P13_EXCLUSIVE_BANDS"
+   ],
+   "base": "P13_EXCLUSIVE_BANDS",
+   "classes": [
+    {
+     "max_span_m": 2.5,
+     "W": 0.3,
+     "H": 0.3
+    },
+    {
+     "max_span_m": 5.0,
+     "W": 0.3,
+     "H": 0.4
+    },
+    {
+     "max_span_m": null,
+     "W": 0.3,
+     "H": 0.6
+    }
+   ],
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "ST7757.pdf p.13 typical ground-beam titles '< 2.5 m (30x30)', '< 5 m (30x40)', '> 5 m (30x60)' (vector glyphs; typed)",
+   "rationale": "Read as exclusive span bands; exterior beams 'FOLLOW ARCH.' are not separated by the generic route (a known limit)."
+  },
+  {
+   "id": "FOUNDING_DEPTH_M",
+   "title": "Founding level below plot level (footing underside)",
+   "kind": "number",
+   "unit": "m",
+   "base": 1.5,
+   "low": 1.5,
+   "high": 2.0,
+   "provenance": "PRINTED_MINIMUM",
+   "source": "ST7757 general note (PDF, transcribed): excavation not less than 1.50 m below plot level",
+   "rationale": "The printed minimum is the base and the low end; 2.00 m is a planning upper bound, not printed (RFI)."
+  },
+  {
+   "id": "NECK_TOP_LEVEL_M",
+   "title": "Top of the foundation necks (GF level above plot level)",
+   "kind": "number",
+   "unit": "m",
+   "base": 1.0,
+   "low": 1.0,
+   "high": 1.0,
+   "provenance": "PRINTED_VALUE",
+   "source": "GF level +1.00 printed on the architectural section P7757 VE-AA-09 (the lift stops GF +1.00, 1F +5.50)",
+   "rationale": "The neck runs from its footing top to the GF level, where the GF column starts (its height is GF +1.00 to 1F +5.50 = 4.50)."
+  },
+  {
+   "id": "GF_FLOOR_LEVEL_M",
+   "title": "Ground-floor level above plot level",
+   "kind": "number",
+   "unit": "m",
+   "base": 1.0,
+   "low": 1.0,
+   "high": 1.0,
+   "provenance": "PRINTED_VALUE",
+   "source": "GF level +1.00 printed on the architectural section P7757 VE-AA-09 and on the ground-beam plan (+1.00)",
+   "rationale": "The top of the exterior ground-beam detail is the ground-floor slab level."
+  },
+  {
+   "id": "OUTER_GROUND_LEVEL_M",
+   "title": "Outer ground level beside the building",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.0,
+   "low": 0.0,
+   "high": 0.15,
+   "provenance": "PRINTED_VALUE",
+   "source": "levels printed outside the building on the ground-beam plan (SH08): +-0.00 and +0.15",
+   "rationale": "The exterior detail runs down to the outer normal ground level; the plan prints +-0.00 and +0.15 outside the building, which set the range."
+  },
+  {
+   "id": "GB_EXTERIOR_DETAIL",
+   "title": "Printed exterior ground-beam detail",
+   "kind": "choice",
+   "options": [
+    "P13_EXTERIOR_WALLS"
+   ],
+   "base": "P13_EXTERIOR_WALLS",
+   "W": 0.3,
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "ST7757 PDF p.13 'Ground Beams. for exterior walls' (labels 'Ground Floor slab level' and 'Outer Normal ground level'); bars from the detail-evidence document",
+   "rationale": "The exterior detail spans from the ground-floor slab level to the outer ground level; width as the typical sections (30 cm)."
+  },
+  {
+   "id": "BLINDING_THICKNESS_M",
+   "title": "Blinding (plain concrete) thickness",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.1,
+   "low": 0.1,
+   "high": 0.1,
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "ST7757 PDF p.13: '10cm Plain con.' in both typical footing details (OCR notes P13N01, P13N02 - each under a footing caption, read again visually) and a 10 cm hatched layer dimensioned under every typical ground-beam section; not reviewed by a person",
+   "rationale": "The isolated-footing details print 10 cm plain concrete under 5 cm screed and a membrane; the ground-beam sections draw the same 10 cm layer. The screed and membrane are separate works, not blinding."
+  },
+  {
+   "id": "BLINDING_UNDER",
+   "title": "Members that sit on blinding",
+   "kind": "choice",
+   "options": [
+    "FOOTINGS_ONLY",
+    "FOOTINGS_AND_GROUND_BEAMS"
+   ],
+   "base": "FOOTINGS_AND_GROUND_BEAMS",
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "ST7757 PDF p.13: the plain-concrete layer is drawn and dimensioned (10 thick, 10 projection each side) under all four typical ground-beam sections and under both typical footing details",
+   "rationale": "Both typical details show the layer."
+  },
+  {
+   "id": "CB_SUPPORT_BAR_EXTENT_FRAC",
+   "title": "Continuous beam support (MID) bars: fraction of the span on each side",
+   "kind": "number",
+   "unit": "fraction",
+   "base": 0.22,
+   "low": 0.22,
+   "high": 0.22,
+   "provenance": "PRINTED_TYPICAL_DETAIL",
+   "source": "ST7757 DXF continuous-beam typical details on SH03, SH05 and SH07 (layer S-DIM.SCH): dimension texts '0.22 Ln', '0.22 Ln1', '0.22 Ln2' measured from the support face",
+   "rationale": "Printed on all three typicals. The '0.3 Ln2' and '0.15L' dimensions bind to no support bar and are not used."
+  },
+  {
+   "id": "CB_SUPPORT_BAR_SPAN_BASIS",
+   "title": "The span 'Ln' of the support-bar dimension",
+   "kind": "choice",
+   "options": [
+    "AXIS",
+    "CLEAR"
+   ],
+   "base": "AXIS",
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "ST7757 DXF CB typical details: 'Ln' / 'Ln1' dimensions run support axis to support axis ('L' runs face to face)",
+   "rationale": "The typical names its spans by their own dimension lines; Ln is axis to axis."
+  },
+  {
+   "id": "CB_BOTTOM_EXTENSION_M",
+   "title": "Continuous beam bottom bars beyond the far face of an interior support",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.075,
+   "low": 0.075,
+   "high": 0.075,
+   "provenance": "PRINTED_TYPICAL_DETAIL",
+   "source": "ST7757 DXF CB typical details on SH03, SH05 and SH07: dimension text '7.5cm' at the bottom bar ends past the interior support",
+   "rationale": "Printed on all three typicals; the end anchorage at an end support is not printed (BEAM_BAR_ANCHORAGE_D applies)."
+  },
+  {
+   "id": "SLAB_PROJECT_DEFAULT_THICKNESS_M",
+   "title": "Project default slab thickness (unless a panel prints its own)",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.16,
+   "low": 0.16,
+   "high": 0.16,
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "ST7757 PDF p.8 general notes (vector glyphs, Arabic): a note naming slab / roof thickness with the value 16 cm, read by local Arabic OCR (unreviewed); the frozen S1 census records the same default as P8-N18 + P1-NOTE-A",
+   "rationale": "Panels without their own thickness tag take the project default; the two 2F panels tagged 'T 18' keep 18 cm. To be confirmed by a person (RFI)."
+  },
+  {
+   "id": "BLINDING_PROJECTION_M",
+   "title": "Blinding projection beyond the footing / ground beam, each side",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.1,
+   "low": 0.1,
+   "high": 0.1,
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "ST7757 PDF p.13 (vector drawing, read visually; not reviewed): the second typical footing detail dimensions the plain concrete 10 beyond the footing face; every typical ground-beam section dimensions it 10 | 30 | 10 under the 30 cm beam",
+   "rationale": "Printed on the typical details; to be confirmed by a person with the blinding thickness (RFI)."
+  },
+  {
+   "id": "LINTEL_SCHEDULE",
+   "title": "Lintel schedule by opening width (cm)",
+   "kind": "choice",
+   "options": [
+    "P13_LINTEL_SCHEDULE"
+   ],
+   "base": "P13_LINTEL_SCHEDULE",
+   "rows": [
+    {
+     "row_id": "L1",
+     "lo": 0,
+     "hi": 100,
+     "D_m": 0.2,
+     "bottom": [
+      2,
+      12
+     ],
+     "top": [
+      2,
+      10
+     ],
+     "stirrup_rate": [
+      5,
+      8
+     ]
+    },
+    {
+     "row_id": "L2",
+     "lo": 101,
+     "hi": 200,
+     "D_m": 0.2,
+     "bottom": [
+      2,
+      14
+     ],
+     "top": [
+      2,
+      12
+     ],
+     "stirrup_rate": [
+      5,
+      8
+     ]
+    },
+    {
+     "row_id": "L3",
+     "lo": 201,
+     "hi": 300,
+     "D_m": 0.3,
+     "bottom": [
+      3,
+      16
+     ],
+     "top": [
+      3,
+      14
+     ],
+     "stirrup_rate": [
+      5,
+      8
+     ]
+    },
+    {
+     "row_id": "L4",
+     "lo": 301,
+     "hi": 500,
+     "D_m": 0.4,
+     "bottom": [
+      3,
+      18
+     ],
+     "top": [
+      3,
+      14
+     ],
+     "stirrup_rate": [
+      5,
+      8
+     ]
+    },
+    {
+     "row_id": "L5",
+     "lo": 501,
+     "hi": 750,
+     "D_m": 0.55,
+     "bottom": [
+      4,
+      18
+     ],
+     "top": [
+      3,
+      14
+     ],
+     "stirrup_rate": [
+      5,
+      8
+     ]
+    }
+   ],
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "ST7757 PDF p.13 'LINTEL SCHEDULE' (vector drawing, read visually, not reviewed): opening width 0-100 / 101-200 / 201-300 / 301-500 / 501-750 cm; size B x 20 / 20 / 30 / 40 / 55 (B = block wall width); bottom 2Ø12 / 2Ø14 / 3Ø16 / 3Ø18 / 4Ø18; top 2Ø10 / 2Ø12 / 3Ø14 / 3Ø14 / 3Ø14; stirrups 5Ø8/M",
+   "rationale": "Bounds inclusive as printed; a width between two bands (e.g. 100.5 cm) is a schedule gap, never rounded into a band."
+  }
+ ]
+}

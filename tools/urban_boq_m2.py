@@ -37,6 +37,7 @@ from engine import boq_m1_xlsx as XL                      # noqa: E402
 from engine.source import detail_evidence as DE           # noqa: E402
 from engine.source import drawing_inventory as DI         # noqa: E402
 from engine.source import family_coverage as FC           # noqa: E402
+from engine.source import arch_evidence as AE             # noqa: E402
 from engine.source import generic_route as GR             # noqa: E402
 from engine.source import provisional_estimate as PE      # noqa: E402
 from tools import m2_overlay as OV                        # noqa: E402
@@ -44,7 +45,7 @@ from tools import urban_intake as UI                      # noqa: E402
 from tools import urban_structural_boq as M1              # noqa: E402
 
 POLICY_ID = "URBAN_BOQ_M2"
-GENERIC_CONVENTIONS = "engine/profiles/URBAN_M3_GENERIC_CONVENTIONS_V2.json"
+GENERIC_CONVENTIONS = "engine/profiles/URBAN_M4_GENERIC_CONVENTIONS_V3.json"   # M4 (V2 / V1: M3 / M2 evidence)
 BANNER = M1.BANNER
 
 
@@ -89,7 +90,10 @@ def load_evidence(path):
     return ev
 
 
-def route_generic(inputs, conv_path, overrides, profile, cache_dir=None, evidence=None):
+def route_generic(inputs, conv_path, overrides, profile, cache_dir=None, evidence=None, arch=None):
+    """arch (M4): accepted architectural DXF records (M1.accept) - the ground-floor plan decides which perimeter
+    ground beams carry an exterior wall, and the floor plans give the masonry openings a lintel schedule is applied
+    to (engine.source.arch_evidence)."""
     dxf = next((r for r in inputs if r["kind"] == "DXF" and "error" not in r), None)
     if dxf is None:
         raise M1.PipelineError("route G needs a readable DXF (a DWG must be converted to DXF first; a PDF alone "
@@ -99,16 +103,24 @@ def route_generic(inputs, conv_path, overrides, profile, cache_dir=None, evidenc
     # M3: an unmarked ground-beam network is searched at the printed typical widths only
     D = GR.detect(I, typical_widths_m=GR.typical_gb_widths(GR.merge_conventions(generic, profile, overrides)))
 
+    ae = None
+    adxf = next((r for r in (arch or []) if r["kind"] == "DXF" and "error" not in r), None)
+    if adxf is not None:
+        AI, _ = cached_intake(adxf, cache_dir)
+        ae = AE.gb_exterior(D, AI)
+        ae["lintels"] = AE.lintel_openings(D, AI)
+
     def build(ov):
         conv = GR.merge_conventions(generic, profile, ov)
-        items, reg, risk = GR.items_from(D, conv, GR.storey_heights(conv), evidence=evidence)
+        items, reg, risk = GR.items_from(D, conv, GR.storey_heights(conv), evidence=evidence, arch=ae)
         return conv, items, reg, risk
     conv, items, reg, risk = build(overrides)
     exc = [{"EXCEPTION_ID": f"CR-{k:04d}", "KIND": "COVERAGE_RISK:" + r["KIND"], "FAMILY": "", "SHEET": r["WHERE"],
             "DETAIL": str(r["DETAIL"])[:300], "LOCATION": ""} for k, r in enumerate(risk, 1)]
     return {"items": items, "conv": conv, "coverage": [], "rebuild": lambda ov: build(dict(overrides, **ov))[1],
             "frozen": [], "exceptions": exc, "adapter": None,
-            "generic": {"D": D, "register": reg, "risk": risk, "intake_cache": cache_state, "evidence": evidence}}
+            "generic": {"D": D, "register": reg, "risk": risk, "intake_cache": cache_state, "evidence": evidence,
+                        "arch": ae}}
 
 
 def not_detected_lines(cov):
@@ -156,7 +168,7 @@ def missing_steel_html(rc):
 
 
 def compute(drawings, *, conventions=None, overrides=None, profile=None, project=None, route="auto", cache_dir=None,
-            evidence=None):
+            evidence=None, arch=None):
     prof = None
     if profile:
         prof = json.loads(Path(profile).read_text(encoding="utf-8")) if not isinstance(profile, dict) else profile
@@ -179,7 +191,8 @@ def compute(drawings, *, conventions=None, overrides=None, profile=None, project
     t = step("2 inventory", t)
     overrides = dict(overrides or {})
     ev = load_evidence(evidence) if isinstance(evidence, (str, Path)) else evidence
-    res = route_generic(inputs, conventions, overrides, prof, cache_dir, evidence=ev)
+    arch_in = M1.accept(arch) if arch else []
+    res = route_generic(inputs, conventions, overrides, prof, cache_dir, evidence=ev, arch=arch_in)
     t = step("3-5 generic detection, quantities, conventions", t)
     items = res["items"]
     PE.check(items, res["conv"])
@@ -218,6 +231,11 @@ def compute(drawings, *, conventions=None, overrides=None, profile=None, project
         "not_detected_families": {b["FAMILY"]: b["EVIDENCE"] for b in boq if b["SECTION"].startswith("C")},
         "sheets": [{k: sh[k] for k in ("sheet_id", "role", "storey")} for sh in g["D"]["model"]["sheets"]],
         "intake_cache": g["intake_cache"],
+        "architectural_evidence": None if not g.get("arch") else {
+            "registration": {k: v for k, v in g["arch"]["registration"].items() if k not in ("dx", "dy")},
+            "ground_beam_classes": dict(sorted(Counter(v["class"] for v in g["arch"]["bands"].values()).items()))},
+        "continuous_beam_lines": dict(sorted(Counter(ln["state"] for r in g["D"]["sheets"].values()
+                                                     for ln in r.get("cb_lines", [])).items())),
         "detail_evidence": None if not ev else {
             "document": ev.get("document"), "records": dict(sorted(Counter(r["state"] for r in ev["records"]).items())),
             "ground_beam_details": [{"detail_id": d["detail_id"], "condition": d["condition"], "ocr": d["ocr"],
@@ -338,9 +356,11 @@ def main(argv=None):
     p.add_argument("--cache", help="folder for cached intakes (by drawing sha256 and code digest); optional")
     p.add_argument("--evidence", help="DETAIL_EVIDENCE.json from tools/pdf_evidence.py (or a manual transcription "
                                       "in the same schema): typical-detail bars the DXF does not carry")
+    p.add_argument("--arch", nargs="+", help="architectural DXF with the ground-floor plan (M4): which perimeter "
+                                              "ground beams carry an exterior wall, and the floor levels inside")
     a = ap.parse_args(argv)
     R = compute(a.drawings, conventions=a.conventions, overrides=M1.parse_sets(a.set), profile=a.profile,
-                route=a.route, cache_dir=a.cache, evidence=a.evidence)
+                route=a.route, cache_dir=a.cache, evidence=a.evidence, arch=a.arch)
     writer = write_all if R.get("generic") else M1.write_all
     res = writer(R, a.out, as_of=a.as_of, pdf=not a.no_pdf, xlsx=not a.no_xlsx)
     s = R["summary"]
