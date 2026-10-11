@@ -163,9 +163,19 @@ COMPARISON_MODULES = (                   # reference-QS / oracle comparison: nev
     "research/alsenan_structural_s9/post_freeze/post_freeze_comparison.py",
     "research/alsenan_structural_s9a/post_freeze/post_freeze_comparison.py",
     "research/alsenan_m1_usable_boq/post_freeze/post_freeze_comparison.py",
+    "research/urban_engine_m5_concrete_reconciliation/build_m5_package.py",  # M5 reconciliation (RECONCILIATION phase)
+    "research/urban_engine_m5_concrete_reconciliation/m5_sources.py",
+    "research/urban_engine_m5_concrete_reconciliation/m5_reconcile.py",
+    "research/urban_engine_m5_concrete_reconciliation/m5_tables.py",
+    "research/urban_engine_m5_concrete_reconciliation/m5_audits.py",
+    "research/urban_engine_m5_concrete_reconciliation/m5_registers.py",
+    "research/urban_engine_m5_concrete_reconciliation/m5_docs.py",
+    "research/urban_engine_m5_concrete_reconciliation/m5_visual.py",
+    "research/urban_engine_m5_concrete_reconciliation/m5_workbook.py",
 )
 COMPARISON_DIRS = (
     "research/alsenan_multi_engine_comparison",
+    "research/urban_engine_m5_concrete_reconciliation",
 )
 # engine modules that mention reinforcement but are neither product (QS audit of external BOQs, reporting, census)
 OTHER_REBAR_AWARE = (

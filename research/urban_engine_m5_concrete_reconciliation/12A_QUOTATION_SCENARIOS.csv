@@ -1,0 +1,7 @@
+SCENARIO,RC_M3,KWD,VS_FREELANCER_RC_M3,VS_FREELANCER_KWD
+S1 measured base (drawing-supported),316.064973,8375.722,-36.371102,-963.834
+S2 measured low (every convention at its low end),307.565567,8150.488,-44.870508,-1189.068
+S3 measured high (every convention at its high end),344.59526,9131.774,-7.840815,-207.782
+S4 measured base + conditional low,330.61497,8761.297,-21.821105,-578.259
+S5 measured base + conditional high,351.448803,9313.393,-0.987272,-26.163
+S6 measured high + conditional high (upper planning bound),379.97909,10069.446,27.543015,729.89

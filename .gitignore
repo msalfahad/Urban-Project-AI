@@ -52,3 +52,6 @@ research/urban_engine_m4_correctness/**/*.png
 research/urban_engine_m4_correctness/**/crops/
 research/urban_engine_m4_correctness/**/run_log.json
 research/urban_engine_m4_correctness/.m3_snapshot.json
+# M5: generated PDF / images (client drawing geometry); the workbooks are covered by *.xlsx
+research/urban_engine_m5_concrete_reconciliation/**/*.pdf
+research/urban_engine_m5_concrete_reconciliation/**/*.png

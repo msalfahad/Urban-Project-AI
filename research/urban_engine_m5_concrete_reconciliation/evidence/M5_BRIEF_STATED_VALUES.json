@@ -1,0 +1,33 @@
+{
+  "record": "M5_BRIEF_STATED_VALUES",
+  "source": "owner brief M5 (Quotation-Critical Concrete Reconciliation & Independent Quantity Audit), typed from the brief text",
+  "use": "RECONCILIATION only: the rate prices differences; the quoted figures are reproduced from their own source records and compared with these; the values that exist in no other record are marked so. None is an engine input.",
+  "concrete_rate_kwd_per_m3": 26.5,
+  "quoted_totals_m3": {
+    "FREELANCER_RC": 352.436,
+    "FREELANCER_PLAIN": 47.055,
+    "URBAN_M4": 312.05,
+    "UC4N_RC": 337.812,
+    "CHRISTIANNP_RC": 333.173
+  },
+  "quoted_freelancer_categories_m3": {
+    "FOUNDATIONS_RELATED": 77.6305,
+    "GROUND_BEAMS_AND_GROUND_SLAB": 75.09,
+    "WALLS_AND_COLUMNS": 39.7515,
+    "BEAMS": 65.965875,
+    "SLABS": 59.8174,
+    "STAIRS_AND_DOME": 21.8328,
+    "SWIMMING_POOL": 12.348
+  },
+  "values_in_no_other_record": {
+    "MCP_BLINDING_APPROX_M3": {
+      "value": 15.787,
+      "note": "stated in the brief as 'about'; no U-C4N or christiannp file in the repository carries a blinding quantity (christiannp assumption A6 states only the rule 0.10 thick + 0.10 projection)"
+    }
+  },
+  "quoted_m4_ground_zone_m3": {"GROUND_BEAMS": 34.48, "GROUND_SLAB": 16.76},
+  "quoted_m4_slabs_m3": 60.97,
+  "quoted_m4_beams_m3": 64.82,
+  "quoted_m4_blinding_m3": 22.16,
+  "quoted_mcp_slabs_approx_m3": 96
+}

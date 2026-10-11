@@ -1,0 +1,18 @@
+RFI_ID,TO,QUESTION,SCOPE,QUANTITY_LOW_M3,QUANTITY_HIGH_M3,SWING_M3,SWING_KWD,NOTE,PRIORITY
+RFI-M5-15,Client / specification,"Blinding scope: under footings and ground beams only (drawn), or a full-plot plate? (plain concrete, priced separately)",plain concrete,22.155,47.055,24.9,659.85,plain concrete,1
+RFI-M5-01,Structural engineer,"Beam schedule depth H: overall depth including the slab, or depth below the slab?",decides 110 measured beams,64.538497,80.785819,16.247322,430.554,,2
+RFI-M5-07,Structural engineer + architect,"Dome ring depth ('AS PER ARCH'), the 1.30 m drum and the tower dome",2 domes + tower,6.736353,14.304179,7.567826,200.547,,3
+RFI-M5-16,Person check,"Confirm the 16 cm project slab default (two printed notes, machine-read only); range shown for +-1 cm",suspended slabs,-3.25,3.25,6.5,172.25,,4
+RFI-M5-02,Structural engineer,"Scope of the 'T=10cm, 5Ø10/m E.W.' ground-slab note: does the slab run in the lift / lobby cell (S8.1A candidates) and under the light-well stair cell?",two ground-slab cells,0,4.895224,4.895224,129.723,,5
+RFI-M5-03,Structural engineer + architect,"Exterior ground beams 'FOLLOW ARCH.': the depth from GF +1.00 to the outer ground level, at the +0.30 / +0.15 annex and court edges; and the p.13 class basis (c/c or clear length)",58 ground-beam spans,26.935876,31.583238,4.647362,123.155,,6
+RFI-M5-06,Structural engineer + architect,"Stair waist thickness and the GF -> 1F riser arrangement (27 / 28 risers, B20 clash)",4 stairs,7.561575,12.134982,4.573407,121.195,,7
+RFI-M5-04,Structural engineer,"Section of the drawn beam spans no tag binds (incl. the two CB10 tags on the 1F slab sheet, ambiguous between a 200 and a 300 band)",17 spans,5.062813,9.584807,4.521995,119.833,,8
+RFI-M5-12,Structural engineer,CN column / neck type (not in the schedule) and the neck sections without a bound footing,CN columns and necks,1.539,5.508,3.969,105.179,,9
+RFI-M5-11,Architect,Door / window head heights against the beam soffits (lintel needed only if the head is below the soffit),46 openings under beams,0,3.415132,3.415132,90.501,,10
+RFI-M5-05,Structural engineer,"Founding level (only 'excavation >= 1.50 m below plot level' is printed): necks, lift pit walls","36 necks, 4 pit walls",0,3.22,3.22,85.33,,11
+RFI-M5-08,Structural engineer,"p.1 note B (neighbour-side external ground beams: upper + lower beam over a black-brick wall): is there a second beam on the neighbour side, and is it the B.W row?",26.4 m of neighbour-side exterior beam,0,3.168,3.168,83.952,,12
+RFI-M5-09,Client + structural engineer,"Is the boundary wall in the contract? Which section governs (p.14 typical GB 20 x 40 or schedule row B.W 20 x 60), and the pad / column spacing?",44.07 m drawn run,3.5256,5.2884,1.7628,46.714,,13
+RFI-M5-10,Architect + pool specialist,"Pool floor profile (flat vs deep end / slope), steps, and where the pump / plant room is (not drawn)",pool,6.495279,7.437969,0.94269,24.981,,14
+RFI-M5-13,Structural engineer,Thickness of the hatched cantilever portions,6 bands,0.67936,0.67936,0,0,,15
+RFI-M5-14,Structural engineer,Water-tank base and walls (only the roof slab is drawn),tank,0,0,0,0,not measurable: not drawn,16
+RFI-M5-17,Architect + structural engineer,"Parapets: RC or masonry, and their geometry",3 roofs,0,0,0,0,not measurable: not drawn,17

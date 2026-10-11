@@ -1,0 +1,6 @@
+OPTION,AREA_M2,M3,BASIS,STATUS
+"B1 footings only (drawn layer, 10 cm, 10 cm projection)",156.594,15.659,"p.13 typical footing details (machine-read, not person-reviewed)",MEASURED (part of B2)
+"B2 footings + ground beams, overlaps once (Urban M4)",212.704,22.155,p.13 draws the layer under every typical ground-beam section and both footing details; union of the placed outlines,MEASURED (Urban base)
+B3 = B2 + a layer under the ground-slab cells,433.543,44.239,no layer is drawn under the 10 cm ground slab; only if the specification requires it,CONDITIONAL ALTERNATIVE
+B4 full plot plate (freelancer),470.55,47.055,"15.00 x 31.37 m printed on SH08 x 0.10; covers court, garden and building alike",CONDITIONAL ALTERNATIVE (not drawn)
+"MCP figure (brief, 'about')",,15.787,christiannp A6: 0.10 thick + 0.10 projection; no file holds the quantity,COMPARISON

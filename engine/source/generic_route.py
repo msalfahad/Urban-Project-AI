@@ -637,6 +637,10 @@ def items_from(D, conv, heights=None, evidence=None, arch=None):
         reg(cid, "COLUMNS", st, "PROVISIONAL_MODEL", "schedule main bars" + (" + printed tie note" if tie_rule else
                                                                            "; ties not printed"), tot)
 
+    # ---------------------------------------------------------------- M5: planted columns labelled on slab plans
+    if "PLANTED_COLUMN_LABELS" in conv.items:
+        _planted_column_items(D, items, reg, risk, conv, heights, occ, src_file, u)
+
     # ---------------------------------------------------------------- strap beams on the foundation plan (M3)
     for sid, rec in sorted(D["sheets"].items()):
         st_ = rec.get("straps") or {}
@@ -2138,3 +2142,60 @@ def policy_record():
     return {"policy": POLICY_ID, "rebar_states": REBAR_STATES,
             "rule": "no project register is loaded; every item names its source entities; a new project is never "
                     "VERIFIED; coverage risk is reported beside unresolved"}
+
+
+STOREY_SEQUENCE = ("GF", "1F", "2F", "3F", "4F", "5F", "6F")
+
+
+def _planted_column_items(D, items, reg, risk, conv, heights, occ, src_file, u):
+    """M5: a column labelled on a slab plan with its own printed section (a planted column, e.g. 'P.C 20x70') stands
+    on that slab and rises one storey. The generic route reads columns from the column plan; a planted column often
+    appears only as such a label. Concrete only: section from the label (cm) x the height of the storey above; its
+    bars stay MISSING_DATA (no ratio). A label within 1 m of a column already counted on that storey is skipped."""
+    c = conv["PLANTED_COLUMN_LABELS"]
+    pat = re.compile(c.get("label_pattern") or r"^\s*P\.?\s*C\.?\s*(\d{2,3})\s*[xX*]\s*(\d{2,3})\s*$")
+    scale = float(c.get("label_unit_m", 0.01))
+    order = [s_ for s_ in STOREY_SEQUENCE if s_ in heights]
+    counted = {}
+    for p in MD.column_storeys(occ, heights) if occ else []:
+        if p.get("box") and p.get("state") == "MEASURED":
+            o_ = D["sheets"][p["sheet"]]["sheet"].get("origin") or (0.0, 0.0)
+            counted.setdefault(p["storey"], []).append(((p["box"][0] + p["box"][2]) / 2 - o_[0],
+                                                        (p["box"][1] + p["box"][3]) / 2 - o_[1]))
+    for sid, rec in sorted(D["sheets"].items()):
+        if rec["sheet"]["role"] != "SLAB_PLAN":
+            continue
+        below = rec["sheet"].get("storey")
+        st = order[order.index(below) + 1] if below in order and order.index(below) + 1 < len(order) else None
+        o_ = rec["sheet"].get("origin") or (0.0, 0.0)
+        for t in rec.get("texts", []) or []:
+            m = pat.match(t.get("value") or "")
+            if not m:
+                continue
+            W, Dp = int(m.group(1)) * scale, int(m.group(2)) * scale
+            lx, ly = t["x"] - o_[0], t["y"] - o_[1]
+            cid = f"COL:{sid}:PC@{round(t['x'])},{round(t['y'])}|{st or 'ROOF'}"
+            if st and any(math.hypot(lx - a, ly - b) * u <= 1.0 for a, b in counted.get(st, [])):
+                risk.append({"KIND": "PLANTED_COLUMN_ALREADY_COUNTED", "WHERE": sid,
+                             "DETAIL": f"{cid}: label '{t['value']}' sits on a column already counted on {st}"})
+                continue
+            common = dict(component_id=cid, trade="CONCRETE", family="COLUMNS", storey=st or "UNKNOWN",
+                          source=f"{src_file} {sid} label '{t['value']}' ({t.get('layer')}); planted on the {below} "
+                                 f"slab", dimensions={"section_m": (W, Dp), "height_m": heights.get(st) if st else None,
+                                                      "planted_on": below},
+                          double_count_risk="stands on a beam / slab of the storey below; the column owns its footprint")
+            if not st or not heights.get(st):
+                items.append(PE.item(item_id=f"U-C:{cid}", category="UNRESOLVED", support="NO_GEOMETRY",
+                                     confidence="LOW", blocker="PLANTED_COLUMN_STOREY", exposure_low=None,
+                                     exposure_high=None, expression=f"{W:g} x {Dp:g} x storey height (no storey above)",
+                                     **common))
+                reg(cid, "COLUMNS", st or "UNKNOWN", "MISSING_DATA", "planted column: no storey above the slab plan")
+                continue
+            v = W * Dp * heights[st]
+            items.append(PE.item(item_id=f"P-C:{cid}", category="PROVISIONAL", low=v, base=v, high=v,
+                                 formula="planted column: label section x storey height",
+                                 assumptions=[f"STOREY_HEIGHT_{st}", "PLANTED_COLUMN_LABELS"],
+                                 support="CONVENTION_ONLY", confidence="MEDIUM", blocker="NOT_REVIEWED", **common))
+            reg(cid, "COLUMNS", st, "MISSING_DATA", "planted column: bars of the label are not bound (no ratio)")
+            risk.append({"KIND": "PLANTED_COLUMN_FROM_LABEL", "WHERE": sid,
+                         "DETAIL": f"{cid}: '{t['value']}' -> {W:g} x {Dp:g} x {heights[st]:g} m on {st}"})
