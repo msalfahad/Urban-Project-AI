@@ -1,0 +1,8707 @@
+{
+ "summary": {
+  "drawings": 40,
+  "crashed": [],
+  "elements": 384,
+  "detected": 383,
+  "recall": 0.9974,
+  "recall_by_kind": {
+   "BOUNDARY_WALL": {
+    "n": 29,
+    "detected": 29,
+    "recall": 1.0
+   },
+   "COLUMN_GAP": {
+    "n": 24,
+    "detected": 24,
+    "recall": 1.0
+   },
+   "DEPENDENCY_NOTE": {
+    "n": 22,
+    "detected": 22,
+    "recall": 1.0
+   },
+   "DOME": {
+    "n": 27,
+    "detected": 27,
+    "recall": 1.0
+   },
+   "EXTRA_STOREY": {
+    "n": 3,
+    "detected": 3,
+    "recall": 1.0
+   },
+   "LABEL_ORPHAN": {
+    "n": 28,
+    "detected": 28,
+    "recall": 1.0
+   },
+   "LIFT_PIT": {
+    "n": 30,
+    "detected": 30,
+    "recall": 1.0
+   },
+   "MISSING_STOREY": {
+    "n": 6,
+    "detected": 6,
+    "recall": 1.0
+   },
+   "PLANTED_COLUMN": {
+    "n": 27,
+    "detected": 27,
+    "recall": 1.0
+   },
+   "POOL": {
+    "n": 31,
+    "detected": 31,
+    "recall": 1.0
+   },
+   "SCHEDULE_ORPHAN": {
+    "n": 30,
+    "detected": 30,
+    "recall": 1.0
+   },
+   "SCHEDULE_UNREAD": {
+    "n": 23,
+    "detected": 23,
+    "recall": 1.0
+   },
+   "STAIR": {
+    "n": 26,
+    "detected": 26,
+    "recall": 1.0
+   },
+   "SUNKEN_SLAB": {
+    "n": 28,
+    "detected": 27,
+    "recall": 0.964
+   },
+   "UNKNOWN_OUTLINE": {
+    "n": 25,
+    "detected": 25,
+    "recall": 1.0
+   },
+   "WATER_TANK": {
+    "n": 25,
+    "detected": 25,
+    "recall": 1.0
+   }
+  },
+  "family_of_detected": {
+   "NA": 76,
+   "RIGHT": 289,
+   "UNKNOWN": 11,
+   "WRONG": 7
+  },
+  "route_column_errors": 24,
+  "route_errors_reported_findings": 35,
+  "false_findings": 2,
+  "false_findings_per_drawing": 0.05,
+  "false_findings_by_kind": {
+   "REGION_EXCLUDED": 1,
+   "SLAB_COVERAGE_LOW": 1
+  },
+  "seconds_mean": 0.41
+ },
+ "drawings": [
+  {
+   "seed": 101,
+   "defects": true,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.81,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "SWIMMING POOL"
+    },
+    {
+     "id": "T02",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-SHAFT"
+    },
+    {
+     "id": "T03",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "MEASURED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T04",
+     "kind": "DEPENDENCY_NOTE",
+     "detected": true,
+     "by": [
+      "DEPENDENCY"
+     ],
+     "family": null,
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "SLAB_STEP"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "SUNKEN"
+    },
+    {
+     "id": "T06",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "UNKNOWN",
+     "note": false,
+     "layer": "4"
+    },
+    {
+     "id": "T07",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "S-DOME"
+    },
+    {
+     "id": "T08",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T09",
+     "kind": "SCHEDULE_UNREAD",
+     "detected": true,
+     "by": [
+      "SCHEDULE_ROW_UNREAD"
+     ],
+     "family": null,
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 13,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 67.2,
+    "geometry_unexplained_m": 88.22,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 32,
+     "CONSUMED_BY_REFERENCE": 47
+    },
+    "labels_consumed_pct": 100.0,
+    "schedule_rows_placed_pct": 87.5,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 97.0,
+    "findings_by_kind": {
+     "DEPENDENCY": 1,
+     "DRAWN_NOT_MEASURED": 5,
+     "REFERENCED_NOT_DRAWN": 2,
+     "SCHEDULED_NOT_PLACED": 1,
+     "SCHEDULE_ROW_UNREAD": 1,
+     "UNRESOLVED_ITEMS": 3
+    },
+    "findings_by_severity": {
+     "HIGH": 7,
+     "MEDIUM": 6
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 5,
+     "MEASURED": 4,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 11,
+     "PARTLY_MEASURED": 1,
+     "REFERENCED_NOT_DRAWN": 2
+    },
+    "rc_measured_m3": 90.243,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 17.145,
+     "MEDIUM": 73.097
+    },
+    "unresolved_exposure_m3": [
+     2.766,
+     5.537
+    ],
+    "finding_volume_m3": [
+     0,
+     0
+    ],
+    "findings_without_volume": 10,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 102,
+   "defects": false,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.41,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "FENCE WALL"
+    },
+    {
+     "id": "T02",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-SHAFT"
+    },
+    {
+     "id": "T03",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "10"
+    },
+    {
+     "id": "T04",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED",
+      "PLACED_NOT_SCHEDULED"
+     ],
+     "family": "GROUND_BEAMS",
+     "family_found": [
+      "GROUND_BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "COLUMN_PRESENCE_NOT_ITEMIZED",
+      "LABEL_NOT_CONSUMED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "COLUMNS",
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "ST"
+    },
+    {
+     "id": "T07",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "WATER_TANK"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "WATER-TANK"
+    },
+    {
+     "id": "T08",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "DOME"
+    },
+    {
+     "id": "T09",
+     "kind": "COLUMN_GAP",
+     "detected": true,
+     "by": [
+      "COLUMN_BAND_NOT_ON_PLAN"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T10",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T11",
+     "kind": "SCHEDULE_UNREAD",
+     "detected": true,
+     "by": [
+      "SCHEDULE_ROW_UNREAD"
+     ],
+     "family": null,
+     "family_found": [
+      "GROUND_BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 17,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 65.5,
+    "geometry_unexplained_m": 93.76,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 31,
+     "CONSUMED_BY_REFERENCE": 48,
+     "NOT_CONSUMED": 2
+    },
+    "labels_consumed_pct": 97.5,
+    "schedule_rows_placed_pct": 87.5,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 46.9,
+    "findings_by_kind": {
+     "COLUMN_BAND_NOT_ON_PLAN": 1,
+     "COLUMN_PRESENCE_NOT_ITEMIZED": 1,
+     "DRAWN_NOT_MEASURED": 5,
+     "LABEL_NOT_CONSUMED": 2,
+     "PLACED_NOT_SCHEDULED": 1,
+     "REFERENCED_NOT_DRAWN": 1,
+     "SCHEDULED_NOT_PLACED": 1,
+     "SCHEDULE_ROW_UNREAD": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "UNRESOLVED_ITEMS": 3
+    },
+    "findings_by_severity": {
+     "HIGH": 12,
+     "MEDIUM": 5
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 8,
+     "MEASURED": 2,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 10,
+     "PARTLY_MEASURED": 2,
+     "REFERENCED_NOT_DRAWN": 1
+    },
+    "rc_measured_m3": 98.205,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 29.187,
+     "MEDIUM": 69.018
+    },
+    "unresolved_exposure_m3": [
+     2.984,
+     6.712
+    ],
+    "finding_volume_m3": [
+     0.36,
+     0.36
+    ],
+    "findings_without_volume": 13,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 103,
+   "defects": true,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.42,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "POOL"
+    },
+    {
+     "id": "T02",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "3"
+    },
+    {
+     "id": "T03",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "11"
+    },
+    {
+     "id": "T04",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-STAIR"
+    },
+    {
+     "id": "T06",
+     "kind": "SUNKEN_SLAB",
+     "detected": false,
+     "by": [],
+     "family": "SLAB_STEP",
+     "family_found": [],
+     "family_state": "NA",
+     "note": false,
+     "layer": "SUNKEN"
+    },
+    {
+     "id": "T07",
+     "kind": "COLUMN_GAP",
+     "detected": true,
+     "by": [
+      "COLUMN_BAND_NOT_ON_PLAN"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T08",
+     "kind": "SCHEDULE_UNREAD",
+     "detected": true,
+     "by": [
+      "SCHEDULE_ROW_UNREAD"
+     ],
+     "family": null,
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T09",
+     "kind": "MISSING_STOREY",
+     "detected": true,
+     "by": [
+      "STOREY_PLAN_MISSING"
+     ],
+     "family": null,
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 13,
+   "variant": {
+    "missing_storey": true,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 70.0,
+    "geometry_unexplained_m": 35.65,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 19,
+     "CONSUMED_BY_REFERENCE": 30,
+     "NOT_CONSUMED": 1
+    },
+    "labels_consumed_pct": 98.0,
+    "schedule_rows_placed_pct": 100.0,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 100.0,
+    "findings_by_kind": {
+     "COLUMN_BAND_NOT_ON_PLAN": 1,
+     "DRAWN_NOT_MEASURED": 3,
+     "LABEL_NOT_CONSUMED": 1,
+     "REFERENCED_NOT_DRAWN": 2,
+     "SCHEDULE_ROW_UNREAD": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "STOREY_PLAN_MISSING": 1,
+     "UNRESOLVED_ITEMS": 3
+    },
+    "findings_by_severity": {
+     "HIGH": 9,
+     "MEDIUM": 4
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 5,
+     "MEASURED": 2,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 13,
+     "PARTLY_MEASURED": 2,
+     "REFERENCED_NOT_DRAWN": 1
+    },
+    "rc_measured_m3": 65.506,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 14.535,
+     "MEDIUM": 50.971
+    },
+    "unresolved_exposure_m3": [
+     16.43,
+     19.697
+    ],
+    "finding_volume_m3": [
+     0,
+     0
+    ],
+    "findings_without_volume": 10,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 104,
+   "defects": false,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.26,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "LIFT",
+      "UNKNOWN"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "BOUNDARY"
+    },
+    {
+     "id": "T02",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-SHAFT"
+    },
+    {
+     "id": "T03",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "10"
+    },
+    {
+     "id": "T04",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "MEASURED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-STAIR"
+    },
+    {
+     "id": "T06",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "S-DOME"
+    },
+    {
+     "id": "T07",
+     "kind": "SCHEDULE_UNREAD",
+     "detected": true,
+     "by": [
+      "SCHEDULE_ROW_UNREAD"
+     ],
+     "family": null,
+     "family_found": [
+      "GROUND_BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 2,
+   "route_errors_reported": [
+    "COLUMN_PRESENCE_NOT_ITEMIZED",
+    "COLUMN_PRESENCE_NOT_ITEMIZED",
+    "COLUMN_BAND_NOT_ON_PLAN",
+    "COLUMN_BAND_NOT_ON_PLAN",
+    "MEMBER_OUTLINE_SUSPECT"
+   ],
+   "n_findings": 17,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 57.5,
+    "geometry_unexplained_m": 125.77,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 18,
+     "CONSUMED_BY_REFERENCE": 25
+    },
+    "labels_consumed_pct": 100.0,
+    "schedule_rows_placed_pct": 100.0,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 55.6,
+    "findings_by_kind": {
+     "COLUMN_BAND_NOT_ON_PLAN": 2,
+     "COLUMN_PRESENCE_NOT_ITEMIZED": 2,
+     "DRAWN_NOT_MEASURED": 4,
+     "MEMBER_OUTLINE_SUSPECT": 1,
+     "REFERENCED_NOT_DRAWN": 2,
+     "SCHEDULE_ROW_UNREAD": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "UNRESOLVED_ITEMS": 4
+    },
+    "findings_by_severity": {
+     "HIGH": 10,
+     "MEDIUM": 7
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 5,
+     "MEASURED": 2,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 11,
+     "PARTLY_MEASURED": 3,
+     "REFERENCED_NOT_DRAWN": 2
+    },
+    "rc_measured_m3": 39.818,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 17.092,
+     "MEDIUM": 22.726
+    },
+    "unresolved_exposure_m3": [
+     4.048,
+     6.124
+    ],
+    "finding_volume_m3": [
+     0.95,
+     0.95
+    ],
+    "findings_without_volume": 11,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 105,
+   "defects": true,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.5,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-SPECIAL"
+    },
+    {
+     "id": "T02",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "11"
+    },
+    {
+     "id": "T03",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T04",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "MEASURED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "DEPENDENCY_NOTE",
+     "detected": true,
+     "by": [
+      "DEPENDENCY"
+     ],
+     "family": null,
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "ST"
+    },
+    {
+     "id": "T07",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "WATER_TANK"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "S-TANK"
+    },
+    {
+     "id": "T08",
+     "kind": "SCHEDULE_UNREAD",
+     "detected": true,
+     "by": [
+      "SCHEDULE_ROW_UNREAD"
+     ],
+     "family": null,
+     "family_found": [
+      "GROUND_BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 11,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 69.3,
+    "geometry_unexplained_m": 56.19,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 32,
+     "CONSUMED_BY_REFERENCE": 47,
+     "NOT_CONSUMED": 1
+    },
+    "labels_consumed_pct": 98.8,
+    "schedule_rows_placed_pct": 100.0,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 97.0,
+    "findings_by_kind": {
+     "DEPENDENCY": 1,
+     "DRAWN_NOT_MEASURED": 3,
+     "LABEL_NOT_CONSUMED": 1,
+     "REFERENCED_NOT_DRAWN": 1,
+     "SCHEDULE_ROW_UNREAD": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "UNRESOLVED_ITEMS": 3
+    },
+    "findings_by_severity": {
+     "HIGH": 8,
+     "MEDIUM": 3
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 4,
+     "MEASURED": 4,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 13,
+     "PARTLY_MEASURED": 1,
+     "REFERENCED_NOT_DRAWN": 1
+    },
+    "rc_measured_m3": 99.996,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 20.173,
+     "LOW": 1.162,
+     "MEDIUM": 78.661
+    },
+    "unresolved_exposure_m3": [
+     3.547,
+     6.84
+    ],
+    "finding_volume_m3": [
+     0.474,
+     0.474
+    ],
+    "findings_without_volume": 7,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 106,
+   "defects": false,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.39,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-SPECIAL"
+    },
+    {
+     "id": "T02",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-LIFT"
+    },
+    {
+     "id": "T03",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED",
+      "PLACED_NOT_SCHEDULED"
+     ],
+     "family": "GROUND_BEAMS",
+     "family_found": [
+      "GROUND_BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T04",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "S-STAIR"
+    },
+    {
+     "id": "T05",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "S-ROOF-DOME"
+    },
+    {
+     "id": "T06",
+     "kind": "COLUMN_GAP",
+     "detected": true,
+     "by": [
+      "COLUMN_ITEM_WITHOUT_PRESENCE"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T07",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 14,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 64.2,
+    "geometry_unexplained_m": 60.36,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 29,
+     "CONSUMED_BY_REFERENCE": 44,
+     "NOT_CONSUMED": 1
+    },
+    "labels_consumed_pct": 98.6,
+    "schedule_rows_placed_pct": 87.5,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 53.3,
+    "findings_by_kind": {
+     "COLUMN_ITEM_WITHOUT_PRESENCE": 1,
+     "DRAWN_NOT_MEASURED": 3,
+     "LABEL_NOT_CONSUMED": 1,
+     "PLACED_NOT_SCHEDULED": 1,
+     "REFERENCED_NOT_DRAWN": 1,
+     "SCHEDULED_NOT_PLACED": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "UNRESOLVED_ITEMS": 5
+    },
+    "findings_by_severity": {
+     "HIGH": 9,
+     "MEDIUM": 5
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 5,
+     "MEASURED": 2,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 12,
+     "PARTLY_MEASURED": 2,
+     "REFERENCED_NOT_DRAWN": 1
+    },
+    "rc_measured_m3": 72.216,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 29.691,
+     "MEDIUM": 42.524
+    },
+    "unresolved_exposure_m3": [
+     12.906,
+     27.329
+    ],
+    "finding_volume_m3": [
+     0.36,
+     0.36
+    ],
+    "findings_without_volume": 8,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 107,
+   "defects": true,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.5,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "LIFT",
+      "UNKNOWN"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-BOUN"
+    },
+    {
+     "id": "T02",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "UNKNOWN"
+     ],
+     "family_state": "WRONG",
+     "note": false,
+     "layer": "S-SPECIAL"
+    },
+    {
+     "id": "T03",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-LIFT"
+    },
+    {
+     "id": "T04",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "SLAB_STEP"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "S-SUNK"
+    },
+    {
+     "id": "T05",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "WATER_TANK"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "WATER-TANK"
+    },
+    {
+     "id": "T06",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "6"
+    },
+    {
+     "id": "T07",
+     "kind": "COLUMN_GAP",
+     "detected": true,
+     "by": [
+      "COLUMN_BAND_NOT_ON_PLAN"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T08",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 12,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 63.7,
+    "geometry_unexplained_m": 190.18,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 31,
+     "CONSUMED_BY_REFERENCE": 46
+    },
+    "labels_consumed_pct": 100.0,
+    "schedule_rows_placed_pct": 85.7,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 100.0,
+    "findings_by_kind": {
+     "COLUMN_BAND_NOT_ON_PLAN": 1,
+     "DRAWN_NOT_MEASURED": 6,
+     "REFERENCED_NOT_DRAWN": 1,
+     "SCHEDULED_NOT_PLACED": 1,
+     "UNRESOLVED_ITEMS": 3
+    },
+    "findings_by_severity": {
+     "HIGH": 7,
+     "MEDIUM": 5
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 6,
+     "MEASURED": 3,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 12,
+     "PARTLY_MEASURED": 1,
+     "REFERENCED_NOT_DRAWN": 1
+    },
+    "rc_measured_m3": 94.546,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 21.162,
+     "MEDIUM": 73.385
+    },
+    "unresolved_exposure_m3": [
+     2.832,
+     6.072
+    ],
+    "finding_volume_m3": [
+     0,
+     0
+    ],
+    "findings_without_volume": 9,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 108,
+   "defects": false,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.55,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "LIFT",
+      "POOL",
+      "UNKNOWN"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-FENCE"
+    },
+    {
+     "id": "T02",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "9"
+    },
+    {
+     "id": "T03",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "LIFT"
+    },
+    {
+     "id": "T04",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "10"
+    },
+    {
+     "id": "T05",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "MEASURED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T07",
+     "kind": "DEPENDENCY_NOTE",
+     "detected": true,
+     "by": [
+      "DEPENDENCY"
+     ],
+     "family": null,
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T08",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "SLAB_STEP"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-SLAB-STEP"
+    },
+    {
+     "id": "T09",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "WATER_TANK"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "TANK"
+    },
+    {
+     "id": "T10",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-ROOF-DOME"
+    },
+    {
+     "id": "T11",
+     "kind": "COLUMN_GAP",
+     "detected": true,
+     "by": [
+      "COLUMN_BAND_NOT_ON_PLAN"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T12",
+     "kind": "EXTRA_STOREY",
+     "detected": true,
+     "by": [
+      "COLUMN_PRESENCE_NOT_ITEMIZED",
+      "STOREY_COLUMN_BANDS_MISSING"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 31,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": true
+   },
+   "scores": {
+    "geometry_explained_pct": 62.5,
+    "geometry_unexplained_m": 157.23,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 47,
+     "CONSUMED_BY_REFERENCE": 73,
+     "NOT_CONSUMED": 1
+    },
+    "labels_consumed_pct": 99.2,
+    "schedule_rows_placed_pct": 100.0,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 61.7,
+    "findings_by_kind": {
+     "COLUMN_BAND_NOT_ON_PLAN": 1,
+     "COLUMN_PRESENCE_NOT_ITEMIZED": 16,
+     "DEPENDENCY": 1,
+     "DRAWN_NOT_MEASURED": 7,
+     "LABEL_NOT_CONSUMED": 1,
+     "STOREY_COLUMN_BANDS_MISSING": 1,
+     "UNRESOLVED_ITEMS": 4
+    },
+    "findings_by_severity": {
+     "HIGH": 26,
+     "MEDIUM": 5
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 7,
+     "MEASURED": 3,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 11,
+     "PARTLY_MEASURED": 2
+    },
+    "rc_measured_m3": 121.718,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 17.632,
+     "LOW": 1.256,
+     "MEDIUM": 102.83
+    },
+    "unresolved_exposure_m3": [
+     3.531,
+     6.455
+    ],
+    "finding_volume_m3": [
+     7.48,
+     7.48
+    ],
+    "findings_without_volume": 11,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 109,
+   "defects": true,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.41,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "LIFT",
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "BOUNDARY"
+    },
+    {
+     "id": "T02",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "SWIMMING POOL"
+    },
+    {
+     "id": "T03",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-SHAFT"
+    },
+    {
+     "id": "T04",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "MEASURED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "DEPENDENCY_NOTE",
+     "detected": true,
+     "by": [
+      "DEPENDENCY"
+     ],
+     "family": null,
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "SLABS"
+     ],
+     "family_state": "WRONG",
+     "note": false,
+     "layer": "S-SLAB-STEP"
+    },
+    {
+     "id": "T07",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "WATER_TANK"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "WATER-TANK"
+    },
+    {
+     "id": "T08",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "S-DOME"
+    },
+    {
+     "id": "T09",
+     "kind": "COLUMN_GAP",
+     "detected": true,
+     "by": [
+      "COLUMN_BAND_NOT_ON_PLAN"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T10",
+     "kind": "SCHEDULE_UNREAD",
+     "detected": true,
+     "by": [
+      "SCHEDULE_ROW_UNREAD"
+     ],
+     "family": null,
+     "family_found": [
+      "GROUND_BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 12,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 59.0,
+    "geometry_unexplained_m": 167.38,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 23,
+     "CONSUMED_BY_REFERENCE": 33
+    },
+    "labels_consumed_pct": 100.0,
+    "schedule_rows_placed_pct": 100.0,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 100.0,
+    "findings_by_kind": {
+     "COLUMN_BAND_NOT_ON_PLAN": 1,
+     "DEPENDENCY": 1,
+     "DRAWN_NOT_MEASURED": 6,
+     "SCHEDULE_ROW_UNREAD": 1,
+     "UNRESOLVED_ITEMS": 3
+    },
+    "findings_by_severity": {
+     "HIGH": 8,
+     "MEDIUM": 4
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 5,
+     "MEASURED": 3,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 12,
+     "PARTLY_MEASURED": 2
+    },
+    "rc_measured_m3": 64.57,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 19.412,
+     "MEDIUM": 45.157
+    },
+    "unresolved_exposure_m3": [
+     2.321,
+     4.972
+    ],
+    "finding_volume_m3": [
+     0,
+     0
+    ],
+    "findings_without_volume": 9,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 110,
+   "defects": false,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.38,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "S-FENCE"
+    },
+    {
+     "id": "T02",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "S-POOL"
+    },
+    {
+     "id": "T03",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "LIFT"
+    },
+    {
+     "id": "T04",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "MEASURED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "SLAB_STEP"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "SUNKEN"
+    },
+    {
+     "id": "T06",
+     "kind": "COLUMN_GAP",
+     "detected": true,
+     "by": [
+      "COLUMN_BAND_NOT_ON_PLAN"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T07",
+     "kind": "SCHEDULE_UNREAD",
+     "detected": true,
+     "by": [
+      "SCHEDULE_ROW_UNREAD"
+     ],
+     "family": null,
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T08",
+     "kind": "MISSING_STOREY",
+     "detected": true,
+     "by": [
+      "STOREY_PLAN_MISSING"
+     ],
+     "family": null,
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 1,
+   "route_errors_reported": [
+    "COLUMN_PRESENCE_NOT_ITEMIZED",
+    "MEMBER_OUTLINE_SUSPECT"
+   ],
+   "n_findings": 12,
+   "variant": {
+    "missing_storey": true,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 63.5,
+    "geometry_unexplained_m": 107.54,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 19,
+     "CONSUMED_BY_REFERENCE": 32
+    },
+    "labels_consumed_pct": 100.0,
+    "schedule_rows_placed_pct": 100.0,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 47.4,
+    "findings_by_kind": {
+     "COLUMN_BAND_NOT_ON_PLAN": 1,
+     "COLUMN_PRESENCE_NOT_ITEMIZED": 1,
+     "DRAWN_NOT_MEASURED": 4,
+     "MEMBER_OUTLINE_SUSPECT": 1,
+     "REFERENCED_NOT_DRAWN": 1,
+     "SCHEDULE_ROW_UNREAD": 1,
+     "STOREY_PLAN_MISSING": 1,
+     "UNRESOLVED_ITEMS": 2
+    },
+    "findings_by_severity": {
+     "HIGH": 8,
+     "MEDIUM": 4
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 5,
+     "MEASURED": 3,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 12,
+     "PARTLY_MEASURED": 2,
+     "REFERENCED_NOT_DRAWN": 1
+    },
+    "rc_measured_m3": 90.079,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 39.038,
+     "LOW": 0.288,
+     "MEDIUM": 50.753
+    },
+    "unresolved_exposure_m3": [
+     4.14,
+     9.68
+    ],
+    "finding_volume_m3": [
+     0.32,
+     0.32
+    ],
+    "findings_without_volume": 9,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 111,
+   "defects": true,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.35,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "UNKNOWN"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-BOUN"
+    },
+    {
+     "id": "T02",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "UNKNOWN"
+     ],
+     "family_state": "WRONG",
+     "note": false,
+     "layer": "S-SPECIAL"
+    },
+    {
+     "id": "T03",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "LIFT"
+    },
+    {
+     "id": "T04",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "X-MISC"
+    },
+    {
+     "id": "T05",
+     "kind": "DEPENDENCY_NOTE",
+     "detected": true,
+     "by": [
+      "DEPENDENCY"
+     ],
+     "family": null,
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-STAIR"
+    },
+    {
+     "id": "T07",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "SLAB_STEP"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-SUNK"
+    },
+    {
+     "id": "T08",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "WATER_TANK"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "4"
+    },
+    {
+     "id": "T09",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "6"
+    },
+    {
+     "id": "T10",
+     "kind": "COLUMN_GAP",
+     "detected": true,
+     "by": [
+      "COLUMN_ITEM_WITHOUT_PRESENCE"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T11",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 17,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 63.2,
+    "geometry_unexplained_m": 103.1,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 23,
+     "CONSUMED_BY_REFERENCE": 32
+    },
+    "labels_consumed_pct": 100.0,
+    "schedule_rows_placed_pct": 85.7,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 41.7,
+    "findings_by_kind": {
+     "COLUMN_ITEM_WITHOUT_PRESENCE": 1,
+     "DEPENDENCY": 1,
+     "DRAWN_NOT_MEASURED": 7,
+     "REFERENCED_NOT_DRAWN": 1,
+     "SCHEDULED_NOT_PLACED": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "UNRESOLVED_ITEMS": 5
+    },
+    "findings_by_severity": {
+     "HIGH": 11,
+     "MEDIUM": 6
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 7,
+     "MEASURED": 2,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 11,
+     "PARTLY_MEASURED": 2,
+     "REFERENCED_NOT_DRAWN": 1
+    },
+    "rc_measured_m3": 50.49,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 21.003,
+     "MEDIUM": 29.487
+    },
+    "unresolved_exposure_m3": [
+     10.18,
+     18.997
+    ],
+    "finding_volume_m3": [
+     0.48,
+     0.48
+    ],
+    "findings_without_volume": 11,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 112,
+   "defects": false,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.51,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "LIFT",
+      "POOL",
+      "UNKNOWN"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "BOUNDARY"
+    },
+    {
+     "id": "T02",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-POOL"
+    },
+    {
+     "id": "T03",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "S-SHAFT"
+    },
+    {
+     "id": "T04",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "Layer1"
+    },
+    {
+     "id": "T05",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "MEASURED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T07",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "ST"
+    },
+    {
+     "id": "T08",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "WATER_TANK"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "4"
+    },
+    {
+     "id": "T09",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "6"
+    },
+    {
+     "id": "T10",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 8,
+   "route_errors_reported": [
+    "COLUMN_PRESENCE_NOT_ITEMIZED",
+    "COLUMN_PRESENCE_NOT_ITEMIZED",
+    "COLUMN_BAND_NOT_ON_PLAN",
+    "COLUMN_BAND_NOT_ON_PLAN",
+    "MEMBER_OUTLINE_SUSPECT"
+   ],
+   "n_findings": 17,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 62.5,
+    "geometry_unexplained_m": 248.76,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 40,
+     "CONSUMED_BY_REFERENCE": 63,
+     "NOT_CONSUMED": 1
+    },
+    "labels_consumed_pct": 99.0,
+    "schedule_rows_placed_pct": 87.5,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 48.8,
+    "findings_by_kind": {
+     "COLUMN_BAND_NOT_ON_PLAN": 2,
+     "COLUMN_PRESENCE_NOT_ITEMIZED": 2,
+     "DRAWN_NOT_MEASURED": 6,
+     "LABEL_NOT_CONSUMED": 1,
+     "MEMBER_OUTLINE_SUSPECT": 1,
+     "SCHEDULED_NOT_PLACED": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "UNRESOLVED_ITEMS": 3
+    },
+    "findings_by_severity": {
+     "HIGH": 11,
+     "MEDIUM": 6
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 7,
+     "MEASURED": 3,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 11,
+     "PARTLY_MEASURED": 2
+    },
+    "rc_measured_m3": 129.706,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 36.351,
+     "MEDIUM": 93.355
+    },
+    "unresolved_exposure_m3": [
+     4.029,
+     9.05
+    ],
+    "finding_volume_m3": [
+     0.608,
+     0.608
+    ],
+    "findings_without_volume": 12,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 113,
+   "defects": true,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.37,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "POOL"
+    },
+    {
+     "id": "T02",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "S-SHAFT"
+    },
+    {
+     "id": "T03",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "Layer1"
+    },
+    {
+     "id": "T04",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-STAIR"
+    },
+    {
+     "id": "T05",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "SLAB_STEP"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "S-SUNK"
+    },
+    {
+     "id": "T06",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "WATER_TANK"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "WATER-TANK"
+    },
+    {
+     "id": "T07",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-DOME"
+    },
+    {
+     "id": "T08",
+     "kind": "COLUMN_GAP",
+     "detected": true,
+     "by": [
+      "COLUMN_BAND_NOT_ON_PLAN"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T09",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T10",
+     "kind": "SCHEDULE_UNREAD",
+     "detected": true,
+     "by": [
+      "SCHEDULE_ROW_UNREAD"
+     ],
+     "family": null,
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 14,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 61.7,
+    "geometry_unexplained_m": 87.12,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 23,
+     "CONSUMED_BY_REFERENCE": 32
+    },
+    "labels_consumed_pct": 100.0,
+    "schedule_rows_placed_pct": 85.7,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 100.0,
+    "findings_by_kind": {
+     "COLUMN_BAND_NOT_ON_PLAN": 1,
+     "DRAWN_NOT_MEASURED": 6,
+     "REFERENCED_NOT_DRAWN": 1,
+     "SCHEDULED_NOT_PLACED": 1,
+     "SCHEDULE_ROW_UNREAD": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "UNRESOLVED_ITEMS": 3
+    },
+    "findings_by_severity": {
+     "HIGH": 9,
+     "MEDIUM": 5
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 7,
+     "MEASURED": 3,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 11,
+     "PARTLY_MEASURED": 1,
+     "REFERENCED_NOT_DRAWN": 1
+    },
+    "rc_measured_m3": 60.502,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 19.467,
+     "MEDIUM": 41.036
+    },
+    "unresolved_exposure_m3": [
+     2.385,
+     5.052
+    ],
+    "finding_volume_m3": [
+     0,
+     0
+    ],
+    "findings_without_volume": 11,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 114,
+   "defects": false,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.4,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "UNKNOWN"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-BOUN"
+    },
+    {
+     "id": "T02",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "9"
+    },
+    {
+     "id": "T03",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "11"
+    },
+    {
+     "id": "T04",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "DEPENDENCY_NOTE",
+     "detected": true,
+     "by": [
+      "DEPENDENCY"
+     ],
+     "family": null,
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "UNKNOWN",
+     "note": true,
+     "layer": "4"
+    },
+    {
+     "id": "T07",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "DOME"
+    },
+    {
+     "id": "T08",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T09",
+     "kind": "SCHEDULE_UNREAD",
+     "detected": true,
+     "by": [
+      "SCHEDULE_ROW_UNREAD"
+     ],
+     "family": null,
+     "family_found": [
+      "WALLS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 14,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 63.8,
+    "geometry_unexplained_m": 97.95,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 32,
+     "CONSUMED_BY_REFERENCE": 48,
+     "NOT_CONSUMED": 1
+    },
+    "labels_consumed_pct": 98.8,
+    "schedule_rows_placed_pct": 88.9,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 100.0,
+    "findings_by_kind": {
+     "DEPENDENCY": 1,
+     "DRAWN_NOT_MEASURED": 5,
+     "LABEL_NOT_CONSUMED": 1,
+     "REFERENCED_NOT_DRAWN": 2,
+     "SCHEDULED_NOT_PLACED": 1,
+     "SCHEDULE_ROW_UNREAD": 1,
+     "UNRESOLVED_ITEMS": 3
+    },
+    "findings_by_severity": {
+     "HIGH": 8,
+     "MEDIUM": 6
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 4,
+     "MEASURED": 3,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 13,
+     "PARTLY_MEASURED": 1,
+     "REFERENCED_NOT_DRAWN": 2
+    },
+    "rc_measured_m3": 96.754,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 24.713,
+     "LOW": 1.075,
+     "MEDIUM": 70.966
+    },
+    "unresolved_exposure_m3": [
+     3.351,
+     6.659
+    ],
+    "finding_volume_m3": [
+     0,
+     0
+    ],
+    "findings_without_volume": 11,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 115,
+   "defects": true,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.39,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "SWIMMING POOL"
+    },
+    {
+     "id": "T02",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "UNKNOWN",
+     "note": false,
+     "layer": "3"
+    },
+    {
+     "id": "T03",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "X-MISC"
+    },
+    {
+     "id": "T04",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "MEASURED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "SLAB_STEP"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "SUNKEN"
+    },
+    {
+     "id": "T07",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "WATER_TANK"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "4"
+    },
+    {
+     "id": "T08",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "DOME"
+    },
+    {
+     "id": "T09",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T10",
+     "kind": "SCHEDULE_UNREAD",
+     "detected": true,
+     "by": [
+      "SCHEDULE_ROW_UNREAD"
+     ],
+     "family": null,
+     "family_found": [
+      "BOUNDARY_WALL"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 15,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 62.0,
+    "geometry_unexplained_m": 71.26,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 34,
+     "CONSUMED_BY_REFERENCE": 23,
+     "NOT_CONSUMED": 1
+    },
+    "labels_consumed_pct": 98.3,
+    "schedule_rows_placed_pct": 85.7,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 96.0,
+    "findings_by_kind": {
+     "DRAWN_NOT_MEASURED": 6,
+     "LABEL_NOT_CONSUMED": 1,
+     "REFERENCED_NOT_DRAWN": 1,
+     "SCHEDULED_NOT_PLACED": 1,
+     "SCHEDULE_ROW_UNREAD": 1,
+     "UNRESOLVED_ITEMS": 5
+    },
+    "findings_by_severity": {
+     "HIGH": 11,
+     "MEDIUM": 4
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 5,
+     "MEASURED": 4,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 12,
+     "PARTLY_MEASURED": 1,
+     "REFERENCED_NOT_DRAWN": 1
+    },
+    "rc_measured_m3": 66.954,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 13.887,
+     "MEDIUM": 53.067
+    },
+    "unresolved_exposure_m3": [
+     5.355,
+     7.776
+    ],
+    "finding_volume_m3": [
+     0,
+     0
+    ],
+    "findings_without_volume": 10,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 116,
+   "defects": false,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.31,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "POOL"
+     ],
+     "family_state": "WRONG",
+     "note": false,
+     "layer": "8"
+    },
+    {
+     "id": "T02",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "SWIMMING POOL"
+    },
+    {
+     "id": "T03",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "3"
+    },
+    {
+     "id": "T04",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "X-MISC"
+    },
+    {
+     "id": "T05",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "MEASURED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T07",
+     "kind": "DEPENDENCY_NOTE",
+     "detected": true,
+     "by": [
+      "DEPENDENCY"
+     ],
+     "family": null,
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T08",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "ST"
+    },
+    {
+     "id": "T09",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "WATER_TANK"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "S-TANK"
+    },
+    {
+     "id": "T10",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "S-DOME"
+    },
+    {
+     "id": "T11",
+     "kind": "COLUMN_GAP",
+     "detected": true,
+     "by": [
+      "COLUMN_BAND_NOT_ON_PLAN"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T12",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 15,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 57.7,
+    "geometry_unexplained_m": 113.77,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 23,
+     "CONSUMED_BY_REFERENCE": 35,
+     "NOT_CONSUMED": 1
+    },
+    "labels_consumed_pct": 98.3,
+    "schedule_rows_placed_pct": 87.5,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 47.8,
+    "findings_by_kind": {
+     "COLUMN_BAND_NOT_ON_PLAN": 1,
+     "DEPENDENCY": 1,
+     "DRAWN_NOT_MEASURED": 6,
+     "LABEL_NOT_CONSUMED": 1,
+     "REFERENCED_NOT_DRAWN": 1,
+     "SCHEDULED_NOT_PLACED": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "UNRESOLVED_ITEMS": 3
+    },
+    "findings_by_severity": {
+     "HIGH": 9,
+     "MEDIUM": 6
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 6,
+     "MEASURED": 4,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 11,
+     "PARTLY_MEASURED": 1,
+     "REFERENCED_NOT_DRAWN": 1
+    },
+    "rc_measured_m3": 65.001,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 22.336,
+     "MEDIUM": 42.665
+    },
+    "unresolved_exposure_m3": [
+     2.35,
+     5.174
+    ],
+    "finding_volume_m3": [
+     0,
+     0
+    ],
+    "findings_without_volume": 12,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 117,
+   "defects": true,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.34,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "UNKNOWN"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "FENCE WALL"
+    },
+    {
+     "id": "T02",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "UNKNOWN"
+     ],
+     "family_state": "WRONG",
+     "note": false,
+     "layer": "S-SPECIAL"
+    },
+    {
+     "id": "T03",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "X-MISC"
+    },
+    {
+     "id": "T04",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED",
+      "PLACED_NOT_SCHEDULED"
+     ],
+     "family": "GROUND_BEAMS",
+     "family_found": [
+      "GROUND_BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "MEASURED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "STAIRS"
+    },
+    {
+     "id": "T07",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "SLAB_STEP"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "12"
+    },
+    {
+     "id": "T08",
+     "kind": "COLUMN_GAP",
+     "detected": true,
+     "by": [
+      "COLUMN_BAND_NOT_ON_PLAN"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T09",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T10",
+     "kind": "SCHEDULE_UNREAD",
+     "detected": true,
+     "by": [
+      "SCHEDULE_ROW_UNREAD"
+     ],
+     "family": null,
+     "family_found": [
+      "WALLS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T11",
+     "kind": "MISSING_STOREY",
+     "detected": true,
+     "by": [
+      "STOREY_PLAN_MISSING"
+     ],
+     "family": null,
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 1,
+   "route_errors_reported": [],
+   "n_findings": 17,
+   "variant": {
+    "missing_storey": true,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 54.5,
+    "geometry_unexplained_m": 144.18,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 11,
+     "CONSUMED_BY_REFERENCE": 17,
+     "NOT_CONSUMED": 1
+    },
+    "labels_consumed_pct": 96.6,
+    "schedule_rows_placed_pct": 87.5,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 45.5,
+    "findings_by_kind": {
+     "COLUMN_BAND_NOT_ON_PLAN": 1,
+     "DRAWN_NOT_MEASURED": 4,
+     "LABEL_NOT_CONSUMED": 1,
+     "PLACED_NOT_SCHEDULED": 1,
+     "REFERENCED_NOT_DRAWN": 3,
+     "SCHEDULED_NOT_PLACED": 1,
+     "SCHEDULE_ROW_UNREAD": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "STOREY_PLAN_MISSING": 1,
+     "UNRESOLVED_ITEMS": 3
+    },
+    "findings_by_severity": {
+     "HIGH": 11,
+     "MEDIUM": 6
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 5,
+     "HELD_UNRESOLVED": 1,
+     "MEASURED": 3,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 10,
+     "PARTLY_MEASURED": 1,
+     "REFERENCED_NOT_DRAWN": 3
+    },
+    "rc_measured_m3": 35.684,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 16.656,
+     "LOW": 0.798,
+     "MEDIUM": 18.23
+    },
+    "unresolved_exposure_m3": [
+     6.945,
+     14.878
+    ],
+    "finding_volume_m3": [
+     0,
+     0
+    ],
+    "findings_without_volume": 14,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 118,
+   "defects": false,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.31,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "BOUNDARY"
+    },
+    {
+     "id": "T02",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-POOL"
+    },
+    {
+     "id": "T03",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "LIFT"
+    },
+    {
+     "id": "T04",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "5"
+    },
+    {
+     "id": "T07",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "SLAB_STEP"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "12"
+    },
+    {
+     "id": "T08",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "WATER_TANK"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "TANK"
+    },
+    {
+     "id": "T09",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-ROOF-DOME"
+    },
+    {
+     "id": "T10",
+     "kind": "COLUMN_GAP",
+     "detected": true,
+     "by": [
+      "COLUMN_BAND_NOT_ON_PLAN"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T11",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 1,
+   "route_errors_reported": [
+    "COLUMN_PRESENCE_NOT_ITEMIZED",
+    "COLUMN_BAND_NOT_ON_PLAN",
+    "MEMBER_OUTLINE_SUSPECT"
+   ],
+   "n_findings": 18,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 59.9,
+    "geometry_unexplained_m": 100.09,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 23,
+     "CONSUMED_BY_REFERENCE": 34,
+     "NOT_CONSUMED": 2
+    },
+    "labels_consumed_pct": 96.6,
+    "schedule_rows_placed_pct": 87.5,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 52.2,
+    "findings_by_kind": {
+     "COLUMN_BAND_NOT_ON_PLAN": 2,
+     "COLUMN_PRESENCE_NOT_ITEMIZED": 1,
+     "DRAWN_NOT_MEASURED": 6,
+     "LABEL_NOT_CONSUMED": 2,
+     "MEMBER_OUTLINE_SUSPECT": 1,
+     "SCHEDULED_NOT_PLACED": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "UNRESOLVED_ITEMS": 4
+    },
+    "findings_by_severity": {
+     "HIGH": 12,
+     "MEDIUM": 6
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 8,
+     "MEASURED": 1,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 10,
+     "PARTLY_MEASURED": 3
+    },
+    "rc_measured_m3": 68.145,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 33.528,
+     "MEDIUM": 34.617
+    },
+    "unresolved_exposure_m3": [
+     5.69,
+     8.536
+    ],
+    "finding_volume_m3": [
+     0.432,
+     0.432
+    ],
+    "findings_without_volume": 13,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 119,
+   "defects": true,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.39,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "UNKNOWN"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "FENCE WALL"
+    },
+    {
+     "id": "T02",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "UNKNOWN",
+     "note": false,
+     "layer": "3"
+    },
+    {
+     "id": "T03",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "10"
+    },
+    {
+     "id": "T04",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "MEASURED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "DEPENDENCY_NOTE",
+     "detected": true,
+     "by": [
+      "DEPENDENCY"
+     ],
+     "family": null,
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T07",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "REGION_EXCLUDED",
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "SLABS",
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "ST"
+    },
+    {
+     "id": "T08",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "UNKNOWN",
+     "note": false,
+     "layer": "12"
+    },
+    {
+     "id": "T09",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "WATER_TANK"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "WATER-TANK"
+    },
+    {
+     "id": "T10",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "S-DOME"
+    },
+    {
+     "id": "T11",
+     "kind": "COLUMN_GAP",
+     "detected": true,
+     "by": [
+      "COLUMN_BAND_NOT_ON_PLAN",
+      "COLUMN_ITEM_WITHOUT_PRESENCE"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T12",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 2,
+   "route_errors_reported": [
+    "COLUMN_PRESENCE_NOT_ITEMIZED",
+    "COLUMN_PRESENCE_NOT_ITEMIZED",
+    "COLUMN_BAND_NOT_ON_PLAN",
+    "SLAB_COVERAGE_LOW",
+    "MEMBER_OUTLINE_SUSPECT"
+   ],
+   "n_findings": 24,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 63.4,
+    "geometry_unexplained_m": 115.14,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 23,
+     "CONSUMED_BY_REFERENCE": 33,
+     "NOT_CONSUMED": 1
+    },
+    "labels_consumed_pct": 98.2,
+    "schedule_rows_placed_pct": 85.7,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 48.0,
+    "findings_by_kind": {
+     "COLUMN_BAND_NOT_ON_PLAN": 2,
+     "COLUMN_ITEM_WITHOUT_PRESENCE": 1,
+     "COLUMN_PRESENCE_NOT_ITEMIZED": 2,
+     "DEPENDENCY": 1,
+     "DRAWN_NOT_MEASURED": 6,
+     "LABEL_NOT_CONSUMED": 1,
+     "MEMBER_OUTLINE_SUSPECT": 1,
+     "REFERENCED_NOT_DRAWN": 2,
+     "REGION_EXCLUDED": 1,
+     "SCHEDULED_NOT_PLACED": 1,
+     "SLAB_COVERAGE_LOW": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "UNRESOLVED_ITEMS": 4
+    },
+    "findings_by_severity": {
+     "HIGH": 14,
+     "MEDIUM": 10
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 5,
+     "MEASURED": 2,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 11,
+     "PARTLY_MEASURED": 3,
+     "REFERENCED_NOT_DRAWN": 2
+    },
+    "rc_measured_m3": 61.839,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 22.111,
+     "MEDIUM": 39.728
+    },
+    "unresolved_exposure_m3": [
+     5.656,
+     11.828
+    ],
+    "finding_volume_m3": [
+     1.932,
+     1.932
+    ],
+    "findings_without_volume": 16,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 120,
+   "defects": false,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.36,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "LIFT",
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "S-FENCE"
+    },
+    {
+     "id": "T02",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "SWIMMING POOL"
+    },
+    {
+     "id": "T03",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "LIFT"
+    },
+    {
+     "id": "T04",
+     "kind": "DEPENDENCY_NOTE",
+     "detected": true,
+     "by": [
+      "DEPENDENCY"
+     ],
+     "family": null,
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "5"
+    },
+    {
+     "id": "T06",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "SLAB_STEP"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "12"
+    },
+    {
+     "id": "T07",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-DOME"
+    },
+    {
+     "id": "T08",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T09",
+     "kind": "SCHEDULE_UNREAD",
+     "detected": true,
+     "by": [
+      "SCHEDULE_ROW_UNREAD"
+     ],
+     "family": null,
+     "family_found": [
+      "WALLS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 13,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 57.4,
+    "geometry_unexplained_m": 203.3,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 24,
+     "CONSUMED_BY_REFERENCE": 34
+    },
+    "labels_consumed_pct": 100.0,
+    "schedule_rows_placed_pct": 88.9,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 50.0,
+    "findings_by_kind": {
+     "DEPENDENCY": 1,
+     "DRAWN_NOT_MEASURED": 5,
+     "REFERENCED_NOT_DRAWN": 1,
+     "SCHEDULED_NOT_PLACED": 1,
+     "SCHEDULE_ROW_UNREAD": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "UNRESOLVED_ITEMS": 3
+    },
+    "findings_by_severity": {
+     "HIGH": 8,
+     "MEDIUM": 5
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 6,
+     "MEASURED": 3,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 11,
+     "PARTLY_MEASURED": 1,
+     "REFERENCED_NOT_DRAWN": 1
+    },
+    "rc_measured_m3": 81.325,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 28.164,
+     "LOW": 1.1,
+     "MEDIUM": 52.061
+    },
+    "unresolved_exposure_m3": [
+     3.611,
+     7.151
+    ],
+    "finding_volume_m3": [
+     0,
+     0
+    ],
+    "findings_without_volume": 10,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 121,
+   "defects": true,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.28,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "11"
+    },
+    {
+     "id": "T02",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED",
+      "PLACED_NOT_SCHEDULED"
+     ],
+     "family": "GROUND_BEAMS",
+     "family_found": [
+      "GROUND_BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T03",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "MEASURED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T04",
+     "kind": "DEPENDENCY_NOTE",
+     "detected": true,
+     "by": [
+      "DEPENDENCY"
+     ],
+     "family": null,
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "ST"
+    },
+    {
+     "id": "T06",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "UNKNOWN",
+     "note": false,
+     "layer": "12"
+    },
+    {
+     "id": "T07",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-DOME"
+    },
+    {
+     "id": "T08",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T09",
+     "kind": "SCHEDULE_UNREAD",
+     "detected": true,
+     "by": [
+      "SCHEDULE_ROW_UNREAD"
+     ],
+     "family": null,
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [
+    {
+     "kind": "SLAB_COVERAGE_LOW",
+     "family": "SLABS",
+     "sheet": "SH02",
+     "storey": "GF",
+     "box": [
+      3.75,
+      3.85,
+      13.2,
+      14.3
+     ],
+     "evidence": "the GF plan encloses 94.3 m2; panels held by items 38.8 m2 and member strips together hold only 54% (regions: BEAM_STRIP 11.3, COLUMN 1.2, OPENING 42.9, STRUCTU"
+    }
+   ],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 16,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 64.3,
+    "geometry_unexplained_m": 42.42,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 18,
+     "CONSUMED_BY_REFERENCE": 23,
+     "NOT_CONSUMED": 1
+    },
+    "labels_consumed_pct": 97.6,
+    "schedule_rows_placed_pct": 87.5,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 44.4,
+    "findings_by_kind": {
+     "DEPENDENCY": 1,
+     "DRAWN_NOT_MEASURED": 3,
+     "LABEL_NOT_CONSUMED": 1,
+     "PLACED_NOT_SCHEDULED": 1,
+     "REFERENCED_NOT_DRAWN": 3,
+     "SCHEDULED_NOT_PLACED": 1,
+     "SCHEDULE_ROW_UNREAD": 1,
+     "SLAB_COVERAGE_LOW": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "UNRESOLVED_ITEMS": 3
+    },
+    "findings_by_severity": {
+     "HIGH": 9,
+     "MEDIUM": 7
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 4,
+     "MEASURED": 4,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 11,
+     "PARTLY_MEASURED": 1,
+     "REFERENCED_NOT_DRAWN": 3
+    },
+    "rc_measured_m3": 49.595,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 19.033,
+     "MEDIUM": 30.562
+    },
+    "unresolved_exposure_m3": [
+     2.04,
+     4.295
+    ],
+    "finding_volume_m3": [
+     0,
+     0
+    ],
+    "findings_without_volume": 13,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 122,
+   "defects": false,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.56,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "FENCE WALL"
+    },
+    {
+     "id": "T02",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-LIFT"
+    },
+    {
+     "id": "T03",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED",
+      "PLACED_NOT_SCHEDULED"
+     ],
+     "family": "GROUND_BEAMS",
+     "family_found": [
+      "GROUND_BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T04",
+     "kind": "DEPENDENCY_NOTE",
+     "detected": true,
+     "by": [
+      "DEPENDENCY"
+     ],
+     "family": null,
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "5"
+    },
+    {
+     "id": "T06",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "WATER_TANK"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "WATER-TANK"
+    },
+    {
+     "id": "T07",
+     "kind": "COLUMN_GAP",
+     "detected": true,
+     "by": [
+      "COLUMN_BAND_NOT_ON_PLAN"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T08",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T09",
+     "kind": "SCHEDULE_UNREAD",
+     "detected": true,
+     "by": [
+      "SCHEDULE_ROW_UNREAD"
+     ],
+     "family": null,
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T10",
+     "kind": "EXTRA_STOREY",
+     "detected": true,
+     "by": [
+      "COLUMN_PRESENCE_NOT_ITEMIZED",
+      "STOREY_COLUMN_BANDS_MISSING"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 33,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": true
+   },
+   "scores": {
+    "geometry_explained_pct": 65.1,
+    "geometry_unexplained_m": 138.37,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 47,
+     "CONSUMED_BY_REFERENCE": 72,
+     "NOT_CONSUMED": 1
+    },
+    "labels_consumed_pct": 99.2,
+    "schedule_rows_placed_pct": 88.9,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 66.0,
+    "findings_by_kind": {
+     "COLUMN_BAND_NOT_ON_PLAN": 1,
+     "COLUMN_PRESENCE_NOT_ITEMIZED": 16,
+     "DEPENDENCY": 1,
+     "DRAWN_NOT_MEASURED": 3,
+     "LABEL_NOT_CONSUMED": 1,
+     "PLACED_NOT_SCHEDULED": 1,
+     "REFERENCED_NOT_DRAWN": 1,
+     "SCHEDULED_NOT_PLACED": 1,
+     "SCHEDULE_ROW_UNREAD": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "STOREY_COLUMN_BANDS_MISSING": 1,
+     "UNRESOLVED_ITEMS": 5
+    },
+    "findings_by_severity": {
+     "HIGH": 26,
+     "MEDIUM": 7
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 5,
+     "MEASURED": 1,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 12,
+     "PARTLY_MEASURED": 3,
+     "REFERENCED_NOT_DRAWN": 1
+    },
+    "rc_measured_m3": 118.357,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 23.97,
+     "MEDIUM": 94.387
+    },
+    "unresolved_exposure_m3": [
+     16.549,
+     34.384
+    ],
+    "finding_volume_m3": [
+     7.48,
+     7.48
+    ],
+    "findings_without_volume": 12,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 123,
+   "defects": true,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.32,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "BOUNDARY"
+    },
+    {
+     "id": "T02",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "9"
+    },
+    {
+     "id": "T03",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "LIFT"
+    },
+    {
+     "id": "T04",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "11"
+    },
+    {
+     "id": "T05",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED",
+      "PLACED_NOT_SCHEDULED"
+     ],
+     "family": "GROUND_BEAMS",
+     "family_found": [
+      "GROUND_BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "SLAB_STEP"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "SUNKEN"
+    },
+    {
+     "id": "T07",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "WATER_TANK"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-TANK"
+    },
+    {
+     "id": "T08",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-ROOF-DOME"
+    },
+    {
+     "id": "T09",
+     "kind": "COLUMN_GAP",
+     "detected": true,
+     "by": [
+      "COLUMN_ITEM_WITHOUT_PRESENCE"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T10",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 14,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 54.6,
+    "geometry_unexplained_m": 94.36,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 17,
+     "CONSUMED_BY_REFERENCE": 22,
+     "NOT_CONSUMED": 1
+    },
+    "labels_consumed_pct": 97.5,
+    "schedule_rows_placed_pct": 85.7,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 55.6,
+    "findings_by_kind": {
+     "COLUMN_ITEM_WITHOUT_PRESENCE": 1,
+     "DRAWN_NOT_MEASURED": 7,
+     "LABEL_NOT_CONSUMED": 1,
+     "PLACED_NOT_SCHEDULED": 1,
+     "SCHEDULED_NOT_PLACED": 1,
+     "UNRESOLVED_ITEMS": 3
+    },
+    "findings_by_severity": {
+     "HIGH": 10,
+     "MEDIUM": 4
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 8,
+     "MEASURED": 3,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 11,
+     "PARTLY_MEASURED": 1
+    },
+    "rc_measured_m3": 39.741,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 18.354,
+     "MEDIUM": 21.387
+    },
+    "unresolved_exposure_m3": [
+     1.953,
+     4.051
+    ],
+    "finding_volume_m3": [
+     0.694,
+     0.694
+    ],
+    "findings_without_volume": 9,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 124,
+   "defects": false,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.27,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-FENCE"
+    },
+    {
+     "id": "T02",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED",
+      "PLACED_NOT_SCHEDULED"
+     ],
+     "family": "GROUND_BEAMS",
+     "family_found": [
+      "GROUND_BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T03",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "MEASURED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T04",
+     "kind": "DEPENDENCY_NOTE",
+     "detected": true,
+     "by": [
+      "DEPENDENCY"
+     ],
+     "family": null,
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "REGION_EXCLUDED",
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "SLABS",
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "S-STAIR"
+    },
+    {
+     "id": "T06",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "SLAB_STEP"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "S-SUNK"
+    },
+    {
+     "id": "T07",
+     "kind": "COLUMN_GAP",
+     "detected": true,
+     "by": [
+      "COLUMN_ITEM_WITHOUT_PRESENCE"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T08",
+     "kind": "MISSING_STOREY",
+     "detected": true,
+     "by": [
+      "STOREY_PLAN_MISSING"
+     ],
+     "family": null,
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [
+    "SLAB_COVERAGE_LOW"
+   ],
+   "n_findings": 17,
+   "variant": {
+    "missing_storey": true,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 62.0,
+    "geometry_unexplained_m": 100.6,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 15,
+     "CONSUMED_BY_REFERENCE": 25,
+     "NOT_CONSUMED": 1
+    },
+    "labels_consumed_pct": 97.6,
+    "schedule_rows_placed_pct": 100.0,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 50.0,
+    "findings_by_kind": {
+     "COLUMN_ITEM_WITHOUT_PRESENCE": 1,
+     "DEPENDENCY": 1,
+     "DRAWN_NOT_MEASURED": 3,
+     "LABEL_NOT_CONSUMED": 1,
+     "PLACED_NOT_SCHEDULED": 1,
+     "REFERENCED_NOT_DRAWN": 3,
+     "REGION_EXCLUDED": 1,
+     "SLAB_COVERAGE_LOW": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "STOREY_PLAN_MISSING": 1,
+     "UNRESOLVED_ITEMS": 3
+    },
+    "findings_by_severity": {
+     "HIGH": 11,
+     "MEDIUM": 6
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 5,
+     "MEASURED": 3,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 10,
+     "PARTLY_MEASURED": 2,
+     "REFERENCED_NOT_DRAWN": 3
+    },
+    "rc_measured_m3": 57.64,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 31.009,
+     "MEDIUM": 26.631
+    },
+    "unresolved_exposure_m3": [
+     6.757,
+     11.233
+    ],
+    "finding_volume_m3": [
+     0.48,
+     0.48
+    ],
+    "findings_without_volume": 13,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 125,
+   "defects": true,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.43,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "LIFT",
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-BOUN"
+    },
+    {
+     "id": "T02",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "9"
+    },
+    {
+     "id": "T03",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "S-SHAFT"
+    },
+    {
+     "id": "T04",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED",
+      "PLACED_NOT_SCHEDULED"
+     ],
+     "family": "GROUND_BEAMS",
+     "family_found": [
+      "GROUND_BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "MEASURED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "SLABS"
+     ],
+     "family_state": "WRONG",
+     "note": false,
+     "layer": "S-SLAB-STEP"
+    },
+    {
+     "id": "T07",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 2,
+   "route_errors_reported": [
+    "COLUMN_PRESENCE_NOT_ITEMIZED",
+    "COLUMN_PRESENCE_NOT_ITEMIZED",
+    "COLUMN_BAND_NOT_ON_PLAN",
+    "COLUMN_BAND_NOT_ON_PLAN",
+    "MEMBER_OUTLINE_SUSPECT"
+   ],
+   "n_findings": 17,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 62.4,
+    "geometry_unexplained_m": 127.7,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 24,
+     "CONSUMED_BY_REFERENCE": 33,
+     "NOT_CONSUMED": 1
+    },
+    "labels_consumed_pct": 98.3,
+    "schedule_rows_placed_pct": 85.7,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 50.0,
+    "findings_by_kind": {
+     "COLUMN_BAND_NOT_ON_PLAN": 2,
+     "COLUMN_PRESENCE_NOT_ITEMIZED": 2,
+     "DRAWN_NOT_MEASURED": 5,
+     "LABEL_NOT_CONSUMED": 1,
+     "MEMBER_OUTLINE_SUSPECT": 1,
+     "PLACED_NOT_SCHEDULED": 1,
+     "REFERENCED_NOT_DRAWN": 1,
+     "SCHEDULED_NOT_PLACED": 1,
+     "UNRESOLVED_ITEMS": 3
+    },
+    "findings_by_severity": {
+     "HIGH": 10,
+     "MEDIUM": 7
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 4,
+     "MEASURED": 2,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 12,
+     "PARTLY_MEASURED": 3,
+     "REFERENCED_NOT_DRAWN": 1
+    },
+    "rc_measured_m3": 66.329,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 26.609,
+     "MEDIUM": 39.72
+    },
+    "unresolved_exposure_m3": [
+     2.996,
+     6.448
+    ],
+    "finding_volume_m3": [
+     1.212,
+     1.212
+    ],
+    "findings_without_volume": 11,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 126,
+   "defects": false,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.37,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "POOL",
+      "UNKNOWN"
+     ],
+     "family_state": "WRONG",
+     "note": true,
+     "layer": "8"
+    },
+    {
+     "id": "T02",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "POOL",
+      "UNKNOWN"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-SPECIAL"
+    },
+    {
+     "id": "T03",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "Layer1"
+    },
+    {
+     "id": "T04",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED",
+      "PLACED_NOT_SCHEDULED"
+     ],
+     "family": "GROUND_BEAMS",
+     "family_found": [
+      "GROUND_BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "MEASURED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "SLAB_STEP"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "12"
+    },
+    {
+     "id": "T07",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "WATER_TANK"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "4"
+    },
+    {
+     "id": "T08",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "S-DOME"
+    },
+    {
+     "id": "T09",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T10",
+     "kind": "SCHEDULE_UNREAD",
+     "detected": true,
+     "by": [
+      "SCHEDULE_ROW_UNREAD"
+     ],
+     "family": null,
+     "family_found": [
+      "GROUND_BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 16,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 58.2,
+    "geometry_unexplained_m": 168.14,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 24,
+     "CONSUMED_BY_REFERENCE": 35,
+     "NOT_CONSUMED": 1
+    },
+    "labels_consumed_pct": 98.3,
+    "schedule_rows_placed_pct": 87.5,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 50.0,
+    "findings_by_kind": {
+     "DRAWN_NOT_MEASURED": 6,
+     "LABEL_NOT_CONSUMED": 1,
+     "PLACED_NOT_SCHEDULED": 1,
+     "REFERENCED_NOT_DRAWN": 2,
+     "SCHEDULED_NOT_PLACED": 1,
+     "SCHEDULE_ROW_UNREAD": 1,
+     "UNRESOLVED_ITEMS": 4
+    },
+    "findings_by_severity": {
+     "HIGH": 11,
+     "MEDIUM": 5
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 6,
+     "MEASURED": 3,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 10,
+     "PARTLY_MEASURED": 2,
+     "REFERENCED_NOT_DRAWN": 2
+    },
+    "rc_measured_m3": 65.898,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 22.609,
+     "MEDIUM": 43.289
+    },
+    "unresolved_exposure_m3": [
+     5.552,
+     8.604
+    ],
+    "finding_volume_m3": [
+     0,
+     0
+    ],
+    "findings_without_volume": 12,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 127,
+   "defects": true,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.36,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-POOL"
+    },
+    {
+     "id": "T02",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-SHAFT"
+    },
+    {
+     "id": "T03",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED",
+      "PLACED_NOT_SCHEDULED"
+     ],
+     "family": "GROUND_BEAMS",
+     "family_found": [
+      "GROUND_BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T04",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "MEASURED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "ST"
+    },
+    {
+     "id": "T06",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "SLAB_STEP"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "12"
+    },
+    {
+     "id": "T07",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "WATER_TANK"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "WATER-TANK"
+    },
+    {
+     "id": "T08",
+     "kind": "COLUMN_GAP",
+     "detected": true,
+     "by": [
+      "COLUMN_BAND_NOT_ON_PLAN"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 2,
+   "route_errors_reported": [],
+   "n_findings": 13,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 64.0,
+    "geometry_unexplained_m": 71.37,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 33,
+     "CONSUMED_BY_REFERENCE": 23,
+     "NOT_CONSUMED": 1
+    },
+    "labels_consumed_pct": 98.2,
+    "schedule_rows_placed_pct": 100.0,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 95.8,
+    "findings_by_kind": {
+     "COLUMN_BAND_NOT_ON_PLAN": 1,
+     "DRAWN_NOT_MEASURED": 4,
+     "LABEL_NOT_CONSUMED": 1,
+     "PLACED_NOT_SCHEDULED": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "UNRESOLVED_ITEMS": 5
+    },
+    "findings_by_severity": {
+     "HIGH": 10,
+     "MEDIUM": 3
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 6,
+     "MEASURED": 4,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 11,
+     "PARTLY_MEASURED": 1
+    },
+    "rc_measured_m3": 54.488,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 19.669,
+     "MEDIUM": 34.819
+    },
+    "unresolved_exposure_m3": [
+     5.909,
+     8.39
+    ],
+    "finding_volume_m3": [
+     0.516,
+     0.516
+    ],
+    "findings_without_volume": 7,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 128,
+   "defects": false,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.33,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "UNKNOWN"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "BOUNDARY"
+    },
+    {
+     "id": "T02",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-POOL"
+    },
+    {
+     "id": "T03",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "LIFT"
+    },
+    {
+     "id": "T04",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "10"
+    },
+    {
+     "id": "T05",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "DEPENDENCY_NOTE",
+     "detected": true,
+     "by": [
+      "DEPENDENCY"
+     ],
+     "family": null,
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T07",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "5"
+    },
+    {
+     "id": "T08",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "SLAB_STEP"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-SLAB-STEP"
+    },
+    {
+     "id": "T09",
+     "kind": "SCHEDULE_UNREAD",
+     "detected": true,
+     "by": [
+      "SCHEDULE_ROW_UNREAD"
+     ],
+     "family": null,
+     "family_found": [
+      "WALLS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 13,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 59.4,
+    "geometry_unexplained_m": 90.65,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 24,
+     "CONSUMED_BY_REFERENCE": 34,
+     "NOT_CONSUMED": 1
+    },
+    "labels_consumed_pct": 98.3,
+    "schedule_rows_placed_pct": 100.0,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 100.0,
+    "findings_by_kind": {
+     "DEPENDENCY": 1,
+     "DRAWN_NOT_MEASURED": 5,
+     "LABEL_NOT_CONSUMED": 1,
+     "REFERENCED_NOT_DRAWN": 1,
+     "SCHEDULE_ROW_UNREAD": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "UNRESOLVED_ITEMS": 3
+    },
+    "findings_by_severity": {
+     "HIGH": 9,
+     "MEDIUM": 4
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 6,
+     "MEASURED": 3,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 12,
+     "PARTLY_MEASURED": 1,
+     "REFERENCED_NOT_DRAWN": 1
+    },
+    "rc_measured_m3": 62.592,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 18.235,
+     "MEDIUM": 44.357
+    },
+    "unresolved_exposure_m3": [
+     2.271,
+     4.752
+    ],
+    "finding_volume_m3": [
+     0,
+     0
+    ],
+    "findings_without_volume": 10,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 129,
+   "defects": true,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.39,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-SPECIAL"
+    },
+    {
+     "id": "T02",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-LIFT"
+    },
+    {
+     "id": "T03",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED",
+      "PLACED_NOT_SCHEDULED"
+     ],
+     "family": "GROUND_BEAMS",
+     "family_found": [
+      "GROUND_BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T04",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "DEPENDENCY_NOTE",
+     "detected": true,
+     "by": [
+      "DEPENDENCY"
+     ],
+     "family": null,
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "STAIRS"
+    },
+    {
+     "id": "T07",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "UNKNOWN",
+     "note": false,
+     "layer": "12"
+    },
+    {
+     "id": "T08",
+     "kind": "COLUMN_GAP",
+     "detected": true,
+     "by": [
+      "COLUMN_BAND_NOT_ON_PLAN"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T09",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T10",
+     "kind": "SCHEDULE_UNREAD",
+     "detected": true,
+     "by": [
+      "SCHEDULE_ROW_UNREAD"
+     ],
+     "family": null,
+     "family_found": [
+      "GROUND_BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 1,
+   "route_errors_reported": [
+    "COLUMN_PRESENCE_NOT_ITEMIZED",
+    "COLUMN_BAND_NOT_ON_PLAN",
+    "SLAB_COVERAGE_LOW",
+    "MEMBER_OUTLINE_SUSPECT"
+   ],
+   "n_findings": 21,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 68.0,
+    "geometry_unexplained_m": 42.85,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 23,
+     "CONSUMED_BY_REFERENCE": 32,
+     "NOT_CONSUMED": 2
+    },
+    "labels_consumed_pct": 96.5,
+    "schedule_rows_placed_pct": 85.7,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 52.2,
+    "findings_by_kind": {
+     "COLUMN_BAND_NOT_ON_PLAN": 2,
+     "COLUMN_PRESENCE_NOT_ITEMIZED": 1,
+     "DEPENDENCY": 1,
+     "DRAWN_NOT_MEASURED": 3,
+     "LABEL_NOT_CONSUMED": 2,
+     "MEMBER_OUTLINE_SUSPECT": 1,
+     "PLACED_NOT_SCHEDULED": 1,
+     "REFERENCED_NOT_DRAWN": 2,
+     "SCHEDULED_NOT_PLACED": 1,
+     "SCHEDULE_ROW_UNREAD": 1,
+     "SLAB_COVERAGE_LOW": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "UNRESOLVED_ITEMS": 4
+    },
+    "findings_by_severity": {
+     "HIGH": 12,
+     "MEDIUM": 9
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 6,
+     "MEASURED": 1,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 12,
+     "PARTLY_MEASURED": 3,
+     "REFERENCED_NOT_DRAWN": 1
+    },
+    "rc_measured_m3": 62.196,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 25.183,
+     "MEDIUM": 37.014
+    },
+    "unresolved_exposure_m3": [
+     8.966,
+     18.769
+    ],
+    "finding_volume_m3": [
+     0.288,
+     0.288
+    ],
+    "findings_without_volume": 16,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 130,
+   "defects": false,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.38,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "LIFT"
+    },
+    {
+     "id": "T02",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "10"
+    },
+    {
+     "id": "T03",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED",
+      "PLACED_NOT_SCHEDULED"
+     ],
+     "family": "GROUND_BEAMS",
+     "family_found": [
+      "GROUND_BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T04",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-ROOF-DOME"
+    },
+    {
+     "id": "T05",
+     "kind": "COLUMN_GAP",
+     "detected": true,
+     "by": [
+      "COLUMN_BAND_NOT_ON_PLAN"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [
+    {
+     "kind": "REGION_EXCLUDED",
+     "family": "SLABS",
+     "sheet": "SH02",
+     "storey": "GF",
+     "box": [
+      4.1,
+      4.1,
+      14.05,
+      12.525
+     ],
+     "evidence": "face SITE-b5106ffed03af11f 83.77 m2 region OPENING_DOMINANT (opening); no item"
+    }
+   ],
+   "route_errors": 2,
+   "route_errors_reported": [
+    "COLUMN_PRESENCE_NOT_ITEMIZED",
+    "COLUMN_PRESENCE_NOT_ITEMIZED",
+    "COLUMN_BAND_NOT_ON_PLAN",
+    "SLAB_COVERAGE_LOW",
+    "MEMBER_OUTLINE_SUSPECT"
+   ],
+   "n_findings": 18,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 63.7,
+    "geometry_unexplained_m": 34.06,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 29,
+     "CONSUMED_BY_REFERENCE": 44,
+     "NOT_CONSUMED": 1
+    },
+    "labels_consumed_pct": 98.6,
+    "schedule_rows_placed_pct": 88.9,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 93.1,
+    "findings_by_kind": {
+     "COLUMN_BAND_NOT_ON_PLAN": 2,
+     "COLUMN_PRESENCE_NOT_ITEMIZED": 2,
+     "DRAWN_NOT_MEASURED": 3,
+     "LABEL_NOT_CONSUMED": 1,
+     "MEMBER_OUTLINE_SUSPECT": 1,
+     "PLACED_NOT_SCHEDULED": 1,
+     "REFERENCED_NOT_DRAWN": 2,
+     "REGION_EXCLUDED": 1,
+     "SCHEDULED_NOT_PLACED": 1,
+     "SLAB_COVERAGE_LOW": 1,
+     "UNRESOLVED_ITEMS": 3
+    },
+    "findings_by_severity": {
+     "HIGH": 10,
+     "MEDIUM": 8
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 4,
+     "MEASURED": 1,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 13,
+     "PARTLY_MEASURED": 3,
+     "REFERENCED_NOT_DRAWN": 2
+    },
+    "rc_measured_m3": 76.573,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 21.395,
+     "MEDIUM": 55.178
+    },
+    "unresolved_exposure_m3": [
+     2.603,
+     5.667
+    ],
+    "finding_volume_m3": [
+     0.95,
+     0.95
+    ],
+    "findings_without_volume": 13,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 131,
+   "defects": true,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.29,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "POOL",
+      "UNKNOWN"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "BOUNDARY"
+    },
+    {
+     "id": "T02",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "SWIMMING POOL"
+    },
+    {
+     "id": "T03",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "10"
+    },
+    {
+     "id": "T04",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "MEASURED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "DEPENDENCY_NOTE",
+     "detected": true,
+     "by": [
+      "DEPENDENCY"
+     ],
+     "family": null,
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "STAIRS"
+    },
+    {
+     "id": "T07",
+     "kind": "COLUMN_GAP",
+     "detected": true,
+     "by": [
+      "COLUMN_ITEM_WITHOUT_PRESENCE"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T08",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T09",
+     "kind": "MISSING_STOREY",
+     "detected": true,
+     "by": [
+      "STOREY_PLAN_MISSING"
+     ],
+     "family": null,
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 13,
+   "variant": {
+    "missing_storey": true,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 61.2,
+    "geometry_unexplained_m": 95.61,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 11,
+     "CONSUMED_BY_REFERENCE": 17
+    },
+    "labels_consumed_pct": 100.0,
+    "schedule_rows_placed_pct": 85.7,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 50.0,
+    "findings_by_kind": {
+     "COLUMN_ITEM_WITHOUT_PRESENCE": 1,
+     "DEPENDENCY": 1,
+     "DRAWN_NOT_MEASURED": 3,
+     "REFERENCED_NOT_DRAWN": 2,
+     "SCHEDULED_NOT_PLACED": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "STOREY_PLAN_MISSING": 1,
+     "UNRESOLVED_ITEMS": 3
+    },
+    "findings_by_severity": {
+     "HIGH": 7,
+     "MEDIUM": 6
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 4,
+     "HELD_UNRESOLVED": 1,
+     "MEASURED": 3,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 12,
+     "PARTLY_MEASURED": 1,
+     "REFERENCED_NOT_DRAWN": 2
+    },
+    "rc_measured_m3": 32.949,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 18.465,
+     "MEDIUM": 14.484
+    },
+    "unresolved_exposure_m3": [
+     7.348,
+     15.841
+    ],
+    "finding_volume_m3": [
+     0.36,
+     0.36
+    ],
+    "findings_without_volume": 9,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 132,
+   "defects": false,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.41,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "S-FENCE"
+    },
+    {
+     "id": "T02",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-SPECIAL"
+    },
+    {
+     "id": "T03",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "3"
+    },
+    {
+     "id": "T04",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "Layer1"
+    },
+    {
+     "id": "T05",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "MEASURED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T07",
+     "kind": "DEPENDENCY_NOTE",
+     "detected": true,
+     "by": [
+      "DEPENDENCY"
+     ],
+     "family": null,
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T08",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "SLAB_STEP"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-SUNK"
+    },
+    {
+     "id": "T09",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "WATER_TANK"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "4"
+    },
+    {
+     "id": "T10",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "UNKNOWN",
+     "note": false,
+     "layer": "6"
+    },
+    {
+     "id": "T11",
+     "kind": "COLUMN_GAP",
+     "detected": true,
+     "by": [
+      "COLUMN_BAND_NOT_ON_PLAN"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T12",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T13",
+     "kind": "SCHEDULE_UNREAD",
+     "detected": true,
+     "by": [
+      "SCHEDULE_ROW_UNREAD"
+     ],
+     "family": null,
+     "family_found": [
+      "BOUNDARY_WALL"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 15,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 61.4,
+    "geometry_unexplained_m": 117.15,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 29,
+     "CONSUMED_BY_REFERENCE": 45,
+     "NOT_CONSUMED": 1
+    },
+    "labels_consumed_pct": 98.7,
+    "schedule_rows_placed_pct": 87.5,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 96.7,
+    "findings_by_kind": {
+     "COLUMN_BAND_NOT_ON_PLAN": 1,
+     "DEPENDENCY": 1,
+     "DRAWN_NOT_MEASURED": 7,
+     "LABEL_NOT_CONSUMED": 1,
+     "SCHEDULED_NOT_PLACED": 1,
+     "SCHEDULE_ROW_UNREAD": 1,
+     "UNRESOLVED_ITEMS": 3
+    },
+    "findings_by_severity": {
+     "HIGH": 10,
+     "MEDIUM": 5
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 6,
+     "MEASURED": 4,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 12,
+     "PARTLY_MEASURED": 1
+    },
+    "rc_measured_m3": 94.839,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 21.992,
+     "MEDIUM": 72.847
+    },
+    "unresolved_exposure_m3": [
+     2.732,
+     5.827
+    ],
+    "finding_volume_m3": [
+     0,
+     0
+    ],
+    "findings_without_volume": 12,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 133,
+   "defects": true,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.56,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "BOUNDARY"
+    },
+    {
+     "id": "T02",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "SWIMMING POOL"
+    },
+    {
+     "id": "T03",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T04",
+     "kind": "DEPENDENCY_NOTE",
+     "detected": true,
+     "by": [
+      "DEPENDENCY"
+     ],
+     "family": null,
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "SLAB_STEP"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "SUNKEN"
+    },
+    {
+     "id": "T06",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "WATER_TANK"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "TANK"
+    },
+    {
+     "id": "T07",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "DOME"
+    },
+    {
+     "id": "T08",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T09",
+     "kind": "SCHEDULE_UNREAD",
+     "detected": true,
+     "by": [
+      "SCHEDULE_ROW_UNREAD"
+     ],
+     "family": null,
+     "family_found": [
+      "WALLS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 13,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 61.7,
+    "geometry_unexplained_m": 203.97,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 30,
+     "CONSUMED_BY_REFERENCE": 42,
+     "NOT_CONSUMED": 1
+    },
+    "labels_consumed_pct": 98.6,
+    "schedule_rows_placed_pct": 85.7,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 100.0,
+    "findings_by_kind": {
+     "DEPENDENCY": 1,
+     "DRAWN_NOT_MEASURED": 5,
+     "LABEL_NOT_CONSUMED": 1,
+     "REFERENCED_NOT_DRAWN": 1,
+     "SCHEDULED_NOT_PLACED": 1,
+     "SCHEDULE_ROW_UNREAD": 1,
+     "UNRESOLVED_ITEMS": 3
+    },
+    "findings_by_severity": {
+     "HIGH": 8,
+     "MEDIUM": 5
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 5,
+     "MEASURED": 3,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 12,
+     "PARTLY_MEASURED": 1,
+     "REFERENCED_NOT_DRAWN": 1
+    },
+    "rc_measured_m3": 91.134,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 21.163,
+     "MEDIUM": 69.971
+    },
+    "unresolved_exposure_m3": [
+     2.675,
+     5.757
+    ],
+    "finding_volume_m3": [
+     0,
+     0
+    ],
+    "findings_without_volume": 10,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 134,
+   "defects": false,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.53,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "SWIMMING POOL"
+    },
+    {
+     "id": "T02",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "UNKNOWN",
+     "note": false,
+     "layer": "3"
+    },
+    {
+     "id": "T03",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "Layer1"
+    },
+    {
+     "id": "T04",
+     "kind": "DEPENDENCY_NOTE",
+     "detected": true,
+     "by": [
+      "DEPENDENCY"
+     ],
+     "family": null,
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "STAIRS"
+    },
+    {
+     "id": "T06",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "UNKNOWN",
+     "note": false,
+     "layer": "12"
+    },
+    {
+     "id": "T07",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "WATER_TANK"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "4"
+    },
+    {
+     "id": "T08",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "S-DOME"
+    },
+    {
+     "id": "T09",
+     "kind": "COLUMN_GAP",
+     "detected": true,
+     "by": [
+      "COLUMN_BAND_NOT_ON_PLAN"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 14,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 65.5,
+    "geometry_unexplained_m": 102.84,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 39,
+     "CONSUMED_BY_REFERENCE": 62
+    },
+    "labels_consumed_pct": 100.0,
+    "schedule_rows_placed_pct": 100.0,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 100.0,
+    "findings_by_kind": {
+     "COLUMN_BAND_NOT_ON_PLAN": 1,
+     "DEPENDENCY": 1,
+     "DRAWN_NOT_MEASURED": 6,
+     "REFERENCED_NOT_DRAWN": 2,
+     "STAIR_NOT_MEASURED": 1,
+     "UNRESOLVED_ITEMS": 3
+    },
+    "findings_by_severity": {
+     "HIGH": 8,
+     "MEDIUM": 6
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 5,
+     "MEASURED": 3,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 12,
+     "PARTLY_MEASURED": 1,
+     "REFERENCED_NOT_DRAWN": 2
+    },
+    "rc_measured_m3": 132.908,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 30.857,
+     "MEDIUM": 102.051
+    },
+    "unresolved_exposure_m3": [
+     3.575,
+     7.92
+    ],
+    "finding_volume_m3": [
+     0.628,
+     0.628
+    ],
+    "findings_without_volume": 10,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 135,
+   "defects": true,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.5,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "LIFT",
+      "POOL",
+      "UNKNOWN"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "S-FENCE"
+    },
+    {
+     "id": "T02",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "POOL"
+    },
+    {
+     "id": "T03",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "3"
+    },
+    {
+     "id": "T04",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "10"
+    },
+    {
+     "id": "T05",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "COLUMN_PRESENCE_NOT_ITEMIZED",
+      "LABEL_NOT_CONSUMED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "COLUMNS",
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T07",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "ST"
+    },
+    {
+     "id": "T08",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "WATER_TANK"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "TANK"
+    },
+    {
+     "id": "T09",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-ROOF-DOME"
+    },
+    {
+     "id": "T10",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T11",
+     "kind": "SCHEDULE_UNREAD",
+     "detected": true,
+     "by": [
+      "SCHEDULE_ROW_UNREAD"
+     ],
+     "family": null,
+     "family_found": [
+      "GROUND_BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 17,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 63.1,
+    "geometry_unexplained_m": 197.14,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 44,
+     "CONSUMED_BY_REFERENCE": 34,
+     "NOT_CONSUMED": 2
+    },
+    "labels_consumed_pct": 97.5,
+    "schedule_rows_placed_pct": 85.7,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 97.0,
+    "findings_by_kind": {
+     "COLUMN_PRESENCE_NOT_ITEMIZED": 1,
+     "DRAWN_NOT_MEASURED": 6,
+     "LABEL_NOT_CONSUMED": 2,
+     "SCHEDULED_NOT_PLACED": 1,
+     "SCHEDULE_ROW_UNREAD": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "UNRESOLVED_ITEMS": 5
+    },
+    "findings_by_severity": {
+     "HIGH": 14,
+     "MEDIUM": 3
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 8,
+     "MEASURED": 2,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 11,
+     "PARTLY_MEASURED": 2
+    },
+    "rc_measured_m3": 85.161,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 22.144,
+     "LOW": 1.35,
+     "MEDIUM": 61.667
+    },
+    "unresolved_exposure_m3": [
+     9.668,
+     13.049
+    ],
+    "finding_volume_m3": [
+     0.45,
+     0.45
+    ],
+    "findings_without_volume": 11,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 136,
+   "defects": false,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.71,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "UNKNOWN",
+     "note": false,
+     "layer": "8"
+    },
+    {
+     "id": "T02",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "9"
+    },
+    {
+     "id": "T03",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-LIFT"
+    },
+    {
+     "id": "T04",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "X-MISC"
+    },
+    {
+     "id": "T05",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "MEASURED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "DEPENDENCY_NOTE",
+     "detected": true,
+     "by": [
+      "DEPENDENCY"
+     ],
+     "family": null,
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T07",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "STAIRS"
+    },
+    {
+     "id": "T08",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "SLAB_STEP"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "12"
+    },
+    {
+     "id": "T09",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "WATER_TANK"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-TANK"
+    },
+    {
+     "id": "T10",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T11",
+     "kind": "SCHEDULE_UNREAD",
+     "detected": true,
+     "by": [
+      "SCHEDULE_ROW_UNREAD"
+     ],
+     "family": null,
+     "family_found": [
+      "BOUNDARY_WALL"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T12",
+     "kind": "EXTRA_STOREY",
+     "detected": true,
+     "by": [
+      "COLUMN_PRESENCE_NOT_ITEMIZED",
+      "STOREY_COLUMN_BANDS_MISSING"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 36,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": true
+   },
+   "scores": {
+    "geometry_explained_pct": 67.9,
+    "geometry_unexplained_m": 128.01,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 60,
+     "CONSUMED_BY_REFERENCE": 94
+    },
+    "labels_consumed_pct": 100.0,
+    "schedule_rows_placed_pct": 87.5,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 29.0,
+    "findings_by_kind": {
+     "COLUMN_PRESENCE_NOT_ITEMIZED": 21,
+     "DEPENDENCY": 1,
+     "DRAWN_NOT_MEASURED": 6,
+     "SCHEDULED_NOT_PLACED": 1,
+     "SCHEDULE_ROW_UNREAD": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "STOREY_COLUMN_BANDS_MISSING": 1,
+     "UNRESOLVED_ITEMS": 4
+    },
+    "findings_by_severity": {
+     "HIGH": 31,
+     "MEDIUM": 5
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 6,
+     "MEASURED": 3,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 12,
+     "PARTLY_MEASURED": 2
+    },
+    "rc_measured_m3": 163.347,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 44.226,
+     "MEDIUM": 119.12
+    },
+    "unresolved_exposure_m3": [
+     5.144,
+     10.935
+    ],
+    "finding_volume_m3": [
+     8.092,
+     8.092
+    ],
+    "findings_without_volume": 11,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 137,
+   "defects": true,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.28,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "BOUNDARY"
+    },
+    {
+     "id": "T02",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-POOL"
+    },
+    {
+     "id": "T03",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T04",
+     "kind": "DEPENDENCY_NOTE",
+     "detected": true,
+     "by": [
+      "DEPENDENCY"
+     ],
+     "family": null,
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "STAIRS"
+    },
+    {
+     "id": "T06",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "DOMES",
+      "WATER_TANK"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-TANK"
+    },
+    {
+     "id": "T07",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-DOME"
+    },
+    {
+     "id": "T08",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 2,
+   "route_errors_reported": [],
+   "n_findings": 13,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 65.8,
+    "geometry_unexplained_m": 64.69,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 18,
+     "CONSUMED_BY_REFERENCE": 22,
+     "NOT_CONSUMED": 1
+    },
+    "labels_consumed_pct": 97.6,
+    "schedule_rows_placed_pct": 85.7,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 55.6,
+    "findings_by_kind": {
+     "DEPENDENCY": 1,
+     "DRAWN_NOT_MEASURED": 4,
+     "LABEL_NOT_CONSUMED": 1,
+     "REFERENCED_NOT_DRAWN": 1,
+     "SCHEDULED_NOT_PLACED": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "UNRESOLVED_ITEMS": 4
+    },
+    "findings_by_severity": {
+     "HIGH": 8,
+     "MEDIUM": 5
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 5,
+     "MEASURED": 2,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 12,
+     "PARTLY_MEASURED": 2,
+     "REFERENCED_NOT_DRAWN": 1
+    },
+    "rc_measured_m3": 41.935,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 20.024,
+     "MEDIUM": 21.911
+    },
+    "unresolved_exposure_m3": [
+     4.816,
+     7.15
+    ],
+    "finding_volume_m3": [
+     0.207,
+     0.207
+    ],
+    "findings_without_volume": 8,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 138,
+   "defects": false,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.26,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "LIFT",
+      "UNKNOWN"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "FENCE WALL"
+    },
+    {
+     "id": "T02",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "LIFT"
+    },
+    {
+     "id": "T03",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "11"
+    },
+    {
+     "id": "T04",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "MEASURED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "DEPENDENCY_NOTE",
+     "detected": true,
+     "by": [
+      "DEPENDENCY"
+     ],
+     "family": null,
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T07",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "5"
+    },
+    {
+     "id": "T08",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "SLAB_STEP"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-SLAB-STEP"
+    },
+    {
+     "id": "T09",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T10",
+     "kind": "SCHEDULE_UNREAD",
+     "detected": true,
+     "by": [
+      "SCHEDULE_ROW_UNREAD"
+     ],
+     "family": null,
+     "family_found": [
+      "BOUNDARY_WALL"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T11",
+     "kind": "MISSING_STOREY",
+     "detected": true,
+     "by": [
+      "STOREY_PLAN_MISSING"
+     ],
+     "family": null,
+     "family_found": [
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 14,
+   "variant": {
+    "missing_storey": true,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 52.4,
+    "geometry_unexplained_m": 118.1,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 12,
+     "CONSUMED_BY_REFERENCE": 18,
+     "NOT_CONSUMED": 1
+    },
+    "labels_consumed_pct": 96.8,
+    "schedule_rows_placed_pct": 87.5,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 100.0,
+    "findings_by_kind": {
+     "DEPENDENCY": 1,
+     "DRAWN_NOT_MEASURED": 4,
+     "LABEL_NOT_CONSUMED": 1,
+     "REFERENCED_NOT_DRAWN": 2,
+     "SCHEDULED_NOT_PLACED": 1,
+     "SCHEDULE_ROW_UNREAD": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "STOREY_PLAN_MISSING": 1,
+     "UNRESOLVED_ITEMS": 2
+    },
+    "findings_by_severity": {
+     "HIGH": 9,
+     "MEDIUM": 5
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 5,
+     "MEASURED": 4,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 11,
+     "PARTLY_MEASURED": 1,
+     "REFERENCED_NOT_DRAWN": 2
+    },
+    "rc_measured_m3": 40.335,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 10.765,
+     "MEDIUM": 29.571
+    },
+    "unresolved_exposure_m3": [
+     1.561,
+     3.555
+    ],
+    "finding_volume_m3": [
+     0.554,
+     0.554
+    ],
+    "findings_without_volume": 11,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 139,
+   "defects": true,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.36,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "FENCE WALL"
+    },
+    {
+     "id": "T02",
+     "kind": "POOL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "POOL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "POOL"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-SPECIAL"
+    },
+    {
+     "id": "T03",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED",
+      "PLACED_NOT_SCHEDULED"
+     ],
+     "family": "GROUND_BEAMS",
+     "family_found": [
+      "GROUND_BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T04",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "DEPENDENCY_NOTE",
+     "detected": true,
+     "by": [
+      "DEPENDENCY"
+     ],
+     "family": null,
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "SLAB_STEP"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "12"
+    },
+    {
+     "id": "T07",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "DOME"
+    },
+    {
+     "id": "T08",
+     "kind": "COLUMN_GAP",
+     "detected": true,
+     "by": [
+      "COLUMN_ITEM_WITHOUT_PRESENCE"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T09",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 16,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 64.5,
+    "geometry_unexplained_m": 82.26,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 23,
+     "CONSUMED_BY_REFERENCE": 32,
+     "NOT_CONSUMED": 2
+    },
+    "labels_consumed_pct": 96.5,
+    "schedule_rows_placed_pct": 85.7,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 50.0,
+    "findings_by_kind": {
+     "COLUMN_ITEM_WITHOUT_PRESENCE": 1,
+     "DEPENDENCY": 1,
+     "DRAWN_NOT_MEASURED": 4,
+     "LABEL_NOT_CONSUMED": 2,
+     "PLACED_NOT_SCHEDULED": 1,
+     "REFERENCED_NOT_DRAWN": 3,
+     "SCHEDULED_NOT_PLACED": 1,
+     "UNRESOLVED_ITEMS": 3
+    },
+    "findings_by_severity": {
+     "HIGH": 8,
+     "MEDIUM": 8
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 6,
+     "MEASURED": 3,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 10,
+     "PARTLY_MEASURED": 1,
+     "REFERENCED_NOT_DRAWN": 2
+    },
+    "rc_measured_m3": 75.244,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 27.355,
+     "MEDIUM": 47.889
+    },
+    "unresolved_exposure_m3": [
+     3.004,
+     6.458
+    ],
+    "finding_volume_m3": [
+     0.873,
+     0.873
+    ],
+    "findings_without_volume": 11,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  },
+  {
+   "seed": 140,
+   "defects": false,
+   "vocabulary": "dev",
+   "hard": false,
+   "ok": true,
+   "seconds": 0.29,
+   "elements": [
+    {
+     "id": "T01",
+     "kind": "BOUNDARY_WALL",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "BOUNDARY_WALL",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "LIFT",
+      "UNKNOWN"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-FENCE"
+    },
+    {
+     "id": "T02",
+     "kind": "LIFT_PIT",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "LIFT",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "LIFT"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "S-SHAFT"
+    },
+    {
+     "id": "T03",
+     "kind": "UNKNOWN_OUTLINE",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "UNKNOWN",
+     "family_found": [
+      "BOUNDARY_WALL",
+      "UNKNOWN"
+     ],
+     "family_state": "NA",
+     "note": false,
+     "layer": "X-MISC"
+    },
+    {
+     "id": "T04",
+     "kind": "LABEL_ORPHAN",
+     "detected": true,
+     "by": [
+      "LABEL_NOT_CONSUMED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T05",
+     "kind": "PLANTED_COLUMN",
+     "detected": true,
+     "by": [
+      "MEASURED"
+     ],
+     "family": "PLANTED_COLUMN",
+     "family_found": [
+      "PLANTED_COLUMN"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T06",
+     "kind": "STAIR",
+     "detected": true,
+     "by": [
+      "REGION_EXCLUDED",
+      "STAIR_NOT_MEASURED"
+     ],
+     "family": "STAIRS",
+     "family_found": [
+      "SLABS",
+      "STAIRS"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "5"
+    },
+    {
+     "id": "T07",
+     "kind": "SUNKEN_SLAB",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "SLAB_STEP",
+     "family_found": [
+      "SLAB_STEP"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "SUNKEN"
+    },
+    {
+     "id": "T08",
+     "kind": "WATER_TANK",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "WATER_TANK",
+     "family_found": [
+      "WATER_TANK"
+     ],
+     "family_state": "RIGHT",
+     "note": true,
+     "layer": "TANK"
+    },
+    {
+     "id": "T09",
+     "kind": "DOME",
+     "detected": true,
+     "by": [
+      "DRAWN_NOT_MEASURED"
+     ],
+     "family": "DOMES",
+     "family_found": [
+      "DOMES"
+     ],
+     "family_state": "RIGHT",
+     "note": false,
+     "layer": "S-DOME"
+    },
+    {
+     "id": "T10",
+     "kind": "COLUMN_GAP",
+     "detected": true,
+     "by": [
+      "COLUMN_BAND_NOT_ON_PLAN"
+     ],
+     "family": "COLUMNS",
+     "family_found": [
+      "COLUMNS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T11",
+     "kind": "SCHEDULE_ORPHAN",
+     "detected": true,
+     "by": [
+      "SCHEDULED_NOT_PLACED"
+     ],
+     "family": "BEAMS",
+     "family_found": [
+      "BEAMS"
+     ],
+     "family_state": "RIGHT",
+     "note": null,
+     "layer": null
+    },
+    {
+     "id": "T12",
+     "kind": "SCHEDULE_UNREAD",
+     "detected": true,
+     "by": [
+      "SCHEDULE_ROW_UNREAD"
+     ],
+     "family": null,
+     "family_found": [
+      "WALLS"
+     ],
+     "family_state": "NA",
+     "note": null,
+     "layer": null
+    }
+   ],
+   "false_findings": [],
+   "route_errors": 0,
+   "route_errors_reported": [],
+   "n_findings": 18,
+   "variant": {
+    "missing_storey": false,
+    "extra_storey": false
+   },
+   "scores": {
+    "geometry_explained_pct": 55.5,
+    "geometry_unexplained_m": 142.75,
+    "labels": {
+     "CONSUMED_BY_PROXIMITY": 17,
+     "CONSUMED_BY_REFERENCE": 25,
+     "NOT_CONSUMED": 1
+    },
+    "labels_consumed_pct": 97.7,
+    "schedule_rows_placed_pct": 87.5,
+    "members_itemized_pct": 100.0,
+    "column_outlines_itemized_pct": 100.0,
+    "findings_by_kind": {
+     "COLUMN_BAND_NOT_ON_PLAN": 1,
+     "DRAWN_NOT_MEASURED": 6,
+     "LABEL_NOT_CONSUMED": 1,
+     "REFERENCED_NOT_DRAWN": 1,
+     "REGION_EXCLUDED": 1,
+     "SCHEDULED_NOT_PLACED": 1,
+     "SCHEDULE_ROW_UNREAD": 1,
+     "STAIR_NOT_MEASURED": 1,
+     "UNRESOLVED_ITEMS": 5
+    },
+    "findings_by_severity": {
+     "HIGH": 13,
+     "MEDIUM": 5
+    },
+    "scope_states": {
+     "DRAWN_NOT_MEASURED": 7,
+     "MEASURED": 3,
+     "NO_EVIDENCE_CONFIRM_ABSENT": 10,
+     "PARTLY_MEASURED": 2,
+     "REFERENCED_NOT_DRAWN": 1
+    },
+    "rc_measured_m3": 30.182,
+    "rc_measured_by_confidence_m3": {
+     "HIGH": 12.847,
+     "MEDIUM": 17.335
+    },
+    "unresolved_exposure_m3": [
+     6.744,
+     10.948
+    ],
+    "finding_volume_m3": [
+     0.58,
+     0.58
+    ],
+    "findings_without_volume": 12,
+    "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total"
+   }
+  }
+ ]
+}

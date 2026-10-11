@@ -1,0 +1,514 @@
+{
+ "geometry_stats": {
+  "annotation_entities": 1661.0,
+  "context_length_m": 278.714,
+  "drawn_entities": 1770.0,
+  "drawn_length_m": 3321.146,
+  "drawn_not_measured_groups": 20.0,
+  "entities": 3431.0,
+  "explained_length_m": 2315.667,
+  "minor_length_m": 40.368,
+  "minor_unexplained_groups": 3.0,
+  "opening_symbol_groups": 4.0,
+  "outside_plan_length_m": 30.0,
+  "rebar_symbol_groups": 7.0,
+  "repeated_length_m": 325.435,
+  "unexplained_length_m": 330.96
+ },
+ "params": {
+  "CLUSTER_GAP_M": 0.6,
+  "DEPENDENCY_MEMBER_M": 1.5,
+  "DEPENDENCY_NEAR_M": 3.0,
+  "DEPENDENCY_NOTE_MAX_CHARS": 40,
+  "EXPLAINED_SHARE": 0.8,
+  "EXPLAIN_TOL_M": 0.03,
+  "LABEL_MEMBER_M": 1.0,
+  "MIN_AREA_M2": 0.25,
+  "MIN_LENGTH_M": 1.0,
+  "OPENING_SHARE_MAX": 0.25,
+  "OVERLAP_MIN_M2": 0.02,
+  "PLAN_MARGIN_M": 8.0,
+  "SLAB_COVERAGE_MIN": 0.6,
+  "STAIR_TREAD_M": [
+   0.22,
+   0.36
+  ],
+  "STRIP_WIDTH_M": [
+   0.08,
+   0.8
+  ],
+  "SYMBOL_MAX_M": 0.6,
+  "SYMBOL_TEXT_M": 1.0,
+  "TEXT_NEAR_M": 1.5
+ },
+ "policy": "CONCRETE_COMPLETENESS_V1",
+ "populations": {
+  "complete_list": true,
+  "counts": {
+   "BLOCKED": 3,
+   "NOT_PRESENT": 0,
+   "PRESENT": 14,
+   "UNKNOWN": 22
+  },
+  "register": "SPECIAL_STRUCTURAL_POPULATION_REGISTER",
+  "rows": [
+   {
+    "flags": [],
+    "group": "FOUNDATIONS",
+    "population": "RAFT",
+    "quantity_state": null,
+    "refs": [],
+    "state": "UNKNOWN",
+    "why": null
+   },
+   {
+    "flags": [],
+    "group": "FOUNDATIONS",
+    "population": "ISOLATED_FOOTING",
+    "quantity_state": null,
+    "refs": [
+     "CC-d35cbdf0ff",
+     "CC-a547264e93"
+    ],
+    "state": "PRESENT",
+    "why": "PARTLY_MEASURED"
+   },
+   {
+    "flags": [],
+    "group": "FOUNDATIONS",
+    "population": "COMBINED_FOOTING",
+    "quantity_state": null,
+    "refs": [],
+    "state": "UNKNOWN",
+    "why": null
+   },
+   {
+    "flags": [],
+    "group": "FOUNDATIONS",
+    "population": "STRIP_FOOTING",
+    "quantity_state": null,
+    "refs": [],
+    "state": "UNKNOWN",
+    "why": null
+   },
+   {
+    "flags": [],
+    "group": "FOUNDATIONS",
+    "population": "PILE_CAP",
+    "quantity_state": null,
+    "refs": [],
+    "state": "UNKNOWN",
+    "why": null
+   },
+   {
+    "flags": [],
+    "group": "FOUNDATIONS",
+    "population": "NECK_PEDESTAL",
+    "quantity_state": null,
+    "refs": [
+     "28 items"
+    ],
+    "state": "PRESENT",
+    "why": "MEASURED"
+   },
+   {
+    "flags": [],
+    "group": "GROUND",
+    "population": "STRAP_BEAM",
+    "quantity_state": null,
+    "refs": [
+     "3 items"
+    ],
+    "state": "PRESENT",
+    "why": "MEASURED"
+   },
+   {
+    "flags": [],
+    "group": "GROUND",
+    "population": "GROUND_BEAM",
+    "quantity_state": null,
+    "refs": [
+     "CC-0ee850b4d9"
+    ],
+    "state": "PRESENT",
+    "why": "PARTLY_MEASURED"
+   },
+   {
+    "flags": [],
+    "group": "GROUND",
+    "population": "GROUND_SLAB",
+    "quantity_state": null,
+    "refs": [
+     "22 items"
+    ],
+    "state": "PRESENT",
+    "why": "PARTLY_MEASURED"
+   },
+   {
+    "flags": [],
+    "group": "VERTICAL",
+    "population": "COLUMN",
+    "quantity_state": null,
+    "refs": [
+     "CC-2cb15ef8d8",
+     "CC-10066a9339",
+     "CC-a3a4a3218a",
+     "CC-ca2666e4a2"
+    ],
+    "state": "PRESENT",
+    "why": "PARTLY_MEASURED"
+   },
+   {
+    "flags": [],
+    "group": "VERTICAL",
+    "population": "STRUCTURAL_WALL",
+    "quantity_state": null,
+    "refs": [],
+    "state": "UNKNOWN",
+    "why": "NO_EVIDENCE_CONFIRM_ABSENT"
+   },
+   {
+    "flags": [],
+    "group": "VERTICAL",
+    "population": "PLANTED_COLUMN",
+    "quantity_state": null,
+    "refs": [
+     "3 items"
+    ],
+    "state": "PRESENT",
+    "why": "MEASURED"
+   },
+   {
+    "flags": [],
+    "group": "VERTICAL",
+    "population": "TURNED_COLUMN",
+    "quantity_state": null,
+    "refs": [],
+    "state": "UNKNOWN",
+    "why": null
+   },
+   {
+    "flags": [],
+    "group": "BEAMS",
+    "population": "SIMPLE_BEAM",
+    "quantity_state": null,
+    "refs": [
+     "CC-93a4edf4b1"
+    ],
+    "state": "PRESENT",
+    "why": "PARTLY_MEASURED"
+   },
+   {
+    "flags": [],
+    "group": "BEAMS",
+    "population": "CONTINUOUS_BEAM",
+    "quantity_state": null,
+    "refs": [],
+    "state": "UNKNOWN",
+    "why": null
+   },
+   {
+    "flags": [],
+    "group": "BEAMS",
+    "population": "RING_BEAM",
+    "quantity_state": null,
+    "refs": [],
+    "state": "UNKNOWN",
+    "why": null
+   },
+   {
+    "flags": [],
+    "group": "BEAMS",
+    "population": "LINTEL",
+    "quantity_state": null,
+    "refs": [
+     "10 items"
+    ],
+    "state": "PRESENT",
+    "why": "PARTLY_MEASURED"
+   },
+   {
+    "flags": [],
+    "group": "BEAMS",
+    "population": "BEAM_OPENING",
+    "quantity_state": null,
+    "refs": [],
+    "state": "UNKNOWN",
+    "why": null
+   },
+   {
+    "flags": [],
+    "group": "SLABS",
+    "population": "SOLID_SLAB",
+    "quantity_state": null,
+    "refs": [
+     "CC-b315c746f6",
+     "CC-989a315bf6",
+     "CC-d2eec2b62b",
+     "CC-e3bd1a6b79"
+    ],
+    "state": "PRESENT",
+    "why": "PARTLY_MEASURED"
+   },
+   {
+    "flags": [],
+    "group": "SLABS",
+    "population": "FLAT_SLAB",
+    "quantity_state": null,
+    "refs": [],
+    "state": "UNKNOWN",
+    "why": null
+   },
+   {
+    "flags": [],
+    "group": "SLABS",
+    "population": "RIBBED_HORDI_SLAB",
+    "quantity_state": null,
+    "refs": [],
+    "state": "UNKNOWN",
+    "why": null
+   },
+   {
+    "flags": [],
+    "group": "SLABS",
+    "population": "CANTILEVER",
+    "quantity_state": null,
+    "refs": [],
+    "state": "UNKNOWN",
+    "why": "NO_EVIDENCE_CONFIRM_ABSENT"
+   },
+   {
+    "flags": [],
+    "group": "STAIRS",
+    "population": "STAIR",
+    "quantity_state": null,
+    "refs": [
+     "CC-13011ac02f",
+     "CC-7390ea1139",
+     "CC-325233f037",
+     "CC-66961c6b20"
+    ],
+    "state": "PRESENT",
+    "why": "DRAWN_NOT_MEASURED"
+   },
+   {
+    "flags": [],
+    "group": "STAIRS",
+    "population": "LANDING",
+    "quantity_state": null,
+    "refs": [],
+    "state": "UNKNOWN",
+    "why": null
+   },
+   {
+    "flags": [],
+    "group": "LIFT",
+    "population": "LIFT_PIT",
+    "quantity_state": null,
+    "refs": [],
+    "state": "UNKNOWN",
+    "why": "NO_EVIDENCE_CONFIRM_ABSENT"
+   },
+   {
+    "flags": [],
+    "group": "LIFT",
+    "population": "LIFT_WALL",
+    "quantity_state": null,
+    "refs": [],
+    "state": "UNKNOWN",
+    "why": null
+   },
+   {
+    "flags": [],
+    "group": "LIFT",
+    "population": "LIFT_TIE_BEAM",
+    "quantity_state": null,
+    "refs": [],
+    "state": "UNKNOWN",
+    "why": null
+   },
+   {
+    "flags": [],
+    "group": "SPECIAL",
+    "population": "POOL",
+    "quantity_state": null,
+    "refs": [
+     "CC-b7b243f699",
+     "CC-d2dd6592f9"
+    ],
+    "state": "PRESENT",
+    "why": "DRAWN_NOT_MEASURED"
+   },
+   {
+    "flags": [],
+    "group": "SPECIAL",
+    "population": "WATER_TANK",
+    "quantity_state": null,
+    "refs": [
+     "CC-15a98ab6a0"
+    ],
+    "state": "BLOCKED",
+    "why": "REFERENCED_NOT_DRAWN"
+   },
+   {
+    "flags": [],
+    "group": "SPECIAL",
+    "population": "DOME",
+    "quantity_state": null,
+    "refs": [
+     "CC-ca101066c6"
+    ],
+    "state": "BLOCKED",
+    "why": "REFERENCED_NOT_DRAWN"
+   },
+   {
+    "flags": [],
+    "group": "BOUNDARY",
+    "population": "BOUNDARY_WALL",
+    "quantity_state": null,
+    "refs": [
+     "CC-9fd936ab60"
+    ],
+    "state": "PRESENT",
+    "why": "DRAWN_NOT_MEASURED"
+   },
+   {
+    "flags": [],
+    "group": "BOUNDARY",
+    "population": "BOUNDARY_RC_COLUMN",
+    "quantity_state": null,
+    "refs": [],
+    "state": "UNKNOWN",
+    "why": null
+   },
+   {
+    "flags": [],
+    "group": "BOUNDARY",
+    "population": "BOUNDARY_GROUND_BEAM",
+    "quantity_state": null,
+    "refs": [],
+    "state": "UNKNOWN",
+    "why": null
+   },
+   {
+    "flags": [],
+    "group": "ROOF",
+    "population": "PARAPET",
+    "quantity_state": null,
+    "refs": [
+     "CC-defa0d15d5"
+    ],
+    "state": "BLOCKED",
+    "why": "REFERENCED_NOT_DRAWN"
+   },
+   {
+    "flags": [],
+    "group": "ROOF",
+    "population": "PARAPET_RC_STIFFENER_COLUMN",
+    "quantity_state": null,
+    "refs": [],
+    "state": "UNKNOWN",
+    "why": null
+   },
+   {
+    "flags": [],
+    "group": "ROOF",
+    "population": "PARAPET_TOP_RING_BEAM",
+    "quantity_state": null,
+    "refs": [],
+    "state": "UNKNOWN",
+    "why": null
+   },
+   {
+    "flags": [],
+    "group": "OTHER",
+    "population": "EQUIPMENT_BASE",
+    "quantity_state": null,
+    "refs": [],
+    "state": "UNKNOWN",
+    "why": null
+   },
+   {
+    "flags": [],
+    "group": "OTHER",
+    "population": "PLANTER_STRUCTURAL_ELEMENT",
+    "quantity_state": null,
+    "refs": [],
+    "state": "UNKNOWN",
+    "why": "NO_EVIDENCE_CONFIRM_ABSENT"
+   },
+   {
+    "flags": [],
+    "group": "OTHER",
+    "population": "OTHER_SPECIAL_RC_DETAIL",
+    "quantity_state": null,
+    "refs": [
+     "CC-6e7b8c8d1f",
+     "CC-a0729cfebc",
+     "CC-1cb9d5ff87",
+     "CC-bc530d0d1c"
+    ],
+    "state": "PRESENT",
+    "why": "DRAWN_NOT_MEASURED"
+   }
+  ]
+ },
+ "rule": "a finding is a question for a person, never a quantity; no reference quantity is read; volumes only from drawn geometry x a printed section / thickness, never a ratio",
+ "scores": {
+  "basis": "ratios of the run's own signals and records; finding volumes only where a printed section or thickness binds; nothing here is added to any total",
+  "column_outlines_itemized_pct": 53.6,
+  "finding_volume_m3": [
+   6.527,
+   6.527
+  ],
+  "findings_by_kind": {
+   "COLUMN_BAND_NOT_ON_PLAN": 2,
+   "COLUMN_ITEM_WITHOUT_PRESENCE": 5,
+   "COLUMN_PRESENCE_NOT_ITEMIZED": 5,
+   "DEPENDENCY": 8,
+   "DRAWN_NOT_MEASURED": 19,
+   "LABEL_NOT_CONSUMED": 2,
+   "MEMBER_DETECTED_NOT_ITEMIZED": 2,
+   "MEMBER_OUTLINE_SUSPECT": 3,
+   "MEMBER_OVERLAP": 1,
+   "REFERENCED_NOT_DRAWN": 3,
+   "REGION_EXCLUDED": 4,
+   "SCHEDULED_NOT_PLACED": 3,
+   "SCHEDULE_ROW_UNREAD": 1,
+   "STAIR_NOT_MEASURED": 3,
+   "UNRESOLVED_ITEMS": 15
+  },
+  "findings_by_severity": {
+   "HIGH": 36,
+   "MEDIUM": 40
+  },
+  "findings_without_volume": 51,
+  "geometry_explained_pct": 70.4,
+  "geometry_unexplained_m": 330.96,
+  "labels": {
+   "CONSUMED_BY_PROXIMITY": 41,
+   "CONSUMED_BY_REFERENCE": 167,
+   "NOT_CONSUMED": 2
+  },
+  "labels_consumed_pct": 99.0,
+  "members_itemized_pct": 99.4,
+  "rc_measured_by_confidence_m3": {
+   "HIGH": 76.946,
+   "LOW": 39.416,
+   "MEDIUM": 174.958
+  },
+  "rc_measured_m3": 291.319,
+  "schedule_rows_placed_pct": 96.0,
+  "scope_states": {
+   "DRAWN_NOT_MEASURED": 4,
+   "MEASURED": 3,
+   "NO_EVIDENCE_CONFIRM_ABSENT": 6,
+   "PARTLY_MEASURED": 7,
+   "REFERENCED_NOT_DRAWN": 3
+  },
+  "unresolved_exposure_m3": [
+   17.71,
+   30.742
+  ]
+ }
+}
