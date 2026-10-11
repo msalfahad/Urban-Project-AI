@@ -409,9 +409,12 @@ def footings(sheet, ents, lib, unit_m, size_tol_m=0.02, max_footing_m=8.0):
 
 
 # ------------------------------------------------------------------ columns
-def column_occurrences(sheet, ents, lib, unit_m, size_tol_m=0.02, max_column_m=2.0):
+def column_occurrences(sheet, ents, lib, unit_m, size_tol_m=0.02, max_column_m=2.0, prefer_section=False):
     """A column mark binds to the column-sized outline (<= max_column_m) that CONTAINS it, else to the nearest one
-    within max(3 text heights, 1.0 m); two outlines equally near -> AMBIGUOUS (no drawn section)."""
+    within max(3 text heights, 1.0 m); two outlines equally near -> AMBIGUOUS (no drawn section).
+    prefer_section (M7): among the outlines within reach, one drawn at a section the mark's schedule row prints wins
+    over a nearer one that is not (a pit, tank or plinth square beside a footing label is not the column); then one
+    on a column-named layer; then the nearest, as before."""
     ms = [m for m in marks(ents["texts"]) if m["family"] == "COLUMN"]
 
     def sizes(fam):
@@ -433,14 +436,31 @@ def column_occurrences(sheet, ents, lib, unit_m, size_tol_m=0.02, max_column_m=2
         d = sorted(((r["box"][2] - r["box"][0]) * unit_m, (r["box"][3] - r["box"][1]) * unit_m))
         hit = lambda S: any(abs(d[0] - a) <= size_tol_m and abs(d[1] - b) <= size_tol_m for a, b in S)  # noqa: E731
         return hit(fsz) and not hit(csz)
-    rects = [r for r in candidate_rects(ents, unit_m)
+    allr = candidate_rects(ents, unit_m)
+    rects = [r for r in allr
              if max(r["box"][2] - r["box"][0], r["box"][3] - r["box"][1]) * unit_m <= max_column_m and
              not is_footing(r)]
+    feet = [r["box"] for r in allr if is_footing(r)] if prefer_section else []
     out = []
     for m in ms:
         gap = max(3 * (m["h"] or 0), 1.0 / unit_m)       # column-plan labels sit beside their column (M3: 0.5 -
         cand = sorted((dist_point_poly(m["x"], m["y"], box_poly(r["box"])), r["source"], r) for r in rects)  # 1 m)
-        cand = [c for c in cand if c[0] <= gap]
+        # M7: a combined C/F label printed inside a footing outline belongs to the column outline inside that same
+        # footing, at any distance within it (a pit or tank square nearer the label, outside the footing, is not it)
+        host = [f for f in feet if f[0] < m["x"] < f[2] and f[1] < m["y"] < f[3]]
+        inside = [c for c in cand if any(f[0] <= (c[2]["box"][0] + c[2]["box"][2]) / 2 <= f[2] and
+                                         f[1] <= (c[2]["box"][1] + c[2]["box"][3]) / 2 <= f[3] for f in host)]
+        cand = inside if inside else [c for c in cand if c[0] <= gap]
+        if prefer_section and len(cand) > 1:
+            secs = sizes_of_mark(lib, m["mark"])
+
+            def rank(c):
+                d = sorted(((c[2]["box"][2] - c[2]["box"][0]) * unit_m, (c[2]["box"][3] - c[2]["box"][1]) * unit_m))
+                fit = any(abs(d[0] - a_) <= size_tol_m and abs(d[1] - b_) <= size_tol_m for a_, b_ in secs)
+                return (0 if fit else 1, 0 if _layer_role(c[2]["layer"]) == "COLUMN" else 1)
+            best = min(rank(c) for c in cand)
+            if best != (1, 1):
+                cand = [c for c in cand if rank(c) == best]
         r, binding = None, "NO_OUTLINE"
         if cand:
             if len(cand) == 1 or cand[0][0] == 0.0 or cand[1][0] - cand[0][0] > max(m["h"] or 0, 0.05 / unit_m):
@@ -453,6 +473,17 @@ def column_occurrences(sheet, ents, lib, unit_m, size_tol_m=0.02, max_column_m=2
                     "mark": m["mark"], "sheet": sheet["sheet_id"], "mark_at": (m["x"], m["y"]),
                     "box": r["box"] if r else None, "drawn_m": drawn, "outline_binding": binding, "row": row,
                     "in_schedule": ("COLUMN", m["mark"]) in lib})
+    return out
+
+
+def sizes_of_mark(lib, mark):
+    """every (short, long) section the schedule prints for a column mark (any storey band)."""
+    row = lib.get(("COLUMN", mark)) or {}
+    out = set()
+    for b in list((row.get("by_storey") or {}).values()) + [{"dims_m": row.get("dims_m") or {}}]:
+        W, H = (b.get("dims_m") or {}).get("W"), (b.get("dims_m") or {}).get("H")
+        if W and H:
+            out.add((min(W, H), max(W, H)))
     return out
 
 

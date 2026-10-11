@@ -104,8 +104,87 @@ def _x_crossed(face_poly, segs):
     return hits >= 2
 
 
+JUNCTION_MAX_M = 1.2           # M7: band ends this close around an undrawn support close it as one junction box
+
+
+def _band_ends(b):
+    """the two end sides of a straight band piece: [(midpoint, outward unit direction, (p, q))]."""
+    u, n = b["u"], b["n"]
+    lo, hi = b["lo_off"], b["hi_off"]
+    out = []
+    for t, sgn in ((b["t0"], -1.0), (b["t1"], 1.0)):
+        p = (u[0] * t + n[0] * lo, u[1] * t + n[1] * lo)
+        q = (u[0] * t + n[0] * hi, u[1] * t + n[1] * hi)
+        out.append((((p[0] + q[0]) / 2, (p[1] + q[1]) / 2), (sgn * u[0], sgn * u[1]), (p, q)))
+    return out
+
+
+def junction_gaps(band_pieces, column_boxes, unit_m, *, max_gap_m=JUNCTION_MAX_M):
+    """M7: undrawn supports. A straight band whose end meets neither a column outline nor another band is a free end;
+    free ends of two or more bands, within max_gap_m of each other and pointing into the space between them, frame
+    one junction (a column or support the plan does not draw, a beam line broken at a missing column). Its box - the
+    bounding box of those end sides - closes the slab cells around it (without it every bay that touches the junction
+    leaks into one face). -> [{box, bands, n_ends}] in drawing units. The junction itself is nobody's concrete here:
+    it is reported, never measured."""
+    probe = 0.02 / unit_m
+    tol = 0.005 / unit_m
+    gap = max_gap_m / unit_m
+    straight = [b for b in band_pieces if b.get("kind") == "STRAIGHT" and len(b.get("polygon") or []) == 4 and
+                "u" in b and "t0" in b]
+    cols = [(c[0] - tol, c[1] - tol, c[2] + tol, c[3] + tol) for c in column_boxes]
+    free = []
+    for b in straight:
+        for m, d, side in _band_ends(b):
+            pt = (m[0] + d[0] * probe, m[1] + d[1] * probe)
+            if any(c[0] <= pt[0] <= c[2] and c[1] <= pt[1] <= c[3] for c in cols):
+                continue
+            if any(o is not b and (MD.point_in_poly(pt[0], pt[1], o["polygon"]) or
+                                   MD.dist_point_poly(pt[0], pt[1], o["polygon"]) <= tol) for o in band_pieces):
+                continue
+            free.append({"band": b.get("band_id"), "m": m, "d": d, "side": side})
+    parent = list(range(len(free)))
+
+    def find(i):
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+    for i in range(len(free)):
+        for j in range(i + 1, len(free)):
+            if free[i]["band"] != free[j]["band"] and math.dist(free[i]["m"], free[j]["m"]) <= gap:
+                parent[find(i)] = find(j)
+    groups = {}
+    for i in range(len(free)):
+        groups.setdefault(find(i), []).append(free[i])
+    out = []
+    for g in groups.values():
+        if len({e["band"] for e in g}) < 2:
+            continue
+        pts = [q for e in g for q in e["side"]]
+        box = (min(x for x, _ in pts), min(y for _, y in pts), max(x for x, _ in pts), max(y for _, y in pts))
+        if box[2] - box[0] <= tol or box[3] - box[1] <= tol or box[2] - box[0] > gap or box[3] - box[1] > gap:
+            continue
+        cx, cy = (box[0] + box[2]) / 2, (box[1] + box[3]) / 2
+        inward = [e for e in g if (cx - e["m"][0]) * e["d"][0] + (cy - e["m"][1]) * e["d"][1] > tol]
+        if len({e["band"] for e in inward}) < 2:
+            continue
+        own = {e["band"] for e in g}
+        bp = MD.box_poly(box)
+        if any(o.get("band_id") not in own and MD.overlap_area(bp, o["polygon"]) > 0.01 * abs(MD.poly_area(bp))
+               for o in band_pieces):
+            continue
+        out.append({"box": tuple(round(v, 6) for v in box), "bands": sorted(own), "n_ends": len(g)})
+    return sorted(out, key=lambda r: r["box"])
+
+
 def panels(ents, edge_layers, band_pieces, column_boxes, unit_m, *, default_t_m=None, eps_native=None,
-           region_id="SHEET"):
+           region_id="SHEET", junction_boxes=(), opening_extent=False, local_origin=False):
+    """junction_boxes (M7): junction_gaps() boxes - they close the cells and their own face is JUNCTION_GAP.
+    local_origin (M7): the arrangement is noded at the lower-left of the edge geometry and moved back (a shoelace
+    area over coordinates far from the origin loses digits: x * y ~ 1e12 leaves ~1e-4 units^2 per term).
+    opening_extent (M7): an opening label claims its face only when no beam band lies inside that face; a labelled
+    face that holds a band is cells merged through a gap (OPENING_SUSPECT: neither slab nor opening, reported with
+    its exposure - a void label never deletes the bays around it)."""
     eps = eps_native if eps_native is not None else 0.5e-3 / unit_m
     items = []
     band_handles = set()
@@ -130,18 +209,37 @@ def panels(ents, edge_layers, band_pieces, column_boxes, unit_m, *, default_t_m=
         for j in range(4):
             (x1, y1), (x2, y2) = p[j], p[(j + 1) % 4]
             items.append(TP.BoundaryItem(f"COLBOX{k}:{j}", "SEGMENT", (x1, y1, x2, y2), "COLUMN"))
+    jboxes = [tuple(j["box"]) if isinstance(j, dict) else tuple(j) for j in junction_boxes]
+    for k, c in enumerate(jboxes):
+        p = MD.box_poly(c)
+        for j in range(4):
+            (x1, y1), (x2, y2) = p[j], p[(j + 1) % 4]
+            items.append(TP.BoundaryItem(f"COLBOX_JUNC{k}:{j}", "SEGMENT", (x1, y1, x2, y2), "COLUMN"))
     if not items:
         return {"policy": POLICY_ID, "faces": [], "summary": {}, "warnings": ["no edge geometry"]}
-    arr = TP.build(items, eps)
+    # M7 (local_origin): site ids are source ids, so moving the arrangement moves no id
+    ox = oy = 0.0
+    if local_origin:
+        ox = min(g[0] - g[2] if it.kind == "ARC" else min(g[0], g[2]) for it in items for g in [it.geometry])
+        oy = min(g[1] - g[2] if it.kind == "ARC" else min(g[1], g[3]) for it in items for g in [it.geometry])
+    local = items if not local_origin else [
+        TP.BoundaryItem(it.source_id, it.kind,
+                        (it.geometry[0] - ox, it.geometry[1] - oy) + tuple(it.geometry[2:]) if it.kind == "ARC"
+                        else (it.geometry[0] - ox, it.geometry[1] - oy, it.geometry[2] - ox, it.geometry[3] - oy),
+                        it.role, it.derived_from) for it in items]
+    arr = TP.build(local, eps)
     sites = TP.sites_of(arr, "M2", region_id)
+    pts = [TP.interior_point(arr, st["cycle"], eps) for st in sites]
+    if local_origin:
+        pts = [None if q is None else (q[0] + ox, q[1] + oy) for q in pts]
+        arr.nodes = [(x + ox, y + oy) for x, y in arr.nodes]
     texts = ents["texts"]
     h_default = 150e-3 / unit_m
     tags = _thickness_tags(texts, h_default)
     opening_txt = [t for t in texts if any(w in DM.normalize(t["value"]).upper() for w in OPENING_WORDS)]
     other_segs = [s for s in ents["segments"] if s["layer"] not in edge_layers]
     faces = []
-    for st in sites:
-        pt = TP.interior_point(arr, st["cycle"], eps)
+    for st, pt in zip(sites, pts):
         if pt is None:
             continue
         poly = [arr.nodes[arr.edges[ei]["n0"]] if fw else arr.nodes[arr.edges[ei]["n1"]] for ei, fw in st["cycle"]]
@@ -150,12 +248,16 @@ def panels(ents, edge_layers, band_pieces, column_boxes, unit_m, *, default_t_m=
             cls = "BEAM"
         elif any(c[0] < pt[0] < c[2] and c[1] < pt[1] < c[3] for c in column_boxes):
             cls = "COLUMN"
+        elif any(c[0] < pt[0] < c[2] and c[1] < pt[1] < c[3] for c in jboxes):
+            cls = "JUNCTION_GAP"
         src = set(st["boundary_source_ids"])
         touches_band = bool(src & band_handles)
         inside_txt = [t for t in opening_txt if MD.point_in_poly(t["x"], t["y"], poly)]
         if cls is None:
             if inside_txt or _x_crossed(poly, other_segs):
                 cls = "OPENING"
+                if opening_extent and _holds_band(poly, st, arr, band_pieces):
+                    cls = "OPENING_SUSPECT"
             elif touches_band:
                 cls = "PANEL"
             else:
@@ -210,6 +312,20 @@ def panels(ents, edge_layers, band_pieces, column_boxes, unit_m, *, default_t_m=
             "open_boundary_area_m2": sum(f["area_m2"] for f in faces if f["class"] == "OPEN_BOUNDARY"),
             "unenclosed_sides": unenclosed,
             "arrangement": {"nodes": len(arr.nodes), "edges": len(arr.edges), "sites": len(sites)}}
+
+
+def _holds_band(poly, st, arr, band_pieces):
+    """a band piece whose centre lies in the face (outside its holes): cells merged through a gap, not one void."""
+    holes = [[arr.nodes[arr.edges[ei]["n0"]] if fw else arr.nodes[arr.edges[ei]["n1"]] for ei, fw in hc]
+             for hc in st.get("hole_cycles", [])]
+    for b in band_pieces:
+        q = b.get("polygon") or []
+        if len(q) < 3:
+            continue
+        cx, cy = sum(x for x, _ in q) / len(q), sum(y for _, y in q) / len(q)
+        if MD.point_in_poly(cx, cy, poly) and not any(len(h) >= 3 and MD.point_in_poly(cx, cy, h) for h in holes):
+            return True
+    return False
 
 
 def _ray_hits_poly(p, d, poly, max_s):
@@ -343,7 +459,7 @@ def band_sides(faces, band_pieces, unit_m, column_boxes=()):
 STAIR_MIN_TREADS = 5           # a flight or a winder fan of at least five tread lines
 STAIR_ZONE_SHARE = 0.25        # treads over a quarter of a cell: the cell is a stair zone, its slab not separable
 REGIONS = ("STRUCTURAL_SLAB", "GROUND_SLAB", "STAIR_ZONE", "OPENING", "BEAM_STRIP", "COLUMN", "DETAIL",
-           "UNRESOLVED")
+           "UNRESOLVED", "JUNCTION_GAP", "OPENING_SUSPECT")
 
 
 def _hull(pts):
@@ -365,11 +481,13 @@ def _hull(pts):
     return lo[:-1] + up[:-1]
 
 
-def tread_family(face_poly, segs, unit_m, min_n=STAIR_MIN_TREADS):
+def tread_family(face_poly, segs, unit_m, min_n=STAIR_MIN_TREADS, *, per_layer=False):
     """Stair treads drawn inside a face (non-edge, non-annotation lines 0.4 - 2.5 m wholly inside it):
         FLIGHT   at least min_n parallel lines, consecutive spacing 0.18 - 0.40 m (a going)
         WINDER   at least min_n lines whose extensions meet near one point (within 0.2 m), fanning over 30 degrees
-    -> {kind, n, hull_m2, segment_ids} or None. Geometry only; a stair label is never required."""
+    -> {kind, n, hull_m2, segment_ids} or None. Geometry only; a stair label is never required.
+    per_layer (M7): the family is searched among one layer's lines at a time (a flight is drawn on one layer; lines of
+    an unrelated layer between two treads must not break the going), the largest family found wins."""
     inside = []
     for sg in segs:
         L = math.dist(sg["a"], sg["b"]) * unit_m
@@ -379,6 +497,17 @@ def tread_family(face_poly, segs, unit_m, min_n=STAIR_MIN_TREADS):
                                                                ((sg["a"][0] + sg["b"][0]) / 2,
                                                                 (sg["a"][1] + sg["b"][1]) / 2))):
             inside.append(sg)
+    if per_layer:
+        best = None
+        for lay in sorted({sg["layer"] for sg in inside}):
+            r = _tread_family_of([sg for sg in inside if sg["layer"] == lay], unit_m, min_n)
+            if r is not None and (best is None or r["n"] > best["n"]):
+                best = r
+        return best
+    return _tread_family_of(inside, unit_m, min_n)
+
+
+def _tread_family_of(inside, unit_m, min_n):
     found = None
     groups = {}
     for sg in inside:
@@ -446,7 +575,8 @@ def open_boundary_panel(face, band_pieces, column_boxes, unit_m):
     return max(abs(MD.poly_area(F)) - cut, 0.0) * unit_m ** 2
 
 
-def classify_regions(slab, ents, edge_layers, band_pieces, column_boxes, unit_m, *, ground=False):
+def classify_regions(slab, ents, edge_layers, band_pieces, column_boxes, unit_m, *, ground=False,
+                     treads_per_layer=False):
     """M3: every face of a plan gets a region class, from the face class plus two generic checks:
         free-standing columns   a column outline inside a PANEL that touches no beam band. On a ground-beam plan a
                                 column stands on a beam junction or its own footing, so the cell is UNRESOLVED (not
@@ -468,7 +598,7 @@ def classify_regions(slab, ents, edge_layers, band_pieces, column_boxes, unit_m,
                 if MD.point_in_poly(cx, cy, f["polygon"]):       # the outer cycle: a column hole lies inside it
                     if not any(MD.overlap_area(MD.box_poly(c), b["polygon"]) > 0 for b in band_pieces):
                         f["free_columns"].append(tuple(round(v, 1) for v in c))
-            f["treads"] = tread_family(f["polygon"], segs, unit_m)
+            f["treads"] = tread_family(f["polygon"], segs, unit_m, per_layer=treads_per_layer)
         cls = f["class"]
         share = (f["treads"]["hull_m2"] / f["area_m2"]) if f["treads"] and f["area_m2"] else 0.0
         if cls == "PANEL" and share >= STAIR_ZONE_SHARE:

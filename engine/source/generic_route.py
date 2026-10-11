@@ -66,7 +66,10 @@ def _trip(conv, cid):
     return conv.triple(cid)
 
 
-def column_boxes(ents, lib, unit_m, tol_m=0.02):
+def column_boxes(ents, lib, unit_m, tol_m=0.02, layer_evidence=False):
+    """layer_evidence (M7): a schedule-sized rectangle is a column only on a layer that shows columns - a layer named
+    for columns, or one where at least half its rectangles are column-like (at a scheduled section or holding a
+    column mark); a furniture / fixture layer whose odd rectangle matches a section or covers a mark is not"""
     sizes = set()
     for (fam, _), row in lib.items():
         if fam != "COLUMN" or row is None:
@@ -77,12 +80,21 @@ def column_boxes(ents, lib, unit_m, tol_m=0.02):
                 sizes.add((min(W, H), max(W, H)))
     cmarks = [m for m in MD.marks(ents["texts"]) if m["family"] == "COLUMN"]
     out = []
+    per_layer = defaultdict(lambda: [0, 0])               # rectangles, column-like ones
     for r in MD.candidate_rects(ents, unit_m):
         bx = r["box"]
         d = sorted(((bx[2] - bx[0]) * unit_m, (bx[3] - bx[1]) * unit_m))
-        if any(abs(d[0] - a) <= tol_m and abs(d[1] - b) <= tol_m for a, b in sizes) or \
-                (d[1] <= 1.5 and any(MD._contains(bx, m["x"], m["y"]) for m in cmarks)):
-            out.append(bx)
+        fit = any(abs(d[0] - a) <= tol_m and abs(d[1] - b) <= tol_m for a, b in sizes)
+        marked = d[1] <= 1.5 and any(MD._contains(bx, m["x"], m["y"]) for m in cmarks)
+        st = per_layer[r["layer"]]
+        st[0] += 1
+        st[1] += fit or marked
+        if fit or marked:
+            out.append((bx, r["layer"]))
+    if layer_evidence:
+        ok = {lay for lay, (n, nc) in per_layer.items() if MD._layer_role(lay) == "COLUMN" or nc >= 0.5 * n}
+        out = [o for o in out if o[1] in ok]
+    out = [o[0] for o in out]
     uniq = []
     for b in sorted(set(out)):                 # twins within 1 mm are one column (M3)
         if not any(all(abs(p - q) <= 1e-3 / unit_m for p, q in zip(b, o)) for o in uniq):
@@ -219,11 +231,23 @@ def _straps(E, S, lib, u, footings):
     return out
 
 
-def detect(intake, *, typical_widths_m=None):
+def detect_options(conv):
+    """M7: the detection behaviour a conventions set switches on (absent conventions -> the frozen M2-M6 behaviour)."""
+    on = lambda cid: cid in conv.items                                       # noqa: E731
+    return {"frames_from_lines": on("SHEET_FRAMES_FROM_LINES"), "dedupe_texts": on("DUPLICATE_ANNOTATION_READ_ONCE"),
+            "junction_gaps": on("SLAB_JUNCTION_GAP_CLOSURE"), "opening_extent": on("SLAB_OPENING_EXTENT_GUARD"),
+            "column_by_section": on("COLUMN_OUTLINE_BY_SECTION"),
+            "column_layer_evidence": on("COLUMN_LAYER_EVIDENCE"), "treads_per_layer": on("STAIR_TREADS_ONE_LAYER"),
+            "local_origin": on("GEOMETRY_LOCAL_ORIGIN")}
+
+
+def detect(intake, *, typical_widths_m=None, options=None):
     """typical_widths_m: the widths of printed typical ground-beam sections (typical_gb_widths(conv)); when given, or
     when the schedule has ground-beam rows, a ground-beam plan is searched at those widths only and every other drawn
-    width mode is recorded as rejected (M3: a slab strip between two faces is not a ground beam)."""
-    M = DM.build(intake)
+    width mode is recorded as rejected (M3: a slab strip between two faces is not a ground beam).
+    options: detect_options(conv) - M7 behaviour switched on by the conventions (None: the frozen behaviour)."""
+    opt = options or {}
+    M = DM.build(intake, options=opt)
     u = M["units"]["unit_m"]
     S = SR.from_attribute_rows(intake["attributes"], sheet_of=M["sheet_of"])
     if len(S["rows"]) < 3:
@@ -238,16 +262,16 @@ def detect(intake, *, typical_widths_m=None):
         S = SR._finish(S["rows"], _fam_vals(S["rows"]), S["warnings"], "MIXED")
     lib = SR.library(S)
     tol = 0.012 / u
-    out = {"model": M, "schedule": S, "lib": lib, "unit_m": u, "sheets": {}}
+    out = {"model": M, "schedule": S, "lib": lib, "unit_m": u, "sheets": {}, "options": dict(sorted(opt.items()))}
     for sh in M["sheets"]:
         E = DM.sheet_entities(M, intake, sh["sheet_id"])
         rec = {"sheet": sh, "n_segments": len(E["segments"])}
         if sh["role"] == "FOUNDATION_PLAN":
             rec["footings"] = MD.footings(sh, E, lib, u)
-            rec["columns"] = MD.column_occurrences(sh, E, lib, u)
+            rec["columns"] = MD.column_occurrences(sh, E, lib, u, prefer_section=bool(opt.get("column_by_section")))
             rec["straps"] = _straps(E, S, lib, u, rec["footings"])
         elif sh["role"] == "COLUMN_PLAN":
-            rec["columns"] = MD.column_occurrences(sh, E, lib, u)
+            rec["columns"] = MD.column_occurrences(sh, E, lib, u, prefer_section=bool(opt.get("column_by_section")))
         elif sh["role"] in ("SLAB_PLAN", "GROUND_BEAM_PLAN"):
             fams = MD.BEAM_FAMILIES if sh["role"] == "SLAB_PLAN" else MD.GROUND_FAMILIES
             widths_m = sorted({round(r["dims_m"]["W"], 3) for r in S["rows"] if r["family"] in fams and
@@ -286,7 +310,7 @@ def detect(intake, *, typical_widths_m=None):
             # M3: a layer NAMED for beams joins on any mark it carries (one inclined transfer beam on its own layer is
             # still a beam: B27 on ST7757 GF)
             lays |= {l for l, v in sc.items() if v >= 1 and MD._layer_role(l) == "BEAM"}
-            cols = column_boxes(E, lib, u)
+            cols = column_boxes(E, lib, u, layer_evidence=bool(opt.get("column_layer_evidence")))
             # every column-sized outline on the layers that carry the column boxes, at any size: storey-presence
             # evidence only (a column drawn at a size no schedule band prints is still a column) - M3
             clay = {r["layer"] for r in MD.candidate_rects(E, u) if tuple(r["box"]) in {tuple(c) for c in cols}}
@@ -323,8 +347,15 @@ def detect(intake, *, typical_widths_m=None):
             extra = [b for b in rec["column_presence"] if not any(max(abs(b[k] - c[k]) for k in range(4)) <= tol
                                                                   for c in cols)]
             rec["slab_column_boxes"] = cols + extra
-            slab = SE.panels(E, lays, bands, cols + extra, u, region_id=sh["sheet_id"]) if lays else None
-            SE.classify_regions(slab, E, lays, bands, cols + extra, u, ground=sh["role"] == "GROUND_BEAM_PLAN")
+            # M7: band ends around an undrawn support close the cells there (a missing column must not merge bays)
+            rec["junction_gaps"] = SE.junction_gaps(bands, cols + extra, u) if (lays and opt.get("junction_gaps")) \
+                else []
+            slab = SE.panels(E, lays, bands, cols + extra, u, region_id=sh["sheet_id"],
+                             junction_boxes=rec["junction_gaps"], opening_extent=bool(opt.get("opening_extent")),
+                             local_origin=bool(opt.get("local_origin"))) \
+                if lays else None
+            SE.classify_regions(slab, E, lays, bands, cols + extra, u, ground=sh["role"] == "GROUND_BEAM_PLAN",
+                                treads_per_layer=bool(opt.get("treads_per_layer")))
             rec["slab"] = slab
             rec["band_sides"] = SE.band_sides(slab["faces"], bands, u, cols + extra) if slab else {}
             # M3: an edge beam with one drawn face (the outer face undrawn), from its mark and scheduled width
@@ -544,7 +575,23 @@ def items_from(D, conv, heights=None, evidence=None, arch=None):
                 ((c[0] + c[2]) / 2 - o_[0], (c[1] + c[3]) / 2 - o_[1]) for c in
                 list(rec.get("column_boxes", [])) + list(rec.get("column_presence", [])))
     origin_of = {sid: (rec["sheet"].get("origin") or (0.0, 0.0)) for sid, rec in D["sheets"].items()}
-    for p in MD.column_storeys(occ, heights):
+    pieces = MD.column_storeys(occ, heights)
+    contra = "COLUMN_PRESENCE_CONTRADICTION" in conv.items
+    order = {s_: k for k, s_ in enumerate(("FOUNDATION",) + STOREY_SEQUENCE)}
+
+    def _present(p_):
+        if not (p_["storey"] in slab_cols and p_.get("state") == "MEASURED" and p_.get("box")):
+            return None
+        o_ = origin_of.get(p_["sheet"], (0.0, 0.0))
+        cx_ = (p_["box"][0] + p_["box"][2]) / 2 - o_[0]
+        cy_ = (p_["box"][1] + p_["box"][3]) / 2 - o_[1]
+        return min(math.hypot(cx_ - a, cy_ - b) for a, b in slab_cols[p_["storey"]]) * u <= 0.25
+    seen_above = defaultdict(set)          # M7: occurrence -> the storeys whose plans show it
+    if contra:
+        for p_ in pieces:
+            if _present(p_):
+                seen_above[p_["member_id"]].add(p_["storey"])
+    for p in pieces:
         cid = p["piece_id"]
         st = p["storey"]
         if necks_from_foundation and st == "FOUNDATION":
@@ -555,6 +602,27 @@ def items_from(D, conv, heights=None, evidence=None, arch=None):
                 cx = (p["box"][0] + p["box"][2]) / 2 - o_[0]
                 cy = (p["box"][1] + p["box"][3]) / 2 - o_[1]
                 near = min(math.hypot(cx - a, cy - b) for a, b in slab_cols[st]) * u
+                above = sorted(s_ for s_ in seen_above.get(p["member_id"], ()) if order.get(s_, 0) > order.get(st, 0))
+                if near > 0.25 and contra and (above or not seen_above.get(p["member_id"])):
+                    # M7: absent on this plan but shown above (a column cannot stand on nothing), or absent on every
+                    # plan (the mark was bound to another outline): a contradiction, held unresolved - never dropped
+                    B_, H_ = p["section_m"]
+                    v_ = B_ * H_ * (p["height_m"] or 0.0)
+                    why = (f"shown on the {', '.join(above)} plan(s) above" if above else
+                           "shown on no storey plan at the position of its bound outline")
+                    items.append(PE.item(item_id=f"U-C:{cid}", component_id=cid, trade="CONCRETE", family="COLUMNS",
+                                         storey=st, category="UNRESOLVED", support="NO_GEOMETRY", confidence="LOW",
+                                         blocker="COLUMN_PRESENCE_CONTRADICTION", exposure_low=0.0, exposure_high=v_,
+                                         source=f"{src_file} {p['sheet']} mark {p['mark']}; schedule storey band {st}",
+                                         dimensions={"section_m": p.get("section_m"), "height_m": p.get("height_m"),
+                                                     "nearest_outline_m": round(near, 3)},
+                                         expression=f"0 .. {B_:g} x {H_:g} x {p['height_m']:g}: no column outline on "
+                                                    f"the {st} plan here although the column is {why}"))
+                    reg(cid, "COLUMNS", st, "MISSING_DATA", f"column presence contradiction ({why})")
+                    risk.append({"KIND": "COLUMN_PRESENCE_CONTRADICTION", "WHERE": f"{st} {p['mark']}",
+                                 "DETAIL": f"{cid}: no outline on the {st} roof-slab plan (nearest {near:.2f} m) but "
+                                           f"{why}; held unresolved"})
+                    continue
                 if near > 0.25:
                     reg(cid, "COLUMNS", st, "EXPLICIT_NONE", f"no column outline on the {st} roof-slab plan at this "
                                                            f"position (nearest {near:.2f} m)")
@@ -997,6 +1065,40 @@ def items_from(D, conv, heights=None, evidence=None, arch=None):
                                              exposure_high=A * th, expression=f"{A:.3f} m2 x t", **common))
                         reg(cid, sfam, st, "MISSING_DATA", "slab thickness not established")
                     continue
+                if f["class"] == "OPENING_SUSPECT":
+                    # M7: a void label in a face that holds a beam band - bays merged through a gap. Neither slab nor
+                    # opening: its slab part (face - bands - columns) is held as exposure, never deleted
+                    A = SE.open_boundary_panel(f, rec.get("bands", []), rec.get("slab_column_boxes", []), u)
+                    cid = f"{sfam}:{st}:{f['face_id']}"
+                    tl, _, th = _trip(conv, "SLAB_THICKNESS_EXPOSURE_M")
+                    t_ = (slab.get("uniform_t_m") or _cv(conv, "SLAB_PROJECT_DEFAULT_THICKNESS_M")) if not ground \
+                        else None
+                    lo_t, hi_t = (t_, t_) if t_ else (tl, th)
+                    items.append(PE.item(item_id=f"U-C:{cid}", component_id=cid, trade="CONCRETE", family=sfam,
+                                         storey=st, category="UNRESOLVED", support="NO_GEOMETRY", confidence="LOW",
+                                         blocker="SLAB_OPENING_EXTENT_UNKNOWN",
+                                         assumptions=[] if t_ else ["SLAB_THICKNESS_EXPOSURE_M"],
+                                         exposure_low=0.0, exposure_high=A * hi_t,
+                                         source=f"{src_file} {sid} face {f['face_id']} (void label in a face that "
+                                                f"holds beam bands)",
+                                         dimensions={"area_m2": round(A, 4), "face_area_m2": round(f["area_m2"], 4),
+                                                     "t_m": t_, "region": f.get("region"),
+                                                     "opening_labels": f.get("opening_labels")},
+                                         expression=f"0 .. {A:.3f} m2 x t: the void's extent is not drawn (its label "
+                                                    "lies in cells merged through a gap)",
+                                         double_count_risk="not counted: neither slab nor opening until the void's "
+                                                           "extent is confirmed"))
+                    reg(cid, sfam, st, "MISSING_DATA", "slab region whose opening extent is unknown")
+                    risk.append({"KIND": "SLAB_OPENING_EXTENT_UNKNOWN", "WHERE": sid,
+                                 "DETAIL": f"{cid} {f['area_m2']:.2f} m2 face ({A:.2f} m2 net of members) holds a "
+                                           f"void label {f.get('opening_labels')} and beam bands: cells merged through "
+                                           "a gap - the void's extent is not established"})
+                    continue
+                if f["class"] == "JUNCTION_GAP":
+                    risk.append({"KIND": "SLAB_JUNCTION_GAP", "WHERE": sid,
+                                 "DETAIL": f"{f['face_id']} {f['area_m2']:.3f} m2: band ends around an undrawn support "
+                                           "closed the cells; the junction itself is in no item (confirm the support)"})
+                    continue
                 if f["class"] != "PANEL":
                     if f["class"] == "OPENING":
                         risk.append({"KIND": "OPENING_DEDUCTED", "WHERE": sid,
@@ -1008,9 +1110,30 @@ def items_from(D, conv, heights=None, evidence=None, arch=None):
                                  "DETAIL": f"{cid} {f['area_m2']:.2f} m2 holds {len(f['free_columns'])} column(s) on "
                                            "no beam (a flat-slab zone; counted)"})
                 if f.get("treads") and f.get("region") != "STAIR_ZONE":
+                    hull = min(f["treads"].get("hull_m2") or 0.0, f["area_m2"])
+                    held = "SLAB_STAIR_FOOTPRINT_UNRESOLVED" in conv.items and hull > 0.0 and f.get("t_m")
                     risk.append({"KIND": "SLAB_PANEL_STAIR_LINES", "WHERE": sid,
                                  "DETAIL": f"{cid} {f['area_m2']:.2f} m2: {f['treads']['kind']} of "
-                                           f"{f['treads']['n']} tread lines over part of the cell (counted)"})
+                                           f"{f['treads']['n']} tread lines over part of the cell " +
+                                           (f"(the flight's {hull:.2f} m2 held unresolved, the rest counted)" if held
+                                            else "(counted)")})
+                    if held:
+                        # M7: a flight drawn inside a slab panel is a possible void of at least its footprint: that
+                        # part is neither counted nor dropped, it is held as exposure (0 .. footprint x t)
+                        f["area_before_stair_m2"] = f["area_m2"]
+                        f["area_m2"] = f["area_m2"] - hull
+                        f["volume_m3"] = f["area_m2"] * f["t_m"]
+                        items.append(PE.item(item_id=f"U-C:{cid}:STAIR_FOOTPRINT", component_id=cid + ":STAIR",
+                                             trade="CONCRETE", family=sfam, storey=st, category="UNRESOLVED",
+                                             support="NO_GEOMETRY", confidence="LOW",
+                                             blocker="SLAB_STAIR_FOOTPRINT_UNRESOLVED", exposure_low=0.0,
+                                             exposure_high=hull * f["t_m"],
+                                             source=f"{src_file} {sid} face {f['face_id']} (tread lines)",
+                                             dimensions={"area_m2": round(hull, 4), "t_m": f["t_m"],
+                                                         "treads": f["treads"]["n"]},
+                                             expression=f"0 .. {hull:.3f} m2 x {f['t_m']:g}: slab or stair void "
+                                                        "under a drawn flight (not decided by the drawing)",
+                                             double_count_risk="deducted from the panel item of the same face"))
                 if f.get("region") == "STAIR_ZONE" and "STAIR_RISER_RULE" in conv.items and \
                         _stair_items(items, reg, risk, f, sid, st, ground, conv, u, src_file):
                     continue

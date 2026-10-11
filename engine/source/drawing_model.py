@@ -166,8 +166,44 @@ def closed_rectangles(segments, eps=1.0):
     return out
 
 
-def frames(segments, min_frame):
+def line_frames(segments, min_frame, *, max_per_layer=3000):
+    """M7: sheet frames drawn as separate LINEs (or a polyline exploded): per layer, the MAXIMAL axis-aligned rectangle
+    between two long horizontal edges whose ends two long vertical edges join (a title-block divider spanning the
+    frame does not split it). Only edges at least half the minimum frame side are considered."""
+    from engine.source import structural_qto as Q
+    eps = max(min_frame) * 1e-5
+    by_layer = defaultdict(list)
+    for sg in segments:
+        (x1, y1), (x2, y2) = sg["a"], sg["b"]
+        if (abs(y1 - y2) <= eps and abs(x2 - x1) >= 0.5 * min_frame[0]) or \
+                (abs(x1 - x2) <= eps and abs(y2 - y1) >= 0.5 * min_frame[1]):
+            by_layer[sg["layer"]].append((sg["id"], x1, y1, x2, y2))
+    out = []
+    for lay, segs in sorted(by_layer.items()):
+        if len(segs) > max_per_layer:
+            continue
+        H, V = Q.edges(segs, eps=eps)
+        for i, (ya, a0, a1, ka) in enumerate(H):
+            for yb, b0, b1, kb in H[i + 1:]:
+                if yb - ya < min_frame[1]:
+                    continue
+                lo, hi = max(a0, b0), min(a1, b1)
+                if hi - lo < min_frame[0]:
+                    continue
+                cand = sorted(v[0] for v in V if lo - eps <= v[0] <= hi + eps and v[1] <= ya + eps and
+                              v[2] >= yb - eps)
+                if len(cand) >= 2 and cand[-1] - cand[0] >= min_frame[0]:
+                    out.append({"box": (round(cand[0], 6), round(ya, 6), round(cand[-1], 6), round(yb, 6)),
+                                "layer": lay, "source": "LINES:" + ",".join((ka + kb)[:2])})
+    return out
+
+
+def frames(segments, min_frame, from_lines=False):
     rects = closed_rectangles(segments)
+    if from_lines:                         # a frame drawn by a polyline is read once (its own sides also form lines)
+        tol = max(min_frame) * 1e-4
+        rects = rects + [r for r in line_frames(segments, min_frame)
+                         if not any(all(abs(p - q) <= tol for p, q in zip(r["box"], o["box"])) for o in rects)]
     big = [r for r in rects if r["box"][2] - r["box"][0] >= min_frame[0] and r["box"][3] - r["box"][1] >= min_frame[1]]
     outer = [r for r in big if not any(o is not r and o["box"][0] <= r["box"][0] and o["box"][1] <= r["box"][1] and
                                        o["box"][2] >= r["box"][2] and o["box"][3] >= r["box"][3] and o["box"] != r["box"]
@@ -203,13 +239,30 @@ def infer_units(intake, rects):
     return {"unit_m": unit_m, "declared_m": declared, "member_fit": score, "warning": warning}
 
 
-def build(intake, *, min_frame_m=(10.0, 7.0)):
-    """The normalized model. Sheets in drawing units; unit_m converts to metres."""
+def build(intake, *, min_frame_m=(10.0, 7.0), options=None):
+    """The normalized model. Sheets in drawing units; unit_m converts to metres.
+    options (M7, off by default so that frozen runs reproduce): frames_from_lines - a frame drawn as separate lines is
+    a frame; dedupe_texts - an annotation drawn twice at the same place (same text, position within 1 mm, rotation)
+    is read once (a duplicated label never duplicates a member)."""
+    opt = options or {}
     rects = closed_rectangles(intake["segments"])
     units = infer_units(intake, rects)
     f = units["unit_m"]
-    fr = frames(intake["segments"], (min_frame_m[0] / f, min_frame_m[1] / f))
+    fr = frames(intake["segments"], (min_frame_m[0] / f, min_frame_m[1] / f),
+                from_lines=bool(opt.get("frames_from_lines")))
     texts = [dict(t, norm=normalize(t["value"])) for t in intake["texts"]]
+    dropped = 0
+    if opt.get("dedupe_texts"):
+        seen, keep = set(), []
+        q = 1e-3 / f
+        for t in texts:
+            k = (t["norm"], round(t["x"] / q), round(t["y"] / q), round(float(t.get("rotation") or 0.0), 1))
+            if k in seen:
+                dropped += 1
+                continue
+            seen.add(k)
+            keep.append(t)
+        texts = keep
     sheets = []
     for k, r in enumerate(fr, 1):
         box = r["box"]
@@ -229,7 +282,8 @@ def build(intake, *, min_frame_m=(10.0, 7.0)):
         t["mark_family"], t["mark"] = mark_family(t["norm"])
     return {"policy": POLICY_ID, "sha256": intake.get("sha256"), "file": intake.get("file"), "units": units,
             "sheets": sheets, "texts": texts, "rects": rects, "sheet_of": sheet_of,
-            "role_counts": dict(Counter(s["role"] for s in sheets))}
+            "role_counts": dict(Counter(s["role"] for s in sheets)), "duplicate_texts_dropped": dropped,
+            "options": dict(sorted(opt.items()))}
 
 
 def sheet_entities(model, intake, sheet_id):

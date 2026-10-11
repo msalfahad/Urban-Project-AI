@@ -114,13 +114,30 @@ def read_dxf(path):
         p = e.dxf.insert
         if t == "TEXT" and (e.dxf.get("halign", 0) or e.dxf.get("valign", 0)) and e.dxf.hasattr("align_point"):
             p = e.dxf.align_point
+        ocs_rot = None
+        if t == "TEXT" and e.dxf.hasattr("extrusion") and tuple(e.dxf.extrusion) != (0.0, 0.0, 1.0):
+            # M7: a TEXT's insert and rotation are in its OCS (a mirrored text carries extrusion 0,0,-1): read them
+            # in world coordinates (MTEXT inserts are already WCS)
+            from ezdxf.math import OCS, Vec3
+            ocs = OCS(e.dxf.extrusion)
+            p = ocs.to_wcs(p)
+            r = math.radians(float(e.dxf.get("rotation", 0.0) or 0.0))
+            d = ocs.to_wcs(Vec3(math.cos(r), math.sin(r), 0.0))
+            ocs_rot = math.degrees(math.atan2(d.y, d.x)) % 360.0
         src = getattr(e, "source_block_reference", None)
         owner = f"D2:{_dec(src.dxf.handle)}" if src is not None and src.dxf.handle else None
         lay = e.dxf.layer
         if lay == "0" and src is not None:
             lay = src.dxf.layer
         h = float((e.dxf.get("height", 0.0) if t == "TEXT" else e.dxf.get("char_height", 0.0)) or 0.0)
-        rot = float(e.dxf.get("rotation", 0.0) or 0.0)
+        if ocs_rot is not None:
+            rot = ocs_rot
+        elif t == "MTEXT":
+            # M7: an MTEXT's direction may be stored as a text_direction vector instead of a rotation angle (CAD
+            # writes either; a transformed MTEXT always carries the vector): get_rotation reads both
+            rot = float(e.get_rotation() or 0.0) % 360.0
+        else:
+            rot = float(e.dxf.get("rotation", 0.0) or 0.0)
         texts.append({"id": f"T{n}:{e.dxf.handle}" if e.dxf.handle else f"T{n}", "value": (val or "").strip(),
                       "x": float(p.x), "y": float(p.y), "layer": lay, "height": h, "rotation": rot,
                       "owner": owner, "block": src.dxf.name if src is not None else None})
