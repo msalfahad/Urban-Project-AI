@@ -258,6 +258,19 @@ def glyph_check(read, classes, glyph_chars):
     return "VERIFIED" if known_all else "UNCHECKED"
 
 
+NOTE_KINDS = (("PLAIN_CONCRETE_LAYER", re.compile(r"PLAIN\s*CON|BLINDING|LEAN\s*CONC", re.I)),)
+
+
+def note_of(text):
+    """a typical-detail note line -> {kind, thickness_m} (a plain-concrete layer: '10cm Plain con.') or None."""
+    for kind, rx in NOTE_KINDS:
+        if rx.search(text or ""):
+            m = re.search(r"(\d{1,2})\s*CM", (text or "").upper())
+            v = int(m.group(1)) / 100.0 if m else None
+            return {"kind": kind, "thickness_m": v if v and 0.03 <= v <= 0.30 else None}
+    return None
+
+
 def manual_record(record_id, *, page, region, text, parsed=None, by, on, note=""):
     """A transcription by a person, in the same schema (the structured fallback when OCR is absent or rejected)."""
     p = parsed or parse_notation(text)
@@ -298,6 +311,9 @@ def validate(ev):
         if r.get("raw_text") and redact(r["raw_text"], ev.get("redact_patterns")):
             bad.append(f"{r.get('record_id')}: raw text matches a redaction pattern")
         ids.add(r.get("record_id"))
+    for n in ev.get("notes", []):
+        if redact(n.get("text", ""), ev.get("redact_patterns")):
+            bad.append(f"{n.get('note_id')}: note text matches a redaction pattern")
     for d in ev.get("details", []):
         for b in d.get("bars", []):
             if b.get("record_id") not in ids:

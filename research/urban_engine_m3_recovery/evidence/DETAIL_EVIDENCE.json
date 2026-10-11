@@ -2052,5 +2052,37 @@
    "page": 13
   }
  ],
+ "notes": [
+  {
+   "kind": "PLAIN_CONCRETE_LAYER",
+   "thickness_m": 0.1,
+   "note_id": "P13N01",
+   "page": 13,
+   "region_pt": [
+    290.4,
+    452.64,
+    347.28,
+    458.88
+   ],
+   "text": "10cm Plain con.",
+   "method": "OCR_TESSERACT",
+   "state": "OCR_UNREVIEWED"
+  },
+  {
+   "kind": "PLAIN_CONCRETE_LAYER",
+   "thickness_m": 0.1,
+   "note_id": "P13N02",
+   "page": 13,
+   "region_pt": [
+    620.88,
+    509.28,
+    677.76,
+    515.52
+   ],
+   "text": "10cm Plain con.",
+   "method": "OCR_TESSERACT",
+   "state": "OCR_UNREVIEWED"
+  }
+ ],
  "validation": []
 }

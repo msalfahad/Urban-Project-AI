@@ -123,7 +123,11 @@ def test_route_g_end_to_end(tmp_path):
     states = {r["REBAR_STATE"] for r in csv.DictReader((out / "REBAR_COMPLETENESS.csv").open())}
     assert states <= set(GR.REBAR_STATES)
     nd = s["not_detected_families"]
-    assert set(nd) == set(GR.SCOPE_WORDS) and set(nd.values()) <= {"LABELS_FOUND", "NO_LABEL_FOUND"}
+    # M3 (WP8): a coverage state per family (engine.source.family_coverage), no longer only labels found / not found
+    from engine.source import family_coverage as FC
+    assert set(nd) == set(GR.SCOPE_WORDS) == set(FC.FAMILIES)
+    assert set(nd.values()) <= {"QUANTIFIED", "PARTLY_QUANTIFIED", "COUNTED_IN_PARENT", "DETECTED_NOT_QUANTIFIED",
+                                "NO_EVIDENCE_FOUND"}
     boq = list(csv.DictReader((out / "CONTRACTOR_BOQ.csv").open()))
     assert sum(1 for b in boq if b["SECTION"].startswith("C")) == len(GR.SCOPE_WORDS)
 

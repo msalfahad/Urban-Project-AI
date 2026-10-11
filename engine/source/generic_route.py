@@ -30,6 +30,7 @@ from engine.source import schedule_grammar as SG
 from engine.source import schedule_reader as SR
 from engine.source import cad_heal as CH
 from engine.source import detail_evidence as DE
+from engine.source import family_coverage as FC
 from engine.source import slab_engine as SE
 
 POLICY_ID = "GENERIC_ROUTE_V1"
@@ -918,6 +919,7 @@ def items_from(D, conv, heights=None, evidence=None):
                                          expression=f"{f['area_m2']:.3f} m2 x t (t not printed)", **common))
                     reg(cid, sfam, st, "MISSING_DATA", "slab thickness not established")
                     risk.append({"KIND": "CELL_" + f["t_basis"], "WHERE": sid, "DETAIL": f"{cid} {f['area_m2']:.2f} m2"})
+    _blinding_items(D, items, reg, risk, conv, src_file)
     # ---------------------------------------------------------------- coverage risk: schedule rows never used
     used = set()
     for i in items:
@@ -931,10 +933,12 @@ def items_from(D, conv, heights=None, evidence=None):
             risk.append({"KIND": "SHEET_ROLE_UNKNOWN", "WHERE": sh["sheet_id"], "DETAIL": "no title matched"})
     for c in D["schedule"]["conflicts"]:
         risk.append({"KIND": "SCHEDULE_DUPLICATE_MARK", "WHERE": c["family"], "DETAIL": c["mark"]})
-    for fam, ev in scope_scan(D).items():
-        risk.append({"KIND": "FAMILY_NOT_QUANTIFIED", "WHERE": fam,
-                     "DETAIL": f"{ev['n_texts']} labels ({', '.join(ev['keywords'])}) on {', '.join(ev['sheets'])}; "
-                               f"the generic engine has no detector for this family - not in any total"})
+    scan = scope_scan(D)
+    for c in FC.coverage(D, items, risk, scan, evidence):       # M3: precise coverage, never "absent"
+        if c["STATE"] in ("DETECTED_NOT_QUANTIFIED", "PARTLY_QUANTIFIED"):
+            risk.append({"KIND": "FAMILY_NOT_QUANTIFIED" if c["STATE"] == "DETECTED_NOT_QUANTIFIED" else
+                         "FAMILY_PARTLY_QUANTIFIED", "WHERE": c["FAMILY"],
+                         "DETAIL": f"{c['EVIDENCE']}; {c['REASON']}; needs {c['NEEDED']} - not in any total"})
     return items, register, risk
 
 
@@ -1042,6 +1046,81 @@ def _neck_items(items, reg, risk, fsheets, conv, covers, tie_rule, src_file):
                     tot += base
             reg(cid, "COLUMNS", "FOUNDATION", "PROVISIONAL_MODEL", "neck: FOUNDATION band bars" +
                 (" + printed tie note" if tie_rule else ""), tot)
+
+
+def _blinding_items(D, items, reg, risk, conv, src_file):
+    """M3 plain-concrete blinding (family PLAIN_CONCRETE): under every quantified footing, (L + 2p)(W + 2p) x t, and
+    under ground and strap beams when BLINDING_UNDER says so, (net plan + 2p x clear length) x t. t is a printed
+    value (profile BLINDING_THICKNESS_M); without it the blinding is UNRESOLVED with an exposure only. The projection
+    p is a named convention. No reinforcement (EXPLICIT_NONE)."""
+    p_ = _trip(conv, "BLINDING_PROJECTION_M") if "BLINDING_PROJECTION_M" in conv.items else None
+    if p_ is None:
+        return
+    t_ = _trip(conv, "BLINDING_THICKNESS_M") if "BLINDING_THICKNESS_M" in conv.items else None
+    under = _cv(conv, "BLINDING_UNDER", "FOOTINGS_ONLY")
+    foot, strips, n_f, n_s, skipped = [], [], 0, 0, 0
+    for sid, rec in sorted(D["sheets"].items()):
+        for f in rec.get("footings", []):
+            dims = None
+            if f["state"] == "LABEL_TYPE_CONFLICT" and f.get("candidates"):
+                # one footing, two labelled types: the type the concrete item takes as base (FOOTING_LABEL_CONFLICT)
+                sizes = sorted((c["schedule_m"] for c in f["candidates"].values() if c.get("schedule_m")),
+                               key=lambda d: d[0] * d[1])
+                if sizes:
+                    dims = (sizes[0] if _cv(conv, "FOOTING_LABEL_CONFLICT", "LARGER") == "SMALLER" else sizes[-1])[:2]
+            elif f["state"] in ("LABEL_ONLY", "LABEL_TYPE_CONFLICT") and f.get("schedule_m"):
+                dims = f["schedule_m"][:2]
+            elif f["state"] not in ("LABEL_TYPE_CONFLICT_SECONDARY", "NESTED_OR_DUPLICATE_OUTLINE", "NO_OUTLINE") and \
+                    f.get("drawn_m"):
+                dims = f["drawn_m"][:2]
+            elif f["state"] not in ("LABEL_TYPE_CONFLICT_SECONDARY", "NESTED_OR_DUPLICATE_OUTLINE"):
+                skipped += 1
+            if dims:
+                foot.append(dims)
+                n_f += 1
+        if rec["sheet"]["role"] == "GROUND_BEAM_PLAN":
+            for b in rec.get("beams", []):
+                strips.append((b["net_plan_m2"], b["length_m"]))
+                n_s += 1
+        for b in (rec.get("straps") or {}).get("bands", []):
+            strips.append((b["net_plan_m2"], b["length_m"]))
+            n_s += 1
+    fA = [sum((L + 2 * p) * (W + 2 * p) for L, W in foot) for p in p_]
+    sA = [sum(a + 2 * p * L for a, L in strips) for p in p_]
+    parts = [("FOOTINGS", fA, n_f, "(L + 2p)(W + 2p) x t under each footing")]
+    if under == "FOOTINGS_AND_GROUND_BEAMS":
+        parts.append(("GROUND_BEAMS", sA, n_s, "(net plan + 2p x clear length) x t under each ground / strap beam"))
+    elif strips:
+        risk.append({"KIND": "BLINDING_UNDER_BEAMS_NOT_ESTABLISHED", "WHERE": "FOUNDATION",
+                     "DETAIL": f"{n_s} ground / strap beams: blinding under them only when the typical detail shows it "
+                               "(BLINDING_UNDER)"})
+    for name, A, n, formula in parts:
+        if not n:
+            continue
+        cid = f"PLAIN_CONCRETE:FOUNDATION:BLINDING_{name}"
+        common = dict(component_id=cid, trade="CONCRETE", family="PLAIN_CONCRETE", storey="FOUNDATION",
+                      source=f"{src_file}: {n} {name.lower().replace('_', ' ')} quantified on the plans",
+                      dimensions={"members": n, "plan_m2_base": round(A[1], 3)},
+                      double_count_risk="beam blinding stops at the footing faces (the clear length); the projection "
+                                        "zones of adjacent members may overlap slightly")
+        if t_:
+            items.append(PE.item(item_id=f"P-C:{cid}", category="PROVISIONAL", low=A[0] * t_[0], base=A[1] * t_[1],
+                                 high=A[2] * t_[2], formula=formula,
+                                 assumptions=["BLINDING_THICKNESS_M", "BLINDING_PROJECTION_M"] +
+                                 (["BLINDING_UNDER"] if name != "FOOTINGS" else []),
+                                 support="CONVENTION_ONLY", confidence="MEDIUM", blocker="BLINDING_PROJECTION",
+                                 **common))
+        else:
+            tl, _, th = _trip(conv, "BLINDING_THICKNESS_EXPOSURE_M")
+            items.append(PE.item(item_id=f"U-C:{cid}", category="UNRESOLVED", support="NO_GEOMETRY", confidence="LOW",
+                                 blocker="BLINDING_THICKNESS_NOT_PRINTED",
+                                 assumptions=["BLINDING_THICKNESS_EXPOSURE_M", "BLINDING_PROJECTION_M"],
+                                 exposure_low=A[0] * tl, exposure_high=A[2] * th,
+                                 expression=f"{A[1]:.2f} m2 x t (blinding thickness not printed)", **common))
+        reg(cid, "PLAIN_CONCRETE", "FOUNDATION", "EXPLICIT_NONE", "plain concrete: no reinforcement")
+    if skipped:
+        risk.append({"KIND": "BLINDING_FOOTING_WITHOUT_SIZE", "WHERE": "FOUNDATION",
+                     "DETAIL": f"{skipped} footing records without a size: no blinding counted for them"})
 
 
 def _gb_class(conv, b):
@@ -1306,6 +1385,49 @@ def _slab_bars(items, reg, f, cid, fam, st, texts, conv, source):
         tot += b
     reg(cid, fam, st, "PROVISIONAL_MODEL", ("sheet mesh note (E.W.) applied to an untagged panel" if note_scope else
                                             f"{len(set(tags))} bar tag(s) in the panel"), tot)
+
+
+MISSING_STATES = ("MISSING_DATA", "PARTIAL_MISSING")
+
+
+def rebar_completeness(items, register):
+    """M3: one reinforcement state for every concrete component, and the missing steel counted by family and storey.
+    A concrete component without a register row gets MISSING_DATA ('no bar model'): the BOQ can never read an
+    absent row as zero steel. -> {rows, by_family_storey, totals}."""
+    reg = {r["COMPONENT_ID"]: r for r in register}
+    conc = {}
+    for i in items:
+        if i["trade"] == "CONCRETE":
+            conc.setdefault(i["component_id"], i)
+    u_steel = Counter(i["component_id"] for i in items if i["trade"] == "REINFORCEMENT" and
+                      i["category"] == "UNRESOLVED")
+    rows = []
+    for cid, i in sorted(conc.items()):
+        r = reg.get(cid) or {"REBAR_STATE": "MISSING_DATA", "REASON": "no bar model for this component",
+                             "PROVISIONAL_KG_BASE": None}
+        rows.append({"COMPONENT_ID": cid, "FAMILY": i["family"], "STOREY": i["storey"],
+                     "CONCRETE_CATEGORY": i["category"], "REBAR_STATE": r["REBAR_STATE"], "REASON": r["REASON"],
+                     "PROVISIONAL_KG_BASE": r.get("PROVISIONAL_KG_BASE"),
+                     "UNRESOLVED_STEEL_ITEMS": u_steel.get(cid, 0)})
+    for cid, r in sorted(reg.items()):
+        if cid not in conc:                       # explicit none / outside scope rows with no concrete item
+            rows.append({"COMPONENT_ID": cid, "FAMILY": r["FAMILY"], "STOREY": r["STOREY"], "CONCRETE_CATEGORY": "",
+                         "REBAR_STATE": r["REBAR_STATE"], "REASON": r["REASON"],
+                         "PROVISIONAL_KG_BASE": r.get("PROVISIONAL_KG_BASE"), "UNRESOLVED_STEEL_ITEMS": 0})
+    agg = defaultdict(lambda: Counter())
+    for r in rows:
+        agg[(r["FAMILY"], r["STOREY"])][r["REBAR_STATE"]] += 1
+        agg[(r["FAMILY"], r["STOREY"])]["UNRESOLVED_STEEL_ITEMS"] += r["UNRESOLVED_STEEL_ITEMS"]
+    by = [{"FAMILY": f, "STOREY": st, "COMPONENTS": sum(c[k] for k in REBAR_STATES),
+           **{k: c[k] for k in REBAR_STATES}, "UNRESOLVED_STEEL_ITEMS": c["UNRESOLVED_STEEL_ITEMS"],
+           "MISSING_STEEL_COMPONENTS": sum(c[k] for k in MISSING_STATES)} for (f, st), c in sorted(agg.items())]
+    tot = Counter()
+    for r in rows:
+        tot[r["REBAR_STATE"]] += 1
+    return {"rows": rows, "by_family_storey": by, "totals": dict(tot),
+            "missing_steel_components": sum(tot[k] for k in MISSING_STATES),
+            "rule": "MISSING_DATA: no bar quantity exists; PARTIAL_MISSING: bars for part of the component, the rest "
+                    "UNRESOLVED; neither is ever counted as zero kg"}
 
 
 def policy_record():

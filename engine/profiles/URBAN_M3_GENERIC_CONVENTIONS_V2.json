@@ -335,6 +335,43 @@
    "provenance": "ENGINEERING_JUDGEMENT",
    "source": "the schedule rows and the drawn width of the bound band",
    "rationale": "When one mark has two schedule rows and the drawn width matches exactly one of them, that row is the base; the other row gives the range. A drawn width that matches neither or both leaves the member UNRESOLVED."
+  },
+  {
+   "id": "BLINDING_PROJECTION_M",
+   "title": "Blinding projection beyond the member it is under, each side",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.1,
+   "low": 0.05,
+   "high": 0.15,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "blinding laid wider than the footing / beam it carries",
+   "rationale": "Not printed on most villa sets; 10 cm each side is usual, 5 - 15 cm the range."
+  },
+  {
+   "id": "BLINDING_UNDER",
+   "title": "Members that sit on blinding",
+   "kind": "choice",
+   "options": [
+    "FOOTINGS_ONLY",
+    "FOOTINGS_AND_GROUND_BEAMS"
+   ],
+   "base": "FOOTINGS_ONLY",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "typical details",
+   "rationale": "Footings always sit on blinding; ground and strap beams only when their typical detail shows it (a profile sets FOOTINGS_AND_GROUND_BEAMS from the printed detail)."
+  },
+  {
+   "id": "BLINDING_THICKNESS_EXPOSURE_M",
+   "title": "Blinding thickness when not printed (exposure only)",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.1,
+   "low": 0.05,
+   "high": 0.1,
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "typical villa blinding",
+   "rationale": "Only an exposure for UNRESOLVED blinding (never added to a total); blinding is measured only with a printed thickness (profile)."
   }
  ]
 }

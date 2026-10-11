@@ -2,7 +2,7 @@
  "profile": "ST7757_M3",
  "confirmed_by": "values typed from the printed drawings (the person-confirmed project profile of the generic route); M3 adds two printed foundation values transcribed from the drawing set (the PDF general notes have no text layer, so they are typed here, not read by the engine)",
  "drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
- "manual_inputs": 9,
+ "manual_inputs": 11,
  "conventions": [
   {
    "id": "STOREY_HEIGHT_GF",
@@ -129,6 +129,31 @@
    "provenance": "READING_OF_PRINTED_VALUE",
    "source": "ST7757 PDF p.13 'Ground Beams. for exterior walls' (labels 'Ground Floor slab level' and 'Outer Normal ground level'); bars from the detail-evidence document",
    "rationale": "The exterior detail spans from the ground-floor slab level to the outer ground level; width as the typical sections (30 cm)."
+  },
+  {
+   "id": "BLINDING_THICKNESS_M",
+   "title": "Blinding (plain concrete) thickness",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.1,
+   "low": 0.1,
+   "high": 0.1,
+   "provenance": "PRINTED_VALUE",
+   "source": "ST7757 PDF p.13 typical isolated-footing detail and ground-beam details: '10cm Plain con.' (OCR lines in evidence/DETAIL_EVIDENCE.json notes)",
+   "rationale": "The typical details print a 10 cm plain-concrete layer under the footing and under the ground beams."
+  },
+  {
+   "id": "BLINDING_UNDER",
+   "title": "Members that sit on blinding",
+   "kind": "choice",
+   "options": [
+    "FOOTINGS_ONLY",
+    "FOOTINGS_AND_GROUND_BEAMS"
+   ],
+   "base": "FOOTINGS_AND_GROUND_BEAMS",
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "ST7757 PDF p.13: the plain-concrete layer is drawn in the footing detail and in the ground-beam details",
+   "rationale": "Both typical details show the layer."
   }
  ]
 }

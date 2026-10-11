@@ -249,7 +249,8 @@ def extract(pdf, out_dir, *, pages=None, dpi=300, redact_patterns=(), use_ocr=Tr
     ev = {"schema": DE.SCHEMA, "policy": POLICY_ID, "document": {"file": pdf.name, "sha256": sha, "pages": n_pages},
           "engine": {"ocr": ver, "dpi": dpi, "second_read_dpi": dpi * 2, "psm_page": 11, "psm_token": [7, 8, 13],
                      "image_check": "VECTOR_GLYPH_CONSENSUS (vector-glyph pages), else UNANIMOUS_READS"},
-          "redact_patterns": list(redact_patterns), "pages": [], "records": [], "captions": [], "details": []}
+          "redact_patterns": list(redact_patterns), "pages": [], "records": [], "captions": [], "details": [],
+          "notes": []}
     k = 0
     for pno in pages:
         words, n_paths, n_img = _native_words(pdf, pno)
@@ -353,6 +354,13 @@ def extract(pdf, out_dir, *, pages=None, dpi=300, redact_patterns=(), use_ocr=Tr
             return rec
 
         recs = [r for t in kept for r in [process(t, ncls.get(id(t)))] if r]
+        for ln in _lines(kept):                  # typical-detail notes (a printed plain-concrete layer), cited only
+            nt = DE.note_of(ln["text"])
+            if nt and not DE.redact(ln["text"], redact_patterns):
+                ev["notes"].append(dict(nt, note_id=f"P{pno:02d}N{len(ev['notes']) + 1:02d}", page=pno,
+                                        region_pt=[round(v, 2) for v in ln["box"]], text=ln["text"],
+                                        method="OCR_TESSERACT" if ln["box"] and glyph_page else "NATIVE_TEXT",
+                                        state="OCR_UNREVIEWED"))
         caps = []
         for n, c in enumerate(captions(_lines(kept), redact_patterns), 1):
             cid = f"P{pno:02d}C{n:02d}"

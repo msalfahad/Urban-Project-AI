@@ -36,6 +36,7 @@ if str(ROOT) not in sys.path:
 from engine import boq_m1_xlsx as XL                      # noqa: E402
 from engine.source import detail_evidence as DE           # noqa: E402
 from engine.source import drawing_inventory as DI         # noqa: E402
+from engine.source import family_coverage as FC           # noqa: E402
 from engine.source import generic_route as GR             # noqa: E402
 from engine.source import provisional_estimate as PE      # noqa: E402
 from tools import m2_overlay as OV                        # noqa: E402
@@ -110,17 +111,48 @@ def route_generic(inputs, conv_path, overrides, profile, cache_dir=None, evidenc
             "generic": {"D": D, "register": reg, "risk": risk, "intake_cache": cache_state, "evidence": evidence}}
 
 
-def not_detected_lines(risk):
-    nd = {r["WHERE"]: r for r in risk if r["KIND"] == "FAMILY_NOT_QUANTIFIED"}
+def not_detected_lines(cov):
+    """BOQ section C: one line per family outside the core six, with its coverage state (family_coverage). A family
+    with no evidence is 'confirm absent', never 'absent'."""
     out = []
-    for k, fam in enumerate(sorted(GR.SCOPE_WORDS), 1):
-        r = nd.get(fam)
-        text = (f"{fam}: drawing evidence, not quantified - {r['DETAIL']}" if r else
-                f"{fam}: no label found on the drawing, and the generic engine cannot detect this family - confirm "
-                f"it is absent before using the totals")
-        out.append({"ITEM": f"C.{k:02d}", "SECTION": "C NOT DETECTED (COVERAGE RISK)", "FAMILY": fam,
-                    "DESCRIPTION": text, "UNIT": "-", "EVIDENCE": "LABELS_FOUND" if r else "NO_LABEL_FOUND"})
+    for k, c in enumerate(cov, 1):
+        text = f"{c['FAMILY']}: {c['STATE']}" + (f" in {c['QUANTIFIED_IN']}" if c["QUANTIFIED_IN"] else "") + \
+            (f" - {c['EVIDENCE']}" if c["EVIDENCE"] else "") + f"; {c['REASON']}" + \
+            (f"; needs {c['NEEDED']}" if c["NEEDED"] else "")
+        out.append({"ITEM": f"C.{k:02d}", "SECTION": "C FAMILY COVERAGE (NOT DETECTED / NOT QUANTIFIED)",
+                    "FAMILY": c["FAMILY"], "DESCRIPTION": text, "UNIT": "-", "EVIDENCE": c["STATE"]})
     return out
+
+
+def missing_steel_lines(rc):
+    """BOQ section D: every family / storey with components that carry no (or only part of their) bar quantity.
+    A count, never a quantity: missing steel is never written as 0 kg."""
+    out = []
+    for k, r in enumerate([r for r in rc["by_family_storey"] if r["MISSING_STEEL_COMPONENTS"]], 1):
+        out.append({"ITEM": f"D.{k:02d}", "SECTION": "D REINFORCEMENT NOT QUANTIFIED (MISSING STEEL)",
+                    "FAMILY": r["FAMILY"], "UNIT": "-",
+                    "DESCRIPTION": f"{r['FAMILY']} {r['STOREY']}: {r['MISSING_STEEL_COMPONENTS']} of {r['COMPONENTS']} "
+                                   f"components without a full bar quantity (MISSING_DATA {r['MISSING_DATA']}, "
+                                   f"PARTIAL_MISSING {r['PARTIAL_MISSING']}, unresolved steel items "
+                                   f"{r['UNRESOLVED_STEEL_ITEMS']}) - not zero, not in any total",
+                    "EVIDENCE": "MISSING_STEEL", "N_UNRESOLVED": r["MISSING_STEEL_COMPONENTS"]})
+    return out
+
+
+def missing_steel_html(rc):
+    rows = [r for r in rc["by_family_storey"] if r["MISSING_STEEL_COMPONENTS"]]
+    head = ("<h2 class='pb'>Reinforcement not quantified (missing steel)</h2><p class='muted small'>Every concrete "
+            "component has one reinforcement state. MISSING_DATA: no bar quantity exists; PARTIAL_MISSING: bars for "
+            "part of it, the rest UNRESOLVED. These are counts, never 0 kg, and are in no total. "
+            f"Components: {sum(rc['totals'].values())}; " +
+            ", ".join(f"{k} {v}" for k, v in sorted(rc["totals"].items())) + ".</p>")
+    tr = "".join(f"<tr><td>{r['FAMILY']}</td><td>{r['STOREY']}</td><td class='num'>{r['COMPONENTS']}</td>"
+                 f"<td class='num'>{r['PROVISIONAL_MODEL']}</td><td class='num'>{r['PARTIAL_MISSING']}</td>"
+                 f"<td class='num'>{r['MISSING_DATA']}</td><td class='num'>{r['UNRESOLVED_STEEL_ITEMS']}</td></tr>"
+                 for r in rows)
+    return head + ("<table class='small'><thead><tr><th>Family</th><th>Storey</th><th>Components</th>"
+                   "<th>Bar model</th><th>Partial</th><th>Missing</th><th>Unresolved steel items</th></tr></thead>"
+                   f"<tbody>{tr}</tbody></table>" if rows else "<p>None.</p>")
 
 
 def compute(drawings, *, conventions=None, overrides=None, profile=None, project=None, route="auto", cache_dir=None,
@@ -158,7 +190,11 @@ def compute(drawings, *, conventions=None, overrides=None, profile=None, project
     strip = lambda r: {k: v for k, v in r.items() if k not in ("trade", "family")}       # noqa: E731
     rc = PE.rollup([i for i in items if i["trade"] == "CONCRETE" and i["family"] != "PLAIN_CONCRETE"], ("trade",))
     g = res["generic"]
-    boq = M1.boq_lines(items) + not_detected_lines(g["risk"])
+    rcomp = GR.rebar_completeness(items, g["register"])
+    g["rebar_completeness"] = rcomp
+    cov = FC.coverage(g["D"], items, g["risk"], GR.scope_scan(g["D"]), g.get("evidence"))
+    g["family_coverage"] = cov
+    boq = M1.boq_lines(items) + not_detected_lines(cov) + missing_steel_lines(rcomp)
     summary = {
         "policy": POLICY_ID, "route": "G_GENERIC_ENGINE",
         "project": known[0]["project"] if known else (project or "new project"),
@@ -174,7 +210,11 @@ def compute(drawings, *, conventions=None, overrides=None, profile=None, project
         "exceptions_by_kind": dict(sorted(Counter(e["KIND"] for e in exc).items())),
         "frozen_manifests_verified": [], "adapter": None,
         "coverage_risk_by_kind": dict(sorted(Counter(r["KIND"] for r in g["risk"]).items())),
-        "rebar_completeness": dict(sorted(Counter(r["REBAR_STATE"] for r in g["register"]).items())),
+        "rebar_completeness": dict(sorted(rcomp["totals"].items())),
+        "missing_steel_components": rcomp["missing_steel_components"],
+        "missing_steel_by_family_storey": [{k: r[k] for k in ("FAMILY", "STOREY", "COMPONENTS",
+                                                               "MISSING_STEEL_COMPONENTS", "UNRESOLVED_STEEL_ITEMS")}
+                                           for r in rcomp["by_family_storey"] if r["MISSING_STEEL_COMPONENTS"]],
         "not_detected_families": {b["FAMILY"]: b["EVIDENCE"] for b in boq if b["SECTION"].startswith("C")},
         "sheets": [{k: sh[k] for k in ("sheet_id", "role", "storey")} for sh in g["D"]["model"]["sheets"]],
         "intake_cache": g["intake_cache"],
@@ -206,7 +246,16 @@ def files(R, *, as_of):
                                                          "N_UNRESOLVED", "UNRESOLVED_EXPOSURE_LOW",
                                                          "UNRESOLVED_EXPOSURE_HIGH", "EVIDENCE"])
         out["COVERAGE_RISK.csv"] = M1.csv_text(g["risk"], ["KIND", "WHERE", "DETAIL"])
-        out["REBAR_COMPLETENESS.csv"] = M1.csv_text(g["register"])
+        if g.get("family_coverage"):
+            out["FAMILY_COVERAGE.csv"] = M1.csv_text(g["family_coverage"])
+        rc = g.get("rebar_completeness") or GR.rebar_completeness(R["items"], g["register"])
+        out["REBAR_COMPLETENESS.csv"] = M1.csv_text(rc["rows"])
+        out["MISSING_STEEL_BY_FAMILY_STOREY.csv"] = M1.csv_text(rc["by_family_storey"])
+        if "BOQ_REPORT.html" in out:                 # the frozen M1 report, with the missing-steel section added
+            tail = "</main></body></html>"
+            h = out["BOQ_REPORT.html"]
+            out["BOQ_REPORT.html"] = (h.replace(tail, missing_steel_html(rc) + tail) if tail in h else
+                                      h + missing_steel_html(rc))
         for name, svg in OV.sheet_svgs(g["D"]).items():
             out[f"overlays/{name}.svg"] = svg
         out["OVERLAYS.html"] = OV.html(g["D"], banner=BANNER)
@@ -228,9 +277,18 @@ def workbook_model(R):
                               "rows": [[r["KIND"], r["WHERE"], str(r["DETAIL"])] for r in g["risk"]],
                               "wrap_cols": [2], "widths": {0: 34, 1: 16, 2: 100},
                               "note": "Everything the generic route may have missed or merged: read before use."}
-    rk = ["COMPONENT_ID", "FAMILY", "STOREY", "REBAR_STATE", "REASON", "PROVISIONAL_KG_BASE"]
+    rk = ["COMPONENT_ID", "FAMILY", "STOREY", "REBAR_STATE", "REASON", "PROVISIONAL_KG_BASE",
+          "UNRESOLVED_STEEL_ITEMS"]
+    rc = g.get("rebar_completeness") or GR.rebar_completeness(R["items"], g["register"])
+    mk = ["FAMILY", "STOREY", "COMPONENTS", "PROVISIONAL_MODEL", "PARTIAL_MISSING", "MISSING_DATA", "EXPLICIT_NONE",
+          "OUTSIDE_SCOPE", "UNRESOLVED_STEEL_ITEMS"]
+    model["MISSING_STEEL"] = {"kind": "TABLE", "header": mk,
+                              "rows": [[M1._cell(r.get(k)) for k in mk] for r in rc["by_family_storey"]],
+                              "widths": {0: 18, 1: 12},
+                              "note": "Components without a full bar quantity, by family and storey: counts, never "
+                                      "0 kg, and in no total."}
     model["REBAR_COMPLETENESS"] = {"kind": "TABLE", "header": rk,
-                                   "rows": [[M1._cell(r.get(k)) for k in rk] for r in g["register"]],
+                                   "rows": [[M1._cell(r.get(k)) for k in rk] for r in rc["rows"]],
                                    "wrap_cols": [4], "widths": {0: 40, 4: 70},
                                    "note": "One row per concrete component and its bar model state. MISSING_DATA: "
                                            "no bar quantity exists for it (never a kg/m3 ratio)."}
