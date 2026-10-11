@@ -138,9 +138,9 @@
    "base": 0.1,
    "low": 0.1,
    "high": 0.1,
-   "provenance": "PRINTED_VALUE",
-   "source": "ST7757 PDF p.13 typical isolated-footing detail and ground-beam details: '10cm Plain con.' (OCR lines in evidence/DETAIL_EVIDENCE.json notes)",
-   "rationale": "The typical details print a 10 cm plain-concrete layer under the footing and under the ground beams."
+   "provenance": "READING_OF_PRINTED_VALUE",
+   "source": "ST7757 PDF p.13 typical isolated-footing detail and ground-beam details: '10cm Plain con.' - read by OCR (notes P13N01, P13N02 in evidence/DETAIL_EVIDENCE.json), not glyph-checked and not reviewed; the frozen M1 replay held footing blinding UNRESOLVED for want of this value",
+   "rationale": "Both typical details print a 10 cm plain-concrete layer; to be confirmed by a person (RFI M3-RFI-06)."
   },
   {
    "id": "BLINDING_UNDER",

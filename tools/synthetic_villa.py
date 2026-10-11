@@ -17,6 +17,11 @@ codes, tags pushed further off the face, solid hatches in the columns. defects="
 beyond any snap tolerance: the engine must then REPORT the open faces, not guess them. The truth is unchanged: the defects are
 drafting noise, not design changes (a face that stops 2 mm short still means a beam from face to face).
 
+M3 DEFECTS (generate(..., m3=True)): the drafting faults found on a real set in M3, injected without changing the
+design (a separate random stream, so the M2 variants draw exactly as before): a 0.41 m line on the centre line of
+some line-end beams, from outside the end column to 10 mm past its face (it made M2 drop the whole strip), and one
+footing drawn by its label only (no outline). The truth is unchanged: the beam still runs face to face, the footing is still its schedule size.
+
 Conventions the truth uses are the generic convention set's BASE values (cover, anchorage, lap, hook table), stated
 in the truth file, so the comparison isolates detection, geometry and parsing.
 """
@@ -323,9 +328,15 @@ def write_dxf(D, path):
                             (-B / 2 * s, H / 2 * s)], close=True, dxfattribs={"layer": "0"})
     rows = schedule_rows(D)
     fr = {r["mark"]: r for r in rows["FOOTING"]}
+    M3 = v.get("m3")
+    RM3 = random.Random(D["seed"] * 104729 + 7)                  # M3 defects only - never touches the design
+    m3_applied = {}
+    label_only = D["cols"][-1] if M3 else None                  # one footing drawn by its label only
     for c in D["cols"]:
         f = fr[c["ftg"]]
-        if v.get("defects") and (c["i"] + c["j"]) % 2 == 0:
+        if c is label_only:
+            m3_applied["FOOTING_LABEL_ONLY"] = m3_applied.get("FOOTING_LABEL_ONLY", 0) + 1
+        elif v.get("defects") and (c["i"] + c["j"]) % 2 == 0:
             x0, y0 = c["x"] - f["L"] / 2, c["y"] - f["W"] / 2
             x1, y1 = c["x"] + f["L"] / 2, c["y"] + f["W"] / 2
             for p0, p1 in (((x0, y0), (x1, y0)), ((x1, y0), (x1, y1)), ((x1, y1), (x0, y1)), ((x0, y1), (x0, y0))):
@@ -409,6 +420,11 @@ def write_dxf(D, path):
                 x0, x1 = a["x"] + _dim(a, "x") / 2, b["x"] - _dim(b, "x") / 2
                 for off in (-hw, hw):
                     face(k, (x0, a["y"] + off), (x1, a["y"] + off), L["beam"])
+                if M3 and a["i"] == 0 and RM3.random() < 0.6:
+                    # a 0.41 m line on the beam's centre line, from outside the end column to 10 mm into the strip
+                    # (ST7757: a face that ran 10 mm past the column made M2 drop the whole strip)
+                    msp.add_line(P(k, x0 - 0.40, a["y"]), P(k, x0 + 0.01, a["y"]), dxfattribs={"layer": L["beam"]})
+                    m3_applied["INTERVENING_STUB"] = m3_applied.get("INTERVENING_STUB", 0) + 1
                 if bm["tagged"]:
                     tag(k, bm["type"], (x0 + x1) / 2 - 0.2, a["y"] + hw + 0.06 + push, 0.0, 0.15 * s)
             else:
@@ -463,7 +479,7 @@ def write_dxf(D, path):
                               r["top"][1], r["sti"][0], r["sti"][1]], y)
         y -= 0.6
     doc.saveas(path)
-    D["defects_applied"] = applied
+    D["defects_applied"] = dict(applied, **m3_applied)
     return path
 
 
@@ -502,11 +518,12 @@ def profile(D):
                             for k, h in D["heights"].items()]}
 
 
-def generate(out_dir, seed, defects=False):
+def generate(out_dir, seed, defects=False, m3=False):
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
     D = design(seed)
     D["var"]["defects"] = defects if defects == "hard" else bool(defects)
+    D["var"]["m3"] = bool(m3)
     dxf = write_dxf(D, out / f"villa_{seed}.dxf")
     T = truth(D)
     T["defects_applied"] = D.get("defects_applied", {})
@@ -516,6 +533,6 @@ def generate(out_dir, seed, defects=False):
 
 
 if __name__ == "__main__":
-    args = [a for a in sys.argv[1:] if a != "--defects"]
+    args = [a for a in sys.argv[1:] if a not in ("--defects", "--m3")]
     for sd in args[1:]:
-        print(generate(args[0], int(sd), defects="--defects" in sys.argv))
+        print(generate(args[0], int(sd), defects="--defects" in sys.argv, m3="--m3" in sys.argv))

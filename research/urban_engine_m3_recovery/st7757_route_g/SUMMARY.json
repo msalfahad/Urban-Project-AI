@@ -1,0 +1,329 @@
+{
+ "adapter": null,
+ "as_of": "2026-10-11",
+ "concrete_rc": {
+  "N_PROVISIONAL": 395,
+  "N_UNRESOLVED": 30,
+  "N_UNRESOLVED_WITH_EXPOSURE": 27,
+  "N_VERIFIED": 0,
+  "PLANNING_BASE": 301.9235795727133,
+  "PLANNING_HIGH": 324.45037291702965,
+  "PLANNING_LOW": 288.98116853570957,
+  "PROVISIONAL_BASE": 301.9235795727133,
+  "PROVISIONAL_HIGH": 324.45037291702965,
+  "PROVISIONAL_LOW": 288.98116853570957,
+  "UNRESOLVED_EXPOSURE_HIGH": 21.86456421848432,
+  "UNRESOLVED_EXPOSURE_LOW": 13.499814899746802,
+  "VERIFIED": 0.0
+ },
+ "conventions": {
+  "digest": "b36ac0cba7097003cc5d0ec8ea535361a6f0f6e540acab98002ed1fd5fb21fe0",
+  "n": 40,
+  "overrides": {},
+  "set": "URBAN_M3_GENERIC_CONVENTIONS_V2+ST7757_M3"
+ },
+ "coverage_risk_by_kind": {
+  "BAND_MULTIPLE_MARKS": 1,
+  "BAND_UNBOUND": 13,
+  "COLUMN_ABSENT_ON_STOREY_PLAN": 13,
+  "COLUMN_STOREY_PRESENCE_UNVERIFIED": 24,
+  "FAMILY_NOT_QUANTIFIED": 6,
+  "FAMILY_PARTLY_QUANTIFIED": 1,
+  "FOOTING_LABEL_TYPE_CONFLICT": 1,
+  "HEAL_EXTEND_WIDE": 1,
+  "MARK_AMBIGUOUS": 4,
+  "MARK_TAG_UNBOUND": 1,
+  "NECK_UNRESOLVED": 8,
+  "OPENING_DEDUCTED": 5,
+  "SCHEDULE_DUPLICATE_MARK": 1,
+  "SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 32,
+  "SLAB_CELL_FREE_COLUMNS": 1,
+  "SLAB_OPEN_BOUNDARY_FACE": 1,
+  "SLAB_STAIR_ZONE": 2,
+  "STRAP_CANDIDATE_UNBOUND": 1
+ },
+ "detail_evidence": {
+  "document": {
+   "file": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3.pdf",
+   "pages": 16,
+   "sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+  },
+  "ground_beam_details": [
+   {
+    "condition": "SPAN_MIN",
+    "detail_id": "DET-P13C12",
+    "ocr": true,
+    "roles": [
+     "BOTTOM",
+     "LINKS",
+     "TOP"
+    ]
+   },
+   {
+    "condition": "SPAN_MAX",
+    "detail_id": "DET-P13C16",
+    "ocr": true,
+    "roles": [
+     "BOTTOM",
+     "TOP"
+    ]
+   },
+   {
+    "condition": "SPAN_MAX",
+    "detail_id": "DET-P13C18",
+    "ocr": true,
+    "roles": [
+     "BOTTOM",
+     "TOP"
+    ]
+   },
+   {
+    "condition": "EXTERIOR",
+    "detail_id": "DET-P13C19",
+    "ocr": true,
+    "roles": [
+     "BOTTOM",
+     "LINKS",
+     "SIDE",
+     "TOP"
+    ]
+   }
+  ],
+  "records": {
+   "OCR_REJECTED_UNPARSED": 1,
+   "OCR_UNREVIEWED": 14
+  }
+ },
+ "exceptions_by_kind": {
+  "COVERAGE_RISK:BAND_MULTIPLE_MARKS": 1,
+  "COVERAGE_RISK:BAND_UNBOUND": 13,
+  "COVERAGE_RISK:COLUMN_ABSENT_ON_STOREY_PLAN": 13,
+  "COVERAGE_RISK:COLUMN_STOREY_PRESENCE_UNVERIFIED": 24,
+  "COVERAGE_RISK:FAMILY_NOT_QUANTIFIED": 6,
+  "COVERAGE_RISK:FAMILY_PARTLY_QUANTIFIED": 1,
+  "COVERAGE_RISK:FOOTING_LABEL_TYPE_CONFLICT": 1,
+  "COVERAGE_RISK:HEAL_EXTEND_WIDE": 1,
+  "COVERAGE_RISK:MARK_AMBIGUOUS": 4,
+  "COVERAGE_RISK:MARK_TAG_UNBOUND": 1,
+  "COVERAGE_RISK:NECK_UNRESOLVED": 8,
+  "COVERAGE_RISK:OPENING_DEDUCTED": 5,
+  "COVERAGE_RISK:SCHEDULE_DUPLICATE_MARK": 1,
+  "COVERAGE_RISK:SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 32,
+  "COVERAGE_RISK:SLAB_CELL_FREE_COLUMNS": 1,
+  "COVERAGE_RISK:SLAB_OPEN_BOUNDARY_FACE": 1,
+  "COVERAGE_RISK:SLAB_STAIR_ZONE": 2,
+  "COVERAGE_RISK:STRAP_CANDIDATE_UNBOUND": 1,
+  "LOW_CONFIDENCE_PROVISIONAL": 341,
+  "UNRESOLVED": 58
+ },
+ "frozen_manifests_verified": [],
+ "inputs": [
+  {
+   "bytes": 3153037,
+   "file": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079.dxf",
+   "kind": "DXF",
+   "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+  }
+ ],
+ "intake_cache": "CACHE_HIT",
+ "missing_steel_by_family_storey": [
+  {
+   "COMPONENTS": 47,
+   "FAMILY": "BEAMS",
+   "MISSING_STEEL_COMPONENTS": 19,
+   "STOREY": "1F",
+   "UNRESOLVED_STEEL_ITEMS": 0
+  },
+  {
+   "COMPONENTS": 70,
+   "FAMILY": "BEAMS",
+   "MISSING_STEEL_COMPONENTS": 20,
+   "STOREY": "GF",
+   "UNRESOLVED_STEEL_ITEMS": 0
+  },
+  {
+   "COMPONENTS": 36,
+   "FAMILY": "COLUMNS",
+   "MISSING_STEEL_COMPONENTS": 8,
+   "STOREY": "FOUNDATION",
+   "UNRESOLVED_STEEL_ITEMS": 0
+  },
+  {
+   "COMPONENTS": 5,
+   "FAMILY": "COLUMNS",
+   "MISSING_STEEL_COMPONENTS": 5,
+   "STOREY": "UNKNOWN",
+   "UNRESOLVED_STEEL_ITEMS": 0
+  },
+  {
+   "COMPONENTS": 27,
+   "FAMILY": "FOOTINGS",
+   "MISSING_STEEL_COMPONENTS": 1,
+   "STOREY": "FOUNDATION",
+   "UNRESOLVED_STEEL_ITEMS": 0
+  },
+  {
+   "COMPONENTS": 58,
+   "FAMILY": "GROUND_BEAMS",
+   "MISSING_STEEL_COMPONENTS": 28,
+   "STOREY": "GROUND",
+   "UNRESOLVED_STEEL_ITEMS": 28
+  },
+  {
+   "COMPONENTS": 24,
+   "FAMILY": "GROUND_SLAB",
+   "MISSING_STEEL_COMPONENTS": 2,
+   "STOREY": "GROUND",
+   "UNRESOLVED_STEEL_ITEMS": 0
+  },
+  {
+   "COMPONENTS": 29,
+   "FAMILY": "SLABS",
+   "MISSING_STEEL_COMPONENTS": 15,
+   "STOREY": "1F",
+   "UNRESOLVED_STEEL_ITEMS": 0
+  },
+  {
+   "COMPONENTS": 9,
+   "FAMILY": "SLABS",
+   "MISSING_STEEL_COMPONENTS": 2,
+   "STOREY": "2F",
+   "UNRESOLVED_STEEL_ITEMS": 0
+  },
+  {
+   "COMPONENTS": 38,
+   "FAMILY": "SLABS",
+   "MISSING_STEEL_COMPONENTS": 10,
+   "STOREY": "GF",
+   "UNRESOLVED_STEEL_ITEMS": 0
+  }
+ ],
+ "missing_steel_components": 110,
+ "n_exceptions": 515,
+ "n_items": 1224,
+ "not_detected_families": {
+  "CANTILEVER_PORTIONS": "COUNTED_IN_PARENT",
+  "COLUMN_NECKS": "PARTLY_QUANTIFIED",
+  "DOMES": "DETECTED_NOT_QUANTIFIED",
+  "LIFT": "NO_EVIDENCE_FOUND",
+  "LINTELS": "DETECTED_NOT_QUANTIFIED",
+  "PARAPETS": "DETECTED_NOT_QUANTIFIED",
+  "PLAIN_CONCRETE": "QUANTIFIED",
+  "POOL": "DETECTED_NOT_QUANTIFIED",
+  "STAIRS": "DETECTED_NOT_QUANTIFIED",
+  "WALLS": "NO_EVIDENCE_FOUND",
+  "WATER_TANK": "DETECTED_NOT_QUANTIFIED"
+ },
+ "plain_concrete": {},
+ "policy": "URBAN_BOQ_M2",
+ "project": "ST7757 villa (structural set)",
+ "rebar_completeness": {
+  "EXPLICIT_NONE": 15,
+  "MISSING_DATA": 82,
+  "OUTSIDE_SCOPE": 1,
+  "PARTIAL_MISSING": 28,
+  "PROVISIONAL_MODEL": 315
+ },
+ "route": "G_GENERIC_ENGINE",
+ "rule": "planning = verified + provisional base; low / high sum each item's own low / high; unresolved items and not-detected families are never added; a new project is never VERIFIED",
+ "sheets": [
+  {
+   "role": "DETAIL",
+   "sheet_id": "SH01",
+   "storey": "ALL"
+  },
+  {
+   "role": "SLAB_PLAN",
+   "sheet_id": "SH02",
+   "storey": "2F"
+  },
+  {
+   "role": "SCHEDULE",
+   "sheet_id": "SH03",
+   "storey": "ALL"
+  },
+  {
+   "role": "SLAB_PLAN",
+   "sheet_id": "SH04",
+   "storey": "1F"
+  },
+  {
+   "role": "SCHEDULE",
+   "sheet_id": "SH05",
+   "storey": "ALL"
+  },
+  {
+   "role": "SLAB_PLAN",
+   "sheet_id": "SH06",
+   "storey": "GF"
+  },
+  {
+   "role": "SCHEDULE",
+   "sheet_id": "SH07",
+   "storey": "ALL"
+  },
+  {
+   "role": "GROUND_BEAM_PLAN",
+   "sheet_id": "SH08",
+   "storey": "GROUND"
+  },
+  {
+   "role": "SCHEDULE",
+   "sheet_id": "SH09",
+   "storey": "ALL"
+  },
+  {
+   "role": "FOUNDATION_PLAN",
+   "sheet_id": "SH10",
+   "storey": "FOUNDATION"
+  },
+  {
+   "role": "SCHEDULE",
+   "sheet_id": "SH11",
+   "storey": "ALL"
+  },
+  {
+   "role": "COLUMN_PLAN",
+   "sheet_id": "SH12",
+   "storey": "ALL"
+  }
+ ],
+ "steel_t": {
+  "PLANNING_BASE": 26.488116207368314,
+  "PLANNING_HIGH": 28.79732733985676,
+  "PLANNING_LOW": 23.234307432621087,
+  "VERIFIED": 0.0
+ },
+ "totals": {
+  "CONCRETE": {
+   "N_PROVISIONAL": 397,
+   "N_UNRESOLVED": 30,
+   "N_UNRESOLVED_WITH_EXPOSURE": 27,
+   "N_VERIFIED": 0,
+   "PLANNING_BASE": 328.33564542530286,
+   "PLANNING_HIGH": 354.1116805082477,
+   "PLANNING_LOW": 312.1959926496706,
+   "PROVISIONAL_BASE": 328.33564542530286,
+   "PROVISIONAL_HIGH": 354.1116805082477,
+   "PROVISIONAL_LOW": 312.1959926496706,
+   "UNRESOLVED_EXPOSURE_HIGH": 21.86456421848432,
+   "UNRESOLVED_EXPOSURE_LOW": 13.499814899746802,
+   "VERIFIED": 0.0
+  },
+  "REINFORCEMENT": {
+   "N_PROVISIONAL": 769,
+   "N_UNRESOLVED": 28,
+   "N_UNRESOLVED_WITH_EXPOSURE": 0,
+   "N_VERIFIED": 0,
+   "PLANNING_BASE": 26488.116207368315,
+   "PLANNING_HIGH": 28797.32733985676,
+   "PLANNING_LOW": 23234.307432621088,
+   "PROVISIONAL_BASE": 26488.116207368315,
+   "PROVISIONAL_HIGH": 28797.32733985676,
+   "PROVISIONAL_LOW": 23234.307432621088,
+   "UNRESOLVED_EXPOSURE_HIGH": null,
+   "UNRESOLVED_EXPOSURE_LOW": null,
+   "VERIFIED": 0.0
+  }
+ }
+}

@@ -9,10 +9,15 @@ Per page:
     native text   the PDF text layer (pymupdf words), method NATIVE_TEXT - exact, no OCR
     vector        the number of vector paths: a page with paths but no text layer draws its text as glyphs, and only
                   OCR (or a person) can read it - recorded, never guessed
-    OCR           tesseract (local binary, optional): the page rendered at --dpi, words with confidence and box (TSV,
-                  page segmentation 11). A word that parses as a bar notation is read a second time from its own crop
-                  re-rendered from the PDF at twice the resolution (segmentation 7, one line); the record is kept as
-                  OCR_UNREVIEWED only when both reads give the same unique parse, else OCR_REJECTED_*.
+    OCR           tesseract (local binary, optional), on raster pages and on vector-glyph pages (paths > 20 x
+                  words): the page rendered at --dpi, words with confidence and box (TSV, page segmentation 11). A
+                  word that parses as a bar notation is read three more times from its own crop re-rendered from the
+                  PDF at twice the resolution (segmentations 7, 8, 13). On a vector-glyph page every stroked glyph is
+                  classed by shape and a page-wide OCR vote gives each class its character
+                  (detail_evidence.glyph_votes); the token's glyphs then check the reads (glyph_check). A record is
+                  OCR_UNREVIEWED when the reads agree with the glyphs (VECTOR_GLYPH_CONSENSUS), or, with no glyph
+                  check, when all reads give the same unique parse; else OCR_REJECTED_*. The region above each
+                  detail caption is re-read for tokens the page pass missed.
 
 Every record keeps the page, the region in PDF points and in pixels, the raw text, the confidence, both reads and
 the crop file name. Crops are written under DIR/crops (never committed). Owner / title-block / file-path text is

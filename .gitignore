@@ -45,3 +45,4 @@ research/urban_engine_m2_generalization/**/*.pdf
 # M3: OCR crops and page renders are client drawing content (the evidence JSON keeps their file names only)
 research/urban_engine_m3_recovery/**/crops/
 research/urban_engine_m3_recovery/**/*.png
+research/urban_engine_m3_recovery/**/*.pdf

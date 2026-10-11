@@ -23,7 +23,10 @@ FACE_FILL = {"PRINTED_IN_PANEL": "#81c7b8", "SHEET_UNIFORM": "#b2dfd6", "CONVENT
              "NO_THICKNESS": "#f4a259", "CONFLICTING_TAGS": "#f4a259"}
 FOOT = {"CONFIRMED": "#1b7f4c", "TYPE_BY_SIZE_MATCH": "#2b6cb0", "SIZE_MISMATCH": "#b7791f",
         "COMBINED_OUTLINE": "#b7791f", "NESTED_OR_DUPLICATE": "#718096", "TYPE_NOT_IN_SCHEDULE": "#c53030"}
-LEGEND = [("#1b7f4c", "beam band bound to a schedule mark / footing confirmed"),
+REGION_FILL = {"STAIR_ZONE": ("#d6bcfa", "#6b46c1"), "UNRESOLVED": ("#feb2b2", "#c53030")}
+LEGEND = [("#d6bcfa", "stair zone found by its treads (not slab; unresolved)"),
+          ("#feb2b2", "cell held out: free-standing column inside a ground-slab cell (unresolved)"),
+          ("#1b7f4c", "beam band bound to a schedule mark / footing confirmed"),
           ("#2b6cb0", "section inherited along the line / footing typed by size"),
           ("#b7791f", "width or size conflict, resolved by a named convention"),
           ("#c53030", "unbound band / type not in schedule (unresolved)"),
@@ -72,7 +75,9 @@ def sheet_svg(rec, width=1000):
            f'<rect x="0" y="0" width="{width:.0f}" height="{hh:.0f}" fill="#ffffff" stroke="#a0aec0"/>']
     slab = rec.get("slab") or {}
     for f in slab.get("faces", []):
-        if f["class"] == "PANEL":
+        if f.get("region") in REGION_FILL:                    # M3 region classes take precedence
+            fill, stroke = REGION_FILL[f["region"]]
+        elif f["class"] == "PANEL":
             fill = FACE_FILL.get(f.get("t_basis"), "#f4a259")
             stroke = "#e53e3e" if f.get("open_boundary") else "#4a5568"
         elif f["class"] == "OPENING":

@@ -1,0 +1,296 @@
+{
+ "clean_m2": {
+  "drawings": 40,
+  "end_to_end_success": 40,
+  "failures": [],
+  "mean_abs_error": {
+   "BEAMS_TOTAL_DEPTH": 0.004038,
+   "COLUMNS": 0.0,
+   "FOOTINGS": 0.0,
+   "SLABS": 0.0,
+   "STEEL_BEAMS": 0.002778,
+   "STEEL_FOOTINGS": 0.0
+  },
+  "max_abs_error": {
+   "BEAMS_TOTAL_DEPTH": 0.116279,
+   "COLUMNS": 0,
+   "FOOTINGS": 0,
+   "SLABS": 0,
+   "STEEL_BEAMS": 0.080206,
+   "STEEL_FOOTINGS": 0
+  },
+  "within_1pct": {
+   "BEAMS_TOTAL_DEPTH": 38,
+   "COLUMNS": 40,
+   "FOOTINGS": 40,
+   "SLABS": 40,
+   "STEEL_BEAMS": 38,
+   "STEEL_FOOTINGS": 40
+  },
+  "detect_beams": {
+   "recall": 0.9975,
+   "precision": 1.0,
+   "matched": 1590,
+   "true": 1594,
+   "pred": 1590
+  },
+  "detect_panels": {
+   "recall": 1.0,
+   "precision": 1.0,
+   "matched": 496,
+   "true": 496,
+   "pred": 496
+  },
+  "footings": {
+   "records": 544,
+   "true": 544
+  },
+  "unresolved_items": 30,
+  "mean_seconds": 0.103
+ },
+ "clean_m3": {
+  "drawings": 40,
+  "end_to_end_success": 40,
+  "failures": [],
+  "mean_abs_error": {
+   "BEAMS_TOTAL_DEPTH": 0.004038,
+   "COLUMNS": 0.0,
+   "FOOTINGS": 0.0,
+   "SLABS": 0.0,
+   "STEEL_BEAMS": 0.002778,
+   "STEEL_FOOTINGS": 0.0
+  },
+  "max_abs_error": {
+   "BEAMS_TOTAL_DEPTH": 0.116279,
+   "COLUMNS": 0,
+   "FOOTINGS": 0,
+   "SLABS": 0,
+   "STEEL_BEAMS": 0.080206,
+   "STEEL_FOOTINGS": 0
+  },
+  "within_1pct": {
+   "BEAMS_TOTAL_DEPTH": 38,
+   "COLUMNS": 40,
+   "FOOTINGS": 40,
+   "SLABS": 40,
+   "STEEL_BEAMS": 38,
+   "STEEL_FOOTINGS": 40
+  },
+  "detect_beams": {
+   "recall": 0.9975,
+   "precision": 1.0,
+   "matched": 1590,
+   "true": 1594,
+   "pred": 1590
+  },
+  "detect_panels": {
+   "recall": 1.0,
+   "precision": 1.0,
+   "matched": 496,
+   "true": 496,
+   "pred": 496
+  },
+  "footings": {
+   "records": 544,
+   "true": 544
+  },
+  "unresolved_items": 70,
+  "mean_seconds": 0.118
+ },
+ "defects_m2": {
+  "drawings": 40,
+  "end_to_end_success": 40,
+  "failures": [],
+  "mean_abs_error": {
+   "BEAMS_TOTAL_DEPTH": 0.004038,
+   "COLUMNS": 0.0,
+   "FOOTINGS": 0.0,
+   "SLABS": 0.0,
+   "STEEL_BEAMS": 0.002778,
+   "STEEL_FOOTINGS": 0.0
+  },
+  "max_abs_error": {
+   "BEAMS_TOTAL_DEPTH": 0.116279,
+   "COLUMNS": 0,
+   "FOOTINGS": 0,
+   "SLABS": 0,
+   "STEEL_BEAMS": 0.080206,
+   "STEEL_FOOTINGS": 0
+  },
+  "within_1pct": {
+   "BEAMS_TOTAL_DEPTH": 38,
+   "COLUMNS": 40,
+   "FOOTINGS": 40,
+   "SLABS": 40,
+   "STEEL_BEAMS": 38,
+   "STEEL_FOOTINGS": 40
+  },
+  "detect_beams": {
+   "recall": 0.9975,
+   "precision": 1.0,
+   "matched": 1590,
+   "true": 1594,
+   "pred": 1590
+  },
+  "detect_panels": {
+   "recall": 1.0,
+   "precision": 1.0,
+   "matched": 496,
+   "true": 496,
+   "pred": 496
+  },
+  "footings": {
+   "records": 544,
+   "true": 544
+  },
+  "unresolved_items": 30,
+  "mean_seconds": 0.131
+ },
+ "defects_m3": {
+  "drawings": 40,
+  "end_to_end_success": 40,
+  "failures": [],
+  "mean_abs_error": {
+   "BEAMS_TOTAL_DEPTH": 0.004038,
+   "COLUMNS": 0.0,
+   "FOOTINGS": 0.0,
+   "SLABS": 0.0,
+   "STEEL_BEAMS": 0.002778,
+   "STEEL_FOOTINGS": 0.0
+  },
+  "max_abs_error": {
+   "BEAMS_TOTAL_DEPTH": 0.116279,
+   "COLUMNS": 0,
+   "FOOTINGS": 0,
+   "SLABS": 0,
+   "STEEL_BEAMS": 0.080206,
+   "STEEL_FOOTINGS": 0
+  },
+  "within_1pct": {
+   "BEAMS_TOTAL_DEPTH": 38,
+   "COLUMNS": 40,
+   "FOOTINGS": 40,
+   "SLABS": 40,
+   "STEEL_BEAMS": 38,
+   "STEEL_FOOTINGS": 40
+  },
+  "detect_beams": {
+   "recall": 0.9975,
+   "precision": 1.0,
+   "matched": 1590,
+   "true": 1594,
+   "pred": 1590
+  },
+  "detect_panels": {
+   "recall": 1.0,
+   "precision": 1.0,
+   "matched": 496,
+   "true": 496,
+   "pred": 496
+  },
+  "footings": {
+   "records": 544,
+   "true": 544
+  },
+  "unresolved_items": 70,
+  "mean_seconds": 0.145
+ },
+ "m3_m2": {
+  "drawings": 40,
+  "end_to_end_success": 40,
+  "failures": [],
+  "mean_abs_error": {
+   "BEAMS_TOTAL_DEPTH": 0.118134,
+   "COLUMNS": 0.0,
+   "FOOTINGS": 0.080385,
+   "SLABS": 0.0,
+   "STEEL_BEAMS": 0.114644,
+   "STEEL_FOOTINGS": 0.079893
+  },
+  "max_abs_error": {
+   "BEAMS_TOTAL_DEPTH": 0.309609,
+   "COLUMNS": 0,
+   "FOOTINGS": 0.165364,
+   "SLABS": 0,
+   "STEEL_BEAMS": 0.270769,
+   "STEEL_FOOTINGS": 0.154114
+  },
+  "within_1pct": {
+   "BEAMS_TOTAL_DEPTH": 1,
+   "COLUMNS": 40,
+   "FOOTINGS": 0,
+   "SLABS": 40,
+   "STEEL_BEAMS": 1,
+   "STEEL_FOOTINGS": 0
+  },
+  "detect_beams": {
+   "recall": 0.8959,
+   "precision": 1.0,
+   "matched": 1428,
+   "true": 1594,
+   "pred": 1428
+  },
+  "detect_panels": {
+   "recall": 1.0,
+   "precision": 1.0,
+   "matched": 496,
+   "true": 496,
+   "pred": 496
+  },
+  "footings": {
+   "records": 544,
+   "true": 544
+  },
+  "unresolved_items": 75,
+  "mean_seconds": 0.11
+ },
+ "m3_m3": {
+  "drawings": 40,
+  "end_to_end_success": 40,
+  "failures": [],
+  "mean_abs_error": {
+   "BEAMS_TOTAL_DEPTH": 0.004281,
+   "COLUMNS": 0.0,
+   "FOOTINGS": 0.0,
+   "SLABS": 0.0,
+   "STEEL_BEAMS": 0.002977,
+   "STEEL_FOOTINGS": 0.0
+  },
+  "max_abs_error": {
+   "BEAMS_TOTAL_DEPTH": 0.116526,
+   "COLUMNS": 0,
+   "FOOTINGS": 0,
+   "SLABS": 0,
+   "STEEL_BEAMS": 0.080388,
+   "STEEL_FOOTINGS": 0
+  },
+  "within_1pct": {
+   "BEAMS_TOTAL_DEPTH": 38,
+   "COLUMNS": 40,
+   "FOOTINGS": 40,
+   "SLABS": 40,
+   "STEEL_BEAMS": 38,
+   "STEEL_FOOTINGS": 40
+  },
+  "detect_beams": {
+   "recall": 0.9975,
+   "precision": 1.0,
+   "matched": 1590,
+   "true": 1594,
+   "pred": 1590
+  },
+  "detect_panels": {
+   "recall": 1.0,
+   "precision": 1.0,
+   "matched": 496,
+   "true": 496,
+   "pred": 496
+  },
+  "footings": {
+   "records": 544,
+   "true": 544
+  },
+  "unresolved_items": 70,
+  "mean_seconds": 0.122
+ }
+}
