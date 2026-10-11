@@ -1,0 +1,527 @@
+{
+ "engine": "CONCRETE_COMPLETENESS_V2 (freeze commit 6c20879, 02_ENGINE_FREEZE_V2.json)",
+ "rule": "seeds 201-240 generated for the first time after the V2 freeze; run once; reported as they came out (no engine change after)",
+ "configs": {
+  "A2": "seeds 201-240, mixed defects (odd seeds), development vocabulary, V2 cases",
+  "B2": "seeds 201-240, mixed defects, held-out vocabulary (layer names, notes, spellings, hatch layers, patterns, legend words the development seeds never draw), hard distractors, V2 cases"
+ },
+ "V2_engine": {
+  "A2": {
+   "drawings": 40,
+   "crashed": [],
+   "elements": 470,
+   "detected": 470,
+   "recall": 1.0,
+   "family_of_detected": {
+    "NA": 96,
+    "RIGHT": 323,
+    "UNKNOWN": 36,
+    "WRONG": 15
+   },
+   "family_of_detected_best_match": {
+    "NA": 96,
+    "RIGHT": 314,
+    "UNKNOWN": 45,
+    "WRONG": 15
+   },
+   "false_findings": 9,
+   "false_findings_per_drawing": 0.225,
+   "false_findings_by_kind": {
+    "COLUMN_PRESENCE_NOT_ITEMIZED": 1,
+    "DRAWN_NOT_MEASURED": 3,
+    "REGION_EXCLUDED": 5
+   },
+   "v2_cases": {
+    "HATCHED_BEAM": {
+     "n": 27,
+     "detected": 27,
+     "recall": 1.0
+    },
+    "HATCHED_PANEL": {
+     "n": 24,
+     "detected": 24,
+     "recall": 1.0
+    },
+    "PIT_IN_FOOTING": {
+     "n": 22,
+     "detected": 22,
+     "recall": 1.0
+    }
+   }
+  },
+  "B2": {
+   "drawings": 40,
+   "crashed": [],
+   "elements": 470,
+   "detected": 470,
+   "recall": 1.0,
+   "family_of_detected": {
+    "NA": 96,
+    "RIGHT": 328,
+    "UNKNOWN": 36,
+    "WRONG": 10
+   },
+   "family_of_detected_best_match": {
+    "NA": 96,
+    "RIGHT": 318,
+    "UNKNOWN": 42,
+    "WRONG": 14
+   },
+   "false_findings": 11,
+   "false_findings_per_drawing": 0.275,
+   "false_findings_by_kind": {
+    "COLUMN_PRESENCE_NOT_ITEMIZED": 1,
+    "DRAWN_NOT_MEASURED": 3,
+    "REGION_EXCLUDED": 6,
+    "SLAB_COVERAGE_LOW": 1
+   },
+   "v2_cases": {
+    "HATCHED_BEAM": {
+     "n": 27,
+     "detected": 27,
+     "recall": 1.0
+    },
+    "HATCHED_PANEL": {
+     "n": 24,
+     "detected": 24,
+     "recall": 1.0
+    },
+    "PIT_IN_FOOTING": {
+     "n": 22,
+     "detected": 22,
+     "recall": 1.0
+    }
+   }
+  }
+ },
+ "V1_engine_same_drawings": {
+  "A2": {
+   "drawings": 40,
+   "crashed": [],
+   "elements": 470,
+   "detected": 422,
+   "recall": 0.8979,
+   "family_of_detected": {
+    "NA": 96,
+    "RIGHT": 287,
+    "UNKNOWN": 17,
+    "WRONG": 22
+   },
+   "family_of_detected_best_match": {
+    "NA": 96,
+    "RIGHT": 280,
+    "UNKNOWN": 22,
+    "WRONG": 24
+   },
+   "false_findings": 15,
+   "false_findings_per_drawing": 0.375,
+   "false_findings_by_kind": {
+    "COLUMN_PRESENCE_NOT_ITEMIZED": 1,
+    "DRAWN_NOT_MEASURED": 9,
+    "REGION_EXCLUDED": 5
+   },
+   "v2_cases": {
+    "HATCHED_BEAM": {
+     "n": 27,
+     "detected": 3,
+     "recall": 0.111
+    },
+    "HATCHED_PANEL": {
+     "n": 24,
+     "detected": 9,
+     "recall": 0.375
+    },
+    "PIT_IN_FOOTING": {
+     "n": 22,
+     "detected": 13,
+     "recall": 0.591
+    }
+   }
+  },
+  "B2": {
+   "drawings": 40,
+   "crashed": [],
+   "elements": 470,
+   "detected": 436,
+   "recall": 0.9277,
+   "family_of_detected": {
+    "NA": 96,
+    "RIGHT": 289,
+    "UNKNOWN": 34,
+    "WRONG": 17
+   },
+   "family_of_detected_best_match": {
+    "NA": 96,
+    "RIGHT": 281,
+    "UNKNOWN": 36,
+    "WRONG": 23
+   },
+   "false_findings": 37,
+   "false_findings_per_drawing": 0.925,
+   "false_findings_by_kind": {
+    "COLUMN_PRESENCE_NOT_ITEMIZED": 1,
+    "DRAWN_NOT_MEASURED": 29,
+    "REGION_EXCLUDED": 6,
+    "SLAB_COVERAGE_LOW": 1
+   },
+   "v2_cases": {
+    "HATCHED_BEAM": {
+     "n": 27,
+     "detected": 5,
+     "recall": 0.185
+    },
+    "HATCHED_PANEL": {
+     "n": 24,
+     "detected": 24,
+     "recall": 1.0
+    },
+    "PIT_IN_FOOTING": {
+     "n": 22,
+     "detected": 10,
+     "recall": 0.455
+    }
+   }
+  }
+ },
+ "V2_engine_same_seeds_without_v2_cases": {
+  "A2": {
+   "drawings": 40,
+   "crashed": [],
+   "elements": 397,
+   "detected": 397,
+   "recall": 1.0,
+   "family_of_detected": {
+    "NA": 96,
+    "RIGHT": 288,
+    "UNKNOWN": 5,
+    "WRONG": 8
+   },
+   "family_of_detected_best_match": {
+    "NA": 96,
+    "RIGHT": 280,
+    "UNKNOWN": 10,
+    "WRONG": 11
+   },
+   "false_findings": 8,
+   "false_findings_per_drawing": 0.2,
+   "false_findings_by_kind": {
+    "COLUMN_PRESENCE_NOT_ITEMIZED": 1,
+    "DRAWN_NOT_MEASURED": 2,
+    "REGION_EXCLUDED": 5
+   },
+   "v2_cases": {}
+  },
+  "B2": {
+   "drawings": 40,
+   "crashed": [],
+   "elements": 397,
+   "detected": 397,
+   "recall": 1.0,
+   "family_of_detected": {
+    "NA": 96,
+    "RIGHT": 287,
+    "UNKNOWN": 11,
+    "WRONG": 3
+   },
+   "family_of_detected_best_match": {
+    "NA": 96,
+    "RIGHT": 278,
+    "UNKNOWN": 13,
+    "WRONG": 10
+   },
+   "false_findings": 10,
+   "false_findings_per_drawing": 0.25,
+   "false_findings_by_kind": {
+    "COLUMN_PRESENCE_NOT_ITEMIZED": 1,
+    "DRAWN_NOT_MEASURED": 2,
+    "REGION_EXCLUDED": 6,
+    "SLAB_COVERAGE_LOW": 1
+   },
+   "v2_cases": {}
+  }
+ },
+ "V1_heldout_seeds_101_140_rerun_on_V2": {
+  "A1_dev_vocabulary": {
+   "drawings": 40,
+   "crashed": [],
+   "elements": 384,
+   "detected": 383,
+   "recall": 0.9974,
+   "family_of_detected": {
+    "NA": 76,
+    "RIGHT": 289,
+    "UNKNOWN": 11,
+    "WRONG": 7
+   },
+   "family_of_detected_best_match": {
+    "NA": 76,
+    "RIGHT": 286,
+    "UNKNOWN": 15,
+    "WRONG": 6
+   },
+   "false_findings": 2,
+   "false_findings_per_drawing": 0.05,
+   "false_findings_by_kind": {
+    "REGION_EXCLUDED": 1,
+    "SLAB_COVERAGE_LOW": 1
+   },
+   "v2_cases": {}
+  },
+  "B1_heldout_vocabulary_hard": {
+   "drawings": 40,
+   "crashed": [],
+   "elements": 384,
+   "detected": 384,
+   "recall": 1.0,
+   "family_of_detected": {
+    "NA": 76,
+    "RIGHT": 290,
+    "UNKNOWN": 11,
+    "WRONG": 7
+   },
+   "family_of_detected_best_match": {
+    "NA": 76,
+    "RIGHT": 288,
+    "UNKNOWN": 17,
+    "WRONG": 3
+   },
+   "false_findings": 1,
+   "false_findings_per_drawing": 0.025,
+   "false_findings_by_kind": {
+    "SLAB_COVERAGE_LOW": 1
+   },
+   "v2_cases": {}
+  },
+  "recorded_V1": {
+   "A1": {
+    "drawings": 40,
+    "crashed": [],
+    "elements": 384,
+    "detected": 383,
+    "recall": 0.9974,
+    "family_of_detected": {
+     "NA": 76,
+     "RIGHT": 289,
+     "UNKNOWN": 11,
+     "WRONG": 7
+    },
+    "family_of_detected_best_match": null,
+    "false_findings": 2,
+    "false_findings_per_drawing": 0.05,
+    "false_findings_by_kind": {
+     "REGION_EXCLUDED": 1,
+     "SLAB_COVERAGE_LOW": 1
+    },
+    "v2_cases": {}
+   },
+   "B1": {
+    "drawings": 40,
+    "crashed": [],
+    "elements": 384,
+    "detected": 384,
+    "recall": 1.0,
+    "family_of_detected": {
+     "NA": 76,
+     "RIGHT": 290,
+     "UNKNOWN": 11,
+     "WRONG": 7
+    },
+    "family_of_detected_best_match": null,
+    "false_findings": 1,
+    "false_findings_per_drawing": 0.025,
+    "false_findings_by_kind": {
+     "SLAB_COVERAGE_LOW": 1
+    },
+    "v2_cases": {}
+   }
+  }
+ },
+ "false_findings_classified_post_hoc": [
+  {
+   "config": "A2",
+   "seed": 209,
+   "kind": "REGION_EXCLUDED",
+   "storey": "1F",
+   "in_base_drawing_without_v2_cases": true,
+   "class": "ROUTE_SLAB_ERROR_SURFACED: the route's slab engine took a 17-85 m2 region as opening (the design has one bay opening); the finding is right, the truth file does not model it",
+   "evidence": "face SITE-2eeeac6791dcae67 24.64 m2 region OPENING_DOMINANT (opening); no item"
+  },
+  {
+   "config": "A2",
+   "seed": 215,
+   "kind": "REGION_EXCLUDED",
+   "storey": "GF",
+   "in_base_drawing_without_v2_cases": true,
+   "class": "ROUTE_SLAB_ERROR_SURFACED: the route's slab engine took a 17-85 m2 region as opening (the design has one bay opening); the finding is right, the truth file does not model it",
+   "evidence": "face SITE-d2fd24c51c7518dc 62.77 m2 region OPENING_DOMINANT (opening); no item"
+  },
+  {
+   "config": "A2",
+   "seed": 219,
+   "kind": "COLUMN_PRESENCE_NOT_ITEMIZED",
+   "storey": "1F",
+   "in_base_drawing_without_v2_cases": true,
+   "class": "UNVERIFIED",
+   "evidence": "column outline 0.25 x 0.50 m (1 pieces, 0.125 m2) on the 1F plan; no 1F column item here"
+  },
+  {
+   "config": "A2",
+   "seed": 220,
+   "kind": "DRAWN_NOT_MEASURED",
+   "storey": "2F",
+   "in_base_drawing_without_v2_cases": true,
+   "class": "TRUTH_GAP: the dome of the 1F plan, copied with the plan to 2F (extra-storey variant); no truth row for the copy",
+   "evidence": "face SITE-3b9a0fa0b1ce3ad4 14.37 m2 region STAIR_ZONE (WINDER of 12 treads over 33% of the cell); no item; its 12 lines radiate from the cen"
+  },
+  {
+   "config": "A2",
+   "seed": 233,
+   "kind": "DRAWN_NOT_MEASURED",
+   "storey": "1F",
+   "in_base_drawing_without_v2_cases": false,
+   "class": "ENGINE_WEAKNESS_W5: two legend rows 0.7 m apart - each swatch sees both captions within 3 m, so neither is read as a legend and the pair becomes a fill group",
+   "evidence": "layer S-HATCH: 2 entities (0 lines, 0 arcs, 0 circles, 2 hatches), 0.00 m; shape HATCH_REGION; outside_building; notes: CANTILEVER, SLAB_STE"
+  },
+  {
+   "config": "A2",
+   "seed": 239,
+   "kind": "DRAWN_NOT_MEASURED",
+   "storey": "GF",
+   "in_base_drawing_without_v2_cases": true,
+   "class": "ROUTE_SLAB_ERROR_SURFACED: the bay opening's X on the opening layer, left unowned once its bay merged into a larger face",
+   "evidence": "layer 2: 2 entities (2 lines, 0 arcs, 0 circles, 0 hatches), 11.08 m; shape LINEWORK; inside_building; notes: SLAB_STEP; marks near: B1,B3,C"
+  },
+  {
+   "config": "A2",
+   "seed": 239,
+   "kind": "REGION_EXCLUDED",
+   "storey": "1F",
+   "in_base_drawing_without_v2_cases": true,
+   "class": "ROUTE_SLAB_ERROR_SURFACED: the route's slab engine took a 17-85 m2 region as opening (the design has one bay opening); the finding is right, the truth file does not model it",
+   "evidence": "face SITE-14a991d8a52303f0 16.73 m2 region OPENING_DOMINANT (opening); no item"
+  },
+  {
+   "config": "A2",
+   "seed": 240,
+   "kind": "REGION_EXCLUDED",
+   "storey": "GF",
+   "in_base_drawing_without_v2_cases": true,
+   "class": "ROUTE_SLAB_ERROR_SURFACED: the route's slab engine took a 17-85 m2 region as opening (the design has one bay opening); the finding is right, the truth file does not model it",
+   "evidence": "face SITE-665f3f86318ea4a9 84.97 m2 region OPENING_DOMINANT (opening); no item"
+  },
+  {
+   "config": "A2",
+   "seed": 240,
+   "kind": "REGION_EXCLUDED",
+   "storey": "1F",
+   "in_base_drawing_without_v2_cases": true,
+   "class": "ROUTE_SLAB_ERROR_SURFACED: the route's slab engine took a 17-85 m2 region as opening (the design has one bay opening); the finding is right, the truth file does not model it",
+   "evidence": "face SITE-d531b7cb9df36b10 24.75 m2 region OPENING_DOMINANT (opening); no item"
+  },
+  {
+   "config": "B2",
+   "seed": 209,
+   "kind": "REGION_EXCLUDED",
+   "storey": "1F",
+   "in_base_drawing_without_v2_cases": true,
+   "class": "ROUTE_SLAB_ERROR_SURFACED: the route's slab engine took a 17-85 m2 region as opening (the design has one bay opening); the finding is right, the truth file does not model it",
+   "evidence": "face SITE-2eeeac6791dcae67 24.64 m2 region OPENING_DOMINANT (opening); no item"
+  },
+  {
+   "config": "B2",
+   "seed": 209,
+   "kind": "SLAB_COVERAGE_LOW",
+   "storey": "GF",
+   "in_base_drawing_without_v2_cases": true,
+   "class": "ROUTE_SLAB_ERROR_SURFACED: low slab coverage on a plan whose bays merged into an opening region",
+   "evidence": "the GF plan encloses 85.5 m2; panels held by items 29.5 m2 and member strips together hold only 49% (regions: BEAM_STRIP 11.7, COLUMN 0.9, O"
+  },
+  {
+   "config": "B2",
+   "seed": 212,
+   "kind": "REGION_EXCLUDED",
+   "storey": "GF",
+   "in_base_drawing_without_v2_cases": true,
+   "class": "ROUTE_SLAB_ERROR_SURFACED: the route's slab engine took a 17-85 m2 region as opening (the design has one bay opening); the finding is right, the truth file does not model it",
+   "evidence": "face SITE-560e0a8cffe7f976 69.74 m2 region OPENING_DOMINANT (opening); no item"
+  },
+  {
+   "config": "B2",
+   "seed": 215,
+   "kind": "REGION_EXCLUDED",
+   "storey": "GF",
+   "in_base_drawing_without_v2_cases": true,
+   "class": "ROUTE_SLAB_ERROR_SURFACED: the route's slab engine took a 17-85 m2 region as opening (the design has one bay opening); the finding is right, the truth file does not model it",
+   "evidence": "face SITE-ec1e2b20a524315e 19.97 m2 region OPENING_DOMINANT (opening); no item"
+  },
+  {
+   "config": "B2",
+   "seed": 219,
+   "kind": "COLUMN_PRESENCE_NOT_ITEMIZED",
+   "storey": "1F",
+   "in_base_drawing_without_v2_cases": true,
+   "class": "UNVERIFIED",
+   "evidence": "column outline 0.25 x 0.50 m (1 pieces, 0.125 m2) on the 1F plan; no 1F column item here"
+  },
+  {
+   "config": "B2",
+   "seed": 220,
+   "kind": "DRAWN_NOT_MEASURED",
+   "storey": "2F",
+   "in_base_drawing_without_v2_cases": true,
+   "class": "TRUTH_GAP: the dome of the 1F plan, copied with the plan to 2F (extra-storey variant); no truth row for the copy",
+   "evidence": "face SITE-6cbb5f04083306e5 14.37 m2 region STAIR_ZONE (WINDER of 12 treads over 27% of the cell); no item; its 12 lines radiate from the cen"
+  },
+  {
+   "config": "B2",
+   "seed": 234,
+   "kind": "DRAWN_NOT_MEASURED",
+   "storey": "1F",
+   "in_base_drawing_without_v2_cases": false,
+   "class": "ENGINE_WEAKNESS_W5: two legend rows 0.7 m apart - each swatch sees both captions within 3 m, so neither is read as a legend and the pair becomes a fill group",
+   "evidence": "layer HT-1: 2 entities (0 lines, 0 arcs, 0 circles, 2 hatches), 0.00 m; shape HATCH_REGION; outside_building; notes: CANTILEVER, SLAB_STEP; "
+  },
+  {
+   "config": "B2",
+   "seed": 239,
+   "kind": "DRAWN_NOT_MEASURED",
+   "storey": "GF",
+   "in_base_drawing_without_v2_cases": true,
+   "class": "ROUTE_SLAB_ERROR_SURFACED: the bay opening's X on the opening layer, left unowned once its bay merged into a larger face",
+   "evidence": "layer 2: 2 entities (2 lines, 0 arcs, 0 circles, 0 hatches), 11.08 m; shape LINEWORK; inside_building; notes: SLAB_STEP; marks near: B1,B3,C"
+  },
+  {
+   "config": "B2",
+   "seed": 239,
+   "kind": "REGION_EXCLUDED",
+   "storey": "1F",
+   "in_base_drawing_without_v2_cases": true,
+   "class": "ROUTE_SLAB_ERROR_SURFACED: the route's slab engine took a 17-85 m2 region as opening (the design has one bay opening); the finding is right, the truth file does not model it",
+   "evidence": "face SITE-14a991d8a52303f0 16.73 m2 region OPENING_DOMINANT (opening); no item"
+  },
+  {
+   "config": "B2",
+   "seed": 240,
+   "kind": "REGION_EXCLUDED",
+   "storey": "GF",
+   "in_base_drawing_without_v2_cases": true,
+   "class": "ROUTE_SLAB_ERROR_SURFACED: the route's slab engine took a 17-85 m2 region as opening (the design has one bay opening); the finding is right, the truth file does not model it",
+   "evidence": "face SITE-665f3f86318ea4a9 84.97 m2 region OPENING_DOMINANT (opening); no item"
+  },
+  {
+   "config": "B2",
+   "seed": 240,
+   "kind": "REGION_EXCLUDED",
+   "storey": "1F",
+   "in_base_drawing_without_v2_cases": true,
+   "class": "ROUTE_SLAB_ERROR_SURFACED: the route's slab engine took a 17-85 m2 region as opening (the design has one bay opening); the finding is right, the truth file does not model it",
+   "evidence": "face SITE-d531b7cb9df36b10 24.75 m2 region OPENING_DOMINANT (opening); no item"
+  }
+ ],
+ "limitations": [
+  "synthetic drawings share the generator author's drafting assumptions (one hatch per meaning, legend rows to the right of the building, pits inside the largest footing)",
+  "the held-out vocabulary words are mostly in the engine's lexicon (FAMILY_TOKENS / SCOPE_WORDS): held-out tests generalisation over names the development seeds never drew, not over words the engine does not know",
+  "W1 (unbound marks) has no synthetic case: the generator cannot draw a mark between two parallel bands; it is tested by a hand-built fixture and on ST7757 (post-discovery)",
+  "the false-finding classification is post hoc and does not change the counts above"
+ ]
+}

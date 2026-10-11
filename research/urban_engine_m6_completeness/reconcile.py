@@ -169,20 +169,26 @@ def _route_ids(members):
             m["SOURCE"].startswith("URBAN M5 (printed label)")}
 
 
+BASIS_ORDER = ("ENTITY", "ITEM", "M1", "CANDIDATES")
+
+
 def _matches_m2(el, f, members):
-    if f["KIND"] not in ITEM_KINDS_EXCLUDED and _route_ids(members) & {x for x in f["ITEMS"].split(",") if x}:
-        return True                                    # the finding names the element's own route item
+    """the basis on which the finding reports the element (ENTITY / ITEM: that very element; M1: family, storey and
+    mark; CANDIDATES: an unidentified finding of the storey that lists the family), or None."""
     refs = {x for x in re.split(r"[,;| ]+", f["REFS"] or "") if x}
     if refs & {h for m in members for h in HANDLE.findall(m.get("LOCATION") or "")}:
-        return True                                    # ... or its drawing entity
+        return "ENTITY"                                # the finding names the element's drawing entity
+    if f["KIND"] not in ITEM_KINDS_EXCLUDED and _route_ids(members) & {x for x in f["ITEMS"].split(",") if x}:
+        return "ITEM"                                  # ... or its own route item
     if _matches(el, f):
-        return True
+        return "M1"
     c = CANDIDATES.search(f["EVIDENCE"])
     if f["FAMILY"] == "UNKNOWN" and c and el["FAMILY"] in SPECIAL and \
             set(c.group(1).split(" or ")) & set(FAMILY.get(el["FAMILY"], ())):
         sto = STOREYS.get(el["FLOOR"])
-        return sto is None or f["STOREY"] in sto or f["STOREY"] in ("ALL", "")
-    return False
+        if sto is None or f["STOREY"] in sto or f["STOREY"] in ("ALL", ""):
+            return "CANDIDATES"
+    return None
 
 
 def reconcile(run="V1", matcher="M1", ext=None):
@@ -209,7 +215,9 @@ def reconcile(run="V1", matcher="M1", ext=None):
             route = "HOLDS_UNRESOLVED"
         else:
             route = "ABSENT"
-        hits = [f for f in F if (_matches_m2(el, f, mem) if matcher == "M2" else _matches(el, f))]
+        basis = {f["FINDING_ID"]: (_matches_m2(el, f, mem) if matcher == "M2" else "M1" if _matches(el, f)
+                                   else None) for f in F}
+        hits = [f for f in F if basis[f["FINDING_ID"]]]
         for f in hits:
             used[f["FINDING_ID"]].append(el)
         if matcher == "M2" and el["FAMILY"] in NOT_RC:
@@ -228,7 +236,10 @@ def reconcile(run="V1", matcher="M1", ext=None):
                      "FREELANCER_M3": round(fl, 3), "MCP": json.dumps(mc, sort_keys=True) if mc else "",
                      "URBAN_STAGE_M3": round(st, 3), "ROUTE_MEASURED_M3": round(rb, 3),
                      "ROUTE_UNRESOLVED_EXPOSURE_M3": round(rc, 3), "ROUTE": route, "M5_CLASS": el["CLASS"],
-                     "VERDICT": verdict, "FINDINGS": ";".join(f"{f['FINDING_ID']}:{f['KIND']}" for f in hits[:6])})
+                     "VERDICT": verdict, "MATCH_BASIS": min((basis[f["FINDING_ID"]] for f in hits),
+                                                            key=BASIS_ORDER.index, default=""),
+                     "FINDINGS": ";".join(f"{f['FINDING_ID']}:{f['KIND']}" for f in sorted(
+                         hits, key=lambda f: BASIS_ORDER.index(basis[f["FINDING_ID"]]))[:6])})
     frows = []
     for f in F:
         els = used.get(f["FINDING_ID"], [])
@@ -255,6 +266,8 @@ def reconcile(run="V1", matcher="M1", ext=None):
         "completeness_cases": len(cases),
         "detected": sum(1 for r in cases if r["VERDICT"] == "DETECTED"),
         "detected_unidentified": sum(1 for r in cases if r["VERDICT"] == "DETECTED_UNIDENTIFIED"),
+        "detected_by_basis": dict(sorted(Counter(r["MATCH_BASIS"] for r in cases if r["VERDICT"] != "MISSED")
+                                         .items())),
         "missed": [r["ELEMENT_ID"] for r in cases if r["VERDICT"] == "MISSED"],
         "missed_m3_external": round(sum(max(r["FREELANCER_M3"], r["URBAN_STAGE_M3"]) for r in cases
                                         if r["VERDICT"] == "MISSED"), 3),
@@ -299,6 +312,7 @@ def outputs():
         for (rn, m), (rows, _, _) in res.items():
             row[f"{rn}_{m}"] = rows[i]["VERDICT"]
         for rn in runs:
+            row[f"{rn}_M2_BASIS"] = res[(rn, "M2")][0][i]["MATCH_BASIS"]
             row[f"{rn}_M2_FINDINGS"] = res[(rn, "M2")][0][i]["FINDINGS"]
         els.append(row)
     out = {"reconciliation/01_RECONCILIATION_SUMMARY.json": json.dumps(summary, indent=1) + "\n",

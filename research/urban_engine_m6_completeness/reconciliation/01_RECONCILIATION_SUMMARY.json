@@ -1,0 +1,186 @@
+{
+ "phase": "BENCHMARK_RECONCILIATION",
+ "runs": [
+  "V1",
+  "V2"
+ ],
+ "matchers": {
+  "M1": "family + storey; marks by token; special families by family alone (V1, as first written)",
+  "M2": "M1 + the finding names the element's route item or DXF entity; an UNKNOWN finding listing the element's family among its candidates (special families, as unidentified); blinding outside the RC count (written before the V2 run froze)"
+ },
+ "results": {
+  "V1_M1": {
+   "run": "V1",
+   "matcher": "M1",
+   "run_phase": "BLIND_GEOMETRY_INTERPRETATION",
+   "frozen_hash": "de4b4a3b3804959eec79d6c0",
+   "engine_commit": "090a470",
+   "elements": 157,
+   "verdicts": {
+    "DETECTED": 19,
+    "FLAGGED_ALTHOUGH_NOT_DRAWN": 1,
+    "MISSED": 13,
+    "NOT_A_COMPLETENESS_CASE": 113,
+    "NO_EVIDENCE_OF_THE_ELEMENT": 11
+   },
+   "completeness_cases": 32,
+   "detected": 19,
+   "detected_unidentified": 0,
+   "detected_by_basis": {
+    "M1": 19
+   },
+   "missed": [
+    "M5-BEAMS-1F-B23",
+    "M5-BEAMS-1F-CB10",
+    "M5-BEAMS-2F-B15",
+    "M5-BEAMS-GF-B20",
+    "M5-BEAMS-GF-B7",
+    "M5-LIFT-FOUNDATION-PIT_WALLS",
+    "M5-CANTILEVER_PORTIONS-1F-S9A-CP-05",
+    "M5-CANTILEVER_PORTIONS-2F-S9A-CP-07",
+    "M5-CANTILEVER_PORTIONS-2F-S9A-CP-08",
+    "M5-CANTILEVER_PORTIONS-GF-S9A-CP-02",
+    "M5-CANTILEVER_PORTIONS-GF-S9A-CP-03",
+    "M5-CANTILEVER_PORTIONS-GF-S9A-CP-04",
+    "M5-BLINDING-FOUNDATION-PLAIN"
+   ],
+   "missed_m3_external": 58.09,
+   "findings": 76,
+   "finding_states": {
+    "CONTRADICTED": 1,
+    "ENGINE_ONLY": 23,
+    "LINKED_ELEMENT_HELD": 10,
+    "SUPPORTED_BY_EXTERNAL": 42
+   },
+   "rule": "external records are evidence of what exists; they never choose a reading or tune a detector"
+  },
+  "V1_M2": {
+   "run": "V1",
+   "matcher": "M2",
+   "run_phase": "BLIND_GEOMETRY_INTERPRETATION",
+   "frozen_hash": "de4b4a3b3804959eec79d6c0",
+   "engine_commit": "090a470",
+   "elements": 157,
+   "verdicts": {
+    "DETECTED": 19,
+    "FLAGGED_ALTHOUGH_NOT_DRAWN": 1,
+    "MISSED": 12,
+    "NOT_A_COMPLETENESS_CASE": 113,
+    "NO_EVIDENCE_OF_THE_ELEMENT": 11,
+    "OUT_OF_RC_SCOPE": 1
+   },
+   "completeness_cases": 31,
+   "detected": 19,
+   "detected_unidentified": 0,
+   "detected_by_basis": {
+    "M1": 19
+   },
+   "missed": [
+    "M5-BEAMS-1F-B23",
+    "M5-BEAMS-1F-CB10",
+    "M5-BEAMS-2F-B15",
+    "M5-BEAMS-GF-B20",
+    "M5-BEAMS-GF-B7",
+    "M5-LIFT-FOUNDATION-PIT_WALLS",
+    "M5-CANTILEVER_PORTIONS-1F-S9A-CP-05",
+    "M5-CANTILEVER_PORTIONS-2F-S9A-CP-07",
+    "M5-CANTILEVER_PORTIONS-2F-S9A-CP-08",
+    "M5-CANTILEVER_PORTIONS-GF-S9A-CP-02",
+    "M5-CANTILEVER_PORTIONS-GF-S9A-CP-03",
+    "M5-CANTILEVER_PORTIONS-GF-S9A-CP-04"
+   ],
+   "missed_m3_external": 11.035,
+   "findings": 76,
+   "finding_states": {
+    "CONTRADICTED": 1,
+    "ENGINE_ONLY": 23,
+    "LINKED_ELEMENT_HELD": 10,
+    "SUPPORTED_BY_EXTERNAL": 42
+   },
+   "rule": "external records are evidence of what exists; they never choose a reading or tune a detector"
+  },
+  "V2_M1": {
+   "run": "V2",
+   "matcher": "M1",
+   "run_phase": "POST_DISCOVERY",
+   "frozen_hash": "25551fa9f5b07f395c5dda64",
+   "engine_commit": "6c20879",
+   "elements": 157,
+   "verdicts": {
+    "DETECTED": 20,
+    "FLAGGED_ALTHOUGH_NOT_DRAWN": 1,
+    "MISSED": 12,
+    "NOT_A_COMPLETENESS_CASE": 113,
+    "NO_EVIDENCE_OF_THE_ELEMENT": 11
+   },
+   "completeness_cases": 32,
+   "detected": 20,
+   "detected_unidentified": 0,
+   "detected_by_basis": {
+    "M1": 20
+   },
+   "missed": [
+    "M5-BEAMS-1F-B23",
+    "M5-BEAMS-2F-B15",
+    "M5-BEAMS-GF-B20",
+    "M5-BEAMS-GF-B7",
+    "M5-LIFT-FOUNDATION-PIT_WALLS",
+    "M5-CANTILEVER_PORTIONS-1F-S9A-CP-05",
+    "M5-CANTILEVER_PORTIONS-2F-S9A-CP-07",
+    "M5-CANTILEVER_PORTIONS-2F-S9A-CP-08",
+    "M5-CANTILEVER_PORTIONS-GF-S9A-CP-02",
+    "M5-CANTILEVER_PORTIONS-GF-S9A-CP-03",
+    "M5-CANTILEVER_PORTIONS-GF-S9A-CP-04",
+    "M5-BLINDING-FOUNDATION-PLAIN"
+   ],
+   "missed_m3_external": 57.215,
+   "findings": 93,
+   "finding_states": {
+    "CONTRADICTED": 1,
+    "ENGINE_ONLY": 38,
+    "LINKED_ELEMENT_HELD": 10,
+    "SUPPORTED_BY_EXTERNAL": 44
+   },
+   "rule": "external records are evidence of what exists; they never choose a reading or tune a detector"
+  },
+  "V2_M2": {
+   "run": "V2",
+   "matcher": "M2",
+   "run_phase": "POST_DISCOVERY",
+   "frozen_hash": "25551fa9f5b07f395c5dda64",
+   "engine_commit": "6c20879",
+   "elements": 157,
+   "verdicts": {
+    "DETECTED": 20,
+    "DETECTED_UNIDENTIFIED": 10,
+    "FLAGGED_ALTHOUGH_NOT_DRAWN": 1,
+    "MISSED": 1,
+    "NOT_A_COMPLETENESS_CASE": 113,
+    "NO_EVIDENCE_OF_THE_ELEMENT": 11,
+    "OUT_OF_RC_SCOPE": 1
+   },
+   "completeness_cases": 31,
+   "detected": 20,
+   "detected_unidentified": 10,
+   "detected_by_basis": {
+    "CANDIDATES": 1,
+    "ENTITY": 6,
+    "ITEM": 3,
+    "M1": 20
+   },
+   "missed": [
+    "M5-BEAMS-GF-B7"
+   ],
+   "missed_m3_external": 1.572,
+   "findings": 93,
+   "finding_states": {
+    "CONTRADICTED": 1,
+    "ENGINE_ONLY": 24,
+    "LINKED_ELEMENT_HELD": 10,
+    "SUPPORTED_BY_EXTERNAL": 58
+   },
+   "rule": "external records are evidence of what exists; they never choose a reading or tune a detector"
+  }
+ },
+ "rule": "external records are evidence of what exists; they never choose a reading or tune a detector; V2 is post-discovery (not blind) - its generalisation evidence is the held-out synthetic villas"
+}
