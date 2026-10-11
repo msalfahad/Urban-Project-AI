@@ -41,7 +41,10 @@ layer rule stay weak evidence (two had stopped being reported); P3 the per-item 
 against the wrong type. The held-out completeness runs repeated on the post-fix engine are identical on every count
 (`heldout/POSTFIX_COMPLETENESS.json`).
 
-**Tests**: 42 new tests in `tests/m7_reliability/` (42 passed); M1–M7 package suites pass; full suite in `12_REGRESSION_RESULTS.md`.
+**Tests**: 42 new tests in `tests/m7_reliability/`, all passed. Full suite (`12_REGRESSION_RESULTS.md`): 7 476
+passed (M6 7 434 + the 42), **0 code failures**, the same 376 tests blocked by missing data and 136 prerequisite
+skips as at M6; M1–M6 package suites all pass, the M4 and M5 frozen records rebuild live on the M7 engine.
+Gate: **INCOMPLETE**.
 
 ## C Second villa
 
