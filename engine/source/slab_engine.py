@@ -271,6 +271,68 @@ def _unenclosed_sides(faces, band_pieces, unit_m, column_boxes=()):
     return out
 
 
+def band_sides(faces, band_pieces, unit_m, column_boxes=()):
+    """band_id -> its two long sides, each classified from the planar arrangement (M3, generic):
+        FACE:<class>   the side borders a bounded face (PANEL, OPENING, ...)
+        ENCLOSED_GAP   no bounded face, but members lie beyond it on every probe (an unclosed slab cell)
+        OUTSIDE        no bounded face and no band or column beyond it: the outside of the member network
+    A band with an OUTSIDE side is a perimeter (exterior) member of the plan. Arcs are probed radially at mid-angle
+    when the piece carries its centre and radii, otherwise their sides are UNKNOWN."""
+    out = {}
+    if not band_pieces:
+        return out
+    d0 = 0.01 / unit_m
+    xs = [x for b in band_pieces for x, _ in b["polygon"]]
+    ys = [y for b in band_pieces for _, y in b["polygon"]]
+    span = math.hypot(max(xs) - min(xs), max(ys) - min(ys))
+    boxes = []
+    for f in faces:
+        px = [x for x, _ in f["polygon"]]
+        py = [y for _, y in f["polygon"]]
+        boxes.append((min(px), min(py), max(px), max(py), f))
+    obst = [(o.get("band_id"), o["polygon"]) for o in band_pieces] + [(None, MD.box_poly(c)) for c in column_boxes]
+
+    def classify(p, nrm, own):
+        for bx0, by0, bx1, by1, f in boxes:
+            if bx0 <= p[0] <= bx1 and by0 <= p[1] <= by1 and MD.point_in_poly(p[0], p[1], f["polygon"]):
+                return "FACE:" + str(f["class"])
+        hit = [h for bid, q in obst if bid != own for h in [_ray_hits_poly(p, nrm, q, span)] if h is not None]
+        if not hit:
+            return "OUTSIDE"
+        # members beyond the side: a bay only when it is boxed in both ways along the side (as _unenclosed_sides);
+        # a gap between two separate building parts opens to the outside
+        q = (p[0] + nrm[0] * min(hit) / 2, p[1] + nrm[1] * min(hit) / 2)
+        lat = [any(_ray_hits_poly(q, (sx * -nrm[1], sx * nrm[0]), o, span) is not None for _, o in obst)
+               for sx in (1, -1)]
+        return "ENCLOSED_GAP" if all(lat) else "OUTSIDE"
+    for b in band_pieces:
+        own = b.get("band_id")
+        if b.get("kind") == "STRAIGHT" and len(b["polygon"]) == 4:
+            poly = b["polygon"]
+            cx = sum(x for x, _ in poly) / 4
+            cy = sum(y for _, y in poly) / 4
+            sides = sorted(((math.dist(poly[k], poly[(k + 1) % 4]), k) for k in range(4)), reverse=True)[:2]
+            res = []
+            for _, k in sides:
+                (x1, y1), (x2, y2) = poly[k], poly[(k + 1) % 4]
+                mx, my = (x1 + x2) / 2, (y1 + y2) / 2
+                L = math.hypot(x2 - x1, y2 - y1)
+                nx, ny = -(y2 - y1) / L, (x2 - x1) / L
+                if nx * (mx - cx) + ny * (my - cy) < 0:
+                    nx, ny = -nx, -ny
+                res.append(classify((mx + nx * d0, my + ny * d0), (nx, ny), own))
+            out[own] = res
+        elif b.get("kind") == "ARC" and b.get("centre") and b.get("r_outer") and b.get("start_rad") is not None:
+            c, a = b["centre"], b["start_rad"] + b.get("overlap_rad", 0.0) / 2.0
+            ux, uy = math.cos(a), math.sin(a)
+            po = (c[0] + ux * (b["r_outer"] + d0), c[1] + uy * (b["r_outer"] + d0))
+            pi = (c[0] + ux * (b["r_inner"] - d0), c[1] + uy * (b["r_inner"] - d0))
+            out[own] = [classify(po, (ux, uy), own), classify(pi, (-ux, -uy), own)]
+        else:
+            out[own] = ["UNKNOWN", "UNKNOWN"]
+    return out
+
+
 def policy_record():
     return {"policy": POLICY_ID, "classes": ["BEAM", "COLUMN", "OPENING", "PANEL", "DETAIL", "OPEN_BOUNDARY"],
             "rule": "a face is slab only with band adjacency and no opening evidence; thickness printed > sheet "

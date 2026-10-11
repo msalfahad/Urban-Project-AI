@@ -2,7 +2,7 @@
 
     python3 -I tools/urban_boq_m2.py run --drawings NEW.dxf --out OUT [--profile P.json] [--route auto|A|B|G|C]
                                        [--conventions C.json] [--set ID=VALUE ...] [--no-pdf] [--no-xlsx]
-                                       [--cache DIR]
+                                       [--cache DIR] [--evidence DETAIL_EVIDENCE.json]
 
 tools/urban_structural_boq.py (M1) is frozen (research/alsenan_m1_usable_boq/06_M1_FREEZE_MANIFEST.json) and is
 used here unchanged: routes A / B / C are delegated to it as they are. This module adds:
@@ -34,6 +34,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from engine import boq_m1_xlsx as XL                      # noqa: E402
+from engine.source import detail_evidence as DE           # noqa: E402
 from engine.source import drawing_inventory as DI         # noqa: E402
 from engine.source import generic_route as GR             # noqa: E402
 from engine.source import provisional_estimate as PE      # noqa: E402
@@ -75,25 +76,38 @@ def cached_intake(dxf, cache_dir=None):
     return I, "CACHE_MISS_STORED"
 
 
-def route_generic(inputs, conv_path, overrides, profile, cache_dir=None):
+def load_evidence(path):
+    """a detail-evidence document (tools/pdf_evidence.py or a manual transcription); refused when it fails the schema
+    check (a record that is not what it claims never reaches a quantity)."""
+    if not path:
+        return None
+    ev = json.loads(Path(path).read_text(encoding="utf-8"))
+    bad = DE.validate(ev)
+    if bad:
+        raise M1.PipelineError(f"detail evidence {path} fails validation: {bad[:5]}")
+    return ev
+
+
+def route_generic(inputs, conv_path, overrides, profile, cache_dir=None, evidence=None):
     dxf = next((r for r in inputs if r["kind"] == "DXF" and "error" not in r), None)
     if dxf is None:
         raise M1.PipelineError("route G needs a readable DXF (a DWG must be converted to DXF first; a PDF alone "
                                "carries no measurable geometry here)")
     I, cache_state = cached_intake(dxf, cache_dir)
-    D = GR.detect(I)
     generic = json.loads((ROOT / (conv_path or GENERIC_CONVENTIONS)).read_text(encoding="utf-8"))
+    # M3: an unmarked ground-beam network is searched at the printed typical widths only
+    D = GR.detect(I, typical_widths_m=GR.typical_gb_widths(GR.merge_conventions(generic, profile, overrides)))
 
     def build(ov):
         conv = GR.merge_conventions(generic, profile, ov)
-        items, reg, risk = GR.items_from(D, conv, GR.storey_heights(conv))
+        items, reg, risk = GR.items_from(D, conv, GR.storey_heights(conv), evidence=evidence)
         return conv, items, reg, risk
     conv, items, reg, risk = build(overrides)
     exc = [{"EXCEPTION_ID": f"CR-{k:04d}", "KIND": "COVERAGE_RISK:" + r["KIND"], "FAMILY": "", "SHEET": r["WHERE"],
             "DETAIL": str(r["DETAIL"])[:300], "LOCATION": ""} for k, r in enumerate(risk, 1)]
     return {"items": items, "conv": conv, "coverage": [], "rebuild": lambda ov: build(dict(overrides, **ov))[1],
             "frozen": [], "exceptions": exc, "adapter": None,
-            "generic": {"D": D, "register": reg, "risk": risk, "intake_cache": cache_state}}
+            "generic": {"D": D, "register": reg, "risk": risk, "intake_cache": cache_state, "evidence": evidence}}
 
 
 def not_detected_lines(risk):
@@ -109,7 +123,8 @@ def not_detected_lines(risk):
     return out
 
 
-def compute(drawings, *, conventions=None, overrides=None, profile=None, project=None, route="auto", cache_dir=None):
+def compute(drawings, *, conventions=None, overrides=None, profile=None, project=None, route="auto", cache_dir=None,
+            evidence=None):
     prof = None
     if profile:
         prof = json.loads(Path(profile).read_text(encoding="utf-8")) if not isinstance(profile, dict) else profile
@@ -131,7 +146,8 @@ def compute(drawings, *, conventions=None, overrides=None, profile=None, project
     invs, _ = M1.inventories(inputs)
     t = step("2 inventory", t)
     overrides = dict(overrides or {})
-    res = route_generic(inputs, conventions, overrides, prof, cache_dir)
+    ev = load_evidence(evidence) if isinstance(evidence, (str, Path)) else evidence
+    res = route_generic(inputs, conventions, overrides, prof, cache_dir, evidence=ev)
     t = step("3-5 generic detection, quantities, conventions", t)
     items = res["items"]
     PE.check(items, res["conv"])
@@ -162,6 +178,10 @@ def compute(drawings, *, conventions=None, overrides=None, profile=None, project
         "not_detected_families": {b["FAMILY"]: b["EVIDENCE"] for b in boq if b["SECTION"].startswith("C")},
         "sheets": [{k: sh[k] for k in ("sheet_id", "role", "storey")} for sh in g["D"]["model"]["sheets"]],
         "intake_cache": g["intake_cache"],
+        "detail_evidence": None if not ev else {
+            "document": ev.get("document"), "records": dict(sorted(Counter(r["state"] for r in ev["records"]).items())),
+            "ground_beam_details": [{"detail_id": d["detail_id"], "condition": d["condition"], "ocr": d["ocr"],
+                                     "roles": sorted(d["bars"])} for d in DE.ground_beam_details(ev)]},
         "rule": "planning = verified + provisional base; low / high sum each item's own low / high; unresolved "
                 "items and not-detected families are never added; a new project is never VERIFIED",
     }
@@ -258,9 +278,11 @@ def main(argv=None):
     p.add_argument("--no-xlsx", action="store_true")
     p.add_argument("--as-of", default=datetime.now().strftime("%Y-%m-%d"))
     p.add_argument("--cache", help="folder for cached intakes (by drawing sha256 and code digest); optional")
+    p.add_argument("--evidence", help="DETAIL_EVIDENCE.json from tools/pdf_evidence.py (or a manual transcription "
+                                      "in the same schema): typical-detail bars the DXF does not carry")
     a = ap.parse_args(argv)
     R = compute(a.drawings, conventions=a.conventions, overrides=M1.parse_sets(a.set), profile=a.profile,
-                route=a.route, cache_dir=a.cache)
+                route=a.route, cache_dir=a.cache, evidence=a.evidence)
     writer = write_all if R.get("generic") else M1.write_all
     res = writer(R, a.out, as_of=a.as_of, pdf=not a.no_pdf, xlsx=not a.no_xlsx)
     s = R["summary"]

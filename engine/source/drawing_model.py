@@ -93,8 +93,13 @@ def normalize(raw):
     return re.sub(r"\s+", " ", s).strip()
 
 
+DOTTED_MARK = re.compile(r"^[A-Z](\.[A-Z])+\.?-?\d")      # S.B2, G.B.1: letters split by dots, then a number
+
+
 def mark_family(mark):
     m = normalize(mark).upper().replace(" ", "")
+    if DOTTED_MARK.match(m):                 # M3: dotted plan marks ("S.B2") are the schedule's "SB2"
+        m = m.replace(".", "")
     for fam, rx in TAG_FAMILIES:
         if re.match(rx, m):
             return fam, m

@@ -1,0 +1,2056 @@
+{
+ "schema": "URBAN_DETAIL_EVIDENCE_V1",
+ "policy": "PDF_EVIDENCE_V1",
+ "document": {
+  "file": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3.pdf",
+  "sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3",
+  "pages": 16
+ },
+ "engine": {
+  "ocr": "tesseract 5.3.4",
+  "dpi": 300,
+  "second_read_dpi": 600,
+  "psm_page": 11,
+  "psm_token": [
+   7,
+   8,
+   13
+  ],
+  "image_check": "VECTOR_GLYPH_CONSENSUS (vector-glyph pages), else UNANIMOUS_READS"
+ },
+ "redact_patterns": [
+  "(?i)ALS[EY]?N[YA]?AN"
+ ],
+ "pages": [
+  {
+   "page": 13,
+   "native_words": 6,
+   "vector_paths": 8092,
+   "images": 0,
+   "dropped_tokens": 12,
+   "method": "NATIVE_TEXT+OCR_TESSERACT",
+   "vector_glyph_page": true,
+   "raster_page": false,
+   "tokens": 450,
+   "glyphs": {
+    "n": 5261,
+    "classes": 626,
+    "voting_words": 109,
+    "known_classes": 20
+   }
+  }
+ ],
+ "records": [
+  {
+   "record_id": "EV-0001",
+   "page": 13,
+   "region_pt": [
+    686.16,
+    531.84,
+    702.72,
+    538.32
+   ],
+   "region_px": [
+    2859,
+    2216,
+    2928,
+    2243
+   ],
+   "dpi": null,
+   "method": "OCR_TESSERACT",
+   "raw_text": "5016",
+   "confidence": 51.93383,
+   "reads": [
+    {
+     "text": "5016",
+     "psm": 11,
+     "dpi": null,
+     "conf": 51.93383,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "5016",
+      "count": 5,
+      "dia_mm": 16,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "CONTRADICTED"
+    },
+    {
+     "text": "5016",
+     "psm": 7,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "5016",
+      "count": 5,
+      "dia_mm": 16,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "CONTRADICTED"
+    },
+    {
+     "text": "3916",
+     "psm": 8,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3916",
+      "count": 3,
+      "dia_mm": 16,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    },
+    {
+     "text": "3916",
+     "psm": 13,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3916",
+      "count": 3,
+      "dia_mm": 16,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    }
+   ],
+   "parsed": {
+    "state": "PARSED",
+    "raw": "3916",
+    "count": 3,
+    "dia_mm": 16,
+    "spacing_m": null,
+    "kind": "BARS"
+   },
+   "crop": "crops/p13_EV-0001.png",
+   "found_by": "PAGE_READ",
+   "glyph_classes": [
+    34,
+    97,
+    25,
+    137
+   ],
+   "state": "OCR_UNREVIEWED",
+   "validation": "VECTOR_GLYPH_CONSENSUS"
+  },
+  {
+   "record_id": "EV-0002",
+   "page": 13,
+   "region_pt": [
+    686.16,
+    563.28,
+    717.6,
+    572.64
+   ],
+   "region_px": [
+    2859,
+    2347,
+    2990,
+    2386
+   ],
+   "dpi": null,
+   "method": "OCR_TESSERACT",
+   "raw_text": "08/15cm",
+   "confidence": 50.855255,
+   "reads": [
+    {
+     "text": "08/15cm",
+     "psm": 11,
+     "dpi": null,
+     "conf": 50.855255,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "08/15cm",
+      "count": null,
+      "dia_mm": 8,
+      "spacing_m": 0.15,
+      "kind": "LINKS"
+     },
+     "glyph_check": "UNCHECKED"
+    },
+    {
+     "text": "$8/15cm",
+     "psm": 7,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "$8/15cm",
+      "count": null,
+      "dia_mm": 8,
+      "spacing_m": 0.15,
+      "kind": "LINKS"
+     },
+     "glyph_check": "UNCHECKED"
+    },
+    {
+     "text": "98/15cm",
+     "psm": 8,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "98/15cm",
+      "count": null,
+      "dia_mm": 8,
+      "spacing_m": 0.15,
+      "kind": "LINKS"
+     },
+     "glyph_check": "UNCHECKED"
+    },
+    {
+     "text": "98/15cm",
+     "psm": 13,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "98/15cm",
+      "count": null,
+      "dia_mm": 8,
+      "spacing_m": 0.15,
+      "kind": "LINKS"
+     },
+     "glyph_check": "UNCHECKED"
+    }
+   ],
+   "parsed": {
+    "state": "PARSED",
+    "raw": "08/15cm",
+    "count": null,
+    "dia_mm": 8,
+    "spacing_m": 0.15,
+    "kind": "LINKS"
+   },
+   "crop": "crops/p13_EV-0002.png",
+   "found_by": "PAGE_READ",
+   "glyph_classes": [
+    97,
+    99,
+    100,
+    25,
+    101,
+    102,
+    7,
+    103,
+    103
+   ],
+   "state": "OCR_UNREVIEWED",
+   "validation": "UNANIMOUS_READS_GLYPHS_UNCHECKED"
+  },
+  {
+   "record_id": "EV-0003",
+   "page": 13,
+   "region_pt": [
+    686.16,
+    588.96,
+    702.72,
+    595.44
+   ],
+   "region_px": [
+    2859,
+    2454,
+    2928,
+    2481
+   ],
+   "dpi": null,
+   "method": "OCR_TESSERACT",
+   "raw_text": "3616",
+   "confidence": 82.403343,
+   "reads": [
+    {
+     "text": "3616",
+     "psm": 11,
+     "dpi": null,
+     "conf": 82.403343,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3616",
+      "count": 3,
+      "dia_mm": 16,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    },
+    {
+     "text": "5016",
+     "psm": 7,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "5016",
+      "count": 5,
+      "dia_mm": 16,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "CONTRADICTED"
+    },
+    {
+     "text": "3916",
+     "psm": 8,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3916",
+      "count": 3,
+      "dia_mm": 16,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    },
+    {
+     "text": "3916",
+     "psm": 13,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3916",
+      "count": 3,
+      "dia_mm": 16,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    }
+   ],
+   "parsed": {
+    "state": "PARSED",
+    "raw": "3616",
+    "count": 3,
+    "dia_mm": 16,
+    "spacing_m": null,
+    "kind": "BARS"
+   },
+   "crop": "crops/p13_EV-0003.png",
+   "found_by": "PAGE_READ",
+   "glyph_classes": [
+    96,
+    97,
+    25,
+    137
+   ],
+   "state": "OCR_UNREVIEWED",
+   "validation": "VECTOR_GLYPH_CONSENSUS"
+  },
+  {
+   "record_id": "EV-0004",
+   "page": 13,
+   "region_pt": [
+    686.4,
+    604.56,
+    702.72,
+    611.04
+   ],
+   "region_px": [
+    2860,
+    2519,
+    2928,
+    2546
+   ],
+   "dpi": null,
+   "method": "OCR_TESSERACT",
+   "raw_text": "3616",
+   "confidence": 72.944427,
+   "reads": [
+    {
+     "text": "3616",
+     "psm": 11,
+     "dpi": null,
+     "conf": 72.944427,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3616",
+      "count": 3,
+      "dia_mm": 16,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    },
+    {
+     "text": "5616",
+     "psm": 7,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "5616",
+      "count": 5,
+      "dia_mm": 16,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "CONTRADICTED"
+    },
+    {
+     "text": "3016",
+     "psm": 8,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3016",
+      "count": 3,
+      "dia_mm": 16,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    },
+    {
+     "text": "3016",
+     "psm": 13,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3016",
+      "count": 3,
+      "dia_mm": 16,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    }
+   ],
+   "parsed": {
+    "state": "PARSED",
+    "raw": "3616",
+    "count": 3,
+    "dia_mm": 16,
+    "spacing_m": null,
+    "kind": "BARS"
+   },
+   "crop": "crops/p13_EV-0004.png",
+   "found_by": "PAGE_READ",
+   "glyph_classes": [
+    34,
+    97,
+    25,
+    137
+   ],
+   "state": "OCR_UNREVIEWED",
+   "validation": "VECTOR_GLYPH_CONSENSUS"
+  },
+  {
+   "record_id": "EV-0005",
+   "page": 13,
+   "region_pt": [
+    828.0,
+    603.84,
+    844.56,
+    610.08
+   ],
+   "region_px": [
+    3450,
+    2516,
+    3519,
+    2542
+   ],
+   "dpi": null,
+   "method": "OCR_TESSERACT",
+   "raw_text": "3016",
+   "confidence": 63.855354,
+   "reads": [
+    {
+     "text": "3016",
+     "psm": 11,
+     "dpi": null,
+     "conf": 63.855354,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3016",
+      "count": 3,
+      "dia_mm": 16,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    },
+    {
+     "text": "5616",
+     "psm": 7,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "5616",
+      "count": 5,
+      "dia_mm": 16,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "CONTRADICTED"
+    },
+    {
+     "text": "3016",
+     "psm": 8,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3016",
+      "count": 3,
+      "dia_mm": 16,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    },
+    {
+     "text": "3016",
+     "psm": 13,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3016",
+      "count": 3,
+      "dia_mm": 16,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    }
+   ],
+   "parsed": {
+    "state": "PARSED",
+    "raw": "3016",
+    "count": 3,
+    "dia_mm": 16,
+    "spacing_m": null,
+    "kind": "BARS"
+   },
+   "crop": "crops/p13_EV-0005.png",
+   "found_by": "PAGE_READ",
+   "glyph_classes": [
+    34,
+    97,
+    25,
+    137
+   ],
+   "state": "OCR_UNREVIEWED",
+   "validation": "VECTOR_GLYPH_CONSENSUS"
+  },
+  {
+   "record_id": "EV-0006",
+   "page": 13,
+   "region_pt": [
+    973.68,
+    618.72,
+    990.24,
+    625.2
+   ],
+   "region_px": [
+    4057,
+    2578,
+    4126,
+    2605
+   ],
+   "dpi": null,
+   "method": "OCR_TESSERACT",
+   "raw_text": "3014",
+   "confidence": 57.693604,
+   "reads": [
+    {
+     "text": "3014",
+     "psm": 11,
+     "dpi": null,
+     "conf": 57.693604,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3014",
+      "count": 3,
+      "dia_mm": 14,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    },
+    {
+     "text": "5614",
+     "psm": 7,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "5614",
+      "count": 5,
+      "dia_mm": 14,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "CONTRADICTED"
+    },
+    {
+     "text": "3014",
+     "psm": 8,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3014",
+      "count": 3,
+      "dia_mm": 14,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    },
+    {
+     "text": "3014",
+     "psm": 13,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3014",
+      "count": 3,
+      "dia_mm": 14,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    }
+   ],
+   "parsed": {
+    "state": "PARSED",
+    "raw": "3014",
+    "count": 3,
+    "dia_mm": 14,
+    "spacing_m": null,
+    "kind": "BARS"
+   },
+   "crop": "crops/p13_EV-0006.png",
+   "found_by": "PAGE_READ",
+   "glyph_classes": [
+    96,
+    97,
+    25,
+    98
+   ],
+   "state": "OCR_UNREVIEWED",
+   "validation": "VECTOR_GLYPH_CONSENSUS"
+  },
+  {
+   "record_id": "EV-0007",
+   "page": 13,
+   "region_pt": [
+    973.68,
+    638.88,
+    1004.88,
+    648.24
+   ],
+   "region_px": [
+    4057,
+    2662,
+    4187,
+    2701
+   ],
+   "dpi": null,
+   "method": "OCR_TESSERACT",
+   "raw_text": "98/15cm",
+   "confidence": 26.037582,
+   "reads": [
+    {
+     "text": "98/15cm",
+     "psm": 11,
+     "dpi": null,
+     "conf": 26.037582,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "98/15cm",
+      "count": null,
+      "dia_mm": 8,
+      "spacing_m": 0.15,
+      "kind": "LINKS"
+     },
+     "glyph_check": "UNCHECKED"
+    },
+    {
+     "text": "08/15cm",
+     "psm": 7,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "08/15cm",
+      "count": null,
+      "dia_mm": 8,
+      "spacing_m": 0.15,
+      "kind": "LINKS"
+     },
+     "glyph_check": "UNCHECKED"
+    },
+    {
+     "text": "98/150m",
+     "psm": 8,
+     "dpi": 600,
+     "parsed": {
+      "state": "UNPARSED",
+      "raw": "98/150m"
+     },
+     "glyph_check": "UNCHECKED"
+    },
+    {
+     "text": "98/150m",
+     "psm": 13,
+     "dpi": 600,
+     "parsed": {
+      "state": "UNPARSED",
+      "raw": "98/150m"
+     },
+     "glyph_check": "UNCHECKED"
+    }
+   ],
+   "parsed": {
+    "state": "PARSED",
+    "raw": "98/15cm",
+    "count": null,
+    "dia_mm": 8,
+    "spacing_m": 0.15,
+    "kind": "LINKS"
+   },
+   "crop": "crops/p13_EV-0007.png",
+   "found_by": "PAGE_READ",
+   "glyph_classes": [
+    97,
+    99,
+    100,
+    25,
+    101,
+    102,
+    7,
+    103,
+    103
+   ],
+   "state": "OCR_REJECTED_UNPARSED"
+  },
+  {
+   "record_id": "EV-0008",
+   "page": 13,
+   "region_pt": [
+    973.68,
+    651.6,
+    990.24,
+    657.84
+   ],
+   "region_px": [
+    4057,
+    2715,
+    4126,
+    2741
+   ],
+   "dpi": null,
+   "method": "OCR_TESSERACT",
+   "raw_text": "3614",
+   "confidence": 69.577957,
+   "reads": [
+    {
+     "text": "3614",
+     "psm": 11,
+     "dpi": null,
+     "conf": 69.577957,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3614",
+      "count": 3,
+      "dia_mm": 14,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    },
+    {
+     "text": "35614",
+     "psm": 7,
+     "dpi": 600,
+     "parsed": {
+      "state": "UNPARSED",
+      "raw": "35614"
+     },
+     "glyph_check": "UNCHECKED"
+    },
+    {
+     "text": "3014",
+     "psm": 8,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3014",
+      "count": 3,
+      "dia_mm": 14,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    },
+    {
+     "text": "3014",
+     "psm": 13,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3014",
+      "count": 3,
+      "dia_mm": 14,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    }
+   ],
+   "parsed": {
+    "state": "PARSED",
+    "raw": "3614",
+    "count": 3,
+    "dia_mm": 14,
+    "spacing_m": null,
+    "kind": "BARS"
+   },
+   "crop": "crops/p13_EV-0008.png",
+   "found_by": "PAGE_READ",
+   "glyph_classes": [
+    34,
+    97,
+    25,
+    98
+   ],
+   "state": "OCR_UNREVIEWED",
+   "validation": "VECTOR_GLYPH_CONSENSUS"
+  },
+  {
+   "record_id": "EV-0009",
+   "page": 13,
+   "region_pt": [
+    828.24,
+    651.36,
+    868.08,
+    660.72
+   ],
+   "region_px": [
+    3451,
+    2714,
+    3617,
+    2753
+   ],
+   "dpi": null,
+   "method": "OCR_TESSERACT",
+   "raw_text": "2612/30cm",
+   "confidence": 52.089977,
+   "reads": [
+    {
+     "text": "2612/30cm",
+     "psm": 11,
+     "dpi": null,
+     "conf": 52.089977,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "2612/30cm",
+      "count": 2,
+      "dia_mm": 12,
+      "spacing_m": 0.3,
+      "kind": "BARS_AT_SPACING"
+     },
+     "glyph_check": "UNCHECKED"
+    },
+    {
+     "text": "2612/30cm",
+     "psm": 7,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "2612/30cm",
+      "count": 2,
+      "dia_mm": 12,
+      "spacing_m": 0.3,
+      "kind": "BARS_AT_SPACING"
+     },
+     "glyph_check": "UNCHECKED"
+    },
+    {
+     "text": "2912/30em",
+     "psm": 8,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "2912/30em",
+      "count": 2,
+      "dia_mm": 12,
+      "spacing_m": 0.3,
+      "kind": "BARS_AT_SPACING"
+     },
+     "glyph_check": "UNCHECKED"
+    },
+    {
+     "text": "2912/30em",
+     "psm": 13,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "2912/30em",
+      "count": 2,
+      "dia_mm": 12,
+      "spacing_m": 0.3,
+      "kind": "BARS_AT_SPACING"
+     },
+     "glyph_check": "UNCHECKED"
+    }
+   ],
+   "parsed": {
+    "state": "PARSED",
+    "raw": "2612/30cm",
+    "count": 2,
+    "dia_mm": 12,
+    "spacing_m": 0.3,
+    "kind": "BARS_AT_SPACING"
+   },
+   "crop": "crops/p13_EV-0009.png",
+   "found_by": "PAGE_READ",
+   "glyph_classes": [
+    138,
+    97,
+    25,
+    138,
+    92,
+    34,
+    85,
+    35,
+    7,
+    103,
+    103
+   ],
+   "state": "OCR_UNREVIEWED",
+   "validation": "UNANIMOUS_READS_GLYPHS_UNCHECKED"
+  },
+  {
+   "record_id": "EV-0010",
+   "page": 13,
+   "region_pt": [
+    973.68,
+    663.12,
+    990.24,
+    669.6
+   ],
+   "region_px": [
+    4057,
+    2763,
+    4126,
+    2790
+   ],
+   "dpi": null,
+   "method": "OCR_TESSERACT",
+   "raw_text": "3014",
+   "confidence": 69.903725,
+   "reads": [
+    {
+     "text": "3014",
+     "psm": 11,
+     "dpi": null,
+     "conf": 69.903725,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3014",
+      "count": 3,
+      "dia_mm": 14,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    },
+    {
+     "text": "5014",
+     "psm": 7,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "5014",
+      "count": 5,
+      "dia_mm": 14,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "CONTRADICTED"
+    },
+    {
+     "text": "3014",
+     "psm": 8,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3014",
+      "count": 3,
+      "dia_mm": 14,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    },
+    {
+     "text": "3014",
+     "psm": 13,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3014",
+      "count": 3,
+      "dia_mm": 14,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    }
+   ],
+   "parsed": {
+    "state": "PARSED",
+    "raw": "3014",
+    "count": 3,
+    "dia_mm": 14,
+    "spacing_m": null,
+    "kind": "BARS"
+   },
+   "crop": "crops/p13_EV-0010.png",
+   "found_by": "PAGE_READ",
+   "glyph_classes": [
+    34,
+    97,
+    25,
+    98
+   ],
+   "state": "OCR_UNREVIEWED",
+   "validation": "VECTOR_GLYPH_CONSENSUS"
+  },
+  {
+   "record_id": "EV-0011",
+   "page": 13,
+   "region_pt": [
+    686.16,
+    705.12,
+    702.96,
+    711.36
+   ],
+   "region_px": [
+    2859,
+    2938,
+    2929,
+    2964
+   ],
+   "dpi": null,
+   "method": "OCR_TESSERACT",
+   "raw_text": "3614",
+   "confidence": 42.829475,
+   "reads": [
+    {
+     "text": "3614",
+     "psm": 11,
+     "dpi": null,
+     "conf": 42.829475,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3614",
+      "count": 3,
+      "dia_mm": 14,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    },
+    {
+     "text": "3614",
+     "psm": 7,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3614",
+      "count": 3,
+      "dia_mm": 14,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    },
+    {
+     "text": "3014",
+     "psm": 8,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3014",
+      "count": 3,
+      "dia_mm": 14,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    },
+    {
+     "text": "3014",
+     "psm": 13,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3014",
+      "count": 3,
+      "dia_mm": 14,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    }
+   ],
+   "parsed": {
+    "state": "PARSED",
+    "raw": "3614",
+    "count": 3,
+    "dia_mm": 14,
+    "spacing_m": null,
+    "kind": "BARS"
+   },
+   "crop": "crops/p13_EV-0011.png",
+   "found_by": "PAGE_READ",
+   "glyph_classes": [
+    34,
+    97,
+    25,
+    98
+   ],
+   "state": "OCR_UNREVIEWED",
+   "validation": "VECTOR_GLYPH_CONSENSUS"
+  },
+  {
+   "record_id": "EV-0012",
+   "page": 13,
+   "region_pt": [
+    686.16,
+    722.4,
+    702.96,
+    728.88
+   ],
+   "region_px": [
+    2859,
+    3010,
+    2929,
+    3037
+   ],
+   "dpi": null,
+   "method": "OCR_TESSERACT",
+   "raw_text": "3914",
+   "confidence": 70.775604,
+   "reads": [
+    {
+     "text": "3914",
+     "psm": 11,
+     "dpi": null,
+     "conf": 70.775604,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3914",
+      "count": 3,
+      "dia_mm": 14,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    },
+    {
+     "text": "5014",
+     "psm": 7,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "5014",
+      "count": 5,
+      "dia_mm": 14,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "CONTRADICTED"
+    },
+    {
+     "text": "3014",
+     "psm": 8,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3014",
+      "count": 3,
+      "dia_mm": 14,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    },
+    {
+     "text": "3014",
+     "psm": 13,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3014",
+      "count": 3,
+      "dia_mm": 14,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    }
+   ],
+   "parsed": {
+    "state": "PARSED",
+    "raw": "3914",
+    "count": 3,
+    "dia_mm": 14,
+    "spacing_m": null,
+    "kind": "BARS"
+   },
+   "crop": "crops/p13_EV-0012.png",
+   "found_by": "PAGE_READ",
+   "glyph_classes": [
+    96,
+    97,
+    25,
+    98
+   ],
+   "state": "OCR_UNREVIEWED",
+   "validation": "VECTOR_GLYPH_CONSENSUS"
+  },
+  {
+   "record_id": "EV-0013",
+   "page": 13,
+   "region_pt": [
+    828.24,
+    718.56,
+    844.56,
+    724.8
+   ],
+   "region_px": [
+    3451,
+    2994,
+    3519,
+    3020
+   ],
+   "dpi": null,
+   "method": "OCR_TESSERACT",
+   "raw_text": "6916",
+   "confidence": 72.976494,
+   "reads": [
+    {
+     "text": "6916",
+     "psm": 11,
+     "dpi": null,
+     "conf": 72.976494,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "6916",
+      "count": 6,
+      "dia_mm": 16,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    },
+    {
+     "text": "6016",
+     "psm": 7,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "6016",
+      "count": 6,
+      "dia_mm": 16,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    },
+    {
+     "text": "6916",
+     "psm": 8,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "6916",
+      "count": 6,
+      "dia_mm": 16,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    },
+    {
+     "text": "6916",
+     "psm": 13,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "6916",
+      "count": 6,
+      "dia_mm": 16,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    }
+   ],
+   "parsed": {
+    "state": "PARSED",
+    "raw": "6916",
+    "count": 6,
+    "dia_mm": 16,
+    "spacing_m": null,
+    "kind": "BARS"
+   },
+   "crop": "crops/p13_EV-0013.png",
+   "found_by": "PAGE_READ",
+   "glyph_classes": [
+    137,
+    97,
+    25,
+    137
+   ],
+   "state": "OCR_UNREVIEWED",
+   "validation": "VECTOR_GLYPH_CONSENSUS"
+  },
+  {
+   "record_id": "EV-0014",
+   "page": 13,
+   "region_pt": [
+    686.16,
+    735.12,
+    702.96,
+    741.36
+   ],
+   "region_px": [
+    2859,
+    3063,
+    2929,
+    3089
+   ],
+   "dpi": null,
+   "method": "OCR_TESSERACT",
+   "raw_text": "3014",
+   "confidence": 44.177708,
+   "reads": [
+    {
+     "text": "3014",
+     "psm": 11,
+     "dpi": null,
+     "conf": 44.177708,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3014",
+      "count": 3,
+      "dia_mm": 14,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    },
+    {
+     "text": "3614",
+     "psm": 7,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3614",
+      "count": 3,
+      "dia_mm": 14,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    },
+    {
+     "text": "3014",
+     "psm": 8,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3014",
+      "count": 3,
+      "dia_mm": 14,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    },
+    {
+     "text": "3014",
+     "psm": 13,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "3014",
+      "count": 3,
+      "dia_mm": 14,
+      "spacing_m": null,
+      "kind": "BARS"
+     },
+     "glyph_check": "VERIFIED"
+    }
+   ],
+   "parsed": {
+    "state": "PARSED",
+    "raw": "3014",
+    "count": 3,
+    "dia_mm": 14,
+    "spacing_m": null,
+    "kind": "BARS"
+   },
+   "crop": "crops/p13_EV-0014.png",
+   "found_by": "PAGE_READ",
+   "glyph_classes": [
+    34,
+    97,
+    25,
+    98
+   ],
+   "state": "OCR_UNREVIEWED",
+   "validation": "VECTOR_GLYPH_CONSENSUS"
+  },
+  {
+   "record_id": "EV-0015",
+   "page": 13,
+   "region_pt": [
+    828.12,
+    692.9,
+    859.56,
+    702.14
+   ],
+   "region_px": null,
+   "dpi": 600,
+   "method": "OCR_TESSERACT",
+   "raw_text": "$8/15cm",
+   "confidence": 62.756847,
+   "reads": [
+    {
+     "text": "$8/15cm",
+     "psm": 11,
+     "dpi": 600,
+     "conf": 62.756847,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "$8/15cm",
+      "count": null,
+      "dia_mm": 8,
+      "spacing_m": 0.15,
+      "kind": "LINKS"
+     },
+     "glyph_check": "UNCHECKED"
+    },
+    {
+     "text": "$8/15cm",
+     "psm": 7,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "$8/15cm",
+      "count": null,
+      "dia_mm": 8,
+      "spacing_m": 0.15,
+      "kind": "LINKS"
+     },
+     "glyph_check": "UNCHECKED"
+    },
+    {
+     "text": "98/15em",
+     "psm": 8,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "98/15em",
+      "count": null,
+      "dia_mm": 8,
+      "spacing_m": 0.15,
+      "kind": "LINKS"
+     },
+     "glyph_check": "UNCHECKED"
+    },
+    {
+     "text": "98/15em",
+     "psm": 13,
+     "dpi": 600,
+     "parsed": {
+      "state": "PARSED",
+      "raw": "98/15em",
+      "count": null,
+      "dia_mm": 8,
+      "spacing_m": 0.15,
+      "kind": "LINKS"
+     },
+     "glyph_check": "UNCHECKED"
+    }
+   ],
+   "parsed": {
+    "state": "PARSED",
+    "raw": "$8/15cm",
+    "count": null,
+    "dia_mm": 8,
+    "spacing_m": 0.15,
+    "kind": "LINKS"
+   },
+   "crop": "crops/p13_EV-0015.png",
+   "found_by": "DETAIL_REGION_READ",
+   "glyph_classes": [
+    97,
+    99,
+    92,
+    25,
+    101,
+    35,
+    7,
+    103,
+    103
+   ],
+   "state": "OCR_UNREVIEWED",
+   "validation": "UNANIMOUS_READS_GLYPHS_UNCHECKED"
+  }
+ ],
+ "captions": [
+  {
+   "caption_id": "P13C01",
+   "page": 13,
+   "region_pt": [
+    64.8,
+    129.6,
+    206.4,
+    169.68
+   ],
+   "text": "Upper Ground beam sitocenerhs/_ Column _ reinforcement",
+   "caption": {
+    "family": "GROUND_BEAM",
+    "scale": null,
+    "condition": "TYPICAL",
+    "min_span_m": null,
+    "max_span_m": null,
+    "qualifiers": []
+   }
+  },
+  {
+   "caption_id": "P13C02",
+   "page": 13,
+   "region_pt": [
+    103.2,
+    190.08,
+    159.84,
+    198.24
+   ],
+   "text": "Column stirrups.",
+   "caption": {
+    "family": "COLUMN",
+    "scale": null,
+    "condition": "TYPICAL",
+    "min_span_m": null,
+    "max_span_m": null,
+    "qualifiers": []
+   }
+  },
+  {
+   "caption_id": "P13C03",
+   "page": 13,
+   "region_pt": [
+    596.16,
+    190.32,
+    699.36,
+    196.8
+   ],
+   "text": "Ground beam reinforcements.",
+   "caption": {
+    "family": "GROUND_BEAM",
+    "scale": null,
+    "condition": "TYPICAL",
+    "min_span_m": null,
+    "max_span_m": null,
+    "qualifiers": []
+   }
+  },
+  {
+   "caption_id": "P13C04",
+   "page": 13,
+   "region_pt": [
+    790.8,
+    208.08,
+    866.88,
+    214.56
+   ],
+   "text": "Column reinforcement",
+   "caption": {
+    "family": "COLUMN",
+    "scale": null,
+    "condition": "TYPICAL",
+    "min_span_m": null,
+    "max_span_m": null,
+    "qualifiers": []
+   }
+  },
+  {
+   "caption_id": "P13C05",
+   "page": 13,
+   "region_pt": [
+    70.8,
+    234.24,
+    216.24,
+    240.48
+   ],
+   "text": "Lower Ground beam reinforcements. 4",
+   "caption": {
+    "family": "GROUND_BEAM",
+    "scale": null,
+    "condition": "TYPICAL",
+    "min_span_m": null,
+    "max_span_m": null,
+    "qualifiers": []
+   }
+  },
+  {
+   "caption_id": "P13C06",
+   "page": 13,
+   "region_pt": [
+    650.64,
+    257.52,
+    705.12,
+    265.68
+   ],
+   "text": "Column stirrups",
+   "caption": {
+    "family": "COLUMN",
+    "scale": null,
+    "condition": "TYPICAL",
+    "min_span_m": null,
+    "max_span_m": null,
+    "qualifiers": []
+   }
+  },
+  {
+   "caption_id": "P13C07",
+   "page": 13,
+   "region_pt": [
+    90.48,
+    438.48,
+    251.52,
+    469.44
+   ],
+   "text": "TYP. DETAIL OF ISOLATED FOOTING. (WITH OUT BASEMENT) (When the level difference between upper",
+   "caption": {
+    "family": "FOOTING",
+    "scale": null,
+    "condition": "TYPICAL",
+    "min_span_m": null,
+    "max_span_m": null,
+    "qualifiers": []
+   }
+  },
+  {
+   "caption_id": "P13C08",
+   "page": 13,
+   "region_pt": [
+    144.96,
+    468.72,
+    270.48,
+    477.36
+   ],
+   "text": "ground beam and footing is more than 2.5m)",
+   "caption": {
+    "family": "GROUND_BEAM",
+    "scale": null,
+    "condition": "SPAN_MIN",
+    "min_span_m": 2.5,
+    "max_span_m": null,
+    "qualifiers": []
+   }
+  },
+  {
+   "caption_id": "P13C09",
+   "page": 13,
+   "region_pt": [
+    725.76,
+    500.64,
+    903.12,
+    511.2
+   ],
+   "text": "TYP. DETAIL OF ISOLATED FOOTING.",
+   "caption": {
+    "family": "FOOTING",
+    "scale": null,
+    "condition": "TYPICAL",
+    "min_span_m": null,
+    "max_span_m": null,
+    "qualifiers": []
+   }
+  },
+  {
+   "caption_id": "P13C10",
+   "page": 13,
+   "region_pt": [
+    792.24,
+    587.28,
+    824.4,
+    593.76
+   ],
+   "text": "slab level",
+   "caption": {
+    "family": "SLAB",
+    "scale": null,
+    "condition": "TYPICAL",
+    "min_span_m": null,
+    "max_span_m": null,
+    "qualifiers": []
+   }
+  },
+  {
+   "caption_id": "P13C11",
+   "page": 13,
+   "region_pt": [
+    208.8,
+    623.04,
+    293.04,
+    632.64
+   ],
+   "text": "LINTEL DETAIL.",
+   "caption": {
+    "family": "LINTEL",
+    "scale": null,
+    "condition": "TYPICAL",
+    "min_span_m": null,
+    "max_span_m": null,
+    "qualifiers": []
+   }
+  },
+  {
+   "caption_id": "P13C12",
+   "page": 13,
+   "region_pt": [
+    597.84,
+    661.2,
+    717.6,
+    688.56
+   ],
+   "text": "Ground Beams. More than 5m _ length (1:20) without concentrated load",
+   "caption": {
+    "family": "GROUND_BEAM",
+    "scale": 20,
+    "condition": "SPAN_MIN",
+    "min_span_m": 5.0,
+    "max_span_m": null,
+    "qualifiers": [
+     "WITHOUT_CONCENTRATED_LOAD"
+    ]
+   }
+  },
+  {
+   "caption_id": "P13C13",
+   "page": 13,
+   "region_pt": [
+    244.32,
+    661.92,
+    409.44,
+    781.92
+   ],
+   "text": "LINTEL SCHEDULE REINFORCEMENT BOTT. STIR. BARS 29 12 29 14 SAME OF WIDTH OF WALL. 39 16 39 18 5",
+   "caption": {
+    "family": "LINTEL",
+    "scale": null,
+    "condition": "TYPICAL",
+    "min_span_m": null,
+    "max_span_m": null,
+    "qualifiers": []
+   }
+  },
+  {
+   "caption_id": "P13C14",
+   "page": 13,
+   "region_pt": [
+    178.56,
+    678.0,
+    231.84,
+    713.76
+   ],
+   "text": "LINTEL SIZE (IN CM) |( IN CM) 0 -100",
+   "caption": {
+    "family": "LINTEL",
+    "scale": null,
+    "condition": "TYPICAL",
+    "min_span_m": null,
+    "max_span_m": null,
+    "qualifiers": []
+   }
+  },
+  {
+   "caption_id": "P13C15",
+   "page": 13,
+   "region_pt": [
+    341.52,
+    721.2,
+    398.64,
+    727.2
+   ],
+   "text": "WIDTH OF LINTEL THE",
+   "caption": {
+    "family": "LINTEL",
+    "scale": null,
+    "condition": "TYPICAL",
+    "min_span_m": null,
+    "max_span_m": null,
+    "qualifiers": []
+   }
+  },
+  {
+   "caption_id": "P13C16",
+   "page": 13,
+   "region_pt": [
+    891.36,
+    731.04,
+    1106.4,
+    770.64
+   ],
+   "text": "Ground Beams. Less than 5m _ length (1:20) DRAWING TITLE: DETAILS",
+   "caption": {
+    "family": "GROUND_BEAM",
+    "scale": 20,
+    "condition": "SPAN_MAX",
+    "min_span_m": null,
+    "max_span_m": 5.0,
+    "qualifiers": []
+   }
+  },
+  {
+   "caption_id": "P13C17",
+   "page": 13,
+   "region_pt": [
+    58.56,
+    766.32,
+    120.96,
+    775.68
+   ],
+   "text": "(THROUGH LINTEL)",
+   "caption": {
+    "family": "LINTEL",
+    "scale": null,
+    "condition": "TYPICAL",
+    "min_span_m": null,
+    "max_span_m": null,
+    "qualifiers": []
+   }
+  },
+  {
+   "caption_id": "P13C18",
+   "page": 13,
+   "region_pt": [
+    600.96,
+    787.92,
+    714.48,
+    808.08
+   ],
+   "text": "Ground Beams. Less than 2.5m length (1:20)",
+   "caption": {
+    "family": "GROUND_BEAM",
+    "scale": 20,
+    "condition": "SPAN_MAX",
+    "min_span_m": null,
+    "max_span_m": 2.5,
+    "qualifiers": []
+   }
+  },
+  {
+   "caption_id": "P13C19",
+   "page": 13,
+   "region_pt": [
+    748.8,
+    787.92,
+    864.48,
+    807.6
+   ],
+   "text": "Ground Beams. for exterior walls (1:20)",
+   "caption": {
+    "family": "GROUND_BEAM",
+    "scale": 20,
+    "condition": "EXTERIOR",
+    "min_span_m": null,
+    "max_span_m": null,
+    "qualifiers": []
+   }
+  }
+ ],
+ "details": [
+  {
+   "detail_id": "DET-P13C12",
+   "caption_id": "P13C12",
+   "caption": {
+    "family": "GROUND_BEAM",
+    "scale": 20,
+    "condition": "SPAN_MIN",
+    "min_span_m": 5.0,
+    "max_span_m": null,
+    "qualifiers": [
+     "WITHOUT_CONCENTRATED_LOAD"
+    ]
+   },
+   "bars": [
+    {
+     "role": "TOP",
+     "count": 3,
+     "dia_mm": 16,
+     "spacing_m": null,
+     "record_id": "EV-0001",
+     "role_basis": "VERTICAL_ORDER_IN_DETAIL"
+    },
+    {
+     "role": "LINKS",
+     "count": null,
+     "dia_mm": 8,
+     "spacing_m": 0.15,
+     "record_id": "EV-0002",
+     "role_basis": "VERTICAL_ORDER_IN_DETAIL"
+    },
+    {
+     "role": "BOTTOM",
+     "count": 3,
+     "dia_mm": 16,
+     "spacing_m": null,
+     "record_id": "EV-0003",
+     "role_basis": "VERTICAL_ORDER_IN_DETAIL"
+    },
+    {
+     "role": "BOTTOM",
+     "count": 3,
+     "dia_mm": 16,
+     "spacing_m": null,
+     "record_id": "EV-0004",
+     "role_basis": "VERTICAL_ORDER_IN_DETAIL"
+    }
+   ],
+   "state": "ASSEMBLED",
+   "rejected_records": [],
+   "page": 13
+  },
+  {
+   "detail_id": "DET-P13C16",
+   "caption_id": "P13C16",
+   "caption": {
+    "family": "GROUND_BEAM",
+    "scale": 20,
+    "condition": "SPAN_MAX",
+    "min_span_m": null,
+    "max_span_m": 5.0,
+    "qualifiers": []
+   },
+   "bars": [
+    {
+     "role": "TOP",
+     "count": 3,
+     "dia_mm": 14,
+     "spacing_m": null,
+     "record_id": "EV-0006",
+     "role_basis": "VERTICAL_ORDER_IN_DETAIL"
+    },
+    {
+     "role": "BOTTOM",
+     "count": 3,
+     "dia_mm": 14,
+     "spacing_m": null,
+     "record_id": "EV-0008",
+     "role_basis": "VERTICAL_ORDER_IN_DETAIL"
+    },
+    {
+     "role": "BOTTOM",
+     "count": 3,
+     "dia_mm": 14,
+     "spacing_m": null,
+     "record_id": "EV-0010",
+     "role_basis": "VERTICAL_ORDER_IN_DETAIL"
+    }
+   ],
+   "state": "ASSEMBLED",
+   "rejected_records": [
+    "EV-0007"
+   ],
+   "page": 13
+  },
+  {
+   "detail_id": "DET-P13C18",
+   "caption_id": "P13C18",
+   "caption": {
+    "family": "GROUND_BEAM",
+    "scale": 20,
+    "condition": "SPAN_MAX",
+    "min_span_m": null,
+    "max_span_m": 2.5,
+    "qualifiers": []
+   },
+   "bars": [
+    {
+     "role": "TOP",
+     "count": 3,
+     "dia_mm": 14,
+     "spacing_m": null,
+     "record_id": "EV-0011",
+     "role_basis": "VERTICAL_ORDER_IN_DETAIL"
+    },
+    {
+     "role": "BOTTOM",
+     "count": 3,
+     "dia_mm": 14,
+     "spacing_m": null,
+     "record_id": "EV-0012",
+     "role_basis": "VERTICAL_ORDER_IN_DETAIL"
+    },
+    {
+     "role": "BOTTOM",
+     "count": 3,
+     "dia_mm": 14,
+     "spacing_m": null,
+     "record_id": "EV-0014",
+     "role_basis": "VERTICAL_ORDER_IN_DETAIL"
+    }
+   ],
+   "state": "ASSEMBLED",
+   "rejected_records": [],
+   "page": 13
+  },
+  {
+   "detail_id": "DET-P13C19",
+   "caption_id": "P13C19",
+   "caption": {
+    "family": "GROUND_BEAM",
+    "scale": 20,
+    "condition": "EXTERIOR",
+    "min_span_m": null,
+    "max_span_m": null,
+    "qualifiers": []
+   },
+   "bars": [
+    {
+     "role": "TOP",
+     "count": 3,
+     "dia_mm": 16,
+     "spacing_m": null,
+     "record_id": "EV-0005",
+     "role_basis": "VERTICAL_ORDER_IN_DETAIL"
+    },
+    {
+     "role": "SIDE",
+     "count": 2,
+     "dia_mm": 12,
+     "spacing_m": 0.3,
+     "record_id": "EV-0009",
+     "role_basis": "VERTICAL_ORDER_IN_DETAIL"
+    },
+    {
+     "role": "LINKS",
+     "count": null,
+     "dia_mm": 8,
+     "spacing_m": 0.15,
+     "record_id": "EV-0015",
+     "role_basis": "VERTICAL_ORDER_IN_DETAIL"
+    },
+    {
+     "role": "BOTTOM",
+     "count": 6,
+     "dia_mm": 16,
+     "spacing_m": null,
+     "record_id": "EV-0013",
+     "role_basis": "VERTICAL_ORDER_IN_DETAIL"
+    }
+   ],
+   "state": "ASSEMBLED",
+   "rejected_records": [],
+   "page": 13
+  }
+ ],
+ "validation": []
+}

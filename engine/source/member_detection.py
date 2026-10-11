@@ -605,9 +605,12 @@ def bind_marks(bands, beam_marks, widths_of, unit_m, width_tol_m=0.015, angle_to
     out = []
     for m in beam_marks:
         w_sched = widths_of.get((m["family"], m["mark"]))
+        # M3: a mark with duplicate schedule rows carries every printed width; a band at any of them qualifies
+        ws = None if w_sched is None else tuple(w_sched) if isinstance(w_sched, (list, tuple, set)) else (w_sched,)
+        ws = tuple(w for w in ws if w) if ws else None
 
         def qualifies(b, check_width):
-            if check_width and (w_sched is None or abs(b["width_native"] * unit_m - w_sched) > width_tol_m):
+            if check_width and (not ws or all(abs(b["width_native"] * unit_m - w) > width_tol_m for w in ws)):
                 return None
             ax = band_axis_deg(b)
             if ax is not None:
@@ -617,7 +620,7 @@ def bind_marks(bands, beam_marks, widths_of, unit_m, width_tol_m=0.015, angle_to
             gap = max(m["h"] * 2.5, b["width_native"] * 1.5)
             dd = dist_point_poly(m["x"], m["y"], b["polygon"])
             return dd if dd <= gap else None
-        if w_sched is None:
+        if not ws:
             out.append(dict(m, state="TYPE_NOT_IN_SCHEDULE", band=None, bands=[]))
             continue
         cands = sorted((d, b["band_id"]) for b in bands if (d := qualifies(b, True)) is not None)
@@ -719,6 +722,48 @@ def inherit_sections(bands, bound, lib, max_gap_native, span_counts=None):
                           "from_band": bid})
             frontier.append((n, owner[n]))
     return extra
+
+
+def strap_layers(ents, widths_native, tol_native, strap_marks, min_face_native):
+    """Foundation-plan layers that carry strap faces: a parallel pair at a strap width within reach of a strap mark.
+    Unlike score_edge_layers a footing layer is admitted (straps are drawn with the footings), but only a pair a
+    strap mark points at counts."""
+    cand = sorted({s["layer"] for s in ents["segments"] if _layer_role(s["layer"]) not in ANNOTATION_ROLES +
+                   ("COLUMN",)})
+    score = {}
+    for lay in cand:
+        faces = _faces(ents, {lay})
+        if len(faces) < 2 or len(faces) > 6000:
+            continue
+        polys = []
+        for w in widths_native:
+            r = GN.pair_straight(faces, width=w, tol=tol_native, admitted_layers={lay}, min_face=min_face_native,
+                                 min_overlap=min_face_native, join_tol=tol_native / 12.0)
+            polys += [b["polygon"] for b in r["bands"]]
+        hit = sum(1 for m in strap_marks if any(dist_point_poly(m["x"], m["y"], p) <= max(m["h"] * 2.5,
+                                                                                         max(widths_native) * 1.5)
+                                                for p in polys))
+        if hit:
+            score[lay] = hit
+    return score
+
+
+def deduct_support_plan(bands, support_polys, unit_m, min_clear_m=0.3):
+    """Strap bands run between footings: the plan inside a footing outline is the footing's. Each band gets its
+    overlap with the footings (exact convex clipping), the net plan and the mean clear length (net / width). A band
+    whose clear part is shorter than min_clear_m lies inside footing outlines - two parallel outline sides, not a
+    strap - and is returned separately (never quantified)."""
+    keep, inside = [], []
+    for b in bands:
+        area = abs(poly_area(b["polygon"]))
+        ov = [(k, overlap_area(q, b["polygon"])) for k, q in enumerate(support_polys)]   # clip: the convex band
+        ov = [(k, a) for k, a in ov if a > 1e-9]
+        net = max(area - sum(a for _, a in ov), 0.0)
+        clear = net / b["width_native"] * unit_m if b["width_native"] else 0.0
+        rec = dict(b, support_overlap_m2=sum(a for _, a in ov) * unit_m ** 2, supports=[k for k, _ in ov],
+                   net_plan_m2=net * unit_m ** 2, clear_length_m=clear)
+        (keep if clear >= min_clear_m else inside).append(rec)
+    return keep, inside
 
 
 def band_length_native(b):

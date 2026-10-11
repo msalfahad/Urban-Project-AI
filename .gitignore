@@ -42,3 +42,6 @@ research/alsenan_m1_usable_boq/boq/run_log.json
 
 # M2 generated PDFs / workbooks stay out of git (reproducible by command)
 research/urban_engine_m2_generalization/**/*.pdf
+# M3: OCR crops and page renders are client drawing content (the evidence JSON keeps their file names only)
+research/urban_engine_m3_recovery/**/crops/
+research/urban_engine_m3_recovery/**/*.png

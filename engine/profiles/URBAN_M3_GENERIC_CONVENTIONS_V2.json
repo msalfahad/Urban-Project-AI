@@ -285,6 +285,56 @@
    "provenance": "ENGINEERING_JUDGEMENT",
    "source": "typical villa necks",
    "rationale": "Only an exposure for an UNRESOLVED neck (never added to a total); a neck is measured only with the printed founding depth and neck top level of the project (profile)."
+  },
+  {
+   "id": "GB_EXTERIOR_CANDIDATE",
+   "title": "A perimeter ground beam takes the printed exterior detail",
+   "kind": "choice",
+   "options": [
+    "EXTERIOR",
+    "INTERIOR"
+   ],
+   "base": "EXTERIOR",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "band side classification of the ground-beam plan (slab_engine.band_sides: a long side with no slab cell and no member beyond it)",
+   "rationale": "A ground beam on the outside of the ground-beam network carries the exterior wall, so the printed exterior detail applies; the typical class section is the alternative and sets the low end of the range."
+  },
+  {
+   "id": "GB_EXTERIOR_BUILDUP_M",
+   "title": "Floor build-up between the floor level and the top of an exterior ground beam",
+   "kind": "number",
+   "unit": "m",
+   "base": 0.1,
+   "low": 0.0,
+   "high": 0.2,
+   "provenance": "STANDARD_PRACTICE",
+   "source": "tiled floor on screed (finish + bedding)",
+   "rationale": "The exterior depth runs from the slab level under the floor finish to the outer ground level; the finish thickness is not printed."
+  },
+  {
+   "id": "SIDE_BAR_READING",
+   "title": "Reading of a side-bar notation 'n Ø d / s'",
+   "kind": "choice",
+   "options": [
+    "PRINTED_COUNT",
+    "SPACING_EACH_FACE"
+   ],
+   "base": "PRINTED_COUNT",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "typical-detail notation",
+   "rationale": "The printed count is the base; bars at the printed spacing on each face over the section height give the high end."
+  },
+  {
+   "id": "SCHEDULE_DUPLICATE_ROW",
+   "title": "A mark with two schedule rows",
+   "kind": "choice",
+   "options": [
+    "DRAWN_WIDTH_MATCH"
+   ],
+   "base": "DRAWN_WIDTH_MATCH",
+   "provenance": "ENGINEERING_JUDGEMENT",
+   "source": "the schedule rows and the drawn width of the bound band",
+   "rationale": "When one mark has two schedule rows and the drawn width matches exactly one of them, that row is the base; the other row gives the range. A drawn width that matches neither or both leaves the member UNRESOLVED."
   }
  ]
 }
