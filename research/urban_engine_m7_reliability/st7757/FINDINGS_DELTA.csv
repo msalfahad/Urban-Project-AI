@@ -1,0 +1,6 @@
+IN,KIND,SEVERITY,FAMILY,SHEET,STOREY,BOX_M,EVIDENCE
+V5_ONLY,COLUMN_ITEM_WITHOUT_PRESENCE,MEDIUM,COLUMNS,SH02,2F,"(10.658, 9.465, 10.658, 9.465)","column item P-C:COL:SH12:C3@243004,52949|2F (PROVISIONAL, 0.420 m3) on 2F; the 2F plan shows no column outline within 3 m"
+V4_ONLY,COLUMN_ITEM_WITHOUT_PRESENCE,MEDIUM,COLUMNS,SH02,2F,"(10.657, 9.466, 10.657, 9.466)","column item P-C:COL:SH12:C3@167036,38502|2F (PROVISIONAL, 0.420 m3) on 2F; the 2F plan shows no column outline within 3 m"
+V4_ONLY,DRAWN_NOT_MEASURED,MEDIUM,UNKNOWN,SH04,1F,"(30.308, 13.684, 32.163, 14.826)","layer 1: 2 entities (0 lines, 2 arcs, 0 circles, 0 hatches), 2.17 m; shape CURVED; inside_building; marks near: B6"
+V5_ONLY,DRAWN_NOT_MEASURED,MEDIUM,UNKNOWN,SH04,1F,"(30.308, 13.684, 32.163, 15.504)","layer 1: 4 entities (1 lines, 3 arcs, 0 circles, 0 hatches), 2.63 m; shape CURVED; inside_building; marks near: B6"
+V4_ONLY,MEMBER_OUTLINE_SUSPECT,MEDIUM,COLUMNS,SH10,FOUNDATION,"(19.788, 15.612, 21.588, 17.412)","column COL:SH10:C1@137485,46080 bound to an outline 1.80 x 1.80 m, more than twice every section its schedule prints"

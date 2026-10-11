@@ -47,3 +47,21 @@ def test_no_silent_quantity_on_cluttered_villas(tmp_path, seed):
     assert rec["ok"], rec.get("error")
     silent = [r for r in rec["rows"] if r["state"] == "SILENT"]
     assert not silent, silent
+
+
+def test_a_rectangle_set_aside_by_the_layer_rule_stays_evidence(tmp_path):
+    """post-freeze P2: the furniture rectangle that lands on a column mark (seed 4) cuts no beam and closes no cell,
+    but the completeness pass still reports it - weakly (MEDIUM, 'confirm it is a column'), never silently dropped."""
+    from tools import urban_boq_m2 as CLI
+    dxf = SM6.generate(tmp_path, 4, hard=True, m6v2=True)
+    noisy = tmp_path / "noise.dxf"
+    MM.transform(dxf, noisy, "noise_layer")
+    prof = str(tmp_path / "villa_m6_4.profile.json")
+    R0 = CLI.compute([str(dxf)], profile=prof, route="G", conventions=V5, completeness=True)
+    R1 = CLI.compute([str(noisy)], profile=prof, route="G", conventions=V5, completeness=True)
+    assert MM.compare(MM.quantities(R0["items"]), MM.quantities(R1["items"])) == []
+    weak = [s for s in R1["generic"]["D"]["sheets"].values() if s.get("column_presence_unsupported")]
+    assert weak and not any(s.get("column_presence_unsupported") for s in R0["generic"]["D"]["sheets"].values())
+    f = [x for x in R1["generic"]["completeness"]["findings"] if x["KIND"] == "COLUMN_PRESENCE_NOT_ITEMIZED" and
+         "no other columns" in x["EVIDENCE"]]
+    assert f and all(x["SEVERITY"] == "MEDIUM" for x in f)

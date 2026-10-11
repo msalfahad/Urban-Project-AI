@@ -431,6 +431,9 @@ def _members(D):
         for key in ("slab_column_boxes", "column_presence", "column_boxes"):
             for bx in rec.get(key, []) or []:
                 boxes.add(tuple(bx))
+        # M7: column-sized outlines the route set aside as on a layer that shows no columns - weak evidence
+        weak = {tuple(bx) for bx in rec.get("column_presence_unsupported", []) or []} - boxes
+        boxes |= weak
         for c in rec.get("columns", []) or []:
             if c.get("box"):
                 out[sid].append({"kind": "COLUMN", "mid": c["member_id"], "box": tuple(c["box"]),
@@ -439,7 +442,8 @@ def _members(D):
                 boxes.discard(tuple(c["box"]))
         for bx in sorted(boxes):
             out[sid].append({"kind": "COLUMN_BOX", "mid": "BOX@" + ",".join(f"{v:.0f}" for v in bx), "box": bx,
-                             "poly": MD.box_poly(bx), "family": "COLUMNS", "mark": None})
+                             "poly": MD.box_poly(bx), "family": "COLUMNS", "mark": None,
+                             **({"weak": True} if bx in weak else {})})
         for ft in rec.get("footings", []) or []:
             poly = ft.get("polygon") or (MD.box_poly(ft["box"]) if ft.get("box") else None)
             approx = False
@@ -1915,11 +1919,14 @@ def vertical_ledger(D, items, members, risk, heights, u, consumed=None):
             if not hit:
                 h = heights.get(st)
                 vol = (area * h, area * h, "drawn outline area x storey height") if h and area < 4.0 else None
+                weak_ = all(m.get("weak") for m in ms_)
                 findings.append(_finding("COLUMN_PRESENCE_NOT_ITEMIZED", sid, rec["sheet"],
-                                         tuple(round(v, 3) for v in lb), "HIGH", family="COLUMNS",
-                                         confidence="MEDIUM",
+                                         tuple(round(v, 3) for v in lb), "MEDIUM" if weak_ else "HIGH",
+                                         family="COLUMNS", confidence="LOW" if weak_ else "MEDIUM",
                                          evidence=f"column outline {w:.2f} x {d:.2f} m ({len(ms_)} pieces, "
-                                                  f"{area:.3f} m2) on the {st} plan; no {st} column item here",
+                                                  f"{area:.3f} m2) on the {st} plan; no {st} column item here" +
+                                                  (" (on a layer that shows no other columns: confirm it is a "
+                                                   "column)" if weak_ else ""),
                                          magnitude={"size_m": (round(w, 3), round(d, 3)), "area_m2": round(area, 4)},
                                          volume=vol, refs=",".join(m["mid"] for m in ms_[:4])))
         for c in pool:

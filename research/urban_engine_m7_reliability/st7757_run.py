@@ -71,11 +71,24 @@ def _csv(rows, fields):
     return buf.getvalue()
 
 
-def main(argv):
-    if not (DXF.exists() and ARCH.exists()):
-        print("ST7757 drawings are not present (private inputs): nothing run")
-        return 2
-    cache = argv[argv.index("--cache") + 1] if "--cache" in argv else None
+FINDING_KEYS = ("KIND", "SEVERITY", "FAMILY", "SHEET", "STOREY", "BOX_M", "EVIDENCE")
+
+
+def finding_delta(c4, c5):
+    """findings present in one run only, matched on kind, sheet, family and box (rounded to 1 cm)."""
+    def k(f):
+        b = f.get("BOX_M")
+        return (f["KIND"], f.get("SHEET"), f.get("FAMILY"), tuple(round(v, 2) for v in b) if b else None)
+    a = {k(f): f for f in c4["findings"]}
+    b = {k(f): f for f in c5["findings"]}
+    rows = []
+    for key in sorted(set(a) ^ set(b), key=str):
+        f = a.get(key) or b[key]
+        rows.append({"IN": "V4_ONLY" if key in a else "V5_ONLY", **{x: str(f.get(x))[:200] for x in FINDING_KEYS}})
+    return rows
+
+
+def compute(cache=None, ablation=True):
     for rel in INPUTS.values():
         bp.assert_blind(json.loads((ROOT / rel).read_text(encoding="utf-8")))
     R4, R5 = run(ROOT / V4, cache), run(ROOT / V5, cache)
@@ -94,7 +107,7 @@ def main(argv):
     v5doc = json.loads((ROOT / V5).read_text(encoding="utf-8"))
     new = [c["id"] for c in v5doc["conventions"] if c["id"] not in v4ids]
     abl = []
-    if "--no-ablation" not in argv:
+    if ablation:
         for cid in new:
             alt = dict(v5doc, set=v5doc["set"] + "_WITHOUT_" + cid,
                        conventions=[c for c in v5doc["conventions"] if c["id"] != cid])
@@ -126,7 +139,9 @@ def main(argv):
                                          "V4_by_severity": sev(c4), "V5_by_severity": sev(c5)},
                "independent_checks_v5": IC.summary(checks),
                "rule": "post-discovery: not blind evidence; no external record read"}
+    delta = finding_delta(c4, c5)
     files = {"BY_FAMILY.csv": _csv(rows, list(rows[0])),
+             "FINDINGS_DELTA.csv": _csv(delta, ["IN"] + list(FINDING_KEYS)),
              "ABLATION.csv": _csv(abl, ["CONVENTION", "TRADE", "FAMILY", "STOREY", "DELTA_MEASURED_DUE_TO_IT",
                                         "DELTA_UNRESOLVED_HIGH_DUE_TO_IT"]),
              "RELEASE_TOTALS.json": json.dumps({"totals": reg["totals"], "independent_checks": IC.summary(checks),
@@ -137,11 +152,23 @@ def main(argv):
              "SUMMARY.json": json.dumps(summary, indent=1, sort_keys=True, default=str) + "\n"}
     for name, text in files.items():
         bp.assert_blind({"file": name, "text_sha256": hashlib.sha256(text.encode()).hexdigest()})
+    return files, rows, abl, summary
+
+
+def main(argv):
+    if not (DXF.exists() and ARCH.exists()):
+        print("ST7757 drawings are not present (private inputs): nothing run")
+        return 2
+    cache = argv[argv.index("--cache") + 1] if "--cache" in argv else None
+    files, rows, abl, summary = compute(cache, ablation="--no-ablation" not in argv)
+    if "--no-ablation" in argv:                        # keep the committed attribution
+        files.pop("ABLATION.csv")
     OUT.mkdir(parents=True, exist_ok=True)
     for name, text in files.items():
         (OUT / name).write_text(text, encoding="utf-8")
     (OUT / "RUN_RECORD.json").write_text(json.dumps(
-        {"files_sha256": {k: hashlib.sha256(v.encode("utf-8")).hexdigest() for k, v in sorted(files.items())},
+        {"files_sha256": {k: hashlib.sha256((OUT / k).read_bytes()).hexdigest()
+                          for k in sorted(set(files) | {"ABLATION.csv"}) if (OUT / k).exists()},
          "phase": "POST_DISCOVERY"}, indent=1, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps({"rows": len(rows), "ablation_rows": len(abl), "items": summary["items"]}))
     return 0

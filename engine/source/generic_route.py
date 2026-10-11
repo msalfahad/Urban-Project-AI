@@ -66,7 +66,7 @@ def _trip(conv, cid):
     return conv.triple(cid)
 
 
-def column_boxes(ents, lib, unit_m, tol_m=0.02, layer_evidence=False):
+def column_boxes(ents, lib, unit_m, tol_m=0.02, layer_evidence=False, rejected=None):
     """layer_evidence (M7): a schedule-sized rectangle is a column only on a layer that shows columns - a layer named
     for columns, or one where at least half its rectangles are column-like (at a scheduled section or holding a
     column mark); a furniture / fixture layer whose odd rectangle matches a section or covers a mark is not"""
@@ -93,6 +93,8 @@ def column_boxes(ents, lib, unit_m, tol_m=0.02, layer_evidence=False):
             out.append((bx, r["layer"]))
     if layer_evidence:
         ok = {lay for lay, (n, nc) in per_layer.items() if MD._layer_role(lay) == "COLUMN" or nc >= 0.5 * n}
+        if rejected is not None:                 # never dropped silently: the caller keeps them as weak evidence
+            rejected.extend(o for o in out if o[1] not in ok)
         out = [o for o in out if o[1] in ok]
     out = [o[0] for o in out]
     uniq = []
@@ -342,13 +344,21 @@ def detect(intake, *, typical_widths_m=None, options=None):
             # M3: a layer NAMED for beams joins on any mark it carries (one inclined transfer beam on its own layer is
             # still a beam: B27 on ST7757 GF)
             lays |= {l for l, v in sc.items() if v >= 1 and MD._layer_role(l) == "BEAM"}
-            cols = column_boxes(E, lib, u, layer_evidence=bool(opt.get("column_layer_evidence")))
+            rejected = []
+            cols = column_boxes(E, lib, u, layer_evidence=bool(opt.get("column_layer_evidence")), rejected=rejected)
             # every column-sized outline on the layers that carry the column boxes, at any size: storey-presence
             # evidence only (a column drawn at a size no schedule band prints is still a column) - M3
             clay = {r["layer"] for r in MD.candidate_rects(E, u) if tuple(r["box"]) in {tuple(c) for c in cols}}
-            rec["column_presence"] = [r["box"] for r in MD.candidate_rects(E, u) if r["layer"] in clay and
-                                      0.15 <= min(r["box"][2] - r["box"][0], r["box"][3] - r["box"][1]) * u and
-                                      max(r["box"][2] - r["box"][0], r["box"][3] - r["box"][1]) * u <= 1.5]
+            sized = lambda r: (0.15 <= min(r["box"][2] - r["box"][0], r["box"][3] - r["box"][1]) * u and  # noqa
+                               max(r["box"][2] - r["box"][0], r["box"][3] - r["box"][1]) * u <= 1.5)
+            rec["column_presence"] = [r["box"] for r in MD.candidate_rects(E, u) if r["layer"] in clay and sized(r)]
+            if rejected:
+                # M7 (post-freeze P2): the column-sized outlines on the layers the layer rule set aside are no member
+                # (they cut no beam and close no slab cell) but stay storey-presence EVIDENCE for the completeness
+                # engine, reported weak (a column drawn on a layer that shows no other columns, or furniture)
+                rl = {o[1] for o in rejected}
+                rec["column_presence_unsupported"] = [r["box"] for r in MD.candidate_rects(E, u)
+                                                      if r["layer"] in rl and sized(r)]
             heal = []
             if lays:                                   # drafting noise: duplicates, broken faces, ends short of a face
                 segs, h1 = CH.merge_collinear(E["segments"], lays, gap=CH.GAP_M / u, off_tol=0.5e-3 / u)
@@ -1974,6 +1984,10 @@ def _lintel_items(items, reg, risk, lintels, conv, cover_trip, hook_std):
                                    "registered on the slab above - lintel need not decided"})
             continue
         for op in rec["openings"]:
+            if "LENGTH_CLASS_AT_MILLIMETRE" in conv.items:
+                # M7 (post-freeze P1): a drawn opening width is read against the schedule's width bands at 1 mm (a
+                # 1.000 m opening fell into the 100 - 101 cm gap between two rows by 4e-10 m)
+                op = dict(op, width_m=round(op["width_m"], 3), wall_t_m=round(op["wall_t_m"], 3))
             res = LMS.lintel(op, rows, bearing_m=bearing, cover_m=tuple(sorted(cover_trip, reverse=True)))
             cid = f"LINTELS:{st}:{op['opening_id']}"
             over = op.get("beam_over", "NONE")

@@ -77,6 +77,17 @@ def item_checks(D, items):
         if fam == "FOOTINGS":
             f = footings.get(cid) or {}
             dims = d.get("schedule_m") or f.get("schedule_m")
+            if f.get("state") == "LABEL_TYPE_CONFLICT" and f.get("candidates"):
+                # two type labels on one footing: the base is the convention's pick among the candidates, the range
+                # the other one - the check recomputes every candidate's L x W x D and needs base and low among them
+                vols = sorted(c["schedule_m"][0] * c["schedule_m"][1] * c["schedule_m"][2]
+                              for c in f["candidates"].values() if c.get("schedule_m") and len(c["schedule_m"]) >= 3)
+                hit = min(vols, key=lambda v: abs(v - it["base"])) if vols else None
+                ok_low = vols and min(abs(v - (it.get("low") or 0.0)) for v in vols) <= TOL_ABS
+                out[it["item_id"]] = _row("ARITHMETIC_CANDIDATES", "every value and the convention's pick",
+                                          it["base"], hit if ok_low else None,
+                                          f"{len(vols)} candidate types" + ("" if ok_low else "; low not a candidate"))
+                continue
             if not dims or len(dims) < 3:
                 out[it["item_id"]] = _row("NONE", "", it["base"], None, "no printed L x W x D")
                 continue

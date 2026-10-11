@@ -1,0 +1,130 @@
+{
+ "independent_checks": {
+  "ARITHMETIC": {
+   "NOT_COMPARABLE": 28,
+   "PASS": 64
+  },
+  "ARITHMETIC_CANDIDATES": {
+   "PASS": 1
+  },
+  "SHAPELY_BAND_LESS_COLUMNS": {
+   "NOT_COMPARABLE": 6,
+   "PASS": 106
+  },
+  "SHAPELY_FACE_LESS_MEMBERS": {
+   "NOT_COMPARABLE": 24,
+   "PASS": 75
+  },
+  "SHAPELY_OUTLINE_x_PRINTED_DEPTH": {
+   "PASS": 25
+  }
+ },
+ "rows_by_state": {
+  "CLASSIFIED": 0,
+  "DETECTED": 0,
+  "ENGINEER_APPROVED": 0,
+  "ENGINEER_REVIEWED": 0,
+  "EXCLUDED": 0,
+  "GEOMETRICALLY_MEASURED": 0,
+  "INDEPENDENTLY_CHECKED": 31,
+  "PROVISIONAL": 1208,
+  "SOURCE_SUPPORTED": 3,
+  "UNRESOLVED": 147
+ },
+ "totals": {
+  "CONCRETE": {
+   "by_state": {
+    "CLASSIFIED": 0,
+    "DETECTED": 0,
+    "ENGINEER_APPROVED": 0,
+    "ENGINEER_REVIEWED": 0,
+    "EXCLUDED": 0,
+    "GEOMETRICALLY_MEASURED": 0,
+    "INDEPENDENTLY_CHECKED": 31,
+    "PROVISIONAL": 368,
+    "SOURCE_SUPPORTED": 3,
+    "UNRESOLVED": 86
+   },
+   "excluded": {
+    "base": 0,
+    "high": 0,
+    "low": 0,
+    "n": 0
+   },
+   "items": 488,
+   "machine_supported": {
+    "base": 79.57051,
+    "high": 79.57051,
+    "low": 79.57051,
+    "n": 34
+   },
+   "measured_items": 402,
+   "provisional": {
+    "base": 234.342899,
+    "high": 254.262722,
+    "low": 227.932092,
+    "n": 368
+   },
+   "released": {
+    "base": 0,
+    "high": 0,
+    "low": 0,
+    "n": 0
+   },
+   "unit": "m3",
+   "unresolved": {
+    "exposure_high": 30.864167,
+    "exposure_low": 17.495458,
+    "n": 86,
+    "n_without_exposure": 3
+   }
+  },
+  "REINFORCEMENT": {
+   "by_state": {
+    "CLASSIFIED": 0,
+    "DETECTED": 0,
+    "ENGINEER_APPROVED": 0,
+    "ENGINEER_REVIEWED": 0,
+    "EXCLUDED": 0,
+    "GEOMETRICALLY_MEASURED": 0,
+    "INDEPENDENTLY_CHECKED": 0,
+    "PROVISIONAL": 840,
+    "SOURCE_SUPPORTED": 0,
+    "UNRESOLVED": 61
+   },
+   "excluded": {
+    "base": 0,
+    "high": 0,
+    "low": 0,
+    "n": 0
+   },
+   "items": 901,
+   "machine_supported": {
+    "base": 0,
+    "high": 0,
+    "low": 0,
+    "n": 0
+   },
+   "measured_items": 840,
+   "provisional": {
+    "base": 27199.321379,
+    "high": 29421.162414,
+    "low": 24140.489503,
+    "n": 840
+   },
+   "released": {
+    "base": 0,
+    "high": 0,
+    "low": 0,
+    "n": 0
+   },
+   "unit": "kg",
+   "unresolved": {
+    "exposure_high": 30.438021,
+    "exposure_low": 29.537281,
+    "n": 61,
+    "n_without_exposure": 59
+   }
+  }
+ }
+}
