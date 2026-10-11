@@ -156,7 +156,43 @@ def candidate_rects(ents, unit_m):
                 continue
             rects.append({"box": r["bounds"], "layer": lay, "source": "LINES:" + ",".join(r["edge_keys"][:4]),
                           "origin": "LINES"})
+        if (ents.get("options") or {}).get("drawn_rectangles"):
+            for r in drawn_rectangles(segs, eps=eps):
+                if dup(r["box"]):
+                    continue
+                rects.append(dict(r, layer=lay, origin="FOUR_SIDES"))
     return rects
+
+
+def drawn_rectangles(segs, *, eps):
+    """M7: rectangles drawn as four whole sides whose ends meet at the corners - each side one line (or collinear
+    pieces end to end). Q.rectangles returns the MINIMAL cells of the line arrangement, so two outlines that cross (a
+    cross- or T-shaped column drawn as two overlapping rectangles, an exploded polyline under a second outline) come
+    back as five pieces and neither drawn rectangle; this finds the drawn ones. segs: (id, x1, y1, x2, y2)."""
+    q = lambda v: int(round(v / eps))                                          # noqa: E731
+    H, V = defaultdict(list), set()
+    for sid, x1, y1, x2, y2 in segs:
+        if abs(y1 - y2) <= eps and abs(x2 - x1) > eps:
+            a, b = sorted((x1, x2))
+            H[(q(a), q(b))].append(((y1 + y2) / 2, sid, a, b))
+        elif abs(x1 - x2) <= eps and abs(y2 - y1) > eps:
+            a, b = sorted((y1, y2))
+            V.add((q((x1 + x2) / 2), q(a), q(b)))
+    out, seen = [], set()
+    for (qa, qb), ys in H.items():
+        ys = sorted(ys)
+        for i in range(len(ys)):
+            for j in range(i + 1, len(ys)):
+                ya, yb = ys[i][0], ys[j][0]
+                if yb - ya <= eps:
+                    continue
+                if (qa, q(ya), q(yb)) in V and (qb, q(ya), q(yb)) in V:
+                    k = (qa, q(ya), qb, q(yb))
+                    if k in seen:
+                        continue
+                    seen.add(k)
+                    out.append({"box": (ys[i][2], ya, ys[i][3], yb), "source": f"SIDES:{ys[i][1]},{ys[j][1]}"})
+    return sorted(out, key=lambda r: r["box"])
 
 
 def _digest(s):
@@ -191,6 +227,57 @@ def closed_polygons(ents, eps):
         xs, ys = [p[0] for p in poly], [p[1] for p in poly]
         out.append({"box": (min(xs), min(ys), max(xs), max(ys)), "layer": ss[0]["layer"], "source": src,
                     "origin": "POLYGON", "polygon": poly})
+    if (ents.get("options") or {}).get("polygons_from_lines"):
+        known = [o["box"] for o in out]
+        for r in line_rings([s for s in ents["segments"] if _layer_role(s["layer"]) not in ANNOTATION_ROLES], eps):
+            if not any(all(abs(p - q) <= 2 * eps for p, q in zip(r["box"], k)) for k in known):
+                out.append(r)
+    return out
+
+
+def line_rings(segs, eps, min_vertices=5):
+    """M7: closed, NON-rectangular outlines drawn as separate lines (an exploded polyline): per layer, a connected set
+    of straight segments in which every end meets exactly one other end (each vertex joins exactly two lines, within
+    eps) and that closes on itself. A vertex where a third line meets breaks the ring (never guessed through)."""
+    q = lambda p: (int(round(p[0] / eps)), int(round(p[1] / eps)))            # noqa: E731
+    by_layer = defaultdict(list)
+    for s in segs:
+        if s.get("kind", "LINE") == "LINE" and math.dist(s["a"], s["b"]) > 2 * eps:
+            by_layer[s["layer"]].append(s)
+    out = []
+    for lay, ss in sorted(by_layer.items()):
+        if len(ss) > 20000:
+            continue
+        ends = defaultdict(list)
+        for k, s in enumerate(ss):
+            ends[q(s["a"])].append((k, 0))
+            ends[q(s["b"])].append((k, 1))
+        used = set()
+        for k0 in range(len(ss)):
+            if k0 in used:
+                continue
+            ring, walk, k, end, closed = [], [], k0, 1, False      # end: which end of line k we leave by (1 = b)
+            while len(walk) <= 400:
+                walk.append(k)
+                ring.append(ss[k]["a"] if end == 1 else ss[k]["b"])
+                node = q(ss[k]["b"] if end == 1 else ss[k]["a"])
+                nxt = [x for x in ends[node] if x[0] != k]
+                if len(ends[node]) != 2 or len(nxt) != 1:
+                    break                                          # an open end or a third line: no ring
+                k, e = nxt[0]
+                end = 1 if e == 0 else 0                           # enter by the shared end, leave by the other
+                if k == k0:
+                    closed = True
+                    break
+                if k in used or k in walk:
+                    break
+            used.update(walk)
+            if not closed or len(ring) < min_vertices:
+                continue
+            xs, ys = [p[0] for p in ring], [p[1] for p in ring]
+            out.append({"box": (min(xs), min(ys), max(xs), max(ys)), "layer": lay,
+                        "source": "RING:" + ",".join(sorted(ss[m]["id"] for m in walk)[:4]),
+                        "origin": "LINE_RING", "polygon": [tuple(p) for p in ring]})
     return out
 
 
@@ -751,9 +838,11 @@ def bind_marks(bands, beam_marks, widths_of, unit_m, width_tol_m=0.015, angle_to
     return out
 
 
-def split_at_supports(bands, column_boxes, min_piece_native):
+def split_at_supports(bands, column_boxes, min_piece_native, min_overlap_native2=0.0):
     """A straight band that runs through columns is cut into clear pieces between them (the column owns its
-    footprint). Each piece keeps the parent band id and its own polygon / length; arcs are kept whole."""
+    footprint). Each piece keeps the parent band id and its own polygon / length; arcs are kept whole.
+    min_overlap_native2 (M7): a column whose overlap with the band is not above this area only touches it (a face
+    flush with the band face) and does not cut it - an exact-zero test flips with floating noise."""
     out = []
     for b in bands:
         if b["kind"] != "STRAIGHT" or not column_boxes:
@@ -763,7 +852,7 @@ def split_at_supports(bands, column_boxes, min_piece_native):
         cuts = []
         for c in column_boxes:
             poly = box_poly(c)
-            if overlap_area(b["polygon"], poly) <= 0:
+            if overlap_area(b["polygon"], poly) <= min_overlap_native2:
                 continue
             ts = [x * u[0] + y * u[1] for x, y in poly]
             cuts.append((max(min(ts), b["t0"]), min(max(ts), b["t1"]), tuple(round(v, 1) for v in c)))

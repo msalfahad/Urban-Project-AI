@@ -759,6 +759,7 @@ def geometry_ledger(D, intake, members, consumed, p, notes_words):
     signals, findings, stats = [], [], defaultdict(float)
     local = _local_index(D, members, consumed, p["EXPLAIN_TOL_M"])
     pending = []
+    legend_records = []
     for sid, rec in _plan_sheets(D):
         sh = rec["sheet"]
         org = sh.get("origin") or (0.0, 0.0)
@@ -807,7 +808,13 @@ def geometry_ledger(D, intake, members, consumed, p, notes_words):
         opening_own = _opening_symbols(ms, drawn, u, p)
         fills = [e for e in drawn if e["type"] == "HATCH"]
         col_fill = _column_fill(fills, solids, p["EXPLAINED_SHARE"])
-        legend, swatches = _legend_swatches([e for e in ents if e["type"] == "HATCH"], ms, texts, notes_words, u, p)
+        v3 = bool((D.get("options") or {}).get("legend_nearest_caption"))
+        legend, swatches = _legend_swatches([e for e in ents if e["type"] == "HATCH"], ms, texts, notes_words, u, p,
+                                            nearest=v3, records=legend_records if v3 else None)
+        for r_ in legend_records:
+            r_.setdefault("sheet", sid)
+        if legend_records:
+            p["_legend_records"] = legend_records
         mgrid = _Grid(max(5.0 / u, 1e-6))
         for m in ms:
             mgrid.add(_bbox(m["poly"]), m)
@@ -1102,9 +1109,14 @@ def _column_fill(hatches, solids, share):
             "layers": {k for k, v in lc.items() if v >= 2 and v >= 0.25 * n}}
 
 
-def _legend_swatches(hatches, ms, texts, words, u, p):
+def _legend_swatches(hatches, ms, texts, words, u, p, nearest=False, records=None):
     """a legend swatch: a small fill off the building, another fill of the same pattern and layer elsewhere on the
-    sheet, and a short note beside it naming one family. -> ({(pattern, layer): (family, note)}, swatch ids)."""
+    sheet, and a short note beside it naming one family. -> ({(pattern, layer): (family, note)}, swatch ids).
+    nearest (M7, V3 legend reader): the swatch takes the caption NEAREST to it among the captions that name a family,
+    a caption on the swatch's row (vertical overlap with the swatch, or the swatch's own height) before one that is
+    not; two captions equally near (within 10 %) naming different families leave the swatch AMBIGUOUS. The V2 vote
+    over every caption within LEGEND_TEXT_M tied on legends whose rows are drawn close together (W5).
+    records: a list that receives one record per swatch candidate {pattern, layer, state, family, caption}."""
     bb = None
     for m in ms:
         bb = _union_box(bb, _bbox(m["poly"]))
@@ -1116,6 +1128,32 @@ def _legend_swatches(hatches, ms, texts, words, u, p):
         if _in_box(bb, cx, cy):
             continue
         if not any(o is not h and o["pattern"] == h["pattern"] and o["layer"] == h["layer"] for o in hatches):
+            continue
+        if nearest:
+            hh = max(h["box"][3] - h["box"][1], 1e-9)
+            cands = []
+            for t in texts:
+                if len(t["norm"]) > p["DEPENDENCY_NOTE_MAX_CHARS"] or section_label(t["norm"]):
+                    continue
+                d = _dist_to_group(t["x"], t["y"], [h]) * u
+                fams = sorted(set(note_families(t["norm"], words)))
+                if d <= p["LEGEND_TEXT_M"] and fams:
+                    row = h["box"][1] - 0.5 * hh <= t["y"] <= h["box"][3] + 0.5 * hh
+                    cands.append((0 if row else 1, d, fams, t))
+            cands.sort(key=lambda c: (c[0], c[1], c[3]["norm"]))
+            state, fam, cap = "NO_CAPTION", None, ""
+            if cands:
+                r0, d0, f0, t0 = cands[0]
+                rivals = [c for c in cands[1:] if c[0] == r0 and c[1] <= d0 * 1.10 + 1e-9 and c[2] != f0]
+                if len(f0) == 1 and not rivals:
+                    state, fam, cap = "MATCHED", f0[0], _ascii(t0["norm"], 30)
+                    out[(h["pattern"], h["layer"])] = (fam, cap)
+                    ids.add(id(h))
+                else:
+                    state = "AMBIGUOUS"
+            if records is not None:
+                records.append({"pattern": h["pattern"], "layer": h["layer"], "state": state, "family": fam,
+                                "caption": cap, "box": tuple(round(v, 1) for v in h["box"])})
             continue
         votes, note = Counter(), None
         for t in texts:
@@ -2255,7 +2293,8 @@ def assess(D, intake, items, *, risk=(), heights=None, family_coverage=None, par
             "populations": populations, "scores": scores, "geometry_stats": {k: round(v, 3) for k, v in
                                                                               sorted(g_stats.items())},
             "rule": "a finding is a question for a person, never a quantity; no reference quantity is read; volumes "
-                    "only from drawn geometry x a printed section / thickness, never a ratio"}
+                    "only from drawn geometry x a printed section / thickness, never a ratio",
+            **({"legend": p["_legend_records"]} if p.get("_legend_records") else {})}
 
 
 def _pct(a, b):

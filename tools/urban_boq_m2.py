@@ -108,12 +108,17 @@ def route_generic(inputs, conv_path, overrides, profile, cache_dir=None, evidenc
     generic = json.loads((ROOT / (conv_path or GENERIC_CONVENTIONS)).read_text(encoding="utf-8"))
     # M3: an unmarked ground-beam network is searched at the printed typical widths only
     merged = GR.merge_conventions(generic, profile, overrides)
-    D = GR.detect(I, typical_widths_m=GR.typical_gb_widths(merged), options=GR.detect_options(merged))
+    opt = GR.detect_options(merged)
+    if opt.get("local_origin"):                  # M7: the route computes near the origin (the shift is recorded)
+        I = GR.to_local_origin(I)
+    D = GR.detect(I, typical_widths_m=GR.typical_gb_widths(merged), options=opt)
 
     ae = None
     adxf = next((r for r in (arch or []) if r["kind"] == "DXF" and "error" not in r), None)
     if adxf is not None:
         AI, _ = cached_intake(adxf, cache_dir)
+        if opt.get("local_origin"):
+            AI = GR.to_local_origin(AI)
         ae = AE.gb_exterior(D, AI)
         ae["lintels"] = AE.lintel_openings(D, AI)
 

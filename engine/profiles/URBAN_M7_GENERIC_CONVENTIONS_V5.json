@@ -1,6 +1,6 @@
 {
  "set": "URBAN_M7_GENERIC_CONVENTIONS_V5",
- "note": "M7 = M5 (V4) + SHEET_FRAMES_FROM_LINES, DUPLICATE_ANNOTATION_READ_ONCE, SLAB_JUNCTION_GAP_CLOSURE, SLAB_OPENING_EXTENT_GUARD, COLUMN_OUTLINE_BY_SECTION, COLUMN_PRESENCE_CONTRADICTION, SLAB_STAIR_FOOTPRINT_UNRESOLVED, COLUMN_LAYER_EVIDENCE, STAIR_TREADS_ONE_LAYER, GEOMETRY_LOCAL_ORIGIN. Opt-in on the CLI (--conventions); the default of tools/urban_project_run.py (a new project's manifest run). The CLI default stays V3 so the frozen M4-M6 packages reproduce unchanged.",
+ "note": "M7 = M5 (V4) + SHEET_FRAMES_FROM_LINES, DUPLICATE_ANNOTATION_READ_ONCE, SLAB_JUNCTION_GAP_CLOSURE, SLAB_OPENING_EXTENT_GUARD, COLUMN_OUTLINE_BY_SECTION, COLUMN_PRESENCE_CONTRADICTION, SLAB_STAIR_FOOTPRINT_UNRESOLVED, COLUMN_LAYER_EVIDENCE, STAIR_TREADS_ONE_LAYER, GEOMETRY_LOCAL_ORIGIN, RECTANGLE_FROM_FOUR_SIDES, UNIT_AWARE_RECTANGLES, TOUCH_IS_NOT_OVERLAP, CB_ENDS_BY_SHARED_SUPPORT, LENGTH_CLASS_AT_MILLIMETRE, POLYGON_FROM_LINE_RING, LEGEND_NEAREST_CAPTION. Opt-in on the CLI (--conventions); the default of tools/urban_project_run.py (a new project's manifest run). The CLI default stays V3 so the frozen M4-M6 packages reproduce unchanged.",
  "conventions": [
   {
    "id": "BAR_STOCK_LENGTH_M",
@@ -723,7 +723,7 @@
   },
   {
    "id": "GEOMETRY_LOCAL_ORIGIN",
-   "title": "Slab cells are noded and measured at a local origin (the lower-left of the plan's edge geometry)",
+   "title": "The route computes in a drawing-local frame (origin at the lower-left of the linework); slab cells are noded locally",
    "kind": "choice",
    "options": [
     "SHEET_EDGE_LOWER_LEFT"
@@ -731,7 +731,91 @@
    "base": "SHEET_EDGE_LOWER_LEFT",
    "provenance": "STANDARD_PRACTICE",
    "source": "an area is a property of the shape, not of where the drawing sits; georeferenced drawings place plans millions of units from the origin",
-   "rationale": "M7 metamorphic harness: translating a metre drawing by 1.2e6 units changed slab cell areas by up to 1e-4 m2 per cell (shoelace terms x * y ~ 1e12 lose four decimals); noded locally the areas agree to 1e-9."
+   "rationale": "M7 metamorphic harness: translating a metre drawing by 1.2e6 units changed slab cell areas by up to 1e-4 m2 per cell (shoelace terms x * y ~ 1e12 lose four decimals); noded locally the areas agree to 1e-9. On ST7757 translated by (1 234 567, -765 432) units, beam bands stopped being cut at three flush columns (1F unresolved exposure +0.19 m3): the overlap predicate's absolute tolerance is below the floating noise at those coordinates."
+  },
+  {
+   "id": "RECTANGLE_FROM_FOUR_SIDES",
+   "title": "A rectangle drawn as four whole sides meeting at its corners is an outline, also where other lines cross it",
+   "kind": "choice",
+   "options": [
+    "DRAWN_SIDES_AND_MINIMAL_CELLS"
+   ],
+   "base": "DRAWN_SIDES_AND_MINIMAL_CELLS",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "a composite (cross / T / L) column is often drawn as overlapping rectangles; an exploded polyline is four lines",
+   "rationale": "M7 metamorphic harness on ST7757: with its polylines exploded to lines, four composite column outlines on one slab plan were no longer found (the line method returned the five minimal cells of each cross), so beams ran through those columns (GF beams +0.30 m3)."
+  },
+  {
+   "id": "UNIT_AWARE_RECTANGLES",
+   "title": "Polyline rectangles are read down to 1 mm in the drawing's own unit",
+   "kind": "choice",
+   "options": [
+    "ONE_MILLIMETRE"
+   ],
+   "base": "ONE_MILLIMETRE",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "the same drawing in metres and in millimetres is the same building",
+   "rationale": "M7 metamorphic harness on ST7757: re-expressed in metres, every polyline rectangle under 1.0 unit (every column outline) was dropped by a fixed 1.0-unit threshold."
+  },
+  {
+   "id": "TOUCH_IS_NOT_OVERLAP",
+   "title": "Flush faces are a touch: a column touching a band does not cut it, and does stand on it",
+   "kind": "choice",
+   "options": [
+    "OVERLAP_ABOVE_1E-4_M2"
+   ],
+   "base": "OVERLAP_ABOVE_1E-4_M2",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "a column face flush with a beam face is a touch; a beam runs through a column only where they overlap",
+   "rationale": "M7 metamorphic harness on ST7757: an exact-zero overlap test on a flush column flipped between runs of the same drawing at two placements (floating noise), cutting one GF band or not. Rotated by 180 degrees, a column flush with a ground-beam face read as free-standing (exact-zero overlap), sending a 6.8 m2 ground-slab cell to UNRESOLVED (1.09 m3)."
+  },
+  {
+   "id": "CB_ENDS_BY_SHARED_SUPPORT",
+   "title": "A continuous-beam span end is interior when its support is shared with another span of the line",
+   "kind": "choice",
+   "options": [
+    "SHARED_SUPPORT"
+   ],
+   "base": "SHARED_SUPPORT",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "bottom bars are anchored at the free ends of a continuous beam and extended into the supports between spans, whatever direction the line is drawn in",
+   "rationale": "M7 metamorphic harness on ST7757 (rotation): on a line whose printed spans match the drawing REVERSED, the end anchorage was applied at the interior support and the support extension at the free end (a 5D18 bottom group 73.2 kg in one orientation, 66.2 kg in the other)."
+  },
+  {
+   "id": "LENGTH_CLASS_AT_MILLIMETRE",
+   "title": "A drawn length is compared with a printed class limit at 1 mm precision",
+   "kind": "choice",
+   "options": [
+    "ROUND_TO_MM"
+   ],
+   "base": "ROUND_TO_MM",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "a drawing is dimensioned to the millimetre; a class limit printed as 5.0 m is read against the drawn length to that precision",
+   "rationale": "M7 metamorphic harness on ST7757: a 5.000 m ground beam fell below or above the 5.0 m typical-section limit depending on the drawing's placement, units or orientation (the beam's low reading 0.9 or 0.6 m3)."
+  },
+  {
+   "id": "POLYGON_FROM_LINE_RING",
+   "title": "A closed ring of lines on one layer, each vertex joining exactly two of them, is a polygon outline",
+   "kind": "choice",
+   "options": [
+    "CLEAN_RING_ONLY"
+   ],
+   "base": "CLEAN_RING_ONLY",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "drawings are often exported with polylines exploded to lines; the outline is the same",
+   "rationale": "M7 metamorphic harness on ST7757: with polylines exploded, a clipped (non-rectangular) footing outline was no longer read; the footing fell back to its schedule L x W x D (0.258 -> 0.300 m3)."
+  },
+  {
+   "id": "LEGEND_NEAREST_CAPTION",
+   "title": "A legend swatch takes its nearest caption on its own row; equally near captions naming different families leave it ambiguous",
+   "kind": "choice",
+   "options": [
+    "NEAREST_ROW_CAPTION"
+   ],
+   "base": "NEAREST_ROW_CAPTION",
+   "provenance": "STANDARD_PRACTICE",
+   "source": "a legend is a table of rows: each swatch is captioned on its own row, beside it",
+   "rationale": "M6 held-out V2 (W5): with legend rows drawn close together every swatch saw every caption within 3 m, the vote tied and the legend was read as an unexplained fill group (one false finding per held-out set; the hatched cases stayed unnamed)."
   }
  ]
 }

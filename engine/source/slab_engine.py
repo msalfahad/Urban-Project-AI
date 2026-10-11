@@ -576,7 +576,7 @@ def open_boundary_panel(face, band_pieces, column_boxes, unit_m):
 
 
 def classify_regions(slab, ents, edge_layers, band_pieces, column_boxes, unit_m, *, ground=False,
-                     treads_per_layer=False):
+                     treads_per_layer=False, touch_counts=False):
     """M3: every face of a plan gets a region class, from the face class plus two generic checks:
         free-standing columns   a column outline inside a PANEL that touches no beam band. On a ground-beam plan a
                                 column stands on a beam junction or its own footing, so the cell is UNRESOLVED (not
@@ -596,7 +596,14 @@ def classify_regions(slab, ents, edge_layers, band_pieces, column_boxes, unit_m,
             for c in column_boxes:
                 cx, cy = (c[0] + c[2]) / 2, (c[1] + c[3]) / 2
                 if MD.point_in_poly(cx, cy, f["polygon"]):       # the outer cycle: a column hole lies inside it
-                    if not any(MD.overlap_area(MD.box_poly(c), b["polygon"]) > 0 for b in band_pieces):
+                    # M7 (touch_counts): a column flush with a band face stands on that beam - the box grown by
+                    # 1 mm decides, not an exact-zero overlap that floating noise turns either way
+                    e = 1e-3 / unit_m if touch_counts else 0.0
+                    cb = MD.box_poly((c[0] - e, c[1] - e, c[2] + e, c[3] + e))
+                    # an arc band's ring is not convex (the convex clip reads 0): its centre test decides
+                    on_arc = touch_counts and any(b.get("kind") != "STRAIGHT" and MD.point_in_poly(cx, cy, b["polygon"])
+                                                  for b in band_pieces)
+                    if not on_arc and not any(MD.overlap_area(cb, b["polygon"]) > 0.25 * e * e for b in band_pieces):
                         f["free_columns"].append(tuple(round(v, 1) for v in c))
             f["treads"] = tread_family(f["polygon"], segs, unit_m, per_layer=treads_per_layer)
         cls = f["class"]

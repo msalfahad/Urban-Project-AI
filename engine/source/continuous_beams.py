@@ -354,11 +354,14 @@ def _public(s):
 
 # ------------------------------------------------------------------ physical bars
 def physical_bars(m, row, *, anchorage_d=(0, 40, 50), support_frac=(0.20, 0.25, 0.33), support_basis="CLEAR",
-                  bottom_ext_m=(0.075, 0.15, 0.30), lap_d=(40, 50, 60), stock_m=12.0):
+                  bottom_ext_m=(0.075, 0.15, 0.30), lap_d=(40, 50, 60), stock_m=12.0, ends_by_shared_support=False):
     """m: a match() result with spans; row: the schedule row. -> {groups, missing}.
     Lengths are (low, base, high) triples in metres; a group's 'share' gives the length of the group in each span
     (by schedule span index) so that it can be allocated to the span's pieces once. support_basis: the span a support
-    bar's fraction is taken of - CLEAR (face to face) or AXIS (support centre to support centre)."""
+    bar's fraction is taken of - CLEAR (face to face) or AXIS (support centre to support centre).
+    ends_by_shared_support (M7): a span end is interior when its support is shared with another span of the line
+    (direction-free). Without it 'left' is taken to point to span 1, which is false on a line matched REVERSED: the
+    end anchorage then went on the interior support and the support extension on the free end."""
     span_of = (lambda s: s["clear_m"]) if support_basis == "CLEAR" else (lambda s: s["drawn_m"])
     rl, empty = roles(row)
     spans = sorted(m["spans"], key=lambda s: s["index"])
@@ -379,7 +382,8 @@ def physical_bars(m, row, *, anchorage_d=(0, 40, 50), support_frac=(0.20, 0.25, 
             ext = []
             for side in ("left", "right"):
                 g = s[side]
-                interior = g["kind"] != "FREE_END" and _is_interior(s, side, n)
+                interior = g["kind"] != "FREE_END" and (_shared_with_neighbour(s, side, spans) if
+                                                        ends_by_shared_support else _is_interior(s, side, n))
                 ext.append([g["width_m"] + e for e in bottom_ext_m] if interior else [a * d for a in anchorage_d])
             L3 = tuple(s["clear_m"] + ext[0][i] + ext[1][i] for i in range(3))
             add("BOTTOM", k, bar, L3, {k: 1.0}, "clear span + extension each side (interior: support width + "
@@ -428,6 +432,12 @@ def physical_bars(m, row, *, anchorage_d=(0, 40, 50), support_frac=(0.20, 0.25, 
 
 def _is_interior(s, side, n):
     return (side == "left" and s["index"] > 1) or (side == "right" and s["index"] < n) if s.get("index") else False
+
+
+def _shared_with_neighbour(s, side, spans):
+    c = (s.get(side) or {}).get("centre")
+    return c is not None and any(o is not s and c in ((o.get("left") or {}).get("centre"),
+                                                     (o.get("right") or {}).get("centre")) for o in spans)
 
 
 def _shared_support_width(a, b):

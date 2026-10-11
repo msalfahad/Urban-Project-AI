@@ -243,11 +243,16 @@ def build(intake, *, min_frame_m=(10.0, 7.0), options=None):
     """The normalized model. Sheets in drawing units; unit_m converts to metres.
     options (M7, off by default so that frozen runs reproduce): frames_from_lines - a frame drawn as separate lines is
     a frame; dedupe_texts - an annotation drawn twice at the same place (same text, position within 1 mm, rotation)
-    is read once (a duplicated label never duplicates a member)."""
+    is read once (a duplicated label never duplicates a member); unit_aware_rects - polyline rectangles down to 1 mm
+    in the drawing's unit. The options travel with every sheet's entities (sheet_entities()["options"])."""
     opt = options or {}
     rects = closed_rectangles(intake["segments"])
     units = infer_units(intake, rects)
     f = units["unit_m"]
+    if opt.get("unit_aware_rects") and f:
+        # M7: the smallest polyline rectangle is 1 mm in the drawing's own unit (a fixed 1.0 unit drops every column
+        # outline of a metre drawing; the units were inferred from the larger rectangles above)
+        rects = closed_rectangles(intake["segments"], eps=1e-3 / f)
     fr = frames(intake["segments"], (min_frame_m[0] / f, min_frame_m[1] / f),
                 from_lines=bool(opt.get("frames_from_lines")))
     texts = [dict(t, norm=normalize(t["value"])) for t in intake["texts"]]
@@ -293,7 +298,8 @@ def sheet_entities(model, intake, sheet_id):
     arcs = [x for x in intake["arcs"] if _inside(b, *x["s"]) and _inside(b, *x["e"])]
     texts = [t for t in model["texts"] if t["sheet"] == sheet_id]
     rects = [r for r in model["rects"] if _inside(b, r["box"][0], r["box"][1]) and _inside(b, r["box"][2], r["box"][3])]
-    return {"segments": segs, "arcs": arcs, "texts": texts, "rects": rects, "box": b}
+    return {"segments": segs, "arcs": arcs, "texts": texts, "rects": rects, "box": b,
+            "options": dict(model.get("options") or {})}
 
 
 def policy_record():

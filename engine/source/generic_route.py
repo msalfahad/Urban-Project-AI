@@ -238,7 +238,39 @@ def detect_options(conv):
             "junction_gaps": on("SLAB_JUNCTION_GAP_CLOSURE"), "opening_extent": on("SLAB_OPENING_EXTENT_GUARD"),
             "column_by_section": on("COLUMN_OUTLINE_BY_SECTION"),
             "column_layer_evidence": on("COLUMN_LAYER_EVIDENCE"), "treads_per_layer": on("STAIR_TREADS_ONE_LAYER"),
-            "local_origin": on("GEOMETRY_LOCAL_ORIGIN")}
+            "local_origin": on("GEOMETRY_LOCAL_ORIGIN"), "drawn_rectangles": on("RECTANGLE_FROM_FOUR_SIDES"),
+            "unit_aware_rects": on("UNIT_AWARE_RECTANGLES"), "touch_tolerance": on("TOUCH_IS_NOT_OVERLAP"),
+            "polygons_from_lines": on("POLYGON_FROM_LINE_RING"),
+            "legend_nearest_caption": on("LEGEND_NEAREST_CAPTION")}
+
+
+def to_local_origin(intake):
+    """M7 (GEOMETRY_LOCAL_ORIGIN): a copy of an intake moved so that the lower-left of its linework is the origin.
+    Every predicate of the route (clipping, overlap, point-in-polygon, shoelace) then works on small numbers: at
+    coordinates ~1e6 a cross product carries ~1e-4 of noise, far above the absolute tolerances the predicates use, so
+    a column face flush with a beam face could cut or not cut the beam depending on where the drawing sits. The shift
+    is recorded (local_origin) and moves with the drawing, so ids and quantities no longer depend on placement."""
+    xs = [p_[0] for s_ in intake["segments"] for p_ in (s_["a"], s_["b"])] + \
+        [p_[0] for a in intake.get("arcs", []) for p_ in (a["s"], a["e"])]
+    ys = [p_[1] for s_ in intake["segments"] for p_ in (s_["a"], s_["b"])] + \
+        [p_[1] for a in intake.get("arcs", []) for p_ in (a["s"], a["e"])]
+    if not xs:
+        xs, ys = [t["x"] for t in intake.get("texts", [])] or [0.0], [t["y"] for t in intake.get("texts", [])] or [0.0]
+    ox, oy = min(xs), min(ys)
+
+    def mv(p_):
+        return (p_[0] - ox, p_[1] - oy) + tuple(p_[2:]) if p_ is not None else None
+    out = dict(intake)
+    out["segments"] = [dict(s_, a=mv(s_["a"]), b=mv(s_["b"])) for s_ in intake["segments"]]
+    out["arcs"] = [dict(a, c=mv(a["c"]), s=mv(a["s"]), m=mv(a["m"]), e=mv(a["e"])) for a in intake.get("arcs", [])]
+    out["circles"] = [dict(c, c=mv(c["c"])) for c in intake.get("circles", [])]
+    out["ellipses"] = [dict(e, c=mv(e["c"]), s=mv(e["s"]), e=mv(e["e"])) for e in intake.get("ellipses", [])]
+    out["texts"] = [dict(t, x=t["x"] - ox, y=t["y"] - oy) for t in intake.get("texts", [])]
+    out["attributes"] = [dict(a, x=a["x"] - ox, y=a["y"] - oy) for a in intake.get("attributes", [])]
+    out["inserts"] = [dict(i, x=i["x"] - ox, y=i["y"] - oy) for i in intake.get("inserts", [])]
+    out["hatches"] = [dict(h, ring=[mv(q) for q in h.get("ring") or []]) for h in intake.get("hatches", [])]
+    out["local_origin"] = {"x": ox, "y": oy, "rule": "lower-left of the linework (segments and arc ends)"}
+    return out
 
 
 def detect(intake, *, typical_widths_m=None, options=None):
@@ -329,7 +361,8 @@ def detect(intake, *, typical_widths_m=None, options=None):
                            "extended": sum(1 for h in heal if h["code"] == "HEAL_EXTEND"),
                            "extended_wide": [h for h in heal if h["code"] == "HEAL_EXTEND_WIDE"], "log": heal[:200]}
             bands, conf = MD.beam_bands(E, lays, widths, tol, 0.3 / u) if lays else ([], [])
-            bands = MD.split_at_supports(bands, cols, 0.05 / u)
+            touch = (1e-2 / u) ** 2 if opt.get("touch_tolerance") else 0.0     # M7: 1e-4 m2
+            bands = MD.split_at_supports(bands, cols, 0.05 / u, touch)
             widths_of = defaultdict(set)              # every printed width of a mark (duplicate rows kept)
             for r in S["rows"]:
                 if r["dims_m"].get("W"):
@@ -355,7 +388,8 @@ def detect(intake, *, typical_widths_m=None, options=None):
                              local_origin=bool(opt.get("local_origin"))) \
                 if lays else None
             SE.classify_regions(slab, E, lays, bands, cols + extra, u, ground=sh["role"] == "GROUND_BEAM_PLAN",
-                                treads_per_layer=bool(opt.get("treads_per_layer")))
+                                treads_per_layer=bool(opt.get("treads_per_layer")),
+                                touch_counts=bool(opt.get("touch_tolerance")))
             rec["slab"] = slab
             rec["band_sides"] = SE.band_sides(slab["faces"], bands, u, cols + extra) if slab else {}
             # M3: an edge beam with one drawn face (the outer face undrawn), from its mark and scheduled width
@@ -364,7 +398,7 @@ def detect(intake, *, typical_widths_m=None, options=None):
             if sf_b:
                 for k, b in enumerate(sf_b, 1):
                     b["band_id"] = f"BANDSF{k:02d}"
-                pieces = MD.split_at_supports(sf_b, cols, 0.05 / u)
+                pieces = MD.split_at_supports(sf_b, cols, 0.05 / u, touch)
                 for mi, v in sf_m.items():
                     ids = {b["band_id"] for b in v["bands"]}
                     own = [p_["band_id"] for p_ in pieces if p_["parent"] in ids]
@@ -1650,7 +1684,12 @@ def _gb_class(conv, b):
     clear = b["length_m"]
     cc = clear + W                                     # one support width added (centre to centre approximation)
     basis = conv.base("GB_LENGTH_BASIS") if "GB_LENGTH_BASIS" in conv.items else "CLEAR"
-    kc, kcc = pick(clear), pick(cc)
+    if "LENGTH_CLASS_AT_MILLIMETRE" in conv.items:
+        # M7: a drawn length is compared with a printed class limit at the drawing's precision (1 mm); at full float
+        # precision a 5.000 m span fell either side of a 5.0 m limit depending on where the drawing sat
+        kc, kcc = pick(round(clear, 3)), pick(round(cc, 3))
+    else:
+        kc, kcc = pick(clear), pick(cc)
     if kc is None or kcc is None:
         return None
     v = {"CLEAR": b["net_plan_m2"] * kc["H"], "CENTRE_TO_CENTRE": b["net_plan_m2"] * kcc["H"]}
@@ -2019,7 +2058,8 @@ def _cb_model(D, rec, conv, cover_trip, hook_std):
     bkw = dict(anchorage_d=_trip(conv, "BEAM_BAR_ANCHORAGE_D"), support_frac=_trip(conv, "CB_SUPPORT_BAR_EXTENT_FRAC"),
                support_basis=_cv(conv, "CB_SUPPORT_BAR_SPAN_BASIS", "CLEAR"),
                bottom_ext_m=_trip(conv, "CB_BOTTOM_EXTENSION_M"), lap_d=_trip(conv, "BEAM_LAP_D"),
-               stock_m=_cv(conv, "BAR_STOCK_LENGTH_M", 12.0))
+               stock_m=_cv(conv, "BAR_STOCK_LENGTH_M", 12.0),
+               ends_by_shared_support="CB_ENDS_BY_SHARED_SUPPORT" in conv.items)
     out = {"lines": [], "band": {}, "steel": {}}
     marks = sorted({m["mark"] for m in rec.get("marks", []) if m.get("family") == "CONTINUOUS_BEAM" and
                     str(m.get("state", "")).startswith("BOUND")})
