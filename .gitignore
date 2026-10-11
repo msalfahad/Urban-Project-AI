@@ -55,3 +55,5 @@ research/urban_engine_m4_correctness/.m3_snapshot.json
 # M5: generated PDF / images (client drawing geometry); the workbooks are covered by *.xlsx
 research/urban_engine_m5_concrete_reconciliation/**/*.pdf
 research/urban_engine_m5_concrete_reconciliation/**/*.png
+# M7: the visual QA PDF is generated from the committed records (build_visuals.py); the workbook is covered by *.xlsx
+research/urban_engine_m7_reliability/**/*.pdf

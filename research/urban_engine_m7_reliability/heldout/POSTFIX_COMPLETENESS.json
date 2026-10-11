@@ -1,0 +1,94 @@
+{
+ "C_A": {
+  "frozen": {
+   "crashed": [],
+   "design_opening_bay_flags": 5,
+   "detected": 479,
+   "drawings": 40,
+   "false_by_kind": {
+    "SLAB_COVERAGE_LOW": 1
+   },
+   "false_findings": 1,
+   "family_states": {
+    "NA": 87,
+    "RIGHT": 350,
+    "UNKNOWN": 30,
+    "WRONG": 12
+   },
+   "injected": 479
+  },
+  "postfix": {
+   "crashed": [],
+   "design_opening_bay_flags": 5,
+   "detected": 479,
+   "drawings": 40,
+   "false_by_kind": {
+    "SLAB_COVERAGE_LOW": 1
+   },
+   "false_findings": 1,
+   "family_states": {
+    "NA": 87,
+    "RIGHT": 350,
+    "UNKNOWN": 30,
+    "WRONG": 12
+   },
+   "injected": 479
+  },
+  "same": {
+   "crashed": true,
+   "design_opening_bay_flags": true,
+   "detected": true,
+   "drawings": true,
+   "false_by_kind": true,
+   "false_findings": true,
+   "family_states": true,
+   "injected": true
+  }
+ },
+ "C_B": {
+  "frozen": {
+   "crashed": [],
+   "design_opening_bay_flags": 4,
+   "detected": 479,
+   "drawings": 40,
+   "false_by_kind": {
+    "SLAB_COVERAGE_LOW": 1
+   },
+   "false_findings": 1,
+   "family_states": {
+    "NA": 87,
+    "RIGHT": 335,
+    "UNKNOWN": 38,
+    "WRONG": 19
+   },
+   "injected": 479
+  },
+  "postfix": {
+   "crashed": [],
+   "design_opening_bay_flags": 4,
+   "detected": 479,
+   "drawings": 40,
+   "false_by_kind": {
+    "SLAB_COVERAGE_LOW": 1
+   },
+   "false_findings": 1,
+   "family_states": {
+    "NA": 87,
+    "RIGHT": 335,
+    "UNKNOWN": 38,
+    "WRONG": 19
+   },
+   "injected": 479
+  },
+  "same": {
+   "crashed": true,
+   "design_opening_bay_flags": true,
+   "detected": true,
+   "drawings": true,
+   "false_by_kind": true,
+   "false_findings": true,
+   "family_states": true,
+   "injected": true
+  }
+ }
+}
