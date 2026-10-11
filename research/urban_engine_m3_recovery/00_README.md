@@ -24,7 +24,7 @@ Read `01_FINAL_REPORT.md` first.
 | 14 | Runtime, caching, incremental recalculation | `14_PERFORMANCE.json` |
 | 15 | Workflow: one command, PDF evidence, manual transcription | `15_WORKFLOW.md` |
 | 16 | Regression record: real bug → fix → test | `16_REGRESSION_RECORD.md` |
-| 17 | Test run | `17_TEST_RUN.md` |
+| 17 | Test run | `17_TEST_RUN.md`, `TEST_GATE_bfa208e.json` |
 | 18 | Notes for ChatGPT: worked / not working / next | `18_CHATGPT_NOTES.md` |
 | 19 | Engineering RFIs | `19_RFIS.csv` |
 | – | The ST7757 run through route G (the contractor-facing outputs) | `st7757_route_g/` (CSV, HTML, SVG, JSON committed; `STRUCTURAL_BOQ.xlsx`, `BOQ_REPORT.pdf` and `VISUAL_QA_OVERLAYS.pdf` regenerate with `15_WORKFLOW.md` §5) |

@@ -224,7 +224,11 @@ The test set is 40 new layouts (seeds 501–540, never used before), each drawn 
   - `test_m3_completeness_families.py`
   - `test_m3_reports.py` (this package)
 - The M2 synthetic suite also exercises the M3 coverage states.
-- Pass / fail / skip counts for each file, and for the full suite, are in `17_TEST_RUN.md`.
+- **`tests/m3_recovery`:** 70 tests, all passing. The breakdown: footings 3, columns 6, ground beams 6, detail evidence 26, slabs and beams 9, completeness and families 4, generator 2, package 14.
+- **Full suite at `bfa208e`:** 7 321 passed, **0 code failures**, 376 blocked by missing data, 136 skipped for an unavailable prerequisite, 2 other skips, 100 expected failures.
+  - Against M2: +70 passes, exactly the M3 tests; every other class is unchanged.
+  - The first full run (at `0aba317`) caught one code failure: project tokens in the engine's redaction rule. It is fixed and recorded as R33.
+- Details are in `17_TEST_RUN.md` and `TEST_GATE_bfa208e.json`. The gate stays **INCOMPLETE**.
 
 ## 10. What remains before a reliable contractor BOQ
 
