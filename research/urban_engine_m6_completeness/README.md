@@ -27,6 +27,7 @@ enters a total.**
 | 7 | ST7757 V2 run — **post-discovery, not blind** (V1 blind files untouched) | `post_discovery_v2/`, `03_V2_RUN_FREEZE.json` |
 | 8 | Reconciliation of both runs under two matchers | `reconciliation/` |
 | 9 | Weakness register (before / after, open items) | `05_WEAKNESS_REGISTER.csv`, `04_EXECUTIVE_REPORT.md` |
+| 10 | Full suite on the V2 freeze: 0 code failures, +40 passes (the M6 tests); gate INCOMPLETE | `06_TEST_RESULTS.md`, `TEST_GATE_M6.json` |
 
 External records were never used to choose a reading or tune a detector: they told us *which* elements were missed;
 the reason was always found in the drawing geometry (a route state, a fill, lines inside a footing), and the fix is
