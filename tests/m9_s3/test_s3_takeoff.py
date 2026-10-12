@@ -51,9 +51,10 @@ def _lines(room, floor, item, name=None):
 
 # ---- text sources: the Arabic (101) keyboard of an SHX big font
 def test_keyboard_layout_is_one_to_one_and_decodes_by_hand():
-    assert len(AI.KEYBOARD_AR101) == 34 and AI.KEYBOARD_AR101["b"] == "لا"
+    assert len(AI.KEYBOARD_AR101) == 34 and AI.KEYBOARD_AR101["b"] == chr(0x0644) + chr(0x0627)   # lam-alef
     # hand: m = teh marbuta, comma = waw, n = alef maksura, period = zain (the keys after the lam-alef key)
-    assert [AI.KEYBOARD_AR101[k] for k in "nm,./`"] == ["ى", "ة", "و", "ز", "ظ", "ذ"]
+    assert [AI.KEYBOARD_AR101[k] for k in "nm,./`"] == [chr(c) for c in (0x0649, 0x0629, 0x0648, 0x0632, 0x0638,
+                                                                      0x0630)]
     assert AI.decode_text("yvtm k,l", "xarb.shx") == ("غرفة نوم", "SHX_KEYBOARD")
     assert AI.decode_text("plhl", "XARB.SHX") == ("حمام", "SHX_KEYBOARD")
     assert AI.decode_text("plhl", "x-arab1b.shx")[1] == "SHX_UNMAPPED"        # never guessed
