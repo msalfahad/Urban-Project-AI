@@ -1,0 +1,193 @@
+{
+ "schema": "URBAN_DRAWING_DISCOVERY_V1",
+ "prototype": true,
+ "documents": [
+  {
+   "file": "plan.dxf",
+   "sha256": "ba5d4c2cc2569fef6face39375080b88c6e7420e15a1b4d47f0e271bcd6d3964",
+   "bytes": 37520,
+   "format": "DXF",
+   "header": {
+    "dxf_version": "AC1032",
+    "INSUNITS": 4,
+    "DIMLFAC": 1.0,
+    "MEASUREMENT": 1
+   }
+  }
+ ],
+ "stages": {
+  "0_intake": {
+   "state": "PASSED",
+   "findings": []
+  },
+  "1_inventory": {
+   "state": "PASSED",
+   "findings": [],
+   "census": {
+    "layouts": [
+     {
+      "name": "Model",
+      "kind": "MODEL",
+      "entities_by_type": {
+       "HATCH": 3,
+       "INSERT": 6,
+       "LINE": 122,
+       "LWPOLYLINE": 5,
+       "TEXT": 18
+      },
+      "viewports": 0
+     },
+     {
+      "name": "Layout1",
+      "kind": "PAPER",
+      "entities_by_type": {},
+      "viewports": 0
+     }
+    ],
+    "blocks": {
+     "DOOR1000": {
+      "LINE": 1,
+      "ARC": 1
+     },
+     "DOORWRAP": {
+      "INSERT": 1
+     },
+     "RTAG": {
+      "ATTDEF": 1
+     }
+    },
+    "xrefs": [],
+    "minserts": 0,
+    "max_insert_depth": 1
+   },
+   "entity_support": {
+    "ARC": "READ",
+    "ATTDEF": "UNKNOWN_KIND",
+    "HATCH": "READ_ONE_BLOCK_LEVEL",
+    "INSERT": "READ_NESTED",
+    "LINE": "READ",
+    "LWPOLYLINE": "READ",
+    "TEXT": "READ"
+   },
+   "hidden_layers": []
+  },
+  "4_units": {
+   "state": "PASSED",
+   "findings": [],
+   "declared_unit_m": 0.001,
+   "inferred_unit_m": 0.001,
+   "member_fit": {
+    "mm": 3,
+    "cm": 0,
+    "m": 0,
+    "in": 0
+   },
+   "unit_m_used_for_discovery": 0.001
+  },
+  "2_sheets": {
+   "state": "PASSED",
+   "findings": [],
+   "frames": [
+    {
+     "sheet_id": "SH01",
+     "role": "UNKNOWN",
+     "storey": "UNKNOWN",
+     "frame_source": "D2:62"
+    },
+    {
+     "sheet_id": "SH02",
+     "role": "UNKNOWN",
+     "storey": "UNKNOWN",
+     "frame_source": "D2:64"
+    }
+   ]
+  },
+  "5_floors": {
+   "state": "PASSED",
+   "findings": [],
+   "floors": [
+    {
+     "floor_id": "GF",
+     "region_id": "SH01:GF",
+     "sheet_id": "SH01",
+     "title_text_id": "T1:3F",
+     "level_texts_m": [
+      0.0
+     ],
+     "entities": {
+      "segments": 82,
+      "arcs": 4,
+      "circles": 0,
+      "texts": 9,
+      "hatches": 3,
+      "inserts": 4
+     }
+    },
+    {
+     "floor_id": "1F",
+     "region_id": "SH02:1F",
+     "sheet_id": "SH02",
+     "title_text_id": "T2:41",
+     "level_texts_m": [
+      3.5
+     ],
+     "entities": {
+      "segments": 66,
+      "arcs": 2,
+      "circles": 0,
+      "texts": 9,
+      "hatches": 0,
+      "inserts": 2
+     }
+    }
+   ]
+  },
+  "6_geometry_readiness": {
+   "state": "PASSED",
+   "findings": []
+  },
+  "7_vertical_model": {
+   "state": "BLOCKED",
+   "findings": [
+    {
+     "level": "BLOCKED_ITEM",
+     "code": "NO_SECTION_SOURCE",
+     "message": "heights need a section / schedule / facts file; level texts are candidates only",
+     "evidence": {}
+    }
+   ],
+   "level_candidates": {
+    "GF": [
+     0.0
+    ],
+    "1F": [
+     3.5
+    ]
+   }
+  },
+  "3_identity": {
+   "state": "NOT_RUN",
+   "findings": []
+  },
+  "8_features": {
+   "state": "NOT_RUN",
+   "findings": []
+  },
+  "9_finish_zones": {
+   "state": "NOT_RUN",
+   "findings": []
+  },
+  "10_boq_readiness": {
+   "state": "NOT_RUN",
+   "findings": []
+  }
+ },
+ "gates": {
+  "fatal": 0,
+  "blocked_items": 1,
+  "review_required": 0,
+  "warnings": 0,
+  "architectural_boq_may_run": true,
+  "rule": "FATAL anywhere, or a BLOCKED_ITEM in stages 0-5, stops the BOQ (exit != 0); a BLOCKED_ITEM in later stages blocks the affected items only"
+ }
+}

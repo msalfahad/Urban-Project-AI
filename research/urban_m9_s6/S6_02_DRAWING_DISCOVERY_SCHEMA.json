@@ -1,0 +1,215 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urban/URBAN_DRAWING_DISCOVERY_V1",
+  "title": "URBAN_DRAWING_DISCOVERY_V1 - what a drawing set holds, before any quantity",
+  "description": "One report per run, written BEFORE measurement. Every stage ends NOT_RUN | PASSED | PROVISIONAL | BLOCKED | FAILED with findings at FATAL / BLOCKED_ITEM / REVIEW_REQUIRED / WARNING. A FATAL finding, or a BLOCKED_ITEM in stages 0-5, stops the BOQ with a non-zero exit; a BLOCKED_ITEM in stages 6-10 blocks only the items it names. No value here is inferred into a quantity; heights and features without a source stay UNKNOWN / BLOCKED. Extends ChatGPT's URBAN_PROJECT_DISCOVERY_V1 (05_BUILDING_DISCOVERY_SCHEMA.json) with per-stage state, an entity census per layout, reader support per entity kind and the region-cut check.",
+  "type": "object",
+  "required": ["schema", "documents", "stages", "gates"],
+  "properties": {
+    "schema": {"const": "URBAN_DRAWING_DISCOVERY_V1"},
+    "prototype": {"type": "boolean", "description": "true for the S6 research prototype output"},
+    "run": {
+      "type": "object",
+      "properties": {
+        "engine_commit": {"type": "string"},
+        "rule_set": {"type": "string"},
+        "python": {"type": "string"},
+        "revision_set_sha256": {"type": "string"},
+        "started_utc": {"type": "string"}
+      }
+    },
+    "documents": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["file", "sha256", "format"],
+        "properties": {
+          "file": {"type": "string", "description": "file name only; never a path that names a client"},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "bytes": {"type": "integer"},
+          "format": {"enum": ["DXF", "DWG", "PDF", "IFC", "IMAGE", "OTHER"]},
+          "header": {
+            "type": "object",
+            "properties": {
+              "dxf_version": {"type": ["string", "null"]},
+              "INSUNITS": {"type": ["integer", "null"]},
+              "DIMLFAC": {"type": ["number", "null"]},
+              "MEASUREMENT": {"type": ["integer", "null"]}
+            }
+          },
+          "conversion": {
+            "type": ["object", "null"],
+            "description": "DWG only: the converter record. CONVERTED requires a NEW file (the target removed before the run), a non-empty model-space census and a converted file name unique per input path (stem + input hash).",
+            "properties": {
+              "state": {"enum": ["CONVERTED", "BLOCKED"]},
+              "converter": {"type": ["string", "null"]},
+              "pin_status": {"type": ["string", "null"]},
+              "dxf_sha256": {"type": ["string", "null"]},
+              "entity_census_nonempty": {"type": "boolean"},
+              "target_removed_before_run": {"type": "boolean"}
+            }
+          },
+          "pdf_pages": {
+            "type": ["array", "null"],
+            "items": {"type": "object", "properties": {
+              "page": {"type": "integer"}, "width_pt": {"type": "number"}, "height_pt": {"type": "number"},
+              "rotation": {"type": "integer"}, "kind": {"enum": ["VECTOR", "RASTER_ONLY", "HYBRID"]},
+              "n_paths": {"type": "integer"}, "n_words": {"type": "integer"}, "n_images": {"type": "integer"}}}
+          },
+          "revision": {"type": ["string", "null"]},
+          "parse_status": {"enum": ["NOT_RUN", "PARSED", "PARTIAL", "FAILED"]}
+        }
+      }
+    },
+    "stages": {
+      "type": "object",
+      "description": "keys are the stage ids 0_intake ... 10_boq_readiness; extra stages may be added with a new schema version",
+      "propertyNames": {"enum": ["0_intake", "1_inventory", "2_sheets", "3_identity", "4_units", "5_floors",
+                                 "6_geometry_readiness", "7_vertical_model", "8_features", "9_finish_zones",
+                                 "10_boq_readiness"]},
+      "additionalProperties": {"$ref": "#/$defs/stage"}
+    },
+    "conflicts": {"type": "array", "items": {"$ref": "#/$defs/conflict"}},
+    "missing_sources": {
+      "type": "array",
+      "items": {"type": "object", "required": ["what", "blocks"], "properties": {
+        "what": {"type": "string", "description": "e.g. SECTION, FINISH_SCHEDULE, DOOR_SCHEDULE, XREF:<name>"},
+        "blocks": {"type": "array", "items": {"type": "string"}, "description": "item families or stages it blocks"}}}
+    },
+    "gates": {
+      "type": "object",
+      "required": ["fatal", "blocked_items", "review_required", "warnings", "architectural_boq_may_run"],
+      "properties": {
+        "fatal": {"type": "integer", "minimum": 0},
+        "blocked_items": {"type": "integer", "minimum": 0},
+        "review_required": {"type": "integer", "minimum": 0},
+        "warnings": {"type": "integer", "minimum": 0},
+        "architectural_boq_may_run": {"type": "boolean"},
+        "rule": {"type": "string"}
+      }
+    }
+  },
+  "$defs": {
+    "state": {"enum": ["NOT_RUN", "PASSED", "PROVISIONAL", "BLOCKED", "FAILED"]},
+    "finding": {
+      "type": "object",
+      "required": ["level", "code", "message"],
+      "properties": {
+        "level": {"enum": ["FATAL", "BLOCKED_ITEM", "REVIEW_REQUIRED", "WARNING"]},
+        "code": {"type": "string", "pattern": "^[A-Z0-9_]+$"},
+        "message": {"type": "string"},
+        "evidence": {"type": "object", "description": "source pointers: document sha, layout, entity handles, block path, layer, coordinates in drawing units"}
+      }
+    },
+    "stage": {
+      "type": "object",
+      "required": ["state", "findings"],
+      "properties": {
+        "state": {"$ref": "#/$defs/state"},
+        "findings": {"type": "array", "items": {"$ref": "#/$defs/finding"}},
+        "census": {"$ref": "#/$defs/census"},
+        "entity_support": {
+          "type": "object",
+          "description": "entity kind -> what the architectural route does with it today",
+          "additionalProperties": {"enum": ["READ", "READ_AS_CHORDS", "READ_2D_ONLY", "READ_NESTED",
+                                            "READ_ONE_BLOCK_LEVEL", "CARRIED_NOT_GEOMETRY", "NOT_READ", "UNKNOWN_KIND"]}
+        },
+        "hidden_layers": {"type": "array", "items": {"type": "object", "properties": {
+          "layer": {"type": "string"}, "off": {"type": "boolean"}, "frozen": {"type": "boolean"},
+          "entities": {"type": "integer"}}}},
+        "frames": {"type": "array", "items": {"type": "object", "properties": {
+          "sheet_id": {"type": "string"}, "role": {"type": "string"}, "storey": {"type": "string"},
+          "frame_source": {"type": "string"}, "layout": {"type": "string"}}}},
+        "declared_unit_m": {"type": ["number", "null"]},
+        "inferred_unit_m": {"type": ["number", "null"]},
+        "member_fit": {"type": "object"},
+        "unit_m_used_for_discovery": {"type": ["number", "null"]},
+        "floors": {"type": "array", "items": {"$ref": "#/$defs/floor"}},
+        "level_candidates": {"type": "object"},
+        "features": {"type": "array", "items": {"$ref": "#/$defs/feature"}},
+        "zones": {"type": "array", "items": {"type": "object"}},
+        "families": {"type": "array", "items": {"$ref": "#/$defs/family_readiness"}}
+      }
+    },
+    "census": {
+      "type": "object",
+      "properties": {
+        "layouts": {"type": "array", "items": {"type": "object", "required": ["name", "kind", "entities_by_type"],
+          "properties": {"name": {"type": "string"}, "kind": {"enum": ["MODEL", "PAPER"]},
+                         "entities_by_type": {"type": "object", "additionalProperties": {"type": "integer"}},
+                         "viewports": {"type": "integer"}}}},
+        "blocks": {"type": "object", "additionalProperties": {"type": "object"}},
+        "xrefs": {"type": "array", "items": {"type": "object", "properties": {
+          "block": {"type": "string"}, "path": {"type": "string"}, "resolved": {"type": "boolean"}}}},
+        "minserts": {"type": "integer"},
+        "max_insert_depth": {"type": "integer"}
+      }
+    },
+    "floor": {
+      "type": "object",
+      "required": ["floor_id"],
+      "properties": {
+        "floor_id": {"enum": ["BASEMENT", "GF", "MEZZANINE", "1F", "2F", "3F", "ROOF", "UNKNOWN"]},
+        "aliases": {"type": "array", "items": {"type": "string"}},
+        "region_id": {"type": "string"},
+        "sheet_id": {"type": "string"},
+        "title_text_id": {"type": "string"},
+        "level_texts_m": {"type": "array", "items": {"type": "number"}},
+        "ffl_m": {"$ref": "#/$defs/sourced_value"},
+        "ssl_m": {"$ref": "#/$defs/sourced_value"},
+        "floor_to_floor_m": {"$ref": "#/$defs/sourced_value"},
+        "clear_height_m": {"$ref": "#/$defs/sourced_value"},
+        "gross_floor_plate_m2": {"type": ["number", "null"]},
+        "net_room_floor_m2": {"type": ["number", "null"]},
+        "unallocated_m2": {"type": ["number", "null"], "description": "merged + mixed + unlabelled, also published separately"},
+        "entities": {"type": "object"}
+      }
+    },
+    "sourced_value": {
+      "type": "object",
+      "required": ["value", "status"],
+      "properties": {
+        "value": {"type": ["number", "null"]},
+        "status": {"enum": ["SOURCE", "OWNER_FACT", "DERIVED", "UNKNOWN", "CONFLICT"]},
+        "source": {"type": ["string", "null"], "description": "section / schedule / level text id / facts file key"}
+      }
+    },
+    "feature": {
+      "type": "object",
+      "required": ["feature_id", "type", "presence"],
+      "properties": {
+        "feature_id": {"type": "string"},
+        "type": {"enum": ["STAIR_ASSEMBLY", "LIFT_SHAFT", "POOL", "WATER_TANK", "SHAFT", "VOID", "RAMP", "TERRACE",
+                          "BALCONY", "COURTYARD", "ROOF", "PARAPET", "GARDEN", "OTHER"]},
+        "presence": {"enum": ["PRESENT", "ABSENT_WITH_SCOPE_PROOF", "UNKNOWN"],
+                     "description": "absence from one drawing is UNKNOWN, never ABSENT"},
+        "floor_range": {"type": "array", "items": {"type": "string"}},
+        "source_views": {"type": "array", "items": {"type": "string"}},
+        "missing_data": {"type": "array", "items": {"type": "string"}},
+        "linked_boq_families": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "family_readiness": {
+      "type": "object",
+      "required": ["family", "state"],
+      "properties": {
+        "family": {"type": "string", "description": "e.g. FIN.FLOOR, FIN.CEILING, FIN.PLASTER, FIN.WP, FIN.STAIR"},
+        "state": {"enum": ["READY", "PROVISIONAL", "BLOCKED", "NOT_APPLICABLE", "NOT_IMPLEMENTED"]},
+        "blocked_by": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "conflict": {
+      "type": "object",
+      "required": ["id", "subject", "attribute", "source_a", "source_b", "values", "status"],
+      "properties": {
+        "id": {"type": "string"}, "subject": {"type": "string"}, "attribute": {"type": "string"},
+        "source_a": {"type": "string"}, "source_b": {"type": "string"},
+        "values": {"type": "array"}, "units": {"type": ["string", "null"]},
+        "rule_or_priority": {"type": ["string", "null"]}, "impact": {"type": ["string", "null"]},
+        "confidence": {"type": ["string", "null"]},
+        "status": {"enum": ["OPEN", "RESOLVED_BY_RULE", "RESOLVED_BY_REVIEWER", "ACCEPTED_RISK"]},
+        "reviewer_decision": {"type": ["string", "null"]}, "decision_timestamp": {"type": ["string", "null"]}
+      }
+    }
+  }
+}
