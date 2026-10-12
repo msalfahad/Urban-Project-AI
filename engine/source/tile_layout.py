@@ -38,8 +38,10 @@ from __future__ import annotations
 import math
 
 from engine.source import material_result as WP
+from engine.source import plane_poly as PP
 
 METHOD = "TILE_RECT_EXACT_V1"
+POLY_METHOD = "TILE_POLYGON_GRID_V1"
 ALIGNMENTS = ("CORNER", "CENTRED_TILE", "CENTRED_JOINT")
 ORIENTATIONS = (0, 90)
 OBJECTIVES = ("CUTTING_WASTE", "CONSUMED_MATERIAL")
@@ -242,9 +244,115 @@ def _key(res, objective):
                    ALIGNMENTS.index(lay["align_y"]))
 
 
+def layout_polygon(room, spec, *, orientation=0, align_x="CORNER", align_y="CORNER", constraints):
+    """M9 S2: a straight grid over ANY simple polygon room (metres) with obstructions (room["holes"]).
+    The grid runs along the room's longest wall (frame_angle); the start alignments apply to the room's extent in that
+    frame. Every grid cell is intersected with the room exactly (plane_poly): a cell wholly inside is a full tile, any
+    other cell that touches the room is a cut piece whose material is its bounding rectangle (a shaped piece - a
+    splay, a column notch - is cut from that rectangle; the trim is cutting waste, never credited). Cut pieces are then
+    taken from whole tiles or retained offcuts exactly as for a rectangle (_plan)."""
+    c = dict(constraints)
+    if c.get("joint_m") is None:
+        raise LayoutError("constraints['joint_m'] is required (the joint width is a design input, never assumed)")
+    if spec.get("pattern", "STRAIGHT") != "STRAIGHT":
+        return WP.blocked(method=POLY_METHOD, spec=spec, reason=f"PATTERN_NOT_IMPLEMENTED: {spec.get('pattern')}",
+                          location=_loc(room), line_id=room.get("line_id"))
+    poly = [tuple(map(float, q)) for q in room.get("polygon") or []]
+    if len(poly) < 3:
+        return WP.blocked(method=POLY_METHOD, spec=spec, reason="NO_ROOM_POLYGON", location=_loc(room),
+                          line_id=room.get("line_id"), net_installed_m2=room.get("net_area_m2"))
+    theta = PP.frame_angle(poly)
+    P = PP.rotate(poly, theta)
+    H = [PP.rotate([tuple(map(float, q)) for q in h], theta) for h in room.get("holes") or ()]
+    x0, y0, x1, y1 = PP.bbox(P)
+    X, Y = x1 - x0, y1 - y0
+    g = c["joint_m"]
+    tx, ty = (spec["length_m"], spec["width_m"]) if orientation == 0 else (spec["width_m"], spec["length_m"])
+    xs, ys = axis_pieces(X, tx, g, align_x), axis_pieces(Y, ty, g, align_y)
+    net = abs(PP.area(P)) - sum(abs(PP.area(h)) for h in H)
+    min_cut = c.get("min_cut_m")
+    full, cuts, placed, small, shaped, cells = 0, [], 0.0, [], 0, 0
+    px0 = x0
+    for px in xs:
+        py0 = y0
+        for py in ys:
+            rect = (px0, py0, px0 + px, py0 + py)
+            a = PP.region_area_in_rect(P, H, rect)
+            if a > 1e-9:
+                cells += 1
+                placed += a
+                if abs(px - tx) <= EPS and abs(py - ty) <= EPS and abs(a - tx * ty) <= 1e-9:
+                    full += 1
+                else:
+                    clip = PP.clip_rect(P, *rect)
+                    bx0, by0, bx1, by1 = PP.bbox(clip)
+                    bw, bh = bx1 - bx0, by1 - by0
+                    if a < bw * bh - 1e-9:
+                        shaped += 1
+                    cuts.append((bw, bh))
+                    for d, td in ((bw, tx), (bh, ty)):
+                        if abs(d - td) > EPS and min_cut is not None and d < min_cut - EPS:
+                            small.append(round(d, 4))
+            py0 += py + g
+        px0 += px + g
+    opened, pool, scrap, from_off = _plan(cuts, tx, ty, c)
+    consumed_units = full + opened
+    tile_a = tx * ty
+    offcuts = sum(r[0] * r[1] for r in pool)
+    concerns = []
+    if small:
+        concerns.append(f"SMALL_CUT: {len(small)} cut side(s) below {min_cut:g} m (smallest {min(small):g} m)")
+    if shaped:
+        concerns.append(f"SHAPED_CUTS: {shaped} piece(s) are not rectangles (cut from their bounding rectangle; the "
+                        "trim is cutting waste)")
+    if H:
+        concerns.append(f"OBSTRUCTIONS: {len(H)} obstruction(s) inside the room are cut around")
+    if c.get("wet_room"):
+        concerns.append("FALLS_TO_DRAIN_NOT_MODELLED: the layout is a flat plane; falls, drain position and envelope "
+                        "cuts are not modelled")
+    if c.get("min_reusable_m") is None:
+        concerns.append("NO_OFFCUT_REUSE: min_reusable_m not given - every cut piece uses a whole tile (upper bound)")
+    pack = WP.packaging(unit="box", consumed_units=consumed_units, unit_area_m2=tile_a,
+                        units_per_pack=spec.get("pieces_per_box"), pack_area_m2=spec.get("box_area_m2"),
+                        consumed_m2=consumed_units * tile_a, spare_allowance=c.get("spare_allowance"),
+                        source=spec.get("packaging_source"))
+    lay = {"room_sides_m": [round(X, 6), round(Y, 6)], "frame_rotation_deg": round(math.degrees(theta), 4),
+           "orientation": orientation, "tile_along_x_m": tx, "tile_along_y_m": ty, "align_x": align_x,
+           "align_y": align_y, "pieces_x_m": [round(q, 6) for q in xs], "pieces_y_m": [round(q, 6) for q in ys],
+           "positions": cells, "full_tiles": full, "cut_pieces": len(cuts), "shaped_cuts": shaped,
+           "cut_from_offcuts": from_off, "tiles_opened_for_cuts": opened, "tiles_without_reuse": full + len(cuts),
+           "grid_check": None, "offcuts_retained_m": sorted([[round(r[0], 4), round(r[1], 4)] for r in pool],
+                                                            reverse=True),
+           "scrap_m2": round(scrap, 6), "feasible": not small, "small_cuts_m": sorted(set(small)),
+           "obstructions": len(H)}
+    assumptions = [f"joint {g:g} m", f"kerf {c.get('kerf_m') or 0:g} m",
+                   f"min reusable offcut {c['min_reusable_m']:g} m" if c.get("min_reusable_m") is not None
+                   else "no offcut reuse", f"min cut {min_cut:g} m" if min_cut is not None else "no minimum cut",
+                   "offcut rotation allowed" if c.get("rotation_allowed") else "offcut rotation not allowed",
+                   f"grid along the longest wall ({math.degrees(theta):.2f} deg from the drawing x axis)",
+                   "a shaped piece is cut from its bounding rectangle (the trim is waste)",
+                   "no perimeter expansion gap modelled (pieces run to the finished wall line)",
+                   "offcuts retained are reported, never credited to another room"]
+    units = {"unit": "pcs", "unit_area_m2": tile_a, "consumed_units": consumed_units, "full": full, "cut": len(cuts)}
+    return WP.make_result(method=POLY_METHOD, spec=spec, net_installed_m2=net, placed_m2=placed,
+                          consumed_m2=consumed_units * tile_a, reusable_offcuts_m2=offcuts, units=units, pack=pack,
+                          layout=lay, assumptions=assumptions, concerns=concerns, line_id=room.get("line_id"),
+                          location=_loc(room), rule_refs=c.get("rule_refs", ()),
+                          state="COMPUTED_REVIEW" if (small or shaped or concerns and c.get("wet_room")) else "COMPUTED")
+
+
 def best(room, spec, constraints):
     """the minimum-waste feasible layout over the allowed orientations and start alignments (same constraints for
     every candidate). -> {"selected": result, "tried": [summary rows], "feasible": bool, "note": ...}"""
+    return _best(room, spec, constraints, layout)
+
+
+def best_polygon(room, spec, constraints):
+    """best() over layout_polygon (M9 S2; the architectural route calls it for a room that is not a rectangle)."""
+    return _best(room, spec, constraints, layout_polygon)
+
+
+def _best(room, spec, constraints, layout_fn):
     c = dict(constraints)
     objective = c.get("objective", "CONSUMED_MATERIAL")
     if objective not in OBJECTIVES:
@@ -257,7 +365,7 @@ def best(room, spec, constraints):
     for o in oris:
         for ax in aligns:
             for ay in aligns:
-                r = layout(room, spec, orientation=o, align_x=ax, align_y=ay, constraints=c)
+                r = layout_fn(room, spec, orientation=o, align_x=ax, align_y=ay, constraints=c)
                 if r["state"] == "BLOCKED":
                     return {"selected": r, "tried": [], "feasible": False, "note": r["blocked_by"]}
                 tried.append(r)
@@ -290,14 +398,14 @@ def _name(r):
     return f"{lay['orientation']}deg {lay['align_x']}/{lay['align_y']}"
 
 
-def compare(room, specs, selected, constraints):
+def compare(room, specs, selected, constraints, polygon=False):
     """one row per candidate size under the same constraints. The selected spec stays the BOQ basis; a candidate with
-    less waste is reported as a RECOMMENDATION only (never substituted)."""
+    less waste is reported as a RECOMMENDATION only (never substituted). polygon=True compares polygon layouts."""
     if selected not in [s["spec_id"] for s in specs]:
         raise LayoutError(f"the selected size {selected} is not among the candidates")
     rows = []
     for s in specs:
-        b = best(room, s, constraints)
+        b = best_polygon(room, s, constraints) if polygon else best(room, s, constraints)
         r = b["selected"]
         p = r.get("packaging") or {}
         rows.append({"spec_id": s["spec_id"], "name_en": s.get("name_en"), "name_ar": s.get("name_ar"),

@@ -35,9 +35,11 @@ from __future__ import annotations
 import math
 
 from engine.source import material_result as WP
+from engine.source import plane_poly as PP
 from engine.source.tile_layout import rectangle
 
 METHOD = "MEMBRANE_RECT_EXACT_V1"
+POLY_METHOD = "MEMBRANE_POLYGON_STRIPS_V1"
 DOORWAY_DETAILS = ("NOT_ESTABLISHED", "SEPARATE_RETURN", "UPTURN_WITHIN_DOORWAY_PIECE")
 DIRECTIONS = ("ALONG_X", "ALONG_Y", "MIN_MATERIAL")
 EPS = 1e-6
@@ -168,7 +170,7 @@ def plan(room, spec, *, constraints):
     return _one(sf, spec, c, direction, loc, room)
 
 
-def _one(sf, spec, c, direction, loc, room):
+def _one(sf, spec, c, direction, loc, room, floor_fn=None, method=METHOD):
     X, Y = sf["sides"]
     W, L_r = spec["roll_width_m"], spec["roll_length_m"]
     side, end = spec["min_side_lap_m"], spec["min_end_lap_m"]
@@ -196,21 +198,25 @@ def _one(sf, spec, c, direction, loc, room):
         leftover(w - k * b, ln, why + " residue")
 
     # floor strips
-    n, w_last, k, lengths = _strip_plan(L_s, D_c, W, L_r, side, end)
-    for s in range(n):
-        for ln in lengths:
-            rolls.cut(ln, f"floor strip {s + 1}")
-            if s == n - 1 and W - w_last > EPS:
-                trim = W - w_last
-                if trim >= b - EPS:
-                    lanes_from(trim, ln, "floor edge trim")
-                else:
-                    leftover(trim, ln, "floor edge trim")
-    floor_mat = ((n - 1) * W + w_last) * (L_s + (k - 1) * end)
+    if floor_fn is None:
+        n, w_last, k, lengths = _strip_plan(L_s, D_c, W, L_r, side, end)
+        for s in range(n):
+            for ln in lengths:
+                rolls.cut(ln, f"floor strip {s + 1}")
+                if s == n - 1 and W - w_last > EPS:
+                    trim = W - w_last
+                    if trim >= b - EPS:
+                        lanes_from(trim, ln, "floor edge trim")
+                    else:
+                        leftover(trim, ln, "floor edge trim")
+        floor_mat = ((n - 1) * W + w_last) * (L_s + (k - 1) * end)
+        seams = {"longitudinal": {"count": n - 1, "each_lm": L_s, "lap_m": side, "running_lm": round((n - 1) * L_s, 6)},
+                 "transverse_floor": {"count": n * (k - 1), "lap_m": end,
+                                      "running_lm": round((k - 1) * ((n - 1) * W + w_last), 6)}}
+        extra = {}
+    else:
+        floor_mat, seams, n, w_last, k, lengths, extra = floor_fn(direction, rolls, lanes_from, leftover, scrap)
     laid["floor"] = floor_mat
-    seams = {"longitudinal": {"count": n - 1, "each_lm": L_s, "lap_m": side, "running_lm": round((n - 1) * L_s, 6)},
-             "transverse_floor": {"count": n * (k - 1), "lap_m": end,
-                                  "running_lm": round((k - 1) * ((n - 1) * W + w_last), 6)}}
     # doorway pieces
     dw_pieces = []
     for r in sf["rows"]:
@@ -250,7 +256,7 @@ def _one(sf, spec, c, direction, loc, room):
                 continue
             cover = min(ln - lap, remaining)
             used = cover + lap
-            band_pieces.append(round(used, 4))
+            band_pieces.append(used)
             if ln - used > EPS:
                 lanes.append(ln - used)
             if lap > 0:
@@ -313,12 +319,13 @@ def _one(sf, spec, c, direction, loc, room):
     comps[1]["overlap_m2"] = round(comps[1]["laid_m2"] - comps[1]["net_m2"], 6)
     lay = {"direction": direction, "strip_length_m": L_s, "cross_width_m": D_c, "floor_strips": n,
            "last_strip_width_m": round(w_last, 6), "pieces_per_strip": k, "strip_piece_lengths_m": [round(x, 4) for x in lengths],
-           "band_width_m": round(b, 6), "lanes_per_roll_width": k_lanes, "band_pieces_m": band_pieces,
+           "band_width_m": round(b, 6), "lanes_per_roll_width": k_lanes, "band_pieces_m": [round(x, 4) for x in band_pieces],
            "band_runs": runs, "doorway_pieces": dw_pieces, "seams": seams, "details": det, "rolls": recs,
            "offcuts_retained": [[round(w, 4), round(ln, 4), why] for w, ln, why in retained],
            "scrap": [[round(w, 4), round(ln, 4), why] for w, ln, why in scrap],
            "surfaces": sf["rows"], "perimeter_lm": sf["perimeter_lm"], "doorway_segments_lm": sf["doorway_segments_lm"],
            "upturn_lm": sf["upturn_lm"]}
+    lay.update(extra)
     assumptions = [f"roll {W:g} x {L_r:g} m ({spec.get('spec_id')})", f"side lap {side:g} m ({(spec.get('lap_source') or {}).get('side')})",
                    f"end lap {end:g} m ({(spec.get('lap_source') or {}).get('end')})", f"upturn {h:g} m",
                    f"upturn band laps {side:g} m onto the floor membrane (band width {b:g} m)",
@@ -327,11 +334,147 @@ def _one(sf, spec, c, direction, loc, room):
                    f"doorway detail {c.get('doorway_detail', 'NOT_ESTABLISHED')}",
                    f"min reusable offcut {min_re:g} m" if min_re is not None else "no offcut retained"]
     units = {"unit": "roll", "unit_area_m2": W * L_r, "consumed_units": n_rolls, "full": None, "cut": None}
-    return WP.make_result(method=METHOD, spec=spec, net_installed_m2=net, placed_m2=net, overlap_m2=overlap,
+    return WP.make_result(method=method, spec=spec, net_installed_m2=net, placed_m2=net, overlap_m2=overlap,
                           consumed_m2=consumed, reusable_offcuts_m2=off, units=units, pack=pack, layout=lay,
                           assumptions=assumptions, concerns=concerns, line_id=room.get("line_id"), location=loc,
                           rule_refs=c.get("rule_refs", ()), state="COMPUTED_REVIEW" if concerns else "COMPUTED",
                           components=comps)
+
+
+def surfaces_polygon(room, *, upturn_h, doorways=(), doorway_detail="NOT_ESTABLISHED"):
+    """surfaces() for any simple polygon room (metres) with obstructions (room["holes"]). The upturn runs on the
+    room's boundary: room["perimeter_lm"] when the caller measured it (the BOQ line's basis), else the outer ring plus
+    every obstruction ring; each ring is a closed band loop."""
+    if doorway_detail not in DOORWAY_DETAILS:
+        raise MembraneError(f"doorway_detail {doorway_detail}")
+    poly = [tuple(map(float, q)) for q in room.get("polygon") or []]
+    if len(poly) < 3:
+        return None
+    holes = [[tuple(map(float, q)) for q in h] for h in room.get("holes") or ()]
+    A = abs(PP.area(poly)) - sum(abs(PP.area(h)) for h in holes)
+    hole_lm = [PP.perimeter(h) for h in holes]
+    P = float(room["perimeter_lm"]) if room.get("perimeter_lm") is not None else PP.perimeter(poly) + sum(hole_lm)
+    dws = [dict(d) for d in doorways]
+    for d in dws:
+        if d.get("width_m") is None or d.get("depth_m") is None:
+            raise MembraneError("a doorway needs width_m and depth_m (the wall depth at the opening)")
+    door_lm = sum(d["width_m"] for d in dws)
+    within = doorway_detail == "UPTURN_WITHIN_DOORWAY_PIECE"
+    up_lm = P - door_lm if within else P
+    rows = [{"item_code": "FIN.WP.FLOOR", "net_m2": A, "formula": "room polygon area - obstructions",
+             "inputs": {"area_m2": A, "obstructions": len(holes)}}]
+    for i, d in enumerate(dws, 1):
+        rows.append({"item_code": "FIN.WP.DOORWAY", "doorway": d.get("door_id") or f"D{i}",
+                     "net_m2": d["width_m"] * d["depth_m"], "formula": "door width x wall depth",
+                     "inputs": {"width_m": d["width_m"], "depth_m": d["depth_m"]}})
+    rows.append({"item_code": "FIN.WP.UPTURN", "net_m2": up_lm * upturn_h,
+                 "formula": ("(boundary - doorway segments, billed in the doorway pieces) x upturn height" if within
+                             else "full boundary incl. doorway segments x upturn height (no door deduction)"),
+                 "inputs": {"perimeter_lm": P, "doorway_segments_lm": door_lm, "upturn_lm": up_lm, "upturn_h_m": upturn_h}})
+    flags = []
+    if dws and doorway_detail == "NOT_ESTABLISHED":
+        flags += ["DOORWAY_UPTURN_DETAIL_REQUIRED", "DOORWAY_DOUBLE_COVERAGE_REVIEW"]
+    if within:
+        flags += [f"DOORWAY_SEGMENT_BILLED_IN_DOORWAY_PIECE ({door_lm:g} lm)"]
+        if any(d["depth_m"] < upturn_h - EPS for d in dws):
+            flags.append("DOORWAY_PIECE_SHALLOWER_THAN_UPTURN")
+    outer = max(P - sum(hole_lm), 0.0)
+    if within and dws:
+        runs = {"runs": [{"length_m": outer - door_lm, "closed": False}] +
+                [{"length_m": h, "closed": True} for h in hole_lm], "approximate": len(dws) > 1}
+    else:
+        runs = {"runs": [{"length_m": outer, "closed": True}] + [{"length_m": h, "closed": True} for h in hole_lm],
+                "approximate": False}
+    x0, y0, x1, y1 = PP.bbox(PP.rotate(poly, PP.frame_angle(poly)))
+    return {"rows": rows, "perimeter_lm": P, "doorway_segments_lm": door_lm, "upturn_lm": up_lm, "flags": flags,
+            "runs": runs, "sides": (x1 - x0, y1 - y0), "polygon": poly, "holes": holes}
+
+
+def _poly_floor(sf, spec):
+    """floor strips over the polygon: strips of the roll width along the frame axis (longest wall), stacked across
+    it with the side lap; in each strip one piece per connected run of the room (band_intervals), spliced with end
+    laps when longer than a roll. Every piece is cut at full roll width; the last strip is trimmed lengthwise (the
+    trim feeds the band lanes, as for a rectangle). Material that falls outside the room (a splayed or stepped wall,
+    an obstruction) is trimmed at the wall: cutting waste. laid = the room area each piece covers, so the floor
+    overlap = laid - net = the side and end laps inside the room exactly."""
+    theta = PP.frame_angle(sf["polygon"])
+    P0 = PP.rotate(sf["polygon"], theta)
+    H0 = [PP.rotate(h, theta) for h in sf["holes"]]
+    W, L_r = spec["roll_width_m"], spec["roll_length_m"]
+    side, end = spec["min_side_lap_m"], spec["min_end_lap_m"]
+
+    def run(direction, rolls, lanes_from, leftover, scrap):
+        P, H = P0, H0
+        if direction == "ALONG_Y":                     # swap axes: strips run along the frame's y axis
+            P = [(y, x) for x, y in P]
+            H = [[(y, x) for x, y in h] for h in H]
+        x0, y0, x1, y1 = PP.bbox(P)
+        D = y1 - y0
+        n = 1 if D <= W + EPS else math.ceil((D - W) / (W - side) - EPS) + 1
+        w_last = D - (n - 1) * (W - side)
+        laid, pieces, longest, k_max, splices, shaped_trim = 0.0, [], 0.0, 1, 0, 0.0
+        for i in range(n):
+            ya = y0 + i * (W - side)
+            w = W if i < n - 1 else w_last
+            for xa, xb in PP.band_intervals(P, H, ya, ya + w):
+                L_s = xb - xa
+                k = 1 if L_s <= L_r + EPS else math.ceil((L_s - L_r) / (L_r - end) - EPS) + 1
+                lens = [L_r] * (k - 1) + [L_s - (k - 1) * (L_r - end)] if k > 1 else [L_s]
+                k_max, splices, longest = max(k_max, k), splices + k - 1, max(longest, L_s)
+                pos = xa
+                for ln in lens:
+                    rolls.cut(ln, f"floor strip {i + 1}")
+                    if W - w > EPS:
+                        trim = W - w
+                        if trim >= (sf["_band"]) - EPS:
+                            lanes_from(trim, ln, "floor edge trim")
+                        else:
+                            leftover(trim, ln, "floor edge trim")
+                    cov = PP.region_area_in_rect(P, H, (pos, ya, pos + ln, ya + w))
+                    t = w * ln - cov
+                    if t > 1e-9:
+                        scrap.append((t / ln, ln, "trim at the wall line (shaped; area-equivalent width)"))
+                        shaped_trim += t
+                    laid += cov
+                    pieces.append(round(ln, 4))
+                    pos += ln - end
+        seams = {"longitudinal": {"count": n - 1, "each_lm": round(longest, 6), "lap_m": side,
+                                  "running_lm": None},
+                 "transverse_floor": {"count": splices, "lap_m": end, "running_lm": None}}
+        extra = {"frame_rotation_deg": round(math.degrees(theta), 4), "floor_pieces_m": pieces,
+                 "trim_at_walls_m2": round(shaped_trim, 6), "shape": "POLYGON"}
+        return laid, seams, n, w_last, k_max, pieces, extra
+    return run
+
+
+def plan_polygon(room, spec, *, constraints):
+    """plan() for any simple polygon room with obstructions (M9 S2; the architectural route calls it for a wet room
+    that is not a rectangle). Same constraints, same balance: rolls x roll area = net installed + overlap + cutting
+    waste + reusable offcuts + packaging surplus."""
+    c = dict(constraints)
+    if c.get("upturn_h_m") is None:
+        raise MembraneError("constraints['upturn_h_m'] is required (the rule store gives UP-WP-002)")
+    direction = c.get("direction", "MIN_MATERIAL")
+    if direction not in DIRECTIONS:
+        raise MembraneError(f"direction {direction}")
+    loc = {k: room.get(k) for k in ("room_id", "floor", "name_en", "name_ar") if room.get(k) is not None}
+    sf = surfaces_polygon(room, upturn_h=c["upturn_h_m"], doorways=c.get("doorways", ()),
+                          doorway_detail=c.get("doorway_detail", "NOT_ESTABLISHED"))
+    if sf is None:
+        return WP.blocked(method=POLY_METHOD, spec=spec, reason="NO_ROOM_POLYGON", location=loc,
+                          line_id=room.get("line_id"), rule_refs=c.get("rule_refs", ()))
+    sf["_band"] = c["upturn_h_m"] + spec["min_side_lap_m"]
+    fl = _poly_floor(sf, spec)
+    dirs = ("ALONG_X", "ALONG_Y") if direction == "MIN_MATERIAL" else (direction,)
+    opts = [_one(sf, spec, c, d, loc, room, floor_fn=fl, method=POLY_METHOD) for d in dirs]
+    sel = min(opts, key=lambda r: (r["units"]["consumed_units"], round(r["consumed_m2"], 6),
+                                   round(r["cutting_waste_m2"], 6), DIRECTIONS.index(r["layout"]["direction"])))
+    if len(opts) > 1:
+        sel["layout"]["alternatives"] = [{"direction": r["layout"]["direction"], "rolls": r["units"]["consumed_units"],
+                                          "consumed_m2": r["consumed_m2"], "overlap_m2": r["overlap_m2"],
+                                          "cutting_waste_m2": r["cutting_waste_m2"],
+                                          "packaging_surplus_m2": r["packaging"]["packaging_surplus_m2"]} for r in opts]
+    return sel
 
 
 def _take_lane(lanes, need, lap, min_cover):

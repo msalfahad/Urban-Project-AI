@@ -10,6 +10,9 @@
                                               [--direction MIN_MATERIAL] [--min-reusable 0.3]
                                               [--data-sheet-side-lap 0.15 --data-sheet-source "TDS rev 2"]
     python3 -I tools/urban_boq_m9.py rules [--check]
+    python3 -I tools/urban_boq_m9.py arch --drawings ARCH.dxf --out OUT --method ARCH_TAKEOFF_V1 [--facts FACTS.json]
+                                          [--layer-roles LAYER=WALL ...] [--reference-areas GF=120.5 ...]
+                                          [--project NAME] [--no-m9-xlsx] [--no-svg]
 
 `run` calls urban_boq_m2's compute and writer exactly as `urban_boq_m2 run` does (tools/urban_boq_m2.py is frozen and
 not edited), so every file it writes in OUT is the route G output unchanged; the M9 outputs go to OUT/m9/:
@@ -22,6 +25,14 @@ not edited), so every file it writes in OUT is the route G output unchanged; the
     URBAN_ROOM_BOQ.xlsx       the room-by-room workbook (formulas; recalculate before reading cached values)
     ROOMS_DIAGNOSTIC.json     with --rooms: the room schedule check (no BOQ line)
 
+`arch` (M9 S2, behind the versioned method flag ARCH_TAKEOFF_V1) measures the architectural plans themselves:
+DXF (urban_intake + the arch hatch reader) -> plan regions by floor title -> layer roles from the geometry (walls,
+columns, windows, doors; --layer-roles overrides, recorded) -> rooms (TS01 faces closed at jambed openings and door
+symbols, named from the room words inside) -> per-room lines (floor finish, ceiling, skirting, wet-room
+waterproofing, wall finishes when their heights are established) -> tile / membrane material per room. OUT gets the
+M9 files above plus ARCH_PLAN.json, ARCH_ROOMS.json, ARCH_OPENINGS.json, UNRESOLVED.json and one SVG overlay per
+plan region; the workbook gains the ROOM BY ROOM BOQ sheet. Route G and every structural output are untouched.
+
 No prices. MACHINE_ONLY: nothing here is reviewed, approved or quotation-ready.
 """
 
@@ -33,6 +44,7 @@ import hashlib
 import io
 import json
 import sys
+from collections import Counter
 from datetime import datetime
 from pathlib import Path
 
@@ -49,6 +61,8 @@ from engine.source import rule_store as RS            # noqa: E402
 from engine.source import tile_layout as TL           # noqa: E402
 
 POLICY_ID = "URBAN_BOQ_M9_S1"
+ARCH_POLICY_ID = "URBAN_BOQ_M9_S2_ARCH"
+ARCH_METHODS = ("ARCH_TAKEOFF_V1",)
 M9_DIR = "m9"
 CREATED = datetime(2026, 1, 1)
 
@@ -88,16 +102,19 @@ def run_rules(*, conventions=None, specs=()):
             "conventions": conventions, "material_specs_used": sorted(set(specs))}
 
 
-def write_m9(out, *, s_lines=(), room=None, family_coverage=None, project_id, conventions=None, xlsx=True, rooms_check=None):
+def write_m9(out, *, s_lines=(), room=None, family_coverage=None, project_id, conventions=None, xlsx=True, rooms_check=None,
+             arch=None):
     from engine import boq_room_workbook as WB
     out = Path(out)
     out.mkdir(parents=True, exist_ok=True)
     lines = list(s_lines) + (room["lines"] if room else [])
     mats = room["materials"] if room else []
     rows = CS.census(lines, family_coverage=family_coverage, structural_run=bool(s_lines) or family_coverage is not None,
-                     rooms_run=room is not None, material_results=mats)
+                     rooms_run=room is not None and arch is None, material_results=mats, arch_run=arch is not None)
     specs = [(m.get("material_spec") or {}).get("spec_id") for m in mats if (m.get("material_spec") or {}).get("spec_id")]
     rr = run_rules(conventions=conventions, specs=specs)
+    if arch is not None:
+        rr["arch"] = arch["run"]
     files = {"BOQ_LINES.json": BL.dumps(lines), "BOQ_LINES.csv": _csv(list(BL.csv_rows(lines)), BL.CSV_COLUMNS),
              "MATERIAL_RESULTS.json": _j({"policy": POLICY_ID, "results": mats,
                                           "comparisons": room["comparisons"] if room else [],
@@ -108,13 +125,18 @@ def write_m9(out, *, s_lines=(), room=None, family_coverage=None, project_id, co
              "RUN_RULES.json": _j(rr)}
     if rooms_check is not None:
         files["ROOMS_DIAGNOSTIC.json"] = _j(rooms_check)
+    if arch is not None:
+        files["ARCH_PLAN.json"] = _j({k: arch[k] for k in ("run", "regions", "other_frames", "reference_areas")})
+        files["ARCH_ROOMS.json"] = _j({"run": arch["run"], "rooms": arch["rooms"]})
+        files["ARCH_OPENINGS.json"] = _j({"run": arch["run"], "openings": arch["openings"]})
+        files["UNRESOLVED.json"] = _j({"run": arch["run"], "unresolved": room["unresolved"]})
     for name, text in files.items():
         (out / name).write_text(text, encoding="utf-8")
     res = {"files": sorted(files)}
     if xlsx:
         res["xlsx"] = WB.write(out / "URBAN_ROOM_BOQ.xlsx", room_boq=room, structural_lines=list(s_lines), census_rows=rows,
                                meta={"project_id": project_id, "rule_set": rr["rule_set"],
-                                     "rule_set_digest": rr["rule_set_digest"]}, created=CREATED)
+                                     "rule_set_digest": rr["rule_set_digest"]}, created=CREATED, arch=arch)
     return res, rows
 
 
@@ -147,6 +169,126 @@ def cmd_rooms(a):
                          rooms_check=RB.check(a.rooms))
     print(json.dumps({"room_lines": len(room["lines"]), "materials": len(room["materials"]),
                       "unresolved": len(room["unresolved"]), "outputs": res["files"]}, indent=1))
+    return 0
+
+
+def _kv(items, what):
+    out = {}
+    for it in items or []:
+        k, sep, v = it.partition("=")
+        if not sep or not k or not v:
+            raise SystemExit(f"{what}: expected KEY=VALUE, got {it!r}")
+        out[k] = v
+    return out
+
+
+def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_areas=None, project_id=None, intake=None):
+    """the architectural route on one plan drawing: every stage recorded, nothing silently skipped. `intake` (the
+    urban_intake.read result of this same drawing) skips the read for repeated runs / tests."""
+    from engine.source import arch_measure as AM
+    from engine.source import arch_plan as AP
+    from engine.source import arch_rooms as AR
+    from tools import arch_intake as AI
+    from tools import urban_intake as UI
+    if method not in ARCH_METHODS:
+        raise SystemExit(f"--method must be one of {ARCH_METHODS} (the architectural route is behind a versioned flag)")
+    facts = AM.validate_facts(facts)
+    path = Path(drawing)
+    sha = hashlib.sha256(path.read_bytes()).hexdigest()
+    docs = [{"file": path.name, "sha256": sha}]
+    rev = revision_set_sha256(docs)
+    pid = project_id or (facts or {}).get("project_id") or "new project"
+    E = intake if intake is not None else UI.read(str(path))
+    hs = AI.hatches(path)
+    E = dict(E, hatches=[dict(h, ring=h["rings"][0]) for h in hs if h["rings"]])
+    u = E["unit_m"]
+    P = AP.plan_regions(E)
+    regs = P["regions"]
+    ents_of = {r["region_id"]: AP.region_entities(E, r["box"]) for r in regs}
+    level = {r["region_id"]: AR.dominant_level(ents_of[r["region_id"]]["texts"]) for r in regs}
+    lines, mats, comps, unresolved, rooms, openings, regions = [], [], [], [], [], [], []
+    for i, reg in enumerate(regs):
+        rid = reg["region_id"]
+        ents = ents_of[rid]
+        floor = reg["floor"] if not reg.get("warning") else rid.replace(":", "-")
+        above = next((level[r["region_id"]] for r in regs[i + 1:] if r["order"] > reg["order"]
+                      and level[r["region_id"]] is not None), None)
+        L = AP.layer_roles(ents, u, override=layer_roles)
+        rec = {"region_id": rid, "floor": floor, "sheet_id": reg["sheet_id"], "title_text_id": reg["title_text_id"],
+               "box": reg["box"], "evidence": reg["evidence"], "warning": reg.get("warning"),
+               "layer_roles": L["roles"], "layer_evidence": L["evidence"], "roles_source": L["source"],
+               "roles_state": L["state"], "level_m": level[rid], "floor_above_level_m": above,
+               "entities": {k: len(v) for k, v in ents.items()}}
+        if L["state"] == "BLOCKED":
+            rec["stage_state"] = "BLOCKED_AT_LAYER_ROLES"
+            unresolved.append({"room_id": "-", "floor": floor, "item": "plan region " + rid,
+                               "reason": L.get("why") or "NO_WALL_LAYER: no layer behaves like walls"})
+            regions.append(rec)
+            continue
+        S = AR.spaces(ents, L["roles"], u, region_id=rid)
+        M = AM.measure(S, floor=floor, project_id=pid, revision_set_sha256=rev, facts=facts,
+                       floor_above_level_m=above, floor_level_m=level[rid], documents=docs)
+        X = AM.materials(M, facts)
+        ref = (reference_areas or {}).get(floor)
+        rec.update(stage_state="MEASURED", face_counts=S["counts"], space_counts=M["counts"],
+                   plate=S["plate"], warnings=S["warnings"], columns=S["columns"], arrangement=S["arrangement"],
+                   openings=dict(Counter(o["kind"] for o in S["openings"])), openings_rejected=len(S["openings_rejected"]),
+                   door_symbols=len(S["doors"]), door_status=dict(Counter(v.get("state") for v in S["door_status"].values())),
+                   lines=len(M["lines"]), rooms_measured=sum(1 for r in M["rooms"] if r["class"] in ("ROOM", "MIXED")))
+        if ref is not None:
+            plate = S["plate"]["largest_m2"]
+            rec["reference"] = {"area_m2": ref, "plate_m2": round(plate, 4), "diff_m2": round(plate - ref, 4),
+                                "diff_pct": round(100.0 * (plate - ref) / ref, 3) if ref else None,
+                                "basis": "the outer boundary of the wall network vs the reference area given on the "
+                                         "command line (an independent schedule, e.g. the architect's area table)"}
+        for rm in M["rooms"]:
+            rm["region_id"] = rid
+        rooms += M["rooms"]
+        openings += M["openings"]
+        lines += M["lines"]
+        mats += X["materials"]
+        comps += X["comparisons"]
+        unresolved += M["unresolved"] + X["unresolved"]
+        regions.append(rec)
+    run = {"policy": ARCH_POLICY_ID, "method": method, "drawing": docs[0], "revision_set_sha256": rev,
+           "project_id": pid, "unit_m": u, "insunits": E.get("insunits"), "intake_findings": E.get("intake_findings"),
+           "hatch_reader": {"hatches": len(hs), "with_islands": sum(1 for h in hs if h["islands"]),
+                            "inside_blocks": sum(1 for h in hs if h["owner"])},
+           "facts": {"schema": (facts or {}).get("schema"), "given": sorted(k for k in (facts or {}) if k != "schema")},
+           "layer_roles_override": layer_roles or {}, "policies": {"plan": AP.policy_record(), "rooms": AR.policy_record(),
+                                                                    "measure": AM.policy_record()}}
+    room_boq = {"project_id": pid, "lines": lines, "materials": mats, "comparisons": comps, "unresolved": unresolved,
+                "assumptions": [], "geometry_source": f"architectural plan DXF {path.name} ({method})"}
+    arch = {"run": run, "regions": regions, "other_frames": P["other_frames"], "rooms": rooms, "openings": openings,
+            "reference_areas": reference_areas or {}}
+    return room_boq, arch, E
+
+
+def cmd_arch(a):
+    facts = json.loads(Path(a.facts).read_text(encoding="utf-8")) if a.facts else None
+    roles = _kv(a.layer_roles, "--layer-roles")
+    refs = {k: float(v) for k, v in _kv(a.reference_areas, "--reference-areas").items()}
+    room, arch, E = arch_compute(a.drawings[0], method=a.method, facts=facts, layer_roles=roles or None,
+                                 reference_areas=refs, project_id=a.project)
+    out = Path(a.out)
+    res, rows = write_m9(out, room=room, project_id=room["project_id"], xlsx=not a.no_m9_xlsx, arch=arch)
+    svgs = []
+    if not a.no_svg:
+        from tools import arch_overlay as AO
+        for reg in arch["regions"]:
+            name = f"OVERLAY_{reg['floor']}.svg"
+            (out / name).write_text(AO.svg(E, reg, [r for r in arch["rooms"] if r.get("region_id") == reg["region_id"]],
+                                           [o for o in arch["openings"] if o["floor"] == reg["floor"]]),
+                                    encoding="utf-8")
+            svgs.append(name)
+    ev = Counter(ln["evidence_state"] for ln in room["lines"])
+    print(json.dumps({"method": a.method, "regions": [{"floor": r["floor"], "state": r["stage_state"],
+                                                        "rooms": r.get("space_counts"), "lines": r.get("lines"),
+                                                        "reference": r.get("reference")} for r in arch["regions"]],
+                      "lines": len(room["lines"]), "evidence": dict(sorted(ev.items())),
+                      "materials": dict(Counter(m["state"] for m in room["materials"])),
+                      "unresolved": len(room["unresolved"]), "coverage": CS.summary(rows)["by_run_state"],
+                      "outputs": res["files"] + (["URBAN_ROOM_BOQ.xlsx"] if "xlsx" in res else []) + svgs}, indent=1))
     return 0
 
 
@@ -260,6 +402,20 @@ def main(argv=None):
     p = sub.add_parser("rules")
     p.add_argument("--check", action="store_true")
     p.set_defaults(fn=cmd_rules)
+    p = sub.add_parser("arch")
+    p.add_argument("--drawings", nargs=1, required=True, help="one architectural plan DXF")
+    p.add_argument("--out", required=True)
+    p.add_argument("--method", required=True, choices=ARCH_METHODS,
+                   help="the versioned architectural takeoff method (no default: the route is opt-in until validated)")
+    p.add_argument("--facts", help="project facts (URBAN_ARCH_FACTS_V1): heights, finishes, tile constraints, membrane")
+    p.add_argument("--layer-roles", nargs="+", metavar="LAYER=ROLE",
+                   help="override the detected role of a layer (WALL, COLUMN, WINDOW, DOOR, OTHER); recorded")
+    p.add_argument("--reference-areas", nargs="+", metavar="FLOOR=M2",
+                   help="independent floor areas to compare the measured plates against (e.g. the area table)")
+    p.add_argument("--project")
+    p.add_argument("--no-m9-xlsx", action="store_true")
+    p.add_argument("--no-svg", action="store_true")
+    p.set_defaults(fn=cmd_arch)
     a = ap.parse_args(argv)
     return a.fn(a)
 

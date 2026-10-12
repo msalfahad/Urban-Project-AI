@@ -77,6 +77,13 @@ ITEMS = {
     "FIN.MARBLE.RISER": ("Stair visible riser marble", "رخام قائم", "STAIR_FINISH", "m2"),
     "FIN.RAILING": ("Stair guardrail (sloping length)", "درابزين الدرج", "RAILING", "lm"),
     "FIN.HANDRAIL": ("Wall-mounted handrail", "مسكة الدرج", "RAILING", "lm"),
+    # M9 S2 architectural route
+    "ARCH.SPACE": ("Space floor area (finish to be confirmed)", "مساحة الفراغ", "FLOOR_FINISH", "m2"),
+    "ARCH.EXTERIOR": ("External / roof space area", "مساحة خارجية", "EXTERNAL_WORKS", "m2"),
+    "ARCH.DOOR": ("Door opening", "فتحة باب", "OPENINGS", "pcs"),
+    "ARCH.WINDOW": ("Window / glazed opening", "فتحة شباك", "OPENINGS", "pcs"),
+    "ARCH.PASSAGE": ("Opening without a door", "فتحة بدون باب", "OPENINGS", "pcs"),
+    "FIN.STAIR.FLIGHT": ("Stair flight (sloping length)", "طول الدرج المائل", "STAIR_FINISH", "lm"),
 }
 # route G family (+ storey) -> item code
 ROUTE_G_FAMILY = {"PLAIN_CONCRETE": "STR.CONC.BLINDING", "FOOTINGS": "STR.CONC.FOOTING", "GROUND_SLAB": "STR.CONC.GROUND_SLAB",

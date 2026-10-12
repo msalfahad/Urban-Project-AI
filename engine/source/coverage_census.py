@@ -1,6 +1,7 @@
 """COVERAGE CENSUS (M9 S1) - one terminal state for every BOQ family of the family master, per run (generic; stdlib).
 
-    census(lines, *, family_coverage=None, structural_run=False, rooms_run=False, material_results=()) -> rows
+    census(lines, *, family_coverage=None, structural_run=False, rooms_run=False, material_results=(), arch_run=False)
+        -> rows
     summary(rows)                                                                                   -> counts
 
 A family never disappears from a run: it is QUANTIFIED, BOUNDED_ONLY, BLOCKED, NOT_FOUND_IN_SOURCE, COUNTED_IN_PARENT,
@@ -28,9 +29,15 @@ FAMILY_ITEMS = {
     "B9-02": ("STR.CONC.LINTEL",), "B11-01": ("STR.REBAR",),
     "B3-01": ("FIN.FLOOR.PORCELAIN",), "B3-02": ("FIN.FLOOR.WET_TILE",), "B4-01": ("FIN.WALL.TILE",),
     "B8-01": ("FIN.WP.FLOOR",), "B8-02": ("FIN.WP.DOORWAY",), "B8-03": ("FIN.WP.UPTURN",),
+    # M9 S2 architectural route (lines of these codes come only from urban_boq_m9 arch)
+    "B3-06": ("FIN.SKIRTING",), "B4-03": ("FIN.PLASTER",), "B4-06": ("FIN.PAINT",), "B5-01": ("FIN.CEILING",),
+    "B6-01": ("ARCH.DOOR", "ARCH.WINDOW", "ARCH.PASSAGE"), "B7-01": ("FIN.STAIR.FLIGHT",),
 }
 STRUCTURAL = {k for k, v in FAMILY_ITEMS.items() if v[0].startswith("STR.")}
 ROOM_FAMILIES = {"B3-01", "B3-02", "B4-01", "B8-01", "B8-02", "B8-03", "B8-05"}
+# the families an architectural-plan run (arch_run) measures room by room; a room schedule run (rooms_run) keeps the
+# S1 set above, so an S1 census is unchanged
+ARCH_FAMILIES = ROOM_FAMILIES | {"B3-06", "B4-03", "B4-06", "B5-01", "B6-01", "B7-01"}
 # route G family_coverage FAMILY -> master code (engine.source.family_coverage)
 COVERAGE_FAMILY = {"PLAIN_CONCRETE": "B10-01", "COLUMN_NECKS": "B10-03", "LINTELS": "B9-02", "LIFT": "B10-10",
                    "POOL": "B10-10", "WATER_TANK": "B10-10", "STAIRS": "B7-12", "DOMES": "B10-09",
@@ -55,7 +62,7 @@ def _from_lines(ls):
     return None, dict(ev)
 
 
-def census(lines, *, family_coverage=None, structural_run=False, rooms_run=False, material_results=()):
+def census(lines, *, family_coverage=None, structural_run=False, rooms_run=False, material_results=(), arch_run=False):
     master = RS.family_master()
     by_code = {}
     for ln in lines:
@@ -88,7 +95,7 @@ def census(lines, *, family_coverage=None, structural_run=False, rooms_run=False
             if scope and not steel:
                 state, reason = "BLOCKED", (f"MISSING_DATA: {len(scope)} concrete line(s) of these families carry no bar "
                                             f"model (no kg/m3 ratio is ever used)")
-        if code == "B8-05" and rooms_run:
+        if code == "B8-05" and (rooms_run or arch_run):
             mem = [r for r in material_results if (r.get("material_spec") or {}).get("kind") == "MEMBRANE_SHEET"]
             done = [r for r in mem if r["state"] != "BLOCKED"]
             if done:
@@ -100,6 +107,8 @@ def census(lines, *, family_coverage=None, structural_run=False, rooms_run=False
                 state, reason = "NOT_FOUND_IN_SOURCE", "the structural route ran and produced no line for this family"
             elif code in ROOM_FAMILIES and rooms_run:
                 state, reason = "NOT_FOUND_IN_SOURCE", "the room input has no surface of this family"
+            elif code in ARCH_FAMILIES and arch_run:
+                state, reason = "NOT_FOUND_IN_SOURCE", "the architectural plans of this run gave no room of this family"
             elif cap == "NOT_IMPLEMENTED":
                 state, reason = "NOT_IMPLEMENTED", f"no engine capability yet (next slice {f['next_slice']})"
             elif cap == "BLOCKED_BY_SOURCE":
