@@ -16,6 +16,7 @@ reason, and no number. No price, rate or amount anywhere; no kg/m3 ratio. Lives 
 from __future__ import annotations
 
 import hashlib
+import json
 from collections import OrderedDict
 
 from engine.boq_rc1_xlsx import _repack
@@ -417,15 +418,22 @@ RBR_HEAD = ["FLOOR", "ROOM", "TRADE", "ITEM", "DIMENSIONS", "GROSS", "DEDUCTIONS
 RC = {h: i + 1 for i, h in enumerate(RBR_HEAD)}
 RBR_ORDER = ("FIN.FLOOR.PORCELAIN", "FIN.FLOOR.WET_TILE", "ARCH.SPACE", "ARCH.EXTERIOR", "FIN.SKIRTING", "FIN.CEILING",
              "FIN.WP.FLOOR", "FIN.WP.DOORWAY", "FIN.WP.UPTURN", "FIN.WALL.TILE", "FIN.PLASTER", "FIN.PAINT",
-             "FIN.STAIR.FLIGHT", "ARCH.DOOR", "ARCH.WINDOW", "ARCH.PASSAGE")
+             "FIN.STAIR.FLIGHT", "FIN.MARBLE.TREAD", "FIN.MARBLE.RISER", "FIN.STAIR.STEP_LM", "FIN.MARBLE.LANDING",
+             "ARCH.WALL_RUN", "MAS.BLOCK", "ARCH.DOOR", "ARCH.WINDOW", "ARCH.PASSAGE")
 TRADE_NAMES = {"FLOOR_FINISH": "أرضيات / Flooring", "CEILING": "الأسقف / Ceilings", "WATERPROOFING": "عازل / Waterproofing",
                "WALL_FINISH": "سيراميك جدران / Wall tiling", "PLASTER": "لياسة / Plaster", "PAINT": "دهان / Paint",
                "OPENINGS": "أبواب - شبابيك / Doors & windows", "EXTERNAL_WORKS": "أعمال خارجية / External works",
-               "STAIR_FINISH": "الدرج / Stairs", "RAILING": "درابزين / Railings"}     # controlled vocabulary only
+               "STAIR_FINISH": "الدرج / Stairs", "RAILING": "درابزين / Railings",
+               "MASONRY": "طابوق / Masonry"}                                          # controlled vocabulary only
 ARCH_TRADE_SHEETS = OrderedDict([("WALL PORCELAIN", ("FIN.WALL.TILE",)), ("PLASTER & PAINT", ("FIN.PLASTER", "FIN.PAINT")),
                                  ("CEILINGS", ("FIN.CEILING",)), ("SKIRTING", ("FIN.SKIRTING",)),
-                                 ("MARBLE", ()), ("STAIRS & RAILINGS", ("FIN.STAIR.FLIGHT",)),
+                                 ("MARBLE", ("FIN.MARBLE.TREAD", "FIN.MARBLE.RISER", "FIN.MARBLE.LANDING",
+                                             "FIN.STAIR.STEP_LM")),
+                                 ("STAIRS & RAILINGS", ("FIN.STAIR.FLIGHT",)),
                                  ("DOORS & WINDOWS", ("ARCH.DOOR", "ARCH.WINDOW", "ARCH.PASSAGE")), ("ALUMINIUM", ())])
+# an architectural run only (the S1 workbook keeps its sheets): census families and the lines that answer them
+ARCH_EXTRA_SHEETS = OrderedDict([("MASONRY", (("B9-01", "B9-02", "B9-03", "B9-04", "B9-05"),
+                                              ("ARCH.WALL_RUN", "MAS.BLOCK")))])
 
 
 def _ded_sum(ln):
@@ -747,6 +755,14 @@ def write(path, *, room_boq=None, structural_lines=(), census_rows=(), meta, cre
                      "NOTE / QUESTION": cen[c]["reason"]} for c in codes if c in cen]
             _rbr_sheet(wb, name, "measured lines of this trade (room by room), then every family of the trade with its "
                        "census state", rb, arch, codes=ARCH_TRADE_SHEETS[name], info_rows=info)
+            if name == list(TRADE_SHEETS)[-1]:
+                for xname, (fams, xcodes) in ARCH_EXTRA_SHEETS.items():
+                    info = [{"FLOOR": "-", "ROOM": "-", "ITEM": f"{cen[c]['item_ar']} / {cen[c]['item_en']} ({c})",
+                             "STATUS": cen[c]["run_state"], "UNIT": cen[c]["unit"],
+                             "SOURCE": f"capability {cen[c]['capability']}", "NOTE / QUESTION": cen[c]["reason"]}
+                            for c in fams if c in cen]
+                    _rbr_sheet(wb, xname, "measured lines of this trade (by floor and wall thickness), then every family "
+                               "of the trade with its census state", rb, arch, codes=xcodes, info_rows=info)
             continue
         sh = _Sheet(wb, name, "not measured by the S1 engine: each family with its run state and reason; no number")
         sh.r_last = FIRST + len(codes) - 1
@@ -803,11 +819,27 @@ def write(path, *, room_boq=None, structural_lines=(), census_rows=(), meta, cre
                                                                      "WASTE %", "BOXES", "PACKAGING SURPLUS M²",
                                                                      "FEASIBLE", "RECOMMENDATION", "CONCERNS"], crow,
            {6: "0.000", 10: "0.000", 11: "0.000", 12: "0.000", 13: "0.00%", 15: "0.000"})
-    urow = [[u["room_id"], u["item"], u["reason"]] for u in rb["unresolved"]]
-    urow += [[ln["location"].get("floor") or "-", ln["item_code"], (ln.get("rfi") or {}).get("question") or "bounded exposure"]
-             for ln in structural_lines if ln["evidence_state"] in ("BLOCKED_RFI", "BOUNDED_EXPOSURE")]
-    _table(wb, "UNRESOLVED", "every question that blocks a quantity, a pack count or a detail", ["ROOM / FLOOR", "ITEM",
-                                                                                                  "QUESTION / REASON"], urow)
+    if any("cause" in u for u in rb["unresolved"]):
+        # an architectural run: every record carries its terminal flag (M9 S3) - location, cause, module, next action
+        urow = [[u["room_id"], " / ".join(x for x in ((u.get("location") or {}).get("room_en"),
+                                                         (u.get("location") or {}).get("room_ar")) if x) or "-",
+                 u["item"], u["reason"], u.get("cause", ""), u.get("module_function", ""), u.get("next_action", ""),
+                 json.dumps(u.get("source_ref") or {}, ensure_ascii=False, sort_keys=True)] for u in rb["unresolved"]]
+        urow += [[ln["location"].get("floor") or "-", "-", ln["item_code"],
+                  (ln.get("rfi") or {}).get("question") or "bounded exposure", "SOURCE", "route G (structural)",
+                  "see the structural BOQ's UNRESOLVED register", ""]
+                 for ln in structural_lines if ln["evidence_state"] in ("BLOCKED_RFI", "BOUNDED_EXPOSURE")]
+        _table(wb, "UNRESOLVED", "every question that blocks a quantity, a pack count or a detail, with its cause "
+               "(SOFTWARE: the engine does not read it yet; SOURCE: not in these drawings; REVIEW: a person decides)",
+               ["ROOM / FLOOR", "ROOM", "ITEM", "QUESTION / REASON", "CAUSE", "MODULE / FUNCTION", "NEXT ACTION",
+                "SOURCE REFERENCE"], urow)
+    else:
+        urow = [[u["room_id"], u["item"], u["reason"]] for u in rb["unresolved"]]
+        urow += [[ln["location"].get("floor") or "-", ln["item_code"], (ln.get("rfi") or {}).get("question") or
+                  "bounded exposure"]
+                 for ln in structural_lines if ln["evidence_state"] in ("BLOCKED_RFI", "BOUNDED_EXPOSURE")]
+        _table(wb, "UNRESOLVED", "every question that blocks a quantity, a pack count or a detail", ["ROOM / FLOOR", "ITEM",
+                                                                                                      "QUESTION / REASON"], urow)
     _table(wb, "COVERAGE", "the 99 BOQ families: engine capability and this run's terminal state",
            ["CODE", "GROUP", "ITEM (AR)", "ITEM (EN)", "UNIT", "CAPABILITY", "RUN STATE", "LINES", "REASON", "NEXT SLICE"],
            [[r["code"], r["group"], r["item_ar"], r["item_en"], r["unit"], r["capability"], r["run_state"], r["lines"],

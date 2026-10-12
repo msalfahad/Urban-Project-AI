@@ -32,12 +32,16 @@ FAMILY_ITEMS = {
     # M9 S2 architectural route (lines of these codes come only from urban_boq_m9 arch)
     "B3-06": ("FIN.SKIRTING",), "B4-03": ("FIN.PLASTER",), "B4-06": ("FIN.PAINT",), "B5-01": ("FIN.CEILING",),
     "B6-01": ("ARCH.DOOR", "ARCH.WINDOW", "ARCH.PASSAGE"), "B7-01": ("FIN.STAIR.FLIGHT",),
+    # M9 S3 stair finishes from the drawn flights
+    "B7-02": ("FIN.MARBLE.TREAD",), "B7-03": ("FIN.MARBLE.RISER",), "B7-04": ("FIN.MARBLE.LANDING",),
+    "B7-06": ("FIN.STAIR.STEP_LM",), "B9-01": ("MAS.BLOCK",),     # the wall run (lm) is its geometry, not its m2
 }
 STRUCTURAL = {k for k, v in FAMILY_ITEMS.items() if v[0].startswith("STR.")}
 ROOM_FAMILIES = {"B3-01", "B3-02", "B4-01", "B8-01", "B8-02", "B8-03", "B8-05"}
 # the families an architectural-plan run (arch_run) measures room by room; a room schedule run (rooms_run) keeps the
 # S1 set above, so an S1 census is unchanged
-ARCH_FAMILIES = ROOM_FAMILIES | {"B3-06", "B4-03", "B4-06", "B5-01", "B6-01", "B7-01"}
+ARCH_FAMILIES = ROOM_FAMILIES | {"B3-06", "B4-03", "B4-06", "B5-01", "B6-01", "B7-01", "B7-02", "B7-03", "B7-04",
+                                 "B7-06", "B9-01"}
 # route G family_coverage FAMILY -> master code (engine.source.family_coverage)
 COVERAGE_FAMILY = {"PLAIN_CONCRETE": "B10-01", "COLUMN_NECKS": "B10-03", "LINTELS": "B9-02", "LIFT": "B10-10",
                    "POOL": "B10-10", "WATER_TANK": "B10-10", "STAIRS": "B7-12", "DOMES": "B10-09",

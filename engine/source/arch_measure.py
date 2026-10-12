@@ -32,6 +32,7 @@ from collections import Counter
 
 from engine.source import arch_rooms as AR
 from engine.source import boq_line as BL
+from engine.source import plane_poly as PP
 from engine.source import rule_store as RS
 from engine.source import tile_layout as TL
 from engine.source import wall_height as WH
@@ -209,33 +210,21 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                 "passages": [p["opening_id"] for p in passages], "issue": sp.get("issue"), "polygon": sp["polygon"],
                 "hole_polygons": sp["hole_polygons"], "point": sp.get("point"), "polygon_m": sp["polygon_m"],
                 "hole_polygons_m": sp["hole_polygons_m"], "open_plan": open_plan,
-                "symbols_inside": sp.get("symbols_inside") or {}}
+                "symbols_inside": sp.get("symbols_inside") or {}, "label_source": sp.get("label_source"),
+                "evidence": sp.get("evidence") or {}, "fixture_conflict": sp.get("fixture_conflict")}
+        typed_by_evidence = sp.get("label_source") not in (None, "TEXT")
         rooms.append(room)
         ded = [{"what": "obstructions inside the room (columns / shafts)", "m2": round(sp["hole_area_m2"], 6)}] \
             if sp["holes"] else []
-        for k, fl in enumerate((sp.get("symbols_inside") or {}).get("stair_flights") or (), 1):
-            st = (facts.get("stairs") or {}).get(floor) or (facts.get("stairs") or {}).get("*") or {}
-            R = (st.get("riser_m") or {})
-            treads = fl["tread_lines"] - 1
-            inp = {"tread_lines": fl["tread_lines"], "treads": treads, "going_m": fl["going_m"], "width_m": fl["width_m"],
-                   "run_m": fl["run_m"], "layer": fl["layer"], "riser_m": R.get("value_m"),
-                   "riser_authority": R.get("authority")}
-            if R.get("value_m"):
-                L = math.hypot(fl["run_m"], treads * R["value_m"])
-                lines.append(_line(ctx, item_code="FIN.STAIR.FLIGHT", room=room, element=f"flight {k}", unit="lm",
-                                   net=round(L, 6), formula="pitch line nosing to nosing: hypot(treads x going, treads x "
-                                   "riser)", inputs=inp, rule_id=None, ev="PROVISIONAL",
-                                   notes="straight flight recognised from its tread lines; the railing / handrail adds "
-                                         "its end extensions by detail (not in a plan); STAIR_DRAWN_ON_TWO_PLANS_REVIEW: "
-                                         "a flight cut by the plan above is drawn on both plans - count it once"))
-            else:
-                q = (f"STAIR_RISER_NOT_ESTABLISHED: flight {k} ({fl['tread_lines']} tread lines, going "
-                     f"{fl['going_m']:.3f} m, width {fl['width_m']:.2f} m, run {fl['run_m']:.2f} m) - the sloping length "
-                     "needs the riser height (section / riser count of every flight between the two levels)")
-                lines.append(_line(ctx, item_code="FIN.STAIR.FLIGHT", room=room, element=f"flight {k}", unit="lm",
-                                   net=None, formula="pitch line nosing to nosing: hypot(treads x going, treads x riser)",
-                                   inputs=inp, rule_id=None, rfi={"question": q, "unlocks": rid}))
-                unresolved.append({"room_id": rid, "floor": floor, "item": "FIN.STAIR.FLIGHT", "reason": q})
+        flights = (sp.get("symbols_inside") or {}).get("stair_flights") or ()
+        for k, fl in enumerate(flights, 1):
+            sl, su = _stair_lines(ctx, room, rid, floor, k, fl, facts)
+            lines += sl
+            unresolved += su
+        if flights and measured_as_room and sp["codes"] and AR.LEX[sp["codes"][0]][2] == AR.STAIR:
+            sl, su = _landing(ctx, room, rid, floor, sp, flights, fr["unit_m"])
+            lines += sl
+            unresolved += su
         if not measured_as_room:
             ec = "ARCH.EXTERIOR" if kind == AR.EXTERIOR else "ARCH.SPACE"
             q = sp.get("issue") or ("MIXED_SPACE: rooms of different kinds share one face - " + " + ".join(sp["codes"]))
@@ -252,18 +241,26 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                                formula="face area (TS01)", inputs={"dims": room["dims"]},
                                notes=f"{kind} space: no internal floor / ceiling finish line"))
             continue
+        stair_m2 = _stair_in_room(sp, flights, fr["unit_m"]) if flights else 0.0
+        if stair_m2 > 1e-6:
+            ded = ded + [{"what": "stair treads drawn inside the room (marble: UP-STAIR-005, never also porcelain)",
+                          "m2": round(stair_m2, 6)}]
         fk = FINISH_KIND[kind]
         wet = fk == "WET"
         lines.append(_line(ctx, item_code="FIN.FLOOR.WET_TILE" if wet else "FIN.FLOOR.PORCELAIN", room=room,
-                           element="floor", unit="m2", net=sp["area_m2"], gross=round(sp["gross_outer_m2"], 6),
-                           deductions=ded, formula="face area (TS01), obstructions deducted",
+                           element="floor", unit="m2", net=round(sp["area_m2"] - stair_m2, 6),
+                           gross=round(sp["gross_outer_m2"], 6), deductions=ded,
+                           formula="face area (TS01), obstructions deducted" +
+                                   (", stair treads deducted (UP-STAIR-005)" if stair_m2 > 1e-6 else ""),
                            inputs={"dims": room["dims"]}, rule_id="UP-CER-001",
+                           ev="PROVISIONAL" if typed_by_evidence else None,
                            notes="; ".join(x for x in [
                                ("OPEN_PLAN: " + " + ".join(sp["codes"]) + " share one face (no partition between them); "
                                 "one dry floor finish assumed for the whole space - split it if the finishes differ")
-                               if open_plan else "", sp.get("issue") or ""] if x)))
+                               if open_plan else "", sp.get("issue") or "", sp.get("fixture_conflict") or ""] if x)))
         lines.append(_line(ctx, item_code="FIN.CEILING", room=room, element="ceiling", unit="m2", net=sp["area_m2"],
-                           ev="PROVISIONAL", gross=round(sp["gross_outer_m2"], 6), deductions=ded,
+                           ev="PROVISIONAL", gross=round(sp["gross_outer_m2"], 6),
+                           deductions=[d for d in ded if not d["what"].startswith("stair")],
                            formula="plan area of the room (the floor face)", inputs={"dims": room["dims"]},
                            rule_id=None, notes="ceiling type, bulkheads and coves are not in a plan; material BY_SPEC"))
         skirt = runs["wall"] + runs["column"] + runs["window_threshold"]
@@ -309,9 +306,11 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                                rule_id="UP-CER-003", gross=round(runs["boundary"], 6), deductions=sk_ded,
                                notes=sk_notes))
         if wet:
-            wp_floor = sp["area_m2"]
+            wp_floor = round(sp["area_m2"] - stair_m2, 6)
             lines.append(_line(ctx, item_code="FIN.WP.FLOOR", room=room, element="wp_floor", unit="m2", net=wp_floor,
-                               formula="room floor face", inputs={"dims": room["dims"]}, rule_id="UP-WP-001"))
+                               formula="room floor face", inputs={"dims": room["dims"]}, rule_id="UP-WP-001",
+                               ev="PROVISIONAL" if typed_by_evidence else None,
+                               notes=sp.get("issue") if typed_by_evidence else ""))
             for d in doors:
                 lines.append(_line(ctx, item_code="FIN.WP.DOORWAY", room=room, element=f"doorway {d['opening_id']}",
                                    unit="m2", net=round(d["width_m"] * d["wall_t_m"], 6),
@@ -375,6 +374,10 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                                    formula="wall run x height - openings", inputs=inputs, rule_id="UP-CER-009",
                                    notes=("WINDOW_POSITION_ASSUMED: sill / head levels are not in a plan - each window "
                                           "is deducted at its full height inside the finish height") if windows else ""))
+    if fr.get("walls"):
+        sl, su = _wall_lines(ctx, floor, fr["walls"], facts)
+        lines += sl
+        unresolved += su
     openings = []
     for o in fr["openings"]:
         code = {"DOOR": "ARCH.DOOR", "WINDOW": "ARCH.WINDOW", "PASSAGE": "ARCH.PASSAGE"}[o["kind"]]
@@ -399,6 +402,227 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                                "reason": "DOOR_CLOSURE_UNRESOLVED: " + st.get("why", "")})
     return {"policy": POLICY_ID, "floor": floor, "rooms": rooms, "lines": lines, "openings": openings,
             "unresolved": unresolved, "counts": dict(Counter(r["class"] for r in rooms))}
+
+
+def _wall_lines(ctx, floor, W, facts):
+    """per thickness family: the wall run (lm, plan geometry) and the block wall (m2), which needs the material and
+    the block height - a band is wall geometry, never a material (engine.qs_core.masonry's two axes)."""
+    lines, unresolved = [], []
+    walls = {"room_id": f"{floor}-WALLS", "floor": floor, "name_en": "Walls", "name_ar": "الجدران"}
+    jm = W["conservation"]["junction_m2"]
+    for fam in W["by_thickness"]:
+        el = f"walls t={fam['family']}"
+        inp = {"thickness_family_m": fam["family"], "walls": fam["walls"], "net_lm": fam["net_lm"],
+               "gross_lm": fam["gross_lm"], "external_lm": fam["external_lm"], "internal_lm": fam["internal_lm"],
+               "columns_in_wall_lm": fam.get("columns_in_wall_lm", 0.0)}
+        lines.append(_line(ctx, item_code="ARCH.WALL_RUN", room=walls, element=el, unit="lm", net=fam["net_lm"],
+                           ev="PROVISIONAL", gross=fam["gross_lm"],
+                           deductions=[{"what": "openings, wall ends and columns standing in the wall line (lm)",
+                                        "lm": round(fam["gross_lm"] - fam["net_lm"], 6)}],
+                           formula="sum over the wall bands of this thickness of the run where both wall faces are "
+                                   "drawn (arch_walls)", inputs=inp, rule_id=None,
+                           notes=f"junction pieces of the floor ({jm:.2f} m2 in plan: corners, T-junctions, wall ends) "
+                                 "are not given to a thickness; external / internal by the space on each face"))
+        q = (f"BLOCK_WALL_NOT_ESTABLISHED (walls t={fam['family']} m, {fam['net_lm']:.2f} lm): the wall material "
+             "(block type / RC / partition: legend or specification) and the block height (slab soffit / beam depth "
+             "above each wall) are not in the plan")
+        lines.append(_line(ctx, item_code="MAS.BLOCK", room=walls, element=el, unit="m2", net=None,
+                           formula="wall run x block height - openings (width x height)", inputs=inp, rule_id=None,
+                           rfi={"question": q, "unlocks": walls["room_id"]}))
+        unresolved.append({"room_id": walls["room_id"], "floor": floor, "item": f"MAS.BLOCK {el}", "reason": q})
+    return lines, unresolved
+
+
+STAIR_TREAD_T_RULE = "UP-STAIR-006"           # the tread marble thickness the visible riser loses
+
+
+def _flight_inputs(fl):
+    return {"kind": fl["kind"], "flight_id": fl.get("flight_id"), "layer": fl["layer"],
+            "also_drawn_on": fl.get("also_drawn_on") or [], "tread_lines": fl["tread_lines"],
+            "treads": len(fl["tread_areas_m2"]), "going_m": fl["going_m"], "width_m": fl["width_m"],
+            "run_m": fl["run_m"], **({"r_in_m": fl["r_in_m"], "r_out_m": fl["r_out_m"], "sweep_deg": fl["sweep_deg"]}
+                                     if fl["kind"] == "RADIAL" else {})}
+
+
+def _seen_below(fl):
+    b = fl.get("drawn_on_plan_below")
+    if not b:
+        return None
+    return (f"STAIR_DRAWN_ON_TWO_PLANS: flight {fl.get('flight_id')} lies over flight {b['flight_id']} of {b['floor']} "
+            f"({100 * b['overlap']:.0f} % of its treads after the floor alignment, {b['alignment']}) and a void is marked "
+            f"at it: the same steps seen through the void - counted on {b['floor']}, here as exposure only (confirm)")
+
+
+def _stacked(fl):
+    b = fl.get("stacked_over")
+    if not b:
+        return None
+    return (f"STAIR_STACKED_FLIGHT_ASSUMED: flight {fl.get('flight_id')} lies over flight {b['flight_id']} of {b['floor']} "
+            f"({100 * b['overlap']:.0f} % of its treads, {b['alignment']}) with no void marked at it: counted as the "
+            "next storey's flight (a stair core) - if it is the same stair seen from above, deduct it")
+
+
+def _stair_lines(ctx, room, rid, floor, k, fl, facts):
+    """the finish lines of one drawn flight: tread marble (each tread its own polygon), the commercial step basis,
+    the visible riser (needs the riser height) and the sloping flight length. A flight that repeats a flight of the
+    plan below is exposure (low 0) until a reviewer says which it is."""
+    lines, unresolved = [], []
+    inp = _flight_inputs(fl)
+    el = f"flight {k}"
+    dup = _seen_below(fl)
+    st = (facts.get("stairs") or {}).get(floor) or (facts.get("stairs") or {}).get("*") or {}
+    R = st.get("riser_m") or {}
+    conv = ("TREADS_BETWEEN_LINES: the n drawn tread lines bound n - 1 treads; if the top line is a nosing (not the "
+            "landing / floor edge) one more tread is not drawn")
+
+    def emit(code, unit, value, formula, rule, extra, notes):
+        if dup:
+            lines.append(_line(ctx, item_code=code, room=room, element=el, unit=unit, net=None, rule_id=rule,
+                               bounded={"low": 0.0, "high": round(value, 6), "basis": dup}, formula=formula,
+                               inputs={**inp, **extra}, rfi={"question": dup, "unlocks": rid}, notes=notes))
+        else:
+            lines.append(_line(ctx, item_code=code, room=room, element=el, unit=unit, net=round(value, 6),
+                               ev="PROVISIONAL", formula=formula, inputs={**inp, **extra}, rule_id=rule,
+                               notes="; ".join(x for x in (notes, _stacked(fl)) if x)))
+    tread = sum(fl["tread_areas_m2"])
+    emit("FIN.MARBLE.TREAD", "m2", tread, "sum of the tread polygons between consecutive tread lines (each tread its "
+         "own polygon: rectangles on a straight flight, wedges on a curved / winder flight)", "UP-STAIR-003",
+         {"tread_areas_m2": fl["tread_areas_m2"]}, conv + "; tread marble covers the nosing projection by detail")
+    emit("FIN.STAIR.STEP_LM", "lm", sum(fl["step_widths_m"]), "sum of the width of each physical step of the flight "
+         "(never derived from the tread area)", "UP-STAIR-008", {"step_widths_m": fl["step_widths_m"]},
+         conv + "; a step drawn on two plans is one step")
+    if dup:
+        unresolved.append({"room_id": rid, "floor": floor, "item": f"FIN.MARBLE.TREAD / FIN.STAIR.STEP_LM {el}",
+                           "reason": dup})
+    st_ = _stacked(fl)
+    if st_:
+        unresolved.append({"room_id": rid, "floor": floor, "item": f"FIN.MARBLE.TREAD / FIN.STAIR.STEP_LM {el}",
+                           "reason": st_})
+    t = RS.rule(STAIR_TREAD_T_RULE, RULE_SET)["value"]
+    if R.get("value_m"):
+        vis = R["value_m"] - t
+        widths = fl["riser_widths_m"]
+        low = sum(widths) * vis
+        br = {"low": round(low, 6), "high": round(low + max(widths) * vis, 6),
+              "basis": f"{len(widths)} risers (each drawn line over a riser) ... one more at the top of the flight "
+                       f"(the riser onto the landing / floor); visible height {R['value_m']:g} - {t:g} m tread marble"}
+        q = (f"STAIR_RISER_COUNT_CONVENTION: flight {k} - the drawn lines give {len(widths)} or {len(widths) + 1} "
+             "risers (a plan does not say whether the top line is a nosing or the landing edge)")
+        lines.append(_line(ctx, item_code="FIN.MARBLE.RISER", room=room, element=el, unit="m2", net=None, bounded=br,
+                           formula="sum of riser widths x (riser height - tread marble thickness)",
+                           inputs={**inp, "riser_widths_m": widths, "riser_m": R["value_m"],
+                                   "riser_authority": R.get("authority"), "tread_t_m": t}, rule_id="UP-STAIR-003",
+                           rfi={"question": q, "unlocks": rid}))
+        unresolved.append({"room_id": rid, "floor": floor, "item": f"FIN.MARBLE.RISER {el}", "reason": q})
+        treads = len(fl["tread_areas_m2"])
+        L = math.hypot(fl["run_m"], treads * R["value_m"])
+        emit("FIN.STAIR.FLIGHT", "lm", L, "pitch line nosing to nosing: hypot(run, treads x riser)" +
+             (" on the walking line (mid radius)" if fl["kind"] == "RADIAL" else ""), None,
+             {"riser_m": R["value_m"], "riser_authority": R.get("authority")},
+             "the railing / handrail adds its end extensions by detail (not in a plan)")
+    else:
+        q = (f"STAIR_RISER_NOT_ESTABLISHED: flight {k} ({fl['kind'].lower()}, {fl['tread_lines']} tread lines, going "
+             f"{fl['going_m']:.3f} m, width {fl['width_m']:.2f} m, run {fl['run_m']:.2f} m) - the visible riser and the "
+             "sloping length need the riser height (section / riser count of every flight between the two levels)")
+        for code, unit, f_ in (("FIN.MARBLE.RISER", "m2", "sum of riser widths x (riser height - tread marble thickness)"),
+                               ("FIN.STAIR.FLIGHT", "lm", "pitch line nosing to nosing: hypot(run, treads x riser)")):
+            lines.append(_line(ctx, item_code=code, room=room, element=el, unit=unit, net=None, formula=f_,
+                               inputs=inp, rule_id="UP-STAIR-003" if code == "FIN.MARBLE.RISER" else None,
+                               rfi={"question": q, "unlocks": rid}))
+        unresolved.append({"room_id": rid, "floor": floor, "item": f"FIN.MARBLE.RISER / FIN.STAIR.FLIGHT {el}",
+                           "reason": q})
+    return lines, unresolved
+
+
+def _treads_in(poly_m, holes_m, fl, u):
+    return sum(PP.region_area_in_convex(poly_m, holes_m, [(x * u, y * u) for x, y in q]) for q in fl["tread_quads"])
+
+
+def _stair_in_room(sp, flights, u):
+    """plan area of the drawn treads inside the room (m2): deducted from its floor finish (UP-STAIR-005)."""
+    return sum(_treads_in(sp["polygon_m"], sp["hole_polygons_m"], fl, u) for fl in flights
+               if not fl.get("drawn_on_plan_below"))
+
+
+def _landing(ctx, room, rid, floor, sp, flights, u):
+    """a stair room's landing marble: the plan of a stair enclosure less its drawn treads is an upper bound of the
+    landings (it also holds any well / void the walls do not close); the landing polygon itself is not in a plan."""
+    treads = sum(_treads_in(sp["polygon_m"], sp["hole_polygons_m"], fl, u) for fl in flights)
+    rest = max(sp["area_m2"] - treads, 0.0)
+    q = (f"STAIR_LANDING_POLYGON_NOT_ESTABLISHED: the stair enclosure is {sp['area_m2']:.2f} m2 and its drawn treads "
+         f"{treads:.2f} m2; the remaining {rest:.2f} m2 holds the landings and any stair well - the landing outline "
+         "(or the well) is needed for the landing marble")
+    ln = _line(ctx, item_code="FIN.MARBLE.LANDING", room=room, element="landings", unit="m2", net=None,
+               bounded={"low": 0.0, "high": round(rest, 6), "basis": "stair enclosure - drawn treads (an upper bound)"},
+               formula="landing polygons (UP-STAIR-005)", inputs={"enclosure_m2": round(sp["area_m2"], 6),
+                                                                  "treads_m2": round(treads, 6)},
+               rule_id="UP-STAIR-005", rfi={"question": q, "unlocks": rid})
+    return [ln], [{"room_id": rid, "floor": floor, "item": "FIN.MARBLE.LANDING", "reason": q}]
+
+
+# every unresolved record of the route gets a terminal classification (M9 S3 Phase F): what stops it, where the
+# software or the source is the cause, the module / function that raised it and the action that unlocks it.
+#   SOFTWARE  the drawing holds the information and the engine does not read it yet
+#   SOURCE    the drawings of this run do not hold it (a section, a schedule, a legend, a specification)
+#   REVIEW    the drawing allows several readings; a person decides (the engine never picks one silently)
+FLAG_RULES = (
+    (r"^WALL_FINISH_HEIGHT_NOT_ESTABLISHED", "SOURCE", "arch_measure.measure / wall_height.resolve",
+     "give the finish height per floor and trade, or the soffit / ceiling / build-up zones, from the sections "
+     "(--facts wall_heights / height_components)"),
+    (r"^opening heights not established", "SOURCE", "arch_measure.measure",
+     "give the door / window heights from the schedule or elevations (--facts opening_heights)"),
+    (r"^UP-CER-004", "SOURCE", "arch_measure.measure", "give the wall tile height of wet rooms (--facts wall_heights "
+     "WALL_TILE) or the clear height it is compared with"),
+    (r"^STAIR_RISER_NOT_ESTABLISHED", "SOURCE", "arch_measure._stair_lines",
+     "give the riser height (or the riser count between the two levels) from the section (--facts stairs.riser_m)"),
+    (r"^STAIR_RISER_COUNT_CONVENTION", "REVIEW", "arch_measure._stair_lines",
+     "confirm whether the top drawn line of each flight is a nosing or the landing edge"),
+    (r"^STAIR_DRAWN_ON_TWO_PLANS", "REVIEW", "arch_rooms.cross_plan_flights",
+     "confirm that the flight on the upper plan is the stair below seen through the void (counted once)"),
+    (r"^STAIR_STACKED_FLIGHT_ASSUMED", "REVIEW", "arch_rooms.cross_plan_flights",
+     "confirm that the flight is the next storey's own flight (a stair core), not the stair below seen from above"),
+    (r"^STAIR_LANDING_POLYGON_NOT_ESTABLISHED", "SOURCE", "arch_measure._landing",
+     "draw / give the landing outline (or the stair-well outline) of the stair enclosure"),
+    (r"^BLOCK_WALL_NOT_ESTABLISHED", "SOURCE", "arch_measure._wall_lines",
+     "give the wall material by thickness (legend / specification) and the block height (slab soffit / beam depth)"),
+    (r"^MERGED_SPACE", "REVIEW", "arch_rooms.spaces",
+     "draw the missing partition / door closure between the spaces, or confirm the open space and its finishes"),
+    (r"^MIXED_SPACE", "REVIEW", "arch_rooms.spaces", "confirm one finish for the open plan, or draw the split"),
+    (r"^UNLABELLED_SPACE.*SHX font", "SOFTWARE", "tools.arch_intake.decode_text",
+     "decode the SHX big-font text (font file or code map), or label the space for review"),
+    (r"^UNLABELLED_SPACE", "SOURCE", "arch_rooms.spaces / arch_rooms._evidence",
+     "name the space (room word, room-tag block or fixtures), or confirm it is not a room (shaft, duct, void)"),
+    (r"^ROOM_TYPE_FROM_", "REVIEW", "arch_rooms._evidence", "confirm the room type proposed from its tag / fixtures"),
+    (r"^DOOR_CLOSURE_UNRESOLVED", "SOFTWARE", "topology.opening_closures",
+     "the door symbol closes no gap the engine can find: check the swing against the wall linework"),
+    (r"door\(s\) closed by a door-symbol closure", "SOFTWARE", "arch_measure.measure",
+     "measure the wall thickness at the door-symbol closure (not implemented); or give the doorway depth"),
+    (r"^NO_WALL_LAYER", "SOFTWARE", "arch_plan.layer_roles", "name the wall layer (--layer-roles LAYER=WALL)"),
+    (r"(selected size|tile size|finishes\.|joint)", "SOURCE", "arch_measure.materials / tile_layout",
+     "give the tile size, joint and cut constraints (--facts finishes / tile_constraints)"),
+    (r"(membrane|roll)", "SOURCE", "arch_measure.materials / membrane_layout",
+     "give the membrane specification (--facts membrane)"),
+)
+
+
+def flag(rec, *, drawing, region=None, room=None):
+    """-> the unresolved record with item, location, reason, source_ref, module_function, cause and next_action."""
+    import re
+    reason = rec.get("reason") or ""
+    cause, mod, nxt = "REVIEW", "arch_measure", "review the item against the drawings"
+    for pat, c, m, a in FLAG_RULES:
+        if re.search(pat, reason, re.I):
+            cause, mod, nxt = c, m, a
+            break
+    loc = {"floor": rec.get("floor"), "room_id": rec.get("room_id")}
+    if room:
+        loc.update(room_en=room.get("name_en"), room_ar=room.get("name_ar"))
+    ref = {"drawing": drawing}
+    if region:
+        ref.update(region_id=region.get("region_id"), sheet_id=region.get("sheet_id"))
+    if room:
+        ref["face_id"] = room.get("face_id")
+    return dict(rec, location=loc, source_ref=ref, module_function=mod, cause=cause, next_action=nxt)
 
 
 def policy_record():

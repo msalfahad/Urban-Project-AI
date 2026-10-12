@@ -6,6 +6,8 @@
                                      result's area is the exact area of the intersection (a concave subject may give
                                      zero-width bridges along the window edge, which carry no area)
     region_area_in_rect(outer, holes, rect)   area of (outer - holes) inside the rectangle
+    clip_convex(poly, window)        the same clip by any convex window (either orientation)
+    region_area_in_convex(outer, holes, window)   area of (outer - holes) inside a convex window
     frame_angle(poly)                the direction (mod 90 degrees) of the longest edge: layouts run along the walls
     rotate(poly, theta)              rotation about the origin by -theta (the frame becomes the x / y axes)
     intervals(outer, holes, y)       the x-intervals of (outer - holes) on the horizontal line y (even-odd rule)
@@ -66,6 +68,38 @@ def region_area_in_rect(outer, holes, rect):
     a = abs(area(clip_rect(outer, x0, y0, x1, y1)))
     for h in holes or ():
         a -= abs(area(clip_rect(h, x0, y0, x1, y1)))
+    return max(a, 0.0)
+
+
+def clip_convex(poly, window):
+    w = [tuple(map(float, q)) for q in window]
+    if len(w) < 3 or abs(area(w)) <= EPS:
+        return []
+    sgn = 1.0 if area(w) > 0 else -1.0
+    p = [tuple(map(float, q)) for q in poly]
+    for i in range(len(w)):
+        a, b = w[i - 1], w[i]
+        ex, ey = b[0] - a[0], b[1] - a[1]
+        if ex == 0 and ey == 0:
+            continue
+
+        def side(q, a=a, ex=ex, ey=ey):
+            return sgn * (ex * (q[1] - a[1]) - ey * (q[0] - a[0]))
+
+        def cross(u, v, side=side):
+            su, sv = side(u), side(v)
+            t = su / (su - sv)
+            return (u[0] + (v[0] - u[0]) * t, u[1] + (v[1] - u[1]) * t)
+        if not p:
+            return []
+        p = _clip(p, lambda q, side=side: side(q) >= 0, cross)
+    return p
+
+
+def region_area_in_convex(outer, holes, window):
+    a = abs(area(clip_convex(outer, window)))
+    for h in holes or ():
+        a -= abs(area(clip_convex(h, window)))
     return max(a, 0.0)
 
 

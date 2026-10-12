@@ -84,6 +84,11 @@ ITEMS = {
     "ARCH.WINDOW": ("Window / glazed opening", "فتحة شباك", "OPENINGS", "pcs"),
     "ARCH.PASSAGE": ("Opening without a door", "فتحة بدون باب", "OPENINGS", "pcs"),
     "FIN.STAIR.FLIGHT": ("Stair flight (sloping length)", "طول الدرج المائل", "STAIR_FINISH", "lm"),
+    # M9 S3
+    "FIN.STAIR.STEP_LM": ("Marble steps (commercial linear basis)", "الدرج بالمتر الطولي", "STAIR_FINISH", "lm"),
+    "FIN.MARBLE.LANDING": ("Stair landing marble", "رخام استراحة / بسطة", "STAIR_FINISH", "m2"),
+    "ARCH.WALL_RUN": ("Wall run by thickness (plan)", "أطوال الجدران حسب السماكة", "MASONRY", "lm"),
+    "MAS.BLOCK": ("Block walls by thickness", "طابوق أسود / أبيض", "MASONRY", "m2"),
 }
 # route G family (+ storey) -> item code
 ROUTE_G_FAMILY = {"PLAIN_CONCRETE": "STR.CONC.BLINDING", "FOOTINGS": "STR.CONC.FOOTING", "GROUND_SLAB": "STR.CONC.GROUND_SLAB",

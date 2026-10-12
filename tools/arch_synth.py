@@ -155,7 +155,8 @@ def _cut(a, b, openings):
     return [(((x1, p), (x1, q)) if vert else ((p, y1), (q, y1))) for p, q in pieces]
 
 
-def _plan(msp, *, rooms, outer, labels, words, openings, columns, level, treads, origin, dx, dy, mirror, quarter_turns):
+def _plan(msp, *, rooms, outer, labels, words, openings, columns, level, treads, origin, dx, dy, mirror, quarter_turns,
+          variant=None):
     xs, ys = [p[0] for p in outer], [p[1] for p in outer]
     centre = ((min(xs) + max(xs)) / 2, (min(ys) + max(ys)) / 2)
     X = lambda p: _xf(p, origin, dx, dy, mirror, quarter_turns, centre)          # noqa: E731
@@ -179,8 +180,13 @@ def _plan(msp, *, rooms, outer, labels, words, openings, columns, level, treads,
             w = (s1 - s0) / 1000.0
             if mirror:
                 sx, r = -sx, (180 - r) % 360                                     # x -> -x mirrors the insert
-            msp.add_blockref("DOOR1000", X((hx, hy)), dxfattribs={
-                "layer": "A-DOOR", "xscale": sx * w, "yscale": sy * w, "rotation": (r + rot) % 360})
+            if variant == "NESTED_MIRRORED_DOORS":
+                # the door block mirrored inside a wrapper block that is mirrored back: the same WCS geometry
+                msp.add_blockref("DOORWRAP", X((hx, hy)), dxfattribs={
+                    "layer": "A-DOOR", "xscale": -sx * w, "yscale": sy * w, "rotation": (r + rot) % 360})
+            else:
+                msp.add_blockref("DOOR1000", X((hx, hy)), dxfattribs={
+                    "layer": "A-DOOR", "xscale": sx * w, "yscale": sy * w, "rotation": (r + rot) % 360})
     for cx, cy in columns:
         sq = [X(p) for p in ((cx, cy), (cx + 400, cy), (cx + 400, cy + 400), (cx, cy + 400))]
         msp.add_lwpolyline(sq, close=True, dxfattribs={"layer": "A-COL"})
@@ -190,22 +196,47 @@ def _plan(msp, *, rooms, outer, labels, words, openings, columns, level, treads,
     for a, b in treads:
         line(a, b, "A-STAIR")
     for name, p in labels.items():
-        msp.add_text(words[name], dxfattribs={"layer": "A-TEXT", "height": 200}).set_placement(X(p))
+        word = words[name]
+        if variant == "ATTRIB_LABELS":
+            # the room word is the NAME attribute of a room-tag block (its block name is not a room word)
+            msp.add_blockref("RTAG", X(p), dxfattribs={"layer": "A-TEXT"}).add_auto_attribs({"NAME": word})
+        elif variant == "SHX_ARABIC" and word in SHX_KEYBOARD_WORDS:
+            # the Arabic word typed on the Arabic (101) keyboard in an Arabic SHX font: the DXF holds Latin letters
+            msp.add_text(SHX_KEYBOARD_WORDS[word], dxfattribs={"layer": "A-TEXT", "height": 200,
+                                                               "style": "AR-SHX"}).set_placement(X(p))
+        else:
+            msp.add_text(word, dxfattribs={"layer": "A-TEXT", "height": 200}).set_placement(X(p))
         msp.add_text(level, dxfattribs={"layer": "A-TEXT", "height": 150}).set_placement(X((p[0], p[1] - 500)))
 
 
-def villa(path, *, dx=0.0, dy=0.0, mirror=False, quarter_turns=0):
+# the Arabic room word typed on the Arabic (101) keyboard, by hand, letter by letter: ghain=y reh=v feh=t
+# teh-marbuta=m (space) noon=k waw=, meem=l
+SHX_KEYBOARD_WORDS = {"غرفة نوم": "yvtm k,l"}
+VARIANTS = (None, "NESTED_MIRRORED_DOORS", "ATTRIB_LABELS", "SHX_ARABIC")
+
+
+def villa(path, *, dx=0.0, dy=0.0, mirror=False, quarter_turns=0, variant=None):
+    """variant (S3, the truth does not change): NESTED_MIRRORED_DOORS - every door is a mirrored door block inside a
+    wrapper block inserted mirrored; ATTRIB_LABELS - the room words are ATTRIBs of a room-tag block; SHX_ARABIC - the
+    Arabic room word is typed in an Arabic SHX keyboard font (xarb.shx)."""
     import ezdxf
+    if variant not in VARIANTS:
+        raise ValueError(f"variant must be one of {VARIANTS}")
     doc = ezdxf.new("R2018")
     doc.header["$INSUNITS"] = 4
     blk = doc.blocks.new("DOOR1000")
     blk.add_line((0, 0), (1000, 0), dxfattribs={"layer": "0"})               # the open leaf
     blk.add_arc((0, 0), 1000, 0, 90, dxfattribs={"layer": "0"})              # the swing, closing at +y
+    wrap = doc.blocks.new("DOORWRAP")
+    wrap.add_blockref("DOOR1000", (0, 0), dxfattribs={"layer": "0", "xscale": -1})
+    tag = doc.blocks.new("RTAG")
+    tag.add_attdef("NAME", (0, 0), dxfattribs={"height": 200, "layer": "0"})
+    doc.styles.add("AR-SHX", font="xarb.shx")
     msp = doc.modelspace()
     for fl, ((x0, y0), (x1, y1), org, title) in FRAMES.items():
         msp.add_lwpolyline([(x0, y0), (x1, y0), (x1, y1), (x0, y1)], close=True, dxfattribs={"layer": "A-FRAME"})
         msp.add_text(title, dxfattribs={"layer": "A-TITLE", "height": 500}).set_placement((x0 + 2000, y0 + 1500))
-    common = {"dx": dx, "dy": dy, "mirror": mirror, "quarter_turns": quarter_turns}
+    common = {"dx": dx, "dy": dy, "mirror": mirror, "quarter_turns": quarter_turns, "variant": variant}
     _plan(msp, rooms=GF_ROOMS, outer=GF_OUTER, labels=GF_LABELS, words=GF_WORDS, openings=GF_OPENINGS,
           columns=GF_COLUMNS, level="+0.00", treads=(), origin=FRAMES["GF"][2], **common)
     _plan(msp, rooms=F1_ROOMS, outer=F1_OUTER, labels=F1_LABELS, words=F1_WORDS, openings=F1_OPENINGS, columns=(),
@@ -241,3 +272,91 @@ def hatch_islands(path):
              {"layer": "H-BLOCK", "area_m2": 2.0, "islands": 0, "box_mm": (20000, 0, 21000, 2000)},
              {"layer": "H-BLOCK", "area_m2": 2.0, "islands": 0, "box_mm": (29000, 0, 30000, 2000)}]
     return {"path": str(path), "truth": truth}
+
+
+# ---- M9 S3: stairs (straight, curved, a dog-leg drawn on one layer) on two plans, with a void at the curved stair
+ST_ROOMS = {"LIVING": [(200, 200), (8200, 200), (8200, 6200), (200, 6200)],
+            "STAIR": [(8400, 200), (14200, 200), (14200, 6200), (8400, 6200)]}
+ST_OUTER = [(0, 0), (14400, 0), (14400, 6400), (0, 6400)]
+ST_LABELS = {"LIVING": (2000, 5300), "STAIR": (13300, 5800)}
+ST_WORDS = {"LIVING": "LIVING", "STAIR": "STAIR"}
+ST_OPENINGS = [("PASSAGE", "x", 8200, 8400, 2000, 3200, None),                  # LIVING | STAIR 1.20, no door
+               ("DOOR", "y", 0, 200, 1000, 2000, (2000, 200, 90, 1, 1))]         # entrance 1.00
+ST_COLUMNS = [(1000, 4500), (6500, 4500), (7000, 800)]                          # 400 x 400, the grid of both plans
+LIVING_FLIGHT = [((4000 + 300 * i, 1000), (4000 + 300 * i, 2200)) for i in range(6)]       # 6 lines, 1.2 wide
+FAN_C, FAN_R0, FAN_R1, FAN_N, FAN_STEP = (11300, 3200), 500.0, 1700.0, 9, 15.0            # 9 radial lines, 15 deg
+FAN = [((FAN_C[0] + FAN_R0 * math.cos(math.radians(FAN_STEP * k)), FAN_C[1] + FAN_R0 * math.sin(math.radians(FAN_STEP * k))),
+        (FAN_C[0] + FAN_R1 * math.cos(math.radians(FAN_STEP * k)), FAN_C[1] + FAN_R1 * math.sin(math.radians(FAN_STEP * k))))
+       for k in range(FAN_N)]
+# two legs side by side on ONE layer, their lines interleaved 50 mm apart in the going direction
+LEG_A = [((8700, 600 + 300 * k), (9700, 600 + 300 * k)) for k in range(7)]
+LEG_B = [((9800, 650 + 300 * k), (10800, 650 + 300 * k)) for k in range(7)]
+ST_FRAMES = {"GF": ((-6000, -8000), (24000, 18000), (0, 0), "GROUND FLOOR PLAN"),
+             "1F": ((34000, -8000), (64000, 18000), (40000, 0), "FIRST FLOOR PLAN")}
+_q = 0.5 * math.sin(math.radians(FAN_STEP)) * ((FAN_R1 / 1000) ** 2 - (FAN_R0 / 1000) ** 2)
+ST_TRUTH = {
+    # each tread its own polygon (hand-derived): the n lines of a flight bound n - 1 treads
+    "living_flight": {"lines": 6, "tread_m2": 5 * 0.30 * 1.2, "step_lm": 5 * 1.2},
+    "fan": {"lines": FAN_N, "tread_m2": (FAN_N - 1) * _q, "step_lm": (FAN_N - 1) * (FAN_R1 - FAN_R0) / 1000,
+            "sweep_deg": (FAN_N - 1) * FAN_STEP},
+    "leg": {"lines": 7, "tread_m2": 6 * 0.30 * 1.0, "step_lm": 6 * 1.0},
+    "living_gross_m2": 48.0, "living_floor_m2": 48.0 - 3 * COL_A - 5 * 0.30 * 1.2,    # columns + the drawn treads out
+    "stair_room_m2": 5.8 * 6.0,
+}
+
+
+def stairs(path):
+    """two plans (GROUND / FIRST FLOOR) of a living room and a stair room on one column grid. GF: a straight flight
+    stands in the living room (its treads leave the porcelain), and the stair room holds a curved fan and a dog-leg
+    whose two legs are drawn on one layer. 1F: the same stair room, with a VOID word at the fan (the fan is the GF stair
+    seen through the void: counted once) and the dog-leg legs repeated (a stacked flight: counted, flagged)."""
+    import ezdxf
+    doc = ezdxf.new("R2018")
+    doc.header["$INSUNITS"] = 4
+    blk = doc.blocks.new("DOOR1000")
+    blk.add_line((0, 0), (1000, 0), dxfattribs={"layer": "0"})
+    blk.add_arc((0, 0), 1000, 0, 90, dxfattribs={"layer": "0"})
+    msp = doc.modelspace()
+    for fl, ((x0, y0), (x1, y1), org, title) in ST_FRAMES.items():
+        msp.add_lwpolyline([(x0, y0), (x1, y0), (x1, y1), (x0, y1)], close=True, dxfattribs={"layer": "A-FRAME"})
+        msp.add_text(title, dxfattribs={"layer": "A-TITLE", "height": 500}).set_placement((x0 + 2000, y0 + 1500))
+        treads = (LIVING_FLIGHT if fl == "GF" else []) + FAN + LEG_A + LEG_B
+        _plan(msp, rooms=ST_ROOMS, outer=ST_OUTER, labels=ST_LABELS, words=ST_WORDS, openings=ST_OPENINGS,
+              columns=ST_COLUMNS, level="+0.00" if fl == "GF" else "+3.50", treads=treads, origin=org, dx=0.0, dy=0.0,
+              mirror=False, quarter_turns=0)
+        if fl == "1F":
+            msp.add_text("VOID", dxfattribs={"layer": "A-TEXT", "height": 200}).set_placement((org[0] + 11300, 4000))
+    doc.saveas(str(path))
+    return {"path": str(path), "truth": ST_TRUTH}
+
+
+def entities(path):
+    """one drawing of the entity kinds the readers must normalise, with analytic truth (mm):
+    ELLIPSE 2000 x 1000 (full) | an ARC r 1000 / 90 deg in a block inserted at x-scale 2 (an elliptical quarter) |
+    SPLINE through 4 points | a closed 2D POLYLINE 3000 x 2000 | an MLINE 4000 + 3000 at scale 200 | a 2 x 3 MINSERT of a
+    400 x 400 column block at 2000 / 3000 spacing | a block with an ATTDEF inserted with its ATTRIB | an MTEXT."""
+    import ezdxf
+    doc = ezdxf.new("R2018")
+    doc.header["$INSUNITS"] = 4
+    msp = doc.modelspace()
+    msp.add_ellipse((0, 0), major_axis=(2000, 0), ratio=0.5, dxfattribs={"layer": "E"})
+    msp.add_spline([(0, 10000), (1000, 11000), (2000, 10000), (3000, 11000)], dxfattribs={"layer": "S"})
+    msp.add_polyline2d([(0, 5000), (3000, 5000), (3000, 7000), (0, 7000)], close=True, dxfattribs={"layer": "P"})
+    m = msp.add_mline([(10000, 0), (14000, 0), (14000, 3000)], dxfattribs={"layer": "M"})
+    m.dxf.scale_factor = 200
+    col = doc.blocks.new("COL")
+    col.add_lwpolyline([(0, 0), (400, 0), (400, 400), (0, 400)], close=True)
+    mi = msp.add_blockref("COL", (20000, 0), dxfattribs={"layer": "C"})
+    mi.grid(size=(2, 3), spacing=(2000, 3000))
+    arc = doc.blocks.new("ARCB")
+    arc.add_arc((0, 0), 1000, 0, 90)
+    msp.add_blockref("ARCB", (30000, 0), dxfattribs={"xscale": 2, "yscale": 1, "layer": "A"})
+    tag = doc.blocks.new("TAG")
+    tag.add_attdef("NAME", (0, 0), dxfattribs={"height": 200})
+    msp.add_blockref("TAG", (40000, 0), dxfattribs={"layer": "T"}).add_auto_attribs({"NAME": "KITCHEN"})
+    msp.add_mtext("BATH", dxfattribs={"layer": "T", "char_height": 200}).set_location((40000, 2000))
+    doc.saveas(str(path))
+    return {"path": str(path), "truth": {
+        "ellipse_full_mm": math.pi * (3 * (2000 + 1000) - math.sqrt((3 * 2000 + 1000) * (2000 + 3 * 1000))),  # Ramanujan
+        "stretched_quarter": {"a": 2000, "b": 1000},
+        "polyline_perimeter_mm": 10000.0, "minsert_columns": 6, "attrib": "KITCHEN", "mtext": "BATH"}}
