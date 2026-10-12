@@ -114,6 +114,15 @@ def _run_lengths(space):
             "glazing_edge": glazing, "other": max(other, 0.0), "boundary": boundary, "perimeter": space["perimeter_lm"]}
 
 
+def _sk_ded(runs):
+    out = [{"what": "door / passage openings", "lm": round(runs["door"] + runs["passage"], 6)}]
+    if runs["glazing_edge"] > 1e-6:
+        out.append({"what": "glazing edge (floor-level window line)", "lm": round(runs["glazing_edge"], 6)})
+    if runs["other"] > 1e-6:
+        out.append({"what": "boundary that is not a wall / column face", "lm": round(runs["other"], 6)})
+    return out
+
+
 def _rect_dims(space):
     ab = TL.rectangle({"polygon": space["polygon_m"]}) if not space["holes"] else None
     return ab
@@ -263,19 +272,36 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
         if runs["glazing_edge"] > 1e-6:
             sk_notes += f"; glazing edge {runs['glazing_edge']:.2f} m not skirted"
         if wet:
-            tile_h = heights(floor, lvl, floor_above_level_m, facts)["WALL_TILE"]
-            q = ("UP-CER-004: no skirting when the wall tile is full height; the wall tile height is not established"
-                 f" (run {skirt:.2f} m if it is not full height)")
-            lines.append(_line(ctx, item_code="FIN.SKIRTING", room=room, element="skirting", unit="lm", net=None,
-                               formula="wall + column faces - door openings", inputs={"run_lm": round(skirt, 6)},
-                               rule_id="UP-CER-004", rfi={"question": q, "unlocks": rid}, notes=sk_notes))
-            unresolved.append({"room_id": rid, "floor": floor, "item": "FIN.SKIRTING", "reason": q})
+            hs0 = heights(floor, lvl, floor_above_level_m, facts)
+            tile_h, clear_h = hs0["WALL_TILE"], hs0["PAINT"]
+            full = None
+            if tile_h["state"] == WH.ESTABLISHED and tile_h["governing"] == "DERIVED_CLEAR_HEIGHT":
+                full = True                               # derived to the ceiling: the tile is full height
+            elif tile_h["state"] == WH.ESTABLISHED and clear_h["state"] == WH.ESTABLISHED:
+                full = tile_h["value_m"] >= clear_h["value_m"] - 1e-6
+            if full is None:
+                q = ("UP-CER-004: no skirting when the wall tile is full height; the wall tile height (or the clear "
+                     f"height it is compared with) is not established (run {skirt:.2f} m if it is not full height)")
+                lines.append(_line(ctx, item_code="FIN.SKIRTING", room=room, element="skirting", unit="lm", net=None,
+                                   formula="wall + column faces - door openings", inputs={"run_lm": round(skirt, 6)},
+                                   rule_id="UP-CER-004", rfi={"question": q, "unlocks": rid}, notes=sk_notes))
+                unresolved.append({"room_id": rid, "floor": floor, "item": "FIN.SKIRTING", "reason": q})
+            elif full:
+                lines.append(_line(ctx, item_code="FIN.SKIRTING", room=room, element="skirting", unit="lm", net=None,
+                                   ev="NOT_APPLICABLE_WITH_EVIDENCE", formula="UP-CER-004: full-height wall tile",
+                                   inputs={"wall_tile_h_m": tile_h["value_m"], "governing": tile_h["governing"],
+                                           "clear_h_m": clear_h.get("value_m"), "run_lm": round(skirt, 6)},
+                                   rule_id="UP-CER-004",
+                                   notes=f"no skirting: the wall tile runs full height ({tile_h['value_m']:.2f} m)"))
+            else:
+                lines.append(_line(ctx, item_code="FIN.SKIRTING", room=room, element="skirting", unit="lm",
+                                   net=round(skirt, 6), formula="room boundary - door / passage openings - glazing edge "
+                                   "(the wall tile is not full height: UP-CER-004)",
+                                   inputs={k: round(v, 6) for k, v in runs.items()}, rule_id="UP-CER-004",
+                                   gross=round(runs["boundary"], 6), deductions=_sk_ded(runs), notes=sk_notes +
+                                   f"; wall tile {tile_h['value_m']:.2f} m below the clear height {clear_h['value_m']:.2f} m"))
         else:
-            sk_ded = [{"what": "door / passage openings", "lm": round(runs["door"] + runs["passage"], 6)}]
-            if runs["glazing_edge"] > 1e-6:
-                sk_ded.append({"what": "glazing edge (floor-level window line)", "lm": round(runs["glazing_edge"], 6)})
-            if runs["other"] > 1e-6:
-                sk_ded.append({"what": "boundary that is not a wall / column face", "lm": round(runs["other"], 6)})
+            sk_ded = _sk_ded(runs)
             lines.append(_line(ctx, item_code="FIN.SKIRTING", room=room, element="skirting", unit="lm",
                                net=round(skirt, 6), formula="room boundary - door / passage openings - glazing edge "
                                "(= wall + column faces + sill-window thresholds)",
@@ -346,7 +372,9 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
             else:
                 lines.append(_line(ctx, item_code=code, room=room, element=tr.lower(), unit="m2",
                                    net=round(gross - known, 6), gross=round(gross, 6), deductions=dd,
-                                   formula="wall run x height - openings", inputs=inputs, rule_id="UP-CER-009"))
+                                   formula="wall run x height - openings", inputs=inputs, rule_id="UP-CER-009",
+                                   notes=("WINDOW_POSITION_ASSUMED: sill / head levels are not in a plan - each window "
+                                          "is deducted at its full height inside the finish height") if windows else ""))
     openings = []
     for o in fr["openings"]:
         code = {"DOOR": "ARCH.DOOR", "WINDOW": "ARCH.WINDOW", "PASSAGE": "ARCH.PASSAGE"}[o["kind"]]

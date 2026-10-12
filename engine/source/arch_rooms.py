@@ -453,23 +453,61 @@ def _box_overlap(a, b):
 
 
 def void_symbols(segments, unit_m):
-    """rectangles with both diagonals drawn (the plan convention for an opening / void in the slab), any layer.
-    -> [{"box", "a_m", "b_m", "area_m2", "layers"}]"""
-    out = []
+    """a rectangle with both diagonals drawn (the plan convention for an opening / void in the slab), any layer, any
+    angle, drawn as one polyline or as separate lines: two equal segments crossing at their common midpoint are the
+    diagonals; each of the four sides must be drawn (covered at least 90 % by collinear segments).
+    -> [{"corners", "a_m", "b_m", "area_m2"}]"""
     tol = 0.02 / unit_m
-    for r in DM.closed_rectangles(segments):
-        x0, y0, x1, y1 = r["box"]
-        w, h = (x1 - x0) * unit_m, (y1 - y0) * unit_m
-        if w < 0.5 or h < 0.5:
-            continue
-        diag = 0
-        for (p, q) in (((x0, y0), (x1, y1)), ((x0, y1), (x1, y0))):
-            if any((math.dist(sg["a"], p) <= tol and math.dist(sg["b"], q) <= tol) or
-                   (math.dist(sg["a"], q) <= tol and math.dist(sg["b"], p) <= tol) for sg in segments):
-                diag += 1
-        if diag == 2:
-            out.append({"box": r["box"], "a_m": round(w, 4), "b_m": round(h, 4), "area_m2": round(w * h, 4)})
+    out, seen = [], set()
+    segs = [sg for sg in segments if math.dist(sg["a"], sg["b"]) * unit_m >= 0.7]
+    mids = defaultdict(list)
+    for k, sg in enumerate(segs):
+        m = ((sg["a"][0] + sg["b"][0]) / 2, (sg["a"][1] + sg["b"][1]) / 2)
+        mids[(round(m[0] / tol), round(m[1] / tol))].append((k, m))
+    for key, items in mids.items():
+        near = [x for dx in (-1, 0, 1) for dy in (-1, 0, 1) for x in mids.get((key[0] + dx, key[1] + dy), [])]
+        for i, mi in items:
+            for j, mj in near:
+                if j <= i or (i, j) in seen or math.dist(mi, mj) > tol:
+                    continue
+                d1, d2 = segs[i], segs[j]
+                if abs(math.dist(d1["a"], d1["b"]) - math.dist(d2["a"], d2["b"])) > tol:
+                    continue
+                c = [d1["a"], d2["a"], d1["b"], d2["b"]]                     # corners in order around the rectangle
+                sides = [math.dist(c[q], c[(q + 1) % 4]) for q in range(4)]
+                if min(sides) * unit_m < 0.5:
+                    continue
+                if all(_side_drawn(c[q], c[(q + 1) % 4], segments, tol) for q in range(4)):
+                    seen.add((i, j))
+                    a_m, b_m = sides[0] * unit_m, sides[1] * unit_m
+                    out.append({"corners": c, "a_m": round(a_m, 4), "b_m": round(b_m, 4),
+                                "area_m2": round(a_m * b_m, 4)})
     return out
+
+
+def _side_drawn(p, q, segments, tol):
+    L = math.dist(p, q)
+    ux, uy = (q[0] - p[0]) / L, (q[1] - p[1]) / L
+    iv = []
+    for sg in segments:
+        ok = True
+        ts = []
+        for e in (sg["a"], sg["b"]):
+            vx, vy = e[0] - p[0], e[1] - p[1]
+            if abs(vx * uy - vy * ux) > tol:
+                ok = False
+                break
+            ts.append(vx * ux + vy * uy)
+        if ok:
+            lo, hi = max(min(ts), 0.0), min(max(ts), L)
+            if hi > lo:
+                iv.append((lo, hi))
+    covered, pos = 0.0, 0.0
+    for lo, hi in sorted(iv):
+        if hi > pos:
+            covered += hi - max(lo, pos)
+            pos = hi
+    return covered >= 0.9 * L
 
 
 def dominant_level(texts):
