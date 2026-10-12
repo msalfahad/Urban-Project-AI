@@ -19,7 +19,6 @@ import hashlib
 from collections import OrderedDict
 
 from engine.boq_rc1_xlsx import _repack
-from engine.source import boq_line as BL
 
 POLICY_ID = "URBAN_ROOM_BOQ_XLSX_V1"
 FONT = "Arial"
@@ -58,9 +57,12 @@ def _room_label(loc):
     return " / ".join(x for x in (ar, en) if x) or (loc.get("room_id") or "")
 
 
-def _item_label(code):
-    n = BL.item_name(code)
-    return f"{n['ar']} / {n['en']}"
+QUANTITY_STATES = ("MEASURED", "SOURCE_DERIVED", "PROVISIONAL")     # boq_line.QUANTITY_STATES (no engine.source import:
+                                                                   # the workbook is a view over the lines it is given)
+
+
+def _item_label(ln):
+    return f"{ln['item_ar']} / {ln['item_en']}"
 
 
 def _size(spec):
@@ -195,7 +197,7 @@ def _floor_rows(room_boq):
         if res is not None and res.get("method", "").startswith("MEMBRANE"):
             res = None
         loc = ln["location"]
-        v = {"FLOOR": loc["floor"], "ROOM (AR/EN)": _room_label(loc), "ITEM": _item_label(ln["item_code"]),
+        v = {"FLOOR": loc["floor"], "ROOM (AR/EN)": _room_label(loc), "ITEM": _item_label(ln),
              "NET M²": ln["measured_net"], "SOURCE": f"{ln['source']['geometry_source']}; {ln['rule']['rule_id']}@{ln['rule']['version']}",
              "STATUS": _status(ln, res), "FORMULA": ln["calculation"]["formula"], "UNIT": ln["unit"], "LINE ID": ln["line_id"],
              "ROOM ID": loc["room_id"]}
@@ -238,7 +240,7 @@ def _wp_rows(room_boq):
         if res and res["state"] != "BLOCKED":
             comp = next((c for c in res["components"] if ln["line_id"] in c.get("line_ids", ())), None)
         v = {"_item_code": ln["item_code"], "FLOOR": loc["floor"], "ROOM (AR/EN)": _room_label(loc),
-             "ITEM": _item_label(ln["item_code"]) + (f" ({ln['physical_element']})" if ln["item_code"] == "FIN.WP.DOORWAY" else ""),
+             "ITEM": _item_label(ln) + (f" ({ln['physical_element']})" if ln["item_code"] == "FIN.WP.DOORWAY" else ""),
              "MATERIAL SIZE": _size((res or {}).get("material_spec")), "NET M²": ln["measured_net"],
              "SOURCE": f"{ln['source']['geometry_source']}; {ln['rule']['rule_id']}@{ln['rule']['version']}",
              "STATUS": _status(ln), "FORMULA": ln["calculation"]["formula"], "UNIT": ln["unit"],
@@ -386,8 +388,8 @@ def _structural(wb, lines):
     for fl, ls in floors.items():
         for ln in ls:
             br = ln.get("bounded_range") or {}
-            prov = ln["evidence_state"] in BL.QUANTITY_STATES
-            rows.append([fl, _item_label(ln["item_code"]), ln.get("subtrade") or ln.get("physical_element"), ln["unit"],
+            prov = ln["evidence_state"] in QUANTITY_STATES
+            rows.append([fl, _item_label(ln), ln.get("subtrade") or ln.get("physical_element"), ln["unit"],
                          ln["measured_net"], br.get("low") if prov else None, br.get("high") if prov else None,
                          None if prov else br.get("low"), None if prov else br.get("high"),
                          f"{ln['evidence_state']} / {ln['approval_state']}", ln["rule"]["rule_id"],
