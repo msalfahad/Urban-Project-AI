@@ -1,0 +1,106 @@
+{
+ "conventions": {
+  "after": "engine/profiles/URBAN_M8_GENERIC_CONVENTIONS_V6.json",
+  "before": "engine/profiles/URBAN_M7_GENERIC_CONVENTIONS_V5.json"
+ },
+ "drawings_sha256": [
+  "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4"
+ ],
+ "family_coverage": {
+  "V5": {
+   "CANTILEVER_PORTIONS": "COUNTED_IN_PARENT",
+   "COLUMN_NECKS": "PARTLY_QUANTIFIED",
+   "DOMES": "DETECTED_NOT_QUANTIFIED",
+   "LIFT": "NO_EVIDENCE_FOUND",
+   "LINTELS": "PARTLY_QUANTIFIED",
+   "PARAPETS": "DETECTED_NOT_QUANTIFIED",
+   "PLAIN_CONCRETE": "QUANTIFIED",
+   "POOL": "DETECTED_NOT_QUANTIFIED",
+   "STAIRS": "DETECTED_NOT_QUANTIFIED",
+   "WALLS": "NO_EVIDENCE_FOUND",
+   "WATER_TANK": "DETECTED_NOT_QUANTIFIED"
+  },
+  "V6": {
+   "CANTILEVER_PORTIONS": "COUNTED_IN_PARENT",
+   "COLUMN_NECKS": "PARTLY_QUANTIFIED",
+   "DOMES": "QUANTIFIED",
+   "LIFT": "NO_EVIDENCE_FOUND",
+   "LINTELS": "PARTLY_QUANTIFIED",
+   "PARAPETS": "BOUNDED_NOT_MEASURED",
+   "PLAIN_CONCRETE": "QUANTIFIED",
+   "POOL": "QUANTIFIED",
+   "STAIRS": "PARTLY_QUANTIFIED",
+   "WALLS": "QUANTIFIED",
+   "WATER_TANK": "BOUNDED_NOT_MEASURED"
+  }
+ },
+ "files_sha256": {
+  "ABLATION.csv": "c421937e88ee7aa3c521cf2207bb35fd0b43c5d722e8c63b9fca6140db80080c",
+  "BY_FAMILY.csv": "2ce9c4c8e596ae6494c3b6beeac623bf8e6cc6799931d7d55d3ad9361512a52b",
+  "POSITIONS.csv": "9c7ab2ee46035e48548fe6eb6c623e6b130b59e682fa126c70d82081068283f6",
+  "SCOPE_BOUNDS.csv": "b6d33387801158b59a4aad6f05082f3367ac40f0c15b4e72a2730e34f8430aa0",
+  "SCOPE_ITEMS.csv": "fd228af52b26ec8b80e1d8a2d05e7db909a7c776bb7c99cff33e76e5a46dc3e3"
+ },
+ "findings": {
+  "V5": 90,
+  "V6": 86
+ },
+ "phase": "POST_DISCOVERY",
+ "positions_source": "research/urban_engine_m5_concrete_reconciliation/02C_FAMILY_TOTALS.csv",
+ "rc_v5_measured_base": 291.758,
+ "rc_v6": {
+  "bounded_high": 476.11,
+  "bounded_low": 313.235,
+  "measured_base": 319.8
+ },
+ "referenced_families": [
+  "DOMES",
+  "PARAPETS",
+  "PLAIN_CONCRETE",
+  "POOL",
+  "STAIRS",
+  "WATER_TANK"
+ ],
+ "rule": "post-discovery, not blind; external positions read at run time from the M5 record after the M8 freeze and written only as differences and in-range flags",
+ "scope_totals": {
+  "PLAIN": {
+   "bounded_high": 67.371,
+   "bounded_low": 22.155,
+   "finding_bounds_high": 45.216,
+   "finding_bounds_low": 0.0,
+   "measured_base": 22.155,
+   "measured_high": 22.155,
+   "measured_low": 22.155,
+   "n_bounds": 1,
+   "unresolved_exposure_high": 0,
+   "unresolved_exposure_low": 0,
+   "unresolved_items_without_exposure": 0
+  },
+  "RC": {
+   "bounded_high": 476.11,
+   "bounded_low": 313.235,
+   "finding_bounds_high": 105.043,
+   "finding_bounds_low": -7.851,
+   "measured_base": 319.8,
+   "measured_high": 343.78,
+   "measured_low": 307.168,
+   "n_bounds": 59,
+   "unresolved_exposure_high": 27.287,
+   "unresolved_exposure_low": 13.918,
+   "unresolved_items_without_exposure": 3
+  },
+  "finding_states": {
+   "BOUNDED": 60,
+   "EXPLAINED": 2,
+   "HELD_BY_ITEMS": 13,
+   "MEASURED": 6,
+   "QUALIFIER": 8
+  },
+  "findings": 89,
+  "findings_without_range": 0,
+  "rule": "bounded = measured (planning) + every UNRESOLVED item's exposure + every bounded finding, low and high; HELD_BY_ITEMS / EXPLAINED / QUALIFIER findings add nothing; MEASURED findings are in the measured total through their items",
+  "without_range_ids": []
+ },
+ "top_storey": "2F"
+}

@@ -97,7 +97,9 @@ BOUND_RULES = {
     "STOREY_COLUMN_BANDS_MISSING": "qualifier: the columns are drawn; their sections are asked for",
     "STOREY_HEIGHT_MISSING": "qualifier: the storey's columns are held by their own findings",
     "REFERENCED_NOT_DRAWN": "the family's allowance (parapets: free roof edge x section; tank / pit / pool / dome: one "
-                            "element at its convention size; any other family: REFERENCED_ELEMENT_ALLOWANCE_M3), 0 low",
+                            "element at its convention size; any other family: REFERENCED_ELEMENT_ALLOWANCE_M3), 0 low; "
+                            "none when a drawn structural group may be it (on the noted plan, or anywhere for a note "
+                            "on a detail / schedule sheet)",
     "DRAWN_NOT_MEASURED": "by shape: strip 0 .. length x width x UNEXPLAINED_STRIP_DEPTH_M high; area / fill 0 .. area x "
                           "slab thickness high; ring 0 .. ring area x the highest wall height; curve / linework 0 .. "
                           "half the length x UNEXPLAINED_LINEWORK_SECTION_M2 high; radial 0 .. the dome or the winder "
@@ -289,7 +291,9 @@ class _Ctx:
         return None
 
     def notes_near(self, f, ents):
-        """printed dimension notes within NOTE_NEAR_M of the element: {kind: [m, ...]}."""
+        """printed dimension notes within NOTE_NEAR_M of the element: {kind: [m, ...]} (PRINTED_DIMENSION_NOTES)."""
+        if "PRINTED_DIMENSION_NOTES" not in self.conv.items:
+            return {}
         sid = f["SHEET"]
         if ents:
             box = None
@@ -963,7 +967,8 @@ def measure(CR, D, items, conv, *, scan=None, src_file=""):
             dome_rule = None
             if fam == "DOMES" and _settled(f):
                 dome_rule = ""
-            elif (shape in ("RADIAL", "RING") or mag.get("radial_spokes")) and f.get("STOREY") == ctx.top and \
+            elif "DOME_ON_TOP_PLAN" in conv.items and (shape in ("RADIAL", "RING") or mag.get("radial_spokes")) and \
+                    f.get("STOREY") == ctx.top and \
                     "DOMES" in ctx.referenced and (fam in ("UNKNOWN", "DOMES") and (not cands or "DOMES" in cands)):
                 dome_rule = "DOME_ON_TOP_PLAN"
             if dome_rule is not None:
@@ -994,8 +999,8 @@ def measure(CR, D, items, conv, *, scan=None, src_file=""):
     # place of another (a route stair zone or a measured flight) on another plan is the same flight (exposure only)
     cand = []
     for f in order:
-        if f["KIND"] in ("DRAWN_NOT_MEASURED", "STAIR_NOT_MEASURED") and f["FAMILY"] == "STAIRS" and _settled(f) and \
-                f["FINDING_ID"] not in bounds:
+        if "STAIR_LOOSE_FLIGHT" in conv.items and f["KIND"] in ("DRAWN_NOT_MEASURED", "STAIR_NOT_MEASURED") and \
+                f["FAMILY"] == "STAIRS" and _settled(f) and f["FINDING_ID"] not in bounds:
             try:
                 its, key = _stair_flight(ctx, f, ctx.group(f))
             except (PE.EstimateError, ZeroDivisionError, ValueError) as e:
@@ -1056,6 +1061,8 @@ def measure(CR, D, items, conv, *, scan=None, src_file=""):
 
 def _bound_of(ctx, f, measured_fams, used_rows):
     conv = ctx.conv
+    if "FINDING_BOUNDS" not in conv.items and f["KIND"] != "UNRESOLVED_ITEMS":
+        return _bound(f, 0.0, 0.0, "NO_RANGE", "FINDING_BOUNDS is off: no range given", state="QUALIFIER")
     kind, fam = f["KIND"], f["FAMILY"]
     mag = f.get("MAGNITUDE") or {}
     vlo, vhi = f.get("VOLUME_LOW_M3"), f.get("VOLUME_HIGH_M3")
@@ -1121,7 +1128,7 @@ def _bound_of(ctx, f, measured_fams, used_rows):
         a = mag.get("hatch_area_m2") or 0.0
         t = _host_thickness(ctx, f) or sh[2]
         return _bound(f, -a * t, 0.0, kind, rule + f" (thickness {t:g} m)")
-    if kind in ("STOREY_PLAN_MISSING", "PLAN_SHEET_NOT_MEASURED"):
+    if kind in ("STOREY_PLAN_MISSING", "PLAN_SHEET_NOT_MEASURED") and "STOREY_PLAN_MISSING_BRACKET" in conv.items:
         st = f.get("STOREY")
         if st in STOREY_ORDER:
             k = STOREY_ORDER.index(st)
@@ -1135,8 +1142,11 @@ def _bound_of(ctx, f, measured_fams, used_rows):
     if kind == "REFERENCED_NOT_DRAWN":
         if measured_fams.get(fam):
             return _bound(f, 0.0, 0.0, "EXPLAINED", f"the {fam} family is measured", state="EXPLAINED")
+        noted = [x for x in (f.get("SHEET") or "").split(",") if x]
+        on_plans = noted and all((ctx.sheets.get(x) or {}).get("role") in CC.PLAN_ROLES for x in noted)
         drawn = next((g for g in ctx.CR["findings"] if g["KIND"] in ("DRAWN_NOT_MEASURED", "STAIR_NOT_MEASURED") and
-                      not _non_structural(g, conv) and (g["FAMILY"] == fam or fam in _candidates(g) or
+                      not _non_structural(g, conv) and (not on_plans or g.get("SHEET") in noted) and
+                      (g["FAMILY"] == fam or fam in _candidates(g) or
                        re.search(r"notes: [A-Z_, ]*\b" + fam + r"\b", g.get("EVIDENCE") or ""))), None)
         if drawn:
             return _bound(f, 0.0, 0.0, "EXPLAINED", f"the {fam} the notes name may be the drawn group "

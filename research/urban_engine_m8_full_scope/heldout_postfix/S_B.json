@@ -142,7 +142,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 1.13,
+   "seconds": 1.26,
    "elements": [
     {
      "id": "T01",
@@ -792,7 +792,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 1.01,
+   "seconds": 1.03,
    "elements": [
     {
      "id": "T01",
@@ -962,7 +962,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 0.53,
+   "seconds": 0.64,
    "elements": [
     {
      "id": "T01",
@@ -1283,7 +1283,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 0.7,
+   "seconds": 0.74,
    "elements": [
     {
      "id": "T01",
@@ -1638,7 +1638,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 1.13,
+   "seconds": 1.06,
    "elements": [
     {
      "id": "T01",
@@ -2025,7 +2025,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 0.6,
+   "seconds": 0.69,
    "elements": [
     {
      "id": "T01",
@@ -2381,7 +2381,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 1.08,
+   "seconds": 1.24,
    "elements": [
     {
      "id": "T01",
@@ -2728,7 +2728,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 1.44,
+   "seconds": 1.75,
    "elements": [
     {
      "id": "T01",
@@ -3111,7 +3111,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 1.28,
+   "seconds": 1.34,
    "elements": [
     {
      "id": "T01",
@@ -3438,7 +3438,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 0.62,
+   "seconds": 0.68,
    "elements": [
     {
      "id": "T01",
@@ -3734,7 +3734,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 1.16,
+   "seconds": 1.28,
    "elements": [
     {
      "id": "T01",
@@ -4035,7 +4035,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 1.01,
+   "seconds": 1.1,
    "elements": [
     {
      "id": "T01",
@@ -4381,7 +4381,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 1.16,
+   "seconds": 1.11,
    "elements": [
     {
      "id": "T01",
@@ -4618,7 +4618,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 0.84,
+   "seconds": 0.9,
    "elements": [
     {
      "id": "T01",
@@ -5005,7 +5005,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 1.04,
+   "seconds": 1.11,
    "elements": [
     {
      "id": "T01",
@@ -5311,7 +5311,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 0.69,
+   "seconds": 0.74,
    "elements": [
     {
      "id": "T01",
@@ -5630,7 +5630,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 0.67,
+   "seconds": 0.81,
    "elements": [
     {
      "id": "T01",
@@ -5927,7 +5927,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 0.86,
+   "seconds": 0.95,
    "elements": [
     {
      "id": "T01",
@@ -6342,7 +6342,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 0.99,
+   "seconds": 1.07,
    "elements": [
     {
      "id": "T01",
@@ -6702,7 +6702,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 0.85,
+   "seconds": 0.87,
    "elements": [
     {
      "id": "T01",
@@ -7025,7 +7025,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 1.05,
+   "seconds": 1.08,
    "elements": [
     {
      "id": "T01",
@@ -7290,7 +7290,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 1.24,
+   "seconds": 1.31,
    "elements": [
     {
      "id": "T01",
@@ -7678,7 +7678,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 1.48,
+   "seconds": 1.69,
    "elements": [
     {
      "id": "T01",
@@ -8054,7 +8054,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 0.65,
+   "seconds": 0.78,
    "elements": [
     {
      "id": "T01",
@@ -8256,7 +8256,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 0.87,
+   "seconds": 0.9,
    "elements": [
     {
      "id": "T01",
@@ -8550,7 +8550,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 1.04,
+   "seconds": 1.06,
    "elements": [
     {
      "id": "T01",
@@ -8811,7 +8811,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 0.83,
+   "seconds": 0.91,
    "elements": [
     {
      "id": "T01",
@@ -9207,7 +9207,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 0.67,
+   "seconds": 0.82,
    "elements": [
     {
      "id": "T01",
@@ -9564,7 +9564,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 1.47,
+   "seconds": 1.46,
    "elements": [
     {
      "id": "T01",
@@ -9839,7 +9839,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 0.99,
+   "seconds": 1.05,
    "elements": [
     {
      "id": "T01",
@@ -10197,7 +10197,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 0.88,
+   "seconds": 0.76,
    "elements": [
     {
      "id": "T01",
@@ -10495,7 +10495,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 1.2,
+   "seconds": 1.26,
    "elements": [
     {
      "id": "T01",
@@ -10814,7 +10814,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 0.91,
+   "seconds": 0.9,
    "elements": [
     {
      "id": "T01",
@@ -11160,7 +11160,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 0.98,
+   "seconds": 1.35,
    "elements": [
     {
      "id": "T03",
@@ -11395,7 +11395,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 1.21,
+   "seconds": 1.15,
    "elements": [
     {
      "id": "T01",
@@ -11753,7 +11753,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 1.06,
+   "seconds": 1.22,
    "elements": [
     {
      "id": "T01",
@@ -12151,7 +12151,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 1.09,
+   "seconds": 1.33,
    "elements": [
     {
      "id": "T01",
@@ -12499,7 +12499,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 0.68,
+   "seconds": 0.66,
    "elements": [
     {
      "id": "T01",
@@ -12760,7 +12760,7 @@
    "vocabulary": "heldout",
    "hard": true,
    "ok": true,
-   "seconds": 0.76,
+   "seconds": 0.7,
    "elements": [
     {
      "id": "T01",

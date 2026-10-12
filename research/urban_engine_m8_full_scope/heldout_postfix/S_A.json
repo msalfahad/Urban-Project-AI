@@ -142,7 +142,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 1.27,
+   "seconds": 1.48,
    "elements": [
     {
      "id": "T01",
@@ -474,7 +474,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 1.41,
+   "seconds": 1.6,
    "elements": [
     {
      "id": "T01",
@@ -792,7 +792,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 1.13,
+   "seconds": 1.04,
    "elements": [
     {
      "id": "T01",
@@ -962,7 +962,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 0.56,
+   "seconds": 0.54,
    "elements": [
     {
      "id": "T01",
@@ -1283,7 +1283,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 0.64,
+   "seconds": 0.78,
    "elements": [
     {
      "id": "T01",
@@ -1644,7 +1644,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 1.12,
+   "seconds": 1.21,
    "elements": [
     {
      "id": "T01",
@@ -2031,7 +2031,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 0.66,
+   "seconds": 0.65,
    "elements": [
     {
      "id": "T01",
@@ -2381,7 +2381,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 1.07,
+   "seconds": 1.16,
    "elements": [
     {
      "id": "T01",
@@ -2729,7 +2729,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 1.4,
+   "seconds": 1.54,
    "elements": [
     {
      "id": "T01",
@@ -3111,7 +3111,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 1.4,
+   "seconds": 1.23,
    "elements": [
     {
      "id": "T01",
@@ -3438,7 +3438,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 0.8,
+   "seconds": 0.63,
    "elements": [
     {
      "id": "T01",
@@ -3734,7 +3734,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 1.17,
+   "seconds": 1.24,
    "elements": [
     {
      "id": "T01",
@@ -4030,7 +4030,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 1.17,
+   "seconds": 1.1,
    "elements": [
     {
      "id": "T01",
@@ -4382,7 +4382,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 1.01,
+   "seconds": 1.06,
    "elements": [
     {
      "id": "T01",
@@ -4613,7 +4613,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 0.88,
+   "seconds": 0.91,
    "elements": [
     {
      "id": "T01",
@@ -5000,7 +5000,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 1.09,
+   "seconds": 1.1,
    "elements": [
     {
      "id": "T01",
@@ -5312,7 +5312,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 0.67,
+   "seconds": 0.64,
    "elements": [
     {
      "id": "T01",
@@ -5631,7 +5631,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 0.6,
+   "seconds": 0.68,
    "elements": [
     {
      "id": "T01",
@@ -5922,7 +5922,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 0.78,
+   "seconds": 0.93,
    "elements": [
     {
      "id": "T01",
@@ -6338,7 +6338,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 0.91,
+   "seconds": 1.25,
    "elements": [
     {
      "id": "T01",
@@ -6698,7 +6698,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 0.78,
+   "seconds": 0.93,
    "elements": [
     {
      "id": "T01",
@@ -7021,7 +7021,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 1.24,
+   "seconds": 1.11,
    "elements": [
     {
      "id": "T01",
@@ -7286,7 +7286,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 1.18,
+   "seconds": 1.14,
    "elements": [
     {
      "id": "T01",
@@ -7674,7 +7674,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 1.53,
+   "seconds": 1.65,
    "elements": [
     {
      "id": "T01",
@@ -8056,7 +8056,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 0.69,
+   "seconds": 0.72,
    "elements": [
     {
      "id": "T01",
@@ -8258,7 +8258,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 0.78,
+   "seconds": 0.86,
    "elements": [
     {
      "id": "T01",
@@ -8546,7 +8546,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 1.06,
+   "seconds": 1.03,
    "elements": [
     {
      "id": "T01",
@@ -8814,7 +8814,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 1.12,
+   "seconds": 0.88,
    "elements": [
     {
      "id": "T01",
@@ -9210,7 +9210,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 0.66,
+   "seconds": 0.67,
    "elements": [
     {
      "id": "T01",
@@ -9566,7 +9566,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 1.54,
+   "seconds": 1.62,
    "elements": [
     {
      "id": "T01",
@@ -9840,7 +9840,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 0.89,
+   "seconds": 0.97,
    "elements": [
     {
      "id": "T01",
@@ -10192,7 +10192,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 0.96,
+   "seconds": 0.87,
    "elements": [
     {
      "id": "T01",
@@ -10484,7 +10484,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 1.37,
+   "seconds": 1.14,
    "elements": [
     {
      "id": "T01",
@@ -10809,7 +10809,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 0.92,
+   "seconds": 0.87,
    "elements": [
     {
      "id": "T01",
@@ -11155,7 +11155,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 0.98,
+   "seconds": 1.04,
    "elements": [
     {
      "id": "T03",
@@ -11390,7 +11390,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 1.23,
+   "seconds": 1.17,
    "elements": [
     {
      "id": "T01",
@@ -11748,7 +11748,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 1.12,
+   "seconds": 1.07,
    "elements": [
     {
      "id": "T01",
@@ -12152,7 +12152,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 1.17,
+   "seconds": 1.29,
    "elements": [
     {
      "id": "T01",
@@ -12507,7 +12507,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 0.78,
+   "seconds": 0.74,
    "elements": [
     {
      "id": "T01",
@@ -12768,7 +12768,7 @@
    "vocabulary": "dev",
    "hard": true,
    "ok": true,
-   "seconds": 0.75,
+   "seconds": 0.8,
    "elements": [
     {
      "id": "T01",
