@@ -2,6 +2,7 @@
 the building (independent of the engine's own formulas: only the DXF is changed, never the expected quantity).
 
     python3 -I tools/m7_metamorphic.py OUT.json DXF [--profile P.json] [--conventions C.json] [--ops op,op,...]
+                                       [--completeness]   (M8: with the completeness / scope pass)
 
 Each operation writes a transformed copy of the drawing and runs route G on it; the quantities (concrete and
 reinforcement base / low / high by family and storey, and the item count by category) must equal the original's
@@ -139,11 +140,24 @@ def compare(a, b, rel=1e-6, exact=False):
     return out
 
 
-def run(dxf, *, profile=None, conventions=None, arch=None, ops=OPS, work=None):
+def _with_scope(q, R):
+    """M8: the bounded total of the scope pass (conventions V6) is a property too."""
+    T = ((R.get("generic") or {}).get("scope") or {}).get("totals")
+    if T:
+        q = dict(q)
+        for cls in ("RC", "PLAIN"):
+            q[f"SCOPE|BOUNDED|{cls}"] = {"low": round(T[cls]["bounded_low"], 6), "high": round(T[cls]["bounded_high"], 6)}
+        q["SCOPE|FINDINGS_WITHOUT_RANGE"] = {"n": T["findings_without_range"]}
+    return q
+
+
+def run(dxf, *, profile=None, conventions=None, arch=None, ops=OPS, work=None, completeness=False):
+    """completeness (M8): run the completeness pass too (with conventions V6 the scope items and the bounded total
+    are then compared); off by default, the M7 behaviour."""
     from tools import urban_boq_m2 as CLI
-    kw = dict(route="G", profile=profile, conventions=conventions)
+    kw = dict(route="G", profile=profile, conventions=conventions, **({"completeness": True} if completeness else {}))
     base = CLI.compute([str(dxf)], arch=[str(arch)] if arch else None, **kw)
-    q0 = quantities(base["items"])
+    q0 = _with_scope(quantities(base["items"]), base)
     res = {"drawing_sha256": hashlib.sha256(Path(dxf).read_bytes()).hexdigest(), "items": len(base["items"]),
            "ops": {}}
     with tempfile.TemporaryDirectory(dir=work) as td:
@@ -152,7 +166,7 @@ def run(dxf, *, profile=None, conventions=None, arch=None, ops=OPS, work=None):
             rec = {"notes": transform(dxf, dst, op)}
             try:
                 R = CLI.compute([str(dst)], arch=[str(arch)] if arch else None, **kw)
-                q1 = quantities(R["items"])
+                q1 = _with_scope(quantities(R["items"]), R)
                 d = compare(q0, q1, exact=op not in GEOMETRIC)
                 rec.update(ok=True, items=len(R["items"]), differences=d, n_differences=len(d))
             except Exception as ex:                   # noqa: BLE001 - a crash is a finding
@@ -168,7 +182,7 @@ def main(argv):
     opt = {a.split("=", 1)[0]: a.split("=", 1)[1] for a in argv if a.startswith("--") and "=" in a}
     ops = tuple(opt["--ops"].split(",")) if "--ops" in opt else OPS
     res = run(args[1], profile=opt.get("--profile"), conventions=opt.get("--conventions"), arch=opt.get("--arch"),
-              ops=ops)
+              ops=ops, completeness="--completeness" in argv)
     Path(args[0]).write_text(json.dumps(res, indent=1, default=str), encoding="utf-8")
     print(json.dumps({"passed": res["passed"], "failed": res["failed"],
                       "n_differences": {k: v.get("n_differences", "CRASH") for k, v in res["ops"].items()}}, indent=1))

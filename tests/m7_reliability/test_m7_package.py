@@ -63,7 +63,14 @@ def test_the_freeze_holds_the_files_as_committed():
                               check=True).stdout
         assert hashlib.sha256(blob).hexdigest() == h, f
     changed = {f for f, h in fz["files_sha256"].items() if hashlib.sha256((ROOT / f).read_bytes()).hexdigest() != h}
-    assert changed == POST_FREEZE, changed            # exactly the post-freeze fixes P1-P3, nothing else
+    # exactly the post-freeze fixes P1-P3, nothing else - and, after M7, the files a later milestone's own freeze
+    # records as changed since this one (M8: research/urban_engine_m8_full_scope/00_ENGINE_FREEZE.json, whose package
+    # test checks their hashes)
+    later = set()
+    m8 = ROOT / "research" / "urban_engine_m8_full_scope" / "00_ENGINE_FREEZE.json"
+    if m8.exists():
+        later = set(json.loads(m8.read_text(encoding="utf-8"))["changed_since_m7_freeze"])
+    assert POST_FREEZE <= changed and changed - POST_FREEZE <= later, changed
 
 
 def test_the_heldout_summary_is_its_own_records():

@@ -481,13 +481,15 @@ def _hull(pts):
     return lo[:-1] + up[:-1]
 
 
-def tread_family(face_poly, segs, unit_m, min_n=STAIR_MIN_TREADS, *, per_layer=False):
+def tread_family(face_poly, segs, unit_m, min_n=STAIR_MIN_TREADS, *, per_layer=False, angle_wrap=False):
     """Stair treads drawn inside a face (non-edge, non-annotation lines 0.4 - 2.5 m wholly inside it):
         FLIGHT   at least min_n parallel lines, consecutive spacing 0.18 - 0.40 m (a going)
         WINDER   at least min_n lines whose extensions meet near one point (within 0.2 m), fanning over 30 degrees
     -> {kind, n, hull_m2, segment_ids} or None. Geometry only; a stair label is never required.
     per_layer (M7): the family is searched among one layer's lines at a time (a flight is drawn on one layer; lines of
-    an unrelated layer between two treads must not break the going), the largest family found wins."""
+    an unrelated layer between two treads must not break the going), the largest family found wins.
+    angle_wrap (M8): directions are binned modulo 180 degrees, so a line at 179.99 degrees (a horizontal tread drawn
+    the other way, or rotated by 180 degrees with floating noise) joins the lines at 0 degrees."""
     inside = []
     for sg in segs:
         L = math.dist(sg["a"], sg["b"]) * unit_m
@@ -500,19 +502,19 @@ def tread_family(face_poly, segs, unit_m, min_n=STAIR_MIN_TREADS, *, per_layer=F
     if per_layer:
         best = None
         for lay in sorted({sg["layer"] for sg in inside}):
-            r = _tread_family_of([sg for sg in inside if sg["layer"] == lay], unit_m, min_n)
+            r = _tread_family_of([sg for sg in inside if sg["layer"] == lay], unit_m, min_n, wrap=angle_wrap)
             if r is not None and (best is None or r["n"] > best["n"]):
                 best = r
         return best
-    return _tread_family_of(inside, unit_m, min_n)
+    return _tread_family_of(inside, unit_m, min_n, wrap=angle_wrap)
 
 
-def _tread_family_of(inside, unit_m, min_n):
+def _tread_family_of(inside, unit_m, min_n, wrap=False):
     found = None
     groups = {}
     for sg in inside:
         ang = math.degrees(math.atan2(sg["b"][1] - sg["a"][1], sg["b"][0] - sg["a"][0])) % 180.0
-        groups.setdefault(round(ang / 3.0), []).append(sg)
+        groups.setdefault(round(ang / 3.0) % 60 if wrap else round(ang / 3.0), []).append(sg)
     for g in groups.values():
         if len(g) < min_n:
             continue
@@ -576,7 +578,7 @@ def open_boundary_panel(face, band_pieces, column_boxes, unit_m):
 
 
 def classify_regions(slab, ents, edge_layers, band_pieces, column_boxes, unit_m, *, ground=False,
-                     treads_per_layer=False, touch_counts=False):
+                     treads_per_layer=False, touch_counts=False, tread_angle_wrap=False):
     """M3: every face of a plan gets a region class, from the face class plus two generic checks:
         free-standing columns   a column outline inside a PANEL that touches no beam band. On a ground-beam plan a
                                 column stands on a beam junction or its own footing, so the cell is UNRESOLVED (not
@@ -605,7 +607,8 @@ def classify_regions(slab, ents, edge_layers, band_pieces, column_boxes, unit_m,
                                                   for b in band_pieces)
                     if not on_arc and not any(MD.overlap_area(cb, b["polygon"]) > 0.25 * e * e for b in band_pieces):
                         f["free_columns"].append(tuple(round(v, 1) for v in c))
-            f["treads"] = tread_family(f["polygon"], segs, unit_m, per_layer=treads_per_layer)
+            f["treads"] = tread_family(f["polygon"], segs, unit_m, per_layer=treads_per_layer,
+                                       angle_wrap=tread_angle_wrap)
         cls = f["class"]
         share = (f["treads"]["hull_m2"] / f["area_m2"]) if f["treads"] and f["area_m2"] else 0.0
         if cls == "PANEL" and share >= STAIR_ZONE_SHARE:

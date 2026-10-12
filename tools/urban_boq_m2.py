@@ -42,6 +42,7 @@ from engine.source import arch_evidence as AE             # noqa: E402
 from engine.source import concrete_completeness as CC     # noqa: E402
 from engine.source import generic_route as GR             # noqa: E402
 from engine.source import provisional_estimate as PE      # noqa: E402
+from engine.source import scope_quantities as SQ          # noqa: E402
 from engine.source import ocr_review as OR                # noqa: E402
 from tools import m2_overlay as OV                        # noqa: E402
 from tools import m4_overlay as OV4                       # noqa: E402
@@ -247,12 +248,35 @@ def compute(drawings, *, conventions=None, overrides=None, profile=None, project
     cov = FC.coverage(g["D"], items, g["risk"], GR.scope_scan(g["D"]), g.get("evidence"))
     g["family_coverage"] = cov
     CR = None
+    scope = None
     if completeness:
+        m8 = SQ.enabled(res["conv"])
         CR = CC.assess(g["D"], g.get("intake"), items, risk=g["risk"], heights=GR.storey_heights(res["conv"]),
-                       family_coverage=cov)
+                       family_coverage=cov, params={"KEEP_GROUP_EIDS": True} if m8 else None)
         g["completeness"] = CR
+        if m8:
+            # M8 (conventions V6): every finding measured (settled family, drawn geometry) or bounded by a range
+            scope = SQ.measure(CR, g["D"], items, res["conv"], scan=GR.scope_scan(g["D"]),
+                               src_file=next((r["file"] for r in inputs if r.get("kind") == "DXF"), ""))
+            if scope["items"]:
+                items = items + scope["items"]
+                PE.check(items, res["conv"])
+                res["items"] = items
+                g["register"] = g["register"] + scope["register"]
+                trades = {r["trade"]: r for r in PE.rollup(items, ("trade",))}
+                rc = PE.rollup([i for i in items if i["trade"] == "CONCRETE" and i["family"] != "PLAIN_CONCRETE"],
+                               ("trade",))
+                rcomp = GR.rebar_completeness(items, g["register"])
+                g["rebar_completeness"] = rcomp
+            g["risk"] = g["risk"] + scope["risk"]
+            cov = FC.coverage(g["D"], items, g["risk"], GR.scope_scan(g["D"]), g.get("evidence"),
+                              bounds=scope["bounds"])
+            g["family_coverage"] = cov
+            scope["totals"] = SQ.totals(items, scope["bounds"])
+            CR["findings"] = scope["findings"]
+            g["scope"] = scope
     boq = M1.boq_lines(items) + not_detected_lines(cov) + missing_steel_lines(rcomp) + \
-        (completeness_lines(CR) if CR else [])
+        (completeness_lines(CR) if CR else []) + (SQ.boq_lines(scope["totals"], scope["bounds"]) if scope else [])
     summary = {
         "policy": POLICY_ID, "route": "G_GENERIC_ENGINE",
         "project": known[0]["project"] if known else (project or "new project"),
@@ -330,6 +354,15 @@ def files(R, *, as_of):
         if CR:
             fk = ["FINDING_ID", "SEVERITY", "KIND", "FAMILY", "CONFIDENCE", "SHEET", "STOREY", "BOX_M", "EVIDENCE",
                   "MAGNITUDE", "VOLUME_LOW_M3", "VOLUME_HIGH_M3", "VOLUME_BASIS", "ITEMS", "REFS", "ACTION"]
+            if g.get("scope"):                   # M8 (V6): what the scope pass did with every finding
+                fk = fk + ["SCOPE_STATE", "SCOPE_LOW_M3", "SCOPE_HIGH_M3", "SCOPE_RULE", "SCOPE_ITEMS"]
+                sq = g["scope"]
+                out["SCOPE_BOUNDS.csv"] = M1.csv_text(sq["bounds"], ["FINDING_ID", "KIND", "FAMILY", "SHEET",
+                                                                     "STOREY", "SCOPE_STATE", "CLASS", "LOW_M3",
+                                                                     "HIGH_M3", "RULE", "BASIS", "ITEMS"])
+                out["SCOPE_TOTALS.json"] = M1._jdump({"policy": sq["policy"], "totals": sq["totals"],
+                                                      "top_storey": sq["top_storey"],
+                                                      "referenced_families": sq["referenced"], "rule": sq["rule"]})
             out["COMPLETENESS_FINDINGS.csv"] = M1.csv_text([{k: f.get(k) for k in fk} for f in CR["findings"]], fk)
             sk = sorted({k for r in CR["signals"] for k in r})
             out["COMPLETENESS_SIGNALS.csv"] = M1.csv_text([{k: r.get(k) for k in sk} for r in CR["signals"]], sk)

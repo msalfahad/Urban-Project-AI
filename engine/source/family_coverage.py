@@ -10,6 +10,7 @@ States:
                             slab is a slab panel); no separate line
     DETECTED_NOT_QUANTIFIED the drawing shows the family (labels, detected zones, detail captions) and no measurement
                             exists; the reason names the missing input
+    BOUNDED_NOT_MEASURED    (M8) the scope pass holds the family's findings as exposure ranges only
     NO_EVIDENCE_FOUND       no label, zone or caption: NOT proof of absence - "confirm absent" before using the totals
 
 Evidence is counts, keywords and sheet ids only; never source text.
@@ -48,8 +49,15 @@ def _labels(scan, fam):
     return f"{s['n_texts']} labels ({', '.join(s['keywords'])}) on {', '.join(s['sheets'])}" if s else ""
 
 
-def coverage(D, items, risk, scan, evidence=None):
-    """scan: generic_route.scope_scan(D). -> one record per FAMILIES entry."""
+M8_FAMILIES = {"LIFT": ("LIFT",), "POOL": ("POOL",), "DOMES": ("DOMES",), "WATER_TANK": ("WATER_TANK",),
+               "PARAPETS": ("PARAPETS",), "WALLS": ("WALLS", "BOUNDARY_WALL"), "STAIRS": ("STAIRS",)}
+
+
+def coverage(D, items, risk, scan, evidence=None, bounds=None):
+    """scan: generic_route.scope_scan(D). -> one record per FAMILIES entry.
+    bounds (M8, scope_quantities.measure()["bounds"]): families measured from the drawn plan by the scope pass are
+    QUANTIFIED (PARTLY when a finding of the family is still only bounded); a family with bounded findings and no
+    measured item is BOUNDED_NOT_MEASURED (an exposure range, never a quantity). None: the frozen M3-M7 states."""
     rk = Counter(r["KIND"] for r in risk)
     fam_items = Counter((i["family"], i["category"]) for i in items if i["trade"] == "CONCRETE")
     faces = [f for rec in D["sheets"].values() for f in ((rec.get("slab") or {}).get("faces") or [])]
@@ -102,6 +110,22 @@ def coverage(D, items, risk, scan, evidence=None):
             if arcs:
                 nb = sum(1 for b in arcs if b.get("state") == "BOUND")
                 ev.append(f"{len(arcs)} curved bands ({nb} bound, measured as beams)")
+        if bounds is not None and fam in M8_FAMILIES:
+            fs = M8_FAMILIES[fam]
+            n_p = sum(fam_items[(x, "PROVISIONAL")] for x in fs)
+            bd = [b for b in bounds if b["FAMILY"] in fs and b["SCOPE_STATE"] == "BOUNDED"]
+            if n_p and fam != "STAIRS":
+                ev.append(f"{n_p} measured items (M8 scope pass)")
+                state, where = ("PARTLY_QUANTIFIED" if bd else "QUANTIFIED"), fam
+                reason = "measured from the drawn plan; dimensions the drawing does not print from the V6 conventions"
+            elif n_p and bd:
+                state = "PARTLY_QUANTIFIED"
+            if bd:
+                ev.append(f"{len(bd)} findings bounded {sum(b['LOW_M3'] for b in bd):.2f} .. "
+                          f"{sum(b['HIGH_M3'] for b in bd):.2f} m3")
+                if not n_p and not (fam == "STAIRS" and fam_items[("STAIRS", "PROVISIONAL")]):
+                    state = "BOUNDED_NOT_MEASURED"
+                    reason = "drawn or named; family or geometry not settled - an exposure range only, not a quantity"
         if state is None:
             state = "DETECTED_NOT_QUANTIFIED" if ev else "NO_EVIDENCE_FOUND"
             reason = reason or ("drawn or labelled, no generic measurement" if ev else

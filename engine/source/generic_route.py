@@ -243,7 +243,9 @@ def detect_options(conv):
             "local_origin": on("GEOMETRY_LOCAL_ORIGIN"), "drawn_rectangles": on("RECTANGLE_FROM_FOUR_SIDES"),
             "unit_aware_rects": on("UNIT_AWARE_RECTANGLES"), "touch_tolerance": on("TOUCH_IS_NOT_OVERLAP"),
             "polygons_from_lines": on("POLYGON_FROM_LINE_RING"),
-            "legend_nearest_caption": on("LEGEND_NEAREST_CAPTION")}
+            "legend_nearest_caption": on("LEGEND_NEAREST_CAPTION"),
+            **({"scope_from_findings": True} if on("SCOPE_FROM_FINDINGS") else {}),
+            **({"tread_angle_wrap": True} if on("STAIR_TREAD_ANGLE_WRAP") else {})}
 
 
 def to_local_origin(intake):
@@ -399,7 +401,8 @@ def detect(intake, *, typical_widths_m=None, options=None):
                 if lays else None
             SE.classify_regions(slab, E, lays, bands, cols + extra, u, ground=sh["role"] == "GROUND_BEAM_PLAN",
                                 treads_per_layer=bool(opt.get("treads_per_layer")),
-                                touch_counts=bool(opt.get("touch_tolerance")))
+                                touch_counts=bool(opt.get("touch_tolerance")),
+                                tread_angle_wrap=bool(opt.get("tread_angle_wrap")))
             rec["slab"] = slab
             rec["band_sides"] = SE.band_sides(slab["faces"], bands, u, cols + extra) if slab else {}
             # M3: an edge beam with one drawn face (the outer face undrawn), from its mark and scheduled width
@@ -484,6 +487,11 @@ def items_from(D, conv, heights=None, evidence=None, arch=None):
     u = D["unit_m"]
     items, register, risk = [], [], []
     src_file = D["model"]["file"]
+    top_slab = None                                # M8 (V6): a winder zone on the topmost slab plan is left to scope
+    if "DOME_ON_TOP_PLAN" in conv.items:
+        sts = [rec["sheet"]["storey"] for rec in D["sheets"].values() if rec["sheet"]["role"] == "SLAB_PLAN" and
+               rec["sheet"].get("storey") in STOREYS_UP]
+        top_slab = max(sts, key=STOREYS_UP.index) if sts else None
     hook_std = _cv(conv, "REBAR_HOOK_STANDARD", "ACI_318_19")
     covers = {k: _trip(conv, f"REBAR_COVER_{k}_M") for k in ("BEAM", "COLUMN", "FOOTING")}
     notes = " ".join(t["norm"] for t in D["model"]["texts"])
@@ -1179,7 +1187,8 @@ def items_from(D, conv, heights=None, evidence=None, arch=None):
                                                         "under a drawn flight (not decided by the drawing)",
                                              double_count_risk="deducted from the panel item of the same face"))
                 if f.get("region") == "STAIR_ZONE" and "STAIR_RISER_RULE" in conv.items and \
-                        _stair_items(items, reg, risk, f, sid, st, ground, conv, u, src_file):
+                        _stair_items(items, reg, risk, f, sid, st, ground, conv, u, src_file, top=top_slab,
+                                     texts=[t for t in D["model"]["texts"] if t.get("sheet") == sid]):
                     continue
                 if f.get("region") in ("STAIR_ZONE", "UNRESOLVED"):
                     tl, _, th = _trip(conv, "SLAB_THICKNESS_EXPOSURE_M")
@@ -1906,7 +1915,10 @@ def _slab_m4(slab, rec, u, conv, ground, risk, sid):
             f["volume_m3"] = f["area_m2"] * f["t_m"]
 
 
-def _stair_items(items, reg, risk, f, sid, st, ground, conv, u, src_file):
+STOREYS_UP = ("FOUNDATION", "GROUND", "GF", "1F", "2F", "3F", "4F", "5F", "6F", "ROOF")
+
+
+def _stair_items(items, reg, risk, f, sid, st, ground, conv, u, src_file, top=None, texts=None):
     """M4: a stair zone measured as a stair (stair_measure) from its drawn treads, the rise of its storey and the
     waist: PROVISIONAL with a printed waist (profile STAIR_WAIST_M), else UNRESOLVED with the waist range as the
     exposure. A zone whose riser height falls outside the diagnostic band holds part of a stair: False (the caller
@@ -1925,15 +1937,55 @@ def _stair_items(items, reg, risk, f, sid, st, ground, conv, u, src_file):
         if f"STOREY_HEIGHT_{st}" not in conv.items:
             return False
         rise = conv.base(f"STOREY_HEIGHT_{st}")
+    if top and st == top and run["kind"] == "WINDER":
+        # M8 (V6, DOME_ON_TOP_PLAN): lines fanning about one point on the topmost slab plan may be dome ribs - a
+        # stair needs a storey above it to arrive at; the scope pass decides with the circle / dome evidence
+        risk.append({"KIND": "STAIR_WINDER_ON_TOP_PLAN", "WHERE": sid,
+                     "DETAIL": f"{f['face_id']}: {run['n_lines']} lines fanning about one point on the topmost slab "
+                               "plan - dome ribs or a stair to the roof: left to the scope pass"})
+        return False
     rule = _cv(conv, "STAIR_RISER_RULE", "LINES_PLUS_ONE")
     printed = "STAIR_WAIST_M" in conv.items
-    waists = _trip(conv, "STAIR_WAIST_M") if printed else _trip(conv, "STAIR_WAIST_EXPOSURE_M")
+    notes = {}
+    if texts is not None and "PRINTED_DIMENSION_NOTES" in conv.items:
+        from engine.source import scope_quantities as SQ
+        xs_, ys_ = [q[0] for q in f["polygon"]], [q[1] for q in f["polygon"]]
+        notes = SQ.notes_in_box(texts, (min(xs_), min(ys_), max(xs_), max(ys_)), u)
+    pw = sorted({round(v, 4) for v in notes.get("waist", ())})
+    pr = sorted({round(v, 4) for v in notes.get("riser", ())})
+    # M8 (V6): an unprinted waist is priced at the waist convention (PROVISIONAL), and a zone holding part of a stair
+    # is measured from its drawn run with the riser convention; absent conventions -> the frozen M4-M7 behaviour
+    priced = not printed and _cv(conv, "STAIR_UNPRINTED_WAIST") == "CONVENTION_PROVISIONAL"
+    drawn_run = _cv(conv, "STAIR_DRAWN_RUN") == "MEASURE_DRAWN_RUN"
+    waists = _trip(conv, "STAIR_WAIST_M") if printed else _trip(conv, "STAIR_WAIST_CONVENTION_M") if priced else \
+        _trip(conv, "STAIR_WAIST_EXPOSURE_M")
+    if len(pw) == 1 and not printed:               # M8: a waist note beside the zone is its printed waist
+        waists, printed, priced = (pw[0], pw[0], pw[0]), True, False
     qs = [SM.quantities(f["area_m2"], run, rise, w, riser_rule=rule) for w in waists]
+    partial = None
     if any(q["state"] != "MEASURED" for q in qs):
-        risk.append({"KIND": "STAIR_ZONE_PARTIAL", "WHERE": sid,
-                     "DETAIL": f"{f['face_id']}: {qs[0].get('why')} - the zone holds part of a stair; slab-zone "
-                               "exposure kept"})
-        return False
+        if not drawn_run:
+            risk.append({"KIND": "STAIR_ZONE_PARTIAL", "WHERE": sid,
+                         "DETAIL": f"{f['face_id']}: {qs[0].get('why')} - the zone holds part of a stair; slab-zone "
+                                   "exposure kept"})
+            return False
+        n_r = SM.risers(run["n_lines"], rule)
+        risers_m = (pr[0], pr[0], pr[0]) if len(pr) == 1 else _trip(conv, "STAIR_RISER_M")
+        partial = {"storey_rise_m": rise, "storey_riser_m": round(rise / n_r, 4) if n_r else None,
+                   "riser_m": risers_m}
+        qs = sorted((SM.quantities(f["area_m2"], run, r_ * n_r, w, riser_rule=rule)
+                     for r_, w in zip(risers_m, waists)), key=lambda q_: q_.get("total_m3") or 0.0)
+        if any(q["state"] != "MEASURED" for q in qs):
+            risk.append({"KIND": "STAIR_ZONE_PARTIAL", "WHERE": sid,
+                         "DETAIL": f"{f['face_id']}: {qs[0].get('why')} - the drawn run is not measurable; slab-zone "
+                                   "exposure kept"})
+            return False
+        risk.append({"KIND": "STAIR_ZONE_PARTIAL_MEASURED", "WHERE": sid,
+                     "DETAIL": f"{f['face_id']}: the storey rise {rise:.2f} m over {n_r} drawn risers gives "
+                               f"{partial['storey_riser_m']} m (outside 0.14 - 0.20 m): the zone holds part of the "
+                               f"stair; its drawn run is measured with the riser convention {risers_m[0]:g} - "
+                               f"{risers_m[2]:g} m"})
+        rise = round(risers_m[1] * n_r, 4)
     cid = f"STAIRS:{st}:{f['face_id']}"
     q = qs[1]
     if q["overflow_m2"] > 0.01:
@@ -1949,13 +2001,22 @@ def _stair_items(items, reg, risk, f, sid, st, ground, conv, u, src_file):
                               "rise_m": rise, "tread_finish_m2": round(q["tread_m2"], 4),
                               "riser_finish_m2": round(q["riser_face_m2"], 4)},
                   double_count_risk="the zone is not counted as slab; landing beams on the plan are the beams'")
-    asm = ["STAIR_RISER_RULE"] + (["STAIR_WAIST_M"] if printed else ["STAIR_WAIST_EXPOSURE_M"]) + \
-        (["GF_FLOOR_LEVEL_M", "OUTER_GROUND_LEVEL_M"] if ground else [f"STOREY_HEIGHT_{st}"])
-    if printed:
+    if partial:
+        common["dimensions"].update(partial_run=True, storey_rise_m=partial["storey_rise_m"],
+                                    storey_riser_m=partial["storey_riser_m"],
+                                    riser_range_m=[round(x, 4) for x in partial["riser_m"]])
+    asm = ["STAIR_RISER_RULE"] + (["PRINTED_DIMENSION_NOTES"] if len(pw) == 1 else ["STAIR_WAIST_M"] if printed
+                                  else ["STAIR_WAIST_CONVENTION_M"] if priced else ["STAIR_WAIST_EXPOSURE_M"]) + \
+        (["STAIR_DRAWN_RUN", "STAIR_RISER_M"] if partial else
+         ["GF_FLOOR_LEVEL_M", "OUTER_GROUND_LEVEL_M"] if ground else [f"STOREY_HEIGHT_{st}"])
+    if priced:
+        asm.append("STAIR_UNPRINTED_WAIST")
+    if printed or priced:
         items.append(PE.item(item_id=f"P-C:{cid}", category="PROVISIONAL", low=qs[0]["total_m3"],
                              base=q["total_m3"], high=qs[2]["total_m3"], formula=q["basis"] + "; landings x waist",
                              assumptions=asm, support="CONVENTION_ONLY", confidence="LOW",
-                             blocker="STAIR_GEOMETRY_FROM_PLAN", **common))
+                             blocker="STAIR_PARTIAL_RUN_RISER_CONVENTION" if partial else
+                             "STAIR_WAIST_CONVENTION" if priced else "STAIR_GEOMETRY_FROM_PLAN", **common))
     else:
         items.append(PE.item(item_id=f"U-C:{cid}", category="UNRESOLVED", support="NO_GEOMETRY", confidence="LOW",
                              blocker="STAIR_WAIST_NOT_PRINTED", assumptions=asm,

@@ -793,7 +793,9 @@ def geometry_ledger(D, intake, members, consumed, p, notes_words):
         for t in texts:
             tg.add((t["x"], t["y"], t["x"], t["y"]), t)
         unexplained = []
-        if not any(i["trade"] == "CONCRETE" and i["family"] == "STAIRS" for i in items_of(consumed)):
+        # M8 (scope_from_findings): a flight in a stair well is reported whatever other stair is measured
+        if (D.get("options") or {}).get("scope_from_findings") or \
+                not any(i["trade"] == "CONCRETE" and i["family"] == "STAIRS" for i in items_of(consumed)):
             for m in ms:
                 if m["kind"] != "FACE" or not (m.get("cls") == "OPENING" or m.get("region") == "OPENING"):
                     continue
@@ -910,7 +912,11 @@ def geometry_ledger(D, intake, members, consumed, p, notes_words):
         for e, hit in hatched:
             here.append((sid, sh) + _hatch_on_member(D, sid, sh, org, e, hit, by_mid, consumed, legend, tg, p,
                                                      notes_words, u) + ([e],))
-        pending.extend(x[:4] for x in _merge_fills(here, signals, u))
+        for x in _merge_fills(here, signals, u):
+            pending.append(x[:4])
+            if p.get("KEEP_GROUP_EIDS") and x[3] is not None:
+                # M8 (scope_quantities): every entity of the finding's group, so that it can be measured
+                p.setdefault("_group_eids", {})[x[3]["FINDING_ID"]] = [e["eid"] for e in x[4]]
     # the same drawing repeated on several sheets (plot line, boundary wall, a lower roof outline): one finding
     order = {sid: (SHEET_PRIORITY.index(rec["sheet"]["role"]), STOREY_ORDER.index(rec["sheet"]["storey"])
                    if rec["sheet"]["storey"] in STOREY_ORDER else 99, sid) for sid, rec in _plan_sheets(D)}
@@ -2083,6 +2089,7 @@ def _depth(c, by_item):
 # ====================================================================== COVERAGE / UNRESOLVED ledgers
 def coverage_ledger(D, items, consumed, p):
     u = D["unit_m"]
+    per_face = bool((D.get("options") or {}).get("scope_from_findings"))
     fam_items = Counter(i["family"] for i in items if i["trade"] == "CONCRETE")
     signals, findings = [], []
     for sid, rec in _plan_sheets(D):
@@ -2116,8 +2123,9 @@ def coverage_ledger(D, items, consumed, p):
                 why = "OPENING_DOMINANT"
             elif region in ("DETAIL", "UNRESOLVED") and not c:
                 why = region
-            elif region == "STAIR_ZONE" and not fam_items.get("STAIRS"):
-                why = "STAIR_ZONE"
+            elif region == "STAIR_ZONE" and (not any("STAIRS:" in x for x in (c or {}).get("items", ())) if per_face
+                                             else not fam_items.get("STAIRS")):
+                why = "STAIR_ZONE"         # M8 (scope_from_findings): per zone - another measured stair is not this one
             elif cls == "OPEN_BOUNDARY" and not c:
                 why = "OPEN_BOUNDARY"
             if not why:
