@@ -4,6 +4,7 @@ unchanged route G reader, the stair / void recognisers, the open-plan rule, fact
 
 from __future__ import annotations
 
+import hashlib
 import math
 import re
 from pathlib import Path
@@ -219,7 +220,13 @@ S2_FILES = ["engine/source/arch_plan.py", "engine/source/arch_rooms.py", "engine
             "tools/urban_boq_m9.py", "engine/boq_room_workbook.py", "research/urban_m9_s2/SYNTHETIC_FACTS_S2.json",
             "research/urban_m9_s2/00_README.md", "research/urban_m9_s2/TEST_GATE_M9_S2.json",
             "tests/m9_s2_arch/test_arch_route.py"]
-HYGIENE = re.compile(r"YEARS 2013|7757-[A-Z]|als[ey]?n[ya]?an|qortuba", re.I)
+HYGIENE = re.compile(r"YEARS 2013|7757-[A-Z]|als[ey]?n[ya]?an", re.I)
+BANNED_TOKENS = {"c4e45a5e1ce1372d"}         # sha256[:16] of other client names: the names are never written out
+
+
+def _banned_token(text):
+    return any(hashlib.sha256(t.encode()).hexdigest()[:16] in BANNED_TOKENS for t in set(re.findall(r"[a-z]{4,}",
+                                                                                                    text.lower())))
 ARABIC = re.compile(r"[؀-ۿ]+")
 
 
@@ -247,7 +254,7 @@ def test_s2_files_carry_no_client_identity_and_only_controlled_arabic():
     lex_files = {"engine/source/arch_rooms.py", "engine/source/arch_plan.py"}
     for f in S2_FILES:
         text = (ROOT / f).read_text(encoding="utf-8")
-        assert not HYGIENE.search(text), f
+        assert not HYGIENE.search(text) and not _banned_token(text), f
         if f not in lex_files:
             assert not set(ARABIC.findall(text)) - vocab, f
 
