@@ -217,6 +217,7 @@ def test_a_floor_to_floor_interval_is_never_a_wall_height():
 S2_FILES = ["engine/source/arch_plan.py", "engine/source/arch_rooms.py", "engine/source/arch_measure.py",
             "engine/source/plane_poly.py", "tools/arch_intake.py", "tools/arch_overlay.py", "tools/arch_synth.py",
             "tools/urban_boq_m9.py", "engine/boq_room_workbook.py", "research/urban_m9_s2/SYNTHETIC_FACTS_S2.json",
+            "research/urban_m9_s2/00_README.md", "research/urban_m9_s2/TEST_GATE_M9_S2.json",
             "tests/m9_s2_arch/test_arch_route.py"]
 HYGIENE = re.compile(r"YEARS 2013|7757-[A-Z]|als[ey]?n[ya]?an|qortuba", re.I)
 ARABIC = re.compile(r"[؀-ۿ]+")
