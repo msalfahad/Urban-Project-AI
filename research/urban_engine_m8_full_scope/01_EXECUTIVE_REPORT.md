@@ -41,8 +41,8 @@ The protocol for both exists (M7 `09_SECOND_VILLA_BLIND_TEST.md`, `tools/urban_p
 | 2c | Base error ≤ 5 % where the dimension is printed | max 0.73 % (one stair); 0 for every other kind | **yes** |
 | 3a | M7 held-out rows unchanged under V6 | 572 rows: 0 moved, 0 SILENT | **yes** |
 | 3b | Metamorphic properties hold for the new families | Measured items are invariant under every operation on 10 of 10 villas, except unrelated furniture (9 of 10; that villa changes in V5 too). Bounded totals pass translate, rotations, units, reorder, explode and duplicate text on 10 of 10 after P3. They fail under mirror on 10 of 10 (pre-existing intake: a mirrored hatch, W8-02) and under furniture noise on 7 of 10 (pre-existing completeness: possible columns, W8-03) | **partly** |
-| 3c | Frozen packages unchanged | V5 on ST7757 identical before and after M8; core families of 80 villas, V5 against V6: 0 moved; frozen M2–M7 package tests inside the full suite (`TEST_GATE_M8.json`) | see the gate |
-| 3d | Full suite: 0 code failures | `TEST_GATE_M8.json` | see the gate |
+| 3c | Frozen packages unchanged | V5 on ST7757 identical before and after M8; core families of 80 villas, V5 against V6: 0 moved; the frozen M2–M7 package tests pass inside the full suite | **yes** |
+| 3d | Full suite: 0 code failures | 0 code failures, 7512 passed (+36 = the M8 tests). The first run found 1 code failure: the new module was not declared in the rebar product registry. It was fixed in the test registry and the whole suite was run again (`TEST_GATE_M8.json`) | **yes** |
 | 4 | Verdict "not quotation-ready" unless released quantities and a blind project exist | kept | **yes** |
 
 ## What the engine does now (V6, any drawing)

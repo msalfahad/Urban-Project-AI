@@ -7,6 +7,9 @@ order:
 3. `03_SCOPE_RULES.md`
 4. this file
 
+State of the tests: the full suite has 0 code failures and 7512 passes (+36, the M8 tests). The gate is INCOMPLETE
+only for the missing private data, the same as at M7 (`TEST_GATE_M8.json`).
+
 The engine is `engine/source/` with conventions `engine/profiles/URBAN_M8_GENERIC_CONVENTIONS_V6.json`, run by
 `tools/urban_boq_m2.py run --route G --conventions …V6.json`.
 

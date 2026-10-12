@@ -17,7 +17,7 @@ The checks:
 | Core families of every M8 synthetic villa, V5 against V6 | 0 rows moved (S_A, S_B; 80 villas) |
 | Core families of ST7757, V5 against V6 | footings, columns, ground beams, ground slab, beams, slabs and lintels: no measured change (`st7757/BY_FAMILY.csv`) |
 | M7 freeze test | M7's own freeze test accepts the files that M8's freeze records as changed since M7, and nothing else |
-| Frozen packages M2–M7 | reproduced by the full suite (`TEST_GATE_M8.json`) |
+| Frozen packages M2–M7 | their package tests pass inside the full suite (below) |
 
 ## Metamorphic properties with the scope pass
 
@@ -63,3 +63,38 @@ These came before the freeze; the M8 conventions record each one's reason.
 | A tolerant face boundary for stair-well lines | a flight's end lines on the well's own boundary were in or out by floating noise |
 | `NON_STRUCTURAL_LAYERS` | furniture rectangles became pits and domes |
 | The plot-outline guard | a plot line round every slab face is not a slab region |
+
+## Full suite
+
+**Command.** Run on the package tree:
+
+```
+python3 -m pytest -o addopts="" -p no:cacheprovider --junitxml=junit_m8.xml
+```
+
+**Classification.** `research/environment_recovery/classify_test_run.py`; the reduced record is `TEST_GATE_M8.json`.
+
+| Class | M8 (`f541448`) | M7 |
+|---|---:|---:|
+| EXECUTED_PASSED | 7512 | 7476 |
+| CODE_FAILURE | **0** | 0 |
+| MANDATORY_BLOCKED_BY_MISSING_DATA | 376 | 376 |
+| SKIPPED_PREREQUISITE_UNAVAILABLE | 136 | 136 |
+| SKIPPED_OTHER | 2 | 2 |
+| EXPECTED_FAILURE | 100 | 100 |
+
+- **Raw pytest:** 344 failed, 7512 passed, 138 skipped, 100 xfailed, 32 errors in 10 min 29 s.
+- **The failures are not code failures.** The 344 failures and 32 errors are the same 376 tests blocked by missing
+  data as at M1–M7:
+  - 373 under `data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01`;
+  - 1 needing the private reconciliation document under `data/runs/7757`;
+  - 1 generated prerequisite;
+  - 1 private path outside the repository.
+- **Passes: +36**, exactly the 36 M8 tests. No earlier test changed state.
+- **The first run (`3441d5e`) had 1 code failure.** `test_every_rebar_module_in_engine_is_declared` found
+  `scope_quantities.py`, which names reinforcement only to mark the new families' steel MISSING_DATA.
+  - The fix (`f541448`) declares it in the rebar product registry of the tests, as M6 did for
+    `concrete_completeness`. No engine file changed.
+  - The whole suite was then run again; the table above is that second run.
+- **Gate: INCOMPLETE.** 376 tests are blocked by missing data, 136 are skipped for a prerequisite, and 108 locked
+  prerequisites are missing. Only EXECUTED_PASSED proves anything; a skip is not a pass.
