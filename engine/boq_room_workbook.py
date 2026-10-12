@@ -672,12 +672,78 @@ def _arch_sheets(wb, arch):
             "OBSTRUCTIONS M²", "BOUNDARY LM", "WALL LM", "COLUMN LM", "DOOR LM", "PASSAGE LM", "SILL WINDOW LM",
             "GLAZING LM", "DIMENSIONS", "LEVEL", "DOORS", "WINDOWS", "PASSAGES", "ISSUE"], rows,
            {c: "0.000" for c in range(7, 17)})
+    if arch.get("floor_areas"):
+        _floor_areas_sheet(wb, arch["floor_areas"])
     _table(wb, "OPENINGS", "every jambed wall-band opening; DOOR = a door symbol hinged at the gap, WINDOW = glazing "
            "inside the gap, PASSAGE = neither", ["FLOOR", "OPENING ID", "KIND", "WIDTH M", "WALL THICKNESS M", "ROOMS",
                                                  "DOOR SYMBOL", "JAMBS"],
            [[o["floor"], o["opening_id"], o["kind"], o["width_m"], o["wall_t_m"], ", ".join(o["rooms"]),
              o.get("door_symbol") or "", " / ".join(str(j) for j in o["jambs"])] for o in arch["openings"]],
            {4: "0.000", 5: "0.000"})
+
+
+FLOOR_CATEGORY_TEXT = {
+    "WALL_AND_COLUMN_MASS": "wall bodies, columns, junction pieces (thin faces, no threshold)",
+    "DOORWAY_STRIPS": "the piece of each opening in the wall thickness (threshold strips)",
+    "SLIVERS": "faces below the space size limit",
+    "ROOM_FLOOR": "rooms with one room word: floor surface (voids, stair treads out)",
+    "OPEN_PLAN_FLOOR": "open plans of compatible room words measured as one finish",
+    "UNALLOCATED_MERGED": "faces with wet + dry or interior + exterior words: a boundary is missing (review)",
+    "UNALLOCATED_MIXED": "faces with room words of different kinds, no finish decision (review)",
+    "UNALLOCATED_UNLABELLED": "spaces with no room word (review)",
+    "VOID": "outlined voids (open to below): never floor",
+    "SHAFT": "shafts / lift wells",
+    "STAIR_FLIGHTS": "treads of the flights drawn on this plan (stair finish, not floor finish)",
+    "STAIR_LANDINGS_BOUND": "stair spaces less their treads (an upper bound of the landings)",
+    "STAIR_BELOW_SEEN": "a flight of the plan below seen through an opening (counted on the plan below)",
+    "EXTERNAL": "balcony / terrace / garden / pool / roof faces (kept apart)"}
+
+
+def _floor_areas_sheet(wb, floors):
+    """FLOOR AREAS (M9 S4): every face of each plan in one category; totals and checks are formulas."""
+    rows, r = [], 4
+    for fa in floors:
+        first = r
+        cats = list(fa["categories_m2"])
+        for k in cats:
+            rows.append([fa["floor"], k, FLOOR_CATEGORY_TEXT.get(k, k), fa["categories_m2"][k],
+                         "YES" if k in fa["internal_categories"] else "NO", ""])
+            r += 1
+        last = r - 1
+        rng = f"D{first}:D{last}"
+        rows.append([fa["floor"], "INTERNAL PHYSICAL FLOOR TOTAL", "the floor that physically exists inside, finished "
+                     "or not (the room sum alone is NOT the floor area)", f'=SUMIFS({rng},E{first}:E{last},"YES")', "",
+                     ""])
+        r += 1
+        rows.append([fa["floor"], "ALL FACES TOTAL", "every face of the plan", f"=SUM({rng})", "", ""])
+        r_all = r
+        r += 1
+        rows.append([fa["floor"], "WALL NETWORK OUTER BOUNDARY", "sum of the outer boundaries of the plan's top-level "
+                     "wall networks (the largest is the gross floor plate)", fa["plate_top_level_m2"], "",
+                     f"gross floor plate {fa['gross_floor_plate_m2']:.3f} m2"])
+        r_plate = r
+        r += 1
+        rows.append([fa["floor"], "RESIDUAL (outer boundary - all faces)", "must read 0.000 (a residual is listed, "
+                     "never spread)", f"=D{r_plate}-D{r_all}", "", ""])
+        r += 1
+        fin = sum(v for k, v in fa["finish_lines_m2"].items() if k.startswith("FIN.FLOOR"))
+        rows.append([fa["floor"], "FLOOR FINISH LINES", "porcelain + wet-room tile lines of this floor", round(fin, 4),
+                     "", ""])
+        r_fin = r
+        r += 1
+        r_room = first + cats.index("ROOM_FLOOR")
+        r_open = first + cats.index("OPEN_PLAN_FLOOR")
+        rows.append([fa["floor"], "FINISH CHECK (lines - room - open plan)", "must read 0.000",
+                     f"=D{r_fin}-D{r_room}-D{r_open}", "", ""])
+        r += 1
+        ref = (fa.get("reference") or {}).get("area_m2")
+        if ref is not None:
+            rows.append([fa["floor"], "REFERENCE AREA (given)", "an independent area schedule given on the command line",
+                         ref, "", ""])
+            rows.append([fa["floor"], "GROSS PLATE - REFERENCE", "", f"={fa['gross_floor_plate_m2']}-D{r}", "", ""])
+            r += 2
+    _table(wb, "FLOOR AREAS", "every m2 of each floor plan in exactly one category (positive evidence only); totals and "
+           "checks are formulas", ["FLOOR", "CATEGORY", "WHAT", "M²", "IN INTERNAL FLOOR", "NOTE"], rows, {4: "0.000"})
 
 
 def write(path, *, room_boq=None, structural_lines=(), census_rows=(), meta, created, arch=None):

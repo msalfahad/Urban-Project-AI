@@ -132,6 +132,8 @@ def write_m9(out, *, s_lines=(), room=None, family_coverage=None, project_id, co
         if arch.get("walls") is not None:
             files["ARCH_WALLS.json"] = _j({"run": arch["run"], "floors": arch["walls"]})
         files["UNRESOLVED.json"] = _j({"run": arch["run"], "unresolved": room["unresolved"]})
+        if arch.get("floor_areas") is not None:
+            files["ARCH_FLOOR_AREAS.json"] = _j({"run": arch["run"], "floors": arch["floor_areas"]})
     for name, text in files.items():
         (out / name).write_text(text, encoding="utf-8")
     res = {"files": sorted(files)}
@@ -187,6 +189,7 @@ def _kv(items, what):
 def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_areas=None, project_id=None, intake=None):
     """the architectural route on one plan drawing: every stage recorded, nothing silently skipped. `intake` (the
     urban_intake.read result of this same drawing) skips the read for repeated runs / tests."""
+    from engine.source import arch_floor as AF
     from engine.source import arch_measure as AM
     from engine.source import arch_plan as AP
     from engine.source import arch_rooms as AR
@@ -217,6 +220,7 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
     ents_of = {r["region_id"]: AP.region_entities(E, r["box"]) for r in regs}
     level = {r["region_id"]: AR.dominant_level(ents_of[r["region_id"]]["texts"]) for r in regs}
     lines, mats, comps, unresolved, rooms, openings, regions, walls_of = [], [], [], [], [], [], [], []
+    floor_areas = []
     roles_of = {r["region_id"]: AP.layer_roles(ents_of[r["region_id"]], u, override=layer_roles) for r in regs}
     spaces_of = {r["region_id"]: AR.spaces(ents_of[r["region_id"]], roles_of[r["region_id"]]["roles"], u,
                                            region_id=r["region_id"])
@@ -224,6 +228,10 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
     # one stair drawn on two plans: the plans are aligned on their column grid, and a flight lying over a flight of
     # the plan below is counted once (the repeat is exposure until a reviewer says which it is)
     stacked = sorted((r for r in regs if r["region_id"] in spaces_of and not r.get("warning")), key=lambda r: r["order"])
+    # a small doorless unlabelled footprint repeated on the other plans (aligned on the column grid) is a shaft (S4)
+    shafts = AR.stacked_shafts([(r["floor"], spaces_of[r["region_id"]]["column_boxes"],
+                                 spaces_of[r["region_id"]]["faces"], spaces_of[r["region_id"]]["openings_by_id"])
+                                for r in stacked], u)
     cross = AR.cross_plan_flights([(r["floor"], spaces_of[r["region_id"]]["column_boxes"],
                                     [fl for f in spaces_of[r["region_id"]]["spaces"]
                                      for fl in (f.get("symbols_inside") or {}).get("stair_flights") or ()],
@@ -266,6 +274,21 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
                                          "command line (an independent schedule, e.g. the architect's area table)"}
         walls_of.append({"floor": floor, "region_id": rid, **{k: S["walls"][k] for k in
                                                                ("walls", "by_thickness", "graph", "conservation")}})
+        fa = AF.reconcile(S, M["rooms"], M["lines"], floor=floor)
+        keep = {x for a_ in (S.get("zoning") or {}).get("attached") or () for x in a_["cells"]} | \
+            {x for s_ in (S.get("zoning") or {}).get("shared") or () for x in s_["cells"]}
+        fa.update(region_id=rid, reference=rec.get("reference"), voids=S.get("voids") or [],
+                  cell_outlines=[c for c in S.get("cells") or () if c["face_id"] in keep],
+                  zoning={k: (S.get("zoning") or {}).get(k) for k in ("attached", "shared", "opening_line_splits")},
+                  physical_regions=(S.get("zoning") or {}).get("physical_regions") or [])
+        floor_areas.append(fa)
+        in_space = {i for f in S["faces"] for i in f.get("label_text_ids") or ()}
+        for v in S.get("voids") or ():
+            if v.get("state") == "VOID_EXTENT_UNRESOLVED" and v.get("label_text_id") not in in_space:
+                unresolved.append({"room_id": "-", "floor": floor, "item": "VOID",
+                                   "reason": "VOID_EXTENT_UNRESOLVED: a VOID word outside every closed space has no "
+                                             "outline (X-marked rectangle / void symbol); no floor is deducted"})
+        rec["floor_areas"] = {k: fa[k] for k in ("gross_floor_plate_m2", "internal_physical_floor_m2", "external_m2")}
         for rm in M["rooms"]:
             rm["region_id"] = rid
         rooms += M["rooms"]
@@ -283,15 +306,16 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
            "project_id": pid, "unit_m": u, "insunits": E.get("insunits"), "intake_findings": E.get("intake_findings"),
            "hatch_reader": {"hatches": len(hs), "with_islands": sum(1 for h in hs if h["islands"]),
                             "inside_blocks": sum(1 for h in hs if h["owner"])},
-           "arch_reader": A["report"], "cross_plan_stairs": cross,
+           "arch_reader": A["report"], "cross_plan_stairs": cross, "stacked_shafts": shafts,
            "facts": {"schema": (facts or {}).get("schema"), "given": sorted(k for k in (facts or {}) if k != "schema")},
            "layer_roles_override": layer_roles or {}, "policies": {"plan": AP.policy_record(), "rooms": AR.policy_record(),
                                                                     "measure": AM.policy_record(),
-                                                                    "walls": AW.policy_record()}}
+                                                                    "walls": AW.policy_record(),
+                                                                    "floor_areas": AF.policy_record()}}
     room_boq = {"project_id": pid, "lines": lines, "materials": mats, "comparisons": comps, "unresolved": unresolved,
                 "assumptions": [], "geometry_source": f"architectural plan DXF {path.name} ({method})"}
     arch = {"run": run, "regions": regions, "other_frames": P["other_frames"], "rooms": rooms, "openings": openings,
-            "walls": walls_of, "reference_areas": reference_areas or {}}
+            "walls": walls_of, "reference_areas": reference_areas or {}, "floor_areas": floor_areas}
     return room_boq, arch, E
 
 
@@ -347,7 +371,9 @@ def cmd_arch(a):
             (out / name).write_text(AO.svg(E, reg, [r for r in arch["rooms"] if r.get("region_id") == reg["region_id"]],
                                            [o for o in arch["openings"] if o["floor"] == reg["floor"]],
                                            walls=next((w for w in arch.get("walls") or () if
-                                                       w["region_id"] == reg["region_id"]), None)),
+                                                       w["region_id"] == reg["region_id"]), None),
+                                           floor_area=next((f for f in arch.get("floor_areas") or () if
+                                                            f["region_id"] == reg["region_id"]), None)),
                                     encoding="utf-8")
             svgs.append(name)
     ev = Counter(ln["evidence_state"] for ln in room["lines"])

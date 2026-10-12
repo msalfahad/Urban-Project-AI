@@ -360,3 +360,183 @@ def entities(path):
         "ellipse_full_mm": math.pi * (3 * (2000 + 1000) - math.sqrt((3 * 2000 + 1000) * (2000 + 3 * 1000))),  # Ramanujan
         "stretched_quarter": {"a": 2000, "b": 1000},
         "polyline_perimeter_mm": 10000.0, "minsert_columns": 6, "attrib": "KITCHEN", "mtext": "BATH"}}
+
+
+# ---- M9 S4: physical vs functional floor - plan ENTITIES built directly (mm, no DXF read), with hand truth ----
+S4_ROLES = {"A-WALL": "WALL", "A-DOOR": "DOOR", "A-GLAZ": "WINDOW", "A-COL": "COLUMN"}
+
+
+def _s4_ents(rooms, outer, openings, *, texts=(), extra_segments=(), swings=(), columns=()):
+    """walls from the room rectangles' faces and the outer outline (cut at every opening, jambs drawn), door swings
+    as door-layer arcs with their leaf lines, extra segments (id, layer, a, b, path) as given."""
+    segs, arcs = [], []
+
+    def seg(a, b, layer, path=None, sid=None):
+        segs.append({"id": sid or f"S{len(segs) + 1}", "layer": layer, "a": tuple(map(float, a)),
+                     "b": tuple(map(float, b)), **({"path": [path]} if path else {})})
+    for poly in list(rooms.values()) + [outer]:
+        for i in range(len(poly)):
+            for a, b in _cut(poly[i], poly[(i + 1) % len(poly)], openings):
+                seg(a, b, "A-WALL")
+    for kind, axis, lo, hi, s0, s1, _ in openings:
+        if kind == "NO_JAMBS":
+            continue
+        for s in (s0, s1):
+            seg((lo, s), (hi, s), "A-WALL") if axis == "x" else seg((s, lo), (s, hi), "A-WALL")
+    for k, (hinge, r, a0, a1) in enumerate(swings, 1):
+        occ = f"DOOR:{k}"
+        c = tuple(map(float, hinge))
+        s = (c[0] + r * math.cos(math.radians(a0)), c[1] + r * math.sin(math.radians(a0)))
+        e = (c[0] + r * math.cos(math.radians(a1)), c[1] + r * math.sin(math.radians(a1)))
+        arcs.append({"id": f"A{k}", "layer": "A-DOOR", "c": c, "r": float(r), "s": s, "e": e, "dir": "CCW",
+                     "path": [occ]})
+        seg(c, s, "A-DOOR", occ)                                       # the open leaf
+    for k, (x, y) in enumerate(columns, 1):                            # one closed polyline per column
+        for i, (a, b) in enumerate((((x, y), (x + 400, y)), ((x + 400, y), (x + 400, y + 400)),
+                                    ((x + 400, y + 400), (x, y + 400)), ((x, y + 400), (x, y)))):
+            seg(a, b, "A-COL", sid=f"COL{k}:{i}")
+    for a, b, layer, path in extra_segments:
+        seg(a, b, layer, path)
+    tx = [{"id": f"T{k}", "x": float(p[0]), "y": float(p[1]), "value": v, "layer": "A-TEXT"}
+          for k, (v, p) in enumerate(texts, 1)]
+    return {"segments": segs, "arcs": arcs, "texts": tx, "inserts": [], "hatches": []}
+
+
+S4_OUTER = [(0, 0), (10600, 0), (10600, 8600), (0, 8600)]
+S4_ROOMS = {"MASTER": [(200, 200), (5200, 200), (5200, 4200), (200, 4200)],
+            "KITCHEN": [(5400, 200), (9000, 200), (9000, 3000), (5400, 3000)],
+            "LOBBY": [(5400, 3200), (9000, 3200), (9000, 4200), (5400, 4200)],
+            "CORRIDOR": [(9200, 200), (10400, 200), (10400, 8400), (9200, 8400)],
+            "VEST": [(200, 4400), (2200, 4400), (2200, 6200), (200, 6200)],
+            "BATH": [(2400, 4400), (4400, 4400), (4400, 6200), (2400, 6200)],
+            "BEDROOM": [(4600, 4400), (9000, 4400), (9000, 8400), (4600, 8400)],
+            "CLOSET": [(2400, 6400), (4400, 6400), (4400, 8400), (2400, 8400)],
+            "ACCESS": [(200, 6400), (2200, 6400), (2200, 8400), (200, 8400)]}
+S4_OPENINGS = [
+    ("PASSAGE", "y", 4200, 4400, 800, 2100, None),       # O1 MASTER | VEST archway 1.30, nothing drawn in it
+    ("PASSAGE", "y", 3000, 3200, 6000, 7000, None),      # O2 KITCHEN | LOBBY 1.00, nothing drawn in it
+    ("DOOR", "x", 9000, 9200, 3300, 4100, None),         # O3 LOBBY | CORRIDOR door 0.80
+    ("DOOR", "x", 2200, 2400, 4500, 5300, None),         # O4 VEST | BATH door 0.80: its hinge stands 0.14 m from O1
+    ("PASSAGE", "x", 4400, 4600, 7000, 8000, None),      # O5 CLOSET | BEDROOM 1.00 with an arch symbol block in it
+    ("PASSAGE", "y", 6200, 6400, 500, 1500, None),       # O6 ACCESS | VEST 1.00 with four lines along it
+    ("PASSAGE", "y", 6200, 6400, 2800, 3800, None)]      # O7 BATH | CLOSET 1.00, nothing drawn in it
+S4_WORDS = (("MASTER BEDROOM", (2600, 2000)), ("KITCHEN", (7000, 1500)), ("CORRIDOR", (9800, 6000)),
+            ("BATH", (3400, 5400)), ("BEDROOM", (6800, 6500)))
+S4_SWINGS = (((9000, 3300), 800, 0, 90),                  # O3: leaf open along +x, closed along +y up the opening
+             ((2200, 4500), 800, 0, 90))                  # O4
+S4_MARKS = ((((4400, 7000), (4400, 8000)), "A-THIN", "ARCH:1"), (((4600, 7000), (4600, 8000)), "A-THIN", "ARCH:1"),
+            (((500, 6200), (1500, 6200)), "A-THIN", None), (((500, 6250), (1500, 6250)), "A-THIN", None),
+            (((500, 6350), (1500, 6350)), "A-THIN", None), (((500, 6400), (1500, 6400)), "A-THIN", None))
+S4_TRUTH = {
+    # hand-derived from the rectangles: a room takes in an unlabelled cell reached ONLY through a clear passage from it
+    "MASTER_BEDROOM": 5.0 * 4.0 + 1.3 * 0.2 + 2.0 * 1.8,   # + the archway's doorway piece + the vestibule
+    "KITCHEN": 3.6 * 2.8 + 1.0 * 0.2 + 3.6 * 1.0,          # + the passage piece + the lobby (up to the lobby door)
+    "BATHROOM": 2.0 * 1.8,                                 # the closet behind O7 is larger than half the bath: apart
+    "BEDROOM": 4.4 * 4.0,                                  # O5 holds an arch symbol: a drawn boundary
+    "CORRIDOR": 1.2 * 8.2,
+    "UNLABELLED": sorted([2.0 * 2.0, 2.0 * 2.0]),          # the closet (not attached) and the access (O6 marked)
+    "attached_m2": {"MASTER_BEDROOM": 2.0 * 1.8, "KITCHEN": 3.6 * 1.0},
+}
+
+
+def s4_floor():
+    """-> (ents, roles, truth) of the S4 physical / functional floor (one plan, mm)."""
+    marks = [(a, b, layer, path) for (a, b), layer, path in S4_MARKS]
+    ents = _s4_ents(S4_ROOMS, S4_OUTER, S4_OPENINGS, texts=S4_WORDS, swings=S4_SWINGS, extra_segments=marks)
+    return ents, dict(S4_ROLES, **{"A-THIN": "OTHER"}), S4_TRUTH
+
+
+S4W_THETA_DEG = 30.3                 # an island partition at an angle off the 0.5-degree band grid ...
+S4W_STUB = ((1500.0, 1200.0), 1500.0, 150.0)   # ... from this point, 1.5 m long, 0.15 m thick, both ends left open
+
+
+def s4_walls():
+    """-> (ents, roles, truth): two rooms on one plan, mm.
+    LIVING 4.0 x 2.8 holds a free-standing partition (two parallel wall lines at 30.3 degrees, ends not drawn): its body
+    is wall, never floor (the caps must meet the drawn lines exactly). BATH 1.2 x 1.2 is entered by a door hung in a
+    gap with no jamb lines and wall stubs too short for a wall band: the door closes on the bath face (its leaf) and
+    the wall's other face closes the doorway piece (closure B), so neither room takes the 0.8 x 0.2 doorway piece."""
+    t = math.radians(S4W_THETA_DEG)
+    (x0, y0), L, w = S4W_STUB
+    d, n = (math.cos(t), math.sin(t)), (-math.sin(t), math.cos(t))
+    a1, b1 = (x0, y0), (x0 + L * d[0], y0 + L * d[1])
+    a2, b2 = (x0 + w * n[0], y0 + w * n[1]), (x0 + L * d[0] + w * n[0], y0 + L * d[1] + w * n[1])
+    rooms = {"LIVING": [(200, 200), (4200, 200), (4200, 3000), (200, 3000)],
+             "BATH": [(1400, 3200), (2600, 3200), (2600, 4400), (1400, 4400)]}
+    outer = [(0, 0), (4400, 0), (4400, 4600), (0, 4600)]
+    # the wall between them (y 3000..3200): the LIVING face runs on except the door gap; the bath face is two stubs
+    openings = [("NO_JAMBS", "y", 3000, 3200, 1600, 2400, None)]
+    ents = _s4_ents(rooms, outer, openings, texts=(("LIVING", (800, 800)), ("BATH", (2000, 4000))),
+                    swings=(((1600, 3200), 800, 270, 360),),
+                    extra_segments=((a1, b1, "A-WALL", None), (a2, b2, "A-WALL", None),
+                                    # the space between the bath and the outer wall is closed by these wall faces
+                                    ((200, 3200), (1400, 3200), "A-WALL", None), ((2600, 3200), (4200, 3200), "A-WALL", None),
+                                    ((200, 3200), (200, 4400), "A-WALL", None), ((4200, 3200), (4200, 4400), "A-WALL", None),
+                                    ((200, 4400), (1400, 4400), "A-WALL", None), ((2600, 4400), (4200, 4400), "A-WALL", None)))
+    truth = {"LIVING": 4.0 * 2.8 - L * w / 1e6, "BATH": 1.2 * 1.2, "doorway_m2": 0.8 * 0.2,
+             "stub_m2": L * w / 1e6}
+    return ents, S4_ROLES, truth
+
+
+def _rot(p, c, deg):
+    t = math.radians(deg)
+    x, y = p[0] - c[0], p[1] - c[1]
+    return (c[0] + x * math.cos(t) - y * math.sin(t), c[1] + x * math.sin(t) + y * math.cos(t))
+
+
+S4V_ROOM = {"LIVING": [(200, 200), (8200, 200), (8200, 6200), (200, 6200)]}
+S4V_OUTER = [(0, 0), (8400, 0), (8400, 6400), (0, 6400)]
+
+
+def s4_voids():
+    """-> {case: (ents, roles, truth)}, mm. One living room 8.0 x 6.0 per case:
+    X_RECT_HAND_DRAWN  a VOID word inside a 4.0 x 3.0 rectangle marked by one full diagonal and a second line drawn
+                       by hand from the third corner (3 degrees off the other diagonal, 60 % of its length): the void
+                       is 12.0 m2 and leaves the floor finish
+    SYMBOL_NO_WORD     a rectangle with all four sides and both diagonals but no VOID word: recorded, never deducted
+    WORD_NO_OUTLINE    a VOID word and nothing around it: VOID_EXTENT_UNRESOLVED, nothing deducted"""
+    P, Q, C = (3000, 2000), (7000, 5000), (7000, 2000)
+    far = (3000, 5000)
+    second = _rot((C[0] + 0.6 * (far[0] - C[0]), C[1] + 0.6 * (far[1] - C[1])), C, 3.0)
+    out = {}
+    words = (("LIVING", (1000, 1000)),)
+    ents = _s4_ents(S4V_ROOM, S4V_OUTER, [], texts=words + (("VOID", (5000, 3600)),),
+                    extra_segments=((P, Q, "A-THIN", None), (C, second, "A-THIN", None)))
+    out["X_RECT_HAND_DRAWN"] = (ents, dict(S4_ROLES, **{"A-THIN": "OTHER"}),
+                                {"void_m2": 4.0 * 3.0, "floor_m2": 8.0 * 6.0 - 4.0 * 3.0, "codes": ["LIVING"]})
+    sq = [(3000, 2000), (7000, 2000), (7000, 5000), (3000, 5000)]
+    sides = [(sq[i], sq[(i + 1) % 4], "A-THIN", None) for i in range(4)] + [(sq[0], sq[2], "A-THIN", None),
+                                                                           (sq[1], sq[3], "A-THIN", None)]
+    ents = _s4_ents(S4V_ROOM, S4V_OUTER, [], texts=words, extra_segments=sides)
+    out["SYMBOL_NO_WORD"] = (ents, dict(S4_ROLES, **{"A-THIN": "OTHER"}),
+                             {"void_m2": 0.0, "floor_m2": 48.0, "codes": ["LIVING"]})
+    ents = _s4_ents(S4V_ROOM, S4V_OUTER, [], texts=words + (("VOID", (5000, 3600)),))
+    out["WORD_NO_OUTLINE"] = (ents, dict(S4_ROLES, **{"A-THIN": "OTHER"}),
+                              {"void_m2": 0.0, "floor_m2": None, "codes": ["LIVING", "VOID"]})
+    return out
+
+
+S4S_COLUMNS = [(600, 600), (4800, 600), (600, 5200), (4800, 5200)]      # inside the living room, 400 x 400
+
+
+def s4_shaft_plans(offset=(40000.0, 0.0)):
+    """-> [(floor, ents)] two plans of one storey stack, the upper drawn `offset` away, on one column grid: a LIVING
+    5.8 x 6.0 (four 0.4 x 0.4 columns inside), a 1.8 x 1.8 doorless unlabelled space at the same place on both plans
+    (a shaft) and a 1.8 x 1.8 STORE that has a door on the lower plan only (so it never stacks as a doorless
+    footprint). Truth: the two 3.24 m2 faces at the shaft are SHAFT; the stores are not."""
+    rooms = {"LIVING": [(200, 200), (6000, 200), (6000, 6200), (200, 6200)],
+             "SHAFT": [(6200, 200), (8000, 200), (8000, 2000), (6200, 2000)],
+             "STORE": [(6200, 2200), (8000, 2200), (8000, 4000), (6200, 4000)],
+             "SPARE": [(6200, 4200), (8000, 4200), (8000, 6200), (6200, 6200)]}
+    outer = [(0, 0), (8200, 0), (8200, 6400), (0, 6400)]
+    plans = []
+    for k, fl in enumerate(("GF", "1F")):
+        dx, dy = offset[0] * k, offset[1] * k
+        mv = {n: [(x + dx, y + dy) for x, y in p] for n, p in rooms.items()}
+        ops = [("DOOR", "x", 6000 + dx, 6200 + dx, 2600 + dy, 3400 + dy, None)] if fl == "GF" else []
+        sw = (((6200 + dx, 2600 + dy), 800, 0, 90),) if fl == "GF" else ()
+        ents = _s4_ents(mv, [(x + dx, y + dy) for x, y in outer], ops,
+                        texts=(("LIVING", (2000 + dx, 2000 + dy)), ("STORE", (7100 + dx, 5200 + dy))),
+                        swings=sw, columns=[(x + dx, y + dy) for x, y in S4S_COLUMNS])
+        plans.append((fl, ents))
+    return plans

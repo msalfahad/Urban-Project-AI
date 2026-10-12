@@ -30,6 +30,7 @@ import hashlib
 import math
 from collections import Counter
 
+from engine.source import arch_floor as AF
 from engine.source import arch_rooms as AR
 from engine.source import boq_line as BL
 from engine.source import plane_poly as PP
@@ -37,7 +38,7 @@ from engine.source import rule_store as RS
 from engine.source import tile_layout as TL
 from engine.source import wall_height as WH
 
-POLICY_ID = "ARCH_MEASURE_V1"
+POLICY_ID = "ARCH_MEASURE_V2"
 RULE_SET = RS.LATEST_APPROVED
 FACTS_SCHEMA = "URBAN_ARCH_FACTS_V1"
 FINISH_KIND = {AR.DRY: "DRY", AR.SERVICE: "DRY", AR.CIRCULATION: "DRY", AR.WET: "WET"}
@@ -188,6 +189,13 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
     ctx = {"project_id": project_id, "revision_set_sha256": revision_set_sha256, "documents": list(documents)}
     rooms, lines, unresolved = [], [], []
     ops = fr["openings_by_id"]
+    closure_pieces = {}                     # door -> its doorway piece face (S4: closed on both wall faces)
+    for f in fr.get("faces") or ():
+        if f["class"] == "DOORWAY" and len(f.get("closure_ids") or ()) >= 2:
+            keys = {c.rsplit("|", 1)[0] for c in f["closure_ids"]}
+            if len(keys) == 1:
+                closure_pieces[keys.pop()] = f
+    done_pieces = set()
     for sp in sorted(fr["spaces"], key=lambda s: (-s["area_m2"], s["face_id"])):
         rid = room_id(floor, sp["face_id"])
         en, ar = _names(sp["codes"])
@@ -211,7 +219,10 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                 "hole_polygons": sp["hole_polygons"], "point": sp.get("point"), "polygon_m": sp["polygon_m"],
                 "hole_polygons_m": sp["hole_polygons_m"], "open_plan": open_plan,
                 "symbols_inside": sp.get("symbols_inside") or {}, "label_source": sp.get("label_source"),
-                "evidence": sp.get("evidence") or {}, "fixture_conflict": sp.get("fixture_conflict")}
+                "evidence": sp.get("evidence") or {}, "fixture_conflict": sp.get("fixture_conflict"),
+                "void_m2": round(sp.get("void_m2") or 0.0, 6), "voids": sp.get("voids") or [],
+                "codes_with_void": sp.get("codes_with_void"), "cells": sp.get("cells") or [],
+                "attached_cells": sp.get("attached_cells") or []}
         typed_by_evidence = sp.get("label_source") not in (None, "TEXT")
         rooms.append(room)
         ded = [{"what": "obstructions inside the room (columns / shafts)", "m2": round(sp["hole_area_m2"], 6)}] \
@@ -239,25 +250,49 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
             lines.append(_line(ctx, item_code=ec, room=room, element="space", unit="m2", net=sp["area_m2"],
                                gross=round(sp["gross_outer_m2"], 6), deductions=ded, rule_id="UP-CER-001",
                                formula="face area (TS01)", inputs={"dims": room["dims"]},
-                               notes=f"{kind} space: no internal floor / ceiling finish line"))
+                               notes="; ".join(x for x in [f"{kind} space: no internal floor / ceiling finish line",
+                                                           sp.get("issue") or ""] if x)))
+            if typed_by_evidence and sp.get("issue"):
+                unresolved.append({"room_id": rid, "floor": floor, "item": ec, "reason": sp["issue"]})
             continue
-        stair_m2 = _stair_in_room(sp, flights, fr["unit_m"]) if flights else 0.0
+        # the floor surface of the face: the same split as the floor reconciliation (arch_floor.split_face), so the
+        # finish lines and the floor areas can never disagree
+        parts = AF.split_face(sp, fr.get("voids") or (), fr["unit_m"], True)
+        stair_m2 = parts.get("STAIR_FLIGHTS", 0.0)
+        void_m2 = parts.get("VOID", 0.0)
+        below_m2 = parts.get("STAIR_BELOW_SEEN", 0.0)
         if stair_m2 > 1e-6:
             ded = ded + [{"what": "stair treads drawn inside the room (marble: UP-STAIR-005, never also porcelain)",
                           "m2": round(stair_m2, 6)}]
+        if void_m2 > 1e-6:
+            ded = ded + [{"what": "the outlined void inside the face (open to below: never floor finish)",
+                          "m2": round(void_m2, 6)}]
+        if below_m2 > 1e-6:
+            ded = ded + [{"what": "a flight of the plan below seen through the opening (no floor at this level; the "
+                                  "stair is counted once, on the plan below)", "m2": round(below_m2, 6)}]
+        att = sp.get("attached_cells") or []
+        att_txt = ("ATTACHED_THROUGH_OPEN_PASSAGE: the floor includes " + ", ".join(
+            f"{a['area_m2']:.2f} m2 of unlabelled floor reached only through open passage(s) {'/'.join(a['passages'])}"
+            for a in att) + " (no door or glazing separates it; confirm it belongs to this room)") if att else ""
+        if att:
+            unresolved.append({"room_id": rid, "floor": floor, "item": "FIN.FLOOR", "reason": att_txt})
         fk = FINISH_KIND[kind]
         wet = fk == "WET"
         lines.append(_line(ctx, item_code="FIN.FLOOR.WET_TILE" if wet else "FIN.FLOOR.PORCELAIN", room=room,
-                           element="floor", unit="m2", net=round(sp["area_m2"] - stair_m2, 6),
+                           element="floor", unit="m2",
+                           net=round(max(sp["area_m2"] - stair_m2 - void_m2 - below_m2, 0.0), 6),
                            gross=round(sp["gross_outer_m2"], 6), deductions=ded,
                            formula="face area (TS01), obstructions deducted" +
-                                   (", stair treads deducted (UP-STAIR-005)" if stair_m2 > 1e-6 else ""),
+                                   (", stair treads deducted (UP-STAIR-005)" if stair_m2 > 1e-6 else "") +
+                                   (", outlined void deducted" if void_m2 > 1e-6 else "") +
+                                   (", stair below seen through the opening deducted" if below_m2 > 1e-6 else ""),
                            inputs={"dims": room["dims"]}, rule_id="UP-CER-001",
-                           ev="PROVISIONAL" if typed_by_evidence else None,
+                           ev="PROVISIONAL" if typed_by_evidence or att else None,
                            notes="; ".join(x for x in [
                                ("OPEN_PLAN: " + " + ".join(sp["codes"]) + " share one face (no partition between them); "
                                 "one dry floor finish assumed for the whole space - split it if the finishes differ")
-                               if open_plan else "", sp.get("issue") or "", sp.get("fixture_conflict") or ""] if x)))
+                               if open_plan else "", att_txt, sp.get("issue") or "", sp.get("fixture_conflict") or ""]
+                               if x)))
         lines.append(_line(ctx, item_code="FIN.CEILING", room=room, element="ceiling", unit="m2", net=sp["area_m2"],
                            ev="PROVISIONAL", gross=round(sp["gross_outer_m2"], 6),
                            deductions=[d for d in ded if not d["what"].startswith("stair")],
@@ -317,8 +352,28 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                                    formula="door width x wall thickness", rule_id="UP-WP-003",
                                    inputs={"width_m": round(d["width_m"], 4), "depth_m": round(d["wall_t_m"], 4)},
                                    notes="DOORWAY_UPTURN_DETAIL_REQUIRED; DOORWAY_DOUBLE_COVERAGE_REVIEW"))
-            if sp["closure_ids"]:
-                q = (f"{len(sp['closure_ids'])} door(s) closed by a door-symbol closure: the doorway depth (wall "
+            # (S4) a door closed by its leaf and by the wall's other face (closure B) has its doorway piece as a face
+            open_doors = []
+            for cid in sp["closure_ids"]:
+                door_key = cid.rsplit("|", 1)[0]
+                piece = closure_pieces.get(door_key)
+                if piece is None:
+                    open_doors.append(cid)
+                    continue
+                if door_key in done_pieces:
+                    continue
+                done_pieces.add(door_key)
+                w = (piece["outer_role_lm"].get("DOOR_CLOSURE") or 0.0) / 2.0     # both closures span the door
+                lines.append(_line(ctx, item_code="FIN.WP.DOORWAY", room=room, element=f"doorway {door_key}",
+                                   unit="m2", net=round(piece["area_m2"], 6),
+                                   formula="the doorway piece between the door's two closures (leaf face and the "
+                                           "wall's other face)", rule_id="UP-WP-003",
+                                   inputs={"width_m": round(w, 4),
+                                           "depth_m": round(piece["area_m2"] / w, 4) if w > 0 else None,
+                                           "face_id": piece["face_id"], "closures": piece["closure_ids"]},
+                                   notes="DOORWAY_UPTURN_DETAIL_REQUIRED; DOORWAY_DOUBLE_COVERAGE_REVIEW"))
+            if open_doors:
+                q = (f"{len(open_doors)} door(s) closed by a door-symbol closure: the doorway depth (wall "
                      "thickness) is not established for their doorway pieces")
                 unresolved.append({"room_id": rid, "floor": floor, "item": "FIN.WP.DOORWAY", "reason": q})
             up = RS.rule("UP-WP-002", RULE_SET)["value"]
@@ -538,12 +593,6 @@ def _treads_in(poly_m, holes_m, fl, u):
     return sum(PP.region_area_in_convex(poly_m, holes_m, [(x * u, y * u) for x, y in q]) for q in fl["tread_quads"])
 
 
-def _stair_in_room(sp, flights, u):
-    """plan area of the drawn treads inside the room (m2): deducted from its floor finish (UP-STAIR-005)."""
-    return sum(_treads_in(sp["polygon_m"], sp["hole_polygons_m"], fl, u) for fl in flights
-               if not fl.get("drawn_on_plan_below"))
-
-
 def _landing(ctx, room, rid, floor, sp, flights, u):
     """a stair room's landing marble: the plan of a stair enclosure less its drawn treads is an upper bound of the
     landings (it also holds any well / void the walls do not close); the landing polygon itself is not in a plan."""
@@ -585,6 +634,12 @@ FLAG_RULES = (
      "draw / give the landing outline (or the stair-well outline) of the stair enclosure"),
     (r"^BLOCK_WALL_NOT_ESTABLISHED", "SOURCE", "arch_measure._wall_lines",
      "give the wall material by thickness (legend / specification) and the block height (slab soffit / beam depth)"),
+    (r"^ATTACHED_THROUGH_OPEN_PASSAGE", "REVIEW", "arch_rooms.open_passages",
+     "confirm the unlabelled alcove / vestibule belongs to this room's floor, or draw / name its own boundary"),
+    (r"^VOID_EXTENT_UNRESOLVED", "SOURCE", "arch_rooms.void_outlines",
+     "draw the void outline (an X-marked rectangle or a closed outline around the VOID word), or give its extent"),
+    (r"^(VOID_DEDUCTED: .*; )?MERGED_SPACE", "REVIEW", "arch_rooms.spaces",
+     "draw the missing partition / door closure between the spaces, or confirm the open space and its finishes"),
     (r"^MERGED_SPACE", "REVIEW", "arch_rooms.spaces",
      "draw the missing partition / door closure between the spaces, or confirm the open space and its finishes"),
     (r"^MIXED_SPACE", "REVIEW", "arch_rooms.spaces", "confirm one finish for the open plan, or draw the split"),
@@ -592,6 +647,8 @@ FLAG_RULES = (
      "decode the SHX big-font text (font file or code map), or label the space for review"),
     (r"^UNLABELLED_SPACE", "SOURCE", "arch_rooms.spaces / arch_rooms._evidence",
      "name the space (room word, room-tag block or fixtures), or confirm it is not a room (shaft, duct, void)"),
+    (r"^ROOM_TYPE_FROM_STACKED_FOOTPRINT", "REVIEW", "arch_rooms.stacked_shafts",
+     "confirm the shaft / duct (the same doorless footprint on the other plans), or name the space"),
     (r"^ROOM_TYPE_FROM_", "REVIEW", "arch_rooms._evidence", "confirm the room type proposed from its tag / fixtures"),
     (r"^DOOR_CLOSURE_UNRESOLVED", "SOFTWARE", "topology.opening_closures",
      "the door symbol closes no gap the engine can find: check the swing against the wall linework"),
