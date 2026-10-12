@@ -280,7 +280,7 @@ class _Ctx:
                 CC._seg_dist(x, y, poly[i], poly[(i + 1) % len(poly)]) for i in range(len(poly))) <= tol
         return [e for e in pool.values() if e["type"] in ("LINE", "ARC", "CIRCLE") and
                 inside(sum(x for x, _ in e["pts"]) / len(e["pts"]), sum(y for _, y in e["pts"]) / len(e["pts"])) and
-                not CC.annotation_layer(e["layer"])]
+                not CC.annotation_layer(e["layer"]) and not (set(CC._tokens(e["layer"])) & NON_STRUCTURAL_WORDS)]
 
     def face(self, sid, face_id):
         for fc in (((self.D["sheets"].get(sid) or {}).get("slab") or {}).get("faces") or []):
@@ -487,7 +487,20 @@ def _straight_run(part, going):
 
 
 def _flights(ctx, ents):
-    """the stair runs of a group's lines: parallel tread lines split into flights by where they lie along their own
+    """the stair runs of a group's lines, read one layer at a time (a flight is drawn on one layer: lines of another
+    layer between two treads - furniture, services - are not treads); the layer whose runs hold the most tread lines
+    wins (post-freeze P1, M8 held-out properties)."""
+    layers = sorted({e["layer"] for e in ents if e["type"] == "LINE"})
+    best = []
+    for lay in layers:
+        runs = _flights_of(ctx, [e for e in ents if e["layer"] == lay])
+        if sum(r["n_lines"] for r in runs) > sum(r["n_lines"] for r in best):
+            best = runs
+    return best
+
+
+def _flights_of(ctx, ents):
+    """the stair runs of one layer's lines: parallel tread lines split into flights by where they lie along their own
     direction (two flights of a dog-leg sit side by side) and by gaps across it; the lines left over that fan about
     one point are a winder run. -> [stair_measure.flight run]."""
     u = ctx.u
@@ -1123,7 +1136,7 @@ def _bound_of(ctx, f, measured_fams, used_rows):
         if measured_fams.get(fam):
             return _bound(f, 0.0, 0.0, "EXPLAINED", f"the {fam} family is measured", state="EXPLAINED")
         drawn = next((g for g in ctx.CR["findings"] if g["KIND"] in ("DRAWN_NOT_MEASURED", "STAIR_NOT_MEASURED") and
-                      (g["FAMILY"] == fam or fam in _candidates(g) or
+                      not _non_structural(g, conv) and (g["FAMILY"] == fam or fam in _candidates(g) or
                        re.search(r"notes: [A-Z_, ]*\b" + fam + r"\b", g.get("EVIDENCE") or ""))), None)
         if drawn:
             return _bound(f, 0.0, 0.0, "EXPLAINED", f"the {fam} the notes name may be the drawn group "

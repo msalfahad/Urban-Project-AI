@@ -135,6 +135,8 @@ def compare(a, b, rel=1e-6, exact=False):
         for f in sorted(set(a[k]) | set(b[k])):
             x, y = a[k].get(f, 0.0), b[k].get(f, 0.0)
             tol = 0.0 if (exact or f == "n") else rel * max(abs(x), abs(y), 1.0)
+            if k.startswith("SCOPE|BOUNDED") and not exact:
+                tol = max(tol, 0.0015)          # M8 post-freeze P3: the bounded totals are reported to 1 litre
             if abs(x - y) > tol:
                 out.append({"key": k, "field": f, "original": x, "transformed": y, "delta": round(y - x, 9)})
     return out
