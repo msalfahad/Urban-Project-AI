@@ -237,6 +237,11 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
                                      for fl in (f.get("symbols_inside") or {}).get("stair_flights") or ()],
                                     AR.void_marks(ents_of[r["region_id"]], spaces_of[r["region_id"]]["faces"]))
                                    for r in stacked], u)
+    # an outlined void is open to the plan below: the space under it is double height (no ceiling at its level) (S5)
+    double_height = AR.voids_above([(r["floor"], spaces_of[r["region_id"]]["column_boxes"],
+                                     spaces_of[r["region_id"]]["faces"], spaces_of[r["region_id"]].get("voids"),
+                                     ents_of[r["region_id"]]["segments"])
+                                    for r in stacked], u)
     for i, reg in enumerate(regs):
         rid = reg["region_id"]
         ents = ents_of[rid]
@@ -261,6 +266,9 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
                        floor_above_level_m=above, floor_level_m=level[rid], documents=docs)
         X = AM.materials(M, facts)
         ref = (reference_areas or {}).get(floor)
+        rec["repairs"] = {"counts": dict(Counter(x["kind"] + ":" + x["rule"] for x in S.get("repairs") or ())),
+                          "items": S.get("repairs") or [], "zones": S.get("zones") or [],
+                          "never": "a drawn entity moved, extended, snapped or deleted"}
         rec.update(stage_state="MEASURED", face_counts=S["counts"], space_counts=M["counts"],
                    plate=S["plate"], warnings=S["warnings"], columns=S["columns"], arrangement=S["arrangement"],
                    openings=dict(Counter(o["kind"] for o in S["openings"])), openings_rejected=len(S["openings_rejected"]),
@@ -280,7 +288,10 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
         fa.update(region_id=rid, reference=rec.get("reference"), voids=S.get("voids") or [],
                   cell_outlines=[c for c in S.get("cells") or () if c["face_id"] in keep],
                   zoning={k: (S.get("zoning") or {}).get(k) for k in ("attached", "shared", "opening_line_splits")},
-                  physical_regions=(S.get("zoning") or {}).get("physical_regions") or [])
+                  physical_regions=(S.get("zoning") or {}).get("physical_regions") or [],
+                  zones=S.get("zones") or [],
+                  double_height=[d for d in double_height if d["onto"] == floor],
+                  zone_lines=[ln for f in S["faces"] for ln in (f.get("zone") or {}).get("lines") or ()])
         floor_areas.append(fa)
         in_space = {i for f in S["faces"] for i in f.get("label_text_ids") or ()}
         for v in S.get("voids") or ():
@@ -307,6 +318,7 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
            "hatch_reader": {"hatches": len(hs), "with_islands": sum(1 for h in hs if h["islands"]),
                             "inside_blocks": sum(1 for h in hs if h["owner"])},
            "arch_reader": A["report"], "cross_plan_stairs": cross, "stacked_shafts": shafts,
+           "double_height": double_height,
            "facts": {"schema": (facts or {}).get("schema"), "given": sorted(k for k in (facts or {}) if k != "schema")},
            "layer_roles_override": layer_roles or {}, "policies": {"plan": AP.policy_record(), "rooms": AR.policy_record(),
                                                                     "measure": AM.policy_record(),

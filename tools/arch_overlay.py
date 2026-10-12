@@ -51,6 +51,21 @@ def svg(intake, region, rooms, openings, width=1600, walls=None, floor_area=None
                    f'stroke-dasharray="6,3"><title>{escape(c["face_id"])} cell {c["area_m2"]:.2f} m2 ' +
                    ("shared by several rooms (review)" if c["face_id"] in shared_cells else
                     "taken in through an open passage (confirm)") + '</title></polygon>')
+    for d in fa.get("double_height") or ():             # S5: the void of the plan above, carried down (no ceiling here)
+        if d.get("window"):
+            out.append(f'<polygon points="{_pts(d["window"], X, Y)}" fill="none" stroke="#1f77b4" stroke-width="2" '
+                       f'stroke-dasharray="4,4"><title>{escape(d["void_id"])} of {escape(d["floor"])}: double height '
+                       f'above ({sum(x["m2"] for x in d.get("in_spaces") or ()):.2f} m2, no ceiling at this level)'
+                       '</title></polygon>')
+    seen_zl = set()
+    for ln in fa.get("zone_lines") or ():              # S5: drawn lines that bound a zone of an open space (inference)
+        if ln["id"] in seen_zl:
+            continue
+        seen_zl.add(ln["id"])
+        (ax, ay), (bx, by) = ln["a"], ln["b"]
+        out.append(f'<line x1="{X(ax):.1f}" y1="{Y(ay):.1f}" x2="{X(bx):.1f}" y2="{Y(by):.1f}" stroke="#e01fb4" '
+                   f'stroke-width="2.6" stroke-dasharray="7,3"><title>{escape(ln["source"])} ({escape(ln["layer"])}): '
+                   'drawn line bounding a zone - inferred finish boundary (confirm)</title></line>')
     for v in fa.get("voids") or ():
         if not v.get("corners") or v.get("state") != "OUTLINED":
             continue
@@ -91,7 +106,9 @@ def svg(intake, region, rooms, openings, width=1600, walls=None, floor_area=None
                    f'fill="#333">{rm["area_m2"]:.2f} m2 ({escape(rm["class"])})</text>')
     out.append(f'<text x="10" y="20" font-size="14" fill="#c00000">{escape(region["region_id"])}: machine overlay '
                f'(MACHINE_ONLY) - green ROOM, yellow MIXED, red MERGED, grey UNLABELLED, dark grey SHAFT; blue hatch '
-               f'VOID (never floor); dashed green: cells taken in through an open passage; orange stair treads (dashed: '
+               f'VOID (never floor); dashed blue: void of the plan above (double height); dashed green: cells taken in '
+               f'through an open passage; dashed magenta: drawn lines '
+               f'bounding a zone (inferred finish boundary, confirm); orange stair treads (dashed: '
                f'seen through a void); wall centrelines by thickness; {len(openings)} openings</text>')
     if fa:
         nf = fa.get("not_floor_m2") or {}

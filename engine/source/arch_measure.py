@@ -4,6 +4,9 @@
         -> {"rooms": [...], "lines": [...], "openings": [...], "unresolved": [...]}
     validate_facts(facts) -> the facts, or FactsError
 
+S5: zones of open spaces (drawn lines) measured as rooms (PROVISIONAL); shared wet doorways counted once; ceilings
+with double height (none under a void above; the ceiling over a void its own line); stair-well ceilings BLOCKED;
+guardrails on open flight sides only; an opening inventory with host wall and height state.
 Rules (rule set 1.5.0, every line names its rule and version):
     floor finish     UP-CER-001  net = the face area, obstructions inside the room (holes) deducted; gross / deductions
                                  kept. Dry, service and circulation rooms: porcelain; wet rooms: wet-room floor tile
@@ -38,7 +41,7 @@ from engine.source import rule_store as RS
 from engine.source import tile_layout as TL
 from engine.source import wall_height as WH
 
-POLICY_ID = "ARCH_MEASURE_V2"
+POLICY_ID = "ARCH_MEASURE_V3"
 RULE_SET = RS.LATEST_APPROVED
 FACTS_SCHEMA = "URBAN_ARCH_FACTS_V1"
 FINISH_KIND = {AR.DRY: "DRY", AR.SERVICE: "DRY", AR.CIRCULATION: "DRY", AR.WET: "WET"}
@@ -196,6 +199,7 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
             if len(keys) == 1:
                 closure_pieces[keys.pop()] = f
     done_pieces = set()
+    wp_door_owner = {}                      # S5: a door between two wet spaces has ONE doorway piece (UP-WP-003)
     for sp in sorted(fr["spaces"], key=lambda s: (-s["area_m2"], s["face_id"])):
         rid = room_id(floor, sp["face_id"])
         en, ar = _names(sp["codes"])
@@ -222,14 +226,20 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                 "evidence": sp.get("evidence") or {}, "fixture_conflict": sp.get("fixture_conflict"),
                 "void_m2": round(sp.get("void_m2") or 0.0, 6), "voids": sp.get("voids") or [],
                 "codes_with_void": sp.get("codes_with_void"), "cells": sp.get("cells") or [],
-                "attached_cells": sp.get("attached_cells") or []}
+                "attached_cells": sp.get("attached_cells") or [], "zone": sp.get("zone"),
+                "double_height_m2": round(sp.get("double_height_m2") or 0.0, 6),
+                "double_height": sp.get("double_height") or []}
         typed_by_evidence = sp.get("label_source") not in (None, "TEXT")
+        zoned = bool(sp.get("zone"))                # S5: a zone of an open space bounded by drawn lines (inference)
+        zone_ln = (sp.get("outer_role_lm") or {}).get("ZONE_LINE", 0.0) + (sp.get("hole_role_lm") or {}).get(
+            "ZONE_LINE", 0.0)
         rooms.append(room)
         ded = [{"what": "obstructions inside the room (columns / shafts)", "m2": round(sp["hole_area_m2"], 6)}] \
             if sp["holes"] else []
         flights = (sp.get("symbols_inside") or {}).get("stair_flights") or ()
         for k, fl in enumerate(flights, 1):
-            sl, su = _stair_lines(ctx, room, rid, floor, k, fl, facts)
+            sl, su = _stair_lines(ctx, room, rid, floor, k, fl, facts,
+                                  walls=(fr.get("walls") or {}).get("walls") or (), u=fr["unit_m"])
             lines += sl
             unresolved += su
         if flights and measured_as_room and sp["codes"] and AR.LEX[sp["codes"][0]][2] == AR.STAIR:
@@ -245,6 +255,17 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                                rule_id="UP-CER-001", notes=q))
             unresolved.append({"room_id": rid, "floor": floor, "item": ec, "reason": q})
             continue
+        if zoned and (measured_as_room or kind in NO_FINISH):
+            unresolved.append({"room_id": rid, "floor": floor, "item": "FIN.FLOOR / zone", "reason": sp["zone_note"]})
+        if kind == AR.STAIR:
+            q = (f"STAIRWELL_CEILING_SCOPE_NOT_ESTABLISHED: the stair enclosure ({sp['area_m2']:.2f} m2) - its ceiling / "
+                 "soffit (the flight soffit, the stair-well ceiling, the landing ceilings) is not in a plan; the section "
+                 "and the ceiling plan decide it")
+            lines.append(_line(ctx, item_code="FIN.CEILING", room=room, element="stairwell ceiling", unit="m2",
+                               net=None, formula="stair-well ceiling / soffit (section)",
+                               inputs={"enclosure_m2": round(sp["area_m2"], 6), "ceiling_type": "STAIRWELL"},
+                               rule_id=None, rfi={"question": q, "unlocks": rid}))
+            unresolved.append({"room_id": rid, "floor": floor, "item": "FIN.CEILING", "reason": q})
         if kind in NO_FINISH:
             ec = "ARCH.EXTERIOR" if kind == AR.EXTERIOR else "ARCH.SPACE"
             lines.append(_line(ctx, item_code=ec, room=room, element="space", unit="m2", net=sp["area_m2"],
@@ -287,17 +308,46 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                                    (", outlined void deducted" if void_m2 > 1e-6 else "") +
                                    (", stair below seen through the opening deducted" if below_m2 > 1e-6 else ""),
                            inputs={"dims": room["dims"]}, rule_id="UP-CER-001",
-                           ev="PROVISIONAL" if typed_by_evidence or att else None,
+                           ev="PROVISIONAL" if typed_by_evidence or att or zoned else None,
                            notes="; ".join(x for x in [
                                ("OPEN_PLAN: " + " + ".join(sp["codes"]) + " share one face (no partition between them); "
                                 "one dry floor finish assumed for the whole space - split it if the finishes differ")
                                if open_plan else "", att_txt, sp.get("issue") or "", sp.get("fixture_conflict") or ""]
+                               + ([] if not zoned or sp.get("zone_note") in (sp.get("issue") or "") else [sp["zone_note"]])
                                if x)))
-        lines.append(_line(ctx, item_code="FIN.CEILING", room=room, element="ceiling", unit="m2", net=sp["area_m2"],
-                           ev="PROVISIONAL", gross=round(sp["gross_outer_m2"], 6),
-                           deductions=[d for d in ded if not d["what"].startswith("stair")],
-                           formula="plan area of the room (the floor face)", inputs={"dims": room["dims"]},
-                           rule_id=None, notes="ceiling type, bulkheads and coves are not in a plan; material BY_SPEC"))
+        # ceilings (S5): one ceiling over every m2 of plan, at the top of the space. The part of the room under the void
+        # of the plan above is double height (its ceiling is the one over that void, on the plan above); the room's
+        # own outlined void carries the double-height ceiling at this level, as its own line
+        dh = sp.get("double_height_m2") or 0.0
+        c_ded = [d for d in ded if d["what"].startswith("obstructions")]
+        if dh > 1e-6:
+            c_ded.append({"what": "under the void of the plan above (double height: its ceiling is the one over the "
+                                  "void, measured on that plan)", "m2": round(dh, 6)})
+        if void_m2 > 1e-6:
+            c_ded.append({"what": "the outlined void of this plan (its double-height ceiling: own line)",
+                          "m2": round(void_m2, 6)})
+        lines.append(_line(ctx, item_code="FIN.CEILING", room=room, element="ceiling", unit="m2",
+                           net=round(max(sp["area_m2"] - void_m2 - dh, 0.0), 6), ev="PROVISIONAL",
+                           gross=round(sp["gross_outer_m2"], 6), deductions=c_ded,
+                           formula="plan area of the room (the floor face)" +
+                                   (" - the part under the void above" if dh > 1e-6 else "") +
+                                   (" - its own void (own line)" if void_m2 > 1e-6 else ""),
+                           inputs={"dims": room["dims"], "ceiling_type": "NORMAL_LEVEL",
+                                   "double_height_below_void_above_m2": round(dh, 6)},
+                           rule_id=None, notes="; ".join(x for x in (
+                               "ceiling type, bulkheads and coves are not in a plan; material BY_SPEC",
+                               "a flight of the plan below seen through the opening: the ceiling over it is this "
+                               "plan's (counted here)" if below_m2 > 1e-6 else "",
+                               "DOUBLE_HEIGHT: " + ", ".join(f"{x['m2']:.2f} m2 under void {x['void_id']} of "
+                                                             f"{x['from_floor']}" for x in sp.get("double_height") or ())
+                               if dh > 1e-6 else "") if x)))
+        if void_m2 > 1e-6:
+            lines.append(_line(ctx, item_code="FIN.CEILING", room=room, element="ceiling over void", unit="m2",
+                               net=round(void_m2, 6), ev="PROVISIONAL", formula="the outlined void of the room (the "
+                               "ceiling of the double-height space, at this plan's ceiling level)",
+                               inputs={"ceiling_type": "DOUBLE_HEIGHT", "voids": sp.get("voids") or []}, rule_id=None,
+                               notes="DOUBLE_HEIGHT_CEILING: the ceiling over the void of a double-height space - its "
+                                     "height, access and type need the section; material BY_SPEC"))
         skirt = runs["wall"] + runs["column"] + runs["window_threshold"]
         sk_notes = (f"door / passage openings not skirted ({runs['door'] + runs['passage']:.2f} m); "
                     f"sill windows skirted ({runs['window_threshold']:.2f} m) - deduct any floor-level glazing")
@@ -344,9 +394,14 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
             wp_floor = round(sp["area_m2"] - stair_m2, 6)
             lines.append(_line(ctx, item_code="FIN.WP.FLOOR", room=room, element="wp_floor", unit="m2", net=wp_floor,
                                formula="room floor face", inputs={"dims": room["dims"]}, rule_id="UP-WP-001",
-                               ev="PROVISIONAL" if typed_by_evidence else None,
-                               notes=sp.get("issue") if typed_by_evidence else ""))
+                               ev="PROVISIONAL" if typed_by_evidence or zoned else None,
+                               notes=sp.get("issue") if typed_by_evidence or zoned else ""))
+            shared_doors = []
             for d in doors:
+                if d["opening_id"] in wp_door_owner:          # already the doorway piece of the wet space beyond
+                    shared_doors.append(f"{d['opening_id']} (counted with {wp_door_owner[d['opening_id']]})")
+                    continue
+                wp_door_owner[d["opening_id"]] = rid
                 lines.append(_line(ctx, item_code="FIN.WP.DOORWAY", room=room, element=f"doorway {d['opening_id']}",
                                    unit="m2", net=round(d["width_m"] * d["wall_t_m"], 6),
                                    formula="door width x wall thickness", rule_id="UP-WP-003",
@@ -381,11 +436,14 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                                net=round(runs["perimeter"] * up, 6),
                                formula=f"one-sided boundary incl. doorways x {up:g} m (no door deduction)",
                                inputs={"perimeter_lm": round(runs["perimeter"], 6), "upturn_h_m": up},
-                               rule_id="UP-WP-002", notes="DOORWAY_UPTURN_DETAIL_REQUIRED" if doors or sp["closure_ids"]
-                               else ""))
+                               rule_id="UP-WP-002", notes="; ".join(x for x in (
+                                   "DOORWAY_UPTURN_DETAIL_REQUIRED" if doors or sp["closure_ids"] else "",
+                                   ("SHARED_WET_DOORWAY: the doorway piece of door(s) " + ", ".join(shared_doors) +
+                                    " is counted once, with the other wet space (UP-WP-003)") if shared_doors else "")
+                                   if x)))
         hs = heights(floor, lvl, floor_above_level_m, facts)
         oh = (facts or {}).get("opening_heights") or {}
-        run = runs["perimeter"]
+        run = runs["perimeter"] - zone_ln               # a drawn zone line has no wall: no wall finish along it
         for tr, code in (("PLASTER", "FIN.PLASTER"), ("PAINT", "FIN.PAINT"), ("WALL_TILE", "FIN.WALL.TILE")):
             if (tr == "WALL_TILE") != wet and tr != "PLASTER":
                 continue
@@ -434,12 +492,24 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
         lines += sl
         unresolved += su
     openings = []
+    oh_facts = (facts or {}).get("opening_heights") or {}
     for o in fr["openings"]:
         code = {"DOOR": "ARCH.DOOR", "WINDOW": "ARCH.WINDOW", "PASSAGE": "ARCH.PASSAGE"}[o["kind"]]
         host = [r["room_id"] for r in rooms if o["opening_id"] in r["doors"] + r["windows"] + r["passages"]]
+        hh0 = oh_facts.get(o["kind"])
+        w_id = _host_wall(o, (fr.get("walls") or {}).get("walls") or (), fr["unit_m"])
         rec = {"opening_id": o["opening_id"], "floor": floor, "kind": o["kind"], "width_m": round(o["width_m"], 4),
                "wall_t_m": round(o["wall_t_m"], 4), "rooms": host, "door_symbol": o.get("door_symbol"),
-               "jambs": [o["start_jamb"], o["end_jamb"]]}
+               "jambs": [o["start_jamb"], o["end_jamb"]],
+               # S5 inventory: host wall, type, height / area state and the evidence of the kind (a swing gives a
+               # width and a hand, never a height)
+               "host_wall": w_id, "type": ("DOUBLE_DOOR" if o.get("door_leaves") else "SWING_DOOR") if o["kind"] ==
+               "DOOR" else ("WINDOW" if o["kind"] == "WINDOW" else "PASSAGE_OR_ARCHWAY"), "material": "BY_SCHEDULE",
+               "height_m": hh0["value_m"] if hh0 else None, "height_state": "FACT" if hh0 else "NOT_ESTABLISHED",
+               "area_m2": round(o["width_m"] * hh0["value_m"], 6) if hh0 else None,
+               "evidence": {"door_symbol": o.get("door_symbol"), "door_leaves": o.get("door_leaves"),
+                            "glazing_lm": o.get("glazing_m"), "marks": o.get("marks")},
+               "status": "WIDTH_MEASURED" + ("" if hh0 else "_HEIGHT_NOT_ESTABLISHED")}
         openings.append(rec)
         pseudo = {"room_id": host[0] if host else f"{floor}-EXT", "floor": floor,
                   "name_en": " | ".join(r["name_en"] for r in rooms if r["room_id"] in host) or "exterior",
@@ -457,6 +527,25 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                                "reason": "DOOR_CLOSURE_UNRESOLVED: " + st.get("why", "")})
     return {"policy": POLICY_ID, "floor": floor, "rooms": rooms, "lines": lines, "openings": openings,
             "unresolved": unresolved, "counts": dict(Counter(r["class"] for r in rooms))}
+
+
+def _host_wall(o, walls, unit_m):
+    """the wall band an opening is cut in: the wall whose centreline runs along the opening (parallel) through its
+    middle, within half the thicker of the two; None when the gap is not in one band (a wall end, a column)."""
+    (ux, uy), (nx, ny) = o["u"], o["n"]
+    m = (ux * (o["s0"] + o["s1"]) / 2 + nx * (o["o0"] + o["o1"]) / 2,
+         uy * (o["s0"] + o["s1"]) / 2 + ny * (o["o0"] + o["o1"]) / 2)
+    best = None
+    for w in walls:
+        (ax, ay), (bx, by) = w["centreline"]
+        L = math.hypot(bx - ax, by - ay)
+        if L <= 0 or abs((bx - ax) * uy - (by - ay) * ux) / L > 0.01:
+            continue
+        reach = max(w["t_m"], abs(o["o1"] - o["o0"]) * unit_m) / 2 / unit_m + 0.005 / unit_m
+        d = AR._dist_point_seg(m, (ax, ay), (bx, by))
+        if d <= reach and (best is None or d < best[0]):
+            best = (d, w["wall_id"])
+    return best[1] if best else None
 
 
 def _wall_lines(ctx, floor, W, facts):
@@ -517,7 +606,36 @@ def _stacked(fl):
             "next storey's flight (a stair core) - if it is the same stair seen from above, deduct it")
 
 
-def _stair_lines(ctx, room, rid, floor, k, fl, facts):
+RAIL_WALL_GAP_M = 0.15                # a flight side this close to a wall face (most of its length) is a wall side
+RAIL_WALL_SHARE = 0.8
+
+
+def flight_sides(fl, walls, u):
+    """the two long sides of a flight (straight: the stringers from the first to the last tread line; curved: the inner
+    and the outer edge) and whether each runs along a wall face (UP-STAIR-012: a guardrail only on an open side).
+    -> [{"side", "plan_lm", "kind": WALL | OPEN}]"""
+    fp = fl["footprint"]
+    if fl["kind"] == "RADIAL":
+        n = len(fp) // 2
+        paths = [("inner", fp[:n]), ("outer", fp[n:][::-1])]
+    else:
+        paths = [("side_a", [fp[3], fp[0]]), ("side_b", [fp[1], fp[2]])]
+    out = []
+    for name, pts in paths:
+        plan = sum(math.dist(a, b) for a, b in zip(pts, pts[1:])) * u
+        samples = []
+        for a, b in zip(pts, pts[1:]):
+            samples += [(a[0] + t * (b[0] - a[0]), a[1] + t * (b[1] - a[1])) for t in (0.1, 0.3, 0.5, 0.7, 0.9)]
+        near = 0
+        for q in samples:
+            if any(AR._dist_point_seg(q, *w["centreline"]) * u <= w["t_m"] / 2 + RAIL_WALL_GAP_M for w in walls):
+                near += 1
+        kind = "WALL" if samples and near >= RAIL_WALL_SHARE * len(samples) else "OPEN"
+        out.append({"side": name, "plan_lm": round(plan, 4), "kind": kind})
+    return out
+
+
+def _stair_lines(ctx, room, rid, floor, k, fl, facts, walls=(), u=1.0):
     """the finish lines of one drawn flight: tread marble (each tread its own polygon), the commercial step basis,
     the visible riser (needs the riser height) and the sloping flight length. A flight that repeats a flight of the
     plan below is exposure (low 0) until a reviewer says which it is."""
@@ -575,14 +693,27 @@ def _stair_lines(ctx, room, rid, floor, k, fl, facts):
              (" on the walking line (mid radius)" if fl["kind"] == "RADIAL" else ""), None,
              {"riser_m": R["value_m"], "riser_authority": R.get("authority")},
              "the railing / handrail adds its end extensions by detail (not in a plan)")
+        sides = flight_sides(fl, walls, u)
+        rise = treads * R["value_m"]
+        opn = [x for x in sides if x["kind"] == "OPEN"]
+        if opn:
+            emit("FIN.RAILING", "lm", sum(math.hypot(x["plan_lm"], rise) for x in opn),
+                 "per open side: sqrt(plan path^2 + rise^2) (UP-STAIR-012; a curved side along its own radius)",
+                 "UP-STAIR-012", {"sides": sides, "rise_m": round(rise, 4)},
+                 "end extensions, newels and landing / void-edge rails by detail; a wall side takes no guardrail "
+                 "(a wall-mounted handrail only where shown or specified: UP-STAIR-013 - none shown)")
     else:
         q = (f"STAIR_RISER_NOT_ESTABLISHED: flight {k} ({fl['kind'].lower()}, {fl['tread_lines']} tread lines, going "
              f"{fl['going_m']:.3f} m, width {fl['width_m']:.2f} m, run {fl['run_m']:.2f} m) - the visible riser and the "
              "sloping length need the riser height (section / riser count of every flight between the two levels)")
-        for code, unit, f_ in (("FIN.MARBLE.RISER", "m2", "sum of riser widths x (riser height - tread marble thickness)"),
-                               ("FIN.STAIR.FLIGHT", "lm", "pitch line nosing to nosing: hypot(run, treads x riser)")):
+        sides = flight_sides(fl, walls, u)
+        rails = [("FIN.RAILING", "lm", "per open side: sqrt(plan path^2 + rise^2) (UP-STAIR-012)")] \
+            if any(x["kind"] == "OPEN" for x in sides) else []
+        for code, unit, f_ in [("FIN.MARBLE.RISER", "m2", "sum of riser widths x (riser height - tread marble thickness)"),
+                               ("FIN.STAIR.FLIGHT", "lm", "pitch line nosing to nosing: hypot(run, treads x riser)")] + rails:
             lines.append(_line(ctx, item_code=code, room=room, element=el, unit=unit, net=None, formula=f_,
-                               inputs=inp, rule_id="UP-STAIR-003" if code == "FIN.MARBLE.RISER" else None,
+                               inputs=dict(inp, sides=sides) if code == "FIN.RAILING" else inp,
+                               rule_id={"FIN.MARBLE.RISER": "UP-STAIR-003", "FIN.RAILING": "UP-STAIR-012"}.get(code),
                                rfi={"question": q, "unlocks": rid}))
         unresolved.append({"room_id": rid, "floor": floor, "item": f"FIN.MARBLE.RISER / FIN.STAIR.FLIGHT {el}",
                            "reason": q})
@@ -630,10 +761,15 @@ FLAG_RULES = (
      "confirm that the flight on the upper plan is the stair below seen through the void (counted once)"),
     (r"^STAIR_STACKED_FLIGHT_ASSUMED", "REVIEW", "arch_rooms.cross_plan_flights",
      "confirm that the flight is the next storey's own flight (a stair core), not the stair below seen from above"),
+    (r"^STAIRWELL_CEILING_SCOPE_NOT_ESTABLISHED", "SOURCE", "arch_measure.measure",
+     "give the stair-well ceiling / soffit scope from the section and the reflected ceiling plan"),
     (r"^STAIR_LANDING_POLYGON_NOT_ESTABLISHED", "SOURCE", "arch_measure._landing",
      "draw / give the landing outline (or the stair-well outline) of the stair enclosure"),
     (r"^BLOCK_WALL_NOT_ESTABLISHED", "SOURCE", "arch_measure._wall_lines",
      "give the wall material by thickness (legend / specification) and the block height (slab soffit / beam depth)"),
+    (r"^ZONE_FROM_DRAWN_LINES", "REVIEW", "arch_rooms.zone_partition",
+     "confirm that the drawn line(s) bound a floor-finish zone (a finish change, threshold, planter or counter edge), "
+     "or draw the boundary as a finish hatch / on a finish layer"),
     (r"^ATTACHED_THROUGH_OPEN_PASSAGE", "REVIEW", "arch_rooms.open_passages",
      "confirm the unlabelled alcove / vestibule belongs to this room's floor, or draw / name its own boundary"),
     (r"^VOID_EXTENT_UNRESOLVED", "SOURCE", "arch_rooms.void_outlines",
@@ -684,8 +820,15 @@ def flag(rec, *, drawing, region=None, room=None):
 
 def policy_record():
     return {"policy_id": POLICY_ID, "rule_set": RULE_SET, "facts_schema": FACTS_SCHEMA,
+            "s5": ["a zone of an open space (drawn lines) is measured as a room, PROVISIONAL and flagged; no wall "
+                   "finish along a drawn zone line", "a door between two wet spaces has one doorway piece (UP-WP-003)",
+                   "ceilings: none under the void of the plan above (double height); the ceiling over this plan's own "
+                   "void is its own DOUBLE_HEIGHT line; a stair enclosure's ceiling is BLOCKED until the section",
+                   "a guardrail only on a flight's open side (UP-STAIR-012), sloping; no wall handrail unless shown",
+                   "every opening names its host wall band, type and height state (a swing never gives a height)"],
             "never": ["a wall height from a floor-to-floor interval alone", "a constant wall-tile height",
-                      "a finish on a merged / unlabelled space", "an opening height that is not sourced"]}
+                      "a finish on a merged / unlabelled space", "an opening height that is not sourced",
+                      "a doorway piece counted twice", "a ceiling counted on two plans"]}
 
 
 def materials(result, facts=None):

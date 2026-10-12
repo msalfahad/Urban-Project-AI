@@ -674,6 +674,7 @@ def _arch_sheets(wb, arch):
            {c: "0.000" for c in range(7, 17)})
     if arch.get("floor_areas"):
         _floor_areas_sheet(wb, arch["floor_areas"])
+    _evidence_sheet(wb, arch)
     _table(wb, "OPENINGS", "every jambed wall-band opening; DOOR = a door symbol hinged at the gap, WINDOW = glazing "
            "inside the gap, PASSAGE = neither", ["FLOOR", "OPENING ID", "KIND", "WIDTH M", "WALL THICKNESS M", "ROOMS",
                                                  "DOOR SYMBOL", "JAMBS"],
@@ -697,6 +698,41 @@ FLOOR_CATEGORY_TEXT = {
     "STAIR_LANDINGS_BOUND": "stair spaces less their treads (an upper bound of the landings)",
     "STAIR_BELOW_SEEN": "a flight of the plan below seen through an opening (counted on the plan below)",
     "EXTERNAL": "balcony / terrace / garden / pool / roof faces (kept apart)"}
+
+
+def _evidence_sheet(wb, arch):
+    """SOURCE EVIDENCE (M9 S5): what the geometry decisions rest on - the zones of each open space (the drawn lines
+    kept, by layer), the voids carried onto the plan below and what corroborates them, the shafts, and the boundary
+    pieces the engine added (repair log counts). Inferences are named as such."""
+    rows = []
+    for fa in arch.get("floor_areas") or ():
+        for z in fa.get("zones") or ():
+            rows.append([fa["floor"], "ZONES OF AN OPEN SPACE", z["parent_face_id"], " + ".join(z["parent_codes"]),
+                         z["state"], z.get("area_m2"), f"{z.get('candidate_lines', 0)} drawn lines inside; "
+                         f"{z.get('symbol_lines', 0)} symbol lines and {z.get('through_lines', 0)} lines through the "
+                         f"walls excluded; kept: {', '.join(z.get('kept_lines') or ()) or '-'}",
+                         "INFERENCE (PROVISIONAL): a drawn line is not stated to be a finish boundary"])
+            for x in z.get("zones") or ():
+                rows.append([fa["floor"], "  zone", x["face_id"], " + ".join(x["codes"]) or "-", x["class"],
+                             x["area_m2"], "bounded by drawn line(s) " + (", ".join(x["lines"]) or "-"), ""])
+    for d in (arch.get("run") or {}).get("double_height") or ():
+        rows.append([d["onto"], "VOID OF THE PLAN ABOVE", d["void_id"] + " (" + d["floor"] + ")", "", d["state"],
+                     sum(x["m2"] for x in d.get("in_spaces") or ()),
+                     "aligned on the column grid" + (f" ({d['offset']['votes']} columns)" if d.get("offset") else "") +
+                     "; corroborated by: " + (", ".join(d.get("corroborated_by") or ()) or "nothing on the lower plan"),
+                     "double height: no ceiling at this level under the void"])
+    for sh in (arch.get("run") or {}).get("stacked_shafts") or ():
+        rows.append([" / ".join(sh["floors"]), "SHAFT (STACKED FOOTPRINT)", ", ".join(sh["face_ids"]), "SHAFT",
+                     "REVIEW", sh["area_m2"], "the same doorless footprint on every plan listed", ""])
+    for r in arch.get("regions") or ():
+        rp = r.get("repairs") or {}
+        if rp.get("counts"):
+            rows.append([r["floor"], "BOUNDARY PIECES ADDED", r["region_id"], "", "LOGGED", None,
+                         ", ".join(f"{k} x{v}" for k, v in sorted(rp["counts"].items())),
+                         "never: " + rp.get("never", "")])
+    _table(wb, "SOURCE EVIDENCE", "what each geometry decision rests on (zones, voids carried down, shafts, added "
+           "boundary pieces); an inference is named as one", ["FLOOR", "WHAT", "ID", "WORDS", "STATE", "M²", "EVIDENCE",
+                                                             "NOTE"], rows, {6: "0.000"})
 
 
 def _floor_areas_sheet(wb, floors):

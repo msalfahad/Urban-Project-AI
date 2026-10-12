@@ -33,6 +33,8 @@ This reader is used by the architectural route only:
 
 from __future__ import annotations
 
+import re
+
 import math
 
 
@@ -117,9 +119,17 @@ def _stem(font):
     return f[:-4] if f.endswith(".shx") or f.endswith(".ttf") else f
 
 
+_DXF_UNICODE = re.compile(r"\\[Uu]\+([0-9A-Fa-f]{4})")
+
+
 def decode_text(value, font):
-    """-> (unicode text, state) for one text drawn in `font`."""
+    """-> (unicode text, state) for one text drawn in `font`. S5: a text of a pre-2007 DXF stores every character
+    outside the drawing code page as a \\U+XXXX escape (the DXF rule); it is decoded exactly (state
+    DXF_UNICODE_ESCAPE; the raw text is kept by the caller)."""
     st = _stem(font)
+    if _DXF_UNICODE.search(value):
+        value = _DXF_UNICODE.sub(lambda m: chr(int(m.group(1), 16)), value)
+        return value, "DXF_UNICODE_ESCAPE"
     if any("\u0600" <= ch <= "\u06ff" for ch in value) or not any(c.isalpha() for c in value):
         return value, "UNICODE"
     if any(st.startswith(k) for k in KEYBOARD_SHX):

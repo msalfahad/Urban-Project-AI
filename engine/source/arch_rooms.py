@@ -20,8 +20,12 @@ Pipeline (each step an existing engine where one exists):
     3b zones        S4: a clear passage is not a boundary - unlabelled cells reached through clear passages from one
                     labelled room belong to it (open_passages, then a second TS01 pass without those thresholds);
                     cells shared by several rooms, or larger than half the room, stay apart for review.
+    3b' zones       S5: a MERGED face (words needing different finishes) is split only along lines DRAWN inside it
+                    (zone_partition: TS01 pass 3 on the drawn lines clipped to the face, cells grouped by words and
+                    finish family; PROVISIONAL, flagged); never along an invented wall.
     3c voids        S4: the outlined void (VOID word + X-marked rectangle / void symbol) of each face (void_outlines);
-                    shafts from the same doorless footprint on every storey (stacked_shafts, run level).
+                    shafts from the same doorless footprint on every storey (stacked_shafts, run level). S5: the
+                    void carried onto the plan below (voids_above, run level): double height, ceiling counted once.
     4 classes       ROOM (one room word inside), MIXED (several compatible room words: an open plan), MERGED (wet and
                     dry room words, or an exterior word, inside one face: a boundary is missing), UNLABELLED (a
                     space with no room word), DOORWAY / WALL (thin faces), SLIVER (< MIN_SPACE_M2)
@@ -45,7 +49,7 @@ from engine.source import plane_poly as PP
 from engine.source import stair_geometry as SG
 from engine.source import topology as TP
 
-POLICY_ID = "ARCH_ROOMS_V2"
+POLICY_ID = "ARCH_ROOMS_V3"
 THIN_LIMIT_M = 0.45            # 2A/P below this: a face in the wall thickness (wall mass or a doorway piece)
 MIN_SPACE_M2 = 1.0
 HINGE_AT_GAP_M = 0.30
@@ -316,7 +320,8 @@ def _faces_of(arr, sites, texts, unit_m, eps):
         codes = sorted({c for c, _ in words})
         thin = per > 0 and 2 * area / per < THIN_LIMIT_M
         role_len = _one_sided_roles(arr, st["cycle"], unit_m)
-        thr_len = sum(v for r, v in role_len.items() if r.endswith("_THRESHOLD") or r == "DOOR_CLOSURE")
+        thr_len = sum(v for r, v in role_len.items() if r.endswith("_THRESHOLD") or r in ("DOOR_CLOSURE",
+                                                                                        "ZONE_LINE"))
         if "WALL_CAP" in role_len:                       # a cap bounds a room only across an uncapped wall end
             role_len["WALL"] = role_len.get("WALL", 0.0) + role_len.pop("WALL_CAP")
         kinds = {LEX[c][2] for c in codes}
@@ -350,6 +355,10 @@ def _faces_of(arr, sites, texts, unit_m, eps):
                       "closure_ids": sorted({sid for sid in st["outer_boundary_source_ids"] if sid.startswith("CLOSURE|")}),
                       "interior_stub_lm": st["interior_stub_length"] * unit_m,
                       "undecoded_texts": sum(1 for t in inside if t.get("encoding") == "SHX_UNMAPPED")})
+        zl = sorted({x for x in st["outer_boundary_source_ids"] + st["hole_boundary_source_ids"]
+                     if x.startswith("ZONE|")})
+        if zl:
+            faces[-1]["zone_line_ids"] = zl
     return faces
 
 
@@ -398,6 +407,16 @@ def _issues(faces):
                           "finish (marble), a flight seen through a void is counted on the plan below" + sym_txt)
         if f.get("void_note"):
             f["issue"] = (f["void_note"] + "; " + f["issue"]) if f.get("issue") else f["void_note"]
+        z = f.get("zone")
+        if z:
+            lay = sorted({x["layer"] for x in z["lines"]})
+            note = (f"ZONE_FROM_DRAWN_LINES: part of the open space {' + '.join(z['parent_codes'])} bounded by "
+                    f"{len(z['lines'])} drawn line(s) that are not walls (layer(s) {', '.join(lay)}) - a plan does not "
+                    "say a line is a finish boundary; confirm the zone" +
+                    (f"; shared between {' + '.join(z['shared_between'])} (no drawn line separates it from either)"
+                     if z.get("shared_between") else ""))
+            f["zone_note"] = note
+            f["issue"] = (f["issue"] + "; " + note) if f.get("issue") else note
 
 
 LABELLED = ("ROOM", "MIXED", "MERGED")
@@ -499,6 +518,335 @@ def open_passages(cells, ops_by_id):
     return drop, {"attached": attached, "shared": shared, "opening_line_splits": splits, "physical_regions": regions}
 
 
+# S5 - zones of an open space from DRAWN lines. A MERGED face holds room words that need different finishes (a wet
+# or an exterior word with dry ones): a boundary is missing. It is split only along lines DRAWN inside it, never along
+# an invented wall: the drawn lines of the non-structural layers (symbols excluded) and the face boundary form its
+# atomic cells (a TS01 pass, the lines clipped to the face so no other face changes); the cells are grouped by the room
+# words / tags / fixtures they hold; a drawn line that separates two groups bounds a zone. A zone is an inference
+# (PROVISIONAL, flagged): a plan does not say that a line is a finish boundary.
+ZONE_MIN_M = 0.10                 # a piece of drawn line shorter than this inside the face is ignored
+ZONE_SYMBOL_PAD_M = 0.02          # a line within this of a stair footprint / an X-marked rectangle belongs to it
+ZONE_AREA_TOL_M2 = 1e-4           # the zones partition the face: the sum of their areas is the face area within this
+ZONE_SEPARATORS = ("DOORWAY", "WALL", "SLIVER")   # thin / small cells: a threshold strip, never a zone of its own
+ZONE_OUTSIDE_MAX_M = 0.45         # a line running further than this outside the face (through a wall: a section cut, a
+                                  # grid line, a dimension) is not a floor line of the face (BAND_T_M's widest wall)
+ZONE_FAMILY = {DRY: DRY, SERVICE: DRY, CIRCULATION: DRY, STAIR: DRY, WET: WET, EXTERIOR: EXTERIOR, VOID: VOID,
+               SHAFT: SHAFT}      # the finish a room kind takes: a zone boundary is needed only between families
+
+
+def _family(codes):
+    fam = {ZONE_FAMILY[LEX[c][2]] for c in codes}
+    return fam.pop() if len(fam) == 1 else None
+
+
+def _clip_inside(a, b, poly, holes, tol):
+    """the pieces of segment a-b strictly inside a polygon with holes (pieces lying on the boundary dropped)."""
+    rings = [poly] + list(holes)
+    dx, dy = b[0] - a[0], b[1] - a[1]
+    ts = {0.0, 1.0}
+    for ring in rings:
+        for i in range(len(ring)):
+            p, q = ring[i - 1], ring[i]
+            ex, ey = q[0] - p[0], q[1] - p[1]
+            d = dx * ey - dy * ex
+            if abs(d) <= 1e-12 * math.hypot(dx, dy) * math.hypot(ex, ey):
+                continue
+            t = ((p[0] - a[0]) * ey - (p[1] - a[1]) * ex) / d
+            u = ((p[0] - a[0]) * dy - (p[1] - a[1]) * dx) / d
+            if -1e-9 <= t <= 1 + 1e-9 and -1e-9 <= u <= 1 + 1e-9:
+                ts.add(min(max(t, 0.0), 1.0))
+    ts = sorted(ts)
+    out = []
+    for t0, t1 in zip(ts, ts[1:]):
+        if t1 - t0 < 1e-12:
+            continue
+        m = (a[0] + dx * (t0 + t1) / 2, a[1] + dy * (t0 + t1) / 2)
+        if not MD.point_in_poly(m[0], m[1], poly) or any(MD.point_in_poly(m[0], m[1], h) for h in holes):
+            continue
+        if min(_dist_point_seg(m, r[i - 1], r[i]) for r in rings for i in range(len(r))) < tol:
+            continue
+        if out and math.dist(out[-1][1], (a[0] + dx * t0, a[1] + dy * t0)) < 1e-9:
+            out[-1] = (out[-1][0], (a[0] + dx * t1, a[1] + dy * t1))     # one piece across a vertex it only touches
+        else:
+            out.append(((a[0] + dx * t0, a[1] + dy * t0), (a[0] + dx * t1, a[1] + dy * t1)))
+    return out
+
+
+def _on_seg(s, p, q, pad):
+    return _dist_point_seg(s["a"], p, q) <= pad and _dist_point_seg(s["b"], p, q) <= pad
+
+
+def _symbol_lines(f, segs, unit_m):
+    """the drawn lines inside a face that belong to a symbol, never a zone boundary: a stair flight (treads, stringers:
+    on or inside its footprint) and an X-marked rectangle / void symbol (sides and diagonals: the slab opening drawn
+    over the floor). -> (ids, X-marked rectangles found)"""
+    pad = ZONE_SYMBOL_PAD_M / unit_m
+    sym = f.get("symbols_inside") or {}
+    foots = [fl["footprint"] for fl in sym.get("stair_flights") or ()]
+    rects = [list(v["corners"]) for v in sym.get("void_symbols") or ()]
+    for s in segs:
+        if math.dist(s["a"], s["b"]) * unit_m < 2 * VOID_MIN_SIDE_M:
+            continue
+        xr = x_rect_at(((s["a"][0] + s["b"][0]) / 2, (s["a"][1] + s["b"][1]) / 2), segs, unit_m)
+        if xr and s["id"] in (xr["diagonal"], xr["second"]) and \
+                not any(all(min(math.dist(c, d) for d in r) < pad for c in xr["corners"]) for r in rects):
+            rects.append(list(xr["corners"]))
+    out = set()
+    for s in segs:
+        m = ((s["a"][0] + s["b"][0]) / 2, (s["a"][1] + s["b"][1]) / 2)
+        for fp in foots:
+            near = [min(_dist_point_seg(e, fp[i - 1], fp[i]) for i in range(len(fp))) for e in (s["a"], s["b"], m)]
+            if all(MD.point_in_poly(e[0], e[1], fp) or d <= pad for e, d in zip((s["a"], s["b"], m), near)):
+                out.add(s["id"])
+        for r in rects:
+            lines = [(r[i - 1], r[i]) for i in range(4)] + [(r[0], r[2]), (r[1], r[3])]
+            if any(_on_seg(s, p, q, pad) for p, q in lines):
+                out.add(s["id"])
+    return out, rects
+
+
+def zone_candidates(f, ents, roles, unit_m):
+    """the drawn lines that may bound zones of face f: the segments of the non-structural layers (no fixture layer)
+    with a piece strictly inside the face, symbol lines excluded, clipped to the face (each piece ends on the face
+    boundary or inside it). -> ([{"id", "source", "layer", "a", "b"}], {"symbol_lines", "x_rects"})"""
+    poly, holes = f["polygon"], f["hole_polygons"]
+    xs, ys = [p[0] for p in poly], [p[1] for p in poly]
+    box = (min(xs), min(ys), max(xs), max(ys))
+    segs = [s for s in ents["segments"] if roles.get(s["layer"], AP.OTHER) == AP.OTHER
+            and not any(re.search(p, DM.normalize(s["layer"]).upper()) for p, _ in FIXTURE_LAYERS)
+            and max(s["a"][0], s["b"][0]) >= box[0] and min(s["a"][0], s["b"][0]) <= box[2]
+            and max(s["a"][1], s["b"][1]) >= box[1] and min(s["a"][1], s["b"][1]) <= box[3]]
+    tol = 1e-3 / unit_m
+    pieces = {}
+    through = 0
+    for s in segs:
+        pc = _clip_inside(s["a"], s["b"], poly, holes, tol)
+        if not pc:
+            continue
+        if (math.dist(s["a"], s["b"]) - sum(math.dist(p, q) for p, q in pc)) * unit_m > ZONE_OUTSIDE_MAX_M:
+            through += 1
+            continue
+        pc = [(p, q) for p, q in pc if math.dist(p, q) * unit_m >= ZONE_MIN_M]
+        if pc:
+            pieces[s["id"]] = (s, pc)
+    sym, rects = _symbol_lines(f, [s for s, _ in pieces.values()], unit_m)
+    out = []
+    for sid, (s, pc) in sorted(pieces.items()):
+        if sid in sym:
+            continue
+        for k, (p, q) in enumerate(pc):
+            out.append({"id": f"ZONE|{sid}|{k}", "source": sid, "layer": s["layer"], "a": p, "b": q})
+    return out, {"symbol_lines": len(sym), "x_rects": rects, "through_lines": through}
+
+
+def _zone_groups(zc, pairs, outward=frozenset()):
+    """group the atomic cells of one face: cells with the same room words join, then the cells of one finish family;
+    a component of word-less cells joins the one group it touches when it opens nowhere else (no door / passage to
+    another space: `outward`); a threshold strip / sliver joins the group on all its sides. `pairs` are the cells
+    meeting along a drawn line or through an opening inside the face. -> (root of each cell, {root: codes} for
+    word-less components touching several groups (shared), the functional root of each cell)"""
+    cell = {c["face_id"]: c for c in zc}
+    parent = {k: k for k in cell}
+
+    def find(x):
+        while parent[x] != x:
+            parent[x] = parent[parent[x]]
+            x = parent[x]
+        return x
+    nb = defaultdict(set)
+    for a, b in pairs:
+        nb[a].add(b)
+        nb[b].add(a)
+    coded = {k for k, c in cell.items() if c["codes"] and c["class"] not in ZONE_SEPARATORS}
+    sep = {k for k, c in cell.items() if c["class"] in ZONE_SEPARATORS}
+    for a, b in pairs:
+        if a in coded and b in coded and cell[a]["codes"] == cell[b]["codes"]:
+            parent[find(a)] = find(b)
+    functional = {k: find(k) for k in cell}          # the functional zones (room words), before the finish families
+    for a, b in pairs:                               # one finish region per family: dry rooms of an open plan stay one
+        fa, fb = _family(cell[a]["codes"]) if a in coded else None, _family(cell[b]["codes"]) if b in coded else None
+        if fa and fa == fb:
+            parent[find(a)] = find(b)
+    shared = {}
+    seen = set()
+    for k in sorted(cell):
+        if k in coded or k in sep or k in seen:
+            continue
+        comp, stack = set(), [k]
+        while stack:
+            x = stack.pop()
+            if x in comp:
+                continue
+            comp.add(x)
+            stack += [y for y in nb[x] if y not in coded and y not in sep]
+        seen |= comp
+        roots = {find(y) for x in comp for y in nb[x] if y in coded}
+        opens = bool(comp & outward)
+        if len(roots) == 1 and not opens:            # enclosed but for drawn lines toward one zone: part of it
+            r = roots.pop()
+            for x in comp:
+                parent[find(x)] = r
+        else:
+            r = find(next(iter(sorted(comp))))
+            for x in comp:
+                parent[find(x)] = r
+            if len(roots) > 1:                       # touching several zones: their words, never one of them
+                shared[r] = sorted({c for g in roots for x in cell if find(x) == g for c in cell[x]["codes"]})
+    for k in sorted(sep):
+        roots = {find(y) for y in nb[k] if y not in sep}
+        if len(roots) == 1 and k not in outward:
+            parent[find(k)] = roots.pop()
+    return {k: find(k) for k in cell}, shared, functional
+
+
+def zone_partition(faces, items, ents, roles, unit_m, eps, texts, region_id, ops_by_id=None):
+    """S5: split each MERGED face along the drawn lines that separate its labelled parts (see ZONE_*).
+    -> (faces, records): the faces of the plan with each split face replaced by its zones, and one record per MERGED
+    face (split or not, and why)."""
+    merged = [f for f in faces if f["class"] == "MERGED"]
+    records, cand = [], {}
+    for f in merged:
+        cs, info = zone_candidates(f, ents, roles, unit_m)
+        cand[f["face_id"]] = cs
+        records.append({"parent_face_id": f["face_id"], "parent_codes": f["codes"], "area_m2": round(f["area_m2"], 6),
+                        "candidate_lines": len(cs), "symbol_lines": info["symbol_lines"],
+                        "through_lines": info["through_lines"], "x_rects": len(info["x_rects"]),
+                        "state": "NO_DRAWN_LINES" if not cs else None})
+    allc = [c for cs in cand.values() for c in cs]
+    if not allc:
+        return faces, records
+    z_item = {c["id"]: TP.BoundaryItem(c["id"], "SEGMENT", (c["a"][0], c["a"][1], c["b"][0], c["b"][1]), "ZONE_LINE")
+              for c in allc}
+    arr = TP.build(items + list(z_item.values()), eps)
+    sites = TP.sites_of(arr, "ARCH", region_id)
+    cells = _faces_of(arr, sites, texts, unit_m, eps)
+    _symbols(cells, ents, roles, unit_m)
+    sides = defaultdict(set)                      # (zone source, edge) -> the cells on its two sides
+    for st in sites:
+        for cyc in [st["cycle"]] + st["hole_cycles"]:
+            for ei, _ in cyc:
+                for src in arr.edges[ei]["sources"]:
+                    if src.startswith("ZONE|"):
+                        sides[(src, ei)].add(st["site_id"])
+    keep, plan = set(), {}
+    for f, rec in zip(merged, records):
+        if not cand[f["face_id"]]:
+            continue
+
+        def inside(pt, f=f):
+            return MD.point_in_poly(pt[0], pt[1], f["polygon"]) and \
+                not any(MD.point_in_poly(pt[0], pt[1], h) for h in f["hole_polygons"])
+        zc = [c for c in cells if inside(c["point"])]
+        ids = {c["face_id"] for c in zc}
+        if abs(sum(c["area_m2"] for c in zc) - f["area_m2"]) > ZONE_AREA_TOL_M2:
+            rec["state"] = "CELLS_DO_NOT_PARTITION_THE_FACE"
+            continue
+        pairs = [tuple(sorted(v)) for v in sides.values() if len(v) == 2 and v <= ids]
+        thr = defaultdict(lambda: defaultdict(list))         # opening -> threshold side -> (cell, interval)
+        outward = set()
+        for st in sites:
+            if st["site_id"] not in ids:
+                continue
+            for cyc in [st["cycle"]] + st["hole_cycles"]:
+                for ei, _ in cyc:
+                    e = arr.edges[ei]
+                    for x in e["sources"]:
+                        if x.startswith("CLOSURE|"):
+                            outward.add(st["site_id"])
+                        o = (ops_by_id or {}).get(x.split("|")[1]) if x.startswith("THR|") else None
+                        if o and o.get("kind") in ("DOOR", "PASSAGE"):
+                            (ux, uy) = o["u"]
+                            t = sorted(arr.nodes[n][0] * ux + arr.nodes[n][1] * uy for n in (e["n0"], e["n1"]))
+                            thr[o["opening_id"]][x.split("|")[2]].append((st["site_id"], t))
+        for oid, by_side in thr.items():
+            if len(by_side) == 2:                     # both sides of the opening are this face: an inner connection
+                a, b = by_side.values()               # between the cells facing each other across it
+                pairs += sorted({tuple(sorted((x, y))) for x, tx in a for y, ty in b
+                                 if x != y and min(tx[1], ty[1]) - max(tx[0], ty[0]) > 0.01 / unit_m})
+            else:
+                for v in by_side.values():
+                    outward |= {x for x, _ in v}
+        root, shared, functional = _zone_groups(zc, pairs, frozenset(outward))
+        rec["cells"] = len(zc)
+        fz = defaultdict(list)
+        for c in zc:
+            if c["codes"] and c["class"] not in ZONE_SEPARATORS:
+                fz[functional[c["face_id"]]].append(c)
+        rec["functional_zones"] = sorted(({"codes": cs[0]["codes"], "cells": sorted(c["face_id"] for c in cs),
+                                           "area_m2": round(sum(c["area_m2"] for c in cs), 6),
+                                           "label_source": cs[0].get("label_source")} for cs in fz.values()),
+                                          key=lambda z: (z["codes"], z["cells"]))
+        kept = sorted({src for (src, _), v in sides.items() if len(v) == 2 and v <= ids and
+                       len({root[x] for x in v}) == 2})
+        if not kept:
+            rec["state"] = "DRAWN_LINES_DO_NOT_SEPARATE_THE_LABELS"
+            continue
+        keep |= set(kept)
+        rec["state"] = "SPLIT"
+        gcodes = defaultdict(set)
+        for c in zc:
+            if c["codes"] and c["class"] not in ZONE_SEPARATORS:
+                gcodes[root[c["face_id"]]] |= set(c["codes"])
+        for g, cs in shared.items():
+            gcodes[g] = set(cs)
+        plan[f["face_id"]] = (zc, root, {g: sorted(v) for g, v in gcodes.items()}, kept, shared)
+    by_line = {c["id"]: c for c in allc}
+    while keep:
+        arr2 = TP.build(items + [z_item[k] for k in sorted(keep)], eps)
+        out = _faces_of(arr2, TP.sites_of(arr2, "ARCH", region_id), texts, unit_m, eps)
+        _symbols(out, ents, roles, unit_m)
+        bad = [fid for fid in plan if not _apply_zones(out, plan[fid], next(r for r in records
+                                                                              if r["parent_face_id"] == fid), by_line)]
+        if not bad:
+            return out, records
+        for fid in bad:                             # never silently: the split of that face is withdrawn
+            keep -= set(plan.pop(fid)[3])
+    return faces, records
+
+
+def _apply_zones(out, plan, rec, by_line):
+    zc, root, gcodes, kept, shared = plan
+    pid = rec["parent_face_id"]
+    zones = []
+    for z in out:
+        hits = [c for c in zc if MD.point_in_poly(c["point"][0], c["point"][1], z["polygon"]) and
+                not any(MD.point_in_poly(c["point"][0], c["point"][1], h) for h in z["hole_polygons"])]
+        if not hits:
+            continue
+        groups = {root[c["face_id"]] for c in hits}
+        own = [k for k in z.get("zone_line_ids") or () if k in kept]
+        z["zone"] = {"parent_face_id": pid, "parent_codes": rec["parent_codes"],
+                     "cells": sorted(c["face_id"] for c in hits),
+                     "lines": [{"id": k, "source": by_line[k]["source"], "layer": by_line[k]["layer"],
+                                "a": by_line[k]["a"], "b": by_line[k]["b"]} for k in own],
+                     "rule": "DRAWN_LINE_ZONES"}
+        g = next(iter(groups))
+        if not z["codes"] and z["class"] not in ZONE_SEPARATORS and gcodes.get(g):
+            # a word-less part of a zone (cut off by an opening inside the face) or a part shared by several zones:
+            # it takes its zone's words / the words of all the zones it touches - never the nearest one's
+            z["codes"] = gcodes[g]
+            kinds = {LEX[c][2] for c in z["codes"]}
+            z["class"] = "ROOM" if len(z["codes"]) == 1 else (
+                "MERGED" if (WET in kinds and kinds - {WET}) or (EXTERIOR in kinds and kinds - {EXTERIOR}) else "MIXED")
+            z["label_source"] = "ZONE_SHARED" if g in shared else "ZONE_GROUP"
+            if g in shared:
+                z["zone"]["shared_between"] = shared[g]
+        zones.append((z, len(groups)))
+    tot = sum(z["area_m2"] for z, _ in zones)
+    ok = abs(tot - rec["area_m2"]) <= ZONE_AREA_TOL_M2 and all(n == 1 for _, n in zones)
+    if not ok:
+        for z, _ in zones:
+            z.pop("zone", None)
+        rec["state"] = "ZONES_INCONSISTENT_WITHDRAWN"
+        rec.pop("zones", None)
+        return False
+    rec["zones"] = [{"face_id": z["face_id"], "class": z["class"], "codes": z["codes"],
+                     "area_m2": round(z["area_m2"], 6), "lines": [x["source"] for x in z["zone"]["lines"]]}
+                    for z, _ in zones]
+    rec["kept_lines"] = sorted({by_line[k]["source"] for k in kept})
+    return True
+
+
 def spaces(ents, roles, unit_m, *, region_id="ARCH"):
     eps = 0.5e-3 / unit_m
     wall_l = sorted(l for l, r in roles.items() if r == AP.WALL)
@@ -575,6 +923,9 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH"):
         arr = TP.build(items + [t for oid, t in thr_items if oid not in drop] + closures, eps)
         faces = _faces_of(arr, TP.sites_of(arr, "ARCH", region_id), texts, unit_m, eps)
         _symbols(faces, ents, roles, unit_m)
+    # pass 3 (S5): a MERGED face is split only along the lines drawn inside it that separate its labelled parts
+    faces, zones = zone_partition(faces, items + [t for oid, t in thr_items if oid not in drop] + closures, ents,
+                                  roles, unit_m, eps, texts, region_id, by_op)
     for o in ops:
         if o["opening_id"] in drop:
             o["inside_one_floor"] = True                     # an open passage inside one room's floor (not a boundary)
@@ -601,16 +952,30 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH"):
     if unresolved_doors:
         warnings.append(f"DOOR_CLOSURE_UNRESOLVED: {len(unresolved_doors)} door swing(s) close no gap")
     spaces_ = [f for f in faces if f["class"] in ("ROOM", "MIXED", "MERGED", "UNLABELLED")]
+    # S5 repair log: every boundary piece the engine ADDS to the drawn linework, with its geometry (drawing units), the
+    # rule and tolerance that produced it and why; nothing drawn is moved or deleted (no snapping, no healing of ends)
+    repairs = [{"kind": "WALL_CAP", "id": c["id"], "a": c["a"], "b": c["b"], "rule": "wall_caps",
+                "tolerance_m": CAP_TOL_M, "reason": "seal a wall body where one face of the wall ends (the cap lies on "
+                "the drawn segments); never across an opening (both ends on the same wall's two faces)"}
+               for c in caps] + \
+              [{"kind": "DOOR_CLOSURE", "id": c.source_id, "a": c.geometry[:2], "b": c.geometry[2:],
+                "rule": "closures_b" if c.source_id.endswith("|B") else "topology.opening_closures",
+                "tolerance_m": CLOSURE_B_TOL_M if c.source_id.endswith("|B") else None,
+                "reason": "the wall's other face at a door closed by its leaf (Round 5 closure B)"
+                if c.source_id.endswith("|B") else "the door leaf's closed position (a proven door symbol only)"}
+               for c in closures]
     return {"policy": POLICY_ID, "region_id": region_id, "unit_m": unit_m, "spaces": spaces_, "faces": faces,
+            "repairs": repairs,
             "openings": ops,
             "openings_rejected": rej, "openings_by_id": by_op, "doors": swings, "door_status": door_status,
             "plate": plate, "columns": len(cols), "column_boxes": cols, "warnings": warnings,
             "counts": dict(Counter(f["class"] for f in faces)),
             "cells": [{k: c[k] for k in ("face_id", "class", "codes", "area_m2", "point", "opening_ids", "polygon")}
                       for c in cells],
-            "zoning": zoning, "voids": voids,
+            "zoning": zoning, "voids": voids, "zones": zones,
             "arrangement": {"nodes": len(arr.nodes), "edges": len(arr.edges), "sites": len(faces),
-                            "cells": len(cells), "passages_inside_one_floor": len(drop)}}
+                            "cells": len(cells), "passages_inside_one_floor": len(drop),
+                            "zone_lines": sum(len(r.get("kept_lines") or ()) for r in zones)}}
 
 
 CAP_TOL_M = 0.03
@@ -1417,6 +1782,59 @@ def floor_offset(cols_a, cols_b, unit_m):
             "votes": len(ds), "of": min(len(ca), len(cb))}
 
 
+DH_CORROBORATE = 0.9                  # a slab-opening symbol of the lower plan covering this share of the projection
+
+
+def voids_above(floors, unit_m):
+    """double height (S5; Round 5's _void_above): an outlined void of a plan is open to the plan directly below it; the
+    part of each space of the lower plan under the void (the plans aligned on their column grid) has no ceiling at its
+    own level - its ceiling is the one over the void, measured on the plan above.
+    floors: [(floor, column_boxes, faces, voids[, segments])] in storey order. The lower faces get double_height (list)
+    and double_height_m2 in place. A lower plan that draws the same opening (its X-marked rectangle on the projected
+    corners, or its own void outline) corroborates it. -> [{"void_id", "floor", "onto", "offset", "in_spaces",
+    "outside_spaces_m2", "corroborated_by"}]"""
+    out = []
+    for i in range(1, len(floors)):
+        (lo, lcols, lfaces, lvoids, *lsegs), (up, ucols, _uf, uvoids, *_us) = floors[i - 1], floors[i]
+        todo = [v for v in uvoids or () if v.get("state") == "OUTLINED" and v.get("corners")]
+        if not todo:
+            continue
+        o = floor_offset(ucols, lcols, unit_m)
+        for v in todo:
+            rec = {"void_id": v["void_id"], "floor": up, "onto": lo, "area_m2": v.get("area_m2"), "in_spaces": []}
+            if o is None:
+                rec["state"] = "PLANS_NOT_ALIGNED"            # no column grid to carry the void down: not applied
+                out.append(rec)
+                continue
+            win = [((x + o["dx"]) * unit_m, (y + o["dy"]) * unit_m) for x, y in v["corners"]]
+            rec["offset"] = {"dx": o["dx"], "dy": o["dy"], "votes": o["votes"]}
+            for f in lfaces:
+                if f["class"] not in ("ROOM", "MIXED", "MERGED", "UNLABELLED", "SLIVER"):
+                    continue
+                a = PP.region_area_in_convex(f["polygon_m"], f["hole_polygons_m"], win)
+                if a > 0.01:
+                    rec["in_spaces"].append({"face_id": f["face_id"], "m2": round(a, 6)})
+                    f.setdefault("double_height", []).append({"void_id": v["void_id"], "from_floor": up,
+                                                              "m2": round(a, 6)})
+                    f["double_height_m2"] = f.get("double_height_m2", 0.0) + a
+            inside = sum(x["m2"] for x in rec["in_spaces"])
+            rec["outside_spaces_m2"] = round(max((v.get("area_m2") or 0.0) - inside, 0.0), 6)
+            win_d = [(x / unit_m, y / unit_m) for x, y in win]
+            cover = [w["void_id"] for w in lvoids or () if w.get("corners") and v.get("area_m2") and
+                     abs(PP.area(PP.clip_convex([(x * unit_m, y * unit_m) for x, y in w["corners"]], win))) >=
+                     DH_CORROBORATE * v["area_m2"]]
+            if lsegs and lsegs[0]:
+                c = (sum(x for x, _ in win_d) / 4, sum(y for _, y in win_d) / 4)
+                xr = x_rect_at(c, lsegs[0], unit_m)
+                if xr and all(min(math.dist(q, w) for w in xr["corners"]) * unit_m <= VOID_TOL_M for q in win_d):
+                    cover.append("X_RECT_ON_" + lo + ":" + xr["diagonal"])
+            rec["corroborated_by"] = cover                    # e.g. the X-marked slab opening drawn on the lower plan
+            rec["state"] = "APPLIED"
+            rec["window"] = win_d
+            out.append(rec)
+    return out
+
+
 VOID_REACH_M = 1.0                    # a void mark this close to a stair assembly marks it seen through the void
 ASSEMBLY_TOUCH_M = 0.15               # flights whose footprints come this close form one stair assembly
 
@@ -1527,6 +1945,19 @@ def policy_record():
                    "belong to it (second TS01 pass); cells shared by several rooms stay apart for review",
                    "a void is deducted only inside a positive outline (X-marked rectangle / void symbol)",
                    "a small doorless unlabelled footprint repeated on the other plans is a shaft (review)"],
+            "s5": ["a MERGED open space is split only along lines DRAWN inside it (non-structural layers; stair "
+                   "flights, X-marked rectangles, fixture layers and lines running through the walls excluded): the "
+                   "atomic cells (TS01 pass 3, lines clipped to the face) grouped by room words / tags / fixtures and "
+                   "by finish family (dry / wet / exterior); a line is kept only between two groups (PROVISIONAL, "
+                   "ZONE_FROM_DRAWN_LINES)",
+                   "a word-less cell joins the one zone it touches only when it opens nowhere else; one touching "
+                   "several zones takes all their words (never the nearest one's)",
+                   "an outlined void is carried onto the plan below (column grid): the space under it is double "
+                   "height (no ceiling at its level; the ceiling over the void is counted once, on the upper plan)",
+                   "every boundary piece the engine adds (wall caps, door closures) is logged with its rule, "
+                   "tolerance and reason; no drawn entity is moved, extended or snapped"],
+            "zone_min_m": ZONE_MIN_M, "zone_symbol_pad_m": ZONE_SYMBOL_PAD_M, "zone_outside_max_m": ZONE_OUTSIDE_MAX_M,
             "never": ["a closure without a proven door symbol or a jambed wall gap", "a room named from a fixture word",
                       "a merged wet + dry face measured as one finish", "a boundary invented inside an open space",
+                      "a zone split along a line that is not drawn", "a void carried down without a common grid",
                       "a void area guessed without its outline"]}

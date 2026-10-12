@@ -540,3 +540,89 @@ def s4_shaft_plans(offset=(40000.0, 0.0)):
                         swings=sw, columns=[(x + dx, y + dy) for x, y in S4S_COLUMNS])
         plans.append((fl, ents))
     return plans
+
+
+# S5 - an open space split only along lines DRAWN inside it (arch_rooms.zone_partition). One hall (inner face
+# 11.8 x 7.8 m) holds LIVING and DINING words (dry), a GARDEN word in a strip closed by three drawn lines on a floor
+# layer, and a wash corner (a basin block, no word) closed by two drawn lines. Things that must NOT split it: an
+# X-marked rectangle round the DINING word (the slab opening above), a section-cut line running through the walls, a
+# table drawn as a closed rectangle. A small word-less pocket touches both the garden and the hall: it stays
+# unallocated (no nearest-label choice).
+S5_OUTER = [(0, 0), (12200, 0), (12200, 8200), (0, 8200)]
+S5_HALL = {"HALL": [(200, 200), (12000, 200), (12000, 8000), (200, 8000)]}
+S5_WORDS = (("LIVING", (3000, 5000)), ("DINING", (8250, 5250)), ("GARDEN", (6000, 800)))
+S5_LINES = (                                                        # (a, b, layer)
+    ((4000, 1500), (9000, 1500), "A-FLOR"), ((4000, 200), (4000, 1500), "A-FLOR"),      # the garden strip
+    ((9000, 200), (9000, 1500), "A-FLOR"),
+    ((9000, 1500), (10500, 1500), "A-FLOR"), ((10500, 200), (10500, 1500), "A-FLOR"),  # the pocket beside it
+    ((10000, 6000), (10000, 8000), "A-FLOR"), ((10000, 6000), (12000, 6000), "A-FLOR"),  # the wash corner
+    ((7000, 4000), (9500, 4000), "A-FLOR"), ((9500, 4000), (9500, 6500), "A-FLOR"),      # X-marked rectangle
+    ((9500, 6500), (7000, 6500), "A-FLOR"), ((7000, 6500), (7000, 4000), "A-FLOR"),
+    ((7000, 4000), (9500, 6500), "A-FLOR"), ((9500, 4000), (7000, 6500), "A-FLOR"),
+    ((5000, -2000), (5000, 10000), "A-SECT"),                                          # section cut (through walls)
+    ((2000, 3000), (3000, 3000), "A-FURN"), ((3000, 3000), (3000, 4000), "A-FURN"),    # a table
+    ((3000, 4000), (2000, 4000), "A-FURN"), ((2000, 4000), (2000, 3000), "A-FURN"))
+S5_INSERTS = (("WASH", (11000, 7000)),)
+S5_TRUTH = {
+    "face_m2": 11.8 * 7.8,
+    "GARDEN": 5.0 * 1.3,                      # EXTERNAL: no floor finish
+    "WASH_CORNER": 2.0 * 2.0,                 # named from the basin (wet: wet-room tile + waterproofing, flagged)
+    "POCKET": 1.5 * 1.3,                      # touches the garden and the hall: unallocated
+    "OPEN_PLAN": 11.8 * 7.8 - 5.0 * 1.3 - 2.0 * 2.0 - 1.5 * 1.3,   # LIVING + DINING, one dry finish
+}
+
+
+def s5_zones(transform=None):
+    """-> (ents, roles, truth) of the S5 drawn-line zones fixture; `transform` maps every point (metamorphic tests)."""
+    T = transform or (lambda p: (float(p[0]), float(p[1])))
+    ents = _s4_ents(S5_HALL, S5_OUTER, [], texts=S5_WORDS,
+                    extra_segments=[(a, b, layer, None) for a, b, layer in S5_LINES])
+    ents["inserts"] = [{"id": f"I:{k}", "name": n, "layer": "A-FIXT", "x": float(p[0]), "y": float(p[1]),
+                        "box": None, "path": [], "depth": 0, "attribs": {}} for k, (n, p) in enumerate(S5_INSERTS, 1)]
+    if transform:
+        for s in ents["segments"]:
+            s["a"], s["b"] = T(s["a"]), T(s["b"])
+        for t in ents["texts"]:
+            t["x"], t["y"] = T((t["x"], t["y"]))
+        for i in ents["inserts"]:
+            i["x"], i["y"] = T((i["x"], i["y"]))
+    roles = dict(S4_ROLES, **{"A-FLOR": "OTHER", "A-SECT": "OTHER", "A-FURN": "OTHER", "A-TEXT": "OTHER"})
+    return ents, roles, S5_TRUTH
+
+
+# S5 - double height: the same 8 x 6 m room on two plans (four 0.4 m columns inside it, the column grid that aligns
+# the plans); the upper plan marks a 2 x 3 m VOID (word inside an X-marked rectangle), the lower plan draws the same
+# X-marked slab opening without the word. The upper plan is drawn 40 m to the right.
+S5D_ROOM = {"LIVING": [(200, 200), (8200, 200), (8200, 6200), (200, 6200)]}
+S5D_OUTER = [(0, 0), (8400, 0), (8400, 6400), (0, 6400)]
+S5D_COLUMNS = [(600, 600), (7200, 600), (600, 5200), (7200, 5200)]
+S5D_VOID = [(3000, 2000), (5000, 2000), (5000, 5000), (3000, 5000)]
+S5D_TRUTH = {"room_m2": 8.0 * 6.0 - 4 * 0.4 * 0.4, "void_m2": 2.0 * 3.0}
+
+
+def s5_double_height(dx=40000.0):
+    """-> ((ents_lower, ents_upper), roles, truth)."""
+    def plan(off, words):
+        sh = lambda p: (p[0] + off, p[1])                                   # noqa: E731
+        x = [((sh(S5D_VOID[i]), sh(S5D_VOID[(i + 1) % 4])), "A-FLOR") for i in range(4)] + \
+            [((sh(S5D_VOID[0]), sh(S5D_VOID[2])), "A-FLOR"), ((sh(S5D_VOID[1]), sh(S5D_VOID[3])), "A-FLOR")]
+        return _s4_ents({k: [sh(p) for p in v] for k, v in S5D_ROOM.items()}, [sh(p) for p in S5D_OUTER], [],
+                        texts=[(w, sh(p)) for w, p in words], columns=[sh(c) for c in S5D_COLUMNS],
+                        extra_segments=[(a, b, layer, None) for (a, b), layer in x])
+    lower = plan(0.0, (("LIVING", (1500, 3000)),))
+    upper = plan(dx, (("LIVING", (1500, 3000)), ("VOID", (4000, 3500))))
+    return (lower, upper), dict(S4_ROLES, **{"A-FLOR": "OTHER", "A-TEXT": "OTHER"}), S5D_TRUTH
+
+
+# S5 - two wet rooms sharing one door (0.80 m in a 0.20 m wall): ONE doorway piece (UP-WP-003)
+S5W_ROOMS = {"BATH1": [(200, 200), (2200, 200), (2200, 2200), (200, 2200)],
+             "BATH2": [(2400, 200), (4400, 200), (4400, 2200), (2400, 2200)]}
+S5W_OUTER = [(0, 0), (4600, 0), (4600, 2400), (0, 2400)]
+S5W_OPENINGS = [("DOOR", "x", 2200, 2400, 800, 1600, None)]
+S5W_SWINGS = (((2400, 800), 800, 0, 90),)
+
+
+def s5_wet_pair():
+    ents = _s4_ents(S5W_ROOMS, S5W_OUTER, S5W_OPENINGS, texts=(("BATH", (1200, 1200)), ("W.C.", (3400, 1200))),
+                    swings=S5W_SWINGS)
+    return ents, dict(S4_ROLES), {"doorway_m2": 0.8 * 0.2, "room_m2": 2.0 * 2.0}
