@@ -83,8 +83,8 @@ def room_id(floor, face_id):
 
 
 def _names(codes):
-    en = " / ".join(AR.LEX[c][0] for c in codes) if codes else AR.UNNAMED[0]
-    ar = " / ".join(AR.LEX[c][1] for c in codes) if codes else AR.UNNAMED[1]
+    en = " + ".join(AR.LEX[c][0] for c in codes) if codes else AR.UNNAMED[0]          # " / " separates AR / EN
+    ar = " + ".join(AR.LEX[c][1] for c in codes) if codes else AR.UNNAMED[1]
     return en, ar
 
 
