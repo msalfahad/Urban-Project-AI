@@ -193,4 +193,8 @@ OTHER_REBAR_AWARE = (
     "engine/source/concrete_completeness.py",
     # M8: the scope pass names reinforcement only to mark the new families' steel MISSING_DATA (never a ratio)
     "engine/source/scope_quantities.py",
+    # M9 S1: the canonical line names the REINFORCEMENT trade / STR.REBAR item of a route G item (numbers copied,
+    # never a ratio); the coverage census reports which families' steel is MISSING_DATA
+    "engine/source/boq_line.py",
+    "engine/source/coverage_census.py",
 )
