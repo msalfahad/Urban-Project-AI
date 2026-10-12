@@ -191,4 +191,6 @@ OTHER_REBAR_AWARE = (
     "engine/source/coverage_metrics.py",
     # M6: the completeness engine names rebar only to treat rebar drawing (layers, bar symbols) as annotation
     "engine/source/concrete_completeness.py",
+    # M8: the scope pass names reinforcement only to mark the new families' steel MISSING_DATA (never a ratio)
+    "engine/source/scope_quantities.py",
 )
