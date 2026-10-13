@@ -93,7 +93,8 @@ def repo(tmp_path):
     r = tmp_path / "repo"
     for rel, text in {"engine/__init__.py": "", "engine/calc.py": ENGINE, "research/pkg/build.py": BUILD,
                       "research/pkg2/build.py": BUILD2, "tests/__init__.py": "", "tests/pkg/__init__.py": "",
-                      "tests/pkg/test_pkg_rebuild.py": REBUILD_TEST, ".gitignore": "__pycache__/\n"}.items():
+                      "tests/pkg/test_pkg_rebuild.py": REBUILD_TEST, ".gitignore": "__pycache__/\n",
+                      "pytest.ini": "[pytest]\naddopts = -q\n"}.items():          # as in the real repository
         (r / rel).parent.mkdir(parents=True, exist_ok=True)
         (r / rel).write_text(text)
     subprocess.run([sys.executable, str(r / "research/pkg/build.py")], check=True)
@@ -136,10 +137,15 @@ def test_clean_rebuild_is_byte_identical_and_leaves_the_repository_alone(repo, t
     before = (_git(repo, "status", "--porcelain"), _git(repo, "rev-parse", "HEAD"))
     r = _run(repo, tmp_path / "out", lock)
     assert r["overall"] == "PASS" and r["repository_unchanged"]
-    assert set(r["counts"]) == {"BYTE_IDENTICAL"}
+    assert set(r["counts"]) == {"BYTE_IDENTICAL"} and r["tests_selected"] == 2
     assert (_git(repo, "status", "--porcelain"), _git(repo, "rev-parse", "HEAD")) == before
     assert not _git(repo, "worktree", "list").strip().count("\n")            # the disposable worktree is gone
     assert (tmp_path / "out" / "FREEZE_VERIFY_REPORT.json").exists()
+
+
+def test_a_run_that_selects_no_test_is_not_a_pass(repo, tmp_path, lock):
+    r = FV.rebuild(repo, "HEAD", tmp_path / "out", select="no_such_keyword", extra_tests=(), lock=lock)
+    assert r["tests_selected"] == 0 and r["overall"] == "FAIL"
 
 
 def test_output_folder_inside_the_repository_is_refused(repo, lock):

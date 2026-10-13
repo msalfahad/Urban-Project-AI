@@ -511,8 +511,8 @@ def rebuild(repo, ref, out, patches=(), repin=False, select=DEFAULT_SELECT, extr
         for args in (["-k", select, "tests"], list(extra_tests)):      # the extra files are taken whole (no -k filter)
             if not args:
                 continue
-            col = subprocess.run([python, "-m", "pytest", "--collect-only", "-q", "-p", "no:cacheprovider", *args],
-                                 cwd=wt, capture_output=True, text=True, env=_env())
+            col = subprocess.run([python, "-m", "pytest", "--collect-only", "-q", "-o", "addopts=", "-p", "no:cacheprovider",
+                                  *args], cwd=wt, capture_output=True, text=True, env=_env())
             nodes += [ln for ln in col.stdout.splitlines() if "::" in ln and not ln.startswith(("ERROR", "FAILED"))
                       and ln not in nodes]
             cerr |= {ln.split()[1] for ln in col.stdout.splitlines() if ln.startswith("ERROR ")}
@@ -526,8 +526,8 @@ def rebuild(repo, ref, out, patches=(), repin=False, select=DEFAULT_SELECT, extr
             xml = tmp / "junit.xml"
             if xml.exists():
                 xml.unlink()
-            subprocess.run([python, "-m", "pytest", "-p", "no:cacheprovider", "-q", f"--junitxml={xml}", *ids],
-                           cwd=wt, capture_output=True, text=True, env=_env())
+            subprocess.run([python, "-m", "pytest", "-p", "no:cacheprovider", "-q", "-o", "addopts=", f"--junitxml={xml}",
+                            *ids], cwd=wt, capture_output=True, text=True, env=_env())
             results = _junit(xml) if xml.exists() else []
             changes = []
             for path in _state(wt):
@@ -570,7 +570,9 @@ def rebuild(repo, ref, out, patches=(), repin=False, select=DEFAULT_SELECT, extr
     allowed = {"BYTE_IDENTICAL", "SKIPPED"} | ({"BEHAVIOUR_IDENTICAL_PROVENANCE_DIFFERS"} if patches else set())
     v = [g["verdict"] for g in report["groups"]]
     report["counts"] = {k: v.count(k) for k in sorted(set(v))}
-    ok = report["repository_unchanged"] and not report["collection_errors"] and set(v) <= allowed
+    report["tests_selected"] = sum(1 for g in report["groups"] if not g["file"].startswith("ARCH_BASELINE::"))
+    ok = (report["repository_unchanged"] and not report["collection_errors"] and set(v) <= allowed
+          and (report["tests_selected"] > 0 or only is not None))          # a run that selected nothing is no evidence
     in_lock = bool(est and est["in_lock"])
     report["overall"] = ("PASS" if ok and in_lock else
                          "NOT_A_PASS_OUTSIDE_THE_LOCKED_ENVIRONMENT" if ok else "FAIL")
@@ -585,7 +587,7 @@ def render(r):
          f"- environment lock: {'MATCHES' if r['environment_status'] and r['environment_status']['in_lock'] else 'DOES NOT MATCH (no byte-identity claim is valid here)'}",
          f"- patches (worktree only): {[p['file'] for p in r['patches']] or 'none'}; repinned: {len(r['repins'])}",
          f"- repository unchanged by the run: {r['repository_unchanged']}",
-         f"- collection errors: {r['collection_errors'] or 'none'}", "",
+         f"- tests run: {r.get('tests_selected')}; collection errors: {r['collection_errors'] or 'none'}", "",
          "| Verdict | Tests |", "|---|---|"]
     L += [f"| {k} | {n} |" for k, n in r["counts"].items()]
     L += ["", "| Test | Verdict | Rewritten files (raw / behaviour / masks) |", "|---|---|---|"]
