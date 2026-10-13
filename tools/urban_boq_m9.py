@@ -235,6 +235,7 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
     rev = revision_set_sha256(docs)
     pid = project_id or (facts or {}).get("project_id") or "new project"
     report = C = None
+    dims_read = None
     if admit:
         import ezdxf
         from engine.source import discovery as DS
@@ -254,6 +255,9 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
         report["documents"] = [AD.documents_record(path, doc, sha)] + list(extra_documents)
         unit_used, C = AD.admit_intake(report, path, intake, doc, units=units, accept_xrefs=accept_xrefs)
         SH = AD.shapes(doc)
+        if v21:                                                   # P2-09a: the authored dimensions (read-only)
+            from tools import arch_dimensions as ADIM
+            dims_read = ADIM.read_doc(doc)
         if strict and not v2:
             st = report["stages"]["4_units"]
             DS.set_stage(report, "4_units", st["findings"] + DS.legacy_tolerance_findings(unit_used),
@@ -277,6 +281,19 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
     E = dict(E, hatches=[dict(h, ring=h["rings"][0]) for h in hs if h["rings"]], texts=A["texts"],
              inserts=A["inserts"], segments=E["segments"] + A["extra_segments"] + chords,
              arcs=E["arcs"] + A["extra_arcs"])
+    fills_merged = None
+    if v21 and admit:
+        # P2-05: the discovery reads every fill at every depth in world coordinates, with the layer a layer-0 block
+        # content inherits from its INSERT (the plan reader misses hatches two or more levels deep or in a later MINSERT
+        # cell, SOLID / TRACE, and keeps layer 0); V2.1 gives all of them to the plan as fills too (column evidence; a
+        # fill the plan reader also read only repeats it). No segment is added and nothing drawn is moved.
+        extra = [{"id": f_["fill_id"], "layer": f_["layer"], "ring": f_["ring"], "rings": [f_["ring"]], "islands": [],
+                  "owner": None, "source": f"DISCOVERY_FILL:{f_['kind']}:depth {f_['depth']}"}
+                 for f_ in SH["fills"] if len(f_["ring"]) >= 3]
+        E = dict(E, hatches=E["hatches"] + extra)
+        SH = dict(SH, fills=[dict(f_, unread_by_plan_reader=False, read_in_v2_1=True)
+                             if f_.get("unread_by_plan_reader") and len(f_["ring"]) >= 3 else f_ for f_ in SH["fills"]])
+        fills_merged = {"fills": len(extra), "by_kind": dict(Counter(x["source"].split(":")[1] for x in extra))}
     u = E["unit_m"]
     split = "EMPTY_BANDS" if v2 else "TITLE_MIDPOINTS"
     tol = "UNIT_RELATIVE" if v2 else "LEGACY"
@@ -486,7 +503,7 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
         run.update(policy=ARCH_POLICY_ID_V21)
         run["policies"]["robust_geometry"] = RG.policy_record()
         run["v2_1"] = {"geometry": {rid: {k: v for k, v in g.report().items() if k != "records"}
-                                    for rid, g in geom_of.items()}}
+                                    for rid, g in geom_of.items()}, "fills_merged": fills_merged}
     if admit:
         _finish_discovery(report, E, facts, regions, lines, coverage if v2 else None,
                           entity_checks={"column_evidence": column_ev, "door_symbols": arc_recs,
@@ -506,6 +523,10 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
         arch["lift_openings"] = doors.get("lift_openings") or []
         # P2-08a: the read-only surface ledger over the finished lines (it changes no line and no exit code)
         from engine.source import surface_ledger as SL
+        arch["dimensions"] = _v21_dimensions(dims_read, regs, spaces_of, doors, u)
+        run["v2_1"]["dimensions"] = {k: arch["dimensions"][k] for k in ("counts", "checks_by_state", "door_evidence")}
+        from engine.source import dimension_evidence as DEV
+        run["policies"]["dimension_evidence"] = DEV.policy_record()
         arch["ledger"] = SL.ledger(lines, rooms, openings, unresolved, method=method, doors=doors, walls=walls_of)
         run["v2_1"]["ledger"] = {"table": arch["ledger"]["table"], "summary": arch["ledger"]["summary"]}
         run["policies"]["surface_ledger"] = SL.policy_record()
@@ -633,6 +654,40 @@ def _v21_doors(door_floors, door_texts, door_face_texts, regs, spaces_of, lines,
     return model, keep + new, unres, cov
 
 
+def _v21_dimensions(dims_read, regs, spaces_of, doors, u):
+    """ARCH_TAKEOFF_V2.1: the dimension census and the read-only cross-check of every measured plan; usable dimensions
+    across a provisional door's closure are attached to it as DIMENSION evidence (no promotion: owner decision)."""
+    from engine.source import dimension_evidence as DEV
+    from engine.source import door_model as DMOD
+    if dims_read is None:
+        return {"counts": None, "checks_by_state": {}, "door_evidence": 0, "regions": [], "findings": [],
+                "note": "no drawing document read (dimensions not available)"}
+    boxes = [(r["floor"], r["box"]) for r in regs]
+    cen = DEV.census(dims_read["dimensions"], dims_read["header_dimlfac"], u, boxes)
+    out, findings, ev = [], [], []
+    for r in regs:
+        if r["region_id"] not in spaces_of:
+            continue
+        here = [d for d in cen["dimensions"] if d["where"] == r["floor"]]
+        els = [e for e in (doors or {}).get("elements") or () if e["floor"] == r["floor"]]
+        x = DEV.crosscheck(here, spaces_of[r["region_id"]]["openings"], u, doors=els)
+        out.append({"floor": r["floor"], "dimensions": len(here), "usable": sum(1 for d in here if d["usable"]),
+                    "checks": x["checks"], "counts": x["counts"], "door_evidence": x["door_evidence"]})
+        findings += [dict(f, floor=r["floor"]) for f in x["findings"]]
+        ev += x["door_evidence"]
+    if doors is not None:
+        DMOD.attach_dimensions(doors["elements"], ev, promote=False)
+    by_state = {}
+    for reg in out:
+        for k, v in reg["counts"].items():
+            by_state[k] = by_state.get(k, 0) + v
+    return {"counts": cen["counts"], "checks_by_state": by_state, "door_evidence": len(ev), "regions": out,
+            "findings": findings, "not_read": dims_read["not_read"], "header_dimlfac": dims_read["header_dimlfac"],
+            "dimensions": [{k: d.get(k) for k in ("handle", "type", "where", "dimlfac", "dimlfac_source", "usable",
+                                                   "why_not", "geometry_mm", "shown_value", "text_overridden",
+                                                   "duplicate", "measurement_matches")} for d in cen["dimensions"]]}
+
+
 def v21_files(arch):
     """the ARCH_TAKEOFF_V2.1 outputs (Phase 2A); none for V1 / V2."""
     if arch.get("geometry") is None:
@@ -643,6 +698,8 @@ def v21_files(arch):
         from engine.source import door_model as DMOD
         files["DOOR_SCHEDULE.json"] = _j({"run": run, "doors": arch["doors"]})
         files["DOOR_SCHEDULE.csv"] = _csv(DMOD.schedule_rows(arch["doors"]), DMOD.SCHEDULE_COLUMNS)
+    if arch.get("dimensions") is not None:
+        files["DIMENSION_CROSSCHECK.json"] = _j({"run": run, "dimensions": arch["dimensions"]})
     if arch.get("ledger") is not None:
         from engine.source import surface_ledger as SL
         files["SURFACE_LEDGER.json"] = _j({"run": run, "ledger": arch["ledger"]})
@@ -655,7 +712,7 @@ PUBLISHED = ("BOQ_LINES.json", "BOQ_LINES.csv", "MATERIAL_RESULTS.json", "COVERA
              "UNRESOLVED.json", "ARCH_FLOOR_AREAS.json", "URBAN_ROOM_BOQ.xlsx", "FINISH_COVERAGE.json",
              "DRAWING_DISCOVERY.json", "ADMISSION_BLOCKED.json", "COMPLETENESS_FAILED.json",
              "ARCH_GEOMETRY_DECISIONS.json", "DOOR_SCHEDULE.json", "DOOR_SCHEDULE.csv",
-             "SURFACE_LEDGER.json", "SURFACE_LEDGER.csv")
+             "SURFACE_LEDGER.json", "SURFACE_LEDGER.csv", "DIMENSION_CROSSCHECK.json")
 
 
 def _supersede(out):

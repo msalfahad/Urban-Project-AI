@@ -330,6 +330,21 @@ def _transition(el, to, evidence_id):
     el["state"] = to
 
 
+def attach_dimensions(els, door_evidence, *, promote=False):
+    """DIMENSION evidence on door elements (read-only unless promote: a provisional door whose closure a usable
+    dimension confirms within 5 mm becomes CONFIRMED - off in the V2.1 run, an owner decision is pending)."""
+    by = {}
+    for d in door_evidence:
+        by.setdefault(d["element_id"], []).append(d)
+    for el in els:
+        for d in by.get(el["element_id"], ()):
+            el["evidence"].append(_ev(f"EV-{el['element_id']}-DIM-{d['handle']}", "DIMENSION",
+                                      **{k: v for k, v in d.items() if k != "element_id"}))
+            if promote and el["state"] == PROVISIONAL and d.get("agrees"):
+                _transition(el, CONFIRMED, el["evidence"][-1]["id"])
+    return els
+
+
 def confirming_evidence(el):
     return [e for e in el["evidence"] if e["kind"] in CONFIRMING_KINDS]
 
