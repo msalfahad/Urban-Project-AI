@@ -31,7 +31,9 @@ FAMILY_ITEMS = {
     "B8-01": ("FIN.WP.FLOOR",), "B8-02": ("FIN.WP.DOORWAY",), "B8-03": ("FIN.WP.UPTURN",),
     # M9 S2 architectural route (lines of these codes come only from urban_boq_m9 arch)
     "B3-06": ("FIN.SKIRTING",), "B4-03": ("FIN.PLASTER",), "B4-06": ("FIN.PAINT",), "B5-01": ("FIN.CEILING",),
-    "B6-01": ("ARCH.DOOR", "ARCH.WINDOW", "ARCH.PASSAGE"), "B7-01": ("FIN.STAIR.FLIGHT",),
+    # Phase 2A: B6-01 also takes the V2.1 door classes (no V1 / V2 line carries them)
+    "B6-01": ("ARCH.DOOR", "ARCH.WINDOW", "ARCH.PASSAGE", "DOOR.INTERNAL.PVC", "DOOR.EXTERNAL.ALUMINIUM",
+              "DOOR.MAIN_ENTRANCE"), "B7-01": ("FIN.STAIR.FLIGHT",),
     # M9 S3 stair finishes from the drawn flights
     "B7-02": ("FIN.MARBLE.TREAD",), "B7-03": ("FIN.MARBLE.RISER",), "B7-04": ("FIN.MARBLE.LANDING",),
     "B7-06": ("FIN.STAIR.STEP_LM",), "B9-01": ("MAS.BLOCK",),     # the wall run (lm) is its geometry, not its m2

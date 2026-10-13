@@ -335,6 +335,7 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
                                      ents_of[r["region_id"]]["segments"])
                                     for r in stacked], u)
     col_layers = sorted({lay for v in roles_of.values() for lay, ro in v["roles"].items() if ro == AP.COLUMN})
+    door_floors, door_texts, door_face_texts = [], {}, {}
     for i, reg in enumerate(regs):
         rid = reg["region_id"]
         ents = ents_of[rid]
@@ -428,6 +429,16 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
                                           "WINDOW_REVEAL strips have no established floor status (sill not in the "
                                           "plan); every strip is a BLOCKED_RFI line, none is a floor finish quantity")
             rec["coverage_gate"] = cov["gate"]
+        if v21:
+            # Phase 2A P2-04: every door swing of the floor in exactly one door element, its class and widths
+            from engine.source import door_model as DMOD
+            walls_here = [lay for lay, ro in L["roles"].items() if ro == AP.WALL]
+            door_floors.append((floor, DMOD.floor_model(S, M["rooms"], ents, u, floor, wall_layers=walls_here,
+                                                        origin=(reg["box"][0], reg["box"][1]), facts=facts)))
+            tx = {t_["id"]: t_ for t_ in ents["texts"]}
+            door_texts[floor] = ents["texts"]
+            door_face_texts[floor] = {f_["face_id"]: [tx[i_] for i_ in f_.get("label_text_ids") or () if i_ in tx]
+                                      for f_ in S["faces"]}
         for rm in M["rooms"]:
             rm["region_id"] = rid
         rooms += M["rooms"]
@@ -437,6 +448,12 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
         comps += X["comparisons"]
         unresolved += M["unresolved"] + X["unresolved"]
         regions.append(rec)
+    doors = None
+    if v21:
+        doors, lines, door_unres, door_cov = _v21_doors(door_floors, door_texts, door_face_texts, regs, spaces_of,
+                                                         lines, u, facts, pid, rev, docs)
+        unresolved += door_unres
+        coverage += door_cov
     by_room = {r["room_id"]: r for r in rooms}
     reg_of = {r["floor"]: r for r in regions}
     unresolved = [AM.flag(u_, drawing=path.name, region=reg_of.get(u_.get("floor")), room=by_room.get(u_.get("room_id")))
@@ -481,7 +498,17 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
     if admit:
         arch["discovery"] = report
     if v21:
+        from engine.source import door_model as DMOD
         arch["geometry"] = {rid: g.report() for rid, g in geom_of.items()}
+        arch["doors"] = doors
+        arch["door_rows"] = DMOD.schedule_rows(doors)          # the workbook takes rows (it imports no engine.source)
+        arch["door_classes"] = list(DMOD.RELEASED_CLASSES)
+        arch["lift_openings"] = doors.get("lift_openings") or []
+        run["v2_1"]["doors"] = {"summary": doors["summary"], "main_entrance": doors["main_entrance"]["state"],
+                                "conservation_ok": doors["conservation_ok"],
+                                "findings": dict(Counter(f_["code"] for f_ in doors["findings"]))}
+        from engine.source import door_model as DMOD
+        run["policies"]["doors"] = DMOD.policy_record()
     if v2:
         arch["coverage"] = coverage
         if any(c["gate"] != "PASS" for c in coverage):
@@ -570,19 +597,55 @@ class _ConversionBlocked(Exception):
         self.rec = rec
 
 
+def _v21_doors(door_floors, door_texts, door_face_texts, regs, spaces_of, lines, u, facts, pid, rev, docs):
+    """ARCH_TAKEOFF_V2.1: the building door model; the ARCH.DOOR opening counts are replaced by the owner door
+    classes (released doors only), lift entrances leave the ordinary opening lines; every finding becomes a flag; a
+    swing without exactly one element fails the floor's coverage gate (exit 3)."""
+    from engine.source import arch_measure as AM
+    from engine.source import door_model as DMOD
+    from engine.source import rule_store as RS
+    measured = [r for r in regs if r["region_id"] in spaces_of and not r.get("warning")]
+    entrance = min(measured, key=lambda r: r["order"])["floor"] if measured else None
+    model = DMOD.building_model(door_floors, door_texts, door_face_texts, u, entrance_floor=entrance, facts=facts)
+    lift_ops = {o_["opening_id"] for o_ in model.get("lift_openings") or ()}
+    keep = [ln for ln in lines if ln["item_code"] != "ARCH.DOOR" and not
+            (ln["item_code"] == "ARCH.PASSAGE" and ln["physical_element"] in lift_ops)]
+    ctx = {"project_id": pid, "revision_set_sha256": rev, "documents": docs}
+    new = DMOD.boq_lines(ctx, model, rule_set=AM.RULE_SET, rule_set_digest=RS.rule_set(AM.RULE_SET)["digest"])
+    unres = []
+    blocked_h = Counter(f_["floor"] for f_ in model["findings"] if f_["code"] == "DOOR_HEIGHT_MISSING")
+    for fl, n in sorted(blocked_h.items()):
+        unres.append({"room_id": "-", "floor": fl, "item": "DOOR HEIGHTS",
+                      "reason": f"MISSING_SOURCE: {n} released door(s) without a height (door schedule / elevation / "
+                                "section / facts opening_heights): count and width kept, height and area BLOCKED"})
+    for f_ in model["findings"]:
+        if f_["code"] != "DOOR_HEIGHT_MISSING":
+            unres.append({"room_id": "-", "floor": f_.get("floor") or "-", "item": f"DOORS:{f_['code']}",
+                          "reason": f"{f_['level']}: {f_['message']}"})
+    cov = [{"floor": c_["floor"], "gate": "FAIL", "kind": "DOOR_CONSERVATION",
+            "unaccounted": [{"kind": "DOOR_SWING", "swing": s_} for s_ in c_["without_element"] + c_["in_two_elements"]]}
+           for c_ in model["conservation"] if not c_["ok"]]
+    return model, keep + new, unres, cov
+
+
 def v21_files(arch):
     """the ARCH_TAKEOFF_V2.1 outputs (Phase 2A); none for V1 / V2."""
     if arch.get("geometry") is None:
         return {}
     run = arch["run"]
-    return {"ARCH_GEOMETRY_DECISIONS.json": _j({"run": run, "regions": arch["geometry"]})}
+    files = {"ARCH_GEOMETRY_DECISIONS.json": _j({"run": run, "regions": arch["geometry"]})}
+    if arch.get("doors") is not None:
+        from engine.source import door_model as DMOD
+        files["DOOR_SCHEDULE.json"] = _j({"run": run, "doors": arch["doors"]})
+        files["DOOR_SCHEDULE.csv"] = _csv(DMOD.schedule_rows(arch["doors"]), DMOD.SCHEDULE_COLUMNS)
+    return files
 
 
 PUBLISHED = ("BOQ_LINES.json", "BOQ_LINES.csv", "MATERIAL_RESULTS.json", "COVERAGE.json", "COVERAGE.csv",
              "RUN_RULES.json", "ARCH_PLAN.json", "ARCH_ROOMS.json", "ARCH_OPENINGS.json", "ARCH_WALLS.json",
              "UNRESOLVED.json", "ARCH_FLOOR_AREAS.json", "URBAN_ROOM_BOQ.xlsx", "FINISH_COVERAGE.json",
              "DRAWING_DISCOVERY.json", "ADMISSION_BLOCKED.json", "COMPLETENESS_FAILED.json",
-             "ARCH_GEOMETRY_DECISIONS.json")
+             "ARCH_GEOMETRY_DECISIONS.json", "DOOR_SCHEDULE.json", "DOOR_SCHEDULE.csv")
 
 
 def _supersede(out):

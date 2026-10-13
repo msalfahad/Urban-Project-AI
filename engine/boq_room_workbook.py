@@ -419,7 +419,8 @@ RC = {h: i + 1 for i, h in enumerate(RBR_HEAD)}
 RBR_ORDER = ("FIN.FLOOR.PORCELAIN", "FIN.FLOOR.WET_TILE", "ARCH.SPACE", "ARCH.EXTERIOR", "FIN.SKIRTING", "FIN.CEILING",
              "FIN.WP.FLOOR", "FIN.WP.DOORWAY", "FIN.WP.UPTURN", "FIN.WALL.TILE", "FIN.PLASTER", "FIN.PAINT",
              "FIN.STAIR.FLIGHT", "FIN.MARBLE.TREAD", "FIN.MARBLE.RISER", "FIN.STAIR.STEP_LM", "FIN.MARBLE.LANDING",
-             "ARCH.WALL_RUN", "MAS.BLOCK", "ARCH.DOOR", "ARCH.WINDOW", "ARCH.PASSAGE")
+             "ARCH.WALL_RUN", "MAS.BLOCK", "ARCH.DOOR", "ARCH.WINDOW", "ARCH.PASSAGE",
+             "DOOR.INTERNAL.PVC", "DOOR.EXTERNAL.ALUMINIUM", "DOOR.MAIN_ENTRANCE")     # Phase 2A (V2.1 only)
 TRADE_NAMES = {"FLOOR_FINISH": "أرضيات / Flooring", "CEILING": "الأسقف / Ceilings", "WATERPROOFING": "عازل / Waterproofing",
                "WALL_FINISH": "سيراميك جدران / Wall tiling", "PLASTER": "لياسة / Plaster", "PAINT": "دهان / Paint",
                "OPENINGS": "أبواب - شبابيك / Doors & windows", "EXTERNAL_WORKS": "أعمال خارجية / External works",
@@ -430,7 +431,9 @@ ARCH_TRADE_SHEETS = OrderedDict([("WALL PORCELAIN", ("FIN.WALL.TILE",)), ("PLAST
                                  ("MARBLE", ("FIN.MARBLE.TREAD", "FIN.MARBLE.RISER", "FIN.MARBLE.LANDING",
                                              "FIN.STAIR.STEP_LM")),
                                  ("STAIRS & RAILINGS", ("FIN.STAIR.FLIGHT",)),
-                                 ("DOORS & WINDOWS", ("ARCH.DOOR", "ARCH.WINDOW", "ARCH.PASSAGE")), ("ALUMINIUM", ())])
+                                 ("DOORS & WINDOWS", ("ARCH.DOOR", "ARCH.WINDOW", "ARCH.PASSAGE", "DOOR.INTERNAL.PVC",
+                                                      "DOOR.EXTERNAL.ALUMINIUM", "DOOR.MAIN_ENTRANCE")),
+                                 ("ALUMINIUM", ())])
 # an architectural run only (the S1 workbook keeps its sheets): census families and the lines that answer them
 ARCH_EXTRA_SHEETS = OrderedDict([("MASONRY", (("B9-01", "B9-02", "B9-03", "B9-04", "B9-05"),
                                               ("ARCH.WALL_RUN", "MAS.BLOCK")))])
@@ -681,6 +684,62 @@ def _arch_sheets(wb, arch):
            [[o["floor"], o["opening_id"], o["kind"], o["width_m"], o["wall_t_m"], ", ".join(o["rooms"]),
              o.get("door_symbol") or "", " / ".join(str(j) for j in o["jambs"])] for o in arch["openings"]],
            {4: "0.000", 5: "0.000"})
+    if arch.get("door_rows") is not None:                   # ARCH_TAKEOFF_V2.1 only
+        _door_sheets(wb, arch)
+
+
+DOOR_HEAD = ["FLOOR", "DOOR ID", "CLASS", "STATE", "LEAVES", "FROM ROOM", "TO ROOM", "WIDTH M", "WIDTH SOURCE",
+             "HEIGHT M", "HEIGHT STATE / SOURCE", "AREA M²", "AREA STATE", "FRAME WIDTH M", "LEAF WIDTHS M (EVIDENCE)",
+             "MATERIAL", "CLASS EVIDENCE", "EVIDENCE KINDS"]
+
+
+def _door_row(r):
+    return [r["floor"], r["element_id"], r["boq_class"], r["state"], r["leaf_count"], r["from_room"] or "-",
+            r["to_room"] or "-", r["structural_opening_width_m"], r["structural_opening_source"], r["height_m"],
+            f"{r['height_state']}: {r['height_source']}", r["area_m2"], r["area_state"], r["frame_width_m"],
+            ", ".join(str(x) for x in r["nominal_leaf_width_m"]), r["material"], r["class_evidence"] or "",
+            ", ".join(r["evidence_kinds"])]
+
+
+def _door_sheets(wb, arch):
+    """Phase 2A doors (rows prepared by the caller: engine.source.door_model.schedule_rows): the released door BOQ
+    (PVC / aluminium / main entrance, totals by formula), the provisional doors apart (never in a total) and the lift
+    doors excluded from the ordinary door BOQ."""
+    rows = arch["door_rows"]
+    lift_openings = arch.get("lift_openings") or ()
+    rel = [r for r in rows if r["section"] == "RELEASED"]
+    body = [_door_row(r) for r in rel]
+    n = len(body)
+    last = 3 + n
+    # per class: doors (COUNTIF, column I), leaves, width; the area sums only doors whose height has a source
+    tot = [[f"{cls} TOTAL", "", cls, "", f'=SUMIF(C4:C{last},"{cls}",E4:E{last})', "", "",
+            f'=SUMIF(C4:C{last},"{cls}",H4:H{last})', f'=COUNTIF(C4:C{last},"{cls}")', "", "",
+            f'=IF(COUNTIF(C4:C{last},"{cls}")-COUNTIFS(C4:C{last},"{cls}",L4:L{last},">0")>0,'
+            f'"BLOCKED: height missing",SUMIF(C4:C{last},"{cls}",L4:L{last}))',
+            "BLOCKED while any door of the class has no sourced height (never read as 0)", "", "", "", "", ""]
+           for cls in arch["door_classes"]]
+    _table(wb, "DOORS", "RELEASED door BOQ (owner door rule 2026-10-13): CONFIRMED doors only (a band opening jamb to "
+           "jamb); one row per door assembly (a double leaf is one door); width = structural opening; height and area "
+           "only from a source (else BLOCKED: count and width kept); the main entrance is never also PVC / aluminium",
+           DOOR_HEAD, body + tot, {8: "0.000", 10: "0.000", 12: "0.000", 14: "0.000"})
+    prov = [r for r in rows if r["section"] == "PROVISIONAL_NOT_RELEASED"]
+    _table(wb, "DOORS PROVISIONAL", "NOT RELEASED - never in a BOQ total (owner decision D4): doors closed only by "
+           "their leaf (width = the wall-to-wall closure, range [swing radius, closure]), unresolved swings and "
+           "main-entrance candidates awaiting review; evidence and uncertainty per door",
+           DOOR_HEAD + ["WIDTH RANGE M", "UNCERTAINTY / WHY NOT RELEASED"],
+           [_door_row(r) + [" - ".join(str(x) for x in (r["width_range_m"] or ())) or "-",
+                            "main-entrance candidate: a reviewer names the main entrance" if
+                            r["boq_class"] == "MAIN_ENTRANCE_CANDIDATE" else
+                            "no band opening: jambs not proven" if r["state"] == "PROVISIONAL" else
+                            "the swing closes no gap" if r["state"] == "UNRESOLVED" else
+                            f"class {r['boq_class']}"] for r in prov], {8: "0.000", 10: "0.000", 12: "0.000", 14: "0.000"})
+    lift = [r for r in rows if r["section"] == "LIFT_EXCLUDED"]
+    _table(wb, "LIFT DOORS (EXCLUDED)", "LIFT_SYSTEM / LIFT_DOOR: landing / car doors and lift entrances are outside "
+           "the ordinary door BOQ (not PVC, aluminium or main entrance); the shaft keeps its place in the gross floor "
+           "geometry", ["FLOOR", "ID", "KIND", "WIDTH M", "EVIDENCE"],
+           [[r["floor"], r["element_id"], "door (swing)", r["structural_opening_width_m"], r["class_evidence"]]
+            for r in lift] + [[o["floor"], o["opening_id"], o["kind"].lower() + " (no swing)", o["width_m"],
+                               o["evidence"]] for o in lift_openings], {4: "0.000"})
 
 
 FLOOR_CATEGORY_TEXT = {

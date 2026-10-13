@@ -92,6 +92,10 @@ ITEMS = {
     # M9 S6 (ARCH_TAKEOFF_V2): the strips of the openings in the wall thickness, measured and handed to the owner
     "ARCH.THRESHOLD": ("Opening threshold strip (finish to be confirmed)", "عتبة الفتحة", "FLOOR_FINISH", "m2"),
     "ARCH.WINDOW_REVEAL": ("Window reveal strip (floor status to be confirmed)", "شريط فتحة الشباك", "OPENINGS", "m2"),
+    # M9 Phase 2A (ARCH_TAKEOFF_V2.1 only): the owner door classes of 2026-10-13 (engine.source.door_model)
+    "DOOR.INTERNAL.PVC": ("Internal door, PVC (one door assembly)", "باب داخلي PVC", "OPENINGS", "pcs"),
+    "DOOR.EXTERNAL.ALUMINIUM": ("External door, aluminium (one door assembly)", "باب خارجي ألمنيوم", "OPENINGS", "pcs"),
+    "DOOR.MAIN_ENTRANCE": ("Main entrance door (material by project)", "باب المدخل الرئيسي", "OPENINGS", "pcs"),
 }
 # route G family (+ storey) -> item code
 ROUTE_G_FAMILY = {"PLAIN_CONCRETE": "STR.CONC.BLINDING", "FOOTINGS": "STR.CONC.FOOTING", "GROUND_SLAB": "STR.CONC.GROUND_SLAB",
