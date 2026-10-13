@@ -483,14 +483,17 @@ def rebuild(repo, ref, out, patches=(), repin=False, select=DEFAULT_SELECT, extr
     if out == repo or repo in out.parents:
         raise ValueError("the output folder must be outside the repository")
     out.mkdir(parents=True, exist_ok=True)
+    # the ref is resolved once: every later read (manifests, committed blobs) uses this commit, even if the
+    # repository's HEAD moves while the run is in progress
+    ref = git(repo, "rev-parse", "--verify", f"{ref}^{{commit}}", text=True).strip()
     before = {"status": git(repo, "status", "--porcelain", "--untracked-files=no", text=True),
-              "head": git(repo, "rev-parse", ref, text=True).strip()}
+              "head": git(repo, "rev-parse", "HEAD", text=True).strip()}
     env = current_env(python)
     est = env_status(json.loads(Path(lock).read_text()), env) if lock else None
     tmp = Path(tempfile.mkdtemp(prefix="freeze_verify_"))
     wt = tmp / "wt"
     git(repo, "worktree", "add", "--detach", str(wt), ref)
-    report = {"ref": before["head"], "python": python, "environment": env["python"], "environment_status": est,
+    report = {"ref": ref, "python": python, "environment": env["python"], "environment_status": est,
               "patches": [], "repins": [], "groups": [], "mask_rules": MASK_RULES}
     try:
         report["inputs_linked"] = _link_inputs(repo, wt)
@@ -526,8 +529,10 @@ def rebuild(repo, ref, out, patches=(), repin=False, select=DEFAULT_SELECT, extr
             xml = tmp / "junit.xml"
             if xml.exists():
                 xml.unlink()
+            bt = tmp / "basetemp"                       # its own pytest temp root: never prunes another session's dirs
+            shutil.rmtree(bt, ignore_errors=True)
             subprocess.run([python, "-m", "pytest", "-p", "no:cacheprovider", "-q", "-o", "addopts=", f"--junitxml={xml}",
-                            *ids], cwd=wt, capture_output=True, text=True, env=_env())
+                            f"--basetemp={bt}", *ids], cwd=wt, capture_output=True, text=True, env=_env())
             results = _junit(xml) if xml.exists() else []
             changes = []
             for path in _state(wt):
@@ -565,8 +570,11 @@ def rebuild(repo, ref, out, patches=(), repin=False, select=DEFAULT_SELECT, extr
             git(repo, "worktree", "prune", check=False)
             shutil.rmtree(tmp, ignore_errors=True)
     after = {"status": git(repo, "status", "--porcelain", "--untracked-files=no", text=True),
-             "head": git(repo, "rev-parse", ref, text=True).strip()}
+             "head": git(repo, "rev-parse", "HEAD", text=True).strip()}
     report["repository_unchanged"] = before == after
+    report["repository_changes"] = {
+        "head": None if before["head"] == after["head"] else [before["head"], after["head"]],
+        "status": sorted(set(before["status"].splitlines()) ^ set(after["status"].splitlines()))}
     allowed = {"BYTE_IDENTICAL", "SKIPPED"} | ({"BEHAVIOUR_IDENTICAL_PROVENANCE_DIFFERS"} if patches else set())
     v = [g["verdict"] for g in report["groups"]]
     report["counts"] = {k: v.count(k) for k in sorted(set(v))}

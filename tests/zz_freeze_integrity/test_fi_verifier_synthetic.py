@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import shutil
 import subprocess
 import sys
 import textwrap
@@ -146,6 +147,25 @@ def test_clean_rebuild_is_byte_identical_and_leaves_the_repository_alone(repo, t
 def test_a_run_that_selects_no_test_is_not_a_pass(repo, tmp_path, lock):
     r = FV.rebuild(repo, "HEAD", tmp_path / "out", select="no_such_keyword", extra_tests=(), lock=lock)
     assert r["tests_selected"] == 0 and r["overall"] == "FAIL"
+
+
+def test_a_commit_made_during_the_run_fails_it_and_the_ref_stays_pinned(repo, tmp_path, lock, monkeypatch):
+    work = tmp_path / "repo_copy"
+    shutil.copytree(repo, work, symlinks=True)
+    start = _git(work, "rev-parse", "HEAD").strip()
+    link = FV._link_inputs
+
+    def link_then_commit(r, wt):                     # the repository moves on after the worktree was added
+        (work / "NOTE.md").write_text("a later commit\n")
+        _git(work, "add", "NOTE.md")
+        _git(work, "commit", "-qm", "later")
+        return link(r, wt)
+
+    monkeypatch.setattr(FV, "_link_inputs", link_then_commit)
+    r = _run(work, tmp_path / "out", lock)
+    assert r["ref"] == start and set(r["counts"]) == {"BYTE_IDENTICAL"}
+    assert not r["repository_unchanged"] and r["overall"] == "FAIL"
+    assert r["repository_changes"]["head"] == [start, _git(work, "rev-parse", "HEAD").strip()]
 
 
 def test_output_folder_inside_the_repository_is_refused(repo, lock):
