@@ -1,0 +1,133 @@
+{
+ "n_per_case": 2000,
+ "kept_fraction": {
+  "mm/rot=0": {
+   "FROZEN": 1.0,
+   "CANON_MM": 1.0,
+   "QUANT_1UM": 1.0,
+   "INT_UM": 1.0,
+   "ROBUST_EPS": 1.0,
+   "LOCAL_ORIGIN": 1.0
+  },
+  "mm/rot=90": {
+   "FROZEN": 1.0,
+   "CANON_MM": 1.0,
+   "QUANT_1UM": 0.999,
+   "INT_UM": 1.0,
+   "ROBUST_EPS": 1.0,
+   "LOCAL_ORIGIN": 1.0
+  },
+  "mm/rot=180": {
+   "FROZEN": 1.0,
+   "CANON_MM": 1.0,
+   "QUANT_1UM": 0.9985,
+   "INT_UM": 1.0,
+   "ROBUST_EPS": 1.0,
+   "LOCAL_ORIGIN": 1.0
+  },
+  "mm/rot=270": {
+   "FROZEN": 1.0,
+   "CANON_MM": 1.0,
+   "QUANT_1UM": 0.999,
+   "INT_UM": 1.0,
+   "ROBUST_EPS": 1.0,
+   "LOCAL_ORIGIN": 1.0
+  },
+  "mm/rot=30": {
+   "FROZEN": 0.8665,
+   "CANON_MM": 0.8665,
+   "QUANT_1UM": 1.0,
+   "INT_UM": 1.0,
+   "ROBUST_EPS": 1.0,
+   "LOCAL_ORIGIN": 0.8665
+  },
+  "mm/rot=45": {
+   "FROZEN": 0.6375,
+   "CANON_MM": 0.6375,
+   "QUANT_1UM": 0.0,
+   "INT_UM": 0.0,
+   "ROBUST_EPS": 1.0,
+   "LOCAL_ORIGIN": 0.6375
+  },
+  "mm/rot=60": {
+   "FROZEN": 0.8445,
+   "CANON_MM": 0.8445,
+   "QUANT_1UM": 1.0,
+   "INT_UM": 1.0,
+   "ROBUST_EPS": 1.0,
+   "LOCAL_ORIGIN": 0.8445
+  },
+  "mm/rot=random": {
+   "FROZEN": 0.496,
+   "CANON_MM": 0.496,
+   "QUANT_1UM": 0.5035,
+   "INT_UM": 0.5035,
+   "ROBUST_EPS": 1.0,
+   "LOCAL_ORIGIN": 0.496
+  },
+  "m/rot=0": {
+   "FROZEN": 0.772,
+   "CANON_MM": 0.941,
+   "QUANT_1UM": 0.998,
+   "INT_UM": 1.0,
+   "ROBUST_EPS": 1.0,
+   "LOCAL_ORIGIN": 0.772
+  },
+  "m/rot=90": {
+   "FROZEN": 0.783,
+   "CANON_MM": 0.942,
+   "QUANT_1UM": 0.9995,
+   "INT_UM": 1.0,
+   "ROBUST_EPS": 1.0,
+   "LOCAL_ORIGIN": 0.783
+  },
+  "m/rot=180": {
+   "FROZEN": 0.7855,
+   "CANON_MM": 0.947,
+   "QUANT_1UM": 0.9995,
+   "INT_UM": 1.0,
+   "ROBUST_EPS": 1.0,
+   "LOCAL_ORIGIN": 0.7855
+  },
+  "m/rot=270": {
+   "FROZEN": 0.7755,
+   "CANON_MM": 0.9365,
+   "QUANT_1UM": 0.9995,
+   "INT_UM": 1.0,
+   "ROBUST_EPS": 1.0,
+   "LOCAL_ORIGIN": 0.7755
+  },
+  "m/rot=30": {
+   "FROZEN": 0.6205,
+   "CANON_MM": 0.7095,
+   "QUANT_1UM": 1.0,
+   "INT_UM": 1.0,
+   "ROBUST_EPS": 1.0,
+   "LOCAL_ORIGIN": 0.6205
+  },
+  "m/rot=45": {
+   "FROZEN": 0.3995,
+   "CANON_MM": 0.4945,
+   "QUANT_1UM": 0.0,
+   "INT_UM": 0.0,
+   "ROBUST_EPS": 1.0,
+   "LOCAL_ORIGIN": 0.3995
+  },
+  "m/rot=60": {
+   "FROZEN": 0.4945,
+   "CANON_MM": 0.5435,
+   "QUANT_1UM": 1.0,
+   "INT_UM": 1.0,
+   "ROBUST_EPS": 1.0,
+   "LOCAL_ORIGIN": 0.4945
+  },
+  "m/rot=random": {
+   "FROZEN": 0.497,
+   "CANON_MM": 0.5175,
+   "QUANT_1UM": 0.516,
+   "INT_UM": 0.5165,
+   "ROBUST_EPS": 1.0,
+   "LOCAL_ORIGIN": 0.497
+  }
+ }
+}
