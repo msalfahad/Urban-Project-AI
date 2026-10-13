@@ -275,7 +275,9 @@ def has_leaf(a, segments, unit_m):
     return False
 
 
-def _bands(segs, unit_m):
+def _bands(segs, unit_m, geom=None):
+    if geom is not None:                      # ARCH_TAKEOFF_V2.1: the robust geometry (engine.source.robust_geometry)
+        return geom.bands(segs)[0]
     k = 1.0 / unit_m / 1000.0
     fl = OC.face_lines([(s["id"], tuple(s["a"]), tuple(s["b"])) for s in segs], ang_res_deg=0.5, off_tol=2.0 * k,
                        join_tol=5.0 * k, min_len=100.0 * k)
@@ -322,8 +324,10 @@ def _in_box(p, b, tol):
     return b[0] - tol <= p[0] <= b[2] + tol and b[1] - tol <= p[1] <= b[3] + tol
 
 
-def layer_roles(ents, unit_m, override=None, tol="LEGACY"):
+def layer_roles(ents, unit_m, override=None, tol="LEGACY", geom=None):
+    """geom (ARCH_TAKEOFF_V2.1 only): an engine.source.robust_geometry.Geometry; None is the V1 / V2 path, unchanged."""
     mt = unit_tol(unit_m, tol)
+    gaps_of = geom.band_gaps if geom is not None else OG.band_gaps
     by = defaultdict(list)
     for s in ents["segments"]:
         by[s["layer"]].append(s)
@@ -336,7 +340,9 @@ def layer_roles(ents, unit_m, override=None, tol="LEGACY"):
     ev = {}
     for lay in sorted(set(by) | set(arcs_by)):
         ss = by.get(lay, [])
-        bands = _bands(ss, unit_m) if ss else []
+        if geom is not None:
+            geom.context = f"layer_roles|{lay}"
+        bands = _bands(ss, unit_m, geom) if ss else []
         long_len = sum((b["hi"] - b["lo"]) * unit_m for b in bands if (b["hi"] - b["lo"]) * unit_m >= LONG_BAND_M)
         rects = _small_rects(ss, unit_m, tol)
         tol_in = 0.02 / unit_m
@@ -355,10 +361,12 @@ def layer_roles(ents, unit_m, override=None, tol="LEGACY"):
     for lay, e in ev.items():                         # jambed openings in the layer's own bands (doors, windows)
         if roles[lay] == OTHER and e["long_band_m"] >= 5.0:
             n_open = 0
-            for b in _bands(by[lay], unit_m):
+            if geom is not None:
+                geom.context = f"layer_roles|jambed|{lay}"
+            for b in _bands(by[lay], unit_m, geom):
                 closures = [(s["id"], tuple(s["a"]), tuple(s["b"])) for s in by[lay]]
-                for g in OG.band_gaps(b, min_gap=0.5 / unit_m, jamb_tol=0.03 / unit_m, closures=closures,
-                                      merge_tol=mt):
+                for g in gaps_of(b, min_gap=0.5 / unit_m, jamb_tol=0.03 / unit_m, closures=closures,
+                                 merge_tol=mt):
                     n_open += g["state"] == OC.OPENING
             e["jambed_openings"] = n_open
     cand = sorted((e.get("jambed_openings", 0), e["long_band_m"], lay) for lay, e in ev.items()
@@ -374,7 +382,7 @@ def layer_roles(ents, unit_m, override=None, tol="LEGACY"):
                 continue
             # a second wall layer must join the primary wall network (partitions meeting walls); a plot boundary or
             # a tread run standing apart does not
-            ends = [p for b in _bands(by[lay], unit_m) if (b["hi"] - b["lo"]) * unit_m >= LONG_BAND_M
+            ends = [p for b in _bands(by[lay], unit_m, geom) if (b["hi"] - b["lo"]) * unit_m >= LONG_BAND_M
                     for p in _band_ends(b)]
             att = sum(1 for q in ends if any(_d_point_seg(q, s["a"], s["b"]) * unit_m <= ATTACH_M for s in prim))
             share = att / len(ends) if ends else 0.0
@@ -397,9 +405,11 @@ def layer_roles(ents, unit_m, override=None, tol="LEGACY"):
     walls = [lay for lay, r in roles.items() if r == WALL]
     gaps = []
     for lay in walls:
-        for b in _bands(by[lay], unit_m):
-            for g in OG.band_gaps(b, min_gap=0.4 / unit_m, jamb_tol=0.03 / unit_m, obstacles=(),
-                                  column_reach=0.06 / unit_m, closures=(), merge_tol=mt):
+        if geom is not None:
+            geom.context = f"layer_roles|window_gaps|{lay}"
+        for b in _bands(by[lay], unit_m, geom):
+            for g in gaps_of(b, min_gap=0.4 / unit_m, jamb_tol=0.03 / unit_m, obstacles=(),
+                             column_reach=0.06 / unit_m, closures=(), merge_tol=mt):
                 gaps.append((b, g))
     for lay, e in ev.items():
         if roles[lay] != OTHER or not by.get(lay):

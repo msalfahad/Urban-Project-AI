@@ -63,11 +63,16 @@ from engine.source import tile_layout as TL           # noqa: E402
 POLICY_ID = "URBAN_BOQ_M9_S1"
 ARCH_POLICY_ID = "URBAN_BOQ_M9_S2_ARCH"
 ARCH_POLICY_ID_V2 = "URBAN_BOQ_M9_S6_ARCH_V2"
-ARCH_METHODS = ("ARCH_TAKEOFF_V1", "ARCH_TAKEOFF_V2")
+ARCH_METHODS = ("ARCH_TAKEOFF_V1", "ARCH_TAKEOFF_V2", "ARCH_TAKEOFF_V2.1")
 # S6: ARCH_TAKEOFF_V2 = V1 + drawing admission (stop, exit 2, no BOQ on a fatal finding) + unit-relative geometric
 # tolerances + plan regions cut only along empty bands + floor-category and finish-surface completeness. V1 is
 # unchanged; --strict-admission puts the same admission in front of V1 (its outputs are V1's own).
 V2 = "ARCH_TAKEOFF_V2"
+# Phase 2A: ARCH_TAKEOFF_V2.1 = V2 + the robust band-path geometry (engine.source.robust_geometry: the reviewed robust
+# predicate at three sites, the mean-axis face lines, AT_THRESHOLD / UNDECIDABLE records). Opt-in only: V1 and V2 never
+# reach the V2.1 code (their call paths pass no geometry object).
+V21 = "ARCH_TAKEOFF_V2.1"
+ARCH_POLICY_ID_V21 = "URBAN_BOQ_M9_P2A_ARCH_V2_1"
 M9_DIR = "m9"
 CREATED = datetime(2026, 1, 1)
 
@@ -217,7 +222,8 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
     from tools import urban_intake as UI
     if method not in ARCH_METHODS:
         raise SystemExit(f"--method must be one of {ARCH_METHODS} (the architectural route is behind a versioned flag)")
-    v2 = method == V2
+    v21 = method == V21
+    v2 = method in (V2, V21)                                  # V2.1 is V2 plus the Phase 2A additions
     admit = v2 or strict
     if not admit and (units or region_specs or accept_xrefs):
         raise SystemExit("--units / --region / --accept-missing-xref are reviewer inputs of the admission: use them "
@@ -300,10 +306,16 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
     lines, mats, comps, unresolved, rooms, openings, regions, walls_of = [], [], [], [], [], [], [], []
     floor_areas = []
     v2_unresolved, coverage, column_ev, arc_recs, unread_ev = [], [], [], [], []
-    roles_of = {r["region_id"]: AP.layer_roles(ents_of[r["region_id"]], u, override=layer_roles, tol=tol)
+    geom_of = {}
+    if v21:
+        from engine.source import robust_geometry as RG
+        geom_of = {r["region_id"]: RG.Geometry(u) for r in regs}
+    roles_of = {r["region_id"]: AP.layer_roles(ents_of[r["region_id"]], u, override=layer_roles, tol=tol,
+                                               **({"geom": geom_of[r["region_id"]]} if v21 else {}))
                 for r in regs}
     spaces_of = {r["region_id"]: AR.spaces(ents_of[r["region_id"]], roles_of[r["region_id"]]["roles"], u,
-                                           region_id=r["region_id"], tol=tol)
+                                           region_id=r["region_id"], tol=tol,
+                                           **({"geom": geom_of[r["region_id"]]} if v21 else {}))
                  for r in regs if roles_of[r["region_id"]]["state"] != "BLOCKED"}
     # one stair drawn on two plans: the plans are aligned on their column grid, and a flight lying over a flight of
     # the plan below is counted once (the repeat is exposure until a reviewer says which it is)
@@ -344,7 +356,8 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
             regions.append(rec)
             continue
         S = spaces_of[rid]
-        S["walls"] = AW.walls(ents, L["roles"], u, S["faces"], S["openings"], columns=S["column_boxes"])
+        S["walls"] = AW.walls(ents, L["roles"], u, S["faces"], S["openings"], columns=S["column_boxes"],
+                              **({"geom": geom_of[rid]} if v21 else {}))
         M = AM.measure(S, floor=floor, project_id=pid, revision_set_sha256=rev, facts=facts,
                        floor_above_level_m=above, floor_level_m=level[rid], documents=docs)
         X = AM.materials(M, facts)
@@ -452,6 +465,11 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
             "region_overrides": list(region_specs or ()), "unit_m_used": u, "admission": report["gates"] or None,
             "completeness": {c["floor"]: c["gate"] for c in coverage}})
         run["policies"].update(completeness=AC.policy_record(), discovery=DS.policy_record())
+    if v21:
+        run.update(policy=ARCH_POLICY_ID_V21)
+        run["policies"]["robust_geometry"] = RG.policy_record()
+        run["v2_1"] = {"geometry": {rid: {k: v for k, v in g.report().items() if k != "records"}
+                                    for rid, g in geom_of.items()}}
     if admit:
         _finish_discovery(report, E, facts, regions, lines, coverage if v2 else None,
                           entity_checks={"column_evidence": column_ev, "door_symbols": arc_recs,
@@ -462,6 +480,8 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
             "walls": walls_of, "reference_areas": reference_areas or {}, "floor_areas": floor_areas}
     if admit:
         arch["discovery"] = report
+    if v21:
+        arch["geometry"] = {rid: g.report() for rid, g in geom_of.items()}
     if v2:
         arch["coverage"] = coverage
         if any(c["gate"] != "PASS" for c in coverage):
@@ -550,10 +570,19 @@ class _ConversionBlocked(Exception):
         self.rec = rec
 
 
+def v21_files(arch):
+    """the ARCH_TAKEOFF_V2.1 outputs (Phase 2A); none for V1 / V2."""
+    if arch.get("geometry") is None:
+        return {}
+    run = arch["run"]
+    return {"ARCH_GEOMETRY_DECISIONS.json": _j({"run": run, "regions": arch["geometry"]})}
+
+
 PUBLISHED = ("BOQ_LINES.json", "BOQ_LINES.csv", "MATERIAL_RESULTS.json", "COVERAGE.json", "COVERAGE.csv",
              "RUN_RULES.json", "ARCH_PLAN.json", "ARCH_ROOMS.json", "ARCH_OPENINGS.json", "ARCH_WALLS.json",
              "UNRESOLVED.json", "ARCH_FLOOR_AREAS.json", "URBAN_ROOM_BOQ.xlsx", "FINISH_COVERAGE.json",
-             "DRAWING_DISCOVERY.json", "ADMISSION_BLOCKED.json", "COMPLETENESS_FAILED.json")
+             "DRAWING_DISCOVERY.json", "ADMISSION_BLOCKED.json", "COMPLETENESS_FAILED.json",
+             "ARCH_GEOMETRY_DECISIONS.json")
 
 
 def _supersede(out):
@@ -602,7 +631,7 @@ def cmd_arch(a):
     refs = {k: float(v) for k, v in _kv(a.reference_areas, "--reference-areas").items()}
     out = Path(a.out)
     conversions = []
-    v2 = a.method == V2
+    v2 = a.method in (V2, V21)
     admit = v2 or a.strict_admission
     if not admit and (a.units or a.region or a.accept_missing_xref):
         raise SystemExit("--units / --region / --accept-missing-xref are reviewer inputs of the admission: use them "
@@ -687,6 +716,9 @@ def cmd_arch(a):
         (out / "FINISH_COVERAGE.json").write_text(_j({"run": arch["run"], "floors": arch["coverage"]}),
                                                   encoding="utf-8")
         res["files"].append("FINISH_COVERAGE.json")
+    for name, text in v21_files(arch).items():               # ARCH_TAKEOFF_V2.1 only (empty otherwise)
+        (out / name).write_text(text, encoding="utf-8")
+        res["files"].append(name)
     svgs = []
     if not a.no_svg:
         from tools import arch_overlay as AO

@@ -105,14 +105,14 @@ def _columns_on(band, columns, lo_off, hi_off):
     return sorted(cuts)
 
 
-def walls(ents, roles, unit_m, faces, openings=(), columns=()):
+def walls(ents, roles, unit_m, faces, openings=(), columns=(), geom=None):
     wall_l = sorted(l for l, r in roles.items() if r == AP.WALL)
     loc = _Locator(faces)
     probe = SIDE_PROBE_M / unit_m
     out = []
     for lay in wall_l:
         segs = [s for s in ents["segments"] if s["layer"] == lay]
-        for b in AP._bands(segs, unit_m):
+        for b in AP._bands(segs, unit_m, geom):
             A, B = b["A"], b["B"]
             both = _iv_intersect(_cover(A, b["lo"], b["hi"]), _cover(B, b["lo"], b["hi"]))
             cuts = _columns_on(b, columns, *sorted((A["off"], B["off"])))

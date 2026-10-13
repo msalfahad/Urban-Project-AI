@@ -847,7 +847,9 @@ def _apply_zones(out, plan, rec, by_line):
     return True
 
 
-def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY"):
+def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None):
+    """geom (ARCH_TAKEOFF_V2.1 only): an engine.source.robust_geometry.Geometry for the band openings; None is the
+    V1 / V2 path, unchanged."""
     eps = 0.5e-3 / unit_m
     wall_l = sorted(l for l, r in roles.items() if r == AP.WALL)
     col_l = {l for l, r in roles.items() if r == AP.COLUMN}
@@ -855,7 +857,12 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY"):
     door_l = {l for l, r in roles.items() if r == AP.DOOR}
     warnings = []
     cols = _columns(ents, roles, unit_m, tol)
-    ops, rej = LM.openings(ents["segments"], unit_m, wall_l, cols, tol=tol)
+    if geom is None:
+        ops, rej = LM.openings(ents["segments"], unit_m, wall_l, cols, tol=tol)
+    else:
+        from engine.source import robust_geometry as RG
+        geom.context = f"{region_id}"
+        ops, rej = RG.openings(ents["segments"], unit_m, wall_l, cols, tol=tol, geom=geom)
     swings = door_swings(ents, door_l, unit_m)
     win_segs = [s for s in ents["segments"] if s["layer"] in win_l]
     served = match_swings(ops, swings, unit_m)
@@ -901,7 +908,7 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY"):
             items.append(_arc_item(a, "WINDOW"))           # curved glazing closes a curved wall opening
     thr_items = [(t["opening_id"], TP.BoundaryItem(t["id"], "SEGMENT", (t["a"][0], t["a"][1], t["b"][0], t["b"][1]),
                                                    role_of_thr[t["kind"]])) for t in thresholds]
-    caps = wall_caps(ents, wall_l, unit_m)
+    caps = wall_caps(ents, wall_l, unit_m, geom)
     items += [TP.BoundaryItem(c["id"], "SEGMENT", (c["a"][0], c["a"][1], c["b"][0], c["b"][1]), "WALL_CAP")
               for c in caps]
     free = {k: v for k, v in swings.items() if k not in used_swings}
@@ -1056,7 +1063,7 @@ def closures_b(closures, ents, wall_layers, unit_m):
     return out
 
 
-def wall_caps(ents, wall_layers, unit_m):
+def wall_caps(ents, wall_layers, unit_m, geom=None):
     """zero-material caps across a wall band so that the wall thickness is never part of a room (the TS01 wall-end
     closure idea, on the band census):
         TWO-SIDED  both faces end at the same station (a wall end or a jamb)
@@ -1070,7 +1077,7 @@ def wall_caps(ents, wall_layers, unit_m):
     for lay in wall_layers:
         segs = [s for s in ents["segments"] if s["layer"] == lay]
         seg_by_id = {s["id"]: s for s in segs}
-        for b in AP._bands(segs, unit_m):
+        for b in AP._bands(segs, unit_m, geom):
             (ux, uy), (nx, ny) = b["u"], b["n"]
 
             def at(side, t):
