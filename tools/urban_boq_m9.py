@@ -504,6 +504,11 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
         arch["door_rows"] = DMOD.schedule_rows(doors)          # the workbook takes rows (it imports no engine.source)
         arch["door_classes"] = list(DMOD.RELEASED_CLASSES)
         arch["lift_openings"] = doors.get("lift_openings") or []
+        # P2-08a: the read-only surface ledger over the finished lines (it changes no line and no exit code)
+        from engine.source import surface_ledger as SL
+        arch["ledger"] = SL.ledger(lines, rooms, openings, unresolved, method=method, doors=doors, walls=walls_of)
+        run["v2_1"]["ledger"] = {"table": arch["ledger"]["table"], "summary": arch["ledger"]["summary"]}
+        run["policies"]["surface_ledger"] = SL.policy_record()
         run["v2_1"]["doors"] = {"summary": doors["summary"], "main_entrance": doors["main_entrance"]["state"],
                                 "conservation_ok": doors["conservation_ok"],
                                 "findings": dict(Counter(f_["code"] for f_ in doors["findings"]))}
@@ -638,6 +643,10 @@ def v21_files(arch):
         from engine.source import door_model as DMOD
         files["DOOR_SCHEDULE.json"] = _j({"run": run, "doors": arch["doors"]})
         files["DOOR_SCHEDULE.csv"] = _csv(DMOD.schedule_rows(arch["doors"]), DMOD.SCHEDULE_COLUMNS)
+    if arch.get("ledger") is not None:
+        from engine.source import surface_ledger as SL
+        files["SURFACE_LEDGER.json"] = _j({"run": run, "ledger": arch["ledger"]})
+        files["SURFACE_LEDGER.csv"] = _csv(arch["ledger"]["records"], SL.CSV_COLUMNS)
     return files
 
 
@@ -645,7 +654,8 @@ PUBLISHED = ("BOQ_LINES.json", "BOQ_LINES.csv", "MATERIAL_RESULTS.json", "COVERA
              "RUN_RULES.json", "ARCH_PLAN.json", "ARCH_ROOMS.json", "ARCH_OPENINGS.json", "ARCH_WALLS.json",
              "UNRESOLVED.json", "ARCH_FLOOR_AREAS.json", "URBAN_ROOM_BOQ.xlsx", "FINISH_COVERAGE.json",
              "DRAWING_DISCOVERY.json", "ADMISSION_BLOCKED.json", "COMPLETENESS_FAILED.json",
-             "ARCH_GEOMETRY_DECISIONS.json", "DOOR_SCHEDULE.json", "DOOR_SCHEDULE.csv")
+             "ARCH_GEOMETRY_DECISIONS.json", "DOOR_SCHEDULE.json", "DOOR_SCHEDULE.csv",
+             "SURFACE_LEDGER.json", "SURFACE_LEDGER.csv")
 
 
 def _supersede(out):
