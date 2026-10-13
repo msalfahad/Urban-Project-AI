@@ -32,6 +32,7 @@ from collections import Counter, defaultdict
 
 from engine.source import drawing_model as DM
 from engine.source import opening_census as OC
+from engine.source import opening_gaps as OG
 
 POLICY_ID = "ARCH_PLAN_V1"
 WALL, COLUMN, WINDOW, DOOR, OTHER = "WALL", "COLUMN", "WINDOW", "DOOR", "OTHER"
@@ -67,10 +68,108 @@ def floor_of_title(text):
     return None, None
 
 
-def plan_regions(intake, model=None):
-    """-> {"regions": [...], "other_frames": [...]}"""
+SPLITS = ("TITLE_MIDPOINTS", "EMPTY_BANDS")
+BAND_MIN_M = 0.5                  # S6: the narrowest empty band that separates two plans in one frame
+
+
+def plan_regions(intake, model=None, *, split="TITLE_MIDPOINTS", frames_from_lines_fallback=False):
+    """-> {"regions": [...], "other_frames": [...]}. split: TITLE_MIDPOINTS (M9 S2: a frame holding several floor
+    titles is cut halfway between the title anchors) or EMPTY_BANDS (S6: cut only along the empty bands between the
+    drawn plans, never through drawn geometry; titles no band separates -> blocked_frames). frames_from_lines_fallback
+    (S6): when no frame holds a floor-plan title, try the frames drawn as separate lines (drawing_model's M7 option)."""
+    if split not in SPLITS:
+        raise PlanError(f"split must be one of {SPLITS}")
     model = model or DM.build(intake)
-    regions, others = [], []
+    unit_m = (model.get("units") or {}).get("unit_m") or intake.get("unit_m") or 0.001
+    out = _plan_regions(intake, model, split, unit_m)
+    if frames_from_lines_fallback and not out["regions"]:
+        alt = _plan_regions(intake, DM.build(intake, options={"frames_from_lines": True}), split, unit_m)
+        if alt["regions"]:
+            alt["frames_from_lines"] = True
+            out = alt
+    return out
+
+
+def _on_frame_side(p, q, box, eps):
+    x0, y0, x1, y1 = box
+    return any(abs(p[0] - v) <= eps and abs(q[0] - v) <= eps for v in (x0, x1)) or \
+        any(abs(p[1] - v) <= eps and abs(q[1] - v) <= eps for v in (y0, y1))
+
+
+def _seg_in(s, box):
+    x0, y0, x1, y1 = box
+    return all(x0 <= p[0] <= x1 and y0 <= p[1] <= y1 for p in (s["a"], s["b"]))
+
+
+def frame_segments(intake, box):
+    """the drawn segments inside a frame, without the frame's own sides."""
+    eps = max(box[2] - box[0], box[3] - box[1]) * 1e-6
+    return [s for s in intake["segments"] if _seg_in(s, box) and not _on_frame_side(s["a"], s["b"], box, eps)]
+
+
+def xy_cut(box, segs, titles, min_band):
+    """S6: split box along empty bands (no segment crosses them, at least min_band wide) until every piece holds at
+    most one title. -> [(box, [title])], or None when two titles share drawn geometry no band separates."""
+    if len(titles) <= 1:
+        return [(box, list(titles))]
+    best = None
+    for axis in (0, 1):
+        key = "x" if axis == 0 else "y"
+        ivs = sorted((min(s["a"][axis], s["b"][axis]), max(s["a"][axis], s["b"][axis])) for s in segs)
+        merged = []
+        for a, b in ivs:
+            if merged and a <= merged[-1][1]:
+                merged[-1][1] = max(merged[-1][1], b)
+            else:
+                merged.append([a, b])
+        for (_a0, a1), (b0, _b1) in zip(merged, merged[1:]):
+            width = b0 - a1
+            if width < min_band:
+                continue
+            c = (a1 + b0) / 2.0
+            lo = [t for t in titles if t[key] < c]
+            hi = [t for t in titles if t[key] >= c]
+            if lo and hi and (best is None or width > best[0]):
+                best = (width, axis, c, lo, hi)
+    if best is None:
+        return None
+    _w, axis, c, lo, hi = best
+    x0, y0, x1, y1 = box
+    b_lo, b_hi = ((x0, y0, c, y1), (c, y0, x1, y1)) if axis == 0 else ((x0, y0, x1, c), (x0, c, x1, y1))
+    s_lo = [s for s in segs if max(s["a"][axis], s["b"][axis]) <= c]
+    s_hi = [s for s in segs if min(s["a"][axis], s["b"][axis]) >= c]
+    p_lo, p_hi = xy_cut(b_lo, s_lo, lo, min_band), xy_cut(b_hi, s_hi, hi, min_band)
+    if p_lo is None or p_hi is None:
+        return None
+    return p_lo + p_hi
+
+
+def cut_crossings(intake, regions):
+    """S6: for every frame split into several regions, the drawn segments (frame sides excepted) whose two ends lie in
+    different regions: a cut through a plan. -> {sheet_id: count}"""
+    by_sheet = defaultdict(list)
+    for r in regions:
+        by_sheet[r["sheet_id"]].append(r)
+    out = {}
+    for sid, rs in by_sheet.items():
+        if len(rs) < 2:
+            continue
+        x0 = min(r["box"][0] for r in rs)
+        y0 = min(r["box"][1] for r in rs)
+        x1 = max(r["box"][2] for r in rs)
+        y1 = max(r["box"][3] for r in rs)
+        n = 0
+        for s in frame_segments(intake, (x0, y0, x1, y1)):
+            ka = [r["region_id"] for r in rs if _seg_in({"a": s["a"], "b": s["a"]}, r["box"])]
+            kb = [r["region_id"] for r in rs if _seg_in({"a": s["b"], "b": s["b"]}, r["box"])]
+            if not set(ka) & set(kb):
+                n += 1
+        out[sid] = n
+    return out
+
+
+def _plan_regions(intake, model, split, unit_m):
+    regions, others, blocked, unassigned = [], [], [], []
     for sh in model["sheets"]:
         x0, y0, x1, y1 = sh["box"]
         titles = []
@@ -92,6 +191,27 @@ def plan_regions(intake, model=None):
                            "titles_seen": kinds})
             continue
         ts = sorted(best.values(), key=lambda t: t["x"])
+        if len(ts) > 1 and split == "EMPTY_BANDS":
+            # S6: several plans in one frame are separated along the empty bands between their drawn geometry, so a
+            # cut never runs through a plan; titles that no empty band separates are not guessed
+            segs = frame_segments(intake, sh["box"])
+            pieces = xy_cut(sh["box"], segs, ts, BAND_MIN_M / unit_m)
+            if pieces is None:
+                blocked.append({"sheet_id": sh["sheet_id"], "box": sh["box"], "titles": [t["floor"] for t in ts],
+                                "why": "REGION_CUT_CROSSES_GEOMETRY: the floor-plan titles of this frame are not "
+                                       "separated by an empty band of the drawing; a cut would divide a plan"})
+                continue
+            for box, tt in pieces:
+                if not tt:
+                    unassigned.append({"sheet_id": sh["sheet_id"], "box": box,
+                                       "segments": sum(1 for g in segs if _seg_in(g, box))})
+                    continue
+                t = tt[0]
+                regions.append({"region_id": f"{sh['sheet_id']}:{t['floor']}", "sheet_id": sh["sheet_id"],
+                                "floor": t["floor"], "order": t["order"], "box": box, "title_text_id": t["text_id"],
+                                "evidence": f"floor-plan title inside frame {sh['sheet_id']} (frame split along the "
+                                            "empty bands between the drawn plans)"})
+            continue
         cuts = [x0] + [(a["x"] + b["x"]) / 2 for a, b in zip(ts, ts[1:])] + [x1]
         for i, t in enumerate(ts):
             regions.append({"region_id": f"{sh['sheet_id']}:{t['floor']}", "sheet_id": sh["sheet_id"],
@@ -104,7 +224,10 @@ def plan_regions(intake, model=None):
         if dup[r["floor"]] > 1:
             r["warning"] = f"FLOOR_TITLE_REPEATED: {dup[r['floor']]} plans titled {r['floor']}"
     regions.sort(key=lambda r: (r["order"], r["region_id"]))
-    return {"policy": POLICY_ID, "regions": regions, "other_frames": others, "units": model.get("units")}
+    out = {"policy": POLICY_ID, "regions": regions, "other_frames": others, "units": model.get("units")}
+    if split == "EMPTY_BANDS":
+        out.update(split=split, blocked_frames=blocked, unassigned_pieces=unassigned)
+    return out
 
 
 def region_entities(intake, box):
@@ -159,9 +282,20 @@ def _bands(segs, unit_m):
     return OC.wall_bands(fl, BAND_T_M[0] / unit_m, BAND_T_M[1] / unit_m, min_overlap=0.3 / unit_m)
 
 
-def _small_rects(segs, unit_m):
+TOL_POLICIES = ("LEGACY", "UNIT_RELATIVE")
+
+
+def unit_tol(unit_m, tol):
+    """S6: the 1 mm geometric tolerance in drawing units. LEGACY is the literal 1.0 drawing unit the M2-M9 code
+    used (1 mm only in a millimetre drawing); UNIT_RELATIVE is 1 mm in the drawing's own unit (equal at mm)."""
+    if tol not in TOL_POLICIES:
+        raise PlanError(f"tolerance policy must be one of {TOL_POLICIES}")
+    return 1.0 if tol == "LEGACY" else 1e-3 / unit_m
+
+
+def _small_rects(segs, unit_m, tol="LEGACY"):
     out = []
-    for r in DM.closed_rectangles(segs):
+    for r in DM.closed_rectangles(segs, eps=unit_tol(unit_m, tol)):
         b = r["box"]
         w, h = (b[2] - b[0]) * unit_m, (b[3] - b[1]) * unit_m
         if COLUMN_SIDE_M[0] <= w <= COLUMN_SIDE_M[1] and COLUMN_SIDE_M[0] <= h <= COLUMN_SIDE_M[1]:
@@ -188,7 +322,8 @@ def _in_box(p, b, tol):
     return b[0] - tol <= p[0] <= b[2] + tol and b[1] - tol <= p[1] <= b[3] + tol
 
 
-def layer_roles(ents, unit_m, override=None):
+def layer_roles(ents, unit_m, override=None, tol="LEGACY"):
+    mt = unit_tol(unit_m, tol)
     by = defaultdict(list)
     for s in ents["segments"]:
         by[s["layer"]].append(s)
@@ -203,12 +338,13 @@ def layer_roles(ents, unit_m, override=None):
         ss = by.get(lay, [])
         bands = _bands(ss, unit_m) if ss else []
         long_len = sum((b["hi"] - b["lo"]) * unit_m for b in bands if (b["hi"] - b["lo"]) * unit_m >= LONG_BAND_M)
-        rects = _small_rects(ss, unit_m)
-        tol = 0.02 / unit_m
-        filled = sum(1 for b in rects if any(all(_in_box(p, b, tol) for p in h["ring"]) for h in hatch_by.get(lay, [])
+        rects = _small_rects(ss, unit_m, tol)
+        tol_in = 0.02 / unit_m
+        filled = sum(1 for b in rects if any(all(_in_box(p, b, tol_in) for p in h["ring"]) for h in hatch_by.get(lay, [])
                                              if h.get("ring")))
-        crossed = sum(1 for b in rects if sum(1 for s in ss if _in_box(s["a"], b, tol) and _in_box(s["b"], b, tol) and
-                                              abs(s["a"][0] - s["b"][0]) > tol and abs(s["a"][1] - s["b"][1]) > tol) >= 1)
+        crossed = sum(1 for b in rects if sum(1 for s in ss if _in_box(s["a"], b, tol_in) and _in_box(s["b"], b, tol_in)
+                                              and abs(s["a"][0] - s["b"][0]) > tol_in
+                                              and abs(s["a"][1] - s["b"][1]) > tol_in) >= 1)
         swings = sum(1 for a in arcs_by.get(lay, []) if is_swing(a, unit_m))
         ev[lay] = {"segments": len(ss), "long_band_m": round(long_len, 3), "bands": len(bands),
                    "small_rects": len(rects), "filled_or_crossed_rects": max(filled, crossed), "swings": swings}
@@ -221,7 +357,8 @@ def layer_roles(ents, unit_m, override=None):
             n_open = 0
             for b in _bands(by[lay], unit_m):
                 closures = [(s["id"], tuple(s["a"]), tuple(s["b"])) for s in by[lay]]
-                for g in OC.band_gaps(b, min_gap=0.5 / unit_m, jamb_tol=0.03 / unit_m, closures=closures):
+                for g in OG.band_gaps(b, min_gap=0.5 / unit_m, jamb_tol=0.03 / unit_m, closures=closures,
+                                      merge_tol=mt):
                     n_open += g["state"] == OC.OPENING
             e["jambed_openings"] = n_open
     cand = sorted((e.get("jambed_openings", 0), e["long_band_m"], lay) for lay, e in ev.items()
@@ -261,8 +398,8 @@ def layer_roles(ents, unit_m, override=None):
     gaps = []
     for lay in walls:
         for b in _bands(by[lay], unit_m):
-            for g in OC.band_gaps(b, min_gap=0.4 / unit_m, jamb_tol=0.03 / unit_m, obstacles=(),
-                                  column_reach=0.06 / unit_m, closures=()):
+            for g in OG.band_gaps(b, min_gap=0.4 / unit_m, jamb_tol=0.03 / unit_m, obstacles=(),
+                                  column_reach=0.06 / unit_m, closures=(), merge_tol=mt):
                 gaps.append((b, g))
     for lay, e in ev.items():
         if roles[lay] != OTHER or not by.get(lay):

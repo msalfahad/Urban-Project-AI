@@ -62,7 +62,12 @@ from engine.source import tile_layout as TL           # noqa: E402
 
 POLICY_ID = "URBAN_BOQ_M9_S1"
 ARCH_POLICY_ID = "URBAN_BOQ_M9_S2_ARCH"
-ARCH_METHODS = ("ARCH_TAKEOFF_V1",)
+ARCH_POLICY_ID_V2 = "URBAN_BOQ_M9_S6_ARCH_V2"
+ARCH_METHODS = ("ARCH_TAKEOFF_V1", "ARCH_TAKEOFF_V2")
+# S6: ARCH_TAKEOFF_V2 = V1 + drawing admission (stop, exit 2, no BOQ on a fatal finding) + unit-relative geometric
+# tolerances + plan regions cut only along empty bands + floor-category and finish-surface completeness. V1 is
+# unchanged; --strict-admission puts the same admission in front of V1 (its outputs are V1's own).
+V2 = "ARCH_TAKEOFF_V2"
 M9_DIR = "m9"
 CREATED = datetime(2026, 1, 1)
 
@@ -186,9 +191,23 @@ def _kv(items, what):
     return out
 
 
-def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_areas=None, project_id=None, intake=None):
+class CompletenessFailed(Exception):
+    """S6 (V2): measured, but a physical region or a finish surface has no line, exclusion or RFI."""
+
+    def __init__(self, room_boq, arch, E):
+        super().__init__("COMPLETENESS_FAILED: " + "; ".join(
+            f"{c['floor']}: {len(c['unaccounted'])} unaccounted" for c in arch.get("coverage") or () if c["unaccounted"]))
+        self.room_boq, self.arch, self.E = room_boq, arch, E
+
+
+def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_areas=None, project_id=None, intake=None,
+                 strict=False, units=None, region_specs=None, accept_xrefs=(), extra_documents=(),
+                 admission_findings=()):
     """the architectural route on one plan drawing: every stage recorded, nothing silently skipped. `intake` (the
-    urban_intake.read result of this same drawing) skips the read for repeated runs / tests."""
+    urban_intake.read result of this same drawing) skips the read for repeated runs / tests.
+    S6: method ARCH_TAKEOFF_V2, or strict=True (V1 behind the same admission), run the drawing discovery first and
+    raise engine.source.discovery.AdmissionBlocked on a stopping finding (nothing is measured); units / region_specs /
+    accept_xrefs are reviewer inputs (recorded). V2 also raises CompletenessFailed when a surface is unaccounted."""
     from engine.source import arch_floor as AF
     from engine.source import arch_measure as AM
     from engine.source import arch_plan as AP
@@ -198,12 +217,50 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
     from tools import urban_intake as UI
     if method not in ARCH_METHODS:
         raise SystemExit(f"--method must be one of {ARCH_METHODS} (the architectural route is behind a versioned flag)")
+    v2 = method == V2
+    admit = v2 or strict
+    if not admit and (units or region_specs or accept_xrefs):
+        raise SystemExit("--units / --region / --accept-missing-xref are reviewer inputs of the admission: use them "
+                         "with --method ARCH_TAKEOFF_V2 or --strict-admission")
     facts = AM.validate_facts(facts)
     path = Path(drawing)
     sha = hashlib.sha256(path.read_bytes()).hexdigest()
     docs = [{"file": path.name, "sha256": sha}]
     rev = revision_set_sha256(docs)
     pid = project_id or (facts or {}).get("project_id") or "new project"
+    report = C = None
+    if admit:
+        import ezdxf
+        from engine.source import discovery as DS
+        from tools import arch_discovery as AD
+        report = DS.new_report([], method=method + ("+STRICT_ADMISSION" if strict and not v2 else ""),
+                               reviewer_inputs={"units": units, "regions": list(region_specs or ()),
+                                                "accepted_missing_xrefs": sorted(accept_xrefs or ())})
+        if intake is None:
+            intake = UI.read(str(path))
+        try:
+            doc = ezdxf.readfile(str(path))
+        except Exception as ex:                                       # noqa: BLE001 - an unreadable drawing stops
+            report["documents"] = [{"file": path.name, "sha256": sha, "format": "DXF", "parse_status": "FAILED"}]
+            DS.set_stage(report, "0_intake", [DS.finding(DS.FATAL, "UNREADABLE_DRAWING", str(ex)[:300])])
+            DS.gate(report)
+            raise DS.AdmissionBlocked(report) from None
+        report["documents"] = [AD.documents_record(path, doc, sha)] + list(extra_documents)
+        unit_used, C = AD.admit_intake(report, path, intake, doc, units=units, accept_xrefs=accept_xrefs)
+        SH = AD.shapes(doc)
+        if strict and not v2:
+            st = report["stages"]["4_units"]
+            DS.set_stage(report, "4_units", st["findings"] + DS.legacy_tolerance_findings(unit_used),
+                         **{k: v for k, v in st.items() if k not in ("state", "findings")})
+        if admission_findings:
+            st = report["stages"]["0_intake"]
+            DS.set_stage(report, "0_intake", st["findings"] + list(admission_findings),
+                         **{k: v for k, v in st.items() if k not in ("state", "findings")})
+        if DS.stops(report):
+            DS.gate(report)
+            raise DS.AdmissionBlocked(report)
+        if unit_used != intake.get("unit_m"):
+            intake = dict(intake, unit_m=unit_used)
     E = intake if intake is not None else UI.read(str(path))
     A = AI.read_arch(path, unit_m=E.get("unit_m"))
     hs = A["hatches"]
@@ -215,15 +272,38 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
              inserts=A["inserts"], segments=E["segments"] + A["extra_segments"] + chords,
              arcs=E["arcs"] + A["extra_arcs"])
     u = E["unit_m"]
-    P = AP.plan_regions(E)
+    split = "EMPTY_BANDS" if v2 else "TITLE_MIDPOINTS"
+    tol = "UNIT_RELATIVE" if v2 else "LEGACY"
+    if region_specs:
+        P = AD.override_regions(region_specs)
+    else:
+        P = AP.plan_regions(E, split=split, frames_from_lines_fallback=v2)
+    if admit:
+        AD.admit_regions(report, E, P, C, split=split, overrides=bool(region_specs))
+        if DS.stops(report):
+            DS.gate(report)
+            raise DS.AdmissionBlocked(report)
     regs = P["regions"]
     ents_of = {r["region_id"]: AP.region_entities(E, r["box"]) for r in regs}
+    frame_sides = {}
+    if v2 and not region_specs:
+        # S6: the sheet frame's own sides are never plan geometry (a frame drawn as lines on the wall layer would
+        # otherwise close the wall network along the frame); a cut along an empty band has no segment on it
+        for r in regs:
+            b = r["box"]
+            eps = max(1e-3 / u, max(b[2] - b[0], b[3] - b[1]) * 1e-6)
+            segs = ents_of[r["region_id"]]["segments"]
+            keep = [s_ for s_ in segs if not AP._on_frame_side(s_["a"], s_["b"], b, eps)]
+            frame_sides[r["region_id"]] = len(segs) - len(keep)
+            ents_of[r["region_id"]] = dict(ents_of[r["region_id"]], segments=keep)
     level = {r["region_id"]: AR.dominant_level(ents_of[r["region_id"]]["texts"]) for r in regs}
     lines, mats, comps, unresolved, rooms, openings, regions, walls_of = [], [], [], [], [], [], [], []
     floor_areas = []
-    roles_of = {r["region_id"]: AP.layer_roles(ents_of[r["region_id"]], u, override=layer_roles) for r in regs}
+    v2_unresolved, coverage, column_ev, arc_recs, unread_ev = [], [], [], [], []
+    roles_of = {r["region_id"]: AP.layer_roles(ents_of[r["region_id"]], u, override=layer_roles, tol=tol)
+                for r in regs}
     spaces_of = {r["region_id"]: AR.spaces(ents_of[r["region_id"]], roles_of[r["region_id"]]["roles"], u,
-                                           region_id=r["region_id"])
+                                           region_id=r["region_id"], tol=tol)
                  for r in regs if roles_of[r["region_id"]]["state"] != "BLOCKED"}
     # one stair drawn on two plans: the plans are aligned on their column grid, and a flight lying over a flight of
     # the plan below is counted once (the repeat is exposure until a reviewer says which it is)
@@ -242,6 +322,7 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
                                      spaces_of[r["region_id"]]["faces"], spaces_of[r["region_id"]].get("voids"),
                                      ents_of[r["region_id"]]["segments"])
                                     for r in stacked], u)
+    col_layers = sorted({lay for v in roles_of.values() for lay, ro in v["roles"].items() if ro == AP.COLUMN})
     for i, reg in enumerate(regs):
         rid = reg["region_id"]
         ents = ents_of[rid]
@@ -254,6 +335,8 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
                "layer_roles": L["roles"], "layer_evidence": L["evidence"], "roles_source": L["source"],
                "roles_state": L["state"], "level_m": level[rid], "floor_above_level_m": above,
                "entities": {k: len(v) for k, v in ents.items()}}
+        if v2 and not region_specs:
+            rec["frame_side_segments_dropped"] = frame_sides.get(rid, 0)
         if L["state"] == "BLOCKED":
             rec["stage_state"] = "BLOCKED_AT_LAYER_ROLES"
             unresolved.append({"room_id": "-", "floor": floor, "item": "plan region " + rid,
@@ -300,6 +383,38 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
                                    "reason": "VOID_EXTENT_UNRESOLVED: a VOID word outside every closed space has no "
                                              "outline (X-marked rectangle / void symbol); no floor is deducted"})
         rec["floor_areas"] = {k: fa[k] for k in ("gross_floor_plate_m2", "internal_physical_floor_m2", "external_m2")}
+        if admit:
+            # S6 entity completeness: the fills read independently of the plan reader against the measured columns,
+            # and the door blocks inserted at a non-uniform scale (review flags; V1 strict: the report only)
+            from engine.source import arch_completeness as AC
+            column_ev.append(AC.column_evidence(S, M, SH["fills"], reg["box"], floor, column_layers=col_layers))
+            arc_recs += AC.distorted_arc_blocks(SH["nonuniform_arc_inserts"], reg["box"], floor)
+            unread_ev.append(AC.unread_fills(S, M, SH["fills"], reg["box"], floor))
+        if v2:
+            # S6: every strip reviewed on its own, the surfaces V1 leaves silent get their RFI, then the coverage of
+            # this plan in three separate views (physical regions / functional spaces / finish zones)
+            from engine.source import arch_completeness as AC
+            ctx = {"project_id": pid, "revision_set_sha256": rev, "documents": docs}
+            strips = AC.strip_register(S, floor)
+            s_lines, s_unres = AC.strip_lines(ctx, strips, floor)
+            r_lines, r_unres = AC.surface_rfis(ctx, M, floor, facts, level[rid], above)
+            M["lines"] = M["lines"] + s_lines + r_lines
+            here = [x for x in unresolved if x.get("floor") == floor]
+            cov = AC.coverage(S, M, strips, M["lines"], M["unresolved"] + X["unresolved"] + here + s_unres + r_unres,
+                              floor)
+            v2_unresolved += [(x, rec) for x in s_unres + r_unres + AC.column_records(column_ev[-1])
+                              + [a_ for a_ in arc_recs if a_["floor"] == floor] + unread_ev[-1][1]]
+            coverage.append(cov)
+            by_cls = Counter()
+            for s_ in strips:
+                by_cls[s_["class"]] += s_["area_m2"]
+            fa.update(strips=strips, coverage={"gate": cov["gate"], "by_category": cov["physical_regions"]["by_category"],
+                                               "unaccounted": len(cov["unaccounted"])},
+                      doorway_strips_by_class_m2={k: round(v, 6) for k, v in sorted(by_cls.items())},
+                      doorway_strips_note="DOORWAY_STRIPS (in internal_physical_floor_m2, as V1) split by class: "
+                                          "WINDOW_REVEAL strips have no established floor status (sill not in the "
+                                          "plan); every strip is a BLOCKED_RFI line, none is a floor finish quantity")
+            rec["coverage_gate"] = cov["gate"]
         for rm in M["rooms"]:
             rm["region_id"] = rid
         rooms += M["rooms"]
@@ -324,22 +439,104 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
                                                                     "measure": AM.policy_record(),
                                                                     "walls": AW.policy_record(),
                                                                     "floor_areas": AF.policy_record()}}
+    if v2:
+        from engine.source import arch_completeness as AC
+        unresolved += [AC.flag(x, drawing=path.name, region=r_) for x, r_ in v2_unresolved]
+        # the non-stopping admission findings travel with the BOQ as flags (REVIEW / WARNING / later BLOCKED_ITEM)
+        for f_ in DS.all_findings(report):
+            if f_["level"] != DS.FATAL:
+                unresolved.append(AC.flag({"room_id": "-", "floor": "-", "item": f"ADMISSION:{f_['code']}",
+                                           "reason": f"{f_['level']}: {f_['message']}"}, drawing=path.name))
+        run.update(policy=ARCH_POLICY_ID_V2, s6={
+            "tolerance_policy": tol, "region_split": split, "frames_from_lines": bool(P.get("frames_from_lines")),
+            "region_overrides": list(region_specs or ()), "unit_m_used": u, "admission": report["gates"] or None,
+            "completeness": {c["floor"]: c["gate"] for c in coverage}})
+        run["policies"].update(completeness=AC.policy_record(), discovery=DS.policy_record())
+    if admit:
+        _finish_discovery(report, E, facts, regions, lines, coverage if v2 else None,
+                          entity_checks={"column_evidence": column_ev, "door_symbols": arc_recs,
+                                         "unread_fills": [u_[0] for u_ in unread_ev], "shape_errors": SH["errors"]})
     room_boq = {"project_id": pid, "lines": lines, "materials": mats, "comparisons": comps, "unresolved": unresolved,
                 "assumptions": [], "geometry_source": f"architectural plan DXF {path.name} ({method})"}
     arch = {"run": run, "regions": regions, "other_frames": P["other_frames"], "rooms": rooms, "openings": openings,
             "walls": walls_of, "reference_areas": reference_areas or {}, "floor_areas": floor_areas}
+    if admit:
+        arch["discovery"] = report
+    if v2:
+        arch["coverage"] = coverage
+        if any(c["gate"] != "PASS" for c in coverage):
+            raise CompletenessFailed(room_boq, arch, E)
     return room_boq, arch, E
 
 
-def _dxf_of(drawing, out, conversions):
+def _finish_discovery(report, E, facts, regions, lines, coverage, entity_checks=None):
+    """S6: the discovery stages after admission - geometry readiness (the K2 findings and the entity completeness
+    checks), the vertical model (heights only from a source or an owner fact), finish zones (the coverage gate) and BOQ
+    readiness (lines by state)."""
+    from engine.source import discovery as DS
+    k2 = E.get("intake_findings") or {}
+    ec = entity_checks or {}
+    geo = [DS.finding(DS.WARNING, "K2_" + code, f"{n} x {code} (K2 kernel finding)", count=n)
+           for code, n in sorted(k2.items())]
+    for ce in ec.get("column_evidence") or ():
+        if ce["unmeasured"]:
+            geo.append(DS.finding(DS.REVIEW, "COLUMN_EVIDENCE_NOT_MEASURED",
+                                  f"{ce['floor']}: {len(ce['unmeasured'])} of {ce['member_sized']} filled member-sized "
+                                  f"shape(s) are not measured as columns ({ce['measured_columns']} columns measured; "
+                                  f"column layers {ce['column_layers'] or 'none found: every layer checked'}): "
+                                  "a lost column (nested block, MINSERT, SOLID, rotated / exploded outline, too few to "
+                                  "class the layer) or a hatched wall piece / fixture; the rooms named are flagged",
+                                  floor=ce["floor"], rooms=sorted({x["room_id"] or "-" for x in ce["unmeasured"]}),
+                                  items=ce["unmeasured"][:50]))
+    for uf in ec.get("unread_fills") or ():
+        if uf["unread_fills"]:
+            geo.append(DS.finding(DS.REVIEW, "FILLS_NOT_READ_IN_PLAN",
+                                  f"{uf['floor']}: {uf['unread_fills']} fill(s) inside the plan are not read by the plan "
+                                  "reader (hatches two or more block levels deep or in a later MINSERT cell, SOLID "
+                                  "fills): columns, finish zones or areas they draw are missing; the rooms named are "
+                                  "flagged", floor=uf["floor"], rooms=uf["rooms"]))
+    for ar in ec.get("door_symbols") or ():
+        geo.append(DS.finding(DS.REVIEW, "DOOR_SYMBOLS_DISTORTED", f"{ar['floor']}: {ar['reason']}", floor=ar["floor"]))
+    for er in ec.get("shape_errors") or ():
+        geo.append(DS.finding(DS.WARNING, "SHAPE_READ_ERROR", f"block {er['block']}: {er['error']}", **er))
+    DS.set_stage(report, "6_geometry_readiness", geo,
+                 measured_regions=[r["region_id"] for r in regions if r.get("stage_state") == "MEASURED"],
+                 blocked_regions=[r["region_id"] for r in regions if r.get("stage_state") != "MEASURED"],
+                 column_evidence=[{k: v for k, v in ce.items() if k != "unmeasured"} | {"unmeasured": len(ce["unmeasured"])}
+                                  for ce in ec.get("column_evidence") or ()])
+    given = sorted(k for k in ("wall_heights", "height_components", "opening_heights", "stairs") if (facts or {}).get(k))
+    DS.set_stage(report, "7_vertical_model",
+                 [] if given else [DS.finding(DS.BLOCKED_ITEM, "NO_SECTION_SOURCE", "no section, schedule or facts "
+                                              "file gives the heights: every height-dependent quantity is BLOCKED; "
+                                              "plan level texts are candidates only")],
+                 state="PROVISIONAL" if given else None, facts_given=given,
+                 level_candidates={r["floor"]: r.get("level_m") for r in regions})
+    if coverage is not None:
+        un = [dict(x, floor=c["floor"]) for c in coverage for x in c["unaccounted"]]
+        DS.set_stage(report, "9_finish_zones",
+                     [DS.finding(DS.FATAL, "SURFACE_UNACCOUNTED", f"{len(un)} region part(s) / surface(s) with no line, "
+                                 "exclusion or RFI", items=un[:50])] if un else [],
+                     gates={c["floor"]: c["gate"] for c in coverage})
+    fam = {}
+    for ln in lines:
+        fam.setdefault(ln["item_code"], Counter())[ln["evidence_state"]] += 1
+    DS.set_stage(report, "10_boq_readiness", [], state="PROVISIONAL",
+                 families={k: dict(sorted(v.items())) for k, v in sorted(fam.items())},
+                 note="MACHINE_ONLY: nothing is reviewed or quotation-ready")
+    DS.gate(report)
+
+
+def _dxf_of(drawing, out, conversions, strict=False):
     """a DWG through the DWG adapter (an external converter, run as a separate program) into OUT/converted; a DXF as
     it is. A failed or impossible conversion stops the run with its record (OUT/DWG_CONVERSION.json)."""
     p = Path(drawing)
     if p.suffix.lower() != ".dwg":
         return str(p)
     from tools import dwg_adapter as DA
-    rec = DA.convert(p, out / "converted")
+    rec = DA.convert(p, out / "converted", strict=strict)
     conversions.append(rec)
+    if strict and rec["state"] != "CONVERTED":
+        raise _ConversionBlocked(rec)
     if rec["state"] != "CONVERTED":
         out.mkdir(parents=True, exist_ok=True)
         (out / "DWG_CONVERSION.json").write_text(_j({"conversions": conversions}), encoding="utf-8")
@@ -347,16 +544,124 @@ def _dxf_of(drawing, out, conversions):
     return rec["dxf"]
 
 
+class _ConversionBlocked(Exception):
+    def __init__(self, rec):
+        super().__init__(rec.get("remedy") or "DWG conversion blocked")
+        self.rec = rec
+
+
+PUBLISHED = ("BOQ_LINES.json", "BOQ_LINES.csv", "MATERIAL_RESULTS.json", "COVERAGE.json", "COVERAGE.csv",
+             "RUN_RULES.json", "ARCH_PLAN.json", "ARCH_ROOMS.json", "ARCH_OPENINGS.json", "ARCH_WALLS.json",
+             "UNRESOLVED.json", "ARCH_FLOOR_AREAS.json", "URBAN_ROOM_BOQ.xlsx", "FINISH_COVERAGE.json",
+             "DRAWING_DISCOVERY.json", "ADMISSION_BLOCKED.json", "COMPLETENESS_FAILED.json")
+
+
+def _supersede(out):
+    """S6: before a run that publishes no BOQ, the BOQ files an earlier run left in OUT are moved to
+    OUT/SUPERSEDED_<n> (never deleted), so a stale BOQ can never be read as this run's."""
+    old = [n for n in PUBLISHED if (out / n).exists()] + sorted(p.name for p in out.glob("OVERLAY_*.svg"))
+    if not old:
+        return None
+    k = 1
+    while (out / f"SUPERSEDED_{k}").exists():
+        k += 1
+    dst = out / f"SUPERSEDED_{k}"
+    dst.mkdir(parents=True)
+    for n in old:
+        (out / n).rename(dst / n)
+    return {"moved_to": dst.name, "files": old}
+
+
+def _blocked(out, report, conversions, *, code, what, extra=None):
+    """S6: publish the evidence of a run that stops (no BOQ): the discovery report, the stopping findings with their
+    remedies, the conversions; exit code 2 (admission) or 3 (completeness)."""
+    from engine.source import discovery as DS
+    out.mkdir(parents=True, exist_ok=True)
+    moved = _supersede(out)
+    if not report.get("gates"):
+        DS.gate(report)
+    (out / "DRAWING_DISCOVERY.json").write_text(_j(report), encoding="utf-8")
+    if conversions:
+        (out / "DWG_CONVERSION.json").write_text(_j({"conversions": conversions}), encoding="utf-8")
+    st = DS.stops(report) if code == DS.EXIT_ADMISSION_BLOCKED else []
+    rec = {"state": what, "exit_code": code, "boq_published": False,
+           "stopping_findings": [{k: f[k] for k in ("stage", "level", "code", "message")} for f in st],
+           "reviewer_inputs": report.get("reviewer_inputs"), "documents": report.get("documents"),
+           "superseded_earlier_outputs": moved, **(extra or {})}
+    name = "ADMISSION_BLOCKED.json" if code == DS.EXIT_ADMISSION_BLOCKED else "COMPLETENESS_FAILED.json"
+    (out / name).write_text(_j(rec), encoding="utf-8")
+    print(json.dumps({"state": what, "exit_code": code, "stopping": [f"{f['stage']}:{f['code']}" for f in st],
+                      "outputs": sorted(p.name for p in out.iterdir() if p.is_file())}, indent=1))
+    return code
+
+
 def cmd_arch(a):
+    from engine.source import discovery as DS
     facts = json.loads(Path(a.facts).read_text(encoding="utf-8")) if a.facts else None
     roles = _kv(a.layer_roles, "--layer-roles")
     refs = {k: float(v) for k, v in _kv(a.reference_areas, "--reference-areas").items()}
     out = Path(a.out)
     conversions = []
-    plan = _dxf_of(a.drawings[0], out, conversions)
-    structural = _dxf_of(a.structural, out, conversions) if a.structural else None
-    room, arch, E = arch_compute(plan, method=a.method, facts=facts, layer_roles=roles or None,
-                                 reference_areas=refs, project_id=a.project)
+    v2 = a.method == V2
+    admit = v2 or a.strict_admission
+    if not admit and (a.units or a.region or a.accept_missing_xref):
+        raise SystemExit("--units / --region / --accept-missing-xref are reviewer inputs of the admission: use them "
+                         "with --method ARCH_TAKEOFF_V2 or --strict-admission")
+    if a.structural and not a.conventions:
+        print("WARNING: --structural without --conventions: route G runs with its default convention set "
+              f"({Path(_m2_default()).stem}); the M8 scope pass (SCOPE_FROM_FINDINGS) needs "
+              "URBAN_M8_GENERIC_CONVENTIONS_V6, so it is OFF for this run", file=sys.stderr)
+    pre = []
+    if admit:
+        inputs = [("plan", Path(a.drawings[0]))] + ([("structural", Path(a.structural))] if a.structural else [])
+        shas = {k: hashlib.sha256(p.read_bytes()).hexdigest() for k, p in inputs}
+        if v2 and a.structural and not a.conventions:
+            pre.append(DS.finding(DS.FATAL, "STRUCTURAL_CONVENTIONS_REQUIRED",
+                                  "ARCH_TAKEOFF_V2 with --structural needs an explicit --conventions profile (the route "
+                                  "G defaults differ by entry point and leave the M8 scope pass off)"))
+        if a.structural and shas["plan"] == shas["structural"]:
+            pre.append(DS.finding(DS.FATAL, "PLAN_AND_STRUCTURAL_ARE_ONE_FILE",
+                                  "the architectural plan and the structural drawing are the same file (sha256)",
+                                  sha256=shas["plan"]))
+        elif a.structural and Path(a.drawings[0]).name.lower() == Path(a.structural).name.lower():
+            pre.append(DS.finding(DS.WARNING, "SAME_FILE_NAME", "the plan and the structural drawing have the same "
+                                  "file name (different content): their conversions are kept apart by content hash",
+                                  name=Path(a.structural).name))
+        inputs_rec = [{"role": k, "file": p.name, "sha256": shas[k]} for k, p in inputs]
+    try:
+        try:
+            plan = _dxf_of(a.drawings[0], out, conversions, strict=admit)
+            structural = _dxf_of(a.structural, out, conversions, strict=admit) if a.structural else None
+        except _ConversionBlocked as ex:
+            report = DS.new_report(inputs_rec, method=a.method)
+            DS.set_stage(report, "0_intake", pre + [DS.finding(
+                DS.FATAL, "DWG_CONVERSION_BLOCKED", ex.rec.get("remedy") or "the DWG was not converted",
+                dwg=ex.rec.get("dwg"), dwg_sha256=ex.rec.get("dwg_sha256"), converter=ex.rec.get("converter"))])
+            raise DS.AdmissionBlocked(report) from None
+        if any(f["level"] == DS.FATAL for f in pre):
+            report = DS.new_report(inputs_rec, method=a.method)
+            DS.set_stage(report, "0_intake", pre)
+            raise DS.AdmissionBlocked(report)
+        room, arch, E = arch_compute(plan, method=a.method, facts=facts, layer_roles=roles or None,
+                                     reference_areas=refs, project_id=a.project, strict=a.strict_admission,
+                                     units=a.units, region_specs=a.region, accept_xrefs=tuple(a.accept_missing_xref or ()),
+                                     extra_documents=[d for d in (inputs_rec if admit else ()) if d["role"] != "plan"],
+                                     admission_findings=pre)
+    except DS.AdmissionBlocked as ex:
+        return _blocked(out, ex.report, conversions, code=DS.EXIT_ADMISSION_BLOCKED, what="ADMISSION_BLOCKED")
+    except CompletenessFailed as ex:
+        diag = out / "diagnostics"
+        diag.mkdir(parents=True, exist_ok=True)
+        (diag / "FINISH_COVERAGE.json").write_text(_j({"run": ex.arch["run"], "floors": ex.arch["coverage"]}),
+                                                   encoding="utf-8")
+        (diag / "BOQ_LINES_UNPUBLISHED.json").write_text(BL.dumps(ex.room_boq["lines"]), encoding="utf-8")
+        (diag / "UNRESOLVED_UNPUBLISHED.json").write_text(_j({"unresolved": ex.room_boq["unresolved"]}),
+                                                          encoding="utf-8")
+        return _blocked(out, ex.arch["discovery"], conversions, code=DS.EXIT_COMPLETENESS_FAILED,
+                        what="COMPLETENESS_FAILED",
+                        extra={"unaccounted": [dict(x, floor=c["floor"]) for c in ex.arch["coverage"]
+                                               for x in c["unaccounted"]][:200],
+                               "diagnostics": "diagnostics/ (the computed, unpublished lines and the coverage)"})
     if conversions:
         arch["run"]["dwg_conversions"] = conversions
         (out / "DWG_CONVERSION.json").write_text(_j({"conversions": conversions}), encoding="utf-8")
@@ -375,6 +680,13 @@ def cmd_arch(a):
                                      "lines": len(s_lines), "conventions": conv}
     res, rows = write_m9(out, s_lines=s_lines, room=room, family_coverage=cov, project_id=room["project_id"],
                          conventions=conv, xlsx=not a.no_m9_xlsx, arch=arch)
+    if admit:
+        (out / "DRAWING_DISCOVERY.json").write_text(_j(arch["discovery"]), encoding="utf-8")
+        res["files"].append("DRAWING_DISCOVERY.json")
+    if v2:
+        (out / "FINISH_COVERAGE.json").write_text(_j({"run": arch["run"], "floors": arch["coverage"]}),
+                                                  encoding="utf-8")
+        res["files"].append("FINISH_COVERAGE.json")
     svgs = []
     if not a.no_svg:
         from tools import arch_overlay as AO
@@ -395,8 +707,15 @@ def cmd_arch(a):
                       "lines": len(room["lines"]), "structural_lines": len(s_lines), "evidence": dict(sorted(ev.items())),
                       "materials": dict(Counter(m["state"] for m in room["materials"])),
                       "unresolved": len(room["unresolved"]), "coverage": CS.summary(rows)["by_run_state"],
-                      "outputs": res["files"] + (["URBAN_ROOM_BOQ.xlsx"] if "xlsx" in res else []) + svgs}, indent=1))
+                      "outputs": res["files"] + (["URBAN_ROOM_BOQ.xlsx"] if "xlsx" in res else []) + svgs,
+                      **({"admission": {k: v for k, v in (arch["discovery"].get("gates") or {}).items() if k != "rule"}}
+                         if admit else {})}, indent=1))
     return 0
+
+
+def _m2_default():
+    from tools import urban_boq_m2 as M2
+    return M2.GENERIC_CONVENTIONS
 
 
 def _tile_constraints(a):
@@ -514,7 +833,9 @@ def main(argv=None):
                    help="one architectural plan DXF (a DWG goes through tools/dwg_adapter.py: an external converter)")
     p.add_argument("--out", required=True)
     p.add_argument("--method", required=True, choices=ARCH_METHODS,
-                   help="the versioned architectural takeoff method (no default: the route is opt-in until validated)")
+                   help="the versioned architectural takeoff method (no default: the route is opt-in until validated); "
+                        "ARCH_TAKEOFF_V2 (S6) adds the drawing admission, unit-relative tolerances, empty-band plan "
+                        "regions and the completeness gates (exit 2: admission blocked, 3: completeness failed)")
     p.add_argument("--facts", help="project facts (URBAN_ARCH_FACTS_V1): heights, finishes, tile constraints, membrane")
     p.add_argument("--layer-roles", nargs="+", metavar="LAYER=ROLE",
                    help="override the detected role of a layer (WALL, COLUMN, WINDOW, DOOR, OTHER); recorded")
@@ -529,6 +850,16 @@ def main(argv=None):
     p.add_argument("--as-of", default=datetime.now().strftime("%Y-%m-%d"), help="with --structural: report date")
     p.add_argument("--no-m9-xlsx", action="store_true")
     p.add_argument("--no-svg", action="store_true")
+    # S6: the drawing admission (always on for ARCH_TAKEOFF_V2) and its reviewer inputs (recorded, never defaulted)
+    p.add_argument("--strict-admission", action="store_true",
+                   help="ARCH_TAKEOFF_V1 behind the S6 drawing admission: a fatal finding stops the run with exit 2 and "
+                        "no BOQ; an admitted drawing gives V1's own outputs plus DRAWING_DISCOVERY.json")
+    p.add_argument("--units", choices=["mm", "cm", "m", "in"],
+                   help="reviewer input: the drawing unit when $INSUNITS is absent / 0 or contradicted (recorded)")
+    p.add_argument("--region", nargs="+", metavar="FLOOR=x0,y0,x1,y1",
+                   help="reviewer input: a plan region in drawing units (frame-less or paper-space sheets; recorded)")
+    p.add_argument("--accept-missing-xref", nargs="+", metavar="XREF_BLOCK",
+                   help="reviewer input: measure without these unresolved external references (recorded)")
     p.set_defaults(fn=cmd_arch)
     a = ap.parse_args(argv)
     return a.fn(a)

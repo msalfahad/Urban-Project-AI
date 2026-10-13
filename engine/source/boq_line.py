@@ -89,6 +89,9 @@ ITEMS = {
     "FIN.MARBLE.LANDING": ("Stair landing marble", "رخام استراحة / بسطة", "STAIR_FINISH", "m2"),
     "ARCH.WALL_RUN": ("Wall run by thickness (plan)", "أطوال الجدران حسب السماكة", "MASONRY", "lm"),
     "MAS.BLOCK": ("Block walls by thickness", "طابوق أسود / أبيض", "MASONRY", "m2"),
+    # M9 S6 (ARCH_TAKEOFF_V2): the strips of the openings in the wall thickness, measured and handed to the owner
+    "ARCH.THRESHOLD": ("Opening threshold strip (finish to be confirmed)", "عتبة الفتحة", "FLOOR_FINISH", "m2"),
+    "ARCH.WINDOW_REVEAL": ("Window reveal strip (floor status to be confirmed)", "شريط فتحة الشباك", "OPENINGS", "m2"),
 }
 # route G family (+ storey) -> item code
 ROUTE_G_FAMILY = {"PLAIN_CONCRETE": "STR.CONC.BLINDING", "FOOTINGS": "STR.CONC.FOOTING", "GROUND_SLAB": "STR.CONC.GROUND_SLAB",

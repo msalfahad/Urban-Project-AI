@@ -195,9 +195,9 @@ def _opening_geometry(o):
     return faces
 
 
-def _columns(ents, roles, unit_m):
+def _columns(ents, roles, unit_m, tol="LEGACY"):
     cols = [s for s in ents["segments"] if roles.get(s["layer"]) == AP.COLUMN]
-    return [b for b in AP._small_rects(cols, unit_m)]
+    return [b for b in AP._small_rects(cols, unit_m, tol)]
 
 
 def _frame(o, p):
@@ -847,15 +847,15 @@ def _apply_zones(out, plan, rec, by_line):
     return True
 
 
-def spaces(ents, roles, unit_m, *, region_id="ARCH"):
+def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY"):
     eps = 0.5e-3 / unit_m
     wall_l = sorted(l for l, r in roles.items() if r == AP.WALL)
     col_l = {l for l, r in roles.items() if r == AP.COLUMN}
     win_l = {l for l, r in roles.items() if r == AP.WINDOW}
     door_l = {l for l, r in roles.items() if r == AP.DOOR}
     warnings = []
-    cols = _columns(ents, roles, unit_m)
-    ops, rej = LM.openings(ents["segments"], unit_m, wall_l, cols)
+    cols = _columns(ents, roles, unit_m, tol)
+    ops, rej = LM.openings(ents["segments"], unit_m, wall_l, cols, tol=tol)
     swings = door_swings(ents, door_l, unit_m)
     win_segs = [s for s in ents["segments"] if s["layer"] in win_l]
     served = match_swings(ops, swings, unit_m)

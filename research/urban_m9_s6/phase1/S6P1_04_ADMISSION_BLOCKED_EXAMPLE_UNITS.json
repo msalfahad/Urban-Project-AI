@@ -1,0 +1,34 @@
+{
+ "boq_published": false,
+ "documents": [
+  {
+   "bytes": 37522,
+   "file": "plan.dxf",
+   "format": "DXF",
+   "header": {
+    "DIMLFAC": 1.0,
+    "INSUNITS": 0,
+    "MEASUREMENT": 1,
+    "dxf_version": "AC1032"
+   },
+   "parse_status": "PARSED",
+   "sha256": "b2671893cfd9d78ad810fb000a8a025a074fc0187803ee4d75d1392041dc1ef4"
+  }
+ ],
+ "exit_code": 2,
+ "reviewer_inputs": {
+  "accepted_missing_xrefs": [],
+  "regions": [],
+  "units": null
+ },
+ "state": "ADMISSION_BLOCKED",
+ "stopping_findings": [
+  {
+   "code": "UNITS_NOT_DECLARED",
+   "level": "BLOCKED_ITEM",
+   "message": "$INSUNITS declares no unit; the drawn geometry suggests 0.001 m per unit - a reviewer must confirm it (--units mm|cm|m|in) before anything is measured",
+   "stage": "4_units"
+  }
+ ],
+ "superseded_earlier_outputs": null
+}

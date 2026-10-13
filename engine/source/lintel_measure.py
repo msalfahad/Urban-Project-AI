@@ -25,6 +25,7 @@ from collections import Counter
 from engine.source import lintel_qto as LQ
 from engine.source import member_detection as MD
 from engine.source import opening_census as OC
+from engine.source import opening_gaps as OG
 
 POLICY_ID = "LINTEL_MEASURE_V1"
 
@@ -48,11 +49,15 @@ def wall_layers(segments, unit_m, *, t_m=(0.10, 0.45), share=0.2):
     return sorted(l for l, v in score.items() if best and v >= max(3, share * best)), score
 
 
-def openings(segments, unit_m, layers, columns=(), *, t_m=(0.10, 0.45), min_gap_m=0.5):
+def openings(segments, unit_m, layers, columns=(), *, t_m=(0.10, 0.45), min_gap_m=0.5, tol="LEGACY"):
     """the census runs on each wall layer by itself (a composite wall drawn on several layers keeps a line between
     its faces, which a combined census would refuse); closures (jamb lines, perpendicular faces) come from every
     non-annotation layer. Openings found twice (one gap, two layers) are kept once."""
     k = 1.0 / unit_m / 1000.0
+    # S6: LEGACY merges the two wall faces' covers within 1.0 drawing unit (1 mm only in a mm drawing);
+    # UNIT_RELATIVE merges within 1 mm in any unit (identical at mm: 1e-3 / 0.001 == 1.0). opening_gaps.band_gaps
+    # calls the frozen opening_census.band_gaps itself at 1.0
+    merge_tol = 1.0 if tol == "LEGACY" else 1e-3 / unit_m
     closures = [(s["id"], tuple(s["a"]), tuple(s["b"])) for s in segments
                 if MD._layer_role(s["layer"]) not in MD.ANNOTATION_ROLES]
     obst = [(f"COL{i}", MD.box_poly(c)) for i, c in enumerate(columns)]
@@ -62,8 +67,8 @@ def openings(segments, unit_m, layers, columns=(), *, t_m=(0.10, 0.45), min_gap_
                            min_len=100.0 * k)
         bands = OC.wall_bands(fl, t_m[0] / unit_m, t_m[1] / unit_m, min_overlap=0.3 / unit_m)
         for b in bands:
-            gaps = OC.band_gaps(b, min_gap=min_gap_m / unit_m, jamb_tol=30.0 * k, obstacles=obst,
-                                column_reach=60.0 * k, closures=closures)
+            gaps = OG.band_gaps(b, min_gap=min_gap_m / unit_m, jamb_tol=30.0 * k, obstacles=obst,
+                                column_reach=60.0 * k, closures=closures, merge_tol=merge_tol)
             for g in [x for g0 in gaps for x in _split_at_columns(g0, b, obst, min_gap_m / unit_m)]:
                 if g["state"] != OC.OPENING:
                     rej[g["state"]] += 1

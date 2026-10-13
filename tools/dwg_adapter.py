@@ -87,21 +87,31 @@ def loss_report(dxf_path):
             types[e.dxftype()] += 1
     losses = [{"type": t, "count": n, "why": NOT_GEOMETRY[t]} for t, n in sorted(types.items()) if t in NOT_GEOMETRY]
     return {"entity_types": dict(sorted(types.items())), "losses": losses,
-            "dxf_version": doc.dxfversion, "insunits": doc.header.get("$INSUNITS")}
+            "dxf_version": doc.dxfversion, "insunits": doc.header.get("$INSUNITS"),
+            "modelspace_entity_types": dict(sorted(Counter(e.dxftype() for e in doc.modelspace()).items()))}
 
 
-def convert(dwg, out_dir, *, prefer=None):
+def convert(dwg, out_dir, *, prefer=None, strict=False):
+    """strict (S6, ARCH_TAKEOFF_V2 and --strict-admission): the converted file is named after the DWG's own hash
+    (two inputs with the same file name never share an output), any earlier file of that name is removed before
+    the converter runs (a converter that writes nothing never leaves a previous revision to be read), an
+    unreadable or entity-less result is BLOCKED. strict=False is the M9 S3 behaviour, unchanged."""
     dwg = Path(dwg)
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
     rec = {"policy": POLICY_ID, "dwg": dwg.name, "dwg_sha256": _sha(dwg), "dwg_version": dwg_version(dwg)}
+    if strict:
+        rec["policy"] = POLICY_ID + "+S6_STRICT"
+        rec["dwg_path"] = str(dwg)
     found = converters()
     if prefer:
         found = [c for c in found if c["converter"] == prefer] or found
     if not found:
         return dict(rec, state="BLOCKED", converter=None, remedy=REMEDY, losses=[])
     c = found[0]
-    dxf = out_dir / (dwg.stem + ".dxf")
+    dxf = out_dir / (f"{dwg.stem}.{rec['dwg_sha256'][:12]}.dxf" if strict else dwg.stem + ".dxf")
+    if strict and dxf.exists():
+        dxf.unlink()
     if c["converter"] == "LIBREDWG_DWG2DXF":
         p = subprocess.run([c["path"], "-y", "-o", str(dxf), str(dwg)], capture_output=True, text=True, timeout=600)
         out, err, code = p.stdout, p.stderr, p.returncode
@@ -119,7 +129,20 @@ def convert(dwg, out_dir, *, prefer=None):
     if code != 0 or not dxf.exists() or dxf.stat().st_size == 0:
         return dict(rec, state="BLOCKED", remedy=f"the converter failed (exit {code}): see stderr_tail; " + REMEDY,
                     losses=[])
-    lr = loss_report(dxf)
+    if strict:
+        try:
+            lr = loss_report(dxf)
+        except Exception as ex:                                    # noqa: BLE001 - the converted file is not a DXF
+            return dict(rec, state="BLOCKED", dxf=str(dxf), losses=[],
+                        remedy=f"CONVERTED_FILE_UNREADABLE: the converter exited 0 but its output is not a readable "
+                               f"DXF ({str(ex)[:200]}); " + REMEDY)
+        msp = lr.get("modelspace_entity_types") or {}
+        if not sum(msp.values()):
+            return dict(rec, state="BLOCKED", dxf=str(dxf), dxf_sha256=_sha(dxf), entity_types=lr["entity_types"],
+                        losses=lr["losses"], remedy="EMPTY_CONVERSION: the converted DXF has no model-space entity; "
+                                                    "the conversion lost the drawing (or the DWG is empty). " + REMEDY)
+    else:
+        lr = loss_report(dxf)
     return dict(rec, state="CONVERTED", dxf=str(dxf), dxf_sha256=_sha(dxf), converted_dxf_version=lr["dxf_version"],
                 entity_types=lr["entity_types"], losses=lr["losses"], remedy=None)
 
