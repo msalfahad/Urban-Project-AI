@@ -452,6 +452,12 @@ def finalise(els, *, main, unresolved_main_candidates, facts):
             el["boq_class"] = el.get("class")
             el["material"] = {PVC: "PVC (owner door rule)", ALU: "ALUMINIUM (owner door rule)"}.get(el["boq_class"],
                                                                                                 "NOT_APPLICABLE")
+        if el["boq_class"] == LIFT:               # lift doors are not measured as ordinary doors (owner rule)
+            el.update(height={"value_m": None, "state": "NOT_APPLICABLE",
+                              "source": "LIFT_SYSTEM / LIFT_DOOR: outside the ordinary door BOQ (not measured)"},
+                      height_m=None, area_m2=None, area_state="NOT_APPLICABLE: lift door (not measured)",
+                      released=False, section="LIFT_EXCLUDED")
+            continue
         h = _height(el["boq_class"] if el["boq_class"] in RELEASED_CLASSES else None, facts)
         el["height"] = h
         w = el["structural_opening_width_m"]

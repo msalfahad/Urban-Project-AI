@@ -146,6 +146,13 @@ def test_lift_doors_are_outside_the_door_boq_and_the_floor_geometry_is_unchanged
     assert S["plate"] == S2["plate"]                             # the shaft keeps its gross floor geometry
 
 
+def test_a_lift_door_is_never_measured_even_with_a_door_height_source():
+    _S, _M, model = H.door_run(H.door_fixture(), facts=_facts(DOOR={"value_m": 2.1, "authority": "schedule rev A"}))
+    (lift,) = [el for el in model["elements"] if el["boq_class"] == DM.LIFT]
+    assert lift["height_m"] is None and lift["area_m2"] is None and lift["height"]["state"] == "NOT_APPLICABLE"
+    assert not lift["released"] and lift["section"] == "LIFT_EXCLUDED"
+
+
 def test_a_leaf_closed_door_is_provisional_with_the_closure_width_and_out_of_released_totals():
     """AT-Q2-04 / AT-Q2-06: width = the wall-to-wall closure, range [radius, closure]; never released."""
     from engine.source import arch_measure as AM
