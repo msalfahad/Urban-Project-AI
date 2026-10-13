@@ -1,0 +1,5 @@
+float values 3067 differing 49 max 9.094947017729282e-13
+  expected rounding flips at 6 decimals: 1.09e-05
+  expected rounding flips at 9 decimals: 0.0109
+  expected rounding flips at 12 decimals: 10.9
+workbook cells 11312 differing 1 max float diff 0.0 non-float differences [('LINES', 'F63', 14, 13.99999999999998)]

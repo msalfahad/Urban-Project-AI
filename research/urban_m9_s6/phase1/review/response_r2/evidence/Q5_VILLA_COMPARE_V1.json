@@ -1,0 +1,81 @@
+{
+ "files": [
+  {
+   "file": "ARCH_FLOOR_AREAS.json",
+   "bytes_equal": false,
+   "canonical_equal": true
+  },
+  {
+   "file": "ARCH_OPENINGS.json",
+   "bytes_equal": true,
+   "canonical_equal": true
+  },
+  {
+   "file": "ARCH_PLAN.json",
+   "bytes_equal": false,
+   "canonical_equal": true
+  },
+  {
+   "file": "ARCH_ROOMS.json",
+   "bytes_equal": false,
+   "canonical_equal": true
+  },
+  {
+   "file": "ARCH_WALLS.json",
+   "bytes_equal": true,
+   "canonical_equal": true
+  },
+  {
+   "file": "BOQ_LINES.csv",
+   "bytes_equal": false,
+   "canonical_equal": true
+  },
+  {
+   "file": "BOQ_LINES.json",
+   "bytes_equal": false,
+   "canonical_equal": true
+  },
+  {
+   "file": "COVERAGE.csv",
+   "bytes_equal": true,
+   "canonical_equal": true
+  },
+  {
+   "file": "COVERAGE.json",
+   "bytes_equal": true,
+   "canonical_equal": true
+  },
+  {
+   "file": "MATERIAL_RESULTS.json",
+   "bytes_equal": false,
+   "canonical_equal": true
+  },
+  {
+   "file": "OVERLAY_1F.svg",
+   "bytes_equal": true,
+   "canonical_equal": true
+  },
+  {
+   "file": "OVERLAY_GF.svg",
+   "bytes_equal": true,
+   "canonical_equal": true
+  },
+  {
+   "file": "RUN_RULES.json",
+   "bytes_equal": true,
+   "canonical_equal": true
+  },
+  {
+   "file": "UNRESOLVED.json",
+   "bytes_equal": true,
+   "canonical_equal": true
+  },
+  {
+   "file": "URBAN_ROOM_BOQ.xlsx",
+   "bytes_equal": false,
+   "canonical_equal": null
+  }
+ ],
+ "max_abs_numeric_diff": 9.094947017729282e-13,
+ "at": "ARCH_ROOMS.json.rooms[4].polygon[2][1]"
+}

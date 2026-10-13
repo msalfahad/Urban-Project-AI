@@ -1,0 +1,37 @@
+id,question,claim,label,evidence,reproduce
+C-01,Q1,"The frozen strict comparison keeps only about 70 % of drafted-exact (delta = 0) 100 mm pieces, at every site offset",MEASURED,evidence/Q1_KEEP_TABLES.txt; Q1_PREDICATE_BOUNDARY_SUMMARY.json,python3 -I scripts/q1_predicate_boundary.py 400 OUT.json
+C-02,Q1,"A fixed epsilon of 1e-6 mm keeps every delta >= 0 at every unit, rotation, depth and offset up to 3.3e9 mm; placement noise there reaches 6.9e-7 mm",MEASURED,same,same
+C-03,Q1,"The float bound alone is not translation-invariant: delta = -1e-9 mm is dropped at the origin and kept at 1 km",MEASURED,same,same
+C-04,Q1,"The hybrid margin max(1e-6 mm, 16 u M (d+1)) has no false drop anywhere tested; its band widens to about 1.2e-5 mm at 3.3e9 mm",MEASURED,same,same
+C-05,Q1,"Hybrid is the more defensible rule; UNDECIDABLE above 1e-3 mm; AT_THRESHOLD records",ENGINEERING INFERENCE,R2_01 Q1,-
+C-06,Q1,"At the three band-path sites (100 / 300 / 500 mm) the frozen code loses between 0 % and 100 % of drafted-exact values at 0 / 90 / 30 / 45 deg; the robust margin keeps 100 %",MEASURED,evidence/Q1_THRESHOLD_SITES.json,python3 -I scripts/q1_threshold_sites.py SRC 400 OUT.json
+C-07,Q1,"F-3: with the 0.5 deg bin-axis projection, a drafted 500 mm gap in a wall at an arbitrary angle is found 0 / 400 times, even at any width within 50 mm; the mean axis finds 400 / 400",VERIFIED DEFECT,evidence/Q1_ANGLE_AXIS.json; evidence/Q1_GAP_ANYWIDTH.json,python3 -I scripts/q1_angle_axis.py SRC; python3 -I scripts/q1_gap_anywidth.py SRC 400 OUT.json
+C-08,Q1,"Reference plan: noise clusters within 5.4e-10 / 2.9e-9 / 1.05e-9 mm of the three thresholds; the closest genuine values are 0.028 mm or more away",MEASURED,PRIVATE Q1_REAL_PLAN_POPULATIONS.json,scripts/threshold_probe_win.py (private inputs)
+C-09,Q1,"Reference plan: the mean-axis projection changes no room and no opening",MEASURED,PRIVATE probe runs,scripts/probe_mean_axis.py (private inputs)
+C-10,Q2,"29 drawn swings = 22 leaves in 21 confirmed doors (V2.1) + 6 provisional + 1 unresolved; the only double-leaf door is one element",MEASURED,PRIVATE Q2_DOOR_EVIDENCE.json,scripts/q2_door_probe.py (private inputs)
+C-11,Q2,"U1 becomes a band opening with masonry jambs only once the 100 mm face piece is kept by the robust predicate",MEASURED,same,same (MODE robust)
+C-12,Q2,"U2-U7 have no door line because a 39-89 mm wall nib on both faces stops the band at the frame (threshold value, not float noise)",VERIFIED DEFECT,same + PRIVATE crops,same
+C-13,Q2,"U8: the host wall is on layers not admitted as walls",VERIFIED DEFECT,same,same
+C-14,Q2,"The swing radius is 11.0-13.8 % below the wall-to-wall width on all 7 measurable unmatched doors",MEASURED,same,same
+C-15,Q2,"U4: closure 797 mm vs frame 800 mm",MEASURED,same,same
+C-16,Q2,"Evidence-typed state machine; closure width with range [radius, closure]; no nib rule in Phase 2A",ENGINEERING INFERENCE,R2_01 Q2,-
+C-17,Q2,"Door heights, leaf type, frame position and a door schedule are not in the drawings read",MISSING SOURCE,R2_01 Q2,-
+C-18,Q3,"Ledger prototype: reference plan 516 records (133 MEASURED / 54 PROVISIONAL / 179 BLOCKED / 3 EXCLUDED / 147 MISSING); synthetic villa 114 records",MEASURED,evidence/Q3_LEDGER_SYNTHETIC.json; PRIVATE Q3_LEDGER_REAL.json,python3 -I scripts/q3_surface_ledger.py V2_OUT [Q2.json|-] OUT.json OUT.csv
+C-19,Q3,"No emitter exists for reveal / head-soffit surfaces: 130 MISSING records on the reference plan",VERIFIED DEFECT,same,same
+C-20,Q3,"The first prototype skipped U1 on V2 outputs (4 records silently absent); fixed",VERIFIED DEFECT (in the review prototype),scripts/q3_surface_ledger.py (fixed),same
+C-21,Q3,"ELIGIBILITY_V0 is a proposal; kitchen (SERVICE) wet eligibility is an owner decision",OWNER DECISION,R2_06_ELIGIBILITY_V0.md,-
+C-22,Q3,"Wall finish areas, upturns, risers and reveals need heights or sections",MISSING SOURCE,R2_01 Q3,-
+C-23,Q4,"389 dimension entities; 282 usable; 0 text overrides; all non-associative; DIMLFAC 0.1 on 388 (header = style)",MEASURED,PRIVATE Q4_DIMENSION_CENSUS_REAL.json,python3 -I scripts/q4_dimension_census.py SRC PLAN ARCH_PLAN.json OPENINGS.json OUT.json
+C-24,Q4,"Cross-check: 10 / 57 openings and 55 wall thicknesses match with 0.0 mm difference; none of the 8 unmatched doors is dimensioned; an injected 10 mm error is flagged",MEASURED,same,same
+C-25,Q4,"engine/cad_adapter.py takes DIMLFAC from the header only; a drawing whose dimension styles differ from the header would be misread",ENGINEERING INFERENCE (not demonstrated),engine/cad_adapter.py:538,read the source
+C-26,Q5,"Python 3.11.17 + the listed packages: 71 / 71 rebuild tests byte-identical, 4 skipped (inputs absent), worktree unchanged",MEASURED,R2_05_REBUILD_MATRIX.csv; evidence/pip_freeze_py311.txt,python3.11 -m pytest tests -k 'rebuild or rerun or byte_identical' (in a scratch worktree)
+C-27,Q5,"Python 3.13.16: 31 pass / 39 fail / 16 modules uncollectable; isolated, 23 of the 39 pass, 10 differ in the last float digits (abs <= 5e-12, rel <= 5e-16), 6 lack a module",MEASURED,R2_05_REBUILD_MATRIX.csv; evidence/pip_freeze_py313.txt,scripts/q5_isolated_loop.py WT python3.13 SUITE_LOG OUT.json
+C-28,Q5,"F-4: no interpreter or package pin exists; the two interpreters carry different package sets",VERIFIED DEFECT,requirements.txt; pip freeze files,python3.x -m pip freeze
+C-29,Q5,"Synthetic villa 3.11 vs 3.13: 7 / 15 files differ, 49 / 3067 floats differ by <= 9.1e-13, 1 / 11312 workbook cells (14 vs 13.99999999999998); a 9-decimal canonical form equalises JSON / CSV, but with about a 1 % flip risk per run",MEASURED,evidence/Q5_VILLA_COMPARE_V1.json / _V2.json; evidence/Q5_FLIP_RISK_V2.txt,scripts/q5_env_run.py + q5_env_compare.py + q5_flip_risk.py
+C-30,Q5,"F-2: a comment-only change in opening_census.py changes 2 of 15 S8.6 outputs (only the code stamp); 28 of 29 output-pinning manifests stamp a code digest into 53 of 379 outputs",VERIFIED DEFECT,R2_01 Q5 E4,"append a comment, run the S8.6 rebuild test in a scratch worktree"
+C-31,Q5,"F-1: after one failing run, the S8.6 rebuild has rewritten its own manifest and a second run passes test_frozen_before_comparison and test_rebuild_byte_identical",VERIFIED DEFECT,R2_01 Q5 E5,"same, run twice"
+C-32,Q5,"A comment-only change in opening_census.py fails 11 tests in 9 frozen packages (468 passed before); 32 manifests pin 111 source files; the 12 that differ today are the recorded post-freeze fixes of the M6-M8 engine freezes; topology.py and tools/urban_intake.py are pinned by the M7 / M8 engine freezes (exact changed-set test)",MEASURED,R2_01 Q5 E6; evidence/Q5_STAMP_AND_PIN_CENSUS.json,"the 36 verify_frozen test files with -k 'not rebuild and not rerun and not byte_identical', before and after"
+C-33,Q5,"The M4 lap count uses ceil(L / stock) with no noise guard (latent; frozen, so errata only)",VERIFIED DEFECT (latent),engine/source/continuous_beams.py:454,read the source
+C-34,Q5,"Two-stage migration: Stage 1 adds verification only; Stage 2 relaxes one file with default-preserving keywords and owner approval",ENGINEERING INFERENCE + OWNER DECISION,R2_01 Q5; R2_03,-
+C-35,round-1 correction,"Round 1 said canonical formatting does not fix S6-ENV-01; on the synthetic villa a 9-decimal canonical form does, but not with certainty",MEASURED (correction),evidence/Q5_VILLA_COMPARE_V2.json,scripts/q5_env_compare.py
+C-36,round-1 correction,"Round-1 P2-04 proposed the swing radius as the provisional width; the closure width replaces it",ENGINEERING INFERENCE (correction),R2_03,-
