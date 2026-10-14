@@ -1,6 +1,6 @@
 # Blind architectural BOQ test: protocol URBAN_BLIND_V1
 
-**Status:** PRE-REGISTERED, 2026-10-14. Not yet run.
+**Status:** PRE-REGISTERED, 2026-10-14. Amended once before any drawing arrived (amendment A1, Phase 2B-0: see the end). Not yet run.
 
 **What this protocol does:**
 - It fixes the drawings, the custody, the run, the freeze and the scoring.
@@ -87,14 +87,15 @@
 
 ## 5. Run modes (both pre-declared; both frozen before the reveal)
 
-- **U, unassisted.** Drawings only, with `--method ARCH_TAKEOFF_V2.1`. No facts file and no layer overrides.
+- **U, unassisted.** Drawings only, with `--method ARCH_TAKEOFF_V2.1` (the baseline) and `--method ARCH_TAKEOFF_V2.2` (amendment A1). No facts file and no layer overrides.
 - **A, assisted.** As U, plus a facts file (heights, finishes) prepared from the drawings by the facts preparer. It is recorded and hashed before the run.
 
   Mode A measures the engine with the inputs a QS would read from sections. Mode U measures the engine alone.
 
 **Engine version.** The engine version is the commit tagged for the round.
-- If fixes for F-17 to F-22 are wanted in the round, they ship as a separately versioned method frozen before the drawings arrive.
-- V2.1 itself is scored as the baseline either way.
+- The fixes for F-17 to F-24 ship as ARCH_TAKEOFF_V2.2 (Phase 2B-0), frozen before the drawings arrive.
+- V2.1 itself is scored as the baseline either way, in Mode U only: V2.1 can stop in Mode A (F-24).
+- Mode A runs on V2.2 only, with the facts sheet of `research/urban_m9_p2b0/FACTS_TEMPLATE_HEIGHTS.json` filled from the sections.
 
 ## 6. Procedure
 
@@ -227,12 +228,23 @@ These expectations come from the reference-plan behaviour and are written before
 
 - [x] Scorer and dry run committed. Six injected faults are each detected in their own category (`DRY_RUN_RESULT.json`, `tests/m9_p2a/test_p2a_blind_scoring.py`).
 - [x] V1 and V2 are unchanged by Phase 2A, and V2.1 is deterministic. The acceptance review confirms both.
-- [ ] **Mode A is not safe on V2.1 as it stands (F-24).**
-  - With heights supplied, a passage shared by several rooms is deducted in full from each room.
-  - The run stops with a LineError: the reference plan does.
-  - Mode A may run only on a version that fixes this. Otherwise it is declared not run, and the result is not a crash.
+- [x] **Mode A is safe on V2.2 (F-24 fixed in Phase 2B-0).** V2.1 still stops when heights are supplied, so V2.1 runs in Mode U only.
+- [x] Window positions are published by V2.2 (`ARCH_OPENINGS.json`, `position.centre_m`). The scorer matches V2.2 windows by position, and V2.1 windows by width.
+- [x] The scorer, the dry run and this protocol are hash-pinned (`research/urban_m9_p2b0/BLIND_READINESS_RECORD.json`, `tests/m9_p2b0/test_p2b0_blind_freeze.py`). Any change before the round needs a new, recorded amendment. Any change after the drawings arrive voids the round.
 - [ ] Owner decisions on BA-11 / BA-12 and the door holds DR-02 / DR-03 (they decide what V2.1's skirting and door totals mean).
 - [ ] The QS appointed, and the conventions sheet (section 4) agreed.
-- [ ] The round's commit tagged. The decision recorded on whether a fixed version runs beside V2.1.
+- [ ] The round's commit tagged (V2.2 runs beside V2.1: amendment A1).
 - [ ] The facts preparer named, if Mode A is run.
 - [ ] A second blind project identified (needed for any percentage claim).
+
+## Amendment A1 (2026-10-14, Phase 2B-0, before any drawing arrived)
+
+**What changed:**
+- ARCH_TAKEOFF_V2.2 is added beside the V2.1 baseline.
+- Mode A runs on V2.2 only.
+- V2.2 publishes window positions, and the scorer uses them: windows were matched by width only before. `blind_score.export_from_memory` reads `position.centre_m` when it is present.
+- The dry run now runs on V2.2 (6 / 6 faults detected; also 6 / 6 on V2.1).
+
+**What did not change:** the metrics, the tolerances, the claim rule, the custody, and the error classes.
+
+**Why the change is allowed:** no blind drawing or benchmark exists yet, so nothing was tuned to answers.

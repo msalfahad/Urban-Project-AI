@@ -291,7 +291,8 @@ def opening_marks(o, segments, arcs, unit_m):
     return {"head_lines": heads, "marks": marks, "blocks": sorted(blocks), "clear": marks == 0 and heads <= 2}
 
 
-def _faces_of(arr, sites, texts, unit_m, eps):
+def _faces_of(arr, sites, texts, unit_m, eps, detail=False):
+    """detail (ARCH_TAKEOFF_V2.2 only): also record each face's boundary edge by edge (engine.source.release_safety)."""
     faces = []
     for st in sites:
         pt = TP.interior_point(arr, st["cycle"], eps)
@@ -359,6 +360,9 @@ def _faces_of(arr, sites, texts, unit_m, eps):
                      if x.startswith("ZONE|")})
         if zl:
             faces[-1]["zone_line_ids"] = zl
+        if detail:
+            from engine.source import release_safety as RSF
+            faces[-1]["boundary_detail"] = RSF.boundary_detail(arr, st["cycle"], st["hole_cycles"], unit_m)
     return faces
 
 
@@ -699,7 +703,7 @@ def _zone_groups(zc, pairs, outward=frozenset()):
     return {k: find(k) for k in cell}, shared, functional
 
 
-def zone_partition(faces, items, ents, roles, unit_m, eps, texts, region_id, ops_by_id=None):
+def zone_partition(faces, items, ents, roles, unit_m, eps, texts, region_id, ops_by_id=None, detail=False):
     """S5: split each MERGED face along the drawn lines that separate its labelled parts (see ZONE_*).
     -> (faces, records): the faces of the plan with each split face replaced by its zones, and one record per MERGED
     face (split or not, and why)."""
@@ -719,7 +723,7 @@ def zone_partition(faces, items, ents, roles, unit_m, eps, texts, region_id, ops
               for c in allc}
     arr = TP.build(items + list(z_item.values()), eps)
     sites = TP.sites_of(arr, "ARCH", region_id)
-    cells = _faces_of(arr, sites, texts, unit_m, eps)
+    cells = _faces_of(arr, sites, texts, unit_m, eps, detail)
     _symbols(cells, ents, roles, unit_m)
     sides = defaultdict(set)                      # (zone source, edge) -> the cells on its two sides
     for st in sites:
@@ -793,7 +797,7 @@ def zone_partition(faces, items, ents, roles, unit_m, eps, texts, region_id, ops
     by_line = {c["id"]: c for c in allc}
     while keep:
         arr2 = TP.build(items + [z_item[k] for k in sorted(keep)], eps)
-        out = _faces_of(arr2, TP.sites_of(arr2, "ARCH", region_id), texts, unit_m, eps)
+        out = _faces_of(arr2, TP.sites_of(arr2, "ARCH", region_id), texts, unit_m, eps, detail)
         _symbols(out, ents, roles, unit_m)
         bad = [fid for fid in plan if not _apply_zones(out, plan[fid], next(r for r in records
                                                                               if r["parent_face_id"] == fid), by_line)]
@@ -847,9 +851,10 @@ def _apply_zones(out, plan, rec, by_line):
     return True
 
 
-def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None):
+def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, release_safety=False):
     """geom (ARCH_TAKEOFF_V2.1 only): an engine.source.robust_geometry.Geometry for the band openings; None is the
-    V1 / V2 path, unchanged."""
+    V1 / V2 path, unchanged. release_safety (ARCH_TAKEOFF_V2.2 only): every face also carries its boundary_detail
+    (engine.source.release_safety); False is the V1 / V2 / V2.1 path, unchanged."""
     eps = 0.5e-3 / unit_m
     wall_l = sorted(l for l, r in roles.items() if r == AP.WALL)
     col_l = {l for l, r in roles.items() if r == AP.COLUMN}
@@ -921,18 +926,18 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None):
     by_op = {o["opening_id"]: o for o in ops}
     # pass 1: every opening closed by its thresholds -> the cells of the floor
     arr = TP.build(items + [t for _, t in thr_items] + closures, eps)
-    cells = _faces_of(arr, TP.sites_of(arr, "ARCH", region_id), texts, unit_m, eps)
+    cells = _faces_of(arr, TP.sites_of(arr, "ARCH", region_id), texts, unit_m, eps, release_safety)
     _symbols(cells, ents, roles, unit_m)
     drop, zoning = open_passages(cells, by_op)
     faces = cells
     if drop:
         # pass 2: the passages inside one room's floor are not boundaries -> the room is its whole floor
         arr = TP.build(items + [t for oid, t in thr_items if oid not in drop] + closures, eps)
-        faces = _faces_of(arr, TP.sites_of(arr, "ARCH", region_id), texts, unit_m, eps)
+        faces = _faces_of(arr, TP.sites_of(arr, "ARCH", region_id), texts, unit_m, eps, release_safety)
         _symbols(faces, ents, roles, unit_m)
     # pass 3 (S5): a MERGED face is split only along the lines drawn inside it that separate its labelled parts
     faces, zones = zone_partition(faces, items + [t for oid, t in thr_items if oid not in drop] + closures, ents,
-                                  roles, unit_m, eps, texts, region_id, by_op)
+                                  roles, unit_m, eps, texts, region_id, by_op, detail=release_safety)
     for o in ops:
         if o["opening_id"] in drop:
             o["inside_one_floor"] = True                     # an open passage inside one room's floor (not a boundary)

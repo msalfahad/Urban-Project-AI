@@ -101,9 +101,10 @@ def export_from_memory(room_boq, arch):
                                  "height_m": None, "area_m2": None})
     for o in arch.get("openings") or ():
         if o["kind"] == "WINDOW":
+            pos = (o.get("position") or {}).get("centre_m")          # ARCH_TAKEOFF_V2.2 publishes it
             elements.append({"family": "WINDOW", "floor": o["floor"], "id": o["opening_id"], "class": None,
-                             "width_m": o.get("width_m"), "leaves": None, "xy_m": None, "status": "RELEASED",
-                             "height_m": o.get("height_m"), "area_m2": o.get("area_m2")})
+                             "width_m": o.get("width_m"), "leaves": None, "xy_m": list(pos) if pos else None,
+                             "status": "RELEASED", "height_m": o.get("height_m"), "area_m2": o.get("area_m2")})
     return {"protocol": PROTOCOL, "unit_m": unit, "rooms": rooms, "rows": rows, "elements": elements,
             "unscored_item_codes": dict(sorted(unscored.items()))}
 

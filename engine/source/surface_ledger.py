@@ -91,6 +91,35 @@ ELIGIBILITY_V0 = {
     "WALL_GROUP": [("WALL_LINE", "WALL_RUN", ("ARCH.WALL_RUN",), None, P, True),
                    ("WALL_BODY", "MASONRY", ("MAS.BLOCK",), None, P, True)],
 }
+# Phase 2B-0 (ARCH_TAKEOFF_V2.2, conserve=True only; finding F-21): the rows V0 lacks, so that every emitted line has
+# its record (still PROPOSAL rows where no owner rule names the surface), the two extra statuses, and the stair rows
+# for a stair drawn inside a room of another kind. ELIGIBILITY_V0 itself (and its digest) is unchanged.
+STATUSES_V2_2 = STATUSES + ("ENGINE_LIMIT", "OUT_OF_LEDGER_SCOPE")
+_STAIR_ROWS = [("TREADS", "MARBLE_TREAD", ("FIN.MARBLE.TREAD",), None, "UP-STAIR-003", True),
+               ("RISERS", "MARBLE_RISER", ("FIN.MARBLE.RISER",), None, "UP-STAIR-005", True),
+               ("LANDINGS", "MARBLE_LANDING", ("FIN.MARBLE.LANDING",), None, P, True),
+               ("FLIGHTS", "STAIR_FLIGHT_FINISH", ("FIN.STAIR.FLIGHT",), None, P, True),
+               ("STEP_LENGTH", "STAIR_STEP_LENGTH", ("FIN.STAIR.STEP_LM",), None, P, True),
+               ("BALUSTRADE", "RAILING", ("FIN.RAILING",), None, P, True)]
+STAIR_CODES = tuple(c for row in _STAIR_ROWS for c in row[2])
+ELIGIBILITY_V0_1_ADDITIONS = {
+    "WET": [("WALLS_ABOVE_TILE", "PAINT", ("FIN.PAINT",), None, "UP-CER-009", True),
+            ("DOORWAY", "WATERPROOFING_DOORWAY", ("FIN.WP.DOORWAY",), None, "UP-WP-003", True)],
+    "STAIR": [("FLIGHTS", "STAIR_FLIGHT_FINISH", ("FIN.STAIR.FLIGHT",), None, P, True),
+              ("STEP_LENGTH", "STAIR_STEP_LENGTH", ("FIN.STAIR.STEP_LM",), None, P, True),
+              ("CEILING", "CEILING", ("FIN.CEILING",), None, P, True),
+              ("SKIRTING", "SKIRTING", ("FIN.SKIRTING",), None, P, True)],
+}
+OUT_OF_SCOPE = {"ARCH.SPACE": "the area of a space with no finish row (shaft, stair, unlabelled): geometry, not a "
+                              "finish quantity",
+                "ARCH.THRESHOLD": "a doorway / closure strip that no opening or room record owns",
+                "ARCH.WINDOW_REVEAL": "a window strip that no opening record owns"}
+BOQ_COMPLETENESS_WHY = [
+    "the eligibility table is a PROPOSAL (ELIGIBILITY_V0 + V0.1 additions), not an owner-approved measurement standard",
+    "external works, facade finishes, roof works, sills and MEP are outside the architectural plan route",
+    "UNRESOLVED_ELIGIBILITY / BLOCKED / ENGINE_LIMIT records are open, not absent",
+    "CONFIRMED_MISSING = 0 says only that no owner-approved, sourced, emitted surface is silently missing"]
+
 KIND_OF = {"DRY": "DRY", "WET": "WET", "SERVICE": "SERVICE", "CIRCULATION": "CIRCULATION", "STAIR": "STAIR",
            "SHAFT": "SHAFT", "EXTERIOR": "EXTERIOR", "VOID": "VOID"}
 LINE_STATE = {"MEASURED": "MEASURED", "SOURCE_DERIVED": "MEASURED", "PROVISIONAL": "PROVISIONAL",
@@ -127,7 +156,8 @@ def _blocker(text):
     return "MISSING_SOURCE"
 
 
-def _record(element, ekind, floor, row, lines, rfi_text=None, rule=None, element_state=None):
+def _record(element, ekind, floor, row, lines, rfi_text=None, rule=None, element_state=None,
+            engine_status="NO_EMITTER"):
     surface, trade, codes, _suf, authority, emitter = row if row else ("ALL", "-", (), None, None, False)
     rec = {"element": element, "element_kind": ekind, "floor": floor, "surface": surface, "trade": trade,
            "item_codes": list(codes), "authority": authority, "authority_approved": _approved(authority) if row else None,
@@ -149,7 +179,7 @@ def _record(element, ekind, floor, row, lines, rfi_text=None, rule=None, element
             b = _blocker(q)
             rec["blocker"] = q[:200]
             rec["status"] = {"OWNER_DECISION": "BLOCKED_OWNER_DECISION", "MISSING_SOURCE": "BLOCKED_MISSING_SOURCE",
-                             "ENGINE": "NO_EMITTER"}[b]
+                             "ENGINE": engine_status}[b]
             if b == "ENGINE":
                 rec["conditions"].append("ENGINE_LIMIT: the emitter exists but stops on an engine limitation")
             return rec
@@ -174,7 +204,7 @@ def _record(element, ekind, floor, row, lines, rfi_text=None, rule=None, element
     elif rfi_text:
         b = _blocker(rfi_text)
         rec["status"] = {"OWNER_DECISION": "BLOCKED_OWNER_DECISION", "MISSING_SOURCE": "BLOCKED_MISSING_SOURCE",
-                         "ENGINE": "NO_EMITTER"}[b]
+                         "ENGINE": engine_status}[b]
         rec["blocker"] = rfi_text[:200]
     elif not emitter:
         rec["status"] = "NO_EMITTER"
@@ -183,9 +213,12 @@ def _record(element, ekind, floor, row, lines, rfi_text=None, rule=None, element
     return rec
 
 
-def ledger(lines, rooms, openings, unresolved, *, method, doors=None, walls=None):
-    """the read-only ledger of one architectural run (its inputs are never modified)."""
+def ledger(lines, rooms, openings, unresolved, *, method, doors=None, walls=None, conserve=False):
+    """the read-only ledger of one architectural run (its inputs are never modified). conserve (ARCH_TAKEOFF_V2.2,
+    F-21): the V0.1 rows, ENGINE_LIMIT apart from NO_EMITTER, every line in exactly one record (or a named
+    out-of-scope category), coverage by floor and trade, and no completeness claim; False is the V2.1 ledger."""
     lines = copy.deepcopy(list(lines))
+    eng = {"engine_status": "ENGINE_LIMIT"} if conserve else {}
     by_room, by_op, by_floor_code, by_elem = defaultdict(list), defaultdict(list), defaultdict(list), defaultdict(list)
     for ln in lines:
         loc = ln["location"]
@@ -208,30 +241,64 @@ def ledger(lines, rooms, openings, unresolved, *, method, doors=None, walls=None
             recs.append(_record(el, "SPACE:" + kind, r["floor"], None, [], rule=elig))
             continue
         mine = by_room.get(r["room_id"], [])
-        for row in elig:
+        rows = list(elig)
+        if conserve:
+            # the V0.1 rows are line-driven: a record only where the room has such a line (they conserve lines, they
+            # do not make a surface eligible - a wet room without a doorway piece is not a CONFIRMED_MISSING)
+            rows += [x for x in ELIGIBILITY_V0_1_ADDITIONS.get(kind, [])
+                     if any(ln["item_code"] in x[2] for ln in mine)]
+            if kind != "STAIR" and any(ln["item_code"] in STAIR_CODES for ln in mine):
+                rows += [(f"STAIR_IN_ROOM:{x[0]}",) + x[1:] for x in _STAIR_ROWS
+                         if any(ln["item_code"] in x[2] for ln in mine)]
+        taken = set()
+        for row in rows:
             surface, trade, codes, suf, _a, _e = row
             hit = [ln for ln in mine if ln["item_code"] in codes and
                    (suf is None or suf in (ln["location"].get("element_id") or "").lower() or
                     suf in (ln.get("physical_element") or "").lower())]
+            if conserve:
+                # V0 rows share codes (WET plaster / paint above tile; stair skirting): a line is taken once
+                if surface == "WALLS" and kind == "WET" and codes == ("FIN.PAINT",):
+                    hit = []
+                hit = [ln for ln in hit if ln["line_id"] not in taken]
+                if surface == "WALLS_ABOVE_TILE":
+                    hit = [ln for ln in hit if "above wall tile" in (ln.get("physical_element") or "")]
+                taken.update(ln["line_id"] for ln in hit)
             q = next((t for code in codes for t in rfi.get((r["room_id"], code), ())), None)
-            recs.append(_record(el, "SPACE:" + kind, r["floor"], row, hit, rfi_text=q))
+            recs.append(_record(el, "SPACE:" + kind, r["floor"], row, hit, rfi_text=q, **eng))
     door_of_op = {}
     if doors is not None:
         for e in doors["elements"]:
             if e.get("opening_id"):
                 door_of_op[(e["floor"], e["opening_id"])] = e
     lift_ops = {(o["floor"], o["opening_id"]) for o in (doors or {}).get("lift_openings") or ()}
+    lift_cand = {(o["floor"], o["opening_id"]): o for o in (doors or {}).get("lift_candidates") or ()} \
+        if conserve else {}
+    op_taken = set()
     for o in openings:
         key = (o["floor"], o["opening_id"])
         el = f"{o['floor']}:{o['opening_id']} ({o['kind']})"
         if key in lift_ops:
             recs.append(_record(el, "OPENING:LIFT_ENTRANCE", o["floor"], None, [], rule=ELIGIBILITY_V0["LIFT_ENTRANCE"]))
             continue
+        if key in lift_cand:
+            mine = by_op.get(key, [])
+            for row in ELIGIBILITY_V0[o["kind"]]:
+                hit = [ln for ln in mine if ln["item_code"] in row[2]]
+                recs.append(_record(el, "OPENING:LIFT_ENTRANCE_CANDIDATE", o["floor"], row, hit, element_state=(
+                    "BLOCKED_OWNER_DECISION", "LIFT_ENTRANCE_CANDIDATE: " + lift_cand[key]["evidence"]), **eng))
+            continue
         mine = by_op.get(key, [])
         d = door_of_op.get(key)
         for row in ELIGIBILITY_V0[o["kind"]]:
             surface, trade, codes, *_ = row
             hit = [ln for ln in mine if ln["item_code"] in codes]
+            shared = []
+            if conserve:
+                # a strip between two openings names both: it is counted under the first one only
+                shared = [ln for ln in hit if ln["line_id"] in op_taken]
+                hit = [ln for ln in hit if ln["line_id"] not in op_taken]
+                op_taken.update(ln["line_id"] for ln in hit)
             if d is not None and surface == "OPENING":
                 hit += by_elem.get(d["element_id"], [])
                 st = _door_state(d)
@@ -239,7 +306,10 @@ def ledger(lines, rooms, openings, unresolved, *, method, doors=None, walls=None
                     recs.append(_record(el, "OPENING:DOOR", o["floor"], row, hit, element_state=st,
                                         rule=ELIGIBILITY_V0["LIFT_ENTRANCE"] if st[0] == "EXCLUDED" else None))
                     continue
-            recs.append(_record(el, "OPENING:" + o["kind"], o["floor"], row, hit))
+            recs.append(_record(el, "OPENING:" + o["kind"], o["floor"], row, hit, **eng))
+            if shared:
+                recs[-1]["conditions"].append("SHARED_STRIP: " + ", ".join(ln["line_id"] for ln in shared) +
+                                              " counted under the other opening it names")
     if doors is not None:                           # door elements with no band opening (V2.1: provisional / unresolved)
         for e in doors["elements"]:
             if e.get("opening_id"):
@@ -254,20 +324,87 @@ def ledger(lines, rooms, openings, unresolved, *, method, doors=None, walls=None
     for fl in sorted({w["floor"] for w in walls or ()}):
         for row in ELIGIBILITY_V0["WALL_GROUP"]:
             recs.append(_record(f"{fl}:walls", "WALL_GROUP", fl, row, by_floor_code.get((fl, row[2][0]), [])))
+    if conserve:
+        recs += _conserve(recs, lines, rooms)
     findings = []
     groups = Counter((r["element_kind"], r["surface"], r["status"]) for r in recs
-                     if r["status"] in ("NO_EMITTER", "CONFIRMED_MISSING", "UNRESOLVED_ELIGIBILITY"))
+                     if r["status"] in ("NO_EMITTER", "CONFIRMED_MISSING", "UNRESOLVED_ELIGIBILITY") +
+                     (("ENGINE_LIMIT", "OUT_OF_LEDGER_SCOPE") if conserve else ()))
     for (ek, sf, st), n in sorted(groups.items()):
         findings.append({"level": "ENGINEERING" if st in ("NO_EMITTER", "CONFIRMED_MISSING") else "OWNER_QUESTION",
                          "code": f"LEDGER_{st}", "element_kind": ek, "surface": sf, "records": n,
-                         "message": {"NO_EMITTER": "the engine produces no record for this surface",
+                         "message": {"ENGINE_LIMIT": "the emitter exists but stops on an engine limitation",
+                                 "OUT_OF_LEDGER_SCOPE": "lines outside every surface row, named with their reason",
+                                 "NO_EMITTER": "the engine produces no record for this surface",
                                      "CONFIRMED_MISSING": "eligible by an owner-approved rule, source present, emitter "
                                                           "exists, and no record: an engineering defect",
                                      "UNRESOLVED_ELIGIBILITY": "eligible only by a PROPOSAL row or an open owner "
                                                                "question: not a BOQ omission"}[st]})
-    return {"policy": POLICY_ID, "method": method, "table": {"id": TABLE_ID, "status": TABLE_STATUS,
-                                                              "digest": table_digest()},
-            "records": recs, "findings": findings, "summary": summary(recs)}
+    out = {"policy": POLICY_ID, "method": method, "table": {"id": TABLE_ID, "status": TABLE_STATUS,
+                                                             "digest": table_digest()},
+           "records": recs, "findings": findings, "summary": summary(recs)}
+    if conserve:
+        out["table"]["additions"] = "ELIGIBILITY_V0_1_ADDITIONS (PROPOSAL)"
+        out["summary"] = summary(recs, statuses=STATUSES_V2_2)
+        out["summary"]["conservation"] = conservation(recs, lines)
+        out["summary"]["coverage_by_floor_trade"] = coverage(recs)
+        out["summary"]["boq_completeness"] = {"state": "NOT_ESTABLISHED", "why": BOQ_COMPLETENESS_WHY}
+    return out
+
+
+def _conserve(recs, lines, rooms):
+    """F-21: a record for every line no surface row took - the room's other lines (by item code), strips that no
+    opening owns, then the named out-of-scope categories; nothing is left unaccounted."""
+    taken = {i for r in recs for i in r["line_ids"]}
+    by_id = {r["room_id"]: r for r in rooms}
+    left = defaultdict(list)
+    for ln in lines:
+        if ln["line_id"] in taken:
+            continue
+        loc = ln["location"]
+        rid = loc.get("room_id")
+        left[(loc.get("floor"), rid, ln["item_code"])].append(ln)
+    out = []
+    for (fl, rid, code), lns in sorted(left.items(), key=lambda kv: tuple(str(x) for x in kv[0])):
+        r = by_id.get(rid)
+        if r is not None and code not in OUT_OF_SCOPE:
+            kind = KIND_OF.get(r.get("kind"), "UNKNOWN")
+            el = f"{rid} ({r.get('name_en') or r['class']})"
+            row = (f"OTHER:{code}", code, (code,), None, P, True)
+            out.append(_record(el, "SPACE:" + kind, fl, row, lns, engine_status="ENGINE_LIMIT"))
+            continue
+        why = OUT_OF_SCOPE.get(code) or f"no surface row owns {code}"
+        rec = _record(f"{fl}:{rid}", "OUT_OF_LEDGER_SCOPE", fl, (f"SCOPE:{code}", code, (code,), None, P, True), lns,
+                      engine_status="ENGINE_LIMIT")
+        rec.update(status="OUT_OF_LEDGER_SCOPE", blocker=why,
+                   conditions=rec["conditions"] + [f"OUT_OF_LEDGER_SCOPE: {why}"])
+        out.append(rec)
+    return out
+
+
+def conservation(recs, lines):
+    seen = Counter(i for r in recs for i in r["line_ids"])
+    ids = [ln["line_id"] for ln in lines]
+    missing = sorted(set(ids) - set(seen))
+    dup = sorted(i for i, n in seen.items() if n > 1)
+    return {"lines": len(ids), "in_records": sum(1 for i in ids if i in seen), "not_in_any_record": missing,
+            "duplicates": dup, "out_of_scope_lines": sum(len(r["line_ids"]) for r in recs
+                                                          if r["status"] == "OUT_OF_LEDGER_SCOPE"),
+            "ok": not missing and not dup}
+
+
+def coverage(recs):
+    """records by floor and trade with their statuses (and the quantity of the measured / provisional ones)."""
+    out = defaultdict(lambda: defaultdict(lambda: {"records": 0, "by_status": Counter(), "quantity": defaultdict(float)}))
+    for r in recs:
+        c = out[r.get("floor") or "-"][r.get("trade") or "-"]
+        c["records"] += 1
+        c["by_status"][r["status"]] += 1
+        if r.get("quantity") is not None and r.get("unit"):
+            c["quantity"][r["unit"]] += r["quantity"]
+    return {fl: {tr: {"records": v["records"], "by_status": dict(sorted(v["by_status"].items())),
+                      "quantity": {u: round(q, 6) for u, q in sorted(v["quantity"].items())}}
+                 for tr, v in sorted(t.items())} for fl, t in sorted(out.items())}
 
 
 def _door_state(e):
@@ -282,12 +419,16 @@ def _door_state(e):
         return ("BLOCKED_OWNER_DECISION", "a main-entrance candidate: a reviewer names the main entrance")
     if e.get("boq_class") == "CLASS_UNRESOLVED":
         return ("BLOCKED_OWNER_DECISION", "the door's class (internal / external) needs review")
+    if e.get("hold"):                                  # ARCH_TAKEOFF_V2.2 only (F-18)
+        return ("BLOCKED_MISSING_SOURCE", e["hold"])
+    if e.get("boq_class") == "CLASS_REVIEW":           # ARCH_TAKEOFF_V2.2 only (F-20)
+        return ("BLOCKED_OWNER_DECISION", "CLASS_REVIEW: " + (e.get("class_evidence") or ""))
     return ("PROVISIONAL", "a provisional door (no band opening): shown apart, never released")
 
 
-def summary(recs):
+def summary(recs, statuses=STATUSES):
     by = Counter(r["status"] for r in recs)
-    return {"records": len(recs), "by_status": {s: by.get(s, 0) for s in STATUSES},
+    return {"records": len(recs), "by_status": {s: by.get(s, 0) for s in statuses},
             "confirmed_missing": by.get("CONFIRMED_MISSING", 0),
             "never_added_to_missing": ["NO_EMITTER", "UNRESOLVED_ELIGIBILITY", "BLOCKED_MISSING_SOURCE",
                                        "BLOCKED_OWNER_DECISION"],

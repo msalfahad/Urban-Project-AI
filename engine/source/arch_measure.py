@@ -186,8 +186,52 @@ def _line(ctx, *, item_code, room, element, unit, net, formula, inputs, rule_id,
                         rule_set_digest=ref["rule_set_digest"], rfi=rfi, notes=notes, bounded_range=bounded)
 
 
+def _wall_finish_rs(ctx, room, tr, code, run, H, h, openings, oh, sp, floor, unresolved):
+    """ARCH_TAKEOFF_V2.2 (finding F-24): one wall-finish line from the room's own boundary (engine.source.release_safety:
+    each opening deducted by its length on THIS boundary; checked; a range where a deduction is unknown; REVIEW where
+    the boundary does not add up)."""
+    from engine.source import release_safety as RSF
+    rid = room["room_id"]
+    r = RSF.wall_finish(run_lm=run, height_m=H, openings=openings, opening_heights=oh, detail=sp["boundary_detail"])
+    inputs = {"wall_run_lm": round(run, 6), "height_m": H, "height_authority": h["authority"],
+              "height_governing": h["governing"], "decomposition": r["decomposition"], "policy": RSF.POLICY_ID}
+    dd = [dict(d, what=f"{d['what']}: {d['lm_on_this_boundary']:.3f} m on this boundary x {d['height_m']:.2f} m")
+          for d in r["deductions"]]
+    formula = "wall run x height - each opening's own length on this boundary x its height (F-24)"
+    if r["state"] == RSF.GEOMETRY_INCONSISTENT:
+        q = (f"{RSF.GEOMETRY_INCONSISTENT} ({tr}): the room boundary does not add up - " + "; ".join(r["checks"]) +
+             " - no quantity is released until the boundary is reviewed")
+        unresolved.append({"room_id": rid, "floor": floor, "item": code, "reason": q})
+        return _line(ctx, item_code=code, room=room, element=tr.lower(), unit="m2", net=None, gross=round(r["gross"], 6),
+                     deductions=dd, formula=formula, inputs=dict(inputs, checks=r["checks"]), rule_id="UP-CER-009",
+                     rfi={"question": q, "unlocks": rid})
+    if r["state"] == "RANGE":
+        parts = []
+        if r["missing_heights"]:
+            parts.append(f"{len(r['missing_heights'])} opening height(s) not established")
+        und = r["decomposition"]["undeducted_opening_lm"]
+        if und > RSF.TOL_M:
+            parts.append(f"{und:.2f} m of boundary is an opening with no established deduction (a door closed only by "
+                         "its leaf, glazing drawn on the room face, or an edge that is wall and something else) - "
+                         "low: deducted at the full finish height, high: not deducted")
+        q = f"{tr} net is a range: " + "; ".join(parts)
+        unresolved.append({"room_id": rid, "floor": floor, "item": code, "reason": q})
+        return _line(ctx, item_code=code, room=room, element=tr.lower(), unit="m2", net=None,
+                     bounded={"low": round(r["low"], 6), "high": round(r["high"], 6), "basis": q},
+                     gross=round(r["gross"], 6), deductions=dd, formula=formula,
+                     inputs=dict(inputs, missing_heights=r["missing_heights"]), rule_id="UP-CER-009",
+                     rfi={"question": q, "unlocks": rid})
+    return _line(ctx, item_code=code, room=room, element=tr.lower(), unit="m2", net=round(r["net"], 6),
+                 gross=round(r["gross"], 6), deductions=dd, formula=formula, inputs=inputs, rule_id="UP-CER-009",
+                 notes=("WINDOW_POSITION_ASSUMED: sill / head levels are not in a plan - each window is deducted at "
+                        "its full height inside the finish height")
+                 if any(o["kind"] == "WINDOW" for o in openings) else "")
+
+
 def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_above_level_m=None, documents=(),
-            floor_level_m=None):
+            floor_level_m=None, release_safety=False):
+    """release_safety (ARCH_TAKEOFF_V2.2 only): wall finishes and skirting through engine.source.release_safety (the
+    boundary detail of every face is required); False is the V1 / V2 / V2.1 path, unchanged."""
     facts = validate_facts(facts) or {}
     ctx = {"project_id": project_id, "revision_set_sha256": revision_set_sha256, "documents": list(documents)}
     rooms, lines, unresolved = [], [], []
@@ -353,6 +397,19 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                     f"sill windows skirted ({runs['window_threshold']:.2f} m) - deduct any floor-level glazing")
         if runs["glazing_edge"] > 1e-6:
             sk_notes += f"; glazing edge {runs['glazing_edge']:.2f} m not skirted"
+        sk_open = None
+        if release_safety:
+            # ARCH_TAKEOFF_V2.2 (F-17): no equal split of an edge that is skirted under one reading and not the other
+            from engine.source import release_safety as RSF
+            sk_rs = RSF.skirting(skirt, sp["boundary_detail"])
+            skirt = sk_rs["certain_lm"]
+            if sk_rs["unresolved_lm"] > RSF.TOL_M:
+                sk_open = sk_rs
+                sk_notes += (f"; {sk_rs['unresolved_lm']:.2f} m of boundary is skirted under one reading and not "
+                             "under the other (" + ", ".join(f"{k} {v:.2f} m" for k, v in
+                                                            sk_rs["unresolved_by_roles"].items()) +
+                             "): not in this line, a separate range line")
+        sk_len0 = len(lines)
         if wet:
             hs0 = heights(floor, lvl, floor_above_level_m, facts)
             tile_h, clear_h = hs0["WALL_TILE"], hs0["PAINT"]
@@ -390,6 +447,22 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                                inputs={k: round(v, 6) for k, v in runs.items()},
                                rule_id="UP-CER-003", gross=round(runs["boundary"], 6), deductions=sk_ded,
                                notes=sk_notes))
+        if sk_open is not None and any(ln["item_code"] == "FIN.SKIRTING" and ln["evidence_state"] in BL.QUANTITY_STATES
+                                       for ln in lines[sk_len0:]):
+            q = (f"F-17: {sk_open['unresolved_lm']:.2f} m of this room's boundary is skirted under one reading and not "
+                 "under the other (" + ", ".join(f"{k} {v:.2f} m" for k, v in sk_open["unresolved_by_roles"].items()) +
+                 ") - e.g. a window frame drawn on the room face: floor-level glazing -> no skirting, sill window -> "
+                 "skirting; give the window type (schedule / elevation)")
+            lines.append(_line(ctx, item_code="FIN.SKIRTING", room=room, element="skirting, boundary role unresolved",
+                               unit="lm", net=None, bounded={"low": 0.0, "high": round(sk_open["unresolved_lm"], 6),
+                                                             "basis": q},
+                               formula="the edges skirted under one reading and not under the other: [0, their length]",
+                               inputs={"unresolved_by_roles": sk_open["unresolved_by_roles"],
+                                       "v1_equal_split_credit_lm": round(sk_open["legacy_credit_lm"], 6)},
+                               rule_id="UP-CER-004" if wet else "UP-CER-003", rfi={"question": q, "unlocks": rid},
+                               notes="RANGE_NOT_RELEASED: the released skirting line holds only what both readings "
+                                     "agree on"))
+            unresolved.append({"room_id": rid, "floor": floor, "item": "FIN.SKIRTING", "reason": q})
         if wet:
             wp_floor = round(sp["area_m2"] - stair_m2, 6)
             lines.append(_line(ctx, item_code="FIN.WP.FLOOR", room=room, element="wp_floor", unit="m2", net=wp_floor,
@@ -460,6 +533,10 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                 unresolved.append({"room_id": rid, "floor": floor, "item": code, "reason": q})
                 continue
             H = h["value_m"]
+            if release_safety:
+                lines.append(_wall_finish_rs(ctx, room, tr, code, run, H, h, doors + windows + passages, oh, sp,
+                                             floor, unresolved))
+                continue
             gross = run * H
             dd, missing = [], []
             for o, kd in [(d, "DOOR") for d in doors] + [(w, "WINDOW") for w in windows]:
@@ -510,6 +587,13 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                "evidence": {"door_symbol": o.get("door_symbol"), "door_leaves": o.get("door_leaves"),
                             "glazing_lm": o.get("glazing_m"), "marks": o.get("marks")},
                "status": "WIDTH_MEASURED" + ("" if hh0 else "_HEIGHT_NOT_ESTABLISHED")}
+        if release_safety:
+            # ARCH_TAKEOFF_V2.2: where the opening is (the blind-test scorer matches windows by position, not width)
+            um = fr["unit_m"]
+            rec["position"] = {"centre_m": [round(o["centre"][0] * um, 4), round(o["centre"][1] * um, 4)],
+                               "wall_axis": [round(o["u"][0], 6), round(o["u"][1], 6)],
+                               "evidence": "the middle of the band opening between its jambs, at mid wall (drawing "
+                                           "coordinates, m)"}
         openings.append(rec)
         pseudo = {"room_id": host[0] if host else f"{floor}-EXT", "floor": floor,
                   "name_en": " | ".join(r["name_en"] for r in rooms if r["room_id"] in host) or "exterior",

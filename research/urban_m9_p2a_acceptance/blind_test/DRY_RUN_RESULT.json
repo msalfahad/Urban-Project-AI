@@ -1,6 +1,6 @@
 {
  "all_faults_detected": true,
- "benchmark_commitment": "aaeb8deefe7a68cb0fb612ff23b80e18c4e28d229d533bc45f2349b330e52895",
+ "benchmark_commitment": "317009134755ae8c563be3f6ce6f108f10824f2bc6a1419d0826e46676e7caec",
  "engine_on_synthetic_villa": {
   "claims": {
    "FLOOR_AREA": {
@@ -77,7 +77,7 @@
      "class_correct_released": 3,
      "false_positives_released": 0,
      "matched": 3,
-     "matched_by": "WIDTH",
+     "matched_by": "POSITION",
      "matched_released": 3,
      "omissions": 0,
      "pred_all": 3,
@@ -92,7 +92,7 @@
      "class_correct_released": 4,
      "false_positives_released": 0,
      "matched": 4,
-     "matched_by": "WIDTH",
+     "matched_by": "POSITION",
      "matched_released": 4,
      "omissions": 0,
      "pred_all": 4,
@@ -246,7 +246,8 @@
    "pass": true
   }
  ],
- "freeze_digest_before_benchmark_opened": "abb84f149704a232cd55fa25f7e54b003a07b1a259f25412575c37b8f030f697",
+ "freeze_digest_before_benchmark_opened": "e384c7e3c660a9e522d13d0a60b8caf694b2b780f52b8363583b1c703a06e863",
+ "method": "ARCH_TAKEOFF_V2.2",
  "protocol": "URBAN_BLIND_V1",
  "what": "scorer dry run on the synthetic villa (no client data); the engine score below is information, the fault checks are the test"
 }

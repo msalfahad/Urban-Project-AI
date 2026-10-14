@@ -63,7 +63,7 @@ from engine.source import tile_layout as TL           # noqa: E402
 POLICY_ID = "URBAN_BOQ_M9_S1"
 ARCH_POLICY_ID = "URBAN_BOQ_M9_S2_ARCH"
 ARCH_POLICY_ID_V2 = "URBAN_BOQ_M9_S6_ARCH_V2"
-ARCH_METHODS = ("ARCH_TAKEOFF_V1", "ARCH_TAKEOFF_V2", "ARCH_TAKEOFF_V2.1")
+ARCH_METHODS = ("ARCH_TAKEOFF_V1", "ARCH_TAKEOFF_V2", "ARCH_TAKEOFF_V2.1", "ARCH_TAKEOFF_V2.2")
 # S6: ARCH_TAKEOFF_V2 = V1 + drawing admission (stop, exit 2, no BOQ on a fatal finding) + unit-relative geometric
 # tolerances + plan regions cut only along empty bands + floor-category and finish-surface completeness. V1 is
 # unchanged; --strict-admission puts the same admission in front of V1 (its outputs are V1's own).
@@ -73,6 +73,12 @@ V2 = "ARCH_TAKEOFF_V2"
 # reach the V2.1 code (their call paths pass no geometry object).
 V21 = "ARCH_TAKEOFF_V2.1"
 ARCH_POLICY_ID_V21 = "URBAN_BOQ_M9_P2A_ARCH_V2_1"
+# Phase 2B-0: ARCH_TAKEOFF_V2.2 = V2.1 + the release-safety corrections (findings F-17 .. F-24 of the Phase 2A
+# acceptance review): openings deducted from the room boundary they lie on, one boundary role per edge, door release
+# guards, lift-entrance candidates, ledger conservation, window positions. Opt-in only: V1, V2 and V2.1 never reach it
+# (their call paths pass no release-safety policy).
+V22 = "ARCH_TAKEOFF_V2.2"
+ARCH_POLICY_ID_V22 = "URBAN_BOQ_M9_P2B0_ARCH_V2_2"
 M9_DIR = "m9"
 CREATED = datetime(2026, 1, 1)
 
@@ -222,8 +228,9 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
     from tools import urban_intake as UI
     if method not in ARCH_METHODS:
         raise SystemExit(f"--method must be one of {ARCH_METHODS} (the architectural route is behind a versioned flag)")
-    v21 = method == V21
-    v2 = method in (V2, V21)                                  # V2.1 is V2 plus the Phase 2A additions
+    v22 = method == V22                                       # V2.2 is V2.1 plus the Phase 2B-0 corrections
+    v21 = method in (V21, V22)
+    v2 = method in (V2, V21, V22)                             # V2.1 is V2 plus the Phase 2A additions
     admit = v2 or strict
     if not admit and (units or region_specs or accept_xrefs):
         raise SystemExit("--units / --region / --accept-missing-xref are reviewer inputs of the admission: use them "
@@ -332,7 +339,8 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
                 for r in regs}
     spaces_of = {r["region_id"]: AR.spaces(ents_of[r["region_id"]], roles_of[r["region_id"]]["roles"], u,
                                            region_id=r["region_id"], tol=tol,
-                                           **({"geom": geom_of[r["region_id"]]} if v21 else {}))
+                                           **({"geom": geom_of[r["region_id"]]} if v21 else {}),
+                                           **({"release_safety": True} if v22 else {}))
                  for r in regs if roles_of[r["region_id"]]["state"] != "BLOCKED"}
     # one stair drawn on two plans: the plans are aligned on their column grid, and a flight lying over a flight of
     # the plan below is counted once (the repeat is exposure until a reviewer says which it is)
@@ -377,7 +385,8 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
         S["walls"] = AW.walls(ents, L["roles"], u, S["faces"], S["openings"], columns=S["column_boxes"],
                               **({"geom": geom_of[rid]} if v21 else {}))
         M = AM.measure(S, floor=floor, project_id=pid, revision_set_sha256=rev, facts=facts,
-                       floor_above_level_m=above, floor_level_m=level[rid], documents=docs)
+                       floor_above_level_m=above, floor_level_m=level[rid], documents=docs,
+                       **({"release_safety": True} if v22 else {}))
         X = AM.materials(M, facts)
         ref = (reference_areas or {}).get(floor)
         rec["repairs"] = {"counts": dict(Counter(x["kind"] + ":" + x["rule"] for x in S.get("repairs") or ())),
@@ -451,7 +460,8 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
             from engine.source import door_model as DMOD
             walls_here = [lay for lay, ro in L["roles"].items() if ro == AP.WALL]
             door_floors.append((floor, DMOD.floor_model(S, M["rooms"], ents, u, floor, wall_layers=walls_here,
-                                                        origin=(reg["box"][0], reg["box"][1]), facts=facts)))
+                                                        origin=(reg["box"][0], reg["box"][1]), facts=facts,
+                                                        **({"guards": True} if v22 else {}))))
             tx = {t_["id"]: t_ for t_ in ents["texts"]}
             door_texts[floor] = ents["texts"]
             door_face_texts[floor] = {f_["face_id"]: [tx[i_] for i_ in f_.get("label_text_ids") or () if i_ in tx]
@@ -468,7 +478,8 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
     doors = None
     if v21:
         doors, lines, door_unres, door_cov = _v21_doors(door_floors, door_texts, door_face_texts, regs, spaces_of,
-                                                         lines, u, facts, pid, rev, docs)
+                                                         lines, u, facts, pid, rev, docs,
+                                                         **({"guards": True} if v22 else {}))
         unresolved += door_unres
         coverage += door_cov
     by_room = {r["room_id"]: r for r in rooms}
@@ -504,6 +515,11 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
         run["policies"]["robust_geometry"] = RG.policy_record()
         run["v2_1"] = {"geometry": {rid: {k: v for k, v in g.report().items() if k != "records"}
                                     for rid, g in geom_of.items()}, "fills_merged": fills_merged}
+    if v22:
+        from engine.source import release_safety as RSF
+        run.update(policy=ARCH_POLICY_ID_V22)
+        run["policies"]["release_safety"] = RSF.policy_record()
+        run["v2_2"] = {"findings_addressed": ["F-17", "F-18", "F-19", "F-20", "F-21", "F-22", "F-24"]}
     if admit:
         _finish_discovery(report, E, facts, regions, lines, coverage if v2 else None,
                           entity_checks={"column_evidence": column_ev, "door_symbols": arc_recs,
@@ -527,7 +543,8 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
         run["v2_1"]["dimensions"] = {k: arch["dimensions"][k] for k in ("counts", "checks_by_state", "door_evidence")}
         from engine.source import dimension_evidence as DEV
         run["policies"]["dimension_evidence"] = DEV.policy_record()
-        arch["ledger"] = SL.ledger(lines, rooms, openings, unresolved, method=method, doors=doors, walls=walls_of)
+        arch["ledger"] = SL.ledger(lines, rooms, openings, unresolved, method=method, doors=doors, walls=walls_of,
+                                   **({"conserve": True} if v22 else {}))
         run["v2_1"]["ledger"] = {"table": arch["ledger"]["table"], "summary": arch["ledger"]["summary"]}
         run["policies"]["surface_ledger"] = SL.policy_record()
         run["v2_1"]["doors"] = {"summary": doors["summary"], "main_entrance": doors["main_entrance"]["state"],
@@ -623,7 +640,8 @@ class _ConversionBlocked(Exception):
         self.rec = rec
 
 
-def _v21_doors(door_floors, door_texts, door_face_texts, regs, spaces_of, lines, u, facts, pid, rev, docs):
+def _v21_doors(door_floors, door_texts, door_face_texts, regs, spaces_of, lines, u, facts, pid, rev, docs,
+               guards=False):
     """ARCH_TAKEOFF_V2.1: the building door model; the ARCH.DOOR opening counts are replaced by the owner door
     classes (released doors only), lift entrances leave the ordinary opening lines; every finding becomes a flag; a
     swing without exactly one element fails the floor's coverage gate (exit 3)."""
@@ -632,10 +650,25 @@ def _v21_doors(door_floors, door_texts, door_face_texts, regs, spaces_of, lines,
     from engine.source import rule_store as RS
     measured = [r for r in regs if r["region_id"] in spaces_of and not r.get("warning")]
     entrance = min(measured, key=lambda r: r["order"])["floor"] if measured else None
-    model = DMOD.building_model(door_floors, door_texts, door_face_texts, u, entrance_floor=entrance, facts=facts)
+    if guards:
+        model = DMOD.building_model(door_floors, door_texts, door_face_texts, u, entrance_floor=entrance, facts=facts,
+                                    guards=True)
+    else:
+        model = DMOD.building_model(door_floors, door_texts, door_face_texts, u, entrance_floor=entrance, facts=facts)
     lift_ops = {o_["opening_id"] for o_ in model.get("lift_openings") or ()}
     keep = [ln for ln in lines if ln["item_code"] != "ARCH.DOOR" and not
             (ln["item_code"] == "ARCH.PASSAGE" and ln["physical_element"] in lift_ops)]
+    if guards:
+        # ARCH_TAKEOFF_V2.2 (F-22): a lift-entrance candidate stays in the BOQ as a PROVISIONAL passage (not released,
+        # not excluded) until a lift word, a lift schedule or the owner says what it is
+        cand = {(c_["floor"], c_["opening_id"]): c_ for c_ in model.get("lift_candidates") or ()}
+        for i, ln in enumerate(keep):
+            c_ = cand.get((ln["location"].get("floor"), ln["physical_element"])) \
+                if ln["item_code"] == "ARCH.PASSAGE" else None
+            if c_ is not None:
+                keep[i] = BL.validate(dict(ln, evidence_state="PROVISIONAL",
+                                           notes=((ln.get("notes") or "") + "; " if ln.get("notes") else "") +
+                                           "LIFT_ENTRANCE_CANDIDATE: " + c_["evidence"] + " - not released"))
     ctx = {"project_id": pid, "revision_set_sha256": rev, "documents": docs}
     new = DMOD.boq_lines(ctx, model, rule_set=AM.RULE_SET, rule_set_digest=RS.rule_set(AM.RULE_SET)["digest"])
     unres = []
@@ -761,7 +794,7 @@ def cmd_arch(a):
     refs = {k: float(v) for k, v in _kv(a.reference_areas, "--reference-areas").items()}
     out = Path(a.out)
     conversions = []
-    v2 = a.method in (V2, V21)
+    v2 = a.method in (V2, V21, V22)
     admit = v2 or a.strict_admission
     if not admit and (a.units or a.region or a.accept_missing_xref):
         raise SystemExit("--units / --region / --accept-missing-xref are reviewer inputs of the admission: use them "

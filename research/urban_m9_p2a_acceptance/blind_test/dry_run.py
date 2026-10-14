@@ -1,7 +1,7 @@
 """DRY RUN of the blind-test scorer on the synthetic villa (tools/arch_synth: every quantity is known by construction).
 
 It proves the scoring machinery before any blind drawing exists: the benchmark is built from the hand-written truth
-of the synthetic villa (never from the engine), the V2.1 prediction is frozen (sha256 of the published files) before
+of the synthetic villa (never from the engine), the prediction (ARCH_TAKEOFF_V2.2 by default) is frozen (sha256 of the published files) before
 the benchmark is opened, then six controlled faults are injected into a copy of the prediction and the scorer must
 report each one exactly once, in the right category (silent omission, flagged omission, duplicate, quantity error,
 false-positive area, false-positive door). Synthetic data only - no client drawing, no benchmark number.
@@ -67,7 +67,7 @@ def synthetic_benchmark():
                 k += 1
             elif kind == "WINDOW":
                 elements.append({"family": "WINDOW", "floor": floor, "class": None, "width_m": (s1 - s0) / 1000.0,
-                                 "xy_m": None})
+                                 "xy_m": xy})
     return {"protocol": BS.PROTOCOL, "unit": "m", "rooms": rooms, "room_quantities": qty, "elements": elements}
 
 
@@ -75,17 +75,17 @@ def _trade(res, trade):
     return res["trades"][trade]
 
 
-def run(out=None):
+def run(out=None, method="ARCH_TAKEOFF_V2.2"):
     from tools import arch_synth as AS
     from tools import urban_boq_m9 as M9
     with tempfile.TemporaryDirectory() as d:
         p = Path(d) / "villa.dxf"
         AS.villa(str(p))
-        room, arch, _E = M9.arch_compute(str(p), method="ARCH_TAKEOFF_V2.1")
+        room, arch, _E = M9.arch_compute(str(p), method=method)
         pred = BS.export_from_memory(room, arch)
         pred_file = Path(d) / "PREDICTION.json"
         pred_file.write_text(json.dumps(pred, sort_keys=True), encoding="utf-8")
-        freeze = BS.freeze_record(d, method="ARCH_TAKEOFF_V2.1", drawing="synthetic villa (tools/arch_synth)")
+        freeze = BS.freeze_record(d, method=method, drawing="synthetic villa (tools/arch_synth)")
         bench = synthetic_benchmark()                      # opened only after the freeze record exists
         bfile = Path(d) / "BENCHMARK.json"
         bfile.write_text(json.dumps(bench, sort_keys=True), encoding="utf-8")
@@ -166,6 +166,7 @@ def run(out=None):
           {"fp_qty": [a["false_positive_qty"], b["false_positive_qty"]]})
     summary = {
         "protocol": BS.PROTOCOL,
+        "method": method,
         "what": "scorer dry run on the synthetic villa (no client data); the engine score below is information, the "
                 "fault checks are the test",
         "freeze_digest_before_benchmark_opened": freeze["digest"],
