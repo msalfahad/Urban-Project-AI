@@ -1,0 +1,252 @@
+{
+ "all_faults_detected": true,
+ "benchmark_commitment": "aaeb8deefe7a68cb0fb612ff23b80e18c4e28d229d533bc45f2349b330e52895",
+ "engine_on_synthetic_villa": {
+  "claims": {
+   "FLOOR_AREA": {
+    "claim_allowed": false,
+    "why_not": [
+     "1 project(s) scored; a claim needs 2"
+    ]
+   },
+   "FLOOR_FINISH_DRY": {
+    "claim_allowed": false,
+    "why_not": [
+     "1 project(s) scored; a claim needs 2"
+    ]
+   },
+   "FLOOR_FINISH_WET": {
+    "claim_allowed": false,
+    "why_not": [
+     "1 project(s) scored; a claim needs 2"
+    ]
+   },
+   "SKIRTING": {
+    "claim_allowed": false,
+    "why_not": [
+     "1 project(s) scored; a claim needs 2"
+    ]
+   },
+   "WATERPROOFING_FLOOR": {
+    "claim_allowed": false,
+    "why_not": [
+     "1 project(s) scored; a claim needs 2"
+    ]
+   }
+  },
+  "elements": {
+   "DOOR": {
+    "1F": {
+     "bench": 2,
+     "class_confusion": {
+      "PVC->PVC:RELEASED": 2
+     },
+     "class_correct_released": 2,
+     "false_positives_released": 0,
+     "matched": 2,
+     "matched_by": "POSITION",
+     "matched_released": 2,
+     "omissions": 0,
+     "pred_all": 2,
+     "pred_released": 2,
+     "width_mae_m": 0.0
+    },
+    "GF": {
+     "bench": 4,
+     "class_confusion": {
+      "MAIN->MAIN_CANDIDATE:PROVISIONAL": 1,
+      "PVC->PVC:RELEASED": 3
+     },
+     "class_correct_released": 3,
+     "false_positives_released": 0,
+     "matched": 4,
+     "matched_by": "POSITION",
+     "matched_released": 3,
+     "omissions": 0,
+     "pred_all": 4,
+     "pred_released": 3,
+     "width_mae_m": 0.0
+    }
+   },
+   "WINDOW": {
+    "1F": {
+     "bench": 3,
+     "class_confusion": {
+      "None->None:RELEASED": 3
+     },
+     "class_correct_released": 3,
+     "false_positives_released": 0,
+     "matched": 3,
+     "matched_by": "WIDTH",
+     "matched_released": 3,
+     "omissions": 0,
+     "pred_all": 3,
+     "pred_released": 3,
+     "width_mae_m": 0.0
+    },
+    "GF": {
+     "bench": 4,
+     "class_confusion": {
+      "None->None:RELEASED": 4
+     },
+     "class_correct_released": 4,
+     "false_positives_released": 0,
+     "matched": 4,
+     "matched_by": "WIDTH",
+     "matched_released": 4,
+     "omissions": 0,
+     "pred_all": 4,
+     "pred_released": 4,
+     "width_mae_m": 0.0
+    }
+   }
+  },
+  "rooms": {
+   "bench_rooms": 8,
+   "category_confusion": {
+    "BATHROOM->WET": 2,
+    "DRY->CIRCULATION": 1,
+    "DRY->DRY": 3,
+    "KITCHEN->SERVICE": 1,
+    "STAIR->STAIR": 1
+   },
+   "matched": 8,
+   "merged_predicted_rooms": {},
+   "unmatched_bench_rooms": []
+  },
+  "trades": {
+   "FLOOR_AREA": {
+    "bench_items": 8,
+    "coverage_qty": 1.0,
+    "duplicates": 0,
+    "false_positive_items": 0,
+    "flagged_omissions": 0,
+    "released_matched": 8,
+    "silent_omissions": 0,
+    "total_error_pct": 0.0,
+    "wape_released_matched": 0.0
+   },
+   "FLOOR_FINISH_DRY": {
+    "bench_items": 5,
+    "coverage_qty": 1.0,
+    "duplicates": 0,
+    "false_positive_items": 0,
+    "flagged_omissions": 0,
+    "released_matched": 5,
+    "silent_omissions": 0,
+    "total_error_pct": 0.0,
+    "wape_released_matched": 0.0
+   },
+   "FLOOR_FINISH_WET": {
+    "bench_items": 2,
+    "coverage_qty": 1.0,
+    "duplicates": 0,
+    "false_positive_items": 0,
+    "flagged_omissions": 0,
+    "released_matched": 2,
+    "silent_omissions": 0,
+    "total_error_pct": 0.0,
+    "wape_released_matched": 0.0
+   },
+   "SKIRTING": {
+    "bench_items": 5,
+    "coverage_qty": 1.0,
+    "duplicates": 0,
+    "false_positive_items": 0,
+    "flagged_omissions": 0,
+    "released_matched": 5,
+    "silent_omissions": 0,
+    "total_error_pct": 0.0,
+    "wape_released_matched": 0.0
+   },
+   "WATERPROOFING_FLOOR": {
+    "bench_items": 2,
+    "coverage_qty": 1.0,
+    "duplicates": 0,
+    "false_positive_items": 0,
+    "flagged_omissions": 0,
+    "released_matched": 2,
+    "silent_omissions": 0,
+    "total_error_pct": 0.0,
+    "wape_released_matched": 0.0
+   }
+  }
+ },
+ "faults": [
+  {
+   "detail": {
+    "coverage": [
+     1.0,
+     0.87316
+    ],
+    "silent": [
+     0,
+     1
+    ]
+   },
+   "fault": "F1_SILENT_OMISSION",
+   "pass": true
+  },
+  {
+   "detail": {
+    "duplicates": [
+     0,
+     1
+    ],
+    "total_error_pct": [
+     0.0,
+     15.2591
+    ]
+   },
+   "fault": "F2_DUPLICATE",
+   "pass": true
+  },
+  {
+   "detail": {
+    "fp": [
+     0,
+     1
+    ]
+   },
+   "fault": "F3_FALSE_POSITIVE_DOOR",
+   "pass": true
+  },
+  {
+   "detail": {
+    "wape": [
+     0.0,
+     0.046489
+    ],
+    "within_tolerance": [
+     5,
+     4
+    ]
+   },
+   "fault": "F4_QUANTITY_ERROR",
+   "pass": true
+  },
+  {
+   "detail": {
+    "flagged": [
+     0,
+     1
+    ]
+   },
+   "fault": "F5_FLAGGED_OMISSION",
+   "pass": true
+  },
+  {
+   "detail": {
+    "fp_qty": [
+     0.0,
+     5.0
+    ]
+   },
+   "fault": "F6_FALSE_POSITIVE_AREA",
+   "pass": true
+  }
+ ],
+ "freeze_digest_before_benchmark_opened": "abb84f149704a232cd55fa25f7e54b003a07b1a259f25412575c37b8f030f697",
+ "protocol": "URBAN_BLIND_V1",
+ "what": "scorer dry run on the synthetic villa (no client data); the engine score below is information, the fault checks are the test"
+}
