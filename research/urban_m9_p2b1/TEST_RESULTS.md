@@ -5,7 +5,7 @@
 | File | Tests | What it proves |
 |---|---|---|
 | `test_kb_registry.py` | 13 | every record complete and valid; every code / test link exists; required families approved; the superseded reading points to the correction; values in data; precedence order; project decisions never general; open conflicts name a question; the wet list; the index is current and carries no identity; `rules/` gains no file; line references name the registry digest; the registry is the builder's output |
-| `test_kb_door_standards.py` | 25 | the owner table (16 cases: below / at / above for each category); no second allowance; CAD never overwritten; main entrance as drawn; elevator excluded; scenario areas apart; fallback heights ASSUMED; schedule height wins; dependency map, nothing released; categories from the space model; kitchen-to-outdoor door aluminium; pantry-to-corridor door PVC; elevator schedule from CAD; the Part C reading superseded |
+| `test_kb_door_standards.py` | 25 | the owner table (12 cases: below / at / above for each category); no second allowance; CAD never overwritten; main entrance as drawn; elevator excluded; scenario areas apart; fallback heights ASSUMED; schedule height wins; dependency map, nothing released; categories from the space model; kitchen-to-outdoor door aluminium; pantry-to-corridor door PVC; elevator schedule from CAD; the Part C reading superseded |
 | `test_kb_space_model.py` | 3 | indoor vs outdoor corridor (connecting space reported, not applied); an unlabelled space never assumed interior; a project decision binds one space only |
 | `test_kb_finish_scope.py` | 10 | kitchen / pantry / ironing wet; no wet spread to an open plan; full-height porcelain, no band question; an explicit lower tile wins, flagged; marble thresholds from geometry; dry doorways porcelain once; door jamb plaster PROVISIONAL; passage jambs skirted; balcony waterproofing; dry-room skirting kept |
 | `test_kb_questions.py` | 7 | every catalogue entry reached by its example; established rules never asked (V2.2 A > 0 -> V2.3 A = 0); repeated instances grouped; engine defects never owner questions; unknown reasons reported; catalogue prefixes exist in the engine; the register is a pure function |
@@ -42,23 +42,22 @@ Failing-before / passing-after for the material corrections of this phase: see `
 D9). Before each fix the named test failed on the defect (reproduced on the reference plan or the fixture); no
 existing test was weakened.
 
-## 3. Full suite (private clone, commit `811c10e` - same tree as `e73d9da`)
+## 3. Full suite (private clone)
 
-Command: `python3 -m pytest -p no:cacheprovider --basetemp=<tmp> --junitxml=<tmp>/junit.xml` (11 min 56 s).
+Command: `python3 -m pytest -p no:cacheprovider --basetemp=<tmp> --junitxml=<tmp>/junit.xml`.
 
 | Run | Passed | Failed | Errors | Skipped | xfailed |
 |---|---|---|---|---|---|
 | Baseline `9875f40` (Phase 2B-0), same clone | 7,958 | 345 | 32 | 160 | 102 |
-| **`811c10e`** | **8,029** | **345** | **32** | **160** | **102** |
+| `811c10e` (engine commit of this phase) | 8,029 | 345 | 32 | 160 | 102 |
+| **`d604b55` (code of the reporting commit; 11 min 36 s)** | **8,043** | **345** | **32** | **160** | **102** |
 
 - **The full suite is not passing**: 377 failures and errors remain - the same test ids as the baseline (classified in
   `research/urban_m9_p2b0/TEST_RESULTS_AND_INTEGRITY.md`: missing git-ignored datasets and one clone-layout artefact;
   code failures 0).
 - **New failures: 0. Baseline failures that disappeared: 0.**
-- **Tests not in the baseline: 71, all passing** (64 in `tests/m9_kb` at that commit, 7 Phase 2B-0 tests added
-  after the baseline run).
-- The 14 tests added afterwards (WP-5 file, metamorphic variants, boundary cases, builder check) are in the affected
-  run below.
+- **Tests not in the baseline: 85, all passing** (78 in `tests/m9_kb`, 7 Phase 2B-0 tests added after the baseline
+  run). The reporting commit differs from `d604b55` only in the text of these reports.
 
 ## 4. Affected suites with the reference plan (`URBAN_REAL_PLAN_DXF` set; working tree of the reporting commit)
 

@@ -8,7 +8,7 @@ commit.
 | V1 / V2 / V2.1 / V2.2 outputs byte-identical | CLI runs of every frozen method on the synthetic villa, its mirror and the reference plan (V2.2 also with the heights facts), compared file by file with the snapshot taken at `8c24179` | **308 of 308 files identical** (repeated after the last code change) |
 | Frozen artefacts | `python3 -I tools/freeze_verify.py check --index research/freeze_integrity/FREEZE_BASELINE_INDEX.jsonl` | **0 artefacts differ** |
 | Freeze import closures | `python3 -I tools/freeze_verify.py closure` | no file changed in this phase is in the import closure of any freeze manifest |
-| Environment lock | `python3 -I tools/freeze_verify.py env` | matches `ENVIRONMENT_LOCK.json` (exit 0) |
+| Environment lock | `python3 -I tools/freeze_verify.py env --lock research/freeze_integrity/ENVIRONMENT_LOCK.json` | `in_lock: true` (Python 3.11.17, 0 package differences) |
 | Rule store | `git diff 8c24179 -- rules/` | empty; `rules/` gains no file (`test_the_rule_store_gains_no_file`): the rule-store digest in V1 .. V2.2 RUN_RULES is unchanged |
 | `engine/source/opening_census.py` | `git diff 8c24179 -- engine/source/opening_census.py` | empty (not edited) |
 | Route G and the structural freezes | closure check + full suite (the same 377 baseline failures / errors, 0 new) | unchanged |
