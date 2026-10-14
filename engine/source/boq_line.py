@@ -75,6 +75,8 @@ ITEMS = {
     "FIN.PAINT": ("Internal paint", "صبغ داخلي", "PAINT", "m2"),
     "FIN.MARBLE.TREAD": ("Stair tread marble", "رخام نايم", "STAIR_FINISH", "m2"),
     "FIN.MARBLE.RISER": ("Stair visible riser marble", "رخام قائم", "STAIR_FINISH", "m2"),
+    # ARCH_TAKEOFF_V2.3 (UP-THR-001): the marble threshold of a wet-area doorway
+    "FIN.MARBLE.THRESHOLD": ("Wet-area doorway marble threshold", "برطاش رخام", "MARBLE", "m2"),
     "FIN.RAILING": ("Stair guardrail (sloping length)", "درابزين الدرج", "RAILING", "lm"),
     "FIN.HANDRAIL": ("Wall-mounted handrail", "مسكة الدرج", "RAILING", "lm"),
     # M9 S2 architectural route

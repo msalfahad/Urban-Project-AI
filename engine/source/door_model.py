@@ -171,6 +171,11 @@ def _height(cls, facts):
         return {"value_m": oh["DOOR_ASSUMED"]["value_m"], "state": "ASSUMED",
                 "source": "facts opening_heights.DOOR_ASSUMED (explicitly authorised project fallback)",
                 "authority": oh["DOOR_ASSUMED"]["authority"]}
+    # ARCH_TAKEOFF_V2.3 (UP-DOOR-HGT-001): the owner reference height of the class, after the project fallback
+    if cls and oh.get(cls + "_ASSUMED"):
+        return {"value_m": oh[cls + "_ASSUMED"]["value_m"], "state": "ASSUMED",
+                "source": f"owner reference height {cls} (UP-DOOR-HGT-001: HEIGHT_ASSUMED)",
+                "authority": oh[cls + "_ASSUMED"]["authority"]}
     return {"value_m": None, "state": "BLOCKED",
             "source": "MISSING SOURCE: no door schedule, elevation, section or facts opening_heights gives the height"}
 
@@ -381,10 +386,17 @@ def conservation(swings, els, floor):
             "in_two_elements": twice, "without_element": missing, "unknown_swings": extra}
 
 
-def classify(el, ents=None, unit_m=1.0, *, guards=False, external_faces=None):
+def classify(el, ents=None, unit_m=1.0, *, guards=False, external_faces=None, decided_exterior=None):
     """the BOQ class from the sides (typed evidence), the lift words of the door block, never a layer name alone.
     guards (ARCH_TAKEOFF_V2.2, F-20): a door into a shaft, or a PVC door whose side space may be exterior (an
-    unlabelled space with a doorless opening to the facade: external_faces), is a CLASS_REVIEW, never released."""
+    unlabelled space with a doorless opening to the facade: external_faces), is a CLASS_REVIEW, never released.
+    decided_exterior (ARCH_TAKEOFF_V2.3, UP-SPACE-002): {face_id: project decision} - a side space a bound project
+    decision makes exterior is typed EXTERIOR_SPACE, with the decision as its evidence."""
+    for sd in el["sides"] if decided_exterior else ():
+        d = decided_exterior.get(sd.get("face_id"))
+        if d is not None and sd["kind"] == "SPACE":
+            sd.update(kind="EXTERIOR_SPACE", evidence=f"project decision {d['id']} ({d.get('rule_id')}): "
+                                                      f"{d.get('statement', '')}")
     _classify(el)
     if guards and el["class"] not in (LIFT,):
         shaft = [s for s in el["sides"] if s["kind"] == "SPACE" and "SHAFT" in (s.get("codes") or ())]
@@ -505,11 +517,22 @@ def finalise(els, *, main, unresolved_main_candidates, facts, guards=False):
     return els
 
 
-def floor_model(S, rooms, ents, unit_m, floor, *, wall_layers=(), origin=(0.0, 0.0), facts=None, guards=False, **kw):
+def floor_model(S, rooms, ents, unit_m, floor, *, wall_layers=(), origin=(0.0, 0.0), facts=None, guards=False,
+                decided_exterior=None, **kw):
     m = elements(S, rooms, ents, unit_m, floor, wall_layers=wall_layers, origin=origin, facts=facts, **kw)
     ext = possibly_external_faces(S, rooms) if guards else {}
+    if decided_exterior:
+        # ARCH_TAKEOFF_V2.3 (UP-SPACE-002): a decided space is no longer "possibly" exterior; only a decision that
+        # makes it EXTERIOR retypes the door's side (an INTERIOR decision leaves an ordinary internal door)
+        settled = {k for k, d in decided_exterior.items()
+                   if (d.get("set") or {}).get("interior_status") in ("INTERIOR", "EXTERIOR")}
+        ext = {k: v for k, v in ext.items() if k not in settled}
+    exterior = {k: d for k, d in (decided_exterior or {}).items()
+                if (d.get("set") or {}).get("interior_status") == "EXTERIOR"}
     for el in m["elements"]:
-        if guards:
+        if decided_exterior:
+            classify(el, ents, unit_m, guards=True, external_faces=ext, decided_exterior=exterior or None)
+        elif guards:
             classify(el, ents, unit_m, guards=True, external_faces=ext)
         else:
             classify(el, ents, unit_m)

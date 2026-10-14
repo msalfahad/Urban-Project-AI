@@ -63,7 +63,7 @@ from engine.source import tile_layout as TL           # noqa: E402
 POLICY_ID = "URBAN_BOQ_M9_S1"
 ARCH_POLICY_ID = "URBAN_BOQ_M9_S2_ARCH"
 ARCH_POLICY_ID_V2 = "URBAN_BOQ_M9_S6_ARCH_V2"
-ARCH_METHODS = ("ARCH_TAKEOFF_V1", "ARCH_TAKEOFF_V2", "ARCH_TAKEOFF_V2.1", "ARCH_TAKEOFF_V2.2")
+ARCH_METHODS = ("ARCH_TAKEOFF_V1", "ARCH_TAKEOFF_V2", "ARCH_TAKEOFF_V2.1", "ARCH_TAKEOFF_V2.2", "ARCH_TAKEOFF_V2.3")
 # S6: ARCH_TAKEOFF_V2 = V1 + drawing admission (stop, exit 2, no BOQ on a fatal finding) + unit-relative geometric
 # tolerances + plan regions cut only along empty bands + floor-category and finish-surface completeness. V1 is
 # unchanged; --strict-admission puts the same admission in front of V1 (its outputs are V1's own).
@@ -79,6 +79,13 @@ ARCH_POLICY_ID_V21 = "URBAN_BOQ_M9_P2A_ARCH_V2_1"
 # (their call paths pass no release-safety policy).
 V22 = "ARCH_TAKEOFF_V2.2"
 ARCH_POLICY_ID_V22 = "URBAN_BOQ_M9_P2B0_ARCH_V2_2"
+# Phase 2B-1: ARCH_TAKEOFF_V2.3 = V2.2 + the engineering knowledge registry (knowledge/URBAN_ENGINEERING_KNOWLEDGE_1.0.0.json):
+# the owner wet-area scope, marble thresholds and doorway strips, door jamb plaster, doorless-opening jamb skirting,
+# exterior waterproofing, the space connectivity model with bound project decisions, the owner door-opening standard
+# as AS_DRAWN / OWNER_REQUIRED scenarios, the elevator schedule and the grouped owner questions. Opt-in only: V1 ..
+# V2.2 never reach it (their call paths pass no owner-scope policy) and keep the frozen rule set rules/ 1.5.0.
+V23 = "ARCH_TAKEOFF_V2.3"
+ARCH_POLICY_ID_V23 = "URBAN_BOQ_M9_P2B1_ARCH_V2_3"
 M9_DIR = "m9"
 CREATED = datetime(2026, 1, 1)
 
@@ -213,7 +220,7 @@ class CompletenessFailed(Exception):
 
 def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_areas=None, project_id=None, intake=None,
                  strict=False, units=None, region_specs=None, accept_xrefs=(), extra_documents=(),
-                 admission_findings=()):
+                 admission_findings=(), decisions=None):
     """the architectural route on one plan drawing: every stage recorded, nothing silently skipped. `intake` (the
     urban_intake.read result of this same drawing) skips the read for repeated runs / tests.
     S6: method ARCH_TAKEOFF_V2, or strict=True (V1 behind the same admission), run the drawing discovery first and
@@ -228,9 +235,10 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
     from tools import urban_intake as UI
     if method not in ARCH_METHODS:
         raise SystemExit(f"--method must be one of {ARCH_METHODS} (the architectural route is behind a versioned flag)")
-    v22 = method == V22                                       # V2.2 is V2.1 plus the Phase 2B-0 corrections
-    v21 = method in (V21, V22)
-    v2 = method in (V2, V21, V22)                             # V2.1 is V2 plus the Phase 2A additions
+    v23 = method == V23                                       # V2.3 is V2.2 plus the knowledge registry
+    v22 = method in (V22, V23)                                # V2.2 is V2.1 plus the Phase 2B-0 corrections
+    v21 = method in (V21, V22, V23)
+    v2 = method in (V2, V21, V22, V23)                        # V2.1 is V2 plus the Phase 2A additions
     admit = v2 or strict
     if not admit and (units or region_specs or accept_xrefs):
         raise SystemExit("--units / --region / --accept-missing-xref are reviewer inputs of the admission: use them "
@@ -361,6 +369,12 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
                                     for r in stacked], u)
     col_layers = sorted({lay for v in roles_of.values() for lay, ro in v["roles"].items() if ro == AP.COLUMN})
     door_floors, door_texts, door_face_texts = [], {}, {}
+    decided, possibly_ext = {}, {}
+    door_facts = facts
+    if v23:
+        from engine.source import door_standards as DSTD
+        from engine.source import space_model as SMOD
+        door_facts = DSTD.door_model_facts(facts)
     for i, reg in enumerate(regs):
         rid = reg["region_id"]
         ents = ents_of[rid]
@@ -386,7 +400,9 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
                               **({"geom": geom_of[rid]} if v21 else {}))
         M = AM.measure(S, floor=floor, project_id=pid, revision_set_sha256=rev, facts=facts,
                        floor_above_level_m=above, floor_level_m=level[rid], documents=docs,
-                       **({"release_safety": True} if v22 else {}))
+                       **({"release_safety": True} if v22 else {}),
+                       **({"owner_scope": True, "door_height": lambda o_: DSTD.door_height(DSTD.INTERNAL, facts)}
+                          if v23 else {}))
         X = AM.materials(M, facts)
         ref = (reference_areas or {}).get(floor)
         rec["repairs"] = {"counts": dict(Counter(x["kind"] + ":" + x["rule"] for x in S.get("repairs") or ())),
@@ -436,8 +452,17 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
             from engine.source import arch_completeness as AC
             ctx = {"project_id": pid, "revision_set_sha256": rev, "documents": docs}
             strips = AC.strip_register(S, floor)
-            s_lines, s_unres = AC.strip_lines(ctx, strips, floor)
-            r_lines, r_unres = AC.surface_rfis(ctx, M, floor, facts, level[rid], above)
+            if v23:
+                # Phase 2B-1 (UP-THR-001): doorway strips of single verified door / passage openings take their
+                # owner treatment; every other strip stays in the V2 strip register
+                from engine.source import owner_finish_scope as OFS
+                t_lines, t_unres, rest = OFS.threshold_lines(ctx, strips, M["rooms"], floor, line=AM._line)
+                s_lines, s_unres = AC.strip_lines(ctx, rest, floor)
+                s_lines, s_unres = t_lines + s_lines, t_unres + s_unres
+            else:
+                s_lines, s_unres = AC.strip_lines(ctx, strips, floor)
+            r_lines, r_unres = AC.surface_rfis(ctx, M, floor, facts, level[rid], above,
+                                               **({"owner_scope": True} if v23 else {}))
             M["lines"] = M["lines"] + s_lines + r_lines
             here = [x for x in unresolved if x.get("floor") == floor]
             cov = AC.coverage(S, M, strips, M["lines"], M["unresolved"] + X["unresolved"] + here + s_unres + r_unres,
@@ -459,9 +484,14 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
             # Phase 2A P2-04: every door swing of the floor in exactly one door element, its class and widths
             from engine.source import door_model as DMOD
             walls_here = [lay for lay, ro in L["roles"].items() if ro == AP.WALL]
+            dec_here = SMOD.decided_faces(S, floor, decisions) if v23 else {}
+            if v23:
+                decided.update({(floor, k): v for k, v in dec_here.items()})
+                possibly_ext.update(DMOD.possibly_external_faces(S, M["rooms"]))
             door_floors.append((floor, DMOD.floor_model(S, M["rooms"], ents, u, floor, wall_layers=walls_here,
-                                                        origin=(reg["box"][0], reg["box"][1]), facts=facts,
-                                                        **({"guards": True} if v22 else {}))))
+                                                        origin=(reg["box"][0], reg["box"][1]), facts=door_facts,
+                                                        **({"guards": True} if v22 else {}),
+                                                        **({"decided_exterior": dec_here} if dec_here else {}))))
             tx = {t_["id"]: t_ for t_ in ents["texts"]}
             door_texts[floor] = ents["texts"]
             door_face_texts[floor] = {f_["face_id"]: [tx[i_] for i_ in f_.get("label_text_ids") or () if i_ in tx]
@@ -478,7 +508,7 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
     doors = None
     if v21:
         doors, lines, door_unres, door_cov = _v21_doors(door_floors, door_texts, door_face_texts, regs, spaces_of,
-                                                         lines, u, facts, pid, rev, docs,
+                                                         lines, u, door_facts, pid, rev, docs,
                                                          **({"guards": True} if v22 else {}))
         unresolved += door_unres
         coverage += door_cov
@@ -520,6 +550,12 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
         run.update(policy=ARCH_POLICY_ID_V22)
         run["policies"]["release_safety"] = RSF.policy_record()
         run["v2_2"] = {"findings_addressed": ["F-17", "F-18", "F-19", "F-20", "F-21", "F-22", "F-24"]}
+    if v23:
+        from engine.source import knowledge as K
+        from engine.source import owner_finish_scope as OFS
+        run.update(policy=ARCH_POLICY_ID_V23)
+        run["policies"].update(knowledge=K.policy_record(), owner_finish_scope=OFS.policy_record(),
+                               door_standards=DSTD.policy_record(), space_model=SMOD.policy_record())
     if admit:
         _finish_discovery(report, E, facts, regions, lines, coverage if v2 else None,
                           entity_checks={"column_evidence": column_ev, "door_symbols": arc_recs,
@@ -544,7 +580,7 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
         from engine.source import dimension_evidence as DEV
         run["policies"]["dimension_evidence"] = DEV.policy_record()
         arch["ledger"] = SL.ledger(lines, rooms, openings, unresolved, method=method, doors=doors, walls=walls_of,
-                                   **({"conserve": True} if v22 else {}))
+                                   **({"conserve": True} if v22 else {}), **({"owner_scope": True} if v23 else {}))
         run["v2_1"]["ledger"] = {"table": arch["ledger"]["table"], "summary": arch["ledger"]["summary"]}
         run["policies"]["surface_ledger"] = SL.policy_record()
         run["v2_1"]["doors"] = {"summary": doors["summary"], "main_entrance": doors["main_entrance"]["state"],
@@ -552,11 +588,70 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
                                 "findings": dict(Counter(f_["code"] for f_ in doors["findings"]))}
         from engine.source import door_model as DMOD
         run["policies"]["doors"] = DMOD.policy_record()
+    if v23:
+        _v23_outputs(arch, room_boq, rooms, openings, doors, facts, decisions, decided, possibly_ext, shafts,
+                     method, unresolved, drawing=path.name)
     if v2:
         arch["coverage"] = coverage
         if any(c["gate"] != "PASS" for c in coverage):
             raise CompletenessFailed(room_boq, arch, E)
     return room_boq, arch, E
+
+
+def _v23_outputs(arch, room_boq, rooms, openings, doors, facts, decisions, decided, possibly_ext, shafts, method,
+                 unresolved, drawing=None):
+    """Phase 2B-1: the space model, the door scenarios (AS_DRAWN / OWNER_REQUIRED / UNRESOLVED), the elevator
+    schedule, the grouped owner questions and the BOQ scenario views. Reads the finished lines; changes none."""
+    from engine.source import door_standards as DSTD
+    from engine.source import knowledge as K
+    from engine.source import space_model as SMOD
+    by_face = {fid: d for (_fl, fid), d in decided.items()}
+    sm = SMOD.build(rooms, doors["elements"], possibly_external=possibly_ext, decisions_by_face=by_face)
+    sm["decisions"] = {"schema": (decisions or {}).get("schema"), "given": len((decisions or {}).get("decisions") or ()),
+                       "bound": sorted({d["id"] for d in by_face.values()}),
+                       "unbound": [d.get("id") for d in SMOD.unbound(decisions, {d["id"] for d in by_face.values()})]}
+    arch["space_model"] = sm
+    arch["door_scenarios"] = DSTD.door_scenarios(doors, facts, openings=openings, rooms=rooms)
+    arch["elevator_schedule"] = DSTD.elevator_schedule(doors, rooms, shafts)
+    enlarged = [r for r in arch["door_scenarios"]["rows"] if r["review_status"] == "MODIFICATION_PROPOSED_NOT_APPROVED"]
+    if enlarged:
+        # the owner rule (UP-DOOR-OPEN-002) widens the wall opening; its head is not an owner rule (CF-11): one
+        # owner question for the run, never one per door, and the widths themselves are never re-asked
+        from engine.source import arch_completeness as AC
+        unresolved.append(AC.flag({"room_id": "-", "floor": "-", "item": "DOOR.OWNER_REQUIRED (wall-opening head)",
+                                   "reason": f"DOOR_OPENING_HEAD_ALLOWANCE (OQ-02): {len(enlarged)} door(s) below the "
+                                             "owner opening standard; the enlarged wall opening's head is taken at "
+                                             "the door height (ASSUMED) until an allowance is given"},
+                                  drawing=drawing))
+    arch["owner_questions"] = K.owner_questions(unresolved, method=method)
+    rel = Counter()
+    for ln in room_boq["lines"]:
+        if ln["evidence_state"] in BL.QUANTITY_STATES and ln.get("measured_net") is not None:
+            rel[(ln["item_code"], ln["unit"], ln["evidence_state"])] += ln["measured_net"]
+    arch["boq_scenarios"] = {
+        "policy": "BOQ_SCENARIOS_V1", "rule": "UP-KB-PREC-001", "method": method,
+        "AS_DRAWN": {"what": "what the drawing establishes: the BOQ lines of this run by item and state (PROVISIONAL "
+                             "is never confirmed)",
+                     "by_item": [{"item_code": c, "unit": un, "state": st, "quantity": round(q, 6)}
+                                 for (c, un, st), q in sorted(rel.items())]},
+        "OWNER_REQUIRED": {"what": "the owner's approved design standards applied to the same elements (proposed "
+                                   "modifications, not approved): doors (UP-DOOR-OPEN-002); no other owner-required "
+                                   "modification is defined in knowledge registry 1.0.0",
+                           "doors": arch["door_scenarios"]["views"]["OWNER_REQUIRED"],
+                           "doors_with_enlargement": sum(1 for r in arch["door_scenarios"]["rows"]
+                                                         if r["review_status"] == "MODIFICATION_PROPOSED_NOT_APPROVED"
+                                                         and r["view"] == "AS_DRAWN")},
+        "UNRESOLVED": {"what": "what cannot yet be quantified reliably",
+                       "lines_without_quantity": dict(Counter(ln["item_code"] for ln in room_boq["lines"]
+                                                              if ln["evidence_state"] not in BL.QUANTITY_STATES)),
+                       "doors": arch["door_scenarios"]["views"]["UNRESOLVED"],
+                       "question_groups": arch["owner_questions"]["summary"]["groups"]},
+        "never": "the AS_DRAWN and OWNER_REQUIRED views added together"}
+    arch["run"]["v2_3"] = {"knowledge": K.policy_record(), "space_model": sm["summary"],
+                           "door_scenarios": arch["door_scenarios"]["conservation"],
+                           "owner_questions": arch["owner_questions"]["summary"],
+                           "elevator_shafts": len(arch["elevator_schedule"]["shafts"]),
+                           "decisions": sm["decisions"]}
 
 
 def _finish_discovery(report, E, facts, regions, lines, coverage, entity_checks=None):
@@ -737,7 +832,37 @@ def v21_files(arch):
         from engine.source import surface_ledger as SL
         files["SURFACE_LEDGER.json"] = _j({"run": run, "ledger": arch["ledger"]})
         files["SURFACE_LEDGER.csv"] = _csv(arch["ledger"]["records"], SL.CSV_COLUMNS)
+    if arch.get("door_scenarios") is not None:                  # ARCH_TAKEOFF_V2.3
+        files["SPACE_MODEL.json"] = _j({"run": run, "space_model": arch["space_model"]})
+        files["DOOR_SCENARIOS.json"] = _j({"run": run, "doors": arch["door_scenarios"]})
+        files["DOOR_SCENARIOS.csv"] = _csv([_door_row(r) for r in arch["door_scenarios"]["rows"]], DOOR_SCENARIO_COLUMNS)
+        files["ELEVATOR_SCHEDULE.json"] = _j({"run": run, "elevators": arch["elevator_schedule"]})
+        files["OWNER_QUESTIONS.json"] = _j({"run": run, "questions": arch["owner_questions"]})
+        files["BOQ_SCENARIOS.json"] = _j({"run": run, "scenarios": arch["boq_scenarios"]})
     return files
+
+
+DOOR_SCENARIO_COLUMNS = ("element_id", "floor", "opening_id", "state", "category", "view", "spaces",
+                         "cad_wall_opening_m", "width_state", "frame_width_m", "height_m", "height_state",
+                         "as_drawn_area_m2", "as_drawn_area_state", "required_nominal_door_m",
+                         "owner_required_wall_opening_m", "enlargement_m", "nominal_door_for_opening_m",
+                         "owner_required_area_m2", "owner_required_area_state", "review_status", "flags")
+
+
+def _door_row(r):
+    a, o = r["as_drawn"], r["owner_required"]
+    return {"element_id": r["element_id"], "floor": r["floor"], "opening_id": r["opening_id"], "state": r["state"],
+            "category": r["category"], "view": r["view"], "spaces": " | ".join(str(x) for x in r["spaces"]),
+            "cad_wall_opening_m": a["cad_wall_opening_m"], "width_state": a["width_state"],
+            "frame_width_m": a["frame_width_m"], "height_m": a["height"].get("value_m"),
+            "height_state": a["height"].get("state"), "as_drawn_area_m2": a["wall_opening_area"]["m2"],
+            "as_drawn_area_state": a["wall_opening_area"]["state"],
+            "required_nominal_door_m": o["required_nominal_door_m"],
+            "owner_required_wall_opening_m": o["owner_required_wall_opening_m"], "enlargement_m": o["enlargement_m"],
+            "nominal_door_for_opening_m": o["nominal_door_for_opening_m"],
+            "owner_required_area_m2": o["wall_opening_area"]["m2"],
+            "owner_required_area_state": o["wall_opening_area"]["state"], "review_status": r["review_status"],
+            "flags": "; ".join(r["flags"])}
 
 
 PUBLISHED = ("BOQ_LINES.json", "BOQ_LINES.csv", "MATERIAL_RESULTS.json", "COVERAGE.json", "COVERAGE.csv",
@@ -745,7 +870,9 @@ PUBLISHED = ("BOQ_LINES.json", "BOQ_LINES.csv", "MATERIAL_RESULTS.json", "COVERA
              "UNRESOLVED.json", "ARCH_FLOOR_AREAS.json", "URBAN_ROOM_BOQ.xlsx", "FINISH_COVERAGE.json",
              "DRAWING_DISCOVERY.json", "ADMISSION_BLOCKED.json", "COMPLETENESS_FAILED.json",
              "ARCH_GEOMETRY_DECISIONS.json", "DOOR_SCHEDULE.json", "DOOR_SCHEDULE.csv",
-             "SURFACE_LEDGER.json", "SURFACE_LEDGER.csv", "DIMENSION_CROSSCHECK.json")
+             "SURFACE_LEDGER.json", "SURFACE_LEDGER.csv", "DIMENSION_CROSSCHECK.json", "SPACE_MODEL.json",
+             "DOOR_SCENARIOS.json", "DOOR_SCENARIOS.csv", "ELEVATOR_SCHEDULE.json", "OWNER_QUESTIONS.json",
+             "BOQ_SCENARIOS.json")
 
 
 def _supersede(out):
@@ -790,11 +917,18 @@ def _blocked(out, report, conversions, *, code, what, extra=None):
 def cmd_arch(a):
     from engine.source import discovery as DS
     facts = json.loads(Path(a.facts).read_text(encoding="utf-8")) if a.facts else None
+    decisions = None
+    if getattr(a, "decisions", None):
+        if a.method != V23:
+            raise SystemExit("--decisions (project decisions, URBAN_PROJECT_DECISIONS_V1) needs --method ARCH_TAKEOFF_V2.3")
+        decisions = json.loads(Path(a.decisions).read_text(encoding="utf-8"))
+        if decisions.get("schema") != "URBAN_PROJECT_DECISIONS_V1":
+            raise SystemExit("--decisions: schema must be URBAN_PROJECT_DECISIONS_V1")
     roles = _kv(a.layer_roles, "--layer-roles")
     refs = {k: float(v) for k, v in _kv(a.reference_areas, "--reference-areas").items()}
     out = Path(a.out)
     conversions = []
-    v2 = a.method in (V2, V21, V22)
+    v2 = a.method in (V2, V21, V22, V23)
     admit = v2 or a.strict_admission
     if not admit and (a.units or a.region or a.accept_missing_xref):
         raise SystemExit("--units / --region / --accept-missing-xref are reviewer inputs of the admission: use them "
@@ -838,7 +972,7 @@ def cmd_arch(a):
                                      reference_areas=refs, project_id=a.project, strict=a.strict_admission,
                                      units=a.units, region_specs=a.region, accept_xrefs=tuple(a.accept_missing_xref or ()),
                                      extra_documents=[d for d in (inputs_rec if admit else ()) if d["role"] != "plan"],
-                                     admission_findings=pre)
+                                     admission_findings=pre, **({"decisions": decisions} if decisions else {}))
     except DS.AdmissionBlocked as ex:
         return _blocked(out, ex.report, conversions, code=DS.EXIT_ADMISSION_BLOCKED, what="ADMISSION_BLOCKED")
     except CompletenessFailed as ex:
@@ -1032,6 +1166,8 @@ def main(argv=None):
                         "ARCH_TAKEOFF_V2 (S6) adds the drawing admission, unit-relative tolerances, empty-band plan "
                         "regions and the completeness gates (exit 2: admission blocked, 3: completeness failed)")
     p.add_argument("--facts", help="project facts (URBAN_ARCH_FACTS_V1): heights, finishes, tile constraints, membrane")
+    p.add_argument("--decisions", help="ARCH_TAKEOFF_V2.3: project decisions (URBAN_PROJECT_DECISIONS_V1) binding owner "
+                                       "decisions to single spaces (kept with the project's private inputs)")
     p.add_argument("--layer-roles", nargs="+", metavar="LAYER=ROLE",
                    help="override the detected role of a layer (WALL, COLUMN, WINDOW, DOOR, OTHER); recorded")
     p.add_argument("--reference-areas", nargs="+", metavar="FLOOR=M2",

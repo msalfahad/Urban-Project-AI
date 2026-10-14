@@ -80,7 +80,13 @@ def validate_facts(facts):
 
 
 def _ref(rule_id):
-    return RS.rule_ref(rule_id, RULE_SET)
+    try:
+        return RS.rule_ref(rule_id, RULE_SET)
+    except KeyError:
+        # ARCH_TAKEOFF_V2.3: a rule of the engineering knowledge registry (never reached by V1 .. V2.2, which name
+        # rule-store rules only)
+        from engine.source import knowledge as K
+        return K.ref(rule_id)
 
 
 def room_id(floor, face_id):
@@ -229,9 +235,14 @@ def _wall_finish_rs(ctx, room, tr, code, run, H, h, openings, oh, sp, floor, unr
 
 
 def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_above_level_m=None, documents=(),
-            floor_level_m=None, release_safety=False):
+            floor_level_m=None, release_safety=False, owner_scope=False, door_height=None):
     """release_safety (ARCH_TAKEOFF_V2.2 only): wall finishes and skirting through engine.source.release_safety (the
-    boundary detail of every face is required); False is the V1 / V2 / V2.1 path, unchanged."""
+    boundary detail of every face is required); False is the V1 / V2 / V2.1 path, unchanged.
+    owner_scope (ARCH_TAKEOFF_V2.3 only): the owner wet-area scope and the surfaces an approved rule answers
+    (engine.source.owner_finish_scope, knowledge registry 1.0.0); door_height(opening) -> {"value_m", "state"} for the
+    door jamb plaster. False is the V1 .. V2.2 path, unchanged."""
+    if owner_scope:
+        from engine.source import owner_finish_scope as OFS
     facts = validate_facts(facts) or {}
     ctx = {"project_id": project_id, "revision_set_sha256": revision_set_sha256, "documents": list(documents)}
     rooms, lines, unresolved = [], [], []
@@ -317,6 +328,12 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                                formula="face area (TS01)", inputs={"dims": room["dims"]},
                                notes="; ".join(x for x in [f"{kind} space: no internal floor / ceiling finish line",
                                                            sp.get("issue") or ""] if x)))
+            if owner_scope and kind == AR.EXTERIOR:
+                # ARCH_TAKEOFF_V2.3 (UP-WP-ROOF-001): balconies / roofs are waterproofed under the default scope
+                wl_ = OFS.exterior_wp_lines(ctx, room, sp["area_m2"], runs["perimeter"], line=_line)
+                lines += wl_
+                unresolved += [{"room_id": rid, "floor": floor, "item": ln_["item_code"],
+                                "reason": ln_["rfi"]["question"]} for ln_ in wl_ if ln_.get("rfi")]
             if typed_by_evidence and sp.get("issue"):
                 unresolved.append({"room_id": rid, "floor": floor, "item": ec, "reason": sp["issue"]})
             continue
@@ -359,6 +376,16 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                                if open_plan else "", att_txt, sp.get("issue") or "", sp.get("fixture_conflict") or ""]
                                + ([] if not zoned or sp.get("zone_note") in (sp.get("issue") or "") else [sp["zone_note"]])
                                if x)))
+        if owner_scope:
+            # ARCH_TAKEOFF_V2.3 (UP-WET-001): kitchens, pantries, ironing and laundry rooms take the wet scope (full-height
+            # wall porcelain, no skirting, no paint, waterproofing); an open plan of wet + dry functions keeps the dry
+            # treatment and says why
+            scope = OFS.finish_scope(room)
+            room["finish_scope"] = scope
+            if scope["scope"] == OFS.WET:
+                wet = True
+            for fl_ in scope["flags"]:
+                unresolved.append({"room_id": rid, "floor": floor, "item": "FINISH_SCOPE", "reason": fl_})
         # ceilings (S5): one ceiling over every m2 of plan, at the top of the space. The part of the room under the void
         # of the plan above is double height (its ceiling is the one over that void, on the plan above); the room's
         # own outlined void carries the double-height ceiling at this level, as its own line
@@ -414,11 +441,23 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
             hs0 = heights(floor, lvl, floor_above_level_m, facts)
             tile_h, clear_h = hs0["WALL_TILE"], hs0["PAINT"]
             full = None
-            if tile_h["state"] == WH.ESTABLISHED and tile_h["governing"] == "DERIVED_CLEAR_HEIGHT":
+            if owner_scope:
+                # UP-FIN-WALL-001: full height unless an explicit source / project height says otherwise
+                tile_h = OFS.wall_tile_height(hs0)
+                full = tile_h["full"]
+            elif tile_h["state"] == WH.ESTABLISHED and tile_h["governing"] == "DERIVED_CLEAR_HEIGHT":
                 full = True                               # derived to the ceiling: the tile is full height
             elif tile_h["state"] == WH.ESTABLISHED and clear_h["state"] == WH.ESTABLISHED:
                 full = tile_h["value_m"] >= clear_h["value_m"] - 1e-6
-            if full is None:
+            if owner_scope and full:
+                lines.append(_line(ctx, item_code="FIN.SKIRTING", room=room, element="skirting", unit="lm", net=None,
+                                   ev="NOT_APPLICABLE_WITH_EVIDENCE",
+                                   formula="UP-CER-004 / UP-WET-001: owner wet area, full-height wall porcelain",
+                                   inputs={"wall_tile_governing": tile_h.get("governing"), "run_lm": round(skirt, 6)},
+                                   rule_id="UP-CER-004",
+                                   notes="no conventional skirting: the wall porcelain of an owner wet area runs full "
+                                         "height (UP-FIN-WALL-001)"))
+            elif full is None:
                 q = ("UP-CER-004: no skirting when the wall tile is full height; the wall tile height (or the clear "
                      f"height it is compared with) is not established (run {skirt:.2f} m if it is not full height)")
                 lines.append(_line(ctx, item_code="FIN.SKIRTING", room=room, element="skirting", unit="lm", net=None,
@@ -517,6 +556,11 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
         hs = heights(floor, lvl, floor_above_level_m, facts)
         oh = (facts or {}).get("opening_heights") or {}
         run = runs["perimeter"] - zone_ln               # a drawn zone line has no wall: no wall finish along it
+        if owner_scope and wet:
+            hs = dict(hs, WALL_TILE=OFS.wall_tile_height(hs))
+            if hs["WALL_TILE"].get("flag"):
+                unresolved.append({"room_id": rid, "floor": floor, "item": "FIN.WALL.TILE",
+                                   "reason": hs["WALL_TILE"]["flag"]})
         for tr, code in (("PLASTER", "FIN.PLASTER"), ("PAINT", "FIN.PAINT"), ("WALL_TILE", "FIN.WALL.TILE")):
             if (tr == "WALL_TILE") != wet and tr != "PLASTER":
                 continue
@@ -564,6 +608,11 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                                    formula="wall run x height - openings", inputs=inputs, rule_id="UP-CER-009",
                                    notes=("WINDOW_POSITION_ASSUMED: sill / head levels are not in a plan - each window "
                                           "is deducted at its full height inside the finish height") if windows else ""))
+    if owner_scope:
+        # ARCH_TAKEOFF_V2.3: door jamb / head plaster (UP-FIN-PLASTER-001) and doorless-opening jamb skirting
+        # (UP-SKIRT-001, URBAN-SKIRTING-OPENING-METHOD), both PROVISIONAL
+        lines += OFS.jamb_plaster_lines(ctx, fr["openings"], floor, door_height or (lambda o: None), line=_line)
+        lines += OFS.passage_jamb_skirting(ctx, fr["openings"], rooms, floor, line=_line)
     if fr.get("walls"):
         sl, su = _wall_lines(ctx, floor, fr["walls"], facts)
         lines += sl
@@ -830,6 +879,17 @@ def _landing(ctx, room, rid, floor, sp, flights, u):
 #   SOURCE    the drawings of this run do not hold it (a section, a schedule, a legend, a specification)
 #   REVIEW    the drawing allows several readings; a person decides (the engine never picks one silently)
 FLAG_RULES = (
+    # ARCH_TAKEOFF_V2.3 (owner_finish_scope; knowledge registry 1.0.0) - prefixes no earlier method emits
+    (r"^WALL_TILE_BELOW_OWNER_FULL_HEIGHT", "SOURCE", "owner_finish_scope.wall_tile_height",
+     "confirm the project's wall-tile height: it governs the owner full-height rule (UP-FIN-WALL-001), and the band "
+     "above it follows the same source"),
+    (r"^OPEN_PLAN_WET_SCOPE_EXTENT", "SOURCE", "owner_finish_scope.finish_scope",
+     "draw or give the kitchen / pantry zone of the open plan (a finish-plan line or hatch): the wet scope applies "
+     "inside it (UP-WET-001)"),
+    (r"^WET_SCOPE_PROJECT_CONFIRMATION", "SOURCE", "owner_finish_scope.finish_scope",
+     "confirm in the project finish schedule that the room is a wet area (UP-WET-001: project-specific)"),
+    (r"^EXTERIOR_WP_UPTURN_BY_SPECIFICATION", "SOURCE", "owner_finish_scope.exterior_wp_lines",
+     "give the balcony / terrace membrane system and its upturn height (specification)"),
     (r"^WALL_FINISH_HEIGHT_NOT_ESTABLISHED", "SOURCE", "arch_measure.measure / wall_height.resolve",
      "give the finish height per floor and trade, or the soffit / ceiling / build-up zones, from the sections "
      "(--facts wall_heights / height_components)"),

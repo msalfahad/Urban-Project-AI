@@ -102,6 +102,30 @@ _STAIR_ROWS = [("TREADS", "MARBLE_TREAD", ("FIN.MARBLE.TREAD",), None, "UP-STAIR
                ("STEP_LENGTH", "STAIR_STEP_LENGTH", ("FIN.STAIR.STEP_LM",), None, P, True),
                ("BALUSTRADE", "RAILING", ("FIN.RAILING",), None, P, True)]
 STAIR_CODES = tuple(c for row in _STAIR_ROWS for c in row[2])
+# Phase 2B-1 (ARCH_TAKEOFF_V2.3, owner_scope=True only): the rows the knowledge registry answers - the owner wet-area
+# scope (a kitchen / pantry / ironing room is WET; its floor stays porcelain), the doorway strip (UP-THR-001), the door
+# jamb and head plaster (UP-FIN-PLASTER-001), and the line-driven passage-jamb skirting and exterior waterproofing.
+TABLE_ID_V0_2 = "ELIGIBILITY_V0_2_OWNER_SCOPE"
+
+
+def _owner_scope_table():
+    t = copy.deepcopy(ELIGIBILITY_V0)
+    t["WET"] = [("FLOOR", "WET_AREA_FLOOR", ("FIN.FLOOR.WET_TILE", "FIN.FLOOR.PORCELAIN"), "floor", "UP-WET-001", True)] \
+        + [r for r in t["WET"] if r[1] != "WET_FLOOR_TILE"]
+    thr = ("ARCH.THRESHOLD", "FIN.MARBLE.THRESHOLD", "FIN.FLOOR.PORCELAIN")
+    t["DOOR"] = [r if r[0] != "THRESHOLD" else ("THRESHOLD", "THRESHOLD_FINISH", thr, None, "UP-THR-001", True)
+                 for r in t["DOOR"] if r[0] != "HEAD_SOFFIT"]
+    t["DOOR"] = [r if r[0] != "REVEAL_JAMBS" else ("REVEAL_JAMBS_AND_HEAD", "PLASTER", ("FIN.PLASTER",), None,
+                                                   "UP-FIN-PLASTER-001", True) for r in t["DOOR"]]
+    t["PASSAGE"] = [r if r[0] != "THRESHOLD" else ("THRESHOLD", "FLOOR_STRIP", thr, None, "UP-THR-001", True)
+                    for r in t["PASSAGE"]]
+    return t
+
+
+OWNER_SCOPE_LINE_DRIVEN = {
+    "PASSAGE": [("JAMB_SKIRTING", "SKIRTING", ("FIN.SKIRTING",), None, "UP-SKIRT-001", True)],
+    "EXTERIOR": [("WATERPROOFING", "WATERPROOFING_FLOOR", ("FIN.WP.FLOOR",), None, "UP-WP-ROOF-001", True),
+                 ("WATERPROOFING_UPTURN", "WATERPROOFING_UPTURN", ("FIN.WP.UPTURN",), None, "UP-WP-ROOF-001", True)]}
 ELIGIBILITY_V0_1_ADDITIONS = {
     "WET": [("WALLS_ABOVE_TILE", "PAINT", ("FIN.PAINT",), None, "UP-CER-009", True),
             ("DOORWAY", "WATERPROOFING_DOORWAY", ("FIN.WP.DOORWAY",), None, "UP-WP-003", True)],
@@ -213,10 +237,12 @@ def _record(element, ekind, floor, row, lines, rfi_text=None, rule=None, element
     return rec
 
 
-def ledger(lines, rooms, openings, unresolved, *, method, doors=None, walls=None, conserve=False):
+def ledger(lines, rooms, openings, unresolved, *, method, doors=None, walls=None, conserve=False, owner_scope=False):
     """the read-only ledger of one architectural run (its inputs are never modified). conserve (ARCH_TAKEOFF_V2.2,
     F-21): the V0.1 rows, ENGINE_LIMIT apart from NO_EMITTER, every line in exactly one record (or a named
-    out-of-scope category), coverage by floor and trade, and no completeness claim; False is the V2.1 ledger."""
+    out-of-scope category), coverage by floor and trade, and no completeness claim; False is the V2.1 ledger.
+    owner_scope (ARCH_TAKEOFF_V2.3): the V0.2 rows of the knowledge registry (_owner_scope_table)."""
+    table = _owner_scope_table() if owner_scope else ELIGIBILITY_V0
     lines = copy.deepcopy(list(lines))
     eng = {"engine_status": "ENGINE_LIMIT"} if conserve else {}
     by_room, by_op, by_floor_code, by_elem = defaultdict(list), defaultdict(list), defaultdict(list), defaultdict(list)
@@ -235,7 +261,9 @@ def ledger(lines, rooms, openings, unresolved, *, method, doors=None, walls=None
         if r.get("class") not in ("ROOM", "MIXED", "MERGED", "UNLABELLED"):
             continue
         kind = KIND_OF.get(r.get("kind"), "UNKNOWN")
-        elig = ELIGIBILITY_V0[kind]
+        if owner_scope and (r.get("finish_scope") or {}).get("scope") == "WET":
+            kind = "WET"                            # UP-WET-001: the owner wet-area scope
+        elig = table[kind]
         el = f"{r['room_id']} ({r.get('name_en') or r['class']})"
         if isinstance(elig, str):
             recs.append(_record(el, "SPACE:" + kind, r["floor"], None, [], rule=elig))
@@ -245,7 +273,8 @@ def ledger(lines, rooms, openings, unresolved, *, method, doors=None, walls=None
         if conserve:
             # the V0.1 rows are line-driven: a record only where the room has such a line (they conserve lines, they
             # do not make a surface eligible - a wet room without a doorway piece is not a CONFIRMED_MISSING)
-            rows += [x for x in ELIGIBILITY_V0_1_ADDITIONS.get(kind, [])
+            rows += [x for x in ELIGIBILITY_V0_1_ADDITIONS.get(kind, []) + (OWNER_SCOPE_LINE_DRIVEN.get(kind, [])
+                                                                             if owner_scope else [])
                      if any(ln["item_code"] in x[2] for ln in mine)]
             if kind != "STAIR" and any(ln["item_code"] in STAIR_CODES for ln in mine):
                 rows += [(f"STAIR_IN_ROOM:{x[0]}",) + x[1:] for x in _STAIR_ROWS
@@ -279,18 +308,22 @@ def ledger(lines, rooms, openings, unresolved, *, method, doors=None, walls=None
         key = (o["floor"], o["opening_id"])
         el = f"{o['floor']}:{o['opening_id']} ({o['kind']})"
         if key in lift_ops:
-            recs.append(_record(el, "OPENING:LIFT_ENTRANCE", o["floor"], None, [], rule=ELIGIBILITY_V0["LIFT_ENTRANCE"]))
+            recs.append(_record(el, "OPENING:LIFT_ENTRANCE", o["floor"], None, [], rule=table["LIFT_ENTRANCE"]))
             continue
         if key in lift_cand:
             mine = by_op.get(key, [])
-            for row in ELIGIBILITY_V0[o["kind"]]:
+            for row in table[o["kind"]]:
                 hit = [ln for ln in mine if ln["item_code"] in row[2]]
                 recs.append(_record(el, "OPENING:LIFT_ENTRANCE_CANDIDATE", o["floor"], row, hit, element_state=(
                     "BLOCKED_OWNER_DECISION", "LIFT_ENTRANCE_CANDIDATE: " + lift_cand[key]["evidence"]), **eng))
             continue
         mine = by_op.get(key, [])
         d = door_of_op.get(key)
-        for row in ELIGIBILITY_V0[o["kind"]]:
+        o_rows = list(table[o["kind"]])
+        if owner_scope:
+            o_rows += [x for x in OWNER_SCOPE_LINE_DRIVEN.get(o["kind"], []) if any(ln["item_code"] in x[2]
+                                                                                    for ln in mine)]
+        for row in o_rows:
             surface, trade, codes, *_ = row
             hit = [ln for ln in mine if ln["item_code"] in codes]
             shared = []
@@ -304,7 +337,7 @@ def ledger(lines, rooms, openings, unresolved, *, method, doors=None, walls=None
                 st = _door_state(d)
                 if st:
                     recs.append(_record(el, "OPENING:DOOR", o["floor"], row, hit, element_state=st,
-                                        rule=ELIGIBILITY_V0["LIFT_ENTRANCE"] if st[0] == "EXCLUDED" else None))
+                                        rule=table["LIFT_ENTRANCE"] if st[0] == "EXCLUDED" else None))
                     continue
             recs.append(_record(el, "OPENING:" + o["kind"], o["floor"], row, hit, **eng))
             if shared:
@@ -315,14 +348,14 @@ def ledger(lines, rooms, openings, unresolved, *, method, doors=None, walls=None
             if e.get("opening_id"):
                 continue
             el = f"{e['floor']}:{e['element_id']} (DOOR without a band opening)"
-            for row in ELIGIBILITY_V0["DOOR"]:
+            for row in table["DOOR"]:
                 if row[0] == "OPENING":
                     recs.append(_record(el, "DOOR_ELEMENT", e["floor"], row, [], element_state=_door_state(e) or
                                         ("PROVISIONAL", None)))
-                elif row[0] in ("REVEAL_JAMBS", "HEAD_SOFFIT"):
+                elif row[0] in ("REVEAL_JAMBS", "HEAD_SOFFIT", "REVEAL_JAMBS_AND_HEAD"):
                     recs.append(_record(el, "DOOR_ELEMENT", e["floor"], row, []))
     for fl in sorted({w["floor"] for w in walls or ()}):
-        for row in ELIGIBILITY_V0["WALL_GROUP"]:
+        for row in table["WALL_GROUP"]:
             recs.append(_record(f"{fl}:walls", "WALL_GROUP", fl, row, by_floor_code.get((fl, row[2][0]), [])))
     if conserve:
         recs += _conserve(recs, lines, rooms)
@@ -343,6 +376,8 @@ def ledger(lines, rooms, openings, unresolved, *, method, doors=None, walls=None
     out = {"policy": POLICY_ID, "method": method, "table": {"id": TABLE_ID, "status": TABLE_STATUS,
                                                              "digest": table_digest()},
            "records": recs, "findings": findings, "summary": summary(recs)}
+    if owner_scope:
+        out["table"]["owner_scope"] = TABLE_ID_V0_2 + " (knowledge registry 1.0.0 rules)"
     if conserve:
         out["table"]["additions"] = "ELIGIBILITY_V0_1_ADDITIONS (PROPOSAL)"
         out["summary"] = summary(recs, statuses=STATUSES_V2_2)

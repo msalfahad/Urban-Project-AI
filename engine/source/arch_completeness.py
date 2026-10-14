@@ -68,6 +68,12 @@ Q_PAINT_BAND = ("FINISH_ABOVE_WALL_TILE_NOT_ESTABLISHED (Q7): the wall band betw
                 "band measured gross, before openings")
 Q_PAINT_BAND_HEIGHTS = ("FINISH_ABOVE_WALL_TILE_NOT_ESTABLISHED (Q7): a wet room's finish above the wall tile has no "
                         "rule, and the tile height or the finish height is not established either")
+Q_PAINT_BAND_EXPLICIT = ("WALL_BAND_ABOVE_EXPLICIT_TILE (Q7, UP-FIN-WALL-001): an explicit wall-tile height "
+                         "({tile:.2f} m) governs this owner wet area below its finish height ({paint:.2f} m); the owner "
+                         "rule tiles to full height, so the band between them has no finish until the project source "
+                         "is confirmed; band measured gross, before openings")
+Q_PAINT_BAND_EXPLICIT_HEIGHTS = ("WALL_BAND_ABOVE_EXPLICIT_TILE (Q7, UP-FIN-WALL-001): an explicit wall-tile height "
+                                 "governs this owner wet area, and the finish height above it is not established")
 Q_EXTERIOR = ("EXTERIOR_FINISH_SCOPE_NOT_ESTABLISHED (Q1): an external space ({codes}, {area:.2f} m2) - its floor "
               "finish (paving, planting, interlock, porcelain, ...), whether it is covered (a ceiling / soffit) and its "
               "wall finishes are owner decisions; no finish assumed")
@@ -80,6 +86,17 @@ EXCLUSIONS = {
              "a shaft finish needs its own specification)",
 }
 FLAG_RULES = (
+    # ARCH_TAKEOFF_V2.3 (owner_finish_scope; knowledge registry 1.0.0) - prefixes no earlier method emits
+    (r"^WALL_BAND_ABOVE_EXPLICIT_TILE", "SOURCE", "arch_completeness.surface_rfis",
+     "confirm the project's wall-tile height (it governs UP-FIN-WALL-001 full height) and give the band's finish"),
+    (r"^THRESHOLD_OF_PROVISIONAL_DOOR", "SOURCE", "owner_finish_scope.threshold_lines",
+     "give the door schedule, or draw the door's opening in the wall band: the strip then takes UP-THR-001"),
+    (r"^THRESHOLD_STRIP_NOT_ATTRIBUTED", "REVIEW", "owner_finish_scope.threshold_lines",
+     "review which doorway owns the strip against the drawing"),
+    (r"^PANTRY_THRESHOLD_RULE_CONFLICT", "REVIEW", "owner_finish_scope.threshold_lines",
+     "owner question OQ-01 (knowledge registry conflict CF-03)"),
+    (r"^DOOR_OPENING_HEAD_ALLOWANCE", "REVIEW", "door_standards.door_scenarios",
+     "owner question OQ-02 (knowledge registry conflict CF-11): the head allowance of an enlarged wall opening"),
     (r"^THRESHOLD_FINISH_NOT_ESTABLISHED", "SOURCE", "arch_completeness.strip_lines",
      "give the threshold finish and its measurement rule (owner decision Q-S6-1), or the door / window schedule"),
     (r"^WINDOW_REVEAL_FLOOR_STATUS_NOT_ESTABLISHED", "SOURCE", "arch_completeness.strip_lines",
@@ -234,12 +251,48 @@ def _h(ln):
     return ((ln.get("calculation") or {}).get("inputs") or {}).get("height_m")
 
 
-def surface_rfis(ctx, M, floor, facts=None, floor_level_m=None, floor_above_level_m=None):
-    """-> (lines, unresolved) for the surfaces V1 measures with no line and no RFI."""
+def surface_rfis(ctx, M, floor, facts=None, floor_level_m=None, floor_above_level_m=None, owner_scope=False):
+    """-> (lines, unresolved) for the surfaces V1 measures with no line and no RFI. owner_scope (ARCH_TAKEOFF_V2.3):
+    the paint band of an owner wet area follows UP-FIN-WALL-001 / UP-FIN-PAINT-001 (full-height porcelain: no band,
+    no question)."""
     lines, unresolved = [], []
     for rm in M["rooms"]:
         rid, kind = rm["room_id"], rm.get("kind")
         mine = _room_lines(M["lines"], rid)
+        if owner_scope and (rm.get("finish_scope") or {}).get("scope") == "WET" and rm["class"] in ("ROOM", "MIXED"):
+            from engine.source import owner_finish_scope as OFS
+            if any(ln["item_code"] == "FIN.PAINT" for ln in mine):
+                continue
+            hs = AM.heights(floor, rm.get("level_m") if rm.get("level_m") is not None else floor_level_m,
+                            floor_above_level_m, facts or {})
+            th = OFS.wall_tile_height(hs)
+            if th["full"]:
+                lines.append(AM._line(ctx, item_code="FIN.PAINT", room=rm, element="paint above wall tile",
+                                      unit="m2", net=None, ev="NOT_APPLICABLE_WITH_EVIDENCE",
+                                      formula="UP-FIN-PAINT-001: full-height wall porcelain, no band above it",
+                                      inputs={"wall_tile_governing": th.get("governing")}, rule_id="UP-FIN-PAINT-001",
+                                      notes="no paint: the wall porcelain of an owner wet area runs to the finished "
+                                            "ceiling (UP-FIN-WALL-001)"))
+                continue
+            # an explicit wall-tile height below the finish height governs (precedence over the owner rule): the band
+            # above it is part of that flagged conflict (WALL_TILE_BELOW_OWNER_FULL_HEIGHT), not an open finish rule
+            tile = next((ln for ln in mine if ln["item_code"] == "FIN.WALL.TILE" and _h(ln) is not None), None)
+            t_h = _h(tile) if tile is not None else th.get("value_m")
+            paint = hs["PAINT"]["value_m"] if hs["PAINT"]["state"] == "ESTABLISHED" else None
+            if t_h is not None and paint is not None:
+                run = ((tile.get("calculation") or {}).get("inputs") or {}).get("wall_run_lm") if tile else None
+                q = Q_PAINT_BAND_EXPLICIT.format(tile=t_h, paint=paint)
+                inputs = {"wall_tile_h_m": t_h, "finish_h_m": paint, "band_h_m": round(paint - t_h, 6),
+                          "wall_run_lm": run,
+                          "band_gross_m2": round(run * (paint - t_h), 6) if run is not None else None}
+            else:
+                q = Q_PAINT_BAND_EXPLICIT_HEIGHTS
+                inputs = {"wall_tile_h_m": t_h, "finish_h_m": paint}
+            lines.append(AM._line(ctx, item_code="FIN.PAINT", room=rm, element="finish above wall tile", unit="m2",
+                                  net=None, formula="wall run x (finish height - wall tile height), before openings",
+                                  inputs=inputs, rule_id="UP-FIN-WALL-001", rfi={"question": q, "unlocks": rid}))
+            unresolved.append({"room_id": rid, "floor": floor, "item": "FIN.PAINT", "reason": q})
+            continue
         if kind == AR.STAIR:
             run = (rm.get("runs_lm") or {}).get("perimeter") or rm.get("perimeter_lm")
             wall = (rm.get("runs_lm") or {}).get("wall")
@@ -471,7 +524,9 @@ def coverage(S, M, strips, lines, unresolved, floor):
     strip_of = {s["strip_id"]: s for s in strips}
     strip_line_of = {}
     for ln in lines:
-        if ln["item_code"] in STRIP_ITEMS.values():
+        # ARCH_TAKEOFF_V2.3 (UP-THR-001): a marble threshold / doorway-strip porcelain line accounts for its strips
+        # (no V1 .. V2.2 floor line names strips)
+        if ln["item_code"] in STRIP_ITEMS.values() or ln["item_code"] in ("FIN.MARBLE.THRESHOLD", "FIN.FLOOR.PORCELAIN"):
             for sid in ((ln.get("calculation") or {}).get("inputs") or {}).get("strips") or ():
                 strip_line_of[sid] = ln["line_id"]
     faces, cat = [], defaultdict(lambda: defaultdict(float))
