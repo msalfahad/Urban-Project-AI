@@ -94,8 +94,10 @@ def _profile(run):
     return lines, views, arch["owner_questions"]["summary"], arch["space_model"]["summary"]
 
 
-@pytest.mark.parametrize("variant", [{"dx": 731.0, "dy": -412.0}, {"mirror": True}, {"quarter_turns": 1}],
-                         ids=["translate", "mirror", "turn"])
+@pytest.mark.parametrize("variant", [{"dx": 731.0, "dy": -412.0}, {"mirror": True}, {"quarter_turns": 1},
+                                     {"variant": "NESTED_MIRRORED_DOORS"}, {"variant": "ATTRIB_LABELS"},
+                                     {"mirror": True, "quarter_turns": 3}],
+                         ids=["translate", "mirror", "turn", "nested-blocks", "attribute-labels", "mirror-turn"])
 def test_v2_3_is_invariant_under_moving_mirroring_and_turning(runs, tmp_path, variant):
     """metamorphic: the V2.3 quantities, door views, question groups and space statuses of the villa do not change
     when its contents are moved, mirrored or turned inside the sheet frames."""

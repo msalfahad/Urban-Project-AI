@@ -875,7 +875,9 @@
    "superseded_by": null,
    "supersedes": [],
    "tests": [
-    "tests/m9_kb/test_kb_door_standards.py::test_categories_follow_the_space_model"
+    "tests/m9_kb/test_kb_door_standards.py::test_categories_follow_the_space_model",
+    "tests/m9_kb/test_kb_wp5.py::test_a_wall_gap_without_a_door_symbol_is_a_passage_not_a_door",
+    "tests/m9_kb/test_kb_wp5.py::test_a_door_symbol_with_no_wall_gap_is_never_measured"
    ],
    "title": "Ordinary internal doors are PVC"
   },
@@ -947,7 +949,8 @@
    "supersedes": [],
    "tests": [
     "tests/m9_kb/test_kb_door_standards.py::test_a_kitchen_door_to_outdoors_is_aluminium",
-    "tests/m9_kb/test_kb_door_standards.py::test_a_pantry_door_to_an_indoor_corridor_stays_pvc"
+    "tests/m9_kb/test_kb_door_standards.py::test_a_pantry_door_to_an_indoor_corridor_stays_pvc",
+    "tests/m9_kb/test_kb_wp5.py::test_a_balcony_door_is_aluminium_and_the_balcony_is_waterproofed"
    ],
    "title": "Ordinary doors to genuine outdoor spaces are aluminium"
   },
@@ -1067,7 +1070,8 @@
    "superseded_by": null,
    "supersedes": [],
    "tests": [
-    "tests/m9_kb/test_kb_door_standards.py::test_the_main_entrance_keeps_its_drawn_width"
+    "tests/m9_kb/test_kb_door_standards.py::test_the_main_entrance_keeps_its_drawn_width",
+    "tests/m9_kb/test_kb_wp5.py::test_a_balcony_door_is_aluminium_and_the_balcony_is_waterproofed"
    ],
    "title": "The main entrance is its own door category, measured as drawn"
   },
@@ -1319,7 +1323,8 @@
    "supersedes": [],
    "tests": [
     "tests/m9_kb/test_kb_door_standards.py::test_a_schedule_height_wins_over_the_owner_fallback",
-    "tests/m9_kb/test_kb_door_standards.py::test_an_owner_fallback_height_is_assumed_never_confirmed"
+    "tests/m9_kb/test_kb_door_standards.py::test_an_owner_fallback_height_is_assumed_never_confirmed",
+    "tests/m9_kb/test_kb_integration.py::test_an_assumption_is_never_released_as_confirmed"
    ],
    "title": "Door heights: sources first, owner reference heights as labelled fallbacks"
   },
@@ -1546,7 +1551,9 @@
    "tests": [
     "tests/m9_kb/test_kb_door_standards.py::test_the_owner_correction_table",
     "tests/m9_kb/test_kb_door_standards.py::test_no_second_allowance_is_added",
-    "tests/m9_kb/test_kb_door_standards.py::test_the_drawn_width_is_never_overwritten"
+    "tests/m9_kb/test_kb_door_standards.py::test_the_drawn_width_is_never_overwritten",
+    "tests/m9_kb/test_kb_wp5.py::test_conflicting_opening_dimensions_keep_both_values_and_hold_the_door",
+    "tests/m9_kb/test_kb_integration.py::test_the_owner_required_view_never_reaches_the_boq_lines"
    ],
    "title": "Required nominal door opening and architectural wall opening"
   },
@@ -1852,7 +1859,10 @@
    "supersedes": [],
    "tests": [
     "tests/m9_kb/test_kb_registry.py::test_precedence_puts_drawing_evidence_above_owner_rules",
-    "tests/m9_kb/test_kb_door_standards.py::test_the_drawn_width_is_never_overwritten"
+    "tests/m9_kb/test_kb_door_standards.py::test_the_drawn_width_is_never_overwritten",
+    "tests/m9_kb/test_kb_integration.py::test_no_drawn_dimension_is_replaced",
+    "tests/m9_kb/test_kb_integration.py::test_an_assumption_is_never_released_as_confirmed",
+    "tests/m9_kb/test_kb_integration.py::test_v2_2_never_reads_the_registry"
    ],
    "title": "Source authority hierarchy, and as-drawn kept apart from owner-required"
   },
@@ -1932,7 +1942,9 @@
    "tests": [
     "tests/m9_kb/test_kb_questions.py::test_established_rules_are_never_asked",
     "tests/m9_kb/test_kb_questions.py::test_repeated_instances_are_grouped_into_one_question",
-    "tests/m9_kb/test_kb_questions.py::test_engine_defects_are_never_owner_questions"
+    "tests/m9_kb/test_kb_questions.py::test_engine_defects_are_never_owner_questions",
+    "tests/m9_kb/test_kb_questions.py::test_every_catalogue_entry_is_reached_by_its_example",
+    "tests/m9_kb/test_kb_questions.py::test_an_unknown_reason_is_reported_unclassified_never_dropped"
    ],
    "title": "Question policy: what may be asked of the owner"
   },
@@ -2066,7 +2078,8 @@
    "supersedes": [],
    "tests": [
     "tests/m9_kb/test_kb_space_model.py::test_indoor_and_outdoor_corridors_are_told_apart",
-    "tests/m9_kb/test_kb_space_model.py::test_an_unlabelled_space_is_never_assumed_interior"
+    "tests/m9_kb/test_kb_space_model.py::test_an_unlabelled_space_is_never_assumed_interior",
+    "tests/m9_kb/test_kb_integration.py::test_v2_3_is_invariant_under_moving_mirroring_and_turning"
    ],
    "title": "Interior / exterior status from enclosure and connectivity, with evidence"
   },
@@ -2190,7 +2203,9 @@
    "supersedes": [],
    "tests": [
     "tests/m9_kb/test_kb_finish_scope.py::test_wet_doorways_take_a_marble_threshold_from_geometry",
-    "tests/m9_kb/test_kb_finish_scope.py::test_dry_doorways_continue_the_floor_porcelain_once"
+    "tests/m9_kb/test_kb_finish_scope.py::test_dry_doorways_continue_the_floor_porcelain_once",
+    "tests/m9_kb/test_kb_wp5.py::test_several_strip_faces_of_one_opening_make_one_line",
+    "tests/m9_kb/test_kb_wp5.py::test_a_door_closure_strip_asks_for_the_door_not_the_finish"
    ],
    "title": "Wet-room doorways take a marble threshold; other doorways continue the floor porcelain"
   },
@@ -2332,7 +2347,8 @@
    "superseded_by": null,
    "supersedes": [],
    "tests": [
-    "tests/m9_kb/test_kb_finish_scope.py::test_balconies_get_provisional_waterproofing"
+    "tests/m9_kb/test_kb_finish_scope.py::test_balconies_get_provisional_waterproofing",
+    "tests/m9_kb/test_kb_wp5.py::test_a_balcony_door_is_aluminium_and_the_balcony_is_waterproofed"
    ],
    "title": "Roofs and balconies are waterproofed under the default scope"
   }

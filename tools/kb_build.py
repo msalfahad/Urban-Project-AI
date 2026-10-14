@@ -612,6 +612,29 @@ QUESTIONS = [
      "rule": "UP-DOOR-OPEN-002", "question_id": "OQ-02"},
 ]
 
+# WP-5 / integration tests that also prove a rule (added to the rule's test links)
+W5, IT, Q = T + "test_kb_wp5.py::", T + "test_kb_integration.py::", T + "test_kb_questions.py::"
+EXTRA_TESTS = {
+    "UP-KB-PREC-001": [IT + "test_no_drawn_dimension_is_replaced", IT + "test_an_assumption_is_never_released_as_confirmed",
+                       IT + "test_v2_2_never_reads_the_registry"],
+    "UP-KB-QUES-001": [Q + "test_every_catalogue_entry_is_reached_by_its_example",
+                       Q + "test_an_unknown_reason_is_reported_unclassified_never_dropped"],
+    "UP-DOOR-CLS-001": [W5 + "test_a_wall_gap_without_a_door_symbol_is_a_passage_not_a_door",
+                        W5 + "test_a_door_symbol_with_no_wall_gap_is_never_measured"],
+    "UP-DOOR-CLS-002": [W5 + "test_a_balcony_door_is_aluminium_and_the_balcony_is_waterproofed"],
+    "UP-DOOR-CLS-004": [W5 + "test_a_balcony_door_is_aluminium_and_the_balcony_is_waterproofed"],
+    "UP-DOOR-OPEN-002": [W5 + "test_conflicting_opening_dimensions_keep_both_values_and_hold_the_door",
+                         IT + "test_the_owner_required_view_never_reaches_the_boq_lines"],
+    "UP-DOOR-HGT-001": [IT + "test_an_assumption_is_never_released_as_confirmed"],
+    "UP-THR-001": [W5 + "test_several_strip_faces_of_one_opening_make_one_line",
+                   W5 + "test_a_door_closure_strip_asks_for_the_door_not_the_finish"],
+    "UP-WP-ROOF-001": [W5 + "test_a_balcony_door_is_aluminium_and_the_balcony_is_waterproofed"],
+    "UP-SPACE-001": [IT + "test_v2_3_is_invariant_under_moving_mirroring_and_turning"],
+}
+for r_ in R:
+    r_["tests"] = r_["tests"] + [t for t in EXTRA_TESTS.get(r_["rule_id"], ()) if t not in r_["tests"]]
+assert set(EXTRA_TESTS) <= {r_["rule_id"] for r_ in R}
+
 # one example reason (and item) per catalogue entry: tests/m9_kb/test_kb_questions.py proves every entry is reached by
 # its example (no entry is shadowed by an earlier, broader one)
 EXAMPLES = {

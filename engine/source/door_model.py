@@ -433,15 +433,19 @@ def _classify(el):
     return el
 
 
-def main_entrance(els, faces_texts, texts, unit_m, *, entrance_floor):
+def main_entrance(els, faces_texts, texts, unit_m, *, entrance_floor, not_entrance_codes=()):
     """the main-entrance reconciliation over every external door of the entrance floor: STRONG candidates carry an
     entrance word in the space they open into or a word within 3 m; exactly one STRONG -> it is the main entrance;
     otherwise a REVIEW finding names the candidates and none is assumed. -> (main element or None, findings,
-    candidates)."""
+    candidates). not_entrance_codes (ARCH_TAKEOFF_V2.3): a door whose exterior side is a space of one of these codes
+    (a balcony, a roof) is never a main-entrance candidate."""
     reach = ENTRANCE_TEXT_REACH_M / unit_m
     cands = []
     for el in els:
         if el.get("class") != ALU or el["floor"] != entrance_floor:
+            continue
+        if not_entrance_codes and any(sd["kind"] == "EXTERIOR_SPACE" and set(sd.get("codes") or ()) &
+                                      set(not_entrance_codes) for sd in el["sides"]):
             continue
         ev = []
         for sd in el["sides"]:
@@ -607,14 +611,15 @@ def lift_openings(S, rooms, ents, unit_m, floor, *, wall_layers=()):
     return out
 
 
-def building_model(floors, texts_of, faces_texts_of, unit_m, *, entrance_floor, facts=None, guards=False):
+def building_model(floors, texts_of, faces_texts_of, unit_m, *, entrance_floor, facts=None, guards=False,
+                   not_entrance_codes=()):
     """floors: [(floor, floor_model)] -> the door model of the drawing (the main entrance is reconciled once).
     guards (ARCH_TAKEOFF_V2.2): the release guards of finalise, one finding for every withheld element (F-19) and the
-    lift-entrance candidates (F-22)."""
+    lift-entrance candidates (F-22). not_entrance_codes (ARCH_TAKEOFF_V2.3): see main_entrance."""
     els = [el for _f, m in floors for el in m["elements"]]
     findings = [f for _f, m in floors for f in m["findings"]]
     main, mf, cands = main_entrance(els, faces_texts_of.get(entrance_floor, {}), texts_of.get(entrance_floor, ()),
-                                    unit_m, entrance_floor=entrance_floor)
+                                    unit_m, entrance_floor=entrance_floor, not_entrance_codes=not_entrance_codes)
     unresolved = [c["element_id"] for c in cands if (c["strong"] or not any(x["strong"] for x in cands))] \
         if main is None else []
     if guards:

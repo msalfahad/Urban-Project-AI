@@ -509,7 +509,9 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
     if v21:
         doors, lines, door_unres, door_cov = _v21_doors(door_floors, door_texts, door_face_texts, regs, spaces_of,
                                                          lines, u, door_facts, pid, rev, docs,
-                                                         **({"guards": True} if v22 else {}))
+                                                         **({"guards": True} if v22 else {}),
+                                                         **({"not_entrance_codes": ("BALCONY", "ROOF")} if v23
+                                                            else {}))
         unresolved += door_unres
         coverage += door_cov
     by_room = {r["room_id"]: r for r in rooms}
@@ -736,7 +738,7 @@ class _ConversionBlocked(Exception):
 
 
 def _v21_doors(door_floors, door_texts, door_face_texts, regs, spaces_of, lines, u, facts, pid, rev, docs,
-               guards=False):
+               guards=False, not_entrance_codes=()):
     """ARCH_TAKEOFF_V2.1: the building door model; the ARCH.DOOR opening counts are replaced by the owner door
     classes (released doors only), lift entrances leave the ordinary opening lines; every finding becomes a flag; a
     swing without exactly one element fails the floor's coverage gate (exit 3)."""
@@ -747,7 +749,8 @@ def _v21_doors(door_floors, door_texts, door_face_texts, regs, spaces_of, lines,
     entrance = min(measured, key=lambda r: r["order"])["floor"] if measured else None
     if guards:
         model = DMOD.building_model(door_floors, door_texts, door_face_texts, u, entrance_floor=entrance, facts=facts,
-                                    guards=True)
+                                    guards=True, **({"not_entrance_codes": not_entrance_codes}
+                                                    if not_entrance_codes else {}))
     else:
         model = DMOD.building_model(door_floors, door_texts, door_face_texts, u, entrance_floor=entrance, facts=facts)
     lift_ops = {o_["opening_id"] for o_ in model.get("lift_openings") or ()}

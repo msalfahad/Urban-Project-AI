@@ -57,7 +57,7 @@ def door_floor(words=FX.DOOR_WORDS, *, decisions=None, facts=None):
     texts = {t["id"]: t for t in ents["texts"]}
     ft = {f["face_id"]: [texts[i] for i in f.get("label_text_ids") or () if i in texts] for f in S["faces"]}
     model = DM.building_model([("GF", fm)], {"GF": ents["texts"]}, {"GF": ft}, U, entrance_floor="GF", facts=facts,
-                              guards=True)
+                              guards=True, not_entrance_codes=("BALCONY", "ROOF"))
     shaft = next(f for f in S["faces"] if f.get("label_source") == "STACKED_FOOTPRINT")
     sm = SMOD.build(M["rooms"], model["elements"], possibly_external=DM.possibly_external_faces(S, M["rooms"]),
                     decisions_by_face=dec)
@@ -133,10 +133,41 @@ def dry_passage(path):
                     words={"LIVING": "LIVING", "DINING": "DINING"}, openings=ops)
 
 
-def drawing_run(path, method, *, facts=None):
+ROLES = {"A-WALL": "WALL", "A-DOOR": "DOOR", "A-GLAZ": "WINDOW"}     # a one-door plan: roles given, as --layer-roles
+
+
+def drawing_run(path, method, *, facts=None, layer_roles=None):
     from tools import urban_boq_m9 as M9
+    kw = {"facts": facts} if facts else {}
+    if layer_roles:
+        kw["layer_roles"] = layer_roles
     try:
-        room, arch = M9.arch_compute(str(path), method=method, **({"facts": facts} if facts else {}))[:2]
+        room, arch = M9.arch_compute(str(path), method=method, **kw)[:2]
     except M9.CompletenessFailed as ex:
         room, arch = ex.room_boq, ex.arch
     return room, arch
+
+
+def balcony(path):
+    """a 5.0 x 4.0 m LIVING room with a 0.90 m door to a 2.0 x 4.0 m BALCONY (an exterior space drawn inside the
+    outer wall line)."""
+    rooms = {"LIVING": [(200, 200), (5200, 200), (5200, 4200), (200, 4200)],
+             "BALCONY": [(5400, 200), (7400, 200), (7400, 4200), (5400, 4200)]}
+    outer = [(0, 0), (7600, 0), (7600, 4400), (0, 4400)]
+    ops = [("DOOR", "x", 5200, 5400, 1000, 1900, (5400, 1000, 0, 1, 1))]
+    doc, msp = FX._doc()
+    return FX._save(doc, msp, path, rooms=rooms, outer=outer, labels={"LIVING": (2500, 3000), "BALCONY": (6400, 3000)},
+                    words={"LIVING": "LIVING", "BALCONY": "BALCONY"}, openings=ops)
+
+
+def metre_copy(src, dst):
+    """the same drawing in metres ($INSUNITS 6): every model-space entity scaled by 1/1000."""
+    import ezdxf
+    from ezdxf.math import Matrix44
+    doc = ezdxf.readfile(str(src))
+    m = Matrix44.scale(0.001, 0.001, 0.001)
+    for e in doc.modelspace():
+        e.transform(m)
+    doc.header["$INSUNITS"] = 6
+    doc.saveas(str(dst))
+    return str(dst)

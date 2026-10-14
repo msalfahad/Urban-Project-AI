@@ -29,9 +29,10 @@ def floor():
 
 @pytest.mark.parametrize("cat,cad,wall,enl", [
     (I, 0.90, 1.10, 0.20), (B, 0.90, 1.00, 0.10), (E, 1.00, 1.10, 0.10), (I, 1.20, 1.20, 0.00),
-    (B, 0.80, 1.00, 0.20), (E, 0.90, 1.10, 0.20), (I, 1.10, 1.10, 0.00), (B, 1.05, 1.05, 0.00)],
+    (B, 0.80, 1.00, 0.20), (E, 0.90, 1.10, 0.20), (I, 1.10, 1.10, 0.00), (B, 1.05, 1.05, 0.00),
+    (I, 1.00, 1.10, 0.10), (B, 1.00, 1.00, 0.00), (E, 1.20, 1.20, 0.00), (E, 1.10, 1.10, 0.00)],
     ids=["internal-0.90", "bath-0.90", "external-1.00", "internal-1.20", "bath-0.80", "external-0.90",
-         "internal-1.10", "bath-1.05"])
+         "internal-1.10", "bath-1.05", "internal-1.00", "bath-1.00", "external-1.20", "external-1.10"])
 def test_the_owner_correction_table(cat, cad, wall, enl):
     """the owner's examples: internal 0.90 -> 1.10 (+0.20), bathroom 0.90 -> 1.00 (+0.10), external 1.00 -> 1.10
     (+0.10), internal 1.20 -> no enlargement; the CAD value is kept beside the requirement."""
