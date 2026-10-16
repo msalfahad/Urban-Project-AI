@@ -46,3 +46,14 @@ drawing writer deterministic (a test helper, see section 3). It changes no engin
 | `tests/m9_p2b3` (new) | **59 passed** |
 | affected suites with the reference plan (`URBAN_REAL_PLAN_DXF`): m9_p2b3, m9_p2b2, m9_kb, m9_p2b0, m9_p2a, m9_s6, m9_s5, m9_s4, m9_s3, m9_s2_arch, m9_foundation, each with its own `--basetemp` | **659 tests: 647 passed, 0 failed**, 2 xfailed (expected, unchanged), 10 skipped (m9_s4 real-plan regression: it also needs the Round-5 registers, which this environment does not have). The first m9_s6 run stopped on the repository's determinism guard because `proof_drawings.py` was edited while it ran; re-run after the edit: 74 passed, 1 xfailed. m9_p2b3 re-run on the final test code: 59 passed |
 | full suite (private clone, `765318d`, no reference plan) | 8165 passed, 345 failed, 32 errors, 160 skipped, 102 xfailed. Test by test against the Phase 2B-2 baseline (`b4d0b6b`: 8106 passed, 345 failed, 32 errors, 160 skipped, 102 xfailed): **0 new failures**, 0 baseline failures changed state, 59 tests added (all passed). The 345 + 32 are the known baseline set (tests that need git-ignored private datasets and workbooks), reported separately and not caused by this phase |
+
+## 5. Re-confirmed at the reports commit
+
+The reports commit (`207bee0`) changes no engine or CLI code. Every CLI run was repeated on it:
+
+| Check | Result |
+|---|---|
+| V1 .. V2.4 (27 runs) against the `2097f2c` baseline | **747 of 747 files byte-identical**, every run exit 0 |
+| V2.5 (6 runs) twice | **254 of 254 files identical** |
+| V2.5 against the section-3 runs | 12 files differ, all `BOQ_TRACEABILITY.json` and its `OUTPUT_MANIFEST.json` entry; the only difference is the proof case WP-LX added to the material-proof list before the engine commit. Every quantity file and `BOQ_TRACEABILITY.csv` are identical |
+| PD-1 through V2.5 | identical to the earlier run except the same WP-LX entry |
