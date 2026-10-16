@@ -422,9 +422,9 @@ def build_area(area, resolver):
     ct = basis["corner_treatment"]["value"]
     corner_q = _treatment_qty(ct, n_cor)
     if n_cor and corner_q is None:
-        withheld.append({"what": f"corner reinforcement ({n_cor} corners)", "why": "WP_CORNER_DETAIL_REQUIRED"})
+        withheld.append({"what": f"corner treatment ({n_cor} corners)", "why": "WP_CORNER_DETAIL_REQUIRED"})
         concerns.append(f"WP_CORNER_DETAIL_REQUIRED (UP-WP-004): {cor['internal']} internal + {cor['external']} "
-                        "external corner(s) counted; reinforcement withheld")
+                        "external corner(s) counted; corner treatment withheld")
     pen = area["penetrations"]
     pt = basis["penetration_treatment"]["value"]
     pen_q = _treatment_qty(pt, pen["count"])
@@ -708,7 +708,7 @@ def boq_lines(ctx, areas, line):
         if cor["state"] == "WITHHELD":
             unresolved.append({"room_id": a["room_id"], "floor": a["floor"], "item": "FIN.WP (material)",
                                "reason": f"WP_CORNER_DETAIL_REQUIRED (UP-WP-004): {cor['internal']} internal + "
-                                         f"{cor['external']} external corner(s); reinforcement withheld"})
+                                         f"{cor['external']} external corner(s); corner treatment withheld"})
         if a["layout"]["state"] == "BLOCKED":
             unresolved.append({"room_id": a["room_id"], "floor": a["floor"], "item": "FIN.WP (material)",
                                "reason": a["layout"]["blocked_by"]})
