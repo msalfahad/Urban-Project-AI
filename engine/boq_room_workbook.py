@@ -880,6 +880,12 @@ def write(path, *, room_boq=None, structural_lines=(), census_rows=(), meta, cre
             ["layouts", "rectangular rooms are laid exactly; polygon rooms use the polygon layout when available"],
             ["not measured", "stairs / railings, marble, aluminium, external works: their families keep their census "
                              "state and reason"]]
+        if arch.get("rules_sheet") is not None:                 # the Phase 2B-2 rules sheet only (UP-RULES-001)
+            rs = arch["rules_sheet"]
+            summary[4:4] = [["project rules sheet", f"{rs['schema']} rules {rs['rules_sha256']}"],
+                            ["rules sheet hash", rs["sheet_sha256"]],
+                            ["knowledge registry", f"{(run.get('v2_4') or {}).get('knowledge', {}).get('rule_set')} "
+                                                   f"({(run.get('v2_4') or {}).get('knowledge', {}).get('digest')})"]]
     _info(wb, "SUMMARY", summary)
     if arch is not None:
         _rbr_sheet(wb, "ROOM BY ROOM BOQ", "every room of every floor, one row per item; NET = GROSS - DEDUCTIONS "

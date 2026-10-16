@@ -63,7 +63,8 @@ from engine.source import tile_layout as TL           # noqa: E402
 POLICY_ID = "URBAN_BOQ_M9_S1"
 ARCH_POLICY_ID = "URBAN_BOQ_M9_S2_ARCH"
 ARCH_POLICY_ID_V2 = "URBAN_BOQ_M9_S6_ARCH_V2"
-ARCH_METHODS = ("ARCH_TAKEOFF_V1", "ARCH_TAKEOFF_V2", "ARCH_TAKEOFF_V2.1", "ARCH_TAKEOFF_V2.2", "ARCH_TAKEOFF_V2.3")
+ARCH_METHODS = ("ARCH_TAKEOFF_V1", "ARCH_TAKEOFF_V2", "ARCH_TAKEOFF_V2.1", "ARCH_TAKEOFF_V2.2", "ARCH_TAKEOFF_V2.3",
+                "ARCH_TAKEOFF_V2.4")
 # S6: ARCH_TAKEOFF_V2 = V1 + drawing admission (stop, exit 2, no BOQ on a fatal finding) + unit-relative geometric
 # tolerances + plan regions cut only along empty bands + floor-category and finish-surface completeness. V1 is
 # unchanged; --strict-admission puts the same admission in front of V1 (its outputs are V1's own).
@@ -86,6 +87,13 @@ ARCH_POLICY_ID_V22 = "URBAN_BOQ_M9_P2B0_ARCH_V2_2"
 # V2.2 never reach it (their call paths pass no owner-scope policy) and keep the frozen rule set rules/ 1.5.0.
 V23 = "ARCH_TAKEOFF_V2.3"
 ARCH_POLICY_ID_V23 = "URBAN_BOQ_M9_P2B1_ARCH_V2_3"
+# Phase 2B-2: ARCH_TAKEOFF_V2.4 = V2.3 + the knowledge registry 1.1.0 (knowledge/URBAN_ENGINEERING_KNOWLEDGE_1.1.0.json:
+# membrane roll, lap and upturn standards, doorway transitions, penetrations, door feasibility), the project rules
+# (URBAN_PROJECT_RULES_V1, --project-rules) and the Project Engineering Rules Sheet, the waterproofing system (net /
+# installed / procurement, cutting plan per membrane system), the door feasibility engine and the door jamb plaster at
+# each door category's height. Opt-in only: V1 .. V2.3 never reach it (V2.3 keeps registry 1.0.0).
+V24 = "ARCH_TAKEOFF_V2.4"
+ARCH_POLICY_ID_V24 = "URBAN_BOQ_M9_P2B2_ARCH_V2_4"
 M9_DIR = "m9"
 CREATED = datetime(2026, 1, 1)
 
@@ -220,7 +228,26 @@ class CompletenessFailed(Exception):
 
 def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_areas=None, project_id=None, intake=None,
                  strict=False, units=None, region_specs=None, accept_xrefs=(), extra_documents=(),
-                 admission_findings=(), decisions=None):
+                 admission_findings=(), decisions=None, project_rules=None):
+    """the architectural route on one plan drawing (see _arch_compute). ARCH_TAKEOFF_V2.4 runs inside the knowledge
+    registry 1.1.0 (engine.source.knowledge.using) and takes the project rules (URBAN_PROJECT_RULES_V1); every other
+    method runs exactly as before (registry 1.0.0 for V2.3, the rule store for V1 .. V2.2)."""
+    kw = dict(method=method, facts=facts, layer_roles=layer_roles, reference_areas=reference_areas,
+              project_id=project_id, intake=intake, strict=strict, units=units, region_specs=region_specs,
+              accept_xrefs=accept_xrefs, extra_documents=extra_documents, admission_findings=admission_findings,
+              decisions=decisions)
+    if method == V24:
+        from engine.source import knowledge as K
+        with K.using("1.1.0"):
+            return _arch_compute(drawing, project_rules=project_rules, **kw)
+    if project_rules is not None:
+        raise SystemExit("--project-rules (URBAN_PROJECT_RULES_V1) needs --method ARCH_TAKEOFF_V2.4")
+    return _arch_compute(drawing, **kw)
+
+
+def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_areas=None, project_id=None, intake=None,
+                  strict=False, units=None, region_specs=None, accept_xrefs=(), extra_documents=(),
+                  admission_findings=(), decisions=None, project_rules=None):
     """the architectural route on one plan drawing: every stage recorded, nothing silently skipped. `intake` (the
     urban_intake.read result of this same drawing) skips the read for repeated runs / tests.
     S6: method ARCH_TAKEOFF_V2, or strict=True (V1 behind the same admission), run the drawing discovery first and
@@ -235,10 +262,11 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
     from tools import urban_intake as UI
     if method not in ARCH_METHODS:
         raise SystemExit(f"--method must be one of {ARCH_METHODS} (the architectural route is behind a versioned flag)")
-    v23 = method == V23                                       # V2.3 is V2.2 plus the knowledge registry
-    v22 = method in (V22, V23)                                # V2.2 is V2.1 plus the Phase 2B-0 corrections
-    v21 = method in (V21, V22, V23)
-    v2 = method in (V2, V21, V22, V23)                        # V2.1 is V2 plus the Phase 2A additions
+    v24 = method == V24                                       # V2.3 plus the registry 1.1.0 and the project rules
+    v23 = method in (V23, V24)                                # V2.3 is V2.2 plus the knowledge registry
+    v22 = method in (V22, V23, V24)                           # V2.2 is V2.1 plus the Phase 2B-0 corrections
+    v21 = method in (V21, V22, V23, V24)
+    v2 = method in (V2, V21, V22, V23, V24)                   # V2.1 is V2 plus the Phase 2A additions
     admit = v2 or strict
     if not admit and (units or region_specs or accept_xrefs):
         raise SystemExit("--units / --region / --accept-missing-xref are reviewer inputs of the admission: use them "
@@ -370,6 +398,7 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
     col_layers = sorted({lay for v in roles_of.values() for lay, ro in v["roles"].items() if ro == AP.COLUMN})
     door_floors, door_texts, door_face_texts = [], {}, {}
     decided, possibly_ext = {}, {}
+    v24_floors = []
     door_facts = facts
     if v23:
         from engine.source import door_standards as DSTD
@@ -496,6 +525,8 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
             door_texts[floor] = ents["texts"]
             door_face_texts[floor] = {f_["face_id"]: [tx[i_] for i_ in f_.get("label_text_ids") or () if i_ in tx]
                                       for f_ in S["faces"]}
+        if v24:
+            v24_floors.append({"floor": floor, "S": S, "M": M, "ents": ents, "roles": L["roles"]})
         for rm in M["rooms"]:
             rm["region_id"] = rid
         rooms += M["rooms"]
@@ -514,6 +545,11 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
                                                             else {}))
         unresolved += door_unres
         coverage += door_cov
+    v24_out = None
+    if v24:
+        # Phase 2B-2: the rules sheet (bound to the drawing's elements), then every rule-dependent quantity
+        lines, mats, unresolved, v24_out = _v24_stage(v24_floors, doors, lines, mats, unresolved, facts, decisions,
+                                                      project_rules, pid, rev, docs, u)
     by_room = {r["room_id"]: r for r in rooms}
     reg_of = {r["floor"]: r for r in regions}
     unresolved = [AM.flag(u_, drawing=path.name, region=reg_of.get(u_.get("floor")), room=by_room.get(u_.get("room_id")))
@@ -558,6 +594,23 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
         run.update(policy=ARCH_POLICY_ID_V23)
         run["policies"].update(knowledge=K.policy_record(), owner_finish_scope=OFS.policy_record(),
                                door_standards=DSTD.policy_record(), space_model=SMOD.policy_record())
+    if v24:
+        from engine.source import door_feasibility as DF
+        from engine.source import project_rules as PRJ
+        from engine.source import waterproofing_system as WS
+        from engine.source import wp_geometry as WG
+        sh = v24_out["rules_sheet"]
+        run.update(policy=ARCH_POLICY_ID_V24)
+        run["policies"].update(project_rules=PRJ.policy_record(), waterproofing=WS.policy_record(),
+                               wp_geometry=WG.policy_record(), door_feasibility=DF.policy_record())
+        run["v2_4"] = {"knowledge": K.policy_record(),
+                       "rules_sheet": {"schema": sh["schema"], "rules_sha256": sh["rules_sha256"],
+                                       "sheet_sha256": sh["sheet_sha256"], "rows": len(sh["rows"]),
+                                       "status_counts": sh["status_counts"],
+                                       "project_rules": sh["project"]["rules_input"]},
+                       "waterproofing": v24_out["waterproofing"]["project"],
+                       "door_feasibility": v24_out["door_feasibility"]["summary"],
+                       "approvals": len(v24_out["approvals"])}
     if admit:
         _finish_discovery(report, E, facts, regions, lines, coverage if v2 else None,
                           entity_checks={"column_evidence": column_ev, "door_symbols": arc_recs,
@@ -582,7 +635,8 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
         from engine.source import dimension_evidence as DEV
         run["policies"]["dimension_evidence"] = DEV.policy_record()
         arch["ledger"] = SL.ledger(lines, rooms, openings, unresolved, method=method, doors=doors, walls=walls_of,
-                                   **({"conserve": True} if v22 else {}), **({"owner_scope": True} if v23 else {}))
+                                   **({"conserve": True} if v22 else {}), **({"owner_scope": True} if v23 else {}),
+                                   **({"wp_system": True} if v24 else {}))
         run["v2_1"]["ledger"] = {"table": arch["ledger"]["table"], "summary": arch["ledger"]["summary"]}
         run["policies"]["surface_ledger"] = SL.policy_record()
         run["v2_1"]["doors"] = {"summary": doors["summary"], "main_entrance": doors["main_entrance"]["state"],
@@ -593,6 +647,8 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
     if v23:
         _v23_outputs(arch, room_boq, rooms, openings, doors, facts, decisions, decided, possibly_ext, shafts,
                      method, unresolved, drawing=path.name)
+    if v24:
+        _v24_outputs(arch, v24_out)
     if v2:
         arch["coverage"] = coverage
         if any(c["gate"] != "PASS" for c in coverage):
@@ -654,6 +710,174 @@ def _v23_outputs(arch, room_boq, rooms, openings, doors, facts, decisions, decid
                            "owner_questions": arch["owner_questions"]["summary"],
                            "elevator_shafts": len(arch["elevator_schedule"]["shafts"]),
                            "decisions": sm["decisions"]}
+
+
+def _v24_stage(floors, doors, lines, mats, unresolved, facts, decisions, project_rules, pid, rev, docs, u):
+    """Phase 2B-2 (ARCH_TAKEOFF_V2.4): the Project Engineering Rules Sheet (project rules bound to the drawing's
+    elements), then the quantities that depend on a rule value - the waterproofing system (the wet-room / exterior
+    upturn, doorway transitions, terminations, penetrations, layouts, the cutting plan per membrane system), the door
+    feasibility and the door jamb plaster by category height. -> (lines, materials, unresolved, outputs)."""
+    from engine.source import door_feasibility as DF
+    from engine.source import project_rules as PRJ
+    from engine.source import waterproofing_system as WS
+    doc = PRJ.load(project_rules if project_rules is not None else {"schema": PRJ.SCHEMA, "rules": []})
+    rooms_m, ops_m, walls_m = [], [], []
+    for f in floors:
+        rooms_m += [{"room_id": r["room_id"], "floor": f["floor"], "polygon_m": r["polygon_m"],
+                     "hole_polygons_m": r.get("hole_polygons_m") or []} for r in f["M"]["rooms"]]
+        ops_m += [{"floor": f["floor"], "opening_id": o["opening_id"],
+                   "centre_m": (o.get("position") or {}).get("centre_m")} for o in f["M"]["openings"]]
+        for w in (f["S"].get("walls") or {}).get("walls") or ():
+            cl = w.get("centreline")
+            if cl:
+                walls_m.append({"floor": f["floor"], "wall_id": w["wall_id"], "t_m": w["t_m"],
+                                "centreline_m": [(cl[0][0] * u, cl[0][1] * u), (cl[1][0] * u, cl[1][1] * u)]})
+    bindings = PRJ.bind(doc, rooms=rooms_m, openings=ops_m, walls=walls_m)
+    resolver = PRJ.Resolver(doc, bindings=bindings)
+    sheet = PRJ.rules_sheet(doc, bindings=bindings, project_id=pid, drawing=docs[0], facts=facts, decisions=decisions)
+    ctx = {"project_id": pid, "revision_set_sha256": rev, "documents": docs}
+    wp_ids = {ln["location"]["room_id"] for ln in lines if ln["item_code"] == "FIN.WP.FLOOR" and
+              ln.get("measured_net") is not None}
+    areas = []
+    for f in floors:
+        mf = dict(f["M"], lines=[ln for ln in lines if ln["location"].get("floor") == f["floor"]])
+        areas += WS.areas_from_floor(f["S"], mf, f["ents"], f["roles"], u, wp_room_ids=wp_ids)
+    built = [WS.build_area(a, resolver) for a in areas]
+    plans = WS.cutting_plan(built)
+    sched = WS.schedule(built, plans)
+    wl, wu = WS.boq_lines(ctx, built, WS.wp_line)
+    ids = {a["room_id"] for a in built}
+    lines = [ln for ln in lines if not (ln["item_code"] == "FIN.WP.UPTURN" and ln["location"].get("room_id") in ids)]
+    lines += wl
+    unresolved = [x for x in unresolved if not (x.get("room_id") in ids and (
+        str(x.get("reason") or "").startswith("EXTERIOR_WP_UPTURN_BY_SPECIFICATION") or
+        x.get("item") == "FIN.WP (membrane)"))] + wu
+    mats = [m for m in mats if not ((m.get("method") or "").startswith("MEMBRANE") and
+                                    (m.get("location") or {}).get("room_id") in ids)] + [a["layout"] for a in built]
+    contexts = {f["floor"]: DF.floor_context(f["S"], f["ents"], f["roles"], u, f["M"]["rooms"], f["floor"],
+                                             walls=f["S"].get("walls")) for f in floors}
+    rep = DF.feasibility(doors, contexts, resolver=resolver, facts=facts)
+    lines, ju = DF.jamb_plaster_lines(ctx, lines, doors, resolver, facts, WS.wp_line)
+    unresolved += ju
+    # one question per conflict (its C- row), per unbound and per unsupported project rule
+    raised = [r for r in sheet["rows"] if r["status"] in ("CONFLICT_REVIEW", "ENGINE_LIMITATION") and (
+        r["row_id"].startswith("C-") or (r.get("project_rule_id") and not r["notes"].startswith("PROJECT_RULE_CONFLICT")))]
+    for r in raised:
+        unresolved.append({"room_id": "-", "floor": "-", "item": "PROJECT_RULES", "reason": r["notes"]})
+    approvals = [dict(a, subject="DOOR") for a in rep["approvals"]]
+    for p_ in plans:
+        if p_["roll_count_state"] != "CONFIRMED":
+            approvals.append({"subject": "WATERPROOFING", "system_id": p_["system_id"], "who": "consultant / "
+                              "waterproofing specialist", "what": "the membrane system and its details before the "
+                              "roll count is confirmed: " + "; ".join(p_["why_not_confirmed"])})
+    for r in raised:
+        if r["status"] == "CONFLICT_REVIEW":
+            approvals.append({"subject": "PROJECT_RULES", "row_id": r["row_id"], "who": "project consultant",
+                              "what": r["notes"]})
+    sheet = dict(sheet, usage=resolver.usage())
+    return lines, mats, unresolved, {"rules_sheet": sheet, "waterproofing": sched, "door_feasibility": rep,
+                                     "approvals": approvals, "areas": built}
+
+
+def _v24_outputs(arch, out):
+    """Phase 2B-2: the rules sheet, the waterproofing schedule and cutting plan, the door feasibility, the approvals
+    and the engineering summary (the eight questions of the owner program); the BOQ scenario views gain the
+    OWNER_STANDARD / PROPOSED_MODIFICATION door views and the waterproofing procurement view."""
+    arch["rules_sheet"] = out["rules_sheet"]
+    arch["waterproofing"] = out["waterproofing"]
+    arch["door_feasibility"] = out["door_feasibility"]
+    arch["approvals"] = {"policy": "APPROVALS_REQUIRED_V1", "items": out["approvals"],
+                         "never": "a proposed modification or a withheld quantity released before its approval"}
+    df = out["door_feasibility"]
+    bs = arch["boq_scenarios"]
+    bs["OWNER_STANDARD"] = {"what": "the door standard each door requires (UP-DOOR-OPEN-002, project rules applied)",
+                            "doors": df["views"]["OWNER_STANDARD"]}
+    bs["PROPOSED_MODIFICATION"] = {"what": "wall-opening enlargements the owner standard needs, with their "
+                                           "feasibility class (not approved; never in the as-drawn lines)",
+                                   "doors": df["views"]["PROPOSED_MODIFICATION"]}
+    wp = out["waterproofing"]
+    bs["WATERPROOFING_PROCUREMENT"] = {"what": "C: whole rolls of the cutting plan per membrane system (a procurement "
+                                               "view; never a BOQ line, never a total across systems)",
+                                       "systems": {s["system_id"]: {"rolls": s["rolls"],
+                                                                    "state": s["roll_count_state"],
+                                                                    "net_m2": s["net_m2"],
+                                                                    "installed_m2": s["installed_m2"]}
+                                                   for s in wp["systems"]}}
+    bs["never"] = "the AS_DRAWN, OWNER_STANDARD / OWNER_REQUIRED and PROPOSED_MODIFICATION views added together"
+    arch["engineering_summary"] = _engineering_summary(arch, out)
+
+
+def _engineering_summary(arch, out):
+    """the eight questions of the owner program, answered from this run's own outputs."""
+    sh, df, wp = out["rules_sheet"], out["door_feasibility"], out["waterproofing"]
+    lines = arch["boq_scenarios"]["AS_DRAWN"]["by_item"]
+    st = Counter()
+    for r in arch["ledger"]["records"] if arch.get("ledger") else ():
+        st[r["status"]] += 1
+    rows = df["rows"]
+    below = [r for r in rows if r.get("compliance") == "ENLARGEMENT_REQUIRED"]
+    proj = [r for r in sh["rows"] if r.get("project_rule_id") and r["status"] in ("PROJECT_SPECIFIED",
+                                                                                   "OWNER_PROJECT_APPROVED",
+                                                                                   "DRAWING_CONFIRMED")]
+    return {"policy": "ENGINEERING_SUMMARY_V1", "rules_sha256": sh["rules_sha256"],
+            "what_the_drawing_shows": {
+                "rooms": len(arch["rooms"]), "door_elements": len(rows),
+                "doors_released_as_drawn": sum(1 for r in rows if r.get("released_as_drawn")),
+                "waterproofed_areas": len(wp["areas"]),
+                "boq_lines_by_item_state": len(lines)},
+            "what_urban_requires": {
+                "status_counts": sh["status_counts"],
+                "door_standard": {r["category"]: r["standard"]["required_wall_opening_m"] for r in rows
+                                  if r.get("standard") and r["standard"].get("required_wall_opening_m")},
+                "waterproofing": {"upturn_h_m": K_value("UP-WP-003", "upturn_h_m"),
+                                  "lap_m": K_value("UP-WP-002", "lap_m"),
+                                  "roll_m": [K_value("UP-WP-001", "roll_width_m"),
+                                             K_value("UP-WP-001", "roll_length_m")]}},
+            "where_they_differ": {
+                "doors_below_standard": len(below),
+                "total_enlargement_m": round(sum(r["enlargement_m"] for r in below), 6),
+                "doorway_transitions_unresolved": sum(a["doorway_transitions"]["unresolved"] for a in wp["areas"]),
+                "project_rules_applied": [r["project_rule_id"] for r in proj]},
+            "can_the_modification_fit": df["summary"],
+            "measured_assumed_proposed_unresolved": {
+                "ledger_records_by_status": dict(sorted(st.items())),
+                "door_views": {k: v for k, v in df["views"].items() if k != "note"},
+                "rules_assumed_owner_standard": sh["status_counts"]["OWNER_STANDARD_ASSUMED"]},
+            "material_needed": {s["system_id"]: {k: s[k] for k in ("net_m2", "installed_m2", "consumed_m2",
+                                                                    "cutting_waste_m2", "rolls",
+                                                                    "rolls_if_each_area_alone", "roll_count_state")}
+                                | {"withheld_detailing": len(s["withheld_detailing"])} for s in wp["systems"]},
+            "governing_project_rules": {"rules_sha256": sh["rules_sha256"], "rows": [
+                {"row_id": r["row_id"], "rule_id": r["rule_id"], "applied": r["applied_rule"]["value"],
+                 "urban": r["urban_standard"]["value"], "scope": r["scope"], "source": r["source"]} for r in proj]},
+            "approvals_needed": {"items": len(out["approvals"]),
+                                 "owner_questions": [q["id"] for q in (arch.get("owner_questions") or {})
+                                                     .get("owner_questions") or ()]}}
+
+
+V24_MANIFEST = "OUTPUT_MANIFEST.json"
+
+
+def _v24_manifest(out, names, arch):
+    """the Phase 2B-2 output manifest: the rules sheet and registry every file of this run was computed with, the SHA-256
+    of each file (a file without an embedded run record - CSV, BOQ lines, workbook, overlay - is bound here)."""
+    import hashlib
+    sh, k = arch["rules_sheet"], arch["run"]["v2_4"]["knowledge"]
+    return {"policy": "URBAN_OUTPUT_MANIFEST_V2_4", "method": arch["run"]["method"],
+            "rules_sheet": {"schema": sh["schema"], "rules_sha256": sh["rules_sha256"],
+                            "sheet_sha256": sh["sheet_sha256"], "invalidation": (sh.get("invalidation") or {})
+                            .get("state")},
+            "knowledge": {"rule_set": k["rule_set"], "digest": k["digest"]},
+            "files": [{"name": n, "sha256": hashlib.sha256((Path(out) / n).read_bytes()).hexdigest(),
+                       "bytes": (Path(out) / n).stat().st_size,
+                       "embeds_rules_sha256": sh["rules_sha256"].encode() in (Path(out) / n).read_bytes()}
+                      for n in sorted(set(names))],
+            "never": "an output reused after the rules sheet changed (it is moved to SUPERSEDED_n)"}
+
+
+def K_value(rule_id, key):
+    from engine.source import knowledge as K
+    return K.rule(rule_id)["logic"][key]
 
 
 def _finish_discovery(report, E, facts, regions, lines, coverage, entity_checks=None):
@@ -842,7 +1066,46 @@ def v21_files(arch):
         files["ELEVATOR_SCHEDULE.json"] = _j({"run": run, "elevators": arch["elevator_schedule"]})
         files["OWNER_QUESTIONS.json"] = _j({"run": run, "questions": arch["owner_questions"]})
         files["BOQ_SCENARIOS.json"] = _j({"run": run, "scenarios": arch["boq_scenarios"]})
+    if arch.get("rules_sheet") is not None:                     # ARCH_TAKEOFF_V2.4
+        from engine.source import door_feasibility as DF
+        from engine.source import project_rules as PRJ
+        files["PROJECT_RULES_SHEET.json"] = _j({"run": run, "sheet": arch["rules_sheet"]})
+        files["PROJECT_RULES_SHEET.csv"] = _csv(PRJ.csv_rows(arch["rules_sheet"]), PRJ.CSV_COLUMNS)
+        wp = arch["waterproofing"]
+        files["WATERPROOFING_SCHEDULE.json"] = _j({"run": run, "waterproofing": {k: v for k, v in wp.items()
+                                                                                  if k != "systems"}})
+        files["WATERPROOFING_SCHEDULE.csv"] = _csv([_wp_row(r) for r in wp["areas"]], WP_COLUMNS)
+        files["MEMBRANE_CUTTING_PLAN.json"] = _j({"run": run, "systems": wp["systems"]})
+        files["DOOR_FEASIBILITY.json"] = _j({"run": run, "doors": arch["door_feasibility"]})
+        files["DOOR_FEASIBILITY.csv"] = _csv(DF.csv_rows(arch["door_feasibility"]), DF.CSV_COLUMNS)
+        files["APPROVALS_REQUIRED.json"] = _j({"run": run, "approvals": arch["approvals"]})
+        files["ENGINEERING_SUMMARY.json"] = _j({"run": run, "summary": arch["engineering_summary"]})
     return files
+
+
+WP_COLUMNS = ("room_id", "floor", "scope", "system_id", "A_net_horizontal_m2", "eligible_upturn_lm", "upturn_h_m",
+              "upturn_h_state", "upturn_m2", "doorway_continuation_m2", "doorway_transitions_unresolved",
+              "doorway_transition_range_m2", "terminations_unresolved_lm", "penetrations_state", "penetrations",
+              "corners_internal", "corners_external", "corners_state", "laps_m2", "B_installed_m2", "consumed_m2",
+              "cutting_waste_m2", "rolls_if_installed_alone", "withheld_items", "state")
+
+
+def _wp_row(r):
+    tr = r["doorway_transitions"]
+    rng = tr["range_m2"]
+    return {"room_id": r["room_id"], "floor": r["floor"], "scope": r["scope"], "system_id": r["system_id"],
+            "A_net_horizontal_m2": r["A_net_horizontal_m2"], "eligible_upturn_lm": r["upturn"]["eligible_lm"],
+            "upturn_h_m": r["upturn"]["height_m"], "upturn_h_state": r["upturn"]["height_state"],
+            "upturn_m2": r["upturn"]["area_m2"], "doorway_continuation_m2": r["doorway_continuation_m2"],
+            "doorway_transitions_unresolved": tr["unresolved"],
+            "doorway_transition_range_m2": f"{rng['low']:g} - {rng['high']:g}" if rng else "",
+            "terminations_unresolved_lm": r["terminations"]["unresolved_lm"],
+            "penetrations_state": r["penetrations"]["state"], "penetrations": r["penetrations"]["count"],
+            "corners_internal": r["corners"]["internal"], "corners_external": r["corners"]["external"],
+            "corners_state": r["corners"]["state"], "laps_m2": r["laps_m2"], "B_installed_m2": r["B_installed_m2"],
+            "consumed_m2": r["consumed_m2"], "cutting_waste_m2": r["cutting_waste_m2"],
+            "rolls_if_installed_alone": r["rolls_if_installed_alone"], "withheld_items": len(r["withheld"]),
+            "state": r["state"]}
 
 
 DOOR_SCENARIO_COLUMNS = ("element_id", "floor", "opening_id", "state", "category", "view", "spaces",
@@ -875,7 +1138,9 @@ PUBLISHED = ("BOQ_LINES.json", "BOQ_LINES.csv", "MATERIAL_RESULTS.json", "COVERA
              "ARCH_GEOMETRY_DECISIONS.json", "DOOR_SCHEDULE.json", "DOOR_SCHEDULE.csv",
              "SURFACE_LEDGER.json", "SURFACE_LEDGER.csv", "DIMENSION_CROSSCHECK.json", "SPACE_MODEL.json",
              "DOOR_SCENARIOS.json", "DOOR_SCENARIOS.csv", "ELEVATOR_SCHEDULE.json", "OWNER_QUESTIONS.json",
-             "BOQ_SCENARIOS.json")
+             "BOQ_SCENARIOS.json", "PROJECT_RULES_SHEET.json", "PROJECT_RULES_SHEET.csv", "WATERPROOFING_SCHEDULE.json",
+             "WATERPROOFING_SCHEDULE.csv", "MEMBRANE_CUTTING_PLAN.json", "DOOR_FEASIBILITY.json", "DOOR_FEASIBILITY.csv",
+             "APPROVALS_REQUIRED.json", "ENGINEERING_SUMMARY.json", "OUTPUT_MANIFEST.json")
 
 
 def _supersede(out):
@@ -922,16 +1187,22 @@ def cmd_arch(a):
     facts = json.loads(Path(a.facts).read_text(encoding="utf-8")) if a.facts else None
     decisions = None
     if getattr(a, "decisions", None):
-        if a.method != V23:
-            raise SystemExit("--decisions (project decisions, URBAN_PROJECT_DECISIONS_V1) needs --method ARCH_TAKEOFF_V2.3")
+        if a.method not in (V23, V24):
+            raise SystemExit("--decisions (project decisions, URBAN_PROJECT_DECISIONS_V1) needs --method "
+                             "ARCH_TAKEOFF_V2.3 or ARCH_TAKEOFF_V2.4")
         decisions = json.loads(Path(a.decisions).read_text(encoding="utf-8"))
         if decisions.get("schema") != "URBAN_PROJECT_DECISIONS_V1":
             raise SystemExit("--decisions: schema must be URBAN_PROJECT_DECISIONS_V1")
+    project_rules = None
+    if getattr(a, "project_rules", None):
+        if a.method != V24:
+            raise SystemExit("--project-rules (URBAN_PROJECT_RULES_V1) needs --method ARCH_TAKEOFF_V2.4")
+        project_rules = json.loads(Path(a.project_rules).read_text(encoding="utf-8"))
     roles = _kv(a.layer_roles, "--layer-roles")
     refs = {k: float(v) for k, v in _kv(a.reference_areas, "--reference-areas").items()}
     out = Path(a.out)
     conversions = []
-    v2 = a.method in (V2, V21, V22, V23)
+    v2 = a.method in (V2, V21, V22, V23, V24)
     admit = v2 or a.strict_admission
     if not admit and (a.units or a.region or a.accept_missing_xref):
         raise SystemExit("--units / --region / --accept-missing-xref are reviewer inputs of the admission: use them "
@@ -975,7 +1246,8 @@ def cmd_arch(a):
                                      reference_areas=refs, project_id=a.project, strict=a.strict_admission,
                                      units=a.units, region_specs=a.region, accept_xrefs=tuple(a.accept_missing_xref or ()),
                                      extra_documents=[d for d in (inputs_rec if admit else ()) if d["role"] != "plan"],
-                                     admission_findings=pre, **({"decisions": decisions} if decisions else {}))
+                                     admission_findings=pre, **({"decisions": decisions} if decisions else {}),
+                                     **({"project_rules": project_rules} if project_rules is not None else {}))
     except DS.AdmissionBlocked as ex:
         return _blocked(out, ex.report, conversions, code=DS.EXIT_ADMISSION_BLOCKED, what="ADMISSION_BLOCKED")
     except CompletenessFailed as ex:
@@ -994,6 +1266,16 @@ def cmd_arch(a):
     if conversions:
         arch["run"]["dwg_conversions"] = conversions
         (out / "DWG_CONVERSION.json").write_text(_j({"conversions": conversions}), encoding="utf-8")
+    if arch.get("rules_sheet") is not None:
+        # ARCH_TAKEOFF_V2.4 (UP-RULES-001): outputs computed with another rules sheet are moved aside, never reused
+        from engine.source import project_rules as PRJ
+        prev = out / "PROJECT_RULES_SHEET.json"
+        old_sheet = json.loads(prev.read_text(encoding="utf-8"))["sheet"] if prev.exists() else None
+        inv = PRJ.invalidation(old_sheet, arch["rules_sheet"])
+        if inv["state"] == "RULES_CHANGED":
+            inv["moved"] = _supersede(out)
+        arch["rules_sheet"]["invalidation"] = inv
+        arch["run"]["v2_4"]["rules_sheet"]["invalidation"] = inv["state"]
     s_lines, cov, conv = (), None, None
     if structural:
         # the structural drawing through the unchanged route G (its own outputs in OUT/structural), its lines into the
@@ -1032,6 +1314,11 @@ def cmd_arch(a):
                                                             f["region_id"] == reg["region_id"]), None)),
                                     encoding="utf-8")
             svgs.append(name)
+    if arch.get("rules_sheet") is not None:
+        # ARCH_TAKEOFF_V2.4 (UP-RULES-001): every output of the run bound to the rules sheet it was computed with
+        written = res["files"] + (["URBAN_ROOM_BOQ.xlsx"] if "xlsx" in res else []) + svgs
+        (out / V24_MANIFEST).write_text(_j(_v24_manifest(out, written, arch)), encoding="utf-8")
+        svgs.append(V24_MANIFEST)
     ev = Counter(ln["evidence_state"] for ln in room["lines"])
     print(json.dumps({"method": a.method, "regions": [{"floor": r["floor"], "state": r["stage_state"],
                                                         "rooms": r.get("space_counts"), "lines": r.get("lines"),
@@ -1169,6 +1456,9 @@ def main(argv=None):
                         "ARCH_TAKEOFF_V2 (S6) adds the drawing admission, unit-relative tolerances, empty-band plan "
                         "regions and the completeness gates (exit 2: admission blocked, 3: completeness failed)")
     p.add_argument("--facts", help="project facts (URBAN_ARCH_FACTS_V1): heights, finishes, tile constraints, membrane")
+    p.add_argument("--project-rules", help="ARCH_TAKEOFF_V2.4: project rules (URBAN_PROJECT_RULES_V1): Level B "
+                   "requirements of the project's drawings, details, schedules and specifications that override the "
+                   "Urban standards within their scope (engine.source.project_rules)")
     p.add_argument("--decisions", help="ARCH_TAKEOFF_V2.3: project decisions (URBAN_PROJECT_DECISIONS_V1) binding owner "
                                        "decisions to single spaces (kept with the project's private inputs)")
     p.add_argument("--layer-roles", nargs="+", metavar="LAYER=ROLE",

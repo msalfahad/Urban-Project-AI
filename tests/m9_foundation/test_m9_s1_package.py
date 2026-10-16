@@ -71,9 +71,10 @@ def test_no_external_figure_or_forbidden_number():
             if x:
                 ext.add(round(x, 3))
     nums = re.compile(r"-?\d+\.\d+")
+    method_id = re.compile(r"ARCH_TAKEOFF_V\d+\.\d+")     # a method identifier (ARCH_TAKEOFF_V2.4) is not a figure
     for p in _files():
         text = p.read_text(encoding="utf-8")
-        found = {round(float(m), 3) for m in nums.findall(text)}
+        found = {round(float(m), 3) for m in nums.findall(method_id.sub("", text))}
         assert not (found & ext), p.name                       # the value itself is never printed
         assert not any(v and abs(v - x * k) <= 1e-4 * abs(x * k) for v in found for x in FORBIDDEN_NUMBERS
                        for k in (1, 1000)), p.name

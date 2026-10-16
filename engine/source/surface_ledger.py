@@ -126,6 +126,31 @@ OWNER_SCOPE_LINE_DRIVEN = {
     "PASSAGE": [("JAMB_SKIRTING", "SKIRTING", ("FIN.SKIRTING",), None, "UP-SKIRT-001", True)],
     "EXTERIOR": [("WATERPROOFING", "WATERPROOFING_FLOOR", ("FIN.WP.FLOOR",), None, "UP-WP-ROOF-001", True),
                  ("WATERPROOFING_UPTURN", "WATERPROOFING_UPTURN", ("FIN.WP.UPTURN",), None, "UP-WP-ROOF-001", True)]}
+# Phase 2B-2 (ARCH_TAKEOFF_V2.4, wp_system=True only): the waterproofing system of the knowledge registry 1.1.0 - the
+# upturn on eligible wall boundaries (FIN.WP.WALL_UPTURN replaces FIN.WP.UPTURN), the doorway transitions, the edge
+# terminations and the penetration treatments (line-driven rows: a record only where the room has such a line).
+TABLE_ID_V0_3 = "ELIGIBILITY_V0_3_WP_SYSTEM"
+WP_SYSTEM_LINE_DRIVEN = {
+    kind: [("DOORWAY_TRANSITION", "WATERPROOFING_TRANSITION", ("FIN.WP.DOORWAY_TRANSITION",), None, P, True),
+           ("EDGE_TERMINATION", "WATERPROOFING_TERMINATION", ("FIN.WP.TERMINATION",), None, P, True),
+           ("PENETRATIONS", "WATERPROOFING_PENETRATIONS", ("FIN.WP.PENETRATION",), None, P, True)]
+    for kind in ("WET", "EXTERIOR")}
+
+
+def _wp_system_table():
+    t = _owner_scope_table()
+    t["WET"] = [r if r[1] != "WATERPROOFING_UPTURN" else (r[0], r[1], ("FIN.WP.WALL_UPTURN",)) + r[3:]
+                for r in t["WET"]]
+    return t
+
+
+def _wp_line_driven():
+    d = copy.deepcopy(OWNER_SCOPE_LINE_DRIVEN)
+    d["EXTERIOR"] = [r if r[1] != "WATERPROOFING_UPTURN" else (r[0], r[1], ("FIN.WP.WALL_UPTURN",)) + r[3:]
+                     for r in d["EXTERIOR"]]
+    return d
+
+
 ELIGIBILITY_V0_1_ADDITIONS = {
     "WET": [("WALLS_ABOVE_TILE", "PAINT", ("FIN.PAINT",), None, "UP-CER-009", True),
             ("DOORWAY", "WATERPROOFING_DOORWAY", ("FIN.WP.DOORWAY",), None, "UP-WP-003", True)],
@@ -237,12 +262,15 @@ def _record(element, ekind, floor, row, lines, rfi_text=None, rule=None, element
     return rec
 
 
-def ledger(lines, rooms, openings, unresolved, *, method, doors=None, walls=None, conserve=False, owner_scope=False):
+def ledger(lines, rooms, openings, unresolved, *, method, doors=None, walls=None, conserve=False, owner_scope=False,
+           wp_system=False):
     """the read-only ledger of one architectural run (its inputs are never modified). conserve (ARCH_TAKEOFF_V2.2,
     F-21): the V0.1 rows, ENGINE_LIMIT apart from NO_EMITTER, every line in exactly one record (or a named
     out-of-scope category), coverage by floor and trade, and no completeness claim; False is the V2.1 ledger.
-    owner_scope (ARCH_TAKEOFF_V2.3): the V0.2 rows of the knowledge registry (_owner_scope_table)."""
-    table = _owner_scope_table() if owner_scope else ELIGIBILITY_V0
+    owner_scope (ARCH_TAKEOFF_V2.3): the V0.2 rows of the knowledge registry (_owner_scope_table).
+    wp_system (ARCH_TAKEOFF_V2.4): the V0.3 waterproofing rows (_wp_system_table, WP_SYSTEM_LINE_DRIVEN)."""
+    table = _wp_system_table() if wp_system else _owner_scope_table() if owner_scope else ELIGIBILITY_V0
+    line_driven = _wp_line_driven() if wp_system else OWNER_SCOPE_LINE_DRIVEN
     lines = copy.deepcopy(list(lines))
     eng = {"engine_status": "ENGINE_LIMIT"} if conserve else {}
     by_room, by_op, by_floor_code, by_elem = defaultdict(list), defaultdict(list), defaultdict(list), defaultdict(list)
@@ -273,8 +301,9 @@ def ledger(lines, rooms, openings, unresolved, *, method, doors=None, walls=None
         if conserve:
             # the V0.1 rows are line-driven: a record only where the room has such a line (they conserve lines, they
             # do not make a surface eligible - a wet room without a doorway piece is not a CONFIRMED_MISSING)
-            rows += [x for x in ELIGIBILITY_V0_1_ADDITIONS.get(kind, []) + (OWNER_SCOPE_LINE_DRIVEN.get(kind, [])
-                                                                             if owner_scope else [])
+            rows += [x for x in ELIGIBILITY_V0_1_ADDITIONS.get(kind, []) + (line_driven.get(kind, [])
+                                                                             if owner_scope else []) +
+                     (WP_SYSTEM_LINE_DRIVEN.get(kind, []) if wp_system else [])
                      if any(ln["item_code"] in x[2] for ln in mine)]
             if kind != "STAIR" and any(ln["item_code"] in STAIR_CODES for ln in mine):
                 rows += [(f"STAIR_IN_ROOM:{x[0]}",) + x[1:] for x in _STAIR_ROWS
@@ -321,8 +350,7 @@ def ledger(lines, rooms, openings, unresolved, *, method, doors=None, walls=None
         d = door_of_op.get(key)
         o_rows = list(table[o["kind"]])
         if owner_scope:
-            o_rows += [x for x in OWNER_SCOPE_LINE_DRIVEN.get(o["kind"], []) if any(ln["item_code"] in x[2]
-                                                                                    for ln in mine)]
+            o_rows += [x for x in line_driven.get(o["kind"], []) if any(ln["item_code"] in x[2] for ln in mine)]
         for row in o_rows:
             surface, trade, codes, *_ = row
             hit = [ln for ln in mine if ln["item_code"] in codes]
@@ -377,7 +405,10 @@ def ledger(lines, rooms, openings, unresolved, *, method, doors=None, walls=None
                                                              "digest": table_digest()},
            "records": recs, "findings": findings, "summary": summary(recs)}
     if owner_scope:
-        out["table"]["owner_scope"] = TABLE_ID_V0_2 + " (knowledge registry 1.0.0 rules)"
+        from engine.source import knowledge as K               # V2.3: 1.0.0; V2.4: 1.1.0 (the active registry)
+        out["table"]["owner_scope"] = TABLE_ID_V0_2 + f" (knowledge registry {K.version()} rules)"
+    if wp_system:
+        out["table"]["wp_system"] = TABLE_ID_V0_3 + " (knowledge registry 1.1.0 waterproofing rules)"
     if conserve:
         out["table"]["additions"] = "ELIGIBILITY_V0_1_ADDITIONS (PROPOSAL)"
         out["summary"] = summary(recs, statuses=STATUSES_V2_2)

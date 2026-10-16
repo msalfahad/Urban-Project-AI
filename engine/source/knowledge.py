@@ -13,12 +13,19 @@ genuine owner questions in one machine-readable registry: knowledge/URBAN_ENGINE
                                         answered (must be empty)
     validate(reg)                    -> problems (empty = clean): fields, statuses, supersession, code and test links
 
-The registry is read by ARCH_TAKEOFF_V2.3 only. V1 .. V2.2 keep the frozen rule set rules/ 1.5.0 (their RUN_RULES
-digests are unchanged); rules/ gains no file. Project-agnostic; stdlib only.
+The registry is read by ARCH_TAKEOFF_V2.3 (version 1.0.0, the default) and ARCH_TAKEOFF_V2.4 (version 1.1.0, inside
+`using("1.1.0")`). V1 .. V2.2 keep the frozen rule set rules/ 1.5.0 (their RUN_RULES digests are unchanged); rules/
+gains no file. Project-agnostic; stdlib only.
+
+    using(version)                   -> a context in which every accessor reads that registry version (1.0.0 outside)
+    version() / rule_set()           -> the active version and its rule-set id (RULE_SET / PATH follow the context)
+    wp_standard()                    -> 1.1.0: UP-WP-001 .. -003 roll, lap and upturn values
 """
 
 from __future__ import annotations
 
+import contextlib
+import contextvars
 import copy
 import hashlib
 import json
@@ -28,8 +35,10 @@ from functools import lru_cache
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-PATH = ROOT / "knowledge" / "URBAN_ENGINEERING_KNOWLEDGE_1.0.0.json"
-RULE_SET = "URBAN_KB_1.0.0"
+VERSIONS = {"1.0.0": ROOT / "knowledge" / "URBAN_ENGINEERING_KNOWLEDGE_1.0.0.json",
+            "1.1.0": ROOT / "knowledge" / "URBAN_ENGINEERING_KNOWLEDGE_1.1.0.json"}
+DEFAULT_VERSION = "1.0.0"
+_ACTIVE = contextvars.ContextVar("urban_knowledge_version", default=DEFAULT_VERSION)
 POLICY_ID = "URBAN_ENGINEERING_KNOWLEDGE_V1"
 REQUIRED = ("rule_id", "title", "kind", "purpose", "scope", "elements", "locations", "preconditions", "exceptions",
             "authority", "status", "effective_version", "logic", "required_evidence", "assumptions_permitted",
@@ -46,13 +55,48 @@ class KnowledgeError(ValueError):
     pass
 
 
+def version():
+    return _ACTIVE.get()
+
+
+def rule_set():
+    return "URBAN_KB_" + _ACTIVE.get()
+
+
+def __getattr__(name):
+    # RULE_SET and PATH follow the active version (1.0.0 unless inside using())
+    if name == "RULE_SET":
+        return rule_set()
+    if name == "PATH":
+        return VERSIONS[_ACTIVE.get()]
+    raise AttributeError(name)
+
+
+@contextlib.contextmanager
+def using(v):
+    """every accessor reads registry version v inside the block (ARCH_TAKEOFF_V2.4: 1.1.0)."""
+    if v not in VERSIONS:
+        raise KnowledgeError(f"knowledge registry version {v} is not one of {sorted(VERSIONS)}")
+    tok = _ACTIVE.set(v)
+    try:
+        yield v
+    finally:
+        _ACTIVE.reset(tok)
+
+
 @lru_cache(maxsize=None)
-def _load():
-    reg = json.loads(PATH.read_text(encoding="utf-8"))
+def _load_version(v):
+    reg = json.loads(VERSIONS[v].read_text(encoding="utf-8"))
     probs = validate(reg, links=False)
     if probs:
         raise KnowledgeError("knowledge registry invalid: " + "; ".join(probs[:5]))
+    if reg.get("version") != v:
+        raise KnowledgeError(f"knowledge registry {VERSIONS[v].name} says version {reg.get('version')}")
     return reg
+
+
+def _load():
+    return _load_version(_ACTIVE.get())
 
 
 def registry():
@@ -60,20 +104,24 @@ def registry():
 
 
 @lru_cache(maxsize=None)
+def _digest_version(v):
+    return hashlib.sha256(VERSIONS[v].read_bytes()).hexdigest()
+
+
 def digest():
-    return hashlib.sha256(PATH.read_bytes()).hexdigest()
+    return _digest_version(_ACTIVE.get())
 
 
 def rule(rule_id):
     for r in _load()["rules"]:
         if r["rule_id"] == rule_id:
             return copy.deepcopy(r)
-    raise KeyError(f"{rule_id} is not in the knowledge registry {RULE_SET}")
+    raise KeyError(f"{rule_id} is not in the knowledge registry {rule_set()}")
 
 
 def ref(rule_id):
     r = rule(rule_id)
-    return {"rule_id": rule_id, "version": r["effective_version"], "rule_set": RULE_SET, "rule_set_digest": digest(),
+    return {"rule_id": rule_id, "version": r["effective_version"], "rule_set": rule_set(), "rule_set_digest": digest(),
             "status": r["status"]}
 
 
@@ -90,6 +138,15 @@ def door_standard(category):
 
 def reference_height(category):
     return rule("UP-DOOR-HGT-001")["logic"]["owner_reference_height_m"].get(category)
+
+
+def wp_standard():
+    """1.1.0: the owner's waterproofing master standards (UP-WP-001 roll, UP-WP-002 lap, UP-WP-003 upturn)."""
+    r1, r2, r3 = (rule(i)["logic"] for i in ("UP-WP-001", "UP-WP-002", "UP-WP-003"))
+    if abs(r1["gross_roll_area_m2"] - r1["roll_width_m"] * r1["roll_length_m"]) > 1e-9:
+        raise KnowledgeError("UP-WP-001: the gross roll area is not width x length")
+    return {"roll_width_m": r1["roll_width_m"], "roll_length_m": r1["roll_length_m"],
+            "gross_roll_area_m2": r1["gross_roll_area_m2"], "lap_m": r2["lap_m"], "upturn_h_m": r3["upturn_h_m"]}
 
 
 def wet_codes():
@@ -139,7 +196,7 @@ def owner_questions(unresolved, *, method):
         if len(g["examples"]) < 3:
             g["examples"].append({"floor": u.get("floor"), "room_id": u.get("room_id"), "item": u.get("item"),
                                   "reason": str(u.get("reason") or "")[:240]})
-    out = {"policy": POLICY_ID, "rule": "UP-KB-QUES-001", "method": method, "rule_set": RULE_SET,
+    out = {"policy": POLICY_ID, "rule": "UP-KB-QUES-001", "method": method, "rule_set": rule_set(),
            "rule_set_digest": digest(), "by_category": {c: [] for c in CATEGORIES}, "unclassified": []}
     for g in groups.values():
         g = dict(g, floors=sorted(g["floors"]), items=sorted(g["items"]))
@@ -160,8 +217,11 @@ def owner_questions(unresolved, *, method):
 
 
 def policy_record():
-    return {"policy": POLICY_ID, "rule_set": RULE_SET, "registry": str(PATH.relative_to(ROOT)), "digest": digest(),
-            "rules": len(_load()["rules"]), "precedence": list(PRECEDENCE), "categories": list(CATEGORIES)}
+    path = VERSIONS[version()]
+    return {"policy": POLICY_ID, "rule_set": rule_set(),
+            "registry": str(path.relative_to(ROOT)) if path.is_relative_to(ROOT) else path.name,
+            "digest": digest(), "rules": len(_load()["rules"]), "precedence": list(PRECEDENCE),
+            "categories": list(CATEGORIES)}
 
 
 def _link_ok(spec, kind):

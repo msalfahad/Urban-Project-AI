@@ -179,7 +179,9 @@ def _plan(msp, *, rooms, outer, labels, words, openings, columns, level, treads,
             hx, hy, r, sx, sy = door
             w = (s1 - s0) / 1000.0
             if mirror:
-                sx, r = -sx, (180 - r) % 360                                     # x -> -x mirrors the insert
+                # x -> -x mirrors the insert: Mx R(r) S(sx, sy) = R(-r) S(-sx, sy) (P2B2: was 180 - r, which turned
+                # every mirrored leaf half a turn about its hinge - closing outside its gap, swinging the other way)
+                sx, r = -sx, (-r) % 360
             if variant == "NESTED_MIRRORED_DOORS":
                 # the door block mirrored inside a wrapper block that is mirrored back: the same WCS geometry
                 msp.add_blockref("DOORWRAP", X((hx, hy)), dxfattribs={
