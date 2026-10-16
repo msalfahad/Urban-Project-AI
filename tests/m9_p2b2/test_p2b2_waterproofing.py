@@ -45,10 +45,13 @@ def test_rectangular_bathroom_hand_calculation():
     0.16 m2. Strips along the 2.00 m wall across 1.50 m: 2 (1.00 + 0.90 >= 1.50), the last 0.60 m wide (trim 0.40 m:
     one 0.30 m band lane 2.00 m long + 0.10 m residue). Band 0.20 + 0.10 = 0.30 m wide, 3 lanes per roll width.
     Doorway piece 0.80 x 0.30 m from the 2.00 m lane (1.20 m left). Upturn run 6.20 m (open at the door): 1.20 m
-    lane, then a 1.87 m segment (4.20 / 3 lanes + 2 x 0.10, to the cm) in three lanes: 1.77 + 1.77 + 1.46 m covered
-    (+0.10 laps), 0.31 m left. Band laid 0.30 x (1.20 + 1.87 + 1.87 + 1.56) = 1.95 m2. Laps 0.20 (floor) + 0.71
-    (band) + 0.08 (doorway) = 0.99 m2. Installed B = 3.00 + 0.16 + 1.24 + 0.99 = 5.39 m2. Consumed 2.00 + 2.00 + 1.87
-    = 5.87 m2; cutting waste 5.87 - 5.39 = 0.48 m2 (0.20 + 0.187 + 0.093). One roll."""
+    lane, then a 1.87 m segment (V2.4's own sizing, frozen: the 5.00 m left / 3 lanes + 2 x 0.10, to the cm) in three
+    lanes: 1.77 + 1.77 + 1.46 m covered (+0.10 laps), 0.31 m left. Band laid 0.30 x (1.20 + 1.87 + 1.87 + 1.56) =
+    1.95 m2. Laps 0.20 (floor) + 0.71 (band) + 0.08 (doorway) = 0.99 m2. Installed B = 3.00 + 0.16 + 1.24 + 0.99 = 5.39
+    m2. Consumed 2.00 + 2.00 + 1.87 = 5.87 m2; cutting waste 5.87 - 5.39 = 0.48 m2 (0.20 + 0.187 + 0.093). One roll.
+    This test pins the frozen ARCH_TAKEOFF_V2.4 behaviour; its segment follows the engine's formula, not an independent
+    derivation. The independent minimum is 1.77 m (3 x 1.67 >= 5.00): consumed 5.77 m2, waste 0.38 m2 - proven in
+    tests/m9_p2b3 and used by ARCH_TAKEOFF_V2.5 (defect D-V25-06)."""
     a = bath()
     r = a["row"]
     assert r["A_net_horizontal_m2"] == 3.0

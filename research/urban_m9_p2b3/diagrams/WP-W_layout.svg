@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="520" viewBox="0 0 760 520" font-family="Arial" font-size="11">
+<rect width="760" height="520" fill="#ffffff"/>
+<defs><clipPath id="room"><polygon points="50.0,430.0 525.0,430.0 525.0,50.0 50.0,50.0"/></clipPath></defs>
+<g clip-path="url(#room)">
+<rect x="50.0" y="50.0" width="316.7" height="380.0" fill="#9ecae1" fill-opacity="0.75" stroke="#3182bd" stroke-width="0.8"/>
+<text x="208.3" y="240.0" text-anchor="middle" fill="#08306b">S1 1.00</text>
+<rect x="335.0" y="50.0" width="190.0" height="380.0" fill="#c6dbef" fill-opacity="0.75" stroke="#3182bd" stroke-width="0.8"/>
+<text x="430.0" y="240.0" text-anchor="middle" fill="#08306b">S2 0.60</text>
+</g>
+<polygon points="50.0,430.0 525.0,430.0 525.0,50.0 50.0,50.0" fill="none" stroke="#252525" stroke-width="1.2"/>
+<line x1="50.0" y1="430.0" x2="160.8" y2="430.0" stroke="#e6550d" stroke-width="5" stroke-opacity="0.7"/>
+<line x1="160.8" y1="430.0" x2="414.2" y2="430.0" stroke="#31a354" stroke-width="5" stroke-dasharray="4,3"/>
+<text x="287.5" y="422.0" text-anchor="middle" fill="#006d2c">door D1 0.80 m</text>
+<line x1="414.2" y1="430.0" x2="525.0" y2="430.0" stroke="#e6550d" stroke-width="5" stroke-opacity="0.7"/>
+<text x="287.5" y="450.0" text-anchor="middle" fill="#525252" font-size="10">1.50 m</text>
+<line x1="525.0" y1="430.0" x2="525.0" y2="50.0" stroke="#e6550d" stroke-width="5" stroke-opacity="0.7"/>
+<text x="541.0" y="244.0" text-anchor="middle" fill="#525252" font-size="10">1.20 m</text>
+<line x1="525.0" y1="50.0" x2="50.0" y2="50.0" stroke="#e6550d" stroke-width="5" stroke-opacity="0.7"/>
+<text x="287.5" y="38.0" text-anchor="middle" fill="#525252" font-size="10">1.50 m</text>
+<line x1="50.0" y1="50.0" x2="50.0" y2="430.0" stroke="#e6550d" stroke-width="5" stroke-opacity="0.7"/>
+<text x="34.0" y="244.0" text-anchor="middle" fill="#525252" font-size="10">1.20 m</text>
+<text x="50" y="498" fill="#252525">WP-W: ALONG_Y, 2 strips (last 0.60 m), band 0.30 m, pieces [0.40, 1.50, 1.50, 1.50] m</text>
+<text x="50" y="512" fill="#252525">A 1.80 m2, upturn 0.92 m2, B 3.63 m2, consumed 3.90 m2, 1 roll(s); orange = upturn band, green = doorway / open edge</text>
+</svg>

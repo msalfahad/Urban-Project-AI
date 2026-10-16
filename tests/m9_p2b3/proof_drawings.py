@@ -31,6 +31,16 @@ BATH1_POINT_M = (2.2, 1.6)                     # a point inside BATH1 (metres) f
 
 def bathrooms(path):
     import ezdxf
+    # fixed header dates, GUIDs and writer marks, so the same drawing has the same SHA-256 (a rules sheet binds to it)
+    fixed = ezdxf.options.write_fixed_meta_data_for_testing
+    ezdxf.options.write_fixed_meta_data_for_testing = True
+    try:
+        return _bathrooms(ezdxf, path)
+    finally:
+        ezdxf.options.write_fixed_meta_data_for_testing = fixed
+
+
+def _bathrooms(ezdxf, path):
     doc = ezdxf.new("R2018")
     doc.header["$INSUNITS"] = 4
     blk = doc.blocks.new("DOOR1000")
@@ -42,5 +52,7 @@ def bathrooms(path):
     msp.add_text(title, dxfattribs={"layer": "A-TITLE", "height": 500}).set_placement((x0 + 2000, y0 + 1500))
     AS._plan(msp, rooms=PD1_ROOMS, outer=PD1_OUTER, labels=PD1_LABELS, words=PD1_WORDS, openings=PD1_OPENINGS,
              columns=(), level="+0.00", treads=(), origin=org, dx=0.0, dy=0.0, mirror=False, quarter_turns=0)
+    doc.classes.add_required_classes(doc.dxfversion)          # the writer's class order follows the hash seed
+    doc.classes.classes = dict(sorted(doc.classes.classes.items()))
     doc.saveas(str(path))
     return str(path)

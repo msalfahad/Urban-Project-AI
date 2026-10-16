@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="520" viewBox="0 0 760 520" font-family="Arial" font-size="11">
+<rect width="760" height="520" fill="#ffffff"/>
+<defs><clipPath id="room"><polygon points="50.0,430.0 556.7,430.0 556.7,50.0 50.0,50.0"/></clipPath></defs>
+<g clip-path="url(#room)">
+<rect x="50.0" y="303.3" width="506.7" height="126.7" fill="#9ecae1" fill-opacity="0.75" stroke="#3182bd" stroke-width="0.8"/>
+<text x="303.3" y="366.7" text-anchor="middle" fill="#08306b">S1 1.00</text>
+<rect x="50.0" y="195.7" width="506.7" height="126.7" fill="#c6dbef" fill-opacity="0.75" stroke="#3182bd" stroke-width="0.8"/>
+<text x="303.3" y="259.0" text-anchor="middle" fill="#08306b">S2 1.00</text>
+<rect x="50.0" y="88.0" width="506.7" height="126.7" fill="#9ecae1" fill-opacity="0.75" stroke="#3182bd" stroke-width="0.8"/>
+<text x="303.3" y="151.3" text-anchor="middle" fill="#08306b">S3 1.00</text>
+<rect x="50.0" y="50.0" width="506.7" height="57.0" fill="#c6dbef" fill-opacity="0.75" stroke="#3182bd" stroke-width="0.8"/>
+<text x="303.3" y="78.5" text-anchor="middle" fill="#08306b">S4 0.45</text>
+</g>
+<polygon points="50.0,430.0 556.7,430.0 556.7,50.0 50.0,50.0" fill="none" stroke="#252525" stroke-width="1.2"/>
+<line x1="50.0" y1="430.0" x2="240.0" y2="430.0" stroke="#e6550d" stroke-width="5" stroke-opacity="0.7"/>
+<line x1="240.0" y1="430.0" x2="366.7" y2="430.0" stroke="#31a354" stroke-width="5" stroke-dasharray="4,3"/>
+<text x="303.3" y="422.0" text-anchor="middle" fill="#006d2c">door D1 1.00 m</text>
+<line x1="366.7" y1="430.0" x2="556.7" y2="430.0" stroke="#e6550d" stroke-width="5" stroke-opacity="0.7"/>
+<text x="303.3" y="450.0" text-anchor="middle" fill="#525252" font-size="10">4.00 m</text>
+<line x1="556.7" y1="430.0" x2="556.7" y2="50.0" stroke="#e6550d" stroke-width="5" stroke-opacity="0.7"/>
+<text x="572.7" y="244.0" text-anchor="middle" fill="#525252" font-size="10">3.00 m</text>
+<line x1="556.7" y1="50.0" x2="50.0" y2="50.0" stroke="#e6550d" stroke-width="5" stroke-opacity="0.7"/>
+<text x="303.3" y="38.0" text-anchor="middle" fill="#525252" font-size="10">4.00 m</text>
+<line x1="50.0" y1="50.0" x2="50.0" y2="430.0" stroke="#e6550d" stroke-width="5" stroke-opacity="0.7"/>
+<text x="34.0" y="244.0" text-anchor="middle" fill="#525252" font-size="10">3.00 m</text>
+<text x="50" y="498" fill="#252525">WP-LX: ALONG_X, 4 strips (last 0.45 m), band 0.35 m, pieces [3.00, 5.15, 5.15] m</text>
+<text x="50" y="512" fill="#252525">A 12.00 m2, upturn 2.60 m2, B 18.805 m2, consumed 21.15 m2, 3 roll(s); orange = upturn band, green = doorway / open edge</text>
+</svg>

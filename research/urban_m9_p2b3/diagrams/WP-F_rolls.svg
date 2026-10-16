@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" font-family="Arial" font-size="10">
+<rect width="900" height="560" fill="#ffffff"/>
+<defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#bdbdbd" stroke-width="2"/></pattern></defs>
+<text x="20" y="14" font-size="12" fill="#252525">WP-F roll plan (V2.5): 10 roll(s), consumed 92.14 m2</text>
+<text x="20" y="47.0" fill="#252525">roll 1</text>
+<rect x="140.0" y="30" width="700.0" height="26" fill="#9ecae1" stroke="#525252" stroke-width="0.8"/>
+<text x="490.0" y="47.0" text-anchor="middle">10.00</text>
+<text x="490.0" y="67" text-anchor="middle" font-size="8" fill="#525252">floor strip 1</text>
+<text x="20" y="97.0" fill="#252525">roll 2</text>
+<rect x="140.0" y="80" width="700.0" height="26" fill="#9ecae1" stroke="#525252" stroke-width="0.8"/>
+<text x="490.0" y="97.0" text-anchor="middle">10.00</text>
+<text x="490.0" y="117" text-anchor="middle" font-size="8" fill="#525252">floor strip 2</text>
+<text x="20" y="147.0" fill="#252525">roll 3</text>
+<rect x="140.0" y="130" width="700.0" height="26" fill="#9ecae1" stroke="#525252" stroke-width="0.8"/>
+<text x="490.0" y="147.0" text-anchor="middle">10.00</text>
+<text x="490.0" y="167" text-anchor="middle" font-size="8" fill="#525252">floor strip 3</text>
+<text x="20" y="197.0" fill="#252525">roll 4</text>
+<rect x="140.0" y="180" width="700.0" height="26" fill="#9ecae1" stroke="#525252" stroke-width="0.8"/>
+<text x="490.0" y="197.0" text-anchor="middle">10.00</text>
+<text x="490.0" y="217" text-anchor="middle" font-size="8" fill="#525252">floor strip 4</text>
+<text x="20" y="247.0" fill="#252525">roll 5</text>
+<rect x="140.0" y="230" width="700.0" height="26" fill="#9ecae1" stroke="#525252" stroke-width="0.8"/>
+<text x="490.0" y="247.0" text-anchor="middle">10.00</text>
+<text x="490.0" y="267" text-anchor="middle" font-size="8" fill="#525252">floor strip 5</text>
+<text x="20" y="297.0" fill="#252525">roll 6</text>
+<rect x="140.0" y="280" width="700.0" height="26" fill="#9ecae1" stroke="#525252" stroke-width="0.8"/>
+<text x="490.0" y="297.0" text-anchor="middle">10.00</text>
+<text x="490.0" y="317" text-anchor="middle" font-size="8" fill="#525252">floor strip 6</text>
+<text x="20" y="347.0" fill="#252525">roll 7</text>
+<rect x="140.0" y="330" width="700.0" height="26" fill="#9ecae1" stroke="#525252" stroke-width="0.8"/>
+<text x="490.0" y="347.0" text-anchor="middle">10.00</text>
+<text x="490.0" y="367" text-anchor="middle" font-size="8" fill="#525252">floor strip 7</text>
+<text x="20" y="397.0" fill="#252525">roll 8</text>
+<rect x="140.0" y="380" width="520.8" height="26" fill="#fdae6b" stroke="#525252" stroke-width="0.8"/>
+<text x="400.4" y="397.0" text-anchor="middle">7.44</text>
+<text x="400.4" y="417" text-anchor="middle" font-size="8" fill="#525252">upturn lanes</text>
+<rect x="660.8" y="380" width="147.0" height="26" fill="#9ecae1" stroke="#525252" stroke-width="0.8"/>
+<text x="734.3" y="397.0" text-anchor="middle">2.10</text>
+<text x="734.3" y="417" text-anchor="middle" font-size="8" fill="#525252">floor strip 1</text>
+<rect x="807.8" y="380" width="32.2" height="26" fill="url(#hatch)" stroke="#525252" stroke-width="0.8"/>
+<text x="823.9" y="397.0" text-anchor="middle" fill="#525252">0.46 left</text>
+<text x="20" y="447.0" fill="#252525">roll 9</text>
+<rect x="140.0" y="430" width="147.0" height="26" fill="#9ecae1" stroke="#525252" stroke-width="0.8"/>
+<text x="213.5" y="447.0" text-anchor="middle">2.10</text>
+<text x="213.5" y="467" text-anchor="middle" font-size="8" fill="#525252">floor strip 2</text>
+<rect x="287.0" y="430" width="147.0" height="26" fill="#9ecae1" stroke="#525252" stroke-width="0.8"/>
+<text x="360.5" y="447.0" text-anchor="middle">2.10</text>
+<text x="360.5" y="467" text-anchor="middle" font-size="8" fill="#525252">floor strip 3</text>
+<rect x="434.0" y="430" width="147.0" height="26" fill="#9ecae1" stroke="#525252" stroke-width="0.8"/>
+<text x="507.5" y="447.0" text-anchor="middle">2.10</text>
+<text x="507.5" y="467" text-anchor="middle" font-size="8" fill="#525252">floor strip 4</text>
+<rect x="581.0" y="430" width="147.0" height="26" fill="#9ecae1" stroke="#525252" stroke-width="0.8"/>
+<text x="654.5" y="447.0" text-anchor="middle">2.10</text>
+<text x="654.5" y="467" text-anchor="middle" font-size="8" fill="#525252">floor strip 5</text>
+<rect x="728.0" y="430" width="112.0" height="26" fill="url(#hatch)" stroke="#525252" stroke-width="0.8"/>
+<text x="784.0" y="447.0" text-anchor="middle" fill="#525252">1.60 left</text>
+<text x="20" y="497.0" fill="#252525">roll 10</text>
+<rect x="140.0" y="480" width="147.0" height="26" fill="#9ecae1" stroke="#525252" stroke-width="0.8"/>
+<text x="213.5" y="497.0" text-anchor="middle">2.10</text>
+<text x="213.5" y="517" text-anchor="middle" font-size="8" fill="#525252">floor strip 6</text>
+<rect x="287.0" y="480" width="147.0" height="26" fill="#9ecae1" stroke="#525252" stroke-width="0.8"/>
+<text x="360.5" y="497.0" text-anchor="middle">2.10</text>
+<text x="360.5" y="517" text-anchor="middle" font-size="8" fill="#525252">floor strip 7</text>
+<rect x="434.0" y="480" width="406.0" height="26" fill="url(#hatch)" stroke="#525252" stroke-width="0.8"/>
+<text x="637.0" y="497.0" text-anchor="middle" fill="#525252">5.80 left</text>
+</svg>
