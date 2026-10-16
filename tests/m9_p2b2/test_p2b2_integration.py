@@ -251,6 +251,12 @@ def test_before_after_waterproofing_and_doors_on_the_villa(tmp_path):
     assert Counter(r["feasibility"] for r in df["rows"]) == {"ENLARGEMENT_GEOMETRICALLY_POSSIBLE": 3,
                                                               "ENLARGEMENT_REQUIRES_ENGINEERING_REVIEW": 2,
                                                               "INSUFFICIENT_DRAWING_EVIDENCE": 1}
+    # a side read only to the 3.00 m reach (OPEN_RUN) makes the maximum enlargement a lower bound, never exact
+    props = [r for r in df["rows"] if r.get("proposed_modification") and r.get("clearances")]
+    assert any(c["constraint"] == "OPEN_RUN" for r in props for c in r["clearances"].values())
+    for r in props:
+        open_run = any(c["constraint"] == "OPEN_RUN" for c in r["clearances"].values())
+        assert r["proposed_modification"]["max_feasible_is_lower_bound"] is open_run, r["opening_id"]
     bs = a24["boq_scenarios"]
     assert {"AS_DRAWN", "OWNER_STANDARD", "PROPOSED_MODIFICATION", "WATERPROOFING_PROCUREMENT"} <= set(bs)
     assert "PROPOSED_MODIFICATION" not in json.dumps(bs["AS_DRAWN"])
