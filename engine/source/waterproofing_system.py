@@ -35,6 +35,8 @@ from engine.source import membrane_layout as ML
 
 POLICY_ID = "WATERPROOFING_SYSTEM_V1"
 METHOD = "MEMBRANE_POLYGON_STRIPS_V2_4"
+# ARCH_TAKEOFF_V2.5 (Phase 2B-3): the layout with membrane_layout's proven band planner (build_area(..., v25=True))
+METHOD_V25 = "MEMBRANE_POLYGON_STRIPS_V2_5"
 TOL_M = 0.02
 WET, EXTERIOR = "WET", "EXTERIOR"
 DEFAULT_SYSTEM = {WET: "URBAN_DEFAULT_WET_AREA", EXTERIOR: "URBAN_DEFAULT_EXTERIOR"}
@@ -363,9 +365,14 @@ def room_layout(area, spec, c):
         sf["runs"] = {"runs": [], "approximate": False}
     cc = {"upturn_h_m": h, "doorways": pieces, "doorway_detail": "SEPARATE_RETURN",
           "min_reusable_m": c.get("min_reusable_m"), "penetrations": 0, "rule_refs": c.get("rule_refs", ())}
+    method = METHOD
+    if c.get("band_planner"):                                   # ARCH_TAKEOFF_V2.5
+        cc["band_planner"], method = c["band_planner"], METHOD_V25
+        if c.get("detail_pieces"):
+            cc["detail_pieces"] = c["detail_pieces"]
     try:
         fl = ML._poly_floor(sf, spec)
-        opts = [ML._one(sf, spec, cc, d, loc, geo, floor_fn=fl, method=METHOD) for d in ("ALONG_X", "ALONG_Y")]
+        opts = [ML._one(sf, spec, cc, d, loc, geo, floor_fn=fl, method=method) for d in ("ALONG_X", "ALONG_Y")]
     except ML.MembraneError as ex:
         return ML.WP.blocked(method=METHOD, spec=spec, reason=f"WP_LAYOUT_BLOCKED: {ex}", location=loc,
                              line_id=geo["line_id"])
@@ -397,8 +404,9 @@ def _treatment_qty(tr, count):
     return {"pcs": count, "m2": None, "name": tr.get("name")}
 
 
-def build_area(area, resolver):
-    """resolve the area's values, its transitions, corners and penetrations, its layout and its schedule row."""
+def build_area(area, resolver, *, v25=False):
+    """resolve the area's values, its transitions, corners and penetrations, its layout and its schedule row.
+    v25 (ARCH_TAKEOFF_V2.5): the layout uses membrane_layout's proven band planner (MIN_SEGMENT_V2_5)."""
     t = target_of(area)
     spec, basis, sysinfo = system_spec(resolver, t, area["scope"])
     tr = transitions(area, basis)
@@ -408,11 +416,15 @@ def build_area(area, resolver):
     # them and the jamb returns of JAMB_RETURNS added as short runs
     runs = [dict(r) for r in area["boundary"]["runs"]]
     approx = area["boundary"].get("approximate", False)
-    for x in tr:
-        if x.get("selected") == "UPTURN_ACROSS_THRESHOLD":
-            runs.append({"length_m": x["width_m"], "closed": False})
-        elif x.get("selected") == "JAMB_RETURNS" and x.get("depth_m"):
-            runs += [{"length_m": x["depth_m"], "closed": False}] * 2
+    topology = _v25_band_topology(area, tr) if v25 else None
+    if topology is not None:
+        runs = topology
+    else:
+        for x in tr:
+            if x.get("selected") == "UPTURN_ACROSS_THRESHOLD":
+                runs.append({"length_m": x["width_m"], "closed": False})
+            elif x.get("selected") == "JAMB_RETURNS" and x.get("depth_m"):
+                runs += [{"length_m": x["depth_m"], "closed": False}] * 2
     unresolved_tr = [x for x in tr if x["state"] == "UNRESOLVED"]
     for x in unresolved_tr:
         withheld.append({"what": f"{x['type']} {x.get('opening_id') or x['kind']}", "range_m2": x.get("range_m2"),
@@ -454,10 +466,93 @@ def build_area(area, resolver):
     c = {"upturn_h_m": h, "runs": runs, "runs_approximate": approx, "details": details, "concerns": concerns,
          "min_reusable_m": basis["min_reusable_m"]["value"], "blocked": sysinfo["blocked"],
          "rule_refs": [K.ref(x) for x in ("UP-WP-001", "UP-WP-002", "UP-WP-003", "UP-WP-004", "UP-WP-LAY-001")]}
+    if v25:
+        c["band_planner"] = ML.BAND_MIN_SEGMENT
+        c["detail_pieces"] = _v25_detail_pieces(corner_q, ct, pen_q, pt)
+        if any(x.get("selected") in ("UPTURN_ACROSS_THRESHOLD", "JAMB_RETURNS") for x in tr) and topology is None:
+            concerns.append("WP_BAND_TOPOLOGY_APPROXIMATED: a resolved doorway detail on an area with more than one "
+                            "boundary break is added as separate band runs (their joints to the wall upturn are not "
+                            "lapped)")
     lay = room_layout(area, spec, c)
     area = dict(area, basis=basis, system=sysinfo, transitions=tr, withheld=withheld, layout=lay, details=details)
+    if v25:
+        area["v25"] = _v25_material_basis(area, spec, c, tr, runs)
     area["row"] = area_schedule(area)
     return area
+
+
+# ------------------------------------------------------------------------------------------------ V2.5
+def _v25_band_topology(area, tr):
+    """ARCH_TAKEOFF_V2.5: the band runs of a resolved doorway detail on an area whose outer ring has exactly one
+    break (the door) and one open run - the common wet room. UPTURN_ACROSS_THRESHOLD closes the loop (the upturn
+    follows the room line across the door: one closed band of eligible + door width, lapped at every joint);
+    JAMB_RETURNS extends the open run around both jambs (+ 2 x wall depth). None: keep the V2.4 runs (other cases)."""
+    sel = [x for x in tr if x.get("selected") in ("UPTURN_ACROSS_THRESHOLD", "JAMB_RETURNS")]
+    base = area["boundary"]["runs"]
+    open_runs = [r for r in base if not r["closed"]]
+    if len(sel) != 1 or len(open_runs) != 1 or area["breaks"] or len(area["doorways"]) != 1 or \
+            area["boundary"].get("approximate"):
+        return None
+    x, r = sel[0], open_runs[0]
+    i = base.index(r)
+    if x["selected"] == "UPTURN_ACROSS_THRESHOLD":
+        new = {"length_m": round(r["length_m"] + x["width_m"], 6), "closed": True}
+    elif x.get("depth_m"):
+        new = {"length_m": round(r["length_m"] + 2 * x["depth_m"], 6), "closed": False}
+    else:
+        return None
+    return [dict(b) for b in base[:i]] + [new] + [dict(b) for b in base[i + 1:]]
+
+
+def _v25_detail_pieces(corner_q, ct, pen_q, pt):
+    """the membrane patches of a resolved PATCH detail (corners, penetrations), cut from the area's own membrane."""
+    out = []
+    for what, q, t in (("corner patch", corner_q, ct), ("penetration patch", pen_q, pt)):
+        if q and q.get("m2") is not None and t and t.get("kind") == "PATCH" and q["pcs"]:
+            out.append({"what": what, "a_m": t["size_m"][0], "b_m": t["size_m"][1], "count": q["pcs"]})
+    return out
+
+
+def _v25_material_basis(area, spec, c, tr, runs):
+    """ARCH_TAKEOFF_V2.5: what the material quantity rests on - the proven geometric subtotal (A + wall upturn +
+    doorway continuation), the installed membrane of the layout, the detailing it includes, what it does not include
+    (each unresolved item) and the roll count if every unresolved doorway transition took the alternative with the
+    most membrane (UPTURN_ACROSS_THRESHOLD) - so a roll count never silently omits an open detail."""
+    lay = area["layout"]
+    h = c["upturn_h_m"]
+    elig = area["boundary"]["eligible_lm"]
+    cont = sum(p["width_m"] * p["depth_m"] for p in area["continuation_pieces"])
+    comp = {x["component"]: x for x in lay.get("components") or ()}
+    det_m2 = (comp.get("detailing") or {}).get("laid_m2", 0.0)
+    out = {"proven_subtotal": {"A_net_m2": area["net_m2"], "wall_upturn_m2": None if h is None else round(elig * h, 6),
+                               "doorway_continuation_m2": round(cont, 6),
+                               "total_m2": None if h is None else round(area["net_m2"] + elig * h + cont, 6),
+                               "basis": "measured geometry x approved standards (UP-WP-003, UP-WP-DOOR-001 "
+                                        "continuation); excludes laps, transitions, detailing"},
+           "detailing_m2": round(det_m2, 6),
+           "not_included": [w for w in area["withheld"]],
+           "final_material_state": "BLOCKED" if lay["state"] == "BLOCKED" else (
+               "COMPLETE_BASIS" if not area["withheld"] else "PROVISIONAL_DETAILS_OPEN")}
+    open_dw = [x for x in tr if x["kind"] == "DOORWAY" and x["state"] == "UNRESOLVED"]
+    if lay["state"] == "BLOCKED" or not open_dw:
+        out["roll_sensitivity"] = None
+        return out
+    hyp = [dict(x, selected="UPTURN_ACROSS_THRESHOLD") for x in tr if x["kind"] == "DOORWAY" and
+           x["state"] == "UNRESOLVED"]
+    topo = _v25_band_topology(area, hyp) if len(hyp) == 1 else None
+    runs2 = topo if topo is not None else [dict(r) for r in runs] + [{"length_m": x["width_m"], "closed": False}
+                                                                       for x in hyp]
+    c2 = dict(c, runs=runs2, concerns=list(c["concerns"]))
+    lay2 = room_layout(area, spec, c2)
+    out["roll_sensitivity"] = {
+        "rolls_as_computed": lay["units"]["consumed_units"],
+        "rolls_if_every_open_doorway_is_upturned": lay2["units"]["consumed_units"],
+        "consumed_m2_if_upturned": lay2["consumed_m2"],
+        "changes_roll_count": lay2["units"]["consumed_units"] != lay["units"]["consumed_units"],
+        "exact_topology": topo is not None,
+        "note": "UPTURN_ACROSS_THRESHOLD is the alternative with the most membrane; corners and penetrations "
+                "without a detail have no size and cannot be included"}
+    return out
 
 
 def area_schedule(area):
@@ -509,7 +604,19 @@ def area_schedule(area):
             "rules": ["UP-WP-001", "UP-WP-002", "UP-WP-003", "UP-WP-004", "UP-WP-MAT-001", "UP-WP-LAY-001",
                       "UP-WP-DOOR-001", "UP-RULES-001"],
             "basis": {k: {"value": v["value"], "state": v["state"], "project_rule_ids": v["project_rule_ids"]}
-                      for k, v in b.items()}}
+                      for k, v in b.items()},
+            **(_v25_row(area) if area.get("v25") else {})}
+
+
+def _v25_row(area):
+    v = area["v25"]
+    lay = area["layout"]
+    det = v["detailing_m2"]
+    return {"laps_m2": None if lay.get("overlap_m2") is None else round(lay["overlap_m2"] - det, 6),
+            "detailing_m2": det, "proven_subtotal": v["proven_subtotal"],
+            "final_material_state": v["final_material_state"], "roll_sensitivity": v["roll_sensitivity"],
+            "roll_packing": (lay.get("layout") or {}).get("roll_packing"),
+            "band_segments": ((lay.get("layout") or {}).get("band_planner") or {}).get("segments")}
 
 
 def _range(rs):
@@ -520,9 +627,11 @@ def _range(rs):
 
 
 # ------------------------------------------------------------------------------------------------ procurement
-def cutting_plan(areas):
+def cutting_plan(areas, *, exact=False):
     """per membrane system (system id + roll + lap): every computed area's full-width pieces cut from shared rolls,
-    first fit decreasing (deterministic). A roll remainder is reused only where the plan cuts a piece from it."""
+    first fit decreasing (deterministic). A roll remainder is reused only where the plan cuts a piece from it.
+    exact (ARCH_TAKEOFF_V2.5): the fewest rolls for the same pieces (membrane_layout.pack_rolls: first fit decreasing
+    unless it misses the lower bound, then an exact search), the sharing conditions of each roll recorded."""
     groups = {}
     for a in areas:
         lay = a["layout"]
@@ -539,7 +648,15 @@ def cutting_plan(areas):
                     pieces.append((s["length_m"], a["room_id"], r["roll"], k, s["for"]))
         pieces.sort(key=lambda p: (-p[0], p[1], p[2], p[3]))
         rolls = []
-        for ln, rid, rr, k, why in pieces:
+        packing = None
+        if exact:
+            bins, packing = ML.pack_rolls([p[0] for p in pieces], L)
+            for b_ in bins:
+                rolls.append({"roll": len(rolls) + 1, "pieces": [{"room_id": pieces[i][1],
+                                                                  "length_m": round(pieces[i][0], 4),
+                                                                  "for": pieces[i][4]} for i in b_],
+                              "cut_m": round(sum(pieces[i][0] for i in b_), 6)})
+        for ln, rid, rr, k, why in (() if exact else pieces):
             for roll in rolls:
                 if L - roll["cut_m"] >= ln - 1e-6:
                     roll["pieces"].append({"room_id": rid, "length_m": round(ln, 4), "for": why})
@@ -548,9 +665,16 @@ def cutting_plan(areas):
             else:
                 rolls.append({"roll": len(rolls) + 1, "pieces": [{"room_id": rid, "length_m": round(ln, 4),
                                                                    "for": why}], "cut_m": round(ln, 6)})
+        floor_of = {a["room_id"]: a["floor"] for a in members}
         for roll in rolls:
             roll["untouched_tail_m"] = round(L - roll["cut_m"], 6)
             roll["areas"] = sorted({p["room_id"] for p in roll["pieces"]})
+            if exact:
+                fl = sorted({floor_of[r] for r in roll["areas"]})
+                roll["sharing"] = {"areas": len(roll["areas"]), "floors": fl,
+                                   "review": ("ROLL_CARRIED_BETWEEN_FLOORS: a part roll serves more than one floor - "
+                                              "confirm it can be carried (owner / contractor)") if len(fl) > 1
+                                   else None}
         consumed = sum(p[0] for p in pieces) * W
         alone = sum(a["layout"]["units"]["consumed_units"] for a in members)
         rows = [a["row"] for a in members]
@@ -573,6 +697,12 @@ def cutting_plan(areas):
                     "reusable_offcuts_m2": round(sum(r["reusable_offcuts_m2"] for r in rows), 6),
                     "roll_count_state": "CONFIRMED" if not reasons else "PROVISIONAL", "why_not_confirmed": reasons,
                     "withheld_detailing": withheld, "cutting_plan": rolls,
+                    **({"packing": packing, "sharing_conditions": [
+                        "one membrane system, roll size and lap (never across systems)",
+                        "only full-width pieces cut from a roll's untouched remainder; band lanes, trims and other "
+                        "narrow offcuts stay with the area that produced them",
+                        "a piece is cut from a remainder only when it fits its length",
+                        "a part roll serving more than one floor is flagged for review"]} if exact else {}),
                     "balance": "gross = consumed (pieces) + untouched tails; consumed = installed + cutting waste + "
                                "retained offcuts (per area)",
                     "never": "combined with another membrane system"})

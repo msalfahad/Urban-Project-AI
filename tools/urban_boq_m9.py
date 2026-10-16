@@ -64,7 +64,7 @@ POLICY_ID = "URBAN_BOQ_M9_S1"
 ARCH_POLICY_ID = "URBAN_BOQ_M9_S2_ARCH"
 ARCH_POLICY_ID_V2 = "URBAN_BOQ_M9_S6_ARCH_V2"
 ARCH_METHODS = ("ARCH_TAKEOFF_V1", "ARCH_TAKEOFF_V2", "ARCH_TAKEOFF_V2.1", "ARCH_TAKEOFF_V2.2", "ARCH_TAKEOFF_V2.3",
-                "ARCH_TAKEOFF_V2.4")
+                "ARCH_TAKEOFF_V2.4", "ARCH_TAKEOFF_V2.5")
 # S6: ARCH_TAKEOFF_V2 = V1 + drawing admission (stop, exit 2, no BOQ on a fatal finding) + unit-relative geometric
 # tolerances + plan regions cut only along empty bands + floor-category and finish-surface completeness. V1 is
 # unchanged; --strict-admission puts the same admission in front of V1 (its outputs are V1's own).
@@ -94,6 +94,14 @@ ARCH_POLICY_ID_V23 = "URBAN_BOQ_M9_P2B1_ARCH_V2_3"
 # each door category's height. Opt-in only: V1 .. V2.3 never reach it (V2.3 keeps registry 1.0.0).
 V24 = "ARCH_TAKEOFF_V2.4"
 ARCH_POLICY_ID_V24 = "URBAN_BOQ_M9_P2B2_ARCH_V2_4"
+# Phase 2B-3: ARCH_TAKEOFF_V2.5 = ARCH_TAKEOFF_V2.4 + the corrections proven by the engineering calculation proof library
+# (tests/m9_p2b3: independent hand calculations, an independent reference calculator): the shortest band segment, the
+# roll-tail band option and exact roll packing, membrane patches of a resolved detail in B and in the rolls, the band
+# topology of a resolved doorway detail, the material basis (proven subtotal / provisional final / roll sensitivity to
+# open doorway details), the project rules bound to the drawing's sha256, the BOQ traceability chain. Opt-in only:
+# no earlier method reaches it (their call paths pass no v25 flag).
+V25 = "ARCH_TAKEOFF_V2.5"
+ARCH_POLICY_ID_V25 = "URBAN_BOQ_M9_P2B3_ARCH_V2_5"
 M9_DIR = "m9"
 CREATED = datetime(2026, 1, 1)
 
@@ -228,7 +236,7 @@ class CompletenessFailed(Exception):
 
 def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_areas=None, project_id=None, intake=None,
                  strict=False, units=None, region_specs=None, accept_xrefs=(), extra_documents=(),
-                 admission_findings=(), decisions=None, project_rules=None):
+                 admission_findings=(), decisions=None, project_rules=None, independent_checks=None):
     """the architectural route on one plan drawing (see _arch_compute). ARCH_TAKEOFF_V2.4 runs inside the knowledge
     registry 1.1.0 (engine.source.knowledge.using) and takes the project rules (URBAN_PROJECT_RULES_V1); every other
     method runs exactly as before (registry 1.0.0 for V2.3, the rule store for V1 .. V2.2)."""
@@ -236,18 +244,22 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
               project_id=project_id, intake=intake, strict=strict, units=units, region_specs=region_specs,
               accept_xrefs=accept_xrefs, extra_documents=extra_documents, admission_findings=admission_findings,
               decisions=decisions)
-    if method == V24:
+    if independent_checks is not None and method != V25:
+        raise SystemExit("--independent-checks (URBAN_INDEPENDENT_CHECKS_V1) needs --method ARCH_TAKEOFF_V2.5")
+    if method in (V24, V25):
         from engine.source import knowledge as K
         with K.using("1.1.0"):
-            return _arch_compute(drawing, project_rules=project_rules, **kw)
+            return _arch_compute(drawing, project_rules=project_rules,
+                                 **({"independent_checks": independent_checks} if method == V25 else {}), **kw)
     if project_rules is not None:
-        raise SystemExit("--project-rules (URBAN_PROJECT_RULES_V1) needs --method ARCH_TAKEOFF_V2.4")
+        raise SystemExit("--project-rules (URBAN_PROJECT_RULES_V1) needs --method ARCH_TAKEOFF_V2.4 or "
+                         "ARCH_TAKEOFF_V2.5")
     return _arch_compute(drawing, **kw)
 
 
 def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_areas=None, project_id=None, intake=None,
                   strict=False, units=None, region_specs=None, accept_xrefs=(), extra_documents=(),
-                  admission_findings=(), decisions=None, project_rules=None):
+                  admission_findings=(), decisions=None, project_rules=None, independent_checks=None):
     """the architectural route on one plan drawing: every stage recorded, nothing silently skipped. `intake` (the
     urban_intake.read result of this same drawing) skips the read for repeated runs / tests.
     S6: method ARCH_TAKEOFF_V2, or strict=True (V1 behind the same admission), run the drawing discovery first and
@@ -262,11 +274,12 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
     from tools import urban_intake as UI
     if method not in ARCH_METHODS:
         raise SystemExit(f"--method must be one of {ARCH_METHODS} (the architectural route is behind a versioned flag)")
-    v24 = method == V24                                       # V2.3 plus the registry 1.1.0 and the project rules
-    v23 = method in (V23, V24)                                # V2.3 is V2.2 plus the knowledge registry
-    v22 = method in (V22, V23, V24)                           # V2.2 is V2.1 plus the Phase 2B-0 corrections
-    v21 = method in (V21, V22, V23, V24)
-    v2 = method in (V2, V21, V22, V23, V24)                   # V2.1 is V2 plus the Phase 2A additions
+    v25 = method == V25                                       # ARCH_TAKEOFF_V2.4 plus the proven corrections
+    v24 = method in (V24, V25)                                # V2.3 plus the registry 1.1.0 and the project rules
+    v23 = method in (V23, V24, V25)                           # V2.3 is V2.2 plus the knowledge registry
+    v22 = method in (V22, V23, V24, V25)                      # V2.2 is V2.1 plus the Phase 2B-0 corrections
+    v21 = method in (V21, V22, V23, V24, V25)
+    v2 = method in (V2, V21, V22, V23, V24, V25)              # V2.1 is V2 plus the Phase 2A additions
     admit = v2 or strict
     if not admit and (units or region_specs or accept_xrefs):
         raise SystemExit("--units / --region / --accept-missing-xref are reviewer inputs of the admission: use them "
@@ -549,7 +562,9 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
     if v24:
         # Phase 2B-2: the rules sheet (bound to the drawing's elements), then every rule-dependent quantity
         lines, mats, unresolved, v24_out = _v24_stage(v24_floors, doors, lines, mats, unresolved, facts, decisions,
-                                                      project_rules, pid, rev, docs, u)
+                                                      project_rules, pid, rev, docs, u,
+                                                      **({"v25": True, "independent": independent_checks}
+                                                         if v25 else {}))
     by_room = {r["room_id"]: r for r in rooms}
     reg_of = {r["floor"]: r for r in regions}
     unresolved = [AM.flag(u_, drawing=path.name, region=reg_of.get(u_.get("floor")), room=by_room.get(u_.get("room_id")))
@@ -611,6 +626,10 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
                        "waterproofing": v24_out["waterproofing"]["project"],
                        "door_feasibility": v24_out["door_feasibility"]["summary"],
                        "approvals": len(v24_out["approvals"])}
+        if v25:
+            run.update(policy=ARCH_POLICY_ID_V25)
+            run["v2_5"] = {"corrections": list(V25_CORRECTIONS), "drawing_binding": v24_out["drawing_binding"],
+                           "traceability": v24_out["traceability"]["summary"]}
     if admit:
         _finish_discovery(report, E, facts, regions, lines, coverage if v2 else None,
                           entity_checks={"column_evidence": column_ev, "door_symbols": arc_recs,
@@ -712,7 +731,38 @@ def _v23_outputs(arch, room_boq, rooms, openings, doors, facts, decisions, decid
                            "decisions": sm["decisions"]}
 
 
-def _v24_stage(floors, doors, lines, mats, unresolved, facts, decisions, project_rules, pid, rev, docs, u):
+V25_CORRECTIONS = (
+    "D-V25-01 band segment: the shortest whose lanes finish the band (one end lap per lane, not two)",
+    "D-V25-02 a band segment that would open a roll is weighed against filling the largest open roll remainder",
+    "D-V25-03 rolls: exact packing of the cut pieces (first fit decreasing missed the minimum)",
+    "D-V25-04 membrane patches of a resolved corner / penetration detail are in B and in the rolls",
+    "D-V25-05 a resolved threshold upturn closes the band loop; jamb returns extend the run",
+    "D-V25-06 material basis: proven subtotal, provisional final requirement, roll count with every open doorway "
+    "upturned",
+    "D-V25-07 project rules bound to the drawing sha256 (a mismatch is refused)",
+    "D-V25-08 BOQ traceability chain (owner rule -> drawing evidence -> formula -> independent check -> engine -> "
+    "line)")
+
+
+def _v25_binding(doc, docs):
+    """ARCH_TAKEOFF_V2.5 (O-8): a project rules file names the drawing it was written for (drawing_sha256); another
+    drawing's file is refused; a file that names none is applied but flagged (PROJECT_RULES_NOT_BOUND)."""
+    sha = (docs[0] or {}).get("sha256")
+    named = doc.get("drawing_sha256")
+    if not doc.get("rules"):
+        return {"state": "NO_PROJECT_RULES", "drawing_sha256": sha}
+    if named is None:
+        return {"state": "PROJECT_RULES_NOT_BOUND", "drawing_sha256": sha,
+                "note": "the project rules file names no drawing_sha256: it is applied, but nothing proves it was "
+                        "written for this drawing"}
+    if named != sha:
+        raise SystemExit(f"PROJECT_RULES_DRAWING_MISMATCH: the project rules were written for drawing {named}, this "
+                         f"drawing is {sha} - refused (ARCH_TAKEOFF_V2.5, UP-RULES-001)")
+    return {"state": "BOUND", "drawing_sha256": sha}
+
+
+def _v24_stage(floors, doors, lines, mats, unresolved, facts, decisions, project_rules, pid, rev, docs, u, v25=False,
+               independent=None):
     """Phase 2B-2 (ARCH_TAKEOFF_V2.4): the Project Engineering Rules Sheet (project rules bound to the drawing's
     elements), then the quantities that depend on a rule value - the waterproofing system (the wet-room / exterior
     upturn, doorway transitions, terminations, penetrations, layouts, the cutting plan per membrane system), the door
@@ -721,6 +771,7 @@ def _v24_stage(floors, doors, lines, mats, unresolved, facts, decisions, project
     from engine.source import project_rules as PRJ
     from engine.source import waterproofing_system as WS
     doc = PRJ.load(project_rules if project_rules is not None else {"schema": PRJ.SCHEMA, "rules": []})
+    binding = _v25_binding(doc, docs) if v25 else None
     rooms_m, ops_m, walls_m = [], [], []
     for f in floors:
         rooms_m += [{"room_id": r["room_id"], "floor": f["floor"], "polygon_m": r["polygon_m"],
@@ -742,8 +793,8 @@ def _v24_stage(floors, doors, lines, mats, unresolved, facts, decisions, project
     for f in floors:
         mf = dict(f["M"], lines=[ln for ln in lines if ln["location"].get("floor") == f["floor"]])
         areas += WS.areas_from_floor(f["S"], mf, f["ents"], f["roles"], u, wp_room_ids=wp_ids)
-    built = [WS.build_area(a, resolver) for a in areas]
-    plans = WS.cutting_plan(built)
+    built = [WS.build_area(a, resolver, **({"v25": True} if v25 else {})) for a in areas]
+    plans = WS.cutting_plan(built, **({"exact": True} if v25 else {}))
     sched = WS.schedule(built, plans)
     wl, wu = WS.boq_lines(ctx, built, WS.wp_line)
     ids = {a["room_id"] for a in built}
@@ -756,7 +807,7 @@ def _v24_stage(floors, doors, lines, mats, unresolved, facts, decisions, project
                                     (m.get("location") or {}).get("room_id") in ids)] + [a["layout"] for a in built]
     contexts = {f["floor"]: DF.floor_context(f["S"], f["ents"], f["roles"], u, f["M"]["rooms"], f["floor"],
                                              walls=f["S"].get("walls")) for f in floors}
-    rep = DF.feasibility(doors, contexts, resolver=resolver, facts=facts)
+    rep = DF.feasibility(doors, contexts, resolver=resolver, facts=facts, **({"v25": True} if v25 else {}))
     lines, ju = DF.jamb_plaster_lines(ctx, lines, doors, resolver, facts, WS.wp_line)
     unresolved += ju
     # one question per conflict (its C- row), per unbound and per unsupported project rule
@@ -775,8 +826,18 @@ def _v24_stage(floors, doors, lines, mats, unresolved, facts, decisions, project
             approvals.append({"subject": "PROJECT_RULES", "row_id": r["row_id"], "who": "project consultant",
                               "what": r["notes"]})
     sheet = dict(sheet, usage=resolver.usage())
-    return lines, mats, unresolved, {"rules_sheet": sheet, "waterproofing": sched, "door_feasibility": rep,
-                                     "approvals": approvals, "areas": built}
+    out = {"rules_sheet": sheet, "waterproofing": sched, "door_feasibility": rep, "approvals": approvals,
+           "areas": built}
+    if v25:
+        from engine.source import traceability as TR
+        sheet["drawing_binding"] = binding
+        if binding["state"] == "PROJECT_RULES_NOT_BOUND":
+            unresolved.append({"room_id": "-", "floor": "-", "item": "PROJECT_RULES", "reason": binding["note"]})
+            approvals.append({"subject": "PROJECT_RULES", "who": "project consultant", "what": "bind the project "
+                              "rules to the drawing revision (drawing_sha256)"})
+        out["drawing_binding"] = binding
+        out["traceability"] = TR.chain(lines, sheet, independent=independent)
+    return lines, mats, unresolved, out
 
 
 def _v24_outputs(arch, out):
@@ -784,6 +845,8 @@ def _v24_outputs(arch, out):
     and the engineering summary (the eight questions of the owner program); the BOQ scenario views gain the
     OWNER_STANDARD / PROPOSED_MODIFICATION door views and the waterproofing procurement view."""
     arch["rules_sheet"] = out["rules_sheet"]
+    if out.get("traceability") is not None:                     # ARCH_TAKEOFF_V2.5
+        arch["traceability"] = out["traceability"]
     arch["waterproofing"] = out["waterproofing"]
     arch["door_feasibility"] = out["door_feasibility"]
     arch["approvals"] = {"policy": "APPROVALS_REQUIRED_V1", "items": out["approvals"],
@@ -863,7 +926,8 @@ def _v24_manifest(out, names, arch):
     of each file (a file without an embedded run record - CSV, BOQ lines, workbook, overlay - is bound here)."""
     import hashlib
     sh, k = arch["rules_sheet"], arch["run"]["v2_4"]["knowledge"]
-    return {"policy": "URBAN_OUTPUT_MANIFEST_V2_4", "method": arch["run"]["method"],
+    return {"policy": "URBAN_OUTPUT_MANIFEST_V2_5" if arch["run"]["method"] == V25 else "URBAN_OUTPUT_MANIFEST_V2_4",
+            "method": arch["run"]["method"],
             "rules_sheet": {"schema": sh["schema"], "rules_sha256": sh["rules_sha256"],
                             "sheet_sha256": sh["sheet_sha256"], "invalidation": (sh.get("invalidation") or {})
                             .get("state")},
@@ -1066,6 +1130,10 @@ def v21_files(arch):
         files["ELEVATOR_SCHEDULE.json"] = _j({"run": run, "elevators": arch["elevator_schedule"]})
         files["OWNER_QUESTIONS.json"] = _j({"run": run, "questions": arch["owner_questions"]})
         files["BOQ_SCENARIOS.json"] = _j({"run": run, "scenarios": arch["boq_scenarios"]})
+    if arch.get("traceability") is not None:                    # ARCH_TAKEOFF_V2.5
+        from engine.source import traceability as TR
+        files["BOQ_TRACEABILITY.json"] = _j({"run": run, "traceability": arch["traceability"]})
+        files["BOQ_TRACEABILITY.csv"] = _csv(arch["traceability"]["rows"], TR.CSV_COLUMNS)
     if arch.get("rules_sheet") is not None:                     # ARCH_TAKEOFF_V2.4
         from engine.source import door_feasibility as DF
         from engine.source import project_rules as PRJ
@@ -1187,22 +1255,28 @@ def cmd_arch(a):
     facts = json.loads(Path(a.facts).read_text(encoding="utf-8")) if a.facts else None
     decisions = None
     if getattr(a, "decisions", None):
-        if a.method not in (V23, V24):
+        if a.method not in (V23, V24, V25):
             raise SystemExit("--decisions (project decisions, URBAN_PROJECT_DECISIONS_V1) needs --method "
-                             "ARCH_TAKEOFF_V2.3 or ARCH_TAKEOFF_V2.4")
+                             "ARCH_TAKEOFF_V2.3, ARCH_TAKEOFF_V2.4 or ARCH_TAKEOFF_V2.5")
         decisions = json.loads(Path(a.decisions).read_text(encoding="utf-8"))
         if decisions.get("schema") != "URBAN_PROJECT_DECISIONS_V1":
             raise SystemExit("--decisions: schema must be URBAN_PROJECT_DECISIONS_V1")
     project_rules = None
     if getattr(a, "project_rules", None):
-        if a.method != V24:
-            raise SystemExit("--project-rules (URBAN_PROJECT_RULES_V1) needs --method ARCH_TAKEOFF_V2.4")
+        if a.method not in (V24, V25):
+            raise SystemExit("--project-rules (URBAN_PROJECT_RULES_V1) needs --method ARCH_TAKEOFF_V2.4 or "
+                             "ARCH_TAKEOFF_V2.5")
         project_rules = json.loads(Path(a.project_rules).read_text(encoding="utf-8"))
+    independent_checks = None
+    if getattr(a, "independent_checks", None):
+        if a.method != V25:
+            raise SystemExit("--independent-checks (URBAN_INDEPENDENT_CHECKS_V1) needs --method ARCH_TAKEOFF_V2.5")
+        independent_checks = json.loads(Path(a.independent_checks).read_text(encoding="utf-8"))
     roles = _kv(a.layer_roles, "--layer-roles")
     refs = {k: float(v) for k, v in _kv(a.reference_areas, "--reference-areas").items()}
     out = Path(a.out)
     conversions = []
-    v2 = a.method in (V2, V21, V22, V23, V24)
+    v2 = a.method in (V2, V21, V22, V23, V24, V25)
     admit = v2 or a.strict_admission
     if not admit and (a.units or a.region or a.accept_missing_xref):
         raise SystemExit("--units / --region / --accept-missing-xref are reviewer inputs of the admission: use them "
@@ -1247,7 +1321,9 @@ def cmd_arch(a):
                                      units=a.units, region_specs=a.region, accept_xrefs=tuple(a.accept_missing_xref or ()),
                                      extra_documents=[d for d in (inputs_rec if admit else ()) if d["role"] != "plan"],
                                      admission_findings=pre, **({"decisions": decisions} if decisions else {}),
-                                     **({"project_rules": project_rules} if project_rules is not None else {}))
+                                     **({"project_rules": project_rules} if project_rules is not None else {}),
+                                     **({"independent_checks": independent_checks} if independent_checks is not None
+                                        else {}))
     except DS.AdmissionBlocked as ex:
         return _blocked(out, ex.report, conversions, code=DS.EXIT_ADMISSION_BLOCKED, what="ADMISSION_BLOCKED")
     except CompletenessFailed as ex:
@@ -1459,6 +1535,9 @@ def main(argv=None):
     p.add_argument("--project-rules", help="ARCH_TAKEOFF_V2.4: project rules (URBAN_PROJECT_RULES_V1): Level B "
                    "requirements of the project's drawings, details, schedules and specifications that override the "
                    "Urban standards within their scope (engine.source.project_rules)")
+    p.add_argument("--independent-checks", help="ARCH_TAKEOFF_V2.5: independently calculated quantities "
+                   "(URBAN_INDEPENDENT_CHECKS_V1: {room_id, item_code, value, tolerance, source}) compared with the "
+                   "engine's BOQ lines in BOQ_TRACEABILITY (engine.source.traceability)")
     p.add_argument("--decisions", help="ARCH_TAKEOFF_V2.3: project decisions (URBAN_PROJECT_DECISIONS_V1) binding owner "
                                        "decisions to single spaces (kept with the project's private inputs)")
     p.add_argument("--layer-roles", nargs="+", metavar="LAYER=ROLE",

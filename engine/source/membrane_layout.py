@@ -21,6 +21,9 @@ Roll plan (constraints and spec values recorded in the result; nothing defaulted
               in a band run takes an end lap; a closed loop also laps at its closure
     doorway   door width x (wall depth + side lap onto the floor membrane); jamb returns and the water stop are the
               project detail (DOORWAY_UPTURN_DETAIL_REQUIRED), not invented here
+    band (constraints band_planner MIN_SEGMENT_V2_5; ARCH_TAKEOFF_V2.5 only): a new band segment is the shortest
+              (1 cm steps) whose lanes finish the band - one end lap per lane, not two - and a segment that would
+              open a roll is weighed against filling the largest open roll tail first (fewest rolls, joints, membrane)
     corners / penetrations   counted and flagged (CORNER_TREATMENT_NOT_SPECIFIED / PENETRATION_DETAIL_NOT_SPECIFIED)
               unless the selected system defines them: never quantified by a guess
     rolls     full-width segments first-fit into whole rolls; an untouched roll tail is PACKAGING SURPLUS, not waste
@@ -42,6 +45,9 @@ METHOD = "MEMBRANE_RECT_EXACT_V1"
 POLY_METHOD = "MEMBRANE_POLYGON_STRIPS_V1"
 DOORWAY_DETAILS = ("NOT_ESTABLISHED", "SEPARATE_RETURN", "UPTURN_WITHIN_DOORWAY_PIECE")
 DIRECTIONS = ("ALONG_X", "ALONG_Y", "MIN_MATERIAL")
+# ARCH_TAKEOFF_V2.5 (constraints["band_planner"]): the band planner proven against the independent hand calculations
+# of the Phase 2B-3 proof library; without the key every earlier method keeps the loop below unchanged
+BAND_MIN_SEGMENT = "MIN_SEGMENT_V2_5"
 EPS = 1e-6
 POLYGON_BLOCK = "POLYGON_OPTIMIZER_NOT_IMPLEMENTED (S2): the S1 membrane engine lays rectangles only"
 
@@ -235,11 +241,42 @@ def _one(sf, spec, c, direction, loc, room, floor_fn=None, method=METHOD):
             lanes_from(W - across, seg, f"doorway {r['doorway']} side")
         else:
             raise MembraneError("a doorway piece wider than the roll in both directions (splice it: S2)")
+    # ARCH_TAKEOFF_V2.5: membrane patches of a resolved corner / penetration detail, cut from this membrane
+    detail_pieces = []
+    for dp in c.get("detail_pieces") or ():
+        a_, b_ = sorted((dp["a_m"], dp["b_m"]))                    # a_: the narrow side of the patch
+        n_ = int(dp["count"])
+        laid["detailing"] = laid.get("detailing", 0.0) + n_ * a_ * b_
+        if a_ <= b + EPS:                                          # narrower than a band lane: from the lanes
+            for i in range(n_):
+                _band_piece(b_, a_, lanes, rolls, leftover, k_lanes, b, f"{dp['what']} {i + 1}")
+        elif a_ <= W + EPS:                                        # side by side across a full-width segment
+            per = int(math.floor(W / a_ + EPS))
+            for s_ in range(-(-n_ // per)):
+                rolls.cut(b_, dp["what"])
+                lanes_from(W - min(per, n_ - s_ * per) * a_, b_, f"{dp['what']} residue")
+        else:
+            raise MembraneError("a patch wider than the roll")
+        detail_pieces.append({"what": dp["what"], "piece_m": [round(a_, 4), round(b_, 4)], "count": n_})
     # upturn band runs
     joints, band_pieces = 0, []
     runs = sf["runs"]["runs"]
     total_need = sum(r["length_m"] for r in runs)
     guard = 0
+    planner = c.get("band_planner")
+    if planner is not None:
+        if planner != BAND_MIN_SEGMENT:
+            raise MembraneError(f"band_planner {planner}")
+
+        def snapshot():
+            return list(lanes), [list(u) for u in rolls.used], list(scrap), list(retained)
+
+        def restore(s):
+            lanes[:], scrap[:], retained[:] = s[0], s[2], s[3]
+            rolls.used[:] = [list(u) for u in s[1]]
+        joints, band_pieces, band_cuts = _band_min_segment(runs, lanes, rolls, lanes_from, k_lanes, b, end,
+                                                           snapshot, restore)
+        runs = ()                                                  # planned: the loop below has nothing to do
     for run in runs:
         remaining, first = run["length_m"], True
         while remaining > EPS:
@@ -267,6 +304,7 @@ def _one(sf, spec, c, direction, loc, room, floor_fn=None, method=METHOD):
     laid["upturn"] = b * sum(band_pieces)
     for ln in lanes:
         leftover(b, ln, "unused lane")
+    runs = sf["runs"]["runs"]
     seams["upturn_end_laps"] = {"count": joints, "lap_m": end, "running_lm": round(joints * b, 6)}
     seams["upturn_to_floor_lap"] = {"lap_m": side, "running_lm": round(sum(r["length_m"] for r in runs), 6)}
     seams["doorway_to_floor_lap"] = {"lap_m": side, "running_lm": round(sum(p["lap_lm"] for p in dw_pieces), 6)}
@@ -274,6 +312,11 @@ def _one(sf, spec, c, direction, loc, room, floor_fn=None, method=METHOD):
     net = sum(r["net_m2"] for r in sf["rows"])
     mat = sum(laid.values())
     overlap = mat - net
+    packing = None
+    if planner is not None:                                     # ARCH_TAKEOFF_V2.5: the fewest rolls (exact)
+        segs = [x for u in rolls.used for x in u]
+        bins, packing = pack_rolls([x[0] for x in segs], L_r)
+        rolls.used[:] = [[segs[i] for i in b] for b in bins]
     recs = rolls.records()
     n_rolls = len(recs)
     surplus = sum(r["untouched_tail_m"] for r in recs) * W
@@ -317,6 +360,10 @@ def _one(sf, spec, c, direction, loc, room, floor_fn=None, method=METHOD):
              {"component": "upturn", "item_code": "FIN.WP.UPTURN", "net_m2": round(sf["rows"][-1]["net_m2"], 6),
               "laid_m2": round(laid["upturn"], 6), "overlap_m2": round(laid["upturn"] - sf["rows"][-1]["net_m2"], 6)}]
     comps[1]["overlap_m2"] = round(comps[1]["laid_m2"] - comps[1]["net_m2"], 6)
+    if detail_pieces:                                              # ARCH_TAKEOFF_V2.5 only
+        comps.append({"component": "detailing", "item_code": "FIN.WP.DETAILING", "net_m2": 0.0,
+                      "laid_m2": round(laid["detailing"], 6), "overlap_m2": round(laid["detailing"], 6),
+                      "pieces": detail_pieces})
     lay = {"direction": direction, "strip_length_m": L_s, "cross_width_m": D_c, "floor_strips": n,
            "last_strip_width_m": round(w_last, 6), "pieces_per_strip": k, "strip_piece_lengths_m": [round(x, 4) for x in lengths],
            "band_width_m": round(b, 6), "lanes_per_roll_width": k_lanes, "band_pieces_m": [round(x, 4) for x in band_pieces],
@@ -326,6 +373,13 @@ def _one(sf, spec, c, direction, loc, room, floor_fn=None, method=METHOD):
            "surfaces": sf["rows"], "perimeter_lm": sf["perimeter_lm"], "doorway_segments_lm": sf["doorway_segments_lm"],
            "upturn_lm": sf["upturn_lm"]}
     lay.update(extra)
+    if planner is not None:
+        lay["roll_packing"] = packing
+        lay["band_planner"] = {"planner": planner, "segments": band_cuts,
+                               "rule": "each new band segment is the shortest (1 cm steps) whose lanes finish the "
+                                       "band; when that segment would open a roll, filling the largest open roll tail "
+                                       "first is evaluated and kept if it gives fewer rolls (then fewer joints, then "
+                                       "less membrane)"}
     assumptions = [f"roll {W:g} x {L_r:g} m ({spec.get('spec_id')})", f"side lap {side:g} m ({(spec.get('lap_source') or {}).get('side')})",
                    f"end lap {end:g} m ({(spec.get('lap_source') or {}).get('end')})", f"upturn {h:g} m",
                    f"upturn band laps {side:g} m onto the floor membrane (band width {b:g} m)",
@@ -509,3 +563,145 @@ def _band_piece(length, width, lanes, rolls, leftover, k_lanes, b, why):
         leftover(b - width, length, why + " width trim")
     if x - length > EPS:
         lanes.append(x - length)
+
+
+# ------------------------------------------------------------------------------------- ARCH_TAKEOFF_V2.5 band planner
+def _fill_band(todo, lanes, end, b):
+    """cover the band runs todo [[remaining, closed, started]] from the lanes as far as they go (copies; the lane
+    choice of _take_lane). -> (pieces, joints, lanes left, runs left)."""
+    todo, lanes, pieces, joints = [list(t) for t in todo], list(lanes), [], 0
+    while todo:
+        rem, closed, started = todo[0]
+        while rem > EPS:
+            lap = end if (closed or started) else 0.0
+            ln = _take_lane(lanes, rem + lap, lap, min(rem, b))
+            if ln is None:
+                todo[0] = [rem, closed, started]
+                return pieces, joints, lanes, todo
+            cover = min(ln - lap, rem)
+            used = cover + lap
+            pieces.append(used)
+            if ln - used > EPS:
+                lanes.append(ln - used)
+            joints += lap > 0
+            rem -= cover
+            started = True
+        todo.pop(0)
+    return pieces, joints, lanes, []
+
+
+def _min_band_segment(todo, lanes, k_lanes, b, L_r, end):
+    """the shortest full-width segment (whole cm) whose k lanes, with the lanes left, finish the band; L_r when no
+    segment of one roll length does (the planner then cuts another)."""
+    need = sum(t[0] for t in todo)
+    c0 = max(1, math.ceil(round(need / k_lanes * 100.0, 6)))
+    for cm in range(c0, int(round(L_r * 100.0)) + 1):
+        seg = cm / 100.0
+        if not _fill_band(todo, list(lanes) + [seg] * k_lanes, end, b)[3]:
+            return seg
+    return L_r
+
+
+def _band_min_segment(runs, lanes, rolls, lanes_from, k_lanes, b, end, snapshot, restore):
+    """ARCH_TAKEOFF_V2.5: the band runs covered from the lane pool, then from new segments, each the shortest whose
+    lanes finish the band (_min_band_segment). A segment that fits no open roll tail opens a roll: filling the
+    largest open tail first (when its lanes cover something) is planned to the end as well and kept only when it
+    gives fewer rolls, then fewer joints, then less membrane. -> (joints, band pieces, [{length_m, basis}])."""
+    L_r = rolls.L
+
+    def cut_total():
+        return round(sum(x[0] for u in rolls.used for x in u), 6)
+
+    def n_rolls():
+        return len(pack_rolls([x[0] for u in rolls.used for x in u], L_r)[0])
+
+    def cut(seg, basis, cuts):
+        rolls.cut(seg, "upturn lanes" if basis == "SHORTEST_FINISHING_SEGMENT" else "upturn lanes (roll tail)")
+        lanes_from(rolls.W, seg, "upturn lane segment")
+        cuts.append({"length_m": round(seg, 4), "basis": basis})
+
+    def plan(todo):
+        pieces, joints, left, todo = _fill_band(todo, lanes, end, b)
+        lanes[:] = left
+        if not todo:
+            return pieces, joints, []
+        seg = _min_band_segment(todo, lanes, k_lanes, b, L_r, end)
+        tail = max((L_r - sum(x[0] for x in u) for u in rolls.used), default=0.0)
+        tail = math.floor(round(tail * 100.0, 6)) / 100.0
+        if seg > tail + EPS and tail - end >= min(todo[0][0], b) - EPS:
+            s0 = snapshot()
+            ca = []
+            cut(seg, "SHORTEST_FINISHING_SEGMENT", ca)
+            pa, ja, ra = plan(todo)
+            ka = (n_rolls(), joints + ja, cut_total())
+            sa = snapshot()
+            restore(s0)
+            cb = []
+            cut(tail, "LARGEST_ROLL_TAIL", cb)
+            pb, jb, rb = plan(todo)
+            if (n_rolls(), joints + jb, cut_total()) < ka:
+                return pieces + pb, joints + jb, cb + rb
+            restore(sa)
+            return pieces + pa, joints + ja, ca + ra
+        cs = []
+        cut(seg, "SHORTEST_FINISHING_SEGMENT", cs)
+        p2, j2, r2 = plan(todo)
+        return pieces + p2, joints + j2, cs + r2
+    todo = [[r["length_m"], r["closed"], False] for r in runs]
+    pieces, joints, cuts = plan(todo)
+    return joints, pieces, cuts
+
+
+def pack_rolls(lengths, L, node_limit=200000):
+    """ARCH_TAKEOFF_V2.5: whole rolls of length L for full-width pieces, fewest rolls. First fit decreasing, then -
+    unless it already meets the lower bound ceil(sum / L) - an exact branch and bound (deterministic, at most
+    node_limit nodes). -> (bins [[piece index ...]], {"method", "lower_bound", "first_fit_decreasing", "proven"})."""
+    q = [int(round(x * 10000.0)) for x in lengths]                  # integers (tenths of a mm): no float drift
+    cap = int(round(L * 10000.0))
+    order = sorted(range(len(q)), key=lambda i: (-q[i], i))
+    ffd, loads = [], []
+    for i in order:
+        for k in range(len(ffd)):
+            if cap - loads[k] >= q[i]:
+                ffd[k].append(i)
+                loads[k] += q[i]
+                break
+        else:
+            ffd.append([i])
+            loads.append(q[i])
+    lb = -(-sum(q) // cap) if q else 0
+    info = {"method": "FIRST_FIT_DECREASING", "lower_bound": lb, "first_fit_decreasing": len(ffd), "proven": True}
+    if len(ffd) <= lb:
+        return ffd, info
+    best = [len(ffd), [list(b) for b in ffd]]
+    nodes, complete = [0], [True]
+
+    def go(k, bins, ld):
+        if len(bins) >= best[0] or best[0] <= lb:
+            return
+        nodes[0] += 1
+        if nodes[0] > node_limit:
+            complete[0] = False
+            return
+        if k == len(order):
+            best[0], best[1] = len(bins), [list(b) for b in bins]
+            return
+        i = order[k]
+        seen = set()
+        for j in range(len(bins)):
+            room = cap - ld[j]
+            if room >= q[i] and room not in seen:
+                seen.add(room)
+                bins[j].append(i)
+                ld[j] += q[i]
+                go(k + 1, bins, ld)
+                ld[j] -= q[i]
+                bins[j].pop()
+        bins.append([i])
+        ld.append(q[i])
+        go(k + 1, bins, ld)
+        ld.pop()
+        bins.pop()
+    go(0, [], [])
+    info.update(method="EXACT_BRANCH_AND_BOUND", proven=complete[0] or best[0] <= lb, nodes=nodes[0])
+    return [sorted(b, key=lambda i: (-q[i], i)) for b in best[1]], info

@@ -80,9 +80,10 @@ def _union(iv, tol):
     return out
 
 
-def clearances(o, ctx):
+def clearances(o, ctx, *, inclusive_reach=False):
     """beyond each jamb of band opening o (drawing frame u, n, s0, s1, o0, o1): -> {"START": side, "END": side}, a
-    side = {"plain_m", "constraint", "constraint_id", "faces_m": [face o0, face o1], "beyond": spaces}."""
+    side = {"plain_m", "constraint", "constraint_id", "faces_m": [face o0, face o1], "beyond": spaces}.
+    inclusive_reach (ARCH_TAKEOFF_V2.5): a wall end exactly at REACH_M is read as its constraint, not an open run."""
     um = ctx["unit_m"]
     u, n = tuple(o["u"]), tuple(o["n"])
     lo, hi = sorted((o["o0"], o["o1"]))
@@ -152,7 +153,8 @@ def clearances(o, ctx):
             face_kind = "JUNCTION"
             what = f"a wall joining on the {'o0' if reachf[0] <= reachf[1] else 'o1'} face"
         face_ev = (dmin, face_kind, f"{what} at {dmin * um:.2f} m")
-        cand = [e for e in events if e[1] != "CROSSING"] + ([face_ev] if dmin < reach else [])
+        cand = [e for e in events if e[1] != "CROSSING"] + (
+            [face_ev] if (dmin <= reach + ftol if inclusive_reach else dmin < reach) else [])
         cross_at = [e for e in events if e[1] == "CROSSING"]
         if cross_at and (not cand or min(cross_at)[0] < min(cand)[0] - 2 * ftol):
             cand.append((min(cross_at)[0], "JUNCTION", f"crossing wall line {min(cross_at)[2]}"))
@@ -285,10 +287,11 @@ def _structure(el, o, ctx, resolver):
     return ("MASONRY_INDICATED" if ctx["frame_drawn"] else "UNKNOWN"), r
 
 
-def _placements(d, sides, pier):
-    """the ways the enlargement d can be placed: (name, take_start, take_end, remaining piers)."""
-    av = {k: max(0.0, s["plain_m"] - (0.0 if s["constraint"] in ("COLUMN", "OPEN_RUN") else pier))
-          for k, s in sides.items()}
+def _placements(d, sides, pier, *, pier_open_run=False):
+    """the ways the enlargement d can be placed: (name, take_start, take_end, remaining piers). pier_open_run
+    (ARCH_TAKEOFF_V2.5): an OPEN_RUN side keeps its pier too, so its maximum stays a conservative lower bound."""
+    free = ("COLUMN",) if pier_open_run else ("COLUMN", "OPEN_RUN")
+    av = {k: max(0.0, s["plain_m"] - (0.0 if s["constraint"] in free else pier)) for k, s in sides.items()}
     opts = []
     for name, ts, te in (("SPLIT_EQUAL", d / 2, d / 2), ("START_SIDE", d, 0.0), ("END_SIDE", 0.0, d)):
         if ts <= av["START"] + TOL_M and te <= av["END"] + TOL_M:
@@ -364,7 +367,8 @@ def door_height_v24(category, facts, resolver, target):
             f"category {category}: every candidate class shares the {h['value_m']:.2f} m standard"}
 
 
-def feasibility(model, contexts, *, resolver, facts):
+def feasibility(model, contexts, *, resolver, facts, v25=False):
+    """v25 (ARCH_TAKEOFF_V2.5): the reach is inclusive and an open run keeps its pier (the proof case DR-06)."""
     rows = []
     for el in model["elements"]:
         cat, basis = DSTD.door_category(el)
@@ -399,11 +403,12 @@ def feasibility(model, contexts, *, resolver, facts):
         row["enlargement_m"] = need
         row["compliance"] = ("NOT_APPLICABLE" if cat not in ORDINARY else "NOT_ESTABLISHED" if need is None else
                              "ENLARGEMENT_REQUIRED" if need > TOL_M else "MEETS_STANDARD")
-        sides = clearances(o, ctx) if (o is not None and ctx is not None and el["state"] == "CONFIRMED") else None
+        sides = clearances(o, ctx, **({"inclusive_reach": True} if v25 else {})) if (
+            o is not None and ctx is not None and el["state"] == "CONFIRMED") else None
         row["clearances"] = sides
         pier_m = pier["value"] if pier["value"] is not None else ENGINE_PIER_M
-        place, avail = (_placements(need, sides, pier_m) if sides is not None and need and need > TOL_M
-                        else ([], None))
+        place, avail = (_placements(need, sides, pier_m, **({"pier_open_run": True} if v25 else {}))
+                        if sides is not None and need and need > TOL_M else ([], None))
         row["pier"] = {"value_m": pier_m, "state": pier["state"], "note": pier.get("note")}
         row["placements"], row["available_m"] = place, avail
         structure, sres = _structure(el, o, ctx, resolver) if ctx is not None else ("UNKNOWN", None)
