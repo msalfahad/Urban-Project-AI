@@ -1,0 +1,180 @@
+{
+ "row": "Q-14",
+ "STATE": "COMPUTED_SHADOW",
+ "VALUE": 140.637,
+ "unit": "m2",
+ "final": false,
+ "BASE_PHYSICAL_SITES": [
+  {
+   "site": "SITE-1c4abf65f9b5db1e",
+   "zones": [
+    "BATH"
+   ],
+   "area_m2": 8.5525
+  },
+  {
+   "site": "SITE-5f1762f1a93b91ca",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "area_m2": 19.2725
+  },
+  {
+   "site": "SITE-77a2130eb275604c",
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "area_m2": 42.649289
+  },
+  {
+   "site": "SITE-8c1c7563d5252c50",
+   "zones": [
+    "PAINTRY"
+   ],
+   "area_m2": 11.685
+  },
+  {
+   "site": "SITE-a2b19efc492a6d0b",
+   "zones": [
+    "BATH"
+   ],
+   "area_m2": 5.1
+  },
+  {
+   "site": "SITE-a6405850100155ac",
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "area_m2": 33.2
+  },
+  {
+   "site": "SITE-daca396d6d730e60",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "area_m2": 16.327
+  },
+  {
+   "site": "SITE-fe8ed5548fb4310e",
+   "zones": [
+    "BATH"
+   ],
+   "area_m2": 4.09
+  }
+ ],
+ "BASE_SITE_AREA_M2": 140.876289,
+ "THRESHOLD_TREATMENT": [
+  {
+   "strip": "THRESHOLD-cf12fcdfd3e6a4a6",
+   "state": "NOT_IN_TRADE",
+   "contribution_m2": 0.0
+  },
+  {
+   "strip": "THRESHOLD-bfcea08375237224",
+   "state": "NOT_IN_TRADE",
+   "contribution_m2": 0.0
+  },
+  {
+   "strip": "THRESHOLD-28f50f8dc18c1e90",
+   "state": "NOT_IN_TRADE",
+   "contribution_m2": 0.0
+  },
+  {
+   "strip": "THRESHOLD-c82365dd41b94abe",
+   "state": "NOT_IN_TRADE",
+   "contribution_m2": 0.0
+  },
+  {
+   "strip": "THRESHOLD-04910e5deeeed2fc",
+   "state": "NOT_IN_TRADE",
+   "contribution_m2": 0.0
+  },
+  {
+   "strip": "THRESHOLD-d4633eabc844b274",
+   "state": "NOT_IN_TRADE",
+   "contribution_m2": 0.0
+  },
+  {
+   "strip": "THRESHOLD-f9846605acbce828",
+   "state": "NOT_IN_TRADE",
+   "contribution_m2": 0.0
+  }
+ ],
+ "THRESHOLD_CONTRIBUTION_M2": 0,
+ "MARBLE": {
+  "thresholds": [],
+  "excluded_from_this_row_m2": 0,
+  "marble_counted_in": "MARBLE_THRESHOLD row only"
+ },
+ "PASSAGE_TREATMENT": [
+  {
+   "strip": "OP-997f14d12b8e9bc1",
+   "state": "SOFFIT_EXCLUDED_FROM_CEILING",
+   "area_m2": 0.239289,
+   "head_authority": "QORTUBA-NEW-OPEN-PASSAGE-SOFFIT-NOT-CEILING-OWNER-001@v1"
+  },
+  {
+   "strip": "OP-9e0fd219ca5cd391",
+   "state": "INCLUDED_IN_SITE_SAME_TREATMENT",
+   "area_m2": 0.18,
+   "head_authority": "QORTUBA-NEW-MB-DRESS-PASSAGE-FULL-HEIGHT-OWNER-001@v1"
+  }
+ ],
+ "SOFFIT_EXCLUSION_M2": 0.239289,
+ "DUCT_TREATMENT": [
+  {
+   "site": "SITE-5f1762f1a93b91ca",
+   "hole_area_m2": 0.84,
+   "authorised": true,
+   "facts": [
+    "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1"
+   ],
+   "effect": "EXCLUDED_FROM_NORMAL_CEILING"
+  }
+ ],
+ "OBJECT_FOOTPRINT_POLICY": [
+  "QORTUBA-CEILING-OBJECT-FOOTPRINT@v1:CEILING:FOOTPRINT_INCLUDED"
+ ],
+ "SEMANTIC_CLASSES": null,
+ "TRADE_AUTHORITY": [
+  "QORTUBA-Q14-CEILING-TREATMENT@v1"
+ ],
+ "TOPOLOGY_POLICY": "WALL_BAND_POLICY_V5 (d1ff58e755bb88f4) + TOPOLOGY_CLOSURE_POLICY_V1",
+ "TOPOLOGY_DIGEST": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+ "ROW_AUTHORITY_DIGEST": "d1c2f2a87820c25916f1d31732e74d7c774086b0369882a0b9dbc81b8bc0139b",
+ "RELEASE_INPUT_DIGEST": "3152437d199c8a1c328e4bfc4bc4fdd9bf5dd5811e9cd484805b4f2973fe9547",
+ "OWNER_FACTS_APPLIED": [
+  "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1",
+  "QORTUBA-NEW-MB-DRESS-PASSAGE-FULL-HEIGHT-OWNER-001@v1",
+  "QORTUBA-NEW-OPEN-PASSAGE-SOFFIT-NOT-CEILING-OWNER-001@v1"
+ ],
+ "SOURCE_ANCHOR": {
+  "revision": "QORTUBA_REV_NEW",
+  "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+  "dwg_identity": "NOT_ESTABLISHED"
+ },
+ "RELEASE_BLOCKERS": [
+  "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+  "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+ ],
+ "COUNTERFACTUALS": {},
+ "blockers": [],
+ "blocker_classes": [],
+ "SCHEMA": "URBAN_R8_17_Q14_STATUS_V1",
+ "regression_vs_r8_16": {
+  "R8.16": 140.637,
+  "R8.17": 140.637,
+  "delta_m2": 0.0,
+  "sliding_door_effect": "NONE (no trade or topology change touches the ceiling)",
+  "is_target": false
+ },
+ "preserved": [
+  "duct exclusion",
+  "Hall / Lobby soffit exclusion",
+  "M.B.ROOM / DRESS full-height ceiling",
+  "I1471 door strip NOT_IN_TRADE"
+ ],
+ "historical_matching": "NONE"
+}

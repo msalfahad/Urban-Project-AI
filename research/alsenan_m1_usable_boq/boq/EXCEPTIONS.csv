@@ -1,0 +1,186 @@
+EXCEPTION_ID,KIND,FAMILY,SHEET,DETAIL,LOCATION
+EX-0001,LOW_CONFIDENCE_PROVISIONAL,BEAMS,1F,P-C:BM-1F_ROOF-B6-BL014-6C5: SECTION_CONFLICT; drawn width differs from the schedule width,BM-1F_ROOF-B6-BL014-6C5
+EX-0002,LOW_CONFIDENCE_PROVISIONAL,BEAMS,GF,P-C:BM-GF_ROOF-B21-BL001-468: SECTION_CONFLICT; drawn width differs from the schedule width,BM-GF_ROOF-B21-BL001-468
+EX-0003,LOW_CONFIDENCE_PROVISIONAL,BEAMS,GF,P-C:BM-GF_ROOF-B29-BL039-465: SECTION_CONFLICT; drawn width differs from the schedule width,BM-GF_ROOF-B29-BL039-465
+EX-0004,LOW_CONFIDENCE_PROVISIONAL,BEAMS,1F,P-C:CBO-FFRS-CB10-BL001#SPAN1: SECTION_CONFLICT; drawn width differs from the schedule width,CBO-FFRS-CB10-BL001#SPAN1
+EX-0005,LOW_CONFIDENCE_PROVISIONAL,BEAMS,1F,P-C:CBO-FFRS-CB10-BL001#SPAN2: SECTION_CONFLICT; drawn width differs from the schedule width,CBO-FFRS-CB10-BL001#SPAN2
+EX-0006,LOW_CONFIDENCE_PROVISIONAL,BEAMS,GF,P-C:CBO-GFRS-CB2-BL038#SPAN1: SECTION_CONFLICT; drawn width differs from the schedule width,CBO-GFRS-CB2-BL038#SPAN1
+EX-0007,LOW_CONFIDENCE_PROVISIONAL,BEAMS,GF,P-C:CBO-GFRS-CB2-BL038#SPAN2: SECTION_CONFLICT; drawn width differs from the schedule width,CBO-GFRS-CB2-BL038#SPAN2
+EX-0008,LOW_CONFIDENCE_PROVISIONAL,BEAMS,GF,P-C:CBO-GFRS-CB3-BL022#SPAN2: SECTION_CONFLICT; drawn width differs from the schedule width,CBO-GFRS-CB3-BL022#SPAN2
+EX-0009,UNRESOLVED,BEAMS,GF,U-C:CBO-GFRS-CB8-BL024#SPAN3: MISSING_LENGTH; BLOCKED (L (clear length)),CBO-GFRS-CB8-BL024#SPAN3
+EX-0010,UNRESOLVED,BEAMS,1F,U-C:SPAN:FFRS:BL002:8912-14499: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:FFRS:BL002:8912-14499
+EX-0011,UNRESOLVED,BEAMS,1F,U-C:SPAN:FFRS:BL005:11912-16087: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:FFRS:BL005:11912-16087
+EX-0012,UNRESOLVED,BEAMS,1F,U-C:SPAN:FFRS:BL005:9062-11912: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:FFRS:BL005:9062-11912
+EX-0013,UNRESOLVED,BEAMS,1F,U-C:SPAN:FFRS:BL008:14062-15912: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:FFRS:BL008:14062-15912
+EX-0014,UNRESOLVED,BEAMS,1F,U-C:SPAN:FFRS:BL010:12388-15888: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:FFRS:BL010:12388-15888
+EX-0015,UNRESOLVED,BEAMS,1F,U-C:SPAN:FFRS:BL010:15888-16957: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:FFRS:BL010:15888-16957
+EX-0016,UNRESOLVED,BEAMS,1F,U-C:SPAN:FFRS:BL018:16004-20492: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:FFRS:BL018:16004-20492
+EX-0017,UNRESOLVED,BEAMS,1F,U-C:SPAN:FFRS:BL019:16087-17362: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:FFRS:BL019:16087-17362
+EX-0018,UNRESOLVED,BEAMS,1F,U-C:SPAN:FFRS:BL020:16087-17362: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:FFRS:BL020:16087-17362
+EX-0019,UNRESOLVED,BEAMS,1F,U-C:SPAN:FFRS:BL021:16482-20442: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:FFRS:BL021:16482-20442
+EX-0020,UNRESOLVED,BEAMS,1F,U-C:SPAN:FFRS:BL029:26630-29105: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:FFRS:BL029:26630-29105
+EX-0021,UNRESOLVED,BEAMS,1F,U-C:SPAN:FFRS:BL033:30758-31508: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:FFRS:BL033:30758-31508
+EX-0022,UNRESOLVED,BEAMS,GF,U-C:SPAN:GFRS:BL002:2844-4653: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:GFRS:BL002:2844-4653
+EX-0023,UNRESOLVED,BEAMS,GF,U-C:SPAN:GFRS:BL013:7462-8912: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:GFRS:BL013:7462-8912
+EX-0024,UNRESOLVED,BEAMS,GF,U-C:SPAN:GFRS:BL017:11912-16112: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:GFRS:BL017:11912-16112
+EX-0025,UNRESOLVED,BEAMS,GF,U-C:SPAN:GFRS:BL020:15888-16988: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:GFRS:BL020:15888-16988
+EX-0026,UNRESOLVED,BEAMS,GF,U-C:SPAN:GFRS:BL021:12388-15888: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:GFRS:BL021:12388-15888
+EX-0027,UNRESOLVED,BEAMS,GF,U-C:SPAN:GFRS:BL021:15888-16957: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:GFRS:BL021:15888-16957
+EX-0028,UNRESOLVED,BEAMS,GF,U-C:SPAN:GFRS:BL023:18712-20687: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:GFRS:BL023:18712-20687
+EX-0029,UNRESOLVED,BEAMS,GF,U-C:SPAN:GFRS:BL024:14088-17913: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:GFRS:BL024:14088-17913
+EX-0030,UNRESOLVED,BEAMS,GF,U-C:SPAN:GFRS:BL029:16412-17362: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:GFRS:BL029:16412-17362
+EX-0031,UNRESOLVED,BEAMS,GF,U-C:SPAN:GFRS:BL042:24521-26120: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:GFRS:BL042:24521-26120
+EX-0032,UNRESOLVED,BEAMS,2F,U-C:SPAN:SFRS:BL002:14112-15762: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:SFRS:BL002:14112-15762
+EX-0033,UNRESOLVED,BEAMS,2F,U-C:SPAN:SFRS:BL003:14112-15662: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:SFRS:BL003:14112-15662
+EX-0034,UNRESOLVED,BEAMS,2F,U-C:SPAN:SFRS:BL005:14112-17362: MISSING_SECTION; no tag binds the span and no schedule row exists (RFI-A09),SPAN:SFRS:BL005:14112-17362
+EX-0035,UNRESOLVED,BEAMS,GF,U-C:BM-GF_ROOF-B3-BL022-1827: MISSING_LENGTH; SOURCE_CONFLICT,BM-GF_ROOF-B3-BL022-1827
+EX-0036,LOW_CONFIDENCE_PROVISIONAL,BEAMS,ALL,P-C:BEAM-CORNER-SQUARES: BEAM_DEPTH_CONVENTION; owner of the corner square not settled (RFI-A10),BEAM-CORNER-SQUARES
+EX-0037,UNRESOLVED,CANTILEVER_PORTIONS,GF,U-S:S9A-CP-02: MISSING_REBAR_DETAIL; no cantilever bar detail bound to the band,S9A-CP-02
+EX-0038,UNRESOLVED,CANTILEVER_PORTIONS,GF,U-S:S9A-CP-03: MISSING_REBAR_DETAIL; no cantilever bar detail bound to the band,S9A-CP-03
+EX-0039,UNRESOLVED,CANTILEVER_PORTIONS,GF,U-S:S9A-CP-04: MISSING_REBAR_DETAIL; no cantilever bar detail bound to the band,S9A-CP-04
+EX-0040,UNRESOLVED,CANTILEVER_PORTIONS,1F,U-S:S9A-CP-05: MISSING_REBAR_DETAIL; no cantilever bar detail bound to the band,S9A-CP-05
+EX-0041,UNRESOLVED,CANTILEVER_PORTIONS,2F,U-S:S9A-CP-06: MISSING_REBAR_DETAIL; no cantilever bar detail bound to the band,S9A-CP-06
+EX-0042,UNRESOLVED,CANTILEVER_PORTIONS,2F,U-S:S9A-CP-07: MISSING_REBAR_DETAIL; no cantilever bar detail bound to the band,S9A-CP-07
+EX-0043,UNRESOLVED,CANTILEVER_PORTIONS,2F,U-S:S9A-CP-08: MISSING_REBAR_DETAIL; no cantilever bar detail bound to the band,S9A-CP-08
+EX-0044,LOW_CONFIDENCE_PROVISIONAL,COLUMNS,GF,"P-C:COL-C-X01-Y01-GF: SECTION_CONFLICT; one side agrees, the other does not: drawing or schedule is wrong",COL-C-X01-Y01-GF
+EX-0045,LOW_CONFIDENCE_PROVISIONAL,COLUMNS,GF,P-C:COL-C3-X04-Y01-GF: SECTION_CONFLICT; no schedule row of any storey or type matches the drawn section,COL-C3-X04-Y01-GF
+EX-0046,LOW_CONFIDENCE_PROVISIONAL,COLUMNS,GF,"P-C:COL-C-X06-Y01-GF: SECTION_CONFLICT; one side agrees, the other does not: drawing or schedule is wrong",COL-C-X06-Y01-GF
+EX-0047,LOW_CONFIDENCE_PROVISIONAL,COLUMNS,GF,"P-C:COL-C-X16-Y01-GF: SECTION_CONFLICT; one side agrees, the other does not: drawing or schedule is wrong",COL-C-X16-Y01-GF
+EX-0048,CONFLICT_RESOLVED_BY_CONVENTION,COLUMNS,GF,P-C:COL-C8-X12-Y02-GF: SECTION_CONFLICT; the drawn section equals the GF schedule of ['C7']: tag or drawing,COL-C8-X12-Y02-GF
+EX-0049,LOW_CONFIDENCE_PROVISIONAL,COLUMNS,1F,P-C:COL-C8-X12-Y02-1F: SECTION_CONFLICT; no schedule row of any storey or type matches the drawn section,COL-C8-X12-Y02-1F
+EX-0050,CONFLICT_RESOLVED_BY_CONVENTION,COLUMNS,1F,P-C:COL-C5-X14-Y02-1F: SECTION_CONFLICT; the drawn section equals the C5 schedule row for ['GF']: which row applies here,COL-C5-X14-Y02-1F
+EX-0051,CONFLICT_RESOLVED_BY_CONVENTION,COLUMNS,1F,P-C:COL-C5-X05-Y04-1F: SECTION_CONFLICT; the drawn section equals the 1F schedule of ['C6']: tag or drawing,COL-C5-X05-Y04-1F
+EX-0052,CONFLICT_RESOLVED_BY_CONVENTION,COLUMNS,1F,P-C:COL-C6-X08-Y04-1F: SECTION_CONFLICT; the drawn section equals the C6 schedule row for ['GF']: which row applies here,COL-C6-X08-Y04-1F
+EX-0053,LOW_CONFIDENCE_PROVISIONAL,COLUMNS,GF,"P-C:COL-C-X01-Y05-GF: SECTION_CONFLICT; one side agrees, the other does not: drawing or schedule is wrong",COL-C-X01-Y05-GF
+EX-0054,LOW_CONFIDENCE_PROVISIONAL,COLUMNS,GF,"P-C:COL-C-X02-Y05-GF: SECTION_CONFLICT; one side agrees, the other does not: drawing or schedule is wrong",COL-C-X02-Y05-GF
+EX-0055,CONFLICT_RESOLVED_BY_CONVENTION,COLUMNS,GF,"P-C:COL-C3-X16-Y06-GF: SECTION_CONFLICT; the drawn section equals the C3 schedule row for ['1F', '2F']: which row applies here",COL-C3-X16-Y06-GF
+EX-0056,CONFLICT_RESOLVED_BY_CONVENTION,COLUMNS,1F,P-C:COL-C9-X10-Y07-1F: SECTION_CONFLICT; the drawn section equals the C9 schedule row for ['GF']: which row applies here,COL-C9-X10-Y07-1F
+EX-0057,LOW_CONFIDENCE_PROVISIONAL,COLUMNS,2F,"P-C:COL-P.C-X?-Y?@24888-15994-2F: SECTION_CONFLICT; one side agrees, the other does not: drawing or schedule is wrong",COL-P.C-X?-Y?@24888-15994-2F
+EX-0058,CONFLICT_RESOLVED_BY_CONVENTION,COLUMNS,1F,P-C:COL-C7-X07-Y?@15888-16162-1F: SECTION_CONFLICT; the drawn section equals the C7 schedule row for ['GF']: which row applies here,COL-C7-X07-Y?@15888-16162-1F
+EX-0059,LOW_CONFIDENCE_PROVISIONAL,COLUMNS,1F,"P-C:COL-C9-X13-Y08-1F: SECTION_CONFLICT; one side agrees, the other does not: drawing or schedule is wrong",COL-C9-X13-Y08-1F
+EX-0060,CONFLICT_RESOLVED_BY_CONVENTION,COLUMNS,1F,P-C:COL-C3-X08-Y09-1F: SECTION_CONFLICT; the drawn section equals the C3 schedule row for ['GF']: which row applies here,COL-C3-X08-Y09-1F
+EX-0061,CONFLICT_RESOLVED_BY_CONVENTION,COLUMNS,2F,P-C:COL-C3-X08-Y09-2F: SECTION_CONFLICT; the drawn section equals the C3 schedule row for ['GF']: which row applies here,COL-C3-X08-Y09-2F
+EX-0062,CONFLICT_RESOLVED_BY_CONVENTION,COLUMNS,1F,P-C:COL-C5-X11-Y10-1F: SECTION_CONFLICT; the drawn section equals the C5 schedule row for ['GF']: which row applies here,COL-C5-X11-Y10-1F
+EX-0063,CONFLICT_RESOLVED_BY_CONVENTION,COLUMNS,2F,P-C:COL-C5-X11-Y10-2F: SECTION_CONFLICT; the drawn section equals the 2F schedule of ['C7']: tag or drawing,COL-C5-X11-Y10-2F
+EX-0064,CONFLICT_RESOLVED_BY_CONVENTION,COLUMNS,1F,P-C:COL-C4-X13-Y10-1F: SECTION_CONFLICT; the drawn section equals the C4 schedule row for ['GF']: which row applies here,COL-C4-X13-Y10-1F
+EX-0065,CONFLICT_RESOLVED_BY_CONVENTION,COLUMNS,1F,P-C:COL-C4-X15-Y10-1F: SECTION_CONFLICT; the drawn section equals the C4 schedule row for ['GF']: which row applies here,COL-C4-X15-Y10-1F
+EX-0066,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-107-7CE-1: GB_EXTERIOR_DEPTH; the exterior ground-beam depth: p.13 gives 'FOLLOW ARCH.' and no architectural section dimensions it,GSO-107-7CE-1
+EX-0067,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-109-7CB-1: GB_EXTERIOR_DEPTH; a detail for spans carrying a concentrated load (the project has none); and whether the span is exterior,GSO-109-7CB-1
+EX-0068,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-109-7CB-2: GB_EXTERIOR_DEPTH; the exterior ground-beam depth: p.13 gives 'FOLLOW ARCH.' and no architectural section dimensions it,GSO-109-7CB-2
+EX-0069,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-10A-7C9-1: GB_EXTERIOR_DEPTH; the exterior ground-beam depth: p.13 gives 'FOLLOW ARCH.' and no architectural section dimensions it,GSO-10A-7C9-1
+EX-0070,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-10B-7D1-1: GB_EXTERIOR_DEPTH; whether the p.13 titles '< 2.5 m' / '< 5 m' are exclusive bands; whether the span is exterior (FOLLOW ARCH.) or interior,GSO-10B-7D1-1
+EX-0071,UNRESOLVED,GROUND_BEAMS,GROUND,U-C:GSO-10B-7D1-2: GB_LEVEL_CONFLICT; an exterior annex span: the +0.30 level bound cannot hold the drawn section (S5 flag ANNEX_DEPTH_SOURCE_CONFLICT),GSO-10B-7D1-2
+EX-0072,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-114-115-7DF-1: GB_EXTERIOR_DEPTH; whether the span is exterior (FOLLOW ARCH.) or interior,GSO-114-115-7DF-1
+EX-0073,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-114-115-7DF-2: GB_EXTERIOR_DEPTH; the exterior ground-beam depth: p.13 gives 'FOLLOW ARCH.' and no architectural section dimensions it,GSO-114-115-7DF-2
+EX-0074,UNRESOLVED,GROUND_BEAMS,GROUND,U-C:GSO-136-7D5-1: GB_LEVEL_CONFLICT; an exterior annex span: the +0.30 level bound cannot hold the drawn section (S5 flag ANNEX_DEPTH_SOURCE_CONFLICT),GSO-136-7D5-1
+EX-0075,UNRESOLVED,GROUND_BEAMS,GROUND,U-C:GSO-137-138-1: GB_LEVEL_CONFLICT; an exterior annex span: the +0.30 level bound cannot hold the drawn section (S5 flag ANNEX_DEPTH_SOURCE_CONFLICT),GSO-137-138-1
+EX-0076,UNRESOLVED,GROUND_BEAMS,GROUND,U-C:GSO-13D-7D2-1: GB_LEVEL_CONFLICT; an exterior annex span: the +0.30 level bound cannot hold the drawn section (S5 flag ANNEX_DEPTH_SOURCE_CONFLICT),GSO-13D-7D2-1
+EX-0077,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-13E-7D6-1: GB_MISSING_DETAIL; a detail for spans carrying a concentrated load (the project has none),GSO-13E-7D6-1
+EX-0078,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-13F-7D3-1: GB_MISSING_DETAIL; a detail for spans carrying a concentrated load (the project has none),GSO-13F-7D3-1
+EX-0079,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-140-7D7-1: GB_MISSING_DETAIL; a detail for spans carrying a concentrated load (the project has none),GSO-140-7D7-1
+EX-0080,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-145-7CA-1: GB_EXTERIOR_DEPTH; whether the p.13 titles '< 2.5 m' / '< 5 m' are exclusive bands; whether the span is exterior (FOLLOW ARCH.) or interior,GSO-145-7CA-1
+EX-0081,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-145-7CA-2: GB_EXTERIOR_DEPTH; whether the p.13 titles '< 2.5 m' / '< 5 m' are exclusive bands; which length selects the class (centre-to-centre or clear); whether the span is exterior (FOLLOW ARCH.) or interior,GSO-145-7CA-2
+EX-0082,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-15E-15F-1: GB_MISSING_DETAIL; a detail for spans carrying a concentrated load (the project has none),GSO-15E-15F-1
+EX-0083,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-170-7C3-1: GB_EXTERIOR_DEPTH; the exterior ground-beam depth: p.13 gives 'FOLLOW ARCH.' and no architectural section dimensions it,GSO-170-7C3-1
+EX-0084,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-170-7C3-2: GB_EXTERIOR_DEPTH; the exterior ground-beam depth: p.13 gives 'FOLLOW ARCH.' and no architectural section dimensions it,GSO-170-7C3-2
+EX-0085,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-170-7C3-3: GB_EXTERIOR_DEPTH; the exterior ground-beam depth: p.13 gives 'FOLLOW ARCH.' and no architectural section dimensions it,GSO-170-7C3-3
+EX-0086,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-175-7DE-1: GB_MISSING_DETAIL; a detail for spans carrying a concentrated load (the project has none),GSO-175-7DE-1
+EX-0087,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-176-7E6-1: GB_MISSING_DETAIL; a detail for spans carrying a concentrated load (the project has none),GSO-176-7E6-1
+EX-0088,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-177-7CD-1: GB_MISSING_DETAIL; a detail for spans carrying a concentrated load (the project has none),GSO-177-7CD-1
+EX-0089,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-178-7DB-1: GB_EXTERIOR_DEPTH; whether the span is exterior (FOLLOW ARCH.) or interior,GSO-178-7DB-1
+EX-0090,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-17D-7E4-1: GB_MISSING_DETAIL; a detail for spans carrying a concentrated load (the project has none),GSO-17D-7E4-1
+EX-0091,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-17E-17F-1: GB_MISSING_DETAIL; a detail for spans carrying a concentrated load (the project has none),GSO-17E-17F-1
+EX-0092,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-180D-180E-1: GB_EXTERIOR_DEPTH; whether the p.13 titles '< 2.5 m' / '< 5 m' are exclusive bands; whether the span is exterior (FOLLOW ARCH.) or interior,GSO-180D-180E-1
+EX-0093,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-1811-1812-1: GB_EXTERIOR_DEPTH; whether the p.13 titles '< 2.5 m' / '< 5 m' are exclusive bands; whether the span is exterior (FOLLOW ARCH.) or interior,GSO-1811-1812-1
+EX-0094,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-184-7CF-1: GB_MISSING_DETAIL; a detail for spans carrying a concentrated load (the project has none),GSO-184-7CF-1
+EX-0095,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-184-7CF-3: GB_MISSING_DETAIL; a detail for spans carrying a concentrated load (the project has none),GSO-184-7CF-3
+EX-0096,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-185-7C7-1: GB_EXTERIOR_DEPTH; the exterior ground-beam depth: p.13 gives 'FOLLOW ARCH.' and no architectural section dimensions it,GSO-185-7C7-1
+EX-0097,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-7D0-FC-1: GB_EXTERIOR_DEPTH; the exterior ground-beam depth: p.13 gives 'FOLLOW ARCH.' and no architectural section dimensions it,GSO-7D0-FC-1
+EX-0098,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-7D0-FC-2: GB_EXTERIOR_DEPTH; the exterior ground-beam depth: p.13 gives 'FOLLOW ARCH.' and no architectural section dimensions it,GSO-7D0-FC-2
+EX-0099,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-7D0-FC-3: GB_EXTERIOR_DEPTH; the exterior ground-beam depth: p.13 gives 'FOLLOW ARCH.' and no architectural section dimensions it,GSO-7D0-FC-3
+EX-0100,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-7D0-FC-4: GB_EXTERIOR_DEPTH; the exterior ground-beam depth: p.13 gives 'FOLLOW ARCH.' and no architectural section dimensions it,GSO-7D0-FC-4
+EX-0101,UNRESOLVED,GROUND_BEAMS,GROUND,U-C:GSO-7D4-F8-1: GB_LEVEL_CONFLICT; an exterior annex span: the +0.30 level bound cannot hold the drawn section (S5 flag ANNEX_DEPTH_SOURCE_CONFLICT),GSO-7D4-F8-1
+EX-0102,UNRESOLVED,GROUND_BEAMS,GROUND,U-C:GSO-7D4-F8-2: GB_LEVEL_CONFLICT; an exterior annex span: the +0.30 level bound cannot hold the drawn section (S5 flag ANNEX_DEPTH_SOURCE_CONFLICT),GSO-7D4-F8-2
+EX-0103,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-7DC-7DD-1: GB_MISSING_DETAIL; a detail for spans carrying a concentrated load (the project has none),GSO-7DC-7DD-1
+EX-0104,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-7E0-FD-1: GB_EXTERIOR_DEPTH; the exterior ground-beam depth: p.13 gives 'FOLLOW ARCH.' and no architectural section dimensions it,GSO-7E0-FD-1
+EX-0105,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-7E0-FD-2: GB_EXTERIOR_DEPTH; the exterior ground-beam depth: p.13 gives 'FOLLOW ARCH.' and no architectural section dimensions it,GSO-7E0-FD-2
+EX-0106,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-7E1-7E2-1: GB_MISSING_DETAIL; a detail for spans carrying a concentrated load (the project has none),GSO-7E1-7E2-1
+EX-0107,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-7E7-7E8-2: GB_MISSING_DETAIL; a detail for spans carrying a concentrated load (the project has none),GSO-7E7-7E8-2
+EX-0108,UNRESOLVED,GROUND_BEAMS,GROUND,U-C:GSO-A-139-13A-1: GB_LEVEL_CONFLICT; an exterior annex span: the +0.30 level bound cannot hold the drawn section (S5 flag ANNEX_DEPTH_SOURCE_CONFLICT),GSO-A-139-13A-1
+EX-0109,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,GROUND,P-C:GSO-A-157-158-1: GB_EXTERIOR_DEPTH; the exterior ground-beam depth: p.13 gives 'FOLLOW ARCH.' and no architectural section dimensions it,GSO-A-157-158-1
+EX-0110,CONFLICT_RESOLVED_BY_CONVENTION,GROUND_BEAMS,GROUND,"P-C:SOCC-1B08-1B09: SECTION_CONFLICT; two schedule rows for one strap (PRE-S5.1 08, Q-S2)",SOCC-1B08-1B09
+EX-0111,UNRESOLVED,GROUND_BEAMS,FOUNDATION,U-C:S9-LOWER-GROUND-BEAMS: FOUNDING_LEVEL; whether any footing needs a lower ground beam depends on the founding levels,S9-LOWER-GROUND-BEAMS
+EX-0112,LOW_CONFIDENCE_PROVISIONAL,LINTELS,GF,"P-C:LT-OP-GF-005: BEARING_NOT_CONFIRMED; BLOCKED_BEARING_REQUIREMENT: start 223.7 mm (T_JUNCTION) against MIN.40cm; may be a beam head, not a lintel (low 0)",LT-OP-GF-005
+EX-0113,LOW_CONFIDENCE_PROVISIONAL,LINTELS,GF,"P-C:LT-OP-GF-013: BEARING_NOT_CONFIRMED; BLOCKED_COLUMN_CONNECTION: start 100 mm (COLUMN) against MIN.40cm; may be a beam head, not a lintel (low 0)",LT-OP-GF-013
+EX-0114,LOW_CONFIDENCE_PROVISIONAL,LINTELS,GF,"P-C:LT-OP-GF-014: BEARING_NOT_CONFIRMED; bearings confirmed, but the opening is glazing whose function (window or full-height) is unresolved and no head is printed: on this project printed sills show full-height glazing exists, so a wall abo; may be a beam head, not a lintel (low 0)",LT-OP-GF-014
+EX-0115,LOW_CONFIDENCE_PROVISIONAL,LINTELS,GF,"P-C:LT-OP-GF-018: BEARING_NOT_CONFIRMED; BLOCKED_COLUMN_CONNECTION: end 100 mm (COLUMN) against MIN.40cm; may be a beam head, not a lintel (low 0)",LT-OP-GF-018
+EX-0116,LOW_CONFIDENCE_PROVISIONAL,LINTELS,GF,"P-C:LT-OP-GF-021: BEARING_NOT_CONFIRMED; BLOCKED_BEARING_REQUIREMENT: start 253 mm (T_JUNCTION) against MIN.40cm; may be a beam head, not a lintel (low 0)",LT-OP-GF-021
+EX-0117,LOW_CONFIDENCE_PROVISIONAL,LINTELS,GF,"P-C:LT-OP-GF-029: BEARING_NOT_CONFIRMED; BLOCKED_BEARING_REQUIREMENT: start 372.7 mm (OBLIQUE_JUNCTION); end 189.1 mm (L_CORNER) against MIN.40cm; may be a beam head, not a lintel (low 0)",LT-OP-GF-029
+EX-0118,LOW_CONFIDENCE_PROVISIONAL,LINTELS,1F,"P-C:LT-OP-1F-017: BEARING_NOT_CONFIRMED; BLOCKED_BEARING_REQUIREMENT: start 259.2 mm (T_JUNCTION) against MIN.40cm; may be a beam head, not a lintel (low 0)",LT-OP-1F-017
+EX-0119,LOW_CONFIDENCE_PROVISIONAL,STAIRS,GF,P-C:A1-F1: STAIR_LEVELS_AND_WAIST; riser count and run differ between the structural plan (12 risers from 16162) and the architectural plan (10 from 16712); waist from the zone tag only,A1-F1
+EX-0120,LOW_CONFIDENCE_PROVISIONAL,STAIRS,GF,P-C:A1-W1: STAIR_LEVELS_AND_WAIST; winder soffit form (flat slab under the winders or warped soffit) and the level of each winder are not stated,A1-W1
+EX-0121,LOW_CONFIDENCE_PROVISIONAL,STAIRS,GF,"P-C:A1-F2: STAIR_LEVELS_AND_WAIST; riser count and run differ: structural plan and SECTION A-A 12 risers / 3.30 m, architectural plan 11 / 3.00 m",A1-F2
+EX-0122,LOW_CONFIDENCE_PROVISIONAL,STAIRS,1F,"P-C:A2-F1: STAIR_LEVELS_AND_WAIST; the 1F -> 2F half-landing level is not printed, so the rise of the flight is unknown",A2-F1
+EX-0123,LOW_CONFIDENCE_PROVISIONAL,STAIRS,1F,P-C:A2-W1: STAIR_LEVELS_AND_WAIST; the structural 1F roof sheet draws no winder lines (one riser line 5E2) where the architectural 1F plan draws four winder risers; levels not printed,A2-W1
+EX-0124,LOW_CONFIDENCE_PROVISIONAL,STAIRS,1F,P-C:A2-L1: STAIR_LEVELS_AND_WAIST; the 1F -> 2F half-landing level is not printed (scaled only): the volume is blocked although it does not depend on the level,A2-L1
+EX-0125,LOW_CONFIDENCE_PROVISIONAL,STAIRS,1F,P-C:A2-F2: STAIR_LEVELS_AND_WAIST; half-landing level not printed; SECTION A-A draws 12 risers where both plans draw 11,A2-F2
+EX-0126,LOW_CONFIDENCE_PROVISIONAL,STAIRS,GROUND,"P-C:B-F1: STAIR_LEVELS_AND_WAIST; steps on grade: no structural section, thickness or bars for them (concrete, masonry or fill not stated)",B-F1
+EX-0127,LOW_CONFIDENCE_PROVISIONAL,STAIRS,GF,"P-C:C-F1: STAIR_LEVELS_AND_WAIST; the corner landing level is not printed; curved flight; beam CA (S1 BM-GF_ROOF-CA-BL015-69E, outline 54E) crosses the straight part on the GF roof sheet at a level not stated",C-F1
+EX-0128,LOW_CONFIDENCE_PROVISIONAL,STAIRS,GF,P-C:C-L1: STAIR_LEVELS_AND_WAIST; the corner landing level is not printed: the volume is blocked although it does not depend on the level,C-L1
+EX-0129,LOW_CONFIDENCE_PROVISIONAL,STAIRS,GF,"P-C:C-F2: STAIR_LEVELS_AND_WAIST; the corner landing level is not printed, so the rise of the short flight is unknown",C-F2
+EX-0130,LOW_CONFIDENCE_PROVISIONAL,STAIRS,GROUND,"P-C:D-F1: STAIR_LEVELS_AND_WAIST; external steps on grade: no structural section, thickness or bars",D-F1
+EX-0131,UNRESOLVED,STAIRS,ALL,"U-S:STAIRS: MISSING_REBAR_DETAIL; flight and landing bars: typical detail only, no plan callouts",STAIRS-REINFORCEMENT
+EX-0132,LOW_CONFIDENCE_PROVISIONAL,DOMES,1F,"P-C:CQ-DOME-A-RING: DOME_RING_DEPTH; ring depth 'AS PER ARCH'; plan vs detail position (CF-S8.3-02, -03)",CQ-DOME-A-RING
+EX-0133,UNRESOLVED,DOMES,1F,U-C:CQ-DOME-A-DRUM: ARCHITECTURE_ONLY; the 1.30 m architectural drum: RC ring or wall not stated (the ring's high case already uses 1.30 m),CQ-DOME-A-DRUM
+EX-0134,LOW_CONFIDENCE_PROVISIONAL,DOMES,1F,"P-C:CQ-DOME-B-RING: DOME_RING_DEPTH; ring depth 'AS PER ARCH'; plan vs detail position (CF-S8.3-02, -03)",CQ-DOME-B-RING
+EX-0135,UNRESOLVED,DOMES,1F,U-C:CQ-DOME-B-DRUM: ARCHITECTURE_ONLY; the 1.30 m architectural drum: RC ring or wall not stated (the ring's high case already uses 1.30 m),CQ-DOME-B-DRUM
+EX-0136,UNRESOLVED,DOMES,1F,U-C:CQ-DOME-TOWER-SHELL: ARCHITECTURE_ONLY; architectural dome only; RC shell at t 0.10 if structural,CQ-DOME-TOWER-SHELL
+EX-0137,UNRESOLVED,LIFT,GF,"U-C:LIFT-01-TIE-GF: MISSING_SECTION; section, reinforcement and the storey-height measure not stated (see 09)",LIFT-01-TIE-GF
+EX-0138,UNRESOLVED,LIFT,ROOF,U-C:LIFT-01-OVERRUN: NOT_IN_SOURCE; ,LIFT-01-OVERRUN
+EX-0139,LOW_CONFIDENCE_PROVISIONAL,POOL,GROUND,P-C:PL-WALL-RUN-E: ARCH_DEPTHS; wall height 'AS PER ARCH'; varies,PL-WALL-RUN-E
+EX-0140,LOW_CONFIDENCE_PROVISIONAL,POOL,GROUND,P-C:PL-WALL-RUN-N: ARCH_DEPTHS; wall height 'AS PER ARCH'; varies,PL-WALL-RUN-N
+EX-0141,LOW_CONFIDENCE_PROVISIONAL,POOL,GROUND,P-C:PL-WALL-RUN-S: ARCH_DEPTHS; wall height 'AS PER ARCH'; varies,PL-WALL-RUN-S
+EX-0142,LOW_CONFIDENCE_PROVISIONAL,POOL,GROUND,P-C:PL-WALL-RUN-W: ARCH_DEPTHS; wall height 'AS PER ARCH'; varies,PL-WALL-RUN-W
+EX-0143,UNRESOLVED,POOL,GROUND,U-S:POOL: ARCH_DEPTHS; base and wall bars depend on the unprinted depths,POOL-REINFORCEMENT
+EX-0144,LOW_CONFIDENCE_PROVISIONAL,FOOTINGS,FOUNDATION,"P-C:FTG-CONFLICT_F_F10-30008-7312: SECTION_CONFLICT; tag conflict ['F', 'F10'] (S1); the drawn outline matches neither schedule row; S2 BLOCKED",FTG-CONFLICT_F_F10-30008-7312
+EX-0145,UNRESOLVED,WATER_TANK_ROOF,2F,U-C:S8.4-C-TANK_BASE: NOT_IN_SOURCE; tank base / walls not drawn as RC,S8.4-C-TANK_BASE
+EX-0146,UNRESOLVED,WATER_TANK_ROOF,2F,U-C:S8.4-C-TANK_WALLS: NOT_IN_SOURCE; tank base / walls not drawn as RC,S8.4-C-TANK_WALLS
+EX-0147,UNRESOLVED,PARAPETS,ROOF,U-C:S9-PARAPET-GF_ROOF: ARCH_GEOMETRY; GF-roof parapet: geometry follows the architectural drawings (lengths / heights not on the structural set),S9-PARAPET-GF_ROOF
+EX-0148,UNRESOLVED,PARAPETS,ROOF,U-C:S9-PARAPET-1F_ROOF: ARCH_GEOMETRY; 1F-roof parapet: geometry follows the architectural drawings (lengths / heights not on the structural set),S9-PARAPET-1F_ROOF
+EX-0149,UNRESOLVED,PARAPETS,ROOF,U-C:S9-PARAPET-2F_ROOF: ARCH_GEOMETRY; 2F-roof parapet: geometry follows the architectural drawings (lengths / heights not on the structural set),S9-PARAPET-2F_ROOF
+EX-0150,UNRESOLVED,BOUNDARY_WALL,SITE,U-C:S9-BOUNDARY-WALL: ARCH_GEOMETRY; typical detail vs schedule row B.W; length not on the structural plans,S9-BOUNDARY-WALL
+EX-0151,UNRESOLVED,SLABS,GF,U-C:S9-SUNKEN-DROP-SP-GF_ROOF_SLAB-04: SUNKEN_DROP_DEPTH; step concrete ~ panel perimeter x 0.16 x drop (drop not printed),S9-SUNKEN-DROP-SP-GF_ROOF_SLAB-04
+EX-0152,UNRESOLVED,SLABS,GF,U-C:S9-SUNKEN-DROP-SP-GF_ROOF_SLAB-05: SUNKEN_DROP_DEPTH; step concrete ~ panel perimeter x 0.16 x drop (drop not printed),S9-SUNKEN-DROP-SP-GF_ROOF_SLAB-05
+EX-0153,UNRESOLVED,SLABS,GF,U-C:S9-SUNKEN-DROP-SP-GF_ROOF_SLAB-12: SUNKEN_DROP_DEPTH; step concrete ~ panel perimeter x 0.16 x drop (drop not printed),S9-SUNKEN-DROP-SP-GF_ROOF_SLAB-12
+EX-0154,UNRESOLVED,SLABS,GF,U-C:S9-SUNKEN-DROP-SP-GF_ROOF_SLAB-24: SUNKEN_DROP_DEPTH; step concrete ~ panel perimeter x 0.16 x drop (drop not printed),S9-SUNKEN-DROP-SP-GF_ROOF_SLAB-24
+EX-0155,UNRESOLVED,SLABS,GF,U-C:S9-SUNKEN-DROP-SP-GF_ROOF_SLAB-29: SUNKEN_DROP_DEPTH; step concrete ~ panel perimeter x 0.16 x drop (drop not printed),S9-SUNKEN-DROP-SP-GF_ROOF_SLAB-29
+EX-0156,UNRESOLVED,SLABS,1F,U-C:S9-SUNKEN-DROP-SP-1F_ROOF_SLAB-02: SUNKEN_DROP_DEPTH; step concrete ~ panel perimeter x 0.16 x drop (drop not printed),S9-SUNKEN-DROP-SP-1F_ROOF_SLAB-02
+EX-0157,UNRESOLVED,PLAIN_CONCRETE,FOUNDATION,U-C:S9-BLINDING-FOOTINGS: NOT_PRINTED; 130.69 m2 footing plan x blinding thickness (no projection),S9-BLINDING-FOOTINGS
+EX-0158,LOW_CONFIDENCE_PROVISIONAL,PLAIN_CONCRETE,GROUND,"P-C:S9-BLINDING-GROUND-BEAMS: NOT_PRINTED; typical detail applied to every ground beam; plain concrete, not RC",S9-BLINDING-GROUND-BEAMS
+EX-0159,LOW_CONFIDENCE_PROVISIONAL,BEAMS,ALL,P-S:BEAMS:LINKS (hook allowance):D10: TIE_LINK_HOOK_RULE; hook length and closure not printed; the S3.1 tie allowance is reused,BEAMS:LINK_HOOKS
+EX-0160,LOW_CONFIDENCE_PROVISIONAL,BEAMS,ALL,P-S:BEAMS:LINKS (hook allowance):D8: TIE_LINK_HOOK_RULE; hook length and closure not printed; the S3.1 tie allowance is reused,BEAMS:LINK_HOOKS
+EX-0161,LOW_CONFIDENCE_PROVISIONAL,GROUND_BEAMS,ALL,P-S:GROUND_BEAMS:LINKS (hook allowance):D8.0: TIE_LINK_HOOK_RULE; hook length and closure not printed; the S3.1 tie allowance is reused,GROUND_BEAMS:LINK_HOOKS
+EX-0162,UNRESOLVED,COLUMNS,ALL,U-S:COLUMNS:OTHER_EXTRA: MISSING_REBAR_DETAIL; 46 bar rows with no source cut length,COLUMNS:OTHER_EXTRA
+EX-0163,UNRESOLVED,COLUMNS,ALL,U-S:COLUMNS:STARTER: MISSING_REBAR_DETAIL; 5 bar rows with no source cut length,COLUMNS:STARTER
+EX-0164,UNRESOLVED,DOMES,ALL,U-S:DOMES:ALL: MISSING_REBAR_DETAIL; 1 bar rows with no source cut length,DOMES:ALL
+EX-0165,UNRESOLVED,DOMES,ALL,U-S:DOMES:RING_BOTTOM: MISSING_REBAR_DETAIL; 2 bar rows with no source cut length,DOMES:RING_BOTTOM
+EX-0166,UNRESOLVED,DOMES,ALL,U-S:DOMES:RING_LAPS_AND_JUNCTIONS: MISSING_REBAR_DETAIL; 2 bar rows with no source cut length,DOMES:RING_LAPS_AND_JUNCTIONS
+EX-0167,UNRESOLVED,DOMES,ALL,U-S:DOMES:RING_LINKS: MISSING_REBAR_DETAIL; 2 bar rows with no source cut length,DOMES:RING_LINKS
+EX-0168,UNRESOLVED,DOMES,ALL,U-S:DOMES:RING_SIDE: MISSING_REBAR_DETAIL; 2 bar rows with no source cut length,DOMES:RING_SIDE
+EX-0169,UNRESOLVED,DOMES,ALL,U-S:DOMES:RING_TOP: MISSING_REBAR_DETAIL; 2 bar rows with no source cut length,DOMES:RING_TOP
+EX-0170,UNRESOLVED,DOMES,ALL,U-S:DOMES:SHELL_ANCHORAGE: MISSING_REBAR_DETAIL; 2 bar rows with no source cut length,DOMES:SHELL_ANCHORAGE
+EX-0171,UNRESOLVED,FOOTINGS,ALL,U-S:FOOTINGS:BOTTOM_LONG: MISSING_REBAR_DETAIL; 6 bar rows with no source cut length,FOOTINGS:BOTTOM_LONG
+EX-0172,UNRESOLVED,FOOTINGS,ALL,U-S:FOOTINGS:BOTTOM_SHORT: MISSING_REBAR_DETAIL; 6 bar rows with no source cut length,FOOTINGS:BOTTOM_SHORT
+EX-0173,UNRESOLVED,FOOTINGS,ALL,U-S:FOOTINGS:BOXED: MISSING_REBAR_DETAIL; 21 bar rows with no source cut length,FOOTINGS:BOXED
+EX-0174,UNRESOLVED,FOOTINGS,ALL,U-S:FOOTINGS:OTHER_EXPLICIT_EXTRA: MISSING_REBAR_DETAIL; 1 bar rows with no source cut length,FOOTINGS:OTHER_EXPLICIT_EXTRA
+EX-0175,UNRESOLVED,FOOTINGS,ALL,U-S:FOOTINGS:TOP_LONG: MISSING_REBAR_DETAIL; 5 bar rows with no source cut length,FOOTINGS:TOP_LONG
+EX-0176,UNRESOLVED,FOOTINGS,ALL,U-S:FOOTINGS:TOP_SHORT: MISSING_REBAR_DETAIL; 5 bar rows with no source cut length,FOOTINGS:TOP_SHORT
+EX-0177,UNRESOLVED,LINTELS,ALL,U-S:LINTELS:ANCHORAGE_INTO_COLUMN_END: MISSING_REBAR_DETAIL; 1 bar rows with no source cut length,LINTELS:ANCHORAGE_INTO_COLUMN_END
+EX-0178,UNRESOLVED,LINTELS,ALL,U-S:LINTELS:ANCHORAGE_INTO_COLUMN_START: MISSING_REBAR_DETAIL; 1 bar rows with no source cut length,LINTELS:ANCHORAGE_INTO_COLUMN_START
+EX-0179,UNRESOLVED,LINTELS,ALL,U-S:LINTELS:BOTTOM: MISSING_REBAR_DETAIL; 14 bar rows with no source cut length,LINTELS:BOTTOM
+EX-0180,UNRESOLVED,LINTELS,ALL,U-S:LINTELS:BOTTOM_END_BENDS: MISSING_REBAR_DETAIL; 14 bar rows with no source cut length,LINTELS:BOTTOM_END_BENDS
+EX-0181,UNRESOLVED,LINTELS,ALL,U-S:LINTELS:LAPS: MISSING_REBAR_DETAIL; 14 bar rows with no source cut length,LINTELS:LAPS
+EX-0182,UNRESOLVED,LINTELS,ALL,U-S:LINTELS:STIRRUP: MISSING_REBAR_DETAIL; 14 bar rows with no source cut length,LINTELS:STIRRUP
+EX-0183,UNRESOLVED,LINTELS,ALL,U-S:LINTELS:STIRRUP_HOOKS: MISSING_REBAR_DETAIL; 14 bar rows with no source cut length,LINTELS:STIRRUP_HOOKS
+EX-0184,UNRESOLVED,LINTELS,ALL,U-S:LINTELS:TOP: MISSING_REBAR_DETAIL; 14 bar rows with no source cut length,LINTELS:TOP
+EX-0185,UNRESOLVED,LINTELS,ALL,U-S:LINTELS:TOP_END_BENDS: MISSING_REBAR_DETAIL; 14 bar rows with no source cut length,LINTELS:TOP_END_BENDS

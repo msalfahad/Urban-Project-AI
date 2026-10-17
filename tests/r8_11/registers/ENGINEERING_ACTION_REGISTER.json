@@ -1,0 +1,49 @@
+{
+ "SCHEMA": "URBAN_ENGINEERING_ACTION_REGISTER_R8_11_V1",
+ "actions": [
+  {
+   "id": "E-R8.12-01",
+   "priority": 1,
+   "title": "fragment-aware wall bands",
+   "what": "mutual nearest over the OVERLAP (not the whole face) and collinear face fragments treated as one face in the closure safety test; synthetic tests first (fragmented faces, T-junction fragments, a column inside one fragment's strip), freeze, THEN a blind Qortuba re-run",
+   "why": "H2430's band is not established only because the lower face is drawn as H470 + H471",
+   "never": "tuning to the 0.3813 m2 core or to a Q-14 value"
+  },
+  {
+   "id": "E-R8.12-02",
+   "priority": 2,
+   "title": "source anchor",
+   "what": "establish (or refuse) DWG e4babbc2... <-> DXF df0e1d69... identity; re-anchor claims only through a reviewed transfer record"
+  },
+  {
+   "id": "E-R8.12-03",
+   "priority": 3,
+   "title": "reviewed closure / correction workflow",
+   "what": "REVIEWED and AUTHORISED_FOR_RELEASE as signed records over a TopologyClosure; SOURCE_CORRECTION claims as a separate kind (never merged with closures)"
+  },
+  {
+   "id": "E-R8.12-04",
+   "priority": 4,
+   "title": "trade-layer claims in the engine manifest",
+   "what": "the Q-14 claim, the space-class rule and footprint policies act in the lab trade layer; R8.11 binds them per row (row_input_digest); move the row manifest into engine/source"
+  },
+  {
+   "id": "E-R8.12-05",
+   "priority": 5,
+   "title": "passage vs open room side",
+   "what": "a strip between a band end and a perpendicular face 3.45 m away is recorded like a 1.2 m passage (no size rule, by design); a structural rule (both jambs belong to the same wall line, or the strip separates label zones) is needed before any allocation"
+  },
+  {
+   "id": "E-R8.12-06",
+   "priority": 6,
+   "title": "reveal / soffit allocation",
+   "what": "jamb faces and a soffit (only with a head) are opening surfaces for wall-treatment trades; never also room wall perimeter or ceiling area"
+  },
+  {
+   "id": "E-R8.12-07",
+   "priority": 7,
+   "title": "floor object-footprint authority",
+   "what": "when it is the sole Q-13 blocker, ask the one prepared owner question; record the answer as a TradeObjectFootprintPolicy (FLOOR_FINISH), never as a quantity"
+  }
+ ]
+}

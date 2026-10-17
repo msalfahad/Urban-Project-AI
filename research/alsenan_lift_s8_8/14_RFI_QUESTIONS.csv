@@ -1,0 +1,14 @@
+QUESTION_ID,TO,QUESTION,BLOCKS
+Q-LIFT-01,lift manufacturer / engineer,Pit depth (footing top to the slab-on-grade top) and the lift model: p.14 gives 'As Per Lift Manufactures recommendations'.,all pit-wall concrete and bars
+Q-LIFT-02,engineer,"Founding level of FF (and so its top = the pit floor). p.9 note 1 only gives a 1.5 m minimum excavation; with the 55 cm footing the pit floor would be at or below -0.95, at least 1.95 m under the GF floor. Does that match the manufacturer's pit, or is a raised pit floor intended?","pit floor, wall height"
+Q-LIFT-03,engineer,Top of the pit walls: the slab-on-grade top (FFL +1.00 less the floor finish). What is the finish thickness?,"wall top, wall height"
+Q-LIFT-04,engineer,Are 6Ø12/m and 6Ø16/m per face (both faces drawn) and do they apply to the W and E walls that the p.14 section does not cut?,wall bars
+Q-LIFT-05,engineer,"Vertical 6Ø16/m: anchorage at the foot (p.14 shows no bend at the footing bottom layer), the U over the wall top, and laps.",vertical bar length
+Q-LIFT-06,engineer,"Horizontal 6Ø12/m at the corner columns: through the column, stopped at its face, or lapped round the corner?",horizontal bar length
+Q-LIFT-07,engineer,"'2 Ø16' top and bottom in the footing under each wall, and '2Ø12' at the wall top: length along the wall, end anchorage, and whether all four walls carry them (S4.1-T01, S4-Q1).",wall-base / wall-top bars
+Q-LIFT-08,engineer,"Foundation-storey lift columns: the plans draw 200 x 500 (C2 / C1) and 250 x 1000 (C9) flush with the 200 pit walls; the column schedule gives 300 wide (S3 used the schedule, STR-COL-013). Which is right, and does the wider column project into the pit?","pit-wall footprint, pit clear size"
+Q-LIFT-09,engineer,"P8-N19: which storey height is meant (floor to floor, clear to slab soffit, clear to beam soffit)? GF is 4.50 m floor to floor but at most 3.75 m clear under the 750 mm beams.",whether the GF tie beam exists
+Q-LIFT-10,engineer,"If the GF tie beams are required: section, reinforcement, the 3.00 m datum (FFL or structural floor), and whether they run on all four sides or only between the columns; how they meet the landing-door lintel L1 on the S side.",tie-beam concrete and bars
+Q-LIFT-11,architect / engineer,The shaft enclosure above GF is 200 walls on the architectural plans only ('AS PER PLAN'): confirm blockwork (not RC) on all three storeys.,shaft walls above the pit
+Q-LIFT-12,lift manufacturer / architect,"Top-floor headroom (2F +9.70 to the roof +13.90) and any overrun, machine room or roof upstand: none is labelled.",lift roof / overrun
+Q-LIFT-13,engineer,"Pit drainage, sump or waterproofing details (p.14 shows a membrane and protection board only).",non-structural; recorded

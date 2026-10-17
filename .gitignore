@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# Secrets — never commit these
+.env
+*.key
+*-service-account.json
+firebase-credentials.json
+serviceAccountKey.json
+
+# Client data — drawings, takeoffs, contracts stay out of git
+/data/*
+# ...except the trade rule library: that is Urban Projects' own policy about
+# what each trade does to a room, not a client document, and the engine cannot
+# run without it. Space maps stay out — they carry a client's room dimensions.
+!/data/trade_rules/
+# ...and the canonical registries: trade ids and space-label aliases are Urban
+# Projects vocabulary, not client documents, and the schema validates against them.
+!/data/registry/
+*.dwg
+*.dxf
+*.xlsx
+!tests/**/*.xlsx
+
+# OS
+.DS_Store
+.secrets/
+
+# S1 human-review drawings embed client drawing content (xlsx already ignored above)
+research/alsenan_structural_census_s1/review/*.pdf
+research/alsenan_column_rebar_s3/review/*.pdf
+# S9A visual QA PDF: printed from the frozen HTML, embeds client plan geometry (like the review PDFs)
+research/alsenan_structural_s9a/visual/*.pdf
+# M1 BOQ: the PDF is printed from the frozen HTML; the run log holds machine timings (not frozen)
+research/alsenan_m1_usable_boq/boq/*.pdf
+research/alsenan_m1_usable_boq/boq/run_log.json
+
+# M2 generated PDFs / workbooks stay out of git (reproducible by command)
+research/urban_engine_m2_generalization/**/*.pdf
+# M3: OCR crops and page renders are client drawing content (the evidence JSON keeps their file names only)
+research/urban_engine_m3_recovery/**/crops/
+research/urban_engine_m3_recovery/**/*.png
+research/urban_engine_m3_recovery/**/*.pdf
+# M4: generated workbooks / PDFs, the machine run log, review sheets with crops (client drawing content)
+research/urban_engine_m4_correctness/**/*.pdf
+research/urban_engine_m4_correctness/**/*.png
+research/urban_engine_m4_correctness/**/crops/
+research/urban_engine_m4_correctness/**/run_log.json
+research/urban_engine_m4_correctness/.m3_snapshot.json
+# M5: generated PDF / images (client drawing geometry); the workbooks are covered by *.xlsx
+research/urban_engine_m5_concrete_reconciliation/**/*.pdf
+research/urban_engine_m5_concrete_reconciliation/**/*.png
+# M7: the visual QA PDF is generated from the committed records (build_visuals.py); the workbook is covered by *.xlsx
+research/urban_engine_m7_reliability/**/*.pdf

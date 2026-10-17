@@ -1,0 +1,1947 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_B2A_OPENING_AUTHORITY_V1",
+ "policy": {
+  "policy_id": "OPENING_AUTHORITY_V1",
+  "functions": [
+   "DOOR",
+   "WINDOW_CANDIDATE",
+   "GLAZED_OPENING_FUNCTION_UNKNOWN"
+  ],
+  "height_order": [
+   "SOURCE_DIMENSION",
+   "SECTION_ELEVATION",
+   "PROJECT_OWNER_FACT",
+   "URBAN_FALLBACK_BY_TYPE"
+  ],
+  "never": [
+   "UNKNOWN published as WINDOW",
+   "one global opening height",
+   "a fallback height for UNKNOWN"
+  ],
+  "digest": "8b1552e5950ac5333a30e0e17ac59fa52488c60e8c605edb4a8f8169e788e684"
+ },
+ "rows": [
+  {
+   "id": "GF-W01",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 900.0
+   },
+   "function": "DOOR",
+   "function_basis": "door evidence: closed door I437 closes this gap (closure CLOSURE|I437|A)",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "GF",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    }
+   ],
+   "box_native": [
+    -153489.856,
+    -800593.54,
+    -152589.856,
+    -800393.54
+   ],
+   "jambs_native": [
+    [
+     -153489.856,
+     -800493.54
+    ],
+    [
+     -152589.856,
+     -800493.54
+    ]
+   ],
+   "a3_record": {
+    "window": "GF-W01",
+    "width_mm": 900.0
+   },
+   "height": "BLOCKED_HEIGHT"
+  },
+  {
+   "id": "GF-W02",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 1500.0
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "GF",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": "SITE-88d9dbffd47c417a",
+     "labels": [
+      "KITCHEN"
+     ],
+     "interior": true
+    }
+   ],
+   "box_native": [
+    -151739.856,
+    -800593.54,
+    -150239.856,
+    -800393.54
+   ],
+   "jambs_native": [
+    [
+     -151739.856,
+     -800493.54
+    ],
+    [
+     -150239.856,
+     -800493.54
+    ]
+   ],
+   "a3_record": {
+    "window": "GF-W02",
+    "width_mm": 1500.0
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "GF-W03",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 1000.0
+   },
+   "function": "DOOR",
+   "function_basis": "door evidence: closed door I350 closes this gap (closure CLOSURE|I350|A)",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "GF",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": "SITE-810cacd9be443703",
+     "labels": [
+      "DEWANEYA / Wash"
+     ],
+     "interior": true
+    }
+   ],
+   "box_native": [
+    -159771.982,
+    -798793.54,
+    -158771.982,
+    -798593.54
+   ],
+   "jambs_native": [
+    [
+     -159771.982,
+     -798693.54
+    ],
+    [
+     -158771.982,
+     -798693.54
+    ]
+   ],
+   "a3_record": {
+    "window": "GF-W03",
+    "width_mm": 1000.0
+   },
+   "height": "BLOCKED_HEIGHT"
+  },
+  {
+   "id": "GF-W04",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 1000.0
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "GF",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": "SITE-0bb9132c5c034229",
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    }
+   ],
+   "box_native": [
+    -141939.856,
+    -797193.54,
+    -140939.856,
+    -796993.54
+   ],
+   "jambs_native": [
+    [
+     -141939.856,
+     -797093.54
+    ],
+    [
+     -140939.856,
+     -797093.54
+    ]
+   ],
+   "a3_record": {
+    "window": "GF-W04",
+    "width_mm": 1000.0
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "GF-W05",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 900.0
+   },
+   "function": "DOOR",
+   "function_basis": "door evidence: door-layer swing ALSENAN_P7757_DXF|H358|1023|ARC|0 hinged at a jamb closes on the opening",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "GF",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    }
+   ],
+   "box_native": [
+    -143586.73,
+    -791993.54,
+    -142686.73,
+    -791793.54
+   ],
+   "jambs_native": [
+    [
+     -143586.73,
+     -791893.54
+    ],
+    [
+     -142686.73,
+     -791893.54
+    ]
+   ],
+   "a3_record": {
+    "window": "GF-W05",
+    "width_mm": 900.0
+   },
+   "height": "BLOCKED_HEIGHT"
+  },
+  {
+   "id": "GF-W06",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 600.0
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "GF",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": "SITE-ce2d2c3a4b7da280",
+     "labels": [
+      "W.C"
+     ],
+     "interior": true
+    }
+   ],
+   "box_native": [
+    -141964.856,
+    -791993.54,
+    -141364.856,
+    -791793.54
+   ],
+   "jambs_native": [
+    [
+     -141964.856,
+     -791893.54
+    ],
+    [
+     -141364.856,
+     -791893.54
+    ]
+   ],
+   "a3_record": {
+    "window": "GF-W06",
+    "width_mm": 600.0
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "GF-W07",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 600.0
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "GF",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": "SITE-5191e28052b00088",
+     "labels": [
+      "W.C"
+     ],
+     "interior": true
+    }
+   ],
+   "box_native": [
+    -139469.856,
+    -791993.54,
+    -138869.856,
+    -791793.54
+   ],
+   "jambs_native": [
+    [
+     -139469.856,
+     -791893.54
+    ],
+    [
+     -138869.856,
+     -791893.54
+    ]
+   ],
+   "a3_record": {
+    "window": "GF-W07",
+    "width_mm": 600.0
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "GF-W08",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 600.0
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "GF",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": "SITE-714889aea3e329c7",
+     "labels": [],
+     "interior": false
+    }
+   ],
+   "box_native": [
+    -137869.856,
+    -791993.54,
+    -137269.856,
+    -791793.54
+   ],
+   "jambs_native": [
+    [
+     -137869.856,
+     -791893.54
+    ],
+    [
+     -137269.856,
+     -791893.54
+    ]
+   ],
+   "a3_record": {
+    "window": "GF-W08",
+    "width_mm": 600.0
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "GF-W09",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 6331.6
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "GF",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    }
+   ],
+   "box_native": [
+    -129069.856,
+    -804393.54,
+    -128869.856,
+    -798061.962
+   ],
+   "jambs_native": [
+    [
+     -128969.856,
+     -804393.54
+    ],
+    [
+     -128969.856,
+     -798061.962
+    ]
+   ],
+   "a3_record": {
+    "window": "GF-W09",
+    "width_mm": 6331.6
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "GF-W10",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 1200.0
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "GF",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    }
+   ],
+   "box_native": [
+    -145239.856,
+    -794243.54,
+    -145039.856,
+    -793043.54
+   ],
+   "jambs_native": [
+    [
+     -145139.856,
+     -794243.54
+    ],
+    [
+     -145139.856,
+     -793043.54
+    ]
+   ],
+   "a3_record": {
+    "window": "GF-W10",
+    "width_mm": 1200.0
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "GF-W11",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 1000.0
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "GF",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    }
+   ],
+   "box_native": [
+    -148239.856,
+    -804993.54,
+    -148039.856,
+    -803993.54
+   ],
+   "jambs_native": [
+    [
+     -148139.856,
+     -804993.54
+    ],
+    [
+     -148139.856,
+     -803993.54
+    ]
+   ],
+   "a3_record": {
+    "window": "GF-W11",
+    "width_mm": 1000.0
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "GF-W12",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 1500.0
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "GF",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    }
+   ],
+   "box_native": [
+    -148239.856,
+    -802943.54,
+    -148039.856,
+    -801443.54
+   ],
+   "jambs_native": [
+    [
+     -148139.856,
+     -802943.54
+    ],
+    [
+     -148139.856,
+     -801443.54
+    ]
+   ],
+   "a3_record": {
+    "window": "GF-W12",
+    "width_mm": 1500.0
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "GF-W13",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 1000.0
+   },
+   "function": "DOOR",
+   "function_basis": "door evidence: closed door I402 closes this gap (closure CLOSURE|I402|A)",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "GF",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": "SITE-88d9dbffd47c417a",
+     "labels": [
+      "KITCHEN"
+     ],
+     "interior": true
+    },
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    }
+   ],
+   "box_native": [
+    -149639.856,
+    -804993.54,
+    -149439.856,
+    -803993.54
+   ],
+   "jambs_native": [
+    [
+     -149539.856,
+     -804993.54
+    ],
+    [
+     -149539.856,
+     -803993.54
+    ]
+   ],
+   "a3_record": {
+    "window": "GF-W13",
+    "width_mm": 1000.0
+   },
+   "height": "BLOCKED_HEIGHT"
+  },
+  {
+   "id": "GF-W14",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 1000.0
+   },
+   "function": "GLAZED_OPENING_FUNCTION_UNKNOWN",
+   "function_basis": "glazing without door geometry; ambiguous: the opening joins two interior spaces (both sides inside room sites) and has no door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_DEMOTION",
+   "floor": "GF",
+   "wall_thickness_mm": 150.0,
+   "sides": [
+    {
+     "site": "SITE-810cacd9be443703",
+     "labels": [
+      "DEWANEYA / Wash"
+     ],
+     "interior": true
+    },
+    {
+     "site": "SITE-dd6245b163cafde0",
+     "labels": [
+      ""
+     ],
+     "interior": true
+    }
+   ],
+   "box_native": [
+    -156039.856,
+    -802143.54,
+    -155889.856,
+    -801143.54
+   ],
+   "jambs_native": [
+    [
+     -155964.856,
+     -802143.54
+    ],
+    [
+     -155964.856,
+     -801143.54
+    ]
+   ],
+   "a3_record": {
+    "window": "GF-W14",
+    "width_mm": 1000.0
+   },
+   "height": "BLOCKED_HEIGHT"
+  },
+  {
+   "id": "GF-W15",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 1954.9
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "GF",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": "SITE-810cacd9be443703",
+     "labels": [
+      "DEWANEYA / Wash"
+     ],
+     "interior": true
+    }
+   ],
+   "box_native": [
+    -160239.856,
+    -804460.554,
+    -160039.856,
+    -802505.634
+   ],
+   "jambs_native": [
+    [
+     -160139.856,
+     -804460.554
+    ],
+    [
+     -160139.856,
+     -802505.634
+    ]
+   ],
+   "a3_record": {
+    "window": "GF-W15",
+    "width_mm": 1954.9
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "GF-W16",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 1954.9
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "GF",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": "SITE-810cacd9be443703",
+     "labels": [
+      "DEWANEYA / Wash"
+     ],
+     "interior": true
+    }
+   ],
+   "box_native": [
+    -160239.856,
+    -801360.554,
+    -160039.856,
+    -799405.634
+   ],
+   "jambs_native": [
+    [
+     -160139.856,
+     -801360.554
+    ],
+    [
+     -160139.856,
+     -799405.634
+    ]
+   ],
+   "a3_record": {
+    "window": "GF-W16",
+    "width_mm": 1954.9
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "1F-W01",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 600.0
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "1F",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": "SITE-16f76cd141ed8273",
+     "labels": [
+      "BATH"
+     ],
+     "interior": true
+    },
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    }
+   ],
+   "box_native": [
+    -193567.511,
+    -803793.54,
+    -192967.511,
+    -803593.54
+   ],
+   "jambs_native": [
+    [
+     -193567.511,
+     -803693.54
+    ],
+    [
+     -192967.511,
+     -803693.54
+    ]
+   ],
+   "a3_record": {
+    "window": "1F-W01",
+    "width_mm": 600.0
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "1F-W02",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 1552.3
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "1F",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": "SITE-87d911399edea4c0",
+     "labels": [
+      "MASTER BED ROOM / MASTER BED ROOM"
+     ],
+     "interior": true
+    },
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    }
+   ],
+   "box_native": [
+    -188843.671,
+    -803793.54,
+    -187291.351,
+    -803593.54
+   ],
+   "jambs_native": [
+    [
+     -188843.671,
+     -803693.54
+    ],
+    [
+     -187291.351,
+     -803693.54
+    ]
+   ],
+   "a3_record": {
+    "window": "1F-W02",
+    "width_mm": 1552.3
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "1F-W03",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 1000.0
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "1F",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": "SITE-195dbe4bca9e732e",
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": "SITE-8bddd8c3b8b698ad",
+     "labels": [
+      "VOID / LAUNDRY / MASTER BED ROOM"
+     ],
+     "interior": true
+    }
+   ],
+   "box_native": [
+    -186792.511,
+    -797193.54,
+    -185792.511,
+    -796993.54
+   ],
+   "jambs_native": [
+    [
+     -186792.511,
+     -797093.54
+    ],
+    [
+     -185792.511,
+     -797093.54
+    ]
+   ],
+   "a3_record": {
+    "window": "1F-W03",
+    "width_mm": 1000.0
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "1F-W04",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 1000.0
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "1F",
+   "wall_thickness_mm": 150.0,
+   "sides": [
+    {
+     "site": "SITE-fc4ad3741a3997f7",
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": "SITE-3cde308552cf977c",
+     "labels": [
+      "MASTER BED ROOM"
+     ],
+     "interior": true
+    }
+   ],
+   "box_native": [
+    -181272.511,
+    -793943.54,
+    -180272.511,
+    -793793.54
+   ],
+   "jambs_native": [
+    [
+     -181272.511,
+     -793868.54
+    ],
+    [
+     -180272.511,
+     -793868.54
+    ]
+   ],
+   "a3_record": {
+    "window": "1F-W04",
+    "width_mm": 1000.0
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "1F-W05",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 1000.0
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "1F",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": "SITE-8bddd8c3b8b698ad",
+     "labels": [
+      "VOID / LAUNDRY / MASTER BED ROOM"
+     ],
+     "interior": true
+    }
+   ],
+   "box_native": [
+    -188492.511,
+    -791993.54,
+    -187492.511,
+    -791793.54
+   ],
+   "jambs_native": [
+    [
+     -188492.511,
+     -791893.54
+    ],
+    [
+     -187492.511,
+     -791893.54
+    ]
+   ],
+   "a3_record": {
+    "window": "1F-W05",
+    "width_mm": 1000.0
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "1F-W06",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 600.0
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "1F",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": "SITE-8bddd8c3b8b698ad",
+     "labels": [
+      "VOID / LAUNDRY / MASTER BED ROOM"
+     ],
+     "interior": true
+    }
+   ],
+   "box_native": [
+    -186817.511,
+    -791993.54,
+    -186217.511,
+    -791793.54
+   ],
+   "jambs_native": [
+    [
+     -186817.511,
+     -791893.54
+    ],
+    [
+     -186217.511,
+     -791893.54
+    ]
+   ],
+   "a3_record": {
+    "window": "1F-W06",
+    "width_mm": 600.0
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "1F-W07",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 600.0
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "1F",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": "SITE-cdc894c0f0fd69c9",
+     "labels": [
+      "BATH"
+     ],
+     "interior": true
+    }
+   ],
+   "box_native": [
+    -182722.511,
+    -791993.54,
+    -182122.511,
+    -791793.54
+   ],
+   "jambs_native": [
+    [
+     -182722.511,
+     -791893.54
+    ],
+    [
+     -182122.511,
+     -791893.54
+    ]
+   ],
+   "a3_record": {
+    "window": "1F-W07",
+    "width_mm": 600.0
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "1F-W08",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 1552.3
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "1F",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": "SITE-8bddd8c3b8b698ad",
+     "labels": [
+      "VOID / LAUNDRY / MASTER BED ROOM"
+     ],
+     "interior": true
+    },
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    }
+   ],
+   "box_native": [
+    -175422.511,
+    -802798.666,
+    -175222.511,
+    -801246.346
+   ],
+   "jambs_native": [
+    [
+     -175322.511,
+     -802798.666
+    ],
+    [
+     -175322.511,
+     -801246.346
+    ]
+   ],
+   "a3_record": {
+    "window": "1F-W08",
+    "width_mm": 1552.3
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "1F-W09",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 1552.3
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "1F",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": "SITE-8bddd8c3b8b698ad",
+     "labels": [
+      "VOID / LAUNDRY / MASTER BED ROOM"
+     ],
+     "interior": true
+    },
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    }
+   ],
+   "box_native": [
+    -175422.511,
+    -800753.07,
+    -175222.511,
+    -799200.75
+   ],
+   "jambs_native": [
+    [
+     -175322.511,
+     -800753.07
+    ],
+    [
+     -175322.511,
+     -799200.75
+    ]
+   ],
+   "a3_record": {
+    "window": "1F-W09",
+    "width_mm": 1552.3
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "1F-W10",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 500.0
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "1F",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": "SITE-2f6cf2b5bebbd966",
+     "labels": [
+      "BATH"
+     ],
+     "interior": true
+    },
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    }
+   ],
+   "box_native": [
+    -175422.511,
+    -797101.238,
+    -175222.511,
+    -796601.238
+   ],
+   "jambs_native": [
+    [
+     -175322.511,
+     -797101.238
+    ],
+    [
+     -175322.511,
+     -796601.238
+    ]
+   ],
+   "a3_record": {
+    "window": "1F-W10",
+    "width_mm": 500.0
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "1F-W11",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 1200.0
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "1F",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": "SITE-8bddd8c3b8b698ad",
+     "labels": [
+      "VOID / LAUNDRY / MASTER BED ROOM"
+     ],
+     "interior": true
+    }
+   ],
+   "box_native": [
+    -190092.511,
+    -794243.54,
+    -189892.511,
+    -793043.54
+   ],
+   "jambs_native": [
+    [
+     -189992.511,
+     -794243.54
+    ],
+    [
+     -189992.511,
+     -793043.54
+    ]
+   ],
+   "a3_record": {
+    "window": "1F-W11",
+    "width_mm": 1200.0
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "1F-W12",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 2449.8
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "1F",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": "SITE-87d911399edea4c0",
+     "labels": [
+      "MASTER BED ROOM / MASTER BED ROOM"
+     ],
+     "interior": true
+    }
+   ],
+   "box_native": [
+    -194492.511,
+    -799775.299,
+    -194292.511,
+    -797325.525
+   ],
+   "jambs_native": [
+    [
+     -194392.511,
+     -799775.299
+    ],
+    [
+     -194392.511,
+     -797325.525
+    ]
+   ],
+   "a3_record": {
+    "window": "1F-W12",
+    "width_mm": 2449.8
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "2F-W01",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 1000.0
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "2F",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": "SITE-fd5fd08ac9eb9313",
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": "SITE-fc3aaade70a89c79",
+     "labels": [],
+     "interior": false
+    }
+   ],
+   "box_native": [
+    -231645.166,
+    -797193.54,
+    -230645.166,
+    -796993.54
+   ],
+   "jambs_native": [
+    [
+     -231645.166,
+     -797093.54
+    ],
+    [
+     -230645.166,
+     -797093.54
+    ]
+   ],
+   "a3_record": {
+    "window": "2F-W01",
+    "width_mm": 1000.0
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "2F-W02",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 1000.0
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "2F",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": "SITE-fc3aaade70a89c79",
+     "labels": [],
+     "interior": false
+    }
+   ],
+   "box_native": [
+    -233345.166,
+    -791993.54,
+    -232345.166,
+    -791793.54
+   ],
+   "jambs_native": [
+    [
+     -233345.166,
+     -791893.54
+    ],
+    [
+     -232345.166,
+     -791893.54
+    ]
+   ],
+   "a3_record": {
+    "window": "2F-W02",
+    "width_mm": 1000.0
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "2F-W03",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 600.0
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "2F",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": "SITE-ae46ec7518ab613e",
+     "labels": [],
+     "interior": false
+    }
+   ],
+   "box_native": [
+    -231670.166,
+    -791993.54,
+    -231070.166,
+    -791793.54
+   ],
+   "jambs_native": [
+    [
+     -231670.166,
+     -791893.54
+    ],
+    [
+     -231070.166,
+     -791893.54
+    ]
+   ],
+   "a3_record": {
+    "window": "2F-W03",
+    "width_mm": 600.0
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "2F-W04",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 1200.0
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "2F",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": "SITE-47c1846e082a69b3",
+     "labels": [],
+     "interior": false
+    }
+   ],
+   "box_native": [
+    -229775.166,
+    -791993.54,
+    -228575.166,
+    -791793.54
+   ],
+   "jambs_native": [
+    [
+     -229775.166,
+     -791893.54
+    ],
+    [
+     -228575.166,
+     -791893.54
+    ]
+   ],
+   "a3_record": {
+    "window": "2F-W04",
+    "width_mm": 1200.0
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  },
+  {
+   "id": "2F-W05",
+   "existence": "GLAZING_IN_WALL_GAP (entity_role_inference)",
+   "geometry": {
+    "width_mm": 1200.0
+   },
+   "function": "WINDOW_CANDIDATE",
+   "function_basis": "linear glazing in a wall gap without door geometry",
+   "material": "BLOCKED_MATERIAL",
+   "vertical_extent": null,
+   "previous_function": "WINDOW",
+   "function_change": "FUNCTION_CHANGE",
+   "floor": "2F",
+   "wall_thickness_mm": 200.0,
+   "sides": [
+    {
+     "site": null,
+     "labels": [],
+     "interior": false
+    },
+    {
+     "site": "SITE-fc3aaade70a89c79",
+     "labels": [],
+     "interior": false
+    }
+   ],
+   "box_native": [
+    -234945.166,
+    -794243.54,
+    -234745.166,
+    -793043.54
+   ],
+   "jambs_native": [
+    [
+     -234845.166,
+     -794243.54
+    ],
+    [
+     -234845.166,
+     -793043.54
+    ]
+   ],
+   "a3_record": {
+    "window": "2F-W05",
+    "width_mm": 1200.0
+   },
+   "height": "BLOCKED_HEIGHT (no source / section / owner value; no versioned fallback adopted this round)"
+  }
+ ],
+ "functions": {
+  "1F|WINDOW_CANDIDATE": 12,
+  "2F|WINDOW_CANDIDATE": 5,
+  "GF|DOOR": 4,
+  "GF|GLAZED_OPENING_FUNCTION_UNKNOWN": 1,
+  "GF|WINDOW_CANDIDATE": 11
+ },
+ "changes": [
+  {
+   "id": "GF-W01",
+   "from": "WINDOW",
+   "to": "DOOR",
+   "change": "FUNCTION_CHANGE",
+   "basis": "door evidence: closed door I437 closes this gap (closure CLOSURE|I437|A)"
+  },
+  {
+   "id": "GF-W02",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "GF-W03",
+   "from": "WINDOW",
+   "to": "DOOR",
+   "change": "FUNCTION_CHANGE",
+   "basis": "door evidence: closed door I350 closes this gap (closure CLOSURE|I350|A)"
+  },
+  {
+   "id": "GF-W04",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "GF-W05",
+   "from": "WINDOW",
+   "to": "DOOR",
+   "change": "FUNCTION_CHANGE",
+   "basis": "door evidence: door-layer swing ALSENAN_P7757_DXF|H358|1023|ARC|0 hinged at a jamb closes on the opening"
+  },
+  {
+   "id": "GF-W06",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "GF-W07",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "GF-W08",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "GF-W09",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "GF-W10",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "GF-W11",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "GF-W12",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "GF-W13",
+   "from": "WINDOW",
+   "to": "DOOR",
+   "change": "FUNCTION_CHANGE",
+   "basis": "door evidence: closed door I402 closes this gap (closure CLOSURE|I402|A)"
+  },
+  {
+   "id": "GF-W14",
+   "from": "WINDOW",
+   "to": "GLAZED_OPENING_FUNCTION_UNKNOWN",
+   "change": "FUNCTION_DEMOTION",
+   "basis": "glazing without door geometry; ambiguous: the opening joins two interior spaces (both sides inside room sites) and has no door geometry"
+  },
+  {
+   "id": "GF-W15",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "GF-W16",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "1F-W01",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "1F-W02",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "1F-W03",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "1F-W04",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "1F-W05",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "1F-W06",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "1F-W07",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "1F-W08",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "1F-W09",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "1F-W10",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "1F-W11",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "1F-W12",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "2F-W01",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "2F-W02",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "2F-W03",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "2F-W04",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  },
+  {
+   "id": "2F-W05",
+   "from": "WINDOW",
+   "to": "WINDOW_CANDIDATE",
+   "change": "FUNCTION_CHANGE",
+   "basis": "linear glazing in a wall gap without door geometry"
+  }
+ ],
+ "door_reconciliation": [
+  {
+   "opening": "GF-W01",
+   "door_occurrence": "I437"
+  },
+  {
+   "opening": "GF-W03",
+   "door_occurrence": "I350"
+  },
+  {
+   "opening": "GF-W05",
+   "door_occurrence": "swing ALSENAN_P7757_DXF|H358|1023|ARC|0"
+  },
+  {
+   "opening": "GF-W13",
+   "door_occurrence": "I402"
+  }
+ ],
+ "salon": {
+  "owner_facts": [
+   "OF-B2A-D",
+   "OF-B2A-E",
+   "OF-B2A-F"
+  ],
+  "registration": "REGISTERED",
+  "opening": "GF-W09",
+  "width_m": 6.33,
+  "width_authority": "SOURCE (printed 633 + CAD gap)",
+  "beam_above": {
+   "type": "CB1",
+   "namespace": "CONTINUOUS",
+   "B_cm": 35,
+   "D_cm": 75,
+   "drawn_breadth_mm": 350.0,
+   "tags": [
+    "ALSENAN_ST7757_DXF|H1249||TEXT|0",
+    "ALSENAN_ST7757_DXF|H1250||TEXT|0"
+   ],
+   "occurrence_state": "MEASURED",
+   "covers_opening": "the opening footprint lies inside the band footprint (>= 90 %)"
+  },
+  "interval_m": 4.5,
+  "interval_authority": "STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP",
+  "structural_soffit_above_gf_ffl_m": "3.75 - (1F floor build-up)",
+  "structural_soffit_upper_bound_m": 3.75,
+  "finished_ceiling": "NOT_IN_SOURCE",
+  "aluminium_head": "NOT_IN_SOURCE",
+  "height_m": 3.65,
+  "height_authority": "OWNER_DERIVED_PROJECT_DIMENSION (OF-B2A-F, provisional)",
+  "source_consistency": "CONSISTENT (3.65 <= structural soffit bound)",
+  "state": "OWNER_DERIVED_REVIEW_REQUIRED",
+  "area_m2": 23.1045,
+  "rule": "the beam soffit is an upper bound for the aluminium head; the head itself is not printed"
+ },
+ "review_image": "GF_1M_OPENINGS_REVIEW.png (package)",
+ "rule": "existence, geometry, function, material and vertical extent are separate; UNKNOWN is never published as WINDOW; an opening whose gap a door closes is that door (counted once)"
+}

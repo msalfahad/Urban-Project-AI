@@ -1,0 +1,65 @@
+{
+ "ARTIFACT": "PA08_QORTUBA_R1_SEMANTIC_READER_OUTPUT",
+ "READER": "independent semantic reader (one agent, §8)",
+ "INPUT_SHOWN": ["the PDF plan render only (raster of the original sheet) and two half-resolution crops of it"],
+ "INPUT_NOT_SHOWN": ["engine spaces", "engine bands", "engine opening sites", "any PA07/PA08 register", "any expected area, length or count"],
+ "STATUS": "MODEL_OBSERVATION_NOT_TRUTH",
+ "USE": "QA only (§8): it may contradict the engine and it may be wrong; it never edits geometry and no quantity is taken from it",
+ "ROOMS": [
+  {"LABEL": "BATH (top-left)", "X": 0.37, "Y": 0.24}, {"LABEL": "DRESS", "X": 0.447, "Y": 0.257}, {"LABEL": "M.B.ROOM", "X": 0.56, "Y": 0.266},
+  {"LABEL": "BATH (middle-left)", "X": 0.37, "Y": 0.349}, {"LABEL": "HALL", "X": 0.548, "Y": 0.41}, {"LABEL": "PAINTRY", "X": 0.37, "Y": 0.435},
+  {"LABEL": "BATH (lower-left)", "X": 0.37, "Y": 0.55}, {"LABEL": "BED.ROOM (left)", "X": 0.403, "Y": 0.622}, {"LABEL": "BED.ROOM (right)", "X": 0.546, "Y": 0.615},
+  {"LABEL": "ROOF", "X": 0.868, "Y": 0.328}, {"LABEL": "(unlabelled) bedroom vestibule", "X": 0.49, "Y": 0.55},
+  {"LABEL": "(unlabelled) stair + landing", "X": 0.675, "Y": 0.57}, {"LABEL": "(unlabelled) lift", "X": 0.77, "Y": 0.51}
+ ],
+ "ADJACENCIES": [
+  {"ROOM_A": "BATH (top-left)", "ROOM_B": "DRESS", "RELATION": "SEPARATED_WALL_WITH_DOOR", "JUSTIFICATION": "door leaf + quarter arc at the south end of the BATH/DRESS partition, swinging west into BATH"},
+  {"ROOM_A": "BATH (top-left)", "ROOM_B": "BATH (middle-left)", "RELATION": "SEPARATED_WALL_NO_OPENING", "JUSTIFICATION": "continuous horizontal wall, no leaf, arc or gap"},
+  {"ROOM_A": "DRESS", "ROOM_B": "M.B.ROOM", "RELATION": "SEPARATED_WALL_WITH_DOORLESS_OPENING", "JUSTIFICATION": "the partition runs 315 cm from the north wall and stops, leaving a ~120 cm gap at its south end; no door symbol"},
+  {"ROOM_A": "DRESS", "ROOM_B": "HALL", "RELATION": "SEPARATED_WALL_WITH_DOOR", "JUSTIFICATION": "leaf and arc in the south wall of the DRESS zone, swinging north into DRESS"},
+  {"ROOM_A": "M.B.ROOM", "ROOM_B": "HALL", "RELATION": "SEPARATED_WALL_NO_OPENING", "JUSTIFICATION": "the south wall of M.B.ROOM is a continuous double line; M.B.ROOM is reached only through DRESS"},
+  {"ROOM_A": "M.B.ROOM", "ROOM_B": "ROOF", "RELATION": "SEPARATED_WALL_NO_OPENING", "JUSTIFICATION": "window lines in the east wall, no door"},
+  {"ROOM_A": "HALL", "ROOM_B": "ROOF", "RELATION": "SEPARATED_WALL_NO_OPENING", "JUSTIFICATION": "window strip only in the east wall of HALL"},
+  {"ROOM_A": "HALL", "ROOM_B": "BATH (middle-left)", "RELATION": "SEPARATED_WALL_WITH_DOOR", "JUSTIFICATION": "door arc and leaf in the east wall of the middle BATH swinging west into BATH"},
+  {"ROOM_A": "HALL", "ROOM_B": "PAINTRY", "RELATION": "SEPARATED_WALL_WITH_DOORLESS_OPENING", "JUSTIFICATION": "wall stubs at both ends with a ~285 cm run between them drawn on the glazing layer; no leaf; PAINTRY has no other entry"},
+  {"ROOM_A": "PAINTRY", "ROOM_B": "BATH (middle-left)", "RELATION": "SEPARATED_WALL_NO_OPENING", "JUSTIFICATION": "continuous wall, no gap"},
+  {"ROOM_A": "PAINTRY", "ROOM_B": "BATH (lower-left)", "RELATION": "SEPARATED_WALL_NO_OPENING", "JUSTIFICATION": "continuous wall containing a long hatched rectangle; no leaf or gap"},
+  {"ROOM_A": "BATH (lower-left)", "ROOM_B": "vestibule", "RELATION": "SEPARATED_WALL_WITH_DOOR", "JUSTIFICATION": "leaf and arc at the south end of the east wall of the lower BATH"},
+  {"ROOM_A": "BATH (lower-left)", "ROOM_B": "BED.ROOM (left)", "RELATION": "SEPARATED_WALL_NO_OPENING", "JUSTIFICATION": "continuous wall; the bedroom door faces the vestibule, not the BATH"},
+  {"ROOM_A": "BED.ROOM (left)", "ROOM_B": "vestibule", "RELATION": "SEPARATED_WALL_WITH_DOOR", "JUSTIFICATION": "door with leaf and arc in the bedroom's north wall swinging south into the bedroom"},
+  {"ROOM_A": "BED.ROOM (right)", "ROOM_B": "vestibule", "RELATION": "SEPARATED_WALL_WITH_DOOR", "JUSTIFICATION": "door with leaf and arc swinging south into the right bedroom"},
+  {"ROOM_A": "BED.ROOM (left)", "ROOM_B": "BED.ROOM (right)", "RELATION": "SEPARATED_WALL_NO_OPENING", "JUSTIFICATION": "continuous partition with a hatched column, from the door jambs to the south external wall"},
+  {"ROOM_A": "BED.ROOM (right)", "ROOM_B": "HALL", "RELATION": "SEPARATED_WALL_NO_OPENING", "JUSTIFICATION": "the north wall of the right bedroom's alcove is continuous and contains a closed 190 x 70 rectangle; no door"},
+  {"ROOM_A": "vestibule", "ROOM_B": "HALL", "RELATION": "INTENTIONALLY_OPEN", "JUSTIFICATION": "the vestibule's north wall stops short, leaving a ~130 cm doorless opening to HALL; no door symbol"},
+  {"ROOM_A": "BED.ROOM (right)", "ROOM_B": "stair", "RELATION": "SEPARATED_WALL_NO_OPENING", "JUSTIFICATION": "continuous wall between the bedroom and the stair flights"},
+  {"ROOM_A": "HALL", "ROOM_B": "stair landing", "RELATION": "SEPARATED_WALL_WITH_DOOR", "JUSTIFICATION": "single-leaf door with arc in the landing's north wall swinging north into HALL"},
+  {"ROOM_A": "ROOF", "ROOM_B": "stair landing", "RELATION": "SEPARATED_WALL_WITH_DOOR", "JUSTIFICATION": "second single-leaf door in the same landing wall swinging north onto the ROOF"},
+  {"ROOM_A": "BATH (middle-left)", "ROOM_B": "DRESS", "RELATION": "SEPARATED_WALL_NO_OPENING", "JUSTIFICATION": "they touch only at a corner through a small closed shaft and a hatched column"}
+ ],
+ "BEDROOMS_DISTINCT": "yes: two separately enclosed rooms divided by a continuous partition with a hatched column; each has its own door from the vestibule",
+ "BATHS": [
+  {"BATH_POSITION": "top-left", "ENTERED_FROM": "DRESS (en-suite to the M.B.ROOM / DRESS suite)"},
+  {"BATH_POSITION": "middle-left", "ENTERED_FROM": "HALL (west strip)"},
+  {"BATH_POSITION": "lower-left", "ENTERED_FROM": "the vestibule that is open to HALL; not en-suite to either bedroom"}
+ ],
+ "VESTIBULE": "an unlabelled vestibule roughly 330 x 120-180 cm in front of the two bedroom doors, bounded west by the lower BATH wall, south by the two bedroom door walls, east by the right bedroom's alcove wall, and open to HALL through a ~130 cm doorless gap in its north wall",
+ "DRESS_MBR": "doorless opening: the partition stops 120 cm short of the south wall",
+ "DRESS_HALL": "a door: one leaf-and-arc door from the HALL west strip into DRESS serves the whole DRESS + M.B.ROOM suite",
+ "CLOSED_OUTLINES": [
+  {"WHERE": "north wall of the right bedroom's alcove", "BETWEEN": "HALL and BED.ROOM (right)", "SIZE_GUESS": "190 x 70 cm closed rectangle; wardrobe recess or duct"},
+  {"WHERE": "between top-left BATH, middle BATH and the DRESS door wall", "BETWEEN": "BATH (middle-left) / DRESS / HALL strip", "SIZE_GUESS": "~45-50 x 80 cm closed cell; shaft or duct"},
+  {"WHERE": "between PAINTRY and BATH (lower-left)", "BETWEEN": "PAINTRY and BATH (lower-left)", "SIZE_GUESS": "~135 x 20 cm cross-hatched strip"},
+  {"WHERE": "several positions in external and party walls", "BETWEEN": "rooms and outside", "SIZE_GUESS": "~20 x 50 to 60 x 20 cm cross-hatched columns"}
+ ],
+ "WINDOWS": ["M.B.ROOM north wall", "M.B.ROOM east wall facing ROOF", "HALL east wall facing ROOF", "PAINTRY west wall", "BED.ROOM (left) west wall", "BED.ROOM (right) south wall"],
+ "STAIR_LIFT": "a two-flight dog-leg stair at the south-east with a landing at its north end; the lift is a cross-hatched box east of the landing opening west onto it; the landing's north wall carries two single-leaf doors, one into HALL and one onto the ROOF",
+ "WET_AREAS": "no sanitary fixtures are drawn in any room; the three BATH rooms and PAINTRY are wet areas by label only; PAINTRY shows an L-shaped counter outline with no sink symbol",
+ "READER_NOTES": [
+  "the PAINTRY opening is drawn on the same layer / colour as the external window symbols: it may be a glazed serving screen rather than a free opening",
+  "M.B.ROOM has no door of its own; its access is the DRESS door plus the 120 cm doorless gap",
+  "the lower-left BATH is not en-suite: it opens off the bedroom vestibule",
+  "DRESS and HALL each contain a blue polyline that is not a wall (fitting or soffit outline)",
+  "the right bedroom's 190 x 70 rectangle is a closed outline; whether it is a wardrobe niche open to the room or a duct cannot be confirmed from the plan",
+  "all positions are estimated by eye from the raster; quoted dimensions are the annotation values drawn on the plan, in centimetres"
+ ]
+}

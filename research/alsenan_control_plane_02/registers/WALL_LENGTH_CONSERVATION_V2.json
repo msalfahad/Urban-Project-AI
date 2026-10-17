@@ -1,0 +1,95 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_WALL_LENGTH_CONSERVATION_V2",
+ "rows": [
+  {
+   "floor": "GF",
+   "bands_m_by_class": {
+    "AMBIGUOUS_BLOCKED": 32.062,
+    "EXCLUDED_WITH_REASON": 14.035,
+    "MASONRY_150": 26.094,
+    "MASONRY_200": 38.861
+   },
+   "raw_ambiguous_m": 32.062,
+   "accounted_ambiguous_m": 32.062,
+   "unaccounted_ambiguous_m": 0.0,
+   "unpaired_m_by_role_class": {
+    "GLAZING_BOUNDARY|NON_MASONRY": 116.355,
+    "STRUCTURAL_OBSTACLE|RC_INTERFACE": 70.033,
+    "TOPOLOGY_BOUNDARY|AMBIGUOUS_BLOCKED": 112.747
+   },
+   "raw_unpaired_boundary_m": 112.747,
+   "classified_unpaired_m": 186.388,
+   "blocked_unpaired_m": 112.747,
+   "unaccounted_unpaired_m": 0.0,
+   "blockwork_release": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "floor": "1F",
+   "bands_m_by_class": {
+    "AMBIGUOUS_BLOCKED": 14.568,
+    "EXCLUDED_WITH_REASON": 14.035,
+    "MASONRY_150": 42.713,
+    "MASONRY_200": 28.881
+   },
+   "raw_ambiguous_m": 14.568,
+   "accounted_ambiguous_m": 14.568,
+   "unaccounted_ambiguous_m": -0.0,
+   "unpaired_m_by_role_class": {
+    "GLAZING_BOUNDARY|NON_MASONRY": 73.926,
+    "STRUCTURAL_OBSTACLE|RC_INTERFACE": 47.599,
+    "TOPOLOGY_BOUNDARY|AMBIGUOUS_BLOCKED": 50.765
+   },
+   "raw_unpaired_boundary_m": 50.765,
+   "classified_unpaired_m": 121.526,
+   "blocked_unpaired_m": 50.765,
+   "unaccounted_unpaired_m": 0.0,
+   "blockwork_release": "VERIFIED_PARTIAL_LOWER_BOUND"
+  },
+  {
+   "floor": "2F",
+   "bands_m_by_class": {
+    "EXCLUDED_WITH_REASON": 14.035,
+    "MASONRY_150": 8.7,
+    "MASONRY_200": 21.998
+   },
+   "raw_ambiguous_m": 0.0,
+   "accounted_ambiguous_m": 0.0,
+   "unaccounted_ambiguous_m": 0.0,
+   "unpaired_m_by_role_class": {
+    "GLAZING_BOUNDARY|NON_MASONRY": 23.12,
+    "STRUCTURAL_OBSTACLE|RC_INTERFACE": 106.403,
+    "TOPOLOGY_BOUNDARY|AMBIGUOUS_BLOCKED": 24.309
+   },
+   "raw_unpaired_boundary_m": 24.309,
+   "classified_unpaired_m": 129.523,
+   "blocked_unpaired_m": 24.309,
+   "unaccounted_unpaired_m": 0.0,
+   "blockwork_release": "VERIFIED_PARTIAL_LOWER_BOUND"
+  }
+ ],
+ "totals": {
+  "accounted_ambiguous_m": 46.63,
+  "band_AMBIGUOUS_BLOCKED": 46.63,
+  "band_EXCLUDED_WITH_REASON": 42.1,
+  "band_MASONRY_150": 77.51,
+  "band_MASONRY_200": 89.74,
+  "blocked_unpaired_m": 187.82,
+  "classified_unpaired_m": 437.44,
+  "raw_ambiguous_m": 46.63,
+  "raw_unpaired_boundary_m": 187.82,
+  "unaccounted_ambiguous_m": 0.0,
+  "unaccounted_unpaired_m": 0.0
+ },
+ "classes": [
+  "MASONRY_150",
+  "MASONRY_200",
+  "OTHER_MASONRY",
+  "RC_INTERFACE",
+  "NON_MASONRY",
+  "OPENING_TRANSITION",
+  "AMBIGUOUS_BLOCKED",
+  "NOT_WALL",
+  "EXCLUDED_WITH_REASON"
+ ],
+ "rule": "every admitted wall band and every boundary item outside a band ends in one class (ledger); ambiguous length stays ambiguous and keeps blockwork at VERIFIED_PARTIAL_LOWER_BOUND"
+}

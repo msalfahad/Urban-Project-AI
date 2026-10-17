@@ -1,0 +1,250 @@
+{
+ "SCHEMA": "URBAN_R8_14_DECISION_REGISTER_V1",
+ "recommendation_before_coding": {
+  "SCHEMA": "URBAN_R8_14_RECOMMENDATION_BEFORE_CODING_V1",
+  "written": "after inspecting the engine and the R8.13 records, before any R8.14 code and before any V5 Qortuba run",
+  "inspected": [
+   "door closures (topology.opening_closures): closure A runs along the CLOSED-LEAF line from the door symbol, closure B joins the far ends of the two jamb caps; a threshold OPENING_SITE exists only when A lands on the jamb-cap END POINTS, i.e. when the drawn leaf is anchored on a wall face",
+   "the six Qortuba threshold doors: every hinge lies ON wall face A (offset 0.000 mm); the door blocks are schematic (closed leaf just outside the face, frame pieces 117.6 mm deep in 150 mm walls, the same block in every opening)",
+   "the passages: no line of any role is drawn across the Hall / Lobby or the M.B.ROOM / DRESS passage - the Hall / Lobby head is known only from the owner; the M.B.ROOM / DRESS head of the NEW revision is not established anywhere (QP-18 is old-revision)",
+   "V4-O1: H2060 (2100 x 400 mm) and H2061 (inset 100 mm) are model-space closed polylines on layer WALL (GR-05 -> TOPOLOGY_BOUNDARY); they touch no other admitted segment; the inner one carries a dashed X already classified PRESENTATION_OVERHEAD (GR-16); together they cut a 0.84 m2 hole out of the BED.ROOM site (19.2725 m2)",
+   "source anchor: the pinned libredwg 0.13.3 (/tmp/ldwg, sha fe49cf28...) still fails on the AC1032 DWG exactly as in R8.7 (Header / Classes / AcDbObjects unreadable); K1 is built on the same reader. R8.13 wrongly said 'no local decoder is installed' - one IS installed (off PATH) and was re-run: it cannot read the file"
+  ],
+  "1_threshold_sufficiently_specified": "YES for this Qortuba revision: the owner fixes (a) continuity through every doorway, (b) the dry / wet transition at the door plane, (c) marble only on explicit evidence. Combined with the class rule (BATH = WET_SERVICE_ROOM, the rest DRY) every threshold gets a finish on each side. The STRIP_ALLOCATION release blocker can go for the FLOOR rows. For the CEILING row a door threshold is the door's TOP REVEAL (US-07 left / right / top reveals; door head 2.20 m, QP-21), never ceiling: NOT_IN_TRADE for CEILING, recorded for the reveal trade.",
+  "2_transition_plane": "The hierarchy is right, but on this source level 1 does NOT apply: every Qortuba hinge sits ON a wall face, the closed leaf falls on / outside the face and the frame block is not fitted to the wall - a schematic symbol establishes the opening (width, swing, host wall), not the frame plane. Generic rule: AUTHORED_LEAF_PLANE only when the hinge / closed leaf lies STRICTLY inside the reveal (between the two faces, beyond eps_r); a symbol anchored on a face is SYMBOL_ANCHORED_AT_FACE (no plane authority). Then level 3: the owner's scoped DOOR_CENTRED fact applied to the ESTABLISHED parallel face pair (closures A and B): the mid-plane between them. Without that fact the state is UNRESOLVED_TRANSITION_PLANE - never wall thickness / 2 by default.",
+  "3_soffit_removed_from_ceiling": "YES: the owner says the underside of the head is a plastered soffit / reveal, not ceiling. The passage strip (source-measured from the band end points) leaves the CEILING region and is recorded once as a TOP_SOFFIT reveal surface.",
+  "4_reveals_without_double_count": "One owner per surface: the ROOM WALL FACE loses the opening rectangle; LEFT_JAMB / RIGHT_JAMB / TOP_SOFFIT are separate OPENING_REVEAL_SURFACE records; the normal CEILING loses the soffit footprint. A surface is owned by exactly one trade region; a guard rejects a footprint claimed by both CEILING and TOP_SOFFIT. Jamb depth comes from the source (the band end segment, 200 mm), NOT from US-07's 0.25 m standard - recorded as a reconciliation item for the plaster trade (no plaster quantity this round).",
+  "5_skirting_vs_qp08": "REFINES (more specific), it does not supersede: QP-08 says no wardrobe / joinery deduction from skirting; the new fact states the positive path (all real walls of tiled dry rooms) and the stops (doors, passages, no-wall gaps). US-02 is CORROBORATED by 'no skirting in full-wall-tile rooms'.",
+  "6_marble": "An explicit threshold treatment MARBLE_THRESHOLD_EXPLICIT that a threshold reaches only through an evidence record (drawing text / schedule / spec / project owner fact) naming that opening; no evidence -> the continuous-tile rule. The evidence search is a register (what was searched, what was found), and its result is part of the row authority.",
+  "7_o1_o2_material": "V4-O2: not material to any row (old revision only) but it IS a nondeterminism -> fix now (V5, tolerance tie, fail closed). V4-O1: MATERIAL - not to the wall-band result (no closure / passage / row) but to the ROOM AREA: the same isolated layer-only loop is a TS01 hole in BED.ROOM, so Q-13 and Q-14 each stand on 0.84 m2 of unproven obstacle authority. V5 makes such a band a GEOMETRIC_BAND_CANDIDATE (no closure, no passage, no paired-face corroboration); the hole itself is a role / admission question (GR-05 is not sufficient physical authority for an isolated closed loop) -> recorded with both counterfactual values and a release blocker; the role-admission change belongs to its own frozen round (R8.15), not slipped into this one.",
+  "8_source_anchor": "NO. The only local DWG reader (pinned libredwg 0.13.3) fails on AC1032 as before; nothing new is installed and nothing will be downloaded. The anchor stays NOT_ESTABLISHED; R8.14 does not fail on it.",
+  "9_disagreements_with_chatgpt": [
+   "Level 1 'authored door leaf / frame plane' must require the leaf to lie strictly inside the reveal: on this source the symbol is anchored on a face, so naive level 1 would put the whole threshold on one side - exactly what the owner forbids.",
+   "The CEILING row needs its own threshold rule (door head = top reveal, NOT_IN_TRADE); the floor allocation does not carry over to the ceiling.",
+   "Passage strips need a HEAD-CONDITION check for the ceiling: R8.13 kept the M.B.ROOM / DRESS strip in the normal ceiling because both sides agree - for a ceiling that is not the deciding fact. Without a head condition for the new revision the strip is an explicit release blocker, not a silent inclusion (and QP-18 does not transfer).",
+   "US-07's 0.25 m reveal depth and the source wall thickness (0.20 m) disagree for the passage jambs: geometry is recorded from source; the depth rule is reconciled when plaster is computed, not silently replaced.",
+   "A skirting quantity should NOT be produced this round even though the path engine can be built and tested: a new geometric engine needs its own freeze + blind run before its number means anything (and jamb returns at topology-closed wall ends have no physical-length authority yet)."
+  ],
+  "10_r8_15": "R8.15: (1) role-admission authority for isolated closed loops on wall layers (frozen, blind) + the BED.ROOM rectangle owner question if still material; (2) the skirting wall-contact path quantity under freeze + blind protocol, with a jamb-return rule; (3) the plaster / reveal face-set engine (US-06 deductions, US-07 vs source depth); (4) the M.B.ROOM / DRESS head condition for the new revision; (5) source anchor via a pinned AC1032-capable reader or an owner-supplied DXF re-export with a checksum chain."
+ },
+ "order": [
+  "recommendation written (r8_14_recommendation.json)",
+  "V5 + synthetic tests committed: 926eb243dda5",
+  "freeze record committed",
+  "blind run committed (BLIND_QORTUBA_V5_RESULT.json)",
+  "trade modules + owner method facts + synthetic tests committed before the Qortuba rebuild",
+  "rebuild, registers afterwards"
+ ],
+ "decisions": [
+  {
+   "id": "R814-D01",
+   "decision": "WALL_BAND_POLICY_V5: elongation tie against eps_r (V4-O2) + GEOMETRIC_BAND_CANDIDATE for isolated closed loops (V4-O1 band side)"
+  },
+  {
+   "id": "R814-D02",
+   "decision": "DOOR_TRANSITION_POLICY_V1: plane hierarchy with the leaf strictly inside the reveal; owner-centred plane only as a scoped fact"
+  },
+  {
+   "id": "R814-D03",
+   "decision": "STRIP_ALLOCATION V2: thresholds resolved by allocation; CEILING door thresholds NOT_IN_TRADE; passage head condition required for CEILING"
+  },
+  {
+   "id": "R814-D04",
+   "decision": "Hall / Lobby soffit out of Q-14, recorded as TOP_SOFFIT plaster; jambs as LEFT / RIGHT_JAMB; no paint"
+  },
+  {
+   "id": "R814-D05",
+   "decision": "skirting: path classifier built and tested; NO quantity (no frozen, blind-tested path policy; no jamb-return rule)"
+  },
+  {
+   "id": "R814-D06",
+   "decision": "V4-O1 room hole kept, release blocker + counterfactual; role admission deferred to R8.15"
+  },
+  {
+   "id": "R814-D07",
+   "decision": "entrance threshold: unit-boundary split at the owner-centred plane (post-run lab scope decision, disclosed, release blocker)"
+  }
+ ],
+ "gates": {
+  "MIGRATION_PLANNING_READY": "YES",
+  "MIGRATION_EXECUTION_READY": "NO",
+  "PRODUCTION_MIGRATION": "NO"
+ },
+ "answers": {
+  "1_physical_vs_trade": "ONE physical OPENING_SITE per door (the reveal strip between the two face closures, a TS01 site); the finish transition is a TRADE subdivision of that site (DOOR_TRANSITION_POLICY_V1) - the building topology is never split",
+  "2_dry_dry_area": "2 dry <-> dry thresholds: CONTINUOUS_SAME_FINISH, the whole strip once to the dry porcelain row Q-13 (0.3 m2)",
+  "3_dry_wet_geometry": "the established parallel face pair (closures A and B, from the wall jamb caps) with the owner-centred plane (level 3); level 1 does not apply - every hinge lies ON a face",
+  "4_midpoint_assumption": "YES, but only as the owner's scoped DOOR_CENTRED fact applied to the established face pair (OWNER_CENTRED_DOOR) - never thickness / 2 by default",
+  "5_explicit_marble": "NO EXPLICIT MARBLE THRESHOLD EVIDENCE FOUND",
+  "6_continuity_rule_applied": "YES (continuous floor-transition rule; QORTUBA-NEW-DOOR-THRESHOLD-CONTINUITY-OWNER-001@v1)",
+  "7_thresholds_allocated": "6 of 7 (by state {'SPLIT_AT_DOOR_PLANE': 4, 'OUTSIDE_MEASURED_UNIT': 1, 'CONTINUOUS_SAME_FINISH': 2}); the remaining one lies wholly outside the measured unit (common landing) and is in no row",
+  "8_areas_reconciled": true,
+  "9_q03_q11_contribution": {
+   "Q-03": 0.18,
+   "Q-11": 0.18,
+   "how": "the wet halves only: THRESHOLD-cf12fcdfd3e6a4a6 0.06 m2, THRESHOLD-28f50f8dc18c1e90 0.06 m2, THRESHOLD-f9846605acbce828 0.06 m2"
+  },
+  "10_q13_contribution": 0.555,
+  "11_threshold_still_blocker": "NONE blocks; the entrance threshold carries a UNIT_BOUNDARY_THRESHOLD release blocker (post-run scope decision, disclosed)",
+  "12_soffit_representation": "OPENING_REVEAL_SURFACE TOP_SOFFIT (plaster), footprint from the source passage strip (0.239289 m2); recorded once",
+  "13_q14_excluded_soffit": "SOFFIT_EXCLUDED_FROM_CEILING",
+  "14_q14_value": "COMPUTED_SHADOW 140.787 m2 (SHADOW)",
+  "15_reveal_surfaces": [
+   {
+    "surface": "LEFT_JAMB",
+    "area_m2": 0.43999999999975997,
+    "finish": "PLASTER",
+    "trade": "PLASTER"
+   },
+   {
+    "surface": "RIGHT_JAMB",
+    "area_m2": 0.43999999999975997,
+    "finish": "PLASTER",
+    "trade": "PLASTER"
+   },
+   {
+    "surface": "TOP_SOFFIT",
+    "area_m2": 0.23928946204185486,
+    "finish": "PLASTER",
+    "trade": "PLASTER"
+   }
+  ],
+  "16_paint_assumed": "NO",
+  "17_passage_still_open": "YES - the Hall / Lobby passage stays an OPEN_PASSAGE_SITE (floor continues; no wall, no closure material)",
+  "18_skirting_method_explicit": "YES - all real walls of tiled dry rooms, stops at doors / passages / gaps, no wardrobe deduction (scoped fact, REFINES QP-08)",
+  "19_behind_wardrobes": "YES",
+  "20_across_doors_passages": "NO",
+  "21_rooms_no_skirting": [
+   "BATHROOM",
+   "KITCHEN",
+   "IRONING_ROOM",
+   "WASHING_LAUNDRY_ROOM",
+   "PAINTRY (SERVICE_ROOM, QP-07)"
+  ],
+  "22_skirting_quantity": "NOT PRODUCED",
+  "23_missing_component": [
+   "a FROZEN, blind-tested WALL_CONTACT_PATH policy (built and synthetically tested this round; never run under freeze + blind protocol)",
+   "a jamb-return rule: the Hall / Lobby jamb faces are TOPOLOGY_CLOSURE edges (zero by rule); their physical 200 mm returns need source / owner length authority before they can carry skirting",
+   "a glazed-opening rule for the new revision (QP-09 is an old-revision rule store entry)",
+   "the V4-O1 hole edges (UNPROVEN_OBSTACLE) withheld until the obstacle has physical authority"
+  ],
+  "24_v4_o1_what": "H2060 (2100 x 400 mm) with H2061 nested 100 mm inside it: closed LWPOLYLINEs on layer WALL (GR-05 TOPOLOGY_BOUNDARY), touching no other admitted segment; a dashed X (H2062 / H2065, hidden layer, GR-16 PRESENTATION_OVERHEAD) inside the inner one",
+  "25_v4_o1_policy_change": "YES for the BAND (V5 GEOMETRIC_BAND_CANDIDATE: no ends / closures / passages); NO for the ROOM HOLE (role admission unchanged after a blind run): material True -> OBSTACLE_AUTHORITY_UNPROVEN on ['Q-13', 'Q-14'] with counterfactuals {'Q-13': 112.9938, 'Q-14': 141.627}",
+  "26_v4_o2_what": "a square run (run == ratio x separation; pair 545 / 549 old revision, 150 x 150 mm) was decided by binary floating-point noise at the elongation equality (V3 and V4)",
+  "27_equality_deterministic": "V5: elongated only when length - elongation_ratio x separation > eps_r (raw overlap pre-check and local run alike); within eps_r of equality -> NOT elongated (ELONGATION_BOUNDARY_CASE, fail closed)",
+  "28_v4_or_v5": "V5 (d1ff58e755bb88f4), frozen at 926eb243dda5 before the blind run",
+  "29_h2430_h2431_regression": [
+   {
+    "closure_id": "TC-1013dbb787e56f65",
+    "release": "AUTHORISED_FOR_SHADOW",
+    "geometry": [
+     109773.7561,
+     15029.7196,
+     109773.7561,
+     15049.7196
+    ],
+    "evidence": [
+     "471",
+     "477",
+     "2430"
+    ],
+    "separated_m2": [
+     0.3813
+    ]
+   },
+   {
+    "closure_id": "TC-5f9f2014f83ab0d4",
+    "release": "AUTHORISED_FOR_SHADOW",
+    "geometry": [
+     109893.4009,
+     15029.7196,
+     109893.4009,
+     15049.7196
+    ],
+    "evidence": [
+     "2296",
+     "2297",
+     "2431"
+    ],
+    "separated_m2": [
+     0.6494
+    ]
+   }
+  ],
+  "30_source_anchor": "NOT_ESTABLISHED - R8.13 said 'no local DWG decoder is installed': the pinned libredwg 0.13.3 build IS present (off PATH, /tmp/ldwg) - it was re-run here and still cannot read this AC1032 file. K1 is built on the same reader. ezdxf reads DXF only. Nothing was downloaded",
+  "31_closure_release": [
+   "AUTHORISED_FOR_SHADOW"
+  ],
+  "32_six_values": {
+   "Q-03": [
+    "COMPUTED_SHADOW",
+    17.9225
+   ],
+   "Q-03P": [
+    "COMPUTED_SHADOW",
+    11.685
+   ],
+   "Q-11": [
+    "COMPUTED_SHADOW",
+    17.9225
+   ],
+   "Q-12": [
+    "COMPUTED_SHADOW",
+    11.685
+   ],
+   "Q-13": [
+    "COMPUTED_SHADOW",
+    112.1538
+   ],
+   "Q-14": [
+    "COMPUTED_SHADOW",
+    140.787
+   ]
+  },
+  "33_blockers_per_row": {
+   "Q-03": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-03P": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-11": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-12": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-13": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "UNIT_BOUNDARY_THRESHOLD: THRESHOLD-bfcea08375237224 (0.15 m2, 1000.0 mm door to a space outside the measured unit) is split at the owner-centred door plane - the owner facts name dry / wet doors; applying the split at the unit entrance is a scope decision taken after the run (not blind-tested)",
+    "OBSTACLE_AUTHORITY_UNPROVEN: 0.84 m2 excluded from BED.ROOM by isolated closed loop(s) H2060 (layer-only; no physical authority)",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "Q-14": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "PASSAGE_HEAD_CONDITION_NOT_ESTABLISHED: OP-9e0fd219ca5cd391 (0.18 m2) is in the ceiling site but its head condition is not established for this revision (old QP-18 does not transfer)",
+    "OBSTACLE_AUTHORITY_UNPROVEN: 0.84 m2 excluded from BED.ROOM by isolated closed loop(s) H2060 (layer-only; no physical authority)",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ]
+  },
+  "34_new_silent_error": [
+   "R8.13 kept the M.B.ROOM / DRESS passage strip (0.18 m2) inside the normal ceiling because both sides agreed - for a ceiling the head condition decides; R8.14 makes it PASSAGE_HEAD_CONDITION_NOT_ESTABLISHED",
+   "the BED.ROOM 0.84 m2 hole stands on a layer-only isolated loop (V4-O1) - now an explicit OBSTACLE_AUTHORITY_UNPROVEN release blocker on Q-13 and Q-14",
+   "the flat entrance threshold (HALL -> common landing) was counted as a dry <-> dry door in the pre-run prediction; the run shows its far side is outside the measured unit - recorded, not hidden"
+  ],
+  "35_r8_15": "R8.15: (1) role-admission authority for isolated closed loops on wall layers (frozen, blind) + the BED.ROOM rectangle owner question if still material; (2) the skirting wall-contact path quantity under freeze + blind protocol, with a jamb-return rule; (3) the plaster / reveal face-set engine (US-06 deductions, US-07 vs source depth); (4) the M.B.ROOM / DRESS head condition for the new revision; (5) source anchor via a pinned AC1032-capable reader or an owner-supplied DXF re-export with a checksum chain.",
+  "36_disagreements": [
+   "Level 1 'authored door leaf / frame plane' must require the leaf to lie strictly inside the reveal: on this source the symbol is anchored on a face, so naive level 1 would put the whole threshold on one side - exactly what the owner forbids.",
+   "The CEILING row needs its own threshold rule (door head = top reveal, NOT_IN_TRADE); the floor allocation does not carry over to the ceiling.",
+   "Passage strips need a HEAD-CONDITION check for the ceiling: R8.13 kept the M.B.ROOM / DRESS strip in the normal ceiling because both sides agree - for a ceiling that is not the deciding fact. Without a head condition for the new revision the strip is an explicit release blocker, not a silent inclusion (and QP-18 does not transfer).",
+   "US-07's 0.25 m reveal depth and the source wall thickness (0.20 m) disagree for the passage jambs: geometry is recorded from source; the depth rule is reconciled when plaster is computed, not silently replaced.",
+   "A skirting quantity should NOT be produced this round even though the path engine can be built and tested: a new geometric engine needs its own freeze + blind run before its number means anything (and jamb returns at topology-closed wall ends have no physical-length authority yet)."
+  ]
+ }
+}

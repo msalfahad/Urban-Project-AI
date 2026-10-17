@@ -1,0 +1,116 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_PHASE_B2A_RECOMMENDATION_V1",
+ "phase": "ALSENAN_P7757_ST7757_PHASE_B2A",
+ "base_commit": "f820263",
+ "committed_before": "any B2A engine, adapter or test code",
+ "rules_in_force": ["NO BENCHMARK CALIBRATION", "NO PRICING", "NO PRODUCTION MIGRATION",
+                    "benchmark quantities are read only AFTER the B2A freeze, for evaluation",
+                    "Qortuba is RC1_REFERENCE: rebuilt, never patched; regression must be UNCHANGED / PROVENANCE_ONLY",
+                    "project facts never travel; what cannot be proved is BLOCKED"],
+ "inspected": {
+  "freezes": ["tests/alsenan/registers_a3 (A3 freeze de01b42d...)", "tests/alsenan/registers_b1 (B1 freeze d29a8a27...)", "B1 backlog FIX-B1-01..11"],
+  "engine": ["engine/source/structural_schedule.py (parse_mark, beam_bands, column_storeys)", "engine/source/structural_qto.py",
+             "engine/source/entity_role_inference.py (glazing / curved glazing / door frames)", "engine/source/topology*.py"],
+  "adapter": ["research/external_engine_lab/alsenan_phase_a3.py (_beams, _slabs, _columns, _architecture)"],
+  "source": ["ST7757.dxf sheets GF / 1F / 2F ROOF SLAB, GROUND BEAMS, FOUNDATION, COLUMN & AXIS (rendered and censused)",
+             "ST7757.pdf p.13 typical isolated footing + ground-beam sections, p.15 slab-on-beams / temperature steel, p.16 typical stair steel layout (N.T.S.)",
+             "P7757.dxf GF / 1F / 2F plans (S-COL.BON column outlines, glazing gaps, GF master-bedroom site)"],
+  "probe_results_from_source_only": {
+   "cross_document_registration": "the S-COL.BON column rectangles of the architectural plan of storey X coincide with the column rectangles of the structural 'X ROOF SLAB' sheet under ONE translation: GF 30/30, 1F 20/20, 2F 9/9 (no second translation scores more than 1). The column & axis / foundation sheets carry the larger foundation-band sections and match by frame offset only.",
+   "beam_marks": "beam tags are TEXT written BESIDE the double-line band they name (rarely inside), with the text rotated along the band (0 / 90 deg and the band angle for diagonal beams: 11.9, 54.4, 98.5, 306 deg). A3's beam_bands required the tag strictly between the two band lines, so 45 of 49 GF marks were NO_BAND_HOLDS_THE_MARK.",
+   "salon_beam": "GF-W09 (6.33 m sea-view opening) projected onto the GF ROOF SLAB sheet lies under the east edge band whose lines are 350 mm apart (x = 73113 / 73463, 13.00 m long); both CB1 tags on the sheet (rotated 90 deg) lie beside that band; CB1 schedule B = 35 cm, H = 75 cm.",
+   "stair": "ST7757.pdf p.16 'TYPICAL STEEL LAYOUT - STAIR SECTION' (N.T.S.) prints tread 30 cm and the stair ground beam (30 wide, 10 cm blinding 50 wide) but NO waist thickness value (the word THICK has no number) and no riser height; the architectural plans give going 300 mm and flight widths.",
+   "footing_detail": "ST7757.pdf p.13 typical isolated footing: 10 cm plain-concrete blinding projecting 10 cm beyond L x W on each side, 5 cm screed, membrane; no footing-top / founding level and no neck length is dimensioned. Typical ground-beam sections: 30x60 (> 5 m), 30x40 (< 5 m), 30x30, exterior 30 x 'FOLLOW ARCH.'",
+   "mbr_blocker": "SITE-dda89794 (GF MASTER BED ROOM, 16.549640 m2, no hole) is REVIEW_REQUIRED because four UNKNOWN_PHYSICAL parts lie inside it: H751 (1.462 m line) + H753 (its diagonal) = the 0.50 x 1.46 m wardrobe box, and H815 / H816 = two 50 mm door-layer ticks 0.80 m apart on the closure line of door E820 (closure 0.80 m).",
+   "parse_mark_namespace": "parse_mark matches '/'-tokens exactly; '.' / blank removal never deletes letters, so 'CB1' can never become 'B1' (verified: B1->B1, CB1->CB1, C.B1->CB1, S.B1->SB1, CB1/B1 -> both)."
+  }
+ },
+ "answers": {
+  "1_project_facts": {
+   "OF-B2A-A": {"class": "PROJECT_OWNER_FACT", "statement": "GF Dining, Reception and Salon are open to each other with no internal doors", "scope": "Alsenan GF"},
+   "OF-B2A-B": {"class": "PROJECT_OWNER_FACT", "statement": "the ENTIRE Reception is double height", "scope": "Alsenan GF Reception"},
+   "OF-B2A-C": {"class": "PROJECT_OWNER_FACT", "statement": "the 0.50 x 1.46 m box in the GF master bedroom is a wardrobe / fixed joinery", "id": "ALSENAN_MBR_WARDROBE_OWNER_FACT", "scope": "Alsenan GF master bedroom"},
+   "OF-B2A-D": {"class": "PROJECT_OWNER_FACT", "statement": "the Salon sea-view opening is aluminium + glass (carried from OF-A3-SALON-MATERIAL)"},
+   "OF-B2A-E": {"class": "SOURCE_EVIDENCE (owner statement source-correlated)", "statement": "Salon opening width 6.33 m = printed dimension 633 + CAD glazing gap 6331.6 mm"},
+   "OF-B2A-F": {"class": "OWNER_DERIVED_PROJECT_DIMENSION", "statement": "Salon aluminium height 3.65 m is provisional (owner derivation), not final authority"}
+  },
+  "2_urban_methods": [
+   "URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1 (floor finish continues under fixed joinery / wardrobes / cabinets; never under walls, columns, plinths, shafts, ducts, curbs)",
+   "URBAN_CURVED_ALUMINIUM_INNER_FACE_METHOD@v1 (commercial length = inner (smallest-radius) arc; inner / centre / outer / chord always published; a project override may select another basis)",
+   "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1 (wet / service rooms: visible wall tile to the finished ceiling; a project specification overrides)",
+   "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1 (internal plaster over the full masonry face to the structural termination, above a false ceiling included)",
+   "URBAN-PAINT-TO-FINISHED-CEILING@v1 (paint to the finished ceiling; finished ceiling = controlling soffit - 150 mm ceiling allowance unless a ceiling level is in the source; concealed plaster in dry rooms is not painted)",
+   "URBAN-ROOF-WATERPROOF-UPTURN-200@v1 (roof membrane upturn 0.20 m; wet-room upturn stays 0.15 m)",
+   "URBAN-COLUMN-HEIGHT-TO-CONTROLLING-MEMBER@v1 (column concrete height = structural storey interval - depth of the deepest member that frames into THAT column; slab thickness when no beam frames in)",
+   "URBAN-BEAM-TYPE-FROM-SCHEDULE-LENGTH-FROM-PLAN@v1 (type identity from the bound tag, section from its own schedule namespace, length from the bound plan band)",
+   "URBAN-NON-OVERLAPPING-SLAB-BEAM-MODEL@v1 (slab = net plate x t; downstand = clear length x B x (D - t); joint = column area x (D_ctrl - t); gross beam view reported separately)"
+  ],
+  "3_unresolved": [
+   "F / F10 footing size (SOURCE_CONFLICT, no owner fact)",
+   "floor build-up thickness above each storey (needed by every height measured from a FINISHED floor: paint, wall tile, salon aluminium head)",
+   "whether the GF entry is an exterior opening, a screen or open (the GF open site cannot close without it; no door is invented)",
+   "the function of the GF 1.00 m openings that the source cannot decide (see answer 11 / annotated image)",
+   "structural founding / footing-top level (neck length) and ground-slab level",
+   "stair waist thickness and riser height"
+  ],
+  "4_structural_height_architecture": {
+   "engine": "STRUCTURAL_VERTICAL_INTERVAL_ENGINE_V1 (new engine/source/structural_vertical.py)",
+   "per_column_occurrence": ["type (column-plan tag)", "storey band section (schedule)", "plan outline on the storey sheet (frame offset + containment)", "lower support", "upper termination: the members (beam bands / slab) that frame into the outline on the sheet ABOVE the storey", "controlling member type and depth", "interval and its authority", "height", "status"],
+   "controlling_member": "the deepest BOUND beam band whose footprint enters the column outline; an UNBOUND framing band is admitted only through its upper bound (deepest scheduled section with that drawn breadth): if the bound maximum already reaches it the depth is proved, otherwise BLOCKED_UPPER_MEMBER_UNBOUND; no framing band -> SLAB_SOFFIT with the printed slab thickness of the region",
+   "interval": "structural storey interval = difference of the printed FFLs (4.50 / 4.20 / 4.20), stated as STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP (valid only when the build-ups above and below are equal); a printed structural level would outrank it; context only, never a column height by itself",
+   "never": ["floor-to-floor - 0.75 globally", "one depth for all columns", "neck from step count", "the benchmark 1.50 m neck"],
+   "neck": "COLUMN_NECK_VOLUME = BLOCKED_HEIGHT: the source gives the footing H but no footing-top / founding level and no ground-beam top; +1.00 FFL is corroboration only",
+   "lower_support_GF": "ground-beam / ground-slab top is not levelled in the structural source; the GF column height is computed with the same interval rule and carries LOWER_SUPPORT_LEVEL_ASSUMED_AT_FLOOR_STRUCTURAL_TOP"
+  },
+  "5_beam_slab_double_count": {
+   "physical_model": {"SLAB": "net plate area (inside the slab perimeter, voids / stair / lift openings removed) x printed thickness t, continuous over beams and columns",
+                      "DOWNSTAND_BEAM": "CLEAR_FACE_TO_FACE length x B x (D - t)",
+                      "BEAM_COLUMN_JOINT": "column plan area x (D_ctrl - t), so a column measured to the controlling soffit and a beam measured face to face leave no gap",
+                      "COLUMN": "plan area x (interval - D_ctrl)"},
+   "reporting_view": "GROSS_BEAM = length x B x full D (never added to the physical total)",
+   "invariant": "physical total = slab + downstands + joints + columns; every cubic metre is owned by exactly one component (tested on synthetic grids)"
+  },
+  "6_wall_height_separation": {
+   "engine": "ARCHITECTURAL_FINISH_HEIGHT_ENGINE_V1 (new engine/source/finish_height.py), independent of the structural engine: it may READ structural terminations as evidence, keeps their status, and never writes a structural value",
+   "blockwork": "per wall: TERMINATION_TYPE = BEAM_SOFFIT (a bound beam band covers the wall line on the sheet above) / SLAB_SOFFIT (inside a closed slab region, no beam) / UNKNOWN -> area BLOCKED; height = interval - D (or - t)",
+   "plaster": "full masonry face to the structural termination (same height as blockwork), above a false ceiling included",
+   "paint": "finished floor to finished ceiling = (interval - build-up above - D_ctrl) - 0.150 m (method); BLOCKED while the build-up is unknown; never a hard-coded 3.60",
+   "wall_tile": "wet rooms: to the finished ceiling (same blocker as paint); dry rooms: concealed plaster is not painted"
+  },
+  "7_wet_room_tile_height": "full visible height to the finished ceiling (URBAN-WET-WALL-TILE-FULL-HEIGHT@v1), not a fixed 3.00 m; a project specification overrides; blocked while the finished ceiling level is blocked",
+  "8_curved_aluminium": "publish inner / centre / outer / chord from the concentric source arcs; commercial default INNER (smallest radius) under URBAN_CURVED_ALUMINIUM_INNER_FACE_METHOD@v1; a project override record may select CENTRE / OUTER / CHORD; the benchmark value is never a basis",
+  "9_gf_salon_reception_dining": "one PHYSICAL site with three SEMANTIC zones only if the site closes from source boundaries; no internal wall is invented between the zones (OF-B2A-A) and no exterior door is invented at the entry (section 16). The Reception region is evidenced by the GF ROOF SLAB opening (VOID, S-OPENING cross) projected through the registration (OF-B2A-B): its plan span is computable even while its finish heights stay blocked (DOUBLE_HEIGHT_FINISH_REGION).",
+  "10_mbr_wardrobe": "OF-B2A-C binds the wardrobe box parts (H751 + diagonal H753, 0.50 x 1.46 m) to FIXED_JOINERY: no area change (the floor runs under it, the site has no hole), no wall face, no partition. The two 50 mm door-layer ticks H815 / H816 sit at the jamb ends of door E820's closure line: a generic door-frame-tick rule (door layer, length <= wall thickness, on a closed door's closure line at its jamb ends) releases them. If both releases hold the room certifies at its source area; if either fails it stays blocked with the residual parts named.",
+  "11_f_f10": "no owner fact: F / F10 stays SOURCE_CONFLICT, BLOCKED; the B1 benchmark treatment (F10 at schedule size, F absorbed) is not copied",
+  "12_generic_beam_binding": {
+   "engine": "BEAM_BINDING_V2 (new engine/source/beam_binding.py); structural_schedule.beam_bands stays unchanged (frozen A3 behaviour, still used for straps)",
+   "positive_constraints": ["band = two parallel element lines (any orientation, collinear pieces merged) whose separation equals the scheduled breadth of the TAG'S OWN TYPE (authoring tolerance, then the 5 % width-deviation policy)",
+                            "orientation: band axis parallel to the tag baseline (rotation read from the source entity) within 1 deg",
+                            "span: the tag centre projects inside the band's common span",
+                            "adjacency: the tag box lies inside the band or its near edge is within ONE TEXT HEIGHT of the band edge, with no other element line between tag and band",
+                            "unique survivor: exactly one band passes all of the above"],
+   "outcomes": "BOUND / NO_BAND / AMBIGUOUS_BAND / CURVED_BAND_NOT_SUPPORTED / SECTION_NOT_SCHEDULED - 0 or 2+ survivors BLOCK; never nearest-text",
+   "robustness": "the result is recomputed at 0.5x / 1.5x the adjacency gap and published as a sensitivity record; a tag whose binding changes is not bound",
+   "lengths": "PLAN_DRAWN_EXTENT (common span of the pair), SUPPORT_CENTRELINE_LENGTH (between the centres of the supports the band ends in), CLEAR_FACE_TO_FACE_LENGTH (between support faces), SCHEDULE_SPAN_LENGTH (continuous beams: sum of printed spans) - stored separately",
+   "namespace": "simple (B*), continuous (CB*) and strap (SB*) libraries are looked up only in their own namespace; a B1 lookup can never return CB1 and no normalisation strips a letter"
+  },
+  "13_slab_outlines_source_only": "per slab sheet: polygonise the element lines (beam band edges + column outlines); the slab perimeter is the outer boundary of the union of bounded faces; VOID labels and S-OPENING crosses / outlines define openings (stair / lift / double-height); a perimeter that does not close -> SLAB_OUTLINE_NOT_ESTABLISHED (BLOCK); thickness from the printed 'T / nn' tag of the region (several printed thicknesses on one sheet without a region boundary -> thickness per region or BLOCK); never fitted to any target area",
+  "14_stair_concrete_source_only": "STAIR_CONCRETE_V1 (new engine/source/stair_concrete.py): waist (sloping length x width x waist) + wedges (0.5 x riser x tread x width x n) + landings (area x thickness) + stair beams separately; the Alsenan source has tread 300 and flight widths but no waist thickness and no riser height -> volume BLOCKED_INPUT_MISSING (WAIST_THICKNESS, RISER_HEIGHT); never steps x 0.30 x 0.15",
+  "15_donors": {
+   "OpenTakeoff": {"door seal from swing": "CLEAN_REIMPLEMENT (already in entity_role_inference)", "layer-name classifier": "REJECT (as authority)", "raster rooms": "BENCHMARK_ONLY"},
+   "U-C4N": {"wall authoring": "BENCHMARK_ONLY", "labels.plain": "already CLEAN_REIMPLEMENTED"},
+   "others (beiming183, Slacker, puran-water)": "BENCHMARK_ONLY / PATTERN_IN_USE",
+   "B2A capabilities": "no donor has tag-to-band binding with positive constraints, a per-column vertical interval, a non-overlapping slab/beam partition or a stair waist/wedge model -> CLEAN_REIMPLEMENT; no QTO engine is copied; nothing is fetched this round"
+  },
+  "16_disagreements_with_chatgpt_architecture": [
+   "Column to the beam soffit + beam clear face to face leaves the beam-column joint in neither item: B2A adds an explicit BEAM_COLUMN_JOINT component so the physical total neither double counts nor omits.",
+   "'4.50 - 0.40 = 4.10' treats the FFL difference as the structural interval; that holds only when the floor build-ups above and below are equal. B2A labels the interval STRUCTURAL_INTERVAL_FROM_FFL_EQUAL_BUILDUP and lets a printed structural level outrank it.",
+   "Paint and wall-tile heights run from the FINISHED floor, so they need the floor build-up above as well as the soffit; the 150 mm ceiling allowance alone does not make them computable. They stay blocked on the build-up (owner action), while blockwork and plaster (slab top to soffit) do not need it.",
+   "'Inner arc' must be defined geometrically (smallest radius) and kept apart from 'room side'; for a curve bulging into a room the room-side face is the larger radius.",
+   "The Reception region can be evidenced from the STRUCTURAL slab opening (VOID) projected through the column registration rather than drawn as a free semantic polygon; without that evidence a zone inside an open site would be an invented boundary.",
+   "The salon height cannot be 'source-proved' from CB1 alone: CB1 gives the structural soffit (interval - 0.75 - build-up above), an UPPER BOUND for the aluminium head; the head itself (ceiling / fascia below the soffit) is not in the source, so 3.65 stays OWNER_DERIVED with a source-consistency check."
+  ]
+ },
+ "investigations_planned": {"A": "beam above the salon glazing (registration + band + tag)", "B": "framing members at every column outline per storey sheet", "C": "GF MBR certification with OF-B2A-C and the door-frame-tick rule", "D": "GF open physical site (does it close?)", "E": "Reception region from the slab opening", "F": "annotated image of GF-W03 / W04 / W11 / W13 / W14", "G": "simple-beam binding on all three roof sheets", "H": "slab outlines / voids / thickness regions", "I": "stair geometry inputs", "J": "roof waterproofing regions (2F roof plate, 1F terrace)"},
+ "qa_gates_planned": ["zero silent opening promotions", "zero B1/CB1 collisions", "zero nearest-beam guesses", "zero slab target fitting", "zero benchmark constants in engine/ or synthetic tests", "zero unsupported heights", "zero guessed stair volume", "zero hidden item omission (every explicit structural item computed or BLOCKED_WITH_REASON)", "zero Qortuba project patch"]
+}

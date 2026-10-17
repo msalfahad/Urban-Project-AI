@@ -1,0 +1,1049 @@
+{
+ "SCHEMA": "URBAN_R8_12_BLIND_QORTUBA_RESULT_V1",
+ "freeze": "b72d866b590c4d73be873342bcf9c7ee138f1c5f",
+ "wall_band_policy": {
+  "id": "WALL_BAND_POLICY_V3",
+  "digest": "ecd6ba5fe51bc89924adf79ba5f790b2b9b9e33abfbd2b97c5ce31dab2c3ae39"
+ },
+ "blind": {
+  "owner_fact_used": false,
+  "expected_h2430_given": false,
+  "expected_q14_given": false,
+  "historical_totals_given": false,
+  "inputs": [
+   "canonical inputs (both revisions)",
+   "R8.10 TS01 claims (7116-7119, xref occurrences)",
+   "the frozen engine"
+  ]
+ },
+ "NEW_K2": {
+  "counts": {
+   "chains": 149,
+   "assemblies": 76,
+   "established": 49,
+   "spans": 64,
+   "closures": 2,
+   "authorised": 2,
+   "passages": 6
+  },
+  "watched_bands": [
+   {
+    "band_id": "WB-7b3ad095cb4bcecb",
+    "state": "WALL_BAND_ESTABLISHED",
+    "faces": [
+     "2296",
+     "2297"
+    ],
+    "width_mm": 200.0,
+    "interval": [
+     109893.4009,
+     110218.0817
+    ],
+    "intervals": [
+     {
+      "class": "WALL_BAND_SPAN",
+      "role": null,
+      "s": [
+       109893.400852,
+       110218.081745
+      ],
+      "by": []
+     }
+    ],
+    "ends": [
+     {
+      "end": 0,
+      "kind": "ALIGNED_FREE_END",
+      "faces": [
+       "2296",
+       "2297"
+      ],
+      "caps": [
+       {
+        "source": "2431",
+        "role": "DIMENSION_GRAPHICS",
+        "grade": "WALL_END_CAP_CANDIDATE",
+        "gap_mm": [
+         9.2,
+         0.49
+        ]
+       }
+      ]
+     },
+     {
+      "end": 1,
+      "kind": "RECEIVING_FACE_JUNCTION",
+      "faces": [
+       "2296",
+       "2297"
+      ],
+      "caps": []
+     }
+    ],
+    "spans": [
+     "BS-653ae9bb530a4b00"
+    ],
+    "span_records": [
+     {
+      "span_id": "BS-653ae9bb530a4b00",
+      "s": [
+       109893.4009,
+       110218.0817
+      ],
+      "source_intervals": [
+       {
+        "source": "2297",
+        "parameter_interval": [
+         0.0,
+         324.680893
+        ],
+        "source_length": 324.680893
+       },
+       {
+        "source": "2296",
+        "parameter_interval": [
+         0.0,
+         324.680893
+        ],
+        "source_length": 324.680893
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "band_id": "WB-87c8552f83e32a2d",
+    "state": "WALL_BAND_ESTABLISHED",
+    "faces": [
+     "470",
+     "471",
+     "477"
+    ],
+    "width_mm": 200.0,
+    "interval": [
+     109308.0817,
+     109773.7561
+    ],
+    "intervals": [
+     {
+      "class": "WALL_BAND_SPAN",
+      "role": null,
+      "s": [
+       109308.081745,
+       109443.081745
+      ],
+      "by": []
+     },
+     {
+      "class": "OBSTACLE_OVERLAP",
+      "role": "STRUCTURAL_OBSTACLE",
+      "s": [
+       109443.081745,
+       109583.081745
+      ],
+      "by": [
+       "718",
+       "718"
+      ]
+     },
+     {
+      "class": "WALL_BAND_SPAN",
+      "role": null,
+      "s": [
+       109583.081745,
+       109773.756121
+      ],
+      "by": []
+     }
+    ],
+    "ends": [
+     {
+      "end": 0,
+      "kind": "RECEIVING_FACE_JUNCTION",
+      "faces": [
+       "470",
+       "477"
+      ],
+      "caps": []
+     },
+     {
+      "end": 1,
+      "kind": "ALIGNED_FREE_END",
+      "faces": [
+       "471",
+       "477"
+      ],
+      "caps": [
+       {
+        "source": "2430",
+        "role": "DIMENSION_GRAPHICS",
+        "grade": "WALL_END_CAP_PROVEN",
+        "gap_mm": [
+         0.0,
+         0.0
+        ]
+       }
+      ]
+     }
+    ],
+    "spans": [
+     "BS-980aca6c0da8fdbc",
+     "BS-65e918fc060a7d07"
+    ],
+    "span_records": [
+     {
+      "span_id": "BS-980aca6c0da8fdbc",
+      "s": [
+       109308.0817,
+       109443.0817
+      ],
+      "source_intervals": [
+       {
+        "source": "477",
+        "parameter_interval": [
+         0.0,
+         135.0
+        ],
+        "source_length": 465.674376
+       },
+       {
+        "source": "470",
+        "parameter_interval": [
+         0.0,
+         135.0
+        ],
+        "source_length": 300.0
+       }
+      ]
+     },
+     {
+      "span_id": "BS-65e918fc060a7d07",
+      "s": [
+       109583.0817,
+       109773.7561
+      ],
+      "source_intervals": [
+       {
+        "source": "477",
+        "parameter_interval": [
+         275.0,
+         465.674376
+        ],
+        "source_length": 465.674376
+       },
+       {
+        "source": "470",
+        "parameter_interval": [
+         275.0,
+         300.0
+        ],
+        "source_length": 300.0
+       },
+       {
+        "source": "471",
+        "parameter_interval": [
+         0.0,
+         165.674376
+        ],
+        "source_length": 165.674376
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "watched_chains": [
+   {
+    "chain_id": "FC-45a9b018c97e1832",
+    "fragments": [
+     "477"
+    ],
+    "nodes": [
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109443.081744984,
+      "point": [
+       109443.081745,
+       15049.719614
+      ],
+      "by": "718",
+      "between": []
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109583.0817449839,
+      "point": [
+       109583.081745,
+       15049.719614
+      ],
+      "by": "718",
+      "between": []
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109593.081744984,
+      "point": [
+       109593.081745,
+       15049.719614
+      ],
+      "by": "535",
+      "between": []
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109608.0817449839,
+      "point": [
+       109608.081745,
+       15049.719614
+      ],
+      "by": "543",
+      "between": []
+     }
+    ]
+   },
+   {
+    "chain_id": "FC-83c1246271ec3e10",
+    "fragments": [
+     "2297"
+    ],
+    "nodes": [
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109988.081744984,
+      "point": [
+       109988.081745,
+       15049.719614
+      ],
+      "by": "551",
+      "between": []
+     }
+    ]
+   },
+   {
+    "chain_id": "FC-861f9599996a9030",
+    "fragments": [
+     "2296"
+    ],
+    "nodes": [
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109928.081744984,
+      "point": [
+       109928.081745,
+       15029.719614
+      ],
+      "by": "7118",
+      "between": []
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109943.0817449839,
+      "point": [
+       109943.081745,
+       15029.719614
+      ],
+      "by": "7119",
+      "between": []
+     }
+    ]
+   },
+   {
+    "chain_id": "FC-a0d9063d437ff3c3",
+    "fragments": [
+     "470",
+     "471"
+    ],
+    "nodes": [
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109443.081744984,
+      "point": [
+       109443.081745,
+       15029.719614
+      ],
+      "by": "718",
+      "between": []
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109583.0817449839,
+      "point": [
+       109583.081745,
+       15029.719614
+      ],
+      "by": "718",
+      "between": []
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109608.081744984,
+      "point": [
+       109608.081745,
+       15029.719614
+      ],
+      "between": [
+       "470",
+       "471"
+      ],
+      "by": null
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109623.0817449839,
+      "point": [
+       109623.081745,
+       15029.719614
+      ],
+      "by": "7116",
+      "between": []
+     }
+    ]
+   }
+  ],
+  "closures": [
+   {
+    "closure_id": "TC-502c8a0e35d1d748",
+    "band_id": "WB-87c8552f83e32a2d",
+    "release": "AUTHORISED_FOR_SHADOW",
+    "geometry": [
+     109773.7561,
+     15029.7196,
+     109773.7561,
+     15049.7196
+    ],
+    "evidence": [
+     "471",
+     "477",
+     "2430"
+    ],
+    "material": "NONE",
+    "safety": {
+     "label_partition_unchanged": true,
+     "area_balance_ok": true,
+     "passes": true,
+     "separated_pieces": [
+      {
+       "area_m2": 0.3813,
+       "pure_band_interior": true,
+       "boundary": [
+        "470",
+        "471",
+        "477",
+        "718",
+        "TCLOSURE|TC-502c8a0e35d1d748"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "closure_id": "TC-9f4609652793df15",
+    "band_id": "WB-7b3ad095cb4bcecb",
+    "release": "AUTHORISED_FOR_SHADOW",
+    "geometry": [
+     109893.4009,
+     15029.7196,
+     109893.4009,
+     15049.7196
+    ],
+    "evidence": [
+     "2296",
+     "2297",
+     "2431"
+    ],
+    "material": "NONE",
+    "safety": {
+     "label_partition_unchanged": true,
+     "area_balance_ok": true,
+     "passes": true,
+     "separated_pieces": [
+      {
+       "area_m2": 0.6494,
+       "pure_band_interior": true,
+       "boundary": [
+        "2296",
+        "2297",
+        "549",
+        "TCLOSURE|TC-9f4609652793df15"
+       ]
+      }
+     ]
+    }
+   }
+  ],
+  "passages": [
+   {
+    "passage_id": "OP-093029c38dbf1727",
+    "band_id": "WB-006aaa6c7bf56187",
+    "end_kind": "CAPPED",
+    "target": "489",
+    "width_mm": 1200.0,
+    "thickness_mm": 100.0,
+    "strip_in_site": "SITE-788f30878ba9d2b3"
+   },
+   {
+    "passage_id": "OP-46ccf3d3e3fe033c",
+    "band_id": "WB-7b3ad095cb4bcecb",
+    "end_kind": "ALIGNED_FREE_END",
+    "target": "BANDEND|WB-87c8552f83e32a2d|1",
+    "width_mm": 1196.45,
+    "thickness_mm": 200.0,
+    "strip_in_site": "SITE-621f9bce1e5ec52a"
+   },
+   {
+    "passage_id": "OP-6b56e2bbc42301c5",
+    "band_id": "WB-006aaa6c7bf56187",
+    "end_kind": "CAPPED",
+    "target": "573",
+    "width_mm": 1200.0,
+    "thickness_mm": 100.0,
+    "strip_in_site": "SITE-788f30878ba9d2b3"
+   },
+   {
+    "passage_id": "OP-6f53bf7dcea4496a",
+    "band_id": "WB-e1ce84df8618a355",
+    "end_kind": "CAPPED",
+    "target": "BANDEND|WB-5f84d83837febf25|0",
+    "width_mm": 900.0,
+    "thickness_mm": 150.0,
+    "strip_in_site": "SITE-788f30878ba9d2b3"
+   },
+   {
+    "passage_id": "OP-a38c9a827025e4a9",
+    "band_id": "WB-eeb4fc032cff8699",
+    "end_kind": "CAPPED",
+    "target": "505",
+    "width_mm": 6000.0,
+    "thickness_mm": 1800.0,
+    "strip_in_site": "SITE-eaae022599294151"
+   },
+   {
+    "passage_id": "OP-f4493d47a122d06a",
+    "band_id": "WB-3654d592eda4476f",
+    "end_kind": "CAPPED",
+    "target": "518",
+    "width_mm": 1200.0,
+    "thickness_mm": 150.0,
+    "strip_in_site": "SITE-a6405850100155ac"
+   }
+  ],
+  "hall": {
+   "site": "SITE-621f9bce1e5ec52a",
+   "area_m2": 42.7993,
+   "issues": [
+    "ROLE_CONFLICT_SEPARATOR",
+    "TOPOLOGY_ROLE_UNRESOLVED"
+   ]
+  },
+  "labelled_sites": [
+   [
+    42.7993,
+    [
+     "HALL",
+     "whgm"
+    ]
+   ],
+   [
+    33.2,
+    [
+     "DRESS",
+     "M.B.ROOM",
+     "k,LVzdsD",
+     "lBfS"
+    ]
+   ],
+   [
+    19.2725,
+    [
+     "BED.ROOM",
+     "yvtmk,L"
+    ]
+   ],
+   [
+    16.327,
+    [
+     "BED.ROOM",
+     "yvtmk,L"
+    ]
+   ],
+   [
+    11.685,
+    [
+     "PAINTRY",
+     "jpqdV"
+    ]
+   ],
+   [
+    8.5525,
+    [
+     "BATH",
+     "plHL"
+    ]
+   ],
+   [
+    5.1,
+    [
+     "BATH",
+     "plHL"
+    ]
+   ],
+   [
+    4.09,
+    [
+     "BATH",
+     "plHL"
+    ]
+   ]
+  ],
+  "run_input_digest": "12547d2d834b6ca4898be83877540a9869bcdacbf663123f9aa91fc189485616"
+ },
+ "OLD_K1": {
+  "counts": {
+   "chains": 153,
+   "assemblies": 76,
+   "established": 50,
+   "spans": 65,
+   "closures": 0,
+   "authorised": 0,
+   "passages": 7
+  },
+  "watched_bands": [
+   {
+    "band_id": "WB-3399d0d4b83df746",
+    "state": "WALL_BAND_ESTABLISHED",
+    "faces": [
+     "471",
+     "477"
+    ],
+    "width_mm": 200.0,
+    "interval": [
+     109623.0817,
+     109808.0817
+    ],
+    "intervals": [
+     {
+      "class": "WALL_BAND_SPAN",
+      "role": null,
+      "s": [
+       109623.081745,
+       109808.081745
+      ],
+      "by": []
+     }
+    ],
+    "ends": [
+     {
+      "end": 0,
+      "kind": "JUNCTION_OR_CONTINUATION",
+      "faces": [],
+      "caps": []
+     },
+     {
+      "end": 1,
+      "kind": "CAPPED",
+      "faces": [
+       "471",
+       "477"
+      ],
+      "caps": []
+     }
+    ],
+    "spans": [
+     "BS-e8ae1792419e8c20"
+    ],
+    "span_records": [
+     {
+      "span_id": "BS-e8ae1792419e8c20",
+      "s": [
+       109623.0817,
+       109808.0817
+      ],
+      "source_intervals": [
+       {
+        "source": "477",
+        "parameter_interval": [
+         315.0,
+         500.0
+        ],
+        "source_length": 500.0
+       },
+       {
+        "source": "471",
+        "parameter_interval": [
+         0.0,
+         185.0
+        ],
+        "source_length": 185.0
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "band_id": "WB-3e5be4a91c2d78e3",
+    "state": "WALL_BAND_ESTABLISHED",
+    "faces": [
+     "470",
+     "477"
+    ],
+    "width_mm": 200.0,
+    "interval": [
+     109308.0817,
+     109608.0817
+    ],
+    "intervals": [
+     {
+      "class": "WALL_BAND_SPAN",
+      "role": null,
+      "s": [
+       109308.081745,
+       109443.081745
+      ],
+      "by": []
+     },
+     {
+      "class": "OBSTACLE_OVERLAP",
+      "role": "STRUCTURAL_OBSTACLE",
+      "s": [
+       109443.081745,
+       109583.081745
+      ],
+      "by": [
+       "718",
+       "718"
+      ]
+     },
+     {
+      "class": "WALL_BAND_SPAN",
+      "role": null,
+      "s": [
+       109583.081745,
+       109608.081745
+      ],
+      "by": []
+     }
+    ],
+    "ends": [
+     {
+      "end": 0,
+      "kind": "RECEIVING_FACE_JUNCTION",
+      "faces": [
+       "470",
+       "477"
+      ],
+      "caps": []
+     },
+     {
+      "end": 1,
+      "kind": "JUNCTION_OR_CONTINUATION",
+      "faces": [],
+      "caps": []
+     }
+    ],
+    "spans": [
+     "BS-c006fa367aa9b0ea",
+     "BS-beb140a38f708c9e"
+    ],
+    "span_records": [
+     {
+      "span_id": "BS-c006fa367aa9b0ea",
+      "s": [
+       109308.0817,
+       109443.0817
+      ],
+      "source_intervals": [
+       {
+        "source": "470",
+        "parameter_interval": [
+         0.0,
+         135.0
+        ],
+        "source_length": 300.0
+       },
+       {
+        "source": "477",
+        "parameter_interval": [
+         0.0,
+         135.0
+        ],
+        "source_length": 500.0
+       }
+      ]
+     },
+     {
+      "span_id": "BS-beb140a38f708c9e",
+      "s": [
+       109583.0817,
+       109608.0817
+      ],
+      "source_intervals": [
+       {
+        "source": "470",
+        "parameter_interval": [
+         275.0,
+         300.0
+        ],
+        "source_length": 300.0
+       },
+       {
+        "source": "477",
+        "parameter_interval": [
+         275.0,
+         300.0
+        ],
+        "source_length": 500.0
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "watched_chains": [
+   {
+    "chain_id": "FC-2aaab53e2d886e27",
+    "fragments": [
+     "470"
+    ],
+    "nodes": [
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109443.08174498352,
+      "point": [
+       109443.081745,
+       15029.719614
+      ],
+      "by": "718",
+      "between": []
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109583.08174498352,
+      "point": [
+       109583.081745,
+       15029.719614
+      ],
+      "by": "718",
+      "between": []
+     }
+    ]
+   },
+   {
+    "chain_id": "FC-5b0317dac43c0b67",
+    "fragments": [
+     "477"
+    ],
+    "nodes": [
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109443.08174498397,
+      "point": [
+       109443.081745,
+       15049.719614
+      ],
+      "by": "718",
+      "between": []
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109583.08174498397,
+      "point": [
+       109583.081745,
+       15049.719614
+      ],
+      "by": "718",
+      "between": []
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109593.08174498397,
+      "point": [
+       109593.081745,
+       15049.719614
+      ],
+      "by": "535",
+      "between": []
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109608.08174498397,
+      "point": [
+       109608.081745,
+       15049.719614
+      ],
+      "by": "543",
+      "between": []
+     }
+    ]
+   },
+   {
+    "chain_id": "FC-5de3ccf392291316",
+    "fragments": [
+     "1316"
+    ],
+    "nodes": [
+     {
+      "kind": "BRANCH_NODE",
+      "s": 14481.719614378162,
+      "point": [
+       109913.081745,
+       14481.719614
+      ],
+      "by": "1318",
+      "between": []
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 14487.719614378162,
+      "point": [
+       109913.081745,
+       14487.719614
+      ],
+      "by": "1320",
+      "between": []
+     }
+    ]
+   },
+   {
+    "chain_id": "FC-d3dfb709ea386550",
+    "fragments": [
+     "471"
+    ],
+    "nodes": []
+   }
+  ],
+  "closures": [],
+  "passages": [
+   {
+    "passage_id": "OP-09badb0314071752",
+    "band_id": "WB-1b9958947d8ff8ed",
+    "end_kind": "CAPPED",
+    "target": "523",
+    "width_mm": 4600.0,
+    "thickness_mm": 600.0,
+    "strip_in_site": "SITE-56af91bb145d30cc"
+   },
+   {
+    "passage_id": "OP-9c9a277204d2e098",
+    "band_id": "WB-3f17b5b39937b54e",
+    "end_kind": "CAPPED",
+    "target": "BANDEND|WB-67141203307d8f27|0",
+    "width_mm": 900.0,
+    "thickness_mm": 150.0,
+    "strip_in_site": "SITE-1e8835fb33cb1a98"
+   },
+   {
+    "passage_id": "OP-c624f362e720d083",
+    "band_id": "WB-aac773e14c3e8e42",
+    "end_kind": "CAPPED",
+    "target": "505",
+    "width_mm": 6000.0,
+    "thickness_mm": 1800.0,
+    "strip_in_site": "SITE-5613caf47fb31d11"
+   },
+   {
+    "passage_id": "OP-d0ba2d7154d0765c",
+    "band_id": "WB-3399d0d4b83df746",
+    "end_kind": "CAPPED",
+    "target": "817",
+    "width_mm": 1200.0,
+    "thickness_mm": 200.0,
+    "strip_in_site": "SITE-56af91bb145d30cc"
+   },
+   {
+    "passage_id": "OP-d835316b40f45f56",
+    "band_id": "WB-50c75efed57ddb37",
+    "end_kind": "CAPPED",
+    "target": "573",
+    "width_mm": 1200.0,
+    "thickness_mm": 100.0,
+    "strip_in_site": "SITE-1e8835fb33cb1a98"
+   },
+   {
+    "passage_id": "OP-ebb265ba259b91bd",
+    "band_id": "WB-50c75efed57ddb37",
+    "end_kind": "CAPPED",
+    "target": "489",
+    "width_mm": 1200.0,
+    "thickness_mm": 100.0,
+    "strip_in_site": "SITE-1e8835fb33cb1a98"
+   },
+   {
+    "passage_id": "OP-f859b4d107d2d0f2",
+    "band_id": "WB-827e91003f532386",
+    "end_kind": "CAPPED",
+    "target": "518",
+    "width_mm": 1200.0,
+    "thickness_mm": 150.0,
+    "strip_in_site": "SITE-8e1f0b3a736abb02"
+   }
+  ],
+  "hall": {
+   "site": "SITE-56af91bb145d30cc",
+   "area_m2": 42.41,
+   "issues": [
+    "TOPOLOGY_ROLE_UNRESOLVED"
+   ]
+  },
+  "labelled_sites": [
+   [
+    42.41,
+    [
+     "HALL",
+     "whgm"
+    ]
+   ],
+   [
+    33.2,
+    [
+     "DRESS",
+     "M.B.ROOM",
+     "k,LVzdsD",
+     "lBfS"
+    ]
+   ],
+   [
+    20.1525,
+    [
+     "BED.ROOM",
+     "yvtmk,L"
+    ]
+   ],
+   [
+    16.5075,
+    [
+     "BED.ROOM",
+     "yvtmk,L"
+    ]
+   ],
+   [
+    11.685,
+    [
+     "PAINTRY",
+     "jpqdV"
+    ]
+   ],
+   [
+    8.5525,
+    [
+     "BATH",
+     "plHL"
+    ]
+   ],
+   [
+    5.1,
+    [
+     "BATH",
+     "plHL"
+    ]
+   ],
+   [
+    4.09,
+    [
+     "BATH",
+     "plHL"
+    ]
+   ]
+  ],
+  "run_input_digest": "eff7ef6096fb40c245af866567210063f66fc6c6877b943aab92bd827e3b8f9c"
+ }
+}

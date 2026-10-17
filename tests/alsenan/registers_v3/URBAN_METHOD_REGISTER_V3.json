@@ -1,0 +1,164 @@
+{
+ "SCHEMA": "URBAN_METHOD_REGISTER_V3",
+ "extends": "URBAN_METHOD_REGISTER_V1 (urban_methods, unchanged)",
+ "authority_order": [
+  "SOURCE",
+  "PROJECT_OWNER_FACT",
+  "URBAN_FALLBACK",
+  "BLOCKED"
+ ],
+ "methods": [
+  {
+   "id": "URBAN-CEILING-QUANTITY-WITHOUT-MATERIAL@v1",
+   "statement": "physical / visible ceiling area is calculated independently; no ceiling is assumed gypsum unless a source / project fact / versioned ceiling-finish method authorises it - otherwise MATERIAL = BY_SPEC / UNRESOLVED and the area is still published",
+   "applies_to": [
+    "CEILING"
+   ],
+   "never_applies_to": [
+    "VOID",
+    "DOUBLE_HEIGHT_OPEN_ZONE"
+   ],
+   "parameters": {
+    "material": "BY_SPEC"
+   },
+   "precedence": [
+    "SOURCE",
+    "PROJECT_OWNER_FACT"
+   ],
+   "decision": "OD-V3-2"
+  },
+  {
+   "id": "URBAN-DRY-FLOOR-PORCELAIN-DEFAULT@v1",
+   "statement": "dry internal floors: porcelain unless the project specification overrides",
+   "applies_to": [
+    "DRY_ROOM_FLOOR"
+   ],
+   "never_applies_to": [
+    "WET_ROOM_FLOOR",
+    "EXTERNAL",
+    "ROOF",
+    "STAIR"
+   ],
+   "parameters": {
+    "material": "PORCELAIN"
+   },
+   "precedence": [
+    "PROJECT_SPECIFICATION"
+   ],
+   "decision": "OD-V3-2"
+  },
+  {
+   "id": "URBAN-FINISH-EXTRAS-SEPARATE-ITEMS@v1",
+   "statement": "gypsum / decor area (m2), cornice (lm), cove light / cove profile (lm), plaster corner beads / profiles (lm), spatter dash (m2), door reveals (m2), window reveals (m2) and other finish profiles (lm) are separate BOQ items wherever source geometry supports them - never buried in plaster, paint or wall tile; opening deduction and reveal addition stay separate calculations",
+   "applies_to": [
+    "FINISH_EXTRA"
+   ],
+   "never_applies_to": [],
+   "parameters": {},
+   "precedence": [
+    "SOURCE",
+    "PROJECT_OWNER_FACT"
+   ],
+   "decision": "OD-V3-4"
+  },
+  {
+   "id": "URBAN-FINISH-QUANTITY-INDEPENDENT-OF-MATERIAL@v1",
+   "statement": "a defensible measured geometry (floor, ceiling, wall face, skirting path ...) is released even when the finish material is not source-proven; MEASURED GEOMETRY and MATERIAL AUTHORITY are kept apart; material = SOURCE / URBAN METHOD / BY_SPEC (unresolved) - an unknown material never blocks the area",
+   "applies_to": [
+    "FINISH_QUANTITY"
+   ],
+   "never_applies_to": [],
+   "parameters": {
+    "material_when_unknown": "BY_SPEC"
+   },
+   "precedence": [
+    "SOURCE",
+    "PROJECT_OWNER_FACT"
+   ],
+   "decision": "OD-V3-2"
+  },
+  {
+   "id": "URBAN-NO-SKIRTING-FULL-TILE-WET@v1",
+   "statement": "no normal skirting in wet / service rooms with full-height wall tile",
+   "applies_to": [
+    "WET_ROOM",
+    "SERVICE_ROOM"
+   ],
+   "never_applies_to": [
+    "DRY_ROOM"
+   ],
+   "parameters": {},
+   "precedence": [
+    "PROJECT_SPECIFICATION"
+   ],
+   "decision": "OD-V3-2"
+  },
+  {
+   "id": "URBAN-REBAR-NET-AND-PROCUREMENT@v1",
+   "statement": "rebar weight = sum(count x length x kg/m) per bar set; NET_DESIGN_WEIGHT uses only bars the source / detail supports (cover and laps from the structural notes); PROCUREMENT_WEIGHT_INCL_LAPS adds laps where a continuous bar exceeds the 12 m stock length, splicing is permitted and no detail contradicts it; hooks / bends / stirrup closing only from an explicit detail, the structural notes or an adopted detailing standard - otherwise BLOCKED_DETAILING; never kg/m3",
+   "applies_to": [
+    "REBAR"
+   ],
+   "never_applies_to": [],
+   "parameters": {
+    "stock_length_m": 12.0
+   },
+   "precedence": [
+    "SOURCE",
+    "PROJECT_OWNER_FACT"
+   ],
+   "decision": "OD-V3-3"
+  },
+  {
+   "id": "URBAN-RESIDENTIAL-FLOOR-BUILDUP-FALLBACK@v1",
+   "statement": "residential floor build-up (screed + finish) = 0.10 m when neither the source / detail nor a project owner fact establishes it; labelled URBAN_FALLBACK, never SOURCE; not used where the source contradicts it; overrideable per project and per floor",
+   "applies_to": [
+    "RESIDENTIAL_FLOOR"
+   ],
+   "never_applies_to": [
+    "ROOF",
+    "WET_ROOM_FALL_ZONE_SOURCED",
+    "STAIR"
+   ],
+   "parameters": {
+    "buildup_m": 0.1
+   },
+   "precedence": [
+    "SOURCE",
+    "PROJECT_OWNER_FACT"
+   ],
+   "decision": "OD-V3-1"
+  },
+  {
+   "id": "URBAN-WET-FLOOR-TILED@v1",
+   "statement": "wet / service room floors: tiled finish (tile type by specification)",
+   "applies_to": [
+    "WET_ROOM_FLOOR",
+    "SERVICE_ROOM_FLOOR"
+   ],
+   "never_applies_to": [
+    "DRY_ROOM_FLOOR"
+   ],
+   "parameters": {
+    "material": "TILE (type BY_SPEC)"
+   },
+   "precedence": [
+    "PROJECT_SPECIFICATION"
+   ],
+   "decision": "OD-V3-2"
+  }
+ ],
+ "v1_methods": [
+  "URBAN-BEAM-TYPE-FROM-SCHEDULE-LENGTH-FROM-PLAN@v1",
+  "URBAN-COLUMN-HEIGHT-TO-CONTROLLING-MEMBER@v1",
+  "URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1",
+  "URBAN-NON-OVERLAPPING-SLAB-BEAM-MODEL@v1",
+  "URBAN-PAINT-TO-FINISHED-CEILING@v1",
+  "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1",
+  "URBAN-ROOF-WATERPROOF-UPTURN-200@v1",
+  "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1",
+  "URBAN_CURVED_ALUMINIUM_INNER_FACE_METHOD@v1"
+ ],
+ "rule": "a method is versioned, scope-limited and overrideable; it is never a project fact; a fallback is never labelled SOURCE",
+ "digest": "31f68f3f2b431ce50b367b71e2dd7238b554a63f389634d694340c95942a9844"
+}

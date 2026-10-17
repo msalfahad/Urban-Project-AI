@@ -1,0 +1,304 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A3_QA_V1",
+ "checks": [
+  {
+   "check": "REGION_LEAKAGE",
+   "state": "PASS",
+   "critical": true,
+   "detail": "{\"GF\": 2531, \"1F\": 2067, \"2F\": 1601}"
+  },
+  {
+   "check": "FRAME_REJECTED_GF",
+   "state": "PASS",
+   "critical": true,
+   "detail": "1 sheet frame(s)"
+  },
+  {
+   "check": "CLAIMS_SCOPED_GF",
+   "state": "PASS",
+   "critical": true,
+   "detail": "23 claims"
+  },
+  {
+   "check": "PLOT_BOUNDARY_REJECTED_GF",
+   "state": "PASS",
+   "critical": false,
+   "detail": "0 plot-boundary parts never topology"
+  },
+  {
+   "check": "ROOM_CLOSURE_GF",
+   "state": "PASS",
+   "critical": true,
+   "detail": "5 of 9 labelled sites certified"
+  },
+  {
+   "check": "UNREALISED_PLACED_GF",
+   "state": "PASS",
+   "critical": true,
+   "detail": ""
+  },
+  {
+   "check": "JOINERY_NOT_WALL_GF",
+   "state": "PASS",
+   "critical": true,
+   "detail": "3 counter run(s), offsets in 450-750 mm"
+  },
+  {
+   "check": "FRAME_REJECTED_1F",
+   "state": "PASS",
+   "critical": true,
+   "detail": "1 sheet frame(s)"
+  },
+  {
+   "check": "CLAIMS_SCOPED_1F",
+   "state": "PASS",
+   "critical": true,
+   "detail": "18 claims"
+  },
+  {
+   "check": "PLOT_BOUNDARY_REJECTED_1F",
+   "state": "PASS",
+   "critical": false,
+   "detail": "0 plot-boundary parts never topology"
+  },
+  {
+   "check": "ROOM_CLOSURE_1F",
+   "state": "PASS",
+   "critical": true,
+   "detail": "4 of 6 labelled sites certified"
+  },
+  {
+   "check": "UNREALISED_PLACED_1F",
+   "state": "PASS",
+   "critical": true,
+   "detail": ""
+  },
+  {
+   "check": "JOINERY_NOT_WALL_1F",
+   "state": "PASS",
+   "critical": true,
+   "detail": "2 counter run(s), offsets in 450-750 mm"
+  },
+  {
+   "check": "FRAME_REJECTED_2F",
+   "state": "PASS",
+   "critical": true,
+   "detail": "1 sheet frame(s)"
+  },
+  {
+   "check": "CLAIMS_SCOPED_2F",
+   "state": "PASS",
+   "critical": true,
+   "detail": "12 claims"
+  },
+  {
+   "check": "PLOT_BOUNDARY_REJECTED_2F",
+   "state": "PASS",
+   "critical": false,
+   "detail": "0 plot-boundary parts never topology"
+  },
+  {
+   "check": "ROOM_CLOSURE_2F",
+   "state": "BLOCKED_REPORTED",
+   "critical": true,
+   "detail": "0 of 0 labelled sites certified"
+  },
+  {
+   "check": "UNREALISED_PLACED_2F",
+   "state": "PASS",
+   "critical": true,
+   "detail": ""
+  },
+  {
+   "check": "JOINERY_NOT_WALL_2F",
+   "state": "PASS",
+   "critical": true,
+   "detail": "0 counter run(s), offsets in 450-750 mm"
+  },
+  {
+   "check": "CURVED_GLAZING_HOSTED",
+   "state": "PASS",
+   "critical": true,
+   "detail": "GF curved glazing bounds the site labelled MASTER BED ROOM"
+  },
+  {
+   "check": "SALON_UNIQUE_BINDING",
+   "state": "PASS",
+   "critical": true,
+   "detail": "GF-W09 6331.6 mm = dimension 2289 633.158 cm"
+  },
+  {
+   "check": "OWNER_HEIGHT_SCOPED",
+   "state": "PASS",
+   "critical": true,
+   "detail": "the owner-derived 3.65 m appears only in ['A3-ALU-SALON']"
+  },
+  {
+   "check": "DOUBLE_HEIGHT_ZONE",
+   "state": "PASS",
+   "critical": true,
+   "detail": "DOUBLE_HEIGHT_ZONE_CORROBORATED"
+  },
+  {
+   "check": "BLOCKED_ROWS_WITHOUT_QTY",
+   "state": "PASS",
+   "critical": true,
+   "detail": "all rows"
+  },
+  {
+   "check": "NO_MATERIAL_WITHOUT_SOURCE_OR_OWNER",
+   "state": "PASS",
+   "critical": true,
+   "detail": ""
+  },
+  {
+   "check": "NO_HEIGHT_QUANTITY",
+   "state": "PASS",
+   "critical": true,
+   "detail": ""
+  },
+  {
+   "check": "FOOTING_TAG_RECONCILIATION",
+   "state": "PASS",
+   "critical": true,
+   "detail": "27 marks -> 27 rows; every tag exactly once"
+  },
+  {
+   "check": "SCHEDULE_RECONCILIATION",
+   "state": "PASS",
+   "critical": true,
+   "detail": "every row: type, mark, schedule row, dims, formula, geometry, status"
+  },
+  {
+   "check": "TYPE_SUMMARY_DERIVED",
+   "state": "PASS",
+   "critical": true,
+   "detail": "type totals = sum of occurrence rows"
+  },
+  {
+   "check": "FOOTING_H_AUDIT",
+   "state": "PASS",
+   "critical": true,
+   "detail": "every footing H is the schedule H of its type; no 0.60 m exists"
+  },
+  {
+   "check": "COLUMN_MARKS_VS_LABELS",
+   "state": "PASS",
+   "critical": false,
+   "detail": "{\"marks\": 35, \"printed_labels\": 35, \"state\": \"PASS\"}"
+  },
+  {
+   "check": "REBAR_FAIL_CLOSED",
+   "state": "PASS",
+   "critical": true,
+   "detail": "no weight"
+  },
+  {
+   "check": "BEAM_VOLUME_NOT_FROM_COUNT",
+   "state": "PASS",
+   "critical": true,
+   "detail": "beam volumes blocked"
+  },
+  {
+   "check": "SYNTHETIC_TESTS",
+   "state": "PASS",
+   "critical": false,
+   "detail": "tests/alsenan/test_alsenan_a3_structural.py, test_alsenan_a3_motifs.py, test_alsenan_a2_role_inference.py (role false positives, frame, plot, joinery vs wall, doors, windows, curved glazing, caps)"
+  },
+  {
+   "check": "XLSX_READBACK",
+   "state": "PASS",
+   "critical": true,
+   "detail": "every cell vs model; deterministic rewrite"
+  }
+ ],
+ "target": "zero silent critical errors: every critical check PASS or BLOCKED_REPORTED with its reason",
+ "xlsx": {
+  "sheets": [
+   "00_READ_ME",
+   "01_SOURCES",
+   "02_ARCH_SUMMARY",
+   "03_ROOM_MATRIX",
+   "04_FLOOR_CEILING",
+   "05_OPENINGS",
+   "06_ALUMINIUM_GLAZING",
+   "07_DOUBLE_HEIGHT_ZONES",
+   "08_WALL_PLAN_QUANTITIES",
+   "09_JOINERY",
+   "10_OWNER_FACTS",
+   "11_ARCH_BLOCKERS",
+   "12_STRUCTURAL_SUMMARY",
+   "13_STRUCT_TYPE_LIBRARY",
+   "14_FOOTING_TYPE_COUNTS",
+   "15_FOOTING_OCCURRENCES",
+   "16_FOOTING_QS_VIEW",
+   "17_COLUMN_TYPE_COUNTS",
+   "18_COLUMN_OCCURRENCES",
+   "19_COLUMN_QS_VIEW",
+   "20_BEAM_TYPE_COUNTS",
+   "21_BEAM_OCCURRENCES",
+   "22_BEAM_QS_VIEW",
+   "23_SLABS",
+   "24_REBAR_EVIDENCE",
+   "25_STRUCT_RECONCILIATION",
+   "26_STRUCT_BLOCKERS",
+   "27_FORENSIC_F_F10"
+  ],
+  "content_digest": "5b6f4cc6e11916bb8037dff3721679640c16c1c1d151b8170207b54df09ed0ff",
+  "file_sha256": "be39a091755bd49364f7bf05f21d284bb815569cf90165fee1c715103fe1232c",
+  "bytes": 83517,
+  "rewrite_identical": true,
+  "readback": {
+   "state": "PASS",
+   "architectural": {
+    "state": "PASS",
+    "differences": [],
+    "formulas": [],
+    "register_mismatches": [],
+    "quantity_cells_checked": 75,
+    "canonical_not_exactly_once": [],
+    "row_drops": []
+   },
+   "structural": {
+    "state": "PASS",
+    "differences": [],
+    "formulas": [],
+    "register_mismatches": [],
+    "quantity_cells_checked": 92,
+    "canonical_not_exactly_once": [],
+    "row_drops": []
+   }
+  },
+  "rows_per_sheet": {
+   "00_READ_ME": 9,
+   "01_SOURCES": 9,
+   "02_ARCH_SUMMARY": 75,
+   "03_ROOM_MATRIX": 15,
+   "04_FLOOR_CEILING": 12,
+   "05_OPENINGS": 59,
+   "06_ALUMINIUM_GLAZING": 5,
+   "07_DOUBLE_HEIGHT_ZONES": 1,
+   "08_WALL_PLAN_QUANTITIES": 28,
+   "09_JOINERY": 2,
+   "10_OWNER_FACTS": 4,
+   "11_ARCH_BLOCKERS": 21,
+   "12_STRUCTURAL_SUMMARY": 92,
+   "13_STRUCT_TYPE_LIBRARY": 77,
+   "14_FOOTING_TYPE_COUNTS": 17,
+   "15_FOOTING_OCCURRENCES": 27,
+   "16_FOOTING_QS_VIEW": 17,
+   "17_COLUMN_TYPE_COUNTS": 52,
+   "18_COLUMN_OCCURRENCES": 35,
+   "19_COLUMN_QS_VIEW": 13,
+   "20_BEAM_TYPE_COUNTS": 47,
+   "21_BEAM_OCCURRENCES": 93,
+   "22_BEAM_QS_VIEW": 44,
+   "23_SLABS": 3,
+   "24_REBAR_EVIDENCE": 64,
+   "25_STRUCT_RECONCILIATION": 16,
+   "26_STRUCT_BLOCKERS": 8,
+   "27_FORENSIC_F_F10": 1
+  }
+ },
+ "silent_critical_errors": 0
+}

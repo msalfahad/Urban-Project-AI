@@ -1,0 +1,23 @@
+STEP_GROUP,STEP_ID,STEP,M3,KWD,CLASS,EVIDENCE,STATUS
+A scope / not drawn,B01,Boundary-wall ground beam (freelancer 42 m x 30 x 60),-7.56,-200.34,SCOPE_DIFFERENCE,S-BOUN run on SH08 (boundary wall); p.14 typical; outside the building structure; Urban keeps a CONDITIONAL allowance (10),CONDITIONAL in Urban
+A scope / not drawn,B02,Perimeter tie beam (freelancer 71.7 m x 20 x 60),-8.604,-228.006,SOURCE_CONFLICT (likely DOUBLE_COUNTED),no 200 mm perimeter band on SH08; the 211 m of 30 x 60 already covers the exterior lines; section = unbound schedule row B.W,RFI (note B / B.W)
+A scope / not drawn,B03,Pool pump room walls and floor,-3.48,-92.22,SCOPE_DIFFERENCE (not drawn),"S8.2 PL-PUMP-ROOM NOT_SHOWN on p.3, p.7, architectural GF",UNRESOLVED (RFI)
+A scope / not drawn,B04,Pool steps,-0.228,-6.042,SCOPE_DIFFERENCE (not drawn),S8.2 PL-STEPS NOT_SHOWN,UNRESOLVED (RFI)
+B ground slab,B05,Ground slab over the ground-beam and column footprint (inside the drawn plate),-6.50444,-172.368,DOUBLE_COUNTED (BEAM_SLAB_OVERLAP),SH08 plate 285.88 m2 minus the slab cells; the beams are measured full depth,FIXED
+B ground slab,B06,"Ground-slab cells Urban holds unresolved (lift / stair cell, stair-zone cell)",-5.32922,-141.224,MISSING_IN_URBAN_BASE,M4 UNRESOLVED cells; S8.1A decomposition (05),CONDITIONAL in Urban
+B ground slab,B07,Freelancer plate area beyond the drawn ground-floor footprint,-0.96169,-25.485,GEOMETRY_DIFFERENCE (cannot be located),one typed area (no outline in the workbook) vs the drawn plate; the 1.2 m passage between the two blocks is a candidate,UNLOCATED
+B ground slab,B07a,"Member overlap deducted inside measured cells, and rounding",0.000007,0,GEOMETRY_DIFFERENCE (small),M4 deducts band / column overlaps inside cells; cell areas kept to 4 dp,MEASURED
+C ground beams,B08,Ground-beam length: freelancer total vs Urban net of columns,-3.00798,-79.711,GEOMETRY_DIFFERENCE,"211.0 m typed in two lumps vs 194.29 m of drawn spans net of columns (column / neck owns the joint); christiannp 200.04 m gross, U-C4N ~200 m",MEASURED
+C ground beams,B09,Interior ground-beam depth: 0.60 everywhere vs the printed p.13 classes,-5.094288,-134.999,THICKNESS_OR_DEPTH_DIFFERENCE,"p.13 typical sections 30 x 30 (< 2.5 m), 30 x 40 (< 5 m), 30 x 60 (> 5 m); the class basis (c/c or clear) is RFI-A05",MEASURED
+C ground beams,B10,Exterior ground-beam depth: 0.60 vs the FOLLOW ARCH bracket,0.823955,21.835,THICKNESS_OR_DEPTH_DIFFERENCE,"p.13 exterior detail 30 x FOLLOW ARCH from the GF slab level (+1.00) to the outer ground level; base 0.9 - 1.0 where the plan prints +1.00, the class section at +0.30 / +0.15 (source conflict, RFI-M4-06)",MEASURED (range)
+D frame / foundations / specials,B11,Strap beams,0.388454,10.294,GEOMETRY_DIFFERENCE,drawn faces clear of the footings; SB2 two rows,MEASURED
+D frame / foundations / specials,B12,Footings,0.63,16.695,MISSING_IN_FREELANCER,a second F3 outline drawn on SH10; the FN outline overlapping F9 deducted,MEASURED
+D frame / foundations / specials,B13,Foundation necks,2.0505,54.338,HEIGHT_OR_LEVEL_DIFFERENCE,neck to +1.00 from a founding level 1.50 m below plot level (printed minimum) vs 1.50 m necks,MEASURED
+D frame / foundations / specials,B14,Columns GF - 2F,8.1675,216.439,HEIGHT_OR_LEVEL_DIFFERENCE,"floor to floor vs clear under beams (the joint is re-allocated, compare frame per floor in 07)",MEASURED
+D frame / foundations / specials,B15,Suspended beams,-1.427378,-37.826,GEOMETRY_DIFFERENCE + MISSING_IN_FREELANCER,"per-mark crosswalk (07): B27, B19, B25, B5 and B6 / B4 lengths missing in the freelancer; c/c vs net lengths; dome-A ring arcs moved to domes",MEASURED
+D frame / foundations / specials,B16,Suspended slabs,1.148771,30.442,GEOMETRY_DIFFERENCE,net panels per floor within 2 - 4 %; same 16 cm default and 18 cm water-tank panels,MEASURED
+D frame / foundations / specials,B17,Lintels,0.462698,12.262,MISSING_IN_FREELANCER,p.13 lintel schedule over masonry openings,MEASURED
+D frame / foundations / specials,B18,Stairs,-5.991806,-158.783,ASSUMPTION_DIFFERENCE,"0.28 m slab-equivalent vs drawn flights, winders and landings at the waist range; ST-B missing in the freelancer",MEASURED
+D frame / foundations / specials,B19,Domes,-0.043647,-1.157,GEOMETRY_DIFFERENCE + SCOPE_DIFFERENCE,3 hemispheres vs 2 caps + 2 rings (tower dome conditional),MEASURED
+D frame / foundations / specials,B20,Pool base and walls,-1.55554,-41.222,HEIGHT_OR_LEVEL_DIFFERENCE,wall height 1.8 m vs drawn bands x height above the base (profile conflict),MEASURED (range)
+D frame / foundations / specials,B21,Lift pit walls,-0.255,-6.758,GEOMETRY_DIFFERENCE,8 m x 1.5 m vs four drawn pieces x founding range,MEASURED

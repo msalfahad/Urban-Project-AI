@@ -1,0 +1,165 @@
+{
+ "SCHEMA": "URBAN_R8_12_FACE_CHAIN_REGISTER_V1",
+ "NEW_K2": {
+  "count": 149,
+  "multi_fragment": [
+   {
+    "chain_id": "FC-3275c563fd51445a",
+    "fragments": [
+     "444",
+     "449"
+    ],
+    "nodes": [
+     {
+      "kind": "BRANCH_NODE",
+      "s": 110233.0817,
+      "by": "545"
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 110278.0817,
+      "by": "699"
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 110523.0817,
+      "by": "702"
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 110583.0817,
+      "by": null
+     }
+    ]
+   },
+   {
+    "chain_id": "FC-46772a508121a264",
+    "fragments": [
+     "531",
+     "1676"
+    ],
+    "nodes": [
+     {
+      "kind": "BRANCH_NODE",
+      "s": 15989.7196,
+      "by": null
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 16009.7196,
+      "by": "714"
+     }
+    ]
+   },
+   {
+    "chain_id": "FC-953d5ced81329ef3",
+    "fragments": [
+     "1892",
+     "537"
+    ],
+    "nodes": [
+     {
+      "kind": "BRANCH_NODE",
+      "s": 15674.7196,
+      "by": null
+     }
+    ]
+   },
+   {
+    "chain_id": "FC-a0d9063d437ff3c3",
+    "fragments": [
+     "470",
+     "471"
+    ],
+    "nodes": [
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109443.0817,
+      "by": "718"
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109583.0817,
+      "by": "718"
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109608.0817,
+      "by": null
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 109623.0817,
+      "by": "7116"
+     }
+    ]
+   },
+   {
+    "chain_id": "FC-e1524d76d353a9ab",
+    "fragments": [
+     "1547",
+     "1947",
+     "1271"
+    ],
+    "nodes": [
+     {
+      "kind": "CONTINUOUS_JOIN",
+      "s": 110178.0817,
+      "by": null
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 110218.0817,
+      "by": null
+     },
+     {
+      "kind": "BRANCH_NODE",
+      "s": 110238.0817,
+      "by": "704"
+     }
+    ]
+   }
+  ],
+  "chain_breaks": [],
+  "duplicate_intervals": [],
+  "id_collisions": {
+   "FC-05c41b5b497eff5b": [
+    [
+     "2060|1"
+    ],
+    [
+     "2060|3"
+    ]
+   ],
+   "FC-162940d1a5dfbe5d": [
+    [
+     "2061|1"
+    ],
+    [
+     "2061|3"
+    ]
+   ],
+   "FC-9ecd78de50b237e3": [
+    [
+     "2060|0"
+    ],
+    [
+     "2060|2"
+    ]
+   ],
+   "FC-ee64c318f9cbcf91": [
+    [
+     "2061|0"
+    ],
+    [
+     "2061|2"
+    ]
+   ]
+  }
+ },
+ "OLD_K1": {
+  "count": 153,
+  "multi_fragment": 4
+ },
+ "finding_V3_D1": "chain ids of the parallel sides of ONE closed polyline with the same extent collide (H2060, H2061: rectangles): the id uses entity + extent, not the supporting-line offset. Effect: only these already-ambiguous rectangles; no closure, no row. Fix in R8.13 (add the offset / sub-part set to the chain id) with a version bump - NOT inside the frozen V3"
+}

@@ -1,0 +1,380 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_SOURCE_AUTHORITY_V1",
+ "hierarchy": {
+  "ARCHITECTURAL": [
+   "P7757.dxf",
+   "P7757.dwg (identity)",
+   "PDF 01-12 (supporting)",
+   "DWF (unread)"
+  ],
+  "STRUCTURAL": [
+   "ST7757.dxf",
+   "ST7757.pdf (corroborating)",
+   "ST7757.dwg (unverified)"
+  ],
+  "SANITARY": [
+   "sanitary-7757.pdf (evidence only)"
+  ]
+ },
+ "dwg_dxf_identity": {
+  "P7757": {
+   "method": "r8_6a_reconcile: K1 (pinned decode of the DWG) vs K2 (ezdxf on the DXF), REAL tolerance, correlated by source handle",
+   "summary": {
+    "verdict": "PASS",
+    "field_class": null,
+    "scope": null,
+    "correlated_by": "BLOCK_RECORD_HANDLE",
+    "correlation_bases": {
+     "SOURCE_HANDLE": 9424
+    },
+    "lineage_bases": {
+     "SOURCE_HANDLE": 931
+    },
+    "lineage_outcomes": {
+     "PASS": 931
+    },
+    "tolerance": {
+     "name": "REAL",
+     "position_pass": 1.846084305007542e-07,
+     "position_warn": 0.00018028167041089278,
+     "basis": "1024*eps*M with M=811916; text step 16 digits"
+    },
+    "counts": {
+     "PASS": 10815
+    },
+    "non_pass_by_field": {}
+   },
+   "state": "GEOMETRY_IDENTICAL",
+   "provenance": "the DXF is an owner re-save (AC1032, LASTSAVEDBY Msalf) - writer not independent"
+  },
+  "ST7757": {
+   "method": "header only (no pinned decode of ST7757.dwg)",
+   "state": "NOT_VERIFIED",
+   "dwg_version": "AC1027",
+   "dxf_version": "AC1032"
+  }
+ },
+ "pdf_vs_dwg": {
+  "architectural_pdf_sheets": 12,
+  "architectural_dxf_sheets": 5,
+  "pdf_only_sheets": [
+   "AREA PLANS - GROUND FLOOR + 1st FLOOR (municipal area calculation)",
+   "AREA PLAN - 2nd FLOOR + TOTAL FLOORS AREA",
+   "SOUTH WEST ELEVATION 1:100",
+   "NORTH EAST ELEVATION 1:100",
+   "SECTION 1:100",
+   "SECTION 1:100",
+   "FENCE ELEVATION + FENCE SECTION"
+  ],
+  "state": "PDF_IS_A_LARGER_SHEET_SET - OQ-S1"
+ },
+ "units": {
+  "ARCHITECTURAL": {
+   "source": "P7757.dxf",
+   "sha256": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+   "status": "PROVISIONAL",
+   "native_to_mm": 0.999999999999863,
+   "reason": "ONE_INDEPENDENT_CLASS",
+   "classes": [
+    [
+     "LEVEL_MARKS:ARCH-S01:NORTH_WEST_ELEVATION:0",
+     "LEVEL_MARKS:ARCH-S02:SOUTH_EAST_ELEVATION:0"
+    ]
+   ],
+   "admitted": [
+    "MODEL_SPACE:INSUNITS:EZDXF",
+    "LEVEL_MARKS:ARCH-S01:NORTH_WEST_ELEVATION:0",
+    "LEVEL_MARKS:ARCH-S02:SOUTH_EAST_ELEVATION:0"
+   ],
+   "excluded": [],
+   "allowed_uses": [
+    "PREVIEW_MEASUREMENT",
+    "COUNT_ONLY",
+    "ANNOTATION_MAPPING"
+   ],
+   "evidence": [
+    {
+     "evidence_id": "MODEL_SPACE:INSUNITS:EZDXF",
+     "question": "NATIVE_UNIT_TO_MM",
+     "kind": "UNIT_HEADER_DECLARATION",
+     "scope": "MODEL_SPACE",
+     "lineage": [
+      "AUTHORED:ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4:HEADER.INSUNITS",
+      "PARSER:EZDXF"
+     ],
+     "derived_value": 1.0,
+     "observed_value": 4,
+     "source_ref": "HEADER.INSUNITS",
+     "source_sha256": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+     "unit": "millimetre",
+     "producer": "DECODER",
+     "review_status": "ADMITTED",
+     "author": null,
+     "timestamp": null,
+     "notes": "",
+     "derived_set": [],
+     "author_role": null,
+     "claim_scope": [],
+     "supersedes": null,
+     "acknowledges": [],
+     "supersession_status": null,
+     "supersession_authorized_by": null,
+     "supersession_authorizer_role": null,
+     "supersession_timestamp": null,
+     "supersession_reason": ""
+    },
+    {
+     "evidence_id": "LEVEL_MARKS:ARCH-S01:NORTH_WEST_ELEVATION:0",
+     "question": "NATIVE_UNIT_TO_MM",
+     "kind": "SECTION_ELEVATION_DIMENSION",
+     "scope": "MODEL_SPACE",
+     "lineage": [
+      "FAMILY:DOCUMENT_SOURCE:ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+      "AUTHORED:LEVEL_MARKS:ARCH-S01:NORTH_WEST_ELEVATION"
+     ],
+     "derived_value": 0.999999999999863,
+     "observed_value": 3,
+     "source_ref": "ARCH-S01:NORTH_WEST_ELEVATION",
+     "source_sha256": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+     "unit": "m",
+     "producer": "ENGINE",
+     "review_status": "ADMITTED",
+     "author": null,
+     "timestamp": null,
+     "notes": "",
+     "derived_set": [],
+     "author_role": null,
+     "claim_scope": [],
+     "supersedes": null,
+     "acknowledges": [],
+     "supersession_status": null,
+     "supersession_authorized_by": null,
+     "supersession_authorizer_role": null,
+     "supersession_timestamp": null,
+     "supersession_reason": ""
+    },
+    {
+     "evidence_id": "LEVEL_MARKS:ARCH-S02:SOUTH_EAST_ELEVATION:0",
+     "question": "NATIVE_UNIT_TO_MM",
+     "kind": "SECTION_ELEVATION_DIMENSION",
+     "scope": "MODEL_SPACE",
+     "lineage": [
+      "FAMILY:DOCUMENT_SOURCE:ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+      "AUTHORED:LEVEL_MARKS:ARCH-S02:SOUTH_EAST_ELEVATION"
+     ],
+     "derived_value": 1.0000000000015523,
+     "observed_value": 3,
+     "source_ref": "ARCH-S02:SOUTH_EAST_ELEVATION",
+     "source_sha256": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+     "unit": "m",
+     "producer": "ENGINE",
+     "review_status": "ADMITTED",
+     "author": null,
+     "timestamp": null,
+     "notes": "",
+     "derived_set": [],
+     "author_role": null,
+     "claim_scope": [],
+     "supersedes": null,
+     "acknowledges": [],
+     "supersession_status": null,
+     "supersession_authorized_by": null,
+     "supersession_authorizer_role": null,
+     "supersession_timestamp": null,
+     "supersession_reason": ""
+    }
+   ],
+   "views": [
+    {
+     "policy": "LEVEL_MARK_UNIT_EVIDENCE_V1",
+     "view": "ARCH-S01:NORTH_WEST_ELEVATION",
+     "marks": 3,
+     "rejected": [],
+     "families": [
+      "('5', 199.9999999984538)"
+     ],
+     "pairs": [
+      {
+       "a": [
+        "ALSENAN_P7757_DXF|H10371||TEXT|0",
+        0.15
+       ],
+       "b": [
+        "ALSENAN_P7757_DXF|H10373||TEXT|0",
+        1.0
+       ],
+       "dy_native": 850.0000000001164,
+       "native_to_mm": 0.999999999999863
+      },
+      {
+       "a": [
+        "ALSENAN_P7757_DXF|H10371||TEXT|0",
+        0.15
+       ],
+       "b": [
+        "ALSENAN_P7757_DXF|H10375||TEXT|0",
+        5.5
+       ],
+       "dy_native": 5350.000000000116,
+       "native_to_mm": 0.9999999999999782
+      },
+      {
+       "a": [
+        "ALSENAN_P7757_DXF|H10373||TEXT|0",
+        1.0
+       ],
+       "b": [
+        "ALSENAN_P7757_DXF|H10375||TEXT|0",
+        5.5
+       ],
+       "dy_native": 4500.0,
+       "native_to_mm": 1.0
+      }
+     ],
+     "state": "AGREE"
+    },
+    {
+     "policy": "LEVEL_MARK_UNIT_EVIDENCE_V1",
+     "view": "ARCH-S02:SOUTH_EAST_ELEVATION",
+     "marks": 3,
+     "rejected": [],
+     "families": [
+      "('5', 199.9999999984538)"
+     ],
+     "pairs": [
+      {
+       "a": [
+        "ALSENAN_P7757_DXF|H9260||TEXT|0",
+        0.15
+       ],
+       "b": [
+        "ALSENAN_P7757_DXF|H9289||TEXT|0",
+        0.3
+       ],
+       "dy_native": 149.99999999976717,
+       "native_to_mm": 1.0000000000015523
+      },
+      {
+       "a": [
+        "ALSENAN_P7757_DXF|H9260||TEXT|0",
+        0.15
+       ],
+       "b": [
+        "ALSENAN_P7757_DXF|H9291||TEXT|0",
+        4.3
+       ],
+       "dy_native": 4149.999999999884,
+       "native_to_mm": 1.0000000000000278
+      },
+      {
+       "a": [
+        "ALSENAN_P7757_DXF|H9289||TEXT|0",
+        0.3
+       ],
+       "b": [
+        "ALSENAN_P7757_DXF|H9291||TEXT|0",
+        4.3
+       ],
+       "dy_native": 4000.0000000001164,
+       "native_to_mm": 0.9999999999999709
+      }
+     ],
+     "state": "AGREE"
+    }
+   ]
+  },
+  "STRUCTURAL": {
+   "source": "ST7757.dxf",
+   "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+   "status": "PROVISIONAL",
+   "native_to_mm": 1.0,
+   "reason": "ONE_INDEPENDENT_CLASS",
+   "classes": [
+    [
+     "FOOTING_SCHEDULE_CM:0"
+    ]
+   ],
+   "admitted": [
+    "MODEL_SPACE:INSUNITS:EZDXF",
+    "FOOTING_SCHEDULE_CM:0"
+   ],
+   "excluded": [],
+   "allowed_uses": [
+    "PREVIEW_MEASUREMENT",
+    "COUNT_ONLY",
+    "ANNOTATION_MAPPING"
+   ],
+   "evidence": [
+    {
+     "evidence_id": "MODEL_SPACE:INSUNITS:EZDXF",
+     "question": "NATIVE_UNIT_TO_MM",
+     "kind": "UNIT_HEADER_DECLARATION",
+     "scope": "MODEL_SPACE",
+     "lineage": [
+      "AUTHORED:9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079:HEADER.INSUNITS",
+      "PARSER:EZDXF"
+     ],
+     "derived_value": 1.0,
+     "observed_value": 4,
+     "source_ref": "HEADER.INSUNITS",
+     "source_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+     "unit": "millimetre",
+     "producer": "DECODER",
+     "review_status": "ADMITTED",
+     "author": null,
+     "timestamp": null,
+     "notes": "",
+     "derived_set": [],
+     "author_role": null,
+     "claim_scope": [],
+     "supersedes": null,
+     "acknowledges": [],
+     "supersession_status": null,
+     "supersession_authorized_by": null,
+     "supersession_authorizer_role": null,
+     "supersession_timestamp": null,
+     "supersession_reason": ""
+    },
+    {
+     "evidence_id": "FOOTING_SCHEDULE_CM:0",
+     "question": "NATIVE_UNIT_TO_MM",
+     "kind": "EXPLICIT_UNIT_NOTE",
+     "scope": "MODEL_SPACE",
+     "lineage": [
+      "FAMILY:DOCUMENT_SOURCE:9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+      "AUTHORED:FOOTING_SCHEDULE_CM_NOTE"
+     ],
+     "derived_value": 1.0,
+     "observed_value": 19,
+     "source_ref": "FOOTING_SCHEDULE",
+     "source_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+     "unit": "cm",
+     "producer": "ENGINE",
+     "review_status": "ADMITTED",
+     "author": null,
+     "timestamp": null,
+     "notes": "",
+     "derived_set": [],
+     "author_role": null,
+     "claim_scope": [],
+     "supersedes": null,
+     "acknowledges": [],
+     "supersession_status": null,
+     "supersession_authorized_by": null,
+     "supersession_authorizer_role": null,
+     "supersession_timestamp": null,
+     "supersession_reason": ""
+    }
+   ],
+   "views": [
+    {
+     "view": "FOUNDATION_PLAN vs SCHEDULE OF FOOTINGS (cm)",
+     "pairs": 19,
+     "distinct_ratios": [
+      1.0
+     ]
+    }
+   ]
+  }
+ }
+}

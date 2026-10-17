@@ -1,0 +1,34 @@
+{
+ "id": "TOPOLOGY_TOLERANCE_POLICY_V1",
+ "noise_relative": 9.313225746154785e-10,
+ "noise_basis": "numeric representation (float64, <= 16 insert levels, DXF 16-17 digit text); relative, unit-free",
+ "authored_precision_mm": 1.0,
+ "authored_basis": "construction / setting-out precision of a plan; converted with the revision's own unit claim",
+ "jamb_allowance_ratio": 0.25,
+ "min_band_ratio": 10.0,
+ "bands": [
+  "NOISE",
+  "AMBIGUOUS",
+  "AUTHORED"
+ ],
+ "predicates": {
+  "points_coincident": "eps_n (build) / eps_r (certificate build)",
+  "junction_snap": "eps_n (build) / eps_r (certificate build)",
+  "segment_endpoint_on_segment": "eps_n (build) / eps_r (certificate build)",
+  "curve_endpoint_on_curve": "eps_n (build) / eps_r (certificate build)",
+  "crossing": "exact intersection; end-point proximity by eps",
+  "is_horizontal": "NOT USED (no axis predicate exists in the engine)",
+  "is_vertical": "NOT USED (no axis predicate exists in the engine)",
+  "axis_alignment": "NOT USED (no axis predicate exists in the engine)",
+  "closed_cycle": "planar half-edge faces; no separate tolerance",
+  "label_on_boundary": "eps_r",
+  "sliver": "area <= eps_r x perimeter / 2",
+  "region_membership_noise": "eps_n",
+  "opening_closure_reach": "JAMB_ALLOWANCE_RATIO = 0.25 x leaf radius"
+ },
+ "certificate": "two builds (eps_n, eps_r); a site is CERTIFIED only if identical in both",
+ "calibration": "none: no room total, benchmark row or project value was read to choose any number here",
+ "source_geometry": "never rewritten; clustering is topological equivalence only",
+ "digest": "263d2adf1d1770e1db963ac9bfde852dcedbdbd77e0040730322848c49acb450",
+ "frozen_at": "R8.8: the numbers (2**-30 relative, 1 mm, jamb ratio 0.25) were written before the first Qortuba topology run and were never changed afterwards; this register was written after the TS01 development run on the OLD revision (K1), on which the door / glazing closure RULES were developed, and BEFORE the old-revision K2 cross-route run and the new-revision diagnostic"
+}

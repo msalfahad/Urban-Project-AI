@@ -1,0 +1,1694 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_CONCRETE_REGISTER_V1",
+ "policy": {
+  "policy_id": "STRUCTURAL_QTO_V1",
+  "rebar_fields": [
+   "bar_diameter_mm",
+   "count_or_spacing",
+   "bar_length",
+   "bar_shape",
+   "laps",
+   "cover"
+  ],
+  "forbidden": [
+   "kg_per_m3",
+   "ratio",
+   "steel_ratio",
+   "kg_m3"
+  ],
+  "never": [
+   "a default dimension",
+   "a kg/m3 ratio",
+   "a tag resolved by nearest distance",
+   "a schedule size the drawing contradicts"
+  ],
+  "digest": "a1a0ce50f14c8c126fb72b76e399ab280ea640b495da07082155903f5c6a65df"
+ },
+ "footing_rows": [
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "F@H5757|5760|TEXT|0",
+   "count": 1,
+   "dims": {
+    "L": {
+     "m": 0.9,
+     "source": "SCHEDULE OF FOOTINGS (cm) F"
+    },
+    "W": {
+     "m": 0.8,
+     "source": "SCHEDULE OF FOOTINGS (cm) F"
+    },
+    "H": {
+     "m": 0.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) F"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": 0.216,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": [],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H5729|5737|SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H5729|5737|SEGMENT|1",
+    "ALSENAN_ST7757_DXF|H5729|5737|SEGMENT|2",
+    "ALSENAN_ST7757_DXF|H5729|5737|SEGMENT|3",
+    "ALSENAN_ST7757_DXF|H5757|5760|TEXT|0",
+    "ATTRIB|7289|DEPHT",
+    "ATTRIB|7289|H",
+    "ATTRIB|7289|W"
+   ],
+   "size_check": "SIZE_CONFIRMED: drawn [900.0, 800.0] mm vs schedule [900.0, 800.0] mm (tol 1.0 mm)"
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "F@H5757|5759|TEXT|0",
+   "count": 1,
+   "dims": {
+    "L": {
+     "m": 0.9,
+     "source": "SCHEDULE OF FOOTINGS (cm) F"
+    },
+    "W": {
+     "m": 0.8,
+     "source": "SCHEDULE OF FOOTINGS (cm) F"
+    },
+    "H": {
+     "m": 0.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) F"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": 0.216,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": [],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H5729|5736|SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H5729|5736|SEGMENT|1",
+    "ALSENAN_ST7757_DXF|H5729|5736|SEGMENT|2",
+    "ALSENAN_ST7757_DXF|H5729|5736|SEGMENT|3",
+    "ALSENAN_ST7757_DXF|H5757|5759|TEXT|0",
+    "ATTRIB|7289|DEPHT",
+    "ATTRIB|7289|H",
+    "ATTRIB|7289|W"
+   ],
+   "size_check": "SIZE_CONFIRMED: drawn [800.0, 900.0] mm vs schedule [900.0, 800.0] mm (tol 1.0 mm)"
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "F3@H5775||TEXT|0",
+   "count": 1,
+   "dims": {
+    "L": {
+     "m": 1.6,
+     "source": "SCHEDULE OF FOOTINGS (cm) F3"
+    },
+    "W": {
+     "m": 1.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) F3"
+    },
+    "H": {
+     "m": 0.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) F3"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": 0.672,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": [],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H5729|5739|SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H5729|5739|SEGMENT|1",
+    "ALSENAN_ST7757_DXF|H5729|5739|SEGMENT|2",
+    "ALSENAN_ST7757_DXF|H5729|5739|SEGMENT|3",
+    "ALSENAN_ST7757_DXF|H5775||TEXT|0",
+    "ATTRIB|7328|DEPHT",
+    "ATTRIB|7328|H",
+    "ATTRIB|7328|W"
+   ],
+   "size_check": "SIZE_CONFIRMED: drawn [1600.0, 1400.0] mm vs schedule [1600.0, 1400.0] mm (tol 1.0 mm)"
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "F15@H6953||TEXT|0",
+   "count": 1,
+   "dims": {
+    "L": {
+     "m": 1.8,
+     "source": "SCHEDULE OF FOOTINGS (cm) F15"
+    },
+    "W": {
+     "m": 1.0,
+     "source": "SCHEDULE OF FOOTINGS (cm) F15"
+    },
+    "H": {
+     "m": 0.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) F15"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": 0.72,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": [],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H6953||TEXT|0",
+    "ALSENAN_ST7757_DXF|H6954||SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H6954||SEGMENT|1",
+    "ALSENAN_ST7757_DXF|H6954||SEGMENT|2",
+    "ALSENAN_ST7757_DXF|H6954||SEGMENT|3",
+    "ATTRIB|11027|DEPHT",
+    "ATTRIB|11027|H",
+    "ATTRIB|11027|W"
+   ],
+   "size_check": "SIZE_CONFIRMED: drawn [1800.0, 1000.0] mm vs schedule [1800.0, 1000.0] mm (tol 1.0 mm)"
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "F13@H6876||TEXT|0",
+   "count": 1,
+   "dims": {
+    "L": {
+     "m": 4.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) F13"
+    },
+    "W": {
+     "m": 2.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) F13"
+    },
+    "H": {
+     "m": 0.5,
+     "source": "SCHEDULE OF FOOTINGS (cm) F13"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": 5.16,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": [],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H6875||SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H6875||SEGMENT|1",
+    "ALSENAN_ST7757_DXF|H6875||SEGMENT|2",
+    "ALSENAN_ST7757_DXF|H6875||SEGMENT|3",
+    "ALSENAN_ST7757_DXF|H6876||TEXT|0",
+    "ATTRIB|10904|DEPHT",
+    "ATTRIB|10904|H",
+    "ATTRIB|10904|W"
+   ],
+   "size_check": "SIZE_CONFIRMED: drawn [4300.0, 2400.0] mm vs schedule [4300.0, 2400.0] mm (tol 1.0 mm)"
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "F3@H5774||TEXT|0",
+   "count": 1,
+   "dims": {
+    "L": {
+     "m": 1.6,
+     "source": "SCHEDULE OF FOOTINGS (cm) F3"
+    },
+    "W": {
+     "m": 1.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) F3"
+    },
+    "H": {
+     "m": 0.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) F3"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": 0.672,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": [],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H5729|5740|SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H5729|5740|SEGMENT|1",
+    "ALSENAN_ST7757_DXF|H5729|5740|SEGMENT|2",
+    "ALSENAN_ST7757_DXF|H5729|5740|SEGMENT|3",
+    "ALSENAN_ST7757_DXF|H5774||TEXT|0",
+    "ATTRIB|7328|DEPHT",
+    "ATTRIB|7328|H",
+    "ATTRIB|7328|W"
+   ],
+   "size_check": "SIZE_CONFIRMED: drawn [1400.0, 1600.0] mm vs schedule [1600.0, 1400.0] mm (tol 1.0 mm)"
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "F12@H6874||TEXT|0",
+   "count": 1,
+   "dims": {
+    "L": {
+     "m": 4.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) F12"
+    },
+    "W": {
+     "m": 3.2,
+     "source": "SCHEDULE OF FOOTINGS (cm) F12"
+    },
+    "H": {
+     "m": 0.7,
+     "source": "SCHEDULE OF FOOTINGS (cm) F12"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": 9.856,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": [],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H6847||SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H6847||SEGMENT|1",
+    "ALSENAN_ST7757_DXF|H6847||SEGMENT|2",
+    "ALSENAN_ST7757_DXF|H6847||SEGMENT|3",
+    "ALSENAN_ST7757_DXF|H6874||TEXT|0",
+    "ATTRIB|10846|DEPHT",
+    "ATTRIB|10846|H",
+    "ATTRIB|10846|W"
+   ],
+   "size_check": "SIZE_CONFIRMED: drawn [4400.0, 3200.0] mm vs schedule [4400.0, 3200.0] mm (tol 1.0 mm)"
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "F2@H5749||TEXT|0",
+   "count": 1,
+   "dims": {
+    "L": {
+     "m": 1.9,
+     "source": "SCHEDULE OF FOOTINGS (cm) F2"
+    },
+    "W": {
+     "m": 1.7,
+     "source": "SCHEDULE OF FOOTINGS (cm) F2"
+    },
+    "H": {
+     "m": 0.35,
+     "source": "SCHEDULE OF FOOTINGS (cm) F2"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": 1.1305,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": [],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H5729|5724|SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H5729|5724|SEGMENT|1",
+    "ALSENAN_ST7757_DXF|H5729|5724|SEGMENT|2",
+    "ALSENAN_ST7757_DXF|H5729|5724|SEGMENT|3",
+    "ALSENAN_ST7757_DXF|H5749||TEXT|0",
+    "ATTRIB|7317|DEPHT",
+    "ATTRIB|7317|H",
+    "ATTRIB|7317|W"
+   ],
+   "size_check": "SIZE_CONFIRMED: drawn [1700.0, 1900.0] mm vs schedule [1900.0, 1700.0] mm (tol 1.0 mm)"
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "FF@H5750||TEXT|0",
+   "count": 1,
+   "dims": {
+    "L": {
+     "m": 4.6,
+     "source": "SCHEDULE OF FOOTINGS (cm) FF"
+    },
+    "W": {
+     "m": 4.5,
+     "source": "SCHEDULE OF FOOTINGS (cm) FF"
+    },
+    "H": {
+     "m": 0.55,
+     "source": "SCHEDULE OF FOOTINGS (cm) FF"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": 11.385,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": [],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H5750||TEXT|0",
+    "ALSENAN_ST7757_DXF|H6955||SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H6955||SEGMENT|1",
+    "ALSENAN_ST7757_DXF|H6955||SEGMENT|2",
+    "ALSENAN_ST7757_DXF|H6955||SEGMENT|3",
+    "ATTRIB|11038|DEPHT",
+    "ATTRIB|11038|H",
+    "ATTRIB|11038|W"
+   ],
+   "size_check": "SIZE_CONFIRMED: drawn [4600.0, 4500.0] mm vs schedule [4600.0, 4500.0] mm (tol 1.0 mm)"
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "F2@H5748||TEXT|0",
+   "count": 1,
+   "dims": {
+    "L": {
+     "m": 1.9,
+     "source": "SCHEDULE OF FOOTINGS (cm) F2"
+    },
+    "W": {
+     "m": 1.7,
+     "source": "SCHEDULE OF FOOTINGS (cm) F2"
+    },
+    "H": {
+     "m": 0.35,
+     "source": "SCHEDULE OF FOOTINGS (cm) F2"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": 1.1305,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": [],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H5729|5731|SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H5729|5731|SEGMENT|1",
+    "ALSENAN_ST7757_DXF|H5729|5731|SEGMENT|2",
+    "ALSENAN_ST7757_DXF|H5729|5731|SEGMENT|3",
+    "ALSENAN_ST7757_DXF|H5748||TEXT|0",
+    "ATTRIB|7317|DEPHT",
+    "ATTRIB|7317|H",
+    "ATTRIB|7317|W"
+   ],
+   "size_check": "SIZE_CONFIRMED: drawn [1700.0, 1900.0] mm vs schedule [1900.0, 1700.0] mm (tol 1.0 mm)"
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "F5@H5747||TEXT|0",
+   "count": 1,
+   "dims": {
+    "L": {
+     "m": 2.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) F5"
+    },
+    "W": {
+     "m": 2.1,
+     "source": "SCHEDULE OF FOOTINGS (cm) F5"
+    },
+    "H": {
+     "m": 0.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) F5"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": 2.016,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": [],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H5729|5732|SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H5729|5732|SEGMENT|1",
+    "ALSENAN_ST7757_DXF|H5729|5732|SEGMENT|2",
+    "ALSENAN_ST7757_DXF|H5729|5732|SEGMENT|3",
+    "ALSENAN_ST7757_DXF|H5747||TEXT|0",
+    "ATTRIB|7350|DEPHT",
+    "ATTRIB|7350|H",
+    "ATTRIB|7350|W"
+   ],
+   "size_check": "SIZE_CONFIRMED: drawn [2400.0, 2100.0] mm vs schedule [2400.0, 2100.0] mm (tol 1.0 mm)"
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "F14@H5763||TEXT|0",
+   "count": 1,
+   "dims": {
+    "L": {
+     "m": 3.8,
+     "source": "SCHEDULE OF FOOTINGS (cm) F14"
+    },
+    "W": {
+     "m": 3.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) F14"
+    },
+    "H": {
+     "m": 0.5,
+     "source": "SCHEDULE OF FOOTINGS (cm) F14"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": 6.27,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": [],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H5763||TEXT|0",
+    "ALSENAN_ST7757_DXF|H6938||SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H6938||SEGMENT|1",
+    "ALSENAN_ST7757_DXF|H6938||SEGMENT|2",
+    "ALSENAN_ST7757_DXF|H6938||SEGMENT|3",
+    "ATTRIB|10965|DEPHT",
+    "ATTRIB|10965|H",
+    "ATTRIB|10965|W"
+   ],
+   "size_check": "SIZE_CONFIRMED: drawn [3800.0, 3300.0] mm vs schedule [3800.0, 3300.0] mm (tol 1.0 mm)"
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "F9@H5751||TEXT|0",
+   "count": 1,
+   "dims": {
+    "L": {
+     "m": 3.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) F9"
+    },
+    "W": {
+     "m": 2.7,
+     "source": "SCHEDULE OF FOOTINGS (cm) F9"
+    },
+    "H": {
+     "m": 0.55,
+     "source": "SCHEDULE OF FOOTINGS (cm) F9"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": 5.049,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": [],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H5751||TEXT|0",
+    "ALSENAN_ST7757_DXF|H6156||SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H6156||SEGMENT|1",
+    "ALSENAN_ST7757_DXF|H6159||SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H6159||SEGMENT|1",
+    "ALSENAN_ST7757_DXF|H6159||SEGMENT|2",
+    "ALSENAN_ST7757_DXF|H6159||SEGMENT|3",
+    "ATTRIB|7383|DEPHT",
+    "ATTRIB|7383|H",
+    "ATTRIB|7383|W"
+   ],
+   "size_check": "SIZE_CONFIRMED: drawn [3400.0, 2700.0] mm vs schedule [3400.0, 2700.0] mm (tol 1.0 mm)"
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "F4@H5746||TEXT|0",
+   "count": 1,
+   "dims": {
+    "L": {
+     "m": 2.2,
+     "source": "SCHEDULE OF FOOTINGS (cm) F4"
+    },
+    "W": {
+     "m": 2.0,
+     "source": "SCHEDULE OF FOOTINGS (cm) F4"
+    },
+    "H": {
+     "m": 0.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) F4"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": 1.76,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": [],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H5729|5733|SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H5729|5733|SEGMENT|1",
+    "ALSENAN_ST7757_DXF|H5729|5733|SEGMENT|2",
+    "ALSENAN_ST7757_DXF|H5729|5733|SEGMENT|3",
+    "ALSENAN_ST7757_DXF|H5746||TEXT|0",
+    "ATTRIB|7339|DEPHT",
+    "ATTRIB|7339|H",
+    "ATTRIB|7339|W"
+   ],
+   "size_check": "SIZE_CONFIRMED: drawn [2200.0, 2000.0] mm vs schedule [2200.0, 2000.0] mm (tol 1.0 mm)"
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "F5@H5743||TEXT|0",
+   "count": 1,
+   "dims": {
+    "L": {
+     "m": 2.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) F5"
+    },
+    "W": {
+     "m": 2.1,
+     "source": "SCHEDULE OF FOOTINGS (cm) F5"
+    },
+    "H": {
+     "m": 0.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) F5"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": 2.016,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": [],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H5729|5741|SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H5729|5741|SEGMENT|1",
+    "ALSENAN_ST7757_DXF|H5729|5741|SEGMENT|2",
+    "ALSENAN_ST7757_DXF|H5729|5741|SEGMENT|3",
+    "ALSENAN_ST7757_DXF|H5743||TEXT|0",
+    "ATTRIB|7350|DEPHT",
+    "ATTRIB|7350|H",
+    "ATTRIB|7350|W"
+   ],
+   "size_check": "SIZE_CONFIRMED: drawn [2400.0, 2100.0] mm vs schedule [2400.0, 2100.0] mm (tol 1.0 mm)"
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "FN@H4333||TEXT|0",
+   "count": 1,
+   "dims": {
+    "L": {
+     "m": 1.0,
+     "source": "SCHEDULE OF FOOTINGS (cm) FN"
+    },
+    "W": {
+     "m": 1.0,
+     "source": "SCHEDULE OF FOOTINGS (cm) FN"
+    },
+    "H": {
+     "m": 0.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) FN"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": 0.3,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": [],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H4333||TEXT|0",
+    "ALSENAN_ST7757_DXF|H4336||SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H4337||SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H4338||SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H4339||SEGMENT|0",
+    "ATTRIB|7416|DEPHT",
+    "ATTRIB|7416|H",
+    "ATTRIB|7416|W"
+   ],
+   "size_check": "SIZE_CONFIRMED: drawn [1000.0, 1000.0] mm vs schedule [1000.0, 1000.0] mm (tol 1.0 mm)"
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "F8@H6949||TEXT|0",
+   "count": 1,
+   "dims": {
+    "L": {
+     "m": 4.0,
+     "source": "SCHEDULE OF FOOTINGS (cm) F8"
+    },
+    "W": {
+     "m": 3.6,
+     "source": "SCHEDULE OF FOOTINGS (cm) F8"
+    },
+    "H": {
+     "m": 0.5,
+     "source": "SCHEDULE OF FOOTINGS (cm) F8"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": 7.2,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": [],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H6948||SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H6948||SEGMENT|1",
+    "ALSENAN_ST7757_DXF|H6948||SEGMENT|2",
+    "ALSENAN_ST7757_DXF|H6948||SEGMENT|3",
+    "ALSENAN_ST7757_DXF|H6949||TEXT|0",
+    "ATTRIB|10998|DEPHT",
+    "ATTRIB|10998|H",
+    "ATTRIB|10998|W"
+   ],
+   "size_check": "SIZE_CONFIRMED: drawn [4000.0, 3600.0] mm vs schedule [4000.0, 3600.0] mm (tol 1.0 mm)"
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "F4@H5745||TEXT|0",
+   "count": 1,
+   "dims": {
+    "L": {
+     "m": 2.2,
+     "source": "SCHEDULE OF FOOTINGS (cm) F4"
+    },
+    "W": {
+     "m": 2.0,
+     "source": "SCHEDULE OF FOOTINGS (cm) F4"
+    },
+    "H": {
+     "m": 0.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) F4"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": 1.76,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": [],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H5729|5734|SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H5729|5734|SEGMENT|1",
+    "ALSENAN_ST7757_DXF|H5729|5734|SEGMENT|2",
+    "ALSENAN_ST7757_DXF|H5729|5734|SEGMENT|3",
+    "ALSENAN_ST7757_DXF|H5745||TEXT|0",
+    "ATTRIB|7339|DEPHT",
+    "ATTRIB|7339|H",
+    "ATTRIB|7339|W"
+   ],
+   "size_check": "SIZE_CONFIRMED: drawn [2200.0, 2000.0] mm vs schedule [2200.0, 2000.0] mm (tol 1.0 mm)"
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "FN@H5770||TEXT|0",
+   "count": 1,
+   "dims": {
+    "L": {
+     "m": 1.0,
+     "source": "SCHEDULE OF FOOTINGS (cm) FN"
+    },
+    "W": {
+     "m": 1.0,
+     "source": "SCHEDULE OF FOOTINGS (cm) FN"
+    },
+    "H": {
+     "m": 0.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) FN"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": 0.3,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "blockers": [],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H4352||SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H4353||SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H4354||SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H4355||SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H5770||TEXT|0",
+    "ATTRIB|7416|DEPHT",
+    "ATTRIB|7416|H",
+    "ATTRIB|7416|W"
+   ],
+   "size_check": "SIZE_CONFIRMED: drawn [1000.0, 1000.0] mm vs schedule [1000.0, 1000.0] mm (tol 1.0 mm)"
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "F@H4261||TEXT|0",
+   "count": null,
+   "dims": {
+    "L": {
+     "m": 0.9,
+     "source": "SCHEDULE OF FOOTINGS (cm) F"
+    },
+    "W": {
+     "m": 0.8,
+     "source": "SCHEDULE OF FOOTINGS (cm) F"
+    },
+    "H": {
+     "m": 0.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) F"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "blockers": [
+    "COUNT_NOT_ESTABLISHED",
+    "TAG_OUTSIDE_EVERY_DRAWN_FOOTING_RECTANGLE (boundary-clipped / rotated / tag drawn beside: never matched by distance)"
+   ],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H4261||TEXT|0"
+   ]
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "FN@H4341||TEXT|0",
+   "count": null,
+   "dims": {
+    "L": {
+     "m": 1.0,
+     "source": "SCHEDULE OF FOOTINGS (cm) FN"
+    },
+    "W": {
+     "m": 1.0,
+     "source": "SCHEDULE OF FOOTINGS (cm) FN"
+    },
+    "H": {
+     "m": 0.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) FN"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "blockers": [
+    "COUNT_NOT_ESTABLISHED",
+    "TAG_OUTSIDE_EVERY_DRAWN_FOOTING_RECTANGLE (boundary-clipped / rotated / tag drawn beside: never matched by distance)"
+   ],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H4341||TEXT|0"
+   ]
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "F@H5757|5752|TEXT|0",
+   "count": null,
+   "dims": {
+    "L": {
+     "m": 0.9,
+     "source": "SCHEDULE OF FOOTINGS (cm) F"
+    },
+    "W": {
+     "m": 0.8,
+     "source": "SCHEDULE OF FOOTINGS (cm) F"
+    },
+    "H": {
+     "m": 0.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) F"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "blockers": [
+    "COUNT_NOT_ESTABLISHED",
+    "TAG_OUTSIDE_EVERY_DRAWN_FOOTING_RECTANGLE (boundary-clipped / rotated / tag drawn beside: never matched by distance)"
+   ],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H5757|5752|TEXT|0"
+   ]
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "F@H5757|5762|TEXT|0",
+   "count": null,
+   "dims": {
+    "L": {
+     "m": 0.9,
+     "source": "SCHEDULE OF FOOTINGS (cm) F"
+    },
+    "W": {
+     "m": 0.8,
+     "source": "SCHEDULE OF FOOTINGS (cm) F"
+    },
+    "H": {
+     "m": 0.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) F"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "blockers": [
+    "COUNT_NOT_ESTABLISHED",
+    "TAG_OUTSIDE_EVERY_DRAWN_FOOTING_RECTANGLE (boundary-clipped / rotated / tag drawn beside: never matched by distance)"
+   ],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H5757|5762|TEXT|0"
+   ]
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "F11@H5767|5764|TEXT|0",
+   "count": null,
+   "dims": {
+    "L": {
+     "m": 3.5,
+     "source": "SCHEDULE OF FOOTINGS (cm) F11"
+    },
+    "W": {
+     "m": 1.5,
+     "source": "SCHEDULE OF FOOTINGS (cm) F11"
+    },
+    "H": {
+     "m": 0.5,
+     "source": "SCHEDULE OF FOOTINGS (cm) F11"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "blockers": [
+    "COUNT_NOT_ESTABLISHED",
+    "TAG_OUTSIDE_EVERY_DRAWN_FOOTING_RECTANGLE (boundary-clipped / rotated / tag drawn beside: never matched by distance)"
+   ],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H5767|5764|TEXT|0"
+   ]
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "F10@H5771||TEXT|0",
+   "count": null,
+   "dims": {
+    "L": {
+     "m": 2.8,
+     "source": "SCHEDULE OF FOOTINGS (cm) F10"
+    },
+    "W": {
+     "m": 1.4,
+     "source": "SCHEDULE OF FOOTINGS (cm) F10"
+    },
+    "H": {
+     "m": 0.5,
+     "source": "SCHEDULE OF FOOTINGS (cm) F10"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "blockers": [
+    "COUNT_NOT_ESTABLISHED",
+    "TAG_OUTSIDE_EVERY_DRAWN_FOOTING_RECTANGLE (boundary-clipped / rotated / tag drawn beside: never matched by distance)"
+   ],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H5771||TEXT|0"
+   ]
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "F6@H5773||TEXT|0",
+   "count": null,
+   "dims": {
+    "L": {
+     "m": 2.6,
+     "source": "SCHEDULE OF FOOTINGS (cm) F6"
+    },
+    "W": {
+     "m": 2.2,
+     "source": "SCHEDULE OF FOOTINGS (cm) F6"
+    },
+    "H": {
+     "m": 0.5,
+     "source": "SCHEDULE OF FOOTINGS (cm) F6"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "blockers": [
+    "COUNT_NOT_ESTABLISHED",
+    "TAG_OUTSIDE_EVERY_DRAWN_FOOTING_RECTANGLE (boundary-clipped / rotated / tag drawn beside: never matched by distance)"
+   ],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H5773||TEXT|0"
+   ]
+  },
+  {
+   "item": "STR-FTG",
+   "element_class": "FOOTING",
+   "floor": "FOUNDATION",
+   "element_id": "FN@H6160||TEXT|0",
+   "count": null,
+   "dims": {
+    "L": {
+     "m": 1.0,
+     "source": "SCHEDULE OF FOOTINGS (cm) FN"
+    },
+    "W": {
+     "m": 1.0,
+     "source": "SCHEDULE OF FOOTINGS (cm) FN"
+    },
+    "H": {
+     "m": 0.3,
+     "source": "SCHEDULE OF FOOTINGS (cm) FN"
+    }
+   },
+   "formula": "1 x L x W x H",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "blockers": [
+    "COUNT_NOT_ESTABLISHED",
+    "TAG_OUTSIDE_EVERY_DRAWN_FOOTING_RECTANGLE (boundary-clipped / rotated / tag drawn beside: never matched by distance)"
+   ],
+   "sources": [
+    "ALSENAN_ST7757_DXF|H6160||TEXT|0"
+   ]
+  }
+ ],
+ "boq_rows": [
+  {
+   "item": "S-FTG-F",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F x5 tag(s): 2 matched + size-confirmed, 3 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F",
+   "en": "Reinforced concrete footings type F (90.0 x 80.0 x 30.0 cm)",
+   "qty": 0.432,
+   "unit": "m3",
+   "status": "AUTHORISED_SUBTOTAL",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1: count of tag-in-rectangle matches x L x W x H (schedule), drawn size confirmed",
+   "blockers": [
+    "COUNT_NOT_ESTABLISHED",
+    "TAG_OUTSIDE_EVERY_DRAWN_FOOTING_RECTANGLE (boundary-clipped / rotated / tag drawn beside: never matched by distance)"
+   ],
+   "complete_rows": [
+    "F@H5757|5760|TEXT|0",
+    "F@H5757|5759|TEXT|0"
+   ],
+   "blocked_rows": [
+    "F@H4261||TEXT|0",
+    "F@H5757|5752|TEXT|0",
+    "F@H5757|5762|TEXT|0"
+   ]
+  },
+  {
+   "item": "S-FTG-F2",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F2 x2 tag(s): 2 matched + size-confirmed, 0 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F2",
+   "en": "Reinforced concrete footings type F2 (190.0 x 170.0 x 35.0 cm)",
+   "qty": 2.261,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1: count of tag-in-rectangle matches x L x W x H (schedule), drawn size confirmed",
+   "blockers": [],
+   "complete_rows": [
+    "F2@H5749||TEXT|0",
+    "F2@H5748||TEXT|0"
+   ],
+   "blocked_rows": []
+  },
+  {
+   "item": "S-FTG-F3",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F3 x2 tag(s): 2 matched + size-confirmed, 0 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F3",
+   "en": "Reinforced concrete footings type F3 (160.0 x 140.0 x 30.0 cm)",
+   "qty": 1.344,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1: count of tag-in-rectangle matches x L x W x H (schedule), drawn size confirmed",
+   "blockers": [],
+   "complete_rows": [
+    "F3@H5775||TEXT|0",
+    "F3@H5774||TEXT|0"
+   ],
+   "blocked_rows": []
+  },
+  {
+   "item": "S-FTG-F4",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F4 x2 tag(s): 2 matched + size-confirmed, 0 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F4",
+   "en": "Reinforced concrete footings type F4 (220.0 x 200.0 x 40.0 cm)",
+   "qty": 3.52,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1: count of tag-in-rectangle matches x L x W x H (schedule), drawn size confirmed",
+   "blockers": [],
+   "complete_rows": [
+    "F4@H5746||TEXT|0",
+    "F4@H5745||TEXT|0"
+   ],
+   "blocked_rows": []
+  },
+  {
+   "item": "S-FTG-F5",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F5 x2 tag(s): 2 matched + size-confirmed, 0 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F5",
+   "en": "Reinforced concrete footings type F5 (240.0 x 210.0 x 40.0 cm)",
+   "qty": 4.032,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1: count of tag-in-rectangle matches x L x W x H (schedule), drawn size confirmed",
+   "blockers": [],
+   "complete_rows": [
+    "F5@H5747||TEXT|0",
+    "F5@H5743||TEXT|0"
+   ],
+   "blocked_rows": []
+  },
+  {
+   "item": "S-FTG-F6",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F6 x1 tag(s): 0 matched + size-confirmed, 1 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F6",
+   "en": "Reinforced concrete footings type F6 (260.0 x 220.0 x 50.0 cm)",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1: count of tag-in-rectangle matches x L x W x H (schedule), drawn size confirmed",
+   "blockers": [
+    "COUNT_NOT_ESTABLISHED",
+    "TAG_OUTSIDE_EVERY_DRAWN_FOOTING_RECTANGLE (boundary-clipped / rotated / tag drawn beside: never matched by distance)"
+   ],
+   "complete_rows": [],
+   "blocked_rows": [
+    "F6@H5773||TEXT|0"
+   ]
+  },
+  {
+   "item": "S-FTG-F8",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F8 x1 tag(s): 1 matched + size-confirmed, 0 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F8",
+   "en": "Reinforced concrete footings type F8 (400.0 x 360.0 x 50.0 cm)",
+   "qty": 7.2,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1: count of tag-in-rectangle matches x L x W x H (schedule), drawn size confirmed",
+   "blockers": [],
+   "complete_rows": [
+    "F8@H6949||TEXT|0"
+   ],
+   "blocked_rows": []
+  },
+  {
+   "item": "S-FTG-F9",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F9 x1 tag(s): 1 matched + size-confirmed, 0 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F9",
+   "en": "Reinforced concrete footings type F9 (340.0 x 270.0 x 55.0 cm)",
+   "qty": 5.049,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1: count of tag-in-rectangle matches x L x W x H (schedule), drawn size confirmed",
+   "blockers": [],
+   "complete_rows": [
+    "F9@H5751||TEXT|0"
+   ],
+   "blocked_rows": []
+  },
+  {
+   "item": "S-FTG-FF",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type FF x1 tag(s): 1 matched + size-confirmed, 0 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع FF",
+   "en": "Reinforced concrete footings type FF (460.0 x 450.0 x 55.0 cm)",
+   "qty": 11.385,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1: count of tag-in-rectangle matches x L x W x H (schedule), drawn size confirmed",
+   "blockers": [],
+   "complete_rows": [
+    "FF@H5750||TEXT|0"
+   ],
+   "blocked_rows": []
+  },
+  {
+   "item": "S-FTG-FN",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type FN x4 tag(s): 2 matched + size-confirmed, 2 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع FN",
+   "en": "Reinforced concrete footings type FN (100.0 x 100.0 x 30.0 cm)",
+   "qty": 0.6,
+   "unit": "m3",
+   "status": "AUTHORISED_SUBTOTAL",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1: count of tag-in-rectangle matches x L x W x H (schedule), drawn size confirmed",
+   "blockers": [
+    "COUNT_NOT_ESTABLISHED",
+    "TAG_OUTSIDE_EVERY_DRAWN_FOOTING_RECTANGLE (boundary-clipped / rotated / tag drawn beside: never matched by distance)"
+   ],
+   "complete_rows": [
+    "FN@H4333||TEXT|0",
+    "FN@H5770||TEXT|0"
+   ],
+   "blocked_rows": [
+    "FN@H4341||TEXT|0",
+    "FN@H6160||TEXT|0"
+   ]
+  },
+  {
+   "item": "S-FTG-F10",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F10 x1 tag(s): 0 matched + size-confirmed, 1 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F10",
+   "en": "Reinforced concrete footings type F10 (280.0 x 140.0 x 50.0 cm)",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1: count of tag-in-rectangle matches x L x W x H (schedule), drawn size confirmed",
+   "blockers": [
+    "COUNT_NOT_ESTABLISHED",
+    "TAG_OUTSIDE_EVERY_DRAWN_FOOTING_RECTANGLE (boundary-clipped / rotated / tag drawn beside: never matched by distance)"
+   ],
+   "complete_rows": [],
+   "blocked_rows": [
+    "F10@H5771||TEXT|0"
+   ]
+  },
+  {
+   "item": "S-FTG-F11",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F11 x1 tag(s): 0 matched + size-confirmed, 1 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F11",
+   "en": "Reinforced concrete footings type F11 (350.0 x 150.0 x 50.0 cm)",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1: count of tag-in-rectangle matches x L x W x H (schedule), drawn size confirmed",
+   "blockers": [
+    "COUNT_NOT_ESTABLISHED",
+    "TAG_OUTSIDE_EVERY_DRAWN_FOOTING_RECTANGLE (boundary-clipped / rotated / tag drawn beside: never matched by distance)"
+   ],
+   "complete_rows": [],
+   "blocked_rows": [
+    "F11@H5767|5764|TEXT|0"
+   ]
+  },
+  {
+   "item": "S-FTG-F12",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F12 x1 tag(s): 1 matched + size-confirmed, 0 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F12",
+   "en": "Reinforced concrete footings type F12 (440.0 x 320.0 x 70.0 cm)",
+   "qty": 9.856,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1: count of tag-in-rectangle matches x L x W x H (schedule), drawn size confirmed",
+   "blockers": [],
+   "complete_rows": [
+    "F12@H6874||TEXT|0"
+   ],
+   "blocked_rows": []
+  },
+  {
+   "item": "S-FTG-F13",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F13 x1 tag(s): 1 matched + size-confirmed, 0 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F13",
+   "en": "Reinforced concrete footings type F13 (430.0 x 240.0 x 50.0 cm)",
+   "qty": 5.16,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1: count of tag-in-rectangle matches x L x W x H (schedule), drawn size confirmed",
+   "blockers": [],
+   "complete_rows": [
+    "F13@H6876||TEXT|0"
+   ],
+   "blocked_rows": []
+  },
+  {
+   "item": "S-FTG-F14",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F14 x1 tag(s): 1 matched + size-confirmed, 0 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F14",
+   "en": "Reinforced concrete footings type F14 (380.0 x 330.0 x 50.0 cm)",
+   "qty": 6.27,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1: count of tag-in-rectangle matches x L x W x H (schedule), drawn size confirmed",
+   "blockers": [],
+   "complete_rows": [
+    "F14@H5763||TEXT|0"
+   ],
+   "blocked_rows": []
+  },
+  {
+   "item": "S-FTG-F15",
+   "discipline": "STRUCTURAL",
+   "trade": "FOOTINGS",
+   "floor": "FOUNDATION",
+   "element": "footing type F15 x1 tag(s): 1 matched + size-confirmed, 0 blocked",
+   "ar": "خرسانة مسلحة للقواعد - نوع F15",
+   "en": "Reinforced concrete footings type F15 (180.0 x 100.0 x 40.0 cm)",
+   "qty": 0.72,
+   "unit": "m3",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "source": "ST7757.dxf FOUNDATION PLAN tags + S-FOOTINGS rectangles; SCHEDULE OF FOOTINGS (cm)",
+   "rule": "STRUCTURAL_QTO_V1: count of tag-in-rectangle matches x L x W x H (schedule), drawn size confirmed",
+   "blockers": [],
+   "complete_rows": [
+    "F15@H6953||TEXT|0"
+   ],
+   "blocked_rows": []
+  },
+  {
+   "item": "S-BLD-01",
+   "discipline": "STRUCTURAL",
+   "trade": "BLINDING",
+   "floor": "FOUNDATION",
+   "element": "BLINDING",
+   "ar": "خرسانة عادية (نظافة) تحت القواعد",
+   "en": "Plain concrete blinding under footings",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf / ST7757.pdf",
+   "rule": "STRUCTURAL_QTO_V1",
+   "blockers": [
+    "BLINDING_THICKNESS_NOT_IN_VECTOR_SOURCE: typical footing detail exists only as vector strokes / raster (ST7757.pdf p.13); no outline offset stated in the DXF"
+   ]
+  },
+  {
+   "item": "S-NCK-01",
+   "discipline": "STRUCTURAL",
+   "trade": "COLUMN_NECKS",
+   "floor": "FOUNDATION",
+   "element": "COLUMN_NECKS",
+   "ar": "رقاب الأعمدة",
+   "en": "Column necks (footing top to ground beam)",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf / ST7757.pdf",
+   "rule": "STRUCTURAL_QTO_V1",
+   "blockers": [
+    "FOUNDING_LEVEL_NOT_STATED: only 'excavation not less than 1.5 m below plot level' (a minimum, not a level)",
+    "GROUND_BEAM_LEVEL_NOT_STATED"
+   ]
+  },
+  {
+   "item": "S-GB-01",
+   "discipline": "STRUCTURAL",
+   "trade": "GROUND_BEAMS",
+   "floor": "FOUNDATION",
+   "element": "GROUND_BEAMS",
+   "ar": "الميدات",
+   "en": "Ground beams",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf / ST7757.pdf",
+   "rule": "STRUCTURAL_QTO_V1",
+   "blockers": [
+    "BEAM_LENGTH_NOT_ESTABLISHED: beam bands on the ground-beams plan are not associated to tags (G-06)",
+    "GROUND_BEAM_SECTION_NOT_IN_A_READ_SCHEDULE"
+   ]
+  },
+  {
+   "item": "S-SB-01",
+   "discipline": "STRUCTURAL",
+   "trade": "STRAP_BEAMS",
+   "floor": "FOUNDATION",
+   "element": "STRAP_BEAMS",
+   "ar": "الميدات الرابطة (S.B)",
+   "en": "Strap beams S.B1 - S.B3",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf / ST7757.pdf",
+   "rule": "STRUCTURAL_QTO_V1",
+   "blockers": [
+    "STRAP_BEAM_SECTION_NOT_SCHEDULED in the DXF",
+    "INCLINED_ELEMENTS_NOT_MEASURED (G-14)"
+   ]
+  },
+  {
+   "item": "S-GS-01",
+   "discipline": "STRUCTURAL",
+   "trade": "GROUND_SLAB",
+   "floor": "GF",
+   "element": "GROUND_SLAB",
+   "ar": "بلاطة أرضية",
+   "en": "Ground slab (T=10cm label on the ground-beams plan)",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf / ST7757.pdf",
+   "rule": "STRUCTURAL_QTO_V1",
+   "blockers": [
+    "SLAB_OUTLINE_NOT_ESTABLISHED (G-06)"
+   ]
+  },
+  {
+   "item": "S-COL-GF",
+   "discipline": "STRUCTURAL",
+   "trade": "COLUMNS",
+   "floor": "GF",
+   "element": "COLUMNS",
+   "ar": "أعمدة الدور الأرضي",
+   "en": "Ground-floor columns",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf / ST7757.pdf",
+   "rule": "STRUCTURAL_QTO_V1",
+   "blockers": [
+    "COLUMN_HEIGHT_NOT_ESTABLISHED: structural slab levels are not stated; architectural FFL marks include finishes"
+   ]
+  },
+  {
+   "item": "S-COL-1F",
+   "discipline": "STRUCTURAL",
+   "trade": "COLUMNS",
+   "floor": "1F",
+   "element": "COLUMNS",
+   "ar": "أعمدة الدور الأول",
+   "en": "First-floor columns",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf / ST7757.pdf",
+   "rule": "STRUCTURAL_QTO_V1",
+   "blockers": [
+    "COLUMN_HEIGHT_NOT_ESTABLISHED: structural slab levels are not stated; architectural FFL marks include finishes"
+   ]
+  },
+  {
+   "item": "S-COL-2F",
+   "discipline": "STRUCTURAL",
+   "trade": "COLUMNS",
+   "floor": "2F",
+   "element": "COLUMNS",
+   "ar": "أعمدة الدور الثاني",
+   "en": "Second-floor / top columns",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf / ST7757.pdf",
+   "rule": "STRUCTURAL_QTO_V1",
+   "blockers": [
+    "COLUMN_HEIGHT_NOT_ESTABLISHED: structural slab levels are not stated; architectural FFL marks include finishes"
+   ]
+  },
+  {
+   "item": "S-BM-GF",
+   "discipline": "STRUCTURAL",
+   "trade": "BEAMS",
+   "floor": "GF",
+   "element": "BEAMS",
+   "ar": "جسور سقف الأرضي",
+   "en": "Beams - ground-floor roof",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf / ST7757.pdf",
+   "rule": "STRUCTURAL_QTO_V1",
+   "blockers": [
+    "BEAM_LENGTH_NOT_ESTABLISHED (G-06)",
+    "CONTINUOUS_BEAM_SCHEDULES_NOT_READ (graphic multi-span tables)"
+   ]
+  },
+  {
+   "item": "S-BM-1F",
+   "discipline": "STRUCTURAL",
+   "trade": "BEAMS",
+   "floor": "1F",
+   "element": "BEAMS",
+   "ar": "جسور سقف الأول",
+   "en": "Beams - first-floor roof",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf / ST7757.pdf",
+   "rule": "STRUCTURAL_QTO_V1",
+   "blockers": [
+    "BEAM_LENGTH_NOT_ESTABLISHED (G-06)",
+    "CONTINUOUS_BEAM_SCHEDULES_NOT_READ (graphic multi-span tables)"
+   ]
+  },
+  {
+   "item": "S-BM-2F",
+   "discipline": "STRUCTURAL",
+   "trade": "BEAMS",
+   "floor": "2F",
+   "element": "BEAMS",
+   "ar": "جسور سقف الثاني",
+   "en": "Beams - second-floor roof",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf / ST7757.pdf",
+   "rule": "STRUCTURAL_QTO_V1",
+   "blockers": [
+    "BEAM_LENGTH_NOT_ESTABLISHED (G-06)",
+    "CONTINUOUS_BEAM_SCHEDULES_NOT_READ (graphic multi-span tables)"
+   ]
+  },
+  {
+   "item": "S-SLB-GF",
+   "discipline": "STRUCTURAL",
+   "trade": "SLABS",
+   "floor": "GF",
+   "element": "SLABS",
+   "ar": "بلاطة سقف الأرضي",
+   "en": "Slab - ground-floor roof",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf / ST7757.pdf",
+   "rule": "STRUCTURAL_QTO_V1",
+   "blockers": [
+    "SLAB_OUTLINE_NOT_ESTABLISHED (G-06): panels are drawn between beam lines; thickness labels exist"
+   ]
+  },
+  {
+   "item": "S-SLB-1F",
+   "discipline": "STRUCTURAL",
+   "trade": "SLABS",
+   "floor": "1F",
+   "element": "SLABS",
+   "ar": "بلاطة سقف الأول",
+   "en": "Slab - first-floor roof",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf / ST7757.pdf",
+   "rule": "STRUCTURAL_QTO_V1",
+   "blockers": [
+    "SLAB_OUTLINE_NOT_ESTABLISHED (G-06): panels are drawn between beam lines; thickness labels exist"
+   ]
+  },
+  {
+   "item": "S-SLB-2F",
+   "discipline": "STRUCTURAL",
+   "trade": "SLABS",
+   "floor": "2F",
+   "element": "SLABS",
+   "ar": "بلاطة سقف الثاني",
+   "en": "Slab - second-floor roof",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf / ST7757.pdf",
+   "rule": "STRUCTURAL_QTO_V1",
+   "blockers": [
+    "SLAB_OUTLINE_NOT_ESTABLISHED (G-06): panels are drawn between beam lines; thickness labels exist"
+   ]
+  },
+  {
+   "item": "S-STR-01",
+   "discipline": "STRUCTURAL",
+   "trade": "STAIRS",
+   "floor": "ALL",
+   "element": "STAIRS",
+   "ar": "الدرج الخرساني",
+   "en": "Concrete stairs",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf / ST7757.pdf",
+   "rule": "STRUCTURAL_QTO_V1",
+   "blockers": [
+    "STAIR_GEOMETRY_ONLY_IN_TYPICAL_DETAIL (ST7757.pdf p.16 strokes); flights not measured"
+   ]
+  },
+  {
+   "item": "S-POOL-01",
+   "discipline": "STRUCTURAL",
+   "trade": "POOL",
+   "floor": "GF",
+   "element": "POOL",
+   "ar": "حوض السباحة",
+   "en": "Swimming pool walls / slab",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf / ST7757.pdf",
+   "rule": "STRUCTURAL_QTO_V1",
+   "blockers": [
+    "POOL_DETAIL_DIMENSIONS_NOT_ASSOCIATED (detail sheet; no measured outline)"
+   ]
+  },
+  {
+   "item": "S-PAR-01",
+   "discipline": "STRUCTURAL",
+   "trade": "PARAPETS",
+   "floor": "ROOF",
+   "element": "PARAPETS",
+   "ar": "دروة السطح",
+   "en": "Parapets",
+   "qty": null,
+   "unit": "m3",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf / ST7757.pdf",
+   "rule": "STRUCTURAL_QTO_V1",
+   "blockers": [
+    "PARAPET_DETAIL_ONLY (ST7757.pdf p.14)"
+   ]
+  },
+  {
+   "item": "S-RBR-FTG",
+   "discipline": "STRUCTURAL",
+   "trade": "REBAR",
+   "floor": "ALL",
+   "element": "REBAR",
+   "ar": "حديد القواعد",
+   "en": "Rebar - footings",
+   "qty": null,
+   "unit": "kg",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf schedules / slab labels",
+   "rule": "STRUCTURAL_QTO_V1 rebar_gate (FAIL CLOSED, no kg/m3)",
+   "blockers": [
+    "REBAR_FAIL_CLOSED: bar length, bar shape, laps and cover are not stated for the scheduled bars (see 21_REBAR)"
+   ]
+  },
+  {
+   "item": "S-RBR-COL",
+   "discipline": "STRUCTURAL",
+   "trade": "REBAR",
+   "floor": "ALL",
+   "element": "REBAR",
+   "ar": "حديد الأعمدة",
+   "en": "Rebar - columns",
+   "qty": null,
+   "unit": "kg",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf schedules / slab labels",
+   "rule": "STRUCTURAL_QTO_V1 rebar_gate (FAIL CLOSED, no kg/m3)",
+   "blockers": [
+    "REBAR_FAIL_CLOSED: bar length, bar shape, laps and cover are not stated for the scheduled bars (see 21_REBAR)"
+   ]
+  },
+  {
+   "item": "S-RBR-BM",
+   "discipline": "STRUCTURAL",
+   "trade": "REBAR",
+   "floor": "ALL",
+   "element": "REBAR",
+   "ar": "حديد الجسور",
+   "en": "Rebar - beams",
+   "qty": null,
+   "unit": "kg",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf schedules / slab labels",
+   "rule": "STRUCTURAL_QTO_V1 rebar_gate (FAIL CLOSED, no kg/m3)",
+   "blockers": [
+    "REBAR_FAIL_CLOSED: bar length, bar shape, laps and cover are not stated for the scheduled bars (see 21_REBAR)"
+   ]
+  },
+  {
+   "item": "S-RBR-SLB",
+   "discipline": "STRUCTURAL",
+   "trade": "REBAR",
+   "floor": "ALL",
+   "element": "REBAR",
+   "ar": "حديد البلاطات",
+   "en": "Rebar - slabs",
+   "qty": null,
+   "unit": "kg",
+   "status": "BLOCKED",
+   "source": "ST7757.dxf schedules / slab labels",
+   "rule": "STRUCTURAL_QTO_V1 rebar_gate (FAIL CLOSED, no kg/m3)",
+   "blockers": [
+    "REBAR_FAIL_CLOSED: bar length, bar shape, laps and cover are not stated for the scheduled bars (see 21_REBAR)"
+   ]
+  }
+ ],
+ "footing_summary": {
+  "occurrences": 27,
+  "complete": 19,
+  "blocked": 8,
+  "complete_m3": 57.829
+ },
+ "rule": "count x dimension, every dimension from a named source; m3 from schedule centimetres; drawn size confirmed against the schedule; nothing defaulted"
+}

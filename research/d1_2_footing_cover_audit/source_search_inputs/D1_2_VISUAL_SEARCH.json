@@ -1,0 +1,46 @@
+{
+ "round": "D1.2",
+ "pdf_sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3",
+ "method": "p.8 is a raster page (two embedded 1-bit images): image Xop1 OCR'd with tesseract 5 'ara' and the note-22 crop re-read visually after rotation. p.13 has no text layer: the two isolated-footing detail boxes were rendered from the vector strokes (pure-python pypdf renderer, 3.0 and 6.0 px/pt, rotated 90) and every printed label and dimension in the footing body was read visually. Nothing was measured by plotted scale. Renders stay in the session scratchpad; only their hashes are kept here.",
+ "p8_note_22": {
+  "image": "Xop1",
+  "ocr_line": "يجب أن لا يقل سمك الغطاء الخرساني عن 2.5 سم في الأعمدة والبلاطات والجسور وعن 7سم في الخرسانة الملاصقة للتربة.",
+  "visual_reading": "22. يجب أن لا يقل سمك الغطاء الخرساني عن 2.5 سم في الأعمدة والبلاطات والجسور وعن 7سم في الخرسانة الملاصقة للتربة.",
+  "translation": "22. The concrete cover thickness shall not be less than 2.5 cm in columns, slabs and beams, and 7 cm in concrete in contact with the soil.",
+  "wording": "MINIMUM ('لا يقل ... عن' = 'shall not be less than')",
+  "png_sha256": {"note_crop": "537eb6c02fc1b7c40c73c233c8939fb6ab1c3cf82b665c60bbf39c3ec3d7d49a",
+                 "note_tail_crop": "6f8f03e9d02fc8098e843c1cb809a1d9d03cfe1f87d2aac8f97b391fbc5f0d65",
+                 "page_image": "42e93320ff4c357c17335c7509449cd16297753768031076cceaf402e3819256"}
+ },
+ "p13_footing_details": {
+  "SHALLOW": {"title": "TYP. DETAIL OF ISOLATED FOOTING (WITH OUT BASEMENT), less than 2.5 m",
+              "png_sha256": "ede0e7ea8d22b99ca191046bd4d3caa349bfce389e60104caf649f6996069ad2",
+              "zoom_png_sha256": "15a2339221f3eab535c5530db4c1ddd1a987c0f20a53a812c545996a812dabe5",
+              "printed_labels_and_dimensions": {
+               "D": "footing depth (vertical dimension, value from the schedule)",
+               "40 Ø": "column starter development above the footing top",
+               "Min. 30cm": "length of the column bar's bent foot",
+               "Max. 10cm": "from the column bar's bent foot down to the footing bottom face: places the column starter; it does not dimension the footing bars",
+               "5": "screed thickness under the footing (5cm Screed)",
+               "10": "plain concrete thickness (10cm Plain con.)",
+               "LESS THAN 2.5m": "level difference ground beam to footing",
+               "Long bars / Short bars / Boxed bars": "leaders to the bars, no dimension"},
+              "bar_to_concrete_face_dimension": "NONE",
+              "cover_annotation": "NONE"},
+  "DEEP": {"title": "TYP. DETAIL OF ISOLATED FOOTING (WITH OUT BASEMENT), level difference more than 2.5 m",
+           "png_sha256": "82b793a6ea5be7031541434792c59134d6447b04836129ed26b9c48adf1629d3",
+           "printed_labels_and_dimensions": {
+            "Min. 30cm": "length of the column bar's bent foot",
+            "Max. 10cm": "from the column bar's bent foot down to the footing bottom face",
+            "5 / 10": "screed and plain-concrete thicknesses",
+            "MORE THAN 2.5m": "level difference",
+            "Long bars / Short bars / Boxed bars / Insulation membrane": "leaders, no dimension"},
+           "bar_to_concrete_face_dimension": "NONE",
+           "cover_annotation": "NONE"}
+ },
+ "ocr_pp9_16": {
+  "source": "the D1.1 OCR dumps of pp.9-16 (same method as research/d1_1_stirrup_authority_audit/source_search_inputs/PDF_TEXT_OCR_PP9_16.json), searched again for COVER / COV / 7cm / 7 cm / 7.5 / CLEAR",
+  "hits": {"p11": "7.5 (continuous-beam typical: the 7.5 cm bottom-bar dimension)", "p15": "CLEAR SPAN (slab detail)"},
+  "footing_cover_hits": 0
+ }
+}

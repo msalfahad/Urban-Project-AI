@@ -1,0 +1,192 @@
+{
+ "SCHEMA": "URBAN_R8_CONTRACT_SUPERSESSION_V1",
+ "rule": "A historical R8 contract is NEVER edited or deleted. A superseded contract keeps its test, inputs and expectation byte-for-byte (legacy_hash) and runs as a strict xfail of class CONTRACT_SUPERSEDED; the superseding expectation is asserted against production by a new test. A hash mismatch fails the suite.",
+ "spec_editions": [
+  {
+   "edition": "v1",
+   "path": "session scratchpad R8_REVISED_SPEC.v1.md (copy in R8.3 package SPEC_EVIDENCE/)",
+   "sha256": "9bb2433d1817af6a5a4ec74ad04b5c65f9f06d7c6a13ea7086782c06defbe955",
+   "bytes": 28821
+  },
+  {
+   "edition": "later",
+   "path": "data/reports/URBAN_QTO_R8_SPEC/R8_REVISED_SPEC.md (gitignored /data/*; copy in R8.4 package SPEC_EVIDENCE/)",
+   "sha256": "17e1a9cddcaddb22ffc1576d8df303291d950fea1d92b1dc36e1e112a47dd0f1",
+   "bytes": 53116,
+   "note": "same §5 thresholds as v1; additionally defines V-CAD-1..6, U-2, and 'parser independence recorded (not required)'"
+  }
+ ],
+ "decision_log": {
+  "path": "data/reports/URBAN_QTO_R8_SPEC/R8_DECISION_LOG.md",
+  "sha256": "3511c8bd3c414b47ac38ff199da0aa4c53037f247db1ea2e7c952a5b81d6dfae"
+ },
+ "corrections_to_r8_3": [
+  "R8.3 said V-CAD-n numbering is 'defined in no R8 document' — wrong; the later spec edition §6a defines it.",
+  "R8.3 threshold provenance cited only spec v1; the later edition carries the same numbers (now cited too).",
+  "R8.3 recommendation said the handle defect 'appears only in files with more than 65k handles' — an object-count proxy; R8.4 judges handle risk by representation (see DECODER_QUALIFICATION)."
+ ],
+ "entries": [
+  {
+   "legacy_id": "F17",
+   "decision": "SUPERSEDED",
+   "legacy_test": "test_r8_0_pending_contracts.py::test_contract[F17]",
+   "legacy_hash": "2c5328f1ef9e9707dbc049b58203ff459200c979fbd4dbae32d4d28a57676921",
+   "legacy_source": "tests/r8_0/test_r8_0_pending_contracts.py::CONTRACTS (frozen in commit 8de5b8d, R8.0)",
+   "legacy_target": "UNIT_CONTEXT",
+   "legacy_inputs": {
+    "header": {
+     "INSUNITS": 1
+    },
+    "evidence": [
+     {
+      "kind": "GEOMETRY_PLAUSIBILITY",
+      "suggests": "METRE"
+     }
+    ]
+   },
+   "legacy_expectation": {
+    "status": "PROVISIONAL",
+    "final_allowed": false,
+    "conflict": true
+   },
+   "legacy_rationale": "R8.0 predicted PROVISIONAL when only GEOMETRY_PLAUSIBILITY contradicts INSUNITS",
+   "problem": "PROVISIONAL is the status one step below CONFIRMED_BY_HUMAN. Granting it on plausibility alone would let plausibility + one human claim reach FINAL, contradicting the spec's own rule that plausibility is support-only. The spec's table puts 'declaration only' at UNCONFIRMED; plausibility adds a question, not strength.",
+   "new_decision": "A declaration contested only by plausibility stays UNCONFIRMED and raises UNIT_PLAUSIBILITY_QUESTION.",
+   "new_expectation": {
+    "status": "UNCONFIRMED",
+    "final_allowed": false,
+    "finding_present": "UNIT_PLAUSIBILITY_QUESTION",
+    "plausibility_counted_toward_status": false
+   },
+   "superseding_authority": "R8.4 brief §8-§10 (Mohammad / Urban review of R8.3), implemented by Claude; semantic basis: R8 revised spec §5 status table (v1 sha 9bb2433d1817…, later edition sha 17e1a9cddcad…): plausibility is support-only and 'declaration only' is UNCONFIRMED",
+   "date": "2026-09-30",
+   "round": "R8.4",
+   "tests": [
+    "tests/r8_4/test_r8_4_contract_supersession.py::test_superseding_expectation[F17]",
+    "tests/r8_4/test_r8_4_contract_supersession.py::test_legacy_contract_unchanged[F17]",
+    "tests/r8_0/test_r8_0_pending_contracts.py::test_contract[F17] (strict xfail CONTRACT_SUPERSEDED)"
+   ],
+   "migration_effect": "None on published quantities. Both PROVISIONAL and UNCONFIRMED forbid FINAL and allow PREVIEW; the difference only matters once a human claim is added, where UNCONFIRMED keeps plausibility from becoming half of a FINAL basis."
+  },
+  {
+   "legacy_id": "MT-32",
+   "decision": "SUPERSEDED",
+   "legacy_test": "test_r8_0_pending_contracts.py::test_contract[MT-32]",
+   "legacy_hash": "71cc432e0f2d6c27504bcd3630e99c681d5fc282f65fac9c1ea0cb5cc9a9843a",
+   "legacy_source": "tests/r8_0/test_r8_0_pending_contracts.py::CONTRACTS (frozen in commit 8de5b8d, R8.0)",
+   "legacy_target": "UNIT_CONTEXT",
+   "legacy_inputs": {
+    "header": {
+     "INSUNITS": 1
+    },
+    "evidence": [
+     {
+      "kind": "GEOMETRY_PLAUSIBILITY",
+      "suggests": "METRE"
+     },
+     {
+      "kind": "GEOMETRY_PLAUSIBILITY",
+      "suggests": "METRE"
+     }
+    ]
+   },
+   "legacy_expectation": {
+    "status": "PROVISIONAL",
+    "plausibility_counted_toward_verified": false
+   },
+   "legacy_rationale": "R8.0 mutation: two plausibility items must not count toward VERIFIED; predicted PROVISIONAL",
+   "problem": "The mutation's intent (plausibility never counts toward VERIFIED) is kept and holds; only its status prediction PROVISIONAL is wrong for the same reason as F17: repetition of plausibility cannot add strength.",
+   "new_decision": "Same as F17; the 'not counted toward VERIFIED' half of the legacy expectation is retained unchanged.",
+   "new_expectation": {
+    "status": "UNCONFIRMED",
+    "final_allowed": false,
+    "finding_present": "UNIT_PLAUSIBILITY_QUESTION",
+    "plausibility_counted_toward_verified": false,
+    "plausibility_counted_toward_status": false
+   },
+   "superseding_authority": "R8.4 brief §8-§10 (Mohammad / Urban review of R8.3), implemented by Claude; semantic basis: R8 revised spec §5 status table (v1 sha 9bb2433d1817…, later edition sha 17e1a9cddcad…): plausibility is support-only and 'declaration only' is UNCONFIRMED",
+   "date": "2026-09-30",
+   "round": "R8.4",
+   "tests": [
+    "tests/r8_4/test_r8_4_contract_supersession.py::test_superseding_expectation[MT-32]",
+    "tests/r8_4/test_r8_4_contract_supersession.py::test_legacy_contract_unchanged[MT-32]",
+    "tests/r8_0/test_r8_0_pending_contracts.py::test_contract[MT-32] (strict xfail CONTRACT_SUPERSEDED)"
+   ],
+   "migration_effect": "None on published quantities (as F17)."
+  },
+  {
+   "legacy_id": "MT-33",
+   "decision": "SUPERSEDED",
+   "legacy_test": "test_r8_0_pending_contracts.py::test_contract[MT-33]",
+   "legacy_hash": "4c5d0976717bcb2ccd95ce75835573063ced3a1d9a2db1b631edf30d79a29048",
+   "legacy_source": "tests/r8_0/test_r8_0_pending_contracts.py::CONTRACTS (frozen in commit 8de5b8d, R8.0)",
+   "legacy_target": "FRAME_EVIDENCE",
+   "legacy_inputs": {
+    "evidence": null,
+    "real_source": "<ENV:URBAN_R8_REAL_SOURCE>"
+   },
+   "legacy_expectation": {
+    "status": "PROVISIONAL",
+    "independent_set_size": 1
+   },
+   "legacy_rationale": "R8_DECISION_LOG D-08 (sha 3511c8bd3c41…): Al Rashed PROVISIONAL because 'two independent kinds agree and they contradict a declaration' — the kinds being the printed plot size, the dimension display ratio and wall-pair spacing; spec §5 PROVISIONAL row '≥2 agreeing kinds that contradict a declaration (Al Rashed)'",
+   "reviewed_separately": true,
+   "problem": "The expectation DEPENDS on admitting evidence R8.3 found inadmissible as physical support: the dimension display ratio is a DIMLFAC / display family whose display unit is not authored (candidate, a set of interpretations; set membership is never support), plot size and wall-pair spacing are plausibility (support-only). With them excluded the admitted physical independent set is 0, not 1, and the status cannot be PROVISIONAL-from-evidence.",
+   "new_decision": "Supersede. Candidate and plausibility evidence are never counted in the admitted independent set and never raise a status; a declaration contradicted by candidate families is a CONFLICT/QUESTION for a human, never PROVISIONAL. The real-source half stays gated on URBAN_R8_REAL_SOURCE and asserts behaviour, not a count.",
+   "new_expectation": {
+    "independent_set_size_counts": "admitted physical evidence only",
+    "candidate_or_plausibility_in_independent_set": false,
+    "status_from_candidate_or_plausibility_only": "never PROVISIONAL or stronger",
+    "final_allowed": false,
+    "real_source_behaviour": "UNIT_CONTEXT not stronger than UNCONFIRMED without admitted physical evidence"
+   },
+   "superseding_authority": "R8.4 brief §8-§10 (Mohammad / Urban review of R8.3), implemented by Claude; semantic basis: R8 revised spec §5 status table (v1 sha 9bb2433d1817…, later edition sha 17e1a9cddcad…): plausibility is support-only; R8.3 review §3-§4: DIMLFAC is candidate-only and 'declaration only' is UNCONFIRMED",
+   "date": "2026-09-30",
+   "round": "R8.4",
+   "tests": [
+    "tests/r8_4/test_r8_4_contract_supersession.py::test_mt33_superseding_expectation_synthetic",
+    "tests/r8_4/test_r8_4_contract_supersession.py::test_mt33_superseding_expectation_real_source (env-gated)",
+    "tests/r8_4/test_r8_4_contract_supersession.py::test_legacy_contract_unchanged[MT-33]",
+    "tests/r8_0/test_r8_0_pending_contracts.py::test_contract[MT-33] (strict xfail CONTRACT_SUPERSEDED)"
+   ],
+   "migration_effect": "Al Rashed stays below PROVISIONAL (R8.3 lab: UNIT_CONTEXT CONFLICT, 0 admitted physical evidence). D-08's 'one click to clear' no longer holds: one human claim would have to acknowledge the contradicted INSUNITS declaration and the candidate families (V2 policy). No published quantity changes; the Al Rashed floor quantity is untouched."
+  },
+  {
+   "legacy_id": "F19",
+   "decision": "CHECK_ID_BOUND_EXPECTATION_RETAINED",
+   "compatibility_record": "LEGACY_CHECK_ID_RESOLVED",
+   "legacy_test": "test_r8_0_source_capability.py::test_custom_entity_on_wall_layer_blocks_region_contract",
+   "legacy_hash": "e206e3153a15132250adb6a31b530f4391368ec396541eef0598fe5203164869",
+   "legacy_hash_basis": "sha256(test function source + canonical F19 scene)",
+   "legacy_source": "tests/r8_0/test_r8_0_source_capability.py + tests/r8_0/scenes.py SKIP_CASES F19 (frozen in 8de5b8d)",
+   "legacy_target": "SOURCE_PROFILE (decode form)",
+   "legacy_expectation": {
+    "V-CAD-5": "FAIL",
+    "region_release": "BLOCKED"
+   },
+   "legacy_rationale": "an unrealised custom entity on a wall layer blocks the region's measured claims (it may be the wall)",
+   "problem": "R8.3 left F19 TARGET_NOT_IMPLEMENTED and stated that no R8 document defines V-CAD-n. That statement was WRONG: R8.3 searched only the scratchpad spec v1 (sha 9bb2433d1817…). The later spec edition data/reports/URBAN_QTO_R8_SPEC/R8_REVISED_SPEC.md (sha 17e1a9cddcad…, §6a) defines V-CAD-1..6; V-CAD-5 = 'no UNHANDLED class on a profile-relevant layer of the region'. No check id needs inventing, so the brief's LEGACY_UNDEFINED_CHECK_ID fallback is not used; the compatibility record is LEGACY_CHECK_ID_RESOLVED.",
+   "new_decision": "Expectation retained unchanged. V-CAD-5 is bound to CAD_PROFILE requirement H_FINDINGS through cad_profile.region_class_findings: census rows for unrealised classes (UNHANDLED / SKIPPED / PROXY / CUSTOM_CLASS / UNSUPPORTED) are re-scoped to the region by layer; a profile-relevant layer (the layers of the region's measured observations, plus adapter-designated role layers) gives a BLOCKING GEOMETRY_COMPLETENESS finding in the region's scope; any other layer gives REVIEW only (the spec's WARN). V-CAD ids are a reporting view (cad_profile.V_CAD_CHECKS / v_cad_view) over requirements A-I.",
+   "new_expectation": {
+    "V-CAD-5": "FAIL",
+    "region_release": "BLOCKED",
+    "control_without_entity": {
+     "V-CAD-5": "PASS"
+    },
+    "control_irrelevant_layer": {
+     "V-CAD-5": "PASS",
+     "finding_severity": "REVIEW"
+    }
+   },
+   "superseding_authority": "R8 revised spec later edition §6a (sha 17e1a9cddcaddb22ffc1576d8df303291d950fea1d92b1dc36e1e112a47dd0f1); R8.4 brief §10",
+   "date": "2026-09-30",
+   "round": "R8.4",
+   "tests": [
+    "tests/r8_0/test_r8_0_source_capability.py::test_custom_entity_on_wall_layer_blocks_region_contract (now PASS)",
+    "tests/r8_4/test_r8_4_contract_supersession.py::test_f19_controls",
+    "tests/r8_4/test_r8_4_contract_supersession.py::test_legacy_contract_unchanged[F19]"
+   ],
+   "migration_effect": "None on published quantities; shadow CAD_PROFILE gains a region-scoped unrealised-class gate."
+  }
+ ]
+}

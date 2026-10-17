@@ -1,0 +1,34 @@
+{
+ "SCHEMA": "URBAN_R8_10_DUPLICATE_OCCURRENCE_REGISTER_V1",
+ "groups": [
+  {
+   "state": "DUPLICATE_SOURCE_OCCURRENCE",
+   "occurrences": [
+    "700047",
+    "700051"
+   ],
+   "block": "MY BLOCKS$0$SF3",
+   "children": 27,
+   "geometry_digest": "75b86ff66e5532994543488de71410621593912e8ba4b75883fb48b5957b6182",
+   "kept": "ALL (never deleted)",
+   "area_topology": "coincident geometry adds no face: no area effect",
+   "count_trades": "COUNT_RULE_REQUIRED"
+  }
+ ],
+ "sf3": [
+  {
+   "state": "DUPLICATE_SOURCE_OCCURRENCE",
+   "occurrences": [
+    "700047",
+    "700051"
+   ],
+   "block": "MY BLOCKS$0$SF3",
+   "children": 27,
+   "geometry_digest": "75b86ff66e5532994543488de71410621593912e8ba4b75883fb48b5957b6182",
+   "kept": "ALL (never deleted)",
+   "area_topology": "coincident geometry adds no face: no area effect",
+   "count_trades": "COUNT_RULE_REQUIRED"
+  }
+ ],
+ "rule": "never deleted; coincident geometry has no area effect; a count trade needs COUNT_RULE_REQUIRED"
+}

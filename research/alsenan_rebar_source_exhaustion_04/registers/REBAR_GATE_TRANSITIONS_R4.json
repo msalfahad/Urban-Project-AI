@@ -1,0 +1,96 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_REBAR_GATE_TRANSITIONS_R4",
+ "rows": [
+  {
+   "gate": "G11",
+   "final_state": "PASS",
+   "evidence": "unchanged from R3 (FTB both layers)",
+   "proving_test": "tests/alsenan_rebar_source_exhaustion/test_rebar_r4.py"
+  },
+  {
+   "gate": "G13",
+   "final_state": "PASS",
+   "evidence": "unchanged from R3 (straps)",
+   "proving_test": "tests/alsenan_rebar_source_exhaustion/test_rebar_r4.py"
+  },
+  {
+   "gate": "G15",
+   "final_state": "XFAIL",
+   "evidence": "ground-slab scope still unresolved after the second pass (GROUND_SLAB_SCOPE_REGISTER_V2)",
+   "proving_test": "tests/alsenan_rebar_source_exhaustion/test_rebar_r4.py"
+  },
+  {
+   "gate": "G23",
+   "final_state": "XFAIL",
+   "evidence": "stair source READ, applicability BLOCKED",
+   "proving_test": "tests/alsenan_rebar_source_exhaustion/test_rebar_r4.py"
+  },
+  {
+   "gate": "G32",
+   "final_state": "PASS",
+   "evidence": "p.13 lower ground-beam rows are not de-duplicated",
+   "proving_test": "tests/alsenan_rebar_source_exhaustion/test_rebar_r4.py"
+  },
+  {
+   "gate": "G33",
+   "final_state": "PASS",
+   "evidence": "p.15 temperature schedule source-accounted",
+   "proving_test": "tests/alsenan_rebar_source_exhaustion/test_rebar_r4.py"
+  },
+  {
+   "gate": "G34",
+   "final_state": "PASS",
+   "evidence": "a 160 / 180 mm slab is never mapped to another row",
+   "proving_test": "tests/alsenan_rebar_source_exhaustion/test_rebar_r4.py"
+  },
+  {
+   "gate": "G35",
+   "final_state": "PASS",
+   "evidence": "p.16 stair source READ while applicability stays BLOCKED",
+   "proving_test": "tests/alsenan_rebar_source_exhaustion/test_rebar_r4.py"
+  },
+  {
+   "gate": "G36",
+   "final_state": "PASS",
+   "evidence": "known-components BBS is never procurement-ready below 100 % completeness",
+   "proving_test": "tests/alsenan_rebar_source_exhaustion/test_rebar_r4.py"
+  },
+  {
+   "gate": "G37",
+   "final_state": "PASS",
+   "evidence": "an AI visual transcription alone never becomes VERIFIED authority",
+   "proving_test": "tests/alsenan_rebar_source_exhaustion/test_rebar_r4.py"
+  },
+  {
+   "gate": "G38",
+   "final_state": "PASS",
+   "evidence": "every visual claim carries a crop reference and crop hash",
+   "proving_test": "tests/alsenan_rebar_source_exhaustion/test_rebar_r4.py"
+  },
+  {
+   "gate": "G39",
+   "final_state": "PASS",
+   "evidence": "CB N.T.S. extensions stay PROVISIONAL",
+   "proving_test": "tests/alsenan_rebar_source_exhaustion/test_rebar_r4.py"
+  },
+  {
+   "gate": "G40",
+   "final_state": "PASS",
+   "evidence": "a D5 candidate never re-enters a total",
+   "proving_test": "tests/alsenan_rebar_source_exhaustion/test_rebar_r4.py"
+  },
+  {
+   "gate": "G41",
+   "final_state": "PASS",
+   "evidence": "ground-slab min / max polygon guessing is forbidden",
+   "proving_test": "tests/alsenan_rebar_source_exhaustion/test_rebar_r4.py"
+  },
+  {
+   "gate": "G42",
+   "final_state": "PASS",
+   "evidence": "no carried opaque population remains",
+   "proving_test": "tests/alsenan_rebar_source_exhaustion/test_rebar_r4.py"
+  }
+ ],
+ "invariants_clean": true
+}

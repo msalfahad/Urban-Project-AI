@@ -1,0 +1,65 @@
+LINE_ID,MARK,BAR_ID,ROLE,COUNT,DIA_MM,SPANS,LENGTH_M_LOW,LENGTH_M_BASE,LENGTH_M_HIGH,BASIS,MASS_KG_LOW,MASS_KG_BASE,MASS_KG_HIGH
+SH04:CB11:1,CB11,CB11:BOTTOM1,BOTTOM,6,18,1,7.5833,8.3033,8.4833,clear span + extension each side (interior: support width + extension; end: anchorage),90.9992,99.6392,101.7992
+SH04:CB11:1,CB11,CB11:STIRRUP1,STIRRUP,68.0827,8,1,,,,"rate x clear span + 1, closed link",51.3706,54.5983,55.6741
+SH04:CB11:1,CB11,CB11:BOTTOM2,BOTTOM,4,16,2,4.2,4.2,4.2,clear span + extension each side (interior: support width + extension; end: anchorage),26.5481,26.5481,26.5481
+SH04:CB11:1,CB11,CB11:STIRRUP2,STIRRUP,16.9,8,2,,,,"rate x clear span + 1, closed link",12.7516,13.5528,13.8199
+SH04:CB11:1,CB11,CB11:BOTTOM3,BOTTOM,4,16,3,3.975,4.615,4.775,clear span + extension each side (interior: support width + extension; end: anchorage),25.1259,29.1714,30.1827
+SH04:CB11:1,CB11,CB11:STIRRUP3,STIRRUP,17.5,8,3,,,,"rate x clear span + 1, closed link",13.2043,14.034,14.3105
+SH04:CB11:1,CB11,CB11:SUPPORT_TOP1,SUPPORT_TOP,8,18,"1,2",3.1778,3.1778,3.1778,support width + fraction x clear span on each side,50.8451,50.8451,50.8451
+SH04:CB11:1,CB11,CB11:SUPPORT_TOP2,SUPPORT_TOP,4,16,"2,3",2.184,2.184,2.184,support width + fraction x clear span on each side,13.805,13.805,13.805
+SH04:CB12:1,CB12,CB12:BOTTOM1,BOTTOM,5,18,1,6.6,7.32,7.5,clear span + extension each side (interior: support width + extension; end: anchorage),66.0,73.2,75.0
+SH04:CB12:1,CB12,CB12:STIRRUP1,STIRRUP,51.625,8,1,,,,"rate x clear span + 1, closed link",36.9133,39.3607,40.1765
+SH04:CB12:1,CB12,CB12:BOTTOM2,BOTTOM,3,16,2,6.0,6.64,6.8,clear span + extension each side (interior: support width + extension; end: anchorage),28.4444,31.4785,32.237
+SH04:CB12:1,CB12,CB12:STIRRUP2,STIRRUP,36.175,8,2,,,,"rate x clear span + 1, closed link",25.8661,27.5811,28.1527
+SH04:CB12:1,CB12,CB12:SUPPORT_TOP1,SUPPORT_TOP,6,18,"1,2",3.4905,3.4905,3.4905,support width + fraction x clear span on each side,41.886,41.886,41.886
+SH04:CB13:1,CB13,CB13:BOTTOM1,BOTTOM,4,16,1,3.775,4.415,4.575,clear span + extension each side (interior: support width + extension; end: anchorage),23.8617,27.9072,28.9185
+SH04:CB13:1,CB13,CB13:STIRRUP1,STIRRUP,22.0,8,1,,,,"rate x clear span + 1, closed link",12.254,13.297,13.6447
+SH04:CB13:1,CB13,CB13:BOTTOM2,BOTTOM,4,18,2,3.925,4.645,4.825,clear span + extension each side (interior: support width + extension; end: anchorage),31.4,37.16,38.6
+SH04:CB13:1,CB13,CB13:STIRRUP2,STIRRUP,23.05,10,2,,,,"rate x clear span + 1, closed link",19.9893,21.6967,22.2659
+SH04:CB13:1,CB13,CB13:SUPPORT_TOP1,SUPPORT_TOP,5,18,"1,2",2.2785,2.2785,2.2785,support width + fraction x clear span on each side,22.785,22.785,22.785
+SH04:CB9:1,CB9,CB9:BOTTOM1,BOTTOM,4,16,1,4.125,4.765,4.925,clear span + extension each side (interior: support width + extension; end: anchorage),26.0741,30.1195,31.1309
+SH04:CB9:1,CB9,CB9:STIRRUP1,STIRRUP,25.85,8,1,,,,"rate x clear span + 1, closed link",12.356,13.5815,13.99
+SH04:CB9:1,CB9,CB9:BOTTOM2,BOTTOM,3,14,2,4.6,4.6,4.6,clear span + extension each side (interior: support width + extension; end: anchorage),16.6963,16.6963,16.6963
+SH04:CB9:1,CB9,CB9:STIRRUP2,STIRRUP,34.5,8,2,,,,"rate x clear span + 1, closed link",16.4906,18.1262,18.6714
+SH04:CB9:1,CB9,CB9:BOTTOM3,BOTTOM,3,14,3,3.745,4.305,4.445,clear span + extension each side (interior: support width + extension; end: anchorage),13.593,15.6256,16.1337
+SH04:CB9:1,CB9,CB9:STIRRUP3,STIRRUP,21.82,8,3,,,,"rate x clear span + 1, closed link",10.4297,11.4642,11.809
+SH04:CB9:1,CB9,CB9:SUPPORT_TOP1,SUPPORT_TOP,4,18,"1,2",2.249,2.249,2.249,support width + fraction x clear span on each side,17.992,17.992,17.992
+SH04:CB9:1,CB9,CB9:SUPPORT_TOP2,SUPPORT_TOP,3,16,"2,3",2.3094,2.3094,2.3094,support width + fraction x clear span on each side,10.9483,10.9483,10.9483
+SH06:CB1:1,CB1,CB1:BOTTOM1,BOTTOM,4,18,1,7.575,8.295,8.475,clear span + extension each side (interior: support width + extension; end: anchorage),60.6,66.36,67.8
+SH06:CB1:1,CB1,CB1:STIRRUP1,STIRRUP,36.0,8,1,,,,"rate x clear span + 1, closed link",28.5854,30.2921,30.861
+SH06:CB1:1,CB1,CB1:BOTTOM2,BOTTOM,5,18,2,5.675,6.395,6.575,clear span + extension each side (interior: support width + extension; end: anchorage),56.75,63.95,65.75
+SH06:CB1:1,CB1,CB1:STIRRUP2,STIRRUP,46.9,10,2,,,,"rate x clear span + 1, closed link",58.0428,61.5169,62.6749
+SH06:CB1:1,CB1,CB1:SUPPORT_TOP1,SUPPORT_TOP,8,18,"1,2",3.371,3.371,3.371,support width + fraction x clear span on each side,53.936,53.936,53.936
+SH06:CB2:1,CB2,CB2:BOTTOM1,BOTTOM,3,16,1,4.145,4.785,4.945,clear span + extension each side (interior: support width + extension; end: anchorage),19.6504,22.6844,23.443
+SH06:CB2:1,CB2,CB2:STIRRUP1,STIRRUP,21.82,8,1,,,,"rate x clear span + 1, closed link",10.4297,11.4642,11.809
+SH06:CB2:1,CB2,CB2:BOTTOM2,BOTTOM,3,14,2,4.025,4.585,4.725,clear span + extension each side (interior: support width + extension; end: anchorage),14.6093,16.6419,17.15
+SH06:CB2:1,CB2,CB2:STIRRUP2,STIRRUP,21.1,8,2,,,,"rate x clear span + 1, closed link",10.0856,11.0859,11.4193
+SH06:CB2:1,CB2,CB2:SUPPORT_TOP1,SUPPORT_TOP,4,16,"1,2",2.3094,2.3094,2.3094,support width + fraction x clear span on each side,14.5977,14.5977,14.5977
+SH06:CB3:1,CB3,CB3:BOTTOM1,BOTTOM,3,16,1,3.895,4.535,4.695,clear span + extension each side (interior: support width + extension; end: anchorage),18.4652,21.4993,22.2578
+SH06:CB3:1,CB3,CB3:STIRRUP1,STIRRUP,16.1,8,1,,,,"rate x clear span + 1, closed link",10.8759,11.6391,11.8936
+SH06:CB3:1,CB3,CB3:BOTTOM2,BOTTOM,3,16,2,4.2,4.2,4.2,clear span + extension each side (interior: support width + extension; end: anchorage),19.9111,19.9111,19.9111
+SH06:CB3:1,CB3,CB3:STIRRUP2,STIRRUP,14.25,8,2,,,,"rate x clear span + 1, closed link",9.6262,10.3017,10.5269
+SH06:CB3:1,CB3,CB3:BOTTOM3,BOTTOM,3,16,3,3.975,4.615,4.775,clear span + extension each side (interior: support width + extension; end: anchorage),18.8444,21.8785,22.637
+SH06:CB3:1,CB3,CB3:STIRRUP3,STIRRUP,30.7,8,3,,,,"rate x clear span + 1, closed link",20.7385,22.1939,22.679
+SH06:CB4:1,CB4,CB4:BOTTOM1,BOTTOM,3,14,1,3.775,4.335,4.475,clear span + extension each side (interior: support width + extension; end: anchorage),13.7019,15.7344,16.2426
+SH06:CB4:1,CB4,CB4:STIRRUP1,STIRRUP,19.0,8,1,,,,"rate x clear span + 1, closed link",9.0818,9.9825,10.2828
+SH06:CB4:1,CB4,CB4:BOTTOM2,BOTTOM,3,16,2,3.975,4.615,4.775,clear span + extension each side (interior: support width + extension; end: anchorage),18.8444,21.8785,22.637
+SH06:CB4:1,CB4,CB4:STIRRUP2,STIRRUP,26.6,8,2,,,,"rate x clear span + 1, closed link",12.7145,13.9756,14.3959
+SH06:CB4:1,CB4,CB4:SUPPORT_TOP1,SUPPORT_TOP,4,16,"1,2",2.284,2.284,2.284,support width + fraction x clear span on each side,14.4371,14.4371,14.4371
+SH06:CB6:1,CB6,CB6:BOTTOM1,BOTTOM,3,16,1,4.575,5.215,5.375,clear span + extension each side (interior: support width + extension; end: anchorage),21.6889,24.723,25.4815
+SH06:CB6:1,CB6,CB6:STIRRUP1,STIRRUP,21.0,8,1,,,,"rate x clear span + 1, closed link",14.1859,15.1815,15.5133
+SH06:CB6:1,CB6,CB6:BOTTOM2,BOTTOM,4,18,2,6.425,7.145,7.325,clear span + extension each side (interior: support width + extension; end: anchorage),51.4,57.16,58.6
+SH06:CB6:1,CB6,CB6:STIRRUP2,STIRRUP,36.1,8,2,,,,"rate x clear span + 1, closed link",24.3863,26.0977,26.6682
+SH06:CB6:1,CB6,CB6:SUPPORT_TOP1,SUPPORT_TOP,4,18,"1,2",2.8283,2.8283,2.8283,support width + fraction x clear span on each side,22.6267,22.6267,22.6267
+SH06:CB7:1,CB7,CB7:BOTTOM1,BOTTOM,3,16,1,6.225,6.865,7.025,clear span + extension each side (interior: support width + extension; end: anchorage),29.5111,32.5452,33.3037
+SH06:CB7:1,CB7,CB7:STIRRUP1,STIRRUP,41.25,8,1,,,,"rate x clear span + 1, closed link",27.8652,29.8208,30.4726
+SH06:CB7:1,CB7,CB7:BOTTOM2,BOTTOM,3,16,2,5.925,6.565,6.725,clear span + extension each side (interior: support width + extension; end: anchorage),28.0889,31.123,31.8815
+SH06:CB7:1,CB7,CB7:STIRRUP2,STIRRUP,39.15,8,2,,,,"rate x clear span + 1, closed link",26.4466,28.3026,28.9213
+SH06:CB7:1,CB7,CB7:SUPPORT_TOP1,SUPPORT_TOP,5,18,"1,2",3.04,3.04,3.04,support width + fraction x clear span on each side,30.4,30.4,30.4
+SH06:CB8:1,CB8,CB8:BOTTOM1,BOTTOM,3,14,1,4.25,4.81,4.95,clear span + extension each side (interior: support width + extension; end: anchorage),15.4259,17.4585,17.9667
+SH06:CB8:1,CB8,CB8:STIRRUP1,STIRRUP,16.375,8,1,,,,"rate x clear span + 1, closed link",12.3555,13.1318,13.3905
+SH06:CB8:1,CB8,CB8:BOTTOM2,BOTTOM,7,18,2,7.495,7.495,7.495,clear span + extension each side (interior: support width + extension; end: anchorage),104.93,104.93,104.93
+SH06:CB8:1,CB8,CB8:STIRRUP2,STIRRUP,46.96,8,2,,,,"rate x clear span + 1, closed link",35.4329,37.6591,38.4012
+SH06:CB8:1,CB8,CB8:BOTTOM3,BOTTOM,4,16,3,6.925,7.565,7.725,clear span + extension each side (interior: support width + extension; end: anchorage),43.7728,47.8183,48.8296
+SH06:CB8:1,CB8,CB8:STIRRUP3,STIRRUP,32.75,8,3,,,,"rate x clear span + 1, closed link",24.711,26.2635,26.7811
+SH06:CB8:1,CB8,CB8:SUPPORT_TOP2,SUPPORT_TOP,6,18,"2,3",3.4689,3.4689,3.4689,support width + fraction x clear span on each side,41.6268,41.6268,41.6268

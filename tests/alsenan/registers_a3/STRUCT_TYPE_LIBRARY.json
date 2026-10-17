@@ -1,0 +1,1237 @@
+{
+ "footings": {
+  "F": {
+   "L_cm": 90.0,
+   "W_cm": 80.0,
+   "H_cm": 30.0,
+   "short_bars": "8 Ø 12",
+   "short_bars_sub_rows": null,
+   "long_bars": "7 Ø 12",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|7289|DEPHT",
+    "ATTRIB|7289|H",
+    "ATTRIB|7289|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ],
+   "source": "SCHEDULE OF FOOTINGS (CAD table, cm)"
+  },
+  "F10": {
+   "L_cm": 280.0,
+   "W_cm": 140.0,
+   "H_cm": 50.0,
+   "short_bars": "20 Ø 14",
+   "short_bars_sub_rows": null,
+   "long_bars": "10 Ø 14",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|7394|DEPHT",
+    "ATTRIB|7394|H",
+    "ATTRIB|7394|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ],
+   "source": "SCHEDULE OF FOOTINGS (CAD table, cm)"
+  },
+  "F11": {
+   "L_cm": 350.0,
+   "W_cm": 150.0,
+   "H_cm": 50.0,
+   "short_bars": "32 Ø 14",
+   "short_bars_sub_rows": null,
+   "long_bars": "14 Ø 14",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|7405|DEPHT",
+    "ATTRIB|7405|H",
+    "ATTRIB|7405|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ],
+   "source": "SCHEDULE OF FOOTINGS (CAD table, cm)"
+  },
+  "F12": {
+   "L_cm": 440.0,
+   "W_cm": 320.0,
+   "H_cm": 70.0,
+   "short_bars": "10 Ø 14/m",
+   "short_bars_sub_rows": [
+    "9 Ø 16/m"
+   ],
+   "long_bars": "10 Ø 14/m",
+   "long_bars_sub_rows": [
+    "9 Ø 16/m"
+   ],
+   "keys": [
+    "ATTRIB|10846|DEPHT",
+    "ATTRIB|10846|H",
+    "ATTRIB|10846|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ],
+   "source": "SCHEDULE OF FOOTINGS (CAD table, cm)"
+  },
+  "F13": {
+   "L_cm": 430.0,
+   "W_cm": 240.0,
+   "H_cm": 50.0,
+   "short_bars": "7 Ø 14/m",
+   "short_bars_sub_rows": [
+    "8 Ø 16/m"
+   ],
+   "long_bars": "7 Ø 14/m",
+   "long_bars_sub_rows": [
+    "8 Ø 16/m"
+   ],
+   "keys": [
+    "ATTRIB|10904|DEPHT",
+    "ATTRIB|10904|H",
+    "ATTRIB|10904|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ],
+   "source": "SCHEDULE OF FOOTINGS (CAD table, cm)"
+  },
+  "F14": {
+   "L_cm": 380.0,
+   "W_cm": 330.0,
+   "H_cm": 50.0,
+   "short_bars": "6 Ø 14/m",
+   "short_bars_sub_rows": [
+    "9 Ø 14/m"
+   ],
+   "long_bars": "6 Ø 14/m",
+   "long_bars_sub_rows": [
+    "9 Ø 14/m"
+   ],
+   "keys": [
+    "ATTRIB|10965|DEPHT",
+    "ATTRIB|10965|H",
+    "ATTRIB|10965|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ],
+   "source": "SCHEDULE OF FOOTINGS (CAD table, cm)"
+  },
+  "F15": {
+   "L_cm": 180.0,
+   "W_cm": 100.0,
+   "H_cm": 40.0,
+   "short_bars": "15 Ø 12",
+   "short_bars_sub_rows": null,
+   "long_bars": "8 Ø 12",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|11027|DEPHT",
+    "ATTRIB|11027|H",
+    "ATTRIB|11027|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ],
+   "source": "SCHEDULE OF FOOTINGS (CAD table, cm)"
+  },
+  "F2": {
+   "L_cm": 190.0,
+   "W_cm": 170.0,
+   "H_cm": 35.0,
+   "short_bars": "13 Ø 12",
+   "short_bars_sub_rows": null,
+   "long_bars": "13 Ø 12",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|7317|DEPHT",
+    "ATTRIB|7317|H",
+    "ATTRIB|7317|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ],
+   "source": "SCHEDULE OF FOOTINGS (CAD table, cm)"
+  },
+  "F3": {
+   "L_cm": 160.0,
+   "W_cm": 140.0,
+   "H_cm": 30.0,
+   "short_bars": "8 Ø 12",
+   "short_bars_sub_rows": null,
+   "long_bars": "8 Ø 12",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|7328|DEPHT",
+    "ATTRIB|7328|H",
+    "ATTRIB|7328|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ],
+   "source": "SCHEDULE OF FOOTINGS (CAD table, cm)"
+  },
+  "F4": {
+   "L_cm": 220.0,
+   "W_cm": 200.0,
+   "H_cm": 40.0,
+   "short_bars": "18 Ø 12",
+   "short_bars_sub_rows": null,
+   "long_bars": "17 Ø 12",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|7339|DEPHT",
+    "ATTRIB|7339|H",
+    "ATTRIB|7339|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ],
+   "source": "SCHEDULE OF FOOTINGS (CAD table, cm)"
+  },
+  "F5": {
+   "L_cm": 240.0,
+   "W_cm": 210.0,
+   "H_cm": 40.0,
+   "short_bars": "22 Ø 12",
+   "short_bars_sub_rows": null,
+   "long_bars": "20 Ø 12",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|7350|DEPHT",
+    "ATTRIB|7350|H",
+    "ATTRIB|7350|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ],
+   "source": "SCHEDULE OF FOOTINGS (CAD table, cm)"
+  },
+  "F6": {
+   "L_cm": 260.0,
+   "W_cm": 220.0,
+   "H_cm": 50.0,
+   "short_bars": "24 Ø 12",
+   "short_bars_sub_rows": null,
+   "long_bars": "22 Ø 12",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|7361|DEPHT",
+    "ATTRIB|7361|H",
+    "ATTRIB|7361|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ],
+   "source": "SCHEDULE OF FOOTINGS (CAD table, cm)"
+  },
+  "F7": {
+   "L_cm": 300.0,
+   "W_cm": 250.0,
+   "H_cm": 50.0,
+   "short_bars": "24 Ø 14",
+   "short_bars_sub_rows": null,
+   "long_bars": "21 Ø 14",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|7372|DEPHT",
+    "ATTRIB|7372|H",
+    "ATTRIB|7372|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ],
+   "source": "SCHEDULE OF FOOTINGS (CAD table, cm)"
+  },
+  "F8": {
+   "L_cm": 400.0,
+   "W_cm": 360.0,
+   "H_cm": 50.0,
+   "short_bars": "6 Ø 14/m",
+   "short_bars_sub_rows": [
+    "9 Ø 14/m"
+   ],
+   "long_bars": "6 Ø 14/m",
+   "long_bars_sub_rows": [
+    "9 Ø 14/m"
+   ],
+   "keys": [
+    "ATTRIB|10998|DEPHT",
+    "ATTRIB|10998|H",
+    "ATTRIB|10998|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ],
+   "source": "SCHEDULE OF FOOTINGS (CAD table, cm)"
+  },
+  "F9": {
+   "L_cm": 340.0,
+   "W_cm": 270.0,
+   "H_cm": 55.0,
+   "short_bars": "28 Ø 14",
+   "short_bars_sub_rows": null,
+   "long_bars": "24 Ø 14",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|7383|DEPHT",
+    "ATTRIB|7383|H",
+    "ATTRIB|7383|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ],
+   "source": "SCHEDULE OF FOOTINGS (CAD table, cm)"
+  },
+  "FF": {
+   "L_cm": 460.0,
+   "W_cm": 450.0,
+   "H_cm": 55.0,
+   "short_bars": "6 9 Ø Ø 14/m 14/m",
+   "short_bars_sub_rows": null,
+   "long_bars": "6 9 Ø Ø 14/m 14/m",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|11038|DEPHT",
+    "ATTRIB|11038|H",
+    "ATTRIB|11038|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ],
+   "source": "SCHEDULE OF FOOTINGS (CAD table, cm)"
+  },
+  "FN": {
+   "L_cm": 100.0,
+   "W_cm": 100.0,
+   "H_cm": 30.0,
+   "short_bars": "8 Ø 12",
+   "short_bars_sub_rows": null,
+   "long_bars": "8 Ø 12",
+   "long_bars_sub_rows": null,
+   "keys": [
+    "ATTRIB|7416|DEPHT",
+    "ATTRIB|7416|H",
+    "ATTRIB|7416|W"
+   ],
+   "unit_note": "(cm) - header text of the FOOTING SIZE columns",
+   "attribute_tags_seen": [
+    "DEPHT",
+    "H",
+    "W"
+   ],
+   "source": "SCHEDULE OF FOOTINGS (CAD table, cm)"
+  }
+ },
+ "columns": {
+  "C": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "GROUND FLOOR": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "1ST FLOOR": {
+    "B_cm": null,
+    "D_cm": null,
+    "reinf": null
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": null,
+    "D_cm": null,
+    "reinf": null
+   }
+  },
+  "C1": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "GROUND FLOOR": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "1ST FLOOR": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "6 Ø 16"
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "6 Ø 16"
+   }
+  },
+  "C2": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "GROUND FLOOR": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "1ST FLOOR": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "6 Ø 16"
+   }
+  },
+  "C3": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "GROUND FLOOR": {
+    "B_cm": 25.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "1ST FLOOR": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "6 Ø 16"
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "6 Ø 16"
+   }
+  },
+  "C4": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "GROUND FLOOR": {
+    "B_cm": 25.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "1ST FLOOR": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "6 Ø 16"
+   }
+  },
+  "C5": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 60.0,
+    "reinf": "10 Ø 16"
+   },
+   "GROUND FLOOR": {
+    "B_cm": 25.0,
+    "D_cm": 60.0,
+    "reinf": "10 Ø 16"
+   },
+   "1ST FLOOR": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "6 Ø 16"
+   }
+  },
+  "C6": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 70.0,
+    "reinf": "10 Ø 16"
+   },
+   "GROUND FLOOR": {
+    "B_cm": 25.0,
+    "D_cm": 70.0,
+    "reinf": "10 Ø 16"
+   },
+   "1ST FLOOR": {
+    "B_cm": 20.0,
+    "D_cm": 60.0,
+    "reinf": "8 Ø 16"
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": 20.0,
+    "D_cm": 50.0,
+    "reinf": "8 Ø 16"
+   }
+  },
+  "C7": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 80.0,
+    "reinf": "12 Ø 16"
+   },
+   "GROUND FLOOR": {
+    "B_cm": 25.0,
+    "D_cm": 80.0,
+    "reinf": "12 Ø 16"
+   },
+   "1ST FLOOR": {
+    "B_cm": 20.0,
+    "D_cm": 80.0,
+    "reinf": "10 Ø 16"
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": 20.0,
+    "D_cm": 60.0,
+    "reinf": "8 Ø 16"
+   }
+  },
+  "C8": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 90.0,
+    "reinf": "12 Ø 16"
+   },
+   "GROUND FLOOR": {
+    "B_cm": 25.0,
+    "D_cm": 90.0,
+    "reinf": "12 Ø 16"
+   },
+   "1ST FLOOR": {
+    "B_cm": 20.0,
+    "D_cm": 90.0,
+    "reinf": "12 Ø 16"
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": 20.0,
+    "D_cm": 70.0,
+    "reinf": "10 Ø 16"
+   }
+  },
+  "C9": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 100.0,
+    "reinf": "14 Ø 16"
+   },
+   "GROUND FLOOR": {
+    "B_cm": 25.0,
+    "D_cm": 100.0,
+    "reinf": "14 Ø 16"
+   },
+   "1ST FLOOR": {
+    "B_cm": 20.0,
+    "D_cm": 90.0,
+    "reinf": "12 Ø 16"
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": 20.0,
+    "D_cm": 70.0,
+    "reinf": "10 Ø 16"
+   }
+  },
+  "C10": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 70.0,
+    "reinf": "10 Ø 16"
+   },
+   "GROUND FLOOR": {
+    "B_cm": 25.0,
+    "D_cm": 70.0,
+    "reinf": "10 Ø 16"
+   },
+   "1ST FLOOR": {
+    "B_cm": null,
+    "D_cm": null,
+    "reinf": null
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": null,
+    "D_cm": null,
+    "reinf": null
+   }
+  },
+  "C11": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 110.0,
+    "reinf": "14 Ø 16"
+   },
+   "GROUND FLOOR": {
+    "B_cm": 25.0,
+    "D_cm": 110.0,
+    "reinf": "14 Ø 16"
+   },
+   "1ST FLOOR": {
+    "B_cm": null,
+    "D_cm": null,
+    "reinf": null
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": null,
+    "D_cm": null,
+    "reinf": null
+   }
+  },
+  "CN": {
+   "FOUNDATION": {
+    "B_cm": 30.0,
+    "D_cm": 30.0,
+    "reinf": "4 Ø 14"
+   },
+   "GROUND FLOOR": {
+    "B_cm": null,
+    "D_cm": null,
+    "reinf": null
+   },
+   "1ST FLOOR": {
+    "B_cm": null,
+    "D_cm": null,
+    "reinf": null
+   },
+   "2ND FLOOR & TOP": {
+    "B_cm": null,
+    "D_cm": null,
+    "reinf": null
+   }
+  }
+ },
+ "simple_beams": {
+  "B1": {
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "bottom": "2 Ø 14",
+   "top": "2 Ø 12",
+   "stirrups": "6 Ø 8",
+   "remarks": "",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B2": {
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "bottom": "3 Ø 16",
+   "top": "2 Ø 12",
+   "stirrups": "6 Ø 8",
+   "remarks": "",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B3": {
+   "B_cm": 20.0,
+   "D_cm": 40.0,
+   "bottom": "4 Ø 16",
+   "top": "2 Ø 12",
+   "stirrups": "6 Ø 8",
+   "remarks": "",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B4": {
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "bottom": "4 Ø 16",
+   "top": "2 Ø 12",
+   "stirrups": "6 Ø 8",
+   "remarks": "",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B5": {
+   "B_cm": 20.0,
+   "D_cm": 50.0,
+   "bottom": "4 Ø 18",
+   "top": "2 Ø 12",
+   "stirrups": "6 Ø 8",
+   "remarks": "",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B6": {
+   "B_cm": 25.0,
+   "D_cm": 50.0,
+   "bottom": "5 Ø 18",
+   "top": "2 Ø 12",
+   "stirrups": "6 Ø 8",
+   "remarks": "",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B7": {
+   "B_cm": 20.0,
+   "D_cm": 75.0,
+   "bottom": "3 Ø 16",
+   "top": "2 Ø 12",
+   "stirrups": "6 Ø 8",
+   "remarks": "2Ø12/30cm",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B8": {
+   "B_cm": 20.0,
+   "D_cm": 75.0,
+   "bottom": "4 Ø 16",
+   "top": "2 Ø 12",
+   "stirrups": "6 Ø 8",
+   "remarks": "2Ø12/30cm",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B9": {
+   "B_cm": 20.0,
+   "D_cm": 75.0,
+   "bottom": "4 Ø 18",
+   "top": "2 Ø 12",
+   "stirrups": "6 Ø 8",
+   "remarks": "2Ø12/30cm",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B10": {
+   "B_cm": 20.0,
+   "D_cm": 75.0,
+   "bottom": "5 Ø 18",
+   "top": "2 Ø 12",
+   "stirrups": "6 Ø 8",
+   "remarks": "2Ø12/30cm",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B11": {
+   "B_cm": 20.0,
+   "D_cm": 75.0,
+   "bottom": "6 Ø 18",
+   "top": "2 Ø 12",
+   "stirrups": "6 Ø 8",
+   "remarks": "2Ø12/30cm",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B12": {
+   "B_cm": 25.0,
+   "D_cm": 75.0,
+   "bottom": "6 Ø 18",
+   "top": "2 Ø 14",
+   "stirrups": "6 Ø 8",
+   "remarks": "2Ø12/30cm",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B13": {
+   "B_cm": 25.0,
+   "D_cm": 75.0,
+   "bottom": "7 Ø 18",
+   "top": "2 Ø 14",
+   "stirrups": "7 Ø 8",
+   "remarks": "2Ø12/30cm",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B14": {
+   "B_cm": 20.0,
+   "D_cm": 75.0,
+   "bottom": "4 Ø 18",
+   "top": "2 Ø 12",
+   "stirrups": "7 Ø 8",
+   "remarks": "2Ø12/30cm",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B15": {
+   "B_cm": 20.0,
+   "D_cm": 120.0,
+   "bottom": "4 Ø 16",
+   "top": "6 Ø 18",
+   "stirrups": "10 Ø 8",
+   "remarks": "2Ø12/30cm",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B16": {
+   "B_cm": 30.0,
+   "D_cm": 75.0,
+   "bottom": "5 Ø 18",
+   "top": "3 Ø 14",
+   "stirrups": "10 Ø 10",
+   "remarks": "2Ø16/20cm",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B17": {
+   "B_cm": 45.0,
+   "D_cm": 75.0,
+   "bottom": "10 Ø 18",
+   "top": "4 Ø 14",
+   "stirrups": "6 Ø 8",
+   "remarks": "2Ø12/30cm",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B18": {
+   "B_cm": 35.0,
+   "D_cm": 75.0,
+   "bottom": "10 Ø 18",
+   "top": "3 Ø 14",
+   "stirrups": "5 Ø 8",
+   "remarks": "2Ø12/30cm",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B19": {
+   "B_cm": 40.0,
+   "D_cm": 75.0,
+   "bottom": "11 Ø 18",
+   "top": "4 Ø 14",
+   "stirrups": "10 Ø 10",
+   "remarks": "2Ø14/20cm",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B20": {
+   "B_cm": 40.0,
+   "D_cm": 75.0,
+   "bottom": "11 Ø 18",
+   "top": "11 Ø 18",
+   "stirrups": "10 Ø 8",
+   "remarks": "2Ø12/30cm",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B21": {
+   "B_cm": 45.0,
+   "D_cm": 75.0,
+   "bottom": "12 Ø 18",
+   "top": "4 Ø 14",
+   "stirrups": "10 Ø 10",
+   "remarks": "2Ø12/30cm",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B22": {
+   "B_cm": 50.0,
+   "D_cm": 75.0,
+   "bottom": "14 Ø 18",
+   "top": "5 Ø 14",
+   "stirrups": "5 Ø 8",
+   "remarks": "2Ø12/30cm",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B23": {
+   "B_cm": 45.0,
+   "D_cm": 75.0,
+   "bottom": "11 Ø 18",
+   "top": "11 Ø 18",
+   "stirrups": "10 Ø 8",
+   "remarks": "2Ø12/30cm",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B24": {
+   "B_cm": 50.0,
+   "D_cm": 75.0,
+   "bottom": "5 Ø 16",
+   "top": "10 Ø 18",
+   "stirrups": "5 Ø 8",
+   "remarks": "2Ø12/30cm",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B25": {
+   "B_cm": 55.0,
+   "D_cm": 75.0,
+   "bottom": "15 Ø 18",
+   "top": "5 Ø 14",
+   "stirrups": "6 Ø 8",
+   "remarks": "2Ø12/30cm",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B26": {
+   "B_cm": 65.0,
+   "D_cm": 85.0,
+   "bottom": "19 Ø 18",
+   "top": "6 Ø 14",
+   "stirrups": "10 Ø 10",
+   "remarks": "2Ø16/20cm",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B27": {
+   "B_cm": 90.0,
+   "D_cm": 85.0,
+   "bottom": "22 Ø 20",
+   "top": "9 Ø 16",
+   "stirrups": "10 Ø 10",
+   "remarks": "2Ø16/20cm",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B28": {
+   "B_cm": 25.0,
+   "D_cm": 75.0,
+   "bottom": "3 Ø 16",
+   "top": "2 Ø 14",
+   "stirrups": "10 Ø 10",
+   "remarks": "2Ø12/30cm",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B29": {
+   "B_cm": 25.0,
+   "D_cm": 75.0,
+   "bottom": "7 Ø 18",
+   "top": "2 Ø 14",
+   "stirrups": "5 Ø 8",
+   "remarks": "2Ø12/30cm",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "CA": {
+   "B_cm": 30.0,
+   "D_cm": 50.0,
+   "bottom": "5 Ø 18",
+   "top": "5 Ø 18",
+   "stirrups": "8 Ø 8",
+   "remarks": "",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "B.W": {
+   "B_cm": 20.0,
+   "D_cm": 60.0,
+   "bottom": "4 Ø 16",
+   "top": "2 Ø 14",
+   "stirrups": "7 Ø 8",
+   "remarks": "",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "SB1": {
+   "B_cm": 70.0,
+   "D_cm": 50.0,
+   "bottom": "7 Ø 16",
+   "top": "13 Ø 18",
+   "stirrups": "8 Ø 8",
+   "remarks": "",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "SB2": {
+   "B_cm": 100.0,
+   "D_cm": 50.0,
+   "bottom": "10 Ø 16",
+   "top": "20 Ø 18",
+   "stirrups": "10 Ø 8",
+   "remarks": "",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "SB3": {
+   "B_cm": 50.0,
+   "D_cm": 40.0,
+   "bottom": "5 Ø 16",
+   "top": "5 Ø 18",
+   "stirrups": "7 Ø 8",
+   "remarks": "",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  }
+ },
+ "continuous_beams": {
+  "CB1": {
+   "type": "CB1",
+   "page": 11,
+   "table": "CONTINUES BEAMS (2 SPAN) - left",
+   "crop_pt": [
+    150,
+    100,
+    560,
+    800
+   ],
+   "B_cm": 35,
+   "H_cm": 75,
+   "spans_m": [
+    7.5,
+    5.7
+   ],
+   "confidence": "HIGH",
+   "source": "ST7757.pdf p.11 CONTINUES BEAMS (2 SPAN) - left (transcribed)"
+  },
+  "CB2": {
+   "type": "CB2",
+   "page": 11,
+   "table": "CONTINUES BEAMS (2 SPAN) - left",
+   "crop_pt": [
+    150,
+    100,
+    560,
+    800
+   ],
+   "B_cm": 20,
+   "H_cm": 50,
+   "spans_m": [
+    4.0,
+    4.0
+   ],
+   "confidence": "HIGH",
+   "source": "ST7757.pdf p.11 CONTINUES BEAMS (2 SPAN) - left (transcribed)"
+  },
+  "CB4": {
+   "type": "CB4",
+   "page": 11,
+   "table": "CONTINUES BEAMS (2 SPAN) - left",
+   "crop_pt": [
+    150,
+    100,
+    560,
+    800
+   ],
+   "B_cm": 20,
+   "H_cm": 50,
+   "spans_m": [
+    3.3,
+    3.7
+   ],
+   "confidence": "HIGH",
+   "source": "ST7757.pdf p.11 CONTINUES BEAMS (2 SPAN) - left (transcribed)"
+  },
+  "CB5": {
+   "type": "CB5",
+   "page": 11,
+   "table": "CONTINUES BEAMS (2 SPAN) - left",
+   "crop_pt": [
+    150,
+    100,
+    560,
+    800
+   ],
+   "B_cm": 20,
+   "H_cm": 40,
+   "spans_m": [
+    2.5,
+    4.5
+   ],
+   "confidence": "HIGH",
+   "source": "ST7757.pdf p.11 CONTINUES BEAMS (2 SPAN) - left (transcribed)"
+  },
+  "CB6": {
+   "type": "CB6",
+   "page": 11,
+   "table": "CONTINUES BEAMS (2 SPAN) - left",
+   "crop_pt": [
+    150,
+    100,
+    560,
+    800
+   ],
+   "B_cm": 20,
+   "H_cm": 75,
+   "spans_m": [
+    4.4,
+    6.3
+   ],
+   "confidence": "HIGH",
+   "source": "ST7757.pdf p.11 CONTINUES BEAMS (2 SPAN) - left (transcribed)"
+  },
+  "CB7": {
+   "type": "CB7",
+   "page": 11,
+   "table": "CONTINUES BEAMS (2 SPAN) - right",
+   "crop_pt": [
+    595,
+    100,
+    1010,
+    560
+   ],
+   "B_cm": 20,
+   "H_cm": 75,
+   "spans_m": [
+    6.0,
+    6.1
+   ],
+   "confidence": "HIGH",
+   "source": "ST7757.pdf p.11 CONTINUES BEAMS (2 SPAN) - right (transcribed)"
+  },
+  "CB10": {
+   "type": "CB10",
+   "page": 11,
+   "table": "CONTINUES BEAMS (2 SPAN) - right",
+   "crop_pt": [
+    595,
+    100,
+    1010,
+    560
+   ],
+   "B_cm": 25,
+   "H_cm": 50,
+   "spans_m": [
+    3.0,
+    4.1
+   ],
+   "confidence": "HIGH",
+   "source": "ST7757.pdf p.11 CONTINUES BEAMS (2 SPAN) - right (transcribed)"
+  },
+  "CB12": {
+   "type": "CB12",
+   "page": 11,
+   "table": "CONTINUES BEAMS (2 SPAN) - right",
+   "crop_pt": [
+    595,
+    100,
+    1010,
+    560
+   ],
+   "B_cm": 25,
+   "H_cm": 75,
+   "spans_m": [
+    6.1,
+    5.5
+   ],
+   "confidence": "HIGH",
+   "source": "ST7757.pdf p.11 CONTINUES BEAMS (2 SPAN) - right (transcribed)"
+  },
+  "CB13": {
+   "type": "CB13",
+   "page": 11,
+   "table": "CONTINUES BEAMS (2 SPAN) - right",
+   "crop_pt": [
+    595,
+    380,
+    1010,
+    560
+   ],
+   "B_cm": 30,
+   "H_cm": 50,
+   "spans_m": [
+    3.7,
+    3.6
+   ],
+   "confidence": "MEDIUM (read at 60 dpi overview)",
+   "source": "ST7757.pdf p.11 CONTINUES BEAMS (2 SPAN) - right (transcribed)"
+  },
+  "CB3": {
+   "type": "CB3",
+   "page": 12,
+   "table": "CONTINUES BEAMS (THREE SPAN)",
+   "crop_pt": [
+    260,
+    240,
+    880,
+    690
+   ],
+   "B_cm": 20,
+   "H_cm": 75,
+   "spans_m": [
+    3.4,
+    3.3,
+    3.8
+   ],
+   "confidence": "HIGH",
+   "source": "ST7757.pdf p.12 CONTINUES BEAMS (THREE SPAN) (transcribed)"
+  },
+  "CB8": {
+   "type": "CB8",
+   "page": 12,
+   "table": "CONTINUES BEAMS (THREE SPAN)",
+   "crop_pt": [
+    260,
+    240,
+    880,
+    690
+   ],
+   "B_cm": 30,
+   "H_cm": 75,
+   "spans_m": [
+    3.7,
+    6.4,
+    6.8
+   ],
+   "confidence": "HIGH",
+   "source": "ST7757.pdf p.12 CONTINUES BEAMS (THREE SPAN) (transcribed)"
+  },
+  "CB9": {
+   "type": "CB9",
+   "page": 12,
+   "table": "CONTINUES BEAMS (THREE SPAN)",
+   "crop_pt": [
+    260,
+    240,
+    880,
+    690
+   ],
+   "B_cm": 20,
+   "H_cm": 50,
+   "spans_m": [
+    4.1,
+    4.0,
+    3.7
+   ],
+   "confidence": "HIGH",
+   "source": "ST7757.pdf p.12 CONTINUES BEAMS (THREE SPAN) (transcribed)"
+  },
+  "CB11": {
+   "type": "CB11",
+   "page": 12,
+   "table": "CONTINUES BEAMS (THREE SPAN)",
+   "crop_pt": [
+    215,
+    200,
+    760,
+    570
+   ],
+   "B_cm": 30,
+   "H_cm": 75,
+   "spans_m": [
+    7.1,
+    3.2,
+    3.7
+   ],
+   "confidence": "MEDIUM (read at 60 dpi overview)",
+   "source": "ST7757.pdf p.12 CONTINUES BEAMS (THREE SPAN) (transcribed)"
+  }
+ },
+ "schedule_states": {
+  "FOOTINGS": "COMPLETE",
+  "COLUMNS": "ITEMS_UNPLACED",
+  "SIMPLE_BEAMS": "COMPLETE"
+ },
+ "schedule_digests": {
+  "FOOTINGS": "3770daef0ad56b67842f1e6e7ffb652380653869bd256778656b8e41381ccd09",
+  "COLUMNS": "d13aa5926f6d00839cc2a876b3353b303944ace7f6603f50397891ae56ed8894",
+  "SIMPLE_BEAMS": "e6f1b37865f0022dd11f228ae62c9cf9724f3e3d02fe6e2ac475c7154e95f178"
+ },
+ "SCHEMA": "URBAN_ALSENAN_A3_TYPE_LIBRARY_V1"
+}

@@ -1,0 +1,540 @@
+{
+ "frozen_before_benchmark": true,
+ "policy": {
+  "cb_states": [
+   "MATCH_CONFIRMED",
+   "SPAN_LENGTH_CONFLICT",
+   "SPAN_COUNT_CONFLICT",
+   "TAG_WITH_NO_MEMBER",
+   "MEMBER_WITH_NO_TAG",
+   "BLOCKED"
+  ],
+  "policy_id": "STRUCTURAL_CENSUS_V1",
+  "precedence": [
+   "LOCAL_PANEL_NOTE",
+   "FLOOR_SPECIFIC_NOTE",
+   "PROJECT_DEFAULT"
+  ],
+  "principles": [
+   "plan decides occurrence; schedule only defines",
+   "no default overrides a local note",
+   "a value is never rounded into a table row it does not match",
+   "every plan object ends in one terminal state"
+  ],
+  "rule_states": [
+   "EXACT_RULE",
+   "RULE_NOT_EXACT_MATCH",
+   "BLOCKED_METHOD"
+  ],
+  "terminal_states": [
+   "COUNTED_AND_DEFINED",
+   "COUNTED_DEFINITION_PARTIAL",
+   "COUNTED_BLOCKED",
+   "NOT_IN_SCOPE"
+  ]
+ },
+ "register": "BEAM_TYPE_FLOOR_MATRIX",
+ "round": "S1",
+ "rows": [
+  {
+   "1F_ROOF": 3,
+   "2F_ROOF": 4,
+   "FOUNDATION": 0,
+   "GF_ROOF": 12,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B1",
+   "total": 19
+  },
+  {
+   "1F_ROOF": 3,
+   "2F_ROOF": 4,
+   "FOUNDATION": 0,
+   "GF_ROOF": 3,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B2",
+   "total": 10
+  },
+  {
+   "1F_ROOF": 1,
+   "2F_ROOF": 4,
+   "FOUNDATION": 0,
+   "GF_ROOF": 4,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B3",
+   "total": 9
+  },
+  {
+   "1F_ROOF": 5,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 6,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B4",
+   "total": 11
+  },
+  {
+   "1F_ROOF": 2,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 1,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B5",
+   "total": 3
+  },
+  {
+   "1F_ROOF": 5,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 0,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B6",
+   "total": 5
+  },
+  {
+   "1F_ROOF": 2,
+   "2F_ROOF": 1,
+   "FOUNDATION": 0,
+   "GF_ROOF": 7,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B7",
+   "total": 10
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 1,
+   "FOUNDATION": 0,
+   "GF_ROOF": 1,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B8",
+   "total": 2
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 1,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B9",
+   "total": 1
+  },
+  {
+   "1F_ROOF": 1,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 1,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B11",
+   "total": 2
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 1,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B13",
+   "total": 1
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 1,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B14",
+   "total": 1
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 1,
+   "FOUNDATION": 0,
+   "GF_ROOF": 0,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B15",
+   "total": 1
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 1,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B16",
+   "total": 1
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 1,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B17",
+   "total": 1
+  },
+  {
+   "1F_ROOF": 1,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 0,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B18",
+   "total": 1
+  },
+  {
+   "1F_ROOF": 1,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 0,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B19",
+   "total": 1
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 1,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B20",
+   "total": 1
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 1,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B21",
+   "total": 1
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 1,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B22",
+   "total": 1
+  },
+  {
+   "1F_ROOF": 1,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 0,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B23",
+   "total": 1
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 1,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B24",
+   "total": 1
+  },
+  {
+   "1F_ROOF": 1,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 0,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B25",
+   "total": 1
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 1,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B26",
+   "total": 1
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 1,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B27",
+   "total": 1
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 1,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B28",
+   "total": 1
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 1,
+   "GROUND_BEAMS": 0,
+   "beam_type": "B29",
+   "total": 1
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 1,
+   "GROUND_BEAMS": 0,
+   "beam_type": "CA",
+   "total": 1
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 2,
+   "GROUND_BEAMS": 0,
+   "beam_type": "CB1",
+   "total": 2
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 2,
+   "GROUND_BEAMS": 0,
+   "beam_type": "CB2",
+   "total": 2
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 3,
+   "GROUND_BEAMS": 0,
+   "beam_type": "CB3",
+   "total": 3
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 2,
+   "GROUND_BEAMS": 0,
+   "beam_type": "CB4",
+   "total": 2
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 2,
+   "GROUND_BEAMS": 0,
+   "beam_type": "CB5",
+   "total": 2
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 2,
+   "GROUND_BEAMS": 0,
+   "beam_type": "CB6",
+   "total": 2
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 2,
+   "GROUND_BEAMS": 0,
+   "beam_type": "CB7",
+   "total": 2
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 2,
+   "GROUND_BEAMS": 0,
+   "beam_type": "CB8",
+   "total": 2
+  },
+  {
+   "1F_ROOF": 3,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 0,
+   "GROUND_BEAMS": 0,
+   "beam_type": "CB9",
+   "total": 3
+  },
+  {
+   "1F_ROOF": 2,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 0,
+   "GROUND_BEAMS": 0,
+   "beam_type": "CB10",
+   "total": 2
+  },
+  {
+   "1F_ROOF": 3,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 0,
+   "GROUND_BEAMS": 0,
+   "beam_type": "CB11",
+   "total": 3
+  },
+  {
+   "1F_ROOF": 2,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 0,
+   "GROUND_BEAMS": 0,
+   "beam_type": "CB12",
+   "total": 2
+  },
+  {
+   "1F_ROOF": 2,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 0,
+   "GROUND_BEAMS": 0,
+   "beam_type": "CB13",
+   "total": 2
+  },
+  {
+   "1F_ROOF": 6,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 0,
+   "GROUND_BEAMS": 0,
+   "beam_type": "DOME_RING",
+   "total": 6
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 0,
+   "GROUND_BEAMS": 4,
+   "beam_type": "EXTERIOR_GB:GB_GT_5M",
+   "total": 4
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 0,
+   "GROUND_BEAMS": 4,
+   "beam_type": "EXTERIOR_GB:GB_LT_2_5M",
+   "total": 4
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 0,
+   "GROUND_BEAMS": 12,
+   "beam_type": "EXTERIOR_GB:GB_LT_5M",
+   "total": 12
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 0,
+   "GROUND_BEAMS": 2,
+   "beam_type": "GB:CURVED_UNCATEGORISED",
+   "total": 2
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 0,
+   "GROUND_BEAMS": 4,
+   "beam_type": "GB:GB_GT_5M",
+   "total": 4
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 0,
+   "GROUND_BEAMS": 11,
+   "beam_type": "GB:GB_LT_2_5M",
+   "total": 11
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 0,
+   "GF_ROOF": 0,
+   "GROUND_BEAMS": 25,
+   "beam_type": "GB:GB_LT_5M",
+   "total": 25
+  },
+  {
+   "1F_ROOF": 13,
+   "2F_ROOF": 1,
+   "FOUNDATION": 0,
+   "GF_ROOF": 5,
+   "GROUND_BEAMS": 0,
+   "beam_type": "OTHER",
+   "total": 19
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 1,
+   "GF_ROOF": 0,
+   "GROUND_BEAMS": 0,
+   "beam_type": "SB1",
+   "total": 1
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 1,
+   "GF_ROOF": 0,
+   "GROUND_BEAMS": 0,
+   "beam_type": "SB2",
+   "total": 1
+  },
+  {
+   "1F_ROOF": 0,
+   "2F_ROOF": 0,
+   "FOUNDATION": 1,
+   "GF_ROOF": 0,
+   "GROUND_BEAMS": 0,
+   "beam_type": "SB3",
+   "total": 1
+  }
+ ],
+ "source": {
+  "drawing": "ST7757.dxf",
+  "dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "pdf": "ST7757.pdf",
+  "pdf_sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ },
+ "summary": {
+  "floor_totals": {
+   "1F_ROOF": 57,
+   "2F_ROOF": 16,
+   "FOUNDATION": 3,
+   "GF_ROOF": 71,
+   "GROUND_BEAMS": 62
+  },
+  "floors": [
+   "FOUNDATION",
+   "GROUND_BEAMS",
+   "GF_ROOF",
+   "1F_ROOF",
+   "2F_ROOF"
+  ],
+  "unit": "plan occurrences (one per tagged span / member span); CB groups in CONTINUOUS_BEAM_OCCURRENCE_REGISTER"
+ }
+}

@@ -1,0 +1,1656 @@
+{
+ "context": {
+  "CALCULATION_ROUND": "S4",
+  "DRAWING_ID": "ST7757.dxf",
+  "DRAWING_SHA": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "ENGINE_COMMIT": "e3633af+code:0d11810b780ae8f8",
+  "PROJECT_ID": "ALSENAN-ST7757",
+  "REGISTER_VERSION": "FOOTING_REBAR_REGISTER_V1",
+  "REVISION": "ALSENAN_ST7757_DXF",
+  "unit_mass": {
+   "authority": "Urban project default (R3)",
+   "method": "D2_OVER_162"
+  }
+ },
+ "occurrences": [
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "CN"
+   ],
+   "columns": [
+    "COLPOS-X?-Y?-28583-12787"
+   ],
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 1,
+    "NOT_APPLICABLE": 3,
+    "VERIFIED": 2
+   },
+   "flags": [],
+   "known_kg": 12.23111111111111,
+   "known_length_m": 13.76,
+   "mark": "FN",
+   "occurrence_id": "FOCC-10F0",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     28082.9,
+     12286.9,
+     29082.9,
+     13286.9
+    ],
+    "drawn_L_cm": 100.0,
+    "drawn_W_cm": 100.0,
+    "geometry": "FOUR_LINES",
+    "handle": "10F0+10F1+10F2+10F3",
+    "handles": [
+     "10F0",
+     "10F1",
+     "10F2",
+     "10F3"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 12.23111111111111,
+   "s1_footing_id": "FTG-FN-28083-12287",
+   "schedule_row": {
+    "D_mm": 300.0,
+    "L_mm": 1000.0,
+    "W_mm": 1000.0,
+    "insert_handle": "1CF8",
+    "layers": "SINGLE_LAYER",
+    "mark": "FN"
+   },
+   "tag_handles": [
+    "10ED"
+   ],
+   "tag_texts": [
+    "CN/FN"
+   ],
+   "unquantified_components": [
+    "BOXED_REBAR"
+   ]
+  },
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "CN"
+   ],
+   "columns": [
+    "COLPOS-X?-Y?-24058-12787"
+   ],
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 1,
+    "NOT_APPLICABLE": 3,
+    "VERIFIED": 2
+   },
+   "flags": [],
+   "known_kg": 12.23111111111111,
+   "known_length_m": 13.76,
+   "mark": "FN",
+   "occurrence_id": "FOCC-10F8",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     23557.9,
+     12286.9,
+     24557.9,
+     13286.9
+    ],
+    "drawn_L_cm": 100.0,
+    "drawn_W_cm": 100.0,
+    "geometry": "FOUR_LINES",
+    "handle": "10F8+10F9+10FA+10FB",
+    "handles": [
+     "10F8",
+     "10F9",
+     "10FA",
+     "10FB"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 12.23111111111111,
+   "s1_footing_id": "FTG-FN-23558-12287",
+   "schedule_row": {
+    "D_mm": 300.0,
+    "L_mm": 1000.0,
+    "W_mm": 1000.0,
+    "insert_handle": "1CF8",
+    "layers": "SINGLE_LAYER",
+    "mark": "FN"
+   },
+   "tag_handles": [
+    "10F5"
+   ],
+   "tag_texts": [
+    "CN/FN"
+   ],
+   "unquantified_components": [
+    "BOXED_REBAR"
+   ]
+  },
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "CN"
+   ],
+   "columns": [
+    "COLPOS-X16-Y03-33108-11312"
+   ],
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 1,
+    "NOT_APPLICABLE": 3,
+    "VERIFIED": 2
+   },
+   "flags": [],
+   "known_kg": 12.23111111111111,
+   "known_length_m": 13.76,
+   "mark": "FN",
+   "occurrence_id": "FOCC-1100",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     32257.9,
+     10811.9,
+     33257.9,
+     11811.9
+    ],
+    "drawn_L_cm": 100.0,
+    "drawn_W_cm": 100.0,
+    "geometry": "FOUR_LINES",
+    "handle": "1100+1101+1102+1103",
+    "handles": [
+     "1100",
+     "1101",
+     "1102",
+     "1103"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 12.23111111111111,
+   "s1_footing_id": "FTG-FN-32258-10812",
+   "schedule_row": {
+    "D_mm": 300.0,
+    "L_mm": 1000.0,
+    "W_mm": 1000.0,
+    "insert_handle": "1CF8",
+    "layers": "SINGLE_LAYER",
+    "mark": "FN"
+   },
+   "tag_handles": [
+    "168A"
+   ],
+   "tag_texts": [
+    "FN"
+   ],
+   "unquantified_components": [
+    "BOXED_REBAR"
+   ]
+  },
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "C2"
+   ],
+   "columns": [
+    "COLPOS-X08-Y10-17038-20562"
+   ],
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 1,
+    "NOT_APPLICABLE": 3,
+    "VERIFIED": 2
+   },
+   "flags": [],
+   "known_kg": 38.364444444444445,
+   "known_length_m": 43.16,
+   "mark": "F2",
+   "occurrence_id": "FOCC-165C",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     16187.9,
+     19611.9,
+     17887.9,
+     21511.9
+    ],
+    "drawn_L_cm": 190.0,
+    "drawn_W_cm": 170.0,
+    "geometry": "BLOCK_F_INSERT",
+    "handle": "165C:F>v",
+    "handles": [
+     "165C"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 38.364444444444445,
+   "s1_footing_id": "FTG-F2-16188-19612",
+   "schedule_row": {
+    "D_mm": 350.0,
+    "L_mm": 1900.0,
+    "W_mm": 1700.0,
+    "insert_handle": "1C95",
+    "layers": "SINGLE_LAYER",
+    "mark": "F2"
+   },
+   "tag_handles": [
+    "1675"
+   ],
+   "tag_texts": [
+    "C2/F2"
+   ],
+   "unquantified_components": [
+    "BOXED_REBAR"
+   ]
+  },
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "C2"
+   ],
+   "columns": [
+    "COLPOS-X09-Y10-19738-20562"
+   ],
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 1,
+    "NOT_APPLICABLE": 3,
+    "VERIFIED": 2
+   },
+   "flags": [],
+   "known_kg": 38.364444444444445,
+   "known_length_m": 43.16,
+   "mark": "F2",
+   "occurrence_id": "FOCC-1663",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     18887.9,
+     19611.9,
+     20587.9,
+     21511.9
+    ],
+    "drawn_L_cm": 190.0,
+    "drawn_W_cm": 170.0,
+    "geometry": "BLOCK_F_INSERT",
+    "handle": "1663:F>v",
+    "handles": [
+     "1663"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 38.364444444444445,
+   "s1_footing_id": "FTG-F2-18888-19612",
+   "schedule_row": {
+    "D_mm": 350.0,
+    "L_mm": 1900.0,
+    "W_mm": 1700.0,
+    "insert_handle": "1C95",
+    "layers": "SINGLE_LAYER",
+    "mark": "F2"
+   },
+   "tag_handles": [
+    "1674"
+   ],
+   "tag_texts": [
+    "C2/F2"
+   ],
+   "unquantified_components": [
+    "BOXED_REBAR"
+   ]
+  },
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "C5"
+   ],
+   "columns": [
+    "COLPOS-X11-Y10-23558-20662"
+   ],
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 1,
+    "NOT_APPLICABLE": 3,
+    "VERIFIED": 2
+   },
+   "flags": [],
+   "known_kg": 78.50666666666666,
+   "known_length_m": 88.32,
+   "mark": "F5",
+   "occurrence_id": "FOCC-1664",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     22357.9,
+     19611.9,
+     24757.9,
+     21711.9
+    ],
+    "drawn_L_cm": 240.0,
+    "drawn_W_cm": 210.0,
+    "geometry": "BLOCK_F_INSERT",
+    "handle": "1664:F>v",
+    "handles": [
+     "1664"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 78.50666666666666,
+   "s1_footing_id": "FTG-F5-22358-19612",
+   "schedule_row": {
+    "D_mm": 400.0,
+    "L_mm": 2400.0,
+    "W_mm": 2100.0,
+    "insert_handle": "1CB6",
+    "layers": "SINGLE_LAYER",
+    "mark": "F5"
+   },
+   "tag_handles": [
+    "1673"
+   ],
+   "tag_texts": [
+    "C5/F5"
+   ],
+   "unquantified_components": [
+    "BOXED_REBAR"
+   ]
+  },
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "C4"
+   ],
+   "columns": [
+    "COLPOS-X13-Y10-27458-20662"
+   ],
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 1,
+    "NOT_APPLICABLE": 3,
+    "VERIFIED": 2
+   },
+   "flags": [],
+   "known_kg": 60.88888888888889,
+   "known_length_m": 68.5,
+   "mark": "F4",
+   "occurrence_id": "FOCC-1665",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     26357.9,
+     19661.9,
+     28557.9,
+     21661.9
+    ],
+    "drawn_L_cm": 220.0,
+    "drawn_W_cm": 200.0,
+    "geometry": "BLOCK_F_INSERT",
+    "handle": "1665:F>v",
+    "handles": [
+     "1665"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 60.88888888888889,
+   "s1_footing_id": "FTG-F4-26358-19662",
+   "schedule_row": {
+    "D_mm": 400.0,
+    "L_mm": 2200.0,
+    "W_mm": 2000.0,
+    "insert_handle": "1CAB",
+    "layers": "SINGLE_LAYER",
+    "mark": "F4"
+   },
+   "tag_handles": [
+    "1672"
+   ],
+   "tag_texts": [
+    "C4/F4"
+   ],
+   "unquantified_components": [
+    "BOXED_REBAR"
+   ]
+  },
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "C4",
+    "CN"
+   ],
+   "columns": [
+    "COLPOS-X?-Y10-31108-20498",
+    "COLPOS-X15-Y10-31508-20687"
+   ],
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 1,
+    "NOT_APPLICABLE": 3,
+    "VERIFIED": 2
+   },
+   "flags": [
+    "SEVERAL_COLUMNS C4/CN"
+   ],
+   "known_kg": 60.88888888888889,
+   "known_length_m": 68.5,
+   "mark": "F4",
+   "occurrence_id": "FOCC-1666",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     30407.9,
+     19686.9,
+     32607.9,
+     21686.9
+    ],
+    "drawn_L_cm": 220.0,
+    "drawn_W_cm": 200.0,
+    "geometry": "BLOCK_F_INSERT",
+    "handle": "1666:F>v",
+    "handles": [
+     "1666"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 60.88888888888889,
+   "s1_footing_id": "FTG-F4-30408-19687",
+   "schedule_row": {
+    "D_mm": 400.0,
+    "L_mm": 2200.0,
+    "W_mm": 2000.0,
+    "insert_handle": "1CAB",
+    "layers": "SINGLE_LAYER",
+    "mark": "F4"
+   },
+   "tag_handles": [
+    "1671"
+   ],
+   "tag_texts": [
+    "C4/F4"
+   ],
+   "unquantified_components": [
+    "BOXED_REBAR"
+   ]
+  },
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "C"
+   ],
+   "columns": [
+    "COLPOS-X02-Y05-4738-13862"
+   ],
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 1,
+    "NOT_APPLICABLE": 3,
+    "VERIFIED": 2
+   },
+   "flags": [],
+   "known_kg": 9.422222222222222,
+   "known_length_m": 10.600000000000001,
+   "mark": "F",
+   "occurrence_id": "FOCC-1667",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     4287.9,
+     13461.9,
+     5187.9,
+     14261.9
+    ],
+    "drawn_L_cm": 90.0,
+    "drawn_W_cm": 80.0,
+    "geometry": "BLOCK_F_INSERT",
+    "handle": "1667:F>v",
+    "handles": [
+     "1667"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 9.422222222222222,
+   "s1_footing_id": "FTG-F-4288-13462",
+   "schedule_row": {
+    "D_mm": 300.0,
+    "L_mm": 900.0,
+    "W_mm": 800.0,
+    "insert_handle": "1C79",
+    "layers": "SINGLE_LAYER",
+    "mark": "F"
+   },
+   "tag_handles": [
+    "1678"
+   ],
+   "tag_texts": [
+    "C/F"
+   ],
+   "unquantified_components": [
+    "BOXED_REBAR"
+   ]
+  },
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "C"
+   ],
+   "columns": [
+    "COLPOS-X01-Y05-2038-13762"
+   ],
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 1,
+    "NOT_APPLICABLE": 3,
+    "VERIFIED": 2
+   },
+   "flags": [],
+   "known_kg": 9.422222222222222,
+   "known_length_m": 10.600000000000001,
+   "mark": "F",
+   "occurrence_id": "FOCC-1668",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     1887.9,
+     13311.9,
+     2687.9,
+     14211.9
+    ],
+    "drawn_L_cm": 90.0,
+    "drawn_W_cm": 80.0,
+    "geometry": "BLOCK_F_INSERT",
+    "handle": "1668:F>v",
+    "handles": [
+     "1668"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 9.422222222222222,
+   "s1_footing_id": "FTG-F-1888-13312",
+   "schedule_row": {
+    "D_mm": 300.0,
+    "L_mm": 900.0,
+    "W_mm": 800.0,
+    "insert_handle": "1C79",
+    "layers": "SINGLE_LAYER",
+    "mark": "F"
+   },
+   "tag_handles": [
+    "167F"
+   ],
+   "tag_texts": [
+    "C/F"
+   ],
+   "unquantified_components": [
+    "BOXED_REBAR"
+   ]
+  },
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "C"
+   ],
+   "columns": [
+    "COLPOS-X01-Y01-2138-7462"
+   ],
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 1,
+    "NOT_APPLICABLE": 3,
+    "VERIFIED": 2
+   },
+   "flags": [],
+   "known_kg": 9.422222222222222,
+   "known_length_m": 10.600000000000001,
+   "mark": "F",
+   "occurrence_id": "FOCC-1669",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     1887.9,
+     7311.9,
+     2787.9,
+     8111.9
+    ],
+    "drawn_L_cm": 90.0,
+    "drawn_W_cm": 80.0,
+    "geometry": "BLOCK_F_INSERT",
+    "handle": "1669:F>v",
+    "handles": [
+     "1669"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 9.422222222222222,
+   "s1_footing_id": "FTG-F-1888-7312",
+   "schedule_row": {
+    "D_mm": 300.0,
+    "L_mm": 900.0,
+    "W_mm": 800.0,
+    "insert_handle": "1C79",
+    "layers": "SINGLE_LAYER",
+    "mark": "F"
+   },
+   "tag_handles": [
+    "1680"
+   ],
+   "tag_texts": [
+    "C/F"
+   ],
+   "unquantified_components": [
+    "BOXED_REBAR"
+   ]
+  },
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "C"
+   ],
+   "columns": [
+    "COLPOS-X06-Y01-14088-7462"
+   ],
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 1,
+    "NOT_APPLICABLE": 3,
+    "VERIFIED": 2
+   },
+   "flags": [],
+   "known_kg": 9.422222222222222,
+   "known_length_m": 10.600000000000001,
+   "mark": "F",
+   "occurrence_id": "FOCC-166A",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     13637.9,
+     7311.9,
+     14537.9,
+     8111.9
+    ],
+    "drawn_L_cm": 90.0,
+    "drawn_W_cm": 80.0,
+    "geometry": "BLOCK_F_INSERT",
+    "handle": "166A:F>v",
+    "handles": [
+     "166A"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 9.422222222222222,
+   "s1_footing_id": "FTG-F-13638-7312",
+   "schedule_row": {
+    "D_mm": 300.0,
+    "L_mm": 900.0,
+    "W_mm": 800.0,
+    "insert_handle": "1C79",
+    "layers": "SINGLE_LAYER",
+    "mark": "F"
+   },
+   "tag_handles": [
+    "1682"
+   ],
+   "tag_texts": [
+    "C/F"
+   ],
+   "unquantified_components": [
+    "BOXED_REBAR"
+   ]
+  },
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "C3"
+   ],
+   "columns": [
+    "COLPOS-X03-Y04-6338-12062"
+   ],
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 1,
+    "NOT_APPLICABLE": 3,
+    "VERIFIED": 2
+   },
+   "flags": [
+    "REFERENCE_COUNT_DISAGREEMENT OQ-11 (external reference only; project drawing establishes this occurrence) - comparison flag, not a release condition"
+   ],
+   "known_kg": 19.34222222222222,
+   "known_length_m": 21.759999999999998,
+   "mark": "F3",
+   "occurrence_id": "FOCC-166B",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     5537.9,
+     11361.9,
+     7137.9,
+     12761.9
+    ],
+    "drawn_L_cm": 160.0,
+    "drawn_W_cm": 140.0,
+    "geometry": "BLOCK_F_INSERT",
+    "handle": "166B:F>v",
+    "handles": [
+     "166B"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 19.34222222222222,
+   "s1_footing_id": "FTG-F3-5538-11362",
+   "schedule_row": {
+    "D_mm": 300.0,
+    "L_mm": 1600.0,
+    "W_mm": 1400.0,
+    "insert_handle": "1CA0",
+    "layers": "SINGLE_LAYER",
+    "mark": "F3"
+   },
+   "tag_handles": [
+    "168F"
+   ],
+   "tag_texts": [
+    "C3/F3"
+   ],
+   "unquantified_components": [
+    "BOXED_REBAR"
+   ]
+  },
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "C3"
+   ],
+   "columns": [
+    "COLPOS-X05-Y02-12538-9062"
+   ],
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 1,
+    "NOT_APPLICABLE": 3,
+    "VERIFIED": 2
+   },
+   "flags": [
+    "REFERENCE_COUNT_DISAGREEMENT OQ-11 (external reference only; project drawing establishes this occurrence) - comparison flag, not a release condition"
+   ],
+   "known_kg": 19.34222222222222,
+   "known_length_m": 21.759999999999998,
+   "mark": "F3",
+   "occurrence_id": "FOCC-166C",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     11837.9,
+     8261.9,
+     13237.9,
+     9861.9
+    ],
+    "drawn_L_cm": 160.0,
+    "drawn_W_cm": 140.0,
+    "geometry": "BLOCK_F_INSERT",
+    "handle": "166C:F>v",
+    "handles": [
+     "166C"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 19.34222222222222,
+   "s1_footing_id": "FTG-F3-11838-8262",
+   "schedule_row": {
+    "D_mm": 300.0,
+    "L_mm": 1600.0,
+    "W_mm": 1400.0,
+    "insert_handle": "1CA0",
+    "layers": "SINGLE_LAYER",
+    "mark": "F3"
+   },
+   "tag_handles": [
+    "168E"
+   ],
+   "tag_texts": [
+    "C3/F3"
+   ],
+   "unquantified_components": [
+    "BOXED_REBAR"
+   ]
+  },
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "C5"
+   ],
+   "columns": [
+    "COLPOS-X14-Y02-27658-8962"
+   ],
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 1,
+    "NOT_APPLICABLE": 3,
+    "VERIFIED": 2
+   },
+   "flags": [],
+   "known_kg": 78.50666666666666,
+   "known_length_m": 88.32,
+   "mark": "F5",
+   "occurrence_id": "FOCC-166D",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     26457.9,
+     7911.9,
+     28857.9,
+     10011.9
+    ],
+    "drawn_L_cm": 240.0,
+    "drawn_W_cm": 210.0,
+    "geometry": "BLOCK_F_INSERT",
+    "handle": "166D:F>v",
+    "handles": [
+     "166D"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 78.50666666666666,
+   "s1_footing_id": "FTG-F5-26458-7912",
+   "schedule_row": {
+    "D_mm": 400.0,
+    "L_mm": 2400.0,
+    "W_mm": 2100.0,
+    "insert_handle": "1CB6",
+    "layers": "SINGLE_LAYER",
+    "mark": "F5"
+   },
+   "tag_handles": [
+    "166F"
+   ],
+   "tag_texts": [
+    "C5/F5"
+   ],
+   "unquantified_components": [
+    "BOXED_REBAR"
+   ]
+  },
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "CN"
+   ],
+   "columns": [
+    "COLPOS-X?-Y?-29108-18112"
+   ],
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 1,
+    "NOT_APPLICABLE": 3,
+    "VERIFIED": 2
+   },
+   "flags": [
+    "OUTLINE_OVERLAP_0.14_M2 (S1 FOOTING_OUTLINES_OVERLAP 180F / 180C) - no rebar effect"
+   ],
+   "known_kg": 12.23111111111111,
+   "known_length_m": 13.76,
+   "mark": "FN",
+   "occurrence_id": "FOCC-180C",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     28607.9,
+     17611.9,
+     29607.9,
+     18611.9
+    ],
+    "drawn_L_cm": 100.0,
+    "drawn_W_cm": 100.0,
+    "geometry": "POLYLINE",
+    "handle": "180C",
+    "handles": [
+     "180C"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 12.23111111111111,
+   "s1_footing_id": "FTG-FN-28608-17612",
+   "schedule_row": {
+    "D_mm": 300.0,
+    "L_mm": 1000.0,
+    "W_mm": 1000.0,
+    "insert_handle": "1CF8",
+    "layers": "SINGLE_LAYER",
+    "mark": "FN"
+   },
+   "tag_handles": [
+    "1810"
+   ],
+   "tag_texts": [
+    "CN/FN"
+   ],
+   "unquantified_components": [
+    "BOXED_REBAR"
+   ]
+  },
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "C9"
+   ],
+   "columns": [
+    "COLPOS-X13-Y08-27308-16612"
+   ],
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 1,
+    "NOT_APPLICABLE": 3,
+    "VERIFIED": 2
+   },
+   "flags": [
+    "OUTLINE_OVERLAP_0.14_M2 (S1 FOOTING_OUTLINES_OVERLAP 180F / 180C) - no rebar effect"
+   ],
+   "known_kg": 181.3846913580247,
+   "known_length_m": 149.92000000000002,
+   "mark": "F9",
+   "occurrence_id": "FOCC-180F",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     25607.9,
+     15261.9,
+     29007.9,
+     17961.9
+    ],
+    "drawn_L_cm": 340.0,
+    "drawn_W_cm": 270.0,
+    "geometry": "POLYLINE",
+    "handle": "180F",
+    "handles": [
+     "180F"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 181.3846913580247,
+   "s1_footing_id": "FTG-F9-25608-15262",
+   "schedule_row": {
+    "D_mm": 550.0,
+    "L_mm": 3400.0,
+    "W_mm": 2700.0,
+    "insert_handle": "1CD7",
+    "layers": "SINGLE_LAYER",
+    "mark": "F9"
+   },
+   "tag_handles": [
+    "1677"
+   ],
+   "tag_texts": [
+    "C9/F9"
+   ],
+   "unquantified_components": [
+    "BOXED_REBAR"
+   ]
+  },
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "C3",
+    "C7"
+   ],
+   "columns": [
+    "COLPOS-X07-Y?-15888-16162",
+    "COLPOS-X08-Y09-17038-17362"
+   ],
+   "components_by_state": {
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 2
+   },
+   "flags": [
+    "SEVERAL_COLUMNS C3/C7"
+   ],
+   "known_kg": 696.0503703703705,
+   "known_length_m": 502.26000000000005,
+   "mark": "F12",
+   "occurrence_id": "FOCC-1ABF",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     13687.9,
+     14561.9,
+     18087.9,
+     17761.9
+    ],
+    "drawn_L_cm": 440.0,
+    "drawn_W_cm": 320.0,
+    "geometry": "POLYLINE",
+    "handle": "1ABF",
+    "handles": [
+     "1ABF"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 696.0503703703705,
+   "s1_footing_id": "FTG-F12-13688-14562",
+   "schedule_row": {
+    "D_mm": 700.0,
+    "L_mm": 4400.0,
+    "W_mm": 3200.0,
+    "insert_handle": "2A5E",
+    "layers": "TWO_LAYER",
+    "mark": "F12"
+   },
+   "tag_handles": [
+    "1ADA"
+   ],
+   "tag_texts": [
+    "F12"
+   ],
+   "unquantified_components": []
+  },
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "C11",
+    "C5"
+   ],
+   "columns": [
+    "COLPOS-X05-Y04-12538-11912",
+    "COLPOS-X06-Y04-14438-12062"
+   ],
+   "components_by_state": {
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 2
+   },
+   "flags": [
+    "SEVERAL_COLUMNS C11/C5"
+   ],
+   "known_kg": 408.8879012345679,
+   "known_length_m": 290.24,
+   "mark": "F13",
+   "occurrence_id": "FOCC-1ADB",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     11187.7,
+     10711.9,
+     15487.7,
+     13111.9
+    ],
+    "drawn_L_cm": 430.0,
+    "drawn_W_cm": 240.0,
+    "geometry": "POLYLINE",
+    "handle": "1ADB",
+    "handles": [
+     "1ADB"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 408.8879012345679,
+   "s1_footing_id": "FTG-F13-11188-10712",
+   "schedule_row": {
+    "D_mm": 500.0,
+    "L_mm": 4300.0,
+    "W_mm": 2400.0,
+    "insert_handle": "2A98",
+    "layers": "TWO_LAYER",
+    "mark": "F13"
+   },
+   "tag_handles": [
+    "1ADC"
+   ],
+   "tag_texts": [
+    "F13"
+   ],
+   "unquantified_components": []
+  },
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "C11"
+   ],
+   "columns": [
+    "COLPOS-X?-Y01-17913-7462"
+   ],
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 1,
+    "NOT_APPLICABLE": 3,
+    "VERIFIED": 2
+   },
+   "flags": [],
+   "known_kg": 109.56641975308642,
+   "known_length_m": 90.56,
+   "mark": "F11",
+   "occurrence_id": "FOCC-1B07",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     16162.9,
+     7311.9,
+     19662.9,
+     8811.9
+    ],
+    "drawn_L_cm": 350.0,
+    "drawn_W_cm": 150.0,
+    "geometry": "POLYLINE",
+    "handle": "1B07",
+    "handles": [
+     "1B07"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 109.56641975308642,
+   "s1_footing_id": "FTG-F11-16163-7312",
+   "schedule_row": {
+    "D_mm": 500.0,
+    "L_mm": 3500.0,
+    "W_mm": 1500.0,
+    "insert_handle": "1CED",
+    "layers": "SINGLE_LAYER",
+    "mark": "F11"
+   },
+   "tag_handles": [
+    "1684"
+   ],
+   "tag_texts": [
+    "C11/F11"
+   ],
+   "unquantified_components": [
+    "BOXED_REBAR"
+   ]
+  },
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "C6"
+   ],
+   "columns": [
+    "COLPOS-X08-Y04-17038-12362"
+   ],
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 1,
+    "NOT_APPLICABLE": 3,
+    "VERIFIED": 2
+   },
+   "flags": [],
+   "known_kg": 92.05333333333333,
+   "known_length_m": 103.56,
+   "mark": "F6",
+   "occurrence_id": "FOCC-1B19",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     15937.9,
+     11061.9,
+     18137.9,
+     13661.9
+    ],
+    "drawn_L_cm": 260.0,
+    "drawn_W_cm": 220.0,
+    "geometry": "POLYLINE",
+    "handle": "1B19",
+    "handles": [
+     "1B19"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 92.05333333333333,
+   "s1_footing_id": "FTG-F6-15938-11062",
+   "schedule_row": {
+    "D_mm": 500.0,
+    "L_mm": 2600.0,
+    "W_mm": 2200.0,
+    "insert_handle": "1CC1",
+    "layers": "SINGLE_LAYER",
+    "mark": "F6"
+   },
+   "tag_handles": [
+    "168D"
+   ],
+   "tag_texts": [
+    "C6/F6"
+   ],
+   "unquantified_components": [
+    "BOXED_REBAR"
+   ]
+  },
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "C3",
+    "C8"
+   ],
+   "columns": [
+    "COLPOS-X12-Y01-24458-7462",
+    "COLPOS-X12-Y02-24308-8912"
+   ],
+   "components_by_state": {
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 2
+   },
+   "flags": [
+    "SEVERAL_COLUMNS C3/C8"
+   ],
+   "known_kg": 422.8276543209877,
+   "known_length_m": 349.4800000000001,
+   "mark": "F14",
+   "occurrence_id": "FOCC-1B1A",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     22407.9,
+     7311.9,
+     26207.9,
+     10611.9
+    ],
+    "drawn_L_cm": 380.0,
+    "drawn_W_cm": 330.0,
+    "geometry": "POLYLINE",
+    "handle": "1B1A",
+    "handles": [
+     "1B1A"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 422.8276543209877,
+   "s1_footing_id": "FTG-F14-22408-7312",
+   "schedule_row": {
+    "D_mm": 500.0,
+    "L_mm": 3800.0,
+    "W_mm": 3300.0,
+    "insert_handle": "2AD5",
+    "layers": "TWO_LAYER",
+    "mark": "F14"
+   },
+   "tag_handles": [
+    "1683"
+   ],
+   "tag_texts": [
+    "F14"
+   ],
+   "unquantified_components": []
+  },
+  {
+   "candidate_marks": [
+    "F",
+    "F10"
+   ],
+   "column_types": [
+    "C",
+    "C10"
+   ],
+   "columns": [
+    "COLPOS-X15-Y01-31408-7462",
+    "COLPOS-X16-Y01-33108-7562"
+   ],
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 3,
+    "NOT_APPLICABLE": 3
+   },
+   "flags": [
+    "SEVERAL_COLUMNS C/C10",
+    "SOURCE_CONFLICT F/F10: hypotheses {2 x F, F10, drawn outline}; none enters the accurate BOQ"
+   ],
+   "known_kg": 0,
+   "known_length_m": 0,
+   "mark": "F|F10",
+   "occurrence_id": "FOCC-1B1B",
+   "occurrence_state": "SOURCE_CONFLICT",
+   "outline": {
+    "bbox_mm_frame": [
+     30007.9,
+     7311.9,
+     33257.9,
+     8711.9
+    ],
+    "drawn_L_cm": null,
+    "drawn_W_cm": null,
+    "geometry": "POLYLINE",
+    "handle": "1B1B",
+    "handles": [
+     "1B1B"
+    ]
+   },
+   "release_state": "REBAR_BLOCKED",
+   "released_kg": null,
+   "s1_footing_id": "FTG-CONFLICT_F_F10-30008-7312",
+   "schedule_row": null,
+   "tag_handles": [
+    "10A5",
+    "168B"
+   ],
+   "tag_texts": [
+    "F",
+    "F10"
+   ],
+   "unquantified_components": [
+    "BOXED_REBAR",
+    "FOOTING_BOTTOM_LONG",
+    "FOOTING_BOTTOM_SHORT"
+   ]
+  },
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "C3",
+    "C8",
+    "CN"
+   ],
+   "columns": [
+    "COLPOS-X16-Y06-33108-14962",
+    "COLPOS-X15-Y06-31508-15062",
+    "COLPOS-X15-Y?-31208-15726"
+   ],
+   "components_by_state": {
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 2
+   },
+   "flags": [
+    "SEVERAL_COLUMNS C3/C8/CN"
+   ],
+   "known_kg": 494.50074074074075,
+   "known_length_m": 408.71999999999997,
+   "mark": "F8",
+   "occurrence_id": "FOCC-1B24",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     29257.9,
+     13261.9,
+     33257.9,
+     16861.9
+    ],
+    "drawn_L_cm": 400.0,
+    "drawn_W_cm": 360.0,
+    "geometry": "POLYLINE",
+    "handle": "1B24",
+    "handles": [
+     "1B24"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 494.50074074074075,
+   "s1_footing_id": "FTG-F8-29258-13262",
+   "schedule_row": {
+    "D_mm": 500.0,
+    "L_mm": 4000.0,
+    "W_mm": 3600.0,
+    "insert_handle": "2AF6",
+    "layers": "TWO_LAYER",
+    "mark": "F8"
+   },
+   "tag_handles": [
+    "1B25"
+   ],
+   "tag_texts": [
+    "F8"
+   ],
+   "unquantified_components": []
+  },
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "C3"
+   ],
+   "columns": [
+    "COLPOS-X04-Y01-7988-7462"
+   ],
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 1,
+    "NOT_APPLICABLE": 3,
+    "VERIFIED": 2
+   },
+   "flags": [],
+   "known_kg": 23.27111111111111,
+   "known_length_m": 26.18,
+   "mark": "F15",
+   "occurrence_id": "FOCC-1B2A",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     7087.9,
+     7311.9,
+     8887.9,
+     8311.9
+    ],
+    "drawn_L_cm": 180.0,
+    "drawn_W_cm": 100.0,
+    "geometry": "POLYLINE",
+    "handle": "1B2A",
+    "handles": [
+     "1B2A"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 23.27111111111111,
+   "s1_footing_id": "FTG-F15-7088-7312",
+   "schedule_row": {
+    "D_mm": 400.0,
+    "L_mm": 1800.0,
+    "W_mm": 1000.0,
+    "insert_handle": "2B13",
+    "layers": "SINGLE_LAYER",
+    "mark": "F15"
+   },
+   "tag_handles": [
+    "1B29"
+   ],
+   "tag_texts": [
+    "F15"
+   ],
+   "unquantified_components": [
+    "BOXED_REBAR"
+   ]
+  },
+  {
+   "candidate_marks": [],
+   "column_types": [
+    "C1",
+    "C2",
+    "C9"
+   ],
+   "columns": [
+    "COLPOS-X09-Y07-19688-15662",
+    "COLPOS-X10-Y07-21713-15912",
+    "COLPOS-X09-Y09-19688-17362",
+    "COLPOS-X10-Y09-21688-17362"
+   ],
+   "components_by_state": {
+    "BLOCKED_UNQUANTIFIED": 1,
+    "LOWER_BOUND": 4,
+    "NOT_APPLICABLE": 2
+   },
+   "flags": [
+    "SEVERAL_COLUMNS C1/C2/C9"
+   ],
+   "known_kg": 720.2395061728396,
+   "known_length_m": 595.3000000000001,
+   "mark": "FF",
+   "occurrence_id": "FOCC-1B2B",
+   "occurrence_state": "ESTABLISHED",
+   "outline": {
+    "bbox_mm_frame": [
+     18687.7,
+     14112.0,
+     23287.7,
+     18612.0
+    ],
+    "drawn_L_cm": 460.0,
+    "drawn_W_cm": 450.0,
+    "geometry": "POLYLINE",
+    "handle": "1B2B",
+    "handles": [
+     "1B2B"
+    ]
+   },
+   "release_state": "REBAR_LOWER_BOUND",
+   "released_kg": 720.2395061728396,
+   "s1_footing_id": "FTG-FF-18688-14112",
+   "schedule_row": {
+    "D_mm": 550.0,
+    "L_mm": 4600.0,
+    "W_mm": 4500.0,
+    "insert_handle": "2B1E",
+    "layers": "TWO_LAYER",
+    "mark": "FF"
+   },
+   "tag_handles": [
+    "1676"
+   ],
+   "tag_texts": [
+    "FF"
+   ],
+   "unquantified_components": [
+    "SPECIAL_DETAIL_BAR"
+   ]
+  }
+ ],
+ "policy": {
+  "component_states": [
+   "VERIFIED",
+   "LOWER_BOUND",
+   "PROVISIONAL",
+   "BLOCKED_MODELLED",
+   "BLOCKED_UNQUANTIFIED",
+   "NOT_REQUIRED",
+   "NOT_APPLICABLE"
+  ],
+  "components": [
+   "BOTTOM_SHORT",
+   "BOTTOM_LONG",
+   "TOP_SHORT",
+   "TOP_LONG",
+   "BOXED",
+   "STARTER_DOWEL_REFERENCE",
+   "OTHER_EXPLICIT_EXTRA"
+  ],
+  "count_modes": [
+   "EXPLICIT_COUNT",
+   "SPACING_RATE",
+   "BARS_PER_METRE",
+   "UNKNOWN"
+  ],
+  "occurrence_states": [
+   "ESTABLISHED",
+   "PROVISIONAL",
+   "SOURCE_CONFLICT",
+   "BLOCKED"
+  ],
+  "policy_id": "FOOTING_REBAR_S4_V1",
+  "rules": [
+   "occurrence first; never count x schedule steel",
+   "net straight length = span - cover - cover; ends only when source-supported",
+   "rate counts: verified lower bound ceil(rate x distribution inside cover); +1 edge bar is BEST",
+   "BOXED is BLOCKED_UNQUANTIFIED until its semantics are quantifiable",
+   "a source-conflict occurrence blocks its type-specific components; candidates are not chosen",
+   "kg/m from rebar_unit_mass; never a ratio",
+   "net only; waste / procurement not computed"
+  ]
+ },
+ "register": "FOOTING_REBAR_OCCURRENCE_REGISTER",
+ "rules": {
+  "cover": {
+   "authority": "SOURCE_EXPLICIT",
+   "evidence": "P8-N22-COVER-SOIL (CROSS_VERIFIED_SOURCE); applies to ['FOOTING', 'FOOTING_2_LAYER', 'FOOTING_LIFT', 'STRAP_BEAM', 'GROUND_BEAM', 'GROUND_SLAB', 'COLUMN_STARTERS', 'POOL']",
+   "rule_id": "COVER_AGAINST_SOIL_70MM",
+   "value_mm": 70.0
+  },
+  "direction": {
+   "authority": "SOURCE_DERIVED_HIGH_CONFIDENCE",
+   "evidence": {
+    "note": "spacing (cm) = (distribution length - 2 x 7 cm cover) / (count - 1); SHORT bars distributed along L and LONG bars along W give near-equal spacing both ways on every FT type; the reversed reading does not",
+    "spacing_cm_if_reversed": {
+     "F": [
+      9.4,
+      12.7
+     ],
+     "F10": [
+      6.6,
+      29.6
+     ],
+     "F11": [
+      4.4,
+      25.8
+     ],
+     "F15": [
+      6.1,
+      23.7
+     ],
+     "F2": [
+      13.0,
+      14.7
+     ],
+     "F3": [
+      18.0,
+      20.9
+     ],
+     "F4": [
+      10.9,
+      12.9
+     ],
+     "F5": [
+      9.3,
+      11.9
+     ],
+     "F6": [
+      9.0,
+      11.7
+     ],
+     "F7": [
+      10.3,
+      14.3
+     ],
+     "F9": [
+      9.5,
+      14.2
+     ]
+    },
+    "spacing_cm_short_long": {
+     "F": [
+      10.9,
+      11.0
+     ],
+     "F10": [
+      14.0,
+      14.0
+     ],
+     "F11": [
+      10.8,
+      10.5
+     ],
+     "F15": [
+      11.9,
+      12.3
+     ],
+     "F2": [
+      14.7,
+      13.0
+     ],
+     "F3": [
+      20.9,
+      18.0
+     ],
+     "F4": [
+      12.1,
+      11.6
+     ],
+     "F5": [
+      10.8,
+      10.3
+     ],
+     "F6": [
+      10.7,
+      9.8
+     ],
+     "F7": [
+      12.4,
+      11.8
+     ],
+     "F9": [
+      12.1,
+      11.1
+     ]
+    }
+   },
+   "rule_id": "PRE-S4-SHORT-SPANS-W-ALONG-L"
+  },
+  "distribution": {
+   "authority": "SOURCE_DERIVED_HIGH_CONFIDENCE",
+   "evidence": "verified n = ceil(rate x (dimension - 2 x cover)); the +1 edge bar is BEST only",
+   "rule_id": "COUNT_PER_METRE_LB_INSIDE_COVER"
+  },
+  "end_bottom": {
+   "authority": "SOURCE_DERIVED_HIGH_CONFIDENCE",
+   "evidence": "ST7757.pdf p.13 TYP. DETAIL OF ISOLATED FOOTING (and deep variant): bottom long / short bars drawn straight between the side legs; no hook drawn",
+   "rule_id": "P13-FOOTING-TYP-STRAIGHT-BOTTOM",
+   "state": "STRAIGHT_SOURCE_SUPPORTED"
+  },
+  "end_top": {
+   "authority": "UNRESOLVED",
+   "evidence": "no detail shows the top-layer bar ends of a two-layer footing (bend down / hook not drawn or dimensioned)",
+   "rule_id": "TOP_LAYER_END_DETAIL_NOT_DRAWN",
+   "state": "END_TREATMENT_NOT_ESTABLISHED"
+  }
+ },
+ "schedule_rows_without_occurrence": {
+  "F10": "DEFINED_CONFLICT_CANDIDATE_ONLY",
+  "F7": "SCHEDULE_ROW_WITHOUT_PLAN_OCCURRENCE"
+ }
+}

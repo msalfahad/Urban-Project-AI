@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif" font-size="11">
+<rect width="900" height="620" fill="#ffffff"/>
+<defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#b91c1c" stroke-width="1"/></pattern><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/></marker></defs>
+<text x="20.0" y="26.0" fill="#1f2937" font-size="15" text-anchor="start" font-weight="bold">Main stair GF -&gt; 1F unfolded along the walking line: why the landing and B20 conflict</text>
+<text x="20.0" y="45.0" fill="#4b5563" font-size="11" text-anchor="start" font-weight="normal">Both arrangements are aligned at the first riser of the upper flight. True proportions (1 mm = 0.075 px). Equal finished risers. Not a drawing.</text>
+<line x1="115.0" y1="470.0" x2="850.0" y2="470.0" stroke="#9ca3af" stroke-width="0.8"/>
+<text x="107.0" y="474.0" fill="#4b5563" font-size="10" text-anchor="end" font-weight="normal">GF +1.00</text>
+<line x1="115.0" y1="282.5" x2="850.0" y2="282.5" stroke="#9ca3af" stroke-width="0.8" stroke-dasharray="6,4"/>
+<text x="107.0" y="286.5" fill="#1f2937" font-size="10" text-anchor="end" font-weight="bold">printed +3.50</text>
+<line x1="115.0" y1="132.5" x2="850.0" y2="132.5" stroke="#9ca3af" stroke-width="0.8"/>
+<text x="107.0" y="136.5" fill="#4b5563" font-size="10" text-anchor="end" font-weight="normal">1F +5.50</text>
+<rect x="790.0" y="132.5" width="30.0" height="56.2" fill="url(#hatch)" fill-opacity="1.0" stroke="#b91c1c" stroke-width="1.2"/>
+<text x="824.5" y="157.2" fill="#b91c1c" font-size="12" text-anchor="start" font-weight="bold">B20</text>
+<text x="824.5" y="171.5" fill="#b91c1c" font-size="10" text-anchor="start" font-weight="normal">40 x 75</text>
+<polyline fill="none" stroke="#c2410c" stroke-width="2.2" stroke-linejoin="round" points="115.6,470.0 138.1,470.0 138.1,457.9 160.6,457.9 160.6,445.9 183.1,445.9 183.1,433.8 205.6,433.8 205.6,421.8 228.1,421.8 228.1,409.7 250.6,409.7 250.6,397.7 273.1,397.7 273.1,385.6 295.6,385.6 295.6,373.6 318.1,373.6 318.1,361.5 340.6,361.5 340.6,349.5 363.1,349.5 363.1,337.4 385.6,337.4 385.6,325.4 406.0,325.4 406.0,313.3 426.5,313.3 426.5,301.2 447.0,301.2 447.0,289.2 467.5,289.2 467.5,277.1 557.5,277.1 557.5,265.1 580.0,265.1 580.0,253.0 602.5,253.0 602.5,241.0 625.0,241.0 625.0,228.9 647.5,228.9 647.5,216.9 670.0,216.9 670.0,204.8 692.5,204.8 692.5,192.8 715.0,192.8 715.0,180.7 737.5,180.7 737.5,168.7 760.0,168.7 760.0,156.6 782.5,156.6 782.5,144.6 805.0,144.6 805.0,132.5 850.0,132.5"/>
+<polyline fill="none" stroke="#1d4ed8" stroke-width="2.2" stroke-linejoin="round" points="160.6,470.0 183.1,470.0 183.1,457.5 205.6,457.5 205.6,445.0 228.1,445.0 228.1,432.5 250.6,432.5 250.6,420.0 273.1,420.0 273.1,407.5 295.6,407.5 295.6,395.0 318.1,395.0 318.1,382.5 340.6,382.5 340.6,370.0 363.1,370.0 363.1,357.5 385.6,357.5 385.6,345.0 402.0,345.0 402.0,332.5 418.3,332.5 418.3,320.0 434.7,320.0 434.7,307.5 451.1,307.5 451.1,295.0 467.5,295.0 467.5,282.5 557.5,282.5 557.5,270.0 580.0,270.0 580.0,257.5 602.5,257.5 602.5,245.0 625.0,245.0 625.0,232.5 647.5,232.5 647.5,220.0 670.0,220.0 670.0,207.5 692.5,207.5 692.5,195.0 715.0,195.0 715.0,182.5 737.5,182.5 737.5,170.0 760.0,170.0 760.0,157.5 782.5,157.5 782.5,145.0 805.0,145.0 805.0,132.5 850.0,132.5"/>
+<rect x="790.0" y="132.5" width="15.0" height="12.5" fill="#b91c1c" fill-opacity="0.55" stroke="#b91c1c" stroke-width="0.8"/>
+<line x1="797.5" y1="128.0" x2="797.5" y2="107.8" stroke="#b91c1c" stroke-width="1.0"/>
+<text x="792.2" y="90.5" fill="#b91c1c" font-size="11" text-anchor="end" font-weight="bold">the last tread sits one riser below the 1F floor,</text>
+<text x="792.2" y="103.2" fill="#b91c1c" font-size="11" text-anchor="end" font-weight="bold">over 200 mm of B20, in both arrangements</text>
+<text x="512.5" y="238.1" fill="#c2410c" font-size="11" text-anchor="middle" font-weight="bold">A-28 landing +3.571</text>
+<text x="512.5" y="250.1" fill="#c2410c" font-size="10" text-anchor="middle" font-weight="normal">71.4 mm above the printed +3.50</text>
+<text x="512.5" y="307.2" fill="#1d4ed8" font-size="11" text-anchor="middle" font-weight="bold">B-27-S landing +3.500</text>
+<text x="512.5" y="319.2" fill="#1d4ed8" font-size="10" text-anchor="middle" font-weight="normal">= the printed +3.50</text>
+<text x="107.0" y="515.0" fill="#c2410c" font-size="11" text-anchor="end" font-weight="bold">A-28</text>
+<rect x="138.1" y="500.0" width="247.5" height="20.0" fill="#ffffff" fill-opacity="1.0" stroke="#c2410c" stroke-width="1.2"/>
+<text x="261.8" y="514.0" fill="#c2410c" font-size="10" text-anchor="middle" font-weight="normal">1 - 12</text>
+<rect x="385.6" y="500.0" width="81.9" height="20.0" fill="#ffffff" fill-opacity="1.0" stroke="#c2410c" stroke-width="1.2"/>
+<text x="426.5" y="514.0" fill="#c2410c" font-size="10" text-anchor="middle" font-weight="normal">turn 13 - 16</text>
+<rect x="467.5" y="500.0" width="90.0" height="20.0" fill="#ffffff" fill-opacity="1.0" stroke="#c2410c" stroke-width="1.2"/>
+<text x="512.5" y="514.0" fill="#c2410c" font-size="10" text-anchor="middle" font-weight="normal">landing</text>
+<rect x="557.5" y="500.0" width="247.5" height="20.0" fill="#ffffff" fill-opacity="1.0" stroke="#c2410c" stroke-width="1.2"/>
+<text x="681.2" y="514.0" fill="#c2410c" font-size="10" text-anchor="middle" font-weight="normal">17 - 28</text>
+<text x="107.0" y="545.0" fill="#1d4ed8" font-size="11" text-anchor="end" font-weight="bold">B-27-S</text>
+<rect x="183.1" y="530.0" width="202.5" height="20.0" fill="#ffffff" fill-opacity="1.0" stroke="#1d4ed8" stroke-width="1.2"/>
+<text x="284.3" y="544.0" fill="#1d4ed8" font-size="10" text-anchor="middle" font-weight="normal">1 - 10</text>
+<rect x="385.6" y="530.0" width="81.9" height="20.0" fill="#ffffff" fill-opacity="1.0" stroke="#1d4ed8" stroke-width="1.2"/>
+<text x="426.5" y="544.0" fill="#1d4ed8" font-size="10" text-anchor="middle" font-weight="normal">turn 11 - 15</text>
+<rect x="467.5" y="530.0" width="90.0" height="20.0" fill="#ffffff" fill-opacity="1.0" stroke="#1d4ed8" stroke-width="1.2"/>
+<text x="512.5" y="544.0" fill="#1d4ed8" font-size="10" text-anchor="middle" font-weight="normal">landing</text>
+<rect x="557.5" y="530.0" width="247.5" height="20.0" fill="#ffffff" fill-opacity="1.0" stroke="#1d4ed8" stroke-width="1.2"/>
+<text x="681.2" y="544.0" fill="#1d4ed8" font-size="10" text-anchor="middle" font-weight="normal">16 - 27</text>
+<text x="20.0" y="585.0" fill="#4b5563" font-size="10" text-anchor="start" font-weight="normal">Horizontal: distance along the walking line (lower flight at 300, turn on the 600 mm walking line, landing 1200, upper flight at 300). The turn is drawn as 4 risers (A, drawn) and 5 risers (B, section A-A).</text>
+<text x="20.0" y="602.0" fill="#4b5563" font-size="10" text-anchor="start" font-weight="normal">B20's top is shown at the finished 1F floor; the floor build-up is not printed. Nothing here is approved.</text>
+</svg>

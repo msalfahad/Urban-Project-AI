@@ -1,0 +1,131 @@
+{
+ "baseline": "974bff2",
+ "census": {
+  "difference": [
+   "OP-GF-B01"
+  ],
+  "ids": 74,
+  "kinds": {
+   "ARC_GAP": 1,
+   "GLAZING_RUN": 1,
+   "SLAB_OPENING": 8,
+   "SYMBOL_ONLY": 1,
+   "WALL_GAP": 63
+  },
+  "r5_missed": [
+   "OP-1F-004",
+   "OP-1F-015",
+   "OP-1F-021",
+   "OP-1F-023",
+   "OP-GF-006",
+   "OP-GF-011",
+   "OP-GF-012",
+   "OP-GF-020",
+   "OP-GF-030"
+  ],
+  "r5_unused": [
+   "GF-D-I1023"
+  ],
+  "v3b_missed": [
+   "OP-1F-004",
+   "OP-1F-015",
+   "OP-1F-021",
+   "OP-1F-023",
+   "OP-GF-006",
+   "OP-GF-011",
+   "OP-GF-012",
+   "OP-GF-020",
+   "OP-GF-030",
+   "OP-GF-B01"
+  ]
+ },
+ "column_connection_rules_found": [],
+ "corrected": {
+  "by_floor": {
+   "1F": {
+    "kg_by_dia": {
+     "10": 8.024691358,
+     "12": 15.2,
+     "14": 4.960493827,
+     "8": 8.32
+    },
+    "m3": 0.264
+   },
+   "2F": {
+    "kg_by_dia": {
+     "10": 0.0,
+     "12": 0.0,
+     "14": 0.0,
+     "8": 0.0
+    },
+    "m3": 0.0
+   },
+   "GF": {
+    "kg_by_dia": {
+     "10": 4.074074074,
+     "12": 5.866666667,
+     "14": 0.0,
+     "8": 3.143111111
+    },
+    "m3": 0.102
+   }
+  },
+  "kg": 49.589037037,
+  "lintels": 7,
+  "m3": 0.366
+ },
+ "cover_and_stirrups": "25 mm is a nominal measurement cover (P8-N22 minimum, scope unconfirmed for lintels); '5Ø8/M' is a rate only; counts, shapes and lengths are Urban conventions",
+ "cross_check_not_adopted": {
+  "bearing_confirmed_lintels": 8,
+  "kg": 61.726222222,
+  "m3": 0.458,
+  "note": "all bearing-confirmed lintels incl. the glazed opening; not released"
+ },
+ "date": "2026-10-10",
+ "engine_commit": "974bff2+code:34d3aace68075085",
+ "frozen": {
+  "kg": 96.427279858,
+  "lintels": 14,
+  "m3": 0.745261681
+ },
+ "overlap": [
+  {
+   "corrected_owner": "LT-OP-1F-018",
+   "frozen_owner": "LT-OP-1F-017",
+   "m3": 0.0045,
+   "pair": [
+    "LT-OP-1F-017",
+    "LT-OP-1F-018"
+   ]
+  }
+ ],
+ "policy": "S8_6A_LINTEL_RELEASE_AUTHORITY_V1",
+ "post_freeze_use": "reference-population ids only (census question); no quantity selected from it",
+ "previous_freezes_verified": 30,
+ "references_read": [],
+ "retained": [
+  "LT-OP-1F-003",
+  "LT-OP-1F-014",
+  "LT-OP-1F-018",
+  "LT-OP-1F-020",
+  "LT-OP-1F-021",
+  "LT-OP-GF-008",
+  "LT-OP-GF-028"
+ ],
+ "round": "S8_6A",
+ "s8_6_manifest_sha256": "9861d791de738722ce53907894c1ff7691923c007411021eb092a2c58616ba9e",
+ "six_cases": {
+  "LT-OP-1F-017": "BLOCKED_BEARING_REQUIREMENT",
+  "LT-OP-GF-005": "BLOCKED_BEARING_REQUIREMENT",
+  "LT-OP-GF-013": "BLOCKED_COLUMN_CONNECTION",
+  "LT-OP-GF-018": "BLOCKED_COLUMN_CONNECTION",
+  "LT-OP-GF-021": "BLOCKED_BEARING_REQUIREMENT",
+  "LT-OP-GF-029": "BLOCKED_BEARING_REQUIREMENT"
+ },
+ "states": {
+  "BLOCKED_BEARING_REQUIREMENT": 4,
+  "BLOCKED_COLUMN_CONNECTION": 2,
+  "BLOCKED_HEAD_FUNCTION_UNRESOLVED": 1,
+  "RETAINED_PROJECT_BASIS_QTO": 7
+ }
+}

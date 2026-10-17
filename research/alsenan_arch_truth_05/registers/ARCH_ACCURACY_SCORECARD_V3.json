@@ -1,0 +1,31 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_ARCH_R5_SCORECARD_V3",
+ "metrics": {
+  "physical_space_accounting_pct": 93.246,
+  "physical_space_accounting_incl_blocked_residual_pct": 100.0,
+  "physical_space_geometry_confidence_pct": 26.331,
+  "semantic_zone_coverage_pct": 64.017,
+  "trade_region_coverage_pct": 64.017,
+  "wet_room_accounting_pct": 100.0,
+  "wet_room_bound_pct": 88.235,
+  "wall_length_accounting_pct": 100.0,
+  "wall_material_interpretation_pct": 92.067,
+  "opening_count_coverage_pct": 100.0,
+  "opening_area_coverage_pct": 55.0,
+  "floor_quantity_completeness_pct": 63.826,
+  "ceiling_quantity_completeness_pct": 60.622,
+  "skirting_path_completeness_pct": 89.939,
+  "wall_tile_completeness_pct": 100.0,
+  "wp_completeness_pct": 100.0,
+  "plaster_paint_completeness_pct": 66.594,
+  "provenance_coverage_pct": 100.0,
+  "blocked_quantity_impact": {
+   "floor_area_class_blocked_m2": 164.385,
+   "unresolved_plate_m2": 40.19,
+   "skirting_blocked_m": 35.15784,
+   "openings_area_blocked": 27,
+   "ambiguous_wall_m": 23.551
+  }
+ },
+ "rule": "separate metrics; no single aggregate accuracy number"
+}

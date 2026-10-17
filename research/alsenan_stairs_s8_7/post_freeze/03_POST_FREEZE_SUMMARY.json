@@ -1,0 +1,40 @@
+{
+ "classes": {
+  "AUTHORITY": 2,
+  "AUTHORITY + SCOPE": 1,
+  "METHOD": 12,
+  "MISSED_OBJECT": 1,
+  "NEW_RELEASE": 2,
+  "NOT_COMPARABLE": 5,
+  "NO_DIFFERENCE": 1,
+  "SCOPE": 1
+ },
+ "frozen_manifest_sha256": "ee523cc9d23ed1ecd15f6092fc00abb736ede09bc6e89eb2c81bf75da5c89779",
+ "round": "S8_7_POST_FREEZE",
+ "rows": 25,
+ "rule": "explains differences only; no frozen S8.7 quantity is changed or chosen here",
+ "s8_7_released": {
+  "concrete_m3": 0.516582788,
+  "elements": [
+   "A1-L1",
+   "A2-T1",
+   "C-T1"
+  ],
+  "kg": 59.020862261,
+  "kg_by_diameter": {
+   "16": 59.020862261
+  },
+  "kg_by_role": {
+   "LANDING_BOTTOM_LONGITUDINAL": 40.816417817,
+   "LANDING_BOTTOM_TRANSVERSE": 18.204444444
+  },
+  "lane": [
+   "PROJECT_BASIS_QTO"
+  ]
+ },
+ "s8_7_released_plus_sensitivity_m3": [
+  5.219861,
+  5.405216
+ ],
+ "v3b_c_stair_commercial_m3": 5.2312
+}

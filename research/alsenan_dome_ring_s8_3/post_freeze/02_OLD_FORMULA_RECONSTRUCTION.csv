@@ -1,0 +1,6 @@
+CASE,WHY,R_M,MID_AREA_M2,SHELL_M3,MESH_KG_ONE_MESH
+"old shell formula, plan radius 2.2111 m, rise 1.72 m","the NW elevation '172': railing top to apex, not springing to apex",2.281199339,23.411794968,2.341179497,277.473125545
+"old shell formula, plan radius 2.2111 m, rise 1.90 m",the p.7 rise '190' (springing to the outer apex),2.236559401,25.416332123,2.541633212,301.23060294
+"old shell formula, tower: plan radius 2.205 m, rise 2.15 m",architectural tower circle and the elevations' '215',2.205703488,28.443837418,2.844383742,337.112147177
+old ring: pi x 4.2222 m centreline x 0.20 x 0.75,detail-reading centreline with the drawn N.I.S depth 0.75 m,2.111091524,,1.989656886,
+old ring bars: 3T16 + 3T18 + 4T14 as closed circles on the detail centreline,before links and laps,2.111091524,,,206.662303758

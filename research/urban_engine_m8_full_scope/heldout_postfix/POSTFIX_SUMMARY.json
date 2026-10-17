@@ -1,0 +1,460 @@
+{
+ "element_changes": {
+  "S_A": [
+   {
+    "element": "411|T07",
+    "frozen": {
+     "engine_base_m3": 1.4642,
+     "engine_high_m3": 1.4642,
+     "engine_low_m3": 1.3665,
+     "in_range": true,
+     "outcome": "MEASURED"
+    },
+    "post_freeze": {
+     "engine_base_m3": 1.1713,
+     "engine_high_m3": 1.1713,
+     "engine_low_m3": 1.0737,
+     "in_range": true,
+     "outcome": "MEASURED"
+    }
+   },
+   {
+    "element": "424|T08",
+    "frozen": {
+     "engine_base_m3": 1.3623,
+     "engine_high_m3": 1.3623,
+     "engine_low_m3": 1.2575,
+     "in_range": true,
+     "outcome": "MEASURED"
+    },
+    "post_freeze": {
+     "engine_base_m3": 1.1527,
+     "engine_high_m3": 1.1527,
+     "engine_low_m3": 1.0479,
+     "in_range": true,
+     "outcome": "MEASURED"
+    }
+   },
+   {
+    "element": "436|T07",
+    "frozen": {
+     "engine_base_m3": 1.5631,
+     "engine_high_m3": 1.5631,
+     "engine_low_m3": 1.4711,
+     "in_range": true,
+     "outcome": "MEASURED"
+    },
+    "post_freeze": {
+     "engine_base_m3": 1.3792,
+     "engine_high_m3": 1.3792,
+     "engine_low_m3": 1.2872,
+     "in_range": true,
+     "outcome": "MEASURED"
+    }
+   }
+  ],
+  "S_B": [
+   {
+    "element": "411|T07",
+    "frozen": {
+     "engine_base_m3": 1.4366,
+     "engine_high_m3": 1.4366,
+     "engine_low_m3": 1.3408,
+     "in_range": true,
+     "outcome": "MEASURED"
+    },
+    "post_freeze": {
+     "engine_base_m3": 1.1493,
+     "engine_high_m3": 1.1493,
+     "engine_low_m3": 1.0535,
+     "in_range": true,
+     "outcome": "MEASURED"
+    }
+   },
+   {
+    "element": "415|T07",
+    "frozen": {
+     "engine_base_m3": 1.1139,
+     "engine_high_m3": 1.1139,
+     "engine_low_m3": 1.0211,
+     "in_range": true,
+     "outcome": "MEASURED"
+    },
+    "post_freeze": {
+     "engine_base_m3": 0.9282,
+     "engine_high_m3": 0.9282,
+     "engine_low_m3": 0.8354,
+     "in_range": true,
+     "outcome": "MEASURED"
+    }
+   },
+   {
+    "element": "434|T06",
+    "frozen": {
+     "engine_base_m3": 1.1752,
+     "engine_high_m3": 1.1752,
+     "engine_low_m3": 1.0773,
+     "in_range": true,
+     "outcome": "MEASURED"
+    },
+    "post_freeze": {
+     "engine_base_m3": 0.8814,
+     "engine_high_m3": 0.8814,
+     "engine_low_m3": 0.7835,
+     "in_range": true,
+     "outcome": "MEASURED"
+    }
+   },
+   {
+    "element": "436|T07",
+    "frozen": {
+     "engine_base_m3": 1.4926,
+     "engine_high_m3": 1.4926,
+     "engine_low_m3": 1.4048,
+     "in_range": true,
+     "outcome": "MEASURED"
+    },
+    "post_freeze": {
+     "engine_base_m3": 1.317,
+     "engine_high_m3": 1.317,
+     "engine_low_m3": 1.2292,
+     "in_range": true,
+     "outcome": "MEASURED"
+    }
+   }
+  ]
+ },
+ "frozen_commit": "9d7aceb",
+ "post_freeze_files": [
+  "engine/source/scope_quantities.py",
+  "tools/m7_metamorphic.py"
+ ],
+ "runs": {
+  "P": {
+   "dup_text": {
+    "fail": 0,
+    "items_invariant": 10,
+    "pass": 10
+   },
+   "explode": {
+    "fail": 0,
+    "items_invariant": 10,
+    "pass": 10
+   },
+   "mirror_x": {
+    "fail": 10,
+    "items_invariant": 10,
+    "pass": 0
+   },
+   "noise_layer": {
+    "fail": 7,
+    "items_invariant": 9,
+    "pass": 3
+   },
+   "reorder": {
+    "fail": 0,
+    "items_invariant": 10,
+    "pass": 10
+   },
+   "rot180": {
+    "fail": 0,
+    "items_invariant": 10,
+    "pass": 10
+   },
+   "rot270": {
+    "fail": 0,
+    "items_invariant": 10,
+    "pass": 10
+   },
+   "rot90": {
+    "fail": 0,
+    "items_invariant": 10,
+    "pass": 10
+   },
+   "translate": {
+    "fail": 0,
+    "items_invariant": 10,
+    "pass": 10
+   },
+   "units_m": {
+    "fail": 0,
+    "items_invariant": 10,
+    "pass": 10
+   }
+  },
+  "S_A": {
+   "by_kind": {
+    "BOUNDARY_WALL": {
+     "detected_pct": 100.0,
+     "in_range_pct": 88.0,
+     "median_abs_base_error_convention": null,
+     "median_abs_base_error_printed": null,
+     "median_high_over_truth": 1.3585,
+     "n": 25,
+     "n_measured_convention": 0,
+     "n_measured_printed": 0,
+     "outcomes": {
+      "BOUNDED": 25
+     }
+    },
+    "DOME": {
+     "detected_pct": 100.0,
+     "in_range_pct": 95.2,
+     "median_abs_base_error_convention": 0.1346,
+     "median_abs_base_error_printed": 0.0,
+     "median_high_over_truth": 1.3728,
+     "n": 21,
+     "n_measured_convention": 13,
+     "n_measured_printed": 6,
+     "outcomes": {
+      "BOUNDED": 2,
+      "MEASURED": 19
+     }
+    },
+    "LIFT_PIT": {
+     "detected_pct": 100.0,
+     "in_range_pct": 97.1,
+     "median_abs_base_error_convention": 0.0736,
+     "median_abs_base_error_printed": 0.0,
+     "median_high_over_truth": 1.0003,
+     "n": 35,
+     "n_measured_convention": 13,
+     "n_measured_printed": 21,
+     "outcomes": {
+      "BOUNDED": 1,
+      "MEASURED": 34
+     }
+    },
+    "PIT_IN_FOOTING": {
+     "detected_pct": 100.0,
+     "in_range_pct": 85.7,
+     "median_abs_base_error_convention": 0.2258,
+     "median_abs_base_error_printed": 0.0,
+     "median_high_over_truth": 1.0191,
+     "n": 21,
+     "n_measured_convention": 9,
+     "n_measured_printed": 8,
+     "outcomes": {
+      "BOUNDED": 4,
+      "MEASURED": 17
+     }
+    },
+    "POOL": {
+     "detected_pct": 100.0,
+     "in_range_pct": 93.5,
+     "median_abs_base_error_convention": 0.0971,
+     "median_abs_base_error_printed": 0.0,
+     "median_high_over_truth": 1.1373,
+     "n": 31,
+     "n_measured_convention": 11,
+     "n_measured_printed": 12,
+     "outcomes": {
+      "BOUNDED": 8,
+      "MEASURED": 23
+     }
+    },
+    "STAIR": {
+     "detected_pct": 100.0,
+     "in_range_pct": 100.0,
+     "median_abs_base_error_convention": 0.0,
+     "median_abs_base_error_printed": 0.0,
+     "median_high_over_truth": 1.0877,
+     "n": 21,
+     "n_measured_convention": 11,
+     "n_measured_printed": 10,
+     "outcomes": {
+      "MEASURED": 21
+     }
+    },
+    "SUNKEN_SLAB": {
+     "detected_pct": 100.0,
+     "in_range_pct": 100.0,
+     "median_abs_base_error_convention": null,
+     "median_abs_base_error_printed": null,
+     "median_high_over_truth": 2.9731,
+     "n": 32,
+     "n_measured_convention": 0,
+     "n_measured_printed": 0,
+     "outcomes": {
+      "BOUNDED": 32
+     }
+    },
+    "UNKNOWN_OUTLINE": {
+     "detected_pct": 100.0,
+     "in_range_pct": 100.0,
+     "median_abs_base_error_convention": null,
+     "median_abs_base_error_printed": null,
+     "median_high_over_truth": 5.5511,
+     "n": 30,
+     "n_measured_convention": 0,
+     "n_measured_printed": 0,
+     "outcomes": {
+      "BOUNDED": 30
+     }
+    },
+    "WATER_TANK": {
+     "detected_pct": 100.0,
+     "in_range_pct": 100.0,
+     "median_abs_base_error_convention": 0.1354,
+     "median_abs_base_error_printed": 0.0,
+     "median_high_over_truth": 1.2679,
+     "n": 21,
+     "n_measured_convention": 11,
+     "n_measured_printed": 7,
+     "outcomes": {
+      "BOUNDED": 3,
+      "MEASURED": 18
+     }
+    }
+   },
+   "core_rows_moved_v5_to_v6": [],
+   "crashed": [],
+   "drawings": 40,
+   "findings_without_range": 0,
+   "villa_total": {
+    "median_bounded_high_over_truth_high": 1.2765,
+    "median_bounded_low_over_truth_low": 0.8898,
+    "median_measured_over_truth_low": 0.9037,
+    "n": 40,
+    "truth_in_bounded": 40
+   }
+  },
+  "S_B": {
+   "by_kind": {
+    "BOUNDARY_WALL": {
+     "detected_pct": 100.0,
+     "in_range_pct": 84.0,
+     "median_abs_base_error_convention": null,
+     "median_abs_base_error_printed": null,
+     "median_high_over_truth": 1.3585,
+     "n": 25,
+     "n_measured_convention": 0,
+     "n_measured_printed": 0,
+     "outcomes": {
+      "BOUNDED": 25
+     }
+    },
+    "DOME": {
+     "detected_pct": 100.0,
+     "in_range_pct": 100.0,
+     "median_abs_base_error_convention": 0.0724,
+     "median_abs_base_error_printed": 0.0,
+     "median_high_over_truth": 1.302,
+     "n": 21,
+     "n_measured_convention": 12,
+     "n_measured_printed": 5,
+     "outcomes": {
+      "BOUNDED": 4,
+      "MEASURED": 17
+     }
+    },
+    "LIFT_PIT": {
+     "detected_pct": 100.0,
+     "in_range_pct": 97.1,
+     "median_abs_base_error_convention": 0.0736,
+     "median_abs_base_error_printed": 0.0,
+     "median_high_over_truth": 1.0001,
+     "n": 35,
+     "n_measured_convention": 13,
+     "n_measured_printed": 22,
+     "outcomes": {
+      "MEASURED": 35
+     }
+    },
+    "PIT_IN_FOOTING": {
+     "detected_pct": 100.0,
+     "in_range_pct": 90.5,
+     "median_abs_base_error_convention": 0.2258,
+     "median_abs_base_error_printed": 0.0,
+     "median_high_over_truth": 1.2598,
+     "n": 21,
+     "n_measured_convention": 8,
+     "n_measured_printed": 6,
+     "outcomes": {
+      "BOUNDED": 7,
+      "MEASURED": 14
+     }
+    },
+    "POOL": {
+     "detected_pct": 100.0,
+     "in_range_pct": 90.3,
+     "median_abs_base_error_convention": 0.1438,
+     "median_abs_base_error_printed": 0.0,
+     "median_high_over_truth": 1.0166,
+     "n": 31,
+     "n_measured_convention": 10,
+     "n_measured_printed": 13,
+     "outcomes": {
+      "BOUNDED": 7,
+      "MEASURED": 23,
+      "MEASURED_OTHER_FAMILY": 1
+     }
+    },
+    "STAIR": {
+     "detected_pct": 100.0,
+     "in_range_pct": 95.2,
+     "median_abs_base_error_convention": 0.0,
+     "median_abs_base_error_printed": 0.0,
+     "median_high_over_truth": 1.0908,
+     "n": 21,
+     "n_measured_convention": 11,
+     "n_measured_printed": 10,
+     "outcomes": {
+      "MEASURED": 21
+     }
+    },
+    "SUNKEN_SLAB": {
+     "detected_pct": 100.0,
+     "in_range_pct": 100.0,
+     "median_abs_base_error_convention": null,
+     "median_abs_base_error_printed": null,
+     "median_high_over_truth": 2.4984,
+     "n": 32,
+     "n_measured_convention": 0,
+     "n_measured_printed": 0,
+     "outcomes": {
+      "BOUNDED": 32
+     }
+    },
+    "UNKNOWN_OUTLINE": {
+     "detected_pct": 100.0,
+     "in_range_pct": 100.0,
+     "median_abs_base_error_convention": null,
+     "median_abs_base_error_printed": null,
+     "median_high_over_truth": 5.5488,
+     "n": 30,
+     "n_measured_convention": 0,
+     "n_measured_printed": 0,
+     "outcomes": {
+      "BOUNDED": 30
+     }
+    },
+    "WATER_TANK": {
+     "detected_pct": 100.0,
+     "in_range_pct": 100.0,
+     "median_abs_base_error_convention": 0.1147,
+     "median_abs_base_error_printed": 0.0,
+     "median_high_over_truth": 1.2684,
+     "n": 21,
+     "n_measured_convention": 8,
+     "n_measured_printed": 9,
+     "outcomes": {
+      "BOUNDED": 4,
+      "MEASURED": 17
+     }
+    }
+   },
+   "core_rows_moved_v5_to_v6": [],
+   "crashed": [],
+   "drawings": 40,
+   "findings_without_range": 0,
+   "villa_total": {
+    "median_bounded_high_over_truth_high": 1.2544,
+    "median_bounded_low_over_truth_low": 0.8996,
+    "median_measured_over_truth_low": 0.9015,
+    "n": 40,
+    "truth_in_bounded": 40
+   }
+  }
+ }
+}

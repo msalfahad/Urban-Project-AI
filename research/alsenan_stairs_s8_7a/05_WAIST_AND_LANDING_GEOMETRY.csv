@@ -1,0 +1,19 @@
+ITEM,VALUE,STATE,EVIDENCE
+p.16 waist,,BLOCKED_UNQUANTIFIED,"'THICK' leader on the waist with no value (TYPICAL STEEL LAYOUT-STAIR SECTION, N.I.S.)"
+'T 16' tag GFRS 580,160,ZONE_TAG (S1 LOCAL_PANEL_NOTE),"insertion at (18096, 19576): inside A1-W1; a slab-thickness tag for the stair zone, not a landing-only tag"
+'T 16' tag FFRS 74A,160,ZONE_TAG (S1 LOCAL_PANEL_NOTE),"insertion at (18096, 19576): inside A2-W1; a slab-thickness tag for the stair zone, not a landing-only tag"
+'T 16' tag GFRS 5B6,160,ZONE_TAG (S1 LOCAL_PANEL_NOTE),"insertion at (26518.6, 10129): inside C-F1; a slab-thickness tag for the stair zone, not a landing-only tag"
+waist 160,160,OWNER_SCENARIO,owner sensitivity; supported only by the zone tags; never released
+A1-OWNER_A-28 A1-L1 finished level,3.571429,OWNER_SCENARIO,after riser 16 of 28 at 160.714286 mm; section A-A 3.5 (difference 71.429 mm)
+A1-ARCH_GF-25 A1-L1 finished level,3.52,SOURCE_CONFLICT,after riser 14 of 25 at 180 mm; section A-A 3.5 (difference 20 mm)
+A2-OWNER_A-27 A2-L1 finished level,7.988889,OWNER_SCENARIO,after riser 16 of 27 at 155.555556 mm
+A2-FFRS-24 A2-W1 (flat quarter) finished level,7.6,SOURCE_CONFLICT,after riser 12 of 24 at 175 mm
+A2-FFRS-24 A2-L1 finished level,7.775,SOURCE_CONFLICT,after riser 13 of 24 at 175 mm
+C-DRAWN-28 C-L1 finished level,4.696429,SOURCE_VERIFIED,after riser 23 of 28 at 160.714286 mm
+A1-L1 plan area,1.44,SOURCE_VERIFIED,S8.7 outline on GFRS
+A2-L1 plan area,1.44,SOURCE_VERIFIED,S8.7 outline on FFRS
+A2-T1 plan area,0.12,SOURCE_VERIFIED,S8.7 outline on FFRS
+C-L1 plan area,1.3525,SOURCE_VERIFIED,S8.7 outline on GFRS
+C-T1 plan area,1.668642425,SOURCE_VERIFIED,S8.7 outline on GFRS
+A1-W1 plan area,1.5,SOURCE_VERIFIED,S8.7 outline on GFRS
+A2-W1 plan area,1.5,SOURCE_VERIFIED,S8.7 outline on FFRS

@@ -1,0 +1,283 @@
+{
+ "baseline_head": "9f89ab6",
+ "blocked_components": 113,
+ "blocked_items": 687,
+ "blocked_items_by_kind": {
+  "BOTTOM_BEYOND_FACE_UNRESOLVED": 99,
+  "BOTTOM_END_ANCHORAGE": 106,
+  "BOTTOM_RUN_LAP_SPLICE": 15,
+  "BOTTOM_STOP_ZONE_UNRESOLVED": 99,
+  "BOTTOM_SUPPORT_CROSSING": 8,
+  "BOTTOM_TRANSITION": 59,
+  "CORNER_GROUP": 4,
+  "FAMILY_BLOCKED": 5,
+  "LEVEL_CHANGE_DETAIL": 6,
+  "SUNKEN_EDGE_EXTRA": 6,
+  "SUNKEN_STEP_VERTICAL_REBAR": 6,
+  "TEMPERATURE": 94,
+  "TOP_AT_UNRECORDED_EDGE": 24,
+  "TOP_END_ANCHORAGE": 68,
+  "TOP_EXTENSION": 9,
+  "TOP_LOCAL_OVERRIDE_GROUP": 1,
+  "TOP_OVER_SUPPORT_UNRESOLVED": 54,
+  "TOP_SUPPORT_CROSSING": 24
+ },
+ "blocked_items_by_question": {
+  "Q-ABSCOUNT": 3,
+  "Q-ANCHOR": 174,
+  "Q-CONT": 152,
+  "Q-CORNER": 4,
+  "Q-EDGE": 24,
+  "Q-ENDCOVER": 68,
+  "Q-HATCH": 7,
+  "Q-LAP": 15,
+  "Q-MISMATCH": 59,
+  "Q-OBLIQUE": 44,
+  "Q-SUNKEN": 108,
+  "Q-TEMP": 94,
+  "Q-TOPOVR": 1,
+  "Q-TWOCALL": 2
+ },
+ "candidate_items": 476,
+ "candidate_items_by_kind": {
+  "BOTTOM_IN_PANEL": 7,
+  "BOTTOM_IN_PANEL_CONTINUING": 87,
+  "BOTTOM_IN_PANEL_CURTAILED": 87,
+  "BOTTOM_SUPPORT_CROSSING": 25,
+  "TOP_EXTENSION": 215,
+  "TOP_SUPPORT_CROSSING": 55
+ },
+ "candidate_items_by_lane": {
+  "PROJECT_BASIS_QTO": 476
+ },
+ "components_by_ad2_state": {
+  "BLOCKED": 113,
+  "RELEASED_ALL": 38,
+  "RELEASED_PARTIAL": 271,
+  "TRANSFERRED_S8": 18
+ },
+ "components_with_released_quantity": 309,
+ "continuous_supports_one_run": 24,
+ "decision_set": "AD2",
+ "decisions_recorded": 17,
+ "dense_hatch": {
+  "HZ-FFRS-5E0": "BEARING_WALL_CANDIDATE",
+  "HZ-GFRS-273": "BEARING_WALL_CANDIDATE",
+  "HZ-GFRS-2B1": "BEARING_WALL_CANDIDATE",
+  "HZ-GFRS-2B4": "BEARING_WALL_CANDIDATE",
+  "HZ-GFRS-54D": "BEARING_WALL_CANDIDATE",
+  "HZ-SFRS-38C": "BEARING_WALL_CANDIDATE",
+  "HZ-SFRS-390": "BEARING_WALL_CANDIDATE",
+  "HZ-SFRS-391": "BEARING_WALL_CANDIDATE"
+ },
+ "engine_commit": "9f89ab6+code:594955c15b09ae66",
+ "fifty_percent_components": 142,
+ "fifty_percent_components_unlocked": 140,
+ "fifty_percent_families": 70,
+ "flags": {
+  "bar_length_total_calculated": false,
+  "donor_or_code_used": false,
+  "interpolated_temperature": false,
+  "kg_calculated": false,
+  "nts_measured": false,
+  "pre_s7_edited": false,
+  "references_read": [],
+  "s7_started": false
+ },
+ "frozen": {
+  "AD1": {
+   "files_checked": 26,
+   "manifest": "research/ad1_authority_decisions/AD1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "e2497cc75181393000187b7e657fa8485a4c0f365b4614bed983d0bc6c0ca5b4",
+   "round": "AD1"
+  },
+  "D1.1": {
+   "files_checked": 28,
+   "manifest": "research/d1_1_stirrup_authority_audit/D1_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "3ecb642e2141f5a9af11453870696b104a11cfb519d65a9e3f505cbff7c73a74",
+   "round": "D1.1"
+  },
+  "D1.2": {
+   "files_checked": 23,
+   "manifest": "research/d1_2_footing_cover_audit/D1_2_FREEZE_MANIFEST.json",
+   "manifest_sha256": "f256d6a25edf93029c6ba1c8cf9bc336790fd8d9cf7a5045e8395942986a9554",
+   "round": "D1.2"
+  },
+  "PRE-S7": {
+   "files_checked": 45,
+   "manifest": "research/alsenan_slab_rebar_pre_s7/PRE_S7_FREEZE_MANIFEST.json",
+   "manifest_sha256": "fb3a1c62a8e525b663853d03d43e067f1839026aea149399491bd4cf98f0ad09",
+   "round": "PRE-S7"
+  },
+  "S4": {
+   "files_checked": 25,
+   "manifest": "research/alsenan_footing_rebar_s4/S4_FREEZE_MANIFEST.json",
+   "manifest_sha256": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+   "round": "S4"
+  },
+  "S4.1": {
+   "files_checked": 13,
+   "manifest": "research/alsenan_footing_rebar_s4_1/S4_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+   "round": "S4.1"
+  },
+  "S5": {
+   "files_checked": 31,
+   "manifest": "research/alsenan_ground_system_rebar_s5/S5_FREEZE_MANIFEST.json",
+   "manifest_sha256": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+   "round": "S5"
+  },
+  "S5.1": {
+   "files_checked": 17,
+   "manifest": "research/alsenan_ground_system_rebar_s5_1/S5_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "595d64b1bf5c8e0ef7b5bebfaf3ea4063dd884356390c84b4c8aac77cddb5a88",
+   "round": "S5.1"
+  },
+  "S6": {
+   "files_checked": 33,
+   "manifest": "research/alsenan_superstructure_beam_rebar_s6/S6_FREEZE_MANIFEST.json",
+   "manifest_sha256": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+   "round": "S6"
+  },
+  "S6.1": {
+   "files_checked": 18,
+   "manifest": "research/alsenan_superstructure_beam_rebar_s6_1/S6_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "c4744888ed2207ebff47c0a895e706d7e381b5f905b694eb92e3d1cdc411c0b2",
+   "round": "S6.1"
+  }
+ },
+ "gates": {
+  "every_pre_s7_component_terminates_once": true,
+  "fifty_plus_fifty_is_one_hundred": true,
+  "local_strips_reconcile_to_panel_geometry": true,
+  "local_top_does_not_coexist_with_the_superseded_rule": true,
+  "mismatch_splits_do_not_overlap": true,
+  "no_forbidden_label": true,
+  "no_kg_in_pre_s7_1": true,
+  "no_released_item_uses_40cl_or_cover": true,
+  "ownership_transfer_loses_no_component": true,
+  "rate_density_never_duplicates_a_group": true,
+  "s8_transfers_never_in_s7_candidates": true,
+  "temperature_components_stay_separate": true
+ },
+ "irregular_panels": 16,
+ "irregular_panels_recovered": 16,
+ "items": 1210,
+ "items_by_lane": {
+  "BLOCKED_UNQUANTIFIED": 687,
+  "PROJECT_BASIS_QTO": 476,
+  "TRANSFERRED_S8": 47
+ },
+ "lightwell_transferred": {
+  "objects": 7,
+  "panel": [
+   "SP-GF_ROOF_SLAB-21"
+  ]
+ },
+ "local_bar_strips": 1145,
+ "mismatch_split_rows": 32,
+ "mismatch_supports_split": 31,
+ "new_components": 42,
+ "no_kg": true,
+ "policy": "AD2_SLAB_QTO_AUTHORITY_V1",
+ "pre_s7": {
+  "blocked": 198,
+  "components": 440,
+  "conditional_candidates": 242,
+  "s7_release_candidates": 0
+ },
+ "project_basis_candidates": 476,
+ "questions_carried_from_pre_s7": [
+  "Q-ABSCOUNT",
+  "Q-ANCHOR",
+  "Q-CORNER",
+  "Q-ENDCOVER",
+  "Q-HATCH",
+  "Q-LAP",
+  "Q-MISMATCH",
+  "Q-SUNKEN",
+  "Q-TEMP",
+  "Q-TOPOVR",
+  "Q-TWOCALL"
+ ],
+ "questions_new_in_ad2": {
+  "Q-CONT": "Continuity / crossing at a support whose far side is a junction, a set-back or a slab analysed elsewhere: which bars stop, anchor or run through?",
+  "Q-EDGE": "Short / curved boundary edges with no support record: what supports the slab there and do top bars apply?",
+  "Q-OBLIQUE": "Bars meeting a support they do not cross squarely (slanted beams, notches): end detail?"
+ },
+ "rate_components": 432,
+ "rate_components_unlocked": 309,
+ "remaining_true_source_conflicts": [
+  "C-01 PANEL_VOID_CONFLICT",
+  "C-03 MULTIPLE_CANDIDATE_BINDINGS",
+  "C-04 COUNT_NOTATION_CONFLICT",
+  "C-06 COVER_DIMENSION_BINDING",
+  "C-09 TOP_BAR_BINDING"
+ ],
+ "round": "PRE-S7.1",
+ "s7_started": false,
+ "source_derived_candidates": 0,
+ "source_derived_counts_released_length_blocked": 5,
+ "strip_reconciliation": true,
+ "sunken_mesh": {
+  "SP-1F_ROOF_SLAB-02": "RETAINED_IN_S7",
+  "SP-GF_ROOF_SLAB-04": "RETAINED_IN_S7",
+  "SP-GF_ROOF_SLAB-05": "RETAINED_IN_S7",
+  "SP-GF_ROOF_SLAB-12": "RETAINED_IN_S7",
+  "SP-GF_ROOF_SLAB-24": "RETAINED_IN_S7",
+  "SP-GF_ROOF_SLAB-29": "RETAINED_IN_S7"
+ },
+ "sunken_panels": 6,
+ "sunken_panels_recovered": 6,
+ "support_continuity_ad2": {
+  "CONTINUITY_UNRESOLVED": 36,
+  "CONTINUOUS": 53,
+  "NON_CONTINUOUS": 74,
+  "None": 9
+ },
+ "support_continuity_changed": [
+  "SUP-GF_ROOF_SLAB-167",
+  "SUP-GF_ROOF_SLAB-168"
+ ],
+ "support_continuity_pre_s7": {
+  "CONTINUITY_UNRESOLVED": 43,
+  "CONTINUOUS": 53,
+  "NON_CONTINUOUS": 76
+ },
+ "temperature_components_blocked": 94,
+ "top_rule_identity": {
+  "authority": "URBAN_OWNER_MEASUREMENT_RULE",
+  "conclusion": "SAME_PHYSICAL_BAR_FAMILY",
+  "extent_rule": "URBAN_QTO_TOP_OVER_SUPPORT_EXTENT_V1",
+  "governing": "P4-6-NOTE-2-TOP-OVER-BEAMS",
+  "local_override_supports": [
+   "SUP-GF_ROOF_SLAB-037"
+  ],
+  "overridden": [
+   "P15-TOP-NONCONT-0.25L1",
+   "P15-TOP-CONT-0.30Lmax",
+   "P15-TOP-EXTEND-50PCT"
+  ]
+ },
+ "topology_corrections_by_geometry": [
+  "SUP-2F_ROOF_SLAB-014",
+  "SUP-GF_ROOF_SLAB-004",
+  "SUP-GF_ROOF_SLAB-005",
+  "SUP-GF_ROOF_SLAB-006",
+  "SUP-GF_ROOF_SLAB-011",
+  "SUP-GF_ROOF_SLAB-012",
+  "SUP-GF_ROOF_SLAB-078",
+  "SUP-GF_ROOF_SLAB-093"
+ ],
+ "transferred_components_by_region": {
+  "STAIR_LIGHTWELL_REGION": 1,
+  "WATER_TANK_SUPPORT_REGION": 17
+ },
+ "transferred_side_items_by_region": {
+  "SPECIAL_STRUCTURE (DOME_ZONE, excluded in PRE-S7)": 12,
+  "SPECIAL_STRUCTURE (STAIR_FLIGHT_ZONE, excluded in PRE-S7)": 8,
+  "STAIR_LIGHTWELL_REGION": 4,
+  "WATER_TANK_SUPPORT_REGION": 4
+ },
+ "transfers": 60
+}

@@ -1,0 +1,517 @@
+diff --git a/engine/source/arch_plan.py b/engine/source/arch_plan.py
+index 16cedd7..bccfd4e 100644
+--- a/engine/source/arch_plan.py
++++ b/engine/source/arch_plan.py
+@@ -250,6 +250,80 @@ def sweep(a):
+     return (e - s) % (2 * math.pi) if a.get("dir", "CCW") == "CCW" else (s - e) % (2 * math.pi)
+ 
+ 
++import os as _os
++
++
++def _EXP(name):  # Phase 2B-6 experiments (isolated clone only, never a method)
++    return name in (_os.environ.get("URBAN_EXP") or "").split(",")
++
++
++EXP_SINGLE_SHARE = 0.8          # EXPERIMENT C: the share of a layer's linework its role instances must explain
++EXP_SINGLE_WINDOW_SHARE = 0.9
++
++
++def _exp_len(s):
++    return math.dist(s["a"], s["b"])
++
++
++def _exp_loose_rects(segs, unit_m, tol_m=0.002):
++    """EXPERIMENT C: closed rectangles of any orientation formed by four segments (one polyline or four LINEs) whose
++    ends meet within tol and whose corners are right angles within 1 degree; sides within COLUMN_SIDE_M ->
++    [{"corners", "w_m", "h_m", "ids"}]."""
++    tol = tol_m / unit_m
++    key = lambda p: (round(p[0] / tol), round(p[1] / tol))          # noqa: E731
++    at = defaultdict(list)
++    for s in segs:
++        for p, q in ((s["a"], s["b"]), (s["b"], s["a"])):
++            at[key(p)].append((s, q))
++    out, seen = [], set()
++    for s in segs:
++        a, b = tuple(s["a"]), tuple(s["b"])
++        for s2, c in at.get(key(b), []):
++            if s2 is s:
++                continue
++            for s3, d in at.get(key(c), []):
++                if s3 in (s, s2):
++                    continue
++                for s4, e in at.get(key(d), []):
++                    if s4 in (s, s2, s3) or math.dist(e, a) > tol:
++                        continue
++                    ids = frozenset(x["id"] for x in (s, s2, s3, s4))
++                    if ids in seen:
++                        continue
++                    pts = [a, b, c, d]
++                    ok = True
++                    for i in range(4):
++                        p0, p1, p2 = pts[i - 1], pts[i], pts[(i + 1) % 4]
++                        v1, v2 = (p0[0] - p1[0], p0[1] - p1[1]), (p2[0] - p1[0], p2[1] - p1[1])
++                        n1, n2 = math.hypot(*v1), math.hypot(*v2)
++                        if n1 <= 0 or n2 <= 0 or abs(v1[0] * v2[0] + v1[1] * v2[1]) / (n1 * n2) > math.sin(math.radians(1)):
++                            ok = False
++                            break
++                    if not ok:
++                        continue
++                    w, h = math.dist(a, b) * unit_m, math.dist(b, c) * unit_m
++                    if COLUMN_SIDE_M[0] <= w <= COLUMN_SIDE_M[1] and COLUMN_SIDE_M[0] <= h <= COLUMN_SIDE_M[1]:
++                        seen.add(ids)
++                        out.append({"corners": pts, "w_m": w, "h_m": h, "ids": ids})
++    return out
++
++
++def _exp_in_poly(p, poly, tol):
++    """point in a convex polygon (counter-clockwise or clockwise), with tolerance."""
++    sgn = 0
++    for i in range(len(poly)):
++        (x0, y0), (x1, y1) = poly[i], poly[(i + 1) % len(poly)]
++        L = math.hypot(x1 - x0, y1 - y0)
++        c = ((x1 - x0) * (p[1] - y0) - (y1 - y0) * (p[0] - x0)) / L if L else 0.0
++        if abs(c) <= tol:
++            continue
++        if sgn == 0:
++            sgn = 1 if c > 0 else -1
++        elif (c > 0) != (sgn > 0):
++            return False
++    return True
++
++
+ def is_swing(a, unit_m):
+     return DOOR_RADIUS_M[0] <= a["r"] * unit_m <= DOOR_RADIUS_M[1] and SWING_RAD[0] <= sweep(a) <= SWING_RAD[1]
+ 
+@@ -358,6 +432,29 @@ def layer_roles(ents, unit_m, override=None, tol="LEGACY", geom=None):
+     for lay, e in ev.items():
+         if e["filled_or_crossed_rects"] >= 3 and e["filled_or_crossed_rects"] >= 0.5 * max(e["small_rects"], 1):
+             roles[lay] = COLUMN
++        elif _EXP("SINGLE"):
++            # EXPERIMENT C: a filled (hatched) or crossed rectangle of column size, any orientation, one polyline or
++            # four LINEs, is a column when such rectangles explain the layer's linework
++            ss = by.get(lay, [])
++            tol_in = 0.02 / unit_m
++            rects_l = _exp_loose_rects(ss, unit_m)
++            def _marked(r):
++                if any(h.get("ring") and all(_exp_in_poly(p, r["corners"], tol_in) for p in h["ring"])
++                       for h in hatch_by.get(lay, [])):
++                    return True
++                return any(x["id"] not in r["ids"] and _exp_in_poly(x["a"], r["corners"], tol_in) and
++                           _exp_in_poly(x["b"], r["corners"], tol_in) and _exp_len(x) * unit_m >= 0.5 * min(r["w_m"], r["h_m"])
++                           for x in ss)
++            marked = [r for r in rects_l if _marked(r)]
++            tot = sum(_exp_len(x) for x in ss)
++            inside = sum(_exp_len(x) for x in ss if any(_exp_in_poly(x["a"], r["corners"], tol_in) and
++                                                        _exp_in_poly(x["b"], r["corners"], tol_in) for r in marked))
++            e["exp_single_rects"] = len(rects_l)
++            e["exp_single_marked"] = len(marked)
++            e["exp_single_explained"] = round(inside / tot, 4) if tot else 0.0
++            if marked and len(marked) >= 0.5 * len(rects_l) and e["exp_single_explained"] >= EXP_SINGLE_SHARE:
++                roles[lay] = COLUMN
++                e["exp_single_rule"] = "COLUMN_SINGLE_INSTANCE"
+     for lay, e in ev.items():                         # jambed openings in the layer's own bands (doors, windows)
+         if roles[lay] == OTHER and e["long_band_m"] >= 5.0:
+             n_open = 0
+@@ -391,6 +488,18 @@ def layer_roles(ents, unit_m, override=None, tol="LEGACY", geom=None):
+                 roles[lay] = WALL
+                 ev[lay]["wall_rule"] = "SECONDARY (joins the primary wall network)"
+     wall_segs = [s for s in ents["segments"] if roles.get(s["layer"]) in (WALL, COLUMN)]
++    exp_jambs = []
++    if _EXP("SINGLE"):
++        # EXPERIMENT C: the jamb ends of the wall layers' band gaps (a door's hinge stands at one)
++        for lay_w in [l for l, r in roles.items() if r == WALL]:
++            for b in _bands(by[lay_w], unit_m, geom):
++                for g in gaps_of(b, min_gap=0.4 / unit_m, jamb_tol=0.03 / unit_m, obstacles=(),
++                                 column_reach=0.06 / unit_m, closures=(), merge_tol=mt):
++                    lo_o, hi_o = sorted((b["A"]["off"], b["B"]["off"]))
++                    for sj in (g["s0"], g["s1"]):
++                        for off in (lo_o, hi_o):
++                            exp_jambs.append((b["u"][0] * sj + b["n"][0] * off, b["u"][1] * sj + b["n"][1] * off,
++                                              (g["s1"] - g["s0"]) * unit_m))
+     for lay, e in ev.items():
+         if roles[lay] != OTHER:
+             continue
+@@ -401,6 +510,23 @@ def layer_roles(ents, unit_m, override=None, tol="LEGACY", geom=None):
+         e["anchored_swings"] = anchored
+         if anchored >= 2 and anchored >= 0.5 * len(sw):
+             roles[lay] = DOOR
++        elif _EXP("SINGLE") and anchored >= 1 and anchored >= 0.5 * len(sw):
++            # EXPERIMENT C: one anchored swing with its leaf is a door when the door symbols (the swing, and the
++            # linework within one radius + 0.10 m of its hinge) explain the layer's linework
++            hinges = [(a["c"], a["r"] + 0.10 / unit_m) for a in sw
++                      if any(math.dist(a["c"], (jx, jy)) * unit_m <= 0.15 and a["r"] * unit_m <= gw + 0.10
++                             for jx, jy, gw in exp_jambs)]
++            e["exp_single_hinges_at_jamb"] = len(hinges)
++            ss = by.get(lay, [])
++            arcs_l = arcs_by.get(lay, [])
++            tot = sum(_exp_len(x) for x in ss) + sum(a["r"] * sweep(a) for a in arcs_l)
++            near = lambda p: any(math.dist(p, c) <= R for c, R in hinges)   # noqa: E731
++            inside = sum(_exp_len(x) for x in ss if near(x["a"]) and near(x["b"])) + \
++                sum(a["r"] * sweep(a) for a in arcs_l if near(a["s"]) and near(a["e"]))
++            e["exp_single_explained"] = round(inside / tot, 4) if tot else 0.0
++            if hinges and e["exp_single_explained"] >= EXP_SINGLE_SHARE:
++                roles[lay] = DOOR
++                e["exp_single_rule"] = "DOOR_SINGLE_INSTANCE"
+     # windows: linework lying inside the gaps of the wall layers' bands
+     walls = [lay for lay, r in roles.items() if r == WALL]
+     gaps = []
+@@ -428,6 +554,32 @@ def layer_roles(ents, unit_m, override=None, tol="LEGACY", geom=None):
+         e["share_in_wall_gaps"] = round(inside / tot, 4) if tot else 0.0
+         if e["share_in_wall_gaps"] >= WINDOW_IN_GAP_SHARE and e["segments"] >= 4:
+             roles[lay] = WINDOW
++        elif _EXP("SINGLE") and e["share_in_wall_gaps"] >= EXP_SINGLE_WINDOW_SHARE and e["segments"] >= 1:
++            # EXPERIMENT C: a few glazing lines, all inside wall gaps that hold no door (no door-layer swing hinge
++            # and no door-layer line in the gap)
++            door_l_ = [l for l, r in roles.items() if r == DOOR]
++            dsegs = [x for l in door_l_ for x in by.get(l, [])]
++            hinges_ = [a["c"] for l in door_l_ for a in arcs_by.get(l, []) if is_swing(a, unit_m)]
++            def _door_gap(b, g):
++                lo, hi = sorted((b["A"]["off"], b["B"]["off"]))
++                inside = lambda p: (g["s0"] - 0.02 / unit_m <= p[0] * b["u"][0] + p[1] * b["u"][1] <= g["s1"] + 0.02 / unit_m
++                                    and lo - 0.02 / unit_m <= p[0] * b["n"][0] + p[1] * b["n"][1] <= hi + 0.02 / unit_m)  # noqa: E731
++                return any(inside(h) for h in hinges_) or any(inside(x["a"]) and inside(x["b"]) for x in dsegs)
++            tot = sum(math.dist(x["a"], x["b"]) for x in by[lay])
++            ins = 0.0
++            for x in by[lay]:
++                mid = ((x["a"][0] + x["b"][0]) / 2, (x["a"][1] + x["b"][1]) / 2)
++                for b, g in gaps:
++                    su = mid[0] * b["u"][0] + mid[1] * b["u"][1]
++                    so = mid[0] * b["n"][0] + mid[1] * b["n"][1]
++                    lo, hi = sorted((b["A"]["off"], b["B"]["off"]))
++                    if g["s0"] <= su <= g["s1"] and lo - 1e-6 <= so <= hi + 1e-6 and not _door_gap(b, g):
++                        ins += math.dist(x["a"], x["b"])
++                        break
++            e["exp_single_share_in_window_gaps"] = round(ins / tot, 4) if tot else 0.0
++            if e["exp_single_share_in_window_gaps"] >= EXP_SINGLE_WINDOW_SHARE:
++                roles[lay] = WINDOW
++                e["exp_single_rule"] = "WINDOW_SINGLE_INSTANCE"
+     source = "INFERRED"
+     if override:
+         for lay, r in override.items():
+diff --git a/engine/source/arch_rooms.py b/engine/source/arch_rooms.py
+index 42d809f..555d0b6 100644
+--- a/engine/source/arch_rooms.py
++++ b/engine/source/arch_rooms.py
+@@ -376,6 +376,34 @@ def opening_marks(o, segments, arcs, unit_m):
+     return {"head_lines": heads, "marks": marks, "blocks": sorted(blocks), "clear": marks == 0 and heads <= 2}
+ 
+ 
++import os as _os
++
++
++def _EXP(name):                                       # Phase 2B-6 experiments (isolated clone only, never a method)
++    return name in (_os.environ.get("URBAN_EXP") or "").split(",")
++
++
++def _exp_cycle_points(arr, cyc, sag):
++    """EXPERIMENT B: the cycle's vertices with every arc edge flattened (chord sagitta <= sag)."""
++    pts = []
++    for ei, fw in cyc:
++        e = arr.edges[ei]
++        start = arr.nodes[e["n0"]] if fw else arr.nodes[e["n1"]]
++        pts.append(start)
++        if e["kind"] == "A":
++            pr = e["prim"]
++            sw = e["t1"] - e["t0"]
++            step = 2 * math.acos(max(-1.0, min(1.0, 1 - sag / pr.r))) if pr.r > sag else sw
++            k = max(1, math.ceil(abs(sw) / max(step, 1e-9)))
++            ts = [e["t0"] + sw * i / k for i in range(1, k)]
++            mids = [pr.point(x) for x in ts]
++            # the nodes are the arc's end points: order the inner points from this edge's start
++            if math.dist(mids[0], start) > math.dist(mids[-1], start) if mids else False:
++                mids.reverse()
++            pts += mids
++    return pts
++
++
+ def _faces_of(arr, sites, texts, unit_m, eps, detail=False):
+     """detail (ARCH_TAKEOFF_V2.2 only): also record each face's boundary edge by edge (engine.source.release_safety)."""
+     faces = []
+@@ -383,9 +411,13 @@ def _faces_of(arr, sites, texts, unit_m, eps, detail=False):
+         pt = TP.interior_point(arr, st["cycle"], eps)
+         if pt is None:
+             continue
+-        poly = [arr.nodes[arr.edges[ei]["n0"]] if fw else arr.nodes[arr.edges[ei]["n1"]] for ei, fw in st["cycle"]]
+-        holes = [[arr.nodes[arr.edges[ei]["n0"]] if fw else arr.nodes[arr.edges[ei]["n1"]] for ei, fw in hc]
+-                 for hc in st["hole_cycles"]]
++        if _EXP("ARC"):
++            poly = _exp_cycle_points(arr, st["cycle"], 1e-3 / unit_m)
++            holes = [_exp_cycle_points(arr, hc, 1e-3 / unit_m) for hc in st["hole_cycles"]]
++        else:
++            poly = [arr.nodes[arr.edges[ei]["n0"]] if fw else arr.nodes[arr.edges[ei]["n1"]] for ei, fw in st["cycle"]]
++            holes = [[arr.nodes[arr.edges[ei]["n0"]] if fw else arr.nodes[arr.edges[ei]["n1"]] for ei, fw in hc]
++                     for hc in st["hole_cycles"]]
+         area = st["area"] * unit_m ** 2
+         per = st["boundary_perimeter"] * unit_m
+         hole_roles = defaultdict(float)
+@@ -963,6 +995,115 @@ def closure_in_passage(seg, passages, unit_m, fit_m=DOOR_LEAF_FIT_M):
+     return (best[1], L) if best else None
+ 
+ 
++def _exp_jamb_span(o, door_segs, unit_m, tol_m=0.01):
++    """EXPERIMENT A: the span between the door symbol's own jamb lines inside the band opening, or None. A jamb line is
++    a door-layer segment across the band at full thickness (within tol), perpendicular to the wall within 2 degrees,
++    its middle between the gap's ends."""
++    (ux, uy), (nx, ny) = o["u"], o["n"]
++    tol = tol_m / unit_m
++    lo_o, hi_o = sorted((o["o0"], o["o1"]))
++    pos = []
++    for s in door_segs:
++        (ax, ay), (bx, by) = s["a"], s["b"]
++        L = math.hypot(bx - ax, by - ay)
++        if L <= 0 or abs(L - (hi_o - lo_o)) > tol:
++            continue
++        if abs(((bx - ax) * ux + (by - ay) * uy) / L) > math.sin(math.radians(2.0)):
++            continue
++        ta, tb = sorted((ax * nx + ay * ny, bx * nx + by * ny))
++        if abs(ta - lo_o) > tol or abs(tb - hi_o) > tol:
++            continue
++        sm = ((ax + bx) * ux + (ay + by) * uy) / 2
++        if o["s0"] - tol <= sm <= o["s1"] + tol:
++            pos.append(sm)
++    if len(pos) < 2:
++        return None
++    lo, hi = min(pos), max(pos)
++    if (o["s1"] - o["s0"]) - (hi - lo) <= 0.05 / unit_m:
++        return None
++    return lo, hi
++
++
++def _exp_face_is_wall(o, off, x0, x1, wall_segs, unit_m, tol_m=0.01):
++    """EXPERIMENT A: is this stretch of one band face wall? Every part of it is drawn by a wall-layer segment lying on
++    the face, or is the mouth of a wall junction: two wall-layer segments perpendicular to the band, each ending on
++    the face at one end of the gap and leaving it away from the band."""
++    (ux, uy), (nx, ny) = o["u"], o["n"]
++    tol = tol_m / unit_m
++    mid_o = (o["o0"] + o["o1"]) / 2
++    cover, ends = [], []
++    for s in wall_segs:
++        (ax, ay), (bx, by) = s["a"], s["b"]
++        L = math.hypot(bx - ax, by - ay)
++        if L <= 0:
++            continue
++        sa, sb = ax * ux + ay * uy, bx * ux + by * uy
++        ta, tb = ax * nx + ay * ny, bx * nx + by * ny
++        if abs(ta - off) <= tol and abs(tb - off) <= tol:                     # on this face
++            lo, hi = sorted((sa, sb))
++            if hi > x0 + tol and lo < x1 - tol:
++                cover.append((max(lo, x0), min(hi, x1)))
++        elif abs(((bx - ax) * ux + (by - ay) * uy) / L) < math.sin(math.radians(2.0)):   # across the face
++            for (s_, t_), (t_other) in (((sa, ta), tb), ((sb, tb), ta)):
++                if abs(t_ - off) <= tol and (t_other - off) * (off - mid_o) > 0:      # ends here, leaves the band
++                    ends.append(s_)
++    cover.sort()
++    gaps, cur = [], x0
++    for lo, hi in cover:
++        if lo > cur + tol:
++            gaps.append((cur, lo))
++        cur = max(cur, hi)
++    if x1 > cur + tol:
++        gaps.append((cur, x1))
++    for g0, g1 in gaps:
++        if not (any(abs(e - g0) <= tol for e in ends) and any(abs(e - g1) <= tol for e in ends)):
++            return False
++    return True
++
++
++EXP_JAMB_LOG = []
++
++
++def _exp_jamb_spans(ops, ents, wall_l, door_l, unit_m, thresholds):
++    """EXPERIMENT A: a DOOR whose band gap is wider than its symbol's jamb span takes the span when every remainder of
++    the gap is wall on both faces; the remainders are closed by zero-material WALL items. -> [BoundaryItem]"""
++    door_segs = [s for s in ents["segments"] if s["layer"] in door_l]
++    wall_segs = [s for s in ents["segments"] if s["layer"] in set(wall_l)]
++    items = []
++    for o in ops:
++        if o["kind"] != "DOOR":
++            continue
++        span = _exp_jamb_span(o, door_segs, unit_m)
++        if span is None:
++            continue
++        lo, hi = span
++        rem = [(a, b) for a, b in ((o["s0"], lo), (hi, o["s1"])) if b - a > 0.02 / unit_m]
++        faces_ = (o["o0"], o["o1"])
++        ok = all(_exp_face_is_wall(o, off, a, b, wall_segs, unit_m) for a, b in rem for off in faces_)
++        EXP_JAMB_LOG.append({"opening_id": o["opening_id"], "gap_m": round((o["s1"] - o["s0"]) * unit_m, 4),
++                             "span_m": round((hi - lo) * unit_m, 4), "remainders_m": [round((b - a) * unit_m, 4)
++                                                                                     for a, b in rem],
++                             "applied": ok})
++        if not ok:
++            continue
++        (ux, uy), (nx, ny) = o["u"], o["n"]
++        o.update(gap_s0=o["s0"], gap_s1=o["s1"], gap_width_m=o["width_m"], s0=lo, s1=hi,
++                 width_m=(hi - lo) * unit_m, jamb_span_experiment=True)
++        geo = _opening_geometry(o)
++        k = 0
++        for t_ in thresholds:
++            if t_["opening_id"] == o["opening_id"]:
++                t_["a"], t_["b"] = geo[k]
++                k += 1
++        for i, (a, b) in enumerate(rem):
++            for j, off in enumerate(faces_):
++                p = (ux * a + nx * off, uy * a + ny * off)
++                q = (ux * b + nx * off, uy * b + ny * off)
++                items.append(TP.BoundaryItem(f"JAMBREM|{o['opening_id']}|{i}|{j}", "SEGMENT", (p[0], p[1], q[0], q[1]),
++                                             "WALL"))
++    return items
++
++
+ def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, release_safety=False,
+            door_review=False):
+     """geom (ARCH_TAKEOFF_V2.1 only): an engine.source.robust_geometry.Geometry for the band openings; None is the
+@@ -1075,6 +1216,18 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, re
+         for oid, note in notes.items():
+             if by_op[oid]["kind"] == "PASSAGE":
+                 by_op[oid]["door_symbol_note"] = note
++    if _EXP("JAMB"):
++        jamb_items = _exp_jamb_spans(ops, ents, wall_l, door_l, unit_m, thresholds)
++        if _os.environ.get("URBAN_EXP_LOG"):
++            import json as _json
++            with open(_os.environ["URBAN_EXP_LOG"], "a") as _f:
++                _f.write(_json.dumps({"region": region_id, "jamb": EXP_JAMB_LOG}) + "\n")
++            EXP_JAMB_LOG.clear()
++        if jamb_items:
++            items += jamb_items
++            thr_items = [(t_["opening_id"], TP.BoundaryItem(t_["id"], "SEGMENT", (t_["a"][0], t_["a"][1], t_["b"][0],
++                                                                                    t_["b"][1]),
++                                                            role_of_thr[t_["kind"]])) for t_ in thresholds]
+     closures = [TP.BoundaryItem(c.source_id, c.kind, c.geometry, "DOOR_CLOSURE", c.derived_from) for c in closures]
+     closures += closures_b(closures, ents, wall_l, unit_m)
+     if not items:
+@@ -1351,6 +1504,12 @@ def _evidence(faces, ents, roles, unit_m):
+             fx_codes = sorted({x["evidences"] for x in fixtures})
+             if len(tag_codes) == 1:
+                 f.update(codes=tag_codes, label_source="BLOCK_NAME")
++            elif _EXP("BASIN") and fx_codes == ["BATHROOM"] and {x["fixture"] for x in fixtures} == {"BASIN"}:
++                # EXPERIMENT G (owner statement, Phase 2B-6): a wash basin alone does not make a space wet; the
++                # space keeps no room type and carries a review status (no wet or dry scope is imposed)
++                f["issue"] = ("WET_CLASSIFICATION_REVIEW: no room word inside; holds only wash basin(s) (" +
++                              ", ".join(x["block"] for x in fixtures) + ") - a basin alone does not make a space wet "
++                              "(owner statement); the room type is for review")
+             elif len(fx_codes) == 1:
+                 f.update(codes=fx_codes, label_source="FIXTURES")
+             elif not fx_codes and len({e["evidences"] for e in layer_ev}) == 1:
+diff --git a/engine/source/arch_walls.py b/engine/source/arch_walls.py
+index a511059..caceed5 100644
+--- a/engine/source/arch_walls.py
++++ b/engine/source/arch_walls.py
+@@ -144,9 +144,11 @@ def walls(ents, roles, unit_m, faces, openings=(), columns=(), geom=None):
+                         "centreline": [(ux * b["lo"] + nx * mid_off, uy * b["lo"] + ny * mid_off),
+                                        (ux * b["hi"] + nx * mid_off, uy * b["hi"] + ny * mid_off)],
+                         "_ang": b["ang"], "_off": mid_off, "_lo": b["lo"], "_hi": b["hi"]})
++    if _EXP("ARCBAND"):
++        out += _exp_arc_bands(ents, wall_l, unit_m, loc, probe)
+     for w in out:
+         for k in ("_ang", "_off", "_lo", "_hi"):
+-            w.pop(k)
++            w.pop(k, None)
+     fam = defaultdict(lambda: {"walls": 0, "net_lm": 0.0, "gross_lm": 0.0, "strip_m2": 0.0, "external_lm": 0.0,
+                                "internal_lm": 0.0, "columns_in_wall_lm": 0.0})
+     for w in out:
+@@ -183,6 +185,104 @@ def walls(ents, roles, unit_m, faces, openings=(), columns=(), geom=None):
+ 
+ WALL_MASS_SHARE = 0.5
+ 
++import os as _os
++
++
++def _EXP(name):  # Phase 2B-6 experiments (isolated clone only, never a method)
++    return name in (_os.environ.get("URBAN_EXP") or "").split(",")
++
++
++EXP_ARC_BASIS = _os.environ.get("URBAN_EXP_ARC_BASIS") or "MID_BAND_ARC"
++EXP_ARCBAND_LOG = []
++
++
++def _exp_arc_iv(a):
++    cx, cy = a["c"]
++    a0 = math.atan2(a["s"][1] - cy, a["s"][0] - cx)
++    a1 = math.atan2(a["e"][1] - cy, a["e"][0] - cx)
++    if a.get("dir") == "CW":
++        a0, a1 = a1, a0
++    if a1 <= a0:
++        a1 += 2 * math.pi
++    return a0, a1
++
++
++def _exp_overlap(i, j):
++    """the angular overlap of two CCW intervals, the second shifted by whole turns to meet the first."""
++    best = None
++    for k in (-1, 0, 1):
++        lo, hi = max(i[0], j[0] + 2 * math.pi * k), min(i[1], j[1] + 2 * math.pi * k)
++        if hi > lo and (best is None or hi - lo > best[1] - best[0]):
++            best = (lo, hi)
++    return best
++
++
++def _exp_arc_bands(ents, wall_l, unit_m, loc, probe):
++    """EXPERIMENT B2: a curved wall band is two concentric wall-layer arcs (centres within 2 mm) whose radii differ by
++    a wall thickness (arch_plan.BAND_T_M) over a common sweep of at least 0.3 m on the inner arc, with no concentric
++    wall arc between them. Published bases (as engine.source.curved_opening): MIN_RADIUS_ARC, MID_BAND_ARC,
++    MAX_RADIUS_ARC; strip = sweep x (r2^2 - r1^2) / 2 = MID_BAND_ARC x t (exact). The run takes EXP_ARC_BASIS."""
++    tmin, tmax = AP.BAND_T_M[0] / unit_m, AP.BAND_T_M[1] / unit_m
++    ctol = 0.002 / unit_m
++    out = []
++    for lay in wall_l:
++        arcs = [a for a in ents["arcs"] if a["layer"] == lay]
++        ivs = [_exp_arc_iv(a) for a in arcs]
++        used = set()
++        cands = []
++        for i, a in enumerate(arcs):
++            for j, b in enumerate(arcs):
++                if j <= i or math.dist(a["c"], b["c"]) > ctol:
++                    continue
++                t = abs(a["r"] - b["r"])
++                if not tmin <= t <= tmax:
++                    continue
++                ov = _exp_overlap(ivs[i], ivs[j])
++                r1 = min(a["r"], b["r"])
++                if ov is None or (ov[1] - ov[0]) * r1 * unit_m < 0.3:
++                    continue
++                between = any(k not in (i, j) and math.dist(c["c"], a["c"]) <= ctol and r1 < c["r"] < max(a["r"], b["r"])
++                              and _exp_overlap(ivs[k], ov) for k, c in enumerate(arcs))
++                if between:
++                    continue
++                cands.append((t, i, j, ov))
++        for t, i, j, ov in sorted(cands):
++            if i in used or j in used:
++                continue
++            used |= {i, j}
++            a, b = arcs[i], arcs[j]
++            r1, r2 = sorted((a["r"], b["r"]))
++            th = ov[1] - ov[0]
++            bases = {"MIN_RADIUS_ARC": r1 * th * unit_m, "MID_BAND_ARC": (r1 + r2) / 2 * th * unit_m,
++                     "MAX_RADIUS_ARC": r2 * th * unit_m}
++            L = bases[EXP_ARC_BASIS]
++            t_m = (r2 - r1) * unit_m
++            strip = th * (r2 ** 2 - r1 ** 2) / 2 * unit_m ** 2
++            am = (ov[0] + ov[1]) / 2
++            cx, cy = a["c"]
++            pa = (cx + (r1 - probe) * math.cos(am), cy + (r1 - probe) * math.sin(am))
++            pb = (cx + (r2 + probe) * math.cos(am), cy + (r2 + probe) * math.sin(am))
++            sides = [loc.at(pa), loc.at(pb)]
++            rec = {"wall_id": f"ARCBAND|{a['id']}|{b['id']}", "layer": lay, "t_m": round(t_m, 4),
++                   "family": _family(t_m), "gross_lm": round(L, 6), "net_lm": round(L, 6), "columns_in_wall_lm": 0.0,
++                   "strip_m2": round(strip, 6), "sides": sides,
++                   "kind": "EXTERNAL" if EXTERIOR in sides else ("INTERNAL" if sides[0] != sides[1]
++                                                                  else "INSIDE_ONE_SPACE"),
++                   "centreline": [(cx + (r1 + r2) / 2 * math.cos(ov[0]), cy + (r1 + r2) / 2 * math.sin(ov[0])),
++                                  (cx + (r1 + r2) / 2 * math.cos(ov[1]), cy + (r1 + r2) / 2 * math.sin(ov[1]))],
++                   "curved": {"centre": [cx, cy], "r1_m": r1 * unit_m, "r2_m": r2 * unit_m, "sweep_rad": th,
++                              "bases_lm": {k: round(v, 6) for k, v in bases.items()}, "basis": EXP_ARC_BASIS}}
++            out.append(rec)
++            EXP_ARCBAND_LOG.append({"t_m": round(t_m, 4), "sweep_deg": round(math.degrees(th), 3),
++                                    "bases_lm": rec["curved"]["bases_lm"], "strip_m2": rec["strip_m2"],
++                                    "kind": rec["kind"]})
++    if _os.environ.get("URBAN_EXP_LOG"):
++        import json as _json
++        with open(_os.environ["URBAN_EXP_LOG"], "a") as _f:
++            _f.write(_json.dumps({"arcband": EXP_ARCBAND_LOG}) + "\n")
++        EXP_ARCBAND_LOG.clear()
++    return out
++
+ 
+ def _wall_share(f):
+     roles = f["outer_role_lm"]

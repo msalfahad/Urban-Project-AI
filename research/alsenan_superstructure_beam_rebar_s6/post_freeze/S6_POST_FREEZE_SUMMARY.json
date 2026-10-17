@@ -1,0 +1,251 @@
+{
+ "class_counts_christiannp": {
+  "BAR_RUN_CONVENTION": 42,
+  "BINDING_DIFFERENCE": 6,
+  "DETAIL_APPLICABILITY": 4,
+  "OCCURRENCE_DIFFERENCE": 58,
+  "SAME": 40,
+  "SCOPE_DIFFERENCE": 13,
+  "STIRRUP_GEOMETRY_MISSING": 63,
+  "WIDTH_SOURCE_CONFLICT": 2
+ },
+ "class_counts_freelancer_occurrences": {
+  "OCCURRENCE_DIFFERENCE": 12,
+  "SAME": 29
+ },
+ "class_counts_old_urban": {
+  "ANCHORAGE_MISSING": 158,
+  "ASSUMED_COMPONENT": 22,
+  "BAR_RUN_CONVENTION": 48,
+  "BINDING_DIFFERENCE": 12,
+  "DETAIL_APPLICABILITY": 8,
+  "HANGER_MISSING": 11,
+  "HOOK_MISSING": 66,
+  "MID_EXTENT": 9,
+  "OCCURRENCE_DIFFERENCE": 47,
+  "SAME": 132,
+  "SIDE_REBAR_SEMANTICS": 33,
+  "STIRRUP_GEOMETRY_MISSING": 92,
+  "WIDTH_SOURCE_CONFLICT": 1
+ },
+ "classes": [
+  "SCOPE_DIFFERENCE",
+  "OCCURRENCE_DIFFERENCE",
+  "BINDING_DIFFERENCE",
+  "WIDTH_SOURCE_CONFLICT",
+  "BAR_RUN_CONVENTION",
+  "DETAIL_APPLICABILITY",
+  "MID_EXTENT",
+  "HANGER_MISSING",
+  "ANCHORAGE_MISSING",
+  "HOOK_MISSING",
+  "STIRRUP_GEOMETRY_MISSING",
+  "SIDE_REBAR_SEMANTICS",
+  "ASSUMED_COMPONENT",
+  "UNKNOWN",
+  "SAME"
+ ],
+ "freeze_manifest_verified": true,
+ "frozen_engine_stamp": "d39f5f6+code:add76dd5f5e9c59a",
+ "references": {
+  "christiannp": {
+   "file": "CHRISTIANNP_FORENSIC_RERUN_2026_10_07/13_rebar/REBAR_EVIDENCE.csv",
+   "sha256": "5a56ed585b03f86490c28f15481f8697a662b8fe43838b475f74bdc9d6386ae6"
+  },
+  "freelancer_lineage_sha256": "8e525d73f2b2240c7f8bee196e95f4998f3c7f4459f29841bffffccc154b8ffa",
+  "old_urban": {
+   "R3_BEAM": "880afaff10264309b41f2c4344064e03f013d4828e328deeed40e1ed17afa00c",
+   "R3_CB": "fdd6be3614a5453d9eb14777248866dbba87670873c4e5feee247777b9985975"
+  },
+  "oracles_sha256": "b0c378224eb44a30703da67eea318956be188048b90c50f5b5bca7fe9251f304"
+ },
+ "rule": "comparison only; S6 is not tuned. A correction needs a new issue, new source evidence, a new regression and a new version.",
+ "totals": {
+  "CHRIS": {
+   "beam_longitudinal_kg": 3588.879999999999,
+   "beam_stirrup_kg": 1214.3099999999997,
+   "cb": "EXCLUDED (UNRESOLVED_COMPONENT)",
+   "decomposition_by_class": {
+    "BAR_RUN_CONVENTION": {
+     "ref_provisional_kg": 0.0,
+     "ref_verified_kg": 852.32,
+     "rows": 42,
+     "s6_kg": 813.1088850000002
+    },
+    "BINDING_DIFFERENCE": {
+     "ref_provisional_kg": 0.0,
+     "ref_verified_kg": 18.759999999999998,
+     "rows": 6,
+     "s6_kg": 0.0
+    },
+    "DETAIL_APPLICABILITY": {
+     "ref_provisional_kg": 0.0,
+     "ref_verified_kg": 355.28000000000003,
+     "rows": 4,
+     "s6_kg": 0.0
+    },
+    "OCCURRENCE_DIFFERENCE": {
+     "ref_provisional_kg": 0.0,
+     "ref_verified_kg": 1785.0800000000002,
+     "rows": 58,
+     "s6_kg": 1485.9921490000002
+    },
+    "SAME": {
+     "ref_provisional_kg": 0.0,
+     "ref_verified_kg": 525.3600000000001,
+     "rows": 40,
+     "s6_kg": 525.363163
+    },
+    "SCOPE_DIFFERENCE": {
+     "ref_provisional_kg": 0.0,
+     "ref_verified_kg": 0.0,
+     "rows": 13,
+     "s6_kg": 805.685103
+    },
+    "STIRRUP_GEOMETRY_MISSING": {
+     "ref_provisional_kg": 0.0,
+     "ref_verified_kg": 1214.3099999999995,
+     "rows": 63,
+     "s6_kg": 0.0
+    },
+    "WIDTH_SOURCE_CONFLICT": {
+     "ref_provisional_kg": 0.0,
+     "ref_verified_kg": 52.08,
+     "rows": 2,
+     "s6_kg": 0.0
+    }
+   },
+   "matched_longitudinal_chris_kg": 3588.880000000001,
+   "matched_longitudinal_s6_kg": 2368.628443,
+   "simple_members": 63
+  },
+  "FREELANCER": {
+   "beams_concrete_m3": 65.965875,
+   "beams_steel_t": 9.89,
+   "class": "SCOPE_DIFFERENCE (BEAMS steel is one lump; no bar, span or component rows - no kg difference or percentage is reported)"
+  },
+  "OLD_URBAN_CB_OCCURRENCES": [
+   "CB1",
+   "CB11",
+   "CB12",
+   "CB13",
+   "CB3",
+   "CB4",
+   "CB5",
+   "CB6",
+   "CB7",
+   "CB8",
+   "CB9"
+  ],
+  "OLD_URBAN_CB_PROVISIONAL_KG": 866.196769,
+  "OLD_URBAN_CB_VERIFIED_KG": 1361.9604929999998,
+  "OLD_URBAN_CB_VERIFIED_LONGITUDINAL_KG": 830.3901229999999,
+  "OLD_URBAN_DECOMPOSITION_BY_CLASS": {
+   "ANCHORAGE_MISSING": {
+    "ref_provisional_kg": 329.4150020000002,
+    "ref_verified_kg": 0.0,
+    "rows": 158,
+    "s6_kg": 0.0
+   },
+   "ASSUMED_COMPONENT": {
+    "ref_provisional_kg": 199.604739,
+    "ref_verified_kg": 0.0,
+    "rows": 22,
+    "s6_kg": 0.0
+   },
+   "BAR_RUN_CONVENTION": {
+    "ref_provisional_kg": 129.04564399999998,
+    "ref_verified_kg": 1773.1160810000001,
+    "rows": 48,
+    "s6_kg": 1632.723356
+   },
+   "BINDING_DIFFERENCE": {
+    "ref_provisional_kg": 24.357766,
+    "ref_verified_kg": 107.84321,
+    "rows": 12,
+    "s6_kg": 0.0
+   },
+   "DETAIL_APPLICABILITY": {
+    "ref_provisional_kg": 26.419295999999996,
+    "ref_verified_kg": 340.55951799999997,
+    "rows": 8,
+    "s6_kg": 0.0
+   },
+   "HANGER_MISSING": {
+    "ref_provisional_kg": 0.0,
+    "ref_verified_kg": 0.0,
+    "rows": 11,
+    "s6_kg": 0.0
+   },
+   "HOOK_MISSING": {
+    "ref_provisional_kg": 150.45613200000003,
+    "ref_verified_kg": 0.0,
+    "rows": 66,
+    "s6_kg": 0.0
+   },
+   "MID_EXTENT": {
+    "ref_provisional_kg": 284.148668,
+    "ref_verified_kg": 0.0,
+    "rows": 9,
+    "s6_kg": 265.20910399999997
+   },
+   "OCCURRENCE_DIFFERENCE": {
+    "ref_provisional_kg": 155.893248,
+    "ref_verified_kg": 175.530865,
+    "rows": 47,
+    "s6_kg": 372.501827
+   },
+   "SAME": {
+    "ref_provisional_kg": 136.06002200000006,
+    "ref_verified_kg": 1114.2129390000002,
+    "rows": 132,
+    "s6_kg": 1114.2211829999997
+   },
+   "SIDE_REBAR_SEMANTICS": {
+    "ref_provisional_kg": 0.0,
+    "ref_verified_kg": 0.0,
+    "rows": 33,
+    "s6_kg": 0.0
+   },
+   "STIRRUP_GEOMETRY_MISSING": {
+    "ref_provisional_kg": 148.27195799999996,
+    "ref_verified_kg": 1384.9876550000008,
+    "rows": 92,
+    "s6_kg": 0.0
+   },
+   "WIDTH_SOURCE_CONFLICT": {
+    "ref_provisional_kg": 16.655485,
+    "ref_verified_kg": 0.0,
+    "rows": 1,
+    "s6_kg": 0.0
+   }
+  },
+  "OLD_URBAN_MULTI_ENGINE_BEAMS_RELEASED_KG": 4115.881,
+  "OLD_URBAN_SIMPLE_MATCHED_ROWS": 75,
+  "OLD_URBAN_SIMPLE_PROVISIONAL_KG": 404.7161889999998,
+  "OLD_URBAN_SIMPLE_UNMATCHED_ROWS": [
+   "BEAM:GF:B20:H1110",
+   "BEAM:GF:B24:H6170",
+   "BEAM:GF:B3:H6183"
+  ],
+  "OLD_URBAN_SIMPLE_VERIFIED_KG": 3534.2897750000016,
+  "OLD_URBAN_SIMPLE_VERIFIED_LONGITUDINAL_KG": 2680.8724900000007,
+  "OLD_URBAN_SIMPLE_VERIFIED_STIRRUP_KG": 853.4172850000009,
+  "ROUGH_150_KG_M3": {
+   "class": "SCOPE_DIFFERENCE (estimating sanity only; never an accurate input)",
+   "value_kg": 5638.05
+  },
+  "S6_CB_KNOWN_KG": 805.6851037037036,
+  "S6_MID_KNOWN_KG": 265.2091037037037,
+  "S6_SIMPLE_KNOWN_KG": 2824.464197530866,
+  "S6_TOTAL_KNOWN_KG": 3630.1493012345695,
+  "UC4N": {
+   "answer": "INCOMPLETE",
+   "net_rebar_t": 22.619,
+   "oracle": "UC4N",
+   "state": "KNOWN_INCOMPLETE"
+  },
+  "UC4N_CLASS": "SCOPE_DIFFERENCE (project net rebar only, KNOWN_INCOMPLETE; no beam split)"
+ },
+ "unknown_rows": []
+}

@@ -1,0 +1,826 @@
+{
+ "summary": {
+  "dup_text": {
+   "pass": 10,
+   "fail": 0,
+   "items_invariant": 10
+  },
+  "explode": {
+   "pass": 10,
+   "fail": 0,
+   "items_invariant": 10
+  },
+  "mirror_x": {
+   "pass": 0,
+   "fail": 10,
+   "items_invariant": 10
+  },
+  "noise_layer": {
+   "pass": 3,
+   "fail": 7,
+   "items_invariant": 9
+  },
+  "reorder": {
+   "pass": 10,
+   "fail": 0,
+   "items_invariant": 10
+  },
+  "rot180": {
+   "pass": 10,
+   "fail": 0,
+   "items_invariant": 10
+  },
+  "rot270": {
+   "pass": 10,
+   "fail": 0,
+   "items_invariant": 10
+  },
+  "rot90": {
+   "pass": 10,
+   "fail": 0,
+   "items_invariant": 10
+  },
+  "translate": {
+   "pass": 10,
+   "fail": 0,
+   "items_invariant": 10
+  },
+  "units_m": {
+   "pass": 10,
+   "fail": 0,
+   "items_invariant": 10
+  }
+ },
+ "drawings": {
+  "401": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 1,
+    "error": null,
+    "first": [
+     {
+      "key": "SCOPE|BOUNDED|RC",
+      "field": "low",
+      "original": 100.699,
+      "transformed": 101.117,
+      "delta": 0.418
+     }
+    ]
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "dup_text": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "402": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 1,
+    "error": null,
+    "first": [
+     {
+      "key": "SCOPE|BOUNDED|RC",
+      "field": "low",
+      "original": 125.312,
+      "transformed": 125.403,
+      "delta": 0.091
+     }
+    ]
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "dup_text": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 1,
+    "error": null,
+    "first": [
+     {
+      "key": "SCOPE|BOUNDED|RC",
+      "field": "high",
+      "original": 144.712,
+      "transformed": 157.957,
+      "delta": 13.245
+     }
+    ]
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "403": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 1,
+    "error": null,
+    "first": [
+     {
+      "key": "SCOPE|BOUNDED|RC",
+      "field": "low",
+      "original": 119.469,
+      "transformed": 119.788,
+      "delta": 0.319
+     }
+    ]
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "dup_text": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 1,
+    "error": null,
+    "first": [
+     {
+      "key": "SCOPE|BOUNDED|RC",
+      "field": "high",
+      "original": 148.171,
+      "transformed": 303.341,
+      "delta": 155.17
+     }
+    ]
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "404": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 1,
+    "error": null,
+    "first": [
+     {
+      "key": "SCOPE|BOUNDED|RC",
+      "field": "low",
+      "original": 49.03,
+      "transformed": 49.591,
+      "delta": 0.561
+     }
+    ]
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "dup_text": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 1,
+    "error": null,
+    "first": [
+     {
+      "key": "SCOPE|BOUNDED|RC",
+      "field": "high",
+      "original": 82.762,
+      "transformed": 79.762,
+      "delta": -3.0
+     }
+    ]
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "405": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 1,
+    "error": null,
+    "first": [
+     {
+      "key": "SCOPE|BOUNDED|RC",
+      "field": "low",
+      "original": 65.578,
+      "transformed": 65.755,
+      "delta": 0.177
+     }
+    ]
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "dup_text": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "406": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 1,
+    "error": null,
+    "first": [
+     {
+      "key": "SCOPE|BOUNDED|RC",
+      "field": "low",
+      "original": 89.854,
+      "transformed": 90.204,
+      "delta": 0.35
+     }
+    ]
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "dup_text": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "407": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 1,
+    "error": null,
+    "first": [
+     {
+      "key": "SCOPE|BOUNDED|RC",
+      "field": "low",
+      "original": 55.671,
+      "transformed": 56.095,
+      "delta": 0.424
+     }
+    ]
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "dup_text": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 1,
+    "error": null,
+    "first": [
+     {
+      "key": "SCOPE|BOUNDED|RC",
+      "field": "high",
+      "original": 98.327,
+      "transformed": 154.013,
+      "delta": 55.686
+     }
+    ]
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "408": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 1,
+    "error": null,
+    "first": [
+     {
+      "key": "SCOPE|BOUNDED|RC",
+      "field": "low",
+      "original": 79.77,
+      "transformed": 79.877,
+      "delta": 0.107
+     }
+    ]
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "dup_text": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 7,
+    "error": null,
+    "first": [
+     {
+      "key": "CONCRETE|SLABS|GF|PROVISIONAL",
+      "field": "base",
+      "original": 13.5264,
+      "transformed": 13.355496643,
+      "delta": -0.170903357
+     },
+     {
+      "key": "CONCRETE|SLABS|GF|PROVISIONAL",
+      "field": "high",
+      "original": 13.5264,
+      "transformed": 13.355496643,
+      "delta": -0.170903357
+     },
+     {
+      "key": "CONCRETE|SLABS|GF|PROVISIONAL",
+      "field": "low",
+      "original": 13.5264,
+      "transformed": 13.355496643,
+      "delta": -0.170903357
+     }
+    ]
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "409": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 1,
+    "error": null,
+    "first": [
+     {
+      "key": "SCOPE|BOUNDED|RC",
+      "field": "low",
+      "original": 144.598,
+      "transformed": 144.992,
+      "delta": 0.394
+     }
+    ]
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "dup_text": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 1,
+    "error": null,
+    "first": [
+     {
+      "key": "SCOPE|BOUNDED|RC",
+      "field": "high",
+      "original": 178.225,
+      "transformed": 175.225,
+      "delta": -3.0
+     }
+    ]
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "410": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 1,
+    "error": null,
+    "first": [
+     {
+      "key": "SCOPE|BOUNDED|RC",
+      "field": "low",
+      "original": 113.695,
+      "transformed": 114.18,
+      "delta": 0.485
+     }
+    ]
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "dup_text": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 1,
+    "error": null,
+    "first": [
+     {
+      "key": "SCOPE|BOUNDED|RC",
+      "field": "high",
+      "original": 150.98,
+      "transformed": 172.298,
+      "delta": 21.318
+     }
+    ]
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  }
+ }
+}

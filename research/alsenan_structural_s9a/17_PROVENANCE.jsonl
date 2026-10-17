@@ -1,0 +1,158 @@
+{"handle": "54D", "id": "S9A-CP-01", "method": "legend hatch spacing from PDF vector paths", "page": 4, "pdf": "ST7757.pdf", "sheet": "GFRS", "source": "ST7757.dxf"}
+{"handle": "2B1", "id": "S9A-CP-02", "method": "legend hatch spacing from PDF vector paths", "page": 4, "pdf": "ST7757.pdf", "sheet": "GFRS", "source": "ST7757.dxf"}
+{"handle": "2B4", "id": "S9A-CP-03", "method": "legend hatch spacing from PDF vector paths", "page": 4, "pdf": "ST7757.pdf", "sheet": "GFRS", "source": "ST7757.dxf"}
+{"handle": "273", "id": "S9A-CP-04", "method": "legend hatch spacing from PDF vector paths", "page": 4, "pdf": "ST7757.pdf", "sheet": "GFRS", "source": "ST7757.dxf"}
+{"handle": "5E0", "id": "S9A-CP-05", "method": "legend hatch spacing from PDF vector paths", "page": 5, "pdf": "ST7757.pdf", "sheet": "FFRS", "source": "ST7757.dxf"}
+{"handle": "391", "id": "S9A-CP-06", "method": "legend hatch spacing from PDF vector paths", "page": 6, "pdf": "ST7757.pdf", "sheet": "SFRS", "source": "ST7757.dxf"}
+{"handle": "390", "id": "S9A-CP-07", "method": "legend hatch spacing from PDF vector paths", "page": 6, "pdf": "ST7757.pdf", "sheet": "SFRS", "source": "ST7757.dxf"}
+{"handle": "38C", "id": "S9A-CP-08", "method": "legend hatch spacing from PDF vector paths", "page": 6, "pdf": "ST7757.pdf", "sheet": "SFRS", "source": "ST7757.dxf"}
+{"id": "BM-1F_ROOF-B1-BL014-6D0", "line": "BL014", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [14061.9, 15982.923]}
+{"id": "BM-1F_ROOF-B1-BL016-6CE", "line": "BL016", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [15911.9, 17361.9]}
+{"id": "BM-1F_ROOF-B1-BL028-6CB", "line": "BL028", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [19687.9, 21687.9]}
+{"id": "BM-1F_ROOF-B11-BL025-6D8", "line": "BL025", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [21662.9, 26860.7]}
+{"id": "BM-1F_ROOF-B18-BL008-6ED", "line": "BL008", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [8961.9, 14061.9]}
+{"id": "BM-1F_ROOF-B19-BL029-6CF", "line": "BL029", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [23469.48, 26629.964]}
+{"id": "BM-1F_ROOF-B2-BL016-6C9", "line": "BL016", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [17361.9, 20711.9]}
+{"id": "BM-1F_ROOF-B2-BL017-6CA", "line": "BL017", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [17361.9, 20561.9]}
+{"id": "BM-1F_ROOF-B2-BL019-6BA", "line": "BL019", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [17361.9, 20561.9]}
+{"id": "BM-1F_ROOF-B23-BL009-74B", "line": "BL009", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [15887.9, 19687.9]}
+{"id": "BM-1F_ROOF-B25-BL006-6D1", "line": "BL006", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [8961.9, 16221.997]}
+{"id": "BM-1F_ROOF-B3-BL023-6B9", "line": "BL023", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [16987.9, 19687.9]}
+{"id": "BM-1F_ROOF-B4-BL011-711", "line": "BL011", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [12587.9, 16849.6]}
+{"id": "BM-1F_ROOF-B4-BL025-6D9", "line": "BL025", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [17037.9, 21662.9]}
+{"id": "BM-1F_ROOF-B4-BL032-6B5", "line": "BL032", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [27307.9, 31632.9]}
+{"id": "BM-1F_ROOF-B5-BL007-6EC", "line": "BL007", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [8936.9, 14061.9]}
+{"id": "BM-1F_ROOF-B5-BL022-6C4", "line": "BL022", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [16586.9, 20686.9]}
+{"id": "BM-1F_ROOF-B6-BL012-76C", "line": "BL012", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": null}
+{"id": "BM-1F_ROOF-B6-BL013-6BD", "line": "BL013", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": null}
+{"id": "BM-1F_ROOF-B6-BL014-6C5", "line": "BL014", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [15982.923, 20711.9]}
+{"id": "BM-1F_ROOF-B6-BL030-6D7", "line": "BL030", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": null}
+{"id": "BM-1F_ROOF-B6-BL031-6D4", "line": "BL031", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": null}
+{"id": "BM-1F_ROOF-B7-BL017-6CD", "line": "BL017", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [15661.9, 17361.9]}
+{"id": "BM-1F_ROOF-B7-BL027-6CC", "line": "BL027", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [19687.9, 21712.9]}
+{"id": "BM-2F_ROOF-B1-BL002-78B", "line": "BL002", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [15761.9, 17361.9]}
+{"id": "BM-2F_ROOF-B1-BL003-78C", "line": "BL003", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [15661.9, 17361.9]}
+{"id": "BM-2F_ROOF-B1-BL006-78F", "line": "BL006", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [19687.9, 21687.9]}
+{"id": "BM-2F_ROOF-B1-BL011-78D", "line": "BL011", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [19687.9, 21687.9]}
+{"id": "BM-2F_ROOF-B15-BL004-7A9", "line": "BL004", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [17361.9, 20561.9]}
+{"id": "BM-2F_ROOF-B2-BL006-78E", "line": "BL006", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [21687.9, 24887.9]}
+{"id": "BM-2F_ROOF-B2-BL006-790", "line": "BL006", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [16956.7, 19687.9]}
+{"id": "BM-2F_ROOF-B2-BL010-775", "line": "BL010", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [21687.9, 24887.9]}
+{"id": "BM-2F_ROOF-B2-BL010-78A", "line": "BL010", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [19687.9, 21687.9]}
+{"id": "BM-2F_ROOF-B3-BL002-79B", "line": "BL002", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [17361.9, 20711.9]}
+{"id": "BM-2F_ROOF-B3-BL003-79C", "line": "BL003", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [17361.9, 20561.9]}
+{"id": "BM-2F_ROOF-B3-BL007-79D", "line": "BL007", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [16987.9, 19687.9]}
+{"id": "BM-2F_ROOF-B3-BL008-774", "line": "BL008", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [17012.9, 19687.9]}
+{"id": "BM-2F_ROOF-B7-BL001-7A1", "line": "BL001", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [15993.6, 20711.9]}
+{"id": "BM-2F_ROOF-B8-BL007-79E", "line": "BL007", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [19687.9, 23557.9]}
+{"id": "BM-GF_ROOF-B1-BL004-476", "line": "BL004", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [12562.9, 14437.9]}
+{"id": "BM-GF_ROOF-B1-BL004-477", "line": "BL004", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [14437.9, 17012.9]}
+{"id": "BM-GF_ROOF-B1-BL008-478", "line": "BL008", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [7411.9, 9061.9]}
+{"id": "BM-GF_ROOF-B1-BL012-50E", "line": "BL012", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [7461.9, 8936.9]}
+{"id": "BM-GF_ROOF-B1-BL016-45D", "line": "BL016", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": null}
+{"id": "BM-GF_ROOF-B1-BL023-466", "line": "BL023", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [13061.9, 15858.994]}
+{"id": "BM-GF_ROOF-B1-BL027-4B7", "line": "BL027", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [15911.9, 17361.9]}
+{"id": "BM-GF_ROOF-B1-BL034-447", "line": "BL034", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [18711.9, 20686.9]}
+{"id": "BM-GF_ROOF-B1-BL037-45E", "line": "BL037", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [19687.9, 21687.9]}
+{"id": "BM-GF_ROOF-B1-BL040-445", "line": "BL040", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [21687.9, 23357.9]}
+{"id": "BM-GF_ROOF-B1-BL047-6A1", "line": "BL047", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [31407.9, 33082.9]}
+{"id": "BM-GF_ROOF-B1-BL048-430", "line": "BL048", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [31507.9, 33082.9]}
+{"id": "BM-GF_ROOF-B11-BL023-444", "line": "BL023", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [15858.994, 18711.9]}
+{"id": "BM-GF_ROOF-B13-BL042-467", "line": "BL042", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [26120.325, 30135.568]}
+{"id": "BM-GF_ROOF-B14-BL036-45F", "line": "BL036", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [19687.9, 21712.9]}
+{"id": "BM-GF_ROOF-B16-BL030-473", "line": "BL030", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [16586.9, 20686.9]}
+{"id": "BM-GF_ROOF-B17-BL044-432", "line": "BL044", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [27307.9, 33082.9]}
+{"id": "BM-GF_ROOF-B2-BL005-485", "line": "BL005", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [1987.9, 4787.9]}
+{"id": "BM-GF_ROOF-B2-BL016-492", "line": "BL016", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [17361.9, 20561.9]}
+{"id": "BM-GF_ROOF-B2-BL028-449", "line": "BL028", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [17361.9, 20561.9]}
+{"id": "BM-GF_ROOF-B20-BL020-453:b20>v", "line": "BL020", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [16987.9, 19687.9]}
+{"id": "BM-GF_ROOF-B21-BL001-468", "line": "BL001", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [-12084.418, -4316.089]}
+{"id": "BM-GF_ROOF-B22-BL013-496", "line": "BL013", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [8911.9, 15511.9]}
+{"id": "BM-GF_ROOF-B24-BL043-1814:B24>v", "line": "BL043", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [27457.9, 31507.9]}
+{"id": "BM-GF_ROOF-B26-BL014-4CC", "line": "BL014", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [8249.8, 15899.918]}
+{"id": "BM-GF_ROOF-B27-BL002-532", "line": "BL002", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [-1151.488, 2843.859]}
+{"id": "BM-GF_ROOF-B28-BL026-46C", "line": "BL026", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [15086.9, 16566.7]}
+{"id": "BM-GF_ROOF-B29-BL039-465", "line": "BL039", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [20637.9, 27847.598]}
+{"id": "BM-GF_ROOF-B3-BL027-448", "line": "BL027", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [17361.9, 20686.9]}
+{"id": "BM-GF_ROOF-B3-BL032-462", "line": "BL032", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [16987.9, 20637.9]}
+{"id": "BM-GF_ROOF-B3-BL033-6B7", "line": "BL033", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [16987.9, 19687.9]}
+{"id": "BM-GF_ROOF-B4-BL009-49B:b4>v", "line": "BL009", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [7411.9, 12111.9]}
+{"id": "BM-GF_ROOF-B4-BL010-508", "line": "BL010", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [7411.9, 12086.9]}
+{"id": "BM-GF_ROOF-B4-BL022-497", "line": "BL022", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [16864.138, 20637.9]}
+{"id": "BM-GF_ROOF-B4-BL025-46B", "line": "BL025", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [14261.9, 16566.7]}
+{"id": "BM-GF_ROOF-B4-BL040-446", "line": "BL040", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [23357.9, 27357.9]}
+{"id": "BM-GF_ROOF-B4-BL045-4DB", "line": "BL045", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [27656.439, 31613.373]}
+{"id": "BM-GF_ROOF-B5-BL022-498", "line": "BL022", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [12562.9, 16864.138]}
+{"id": "BM-GF_ROOF-B7-BA001-47D:b7>v", "line": null, "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": null}
+{"id": "BM-GF_ROOF-B7-BA002-46E", "line": null, "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": null}
+{"id": "BM-GF_ROOF-B7-BA003-470", "line": null, "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": null}
+{"id": "BM-GF_ROOF-B7-BA004-46F", "line": null, "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": null}
+{"id": "BM-GF_ROOF-B7-BA005-471", "line": null, "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": null}
+{"id": "BM-GF_ROOF-B7-BL028-4B6", "line": "BL028", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [15661.9, 17361.9]}
+{"id": "BM-GF_ROOF-B7-BL046-4D2", "line": "BL046", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": null}
+{"id": "BM-GF_ROOF-B8-BL031-472", "line": "BL031", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": null}
+{"id": "BM-GF_ROOF-B9-BL011-5BD", "line": "BL011", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [7411.9, 13811.9]}
+{"id": "BM-GF_ROOF-CA-BL015-69E", "line": "BL015", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [8936.9, 10211.9]}
+{"id": "CBO-FFRS-CB10-BL001#SPAN1", "line": "BL001", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [9061.9, 11911.9]}
+{"id": "CBO-FFRS-CB10-BL001#SPAN2", "line": "BL001", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [11911.9, 16086.9]}
+{"id": "CBO-FFRS-CB11-BL024#SPAN1", "line": "BL024", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [16849.6, 24307.9]}
+{"id": "CBO-FFRS-CB11-BL024#SPAN2", "line": "BL024", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [24307.9, 27657.9]}
+{"id": "CBO-FFRS-CB11-BL024#SPAN3", "line": "BL024", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [27657.9, 31507.9]}
+{"id": "CBO-FFRS-CB12-BL003#SPAN1", "line": "BL003", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [8911.9, 15086.9]}
+{"id": "CBO-FFRS-CB12-BL003#SPAN2", "line": "BL003", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [15086.9, 20686.9]}
+{"id": "CBO-FFRS-CB13-BL004#SPAN1", "line": "BL004", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [8911.9, 12361.9]}
+{"id": "CBO-FFRS-CB13-BL004#SPAN2", "line": "BL004", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [12361.9, 16086.9]}
+{"id": "CBO-FFRS-CB9-BL023#SPAN1", "line": "BL023", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [19687.9, 23557.9]}
+{"id": "CBO-FFRS-CB9-BL023#SPAN2", "line": "BL023", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [23557.9, 27457.9]}
+{"id": "CBO-FFRS-CB9-BL023#SPAN3", "line": "BL023", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [27457.9, 31507.9]}
+{"id": "CBO-GFRS-CB1-BL007#SPAN1", "line": "BL007", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [7511.9, 14961.9]}
+{"id": "CBO-GFRS-CB1-BL007#SPAN2", "line": "BL007", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [14961.9, 20561.9]}
+{"id": "CBO-GFRS-CB2-BL038#SPAN1", "line": "BL038", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [19687.9, 23557.9]}
+{"id": "CBO-GFRS-CB2-BL038#SPAN2", "line": "BL038", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [23557.9, 27457.9]}
+{"id": "CBO-GFRS-CB3-BL022#SPAN1", "line": "BL022", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [20637.9, 24307.9]}
+{"id": "CBO-GFRS-CB3-BL022#SPAN2", "line": "BL022", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [24307.9, 27657.9]}
+{"id": "CBO-GFRS-CB3-BL022#SPAN3", "line": "BL022", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [27657.9, 31474.414]}
+{"id": "CBO-GFRS-CB4-BL016#SPAN1", "line": "BL016", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [9637.5, 12361.9]}
+{"id": "CBO-GFRS-CB4-BL016#SPAN2", "line": "BL016", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [12361.9, 16111.9]}
+{"id": "CBO-GFRS-CB5-BL008#SPAN1", "line": "BL008", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [9061.9, 11911.9]}
+{"id": "CBO-GFRS-CB5-BL008#SPAN2", "line": "BL008", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": null}
+{"id": "CBO-GFRS-CB6-BL004#SPAN1", "line": "BL004", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [1987.9, 6337.9]}
+{"id": "CBO-GFRS-CB6-BL004#SPAN2", "line": "BL004", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [6337.9, 12562.9]}
+{"id": "CBO-GFRS-CB7-BL003#SPAN1", "line": "BL003", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [2087.9, 7937.9]}
+{"id": "CBO-GFRS-CB7-BL003#SPAN2", "line": "BL003", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [7937.9, 14087.9]}
+{"id": "CBO-GFRS-CB8-BL024#SPAN1", "line": "BL024", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [17912.9, 24457.9]}
+{"id": "CBO-GFRS-CB8-BL024#SPAN2", "line": "BL024", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [24457.9, 31407.9]}
+{"id": "CBO-GFRS-CB8-BL024#SPAN3", "line": "BL024", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": null}
+{"id": "SPAN:FFRS:BL002:8912-14499", "line": "BL002", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [8912.0, 14499.0]}
+{"id": "SPAN:FFRS:BL005:11912-16087", "line": "BL005", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [11912.0, 16087.0]}
+{"id": "SPAN:FFRS:BL005:9062-11912", "line": "BL005", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [9062.0, 11912.0]}
+{"id": "SPAN:FFRS:BL008:14062-15912", "line": "BL008", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [14062.0, 15912.0]}
+{"id": "SPAN:FFRS:BL009:12388-15888", "line": "BL009", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [12388.0, 15888.0]}
+{"id": "SPAN:FFRS:BL010:12388-15888", "line": "BL010", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [12388.0, 15888.0]}
+{"id": "SPAN:FFRS:BL010:15888-16957", "line": "BL010", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [15888.0, 16957.0]}
+{"id": "SPAN:FFRS:BL018:16004-20492", "line": "BL018", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [16004.0, 20492.0]}
+{"id": "SPAN:FFRS:BL019:16087-17362", "line": "BL019", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [16087.0, 17362.0]}
+{"id": "SPAN:FFRS:BL020:16087-17362", "line": "BL020", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [16087.0, 17362.0]}
+{"id": "SPAN:FFRS:BL021:16482-20442", "line": "BL021", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [16482.0, 20442.0]}
+{"id": "SPAN:FFRS:BL029:26630-29105", "line": "BL029", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [26630.0, 29105.0]}
+{"id": "SPAN:FFRS:BL033:30758-31508", "line": "BL033", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [30758.0, 31508.0]}
+{"id": "SPAN:GFRS:BL002:2844-4653", "line": "BL002", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [2844.0, 4653.0]}
+{"id": "SPAN:GFRS:BL010:12087-12712", "line": "BL010", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [12087.0, 12712.0]}
+{"id": "SPAN:GFRS:BL013:7462-8912", "line": "BL013", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [7462.0, 8912.0]}
+{"id": "SPAN:GFRS:BL017:11912-16112", "line": "BL017", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [11912.0, 16112.0]}
+{"id": "SPAN:GFRS:BL020:12388-15888", "line": "BL020", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [12388.0, 15888.0]}
+{"id": "SPAN:GFRS:BL020:15888-16988", "line": "BL020", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [15888.0, 16988.0]}
+{"id": "SPAN:GFRS:BL021:12388-15888", "line": "BL021", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [12388.0, 15888.0]}
+{"id": "SPAN:GFRS:BL021:15888-16957", "line": "BL021", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [15888.0, 16957.0]}
+{"id": "SPAN:GFRS:BL023:18712-20687", "line": "BL023", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [18712.0, 20687.0]}
+{"id": "SPAN:GFRS:BL024:14088-17913", "line": "BL024", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [14088.0, 17913.0]}
+{"id": "SPAN:GFRS:BL029:16412-17362", "line": "BL029", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [16412.0, 17362.0]}
+{"id": "SPAN:GFRS:BL042:24521-26120", "line": "BL042", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [24521.0, 26120.0]}
+{"id": "SPAN:GFRS:BL043:31508-33083", "line": "BL043", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [31508.0, 33083.0]}
+{"id": "SPAN:SFRS:BL001:14112-15994", "line": "BL001", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [14112.0, 15994.0]}
+{"id": "SPAN:SFRS:BL002:14112-15762", "line": "BL002", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [14112.0, 15762.0]}
+{"id": "SPAN:SFRS:BL003:14112-15662", "line": "BL003", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [14112.0, 15662.0]}
+{"id": "SPAN:SFRS:BL004:14112-17362", "line": "BL004", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [14112.0, 17362.0]}
+{"id": "SPAN:SFRS:BL005:14112-17362", "line": "BL005", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [14112.0, 17362.0]}
+{"id": "SPAN:SFRS:BL007:23558-24888", "line": "BL007", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [23558.0, 24888.0]}
+{"id": "BM-GF_ROOF-B3-BL022-1827", "line": "BL022", "source": "S9 02 + S1 + S6 + PRE-S7 thickness", "stations": [24307.9, 27657.9]}

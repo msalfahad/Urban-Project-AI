@@ -1,0 +1,10 @@
+{
+ "files": {
+  "REFERENCE_TEMPLATE.json": "b612762cb389c73c286d869b88e32bce82474421d33b81610074deef5a50040c",
+  "URBAN_BLIND_V2_PROTOCOL.json": "30934e06399be184928588dbc17e238ef5e0b1a4f51b89250f2054d7873d8ad3",
+  "URBAN_BLIND_V2_PROTOCOL.md": "f058db1446ca2910daf975f7789df3be4cf2bf85b0b397e2c713b3ccf421d068",
+  "blind_score_v2.py": "93ce1834a1713a536287372e5ca011ac2bdd44004392bedd7803e3866f132b56"
+ },
+ "meaning": "the files of the protocol as sealed before any second-villa run; a change voids the round",
+ "protocol": "URBAN_BLIND_V2"
+}

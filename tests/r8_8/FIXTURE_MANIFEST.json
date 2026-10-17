@@ -1,0 +1,15 @@
+{
+ "SCHEMA": "URBAN_R8_8_FIXTURE_MANIFEST_V1",
+ "rule": "declared fixtures of the R8.8 real-data tests. Untracked project data: a missing fixture skips (stated reason); a fixture whose sha256 differs FAILS.",
+ "fixtures": {
+  "data/runs/cad_convert/QORTUBA_ARCHITECTURAL.json": "7dbafb3ddd59076664f05c2f3c539d3133b295002c90e3f6f26ffd01737d5e36",
+  "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01/pa08_qortuba/PA08_BLIND_CONFIG.json": "04c4838fab1c41ba2769954c4b86fd9408c672c39304071a9aefe41f57002b32",
+  "data/inputs/by_sha256/66ea72057266d006ee111325dac69fbbb8d8e87d6415fcee6a69486e5f62b641.dxf": "66ea72057266d006ee111325dac69fbbb8d8e87d6415fcee6a69486e5f62b641"
+ },
+ "derived_inputs": {
+  "66ea7205...dxf": "LibreDWG 0.13.3 (pinned dwgread) DXF output of the OLD Qortuba DWG 2ec3a9c8; the K2 route reads it"
+ },
+ "lab_only_inputs": {
+  "df0e1d69...dxf": "new-revision DXF (214 MB); read only by the lab (r8_8_topology.py), never by a unit test"
+ }
+}

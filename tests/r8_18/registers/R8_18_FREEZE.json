@@ -1,0 +1,334 @@
+{
+ "SCHEMA": "URBAN_R8_18_FREEZE_V1",
+ "recommendation_written_first": {
+  "file": "research/external_engine_lab/r8_18_recommendation.json",
+  "commit": "0107408",
+  "sha256": "64167da4e1494d9c392ac76e5f581d45d52c79df7bb33c5b2d3d0a4f7b4ec059"
+ },
+ "frozen_commit": "bcac8a30b5a17006dd80391d85cd76e7b257c651",
+ "policies": {
+  "wall_face_v2": [
+   "WALL_FACE_SURFACE_POLICY_V2",
+   "2ad645a86c45adae6f1996fdcfb1c6c86c913267529a5c289ba20ada2027f4d4"
+  ],
+  "wall_height": [
+   "WALL_HEIGHT_AUTHORITY_POLICY_V1",
+   "e7cc4cd65687dd7b2363415030c5795dc498f0a305ce3345dab804d5b60cf803"
+  ],
+  "reveal_finish": [
+   "REVEAL_FINISH_POLICY_V1",
+   "d26f9dd5fb80e7eb8425a925ea98b35fa7fa703b8c2ab6c288d264ab2c1785e6"
+  ],
+  "waterproofing": [
+   "WATERPROOFING_POLICY_V1",
+   "16e1955b9443bf4b39fdc1ef9e287acea5e536e6165a27f712d06638cc9f5c90"
+  ],
+  "owner_method_fact": [
+   "OWNER_METHOD_FACT_POLICY_V5",
+   "71bce0c31d325cb2bc3d88f828849099c242f1ca595324814a478a8bac154916"
+  ]
+ },
+ "unchanged": {
+  "wall_face_v1": [
+   "WALL_FACE_SURFACE_POLICY_V1",
+   "a2ba3bfb96cdab5f0d45b1d024a63bfff2bce325a274e9a5df9f5cecba570258"
+  ],
+  "wall_contact_path_v4": [
+   "WALL_CONTACT_PATH_POLICY_V4",
+   "0426020a17326bfed5d4f3e92e5b4b738cee9908844f5dcb6a26fa2760b72d8a"
+  ],
+  "door_opening_closure": [
+   "DOOR_OPENING_CLOSURE_POLICY_V2",
+   "23142e50a6f92ac4e540e973ba580d067e2983f6bb15b72d83c98a5666e7a790"
+  ],
+  "wall_band": [
+   "WALL_BAND_POLICY_V5",
+   "d1ff58e755bb88f4bbb7a9813427b7ac6f054ece851df7d9a048866641f3e6d3"
+  ],
+  "topology_closure": [
+   "TOPOLOGY_CLOSURE_POLICY_V1",
+   "46742c570b4d8a036fd6b7446f28055bfd4e1adbff51966e800e5986ca99ccb2"
+  ]
+ },
+ "engine_file_sha256": {
+  "engine/source/wall_faces_v2.py": "7c443588c66897325b0276eca338ae3a26cc26ff5d5ad69436f8775dd0ef1df8",
+  "engine/source/wall_height.py": "e0d35a5060f598ef1f366b27e7d7653934eb5c13b534b39f61a1b09296a909c0",
+  "engine/source/reveal_finish.py": "6728c02df4ff4f1dc661a4a5e30a27e6bbbfd65b8cee339ae612e7a93bfab643",
+  "engine/source/waterproofing.py": "df80341430dc9c34df86532a9a39d34da8b7d92e9e5cc0bf94279ba290778b25"
+ },
+ "facts_sha256": {
+  "data/registry/OWNER_METHOD_FACTS.json": "17112a7711034d05495f7c6b4e1e6a16083ea9a2138207f2b1f25bf6de8fc48c",
+  "data/registry/URBAN_OWNER_METHOD_RULES.json": "96b6201b95e09244bf21dc7daad37259a5e21b6e7d4a95a5e06712bcf91e5b7a",
+  "data/registry/OWNER_PHYSICAL_FACTS.json": "a49923884fbcda8ee85b5f76cb849a62d58b100e328495d66515d10100d03cbf"
+ },
+ "blind_script_sha256": "3775d753a88ce25a415670586158ba9017f617f5617619cb0d1c4e02c21a0e67",
+ "synthetic_test_sha256": {
+  "tests/r8_18/test_r8_18_height_reveal.py": "a488023884f353c9ef73d93deb576341262a5f9dea2b758e0bf786d244120d80",
+  "tests/r8_18/test_r8_18_wall_faces_v2.py": "b52b3d819ff3b2965d079e7c2b961310a6d3310913a9af308b1c38d2b457dad3",
+  "tests/r8_18/test_r8_18_waterproofing.py": "571a1a27844d7ddd6c41af99e04150b8a0ce0ca0764f92bc5af83f95c9641c42"
+ },
+ "synthetic_tests": [
+  "test_r8_18_height_reveal::test_the_best_ranked_established_candidate_governs_and_all_are_kept",
+  "test_r8_18_height_reveal::test_floor_to_floor_alone_is_never_a_wall_height",
+  "test_r8_18_height_reveal::test_a_derivation_with_one_unknown_component_is_blocked_and_never_defaulted",
+  "test_r8_18_height_reveal::test_a_blocked_derivation_falls_to_the_owner_fact_rank",
+  "test_r8_18_height_reveal::test_a_finish_height_above_an_unproven_available_height_is_only_a_potential_conflict_never_clipped",
+  "test_r8_18_height_reveal::test_the_frame_plane_splits_reveal_ownership_and_a_flush_frame_leaves_no_reveal",
+  "test_r8_18_height_reveal::test_finish_states_default_plaster_paint_only_on_painted_dry_porcelain_only_explicit",
+  "test_r8_18_wall_faces_v2::test_01_blank_wall",
+  "test_r8_18_wall_faces_v2::test_02_one_door_deducts_its_rectangle_and_keeps_the_wall_above",
+  "test_r8_18_wall_faces_v2::test_03_a_normal_window_keeps_the_wall_below_and_above_wf_o1",
+  "test_r8_18_wall_faces_v2::test_04_two_windows_each_one_rectangle",
+  "test_r8_18_wall_faces_v2::test_05_a_window_top_below_the_trade_height_has_an_above_surface",
+  "test_r8_18_wall_faces_v2::test_06_a_window_reaching_the_trade_height_has_no_above_surface",
+  "test_r8_18_wall_faces_v2::test_07_a_floor_reaching_sliding_glass_door_has_no_low_wall",
+  "test_r8_18_wall_faces_v2::test_08_full_height_glazing_removes_the_whole_plane_span",
+  "test_r8_18_wall_faces_v2::test_09_a_low_head_passage_has_two_head_faces",
+  "test_r8_18_wall_faces_v2::test_10_a_full_height_passage_has_no_head_face",
+  "test_r8_18_wall_faces_v2::test_11_the_offset_door_analogue_computes_on_both_sides",
+  "test_r8_18_wall_faces_v2::test_12_13_column_and_duct_faces_are_separate_classes_not_wall_plane",
+  "test_r8_18_wall_faces_v2::test_14_a_wet_tiled_room_at_its_own_height",
+  "test_r8_18_wall_faces_v2::test_15_16_17_physical_jambs_are_consumed_not_wall_and_reveals_have_their_own_identity",
+  "test_r8_18_wall_faces_v2::test_18_topology_closures_are_zero_and_never_wall_plane",
+  "test_r8_18_wall_faces_v2::test_19_duplicate_surface_guard",
+  "test_r8_18_wall_faces_v2::test_20_shuffled_input_is_deterministic",
+  "test_r8_18_wall_faces_v2::test_21_both_area_methods_pass_on_every_valid_fixture",
+  "test_r8_18_wall_faces_v2::test_22_a_broken_surface_partition_fails_the_reconciliation",
+  "test_r8_18_waterproofing::test_a_rectangular_bathroom_floor_and_gross_perimeter",
+  "test_r8_18_waterproofing::test_a_doorway_is_not_deducted",
+  "test_r8_18_waterproofing::test_two_doors_both_on_the_perimeter",
+  "test_r8_18_waterproofing::test_a_marble_threshold_changes_nothing_and_full_wall_tile_and_skirting_are_independent",
+  "test_r8_18_waterproofing::test_a_column_projection_and_an_internal_obstacle_are_on_the_gross_perimeter",
+  "test_r8_18_waterproofing::test_no_upturn_authority_blocks_and_the_floor_is_the_site_area",
+  "test_r8_18_waterproofing::test_shuffled_input_is_deterministic"
+ ],
+ "synthetic_test_count": 33,
+ "qortuba_wall_face_method": {
+  "method_id": "QORTUBA-NEW-WALL-FACE-METHOD",
+  "version": 2,
+  "supersedes": "QORTUBA-NEW-WALL-FACE-METHOD@v1 (R8.17)",
+  "scope": {
+   "project": "QORTUBA",
+   "source_revision_id": "QORTUBA_REV_NEW",
+   "region_id": "RC:MODEL_SPACE:4267:540:1649",
+   "plan": "PLAN_VARIANT_4_SELECTED",
+   "floor": "the selected SECOND FLOOR apartment"
+  },
+  "height_scopes": {
+   "DRY_INTERNAL_ROOM|PLASTER": [
+    {
+     "kind": "DERIVED_CLEAR_HEIGHT",
+     "gross_m": 4.0,
+     "gross_authority": "SOURCE TEXT 'LEVEL R.F = 4.00 m' (measured region)",
+     "components": {
+      "beam_or_soffit_zone": {
+       "value_m": null,
+       "authority": null,
+       "required": true
+      },
+      "ceiling_service_decor_zone": {
+       "value_m": null,
+       "authority": null,
+       "required": true
+      },
+      "floor_buildup": {
+       "value_m": null,
+       "authority": null,
+       "required": true
+      }
+     }
+    },
+    {
+     "kind": "OWNER_PROJECT_FACT",
+     "value_m": 3.15,
+     "authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1"
+    }
+   ],
+   "DRY_INTERNAL_ROOM|PAINT": [
+    {
+     "kind": "DERIVED_CLEAR_HEIGHT",
+     "gross_m": 4.0,
+     "gross_authority": "SOURCE TEXT 'LEVEL R.F = 4.00 m' (measured region)",
+     "components": {
+      "beam_or_soffit_zone": {
+       "value_m": null,
+       "authority": null,
+       "required": true
+      },
+      "ceiling_service_decor_zone": {
+       "value_m": null,
+       "authority": null,
+       "required": true
+      },
+      "floor_buildup": {
+       "value_m": null,
+       "authority": null,
+       "required": true
+      }
+     }
+    },
+    {
+     "kind": "OWNER_PROJECT_FACT",
+     "value_m": 3.15,
+     "authority": "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1"
+    }
+   ],
+   "WET_SERVICE_ROOM|WALL_TILE": [
+    {
+     "kind": "OWNER_PROJECT_FACT",
+     "value_m": 3.2,
+     "authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1"
+    }
+   ],
+   "SERVICE_ROOM|WALL_TILE": [
+    {
+     "kind": "OWNER_PROJECT_FACT",
+     "value_m": 3.2,
+     "authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1 (SERVICE_ROOM; PAINTRY via QP-07 = kitchen / preparation zone for the ceramic takeoff)"
+    }
+   ]
+  },
+  "trade_rules": {
+   "DRY_INTERNAL_ROOM": {
+    "PLASTER": {
+     "state": "APPLIES",
+     "height_scope": "PLASTER",
+     "authority": "QP-03 superseded in scope by QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1"
+    },
+    "PAINT": {
+     "state": "APPLIES",
+     "height_scope": "PAINT",
+     "authority": "QP-04 superseded in scope by QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1"
+    },
+    "WALL_TILE": {
+     "state": "NONE",
+     "authority": "not a wet / service room"
+    },
+    "WET_WALL_TILE_PREP": {
+     "state": "NONE",
+     "authority": "not a wet / service room"
+    }
+   },
+   "WET_SERVICE_ROOM": {
+    "WALL_TILE": {
+     "state": "APPLIES",
+     "height_scope": "WALL_TILE",
+     "authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1"
+    },
+    "WET_WALL_TILE_PREP": {
+     "state": "APPLIES",
+     "height_scope": "WALL_TILE",
+     "authority": "US-03: the tile preparation trade carries the ceramic face"
+    },
+    "PLASTER": {
+     "state": "NONE",
+     "authority": "US-03: normal plaster is not the ceramic backing"
+    },
+    "PAINT": {
+     "state": "NONE",
+     "authority": "US-03"
+    }
+   },
+   "SERVICE_ROOM": {
+    "WALL_TILE": {
+     "state": "APPLIES",
+     "height_scope": "WALL_TILE",
+     "authority": "QORTUBA-NEW-WET-SERVICE-FINISH-OWNER-001@v1 + QP-07"
+    },
+    "WET_WALL_TILE_PREP": {
+     "state": "APPLIES",
+     "height_scope": "WALL_TILE",
+     "authority": "US-03"
+    },
+    "PLASTER": {
+     "state": "NONE",
+     "authority": "US-03"
+    },
+    "PAINT": {
+     "state": "NONE",
+     "authority": "US-03"
+    }
+   }
+  },
+  "opening_heights": {
+   "DOOR": {
+    "height_m": 2.2,
+    "authority": "QP-21 OWNER_CONFIRMED_PROJECT_PARAMETER: Qortuba internal door height 2.20 m where the drawing states none"
+   },
+   "SLIDING_GLAZED_DOOR": {
+    "height_m": 2.2,
+    "authority": "QP-12 owner: the HALL / PAINTRY glazed opening 2.750 x 2.200 (same occurrence: glazing H533 / H542, 2.75 m, in both revisions) + QP-23 corroborating; floor contact from QORTUBA-NEW-HALL-PAINTRY-SLIDING-GLASS-DOOR-OWNER-001@v1"
+   },
+   "WINDOW": {
+    "height_m": 1.5,
+    "authority": "QP-22 owner: 1.500 m for every Qortuba window whose height the drawing does not state"
+   }
+  },
+  "window_sill_fact": [
+   "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001",
+   2
+  ],
+  "window_reveal_depth": {
+   "depth_m": 0.25,
+   "basis": "US-07 FALLBACK: the glazing is drawn on the wall face line, the frame position in the wall is not in the source"
+  },
+  "column_faces": {
+   "PLASTER": "UNRESOLVED",
+   "PAINT": "UNRESOLVED",
+   "WALL_TILE": "UNRESOLVED",
+   "WET_WALL_TILE_PREP": "UNRESOLVED"
+  },
+  "obstacle_faces": {
+   "PLASTER": "UNRESOLVED",
+   "PAINT": "UNRESOLVED",
+   "WALL_TILE": "UNRESOLVED",
+   "WET_WALL_TILE_PREP": "UNRESOLVED"
+  },
+  "unresolved_why": {
+   "COLUMN_FACE": "no plaster / paint / tile rule for column faces: R-13 is the blockwork SHEET's full-deduction column (R8.17 misread it); owner_rules section E is skirting only",
+   "OBSTACLE_FACE": "the duct exists (owner fact) but no finish is stated for its faces; skirting eligibility is not a finish"
+  },
+  "reveal_finish": {
+   "rule": "URBAN-REVEAL-FINISH-METHOD@v1",
+   "policy": "REVEAL_FINISH_POLICY_V1",
+   "hall_lobby_passage": "QORTUBA-NEW-OPEN-PASSAGE-REVEALS-PLASTERED-OWNER-001@v1 (plaster; paint by the dry 3.15 m rule)"
+  },
+  "complete_row_rule": "a row's COMPLETE value is null while ANY contributor is UNRESOLVED (zero materiality tolerance); the AUTHORISED subtotal is published with the unresolved contributors listed",
+  "waterproofing": {
+   "policy": "WATERPROOFING_POLICY_V1",
+   "upturn_height_m": 0.15,
+   "upturn_authority": "US-04 (0.15 m upturn) + US-05 (doorway not deducted)",
+   "include_holes": true,
+   "classes": {
+    "WET_SERVICE_ROOM": "US-14 bathroom",
+    "SERVICE_ROOM": "US-14 pantry / preparation kitchen + QP-13 (PAINTRY, GROSS perimeter)"
+   }
+  },
+  "never": [
+   "a company-wide wall height",
+   "3.15 m in a wet / service room",
+   "3.20 m clipped to 3.15 m",
+   "porcelain reveals without explicit authority",
+   "paint in a wet / service room",
+   "a column or duct face finished by assumption",
+   "the skirting path as the waterproofing perimeter"
+  ],
+  "ref": "QORTUBA-NEW-WALL-FACE-METHOD@v2",
+  "digest": "8d7b990ff21ab99e8664d7bff733e04dd71b4d9284417a0d8033efccecca2128"
+ },
+ "qortuba_before_freeze": {
+  "wall_face_v2_runs_on_qortuba": 0,
+  "waterproofing_runs_on_qortuba": 0,
+  "note": "pre-freeze Qortuba reads: source probes of door closures, glazed strip sites and region texts only (no area, no total)"
+ },
+ "order": [
+  "recommendation (0107408)",
+  "engines + facts + rules + tests + blind script (bcac8a3)",
+  "THIS freeze",
+  "commit",
+  "THEN the blind Qortuba run",
+  "THEN rebuild / registers"
+ ],
+ "rule": "no post-result edit inside a frozen policy or the v2 method; amendments recorded here",
+ "amendments": []
+}

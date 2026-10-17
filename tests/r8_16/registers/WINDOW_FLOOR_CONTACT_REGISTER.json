@@ -1,0 +1,145 @@
+{
+ "SCHEMA": "URBAN_R8_16_WINDOW_FLOOR_CONTACT_REGISTER_V1",
+ "fact_binding": "APPLIES",
+ "source_exhaustion": {
+  "searched": [
+   "window schedule",
+   "sill text / dimension",
+   "section",
+   "elevation",
+   "block attributes"
+  ],
+  "found": "NONE (the only SILL / SCHEDULE hits are AutoCAD AEC class names)",
+  "heights_not_sills": [
+   "QP-22 window HEIGHT 1.50 m",
+   "QP-12 HALL / PAINTRY glazed opening HEIGHT 2.20 m"
+  ]
+ },
+ "windows": [
+  {
+   "site": "SITE-5f1762f1a93b91ca",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "sources": [
+    "1319",
+    "448"
+   ],
+   "length_mm": 1205.4,
+   "hosted_on_wall_face_line": true,
+   "floor_contact": {
+    "state": "ABOVE_FLOOR",
+    "sill_m": 1.0,
+    "authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v1"
+   },
+   "span": "SKIRTING_CONTINUITY_UNDER_WINDOW",
+   "topology_effect": "NONE (trade-only span)"
+  },
+  {
+   "site": "SITE-77a2130eb275604c",
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "sources": [
+    "1518",
+    "510"
+   ],
+   "length_mm": 2346.4,
+   "hosted_on_wall_face_line": true,
+   "floor_contact": {
+    "state": "ABOVE_FLOOR",
+    "sill_m": 1.0,
+    "authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v1"
+   },
+   "span": "SKIRTING_CONTINUITY_UNDER_WINDOW",
+   "topology_effect": "NONE (trade-only span)"
+  },
+  {
+   "site": "SITE-77a2130eb275604c",
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "sources": [
+    "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F2",
+    "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F1",
+    "542"
+   ],
+   "length_mm": 2750.0,
+   "hosted_on_wall_face_line": false,
+   "floor_contact": {
+    "state": "FLOOR_CONTACT_UNPROVEN",
+    "authority": null
+   },
+   "span": "WITHHELD",
+   "topology_effect": "NONE (trade-only span)"
+  },
+  {
+   "site": "SITE-a6405850100155ac",
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "sources": [
+    "1026",
+    "457"
+   ],
+   "length_mm": 1697.5,
+   "hosted_on_wall_face_line": true,
+   "floor_contact": {
+    "state": "ABOVE_FLOOR",
+    "sill_m": 1.0,
+    "authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v1"
+   },
+   "span": "SKIRTING_CONTINUITY_UNDER_WINDOW",
+   "topology_effect": "NONE (trade-only span)"
+  },
+  {
+   "site": "SITE-a6405850100155ac",
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "sources": [
+    "1325",
+    "512"
+   ],
+   "length_mm": 2500.0,
+   "hosted_on_wall_face_line": true,
+   "floor_contact": {
+    "state": "ABOVE_FLOOR",
+    "sill_m": 1.0,
+    "authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v1"
+   },
+   "span": "SKIRTING_CONTINUITY_UNDER_WINDOW",
+   "topology_effect": "NONE (trade-only span)"
+  },
+  {
+   "site": "SITE-daca396d6d730e60",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "sources": [
+    "1020",
+    "469"
+   ],
+   "length_mm": 1342.3,
+   "hosted_on_wall_face_line": true,
+   "floor_contact": {
+    "state": "ABOVE_FLOOR",
+    "sill_m": 1.0,
+    "authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v1"
+   },
+   "span": "SKIRTING_CONTINUITY_UNDER_WINDOW",
+   "topology_effect": "NONE (trade-only span)"
+  }
+ ],
+ "continuity_lm": 9.091605,
+ "withheld_lm": 2.75,
+ "never": [
+  "the 1.00 m transferred to another project / revision / the DWG",
+  "a plan cut as floor contact",
+  "a window as a topology closure"
+ ]
+}

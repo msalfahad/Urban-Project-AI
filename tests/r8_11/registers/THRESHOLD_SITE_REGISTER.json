@@ -1,0 +1,91 @@
+{
+ "SCHEMA": "URBAN_R8_11_THRESHOLD_SITE_REGISTER_V1",
+ "NEW_K2": [
+  {
+   "threshold": "THRESHOLD-cf12fcdfd3e6a4a6",
+   "site": "SITE-1cc94d2ca98f6229",
+   "opening": "I2044",
+   "area_m2": 0.12,
+   "sides": [
+    "SITE-6d1ce80253b53f83",
+    "SITE-a2b19efc492a6d0b"
+   ],
+   "allocation": "TRADE_RULE_REQUIRED"
+  },
+  {
+   "threshold": "THRESHOLD-bfcea08375237224",
+   "site": "SITE-2bf3db64b092ac64",
+   "opening": "I677",
+   "area_m2": 0.15,
+   "sides": [
+    "SITE-6d1ce80253b53f83",
+    "SITE-788f30878ba9d2b3"
+   ],
+   "allocation": "TRADE_RULE_REQUIRED"
+  },
+  {
+   "threshold": "THRESHOLD-28f50f8dc18c1e90",
+   "site": "SITE-5b8e4f9259cdb19c",
+   "opening": "I1561",
+   "area_m2": 0.12,
+   "sides": [
+    "SITE-6d1ce80253b53f83",
+    "SITE-fe8ed5548fb4310e"
+   ],
+   "allocation": "TRADE_RULE_REQUIRED"
+  },
+  {
+   "threshold": "THRESHOLD-e84ea1bf89bb6701",
+   "site": "SITE-95292543249f37c6",
+   "opening": "I1028",
+   "area_m2": 0.15,
+   "sides": [
+    "SITE-788f30878ba9d2b3",
+    "SITE-eaae022599294151"
+   ],
+   "allocation": "TRADE_RULE_REQUIRED"
+  },
+  {
+   "threshold": "THRESHOLD-c82365dd41b94abe",
+   "site": "SITE-9f4d8d389cb86869",
+   "opening": "I1988",
+   "area_m2": 0.15,
+   "sides": [
+    "SITE-6d1ce80253b53f83",
+    "SITE-daca396d6d730e60"
+   ],
+   "allocation": "TRADE_RULE_REQUIRED"
+  },
+  {
+   "threshold": "THRESHOLD-04910e5deeeed2fc",
+   "site": "SITE-bd2b680527d056fa",
+   "opening": "I841",
+   "area_m2": 0.15,
+   "sides": [
+    "SITE-5f1762f1a93b91ca",
+    "SITE-6d1ce80253b53f83"
+   ],
+   "allocation": "TRADE_RULE_REQUIRED"
+  },
+  {
+   "threshold": "THRESHOLD-f9846605acbce828",
+   "site": "SITE-e639327cc873867d",
+   "opening": "I1443",
+   "area_m2": 0.12,
+   "sides": [
+    "SITE-1c4abf65f9b5db1e",
+    "SITE-a6405850100155ac"
+   ],
+   "allocation": "TRADE_RULE_REQUIRED"
+  }
+ ],
+ "distinction": {
+  "DOOR_THRESHOLD_SITE": "the strip under a door leaf between two door jamb caps, closed by the door closure; separate TS01 site; allocation TRADE_RULE_REQUIRED",
+  "OPEN_PASSAGE_SITE": "a doorless strip through a wall line, physically connected, inside the adjacent site; allocation NOT_ALLOCATED",
+  "never": "a passage strip is never moved into a room to match a total; a door threshold is never treated as a passage"
+ },
+ "wet_rows_new": {
+  "ROOM_FOOTPRINT_m2": 17.7425,
+  "THRESHOLD_FOOTPRINT_m2": 0.36
+ }
+}

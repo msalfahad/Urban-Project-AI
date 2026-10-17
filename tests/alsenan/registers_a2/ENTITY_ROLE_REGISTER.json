@@ -1,0 +1,2130 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A2_ENTITY_ROLE_REGISTER_V1",
+ "policy": {
+  "id": "ENTITY_ROLE_INFERENCE_V1",
+  "physical_mm": {
+   "wall_thickness": [
+    80.0,
+    400.0
+   ],
+   "pair_min_overlap_ratio": 0.5,
+   "min_segment": 50.0,
+   "door_radius": [
+    500.0,
+    1300.0
+   ],
+   "tread_going": [
+    200.0,
+    400.0
+   ],
+   "column_side": [
+    150.0,
+    1200.0
+   ],
+   "authoring_tolerance": 10.0
+  },
+  "swing_sweep_rad": [
+   0.7,
+   2.1
+  ],
+  "leaf_length_ratio": 0.12,
+  "parallel_rad": 0.017453292519943295,
+  "sheet_aspect": [
+   1.2,
+   1.8
+  ],
+  "frame_content_share": 0.95,
+  "min_treads": 4,
+  "decision": {
+   "accept": 3,
+   "min_channels": 2,
+   "margin": 2
+  },
+  "to_geometry_role": {
+   "WALL_FACE": "TOPOLOGY_BOUNDARY",
+   "COLUMN": "STRUCTURAL_OBSTACLE",
+   "GLAZING": "GLAZING_BOUNDARY",
+   "DOOR_SYMBOL": "OPENING_SYMBOL",
+   "OVERHEAD": "PRESENTATION_OVERHEAD",
+   "AXIS_GRID": "ANNOTATION_GRAPHICS",
+   "ANNOTATION": "ANNOTATION_GRAPHICS",
+   "SYMBOL": "FURNITURE",
+   "SANITARY": "SANITARY_FIXTURE",
+   "STAIR": "STAIR_GEOMETRY",
+   "SHEET_FRAME": "SHEET_FRAME",
+   "PLOT_BOUNDARY": "SEMANTIC_BOUNDARY"
+  },
+  "claim": {
+   "review_state": "POLICY_ACCEPTED",
+   "authority": "ENTITY_ROLE_INFERENCE_V1",
+   "scope": "this source revision + anchor + region only; never inherited; versioned",
+   "applies_through": "role_authority.claim_applies (POLICY_ACCEPTED + this authority + evidence)"
+  },
+  "inferred_doors": "door-motif occurrences are passed to room_topology.run(inferred_doors=...) and merged into the door set the frozen opening closure uses (both leaf ends tried; exactly one must land on admitted walls)",
+  "never": [
+   "layer name",
+   "block name",
+   "handle list",
+   "coordinates",
+   "a desired quantity",
+   "a project"
+  ],
+  "name_evidence": "CORROBORATION ONLY (recorded, never decides)",
+  "digest": "f57c4d9faef00f227220f3841452e177f2593fc17122aa72084be786f632640e"
+ },
+ "cad_tables": {
+  "linetypes": {
+   "BYBLOCK": [],
+   "BYLAYER": [],
+   "CONTINUOUS": [],
+   "HIDDEN": [
+    0.25,
+    -0.125
+   ],
+   "CENTER": [
+    1.25,
+    -0.25,
+    0.25,
+    -0.25
+   ]
+  },
+  "linetype_class": {
+   "BYBLOCK": "CONTINUOUS",
+   "BYLAYER": "CONTINUOUS",
+   "CONTINUOUS": "CONTINUOUS",
+   "HIDDEN": "UNIFORM_DASH",
+   "CENTER": "DASH_DOT"
+  },
+  "layer_linetype": {
+   "0": "CONTINUOUS",
+   "1": "CONTINUOUS",
+   "5": "CONTINUOUS",
+   "2": "HIDDEN",
+   "3": "CONTINUOUS",
+   "4": "CONTINUOUS",
+   "DEFPOINTS": "CONTINUOUS",
+   "ARNOTE": "CONTINUOUS",
+   "D": "CONTINUOUS",
+   "W": "CONTINUOUS",
+   "ST": "CONTINUOUS",
+   "stamp": "CONTINUOUS",
+   "TOI": "CONTINUOUS",
+   "TEXT": "CONTINUOUS",
+   "TE": "CONTINUOUS",
+   "S-COL.BON": "CONTINUOUS",
+   "LEVEL": "CONTINUOUS",
+   "CC": "CENTER",
+   "6": "CONTINUOUS"
+  },
+  "solid_fills": 59,
+  "entity_linetype_overrides": 0
+ },
+ "unrealised_placement": {
+  "phase_a": [
+   {
+    "code": "DEGENERATE_GEOMETRY",
+    "obs_id": "D2:1200",
+    "layer": null,
+    "path": []
+   },
+   {
+    "code": "DEGENERATE_GEOMETRY",
+    "obs_id": "D2:2935",
+    "layer": null,
+    "path": []
+   },
+   {
+    "code": "UNHANDLED",
+    "obs_id": "D2:5483",
+    "layer": null,
+    "path": []
+   },
+   {
+    "code": "UNHANDLED",
+    "obs_id": "D2:5488",
+    "layer": null,
+    "path": []
+   },
+   {
+    "code": "UNHANDLED",
+    "obs_id": "D2:5489",
+    "layer": null,
+    "path": []
+   }
+  ],
+  "placed": [
+   {
+    "obs_id": "D2:5483",
+    "entity": "RTEXT",
+    "layer": "stamp",
+    "extent": [
+     -163615.51957130939,
+     -811164.3055977974,
+     -132874.17355336482,
+     -810602.5633224581
+    ],
+    "basis": "PROXY_GRAPHICS_VERTICES"
+   },
+   {
+    "obs_id": "D2:5488",
+    "entity": "RTEXT",
+    "layer": "stamp",
+    "extent": [
+     -208468.17462615913,
+     -811164.3055977974,
+     -177726.82860821456,
+     -810602.5633224581
+    ],
+    "basis": "PROXY_GRAPHICS_VERTICES"
+   },
+   {
+    "obs_id": "D2:5489",
+    "entity": "RTEXT",
+    "layer": "stamp",
+    "extent": [
+     -253320.82968100888,
+     -811164.3055977974,
+     -222579.4836630643,
+     -810602.5633224581
+    ],
+    "basis": "PROXY_GRAPHICS_VERTICES"
+   }
+  ],
+  "rtext_in_dxf": 3
+ },
+ "floors": {
+  "GF": {
+   "decisions": {
+    "1": {
+     "state": "ACCEPTED",
+     "role": "WALL_FACE",
+     "score": 5,
+     "channels": {
+      "GEOMETRY_PAIRS": 2,
+      "GEOMETRY_JOINS": 1,
+      "CONTEXT_DOOR_HINGES": 1,
+      "CONTEXT_SAME_SOURCE": 1
+     },
+     "reasons": [
+      "pair share 0.6513",
+      "pair offset median 200.0 mm",
+      "junction share 0.8135",
+      "linetype CONTINUOUS",
+      "door hinges anchored 13",
+      "accepted in other regions of this source: ARCH-S04:1F"
+     ],
+     "competing": []
+    },
+    "2": {
+     "state": "ACCEPTED",
+     "role": "OVERHEAD",
+     "score": 4,
+     "channels": {
+      "CAD_LINETYPE_PATTERN": 2,
+      "GEOMETRY_OPEN_NETWORK": 1,
+      "CONTEXT_SAME_SOURCE": 1
+     },
+     "reasons": [
+      "linetype HIDDEN = UNIFORM_DASH",
+      "pair share 0.5696",
+      "accepted in other regions of this source: ARCH-S03:2F,ARCH-S04:1F"
+     ],
+     "competing": []
+    },
+    "4": {
+     "state": "NO_CANDIDATE",
+     "role": null,
+     "why": "no role candidate from any channel"
+    },
+    "5": {
+     "state": "BLOCKED",
+     "role": null,
+     "best": "WALL_FACE",
+     "score": 2,
+     "why": "score 2 / channels 1 below the frozen decision"
+    },
+    "CC": {
+     "state": "NO_CANDIDATE",
+     "role": null,
+     "why": "no role candidate from any channel"
+    },
+    "D": {
+     "state": "NO_CANDIDATE",
+     "role": null,
+     "why": "no role candidate from any channel"
+    },
+    "LEVEL": {
+     "state": "NO_CANDIDATE",
+     "role": null,
+     "why": "no role candidate from any channel"
+    },
+    "S-COL.BON": {
+     "state": "ACCEPTED",
+     "role": "COLUMN",
+     "score": 5,
+     "channels": {
+      "GEOMETRY_RECTANGLES": 2,
+      "CAD_SOLID_FILL": 1,
+      "CAD_CONTINUOUS_STRAIGHT": 1,
+      "CONTEXT_SAME_SOURCE": 1
+     },
+     "reasons": [
+      "30 closed rectangles [150.0, 1200.0] mm",
+      "rect share 0.7197",
+      "filled 30",
+      "accepted in other regions of this source: ARCH-S04:1F"
+     ],
+     "competing": []
+    },
+    "ST": {
+     "state": "NO_CANDIDATE",
+     "role": null,
+     "why": "no role candidate from any channel"
+    },
+    "TEXT": {
+     "state": "NO_CANDIDATE",
+     "role": null,
+     "why": "no role candidate from any channel"
+    },
+    "TOI": {
+     "state": "NO_CANDIDATE",
+     "role": null,
+     "why": "no role candidate from any channel"
+    },
+    "W": {
+     "state": "PART_LEVEL",
+     "role": null,
+     "best": "GLAZING",
+     "score": 3,
+     "why": "decided per part (motif); the rest of the layer stays UNKNOWN"
+    }
+   },
+   "pass1_states": {
+    "1": "ACCEPTED",
+    "2": "ACCEPTED",
+    "4": "NO_CANDIDATE",
+    "5": "BLOCKED",
+    "CC": "NO_CANDIDATE",
+    "D": "NO_CANDIDATE",
+    "LEVEL": "NO_CANDIDATE",
+    "S-COL.BON": "ACCEPTED",
+    "ST": "NO_CANDIDATE",
+    "TEXT": "NO_CANDIDATE",
+    "TOI": "NO_CANDIDATE",
+    "W": "PART_LEVEL"
+   },
+   "observations": {
+    "1": {
+     "parts": 229,
+     "model_space_parts": 199,
+     "segments": 193,
+     "length_m": 307.97,
+     "kinds": {
+      "ARC": 2,
+      "SEGMENT": 197
+     },
+     "model_space_share": 0.869,
+     "pair_share": 0.6513,
+     "pair_offset_median_mm": 200.0,
+     "junction_share": 0.8135,
+     "rectangles": 2,
+     "rect_share": 0.0169,
+     "filled_rectangles": 0,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 2,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    },
+    "2": {
+     "parts": 132,
+     "model_space_parts": 130,
+     "segments": 122,
+     "length_m": 196.167,
+     "kinds": {
+      "ARC": 7,
+      "SEGMENT": 123
+     },
+     "model_space_share": 0.9848,
+     "pair_share": 0.5696,
+     "pair_offset_median_mm": 250.0,
+     "junction_share": 0.4016,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "HIDDEN",
+     "linetype_class": "UNIFORM_DASH",
+     "curves": 7,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    },
+    "4": {
+     "parts": 1,
+     "model_space_parts": 0,
+     "segments": 0,
+     "length_m": 0.0,
+     "kinds": {},
+     "model_space_share": 0.0,
+     "pair_share": 0.0,
+     "pair_offset_median_mm": null,
+     "junction_share": 0.0,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 0,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    },
+    "5": {
+     "parts": 1329,
+     "model_space_parts": 177,
+     "segments": 156,
+     "length_m": 269.17,
+     "kinds": {
+      "ARC": 16,
+      "CIRCLE": 3,
+      "SEGMENT": 158
+     },
+     "model_space_share": 0.1332,
+     "pair_share": 0.6384,
+     "pair_offset_median_mm": 200.0,
+     "junction_share": 0.4744,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 19,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    },
+    "CC": {
+     "parts": 2,
+     "model_space_parts": 0,
+     "segments": 0,
+     "length_m": 0.0,
+     "kinds": {},
+     "model_space_share": 0.0,
+     "pair_share": 0.0,
+     "pair_offset_median_mm": null,
+     "junction_share": 0.0,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "CENTER",
+     "linetype_class": "DASH_DOT",
+     "curves": 0,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    },
+    "D": {
+     "parts": 232,
+     "model_space_parts": 45,
+     "segments": 27,
+     "length_m": 9.372,
+     "kinds": {
+      "ARC": 7,
+      "SEGMENT": 38
+     },
+     "model_space_share": 0.194,
+     "pair_share": 0.2729,
+     "pair_offset_median_mm": 200.0,
+     "junction_share": 0.5741,
+     "rectangles": 1,
+     "rect_share": 0.1775,
+     "filled_rectangles": 0,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 7,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    },
+    "LEVEL": {
+     "parts": 100,
+     "model_space_parts": 0,
+     "segments": 0,
+     "length_m": 0.0,
+     "kinds": {},
+     "model_space_share": 0.0,
+     "pair_share": 0.0,
+     "pair_offset_median_mm": null,
+     "junction_share": 0.0,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 0,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    },
+    "S-COL.BON": {
+     "parts": 150,
+     "model_space_parts": 150,
+     "segments": 150,
+     "length_m": 70.033,
+     "kinds": {
+      "SEGMENT": 150
+     },
+     "model_space_share": 1.0,
+     "pair_share": 0.5369,
+     "pair_offset_median_mm": 250.0,
+     "junction_share": 1.0,
+     "rectangles": 30,
+     "rect_share": 0.7197,
+     "filled_rectangles": 30,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 0,
+     "name_corroboration": {
+      "layer_lexicon": "COLUMN"
+     }
+    },
+    "ST": {
+     "parts": 10,
+     "model_space_parts": 2,
+     "segments": 2,
+     "length_m": 5.568,
+     "kinds": {
+      "SEGMENT": 2
+     },
+     "model_space_share": 0.2,
+     "pair_share": 0.0,
+     "pair_offset_median_mm": null,
+     "junction_share": 1.0,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 0,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    },
+    "TEXT": {
+     "parts": 24,
+     "model_space_parts": 24,
+     "segments": 8,
+     "length_m": 2.008,
+     "kinds": {
+      "CIRCLE": 8,
+      "SEGMENT": 16
+     },
+     "model_space_share": 1.0,
+     "pair_share": 0.0,
+     "pair_offset_median_mm": null,
+     "junction_share": 0.0,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 8,
+     "name_corroboration": {
+      "layer_lexicon": "ANNOTATION"
+     }
+    },
+    "TOI": {
+     "parts": 215,
+     "model_space_parts": 0,
+     "segments": 0,
+     "length_m": 0.0,
+     "kinds": {},
+     "model_space_share": 0.0,
+     "pair_share": 0.0,
+     "pair_offset_median_mm": null,
+     "junction_share": 0.0,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 0,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    },
+    "W": {
+     "parts": 103,
+     "model_space_parts": 103,
+     "segments": 68,
+     "length_m": 66.048,
+     "kinds": {
+      "ARC": 4,
+      "SEGMENT": 99
+     },
+     "model_space_share": 1.0,
+     "pair_share": 0.5219,
+     "pair_offset_median_mm": 120.0,
+     "junction_share": 0.7721,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 4,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    }
+   },
+   "glazing_share": {
+    "1": 0.0432,
+    "5": 0.1304,
+    "W": 0.9024
+   },
+   "claims": [
+    {
+     "claim_id": "ERI-P-ANNOTATION-1",
+     "layer": "1",
+     "role": "ANNOTATION_GRAPHICS",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S05:GF",
+     "version": 1,
+     "evidence": [
+      "MOTIF=ANNOTATION",
+      "parts=28"
+     ],
+     "part_keys": 28
+    },
+    {
+     "claim_id": "ERI-P-ANNOTATION-4",
+     "layer": "4",
+     "role": "ANNOTATION_GRAPHICS",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S05:GF",
+     "version": 1,
+     "evidence": [
+      "MOTIF=ANNOTATION",
+      "parts=1"
+     ],
+     "part_keys": 1
+    },
+    {
+     "claim_id": "ERI-P-ANNOTATION-5",
+     "layer": "5",
+     "role": "ANNOTATION_GRAPHICS",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S05:GF",
+     "version": 1,
+     "evidence": [
+      "MOTIF=ANNOTATION",
+      "parts=1150"
+     ],
+     "part_keys": 1150
+    },
+    {
+     "claim_id": "ERI-P-ANNOTATION-CC",
+     "layer": "CC",
+     "role": "ANNOTATION_GRAPHICS",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S05:GF",
+     "version": 1,
+     "evidence": [
+      "MOTIF=ANNOTATION",
+      "parts=2"
+     ],
+     "part_keys": 2
+    },
+    {
+     "claim_id": "ERI-P-ANNOTATION-LEVEL",
+     "layer": "LEVEL",
+     "role": "ANNOTATION_GRAPHICS",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S05:GF",
+     "version": 1,
+     "evidence": [
+      "MOTIF=ANNOTATION",
+      "parts=30"
+     ],
+     "part_keys": 30
+    },
+    {
+     "claim_id": "ERI-L-COLUMN-S-COL.BON",
+     "layer": "S-COL.BON",
+     "role": "STRUCTURAL_OBSTACLE",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S05:GF",
+     "version": 1,
+     "evidence": [
+      "CAD_CONTINUOUS_STRAIGHT=1",
+      "CAD_SOLID_FILL=1",
+      "CONTEXT_SAME_SOURCE=1",
+      "GEOMETRY_RECTANGLES=2",
+      "30 closed rectangles [150.0, 1200.0] mm",
+      "rect share 0.7197",
+      "filled 30",
+      "accepted in other regions of this source: ARCH-S04:1F"
+     ],
+     "part_keys": 150
+    },
+    {
+     "claim_id": "ERI-P-DOOR_SYMBOL-D",
+     "layer": "D",
+     "role": "OPENING_SYMBOL",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S05:GF",
+     "version": 1,
+     "evidence": [
+      "MOTIF=DOOR_SYMBOL",
+      "parts=158"
+     ],
+     "part_keys": 158
+    },
+    {
+     "claim_id": "ERI-P-GLAZING-1",
+     "layer": "1",
+     "role": "GLAZING_BOUNDARY",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S05:GF",
+     "version": 1,
+     "evidence": [
+      "MOTIF=GLAZING",
+      "parts=2"
+     ],
+     "part_keys": 2
+    },
+    {
+     "claim_id": "ERI-P-GLAZING-2",
+     "layer": "2",
+     "role": "GLAZING_BOUNDARY",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S05:GF",
+     "version": 1,
+     "evidence": [
+      "MOTIF=GLAZING",
+      "parts=6"
+     ],
+     "part_keys": 6
+    },
+    {
+     "claim_id": "ERI-P-GLAZING-5",
+     "layer": "5",
+     "role": "GLAZING_BOUNDARY",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S05:GF",
+     "version": 1,
+     "evidence": [
+      "MOTIF=GLAZING",
+      "parts=18"
+     ],
+     "part_keys": 18
+    },
+    {
+     "claim_id": "ERI-P-GLAZING-W",
+     "layer": "W",
+     "role": "GLAZING_BOUNDARY",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S05:GF",
+     "version": 1,
+     "evidence": [
+      "MOTIF=GLAZING",
+      "parts=79"
+     ],
+     "part_keys": 79
+    },
+    {
+     "claim_id": "ERI-L-OVERHEAD-2",
+     "layer": "2",
+     "role": "PRESENTATION_OVERHEAD",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S05:GF",
+     "version": 1,
+     "evidence": [
+      "CAD_LINETYPE_PATTERN=2",
+      "CONTEXT_SAME_SOURCE=1",
+      "GEOMETRY_OPEN_NETWORK=1",
+      "linetype HIDDEN = UNIFORM_DASH",
+      "pair share 0.5696",
+      "accepted in other regions of this source: ARCH-S03:2F,ARCH-S04:1F"
+     ],
+     "part_keys": 106
+    },
+    {
+     "claim_id": "ERI-P-SHEET_FRAME-1",
+     "layer": "1",
+     "role": "SHEET_FRAME",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S05:GF",
+     "version": 1,
+     "evidence": [
+      "MOTIF=SHEET_FRAME",
+      "parts=4"
+     ],
+     "part_keys": 4
+    },
+    {
+     "claim_id": "ERI-P-STAIR-2",
+     "layer": "2",
+     "role": "STAIR_GEOMETRY",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S05:GF",
+     "version": 1,
+     "evidence": [
+      "MOTIF=STAIR",
+      "parts=20"
+     ],
+     "part_keys": 20
+    },
+    {
+     "claim_id": "ERI-P-STAIR-5",
+     "layer": "5",
+     "role": "STAIR_GEOMETRY",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S05:GF",
+     "version": 1,
+     "evidence": [
+      "MOTIF=STAIR",
+      "parts=22"
+     ],
+     "part_keys": 22
+    },
+    {
+     "claim_id": "ERI-P-SYMBOL-5",
+     "layer": "5",
+     "role": "FURNITURE",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S05:GF",
+     "version": 1,
+     "evidence": [
+      "MOTIF=SYMBOL",
+      "parts=3"
+     ],
+     "part_keys": 3
+    },
+    {
+     "claim_id": "ERI-P-SYMBOL-D",
+     "layer": "D",
+     "role": "FURNITURE",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S05:GF",
+     "version": 1,
+     "evidence": [
+      "MOTIF=SYMBOL",
+      "parts=31"
+     ],
+     "part_keys": 31
+    },
+    {
+     "claim_id": "ERI-P-SYMBOL-LEVEL",
+     "layer": "LEVEL",
+     "role": "FURNITURE",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S05:GF",
+     "version": 1,
+     "evidence": [
+      "MOTIF=SYMBOL",
+      "parts=70"
+     ],
+     "part_keys": 70
+    },
+    {
+     "claim_id": "ERI-P-SYMBOL-TEXT",
+     "layer": "TEXT",
+     "role": "FURNITURE",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S05:GF",
+     "version": 1,
+     "evidence": [
+      "MOTIF=SYMBOL",
+      "parts=8"
+     ],
+     "part_keys": 8
+    },
+    {
+     "claim_id": "ERI-P-SYMBOL-TOI",
+     "layer": "TOI",
+     "role": "FURNITURE",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S05:GF",
+     "version": 1,
+     "evidence": [
+      "MOTIF=SYMBOL",
+      "parts=215"
+     ],
+     "part_keys": 215
+    },
+    {
+     "claim_id": "ERI-L-WALL_FACE-1",
+     "layer": "1",
+     "role": "TOPOLOGY_BOUNDARY",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S05:GF",
+     "version": 1,
+     "evidence": [
+      "CONTEXT_DOOR_HINGES=1",
+      "CONTEXT_SAME_SOURCE=1",
+      "GEOMETRY_JOINS=1",
+      "GEOMETRY_PAIRS=2",
+      "pair share 0.6513",
+      "pair offset median 200.0 mm",
+      "junction share 0.8135",
+      "linetype CONTINUOUS",
+      "door hinges anchored 13",
+      "accepted in other regions of this source: ARCH-S04:1F"
+     ],
+     "part_keys": 199
+    }
+   ],
+   "frames": [
+    {
+     "bounds": [
+      -164712.801,
+      -811916.464,
+      -124398.491,
+      -783886.131
+     ],
+     "aspect": 1.4382,
+     "content_share": 1.0,
+     "parts": 4
+    }
+   ],
+   "doors_found": 13,
+   "doors_rejected": {
+    "NO_LEAF_FROM_HINGE": 12,
+    "HINGE_NOT_ANCHORED_ON_A_WALL_FACE_CANDIDATE": 1
+   },
+   "glazing_parts": 105,
+   "windows": 16,
+   "tread_runs": 8,
+   "plot_boundary_parts": 0,
+   "occurrences": {
+    "SYMBOL": 21,
+    "ANNOTATION": 9
+   },
+   "residual": {
+    "ANNOTATION": 3,
+    "SYMBOL": 11
+   },
+   "gap_infill": 0,
+   "part_roles": {
+    "SHEET_FRAME": 4,
+    "DOOR_SYMBOL": 158,
+    "GLAZING": 105,
+    "STAIR": 42,
+    "SYMBOL": 327,
+    "ANNOTATION": 1211,
+    "WALL_FACE": 199,
+    "OVERHEAD": 106,
+    "COLUMN": 150
+   },
+   "unresolved_parts": 213
+  },
+  "1F": {
+   "decisions": {
+    "1": {
+     "state": "ACCEPTED",
+     "role": "WALL_FACE",
+     "score": 5,
+     "channels": {
+      "GEOMETRY_PAIRS": 2,
+      "GEOMETRY_JOINS": 1,
+      "CONTEXT_DOOR_HINGES": 1,
+      "CONTEXT_SAME_SOURCE": 1
+     },
+     "reasons": [
+      "pair share 0.7564",
+      "pair offset median 200.0 mm",
+      "junction share 0.8537",
+      "linetype CONTINUOUS",
+      "door hinges anchored 10",
+      "accepted in other regions of this source: ARCH-S05:GF"
+     ],
+     "competing": []
+    },
+    "2": {
+     "state": "ACCEPTED",
+     "role": "OVERHEAD",
+     "score": 4,
+     "channels": {
+      "CAD_LINETYPE_PATTERN": 2,
+      "GEOMETRY_OPEN_NETWORK": 1,
+      "CONTEXT_SAME_SOURCE": 1
+     },
+     "reasons": [
+      "linetype HIDDEN = UNIFORM_DASH",
+      "pair share 0.5696",
+      "accepted in other regions of this source: ARCH-S03:2F,ARCH-S05:GF"
+     ],
+     "competing": []
+    },
+    "5": {
+     "state": "BLOCKED",
+     "role": null,
+     "best": "WALL_FACE",
+     "score": 1,
+     "why": "score 1 / channels 1 below the frozen decision"
+    },
+    "CC": {
+     "state": "NO_CANDIDATE",
+     "role": null,
+     "why": "no role candidate from any channel"
+    },
+    "D": {
+     "state": "NO_CANDIDATE",
+     "role": null,
+     "why": "no role candidate from any channel"
+    },
+    "LEVEL": {
+     "state": "NO_CANDIDATE",
+     "role": null,
+     "why": "no role candidate from any channel"
+    },
+    "S-COL.BON": {
+     "state": "ACCEPTED",
+     "role": "COLUMN",
+     "score": 5,
+     "channels": {
+      "GEOMETRY_RECTANGLES": 2,
+      "CAD_SOLID_FILL": 1,
+      "CAD_CONTINUOUS_STRAIGHT": 1,
+      "CONTEXT_SAME_SOURCE": 1
+     },
+     "reasons": [
+      "20 closed rectangles [150.0, 1200.0] mm",
+      "rect share 0.7176",
+      "filled 20",
+      "accepted in other regions of this source: ARCH-S05:GF"
+     ],
+     "competing": []
+    },
+    "ST": {
+     "state": "NO_CANDIDATE",
+     "role": null,
+     "why": "no role candidate from any channel"
+    },
+    "TEXT": {
+     "state": "NO_CANDIDATE",
+     "role": null,
+     "why": "no role candidate from any channel"
+    },
+    "W": {
+     "state": "PART_LEVEL",
+     "role": null,
+     "best": "GLAZING",
+     "score": 3,
+     "why": "decided per part (motif); the rest of the layer stays UNKNOWN"
+    }
+   },
+   "pass1_states": {
+    "1": "ACCEPTED",
+    "2": "ACCEPTED",
+    "5": "BLOCKED",
+    "CC": "NO_CANDIDATE",
+    "D": "NO_CANDIDATE",
+    "LEVEL": "NO_CANDIDATE",
+    "S-COL.BON": "ACCEPTED",
+    "ST": "NO_CANDIDATE",
+    "TEXT": "NO_CANDIDATE",
+    "W": "PART_LEVEL"
+   },
+   "observations": {
+    "1": {
+     "parts": 199,
+     "model_space_parts": 168,
+     "segments": 164,
+     "length_m": 264.429,
+     "kinds": {
+      "ARC": 4,
+      "SEGMENT": 164
+     },
+     "model_space_share": 0.8442,
+     "pair_share": 0.7564,
+     "pair_offset_median_mm": 200.0,
+     "junction_share": 0.8537,
+     "rectangles": 1,
+     "rect_share": 0.0052,
+     "filled_rectangles": 0,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 4,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    },
+    "2": {
+     "parts": 80,
+     "model_space_parts": 78,
+     "segments": 74,
+     "length_m": 86.459,
+     "kinds": {
+      "ARC": 4,
+      "SEGMENT": 74
+     },
+     "model_space_share": 0.975,
+     "pair_share": 0.5696,
+     "pair_offset_median_mm": 300.0,
+     "junction_share": 0.1081,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "HIDDEN",
+     "linetype_class": "UNIFORM_DASH",
+     "curves": 4,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    },
+    "5": {
+     "parts": 1315,
+     "model_space_parts": 168,
+     "segments": 151,
+     "length_m": 357.272,
+     "kinds": {
+      "ARC": 16,
+      "SEGMENT": 152
+     },
+     "model_space_share": 0.1278,
+     "pair_share": 0.4658,
+     "pair_offset_median_mm": 300.0,
+     "junction_share": 0.5894,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 16,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    },
+    "CC": {
+     "parts": 2,
+     "model_space_parts": 0,
+     "segments": 0,
+     "length_m": 0.0,
+     "kinds": {},
+     "model_space_share": 0.0,
+     "pair_share": 0.0,
+     "pair_offset_median_mm": null,
+     "junction_share": 0.0,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "CENTER",
+     "linetype_class": "DASH_DOT",
+     "curves": 0,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    },
+    "D": {
+     "parts": 190,
+     "model_space_parts": 60,
+     "segments": 31,
+     "length_m": 20.011,
+     "kinds": {
+      "ARC": 15,
+      "SEGMENT": 45
+     },
+     "model_space_share": 0.3158,
+     "pair_share": 0.0199,
+     "pair_offset_median_mm": 100.0,
+     "junction_share": 0.3548,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 15,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    },
+    "LEVEL": {
+     "parts": 30,
+     "model_space_parts": 0,
+     "segments": 0,
+     "length_m": 0.0,
+     "kinds": {},
+     "model_space_share": 0.0,
+     "pair_share": 0.0,
+     "pair_offset_median_mm": null,
+     "junction_share": 0.0,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 0,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    },
+    "S-COL.BON": {
+     "parts": 100,
+     "model_space_parts": 100,
+     "segments": 100,
+     "length_m": 47.799,
+     "kinds": {
+      "SEGMENT": 100
+     },
+     "model_space_share": 1.0,
+     "pair_share": 0.5314,
+     "pair_offset_median_mm": 200.0,
+     "junction_share": 1.0,
+     "rectangles": 20,
+     "rect_share": 0.7176,
+     "filled_rectangles": 20,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 0,
+     "name_corroboration": {
+      "layer_lexicon": "COLUMN"
+     }
+    },
+    "ST": {
+     "parts": 11,
+     "model_space_parts": 5,
+     "segments": 3,
+     "length_m": 7.619,
+     "kinds": {
+      "ARC": 2,
+      "SEGMENT": 3
+     },
+     "model_space_share": 0.4545,
+     "pair_share": 0.0,
+     "pair_offset_median_mm": null,
+     "junction_share": 0.0,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 2,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    },
+    "TEXT": {
+     "parts": 24,
+     "model_space_parts": 24,
+     "segments": 8,
+     "length_m": 2.008,
+     "kinds": {
+      "CIRCLE": 8,
+      "SEGMENT": 16
+     },
+     "model_space_share": 1.0,
+     "pair_share": 0.0,
+     "pair_offset_median_mm": null,
+     "junction_share": 0.0,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 8,
+     "name_corroboration": {
+      "layer_lexicon": "ANNOTATION"
+     }
+    },
+    "W": {
+     "parts": 112,
+     "model_space_parts": 112,
+     "segments": 74,
+     "length_m": 46.517,
+     "kinds": {
+      "ARC": 4,
+      "SEGMENT": 108
+     },
+     "model_space_share": 1.0,
+     "pair_share": 0.489,
+     "pair_offset_median_mm": 120.0,
+     "junction_share": 0.8514,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 4,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    }
+   },
+   "glazing_share": {
+    "1": 0.0614,
+    "5": 0.0977,
+    "W": 0.8261
+   },
+   "claims": [
+    {
+     "claim_id": "ERI-P-ANNOTATION-1",
+     "layer": "1",
+     "role": "ANNOTATION_GRAPHICS",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S04:1F",
+     "version": 1,
+     "evidence": [
+      "MOTIF=ANNOTATION",
+      "parts=29"
+     ],
+     "part_keys": 29
+    },
+    {
+     "claim_id": "ERI-P-ANNOTATION-5",
+     "layer": "5",
+     "role": "ANNOTATION_GRAPHICS",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S04:1F",
+     "version": 1,
+     "evidence": [
+      "MOTIF=ANNOTATION",
+      "parts=1147"
+     ],
+     "part_keys": 1147
+    },
+    {
+     "claim_id": "ERI-P-ANNOTATION-CC",
+     "layer": "CC",
+     "role": "ANNOTATION_GRAPHICS",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S04:1F",
+     "version": 1,
+     "evidence": [
+      "MOTIF=ANNOTATION",
+      "parts=2"
+     ],
+     "part_keys": 2
+    },
+    {
+     "claim_id": "ERI-L-COLUMN-S-COL.BON",
+     "layer": "S-COL.BON",
+     "role": "STRUCTURAL_OBSTACLE",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S04:1F",
+     "version": 1,
+     "evidence": [
+      "CAD_CONTINUOUS_STRAIGHT=1",
+      "CAD_SOLID_FILL=1",
+      "CONTEXT_SAME_SOURCE=1",
+      "GEOMETRY_RECTANGLES=2",
+      "20 closed rectangles [150.0, 1200.0] mm",
+      "rect share 0.7176",
+      "filled 20",
+      "accepted in other regions of this source: ARCH-S05:GF"
+     ],
+     "part_keys": 99
+    },
+    {
+     "claim_id": "ERI-P-DOOR_SYMBOL-D",
+     "layer": "D",
+     "role": "OPENING_SYMBOL",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S04:1F",
+     "version": 1,
+     "evidence": [
+      "MOTIF=DOOR_SYMBOL",
+      "parts=130"
+     ],
+     "part_keys": 130
+    },
+    {
+     "claim_id": "ERI-P-GLAZING-1",
+     "layer": "1",
+     "role": "GLAZING_BOUNDARY",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S04:1F",
+     "version": 1,
+     "evidence": [
+      "MOTIF=GLAZING",
+      "parts=2"
+     ],
+     "part_keys": 2
+    },
+    {
+     "claim_id": "ERI-P-GLAZING-2",
+     "layer": "2",
+     "role": "GLAZING_BOUNDARY",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S04:1F",
+     "version": 1,
+     "evidence": [
+      "MOTIF=GLAZING",
+      "parts=3"
+     ],
+     "part_keys": 3
+    },
+    {
+     "claim_id": "ERI-P-GLAZING-5",
+     "layer": "5",
+     "role": "GLAZING_BOUNDARY",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S04:1F",
+     "version": 1,
+     "evidence": [
+      "MOTIF=GLAZING",
+      "parts=13"
+     ],
+     "part_keys": 13
+    },
+    {
+     "claim_id": "ERI-P-GLAZING-S-COL.BON",
+     "layer": "S-COL.BON",
+     "role": "GLAZING_BOUNDARY",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S04:1F",
+     "version": 1,
+     "evidence": [
+      "MOTIF=GLAZING",
+      "parts=1"
+     ],
+     "part_keys": 1
+    },
+    {
+     "claim_id": "ERI-P-GLAZING-W",
+     "layer": "W",
+     "role": "GLAZING_BOUNDARY",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S04:1F",
+     "version": 1,
+     "evidence": [
+      "MOTIF=GLAZING",
+      "parts=86"
+     ],
+     "part_keys": 86
+    },
+    {
+     "claim_id": "ERI-L-OVERHEAD-2",
+     "layer": "2",
+     "role": "PRESENTATION_OVERHEAD",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S04:1F",
+     "version": 1,
+     "evidence": [
+      "CAD_LINETYPE_PATTERN=2",
+      "CONTEXT_SAME_SOURCE=1",
+      "GEOMETRY_OPEN_NETWORK=1",
+      "linetype HIDDEN = UNIFORM_DASH",
+      "pair share 0.5696",
+      "accepted in other regions of this source: ARCH-S03:2F,ARCH-S05:GF"
+     ],
+     "part_keys": 61
+    },
+    {
+     "claim_id": "ERI-P-SHEET_FRAME-1",
+     "layer": "1",
+     "role": "SHEET_FRAME",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S04:1F",
+     "version": 1,
+     "evidence": [
+      "MOTIF=SHEET_FRAME",
+      "parts=4"
+     ],
+     "part_keys": 4
+    },
+    {
+     "claim_id": "ERI-P-STAIR-2",
+     "layer": "2",
+     "role": "STAIR_GEOMETRY",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S04:1F",
+     "version": 1,
+     "evidence": [
+      "MOTIF=STAIR",
+      "parts=16"
+     ],
+     "part_keys": 16
+    },
+    {
+     "claim_id": "ERI-P-STAIR-5",
+     "layer": "5",
+     "role": "STAIR_GEOMETRY",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S04:1F",
+     "version": 1,
+     "evidence": [
+      "MOTIF=STAIR",
+      "parts=16"
+     ],
+     "part_keys": 16
+    },
+    {
+     "claim_id": "ERI-P-SYMBOL-LEVEL",
+     "layer": "LEVEL",
+     "role": "FURNITURE",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S04:1F",
+     "version": 1,
+     "evidence": [
+      "MOTIF=SYMBOL",
+      "parts=30"
+     ],
+     "part_keys": 30
+    },
+    {
+     "claim_id": "ERI-P-SYMBOL-TEXT",
+     "layer": "TEXT",
+     "role": "FURNITURE",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S04:1F",
+     "version": 1,
+     "evidence": [
+      "MOTIF=SYMBOL",
+      "parts=8"
+     ],
+     "part_keys": 8
+    },
+    {
+     "claim_id": "ERI-L-WALL_FACE-1",
+     "layer": "1",
+     "role": "TOPOLOGY_BOUNDARY",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S04:1F",
+     "version": 1,
+     "evidence": [
+      "CONTEXT_DOOR_HINGES=1",
+      "CONTEXT_SAME_SOURCE=1",
+      "GEOMETRY_JOINS=1",
+      "GEOMETRY_PAIRS=2",
+      "pair share 0.7564",
+      "pair offset median 200.0 mm",
+      "junction share 0.8537",
+      "linetype CONTINUOUS",
+      "door hinges anchored 10",
+      "accepted in other regions of this source: ARCH-S05:GF"
+     ],
+     "part_keys": 168
+    }
+   ],
+   "frames": [
+    {
+     "bounds": [
+      -209565.456,
+      -811916.464,
+      -169251.146,
+      -783886.131
+     ],
+     "aspect": 1.4382,
+     "content_share": 1.0,
+     "parts": 4
+    }
+   ],
+   "doors_found": 10,
+   "doors_rejected": {
+    "NO_LEAF_FROM_HINGE": 12
+   },
+   "glazing_parts": 105,
+   "windows": 12,
+   "tread_runs": 4,
+   "plot_boundary_parts": 0,
+   "occurrences": {
+    "ANNOTATION": 3,
+    "SYMBOL": 6
+   },
+   "residual": {
+    "SYMBOL": 8
+   },
+   "gap_infill": 0,
+   "part_roles": {
+    "SHEET_FRAME": 4,
+    "DOOR_SYMBOL": 130,
+    "GLAZING": 105,
+    "STAIR": 32,
+    "ANNOTATION": 1178,
+    "SYMBOL": 38,
+    "WALL_FACE": 168,
+    "OVERHEAD": 61,
+    "COLUMN": 99
+   },
+   "unresolved_parts": 236
+  },
+  "2F": {
+   "decisions": {
+    "1": {
+     "state": "ACCEPTED",
+     "role": "WALL_FACE",
+     "score": 4,
+     "channels": {
+      "GEOMETRY_PAIRS": 1,
+      "GEOMETRY_JOINS": 1,
+      "CONTEXT_DOOR_HINGES": 1,
+      "CONTEXT_SAME_SOURCE": 1
+     },
+     "reasons": [
+      "pair share 0.4731",
+      "pair offset median 200.0 mm",
+      "junction share 0.8909",
+      "linetype CONTINUOUS",
+      "door hinges anchored 3",
+      "accepted in other regions of this source: ARCH-S04:1F,ARCH-S05:GF"
+     ],
+     "competing": []
+    },
+    "2": {
+     "state": "ACCEPTED",
+     "role": "OVERHEAD",
+     "score": 4,
+     "channels": {
+      "CAD_LINETYPE_PATTERN": 2,
+      "GEOMETRY_OPEN_NETWORK": 1,
+      "CONTEXT_SAME_SOURCE": 1
+     },
+     "reasons": [
+      "linetype HIDDEN = UNIFORM_DASH",
+      "pair share 0.549",
+      "accepted in other regions of this source: ARCH-S04:1F,ARCH-S05:GF"
+     ],
+     "competing": []
+    },
+    "5": {
+     "state": "BLOCKED",
+     "role": null,
+     "best": "WALL_FACE",
+     "score": 2,
+     "why": "score 2 / channels 2 below the frozen decision"
+    },
+    "CC": {
+     "state": "NO_CANDIDATE",
+     "role": null,
+     "why": "no role candidate from any channel"
+    },
+    "D": {
+     "state": "NO_CANDIDATE",
+     "role": null,
+     "why": "no role candidate from any channel"
+    },
+    "LEVEL": {
+     "state": "NO_CANDIDATE",
+     "role": null,
+     "why": "no role candidate from any channel"
+    },
+    "S-COL.BON": {
+     "state": "NO_CANDIDATE",
+     "role": null,
+     "why": "no role candidate from any channel"
+    },
+    "ST": {
+     "state": "NO_CANDIDATE",
+     "role": null,
+     "why": "no role candidate from any channel"
+    },
+    "TEXT": {
+     "state": "NO_CANDIDATE",
+     "role": null,
+     "why": "no role candidate from any channel"
+    },
+    "W": {
+     "state": "PART_LEVEL",
+     "role": null,
+     "best": "GLAZING",
+     "score": 3,
+     "why": "decided per part (motif); the rest of the layer stays UNKNOWN"
+    }
+   },
+   "pass1_states": {
+    "1": "BLOCKED",
+    "2": "ACCEPTED",
+    "5": "BLOCKED",
+    "CC": "NO_CANDIDATE",
+    "D": "NO_CANDIDATE",
+    "LEVEL": "NO_CANDIDATE",
+    "S-COL.BON": "NO_CANDIDATE",
+    "ST": "NO_CANDIDATE",
+    "TEXT": "NO_CANDIDATE",
+    "W": "PART_LEVEL"
+   },
+   "observations": {
+    "1": {
+     "parts": 84,
+     "model_space_parts": 55,
+     "segments": 55,
+     "length_m": 120.575,
+     "kinds": {
+      "SEGMENT": 55
+     },
+     "model_space_share": 0.6548,
+     "pair_share": 0.4731,
+     "pair_offset_median_mm": 200.0,
+     "junction_share": 0.8909,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 0,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    },
+    "2": {
+     "parts": 33,
+     "model_space_parts": 33,
+     "segments": 32,
+     "length_m": 48.176,
+     "kinds": {
+      "CIRCLE": 1,
+      "SEGMENT": 32
+     },
+     "model_space_share": 1.0,
+     "pair_share": 0.549,
+     "pair_offset_median_mm": 300.0,
+     "junction_share": 0.0625,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "HIDDEN",
+     "linetype_class": "UNIFORM_DASH",
+     "curves": 1,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    },
+    "5": {
+     "parts": 1253,
+     "model_space_parts": 106,
+     "segments": 92,
+     "length_m": 291.043,
+     "kinds": {
+      "ARC": 5,
+      "CIRCLE": 2,
+      "SEGMENT": 99
+     },
+     "model_space_share": 0.0846,
+     "pair_share": 0.4442,
+     "pair_offset_median_mm": 200.0,
+     "junction_share": 0.625,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 7,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    },
+    "CC": {
+     "parts": 2,
+     "model_space_parts": 0,
+     "segments": 0,
+     "length_m": 0.0,
+     "kinds": {},
+     "model_space_share": 0.0,
+     "pair_share": 0.0,
+     "pair_offset_median_mm": null,
+     "junction_share": 0.0,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "CENTER",
+     "linetype_class": "DASH_DOT",
+     "curves": 0,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    },
+    "D": {
+     "parts": 59,
+     "model_space_parts": 20,
+     "segments": 8,
+     "length_m": 5.45,
+     "kinds": {
+      "ARC": 6,
+      "SEGMENT": 14
+     },
+     "model_space_share": 0.339,
+     "pair_share": 0.0,
+     "pair_offset_median_mm": null,
+     "junction_share": 0.25,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 6,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    },
+    "LEVEL": {
+     "parts": 15,
+     "model_space_parts": 0,
+     "segments": 0,
+     "length_m": 0.0,
+     "kinds": {},
+     "model_space_share": 0.0,
+     "pair_share": 0.0,
+     "pair_offset_median_mm": null,
+     "junction_share": 0.0,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 0,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    },
+    "S-COL.BON": {
+     "parts": 85,
+     "model_space_parts": 85,
+     "segments": 85,
+     "length_m": 106.603,
+     "kinds": {
+      "SEGMENT": 85
+     },
+     "model_space_share": 1.0,
+     "pair_share": 0.0882,
+     "pair_offset_median_mm": 200.0,
+     "junction_share": 0.7647,
+     "rectangles": 9,
+     "rect_share": 0.1229,
+     "filled_rectangles": 9,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 0,
+     "name_corroboration": {
+      "layer_lexicon": "COLUMN"
+     }
+    },
+    "ST": {
+     "parts": 9,
+     "model_space_parts": 5,
+     "segments": 3,
+     "length_m": 7.559,
+     "kinds": {
+      "ARC": 2,
+      "SEGMENT": 3
+     },
+     "model_space_share": 0.5556,
+     "pair_share": 0.0,
+     "pair_offset_median_mm": null,
+     "junction_share": 0.0,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 2,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    },
+    "TEXT": {
+     "parts": 24,
+     "model_space_parts": 24,
+     "segments": 8,
+     "length_m": 2.008,
+     "kinds": {
+      "CIRCLE": 8,
+      "SEGMENT": 16
+     },
+     "model_space_share": 1.0,
+     "pair_share": 0.0,
+     "pair_offset_median_mm": null,
+     "junction_share": 0.0,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 8,
+     "name_corroboration": {
+      "layer_lexicon": "ANNOTATION"
+     }
+    },
+    "W": {
+     "parts": 33,
+     "model_space_parts": 33,
+     "segments": 24,
+     "length_m": 14.47,
+     "kinds": {
+      "SEGMENT": 33
+     },
+     "model_space_share": 1.0,
+     "pair_share": 0.5943,
+     "pair_offset_median_mm": 120.0,
+     "junction_share": 0.8125,
+     "rectangles": 0,
+     "rect_share": 0.0,
+     "filled_rectangles": 0,
+     "linetype": "CONTINUOUS",
+     "linetype_class": "CONTINUOUS",
+     "curves": 0,
+     "name_corroboration": {
+      "layer_lexicon": null
+     }
+    }
+   },
+   "glazing_share": {
+    "1": 0.0263,
+    "5": 0.1,
+    "W": 1.0
+   },
+   "claims": [
+    {
+     "claim_id": "ERI-P-ANNOTATION-1",
+     "layer": "1",
+     "role": "ANNOTATION_GRAPHICS",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S03:2F",
+     "version": 1,
+     "evidence": [
+      "MOTIF=ANNOTATION",
+      "parts=29"
+     ],
+     "part_keys": 29
+    },
+    {
+     "claim_id": "ERI-P-ANNOTATION-5",
+     "layer": "5",
+     "role": "ANNOTATION_GRAPHICS",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S03:2F",
+     "version": 1,
+     "evidence": [
+      "MOTIF=ANNOTATION",
+      "parts=1147"
+     ],
+     "part_keys": 1147
+    },
+    {
+     "claim_id": "ERI-P-ANNOTATION-CC",
+     "layer": "CC",
+     "role": "ANNOTATION_GRAPHICS",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S03:2F",
+     "version": 1,
+     "evidence": [
+      "MOTIF=ANNOTATION",
+      "parts=2"
+     ],
+     "part_keys": 2
+    },
+    {
+     "claim_id": "ERI-P-DOOR_SYMBOL-D",
+     "layer": "D",
+     "role": "OPENING_SYMBOL",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S03:2F",
+     "version": 1,
+     "evidence": [
+      "MOTIF=DOOR_SYMBOL",
+      "parts=39"
+     ],
+     "part_keys": 39
+    },
+    {
+     "claim_id": "ERI-P-GLAZING-5",
+     "layer": "5",
+     "role": "GLAZING_BOUNDARY",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S03:2F",
+     "version": 1,
+     "evidence": [
+      "MOTIF=GLAZING",
+      "parts=8"
+     ],
+     "part_keys": 8
+    },
+    {
+     "claim_id": "ERI-P-GLAZING-S-COL.BON",
+     "layer": "S-COL.BON",
+     "role": "GLAZING_BOUNDARY",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S03:2F",
+     "version": 1,
+     "evidence": [
+      "MOTIF=GLAZING",
+      "parts=1"
+     ],
+     "part_keys": 1
+    },
+    {
+     "claim_id": "ERI-P-GLAZING-W",
+     "layer": "W",
+     "role": "GLAZING_BOUNDARY",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S03:2F",
+     "version": 1,
+     "evidence": [
+      "MOTIF=GLAZING",
+      "parts=33"
+     ],
+     "part_keys": 33
+    },
+    {
+     "claim_id": "ERI-L-OVERHEAD-2",
+     "layer": "2",
+     "role": "PRESENTATION_OVERHEAD",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S03:2F",
+     "version": 1,
+     "evidence": [
+      "CAD_LINETYPE_PATTERN=2",
+      "CONTEXT_SAME_SOURCE=1",
+      "GEOMETRY_OPEN_NETWORK=1",
+      "linetype HIDDEN = UNIFORM_DASH",
+      "pair share 0.549",
+      "accepted in other regions of this source: ARCH-S04:1F,ARCH-S05:GF"
+     ],
+     "part_keys": 33
+    },
+    {
+     "claim_id": "ERI-P-SHEET_FRAME-1",
+     "layer": "1",
+     "role": "SHEET_FRAME",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S03:2F",
+     "version": 1,
+     "evidence": [
+      "MOTIF=SHEET_FRAME",
+      "parts=4"
+     ],
+     "part_keys": 4
+    },
+    {
+     "claim_id": "ERI-P-SYMBOL-LEVEL",
+     "layer": "LEVEL",
+     "role": "FURNITURE",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S03:2F",
+     "version": 1,
+     "evidence": [
+      "MOTIF=SYMBOL",
+      "parts=15"
+     ],
+     "part_keys": 15
+    },
+    {
+     "claim_id": "ERI-P-SYMBOL-TEXT",
+     "layer": "TEXT",
+     "role": "FURNITURE",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S03:2F",
+     "version": 1,
+     "evidence": [
+      "MOTIF=SYMBOL",
+      "parts=8"
+     ],
+     "part_keys": 8
+    },
+    {
+     "claim_id": "ERI-L-WALL_FACE-1",
+     "layer": "1",
+     "role": "TOPOLOGY_BOUNDARY",
+     "review_state": "POLICY_ACCEPTED",
+     "authority": "ENTITY_ROLE_INFERENCE_V1",
+     "scope": "ARCH-S03:2F",
+     "version": 1,
+     "evidence": [
+      "CONTEXT_DOOR_HINGES=1",
+      "CONTEXT_SAME_SOURCE=1",
+      "GEOMETRY_JOINS=1",
+      "GEOMETRY_PAIRS=1",
+      "pair share 0.4731",
+      "pair offset median 200.0 mm",
+      "junction share 0.8909",
+      "linetype CONTINUOUS",
+      "door hinges anchored 3",
+      "accepted in other regions of this source: ARCH-S04:1F,ARCH-S05:GF"
+     ],
+     "part_keys": 55
+    }
+   ],
+   "frames": [
+    {
+     "bounds": [
+      -254418.111,
+      -811916.464,
+      -214103.801,
+      -783886.131
+     ],
+     "aspect": 1.4382,
+     "content_share": 1.0,
+     "parts": 4
+    }
+   ],
+   "doors_found": 3,
+   "doors_rejected": {
+    "NO_LEAF_FROM_HINGE": 8
+   },
+   "glazing_parts": 42,
+   "windows": 5,
+   "tread_runs": 0,
+   "plot_boundary_parts": 0,
+   "occurrences": {
+    "ANNOTATION": 3,
+    "SYMBOL": 3
+   },
+   "residual": {
+    "SYMBOL": 8
+   },
+   "gap_infill": 0,
+   "part_roles": {
+    "SHEET_FRAME": 4,
+    "DOOR_SYMBOL": 39,
+    "GLAZING": 42,
+    "ANNOTATION": 1178,
+    "SYMBOL": 23,
+    "WALL_FACE": 55,
+    "OVERHEAD": 33
+   },
+   "unresolved_parts": 127
+  }
+ },
+ "rule": "OBSERVATION -> ROLE_CANDIDATE (channel scores) -> CLAIM (POLICY_ACCEPTED, source + region scoped) -> ACCEPTED | BLOCKED; layer names corroborate only; no layer map in code"
+}

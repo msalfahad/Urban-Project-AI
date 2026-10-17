@@ -1,0 +1,131 @@
+{
+ "SCHEMA": "URBAN_R8_15_DUCT_AUTHORITY_REGISTER_V1",
+ "policy": {
+  "policy_id": "OBSTACLE_AUTHORITY_POLICY_V1",
+  "states": [
+   "OWNER_PHYSICAL_OBSTACLE",
+   "UNPROVEN_OBSTACLE"
+  ],
+  "authority": "an APPLYING owner physical fact of kind BUILT_OBSTACLE binding EVERY segment of the entity",
+  "never": [
+   "a topology change",
+   "authority from shape, size, layer or a dashed X",
+   "transfer to another entity, revision or project",
+   "a material type beyond the fact",
+   "a quantity"
+  ],
+  "digest": "4e4134e5a7bd05c5497d845cc76ab35d43a5cff5101912b77c8fa36b95470d2f"
+ },
+ "fact": "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1",
+ "parts": [
+  {
+   "key": "QORTUBA_REV_NEW|H2060||SEGMENT|0",
+   "reading": "DUCT_ENCLOSURE_OUTER_FACE"
+  },
+  {
+   "key": "QORTUBA_REV_NEW|H2060||SEGMENT|1",
+   "reading": "DUCT_ENCLOSURE_OUTER_FACE"
+  },
+  {
+   "key": "QORTUBA_REV_NEW|H2060||SEGMENT|2",
+   "reading": "DUCT_ENCLOSURE_OUTER_FACE"
+  },
+  {
+   "key": "QORTUBA_REV_NEW|H2060||SEGMENT|3",
+   "reading": "DUCT_ENCLOSURE_OUTER_FACE"
+  },
+  {
+   "key": "QORTUBA_REV_NEW|H2061||SEGMENT|0",
+   "reading": "DUCT_ENCLOSURE_INNER_FACE"
+  },
+  {
+   "key": "QORTUBA_REV_NEW|H2061||SEGMENT|1",
+   "reading": "DUCT_ENCLOSURE_INNER_FACE"
+  },
+  {
+   "key": "QORTUBA_REV_NEW|H2061||SEGMENT|2",
+   "reading": "DUCT_ENCLOSURE_INNER_FACE"
+  },
+  {
+   "key": "QORTUBA_REV_NEW|H2061||SEGMENT|3",
+   "reading": "DUCT_ENCLOSURE_INNER_FACE"
+  }
+ ],
+ "entity_authority": {
+  "QORTUBA_REV_NEW|H2060||SEGMENT": {
+   "state": "OWNER_PHYSICAL_OBSTACLE",
+   "fact": "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1",
+   "physical_class": "DUCT",
+   "segments": 4,
+   "topology_effect": "PHYSICAL_OBSTACLE",
+   "floor_effect": "EXCLUDED_FROM_ROOM_FLOOR",
+   "ceiling_effect": "EXCLUDED_FROM_NORMAL_CEILING"
+  },
+  "QORTUBA_REV_NEW|H2061||SEGMENT": {
+   "state": "OWNER_PHYSICAL_OBSTACLE",
+   "fact": "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1",
+   "physical_class": "DUCT",
+   "segments": 4,
+   "topology_effect": "PHYSICAL_OBSTACLE",
+   "floor_effect": "EXCLUDED_FROM_ROOM_FLOOR",
+   "ceiling_effect": "EXCLUDED_FROM_NORMAL_CEILING"
+  }
+ },
+ "holes": [
+  {
+   "site": "SITE-5f1762f1a93b91ca",
+   "entities": [
+    "QORTUBA_REV_NEW|H2060||SEGMENT"
+   ],
+   "states": {
+    "QORTUBA_REV_NEW|H2060||SEGMENT": "OWNER_PHYSICAL_OBSTACLE"
+   },
+   "hole_area_m2": 0.84,
+   "holes_only_isolated_loops": true,
+   "authorised": true,
+   "facts": [
+    "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1"
+   ],
+   "labels": [
+    "BED.ROOM",
+    "yvtmk,L"
+   ],
+   "site_area_m2": 19.2725
+  },
+  {
+   "site": "SITE-fa55b66bc141aa56",
+   "entities": [
+    "QORTUBA_REV_NEW|H2061||SEGMENT"
+   ],
+   "states": {
+    "QORTUBA_REV_NEW|H2061||SEGMENT": "OWNER_PHYSICAL_OBSTACLE"
+   },
+   "hole_area_m2": 0.38,
+   "holes_only_isolated_loops": true,
+   "authorised": true,
+   "facts": [
+    "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1"
+   ],
+   "labels": [],
+   "site_area_m2": 0.46
+  }
+ ],
+ "footprint_from_source_m2": {
+  "H2060 outer loop (shoelace)": 0.84,
+  "TS01 BED.ROOM hole": 0.84,
+  "agree": true
+ },
+ "floor": "EXCLUDED_FROM_ROOM_FLOOR (Q-13)",
+ "ceiling": "EXCLUDED_FROM_NORMAL_CEILING (Q-14)",
+ "skirting": "its 5.0 lm room-facing perimeter is OBSTACLE_FACE on the path, included by the frozen method (owner 'all real walls' + rule-store section E)",
+ "v5_band_state": "GEOMETRIC_BAND_CANDIDATE (unchanged - desirable separation of geometry and authority)",
+ "old_revision": {
+  "QORTUBA_REV_OLD|H2060||SEGMENT": "UNPROVEN_OBSTACLE",
+  "QORTUBA_REV_OLD|H2061||SEGMENT": "UNPROVEN_OBSTACLE"
+ },
+ "never": [
+  "closed rectangle + X = duct",
+  "a material",
+  "a topology change"
+ ]
+}

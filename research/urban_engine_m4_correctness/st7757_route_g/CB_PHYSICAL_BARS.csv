@@ -1,0 +1,65 @@
+LINE_ID,MARK,BAR_ID,ROLE,COUNT,DIA_MM,SPANS,LENGTH_M_LOW,LENGTH_M_BASE,LENGTH_M_HIGH,BASIS,MASS_KG_LOW,MASS_KG_BASE,MASS_KG_HIGH
+SH04:CB11:1,CB11,CB11:BOTTOM1,BOTTOM,6,18,1,7.583268752,8.303268752,8.483268752,clear span + extension each side (interior: support width + extension; end: anchorage),90.999225024,99.639225024,101.799225024
+SH04:CB11:1,CB11,CB11:STIRRUP1,STIRRUP,68.08268752,8,1,,,,"rate x clear span + 1, closed link",51.370635805,54.598259509,55.674134077
+SH04:CB11:1,CB11,CB11:BOTTOM2,BOTTOM,4,16,2,4.2,4.2,4.2,clear span + extension each side (interior: support width + extension; end: anchorage),26.548148148,26.548148148,26.548148148
+SH04:CB11:1,CB11,CB11:STIRRUP2,STIRRUP,16.9,8,2,,,,"rate x clear span + 1, closed link",12.751608033,13.552793218,13.819854947
+SH04:CB11:1,CB11,CB11:BOTTOM3,BOTTOM,4,16,3,3.975,4.615,4.775,clear span + extension each side (interior: support width + extension; end: anchorage),25.125925926,29.171358025,30.182716049
+SH04:CB11:1,CB11,CB11:STIRRUP3,STIRRUP,17.5,8,3,,,,"rate x clear span + 1, closed link",13.204327845,14.033957475,14.310500684
+SH04:CB11:1,CB11,CB11:SUPPORT_TOP1,SUPPORT_TOP,8,18,"1,2",3.177819125,3.177819125,3.177819125,support width + fraction x clear span on each side,50.845106007,50.845106007,50.845106007
+SH04:CB11:1,CB11,CB11:SUPPORT_TOP2,SUPPORT_TOP,4,16,"2,3",2.184,2.184,2.184,support width + fraction x clear span on each side,13.805037037,13.805037037,13.805037037
+SH04:CB12:1,CB12,CB12:BOTTOM1,BOTTOM,5,18,1,6.6,7.32,7.5,clear span + extension each side (interior: support width + extension; end: anchorage),66.0,73.2,75.0
+SH04:CB12:1,CB12,CB12:STIRRUP1,STIRRUP,51.625,8,1,,,,"rate x clear span + 1, closed link",36.91326097,39.360668377,40.176470846
+SH04:CB12:1,CB12,CB12:BOTTOM2,BOTTOM,3,16,2,6.0,6.64,6.8,clear span + extension each side (interior: support width + extension; end: anchorage),28.444444444,31.478518519,32.237037037
+SH04:CB12:1,CB12,CB12:STIRRUP2,STIRRUP,36.175,8,2,,,,"rate x clear span + 1, closed link",25.866096186,27.581059149,28.15271347
+SH04:CB12:1,CB12,CB12:SUPPORT_TOP1,SUPPORT_TOP,6,18,"1,2",3.4905,3.4905,3.4905,support width + fraction x clear span on each side,41.886,41.886,41.886
+SH04:CB13:1,CB13,CB13:BOTTOM1,BOTTOM,4,16,1,3.775,4.415,4.575,clear span + extension each side (interior: support width + extension; end: anchorage),23.861728395,27.907160494,28.918518519
+SH04:CB13:1,CB13,CB13:STIRRUP1,STIRRUP,22.0,8,1,,,,"rate x clear span + 1, closed link",12.254047421,13.297010384,13.644664705
+SH04:CB13:1,CB13,CB13:BOTTOM2,BOTTOM,4,18,2,3.925,4.645,4.825,clear span + extension each side (interior: support width + extension; end: anchorage),31.399999999,37.159999999,38.599999999
+SH04:CB13:1,CB13,CB13:STIRRUP2,STIRRUP,23.049999999,10,2,,,,"rate x clear span + 1, closed link",19.989324711,21.696732119,22.265867921
+SH04:CB13:1,CB13,CB13:SUPPORT_TOP1,SUPPORT_TOP,5,18,"1,2",2.2785,2.2785,2.2785,support width + fraction x clear span on each side,22.785,22.785,22.785
+SH04:CB9:1,CB9,CB9:BOTTOM1,BOTTOM,4,16,1,4.125,4.765,4.925,clear span + extension each side (interior: support width + extension; end: anchorage),26.074074074,30.119506173,31.130864198
+SH04:CB9:1,CB9,CB9:STIRRUP1,STIRRUP,25.85,8,1,,,,"rate x clear span + 1, closed link",12.356036584,13.581518066,13.990011893
+SH04:CB9:1,CB9,CB9:BOTTOM2,BOTTOM,3,14,2,4.6,4.6,4.6,clear span + extension each side (interior: support width + extension; end: anchorage),16.696296296,16.696296296,16.696296296
+SH04:CB9:1,CB9,CB9:STIRRUP2,STIRRUP,34.5,8,2,,,,"rate x clear span + 1, closed link",16.490648439,18.126203995,18.67138918
+SH04:CB9:1,CB9,CB9:BOTTOM3,BOTTOM,3,14,3,3.745,4.305,4.445,clear span + extension each side (interior: support width + extension; end: anchorage),13.592962963,15.625555556,16.133703704
+SH04:CB9:1,CB9,CB9:STIRRUP3,STIRRUP,21.82,8,3,,,,"rate x clear span + 1, closed link",10.429737651,11.46416728,11.808977157
+SH04:CB9:1,CB9,CB9:SUPPORT_TOP1,SUPPORT_TOP,4,18,"1,2",2.249,2.249,2.249,support width + fraction x clear span on each side,17.992,17.992,17.992
+SH04:CB9:1,CB9,CB9:SUPPORT_TOP2,SUPPORT_TOP,3,16,"2,3",2.3094,2.3094,2.3094,support width + fraction x clear span on each side,10.948266667,10.948266667,10.948266667
+SH06:CB1:1,CB1,CB1:BOTTOM1,BOTTOM,4,18,1,7.575,8.295,8.475,clear span + extension each side (interior: support width + extension; end: anchorage),60.6,66.36,67.8
+SH06:CB1:1,CB1,CB1:STIRRUP1,STIRRUP,36.0,8,1,,,,"rate x clear span + 1, closed link",28.585410932,30.292077598,30.860966487
+SH06:CB1:1,CB1,CB1:BOTTOM2,BOTTOM,5,18,2,5.675,6.395,6.575,clear span + extension each side (interior: support width + extension; end: anchorage),56.749999999,63.949999999,65.749999999
+SH06:CB1:1,CB1,CB1:STIRRUP2,STIRRUP,46.899999999,10,2,,,,"rate x clear span + 1, closed link",58.042792451,61.516866525,62.674891216
+SH06:CB1:1,CB1,CB1:SUPPORT_TOP1,SUPPORT_TOP,8,18,"1,2",3.371,3.371,3.371,support width + fraction x clear span on each side,53.936,53.936,53.936
+SH06:CB2:1,CB2,CB2:BOTTOM1,BOTTOM,3,16,1,4.145,4.785,4.945,clear span + extension each side (interior: support width + extension; end: anchorage),19.65037037,22.684444444,23.442962963
+SH06:CB2:1,CB2,CB2:STIRRUP1,STIRRUP,21.82,8,1,,,,"rate x clear span + 1, closed link",10.429737651,11.46416728,11.808977157
+SH06:CB2:1,CB2,CB2:BOTTOM2,BOTTOM,3,14,2,4.025,4.585,4.725,clear span + extension each side (interior: support width + extension; end: anchorage),14.609259259,16.641851852,17.15
+SH06:CB2:1,CB2,CB2:STIRRUP2,STIRRUP,21.1,8,2,,,,"rate x clear span + 1, closed link",10.085584988,11.085881284,11.419313383
+SH06:CB2:1,CB2,CB2:SUPPORT_TOP1,SUPPORT_TOP,4,16,"1,2",2.3094,2.3094,2.3094,support width + fraction x clear span on each side,14.597688889,14.597688889,14.597688889
+SH06:CB3:1,CB3,CB3:BOTTOM1,BOTTOM,3,16,1,3.895,4.535,4.695,clear span + extension each side (interior: support width + extension; end: anchorage),18.465185183,21.499259257,22.257777776
+SH06:CB3:1,CB3,CB3:STIRRUP1,STIRRUP,16.099999998,8,1,,,,"rate x clear span + 1, closed link",10.875882851,11.63914211,11.893561863
+SH06:CB3:1,CB3,CB3:BOTTOM2,BOTTOM,3,16,2,4.2,4.2,4.2,clear span + extension each side (interior: support width + extension; end: anchorage),19.911111111,19.911111111,19.911111111
+SH06:CB3:1,CB3,CB3:STIRRUP2,STIRRUP,14.25,8,2,,,,"rate x clear span + 1, closed link",9.626169605,10.301725161,10.526910346
+SH06:CB3:1,CB3,CB3:BOTTOM3,BOTTOM,3,16,3,3.975,4.615,4.775,clear span + extension each side (interior: support width + extension; end: anchorage),18.844444444,21.878518519,22.637037037
+SH06:CB3:1,CB3,CB3:STIRRUP3,STIRRUP,30.7,8,3,,,,"rate x clear span + 1, closed link",20.738484693,22.1938921,22.679027903
+SH06:CB4:1,CB4,CB4:BOTTOM1,BOTTOM,3,14,1,3.775,4.335,4.475,clear span + extension each side (interior: support width + extension; end: anchorage),13.701851852,15.734444444,16.242592593
+SH06:CB4:1,CB4,CB4:STIRRUP1,STIRRUP,19.0,8,1,,,,"rate x clear span + 1, closed link",9.081806387,9.982547128,10.282794041
+SH06:CB4:1,CB4,CB4:BOTTOM2,BOTTOM,3,16,2,3.975,4.615,4.775,clear span + extension each side (interior: support width + extension; end: anchorage),18.844444444,21.878518518,22.637037037
+SH06:CB4:1,CB4,CB4:STIRRUP2,STIRRUP,26.599999999,8,2,,,,"rate x clear span + 1, closed link",12.714528941,13.975565978,14.395911657
+SH06:CB4:1,CB4,CB4:SUPPORT_TOP1,SUPPORT_TOP,4,16,"1,2",2.284,2.284,2.284,support width + fraction x clear span on each side,14.437135802,14.437135802,14.437135802
+SH06:CB6:1,CB6,CB6:BOTTOM1,BOTTOM,3,16,1,4.575,5.215,5.375,clear span + extension each side (interior: support width + extension; end: anchorage),21.688888887,24.722962961,25.48148148
+SH06:CB6:1,CB6,CB6:STIRRUP1,STIRRUP,20.999999998,8,1,,,,"rate x clear span + 1, closed link",14.185934153,15.181489709,15.513341561
+SH06:CB6:1,CB6,CB6:BOTTOM2,BOTTOM,4,18,2,6.425,7.145,7.325,clear span + extension each side (interior: support width + extension; end: anchorage),51.4,57.16,58.6
+SH06:CB6:1,CB6,CB6:STIRRUP2,STIRRUP,36.1,8,2,,,,"rate x clear span + 1, closed link",24.386296333,26.09770374,26.668172876
+SH06:CB6:1,CB6,CB6:SUPPORT_TOP1,SUPPORT_TOP,4,18,"1,2",2.828341048,2.828341048,2.828341048,support width + fraction x clear span on each side,22.626728386,22.626728386,22.626728386
+SH06:CB7:1,CB7,CB7:BOTTOM1,BOTTOM,3,16,1,6.225,6.865,7.025,clear span + extension each side (interior: support width + extension; end: anchorage),29.511111111,32.545185185,33.303703704
+SH06:CB7:1,CB7,CB7:STIRRUP1,STIRRUP,41.25,8,1,,,,"rate x clear span + 1, closed link",27.865227804,29.820783359,30.472635211
+SH06:CB7:1,CB7,CB7:BOTTOM2,BOTTOM,3,16,2,5.925,6.565,6.725,clear span + extension each side (interior: support width + extension; end: anchorage),28.088888889,31.122962963,31.881481481
+SH06:CB7:1,CB7,CB7:STIRRUP2,STIRRUP,39.15,8,2,,,,"rate x clear span + 1, closed link",26.446634388,28.302634388,28.921301055
+SH06:CB7:1,CB7,CB7:SUPPORT_TOP1,SUPPORT_TOP,5,18,"1,2",3.04,3.04,3.04,support width + fraction x clear span on each side,30.4,30.4,30.4
+SH06:CB8:1,CB8,CB8:BOTTOM1,BOTTOM,3,14,1,4.25,4.81,4.95,clear span + extension each side (interior: support width + extension; end: anchorage),15.425925926,17.458518519,17.966666667
+SH06:CB8:1,CB8,CB8:STIRRUP1,STIRRUP,16.375,8,1,,,,"rate x clear span + 1, closed link",12.355478198,13.131774494,13.390539926
+SH06:CB8:1,CB8,CB8:BOTTOM2,BOTTOM,7,18,2,7.495,7.495,7.495,clear span + extension each side (interior: support width + extension; end: anchorage),104.93,104.93,104.93
+SH06:CB8:1,CB8,CB8:STIRRUP2,STIRRUP,46.96,8,2,,,,"rate x clear span + 1, closed link",35.432870606,37.659122457,38.401206408
+SH06:CB8:1,CB8,CB8:BOTTOM3,BOTTOM,4,16,3,6.925,7.565,7.725,clear span + extension each side (interior: support width + extension; end: anchorage),43.772839506,47.818271605,48.82962963
+SH06:CB8:1,CB8,CB8:STIRRUP3,STIRRUP,32.75,8,3,,,,"rate x clear span + 1, closed link",24.710956396,26.263548988,26.781079852
+SH06:CB8:1,CB8,CB8:SUPPORT_TOP2,SUPPORT_TOP,6,18,"2,3",3.4689,3.4689,3.4689,support width + fraction x clear span on each side,41.6268,41.6268,41.6268

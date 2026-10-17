@@ -1,0 +1,312 @@
+{
+ "SCHEMA": "URBAN_QORTUBA_RC1_BOQ_ALIAS_REGISTER_V1",
+ "aliases": [
+  {
+   "alias": "QOR-R819-Q-13",
+   "canonical": "FLR-01",
+   "relation": "SAME_QUANTITY",
+   "value": 111.8988,
+   "keys": null,
+   "note": "R8.19 / R8.20 BOQ shadow line"
+  },
+  {
+   "alias": "OWNER-RULES-V1:Q-13",
+   "canonical": "FLR-01",
+   "relation": "HISTORICAL_MEANING",
+   "value": null,
+   "keys": null,
+   "note": "old revision takeoff (OWNER RULES V1), same meaning, another source"
+  },
+  {
+   "alias": "QOR-R819-Q-11",
+   "canonical": "FLR-02",
+   "relation": "SAME_QUANTITY",
+   "value": 17.7425,
+   "keys": null,
+   "note": "R8.19 / R8.20 BOQ shadow line"
+  },
+  {
+   "alias": "OWNER-RULES-V1:Q-11",
+   "canonical": "FLR-02",
+   "relation": "HISTORICAL_MEANING",
+   "value": null,
+   "keys": null,
+   "note": "old revision takeoff (OWNER RULES V1), same meaning, another source"
+  },
+  {
+   "alias": "QOR-R819-Q-03",
+   "canonical": "FLR-02",
+   "relation": "MISLABELLED_DUPLICATE",
+   "value": 17.7425,
+   "keys": [
+    "SITE-1c4abf65f9b5db1e",
+    "SITE-a2b19efc492a6d0b",
+    "SITE-fe8ed5548fb4310e"
+   ],
+   "note": "Q-03 was historically WATERPROOFING floor (OWNER RULES V1) but the R8.19 / R8.20 BOQ shadow described it as ceramic floor - same sites, same m2: a duplicate line"
+  },
+  {
+   "alias": "QOR-R819-Q-12",
+   "canonical": "FLR-03",
+   "relation": "SAME_QUANTITY",
+   "value": 11.685,
+   "keys": null,
+   "note": "R8.19 / R8.20 BOQ shadow line"
+  },
+  {
+   "alias": "OWNER-RULES-V1:Q-12",
+   "canonical": "FLR-03",
+   "relation": "HISTORICAL_MEANING",
+   "value": null,
+   "keys": null,
+   "note": "old revision takeoff (OWNER RULES V1), same meaning, another source"
+  },
+  {
+   "alias": "QOR-R819-Q-03P",
+   "canonical": "FLR-03",
+   "relation": "MISLABELLED_DUPLICATE",
+   "value": 11.685,
+   "keys": [
+    "SITE-8c1c7563d5252c50"
+   ],
+   "note": "Q-03P was historically WATERPROOFING floor (OWNER RULES V1) but the R8.19 / R8.20 BOQ shadow described it as ceramic floor - same sites, same m2: a duplicate line"
+  },
+  {
+   "alias": "QOR-R819-MARBLE-THRESHOLD-PLAN-AREA-M2",
+   "canonical": "MRB-01",
+   "relation": "SAME_QUANTITY",
+   "value": 0.51,
+   "keys": null,
+   "note": null
+  },
+  {
+   "alias": "QOR-R819-MARBLE-THRESHOLD-LENGTH-LM",
+   "canonical": "MRB-02",
+   "relation": "SAME_QUANTITY",
+   "value": 3.4,
+   "keys": null,
+   "note": null
+  },
+  {
+   "alias": "QOR-R819-Q-14",
+   "canonical": "CLG-01",
+   "relation": "SAME_QUANTITY",
+   "value": 140.637,
+   "keys": null,
+   "note": null
+  },
+  {
+   "alias": "OWNER-RULES-V1:Q-14",
+   "canonical": "CLG-01",
+   "relation": "HISTORICAL_MEANING",
+   "value": null,
+   "keys": null,
+   "note": null
+  },
+  {
+   "alias": "QOR-R819-DRY-WALL-PLASTER",
+   "canonical": "PLS-01",
+   "relation": "SAME_QUANTITY",
+   "value": 307.361518,
+   "keys": null,
+   "note": null
+  },
+  {
+   "alias": "OWNER-RULES-V1:Q-08",
+   "canonical": "PLS-01",
+   "relation": "HISTORICAL_MEANING",
+   "value": null,
+   "keys": null,
+   "note": null
+  },
+  {
+   "alias": "QOR-R819-WET-SERVICE-REVEAL-PLASTER",
+   "canonical": "PLS-02",
+   "relation": "SAME_QUANTITY",
+   "value": 1.510248,
+   "keys": null,
+   "note": null
+  },
+  {
+   "alias": "QOR-R819-DRY-WALL-PAINT",
+   "canonical": "PNT-01",
+   "relation": "SAME_QUANTITY",
+   "value": 307.361518,
+   "keys": null,
+   "note": null
+  },
+  {
+   "alias": "OWNER-RULES-V1:Q-09",
+   "canonical": "PNT-01",
+   "relation": "HISTORICAL_MEANING",
+   "value": null,
+   "keys": null,
+   "note": null
+  },
+  {
+   "alias": "QOR-R819-WET-SERVICE-WALL-TILE",
+   "canonical": "WTL-01",
+   "relation": "SAME_QUANTITY",
+   "value": 127.693512,
+   "keys": null,
+   "note": null
+  },
+  {
+   "alias": "OWNER-RULES-V1:Q-05 + Q-06",
+   "canonical": "WTL-01",
+   "relation": "HISTORICAL_MEANING",
+   "value": null,
+   "keys": null,
+   "note": null
+  },
+  {
+   "alias": "QOR-R819-WET-WALL-TILE-PREP",
+   "canonical": "WTP-01",
+   "relation": "SAME_QUANTITY",
+   "value": 127.693512,
+   "keys": null,
+   "note": null
+  },
+  {
+   "alias": "OWNER-RULES-V1:Q-10",
+   "canonical": "WTP-01",
+   "relation": "HISTORICAL_MEANING",
+   "value": null,
+   "keys": null,
+   "note": null
+  },
+  {
+   "alias": "QOR-R819-SKIRTING",
+   "canonical": "SKT-01",
+   "relation": "SAME_QUANTITY",
+   "value": 94.13682,
+   "keys": null,
+   "note": null
+  },
+  {
+   "alias": "OWNER-RULES-V1:Q-01",
+   "canonical": "SKT-01",
+   "relation": "HISTORICAL_MEANING",
+   "value": null,
+   "keys": null,
+   "note": null
+  },
+  {
+   "alias": "QOR-R819-HIDDEN-PROFILE",
+   "canonical": "HPR-01",
+   "relation": "SAME_QUANTITY",
+   "value": 94.13682,
+   "keys": null,
+   "note": null
+  },
+  {
+   "alias": "OWNER-RULES-V1:Q-02",
+   "canonical": "HPR-01",
+   "relation": "HISTORICAL_MEANING",
+   "value": null,
+   "keys": null,
+   "note": null
+  },
+  {
+   "alias": "QOR-R819-WATERPROOFING-FLOOR-M2",
+   "canonical": "WPF-01",
+   "relation": "SAME_QUANTITY",
+   "value": 29.4275,
+   "keys": null,
+   "note": null
+  },
+  {
+   "alias": "OWNER-RULES-V1:Q-03",
+   "canonical": "WPF-01",
+   "relation": "HISTORICAL_MEANING",
+   "value": null,
+   "keys": null,
+   "note": "old-revision waterproofing row of the same meaning"
+  },
+  {
+   "alias": "OWNER-RULES-V1:Q-03P",
+   "canonical": "WPF-01",
+   "relation": "HISTORICAL_MEANING",
+   "value": null,
+   "keys": null,
+   "note": "old-revision waterproofing row of the same meaning"
+  },
+  {
+   "alias": "QOR-R819-WATERPROOFING-UPTURN-LM",
+   "canonical": "WPU-01",
+   "relation": "SAME_QUANTITY",
+   "value": 44.2,
+   "keys": null,
+   "note": null
+  },
+  {
+   "alias": "OWNER-RULES-V1:Q-04",
+   "canonical": "WPU-01",
+   "relation": "HISTORICAL_MEANING",
+   "value": null,
+   "keys": null,
+   "note": "old-revision waterproofing row of the same meaning"
+  },
+  {
+   "alias": "OWNER-RULES-V1:Q-04P",
+   "canonical": "WPU-01",
+   "relation": "HISTORICAL_MEANING",
+   "value": null,
+   "keys": null,
+   "note": "old-revision waterproofing row of the same meaning"
+  },
+  {
+   "alias": "OWNER-RULES-V1:Q-16",
+   "canonical": "DOR-01",
+   "relation": "HISTORICAL_MEANING",
+   "value": null,
+   "keys": null,
+   "note": null
+  },
+  {
+   "alias": "OWNER-RULES-V1:Q-17",
+   "canonical": "SGD-01",
+   "relation": "HISTORICAL_MEANING",
+   "value": null,
+   "keys": null,
+   "note": null
+  },
+  {
+   "alias": "OWNER-RULES-V1:Q-15",
+   "canonical": "WIN-01",
+   "relation": "HISTORICAL_MEANING",
+   "value": null,
+   "keys": null,
+   "note": null
+  }
+ ],
+ "q03_q11": "NOT two payable floor quantities. Same physical surface (the three BATH sites, 17.7425 m2) but historically two DIFFERENT trades: Q-03 = wet-area WATERPROOFING floor, Q-11 = wet-room CERAMIC floor. The R8.18 waterproofing register now owns the membrane (WATERPROOFING_FLOOR_M2), so RC1: Q-11 -> canonical FLOOR CERAMIC WET item; Q-03 -> LEGACY alias of the bathroom part of the canonical WATERPROOFING FLOOR item (and it must never again be shown as a floor-finish row)",
+ "q03p_q12": "Same: Q-12 -> canonical PAINTRY CERAMIC FLOOR item; Q-03P -> legacy alias of the PAINTRY part of the WATERPROOFING FLOOR item",
+ "r8_20_xlsx_duplicate_risk": "YES (R8.20 XLSX): 01_BOQ_SUMMARY lists Q-03, Q-03P, Q-11, Q-12 and Q-13 all as ARCHITECTURAL_FLOOR_FINISH (sum 170.7538 m2 against a physical floor of 141.8363 m2) AND WATERPROOFING-FLOOR 29.4275 - the membrane appears twice and the wet / service floor twice. Also MARBLE plan area (m2) and MARBLE length (lm) are two measures of the SAME four thresholds (price one basis). This is a reporting defect (quantities unchanged); RC1 removes it structurally",
+ "r8_20_floor_lines_sum_m2": 170.7538,
+ "physical_floor_finish_m2": 141.8363,
+ "summary_lines_now": [
+  "FLR-01",
+  "FLR-02",
+  "FLR-03",
+  "MRB-01",
+  "MRB-02",
+  "CLG-01",
+  "PLS-01",
+  "PLS-02",
+  "PNT-01",
+  "WTL-01",
+  "WTP-01",
+  "SKT-01",
+  "HPR-01",
+  "WPF-01",
+  "WPU-01",
+  "DOR-01",
+  "DOR-02",
+  "SGD-01",
+  "SGD-02",
+  "WIN-01",
+  "WIN-02"
+ ],
+ "aliases_in_summary": []
+}

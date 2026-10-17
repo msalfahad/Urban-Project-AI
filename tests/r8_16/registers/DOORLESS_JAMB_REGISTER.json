@@ -1,0 +1,96 @@
+{
+ "SCHEMA": "URBAN_R8_16_DOORLESS_JAMB_REGISTER_V1",
+ "rule": {
+  "across_opening": "NONE",
+  "real_floor_side_jambs": "INCLUDED",
+  "conditions": [
+   "the opening genuinely has no door",
+   "the jamb is a real physical vertical surface",
+   "that side is skirting-eligible",
+   "the floor finish reaches the jamb",
+   "not a full-wall-tile / no-skirting room"
+  ]
+ },
+ "jambs": [
+  {
+   "opening": "OP-997f14d12b8e9bc1",
+   "kind": "DOORLESS",
+   "side": "LEFT",
+   "source": "BANDEND|WB-0644b40d07c861d6|1",
+   "end_kind": "ALIGNED_FREE_END",
+   "physical": true,
+   "length_lm": 0.2,
+   "counted_lm": 0.2,
+   "why": null,
+   "site": "SITE-77a2130eb275604c",
+   "record": "LEFT_PHYSICAL_JAMB"
+  },
+  {
+   "opening": "OP-997f14d12b8e9bc1",
+   "kind": "DOORLESS",
+   "side": "RIGHT",
+   "source": "BANDEND|WB-6c882c7cafa843e5|0",
+   "end_kind": "ALIGNED_FREE_END",
+   "physical": true,
+   "length_lm": 0.2,
+   "counted_lm": 0.2,
+   "why": null,
+   "site": "SITE-77a2130eb275604c",
+   "record": "RIGHT_PHYSICAL_JAMB"
+  },
+  {
+   "opening": "OP-9e0fd219ca5cd391",
+   "kind": "DOORLESS",
+   "side": "LEFT",
+   "source": "BANDEND|WB-8549cc78e5a3af40|0",
+   "end_kind": "CAPPED",
+   "physical": true,
+   "length_lm": 0.15,
+   "counted_lm": 0.15,
+   "why": null,
+   "site": "SITE-a6405850100155ac",
+   "record": "LEFT_PHYSICAL_JAMB"
+  },
+  {
+   "opening": "OP-9e0fd219ca5cd391",
+   "kind": "DOORLESS",
+   "side": "RIGHT",
+   "source": "QORTUBA_REV_NEW|H518||SEGMENT|0",
+   "end_kind": "CONTINUOUS_WALL_FACE",
+   "physical": false,
+   "length_lm": 0.15,
+   "counted_lm": 0.0,
+   "why": "not physical",
+   "site": "SITE-a6405850100155ac",
+   "record": "NOT_A_JAMB (continuous wall face)"
+  }
+ ],
+ "counted_lm": 0.55,
+ "across_opening_lm": 0.0,
+ "topology_closure_lm": 0.0,
+ "hall_far_jamb": {
+  "opening": "OP-997f14d12b8e9bc1",
+  "kind": "DOORLESS",
+  "side": "RIGHT",
+  "source": "BANDEND|WB-6c882c7cafa843e5|0",
+  "end_kind": "ALIGNED_FREE_END",
+  "physical": true,
+  "length_lm": 0.2,
+  "counted_lm": 0.2,
+  "why": null,
+  "site": "SITE-77a2130eb275604c"
+ },
+ "v3_o1": {
+  "id": "V3-O1",
+  "what": "measure_v3 subtracts the overlap of EVERY jamb record from the wall path, including a CONTINUOUS_WALL_FACE side (not a jamb) - that wall span then counts nowhere",
+  "spans": [
+   {
+    "site": "SITE-a6405850100155ac",
+    "opening": "OP-9e0fd219ca5cd391",
+    "length_lm": 0.15
+   }
+  ],
+  "effect_lm": 0.15,
+  "action": "next round (no post-result edit inside the frozen V3)"
+ }
+}

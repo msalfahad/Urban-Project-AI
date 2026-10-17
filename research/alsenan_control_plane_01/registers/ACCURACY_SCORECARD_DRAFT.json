@@ -1,0 +1,102 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_ACCURACY_SCORECARD_DRAFT_V1",
+ "rows": [
+  {
+   "id": "M01",
+   "metric": "floor area released while its room is COMPUTED_REVIEW",
+   "unit": "m2",
+   "current": 325.251,
+   "acceptance": 0.0,
+   "note": "rooms not proved closed must not carry a COMPUTED floor"
+  },
+  {
+   "id": "M02",
+   "metric": "rooms with TS01 semantic state unresolved but released",
+   "unit": "nr",
+   "current": 3,
+   "acceptance": 0,
+   "note": "BLOCKED_SEMANTIC_ZONE"
+  },
+  {
+   "id": "M03",
+   "metric": "wet labels lost (in DRY zone or no site)",
+   "unit": "nr",
+   "current": 4,
+   "acceptance": 0,
+   "note": "English label per wet room (Arabic twin not double-counted)"
+  },
+  {
+   "id": "M04",
+   "metric": "structural source objects fully consumed",
+   "unit": "%",
+   "current": 25.7,
+   "acceptance": 100.0,
+   "note": null
+  },
+  {
+   "id": "M05",
+   "metric": "concrete occurrences with complete rebar",
+   "unit": "%",
+   "current": 53.4,
+   "acceptance": 100.0,
+   "note": null
+  },
+  {
+   "id": "M06",
+   "metric": "occurrences dropped silently (no row)",
+   "unit": "nr",
+   "current": 26,
+   "acceptance": 0,
+   "note": null
+  },
+  {
+   "id": "M07",
+   "metric": "rebar kg on occurrences with no concrete",
+   "unit": "kg",
+   "current": 1739.7,
+   "acceptance": 0.0,
+   "note": null
+  },
+  {
+   "id": "M08",
+   "metric": "ambiguous wall-band length with no row",
+   "unit": "m",
+   "current": 46.63,
+   "acceptance": 0.0,
+   "note": null
+  },
+  {
+   "id": "M09",
+   "metric": "unpaired topology-boundary length with no row",
+   "unit": "m",
+   "current": 187.82,
+   "acceptance": 0.0,
+   "note": "classified as wall / not-wall / blocked"
+  },
+  {
+   "id": "M10",
+   "metric": "openings with a source or raster height",
+   "unit": "%",
+   "current": 20.0,
+   "acceptance": 100.0,
+   "note": null
+  },
+  {
+   "id": "M11",
+   "metric": "openings COMPUTED in V3a with a BLOCKED height",
+   "unit": "nr",
+   "current": 59,
+   "acceptance": 0,
+   "note": null
+  },
+  {
+   "id": "M12",
+   "metric": "silent-drop code paths",
+   "unit": "nr",
+   "current": 23,
+   "acceptance": 0,
+   "note": null
+  }
+ ],
+ "rule": "DRAFT - the scorecard measures control-plane completeness (what is released on what evidence), not closeness to the freelancer workbook; no row is ever computed from a benchmark value"
+}

@@ -1,0 +1,35 @@
+{
+ "SCHEMA": "URBAN_QORTUBA_RC1_LEGACY_PATH_REGISTER_V1",
+ "rc1_quantities_from_legacy": "NONE of the RC1 quantities. OWNER RULES V1 (owner_rules.py) is used as a RULE STORE (US-xx / QP-xx identities and values: heights QP-21 / QP-22 / QP-12, US-01 / US-04 / US-14 ...), never as a calculator; its old-revision Q-01..Q-17 takeoff is a superseded parallel path whose values are not used",
+ "paths": [
+  {
+   "legacy": "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py takeoff rows Q-01..Q-17 (OWNER RULES V1, old revision)",
+   "replacement": "the R8 evidence -> topology -> trade chain (rc1_qortuba)",
+   "reconciles": "not comparable (old revision, different source)",
+   "status": "SUPERSEDED - kept as rule store (US / QP identities) and provenance; its takeoff is never read for a quantity",
+   "retirement": "freeze as historical; no new consumer"
+  },
+  {
+   "legacy": "engine/source/wall_faces.py (WALL_FACE_SURFACE_POLICY_V1)",
+   "replacement": "engine/source/wall_faces_v2.py (V2, governing since R8.18)",
+   "reconciles": "V2 supersedes by policy; V1 kept only for the frozen R8.17 regressions",
+   "status": "SUPERSEDED",
+   "retirement": "remove with the R8.17 regression set at migration"
+  },
+  {
+   "legacy": "engine/*.py (pre-R8 production modules), engine/qs_core, engine/ingest",
+   "replacement": "engine/source + the RC1 chain",
+   "reconciles": "not used by RC1",
+   "status": "LEGACY (production app path)",
+   "retirement": "migration programme (not this round)"
+  },
+  {
+   "legacy": "engine/boq_xlsx.py (BOQ_XLSX_EXPORT_V1, R8.20 shadow workbook)",
+   "replacement": "engine/boq_rc1_xlsx.py (V2)",
+   "reconciles": "same report values; V1 exposed the alias duplicates",
+   "status": "SUPERSEDED for owner review",
+   "retirement": "keep for R8.20 regression"
+  }
+ ],
+ "one_authoritative_path": "SOURCE (K2 DXF) -> claims / facts -> topology -> trade regions -> rules -> rows (engine/source policies, lab orchestration) -> canonical BOQ -> RC1 XLSX view"
+}

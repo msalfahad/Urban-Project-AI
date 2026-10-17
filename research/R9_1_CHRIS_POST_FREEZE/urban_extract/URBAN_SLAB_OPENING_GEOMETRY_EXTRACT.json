@@ -1,0 +1,422 @@
+{
+ "floors": {
+  "1F": {
+   "bounds": [
+    1481.0,
+    29036.0,
+    36675.0,
+    57066.0
+   ],
+   "gross_outline_area_m2": 217.2008,
+   "net_plate_area_m2": 169.7514,
+   "opening_segments_hex": [
+    "1731",
+    "1732",
+    "1733",
+    "604",
+    "605",
+    "606",
+    "607",
+    "608",
+    "609",
+    "60A",
+    "60B",
+    "60C",
+    "60D",
+    "60E",
+    "60F",
+    "610",
+    "611",
+    "612",
+    "613",
+    "614",
+    "615",
+    "616",
+    "617",
+    "62D",
+    "62E",
+    "633",
+    "64E",
+    "64F",
+    "650",
+    "651",
+    "652",
+    "653",
+    "654",
+    "655",
+    "656",
+    "657",
+    "658",
+    "659",
+    "65A",
+    "65B",
+    "65C",
+    "65D",
+    "65E",
+    "65F",
+    "660",
+    "661",
+    "73F",
+    "740"
+   ],
+   "openings": [
+    {
+     "area_m2": 16.3572,
+     "bbox": [
+      14269.0,
+      39190.3,
+      18369.0,
+      43862.5
+     ],
+     "bbox_local": [
+      12788.0,
+      10154.3,
+      16888.0,
+      14826.5
+     ],
+     "face": "SITE-8902158ef73bc89b",
+     "role": "OPENING_VOID",
+     "tags_cm": [],
+     "why": "opening-layer cross over the face"
+    },
+    {
+     "area_m2": 10.725,
+     "bbox": [
+      18569.0,
+      45348.0,
+      21069.0,
+      49648.0
+     ],
+     "bbox_local": [
+      17088.0,
+      16312.0,
+      19588.0,
+      20612.0
+     ],
+     "face": "SITE-b45f28b90e787c61",
+     "role": "OPENING_STAIR",
+     "tags_cm": [
+      16
+     ],
+     "why": "stair line work inside the face"
+    },
+    {
+     "area_m2": 3.24,
+     "bbox": [
+      21269.0,
+      44648.0,
+      23069.0,
+      46448.0
+     ],
+     "bbox_local": [
+      19788.0,
+      15612.0,
+      21588.0,
+      17412.0
+     ],
+     "face": "SITE-2d061106628608ac",
+     "role": "OPENING_VOID",
+     "tags_cm": [],
+     "why": "opening-layer cross over the face"
+    },
+    {
+     "area_m2": 17.1272,
+     "bbox": [
+      28616.8,
+      39440.3,
+      32989.0,
+      43862.5
+     ],
+     "bbox_local": [
+      27135.8,
+      10404.3,
+      31508.0,
+      14826.5
+     ],
+     "face": "SITE-5d2a1fe57fbc0bb4",
+     "role": "OPENING_VOID",
+     "tags_cm": [],
+     "why": "opening-layer cross over the face"
+    }
+   ],
+   "reproduction": {
+    "REPRODUCES_FROZEN_B2A1": true,
+    "gross": [
+     217.2008,
+     217.2008
+    ],
+    "openings": [
+     47.4494,
+     47.4494
+    ]
+   },
+   "sheet_thickness_tags_cm": [
+    16
+   ],
+   "thickness_tags": [
+    {
+     "handles_hex": [
+      "589",
+      "58A"
+     ],
+     "t_cm": 16,
+     "xy_local": [
+      18096.1,
+      19576.1
+     ]
+    },
+    {
+     "handles_hex": [
+      "768",
+      "769"
+     ],
+     "t_cm": 16,
+     "xy_local": [
+      19402.9,
+      11486.7
+     ]
+    }
+   ],
+   "void_labels_local": []
+  },
+  "2F": {
+   "bounds": [
+    -37243.0,
+    29036.0,
+    -2049.0,
+    57066.0
+   ],
+   "gross_outline_area_m2": 55.4784,
+   "net_plate_area_m2": 55.4784,
+   "opening_segments_hex": [],
+   "openings": [],
+   "reproduction": {
+    "REPRODUCES_FROZEN_B2A1": true,
+    "gross": [
+     55.4784,
+     55.4784
+    ],
+    "openings": [
+     0,
+     0
+    ]
+   },
+   "sheet_thickness_tags_cm": [
+    18
+   ],
+   "thickness_tags": [
+    {
+     "handles_hex": [
+      "7B3",
+      "7B4"
+     ],
+     "t_cm": 18,
+     "xy_local": [
+      18534.2,
+      18905.0
+     ]
+    },
+    {
+     "handles_hex": [
+      "1A7D",
+      "1A7E"
+     ],
+     "t_cm": 18,
+     "xy_local": [
+      20903.7,
+      18905.0
+     ]
+    }
+   ],
+   "void_labels_local": []
+  },
+  "GF": {
+   "bounds": [
+    40205.0,
+    29036.0,
+    75400.0,
+    57066.0
+   ],
+   "gross_outline_area_m2": 322.4132,
+   "net_plate_area_m2": 276.7882,
+   "opening_segments_hex": [
+    "172A",
+    "172B",
+    "172C",
+    "1768",
+    "176A",
+    "179E",
+    "17A0",
+    "256",
+    "25A",
+    "25F",
+    "2CF",
+    "2D0",
+    "2D1",
+    "2D2",
+    "42E",
+    "42F",
+    "54B",
+    "54C",
+    "54F",
+    "550"
+   ],
+   "openings": [
+    {
+     "area_m2": 10.725,
+     "bbox": [
+      57293.4,
+      45348.0,
+      59793.4,
+      49648.0
+     ],
+     "bbox_local": [
+      17088.4,
+      16312.0,
+      19588.4,
+      20612.0
+     ],
+     "face": "SITE-71996b11cee5f1c7",
+     "role": "OPENING_STAIR",
+     "tags_cm": [
+      16
+     ],
+     "why": "stair line work inside the face"
+    },
+    {
+     "area_m2": 3.24,
+     "bbox": [
+      59993.4,
+      44648.0,
+      61793.4,
+      46448.0
+     ],
+     "bbox_local": [
+      19788.4,
+      15612.0,
+      21588.4,
+      17412.0
+     ],
+     "face": "SITE-c2f739343397f0f0",
+     "role": "OPENING_VOID",
+     "tags_cm": [],
+     "why": "opening-layer cross over the face"
+    },
+    {
+     "area_m2": 27.0758,
+     "bbox": [
+      61093.4,
+      38048.0,
+      68113.4,
+      41998.0
+     ],
+     "bbox_local": [
+      20888.4,
+      9012.0,
+      27908.4,
+      12962.0
+     ],
+     "face": "SITE-4e71d36d91b40e50",
+     "role": "OPENING_VOID",
+     "tags_cm": [
+      16
+     ],
+     "why": "VOID label inside the face"
+    },
+    {
+     "area_m2": 4.5842,
+     "bbox": [
+      71213.4,
+      45827.8,
+      73113.4,
+      49348.0
+     ],
+     "bbox_local": [
+      31008.4,
+      16791.8,
+      32908.4,
+      20312.0
+     ],
+     "face": "SITE-14d5b223af3265f8",
+     "role": "OPENING_VOID",
+     "tags_cm": [],
+     "why": "VOID label inside the face"
+    }
+   ],
+   "reproduction": {
+    "REPRODUCES_FROZEN_B2A1": true,
+    "gross": [
+     322.4132,
+     322.4132
+    ],
+    "openings": [
+     45.6249,
+     45.6249
+    ]
+   },
+   "sheet_thickness_tags_cm": [
+    16
+   ],
+   "thickness_tags": [
+    {
+     "handles_hex": [
+      "589",
+      "58A"
+     ],
+     "t_cm": 16,
+     "xy_local": [
+      18096.5,
+      19576.1
+     ]
+    },
+    {
+     "handles_hex": [
+      "589",
+      "58A"
+     ],
+     "t_cm": 16,
+     "xy_local": [
+      26519.1,
+      10129.1
+     ]
+    },
+    {
+     "handles_hex": [
+      "589",
+      "58A"
+     ],
+     "t_cm": 16,
+     "xy_local": [
+      25384.1,
+      14623.7
+     ]
+    },
+    {
+     "handles_hex": [
+      "589",
+      "58A"
+     ],
+     "t_cm": 16,
+     "xy_local": [
+      13953.0,
+      10468.7
+     ]
+    }
+   ],
+   "void_labels_local": [
+    [
+     23810.7,
+     11887.6
+    ],
+    [
+     31555.5,
+     18256.6
+    ]
+   ]
+  }
+ },
+ "rule": "engine.source.slab_region.regions re-run with the frozen B2A inputs; opening rings kept",
+ "source": {
+  "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+ }
+}

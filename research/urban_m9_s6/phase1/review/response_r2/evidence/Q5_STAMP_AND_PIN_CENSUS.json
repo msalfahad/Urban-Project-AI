@@ -1,0 +1,182 @@
+{
+ "output_pinning_manifests": 29,
+ "with_a_stamped_output": 28,
+ "outputs_total": 379,
+ "outputs_stamped": 53,
+ "outputs_by_type": {
+  ".md": 31,
+  ".json": 45,
+  ".csv": 275,
+  ".jsonl": 25,
+  ".html": 1,
+  ".svg": 2
+ },
+ "stamped_by_type": {
+  ".json": 31,
+  ".csv": 6,
+  ".jsonl": 7,
+  ".md": 9
+ },
+ "manifests_with_a_code_map": 32,
+ "distinct_pinned_source_files": 111,
+ "stale_pins": 12,
+ "pins_of_phase2a_files": {
+  "engine/source/opening_census.py": 1,
+  "engine/source/arch_plan.py": 0,
+  "engine/source/arch_rooms.py": 0,
+  "engine/source/topology.py": 2,
+  "engine/source/opening_gaps.py": 0,
+  "engine/source/lintel_measure.py": 0,
+  "tools/urban_intake.py": 2,
+  "tools/arch_intake.py": 0,
+  "tools/arch_discovery.py": 0,
+  "tools/urban_boq_m9.py": 0
+ },
+ "per_manifest": [
+  {
+   "stage_folder": "ad1_authority_decisions",
+   "outputs": 9,
+   "outputs_with_code_stamp": 1
+  },
+  {
+   "stage_folder": "dome_mesh_s8_3a",
+   "outputs": 9,
+   "outputs_with_code_stamp": 1
+  },
+  {
+   "stage_folder": "dome_ring_s8_3",
+   "outputs": 16,
+   "outputs_with_code_stamp": 3
+  },
+  {
+   "stage_folder": "footing_rebar_s4",
+   "outputs": 9,
+   "outputs_with_code_stamp": 3
+  },
+  {
+   "stage_folder": "footing_rebar_s4_1",
+   "outputs": 6,
+   "outputs_with_code_stamp": 5
+  },
+  {
+   "stage_folder": "ground_slab_s8_1",
+   "outputs": 12,
+   "outputs_with_code_stamp": 1
+  },
+  {
+   "stage_folder": "ground_slab_s8_1a",
+   "outputs": 14,
+   "outputs_with_code_stamp": 2
+  },
+  {
+   "stage_folder": "ground_system_rebar_s5",
+   "outputs": 11,
+   "outputs_with_code_stamp": 3
+  },
+  {
+   "stage_folder": "ground_system_rebar_s5_1",
+   "outputs": 5,
+   "outputs_with_code_stamp": 4
+  },
+  {
+   "stage_folder": "lift_s8_8",
+   "outputs": 18,
+   "outputs_with_code_stamp": 2
+  },
+  {
+   "stage_folder": "lintels_s8_6",
+   "outputs": 15,
+   "outputs_with_code_stamp": 2
+  },
+  {
+   "stage_folder": "m1_usable_boq",
+   "outputs": 24,
+   "outputs_with_code_stamp": 0
+  },
+  {
+   "stage_folder": "slab_rebar_pre_s7",
+   "outputs": 17,
+   "outputs_with_code_stamp": 1
+  },
+  {
+   "stage_folder": "slab_rebar_pre_s7_1",
+   "outputs": 14,
+   "outputs_with_code_stamp": 1
+  },
+  {
+   "stage_folder": "slab_rebar_s7",
+   "outputs": 12,
+   "outputs_with_code_stamp": 2
+  },
+  {
+   "stage_folder": "slab_rebar_s7a_qa",
+   "outputs": 11,
+   "outputs_with_code_stamp": 1
+  },
+  {
+   "stage_folder": "special_columns_s8_5",
+   "outputs": 17,
+   "outputs_with_code_stamp": 1
+  },
+  {
+   "stage_folder": "stairs_s8_7",
+   "outputs": 17,
+   "outputs_with_code_stamp": 2
+  },
+  {
+   "stage_folder": "stairs_s8_7b",
+   "outputs": 16,
+   "outputs_with_code_stamp": 2
+  },
+  {
+   "stage_folder": "stairs_s8_7c",
+   "outputs": 15,
+   "outputs_with_code_stamp": 1
+  },
+  {
+   "stage_folder": "structural_s9",
+   "outputs": 16,
+   "outputs_with_code_stamp": 1
+  },
+  {
+   "stage_folder": "superstructure_beam_rebar_s6",
+   "outputs": 17,
+   "outputs_with_code_stamp": 4
+  },
+  {
+   "stage_folder": "superstructure_beam_rebar_s6_1",
+   "outputs": 6,
+   "outputs_with_code_stamp": 4
+  },
+  {
+   "stage_folder": "swimming_pool_s8_2",
+   "outputs": 18,
+   "outputs_with_code_stamp": 1
+  },
+  {
+   "stage_folder": "swimming_pool_s8_2a",
+   "outputs": 12,
+   "outputs_with_code_stamp": 1
+  },
+  {
+   "stage_folder": "water_tank_s8_4",
+   "outputs": 15,
+   "outputs_with_code_stamp": 1
+  },
+  {
+   "stage_folder": "d1_1_stirrup_authority_audit",
+   "outputs": 8,
+   "outputs_with_code_stamp": 1
+  },
+  {
+   "stage_folder": "d1_2_footing_cover_audit",
+   "outputs": 7,
+   "outputs_with_code_stamp": 1
+  },
+  {
+   "stage_folder": "pre_s8_structural_completeness",
+   "outputs": 13,
+   "outputs_with_code_stamp": 1
+  }
+ ]
+}

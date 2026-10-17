@@ -1,0 +1,44 @@
+{
+ "SCHEMA": "URBAN_OWNER_ACTION_REGISTER_V15",
+ "headline": "NO OWNER ACTION REQUIRED FOR THE AUTHORISED SUBTOTALS. ONE NEW QUESTION TO COMPLETE THE PLASTER / PAINT / WALL_TILE ROWS.",
+ "required_now": [],
+ "needed_to_complete_rows": [
+  {
+   "id": "QORTUBA_NEW_COLUMN_FACE_FINISH",
+   "blocks": "COMPLETE_M2 of PLASTER, PAINT, WALL_TILE and WET_WALL_TILE_PREP (the authorised subtotals are published without it)",
+   "question": "Are the exposed column faces finished like the wall around them - plaster and paint in the dry rooms, wall tile in the bathrooms and the PAINTRY?",
+   "why_new": "no rule or fact states a column-face finish: R-13 is the blockwork sheet's full-deduction column (R8.17 misread it), owner_rules section E is skirting only",
+   "area_at_stake_m2": {
+    "dry_columns": 10.8675,
+    "wet_service_columns": 14.88
+   },
+   "current": "UNRESOLVED contributors listed with their areas; never silently excluded or included"
+  }
+ ],
+ "not_asked": [
+  {
+   "item": "duct face finish",
+   "why": "the duct is on the owner's do-not-ask list for R8.18 and no finish for its faces is stated in any rule or fact: reported UNRESOLVED, not asked again",
+   "area_m2": 15.75
+  }
+ ],
+ "answered_this_round": [
+  "QORTUBA-NEW-DRY-WALL-FINISH-HEIGHT-OWNER-001@v1 (dry plaster / paint 3.15 m)",
+  "URBAN-WALL-FINISH-HEIGHT-METHOD@v1",
+  "URBAN-REVEAL-FINISH-METHOD@v1"
+ ],
+ "do_not_ask": [
+  "dry-room Qortuba wall height = 3.15 m",
+  "dynamic floor-by-floor height method",
+  "wet wall-tile height = 3.20 m",
+  "default reveal = plaster",
+  "porcelain reveals only when specifically required",
+  "sliding-door profile-dependent reveal treatment",
+  "Hall / Pantry sliding glass door",
+  "normal windows",
+  "skirting",
+  "marble",
+  "duct",
+  "passage heads"
+ ]
+}

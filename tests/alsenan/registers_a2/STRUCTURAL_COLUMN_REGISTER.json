@@ -1,0 +1,477 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A2_COLUMNS_V1",
+ "columns": [
+  {
+   "type": "C",
+   "count_on_column_plan": 5,
+   "sections_cm": {
+    "foundation": [
+     30.0,
+     50.0
+    ],
+    "ground_floor": [
+     20.0,
+     50.0
+    ],
+    "first_floor": null,
+    "second_floor": null
+   },
+   "plan_area_m2_by_storey": {
+    "foundation": 0.75,
+    "ground_floor": 0.5,
+    "first_floor": null,
+    "second_floor": null
+   },
+   "volume_m3": null,
+   "volume_blocker": "COLUMN_HEIGHT_NOT_PROVED: no founding / ground-beam / slab top level in the source (structural levels, not FFL)",
+   "reinforcement_text": {
+    "foundation": "30 / 50 / 8 Ø 16",
+    "ground_floor": "20 / 50 / 8 Ø 16",
+    "first_floor": " /  / Ø",
+    "second_floor": " /  / Ø"
+   }
+  },
+  {
+   "type": "C1",
+   "count_on_column_plan": 1,
+   "sections_cm": {
+    "foundation": [
+     30.0,
+     50.0
+    ],
+    "ground_floor": [
+     20.0,
+     50.0
+    ],
+    "first_floor": [
+     20.0,
+     50.0
+    ],
+    "second_floor": [
+     20.0,
+     50.0
+    ]
+   },
+   "plan_area_m2_by_storey": {
+    "foundation": 0.15,
+    "ground_floor": 0.1,
+    "first_floor": 0.1,
+    "second_floor": 0.1
+   },
+   "volume_m3": null,
+   "volume_blocker": "COLUMN_HEIGHT_NOT_PROVED: no founding / ground-beam / slab top level in the source (structural levels, not FFL)",
+   "reinforcement_text": {
+    "foundation": "30 / 50 / 8 Ø 16",
+    "ground_floor": "20 / 50 / 8 Ø 16",
+    "first_floor": "20 / 50 / 6 Ø 16",
+    "second_floor": "20 / 50 / 6 Ø 16"
+   }
+  },
+  {
+   "type": "C2",
+   "count_on_column_plan": 4,
+   "sections_cm": {
+    "foundation": [
+     30.0,
+     50.0
+    ],
+    "ground_floor": [
+     20.0,
+     50.0
+    ],
+    "first_floor": [
+     20.0,
+     50.0
+    ],
+    "second_floor": [
+     20.0,
+     50.0
+    ]
+   },
+   "plan_area_m2_by_storey": {
+    "foundation": 0.6,
+    "ground_floor": 0.4,
+    "first_floor": 0.4,
+    "second_floor": 0.4
+   },
+   "volume_m3": null,
+   "volume_blocker": "COLUMN_HEIGHT_NOT_PROVED: no founding / ground-beam / slab top level in the source (structural levels, not FFL)",
+   "reinforcement_text": {
+    "foundation": "30 / 50 / 8 Ø 16",
+    "ground_floor": "20 / 50 / 8 Ø 16",
+    "first_floor": "20 / 50 / 8 Ø 16",
+    "second_floor": "20 / 50 / 6 Ø 16"
+   }
+  },
+  {
+   "type": "C3",
+   "count_on_column_plan": 6,
+   "sections_cm": {
+    "foundation": [
+     30.0,
+     50.0
+    ],
+    "ground_floor": [
+     25.0,
+     50.0
+    ],
+    "first_floor": [
+     20.0,
+     50.0
+    ],
+    "second_floor": [
+     20.0,
+     50.0
+    ]
+   },
+   "plan_area_m2_by_storey": {
+    "foundation": 0.9,
+    "ground_floor": 0.75,
+    "first_floor": 0.6,
+    "second_floor": 0.6
+   },
+   "volume_m3": null,
+   "volume_blocker": "COLUMN_HEIGHT_NOT_PROVED: no founding / ground-beam / slab top level in the source (structural levels, not FFL)",
+   "reinforcement_text": {
+    "foundation": "30 / 50 / 8 Ø 16",
+    "ground_floor": "25 / 50 / 8 Ø 16",
+    "first_floor": "20 / 50 / 6 Ø 16",
+    "second_floor": "20 / 50 / 6 Ø 16"
+   }
+  },
+  {
+   "type": "C4",
+   "count_on_column_plan": 2,
+   "sections_cm": {
+    "foundation": [
+     30.0,
+     50.0
+    ],
+    "ground_floor": [
+     25.0,
+     50.0
+    ],
+    "first_floor": [
+     20.0,
+     50.0
+    ],
+    "second_floor": [
+     20.0,
+     50.0
+    ]
+   },
+   "plan_area_m2_by_storey": {
+    "foundation": 0.3,
+    "ground_floor": 0.25,
+    "first_floor": 0.2,
+    "second_floor": 0.2
+   },
+   "volume_m3": null,
+   "volume_blocker": "COLUMN_HEIGHT_NOT_PROVED: no founding / ground-beam / slab top level in the source (structural levels, not FFL)",
+   "reinforcement_text": {
+    "foundation": "30 / 50 / 8 Ø 16",
+    "ground_floor": "25 / 50 / 8 Ø 16",
+    "first_floor": "20 / 50 / 8 Ø 16",
+    "second_floor": "20 / 50 / 6 Ø 16"
+   }
+  },
+  {
+   "type": "C5",
+   "count_on_column_plan": 3,
+   "sections_cm": {
+    "foundation": [
+     30.0,
+     60.0
+    ],
+    "ground_floor": [
+     25.0,
+     60.0
+    ],
+    "first_floor": [
+     20.0,
+     50.0
+    ],
+    "second_floor": [
+     20.0,
+     50.0
+    ]
+   },
+   "plan_area_m2_by_storey": {
+    "foundation": 0.54,
+    "ground_floor": 0.45,
+    "first_floor": 0.3,
+    "second_floor": 0.3
+   },
+   "volume_m3": null,
+   "volume_blocker": "COLUMN_HEIGHT_NOT_PROVED: no founding / ground-beam / slab top level in the source (structural levels, not FFL)",
+   "reinforcement_text": {
+    "foundation": "30 / 60 / 10 Ø 16",
+    "ground_floor": "25 / 60 / 10 Ø 16",
+    "first_floor": "20 / 50 / 8 Ø 16",
+    "second_floor": "20 / 50 / 6 Ø 16"
+   }
+  },
+  {
+   "type": "C6",
+   "count_on_column_plan": 1,
+   "sections_cm": {
+    "foundation": [
+     30.0,
+     70.0
+    ],
+    "ground_floor": [
+     25.0,
+     70.0
+    ],
+    "first_floor": [
+     20.0,
+     60.0
+    ],
+    "second_floor": [
+     20.0,
+     50.0
+    ]
+   },
+   "plan_area_m2_by_storey": {
+    "foundation": 0.21,
+    "ground_floor": 0.175,
+    "first_floor": 0.12,
+    "second_floor": 0.1
+   },
+   "volume_m3": null,
+   "volume_blocker": "COLUMN_HEIGHT_NOT_PROVED: no founding / ground-beam / slab top level in the source (structural levels, not FFL)",
+   "reinforcement_text": {
+    "foundation": "30 / 70 / 10 Ø 16",
+    "ground_floor": "25 / 70 / 10 Ø 16",
+    "first_floor": "20 / 60 / 8 Ø 16",
+    "second_floor": "20 / 50 / 8 Ø 16"
+   }
+  },
+  {
+   "type": "C7",
+   "count_on_column_plan": 1,
+   "sections_cm": {
+    "foundation": [
+     30.0,
+     80.0
+    ],
+    "ground_floor": [
+     25.0,
+     80.0
+    ],
+    "first_floor": [
+     20.0,
+     80.0
+    ],
+    "second_floor": [
+     20.0,
+     60.0
+    ]
+   },
+   "plan_area_m2_by_storey": {
+    "foundation": 0.24,
+    "ground_floor": 0.2,
+    "first_floor": 0.16,
+    "second_floor": 0.12
+   },
+   "volume_m3": null,
+   "volume_blocker": "COLUMN_HEIGHT_NOT_PROVED: no founding / ground-beam / slab top level in the source (structural levels, not FFL)",
+   "reinforcement_text": {
+    "foundation": "30 / 80 / 12 Ø 16",
+    "ground_floor": "25 / 80 / 12 Ø 16",
+    "first_floor": "20 / 80 / 10 Ø 16",
+    "second_floor": "20 / 60 / 8 Ø 16"
+   }
+  },
+  {
+   "type": "C8",
+   "count_on_column_plan": 2,
+   "sections_cm": {
+    "foundation": [
+     30.0,
+     90.0
+    ],
+    "ground_floor": [
+     25.0,
+     90.0
+    ],
+    "first_floor": [
+     20.0,
+     90.0
+    ],
+    "second_floor": [
+     20.0,
+     70.0
+    ]
+   },
+   "plan_area_m2_by_storey": {
+    "foundation": 0.54,
+    "ground_floor": 0.45,
+    "first_floor": 0.36,
+    "second_floor": 0.28
+   },
+   "volume_m3": null,
+   "volume_blocker": "COLUMN_HEIGHT_NOT_PROVED: no founding / ground-beam / slab top level in the source (structural levels, not FFL)",
+   "reinforcement_text": {
+    "foundation": "30 / 90 / 12 Ø 16",
+    "ground_floor": "25 / 90 / 12 Ø 16",
+    "first_floor": "20 / 90 / 12 Ø 16",
+    "second_floor": "20 / 70 / 10 Ø 16"
+   }
+  },
+  {
+   "type": "C9",
+   "count_on_column_plan": 2,
+   "sections_cm": {
+    "foundation": [
+     30.0,
+     100.0
+    ],
+    "ground_floor": [
+     25.0,
+     100.0
+    ],
+    "first_floor": [
+     20.0,
+     90.0
+    ],
+    "second_floor": [
+     20.0,
+     70.0
+    ]
+   },
+   "plan_area_m2_by_storey": {
+    "foundation": 0.6,
+    "ground_floor": 0.5,
+    "first_floor": 0.36,
+    "second_floor": 0.28
+   },
+   "volume_m3": null,
+   "volume_blocker": "COLUMN_HEIGHT_NOT_PROVED: no founding / ground-beam / slab top level in the source (structural levels, not FFL)",
+   "reinforcement_text": {
+    "foundation": "30 / 100 / 14 Ø 16",
+    "ground_floor": "25 / 100 / 14 Ø 16",
+    "first_floor": "20 / 90 / 12 Ø 16",
+    "second_floor": "20 / 70 / 10 Ø 16"
+   }
+  },
+  {
+   "type": "C10",
+   "count_on_column_plan": 1,
+   "sections_cm": {
+    "foundation": [
+     30.0,
+     70.0
+    ],
+    "ground_floor": [
+     25.0,
+     70.0
+    ],
+    "first_floor": null,
+    "second_floor": null
+   },
+   "plan_area_m2_by_storey": {
+    "foundation": 0.21,
+    "ground_floor": 0.175,
+    "first_floor": null,
+    "second_floor": null
+   },
+   "volume_m3": null,
+   "volume_blocker": "COLUMN_HEIGHT_NOT_PROVED: no founding / ground-beam / slab top level in the source (structural levels, not FFL)",
+   "reinforcement_text": {
+    "foundation": "30 / 70 / 10 Ø 16",
+    "ground_floor": "25 / 70 / 10 Ø 16",
+    "first_floor": " /  / ",
+    "second_floor": " /  / Ø"
+   }
+  },
+  {
+   "type": "C11",
+   "count_on_column_plan": 2,
+   "sections_cm": {
+    "foundation": [
+     30.0,
+     110.0
+    ],
+    "ground_floor": [
+     25.0,
+     110.0
+    ],
+    "first_floor": null,
+    "second_floor": null
+   },
+   "plan_area_m2_by_storey": {
+    "foundation": 0.66,
+    "ground_floor": 0.55,
+    "first_floor": null,
+    "second_floor": null
+   },
+   "volume_m3": null,
+   "volume_blocker": "COLUMN_HEIGHT_NOT_PROVED: no founding / ground-beam / slab top level in the source (structural levels, not FFL)",
+   "reinforcement_text": {
+    "foundation": "30 / 110 / 14 Ø 16",
+    "ground_floor": "25 / 110 / 14 Ø 16",
+    "first_floor": " /  / ",
+    "second_floor": " /  / Ø"
+   }
+  },
+  {
+   "type": "CN",
+   "count_on_column_plan": 5,
+   "sections_cm": {
+    "foundation": [
+     30.0,
+     30.0
+    ],
+    "ground_floor": null,
+    "first_floor": null,
+    "second_floor": null
+   },
+   "plan_area_m2_by_storey": {
+    "foundation": 0.45,
+    "ground_floor": null,
+    "first_floor": null,
+    "second_floor": null
+   },
+   "volume_m3": null,
+   "volume_blocker": "COLUMN_HEIGHT_NOT_PROVED: no founding / ground-beam / slab top level in the source (structural levels, not FFL)",
+   "reinforcement_text": {
+    "foundation": "30 / 30 / 4 Ø 14",
+    "ground_floor": " /  / ",
+    "first_floor": " /  / ",
+    "second_floor": " /  / "
+   }
+  }
+ ],
+ "plan_outlines": {
+  "outlines_on_column_plan": 35,
+  "outline_sizes_mm": {
+   "300x500": 14,
+   "300x600": 3,
+   "250x500": 1,
+   "250x1000": 1,
+   "200x500": 3,
+   "300x1100": 2,
+   "300x700": 2,
+   "300x800": 2,
+   "300x900": 1,
+   "300x1000": 1,
+   "300x300": 5
+  },
+  "tags": {
+   "C": 5,
+   "C3": 6,
+   "C5": 3,
+   "C11": 2,
+   "C6": 1,
+   "C8": 2,
+   "C10": 1,
+   "C7": 1,
+   "C2": 4,
+   "C4": 2,
+   "C9": 2,
+   "CN": 5,
+   "C1": 1
+  }
+ }
+}

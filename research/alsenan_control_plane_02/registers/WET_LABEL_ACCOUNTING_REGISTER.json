@@ -1,0 +1,580 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_WET_LABEL_ACCOUNTING_V1",
+ "rows": [
+  {
+   "floor": "GF",
+   "text": "تحضير",
+   "key": "ALSENAN_P7757_DXF|H379|376|TEXT|0",
+   "xy": [
+    -146057.8,
+    -802513.3
+   ],
+   "site": "SITE-67547ed37daadb5a",
+   "room": "GF-Z04",
+   "terminal_state": "WET_LABEL_BLOCKED_SEMANTIC_TRADE_BOUNDARY",
+   "reason": "GF-Z04 holds dry and wet zones without a source boundary; its wet trades are BLOCKED",
+   "is_wet_room_label": false,
+   "affected_trades": [
+    "WALL_TILE",
+    "WATERPROOFING",
+    "FLOOR_FINISH (wet tile)"
+   ]
+  },
+  {
+   "floor": "GF",
+   "text": "PANTRY",
+   "key": "ALSENAN_P7757_DXF|H381|376|TEXT|0",
+   "xy": [
+    -147082.9,
+    -802921.3
+   ],
+   "site": "SITE-67547ed37daadb5a",
+   "room": "GF-Z04",
+   "terminal_state": "WET_LABEL_BLOCKED_SEMANTIC_TRADE_BOUNDARY",
+   "reason": "GF-Z04 holds dry and wet zones without a source boundary; its wet trades are BLOCKED",
+   "is_wet_room_label": false,
+   "affected_trades": [
+    "WALL_TILE",
+    "WATERPROOFING",
+    "FLOOR_FINISH (wet tile)"
+   ]
+  },
+  {
+   "floor": "GF",
+   "text": "حمام سباحة",
+   "key": "ALSENAN_P7757_DXF|H399|396|TEXT|0",
+   "xy": [
+    -129805.9,
+    -793606.3
+   ],
+   "site": null,
+   "room": null,
+   "terminal_state": "WET_LABEL_NOT_IN_SCOPE",
+   "reason": "swimming-pool label: the pool population (structure + finish) carries it, not a wet-room trade",
+   "is_wet_room_label": false,
+   "affected_trades": []
+  },
+  {
+   "floor": "GF",
+   "text": "W.C",
+   "key": "ALSENAN_P7757_DXF|H459|456|TEXT|0",
+   "xy": [
+    -151626.1,
+    -804536.8
+   ],
+   "site": "SITE-9b585230d0877a35",
+   "room": "GF-R10",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to GF-R10 (WET, SINGLE)",
+   "is_wet_room_label": true,
+   "affected_trades": []
+  },
+  {
+   "floor": "GF",
+   "text": "مرحاض",
+   "key": "ALSENAN_P7757_DXF|H460|456|TEXT|0",
+   "xy": [
+    -151051.8,
+    -804295.5
+   ],
+   "site": "SITE-9b585230d0877a35",
+   "room": "GF-R10",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to GF-R10 (WET, SINGLE)",
+   "is_wet_room_label": false,
+   "affected_trades": []
+  },
+  {
+   "floor": "GF",
+   "text": "Wash",
+   "key": "ALSENAN_P7757_DXF|H500|496|TEXT|0",
+   "xy": [
+    -156626.4,
+    -801801.4
+   ],
+   "site": "SITE-810cacd9be443703",
+   "room": "GF-Z06",
+   "terminal_state": "WET_LABEL_BLOCKED_SEMANTIC_TRADE_BOUNDARY",
+   "reason": "GF-Z06 holds dry and wet zones without a source boundary; its wet trades are BLOCKED",
+   "is_wet_room_label": true,
+   "affected_trades": [
+    "WALL_TILE",
+    "WATERPROOFING",
+    "FLOOR_FINISH (wet tile)"
+   ]
+  },
+  {
+   "floor": "GF",
+   "text": "مغسلة",
+   "key": "ALSENAN_P7757_DXF|H501|496|TEXT|0",
+   "xy": [
+    -154949.7,
+    -801580.0
+   ],
+   "site": "SITE-0e9a7a85e795446f",
+   "room": "GF-R02",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to GF-R02 (WET, SINGLE)",
+   "is_wet_room_label": false,
+   "affected_trades": []
+  },
+  {
+   "floor": "GF",
+   "text": "W.C",
+   "key": "ALSENAN_P7757_DXF|H459|503|TEXT|0",
+   "xy": [
+    -155307.6,
+    -804151.7
+   ],
+   "site": "SITE-eac7a1be6566b2d0",
+   "room": "GF-R15",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to GF-R15 (WET, SINGLE)",
+   "is_wet_room_label": true,
+   "affected_trades": []
+  },
+  {
+   "floor": "GF",
+   "text": "مرحاض",
+   "key": "ALSENAN_P7757_DXF|H460|503|TEXT|0",
+   "xy": [
+    -154733.3,
+    -803910.3
+   ],
+   "site": "SITE-eac7a1be6566b2d0",
+   "room": "GF-R15",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to GF-R15 (WET, SINGLE)",
+   "is_wet_room_label": false,
+   "affected_trades": []
+  },
+  {
+   "floor": "GF",
+   "text": "KITCHEN",
+   "key": "ALSENAN_P7757_DXF|H634|630|TEXT|0",
+   "xy": [
+    -151238.0,
+    -802612.3
+   ],
+   "site": "SITE-88d9dbffd47c417a",
+   "room": "GF-R07",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to GF-R07 (SERVICE, SINGLE)",
+   "is_wet_room_label": false,
+   "affected_trades": []
+  },
+  {
+   "floor": "GF",
+   "text": "مطبخ",
+   "key": "ALSENAN_P7757_DXF|H635|630|TEXT|0",
+   "xy": [
+    -150480.1,
+    -802248.8
+   ],
+   "site": "SITE-88d9dbffd47c417a",
+   "room": "GF-R07",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to GF-R07 (SERVICE, SINGLE)",
+   "is_wet_room_label": false,
+   "affected_trades": []
+  },
+  {
+   "floor": "GF",
+   "text": "Wash",
+   "key": "ALSENAN_P7757_DXF|H500|709|TEXT|0",
+   "xy": [
+    -140275.8,
+    -795137.3
+   ],
+   "site": "SITE-67547ed37daadb5a",
+   "room": "GF-Z04",
+   "terminal_state": "WET_LABEL_BLOCKED_SEMANTIC_TRADE_BOUNDARY",
+   "reason": "GF-Z04 holds dry and wet zones without a source boundary; its wet trades are BLOCKED",
+   "is_wet_room_label": true,
+   "affected_trades": [
+    "WALL_TILE",
+    "WATERPROOFING",
+    "FLOOR_FINISH (wet tile)"
+   ]
+  },
+  {
+   "floor": "GF",
+   "text": "مغسلة",
+   "key": "ALSENAN_P7757_DXF|H501|709|TEXT|0",
+   "xy": [
+    -138934.4,
+    -794960.1
+   ],
+   "site": "SITE-67547ed37daadb5a",
+   "room": "GF-Z04",
+   "terminal_state": "WET_LABEL_BLOCKED_SEMANTIC_TRADE_BOUNDARY",
+   "reason": "GF-Z04 holds dry and wet zones without a source boundary; its wet trades are BLOCKED",
+   "is_wet_room_label": false,
+   "affected_trades": [
+    "WALL_TILE",
+    "WATERPROOFING",
+    "FLOOR_FINISH (wet tile)"
+   ]
+  },
+  {
+   "floor": "GF",
+   "text": "W.C",
+   "key": "ALSENAN_P7757_DXF|H459|730|TEXT|0",
+   "xy": [
+    -141731.6,
+    -793100.1
+   ],
+   "site": "SITE-ce2d2c3a4b7da280",
+   "room": "GF-R13",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to GF-R13 (WET, SINGLE)",
+   "is_wet_room_label": true,
+   "affected_trades": []
+  },
+  {
+   "floor": "GF",
+   "text": "مرحاض",
+   "key": "ALSENAN_P7757_DXF|H460|730|TEXT|0",
+   "xy": [
+    -141157.3,
+    -792858.8
+   ],
+   "site": "SITE-ce2d2c3a4b7da280",
+   "room": "GF-R13",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to GF-R13 (WET, SINGLE)",
+   "is_wet_room_label": false,
+   "affected_trades": []
+  },
+  {
+   "floor": "GF",
+   "text": "BATH",
+   "key": "ALSENAN_P7757_DXF|H749||TEXT|0",
+   "xy": [
+    -137466.5,
+    -793273.4
+   ],
+   "site": "SITE-714889aea3e329c7",
+   "room": "GF-R05",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to GF-R05 (WET, CANDIDATE_LABEL)",
+   "is_wet_room_label": true,
+   "affected_trades": []
+  },
+  {
+   "floor": "GF",
+   "text": "حمام",
+   "key": "ALSENAN_P7757_DXF|H750||TEXT|0",
+   "xy": [
+    -136676.3,
+    -792852.1
+   ],
+   "site": "SITE-714889aea3e329c7",
+   "room": "GF-R05",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to GF-R05 (WET, CANDIDATE_LABEL)",
+   "is_wet_room_label": false,
+   "affected_trades": []
+  },
+  {
+   "floor": "GF",
+   "text": "W.C",
+   "key": "ALSENAN_P7757_DXF|H459|802|TEXT|0",
+   "xy": [
+    -139636.3,
+    -792833.9
+   ],
+   "site": "SITE-5191e28052b00088",
+   "room": "GF-R03",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to GF-R03 (WET, SINGLE)",
+   "is_wet_room_label": true,
+   "affected_trades": []
+  },
+  {
+   "floor": "GF",
+   "text": "مرحاض",
+   "key": "ALSENAN_P7757_DXF|H460|802|TEXT|0",
+   "xy": [
+    -138918.4,
+    -792532.3
+   ],
+   "site": "SITE-5191e28052b00088",
+   "room": "GF-R03",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to GF-R03 (WET, SINGLE)",
+   "is_wet_room_label": false,
+   "affected_trades": []
+  },
+  {
+   "floor": "GF",
+   "text": "W.C",
+   "key": "ALSENAN_P7757_DXF|H459|803|TEXT|0",
+   "xy": [
+    -140447.1,
+    -793637.6
+   ],
+   "site": "SITE-9810548752edbe40",
+   "room": "GF-R09",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to GF-R09 (WET, SINGLE)",
+   "is_wet_room_label": true,
+   "affected_trades": []
+  },
+  {
+   "floor": "GF",
+   "text": "مرحاض",
+   "key": "ALSENAN_P7757_DXF|H460|803|TEXT|0",
+   "xy": [
+    -139729.2,
+    -793336.0
+   ],
+   "site": "SITE-9810548752edbe40",
+   "room": "GF-R09",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to GF-R09 (WET, SINGLE)",
+   "is_wet_room_label": false,
+   "affected_trades": []
+  },
+  {
+   "floor": "1F",
+   "text": "LAUNDRY",
+   "key": "ALSENAN_P7757_DXF|H3040|3037|TEXT|0",
+   "xy": [
+    -186559.2,
+    -793770.7
+   ],
+   "site": "SITE-69e2d39bee49fa7e",
+   "room": "1F-R07",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to 1F-R07 (SERVICE, SINGLE)",
+   "is_wet_room_label": false,
+   "affected_trades": []
+  },
+  {
+   "floor": "1F",
+   "text": "غسيل",
+   "key": "ALSENAN_P7757_DXF|H3041|3037|TEXT|0",
+   "xy": [
+    -185588.4,
+    -793338.7
+   ],
+   "site": "SITE-69e2d39bee49fa7e",
+   "room": "1F-R07",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to 1F-R07 (SERVICE, SINGLE)",
+   "is_wet_room_label": false,
+   "affected_trades": []
+  },
+  {
+   "floor": "1F",
+   "text": "BATH",
+   "key": "ALSENAN_P7757_DXF|H3077|3073|TEXT|0",
+   "xy": [
+    -182911.1,
+    -793247.6
+   ],
+   "site": "SITE-cdc894c0f0fd69c9",
+   "room": "1F-R10",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to 1F-R10 (WET, SINGLE)",
+   "is_wet_room_label": true,
+   "affected_trades": []
+  },
+  {
+   "floor": "1F",
+   "text": "حمام",
+   "key": "ALSENAN_P7757_DXF|H3078|3073|TEXT|0",
+   "xy": [
+    -182118.4,
+    -792826.3
+   ],
+   "site": "SITE-cdc894c0f0fd69c9",
+   "room": "1F-R10",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to 1F-R10 (WET, SINGLE)",
+   "is_wet_room_label": false,
+   "affected_trades": []
+  },
+  {
+   "floor": "1F",
+   "text": "BATH",
+   "key": "ALSENAN_P7757_DXF|H3077|3089|TEXT|0",
+   "xy": [
+    -176538.1,
+    -797286.5
+   ],
+   "site": "SITE-2f6cf2b5bebbd966",
+   "room": "1F-R04",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to 1F-R04 (WET, SINGLE)",
+   "is_wet_room_label": true,
+   "affected_trades": []
+  },
+  {
+   "floor": "1F",
+   "text": "حمام",
+   "key": "ALSENAN_P7757_DXF|H3078|3089|TEXT|0",
+   "xy": [
+    -175745.5,
+    -796865.3
+   ],
+   "site": "SITE-2f6cf2b5bebbd966",
+   "room": "1F-R04",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to 1F-R04 (WET, SINGLE)",
+   "is_wet_room_label": false,
+   "affected_trades": []
+  },
+  {
+   "floor": "1F",
+   "text": "W.C",
+   "key": "ALSENAN_P7757_DXF|H459|3097|TEXT|0",
+   "xy": [
+    -184822.1,
+    -793185.5
+   ],
+   "site": null,
+   "room": null,
+   "terminal_state": "WET_LABEL_BLOCKED_NO_PHYSICAL_SITE",
+   "reason": "the label lies in no closed physical site; the wet room's walls are missing / not closed in the source",
+   "is_wet_room_label": true,
+   "affected_trades": [
+    "WALL_TILE",
+    "WATERPROOFING",
+    "FLOOR_FINISH (wet tile)"
+   ]
+  },
+  {
+   "floor": "1F",
+   "text": "مرحاض",
+   "key": "ALSENAN_P7757_DXF|H460|3097|TEXT|0",
+   "xy": [
+    -184104.2,
+    -792883.9
+   ],
+   "site": null,
+   "room": null,
+   "terminal_state": "WET_LABEL_BLOCKED_NO_PHYSICAL_SITE",
+   "reason": "the label lies in no closed physical site; the wet room's walls are missing / not closed in the source",
+   "is_wet_room_label": false,
+   "affected_trades": [
+    "WALL_TILE",
+    "WATERPROOFING",
+    "FLOOR_FINISH (wet tile)"
+   ]
+  },
+  {
+   "floor": "1F",
+   "text": "BATH",
+   "key": "ALSENAN_P7757_DXF|H3077|3116|TEXT|0",
+   "xy": [
+    -191319.5,
+    -802628.2
+   ],
+   "site": null,
+   "room": null,
+   "terminal_state": "WET_LABEL_BLOCKED_NO_PHYSICAL_SITE",
+   "reason": "the label lies in no closed physical site; the wet room's walls are missing / not closed in the source",
+   "is_wet_room_label": true,
+   "affected_trades": [
+    "WALL_TILE",
+    "WATERPROOFING",
+    "FLOOR_FINISH (wet tile)"
+   ]
+  },
+  {
+   "floor": "1F",
+   "text": "حمام",
+   "key": "ALSENAN_P7757_DXF|H3078|3116|TEXT|0",
+   "xy": [
+    -190526.9,
+    -802206.9
+   ],
+   "site": null,
+   "room": null,
+   "terminal_state": "WET_LABEL_BLOCKED_NO_PHYSICAL_SITE",
+   "reason": "the label lies in no closed physical site; the wet room's walls are missing / not closed in the source",
+   "is_wet_room_label": false,
+   "affected_trades": [
+    "WALL_TILE",
+    "WATERPROOFING",
+    "FLOOR_FINISH (wet tile)"
+   ]
+  },
+  {
+   "floor": "1F",
+   "text": "BATH",
+   "key": "ALSENAN_P7757_DXF|H3077|3119|TEXT|0",
+   "xy": [
+    -193587.4,
+    -802628.2
+   ],
+   "site": "SITE-16f76cd141ed8273",
+   "room": "1F-R01",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to 1F-R01 (WET, SINGLE)",
+   "is_wet_room_label": true,
+   "affected_trades": []
+  },
+  {
+   "floor": "1F",
+   "text": "حمام",
+   "key": "ALSENAN_P7757_DXF|H3078|3119|TEXT|0",
+   "xy": [
+    -192794.8,
+    -802206.9
+   ],
+   "site": "SITE-16f76cd141ed8273",
+   "room": "1F-R01",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to 1F-R01 (WET, SINGLE)",
+   "is_wet_room_label": false,
+   "affected_trades": []
+  },
+  {
+   "floor": "2F",
+   "text": "W.C",
+   "key": "ALSENAN_P7757_DXF|H459|4790|TEXT|0",
+   "xy": [
+    -231267.7,
+    -793700.2
+   ],
+   "site": "SITE-ae46ec7518ab613e",
+   "room": "2F-R03",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to 2F-R03 (WET, SINGLE)",
+   "is_wet_room_label": true,
+   "affected_trades": []
+  },
+  {
+   "floor": "2F",
+   "text": "مرحاض",
+   "key": "ALSENAN_P7757_DXF|H460|4790|TEXT|0",
+   "xy": [
+    -230549.8,
+    -793398.5
+   ],
+   "site": "SITE-ae46ec7518ab613e",
+   "room": "2F-R03",
+   "terminal_state": "WET_LABEL_BOUND_TO_REGION",
+   "reason": "bound to 2F-R03 (WET, SINGLE)",
+   "is_wet_room_label": false,
+   "affected_trades": []
+  }
+ ],
+ "counts": {
+  "WET_LABEL_BLOCKED_SEMANTIC_TRADE_BOUNDARY": 5,
+  "WET_LABEL_NOT_IN_SCOPE": 1,
+  "WET_LABEL_BOUND_TO_REGION": 25,
+  "WET_LABEL_BLOCKED_NO_PHYSICAL_SITE": 4
+ },
+ "wet_room_labels_en": {
+  "WET_LABEL_BOUND_TO_REGION": 10,
+  "WET_LABEL_BLOCKED_SEMANTIC_TRADE_BOUNDARY": 2,
+  "WET_LABEL_BLOCKED_NO_PHYSICAL_SITE": 2
+ },
+ "unaccounted_wet_labels": [],
+ "wet_trade_population_complete": false,
+ "rule": "no wet label disappears: every label ends BOUND / BLOCKED_NO_PHYSICAL_SITE / BLOCKED_SEMANTIC_TRADE_BOUNDARY / SOURCE_CONFLICT / NOT_IN_SCOPE; a blocked label keeps the wet-trade population incomplete (no wall tile / WP total is VERIFIED_COMPLETE for the project)"
+}

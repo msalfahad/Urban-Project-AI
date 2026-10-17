@@ -1,0 +1,602 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_ARCH_R5_ORPHANS",
+ "rows": [
+  {
+   "floor": "GF",
+   "occurrence": "396",
+   "text": "swimming pool",
+   "text_ar": "حمام سباحة",
+   "normalized_identity": "EXTERNAL",
+   "xy": [
+    -129805.9,
+    -793606.3
+   ],
+   "nearest_walls": [
+    {
+     "m": 1.932,
+     "source": "ALSENAN_P7757_DXF|H628||SEGMENT|0"
+    },
+    {
+     "m": 1.932,
+     "source": "ALSENAN_P7757_DXF|H693||SEGMENT|0"
+    },
+    {
+     "m": 1.932,
+     "source": "ALSENAN_P7757_DXF|H726||SEGMENT|0"
+    }
+   ],
+   "nearest_spaces": [
+    {
+     "m": 1.978,
+     "site": "SITE-dda89794d15dfb61"
+    },
+    {
+     "m": 3.53,
+     "site": "SITE-67547ed37daadb5a"
+    },
+    {
+     "m": 6.234,
+     "site": "SITE-714889aea3e329c7"
+    }
+   ],
+   "sanitary_fixtures_nearby": [],
+   "doors_nearby": [
+    "I728"
+   ],
+   "structural_obstacles_nearby": 2,
+   "candidate_polygons": [
+    {
+     "route_b_face": "RB-682db83b9b101479",
+     "area_m2": 8.57405
+    }
+   ],
+   "route_a_site_under_label": null,
+   "reason_closure_failed": "no Route A site contains the label",
+   "outcome": "RECOVERED_PHYSICAL_REGION",
+   "why": "Route A left this plate area unclosed; Route B closes it from source linework + recorded closures ",
+   "host": "PS:GF:RR:GF:RB-682db83b9b101479"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "403",
+   "text": "COURT",
+   "text_ar": null,
+   "normalized_identity": "EXTERNAL",
+   "xy": [
+    -152565.4,
+    -794858.4
+   ],
+   "nearest_walls": [
+    {
+     "m": 5.504,
+     "source": "ALSENAN_P7757_DXF|H269||ARC|0"
+    },
+    {
+     "m": 5.535,
+     "source": "ALSENAN_P7757_DXF|H289||SEGMENT|0"
+    },
+    {
+     "m": 5.596,
+     "source": "ALSENAN_P7757_DXF|H951||SEGMENT|0"
+    }
+   ],
+   "nearest_spaces": [
+    {
+     "m": 5.704,
+     "site": "SITE-810cacd9be443703"
+    },
+    {
+     "m": 5.74,
+     "site": "SITE-88d9dbffd47c417a"
+    },
+    {
+     "m": 6.018,
+     "site": "SITE-0e9a7a85e795446f"
+    }
+   ],
+   "sanitary_fixtures_nearby": [],
+   "doors_nearby": [],
+   "structural_obstacles_nearby": 0,
+   "candidate_polygons": [],
+   "route_a_site_under_label": null,
+   "reason_closure_failed": "no Route A site contains the label",
+   "outcome": "NOT_IN_SCOPE_EXTERNAL",
+   "why": "external label (court / roof terrace / street): roof and external trades, not an internal space",
+   "host": null
+  },
+  {
+   "floor": "GF",
+   "occurrence": "717",
+   "text": "DRIVER",
+   "text_ar": "سائق",
+   "normalized_identity": "DRY",
+   "xy": [
+    -152794.9,
+    -802469.4
+   ],
+   "nearest_walls": [
+    {
+     "m": 0.305,
+     "source": "ALSENAN_P7757_DXF|H305||SEGMENT|0"
+    },
+    {
+     "m": 0.455,
+     "source": "ALSENAN_P7757_DXF|H310||SEGMENT|0"
+    },
+    {
+     "m": 1.213,
+     "source": "ALSENAN_P7757_DXF|H335||SEGMENT|0"
+    }
+   ],
+   "nearest_spaces": [
+    {
+     "m": 0.455,
+     "site": "SITE-88d9dbffd47c417a"
+    },
+    {
+     "m": 1.4,
+     "site": "SITE-9b585230d0877a35"
+    },
+    {
+     "m": 1.595,
+     "site": "SITE-0e9a7a85e795446f"
+    }
+   ],
+   "sanitary_fixtures_nearby": [
+    "463",
+    "494"
+   ],
+   "doors_nearby": [
+    "I414",
+    "I495",
+    "I437"
+   ],
+   "structural_obstacles_nearby": 0,
+   "candidate_polygons": [
+    {
+     "route_b_face": "RB-a1191769a247d0ff",
+     "area_m2": 7.875
+    }
+   ],
+   "route_a_site_under_label": null,
+   "reason_closure_failed": "no Route A site contains the label",
+   "outcome": "RECOVERED_PHYSICAL_REGION",
+   "why": "Route A left this plate area unclosed; Route B closes it from source linework + recorded closures BRIDGE|ALSENAN_P7757_DXF|H285||SEGMENT|0|ALSENAN_P7757_DXF|H286||SEGMENT|0, BRIDGE|ALSENAN_P7757_DXF|H304||SEGMENT|0|ALSENAN_P7757_DXF|H305||SEGMENT|0, DOORCLOSE|I437",
+   "host": "PS:GF:RR:GF:RB-a1191769a247d0ff"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "729",
+   "text": "COURT",
+   "text_ar": null,
+   "normalized_identity": "EXTERNAL",
+   "xy": [
+    -137314.6,
+    -790913.8
+   ],
+   "nearest_walls": [
+    {
+     "m": 0.881,
+     "source": "ALSENAN_P7757_DXF|H700||SEGMENT|0"
+    },
+    {
+     "m": 0.881,
+     "source": "ALSENAN_P7757_DXF|H1019||SEGMENT|0"
+    },
+    {
+     "m": 1.04,
+     "source": "ALSENAN_P7757_DXF|H699||SEGMENT|0"
+    }
+   ],
+   "nearest_spaces": [
+    {
+     "m": 1.04,
+     "site": "SITE-67547ed37daadb5a"
+    },
+    {
+     "m": 1.08,
+     "site": "SITE-714889aea3e329c7"
+    },
+    {
+     "m": 1.492,
+     "site": "SITE-5191e28052b00088"
+    }
+   ],
+   "sanitary_fixtures_nearby": [],
+   "doors_nearby": [
+    "I800",
+    "E820"
+   ],
+   "structural_obstacles_nearby": 2,
+   "candidate_polygons": [],
+   "route_a_site_under_label": null,
+   "reason_closure_failed": "no Route A site contains the label",
+   "outcome": "NOT_IN_SCOPE_EXTERNAL",
+   "why": "external label (court / roof terrace / street): roof and external trades, not an internal space",
+   "host": null
+  },
+  {
+   "floor": "1F",
+   "occurrence": "2945",
+   "text": "ROOF",
+   "text_ar": "سطح",
+   "normalized_identity": "ROOF",
+   "xy": [
+    -175031.8,
+    -802427.7
+   ],
+   "nearest_walls": [
+    {
+     "m": 0.417,
+     "source": "ALSENAN_P7757_DXF|H3020||SEGMENT|0"
+    },
+    {
+     "m": 0.417,
+     "source": "ALSENAN_P7757_DXF|H2909||SEGMENT|0"
+    },
+    {
+     "m": 0.539,
+     "source": "ALSENAN_P7757_DXF|H2917||SEGMENT|0"
+    }
+   ],
+   "nearest_spaces": [
+    {
+     "m": 0.391,
+     "site": "SITE-60a08def069f0e48"
+    },
+    {
+     "m": 4.202,
+     "site": "SITE-2f6cf2b5bebbd966"
+    },
+    {
+     "m": 5.029,
+     "site": "SITE-22b96446836c3d8d"
+    }
+   ],
+   "sanitary_fixtures_nearby": [],
+   "doors_nearby": [],
+   "structural_obstacles_nearby": 2,
+   "candidate_polygons": [
+    {
+     "route_b_face": "RB-a8aee344a184bf17",
+     "area_m2": 38.474795
+    }
+   ],
+   "route_a_site_under_label": null,
+   "reason_closure_failed": "no Route A site contains the label",
+   "outcome": "NOT_IN_SCOPE_EXTERNAL",
+   "why": "external label (court / roof terrace / street): roof and external trades, not an internal space",
+   "host": null
+  },
+  {
+   "floor": "1F",
+   "occurrence": "2957",
+   "text": "ROOF",
+   "text_ar": "سطح",
+   "normalized_identity": "ROOF",
+   "xy": [
+    -201494.7,
+    -802732.7
+   ],
+   "nearest_walls": [
+    {
+     "m": 7.002,
+     "source": "ALSENAN_P7757_DXF|H2874||SEGMENT|0"
+    },
+    {
+     "m": 7.082,
+     "source": "ALSENAN_P7757_DXF|H2783||SEGMENT|0"
+    },
+    {
+     "m": 7.202,
+     "source": "ALSENAN_P7757_DXF|H2878||SEGMENT|0"
+    }
+   ],
+   "nearest_spaces": [
+    {
+     "m": 7.202,
+     "site": "SITE-16f76cd141ed8273"
+    },
+    {
+     "m": 7.409,
+     "site": "SITE-da154e7546d18013"
+    },
+    {
+     "m": 11.602,
+     "site": "SITE-c46cb88cea7decbb"
+    }
+   ],
+   "sanitary_fixtures_nearby": [],
+   "doors_nearby": [],
+   "structural_obstacles_nearby": 0,
+   "candidate_polygons": [
+    {
+     "route_b_face": "RB-b6211b9871668ae8",
+     "area_m2": 208.019977
+    }
+   ],
+   "route_a_site_under_label": null,
+   "reason_closure_failed": "no Route A site contains the label",
+   "outcome": "NOT_IN_SCOPE_EXTERNAL",
+   "why": "external label (court / roof terrace / street): roof and external trades, not an internal space",
+   "host": null
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3007",
+   "text": "VOID",
+   "text_ar": "منور",
+   "normalized_identity": "VOID",
+   "xy": [
+    -174771.6,
+    -793988.2
+   ],
+   "nearest_walls": [
+    {
+     "m": 1.07,
+     "source": "ALSENAN_P7757_DXF|H3033||SEGMENT|0"
+    },
+    {
+     "m": 1.07,
+     "source": "ALSENAN_P7757_DXF|H3021||ARC|0"
+    },
+    {
+     "m": 1.119,
+     "source": "ALSENAN_P7757_DXF|H2914||SEGMENT|0"
+    }
+   ],
+   "nearest_spaces": [
+    {
+     "m": 1.242,
+     "site": "SITE-22b96446836c3d8d"
+    },
+    {
+     "m": 1.953,
+     "site": "SITE-60a08def069f0e48"
+    },
+    {
+     "m": 2.251,
+     "site": "SITE-2f6cf2b5bebbd966"
+    }
+   ],
+   "sanitary_fixtures_nearby": [],
+   "doors_nearby": [],
+   "structural_obstacles_nearby": 2,
+   "candidate_polygons": [
+    {
+     "route_b_face": "RB-c8ef6d99700bbc0a",
+     "area_m2": 2.859889
+    }
+   ],
+   "route_a_site_under_label": null,
+   "reason_closure_failed": "no Route A site contains the label",
+   "outcome": "BLOCKED_TOPOLOGY",
+   "why": "label in plate area that neither Route A nor Route B closes (the room shares an unclosed opening with a neighbour; no wall is invented)",
+   "host": null
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3097",
+   "text": "W.C",
+   "text_ar": "مرحاض",
+   "normalized_identity": "WET",
+   "xy": [
+    -184822.1,
+    -793185.5
+   ],
+   "nearest_walls": [
+    {
+     "m": 0.37,
+     "source": "ALSENAN_P7757_DXF|H2821||SEGMENT|0"
+    },
+    {
+     "m": 0.52,
+     "source": "ALSENAN_P7757_DXF|H2823||SEGMENT|0"
+    },
+    {
+     "m": 0.608,
+     "source": "ALSENAN_P7757_DXF|H2771||SEGMENT|0"
+    }
+   ],
+   "nearest_spaces": [
+    {
+     "m": 0.52,
+     "site": "SITE-69e2d39bee49fa7e"
+    },
+    {
+     "m": 0.649,
+     "site": "SITE-60a08def069f0e48"
+    },
+    {
+     "m": 1.25,
+     "site": "SITE-cdc894c0f0fd69c9"
+    }
+   ],
+   "sanitary_fixtures_nearby": [],
+   "doors_nearby": [
+    "I3054",
+    "I4532"
+   ],
+   "structural_obstacles_nearby": 4,
+   "candidate_polygons": [
+    {
+     "route_b_face": "RB-4b9c70b263fdc9bd",
+     "area_m2": 56.720671
+    }
+   ],
+   "route_a_site_under_label": null,
+   "reason_closure_failed": "no Route A site contains the label",
+   "outcome": "BLOCKED_TOPOLOGY",
+   "why": "label in plate area that neither Route A nor Route B closes (the room shares an unclosed opening with a neighbour; no wall is invented)",
+   "host": null
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3116",
+   "text": "BATH",
+   "text_ar": "حمام",
+   "normalized_identity": "WET",
+   "xy": [
+    -191319.5,
+    -802628.2
+   ],
+   "nearest_walls": [
+    {
+     "m": 0.773,
+     "source": "ALSENAN_P7757_DXF|H3106||SEGMENT|0"
+    },
+    {
+     "m": 0.923,
+     "source": "ALSENAN_P7757_DXF|H3107||SEGMENT|0"
+    },
+    {
+     "m": 0.965,
+     "source": "ALSENAN_P7757_DXF|H3109||SEGMENT|0"
+    }
+   ],
+   "nearest_spaces": [
+    {
+     "m": 0.923,
+     "site": "SITE-16f76cd141ed8273"
+    },
+    {
+     "m": 1.427,
+     "site": "SITE-c46cb88cea7decbb"
+    },
+    {
+     "m": 1.635,
+     "site": "SITE-da154e7546d18013"
+    }
+   ],
+   "sanitary_fixtures_nearby": [],
+   "doors_nearby": [
+    "I3115",
+    "I3118"
+   ],
+   "structural_obstacles_nearby": 2,
+   "candidate_polygons": [
+    {
+     "route_b_face": "RB-5757373d9f615fe5",
+     "area_m2": 5.0225
+    }
+   ],
+   "route_a_site_under_label": null,
+   "reason_closure_failed": "no Route A site contains the label",
+   "outcome": "RECOVERED_PHYSICAL_REGION",
+   "why": "Route A left this plate area unclosed; Route B closes it from source linework + recorded closures BRIDGE|ALSENAN_P7757_DXF|H3099||SEGMENT|0|ALSENAN_P7757_DXF|H3100||SEGMENT|0, DOORCLOSE|I3118",
+   "host": "PS:1F:RR:1F:RB-5757373d9f615fe5"
+  },
+  {
+   "floor": "2F",
+   "occurrence": "4778",
+   "text": "ROOF",
+   "text_ar": "سطح",
+   "normalized_identity": "ROOF",
+   "xy": [
+    -230424.6,
+    -801986.4
+   ],
+   "nearest_walls": [
+    {
+     "m": 3.393,
+     "source": "ALSENAN_P7757_DXF|H4737||SEGMENT|0"
+    },
+    {
+     "m": 3.543,
+     "source": "ALSENAN_P7757_DXF|H4739||SEGMENT|0"
+    },
+    {
+     "m": 3.547,
+     "source": "ALSENAN_P7757_DXF|H4757||SEGMENT|0"
+    }
+   ],
+   "nearest_spaces": [
+    {
+     "m": 3.543,
+     "site": "SITE-22c718c6fc156ebe"
+    },
+    {
+     "m": 3.563,
+     "site": "SITE-2e3bac611a8fb491"
+    },
+    {
+     "m": 6.993,
+     "site": "SITE-ae46ec7518ab613e"
+    }
+   ],
+   "sanitary_fixtures_nearby": [],
+   "doors_nearby": [],
+   "structural_obstacles_nearby": 0,
+   "candidate_polygons": [
+    {
+     "route_b_face": "RB-755c170e6bba75e2",
+     "area_m2": 370.42279
+    }
+   ],
+   "route_a_site_under_label": null,
+   "reason_closure_failed": "no Route A site contains the label",
+   "outcome": "NOT_IN_SCOPE_EXTERNAL",
+   "why": "external label (court / roof terrace / street): roof and external trades, not an internal space",
+   "host": null
+  },
+  {
+   "floor": "2F",
+   "occurrence": "4803",
+   "text": "ROOF",
+   "text_ar": "سطح",
+   "normalized_identity": "ROOF",
+   "xy": [
+    -223701.5,
+    -797082.1
+   ],
+   "nearest_walls": [
+    {
+     "m": 3.144,
+     "source": "ALSENAN_P7757_DXF|H4753||SEGMENT|0"
+    },
+    {
+     "m": 3.344,
+     "source": "ALSENAN_P7757_DXF|H4754||SEGMENT|0"
+    },
+    {
+     "m": 3.488,
+     "source": "ALSENAN_P7757_DXF|H4737||SEGMENT|0"
+    }
+   ],
+   "nearest_spaces": [
+    {
+     "m": 3.344,
+     "site": "SITE-2e3bac611a8fb491"
+    },
+    {
+     "m": 6.545,
+     "site": "SITE-22c718c6fc156ebe"
+    },
+    {
+     "m": 6.821,
+     "site": "SITE-ae46ec7518ab613e"
+    }
+   ],
+   "sanitary_fixtures_nearby": [],
+   "doors_nearby": [],
+   "structural_obstacles_nearby": 0,
+   "candidate_polygons": [
+    {
+     "route_b_face": "RB-755c170e6bba75e2",
+     "area_m2": 370.42279
+    }
+   ],
+   "route_a_site_under_label": null,
+   "reason_closure_failed": "no Route A site contains the label",
+   "outcome": "NOT_IN_SCOPE_EXTERNAL",
+   "why": "external label (court / roof terrace / street): roof and external trades, not an internal space",
+   "host": null
+  }
+ ],
+ "counts": {
+  "RECOVERED_PHYSICAL_REGION": 3,
+  "NOT_IN_SCOPE_EXTERNAL": 6,
+  "BLOCKED_TOPOLOGY": 2
+ },
+ "rule": "a label is never deleted; every label outside a Route A space terminates in one outcome"
+}

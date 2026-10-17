@@ -1,0 +1,86 @@
+EXAMPLE,ROW,WHAT,VALUE (m2 / lm / m),NOTE
+BATH-3x2,SURFACE,FIN.WP.FLOOR,6.000,length x width (inside the finished wall line)
+BATH-3x2,SURFACE,FIN.WP.DOORWAY D-01,0.160,door width x wall depth
+BATH-3x2,SURFACE,FIN.WP.UPTURN,2.000,full perimeter incl. doorway segments x upturn height (no door deduction)
+BATH-3x2,SEAM,longitudinal,6.000,"count 3, lap 0.1 m"
+BATH-3x2,SEAM,transverse_floor,0.000,"count 0, lap 0.1 m"
+BATH-3x2,SEAM,upturn_end_laps,1.500,"count 5, lap 0.1 m"
+BATH-3x2,SEAM,upturn_to_floor_lap,10.000,"count -, lap 0.1 m"
+BATH-3x2,SEAM,doorway_to_floor_lap,0.800,"count -, lap 0.1 m"
+BATH-3x2,ROLL_SEGMENT,roll 1: floor strip 1,2.000,length m x 1.00 m
+BATH-3x2,ROLL_SEGMENT,roll 1: floor strip 2,2.000,length m x 1.00 m
+BATH-3x2,ROLL_SEGMENT,roll 1: floor strip 3,2.000,length m x 1.00 m
+BATH-3x2,ROLL_SEGMENT,roll 1: floor strip 4,2.000,length m x 1.00 m
+BATH-3x2,ROLL_TAIL,roll 1 untouched,2.000,packaging surplus
+BATH-3x2,ROLL_SEGMENT,roll 2: upturn lanes,2.540,length m x 1.00 m
+BATH-3x2,ROLL_TAIL,roll 2 untouched,7.460,packaging surplus
+BATH-3x2,BAND_PIECE,upturn piece 1,2.000,length m x 0.3 m
+BATH-3x2,BAND_PIECE,upturn piece 2,1.200,length m x 0.3 m
+BATH-3x2,BAND_PIECE,upturn piece 3,2.540,length m x 0.3 m
+BATH-3x2,BAND_PIECE,upturn piece 4,2.540,length m x 0.3 m
+BATH-3x2,BAND_PIECE,upturn piece 5,2.220,length m x 0.3 m
+BATH-3x2,OFFCUT_RETAINED,unused lane,0.096,0.3 x 0.32 m
+BATH-3x2,CUTTING_WASTE,floor edge trim residue,0.200,0.1 x 2 m
+BATH-3x2,CUTTING_WASTE,upturn lane segment residue,0.254,0.1 x 2.54 m
+BATH-3x2,BALANCE,net installed,8.160,rolls x 10 m2 = net + overlap + cutting waste + offcuts + surplus
+BATH-3x2,BALANCE,overlap,1.830,rolls x 10 m2 = net + overlap + cutting waste + offcuts + surplus
+BATH-3x2,BALANCE,cutting waste,0.454,rolls x 10 m2 = net + overlap + cutting waste + offcuts + surplus
+BATH-3x2,BALANCE,reusable offcuts,0.096,rolls x 10 m2 = net + overlap + cutting waste + offcuts + surplus
+BATH-3x2,BALANCE,packaging surplus,9.460,rolls x 10 m2 = net + overlap + cutting waste + offcuts + surplus
+BATH-3x2,BALANCE,rolls x roll area,20.000,rolls x 10 m2 = net + overlap + cutting waste + offcuts + surplus
+BATH-3x2-DOORWAY-IN-PIECE,SURFACE,FIN.WP.FLOOR,6.000,length x width (inside the finished wall line)
+BATH-3x2-DOORWAY-IN-PIECE,SURFACE,FIN.WP.DOORWAY D-01,0.160,door width x wall depth
+BATH-3x2-DOORWAY-IN-PIECE,SURFACE,FIN.WP.UPTURN,1.840,"(perimeter - doorway segments, billed in the doorway pieces) x upturn height"
+BATH-3x2-DOORWAY-IN-PIECE,SEAM,longitudinal,6.000,"count 3, lap 0.1 m"
+BATH-3x2-DOORWAY-IN-PIECE,SEAM,transverse_floor,0.000,"count 0, lap 0.1 m"
+BATH-3x2-DOORWAY-IN-PIECE,SEAM,upturn_end_laps,1.200,"count 4, lap 0.1 m"
+BATH-3x2-DOORWAY-IN-PIECE,SEAM,upturn_to_floor_lap,9.200,"count -, lap 0.1 m"
+BATH-3x2-DOORWAY-IN-PIECE,SEAM,doorway_to_floor_lap,0.800,"count -, lap 0.1 m"
+BATH-3x2-DOORWAY-IN-PIECE,ROLL_SEGMENT,roll 1: floor strip 1,2.000,length m x 1.00 m
+BATH-3x2-DOORWAY-IN-PIECE,ROLL_SEGMENT,roll 1: floor strip 2,2.000,length m x 1.00 m
+BATH-3x2-DOORWAY-IN-PIECE,ROLL_SEGMENT,roll 1: floor strip 3,2.000,length m x 1.00 m
+BATH-3x2-DOORWAY-IN-PIECE,ROLL_SEGMENT,roll 1: floor strip 4,2.000,length m x 1.00 m
+BATH-3x2-DOORWAY-IN-PIECE,ROLL_TAIL,roll 1 untouched,2.000,packaging surplus
+BATH-3x2-DOORWAY-IN-PIECE,ROLL_SEGMENT,roll 2: upturn lanes,2.240,length m x 1.00 m
+BATH-3x2-DOORWAY-IN-PIECE,ROLL_TAIL,roll 2 untouched,7.760,packaging surplus
+BATH-3x2-DOORWAY-IN-PIECE,BAND_PIECE,upturn piece 1,2.000,length m x 0.3 m
+BATH-3x2-DOORWAY-IN-PIECE,BAND_PIECE,upturn piece 2,1.200,length m x 0.3 m
+BATH-3x2-DOORWAY-IN-PIECE,BAND_PIECE,upturn piece 3,2.240,length m x 0.3 m
+BATH-3x2-DOORWAY-IN-PIECE,BAND_PIECE,upturn piece 4,2.240,length m x 0.3 m
+BATH-3x2-DOORWAY-IN-PIECE,BAND_PIECE,upturn piece 5,1.920,length m x 0.3 m
+BATH-3x2-DOORWAY-IN-PIECE,OFFCUT_RETAINED,unused lane,0.096,0.3 x 0.32 m
+BATH-3x2-DOORWAY-IN-PIECE,CUTTING_WASTE,floor edge trim residue,0.200,0.1 x 2 m
+BATH-3x2-DOORWAY-IN-PIECE,CUTTING_WASTE,upturn lane segment residue,0.224,0.1 x 2.24 m
+BATH-3x2-DOORWAY-IN-PIECE,BALANCE,net installed,8.000,rolls x 10 m2 = net + overlap + cutting waste + offcuts + surplus
+BATH-3x2-DOORWAY-IN-PIECE,BALANCE,overlap,1.720,rolls x 10 m2 = net + overlap + cutting waste + offcuts + surplus
+BATH-3x2-DOORWAY-IN-PIECE,BALANCE,cutting waste,0.424,rolls x 10 m2 = net + overlap + cutting waste + offcuts + surplus
+BATH-3x2-DOORWAY-IN-PIECE,BALANCE,reusable offcuts,0.096,rolls x 10 m2 = net + overlap + cutting waste + offcuts + surplus
+BATH-3x2-DOORWAY-IN-PIECE,BALANCE,packaging surplus,9.760,rolls x 10 m2 = net + overlap + cutting waste + offcuts + surplus
+BATH-3x2-DOORWAY-IN-PIECE,BALANCE,rolls x roll area,20.000,rolls x 10 m2 = net + overlap + cutting waste + offcuts + surplus
+WP-1,SURFACE,FIN.WP.FLOOR,7.360,length x width (inside the finished wall line)
+WP-1,SURFACE,FIN.WP.DOORWAY D1,0.180,door width x wall depth
+WP-1,SURFACE,FIN.WP.UPTURN,2.200,full perimeter incl. doorway segments x upturn height (no door deduction)
+WP-1,SEAM,longitudinal,6.400,"count 2, lap 0.1 m"
+WP-1,SEAM,transverse_floor,0.000,"count 0, lap 0.1 m"
+WP-1,SEAM,upturn_end_laps,1.200,"count 4, lap 0.1 m"
+WP-1,SEAM,upturn_to_floor_lap,11.000,"count -, lap 0.1 m"
+WP-1,SEAM,doorway_to_floor_lap,0.900,"count -, lap 0.1 m"
+WP-1,ROLL_SEGMENT,roll 1: floor strip 1,3.200,length m x 1.00 m
+WP-1,ROLL_SEGMENT,roll 1: floor strip 2,3.200,length m x 1.00 m
+WP-1,ROLL_SEGMENT,roll 1: floor strip 3,3.200,length m x 1.00 m
+WP-1,ROLL_TAIL,roll 1 untouched,0.400,packaging surplus
+WP-1,ROLL_SEGMENT,roll 2: upturn lanes,3.140,length m x 1.00 m
+WP-1,ROLL_TAIL,roll 2 untouched,6.860,packaging surplus
+WP-1,BAND_PIECE,upturn piece 1,2.300,length m x 0.3 m
+WP-1,BAND_PIECE,upturn piece 2,3.140,length m x 0.3 m
+WP-1,BAND_PIECE,upturn piece 3,3.140,length m x 0.3 m
+WP-1,BAND_PIECE,upturn piece 4,2.820,length m x 0.3 m
+WP-1,OFFCUT_RETAINED,unused lane,0.096,0.3 x 0.32 m
+WP-1,CUTTING_WASTE,floor edge trim residue,0.640,0.2 x 3.2 m
+WP-1,CUTTING_WASTE,upturn lane segment residue,0.314,0.1 x 3.14 m
+WP-1,BALANCE,net installed,9.740,rolls x 10 m2 = net + overlap + cutting waste + offcuts + surplus
+WP-1,BALANCE,overlap,1.950,rolls x 10 m2 = net + overlap + cutting waste + offcuts + surplus
+WP-1,BALANCE,cutting waste,0.954,rolls x 10 m2 = net + overlap + cutting waste + offcuts + surplus
+WP-1,BALANCE,reusable offcuts,0.096,rolls x 10 m2 = net + overlap + cutting waste + offcuts + surplus
+WP-1,BALANCE,packaging surplus,7.260,rolls x 10 m2 = net + overlap + cutting waste + offcuts + surplus
+WP-1,BALANCE,rolls x roll area,20.000,rolls x 10 m2 = net + overlap + cutting waste + offcuts + surplus

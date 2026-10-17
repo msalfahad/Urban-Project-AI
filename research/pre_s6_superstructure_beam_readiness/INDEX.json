@@ -1,0 +1,41 @@
+{
+ "baseline": "3b36f2b",
+ "code": {
+  "engine/source/beam_rebar_readiness.py": "71717f529c3e2548950c0f6aae24ec70a49f017fe7ff22c3c56937a86dbcc690",
+  "engine/source/schedule_grammar.py": "d27fbda11bd7f9c9d16e3ba2bf8c25b4c0b885c7cb2961bdb8eaa4afec909308",
+  "research/external_engine_lab/alsenan_rebar_v3.py": "0fac707bd6e117c6725f75b6e819af0796e233185448bdbec93cdb7cb8209221",
+  "research/external_engine_lab/alsenan_structural_s1.py": "e3ecd25490cd433540e317454ffdbaadf17c19799f49eb1df9afcb928aa494cb",
+  "research/external_engine_lab/alsenan_structural_source_v2.py": "04674741aa88a707163ec6bed0875429c94b53e77f305dd3011bf9d4473ff6fa",
+  "research/pre_s6_superstructure_beam_readiness/build_pre_s6.py": "69a08ded3d70477d2b08daf58b5dc7036e846ad6882f741ce617acc637d38e69",
+  "research/pre_s6_superstructure_beam_readiness/write_docs_pre_s6.py": "56174c3196366e065714166dba3e0ecb7a6ba7574ee93c474f0a4161ef67029d"
+ },
+ "drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+ "inputs": {
+  "research/alsenan_rebar_source_exhaustion_04/registers/PROJECT_REBAR_RULE_REGISTER.json": "5536777ab000e65bd8bb61fabae04f0a09cfe58e75e9547c65c1b04e8633d6b8",
+  "research/alsenan_rebar_source_exhaustion_04/registers/VISUAL_SOURCE_CLAIM_REGISTER.json": "de12e1d73eeb57017d6af600d11becef521e573e150c9c5e715d34d4db02668d",
+  "research/alsenan_structural_census_s1/BEAM_DEFINITION_REGISTER.json": "6b490b8a17aab326a3233d7090c219d35f61e60c83ee290391cfa0f0a69df249",
+  "research/alsenan_structural_census_s1/BEAM_OCCURRENCE_REGISTER.json": "4af4ca569a3cda4c7fb7c30729db818e27f9727b6fe061aaa1436b9e3a5f4bc0",
+  "research/alsenan_structural_census_s1/COLUMN_VERTICAL_CHAIN_REGISTER.json": "0397e1981a5a439ade43edc39b1902cdc192571e5273f6302c9c363f20ca6e1d",
+  "research/alsenan_structural_census_s1/CONTINUOUS_BEAM_OCCURRENCE_REGISTER.json": "45639780e85ee870d2c0941d79d71033d39825efa82c930bc8d6a44487030edc",
+  "research/alsenan_structural_census_s1/INDEX.json": "bff6694f05762498c897e2e8da95f70747af133ba652eb47470a03241aa7cc51"
+ },
+ "no_kg": true,
+ "outputs": {
+  "00_README.md": "812314b8f3e985d81c81acf677e7890aaad8577b224123f03685da44fbf80bf9",
+  "01_BEAM_OCCURRENCE_CONSERVATION.csv": "0f431ea3f2afbecaf3457c366a03a27bb40a0ec9b7053095bb89311e962e08af",
+  "02_BEAM_BINDING_READINESS.csv": "42b0643e05385e8b32a2803b66b12ea9a2508d2c16dd673433bd31b9be54b672",
+  "03_SIMPLE_BEAM_SCHEDULE_SEMANTICS.csv": "22a19fce3fd5c48ba939397ecb5be6206275598d1b976cd2b324b7262772c108",
+  "04_CONTINUOUS_BEAM_SCHEDULE_SEMANTICS.csv": "1d9e0960149de46fea2e6cfe35f6170efdccfcffe28ce9705305cd16b8bd7eec",
+  "05_CB_SPAN_SEQUENCE.csv": "696c07fac33374d7d3de6e62f2d0cdcba9a48682839174730be83f95df969a7b",
+  "06_BEAM_BAR_RUN_READINESS.csv": "3541482d9e318f1126ae00cf52883a2108ffeca398939418a8c59a7cea2f6af5",
+  "07_BEAM_SIDE_REBAR_READINESS.csv": "f3fedff4058915dd4488a268cbf1766c3cd9ee4a593811c2aa20d6586f2c526b",
+  "08_BEAM_OPENING_OCCURRENCES.csv": "8b80913d950449a9bd55d3c54d4a6b90ea1da1584b81231feca18c3437965e6c",
+  "09_BEAM_TOKEN_CORPUS.csv": "08b24935b270f9635967e7d6d86c8aec57e0d50a891b83e4f7a3ba41a3784cca",
+  "10_SUPERSTRUCTURE_BEAM_REBAR_READINESS.csv": "de686e6c488bdad573ec43f7a9c2856d2f37acd57c76bbc40fd44c094f473397",
+  "11_ENGINEERING_QUESTIONS.md": "80e0346caea91ac5cd324ee869e781116bfdcfed331786b1949e23aca41b024b",
+  "12_S6_SCOPE_RECOMMENDATION.md": "425f56dd366af1abce6ec978618971c3a72797728928ab528fa4465f8bdaaa6f",
+  "PRE_S6_SUMMARY.json": "f4c1d4c1b5b0a9a2017c8db749abcc969b54e1ec1db103618afccff531ee2c50",
+  "S6_PROVENANCE_TEMPLATES.json": "c42bb7e84a79196db0bf569b5ddbccad3bf5f9c42d2067c4d0ad6711f1ebaec5"
+ },
+ "round": "PRE_S6"
+}

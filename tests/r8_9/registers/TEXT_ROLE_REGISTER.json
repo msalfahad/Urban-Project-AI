@@ -1,0 +1,141 @@
+{
+ "SCHEMA": "URBAN_R8_9_TEXT_ROLE_REGISTER_V1",
+ "policy": {
+  "id": "TEXT_ROLE_POLICY_V1",
+  "rules": [
+   "TR-01 TITLE_TEXT",
+   "TR-02 DIMENSION_TEXT",
+   "TR-03 tag occurrence + room vocabulary",
+   "TR-04 tag family (same source)",
+   "TR-05 door / window tag",
+   "TR-06 tag candidate",
+   "TR-07 room-label layer",
+   "TR-08 area / level",
+   "TR-09 annotation",
+   "TR-10 loose room word: candidate",
+   "TR-11 claim",
+   "TR-99 unknown"
+  ],
+  "names_a_space": [
+   "ROOM_LABEL_ESTABLISHED"
+  ],
+  "semantic_review": [
+   "ROOM_LABEL_CANDIDATE",
+   "UNKNOWN_TEXT_ROLE"
+  ],
+  "room_vocabulary": [
+   "ROOM",
+   "ROOMS",
+   "BED",
+   "BEDROOM",
+   "MASTER",
+   "LIVING",
+   "HALL",
+   "LOBBY",
+   "SALOON",
+   "SALON",
+   "RECEPTION",
+   "DINING",
+   "KITCHEN",
+   "PANTRY",
+   "BATH",
+   "BATHROOM",
+   "WC",
+   "TOILET",
+   "SHOWER",
+   "LAUNDRY",
+   "STORE",
+   "STORAGE",
+   "DRESS",
+   "DRESSING",
+   "CLOSET",
+   "MAID",
+   "DRIVER",
+   "GUARD",
+   "OFFICE",
+   "STUDY",
+   "LIBRARY",
+   "CORRIDOR",
+   "PASSAGE",
+   "ENTRANCE",
+   "FOYER",
+   "BALCONY",
+   "TERRACE",
+   "ROOF",
+   "GARAGE",
+   "PARKING",
+   "MAJLIS",
+   "DIWANIYA",
+   "PRAYER",
+   "GYM",
+   "UTILITY",
+   "SHAFT",
+   "VOID",
+   "STAIR",
+   "STAIRS",
+   "LIFT",
+   "FAMILY",
+   "GUEST",
+   "SITTING",
+   "WASH"
+  ],
+  "room_label_layers": [
+   "ROOM",
+   "ROOMS",
+   "ROOMNAME",
+   "ROOMNAMES",
+   "ROOMTAG",
+   "RMTAG",
+   "SPACE",
+   "SPACES",
+   "SPACENAME"
+  ],
+  "never": [
+   "inside a polygon alone",
+   "nearest label",
+   "vocabulary alone"
+  ]
+ },
+ "runs": {
+  "OLD_K1": {
+   "AREA_TEXT | TR-08": 2,
+   "GENERAL_NOTE | TR-09": 7,
+   "LEVEL_MARK | TR-08": 1,
+   "ROOM_LABEL_ESTABLISHED | TR-03": 18,
+   "ROOM_LABEL_ESTABLISHED | TR-04": 2,
+   "TITLE_TEXT | TR-01": 26,
+   "UNKNOWN_TEXT_ROLE | TR-99": 5
+  },
+  "OLD_K2": {
+   "AREA_TEXT | TR-08": 2,
+   "GENERAL_NOTE | TR-09": 7,
+   "LEVEL_MARK | TR-08": 1,
+   "ROOM_LABEL_ESTABLISHED | TR-03": 18,
+   "ROOM_LABEL_ESTABLISHED | TR-04": 2,
+   "TITLE_TEXT | TR-01": 26,
+   "UNKNOWN_TEXT_ROLE | TR-99": 5
+  },
+  "NEW_K2": {
+   "AREA_TEXT | TR-08": 2,
+   "GENERAL_NOTE | TR-09": 7,
+   "LEVEL_MARK | TR-08": 1,
+   "ROOM_LABEL_ESTABLISHED | TR-03": 18,
+   "ROOM_LABEL_ESTABLISHED | TR-04": 2,
+   "TITLE_TEXT | TR-01": 26,
+   "UNKNOWN_TEXT_ROLE | TR-99": 5
+  }
+ },
+ "established_room_tags_new": [
+  "1008",
+  "1251",
+  "1259",
+  "1274",
+  "1283",
+  "1447",
+  "1453",
+  "1454",
+  "2046",
+  "999"
+ ],
+ "paintry": "PAINTRY (misspelled) is established by TR-04: same tag composition as the source's lexicon-established tags; the misspelling is never added to the vocabulary"
+}

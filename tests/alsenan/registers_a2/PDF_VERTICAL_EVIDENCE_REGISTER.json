@@ -1,0 +1,391 @@
+{
+ "items": [
+  {
+   "id": "VE-AA-01",
+   "page": 10,
+   "view": "SECTION A-A",
+   "crop_px": [
+    680,
+    360,
+    1940,
+    1380
+   ],
+   "kind": "LEVEL_MARK",
+   "text": "±0.00",
+   "value_m": 0.0,
+   "reading": "natural ground, both sides",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "VE-AA-02",
+   "page": 10,
+   "view": "SECTION A-A",
+   "crop_px": [
+    680,
+    360,
+    1940,
+    1380
+   ],
+   "kind": "LEVEL_MARK",
+   "text": "+0.15",
+   "value_m": 0.15,
+   "reading": "external paving at the stair foot",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "VE-AA-03",
+   "page": 10,
+   "view": "SECTION A-A",
+   "crop_px": [
+    680,
+    360,
+    1940,
+    1380
+   ],
+   "kind": "LEVEL_MARK",
+   "text": "+0.30",
+   "value_m": 0.3,
+   "reading": "entrance / landing",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "VE-AA-04",
+   "page": 10,
+   "view": "SECTION A-A",
+   "crop_px": [
+    680,
+    360,
+    1940,
+    1380
+   ],
+   "kind": "FFL",
+   "text": "+1.00",
+   "value_m": 1.0,
+   "floor": "GF",
+   "reading": "ground floor finished level",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "VE-AA-05",
+   "page": 10,
+   "view": "SECTION A-A",
+   "crop_px": [
+    680,
+    360,
+    1940,
+    1380
+   ],
+   "kind": "FFL",
+   "text": "+5.50",
+   "value_m": 5.5,
+   "floor": "1F",
+   "reading": "first floor finished level",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "VE-AA-06",
+   "page": 10,
+   "view": "SECTION A-A",
+   "crop_px": [
+    680,
+    360,
+    1940,
+    1380
+   ],
+   "kind": "FFL",
+   "text": "+9.70",
+   "value_m": 9.7,
+   "floor": "2F",
+   "reading": "second floor finished level",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "VE-AA-07",
+   "page": 10,
+   "view": "SECTION A-A",
+   "crop_px": [
+    680,
+    360,
+    1940,
+    1380
+   ],
+   "kind": "ROOF_LEVEL",
+   "text": "+13.90",
+   "value_m": 13.9,
+   "floor": "ROOF",
+   "reading": "upper roof level",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "VE-AA-08",
+   "page": 10,
+   "view": "SECTION A-A",
+   "crop_px": [
+    680,
+    360,
+    1940,
+    1380
+   ],
+   "kind": "DIMENSION_CHAIN",
+   "text": "100 / 870 / 420 / 50 = 1440 (cm)",
+   "values_cm": [
+    100,
+    870,
+    420,
+    50
+   ],
+   "total_cm": 1440,
+   "reading": "left chain: ground -> GF FFL, GF -> 2F FFL, 2F -> roof, parapet",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "VE-AA-09",
+   "page": 10,
+   "view": "SECTION A-A",
+   "crop_px": [
+    680,
+    360,
+    1940,
+    1380
+   ],
+   "kind": "DIMENSION_CHAIN",
+   "text": "450 (cm) between +1.00 and +5.50; 420 between +5.50 and +9.70; 420 between +9.70 and +13.90",
+   "values_cm": [
+    450,
+    420,
+    420
+   ],
+   "reading": "floor-to-floor dimensions printed beside the rooms",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "VE-AA-10",
+   "page": 10,
+   "view": "SECTION A-A",
+   "crop_px": [
+    680,
+    360,
+    1940,
+    1380
+   ],
+   "kind": "PARAPET",
+   "text": "50 (cm) above +13.90 and above +5.50 (terrace edge)",
+   "values_cm": [
+    50
+   ],
+   "reading": "parapet height",
+   "confidence": "MEDIUM"
+  },
+  {
+   "id": "VE-BB-01",
+   "page": 11,
+   "view": "SECTION B-B",
+   "crop_px": [
+    0,
+    0,
+    2484,
+    1755
+   ],
+   "kind": "LEVEL_MARK",
+   "text": "±0.00",
+   "value_m": 0.0,
+   "reading": "natural ground",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "VE-BB-02",
+   "page": 11,
+   "view": "SECTION B-B",
+   "crop_px": [
+    0,
+    0,
+    2484,
+    1755
+   ],
+   "kind": "FFL",
+   "text": "+0.30",
+   "value_m": 0.3,
+   "floor": "ANNEX",
+   "reading": "annex (pool side) floor",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "VE-BB-03",
+   "page": 11,
+   "view": "SECTION B-B",
+   "crop_px": [
+    0,
+    0,
+    2484,
+    1755
+   ],
+   "kind": "ROOF_LEVEL",
+   "text": "+4.30",
+   "value_m": 4.3,
+   "floor": "ANNEX",
+   "reading": "annex roof",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "VE-BB-04",
+   "page": 11,
+   "view": "SECTION B-B",
+   "crop_px": [
+    0,
+    0,
+    2484,
+    1755
+   ],
+   "kind": "LEVEL_MARK",
+   "text": "+0.15",
+   "value_m": 0.15,
+   "reading": "court paving",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "VE-BB-05",
+   "page": 11,
+   "view": "SECTION B-B",
+   "crop_px": [
+    0,
+    0,
+    2484,
+    1755
+   ],
+   "kind": "FFL",
+   "text": "+1.00",
+   "value_m": 1.0,
+   "floor": "GF",
+   "reading": "ground floor finished level",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "VE-BB-06",
+   "page": 11,
+   "view": "SECTION B-B",
+   "crop_px": [
+    0,
+    0,
+    2484,
+    1755
+   ],
+   "kind": "FFL",
+   "text": "+5.50",
+   "value_m": 5.5,
+   "floor": "1F",
+   "reading": "first floor finished level",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "VE-BB-07",
+   "page": 11,
+   "view": "SECTION B-B",
+   "crop_px": [
+    0,
+    0,
+    2484,
+    1755
+   ],
+   "kind": "FFL",
+   "text": "+9.70",
+   "value_m": 9.7,
+   "floor": "2F",
+   "reading": "second floor / roof terrace level",
+   "confidence": "HIGH"
+  },
+  {
+   "id": "VE-BB-08",
+   "page": 11,
+   "view": "SECTION B-B",
+   "crop_px": [
+    0,
+    0,
+    2484,
+    1755
+   ],
+   "kind": "DIMENSION_CHAIN",
+   "text": "480 / 400 (annex); 535; 100 / 550 / 50; 450; 420; 870; 130; 420 / 50; 1440 (cm)",
+   "values_cm": [
+    480,
+    400,
+    535,
+    100,
+    550,
+    50,
+    450,
+    420,
+    870,
+    130,
+    420,
+    50,
+    1440
+   ],
+   "reading": "vertical chains; 400 = annex +0.30 -> +4.30",
+   "confidence": "MEDIUM"
+  }
+ ],
+ "cad_plan_levels_m": {
+  "GF": [
+   0.0,
+   0.15,
+   0.3,
+   1.0,
+   15.0,
+   31.37
+  ],
+  "1F": [
+   4.3,
+   5.5,
+   15.0,
+   31.37
+  ],
+  "2F": [
+   9.7,
+   15.0,
+   31.37
+  ]
+ },
+ "floor_to_floor": [
+  {
+   "from": "GF",
+   "to": "1F",
+   "ffl_from_m": 1.0,
+   "ffl_to_m": 5.5,
+   "floor_to_floor_m": 4.5,
+   "printed_dimension_agrees": true,
+   "cad_plan_level_agrees": true,
+   "state": "EVIDENCE_CORROBORATED",
+   "use": "vertical EVIDENCE only: a clear (wall-face) height also needs the slab thickness AND the floor build-up and any false ceiling - the build-up is not in the source"
+  },
+  {
+   "from": "1F",
+   "to": "2F",
+   "ffl_from_m": 5.5,
+   "ffl_to_m": 9.7,
+   "floor_to_floor_m": 4.2,
+   "printed_dimension_agrees": true,
+   "cad_plan_level_agrees": true,
+   "state": "EVIDENCE_CORROBORATED",
+   "use": "vertical EVIDENCE only: a clear (wall-face) height also needs the slab thickness AND the floor build-up and any false ceiling - the build-up is not in the source"
+  },
+  {
+   "from": "2F",
+   "to": "ROOF",
+   "ffl_from_m": 9.7,
+   "ffl_to_m": 13.9,
+   "floor_to_floor_m": 4.2,
+   "printed_dimension_agrees": true,
+   "cad_plan_level_agrees": true,
+   "state": "EVIDENCE_CORROBORATED",
+   "use": "vertical EVIDENCE only: a clear (wall-face) height also needs the slab thickness AND the floor build-up and any false ceiling - the build-up is not in the source"
+  }
+ ],
+ "pdf": "P7757_Architectural_Plan_Pages_07-12.pdf",
+ "pages": [
+  10,
+  11
+ ],
+ "method": "transcribed by eye from 150 dpi renders of the delivered raster pages; no OCR; no pixel measurement; scale never derived from pixels",
+ "clear_height": "BLOCKED: FFL-to-FFL minus structural slab (16 / 18 cm, ST7757 labels) minus floor build-up (NOT IN SOURCE) minus false ceiling (NOT IN SOURCE)",
+ "SCHEMA": "URBAN_ALSENAN_A2_VERTICAL_EVIDENCE_V1"
+}

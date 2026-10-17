@@ -1,0 +1,121 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A3_STRUCTURAL_RECONCILIATION_V1",
+ "footings": {
+  "state": "PASS",
+  "per_type": {
+   "F": {
+    "tags": 5,
+    "computed": 4,
+    "blocked": 1,
+    "state": "PASS"
+   },
+   "F2": {
+    "tags": 2,
+    "computed": 2,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "F3": {
+    "tags": 2,
+    "computed": 2,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "F4": {
+    "tags": 2,
+    "computed": 2,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "F5": {
+    "tags": 2,
+    "computed": 2,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "F6": {
+    "tags": 1,
+    "computed": 1,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "F8": {
+    "tags": 1,
+    "computed": 1,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "F9": {
+    "tags": 1,
+    "computed": 1,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "F10": {
+    "tags": 1,
+    "computed": 0,
+    "blocked": 1,
+    "state": "PASS"
+   },
+   "F11": {
+    "tags": 1,
+    "computed": 1,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "F12": {
+    "tags": 1,
+    "computed": 1,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "F13": {
+    "tags": 1,
+    "computed": 1,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "F14": {
+    "tags": 1,
+    "computed": 1,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "F15": {
+    "tags": 1,
+    "computed": 1,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "FF": {
+    "tags": 1,
+    "computed": 1,
+    "blocked": 0,
+    "state": "PASS"
+   },
+   "FN": {
+    "tags": 4,
+    "computed": 4,
+    "blocked": 0,
+    "state": "PASS"
+   }
+  },
+  "tags_not_exactly_once": [],
+  "computed_types_not_in_schedule": [],
+  "tags": 27,
+  "rows": 27
+ },
+ "type_summary_derived_exactly": true,
+ "summary_rows_equal_type_totals": true,
+ "every_row_names_schedule_row": true,
+ "row_fields_complete": true,
+ "computed_types_not_in_schedule": [],
+ "marks_without_schedule_definition": [],
+ "columns": {
+  "marks": 35,
+  "printed_labels": 35,
+  "state": "PASS"
+ },
+ "beams_volume_from_count": "NONE (every beam volume is blocked or measured from a bound band)",
+ "state": "PASS"
+}

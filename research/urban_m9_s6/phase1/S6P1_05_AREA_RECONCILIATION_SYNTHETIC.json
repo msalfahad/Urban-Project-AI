@@ -1,0 +1,140 @@
+{
+ "floors": {
+  "GF": {
+   "categories_equal_v1_v2": true,
+   "gross_floor_plate_m2": 116.56,
+   "internal_physical_floor_m2": 105.0,
+   "external_m2": 0.0,
+   "categories_m2": {
+    "DOORWAY_STRIPS": 1.4,
+    "EXTERNAL": 0.0,
+    "OPEN_PLAN_FLOOR": 0.0,
+    "ROOM_FLOOR": 103.6,
+    "SHAFT": 0.0,
+    "SLIVERS": 0.0,
+    "STAIR_BELOW_SEEN": 0.0,
+    "STAIR_FLIGHTS": 0.0,
+    "STAIR_LANDINGS_BOUND": 0.0,
+    "UNALLOCATED_MERGED": 0.0,
+    "UNALLOCATED_MIXED": 0.0,
+    "UNALLOCATED_UNLABELLED": 0.0,
+    "VOID": 0.0,
+    "WALL_AND_COLUMN_MASS": 11.56
+   },
+   "faces_m2": 116.56,
+   "covered_m2": 116.56,
+   "faces_by_state_m2": {
+    "EXCLUDED": 11.56,
+    "LINE": 103.6,
+    "RFI": 1.4
+   },
+   "by_category_and_state_m2": {
+    "DOORWAY_STRIPS": {
+     "RFI": 1.4
+    },
+    "ROOM_FLOOR": {
+     "LINE": 103.6
+    },
+    "WALL_AND_COLUMN_MASS": {
+     "EXCLUDED": 11.56
+    }
+   },
+   "coverage_gate": "PASS",
+   "unaccounted": 0,
+   "doorway_strips_m2": 1.4,
+   "doorway_strips_by_class_m2": {
+    "THRESHOLD": 0.72,
+    "WINDOW_REVEAL": 0.68
+   },
+   "strips_by_class_and_verification": {
+    "THRESHOLD:VERIFIED": {
+     "count": 4,
+     "m2": 0.72
+    },
+    "WINDOW_REVEAL:VERIFIED": {
+     "count": 8,
+     "m2": 0.68
+    }
+   },
+   "functional_spaces": 4,
+   "functional_surfaces_by_state": {
+    "LINE": 16
+   }
+  },
+  "1F": {
+   "categories_equal_v1_v2": true,
+   "gross_floor_plate_m2": 75.2,
+   "internal_physical_floor_m2": 66.14,
+   "external_m2": 0.0,
+   "categories_m2": {
+    "DOORWAY_STRIPS": 1.02,
+    "EXTERNAL": 0.0,
+    "OPEN_PLAN_FLOOR": 0.0,
+    "ROOM_FLOOR": 51.12,
+    "SHAFT": 0.0,
+    "SLIVERS": 0.0,
+    "STAIR_BELOW_SEEN": 0.0,
+    "STAIR_FLIGHTS": 2.7,
+    "STAIR_LANDINGS_BOUND": 11.3,
+    "UNALLOCATED_MERGED": 0.0,
+    "UNALLOCATED_MIXED": 0.0,
+    "UNALLOCATED_UNLABELLED": 0.0,
+    "VOID": 0.0,
+    "WALL_AND_COLUMN_MASS": 9.06
+   },
+   "faces_m2": 75.2,
+   "covered_m2": 75.2,
+   "faces_by_state_m2": {
+    "EXCLUDED": 9.06,
+    "LINE": 53.82,
+    "RFI": 12.32
+   },
+   "by_category_and_state_m2": {
+    "DOORWAY_STRIPS": {
+     "RFI": 1.02
+    },
+    "ROOM_FLOOR": {
+     "LINE": 51.12
+    },
+    "STAIR_FLIGHTS": {
+     "LINE": 2.7
+    },
+    "STAIR_LANDINGS_BOUND": {
+     "RFI": 11.3
+    },
+    "WALL_AND_COLUMN_MASS": {
+     "EXCLUDED": 9.06
+    }
+   },
+   "coverage_gate": "PASS",
+   "unaccounted": 0,
+   "doorway_strips_m2": 1.02,
+   "doorway_strips_by_class_m2": {
+    "THRESHOLD": 0.54,
+    "WINDOW_REVEAL": 0.48
+   },
+   "strips_by_class_and_verification": {
+    "THRESHOLD:VERIFIED": {
+     "count": 3,
+     "m2": 0.54
+    },
+    "WINDOW_REVEAL:VERIFIED": {
+     "count": 6,
+     "m2": 0.48
+    }
+   },
+   "functional_spaces": 4,
+   "functional_surfaces_by_state": {
+    "LINE": 13,
+    "RFI": 3
+   }
+  }
+ },
+ "lines": {
+  "v1": 67,
+  "v2": 86,
+  "v1_kept_unchanged": 67,
+  "v2_added": 19,
+  "v2_added_with_a_quantity": 0
+ }
+}

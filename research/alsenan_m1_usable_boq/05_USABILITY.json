@@ -1,0 +1,214 @@
+{
+ "as_of": "2026-10-10",
+ "beams": {
+  "convention_A_total_m3": 63.479646,
+  "convention_B_total_m3": 79.287837,
+  "difference_m3": 15.808191,
+  "still_unmeasurable": 27
+ },
+ "blind_test_on_a_different_villa": "NOT RUN: no second permitted villa dataset exists in this repository (data/inputs/by_sha256 holds only this project's drawings). The new-villa route is exercised on a synthetic drawing in tests/m1_usable_boq",
+ "completeness_by_family_concrete": {
+  "BEAMS": {
+   "n_provisional": 117,
+   "n_unresolved": 27,
+   "n_verified": 0,
+   "planning_base_m3": 63.842902,
+   "verified_share_of_planning_base": 0.0
+  },
+  "BOUNDARY_WALL": {
+   "n_provisional": 0,
+   "n_unresolved": 1,
+   "n_verified": 0,
+   "planning_base_m3": 0.0,
+   "verified_share_of_planning_base": null
+  },
+  "CANTILEVER_PORTIONS": {
+   "n_provisional": 7,
+   "n_unresolved": 0,
+   "n_verified": 0,
+   "planning_base_m3": 0.736375,
+   "verified_share_of_planning_base": 0.0
+  },
+  "COLUMNS": {
+   "n_provisional": 63,
+   "n_unresolved": 0,
+   "n_verified": 32,
+   "planning_base_m3": 47.1825,
+   "verified_share_of_planning_base": 0.436274
+  },
+  "DOMES": {
+   "n_provisional": 2,
+   "n_unresolved": 3,
+   "n_verified": 2,
+   "planning_base_m3": 6.736353,
+   "verified_share_of_planning_base": 0.754319
+  },
+  "FOOTINGS": {
+   "n_provisional": 1,
+   "n_unresolved": 0,
+   "n_verified": 25,
+   "planning_base_m3": 66.264,
+   "verified_share_of_planning_base": 0.970421
+  },
+  "GROUND_BEAMS": {
+   "n_provisional": 49,
+   "n_unresolved": 8,
+   "n_verified": 6,
+   "planning_base_m3": 36.25223,
+   "verified_share_of_planning_base": 0.107003
+  },
+  "GROUND_SLAB": {
+   "n_provisional": 19,
+   "n_unresolved": 0,
+   "n_verified": 2,
+   "planning_base_m3": 16.763728,
+   "verified_share_of_planning_base": 0.225836
+  },
+  "LIFT": {
+   "n_provisional": 4,
+   "n_unresolved": 2,
+   "n_verified": 0,
+   "planning_base_m3": 2.145,
+   "verified_share_of_planning_base": 0.0
+  },
+  "LINTELS": {
+   "n_provisional": 57,
+   "n_unresolved": 0,
+   "n_verified": 7,
+   "planning_base_m3": 4.976978,
+   "verified_share_of_planning_base": 0.073539
+  },
+  "PARAPETS": {
+   "n_provisional": 0,
+   "n_unresolved": 3,
+   "n_verified": 0,
+   "planning_base_m3": 0.0,
+   "verified_share_of_planning_base": null
+  },
+  "PLAIN_CONCRETE": {
+   "n_provisional": 1,
+   "n_unresolved": 1,
+   "n_verified": 0,
+   "planning_base_m3": 9.9747,
+   "verified_share_of_planning_base": 0.0
+  },
+  "POOL": {
+   "n_provisional": 5,
+   "n_unresolved": 0,
+   "n_verified": 0,
+   "planning_base_m3": 7.08446,
+   "verified_share_of_planning_base": 0.0
+  },
+  "SLABS": {
+   "n_provisional": 0,
+   "n_unresolved": 6,
+   "n_verified": 47,
+   "planning_base_m3": 57.09856,
+   "verified_share_of_planning_base": 1.0
+  },
+  "STAIRS": {
+   "n_provisional": 12,
+   "n_unresolved": 0,
+   "n_verified": 3,
+   "planning_base_m3": 9.060994,
+   "verified_share_of_planning_base": 0.057012
+  },
+  "WATER_TANK_ROOF": {
+   "n_provisional": 0,
+   "n_unresolved": 2,
+   "n_verified": 2,
+   "planning_base_m3": 2.4543,
+   "verified_share_of_planning_base": 1.0
+  }
+ },
+ "detection_coverage": {
+  "by_m1_disposition": {
+   "COVERED_BY_PL-BASE": 3,
+   "EXCLUDED_OWNED_BY_OTHER_FAMILY": 26,
+   "ITEM": 507,
+   "NOT_APPLICABLE": 14,
+   "NO_PLAN_OCCURRENCE (typical detail only)": 3,
+   "SUPERSEDED_BY_S9A_BAND": 7
+  },
+  "drawing_layers": 47,
+  "layers_with_geometry_no_stage_names": [
+   "S-SHEET.LO"
+  ],
+  "missing_from_m1": 0,
+  "s9_component_records": 560
+ },
+ "independent_benchmark": "NONE before the freeze. The post-freeze comparison (post_freeze/) classifies discrepancies against external estimates; none is an independent measured truth, so no accuracy percentage is claimed",
+ "inputs": [
+  {
+   "file": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079.dxf",
+   "kind": "DXF",
+   "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+  },
+  {
+   "file": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3.pdf",
+   "kind": "PDF",
+   "sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+  }
+ ],
+ "manual_interventions_during_the_run": 0,
+ "manual_work_embodied_in_the_inputs": "the frozen S1 - S9A stages (census, rule transcription, reviews) that route A replays; on a new villa, the profile a person confirms",
+ "n_items": 1582,
+ "new_villa_without_repeating_S1_S9": "PARTIAL. Inventory, footings and columns (with a confirmed profile), conventions, checks, exceptions, Excel and PDF run in one command. Beams, slabs, ground beams, stairs and reinforcement would still need the S1-type census and the family stages, which are specific to this drawing",
+ "route": "A_FROZEN_STAGE_REPLAY",
+ "runtime": "measured per run in boq/run_log.json (not frozen: it varies with the machine); see TEST_RUN.md",
+ "unresolved": {
+  "concrete_exposure_m3_not_added": [
+   15.692096720000002,
+   34.380783691
+  ],
+  "concrete_items": 53,
+  "concrete_items_with_exposure": 40,
+  "reinforcement_items": 33
+ },
+ "verified_vs_provisional": {
+  "concrete_m3": {
+   "planning_base": 330.5730809024707,
+   "planning_high": 365.1039210887144,
+   "planning_low": 313.79206613354927,
+   "provisional_base": 172.5028244764706,
+   "verified": 158.07025642600007
+  },
+  "plain_concrete_m3": {
+   "N_PROVISIONAL": 1,
+   "N_UNRESOLVED": 1,
+   "N_UNRESOLVED_WITH_EXPOSURE": 1,
+   "N_VERIFIED": 0,
+   "PLANNING_BASE": 9.9747,
+   "PLANNING_HIGH": 9.9747,
+   "PLANNING_LOW": 9.9747,
+   "PROVISIONAL_BASE": 9.9747,
+   "PROVISIONAL_HIGH": 9.9747,
+   "PROVISIONAL_LOW": 9.9747,
+   "UNRESOLVED_EXPOSURE_HIGH": 13.069,
+   "UNRESOLVED_EXPOSURE_LOW": 6.5345,
+   "VERIFIED": 0.0
+  },
+  "rc_concrete_m3": {
+   "N_PROVISIONAL": 336,
+   "N_UNRESOLVED": 52,
+   "N_UNRESOLVED_WITH_EXPOSURE": 39,
+   "N_VERIFIED": 126,
+   "PLANNING_BASE": 320.5983809024707,
+   "PLANNING_HIGH": 355.1292210887144,
+   "PLANNING_LOW": 303.8173661335493,
+   "PROVISIONAL_BASE": 162.5281244764706,
+   "PROVISIONAL_HIGH": 197.05896466271435,
+   "PROVISIONAL_LOW": 145.7471097075492,
+   "UNRESOLVED_EXPOSURE_HIGH": 21.311783690999995,
+   "UNRESOLVED_EXPOSURE_LOW": 9.15759672,
+   "VERIFIED": 158.07025642600007
+  },
+  "reinforcement_kg": {
+   "planning_base": 24866.591171093824,
+   "planning_high": 24968.655245167898,
+   "planning_low": 24533.4045231076,
+   "provisional_base": 6020.629824446828,
+   "verified": 18845.961346646996
+  }
+ }
+}

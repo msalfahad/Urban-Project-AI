@@ -1,0 +1,173 @@
+{
+ "SCHEMA": "URBAN_QORTUBA_RC1_ENGINE_INVENTORY_V1",
+ "components": [
+  {
+   "component": "SOURCE ENGINE",
+   "state": "ACTIVE",
+   "modules": "engine/source/canonical_input.py, canonical_build.py"
+  },
+  {
+   "component": "CAD K1/K2",
+   "state": "ACTIVE (K2 measures REV_NEW; K1 cross-route pending the AC1027 export)",
+   "modules": "engine/source/cad/"
+  },
+  {
+   "component": "UNIT / FRAME",
+   "state": "ACTIVE",
+   "modules": "engine/source/frame.py, cad/unit_evidence.py"
+  },
+  {
+   "component": "EVIDENCE ENGINE",
+   "state": "ACTIVE",
+   "modules": "engine/source/observations.py, findings.py, role_authority.py"
+  },
+  {
+   "component": "CLAIM / FACT POLICY",
+   "state": "ACTIVE",
+   "modules": "engine/source/owner_claims.py, owner_facts.py, owner_method_facts.py"
+  },
+  {
+   "component": "ROOM / SEMANTIC ENGINE",
+   "state": "ACTIVE",
+   "modules": "engine/source/semantic_zones.py, room_topology.py, text_role.py"
+  },
+  {
+   "component": "GEOMETRY ENGINE",
+   "state": "ACTIVE",
+   "modules": "engine/source/geometry_role.py, region_membership.py"
+  },
+  {
+   "component": "WALL BAND ENGINE",
+   "state": "ACTIVE (WALL_BAND_POLICY_V5)",
+   "modules": "engine/source/wall_bands.py"
+  },
+  {
+   "component": "TOPOLOGY CLOSURE",
+   "state": "ACTIVE",
+   "modules": "engine/source/topology.py, topology_closures.py"
+  },
+  {
+   "component": "OPENING ENGINE",
+   "state": "ACTIVE (+ OPENING_REGISTER_V1 new)",
+   "modules": "engine/source/opening_facts.py, door_transition.py, opening_register.py"
+  },
+  {
+   "component": "FLOOR QTO",
+   "state": "SHADOW",
+   "modules": "engine/source/trade_regions.py, trade_strips.py (+ lab rows)"
+  },
+  {
+   "component": "CEILING QTO",
+   "state": "SHADOW",
+   "modules": "engine/source/trade_regions.py (+ lab rows)"
+  },
+  {
+   "component": "SKIRTING",
+   "state": "SHADOW (V4)",
+   "modules": "engine/source/wall_contact_path.py"
+  },
+  {
+   "component": "PROFILE",
+   "state": "SHADOW (same path, separate item)",
+   "modules": "engine/source/wall_contact_path.py"
+  },
+  {
+   "component": "WALL SURFACE",
+   "state": "SHADOW (V2 governing; V1 SUPERSEDED)",
+   "modules": "engine/source/wall_faces_v2.py | wall_faces.py"
+  },
+  {
+   "component": "PLASTER",
+   "state": "SHADOW",
+   "modules": "engine/source/wall_faces_v2.py, wall_height.py"
+  },
+  {
+   "component": "PAINT",
+   "state": "SHADOW",
+   "modules": "engine/source/wall_faces_v2.py"
+  },
+  {
+   "component": "WALL TILE",
+   "state": "SHADOW",
+   "modules": "engine/source/wall_faces_v2.py"
+  },
+  {
+   "component": "TILE PREP",
+   "state": "SHADOW",
+   "modules": "engine/source/wall_faces_v2.py"
+  },
+  {
+   "component": "COLUMN / DUCT FINISH",
+   "state": "SHADOW",
+   "modules": "engine/source/exposed_finish.py, obstacle_authority.py"
+  },
+  {
+   "component": "REVEAL",
+   "state": "SHADOW",
+   "modules": "engine/source/reveal_physicality.py, reveal_finish.py, opening_reveals.py"
+  },
+  {
+   "component": "WATERPROOFING",
+   "state": "SHADOW",
+   "modules": "engine/source/waterproofing.py"
+  },
+  {
+   "component": "MARBLE",
+   "state": "SHADOW",
+   "modules": "engine/source/marble_thresholds.py"
+  },
+  {
+   "component": "BOQ REPORT",
+   "state": "SHADOW (canonical model new; BOQ_REPORT_LAYER_V1 kept)",
+   "modules": "engine/source/boq_canonical.py, boq_report.py, boq_evidence.py, room_matrix.py, footprint_authority.py"
+  },
+  {
+   "component": "XLSX EXPORT",
+   "state": "SHADOW (V2 new; V1 SUPERSEDED)",
+   "modules": "engine/boq_rc1_xlsx.py | engine/boq_xlsx.py"
+  },
+  {
+   "component": "QA / BLIND",
+   "state": "ACTIVE (lab)",
+   "modules": "research/external_engine_lab/*blind*.py, tests/"
+  },
+  {
+   "component": "RELEASE",
+   "state": "BLOCKED (no released level; source anchor NOT_ESTABLISHED)",
+   "modules": "engine/source/closure_release.py, closure_review.py, source_anchor.py"
+  },
+  {
+   "component": "LEGACY PRE-R8 ENGINE",
+   "state": "LEGACY",
+   "modules": "engine/*.py, engine/qs_core, engine/ingest"
+  }
+ ],
+ "duplicates": [
+  "engine/source/wall_faces.py (V1, R8.17) beside wall_faces_v2.py (governing since R8.18): V1 kept for frozen R8.17 regressions only -> SUPERSEDED, not in the RC1 path",
+  "the pre-R8 engine (engine/*.py, engine/qs_core, engine/ingest) is a parallel production-app quantity path NOT used for Qortuba RC1 -> LEGACY; retirement belongs to migration, not this round",
+  "OWNER RULES V1 old-revision takeoff -> LEGACY (superseded)"
+ ],
+ "orchestration": "research/external_engine_lab r8_10 -> r8_20 -> rc1 chain (lab; moves into engine at migration)",
+ "module_sha256": {
+  "engine/boq_rc1_xlsx.py": "35eb20421e28a56c34cef2734ceeff2e76ce0798070b300c1e46d97529daf911",
+  "engine/boq_xlsx.py": "7755e00903534d835d48c14aa27416443e6d7c01845127c98fe7c373d4df8314",
+  "engine/source/boq_canonical.py": "42f0c1c751276de467a6a297f06ca19dd70a2faaf34068d2e2a1e01d39363a92",
+  "engine/source/canonical_input.py": "0f0e56f990d7aa8c5db0701023bc6af20f33bd7dad70dbd3a7e1724c0e57da6e",
+  "engine/source/closure_release.py": "18d7fb92d3f36cf8fec8d71bafb5234a128ee90a78c52a984904efe05d83e506",
+  "engine/source/exposed_finish.py": "90fdd50f2c3148960ee37b7e5684823ca56daafdc93e521e168201df086657b8",
+  "engine/source/frame.py": "12eb573ef67b11a29f18b25d3cbef924374e48bf908d8c9b043ce4ef601005be",
+  "engine/source/geometry_role.py": "0879a71c307e21291edf57c351d18e2d36a1d5d0d41375c5dd3a1102c12411fc",
+  "engine/source/marble_thresholds.py": "80fc583f4d15324b2a9cd1456dd9735b1a039d01a25d9be9251b43ea5b9028ba",
+  "engine/source/observations.py": "1328bb90a68e5971b1499436eef796e37e81211bd6374042597a1bb1d16f9a45",
+  "engine/source/opening_facts.py": "f985a49f3661f440094004b958cab63e74bddbcd0d6b9623c895d6c179166b96",
+  "engine/source/owner_claims.py": "f986425f01463d24e1be5020eb51dbe0d07060ddb004228b843eedfc6dd3c444",
+  "engine/source/reveal_physicality.py": "90ee246073d9538f1949482f2fc019cf7446a9f3aef21fce20b728bf4dee9a7e",
+  "engine/source/semantic_zones.py": "2447baad5b01f015108c659eaab5ec4e9fff5ccb9c893e3c5edda6f91ac12a3f",
+  "engine/source/topology.py": "f87ce3cffe9c3d3d54cc20cfb28413b1e168f3b7289ae7264723eeca7d4bc795",
+  "engine/source/trade_regions.py": "4f80fa1b50c9ede3bfc1d474c36ab9801ae22b3d6b9afab23b05eaccc10b5b1c",
+  "engine/source/wall_bands.py": "1e8e8a592df961f5943f956466bbf326841d9dba0ca62d2b9191af48d34ce511",
+  "engine/source/wall_contact_path.py": "2ac4ea72512ba670b3ea20e351d7e3eb2cd675c4babb5d1cd244f4e2363c0f50",
+  "engine/source/wall_faces_v2.py": "7c443588c66897325b0276eca338ae3a26cc26ff5d5ad69436f8775dd0ef1df8",
+  "engine/source/waterproofing.py": "df80341430dc9c34df86532a9a39d34da8b7d92e9e5cc0bf94279ba290778b25"
+ }
+}

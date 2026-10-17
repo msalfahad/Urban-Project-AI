@@ -1,0 +1,97 @@
+{
+ "SCHEMA": "URBAN_R8_16_OFFSET_CLOSURE_POLICY_V1",
+ "policy": {
+  "policy_id": "DOOR_OPENING_CLOSURE_POLICY_V2",
+  "closure_a": "along the closed leaf, between the two forward / backward ray hits (JAMB_ALLOWANCE_RATIO)",
+  "closure_b": {
+   "END_POINT_JAMB_CAPS": "V1 (R8.9): both A hits are END points of straight caps whose far ends are parallel to A at A's length",
+   "OFFSET_JAMB_CAPS": "V2 (R8.16): both A hits lie on straight caps perpendicular to A (a hit may be mid-cap); A lies ON the face of at least one jamb wall (that cap does not extend past A: an authored leaf strictly inside the reveal splits the rooms itself and gets no B); both caps reach ONE far line parallel to A at equal depth t (within eps); the near-side stagger of the other cap is <= t; B has A's length and direction; no admitted segment enters the strip interior; exactly one far side qualifies"
+  },
+  "blocked": [
+   "CLOSURE_B_AMBIGUOUS_FAR_SIDE",
+   "CLOSURE_B_STAGGER_EXCEEDS_DEPTH",
+   "CLOSURE_B_INTERVENING_BOUNDARY",
+   "CLOSURE_B_CAPS_NOT_COMPATIBLE",
+   "CLOSURE_B_LEAF_INSIDE_REVEAL"
+  ],
+  "never": [
+   "a closure without a proven door occurrence",
+   "a bridge chosen by gap size alone",
+   "a project coordinate",
+   "material on a closure"
+  ],
+  "history": [
+   "V1 (R8.9): end-point rule only",
+   "V2 (R8.16): + offset-jamb rule (walls of different thickness flush on one side of the door)"
+  ],
+  "digest": "23142e50a6f92ac4e540e973ba580d067e2983f6bb15b72d83c98a5666e7a790"
+ },
+ "freeze": {
+  "frozen_commit": "2ded82aaba4437513860b56ff8987e4713a5be05",
+  "door_closure_policy": {
+   "id": "DOOR_OPENING_CLOSURE_POLICY_V2",
+   "digest": "23142e50a6f92ac4e540e973ba580d067e2983f6bb15b72d83c98a5666e7a790"
+  },
+  "unchanged": {
+   "wall_band_policy": [
+    "WALL_BAND_POLICY_V5",
+    "d1ff58e755bb88f4bbb7a9813427b7ac6f054ece851df7d9a048866641f3e6d3"
+   ],
+   "topology_closure_policy": [
+    "TOPOLOGY_CLOSURE_POLICY_V1",
+    "46742c570b4d8a036fd6b7446f28055bfd4e1adbff51966e800e5986ca99ccb2"
+   ],
+   "topology_tolerance_policy": [
+    "TOPOLOGY_TOLERANCE_POLICY_V1",
+    "263d2adf1d1770e1db963ac9bfde852dcedbdbd77e0040730322848c49acb450"
+   ],
+   "wall_contact_path_policy_v2": [
+    "WALL_CONTACT_PATH_POLICY_V2",
+    "5b5d6e5ec6397cf1c09fa678c95197db971f0867ae741becb9ac3b51bfc0c5b3"
+   ]
+  },
+  "order": [
+   "recommendation",
+   "closure V2 + skirting V3 + facts + rule",
+   "synthetic tests",
+   "freeze",
+   "commit",
+   "THEN the blind Qortuba run (closure + skirting)",
+   "THEN rows, hidden profile, registers"
+  ],
+  "amendments": [
+   {
+    "what": "blind script record formatting: the topology-closure safety pieces carry 'area' (native), not 'area_m2' - the first blind attempt raised KeyError BEFORE writing any output",
+    "policy_or_method_changed": false,
+    "qortuba_values_seen": "NONE (no file written, no total printed)",
+    "previous_blind_script_sha256": "5697308451b0235a33e9aec3283bdf067e1ecbf43f9fd398466457d29140343d"
+   },
+   {
+    "what": "blind script: a duplicate 'method' keyword in the skirting record dict raised TypeError BEFORE any file was written or any value printed",
+    "policy_or_method_changed": false,
+    "qortuba_values_seen": "NONE",
+    "previous_blind_script_sha256": "90b61765f41aae74a38f1a91c4f29c5436a6dfad6ce6953252b5cd33ca9ab2d8"
+   }
+  ]
+ },
+ "in_run_manifest": [
+  "DOOR_OPENING_CLOSURE_POLICY_V2",
+  "23142e50a6f92ac4e540e973ba580d067e2983f6bb15b72d83c98a5666e7a790"
+ ],
+ "blind_result": {
+  "closure_b_rules": {
+   "END_POINT_JAMB_CAPS": 7,
+   "OFFSET_JAMB_CAPS": 1
+  },
+  "closure_b_missing": [],
+  "old_revision": {
+   "END_POINT_JAMB_CAPS": 7,
+   "OFFSET_JAMB_CAPS": 1
+  }
+ },
+ "reproduced_by_the_lab": {
+  "closures": true,
+  "topology_digest": true,
+  "skirting": true
+ }
+}

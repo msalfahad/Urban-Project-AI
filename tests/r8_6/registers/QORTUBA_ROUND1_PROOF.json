@@ -1,0 +1,4550 @@
+{
+ "SCHEMA": "URBAN_R8_6_QORTUBA_ROUND1_PROOF_V1",
+ "status": "SHADOW_PROOF_NOT_MIGRATION",
+ "source_sha256": "2ec3a9c8b66eb2e129275b87010f4a8d79d7e5bdcc31c1897c14fd7e5647d355",
+ "decode_sha256": "7dbafb3ddd59076664f05c2f3c539d3133b295002c90e3f6f26ffd01737d5e36",
+ "config_sha256": "04c4838fab1c41ba2769954c4b86fd9408c672c39304071a9aefe41f57002b32",
+ "canonical_runs_use_session_uploads": false,
+ "chain": "SOURCE (DWG) -> D1 decode -> K1 realisation -> method-input mapping -> QS01 Method A rooms -> owner_rules floor rows; the current value is read only AFTER the value is computed, for the comparison",
+ "method_code_sha256": {
+  "research/qs_wall_treatment_01/pa08/qortuba/qs01/takeoff.py": "e6a587dfe4f8a5327faa837ca77a749c086f9e86b36164e685383144d0072b2d",
+  "research/qs_wall_treatment_01/pa08/qortuba/r3/floor_regions.py": "f847ea59c8e24e21812726fb886e8651ce079cb82df6d32f57325eefc970635f",
+  "research/qs_wall_treatment_01/pa08/qortuba/r3/run_r3.py": "f46ae6ae8d566f5d7065e02279a4a58490fae711f6e8feaddc05fa38a9fe0e1a",
+  "research/qs_wall_treatment_01/pa08/qortuba/r2/cells.py": "d08dd3b5d7c439a98dd40337eef5d6c3a910d166b45233b052999a65f7a8732b",
+  "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py": "618614308f1b737c223f66f37e7e9b4054aa83250f16a53402f67b37b7541dc0",
+  "engine/ingest/pipeline7.py": "ddf03ca77228f34e7146957d7aea5e614f4eebcb06c12853ee1de94bc147f307",
+  "engine/ingest/source_units.py": "295aea39cc22a73e51b42de7624d4bd58c887526e7997f3618d558d6c21a171e",
+  "engine/cad_adapter.py": "4d060a1d0f9c5a6ed19c6f8b7b508fa7a5762aa4dc74684bc3b1ec9cd0a573a3",
+  "engine/source/cad/kernel.py": "7ae1562686744eed7504db015e57410020dcfc1e26a1b91766555ca1d11eca5b",
+  "engine/source/cad/libredwg_map.py": "98a3414cc296dfa6196491086f6522ea17f2b6a0f0f212f5b1d4658f9017a44b"
+ },
+ "inputs_by_origin": {
+  "CANONICAL": [
+   "SEGMENT/ARC/CIRCLE primitives (K1)",
+   "texts: D1 TEXT/MTEXT, block texts placed through the K1 instance path (lab mapping)",
+   "dimensions: D1 decode definition points placed through the K1 instance path (lab mapping)"
+  ],
+  "ACTIVE_READER_STILL": [
+   "HATCH primitives",
+   "text height",
+   "instances / block definitions records",
+   "layer table",
+   "unit reading (INSUNITS)"
+  ],
+  "PROVEN_NOT_A_DEPENDENCY_OF_THE_SIX_ROWS": [
+   "linetype",
+   "lineweight",
+   "TEXT_HEIGHT (input blanked)",
+   "INSTANCES (input blanked)",
+   "BLOCK_DEFINITIONS (input blanked)",
+   "LAYERS (input blanked)",
+   "HATCH (input dropped entirely)",
+   "UPLOADED_PDF (config source under the session upload folder)"
+  ]
+ },
+ "text_check": {
+  "texts_canonical": 61,
+  "texts_active": 61,
+  "compared": 61,
+  "equal_to_active_reading": 61,
+  "differing": [],
+  "texts_only_in_active_reading": 0,
+  "texts_without_insertion": [],
+  "normalisation": "value whitespace trimmed"
+ },
+ "dimension_check": {
+  "dimensions_canonical": 101,
+  "dimensions_active": 101,
+  "compared": 101,
+  "equal_to_active_reading": 101,
+  "differing": [],
+  "source": "D1 decode fields xline1_pt/xline2_pt/def_pt, act_measurement, user_text; HEADER DIMLFAC"
+ },
+ "method_input_contract": [
+  {
+   "field": "linetype",
+   "meaning": "resolved linetype and its source",
+   "six_rows_change_when_blanked": false,
+   "rooms_change_when_blanked": false,
+   "k1_supplies_it": false,
+   "k1_source": "not carried by K1 lineage (linetype table not resolved canonically)"
+  },
+  {
+   "field": "lineweight",
+   "meaning": "resolved lineweight",
+   "six_rows_change_when_blanked": false,
+   "rooms_change_when_blanked": false,
+   "k1_supplies_it": false,
+   "k1_source": "not carried by K1 lineage (linetype table not resolved canonically)"
+  },
+  {
+   "field": "block_path",
+   "meaning": "names of the blocks the primitive is placed through",
+   "six_rows_change_when_blanked": true,
+   "rooms_change_when_blanked": true,
+   "k1_supplies_it": true,
+   "k1_source": "D1 INSERT observation -> block record name along the K1 instance path"
+  },
+  {
+   "field": "sub_id",
+   "meaning": "per-part identity of a multi-part entity (part of object_id)",
+   "six_rows_change_when_blanked": true,
+   "rooms_change_when_blanked": true,
+   "k1_supplies_it": true,
+   "k1_source": "hash of K1 lineage obs id + canonical coordinates (uniqueness only)"
+  },
+  {
+   "field": "TEXT_HEIGHT (input blanked)",
+   "meaning": "non-curve input still read from the active reader",
+   "six_rows_change_when_blanked": false,
+   "rooms_change_when_blanked": false,
+   "k1_supplies_it": false,
+   "k1_source": "active reader (cad_adapter)"
+  },
+  {
+   "field": "INSTANCES (input blanked)",
+   "meaning": "non-curve input still read from the active reader",
+   "six_rows_change_when_blanked": false,
+   "rooms_change_when_blanked": false,
+   "k1_supplies_it": false,
+   "k1_source": "active reader (cad_adapter)"
+  },
+  {
+   "field": "BLOCK_DEFINITIONS (input blanked)",
+   "meaning": "non-curve input still read from the active reader",
+   "six_rows_change_when_blanked": false,
+   "rooms_change_when_blanked": false,
+   "k1_supplies_it": false,
+   "k1_source": "active reader (cad_adapter)"
+  },
+  {
+   "field": "LAYERS (input blanked)",
+   "meaning": "non-curve input still read from the active reader",
+   "six_rows_change_when_blanked": false,
+   "rooms_change_when_blanked": false,
+   "k1_supplies_it": false,
+   "k1_source": "active reader (cad_adapter)"
+  },
+  {
+   "field": "HATCH (input dropped entirely)",
+   "meaning": "non-curve input still read from the active reader",
+   "six_rows_change_when_blanked": false,
+   "rooms_change_when_blanked": false,
+   "k1_supplies_it": false,
+   "k1_source": "active reader (cad_adapter)"
+  },
+  {
+   "field": "DIMENSIONS (input dropped entirely)",
+   "meaning": "non-curve input still read from the active reader",
+   "six_rows_change_when_blanked": true,
+   "rooms_change_when_blanked": true,
+   "k1_supplies_it": true,
+   "k1_source": "D1 decode definition points (lab mapping, see dimension_check)"
+  },
+  {
+   "field": "UPLOADED_PDF (config source under the session upload folder)",
+   "meaning": "a PDF the run config lists as a source; it lives outside the repository",
+   "six_rows_change_when_blanked": false,
+   "rooms_change_when_blanked": false,
+   "k1_supplies_it": false,
+   "k1_source": "not needed: removed from the canonical runs"
+  }
+ ],
+ "lossy_mapping_evidence": {
+  "block_path": {
+   "rooms_equal_to_active": false,
+   "six_rows": {
+    "Q-03": null,
+    "Q-03P": null,
+    "Q-11": null,
+    "Q-12": null,
+    "Q-13": null,
+    "Q-14": null
+   },
+   "rooms_only_in_lossy_run": [
+    [
+     "HALL / whgm",
+     29.0153
+    ],
+    [
+     "UNLABELLED_INTERNAL_SPACE",
+     0.84
+    ],
+    [
+     "UNLABELLED_INTERNAL_SPACE",
+     2.89
+    ],
+    [
+     "UNLABELLED_INTERNAL_SPACE",
+     null
+    ]
+   ]
+  },
+  "sub_id": {
+   "rooms_equal_to_active": false,
+   "six_rows": {
+    "Q-03": 17.8625,
+    "Q-03P": 11.685,
+    "Q-11": 17.8625,
+    "Q-12": 11.685,
+    "Q-13": 110.9425,
+    "Q-14": 140.49
+   },
+   "rooms_only_in_lossy_run": [
+    [
+     "BED.ROOM",
+     20.8375
+    ],
+    [
+     "M.B.ROOM",
+     20.7025
+    ]
+   ]
+  },
+  "block_path+sub_id": {
+   "rooms_equal_to_active": false,
+   "six_rows": {
+    "Q-03": 17.8625,
+    "Q-03P": 11.685,
+    "Q-11": 17.8625,
+    "Q-12": 11.685,
+    "Q-13": 103.9253,
+    "Q-14": 133.4728
+   },
+   "rooms_only_in_lossy_run": [
+    [
+     "BED.ROOM",
+     20.8375
+    ],
+    [
+     "HALL / whgm",
+     25.0925
+    ],
+    [
+     "M.B.ROOM",
+     20.7025
+    ],
+    [
+     "UNLABELLED_INTERNAL_SPACE",
+     4.2603
+    ]
+   ]
+  }
+ },
+ "row_dependency_ablation": "owner_rules.quantities called with rooms, walls, openings, glazing and the human register all EMPTY; the six rows are unchanged, so they depend on the floors only",
+ "results": {
+  "active_six": {
+   "Q-03": 17.8625,
+   "Q-03P": 11.685,
+   "Q-11": 17.8625,
+   "Q-12": 11.685,
+   "Q-13": 108.9625,
+   "Q-14": 138.51
+  },
+  "canonical_six": {
+   "Q-03": 17.8625,
+   "Q-03P": 11.685,
+   "Q-11": 17.8625,
+   "Q-12": 11.685,
+   "Q-13": 108.9625,
+   "Q-14": 138.51
+  },
+  "canonical_six_second_run": {
+   "Q-03": 17.8625,
+   "Q-03P": 11.685,
+   "Q-11": 17.8625,
+   "Q-12": 11.685,
+   "Q-13": 108.9625,
+   "Q-14": 138.51
+  },
+  "rooms_equal_active_vs_canonical": true,
+  "canonical_deterministic": true,
+  "canonical_rooms_digest": "165a7cd8206ae2a8d3bc872b54ec7213c50cb66500514ce9b3491f750f102630"
+ },
+ "rows": [
+  {
+   "row_id": "Q-03|WET_AREA_WATERPROOFING_FLOOR",
+   "trade": "عازل حمام+مطابخ",
+   "item": "WET_AREA_WATERPROOFING_FLOOR",
+   "rooms": [
+    {
+     "room_id": "RM-a8bebaab",
+     "room": "BATH"
+    },
+    {
+     "room_id": "RM-3ef43270",
+     "room": "BATH"
+    },
+    {
+     "room_id": "RM-2618ef17",
+     "room": "BATH"
+    }
+   ],
+   "room_names_in_row": [
+    "BATH",
+    "BATH",
+    "BATH"
+   ],
+   "source_observations": [
+    "D1:458",
+    "D1:460",
+    "D1:461",
+    "D1:462",
+    "D1:464",
+    "D1:465",
+    "D1:466",
+    "D1:470",
+    "D1:472",
+    "D1:483",
+    "D1:521",
+    "D1:522",
+    "D1:526",
+    "D1:527",
+    "D1:528",
+    "D1:529",
+    "D1:681",
+    "D1:685",
+    "D1:686",
+    "D1:714",
+    "D1:716",
+    "D1:718",
+    "D1:720",
+    "D1:1673",
+    "D1:1674",
+    "D1:1675"
+   ],
+   "source_occurrences": [
+    [
+     "D1:458",
+     []
+    ],
+    [
+     "D1:460",
+     []
+    ],
+    [
+     "D1:461",
+     []
+    ],
+    [
+     "D1:462",
+     []
+    ],
+    [
+     "D1:464",
+     []
+    ],
+    [
+     "D1:465",
+     []
+    ],
+    [
+     "D1:466",
+     []
+    ],
+    [
+     "D1:470",
+     []
+    ],
+    [
+     "D1:472",
+     []
+    ],
+    [
+     "D1:483",
+     []
+    ],
+    [
+     "D1:521",
+     []
+    ],
+    [
+     "D1:522",
+     []
+    ],
+    [
+     "D1:526",
+     []
+    ],
+    [
+     "D1:527",
+     []
+    ],
+    [
+     "D1:528",
+     []
+    ],
+    [
+     "D1:529",
+     []
+    ],
+    [
+     "D1:681",
+     [
+      "D1:1443"
+     ]
+    ],
+    [
+     "D1:681",
+     [
+      "D1:1561"
+     ]
+    ],
+    [
+     "D1:681",
+     [
+      "D1:2044"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:1443"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:1561"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:2044"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:1443"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:1561"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:2044"
+     ]
+    ],
+    [
+     "D1:714",
+     []
+    ],
+    [
+     "D1:716",
+     []
+    ],
+    [
+     "D1:718",
+     []
+    ],
+    [
+     "D1:720",
+     []
+    ],
+    [
+     "D1:1673",
+     []
+    ],
+    [
+     "D1:1674",
+     []
+    ],
+    [
+     "D1:1675",
+     []
+    ]
+   ],
+   "source_geometry_ids": [
+    "FMR-a8bebaab8359",
+    "FMR-3ef432705c51",
+    "FMR-2618ef1772e9"
+   ],
+   "canonical_region_id": "RC:MODEL_SPACE:4267:540:1649",
+   "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+   "unit_context": {
+    "status": "CONFIRMED_BY_HUMAN",
+    "native_to_mm": 10.0,
+    "canonical_policy": "URBAN_FRAME_RELEASE_V3",
+    "owner_claims_applied": [
+     "QORTUBA-NATIVE-UNIT-OWNER-001"
+    ],
+    "evidence_kept": [
+     "MODEL_SPACE:INSUNITS:LIBREDWG",
+     "MODEL_SPACE:DIMFAMILY:r=1",
+     "QORTUBA-NATIVE-UNIT-OWNER-001"
+    ],
+    "active_path_reading": {
+     "UNIT_CANDIDATE": "cm",
+     "UNIT_SCALE_TO_MM": 10.0,
+     "PROVENANCE": "INSUNITS",
+     "STATUS": "SOURCE_ESTABLISHED"
+    },
+    "method_unit_equals_confirmed_unit": true,
+    "note": "unit confirmed by the owner for this exact source (claim beside the INSUNITS declaration); the method ran at the same scale, so its rooms are proven at the confirmed unit"
+   },
+   "source_capability_signatures": [
+    "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=REFLECTION+ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LWPOLYLINE_STRAIGHT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12"
+   ],
+   "decoder_qualification_requirement": "every listed signature EXERCISED_AND_PASS against an ADMITTED independent export of this source (V2); currently 0 qualified",
+   "method_rule_ids": {
+    "geometry": "QS01_METHOD_A_ARRANGEMENT_OF_BOUNDARY_LINES",
+    "row": "OWNER_RULES_V1.quantities (floor-area rows)",
+    "rules": [
+     "US-04"
+    ]
+   },
+   "formula": "BATH 8.5525 + BATH 5.1 + BATH 4.21 = 17.8625 m2",
+   "formula_inputs": [
+    {
+     "room_id": "RM-a8bebaab",
+     "room": "BATH",
+     "preview_area_m2": 8.5525
+    },
+    {
+     "room_id": "RM-3ef43270",
+     "room": "BATH",
+     "preview_area_m2": 5.1
+    },
+    {
+     "room_id": "RM-2618ef17",
+     "room": "BATH",
+     "preview_area_m2": 4.21
+    }
+   ],
+   "canonical_native_value": 178625.0,
+   "canonical_physical_value": null,
+   "canonical_physical_value_reason": "frame UNCONFIRMED: the CAD drawing-region designation is PENDING_OWNER, so no physical value may be released",
+   "preview_value_m2_under_active_unit_reading": 17.8625,
+   "current_value": 17.8625,
+   "current_status": "FINAL",
+   "difference_preview_minus_current": 0.0,
+   "status": "PREVIEW",
+   "blockers": [
+    "D_ROUTES: K1 realised; parser: no QUALIFIED V2 record for this decoder build; independent-parser reconciliation not available",
+    "F_REGION: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']",
+    "G_FRAME: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']"
+   ],
+   "release_eligibility": "NOT_ELIGIBLE",
+   "release_eligibility_reasons": [
+    "CAD drawing-region designation PENDING_OWNER (frame UNCONFIRMED)",
+    "no independent-parser qualification",
+    "method / input contract not promoted (legacy audit)",
+    "baseline rows not approved"
+   ]
+  },
+  {
+   "row_id": "Q-03P|PANTRY_WATERPROOFING_FLOOR",
+   "trade": "عازل حمام+مطابخ",
+   "item": "PANTRY_WATERPROOFING_FLOOR",
+   "rooms": [
+    {
+     "room_id": "RM-45ddc40d",
+     "room": "PAINTRY"
+    }
+   ],
+   "room_names_in_row": [],
+   "source_observations": [
+    "D1:463",
+    "D1:477",
+    "D1:478",
+    "D1:480",
+    "D1:481",
+    "D1:535",
+    "D1:540",
+    "D1:718",
+    "D1:1342",
+    "D1:1512",
+    "D1:1651"
+   ],
+   "source_occurrences": [
+    [
+     "D1:463",
+     []
+    ],
+    [
+     "D1:477",
+     []
+    ],
+    [
+     "D1:478",
+     []
+    ],
+    [
+     "D1:480",
+     []
+    ],
+    [
+     "D1:481",
+     []
+    ],
+    [
+     "D1:535",
+     []
+    ],
+    [
+     "D1:540",
+     []
+    ],
+    [
+     "D1:718",
+     []
+    ],
+    [
+     "D1:1342",
+     []
+    ],
+    [
+     "D1:1512",
+     []
+    ],
+    [
+     "D1:1651",
+     [
+      "D1:1668"
+     ]
+    ]
+   ],
+   "source_geometry_ids": [
+    "FMR-45ddc40db7af"
+   ],
+   "canonical_region_id": "RC:MODEL_SPACE:4267:540:1649",
+   "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+   "unit_context": {
+    "status": "CONFIRMED_BY_HUMAN",
+    "native_to_mm": 10.0,
+    "canonical_policy": "URBAN_FRAME_RELEASE_V3",
+    "owner_claims_applied": [
+     "QORTUBA-NATIVE-UNIT-OWNER-001"
+    ],
+    "evidence_kept": [
+     "MODEL_SPACE:INSUNITS:LIBREDWG",
+     "MODEL_SPACE:DIMFAMILY:r=1",
+     "QORTUBA-NATIVE-UNIT-OWNER-001"
+    ],
+    "active_path_reading": {
+     "UNIT_CANDIDATE": "cm",
+     "UNIT_SCALE_TO_MM": 10.0,
+     "PROVENANCE": "INSUNITS",
+     "STATUS": "SOURCE_ESTABLISHED"
+    },
+    "method_unit_equals_confirmed_unit": true,
+    "note": "unit confirmed by the owner for this exact source (claim beside the INSUNITS declaration); the method ran at the same scale, so its rooms are proven at the confirmed unit"
+   },
+   "source_capability_signatures": [
+    "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LWPOLYLINE_STRAIGHT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12"
+   ],
+   "decoder_qualification_requirement": "every listed signature EXERCISED_AND_PASS against an ADMITTED independent export of this source (V2); currently 0 qualified",
+   "method_rule_ids": {
+    "geometry": "QS01_METHOD_A_ARRANGEMENT_OF_BOUNDARY_LINES",
+    "row": "OWNER_RULES_V1.quantities (floor-area rows)",
+    "rules": [
+     "US-14",
+     "QP-13"
+    ]
+   },
+   "formula": "PAINTRY 11.685 = 11.685 m2",
+   "formula_inputs": [
+    {
+     "room_id": "RM-45ddc40d",
+     "room": "PAINTRY",
+     "preview_area_m2": 11.685
+    }
+   ],
+   "canonical_native_value": 116850.0,
+   "canonical_physical_value": null,
+   "canonical_physical_value_reason": "frame UNCONFIRMED: the CAD drawing-region designation is PENDING_OWNER, so no physical value may be released",
+   "preview_value_m2_under_active_unit_reading": 11.685,
+   "current_value": 11.685,
+   "current_status": "FINAL",
+   "difference_preview_minus_current": 0.0,
+   "status": "PREVIEW",
+   "blockers": [
+    "D_ROUTES: K1 realised; parser: no QUALIFIED V2 record for this decoder build; independent-parser reconciliation not available",
+    "F_REGION: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']",
+    "G_FRAME: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']"
+   ],
+   "release_eligibility": "NOT_ELIGIBLE",
+   "release_eligibility_reasons": [
+    "CAD drawing-region designation PENDING_OWNER (frame UNCONFIRMED)",
+    "no independent-parser qualification",
+    "method / input contract not promoted (legacy audit)",
+    "baseline rows not approved"
+   ]
+  },
+  {
+   "row_id": "Q-11|FLOOR_CERAMIC_WET_ROOMS",
+   "trade": "سيراميك",
+   "item": "FLOOR_CERAMIC_WET_ROOMS",
+   "rooms": [
+    {
+     "room_id": "RM-a8bebaab",
+     "room": "BATH"
+    },
+    {
+     "room_id": "RM-3ef43270",
+     "room": "BATH"
+    },
+    {
+     "room_id": "RM-2618ef17",
+     "room": "BATH"
+    }
+   ],
+   "room_names_in_row": [
+    "BATH",
+    "BATH",
+    "BATH"
+   ],
+   "source_observations": [
+    "D1:458",
+    "D1:460",
+    "D1:461",
+    "D1:462",
+    "D1:464",
+    "D1:465",
+    "D1:466",
+    "D1:470",
+    "D1:472",
+    "D1:483",
+    "D1:521",
+    "D1:522",
+    "D1:526",
+    "D1:527",
+    "D1:528",
+    "D1:529",
+    "D1:681",
+    "D1:685",
+    "D1:686",
+    "D1:714",
+    "D1:716",
+    "D1:718",
+    "D1:720",
+    "D1:1673",
+    "D1:1674",
+    "D1:1675"
+   ],
+   "source_occurrences": [
+    [
+     "D1:458",
+     []
+    ],
+    [
+     "D1:460",
+     []
+    ],
+    [
+     "D1:461",
+     []
+    ],
+    [
+     "D1:462",
+     []
+    ],
+    [
+     "D1:464",
+     []
+    ],
+    [
+     "D1:465",
+     []
+    ],
+    [
+     "D1:466",
+     []
+    ],
+    [
+     "D1:470",
+     []
+    ],
+    [
+     "D1:472",
+     []
+    ],
+    [
+     "D1:483",
+     []
+    ],
+    [
+     "D1:521",
+     []
+    ],
+    [
+     "D1:522",
+     []
+    ],
+    [
+     "D1:526",
+     []
+    ],
+    [
+     "D1:527",
+     []
+    ],
+    [
+     "D1:528",
+     []
+    ],
+    [
+     "D1:529",
+     []
+    ],
+    [
+     "D1:681",
+     [
+      "D1:1443"
+     ]
+    ],
+    [
+     "D1:681",
+     [
+      "D1:1561"
+     ]
+    ],
+    [
+     "D1:681",
+     [
+      "D1:2044"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:1443"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:1561"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:2044"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:1443"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:1561"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:2044"
+     ]
+    ],
+    [
+     "D1:714",
+     []
+    ],
+    [
+     "D1:716",
+     []
+    ],
+    [
+     "D1:718",
+     []
+    ],
+    [
+     "D1:720",
+     []
+    ],
+    [
+     "D1:1673",
+     []
+    ],
+    [
+     "D1:1674",
+     []
+    ],
+    [
+     "D1:1675",
+     []
+    ]
+   ],
+   "source_geometry_ids": [
+    "FMR-a8bebaab8359",
+    "FMR-3ef432705c51",
+    "FMR-2618ef1772e9"
+   ],
+   "canonical_region_id": "RC:MODEL_SPACE:4267:540:1649",
+   "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+   "unit_context": {
+    "status": "CONFIRMED_BY_HUMAN",
+    "native_to_mm": 10.0,
+    "canonical_policy": "URBAN_FRAME_RELEASE_V3",
+    "owner_claims_applied": [
+     "QORTUBA-NATIVE-UNIT-OWNER-001"
+    ],
+    "evidence_kept": [
+     "MODEL_SPACE:INSUNITS:LIBREDWG",
+     "MODEL_SPACE:DIMFAMILY:r=1",
+     "QORTUBA-NATIVE-UNIT-OWNER-001"
+    ],
+    "active_path_reading": {
+     "UNIT_CANDIDATE": "cm",
+     "UNIT_SCALE_TO_MM": 10.0,
+     "PROVENANCE": "INSUNITS",
+     "STATUS": "SOURCE_ESTABLISHED"
+    },
+    "method_unit_equals_confirmed_unit": true,
+    "note": "unit confirmed by the owner for this exact source (claim beside the INSUNITS declaration); the method ran at the same scale, so its rooms are proven at the confirmed unit"
+   },
+   "source_capability_signatures": [
+    "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=REFLECTION+ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LWPOLYLINE_STRAIGHT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12"
+   ],
+   "decoder_qualification_requirement": "every listed signature EXERCISED_AND_PASS against an ADMITTED independent export of this source (V2); currently 0 qualified",
+   "method_rule_ids": {
+    "geometry": "QS01_METHOD_A_ARRANGEMENT_OF_BOUNDARY_LINES",
+    "row": "OWNER_RULES_V1.quantities (floor-area rows)",
+    "rules": [
+     "US-01",
+     "M"
+    ]
+   },
+   "formula": "the three bathroom floor polygons, unchanged = 17.8625 m2",
+   "formula_inputs": [
+    {
+     "room_id": "RM-a8bebaab",
+     "room": "BATH",
+     "preview_area_m2": 8.5525
+    },
+    {
+     "room_id": "RM-3ef43270",
+     "room": "BATH",
+     "preview_area_m2": 5.1
+    },
+    {
+     "room_id": "RM-2618ef17",
+     "room": "BATH",
+     "preview_area_m2": 4.21
+    }
+   ],
+   "canonical_native_value": 178625.0,
+   "canonical_physical_value": null,
+   "canonical_physical_value_reason": "frame UNCONFIRMED: the CAD drawing-region designation is PENDING_OWNER, so no physical value may be released",
+   "preview_value_m2_under_active_unit_reading": 17.8625,
+   "current_value": 17.8625,
+   "current_status": "FINAL",
+   "difference_preview_minus_current": 0.0,
+   "status": "PREVIEW",
+   "blockers": [
+    "D_ROUTES: K1 realised; parser: no QUALIFIED V2 record for this decoder build; independent-parser reconciliation not available",
+    "F_REGION: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']",
+    "G_FRAME: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']"
+   ],
+   "release_eligibility": "NOT_ELIGIBLE",
+   "release_eligibility_reasons": [
+    "CAD drawing-region designation PENDING_OWNER (frame UNCONFIRMED)",
+    "no independent-parser qualification",
+    "method / input contract not promoted (legacy audit)",
+    "baseline rows not approved"
+   ]
+  },
+  {
+   "row_id": "Q-12|FLOOR_CERAMIC_SERVICE_ROOM",
+   "trade": "سيراميك",
+   "item": "FLOOR_CERAMIC_SERVICE_ROOM",
+   "rooms": [
+    {
+     "room_id": "RM-45ddc40d",
+     "room": "PAINTRY"
+    }
+   ],
+   "room_names_in_row": [],
+   "source_observations": [
+    "D1:463",
+    "D1:477",
+    "D1:478",
+    "D1:480",
+    "D1:481",
+    "D1:535",
+    "D1:540",
+    "D1:718",
+    "D1:1342",
+    "D1:1512",
+    "D1:1651"
+   ],
+   "source_occurrences": [
+    [
+     "D1:463",
+     []
+    ],
+    [
+     "D1:477",
+     []
+    ],
+    [
+     "D1:478",
+     []
+    ],
+    [
+     "D1:480",
+     []
+    ],
+    [
+     "D1:481",
+     []
+    ],
+    [
+     "D1:535",
+     []
+    ],
+    [
+     "D1:540",
+     []
+    ],
+    [
+     "D1:718",
+     []
+    ],
+    [
+     "D1:1342",
+     []
+    ],
+    [
+     "D1:1512",
+     []
+    ],
+    [
+     "D1:1651",
+     [
+      "D1:1668"
+     ]
+    ]
+   ],
+   "source_geometry_ids": [
+    "FMR-45ddc40db7af"
+   ],
+   "canonical_region_id": "RC:MODEL_SPACE:4267:540:1649",
+   "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+   "unit_context": {
+    "status": "CONFIRMED_BY_HUMAN",
+    "native_to_mm": 10.0,
+    "canonical_policy": "URBAN_FRAME_RELEASE_V3",
+    "owner_claims_applied": [
+     "QORTUBA-NATIVE-UNIT-OWNER-001"
+    ],
+    "evidence_kept": [
+     "MODEL_SPACE:INSUNITS:LIBREDWG",
+     "MODEL_SPACE:DIMFAMILY:r=1",
+     "QORTUBA-NATIVE-UNIT-OWNER-001"
+    ],
+    "active_path_reading": {
+     "UNIT_CANDIDATE": "cm",
+     "UNIT_SCALE_TO_MM": 10.0,
+     "PROVENANCE": "INSUNITS",
+     "STATUS": "SOURCE_ESTABLISHED"
+    },
+    "method_unit_equals_confirmed_unit": true,
+    "note": "unit confirmed by the owner for this exact source (claim beside the INSUNITS declaration); the method ran at the same scale, so its rooms are proven at the confirmed unit"
+   },
+   "source_capability_signatures": [
+    "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LWPOLYLINE_STRAIGHT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12"
+   ],
+   "decoder_qualification_requirement": "every listed signature EXERCISED_AND_PASS against an ADMITTED independent export of this source (V2); currently 0 qualified",
+   "method_rule_ids": {
+    "geometry": "QS01_METHOD_A_ARRANGEMENT_OF_BOUNDARY_LINES",
+    "row": "OWNER_RULES_V1.quantities (floor-area rows)",
+    "rules": [
+     "US-01",
+     "QP-07",
+     "M"
+    ]
+   },
+   "formula": "the PAINTRY floor polygon, unchanged = 11.685 m2",
+   "formula_inputs": [
+    {
+     "room_id": "RM-45ddc40d",
+     "room": "PAINTRY",
+     "preview_area_m2": 11.685
+    }
+   ],
+   "canonical_native_value": 116850.0,
+   "canonical_physical_value": null,
+   "canonical_physical_value_reason": "frame UNCONFIRMED: the CAD drawing-region designation is PENDING_OWNER, so no physical value may be released",
+   "preview_value_m2_under_active_unit_reading": 11.685,
+   "current_value": 11.685,
+   "current_status": "FINAL",
+   "difference_preview_minus_current": 0.0,
+   "status": "PREVIEW",
+   "blockers": [
+    "D_ROUTES: K1 realised; parser: no QUALIFIED V2 record for this decoder build; independent-parser reconciliation not available",
+    "F_REGION: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']",
+    "G_FRAME: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']"
+   ],
+   "release_eligibility": "NOT_ELIGIBLE",
+   "release_eligibility_reasons": [
+    "CAD drawing-region designation PENDING_OWNER (frame UNCONFIRMED)",
+    "no independent-parser qualification",
+    "method / input contract not promoted (legacy audit)",
+    "baseline rows not approved"
+   ]
+  },
+  {
+   "row_id": "Q-13|PORCELAIN_FLOOR_DRY_ROOMS",
+   "trade": "سيراميك",
+   "item": "PORCELAIN_FLOOR_DRY_ROOMS",
+   "rooms": [
+    {
+     "room_id": "RM-2eaf198b",
+     "room": "HALL / whgm"
+    },
+    {
+     "room_id": "RM-1bf02f9e",
+     "room": "M.B.ROOM"
+    },
+    {
+     "room_id": "RM-dd405ee7",
+     "room": "BED.ROOM"
+    },
+    {
+     "room_id": "RM-c9bc432b",
+     "room": "BED.ROOM"
+    },
+    {
+     "room_id": "RM-894527f7",
+     "room": "DRESS"
+    },
+    {
+     "room_id": "RM-1a81d91e",
+     "room": "UNLABELLED_INTERNAL_SPACE"
+    }
+   ],
+   "room_names_in_row": [
+    "HALL / whgm",
+    "M.B.ROOM",
+    "BED.ROOM",
+    "BED.ROOM",
+    "DRESS",
+    "UNLABELLED_INTERNAL_SPACE"
+   ],
+   "source_observations": [
+    "D1:447",
+    "D1:454",
+    "D1:457",
+    "D1:467",
+    "D1:468",
+    "D1:469",
+    "D1:471",
+    "D1:473",
+    "D1:474",
+    "D1:475",
+    "D1:476",
+    "D1:477",
+    "D1:478",
+    "D1:480",
+    "D1:484",
+    "D1:485",
+    "D1:486",
+    "D1:487",
+    "D1:488",
+    "D1:510",
+    "D1:512",
+    "D1:513",
+    "D1:514",
+    "D1:516",
+    "D1:517",
+    "D1:518",
+    "D1:519",
+    "D1:520",
+    "D1:523",
+    "D1:525",
+    "D1:530",
+    "D1:531",
+    "D1:537",
+    "D1:538",
+    "D1:539",
+    "D1:542",
+    "D1:543",
+    "D1:549",
+    "D1:550",
+    "D1:552",
+    "D1:554",
+    "D1:555",
+    "D1:577",
+    "D1:578",
+    "D1:681",
+    "D1:685",
+    "D1:686",
+    "D1:693",
+    "D1:694",
+    "D1:704",
+    "D1:706",
+    "D1:708",
+    "D1:712",
+    "D1:714",
+    "D1:716",
+    "D1:815",
+    "D1:816",
+    "D1:817",
+    "D1:1020",
+    "D1:1026",
+    "D1:1271",
+    "D1:1325",
+    "D1:1512",
+    "D1:1518",
+    "D1:1547",
+    "D1:1587",
+    "D1:1588",
+    "D1:1590",
+    "D1:1651",
+    "D1:1659",
+    "D1:1663",
+    "D1:1669",
+    "D1:1671",
+    "D1:1672",
+    "D1:1676",
+    "D1:1677",
+    "D1:1892",
+    "D1:1893",
+    "D1:1895",
+    "D1:1947",
+    "D1:1948",
+    "D1:2060"
+   ],
+   "source_occurrences": [
+    [
+     "D1:447",
+     []
+    ],
+    [
+     "D1:454",
+     []
+    ],
+    [
+     "D1:457",
+     []
+    ],
+    [
+     "D1:467",
+     []
+    ],
+    [
+     "D1:468",
+     []
+    ],
+    [
+     "D1:469",
+     []
+    ],
+    [
+     "D1:471",
+     []
+    ],
+    [
+     "D1:473",
+     []
+    ],
+    [
+     "D1:474",
+     []
+    ],
+    [
+     "D1:475",
+     []
+    ],
+    [
+     "D1:476",
+     []
+    ],
+    [
+     "D1:477",
+     []
+    ],
+    [
+     "D1:478",
+     []
+    ],
+    [
+     "D1:480",
+     []
+    ],
+    [
+     "D1:484",
+     []
+    ],
+    [
+     "D1:485",
+     []
+    ],
+    [
+     "D1:486",
+     []
+    ],
+    [
+     "D1:487",
+     []
+    ],
+    [
+     "D1:488",
+     []
+    ],
+    [
+     "D1:510",
+     []
+    ],
+    [
+     "D1:512",
+     []
+    ],
+    [
+     "D1:513",
+     []
+    ],
+    [
+     "D1:514",
+     []
+    ],
+    [
+     "D1:516",
+     []
+    ],
+    [
+     "D1:517",
+     []
+    ],
+    [
+     "D1:518",
+     []
+    ],
+    [
+     "D1:519",
+     []
+    ],
+    [
+     "D1:520",
+     []
+    ],
+    [
+     "D1:523",
+     []
+    ],
+    [
+     "D1:525",
+     []
+    ],
+    [
+     "D1:530",
+     []
+    ],
+    [
+     "D1:531",
+     []
+    ],
+    [
+     "D1:537",
+     []
+    ],
+    [
+     "D1:538",
+     []
+    ],
+    [
+     "D1:539",
+     []
+    ],
+    [
+     "D1:542",
+     []
+    ],
+    [
+     "D1:543",
+     []
+    ],
+    [
+     "D1:549",
+     []
+    ],
+    [
+     "D1:550",
+     []
+    ],
+    [
+     "D1:552",
+     []
+    ],
+    [
+     "D1:554",
+     []
+    ],
+    [
+     "D1:555",
+     []
+    ],
+    [
+     "D1:577",
+     []
+    ],
+    [
+     "D1:578",
+     []
+    ],
+    [
+     "D1:681",
+     [
+      "D1:1028"
+     ]
+    ],
+    [
+     "D1:681",
+     [
+      "D1:1471"
+     ]
+    ],
+    [
+     "D1:681",
+     [
+      "D1:1988"
+     ]
+    ],
+    [
+     "D1:681",
+     [
+      "D1:677"
+     ]
+    ],
+    [
+     "D1:681",
+     [
+      "D1:841"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:1028"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:1988"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:677"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:841"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:1028"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:1471"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:1988"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:677"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:841"
+     ]
+    ],
+    [
+     "D1:693",
+     [
+      "D1:1471"
+     ]
+    ],
+    [
+     "D1:693",
+     [
+      "D1:1988"
+     ]
+    ],
+    [
+     "D1:693",
+     [
+      "D1:677"
+     ]
+    ],
+    [
+     "D1:693",
+     [
+      "D1:841"
+     ]
+    ],
+    [
+     "D1:694",
+     [
+      "D1:1471"
+     ]
+    ],
+    [
+     "D1:694",
+     [
+      "D1:1988"
+     ]
+    ],
+    [
+     "D1:694",
+     [
+      "D1:677"
+     ]
+    ],
+    [
+     "D1:694",
+     [
+      "D1:841"
+     ]
+    ],
+    [
+     "D1:704",
+     []
+    ],
+    [
+     "D1:706",
+     []
+    ],
+    [
+     "D1:708",
+     []
+    ],
+    [
+     "D1:712",
+     []
+    ],
+    [
+     "D1:714",
+     []
+    ],
+    [
+     "D1:716",
+     []
+    ],
+    [
+     "D1:815",
+     []
+    ],
+    [
+     "D1:816",
+     []
+    ],
+    [
+     "D1:817",
+     []
+    ],
+    [
+     "D1:1020",
+     []
+    ],
+    [
+     "D1:1026",
+     []
+    ],
+    [
+     "D1:1271",
+     []
+    ],
+    [
+     "D1:1325",
+     []
+    ],
+    [
+     "D1:1512",
+     []
+    ],
+    [
+     "D1:1518",
+     []
+    ],
+    [
+     "D1:1547",
+     []
+    ],
+    [
+     "D1:1587",
+     []
+    ],
+    [
+     "D1:1588",
+     []
+    ],
+    [
+     "D1:1590",
+     []
+    ],
+    [
+     "D1:1651",
+     [
+      "D1:1641"
+     ]
+    ],
+    [
+     "D1:1651",
+     [
+      "D1:1664"
+     ]
+    ],
+    [
+     "D1:1651",
+     [
+      "D1:1665"
+     ]
+    ],
+    [
+     "D1:1651",
+     [
+      "D1:1666"
+     ]
+    ],
+    [
+     "D1:1651",
+     [
+      "D1:1667"
+     ]
+    ],
+    [
+     "D1:1651",
+     [
+      "D1:1668"
+     ]
+    ],
+    [
+     "D1:1659",
+     [
+      "D1:1665"
+     ]
+    ],
+    [
+     "D1:1659",
+     [
+      "D1:1666"
+     ]
+    ],
+    [
+     "D1:1659",
+     [
+      "D1:1668"
+     ]
+    ],
+    [
+     "D1:1663",
+     []
+    ],
+    [
+     "D1:1669",
+     []
+    ],
+    [
+     "D1:1671",
+     []
+    ],
+    [
+     "D1:1672",
+     []
+    ],
+    [
+     "D1:1676",
+     []
+    ],
+    [
+     "D1:1677",
+     []
+    ],
+    [
+     "D1:1892",
+     []
+    ],
+    [
+     "D1:1893",
+     []
+    ],
+    [
+     "D1:1895",
+     []
+    ],
+    [
+     "D1:1947",
+     []
+    ],
+    [
+     "D1:1948",
+     []
+    ],
+    [
+     "D1:2060",
+     []
+    ]
+   ],
+   "source_geometry_ids": [
+    "FMR-2eaf198b6182",
+    "FMR-1bf02f9ee17f",
+    "FMR-dd405ee7c100",
+    "FMR-c9bc432bb4ad",
+    "FMR-894527f7d191",
+    "FMR-1a81d91eacaf"
+   ],
+   "canonical_region_id": "RC:MODEL_SPACE:4267:540:1649",
+   "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+   "unit_context": {
+    "status": "CONFIRMED_BY_HUMAN",
+    "native_to_mm": 10.0,
+    "canonical_policy": "URBAN_FRAME_RELEASE_V3",
+    "owner_claims_applied": [
+     "QORTUBA-NATIVE-UNIT-OWNER-001"
+    ],
+    "evidence_kept": [
+     "MODEL_SPACE:INSUNITS:LIBREDWG",
+     "MODEL_SPACE:DIMFAMILY:r=1",
+     "QORTUBA-NATIVE-UNIT-OWNER-001"
+    ],
+    "active_path_reading": {
+     "UNIT_CANDIDATE": "cm",
+     "UNIT_SCALE_TO_MM": 10.0,
+     "PROVENANCE": "INSUNITS",
+     "STATUS": "SOURCE_ESTABLISHED"
+    },
+    "method_unit_equals_confirmed_unit": true,
+    "note": "unit confirmed by the owner for this exact source (claim beside the INSUNITS declaration); the method ran at the same scale, so its rooms are proven at the confirmed unit"
+   },
+   "source_capability_signatures": [
+    "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=REFLECTION+ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=REFLECTION+ROTATION+TRANSLATION|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=REFLECTION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LWPOLYLINE_BULGE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LWPOLYLINE_STRAIGHT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12"
+   ],
+   "decoder_qualification_requirement": "every listed signature EXERCISED_AND_PASS against an ADMITTED independent export of this source (V2); currently 0 qualified",
+   "method_rule_ids": {
+    "geometry": "QS01_METHOD_A_ARRANGEMENT_OF_BOUNDARY_LINES",
+    "row": "OWNER_RULES_V1.quantities (floor-area rows)",
+    "rules": [
+     "QP-14",
+     "US-01"
+    ]
+   },
+   "formula": "HALL / whgm 36.37 + M.B.ROOM 20.8075 + BED.ROOM 18.7525 + BED.ROOM 16.5375 + DRESS 11.985 + UNLABELLED_INTERNAL_SPACE 4.51 = 108.9625 m2",
+   "formula_inputs": [
+    {
+     "room_id": "RM-2eaf198b",
+     "room": "HALL / whgm",
+     "preview_area_m2": 36.37
+    },
+    {
+     "room_id": "RM-1bf02f9e",
+     "room": "M.B.ROOM",
+     "preview_area_m2": 20.8075
+    },
+    {
+     "room_id": "RM-dd405ee7",
+     "room": "BED.ROOM",
+     "preview_area_m2": 18.7525
+    },
+    {
+     "room_id": "RM-c9bc432b",
+     "room": "BED.ROOM",
+     "preview_area_m2": 16.5375
+    },
+    {
+     "room_id": "RM-894527f7",
+     "room": "DRESS",
+     "preview_area_m2": 11.985
+    },
+    {
+     "room_id": "RM-1a81d91e",
+     "room": "UNLABELLED_INTERNAL_SPACE",
+     "preview_area_m2": 4.51
+    }
+   ],
+   "canonical_native_value": 1089625.0,
+   "canonical_physical_value": null,
+   "canonical_physical_value_reason": "frame UNCONFIRMED: the CAD drawing-region designation is PENDING_OWNER, so no physical value may be released",
+   "preview_value_m2_under_active_unit_reading": 108.9625,
+   "current_value": 108.9625,
+   "current_status": "FINAL",
+   "difference_preview_minus_current": 0.0,
+   "status": "PREVIEW",
+   "blockers": [
+    "D_ROUTES: K1 realised; parser: no QUALIFIED V2 record for this decoder build; independent-parser reconciliation not available",
+    "F_REGION: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']",
+    "G_FRAME: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']"
+   ],
+   "release_eligibility": "NOT_ELIGIBLE",
+   "release_eligibility_reasons": [
+    "CAD drawing-region designation PENDING_OWNER (frame UNCONFIRMED)",
+    "no independent-parser qualification",
+    "method / input contract not promoted (legacy audit)",
+    "baseline rows not approved"
+   ]
+  },
+  {
+   "row_id": "Q-14|CEILING_BY_AREA",
+   "trade": "ديكور جبس",
+   "item": "CEILING_BY_AREA",
+   "rooms": [
+    {
+     "room_id": "RM-2eaf198b",
+     "room": "HALL / whgm"
+    },
+    {
+     "room_id": "RM-1bf02f9e",
+     "room": "M.B.ROOM"
+    },
+    {
+     "room_id": "RM-dd405ee7",
+     "room": "BED.ROOM"
+    },
+    {
+     "room_id": "RM-c9bc432b",
+     "room": "BED.ROOM"
+    },
+    {
+     "room_id": "RM-45ddc40d",
+     "room": "PAINTRY"
+    },
+    {
+     "room_id": "RM-894527f7",
+     "room": "DRESS"
+    },
+    {
+     "room_id": "RM-a8bebaab",
+     "room": "BATH"
+    },
+    {
+     "room_id": "RM-3ef43270",
+     "room": "BATH"
+    },
+    {
+     "room_id": "RM-1a81d91e",
+     "room": "UNLABELLED_INTERNAL_SPACE"
+    },
+    {
+     "room_id": "RM-2618ef17",
+     "room": "BATH"
+    }
+   ],
+   "room_names_in_row": [],
+   "source_observations": [
+    "D1:447",
+    "D1:454",
+    "D1:457",
+    "D1:458",
+    "D1:460",
+    "D1:461",
+    "D1:462",
+    "D1:463",
+    "D1:464",
+    "D1:465",
+    "D1:466",
+    "D1:467",
+    "D1:468",
+    "D1:469",
+    "D1:470",
+    "D1:471",
+    "D1:472",
+    "D1:473",
+    "D1:474",
+    "D1:475",
+    "D1:476",
+    "D1:477",
+    "D1:478",
+    "D1:480",
+    "D1:481",
+    "D1:483",
+    "D1:484",
+    "D1:485",
+    "D1:486",
+    "D1:487",
+    "D1:488",
+    "D1:510",
+    "D1:512",
+    "D1:513",
+    "D1:514",
+    "D1:516",
+    "D1:517",
+    "D1:518",
+    "D1:519",
+    "D1:520",
+    "D1:521",
+    "D1:522",
+    "D1:523",
+    "D1:525",
+    "D1:526",
+    "D1:527",
+    "D1:528",
+    "D1:529",
+    "D1:530",
+    "D1:531",
+    "D1:535",
+    "D1:537",
+    "D1:538",
+    "D1:539",
+    "D1:540",
+    "D1:542",
+    "D1:543",
+    "D1:549",
+    "D1:550",
+    "D1:552",
+    "D1:554",
+    "D1:555",
+    "D1:577",
+    "D1:578",
+    "D1:681",
+    "D1:685",
+    "D1:686",
+    "D1:693",
+    "D1:694",
+    "D1:704",
+    "D1:706",
+    "D1:708",
+    "D1:712",
+    "D1:714",
+    "D1:716",
+    "D1:718",
+    "D1:720",
+    "D1:815",
+    "D1:816",
+    "D1:817",
+    "D1:1020",
+    "D1:1026",
+    "D1:1271",
+    "D1:1325",
+    "D1:1342",
+    "D1:1512",
+    "D1:1518",
+    "D1:1547",
+    "D1:1587",
+    "D1:1588",
+    "D1:1590",
+    "D1:1651",
+    "D1:1659",
+    "D1:1663",
+    "D1:1669",
+    "D1:1671",
+    "D1:1672",
+    "D1:1673",
+    "D1:1674",
+    "D1:1675",
+    "D1:1676",
+    "D1:1677",
+    "D1:1892",
+    "D1:1893",
+    "D1:1895",
+    "D1:1947",
+    "D1:1948",
+    "D1:2060"
+   ],
+   "source_occurrences": [
+    [
+     "D1:447",
+     []
+    ],
+    [
+     "D1:454",
+     []
+    ],
+    [
+     "D1:457",
+     []
+    ],
+    [
+     "D1:458",
+     []
+    ],
+    [
+     "D1:460",
+     []
+    ],
+    [
+     "D1:461",
+     []
+    ],
+    [
+     "D1:462",
+     []
+    ],
+    [
+     "D1:463",
+     []
+    ],
+    [
+     "D1:464",
+     []
+    ],
+    [
+     "D1:465",
+     []
+    ],
+    [
+     "D1:466",
+     []
+    ],
+    [
+     "D1:467",
+     []
+    ],
+    [
+     "D1:468",
+     []
+    ],
+    [
+     "D1:469",
+     []
+    ],
+    [
+     "D1:470",
+     []
+    ],
+    [
+     "D1:471",
+     []
+    ],
+    [
+     "D1:472",
+     []
+    ],
+    [
+     "D1:473",
+     []
+    ],
+    [
+     "D1:474",
+     []
+    ],
+    [
+     "D1:475",
+     []
+    ],
+    [
+     "D1:476",
+     []
+    ],
+    [
+     "D1:477",
+     []
+    ],
+    [
+     "D1:478",
+     []
+    ],
+    [
+     "D1:480",
+     []
+    ],
+    [
+     "D1:481",
+     []
+    ],
+    [
+     "D1:483",
+     []
+    ],
+    [
+     "D1:484",
+     []
+    ],
+    [
+     "D1:485",
+     []
+    ],
+    [
+     "D1:486",
+     []
+    ],
+    [
+     "D1:487",
+     []
+    ],
+    [
+     "D1:488",
+     []
+    ],
+    [
+     "D1:510",
+     []
+    ],
+    [
+     "D1:512",
+     []
+    ],
+    [
+     "D1:513",
+     []
+    ],
+    [
+     "D1:514",
+     []
+    ],
+    [
+     "D1:516",
+     []
+    ],
+    [
+     "D1:517",
+     []
+    ],
+    [
+     "D1:518",
+     []
+    ],
+    [
+     "D1:519",
+     []
+    ],
+    [
+     "D1:520",
+     []
+    ],
+    [
+     "D1:521",
+     []
+    ],
+    [
+     "D1:522",
+     []
+    ],
+    [
+     "D1:523",
+     []
+    ],
+    [
+     "D1:525",
+     []
+    ],
+    [
+     "D1:526",
+     []
+    ],
+    [
+     "D1:527",
+     []
+    ],
+    [
+     "D1:528",
+     []
+    ],
+    [
+     "D1:529",
+     []
+    ],
+    [
+     "D1:530",
+     []
+    ],
+    [
+     "D1:531",
+     []
+    ],
+    [
+     "D1:535",
+     []
+    ],
+    [
+     "D1:537",
+     []
+    ],
+    [
+     "D1:538",
+     []
+    ],
+    [
+     "D1:539",
+     []
+    ],
+    [
+     "D1:540",
+     []
+    ],
+    [
+     "D1:542",
+     []
+    ],
+    [
+     "D1:543",
+     []
+    ],
+    [
+     "D1:549",
+     []
+    ],
+    [
+     "D1:550",
+     []
+    ],
+    [
+     "D1:552",
+     []
+    ],
+    [
+     "D1:554",
+     []
+    ],
+    [
+     "D1:555",
+     []
+    ],
+    [
+     "D1:577",
+     []
+    ],
+    [
+     "D1:578",
+     []
+    ],
+    [
+     "D1:681",
+     [
+      "D1:1028"
+     ]
+    ],
+    [
+     "D1:681",
+     [
+      "D1:1443"
+     ]
+    ],
+    [
+     "D1:681",
+     [
+      "D1:1471"
+     ]
+    ],
+    [
+     "D1:681",
+     [
+      "D1:1561"
+     ]
+    ],
+    [
+     "D1:681",
+     [
+      "D1:1988"
+     ]
+    ],
+    [
+     "D1:681",
+     [
+      "D1:2044"
+     ]
+    ],
+    [
+     "D1:681",
+     [
+      "D1:677"
+     ]
+    ],
+    [
+     "D1:681",
+     [
+      "D1:841"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:1028"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:1443"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:1561"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:1988"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:2044"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:677"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:841"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:1028"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:1443"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:1471"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:1561"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:1988"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:2044"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:677"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:841"
+     ]
+    ],
+    [
+     "D1:693",
+     [
+      "D1:1471"
+     ]
+    ],
+    [
+     "D1:693",
+     [
+      "D1:1988"
+     ]
+    ],
+    [
+     "D1:693",
+     [
+      "D1:677"
+     ]
+    ],
+    [
+     "D1:693",
+     [
+      "D1:841"
+     ]
+    ],
+    [
+     "D1:694",
+     [
+      "D1:1471"
+     ]
+    ],
+    [
+     "D1:694",
+     [
+      "D1:1988"
+     ]
+    ],
+    [
+     "D1:694",
+     [
+      "D1:677"
+     ]
+    ],
+    [
+     "D1:694",
+     [
+      "D1:841"
+     ]
+    ],
+    [
+     "D1:704",
+     []
+    ],
+    [
+     "D1:706",
+     []
+    ],
+    [
+     "D1:708",
+     []
+    ],
+    [
+     "D1:712",
+     []
+    ],
+    [
+     "D1:714",
+     []
+    ],
+    [
+     "D1:716",
+     []
+    ],
+    [
+     "D1:718",
+     []
+    ],
+    [
+     "D1:720",
+     []
+    ],
+    [
+     "D1:815",
+     []
+    ],
+    [
+     "D1:816",
+     []
+    ],
+    [
+     "D1:817",
+     []
+    ],
+    [
+     "D1:1020",
+     []
+    ],
+    [
+     "D1:1026",
+     []
+    ],
+    [
+     "D1:1271",
+     []
+    ],
+    [
+     "D1:1325",
+     []
+    ],
+    [
+     "D1:1342",
+     []
+    ],
+    [
+     "D1:1512",
+     []
+    ],
+    [
+     "D1:1518",
+     []
+    ],
+    [
+     "D1:1547",
+     []
+    ],
+    [
+     "D1:1587",
+     []
+    ],
+    [
+     "D1:1588",
+     []
+    ],
+    [
+     "D1:1590",
+     []
+    ],
+    [
+     "D1:1651",
+     [
+      "D1:1641"
+     ]
+    ],
+    [
+     "D1:1651",
+     [
+      "D1:1664"
+     ]
+    ],
+    [
+     "D1:1651",
+     [
+      "D1:1665"
+     ]
+    ],
+    [
+     "D1:1651",
+     [
+      "D1:1666"
+     ]
+    ],
+    [
+     "D1:1651",
+     [
+      "D1:1667"
+     ]
+    ],
+    [
+     "D1:1651",
+     [
+      "D1:1668"
+     ]
+    ],
+    [
+     "D1:1659",
+     [
+      "D1:1665"
+     ]
+    ],
+    [
+     "D1:1659",
+     [
+      "D1:1666"
+     ]
+    ],
+    [
+     "D1:1659",
+     [
+      "D1:1668"
+     ]
+    ],
+    [
+     "D1:1663",
+     []
+    ],
+    [
+     "D1:1669",
+     []
+    ],
+    [
+     "D1:1671",
+     []
+    ],
+    [
+     "D1:1672",
+     []
+    ],
+    [
+     "D1:1673",
+     []
+    ],
+    [
+     "D1:1674",
+     []
+    ],
+    [
+     "D1:1675",
+     []
+    ],
+    [
+     "D1:1676",
+     []
+    ],
+    [
+     "D1:1677",
+     []
+    ],
+    [
+     "D1:1892",
+     []
+    ],
+    [
+     "D1:1893",
+     []
+    ],
+    [
+     "D1:1895",
+     []
+    ],
+    [
+     "D1:1947",
+     []
+    ],
+    [
+     "D1:1948",
+     []
+    ],
+    [
+     "D1:2060",
+     []
+    ]
+   ],
+   "source_geometry_ids": [
+    "FMR-2eaf198b6182",
+    "FMR-1bf02f9ee17f",
+    "FMR-dd405ee7c100",
+    "FMR-c9bc432bb4ad",
+    "FMR-45ddc40db7af",
+    "FMR-894527f7d191",
+    "FMR-a8bebaab8359",
+    "FMR-3ef432705c51",
+    "FMR-1a81d91eacaf",
+    "FMR-2618ef1772e9"
+   ],
+   "canonical_region_id": "RC:MODEL_SPACE:4267:540:1649",
+   "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+   "unit_context": {
+    "status": "CONFIRMED_BY_HUMAN",
+    "native_to_mm": 10.0,
+    "canonical_policy": "URBAN_FRAME_RELEASE_V3",
+    "owner_claims_applied": [
+     "QORTUBA-NATIVE-UNIT-OWNER-001"
+    ],
+    "evidence_kept": [
+     "MODEL_SPACE:INSUNITS:LIBREDWG",
+     "MODEL_SPACE:DIMFAMILY:r=1",
+     "QORTUBA-NATIVE-UNIT-OWNER-001"
+    ],
+    "active_path_reading": {
+     "UNIT_CANDIDATE": "cm",
+     "UNIT_SCALE_TO_MM": 10.0,
+     "PROVENANCE": "INSUNITS",
+     "STATUS": "SOURCE_ESTABLISHED"
+    },
+    "method_unit_equals_confirmed_unit": true,
+    "note": "unit confirmed by the owner for this exact source (claim beside the INSUNITS declaration); the method ran at the same scale, so its rooms are proven at the confirmed unit"
+   },
+   "source_capability_signatures": [
+    "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=REFLECTION+ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=REFLECTION+ROTATION+TRANSLATION|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=REFLECTION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LWPOLYLINE_BULGE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LWPOLYLINE_STRAIGHT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12"
+   ],
+   "decoder_qualification_requirement": "every listed signature EXERCISED_AND_PASS against an ADMITTED independent export of this source (V2); currently 0 qualified",
+   "method_rule_ids": {
+    "geometry": "QS01_METHOD_A_ARRANGEMENT_OF_BOUNDARY_LINES",
+    "row": "OWNER_RULES_V1.quantities (floor-area rows)",
+    "rules": [
+     "US-15",
+     "QP-15"
+    ]
+   },
+   "formula": "HALL / whgm 36.37 + M.B.ROOM 20.8075 + BED.ROOM 18.7525 + BED.ROOM 16.5375 + PAINTRY 11.685 + DRESS 11.985 + BATH 8.5525 + BATH 5.1 + UNLABELLED_INTERNAL_SPACE 4.51 + BATH 4.21 = 138.51 m2",
+   "formula_inputs": [
+    {
+     "room_id": "RM-2eaf198b",
+     "room": "HALL / whgm",
+     "preview_area_m2": 36.37
+    },
+    {
+     "room_id": "RM-1bf02f9e",
+     "room": "M.B.ROOM",
+     "preview_area_m2": 20.8075
+    },
+    {
+     "room_id": "RM-dd405ee7",
+     "room": "BED.ROOM",
+     "preview_area_m2": 18.7525
+    },
+    {
+     "room_id": "RM-c9bc432b",
+     "room": "BED.ROOM",
+     "preview_area_m2": 16.5375
+    },
+    {
+     "room_id": "RM-45ddc40d",
+     "room": "PAINTRY",
+     "preview_area_m2": 11.685
+    },
+    {
+     "room_id": "RM-894527f7",
+     "room": "DRESS",
+     "preview_area_m2": 11.985
+    },
+    {
+     "room_id": "RM-a8bebaab",
+     "room": "BATH",
+     "preview_area_m2": 8.5525
+    },
+    {
+     "room_id": "RM-3ef43270",
+     "room": "BATH",
+     "preview_area_m2": 5.1
+    },
+    {
+     "room_id": "RM-1a81d91e",
+     "room": "UNLABELLED_INTERNAL_SPACE",
+     "preview_area_m2": 4.51
+    },
+    {
+     "room_id": "RM-2618ef17",
+     "room": "BATH",
+     "preview_area_m2": 4.21
+    }
+   ],
+   "canonical_native_value": 1385100.0,
+   "canonical_physical_value": null,
+   "canonical_physical_value_reason": "frame UNCONFIRMED: the CAD drawing-region designation is PENDING_OWNER, so no physical value may be released",
+   "preview_value_m2_under_active_unit_reading": 138.51,
+   "current_value": 138.51,
+   "current_status": "FINAL",
+   "difference_preview_minus_current": 0.0,
+   "status": "PREVIEW",
+   "blockers": [
+    "D_ROUTES: K1 realised; parser: no QUALIFIED V2 record for this decoder build; independent-parser reconciliation not available",
+    "F_REGION: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']",
+    "G_FRAME: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']"
+   ],
+   "release_eligibility": "NOT_ELIGIBLE",
+   "release_eligibility_reasons": [
+    "CAD drawing-region designation PENDING_OWNER (frame UNCONFIRMED)",
+    "no independent-parser qualification",
+    "method / input contract not promoted (legacy audit)",
+    "baseline rows not approved",
+    "ceiling conditions not confirmed"
+   ]
+  }
+ ],
+ "rooms": [
+  {
+   "room_id": "RM-1a81d91e",
+   "room": "UNLABELLED_INTERNAL_SPACE",
+   "wet_or_dry": "DRY",
+   "measurement_region_id": "FMR-1a81d91eacaf",
+   "method_id": "QS01_METHOD_A_ARRANGEMENT_OF_BOUNDARY_LINES",
+   "status_in_method": "SOURCE_ESTABLISHED",
+   "canonical_native_geometry": {
+    "unit": "native drawing unit (unconfirmed)",
+    "rectangles_native": [
+     [
+      109623.08,
+      14859.72,
+      109793.08,
+      15029.72
+     ],
+     [
+      109793.08,
+      14909.72,
+      109928.08,
+      15029.72
+     ]
+    ],
+    "area_native_sq": 45100.0
+   },
+   "preview_area_m2_under_active_unit_reading": 4.51,
+   "active_area_m2": 4.51,
+   "formula": "1.700 x 1.700 + 1.350 x 1.200 = 4.5100 m2",
+   "boundary": {
+    "boundary_segments": 13,
+    "boundary_basis": {
+     "ESTABLISHED_WALL_FACE": 9,
+     "CAD_FACE_LINE_UNRESOLVED_ROLE": 1,
+     "THRESHOLD_CLOSURE": 3
+    },
+    "segments_without_a_source_line": [
+     {
+      "basis": "CAD_FACE_LINE_UNRESOLVED_ROLE",
+      "site_id": "OS-77f8fed2eb15",
+      "pts_mm": [
+       [
+        1098080.8,
+        150297.2
+       ],
+       [
+        1099280.8,
+        150297.2
+       ]
+      ],
+      "counts_as_perimeter": true
+     },
+     {
+      "basis": "THRESHOLD_CLOSURE",
+      "site_id": "OS-c9c2bd4f2ebe",
+      "pts_mm": [
+       [
+        1098180.8,
+        149097.2
+       ],
+       [
+        1099180.8,
+        149097.2
+       ]
+      ],
+      "counts_as_perimeter": true
+     }
+    ]
+   },
+   "source_observations": [
+    "D1:467",
+    "D1:468",
+    "D1:471",
+    "D1:473",
+    "D1:474",
+    "D1:487",
+    "D1:488",
+    "D1:555",
+    "D1:817"
+   ],
+   "source_occurrences": [
+    [
+     "D1:467",
+     []
+    ],
+    [
+     "D1:468",
+     []
+    ],
+    [
+     "D1:471",
+     []
+    ],
+    [
+     "D1:473",
+     []
+    ],
+    [
+     "D1:474",
+     []
+    ],
+    [
+     "D1:487",
+     []
+    ],
+    [
+     "D1:488",
+     []
+    ],
+    [
+     "D1:555",
+     []
+    ],
+    [
+     "D1:817",
+     []
+    ]
+   ],
+   "occurrences_without_signature": [],
+   "capability_signatures": [
+    "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12"
+   ]
+  },
+  {
+   "room_id": "RM-1bf02f9e",
+   "room": "M.B.ROOM",
+   "wet_or_dry": "DRY",
+   "measurement_region_id": "FMR-1bf02f9ee17f",
+   "method_id": "QS01_METHOD_A_ARRANGEMENT_OF_BOUNDARY_LINES",
+   "status_in_method": "SOURCE_ESTABLISHED",
+   "canonical_native_geometry": {
+    "unit": "native drawing unit (unconfirmed)",
+    "rectangles_native": [
+     [
+      109873.08,
+      15589.72,
+      110218.08,
+      16024.72
+     ],
+     [
+      110218.08,
+      15589.72,
+      110363.08,
+      15989.72
+     ]
+    ],
+    "area_native_sq": 208075.0
+   },
+   "preview_area_m2_under_active_unit_reading": 20.8075,
+   "active_area_m2": 20.8075,
+   "formula": "3.450 x 4.350 + 1.450 x 4.000 = 20.8075 m2",
+   "boundary": {
+    "boundary_segments": 10,
+    "boundary_basis": {
+     "ESTABLISHED_WALL_FACE": 4,
+     "CAD_FACE_LINE_UNRESOLVED_ROLE": 6
+    },
+    "segments_without_a_source_line": [
+     {
+      "basis": "CAD_FACE_LINE_UNRESOLVED_ROLE",
+      "site_id": "OS-85cb2192ebc0",
+      "pts_mm": [
+       [
+        1098730.8,
+        155897.2
+       ],
+       [
+        1098730.8,
+        157097.2
+       ]
+      ],
+      "counts_as_perimeter": true
+     }
+    ]
+   },
+   "source_observations": [
+    "D1:454",
+    "D1:457",
+    "D1:512",
+    "D1:516",
+    "D1:518",
+    "D1:712",
+    "D1:1026",
+    "D1:1325",
+    "D1:1677",
+    "D1:1895"
+   ],
+   "source_occurrences": [
+    [
+     "D1:454",
+     []
+    ],
+    [
+     "D1:457",
+     []
+    ],
+    [
+     "D1:512",
+     []
+    ],
+    [
+     "D1:516",
+     []
+    ],
+    [
+     "D1:518",
+     []
+    ],
+    [
+     "D1:712",
+     []
+    ],
+    [
+     "D1:1026",
+     []
+    ],
+    [
+     "D1:1325",
+     []
+    ],
+    [
+     "D1:1677",
+     []
+    ],
+    [
+     "D1:1895",
+     []
+    ]
+   ],
+   "occurrences_without_signature": [],
+   "capability_signatures": [
+    "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LWPOLYLINE_STRAIGHT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12"
+   ]
+  },
+  {
+   "room_id": "RM-2618ef17",
+   "room": "BATH",
+   "wet_or_dry": "WET",
+   "measurement_region_id": "FMR-2618ef1772e9",
+   "method_id": "QS01_METHOD_A_ARRANGEMENT_OF_BOUNDARY_LINES",
+   "status_in_method": "SOURCE_ESTABLISHED",
+   "canonical_native_geometry": {
+    "unit": "native drawing unit (unconfirmed)",
+    "rectangles_native": [
+     [
+      109308.08,
+      15474.72,
+      109523.08,
+      15574.72
+     ],
+     [
+      109323.08,
+      15574.72,
+      109523.08,
+      15634.72
+     ],
+     [
+      109308.08,
+      15634.72,
+      109523.08,
+      15674.72
+     ]
+    ],
+    "area_native_sq": 42100.0
+   },
+   "preview_area_m2_under_active_unit_reading": 4.21,
+   "active_area_m2": 4.21,
+   "formula": "2.150 x 1.000 + 2.000 x 0.600 + 2.150 x 0.400 = 4.2100 m2",
+   "boundary": {
+    "boundary_segments": 13,
+    "boundary_basis": {
+     "ESTABLISHED_WALL_FACE": 8,
+     "COLUMN_FACE": 3,
+     "CAD_FACE_LINE_UNRESOLVED_ROLE": 1,
+     "THRESHOLD_CLOSURE": 1
+    },
+    "segments_without_a_source_line": [
+     {
+      "basis": "ESTABLISHED_WALL_FACE",
+      "site_id": null,
+      "pts_mm": [
+       [
+        1095230.8,
+        155947.2
+       ],
+       [
+        1095130.8,
+        155947.2
+       ]
+      ],
+      "counts_as_perimeter": false
+     },
+     {
+      "basis": "ESTABLISHED_WALL_FACE",
+      "site_id": null,
+      "pts_mm": [
+       [
+        1095230.8,
+        155747.2
+       ],
+       [
+        1095130.8,
+        155747.2
+       ]
+      ],
+      "counts_as_perimeter": false
+     }
+    ]
+   },
+   "source_observations": [
+    "D1:461",
+    "D1:462",
+    "D1:483",
+    "D1:521",
+    "D1:528",
+    "D1:529",
+    "D1:681",
+    "D1:685",
+    "D1:686",
+    "D1:716",
+    "D1:720",
+    "D1:1673",
+    "D1:1674"
+   ],
+   "source_occurrences": [
+    [
+     "D1:461",
+     []
+    ],
+    [
+     "D1:462",
+     []
+    ],
+    [
+     "D1:483",
+     []
+    ],
+    [
+     "D1:521",
+     []
+    ],
+    [
+     "D1:528",
+     []
+    ],
+    [
+     "D1:529",
+     []
+    ],
+    [
+     "D1:681",
+     [
+      "D1:1561"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:1561"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:1561"
+     ]
+    ],
+    [
+     "D1:716",
+     []
+    ],
+    [
+     "D1:720",
+     []
+    ],
+    [
+     "D1:1673",
+     []
+    ],
+    [
+     "D1:1674",
+     []
+    ]
+   ],
+   "occurrences_without_signature": [],
+   "capability_signatures": [
+    "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=REFLECTION+ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LWPOLYLINE_STRAIGHT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12"
+   ]
+  },
+  {
+   "room_id": "RM-2eaf198b",
+   "room": "HALL / whgm",
+   "wet_or_dry": "DRY",
+   "measurement_region_id": "FMR-2eaf198b6182",
+   "method_id": "QS01_METHOD_A_ARRANGEMENT_OF_BOUNDARY_LINES",
+   "status_in_method": "SOURCE_ESTABLISHED",
+   "canonical_native_geometry": {
+    "unit": "native drawing unit (unconfirmed)",
+    "rectangles_native": [
+     [
+      109928.08,
+      15114.72,
+      110363.08,
+      15574.72
+     ],
+     [
+      109608.08,
+      15049.72,
+      109783.08,
+      15474.72
+     ],
+     [
+      109783.08,
+      15049.72,
+      109928.08,
+      15384.72
+     ],
+     [
+      109538.08,
+      15474.72,
+      109783.08,
+      15574.72
+     ],
+     [
+      109843.08,
+      15384.72,
+      109928.08,
+      15574.72
+     ]
+    ],
+    "area_native_sq": 363700.0
+   },
+   "preview_area_m2_under_active_unit_reading": 36.37,
+   "active_area_m2": 36.37,
+   "formula": "4.350 x 4.600 + 1.750 x 4.250 + 1.450 x 3.350 + 2.450 x 1.000 + 0.850 x 1.900 = 36.3700 m2",
+   "boundary": {
+    "boundary_segments": 43,
+    "boundary_basis": {
+     "ESTABLISHED_WALL_FACE": 18,
+     "THRESHOLD_CLOSURE": 4,
+     "CAD_FACE_LINE_UNRESOLVED_ROLE": 19,
+     "COLUMN_FACE": 2
+    },
+    "segments_without_a_source_line": [
+     {
+      "basis": "ESTABLISHED_WALL_FACE",
+      "site_id": null,
+      "pts_mm": [
+       [
+        1096780.8,
+        155747.2
+       ],
+       [
+        1096880.8,
+        155747.2
+       ]
+      ],
+      "counts_as_perimeter": false
+     },
+     {
+      "basis": "THRESHOLD_CLOSURE",
+      "site_id": "OS-30895ae78da8",
+      "pts_mm": [
+       [
+        1096855.8,
+        155747.2
+       ],
+       [
+        1097780.8,
+        155747.2
+       ]
+      ],
+      "counts_as_perimeter": true
+     },
+     {
+      "basis": "THRESHOLD_CLOSURE",
+      "site_id": "OS-c0aa3a5561fb",
+      "pts_mm": [
+       [
+        1095380.8,
+        154847.2
+       ],
+       [
+        1095380.8,
+        155647.2
+       ]
+      ],
+      "counts_as_perimeter": true
+     },
+     {
+      "basis": "CAD_FACE_LINE_UNRESOLVED_ROLE",
+      "site_id": "OS-77f8fed2eb15",
+      "pts_mm": [
+       [
+        1098080.8,
+        150497.2
+       ],
+       [
+        1099280.8,
+        150497.2
+       ]
+      ],
+      "counts_as_perimeter": true
+     }
+    ]
+   },
+   "source_observations": [
+    "D1:477",
+    "D1:478",
+    "D1:480",
+    "D1:484",
+    "D1:510",
+    "D1:523",
+    "D1:525",
+    "D1:530",
+    "D1:538",
+    "D1:539",
+    "D1:542",
+    "D1:543",
+    "D1:577",
+    "D1:578",
+    "D1:681",
+    "D1:685",
+    "D1:686",
+    "D1:693",
+    "D1:694",
+    "D1:704",
+    "D1:716",
+    "D1:815",
+    "D1:817",
+    "D1:1271",
+    "D1:1512",
+    "D1:1518",
+    "D1:1547",
+    "D1:1587",
+    "D1:1588",
+    "D1:1590",
+    "D1:1651",
+    "D1:1659",
+    "D1:1663",
+    "D1:1947"
+   ],
+   "source_occurrences": [
+    [
+     "D1:477",
+     []
+    ],
+    [
+     "D1:478",
+     []
+    ],
+    [
+     "D1:480",
+     []
+    ],
+    [
+     "D1:484",
+     []
+    ],
+    [
+     "D1:510",
+     []
+    ],
+    [
+     "D1:523",
+     []
+    ],
+    [
+     "D1:525",
+     []
+    ],
+    [
+     "D1:530",
+     []
+    ],
+    [
+     "D1:538",
+     []
+    ],
+    [
+     "D1:539",
+     []
+    ],
+    [
+     "D1:542",
+     []
+    ],
+    [
+     "D1:543",
+     []
+    ],
+    [
+     "D1:577",
+     []
+    ],
+    [
+     "D1:578",
+     []
+    ],
+    [
+     "D1:681",
+     [
+      "D1:1028"
+     ]
+    ],
+    [
+     "D1:681",
+     [
+      "D1:677"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:1028"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:677"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:1028"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:677"
+     ]
+    ],
+    [
+     "D1:693",
+     [
+      "D1:677"
+     ]
+    ],
+    [
+     "D1:694",
+     [
+      "D1:677"
+     ]
+    ],
+    [
+     "D1:704",
+     []
+    ],
+    [
+     "D1:716",
+     []
+    ],
+    [
+     "D1:815",
+     []
+    ],
+    [
+     "D1:817",
+     []
+    ],
+    [
+     "D1:1271",
+     []
+    ],
+    [
+     "D1:1512",
+     []
+    ],
+    [
+     "D1:1518",
+     []
+    ],
+    [
+     "D1:1547",
+     []
+    ],
+    [
+     "D1:1587",
+     []
+    ],
+    [
+     "D1:1588",
+     []
+    ],
+    [
+     "D1:1590",
+     []
+    ],
+    [
+     "D1:1651",
+     [
+      "D1:1641"
+     ]
+    ],
+    [
+     "D1:1651",
+     [
+      "D1:1664"
+     ]
+    ],
+    [
+     "D1:1651",
+     [
+      "D1:1665"
+     ]
+    ],
+    [
+     "D1:1651",
+     [
+      "D1:1666"
+     ]
+    ],
+    [
+     "D1:1651",
+     [
+      "D1:1667"
+     ]
+    ],
+    [
+     "D1:1651",
+     [
+      "D1:1668"
+     ]
+    ],
+    [
+     "D1:1659",
+     [
+      "D1:1665"
+     ]
+    ],
+    [
+     "D1:1659",
+     [
+      "D1:1666"
+     ]
+    ],
+    [
+     "D1:1659",
+     [
+      "D1:1668"
+     ]
+    ],
+    [
+     "D1:1663",
+     []
+    ],
+    [
+     "D1:1947",
+     []
+    ]
+   ],
+   "occurrences_without_signature": [],
+   "capability_signatures": [
+    "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=REFLECTION+ROTATION+TRANSLATION|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=REFLECTION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=ROTATION+TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LWPOLYLINE_BULGE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LWPOLYLINE_STRAIGHT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12"
+   ]
+  },
+  {
+   "room_id": "RM-3ef43270",
+   "room": "BATH",
+   "wet_or_dry": "WET",
+   "measurement_region_id": "FMR-3ef432705c51",
+   "method_id": "QS01_METHOD_A_ARRANGEMENT_OF_BOUNDARY_LINES",
+   "status_in_method": "SOURCE_ESTABLISHED",
+   "canonical_native_geometry": {
+    "unit": "native drawing unit (unconfirmed)",
+    "rectangles_native": [
+     [
+      109308.08,
+      14859.72,
+      109608.08,
+      15029.72
+     ]
+    ],
+    "area_native_sq": 51000.0
+   },
+   "preview_area_m2_under_active_unit_reading": 5.1,
+   "active_area_m2": 5.1,
+   "formula": "3.000 x 1.700 = 5.1000 m2",
+   "boundary": {
+    "boundary_segments": 5,
+    "boundary_basis": {
+     "ESTABLISHED_WALL_FACE": 4,
+     "THRESHOLD_CLOSURE": 1
+    },
+    "segments_without_a_source_line": []
+   },
+   "source_observations": [
+    "D1:464",
+    "D1:465",
+    "D1:466",
+    "D1:470",
+    "D1:472",
+    "D1:681",
+    "D1:685",
+    "D1:686",
+    "D1:718"
+   ],
+   "source_occurrences": [
+    [
+     "D1:464",
+     []
+    ],
+    [
+     "D1:465",
+     []
+    ],
+    [
+     "D1:466",
+     []
+    ],
+    [
+     "D1:470",
+     []
+    ],
+    [
+     "D1:472",
+     []
+    ],
+    [
+     "D1:681",
+     [
+      "D1:2044"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:2044"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:2044"
+     ]
+    ],
+    [
+     "D1:718",
+     []
+    ]
+   ],
+   "occurrences_without_signature": [],
+   "capability_signatures": [
+    "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=REFLECTION+ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LWPOLYLINE_STRAIGHT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12"
+   ]
+  },
+  {
+   "room_id": "RM-45ddc40d",
+   "room": "PAINTRY",
+   "wet_or_dry": "DRY",
+   "measurement_region_id": "FMR-45ddc40db7af",
+   "method_id": "QS01_METHOD_A_ARRANGEMENT_OF_BOUNDARY_LINES",
+   "status_in_method": "SOURCE_ESTABLISHED",
+   "canonical_native_geometry": {
+    "unit": "native drawing unit (unconfirmed)",
+    "rectangles_native": [
+     [
+      109308.08,
+      15049.72,
+      109593.08,
+      15459.72
+     ]
+    ],
+    "area_native_sq": 116850.0
+   },
+   "preview_area_m2_under_active_unit_reading": 11.685,
+   "active_area_m2": 11.685,
+   "formula": "2.850 x 4.100 = 11.6850 m2",
+   "boundary": {
+    "boundary_segments": 10,
+    "boundary_basis": {
+     "ESTABLISHED_WALL_FACE": 7,
+     "THRESHOLD_CLOSURE": 1,
+     "CAD_FACE_LINE_UNRESOLVED_ROLE": 2
+    },
+    "segments_without_a_source_line": [
+     {
+      "basis": "THRESHOLD_CLOSURE",
+      "site_id": "OS-b5a0fbb335d4",
+      "pts_mm": [
+       [
+        1095930.8,
+        151097.2
+       ],
+       [
+        1095930.8,
+        153847.2
+       ]
+      ],
+      "counts_as_perimeter": false
+     }
+    ]
+   },
+   "source_observations": [
+    "D1:463",
+    "D1:477",
+    "D1:478",
+    "D1:480",
+    "D1:481",
+    "D1:535",
+    "D1:540",
+    "D1:718",
+    "D1:1342",
+    "D1:1512",
+    "D1:1651"
+   ],
+   "source_occurrences": [
+    [
+     "D1:463",
+     []
+    ],
+    [
+     "D1:477",
+     []
+    ],
+    [
+     "D1:478",
+     []
+    ],
+    [
+     "D1:480",
+     []
+    ],
+    [
+     "D1:481",
+     []
+    ],
+    [
+     "D1:535",
+     []
+    ],
+    [
+     "D1:540",
+     []
+    ],
+    [
+     "D1:718",
+     []
+    ],
+    [
+     "D1:1342",
+     []
+    ],
+    [
+     "D1:1512",
+     []
+    ],
+    [
+     "D1:1651",
+     [
+      "D1:1668"
+     ]
+    ]
+   ],
+   "occurrences_without_signature": [],
+   "capability_signatures": [
+    "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=TRANSLATION|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LWPOLYLINE_STRAIGHT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12"
+   ]
+  },
+  {
+   "room_id": "RM-894527f7",
+   "room": "DRESS",
+   "wet_or_dry": "DRY",
+   "measurement_region_id": "FMR-894527f7d191",
+   "method_id": "QS01_METHOD_A_ARRANGEMENT_OF_BOUNDARY_LINES",
+   "status_in_method": "SOURCE_ESTABLISHED",
+   "canonical_native_geometry": {
+    "unit": "native drawing unit (unconfirmed)",
+    "rectangles_native": [
+     [
+      109583.08,
+      15689.72,
+      109858.08,
+      16024.72
+     ],
+     [
+      109583.08,
+      15589.72,
+      109858.08,
+      15674.72
+     ],
+     [
+      109568.08,
+      15674.72,
+      109858.08,
+      15689.72
+     ]
+    ],
+    "area_native_sq": 119850.0
+   },
+   "preview_area_m2_under_active_unit_reading": 11.985,
+   "active_area_m2": 11.985,
+   "formula": "2.750 x 3.350 + 2.750 x 0.850 + 2.900 x 0.150 = 11.9850 m2",
+   "boundary": {
+    "boundary_segments": 23,
+    "boundary_basis": {
+     "ESTABLISHED_WALL_FACE": 10,
+     "COLUMN_FACE": 3,
+     "UNPAIRED_LINE_NO_THICKNESS_EVIDENCE": 1,
+     "WALL_INTERIOR_CHORD": 2,
+     "CAD_FACE_LINE_UNRESOLVED_ROLE": 5,
+     "THRESHOLD_CLOSURE": 2
+    },
+    "segments_without_a_source_line": [
+     {
+      "basis": "UNPAIRED_LINE_NO_THICKNESS_EVIDENCE",
+      "site_id": null,
+      "pts_mm": [
+       [
+        1098580.8,
+        159647.2
+       ],
+       [
+        1095830.8,
+        160247.2
+       ]
+      ],
+      "counts_as_perimeter": false
+     },
+     {
+      "basis": "ESTABLISHED_WALL_FACE",
+      "site_id": null,
+      "pts_mm": [
+       [
+        1095830.8,
+        160097.2
+       ],
+       [
+        1095930.8,
+        160097.2
+       ]
+      ],
+      "counts_as_perimeter": false
+     },
+     {
+      "basis": "ESTABLISHED_WALL_FACE",
+      "site_id": null,
+      "pts_mm": [
+       [
+        1095830.8,
+        159897.2
+       ],
+       [
+        1095930.8,
+        159897.2
+       ]
+      ],
+      "counts_as_perimeter": false
+     },
+     {
+      "basis": "CAD_FACE_LINE_UNRESOLVED_ROLE",
+      "site_id": "OS-85cb2192ebc0",
+      "pts_mm": [
+       [
+        1098580.8,
+        155897.2
+       ],
+       [
+        1098580.8,
+        157097.2
+       ]
+      ],
+      "counts_as_perimeter": true
+     },
+     {
+      "basis": "ESTABLISHED_WALL_FACE",
+      "site_id": null,
+      "pts_mm": [
+       [
+        1095680.8,
+        156897.2
+       ],
+       [
+        1095780.8,
+        156897.2
+       ]
+      ],
+      "counts_as_perimeter": true
+     },
+     {
+      "basis": "WALL_INTERIOR_CHORD",
+      "site_id": null,
+      "pts_mm": [
+       [
+        1095680.8,
+        156747.2
+       ],
+       [
+        1095680.8,
+        156897.2
+       ]
+      ],
+      "counts_as_perimeter": true
+     },
+     {
+      "basis": "ESTABLISHED_WALL_FACE",
+      "site_id": null,
+      "pts_mm": [
+       [
+        1096780.8,
+        155947.2
+       ],
+       [
+        1096880.8,
+        155947.2
+       ]
+      ],
+      "counts_as_perimeter": false
+     }
+    ]
+   },
+   "source_observations": [
+    "D1:457",
+    "D1:514",
+    "D1:517",
+    "D1:518",
+    "D1:519",
+    "D1:520",
+    "D1:531",
+    "D1:537",
+    "D1:681",
+    "D1:686",
+    "D1:693",
+    "D1:694",
+    "D1:714",
+    "D1:716",
+    "D1:1026",
+    "D1:1669",
+    "D1:1676",
+    "D1:1892",
+    "D1:1893"
+   ],
+   "source_occurrences": [
+    [
+     "D1:457",
+     []
+    ],
+    [
+     "D1:514",
+     []
+    ],
+    [
+     "D1:517",
+     []
+    ],
+    [
+     "D1:518",
+     []
+    ],
+    [
+     "D1:519",
+     []
+    ],
+    [
+     "D1:520",
+     []
+    ],
+    [
+     "D1:531",
+     []
+    ],
+    [
+     "D1:537",
+     []
+    ],
+    [
+     "D1:681",
+     [
+      "D1:1471"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:1471"
+     ]
+    ],
+    [
+     "D1:693",
+     [
+      "D1:1471"
+     ]
+    ],
+    [
+     "D1:694",
+     [
+      "D1:1471"
+     ]
+    ],
+    [
+     "D1:714",
+     []
+    ],
+    [
+     "D1:716",
+     []
+    ],
+    [
+     "D1:1026",
+     []
+    ],
+    [
+     "D1:1669",
+     []
+    ],
+    [
+     "D1:1676",
+     []
+    ],
+    [
+     "D1:1892",
+     []
+    ],
+    [
+     "D1:1893",
+     []
+    ]
+   ],
+   "occurrences_without_signature": [],
+   "capability_signatures": [
+    "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=REFLECTION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LWPOLYLINE_STRAIGHT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12"
+   ]
+  },
+  {
+   "room_id": "RM-a8bebaab",
+   "room": "BATH",
+   "wet_or_dry": "WET",
+   "measurement_region_id": "FMR-a8bebaab8359",
+   "method_id": "QS01_METHOD_A_ARRANGEMENT_OF_BOUNDARY_LINES",
+   "status_in_method": "SOURCE_ESTABLISHED",
+   "canonical_native_geometry": {
+    "unit": "native drawing unit (unconfirmed)",
+    "rectangles_native": [
+     [
+      109308.08,
+      15689.72,
+      109523.08,
+      16024.72
+     ],
+     [
+      109523.08,
+      15689.72,
+      109568.08,
+      15989.72
+     ]
+    ],
+    "area_native_sq": 85525.0
+   },
+   "preview_area_m2_under_active_unit_reading": 8.5525,
+   "active_area_m2": 8.5525,
+   "formula": "2.150 x 3.350 + 0.450 x 3.000 = 8.5525 m2",
+   "boundary": {
+    "boundary_segments": 12,
+    "boundary_basis": {
+     "ESTABLISHED_WALL_FACE": 9,
+     "COLUMN_FACE": 1,
+     "WALL_INTERIOR_CHORD": 1,
+     "THRESHOLD_CLOSURE": 1
+    },
+    "segments_without_a_source_line": [
+     {
+      "basis": "ESTABLISHED_WALL_FACE",
+      "site_id": null,
+      "pts_mm": [
+       [
+        1095230.8,
+        160097.2
+       ],
+       [
+        1095130.8,
+        160097.2
+       ]
+      ],
+      "counts_as_perimeter": false
+     },
+     {
+      "basis": "ESTABLISHED_WALL_FACE",
+      "site_id": null,
+      "pts_mm": [
+       [
+        1095230.8,
+        159897.2
+       ],
+       [
+        1095130.8,
+        159897.2
+       ]
+      ],
+      "counts_as_perimeter": false
+     }
+    ]
+   },
+   "source_observations": [
+    "D1:458",
+    "D1:460",
+    "D1:522",
+    "D1:526",
+    "D1:527",
+    "D1:681",
+    "D1:685",
+    "D1:686",
+    "D1:714",
+    "D1:1675"
+   ],
+   "source_occurrences": [
+    [
+     "D1:458",
+     []
+    ],
+    [
+     "D1:460",
+     []
+    ],
+    [
+     "D1:522",
+     []
+    ],
+    [
+     "D1:526",
+     []
+    ],
+    [
+     "D1:527",
+     []
+    ],
+    [
+     "D1:681",
+     [
+      "D1:1443"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:1443"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:1443"
+     ]
+    ],
+    [
+     "D1:714",
+     []
+    ],
+    [
+     "D1:1675",
+     []
+    ]
+   ],
+   "occurrences_without_signature": [],
+   "capability_signatures": [
+    "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=REFLECTION+ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LWPOLYLINE_STRAIGHT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12"
+   ]
+  },
+  {
+   "room_id": "RM-c9bc432b",
+   "room": "BED.ROOM",
+   "wet_or_dry": "DRY",
+   "measurement_region_id": "FMR-c9bc432bb4ad",
+   "method_id": "QS01_METHOD_A_ARRANGEMENT_OF_BOUNDARY_LINES",
+   "status_in_method": "SOURCE_ESTABLISHED",
+   "canonical_native_geometry": {
+    "unit": "native drawing unit (unconfirmed)",
+    "rectangles_native": [
+     [
+      109308.08,
+      14619.72,
+      109793.08,
+      14844.72
+     ],
+     [
+      109343.08,
+      14494.72,
+      109793.08,
+      14619.72
+     ]
+    ],
+    "area_native_sq": 165375.0
+   },
+   "preview_area_m2_under_active_unit_reading": 16.5375,
+   "active_area_m2": 16.5375,
+   "formula": "4.850 x 2.250 + 4.500 x 1.250 = 16.5375 m2",
+   "boundary": {
+    "boundary_segments": 13,
+    "boundary_basis": {
+     "ESTABLISHED_WALL_FACE": 8,
+     "THRESHOLD_CLOSURE": 1,
+     "CAD_FACE_LINE_UNRESOLVED_ROLE": 2,
+     "WALL_INTERIOR_CHORD": 1,
+     "COLUMN_FACE": 1
+    },
+    "segments_without_a_source_line": [
+     {
+      "basis": "ESTABLISHED_WALL_FACE",
+      "site_id": null,
+      "pts_mm": [
+       [
+        1093430.8,
+        146197.2
+       ],
+       [
+        1093430.8,
+        146297.2
+       ]
+      ],
+      "counts_as_perimeter": false
+     }
+    ]
+   },
+   "source_observations": [
+    "D1:447",
+    "D1:469",
+    "D1:475",
+    "D1:476",
+    "D1:554",
+    "D1:681",
+    "D1:685",
+    "D1:686",
+    "D1:693",
+    "D1:694",
+    "D1:706",
+    "D1:708",
+    "D1:1020",
+    "D1:1671",
+    "D1:1672"
+   ],
+   "source_occurrences": [
+    [
+     "D1:447",
+     []
+    ],
+    [
+     "D1:469",
+     []
+    ],
+    [
+     "D1:475",
+     []
+    ],
+    [
+     "D1:476",
+     []
+    ],
+    [
+     "D1:554",
+     []
+    ],
+    [
+     "D1:681",
+     [
+      "D1:1988"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:1988"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:1988"
+     ]
+    ],
+    [
+     "D1:693",
+     [
+      "D1:1988"
+     ]
+    ],
+    [
+     "D1:694",
+     [
+      "D1:1988"
+     ]
+    ],
+    [
+     "D1:706",
+     []
+    ],
+    [
+     "D1:708",
+     []
+    ],
+    [
+     "D1:1020",
+     []
+    ],
+    [
+     "D1:1671",
+     []
+    ],
+    [
+     "D1:1672",
+     []
+    ]
+   ],
+   "occurrences_without_signature": [],
+   "capability_signatures": [
+    "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=REFLECTION+ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_REFLECTED|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LWPOLYLINE_STRAIGHT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12"
+   ]
+  },
+  {
+   "room_id": "RM-dd405ee7",
+   "room": "BED.ROOM",
+   "wet_or_dry": "DRY",
+   "measurement_region_id": "FMR-dd405ee7c100",
+   "method_id": "QS01_METHOD_A_ARRANGEMENT_OF_BOUNDARY_LINES",
+   "status_in_method": "SOURCE_ESTABLISHED",
+   "canonical_native_geometry": {
+    "unit": "native drawing unit (unconfirmed)",
+    "rectangles_native": [
+     [
+      109908.08,
+      14579.72,
+      110218.08,
+      14894.72
+     ],
+     [
+      109943.08,
+      14894.72,
+      110218.08,
+      15099.72
+     ],
+     [
+      109808.08,
+      14569.72,
+      109908.08,
+      14894.72
+     ],
+     [
+      110118.08,
+      14569.72,
+      110218.08,
+      14579.72
+     ]
+    ],
+    "area_native_sq": 187525.0
+   },
+   "preview_area_m2_under_active_unit_reading": 18.7525,
+   "active_area_m2": 18.7525,
+   "formula": "3.100 x 3.150 + 2.750 x 2.050 + 1.000 x 3.250 + 1.000 x 0.100 = 18.7525 m2",
+   "boundary": {
+    "boundary_segments": 21,
+    "boundary_basis": {
+     "ESTABLISHED_WALL_FACE": 11,
+     "THRESHOLD_CLOSURE": 2,
+     "CAD_FACE_LINE_UNRESOLVED_ROLE": 8
+    },
+    "segments_without_a_source_line": [
+     {
+      "basis": "THRESHOLD_CLOSURE",
+      "site_id": "OS-4725566b42f3",
+      "pts_mm": [
+       [
+        1099880.8,
+        150997.2
+       ],
+       [
+        1101780.8,
+        150997.2
+       ]
+      ],
+      "counts_as_perimeter": true
+     },
+     {
+      "basis": "CAD_FACE_LINE_UNRESOLVED_ROLE",
+      "site_id": "OS-3144b5fbb149",
+      "pts_mm": [
+       [
+        1098080.8,
+        145697.2
+       ],
+       [
+        1099180.8,
+        145697.2
+       ]
+      ],
+      "counts_as_perimeter": true
+     },
+     {
+      "basis": "CAD_FACE_LINE_UNRESOLVED_ROLE",
+      "site_id": "OS-045efd7810a7",
+      "pts_mm": [
+       [
+        1101080.8,
+        145697.2
+       ],
+       [
+        1102180.8,
+        145697.2
+       ]
+      ],
+      "counts_as_perimeter": true
+     }
+    ]
+   },
+   "source_observations": [
+    "D1:485",
+    "D1:486",
+    "D1:513",
+    "D1:549",
+    "D1:550",
+    "D1:552",
+    "D1:681",
+    "D1:685",
+    "D1:686",
+    "D1:693",
+    "D1:694",
+    "D1:704",
+    "D1:708",
+    "D1:816",
+    "D1:1948",
+    "D1:2060"
+   ],
+   "source_occurrences": [
+    [
+     "D1:485",
+     []
+    ],
+    [
+     "D1:486",
+     []
+    ],
+    [
+     "D1:513",
+     []
+    ],
+    [
+     "D1:549",
+     []
+    ],
+    [
+     "D1:550",
+     []
+    ],
+    [
+     "D1:552",
+     []
+    ],
+    [
+     "D1:681",
+     [
+      "D1:841"
+     ]
+    ],
+    [
+     "D1:685",
+     [
+      "D1:841"
+     ]
+    ],
+    [
+     "D1:686",
+     [
+      "D1:841"
+     ]
+    ],
+    [
+     "D1:693",
+     [
+      "D1:841"
+     ]
+    ],
+    [
+     "D1:694",
+     [
+      "D1:841"
+     ]
+    ],
+    [
+     "D1:704",
+     []
+    ],
+    [
+     "D1:708",
+     []
+    ],
+    [
+     "D1:816",
+     []
+    ],
+    [
+     "D1:1948",
+     []
+    ],
+    [
+     "D1:2060",
+     []
+    ]
+   ],
+   "occurrences_without_signature": [],
+   "capability_signatures": [
+    "KIND=LINE|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LINE|CHAIN=ROTATION+TRANSLATION+UNIFORM_SCALE|NET=NET_DIRECT|DEPTH=1|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12",
+    "KIND=LWPOLYLINE_STRAIGHT|CHAIN=DEFAULT_FRAME|NET=NET_DIRECT|DEPTH=0|EXT=DEFAULT|CTX=-|VIS=VISIBLE|HANDLE=H12"
+   ]
+  }
+ ],
+ "canonical_context": {
+  "unit": "CONFIRMED_BY_HUMAN",
+  "native_to_mm": 10.0,
+  "region": "UNCONFIRMED",
+  "frame": "UNCONFIRMED",
+  "release": "PREVIEW",
+  "V-CAD-5": {
+   "V-CAD-1": "FAIL",
+   "V-CAD-2": "PASS",
+   "V-CAD-3": "PASS",
+   "V-CAD-4": "PASS",
+   "V-CAD-5": "PASS",
+   "V-CAD-6": "RECORDED"
+  },
+  "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+  "evidence_version": "c058a3486a260a239c00c8ebb09a2044f013f24866ea73b0976de334f4104e34",
+  "blockers": [
+   "D_ROUTES: K1 realised; parser: no QUALIFIED V2 record for this decoder build; independent-parser reconciliation not available",
+   "F_REGION: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']",
+   "G_FRAME: UNCONFIRMED: ['ANNOTATION_MAPPING', 'COUNT_ONLY', 'PREVIEW_MEASUREMENT']"
+  ],
+  "unit_evidence": [
+   {
+    "evidence_id": "MODEL_SPACE:INSUNITS:LIBREDWG",
+    "kind": "UNIT_HEADER_DECLARATION",
+    "producer": "DECODER",
+    "native_to_mm": 10.0,
+    "review_status": "ADMITTED",
+    "author": null,
+    "author_role": null,
+    "timestamp": null
+   },
+   {
+    "evidence_id": "MODEL_SPACE:DIMFAMILY:r=1",
+    "kind": "DIMENSION_STYLE",
+    "producer": "ENGINE",
+    "native_to_mm": null,
+    "review_status": "CANDIDATE",
+    "author": null,
+    "author_role": null,
+    "timestamp": null
+   },
+   {
+    "evidence_id": "QORTUBA-NATIVE-UNIT-OWNER-001",
+    "kind": "HUMAN_CONFIRMATION",
+    "producer": "HUMAN",
+    "native_to_mm": 10.0,
+    "review_status": "ADMITTED",
+    "author": "Mohammad",
+    "author_role": "PROJECT_OWNER",
+    "timestamp": "2026-10-01"
+   }
+  ],
+  "owner_claims_applied": [
+   "QORTUBA-NATIVE-UNIT-OWNER-001"
+  ]
+ },
+ "if_designation_accepted_diagnostic": {
+  "note": "diagnostic only; the designation is NOT accepted. Shows what the CAD drawing-region designation alone would change",
+  "region": "VERIFIED",
+  "frame": "CONFIRMED_BY_HUMAN",
+  "release": "PREVIEW",
+  "blockers": [
+   "D_ROUTES: K1 realised; parser: no QUALIFIED V2 record for this decoder build; independent-parser reconciliation not available"
+  ]
+ }
+}

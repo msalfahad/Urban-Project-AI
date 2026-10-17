@@ -1,0 +1,158 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_V3B_COVERAGE_V1",
+ "rows": [
+  {
+   "trade": "CONCRETE",
+   "trade_ar": "الخرسانة",
+   "items": 40,
+   "technical_coverage_pct": 57.5,
+   "commercial_coverage_pct": 97.5,
+   "provisional_items": 13,
+   "technical_classes": {
+    "BLOCKED": 13,
+    "BLOCKED_SOURCE_CONFLICT": 1,
+    "DERIVED": 19,
+    "OWNER_PROJECT_FACT": 1,
+    "PARTIAL": 6
+   },
+   "not_released": [
+    "C-SWALL"
+   ],
+   "not_released_count": 1,
+   "owner_pending_scope_items": 0
+  },
+  {
+   "trade": "REBAR",
+   "trade_ar": "حديد التسليح",
+   "items": 28,
+   "technical_coverage_pct": 39.3,
+   "commercial_coverage_pct": 96.4,
+   "provisional_items": 23,
+   "technical_classes": {
+    "BLOCKED": 10,
+    "DERIVED": 4,
+    "PARTIAL": 14
+   },
+   "not_released": [
+    "R-STAIRS-GF"
+   ],
+   "not_released_count": 1,
+   "owner_pending_scope_items": 0
+  },
+  {
+   "trade": "BLOCKWORK",
+   "trade_ar": "الطابوق",
+   "items": 19,
+   "technical_coverage_pct": 84.2,
+   "commercial_coverage_pct": 100.0,
+   "provisional_items": 2,
+   "technical_classes": {
+    "BLOCKED": 1,
+    "DERIVED": 14,
+    "PARTIAL": 4
+   },
+   "not_released": [],
+   "not_released_count": 0,
+   "owner_pending_scope_items": 0
+  },
+  {
+   "trade": "PLASTER_PAINT",
+   "trade_ar": "اللياسة والدهان",
+   "items": 67,
+   "technical_coverage_pct": 6.7,
+   "commercial_coverage_pct": 100.0,
+   "provisional_items": 64,
+   "technical_classes": {
+    "BLOCKED": 61,
+    "DERIVED": 3,
+    "PARTIAL": 3
+   },
+   "not_released": [],
+   "not_released_count": 0,
+   "owner_pending_scope_items": 0
+  },
+  {
+   "trade": "FLOORING",
+   "trade_ar": "الأرضيات",
+   "items": 40,
+   "technical_coverage_pct": 97.5,
+   "commercial_coverage_pct": 100.0,
+   "provisional_items": 1,
+   "technical_classes": {
+    "BLOCKED": 1,
+    "DERIVED": 17,
+    "URBAN_STANDARD": 22
+   },
+   "not_released": [],
+   "not_released_count": 0,
+   "owner_pending_scope_items": 0
+  },
+  {
+   "trade": "CEILINGS",
+   "trade_ar": "الأسقف",
+   "items": 26,
+   "technical_coverage_pct": 96.2,
+   "commercial_coverage_pct": 96.2,
+   "provisional_items": 0,
+   "technical_classes": {
+    "NOT_IN_SOURCE": 1,
+    "URBAN_STANDARD": 25
+   },
+   "not_released": [
+    "CE-DECOR"
+   ],
+   "not_released_count": 1,
+   "owner_pending_scope_items": 25
+  },
+  {
+   "trade": "WALL_TILE_WATERPROOFING",
+   "trade_ar": "تكسيات الجدران والعزل المائي",
+   "items": 87,
+   "technical_coverage_pct": 57.5,
+   "commercial_coverage_pct": 100.0,
+   "provisional_items": 37,
+   "technical_classes": {
+    "BLOCKED": 37,
+    "DERIVED": 8,
+    "URBAN_STANDARD": 42
+   },
+   "not_released": [],
+   "not_released_count": 0,
+   "owner_pending_scope_items": 0
+  },
+  {
+   "trade": "ALUMINIUM_OPENINGS",
+   "trade_ar": "الألمنيوم والفتحات",
+   "items": 27,
+   "technical_coverage_pct": 81.5,
+   "commercial_coverage_pct": 100.0,
+   "provisional_items": 7,
+   "technical_classes": {
+    "BLOCKED": 3,
+    "DERIVED": 18,
+    "OWNER_PROJECT_FACT": 1,
+    "PARTIAL": 4,
+    "RASTER_DERIVED": 1
+   },
+   "not_released": [],
+   "not_released_count": 0,
+   "owner_pending_scope_items": 0
+  },
+  {
+   "trade": "STAIRS_RAILINGS",
+   "trade_ar": "الدرج والدرابزين",
+   "items": 6,
+   "technical_coverage_pct": 33.3,
+   "commercial_coverage_pct": 100.0,
+   "provisional_items": 4,
+   "technical_classes": {
+    "BLOCKED": 4,
+    "DERIVED": 2
+   },
+   "not_released": [],
+   "not_released_count": 0,
+   "owner_pending_scope_items": 0
+  }
+ ],
+ "rule": "item coverage: technical = (full + 0.5 partial) / items; commercial = items with a commercial quantity (incl. budget estimates) / items; alternatives, components, superseded lines and owner-pending scope items (cornice: presence not established, OD-V3B-10) excluded and counted"
+}

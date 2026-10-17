@@ -1,0 +1,93 @@
+{
+ "schema": "URBAN_BLIND_V2_REFERENCE",
+ "protocol": "URBAN_BLIND_V2",
+ "protocol_sha256": "<sha256 of URBAN_BLIND_V2_PROTOCOL.json, from SEAL.json>",
+ "_legend": {
+  "fill_in": "every <...> value; delete the example entries; one entry per room / door / window / stair / floor",
+  "ref_xy_m": "a point inside the element in the drawing's own coordinates, in metres (the room's label point; a door's or window's centre at mid wall) - the only matching key",
+  "quantities": "only the metrics of URBAN_BLIND_V2_PROTOCOL.json, in its units; a metric the QS cannot measure is left out (never 0); an UNSUPPORTED metric may still be given - it is reported, not scored",
+  "conventions": "the QS states each convention used where an owner rule is still open (D-16 door minimum, D-07 wall basis, kitchen waterproofing, skirting under windows)",
+  "never": "a value read from any engine output, or rounded from one"
+ },
+ "drawing_set": [
+  {
+   "file": "<file name>",
+   "sha256": "<sha256 of the file>"
+  }
+ ],
+ "prepared": {
+  "role": "INDEPENDENT_QS",
+  "method": "QS_HAND_TAKEOFF",
+  "engine_outputs_consulted": false,
+  "date": "<YYYY-MM-DD>",
+  "note": "<how the takeoff was made: drawings, sections, schedules used>"
+ },
+ "conventions": {
+  "wall_run_basis": "<centreline | inner face>",
+  "door_width": "<structural opening as drawn>",
+  "skirting_under_windows": "<sill windows yes, floor glazing no>"
+ },
+ "rooms": [
+  {
+   "ref_id": "R1",
+   "floor": "GF",
+   "name": "Example bathroom",
+   "category": "BATHROOM",
+   "ref_xy_m": [
+    1.0,
+    1.7
+   ],
+   "quantities": {
+    "FLOOR_AREA": 5.03,
+    "WET_FLOOR_AREA": 5.03,
+    "WALL_CERAMIC_AREA": 20.77,
+    "CEILING_AREA": 5.03,
+    "PLASTER_AREA": 26.38,
+    "WP_FLOOR_AREA": 5.03
+   }
+  }
+ ],
+ "floors": [
+  {
+   "floor": "GF",
+   "quantities": {
+    "WALL_RUN_LM": 25.6,
+    "OPENING_COUNT": 3,
+    "WINDOW_COUNT": 1,
+    "DOOR_COUNT": {
+     "PVC": 0,
+     "ALU": 1
+    }
+   }
+  }
+ ],
+ "doors": [
+  {
+   "ref_id": "D1",
+   "floor": "GF",
+   "ref_xy_m": [
+    1.4,
+    0.1
+   ],
+   "quantities": {
+    "DOOR_OPENING_WIDTH": 0.8,
+    "DOOR_CLASS": "ALU",
+    "DOOR_LEAF_WIDTH": 0.7
+   }
+  }
+ ],
+ "windows": [
+  {
+   "ref_id": "W1",
+   "floor": "GF",
+   "ref_xy_m": [
+    4.3,
+    1.3
+   ],
+   "quantities": {
+    "WINDOW_WIDTH": 0.6
+   }
+  }
+ ],
+ "stairs": []
+}

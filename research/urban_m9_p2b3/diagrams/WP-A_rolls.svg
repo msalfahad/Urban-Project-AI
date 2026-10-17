@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="110" viewBox="0 0 900 110" font-family="Arial" font-size="10">
+<rect width="900" height="110" fill="#ffffff"/>
+<defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#bdbdbd" stroke-width="2"/></pattern></defs>
+<text x="20" y="14" font-size="12" fill="#252525">WP-A roll plan (V2.5): 1 roll(s), consumed 7.50 m2</text>
+<text x="20" y="47.0" fill="#252525">roll 1</text>
+<rect x="140.0" y="30" width="140.0" height="26" fill="#9ecae1" stroke="#525252" stroke-width="0.8"/>
+<text x="210.0" y="47.0" text-anchor="middle">2.00</text>
+<text x="210.0" y="67" text-anchor="middle" font-size="8" fill="#525252">floor strip 1</text>
+<rect x="280.0" y="30" width="140.0" height="26" fill="#9ecae1" stroke="#525252" stroke-width="0.8"/>
+<text x="350.0" y="47.0" text-anchor="middle">2.00</text>
+<text x="350.0" y="67" text-anchor="middle" font-size="8" fill="#525252">floor strip 2</text>
+<rect x="420.0" y="30" width="140.0" height="26" fill="#9ecae1" stroke="#525252" stroke-width="0.8"/>
+<text x="490.0" y="47.0" text-anchor="middle">2.00</text>
+<text x="490.0" y="67" text-anchor="middle" font-size="8" fill="#525252">floor strip 3</text>
+<rect x="560.0" y="30" width="105.0" height="26" fill="#fdae6b" stroke="#525252" stroke-width="0.8"/>
+<text x="612.5" y="47.0" text-anchor="middle">1.50</text>
+<text x="612.5" y="67" text-anchor="middle" font-size="8" fill="#525252">upturn lanes</text>
+<rect x="665.0" y="30" width="175.0" height="26" fill="url(#hatch)" stroke="#525252" stroke-width="0.8"/>
+<text x="752.5" y="47.0" text-anchor="middle" fill="#525252">2.50 left</text>
+</svg>

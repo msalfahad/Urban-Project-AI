@@ -1,0 +1,639 @@
+{
+ "protocol": "URBAN_BLIND_V2",
+ "schema": "URBAN_BLIND_V2_PROTOCOL",
+ "status": "SEALED - no second-villa drawing has been run under this protocol",
+ "inherits": "URBAN_BLIND_V1 (research/urban_m9_p2a_acceptance/blind_test/BLIND_TEST_PROTOCOL.md): roles and custody (section 2), the drawing set (3), the procedure (6), the outcomes (7), the claim rule (8) and the error classes (9); what this file states replaces V1 where they differ",
+ "methods_frozen": [
+  "ARCH_TAKEOFF_V2.7.1",
+  "ARCH_TAKEOFF_V2.7"
+ ],
+ "primary_method": "ARCH_TAKEOFF_V2.7.1",
+ "modes": {
+  "U": "the drawings only: no facts, no layer overrides",
+  "A": "U plus a facts file (heights) prepared from the sections by a person who has not seen the reference"
+ },
+ "reference": {
+  "schema": "URBAN_BLIND_V2_REFERENCE",
+  "allowed_methods": [
+   "QS_HAND_TAKEOFF",
+   "QS_CAD_MEASUREMENT"
+  ],
+  "author": "an independent quantity surveyor appointed by the owner: not the engineer, never shown any engine output for this villa",
+  "audit_aid": "the custodian may audit the QS reference with tools/indep_reader.py (an ezdxf + shapely reading that imports no engine module) before sealing it; a difference is settled by the QS, and the reader is never the reference itself",
+  "engine_outputs_consulted": false,
+  "leakage_markers": [
+   "ARCH_TAKEOFF_V\\d",
+   "URBAN_BOQ_M9",
+   "URBAN_[A-Z_]+_V\\d",
+   "\\b[A-Z0-9]{1,3}-R[0-9A-F]{6}\\b",
+   "\\bOP-\\d{3}\\b",
+   "\\bC27-\\d{4}\\b",
+   "\\bSITE-[0-9a-f]{16}\\b",
+   "\\bDOOR-[A-Z0-9]+-[0-9a-f]{8}\\b",
+   "measured_net",
+   "evidence_state",
+   "line_id",
+   "\\bD2:[0-9A-F]+"
+  ],
+  "digit_identity": {
+   "min_decimals": 4,
+   "min_items": 5,
+   "max_share": 0.5,
+   "meaning": "reference values carrying 4 or more decimals that equal the engine's value exactly: 5 or more of them, and half or more of such values, refuse the reference as copied"
+  },
+  "units": {
+   "m2": "square metres",
+   "lm": "linear metres",
+   "m": "metres",
+   "count": "items",
+   "class": "PVC | ALU | MAIN | LIFT"
+  },
+  "commitment": "the custodian publishes sha256(salt + reference file) and the protocol sha256 before the run; the salt is revealed at scoring"
+ },
+ "matching": {
+  "ROOM": "the engine room of the same floor whose polygon contains the reference label point (the smallest where faces nest); two reference rooms in one engine room are MERGED and scored once on their sum",
+  "DOOR": {
+   "reach_m": 0.6,
+   "rule": "the nearest engine door opening of the floor within reach, used once"
+  },
+  "WINDOW": {
+   "reach_m": 0.6,
+   "rule": "the nearest engine window opening of the floor within reach, used once"
+  },
+  "STAIR": "the engine space containing the reference point; its stair lines",
+  "FLOOR": "the floor code",
+  "FLOOR_CLASS": "the floor code and the door class"
+ },
+ "tolerances": {
+  "m2": {
+   "abs": 0.1,
+   "rel": 0.02
+  },
+  "lm": {
+   "abs": 0.05,
+   "rel": 0.02
+  },
+  "m": {
+   "abs": 0.02,
+   "rel": 0.0
+  },
+  "count": {
+   "abs": 0,
+   "rel": 0.0
+  },
+  "class": "exact",
+  "rule": "|engine - reference| <= max(abs, rel x reference)"
+ },
+ "status_of": {
+  "SOURCE_DERIVED": "RELEASED",
+  "OWNER_APPROVED": "RELEASED",
+  "PROVISIONAL": "PROVISIONAL",
+  "BOUNDED_EXPOSURE": "PROVISIONAL",
+  "ASSUMED": "PROVISIONAL",
+  "BLOCKED_RFI": "FLAGGED",
+  "NOT_APPLICABLE_WITH_EVIDENCE": "NOT_APPLICABLE",
+  "CONDITIONAL": "FLAGGED"
+ },
+ "geometry_records_released": [
+  "ROOM",
+  "OPENING",
+  "OPENINGS",
+  "DOOR_CLASS",
+  "DOOR_LEAF",
+  "TREADS"
+ ],
+ "support_levels": {
+  "SUPPORTED": "the engine emits the quantity from plan evidence; scored",
+  "PARTIAL": "emitted in some conditions only (stated per metric); scored, its gaps counted",
+  "UNSUPPORTED": "the engine does not establish it: reported UNSUPPORTED with the reference total, never scored, never zero"
+ },
+ "categories": [
+  {
+   "category": "ROOM_FLOOR_AREAS",
+   "what": "net floor area of every room, by floor (finish of the floor not scored here)",
+   "metrics": [
+    {
+     "metric": "FLOOR_AREA",
+     "unit": "m2",
+     "level": "ROOM",
+     "support": "SUPPORTED",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "engine": {
+      "source": "ROOM",
+      "field": "area_m2"
+     },
+     "note": "the room's plan area net of walls and columns; matched by the reference label point"
+    }
+   ]
+  },
+  {
+   "category": "WET_ROOMS",
+   "what": "wet-room floor and wall finishes",
+   "metrics": [
+    {
+     "metric": "WET_FLOOR_AREA",
+     "unit": "m2",
+     "level": "ROOM",
+     "support": "SUPPORTED",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "engine": {
+      "source": "LINES",
+      "items": [
+       "FIN.FLOOR.WET_TILE"
+      ]
+     },
+     "note": "a space under classification review answers with conditional quantities only (FLAGGED)"
+    },
+    {
+     "metric": "WALL_CERAMIC_AREA",
+     "unit": "m2",
+     "level": "ROOM",
+     "support": "PARTIAL",
+     "modes": [
+      "A"
+     ],
+     "engine": {
+      "source": "LINES",
+      "items": [
+       "FIN.WALL.TILE"
+      ]
+     },
+     "note": "needs the wall-tile height (Mode A); windows on a tiled wall need their sill (not in a plan)"
+    }
+   ]
+  },
+  {
+   "category": "CEILINGS",
+   "what": "ceilings and the double-height exclusions",
+   "metrics": [
+    {
+     "metric": "CEILING_AREA",
+     "unit": "m2",
+     "level": "ROOM",
+     "support": "PARTIAL",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "engine": {
+      "source": "LINES",
+      "items": [
+       "FIN.CEILING"
+      ]
+     },
+     "note": "measured from the room polygon, but every ceiling line is PROVISIONAL (the ceiling type is not in a plan): scored as a PROVISIONAL answer, never as released"
+    },
+    {
+     "metric": "DOUBLE_HEIGHT_EXCLUDED_AREA",
+     "unit": "m2",
+     "level": "ROOM",
+     "support": "PARTIAL",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "engine": {
+      "source": "ROOM",
+      "field": "double_height_m2"
+     },
+     "note": "read from void / double-height symbols and stacked plans; a void drawn only in section is missed"
+    }
+   ]
+  },
+  {
+   "category": "DOORS",
+   "what": "internal and external doors",
+   "metrics": [
+    {
+     "metric": "DOOR_COUNT",
+     "unit": "count",
+     "level": "FLOOR_CLASS",
+     "support": "SUPPORTED",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "engine": {
+      "source": "DOOR_LINES"
+     },
+     "note": "per floor and class PVC / ALU / MAIN / LIFT; a MAIN_ENTRANCE_CANDIDATE or unresolved class is a flagged omission of its class"
+    },
+    {
+     "metric": "DOOR_OPENING_WIDTH",
+     "unit": "m",
+     "level": "DOOR",
+     "support": "SUPPORTED",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "engine": {
+      "source": "OPENING",
+      "field": "width_m"
+     },
+     "note": "as drawn (the jamb span); the owner minimum (D-16) is never applied to it"
+    },
+    {
+     "metric": "DOOR_CLASS",
+     "unit": "class",
+     "level": "DOOR",
+     "support": "SUPPORTED",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "engine": {
+      "source": "DOOR_CLASS"
+     }
+    },
+    {
+     "metric": "DOOR_LEAF_WIDTH",
+     "unit": "m",
+     "level": "DOOR",
+     "support": "PARTIAL",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "engine": {
+      "source": "DOOR_LEAF"
+     },
+     "note": "the drawn leaf (swing radius / leaf line); not every symbol draws one"
+    },
+    {
+     "metric": "DOOR_HEIGHT",
+     "unit": "m",
+     "level": "DOOR",
+     "support": "UNSUPPORTED",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "note": "not in a plan; in Mode A it is the facts input, not a measurement"
+    }
+   ]
+  },
+  {
+   "category": "WINDOWS_GLAZING",
+   "what": "windows and glazing",
+   "metrics": [
+    {
+     "metric": "WINDOW_COUNT",
+     "unit": "count",
+     "level": "FLOOR",
+     "support": "SUPPORTED",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "engine": {
+      "source": "LINES",
+      "items": [
+       "ARCH.WINDOW"
+      ]
+     }
+    },
+    {
+     "metric": "WINDOW_WIDTH",
+     "unit": "m",
+     "level": "WINDOW",
+     "support": "SUPPORTED",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "engine": {
+      "source": "OPENING",
+      "field": "width_m"
+     }
+    },
+    {
+     "metric": "WINDOW_HEIGHT",
+     "unit": "m",
+     "level": "WINDOW",
+     "support": "UNSUPPORTED",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "note": "not in a plan"
+    },
+    {
+     "metric": "SILL_HEIGHT",
+     "unit": "m",
+     "level": "WINDOW",
+     "support": "UNSUPPORTED",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "note": "not in a plan"
+    },
+    {
+     "metric": "GLAZING_AREA",
+     "unit": "m2",
+     "level": "WINDOW",
+     "support": "UNSUPPORTED",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "note": "no engine line: width x a height not in a plan"
+    }
+   ]
+  },
+  {
+   "category": "PLASTER_PAINT",
+   "what": "internal plaster and paint",
+   "metrics": [
+    {
+     "metric": "PLASTER_AREA",
+     "unit": "m2",
+     "level": "ROOM",
+     "support": "SUPPORTED",
+     "modes": [
+      "A"
+     ],
+     "engine": {
+      "source": "LINES",
+      "items": [
+       "FIN.PLASTER"
+      ]
+     },
+     "note": "needs the plaster height (Mode A)"
+    },
+    {
+     "metric": "PAINT_AREA",
+     "unit": "m2",
+     "level": "ROOM",
+     "support": "PARTIAL",
+     "modes": [
+      "A"
+     ],
+     "engine": {
+      "source": "LINES",
+      "items": [
+       "FIN.PAINT"
+      ]
+     },
+     "note": "paint above wall tile is held (the tile height and system per room)"
+    }
+   ]
+  },
+  {
+   "category": "SKIRTING",
+   "what": "skirting",
+   "metrics": [
+    {
+     "metric": "SKIRTING_LM",
+     "unit": "lm",
+     "level": "ROOM",
+     "support": "SUPPORTED",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "engine": {
+      "source": "LINES",
+      "items": [
+       "FIN.SKIRTING"
+      ]
+     },
+     "note": "a window on the boundary: floor glazing (no skirting) and sill windows (skirting) are not told apart from a plan"
+    }
+   ]
+  },
+  {
+   "category": "WATERPROOFING",
+   "what": "wet-room waterproofing",
+   "metrics": [
+    {
+     "metric": "WP_FLOOR_AREA",
+     "unit": "m2",
+     "level": "ROOM",
+     "support": "SUPPORTED",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "engine": {
+      "source": "LINES",
+      "items": [
+       "FIN.WP.FLOOR"
+      ]
+     }
+    },
+    {
+     "metric": "WP_UPTURN_AREA",
+     "unit": "m2",
+     "level": "ROOM",
+     "support": "SUPPORTED",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "engine": {
+      "source": "LINES",
+      "items": [
+       "FIN.WP.WALL_UPTURN",
+       "FIN.WP.UPTURN"
+      ]
+     }
+    },
+    {
+     "metric": "WP_DOORWAY_AREA",
+     "unit": "m2",
+     "level": "ROOM",
+     "support": "SUPPORTED",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "engine": {
+      "source": "LINES",
+      "items": [
+       "FIN.WP.DOORWAY"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "category": "WALL_RUNS_OPENINGS",
+   "what": "wall runs and openings",
+   "metrics": [
+    {
+     "metric": "WALL_RUN_LM",
+     "unit": "lm",
+     "level": "FLOOR",
+     "support": "PARTIAL",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "engine": {
+      "source": "LINES",
+      "items": [
+       "ARCH.WALL_RUN"
+      ]
+     },
+     "note": "PROVISIONAL in the engine (wall material and height not in a plan); both faces over 0.30 m at least - a shorter pier or stub is not in the run"
+    },
+    {
+     "metric": "OPENING_COUNT",
+     "unit": "count",
+     "level": "FLOOR",
+     "support": "SUPPORTED",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "engine": {
+      "source": "OPENINGS"
+     }
+    },
+    {
+     "metric": "MASONRY_AREA",
+     "unit": "m2",
+     "level": "FLOOR",
+     "support": "UNSUPPORTED",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "note": "block walls need material and height: BLOCKED_RFI"
+    }
+   ]
+  },
+  {
+   "category": "STAIRS",
+   "what": "stairs where the engine supports them",
+   "metrics": [
+    {
+     "metric": "TREAD_COUNT",
+     "unit": "count",
+     "level": "STAIR",
+     "support": "PARTIAL",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "engine": {
+      "source": "TREADS"
+     },
+     "note": "straight and winder flights in plan"
+    },
+    {
+     "metric": "TREAD_AREA",
+     "unit": "m2",
+     "level": "STAIR",
+     "support": "PARTIAL",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "engine": {
+      "source": "LINES",
+      "items": [
+       "FIN.MARBLE.TREAD"
+      ]
+     }
+    },
+    {
+     "metric": "LANDING_AREA",
+     "unit": "m2",
+     "level": "STAIR",
+     "support": "PARTIAL",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "engine": {
+      "source": "LINES",
+      "items": [
+       "FIN.MARBLE.LANDING"
+      ]
+     }
+    },
+    {
+     "metric": "RISER_AREA",
+     "unit": "m2",
+     "level": "STAIR",
+     "support": "UNSUPPORTED",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "note": "riser height not in a plan: BLOCKED_RFI"
+    },
+    {
+     "metric": "FLIGHT_SLOPING_LM",
+     "unit": "lm",
+     "level": "STAIR",
+     "support": "UNSUPPORTED",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "note": "needs the rise: BLOCKED_RFI"
+    },
+    {
+     "metric": "HANDRAIL_LM",
+     "unit": "lm",
+     "level": "STAIR",
+     "support": "UNSUPPORTED",
+     "modes": [
+      "U",
+      "A"
+     ],
+     "note": "needs the rise and the rail layout: BLOCKED_RFI"
+    }
+   ]
+  }
+ ],
+ "acceptance": {
+  "status": "PROPOSED_PENDING_OWNER_APPROVAL",
+  "per_metric": {
+   "coverage_qty_min": 0.9,
+   "within_tolerance_share_min": 0.9,
+   "abs_total_error_pct_max": 3.0,
+   "silent_omissions_max": 0,
+   "fp_share_max": 0.02
+  },
+  "meaning": "a metric meets the criteria when all five hold on the blind villa; while the status is PROPOSED the scorer reports the result as PROPOSED_PASS / PROPOSED_FAIL, never as acceptance",
+  "claim_rule": "an accuracy percentage only under URBAN_BLIND_V1 section 8: two independent blind projects"
+ },
+ "refusals": {
+  "PROTOCOL_NOT_SEALED": "the protocol, scorer or template differs from SEAL.json",
+  "REFERENCE_SCHEMA": "the reference is not URBAN_BLIND_V2_REFERENCE for this protocol",
+  "REFERENCE_PROTOCOL_MISMATCH": "the reference names another protocol sha256",
+  "REFERENCE_METHOD_NOT_ALLOWED": "the reference method is not an independent QS method",
+  "REFERENCE_ENGINE_DERIVED": "the reference states that engine outputs were consulted",
+  "REFERENCE_LEAKAGE_MARKER": "an engine identifier or field name appears in the reference",
+  "REFERENCE_MATCHES_ENGINE_DIGITS": "the reference repeats the engine's digits (digit_identity)",
+  "COMMITMENT_MISMATCH": "sha256(salt + reference) or the protocol sha256 differs from the commitment",
+  "RUN_METHOD_NOT_FROZEN": "the run's method is not a frozen method of this protocol",
+  "RUN_DRAWING_NOT_IN_SET": "the run's drawing is not in the reference's drawing set"
+ },
+ "never": [
+  "an UNSUPPORTED metric scored as zero",
+  "a reference generated from an engine output",
+  "a conditional or provisional quantity counted as a released answer",
+  "the scenarios of a review space added together",
+  "an accuracy claim from one project"
+ ],
+ "outcomes": {
+  "RELEASED": "a released value: its error and tolerance count toward coverage and acceptance",
+  "PROVISIONAL": "a value in a provisional, bounded or assumed state: its error and tolerance are reported (provisional_error), never counted as released coverage or acceptance",
+  "FLAGGED": "an RFI, a conditional (review-space scenario) quantity or a line without a value",
+  "SILENT": "no line and no flag",
+  "NOT_APPLICABLE": "the engine says it does not apply, with evidence",
+  "MERGED": "answered by another reference room's engine room (scored once on the sum)"
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_B1_BENCHMARK_DEPENDENCY_V1",
+ "WEB_APP_DEPENDENCY": "DERIVED_FROM_FREELANCER_BOQ",
+ "basis": [
+  "owner statement",
+  "21 web rows carry a freelancer quantity rounded up by [0.204263, 7.820972] %"
+ ],
+ "votes": "a web-app quantity is never a second confirmation of a freelancer quantity",
+ "freelancer_files_relationship": "six workbooks by the same measurer (covers NO:1, 2, 3, 3, 5, 6; NO:4 not supplied); covers summarise their own detail sheets by cell reference",
+ "use_of_web_app": [
+  "category mapping",
+  "commercial presentation",
+  "cost structure",
+  "current Urban Projects workflow"
+ ]
+}

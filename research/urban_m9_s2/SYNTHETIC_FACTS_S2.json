@@ -1,0 +1,20 @@
+{
+ "schema": "URBAN_ARCH_FACTS_V1",
+ "project_id": "SYNTHETIC VILLA S2",
+ "note": "TEST PARAMETERS for the synthetic villa of tools/arch_synth.py only - not project data, not supplier data",
+ "wall_heights": {
+  "*": {
+   "PLASTER": {"value_m": 3.0, "authority": "OWNER_PROJECT_FACT: synthetic test parameter"},
+   "PAINT": {"value_m": 3.0, "authority": "OWNER_PROJECT_FACT: synthetic test parameter"},
+   "WALL_TILE": {"value_m": 2.4, "authority": "OWNER_PROJECT_FACT: synthetic test parameter"}
+  }
+ },
+ "opening_heights": {
+  "DOOR": {"value_m": 2.1, "authority": "OWNER_PROJECT_FACT: synthetic test parameter"},
+  "WINDOW": {"value_m": 1.5, "authority": "OWNER_PROJECT_FACT: synthetic test parameter"}
+ },
+ "finishes": {"DRY": {"floor": "TILE-120x60"}, "WET": {"floor": "TILE-60x60"}},
+ "tile_constraints": {"joint_m": 0.002, "min_reusable_m": 0.1, "min_cut_m": 0.05},
+ "membrane": {"min_reusable_m": 0.3, "doorway_detail": "NOT_ESTABLISHED"},
+ "stairs": {"1F": {"riser_m": {"value_m": 0.175, "authority": "OWNER_PROJECT_FACT: synthetic test parameter"}}}
+}

@@ -1,0 +1,10 @@
+GROUP,M1_FAMILIES,ENGINE,M1_PLANNING_LOW_KG,M1_PLANNING_BASE_KG,M1_PLANNING_HIGH_KG,M1_UNRESOLVED_BAR_ITEMS,EXTERNAL_POSITION,DIFF_PCT_OF_M1_BASE,CLASS,APPLIES_TO,REASON
+BEAMS,BEAMS+LINTELS,freelancer QS,5918.7,6061.7,6109.3,9,ABOVE,63,MISSING_COMPONENT,M1,"beam bars of the unmeasurable and conflict spans, side bars and residue spans have no bar model; laps / wastage conventions also differ"
+FOUNDATIONS_RELATED,FOOTINGS,freelancer QS,3629.6,3629.6,3629.6,6,ABOVE,60,MISSING_COMPONENT,M1,"footing bar groups M1 holds UNRESOLVED (F / F10, boxed and extra bars) and column starters filed elsewhere"
+GROUND_BEAMS_AND_GROUND_SLAB,GROUND_BEAMS+GROUND_SLAB,freelancer QS,2538.3,2550.8,2555.0,0,ABOVE,282,MISSING_COMPONENT,M1,ground-beam spans M1 carries as provisional concrete have no bar model (see PF-M1-03); the freelancer also applies its own sections
+SLABS,SLABS+WATER_TANK_ROOF,freelancer QS,4163.2,4163.2,4163.2,0,ABOVE,30,MEASUREMENT_CONVENTION,both,slab mesh / top bars: lap and wastage allowances and the slab extent
+STAIRS_AND_DOME,DOMES+STAIRS,freelancer QS,946.1,973.1,973.1,8,ABOVE,301,MISSING_COMPONENT,M1,stair bars are UNRESOLVED in M1 (typical detail only)
+SWIMMING_POOL,POOL,freelancer QS,0.0,0.0,0.0,1,ABOVE,,MISSING_COMPONENT,M1,pool bars are UNRESOLVED in M1 (depths 'AS PER ARCH')
+WALLS_AND_COLUMNS,COLUMNS,freelancer QS,7337.5,7488.2,7538.4,2,ABOVE,6,MEASUREMENT_CONVENTION,both,column ties / laps / starters: M1 uses S3.1's model; the freelancer's wall population and allowances differ
+TOTAL_NET_REBAR (position only),ALL,U-C4N,24533.4,24866.6,24968.7,33,BELOW,,UNRESOLVED,both,"the oracle declares its own net rebar known incomplete; M1 has unresolved bar items too, so neither total is complete"
+TOTAL_NET_REBAR (position only),ALL,christiannp-autocad,24533.4,24866.6,24968.7,33,BELOW,,UNRESOLVED,both,"the oracle declares its own net rebar known incomplete; M1 has unresolved bar items too, so neither total is complete"

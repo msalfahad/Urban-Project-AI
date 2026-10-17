@@ -1,0 +1,81 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_ARCH_R5_INDEX",
+ "files": {
+  "ARCHITECTURAL_SOURCE_COVERAGE_REGISTER": "0ed00fb10f9d35360e6acedf5908df862c88e1ca532ae9beaed77e6977029f7b",
+  "PHYSICAL_SPACE_REGISTER": "10d894e43e12672de38dfc3e62686f9df13a33ab45f895c615befe902a345045",
+  "TOPOLOGY_SHADOW_COMPARISON": "bfff9c2e62bcf46571a9ffedc77367717691c46ea8260f0a222ecdf3fcba7b29",
+  "ORPHAN_SEMANTIC_LABEL_REGISTER": "110ad5a7ec57af061f4727a05a8f824b857502334da9d8d0786eafafdfecc83d",
+  "SEMANTIC_ZONE_REGISTER_V2": "843ba09b259366fa8c3f07d8da91ba911349c39c6ded6c3cbda3c2f1577acebc",
+  "TRADE_REGION_REGISTER_V2": "667d3a10140ef6bd1a2d215e10b6943888b21ecc81f7ebfc3eb822813c2a6e59",
+  "FLOOR_AREA_CONSERVATION_REGISTER": "f294c1bddff9fa52831d350b61322bf27f9be5c5fd357ec7e3a70cfed54e8259",
+  "WET_SERVICE_COMPLETENESS_REGISTER": "d95e41c3e579c3c760e5c402e61fc6014e8538b4c1ba84bed30117244213f384",
+  "WALL_SEGMENT_LEDGER_V2": "e374099cf3f849a997913d7ab1c8ba44a22391ac2e2559ce278782e30186674c",
+  "BLOCKWORK_LENGTH_REGISTER_V2": "c21387a767915f448069c9ae2366cad553d4baf712f881e1f2726e35b1fc9b1a",
+  "BLOCKWORK_AREA_REGISTER_V2": "6ef725ccd523f5bc65f4ccc1ec76dafa0bb537dbab3fd7c010431bea4f13b818",
+  "OPENING_EVIDENCE_REGISTER_V3": "073422a7a53e7316349f1b47d799351155e61411bdc920af8b4b4ba23f9347b5",
+  "FLOOR_FINISH_REGISTER_V2": "3c5872340e5836b25a7f7335f4b6bbca08a1296cd2209697986481881a2c9215",
+  "CEILING_AREA_REGISTER_V2": "4456526fc5ce22af465b386ce81101a186147dacd230fa28f7cfe9ca92b95771",
+  "SKIRTING_PATH_REGISTER_V3": "b2b76084f5d0f6ae2860c021735669104759fb91e7ecf76595b4e38f3a367204",
+  "WATERPROOFING_REGISTER_V2": "3554b50974545f30ab9772342c4ad9c6bdc9f4164469e35b024dd32c61b7362d",
+  "WALL_TILE_REGISTER_V2": "c4c52d98c6e004e8579eb62095a799f3ea872dccf3ce9aa49a7e294b5c90db5e",
+  "PLASTER_PAINT_REGISTER_V2": "9babace381246bd2d00116cb9bbf1ff863877213b0974ed24d33d78730676cd4",
+  "STAIR_ARCHITECTURAL_REGISTER": "0dc52d43dfd0562059f0225cb4f21515934ebaf9a961db0dba5c135b44e9f8e1",
+  "ARCHITECTURAL_QUANTITY_CONSERVATION_REGISTER": "a6e743d4cbb603bf14a12cad9ec93f3f2ee26e573615656f3aaacfaa29098224",
+  "ARCHITECTURAL_REVIEW_QUEUE": "1b8a9a2f43e548ff352d6fd26f0ea5b6526115ebb4ad0669df6ea453e94b9060",
+  "ARCH_ACCURACY_SCORECARD_V3": "5b5c3bc6544ce5a8f2b4fa91c5cbd35334c7bcfa2efdf0c29c2c1845a1efcac5"
+ },
+ "gates": [
+  {
+   "gate": "A01",
+   "statement": "every admitted architectural source object terminates (coverage register, 5 states)"
+  },
+  {
+   "gate": "A02",
+   "statement": "floor plate conserved per floor; residual listed as UNRESOLVED_BLOCKED"
+  },
+  {
+   "gate": "A03",
+   "statement": "wall ledger: every admitted piece one class, unaccounted length 0"
+  },
+  {
+   "gate": "A04",
+   "statement": "masonry never from thickness alone"
+  },
+  {
+   "gate": "A05",
+   "statement": "mixed zone never fully DRY; split only along positive source boundaries"
+  },
+  {
+   "gate": "A06",
+   "statement": "orphan labels never deleted (terminal outcome each)"
+  },
+  {
+   "gate": "A07",
+   "statement": "opening area only with width AND height; no default window height; glazed door candidate kept"
+  },
+  {
+   "gate": "A08",
+   "statement": "skirting excludes doors / voids / zone splits; wet full-tile rooms none"
+  },
+  {
+   "gate": "A09",
+   "statement": "every wet region has floor + WP + wall-tile records"
+  },
+  {
+   "gate": "A10",
+   "statement": "no face both fully tiled and plastered / painted"
+  },
+  {
+   "gate": "A11",
+   "statement": "external areas never in internal floor totals"
+  },
+  {
+   "gate": "A12",
+   "statement": "Route B is shadow only; disagreements recorded"
+  }
+ ],
+ "p7757_dxf_revision": "ALSENAN_P7757_DXF",
+ "p7757_dxf_anchor_sha256": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4",
+ "frozen_before_benchmark": true,
+ "built_twice_identical": true
+}

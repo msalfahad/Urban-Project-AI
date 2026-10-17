@@ -1,0 +1,299 @@
+{
+ "note": "cluttered synthetic villas seeds 1-8 (tools/synthetic_villa_m6, odd seeds with drafting noise, hard, V2 cases), V5 conventions, number of differing quantity groups per operation; development runs (not held-out)",
+ "runs": {
+  "1_initial": {
+   "1": {
+    "dup_text": 0,
+    "explode": 0,
+    "mirror_x": 22,
+    "noise_layer": 4,
+    "reorder": 0,
+    "rot180": 22,
+    "rot270": 22,
+    "rot90": 22,
+    "translate": 22,
+    "units_m": 22
+   },
+   "2": {
+    "dup_text": 0,
+    "explode": 0,
+    "mirror_x": 0,
+    "noise_layer": 9,
+    "reorder": 0,
+    "rot180": 0,
+    "rot270": 0,
+    "rot90": 0,
+    "translate": 6,
+    "units_m": 16
+   },
+   "3": {
+    "dup_text": 0,
+    "explode": 0,
+    "mirror_x": 22,
+    "noise_layer": 0,
+    "reorder": 0,
+    "rot180": 22,
+    "rot270": 22,
+    "rot90": 22,
+    "translate": 22,
+    "units_m": 22
+   },
+   "4": {
+    "dup_text": 0,
+    "explode": 0,
+    "mirror_x": 0,
+    "noise_layer": 15,
+    "reorder": 0,
+    "rot180": 0,
+    "rot270": 0,
+    "rot90": 0,
+    "translate": 0,
+    "units_m": 0
+   },
+   "5": {
+    "dup_text": 0,
+    "explode": 0,
+    "mirror_x": 11,
+    "noise_layer": 0,
+    "reorder": 0,
+    "rot180": 11,
+    "rot270": 11,
+    "rot90": 11,
+    "translate": 11,
+    "units_m": 11
+   },
+   "6": {
+    "dup_text": 0,
+    "explode": 0,
+    "mirror_x": 0,
+    "noise_layer": 9,
+    "reorder": 0,
+    "rot180": 0,
+    "rot270": 0,
+    "rot90": 0,
+    "translate": 0,
+    "units_m": 0
+   },
+   "7": {
+    "dup_text": 0,
+    "explode": 0,
+    "mirror_x": 22,
+    "noise_layer": 0,
+    "reorder": 0,
+    "rot180": 22,
+    "rot270": 22,
+    "rot90": 22,
+    "translate": 31,
+    "units_m": 18
+   },
+   "8": {
+    "dup_text": 0,
+    "explode": 0,
+    "mirror_x": 0,
+    "noise_layer": 18,
+    "reorder": 0,
+    "rot180": 0,
+    "rot270": 0,
+    "rot90": 0,
+    "translate": 0,
+    "units_m": 0
+   }
+  },
+  "2_after_mtext_rotation": {
+   "1": {
+    "dup_text": 0,
+    "explode": 0,
+    "mirror_x": 0,
+    "noise_layer": 4,
+    "reorder": 0,
+    "rot180": 0,
+    "rot270": 0,
+    "rot90": 0,
+    "translate": 0,
+    "units_m": 0
+   },
+   "2": {
+    "dup_text": 0,
+    "explode": 0,
+    "mirror_x": 0,
+    "noise_layer": 9,
+    "reorder": 0,
+    "rot180": 0,
+    "rot270": 0,
+    "rot90": 0,
+    "translate": 6,
+    "units_m": 16
+   },
+   "3": {
+    "dup_text": 0,
+    "explode": 0,
+    "mirror_x": 0,
+    "noise_layer": 0,
+    "reorder": 0,
+    "rot180": 0,
+    "rot270": 0,
+    "rot90": 0,
+    "translate": 0,
+    "units_m": 0
+   },
+   "4": {
+    "dup_text": 0,
+    "explode": 0,
+    "mirror_x": 0,
+    "noise_layer": 15,
+    "reorder": 0,
+    "rot180": 0,
+    "rot270": 0,
+    "rot90": 0,
+    "translate": 0,
+    "units_m": 0
+   },
+   "5": {
+    "dup_text": 0,
+    "explode": 0,
+    "mirror_x": 0,
+    "noise_layer": 0,
+    "reorder": 0,
+    "rot180": 0,
+    "rot270": 0,
+    "rot90": 0,
+    "translate": 0,
+    "units_m": 0
+   },
+   "6": {
+    "dup_text": 0,
+    "explode": 0,
+    "mirror_x": 0,
+    "noise_layer": 9,
+    "reorder": 0,
+    "rot180": 0,
+    "rot270": 0,
+    "rot90": 0,
+    "translate": 0,
+    "units_m": 0
+   },
+   "7": {
+    "dup_text": 0,
+    "explode": 0,
+    "mirror_x": 0,
+    "noise_layer": 0,
+    "reorder": 0,
+    "rot180": 0,
+    "rot270": 0,
+    "rot90": 0,
+    "translate": 9,
+    "units_m": 18
+   },
+   "8": {
+    "dup_text": 0,
+    "explode": 0,
+    "mirror_x": 0,
+    "noise_layer": 18,
+    "reorder": 0,
+    "rot180": 0,
+    "rot270": 0,
+    "rot90": 0,
+    "translate": 0,
+    "units_m": 0
+   }
+  },
+  "3_final": {
+   "1": {
+    "dup_text": 0,
+    "explode": 0,
+    "mirror_x": 0,
+    "noise_layer": 0,
+    "reorder": 0,
+    "rot180": 0,
+    "rot270": 0,
+    "rot90": 0,
+    "translate": 0,
+    "units_m": 0
+   },
+   "2": {
+    "dup_text": 0,
+    "explode": 0,
+    "mirror_x": 0,
+    "noise_layer": 0,
+    "reorder": 0,
+    "rot180": 0,
+    "rot270": 0,
+    "rot90": 0,
+    "translate": 0,
+    "units_m": 0
+   },
+   "3": {
+    "dup_text": 0,
+    "explode": 0,
+    "mirror_x": 0,
+    "noise_layer": 0,
+    "reorder": 0,
+    "rot180": 0,
+    "rot270": 0,
+    "rot90": 0,
+    "translate": 0,
+    "units_m": 0
+   },
+   "4": {
+    "dup_text": 0,
+    "explode": 0,
+    "mirror_x": 0,
+    "noise_layer": 0,
+    "reorder": 0,
+    "rot180": 0,
+    "rot270": 0,
+    "rot90": 0,
+    "translate": 0,
+    "units_m": 0
+   },
+   "5": {
+    "dup_text": 0,
+    "explode": 0,
+    "mirror_x": 0,
+    "noise_layer": 0,
+    "reorder": 0,
+    "rot180": 0,
+    "rot270": 0,
+    "rot90": 0,
+    "translate": 0,
+    "units_m": 0
+   },
+   "6": {
+    "dup_text": 0,
+    "explode": 0,
+    "mirror_x": 0,
+    "noise_layer": 0,
+    "reorder": 0,
+    "rot180": 0,
+    "rot270": 0,
+    "rot90": 0,
+    "translate": 0,
+    "units_m": 0
+   },
+   "7": {
+    "dup_text": 0,
+    "explode": 0,
+    "mirror_x": 0,
+    "noise_layer": 0,
+    "reorder": 0,
+    "rot180": 0,
+    "rot270": 0,
+    "rot90": 0,
+    "translate": 0,
+    "units_m": 0
+   },
+   "8": {
+    "dup_text": 0,
+    "explode": 0,
+    "mirror_x": 0,
+    "noise_layer": 0,
+    "reorder": 0,
+    "rot180": 0,
+    "rot270": 0,
+    "rot90": 0,
+    "translate": 0,
+    "units_m": 0
+   }
+  }
+ }
+}

@@ -1,0 +1,94 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_REBAR_MASS_CONSERVATION_V3",
+ "component_kg": {
+  "verified_kg": 23889.224632,
+  "provisional_kg": 7464.172135,
+  "audit_kg": 0.0
+ },
+ "released_component_verified_kg": 21195.111569,
+ "population_kg": {
+  "verified_complete_kg": 48.924444,
+  "lower_bound_kg": 21146.187125,
+  "provisional_kg": 6959.124046,
+  "budget_kg": 319.11342,
+  "audit_kg": 2880.047732
+ },
+ "trade_kg": {
+  "verified_complete_kg": 48.924444,
+  "lower_bound_kg": 21146.187125,
+  "provisional_kg": 6959.124046,
+  "budget_kg": 319.11342,
+  "audit_kg": 2880.047732,
+  "populations_by_state": {
+   "BLOCKED": 45,
+   "VERIFIED_COMPLETE": 4,
+   "VERIFIED_PARTIAL_LOWER_BOUND": 150,
+   "PROVISIONAL": 8,
+   "NOT_IN_SCOPE": 31,
+   "BUDGET": 1
+  },
+  "project_final_rebar_total": "NOT YET ESTABLISHED"
+ },
+ "bbs_total": {
+  "net_kg": 21195.111569,
+  "used_kg": 21668.673481,
+  "purchased_kg": 22634.962963,
+  "waste_kg": 966.289482,
+  "waste_pct": 4.269013
+ },
+ "checks": {
+  "completeness": {
+   "violations": [],
+   "pass": true
+  },
+  "duplicates": {
+   "violations": [],
+   "pass": true
+  },
+  "provenance": {
+   "violations": [],
+   "pass": true
+  },
+  "mass": {
+   "violations": [],
+   "pass": true
+  },
+  "bbs_eligibility": {
+   "violations": [],
+   "pass": true
+  },
+  "cb_accounting": {
+   "violations": [],
+   "pass": true
+  },
+  "cb_span_cores": {
+   "violations": [],
+   "pass": true
+  },
+  "ftb_layers": {
+   "violations": [],
+   "pass": true
+  },
+  "layer_tags": {
+   "violations": [],
+   "pass": true
+  },
+  "column_d5": {
+   "violations": [],
+   "pass": true
+  },
+  "t_and_b": {
+   "violations": [],
+   "pass": true
+  },
+  "strap_conflicts": {
+   "violations": [],
+   "pass": true
+  },
+  "source_consistency": {
+   "violations": [],
+   "pass": true
+  }
+ },
+ "rule": "sum(component) = population = trade per bucket; BBS used >= net; purchased >= used; waste = purchased - used; no negative; no component in two populations; NET and PROCUREMENT never added together"
+}

@@ -1,0 +1,11 @@
+CRITERION,KIND,SATISFIED,EVIDENCE
+B-01,IDENTITY_LABEL,True,"plan text 'swimming pool' (layer 5) 739.0 mm from the pool arc centre, inside the R1550 water outline"
+B-02,DIMENSION_MATCH,True,elevation outer faces 3500.0 mm apart = plan '350' (4C4) 3500.0 mm
+B-03,DIMENSION_MATCH,True,elevation inner faces 3100.0 mm apart = 2 x the R1550 water arc
+B-04,DIMENSION_MATCH,True,elevation wall 200.0 mm = R1750 - R1550
+B-05,FEATURE_MATCH,True,"10 generator lines inside the element are those of a cylinder of radius 1550.0 mm seen side-on (angles [71.7, 44.6, 31.1, 18.3, 12.2]): the pool's semicircular inner wall R1550"
+B-06,FEATURE_MATCH,True,"the curved element above is symmetric about the same axis with half-width 2236.1 mm = the plan arc R2250 (96.379-263.621 deg, inner face of the curved wall: pool R1750 + gap 500) projected on the facade axis, 2236.1 mm"
+B-07,FEATURE_MATCH,True,"view direction: both drawn features are symmetric about the element's axis. The curved-wall arc projects symmetrically only onto plan y (-2236..2236 mm); onto x it spans -2250..-250 mm. So the elevation looks along plan x, from the straight sea-side end"
+B-08,LEVEL_MATCH,True,'+0.15' on the elevation deck line right of the element and 2 '+0.15' LEVEL marks round the pool in plan
+B-09,CONTRADICTION,False,"another sunken object (lift, pit, tank, sump) labelled at this place in plan: []"
+VERDICT,BINDING,True,BOUND: '115' (2E5E) measures the swimming pool; '70' (2E6C) measures the building (pool wall top to the house floor)

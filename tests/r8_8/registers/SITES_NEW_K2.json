@@ -1,0 +1,2742 @@
+[
+ {
+  "site_id": "SITE-000cb4848de65f42",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.09396,
+  "area_bound_m2": 0.002825,
+  "perimeter_native": 282.457407,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1016||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1017||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1018||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1019||SEGMENT|0",
+   "QORTUBA_REV_NEW|H459||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 201.343055,
+   "TOPOLOGY_BOUNDARY": 81.114352
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 28.245740690189635
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-16beefe79d1949e3",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.164251,
+  "area_bound_m2": 0.004833,
+  "perimeter_native": 483.288885,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1514||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1515||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1518||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1519||SEGMENT|0",
+   "QORTUBA_REV_NEW|H510||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 351.966664,
+   "TOPOLOGY_BOUNDARY": 131.322221
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 48.32888849449519
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-1bb7f3bf4a602fbf",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.7875,
+  "area_bound_m2": 0.0108,
+  "perimeter_native": 1080.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H546||SEGMENT|0",
+   "QORTUBA_REV_NEW|H549||SEGMENT|0",
+   "QORTUBA_REV_NEW|H699||SEGMENT|0",
+   "QORTUBA_REV_NEW|H704||SEGMENT|1"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 30.0,
+   "TOPOLOGY_BOUNDARY": 1050.0
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 108.00000000002348
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-1c4abf65f9b5db1e",
+  "kind": "LABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [
+   "I1453"
+  ],
+  "stamps": [
+   [
+    "BATH",
+    "plHL"
+   ]
+  ],
+  "apartment_names": [
+   [
+    "BATH"
+   ]
+  ],
+  "area_m2": 8.5525,
+  "area_bound_m2": 0.0119,
+  "perimeter_native": 1190.0,
+  "boundary_source_ids": [
+   "CLOSURE|I1443|A",
+   "QORTUBA_REV_NEW|H1675||SEGMENT|0",
+   "QORTUBA_REV_NEW|H458||SEGMENT|0",
+   "QORTUBA_REV_NEW|H460||SEGMENT|0",
+   "QORTUBA_REV_NEW|H522||SEGMENT|0",
+   "QORTUBA_REV_NEW|H526||SEGMENT|0",
+   "QORTUBA_REV_NEW|H527||SEGMENT|0",
+   "QORTUBA_REV_NEW|H714||SEGMENT|2",
+   "QORTUBA_REV_NEW|H714||SEGMENT|3"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "OPENING_BOUNDARY": 80.0,
+   "STRUCTURAL_OBSTACLE": 55.0,
+   "TOPOLOGY_BOUNDARY": 1055.0
+  },
+  "contents": {
+   "OPENING_SYMBOL": 10
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 119.00000000001074
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-1cc94d2ca98f6229",
+  "kind": "OPENING_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.12,
+  "area_bound_m2": 0.0019,
+  "perimeter_native": 190.0,
+  "boundary_source_ids": [
+   "CLOSURE|I2044|A",
+   "CLOSURE|I2044|B",
+   "QORTUBA_REV_NEW|H2043||SEGMENT|0",
+   "QORTUBA_REV_NEW|H2045||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "OPENING_BOUNDARY": 160.0,
+   "TOPOLOGY_BOUNDARY": 30.0
+  },
+  "contents": {
+   "OPENING_SYMBOL": 10
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 18.99999999994143
+  },
+  "opening_of": "I2044",
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-1e137bdedfb4a92a",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 1.552943,
+  "area_bound_m2": 0.017854,
+  "perimeter_native": 1785.443391,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1017||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1338||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1990||SEGMENT|0",
+   "QORTUBA_REV_NEW|H2043||SEGMENT|0",
+   "QORTUBA_REV_NEW|H459||SEGMENT|0",
+   "QORTUBA_REV_NEW|H463||SEGMENT|0",
+   "QORTUBA_REV_NEW|H464||SEGMENT|0",
+   "QORTUBA_REV_NEW|H466||SEGMENT|0",
+   "QORTUBA_REV_NEW|H468||SEGMENT|0",
+   "QORTUBA_REV_NEW|H469||SEGMENT|0",
+   "QORTUBA_REV_NEW|H470||SEGMENT|0",
+   "QORTUBA_REV_NEW|H472||SEGMENT|0",
+   "QORTUBA_REV_NEW|H473||SEGMENT|0",
+   "QORTUBA_REV_NEW|H475||SEGMENT|0",
+   "QORTUBA_REV_NEW|H477||SEGMENT|0",
+   "QORTUBA_REV_NEW|H718||SEGMENT|3"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 20.0,
+   "TOPOLOGY_BOUNDARY": 1765.443391
+  },
+  "contents": {
+   "OPENING_SYMBOL": 3
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 178.54433910545924
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-1ee05f19c800b1b0",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.49,
+  "area_bound_m2": 0.0053,
+  "perimeter_native": 530.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H444||SEGMENT|0",
+   "QORTUBA_REV_NEW|H489||SEGMENT|0",
+   "QORTUBA_REV_NEW|H699||SEGMENT|1",
+   "QORTUBA_REV_NEW|H702||SEGMENT|3"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 40.0,
+   "TOPOLOGY_BOUNDARY": 490.0
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 52.99999999999454
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-200fdc0beeaa8739",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.0225,
+  "area_bound_m2": 0.001,
+  "perimeter_native": 100.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1272||SEGMENT|0",
+   "QORTUBA_REV_NEW|H546||SEGMENT|0",
+   "QORTUBA_REV_NEW|H704||SEGMENT|0",
+   "QORTUBA_REV_NEW|H704||SEGMENT|1"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 50.0,
+   "TOPOLOGY_BOUNDARY": 50.0
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 9.999999999925059
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-23db89e96ede6dac",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.080537,
+  "area_bound_m2": 0.002805,
+  "perimeter_native": 280.457407,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1016||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1017||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1019||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1021||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 268.457407,
+   "TOPOLOGY_BOUNDARY": 12.0
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 28.04574069020964
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-2b7e752d7baa45f5",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.175,
+  "area_bound_m2": 0.00514,
+  "perimeter_native": 514.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1321||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1322||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1325||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1326||SEGMENT|0",
+   "QORTUBA_REV_NEW|H512||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 375.0,
+   "TOPOLOGY_BOUNDARY": 139.0
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 51.39999999999709
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-2bf3db64b092ac64",
+  "kind": "OPENING_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.15,
+  "area_bound_m2": 0.0023,
+  "perimeter_native": 230.0,
+  "boundary_source_ids": [
+   "CLOSURE|I677|A",
+   "CLOSURE|I677|B",
+   "QORTUBA_REV_NEW|H1007||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1273||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "OPENING_BOUNDARY": 200.0,
+   "TOPOLOGY_BOUNDARY": 30.0
+  },
+  "contents": {
+   "OPENING_SYMBOL": 10
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 23.000000000167894
+  },
+  "opening_of": "I677",
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-334628841f471bed",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.118826,
+  "area_bound_m2": 0.003535,
+  "perimeter_native": 353.503064,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1022||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1023||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1024||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1025||SEGMENT|0",
+   "QORTUBA_REV_NEW|H455||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 254.627298,
+   "TOPOLOGY_BOUNDARY": 98.875766
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 35.35030640330042
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-3560d030b869ac30",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.315,
+  "area_bound_m2": 0.0045,
+  "perimeter_native": 450.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1444||SEGMENT|0",
+   "QORTUBA_REV_NEW|H526||SEGMENT|0",
+   "QORTUBA_REV_NEW|H531||SEGMENT|0",
+   "QORTUBA_REV_NEW|H714||SEGMENT|2"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 15.0,
+   "TOPOLOGY_BOUNDARY": 435.0
+  },
+  "contents": {
+   "OPENING_SYMBOL": 1
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 44.999999999983814
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-3a6f70f44b93c7b5",
+  "kind": "UNLABELLED_SITE",
+  "status": "REVIEW_REQUIRED",
+  "issues": [
+   "TOPOLOGY_ROLE_UNRESOLVED"
+  ],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 1.098729,
+  "area_bound_m2": 0.014312,
+  "perimeter_native": 1431.229067,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1322||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1473||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1514||SEGMENT|0",
+   "QORTUBA_REV_NEW|H506||SEGMENT|0",
+   "QORTUBA_REV_NEW|H510||SEGMENT|0",
+   "QORTUBA_REV_NEW|H512||SEGMENT|0",
+   "QORTUBA_REV_NEW|H518||SEGMENT|0",
+   "QORTUBA_REV_NEW|H523||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "TOPOLOGY_BOUNDARY": 1431.229067
+  },
+  "contents": {
+   "OPENING_SYMBOL": 1,
+   "UNKNOWN_PHYSICAL": 6
+  },
+  "blocked_by": [
+   "QORTUBA_REV_NEW|H612097|700047|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612097|700051|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612098|700047|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612098|700051|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612100|700047|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612100|700051|SEGMENT|0"
+  ],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 143.12290673027857
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-3b875c57dda012d3",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.164251,
+  "area_bound_m2": 0.004833,
+  "perimeter_native": 483.288885,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1514||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1515||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1516||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1517||SEGMENT|0",
+   "QORTUBA_REV_NEW|H506||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 351.966664,
+   "TOPOLOGY_BOUNDARY": 131.322221
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 48.32888849449519
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-3c956adac3484dd9",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.275,
+  "area_bound_m2": 0.0057,
+  "perimeter_native": 570.0,
+  "boundary_source_ids": [
+   "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F2",
+   "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F1",
+   "QORTUBA_REV_NEW|H1512||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1513||SEGMENT|0",
+   "QORTUBA_REV_NEW|H533||SEGMENT|0",
+   "QORTUBA_REV_NEW|H542||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 412.5,
+   "OPENING_BOUNDARY": 137.5,
+   "TOPOLOGY_BOUNDARY": 20.0
+  },
+  "contents": {
+   "FURNITURE": 6
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 56.99999999996217
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-404c077514e2269f",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.0975,
+  "area_bound_m2": 0.0016,
+  "perimeter_native": 160.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1271||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1272||SEGMENT|0",
+   "QORTUBA_REV_NEW|H546||SEGMENT|0",
+   "QORTUBA_REV_NEW|H549||SEGMENT|0",
+   "QORTUBA_REV_NEW|H704||SEGMENT|0",
+   "QORTUBA_REV_NEW|H704||SEGMENT|1",
+   "QORTUBA_REV_NEW|H704||SEGMENT|2",
+   "QORTUBA_REV_NEW|H704||SEGMENT|3"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 70.0,
+   "TOPOLOGY_BOUNDARY": 90.0
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 15.99999999983229
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-40c6cd00232ce5c2",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.101851,
+  "area_bound_m2": 0.003515,
+  "perimeter_native": 351.503064,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1022||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1023||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1025||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1027||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 339.503064,
+   "TOPOLOGY_BOUNDARY": 12.0
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 35.15030640330224
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-442b55192e6578ff",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.12,
+  "area_bound_m2": 0.0016,
+  "perimeter_native": 160.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1677||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1678||SEGMENT|0",
+   "QORTUBA_REV_NEW|H454||SEGMENT|0",
+   "QORTUBA_REV_NEW|H516||SEGMENT|0",
+   "QORTUBA_REV_NEW|H712||SEGMENT|0",
+   "QORTUBA_REV_NEW|H712||SEGMENT|1",
+   "QORTUBA_REV_NEW|H712||SEGMENT|2",
+   "QORTUBA_REV_NEW|H712||SEGMENT|3"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 80.0,
+   "TOPOLOGY_BOUNDARY": 80.0
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 15.999999999999273
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-44e79002f6975126",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.112769,
+  "area_bound_m2": 0.003362,
+  "perimeter_native": 336.198404,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1338||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1339||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1340||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1341||SEGMENT|0",
+   "QORTUBA_REV_NEW|H459||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 241.648803,
+   "TOPOLOGY_BOUNDARY": 94.549601
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 33.61984040763382
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-47f3ffda2aca56f7",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 3.878901,
+  "area_bound_m2": 0.041739,
+  "perimeter_native": 4173.900798,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1022||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1339||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1442||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1513||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1560||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1673||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1674||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1675||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1676||SEGMENT|0",
+   "QORTUBA_REV_NEW|H455||SEGMENT|0",
+   "QORTUBA_REV_NEW|H457||SEGMENT|0",
+   "QORTUBA_REV_NEW|H458||SEGMENT|0",
+   "QORTUBA_REV_NEW|H459||SEGMENT|0",
+   "QORTUBA_REV_NEW|H460||SEGMENT|0",
+   "QORTUBA_REV_NEW|H461||SEGMENT|0",
+   "QORTUBA_REV_NEW|H462||SEGMENT|0",
+   "QORTUBA_REV_NEW|H463||SEGMENT|0",
+   "QORTUBA_REV_NEW|H481||SEGMENT|0",
+   "QORTUBA_REV_NEW|H483||SEGMENT|0",
+   "QORTUBA_REV_NEW|H484||SEGMENT|0",
+   "QORTUBA_REV_NEW|H520||SEGMENT|0",
+   "QORTUBA_REV_NEW|H521||SEGMENT|0",
+   "QORTUBA_REV_NEW|H522||SEGMENT|0",
+   "QORTUBA_REV_NEW|H527||SEGMENT|0",
+   "QORTUBA_REV_NEW|H528||SEGMENT|0",
+   "QORTUBA_REV_NEW|H529||SEGMENT|0",
+   "QORTUBA_REV_NEW|H530||SEGMENT|0",
+   "QORTUBA_REV_NEW|H537||SEGMENT|0",
+   "QORTUBA_REV_NEW|H538||SEGMENT|0",
+   "QORTUBA_REV_NEW|H539||SEGMENT|0",
+   "QORTUBA_REV_NEW|H540||SEGMENT|0",
+   "QORTUBA_REV_NEW|H714||SEGMENT|0",
+   "QORTUBA_REV_NEW|H716||SEGMENT|0",
+   "QORTUBA_REV_NEW|H720||SEGMENT|2"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 135.0,
+   "TOPOLOGY_BOUNDARY": 4038.900798
+  },
+  "contents": {
+   "OPENING_SYMBOL": 5
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 417.39007979600814
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-496a42dddca4f8ff",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.15,
+  "area_bound_m2": 0.00512,
+  "perimeter_native": 512.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1321||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1322||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1324||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1326||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 500.0,
+   "TOPOLOGY_BOUNDARY": 12.0
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 51.19999999998254
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-4cd00ecb866fbbb9",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.015,
+  "area_bound_m2": 0.0005,
+  "perimeter_native": 50.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1562||SEGMENT|0",
+   "QORTUBA_REV_NEW|H528||SEGMENT|0",
+   "QORTUBA_REV_NEW|H538||SEGMENT|0",
+   "QORTUBA_REV_NEW|H716||SEGMENT|2"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 15.0,
+   "TOPOLOGY_BOUNDARY": 35.0
+  },
+  "contents": {
+   "OPENING_SYMBOL": 1
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 5.000000000015461
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-4e2a2a3375396340",
+  "kind": "LABELLED_SITE",
+  "status": "REVIEW_REQUIRED",
+  "issues": [
+   "MULTIPLE_SEMANTIC_LABELS",
+   "TOPOLOGY_ROLE_UNRESOLVED"
+  ],
+  "labels": [
+   "I999",
+   "I1251",
+   "I2046"
+  ],
+  "stamps": [
+   [
+    "BED.ROOM",
+    "yvtmk,L"
+   ],
+   [
+    "BATH",
+    "plHL"
+   ],
+   [
+    "HALL",
+    "whgm"
+   ]
+  ],
+  "apartment_names": [
+   [
+    "BED.ROOM"
+   ],
+   [
+    "BATH"
+   ],
+   [
+    "HALL",
+    "whgm"
+   ]
+  ],
+  "area_m2": 68.54,
+  "area_bound_m2": 0.075214,
+  "perimeter_native": 7521.421076,
+  "boundary_source_ids": [
+   "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F2",
+   "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F1",
+   "CLOSURE|I1471|A",
+   "CLOSURE|I1561|B",
+   "CLOSURE|I1988|B",
+   "CLOSURE|I2044|A",
+   "CLOSURE|I2044|B",
+   "CLOSURE|I677|A",
+   "CLOSURE|I841|A",
+   "CLOSURE|I841|B",
+   "QORTUBA_REV_NEW|H1271||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1319||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1472||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1473||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1518||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1547||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1947||SEGMENT|0",
+   "QORTUBA_REV_NEW|H2045||SEGMENT|0",
+   "QORTUBA_REV_NEW|H2296||SEGMENT|0",
+   "QORTUBA_REV_NEW|H2297||SEGMENT|0",
+   "QORTUBA_REV_NEW|H448||SEGMENT|0",
+   "QORTUBA_REV_NEW|H464||SEGMENT|0",
+   "QORTUBA_REV_NEW|H466||SEGMENT|0",
+   "QORTUBA_REV_NEW|H468||SEGMENT|0",
+   "QORTUBA_REV_NEW|H470||SEGMENT|0",
+   "QORTUBA_REV_NEW|H471||SEGMENT|0",
+   "QORTUBA_REV_NEW|H472||SEGMENT|0",
+   "QORTUBA_REV_NEW|H473||SEGMENT|0",
+   "QORTUBA_REV_NEW|H474||SEGMENT|0",
+   "QORTUBA_REV_NEW|H477||SEGMENT|0",
+   "QORTUBA_REV_NEW|H484||SEGMENT|0",
+   "QORTUBA_REV_NEW|H485||SEGMENT|0",
+   "QORTUBA_REV_NEW|H486||SEGMENT|0",
+   "QORTUBA_REV_NEW|H487||SEGMENT|0",
+   "QORTUBA_REV_NEW|H488||SEGMENT|0",
+   "QORTUBA_REV_NEW|H510||SEGMENT|0",
+   "QORTUBA_REV_NEW|H523||SEGMENT|0",
+   "QORTUBA_REV_NEW|H525||SEGMENT|0",
+   "QORTUBA_REV_NEW|H530||SEGMENT|0",
+   "QORTUBA_REV_NEW|H538||SEGMENT|0",
+   "QORTUBA_REV_NEW|H539||SEGMENT|0",
+   "QORTUBA_REV_NEW|H542||SEGMENT|0",
+   "QORTUBA_REV_NEW|H543||SEGMENT|0",
+   "QORTUBA_REV_NEW|H549||SEGMENT|0",
+   "QORTUBA_REV_NEW|H551||SEGMENT|0",
+   "QORTUBA_REV_NEW|H552||SEGMENT|0",
+   "QORTUBA_REV_NEW|H555||SEGMENT|0",
+   "QORTUBA_REV_NEW|H578||SEGMENT|0",
+   "QORTUBA_REV_NEW|H699||SEGMENT|3",
+   "QORTUBA_REV_NEW|H704||SEGMENT|3",
+   "QORTUBA_REV_NEW|H708||SEGMENT|0",
+   "QORTUBA_REV_NEW|H716||SEGMENT|2",
+   "QORTUBA_REV_NEW|H718||SEGMENT|1",
+   "QORTUBA_REV_NEW|H718||SEGMENT|2",
+   "QORTUBA_REV_NEW|H843||SEGMENT|0"
+  ],
+  "hole_source_ids": [
+   "QORTUBA_REV_NEW|H2060||SEGMENT|0",
+   "QORTUBA_REV_NEW|H2060||SEGMENT|1",
+   "QORTUBA_REV_NEW|H2060||SEGMENT|2",
+   "QORTUBA_REV_NEW|H2060||SEGMENT|3"
+  ],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 315.090149,
+   "OPENING_BOUNDARY": 877.5,
+   "STRUCTURAL_OBSTACLE": 165.0,
+   "TOPOLOGY_BOUNDARY": 5663.830927
+  },
+  "contents": {
+   "DIMENSION_GRAPHICS": 6,
+   "FURNITURE": 74,
+   "OPENING_SYMBOL": 43,
+   "UNKNOWN_PHYSICAL": 81
+  },
+  "blocked_by": [
+   "QORTUBA_REV_NEW|H612083|700047|ARC|0",
+   "QORTUBA_REV_NEW|H612083|700051|ARC|0",
+   "QORTUBA_REV_NEW|H612083|700052|ARC|0",
+   "QORTUBA_REV_NEW|H612084|700047|ARC|0",
+   "QORTUBA_REV_NEW|H612084|700051|ARC|0",
+   "QORTUBA_REV_NEW|H612084|700052|ARC|0",
+   "QORTUBA_REV_NEW|H612085|700047|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612085|700051|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612085|700052|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612086|700047|ARC|0",
+   "QORTUBA_REV_NEW|H612086|700051|ARC|0",
+   "QORTUBA_REV_NEW|H612086|700052|ARC|0",
+   "QORTUBA_REV_NEW|H612087|700047|ARC|0",
+   "QORTUBA_REV_NEW|H612087|700051|ARC|0",
+   "QORTUBA_REV_NEW|H612087|700052|ARC|0",
+   "QORTUBA_REV_NEW|H612088|700047|ARC|0",
+   "QORTUBA_REV_NEW|H612088|700051|ARC|0",
+   "QORTUBA_REV_NEW|H612088|700052|ARC|0",
+   "QORTUBA_REV_NEW|H612089|700047|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612089|700051|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612089|700052|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612090|700047|ARC|0",
+   "QORTUBA_REV_NEW|H612090|700051|ARC|0",
+   "QORTUBA_REV_NEW|H612090|700052|ARC|0",
+   "QORTUBA_REV_NEW|H612091|700047|ARC|0",
+   "QORTUBA_REV_NEW|H612091|700051|ARC|0",
+   "QORTUBA_REV_NEW|H612091|700052|ARC|0",
+   "QORTUBA_REV_NEW|H612092|700047|ARC|0",
+   "QORTUBA_REV_NEW|H612092|700051|ARC|0",
+   "QORTUBA_REV_NEW|H612092|700052|ARC|0",
+   "QORTUBA_REV_NEW|H612093|700047|ARC|0",
+   "QORTUBA_REV_NEW|H612093|700051|ARC|0",
+   "QORTUBA_REV_NEW|H612093|700052|ARC|0",
+   "QORTUBA_REV_NEW|H612094|700047|ARC|0",
+   "QORTUBA_REV_NEW|H612094|700051|ARC|0",
+   "QORTUBA_REV_NEW|H612094|700052|ARC|0",
+   "QORTUBA_REV_NEW|H612095|700047|ARC|0",
+   "QORTUBA_REV_NEW|H612095|700051|ARC|0",
+   "QORTUBA_REV_NEW|H612095|700052|ARC|0",
+   "QORTUBA_REV_NEW|H612096|700047|ARC|0",
+   "QORTUBA_REV_NEW|H612096|700051|ARC|0",
+   "QORTUBA_REV_NEW|H612096|700052|ARC|0",
+   "QORTUBA_REV_NEW|H612097|700047|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612097|700051|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612097|700052|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612098|700047|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612098|700051|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612098|700052|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612099|700047|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612099|700051|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612099|700052|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612100|700047|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612100|700051|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612100|700052|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612101|700047|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612101|700051|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612101|700052|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612102|700047|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612102|700051|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612102|700052|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612103|700047|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612103|700051|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612103|700052|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612104|700047|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612104|700051|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612104|700052|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612105|700047|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612105|700051|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612105|700052|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612106|700047|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612106|700051|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612106|700052|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612107|700047|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612107|700051|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612107|700052|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612108|700047|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612108|700051|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612108|700052|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612109|700047|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612109|700051|SEGMENT|0",
+   "QORTUBA_REV_NEW|H612109|700052|SEGMENT|0"
+  ],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 752.1421075943605
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-5b8e4f9259cdb19c",
+  "kind": "OPENING_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.12,
+  "area_bound_m2": 0.0019,
+  "perimeter_native": 190.0,
+  "boundary_source_ids": [
+   "CLOSURE|I1561|A",
+   "CLOSURE|I1561|B",
+   "QORTUBA_REV_NEW|H1560||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1562||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "OPENING_BOUNDARY": 160.0,
+   "TOPOLOGY_BOUNDARY": 30.0
+  },
+  "contents": {
+   "OPENING_SYMBOL": 10
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 18.999999999934154
+  },
+  "opening_of": "I1561",
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-605a119624a3ea83",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.2275,
+  "area_bound_m2": 0.007,
+  "perimeter_native": 700.0,
+  "boundary_source_ids": [
+   "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F1",
+   "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F2",
+   "QORTUBA_REV_NEW|H1512||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1513||SEGMENT|0",
+   "QORTUBA_REV_NEW|H477||SEGMENT|0",
+   "QORTUBA_REV_NEW|H533||SEGMENT|0",
+   "QORTUBA_REV_NEW|H535||SEGMENT|0",
+   "QORTUBA_REV_NEW|H543||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 275.0,
+   "OPENING_BOUNDARY": 275.0,
+   "TOPOLOGY_BOUNDARY": 150.0
+  },
+  "contents": {
+   "SANITARY_FIXTURE": 1
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 69.99999999997617
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-646d666d8eb7440a",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.03,
+  "area_bound_m2": 0.0007,
+  "perimeter_native": 70.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H528||SEGMENT|0",
+   "QORTUBA_REV_NEW|H538||SEGMENT|0",
+   "QORTUBA_REV_NEW|H716||SEGMENT|0",
+   "QORTUBA_REV_NEW|H716||SEGMENT|2",
+   "QORTUBA_REV_NEW|H716||SEGMENT|3"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 40.0,
+   "TOPOLOGY_BOUNDARY": 30.0
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 7.000000000024738
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-6da5bafb50ce7eeb",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.12,
+  "area_bound_m2": 0.0016,
+  "perimeter_native": 160.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H552||SEGMENT|0",
+   "QORTUBA_REV_NEW|H708||SEGMENT|0",
+   "QORTUBA_REV_NEW|H708||SEGMENT|1",
+   "QORTUBA_REV_NEW|H708||SEGMENT|2",
+   "QORTUBA_REV_NEW|H708||SEGMENT|3"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 130.0,
+   "TOPOLOGY_BOUNDARY": 30.0
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 15.999999999973808
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-702c6552f70cf308",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.03,
+  "area_bound_m2": 0.0007,
+  "perimeter_native": 70.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1271||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1272||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1273||SEGMENT|0",
+   "QORTUBA_REV_NEW|H704||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 15.0,
+   "TOPOLOGY_BOUNDARY": 55.0
+  },
+  "contents": {
+   "OPENING_SYMBOL": 1
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 6.999999999992906
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-768c29ef11089119",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 6.212548,
+  "area_bound_m2": 0.062525,
+  "perimeter_native": 6252.54834,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H449||SEGMENT|0",
+   "QORTUBA_REV_NEW|H450||SEGMENT|0",
+   "QORTUBA_REV_NEW|H451||SEGMENT|0",
+   "QORTUBA_REV_NEW|H452||SEGMENT|0",
+   "QORTUBA_REV_NEW|H453||SEGMENT|0",
+   "QORTUBA_REV_NEW|H504||SEGMENT|0",
+   "QORTUBA_REV_NEW|H505||SEGMENT|0",
+   "QORTUBA_REV_NEW|H506||SEGMENT|0",
+   "QORTUBA_REV_NEW|H515||SEGMENT|0",
+   "QORTUBA_REV_NEW|H702||SEGMENT|1",
+   "QORTUBA_REV_NEW|H709||SEGMENT|0",
+   "QORTUBA_REV_NEW|H710||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 20.0,
+   "TOPOLOGY_BOUNDARY": 6232.54834
+  },
+  "contents": {
+   "OPENING_SYMBOL": 1
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 625.2548339959516
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-788f30878ba9d2b3",
+  "kind": "UNLABELLED_SITE",
+  "status": "REVIEW_REQUIRED",
+  "issues": [
+   "TOPOLOGY_ROLE_UNRESOLVED"
+  ],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 19.3125,
+  "area_bound_m2": 0.0295,
+  "perimeter_native": 2950.0,
+  "boundary_source_ids": [
+   "CLOSURE|I1028|B",
+   "CLOSURE|I677|B",
+   "QORTUBA_REV_NEW|H1272||SEGMENT|0",
+   "QORTUBA_REV_NEW|H489||SEGMENT|0",
+   "QORTUBA_REV_NEW|H544||SEGMENT|0",
+   "QORTUBA_REV_NEW|H546||SEGMENT|0",
+   "QORTUBA_REV_NEW|H556||SEGMENT|0",
+   "QORTUBA_REV_NEW|H571||SEGMENT|0",
+   "QORTUBA_REV_NEW|H572||SEGMENT|0",
+   "QORTUBA_REV_NEW|H573||SEGMENT|0",
+   "QORTUBA_REV_NEW|H579||SEGMENT|0",
+   "QORTUBA_REV_NEW|H581||SEGMENT|0",
+   "QORTUBA_REV_NEW|H582||SEGMENT|0",
+   "QORTUBA_REV_NEW|H583||SEGMENT|0",
+   "QORTUBA_REV_NEW|H647||SEGMENT|0",
+   "QORTUBA_REV_NEW|H648||SEGMENT|0",
+   "QORTUBA_REV_NEW|H699||SEGMENT|0",
+   "QORTUBA_REV_NEW|H704||SEGMENT|0",
+   "QORTUBA_REV_NEW|H704||SEGMENT|1"
+  ],
+  "hole_source_ids": [
+   "QORTUBA_REV_NEW|H547||SEGMENT|0",
+   "QORTUBA_REV_NEW|H548||SEGMENT|0",
+   "QORTUBA_REV_NEW|H665||SEGMENT|0",
+   "QORTUBA_REV_NEW|H666||SEGMENT|0"
+  ],
+  "boundary_role_lengths": {
+   "OPENING_BOUNDARY": 200.0,
+   "STRUCTURAL_OBSTACLE": 72.5,
+   "TOPOLOGY_BOUNDARY": 1997.5
+  },
+  "contents": {
+   "ANNOTATION_GRAPHICS": 5,
+   "LIFT_GEOMETRY": 5,
+   "STAIR_GEOMETRY": 28,
+   "UNKNOWN_PHYSICAL": 10
+  },
+  "blocked_by": [
+   "QORTUBA_REV_NEW|H649||SEGMENT|0",
+   "QORTUBA_REV_NEW|H651||SEGMENT|0",
+   "QORTUBA_REV_NEW|H652||SEGMENT|0",
+   "QORTUBA_REV_NEW|H653||SEGMENT|0",
+   "QORTUBA_REV_NEW|H668||SEGMENT|0",
+   "QORTUBA_REV_NEW|H669||SEGMENT|0",
+   "QORTUBA_REV_NEW|H670||SEGMENT|0",
+   "QORTUBA_REV_NEW|H671||SEGMENT|0",
+   "QORTUBA_REV_NEW|H672||SEGMENT|0",
+   "QORTUBA_REV_NEW|H676||SEGMENT|0"
+  ],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 294.99999999996544
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-7d5d931ecd5b48d4",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.12,
+  "area_bound_m2": 0.0016,
+  "perimeter_native": 160.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1671||SEGMENT|0",
+   "QORTUBA_REV_NEW|H706||SEGMENT|0",
+   "QORTUBA_REV_NEW|H706||SEGMENT|1",
+   "QORTUBA_REV_NEW|H706||SEGMENT|2",
+   "QORTUBA_REV_NEW|H706||SEGMENT|3"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 150.0,
+   "TOPOLOGY_BOUNDARY": 10.0
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 15.999999999992543
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-7ee2f86ab3b44106",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.084375,
+  "area_bound_m2": 0.002551,
+  "perimeter_native": 255.071711,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1315||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1316||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1317||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1318||SEGMENT|0",
+   "QORTUBA_REV_NEW|H446||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 180.803783,
+   "TOPOLOGY_BOUNDARY": 74.267928
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 25.50717110698188
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-8a49393e37741a5e",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.36,
+  "area_bound_m2": 0.0025,
+  "perimeter_native": 250.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1892||SEGMENT|0",
+   "QORTUBA_REV_NEW|H519||SEGMENT|0",
+   "QORTUBA_REV_NEW|H520||SEGMENT|0",
+   "QORTUBA_REV_NEW|H538||SEGMENT|0",
+   "QORTUBA_REV_NEW|H716||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 22.5,
+   "TOPOLOGY_BOUNDARY": 227.5
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 24.999999999981448
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-8c0fce5ecd15953b",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.112769,
+  "area_bound_m2": 0.003362,
+  "perimeter_native": 336.198404,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1338||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1339||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1342||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1343||SEGMENT|0",
+   "QORTUBA_REV_NEW|H463||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 241.648803,
+   "TOPOLOGY_BOUNDARY": 94.549601
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 33.61984040765128
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-8c1c7563d5252c50",
+  "kind": "LABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [
+   "I1008"
+  ],
+  "stamps": [
+   [
+    "PAINTRY",
+    "jpqdV"
+   ]
+  ],
+  "apartment_names": [
+   [
+    "PAINTRY"
+   ]
+  ],
+  "area_m2": 11.685,
+  "area_bound_m2": 0.0139,
+  "perimeter_native": 1390.0,
+  "boundary_source_ids": [
+   "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F1",
+   "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F2",
+   "QORTUBA_REV_NEW|H1342||SEGMENT|0",
+   "QORTUBA_REV_NEW|H463||SEGMENT|0",
+   "QORTUBA_REV_NEW|H477||SEGMENT|0",
+   "QORTUBA_REV_NEW|H481||SEGMENT|0",
+   "QORTUBA_REV_NEW|H535||SEGMENT|0",
+   "QORTUBA_REV_NEW|H540||SEGMENT|0",
+   "QORTUBA_REV_NEW|H718||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 80.549601,
+   "OPENING_BOUNDARY": 275.0,
+   "STRUCTURAL_OBSTACLE": 70.0,
+   "TOPOLOGY_BOUNDARY": 964.450399
+  },
+  "contents": {
+   "SANITARY_FIXTURE": 5
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 139.000000000004
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-91e975ed87398dd5",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.12,
+  "area_bound_m2": 0.0016,
+  "perimeter_native": 160.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1673||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1674||SEGMENT|0",
+   "QORTUBA_REV_NEW|H720||SEGMENT|0",
+   "QORTUBA_REV_NEW|H720||SEGMENT|1",
+   "QORTUBA_REV_NEW|H720||SEGMENT|2",
+   "QORTUBA_REV_NEW|H720||SEGMENT|3"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 140.0,
+   "TOPOLOGY_BOUNDARY": 20.0
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 15.99999999999418
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-923ecf17dbfed5f7",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 1.665,
+  "area_bound_m2": 0.0225,
+  "perimeter_native": 2250.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1030||SEGMENT|0",
+   "QORTUBA_REV_NEW|H544||SEGMENT|0",
+   "QORTUBA_REV_NEW|H556||SEGMENT|0",
+   "QORTUBA_REV_NEW|H570||SEGMENT|0",
+   "QORTUBA_REV_NEW|H571||SEGMENT|0",
+   "QORTUBA_REV_NEW|H572||SEGMENT|0",
+   "QORTUBA_REV_NEW|H574||SEGMENT|0",
+   "QORTUBA_REV_NEW|H579||SEGMENT|0",
+   "QORTUBA_REV_NEW|H580||SEGMENT|0",
+   "QORTUBA_REV_NEW|H581||SEGMENT|0",
+   "QORTUBA_REV_NEW|H582||SEGMENT|0",
+   "QORTUBA_REV_NEW|H583||SEGMENT|0",
+   "QORTUBA_REV_NEW|H584||SEGMENT|0",
+   "QORTUBA_REV_NEW|H647||SEGMENT|0",
+   "QORTUBA_REV_NEW|H648||SEGMENT|0",
+   "QORTUBA_REV_NEW|H702||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 15.0,
+   "TOPOLOGY_BOUNDARY": 2235.0
+  },
+  "contents": {
+   "OPENING_SYMBOL": 1
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 225.00000000005787
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-947593841a77310e",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.969979,
+  "area_bound_m2": 0.0095,
+  "perimeter_native": 949.978984,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1023||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1321||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1677||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1678||SEGMENT|0",
+   "QORTUBA_REV_NEW|H454||SEGMENT|0",
+   "QORTUBA_REV_NEW|H455||SEGMENT|0",
+   "QORTUBA_REV_NEW|H456||SEGMENT|0",
+   "QORTUBA_REV_NEW|H457||SEGMENT|0",
+   "QORTUBA_REV_NEW|H506||SEGMENT|0",
+   "QORTUBA_REV_NEW|H512||SEGMENT|0",
+   "QORTUBA_REV_NEW|H712||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 30.0,
+   "TOPOLOGY_BOUNDARY": 919.978984
+  },
+  "contents": {
+   "DIMENSION_GRAPHICS": 3
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 94.99789837187745
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-95292543249f37c6",
+  "kind": "OPENING_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.15,
+  "area_bound_m2": 0.0023,
+  "perimeter_native": 230.0,
+  "boundary_source_ids": [
+   "CLOSURE|I1028|A",
+   "CLOSURE|I1028|B",
+   "QORTUBA_REV_NEW|H1029||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1030||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "OPENING_BOUNDARY": 200.0,
+   "TOPOLOGY_BOUNDARY": 30.0
+  },
+  "contents": {
+   "OPENING_SYMBOL": 9
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 23.00000000023156
+  },
+  "opening_of": "I1028",
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-966568f1df5a6361",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.12,
+  "area_bound_m2": 0.0016,
+  "perimeter_native": 160.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1675||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1676||SEGMENT|0",
+   "QORTUBA_REV_NEW|H714||SEGMENT|0",
+   "QORTUBA_REV_NEW|H714||SEGMENT|1",
+   "QORTUBA_REV_NEW|H714||SEGMENT|2",
+   "QORTUBA_REV_NEW|H714||SEGMENT|3"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 140.0,
+   "TOPOLOGY_BOUNDARY": 20.0
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 15.99999999999709
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-967a9d31d84fb775",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.080558,
+  "area_bound_m2": 0.001281,
+  "perimeter_native": 128.058216,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1315||SEGMENT|0",
+   "QORTUBA_REV_NEW|H444||SEGMENT|0",
+   "QORTUBA_REV_NEW|H446||SEGMENT|0",
+   "QORTUBA_REV_NEW|H448||SEGMENT|0",
+   "QORTUBA_REV_NEW|H545||SEGMENT|0",
+   "QORTUBA_REV_NEW|H549||SEGMENT|0",
+   "QORTUBA_REV_NEW|H699||SEGMENT|2"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 7.5,
+   "TOPOLOGY_BOUNDARY": 120.558216
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 12.805821633235064
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-9954740764743f8e",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.12,
+  "area_bound_m2": 0.0016,
+  "perimeter_native": 160.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H444||SEGMENT|0",
+   "QORTUBA_REV_NEW|H504||SEGMENT|0",
+   "QORTUBA_REV_NEW|H702||SEGMENT|0",
+   "QORTUBA_REV_NEW|H702||SEGMENT|1",
+   "QORTUBA_REV_NEW|H702||SEGMENT|2",
+   "QORTUBA_REV_NEW|H702||SEGMENT|3"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 107.5,
+   "TOPOLOGY_BOUNDARY": 52.5
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 16.0
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-9d115e042e0e1565",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.175,
+  "area_bound_m2": 0.00514,
+  "perimeter_native": 514.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1321||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1322||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1323||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1324||SEGMENT|0",
+   "QORTUBA_REV_NEW|H506||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 375.0,
+   "TOPOLOGY_BOUNDARY": 139.0
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 51.39999999999709
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-9f4d8d389cb86869",
+  "kind": "OPENING_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.15,
+  "area_bound_m2": 0.0023,
+  "perimeter_native": 230.0,
+  "boundary_source_ids": [
+   "CLOSURE|I1988|A",
+   "CLOSURE|I1988|B",
+   "QORTUBA_REV_NEW|H1989||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1990||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "OPENING_BOUNDARY": 200.0,
+   "TOPOLOGY_BOUNDARY": 30.0
+  },
+  "contents": {
+   "OPENING_SYMBOL": 9
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 23.000000000271214
+  },
+  "opening_of": "I1988",
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-a6405850100155ac",
+  "kind": "LABELLED_SITE",
+  "status": "REVIEW_REQUIRED",
+  "issues": [
+   "MULTIPLE_SEMANTIC_LABELS",
+   "TOPOLOGY_ROLE_UNRESOLVED"
+  ],
+  "labels": [
+   "I1274",
+   "I1454"
+  ],
+  "stamps": [
+   [
+    "M.B.ROOM",
+    "k,LVzdsD"
+   ],
+   [
+    "DRESS",
+    "lBfS"
+   ]
+  ],
+  "apartment_names": [
+   [
+    "M.B.ROOM"
+   ],
+   [
+    "DRESS"
+   ]
+  ],
+  "area_m2": 33.2,
+  "area_bound_m2": 0.0313,
+  "perimeter_native": 3130.0,
+  "boundary_source_ids": [
+   "CLOSURE|I1443|B",
+   "CLOSURE|I1471|A",
+   "QORTUBA_REV_NEW|H1026||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1325||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1472||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1676||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1677||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1678||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1892||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1893||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1894||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1895||SEGMENT|0",
+   "QORTUBA_REV_NEW|H456||SEGMENT|0",
+   "QORTUBA_REV_NEW|H457||SEGMENT|0",
+   "QORTUBA_REV_NEW|H512||SEGMENT|0",
+   "QORTUBA_REV_NEW|H516||SEGMENT|0",
+   "QORTUBA_REV_NEW|H518||SEGMENT|0",
+   "QORTUBA_REV_NEW|H519||SEGMENT|0",
+   "QORTUBA_REV_NEW|H531||SEGMENT|0",
+   "QORTUBA_REV_NEW|H537||SEGMENT|0",
+   "QORTUBA_REV_NEW|H712||SEGMENT|1",
+   "QORTUBA_REV_NEW|H712||SEGMENT|2",
+   "QORTUBA_REV_NEW|H712||SEGMENT|3",
+   "QORTUBA_REV_NEW|H714||SEGMENT|1"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 209.875766,
+   "OPENING_BOUNDARY": 180.0,
+   "STRUCTURAL_OBSTACLE": 60.0,
+   "TOPOLOGY_BOUNDARY": 2680.124234
+  },
+  "contents": {
+   "FURNITURE": 171,
+   "OPENING_SYMBOL": 10,
+   "UNKNOWN_PHYSICAL": 6
+  },
+  "blocked_by": [
+   "QORTUBA_REV_NEW|H1445||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1446||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1669||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1670||SEGMENT|0",
+   "QORTUBA_REV_NEW|H514||SEGMENT|0",
+   "QORTUBA_REV_NEW|H517||SEGMENT|0"
+  ],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 313.0000000000348
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-b039f31d6aead19a",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.12,
+  "area_bound_m2": 0.0016,
+  "perimeter_native": 160.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H444||SEGMENT|0",
+   "QORTUBA_REV_NEW|H489||SEGMENT|0",
+   "QORTUBA_REV_NEW|H549||SEGMENT|0",
+   "QORTUBA_REV_NEW|H699||SEGMENT|0",
+   "QORTUBA_REV_NEW|H699||SEGMENT|1",
+   "QORTUBA_REV_NEW|H699||SEGMENT|2",
+   "QORTUBA_REV_NEW|H699||SEGMENT|3"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 97.5,
+   "TOPOLOGY_BOUNDARY": 62.5
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 16.000000000004547
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-b165cf6ff5d3dcc3",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 1.495,
+  "area_bound_m2": 0.0067,
+  "perimeter_native": 670.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1547||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1947||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1948||SEGMENT|0",
+   "QORTUBA_REV_NEW|H2297||SEGMENT|0",
+   "QORTUBA_REV_NEW|H549||SEGMENT|0",
+   "QORTUBA_REV_NEW|H551||SEGMENT|0",
+   "QORTUBA_REV_NEW|H704||SEGMENT|2"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 30.0,
+   "TOPOLOGY_BOUNDARY": 640.0
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 66.99999999962328
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-bd2b680527d056fa",
+  "kind": "OPENING_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.15,
+  "area_bound_m2": 0.0023,
+  "perimeter_native": 230.0,
+  "boundary_source_ids": [
+   "CLOSURE|I841|A",
+   "CLOSURE|I841|B",
+   "QORTUBA_REV_NEW|H842||SEGMENT|0",
+   "QORTUBA_REV_NEW|H843||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "OPENING_BOUNDARY": 200.0,
+   "TOPOLOGY_BOUNDARY": 30.0
+  },
+  "contents": {
+   "OPENING_SYMBOL": 9
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 23.00000000028431
+  },
+  "opening_of": "I841",
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-c016d9fe4a46e164",
+  "kind": "UNLABELLED_SITE",
+  "status": "REVIEW_REQUIRED",
+  "issues": [
+   "TOPOLOGY_ROLE_UNRESOLVED"
+  ],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.4725,
+  "area_bound_m2": 0.0066,
+  "perimeter_native": 660.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1893||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1894||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1895||SEGMENT|0",
+   "QORTUBA_REV_NEW|H457||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "TOPOLOGY_BOUNDARY": 660.0
+  },
+  "contents": {
+   "FURNITURE": 1,
+   "UNKNOWN_PHYSICAL": 1
+  },
+  "blocked_by": [
+   "QORTUBA_REV_NEW|H1669||SEGMENT|0"
+  ],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 66.00000000002346
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-c4fbccf601537402",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.09666,
+  "area_bound_m2": 0.003342,
+  "perimeter_native": 334.198404,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1338||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1339||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1341||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1343||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 322.198404,
+   "TOPOLOGY_BOUNDARY": 12.0
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 33.41984040765383
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-c6d6da0958d13931",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.140787,
+  "area_bound_m2": 0.004813,
+  "perimeter_native": 481.288885,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1514||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1515||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1517||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1519||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 469.288885,
+   "TOPOLOGY_BOUNDARY": 12.0
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 48.128888494480634
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-cd37b93b34b56dc4",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.19,
+  "area_bound_m2": 0.0023,
+  "perimeter_native": 230.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1472||SEGMENT|0",
+   "QORTUBA_REV_NEW|H519||SEGMENT|0",
+   "QORTUBA_REV_NEW|H525||SEGMENT|0",
+   "QORTUBA_REV_NEW|H716||SEGMENT|1"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 20.0,
+   "TOPOLOGY_BOUNDARY": 210.0
+  },
+  "contents": {
+   "OPENING_SYMBOL": 1
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 23.000000000048203
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-ceba36f0ed088fdd",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.28,
+  "area_bound_m2": 0.0032,
+  "perimeter_native": 320.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H470||SEGMENT|0",
+   "QORTUBA_REV_NEW|H477||SEGMENT|0",
+   "QORTUBA_REV_NEW|H718||SEGMENT|0",
+   "QORTUBA_REV_NEW|H718||SEGMENT|1",
+   "QORTUBA_REV_NEW|H718||SEGMENT|2",
+   "QORTUBA_REV_NEW|H718||SEGMENT|3"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 180.0,
+   "TOPOLOGY_BOUNDARY": 140.0
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 31.99999999997672
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-cf6333ee5df94e4b",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.33,
+  "area_bound_m2": 0.0068,
+  "perimeter_native": 680.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H547||SEGMENT|0",
+   "QORTUBA_REV_NEW|H548||SEGMENT|0",
+   "QORTUBA_REV_NEW|H665||SEGMENT|0",
+   "QORTUBA_REV_NEW|H666||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "TOPOLOGY_BOUNDARY": 680.0
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 68.0
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-d057c5d076178d74",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.09,
+  "area_bound_m2": 0.0013,
+  "perimeter_native": 130.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H519||SEGMENT|0",
+   "QORTUBA_REV_NEW|H525||SEGMENT|0",
+   "QORTUBA_REV_NEW|H538||SEGMENT|0",
+   "QORTUBA_REV_NEW|H716||SEGMENT|0",
+   "QORTUBA_REV_NEW|H716||SEGMENT|1",
+   "QORTUBA_REV_NEW|H716||SEGMENT|2"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "STRUCTURAL_OBSTACLE": 67.5,
+   "TOPOLOGY_BOUNDARY": 62.5
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 12.99999999997108
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-d5f9ca6e92211f18",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.465,
+  "area_bound_m2": 0.0051,
+  "perimeter_native": 510.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1007||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1029||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1515||SEGMENT|0",
+   "QORTUBA_REV_NEW|H506||SEGMENT|0",
+   "QORTUBA_REV_NEW|H510||SEGMENT|0",
+   "QORTUBA_REV_NEW|H573||SEGMENT|0",
+   "QORTUBA_REV_NEW|H577||SEGMENT|0",
+   "QORTUBA_REV_NEW|H578||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "TOPOLOGY_BOUNDARY": 510.0
+  },
+  "contents": {
+   "OPENING_SYMBOL": 2
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 50.99999999968059
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-daca396d6d730e60",
+  "kind": "LABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [
+   "I1259"
+  ],
+  "stamps": [
+   [
+    "BED.ROOM",
+    "yvtmk,L"
+   ]
+  ],
+  "apartment_names": [
+   [
+    "BED.ROOM"
+   ]
+  ],
+  "area_m2": 16.327,
+  "area_bound_m2": 0.01658,
+  "perimeter_native": 1657.971427,
+  "boundary_source_ids": [
+   "CLOSURE|I1988|A",
+   "QORTUBA_REV_NEW|H1020||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1671||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1672||SEGMENT|0",
+   "QORTUBA_REV_NEW|H447||SEGMENT|0",
+   "QORTUBA_REV_NEW|H469||SEGMENT|0",
+   "QORTUBA_REV_NEW|H475||SEGMENT|0",
+   "QORTUBA_REV_NEW|H476||SEGMENT|0",
+   "QORTUBA_REV_NEW|H554||SEGMENT|0",
+   "QORTUBA_REV_NEW|H706||SEGMENT|0",
+   "QORTUBA_REV_NEW|H706||SEGMENT|3"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 67.114352,
+   "OPENING_BOUNDARY": 100.0,
+   "STRUCTURAL_OBSTACLE": 70.0,
+   "TOPOLOGY_BOUNDARY": 1420.857075
+  },
+  "contents": {
+   "OPENING_SYMBOL": 10
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 165.79714269538292
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-dd723ea8c5f6a956",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 3.105745,
+  "area_bound_m2": 0.031657,
+  "perimeter_native": 3165.661759,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1016||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1315||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1316||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1319||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1320||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1671||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1672||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1989||SEGMENT|0",
+   "QORTUBA_REV_NEW|H446||SEGMENT|0",
+   "QORTUBA_REV_NEW|H447||SEGMENT|0",
+   "QORTUBA_REV_NEW|H448||SEGMENT|0",
+   "QORTUBA_REV_NEW|H459||SEGMENT|0",
+   "QORTUBA_REV_NEW|H469||SEGMENT|0",
+   "QORTUBA_REV_NEW|H474||SEGMENT|0",
+   "QORTUBA_REV_NEW|H476||SEGMENT|0",
+   "QORTUBA_REV_NEW|H485||SEGMENT|0",
+   "QORTUBA_REV_NEW|H487||SEGMENT|0",
+   "QORTUBA_REV_NEW|H552||SEGMENT|0",
+   "QORTUBA_REV_NEW|H554||SEGMENT|0",
+   "QORTUBA_REV_NEW|H555||SEGMENT|0",
+   "QORTUBA_REV_NEW|H706||SEGMENT|1",
+   "QORTUBA_REV_NEW|H706||SEGMENT|2",
+   "QORTUBA_REV_NEW|H708||SEGMENT|1",
+   "QORTUBA_REV_NEW|H708||SEGMENT|2",
+   "QORTUBA_REV_NEW|H708||SEGMENT|3",
+   "QORTUBA_REV_NEW|H842||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 180.803783,
+   "STRUCTURAL_OBSTACLE": 180.0,
+   "TOPOLOGY_BOUNDARY": 2804.857976
+  },
+  "contents": {
+   "OPENING_SYMBOL": 5
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 316.5661759456696
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-e2e4fb046c732aed",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.072322,
+  "area_bound_m2": 0.002531,
+  "perimeter_native": 253.071711,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1315||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1316||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1318||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1320||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 241.071711,
+   "TOPOLOGY_BOUNDARY": 12.0
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 25.307171106978785
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-e639327cc873867d",
+  "kind": "OPENING_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.12,
+  "area_bound_m2": 0.0019,
+  "perimeter_native": 190.0,
+  "boundary_source_ids": [
+   "CLOSURE|I1443|A",
+   "CLOSURE|I1443|B",
+   "QORTUBA_REV_NEW|H1442||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1444||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "OPENING_BOUNDARY": 160.0,
+   "TOPOLOGY_BOUNDARY": 30.0
+  },
+  "contents": {
+   "OPENING_SYMBOL": 10
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 18.999999999917055
+  },
+  "opening_of": "I1443",
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-e7d510fad1583999",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.118826,
+  "area_bound_m2": 0.003535,
+  "perimeter_native": 353.503064,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1022||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1023||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1026||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1027||SEGMENT|0",
+   "QORTUBA_REV_NEW|H457||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 254.627298,
+   "TOPOLOGY_BOUNDARY": 98.875766
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 35.35030640330115
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-eaae022599294151",
+  "kind": "LABELLED_SITE",
+  "status": "REVIEW_REQUIRED",
+  "issues": [
+   "TOPOLOGY_ROLE_UNRESOLVED"
+  ],
+  "labels": [
+   "I1283"
+  ],
+  "stamps": [
+   [
+    "ROOF",
+    "s'P"
+   ]
+  ],
+  "apartment_names": [
+   []
+  ],
+  "area_m2": 127.509952,
+  "area_bound_m2": 0.051631,
+  "perimeter_native": 5163.137085,
+  "boundary_source_ids": [
+   "CLOSURE|I1028|A",
+   "QORTUBA_REV_NEW|H1323||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1516||SEGMENT|0",
+   "QORTUBA_REV_NEW|H452||SEGMENT|0",
+   "QORTUBA_REV_NEW|H504||SEGMENT|0",
+   "QORTUBA_REV_NEW|H505||SEGMENT|0",
+   "QORTUBA_REV_NEW|H506||SEGMENT|0",
+   "QORTUBA_REV_NEW|H515||SEGMENT|0",
+   "QORTUBA_REV_NEW|H570||SEGMENT|0",
+   "QORTUBA_REV_NEW|H574||SEGMENT|0",
+   "QORTUBA_REV_NEW|H577||SEGMENT|0",
+   "QORTUBA_REV_NEW|H580||SEGMENT|0",
+   "QORTUBA_REV_NEW|H584||SEGMENT|0",
+   "QORTUBA_REV_NEW|H702||SEGMENT|0",
+   "QORTUBA_REV_NEW|H710||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 242.322221,
+   "OPENING_BOUNDARY": 100.0,
+   "STRUCTURAL_OBSTACLE": 22.5,
+   "TOPOLOGY_BOUNDARY": 4798.314864
+  },
+  "contents": {
+   "OPENING_SYMBOL": 10,
+   "UNKNOWN_PHYSICAL": 4
+  },
+  "blocked_by": [
+   "QORTUBA_REV_NEW|H507||SEGMENT|0",
+   "QORTUBA_REV_NEW|H509||SEGMENT|0",
+   "QORTUBA_REV_NEW|H575||SEGMENT|0",
+   "QORTUBA_REV_NEW|H576||SEGMENT|0"
+  ],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 516.3137084989993
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-ec43024640ae6a95",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.09396,
+  "area_bound_m2": 0.002825,
+  "perimeter_native": 282.457407,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H1016||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1017||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1020||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1021||SEGMENT|0",
+   "QORTUBA_REV_NEW|H469||SEGMENT|0"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "GLAZING_BOUNDARY": 201.343055,
+   "TOPOLOGY_BOUNDARY": 81.114352
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 28.245740690207096
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-eff54ade32f152fc",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.38,
+  "area_bound_m2": 0.0042,
+  "perimeter_native": 420.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H2061||SEGMENT|0",
+   "QORTUBA_REV_NEW|H2061||SEGMENT|1",
+   "QORTUBA_REV_NEW|H2061||SEGMENT|2",
+   "QORTUBA_REV_NEW|H2061||SEGMENT|3"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "TOPOLOGY_BOUNDARY": 420.0
+  },
+  "contents": {
+   "PRESENTATION_OVERHEAD": 2
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 42.0
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-fa55b66bc141aa56",
+  "kind": "UNLABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [],
+  "stamps": [],
+  "apartment_names": [],
+  "area_m2": 0.46,
+  "area_bound_m2": 0.0092,
+  "perimeter_native": 920.0,
+  "boundary_source_ids": [
+   "QORTUBA_REV_NEW|H2060||SEGMENT|0",
+   "QORTUBA_REV_NEW|H2060||SEGMENT|1",
+   "QORTUBA_REV_NEW|H2060||SEGMENT|2",
+   "QORTUBA_REV_NEW|H2060||SEGMENT|3"
+  ],
+  "hole_source_ids": [
+   "QORTUBA_REV_NEW|H2061||SEGMENT|0",
+   "QORTUBA_REV_NEW|H2061||SEGMENT|1",
+   "QORTUBA_REV_NEW|H2061||SEGMENT|2",
+   "QORTUBA_REV_NEW|H2061||SEGMENT|3"
+  ],
+  "boundary_role_lengths": {
+   "TOPOLOGY_BOUNDARY": 500.0
+  },
+  "contents": {},
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 92.0
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ },
+ {
+  "site_id": "SITE-fe8ed5548fb4310e",
+  "kind": "LABELLED_SITE",
+  "status": "CERTIFIED",
+  "issues": [],
+  "labels": [
+   "I1447"
+  ],
+  "stamps": [
+   [
+    "BATH",
+    "plHL"
+   ]
+  ],
+  "apartment_names": [
+   [
+    "BATH"
+   ]
+  ],
+  "area_m2": 4.09,
+  "area_bound_m2": 0.009,
+  "perimeter_native": 900.0,
+  "boundary_source_ids": [
+   "CLOSURE|I1561|A",
+   "QORTUBA_REV_NEW|H1673||SEGMENT|0",
+   "QORTUBA_REV_NEW|H1674||SEGMENT|0",
+   "QORTUBA_REV_NEW|H461||SEGMENT|0",
+   "QORTUBA_REV_NEW|H462||SEGMENT|0",
+   "QORTUBA_REV_NEW|H483||SEGMENT|0",
+   "QORTUBA_REV_NEW|H521||SEGMENT|0",
+   "QORTUBA_REV_NEW|H528||SEGMENT|0",
+   "QORTUBA_REV_NEW|H529||SEGMENT|0",
+   "QORTUBA_REV_NEW|H716||SEGMENT|3",
+   "QORTUBA_REV_NEW|H720||SEGMENT|0",
+   "QORTUBA_REV_NEW|H720||SEGMENT|1",
+   "QORTUBA_REV_NEW|H720||SEGMENT|3"
+  ],
+  "hole_source_ids": [],
+  "boundary_role_lengths": {
+   "OPENING_BOUNDARY": 80.0,
+   "STRUCTURAL_OBSTACLE": 90.0,
+   "TOPOLOGY_BOUNDARY": 730.0
+  },
+  "contents": {
+   "OPENING_SYMBOL": 10
+  },
+  "blocked_by": [],
+  "certificate": {
+   "eps_r_site_found": true,
+   "area_difference": 0.0,
+   "area_bound": 89.99999999999237
+  },
+  "opening_of": null,
+  "crosscheck": "AGREES"
+ }
+]

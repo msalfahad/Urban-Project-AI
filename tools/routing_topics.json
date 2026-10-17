@@ -1,0 +1,647 @@
+{
+ "_comment": "Hand-kept input for tools/codemap.py (the only one). freeze_check: the freeze-integrity command quoted in docs/ROUTING.md (kept here so no production module names the verifier). Patterns are Python regexes over repository paths (modules, tests), rule ids (rules) or BOQ family codes (families). keywords: words a task uses for this topic (prefix match). start: modules to open first when the generated choice is not the best entry. related: topics routed as secondary. risk: floor for the topic's risk class. Add each new phase defect register to defect_sources, oldest first: the newest one sets VERIFIED_* classes. Run python3 -I tools/codemap.py after editing.",
+ "freeze_check": "PYTHONDONTWRITEBYTECODE=1 python3 -I tools/freeze_verify.py check --index research/freeze_integrity/FREEZE_BASELINE_INDEX.jsonl",
+ "defect_sources": [
+  "URBAN_PROJECTS_CLAUDE_HANDOFF.md#21. Known bugs",
+  "research/urban_m9_p2b8/REMAINING_DEFECT_REGISTER.md",
+  "research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md"
+ ],
+ "shared_threshold": 10,
+ "topics": [
+  {
+   "id": "cad",
+   "title": "CAD parsing (DWG/DXF, blocks, transforms, entities)",
+   "keywords": [
+    "cad",
+    "dwg",
+    "dxf",
+    "block",
+    "insert",
+    "minsert",
+    "nested",
+    "mirror",
+    "transform",
+    "arc",
+    "bulge",
+    "polyline",
+    "entity",
+    "layer",
+    "kernel",
+    "decode",
+    "libredwg",
+    "ezdxf",
+    "xref",
+    "ocs",
+    "extrusion"
+   ],
+   "start": [
+    "engine/source/cad/kernel_ezdxf.py",
+    "engine/source/cad/kernel.py",
+    "engine/source/cad/libredwg_map.py",
+    "tools/urban_intake.py"
+   ],
+   "modules": [
+    "engine/source/cad/",
+    "engine/source/(capability|conservation|canonical_build|canonical_input|realised|cad_[a-z_]+|decoder_pins)\\.py$",
+    "engine/(cad_source|cad_adapter|dwg_adapter)\\.py$",
+    "tools/(urban_intake|dwg_adapter|audit_cad_source)\\.py$"
+   ],
+   "rules": [],
+   "families": [],
+   "tests": [
+    "tests/r8_[0-2]/"
+   ],
+   "defect_terms": [
+    "cad_adapter",
+    "mirrored arc",
+    "transform",
+    "decoder",
+    "dwgread",
+    "minsert",
+    "xref",
+    "arc flatten",
+    "bezier"
+   ],
+   "related": [
+    "units"
+   ],
+   "risk": "HIGH"
+  },
+  {
+   "id": "units",
+   "title": "Units and drawing frame",
+   "keywords": [
+    "unit",
+    "insunits",
+    "millimet",
+    "metre",
+    "meter",
+    "scale",
+    "frame",
+    "conversion",
+    "mm",
+    "cm"
+   ],
+   "modules": [
+    "engine/source/(frame|source_units|unit_evidence|unit_guard)\\.py$",
+    "engine/(units|ingest/units)\\.py$"
+   ],
+   "rules": [],
+   "families": [],
+   "tests": [
+    "tests/[^/]*frame",
+    "tests/[^/]*unit"
+   ],
+   "defect_terms": [
+    "unit conflict",
+    "insunits",
+    "metres drawing",
+    "units_contradicted",
+    "unit "
+   ],
+   "related": [
+    "cad"
+   ],
+   "risk": "HIGH"
+  },
+  {
+   "id": "rooms",
+   "title": "Rooms, spaces, zones and closure",
+   "keywords": [
+    "room",
+    "space",
+    "zone",
+    "closure",
+    "enclosure",
+    "bathroom",
+    "kitchen",
+    "wet room",
+    "pantry",
+    "label",
+    "lexicon",
+    "corridor",
+    "garden",
+    "void",
+    "area"
+   ],
+   "start": [
+    "engine/source/arch_rooms.py",
+    "engine/source/arch_plan.py",
+    "engine/source/space_model.py"
+   ],
+   "modules": [
+    "engine/source/(arch_rooms|arch_plan|space_model|room_[a-z0-9_]+|semantic_zones|topology[a-z_]*|closure_[a-z]+|robust_geometry)\\.py$"
+   ],
+   "rules": [
+    "^UP-SPACE",
+    "^UP-WET",
+    "^UP-PANTRY",
+    "^PS-REF",
+    "^UP-VOCAB"
+   ],
+   "families": [
+    "^B2-"
+   ],
+   "tests": [
+    "tests/m9_s[3-6]/",
+    "tests/m9_kb/test_kb_space"
+   ],
+   "defect_terms": [
+    "zone",
+    "closure",
+    "lexicon",
+    "closed space",
+    "wet / dry",
+    "merged into",
+    "room label",
+    "room whose label"
+   ],
+   "related": [
+    "walls",
+    "finishes"
+   ],
+   "risk": "HIGH"
+  },
+  {
+   "id": "walls",
+   "title": "Walls, blockwork and masonry",
+   "keywords": [
+    "wall",
+    "blockwork",
+    "block",
+    "masonry",
+    "stub",
+    "nib",
+    "return",
+    "partition",
+    "thickness",
+    "wall length",
+    "curved wall",
+    "column"
+   ],
+   "start": [
+    "engine/source/arch_walls.py"
+   ],
+   "modules": [
+    "engine/source/(arch_walls|arch_v29|wall_[a-z0-9_]+|physical_wall[a-z_]*|curved_member_geometry)\\.py$"
+   ],
+   "rules": [
+    "^UP-WALL",
+    "^UP-COL-ORIENT",
+    "^UP-REF-COLUMN"
+   ],
+   "families": [
+    "^B4-",
+    "^B9-"
+   ],
+   "tests": [
+    "tests/m9_p2b[6-9]/",
+    "tests/m9_s2_arch/",
+    "tests/m9_n10/"
+   ],
+   "defect_terms": [
+    "wall run",
+    "wall-length",
+    "wall stretch",
+    "blockwork",
+    "masonry",
+    "stub",
+    "nib",
+    "wall band",
+    "wall-band"
+   ],
+   "related": [
+    "rooms",
+    "finishes"
+   ],
+   "risk": "HIGH"
+  },
+  {
+   "id": "doors",
+   "title": "Doors (classes, openings, heights, feasibility)",
+   "keywords": [
+    "door",
+    "opening",
+    "doorway",
+    "threshold",
+    "leaf",
+    "swing",
+    "lift",
+    "elevator",
+    "main entrance",
+    "lintel"
+   ],
+   "modules": [
+    "engine/source/(door_[a-z_]+|opening_[a-z_]+|openings|lintel_[a-z_]+)\\.py$"
+   ],
+   "rules": [
+    "^UP-DOOR",
+    "^UP-THR",
+    "^UP-ELEV"
+   ],
+   "families": [
+    "^B6-0[1-3]"
+   ],
+   "tests": [
+    "tests/m9_p2a/",
+    "tests/m9_kb/test_kb_door",
+    "tests/m9_p2b2/"
+   ],
+   "defect_terms": [
+    "door",
+    "lift",
+    "elevator",
+    "threshold",
+    "lintel"
+   ],
+   "related": [
+    "walls",
+    "finishes",
+    "windows"
+   ]
+  },
+  {
+   "id": "windows",
+   "title": "Windows, glazing, sills and opening schedules",
+   "keywords": [
+    "window",
+    "glazing",
+    "sill",
+    "schedule",
+    "reveal",
+    "curtain wall",
+    "aluminium",
+    "head height"
+   ],
+   "start": [
+    "engine/source/schedule_reader.py",
+    "engine/source/opening_census.py"
+   ],
+   "modules": [
+    "engine/source/(opening_[a-z_]+|curved_opening|schedule_[a-z_]+|reveal_[a-z_]+|opening_reveals)\\.py$"
+   ],
+   "rules": [
+    "^UP-OPEN-SCHED",
+    "^UP-REVEAL",
+    "^UP-REF-REVEAL"
+   ],
+   "families": [
+    "^B6-0[4-7]"
+   ],
+   "tests": [
+    "tests/m9_p2b9/"
+   ],
+   "defect_terms": [
+    "window",
+    "sill",
+    "glazing",
+    "schedule",
+    "reveal"
+   ],
+   "related": [
+    "walls",
+    "finishes",
+    "doors"
+   ]
+  },
+  {
+   "id": "finishes",
+   "title": "Finishes: plaster, paint, wall/floor tile, skirting, ceilings, heights",
+   "keywords": [
+    "plaster",
+    "paint",
+    "tile",
+    "tiling",
+    "skirting",
+    "ceiling",
+    "finish",
+    "height",
+    "false ceiling",
+    "ceramic",
+    "wall tile",
+    "floor tile"
+   ],
+   "start": [
+    "engine/source/arch_measure.py",
+    "engine/source/wall_height.py",
+    "engine/source/owner_finish_scope.py"
+   ],
+   "modules": [
+    "engine/source/(arch_measure|arch_v29|finish_height[a-z0-9_]*|exposed_finish|owner_finish_scope|tile_layout|wall_height|surface_ledger|physical_measurement_state)\\.py$"
+   ],
+   "rules": [
+    "^UP-FIN",
+    "^UP-SKIRT",
+    "^UP-CEIL",
+    "^UP-HGT",
+    "^UP-CER"
+   ],
+   "families": [
+    "^B3-",
+    "^B5-"
+   ],
+   "tests": [
+    "tests/m9_s5/",
+    "tests/m9_p2b[3-9]/",
+    "tests/m9_n10/"
+   ],
+   "defect_terms": [
+    "plaster",
+    "paint",
+    "tile",
+    "skirting",
+    "ceiling",
+    "finish",
+    "synthetic height"
+   ],
+   "related": [
+    "rooms",
+    "walls"
+   ]
+  },
+  {
+   "id": "waterproofing",
+   "title": "Waterproofing (wet rooms, roof, membranes, upturns)",
+   "keywords": [
+    "waterproof",
+    "membrane",
+    "upturn",
+    "wet area",
+    "bathroom",
+    "roof",
+    "overlap",
+    "lap",
+    "wp"
+   ],
+   "modules": [
+    "engine/source/(waterproofing[a-z_]*|wp_[a-z_]+|membrane_layout)\\.py$"
+   ],
+   "rules": [
+    "^UP-WP"
+   ],
+   "families": [
+    "^B8-"
+   ],
+   "tests": [
+    "tests/m9_p2b2/",
+    "tests/m9_s5/test_s5_ceilings_wp"
+   ],
+   "defect_terms": [
+    "waterproof",
+    "membrane",
+    "upturn",
+    "roof wp",
+    " wp"
+   ],
+   "related": [
+    "rooms",
+    "finishes",
+    "boq_output"
+   ],
+   "note": "Wet-room scope comes from room classification (UP-WET) before any membrane is measured."
+  },
+  {
+   "id": "stairs",
+   "title": "Stairs and railings",
+   "keywords": [
+    "stair",
+    "railing",
+    "riser",
+    "tread",
+    "landing",
+    "guardrail",
+    "handrail",
+    "balustrade"
+   ],
+   "start": [
+    "engine/source/stair_geometry.py",
+    "engine/source/stair_measure.py",
+    "engine/source/arch_measure.py"
+   ],
+   "modules": [
+    "engine/source/(stair_[a-z_]+)\\.py$",
+    "engine/stair[a-z_]*\\.py$"
+   ],
+   "rules": [
+    "^UP-STAIR"
+   ],
+   "families": [
+    "^B7-"
+   ],
+   "tests": [
+    "tests/stairs_",
+    "tests/m9_s6/"
+   ],
+   "defect_terms": [
+    "stair",
+    "railing",
+    "riser",
+    "guardrail"
+   ],
+   "related": [
+    "finishes",
+    "concrete"
+   ]
+  },
+  {
+   "id": "concrete",
+   "title": "Structural concrete (slabs, beams, columns, footings, ground system)",
+   "keywords": [
+    "concrete",
+    "slab",
+    "beam",
+    "column",
+    "footing",
+    "foundation",
+    "strap",
+    "ground slab",
+    "raft",
+    "m3",
+    "structural"
+   ],
+   "modules": [
+    "engine/source/(concrete_[a-z_]+|column_[a-z_]+|beam_[a-z_]+|continuous_beams|ground_[a-z_]+|slab_[a-z_]+|footing_[a-z_]+|special_column_components)\\.py$",
+    "engine/(slab_engine|structural_[a-z_]+)\\.py$"
+   ],
+   "rules": [],
+   "families": [
+    "^B10-"
+   ],
+   "tests": [
+    "tests/(ground_system|slab|footing|structural)[^/]*/",
+    "tests/rc1/"
+   ],
+   "defect_terms": [
+    "slab",
+    "beam",
+    "column",
+    "footing",
+    "strap",
+    "concrete",
+    "m³"
+   ],
+   "related": [
+    "rebar",
+    "formwork"
+   ],
+   "risk": "MEDIUM"
+  },
+  {
+   "id": "rebar",
+   "title": "Rebar and bar bending schedules",
+   "keywords": [
+    "rebar",
+    "reinforcement",
+    "bar",
+    "steel",
+    "bbs",
+    "population",
+    "tonnage",
+    "hook",
+    "lap length",
+    "bending schedule",
+    "kg"
+   ],
+   "modules": [
+    "engine/source/([a-z_]*rebar[a-z_]*|bar_shapes|bbs_optimiser)\\.py$",
+    "engine/(bbs_steel|rebar_sanity)\\.py$"
+   ],
+   "rules": [],
+   "families": [
+    "^B11-"
+   ],
+   "tests": [
+    "tests/[a-z_]*rebar[^/]*/",
+    "tests/alsenan/"
+   ],
+   "defect_terms": [
+    "rebar",
+    "hooks",
+    "bbs"
+   ],
+   "related": [
+    "concrete",
+    "units"
+   ],
+   "risk": "MEDIUM",
+   "note": "Rebar quantities depend on structural element population (concrete topic) before bar geometry."
+  },
+  {
+   "id": "formwork",
+   "title": "Formwork",
+   "keywords": [
+    "formwork",
+    "shuttering",
+    "form work"
+   ],
+   "modules": [
+    "formwork",
+    "engine/source/struct_n10\\.py$",
+    "tools/struct_n10\\.py$"
+   ],
+   "rules": [],
+   "families": [
+    "B10-13",
+    "B7-13"
+   ],
+   "tests": [
+    "formwork",
+    "tests/m9_n10/test_n10_structural"
+   ],
+   "defect_terms": [
+    "formwork",
+    "shuttering"
+   ],
+   "related": [
+    "concrete"
+   ],
+   "note": "Phase N10: engine/source/struct_n10.py (tools/struct_n10.py) reads the route G register and gives the formwork faces (MEASURED / CONDITIONAL / UPPER_BOUND / HELD; owner decisions FW-D1..D4); not yet in the BOQ (registry items B10-13 and B7-13 stay NOT_IMPLEMENTED there).",
+   "start": [
+    "engine/source/struct_n10.py"
+   ]
+  },
+  {
+   "id": "excavation",
+   "title": "Excavation and backfill",
+   "keywords": [
+    "excavation",
+    "excavate",
+    "backfill",
+    "earthwork",
+    "dig",
+    "compaction"
+   ],
+   "modules": [
+    "excavat",
+    "backfill",
+    "engine/source/struct_n10\\.py$"
+   ],
+   "rules": [],
+   "families": [
+    "^B1-0[23]$"
+   ],
+   "tests": [
+    "excavat",
+    "tests/m9_n10/test_n10_structural"
+   ],
+   "defect_terms": [
+    "excavat",
+    "backfill"
+   ],
+   "related": [
+    "concrete"
+   ],
+   "note": "Phase N10: engine/source/struct_n10.excavation gives the pit / trench footprints; the volume only with stated depth and working space (EX-D1, EX-D2); backfill held. Not yet in the BOQ (registry items B1-02 and B1-03 stay NOT_IMPLEMENTED there).",
+   "start": [
+    "engine/source/struct_n10.py"
+   ]
+  },
+  {
+   "id": "boq_output",
+   "title": "BOQ lines, release model, reports and exports",
+   "keywords": [
+    "boq",
+    "total",
+    "release",
+    "report",
+    "export",
+    "xlsx",
+    "pdf",
+    "line",
+    "aggregation",
+    "quantity status",
+    "provisional",
+    "partial row"
+   ],
+   "modules": [
+    "engine/source/(boq_[a-z_]+|release_[a-z0-9_]+|quantity_release|delta_release)\\.py$",
+    "engine/reporting_v3/",
+    "tools/urban_boq_m9\\.py$"
+   ],
+   "rules": [
+    "^UP-QTY",
+    "^UP-REVIEW",
+    "^UP-QA",
+    "^UP-GEN",
+    "^UP-RULES",
+    "^UP-KB"
+   ],
+   "families": [
+    "^B13-"
+   ],
+   "tests": [
+    "tests/m9_foundation/",
+    "tests/m9_p2b[0-9]/"
+   ],
+   "defect_terms": [
+    "partial",
+    "total",
+    "release",
+    "report",
+    "evaluation map"
+   ],
+   "related": [],
+   "risk": "HIGH"
+  }
+ ]
+}

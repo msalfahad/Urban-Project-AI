@@ -1,0 +1,302 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_SLAB_REBAR_AUDIT_V3",
+ "t_and_b": {
+  "bound": {
+   "7A7": {
+    "qualifier": "7AF",
+    "rotation": 0,
+    "nearest_annotation": "7A7",
+    "nearest_text": "7%%C14/m",
+    "d1_mm": 532.7,
+    "d2_mm": 2212.1,
+    "annotation_state": "BOUND",
+    "annotation_bound_as_top": false,
+    "top_record_exists": false,
+    "binding": "STRONG_POSITIONAL"
+   },
+   "7A8": {
+    "qualifier": "7B0",
+    "rotation": 90,
+    "nearest_annotation": "7A8",
+    "nearest_text": "6%%c14/m",
+    "d1_mm": 430.1,
+    "d2_mm": 2116.4,
+    "annotation_state": "BOUND",
+    "annotation_bound_as_top": false,
+    "top_record_exists": false,
+    "binding": "STRONG_POSITIONAL"
+   },
+   "798": {
+    "qualifier": "1A7F",
+    "rotation": 0,
+    "nearest_annotation": "798",
+    "nearest_text": "6%%c12/m",
+    "d1_mm": 481.1,
+    "d2_mm": 2471.9,
+    "annotation_state": "BOUND",
+    "annotation_bound_as_top": false,
+    "top_record_exists": false,
+    "binding": "STRONG_POSITIONAL"
+   },
+   "796": {
+    "qualifier": "1A80",
+    "rotation": 90,
+    "nearest_annotation": "796",
+    "nearest_text": "6%%c12/m",
+    "d1_mm": 416.1,
+    "d2_mm": 2778.7,
+    "annotation_state": "BOUND",
+    "annotation_bound_as_top": false,
+    "top_record_exists": false,
+    "binding": "STRONG_POSITIONAL"
+   }
+  },
+  "rows": [
+   {
+    "qualifier": "7AF",
+    "rotation": 0,
+    "nearest_annotation": "7A7",
+    "nearest_text": "7%%C14/m",
+    "d1_mm": 532.7,
+    "d2_mm": 2212.1,
+    "annotation_state": "BOUND",
+    "annotation_bound_as_top": false,
+    "top_record_exists": false,
+    "binding": "STRONG_POSITIONAL"
+   },
+   {
+    "qualifier": "7B0",
+    "rotation": 90,
+    "nearest_annotation": "7A8",
+    "nearest_text": "6%%c14/m",
+    "d1_mm": 430.1,
+    "d2_mm": 2116.4,
+    "annotation_state": "BOUND",
+    "annotation_bound_as_top": false,
+    "top_record_exists": false,
+    "binding": "STRONG_POSITIONAL"
+   },
+   {
+    "qualifier": "1A7F",
+    "rotation": 0,
+    "nearest_annotation": "798",
+    "nearest_text": "6%%c12/m",
+    "d1_mm": 481.1,
+    "d2_mm": 2471.9,
+    "annotation_state": "BOUND",
+    "annotation_bound_as_top": false,
+    "top_record_exists": false,
+    "binding": "STRONG_POSITIONAL"
+   },
+   {
+    "qualifier": "1A80",
+    "rotation": 90,
+    "nearest_annotation": "796",
+    "nearest_text": "6%%c12/m",
+    "d1_mm": 416.1,
+    "d2_mm": 2778.7,
+    "annotation_state": "BOUND",
+    "annotation_bound_as_top": false,
+    "top_record_exists": false,
+    "binding": "STRONG_POSITIONAL"
+   }
+  ],
+  "dedupe_audit": [
+   {
+    "floor": "GF",
+    "annotation": "491",
+    "text": "8%%C16/m",
+    "state": "DUPLICATE_LABEL",
+    "duplicate_of": "490",
+    "top": false,
+    "count": 21,
+    "length_mm": 4850.0
+   },
+   {
+    "floor": "1F",
+    "annotation": "749",
+    "text": "8%%C16/m",
+    "state": "DUPLICATE_LABEL",
+    "duplicate_of": "748",
+    "top": false,
+    "count": 21,
+    "length_mm": 4900.0
+   }
+  ]
+ },
+ "t_and_b_top_layer_added_kg": 222.479012,
+ "dedupe_audit": {
+  "rows": [
+   {
+    "floor": "GF",
+    "annotation": "491",
+    "text": "8%%C16/m",
+    "state": "DUPLICATE_LABEL",
+    "duplicate_of": "490",
+    "top": false,
+    "count": 21,
+    "length_mm": 4850.0
+   },
+   {
+    "floor": "1F",
+    "annotation": "749",
+    "text": "8%%C16/m",
+    "state": "DUPLICATE_LABEL",
+    "duplicate_of": "748",
+    "top": false,
+    "count": 21,
+    "length_mm": 4900.0
+   }
+  ],
+  "finding": "both DUPLICATE_LABEL rows repeat the same bar family, direction, panel and layer flag as an earlier label (same text, count and length) - a repeated label, not a second layer; the dedupe key includes the top / bottom flag, so a genuine second layer is never collapsed"
+ },
+ "ground_slab_scope": [
+  {
+   "zone": "ZONE-1",
+   "note": "T=10cm, 5Ø10/m E.W.",
+   "bound_cell_outer_m2": 103.443,
+   "slab_m2": 70.40589,
+   "footprints": [
+    {
+     "id": "FP-1",
+     "area_m2": 227.719,
+     "bounds": [
+      92817,
+      35948,
+      112189,
+      49998
+     ]
+    },
+    {
+     "id": "FP-2",
+     "area_m2": 60.557,
+     "bounds": [
+      80817,
+      36298,
+      91619,
+      45549
+     ]
+    }
+   ],
+   "scope": "AMBIGUOUS_NESTED_CANDIDATES",
+   "positive_evidence_checked": [
+    "slab note position",
+    "closed cell / footprint outlines",
+    "structural layer (1 / 2)",
+    "drawing title"
+   ],
+   "evidence_found": "the note lies inside nested closed cells; no boundary, callout or hatch selects one",
+   "decision": "BLOCKED_SCOPE (Q-S4): the bound smallest cell is kept as a LOWER BOUND; min -> max is not used"
+  },
+  {
+   "zone": "ZONE-2",
+   "note": "T=10cm, 5Ø10/m E.W.",
+   "bound_cell_outer_m2": 60.557,
+   "slab_m2": 44.983,
+   "footprints": [
+    {
+     "id": "FP-1",
+     "area_m2": 227.719,
+     "bounds": [
+      92817,
+      35948,
+      112189,
+      49998
+     ]
+    },
+    {
+     "id": "FP-2",
+     "area_m2": 60.557,
+     "bounds": [
+      80817,
+      36298,
+      91619,
+      45549
+     ]
+    }
+   ],
+   "scope": "ESTABLISHED_SOLE_CANDIDATE",
+   "positive_evidence_checked": [
+    "slab note position",
+    "closed cell / footprint outlines",
+    "structural layer (1 / 2)",
+    "drawing title"
+   ],
+   "evidence_found": "the note's smallest closed cell IS a whole ground-beam footprint",
+   "decision": "scope = the footprint"
+  }
+ ],
+ "stairs": [
+  {
+   "detail": "ST7757.pdf p.16 TYPICAL STEEL LAYOUT-STAIR SECTION",
+   "bars_printed": [
+    "8Ø16/m",
+    "6Ø14/m",
+    "6Ø12/m",
+    "Ø12/20cm",
+    "Ø8/15",
+    "1Ø12",
+    "6Ø16/m"
+   ],
+   "state": "BLOCKED_DETAIL_APPLICABILITY",
+   "reasons": [
+    "p.16 TYPICAL STEEL LAYOUT is N.T.S. with levels 0.00 / +2.00 (one landing) / +4.00",
+    "Alsenan GF->1F rise 4.5 m with two turns (plan tread runs [4, 7, 6])",
+    "Alsenan 1F->2F rise 4.2 m",
+    "waist thickness printed only as 'THICK' (no value); riser count not printed",
+    "no stair callout on the plans binds the typical layout to a flight"
+   ]
+  }
+ ],
+ "populations": [
+  {
+   "pop_id": "POP:SLAB:GF",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "lower_bound_kg": 2903.503232,
+   "provisional_kg": 73.879683,
+   "audit_kg": 0.0,
+   "occurrence_why": "slab panel coverage (every panel annotated) is not proven - the slab population stays a lower bound"
+  },
+  {
+   "pop_id": "POP:SLAB:1F",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "lower_bound_kg": 1426.390291,
+   "provisional_kg": 14.401667,
+   "audit_kg": 0.0,
+   "occurrence_why": "slab panel coverage (every panel annotated) is not proven - the slab population stays a lower bound"
+  },
+  {
+   "pop_id": "POP:SLAB:2F",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "lower_bound_kg": 689.093827,
+   "provisional_kg": 108.037477,
+   "audit_kg": 0.0,
+   "occurrence_why": "slab panel coverage (every panel annotated) is not proven - the slab population stays a lower bound"
+  },
+  {
+   "pop_id": "POP:GROUND_SLAB:ZONE-1",
+   "release_state": "PROVISIONAL",
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 434.604259,
+   "audit_kg": 0.0,
+   "occurrence_why": "AMBIGUOUS_NESTED_CANDIDATES"
+  },
+  {
+   "pop_id": "POP:GROUND_SLAB:ZONE-2",
+   "release_state": "PROVISIONAL",
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 277.67284,
+   "audit_kg": 0.0,
+   "occurrence_why": "ESTABLISHED_SOLE_CANDIDATE"
+  },
+  {
+   "pop_id": "POP:STAIRS:GF-1F+1F-2F",
+   "release_state": "BLOCKED",
+   "lower_bound_kg": 0.0,
+   "provisional_kg": 0.0,
+   "audit_kg": 0.0,
+   "occurrence_why": "BLOCKED_DETAIL_APPLICABILITY"
+  }
+ ],
+ "rule": "T&B applied only with a strong positional binding; ground-slab scope from positive evidence (Q-S4 open: min -> max is never used); stairs bound only when the detail is proved applicable"
+}

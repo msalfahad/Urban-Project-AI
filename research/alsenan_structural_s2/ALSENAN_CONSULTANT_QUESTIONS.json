@@ -1,0 +1,2318 @@
+[
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "none - held back",
+  "PLAIN_LANGUAGE_ISSUE": "P13 ground-beam typical details (<2.5 / <5 / >5 m): 9 beam(s) change class depending on the length basis (centre-to-centre / clear span).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "BM-GROUND_BEAMS-GB-BL002-2038",
+    "BM-GROUND_BEAMS-GB-BL005-14438",
+    "BM-GROUND_BEAMS-GB-BL008-9062",
+    "BM-GROUND_BEAMS-GB-BL011-12362",
+    "BM-GROUND_BEAMS-GB-BL020-9788",
+    "BM-GROUND_BEAMS-GB-BL027-17038",
+    "BM-GROUND_BEAMS-GB-BL028-17038",
+    "BM-GROUND_BEAMS-GB-BL036-27612",
+    "BM-GROUND_BEAMS-GB-BL037-28583"
+   ],
+   "quantity_affected": 26.899,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam"
+  },
+  "QUESTION_TO_CONSULTANT": "P13 ground-beam typical details (<2.5 / <5 / >5 m): is the length measured centre-to-centre or clear span?",
+  "WHAT_THE_DRAWING_SAYS": [],
+  "WHERE_TO_LOOK": "ST7757.dxf, GROUND BEAMS PLAN, p.3; ST7757.pdf, ground beam details, p.13",
+  "WHY_IT_MATTERS": "A rule or note exists but it is not clear where or how it applies. Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 26.899 m beam (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-BEA-001",
+  "flag_key": "1ec82c958b0067f8"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "zero occurrences (a schedule row never creates an occurrence) (authority: PLAN_MEMBER_TAG)",
+  "PLAIN_LANGUAGE_ISSUE": "Schedule row B.W (beam) is defined but no plan occurrence carries this mark.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "B.W"
+   ],
+   "quantity_affected": null,
+   "release_effect": "NO_QUANTITY_IMPACT",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null
+  },
+  "QUESTION_TO_CONSULTANT": "Schedule row B.W has no occurrence on the plans. Is it unused, or is a mark missing on a plan?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule row: 20x60"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (simple beam), p.10",
+  "WHY_IT_MATTERS": "A rule or note exists but it is not clear where or how it applies. No quantity changes with the answer; it is recorded for completeness.",
+  "flag_id": "STR-BEA-002",
+  "flag_key": "78951c949f917b16"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "zero occurrences (a schedule row never creates an occurrence) (authority: PLAN_MEMBER_TAG)",
+  "PLAIN_LANGUAGE_ISSUE": "Schedule row B10 (beam) is defined but no plan occurrence carries this mark.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "B10"
+   ],
+   "quantity_affected": null,
+   "release_effect": "NO_QUANTITY_IMPACT",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null
+  },
+  "QUESTION_TO_CONSULTANT": "Schedule row B10 has no occurrence on the plans. Is it unused, or is a mark missing on a plan?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule row: 20x75"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (simple beam), p.10",
+  "WHY_IT_MATTERS": "A rule or note exists but it is not clear where or how it applies. No quantity changes with the answer; it is recorded for completeness.",
+  "flag_id": "STR-BEA-003",
+  "flag_key": "e224152ffc9933b3"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "zero occurrences (a schedule row never creates an occurrence) (authority: PLAN_MEMBER_TAG)",
+  "PLAIN_LANGUAGE_ISSUE": "Schedule row B12 (beam) is defined but no plan occurrence carries this mark.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "B12"
+   ],
+   "quantity_affected": null,
+   "release_effect": "NO_QUANTITY_IMPACT",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null
+  },
+  "QUESTION_TO_CONSULTANT": "Schedule row B12 has no occurrence on the plans. Is it unused, or is a mark missing on a plan?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule row: 25x75"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (simple beam), p.10",
+  "WHY_IT_MATTERS": "A rule or note exists but it is not clear where or how it applies. No quantity changes with the answer; it is recorded for completeness.",
+  "flag_id": "STR-BEA-004",
+  "flag_key": "818fb14acce4f41a"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "occurrences counted; quantities depending on the rule held back",
+  "PLAIN_LANGUAGE_ISSUE": "16 beam occurrence(s) depend on P8-N21 (Side bars 2Ø12 / 3Ø12 / 4Ø12 in beams deeper than 60 cm, according to the beam width, unless stated otherwise.), whose method is not established (BLOCKED_METHOD).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "BM-GF_ROOF-CB7-BL003-479",
+    "BM-GF_ROOF-CB7-BL003-47A",
+    "BM-GF_ROOF-CB8-BL024-69F",
+    "BM-GF_ROOF-CB8-BL024-6A0",
+    "BM-GF_ROOF-CB3-BL022-493",
+    "BM-GF_ROOF-CB3-BL022-494",
+    "BM-GF_ROOF-CB3-BL022-495",
+    "BM-GF_ROOF-CB1-BL007-4E1",
+    "BM-GF_ROOF-CB6-BL004-47C",
+    "BM-GF_ROOF-CB6-BL004-47B",
+    "BM-GF_ROOF-CB1-BL007-4E2",
+    "BM-1F_ROOF-CB11-BL024-6DA",
+    "BM-1F_ROOF-CB11-BL024-6DB",
+    "BM-1F_ROOF-CB11-BL024-6DC",
+    "BM-1F_ROOF-CB12-BL003-6DD",
+    "BM-1F_ROOF-CB12-BL003-6DE"
+   ],
+   "quantity_affected": 86.389,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam"
+  },
+  "QUESTION_TO_CONSULTANT": "Beams deeper than 60 cm without side bars in their schedule row (CB1, CB11, CB12, CB3, CB6, CB7, CB8): how many 12 mm side bars per face?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "P8-N21: Side bars 2Ø12 / 3Ø12 / 4Ø12 in beams deeper than 60 cm, according to the beam width, unless stated otherwise."
+  ],
+  "WHERE_TO_LOOK": "ST7757.pdf, rule P8-N21, p.8",
+  "WHY_IT_MATTERS": "The drawings give the requirement but not the method to measure it; the engineer must state the method. Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 86.389 m beam (REINFORCEMENT).",
+  "flag_id": "STR-BEA-005",
+  "flag_key": "0aff62f6c534cd91"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "occurrence counted; measurement held back",
+  "PLAIN_LANGUAGE_ISSUE": "2 beams: curved ground-beam span - support length not measured.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "BM-GROUND_BEAMS-GB-BA001",
+    "BM-GROUND_BEAMS-GB-BA002"
+   ],
+   "quantity_affected": 8.093,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam"
+  },
+  "QUESTION_TO_CONSULTANT": "Confirm the curved ground beam's supports and length (pool edge).",
+  "WHAT_THE_DRAWING_SAYS": [],
+  "WHERE_TO_LOOK": "ST7757.dxf, GROUND BEAMS PLAN, p.3",
+  "WHY_IT_MATTERS": "A size or length needed to measure this is not given. Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 8.093 m beam (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-BEA-006",
+  "flag_key": "7363ffa80a294641"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "occurrences counted; quantities depending on the rule held back",
+  "PLAIN_LANGUAGE_ISSUE": "113 beam occurrence(s) depend on P8-N11 (Beams crossed by service pipes are widened by 5 cm.), whose extent is not established (BLOCKED_METHOD).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "BM-GF_ROOF-CB7-BL003-479",
+    "BM-GF_ROOF-CB7-BL003-47A",
+    "BM-GF_ROOF-B1-BL047-6A1",
+    "BM-GF_ROOF-CB8-BL024-69F",
+    "BM-GF_ROOF-CB8-BL024-6A0",
+    "BM-GF_ROOF-B1-BL012-50E",
+    "BM-GF_ROOF-B1-BL008-478",
+    "BM-GF_ROOF-CB3-BL022-493",
+    "BM-GF_ROOF-CB3-BL022-494",
+    "BM-GF_ROOF-CB3-BL022-495",
+    "BM-GF_ROOF-B3-BL022-1827",
+    "BM-GF_ROOF-B4-BL022-497",
+    "BM-GF_ROOF-B5-BL022-498",
+    "BM-GF_ROOF-CA-BL015-69E",
+    "BM-GF_ROOF-B4-BL010-508",
+    "BM-GF_ROOF-B4-BL009-49B:b4>v",
+    "BM-GF_ROOF-CB5-BL008-475",
+    "BM-GF_ROOF-CB1-BL007-4E1",
+    "BM-GF_ROOF-B27-BL002-532",
+    "BM-GF_ROOF-B9-BL011-5BD",
+    "BM-GF_ROOF-B26-BL014-4CC",
+    "BM-GF_ROOF-CB4-BL016-45C",
+    "BM-GF_ROOF-B22-BL013-496",
+    "BM-GF_ROOF-B1-BL004-476",
+    "BM-GF_ROOF-B1-BL004-477",
+    "BM-GF_ROOF-CB6-BL004-47C",
+    "BM-GF_ROOF-CB6-BL004-47B",
+    "BM-GF_ROOF-B21-BL001-468",
+    "BM-GF_ROOF-B29-BL039-465",
+    "BM-GF_ROOF-CB5-BL017-474",
+    "BM-GF_ROOF-B7-BA001-47D:b7>v",
+    "BM-GF_ROOF-CB4-BL016-45B",
+    "BM-GF_ROOF-B2-BL005-485",
+    "BM-GF_ROOF-B1-BL023-466",
+    "BM-GF_ROOF-B3-BL032-462",
+    "BM-GF_ROOF-B4-BL045-4DB",
+    "BM-GF_ROOF-B4-BL025-46B",
+    "BM-GF_ROOF-B28-BL026-46C",
+    "BM-GF_ROOF-B1-BL048-430",
+    "BM-GF_ROOF-B14-BL036-45F",
+    "BM-GF_ROOF-B20-BL020-453:b20>v",
+    "BM-GF_ROOF-B13-BL042-467",
+    "BM-GF_ROOF-B7-BL028-4B6",
+    "BM-GF_ROOF-B17-BL044-432",
+    "BM-GF_ROOF-B1-BL027-4B7",
+    "BM-GF_ROOF-B1-BL037-45E",
+    "BM-GF_ROOF-B7-BA003-470",
+    "BM-GF_ROOF-CB1-BL007-4E2",
+    "BM-GF_ROOF-B11-BL023-444",
+    "BM-GF_ROOF-B7-BA005-471",
+    "BM-GF_ROOF-B3-BL027-448",
+    "BM-GF_ROOF-B7-BA004-46F",
+    "BM-GF_ROOF-B2-BL028-449",
+    "BM-GF_ROOF-B2-BL016-492",
+    "BM-GF_ROOF-B16-BL030-473",
+    "BM-GF_ROOF-B4-BL040-446",
+    "BM-GF_ROOF-B1-BL040-445",
+    "BM-GF_ROOF-B7-BA002-46E",
+    "BM-GF_ROOF-B1-BL034-447",
+    "BM-GF_ROOF-B7-BA004-4D2",
+    "BM-GF_ROOF-B24-BL043-1814:B24>v",
+    "BM-GF_ROOF-CB2-BL038-42A",
+    "BM-GF_ROOF-CB2-BL038-42B",
+    "BM-GF_ROOF-B3-BL033-6B7",
+    "BM-1F_ROOF-CB11-BL024-6DA",
+    "BM-1F_ROOF-CB11-BL024-6DB",
+    "BM-1F_ROOF-CB11-BL024-6DC",
+    "BM-1F_ROOF-B4-BL011-711",
+    "BM-1F_ROOF-CB10-BL001-717",
+    "BM-1F_ROOF-CB13-BL004-76A",
+    "BM-1F_ROOF-CB12-BL003-6DD",
+    "BM-1F_ROOF-B18-BL008-6ED",
+    "BM-1F_ROOF-B5-BL007-6EC",
+    "BM-1F_ROOF-B25-BL006-6D1",
+    "BM-1F_ROOF-CB13-BL004-76B",
+    "BM-1F_ROOF-CB10-BL001-718",
+    "BM-1F_ROOF-B4-BA002-1828",
+    "BM-1F_ROOF-B4-BL025-6D9",
+    "BM-1F_ROOF-B11-BL025-6D8",
+    "BM-1F_ROOF-B4-BA001-1829",
+    "BM-1F_ROOF-B1-BL014-6D0",
+    "BM-1F_ROOF-B19-BL029-6CF",
+    "BM-1F_ROOF-B7-BL027-6CC",
+    "BM-1F_ROOF-B23-BL009-74B",
+    "BM-1F_ROOF-B7-BL017-6CD",
+    "BM-1F_ROOF-B4-BL032-6B5",
+    "BM-1F_ROOF-B1-BL016-6CE",
+    "BM-1F_ROOF-B1-BL028-6CB",
+    "BM-1F_ROOF-CB12-BL003-6DE",
+    "BM-1F_ROOF-B6-BL014-6C5",
+    "BM-1F_ROOF-B5-BL022-6C4",
+    "BM-1F_ROOF-B2-BL017-6CA",
+    "BM-1F_ROOF-B2-BL019-6BA",
+    "BM-1F_ROOF-B2-BL016-6C9",
+    "BM-1F_ROOF-CB9-BL023-6C6",
+    "BM-1F_ROOF-CB9-BL023-6C7",
+    "BM-1F_ROOF-CB9-BL023-6C8",
+    "BM-1F_ROOF-B3-BL023-6B9",
+    "BM-2F_ROOF-B2-BL006-790",
+    "BM-2F_ROOF-B1-BL006-78F",
+    "BM-2F_ROOF-B2-BL006-78E",
+    "BM-2F_ROOF-B2-BL010-78A",
+    "BM-2F_ROOF-B2-BL010-775",
+    "BM-2F_ROOF-B1-BL003-78C",
+    "BM-2F_ROOF-B1-BL002-78B",
+    "BM-2F_ROOF-B3-BL008-774",
+    "BM-2F_ROOF-B1-BL011-78D",
+    "BM-2F_ROOF-B7-BL001-7A1",
+    "BM-2F_ROOF-B15-BL004-7A9",
+    "BM-2F_ROOF-B3-BL002-79B",
+    "BM-2F_ROOF-B3-BL003-79C",
+    "BM-2F_ROOF-B3-BL007-79D",
+    "BM-2F_ROOF-B8-BL007-79E"
+   ],
+   "quantity_affected": 389.327,
+   "release_effect": "LOWER_BOUND",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK"
+   ],
+   "unit": "m beam"
+  },
+  "QUESTION_TO_CONSULTANT": "Which beams are crossed by service pipes (drainage, water, electrical, AC) and must be widened by 5 cm?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "P8-N11: Beams crossed by service pipes are widened by 5 cm."
+  ],
+  "WHERE_TO_LOOK": "ST7757.pdf, rule P8-N11, p.8",
+  "WHY_IT_MATTERS": "A size or length needed to measure this is not given. Only the part that is certain is counted; the total is a minimum until this is answered. Affected: 389.327 m beam (CONCRETE, FORMWORK).",
+  "flag_id": "STR-BEA-007",
+  "flag_key": "eb5de37b31778d5d"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "geometry counted; size and bars unknown",
+  "PLAIN_LANGUAGE_ISSUE": "6 beam member(s) at 1F_ROOF are drawn without a type mark (dome ring (curved)).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "BM-1F_ROOF-UNTAGGED-BA003",
+    "BM-1F_ROOF-UNTAGGED-BA004",
+    "BM-1F_ROOF-UNTAGGED-BA005",
+    "BM-1F_ROOF-UNTAGGED-BA006",
+    "BM-1F_ROOF-UNTAGGED-BA007",
+    "BM-1F_ROOF-UNTAGGED-BA008"
+   ],
+   "quantity_affected": 9.521,
+   "release_effect": "AUDIT_ONLY",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam"
+  },
+  "QUESTION_TO_CONSULTANT": "These beam members at 1F_ROOF carry no mark. Which type is each (or are they not structural members)?",
+  "WHAT_THE_DRAWING_SAYS": [],
+  "WHERE_TO_LOOK": "ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5",
+  "WHY_IT_MATTERS": "This member has no schedule row, so its size and bars are not defined. The affected quantity is shown for checking but not counted in totals. Affected: 9.521 m beam (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-BEA-008",
+  "flag_key": "d8bd77cbe0931ce3"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "geometry counted; size and bars unknown",
+  "PLAIN_LANGUAGE_ISSUE": "13 beam member(s) at 1F_ROOF are drawn without a type mark (no mark).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "BM-1F_ROOF-UNTAGGED-BL002-8912",
+    "BM-1F_ROOF-UNTAGGED-BL005-9062",
+    "BM-1F_ROOF-UNTAGGED-BL005-11912",
+    "BM-1F_ROOF-UNTAGGED-BL010-12388",
+    "BM-1F_ROOF-UNTAGGED-BL010-15888",
+    "BM-1F_ROOF-UNTAGGED-BL012-12638",
+    "BM-1F_ROOF-UNTAGGED-BL013-12638",
+    "BM-1F_ROOF-UNTAGGED-BL018-16004",
+    "BM-1F_ROOF-UNTAGGED-BL020-16087",
+    "BM-1F_ROOF-UNTAGGED-BL021-16482",
+    "BM-1F_ROOF-UNTAGGED-BL030-26861",
+    "BM-1F_ROOF-UNTAGGED-BL031-26861",
+    "BM-1F_ROOF-UNTAGGED-BL033-30758"
+   ],
+   "quantity_affected": 46.021,
+   "release_effect": "AUDIT_ONLY",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam"
+  },
+  "QUESTION_TO_CONSULTANT": "These beam members at 1F_ROOF carry no mark. Which type is each (or are they not structural members)?",
+  "WHAT_THE_DRAWING_SAYS": [],
+  "WHERE_TO_LOOK": "ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5",
+  "WHY_IT_MATTERS": "This member has no schedule row, so its size and bars are not defined. The affected quantity is shown for checking but not counted in totals. Affected: 46.021 m beam (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-BEA-009",
+  "flag_key": "fa00f0a097c290bb"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "geometry counted; size and bars unknown",
+  "PLAIN_LANGUAGE_ISSUE": "1 beam member(s) at 2F_ROOF are drawn without a type mark (no mark).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "BM-2F_ROOF-UNTAGGED-BL005-14112"
+   ],
+   "quantity_affected": 3.25,
+   "release_effect": "AUDIT_ONLY",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam"
+  },
+  "QUESTION_TO_CONSULTANT": "These beam members at 2F_ROOF carry no mark. Which type is each (or are they not structural members)?",
+  "WHAT_THE_DRAWING_SAYS": [],
+  "WHERE_TO_LOOK": "ST7757.dxf, SECOND FLOOR ROOF SLAB, p.6",
+  "WHY_IT_MATTERS": "This member has no schedule row, so its size and bars are not defined. The affected quantity is shown for checking but not counted in totals. Affected: 3.25 m beam (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-BEA-010",
+  "flag_key": "4ec1c5894e430286"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "geometry counted; size and bars unknown",
+  "PLAIN_LANGUAGE_ISSUE": "5 beam member(s) at GF_ROOF are drawn without a type mark (no mark).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "BM-GF_ROOF-UNTAGGED-BL021-12388",
+    "BM-GF_ROOF-UNTAGGED-BL021-15888",
+    "BM-GF_ROOF-UNTAGGED-BL029-16412",
+    "BM-GF_ROOF-UNTAGGED-BL031-16567",
+    "BM-GF_ROOF-UNTAGGED-BL046-31108"
+   ],
+   "quantity_affected": 11.489,
+   "release_effect": "AUDIT_ONLY",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam"
+  },
+  "QUESTION_TO_CONSULTANT": "These beam members at GF_ROOF carry no mark. Which type is each (or are they not structural members)?",
+  "WHAT_THE_DRAWING_SAYS": [],
+  "WHERE_TO_LOOK": "ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4",
+  "WHY_IT_MATTERS": "This member has no schedule row, so its size and bars are not defined. The affected quantity is shown for checking but not counted in totals. Affected: 11.489 m beam (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-BEA-011",
+  "flag_key": "4608c7ba30e258d8"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "45.0 (MEMBER_SCHEDULE) used (authority: MEMBER_SCHEDULE)",
+  "PLAIN_LANGUAGE_ISSUE": "1 beam occurrence(s) of type B21: schedule width (cm) differs from drawn width (cm) (45.0 vs 40.0).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "BM-GF_ROOF-B21-BL001-468"
+   ],
+   "quantity_affected": 7.768,
+   "release_effect": "PROVISIONAL",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam"
+  },
+  "QUESTION_TO_CONSULTANT": "For beam type B21: does the schedule width (cm) govern, or the drawn width (cm) (45.0 vs 40.0)?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule width (cm): 45.0 (ST7757.dxf / ST7757.pdf, p.10, schedule (simple beam), 'B21')",
+   "drawn width (cm): 40.0 (ST7757.dxf, p.4, GROUND FLOOR ROOF SLAB, handle 468, 'B21')"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (simple beam), p.10; ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. The quantity uses the engine's current interpretation; an answer may change it. Affected: 7.768 m beam (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-BEA-012",
+  "flag_key": "9fe58a7ccf5d017e"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "25.0 (MEMBER_SCHEDULE) used (authority: MEMBER_SCHEDULE)",
+  "PLAIN_LANGUAGE_ISSUE": "1 beam occurrence(s) of type B29: schedule width (cm) differs from drawn width (cm) (25.0 vs 20.0).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "BM-GF_ROOF-B29-BL039-465"
+   ],
+   "quantity_affected": 7.21,
+   "release_effect": "PROVISIONAL",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam"
+  },
+  "QUESTION_TO_CONSULTANT": "For beam type B29: does the schedule width (cm) govern, or the drawn width (cm) (25.0 vs 20.0)?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule width (cm): 25.0 (ST7757.dxf / ST7757.pdf, p.10, schedule (simple beam), 'B29')",
+   "drawn width (cm): 20.0 (ST7757.dxf, p.4, GROUND FLOOR ROOF SLAB, handle 465, 'B29')"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (simple beam), p.10; ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. The quantity uses the engine's current interpretation; an answer may change it. Affected: 7.21 m beam (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-BEA-013",
+  "flag_key": "3fd2b05822e5c5e8"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "25.0 (MEMBER_SCHEDULE) used (authority: MEMBER_SCHEDULE)",
+  "PLAIN_LANGUAGE_ISSUE": "1 beam occurrence(s) of type B6: schedule width (cm) differs from drawn width (cm) (25.0 vs 20.0).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "BM-1F_ROOF-B6-BL014-6C5"
+   ],
+   "quantity_affected": 4.729,
+   "release_effect": "PROVISIONAL",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam"
+  },
+  "QUESTION_TO_CONSULTANT": "For beam type B6: does the schedule width (cm) govern, or the drawn width (cm) (25.0 vs 20.0)?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule width (cm): 25.0 (ST7757.dxf / ST7757.pdf, p.10, schedule (simple beam), 'B6')",
+   "drawn width (cm): 20.0 (ST7757.dxf, p.5, FIRST FLOOR ROOF SLAB, handle 6C5, 'B6')"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (simple beam), p.10; ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. The quantity uses the engine's current interpretation; an answer may change it. Affected: 4.729 m beam (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-BEA-014",
+  "flag_key": "84d518bac75d8660"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "25.0 (MEMBER_SCHEDULE) used (authority: MEMBER_SCHEDULE)",
+  "PLAIN_LANGUAGE_ISSUE": "2 beam occurrence(s) of type CB10: schedule width (cm) differs from drawn width (cm) (25.0 vs 20.0).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "BM-1F_ROOF-CB10-BL001-717",
+    "BM-1F_ROOF-CB10-BL001-718"
+   ],
+   "quantity_affected": 7.025,
+   "release_effect": "PROVISIONAL",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam"
+  },
+  "QUESTION_TO_CONSULTANT": "For beam type CB10: does the schedule width (cm) govern, or the drawn width (cm) (25.0 vs 20.0)?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule width (cm): 25.0 (ST7757.dxf / ST7757.pdf, p.10, schedule (simple beam), 'CB10')",
+   "drawn width (cm): 20.0 (ST7757.dxf, p.5, FIRST FLOOR ROOF SLAB, handle 717, 'CB10')"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (simple beam), p.10; ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. The quantity uses the engine's current interpretation; an answer may change it. Affected: 7.025 m beam (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-BEA-015",
+  "flag_key": "59633063ff619eab"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "20.0 (MEMBER_SCHEDULE) used (authority: MEMBER_SCHEDULE)",
+  "PLAIN_LANGUAGE_ISSUE": "2 beam occurrence(s) of type CB2: schedule width (cm) differs from drawn width (cm) (20.0 vs 25.0).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "BM-GF_ROOF-CB2-BL038-42A",
+    "BM-GF_ROOF-CB2-BL038-42B"
+   ],
+   "quantity_affected": 7.77,
+   "release_effect": "PROVISIONAL",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam"
+  },
+  "QUESTION_TO_CONSULTANT": "For beam type CB2: does the schedule width (cm) govern, or the drawn width (cm) (20.0 vs 25.0)?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule width (cm): 20.0 (ST7757.dxf / ST7757.pdf, p.10, schedule (simple beam), 'CB2')",
+   "drawn width (cm): 25.0 (ST7757.dxf, p.4, GROUND FLOOR ROOF SLAB, handle 42A, 'CB2')"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (simple beam), p.10; ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. The quantity uses the engine's current interpretation; an answer may change it. Affected: 7.77 m beam (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-BEA-016",
+  "flag_key": "64b8735fef6cf21f"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "none - held back",
+  "PLAIN_LANGUAGE_ISSUE": "One drawn beam carries 2 different type marks (CB3, B3); both marks sit on the same drawn span.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "BM-GF_ROOF-CB3-BL022-494+BM-GF_ROOF-B3-BL022-1827"
+   ],
+   "quantity_affected": 3.35,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam"
+  },
+  "QUESTION_TO_CONSULTANT": "This beam is marked CB3 and B3. Which type is it - or is it two members drawn as one?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "mark 1: CB3",
+   "mark 2: B3"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 3.35 m beam (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-BEA-017",
+  "flag_key": "7be96afb858df9b1"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "none - held back",
+  "PLAIN_LANGUAGE_ISSUE": "beam CB4: schedule spans [3.3, 3.7] but plan spans [2.724, 3.75] (SPAN_LENGTH_CONFLICT).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "CBO-GFRS-CB4-BL016"
+   ],
+   "quantity_affected": 6.474,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam"
+  },
+  "QUESTION_TO_CONSULTANT": "Which plan members form CB4 (schedule spans [3.3, 3.7])?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule spans: [3.3, 3.7]",
+   "plan spans: [2.724, 3.75]"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (continuous beam), p.11; ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 6.474 m beam (REINFORCEMENT).",
+  "flag_id": "STR-BEA-018",
+  "flag_key": "e5acbe35fcc3d54f"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "none - held back",
+  "PLAIN_LANGUAGE_ISSUE": "beam CB5: schedule spans [2.5, 4.5] but plan spans [2.85] (SPAN_COUNT_CONFLICT).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "CBO-GFRS-CB5-BL008"
+   ],
+   "quantity_affected": 2.85,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam"
+  },
+  "QUESTION_TO_CONSULTANT": "Which plan members form CB5 (schedule spans [2.5, 4.5])?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule spans: [2.5, 4.5]",
+   "plan spans: [2.85]"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (continuous beam), p.11; ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 2.85 m beam (REINFORCEMENT).",
+  "flag_id": "STR-BEA-019",
+  "flag_key": "56e725132bd3d588"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "none - held back",
+  "PLAIN_LANGUAGE_ISSUE": "beam CB5: schedule spans [2.5, 4.5] but plan spans [4.2] (SPAN_COUNT_CONFLICT).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "CBO-GFRS-CB5-BL017"
+   ],
+   "quantity_affected": 4.2,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam"
+  },
+  "QUESTION_TO_CONSULTANT": "Which plan members form CB5 (schedule spans [2.5, 4.5])?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule spans: [2.5, 4.5]",
+   "plan spans: [4.2]"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (continuous beam), p.11; ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 4.2 m beam (REINFORCEMENT).",
+  "flag_id": "STR-BEA-020",
+  "flag_key": "8ef91483105ddbe2"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "would match if extended: [3.825, 6.545, 6.95]",
+  "PLAIN_LANGUAGE_ISSUE": "beam CB8: schedule spans [3.7, 6.4, 6.8] but plan spans [6.545, 6.95] (SPAN_COUNT_CONFLICT).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "CBO-GFRS-CB8-BL024"
+   ],
+   "quantity_affected": 13.495,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam"
+  },
+  "QUESTION_TO_CONSULTANT": "Which plan members form CB8 (schedule spans [3.7, 6.4, 6.8])?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule spans: [3.7, 6.4, 6.8]",
+   "plan spans: [6.545, 6.95]"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (continuous beam), p.11; ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 13.495 m beam (REINFORCEMENT).",
+  "flag_id": "STR-BEA-021",
+  "flag_key": "ab4eaad06cdd358b"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "drawn width 987 mm fits B = 100 cm (geometry hint only, not applied)",
+  "PLAIN_LANGUAGE_ISSUE": "Schedule key SB2 is defined 2 times with different values.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "BM-FOUNDATION-SB2-BD003"
+   ],
+   "quantity_affected": 5.11,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m beam"
+  },
+  "QUESTION_TO_CONSULTANT": "Schedule key SB2 appears twice. Which row is valid?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "row 2ABA: {'BOT-B': '10', 'BOT-D': '16', 'D': '8', 'H': '50', 'STI-B': '10', 'TOP-B': '20', 'TOP-D': '18', 'W': '100'}",
+   "row 1FBB: {'BOT-B': '10', 'BOT-D': '18', 'D': '8', 'H': '50', 'STI-B': '10', 'TOP-B': '10', 'TOP-D': '18', 'W': '80'}"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (strap beam), p.10",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 5.11 m beam (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-BEA-022",
+  "flag_key": "136ed013b3085f74"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "counted as a mark occurrence; member not assigned",
+  "PLAIN_LANGUAGE_ISSUE": "Mark B6 sits between 3 members at similar distance; the member it names is not certain.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "BM-1F_ROOF-B6-UNBOUND-6BD"
+   ],
+   "quantity_affected": null,
+   "release_effect": "AUDIT_ONLY",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null
+  },
+  "QUESTION_TO_CONSULTANT": "Which member does mark B6 refer to?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "mark: B6",
+   "candidate members: ['BL013', 'BA002', 'BL009']"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5",
+  "WHY_IT_MATTERS": "A member drawn on the plan cannot be tied to one type mark with certainty. The affected quantity is shown for checking but not counted in totals.",
+  "flag_id": "STR-BEA-023",
+  "flag_key": "19f766b53714dd1c"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "counted as a mark occurrence; member not assigned",
+  "PLAIN_LANGUAGE_ISSUE": "Mark B6 sits between 3 members at similar distance; the member it names is not certain.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "BM-1F_ROOF-B6-UNBOUND-6D4"
+   ],
+   "quantity_affected": null,
+   "release_effect": "AUDIT_ONLY",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null
+  },
+  "QUESTION_TO_CONSULTANT": "Which member does mark B6 refer to?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "mark: B6",
+   "candidate members: ['BL031', 'BA005', 'BA006']"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5",
+  "WHY_IT_MATTERS": "A member drawn on the plan cannot be tied to one type mark with certainty. The affected quantity is shown for checking but not counted in totals.",
+  "flag_id": "STR-BEA-024",
+  "flag_key": "81855f7056b6f094"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "counted as a mark occurrence; member not assigned",
+  "PLAIN_LANGUAGE_ISSUE": "Mark B6 sits between 3 members at similar distance; the member it names is not certain.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "BM-1F_ROOF-B6-UNBOUND-6D7"
+   ],
+   "quantity_affected": null,
+   "release_effect": "AUDIT_ONLY",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null
+  },
+  "QUESTION_TO_CONSULTANT": "Which member does mark B6 refer to?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "mark: B6",
+   "candidate members: ['BA007', 'BA008', 'BL030']"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5",
+  "WHY_IT_MATTERS": "A member drawn on the plan cannot be tied to one type mark with certainty. The affected quantity is shown for checking but not counted in totals.",
+  "flag_id": "STR-BEA-025",
+  "flag_key": "c38041be901de6d9"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "counted as a mark occurrence; member not assigned",
+  "PLAIN_LANGUAGE_ISSUE": "Mark B6 sits between 3 members at similar distance; the member it names is not certain.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "BM-1F_ROOF-B6-UNBOUND-76C"
+   ],
+   "quantity_affected": null,
+   "release_effect": "AUDIT_ONLY",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null
+  },
+  "QUESTION_TO_CONSULTANT": "Which member does mark B6 refer to?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "mark: B6",
+   "candidate members: ['BL012', 'BA003', 'BA004']"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5",
+  "WHY_IT_MATTERS": "A member drawn on the plan cannot be tied to one type mark with certainty. The affected quantity is shown for checking but not counted in totals.",
+  "flag_id": "STR-BEA-026",
+  "flag_key": "fa4a8793251b7e29"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "counted as a mark occurrence; member not assigned",
+  "PLAIN_LANGUAGE_ISSUE": "Mark B1 sits between 2 members at similar distance; the member it names is not certain.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "BM-GF_ROOF-B1-UNBOUND-45D"
+   ],
+   "quantity_affected": null,
+   "release_effect": "AUDIT_ONLY",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null
+  },
+  "QUESTION_TO_CONSULTANT": "Which member does mark B1 refer to?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "mark: B1",
+   "candidate members: ['BL029', 'BL016']"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4",
+  "WHY_IT_MATTERS": "A member drawn on the plan cannot be tied to one type mark with certainty. The affected quantity is shown for checking but not counted in totals.",
+  "flag_id": "STR-BEA-027",
+  "flag_key": "52d31e9fcfdccc19"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "counted as a mark occurrence; member not assigned",
+  "PLAIN_LANGUAGE_ISSUE": "Mark B8 sits between 2 members at similar distance; the member it names is not certain.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "BM-GF_ROOF-B8-UNBOUND-472"
+   ],
+   "quantity_affected": null,
+   "release_effect": "AUDIT_ONLY",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null
+  },
+  "QUESTION_TO_CONSULTANT": "Which member does mark B8 refer to?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "mark: B8",
+   "candidate members: ['BL031', 'BA004']"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4",
+  "WHY_IT_MATTERS": "A member drawn on the plan cannot be tied to one type mark with certainty. The affected quantity is shown for checking but not counted in totals.",
+  "flag_id": "STR-BEA-028",
+  "flag_key": "501e2bea96ca6ee3"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "counted as column occurrences at FOUNDATION only (authority: PLAN_MEMBER_TAG)",
+  "PLAIN_LANGUAGE_ISSUE": "Type CN occurs only at FOUNDATION (6 occurrence(s)) while other columns continue upward.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "COL-CN-X16-Y03-FOUNDATION",
+    "COL-CN-X?-Y?@24058-12787-FOUNDATION",
+    "COL-CN-X?-Y?@28583-12787-FOUNDATION",
+    "COL-CN-X15-Y?@31208-15726-FOUNDATION",
+    "COL-CN-X?-Y?@29108-18112-FOUNDATION",
+    "COL-CN-X?-Y10@31108-20498-FOUNDATION"
+   ],
+   "quantity_affected": 6,
+   "release_effect": "PROVISIONAL",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences"
+  },
+  "QUESTION_TO_CONSULTANT": "Is CN a column that stops at FOUNDATION, or a short stub / pedestal that belongs to the foundation item?",
+  "WHAT_THE_DRAWING_SAYS": [],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FOUNDATION PLAN, p.2",
+  "WHY_IT_MATTERS": "A rule or note exists but it is not clear where or how it applies. The quantity uses the engine's current interpretation; an answer may change it. Affected: 6 nr occurrences (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-COL-001",
+  "flag_key": "27de4e7a2881df97"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "none - held back",
+  "PLAIN_LANGUAGE_ISSUE": "ST. OF COLUMN- 6Ø8/m (column ties) gives a count per metre, but 2 band(s) use more than one closed tie per level; whether the count is of tie SETS or of single ties is not stated.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "COL-C10-X15-Y01-FOUNDATION",
+    "COL-C10-X15-Y01-GF",
+    "COL-C11-X06-Y04-FOUNDATION",
+    "COL-C11-X06-Y04-GF",
+    "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+    "COL-C11-X?-Y01@17913-7462-GF",
+    "COL-C5-X05-Y04-FOUNDATION",
+    "COL-C5-X05-Y04-GF",
+    "COL-C5-X11-Y10-FOUNDATION",
+    "COL-C5-X11-Y10-GF",
+    "COL-C5-X14-Y02-FOUNDATION",
+    "COL-C5-X14-Y02-GF",
+    "COL-C6-X08-Y04-1F",
+    "COL-C6-X08-Y04-FOUNDATION",
+    "COL-C6-X08-Y04-GF",
+    "COL-C8-X12-Y02-1F",
+    "COL-C8-X12-Y02-FOUNDATION",
+    "COL-C8-X12-Y02-GF",
+    "COL-C8-X15-Y06-1F",
+    "COL-C8-X15-Y06-FOUNDATION",
+    "COL-C8-X15-Y06-GF",
+    "COL-C9-X10-Y07-1F",
+    "COL-C9-X10-Y07-2F",
+    "COL-C9-X10-Y07-FOUNDATION",
+    "COL-C9-X10-Y07-GF",
+    "COL-C9-X13-Y08-1F",
+    "COL-C9-X13-Y08-FOUNDATION",
+    "COL-C9-X13-Y08-GF",
+    "COL-P.C-X08-Y02-1F"
+   ],
+   "quantity_affected": 29,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences"
+  },
+  "QUESTION_TO_CONSULTANT": "ST. OF COLUMN- 6Ø8/m (column ties): is the per-metre count the number of tie sets (all closed ties at one level) or the number of single ties?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "rule: ST. OF COLUMN- 6Ø8/m (column ties)",
+   "ties per level in the multi-tie bands: {'TIE_50_LT_L_LT_80': 2, 'TIE_80_LT_L_LT_120': 3}"
+  ],
+  "WHERE_TO_LOOK": "ST7757.pdf, DETAILS OF COLUMN REINFORCEMENT (schedule sheet), p.9",
+  "WHY_IT_MATTERS": "A rule or note exists but it is not clear where or how it applies. Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 29 nr occurrences (REINFORCEMENT).",
+  "flag_id": "STR-COL-002",
+  "flag_key": "2e23673c1966908b"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "none - held back",
+  "PLAIN_LANGUAGE_ISSUE": "Type C10 (FOUNDATION), C10 (GF), C5 (FOUNDATION), C5 (GF), C6 (FOUNDATION), C6 (GF), C9 (2F) has 10 main bars but the detail sketch for its band shows 8; which bars each tie encloses is not shown.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "COL-C5-X14-Y02-FOUNDATION",
+    "COL-C5-X05-Y04-FOUNDATION",
+    "COL-C5-X11-Y10-FOUNDATION",
+    "COL-C5-X14-Y02-GF",
+    "COL-C5-X05-Y04-GF",
+    "COL-C5-X11-Y10-GF",
+    "COL-C6-X08-Y04-FOUNDATION",
+    "COL-C6-X08-Y04-GF",
+    "COL-C9-X10-Y07-2F",
+    "COL-C10-X15-Y01-FOUNDATION",
+    "COL-C10-X15-Y01-GF"
+   ],
+   "quantity_affected": 11,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences"
+  },
+  "QUESTION_TO_CONSULTANT": "For C10 (FOUNDATION), C10 (GF), C5 (FOUNDATION), C5 (GF), C6 (FOUNDATION), C6 (GF), C9 (2F) (10 bars): which bars does each overlapping tie enclose?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule bars: 10",
+   "bars in band sketch: 8"
+  ],
+  "WHERE_TO_LOOK": "ST7757.pdf, DETAILS OF COLUMN REINFORCEMENT (schedule sheet), p.9",
+  "WHY_IT_MATTERS": "A rule or note exists but it is not clear where or how it applies. Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 11 nr occurrences (REINFORCEMENT).",
+  "flag_id": "STR-COL-003",
+  "flag_key": "d36751d764ff7264"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "none - held back",
+  "PLAIN_LANGUAGE_ISSUE": "Type C11 (FOUNDATION), C11 (GF), C9 (FOUNDATION), C9 (GF) has 14 main bars but the detail sketch for its band shows 12; which bars each tie encloses is not shown.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "COL-C9-X10-Y07-FOUNDATION",
+    "COL-C9-X13-Y08-FOUNDATION",
+    "COL-C9-X10-Y07-GF",
+    "COL-C9-X13-Y08-GF",
+    "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+    "COL-C11-X06-Y04-FOUNDATION",
+    "COL-C11-X?-Y01@17913-7462-GF",
+    "COL-C11-X06-Y04-GF"
+   ],
+   "quantity_affected": 8,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences"
+  },
+  "QUESTION_TO_CONSULTANT": "For C11 (FOUNDATION), C11 (GF), C9 (FOUNDATION), C9 (GF) (14 bars): which bars does each overlapping tie enclose?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule bars: 14",
+   "bars in band sketch: 12"
+  ],
+  "WHERE_TO_LOOK": "ST7757.pdf, DETAILS OF COLUMN REINFORCEMENT (schedule sheet), p.9",
+  "WHY_IT_MATTERS": "A rule or note exists but it is not clear where or how it applies. Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 8 nr occurrences (REINFORCEMENT).",
+  "flag_id": "STR-COL-004",
+  "flag_key": "42c6b2ed898daffb"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "none - held back",
+  "PLAIN_LANGUAGE_ISSUE": "Type C1 (1F), C1 (2F), C2 (2F), C3 (1F), C3 (2F), C5 (2F) has 6 main bars but the detail sketch for its band shows 4; which bars each tie encloses is not shown.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "COL-C1-X09-Y09-1F",
+    "COL-C1-X09-Y09-2F",
+    "COL-C2-X09-Y07-2F",
+    "COL-C2-X10-Y09-2F",
+    "COL-C2-X08-Y10-2F",
+    "COL-C2-X09-Y10-2F",
+    "COL-C3-X05-Y02-1F",
+    "COL-C3-X08-Y09-1F",
+    "COL-C3-X08-Y09-2F",
+    "COL-C5-X11-Y10-2F"
+   ],
+   "quantity_affected": 10,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences"
+  },
+  "QUESTION_TO_CONSULTANT": "For C1 (1F), C1 (2F), C2 (2F), C3 (1F), C3 (2F), C5 (2F) (6 bars): which bars does each overlapping tie enclose?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule bars: 6",
+   "bars in band sketch: 4"
+  ],
+  "WHERE_TO_LOOK": "ST7757.pdf, DETAILS OF COLUMN REINFORCEMENT (schedule sheet), p.9",
+  "WHY_IT_MATTERS": "A rule or note exists but it is not clear where or how it applies. Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 10 nr occurrences (REINFORCEMENT).",
+  "flag_id": "STR-COL-005",
+  "flag_key": "b8c903ac066763f7"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "none - held back",
+  "PLAIN_LANGUAGE_ISSUE": "Type C (FOUNDATION), C (GF), C1 (FOUNDATION), C1 (GF), C2 (1F), C2 (FOUNDATION), C2 (GF), C3 (FOUNDATION), C3 (GF), C4 (1F), C4 (FOUNDATION), C4 (GF), C5 (1F) has 8 main bars but the detail sketch for its band shows 4; which bars each tie encloses is not shown.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "COL-C-X01-Y01-FOUNDATION",
+    "COL-C-X06-Y01-FOUNDATION",
+    "COL-C-X16-Y01-FOUNDATION",
+    "COL-C-X01-Y05-FOUNDATION",
+    "COL-C-X02-Y05-FOUNDATION",
+    "COL-C-X01-Y01-GF",
+    "COL-C-X06-Y01-GF",
+    "COL-C-X16-Y01-GF",
+    "COL-C-X01-Y05-GF",
+    "COL-C-X02-Y05-GF",
+    "COL-C1-X09-Y09-FOUNDATION",
+    "COL-C1-X09-Y09-GF",
+    "COL-C2-X09-Y07-FOUNDATION",
+    "COL-C2-X10-Y09-FOUNDATION",
+    "COL-C2-X08-Y10-FOUNDATION",
+    "COL-C2-X09-Y10-FOUNDATION",
+    "COL-C2-X09-Y07-GF",
+    "COL-C2-X10-Y09-GF",
+    "COL-C2-X08-Y10-GF",
+    "COL-C2-X09-Y10-GF",
+    "COL-C2-X09-Y07-1F",
+    "COL-C2-X10-Y09-1F",
+    "COL-C2-X08-Y10-1F",
+    "COL-C2-X09-Y10-1F",
+    "COL-C3-X04-Y01-FOUNDATION",
+    "COL-C3-X12-Y01-FOUNDATION",
+    "COL-C3-X05-Y02-FOUNDATION",
+    "COL-C3-X03-Y04-FOUNDATION",
+    "COL-C3-X16-Y06-FOUNDATION",
+    "COL-C3-X08-Y09-FOUNDATION",
+    "COL-C3-X04-Y01-GF",
+    "COL-C3-X12-Y01-GF",
+    "COL-C3-X05-Y02-GF",
+    "COL-C3-X03-Y04-GF",
+    "COL-C3-X16-Y06-GF",
+    "COL-C3-X08-Y09-GF",
+    "COL-C4-X13-Y10-FOUNDATION",
+    "COL-C4-X15-Y10-FOUNDATION",
+    "COL-C4-X13-Y10-GF",
+    "COL-C4-X15-Y10-GF",
+    "COL-C4-X13-Y10-1F",
+    "COL-C4-X15-Y10-1F",
+    "COL-C5-X14-Y02-1F",
+    "COL-C5-X05-Y04-1F",
+    "COL-C5-X11-Y10-1F"
+   ],
+   "quantity_affected": 45,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences"
+  },
+  "QUESTION_TO_CONSULTANT": "For C (FOUNDATION), C (GF), C1 (FOUNDATION), C1 (GF), C2 (1F), C2 (FOUNDATION), C2 (GF), C3 (FOUNDATION), C3 (GF), C4 (1F), C4 (FOUNDATION), C4 (GF), C5 (1F) (8 bars): which bars does each overlapping tie enclose?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule bars: 8",
+   "bars in band sketch: 4"
+  ],
+  "WHERE_TO_LOOK": "ST7757.pdf, DETAILS OF COLUMN REINFORCEMENT (schedule sheet), p.9",
+  "WHY_IT_MATTERS": "A rule or note exists but it is not clear where or how it applies. Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 45 nr occurrences (REINFORCEMENT).",
+  "flag_id": "STR-COL-006",
+  "flag_key": "467b2591ed2a06e1"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "none - held back",
+  "PLAIN_LANGUAGE_ISSUE": "ST. OF COLUMN- 6Ø8/m (column ties) gives ties per metre but not over which height: full storey height, clear height below the beams, or including the joint.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "COL-C10-X15-Y01-FOUNDATION",
+    "COL-C10-X15-Y01-GF",
+    "COL-C-X01-Y01-FOUNDATION",
+    "COL-C-X01-Y01-GF",
+    "COL-C3-X04-Y01-FOUNDATION",
+    "COL-C3-X04-Y01-GF",
+    "COL-C-X06-Y01-FOUNDATION",
+    "COL-C-X06-Y01-GF",
+    "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+    "COL-C11-X?-Y01@17913-7462-GF",
+    "COL-C3-X12-Y01-FOUNDATION",
+    "COL-C3-X12-Y01-GF",
+    "COL-C-X16-Y01-FOUNDATION",
+    "COL-C-X16-Y01-GF",
+    "COL-P.C-X08-Y02-1F",
+    "COL-C8-X12-Y02-FOUNDATION",
+    "COL-C8-X12-Y02-GF",
+    "COL-C8-X12-Y02-1F",
+    "COL-P.C-X15-Y02-1F",
+    "COL-C5-X14-Y02-FOUNDATION",
+    "COL-C5-X14-Y02-GF",
+    "COL-C5-X14-Y02-1F",
+    "COL-C3-X05-Y02-FOUNDATION",
+    "COL-C3-X05-Y02-GF",
+    "COL-C3-X05-Y02-1F",
+    "COL-CN-X16-Y03-FOUNDATION",
+    "COL-C5-X05-Y04-FOUNDATION",
+    "COL-C5-X05-Y04-GF",
+    "COL-C5-X05-Y04-1F",
+    "COL-C3-X03-Y04-FOUNDATION",
+    "COL-C3-X03-Y04-GF",
+    "COL-C11-X06-Y04-FOUNDATION",
+    "COL-C11-X06-Y04-GF",
+    "COL-C6-X08-Y04-FOUNDATION",
+    "COL-C6-X08-Y04-GF",
+    "COL-C6-X08-Y04-1F",
+    "COL-CN-X?-Y?@24058-12787-FOUNDATION",
+    "COL-CN-X?-Y?@28583-12787-FOUNDATION",
+    "COL-C-X01-Y05-FOUNDATION",
+    "COL-C-X01-Y05-GF",
+    "COL-C-X02-Y05-FOUNDATION",
+    "COL-C-X02-Y05-GF",
+    "COL-C3-X16-Y06-FOUNDATION",
+    "COL-C3-X16-Y06-GF",
+    "COL-C8-X15-Y06-FOUNDATION",
+    "COL-C8-X15-Y06-GF",
+    "COL-C8-X15-Y06-1F",
+    "COL-C2-X09-Y07-FOUNDATION",
+    "COL-C2-X09-Y07-GF",
+    "COL-C2-X09-Y07-1F",
+    "COL-C2-X09-Y07-2F",
+    "COL-CN-X15-Y?@31208-15726-FOUNDATION",
+    "COL-C9-X10-Y07-FOUNDATION",
+    "COL-C9-X10-Y07-GF",
+    "COL-C9-X10-Y07-1F",
+    "COL-C9-X10-Y07-2F",
+    "COL-P.C-X?-Y?@24888-15994-2F",
+    "COL-C7-X07-Y?@15888-16162-FOUNDATION",
+    "COL-C7-X07-Y?@15888-16162-GF",
+    "COL-C7-X07-Y?@15888-16162-1F",
+    "COL-C9-X13-Y08-FOUNDATION",
+    "COL-C9-X13-Y08-GF",
+    "COL-C9-X13-Y08-1F",
+    "COL-C3-X08-Y09-FOUNDATION",
+    "COL-C3-X08-Y09-GF",
+    "COL-C3-X08-Y09-1F",
+    "COL-C3-X08-Y09-2F",
+    "COL-C1-X09-Y09-FOUNDATION",
+    "COL-C1-X09-Y09-GF",
+    "COL-C1-X09-Y09-1F",
+    "COL-C1-X09-Y09-2F",
+    "COL-C2-X10-Y09-FOUNDATION",
+    "COL-C2-X10-Y09-GF",
+    "COL-C2-X10-Y09-1F",
+    "COL-C2-X10-Y09-2F",
+    "COL-CN-X?-Y?@29108-18112-FOUNDATION",
+    "COL-CN-X?-Y10@31108-20498-FOUNDATION",
+    "COL-C2-X08-Y10-FOUNDATION",
+    "COL-C2-X08-Y10-GF",
+    "COL-C2-X08-Y10-1F",
+    "COL-C2-X08-Y10-2F",
+    "COL-C2-X09-Y10-FOUNDATION",
+    "COL-C2-X09-Y10-GF",
+    "COL-C2-X09-Y10-1F",
+    "COL-C2-X09-Y10-2F",
+    "COL-C5-X11-Y10-FOUNDATION",
+    "COL-C5-X11-Y10-GF",
+    "COL-C5-X11-Y10-1F",
+    "COL-C5-X11-Y10-2F",
+    "COL-C4-X13-Y10-FOUNDATION",
+    "COL-C4-X13-Y10-GF",
+    "COL-C4-X13-Y10-1F",
+    "COL-C4-X15-Y10-FOUNDATION",
+    "COL-C4-X15-Y10-GF",
+    "COL-C4-X15-Y10-1F"
+   ],
+   "quantity_affected": 95,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences"
+  },
+  "QUESTION_TO_CONSULTANT": "Over which vertical length are the column ties counted: floor-to-floor, clear height between slab and beam soffit, or clear height plus the beam-column joint?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "rule: ST. OF COLUMN- 6Ø8/m (column ties)"
+  ],
+  "WHERE_TO_LOOK": "ST7757.pdf, DETAILS OF COLUMN REINFORCEMENT (schedule sheet), p.9",
+  "WHY_IT_MATTERS": "The drawings give the requirement but not the method to measure it; the engineer must state the method. Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 95 nr occurrences (REINFORCEMENT).",
+  "flag_id": "STR-COL-007",
+  "flag_key": "db724c886670c21a"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "none - held back",
+  "PLAIN_LANGUAGE_ISSUE": "column tie rule (arrangement by long side L): value 80.0 cm (C7) is on a limit no band includes.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "COL-C7-X07-Y?@15888-16162-FOUNDATION",
+    "COL-C7-X07-Y?@15888-16162-GF",
+    "COL-C7-X07-Y?@15888-16162-1F"
+   ],
+   "quantity_affected": 3,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences"
+  },
+  "QUESTION_TO_CONSULTANT": "column tie rule (arrangement by long side L): which band applies where the value is exactly 80.0 cm?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "rule bands: ['L ≤ 50cm', '50cm < L < 80cm', '80cm < L < 120cm']",
+   "member value: 80.0 cm"
+  ],
+  "WHERE_TO_LOOK": "ST7757.pdf, DETAILS OF COLUMN REINFORCEMENT (schedule sheet), p.9",
+  "WHY_IT_MATTERS": "A drawing rule does not cover this exact case (for example a value sits exactly on a limit). Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 3 nr occurrences (REINFORCEMENT).",
+  "flag_id": "STR-COL-008",
+  "flag_key": "647c4db1d77bc7d9"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "type C3 used provisionally (authority: TAG_CONFLICT)",
+  "PLAIN_LANGUAGE_ISSUE": "column at grid X04/Y01: equal-authority sources give different types (C3 vs C).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "COL-C3-X04-Y01-FOUNDATION",
+    "COL-C3-X04-Y01-GF"
+   ],
+   "quantity_affected": 2,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences"
+  },
+  "QUESTION_TO_CONSULTANT": "Which type is correct for this column (at grid X04/Y01): C3 or C?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "COLUMN & AXIS PLAN tag: C3 (ST7757.dxf, p.1, COLUMN & AXIS PLAN, layer S-TEXT, handle 100A, 'C3')",
+   "GROUND BEAMS PLAN tag: C (ST7757.dxf, p.3, GROUND BEAMS PLAN, layer S-TEXT, handle 20D, 'C')"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf, COLUMN & AXIS PLAN, p.1; ST7757.dxf, FOUNDATION PLAN, p.2; ST7757.dxf, GROUND BEAMS PLAN, p.3",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 2 nr occurrences (REINFORCEMENT).",
+  "flag_id": "STR-COL-009",
+  "flag_key": "f7f8ae2918e238b6"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "type C8 used provisionally (authority: TAG_CONFLICT)",
+  "PLAIN_LANGUAGE_ISSUE": "column at grid X12/Y02: equal-authority sources give different types (C8 vs C7).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "COL-C8-X12-Y02-FOUNDATION",
+    "COL-C8-X12-Y02-GF",
+    "COL-C8-X12-Y02-1F"
+   ],
+   "quantity_affected": 3,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "REINFORCEMENT",
+    "CONCRETE",
+    "FORMWORK"
+   ],
+   "unit": "nr occurrences"
+  },
+  "QUESTION_TO_CONSULTANT": "Which type is correct for this column (at grid X12/Y02): C8 or C7?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "COLUMN & AXIS PLAN tag: C8 (ST7757.dxf, p.1, COLUMN & AXIS PLAN, layer S-TEXT, handle 101A, 'C8')",
+   "GROUND BEAMS PLAN tag: C7 (ST7757.dxf, p.3, GROUND BEAMS PLAN, layer S-TEXT, handle 24E, 'C7')"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf, COLUMN & AXIS PLAN, p.1; ST7757.dxf, FOUNDATION PLAN, p.2; ST7757.dxf, GROUND BEAMS PLAN, p.3",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 3 nr occurrences (REINFORCEMENT, CONCRETE, FORMWORK).",
+  "flag_id": "STR-COL-010",
+  "flag_key": "e3be1b4bfeb1d55c"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "counted (present on the other plans) (authority: DRAWN_GEOMETRY)",
+  "PLAIN_LANGUAGE_ISSUE": "column CN is drawn on FOUNDATION PLAN, GROUND BEAMS PLAN but not on COLUMN & AXIS PLAN.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "COLPOS-X?-Y?-29108-18112"
+   ],
+   "quantity_affected": 1,
+   "release_effect": "PROVISIONAL",
+   "trades": [
+    "CONCRETE"
+   ],
+   "unit": "nr occurrences"
+  },
+  "QUESTION_TO_CONSULTANT": "Does this column exist (it is missing on COLUMN & AXIS PLAN)?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "drawn on: ['FOUNDATION PLAN', 'GROUND BEAMS PLAN']",
+   "missing on: ['COLUMN & AXIS PLAN']"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf, FOUNDATION PLAN, p.2; ST7757.dxf, GROUND BEAMS PLAN, p.3",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. The quantity uses the engine's current interpretation; an answer may change it. Affected: 1 nr occurrences (CONCRETE).",
+  "flag_id": "STR-COL-011",
+  "flag_key": "5f49f5bc706c6d18"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "[30.0, 50.0] (MEMBER_SCHEDULE) used (authority: MEMBER_SCHEDULE)",
+  "PLAIN_LANGUAGE_ISSUE": "1 column occurrence(s) of type C1: schedule section (storey band) differs from drawn outline ([30.0, 50.0] vs [20.0, 50.0]).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "COL-C1-X09-Y09-FOUNDATION"
+   ],
+   "quantity_affected": 1,
+   "release_effect": "PROVISIONAL",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences"
+  },
+  "QUESTION_TO_CONSULTANT": "For column type C1: does the schedule section (storey band) govern, or the drawn outline ([30.0, 50.0] vs [20.0, 50.0])?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule section (storey band): [30.0, 50.0] (ST7757.dxf / ST7757.pdf, p.9, schedule (column), 'C1')",
+   "drawn outline: [20.0, 50.0] (ST7757.dxf, p.2, FOUNDATION PLAN, layer S-COL.BON, handle 1099)"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FOUNDATION PLAN, p.2",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. The quantity uses the engine's current interpretation; an answer may change it. Affected: 1 nr occurrences (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-COL-012",
+  "flag_key": "b4adc58ed35e8d09"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "[30.0, 50.0] (MEMBER_SCHEDULE) used (authority: MEMBER_SCHEDULE)",
+  "PLAIN_LANGUAGE_ISSUE": "2 column occurrence(s) of type C2: schedule section (storey band) differs from drawn outline ([30.0, 50.0] vs [20.0, 50.0]).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "COL-C2-X09-Y07-FOUNDATION",
+    "COL-C2-X10-Y09-FOUNDATION"
+   ],
+   "quantity_affected": 2,
+   "release_effect": "PROVISIONAL",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences"
+  },
+  "QUESTION_TO_CONSULTANT": "For column type C2: does the schedule section (storey band) govern, or the drawn outline ([30.0, 50.0] vs [20.0, 50.0])?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule section (storey band): [30.0, 50.0] (ST7757.dxf / ST7757.pdf, p.9, schedule (column), 'C2')",
+   "drawn outline: [20.0, 50.0] (ST7757.dxf, p.2, FOUNDATION PLAN, layer S-COL.BON, handle 1096)"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FOUNDATION PLAN, p.2",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. The quantity uses the engine's current interpretation; an answer may change it. Affected: 2 nr occurrences (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-COL-013",
+  "flag_key": "af638353ff477a4c"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "[25.0, 50.0] (MEMBER_SCHEDULE) used (authority: MEMBER_SCHEDULE)",
+  "PLAIN_LANGUAGE_ISSUE": "4 column occurrence(s) of type C3: schedule section (storey band) differs from drawn outline ([20.0, 50.0] vs [25.0, 50.0]; [25.0, 50.0] vs [20.0, 40.0]; [25.0, 50.0] vs [20.0, 50.0]).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "COL-C3-X04-Y01-GF",
+    "COL-C3-X16-Y06-GF",
+    "COL-C3-X08-Y09-1F",
+    "COL-C3-X08-Y09-2F"
+   ],
+   "quantity_affected": 4,
+   "release_effect": "PROVISIONAL",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences"
+  },
+  "QUESTION_TO_CONSULTANT": "For column type C3: does the schedule section (storey band) govern, or the drawn outline ([20.0, 50.0] vs [25.0, 50.0]; [25.0, 50.0] vs [20.0, 40.0]; [25.0, 50.0] vs [20.0, 50.0])?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule section (storey band): [25.0, 50.0] (ST7757.dxf / ST7757.pdf, p.9, schedule (column), 'C3')",
+   "drawn outline: [20.0, 40.0] (ST7757.dxf, p.4, GROUND FLOOR ROOF SLAB, layer S-COL.BON, handle 350)"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. The quantity uses the engine's current interpretation; an answer may change it. Affected: 4 nr occurrences (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-COL-014",
+  "flag_key": "9959b2794f775d09"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "[20.0, 50.0] (MEMBER_SCHEDULE) used (authority: MEMBER_SCHEDULE)",
+  "PLAIN_LANGUAGE_ISSUE": "3 column occurrence(s) of type C4: schedule section (storey band) differs from drawn outline ([20.0, 50.0] vs [25.0, 50.0]; [30.0, 50.0] vs [25.0, 50.0]).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "COL-C4-X13-Y10-1F",
+    "COL-C4-X15-Y10-FOUNDATION",
+    "COL-C4-X15-Y10-1F"
+   ],
+   "quantity_affected": 3,
+   "release_effect": "PROVISIONAL",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences"
+  },
+  "QUESTION_TO_CONSULTANT": "For column type C4: does the schedule section (storey band) govern, or the drawn outline ([20.0, 50.0] vs [25.0, 50.0]; [30.0, 50.0] vs [25.0, 50.0])?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule section (storey band): [20.0, 50.0] (ST7757.dxf / ST7757.pdf, p.9, schedule (column), 'C4')",
+   "drawn outline: [25.0, 50.0] (ST7757.dxf, p.5, FIRST FLOOR ROOF SLAB, layer S-COL.BON, handle 697)"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. The quantity uses the engine's current interpretation; an answer may change it. Affected: 3 nr occurrences (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-COL-015",
+  "flag_key": "43aec3f474f6b35f"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "[20.0, 50.0] (MEMBER_SCHEDULE) used (authority: MEMBER_SCHEDULE)",
+  "PLAIN_LANGUAGE_ISSUE": "4 column occurrence(s) of type C5: schedule section (storey band) differs from drawn outline ([20.0, 50.0] vs [20.0, 60.0]; [20.0, 50.0] vs [25.0, 60.0]).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "COL-C5-X14-Y02-1F",
+    "COL-C5-X05-Y04-1F",
+    "COL-C5-X11-Y10-1F",
+    "COL-C5-X11-Y10-2F"
+   ],
+   "quantity_affected": 4,
+   "release_effect": "PROVISIONAL",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences"
+  },
+  "QUESTION_TO_CONSULTANT": "For column type C5: does the schedule section (storey band) govern, or the drawn outline ([20.0, 50.0] vs [20.0, 60.0]; [20.0, 50.0] vs [25.0, 60.0])?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule section (storey band): [20.0, 50.0] (ST7757.dxf / ST7757.pdf, p.9, schedule (column), 'C5')",
+   "drawn outline: [25.0, 60.0] (ST7757.dxf, p.5, FIRST FLOOR ROOF SLAB, layer S-COL.BON, handle 694)"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. The quantity uses the engine's current interpretation; an answer may change it. Affected: 4 nr occurrences (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-COL-016",
+  "flag_key": "d03616d862033e55"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "[20.0, 60.0] (MEMBER_SCHEDULE) used (authority: MEMBER_SCHEDULE)",
+  "PLAIN_LANGUAGE_ISSUE": "1 column occurrence(s) of type C6: schedule section (storey band) differs from drawn outline ([20.0, 60.0] vs [25.0, 70.0]).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "COL-C6-X08-Y04-1F"
+   ],
+   "quantity_affected": 1,
+   "release_effect": "PROVISIONAL",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences"
+  },
+  "QUESTION_TO_CONSULTANT": "For column type C6: does the schedule section (storey band) govern, or the drawn outline ([20.0, 60.0] vs [25.0, 70.0])?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule section (storey band): [20.0, 60.0] (ST7757.dxf / ST7757.pdf, p.9, schedule (column), 'C6')",
+   "drawn outline: [25.0, 70.0] (ST7757.dxf, p.5, FIRST FLOOR ROOF SLAB, layer S-COL.BON, handle 688)"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. The quantity uses the engine's current interpretation; an answer may change it. Affected: 1 nr occurrences (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-COL-017",
+  "flag_key": "717770985d307b9f"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "[20.0, 80.0] (MEMBER_SCHEDULE) used (authority: MEMBER_SCHEDULE)",
+  "PLAIN_LANGUAGE_ISSUE": "1 column occurrence(s) of type C7: schedule section (storey band) differs from drawn outline ([20.0, 80.0] vs [25.0, 80.0]).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "COL-C7-X07-Y?@15888-16162-1F"
+   ],
+   "quantity_affected": 1,
+   "release_effect": "PROVISIONAL",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences"
+  },
+  "QUESTION_TO_CONSULTANT": "For column type C7: does the schedule section (storey band) govern, or the drawn outline ([20.0, 80.0] vs [25.0, 80.0])?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule section (storey band): [20.0, 80.0] (ST7757.dxf / ST7757.pdf, p.9, schedule (column), 'C7')",
+   "drawn outline: [25.0, 80.0] (ST7757.dxf, p.5, FIRST FLOOR ROOF SLAB, layer S-COL.BON, handle 68E)"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. The quantity uses the engine's current interpretation; an answer may change it. Affected: 1 nr occurrences (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-COL-018",
+  "flag_key": "66e7e7b066d378bc"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "[30.0, 90.0] (MEMBER_SCHEDULE) used (authority: MEMBER_SCHEDULE)",
+  "PLAIN_LANGUAGE_ISSUE": "3 column occurrence(s) of type C8: schedule section (storey band) differs from drawn outline ([20.0, 90.0] vs [25.0, 80.0]; [25.0, 90.0] vs [25.0, 80.0]; [30.0, 90.0] vs [30.0, 80.0]).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "COL-C8-X12-Y02-FOUNDATION",
+    "COL-C8-X12-Y02-GF",
+    "COL-C8-X12-Y02-1F"
+   ],
+   "quantity_affected": 3,
+   "release_effect": "PROVISIONAL",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences"
+  },
+  "QUESTION_TO_CONSULTANT": "For column type C8: does the schedule section (storey band) govern, or the drawn outline ([20.0, 90.0] vs [25.0, 80.0]; [25.0, 90.0] vs [25.0, 80.0]; [30.0, 90.0] vs [30.0, 80.0])?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule section (storey band): [30.0, 90.0] (ST7757.dxf / ST7757.pdf, p.9, schedule (column), 'C8')",
+   "drawn outline: [30.0, 80.0] (ST7757.dxf, p.2, FOUNDATION PLAN, layer S-COL.BON, handle 10E0)"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FOUNDATION PLAN, p.2",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. The quantity uses the engine's current interpretation; an answer may change it. Affected: 3 nr occurrences (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-COL-019",
+  "flag_key": "ce59876118cdbe17"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "[30.0, 100.0] (MEMBER_SCHEDULE) used (authority: MEMBER_SCHEDULE)",
+  "PLAIN_LANGUAGE_ISSUE": "3 column occurrence(s) of type C9: schedule section (storey band) differs from drawn outline ([20.0, 90.0] vs [20.0, 100.0]; [20.0, 90.0] vs [25.0, 100.0]; [30.0, 100.0] vs [25.0, 100.0]).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "COL-C9-X10-Y07-FOUNDATION",
+    "COL-C9-X10-Y07-1F",
+    "COL-C9-X13-Y08-1F"
+   ],
+   "quantity_affected": 3,
+   "release_effect": "PROVISIONAL",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences"
+  },
+  "QUESTION_TO_CONSULTANT": "For column type C9: does the schedule section (storey band) govern, or the drawn outline ([20.0, 90.0] vs [20.0, 100.0]; [20.0, 90.0] vs [25.0, 100.0]; [30.0, 100.0] vs [25.0, 100.0])?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule section (storey band): [30.0, 100.0] (ST7757.dxf / ST7757.pdf, p.9, schedule (column), 'C9')",
+   "drawn outline: [25.0, 100.0] (ST7757.dxf, p.2, FOUNDATION PLAN, layer S-COL.BON, handle 1090)"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, FOUNDATION PLAN, p.2",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. The quantity uses the engine's current interpretation; an answer may change it. Affected: 3 nr occurrences (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-COL-020",
+  "flag_key": "af7c64702ffc823c"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "[20.0, 50.0] (MEMBER_SCHEDULE) used (authority: MEMBER_SCHEDULE)",
+  "PLAIN_LANGUAGE_ISSUE": "5 column occurrence(s) of type C: schedule section (storey band) differs from drawn outline ([20.0, 50.0] vs [20.0, 40.0]).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "COL-C-X01-Y01-GF",
+    "COL-C-X06-Y01-GF",
+    "COL-C-X16-Y01-GF",
+    "COL-C-X01-Y05-GF",
+    "COL-C-X02-Y05-GF"
+   ],
+   "quantity_affected": 5,
+   "release_effect": "PROVISIONAL",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences"
+  },
+  "QUESTION_TO_CONSULTANT": "For column type C: does the schedule section (storey band) govern, or the drawn outline ([20.0, 50.0] vs [20.0, 40.0])?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule section (storey band): [20.0, 50.0] (ST7757.dxf / ST7757.pdf, p.9, schedule (column), 'C')",
+   "drawn outline: [20.0, 40.0] (ST7757.dxf, p.4, GROUND FLOOR ROOF SLAB, layer S-COL.BON, handle 34D)"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. The quantity uses the engine's current interpretation; an answer may change it. Affected: 5 nr occurrences (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-COL-021",
+  "flag_key": "7a6e886ffef87d2e"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "[20, 50] (MEMBER_SCHEDULE) used (authority: MEMBER_SCHEDULE)",
+  "PLAIN_LANGUAGE_ISSUE": "1 column occurrence(s) of type P.C: schedule section (storey band) differs from drawn outline ([20, 50] vs [20.0, 40.0]).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "COL-P.C-X?-Y?@24888-15994-2F"
+   ],
+   "quantity_affected": 1,
+   "release_effect": "PROVISIONAL",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences"
+  },
+  "QUESTION_TO_CONSULTANT": "For column type P.C: does the schedule section (storey band) govern, or the drawn outline ([20, 50] vs [20.0, 40.0])?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule section (storey band): [20, 50] (ST7757.dxf / ST7757.pdf, p.9, schedule (column), 'P.C')",
+   "drawn outline: [20.0, 40.0] (ST7757.dxf, p.6, SECOND FLOOR ROOF SLAB, layer S-COL.BON, handle 778)"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (column), p.9; ST7757.dxf, SECOND FLOOR ROOF SLAB, p.6",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. The quantity uses the engine's current interpretation; an answer may change it. Affected: 1 nr occurrences (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-COL-022",
+  "flag_key": "449179aaaf9557b4"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "schedule value kept (member-specific design) (authority: MEMBER_SCHEDULE)",
+  "PLAIN_LANGUAGE_ISSUE": "10 column occurrence(s) (C, C1, C2) at GF: schedule gives 20.0 cm but minimum column thickness for the storey height (p.9) requires at least 25.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "COL-C-X01-Y01-GF",
+    "COL-C-X06-Y01-GF",
+    "COL-C-X16-Y01-GF",
+    "COL-C-X01-Y05-GF",
+    "COL-C-X02-Y05-GF",
+    "COL-C2-X09-Y07-GF",
+    "COL-C1-X09-Y09-GF",
+    "COL-C2-X10-Y09-GF",
+    "COL-C2-X08-Y10-GF",
+    "COL-C2-X09-Y10-GF"
+   ],
+   "quantity_affected": 10,
+   "release_effect": "PROVISIONAL",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr occurrences"
+  },
+  "QUESTION_TO_CONSULTANT": "The schedule gives 20.0 where the general rule asks for at least 25. Is the schedule correct, or must the section increase?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "minimum column thickness for the storey height (p.9): 25",
+   "schedule value: 20.0"
+  ],
+  "WHERE_TO_LOOK": "ST7757.pdf, rule P9-COL-TMIN, p.9",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. The quantity uses the engine's current interpretation; an answer may change it. Affected: 10 nr occurrences (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-COL-023",
+  "flag_key": "a3a97eb1eb84ffeb"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "occurrences counted; quantities depending on the rule held back",
+  "PLAIN_LANGUAGE_ISSUE": "8 dome occurrence(s) depend on P7-DOME (Dome reinforcement.), whose applicability is not established (CANDIDATE).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "SP-1F_ROOF_SLAB-13",
+    "SP-1F_ROOF_SLAB-14",
+    "SP-1F_ROOF_SLAB-15",
+    "SP-1F_ROOF_SLAB-16",
+    "SP-1F_ROOF_SLAB-17",
+    "SP-1F_ROOF_SLAB-18",
+    "SP-1F_ROOF_SLAB-19",
+    "SP-1F_ROOF_SLAB-20"
+   ],
+   "quantity_affected": 30.278,
+   "release_effect": "PROVISIONAL",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m2 plan"
+  },
+  "QUESTION_TO_CONSULTANT": "Does the dome detail (100 mm shell, ring beam) apply to both domes on the first-floor roof?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "P7-DOME: Dome reinforcement."
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf, DETAILS (pool / dome), p.7; ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5",
+  "WHY_IT_MATTERS": "A rule or note exists but it is not clear where or how it applies. The quantity uses the engine's current interpretation; an answer may change it. Affected: 30.278 m2 plan (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-DOM-001",
+  "flag_key": "5f494d530f357b05"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "component held back; other bars of the same members stay releasable",
+  "PLAIN_LANGUAGE_ISSUE": "The schedule field 'BOXED' is printed for 11 type(s) (e.g. F=3+4, F10=3+5, F11=3+8, F15=3+4) but its meaning is not stated.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "FTG-F-1888-7312",
+    "FTG-F15-7088-7312",
+    "FTG-F-13638-7312",
+    "FTG-F11-16163-7312",
+    "FTG-CONFLICT_F_F10-30008-7312",
+    "FTG-F5-26458-7912",
+    "FTG-F3-11838-8262",
+    "FTG-F6-15938-11062",
+    "FTG-F3-5538-11362",
+    "FTG-F-1888-13312",
+    "FTG-F-4288-13462",
+    "FTG-F9-25608-15262",
+    "FTG-F2-16188-19612",
+    "FTG-F2-18888-19612",
+    "FTG-F5-22358-19612",
+    "FTG-F4-26358-19662",
+    "FTG-F4-30408-19687"
+   ],
+   "quantity_affected": 17,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "REINFORCEMENT"
+   ],
+   "unit": "nr"
+  },
+  "QUESTION_TO_CONSULTANT": "What does the schedule field 'BOXED' mean (bar count, bar size, shape and position)?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "field BOXED: {'F': '3+4', 'F10': '3+5', 'F11': '3+8', 'F15': '3+4', 'F2': '3+4', 'F3': '3+4', 'F4': '3+4', 'F5': '3+4', 'F6': '3+5', 'F7': '3+6', 'F9': '3+8'}"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (footing), p.9",
+  "WHY_IT_MATTERS": "A rule or note exists but it is not clear where or how it applies. Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 17 nr (REINFORCEMENT).",
+  "flag_id": "STR-FOO-001",
+  "flag_key": "0ce7fd48490c22ff"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "zero occurrences (a schedule row never creates an occurrence) (authority: PLAN_MEMBER_TAG)",
+  "PLAIN_LANGUAGE_ISSUE": "Schedule row F7 (footing) is defined but no plan occurrence carries this mark.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "F7"
+   ],
+   "quantity_affected": null,
+   "release_effect": "NO_QUANTITY_IMPACT",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null
+  },
+  "QUESTION_TO_CONSULTANT": "Schedule row F7 has no occurrence on the plans. Is it unused, or is a mark missing on a plan?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "schedule row: 300x250x50"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (footing), p.9",
+  "WHY_IT_MATTERS": "A rule or note exists but it is not clear where or how it applies. No quantity changes with the answer; it is recorded for completeness.",
+  "flag_id": "STR-FOO-002",
+  "flag_key": "36d8f2d72bb3889a"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "occurrences counted; quantities depending on the rule held back",
+  "PLAIN_LANGUAGE_ISSUE": "26 footing occurrence(s) depend on P13-FOOTING-DEEP (Where the upper ground beam is more than 2.5 m above the footing, an additional LOWER ground beam is provided.), whose dimension is not established (BLOCKED_METHOD).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "FTG-F-1888-7312",
+    "FTG-F15-7088-7312",
+    "FTG-F-13638-7312",
+    "FTG-F11-16163-7312",
+    "FTG-F14-22408-7312",
+    "FTG-CONFLICT_F_F10-30008-7312",
+    "FTG-F5-26458-7912",
+    "FTG-F3-11838-8262",
+    "FTG-F13-11188-10712",
+    "FTG-FN-32258-10812",
+    "FTG-F6-15938-11062",
+    "FTG-F3-5538-11362",
+    "FTG-FN-23558-12287",
+    "FTG-FN-28083-12287",
+    "FTG-F8-29258-13262",
+    "FTG-F-1888-13312",
+    "FTG-F-4288-13462",
+    "FTG-FF-18688-14112",
+    "FTG-F12-13688-14562",
+    "FTG-F9-25608-15262",
+    "FTG-FN-28608-17612",
+    "FTG-F2-16188-19612",
+    "FTG-F2-18888-19612",
+    "FTG-F5-22358-19612",
+    "FTG-F4-26358-19662",
+    "FTG-F4-30408-19687"
+   ],
+   "quantity_affected": 26,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr"
+  },
+  "QUESTION_TO_CONSULTANT": "What is the founding level? (A lower ground beam is required where the ground beam is more than 2.5 m above the footing.)",
+  "WHAT_THE_DRAWING_SAYS": [
+   "P13-FOOTING-DEEP: Where the upper ground beam is more than 2.5 m above the footing, an additional LOWER ground beam is provided."
+  ],
+  "WHERE_TO_LOOK": "ST7757.pdf, rule P13-FOOTING-DEEP, p.13; ST7757.pdf, rule P9-SOIL, p.9",
+  "WHY_IT_MATTERS": "A size or length needed to measure this is not given. Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 26 nr (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-FOO-003",
+  "flag_key": "d3278910db378e02"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "both counted; overlap volume must not be counted twice",
+  "PLAIN_LANGUAGE_ISSUE": "Two footing outlines overlap by 0.14 m2 plan.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "FT:180F",
+    "FT:180C"
+   ],
+   "quantity_affected": 0.14,
+   "release_effect": "PROVISIONAL",
+   "trades": [
+    "CONCRETE"
+   ],
+   "unit": "m2 plan"
+  },
+  "QUESTION_TO_CONSULTANT": "Are these two separate members or one combined member?",
+  "WHAT_THE_DRAWING_SAYS": [],
+  "WHERE_TO_LOOK": "ST7757.dxf, FOUNDATION PLAN, p.2",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. The quantity uses the engine's current interpretation; an answer may change it. Affected: 0.14 m2 plan (CONCRETE).",
+  "flag_id": "STR-FOO-004",
+  "flag_key": "aba3d83e7ea30f33"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "none - held back",
+  "PLAIN_LANGUAGE_ISSUE": "One drawn footing carries 2 different type marks (F, F10); one outline holding columns C, C10.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "FTG-CONFLICT_F_F10-30008-7312"
+   ],
+   "quantity_affected": 1,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "nr"
+  },
+  "QUESTION_TO_CONSULTANT": "This footing is marked F and F10. Which type is it - or is it two members drawn as one?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "mark 1: F",
+   "mark 2: F10"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf, FOUNDATION PLAN, p.2",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 1 nr (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-FOO-005",
+  "flag_key": "e67c027c86dbf9c4"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "occurrences counted; quantities depending on the rule held back",
+  "PLAIN_LANGUAGE_ISSUE": "21 ground slab occurrence(s) depend on P3-GROUND-SLAB (Ground slab note: 10 cm, 5Ø10/m each way.), whose extent is not established (CANDIDATE).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "SP-GBP-02",
+    "SP-GBP-03",
+    "SP-GBP-04",
+    "SP-GBP-05",
+    "SP-GBP-06",
+    "SP-GBP-07",
+    "SP-GBP-08",
+    "SP-GBP-09",
+    "SP-GBP-10",
+    "SP-GBP-11",
+    "SP-GBP-13",
+    "SP-GBP-14",
+    "SP-GBP-15",
+    "SP-GBP-16",
+    "SP-GBP-17",
+    "SP-GBP-18",
+    "SP-GBP-19",
+    "SP-GBP-20",
+    "SP-GBP-21",
+    "SP-GBP-22",
+    "SP-GBP-23"
+   ],
+   "quantity_affected": 167.636,
+   "release_effect": "LOWER_BOUND",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m2 plan"
+  },
+  "QUESTION_TO_CONSULTANT": "Which areas receive the 10 cm ground slab (5Ø10/m each way): every cell inside the ground beams, or only the cells marked with the note?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "P3-GROUND-SLAB: Ground slab note: 10 cm, 5Ø10/m each way."
+  ],
+  "WHERE_TO_LOOK": "ST7757.pdf, rule P3-GROUND-SLAB, p.3",
+  "WHY_IT_MATTERS": "A size or length needed to measure this is not given. Only the part that is certain is counted; the total is a minimum until this is answered. Affected: 167.636 m2 plan (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-GRO-001",
+  "flag_key": "515de8776e3953a2"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "occurrences counted; quantities depending on the rule held back",
+  "PLAIN_LANGUAGE_ISSUE": "1 lift pit occurrence(s) depend on P14-LIFT (Lift pit on the FF raft: 20 cm walls with 6Ø12/m and 6Ø16/m, pit depth by the lift manufacturer.), whose dimension is not established (BLOCKED_METHOD).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "SPC-LIFT_PIT"
+   ],
+   "quantity_affected": null,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null
+  },
+  "QUESTION_TO_CONSULTANT": "What is the lift-pit depth below the lift footing (manufacturer / engineer)?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "P14-LIFT: Lift pit on the FF raft: 20 cm walls with 6Ø12/m and 6Ø16/m, pit depth by the lift manufacturer."
+  ],
+  "WHERE_TO_LOOK": "ST7757.pdf, rule P14-LIFT, p.14",
+  "WHY_IT_MATTERS": "A size or length needed to measure this is not given. Until this is answered the affected part of the quantity is held back (not counted in totals).",
+  "flag_id": "STR-LIF-001",
+  "flag_key": "c0af7d1d647143b9"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "required population recorded; no geometry",
+  "PLAIN_LANGUAGE_ISSUE": "Lift tie beams at 3.00 m height around the lift shaft when the storey is higher than 4.30 m. requires lift tie beam (storey height > 4.30 m) but none is drawn.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "BM-GF-LIFT_TIE"
+   ],
+   "quantity_affected": null,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null
+  },
+  "QUESTION_TO_CONSULTANT": "Lift tie beams at 3.00 m height around the lift shaft when the storey is higher than 4.30 m.: where are these lift tie beams, and what size and bars?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "P8-N19: Lift tie beams at 3.00 m height around the lift shaft when the storey is higher than 4.30 m."
+  ],
+  "WHERE_TO_LOOK": "ST7757.pdf, rule P8-N19, p.8",
+  "WHY_IT_MATTERS": "Something is required by a note or rule but is not drawn or detailed. Until this is answered the affected part of the quantity is held back (not counted in totals).",
+  "flag_id": "STR-LIF-002",
+  "flag_key": "714c3838a3ff7408"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "required population recorded; no geometry",
+  "PLAIN_LANGUAGE_ISSUE": "Lintels by opening width; width = wall width; 40 cm minimum bearing each side. requires lintel (one lintel per architectural opening, type by opening width) but none is drawn.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "BM-ALL-LINTEL-POPULATION"
+   ],
+   "quantity_affected": null,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null
+  },
+  "QUESTION_TO_CONSULTANT": "Lintels by opening width; width = wall width; 40 cm minimum bearing each side.: where are these lintels, and what size and bars?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "P13-LINTEL: Lintels by opening width; width = wall width; 40 cm minimum bearing each side."
+  ],
+  "WHERE_TO_LOOK": "ST7757.pdf, rule P13-LINTEL, p.13",
+  "WHY_IT_MATTERS": "Something is required by a note or rule but is not drawn or detailed. Until this is answered the affected part of the quantity is held back (not counted in totals).",
+  "flag_id": "STR-LIN-001",
+  "flag_key": "26b352250deb3515"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "occurrence counted; measurement held back",
+  "PLAIN_LANGUAGE_ISSUE": "3 parapets: parapet height / length follow the architectural drawings (not on the structural set).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "SPC-PARAPET-GFRS",
+    "SPC-PARAPET-FFRS",
+    "SPC-PARAPET-SFRS"
+   ],
+   "quantity_affected": null,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null
+  },
+  "QUESTION_TO_CONSULTANT": "Give the parapet height and the roof edges that carry a parapet.",
+  "WHAT_THE_DRAWING_SAYS": [],
+  "WHERE_TO_LOOK": "ST7757.dxf, FIRST FLOOR ROOF SLAB, p.5; ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4; ST7757.dxf, SECOND FLOOR ROOF SLAB, p.6",
+  "WHY_IT_MATTERS": "A size or length needed to measure this is not given. Until this is answered the affected part of the quantity is held back (not counted in totals).",
+  "flag_id": "STR-PAR-001",
+  "flag_key": "61c354ba0d2c1a1d"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "occurrences counted; quantities depending on the rule held back",
+  "PLAIN_LANGUAGE_ISSUE": "3 planted column occurrence(s) depend on P15-PLANTED (Beam carrying a planted column: 4Ø16 extra, column bars anchored 100 into the beam.), whose applicability is not established (CANDIDATE).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "SPC-PLANTED_COLUMN-GFRS-544",
+    "SPC-PLANTED_COLUMN-GFRS-548",
+    "SPC-PLANTED_COLUMN-FFRS-77C"
+   ],
+   "quantity_affected": null,
+   "release_effect": "LOWER_BOUND",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null
+  },
+  "QUESTION_TO_CONSULTANT": "Does the p.15 detail (Beam carrying a planted column: 4Ø16 extra, column bars anchored 100 into the beam.) apply to each of these columns, and do they use the normal tie bands?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "P15-PLANTED: Beam carrying a planted column: 4Ø16 extra, column bars anchored 100 into the beam."
+  ],
+  "WHERE_TO_LOOK": "ST7757.pdf, rule P15-PLANTED, p.15",
+  "WHY_IT_MATTERS": "A rule or note exists but it is not clear where or how it applies. Only the part that is certain is counted; the total is a minimum until this is answered.",
+  "flag_id": "STR-PLA-001",
+  "flag_key": "34791ab66c22ba3f"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "occurrence counted; measurement held back",
+  "PLAIN_LANGUAGE_ISSUE": "pool SPC-POOL: pool lengths and depths are 'AS PER ARCH' on the detail.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "SPC-POOL"
+   ],
+   "quantity_affected": null,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null
+  },
+  "QUESTION_TO_CONSULTANT": "Provide the pool plan and section (lengths, depths, slope) from the architect.",
+  "WHAT_THE_DRAWING_SAYS": [],
+  "WHERE_TO_LOOK": "ST7757.dxf, DETAILS (pool / dome), p.7; ST7757.dxf, GROUND BEAMS PLAN, p.3",
+  "WHY_IT_MATTERS": "A size or length needed to measure this is not given. Until this is answered the affected part of the quantity is held back (not counted in totals).",
+  "flag_id": "STR-POO-001",
+  "flag_key": "04fac09f25bfada6"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "none - held back",
+  "PLAIN_LANGUAGE_ISSUE": "boundary wall definition: P14-BOUNDARY says TYPICAL BOUNDARY WALL: (20x30) R.C columns 4Ø14; GROUND BEAM (20x40); 2Ø14 (T&B); Ø8/20 STIRRUPS; 3Ø16 (T&B); 7Ø12; 4Ø12, schedule row B.W says 20x60 ['4', '16'].",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "P14-BOUNDARY+SBT:B.W"
+   ],
+   "quantity_affected": null,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "CONCRETE",
+    "REINFORCEMENT"
+   ],
+   "unit": null
+  },
+  "QUESTION_TO_CONSULTANT": "boundary wall definition: which value governs, TYPICAL BOUNDARY WALL: (20x30) R.C columns 4Ø14; GROUND BEAM (20x40); 2Ø14 (T&B); Ø8/20 STIRRUPS; 3Ø16 (T&B); 7Ø12; 4Ø12 or 20x60 ['4', '16']?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "None: TYPICAL BOUNDARY WALL: (20x30) R.C columns 4Ø14; GROUND BEAM (20x40); 2Ø14 (T&B); Ø8/20 STIRRUPS; 3Ø16 (T&B); 7Ø12; 4Ø12 (ST7757.pdf, p.14, rule P14-BOUNDARY)",
+   "None: 20x60 ['4', '16'] (ST7757.dxf / ST7757.pdf, p.10, schedule (simple beam), 'B.W')"
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf / ST7757.pdf, schedule (simple beam), p.10; ST7757.pdf, rule P14-BOUNDARY, p.14",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. Until this is answered the affected part of the quantity is held back (not counted in totals).",
+  "flag_id": "STR-PRO-001",
+  "flag_key": "9f4190b119901d1b"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "none - held back",
+  "PLAIN_LANGUAGE_ISSUE": "formwork rule: P8-N17 says formwork >= 14 days, P1-NOTE-C says formwork >= 21 days.",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "P8-N17+P1-NOTE-C"
+   ],
+   "quantity_affected": null,
+   "release_effect": "NO_QUANTITY_IMPACT",
+   "trades": [
+    "OTHER"
+   ],
+   "unit": null
+  },
+  "QUESTION_TO_CONSULTANT": "formwork rule: which value governs, formwork >= 14 days or formwork >= 21 days?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "None: formwork >= 14 days (ST7757.pdf, p.8, rule P8-N17)",
+   "None: formwork >= 21 days (ST7757.pdf, p.1, rule P1-NOTE-C, handle 7E)"
+  ],
+  "WHERE_TO_LOOK": "ST7757.pdf, rule P1-NOTE-C, p.1; ST7757.pdf, rule P8-N17, p.8",
+  "WHY_IT_MATTERS": "Two places on the drawings say different things about the same thing. No quantity changes with the answer; it is recorded for completeness.",
+  "flag_id": "STR-PRO-002",
+  "flag_key": "e25b5038443ecc4e"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "occurrences counted; quantities depending on the rule held back",
+  "PLAIN_LANGUAGE_ISSUE": "49 slab occurrence(s) depend on P4-6-NOTE-2 (Top steel 5Ø10/m over beams for the slabs, length one third of the span, in both directions.), whose applicability is not established (CANDIDATE).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "SP-GF_ROOF_SLAB-02",
+    "SP-GF_ROOF_SLAB-04",
+    "SP-GF_ROOF_SLAB-05",
+    "SP-GF_ROOF_SLAB-06",
+    "SP-GF_ROOF_SLAB-07",
+    "SP-GF_ROOF_SLAB-08",
+    "SP-GF_ROOF_SLAB-10",
+    "SP-GF_ROOF_SLAB-11",
+    "SP-GF_ROOF_SLAB-12",
+    "SP-GF_ROOF_SLAB-14",
+    "SP-GF_ROOF_SLAB-15",
+    "SP-GF_ROOF_SLAB-16",
+    "SP-GF_ROOF_SLAB-17",
+    "SP-GF_ROOF_SLAB-18",
+    "SP-GF_ROOF_SLAB-19",
+    "SP-GF_ROOF_SLAB-20",
+    "SP-GF_ROOF_SLAB-22",
+    "SP-GF_ROOF_SLAB-23",
+    "SP-GF_ROOF_SLAB-24",
+    "SP-GF_ROOF_SLAB-25",
+    "SP-GF_ROOF_SLAB-26",
+    "SP-GF_ROOF_SLAB-27",
+    "SP-GF_ROOF_SLAB-29",
+    "SP-GF_ROOF_SLAB-30",
+    "SP-GF_ROOF_SLAB-31",
+    "SP-GF_ROOF_SLAB-32",
+    "SP-GF_ROOF_SLAB-33",
+    "SP-GF_ROOF_SLAB-34",
+    "SP-1F_ROOF_SLAB-02",
+    "SP-1F_ROOF_SLAB-03",
+    "SP-1F_ROOF_SLAB-04",
+    "SP-1F_ROOF_SLAB-05",
+    "SP-1F_ROOF_SLAB-07",
+    "SP-1F_ROOF_SLAB-08",
+    "SP-1F_ROOF_SLAB-09",
+    "SP-1F_ROOF_SLAB-11",
+    "SP-1F_ROOF_SLAB-12",
+    "SP-1F_ROOF_SLAB-21",
+    "SP-1F_ROOF_SLAB-22",
+    "SP-1F_ROOF_SLAB-23",
+    "SP-1F_ROOF_SLAB-24",
+    "SP-1F_ROOF_SLAB-25",
+    "SP-2F_ROOF_SLAB-01",
+    "SP-2F_ROOF_SLAB-02",
+    "SP-2F_ROOF_SLAB-03",
+    "SP-2F_ROOF_SLAB-04",
+    "SP-2F_ROOF_SLAB-06",
+    "SP-2F_ROOF_SLAB-07",
+    "SP-2F_ROOF_SLAB-08"
+   ],
+   "quantity_affected": 370.501,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "REINFORCEMENT"
+   ],
+   "unit": "m2 plan"
+  },
+  "QUESTION_TO_CONSULTANT": "The plan note asks for 5Ø10/m top bars over beams for one third of the span, and p.15 gives top-bar extensions of 0.25L / 0.30L. Is the plan note a minimum where no top bar is drawn, or does it replace p.15?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "P4-6-NOTE-2: Top steel 5Ø10/m over beams for the slabs, length one third of the span, in both directions."
+  ],
+  "WHERE_TO_LOOK": "ST7757.pdf, rule P15-SLAB-ON-BEAMS, p.15; ST7757.pdf, rule P4-6-NOTE-2, p.4",
+  "WHY_IT_MATTERS": "A rule or note exists but it is not clear where or how it applies. Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 370.501 m2 plan (REINFORCEMENT).",
+  "flag_id": "STR-SLA-001",
+  "flag_key": "bb9f906f38e1222a"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "none - held back",
+  "PLAIN_LANGUAGE_ISSUE": "temperature reinforcement table (p.15) has no row for 160 mm (47 element(s)); rows are [100, 125, 150, 175, 200, 250, 300].",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "SP-GF_ROOF_SLAB-02",
+    "SP-GF_ROOF_SLAB-04",
+    "SP-GF_ROOF_SLAB-05",
+    "SP-GF_ROOF_SLAB-06",
+    "SP-GF_ROOF_SLAB-07",
+    "SP-GF_ROOF_SLAB-08",
+    "SP-GF_ROOF_SLAB-10",
+    "SP-GF_ROOF_SLAB-11",
+    "SP-GF_ROOF_SLAB-12",
+    "SP-GF_ROOF_SLAB-14",
+    "SP-GF_ROOF_SLAB-15",
+    "SP-GF_ROOF_SLAB-16",
+    "SP-GF_ROOF_SLAB-17",
+    "SP-GF_ROOF_SLAB-18",
+    "SP-GF_ROOF_SLAB-19",
+    "SP-GF_ROOF_SLAB-20",
+    "SP-GF_ROOF_SLAB-22",
+    "SP-GF_ROOF_SLAB-23",
+    "SP-GF_ROOF_SLAB-24",
+    "SP-GF_ROOF_SLAB-25",
+    "SP-GF_ROOF_SLAB-26",
+    "SP-GF_ROOF_SLAB-27",
+    "SP-GF_ROOF_SLAB-29",
+    "SP-GF_ROOF_SLAB-30",
+    "SP-GF_ROOF_SLAB-31",
+    "SP-GF_ROOF_SLAB-32",
+    "SP-GF_ROOF_SLAB-33",
+    "SP-GF_ROOF_SLAB-34",
+    "SP-1F_ROOF_SLAB-02",
+    "SP-1F_ROOF_SLAB-03",
+    "SP-1F_ROOF_SLAB-04",
+    "SP-1F_ROOF_SLAB-05",
+    "SP-1F_ROOF_SLAB-07",
+    "SP-1F_ROOF_SLAB-08",
+    "SP-1F_ROOF_SLAB-09",
+    "SP-1F_ROOF_SLAB-11",
+    "SP-1F_ROOF_SLAB-12",
+    "SP-1F_ROOF_SLAB-21",
+    "SP-1F_ROOF_SLAB-22",
+    "SP-1F_ROOF_SLAB-23",
+    "SP-1F_ROOF_SLAB-24",
+    "SP-1F_ROOF_SLAB-25",
+    "SP-2F_ROOF_SLAB-03",
+    "SP-2F_ROOF_SLAB-04",
+    "SP-2F_ROOF_SLAB-06",
+    "SP-2F_ROOF_SLAB-07",
+    "SP-2F_ROOF_SLAB-08"
+   ],
+   "quantity_affected": 356.866,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "REINFORCEMENT"
+   ],
+   "unit": "m2 plan"
+  },
+  "QUESTION_TO_CONSULTANT": "temperature reinforcement table (p.15): which value applies for 160 mm?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "table rows: [100, 125, 150, 175, 200, 250, 300]",
+   "required key: 160"
+  ],
+  "WHERE_TO_LOOK": "ST7757.pdf, rule P15-TEMP-TABLE, p.15",
+  "WHY_IT_MATTERS": "A drawing rule does not cover this exact case (for example a value sits exactly on a limit). Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 356.866 m2 plan (REINFORCEMENT).",
+  "flag_id": "STR-SLA-002",
+  "flag_key": "93a601ca94b38bfe"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "none - held back",
+  "PLAIN_LANGUAGE_ISSUE": "temperature reinforcement table (p.15) has no row for 180 mm (2 element(s)); rows are [100, 125, 150, 175, 200, 250, 300].",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "SP-2F_ROOF_SLAB-01",
+    "SP-2F_ROOF_SLAB-02"
+   ],
+   "quantity_affected": 13.635,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "REINFORCEMENT"
+   ],
+   "unit": "m2 plan"
+  },
+  "QUESTION_TO_CONSULTANT": "temperature reinforcement table (p.15): which value applies for 180 mm?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "table rows: [100, 125, 150, 175, 200, 250, 300]",
+   "required key: 180"
+  ],
+  "WHERE_TO_LOOK": "ST7757.pdf, rule P15-TEMP-TABLE, p.15",
+  "WHY_IT_MATTERS": "A drawing rule does not cover this exact case (for example a value sits exactly on a limit). Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 13.635 m2 plan (REINFORCEMENT).",
+  "flag_id": "STR-SLA-003",
+  "flag_key": "97ea70eb6bb59173"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "occurrences counted; quantities depending on the rule held back",
+  "PLAIN_LANGUAGE_ISSUE": "5 stair occurrence(s) depend on P16-STAIR (Typical stair and stair-beam reinforcement (N.T.S.).), whose applicability is not established (BLOCKED_METHOD).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "SP-GF_ROOF_SLAB-03",
+    "SP-GF_ROOF_SLAB-21",
+    "SP-GF_ROOF_SLAB-28",
+    "SP-1F_ROOF_SLAB-01",
+    "SP-GBP-12"
+   ],
+   "quantity_affected": 56.327,
+   "release_effect": "BLOCKED",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": "m2 plan"
+  },
+  "QUESTION_TO_CONSULTANT": "Does the typical stair detail (p.16) apply to each stair on the plans, including the stair inside the void? Please give flight / landing levels and waist thickness.",
+  "WHAT_THE_DRAWING_SAYS": [
+   "P16-STAIR: Typical stair and stair-beam reinforcement (N.T.S.)."
+  ],
+  "WHERE_TO_LOOK": "ST7757.dxf, GROUND FLOOR ROOF SLAB, p.4; ST7757.pdf, rule P16-STAIR, p.16",
+  "WHY_IT_MATTERS": "A rule or note exists but it is not clear where or how it applies. Until this is answered the affected part of the quantity is held back (not counted in totals). Affected: 56.327 m2 plan (CONCRETE, FORMWORK, REINFORCEMENT).",
+  "flag_id": "STR-STA-001",
+  "flag_key": "65534aa4c34bf9a0"
+ },
+ {
+  "ENGINE_CURRENT_INTERPRETATION": "occurrences counted; quantities depending on the rule held back",
+  "PLAIN_LANGUAGE_ISSUE": "2 turn column occurrence(s) depend on P15-TWISTED (Twisted (turned) column: spiral ties 6Ø8/m over 1 m each side of the floor, 4Ø16 extra.), whose applicability is not established (CANDIDATE).",
+  "QUANTITY_BOQ_IMPACT": {
+   "elements": [
+    "SPC-TURN_COLUMN-GFRS-31F",
+    "SPC-TURN_COLUMN-GFRS-324"
+   ],
+   "quantity_affected": null,
+   "release_effect": "LOWER_BOUND",
+   "trades": [
+    "CONCRETE",
+    "FORMWORK",
+    "REINFORCEMENT"
+   ],
+   "unit": null
+  },
+  "QUESTION_TO_CONSULTANT": "Does the p.15 detail (Twisted (turned) column: spiral ties 6Ø8/m over 1 m each side of the floor, 4Ø16 extra.) apply to each of these columns, and do they use the normal tie bands?",
+  "WHAT_THE_DRAWING_SAYS": [
+   "P15-TWISTED: Twisted (turned) column: spiral ties 6Ø8/m over 1 m each side of the floor, 4Ø16 extra."
+  ],
+  "WHERE_TO_LOOK": "ST7757.pdf, rule P15-TWISTED, p.15",
+  "WHY_IT_MATTERS": "A rule or note exists but it is not clear where or how it applies. Only the part that is certain is counted; the total is a minimum until this is answered.",
+  "flag_id": "STR-TUR-001",
+  "flag_key": "96f29219d648bddc"
+ }
+]

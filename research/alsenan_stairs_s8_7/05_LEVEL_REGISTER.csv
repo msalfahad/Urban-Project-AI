@@ -1,0 +1,75 @@
+LEVEL_ID,SOURCE,TEXT,VALUE_M,POSITION_MM,NEAR_STAIR_WINDOW,STATE,USE
+ARCH-GF-394,P7757 GF plan (registered),+0.15,0.15,"[4306.325, 15138.955]",[],PRINTED,
+ARCH-GF-401,P7757 GF plan (registered),+0.30,0.3,"[3447.966, 12834.122]",[],PRINTED,
+ARCH-GF-403,P7757 GF plan (registered),+0.30,0.3,"[8544.705, 11207.524]",[],PRINTED,
+ARCH-GF-405,P7757 GF plan (registered),+0.30,0.3,"[11897.491, 8071.321]",[],PRINTED,
+ARCH-GF-407,P7757 GF plan (registered),+0.15,0.15,"[13078.584, 8587.692]",[],PRINTED,
+ARCH-GF-409,P7757 GF plan (registered),+0.15,0.15,"[13225.172, 14005.306]","[""ENTRANCE""]",PRINTED,
+ARCH-GF-40B,P7757 GF plan (registered),+0.15,0.15,"[29551.751, 21547.561]",[],PRINTED,
+ARCH-GF-40D,P7757 GF plan (registered),+0.15,0.15,"[31916.491, 15964.398]",[],PRINTED,
+ARCH-GF-40F,P7757 GF plan (registered),+1.00,1,"[19682.825, 14175.412]","[""MAIN"", ""WELL""]",PRINTED,
+ARCH-GF-411,P7757 GF plan (registered),+1.00,1,"[15427.186, 10955.376]","[""ENTRANCE""]",PRINTED,
+ARCH-GF-413,P7757 GF plan (registered),+1.00,1,"[18836.725, 16940.923]","[""MAIN"", ""ENTRANCE""]",PRINTED,
+ARCH-GF-4AC,P7757 GF plan (registered),+0.30,0.3,"[18550.595, 20011.778]","[""MAIN""]",PRINTED,
+ARCH-GF-4AE,P7757 GF plan (registered),+0.15,0.15,"[14837.507, 18864.825]","[""MAIN""]",PRINTED,
+ARCH-GF-A74,P7757 GF plan (registered),+1.00,1,"[30547.452, 9537.038]","[""WELL""]",PRINTED,
+ARCH-1F-1251,P7757 1F plan (registered),+5.50,5.5,"[32381.026, 15948.799]",[],PRINTED,
+ARCH-1F-D16,P7757 1F plan (registered),+5.50,5.5,"[27975.034, 12150.795]","[""WELL""]",PRINTED,
+ARCH-1F-D18,P7757 1F plan (registered),+5.50,5.5,"[18531.235, 15260.743]","[""MAIN"", ""WELL"", ""ENTRANCE""]",PRINTED,
+ARCH-1F-D1B,P7757 1F plan (registered),+5.50,5.5,"[22388.069, 8002.701]","[""WELL""]",PRINTED,
+ARCH-1F-D1D,P7757 1F plan (registered),+5.50,5.5,"[32381.026, 13017.131]",[],PRINTED,
+ARCH-1F-D20,P7757 1F plan (registered),+4.30,4.3,"[7869.622, 9842.786]",[],PRINTED,
+ARCH-2F-134E,P7757 2F plan (registered),+9.70,9.7,"[18519.856, 15157.058]","[""MAIN"", ""WELL"", ""ENTRANCE""]",PRINTED,
+ARCH-2F-1350,P7757 2F plan (registered),+9.70,9.7,"[29225.143, 17929.032]",[],PRINTED,
+ARCH-2F-1352,P7757 2F plan (registered),+9.70,9.7,"[20021.21, 10900.495]","[""WELL""]",PRINTED,
+STRUCT-GBP-18B,ST7757 GBP (S1),%%p0.00,0,"[840.032, 7469.784]",[],PRINTED,
+STRUCT-GBP-1A9,ST7757 GBP (S1),+0.15,0.15,"[4306.325, 15138.956]",[],PRINTED,
+STRUCT-GBP-1B0,ST7757 GBP (S1),+0.30,0.3,"[3447.966, 12834.122]",[],PRINTED,
+STRUCT-GBP-1B2,ST7757 GBP (S1),+0.30,0.3,"[8544.705, 11207.524]",[],PRINTED,
+STRUCT-GBP-1B4,ST7757 GBP (S1),+0.30,0.3,"[11897.491, 8071.322]",[],PRINTED,
+STRUCT-GBP-1B6,ST7757 GBP (S1),+0.15,0.15,"[13078.584, 8587.693]",[],PRINTED,
+STRUCT-GBP-1B8,ST7757 GBP (S1),+0.15,0.15,"[13225.171, 14005.307]","[""ENTRANCE""]",PRINTED,
+STRUCT-GBP-1BA,ST7757 GBP (S1),+0.15,0.15,"[29551.751, 21547.561]",[],PRINTED,
+STRUCT-GBP-1BC,ST7757 GBP (S1),+0.15,0.15,"[31916.49, 15964.398]",[],PRINTED,
+STRUCT-GBP-1BE,ST7757 GBP (S1),+1.00,1,"[19682.825, 14175.413]","[""MAIN"", ""WELL""]",PRINTED,
+STRUCT-GBP-1C0,ST7757 GBP (S1),+1.00,1,"[15427.186, 10955.376]","[""ENTRANCE""]",PRINTED,
+STRUCT-GBP-1C2,ST7757 GBP (S1),+1.00,1,"[18836.725, 16940.923]","[""MAIN"", ""ENTRANCE""]",PRINTED,
+STRUCT-GBP-1C9,ST7757 GBP (S1),+0.30,0.3,"[18550.595, 20011.779]","[""MAIN""]",PRINTED,
+STRUCT-GBP-1CB,ST7757 GBP (S1),+0.15,0.15,"[14837.507, 18864.825]","[""MAIN""]",PRINTED,
+STRUCT-GBP-1CD,ST7757 GBP (S1),+1.00,1,"[30547.452, 9537.038]","[""WELL""]",PRINTED,
+STRUCT-GBP-1CE,ST7757 GBP (S1),%%p0.00,0,"[840.032, 16946.904]",[],PRINTED,
+STRUCT-GBP-1CF,ST7757 GBP (S1),%%p0.00,0,"[840.032, 22051.862]",[],PRINTED,
+STRUCT-GBP-1D0,ST7757 GBP (S1),%%p0.00,0,"[34305.011, 7469.784]",[],PRINTED,
+STRUCT-GBP-1D1,ST7757 GBP (S1),%%p0.00,0,"[34082.567, 21950.821]",[],PRINTED,
+STRUCT-GBP-1D2,ST7757 GBP (S1),%%p0.00,0,"[34305.011, 12636.643]",[],PRINTED,
+STRUCT-SFRS-3F4,ST7757 SFRS (S1),+9.70,9.7,"[29225.143, 17929.033]",[],PRINTED,
+STRUCT-SFRS-3F6,ST7757 SFRS (S1),+9.70,9.7,"[20021.21, 10900.496]","[""WELL""]",PRINTED,
+S1-GF,S1 level register,GF,1,,[],PRINTED,ST7757 p.3 '+1.00' marks inside the building + VE-AA-04
+S1-1F,S1 level register,1F,5.5,,[],PRINTED_ARCH,P7757 SECTION A-A VE-AA-05
+S1-2F__1F_ROOF,S1 level register,2F / 1F ROOF,9.7,,[],PRINTED,"ST7757 p.6 '+9.70' roof marks (3F4, 3F6) + VE-AA-06"
+S1-ROOF_(2F_roof),S1 level register,ROOF (2F roof),13.9,,[],PRINTED_ARCH,P7757 SECTION A-A VE-AA-07
+SECTION-AA-LEVELS,"P7757 architectural sections PDF sheet 4, SECTION A-A (visual, scaled drawing)",+0.00 / +0.15 / +0.30 / +1.00 / +5.50 / +9.70 / +13.90 printed,,,"[""MAIN""]",VISUAL_RECORD,
+SECTION-AA-HALF_LANDING_GF_1F,"P7757 architectural sections PDF sheet 4, SECTION A-A (visual, scaled drawing)",dimension '320' from the +0.30 lobby floor to the top of the half-landing slab: +3.50,3.5,,"[""MAIN""]",DERIVED_FROM_PRINTED,
+SECTION-AA-HALF_LANDING_1F_2F,"P7757 architectural sections PDF sheet 4, SECTION A-A (visual, scaled drawing)",no level and no dimension; drawn about 2.00 m below +9.70 (scaled only),,,"[""MAIN""]",NOT_PRINTED,
+SECTION-AA-CUT_FLIGHT_GF_1F,"P7757 architectural sections PDF sheet 4, SECTION A-A (visual, scaled drawing)","upper flight (half-landing up to +5.50) cut: 12 risers, 11 treads drawn",,,"[""MAIN""]",VISUAL_RECORD,
+SECTION-AA-CUT_FLIGHT_1F_2F,"P7757 architectural sections PDF sheet 4, SECTION A-A (visual, scaled drawing)","upper flight (half-landing up to +9.70) cut: 12 risers, 11 treads drawn",,,"[""MAIN""]",VISUAL_RECORD,
+SECTION-AA-LOWER_FLIGHTS,"P7757 architectural sections PDF sheet 4, SECTION A-A (visual, scaled drawing)",seen in elevation behind balustrades: risers not countable,,,"[""MAIN""]",VISUAL_RECORD,
+SECTION-AA-LOBBY_STEPS,"P7757 architectural sections PDF sheet 4, SECTION A-A (visual, scaled drawing)","steps cut from the +1.00 floor down to the +0.30 lobby, on grade",,,"[""MAIN""]",VISUAL_RECORD,
+SECTION-AA-STEPS_MONOLITHIC,"P7757 architectural sections PDF sheet 4, SECTION A-A (visual, scaled drawing)",cut flights hatched as one solid with the waist and the landing,,,"[""MAIN""]",VISUAL_RECORD,
+SECTION-AA-HALF_LANDING_SUPPORT,"P7757 architectural sections PDF sheet 4, SECTION A-A (visual, scaled drawing)",each half-landing ends on a downstand at the north wall,,,"[""MAIN""]",VISUAL_RECORD,
+P16-TYPICAL-LEVELS,ST7757.pdf p.16 'TYPICAL STEEL LAYOUT-STAIR SECTION.' (N.I.S.) and 'TYPICAL DETAIL OF STAIR BEAM' (visual),+0.00 T.O.B / -0.05 S.S.L / +2.00 landing / +4.00 and +3.95 S.S.L at the top beam,,,[],TYPICAL_NOT_PROJECT,never used: the typical section is N.I.S. and its levels are not this villa's
+ELEMENT-A1-F1,S8.7 binding,from 1.0 to None,,,[],PRINTED / NOT_PRINTED,'+1.00' in the bay (GBP 1C2 / P7757 GF 413) = S1 GF FFL | the winder turn follows; the level where the straight part ends is not given
+ELEMENT-A1-W1,S8.7 binding,from None to 3.5,,,[],NOT_PRINTED / DERIVED_FROM_PRINTED,inside the turn | SECTION A-A '320' from the printed +0.30 lobby to the half-landing top
+ELEMENT-A1-L1,S8.7 binding,from 3.5 to 3.5,,,[],DERIVED_FROM_PRINTED / DERIVED_FROM_PRINTED,SECTION A-A: +0.30 + 3.20 (printed dimension) = +3.50 | flat
+ELEMENT-A1-F2,S8.7 binding,from 3.5 to 5.5,,,[],DERIVED_FROM_PRINTED / PRINTED,the half-landing | '+5.50' south of the bay (P7757 1F D18) = S1 1F FFL
+ELEMENT-A2-F1,S8.7 binding,from 5.5 to None,,,[],PRINTED / NOT_PRINTED,'+5.50' (P7757 1F D18) = S1 1F FFL | the winder turn follows
+ELEMENT-A2-W1,S8.7 binding,from None to None,,,[],NOT_PRINTED / NOT_PRINTED,inside the turn | the 1F -> 2F half-landing carries no level and no dimension
+ELEMENT-A2-L1,S8.7 binding,from None to None,,,[],NOT_PRINTED / NOT_PRINTED,"SECTION A-A draws it about 2.00 m below +9.70 (scaled, sensitivity only) | flat"
+ELEMENT-A2-F2,S8.7 binding,from None to 9.7,,,[],NOT_PRINTED / PRINTED,the half-landing | '+9.70' south of the bay (P7757 2F 134E) = S1 2F FFL
+ELEMENT-A2-T1,S8.7 binding,from 9.7 to 9.7,,,[],PRINTED / PRINTED,'+9.70' (P7757 2F 134E) | flat
+ELEMENT-B-F1,S8.7 binding,from 1.0 to 0.3,,,[],PRINTED / PRINTED,'+1.00' in the bay (GBP 1C2) | '+0.30' lobby (GBP 1C9)
+ELEMENT-C-F1,S8.7 binding,from 1.0 to None,,,[],PRINTED / NOT_PRINTED,GF FFL +1.00 (S1; '+1.00' 40F / GBP 1BE in the hall) | the corner landing carries no level
+ELEMENT-C-L1,S8.7 binding,from None to None,,,[],NOT_PRINTED / NOT_PRINTED,"no level, no section through the light-well stair | flat"
+ELEMENT-C-F2,S8.7 binding,from None to 5.5,,,[],NOT_PRINTED / PRINTED,the corner landing | '+5.50' at the arrival (P7757 1F D16)
+ELEMENT-C-T1,S8.7 binding,from 5.5 to 5.5,,,[],PRINTED / PRINTED,'+5.50' (P7757 1F D16) | flat
+ELEMENT-D-F1,S8.7 binding,from 0.15 to 1.0,,,[],PRINTED / PRINTED_NEAREST,'+0.15' at the foot (GBP 1B8 / P7757 GF 409) | '+1.00' (GBP 1C0 / P7757 GF 411) is the nearest mark on the porch side; its binding to the top of the steps is project basis

@@ -1,0 +1,462 @@
+{
+ "SCHEMA": "URBAN_QORTUBA_RC1_DECISION_REGISTER_V1",
+ "answers": {
+  "1_rc1_complete": "YES - frozen as URBAN_ARCHITECTURAL_QTO_QORTUBA_RC1 (SHADOW / RC1_REFERENCE), no open quantity item",
+  "2_blocked": {
+   "quantity": [],
+   "release": [
+    "SOURCE_ANCHOR (DWG <-> DXF NOT_ESTABLISHED)",
+    "CROSS_ROUTE_AGREEMENT",
+    "SHADOW_ONLY"
+   ]
+  },
+  "3_total_physical_floor_m2": 141.836289,
+  "4_room_floor_areas": {
+   "BATH (1) [1c4abf65]": 8.5525,
+   "BATH (2) [a2b19efc]": 5.1,
+   "BATH (3) [fe8ed554]": 4.09,
+   "BED.ROOM (1) [5f1762f1]": 19.2725,
+   "BED.ROOM (2) [daca396d]": 16.327,
+   "DRESS / M.B.ROOM": 33.2,
+   "HALL / whgm": 42.649289,
+   "PAINTRY": 11.685,
+   "DOOR STRIP I841 (BED.ROOM (1) [5f1762f1] / HALL / whgm)": 0.15,
+   "DOOR STRIP I1561 (HALL / whgm / BATH (3) [fe8ed554])": 0.12,
+   "DOOR STRIP I677 (HALL / whgm / OUTSIDE UNIT)": 0.15,
+   "DOOR STRIP I1988 (HALL / whgm / BED.ROOM (2) [daca396d])": 0.15,
+   "DOOR STRIP I2044 (HALL / whgm / BATH (2) [a2b19efc])": 0.12,
+   "DOOR STRIP I1471 (HALL / whgm / DRESS / M.B.ROOM)": 0.15,
+   "DOOR STRIP I1443 (BATH (1) [1c4abf65] / DRESS / M.B.ROOM)": 0.12
+  },
+  "5_room_floor_finish": {
+   "FLR-01": {
+    "BED.ROOM (1) [5f1762f1]": 19.2725,
+    "HALL / whgm": 42.649289,
+    "DRESS / M.B.ROOM": 33.2,
+    "BED.ROOM (2) [daca396d]": 16.327,
+    "door strip THRESHOLD-04910e5deeeed2fc": 0.15,
+    "door strip THRESHOLD-c82365dd41b94abe": 0.15,
+    "door strip THRESHOLD-d4633eabc844b274": 0.15
+   },
+   "FLR-02": {
+    "BATH (1) [1c4abf65]": 8.5525,
+    "BATH (2) [a2b19efc]": 5.1,
+    "BATH (3) [fe8ed554]": 4.09
+   },
+   "FLR-03": {
+    "PAINTRY": 11.685
+   },
+   "MRB-01": {
+    "threshold THRESHOLD-28f50f8dc18c1e90 (door I1561)": 0.12,
+    "threshold THRESHOLD-bfcea08375237224 (door I677)": 0.15,
+    "threshold THRESHOLD-cf12fcdfd3e6a4a6 (door I2044)": 0.12,
+    "threshold THRESHOLD-f9846605acbce828 (door I1443)": 0.12
+   }
+  },
+  "6_room_ceilings": {
+   "BATH (1) [1c4abf65]": 8.5525,
+   "BED.ROOM (1) [5f1762f1]": 19.2725,
+   "HALL / whgm": 42.41,
+   "PAINTRY": 11.685,
+   "BATH (2) [a2b19efc]": 5.1,
+   "DRESS / M.B.ROOM": 33.2,
+   "BED.ROOM (2) [daca396d]": 16.327,
+   "BATH (3) [fe8ed554]": 4.09
+  },
+  "7_total_ceiling": 140.637,
+  "8_room_skirting": {
+   "BATH (1) [1c4abf65]": 0.0,
+   "BED.ROOM (1) [5f1762f1]": 22.9,
+   "HALL / whgm": 26.157105,
+   "PAINTRY": 0.0,
+   "BATH (2) [a2b19efc]": 0.0,
+   "DRESS / M.B.ROOM": 29.5,
+   "BED.ROOM (2) [daca396d]": 15.579714,
+   "BATH (3) [fe8ed554]": 0.0
+  },
+  "9_total_skirting": 94.13682,
+  "10_hidden_profile": {
+   "total": 94.13682,
+   "rooms": {
+    "BATH (1) [1c4abf65]": 0.0,
+    "BED.ROOM (1) [5f1762f1]": 22.9,
+    "HALL / whgm": 26.157105,
+    "PAINTRY": 0.0,
+    "BATH (2) [a2b19efc]": 0.0,
+    "DRESS / M.B.ROOM": 29.5,
+    "BED.ROOM (2) [daca396d]": 15.579714,
+    "BATH (3) [fe8ed554]": 0.0
+   }
+  },
+  "11_room_plaster": {
+   "PLS-01": {
+    "BED.ROOM (1) [5f1762f1]": 72.328302,
+    "HALL / whgm": 94.266868,
+    "DRESS / M.B.ROOM": 91.668106,
+    "BED.ROOM (2) [daca396d]": 49.098242
+   },
+   "PLS-02": {
+    "PAINTRY": 1.510248
+   }
+  },
+  "12_total_plaster": {
+   "PLS-01": 307.361518,
+   "PLS-02": 1.510248
+  },
+  "13_room_paint": {
+   "BED.ROOM (1) [5f1762f1]": 72.328302,
+   "HALL / whgm": 94.266868,
+   "DRESS / M.B.ROOM": 91.668106,
+   "BED.ROOM (2) [daca396d]": 49.098242
+  },
+  "14_total_paint": 307.361518,
+  "15_bath_wall_tile": {
+   "BATH (1) [1c4abf65]": 36.32,
+   "BATH (2) [a2b19efc]": 28.32,
+   "BATH (3) [fe8ed554]": 27.04
+  },
+  "16_paintry_wall_tile": 36.013512,
+  "17_total_wall_tile": 127.693512,
+  "18_tile_prep": {
+   "total": 127.693512,
+   "rooms": {
+    "BATH (1) [1c4abf65]": 36.32,
+    "PAINTRY": 36.013512,
+    "BATH (2) [a2b19efc]": 28.32,
+    "BATH (3) [fe8ed554]": 27.04
+   }
+  },
+  "19_waterproofing_floor": {
+   "BATH (1) [1c4abf65]": 8.5525,
+   "PAINTRY": 11.685,
+   "BATH (2) [a2b19efc]": 5.1,
+   "BATH (3) [fe8ed554]": 4.09
+  },
+  "20_waterproofing_upturn": {
+   "BATH (1) [1c4abf65]": 11.9,
+   "PAINTRY": 13.9,
+   "BATH (2) [a2b19efc]": 9.4,
+   "BATH (3) [fe8ed554]": 9.0
+  },
+  "21_marble": {
+   "area_m2": 0.51,
+   "length_lm": 3.4,
+   "thresholds": {
+    "threshold THRESHOLD-28f50f8dc18c1e90 (door I1561)": 0.12,
+    "threshold THRESHOLD-bfcea08375237224 (door I677)": 0.15,
+    "threshold THRESHOLD-cf12fcdfd3e6a4a6 (door I2044)": 0.12,
+    "threshold THRESHOLD-f9846605acbce828 (door I1443)": 0.12
+   },
+   "pair": "price one basis"
+  },
+  "22_internal_door_count": 6,
+  "23_internal_doors": [
+   {
+    "opening_id": "I1443",
+    "from_display": "BATH (1) [1c4abf65]",
+    "to_display": "DRESS / M.B.ROOM",
+    "clear_width_m": 0.8,
+    "height_m": 2.2,
+    "height_basis": "OWNER_PROJECT_PARAMETER",
+    "area_m2": 1.76,
+    "material": "PVC"
+   },
+   {
+    "opening_id": "I1471",
+    "from_display": "HALL / whgm",
+    "to_display": "DRESS / M.B.ROOM",
+    "clear_width_m": 1.0,
+    "height_m": 2.2,
+    "height_basis": "OWNER_PROJECT_PARAMETER",
+    "area_m2": 2.2,
+    "material": "PVC"
+   },
+   {
+    "opening_id": "I1561",
+    "from_display": "HALL / whgm",
+    "to_display": "BATH (3) [fe8ed554]",
+    "clear_width_m": 0.8,
+    "height_m": 2.2,
+    "height_basis": "OWNER_PROJECT_PARAMETER",
+    "area_m2": 1.76,
+    "material": "PVC"
+   },
+   {
+    "opening_id": "I1988",
+    "from_display": "HALL / whgm",
+    "to_display": "BED.ROOM (2) [daca396d]",
+    "clear_width_m": 1.0,
+    "height_m": 2.2,
+    "height_basis": "OWNER_PROJECT_PARAMETER",
+    "area_m2": 2.2,
+    "material": "PVC"
+   },
+   {
+    "opening_id": "I2044",
+    "from_display": "HALL / whgm",
+    "to_display": "BATH (2) [a2b19efc]",
+    "clear_width_m": 0.8,
+    "height_m": 2.2,
+    "height_basis": "OWNER_PROJECT_PARAMETER",
+    "area_m2": 1.76,
+    "material": "PVC"
+   },
+   {
+    "opening_id": "I841",
+    "from_display": "BED.ROOM (1) [5f1762f1]",
+    "to_display": "HALL / whgm",
+    "clear_width_m": 1.0,
+    "height_m": 2.2,
+    "height_basis": "OWNER_PROJECT_PARAMETER",
+    "area_m2": 2.2,
+    "material": "PVC"
+   }
+  ],
+  "24_entrance": [
+   {
+    "opening_id": "I677",
+    "from_display": "HALL / whgm",
+    "to_display": "OUTSIDE_UNIT (SITE-788f30878ba9d2b3)",
+    "clear_width_m": 1.0,
+    "height_m": 2.2,
+    "height_basis": "OWNER_PROJECT_PARAMETER",
+    "area_m2": 2.2,
+    "material": null
+   }
+  ],
+  "25_sliding_glass_door": [
+   {
+    "opening_id": "SGD-H533",
+    "from_display": "HALL / whgm",
+    "to_display": "PAINTRY",
+    "clear_width_m": 2.75,
+    "height_m": 2.2,
+    "height_basis": "OWNER_PROJECT_PARAMETER",
+    "area_m2": 6.05,
+    "material": null
+   }
+  ],
+  "26_window_count": 6,
+  "27_windows": [
+   {
+    "opening_id": "W-H1020",
+    "from_display": "BED.ROOM (2) [daca396d]",
+    "to_display": "EXTERIOR (outside the drawn building)",
+    "clear_width_m": 1.342287,
+    "height_m": 1.5,
+    "height_basis": "OWNER_PROJECT_PARAMETER",
+    "area_m2": 2.013431,
+    "material": "ALUMINIUM"
+   },
+   {
+    "opening_id": "W-H1026",
+    "from_display": "DRESS / M.B.ROOM",
+    "to_display": "EXTERIOR (outside the drawn building)",
+    "clear_width_m": 1.697515,
+    "height_m": 1.5,
+    "height_basis": "OWNER_PROJECT_PARAMETER",
+    "area_m2": 2.546273,
+    "material": "ALUMINIUM"
+   },
+   {
+    "opening_id": "W-H1319",
+    "from_display": "BED.ROOM (1) [5f1762f1]",
+    "to_display": "EXTERIOR (outside the drawn building)",
+    "clear_width_m": 1.205359,
+    "height_m": 1.5,
+    "height_basis": "OWNER_PROJECT_PARAMETER",
+    "area_m2": 1.808039,
+    "material": "ALUMINIUM"
+   },
+   {
+    "opening_id": "W-H1325",
+    "from_display": "DRESS / M.B.ROOM",
+    "to_display": "UNLABELLED REGION SITE-2b7e752d7baa45f5,SITE-9d115e042e0e1565,SITE-eaae022599294151",
+    "clear_width_m": 2.5,
+    "height_m": 1.5,
+    "height_basis": "OWNER_PROJECT_PARAMETER",
+    "area_m2": 3.75,
+    "material": null
+   },
+   {
+    "opening_id": "W-H1342",
+    "from_display": "PAINTRY",
+    "to_display": "EXTERIOR (outside the drawn building)",
+    "clear_width_m": 1.610992,
+    "height_m": 1.5,
+    "height_basis": "OWNER_PROJECT_PARAMETER",
+    "area_m2": 2.416488,
+    "material": "ALUMINIUM"
+   },
+   {
+    "opening_id": "W-H1518",
+    "from_display": "HALL / whgm",
+    "to_display": "UNLABELLED REGION SITE-16beefe79d1949e3,SITE-3b875c57dda012d3,SITE-eaae022599294151",
+    "clear_width_m": 2.346444,
+    "height_m": 1.5,
+    "height_basis": "OWNER_PROJECT_PARAMETER",
+    "area_m2": 3.519666,
+    "material": null
+   },
+   {
+    "total_area_m2": 16.053897
+   }
+  ],
+  "28_other_glazing": [
+   "SGD-H533",
+   "W-H1325",
+   "W-H1518"
+  ],
+  "29_open_passages": [
+   {
+    "opening_id": "OP-997f14d12b8e9bc1",
+    "from_zone": "HALL",
+    "to_zone": "whgm",
+    "clear_width_m": 1.196447,
+    "head_condition": "OPEN_PASSAGE_WITH_HEAD",
+    "height_m": 2.2,
+    "soffit": "OPENING SOFFIT (plaster / paint reveal), NOT ceiling",
+    "door_present": false
+   },
+   {
+    "opening_id": "OP-9e0fd219ca5cd391",
+    "from_zone": "DRESS",
+    "to_zone": "M.B.ROOM",
+    "clear_width_m": 1.2,
+    "head_condition": "OPEN_PASSAGE_FULL_HEIGHT",
+    "height_m": null,
+    "soffit": "NONE - the ceiling continues through the passage",
+    "door_present": false
+   }
+  ],
+  "30_unresolved_reveal": "NONE",
+  "31_column_treatment": "YES: dry exposed column faces in PLS-01 / PNT-01 (+ skirting on the V4 path), wet exposed column faces in WTL-01 / WTP-01 only (no paint, no skirting); hidden faces zero",
+  "32_duct_treatment": "YES: H2060 / H2061 outer faces in BED.ROOM plaster + paint + skirting; inner lining zero; 0.84 m2 footprint outside floor and ceiling",
+  "33_q03_q11": "NOT two payable floor quantities. Same physical surface (the three BATH sites, 17.7425 m2) but historically two DIFFERENT trades: Q-03 = wet-area WATERPROOFING floor, Q-11 = wet-room CERAMIC floor. The R8.18 waterproofing register now owns the membrane (WATERPROOFING_FLOOR_M2), so RC1: Q-11 -> canonical FLOOR CERAMIC WET item; Q-03 -> LEGACY alias of the bathroom part of the canonical WATERPROOFING FLOOR item (and it must never again be shown as a floor-finish row)",
+  "34_q03p_q12": "Same: Q-12 -> canonical PAINTRY CERAMIC FLOOR item; Q-03P -> legacy alias of the PAINTRY part of the WATERPROOFING FLOOR item",
+  "35_excel_double_count": "NO in RC1: every legacy id is an attribute of its canonical line (readback refuses an alias line); R8.20 XLSX: YES (see BOQ_ALIAS_REGISTER)",
+  "36_footprint_resolved": "YES for every site",
+  "37_authority": {
+   "Q-13|SITE-77a2130eb275604c": {
+    "policies": [
+     "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1"
+    ],
+    "identity": []
+   },
+   "Q-13|SITE-a6405850100155ac": {
+    "policies": [
+     "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1"
+    ],
+    "identity": []
+   },
+   "Q-12|SITE-8c1c7563d5252c50": {
+    "policies": [
+     "URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1"
+    ],
+    "identity": [
+     "QORTUBA-NEW-PAINTRY-COUNTER-CABINETRY-OWNER-001@v1"
+    ]
+   }
+  },
+  "38_remaining_blocker": "NONE (answered: floor finish laid before the cabinets)",
+  "39_every_room_reconciles": true,
+  "40_trade_totals_equal_breakdowns": true,
+  "41_duplicate_physical_surface": "NONE (wall_plane_vs_column_vs_duct_vs_reveals (R8.19 guard): PASS, all_wall_surfaces_once (R8.18 guard, 190 surfaces): PASS, below_sill_and_above_opening_vs_wall: PASS, passage_soffit_vs_ceiling: PASS, threshold_vs_floor_finish: PASS, duct_footprint_vs_floor_and_ceiling: PASS)",
+  "42_duplicate_calculation_path": "NONE for RC1 quantities; superseded parallel code listed in LEGACY_PATH_REGISTER",
+  "43_legacy_engines": [
+   "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py takeoff rows Q-01..Q-17 (OWNER RULES V1, old revision)",
+   "engine/source/wall_faces.py (WALL_FACE_SURFACE_POLICY_V1)",
+   "engine/*.py (pre-R8 production modules), engine/qs_core, engine/ingest",
+   "engine/boq_xlsx.py (BOQ_XLSX_EXPORT_V1, R8.20 shadow workbook)"
+  ],
+  "44_copy_adapted": "NONE (labels.plain deferred: NONE. labels.plain does not materially help: room / opening extraction already uses decoded TEXT, and the garbled Qortuba labels ('whgm', 'jpqdV') are an SHX font-encoding effect labels.plain does not decode; the donor clone is not present and fetching code for no gain is not justified)",
+  "45_clean_reimplemented": [
+   "no-silent-row-drop readback (OT principle)",
+   "field-level cell readback (BM pattern)",
+   "deterministic zip re-pack of the workbook (fixed entry timestamps) so a rebuild is byte-identical"
+  ],
+  "46_rejected": [
+   "OpenTakeoff detectRooms / One-Click quantities as any authority",
+   "any donor / MCP output as a quantity",
+   "U-C4N unit_of (inferred units) and silent OCS identity",
+   "warn-not-block on mixed scale",
+   "workbook formulas or sheet totals"
+  ],
+  "47_xlsx_formulas": "NO",
+  "48_xlsx_equals_engine": true,
+  "49_xlsx_content_digest": "647fa151d3e0cf5c9b53a022c6555d988025f31680907cbe161a1de9b012bbc8",
+  "50_canonical_source": "DXF sha256 df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315 (QORTUBA_REV_NEW)",
+  "51_dwg_dxf_identity": "NOT_ESTABLISHED",
+  "52_blocks_rc1_reference": "NO",
+  "53_blocks_release_authority": "YES",
+  "55_deterministic_regeneration": "registers regenerated twice from the committed code and compared; the workbook writes byte-identical (fixed zip timestamps)",
+  "56_frozen": true,
+  "57_blind_files": [
+   "ORIGINAL_DWG",
+   "CONTROLLED_DXF",
+   "CONTROLLED_DWG_AC1027",
+   "ARCHITECTURAL_PDF",
+   "SECTIONS",
+   "ELEVATIONS",
+   "DOOR_SCHEDULE",
+   "WINDOW_SCHEDULE",
+   "FINISH_SCHEDULE",
+   "GENERAL_NOTES",
+   "STRUCTURAL_PACKAGE"
+  ],
+  "58_blind_measures": [
+   "ROOM_DETECTION_COMPLETENESS",
+   "ROOM_CLASSIFICATION",
+   "FLOOR_AREA_ERROR",
+   "CEILING_AREA_ERROR",
+   "SKIRTING_ERROR",
+   "PLASTER_ERROR",
+   "PAINT_ERROR",
+   "WALL_TILE_ERROR",
+   "TILE_PREP_ERROR",
+   "WATERPROOFING_ERROR",
+   "MARBLE_ERROR",
+   "DOOR_DETECTION",
+   "DOOR_SIZE_ACCURACY",
+   "WINDOW_DETECTION",
+   "WINDOW_AREA_ACCURACY",
+   "OPENING_CLASSIFICATION",
+   "SILENT_ERROR_COUNT",
+   "BLOCKED_ITEM_COUNT",
+   "OWNER_QUESTION_COUNT"
+  ],
+  "59_after_blind": [
+   "classify every mismatch with exactly one defect class",
+   "fix the GENERIC system (versioned)",
+   "rerun Qortuba RC1 as regression",
+   "never fix the test villa"
+  ],
+  "60_disagreements": [
+   "Q-03 / Q-11 are not 'two views of one wet-floor trade quantity': Q-03 was historically the waterproofing membrane; the right canonical model is FLOOR CERAMIC (Q-11) + WATERPROOFING FLOOR (legacy Q-03 + Q-03P) - the R8.18 waterproofing register already superseded Q-03 / Q-03P",
+   "QP-21 2.20 m is an OWNER_CONFIRMED_PROJECT_PARAMETER (rung 2), not a disguised measurement and not a temporary default; the 1.00 m width fallback (TD-01) is NEVER used here - every door width is source. The schedule labels each attribute SOURCE / OWNER_PROJECT_PARAMETER / NOT_ESTABLISHED",
+   "MARBLE plan area and MARBLE length are two measures of ONE physical item: both rows stay (as asked) but they are a MEASURE_PAIR - price one basis; the workbook must say so or it double-counts",
+   "the 14-sheet structure is acceptable only if 01_BOQ_SUMMARY is the ONLY additive sheet; every trade sheet is labelled BREAKDOWN (non-additive) on every row",
+   "Hall and Lobby are ONE certified physical site (HALL + whgm zones, the open passage lies inside it): the room matrix shows one row; splitting it would invent a boundary",
+   "the main entrance height: QP-21 is an internal-door parameter; the frozen wall-face method applied it to I677 - the schedule flags the entrance height as OWNER_PARAMETER_APPLIED_BY_METHOD (scope unconfirmed) instead of silently presenting it as the entrance height",
+   "Window material: 'glazed' is not 'aluminium' - US-13 (exterior windows = aluminium) is applied only where the geometry proves the far side is outside the drawing; H1518 / H1325 stay NOT_ESTABLISHED"
+  ]
+ },
+ "gates": {
+  "QORTUBA_RC1_REFERENCE_READY": "YES",
+  "FULL_VILLA_BLIND_TEST_READY": "YES (intake contract + plan ready; awaiting the owner's files)",
+  "MIGRATION_PLANNING_READY": "YES",
+  "MIGRATION_EXECUTION_READY": "NO",
+  "PRODUCTION_MIGRATION": "NO"
+ },
+ "owner_actions": [
+  {
+   "id": "QORTUBA_CONTROLLED_REEXPORT",
+   "when": "in parallel or after RC1 (not blocking)",
+   "protocol": "R8.20 SOURCE_ANCHOR_PLAN"
+  },
+  {
+   "id": "UNSEEN_VILLA_FILES",
+   "what": "files per BLIND_VILLA_INTAKE_SCHEMA; seal the QS BOQ (hash) before sending anything"
+  }
+ ]
+}

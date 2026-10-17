@@ -1,0 +1,164 @@
+{"record": "GF_1F:A-28", "risers": 28, "status": "CONFLICTING"}
+{"record": "GF_1F:A-28-M", "risers": 28, "status": "CONFLICTING (landing) even with the modification"}
+{"record": "GF_1F:B-27-S", "risers": 27, "status": "CONFLICTING"}
+{"record": "GF_1F:B-27-SM", "risers": 27, "status": "GEOMETRICALLY_POSSIBLE_ONLY_WITH_MODIFICATIONS (unverified)"}
+{"record": "GF_1F:B-27-P", "risers": 27, "status": "CONFLICTING"}
+{"record": "GF_1F:B-27-U", "risers": 27, "status": "CONFLICTING"}
+{"record": "GF_1F:REF-25", "risers": 25, "status": "REFERENCE_ONLY"}
+{"gross": 0.992080987, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.985817806, "record": "CONCRETE:A-28:lower flight:150.0"}
+{"gross": 0.380327933, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.380327933, "record": "CONCRETE:A-28:turn (winders):150.0"}
+{"gross": 0.216, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:A-28:landing A1-L1 (NE quarter):150.0"}
+{"gross": 0.992080987, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.938383438, "record": "CONCRETE:A-28:upper flight:150.0"}
+{"gross": 2.364489907, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.304529177, "record": "CONCRETE:A-28:TOTAL (new; S8.7 landing excluded):150.0"}
+{"gross": 1.037005434, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.030458637, "record": "CONCRETE:A-28:lower flight:160.0"}
+{"gross": 0.3976742, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.3976742, "record": "CONCRETE:A-28:turn (winders):160.0"}
+{"gross": 0.2304, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:A-28:landing A1-L1 (NE quarter):160.0"}
+{"gross": 1.037005434, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.980585191, "record": "CONCRETE:A-28:upper flight:160.0"}
+{"gross": 2.471685068, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.408718028, "record": "CONCRETE:A-28:TOTAL (new; S8.7 landing excluded):160.0"}
+{"gross": 1.104392104, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.097419883, "record": "CONCRETE:A-28:lower flight:175.0"}
+{"gross": 0.4236936, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.4236936, "record": "CONCRETE:A-28:turn (winders):175.0"}
+{"gross": 0.252, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:A-28:landing A1-L1 (NE quarter):175.0"}
+{"gross": 1.104392104, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.043887821, "record": "CONCRETE:A-28:upper flight:175.0"}
+{"gross": 2.632477808, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.565001304, "record": "CONCRETE:A-28:TOTAL (new; S8.7 landing excluded):175.0"}
+{"gross": 1.216703221, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.20902196, "record": "CONCRETE:A-28:lower flight:200.0"}
+{"gross": 0.467059267, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.467059267, "record": "CONCRETE:A-28:turn (winders):200.0"}
+{"gross": 0.288, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:A-28:landing A1-L1 (NE quarter):200.0"}
+{"gross": 1.216703221, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.149392204, "record": "CONCRETE:A-28:upper flight:200.0"}
+{"gross": 2.900465709, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.825473431, "record": "CONCRETE:A-28:TOTAL (new; S8.7 landing excluded):200.0"}
+{"gross": 0.992080987, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.985817806, "record": "CONCRETE:A-28-M:lower flight:150.0"}
+{"gross": 0.380327933, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.380327933, "record": "CONCRETE:A-28-M:turn (winders):150.0"}
+{"gross": 0.216, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:A-28-M:landing A1-L1 (NE quarter):150.0"}
+{"gross": 0.916071429, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.916071429, "record": "CONCRETE:A-28-M:upper flight:150.0"}
+{"gross": 0.018, "lane": "OWNERSHIP_UNRESOLVED (shown, never in a total)", "net": null, "record": "CONCRETE:A-28-M:arrival strip before B20 (1F floor):150.0"}
+{"gross": 2.288480349, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.282217168, "record": "CONCRETE:A-28-M:TOTAL (new; S8.7 landing excluded):150.0"}
+{"gross": 1.037005434, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.030458637, "record": "CONCRETE:A-28-M:lower flight:160.0"}
+{"gross": 0.3976742, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.3976742, "record": "CONCRETE:A-28-M:turn (winders):160.0"}
+{"gross": 0.2304, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:A-28-M:landing A1-L1 (NE quarter):160.0"}
+{"gross": 0.957857144, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.957857144, "record": "CONCRETE:A-28-M:upper flight:160.0"}
+{"gross": 0.0192, "lane": "OWNERSHIP_UNRESOLVED (shown, never in a total)", "net": null, "record": "CONCRETE:A-28-M:arrival strip before B20 (1F floor):160.0"}
+{"gross": 2.392536778, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.385989981, "record": "CONCRETE:A-28-M:TOTAL (new; S8.7 landing excluded):160.0"}
+{"gross": 1.104392104, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.097419883, "record": "CONCRETE:A-28-M:lower flight:175.0"}
+{"gross": 0.4236936, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.4236936, "record": "CONCRETE:A-28-M:turn (winders):175.0"}
+{"gross": 0.252, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:A-28-M:landing A1-L1 (NE quarter):175.0"}
+{"gross": 1.020535715, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.020535715, "record": "CONCRETE:A-28-M:upper flight:175.0"}
+{"gross": 0.021, "lane": "OWNERSHIP_UNRESOLVED (shown, never in a total)", "net": null, "record": "CONCRETE:A-28-M:arrival strip before B20 (1F floor):175.0"}
+{"gross": 2.548621419, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.541649198, "record": "CONCRETE:A-28-M:TOTAL (new; S8.7 landing excluded):175.0"}
+{"gross": 1.216703221, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.20902196, "record": "CONCRETE:A-28-M:lower flight:200.0"}
+{"gross": 0.467059267, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.467059267, "record": "CONCRETE:A-28-M:turn (winders):200.0"}
+{"gross": 0.288, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:A-28-M:landing A1-L1 (NE quarter):200.0"}
+{"gross": 1.125000001, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.125000001, "record": "CONCRETE:A-28-M:upper flight:200.0"}
+{"gross": 0.024, "lane": "OWNERSHIP_UNRESOLVED (shown, never in a total)", "net": null, "record": "CONCRETE:A-28-M:arrival strip before B20 (1F floor):200.0"}
+{"gross": 2.808762489, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.801081228, "record": "CONCRETE:A-28-M:TOTAL (new; S8.7 landing excluded):200.0"}
+{"gross": 0.825964028, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.819590804, "record": "CONCRETE:B-27-S:lower flight:150.0"}
+{"gross": 0.406626125, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.406626125, "record": "CONCRETE:B-27-S:turn (winders):150.0"}
+{"gross": 0.216, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:B-27-S:landing A1-L1 (NE quarter):150.0"}
+{"gross": 1.009511589, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.954995735, "record": "CONCRETE:B-27-S:upper flight:150.0"}
+{"gross": 2.242101742, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.181212664, "record": "CONCRETE:B-27-S:TOTAL (new; S8.7 landing excluded):150.0"}
+{"gross": 0.863028296, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.856369081, "record": "CONCRETE:B-27-S:lower flight:160.0"}
+{"gross": 0.425428978, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.425428978, "record": "CONCRETE:B-27-S:turn (winders):160.0"}
+{"gross": 0.2304, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:B-27-S:landing A1-L1 (NE quarter):160.0"}
+{"gross": 1.054812362, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.997551007, "record": "CONCRETE:B-27-S:upper flight:160.0"}
+{"gross": 2.343269636, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.279349066, "record": "CONCRETE:B-27-S:TOTAL (new; S8.7 landing excluded):160.0"}
+{"gross": 0.918624699, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.911536496, "record": "CONCRETE:B-27-S:lower flight:175.0"}
+{"gross": 0.453633257, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.453633257, "record": "CONCRETE:B-27-S:turn (winders):175.0"}
+{"gross": 0.252, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:B-27-S:landing A1-L1 (NE quarter):175.0"}
+{"gross": 1.122763521, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.061383914, "record": "CONCRETE:B-27-S:upper flight:175.0"}
+{"gross": 2.495021477, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.426553667, "record": "CONCRETE:B-27-S:TOTAL (new; S8.7 landing excluded):175.0"}
+{"gross": 1.01128537, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.003482187, "record": "CONCRETE:B-27-S:lower flight:200.0"}
+{"gross": 0.500640389, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.500640389, "record": "CONCRETE:B-27-S:turn (winders):200.0"}
+{"gross": 0.288, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:B-27-S:landing A1-L1 (NE quarter):200.0"}
+{"gross": 1.236015452, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.167772092, "record": "CONCRETE:B-27-S:upper flight:200.0"}
+{"gross": 2.747941211, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.671894668, "record": "CONCRETE:B-27-S:TOTAL (new; S8.7 landing excluded):200.0"}
+{"gross": 0.825964028, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.819590804, "record": "CONCRETE:B-27-SM:lower flight:150.0"}
+{"gross": 0.406626125, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.406626125, "record": "CONCRETE:B-27-SM:turn (winders):150.0"}
+{"gross": 0.216, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:B-27-SM:landing A1-L1 (NE quarter):150.0"}
+{"gross": 0.932850694, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.932850694, "record": "CONCRETE:B-27-SM:upper flight:150.0"}
+{"gross": 0.018, "lane": "OWNERSHIP_UNRESOLVED (shown, never in a total)", "net": null, "record": "CONCRETE:B-27-SM:arrival strip before B20 (1F floor):150.0"}
+{"gross": 2.165440847, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.159067623, "record": "CONCRETE:B-27-SM:TOTAL (new; S8.7 landing excluded):150.0"}
+{"gross": 0.863028296, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.856369081, "record": "CONCRETE:B-27-SM:lower flight:160.0"}
+{"gross": 0.425428978, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.425428978, "record": "CONCRETE:B-27-SM:turn (winders):160.0"}
+{"gross": 0.2304, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:B-27-SM:landing A1-L1 (NE quarter):160.0"}
+{"gross": 0.97504074, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.97504074, "record": "CONCRETE:B-27-SM:upper flight:160.0"}
+{"gross": 0.0192, "lane": "OWNERSHIP_UNRESOLVED (shown, never in a total)", "net": null, "record": "CONCRETE:B-27-SM:arrival strip before B20 (1F floor):160.0"}
+{"gross": 2.263498014, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.256838799, "record": "CONCRETE:B-27-SM:TOTAL (new; S8.7 landing excluded):160.0"}
+{"gross": 0.918624699, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.911536496, "record": "CONCRETE:B-27-SM:lower flight:175.0"}
+{"gross": 0.453633257, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.453633257, "record": "CONCRETE:B-27-SM:turn (winders):175.0"}
+{"gross": 0.252, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:B-27-SM:landing A1-L1 (NE quarter):175.0"}
+{"gross": 1.03832581, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.03832581, "record": "CONCRETE:B-27-SM:upper flight:175.0"}
+{"gross": 0.021, "lane": "OWNERSHIP_UNRESOLVED (shown, never in a total)", "net": null, "record": "CONCRETE:B-27-SM:arrival strip before B20 (1F floor):175.0"}
+{"gross": 2.410583766, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.403495563, "record": "CONCRETE:B-27-SM:TOTAL (new; S8.7 landing excluded):175.0"}
+{"gross": 1.01128537, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.003482187, "record": "CONCRETE:B-27-SM:lower flight:200.0"}
+{"gross": 0.500640389, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.500640389, "record": "CONCRETE:B-27-SM:turn (winders):200.0"}
+{"gross": 0.288, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:B-27-SM:landing A1-L1 (NE quarter):200.0"}
+{"gross": 1.143800925, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.143800925, "record": "CONCRETE:B-27-SM:upper flight:200.0"}
+{"gross": 0.024, "lane": "OWNERSHIP_UNRESOLVED (shown, never in a total)", "net": null, "record": "CONCRETE:B-27-SM:arrival strip before B20 (1F floor):200.0"}
+{"gross": 2.655726684, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.647923501, "record": "CONCRETE:B-27-SM:TOTAL (new; S8.7 landing excluded):200.0"}
+{"gross": 0.917737808, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.911364585, "record": "CONCRETE:B-27-P:lower flight:150.0"}
+{"gross": 0.387289723, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.387289723, "record": "CONCRETE:B-27-P:turn (winders):150.0"}
+{"gross": 0.216, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:B-27-P:landing A1-L1 (NE quarter):150.0"}
+{"gross": 1.009511589, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.954995735, "record": "CONCRETE:B-27-P:upper flight:150.0"}
+{"gross": 2.31453912, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.253650043, "record": "CONCRETE:B-27-P:TOTAL (new; S8.7 landing excluded):150.0"}
+{"gross": 0.958920329, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.952261114, "record": "CONCRETE:B-27-P:lower flight:160.0"}
+{"gross": 0.404803482, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.404803482, "record": "CONCRETE:B-27-P:turn (winders):160.0"}
+{"gross": 0.2304, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:B-27-P:landing A1-L1 (NE quarter):160.0"}
+{"gross": 1.054812362, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.997551007, "record": "CONCRETE:B-27-P:upper flight:160.0"}
+{"gross": 2.418536173, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.354615603, "record": "CONCRETE:B-27-P:TOTAL (new; S8.7 landing excluded):160.0"}
+{"gross": 1.02069411, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.013605907, "record": "CONCRETE:B-27-P:lower flight:175.0"}
+{"gross": 0.431074121, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.431074121, "record": "CONCRETE:B-27-P:turn (winders):175.0"}
+{"gross": 0.252, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:B-27-P:landing A1-L1 (NE quarter):175.0"}
+{"gross": 1.122763521, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.061383914, "record": "CONCRETE:B-27-P:upper flight:175.0"}
+{"gross": 2.574531752, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.506063942, "record": "CONCRETE:B-27-P:TOTAL (new; S8.7 landing excluded):175.0"}
+{"gross": 1.123650411, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.115847228, "record": "CONCRETE:B-27-P:lower flight:200.0"}
+{"gross": 0.474858519, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.474858519, "record": "CONCRETE:B-27-P:turn (winders):200.0"}
+{"gross": 0.288, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:B-27-P:landing A1-L1 (NE quarter):200.0"}
+{"gross": 1.236015452, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.167772092, "record": "CONCRETE:B-27-P:upper flight:200.0"}
+{"gross": 2.834524382, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.758477839, "record": "CONCRETE:B-27-P:TOTAL (new; S8.7 landing excluded):200.0"}
+{"gross": 1.009511589, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.003138366, "record": "CONCRETE:B-27-U:lower flight:150.0"}
+{"gross": 0.387289723, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.387289723, "record": "CONCRETE:B-27-U:turn (winders):150.0"}
+{"gross": 0.216, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:B-27-U:landing A1-L1 (NE quarter):150.0"}
+{"gross": 0.917737808, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.917737808, "record": "CONCRETE:B-27-U:upper flight:150.0"}
+{"gross": 0.018, "lane": "OWNERSHIP_UNRESOLVED (shown, never in a total)", "net": null, "record": "CONCRETE:B-27-U:arrival strip before B20 (1F floor):150.0"}
+{"gross": 2.31453912, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.308165897, "record": "CONCRETE:B-27-U:TOTAL (new; S8.7 landing excluded):150.0"}
+{"gross": 1.054812362, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.048153146, "record": "CONCRETE:B-27-U:lower flight:160.0"}
+{"gross": 0.404803482, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.404803482, "record": "CONCRETE:B-27-U:turn (winders):160.0"}
+{"gross": 0.2304, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:B-27-U:landing A1-L1 (NE quarter):160.0"}
+{"gross": 0.958920329, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.958920329, "record": "CONCRETE:B-27-U:upper flight:160.0"}
+{"gross": 0.0192, "lane": "OWNERSHIP_UNRESOLVED (shown, never in a total)", "net": null, "record": "CONCRETE:B-27-U:arrival strip before B20 (1F floor):160.0"}
+{"gross": 2.418536173, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.411876957, "record": "CONCRETE:B-27-U:TOTAL (new; S8.7 landing excluded):160.0"}
+{"gross": 1.122763521, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.115675318, "record": "CONCRETE:B-27-U:lower flight:175.0"}
+{"gross": 0.431074121, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.431074121, "record": "CONCRETE:B-27-U:turn (winders):175.0"}
+{"gross": 0.252, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:B-27-U:landing A1-L1 (NE quarter):175.0"}
+{"gross": 1.02069411, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.02069411, "record": "CONCRETE:B-27-U:upper flight:175.0"}
+{"gross": 0.021, "lane": "OWNERSHIP_UNRESOLVED (shown, never in a total)", "net": null, "record": "CONCRETE:B-27-U:arrival strip before B20 (1F floor):175.0"}
+{"gross": 2.574531752, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.567443549, "record": "CONCRETE:B-27-U:TOTAL (new; S8.7 landing excluded):175.0"}
+{"gross": 1.236015452, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.22821227, "record": "CONCRETE:B-27-U:lower flight:200.0"}
+{"gross": 0.474858519, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.474858519, "record": "CONCRETE:B-27-U:turn (winders):200.0"}
+{"gross": 0.288, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:B-27-U:landing A1-L1 (NE quarter):200.0"}
+{"gross": 1.123650411, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.123650411, "record": "CONCRETE:B-27-U:upper flight:200.0"}
+{"gross": 0.024, "lane": "OWNERSHIP_UNRESOLVED (shown, never in a total)", "net": null, "record": "CONCRETE:B-27-U:arrival strip before B20 (1F floor):200.0"}
+{"gross": 2.834524382, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.8267212, "record": "CONCRETE:B-27-U:TOTAL (new; S8.7 landing excluded):200.0"}
+{"gross": 0.858368524, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.851745264, "record": "CONCRETE:REF-25:lower flight:150.0"}
+{"gross": 0.403121686, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.403121686, "record": "CONCRETE:REF-25:turn (winders):150.0"}
+{"gross": 0.216, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:REF-25:landing A1-L1 (NE quarter):150.0"}
+{"gross": 0.953742805, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.953742805, "record": "CONCRETE:REF-25:upper flight:150.0"}
+{"gross": 0.018, "lane": "OWNERSHIP_UNRESOLVED (shown, never in a total)", "net": null, "record": "CONCRETE:REF-25:arrival strip before B20 (1F floor):150.0"}
+{"gross": 2.215233015, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.208609755, "record": "CONCRETE:REF-25:TOTAL (new; S8.7 landing excluded):150.0"}
+{"gross": 0.896153092, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.889238283, "record": "CONCRETE:REF-25:lower flight:160.0"}
+{"gross": 0.421026465, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.421026465, "record": "CONCRETE:REF-25:turn (winders):160.0"}
+{"gross": 0.2304, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:REF-25:landing A1-L1 (NE quarter):160.0"}
+{"gross": 0.995725658, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.995725658, "record": "CONCRETE:REF-25:upper flight:160.0"}
+{"gross": 0.0192, "lane": "OWNERSHIP_UNRESOLVED (shown, never in a total)", "net": null, "record": "CONCRETE:REF-25:arrival strip before B20 (1F floor):160.0"}
+{"gross": 2.312905215, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.305990406, "record": "CONCRETE:REF-25:TOTAL (new; S8.7 landing excluded):160.0"}
+{"gross": 0.952829945, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 0.94547781, "record": "CONCRETE:REF-25:lower flight:175.0"}
+{"gross": 0.447883634, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.447883634, "record": "CONCRETE:REF-25:turn (winders):175.0"}
+{"gross": 0.252, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:REF-25:landing A1-L1 (NE quarter):175.0"}
+{"gross": 1.058699939, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.058699939, "record": "CONCRETE:REF-25:upper flight:175.0"}
+{"gross": 0.021, "lane": "OWNERSHIP_UNRESOLVED (shown, never in a total)", "net": null, "record": "CONCRETE:REF-25:arrival strip before B20 (1F floor):175.0"}
+{"gross": 2.459413518, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.452061383, "record": "CONCRETE:REF-25:TOTAL (new; S8.7 landing excluded):175.0"}
+{"gross": 1.047291366, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.039210357, "record": "CONCRETE:REF-25:lower flight:200.0"}
+{"gross": 0.492645582, "lane": "CONDITIONAL_ESTIMATE_NOT_RELEASED", "net": 0.492645582, "record": "CONCRETE:REF-25:turn (winders):200.0"}
+{"gross": 0.288, "lane": "ALREADY_OWNED_BY_S8_7 (frozen; not counted again)", "net": 0.0, "record": "CONCRETE:REF-25:landing A1-L1 (NE quarter):200.0"}
+{"gross": 1.163657073, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 1.163657073, "record": "CONCRETE:REF-25:upper flight:200.0"}
+{"gross": 0.024, "lane": "OWNERSHIP_UNRESOLVED (shown, never in a total)", "net": null, "record": "CONCRETE:REF-25:arrival strip before B20 (1F floor):200.0"}
+{"gross": 2.703594021, "lane": "RESEARCH_SENSITIVITY_NOT_RELEASED", "net": 2.695513012, "record": "CONCRETE:REF-25:TOTAL (new; S8.7 landing excluded):200.0"}
+{"crop": [1500, 3700, 3900, 2900], "dpi": 600, "record": "RENDER", "state": "temporary folder, deleted after measuring; never committed", "tool": "pdftoppm"}

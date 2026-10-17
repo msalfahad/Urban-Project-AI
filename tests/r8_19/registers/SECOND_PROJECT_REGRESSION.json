@@ -1,0 +1,11 @@
+{
+ "SCHEMA": "URBAN_R8_19_SECOND_PROJECT_REGRESSION_V1",
+ "state": "NOT_RUN",
+ "candidates": {
+  "P7757": "UNIT_UNRESOLVED (R8.9 / R8.10: no eps_r, so no certified topology and no sites; adopting the candidate mm unit would itself be a calibration)",
+  "Al Rashed": "physical values not computable (R8.5: IMAGE / OLE content, unmapped regions)"
+ },
+ "substitute": "the 29 frozen R8.19 synthetic tests (exposed columns / ducts, reveal physicality, BOQ layer) plus the R8.13-R8.18 families",
+ "next": "R8.20: a second project with a resolved unit and certified topology",
+ "why_not_run": "no second project has a resolved unit AND a certified topology; running one anyway would need an adopted unit (a calibration) or an uncertified topology"
+}

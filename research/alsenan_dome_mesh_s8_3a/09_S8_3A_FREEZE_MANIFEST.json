@@ -1,0 +1,37 @@
+{
+ "baseline": "6ddd988",
+ "code": {
+  "engine/source/curved_member_geometry.py": "8c63aa5f1fa3e52213a3cb329ebb2cd28374bc116e8a8fdc8443eceb2cc599da",
+  "engine/source/delta_release.py": "7b0f72a6f5138b3e0f8515c80a42a38a2cfc035c8fb4c138aa64a4fd5c9708b9",
+  "engine/source/rebar_unit_mass.py": "81d63a85da8e64600d0c49a6662bcc49655f46dc71603654b3e1438c5b146eb8",
+  "engine/source/shell_line_distribution.py": "e81ac138608ae7be993edd2650760bd3d57f89ada96ede9c4a70d434f44e354d",
+  "research/alsenan_dome_mesh_s8_3a/build_s8_3a.py": "b415241c90c8a09e486a8c3a368415c412f4c80a9d8a4998fb1ab1a9c95d7683",
+  "research/external_engine_lab/alsenan_structural_s1.py": "e3ecd25490cd433540e317454ffdbaadf17c19799f49eb1df9afcb928aa494cb"
+ },
+ "corrects": "S8.3 (frozen, unchanged)",
+ "date": "2026-10-09",
+ "drawing_sha256": {
+  "ST7757.dxf": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079"
+ },
+ "engine_commit_stamp": "6ddd988+code:da1deb2a2a6d18e5",
+ "inputs": {
+  "research/alsenan_dome_ring_s8_3/08_REBAR_QTO_REGISTER.csv": "3ad473a7aba7e49aeef5ef974a3683e9677032264ac7d74fddc572ec16371195",
+  "research/alsenan_dome_ring_s8_3/15_S8_3_SUMMARY.json": "de8889b57956c04622cd0575890aa058c0aa35c30a3f59fa873b284fa5646261",
+  "research/alsenan_dome_ring_s8_3/16_S8_3_FREEZE_MANIFEST.json": "92bfe9c0b2b7fea189bb37759f93759ea4a6cf5108738af1390468bda6ee92da"
+ },
+ "outputs": {
+  "00_README.md": "026cf321e4d3fb09f3e976be7c4c3d8829afefb7501aa2932897210121188908",
+  "01_SOURCE_EVIDENCE.csv": "64a564237e8ca221b8638098ac0108829a45517adb59b416a695f594c1808430",
+  "02_SCENARIOS.csv": "a643fb31971c59e519a6abe0160102dfaf506f85165ca10aa7f47f5ccae0b98b",
+  "03_PHYSICAL_LAYOUT_FEASIBILITY.csv": "b60997c53192eefd9ac33cdef2ec91ce53deb49f589707c3cf7154de0dab41cd",
+  "04_STATUS_CHANGES.csv": "23241759b74117c80b3f79adb6e733ad4b460b782c65af3db30dca1a4e836069",
+  "05_BAR_OBJECT_RECONCILIATION.csv": "ed50b06a3284dd1e64d3c3fcff2faf66ecfb1a61b259d3c197565601074ffe15",
+  "06_MISSING_EVIDENCE.csv": "823c2ea8082d84f2267a4d066fbfe6585526b5b230d608b7dc1aa98d5f8d20ac",
+  "07_FROZEN_VERIFICATION.json": "90bcd4f18a11144140a9d90b25ce872cefc641f6cfddbd30e5536a1997667ed0",
+  "08_S8_3A_SUMMARY.json": "3844cdf7eab44a5e2777ee64f2048cc3ec4c69eda7bcab6e1f478a5cee27d7b1"
+ },
+ "references_read": [],
+ "round": "S8_3A",
+ "rule": "a confidence and evidence correction: no frozen quantity changes, no scenario is released",
+ "state": "DATED_CORRECTION_LAYER"
+}

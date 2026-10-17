@@ -1,0 +1,34 @@
+{
+ "baseline_round": "S4",
+ "code": {
+  "engine/source/delta_release.py": "7b0f72a6f5138b3e0f8515c80a42a38a2cfc035c8fb4c138aa64a4fd5c9708b9",
+  "engine/source/graphic_evidence.py": "e2c5050895f6eff32d420805fde8bdb6b87cd4a926560ea24ceebb97bd77b92d",
+  "research/alsenan_footing_rebar_s4_1/build_footing_rebar_s4_1.py": "43aa34695e871763306ffebb9b9135ef4e17feda54be8c5860ad9e4e1267bf6a"
+ },
+ "engine_commit_stamp": "e3633af+code:0d11810b780ae8f8+delta:06346dac56faa12d",
+ "frozen_baseline": {
+  "engine_commit_stamp": "e3633af+code:0d11810b780ae8f8",
+  "files_checked": 25,
+  "manifest": "research/alsenan_footing_rebar_s4/S4_FREEZE_MANIFEST.json",
+  "manifest_sha256": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+  "round": "S4"
+ },
+ "inputs": {
+  "research/alsenan_footing_rebar_s4/S4_FREEZE_MANIFEST.json": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+  "research/source_recovery_delta/02_UNRESOLVED_MASTER_REGISTER.csv": "ef8e27d89bf643363eb4ed3929ed9bfdbc66fb1fac71241a4ee5ed7a131e2407",
+  "research/source_recovery_delta/07_S4_1_CANDIDATES.csv": "89d8af8feb2d0ff3b9f87692e0131c638810934da9ee3555033bc6b565bcd902",
+  "research/source_recovery_delta/13_GRAPHIC_EVIDENCE.json": "2a8a307b3a3084cc537edaccd753b9865b5a33aa80e9137ae1383b0f0380a13b"
+ },
+ "outputs": {
+  "S4_1_CHANGELOG.md": "6b7ca82e792a7e2f881df3854a39937805fb9da5938a6d525da6a3dfe10de129",
+  "S4_1_DELTA_COMPONENTS.csv": "b78aed8688d6b75093734e6e864b288debed2f17153b7db4650f420a421f0738",
+  "S4_1_OWNERSHIP_TRANSFERS.csv": "527dd6755a0513057fbef072ffbe8cf31c8ea97f3bae8567ec9f4e431a8fe461",
+  "S4_1_PROVENANCE.jsonl": "dc01b9dad8466dea64fbc1ea62ec877fdc8bcc569a7280bb54b40ddb2fc87880",
+  "S4_1_RELEASE_SUMMARY.json": "3970bd62fb6c91cbd8fe8b453a9c5c7ab28283f1865d5dcc651ad1ed1b90f825",
+  "S4_1_UNRESOLVED.csv": "bef3aae6b49d19e3b9110f97ddfa44e283f017f31532c40cf2d34ec10df23be0"
+ },
+ "references_read_before_freeze": [],
+ "round": "S4.1",
+ "rule": "S4.1 is a delta over frozen S4; a correction needs a new delta round, never an edit of S4 or of these outputs",
+ "state": "FROZEN_BEFORE_S6_1"
+}

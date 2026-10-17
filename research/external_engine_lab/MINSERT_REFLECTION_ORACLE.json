@@ -1,0 +1,132 @@
+{
+ "SCHEMA": "URBAN_R8_1_MINSERT_REFLECTION_ORACLE_V1",
+ "status": "MINSERT_REFLECTION_ORACLE_CONFLICT",
+ "resolution_by_analysis": "HAND_TRUTH_FAVOURED (native AutoCAD confirmation recommended, not blocking)",
+ "dxf": "MINSERT_REFLECTION_ORACLE.dxf",
+ "ezdxf_version": "1.4.4",
+ "case_A": {
+  "scene": "INSERT HOLDER scale(-1,1) > MINSERT CELL 3x2 spacing col 1000 / row 500",
+  "urban_expected_cell_origins": [
+   [
+    -2000.0,
+    0.0
+   ],
+   [
+    -2000.0,
+    500.0
+   ],
+   [
+    -1000.0,
+    0.0
+   ],
+   [
+    -1000.0,
+    500.0
+   ],
+   [
+    -0.0,
+    0.0
+   ],
+   [
+    -0.0,
+    500.0
+   ]
+  ],
+  "ezdxf_cell_origins": [
+   [
+    -2000.0,
+    -500.0
+   ],
+   [
+    -2000.0,
+    0.0
+   ],
+   [
+    -1000.0,
+    -500.0
+   ],
+   [
+    -1000.0,
+    0.0
+   ],
+   [
+    -0.0,
+    -500.0
+   ],
+   [
+    0.0,
+    0.0
+   ]
+  ],
+  "agree": false,
+  "disagreement": "rows: Urban +500r, ezdxf -500r; columns agree (-1000c)"
+ },
+ "case_B": {
+  "scene": "top-level MINSERT CELL scale(-1,1) at (0,-3000) 3x2 spacing col 1000 / row 500",
+  "urban_expected_cell_origins": [
+   [
+    0.0,
+    -3000.0
+   ],
+   [
+    0.0,
+    -2500.0
+   ],
+   [
+    1000.0,
+    -3000.0
+   ],
+   [
+    1000.0,
+    -2500.0
+   ],
+   [
+    2000.0,
+    -3000.0
+   ],
+   [
+    2000.0,
+    -2500.0
+   ]
+  ],
+  "ezdxf_cell_origins": [
+   [
+    0.0,
+    -3000.0
+   ],
+   [
+    0.0,
+    -2500.0
+   ],
+   [
+    1000.0,
+    -3000.0
+   ],
+   [
+    1000.0,
+    -2500.0
+   ],
+   [
+    2000.0,
+    -3000.0
+   ],
+   [
+    2000.0,
+    -2500.0
+   ]
+  ],
+  "agree": true,
+  "note": "tests the stored-field rule itself: offsets rotated, never scaled"
+ },
+ "ezdxf_mechanism": "Insert.virtual_entities() transforms the nested MINSERT with Insert.transform(m); InsertCoordinateSystem absorbs the X reflection as rotation 180 + yscale -1 and the spacing attributes row_spacing/column_spacing are left untouched. multi_insert() then rotates the unchanged (1000c, 500r) offsets by 180 deg -> (-1000c, -500r). The reflected grid is only representable in a flat INSERT encoding with an extrusion flip or negated spacing, which ezdxf does not do.",
+ "why_hand_truth": "A block reference places its definition by one affine matrix; nothing in the definition is re-encoded. The MINSERT inside HOLDER puts cells at (1000c, 500r) in HOLDER's frame, and the parent matrix diag(-1,1) maps them to (-1000c, 500r). This is what composing matrices (AutoCAD display, K1) gives.",
+ "native_autocad_instructions": [
+  "Open MINSERT_REFLECTION_ORACLE.dxf in AutoCAD (any release >= 2018). Do not save changes.",
+  "ZOOM EXTENTS. Layers: CONTENT (white) = the real geometry; URBAN_EXPECTED (green circles); EZDXF_RESULT (red crosses); NOTES.",
+  "CASE A: check that each white 30-unit tick of the six cells sits inside a GREEN circle (upper row at y=+500) and NOT on a red cross (y=-500).",
+  "Use ID on two tick origins (e.g. column 0 row 1 and column 2 row 1) and record the coordinates.",
+  "CASE B (around y=-3000): check each tick sits inside a green circle at (1000c, -3000+500r); record ID for column 2 row 1.",
+  "Optional: MIRROR a copy of the top-level MINSERT about the Y axis, LIST it, and record the stored column spacing sign, scale and rotation (tells how AutoCAD re-encodes a mirrored MINSERT).",
+  "Report the recorded coordinates; they go into R8.2 as NATIVE_AUTOCAD_OBSERVATION, never into production code."
+ ]
+}

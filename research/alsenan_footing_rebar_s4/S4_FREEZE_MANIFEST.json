@@ -1,0 +1,39 @@
+{
+ "baseline": "e3633af",
+ "code": {
+  "engine/source/accurate_boq_rebar.py": "0f919bed502dab3b232a75f913ec7832dd530d4607e9bfacce6c9592b0bcdacb",
+  "engine/source/footing_rebar.py": "4f9d7fb016e2b67dbd4c32429c8cf2becbc372e55609d16e157e698fec5b9b28",
+  "engine/source/footing_rebar_guard.py": "dfbf59afa7a9bd04c931454e0176a4dd079cb7609ab9adb3b7b5e02ea20e367e",
+  "engine/source/rebar_model.py": "5a67349f8feeffe18096534a16556f1967b66f4e3e4ce50e995c5df57bc5838c",
+  "engine/source/rebar_unit_mass.py": "81d63a85da8e64600d0c49a6662bcc49655f46dc71603654b3e1438c5b146eb8",
+  "engine/source/schedule_grammar.py": "d27fbda11bd7f9c9d16e3ba2bf8c25b4c0b885c7cb2961bdb8eaa4afec909308",
+  "engine/source/slab_rebar_binding.py": "a4571fff0587eae8a3988c7d39c3d4456a76905aaa49eeae250199312f061373",
+  "engine/source/structural_schedule.py": "d9e7890d4c34eeded8764820f7e3939d5ebd79e6f69871068de49b47a74a7569",
+  "research/alsenan_footing_rebar_s4/build_footing_rebar_s4.py": "f67dc22515fdc5daee03dac2cb535d953f3e54b8a56fe79dd4f19d66c6d39d5c"
+ },
+ "engine_commit_stamp": "e3633af+code:0d11810b780ae8f8",
+ "inputs": {
+  "research/alsenan_rebar_source_exhaustion_04/registers/PROJECT_REBAR_RULE_REGISTER.json": "5536777ab000e65bd8bb61fabae04f0a09cfe58e75e9547c65c1b04e8633d6b8",
+  "research/alsenan_structural_census_s1/FOOTING_DEFINITION_REGISTER.json": "197e122719ca1e5d68033720c5e9cba333813d67bc9484b74864b29c845b7ae7",
+  "research/alsenan_structural_census_s1/FOOTING_OCCURRENCE_REGISTER.json": "96341bd2c7bc159f695c3a552e1df3763db6baf693cca9b2bedaf1b031106ea8",
+  "research/pre_s4_footing_readiness/01_FOOTING_TOKEN_PARITY_REGISTER.csv": "b84cc99a99301a642148db1990870a3bfd6d8b9a6522089469064a641a360ceb",
+  "research/pre_s4_footing_readiness/03_BOXED_OCCURRENCES.csv": "f57846ec2b4a296fe4288f101658f7b6471575ae086fef59dae19e44f9114f1a",
+  "research/pre_s4_footing_readiness/INDEX.json": "83b59c568e360be196a0cd934feb7f6c48d135d6fd82d925dc6eda4727af2f59",
+  "research/pre_s4_footing_readiness/PRE_S4_SUMMARY.json": "4e5322700891b40438aa9508e88ea400f74cde230463a4a34399d9acb6afcaca"
+ },
+ "outputs": {
+  "F3_AUTHORITY_DECISION.json": "d348943964c4c85ac953283bda156b9818c52c626bf99c5d91c1d17129c0ef2d",
+  "FOOTING_BBS_NET.csv": "d72848fd4874cf23015be8498494beb17e4ba9980d335b0e0babda2c28ec5463",
+  "FOOTING_REBAR_COMPONENTS.csv": "d646bb1e6c868b9a0c9f9830b435299a99b1d3ecd5b2a5e9c0b8fd7fec9e1148",
+  "FOOTING_REBAR_ENGINEERING_FLAGS.csv": "3d41383db9735fcd297c6e6ce885677585481bd6366118a464d0e37a6f7f4ee3",
+  "FOOTING_REBAR_OCCURRENCES.csv": "2d0f8d8ae85247f4caddc86bb2a6f5ef631106c0d5df2729875983b1e854ba4f",
+  "FOOTING_REBAR_OCCURRENCE_REGISTER.json": "b9654b2d623b7a577414e00dbf8668b45376ed2d9a2713e7d16c13e3ce3cfd6e",
+  "FOOTING_REBAR_PROVENANCE.jsonl": "92110f9b870c1b254272124a9b68cea9bcd18ab7d7496002d86da4cb3b0e52c2",
+  "FOOTING_REBAR_RELEASE_SUMMARY.json": "30493cbe60e70b79527faaca72d81dd235012531243276324f2287099269564f",
+  "FOOTING_REBAR_UNRESOLVED.csv": "303c1d6a3c6f8a15df81b32bb6bda9f435b5b17184e83090395691f78462dd10"
+ },
+ "references_read_before_freeze": [],
+ "round": "S4",
+ "rule": "the post-freeze comparison script refuses to run unless every hash above still matches; a correction found by the comparison needs a new issue, new evidence, a new regression and a new version - never an edit of these outputs",
+ "state": "FROZEN_BEFORE_ANY_REFERENCE_COMPARISON"
+}

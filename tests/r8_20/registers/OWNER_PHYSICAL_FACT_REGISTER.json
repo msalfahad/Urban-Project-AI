@@ -1,0 +1,184 @@
+{
+ "SCHEMA": "URBAN_R8_20_OWNER_PHYSICAL_FACT_REGISTER_V1",
+ "file": "data/registry/OWNER_PHYSICAL_FACTS.json",
+ "new_fact": {
+  "fact_id": "QORTUBA-NEW-I1471-200MM-WALL-COLUMN-CONCEALMENT-OWNER-001",
+  "version": 1,
+  "kind": "PHYSICAL_CONSTRUCTION_RATIONALE",
+  "authority": [
+   "PROJECT_OWNER"
+  ],
+  "received": "R8.20 brief §2-§6 (owner review of the I1471 packet)",
+  "scope": {
+   "project": "QORTUBA",
+   "source_revision_id": "QORTUBA_REV_NEW",
+   "source_anchor_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+   "region_id": "RC:MODEL_SPACE:4267:540:1649",
+   "frame_id": "MF:RC:MODEL_SPACE:4267:540:1649",
+   "plan": "PLAN_VARIANT_4_SELECTED",
+   "opening": "I1471"
+  },
+  "allowed_domains": [],
+  "parts": [
+   {
+    "handle": "519",
+    "key": "QORTUBA_REV_NEW|H519||SEGMENT|0",
+    "source_layer": "WALL",
+    "fingerprint": "a2a31eda63f0533fa5be38749bba0c70601aabbad939a1e085b05b1ecec66ba3",
+    "physical_reading": "LEFT_WALL_200MM_FACE (band WB-d0fa2ebe87cedccd)"
+   },
+   {
+    "handle": "525",
+    "key": "QORTUBA_REV_NEW|H525||SEGMENT|0",
+    "source_layer": "WALL",
+    "fingerprint": "52e7add66f00e7feb6ec6fa80772b649cc67b750e902fba1088c9bd7e04b16d8",
+    "physical_reading": "LEFT_WALL_200MM_FACE (band WB-d0fa2ebe87cedccd)"
+   },
+   {
+    "handle": "1472",
+    "key": "QORTUBA_REV_NEW|H1472||SEGMENT|0",
+    "source_layer": "WALL",
+    "fingerprint": "abe51298c0ee3c33478747bad19771ec86f08ca5f1cbe7139587b259bd0e7a76",
+    "physical_reading": "LEFT_JAMB_CAP_200MM (I1471)"
+   },
+   {
+    "handle": "518",
+    "key": "QORTUBA_REV_NEW|H518||SEGMENT|0",
+    "source_layer": "WALL",
+    "fingerprint": "1e402da9b8051f8a776eaefb801a5e5a0b8cbc4a004ba735cd6a145818b97562",
+    "physical_reading": "RIGHT_WALL_150MM_FACE (band WB-2c6e6cc37179fbc6)"
+   },
+   {
+    "handle": "523",
+    "key": "QORTUBA_REV_NEW|H523||SEGMENT|0",
+    "source_layer": "WALL",
+    "fingerprint": "b50b8980cc8a611071beb0805f313421f97f256ddd53074805891610fbaa7265",
+    "physical_reading": "RIGHT_WALL_150MM_FACE (band WB-2c6e6cc37179fbc6)"
+   },
+   {
+    "handle": "1473",
+    "key": "QORTUBA_REV_NEW|H1473||SEGMENT|0",
+    "source_layer": "WALL",
+    "fingerprint": "f33a0318597abc4ee4d5d7c7a8b9ff158d462d165332a004b070b2d25ec77672",
+    "physical_reading": "RIGHT_JAMB_CAP_150MM (I1471)"
+   },
+   {
+    "handle": "716",
+    "key": "QORTUBA_REV_NEW|H716||SEGMENT|0",
+    "source_layer": "COL",
+    "fingerprint": "7b10d8e889e7699ab8e2e5b55cb162187b22645315ab6fd4feae2ad863fb4689",
+    "physical_reading": "STRUCTURAL_COLUMN_CONCEALED_BY_THE_200MM_WALL (H716)"
+   },
+   {
+    "handle": "716",
+    "key": "QORTUBA_REV_NEW|H716||SEGMENT|1",
+    "source_layer": "COL",
+    "fingerprint": "7ff18a70c094d5f45220cf414b5c9d23df57efe1e41238aee7fcaad95f57b76e",
+    "physical_reading": "STRUCTURAL_COLUMN_CONCEALED_BY_THE_200MM_WALL (H716)"
+   },
+   {
+    "handle": "716",
+    "key": "QORTUBA_REV_NEW|H716||SEGMENT|2",
+    "source_layer": "COL",
+    "fingerprint": "32569b1dae4778943b2e158ebce8d65d820e31fba1e47d6a431a0e87fcd1e322",
+    "physical_reading": "STRUCTURAL_COLUMN_CONCEALED_BY_THE_200MM_WALL (H716)"
+   },
+   {
+    "handle": "716",
+    "key": "QORTUBA_REV_NEW|H716||SEGMENT|3",
+    "source_layer": "COL",
+    "fingerprint": "657babc9d5dc1269aa7813a893bac2cafabe30ccd902a3cdb936462d0a7d4a1d",
+    "physical_reading": "STRUCTURAL_COLUMN_CONCEALED_BY_THE_200MM_WALL (H716)"
+   }
+  ],
+  "statement": {
+   "text": "the LEFT wall at I1471 is intentionally ~200 mm thick: it is thickened / aligned to conceal the structural column; the other wall is ~150 mm; the 50 mm stagger is intentional construction geometry",
+   "is_not": [
+    "a drafting error",
+    "a snap error",
+    "a finish offset",
+    "a dimension error",
+    "a wall-band reconstruction error"
+   ],
+   "geometry_change": "NONE - the deterministic geometry stays exactly what the admitted source proves (200 / 150 mm, 50 mm stagger)",
+   "role": "CORROBORATING RATIONALE (why the geometry exists); authorises no topology, geometry, quantity or trade change"
+  },
+  "transfer_forbidden": [
+   "another door",
+   "another wall",
+   "another floor or plan",
+   "another revision",
+   "another project",
+   "an Urban wall rule ('walls beside columns are 200 mm')"
+  ],
+  "relations": []
+ },
+ "binding": {
+  "fact": "QORTUBA-NEW-I1471-200MM-WALL-COLUMN-CONCEALMENT-OWNER-001@v1",
+  "parts": [
+   {
+    "key": "QORTUBA_REV_NEW|H519||SEGMENT|0",
+    "state": "APPLIES",
+    "physical_reading": "LEFT_WALL_200MM_FACE (band WB-d0fa2ebe87cedccd)"
+   },
+   {
+    "key": "QORTUBA_REV_NEW|H525||SEGMENT|0",
+    "state": "APPLIES",
+    "physical_reading": "LEFT_WALL_200MM_FACE (band WB-d0fa2ebe87cedccd)"
+   },
+   {
+    "key": "QORTUBA_REV_NEW|H1472||SEGMENT|0",
+    "state": "APPLIES",
+    "physical_reading": "LEFT_JAMB_CAP_200MM (I1471)"
+   },
+   {
+    "key": "QORTUBA_REV_NEW|H518||SEGMENT|0",
+    "state": "APPLIES",
+    "physical_reading": "RIGHT_WALL_150MM_FACE (band WB-2c6e6cc37179fbc6)"
+   },
+   {
+    "key": "QORTUBA_REV_NEW|H523||SEGMENT|0",
+    "state": "APPLIES",
+    "physical_reading": "RIGHT_WALL_150MM_FACE (band WB-2c6e6cc37179fbc6)"
+   },
+   {
+    "key": "QORTUBA_REV_NEW|H1473||SEGMENT|0",
+    "state": "APPLIES",
+    "physical_reading": "RIGHT_JAMB_CAP_150MM (I1471)"
+   },
+   {
+    "key": "QORTUBA_REV_NEW|H716||SEGMENT|0",
+    "state": "APPLIES",
+    "physical_reading": "STRUCTURAL_COLUMN_CONCEALED_BY_THE_200MM_WALL (H716)"
+   },
+   {
+    "key": "QORTUBA_REV_NEW|H716||SEGMENT|1",
+    "state": "APPLIES",
+    "physical_reading": "STRUCTURAL_COLUMN_CONCEALED_BY_THE_200MM_WALL (H716)"
+   },
+   {
+    "key": "QORTUBA_REV_NEW|H716||SEGMENT|2",
+    "state": "APPLIES",
+    "physical_reading": "STRUCTURAL_COLUMN_CONCEALED_BY_THE_200MM_WALL (H716)"
+   },
+   {
+    "key": "QORTUBA_REV_NEW|H716||SEGMENT|3",
+    "state": "APPLIES",
+    "physical_reading": "STRUCTURAL_COLUMN_CONCEALED_BY_THE_200MM_WALL (H716)"
+   }
+  ],
+  "binding": "APPLIES"
+ },
+ "allowed_domains": [],
+ "role": "CORROBORATING RATIONALE: explains WHY the admitted geometry exists; authorises no topology, geometry, quantity or trade change",
+ "physical_fact_policy": "OWNER_PHYSICAL_FACT_POLICY_V2 (unchanged; no new domain)",
+ "transfer_forbidden": [
+  "another door",
+  "another wall",
+  "another floor or plan",
+  "another revision",
+  "another project",
+  "an Urban wall rule ('walls beside columns are 200 mm')"
+ ],
+ "urban_rule_created": false
+}

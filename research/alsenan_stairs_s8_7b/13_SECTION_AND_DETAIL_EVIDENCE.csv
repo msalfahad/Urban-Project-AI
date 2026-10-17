@@ -1,0 +1,48 @@
+RECORD,ITEM,PIXEL_X,VALUE,UNIT,STATUS,EVIDENCE
+SECTION_A_A_CALIBRATION,extension line 0 (bottom chain),1781,0,m,PRINTED_ON_DRAWING,x = 1780.994 + 236.2375 px/m x level; residual 0.01 px
+SECTION_A_A_CALIBRATION,extension line 9.7 (bottom chain),4072.5,9.7,m,PRINTED_ON_DRAWING,x = 1780.994 + 236.2375 px/m x level; residual 0 px
+SECTION_A_A_CALIBRATION,extension line 13.9 (bottom chain),5064.5,13.8992,m,PRINTED_ON_DRAWING,x = 1780.994 + 236.2375 px/m x level; residual -0.19 px
+SECTION_A_A_CALIBRATION,extension line 14.4 (bottom chain),5183,14.4008,m,PRINTED_ON_DRAWING,x = 1780.994 + 236.2375 px/m x level; residual 0.19 px
+SECTION_A_A_CALIBRATION,extension line +1 (top chain),2019.5,1.0096,m,PRINTED_ON_DRAWING,check against the calibration (within 15 mm)
+SECTION_A_A_CALIBRATION,extension line +5.5 (top chain),3082.5,5.5093,m,PRINTED_ON_DRAWING,check against the calibration (within 15 mm)
+SECTION_A_A_CALIBRATION,extension line +9.7 (top chain),4074.5,9.7085,m,PRINTED_ON_DRAWING,check against the calibration (within 15 mm)
+SECTION_A_A_LEVEL,+0.30 lobby floor (level line),1853,0.3048,m,PRINTED_ON_DRAWING,"'+0.30' level symbol on this line; slab-top line 0.256 m (49 mm below the level line, line centres: the drawn finish, not a dimension)"
+SECTION_A_A_LEVEL,GF -> 1F half-landing (level line),2609,3.505,m,PRINTED_ON_DRAWING,"dimension '320' from the +0.30 lobby floor to this line = +3.50; slab-top line 3.454 m (51 mm below the level line, line centres: the drawn finish, not a dimension)"
+SECTION_A_A_LEVEL,1F -> 2F half-landing (level line),3597,7.6872,m,SCALED_FROM_SECTION_1_100 (indicative),"no level or dimension printed; slab-top line 7.636 m (51 mm below the level line, line centres: the drawn finish, not a dimension)"
+SECTION_A_A_FLIGHT,"A1 upper flight (cut, structural tread lines)",,12,risers,DRAWN_COUNT (measured),11 of 11 intermediate grid positions carry a drawn line (13 line groups on the grid); pitch 39.38 px = 166.7 mm; from 3.505 to 5.5 m: 166.25 mm per riser
+SECTION_A_A_FLIGHT,"A1 lower flight + turn (seen; finish lines, some hidden by rails)",,15,risers,DRAWN_COUNT (measured),13 of 14 intermediate grid positions carry a drawn line (13 line groups on the grid); pitch 39.3 px = 166.4 mm; from 1 to 3.505 m: 167 mm per riser
+SECTION_A_A_FLIGHT,"A2 upper flight (cut, structural tread lines)",,12,risers,DRAWN_COUNT (measured),11 of 11 intermediate grid positions carry a drawn line (12 line groups on the grid); pitch 39.67 px = 167.9 mm; from 7.687 to 9.7 m: 167.73 mm per riser
+SECTION_A_A_FLIGHT,"A2 lower flight + turn (seen; finish lines, some hidden by rails)",,13,risers,DRAWN_COUNT (measured),11 of 12 intermediate grid positions carry a drawn line (11 line groups on the grid); pitch 39.58 px = 167.5 mm; from 5.5 to 7.687 m: 168.25 mm per riser
+SECTION_A_A_FINISH,finish line above the structural tread lines (cut flights),,50.8,mm,ILLUSTRATIVE_NOT_PROJECT_FACT,"median of 17 tread pairs, line centre to line centre; at 1:100 the lines are 20 - 45 mm wide, so this is an indication that a finish is drawn, not a thickness"
+PLAN_LEVEL_TEXT,ARCH-1F '+5.50' (1251),,+5.50,m,PRINTED_ON_DRAWING,"registered at (32381, 15948.8); 5281 mm from the light well"
+PLAN_LEVEL_TEXT,ARCH-1F '+5.50' (D16),,+5.50,m,PRINTED_ON_DRAWING,"registered at (27975, 12150.8); inside the light well"
+PLAN_LEVEL_TEXT,ARCH-1F '+5.50' (D18),,+5.50,m,PRINTED_ON_DRAWING,"registered at (18531.2, 15260.7); 1051 mm from the main bay east column"
+PLAN_LEVEL_TEXT,ARCH-1F '+5.50' (D1B),,+5.50,m,PRINTED_ON_DRAWING,"registered at (22388.1, 8002.7); 1057 mm from the light well"
+PLAN_LEVEL_TEXT,ARCH-1F '+5.50' (D1D),,+5.50,m,PRINTED_ON_DRAWING,"registered at (32381, 13017.1); 4381 mm from the light well"
+PLAN_LEVEL_TEXT,ARCH-1F '+4.30' (D20),,+4.30,m,PRINTED_ON_DRAWING,"registered at (7869.6, 9842.8); 11262 mm from the main bay west column"
+PLAN_LEVEL_TEXT,ARCH-2F '+9.70' (134E),,+9.70,m,PRINTED_ON_DRAWING,"registered at (18519.9, 15157.1); 1155 mm from the main bay east column"
+PLAN_LEVEL_TEXT,ARCH-2F '+9.70' (1350),,+9.70,m,PRINTED_ON_DRAWING,"registered at (29225.1, 17929); 5079 mm from the light well"
+PLAN_LEVEL_TEXT,ARCH-2F '+9.70' (1352),,+9.70,m,PRINTED_ON_DRAWING,"registered at (20021.2, 10900.5); 851 mm from the light well"
+PLAN_LEVEL_TEXT,ARCH-GF '+0.15' (394),,+0.15,m,PRINTED_ON_DRAWING,"registered at (4306.3, 15139); 12835 mm from the main bay west column"
+PLAN_LEVEL_TEXT,ARCH-GF '+0.30' (401),,+0.30,m,PRINTED_ON_DRAWING,"registered at (3448, 12834.1); 14076 mm from the main bay west column"
+PLAN_LEVEL_TEXT,ARCH-GF '+0.30' (403),,+0.30,m,PRINTED_ON_DRAWING,"registered at (8544.7, 11207.5); 9952 mm from the main bay west column"
+PLAN_LEVEL_TEXT,ARCH-GF '+0.30' (405),,+0.30,m,PRINTED_ON_DRAWING,"registered at (11897.5, 8071.3); 9435 mm from the light well"
+PLAN_LEVEL_TEXT,ARCH-GF '+0.15' (407),,+0.15,m,PRINTED_ON_DRAWING,"registered at (13078.6, 8587.7); 8154 mm from the light well"
+PLAN_LEVEL_TEXT,ARCH-GF '+0.15' (409),,+0.15,m,PRINTED_ON_DRAWING,"registered at (13225.2, 14005.3); 4499 mm from the main bay west column"
+PLAN_LEVEL_TEXT,ARCH-GF '+0.15' (40B),,+0.15,m,PRINTED_ON_DRAWING,"registered at (29551.8, 21547.6); 8536 mm from the light well"
+PLAN_LEVEL_TEXT,ARCH-GF '+0.15' (40D),,+0.15,m,PRINTED_ON_DRAWING,"registered at (31916.5, 15964.4); 4912 mm from the light well"
+PLAN_LEVEL_TEXT,ARCH-GF '+1.00' (40F),,+1.00,m,PRINTED_ON_DRAWING,"registered at (19682.8, 14175.4); 1777 mm from the light well"
+PLAN_LEVEL_TEXT,ARCH-GF '+1.00' (411),,+1.00,m,PRINTED_ON_DRAWING,"registered at (15427.2, 10955.4); 5384 mm from the light well"
+PLAN_LEVEL_TEXT,ARCH-GF '+1.00' (413),,+1.00,m,PRINTED_ON_DRAWING,"registered at (18836.7, 16940.9); inside the main bay east column"
+PLAN_LEVEL_TEXT,ARCH-GF '+0.30' (4AC),,+0.30,m,PRINTED_ON_DRAWING,"registered at (18550.6, 20011.8); inside the main bay NE quarter (under the turn landing)"
+PLAN_LEVEL_TEXT,ARCH-GF '+0.15' (4AE),,+0.15,m,PRINTED_ON_DRAWING,"registered at (14837.5, 18864.8); 2250 mm from the main bay west column"
+PLAN_LEVEL_TEXT,ARCH-GF '+1.00' (A74),,+1.00,m,PRINTED_ON_DRAWING,"registered at (30547.5, 9537); 2547 mm from the light well"
+P16_VISUAL_RECORD,P16-01 TYPICAL STEEL LAYOUT-STAIR SECTION (N.I.S.): waist,,'THICK' with a dimension leader across the waist of both flights; no value,,TYPICAL_ONLY (N.I.S.),"ST7757.pdf p.16 (no vector text), rendered 100 / 300 dpi this round; renders not kept"
+P16_VISUAL_RECORD,P16-02 TYPICAL STEEL LAYOUT-STAIR SECTION (N.I.S.): goings,,'30' on the treads,,TYPICAL_ONLY (N.I.S.),"ST7757.pdf p.16 (no vector text), rendered 100 / 300 dpi this round; renders not kept"
+P16_VISUAL_RECORD,P16-03 TYPICAL STEEL LAYOUT-STAIR SECTION (N.I.S.): generic levels,,"landing S.S.L +2.00 on a 0.00 -> 4.00 storey: a schematic half-landing, not a project level",,TYPICAL_ONLY (N.I.S.),"ST7757.pdf p.16 (no vector text), rendered 100 / 300 dpi this round; renders not kept"
+P16_VISUAL_RECORD,P16-04 TYPICAL STEEL LAYOUT-STAIR SECTION (N.I.S.): head,,'+4.00' at the top of the last concrete step; '+3.95 S.S.L' on the slab beyond the head beam (50 mm; meaning not stated),,TYPICAL_ONLY (N.I.S.),"ST7757.pdf p.16 (no vector text), rendered 100 / 300 dpi this round; renders not kept"
+P16_VISUAL_RECORD,P16-05 TYPICAL STEEL LAYOUT-STAIR SECTION (N.I.S.): foot,,'+0.00 T.O.B' on the ground beam G.B and '-0.05 S.S.L' on the slab beside it (50 mm; meaning not stated),,TYPICAL_ONLY (N.I.S.),"ST7757.pdf p.16 (no vector text), rendered 100 / 300 dpi this round; renders not kept"
+P16_VISUAL_RECORD,P16-06 TYPICAL STEEL LAYOUT-STAIR SECTION (N.I.S.): bars,,8Ø16/m bottom along the waist and the landing; 6Ø14/m top at the junctions and the head; 6Ø12/m landing top; Ø12/20cm distribution; Ø8/15 step bars; 1Ø12 nosing bar; 6Ø16/m starter into the G.B,,TYPICAL_ONLY (N.I.S.),"ST7757.pdf p.16 (no vector text), rendered 100 / 300 dpi this round; renders not kept"
+P16_VISUAL_RECORD,P16-07 TYPICAL STEEL LAYOUT-STAIR SECTION (N.I.S.): landing edge beam,,"20 x 40: 2Ø12 top, 4Ø16 bottom",,TYPICAL_ONLY (N.I.S.),"ST7757.pdf p.16 (no vector text), rendered 100 / 300 dpi this round; renders not kept"
+P16_VISUAL_RECORD,P16-08 TYPICAL STEEL LAYOUT-STAIR SECTION (N.I.S.): ground beam G.B,,"30 wide (depth not dimensioned) on a 50 x 10 blinding: 3Ø14 top, 4Ø16 bottom, 2Ø14/30cm sides, Ø8/15cm stirrups",,TYPICAL_ONLY (N.I.S.),"ST7757.pdf p.16 (no vector text), rendered 100 / 300 dpi this round; renders not kept"
+P16_VISUAL_RECORD,P16-09 TYPICAL DETAIL OF STAIR BEAM: cranked beam,,"column to column, cranked to follow the stair: 2Ø12 top, 4Ø16 bottom, 6Ø8/m stirrups, depth 'AS PER SCH.' on both the inclined and the level part",,TYPICAL_ONLY (N.I.S.),"ST7757.pdf p.16 (no vector text), rendered 100 / 300 dpi this round; renders not kept"

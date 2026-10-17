@@ -1,0 +1,66 @@
+{
+ "SCHEMA": "URBAN_FINAL_OWNER_QUESTION_REGISTER_V3",
+ "rows": [
+  {
+   "group": "STRUCTURE",
+   "id": "Q-S1",
+   "question": "Exterior ground beams are 'follow arch.': confirm the depth from outer ground to the GF slab level (main house +1.00, annex +0.30)."
+  },
+  {
+   "group": "STRUCTURE",
+   "id": "Q-S2",
+   "question": "Founding level (bottom of footings) - needed for column necks and starter bars."
+  },
+  {
+   "group": "STRUCTURE",
+   "id": "Q-S3",
+   "question": "Stair waist thickness and riser height (or the number of risers per flight)."
+  },
+  {
+   "group": "STRUCTURE",
+   "id": "Q-S4",
+   "question": "Swimming pool depths (shallow / deep) - the detail says 'as per arch.'."
+  },
+  {
+   "group": "STRUCTURE",
+   "id": "Q-S5",
+   "question": "Is the p.7 dome built? Where, and how many?"
+  },
+  {
+   "group": "STRUCTURE",
+   "id": "Q-S6",
+   "question": "F / F10 footing conflict (OQ3-S1, still open)."
+  },
+  {
+   "group": "STRUCTURE",
+   "id": "Q-S7",
+   "question": "Bar bending: adopt a standard for hooks / bends / stirrup closing, or supply the bending schedule."
+  },
+  {
+   "group": "ARCHITECTURE",
+   "id": "Q-A1",
+   "question": "Confirm the 1.8 x 1.8 m repeated space on all storeys is the lift shaft."
+  },
+  {
+   "group": "ARCHITECTURE",
+   "id": "Q-A2",
+   "question": "GF entrance / open zone: is the hall-dining-reception zone one open space (no screen)?"
+  },
+  {
+   "group": "OPENINGS",
+   "id": "Q-O1",
+   "question": "Door and window head heights (and sills), or a door / window schedule."
+  },
+  {
+   "group": "FINISHES",
+   "id": "Q-F1",
+   "question": "Extras: measure corner beads / spatter dash on all plastered walls? Cornice in which rooms?"
+  },
+  {
+   "group": "FINISHES",
+   "id": "Q-F2",
+   "question": "Ceiling material per room (gypsum board / plaster / decor) - no reflected ceiling plan."
+  }
+ ],
+ "rule": "batched once, after the source was exhausted (OD-V3-9); F / F10 stays blocked until answered"
+}

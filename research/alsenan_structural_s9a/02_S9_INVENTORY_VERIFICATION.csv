@@ -1,0 +1,8 @@
+CHECK_ID,CHECK,RESULT,DETAIL
+V01,"560 inventory records, one per component id",PASS,"560 concrete rows, 560 inventory rows"
+V02,"every record holds exactly one lane, and the lanes are mutually exclusive",PASS,"{""BLOCKED_UNQUANTIFIED"": 125, ""CONDITIONAL_NOT_RELEASED"": 234, ""EXCLUDED_OWNED_BY_OTHER_FAMILY"": 26, ""INDICATIVE_ONLY_NOT_RELEASED"": 4, ""NOT_APPLICABLE"": 14, ""NOT_IN_SOURCE"": 6, ""RELEASED_FROZEN_STAGE"": 16, ""RELEASED_S9_DELTA"": 110, ""SOURCE_CONFLICT"": 25}"
+V03,"110 S9 concrete deltas, each on one released S9 component, equal in value",PASS,"110 deltas, sum 145.866160 m3"
+V04,the deltas sum to the published S9 delta release,PASS,145.86616 m3
+V05,"S9-C01 = the S3.1 tie paths and hook allowances, 288 parts, 1,217.128 kg",PASS,1217.128 kg
+V06,"the 98.994 m3 conditional point sits only on unreleased rows, never in a released total",PASS,98.994217 m3 conditional over 230 rows; released 158.070256 m3
+V07,unreleased rows carry no released quantity and no authoritative kg,PASS,

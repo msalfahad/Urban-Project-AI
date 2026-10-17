@@ -1,0 +1,708 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_ROOM_SPACES_V2",
+ "rows": [
+  {
+   "room": "GF-R01",
+   "floor": "GF",
+   "class": "UNNAMED_ROOM",
+   "room_class": "SHAFT",
+   "upstream_status": "COMPUTED_REVIEW",
+   "semantic_state": "UNLABELLED",
+   "ts01_state": "UNLABELLED",
+   "semantic_zones": [],
+   "zone_classes": [
+    "SHAFT"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "UNKNOWN"
+  },
+  {
+   "room": "GF-R02",
+   "floor": "GF",
+   "class": "ROOM",
+   "room_class": "WET",
+   "upstream_status": "COMPUTED_REVIEW",
+   "semantic_state": "SINGLE",
+   "ts01_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    {
+     "label_values": [
+      "MOSLy",
+      "Wash"
+     ],
+     "state": "ESTABLISHED"
+    }
+   ],
+   "zone_classes": [
+    "WET"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": ""
+  },
+  {
+   "room": "GF-R03",
+   "floor": "GF",
+   "class": "ROOM",
+   "room_class": "WET",
+   "upstream_status": "COMPUTED_REVIEW",
+   "semantic_state": "SINGLE",
+   "ts01_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    {
+     "label_values": [
+      "M—HAe",
+      "W.C"
+     ],
+     "state": "ESTABLISHED"
+    }
+   ],
+   "zone_classes": [
+    "WET"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "W.C"
+  },
+  {
+   "room": "GF-Z04",
+   "floor": "GF",
+   "class": "OPEN_PLAN_ZONE",
+   "room_class": "MIXED_SEMANTIC_ZONE",
+   "upstream_status": "COMPUTED_REVIEW",
+   "semantic_state": "MULTI_UNRESOLVED",
+   "ts01_state": "ONE_PHYSICAL_SPACE_MULTIPLE_SEMANTIC_ZONES_UNRESOLVED",
+   "semantic_zones": [
+    {
+     "label_values": [
+      "PANTRY",
+      "VHEZ—"
+     ],
+     "state": "UNRESOLVED"
+    },
+    {
+     "label_values": [
+      "RaL‘n",
+      "SALOON"
+     ],
+     "state": "UNRESOLVED"
+    },
+    {
+     "label_values": [
+      "ASVQBaL",
+      "RECEPTION"
+     ],
+     "state": "UNRESOLVED"
+    },
+    {
+     "label_values": [
+      "DINING",
+      "“Ia²"
+     ],
+     "state": "UNRESOLVED"
+    },
+    {
+     "label_values": [
+      "MOSLy",
+      "Wash"
+     ],
+     "state": "UNRESOLVED"
+    },
+    {
+     "label_values": [
+      "GARDEN",
+      "H™ZQy"
+     ],
+     "state": "UNRESOLVED"
+    }
+   ],
+   "zone_classes": [
+    "DRY",
+    "EXTERNAL",
+    "SERVICE",
+    "WET"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "PANTRY / SALOON / RECEPTION / Wash / DINING / GARDEN"
+  },
+  {
+   "room": "GF-R05",
+   "floor": "GF",
+   "class": "UNNAMED_ROOM",
+   "room_class": "WET",
+   "upstream_status": "COMPUTED_REVIEW",
+   "semantic_state": "CANDIDATE_LABEL",
+   "ts01_state": "UNLABELLED",
+   "semantic_zones": [],
+   "zone_classes": [
+    "WET"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "BATH"
+  },
+  {
+   "room": "GF-Z06",
+   "floor": "GF",
+   "class": "OPEN_PLAN_ZONE",
+   "room_class": "MIXED_SEMANTIC_ZONE",
+   "upstream_status": "COMPUTED_REVIEW",
+   "semantic_state": "MULTI_UNRESOLVED",
+   "ts01_state": "ONE_PHYSICAL_SPACE_MULTIPLE_SEMANTIC_ZONES_UNRESOLVED",
+   "semantic_zones": [
+    {
+     "label_values": [
+      "DEWANEYA",
+      "™Z‘aNZy"
+     ],
+     "state": "UNRESOLVED"
+    },
+    {
+     "label_values": [
+      "MOSLy",
+      "Wash"
+     ],
+     "state": "UNRESOLVED"
+    }
+   ],
+   "zone_classes": [
+    "DRY",
+    "WET"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "DEWANEYA / Wash"
+  },
+  {
+   "room": "GF-R07",
+   "floor": "GF",
+   "class": "ROOM",
+   "room_class": "SERVICE",
+   "upstream_status": "COMPUTED",
+   "semantic_state": "SINGLE",
+   "ts01_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    {
+     "label_values": [
+      "KITCHEN",
+      "M“B¢"
+     ],
+     "state": "ESTABLISHED"
+    }
+   ],
+   "zone_classes": [
+    "SERVICE"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "KITCHEN"
+  },
+  {
+   "room": "GF-T08",
+   "floor": "GF",
+   "class": "OPENING_STRIP",
+   "room_class": "UNKNOWN",
+   "upstream_status": "COMPUTED",
+   "semantic_state": "UNLABELLED",
+   "ts01_state": null,
+   "semantic_zones": [],
+   "zone_classes": [
+    "UNKNOWN"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "UNKNOWN"
+  },
+  {
+   "room": "GF-R09",
+   "floor": "GF",
+   "class": "ROOM",
+   "room_class": "WET",
+   "upstream_status": "COMPUTED",
+   "semantic_state": "SINGLE",
+   "ts01_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    {
+     "label_values": [
+      "M—HAe",
+      "W.C"
+     ],
+     "state": "ESTABLISHED"
+    }
+   ],
+   "zone_classes": [
+    "WET"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "W.C"
+  },
+  {
+   "room": "GF-R10",
+   "floor": "GF",
+   "class": "ROOM",
+   "room_class": "WET",
+   "upstream_status": "COMPUTED",
+   "semantic_state": "SINGLE",
+   "ts01_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    {
+     "label_values": [
+      "M—HAe",
+      "W.C"
+     ],
+     "state": "ESTABLISHED"
+    }
+   ],
+   "zone_classes": [
+    "WET"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "W.C"
+  },
+  {
+   "room": "GF-T11",
+   "floor": "GF",
+   "class": "OPENING_STRIP",
+   "room_class": "UNKNOWN",
+   "upstream_status": "COMPUTED_REVIEW",
+   "semantic_state": "UNLABELLED",
+   "ts01_state": null,
+   "semantic_zones": [],
+   "zone_classes": [
+    "UNKNOWN"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "UNKNOWN"
+  },
+  {
+   "room": "GF-R12",
+   "floor": "GF",
+   "class": "UNNAMED_ROOM",
+   "room_class": "UNKNOWN",
+   "upstream_status": "COMPUTED_REVIEW",
+   "semantic_state": "UNLABELLED",
+   "ts01_state": "UNLABELLED",
+   "semantic_zones": [],
+   "zone_classes": [
+    "UNKNOWN"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "UNKNOWN"
+  },
+  {
+   "room": "GF-R13",
+   "floor": "GF",
+   "class": "ROOM",
+   "room_class": "WET",
+   "upstream_status": "COMPUTED",
+   "semantic_state": "SINGLE",
+   "ts01_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    {
+     "label_values": [
+      "M—HAe",
+      "W.C"
+     ],
+     "state": "ESTABLISHED"
+    }
+   ],
+   "zone_classes": [
+    "WET"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "W.C"
+  },
+  {
+   "room": "GF-R14",
+   "floor": "GF",
+   "class": "ROOM",
+   "room_class": "DRY",
+   "upstream_status": "COMPUTED_REVIEW",
+   "semantic_state": "SINGLE",
+   "ts01_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    {
+     "label_values": [
+      "MASTER BED ROOM",
+      "O—FtN‘²—XZS‚Zt"
+     ],
+     "state": "ESTABLISHED"
+    }
+   ],
+   "zone_classes": [
+    "DRY"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "MASTER BED ROOM"
+  },
+  {
+   "room": "GF-R15",
+   "floor": "GF",
+   "class": "ROOM",
+   "room_class": "WET",
+   "upstream_status": "COMPUTED",
+   "semantic_state": "SINGLE",
+   "ts01_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    {
+     "label_values": [
+      "M—HAe",
+      "W.C"
+     ],
+     "state": "ESTABLISHED"
+    }
+   ],
+   "zone_classes": [
+    "WET"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "W.C"
+  },
+  {
+   "room": "1F-R01",
+   "floor": "1F",
+   "class": "ROOM",
+   "room_class": "WET",
+   "upstream_status": "COMPUTED",
+   "semantic_state": "SINGLE",
+   "ts01_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    {
+     "label_values": [
+      "BATH",
+      "HMam"
+     ],
+     "state": "ESTABLISHED"
+    }
+   ],
+   "zone_classes": [
+    "WET"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "BATH"
+  },
+  {
+   "room": "1F-R02",
+   "floor": "1F",
+   "class": "UNNAMED_ROOM",
+   "room_class": "SHAFT",
+   "upstream_status": "COMPUTED_REVIEW",
+   "semantic_state": "UNLABELLED",
+   "ts01_state": "UNLABELLED",
+   "semantic_zones": [],
+   "zone_classes": [
+    "SHAFT"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "UNKNOWN"
+  },
+  {
+   "room": "1F-R03",
+   "floor": "1F",
+   "class": "ROOM",
+   "room_class": "DRY",
+   "upstream_status": "COMPUTED_REVIEW",
+   "semantic_state": "SINGLE",
+   "ts01_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    {
+     "label_values": [
+      "MASTER BED ROOM",
+      "O—FtN‘²—XZS‚Zt"
+     ],
+     "state": "ESTABLISHED"
+    }
+   ],
+   "zone_classes": [
+    "DRY"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "MASTER BED ROOM"
+  },
+  {
+   "room": "1F-R04",
+   "floor": "1F",
+   "class": "ROOM",
+   "room_class": "WET",
+   "upstream_status": "COMPUTED",
+   "semantic_state": "SINGLE",
+   "ts01_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    {
+     "label_values": [
+      "BATH",
+      "HMam"
+     ],
+     "state": "ESTABLISHED"
+    }
+   ],
+   "zone_classes": [
+    "WET"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "BATH"
+  },
+  {
+   "room": "1F-R05",
+   "floor": "1F",
+   "class": "ROOM",
+   "room_class": "DRY",
+   "upstream_status": "COMPUTED",
+   "semantic_state": "SINGLE",
+   "ts01_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    {
+     "label_values": [
+      "MASTER BED ROOM",
+      "O—FtN‘²—XZS‚Zt"
+     ],
+     "state": "ESTABLISHED"
+    }
+   ],
+   "zone_classes": [
+    "DRY"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "MASTER BED ROOM"
+  },
+  {
+   "room": "1F-Z06",
+   "floor": "1F",
+   "class": "OPEN_PLAN_ZONE",
+   "room_class": "MIXED_SEMANTIC_ZONE",
+   "upstream_status": "COMPUTED_REVIEW",
+   "semantic_state": "MULTI_UNRESOLVED",
+   "ts01_state": "ONE_PHYSICAL_SPACE_MULTIPLE_SEMANTIC_ZONES_UNRESOLVED",
+   "semantic_zones": [
+    {
+     "label_values": [
+      "MN‘—",
+      "VOID"
+     ],
+     "state": "UNRESOLVED"
+    },
+    {
+     "label_values": [
+      "LIVING AREA",
+      "MPZDy"
+     ],
+     "state": "UNRESOLVED"
+    }
+   ],
+   "zone_classes": [
+    "DRY",
+    "VOID"
+   ],
+   "void_split_resolved": true,
+   "geometry": "HIGH",
+   "name_en": "VOID / LIVING AREA"
+  },
+  {
+   "room": "1F-R07",
+   "floor": "1F",
+   "class": "ROOM",
+   "room_class": "SERVICE",
+   "upstream_status": "COMPUTED",
+   "semantic_state": "SINGLE",
+   "ts01_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    {
+     "label_values": [
+      "LAUNDRY",
+      "OSZl"
+     ],
+     "state": "ESTABLISHED"
+    }
+   ],
+   "zone_classes": [
+    "SERVICE"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "LAUNDRY"
+  },
+  {
+   "room": "1F-R08",
+   "floor": "1F",
+   "class": "UNNAMED_ROOM",
+   "room_class": "UNKNOWN",
+   "upstream_status": "COMPUTED_REVIEW",
+   "semantic_state": "UNLABELLED",
+   "ts01_state": "UNLABELLED",
+   "semantic_zones": [],
+   "zone_classes": [
+    "UNKNOWN"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "UNKNOWN"
+  },
+  {
+   "room": "1F-R09",
+   "floor": "1F",
+   "class": "ROOM",
+   "room_class": "DRY",
+   "upstream_status": "COMPUTED",
+   "semantic_state": "SINGLE",
+   "ts01_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    {
+     "label_values": [
+      "MASTER BED ROOM",
+      "O—FtN‘²—XZS‚Zt"
+     ],
+     "state": "ESTABLISHED"
+    }
+   ],
+   "zone_classes": [
+    "DRY"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "MASTER BED ROOM"
+  },
+  {
+   "room": "1F-R10",
+   "floor": "1F",
+   "class": "ROOM",
+   "room_class": "WET",
+   "upstream_status": "COMPUTED",
+   "semantic_state": "SINGLE",
+   "ts01_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    {
+     "label_values": [
+      "BATH",
+      "HMam"
+     ],
+     "state": "ESTABLISHED"
+    }
+   ],
+   "zone_classes": [
+    "WET"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "BATH"
+  },
+  {
+   "room": "1F-R11",
+   "floor": "1F",
+   "class": "ROOM",
+   "room_class": "DRY",
+   "upstream_status": "COMPUTED",
+   "semantic_state": "SINGLE",
+   "ts01_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    {
+     "label_values": [
+      "MASTER BED ROOM",
+      "O—FtN‘²—XZS‚Zt"
+     ],
+     "state": "ESTABLISHED"
+    }
+   ],
+   "zone_classes": [
+    "DRY"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "MASTER BED ROOM"
+  },
+  {
+   "room": "2F-R01",
+   "floor": "2F",
+   "class": "UNNAMED_ROOM",
+   "room_class": "UNKNOWN",
+   "upstream_status": "COMPUTED_REVIEW",
+   "semantic_state": "UNLABELLED",
+   "ts01_state": "UNLABELLED",
+   "semantic_zones": [],
+   "zone_classes": [
+    "UNKNOWN"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "UNKNOWN"
+  },
+  {
+   "room": "2F-R02",
+   "floor": "2F",
+   "class": "ROOM",
+   "room_class": "DRY",
+   "upstream_status": "COMPUTED",
+   "semantic_state": "SINGLE",
+   "ts01_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    {
+     "label_values": [
+      "MAID R.",
+      "O—F_yGa™M_y"
+     ],
+     "state": "ESTABLISHED"
+    }
+   ],
+   "zone_classes": [
+    "DRY"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "MAID R."
+  },
+  {
+   "room": "2F-R03",
+   "floor": "2F",
+   "class": "ROOM",
+   "room_class": "WET",
+   "upstream_status": "COMPUTED",
+   "semantic_state": "SINGLE",
+   "ts01_state": "ONE_PHYSICAL_SPACE_ONE_SEMANTIC_ZONE",
+   "semantic_zones": [
+    {
+     "label_values": [
+      "M—HAe",
+      "W.C"
+     ],
+     "state": "ESTABLISHED"
+    }
+   ],
+   "zone_classes": [
+    "WET"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "W.C"
+  },
+  {
+   "room": "2F-R04",
+   "floor": "2F",
+   "class": "UNNAMED_ROOM",
+   "room_class": "SHAFT",
+   "upstream_status": "COMPUTED_REVIEW",
+   "semantic_state": "UNLABELLED",
+   "ts01_state": "UNLABELLED",
+   "semantic_zones": [],
+   "zone_classes": [
+    "SHAFT"
+   ],
+   "void_split_resolved": false,
+   "geometry": "HIGH",
+   "name_en": "UNKNOWN"
+  }
+ ],
+ "rule": "physical space + TS01 semantic state + zone classes per room; no DRY wins"
+}

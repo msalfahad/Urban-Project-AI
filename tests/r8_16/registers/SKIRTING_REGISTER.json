@@ -1,0 +1,240 @@
+{
+ "SCHEMA": "URBAN_R8_16_SKIRTING_REGISTER_V1",
+ "row": "SKIRTING (hidden skirting, QP-06)",
+ "unit": "lm",
+ "state": "COMPUTED_SHADOW_WITH_WITHHELD_SPANS",
+ "SKIRTING_LM": 93.98682,
+ "reproduces_blind": true,
+ "per_room": {
+  "SITE-5f1762f1a93b91ca": {
+   "zones": [
+    "BED.ROOM"
+   ],
+   "state": "COMPUTED",
+   "payable_lm": 22.9,
+   "components_lm": {
+    "AUTHORISED_OBSTACLE_FACE": 5.0,
+    "COLUMN_FACE": 0.8,
+    "REAL_WALL_FACE": 15.894641,
+    "WINDOW_ABOVE_FLOOR": 1.205359
+   },
+   "excluded_lm": {
+    "DOOR_PRESENT": 1.0
+   },
+   "withheld": [],
+   "jambs": []
+  },
+  "SITE-77a2130eb275604c": {
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "state": "COMPUTED_WITH_WITHHELD_SPANS",
+   "payable_lm": 26.157105,
+   "components_lm": {
+    "COLUMN_FACE": 0.65,
+    "PHYSICAL_OPENING_JAMB": 0.4,
+    "REAL_WALL_FACE": 22.760661,
+    "WINDOW_ABOVE_FLOOR": 2.346444
+   },
+   "excluded_lm": {
+    "DOOR_PRESENT": 5.6
+   },
+   "withheld": [
+    {
+     "class": "FLOOR_CONTACT_UNPROVEN",
+     "length": 275.0,
+     "sources": [
+      "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F2",
+      "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F1",
+      "QORTUBA_REV_NEW|H542||SEGMENT|0"
+     ],
+     "length_lm": 2.75
+    }
+   ],
+   "jambs": [
+    {
+     "opening": "OP-997f14d12b8e9bc1",
+     "kind": "DOORLESS",
+     "side": "LEFT",
+     "source": "BANDEND|WB-0644b40d07c861d6|1",
+     "end_kind": "ALIGNED_FREE_END",
+     "physical": true,
+     "length_lm": 0.2,
+     "counted_lm": 0.2,
+     "why": null
+    },
+    {
+     "opening": "OP-997f14d12b8e9bc1",
+     "kind": "DOORLESS",
+     "side": "RIGHT",
+     "source": "BANDEND|WB-6c882c7cafa843e5|0",
+     "end_kind": "ALIGNED_FREE_END",
+     "physical": true,
+     "length_lm": 0.2,
+     "counted_lm": 0.2,
+     "why": null
+    }
+   ]
+  },
+  "SITE-a6405850100155ac": {
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "state": "COMPUTED",
+   "payable_lm": 29.35,
+   "components_lm": {
+    "COLUMN_FACE": 1.2,
+    "PHYSICAL_OPENING_JAMB": 0.15,
+    "REAL_WALL_FACE": 23.802485,
+    "WINDOW_ABOVE_FLOOR": 4.197515
+   },
+   "excluded_lm": {
+    "DOORLESS_JAMB_NOT_COUNTED": 0.15,
+    "DOOR_PRESENT": 1.8
+   },
+   "withheld": [],
+   "jambs": [
+    {
+     "opening": "OP-9e0fd219ca5cd391",
+     "kind": "DOORLESS",
+     "side": "LEFT",
+     "source": "BANDEND|WB-8549cc78e5a3af40|0",
+     "end_kind": "CAPPED",
+     "physical": true,
+     "length_lm": 0.15,
+     "counted_lm": 0.15,
+     "why": null
+    },
+    {
+     "opening": "OP-9e0fd219ca5cd391",
+     "kind": "DOORLESS",
+     "side": "RIGHT",
+     "source": "QORTUBA_REV_NEW|H518||SEGMENT|0",
+     "end_kind": "CONTINUOUS_WALL_FACE",
+     "physical": false,
+     "length_lm": 0.15,
+     "counted_lm": 0.0,
+     "why": "not physical"
+    }
+   ]
+  },
+  "SITE-daca396d6d730e60": {
+   "zones": [
+    "BED.ROOM"
+   ],
+   "state": "COMPUTED",
+   "payable_lm": 15.579714,
+   "components_lm": {
+    "COLUMN_FACE": 0.8,
+    "REAL_WALL_FACE": 13.437427,
+    "WINDOW_ABOVE_FLOOR": 1.342287
+   },
+   "excluded_lm": {
+    "DOOR_PRESENT": 1.0
+   },
+   "withheld": [],
+   "jambs": []
+  },
+  "SITE-1c4abf65f9b5db1e": {
+   "zones": [
+    "BATH"
+   ],
+   "state": "NO_SKIRTING_FULL_WALL_TILE",
+   "payable_lm": 0.0,
+   "components_lm": null,
+   "excluded_lm": null,
+   "withheld": null,
+   "jambs": null
+  },
+  "SITE-8c1c7563d5252c50": {
+   "zones": [
+    "PAINTRY"
+   ],
+   "state": "NO_SKIRTING_FULL_WALL_TILE",
+   "payable_lm": 0.0,
+   "components_lm": null,
+   "excluded_lm": null,
+   "withheld": null,
+   "jambs": null
+  },
+  "SITE-a2b19efc492a6d0b": {
+   "zones": [
+    "BATH"
+   ],
+   "state": "NO_SKIRTING_FULL_WALL_TILE",
+   "payable_lm": 0.0,
+   "components_lm": null,
+   "excluded_lm": null,
+   "withheld": null,
+   "jambs": null
+  },
+  "SITE-fe8ed5548fb4310e": {
+   "zones": [
+    "BATH"
+   ],
+   "state": "NO_SKIRTING_FULL_WALL_TILE",
+   "payable_lm": 0.0,
+   "components_lm": null,
+   "excluded_lm": null,
+   "withheld": null,
+   "jambs": null
+  }
+ },
+ "breakdown_lm": {
+  "wall": 75.895214,
+  "column": 3.45,
+  "duct": 5.0,
+  "doorless_jamb": 0.55,
+  "under_window": 9.091605
+ },
+ "excluded_lm": {
+  "DOOR_PRESENT": 9.4,
+  "TOPOLOGY_CLOSURE": 0.0,
+  "FULL_HEIGHT_GLAZED_OPENING": 0.0,
+  "DOOR_JAMB": 0.0,
+  "DOORLESS_JAMB_NOT_COUNTED": 0.15
+ },
+ "withheld": [
+  {
+   "class": "FLOOR_CONTACT_UNPROVEN",
+   "length": 275.0,
+   "sources": [
+    "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F2",
+    "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F1",
+    "QORTUBA_REV_NEW|H542||SEGMENT|0"
+   ],
+   "length_lm": 2.75,
+   "site": "SITE-77a2130eb275604c"
+  }
+ ],
+ "withheld_lm": 2.75,
+ "method": "QORTUBA-NEW-SKIRTING-METHOD@v2",
+ "policy": "WALL_CONTACT_PATH_POLICY_V3",
+ "counterfactuals": {
+  "with_v3_o1_fixed_lm": 94.13682,
+  "with_the_glazed_opening_continuous_lm": 96.73682,
+  "both_lm": 96.88682
+ },
+ "reconciliation_vs_r8_15": {
+  "R8.15_SKIRTING_LM": 84.795214,
+  "+ windows now continuous": 9.091605,
+  "+ doorless physical jambs": 0.55,
+  "- I1471 jamb caps (R8.15 counted them as wall face; door jamb = 0)": -0.3,
+  "- V3-O1 continuous face consumed": -0.15,
+  "= R8.16": 93.986819,
+  "reconciles": true,
+  "is_target": false
+ },
+ "release_blockers": [
+  "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+  "WITHHELD_SPAN: 2.75 lm whose floor contact is not proven (SITE-77a2130eb275604c FLOOR_CONTACT_UNPROVEN 2.75 lm)",
+  "V3_O1_CONTINUOUS_FACE_UNDERCOUNT: 0.15 lm of continuous wall face at a passage side is consumed by a non-jamb record (frozen V3 defect, fixed next round)",
+  "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+ ],
+ "never": [
+  "84.795214 / 9.091605 / 1.75 / 0.55 / 0.30 / QP-10 76.389 as a target",
+  "a room polygon perimeter"
+ ]
+}

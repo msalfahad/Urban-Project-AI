@@ -1,0 +1,46 @@
+{
+ "CANDIDATE_GEOMETRY_HASH": "25551fa9f5b07f395c5dda64",
+ "by_severity": {
+  "HIGH": 36,
+  "LOW": 1,
+  "MEDIUM": 56
+ },
+ "delta_vs_v1": {
+  "v1_only": 4,
+  "v2_only": 21
+ },
+ "drawings_sha256": [
+  "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4"
+ ],
+ "engine_commit": "6c20879",
+ "files_sha256": {
+  "post_discovery_v2/COMPLETENESS_FINDINGS.csv": "3b5e9d3a3b87d1aa1a1a60b97184957165be6eef89de6c1747df52242ce5bb94",
+  "post_discovery_v2/COMPLETENESS_SCOPE.csv": "4fef3db9e3cdba0f4fa9f184794e4af20a62d12f4262e2b53d74ea6a7d14f7ea",
+  "post_discovery_v2/COMPLETENESS_SIGNALS.csv": "4b0cdc83915a4db1a3441c008cb0bc40374b06a3a0ab57e9eb18afe3a4d79156",
+  "post_discovery_v2/COMPLETENESS_SUMMARY.json": "c0d9feeae13f92238af2d0e89b8f24f4bcbe4bec03158e38dbc70e1beff9d57f",
+  "post_discovery_v2/V1_V2_FINDING_DELTA.csv": "c243f19264b197b44d8e16a50021dd565c4d8090c7f6d8b7692a87451cdca9a4"
+ },
+ "findings": 93,
+ "inputs": {
+  "conventions": "engine/profiles/URBAN_M5_GENERIC_CONVENTIONS_V4.json",
+  "evidence": "research/urban_engine_m3_recovery/evidence/DETAIL_EVIDENCE.json",
+  "evidence_review": "research/urban_engine_m4_correctness/evidence/OCR_INDEPENDENT_READINGS.json",
+  "profile": "research/urban_engine_m4_correctness/profile_st7757_m4.json"
+ },
+ "inputs_sha256": {
+  "conventions": "14cf36cb471df4e73b35e98806d85b98fea98d8c3c66f3246bbbb5f5cc24e67a",
+  "evidence": "5b681c45314f9261c0aa814aa8b91e5eb66106d56b9af330ce60fdb747266ad9",
+  "evidence_review": "6c5f82216beacdee8fb08ec002dacdd78f01f4646813da3bfa56654a72dea046",
+  "profile": "f482b5be2ca1594fd1a0ca4b89fb28684b51fcde5f0dc4db7b8fa5d17f4c0fdd"
+ },
+ "phase": "POST_DISCOVERY",
+ "rule": "post-discovery: the V2 rules were written after the V1 reconciliation named the misses; this run is evidence of what V2 reports on this drawing, not of generalisation (see heldout/HELDOUT_V2_SUMMARY.json); reconcile.py reads these files and never re-runs the engine to meet an external figure",
+ "run_phase": "POST_DISCOVERY",
+ "then": "CANDIDATE_GEOMETRY_FROZEN",
+ "v1_blind_run": {
+  "engine_commit": "090a470",
+  "manifest": "01_BLIND_RUN_FREEZE.json",
+  "untouched": true
+ }
+}

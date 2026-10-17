@@ -1,0 +1,53 @@
+{
+ "comparison_rule": "never compared with Urban ACCURATE_BOQ_REBAR as if both were complete; a comparison is only per component that both sides hold as resolved",
+ "label": "KNOWN_INCOMPLETE_NET_DRAWING_REBAR",
+ "report_net_rebar_t": 22.916,
+ "unresolved_items": [
+  {
+   "evidence": "REPORT_EXPLICIT",
+   "item": "continuous-beam T/M fields",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)"
+  },
+  {
+   "evidence": "REPORT_EXPLICIT",
+   "item": "BOXED footing bars",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)"
+  },
+  {
+   "evidence": "REPORT_EXPLICIT",
+   "item": "ground-beam reinforcement",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)"
+  },
+  {
+   "evidence": "REPORT_EXPLICIT",
+   "item": "missing slab direction",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)"
+  },
+  {
+   "evidence": "REPORT_EXPLICIT",
+   "item": "slab top bars without extent",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)"
+  },
+  {
+   "evidence": "REPORT_EXPLICIT",
+   "item": "CN reinforcement",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)"
+  },
+  {
+   "evidence": "REPORT_EXPLICIT",
+   "item": "CB MID/support bars",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)"
+  },
+  {
+   "evidence": "REPORT_EXPLICIT",
+   "item": "top hangers",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)"
+  },
+  {
+   "evidence": "REPORT_EXPLICIT",
+   "item": "stair reinforcement",
+   "report_file_check": "PENDING (report file not yet delivered; imported from the owner's quotation)"
+  }
+ ],
+ "unresolved_note": "the owner's quotation ends in 'etc.': the full list is in the report and is imported completely only when the file is delivered"
+}

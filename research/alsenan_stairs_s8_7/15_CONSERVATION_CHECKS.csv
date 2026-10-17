@@ -1,0 +1,16 @@
+CHECK_ID,CHECK,RESULT,DETAIL
+C01,every detected tread run is assigned to one element (or recorded as an unexplained diagonal),PASS,40 runs
+C02,every element has exactly one concrete row and one lane,PASS,15 elements
+C03,released m3 = sum of the released rows,PASS,0.516582788
+C04,released kg = sum of the released bar rows; Ø16 only,PASS,59.020862261
+C05,S7 stair-adjacent top steel recomputed run by run equals the S7A audit; 75 ends; all in S7 panels,PASS,71.895327413
+C06,"S1 stair zones on their own sheet: GF-03, 1F-01 and GF-28 are tiled exactly by their elements; GF-21 = flight band + void",PASS,"{""SP-GF_ROOF_SLAB-03"": [10.415, 10.415], ""SP-1F_ROOF_SLAB-01"": [10.415, 10.415], ""SP-GF_ROOF_SLAB-28"": [6.978642425, 6.978641976], ""SP-GF_ROOF_SLAB-21"": [20.1465, 20.1465]}"
+C07,RG-02 partition closes to 11.52 m2 and SP-GBP-12 to 8.37232788 m2; no part is ground slab and stair,PASS,
+C08,no released plate overlaps another element on its sheet,PASS,[]
+C09,no released plate overlaps an S6 beam band or a column,PASS,"{""A1-L1"": [], ""A2-T1"": [], ""C-T1"": []}"
+C10,the released plates lie inside S7-excluded stair zones (no S7 panel overlaps them),PASS,
+C11,PRE-S8 read through whitelists only; no firewalled column bound; references_read empty,PASS,"{""PRE_S8_CENSUS"": [""ELEMENT_ID"", ""ROW_KIND"", ""PARENT_ELEMENT"", ""ELEMENT_FAMILY"", ""FLOOR"", ""SOURCE_PAGE"", ""EXISTING_STAGE_OWNER"", ""NEW_S8_OWNER"", ""S8_SCOPE"", ""MISSING_INFORMATION"", ""CONFLICT""], ""PRE_S8_INTERFACES"": [""INTERFACE"", ""SIDE_A"", ""SIDE_B"", ""RISK"", ""STATE""], ""PRE_S8_EXHAUSTION"": [""S8_CANDIDATE"", ""CH_PLAN"", ""CH_SECTION"", ""CH_TYPICAL_DETAIL"", ""MISSING"", ""READINESS""]}"
+C12,"all 24 earlier freezes, the S8.3 errata and the S1 / S2 / S3 / S3.1 register indexes verify",PASS,24 manifests
+C13,every p.16 callout has a role; typical-only callouts release nothing,PASS,
+C14,"bends, hooks, anchorages and laps are separate rows and none is released",PASS,
+C15,the inadvertent PRE-S8 exposure is recorded and nothing reads it,PASS,"none: no S8.7 dimension, lane or quantity reads it; every later PRE-S8 read goes through the column whitelists above; the figure is used only by the post-freeze comparison"

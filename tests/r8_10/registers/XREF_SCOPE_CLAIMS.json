@@ -1,0 +1,105 @@
+{
+ "SCHEMA": "URBAN_R8_10_XREF_SCOPE_CLAIMS_V1",
+ "claim": "QORTUBA-NEW-XREFS-NONCONTRIBUTING-TO-PLAN-VARIANT-4-OWNER-001",
+ "four_state_model": [
+  "XREF_PRESENT_AND_ADMITTED",
+  "XREF_MISSING_BUT_PROVEN_OUTSIDE_REGION",
+  "XREF_MISSING_OWNER_CONFIRMED_NONCONTRIBUTING",
+  "XREF_MISSING_POTENTIALLY_CONTRIBUTING"
+ ],
+ "occurrences_in_source": {
+  "16783": {
+   "handle": "16783",
+   "hex_handle": "418F",
+   "xref_name": "block",
+   "xref_path": "..\\Autocad blocks\\block.dwg",
+   "flags": 36,
+   "container": "LAYOUT:Model",
+   "insert": [
+    0.0,
+    0.0
+   ],
+   "scale": [
+    2.54,
+    2.54
+   ],
+   "layer": "DIM"
+  },
+  "17716": {
+   "handle": "17716",
+   "hex_handle": "4534",
+   "xref_name": "بلوكات وتفاصيل واجهات جامده",
+   "xref_path": "..\\Autocad blocks\\بلوكات وتفاصيل واجهات جامده.dwg",
+   "flags": 36,
+   "container": "LAYOUT:Model",
+   "insert": [
+    0.0,
+    0.0
+   ],
+   "scale": [
+    0.1,
+    0.1
+   ],
+   "layer": "DIM"
+  }
+ },
+ "inventory_new_revision": {
+  "16783": {
+   "state": "XREF_MISSING_OWNER_CONFIRMED_NONCONTRIBUTING",
+   "continues": true,
+   "claim": "QORTUBA-NEW-XREFS-NONCONTRIBUTING-TO-PLAN-VARIANT-4-OWNER-001@v1",
+   "facts": {
+    "handle": "16783",
+    "hex_handle": "418F",
+    "xref_name": "block",
+    "xref_path": "..\\Autocad blocks\\block.dwg",
+    "flags": 36,
+    "container": "LAYOUT:Model",
+    "insert": [
+     0.0,
+     0.0
+    ],
+    "scale": [
+     2.54,
+     2.54
+    ],
+    "layer": "DIM"
+   },
+   "provenance": "kept"
+  },
+  "17716": {
+   "state": "XREF_MISSING_OWNER_CONFIRMED_NONCONTRIBUTING",
+   "continues": true,
+   "claim": "QORTUBA-NEW-XREFS-NONCONTRIBUTING-TO-PLAN-VARIANT-4-OWNER-001@v1",
+   "facts": {
+    "handle": "17716",
+    "hex_handle": "4534",
+    "xref_name": "بلوكات وتفاصيل واجهات جامده",
+    "xref_path": "..\\Autocad blocks\\بلوكات وتفاصيل واجهات جامده.dwg",
+    "flags": 36,
+    "container": "LAYOUT:Model",
+    "insert": [
+     0.0,
+     0.0
+    ],
+    "scale": [
+     0.1,
+     0.1
+    ],
+    "layer": "DIM"
+   },
+   "provenance": "kept"
+  }
+ },
+ "blocking_unrealised_after_claim": [],
+ "unrealised_records_total": 37504,
+ "unrealised_dispositions": {
+  "OUTSIDE_REGION_BY_OCCURRENCE": 23711,
+  "OUTSIDE_SELECTED_MEASUREMENT_REGION_BY_PLACEMENT": 114,
+  "IN_SHEET_FRAME_OCCURRENCE": 3,
+  "XREF_MISSING_OWNER_CONFIRMED_NONCONTRIBUTING": 2,
+  "NOT_IN_ANY_BOUNDED_SITE_BY_PLACEMENT": 38
+ },
+ "source_complete": "NOT DECLARED: two occurrences were cleared for THIS region; the file as a whole is not declared source-complete",
+ "old_revision": "no xref in the old revision"
+}

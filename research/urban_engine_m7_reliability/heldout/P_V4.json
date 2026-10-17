@@ -1,0 +1,1278 @@
+{
+ "summary": {
+  "dup_text": {
+   "pass": 0,
+   "fail": 10
+  },
+  "explode": {
+   "pass": 0,
+   "fail": 10
+  },
+  "mirror_x": {
+   "pass": 10,
+   "fail": 0
+  },
+  "noise_layer": {
+   "pass": 1,
+   "fail": 9
+  },
+  "reorder": {
+   "pass": 10,
+   "fail": 0
+  },
+  "rot180": {
+   "pass": 10,
+   "fail": 0
+  },
+  "rot270": {
+   "pass": 10,
+   "fail": 0
+  },
+  "rot90": {
+   "pass": 10,
+   "fail": 0
+  },
+  "translate": {
+   "pass": 8,
+   "fail": 2
+  },
+  "units_m": {
+   "pass": 10,
+   "fail": 0
+  }
+ },
+ "drawings": {
+  "301": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 15,
+    "error": null,
+    "first": [
+     {
+      "key": "CONCRETE|BEAMS|1F|PROVISIONAL",
+      "original": {
+       "base": 13.95225,
+       "exposure_high": 0.0,
+       "exposure_low": 0.0,
+       "high": 18.34765,
+       "low": 13.95225,
+       "n": 30.0
+      },
+      "transformed": null
+     },
+     {
+      "key": "CONCRETE|BEAMS|1F|UNRESOLVED",
+      "original": {
+       "base": 0.0,
+       "exposure_high": 0.4225,
+       "exposure_low": 0.338,
+       "high": 0.0,
+       "low": 0.0,
+       "n": 1.0
+      },
+      "transformed": null
+     },
+     {
+      "key": "CONCRETE|BEAMS|GF|PROVISIONAL",
+      "original": {
+       "base": 13.951944626,
+       "exposure_high": 0.0,
+       "exposure_low": 0.0,
+       "high": 18.347222477,
+       "low": 13.951944626,
+       "n": 30.0
+      },
+      "transformed": null
+     }
+    ]
+   },
+   "dup_text": {
+    "ok": false,
+    "n_differences": null,
+    "error": "EstimateError: duplicate item ids ['P-C:COL:SH01:C2@13280,12100|1F', 'P-C:COL:SH01:C2@13280,12100|GF', 'P-C:COL:SH01:C2@13280,3500|1F', 'P-C:COL:SH01:C2@13280,3500|GF', 'P-C:COL:SH01:C2@17680,17650|1F']",
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 16,
+    "error": null,
+    "first": [
+     {
+      "key": "CONCRETE|COLUMNS|1F|PROVISIONAL",
+      "field": "base",
+      "original": 9.9,
+      "transformed": 8.82,
+      "delta": -1.08
+     },
+     {
+      "key": "CONCRETE|COLUMNS|1F|PROVISIONAL",
+      "field": "high",
+      "original": 9.9,
+      "transformed": 8.82,
+      "delta": -1.08
+     },
+     {
+      "key": "CONCRETE|COLUMNS|1F|PROVISIONAL",
+      "field": "low",
+      "original": 9.9,
+      "transformed": 8.82,
+      "delta": -1.08
+     }
+    ]
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "302": {
+   "translate": {
+    "ok": true,
+    "n_differences": 9,
+    "error": null,
+    "first": [
+     {
+      "key": "CONCRETE|SLABS|1F|PROVISIONAL",
+      "field": "base",
+      "original": 22.1764,
+      "transformed": 22.176132813,
+      "delta": -0.000267187
+     },
+     {
+      "key": "CONCRETE|SLABS|1F|PROVISIONAL",
+      "field": "high",
+      "original": 22.1764,
+      "transformed": 22.176132813,
+      "delta": -0.000267187
+     },
+     {
+      "key": "CONCRETE|SLABS|1F|PROVISIONAL",
+      "field": "low",
+      "original": 22.1764,
+      "transformed": 22.176132813,
+      "delta": -0.000267187
+     }
+    ]
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 16,
+    "error": null,
+    "first": [
+     {
+      "key": "CONCRETE|BEAMS|1F|PROVISIONAL",
+      "original": {
+       "base": 8.859159265,
+       "exposure_high": 0.0,
+       "exposure_low": 0.0,
+       "high": 11.91969023,
+       "low": 8.859159265,
+       "n": 22.0
+      },
+      "transformed": null
+     },
+     {
+      "key": "CONCRETE|BEAMS|1F|UNRESOLVED",
+      "original": {
+       "base": 0.0,
+       "exposure_high": 0.485,
+       "exposure_low": 0.388,
+       "high": 0.0,
+       "low": 0.0,
+       "n": 1.0
+      },
+      "transformed": null
+     },
+     {
+      "key": "CONCRETE|BEAMS|GF|PROVISIONAL",
+      "original": {
+       "base": 8.859159265,
+       "exposure_high": 0.0,
+       "exposure_low": 0.0,
+       "high": 11.91969023,
+       "low": 8.859159265,
+       "n": 22.0
+      },
+      "transformed": null
+     }
+    ]
+   },
+   "dup_text": {
+    "ok": false,
+    "n_differences": null,
+    "error": "EstimateError: duplicate item ids ['P-C:COL:SH01:C1@14,13|1F', 'P-C:COL:SH01:C1@14,13|GF', 'P-C:COL:SH01:C1@14,4|1F', 'P-C:COL:SH01:C1@14,4|GF', 'P-C:COL:SH01:C1@19,9|1F']",
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 16,
+    "error": null,
+    "first": [
+     {
+      "key": "CONCRETE|COLUMNS|1F|PROVISIONAL",
+      "field": "base",
+      "original": 6.516,
+      "transformed": 4.608,
+      "delta": -1.908
+     },
+     {
+      "key": "CONCRETE|COLUMNS|1F|PROVISIONAL",
+      "field": "high",
+      "original": 12.996,
+      "transformed": 11.088,
+      "delta": -1.908
+     },
+     {
+      "key": "CONCRETE|COLUMNS|1F|PROVISIONAL",
+      "field": "low",
+      "original": 6.516,
+      "transformed": 4.608,
+      "delta": -1.908
+     }
+    ]
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "303": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 15,
+    "error": null,
+    "first": [
+     {
+      "key": "CONCRETE|BEAMS|1F|PROVISIONAL",
+      "original": {
+       "base": 5.058,
+       "exposure_high": 0.0,
+       "exposure_low": 0.0,
+       "high": 6.7764,
+       "low": 5.058,
+       "n": 11.0
+      },
+      "transformed": null
+     },
+     {
+      "key": "CONCRETE|BEAMS|1F|UNRESOLVED",
+      "original": {
+       "base": 0.0,
+       "exposure_high": 0.345,
+       "exposure_low": 0.276,
+       "high": 0.0,
+       "low": 0.0,
+       "n": 1.0
+      },
+      "transformed": null
+     },
+     {
+      "key": "CONCRETE|BEAMS|GF|PROVISIONAL",
+      "original": {
+       "base": 5.057589254,
+       "exposure_high": 0.0,
+       "exposure_low": 0.0,
+       "high": 5.057589254,
+       "low": 5.057589254,
+       "n": 11.0
+      },
+      "transformed": null
+     }
+    ]
+   },
+   "dup_text": {
+    "ok": false,
+    "n_differences": null,
+    "error": "EstimateError: duplicate item ids ['P-C:COL:SH01:C3@12480,14150|1F', 'P-C:COL:SH01:C3@12480,14150|GF', 'P-C:COL:SH01:C3@12480,3100|1F', 'P-C:COL:SH01:C3@12480,3100|GF', 'P-C:COL:SH01:C3@3080,14150|1F']",
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 16,
+    "error": null,
+    "first": [
+     {
+      "key": "CONCRETE|COLUMNS|1F|PROVISIONAL",
+      "field": "base",
+      "original": 3.348,
+      "transformed": 2.484,
+      "delta": -0.864
+     },
+     {
+      "key": "CONCRETE|COLUMNS|1F|PROVISIONAL",
+      "field": "high",
+      "original": 3.348,
+      "transformed": 2.484,
+      "delta": -0.864
+     },
+     {
+      "key": "CONCRETE|COLUMNS|1F|PROVISIONAL",
+      "field": "low",
+      "original": 3.348,
+      "transformed": 2.484,
+      "delta": -0.864
+     }
+    ]
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "304": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 19,
+    "error": null,
+    "first": [
+     {
+      "key": "CONCRETE|BEAMS|1F|PROVISIONAL",
+      "original": {
+       "base": 7.253409265,
+       "exposure_high": 0.0,
+       "exposure_low": 0.0,
+       "high": 9.57934023,
+       "low": 7.253409265,
+       "n": 17.0
+      },
+      "transformed": null
+     },
+     {
+      "key": "CONCRETE|BEAMS|1F|UNRESOLVED",
+      "original": {
+       "base": 0.0,
+       "exposure_high": 0.76875,
+       "exposure_low": 0.76875,
+       "high": 0.0,
+       "low": 0.0,
+       "n": 1.0
+      },
+      "transformed": null
+     },
+     {
+      "key": "CONCRETE|BEAMS|2F|PROVISIONAL",
+      "original": {
+       "base": 7.253409265,
+       "exposure_high": 0.0,
+       "exposure_low": 0.0,
+       "high": 9.57934023,
+       "low": 7.253409265,
+       "n": 17.0
+      },
+      "transformed": null
+     }
+    ]
+   },
+   "dup_text": {
+    "ok": false,
+    "n_differences": null,
+    "error": "EstimateError: duplicate item ids ['P-C:COL:SH01:C2@13030,7200|1F', 'P-C:COL:SH01:C2@13030,7200|GF', 'P-C:COL:SH01:C2@17380,12000|1F', 'P-C:COL:SH01:C2@17380,12000|GF', 'P-C:COL:SH01:C2@17380,3450|1F']",
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "305": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 18,
+    "error": null,
+    "first": [
+     {
+      "key": "CONCRETE|BEAMS|1F|PROVISIONAL",
+      "original": {
+       "base": 8.707,
+       "exposure_high": 0.0,
+       "exposure_low": 0.0,
+       "high": 11.6982,
+       "low": 8.707,
+       "n": 23.0
+      },
+      "transformed": null
+     },
+     {
+      "key": "CONCRETE|BEAMS|1F|UNRESOLVED",
+      "original": {
+       "base": 0.0,
+       "exposure_high": 0.4625,
+       "exposure_low": 0.37,
+       "high": 0.0,
+       "low": 0.0,
+       "n": 1.0
+      },
+      "transformed": null
+     },
+     {
+      "key": "CONCRETE|BEAMS|GF|PROVISIONAL",
+      "original": {
+       "base": 8.706653718,
+       "exposure_high": 0.0,
+       "exposure_low": 0.0,
+       "high": 11.697730794,
+       "low": 8.706653718,
+       "n": 23.0
+      },
+      "transformed": null
+     }
+    ]
+   },
+   "dup_text": {
+    "ok": false,
+    "n_differences": null,
+    "error": "EstimateError: duplicate item ids ['P-C:COL:SH01:C2@12830,12100|1F', 'P-C:COL:SH01:C2@12830,3450|1F', 'P-C:COL:SH01:C2@12830,3450|GF', 'P-C:COL:SH01:C2@16780,16800|1F', 'P-C:COL:SH01:C2@16780,16800|GF']",
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 16,
+    "error": null,
+    "first": [
+     {
+      "key": "CONCRETE|COLUMNS|1F|PROVISIONAL",
+      "field": "base",
+      "original": 7.416,
+      "transformed": 6.984,
+      "delta": -0.432
+     },
+     {
+      "key": "CONCRETE|COLUMNS|1F|PROVISIONAL",
+      "field": "high",
+      "original": 7.416,
+      "transformed": 6.984,
+      "delta": -0.432
+     },
+     {
+      "key": "CONCRETE|COLUMNS|1F|PROVISIONAL",
+      "field": "low",
+      "original": 7.416,
+      "transformed": 6.984,
+      "delta": -0.432
+     }
+    ]
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "306": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 11,
+    "error": null,
+    "first": [
+     {
+      "key": "CONCRETE|BEAMS|GF|PROVISIONAL",
+      "original": {
+       "base": 12.833159265,
+       "exposure_high": 0.0,
+       "exposure_low": 0.0,
+       "high": 17.22649023,
+       "low": 12.833159265,
+       "n": 31.0
+      },
+      "transformed": null
+     },
+     {
+      "key": "CONCRETE|BEAMS|GF|UNRESOLVED",
+      "original": {
+       "base": 0.0,
+       "exposure_high": 0.365,
+       "exposure_low": 0.292,
+       "high": 0.0,
+       "low": 0.0,
+       "n": 1.0
+      },
+      "transformed": null
+     },
+     {
+      "key": "CONCRETE|COLUMNS|1F|PROVISIONAL",
+      "original": {
+       "base": 8.28,
+       "exposure_high": 0.0,
+       "exposure_low": 0.0,
+       "high": 8.28,
+       "low": 8.28,
+       "n": 20.0
+      },
+      "transformed": null
+     }
+    ]
+   },
+   "dup_text": {
+    "ok": false,
+    "n_differences": null,
+    "error": "EstimateError: duplicate item ids ['P-C:COL:SH01:C1@12330,18450|1F', 'P-C:COL:SH01:C1@12330,18450|GF', 'P-C:COL:SH01:C1@12330,8450|1F', 'P-C:COL:SH01:C1@12330,8450|GF', 'P-C:COL:SH01:C1@17130,13250|1F']",
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 3,
+    "error": null,
+    "first": [
+     {
+      "key": "CONCRETE|SLABS|GF|PROVISIONAL",
+      "field": "base",
+      "original": 33.5532,
+      "transformed": 33.193434049,
+      "delta": -0.359765951
+     },
+     {
+      "key": "CONCRETE|SLABS|GF|PROVISIONAL",
+      "field": "high",
+      "original": 33.5532,
+      "transformed": 33.193434049,
+      "delta": -0.359765951
+     },
+     {
+      "key": "CONCRETE|SLABS|GF|PROVISIONAL",
+      "field": "low",
+      "original": 33.5532,
+      "transformed": 33.193434049,
+      "delta": -0.359765951
+     }
+    ]
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "307": {
+   "translate": {
+    "ok": true,
+    "n_differences": 5,
+    "error": null,
+    "first": [
+     {
+      "key": "CONCRETE|SLABS|1F|PROVISIONAL",
+      "field": "base",
+      "original": 25.3036,
+      "transformed": 25.303535156,
+      "delta": -6.4844e-05
+     },
+     {
+      "key": "CONCRETE|SLABS|1F|PROVISIONAL",
+      "field": "high",
+      "original": 25.3036,
+      "transformed": 25.303535156,
+      "delta": -6.4844e-05
+     },
+     {
+      "key": "CONCRETE|SLABS|1F|PROVISIONAL",
+      "field": "low",
+      "original": 25.3036,
+      "transformed": 25.303535156,
+      "delta": -6.4844e-05
+     }
+    ]
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 15,
+    "error": null,
+    "first": [
+     {
+      "key": "CONCRETE|BEAMS|1F|PROVISIONAL",
+      "original": {
+       "base": 9.3925,
+       "exposure_high": 0.0,
+       "exposure_low": 0.0,
+       "high": 12.0737,
+       "low": 9.3925,
+       "n": 17.0
+      },
+      "transformed": null
+     },
+     {
+      "key": "CONCRETE|BEAMS|1F|UNRESOLVED",
+      "original": {
+       "base": 0.0,
+       "exposure_high": 2.995,
+       "exposure_low": 2.6955,
+       "high": 0.0,
+       "low": 0.0,
+       "n": 7.0
+      },
+      "transformed": null
+     },
+     {
+      "key": "CONCRETE|BEAMS|GF|PROVISIONAL",
+      "original": {
+       "base": 9.393047975,
+       "exposure_high": 0.0,
+       "exposure_low": 0.0,
+       "high": 9.393047975,
+       "low": 9.393047975,
+       "n": 17.0
+      },
+      "transformed": null
+     }
+    ]
+   },
+   "dup_text": {
+    "ok": false,
+    "n_differences": null,
+    "error": "EstimateError: duplicate item ids ['P-C:COL:SH01:C3@12,19|1F', 'P-C:COL:SH01:C3@12,19|GF', 'P-C:COL:SH01:C3@12,8|1F', 'P-C:COL:SH01:C3@12,8|GF', 'P-C:COL:SH01:C3@16,14|1F']",
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 16,
+    "error": null,
+    "first": [
+     {
+      "key": "CONCRETE|COLUMNS|1F|PROVISIONAL",
+      "field": "base",
+      "original": 6.912,
+      "transformed": 5.292,
+      "delta": -1.62
+     },
+     {
+      "key": "CONCRETE|COLUMNS|1F|PROVISIONAL",
+      "field": "high",
+      "original": 16.776,
+      "transformed": 15.156,
+      "delta": -1.62
+     },
+     {
+      "key": "CONCRETE|COLUMNS|1F|PROVISIONAL",
+      "field": "low",
+      "original": 6.912,
+      "transformed": 5.292,
+      "delta": -1.62
+     }
+    ]
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "308": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 16,
+    "error": null,
+    "first": [
+     {
+      "key": "CONCRETE|BEAMS|1F|PROVISIONAL",
+      "original": {
+       "base": 6.467159265,
+       "exposure_high": 0.0,
+       "exposure_low": 0.0,
+       "high": 8.71809023,
+       "low": 6.467159265,
+       "n": 17.0
+      },
+      "transformed": null
+     },
+     {
+      "key": "CONCRETE|BEAMS|1F|UNRESOLVED",
+      "original": {
+       "base": 0.0,
+       "exposure_high": 0.365,
+       "exposure_low": 0.292,
+       "high": 0.0,
+       "low": 0.0,
+       "n": 1.0
+      },
+      "transformed": null
+     },
+     {
+      "key": "CONCRETE|BEAMS|GF|PROVISIONAL",
+      "original": {
+       "base": 6.467159265,
+       "exposure_high": 0.0,
+       "exposure_low": 0.0,
+       "high": 8.71809023,
+       "low": 6.467159265,
+       "n": 17.0
+      },
+      "transformed": null
+     }
+    ]
+   },
+   "dup_text": {
+    "ok": false,
+    "n_differences": null,
+    "error": "EstimateError: duplicate item ids ['P-C:COL:SH01:C4@13130,11550|1F', 'P-C:COL:SH01:C4@13130,11550|GF', 'P-C:COL:SH01:C4@13130,3450|1F', 'P-C:COL:SH01:C4@13130,3450|GF', 'P-C:COL:SH01:C4@18430,7300|1F']",
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 16,
+    "error": null,
+    "first": [
+     {
+      "key": "CONCRETE|COLUMNS|1F|PROVISIONAL",
+      "field": "base",
+      "original": 5.832,
+      "transformed": 4.212,
+      "delta": -1.62
+     },
+     {
+      "key": "CONCRETE|COLUMNS|1F|PROVISIONAL",
+      "field": "high",
+      "original": 9.612,
+      "transformed": 7.992,
+      "delta": -1.62
+     },
+     {
+      "key": "CONCRETE|COLUMNS|1F|PROVISIONAL",
+      "field": "low",
+      "original": 5.832,
+      "transformed": 4.212,
+      "delta": -1.62
+     }
+    ]
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "309": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 15,
+    "error": null,
+    "first": [
+     {
+      "key": "CONCRETE|BEAMS|1F|PROVISIONAL",
+      "original": {
+       "base": 3.794,
+       "exposure_high": 0.0,
+       "exposure_low": 0.0,
+       "high": 5.0788,
+       "low": 3.794,
+       "n": 11.0
+      },
+      "transformed": null
+     },
+     {
+      "key": "CONCRETE|BEAMS|1F|UNRESOLVED",
+      "original": {
+       "base": 0.0,
+       "exposure_high": 0.35,
+       "exposure_low": 0.28,
+       "high": 0.0,
+       "low": 0.0,
+       "n": 1.0
+      },
+      "transformed": null
+     },
+     {
+      "key": "CONCRETE|BEAMS|GF|PROVISIONAL",
+      "original": {
+       "base": 3.794,
+       "exposure_high": 0.0,
+       "exposure_low": 0.0,
+       "high": 5.0788,
+       "low": 3.794,
+       "n": 11.0
+      },
+      "transformed": null
+     }
+    ]
+   },
+   "dup_text": {
+    "ok": false,
+    "n_differences": null,
+    "error": "EstimateError: duplicate item ids ['P-C:COL:SH01:C1@10380,8850|1F', 'P-C:COL:SH01:C1@10380,8850|GF', 'P-C:COL:SH01:C1@3480,8850|1F', 'P-C:COL:SH01:C1@3480,8850|GF', 'P-C:COL:SH01:C1@6680,12550|1F']",
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 19,
+    "error": null,
+    "first": [
+     {
+      "key": "CONCRETE|COLUMNS|1F|PROVISIONAL",
+      "field": "base",
+      "original": 2.88,
+      "transformed": 2.16,
+      "delta": -0.72
+     },
+     {
+      "key": "CONCRETE|COLUMNS|1F|PROVISIONAL",
+      "field": "high",
+      "original": 2.88,
+      "transformed": 2.16,
+      "delta": -0.72
+     },
+     {
+      "key": "CONCRETE|COLUMNS|1F|PROVISIONAL",
+      "field": "low",
+      "original": 2.88,
+      "transformed": 2.16,
+      "delta": -0.72
+     }
+    ]
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  },
+  "310": {
+   "translate": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot90": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot180": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "rot270": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "mirror_x": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "reorder": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   },
+   "explode": {
+    "ok": true,
+    "n_differences": 16,
+    "error": null,
+    "first": [
+     {
+      "key": "CONCRETE|BEAMS|1F|PROVISIONAL",
+      "original": {
+       "base": 7.953159265,
+       "exposure_high": 0.0,
+       "exposure_low": 0.0,
+       "high": 10.10169023,
+       "low": 7.953159265,
+       "n": 12.0
+      },
+      "transformed": null
+     },
+     {
+      "key": "CONCRETE|BEAMS|1F|UNRESOLVED",
+      "original": {
+       "base": 0.0,
+       "exposure_high": 0.32,
+       "exposure_low": 0.256,
+       "high": 0.0,
+       "low": 0.0,
+       "n": 1.0
+      },
+      "transformed": null
+     },
+     {
+      "key": "CONCRETE|BEAMS|GF|PROVISIONAL",
+      "original": {
+       "base": 7.953159265,
+       "exposure_high": 0.0,
+       "exposure_low": 0.0,
+       "high": 7.953159265,
+       "low": 7.953159265,
+       "n": 12.0
+      },
+      "transformed": null
+     }
+    ]
+   },
+   "dup_text": {
+    "ok": false,
+    "n_differences": null,
+    "error": "EstimateError: duplicate item ids ['P-C:COL:SH01:C3@11980,8950|1F', 'P-C:COL:SH01:C3@11980,8950|GF', 'P-C:COL:SH01:C3@3480,8950|1F', 'P-C:COL:SH01:C3@3480,8950|GF', 'P-C:COL:SH01:C3@8380,14300|1F']",
+    "first": []
+   },
+   "noise_layer": {
+    "ok": true,
+    "n_differences": 28,
+    "error": null,
+    "first": [
+     {
+      "key": "CONCRETE|BEAMS|1F|PROVISIONAL",
+      "field": "base",
+      "original": 7.953159265,
+      "transformed": 7.792940873,
+      "delta": -0.160218392
+     },
+     {
+      "key": "CONCRETE|BEAMS|1F|PROVISIONAL",
+      "field": "high",
+      "original": 10.10169023,
+      "transformed": 9.902788372,
+      "delta": -0.198901858
+     },
+     {
+      "key": "CONCRETE|BEAMS|1F|PROVISIONAL",
+      "field": "low",
+      "original": 7.953159265,
+      "transformed": 7.792940873,
+      "delta": -0.160218392
+     }
+    ]
+   },
+   "units_m": {
+    "ok": true,
+    "n_differences": 0,
+    "error": null,
+    "first": []
+   }
+  }
+ }
+}

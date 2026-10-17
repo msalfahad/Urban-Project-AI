@@ -1,0 +1,17 @@
+CHECK_ID,CHECK,RESULT,DETAIL
+K-01,"every frozen stage (21 manifests), the S8.3 errata and the S1 / S2 / S3 / S3.1 registers verify before and after",PASS,"21 manifests, 3 errata, S1 21, S2 12, S3 11, S3.1 12"
+K-02,"six records, six real column occurrences; every planted support resolved or explicitly unresolved",PASS,"31F -> COL-C8-X15-Y06-GF, COL-C8-X15-Y06-1F (its own chain (foundation segment, footing)); 324 -> COL-C9-X13-Y08-GF, COL-C9-X13-Y08-1F (its own chain (foundation segment, footing)); 38A -> COL-C11-X06-Y04-GF (its own chain (foundation segment, footing)); 544 -> COL-P.C-X08-Y02-1F (UNRESOLVED (NODE: BM-GF_ROOF-B27-BL002-532, BM-GF_ROOF-B4-BL022-497, BM-GF_ROOF-B5-BL022-498, SPAN:GFRS:BL002:2844-4653)); 548 -> COL-P.C-X15-Y02-1F (BM-GF_ROOF-B26-BL014-4CC); 77C -> COL-P.C-X?-Y?@24888-15994-2F (UNRESOLVED (NODE: BM-1F_ROOF-B1-BL014-6D0, BM-1F_ROOF-B19-BL029-6CF, BM-1F_ROOF-B6-BL014-6C5, SPAN:FFRS:BL029:26630-29105))"
+K-03,"every special-column annotation is accounted: six DXF labels on seven sheets, each bound once; p.15 details and the legend as visual records",PASS,"labels FFRS:77C, GFRS:31F, GFRS:324, GFRS:38A, GFRS:544, GFRS:548; other legend codes []"
+K-04,no duplicate column: S8.5 creates no column occurrence; each owner appears once per record,PASS,S3.1 occurrences 95
+K-05,"no duplicate bars or ties: every S3.1 row of the eight special segments is cited by exactly one S8.5 row, no frozen component twice, no role twice",PASS,56 S3.1 rows over 8 segments
+K-06,S3.1 and S6.1 totals unchanged,PASS,S3.1 7488.205 kg; S6.1 known 5347.029745679014 kg
+K-07,S8.5 releases only INCREMENTAL roles,PASS,"0 rows, 0 kg"
+K-08,the twisted 4Ø16 straight basis recomputes to S3.1's figure on both columns,PASS,
+K-09,548's beam extra recomputes to S6.1's figure,PASS,
+K-10,every blocked role is registered with its question; every question is used,PASS,24 blocked
+K-11,sensitivity is never released,PASS,18 cases
+K-12,"planted storeys: 544 / 548 -> 1F, 77C -> 2F, as S1 and S3.1",PASS,
+K-13,turned outlines on GFRS are the 1F columns; the dead column has nothing above,PASS,
+K-14,no new concrete: every column keeps its S2 owner,PASS,8 owned rows
+K-15,PRE-S8 read through its whitelist only,PASS,"['ELEMENT_ID', 'PARENT_ELEMENT', 'ELEMENT_FAMILY', 'FLOOR', 'EXISTING_STAGE_OWNER', 'NEW_S8_OWNER', 'MISSING_INFORMATION']"
+K-16,"no client drawing, render or crop in the package",PASS,

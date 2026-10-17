@@ -1,0 +1,149 @@
+{
+ "n_per_case": 400,
+ "results": {
+  "BIN_AXIS (frozen)|PIECE|mm|rot=random|off=0mm": {
+   "found_robust": 0.05,
+   "max_measured_error_mm": 0.049848617020870734
+  },
+  "BIN_AXIS (frozen)|PIECE|mm|rot=random|off=1e+06mm": {
+   "found_robust": 0.0525,
+   "max_measured_error_mm": 0.04873828042764217
+  },
+  "BIN_AXIS (frozen)|PIECE|mm|rot=random|off=3.3e+09mm": {
+   "found_robust": 0.035,
+   "max_measured_error_mm": 0.045366764068603516
+  },
+  "BIN_AXIS (frozen)|PIECE|m|rot=random|off=0mm": {
+   "found_robust": 0.0625,
+   "max_measured_error_mm": 0.04788646952886211
+  },
+  "BIN_AXIS (frozen)|PIECE|m|rot=random|off=1e+06mm": {
+   "found_robust": 0.05,
+   "max_measured_error_mm": 0.04987876354789478
+  },
+  "BIN_AXIS (frozen)|PIECE|m|rot=random|off=3.3e+09mm": {
+   "found_robust": 0.05,
+   "max_measured_error_mm": 0.047820620238780975
+  },
+  "BIN_AXIS (frozen)|OVERLAP|mm|rot=random|off=0mm": {
+   "found_robust": 0.5175,
+   "max_measured_error_mm": 0.8668195713768228
+  },
+  "BIN_AXIS (frozen)|OVERLAP|mm|rot=random|off=1e+06mm": {
+   "found_robust": 0.5175,
+   "max_measured_error_mm": 0.8689773260848597
+  },
+  "BIN_AXIS (frozen)|OVERLAP|mm|rot=random|off=3.3e+09mm": {
+   "found_robust": 0.51,
+   "max_measured_error_mm": 0.8667787313461304
+  },
+  "BIN_AXIS (frozen)|OVERLAP|m|rot=random|off=0mm": {
+   "found_robust": 0.5075,
+   "max_measured_error_mm": 0.8682730165263592
+  },
+  "BIN_AXIS (frozen)|OVERLAP|m|rot=random|off=1e+06mm": {
+   "found_robust": 0.52,
+   "max_measured_error_mm": 0.8687858207963473
+  },
+  "BIN_AXIS (frozen)|OVERLAP|m|rot=random|off=3.3e+09mm": {
+   "found_robust": 0.4775,
+   "max_measured_error_mm": 0.8639271138235927
+  },
+  "BIN_AXIS (frozen)|GAP|mm|rot=random|off=0mm": {
+   "found_robust": 0.0,
+   "max_measured_error_mm": null
+  },
+  "BIN_AXIS (frozen)|GAP|mm|rot=random|off=1e+06mm": {
+   "found_robust": 0.0,
+   "max_measured_error_mm": null
+  },
+  "BIN_AXIS (frozen)|GAP|mm|rot=random|off=3.3e+09mm": {
+   "found_robust": 0.0,
+   "max_measured_error_mm": null
+  },
+  "BIN_AXIS (frozen)|GAP|m|rot=random|off=0mm": {
+   "found_robust": 0.0,
+   "max_measured_error_mm": null
+  },
+  "BIN_AXIS (frozen)|GAP|m|rot=random|off=1e+06mm": {
+   "found_robust": 0.0,
+   "max_measured_error_mm": null
+  },
+  "BIN_AXIS (frozen)|GAP|m|rot=random|off=3.3e+09mm": {
+   "found_robust": 0.0,
+   "max_measured_error_mm": null
+  },
+  "MEAN_AXIS|PIECE|mm|rot=random|off=0mm": {
+   "found_robust": 1.0,
+   "max_measured_error_mm": 9.094947017729282e-13
+  },
+  "MEAN_AXIS|PIECE|mm|rot=random|off=1e+06mm": {
+   "found_robust": 1.0,
+   "max_measured_error_mm": 2.3283064365386963e-10
+  },
+  "MEAN_AXIS|PIECE|mm|rot=random|off=3.3e+09mm": {
+   "found_robust": 1.0,
+   "max_measured_error_mm": 9.5367431640625e-07
+  },
+  "MEAN_AXIS|PIECE|m|rot=random|off=0mm": {
+   "found_robust": 1.0,
+   "max_measured_error_mm": 1.3642420526593924e-12
+  },
+  "MEAN_AXIS|PIECE|m|rot=random|off=1e+06mm": {
+   "found_robust": 1.0,
+   "max_measured_error_mm": 2.2737367544323206e-10
+  },
+  "MEAN_AXIS|PIECE|m|rot=random|off=3.3e+09mm": {
+   "found_robust": 1.0,
+   "max_measured_error_mm": 9.313225746154785e-07
+  },
+  "MEAN_AXIS|OVERLAP|mm|rot=random|off=0mm": {
+   "found_robust": 1.0,
+   "max_measured_error_mm": 4.547473508864641e-13
+  },
+  "MEAN_AXIS|OVERLAP|mm|rot=random|off=1e+06mm": {
+   "found_robust": 1.0,
+   "max_measured_error_mm": 2.3283064365386963e-10
+  },
+  "MEAN_AXIS|OVERLAP|mm|rot=random|off=3.3e+09mm": {
+   "found_robust": 1.0,
+   "max_measured_error_mm": 9.5367431640625e-07
+  },
+  "MEAN_AXIS|OVERLAP|m|rot=random|off=0mm": {
+   "found_robust": 1.0,
+   "max_measured_error_mm": 6.821210263296962e-13
+  },
+  "MEAN_AXIS|OVERLAP|m|rot=random|off=1e+06mm": {
+   "found_robust": 1.0,
+   "max_measured_error_mm": 2.7284841053187847e-10
+  },
+  "MEAN_AXIS|OVERLAP|m|rot=random|off=3.3e+09mm": {
+   "found_robust": 1.0,
+   "max_measured_error_mm": 7.450580596923828e-07
+  },
+  "MEAN_AXIS|GAP|mm|rot=random|off=0mm": {
+   "found_robust": 1.0,
+   "max_measured_error_mm": 6.821210263296962e-13
+  },
+  "MEAN_AXIS|GAP|mm|rot=random|off=1e+06mm": {
+   "found_robust": 1.0,
+   "max_measured_error_mm": 2.3283064365386963e-10
+  },
+  "MEAN_AXIS|GAP|mm|rot=random|off=3.3e+09mm": {
+   "found_robust": 1.0,
+   "max_measured_error_mm": 9.5367431640625e-07
+  },
+  "MEAN_AXIS|GAP|m|rot=random|off=0mm": {
+   "found_robust": 1.0,
+   "max_measured_error_mm": 6.821210263296962e-13
+  },
+  "MEAN_AXIS|GAP|m|rot=random|off=1e+06mm": {
+   "found_robust": 1.0,
+   "max_measured_error_mm": 2.2737367544323206e-10
+  },
+  "MEAN_AXIS|GAP|m|rot=random|off=3.3e+09mm": {
+   "found_robust": 1.0,
+   "max_measured_error_mm": 9.313225746154785e-07
+  }
+ }
+}

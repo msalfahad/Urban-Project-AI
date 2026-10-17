@@ -1,0 +1,78 @@
+{
+ "beams_in_S9A_05": 150,
+ "convention_A_total_m3": 63.479646,
+ "convention_B_total_m3": 79.287837,
+ "corner_squares_m3_reading_B": 0.4539,
+ "difference_m3": 15.808191,
+ "groups": {
+  "CONDITIONAL": {
+   "CONVENTION_A_M3": 56.766583,
+   "CONVENTION_B_M3": 70.931534,
+   "DIFFERENCE_M3": 14.164952,
+   "N": 103,
+   "N_UNMEASURABLE": 0,
+   "WHY": {}
+  },
+  "CURVED_UPPER_BOUND": {
+   "CONVENTION_A_M3": 0.56445,
+   "CONVENTION_B_M3": 0.684866,
+   "DIFFERENCE_M3": 0.120416,
+   "N": 5,
+   "N_UNMEASURABLE": 0,
+   "WHY": {}
+  },
+  "RE_OWNED_TO_BAND": {
+   "CONVENTION_A_M3": 0.0,
+   "CONVENTION_B_M3": 0.0,
+   "DIFFERENCE_M3": 0.0,
+   "N": 7,
+   "N_UNMEASURABLE": 0,
+   "WHY": {}
+  },
+  "SOURCE_CONFLICT": {
+   "CONVENTION_A_M3": 6.148613,
+   "CONVENTION_B_M3": 7.671437,
+   "DIFFERENCE_M3": 1.522824,
+   "N": 8,
+   "N_UNMEASURABLE": 0,
+   "WHY": {}
+  },
+  "UNMEASURABLE": {
+   "CONVENTION_A_M3": 0.0,
+   "CONVENTION_B_M3": 0.0,
+   "DIFFERENCE_M3": 0.0,
+   "N": 27,
+   "N_UNMEASURABLE": 27,
+   "WHY": {
+    "[\"B (schedule width)\", \"H (schedule depth)\", \"L (clear length)\"]": 1,
+    "[\"B (schedule width)\", \"H (schedule depth)\"]": 25,
+    "[\"L (clear length)\"]": 1
+   }
+  }
+ },
+ "m1_base_reading": "TOTAL_DEPTH (convention A); B is the high end of every beam item",
+ "ownership": "7 S9 beam spans re-owned by S9A to the cantilever bands (counted once, in CANTILEVER_PORTIONS); CA's band is CA's own hatch (counted in the CA beam); slab panels stop at the drawn beam faces (BO-01), so the B x t strip under reading B is in no slab panel",
+ "slab_overlap_and_intersections": {
+  "BO-01": {
+   "DETAIL": "243 of 243 edges on a drawn face: {\"BEAM_EDGE_LINE\": 217, \"COLUMN_OUTLINE\": 26}",
+   "RESULT": "PASS"
+  },
+  "BO-02": {
+   "DETAIL": "0 m2",
+   "RESULT": "PASS"
+  },
+  "BO-03": {
+   "DETAIL": "",
+   "RESULT": "PASS"
+  },
+  "BO-04": {
+   "DETAIL": "10 corner ends; at most 0.4539 m3 unowned under the larger reading",
+   "RESULT": "INFO"
+  },
+  "BO-05": {
+   "DETAIL": "identity checked per beam: BELOW_SLAB - TOTAL_DEPTH = B x t x L",
+   "RESULT": "PASS"
+  }
+ },
+ "still_unmeasurable": 27
+}

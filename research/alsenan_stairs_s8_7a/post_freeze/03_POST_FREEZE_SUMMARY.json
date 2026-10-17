@@ -1,0 +1,29 @@
+{
+ "classes": {
+  "AUTHORITY": 4,
+  "METHOD": 6,
+  "METHOD + SCOPE": 1,
+  "MISSED_OBJECT": 1,
+  "NOT_COMPARABLE": 2,
+  "NO_DIFFERENCE": 3,
+  "NO_DIFFERENCE (count only)": 1
+ },
+ "frozen_manifest_sha256": "cb10bef01070a7968a99a7a5510fe8a96588c4b3853461b5fcb3315798cf1e0a",
+ "released_by_s8_7a": null,
+ "round": "S8_7A_POST_FREEZE",
+ "rows": 18,
+ "rule": "explains differences only; no frozen quantity is changed, no riser count is chosen, nothing is released",
+ "s8_7_manifest_sha256": "ee523cc9d23ed1ecd15f6092fc00abb736ede09bc6e89eb2c81bf75da5c89779",
+ "s8_7a_light_well_whole_m3": 2.956247,
+ "s8_7a_main_stair_whole_m3_range": [
+  5.110757,
+  5.319852
+ ],
+ "v3b_c_stair_commercial_m3": 5.2312,
+ "v3b_method_reproduced_m3": 5.2312,
+ "v3b_reproduced_exactly": true,
+ "v3b_risers": {
+  "A1": 26,
+  "A2": 24
+ }
+}

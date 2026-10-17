@@ -1,0 +1,16 @@
+ITEM,VALUE,UNIT,NOTE
+"fixed meridians: spacing at polar angle 1.00 x psi0 (1 = springing, 0 = crown)",0.15,m,plan radius 2.159 m
+"fixed meridians: spacing at polar angle 0.75 x psi0 (1 = springing, 0 = crown)",0.132611409,m,plan radius 1.909 m
+"fixed meridians: spacing at polar angle 0.50 x psi0 (1 = springing, 0 = crown)",0.09875989,m,plan radius 1.422 m
+"fixed meridians: spacing at polar angle 0.25 x psi0 (1 = springing, 0 = crown)",0.052647909,m,plan radius 0.758 m
+"fixed meridians: spacing at polar angle 0.10 x psi0 (1 = springing, 0 = crown)",0.021434134,m,plan radius 0.309 m
+"fixed meridians: spacing at polar angle 0.05 x psi0 (1 = springing, 0 = crown)",0.010744013,m,plan radius 0.155 m
+fixed meridians closer than 75 mm inside plan radius,1.079707258,m,of a 2.159 m rim: 25.0 % of the plan area
+fixed Ø12 meridians touch (12 mm centre to centre) inside plan radius,0.172753161,m,inside it the bars cannot all pass
+"full arches crossing at the crown (as drawn, ring to ring)",45.226671867,arches,every drawn meridian passes through the apex: not buildable without a crown detail
+scenario A: meridional length per dome needs continuous curtailment,169.343804127,m,no drawing shows where meridians stop
+scenario C levels (test rule),37,levels,first stop at plan radius 1.080 m; a geometric series to the crown in unrounded counts (7 levels carry at least one bar)
+whole meridians (fabrication),91,bars,continuous 90.453344
+whole hoops from the springing at 150 mm (fabrication),21,circles,continuous 20.640170; total 176.169871 m vs continuous 169.343804 m; mid-start 21 circles 169.316030 m
+longest hoop (springing circle of the mid-surface),13.56800156,m,a lap position and length are not detailed for any hoop
+"one drawn meridian arch, springing to springing, on the mid-surface",6.192051143,m,"plus the legs into both rings (length follows the ring depth, not stated)"

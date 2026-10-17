@@ -1,0 +1,23 @@
+{
+ "SCHEMA": "URBAN_R8_2_CAD_ADAPTER_DEFECT_REGISTER_V1",
+ "frozen": "2026-09-30",
+ "cad_adapter_sha256": "4d060a1d0f9c5a6ed19c6f8b7b508fa7a5762aa4dc74684bc3b1ec9cd0a573a3",
+ "rule": "cad_adapter stays frozen until the migration commit. Each defect: characterisation test = strict xfail on today's cad_adapter; replacement test = PASS on K1/K2. Remove an entry only in the commit that migrates or fixes it.",
+ "defects": [
+  {"id": "CAD_ADAPTER_REALISES_INVISIBLE_GEOMETRY", "summary": "entities with the source invisibility flag are emitted as primitives (flag kept in provenance, read by no engine module)",
+   "characterisation_tests": ["test_r8_2_cad_adapter_defects.py::test_A_cad_adapter_does_not_realise_invisible_geometry"],
+   "replacement_tests": ["test_r8_2_cad_adapter_defects.py::test_A_k1_hides_invisible_geometry", "test_r8_2_cad_adapter_defects.py::test_A_k2_hides_invisible_geometry"]},
+  {"id": "CAD_ADAPTER_NAMELESS_BLOCK_TOP_LEVEL", "summary": "content of a BLOCK_HEADER with an empty name is emitted at its block-local coordinates instead of through its INSERT",
+   "characterisation_tests": ["test_r8_2_cad_adapter_defects.py::test_B_cad_adapter_places_nameless_block_content_through_its_insert"],
+   "replacement_tests": ["test_r8_2_cad_adapter_defects.py::test_B_k1_places_nameless_block_through_its_insert"]},
+  {"id": "CAD_ADAPTER_OLE2FRAME_TYPE2_DROP", "summary": "an OLE2FRAME the decoder labels with type code 2 disappears without any count (type 74 is counted)",
+   "characterisation_tests": ["test_r8_2_cad_adapter_defects.py::test_C_cad_adapter_counts_a_type2_ole2frame"],
+   "replacement_tests": ["test_r8_2_cad_adapter_defects.py::test_C_k1_reports_type2_ole2frame_as_skipped"]},
+  {"id": "OWNER_UNRESOLVED_MODELSPACE_GUESS", "summary": "an entity whose owner cannot be established is realised as model-space geometry (R8.1 K1 shared this; fixed in R8.2 Phase 0)",
+   "characterisation_tests": ["test_r8_2_cad_adapter_defects.py::test_D_cad_adapter_does_not_place_an_unowned_entity_in_model_space"],
+   "replacement_tests": ["test_r8_2_cad_adapter_defects.py::test_D_k1_quarantines_an_unowned_entity"]},
+  {"id": "CAD_ADAPTER_HANDLE_IDENTITY_COLLISION", "summary": "identity is keyed on the printed handle value; LibreDWG 0.13.3 prints 3-byte handles with 16 bits, so two entities can share one object_id",
+   "characterisation_tests": ["test_r8_2_cad_adapter_defects.py::test_E_cad_adapter_keeps_distinct_identity_for_colliding_handle_values"],
+   "replacement_tests": ["test_r8_2_cad_adapter_defects.py::test_E_k1_keeps_distinct_identity_for_colliding_handle_values"]}
+ ]
+}

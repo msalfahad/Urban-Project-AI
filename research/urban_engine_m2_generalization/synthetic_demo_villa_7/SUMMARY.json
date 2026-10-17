@@ -1,0 +1,132 @@
+{
+ "adapter": null,
+ "as_of": "2026-10-10",
+ "concrete_rc": {
+  "N_PROVISIONAL": 70,
+  "N_UNRESOLVED": 10,
+  "N_UNRESOLVED_WITH_EXPOSURE": 10,
+  "N_VERIFIED": 0,
+  "PLANNING_BASE": 65.15095000000001,
+  "PLANNING_HIGH": 68.48015000000001,
+  "PLANNING_LOW": 65.15095000000001,
+  "PROVISIONAL_BASE": 65.15095000000001,
+  "PROVISIONAL_HIGH": 68.48015000000001,
+  "PROVISIONAL_LOW": 65.15095000000001,
+  "UNRESOLVED_EXPOSURE_HIGH": 4.768750000000002,
+  "UNRESOLVED_EXPOSURE_LOW": 4.768750000000002,
+  "VERIFIED": 0.0
+ },
+ "conventions": {
+  "digest": "651bd3a1c4e94f8fb9798bb8a94e6d14baaac0420086f46535f31474654b1161",
+  "n": 22,
+  "overrides": {},
+  "set": "URBAN_M2_GENERIC_CONVENTIONS_V1+SYNTHETIC_7"
+ },
+ "coverage_risk_by_kind": {
+  "BAND_UNBOUND": 10,
+  "MARK_TYPE_NOT_IN_SCHEDULE": 10,
+  "OPENING_DEDUCTED": 2,
+  "SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 4
+ },
+ "exceptions_by_kind": {
+  "COVERAGE_RISK:BAND_UNBOUND": 10,
+  "COVERAGE_RISK:MARK_TYPE_NOT_IN_SCHEDULE": 10,
+  "COVERAGE_RISK:OPENING_DEDUCTED": 2,
+  "COVERAGE_RISK:SCHEDULE_ROW_NOT_FOUND_ON_PLAN": 4,
+  "LOW_CONFIDENCE_PROVISIONAL": 2,
+  "UNRESOLVED": 10
+ },
+ "frozen_manifests_verified": [],
+ "inputs": [
+  {
+   "bytes": 95610,
+   "file": "villa_7.dxf",
+   "kind": "DXF",
+   "sha256": "31badacacc08aefb21934a35cf08fb49f8975db3fa6565c4bfc5492947ecef01"
+  }
+ ],
+ "n_exceptions": 38,
+ "n_items": 188,
+ "not_detected_families": {
+  "CANTILEVER_PORTIONS": "NO_LABEL_FOUND",
+  "COLUMN_NECKS": "NO_LABEL_FOUND",
+  "DOMES": "NO_LABEL_FOUND",
+  "LIFT": "NO_LABEL_FOUND",
+  "LINTELS": "NO_LABEL_FOUND",
+  "PARAPETS": "NO_LABEL_FOUND",
+  "PLAIN_CONCRETE": "NO_LABEL_FOUND",
+  "POOL": "NO_LABEL_FOUND",
+  "STAIRS": "NO_LABEL_FOUND",
+  "WALLS": "NO_LABEL_FOUND",
+  "WATER_TANK": "NO_LABEL_FOUND"
+ },
+ "plain_concrete": {},
+ "policy": "URBAN_BOQ_M2",
+ "project": "new project",
+ "rebar_completeness": {
+  "MISSING_DATA": 20,
+  "PROVISIONAL_MODEL": 60
+ },
+ "route": "G_GENERIC_ENGINE",
+ "rule": "planning = verified + provisional base; low / high sum each item's own low / high; unresolved items and not-detected families are never added; a new project is never VERIFIED",
+ "sheets": [
+  {
+   "role": "FOUNDATION_PLAN",
+   "sheet_id": "SH01",
+   "storey": "FOUNDATION"
+  },
+  {
+   "role": "SLAB_PLAN",
+   "sheet_id": "SH02",
+   "storey": "GF"
+  },
+  {
+   "role": "SLAB_PLAN",
+   "sheet_id": "SH03",
+   "storey": "1F"
+  },
+  {
+   "role": "SCHEDULE",
+   "sheet_id": "SH04",
+   "storey": "ALL"
+  }
+ ],
+ "steel_t": {
+  "PLANNING_BASE": 2.827307736194679,
+  "PLANNING_HIGH": 3.0095459449848,
+  "PLANNING_LOW": 2.5571921806391233,
+  "VERIFIED": 0.0
+ },
+ "totals": {
+  "CONCRETE": {
+   "N_PROVISIONAL": 70,
+   "N_UNRESOLVED": 10,
+   "N_UNRESOLVED_WITH_EXPOSURE": 10,
+   "N_VERIFIED": 0,
+   "PLANNING_BASE": 65.15095000000001,
+   "PLANNING_HIGH": 68.48015000000001,
+   "PLANNING_LOW": 65.15095000000001,
+   "PROVISIONAL_BASE": 65.15095000000001,
+   "PROVISIONAL_HIGH": 68.48015000000001,
+   "PROVISIONAL_LOW": 65.15095000000001,
+   "UNRESOLVED_EXPOSURE_HIGH": 4.768750000000002,
+   "UNRESOLVED_EXPOSURE_LOW": 4.768750000000002,
+   "VERIFIED": 0.0
+  },
+  "REINFORCEMENT": {
+   "N_PROVISIONAL": 108,
+   "N_UNRESOLVED": 0,
+   "N_UNRESOLVED_WITH_EXPOSURE": 0,
+   "N_VERIFIED": 0,
+   "PLANNING_BASE": 2827.307736194679,
+   "PLANNING_HIGH": 3009.5459449848,
+   "PLANNING_LOW": 2557.1921806391233,
+   "PROVISIONAL_BASE": 2827.307736194679,
+   "PROVISIONAL_HIGH": 3009.5459449848,
+   "PROVISIONAL_LOW": 2557.1921806391233,
+   "UNRESOLVED_EXPOSURE_HIGH": null,
+   "UNRESOLVED_EXPOSURE_LOW": null,
+   "VERIFIED": 0.0
+  }
+ }
+}

@@ -1,0 +1,84 @@
+{
+ "SCHEMA": "URBAN_R8_8_ENGINEERING_ACTION_REGISTER_V1",
+ "rule": "work Urban does itself; none of it waits on the owner",
+ "actions": [
+  {
+   "action_id": "ESTABLISH_NEW_DWG_SOURCE_IDENTITY",
+   "from": "R8.7 owner register",
+   "status": "OPEN",
+   "what": "compare DWG e4babbc2 with DXF df0e1d69 with a pinned decoder that reads AutoCAD 2018 (AC1032) object sections; re-anchor only on SAME_EXACT_SOURCE_REVISION",
+   "state_now": "SOURCE_IDENTITY = NOT_ESTABLISHED (not forced)",
+   "critical_path_for_topology": false
+  },
+  {
+   "action_id": "OBTAIN_PINNED_AC1032_DECODER",
+   "from": "R8.7 owner register (ALLOW_DECODER_INSTALL_IN_ENVIRONMENT)",
+   "status": "OPEN",
+   "what": "environment / tooling: a newer LibreDWG build or the ODA File Converter, pinned by hash; the cloud network policy currently denies github.com and ftp.gnu.org",
+   "owner_action": false,
+   "unpinned_download": "never"
+  },
+  {
+   "action_id": "ANCHOR_SELECTED_PLAN_TO_EXACT_NEW_DWG",
+   "from": "R8.7 owner register",
+   "status": "BLOCKED_BY_ESTABLISH_NEW_DWG_SOURCE_IDENTITY",
+   "what": "re-anchor the four new-revision owner claims (supersede, keep history)"
+  },
+  {
+   "action_id": "ROLE_EVIDENCE_FOR_UNKNOWN_GEOMETRY",
+   "status": "OPEN",
+   "what": "unknown-role geometry blocks Qortuba rooms: 0 (6 parts), FIRNTUR (10 parts), MY BLOCKS$0$PM (81 parts), RCC (4 parts)",
+   "options": [
+    "a reviewed, revision-scoped role claim (needs an authority path; NOT requested from the owner in R8.8)",
+    "structural evidence rules that do not use the layer name alone"
+   ],
+   "never": "fuzzy layer-name matching ('FIRNTUR' ~ 'FURNITURE') or a project-specific lexicon entry"
+  },
+  {
+   "action_id": "SEMANTIC_SUBDIVISION_OF_CONNECTED_SPACES",
+   "status": "OPEN",
+   "what": "physically connected spaces with two room stamps (old: M.B.ROOM + DRESS; new: HALL + BED.ROOM + BATH) are REVIEW_REQUIRED; a subdivision needs source evidence (a drawn threshold, a finish boundary) - never wet-wins / first / largest / alphabetical"
+  },
+  {
+   "action_id": "TS01_SECOND_DRAWING_FAMILY_SHADOW",
+   "status": "PROPOSED_NEXT_ROUND",
+   "what": "run TS01 shadow on P7757 to test the door / glazing closure rules on a second drafting style (no change to its published outputs)"
+  },
+  {
+   "action_id": "ADMIT_BLOCK_HOSTED_BUILDING_GEOMETRY",
+   "status": "OPEN",
+   "what": "an evidence rule for walls inside an insert occurrence whose block definition is a building assembly (F-R88-18); until then such plans fail closed"
+  },
+  {
+   "action_id": "RETIRE_QS01_FOR_ROUND1_ROWS",
+   "status": "NOT_NOW",
+   "what": "QS01 stays research/legacy; no migration while TS01 rows are blocked"
+  }
+ ],
+ "six_row_snapshot": {
+  "OLD_K1": {
+   "Q-03": "COMPUTED_SHADOW",
+   "Q-03P": "COMPUTED_SHADOW",
+   "Q-11": "COMPUTED_SHADOW",
+   "Q-12": "COMPUTED_SHADOW",
+   "Q-13": "BLOCKED",
+   "Q-14": "BLOCKED"
+  },
+  "OLD_K2": {
+   "Q-03": "COMPUTED_SHADOW",
+   "Q-03P": "COMPUTED_SHADOW",
+   "Q-11": "COMPUTED_SHADOW",
+   "Q-12": "COMPUTED_SHADOW",
+   "Q-13": "BLOCKED",
+   "Q-14": "BLOCKED"
+  },
+  "NEW_K2": {
+   "Q-03": "BLOCKED",
+   "Q-03P": "COMPUTED_SHADOW",
+   "Q-11": "BLOCKED",
+   "Q-12": "COMPUTED_SHADOW",
+   "Q-13": "BLOCKED",
+   "Q-14": "BLOCKED"
+  }
+ }
+}

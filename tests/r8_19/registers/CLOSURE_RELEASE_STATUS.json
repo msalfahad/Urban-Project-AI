@@ -1,0 +1,210 @@
+{
+ "SCHEMA": "URBAN_R8_19_CLOSURE_RELEASE_STATUS_V1",
+ "policy": {
+  "policy_id": "CLOSURE_RELEASE_MODEL_V1",
+  "levels": [
+   "CANDIDATE",
+   "DIAGNOSTIC_PASS",
+   "AUTHORISED_FOR_SHADOW",
+   "REVIEWED_FOR_RELEASE_CANDIDATE"
+  ],
+  "reviewed_requires": [
+   "POLICY_FROZEN",
+   "CROSS_ROUTE_AGREEMENT",
+   "OWNER_OR_SOURCE_CORROBORATION",
+   "SOURCE_ANCHOR",
+   "HUMAN_REVIEW"
+  ],
+  "never": [
+   "a release",
+   "a level inferred from a missing condition",
+   "an owner fact as topology authority",
+   "a review record without the closure digest"
+  ],
+  "digest": "8f64ecc50048796da79a6d7cd5ecfb36bd3d46896ed61ab2b57a72bcf3e29f51"
+ },
+ "closures": {
+  "TC-1013dbb787e56f65": {
+   "level": "AUTHORISED_FOR_SHADOW",
+   "missing_for_reviewed": [
+    "CROSS_ROUTE_AGREEMENT",
+    "SOURCE_ANCHOR",
+    "HUMAN_REVIEW"
+   ],
+   "evidence": {
+    "POLICY_FROZEN": true,
+    "CROSS_ROUTE_AGREEMENT": null,
+    "OWNER_OR_SOURCE_CORROBORATION": true,
+    "SOURCE_ANCHOR": false,
+    "HUMAN_REVIEW": null
+   },
+   "releases_anything": false,
+   "evidence_parts": [
+    "471",
+    "477",
+    "2430"
+   ],
+   "geometry": [
+    109773.7561,
+    15029.7196,
+    109773.7561,
+    15049.7196
+   ]
+  },
+  "TC-5f9f2014f83ab0d4": {
+   "level": "AUTHORISED_FOR_SHADOW",
+   "missing_for_reviewed": [
+    "CROSS_ROUTE_AGREEMENT",
+    "SOURCE_ANCHOR",
+    "HUMAN_REVIEW"
+   ],
+   "evidence": {
+    "POLICY_FROZEN": true,
+    "CROSS_ROUTE_AGREEMENT": null,
+    "OWNER_OR_SOURCE_CORROBORATION": true,
+    "SOURCE_ANCHOR": false,
+    "HUMAN_REVIEW": null
+   },
+   "releases_anything": false,
+   "evidence_parts": [
+    "2296",
+    "2297",
+    "2431"
+   ],
+   "geometry": [
+    109893.4009,
+    15029.7196,
+    109893.4009,
+    15049.7196
+   ]
+  }
+ },
+ "reached": [
+  "AUTHORISED_FOR_SHADOW"
+ ],
+ "missing": [
+  "CROSS_ROUTE_AGREEMENT",
+  "HUMAN_REVIEW",
+  "SOURCE_ANCHOR"
+ ],
+ "released": [],
+ "ceiling": "REVIEWED_RELEASE_CANDIDATE at most; never production",
+ "door_closures": {
+  "V2_offset": 1,
+  "V1_end_point": 7,
+  "release": "SHADOW only (TS01 door strips are not release-graded closures)"
+ },
+ "tracked": [
+  "I1471 (DOOR_OPENING_CLOSURE_POLICY_V2 offset jambs)",
+  "H2430",
+  "H2431"
+ ],
+ "production": "NO",
+ "review_packets": {
+  "H2430": {
+   "closure_id": "TC-1013dbb787e56f65",
+   "kind": "TOPOLOGY_CLOSURE (TS01, zero material)",
+   "record": {
+    "closure_id": "TC-1013dbb787e56f65",
+    "geometry": [
+     109773.756120533,
+     15029.71961437816,
+     109773.756120533,
+     15049.71961437815
+    ],
+    "source_evidence_ids": [
+     "QORTUBA_REV_NEW|H471||SEGMENT|0",
+     "QORTUBA_REV_NEW|H477||SEGMENT|0",
+     "QORTUBA_REV_NEW|H2430||SEGMENT|0"
+    ],
+    "release": "AUTHORISED_FOR_SHADOW"
+   },
+   "closure_digest": "3c01667edcfb76252a739648c58a59f83d7a59c98288f33361c6b1da04d874d6",
+   "current_level": "AUTHORISED_FOR_SHADOW",
+   "conditions": {
+    "POLICY_FROZEN": true,
+    "OWNER_OR_SOURCE_CORROBORATION": true,
+    "CROSS_ROUTE_AGREEMENT": "NOT_ACHIEVABLE_THIS_ROUND (REV_NEW has one input route; K1 needs the DWG decode)",
+    "SOURCE_ANCHOR": "NOT_ESTABLISHED",
+    "HUMAN_REVIEW": "PENDING (packet prepared, never self-approved)"
+   },
+   "maximum_level_now": "AUTHORISED_FOR_SHADOW",
+   "review_question": "Is the zero-material closure line [109773.76, 15029.72, 109773.76, 15049.72] (between source parts ['471', '477', '2430']) a correct room separation for the measured topology? ACCEPT / REJECT, with the closure digest"
+  },
+  "H2431": {
+   "closure_id": "TC-5f9f2014f83ab0d4",
+   "kind": "TOPOLOGY_CLOSURE (TS01, zero material)",
+   "record": {
+    "closure_id": "TC-5f9f2014f83ab0d4",
+    "geometry": [
+     109893.4008515468,
+     15029.71961437815,
+     109893.4008515468,
+     15049.71961437814
+    ],
+    "source_evidence_ids": [
+     "QORTUBA_REV_NEW|H2296||SEGMENT|0",
+     "QORTUBA_REV_NEW|H2297||SEGMENT|0",
+     "QORTUBA_REV_NEW|H2431||SEGMENT|0"
+    ],
+    "release": "AUTHORISED_FOR_SHADOW"
+   },
+   "closure_digest": "ec65868d17e37ba82a035102bff289b3a8d8c2cbe95340801111ab1c62d5286e",
+   "current_level": "AUTHORISED_FOR_SHADOW",
+   "conditions": {
+    "POLICY_FROZEN": true,
+    "OWNER_OR_SOURCE_CORROBORATION": true,
+    "CROSS_ROUTE_AGREEMENT": "NOT_ACHIEVABLE_THIS_ROUND (REV_NEW has one input route; K1 needs the DWG decode)",
+    "SOURCE_ANCHOR": "NOT_ESTABLISHED",
+    "HUMAN_REVIEW": "PENDING (packet prepared, never self-approved)"
+   },
+   "maximum_level_now": "AUTHORISED_FOR_SHADOW",
+   "review_question": "Is the zero-material closure line [109893.4, 15029.72, 109893.4, 15049.72] (between source parts ['2296', '2297', '2431']) a correct room separation for the measured topology? ACCEPT / REJECT, with the closure digest"
+  },
+  "I1471": {
+   "kind": "TS01 DOOR STRIP CLOSURE (DOOR_OPENING_CLOSURE_POLICY_V2 offset jambs)",
+   "record": {
+    "opening": "I1471",
+    "closures": [
+     {
+      "source_id": "CLOSURE|I1471|A",
+      "geometry": [
+       109678.0817,
+       15589.7196,
+       109778.0817,
+       15589.7196
+      ]
+     },
+     {
+      "source_id": "CLOSURE|I1471|B",
+      "geometry": [
+       109678.0817,
+       15574.7196,
+       109778.0817,
+       15574.7196
+      ]
+     }
+    ],
+    "opening_record": {
+     "state": "CLOSED",
+     "closure_a": "CLOSURE|I1471|A",
+     "width": 100.0,
+     "closure_b": "CLOSURE|I1471|B"
+    }
+   },
+   "closure_digest": "581633373b225865cd662326aa9d37d0d4a735dfbe38a48a0c97f01d645ad14b",
+   "current_level": "SHADOW (door strips are not release-graded closures)",
+   "conditions": {
+    "POLICY_FROZEN": "YES (R8.16 freeze)",
+    "OWNER_OR_SOURCE_CORROBORATION": "SOURCE (door block geometry, offset jambs)",
+    "CROSS_ROUTE_AGREEMENT": "NOT_ACHIEVABLE_THIS_ROUND",
+    "SOURCE_ANCHOR": "NOT_ESTABLISHED",
+    "HUMAN_REVIEW": "PENDING (packet prepared, never self-approved)"
+   },
+   "maximum_level_now": "SHADOW",
+   "review_question": "Do the two I1471 door-strip closures (offset jambs, CLOSURE|I1471|A / B) bound the real door opening I1471? ACCEPT / REJECT, with the closure digest"
+  }
+ },
+ "self_approved": false,
+ "note": "review material prepared; no level raised"
+}

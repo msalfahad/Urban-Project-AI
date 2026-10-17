@@ -1,0 +1,86 @@
+{
+ "registry": "URBAN_MATERIAL_SPECS",
+ "version": "1.0.0",
+ "rule": "owner-approved defaults for a material type, never universal: a project specification or a product data sheet overrides them, and the stricter lap always wins; every value used is recorded with its source",
+ "specs": [
+  {
+   "spec_id": "MEM-URBAN-DEFAULT-1x10",
+   "kind": "MEMBRANE_SHEET",
+   "name_en": "Sheet waterproofing membrane (Urban default)",
+   "name_ar": "رولات عازل مائي (افتراضي)",
+   "roll_width_m": 1.0,
+   "roll_length_m": 10.0,
+   "roll_area_m2": 10.0,
+   "min_side_lap_m": 0.1,
+   "min_end_lap_m": 0.1,
+   "upturn_rule": "UP-WP-002@2.0.0",
+   "corner_treatment": null,
+   "penetration_detail": null,
+   "system": "SHEET_MEMBRANE (product BY_SPEC)",
+   "authority": "OWNER_APPROVED_DEFAULT",
+   "approval": {
+    "by": "owner (Urban Projects)",
+    "on": "2026-10-12",
+    "source": "M9 S1 addendum, sections 1-3"
+   },
+   "note": "the 0.10 m minimum overlap applies between adjoining strips (side laps) and at transverse seams (end laps); corner, penetration and detailing pieces follow the selected system and are UNRESOLVED until it is named"
+  },
+  {
+   "spec_id": "TILE-120x60",
+   "kind": "TILE",
+   "name_en": "Porcelain 120 x 60 cm",
+   "name_ar": "بورسلان 120×60 سم",
+   "length_m": 1.2,
+   "width_m": 0.6,
+   "thickness_m": null,
+   "pieces_per_box": null,
+   "box_area_m2": null,
+   "pattern": "STRAIGHT",
+   "grain_direction": null,
+   "authority": "OWNER_APPROVED_SIZE",
+   "approval": {
+    "by": "owner (Urban Projects)",
+    "on": "2026-10-12",
+    "source": "M9 S1 addendum, sections 1-3"
+   }
+  },
+  {
+   "spec_id": "TILE-60x60",
+   "kind": "TILE",
+   "name_en": "Porcelain 60 x 60 cm",
+   "name_ar": "بورسلان 60×60 سم",
+   "length_m": 0.6,
+   "width_m": 0.6,
+   "thickness_m": null,
+   "pieces_per_box": null,
+   "box_area_m2": null,
+   "pattern": "STRAIGHT",
+   "grain_direction": null,
+   "authority": "OWNER_APPROVED_SIZE",
+   "approval": {
+    "by": "owner (Urban Projects)",
+    "on": "2026-10-12",
+    "source": "M9 S1 addendum, sections 1-3"
+   }
+  },
+  {
+   "spec_id": "TILE-160x80",
+   "kind": "TILE",
+   "name_en": "Porcelain 160 x 80 cm",
+   "name_ar": "بورسلان 160×80 سم",
+   "length_m": 1.6,
+   "width_m": 0.8,
+   "thickness_m": null,
+   "pieces_per_box": null,
+   "box_area_m2": null,
+   "pattern": "STRAIGHT",
+   "grain_direction": null,
+   "authority": "OWNER_APPROVED_SIZE",
+   "approval": {
+    "by": "owner (Urban Projects)",
+    "on": "2026-10-12",
+    "source": "M9 S1 addendum, sections 1-3"
+   }
+  }
+ ]
+}

@@ -1,0 +1,652 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_CB_OCCURRENCE_CANDIDATES_V1",
+ "rows": [
+  {
+   "occurrence": "CB:GF:CB8:H1695",
+   "type": "CB8",
+   "floor": "GF",
+   "r3_state": "SPAN_COUNT_MISMATCH",
+   "candidate": "band [['ALSENAN_ST7757_DXF|H626||SEGMENT|0'], ['ALSENAN_ST7757_DXF|H683||SEGMENT|0']]",
+   "evidence": [],
+   "contradictions": [
+    "plan length 13.495 m vs schedule 16.90 m",
+    "column-supported spans 2 vs schedule 3"
+   ],
+   "score_factors": {
+    "breadth_mm": {
+     "drawn": 300.0,
+     "schedule": 300.0,
+     "agree": true
+    },
+    "length": {
+     "centreline_m": 13.495,
+     "clear_m": 12.995,
+     "drawn_band_m": 12.733,
+     "schedule_sum_m": 16.9,
+     "agree": false
+    },
+    "collinear_extension_m": 31.37,
+    "supports": {
+     "interior_all": 1,
+     "interior_columns": 1,
+     "kinds": [
+      "COLUMN",
+      "COLUMN",
+      "COLUMN"
+     ],
+     "schedule_spans": 3,
+     "agree": false
+    }
+   },
+   "decision": "NOT_ACCEPTED",
+   "why": "plan length 13.495 m vs schedule 16.90 m; column-supported spans 2 vs schedule 3"
+  },
+  {
+   "occurrence": "CB:GF:CB3:H1171",
+   "type": "CB3",
+   "floor": "GF",
+   "r3_state": "BAND_TYPE_CONFLICT",
+   "candidate": "band [['ALSENAN_ST7757_DXF|H638||SEGMENT|0'], ['ALSENAN_ST7757_DXF|H643||SEGMENT|0']]",
+   "evidence": [
+    "drawn band 10.259 m within 5 % of the schedule 10.50 m (but support-to-support length not measured)"
+   ],
+   "contradictions": [
+    "band also claimed by ['B3'] (two types, one band)",
+    "plan length 10.259 m vs schedule 10.50 m",
+    "support positions not resolvable"
+   ],
+   "score_factors": {
+    "breadth_mm": {
+     "drawn": 200.0,
+     "schedule": 200.0,
+     "agree": true
+    },
+    "length": {
+     "centreline_m": null,
+     "clear_m": null,
+     "drawn_band_m": 10.259,
+     "schedule_sum_m": 10.5,
+     "agree": false
+    },
+    "collinear_extension_m": 18.664
+   },
+   "decision": "NOT_ACCEPTED",
+   "why": "band also claimed by ['B3'] (two types, one band); plan length 10.259 m vs schedule 10.50 m; support positions not resolvable"
+  },
+  {
+   "occurrence": "CB:GF:CB4:H1116",
+   "type": "CB4",
+   "floor": "GF",
+   "r3_state": "MEASURED",
+   "candidate": "band [['ALSENAN_ST7757_DXF|H645||SEGMENT|0'], ['ALSENAN_ST7757_DXF|H648||SEGMENT|0']]",
+   "evidence": [],
+   "contradictions": [
+    "plan length 5.709877 m vs schedule 7.00 m",
+    "support positions not resolvable"
+   ],
+   "score_factors": {
+    "breadth_mm": {
+     "drawn": 200.0,
+     "schedule": 200.0,
+     "agree": true
+    },
+    "length": {
+     "centreline_m": null,
+     "clear_m": 5.709877,
+     "drawn_band_m": 6.274,
+     "schedule_sum_m": 7.0,
+     "agree": false
+    },
+    "collinear_extension_m": 11.445
+   },
+   "decision": "NOT_ACCEPTED",
+   "why": "plan length 5.709877 m vs schedule 7.00 m; support positions not resolvable"
+  },
+  {
+   "occurrence": "CB:GF:CB6:H1148",
+   "type": "CB6",
+   "floor": "GF",
+   "r3_state": "SPAN_COUNT_MISMATCH",
+   "candidate": "band [['ALSENAN_ST7757_DXF|H686||SEGMENT|0'], ['ALSENAN_ST7757_DXF|H687||SEGMENT|0']]",
+   "evidence": [
+    "centreline 10.575 m within 5 % of the schedule 10.70 m",
+    "column-supported span count 2 = schedule spans 2 (Round 2 also cut the band at a non-column ['FACE'] line - not a schedule support)"
+   ],
+   "contradictions": [],
+   "score_factors": {
+    "breadth_mm": {
+     "drawn": 200.0,
+     "schedule": 200.0,
+     "agree": true
+    },
+    "length": {
+     "centreline_m": 10.575,
+     "clear_m": 10.1,
+     "drawn_band_m": 14.8,
+     "schedule_sum_m": 10.7,
+     "agree": true
+    },
+    "supports": {
+     "interior_all": 2,
+     "interior_columns": 1,
+     "kinds": [
+      "BEAM",
+      "FACE",
+      "COLUMN",
+      "COLUMN"
+     ],
+     "schedule_spans": 2,
+     "agree": true
+    }
+   },
+   "decision": "ACCEPTED_STRONG",
+   "why": "centreline 10.575 m within 5 % of the schedule 10.70 m; column-supported span count 2 = schedule spans 2 (Round 2 also cut the band at a non-column ['FACE'] line - not a schedule support)"
+  },
+  {
+   "occurrence": "CB:GF:CB5:H1140",
+   "type": "CB5",
+   "floor": "GF",
+   "r3_state": "SPAN_COUNT_MISMATCH",
+   "candidate": "band [['ALSENAN_ST7757_DXF|H693||SEGMENT|0'], ['ALSENAN_ST7757_DXF|H694||SEGMENT|0', 'ALSENAN_ST7757_DXF|H695||SEGMENT|0', 'ALSENAN_ST7757_DXF|H763||SEGMENT|0']]",
+   "evidence": [],
+   "contradictions": [
+    "plan length 2.449774 m vs schedule 7.00 m",
+    "column-supported spans 1 vs schedule 2"
+   ],
+   "score_factors": {
+    "breadth_mm": {
+     "drawn": 200.0,
+     "schedule": 200.0,
+     "agree": true
+    },
+    "length": {
+     "centreline_m": null,
+     "clear_m": 2.449774,
+     "drawn_band_m": 4.1,
+     "schedule_sum_m": 7.0,
+     "agree": false
+    },
+    "collinear_extension_m": 8.8,
+    "supports": {
+     "interior_all": 0,
+     "interior_columns": 0,
+     "kinds": [
+      "FACE",
+      "BEAM"
+     ],
+     "schedule_spans": 2,
+     "agree": false
+    }
+   },
+   "decision": "NOT_ACCEPTED",
+   "why": "plan length 2.449774 m vs schedule 7.00 m; column-supported spans 1 vs schedule 2"
+  },
+  {
+   "occurrence": "TAG:GF:CB2:H1066",
+   "type": "CB2",
+   "floor": "GF",
+   "r3_state": "NO_BAND_ADJACENT_TO_TAG",
+   "candidate": {
+    "edges": [
+     [
+      "ALSENAN_ST7757_DXF|H661||SEGMENT|0"
+     ],
+     [
+      "ALSENAN_ST7757_DXF|H660||SEGMENT|0"
+     ]
+    ],
+    "breadth_mm": 200.0,
+    "length_m": 1.8,
+    "tag_offset_mm": 3377.7,
+    "tag_within_span": true,
+    "length_vs_schedule": 0.225
+   },
+   "candidates_considered": 18,
+   "evidence": [],
+   "contradictions": [
+    "nearest band 3377.7 mm from the tag, length 1.8 m vs schedule 8.0 m"
+   ],
+   "score_factors": {
+    "top_candidates": [
+     {
+      "edges": [
+       [
+        "ALSENAN_ST7757_DXF|H661||SEGMENT|0"
+       ],
+       [
+        "ALSENAN_ST7757_DXF|H660||SEGMENT|0"
+       ]
+      ],
+      "breadth_mm": 200.0,
+      "length_m": 1.8,
+      "tag_offset_mm": 3377.7,
+      "tag_within_span": true,
+      "length_vs_schedule": 0.225
+     },
+     {
+      "edges": [
+       [
+        "ALSENAN_ST7757_DXF|H651||SEGMENT|0"
+       ],
+       [
+        "ALSENAN_ST7757_DXF|H663||SEGMENT|0"
+       ]
+      ],
+      "breadth_mm": 200.0,
+      "length_m": 1.8,
+      "tag_offset_mm": 5377.7,
+      "tag_within_span": true,
+      "length_vs_schedule": 0.225
+     },
+     {
+      "edges": [
+       [
+        "ALSENAN_ST7757_DXF|H718||SEGMENT|0"
+       ],
+       [
+        "ALSENAN_ST7757_DXF|H1123||SEGMENT|0"
+       ]
+      ],
+      "breadth_mm": 200.0,
+      "length_m": 6.741,
+      "tag_offset_mm": 7827.7,
+      "tag_within_span": true,
+      "length_vs_schedule": 0.843
+     }
+    ]
+   },
+   "decision": "UNRESOLVED",
+   "why": "nearest band 3377.7 mm from the tag, length 1.8 m vs schedule 8.0 m"
+  },
+  {
+   "occurrence": "TAG:GF:CB2:H1067",
+   "type": "CB2",
+   "floor": "GF",
+   "r3_state": "NO_BAND_ADJACENT_TO_TAG",
+   "candidate": {
+    "edges": [
+     [
+      "ALSENAN_ST7757_DXF|H1077||SEGMENT|0"
+     ],
+     [
+      "ALSENAN_ST7757_DXF|H635||SEGMENT|0"
+     ]
+    ],
+    "breadth_mm": 200.0,
+    "length_m": 3.75,
+    "tag_offset_mm": 2177.7,
+    "tag_within_span": true,
+    "length_vs_schedule": 0.469
+   },
+   "candidates_considered": 18,
+   "evidence": [],
+   "contradictions": [
+    "nearest band 2177.7 mm from the tag, length 3.75 m vs schedule 8.0 m"
+   ],
+   "score_factors": {
+    "top_candidates": [
+     {
+      "edges": [
+       [
+        "ALSENAN_ST7757_DXF|H1077||SEGMENT|0"
+       ],
+       [
+        "ALSENAN_ST7757_DXF|H635||SEGMENT|0"
+       ]
+      ],
+      "breadth_mm": 200.0,
+      "length_m": 3.75,
+      "tag_offset_mm": 2177.7,
+      "tag_within_span": true,
+      "length_vs_schedule": 0.469
+     },
+     {
+      "edges": [
+       [
+        "ALSENAN_ST7757_DXF|H718||SEGMENT|0"
+       ],
+       [
+        "ALSENAN_ST7757_DXF|H1123||SEGMENT|0"
+       ]
+      ],
+      "breadth_mm": 200.0,
+      "length_m": 6.741,
+      "tag_offset_mm": 7827.7,
+      "tag_within_span": true,
+      "length_vs_schedule": 0.843
+     },
+     {
+      "edges": [
+       [
+        "ALSENAN_ST7757_DXF|H638||SEGMENT|0"
+       ],
+       [
+        "ALSENAN_ST7757_DXF|H643||SEGMENT|0"
+       ]
+      ],
+      "breadth_mm": 200.0,
+      "length_m": 10.259,
+      "tag_offset_mm": 11977.7,
+      "tag_within_span": true,
+      "length_vs_schedule": 1.282
+     }
+    ]
+   },
+   "decision": "UNRESOLVED",
+   "why": "nearest band 2177.7 mm from the tag, length 3.75 m vs schedule 8.0 m"
+  },
+  {
+   "occurrence": "TAG:GF:CB5:H1141",
+   "type": "CB5",
+   "floor": "GF",
+   "r3_state": "NO_BAND_ADJACENT_TO_TAG",
+   "candidate": {
+    "edges": [
+     [
+      "ALSENAN_ST7757_DXF|H696||SEGMENT|0"
+     ],
+     [
+      "ALSENAN_ST7757_DXF|H693||SEGMENT|0"
+     ]
+    ],
+    "breadth_mm": 200.0,
+    "length_m": 8.4,
+    "tag_offset_mm": 425.3,
+    "tag_within_span": true,
+    "length_vs_schedule": 1.2
+   },
+   "candidates_considered": 16,
+   "evidence": [],
+   "contradictions": [
+    "nearest band 425.3 mm from the tag, length 8.4 m vs schedule 7.0 m"
+   ],
+   "score_factors": {
+    "top_candidates": [
+     {
+      "edges": [
+       [
+        "ALSENAN_ST7757_DXF|H696||SEGMENT|0"
+       ],
+       [
+        "ALSENAN_ST7757_DXF|H693||SEGMENT|0"
+       ]
+      ],
+      "breadth_mm": 200.0,
+      "length_m": 8.4,
+      "tag_offset_mm": 425.3,
+      "tag_within_span": true,
+      "length_vs_schedule": 1.2
+     },
+     {
+      "edges": [
+       [
+        "ALSENAN_ST7757_DXF|H1178||SEGMENT|0"
+       ],
+       [
+        "ALSENAN_ST7757_DXF|H1177||SEGMENT|0"
+       ]
+      ],
+      "breadth_mm": 200.0,
+      "length_m": 4.5,
+      "tag_offset_mm": 2774.7,
+      "tag_within_span": true,
+      "length_vs_schedule": 0.643
+     },
+     {
+      "edges": [
+       [
+        "ALSENAN_ST7757_DXF|H645||SEGMENT|0"
+       ],
+       [
+        "ALSENAN_ST7757_DXF|H648||SEGMENT|0"
+       ]
+      ],
+      "breadth_mm": 200.0,
+      "length_m": 6.274,
+      "tag_offset_mm": 4825.3,
+      "tag_within_span": true,
+      "length_vs_schedule": 0.896
+     }
+    ]
+   },
+   "decision": "NOT_ACCEPTED",
+   "why": "nearest band 425.3 mm from the tag, length 8.4 m vs schedule 7.0 m"
+  },
+  {
+   "occurrence": "CB:1F:CB12:H1758",
+   "type": "CB12",
+   "floor": "1F",
+   "r3_state": "SPAN_COUNT_MISMATCH",
+   "candidate": "band [['ALSENAN_ST7757_DXF|H1502||SEGMENT|0'], ['ALSENAN_ST7757_DXF|H1503||SEGMENT|0']]",
+   "evidence": [
+    "drawn band 11.550 m within 5 % of the schedule 11.60 m (but support-to-support length not measured)"
+   ],
+   "contradictions": [
+    "plan length 5.275 m vs schedule 11.60 m",
+    "column-supported spans 1 vs schedule 2"
+   ],
+   "score_factors": {
+    "breadth_mm": {
+     "drawn": 250.0,
+     "schedule": 250.0,
+     "agree": true
+    },
+    "length": {
+     "centreline_m": null,
+     "clear_m": 5.275,
+     "drawn_band_m": 11.55,
+     "schedule_sum_m": 11.6,
+     "agree": false
+    },
+    "collinear_extension_m": 11.8,
+    "supports": {
+     "interior_all": 0,
+     "interior_columns": 0,
+     "kinds": [
+      "COLUMN",
+      "FACE"
+     ],
+     "schedule_spans": 2,
+     "agree": false
+    }
+   },
+   "decision": "NOT_ACCEPTED",
+   "why": "plan length 5.275 m vs schedule 11.60 m; column-supported spans 1 vs schedule 2"
+  },
+  {
+   "occurrence": "TAG:1F:CB12:H1757",
+   "type": "CB12",
+   "floor": "1F",
+   "r3_state": "NO_BAND_ADJACENT_TO_TAG",
+   "candidate": {
+    "edges": [
+     [
+      "ALSENAN_ST7757_DXF|H1502||SEGMENT|0"
+     ],
+     [
+      "ALSENAN_ST7757_DXF|H1503||SEGMENT|0"
+     ]
+    ],
+    "breadth_mm": 250.0,
+    "length_m": 11.55,
+    "tag_offset_mm": 645.6,
+    "tag_within_span": true,
+    "length_vs_schedule": 0.996
+   },
+   "candidates_considered": 2,
+   "evidence": [
+    "a 250 mm band of length 11.55 m (schedule 11.6 m) lies 645.6 mm from the tag"
+   ],
+   "contradictions": [
+    "nearest band 645.6 mm from the tag, length 11.55 m vs schedule 11.6 m"
+   ],
+   "score_factors": {
+    "top_candidates": [
+     {
+      "edges": [
+       [
+        "ALSENAN_ST7757_DXF|H1502||SEGMENT|0"
+       ],
+       [
+        "ALSENAN_ST7757_DXF|H1503||SEGMENT|0"
+       ]
+      ],
+      "breadth_mm": 250.0,
+      "length_m": 11.55,
+      "tag_offset_mm": 645.6,
+      "tag_within_span": true,
+      "length_vs_schedule": 0.996
+     },
+     {
+      "edges": [
+       [
+        "ALSENAN_ST7757_DXF|H1507||SEGMENT|0"
+       ],
+       [
+        "ALSENAN_ST7757_DXF|H1528||SEGMENT|0"
+       ]
+      ],
+      "breadth_mm": 250.0,
+      "length_m": 0.716,
+      "tag_offset_mm": 15315.6,
+      "tag_within_span": false,
+      "length_vs_schedule": 0.062
+     }
+    ]
+   },
+   "decision": "NOT_ACCEPTED",
+   "why": "nearest band 645.6 mm from the tag, length 11.55 m vs schedule 11.6 m"
+  },
+  {
+   "occurrence": "TAG:1F:CB10:H1815",
+   "type": "CB10",
+   "floor": "1F",
+   "r3_state": "NO_BAND_ADJACENT_TO_TAG",
+   "candidate": {
+    "edges": [
+     [
+      "ALSENAN_ST7757_DXF|H1502||SEGMENT|0"
+     ],
+     [
+      "ALSENAN_ST7757_DXF|H1503||SEGMENT|0"
+     ]
+    ],
+    "breadth_mm": 250.0,
+    "length_m": 11.55,
+    "tag_offset_mm": 19495.1,
+    "tag_within_span": true,
+    "length_vs_schedule": 1.627
+   },
+   "candidates_considered": 2,
+   "evidence": [],
+   "contradictions": [
+    "nearest band 19495.1 mm from the tag, length 11.55 m vs schedule 7.1 m"
+   ],
+   "score_factors": {
+    "top_candidates": [
+     {
+      "edges": [
+       [
+        "ALSENAN_ST7757_DXF|H1502||SEGMENT|0"
+       ],
+       [
+        "ALSENAN_ST7757_DXF|H1503||SEGMENT|0"
+       ]
+      ],
+      "breadth_mm": 250.0,
+      "length_m": 11.55,
+      "tag_offset_mm": 19495.1,
+      "tag_within_span": true,
+      "length_vs_schedule": 1.627
+     },
+     {
+      "edges": [
+       [
+        "ALSENAN_ST7757_DXF|H1507||SEGMENT|0"
+       ],
+       [
+        "ALSENAN_ST7757_DXF|H1528||SEGMENT|0"
+       ]
+      ],
+      "breadth_mm": 250.0,
+      "length_m": 0.716,
+      "tag_offset_mm": 4825.1,
+      "tag_within_span": false,
+      "length_vs_schedule": 0.101
+     }
+    ]
+   },
+   "decision": "UNRESOLVED",
+   "why": "nearest band 19495.1 mm from the tag, length 11.55 m vs schedule 7.1 m"
+  },
+  {
+   "occurrence": "TAG:1F:CB10:H1816",
+   "type": "CB10",
+   "floor": "1F",
+   "r3_state": "NO_BAND_ADJACENT_TO_TAG",
+   "candidate": {
+    "edges": [
+     [
+      "ALSENAN_ST7757_DXF|H1502||SEGMENT|0"
+     ],
+     [
+      "ALSENAN_ST7757_DXF|H1503||SEGMENT|0"
+     ]
+    ],
+    "breadth_mm": 250.0,
+    "length_m": 11.55,
+    "tag_offset_mm": 19495.1,
+    "tag_within_span": true,
+    "length_vs_schedule": 1.627
+   },
+   "candidates_considered": 2,
+   "evidence": [],
+   "contradictions": [
+    "nearest band 19495.1 mm from the tag, length 11.55 m vs schedule 7.1 m"
+   ],
+   "score_factors": {
+    "top_candidates": [
+     {
+      "edges": [
+       [
+        "ALSENAN_ST7757_DXF|H1502||SEGMENT|0"
+       ],
+       [
+        "ALSENAN_ST7757_DXF|H1503||SEGMENT|0"
+       ]
+      ],
+      "breadth_mm": 250.0,
+      "length_m": 11.55,
+      "tag_offset_mm": 19495.1,
+      "tag_within_span": true,
+      "length_vs_schedule": 1.627
+     },
+     {
+      "edges": [
+       [
+        "ALSENAN_ST7757_DXF|H1507||SEGMENT|0"
+       ],
+       [
+        "ALSENAN_ST7757_DXF|H1528||SEGMENT|0"
+       ]
+      ],
+      "breadth_mm": 250.0,
+      "length_m": 0.716,
+      "tag_offset_mm": 4825.1,
+      "tag_within_span": false,
+      "length_vs_schedule": 0.101
+     }
+    ]
+   },
+   "decision": "UNRESOLVED",
+   "why": "nearest band 19495.1 mm from the tag, length 11.55 m vs schedule 7.1 m"
+  }
+ ],
+ "summary": {
+  "NOT_ACCEPTED": 7,
+  "ACCEPTED_STRONG": 1,
+  "UNRESOLVED": 4
+ },
+ "rule": "breadth, length vs schedule sum (<= 5 %), column-supported span count, tag position, collinear extension; ACCEPTED_STRONG only with no contradiction - weak matches are never auto-accepted",
+ "nts_cutoffs": "PROVISIONAL_NTS_GEOMETRY kept for every template extension"
+}

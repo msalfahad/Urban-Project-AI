@@ -1,0 +1,14 @@
+DIRECTION,SUBJECT,S9_RELEASED_M3,S9_COMPONENTS,S9_LANES,EXPLANATION,V3B
+S9 family with no V3b line,WATER_TANK_ROOF,2.4543,4,"{""NOT_IN_SOURCE"": 2, ""RELEASED_FROZEN_STAGE"": 2}",no V3b concrete line (S8.4 releases 2.454 m3; V3b may hold it inside C-SLAB-2F),
+S9 family with no V3b line,LIFT,0,11,"{""BLOCKED_UNQUANTIFIED"": 1, ""EXCLUDED_OWNED_BY_OTHER_FAMILY"": 1, ""INDICATIVE_ONLY_NOT_RELEASED"": 4, ""NOT_APPLICABLE"": 4, ""NOT_IN_SOURCE"": 1}",no V3b line for the pit walls or tie beam (V3b's C-FTG holds FF only); S8.8 keeps them blocked / indicative,
+S9 family with no V3b line,PARAPETS,0,3,"{""BLOCKED_UNQUANTIFIED"": 3}",no V3b line; S9 blocked (geometry not printed),
+S9 family with no V3b line,OTHER,0,3,"{""NOT_IN_SOURCE"": 3}","typical-only details (ribbed slab, casement, beam opening): no V3b line, no S9 quantity",
+S9 component with no V3b line,sunken-slab drops,,6,"{""BLOCKED_UNQUANTIFIED"": 6}",V3b's slab plates hold no drop or step; S9 registers each blocked (drop depth not located),
+S9 release with no V3b technical value,stair landing plates,0.516583,,,S8.7's three plates are released; V3b's stair line has no technical quantity,B0031 C-STAIR technical BLOCKED
+V3b line with no S9 row of its own,B0013 C-JNT-GF,,,,"inside S9's columns (the column owns the joint, S9-MC1)",COMPUTED 1.878 m3
+V3b line with no S9 row of its own,B0020 C-JNT-1F,,,,inside S9's columns (S9-MC1),COMPUTED 0.921 m3
+V3b line with no S9 row of its own,B0027 C-JNT-2F,,,,inside S9's columns (S9-MC1),COMPUTED 0.415 m3
+V3b line with no S9 row of its own,B0042 C-BLD-FULL,,,,owner method; S9 blocked (no printed thickness or projection),COMPUTED 28.828 m3
+V3b line with no S9 row of its own,B0039 C-POOL-BLD,,,,pool blinding: S8.2 blocked,COMPUTED 0.795 m3
+V3b line with no S9 row of its own,B0040 C-SWALL,,,,structural walls: no S9 family (F-01),BLOCKED - m3
+R5 context,R5 stair register,,,,architectural finish register; S9 carries S8.7 unchanged and S8.7C's post-freeze already classified R5's riser method (METHOD + MISSED_OBJECT); not comparable as a quantity,12 straight tread sets; riser height BLOCKED

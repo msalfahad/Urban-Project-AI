@@ -1,0 +1,35 @@
+{
+ "note": "informational: unit-mass method D2/162 (was exact density), section transitions blocked, rate notation by owner rule",
+ "project_kg": {
+  "blocked": {
+   "delta": 0.313,
+   "s3": 258.195,
+   "s3_1": 258.508
+  },
+  "lower_bound": {
+   "delta": 3.035,
+   "s3": 2506.871,
+   "s3_1": 2509.906
+  },
+  "provisional": {
+   "delta": 1.638,
+   "s3": 1353.176,
+   "s3_1": 1354.814
+  },
+  "total": {
+   "delta": 9.054,
+   "s3": 7479.151,
+   "s3_1": 7488.205
+  },
+  "unquantified_blocked_parts": {
+   "delta": 44.0,
+   "s3": 7.0,
+   "s3_1": 51.0
+  },
+  "verified": {
+   "delta": 4.069,
+   "s3": 3360.909,
+   "s3_1": 3364.978
+  }
+ }
+}

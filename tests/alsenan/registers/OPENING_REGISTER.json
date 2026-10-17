@@ -1,0 +1,462 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_OPENING_REGISTER_V1",
+ "door_signature_candidates": [
+  {
+   "floor": "GF",
+   "occurrence": "1023",
+   "block": "D120",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 890.0,
+   "leaf_width_mm_provisional": 890.0,
+   "hinge": [
+    -142699.856,
+    -791993.54
+   ],
+   "insert_layer": "S-COL.BON",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "350",
+   "block": "D120",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 890.0,
+   "leaf_width_mm_provisional": 890.0,
+   "hinge": [
+    -159711.982,
+    -798793.54
+   ],
+   "insert_layer": "4",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "402",
+   "block": "D120",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 890.0,
+   "leaf_width_mm_provisional": 890.0,
+   "hinge": [
+    -149639.856,
+    -804933.54
+   ],
+   "insert_layer": "4",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "414",
+   "block": "D315",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 690.0,
+   "leaf_width_mm_provisional": 690.0,
+   "hinge": [
+    -152339.856,
+    -803923.807
+   ],
+   "insert_layer": "4",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "437",
+   "block": "d220",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 790.0,
+   "leaf_width_mm_provisional": 790.0,
+   "hinge": [
+    -152649.856,
+    -800593.54
+   ],
+   "insert_layer": "4",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "495",
+   "block": "D315",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 690.0,
+   "leaf_width_mm_provisional": 690.0,
+   "hinge": [
+    -155756.241,
+    -802843.54
+   ],
+   "insert_layer": "4",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "711",
+   "block": "D120",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 890.0,
+   "leaf_width_mm_provisional": 890.0,
+   "hinge": [
+    -142699.856,
+    -797193.54
+   ],
+   "insert_layer": "4",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "728",
+   "block": "D120",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 890.0,
+   "leaf_width_mm_provisional": 890.0,
+   "hinge": [
+    -129069.856,
+    -790654.169
+   ],
+   "insert_layer": "4",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "754",
+   "block": "D115",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 890.0,
+   "leaf_width_mm_provisional": 890.0,
+   "hinge": [
+    -137520.798,
+    -795993.54
+   ],
+   "insert_layer": "4",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "800",
+   "block": "D315",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 690.0,
+   "leaf_width_mm_provisional": 690.0,
+   "hinge": [
+    -139006.441,
+    -793603.672
+   ],
+   "insert_layer": "4",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "801",
+   "block": "D315",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 690.0,
+   "leaf_width_mm_provisional": 690.0,
+   "hinge": [
+    -139259.82,
+    -793857.051
+   ],
+   "insert_layer": "4",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "825",
+   "block": "D315",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 690.0,
+   "leaf_width_mm_provisional": 690.0,
+   "hinge": [
+    -142229.856,
+    -793743.54
+   ],
+   "insert_layer": "S-COL.BON",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "830",
+   "block": "D120",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 890.0,
+   "leaf_width_mm_provisional": 890.0,
+   "hinge": [
+    -145440.745,
+    -800593.54
+   ],
+   "insert_layer": "S-COL.BON",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3054",
+   "block": "D315",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 690.0,
+   "leaf_width_mm_provisional": 690.0,
+   "hinge": [
+    -181572.511,
+    -793624.28
+   ],
+   "insert_layer": "4",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3055",
+   "block": "D215",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 790.0,
+   "leaf_width_mm_provisional": 790.0,
+   "hinge": [
+    -178925.196,
+    -798243.54
+   ],
+   "insert_layer": "4",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3090",
+   "block": "D315",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 690.0,
+   "leaf_width_mm_provisional": 690.0,
+   "hinge": [
+    -177672.511,
+    -796312.8
+   ],
+   "insert_layer": "4",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3096",
+   "block": "D215",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 790.0,
+   "leaf_width_mm_provisional": 790.0,
+   "hinge": [
+    -179889.743,
+    -798243.54
+   ],
+   "insert_layer": "4",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3098",
+   "block": "d220",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 790.0,
+   "leaf_width_mm_provisional": 790.0,
+   "hinge": [
+    -184017.511,
+    -796993.54
+   ],
+   "insert_layer": "4",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3115",
+   "block": "D315",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 690.0,
+   "leaf_width_mm_provisional": 690.0,
+   "hinge": [
+    -192379.678,
+    -801143.54
+   ],
+   "insert_layer": "4",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3118",
+   "block": "D315",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 690.0,
+   "leaf_width_mm_provisional": 690.0,
+   "hinge": [
+    -190042.511,
+    -803453.695
+   ],
+   "insert_layer": "4",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3121",
+   "block": "D115",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 890.0,
+   "leaf_width_mm_provisional": 890.0,
+   "hinge": [
+    -190042.511,
+    -796678.654
+   ],
+   "insert_layer": "4",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3122",
+   "block": "D115",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 890.0,
+   "leaf_width_mm_provisional": 890.0,
+   "hinge": [
+    -189743.991,
+    -798593.54
+   ],
+   "insert_layer": "4",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "4532",
+   "block": "D315",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 690.0,
+   "leaf_width_mm_provisional": 690.0,
+   "hinge": [
+    -183855.784,
+    -793793.54
+   ],
+   "insert_layer": "4",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "2F",
+   "occurrence": "4794",
+   "block": "D115",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 890.0,
+   "leaf_width_mm_provisional": 890.0,
+   "hinge": [
+    -234269.357,
+    -798593.54
+   ],
+   "insert_layer": "4",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "2F",
+   "occurrence": "4795",
+   "block": "D315",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 690.0,
+   "leaf_width_mm_provisional": 690.0,
+   "hinge": [
+    -230195.166,
+    -794684.242
+   ],
+   "insert_layer": "4",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  },
+  {
+   "floor": "2F",
+   "occurrence": "4802",
+   "block": "d220",
+   "leaf_layer": [
+    "D"
+   ],
+   "swing_radius_native": 790.0,
+   "leaf_width_mm_provisional": 790.0,
+   "hinge": [
+    -230045.166,
+    -798281.934
+   ],
+   "insert_layer": "4",
+   "status": "DOOR_SIGNATURE_CANDIDATE",
+   "not_admitted_because": "no DOOR layer role / reviewed claim (GR-02 needs signature AND role)"
+  }
+ ],
+ "counts": {
+  "GF": 13,
+  "1F": 10,
+  "2F": 3
+ },
+ "by_block": {
+  "D115": 4,
+  "D120": 6,
+  "D215": 2,
+  "D315": 11,
+  "d220": 3
+ },
+ "windows": "NOT_ESTABLISHED (no glazing role)",
+ "admitted_openings": 0,
+ "basis": "GR.door_signature (one swing arc < pi) WITHOUT a DOOR layer role: candidate only; heights / materials NOT_ESTABLISHED (no schedule, sections raster)"
+}

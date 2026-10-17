@@ -1,0 +1,5670 @@
+{
+ "bands": [
+  {
+   "band_id": "TIE_L_LE_50",
+   "drawn_bars_per_face": 2,
+   "hi_incl": true,
+   "hi_mm": 500,
+   "links": [
+    {
+     "bar_range": [
+      0,
+      1
+     ]
+    }
+   ],
+   "lo_incl": false,
+   "lo_mm": null,
+   "printed": "L ≤ 50cm",
+   "reading": "link bar ranges from the detail sketch (topology only); link dimensions are derived from section, cover and bar positions, not from sketch proportions",
+   "source_ref": {
+    "drawing": "ST7757.dxf",
+    "page": 9,
+    "sketch_handles": [
+     "1BA8"
+    ],
+    "tie_handles": [
+     "1BAB"
+    ]
+   },
+   "topology": "ONE_LINK"
+  },
+  {
+   "band_id": "TIE_50_LT_L_LT_80",
+   "drawn_bars_per_face": 4,
+   "hi_incl": false,
+   "hi_mm": 800,
+   "links": [
+    {
+     "bar_range": [
+      0,
+      2
+     ]
+    },
+    {
+     "bar_range": [
+      1,
+      3
+     ]
+    }
+   ],
+   "lo_incl": false,
+   "lo_mm": 500,
+   "printed": "50cm < L < 80cm",
+   "reading": "link bar ranges from the detail sketch (topology only); link dimensions are derived from section, cover and bar positions, not from sketch proportions",
+   "source_ref": {
+    "drawing": "ST7757.dxf",
+    "page": 9,
+    "sketch_handles": [
+     "1BCA",
+     "1BCB"
+    ],
+    "tie_handles": [
+     "1BBA",
+     "1BBF"
+    ]
+   },
+   "topology": "TWO_OVERLAPPING_LINKS"
+  },
+  {
+   "band_id": "TIE_80_LT_L_LT_120",
+   "drawn_bars_per_face": 6,
+   "hi_incl": false,
+   "hi_mm": 1200,
+   "links": [
+    {
+     "bar_range": [
+      0,
+      4
+     ]
+    },
+    {
+     "bar_range": [
+      1,
+      5
+     ]
+    },
+    {
+     "bar_range": [
+      2,
+      3
+     ]
+    }
+   ],
+   "lo_incl": false,
+   "lo_mm": 800,
+   "printed": "80cm < L < 120cm",
+   "reading": "link bar ranges from the detail sketch (topology only); link dimensions are derived from section, cover and bar positions, not from sketch proportions",
+   "source_ref": {
+    "drawing": "ST7757.dxf",
+    "page": 9,
+    "sketch_handles": [
+     "1BD2",
+     "1BE7",
+     "1BE8"
+    ],
+    "tie_handles": [
+     "1BB6",
+     "1BD3",
+     "1BDA"
+    ]
+   },
+   "topology": "MULTI_LINK_SET"
+  }
+ ],
+ "bar_arrangement": {
+  "authority": "p.9 detail sketches draw bars on the long faces only (corner + long-face bars); internal bar positions by equal spacing (method)",
+  "method": "CORNERS_PLUS_LONG_FACES"
+ },
+ "cover": {
+  "authority": "CROSS_VERIFIED_SOURCE",
+  "cover_mm": 25,
+  "rule_id": "COVER_GENERAL_25MM",
+  "source_ref": "P8-N22-COVER-GENERAL"
+ },
+ "hook_method": {
+  "authority": "URBAN_FALLBACK (ACI 318 135-degree tie hook) - PROVISIONAL_ENGINEERING_METHOD, not printed on ST7757",
+  "extension_d": 6,
+  "hooks_per_link": 2,
+  "method_id": "URBAN-PROV-HOOK135-6D-75",
+  "min_extension_mm": 75
+ },
+ "rows": [
+  {
+   "across_mm": 242,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1368.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "FOUNDATION",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C-X01-Y01-FOUNDATION",
+   "section_mm": [
+    300,
+    500
+   ],
+   "segment_id": "SEG-COL-C-X01-Y01-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1368.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "FOUNDATION",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C-X01-Y05-FOUNDATION",
+   "section_mm": [
+    300,
+    500
+   ],
+   "segment_id": "SEG-COL-C-X01-Y05-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1368.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "FOUNDATION",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C-X02-Y05-FOUNDATION",
+   "section_mm": [
+    300,
+    500
+   ],
+   "segment_id": "SEG-COL-C-X02-Y05-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1368.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "FOUNDATION",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C-X06-Y01-FOUNDATION",
+   "section_mm": [
+    300,
+    500
+   ],
+   "segment_id": "SEG-COL-C-X06-Y01-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1368.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "FOUNDATION",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C-X16-Y01-FOUNDATION",
+   "section_mm": [
+    300,
+    500
+   ],
+   "segment_id": "SEG-COL-C-X16-Y01-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1368.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "FOUNDATION",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C1-X09-Y09-FOUNDATION",
+   "section_mm": [
+    300,
+    500
+   ],
+   "segment_id": "SEG-COL-C1-X09-Y09-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C1"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 487.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    195.5,
+    350.0,
+    504.5,
+    659.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1459.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C10-X15-Y01-FOUNDATION",
+   "section_mm": [
+    300,
+    700
+   ],
+   "segment_id": "SEG-COL-C10-X15-Y01-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C10"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 487.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    195.5,
+    350.0,
+    504.5,
+    659.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    4
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1459.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C10-X15-Y01-FOUNDATION",
+   "section_mm": [
+    300,
+    700
+   ],
+   "segment_id": "SEG-COL-C10-X15-Y01-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C10"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 872.333,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    210.667,
+    380.333,
+    550.0,
+    719.667,
+    889.333,
+    1059.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    5
+   ],
+   "bars_restrained": 12,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 2228.667,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C11-X06-Y04-FOUNDATION",
+   "section_mm": [
+    300,
+    1100
+   ],
+   "segment_id": "SEG-COL-C11-X06-Y04-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C11"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 872.333,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    210.667,
+    380.333,
+    550.0,
+    719.667,
+    889.333,
+    1059.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    6
+   ],
+   "bars_restrained": 12,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 2228.667,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C11-X06-Y04-FOUNDATION",
+   "section_mm": [
+    300,
+    1100
+   ],
+   "segment_id": "SEG-COL-C11-X06-Y04-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C11"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 363.333,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    210.667,
+    380.333,
+    550.0,
+    719.667,
+    889.333,
+    1059.0
+   ],
+   "bar_range_per_long_face": [
+    2,
+    4
+   ],
+   "bars_restrained": 6,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1210.667,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-3",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C11-X06-Y04-FOUNDATION",
+   "section_mm": [
+    300,
+    1100
+   ],
+   "segment_id": "SEG-COL-C11-X06-Y04-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C11"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 872.333,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    210.667,
+    380.333,
+    550.0,
+    719.667,
+    889.333,
+    1059.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    5
+   ],
+   "bars_restrained": 12,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 2228.667,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+   "section_mm": [
+    300,
+    1100
+   ],
+   "segment_id": "SEG-COL-C11-X?-Y01@17913-7462-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C11"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 872.333,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    210.667,
+    380.333,
+    550.0,
+    719.667,
+    889.333,
+    1059.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    6
+   ],
+   "bars_restrained": 12,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 2228.667,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+   "section_mm": [
+    300,
+    1100
+   ],
+   "segment_id": "SEG-COL-C11-X?-Y01@17913-7462-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C11"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 363.333,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    210.667,
+    380.333,
+    550.0,
+    719.667,
+    889.333,
+    1059.0
+   ],
+   "bar_range_per_long_face": [
+    2,
+    4
+   ],
+   "bars_restrained": 6,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1210.667,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-3",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+   "section_mm": [
+    300,
+    1100
+   ],
+   "segment_id": "SEG-COL-C11-X?-Y01@17913-7462-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C11"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1368.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "FOUNDATION",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C2-X08-Y10-FOUNDATION",
+   "section_mm": [
+    300,
+    500
+   ],
+   "segment_id": "SEG-COL-C2-X08-Y10-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C2"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1368.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "FOUNDATION",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C2-X09-Y07-FOUNDATION",
+   "section_mm": [
+    300,
+    500
+   ],
+   "segment_id": "SEG-COL-C2-X09-Y07-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C2"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1368.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "FOUNDATION",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C2-X09-Y10-FOUNDATION",
+   "section_mm": [
+    300,
+    500
+   ],
+   "segment_id": "SEG-COL-C2-X09-Y10-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C2"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1368.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "FOUNDATION",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C2-X10-Y09-FOUNDATION",
+   "section_mm": [
+    300,
+    500
+   ],
+   "segment_id": "SEG-COL-C2-X10-Y09-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C2"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1368.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "FOUNDATION",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C3-X03-Y04-FOUNDATION",
+   "section_mm": [
+    300,
+    500
+   ],
+   "segment_id": "SEG-COL-C3-X03-Y04-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C3"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1368.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "FOUNDATION",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C3-X04-Y01-FOUNDATION",
+   "section_mm": [
+    300,
+    500
+   ],
+   "segment_id": "SEG-COL-C3-X04-Y01-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C3"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1368.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "FOUNDATION",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C3-X05-Y02-FOUNDATION",
+   "section_mm": [
+    300,
+    500
+   ],
+   "segment_id": "SEG-COL-C3-X05-Y02-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C3"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1368.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "FOUNDATION",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C3-X08-Y09-FOUNDATION",
+   "section_mm": [
+    300,
+    500
+   ],
+   "segment_id": "SEG-COL-C3-X08-Y09-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C3"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1368.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "FOUNDATION",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C3-X12-Y01-FOUNDATION",
+   "section_mm": [
+    300,
+    500
+   ],
+   "segment_id": "SEG-COL-C3-X12-Y01-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C3"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1368.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "FOUNDATION",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C3-X16-Y06-FOUNDATION",
+   "section_mm": [
+    300,
+    500
+   ],
+   "segment_id": "SEG-COL-C3-X16-Y06-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C3"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1368.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "FOUNDATION",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C4-X13-Y10-FOUNDATION",
+   "section_mm": [
+    300,
+    500
+   ],
+   "segment_id": "SEG-COL-C4-X13-Y10-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C4"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1368.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "FOUNDATION",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C4-X15-Y10-FOUNDATION",
+   "section_mm": [
+    300,
+    500
+   ],
+   "segment_id": "SEG-COL-C4-X15-Y10-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C4"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 412.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    170.5,
+    300.0,
+    429.5,
+    559.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1309.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C5-X05-Y04-FOUNDATION",
+   "section_mm": [
+    300,
+    600
+   ],
+   "segment_id": "SEG-COL-C5-X05-Y04-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C5"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 412.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    170.5,
+    300.0,
+    429.5,
+    559.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    4
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1309.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C5-X05-Y04-FOUNDATION",
+   "section_mm": [
+    300,
+    600
+   ],
+   "segment_id": "SEG-COL-C5-X05-Y04-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C5"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 412.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    170.5,
+    300.0,
+    429.5,
+    559.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1309.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C5-X11-Y10-FOUNDATION",
+   "section_mm": [
+    300,
+    600
+   ],
+   "segment_id": "SEG-COL-C5-X11-Y10-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C5"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 412.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    170.5,
+    300.0,
+    429.5,
+    559.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    4
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1309.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C5-X11-Y10-FOUNDATION",
+   "section_mm": [
+    300,
+    600
+   ],
+   "segment_id": "SEG-COL-C5-X11-Y10-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C5"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 412.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    170.5,
+    300.0,
+    429.5,
+    559.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1309.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C5-X14-Y02-FOUNDATION",
+   "section_mm": [
+    300,
+    600
+   ],
+   "segment_id": "SEG-COL-C5-X14-Y02-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C5"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 412.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    170.5,
+    300.0,
+    429.5,
+    559.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    4
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1309.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C5-X14-Y02-FOUNDATION",
+   "section_mm": [
+    300,
+    600
+   ],
+   "segment_id": "SEG-COL-C5-X14-Y02-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C5"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 487.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    195.5,
+    350.0,
+    504.5,
+    659.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1459.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C6-X08-Y04-FOUNDATION",
+   "section_mm": [
+    300,
+    700
+   ],
+   "segment_id": "SEG-COL-C6-X08-Y04-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C6"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 487.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    195.5,
+    350.0,
+    504.5,
+    659.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    4
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1459.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C6-X08-Y04-FOUNDATION",
+   "section_mm": [
+    300,
+    700
+   ],
+   "segment_id": "SEG-COL-C6-X08-Y04-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C6"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 598.4,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    184.6,
+    328.2,
+    471.8,
+    615.4,
+    759.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    4
+   ],
+   "bars_restrained": 10,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1680.8,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C7-X07-Y?@15888-16162-FOUNDATION",
+   "section_mm": [
+    300,
+    800
+   ],
+   "segment_id": "SEG-COL-C7-X07-Y?@15888-16162-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C7"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 598.4,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    184.6,
+    328.2,
+    471.8,
+    615.4,
+    759.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    5
+   ],
+   "bars_restrained": 10,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1680.8,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C7-X07-Y?@15888-16162-FOUNDATION",
+   "section_mm": [
+    300,
+    800
+   ],
+   "segment_id": "SEG-COL-C7-X07-Y?@15888-16162-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C7"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 167.6,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    184.6,
+    328.2,
+    471.8,
+    615.4,
+    759.0
+   ],
+   "bar_range_per_long_face": [
+    2,
+    3
+   ],
+   "bars_restrained": 4,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 819.2,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-3",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C7-X07-Y?@15888-16162-FOUNDATION",
+   "section_mm": [
+    300,
+    800
+   ],
+   "segment_id": "SEG-COL-C7-X07-Y?@15888-16162-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C7"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 598.4,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    184.6,
+    328.2,
+    471.8,
+    615.4,
+    759.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    4
+   ],
+   "bars_restrained": 10,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1680.8,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C8-X12-Y02-FOUNDATION",
+   "section_mm": [
+    300,
+    800
+   ],
+   "segment_id": "SEG-COL-C8-X12-Y02-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C7"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 598.4,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    184.6,
+    328.2,
+    471.8,
+    615.4,
+    759.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    5
+   ],
+   "bars_restrained": 10,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1680.8,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C8-X12-Y02-FOUNDATION",
+   "section_mm": [
+    300,
+    800
+   ],
+   "segment_id": "SEG-COL-C8-X12-Y02-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C7"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 167.6,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    184.6,
+    328.2,
+    471.8,
+    615.4,
+    759.0
+   ],
+   "bar_range_per_long_face": [
+    2,
+    3
+   ],
+   "bars_restrained": 4,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 819.2,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-3",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C8-X12-Y02-FOUNDATION",
+   "section_mm": [
+    300,
+    800
+   ],
+   "segment_id": "SEG-COL-C8-X12-Y02-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C7"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 678.4,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    204.6,
+    368.2,
+    531.8,
+    695.4,
+    859.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    4
+   ],
+   "bars_restrained": 10,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1840.8,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C8-X15-Y06-FOUNDATION",
+   "section_mm": [
+    300,
+    900
+   ],
+   "segment_id": "SEG-COL-C8-X15-Y06-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C8"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 678.4,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    204.6,
+    368.2,
+    531.8,
+    695.4,
+    859.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    5
+   ],
+   "bars_restrained": 10,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1840.8,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C8-X15-Y06-FOUNDATION",
+   "section_mm": [
+    300,
+    900
+   ],
+   "segment_id": "SEG-COL-C8-X15-Y06-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C8"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 187.6,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    204.6,
+    368.2,
+    531.8,
+    695.4,
+    859.0
+   ],
+   "bar_range_per_long_face": [
+    2,
+    3
+   ],
+   "bars_restrained": 4,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 859.2,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-3",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C8-X15-Y06-FOUNDATION",
+   "section_mm": [
+    300,
+    900
+   ],
+   "segment_id": "SEG-COL-C8-X15-Y06-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C8"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 789.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    194.0,
+    347.0,
+    500.0,
+    653.0,
+    806.0,
+    959.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    5
+   ],
+   "bars_restrained": 12,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 2062.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C9-X10-Y07-FOUNDATION",
+   "section_mm": [
+    300,
+    1000
+   ],
+   "segment_id": "SEG-COL-C9-X10-Y07-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C9"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 789.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    194.0,
+    347.0,
+    500.0,
+    653.0,
+    806.0,
+    959.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    6
+   ],
+   "bars_restrained": 12,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 2062.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C9-X10-Y07-FOUNDATION",
+   "section_mm": [
+    300,
+    1000
+   ],
+   "segment_id": "SEG-COL-C9-X10-Y07-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C9"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 330.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    194.0,
+    347.0,
+    500.0,
+    653.0,
+    806.0,
+    959.0
+   ],
+   "bar_range_per_long_face": [
+    2,
+    4
+   ],
+   "bars_restrained": 6,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1144.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-3",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C9-X10-Y07-FOUNDATION",
+   "section_mm": [
+    300,
+    1000
+   ],
+   "segment_id": "SEG-COL-C9-X10-Y07-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C9"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 789.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    194.0,
+    347.0,
+    500.0,
+    653.0,
+    806.0,
+    959.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    5
+   ],
+   "bars_restrained": 12,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 2062.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C9-X13-Y08-FOUNDATION",
+   "section_mm": [
+    300,
+    1000
+   ],
+   "segment_id": "SEG-COL-C9-X13-Y08-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C9"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 789.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    194.0,
+    347.0,
+    500.0,
+    653.0,
+    806.0,
+    959.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    6
+   ],
+   "bars_restrained": 12,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 2062.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C9-X13-Y08-FOUNDATION",
+   "section_mm": [
+    300,
+    1000
+   ],
+   "segment_id": "SEG-COL-C9-X13-Y08-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C9"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 330.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    194.0,
+    347.0,
+    500.0,
+    653.0,
+    806.0,
+    959.0
+   ],
+   "bar_range_per_long_face": [
+    2,
+    4
+   ],
+   "bars_restrained": 6,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1144.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "FOUNDATION",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-3",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C9-X13-Y08-FOUNDATION",
+   "section_mm": [
+    300,
+    1000
+   ],
+   "segment_id": "SEG-COL-C9-X13-Y08-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "C9"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 242.0,
+   "bar_position_method": "NONE",
+   "bar_positions_mm": [
+    40.0,
+    260.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    1
+   ],
+   "bars_restrained": 4,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 968.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "FOUNDATION",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-CN-X15-Y?@31208-15726-FOUNDATION",
+   "section_mm": [
+    300,
+    300
+   ],
+   "segment_id": "SEG-COL-CN-X15-Y?@31208-15726-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "CN"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 242.0,
+   "bar_position_method": "NONE",
+   "bar_positions_mm": [
+    40.0,
+    260.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    1
+   ],
+   "bars_restrained": 4,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 968.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "FOUNDATION",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-CN-X16-Y03-FOUNDATION",
+   "section_mm": [
+    300,
+    300
+   ],
+   "segment_id": "SEG-COL-CN-X16-Y03-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "CN"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 242.0,
+   "bar_position_method": "NONE",
+   "bar_positions_mm": [
+    40.0,
+    260.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    1
+   ],
+   "bars_restrained": 4,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 968.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "FOUNDATION",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-CN-X?-Y10@31108-20498-FOUNDATION",
+   "section_mm": [
+    300,
+    300
+   ],
+   "segment_id": "SEG-COL-CN-X?-Y10@31108-20498-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "CN"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 242.0,
+   "bar_position_method": "NONE",
+   "bar_positions_mm": [
+    40.0,
+    260.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    1
+   ],
+   "bars_restrained": 4,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 968.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "FOUNDATION",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-CN-X?-Y?@24058-12787-FOUNDATION",
+   "section_mm": [
+    300,
+    300
+   ],
+   "segment_id": "SEG-COL-CN-X?-Y?@24058-12787-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "CN"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 242.0,
+   "bar_position_method": "NONE",
+   "bar_positions_mm": [
+    40.0,
+    260.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    1
+   ],
+   "bars_restrained": 4,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 968.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "FOUNDATION",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-CN-X?-Y?@28583-12787-FOUNDATION",
+   "section_mm": [
+    300,
+    300
+   ],
+   "segment_id": "SEG-COL-CN-X?-Y?@28583-12787-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "CN"
+  },
+  {
+   "across_mm": 242,
+   "along_mm": 242.0,
+   "bar_position_method": "NONE",
+   "bar_positions_mm": [
+    40.0,
+    260.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    1
+   ],
+   "bars_restrained": 4,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 968.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "FOUNDATION",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-CN-X?-Y?@29108-18112-FOUNDATION",
+   "section_mm": [
+    300,
+    300
+   ],
+   "segment_id": "SEG-COL-CN-X?-Y?@29108-18112-FOUNDATION",
+   "tie_dia_mm": 8,
+   "type": "CN"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "GF",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C-X01-Y01-GF",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C-X01-Y01-GF",
+   "tie_dia_mm": 8,
+   "type": "C"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "GF",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C-X01-Y05-GF",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C-X01-Y05-GF",
+   "tie_dia_mm": 8,
+   "type": "C"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "GF",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C-X02-Y05-GF",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C-X02-Y05-GF",
+   "tie_dia_mm": 8,
+   "type": "C"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "GF",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C-X06-Y01-GF",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C-X06-Y01-GF",
+   "tie_dia_mm": 8,
+   "type": "C"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "GF",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C-X16-Y01-GF",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C-X16-Y01-GF",
+   "tie_dia_mm": 8,
+   "type": "C"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "GF",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C1-X09-Y09-GF",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C1-X09-Y09-GF",
+   "tie_dia_mm": 8,
+   "type": "C1"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 487.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    195.5,
+    350.0,
+    504.5,
+    659.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1359.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C10-X15-Y01-GF",
+   "section_mm": [
+    250,
+    700
+   ],
+   "segment_id": "SEG-COL-C10-X15-Y01-GF",
+   "tie_dia_mm": 8,
+   "type": "C10"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 487.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    195.5,
+    350.0,
+    504.5,
+    659.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    4
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1359.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C10-X15-Y01-GF",
+   "section_mm": [
+    250,
+    700
+   ],
+   "segment_id": "SEG-COL-C10-X15-Y01-GF",
+   "tie_dia_mm": 8,
+   "type": "C10"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 872.333,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    210.667,
+    380.333,
+    550.0,
+    719.667,
+    889.333,
+    1059.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    5
+   ],
+   "bars_restrained": 12,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 2128.667,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C11-X06-Y04-GF",
+   "section_mm": [
+    250,
+    1100
+   ],
+   "segment_id": "SEG-COL-C11-X06-Y04-GF",
+   "tie_dia_mm": 8,
+   "type": "C11"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 872.333,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    210.667,
+    380.333,
+    550.0,
+    719.667,
+    889.333,
+    1059.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    6
+   ],
+   "bars_restrained": 12,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 2128.667,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C11-X06-Y04-GF",
+   "section_mm": [
+    250,
+    1100
+   ],
+   "segment_id": "SEG-COL-C11-X06-Y04-GF",
+   "tie_dia_mm": 8,
+   "type": "C11"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 363.333,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    210.667,
+    380.333,
+    550.0,
+    719.667,
+    889.333,
+    1059.0
+   ],
+   "bar_range_per_long_face": [
+    2,
+    4
+   ],
+   "bars_restrained": 6,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1110.667,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-3",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C11-X06-Y04-GF",
+   "section_mm": [
+    250,
+    1100
+   ],
+   "segment_id": "SEG-COL-C11-X06-Y04-GF",
+   "tie_dia_mm": 8,
+   "type": "C11"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 872.333,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    210.667,
+    380.333,
+    550.0,
+    719.667,
+    889.333,
+    1059.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    5
+   ],
+   "bars_restrained": 12,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 2128.667,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C11-X?-Y01@17913-7462-GF",
+   "section_mm": [
+    250,
+    1100
+   ],
+   "segment_id": "SEG-COL-C11-X?-Y01@17913-7462-GF",
+   "tie_dia_mm": 8,
+   "type": "C11"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 872.333,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    210.667,
+    380.333,
+    550.0,
+    719.667,
+    889.333,
+    1059.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    6
+   ],
+   "bars_restrained": 12,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 2128.667,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C11-X?-Y01@17913-7462-GF",
+   "section_mm": [
+    250,
+    1100
+   ],
+   "segment_id": "SEG-COL-C11-X?-Y01@17913-7462-GF",
+   "tie_dia_mm": 8,
+   "type": "C11"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 363.333,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    210.667,
+    380.333,
+    550.0,
+    719.667,
+    889.333,
+    1059.0
+   ],
+   "bar_range_per_long_face": [
+    2,
+    4
+   ],
+   "bars_restrained": 6,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1110.667,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-3",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C11-X?-Y01@17913-7462-GF",
+   "section_mm": [
+    250,
+    1100
+   ],
+   "segment_id": "SEG-COL-C11-X?-Y01@17913-7462-GF",
+   "tie_dia_mm": 8,
+   "type": "C11"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "GF",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C2-X08-Y10-GF",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C2-X08-Y10-GF",
+   "tie_dia_mm": 8,
+   "type": "C2"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "GF",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C2-X09-Y07-GF",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C2-X09-Y07-GF",
+   "tie_dia_mm": 8,
+   "type": "C2"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "GF",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C2-X09-Y10-GF",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C2-X09-Y10-GF",
+   "tie_dia_mm": 8,
+   "type": "C2"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "GF",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C2-X10-Y09-GF",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C2-X10-Y09-GF",
+   "tie_dia_mm": 8,
+   "type": "C2"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1268.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "GF",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C3-X03-Y04-GF",
+   "section_mm": [
+    250,
+    500
+   ],
+   "segment_id": "SEG-COL-C3-X03-Y04-GF",
+   "tie_dia_mm": 8,
+   "type": "C3"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1268.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "GF",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C3-X04-Y01-GF",
+   "section_mm": [
+    250,
+    500
+   ],
+   "segment_id": "SEG-COL-C3-X04-Y01-GF",
+   "tie_dia_mm": 8,
+   "type": "C3"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1268.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "GF",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C3-X05-Y02-GF",
+   "section_mm": [
+    250,
+    500
+   ],
+   "segment_id": "SEG-COL-C3-X05-Y02-GF",
+   "tie_dia_mm": 8,
+   "type": "C3"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1268.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "GF",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C3-X08-Y09-GF",
+   "section_mm": [
+    250,
+    500
+   ],
+   "segment_id": "SEG-COL-C3-X08-Y09-GF",
+   "tie_dia_mm": 8,
+   "type": "C3"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1268.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "GF",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C3-X12-Y01-GF",
+   "section_mm": [
+    250,
+    500
+   ],
+   "segment_id": "SEG-COL-C3-X12-Y01-GF",
+   "tie_dia_mm": 8,
+   "type": "C3"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1268.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "GF",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C3-X16-Y06-GF",
+   "section_mm": [
+    250,
+    500
+   ],
+   "segment_id": "SEG-COL-C3-X16-Y06-GF",
+   "tie_dia_mm": 8,
+   "type": "C3"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1268.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "GF",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C4-X13-Y10-GF",
+   "section_mm": [
+    250,
+    500
+   ],
+   "segment_id": "SEG-COL-C4-X13-Y10-GF",
+   "tie_dia_mm": 8,
+   "type": "C4"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1268.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "GF",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C4-X15-Y10-GF",
+   "section_mm": [
+    250,
+    500
+   ],
+   "segment_id": "SEG-COL-C4-X15-Y10-GF",
+   "tie_dia_mm": 8,
+   "type": "C4"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 412.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    170.5,
+    300.0,
+    429.5,
+    559.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1209.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C5-X05-Y04-GF",
+   "section_mm": [
+    250,
+    600
+   ],
+   "segment_id": "SEG-COL-C5-X05-Y04-GF",
+   "tie_dia_mm": 8,
+   "type": "C5"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 412.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    170.5,
+    300.0,
+    429.5,
+    559.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    4
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1209.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C5-X05-Y04-GF",
+   "section_mm": [
+    250,
+    600
+   ],
+   "segment_id": "SEG-COL-C5-X05-Y04-GF",
+   "tie_dia_mm": 8,
+   "type": "C5"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 412.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    170.5,
+    300.0,
+    429.5,
+    559.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1209.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C5-X11-Y10-GF",
+   "section_mm": [
+    250,
+    600
+   ],
+   "segment_id": "SEG-COL-C5-X11-Y10-GF",
+   "tie_dia_mm": 8,
+   "type": "C5"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 412.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    170.5,
+    300.0,
+    429.5,
+    559.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    4
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1209.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C5-X11-Y10-GF",
+   "section_mm": [
+    250,
+    600
+   ],
+   "segment_id": "SEG-COL-C5-X11-Y10-GF",
+   "tie_dia_mm": 8,
+   "type": "C5"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 412.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    170.5,
+    300.0,
+    429.5,
+    559.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1209.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C5-X14-Y02-GF",
+   "section_mm": [
+    250,
+    600
+   ],
+   "segment_id": "SEG-COL-C5-X14-Y02-GF",
+   "tie_dia_mm": 8,
+   "type": "C5"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 412.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    170.5,
+    300.0,
+    429.5,
+    559.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    4
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1209.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C5-X14-Y02-GF",
+   "section_mm": [
+    250,
+    600
+   ],
+   "segment_id": "SEG-COL-C5-X14-Y02-GF",
+   "tie_dia_mm": 8,
+   "type": "C5"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 487.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    195.5,
+    350.0,
+    504.5,
+    659.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1359.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C6-X08-Y04-GF",
+   "section_mm": [
+    250,
+    700
+   ],
+   "segment_id": "SEG-COL-C6-X08-Y04-GF",
+   "tie_dia_mm": 8,
+   "type": "C6"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 487.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    195.5,
+    350.0,
+    504.5,
+    659.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    4
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1359.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C6-X08-Y04-GF",
+   "section_mm": [
+    250,
+    700
+   ],
+   "segment_id": "SEG-COL-C6-X08-Y04-GF",
+   "tie_dia_mm": 8,
+   "type": "C6"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 598.4,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    184.6,
+    328.2,
+    471.8,
+    615.4,
+    759.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    4
+   ],
+   "bars_restrained": 10,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1580.8,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C7-X07-Y?@15888-16162-GF",
+   "section_mm": [
+    250,
+    800
+   ],
+   "segment_id": "SEG-COL-C7-X07-Y?@15888-16162-GF",
+   "tie_dia_mm": 8,
+   "type": "C7"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 598.4,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    184.6,
+    328.2,
+    471.8,
+    615.4,
+    759.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    5
+   ],
+   "bars_restrained": 10,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1580.8,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C7-X07-Y?@15888-16162-GF",
+   "section_mm": [
+    250,
+    800
+   ],
+   "segment_id": "SEG-COL-C7-X07-Y?@15888-16162-GF",
+   "tie_dia_mm": 8,
+   "type": "C7"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 167.6,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    184.6,
+    328.2,
+    471.8,
+    615.4,
+    759.0
+   ],
+   "bar_range_per_long_face": [
+    2,
+    3
+   ],
+   "bars_restrained": 4,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 719.2,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-3",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C7-X07-Y?@15888-16162-GF",
+   "section_mm": [
+    250,
+    800
+   ],
+   "segment_id": "SEG-COL-C7-X07-Y?@15888-16162-GF",
+   "tie_dia_mm": 8,
+   "type": "C7"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 598.4,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    184.6,
+    328.2,
+    471.8,
+    615.4,
+    759.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    4
+   ],
+   "bars_restrained": 10,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1580.8,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C8-X12-Y02-GF",
+   "section_mm": [
+    250,
+    800
+   ],
+   "segment_id": "SEG-COL-C8-X12-Y02-GF",
+   "tie_dia_mm": 8,
+   "type": "C7"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 598.4,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    184.6,
+    328.2,
+    471.8,
+    615.4,
+    759.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    5
+   ],
+   "bars_restrained": 10,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1580.8,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C8-X12-Y02-GF",
+   "section_mm": [
+    250,
+    800
+   ],
+   "segment_id": "SEG-COL-C8-X12-Y02-GF",
+   "tie_dia_mm": 8,
+   "type": "C7"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 167.6,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    184.6,
+    328.2,
+    471.8,
+    615.4,
+    759.0
+   ],
+   "bar_range_per_long_face": [
+    2,
+    3
+   ],
+   "bars_restrained": 4,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 719.2,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-3",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C8-X12-Y02-GF",
+   "section_mm": [
+    250,
+    800
+   ],
+   "segment_id": "SEG-COL-C8-X12-Y02-GF",
+   "tie_dia_mm": 8,
+   "type": "C7"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 678.4,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    204.6,
+    368.2,
+    531.8,
+    695.4,
+    859.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    4
+   ],
+   "bars_restrained": 10,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1740.8,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C8-X15-Y06-GF",
+   "section_mm": [
+    250,
+    900
+   ],
+   "segment_id": "SEG-COL-C8-X15-Y06-GF",
+   "tie_dia_mm": 8,
+   "type": "C8"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 678.4,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    204.6,
+    368.2,
+    531.8,
+    695.4,
+    859.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    5
+   ],
+   "bars_restrained": 10,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1740.8,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C8-X15-Y06-GF",
+   "section_mm": [
+    250,
+    900
+   ],
+   "segment_id": "SEG-COL-C8-X15-Y06-GF",
+   "tie_dia_mm": 8,
+   "type": "C8"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 187.6,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    204.6,
+    368.2,
+    531.8,
+    695.4,
+    859.0
+   ],
+   "bar_range_per_long_face": [
+    2,
+    3
+   ],
+   "bars_restrained": 4,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 759.2,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-3",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C8-X15-Y06-GF",
+   "section_mm": [
+    250,
+    900
+   ],
+   "segment_id": "SEG-COL-C8-X15-Y06-GF",
+   "tie_dia_mm": 8,
+   "type": "C8"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 789.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    194.0,
+    347.0,
+    500.0,
+    653.0,
+    806.0,
+    959.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    5
+   ],
+   "bars_restrained": 12,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1962.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C9-X10-Y07-GF",
+   "section_mm": [
+    250,
+    1000
+   ],
+   "segment_id": "SEG-COL-C9-X10-Y07-GF",
+   "tie_dia_mm": 8,
+   "type": "C9"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 789.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    194.0,
+    347.0,
+    500.0,
+    653.0,
+    806.0,
+    959.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    6
+   ],
+   "bars_restrained": 12,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1962.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C9-X10-Y07-GF",
+   "section_mm": [
+    250,
+    1000
+   ],
+   "segment_id": "SEG-COL-C9-X10-Y07-GF",
+   "tie_dia_mm": 8,
+   "type": "C9"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 330.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    194.0,
+    347.0,
+    500.0,
+    653.0,
+    806.0,
+    959.0
+   ],
+   "bar_range_per_long_face": [
+    2,
+    4
+   ],
+   "bars_restrained": 6,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1044.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-3",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C9-X10-Y07-GF",
+   "section_mm": [
+    250,
+    1000
+   ],
+   "segment_id": "SEG-COL-C9-X10-Y07-GF",
+   "tie_dia_mm": 8,
+   "type": "C9"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 789.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    194.0,
+    347.0,
+    500.0,
+    653.0,
+    806.0,
+    959.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    5
+   ],
+   "bars_restrained": 12,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1962.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C9-X13-Y08-GF",
+   "section_mm": [
+    250,
+    1000
+   ],
+   "segment_id": "SEG-COL-C9-X13-Y08-GF",
+   "tie_dia_mm": 8,
+   "type": "C9"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 789.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    194.0,
+    347.0,
+    500.0,
+    653.0,
+    806.0,
+    959.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    6
+   ],
+   "bars_restrained": 12,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1962.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C9-X13-Y08-GF",
+   "section_mm": [
+    250,
+    1000
+   ],
+   "segment_id": "SEG-COL-C9-X13-Y08-GF",
+   "tie_dia_mm": 8,
+   "type": "C9"
+  },
+  {
+   "across_mm": 192,
+   "along_mm": 330.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    194.0,
+    347.0,
+    500.0,
+    653.0,
+    806.0,
+    959.0
+   ],
+   "bar_range_per_long_face": [
+    2,
+    4
+   ],
+   "bars_restrained": 6,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1044.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "GF",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-3",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C9-X13-Y08-GF",
+   "section_mm": [
+    250,
+    1000
+   ],
+   "segment_id": "SEG-COL-C9-X13-Y08-GF",
+   "tie_dia_mm": 8,
+   "type": "C9"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    250.0,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    2
+   ],
+   "bars_restrained": 6,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "1F",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C1-X09-Y09-1F",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C1-X09-Y09-1F",
+   "tie_dia_mm": 8,
+   "type": "C1"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "1F",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C2-X08-Y10-1F",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C2-X08-Y10-1F",
+   "tie_dia_mm": 8,
+   "type": "C2"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "1F",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C2-X09-Y07-1F",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C2-X09-Y07-1F",
+   "tie_dia_mm": 8,
+   "type": "C2"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "1F",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C2-X09-Y10-1F",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C2-X09-Y10-1F",
+   "tie_dia_mm": 8,
+   "type": "C2"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "1F",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C2-X10-Y09-1F",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C2-X10-Y09-1F",
+   "tie_dia_mm": 8,
+   "type": "C2"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    250.0,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    2
+   ],
+   "bars_restrained": 6,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "1F",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C3-X05-Y02-1F",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C3-X05-Y02-1F",
+   "tie_dia_mm": 8,
+   "type": "C3"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    250.0,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    2
+   ],
+   "bars_restrained": 6,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "1F",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C3-X08-Y09-1F",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C3-X08-Y09-1F",
+   "tie_dia_mm": 8,
+   "type": "C3"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "1F",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C4-X13-Y10-1F",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C4-X13-Y10-1F",
+   "tie_dia_mm": 8,
+   "type": "C4"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "1F",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C4-X15-Y10-1F",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C4-X15-Y10-1F",
+   "tie_dia_mm": 8,
+   "type": "C4"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "1F",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C5-X05-Y04-1F",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C5-X05-Y04-1F",
+   "tie_dia_mm": 8,
+   "type": "C5"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "1F",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C5-X11-Y10-1F",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C5-X11-Y10-1F",
+   "tie_dia_mm": 8,
+   "type": "C5"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "1F",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C5-X14-Y02-1F",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C5-X14-Y02-1F",
+   "tie_dia_mm": 8,
+   "type": "C5"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 369.333,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    213.667,
+    386.333,
+    559.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    2
+   ],
+   "bars_restrained": 6,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1022.667,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "1F",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C6-X08-Y04-1F",
+   "section_mm": [
+    200,
+    600
+   ],
+   "segment_id": "SEG-COL-C6-X08-Y04-1F",
+   "tie_dia_mm": 8,
+   "type": "C6"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 369.333,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    213.667,
+    386.333,
+    559.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    3
+   ],
+   "bars_restrained": 6,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1022.667,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "1F",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C6-X08-Y04-1F",
+   "section_mm": [
+    200,
+    600
+   ],
+   "segment_id": "SEG-COL-C6-X08-Y04-1F",
+   "tie_dia_mm": 8,
+   "type": "C6"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 562.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    220.5,
+    400.0,
+    579.5,
+    759.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1409.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "1F",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C7-X07-Y?@15888-16162-1F",
+   "section_mm": [
+    200,
+    800
+   ],
+   "segment_id": "SEG-COL-C7-X07-Y?@15888-16162-1F",
+   "tie_dia_mm": 8,
+   "type": "C7"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 562.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    220.5,
+    400.0,
+    579.5,
+    759.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    4
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1409.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "1F",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C7-X07-Y?@15888-16162-1F",
+   "section_mm": [
+    200,
+    800
+   ],
+   "segment_id": "SEG-COL-C7-X07-Y?@15888-16162-1F",
+   "tie_dia_mm": 8,
+   "type": "C7"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 24.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    220.5,
+    400.0,
+    579.5,
+    759.0
+   ],
+   "bar_range_per_long_face": [
+    2,
+    2
+   ],
+   "bars_restrained": 2,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 332.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "1F",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-3",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C7-X07-Y?@15888-16162-1F",
+   "section_mm": [
+    200,
+    800
+   ],
+   "segment_id": "SEG-COL-C7-X07-Y?@15888-16162-1F",
+   "tie_dia_mm": 8,
+   "type": "C7"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 562.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    220.5,
+    400.0,
+    579.5,
+    759.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1409.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "1F",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C8-X12-Y02-1F",
+   "section_mm": [
+    200,
+    800
+   ],
+   "segment_id": "SEG-COL-C8-X12-Y02-1F",
+   "tie_dia_mm": 8,
+   "type": "C7"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 562.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    220.5,
+    400.0,
+    579.5,
+    759.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    4
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1409.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "1F",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C8-X12-Y02-1F",
+   "section_mm": [
+    200,
+    800
+   ],
+   "segment_id": "SEG-COL-C8-X12-Y02-1F",
+   "tie_dia_mm": 8,
+   "type": "C7"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 24.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    220.5,
+    400.0,
+    579.5,
+    759.0
+   ],
+   "bar_range_per_long_face": [
+    2,
+    2
+   ],
+   "bars_restrained": 2,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 332.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "1F",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-3",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C8-X12-Y02-1F",
+   "section_mm": [
+    200,
+    800
+   ],
+   "segment_id": "SEG-COL-C8-X12-Y02-1F",
+   "tie_dia_mm": 8,
+   "type": "C7"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 678.4,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    204.6,
+    368.2,
+    531.8,
+    695.4,
+    859.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    4
+   ],
+   "bars_restrained": 10,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1640.8,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "1F",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C8-X15-Y06-1F",
+   "section_mm": [
+    200,
+    900
+   ],
+   "segment_id": "SEG-COL-C8-X15-Y06-1F",
+   "tie_dia_mm": 8,
+   "type": "C8"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 678.4,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    204.6,
+    368.2,
+    531.8,
+    695.4,
+    859.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    5
+   ],
+   "bars_restrained": 10,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1640.8,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "1F",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C8-X15-Y06-1F",
+   "section_mm": [
+    200,
+    900
+   ],
+   "segment_id": "SEG-COL-C8-X15-Y06-1F",
+   "tie_dia_mm": 8,
+   "type": "C8"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 187.6,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    204.6,
+    368.2,
+    531.8,
+    695.4,
+    859.0
+   ],
+   "bar_range_per_long_face": [
+    2,
+    3
+   ],
+   "bars_restrained": 4,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 659.2,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "1F",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-3",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C8-X15-Y06-1F",
+   "section_mm": [
+    200,
+    900
+   ],
+   "segment_id": "SEG-COL-C8-X15-Y06-1F",
+   "tie_dia_mm": 8,
+   "type": "C8"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 678.4,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    204.6,
+    368.2,
+    531.8,
+    695.4,
+    859.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    4
+   ],
+   "bars_restrained": 10,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1640.8,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "1F",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C9-X10-Y07-1F",
+   "section_mm": [
+    200,
+    900
+   ],
+   "segment_id": "SEG-COL-C9-X10-Y07-1F",
+   "tie_dia_mm": 8,
+   "type": "C9"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 678.4,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    204.6,
+    368.2,
+    531.8,
+    695.4,
+    859.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    5
+   ],
+   "bars_restrained": 10,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1640.8,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "1F",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C9-X10-Y07-1F",
+   "section_mm": [
+    200,
+    900
+   ],
+   "segment_id": "SEG-COL-C9-X10-Y07-1F",
+   "tie_dia_mm": 8,
+   "type": "C9"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 187.6,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    204.6,
+    368.2,
+    531.8,
+    695.4,
+    859.0
+   ],
+   "bar_range_per_long_face": [
+    2,
+    3
+   ],
+   "bars_restrained": 4,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 659.2,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "1F",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-3",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C9-X10-Y07-1F",
+   "section_mm": [
+    200,
+    900
+   ],
+   "segment_id": "SEG-COL-C9-X10-Y07-1F",
+   "tie_dia_mm": 8,
+   "type": "C9"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 678.4,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    204.6,
+    368.2,
+    531.8,
+    695.4,
+    859.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    4
+   ],
+   "bars_restrained": 10,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1640.8,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "1F",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C9-X13-Y08-1F",
+   "section_mm": [
+    200,
+    900
+   ],
+   "segment_id": "SEG-COL-C9-X13-Y08-1F",
+   "tie_dia_mm": 8,
+   "type": "C9"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 678.4,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    204.6,
+    368.2,
+    531.8,
+    695.4,
+    859.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    5
+   ],
+   "bars_restrained": 10,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1640.8,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "1F",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C9-X13-Y08-1F",
+   "section_mm": [
+    200,
+    900
+   ],
+   "segment_id": "SEG-COL-C9-X13-Y08-1F",
+   "tie_dia_mm": 8,
+   "type": "C9"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 187.6,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    204.6,
+    368.2,
+    531.8,
+    695.4,
+    859.0
+   ],
+   "bar_range_per_long_face": [
+    2,
+    3
+   ],
+   "bars_restrained": 4,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 659.2,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "1F",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-3",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C9-X13-Y08-1F",
+   "section_mm": [
+    200,
+    900
+   ],
+   "segment_id": "SEG-COL-C9-X13-Y08-1F",
+   "tie_dia_mm": 8,
+   "type": "C9"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 487.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    195.5,
+    350.0,
+    504.5,
+    659.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1259.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "1F",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-P.C-X08-Y02-1F",
+   "section_mm": [
+    200,
+    700
+   ],
+   "segment_id": "SEG-COL-P.C-X08-Y02-1F",
+   "tie_dia_mm": 8,
+   "type": "P.C"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 487.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    195.5,
+    350.0,
+    504.5,
+    659.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    4
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1259.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "1F",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-P.C-X08-Y02-1F",
+   "section_mm": [
+    200,
+    700
+   ],
+   "segment_id": "SEG-COL-P.C-X08-Y02-1F",
+   "tie_dia_mm": 8,
+   "type": "P.C"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "1F",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-P.C-X15-Y02-1F",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-P.C-X15-Y02-1F",
+   "tie_dia_mm": 8,
+   "type": "P.C"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    250.0,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    2
+   ],
+   "bars_restrained": 6,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "2F",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C1-X09-Y09-2F",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C1-X09-Y09-2F",
+   "tie_dia_mm": 8,
+   "type": "C1"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    250.0,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    2
+   ],
+   "bars_restrained": 6,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "2F",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C2-X08-Y10-2F",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C2-X08-Y10-2F",
+   "tie_dia_mm": 8,
+   "type": "C2"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    250.0,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    2
+   ],
+   "bars_restrained": 6,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "2F",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C2-X09-Y07-2F",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C2-X09-Y07-2F",
+   "tie_dia_mm": 8,
+   "type": "C2"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    250.0,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    2
+   ],
+   "bars_restrained": 6,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "2F",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C2-X09-Y10-2F",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C2-X09-Y10-2F",
+   "tie_dia_mm": 8,
+   "type": "C2"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    250.0,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    2
+   ],
+   "bars_restrained": 6,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "2F",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C2-X10-Y09-2F",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C2-X10-Y09-2F",
+   "tie_dia_mm": 8,
+   "type": "C2"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    250.0,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    2
+   ],
+   "bars_restrained": 6,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "2F",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C3-X08-Y09-2F",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C3-X08-Y09-2F",
+   "tie_dia_mm": 8,
+   "type": "C3"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    250.0,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    2
+   ],
+   "bars_restrained": 6,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "2F",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-C5-X11-Y10-2F",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-C5-X11-Y10-2F",
+   "tie_dia_mm": 8,
+   "type": "C5"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 487.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    195.5,
+    350.0,
+    504.5,
+    659.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1259.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "2F",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C9-X10-Y07-2F",
+   "section_mm": [
+    200,
+    700
+   ],
+   "segment_id": "SEG-COL-C9-X10-Y07-2F",
+   "tie_dia_mm": 8,
+   "type": "C9"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 487.5,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    195.5,
+    350.0,
+    504.5,
+    659.0
+   ],
+   "bar_range_per_long_face": [
+    1,
+    4
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1259.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": false,
+   "floor": "2F",
+   "geometry_state": "DERIVED_BAR_POSITIONS",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-2",
+   "link_ranges_state": "SCALED_FROM_DETAIL",
+   "occurrence_id": "COL-C9-X10-Y07-2F",
+   "section_mm": [
+    200,
+    700
+   ],
+   "segment_id": "SEG-COL-C9-X10-Y07-2F",
+   "tie_dia_mm": 8,
+   "type": "C9"
+  },
+  {
+   "across_mm": 142,
+   "along_mm": 442.0,
+   "bar_position_method": "EQUAL_SPACING_METHOD",
+   "bar_positions_mm": [
+    41.0,
+    180.333,
+    319.667,
+    459.0
+   ],
+   "bar_range_per_long_face": [
+    0,
+    3
+   ],
+   "bars_restrained": 8,
+   "bend_method": "centreline rectangle; no bend deduction or allowance (BEND-OTHER = 0)",
+   "core_path_mm": 1168.0,
+   "cover_mm": 25,
+   "cover_rule_id": "COVER_GENERAL_25MM",
+   "cover_source_ref": "P8-N22-COVER-GENERAL",
+   "encloses_all_bars": true,
+   "floor": "2F",
+   "geometry_state": "MEASURED",
+   "hook_1_mm": 75,
+   "hook_2_mm": 75,
+   "hook_state": "PROVISIONAL_ENGINEERING_METHOD",
+   "link_id": "LINK-1",
+   "link_ranges_state": "EXACT_RULE",
+   "occurrence_id": "COL-P.C-X?-Y?@24888-15994-2F",
+   "section_mm": [
+    200,
+    500
+   ],
+   "segment_id": "SEG-COL-P.C-X?-Y?@24888-15994-2F",
+   "tie_dia_mm": 8,
+   "type": "P.C"
+  }
+ ]
+}

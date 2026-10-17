@@ -1,0 +1,5935 @@
+{
+ "SCHEMA": "URBAN_STRUCTURE_V3B_V1",
+ "domes": {
+  "count": 3,
+  "count_route_a": "P7757.dxf plan circles (r 2205 / 2211)",
+  "count_route_c": {
+   "value": 3,
+   "sheets": [
+    "ARCH-P11-SECTION-BB",
+    "ARCH-P06-SE-ELEV",
+    "ARCH-P07-SW-ELEV",
+    "ARCH-P09-NE-ELEV"
+   ],
+   "text": "two domes on the 2F terrace (+9.70) and one on the tower roof (+13.90)"
+  },
+  "detail_factor": {
+   "measured_drawing_units": 22110.915235,
+   "printed_cm": 442,
+   "factor": 5.00247,
+   "handle": "1A38"
+  },
+  "shell_t_m": 0.099951,
+  "ring_beam": {
+   "B_m": 0.2,
+   "D_drawn_m": 0.75,
+   "centreline_diameter_m": 4.22,
+   "depth_text": "AS PER ARCH"
+  },
+  "rows": [
+   {
+    "id": "DOME-TERRACE-12EB",
+    "plan_circle": "12EB",
+    "location": "2F terrace (+9.70)",
+    "span_m": 4.422,
+    "span_route_c_m": 4.42,
+    "rise_m": 1.72,
+    "rise_source": "ARCH-P08-NW-ELEV",
+    "shell_t_m": 0.1,
+    "detail_factor": 5.00247,
+    "R_m": 2.2811,
+    "outer_area_m2": 24.652,
+    "mid_area_m2": 23.411,
+    "shell_m3": 2.34,
+    "inner_area_m2": 22.202,
+    "shell_mesh_kg": 277.466,
+    "ring_beam": {
+     "B_m": 0.2,
+     "D_drawn_m": 0.75,
+     "centreline_diameter_m": 4.22,
+     "depth_text": "AS PER ARCH",
+     "perimeter_m": 13.258,
+     "volume_m3": 1.989
+    },
+    "ring_rebar": {
+     "rings": [
+      {
+       "n": 3,
+       "dia": 16,
+       "length_m": 13.258,
+       "what": "top ring 3Ø16"
+      },
+      {
+       "n": 3,
+       "dia": 18,
+       "length_m": 13.258,
+       "what": "bottom ring 3Ø18"
+      },
+      {
+       "n": 4,
+       "dia": 14,
+       "length_m": 13.258,
+       "what": "side rings 2Ø14 each face"
+      }
+     ],
+     "ring_kg": 206.555,
+     "links": 107,
+     "link_length_m": 1.7,
+     "link_hooks_m": 0.1962,
+     "hook_class": "PROVISIONAL_CODE_METHOD",
+     "links_kg": 80.157,
+     "laps_m": 11.06
+    }
+   },
+   {
+    "id": "DOME-TOWER-1300",
+    "plan_circle": "1300",
+    "location": "tower roof (+13.90)",
+    "span_m": 4.41,
+    "span_route_c_m": 4.41,
+    "rise_m": 2.15,
+    "rise_source": "ARCH-P06-SE-ELEV",
+    "shell_t_m": 0.1,
+    "detail_factor": 5.00247,
+    "R_m": 2.2057,
+    "outer_area_m2": 29.797,
+    "mid_area_m2": 28.444,
+    "shell_m3": 2.843,
+    "inner_area_m2": 27.124,
+    "shell_mesh_kg": 337.12,
+    "ring_beam": {
+     "B_m": 0.2,
+     "D_drawn_m": 0.75,
+     "centreline_diameter_m": 4.22,
+     "depth_text": "AS PER ARCH",
+     "perimeter_m": 13.258,
+     "volume_m3": 1.989
+    },
+    "ring_rebar": {
+     "rings": [
+      {
+       "n": 3,
+       "dia": 16,
+       "length_m": 13.258,
+       "what": "top ring 3Ø16"
+      },
+      {
+       "n": 3,
+       "dia": 18,
+       "length_m": 13.258,
+       "what": "bottom ring 3Ø18"
+      },
+      {
+       "n": 4,
+       "dia": 14,
+       "length_m": 13.258,
+       "what": "side rings 2Ø14 each face"
+      }
+     ],
+     "ring_kg": 206.555,
+     "links": 107,
+     "link_length_m": 1.7,
+     "link_hooks_m": 0.1962,
+     "hook_class": "PROVISIONAL_CODE_METHOD",
+     "links_kg": 80.157,
+     "laps_m": 11.06
+    }
+   },
+   {
+    "id": "DOME-TERRACE-2F33",
+    "plan_circle": "2F33",
+    "location": "2F terrace (+9.70)",
+    "span_m": 4.422,
+    "span_route_c_m": 4.42,
+    "rise_m": 1.72,
+    "rise_source": "ARCH-P08-NW-ELEV",
+    "shell_t_m": 0.1,
+    "detail_factor": 5.00247,
+    "R_m": 2.2811,
+    "outer_area_m2": 24.652,
+    "mid_area_m2": 23.411,
+    "shell_m3": 2.34,
+    "inner_area_m2": 22.202,
+    "shell_mesh_kg": 277.466,
+    "ring_beam": {
+     "B_m": 0.2,
+     "D_drawn_m": 0.75,
+     "centreline_diameter_m": 4.22,
+     "depth_text": "AS PER ARCH",
+     "perimeter_m": 13.258,
+     "volume_m3": 1.989
+    },
+    "ring_rebar": {
+     "rings": [
+      {
+       "n": 3,
+       "dia": 16,
+       "length_m": 13.258,
+       "what": "top ring 3Ø16"
+      },
+      {
+       "n": 3,
+       "dia": 18,
+       "length_m": 13.258,
+       "what": "bottom ring 3Ø18"
+      },
+      {
+       "n": 4,
+       "dia": 14,
+       "length_m": 13.258,
+       "what": "side rings 2Ø14 each face"
+      }
+     ],
+     "ring_kg": 206.555,
+     "links": 107,
+     "link_length_m": 1.7,
+     "link_hooks_m": 0.1962,
+     "hook_class": "PROVISIONAL_CODE_METHOD",
+     "links_kg": 80.157,
+     "laps_m": 11.06
+    }
+   }
+  ]
+ },
+ "residue": {
+  "beams": [
+   {
+    "floor": "GF",
+    "id": "CA:ALSENAN_ST7757_DXF|H1694||TEXT|0",
+    "type": "CA",
+    "why_v3a": "TAG_INSIDE_SUPPORT",
+    "B_m": 0.3,
+    "D_m": 0.5,
+    "length_m": 1.15,
+    "length_basis": "drawn band extent",
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "qty": 0.1173,
+     "low": 0.0997,
+     "high": 0.1173,
+     "confidence": "M",
+     "method": "drawn band length x scheduled section (B x (D - t))",
+     "assumption": "band extent may include support zones (low = 85 %)",
+     "source": null
+    }
+   },
+   {
+    "floor": "GF",
+    "id": "CB8:ALSENAN_ST7757_DXF|H1695||TEXT|0",
+    "type": "CB8",
+    "why_v3a": "SPAN_COUNT_MISMATCH",
+    "B_m": 0.3,
+    "D_m": 0.75,
+    "length_m": 12.995,
+    "length_basis": "CLEAR_FACE_TO_FACE (band measured; span count differs from the schedule)",
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "qty": 2.3001,
+     "low": 1.9551,
+     "high": 2.3001,
+     "confidence": "M",
+     "method": "drawn band length x scheduled section (B x (D - t))",
+     "assumption": "band extent may include support zones (low = 85 %)",
+     "source": null
+    }
+   },
+   {
+    "floor": "GF",
+    "id": "B3:ALSENAN_ST7757_DXF|H6183||TEXT|0",
+    "type": "B3",
+    "why_v3a": "BAND_TYPE_CONFLICT",
+    "B_m": 0.2,
+    "D_m": 0.4,
+    "length_m": 10.259,
+    "length_basis": "drawn band extent",
+    "commercial": null,
+    "superseded_by": "CB3:ALSENAN_ST7757_DXF|H1171||TEXT|0"
+   },
+   {
+    "floor": "GF",
+    "id": "CB3:ALSENAN_ST7757_DXF|H1171||TEXT|0",
+    "type": "CB3",
+    "why_v3a": "BAND_TYPE_CONFLICT",
+    "B_m": 0.2,
+    "D_m": 0.75,
+    "length_m": 10.259,
+    "length_basis": "drawn band extent",
+    "commercial": {
+     "class": "PROVISIONAL_SOURCE_RANGE",
+     "qty": 1.2105,
+     "low": 0.4924,
+     "high": 1.2105,
+     "confidence": "M",
+     "method": "band x scheduled section of this tag (two tags claim one band)",
+     "assumption": "selected commercial basis = the larger section (CB3); alternative B3",
+     "source": null
+    }
+   },
+   {
+    "floor": "GF",
+    "id": "CB6:ALSENAN_ST7757_DXF|H1148||TEXT|0",
+    "type": "CB6",
+    "why_v3a": "SPAN_COUNT_MISMATCH",
+    "B_m": 0.2,
+    "D_m": 0.75,
+    "length_m": 10.1,
+    "length_basis": "CLEAR_FACE_TO_FACE (band measured; span count differs from the schedule)",
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "qty": 1.1918,
+     "low": 1.013,
+     "high": 1.1918,
+     "confidence": "M",
+     "method": "drawn band length x scheduled section (B x (D - t))",
+     "assumption": "band extent may include support zones (low = 85 %)",
+     "source": null
+    }
+   },
+   {
+    "floor": "GF",
+    "id": "CB5:ALSENAN_ST7757_DXF|H1140||TEXT|0",
+    "type": "CB5",
+    "why_v3a": "SPAN_COUNT_MISMATCH",
+    "B_m": 0.2,
+    "D_m": 0.4,
+    "length_m": 2.45,
+    "length_basis": "CLEAR_FACE_TO_FACE (band measured; span count differs from the schedule)",
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "qty": 0.1176,
+     "low": 0.1,
+     "high": 0.1176,
+     "confidence": "M",
+     "method": "drawn band length x scheduled section (B x (D - t))",
+     "assumption": "band extent may include support zones (low = 85 %)",
+     "source": null
+    }
+   },
+   {
+    "floor": "GF",
+    "id": "CB2:ALSENAN_ST7757_DXF|H1066||TEXT|0",
+    "type": "CB2",
+    "why_v3a": "NO_BAND_ADJACENT_TO_TAG",
+    "B_m": 0.2,
+    "D_m": 0.5,
+    "length_m": null,
+    "length_basis": "none",
+    "commercial": null
+   },
+   {
+    "floor": "GF",
+    "id": "CB2:ALSENAN_ST7757_DXF|H1067||TEXT|0",
+    "type": "CB2",
+    "why_v3a": "NO_BAND_ADJACENT_TO_TAG",
+    "B_m": 0.2,
+    "D_m": 0.5,
+    "length_m": null,
+    "length_basis": "none",
+    "commercial": null
+   },
+   {
+    "floor": "GF",
+    "id": "B1:ALSENAN_ST7757_DXF|H1117||TEXT|0",
+    "type": "B1",
+    "why_v3a": "NO_BAND_ADJACENT_TO_TAG",
+    "B_m": 0.2,
+    "D_m": 0.4,
+    "length_m": 1.545,
+    "length_basis": "median clear length of the 18 measured B1 occurrence(s)",
+    "commercial": {
+     "class": "BUDGET_ESTIMATE",
+     "qty": 0.0742,
+     "low": 0.0,
+     "high": 0.1233,
+     "confidence": "L",
+     "method": "unbound tag: same-type median clear length x section",
+     "assumption": "the tag may repeat a beam already measured (low = 0)",
+     "source": null
+    }
+   },
+   {
+    "floor": "GF",
+    "id": "B29:ALSENAN_ST7757_DXF|H1125||TEXT|0",
+    "type": "B29",
+    "why_v3a": "NO_BAND_ADJACENT_TO_TAG",
+    "B_m": 0.25,
+    "D_m": 0.75,
+    "length_m": null,
+    "length_basis": "none",
+    "commercial": null
+   },
+   {
+    "floor": "GF",
+    "id": "B21:ALSENAN_ST7757_DXF|H1128||TEXT|0",
+    "type": "B21",
+    "why_v3a": "NO_BAND_AT_SCHEDULED_BREADTH",
+    "B_m": 0.45,
+    "D_m": 0.75,
+    "length_m": null,
+    "length_basis": "none",
+    "commercial": null
+   },
+   {
+    "floor": "GF",
+    "id": "B7:ALSENAN_ST7757_DXF|H1134||TEXT|0",
+    "type": "B7",
+    "why_v3a": "NO_BAND_AT_SCHEDULED_BREADTH",
+    "B_m": 0.2,
+    "D_m": 0.75,
+    "length_m": 1.7,
+    "length_basis": "median clear length of the 5 measured B7 occurrence(s)",
+    "commercial": {
+     "class": "BUDGET_ESTIMATE",
+     "qty": 0.2006,
+     "low": 0.0,
+     "high": 0.5214,
+     "confidence": "L",
+     "method": "unbound tag: same-type median clear length x section",
+     "assumption": "the tag may repeat a beam already measured (low = 0)",
+     "source": null
+    }
+   },
+   {
+    "floor": "GF",
+    "id": "B7:ALSENAN_ST7757_DXF|H1135||TEXT|0",
+    "type": "B7",
+    "why_v3a": "NO_BAND_PARALLEL_TO_TAG",
+    "B_m": 0.2,
+    "D_m": 0.75,
+    "length_m": 1.7,
+    "length_basis": "median clear length of the 5 measured B7 occurrence(s)",
+    "commercial": {
+     "class": "BUDGET_ESTIMATE",
+     "qty": 0.2006,
+     "low": 0.0,
+     "high": 0.5214,
+     "confidence": "L",
+     "method": "unbound tag: same-type median clear length x section",
+     "assumption": "the tag may repeat a beam already measured (low = 0)",
+     "source": null
+    }
+   },
+   {
+    "floor": "GF",
+    "id": "B7:ALSENAN_ST7757_DXF|H1136||TEXT|0",
+    "type": "B7",
+    "why_v3a": "NO_BAND_PARALLEL_TO_TAG",
+    "B_m": 0.2,
+    "D_m": 0.75,
+    "length_m": 1.7,
+    "length_basis": "median clear length of the 5 measured B7 occurrence(s)",
+    "commercial": {
+     "class": "BUDGET_ESTIMATE",
+     "qty": 0.2006,
+     "low": 0.0,
+     "high": 0.5214,
+     "confidence": "L",
+     "method": "unbound tag: same-type median clear length x section",
+     "assumption": "the tag may repeat a beam already measured (low = 0)",
+     "source": null
+    }
+   },
+   {
+    "floor": "GF",
+    "id": "B7:ALSENAN_ST7757_DXF|H1137||TEXT|0",
+    "type": "B7",
+    "why_v3a": "NO_BAND_PARALLEL_TO_TAG",
+    "B_m": 0.2,
+    "D_m": 0.75,
+    "length_m": 1.7,
+    "length_basis": "median clear length of the 5 measured B7 occurrence(s)",
+    "commercial": {
+     "class": "BUDGET_ESTIMATE",
+     "qty": 0.2006,
+     "low": 0.0,
+     "high": 0.5214,
+     "confidence": "L",
+     "method": "unbound tag: same-type median clear length x section",
+     "assumption": "the tag may repeat a beam already measured (low = 0)",
+     "source": null
+    }
+   },
+   {
+    "floor": "GF",
+    "id": "CB5:ALSENAN_ST7757_DXF|H1141||TEXT|0",
+    "type": "CB5",
+    "why_v3a": "NO_BAND_ADJACENT_TO_TAG",
+    "B_m": 0.2,
+    "D_m": 0.4,
+    "length_m": null,
+    "length_basis": "none",
+    "commercial": null
+   },
+   {
+    "floor": "GF",
+    "id": "B7:ALSENAN_ST7757_DXF|H1154|1149|TEXT|0",
+    "type": "B7",
+    "why_v3a": "NO_BAND_ADJACENT_TO_TAG",
+    "B_m": 0.2,
+    "D_m": 0.75,
+    "length_m": 1.7,
+    "length_basis": "median clear length of the 5 measured B7 occurrence(s)",
+    "commercial": {
+     "class": "BUDGET_ESTIMATE",
+     "qty": 0.2006,
+     "low": 0.0,
+     "high": 0.5214,
+     "confidence": "L",
+     "method": "unbound tag: same-type median clear length x section",
+     "assumption": "the tag may repeat a beam already measured (low = 0)",
+     "source": null
+    }
+   },
+   {
+    "floor": "GF",
+    "id": "B4:ALSENAN_ST7757_DXF|H1184|1179|TEXT|0",
+    "type": "B4",
+    "why_v3a": "NO_BAND_ADJACENT_TO_TAG",
+    "B_m": 0.2,
+    "D_m": 0.5,
+    "length_m": 3.906,
+    "length_basis": "median clear length of the 8 measured B4 occurrence(s)",
+    "commercial": {
+     "class": "BUDGET_ESTIMATE",
+     "qty": 0.2656,
+     "low": 0.0,
+     "high": 0.306,
+     "confidence": "L",
+     "method": "unbound tag: same-type median clear length x section",
+     "assumption": "the tag may repeat a beam already measured (low = 0)",
+     "source": null
+    }
+   },
+   {
+    "floor": "1F",
+    "id": "CB12:ALSENAN_ST7757_DXF|H1758||TEXT|0",
+    "type": "CB12",
+    "why_v3a": "SPAN_COUNT_MISMATCH",
+    "B_m": 0.25,
+    "D_m": 0.75,
+    "length_m": 5.275,
+    "length_basis": "CLEAR_FACE_TO_FACE (band measured; span count differs from the schedule)",
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "qty": 0.7781,
+     "low": 0.6614,
+     "high": 0.7781,
+     "confidence": "M",
+     "method": "drawn band length x scheduled section (B x (D - t))",
+     "assumption": "band extent may include support zones (low = 85 %)",
+     "source": null
+    }
+   },
+   {
+    "floor": "1F",
+    "id": "B6:ALSENAN_ST7757_DXF|H1733||TEXT|0",
+    "type": "B6",
+    "why_v3a": "NO_BAND_ADJACENT_TO_TAG",
+    "B_m": 0.25,
+    "D_m": 0.5,
+    "length_m": 4.236,
+    "length_basis": "median clear length of the 4 measured B6 occurrence(s)",
+    "commercial": {
+     "class": "BUDGET_ESTIMATE",
+     "qty": 0.3601,
+     "low": 0.0,
+     "high": 0.3716,
+     "confidence": "L",
+     "method": "unbound tag: same-type median clear length x section",
+     "assumption": "the tag may repeat a beam already measured (low = 0)",
+     "source": null
+    }
+   },
+   {
+    "floor": "1F",
+    "id": "CB12:ALSENAN_ST7757_DXF|H1757||TEXT|0",
+    "type": "CB12",
+    "why_v3a": "NO_BAND_ADJACENT_TO_TAG",
+    "B_m": 0.25,
+    "D_m": 0.75,
+    "length_m": null,
+    "length_basis": "none",
+    "commercial": null
+   },
+   {
+    "floor": "1F",
+    "id": "CB10:ALSENAN_ST7757_DXF|H1815||TEXT|0",
+    "type": "CB10",
+    "why_v3a": "NO_BAND_ADJACENT_TO_TAG",
+    "B_m": 0.25,
+    "D_m": 0.5,
+    "length_m": null,
+    "length_basis": "none",
+    "commercial": null
+   },
+   {
+    "floor": "1F",
+    "id": "CB10:ALSENAN_ST7757_DXF|H1816||TEXT|0",
+    "type": "CB10",
+    "why_v3a": "NO_BAND_ADJACENT_TO_TAG",
+    "B_m": 0.25,
+    "D_m": 0.5,
+    "length_m": null,
+    "length_basis": "none",
+    "commercial": null
+   },
+   {
+    "floor": "1F",
+    "id": "B4:ALSENAN_ST7757_DXF|H6184||TEXT|0",
+    "type": "B4",
+    "why_v3a": "NO_BAND_PARALLEL_TO_TAG",
+    "B_m": 0.2,
+    "D_m": 0.5,
+    "length_m": 3.906,
+    "length_basis": "median clear length of the 8 measured B4 occurrence(s)",
+    "commercial": {
+     "class": "BUDGET_ESTIMATE",
+     "qty": 0.2656,
+     "low": 0.0,
+     "high": 0.306,
+     "confidence": "L",
+     "method": "unbound tag: same-type median clear length x section",
+     "assumption": "the tag may repeat a beam already measured (low = 0)",
+     "source": null
+    }
+   },
+   {
+    "floor": "1F",
+    "id": "B4:ALSENAN_ST7757_DXF|H6185||TEXT|0",
+    "type": "B4",
+    "why_v3a": "NO_BAND_PARALLEL_TO_TAG",
+    "B_m": 0.2,
+    "D_m": 0.5,
+    "length_m": 3.906,
+    "length_basis": "median clear length of the 8 measured B4 occurrence(s)",
+    "commercial": {
+     "class": "BUDGET_ESTIMATE",
+     "qty": 0.2656,
+     "low": 0.0,
+     "high": 0.306,
+     "confidence": "L",
+     "method": "unbound tag: same-type median clear length x section",
+     "assumption": "the tag may repeat a beam already measured (low = 0)",
+     "source": null
+    }
+   }
+  ],
+  "columns": [
+   {
+    "floor": "GF",
+    "id": "ALSENAN_ST7757_DXF|H4122||TEXT|0",
+    "type": "C8",
+    "why_v3a": "BLOCKED_UPPER_MEMBER_UNBOUND",
+    "B_m": 0.25,
+    "D_m": 0.9,
+    "height_m": 3.75,
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "qty": 0.8438,
+     "low": 0.8213,
+     "high": 1.0125,
+     "confidence": "M",
+     "method": "scheduled section x the floor's median computed column height",
+     "assumption": "upper member unbound: height between the floor's lowest computed height and the storey interval",
+     "source": null
+    }
+   },
+   {
+    "floor": "GF",
+    "id": "ALSENAN_ST7757_DXF|H4124||TEXT|0",
+    "type": "C5",
+    "why_v3a": "BLOCKED_UPPER_MEMBER_UNBOUND",
+    "B_m": 0.25,
+    "D_m": 0.6,
+    "height_m": 3.75,
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "qty": 0.5625,
+     "low": 0.5475,
+     "high": 0.675,
+     "confidence": "M",
+     "method": "scheduled section x the floor's median computed column height",
+     "assumption": "upper member unbound: height between the floor's lowest computed height and the storey interval",
+     "source": null
+    }
+   },
+   {
+    "floor": "GF",
+    "id": "ALSENAN_ST7757_DXF|H4199||TEXT|0",
+    "type": "C4",
+    "why_v3a": "BLOCKED_TAG_NOT_BOUND",
+    "B_m": 0.25,
+    "D_m": 0.5,
+    "height_m": 3.75,
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "qty": 0.4688,
+     "low": 0.4562,
+     "high": 0.5625,
+     "confidence": "M",
+     "method": "scheduled section x the floor's median computed column height",
+     "assumption": "upper member unbound: height between the floor's lowest computed height and the storey interval",
+     "source": null
+    }
+   },
+   {
+    "floor": "GF",
+    "id": "ALSENAN_ST7757_DXF|H4203||TEXT|0",
+    "type": "C9",
+    "why_v3a": "BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET",
+    "B_m": 0.25,
+    "D_m": 1.0,
+    "height_m": 3.75,
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "qty": 0.9375,
+     "low": 0.9125,
+     "high": 1.125,
+     "confidence": "M",
+     "method": "scheduled section x the floor's median computed column height",
+     "assumption": "upper member unbound: height between the floor's lowest computed height and the storey interval",
+     "source": null
+    }
+   },
+   {
+    "floor": "GF",
+    "id": "ALSENAN_ST7757_DXF|H4205||TEXT|0",
+    "type": "C8",
+    "why_v3a": "BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET",
+    "B_m": 0.25,
+    "D_m": 0.9,
+    "height_m": 3.75,
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "qty": 0.8438,
+     "low": 0.8213,
+     "high": 1.0125,
+     "confidence": "M",
+     "method": "scheduled section x the floor's median computed column height",
+     "assumption": "upper member unbound: height between the floor's lowest computed height and the storey interval",
+     "source": null
+    }
+   },
+   {
+    "floor": "1F",
+    "id": "ALSENAN_ST7757_DXF|H4110||TEXT|0",
+    "type": "C3",
+    "why_v3a": "BLOCKED_UPPER_MEMBER_UNBOUND",
+    "B_m": 0.2,
+    "D_m": 0.5,
+    "height_m": 3.45,
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "qty": 0.345,
+     "low": 0.345,
+     "high": 0.42,
+     "confidence": "M",
+     "method": "scheduled section x the floor's median computed column height",
+     "assumption": "upper member unbound: height between the floor's lowest computed height and the storey interval",
+     "source": null
+    }
+   },
+   {
+    "floor": "1F",
+    "id": "ALSENAN_ST7757_DXF|H4112||TEXT|0",
+    "type": "C5",
+    "why_v3a": "BLOCKED_UPPER_MEMBER_UNBOUND",
+    "B_m": 0.2,
+    "D_m": 0.5,
+    "height_m": 3.45,
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "qty": 0.345,
+     "low": 0.345,
+     "high": 0.42,
+     "confidence": "M",
+     "method": "scheduled section x the floor's median computed column height",
+     "assumption": "upper member unbound: height between the floor's lowest computed height and the storey interval",
+     "source": null
+    }
+   },
+   {
+    "floor": "1F",
+    "id": "ALSENAN_ST7757_DXF|H4199||TEXT|0",
+    "type": "C4",
+    "why_v3a": "BLOCKED_TAG_NOT_BOUND",
+    "B_m": 0.2,
+    "D_m": 0.5,
+    "height_m": 3.45,
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "qty": 0.345,
+     "low": 0.345,
+     "high": 0.42,
+     "confidence": "M",
+     "method": "scheduled section x the floor's median computed column height",
+     "assumption": "upper member unbound: height between the floor's lowest computed height and the storey interval",
+     "source": null
+    }
+   },
+   {
+    "floor": "2F",
+    "id": "ALSENAN_ST7757_DXF|H4199||TEXT|0",
+    "type": "C4",
+    "why_v3a": "BLOCKED_TAG_NOT_BOUND",
+    "B_m": 0.2,
+    "D_m": 0.5,
+    "height_m": 3.625,
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "qty": 0.3625,
+     "low": 0.3,
+     "high": 0.42,
+     "confidence": "M",
+     "method": "scheduled section x the floor's median computed column height",
+     "assumption": "upper member unbound: height between the floor's lowest computed height and the storey interval",
+     "source": null
+    }
+   }
+  ]
+ },
+ "ext_gb": {
+  "spans": 28,
+  "length_m": 110.299,
+  "B_m": 0.3,
+  "D": {
+   "qty": 1.0,
+   "low": 0.9,
+   "high": 1.3
+  },
+  "concrete": {
+   "class": "PROVISIONAL_SOURCE_DERIVED",
+   "qty": 33.0898,
+   "low": 29.7808,
+   "high": 43.0167,
+   "confidence": "M",
+   "method": "length x 0.30 x D; D = ground (±0.00) to GF level (+1.00), printed on all elevations",
+   "assumption": "the below-ground embedment is not printed (low 0.90 = 10 cm build-up off, high 1.30 = 30 cm below ground)",
+   "source": null
+  },
+  "blinding_local_m3": 5.515,
+  "rebar_kg": {
+   "qty": 2611.1,
+   "low": 2552.947,
+   "high": 2981.647
+  },
+  "rebar_basis": "p.13 exterior GB: top 3Ø16, bottom 6Ø16, side 2Ø12 @ 30, Ø8 @ 15 links (cover 7); 135° link hooks PROVISIONAL_CODE_METHOD"
+ },
+ "necks": {
+  "footings": 25,
+  "median_section_m2": 0.125,
+  "founding_m": {
+   "qty": -1.5,
+   "low": -1.0,
+   "high": -2.0
+  },
+  "concrete": {
+   "class": "PROVISIONAL_URBAN_FALLBACK",
+   "qty": 6.25,
+   "low": 4.6875,
+   "high": 7.8125,
+   "confidence": "L",
+   "method": "neck = median GF column section x (GF slab underside +0.90 - footing top)",
+   "assumption": "founding level -1.50 (Urban fallback; note 12 leaves it to site) range -1.00 .. -2.00",
+   "source": null
+  },
+  "starter_rebar_kg": {
+   "qty": 938.667,
+   "low": 780.642,
+   "high": 1096.691,
+   "bars_per_column": 8.0,
+   "basis": "FOUNDATION bars of the column schedule: neck + footing embedment (H - 7 cm) + one 40Ø lap"
+  }
+ },
+ "f_f10": {
+  "outline_mm": [
+   3250.0,
+   1400.0
+  ],
+  "marks": [
+   "F",
+   "F10"
+  ],
+  "F_SCENARIO": {
+   "what": "two F footings",
+   "concrete_m3": 0.432,
+   "rebar_kg": 18.844444,
+   "blinding_m3": 0.22
+  },
+  "F10_SCENARIO": {
+   "what": "one F10 combined footing",
+   "concrete_m3": 1.96,
+   "rebar_kg": 62.671605,
+   "blinding_m3": 0.48
+  },
+  "LOW": 0.432,
+  "HIGH": 1.96,
+  "DIFFERENCE": 1.528,
+  "technical": "BLOCKED_SOURCE_CONFLICT",
+  "commercial": {
+   "class": "PROVISIONAL_SOURCE_RANGE",
+   "qty": 1.96,
+   "low": 0.432,
+   "high": 1.96,
+   "confidence": "M",
+   "method": "the two schedule definitions of the one drawn outline",
+   "assumption": "SELECTED COMMERCIAL BASIS = the larger (F10) definition, labelled",
+   "source": null
+  }
+ },
+ "pool": {
+  "state": "DERIVED",
+  "swim_block": "147",
+  "inner_m": [
+   3.1,
+   1.55
+  ],
+  "wall_t_m": 0.2,
+  "wall_source": "detail (20)",
+  "drawn_outer_offsets_m": [
+   0.0,
+   0.2,
+   0.2,
+   0.2
+  ],
+  "base_t_m": 0.4,
+  "depth_m": 1.15,
+  "depth_source": "ARCH-P08-NW-ELEV",
+  "outline_handles": [
+   "7C5",
+   "7C6"
+  ],
+  "walls_m3": 2.323,
+  "base_m3": 2.73,
+  "concrete_m3": 5.053,
+  "blinding_m3": 0.7955,
+  "external_wp_m2": 23.72,
+  "internal_finish_m2": 15.5,
+  "coping_lm": 9.3,
+  "rebar_kg": 579.47,
+  "rebar_basis": "DETAIL OF SWIMMING POOL deep-end callouts applied to the whole pool (the detail's sloped shallow end is not shown on the 1.55 x 3.10 plan): walls 7Ø14/m + 7Ø12/m vertical, Ø12/20 horizontal both faces; base 7Ø14/m top and bottom both ways",
+  "formula": "walls 10.10 x 0.20 x 1.15; base 3.50 x 1.95 x 0.40"
+ },
+ "boundary_wall": {
+  "runs": [
+   {
+    "handle": "7FC",
+    "area_m2": 0.23,
+    "centreline_m": 1.15,
+    "width_mm_effective": 170.4
+   },
+   {
+    "handle": "7FE",
+    "area_m2": 8.344,
+    "centreline_m": 41.72,
+    "width_mm_effective": 199.0
+   },
+   {
+    "handle": "810",
+    "area_m2": 0.24,
+    "centreline_m": 1.2,
+    "width_mm_effective": 171.4
+   }
+  ],
+  "length_m": 44.07,
+  "height_m": 2.65,
+  "height_source": "ARCH-P12-FENCE (printed 2.15 + 0.50)",
+  "front_run_printed_m": 14.99,
+  "blockwork_m2": 116.785,
+  "blockwork_basis": "run x 2.65 printed face height",
+  "beam_m3": 5.2884,
+  "beam": "B.W 20 x 60 (schedule)",
+  "plaster_both_faces_m2": 233.571,
+  "note": "S-BOUN runs on the ground-beam sheet are 200 mm wide (wall on its beam); footings of the p.14 typical detail are not spaced on any plan -> not quantified (PENDING)",
+  "class": "PROVISIONAL_SOURCE_DERIVED"
+ },
+ "stairs": {
+  "flights": [
+   {
+    "flight": "GF->1F",
+    "H_m": 4.5,
+    "risers": 26,
+    "risers_range": [
+     26,
+     30
+    ],
+    "R_m": 0.1731,
+    "G_m": 0.3,
+    "treads": 25,
+    "width_m": 1.15,
+    "slope_len_m": 8.746,
+    "landings_m2": 2.645,
+    "concrete_m3": 2.8088,
+    "concrete_hi_m3": 3.0017,
+    "tread_m2": 11.27,
+    "riser_m2": 5.175,
+    "nosing_lm": 28.75,
+    "handrail_lm": 9.896,
+    "plan_tread_lines_check": [
+     4,
+     7,
+     6
+    ]
+   },
+   {
+    "flight": "1F->2F",
+    "H_m": 4.2,
+    "risers": 24,
+    "risers_range": [
+     24,
+     28
+    ],
+    "R_m": 0.175,
+    "G_m": 0.3,
+    "treads": 23,
+    "width_m": 1.15,
+    "slope_len_m": 8.078,
+    "landings_m2": 1.3225,
+    "concrete_m3": 2.4224,
+    "concrete_hi_m3": 2.6149,
+    "tread_m2": 9.257,
+    "riser_m2": 4.83,
+    "nosing_lm": 26.45,
+    "handrail_lm": 9.228,
+    "plan_tread_lines_check": [
+     5,
+     11
+    ]
+   }
+  ],
+  "waist": {
+   "t_m": 0.16,
+   "class": "PROVISIONAL_SOURCE_DERIVED",
+   "why": "note 18 (slabs 16 cm unless stated) is not a stair waist proof"
+  },
+  "risers_class": "PROVISIONAL_CODE_METHOD (2R + G band, G = 0.30 printed)",
+  "landings": "W x W per turn (GF->1F two turns, 1F->2F one; plan tread runs 3 / 2) - labelled"
+ },
+ "blinding": {
+  "thickness": {
+   "value_m": 0.1,
+   "authority": "SOURCE (ST7757 p.13 typical footing: 10 cm plain concrete)",
+   "hierarchy": "SOURCE > OWNER FACT > URBAN METHOD 0.10 > PENDING"
+  },
+  "concrete": {
+   "strength": "f'c >= 150 kg/cm2 (p.8 note 6)",
+   "cement": "sulfate- and salt-resisting (note 13)",
+   "soil_contact": true,
+   "sulfate_requirement": "YES (note 13)",
+   "source": "ST7757.pdf p.8"
+  },
+  "SOURCE_DETAIL_LOCAL_BLINDING": {
+   "volume_m3": 25.6328,
+   "level": "under each footing / ground beam (formation of each element)",
+   "parts": {
+    "footings (computed)": 15.213,
+    "interior ground beams": 4.424836,
+    "exterior ground beams (provisional length x 0.50)": 5.515,
+    "F / F10 (F10 definition)": 0.48
+   },
+   "source": "p.13 typical detail",
+   "role": "ALTERNATIVE (same physical layer) - not in the total"
+  },
+  "OWNER_FULL_FOOTPRINT_BLINDING": {
+   "footprints": [
+    {
+     "id": "FP-1",
+     "area_m2": 227.719,
+     "bounds": [
+      92817,
+      35948,
+      112189,
+      49998
+     ]
+    },
+    {
+     "id": "FP-2",
+     "area_m2": 60.557,
+     "bounds": [
+      80817,
+      36298,
+      91619,
+      45549
+     ]
+    }
+   ],
+   "area_m2": 288.276,
+   "thickness_m": 0.1,
+   "volume_m3": 28.8276,
+   "level": "formation level (one layer; footings set out above it)",
+   "source": "OD-V3B-1 (owner method) x ground-beam system outline (ST7757 GROUND BEAMS PLAN)",
+   "route_b": {
+    "what": "GF architectural plate (structural GF roof plate registered on the plan)",
+    "area_m2": 322.411,
+    "note": "the roof plate includes overhangs / terraces; the founded footprint is expected below it"
+   }
+  },
+  "double_count_guard": "local detail blinding = the same layer; only OWNER_FULL_FOOTPRINT enters the total"
+ },
+ "courtyard": {
+  "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+  "qty": 147.137,
+  "low": 102.996,
+  "high": 147.137,
+  "confidence": "L",
+  "method": "boundary-wall enclosure (S-BOUN) - founded footprints - pool / shaft outlines",
+  "assumption": "the enclosure's open south side is closed at the end of the side runs; paving material BY_SPEC",
+  "formula": "enclosure 250.86 m2 - buildings / pool = 147.14 m2"
+ },
+ "ground_zones": {
+  "zones": [
+   {
+    "id": "ZONE-1",
+    "state": "CLOSED_V3A",
+    "slab_m2": 70.40589
+   },
+   {
+    "id": "ZONE-2",
+    "state": "CLOSED_CROSS_LAYER",
+    "outer_m2": 60.557,
+    "slab_m2": 44.983,
+    "pieces": 7,
+    "t_m": 0.1,
+    "volume_m3": 4.4983,
+    "mesh_kg": 277.672,
+    "rule": "paired 300 mm bands (layers 1 + 2) + single lines as barriers; slab = outer - beams / columns / barriers, strips narrower than 450 mm effective width excluded"
+   }
+  ],
+  "footprints": [
+   {
+    "id": "FP-1",
+    "area_m2": 227.719,
+    "bounds": [
+     92817,
+     35948,
+     112189,
+     49998
+    ]
+   },
+   {
+    "id": "FP-2",
+    "area_m2": 60.557,
+    "bounds": [
+     80817,
+     36298,
+     91619,
+     45549
+    ]
+   }
+  ]
+ },
+ "slab_binding": {
+  "rows": [
+   {
+    "floor": "GF",
+    "annotation": "1824",
+    "text": "3%%c16/Top",
+    "state": "BOUND",
+    "dia_mm": 16,
+    "kind": "COUNT",
+    "n": 3,
+    "top": true,
+    "bar": "1825",
+    "binding": "DRAWN_BAR",
+    "count": 3,
+    "clear_span_mm": 4500.0,
+    "width_mm": 4000.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 4850.0,
+    "drawn_length_mm": 2408.8,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 1.5802,
+    "technical": "DERIVED",
+    "net_m": 14.55,
+    "commercial": null,
+    "net_kg": 22.992593,
+    "pieces": [
+     [
+      "GF-1824",
+      4.85,
+      3
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "48F",
+    "text": "8%%C16/m",
+    "state": "BOUND_TEXT_ONLY",
+    "dia_mm": 16,
+    "kind": "PER_M",
+    "n": 8,
+    "top": false,
+    "bar": null,
+    "binding": "TEXT_ONLY_PANEL",
+    "count": 35,
+    "clear_span_mm": 2500.0,
+    "width_mm": 4300.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 2850.0,
+    "drawn_length_mm": null,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 1.5802,
+    "technical": "DERIVED",
+    "net_m": 99.75,
+    "commercial": null,
+    "net_kg": 157.62963,
+    "pieces": [
+     [
+      "GF-48F",
+      2.85,
+      35
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "490",
+    "text": "8%%C16/m",
+    "state": "BOUND_TEXT_ONLY",
+    "dia_mm": 16,
+    "kind": "PER_M",
+    "n": 8,
+    "top": false,
+    "bar": null,
+    "binding": "TEXT_ONLY_PANEL",
+    "count": 21,
+    "clear_span_mm": 4300.0,
+    "width_mm": 2500.0,
+    "support_widths_mm": [
+     200.0,
+     400.0
+    ],
+    "embed_mm": [
+     175.0,
+     375.0
+    ],
+    "length_mm": 4850.0,
+    "drawn_length_mm": null,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 1.5802,
+    "technical": "DERIVED",
+    "net_m": 101.85,
+    "commercial": null,
+    "net_kg": 160.948148,
+    "pieces": [
+     [
+      "GF-490",
+      4.85,
+      21
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "491",
+    "text": "8%%C16/m",
+    "state": "DUPLICATE_LABEL",
+    "dia_mm": 16,
+    "kind": "PER_M",
+    "n": 8,
+    "top": false,
+    "bar": null,
+    "binding": "TEXT_ONLY_PANEL",
+    "count": 21,
+    "clear_span_mm": 4300.0,
+    "width_mm": 2500.0,
+    "support_widths_mm": [
+     200.0,
+     400.0
+    ],
+    "embed_mm": [
+     175.0,
+     375.0
+    ],
+    "length_mm": 4850.0,
+    "drawn_length_mm": null,
+    "why": "same bar family, direction and panel as an earlier label - counted once",
+    "duplicate_of": "490",
+    "kg_per_m": 1.5802,
+    "technical": "DUPLICATE",
+    "net_m": null,
+    "commercial": null,
+    "net_kg": null
+   },
+   {
+    "floor": "GF",
+    "annotation": "4A2",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "4A3",
+    "binding": "DRAWN_BAR",
+    "count": 10,
+    "clear_span_mm": 2950.0,
+    "width_mm": 1800.0,
+    "support_widths_mm": [
+     200.0,
+     250.0
+    ],
+    "embed_mm": [
+     175.0,
+     225.0
+    ],
+    "length_mm": 3350.0,
+    "drawn_length_mm": 2215.2,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 33.5,
+    "commercial": null,
+    "net_kg": 20.679012,
+    "pieces": [
+     [
+      "GF-4A2",
+      3.35,
+      10
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4A4",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "4A6",
+    "binding": "DRAWN_BAR",
+    "count": 15,
+    "clear_span_mm": 1800.0,
+    "width_mm": 2950.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 2150.0,
+    "drawn_length_mm": 1300.9,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 32.25,
+    "commercial": null,
+    "net_kg": 19.907407,
+    "pieces": [
+     [
+      "GF-4A4",
+      2.15,
+      15
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4A7",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "4A8",
+    "binding": "DRAWN_BAR",
+    "count": 8,
+    "clear_span_mm": 2874.4,
+    "width_mm": 1470.0,
+    "support_widths_mm": [
+     255.5,
+     200.0
+    ],
+    "embed_mm": [
+     230.5,
+     175.0
+    ],
+    "length_mm": 3279.8,
+    "drawn_length_mm": 2459.6,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 26.2387,
+    "commercial": null,
+    "net_kg": 16.196728,
+    "pieces": [
+     [
+      "GF-4A7",
+      3.2798,
+      8
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4A9",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "4AB",
+    "binding": "DRAWN_BAR",
+    "count": 14,
+    "clear_span_mm": 1470.0,
+    "width_mm": 2790.5,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 1820.0,
+    "drawn_length_mm": 1300.9,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 25.48,
+    "commercial": null,
+    "net_kg": 15.728395,
+    "pieces": [
+     [
+      "GF-4A9",
+      1.82,
+      14
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4AC",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "4AD",
+    "binding": "DRAWN_BAR",
+    "count": 8,
+    "clear_span_mm": 1750.0,
+    "width_mm": 1470.0,
+    "support_widths_mm": [
+     200.0,
+     250.0
+    ],
+    "embed_mm": [
+     175.0,
+     225.0
+    ],
+    "length_mm": 2150.0,
+    "drawn_length_mm": 1317.3,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 17.2,
+    "commercial": null,
+    "net_kg": 10.617284,
+    "pieces": [
+     [
+      "GF-4AC",
+      2.15,
+      8
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4AE",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "4B0",
+    "binding": "DRAWN_BAR",
+    "count": 9,
+    "clear_span_mm": 1470.0,
+    "width_mm": 1750.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 1820.0,
+    "drawn_length_mm": 1231.5,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 16.38,
+    "commercial": null,
+    "net_kg": 10.111111,
+    "pieces": [
+     [
+      "GF-4AE",
+      1.82,
+      9
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4B4",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "4B1",
+    "binding": "DRAWN_BAR",
+    "count": 9,
+    "clear_span_mm": 3300.0,
+    "width_mm": 1750.0,
+    "support_widths_mm": [
+     500.0,
+     200.0
+    ],
+    "embed_mm": [
+     475.0,
+     175.0
+    ],
+    "length_mm": 3950.0,
+    "drawn_length_mm": 2925.5,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 35.55,
+    "commercial": null,
+    "net_kg": 21.944444,
+    "pieces": [
+     [
+      "GF-4B4",
+      3.95,
+      9
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4B5",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "4B3",
+    "binding": "DRAWN_BAR",
+    "count": 17,
+    "clear_span_mm": 1750.0,
+    "width_mm": 3300.0,
+    "support_widths_mm": [
+     200.0,
+     400.0
+    ],
+    "embed_mm": [
+     175.0,
+     375.0
+    ],
+    "length_mm": 2300.0,
+    "drawn_length_mm": 1297.4,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 39.1,
+    "commercial": null,
+    "net_kg": 24.135802,
+    "pieces": [
+     [
+      "GF-4B5",
+      2.3,
+      17
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4BB",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "4B8",
+    "binding": "DRAWN_BAR",
+    "count": 9,
+    "clear_span_mm": 1900.0,
+    "width_mm": 1750.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 2250.0,
+    "drawn_length_mm": 1545.0,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 20.25,
+    "commercial": null,
+    "net_kg": 12.5,
+    "pieces": [
+     [
+      "GF-4BB",
+      2.25,
+      9
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4BC",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "4BA",
+    "binding": "DRAWN_BAR",
+    "count": 10,
+    "clear_span_mm": 1750.0,
+    "width_mm": 1900.0,
+    "support_widths_mm": [
+     200.0,
+     250.0
+    ],
+    "embed_mm": [
+     175.0,
+     225.0
+    ],
+    "length_mm": 2150.0,
+    "drawn_length_mm": 1297.4,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 21.5,
+    "commercial": null,
+    "net_kg": 13.271605,
+    "pieces": [
+     [
+      "GF-4BC",
+      2.15,
+      10
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4C0",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "4BD",
+    "binding": "DRAWN_BAR",
+    "count": 9,
+    "clear_span_mm": 1650.0,
+    "width_mm": 1750.0,
+    "support_widths_mm": [
+     300.0,
+     200.0
+    ],
+    "embed_mm": [
+     275.0,
+     175.0
+    ],
+    "length_mm": 2100.0,
+    "drawn_length_mm": 1482.5,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 18.9,
+    "commercial": null,
+    "net_kg": 11.666667,
+    "pieces": [
+     [
+      "GF-4C0",
+      2.1,
+      9
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4C1",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "4BF",
+    "binding": "DRAWN_BAR",
+    "count": 9,
+    "clear_span_mm": 1750.0,
+    "width_mm": 1650.0,
+    "support_widths_mm": [
+     200.0,
+     250.0
+    ],
+    "embed_mm": [
+     175.0,
+     225.0
+    ],
+    "length_mm": 2150.0,
+    "drawn_length_mm": 1297.4,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 19.35,
+    "commercial": null,
+    "net_kg": 11.944444,
+    "pieces": [
+     [
+      "GF-4C1",
+      2.15,
+      9
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4C5",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "4C2",
+    "binding": "DRAWN_BAR",
+    "count": 12,
+    "clear_span_mm": 3750.0,
+    "width_mm": 2220.1,
+    "support_widths_mm": [
+     300.0,
+     200.0
+    ],
+    "embed_mm": [
+     275.0,
+     175.0
+    ],
+    "length_mm": 4200.0,
+    "drawn_length_mm": 3163.1,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 50.4,
+    "commercial": null,
+    "net_kg": 31.111111,
+    "pieces": [
+     [
+      "GF-4C5",
+      4.2,
+      12
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4C6",
+    "text": "6%%C10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 6,
+    "top": false,
+    "bar": "4C4",
+    "binding": "DRAWN_BAR",
+    "count": 23,
+    "clear_span_mm": 2500.2,
+    "width_mm": 3750.0,
+    "support_widths_mm": [
+     255.5,
+     200.0
+    ],
+    "embed_mm": [
+     230.5,
+     175.0
+    ],
+    "length_mm": 2905.7,
+    "drawn_length_mm": 1638.3,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 66.830014,
+    "commercial": null,
+    "net_kg": 41.253095,
+    "pieces": [
+     [
+      "GF-4C6",
+      2.9057,
+      23
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4CA",
+    "text": "7%%C10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 7,
+    "top": false,
+    "bar": "4C9",
+    "binding": "DRAWN_BAR",
+    "count": 35,
+    "clear_span_mm": 3300.0,
+    "width_mm": 4950.0,
+    "support_widths_mm": [
+     500.0,
+     200.0
+    ],
+    "embed_mm": [
+     475.0,
+     175.0
+    ],
+    "length_mm": 3950.0,
+    "drawn_length_mm": 2296.5,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 138.25,
+    "commercial": null,
+    "net_kg": 85.339506,
+    "pieces": [
+     [
+      "GF-4CA",
+      3.95,
+      35
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4CB",
+    "text": "6%%C10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 6,
+    "top": false,
+    "bar": "4C7",
+    "binding": "DRAWN_BAR",
+    "count": 20,
+    "clear_span_mm": 4950.0,
+    "width_mm": 3300.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 5300.0,
+    "drawn_length_mm": 3904.3,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 106.0,
+    "commercial": null,
+    "net_kg": 65.432099,
+    "pieces": [
+     [
+      "GF-4CB",
+      5.3,
+      20
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4D0",
+    "text": "6%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 6,
+    "top": false,
+    "bar": "4CF",
+    "binding": "DRAWN_BAR",
+    "count": 22,
+    "clear_span_mm": 3500.0,
+    "width_mm": 3520.1,
+    "support_widths_mm": [
+     200.0,
+     300.0
+    ],
+    "embed_mm": [
+     175.0,
+     275.0
+    ],
+    "length_mm": 3950.0,
+    "drawn_length_mm": 1806.5,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 86.9,
+    "commercial": null,
+    "net_kg": 53.641975,
+    "pieces": [
+     [
+      "GF-4D0",
+      3.95,
+      22
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4D1",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "4CD",
+    "binding": "DRAWN_BAR",
+    "count": 18,
+    "clear_span_mm": 3520.1,
+    "width_mm": 3500.0,
+    "support_widths_mm": [
+     450.0,
+     500.0
+    ],
+    "embed_mm": [
+     425.0,
+     475.0
+    ],
+    "length_mm": 4420.1,
+    "drawn_length_mm": 2951.1,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 79.56252,
+    "commercial": null,
+    "net_kg": 49.112667,
+    "pieces": [
+     [
+      "GF-4D1",
+      4.4201,
+      18
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4D6",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "4D7",
+    "binding": "DRAWN_BAR",
+    "count": 8,
+    "clear_span_mm": 1979.9,
+    "width_mm": 1424.6,
+    "support_widths_mm": [
+     200.0,
+     450.0
+    ],
+    "embed_mm": [
+     175.0,
+     425.0
+    ],
+    "length_mm": 2579.9,
+    "drawn_length_mm": 1643.0,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 20.63888,
+    "commercial": null,
+    "net_kg": 12.740049,
+    "pieces": [
+     [
+      "GF-4D6",
+      2.5799,
+      8
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4D8",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "4DA",
+    "binding": "DRAWN_BAR",
+    "count": 10,
+    "clear_span_mm": 1515.8,
+    "width_mm": 1979.9,
+    "support_widths_mm": [
+     200.0,
+     405.0
+    ],
+    "embed_mm": [
+     175.0,
+     380.0
+    ],
+    "length_mm": 2070.8,
+    "drawn_length_mm": 1083.0,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 20.708119,
+    "commercial": null,
+    "net_kg": 12.782789,
+    "pieces": [
+     [
+      "GF-4D8",
+      2.0708,
+      10
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4DC",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "4DD",
+    "binding": "DRAWN_BAR",
+    "count": 6,
+    "clear_span_mm": 7500.0,
+    "width_mm": 1046.6,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 7850.0,
+    "drawn_length_mm": 6623.4,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 47.1,
+    "commercial": null,
+    "net_kg": 29.074074,
+    "pieces": [
+     [
+      "GF-4DC",
+      7.85,
+      6
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4DE",
+    "text": "6%%C10/m",
+    "state": "PARTIAL",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 6,
+    "top": false,
+    "bar": "4E0",
+    "binding": "DRAWN_BAR",
+    "count": 46,
+    "clear_span_mm": 967.0,
+    "width_mm": 7500.0,
+    "support_widths_mm": [
+     350.0,
+     null
+    ],
+    "embed_mm": [
+     325.0,
+     null
+    ],
+    "length_mm": 967.0,
+    "drawn_length_mm": 752.8,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "PARTIAL",
+    "net_m": 44.483743,
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "net_m": 52.533743,
+     "low_m": 44.483743,
+     "high_m": 66.333743,
+     "confidence": "M",
+     "method": "open support: embedment = the floor's median measured support width - cover",
+     "assumption": "1 open support(s), embed 0.175 m each (range 0 .. 0.475)",
+     "net_kg": 32.428236,
+     "low_kg": 27.459101,
+     "high_kg": 40.946755
+    },
+    "net_kg": 27.459101,
+    "pieces": [
+     [
+      "GF-4DE",
+      0.967,
+      46
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4EB",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "4E8",
+    "binding": "DRAWN_BAR",
+    "count": 10,
+    "clear_span_mm": 2200.0,
+    "width_mm": 1979.9,
+    "support_widths_mm": [
+     250.0,
+     200.0
+    ],
+    "embed_mm": [
+     225.0,
+     175.0
+    ],
+    "length_mm": 2600.0,
+    "drawn_length_mm": 1545.0,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 26.0,
+    "commercial": null,
+    "net_kg": 16.049383,
+    "pieces": [
+     [
+      "GF-4EB",
+      2.6,
+      10
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4EC",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "4EA",
+    "binding": "DRAWN_BAR",
+    "count": 12,
+    "clear_span_mm": 1979.9,
+    "width_mm": 2200.0,
+    "support_widths_mm": [
+     200.0,
+     450.0
+    ],
+    "embed_mm": [
+     175.0,
+     425.0
+    ],
+    "length_mm": 2579.9,
+    "drawn_length_mm": 1545.2,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 30.95832,
+    "commercial": null,
+    "net_kg": 19.110074,
+    "pieces": [
+     [
+      "GF-4EC",
+      2.5799,
+      12
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4F0",
+    "text": "5%%c10/m",
+    "state": "PARTIAL",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "4ED",
+    "binding": "DRAWN_BAR",
+    "count": 7,
+    "clear_span_mm": 3985.8,
+    "width_mm": 1200.0,
+    "support_widths_mm": [
+     null,
+     200.0
+    ],
+    "embed_mm": [
+     null,
+     175.0
+    ],
+    "length_mm": 3985.8,
+    "drawn_length_mm": 3418.6,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "PARTIAL",
+    "net_m": 27.90026,
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "net_m": 29.12526,
+     "low_m": 27.90026,
+     "high_m": 31.22526,
+     "confidence": "M",
+     "method": "open support: embedment = the floor's median measured support width - cover",
+     "assumption": "1 open support(s), embed 0.175 m each (range 0 .. 0.475)",
+     "net_kg": 17.978556,
+     "low_kg": 17.222383,
+     "high_kg": 19.274852
+    },
+    "net_kg": 17.222383,
+    "pieces": [
+     [
+      "GF-4F0",
+      3.9858,
+      7
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4F1",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "4EF",
+    "binding": "DRAWN_BAR",
+    "count": 21,
+    "clear_span_mm": 1300.0,
+    "width_mm": 4176.2,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 1650.0,
+    "drawn_length_mm": 1019.0,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 34.65,
+    "commercial": null,
+    "net_kg": 21.388889,
+    "pieces": [
+     [
+      "GF-4F1",
+      1.65,
+      21
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4F5",
+    "text": "5%%c10/m",
+    "state": "PARTIAL",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "4F2",
+    "binding": "DRAWN_BAR",
+    "count": 7,
+    "clear_span_mm": 2595.7,
+    "width_mm": 1200.0,
+    "support_widths_mm": [
+     500.0,
+     null
+    ],
+    "embed_mm": [
+     475.0,
+     null
+    ],
+    "length_mm": 2595.7,
+    "drawn_length_mm": 1902.6,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "PARTIAL",
+    "net_m": 18.169713,
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "net_m": 19.394713,
+     "low_m": 18.169713,
+     "high_m": 21.494713,
+     "confidence": "M",
+     "method": "open support: embedment = the floor's median measured support width - cover",
+     "assumption": "1 open support(s), embed 0.175 m each (range 0 .. 0.475)",
+     "net_kg": 11.972045,
+     "low_kg": 11.215872,
+     "high_kg": 13.268341
+    },
+    "net_kg": 11.215872,
+    "pieces": [
+     [
+      "GF-4F5",
+      2.5957,
+      7
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4F6",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "4F4",
+    "binding": "DRAWN_BAR",
+    "count": 13,
+    "clear_span_mm": 1200.0,
+    "width_mm": 2419.2,
+    "support_widths_mm": [
+     300.0,
+     200.0
+    ],
+    "embed_mm": [
+     275.0,
+     175.0
+    ],
+    "length_mm": 1650.0,
+    "drawn_length_mm": 981.2,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 21.45,
+    "commercial": null,
+    "net_kg": 13.240741,
+    "pieces": [
+     [
+      "GF-4F6",
+      1.65,
+      13
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4FC",
+    "text": "7%%C10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 7,
+    "top": false,
+    "bar": "4FB",
+    "binding": "DRAWN_BAR",
+    "count": 32,
+    "clear_span_mm": 3000.0,
+    "width_mm": 4500.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 3350.0,
+    "drawn_length_mm": 2296.5,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 107.2,
+    "commercial": null,
+    "net_kg": 66.17284,
+    "pieces": [
+     [
+      "GF-4FC",
+      3.35,
+      32
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "4FD",
+    "text": "6%%C10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 6,
+    "top": false,
+    "bar": "4F9",
+    "binding": "DRAWN_BAR",
+    "count": 19,
+    "clear_span_mm": 4500.0,
+    "width_mm": 3000.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 4850.0,
+    "drawn_length_mm": 3854.2,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 92.15,
+    "commercial": null,
+    "net_kg": 56.882716,
+    "pieces": [
+     [
+      "GF-4FD",
+      4.85,
+      19
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "501",
+    "text": "7%%C10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 7,
+    "top": false,
+    "bar": "500",
+    "binding": "DRAWN_BAR",
+    "count": 32,
+    "clear_span_mm": 3000.0,
+    "width_mm": 4500.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 3350.0,
+    "drawn_length_mm": 2155.6,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 107.2,
+    "commercial": null,
+    "net_kg": 66.17284,
+    "pieces": [
+     [
+      "GF-501",
+      3.35,
+      32
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "502",
+    "text": "6%%C10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 6,
+    "top": false,
+    "bar": "4FE",
+    "binding": "DRAWN_BAR",
+    "count": 19,
+    "clear_span_mm": 4500.0,
+    "width_mm": 3000.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 4850.0,
+    "drawn_length_mm": 3854.2,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 92.15,
+    "commercial": null,
+    "net_kg": 56.882716,
+    "pieces": [
+     [
+      "GF-502",
+      4.85,
+      19
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "506",
+    "text": "7%%C10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 7,
+    "top": false,
+    "bar": "505",
+    "binding": "DRAWN_BAR",
+    "count": 32,
+    "clear_span_mm": 4000.0,
+    "width_mm": 4500.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 4350.0,
+    "drawn_length_mm": 2155.6,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 139.2,
+    "commercial": null,
+    "net_kg": 85.925926,
+    "pieces": [
+     [
+      "GF-506",
+      4.35,
+      32
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "507",
+    "text": "6%%C10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 6,
+    "top": false,
+    "bar": "503",
+    "binding": "DRAWN_BAR",
+    "count": 25,
+    "clear_span_mm": 4500.0,
+    "width_mm": 4000.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 4850.0,
+    "drawn_length_mm": 3854.2,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 121.25,
+    "commercial": null,
+    "net_kg": 74.845679,
+    "pieces": [
+     [
+      "GF-507",
+      4.85,
+      25
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "50C",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "509",
+    "binding": "DRAWN_BAR",
+    "count": 7,
+    "clear_span_mm": 6470.0,
+    "width_mm": 1200.0,
+    "support_widths_mm": [
+     200.0,
+     500.0
+    ],
+    "embed_mm": [
+     175.0,
+     475.0
+    ],
+    "length_mm": 7120.0,
+    "drawn_length_mm": 5361.0,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 49.84,
+    "commercial": null,
+    "net_kg": 30.765432,
+    "pieces": [
+     [
+      "GF-50C",
+      7.12,
+      7
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "50D",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "50B",
+    "binding": "DRAWN_BAR",
+    "count": 33,
+    "clear_span_mm": 1200.0,
+    "width_mm": 6470.0,
+    "support_widths_mm": [
+     300.0,
+     200.0
+    ],
+    "embed_mm": [
+     275.0,
+     175.0
+    ],
+    "length_mm": 1650.0,
+    "drawn_length_mm": 1117.1,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 54.45,
+    "commercial": null,
+    "net_kg": 33.611111,
+    "pieces": [
+     [
+      "GF-50D",
+      1.65,
+      33
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "512",
+    "text": "5%%c10/m",
+    "state": "PARTIAL",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "50F",
+    "binding": "DRAWN_BAR",
+    "count": 7,
+    "clear_span_mm": 3564.5,
+    "width_mm": 1200.0,
+    "support_widths_mm": [
+     null,
+     200.0
+    ],
+    "embed_mm": [
+     null,
+     175.0
+    ],
+    "length_mm": 3564.5,
+    "drawn_length_mm": 3034.0,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "PARTIAL",
+    "net_m": 24.951521,
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "net_m": 26.176521,
+     "low_m": 24.951521,
+     "high_m": 28.276521,
+     "confidence": "M",
+     "method": "open support: embedment = the floor's median measured support width - cover",
+     "assumption": "1 open support(s), embed 0.175 m each (range 0 .. 0.475)",
+     "net_kg": 16.158346,
+     "low_kg": 15.402173,
+     "high_kg": 17.454643
+    },
+    "net_kg": 15.402173,
+    "pieces": [
+     [
+      "GF-512",
+      3.5645,
+      7
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "513",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "511",
+    "binding": "DRAWN_BAR",
+    "count": 18,
+    "clear_span_mm": 1200.0,
+    "width_mm": 3573.1,
+    "support_widths_mm": [
+     300.0,
+     200.0
+    ],
+    "embed_mm": [
+     275.0,
+     175.0
+    ],
+    "length_mm": 1650.0,
+    "drawn_length_mm": 1125.4,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 29.7,
+    "commercial": null,
+    "net_kg": 18.333333,
+    "pieces": [
+     [
+      "GF-513",
+      1.65,
+      18
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "517",
+    "text": "6%%c10/m",
+    "state": "PARTIAL",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 6,
+    "top": false,
+    "bar": "516",
+    "binding": "DRAWN_BAR",
+    "count": 19,
+    "clear_span_mm": 3118.0,
+    "width_mm": 3000.0,
+    "support_widths_mm": [
+     null,
+     200.0
+    ],
+    "embed_mm": [
+     null,
+     175.0
+    ],
+    "length_mm": 3118.0,
+    "drawn_length_mm": 1806.5,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "PARTIAL",
+    "net_m": 59.242412,
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "net_m": 62.567412,
+     "low_m": 59.242412,
+     "high_m": 68.267412,
+     "confidence": "M",
+     "method": "open support: embedment = the floor's median measured support width - cover",
+     "assumption": "1 open support(s), embed 0.175 m each (range 0 .. 0.475)",
+     "net_kg": 38.62186,
+     "low_kg": 36.56939,
+     "high_kg": 42.140378
+    },
+    "net_kg": 36.56939,
+    "pieces": [
+     [
+      "GF-517",
+      3.118,
+      19
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "518",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "514",
+    "binding": "DRAWN_BAR",
+    "count": 13,
+    "clear_span_mm": 3000.0,
+    "width_mm": 2496.6,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 3350.0,
+    "drawn_length_mm": 2183.8,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 43.55,
+    "commercial": null,
+    "net_kg": 26.882716,
+    "pieces": [
+     [
+      "GF-518",
+      3.35,
+      13
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "519",
+    "text": "5%%c10/m",
+    "state": "PARTIAL",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "51A",
+    "binding": "DRAWN_BAR",
+    "count": 5,
+    "clear_span_mm": 1887.9,
+    "width_mm": 995.7,
+    "support_widths_mm": [
+     null,
+     200.0
+    ],
+    "embed_mm": [
+     null,
+     175.0
+    ],
+    "length_mm": 1887.9,
+    "drawn_length_mm": 1552.2,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "PARTIAL",
+    "net_m": 9.439435,
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "net_m": 10.314435,
+     "low_m": 9.439435,
+     "high_m": 11.814435,
+     "confidence": "M",
+     "method": "open support: embedment = the floor's median measured support width - cover",
+     "assumption": "1 open support(s), embed 0.175 m each (range 0 .. 0.475)",
+     "net_kg": 6.366935,
+     "low_kg": 5.826812,
+     "high_kg": 7.292861
+    },
+    "net_kg": 5.826812,
+    "pieces": [
+     [
+      "GF-519",
+      1.8879,
+      5
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "51B",
+    "text": "5%%c10/m",
+    "state": "PARTIAL",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "51D",
+    "binding": "DRAWN_BAR",
+    "count": 8,
+    "clear_span_mm": 1384.8,
+    "width_mm": 1531.9,
+    "support_widths_mm": [
+     200.0,
+     null
+    ],
+    "embed_mm": [
+     175.0,
+     null
+    ],
+    "length_mm": 1384.8,
+    "drawn_length_mm": 1028.3,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "PARTIAL",
+    "net_m": 11.078416,
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "net_m": 12.478416,
+     "low_m": 11.078416,
+     "high_m": 14.878416,
+     "confidence": "M",
+     "method": "open support: embedment = the floor's median measured support width - cover",
+     "assumption": "1 open support(s), embed 0.175 m each (range 0 .. 0.475)",
+     "net_kg": 7.702726,
+     "low_kg": 6.838528,
+     "high_kg": 9.184208
+    },
+    "net_kg": 6.838528,
+    "pieces": [
+     [
+      "GF-51B",
+      1.3848,
+      8
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "521",
+    "text": "6%%C10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 6,
+    "top": false,
+    "bar": "51E",
+    "binding": "DRAWN_BAR",
+    "count": 23,
+    "clear_span_mm": 4200.0,
+    "width_mm": 3700.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 4550.0,
+    "drawn_length_mm": 3301.1,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 104.65,
+    "commercial": null,
+    "net_kg": 64.598765,
+    "pieces": [
+     [
+      "GF-521",
+      4.55,
+      23
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "522",
+    "text": "7%%C10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 7,
+    "top": false,
+    "bar": "520",
+    "binding": "DRAWN_BAR",
+    "count": 30,
+    "clear_span_mm": 3700.0,
+    "width_mm": 4200.0,
+    "support_widths_mm": [
+     200.0,
+     400.0
+    ],
+    "embed_mm": [
+     175.0,
+     375.0
+    ],
+    "length_mm": 4250.0,
+    "drawn_length_mm": 2296.5,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 127.5,
+    "commercial": null,
+    "net_kg": 78.703704,
+    "pieces": [
+     [
+      "GF-522",
+      4.25,
+      30
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "526",
+    "text": "7%%C10/m",
+    "state": "PARTIAL",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 7,
+    "top": false,
+    "bar": "525",
+    "binding": "DRAWN_BAR",
+    "count": 37,
+    "clear_span_mm": 3300.1,
+    "width_mm": 5150.0,
+    "support_widths_mm": [
+     null,
+     405.0
+    ],
+    "embed_mm": [
+     null,
+     380.0
+    ],
+    "length_mm": 3300.1,
+    "drawn_length_mm": 2296.5,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "PARTIAL",
+    "net_m": 122.105171,
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "net_m": 128.580171,
+     "low_m": 122.105171,
+     "high_m": 139.680171,
+     "confidence": "M",
+     "method": "open support: embedment = the floor's median measured support width - cover",
+     "assumption": "1 open support(s), embed 0.175 m each (range 0 .. 0.475)",
+     "net_kg": 79.370476,
+     "low_kg": 75.373562,
+     "high_kg": 86.222328
+    },
+    "net_kg": 75.373562,
+    "pieces": [
+     [
+      "GF-526",
+      3.3001,
+      37
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "527",
+    "text": "6%%C10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 6,
+    "top": false,
+    "bar": "523",
+    "binding": "DRAWN_BAR",
+    "count": 18,
+    "clear_span_mm": 5150.0,
+    "width_mm": 2962.1,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 5500.0,
+    "drawn_length_mm": 4149.5,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 99.0,
+    "commercial": null,
+    "net_kg": 61.111111,
+    "pieces": [
+     [
+      "GF-527",
+      5.5,
+      18
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "528",
+    "text": "5%%c10/m",
+    "state": "PARTIAL",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "529",
+    "binding": "DRAWN_BAR",
+    "count": 12,
+    "clear_span_mm": 2250.0,
+    "width_mm": 2370.0,
+    "support_widths_mm": [
+     200.0,
+     null
+    ],
+    "embed_mm": [
+     175.0,
+     null
+    ],
+    "length_mm": 2250.0,
+    "drawn_length_mm": 1863.7,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "PARTIAL",
+    "net_m": 27.0,
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "net_m": 29.1,
+     "low_m": 27.0,
+     "high_m": 32.7,
+     "confidence": "M",
+     "method": "open support: embedment = the floor's median measured support width - cover",
+     "assumption": "1 open support(s), embed 0.175 m each (range 0 .. 0.475)",
+     "net_kg": 17.962963,
+     "low_kg": 16.666667,
+     "high_kg": 20.185185
+    },
+    "net_kg": 16.666667,
+    "pieces": [
+     [
+      "GF-528",
+      2.25,
+      12
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "52A",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "52C",
+    "binding": "DRAWN_BAR",
+    "count": 12,
+    "clear_span_mm": 2370.0,
+    "width_mm": 2294.1,
+    "support_widths_mm": [
+     200.0,
+     500.0
+    ],
+    "embed_mm": [
+     175.0,
+     475.0
+    ],
+    "length_mm": 3020.0,
+    "drawn_length_mm": 1300.9,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 36.24,
+    "commercial": null,
+    "net_kg": 22.37037,
+    "pieces": [
+     [
+      "GF-52A",
+      3.02,
+      12
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "530",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "52D",
+    "binding": "DRAWN_BAR",
+    "count": 9,
+    "clear_span_mm": 10200.0,
+    "width_mm": 1600.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 10550.0,
+    "drawn_length_mm": 2992.1,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 94.95,
+    "commercial": null,
+    "net_kg": 58.611111,
+    "pieces": [
+     [
+      "GF-530",
+      10.55,
+      9
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "531",
+    "text": "6%%C10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 6,
+    "top": false,
+    "bar": "52F",
+    "binding": "DRAWN_BAR",
+    "count": 62,
+    "clear_span_mm": 1600.0,
+    "width_mm": 10200.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 1950.0,
+    "drawn_length_mm": 1297.4,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 120.9,
+    "commercial": null,
+    "net_kg": 74.62963,
+    "pieces": [
+     [
+      "GF-531",
+      1.95,
+      62
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "533",
+    "text": "6%%C14/m",
+    "state": "PARTIAL",
+    "dia_mm": 14,
+    "kind": "PER_M",
+    "n": 6,
+    "top": false,
+    "bar": "534",
+    "binding": "DRAWN_BAR",
+    "count": 31,
+    "clear_span_mm": 2609.6,
+    "width_mm": 5150.0,
+    "support_widths_mm": [
+     405.0,
+     null
+    ],
+    "embed_mm": [
+     380.0,
+     null
+    ],
+    "length_mm": 2609.6,
+    "drawn_length_mm": 2842.8,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 1.2099,
+    "technical": "PARTIAL",
+    "net_m": 80.898854,
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "net_m": 86.323854,
+     "low_m": 80.898854,
+     "high_m": 95.623854,
+     "confidence": "M",
+     "method": "open support: embedment = the floor's median measured support width - cover",
+     "assumption": "1 open support(s), embed 0.175 m each (range 0 .. 0.475)",
+     "net_kg": 104.441206,
+     "low_kg": 97.877626,
+     "high_kg": 115.693058
+    },
+    "net_kg": 97.877626,
+    "pieces": [
+     [
+      "GF-533",
+      2.6096,
+      31
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "53D",
+    "text": "8%%C16/m",
+    "state": "BOUND_TEXT_ONLY",
+    "dia_mm": 16,
+    "kind": "PER_M",
+    "n": 8,
+    "top": false,
+    "bar": null,
+    "binding": "TEXT_ONLY_PANEL",
+    "count": 57,
+    "clear_span_mm": 3950.0,
+    "width_mm": 7020.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 4300.0,
+    "drawn_length_mm": null,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 1.5802,
+    "technical": "DERIVED",
+    "net_m": 245.1,
+    "commercial": null,
+    "net_kg": 387.318519,
+    "pieces": [
+     [
+      "GF-53D",
+      4.3,
+      57
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "541",
+    "text": "6%%C10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 6,
+    "top": false,
+    "bar": "53E",
+    "binding": "DRAWN_BAR",
+    "count": 19,
+    "clear_span_mm": 3817.1,
+    "width_mm": 3001.5,
+    "support_widths_mm": [
+     200.0,
+     405.0
+    ],
+    "embed_mm": [
+     175.0,
+     380.0
+    ],
+    "length_mm": 4372.2,
+    "drawn_length_mm": 2951.1,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 83.071088,
+    "commercial": null,
+    "net_kg": 51.278449,
+    "pieces": [
+     [
+      "GF-541",
+      4.3722,
+      19
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "542",
+    "text": "7%%C12/m",
+    "state": "BOUND",
+    "dia_mm": 12,
+    "kind": "PER_M",
+    "n": 7,
+    "top": false,
+    "bar": "540",
+    "binding": "DRAWN_BAR",
+    "count": 28,
+    "clear_span_mm": 2743.9,
+    "width_mm": 3948.6,
+    "support_widths_mm": [
+     200.0,
+     255.5
+    ],
+    "embed_mm": [
+     175.0,
+     230.5
+    ],
+    "length_mm": 3149.3,
+    "drawn_length_mm": 2151.3,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.8889,
+    "technical": "DERIVED",
+    "net_m": 88.181724,
+    "commercial": null,
+    "net_kg": 78.383754,
+    "pieces": [
+     [
+      "GF-542",
+      3.1493,
+      28
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "551",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "4D3",
+    "binding": "DRAWN_BAR",
+    "count": 4,
+    "clear_span_mm": 1700.0,
+    "width_mm": 619.7,
+    "support_widths_mm": [
+     200.0,
+     350.0
+    ],
+    "embed_mm": [
+     175.0,
+     325.0
+    ],
+    "length_mm": 2200.0,
+    "drawn_length_mm": 1475.7,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 8.8,
+    "commercial": null,
+    "net_kg": 5.432099,
+    "pieces": [
+     [
+      "GF-551",
+      2.2,
+      4
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "552",
+    "text": "5%%C10",
+    "state": "PARTIAL",
+    "dia_mm": 10,
+    "kind": "COUNT",
+    "n": 5,
+    "top": false,
+    "bar": null,
+    "binding": "TEXT_ONLY_PANEL",
+    "count": 5,
+    "clear_span_mm": 819.7,
+    "width_mm": 1700.0,
+    "support_widths_mm": [
+     500.0,
+     null
+    ],
+    "embed_mm": [
+     475.0,
+     null
+    ],
+    "length_mm": 819.7,
+    "drawn_length_mm": null,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "PARTIAL",
+    "net_m": 4.098338,
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "net_m": 4.973338,
+     "low_m": 4.098338,
+     "high_m": 6.473338,
+     "confidence": "M",
+     "method": "open support: embedment = the floor's median measured support width - cover",
+     "assumption": "1 open support(s), embed 0.175 m each (range 0 .. 0.475)",
+     "net_kg": 3.069962,
+     "low_kg": 2.529838,
+     "high_kg": 3.995888
+    },
+    "net_kg": 2.529838,
+    "pieces": [
+     [
+      "GF-552",
+      0.8197,
+      5
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "5B7",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "5B8",
+    "binding": "DRAWN_BAR",
+    "count": 6,
+    "clear_span_mm": 1129.9,
+    "width_mm": 1150.0,
+    "support_widths_mm": [
+     200.0,
+     450.0
+    ],
+    "embed_mm": [
+     175.0,
+     425.0
+    ],
+    "length_mm": 1729.9,
+    "drawn_length_mm": 941.1,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 10.37916,
+    "commercial": null,
+    "net_kg": 6.406889,
+    "pieces": [
+     [
+      "GF-5B7",
+      1.7299,
+      6
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "5B9",
+    "text": "5%%C10",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "COUNT",
+    "n": 5,
+    "top": false,
+    "bar": "5BB",
+    "binding": "DRAWN_BAR",
+    "count": 5,
+    "clear_span_mm": 1150.0,
+    "width_mm": 1129.9,
+    "support_widths_mm": [
+     350.0,
+     250.0
+    ],
+    "embed_mm": [
+     325.0,
+     225.0
+    ],
+    "length_mm": 1700.0,
+    "drawn_length_mm": 843.4,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 8.5,
+    "commercial": null,
+    "net_kg": 5.246914,
+    "pieces": [
+     [
+      "GF-5B9",
+      1.7,
+      5
+     ]
+    ]
+   },
+   {
+    "floor": "GF",
+    "annotation": "5BC",
+    "text": "8%%C16/m",
+    "state": "PARTIAL",
+    "dia_mm": 16,
+    "kind": "PER_M",
+    "n": 8,
+    "top": false,
+    "bar": null,
+    "binding": "TEXT_ONLY_PANEL",
+    "count": 39,
+    "clear_span_mm": 3884.6,
+    "width_mm": 4756.7,
+    "support_widths_mm": [
+     279.3,
+     null
+    ],
+    "embed_mm": [
+     254.3,
+     null
+    ],
+    "length_mm": 3884.6,
+    "drawn_length_mm": null,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 1.5802,
+    "technical": "PARTIAL",
+    "net_m": 151.500501,
+    "commercial": {
+     "class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "net_m": 158.325501,
+     "low_m": 151.500501,
+     "high_m": 170.025501,
+     "confidence": "M",
+     "method": "open support: embedment = the floor's median measured support width - cover",
+     "assumption": "1 open support(s), embed 0.175 m each (range 0 .. 0.475)",
+     "net_kg": 250.193385,
+     "low_kg": 239.408199,
+     "high_kg": 268.682273
+    },
+    "net_kg": 239.408199,
+    "pieces": [
+     [
+      "GF-5BC",
+      3.8846,
+      39
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "6F1",
+    "text": "6%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 6,
+    "top": false,
+    "bar": "6F0",
+    "binding": "DRAWN_BAR",
+    "count": 26,
+    "clear_span_mm": 2220.0,
+    "width_mm": 4279.3,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 2570.0,
+    "drawn_length_mm": 1806.5,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 66.82,
+    "commercial": null,
+    "net_kg": 41.246914,
+    "pieces": [
+     [
+      "1F-6F1",
+      2.57,
+      26
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "6F2",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "6EE",
+    "binding": "DRAWN_BAR",
+    "count": 12,
+    "clear_span_mm": 4358.5,
+    "width_mm": 2220.0,
+    "support_widths_mm": [
+     402.9,
+     200.0
+    ],
+    "embed_mm": [
+     377.9,
+     175.0
+    ],
+    "length_mm": 4911.4,
+    "drawn_length_mm": 3605.1,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 58.936746,
+    "commercial": null,
+    "net_kg": 36.380708,
+    "pieces": [
+     [
+      "1F-6F2",
+      4.9114,
+      12
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "6F6",
+    "text": "7%%C10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 7,
+    "top": false,
+    "bar": "6F5",
+    "binding": "DRAWN_BAR",
+    "count": 33,
+    "clear_span_mm": 3000.0,
+    "width_mm": 4625.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 3350.0,
+    "drawn_length_mm": 2296.5,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 110.55,
+    "commercial": null,
+    "net_kg": 68.240741,
+    "pieces": [
+     [
+      "1F-6F6",
+      3.35,
+      33
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "6F7",
+    "text": "6%%C10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 6,
+    "top": false,
+    "bar": "6F3",
+    "binding": "DRAWN_BAR",
+    "count": 19,
+    "clear_span_mm": 4733.8,
+    "width_mm": 3000.0,
+    "support_widths_mm": [
+     402.9,
+     200.0
+    ],
+    "embed_mm": [
+     377.9,
+     175.0
+    ],
+    "length_mm": 5286.7,
+    "drawn_length_mm": 3977.6,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 100.44786,
+    "commercial": null,
+    "net_kg": 62.004852,
+    "pieces": [
+     [
+      "1F-6F7",
+      5.2867,
+      19
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "6FB",
+    "text": "7%%C10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 7,
+    "top": false,
+    "bar": "6FA",
+    "binding": "DRAWN_BAR",
+    "count": 31,
+    "clear_span_mm": 4100.0,
+    "width_mm": 4325.0,
+    "support_widths_mm": [
+     250.0,
+     200.0
+    ],
+    "embed_mm": [
+     225.0,
+     175.0
+    ],
+    "length_mm": 4500.0,
+    "drawn_length_mm": 2296.5,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 139.5,
+    "commercial": null,
+    "net_kg": 86.111111,
+    "pieces": [
+     [
+      "1F-6FB",
+      4.5,
+      31
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "6FC",
+    "text": "6%%C10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 6,
+    "top": false,
+    "bar": "6F8",
+    "binding": "DRAWN_BAR",
+    "count": 25,
+    "clear_span_mm": 4325.0,
+    "width_mm": 4100.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 4675.0,
+    "drawn_length_mm": 3559.0,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 116.875,
+    "commercial": null,
+    "net_kg": 72.145062,
+    "pieces": [
+     [
+      "1F-6FC",
+      4.675,
+      25
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "700",
+    "text": "6%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 6,
+    "top": false,
+    "bar": "6FF",
+    "binding": "DRAWN_BAR",
+    "count": 30,
+    "clear_span_mm": 2273.9,
+    "width_mm": 4850.0,
+    "support_widths_mm": [
+     550.0,
+     200.0
+    ],
+    "embed_mm": [
+     525.0,
+     175.0
+    ],
+    "length_mm": 2973.9,
+    "drawn_length_mm": 1806.5,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 89.217254,
+    "commercial": null,
+    "net_kg": 55.072379,
+    "pieces": [
+     [
+      "1F-700",
+      2.9739,
+      30
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "701",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "6FD",
+    "binding": "DRAWN_BAR",
+    "count": 12,
+    "clear_span_mm": 4850.0,
+    "width_mm": 2273.9,
+    "support_widths_mm": [
+     300.0,
+     200.0
+    ],
+    "embed_mm": [
+     275.0,
+     175.0
+    ],
+    "length_mm": 5300.0,
+    "drawn_length_mm": 3780.7,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 63.6,
+    "commercial": null,
+    "net_kg": 39.259259,
+    "pieces": [
+     [
+      "1F-701",
+      5.3,
+      12
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "705",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "702",
+    "binding": "DRAWN_BAR",
+    "count": 6,
+    "clear_span_mm": 4372.2,
+    "width_mm": 1010.5,
+    "support_widths_mm": [
+     250.0,
+     550.0
+    ],
+    "embed_mm": [
+     225.0,
+     525.0
+    ],
+    "length_mm": 5122.2,
+    "drawn_length_mm": 3901.8,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 30.733098,
+    "commercial": null,
+    "net_kg": 18.971048,
+    "pieces": [
+     [
+      "1F-705",
+      5.1222,
+      6
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "706",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "704",
+    "binding": "DRAWN_BAR",
+    "count": 22,
+    "clear_span_mm": 1010.5,
+    "width_mm": 4372.2,
+    "support_widths_mm": [
+     250.0,
+     200.0
+    ],
+    "embed_mm": [
+     225.0,
+     175.0
+    ],
+    "length_mm": 1410.5,
+    "drawn_length_mm": 793.7,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 31.030524,
+    "commercial": null,
+    "net_kg": 19.154645,
+    "pieces": [
+     [
+      "1F-706",
+      1.4105,
+      22
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "707",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "708",
+    "binding": "DRAWN_BAR",
+    "count": 8,
+    "clear_span_mm": 1681.8,
+    "width_mm": 1597.8,
+    "support_widths_mm": [
+     200.0,
+     402.9
+    ],
+    "embed_mm": [
+     175.0,
+     377.9
+    ],
+    "length_mm": 2234.8,
+    "drawn_length_mm": 1552.2,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 17.878057,
+    "commercial": null,
+    "net_kg": 11.035838,
+    "pieces": [
+     [
+      "1F-707",
+      2.2348,
+      8
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "709",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "70B",
+    "binding": "DRAWN_BAR",
+    "count": 9,
+    "clear_span_mm": 1597.8,
+    "width_mm": 1730.2,
+    "support_widths_mm": [
+     550.0,
+     200.0
+    ],
+    "embed_mm": [
+     525.0,
+     175.0
+    ],
+    "length_mm": 2297.8,
+    "drawn_length_mm": 1300.9,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 20.680353,
+    "commercial": null,
+    "net_kg": 12.76565,
+    "pieces": [
+     [
+      "1F-709",
+      2.2978,
+      9
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "70F",
+    "text": "6%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 6,
+    "top": false,
+    "bar": "70E",
+    "binding": "DRAWN_BAR",
+    "count": 30,
+    "clear_span_mm": 2273.9,
+    "width_mm": 4850.0,
+    "support_widths_mm": [
+     200.0,
+     350.0
+    ],
+    "embed_mm": [
+     175.0,
+     325.0
+    ],
+    "length_mm": 2773.9,
+    "drawn_length_mm": 1806.5,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 83.217254,
+    "commercial": null,
+    "net_kg": 51.368675,
+    "pieces": [
+     [
+      "1F-70F",
+      2.7739,
+      30
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "710",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "70C",
+    "binding": "DRAWN_BAR",
+    "count": 12,
+    "clear_span_mm": 4850.0,
+    "width_mm": 2273.9,
+    "support_widths_mm": [
+     300.0,
+     200.0
+    ],
+    "embed_mm": [
+     275.0,
+     175.0
+    ],
+    "length_mm": 5300.0,
+    "drawn_length_mm": 3780.7,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 63.6,
+    "commercial": null,
+    "net_kg": 39.259259,
+    "pieces": [
+     [
+      "1F-710",
+      5.3,
+      12
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "715",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "712",
+    "binding": "DRAWN_BAR",
+    "count": 6,
+    "clear_span_mm": 4100.0,
+    "width_mm": 1142.3,
+    "support_widths_mm": [
+     300.0,
+     300.0
+    ],
+    "embed_mm": [
+     275.0,
+     275.0
+    ],
+    "length_mm": 4650.0,
+    "drawn_length_mm": 3750.9,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 27.9,
+    "commercial": null,
+    "net_kg": 17.222222,
+    "pieces": [
+     [
+      "1F-715",
+      4.65,
+      6
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "716",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "714",
+    "binding": "DRAWN_BAR",
+    "count": 21,
+    "clear_span_mm": 1142.3,
+    "width_mm": 4100.0,
+    "support_widths_mm": [
+     200.0,
+     250.0
+    ],
+    "embed_mm": [
+     175.0,
+     225.0
+    ],
+    "length_mm": 1542.3,
+    "drawn_length_mm": 864.4,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 32.38911,
+    "commercial": null,
+    "net_kg": 19.993278,
+    "pieces": [
+     [
+      "1F-716",
+      1.5423,
+      21
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "71C",
+    "text": "8%%C10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 8,
+    "top": false,
+    "bar": "71B",
+    "binding": "DRAWN_BAR",
+    "count": 39,
+    "clear_span_mm": 4300.0,
+    "width_mm": 4850.0,
+    "support_widths_mm": [
+     350.0,
+     300.0
+    ],
+    "embed_mm": [
+     325.0,
+     275.0
+    ],
+    "length_mm": 4900.0,
+    "drawn_length_mm": 2096.5,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 191.1,
+    "commercial": null,
+    "net_kg": 117.962963,
+    "pieces": [
+     [
+      "1F-71C",
+      4.9,
+      39
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "71D",
+    "text": "7%%C10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 7,
+    "top": false,
+    "bar": "719",
+    "binding": "DRAWN_BAR",
+    "count": 31,
+    "clear_span_mm": 4850.0,
+    "width_mm": 4300.0,
+    "support_widths_mm": [
+     300.0,
+     200.0
+    ],
+    "embed_mm": [
+     275.0,
+     175.0
+    ],
+    "length_mm": 5300.0,
+    "drawn_length_mm": 3900.1,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 164.3,
+    "commercial": null,
+    "net_kg": 101.419753,
+    "pieces": [
+     [
+      "1F-71D",
+      5.3,
+      31
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "71E",
+    "text": "3%%c14",
+    "state": "BOUND",
+    "dia_mm": 14,
+    "kind": "COUNT",
+    "n": 3,
+    "top": false,
+    "bar": "723",
+    "binding": "DRAWN_BAR",
+    "count": 3,
+    "clear_span_mm": 895.3,
+    "width_mm": 6069.3,
+    "support_widths_mm": [
+     423.8,
+     424.7
+    ],
+    "embed_mm": [
+     398.8,
+     399.7
+    ],
+    "length_mm": 1693.8,
+    "drawn_length_mm": 1106.0,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 1.2099,
+    "technical": "DERIVED",
+    "net_m": 5.081422,
+    "commercial": null,
+    "net_kg": 6.147894,
+    "pieces": [
+     [
+      "1F-71E",
+      1.6938,
+      3
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "725",
+    "text": "3%%c14",
+    "state": "BOUND",
+    "dia_mm": 14,
+    "kind": "COUNT",
+    "n": 3,
+    "top": false,
+    "bar": "726",
+    "binding": "DRAWN_BAR",
+    "count": 3,
+    "clear_span_mm": 873.5,
+    "width_mm": 6075.0,
+    "support_widths_mm": [
+     423.8,
+     495.5
+    ],
+    "embed_mm": [
+     398.8,
+     470.5
+    ],
+    "length_mm": 1742.8,
+    "drawn_length_mm": 1106.0,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 1.2099,
+    "technical": "DERIVED",
+    "net_m": 5.228463,
+    "commercial": null,
+    "net_kg": 6.325795,
+    "pieces": [
+     [
+      "1F-725",
+      1.7428,
+      3
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "72E",
+    "text": "3%%c14",
+    "state": "BOUND",
+    "dia_mm": 14,
+    "kind": "COUNT",
+    "n": 3,
+    "top": false,
+    "bar": "72D",
+    "binding": "DRAWN_BAR",
+    "count": 3,
+    "clear_span_mm": 874.6,
+    "width_mm": 6048.6,
+    "support_widths_mm": [
+     282.6,
+     424.7
+    ],
+    "embed_mm": [
+     257.6,
+     399.7
+    ],
+    "length_mm": 1531.9,
+    "drawn_length_mm": 1106.0,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 1.2099,
+    "technical": "DERIVED",
+    "net_m": 4.595676,
+    "commercial": null,
+    "net_kg": 5.560201,
+    "pieces": [
+     [
+      "1F-72E",
+      1.5319,
+      3
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "72F",
+    "text": "3%%c14",
+    "state": "BOUND",
+    "dia_mm": 14,
+    "kind": "COUNT",
+    "n": 3,
+    "top": false,
+    "bar": "72A",
+    "binding": "DRAWN_BAR",
+    "count": 3,
+    "clear_span_mm": 852.9,
+    "width_mm": 6070.3,
+    "support_widths_mm": [
+     282.6,
+     495.5
+    ],
+    "embed_mm": [
+     257.6,
+     470.5
+    ],
+    "length_mm": 1580.9,
+    "drawn_length_mm": 1106.0,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 1.2099,
+    "technical": "DERIVED",
+    "net_m": 4.742717,
+    "commercial": null,
+    "net_kg": 5.738102,
+    "pieces": [
+     [
+      "1F-72F",
+      1.5809,
+      3
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "730",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "731",
+    "binding": "DRAWN_BAR",
+    "count": 9,
+    "clear_span_mm": 4300.0,
+    "width_mm": 1700.0,
+    "support_widths_mm": [
+     350.0,
+     300.0
+    ],
+    "embed_mm": [
+     325.0,
+     275.0
+    ],
+    "length_mm": 4900.0,
+    "drawn_length_mm": 3839.0,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 44.1,
+    "commercial": null,
+    "net_kg": 27.222222,
+    "pieces": [
+     [
+      "1F-730",
+      4.9,
+      9
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "732",
+    "text": "6%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 6,
+    "top": false,
+    "bar": "734",
+    "binding": "DRAWN_BAR",
+    "count": 26,
+    "clear_span_mm": 1250.0,
+    "width_mm": 4300.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 1600.0,
+    "drawn_length_mm": 1095.1,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 41.6,
+    "commercial": null,
+    "net_kg": 25.679012,
+    "pieces": [
+     [
+      "1F-732",
+      1.6,
+      26
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "735",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "736",
+    "binding": "DRAWN_BAR",
+    "count": 8,
+    "clear_span_mm": 2950.0,
+    "width_mm": 1428.0,
+    "support_widths_mm": [
+     200.0,
+     350.0
+    ],
+    "embed_mm": [
+     175.0,
+     325.0
+    ],
+    "length_mm": 3450.0,
+    "drawn_length_mm": 2641.4,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 27.6,
+    "commercial": null,
+    "net_kg": 17.037037,
+    "pieces": [
+     [
+      "1F-735",
+      3.45,
+      8
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "737",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "739",
+    "binding": "DRAWN_BAR",
+    "count": 15,
+    "clear_span_mm": 1298.1,
+    "width_mm": 2950.0,
+    "support_widths_mm": [
+     402.9,
+     200.0
+    ],
+    "embed_mm": [
+     377.9,
+     175.0
+    ],
+    "length_mm": 1851.0,
+    "drawn_length_mm": 934.3,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 27.765643,
+    "commercial": null,
+    "net_kg": 17.139286,
+    "pieces": [
+     [
+      "1F-737",
+      1.851,
+      15
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "73A",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "73B",
+    "binding": "DRAWN_BAR",
+    "count": 10,
+    "clear_span_mm": 3000.0,
+    "width_mm": 1800.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 3350.0,
+    "drawn_length_mm": 2535.0,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 33.5,
+    "commercial": null,
+    "net_kg": 20.679012,
+    "pieces": [
+     [
+      "1F-73A",
+      3.35,
+      10
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "73C",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "73E",
+    "binding": "DRAWN_BAR",
+    "count": 16,
+    "clear_span_mm": 1800.0,
+    "width_mm": 3000.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 2150.0,
+    "drawn_length_mm": 1300.9,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 34.4,
+    "commercial": null,
+    "net_kg": 21.234568,
+    "pieces": [
+     [
+      "1F-73C",
+      2.15,
+      16
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "747",
+    "text": "8%%C16/m",
+    "state": "BOUND_TEXT_ONLY",
+    "dia_mm": 16,
+    "kind": "PER_M",
+    "n": 8,
+    "top": false,
+    "bar": null,
+    "binding": "TEXT_ONLY_PANEL",
+    "count": 35,
+    "clear_span_mm": 2500.0,
+    "width_mm": 4300.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 2850.0,
+    "drawn_length_mm": null,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 1.5802,
+    "technical": "DERIVED",
+    "net_m": 99.75,
+    "commercial": null,
+    "net_kg": 157.62963,
+    "pieces": [
+     [
+      "1F-747",
+      2.85,
+      35
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "748",
+    "text": "8%%C16/m",
+    "state": "BOUND_TEXT_ONLY",
+    "dia_mm": 16,
+    "kind": "PER_M",
+    "n": 8,
+    "top": false,
+    "bar": null,
+    "binding": "TEXT_ONLY_PANEL",
+    "count": 21,
+    "clear_span_mm": 4300.0,
+    "width_mm": 2500.0,
+    "support_widths_mm": [
+     200.0,
+     450.0
+    ],
+    "embed_mm": [
+     175.0,
+     425.0
+    ],
+    "length_mm": 4900.0,
+    "drawn_length_mm": null,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 1.5802,
+    "technical": "DERIVED",
+    "net_m": 102.9,
+    "commercial": null,
+    "net_kg": 162.607407,
+    "pieces": [
+     [
+      "1F-748",
+      4.9,
+      21
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "749",
+    "text": "8%%C16/m",
+    "state": "DUPLICATE_LABEL",
+    "dia_mm": 16,
+    "kind": "PER_M",
+    "n": 8,
+    "top": false,
+    "bar": null,
+    "binding": "TEXT_ONLY_PANEL",
+    "count": 21,
+    "clear_span_mm": 4300.0,
+    "width_mm": 2500.0,
+    "support_widths_mm": [
+     200.0,
+     450.0
+    ],
+    "embed_mm": [
+     175.0,
+     425.0
+    ],
+    "length_mm": 4900.0,
+    "drawn_length_mm": null,
+    "why": "same bar family, direction and panel as an earlier label - counted once",
+    "duplicate_of": "748",
+    "kg_per_m": 1.5802,
+    "technical": "DUPLICATE",
+    "net_m": null,
+    "commercial": null,
+    "net_kg": null
+   },
+   {
+    "floor": "1F",
+    "annotation": "74F",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "74C",
+    "binding": "DRAWN_BAR",
+    "count": 4,
+    "clear_span_mm": 4100.0,
+    "width_mm": 785.5,
+    "support_widths_mm": [
+     300.0,
+     300.0
+    ],
+    "embed_mm": [
+     275.0,
+     275.0
+    ],
+    "length_mm": 4650.0,
+    "drawn_length_mm": 3577.0,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 18.6,
+    "commercial": null,
+    "net_kg": 11.481481,
+    "pieces": [
+     [
+      "1F-74F",
+      4.65,
+      4
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "750",
+    "text": "5%%C10",
+    "state": "BOUND_TEXT_ONLY",
+    "dia_mm": 10,
+    "kind": "COUNT",
+    "n": 5,
+    "top": false,
+    "bar": null,
+    "binding": "TEXT_ONLY_PANEL",
+    "count": 5,
+    "clear_span_mm": 785.5,
+    "width_mm": 4100.0,
+    "support_widths_mm": [
+     450.0,
+     250.0
+    ],
+    "embed_mm": [
+     425.0,
+     225.0
+    ],
+    "length_mm": 1435.5,
+    "drawn_length_mm": null,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 7.177392,
+    "commercial": null,
+    "net_kg": 4.430489,
+    "pieces": [
+     [
+      "1F-750",
+      1.4355,
+      5
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "754",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "751",
+    "binding": "DRAWN_BAR",
+    "count": 6,
+    "clear_span_mm": 4372.2,
+    "width_mm": 1042.3,
+    "support_widths_mm": [
+     250.0,
+     550.0
+    ],
+    "embed_mm": [
+     225.0,
+     525.0
+    ],
+    "length_mm": 5122.2,
+    "drawn_length_mm": 3901.8,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 30.733098,
+    "commercial": null,
+    "net_kg": 18.971048,
+    "pieces": [
+     [
+      "1F-754",
+      5.1222,
+      6
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "755",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "753",
+    "binding": "DRAWN_BAR",
+    "count": 22,
+    "clear_span_mm": 1042.3,
+    "width_mm": 4372.2,
+    "support_widths_mm": [
+     300.0,
+     250.0
+    ],
+    "embed_mm": [
+     275.0,
+     225.0
+    ],
+    "length_mm": 1542.3,
+    "drawn_length_mm": 817.9,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 33.931448,
+    "commercial": null,
+    "net_kg": 20.945339,
+    "pieces": [
+     [
+      "1F-755",
+      1.5423,
+      22
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "77D",
+    "text": "8%%C16",
+    "state": "BOUND_TEXT_ONLY",
+    "dia_mm": 16,
+    "kind": "COUNT",
+    "n": 8,
+    "top": false,
+    "bar": null,
+    "binding": "TEXT_ONLY_PANEL",
+    "count": 8,
+    "clear_span_mm": 3000.0,
+    "width_mm": 4719.5,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 3350.0,
+    "drawn_length_mm": null,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 1.5802,
+    "technical": "DERIVED",
+    "net_m": 26.8,
+    "commercial": null,
+    "net_kg": 42.350617,
+    "pieces": [
+     [
+      "1F-77D",
+      3.35,
+      8
+     ]
+    ]
+   },
+   {
+    "floor": "1F",
+    "annotation": "182A",
+    "text": "SEE DETAIL",
+    "state": "BOUND_TO_DETAIL",
+    "detail": "DETAIL OF DOME",
+    "dome_circle": "5FE",
+    "why": "inside the plan dome circle (442 cm) - reinforcement per DETAIL OF DOME (counted with the domes)",
+    "technical": "DERIVED",
+    "net_kg": null
+   },
+   {
+    "floor": "1F",
+    "annotation": "1A1A",
+    "text": "SEE DETAIL",
+    "state": "BOUND_TO_DETAIL",
+    "detail": "DETAIL OF DOME",
+    "dome_circle": "5FE",
+    "why": "inside the plan dome circle (442 cm) - reinforcement per DETAIL OF DOME (counted with the domes)",
+    "technical": "DERIVED",
+    "net_kg": null
+   },
+   {
+    "floor": "1F",
+    "annotation": "1A1B",
+    "text": "SEE DETAIL",
+    "state": "BOUND_TO_DETAIL",
+    "detail": "DETAIL OF DOME",
+    "dome_circle": "5FE",
+    "why": "inside the plan dome circle (442 cm) - reinforcement per DETAIL OF DOME (counted with the domes)",
+    "technical": "DERIVED",
+    "net_kg": null
+   },
+   {
+    "floor": "1F",
+    "annotation": "1A1C",
+    "text": "SEE DETAIL",
+    "state": "BOUND_TO_DETAIL",
+    "detail": "DETAIL OF DOME",
+    "dome_circle": "5FE",
+    "why": "inside the plan dome circle (442 cm) - reinforcement per DETAIL OF DOME (counted with the domes)",
+    "technical": "DERIVED",
+    "net_kg": null
+   },
+   {
+    "floor": "1F",
+    "annotation": "1A1D",
+    "text": "SEE DETAIL",
+    "state": "BOUND_TO_DETAIL",
+    "detail": "DETAIL OF DOME",
+    "dome_circle": "649",
+    "why": "inside the plan dome circle (442 cm) - reinforcement per DETAIL OF DOME (counted with the domes)",
+    "technical": "DERIVED",
+    "net_kg": null
+   },
+   {
+    "floor": "1F",
+    "annotation": "1A1E",
+    "text": "SEE DETAIL",
+    "state": "BOUND_TO_DETAIL",
+    "detail": "DETAIL OF DOME",
+    "dome_circle": "649",
+    "why": "inside the plan dome circle (442 cm) - reinforcement per DETAIL OF DOME (counted with the domes)",
+    "technical": "DERIVED",
+    "net_kg": null
+   },
+   {
+    "floor": "1F",
+    "annotation": "1A1F",
+    "text": "SEE DETAIL",
+    "state": "BOUND_TO_DETAIL",
+    "detail": "DETAIL OF DOME",
+    "dome_circle": "649",
+    "why": "inside the plan dome circle (442 cm) - reinforcement per DETAIL OF DOME (counted with the domes)",
+    "technical": "DERIVED",
+    "net_kg": null
+   },
+   {
+    "floor": "1F",
+    "annotation": "1A20",
+    "text": "SEE DETAIL",
+    "state": "BOUND_TO_DETAIL",
+    "detail": "DETAIL OF DOME",
+    "dome_circle": "649",
+    "why": "inside the plan dome circle (442 cm) - reinforcement per DETAIL OF DOME (counted with the domes)",
+    "technical": "DERIVED",
+    "net_kg": null
+   },
+   {
+    "floor": "2F",
+    "annotation": "783",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "780",
+    "binding": "DRAWN_BAR",
+    "count": 7,
+    "clear_span_mm": 3000.0,
+    "width_mm": 1200.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 3350.0,
+    "drawn_length_mm": 2599.6,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 23.45,
+    "commercial": null,
+    "net_kg": 14.475309,
+    "pieces": [
+     [
+      "2F-783",
+      3.35,
+      7
+     ]
+    ]
+   },
+   {
+    "floor": "2F",
+    "annotation": "784",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "782",
+    "binding": "DRAWN_BAR",
+    "count": 16,
+    "clear_span_mm": 1200.0,
+    "width_mm": 3000.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 1550.0,
+    "drawn_length_mm": 936.4,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 24.8,
+    "commercial": null,
+    "net_kg": 15.308642,
+    "pieces": [
+     [
+      "2F-784",
+      1.55,
+      16
+     ]
+    ]
+   },
+   {
+    "floor": "2F",
+    "annotation": "788",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "785",
+    "binding": "DRAWN_BAR",
+    "count": 7,
+    "clear_span_mm": 1800.0,
+    "width_mm": 1200.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 2150.0,
+    "drawn_length_mm": 1480.4,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 15.05,
+    "commercial": null,
+    "net_kg": 9.290123,
+    "pieces": [
+     [
+      "2F-788",
+      2.15,
+      7
+     ]
+    ]
+   },
+   {
+    "floor": "2F",
+    "annotation": "789",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "787",
+    "binding": "DRAWN_BAR",
+    "count": 10,
+    "clear_span_mm": 1200.0,
+    "width_mm": 1800.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 1550.0,
+    "drawn_length_mm": 936.4,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 15.5,
+    "commercial": null,
+    "net_kg": 9.567901,
+    "pieces": [
+     [
+      "2F-789",
+      1.55,
+      10
+     ]
+    ]
+   },
+   {
+    "floor": "2F",
+    "annotation": "791",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "792",
+    "binding": "DRAWN_BAR",
+    "count": 10,
+    "clear_span_mm": 1800.0,
+    "width_mm": 1800.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 2150.0,
+    "drawn_length_mm": 1552.2,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 21.5,
+    "commercial": null,
+    "net_kg": 13.271605,
+    "pieces": [
+     [
+      "2F-791",
+      2.15,
+      10
+     ]
+    ]
+   },
+   {
+    "floor": "2F",
+    "annotation": "793",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "795",
+    "binding": "DRAWN_BAR",
+    "count": 10,
+    "clear_span_mm": 1800.0,
+    "width_mm": 1800.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 2150.0,
+    "drawn_length_mm": 1300.9,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 21.5,
+    "commercial": null,
+    "net_kg": 13.271605,
+    "pieces": [
+     [
+      "2F-793",
+      2.15,
+      10
+     ]
+    ]
+   },
+   {
+    "floor": "2F",
+    "annotation": "796",
+    "text": "6%%c12/m",
+    "state": "BOUND",
+    "dia_mm": 12,
+    "kind": "PER_M",
+    "n": 6,
+    "top": false,
+    "bar": "797",
+    "binding": "DRAWN_BAR",
+    "count": 11,
+    "clear_span_mm": 3000.0,
+    "width_mm": 1800.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 3350.0,
+    "drawn_length_mm": 2483.9,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.8889,
+    "technical": "DERIVED",
+    "net_m": 36.85,
+    "commercial": null,
+    "net_kg": 32.755556,
+    "pieces": [
+     [
+      "2F-796",
+      3.35,
+      11
+     ]
+    ]
+   },
+   {
+    "floor": "2F",
+    "annotation": "798",
+    "text": "6%%c12/m",
+    "state": "BOUND",
+    "dia_mm": 12,
+    "kind": "PER_M",
+    "n": 6,
+    "top": false,
+    "bar": "79A",
+    "binding": "DRAWN_BAR",
+    "count": 19,
+    "clear_span_mm": 1800.0,
+    "width_mm": 3000.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 2150.0,
+    "drawn_length_mm": 1300.9,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.8889,
+    "technical": "DERIVED",
+    "net_m": 40.85,
+    "commercial": null,
+    "net_kg": 36.311111,
+    "pieces": [
+     [
+      "2F-798",
+      2.15,
+      19
+     ]
+    ]
+   },
+   {
+    "floor": "2F",
+    "annotation": "79F",
+    "text": "4%%C16/Top",
+    "state": "DRAWN_EXTENT",
+    "dia_mm": 16,
+    "kind": "COUNT",
+    "n": 4,
+    "top": true,
+    "bar": "7A0",
+    "binding": "DRAWN_BAR",
+    "count": 4,
+    "clear_span_mm": null,
+    "width_mm": null,
+    "support_widths_mm": [
+     null,
+     null
+    ],
+    "embed_mm": [],
+    "length_mm": 3813.3,
+    "drawn_length_mm": 3813.3,
+    "why": "count bar outside the panel grid: drawn developed length (not dimensioned)",
+    "duplicate_of": null,
+    "kg_per_m": 1.5802,
+    "technical": "PARTIAL",
+    "net_m": null,
+    "commercial": {
+     "class": "PROVISIONAL_SOURCE_DERIVED",
+     "net_m": 15.253372,
+     "low_m": 13.728035,
+     "high_m": 16.778709,
+     "confidence": "M",
+     "method": "count bar outside the panel grid: drawn developed length (not dimensioned)",
+     "assumption": "drawn extent = bar length (+-10 % drafting)",
+     "net_kg": 24.104094,
+     "low_kg": 21.693684,
+     "high_kg": 26.514503
+    },
+    "net_kg": null
+   },
+   {
+    "floor": "2F",
+    "annotation": "7A2",
+    "text": "5%%C18/Top",
+    "state": "DRAWN_EXTENT",
+    "dia_mm": 18,
+    "kind": "COUNT",
+    "n": 5,
+    "top": true,
+    "bar": "7A3",
+    "binding": "DRAWN_BAR",
+    "count": 5,
+    "clear_span_mm": null,
+    "width_mm": null,
+    "support_widths_mm": [
+     null,
+     null
+    ],
+    "embed_mm": [],
+    "length_mm": 5794.6,
+    "drawn_length_mm": 5794.6,
+    "why": "count bar outside the panel grid: drawn developed length (not dimensioned)",
+    "duplicate_of": null,
+    "kg_per_m": 2.0,
+    "technical": "PARTIAL",
+    "net_m": null,
+    "commercial": {
+     "class": "PROVISIONAL_SOURCE_DERIVED",
+     "net_m": 28.97303,
+     "low_m": 26.075727,
+     "high_m": 31.870333,
+     "confidence": "M",
+     "method": "count bar outside the panel grid: drawn developed length (not dimensioned)",
+     "assumption": "drawn extent = bar length (+-10 % drafting)",
+     "net_kg": 57.94606,
+     "low_kg": 52.151454,
+     "high_kg": 63.740666
+    },
+    "net_kg": null
+   },
+   {
+    "floor": "2F",
+    "annotation": "7A7",
+    "text": "7%%C14/m",
+    "state": "BOUND",
+    "dia_mm": 14,
+    "kind": "PER_M",
+    "n": 7,
+    "top": false,
+    "bar": "7A6",
+    "binding": "DRAWN_BAR",
+    "count": 24,
+    "clear_span_mm": 2500.0,
+    "width_mm": 3300.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 2850.0,
+    "drawn_length_mm": 1806.5,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 1.2099,
+    "technical": "DERIVED",
+    "net_m": 68.4,
+    "commercial": null,
+    "net_kg": 82.755556,
+    "pieces": [
+     [
+      "2F-7A7",
+      2.85,
+      24
+     ]
+    ]
+   },
+   {
+    "floor": "2F",
+    "annotation": "7A8",
+    "text": "6%%c14/m",
+    "state": "BOUND",
+    "dia_mm": 14,
+    "kind": "PER_M",
+    "n": 6,
+    "top": false,
+    "bar": "7A4",
+    "binding": "DRAWN_BAR",
+    "count": 16,
+    "clear_span_mm": 3300.0,
+    "width_mm": 2500.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 3650.0,
+    "drawn_length_mm": 2951.1,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 1.2099,
+    "technical": "DERIVED",
+    "net_m": 58.4,
+    "commercial": null,
+    "net_kg": 70.65679,
+    "pieces": [
+     [
+      "2F-7A8",
+      3.65,
+      16
+     ]
+    ]
+   },
+   {
+    "floor": "2F",
+    "annotation": "7AD",
+    "text": "6%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 6,
+    "top": false,
+    "bar": "7AC",
+    "binding": "DRAWN_BAR",
+    "count": 18,
+    "clear_span_mm": 2500.0,
+    "width_mm": 2900.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 2850.0,
+    "drawn_length_mm": 1806.5,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 51.3,
+    "commercial": null,
+    "net_kg": 31.666667,
+    "pieces": [
+     [
+      "2F-7AD",
+      2.85,
+      18
+     ]
+    ]
+   },
+   {
+    "floor": "2F",
+    "annotation": "7AE",
+    "text": "5%%c10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 5,
+    "top": false,
+    "bar": "7AA",
+    "binding": "DRAWN_BAR",
+    "count": 13,
+    "clear_span_mm": 2900.0,
+    "width_mm": 2500.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 3250.0,
+    "drawn_length_mm": 2523.3,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 42.25,
+    "commercial": null,
+    "net_kg": 26.080247,
+    "pieces": [
+     [
+      "2F-7AE",
+      3.25,
+      13
+     ]
+    ]
+   },
+   {
+    "floor": "2F",
+    "annotation": "7B8",
+    "text": "7%%C10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 7,
+    "top": false,
+    "bar": "7B7",
+    "binding": "DRAWN_BAR",
+    "count": 36,
+    "clear_span_mm": 3000.0,
+    "width_mm": 5000.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 3350.0,
+    "drawn_length_mm": 2296.5,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 120.6,
+    "commercial": null,
+    "net_kg": 74.444444,
+    "pieces": [
+     [
+      "2F-7B8",
+      3.35,
+      36
+     ]
+    ]
+   },
+   {
+    "floor": "2F",
+    "annotation": "7B9",
+    "text": "6%%C10/m",
+    "state": "BOUND",
+    "dia_mm": 10,
+    "kind": "PER_M",
+    "n": 6,
+    "top": false,
+    "bar": "7B5",
+    "binding": "DRAWN_BAR",
+    "count": 19,
+    "clear_span_mm": 5000.0,
+    "width_mm": 3000.0,
+    "support_widths_mm": [
+     200.0,
+     200.0
+    ],
+    "embed_mm": [
+     175.0,
+     175.0
+    ],
+    "length_mm": 5350.0,
+    "drawn_length_mm": 4126.7,
+    "why": null,
+    "duplicate_of": null,
+    "kg_per_m": 0.6173,
+    "technical": "DERIVED",
+    "net_m": 101.65,
+    "commercial": null,
+    "net_kg": 62.746914,
+    "pieces": [
+     [
+      "2F-7B9",
+      5.35,
+      19
+     ]
+    ]
+   }
+  ],
+  "floors": {
+   "GF": {
+    "annotations": 69,
+    "bars": 84,
+    "states": {
+     "BOUND": 47,
+     "BOUND_TEXT_ONLY": 3,
+     "DUPLICATE_LABEL": 1,
+     "PARTIAL": 12
+    },
+    "see_detail": {},
+    "median_support_width_mm": 200.0,
+    "max_support_width_mm": 500.0
+   },
+   "1F": {
+    "annotations": 47,
+    "bars": 52,
+    "states": {
+     "BOUND": 31,
+     "BOUND_TEXT_ONLY": 4,
+     "DUPLICATE_LABEL": 1
+    },
+    "see_detail": {
+     "BOUND_TO_DETAIL": 8
+    },
+    "median_support_width_mm": 250.0,
+    "max_support_width_mm": 550.0
+   },
+   "2F": {
+    "annotations": 24,
+    "bars": 23,
+    "states": {
+     "BOUND": 14,
+     "DRAWN_EXTENT": 2
+    },
+    "see_detail": {},
+    "median_support_width_mm": 200.0,
+    "max_support_width_mm": 200.0
+   }
+  },
+  "policy": {
+   "policy_id": "SLAB_REBAR_BINDING_V1",
+   "angle_tol_deg": 8.0,
+   "bind_dist_mm": 700.0,
+   "tie_mm": 50.0,
+   "max_support_mm": 600.0,
+   "embed_rule": "BAR_TO_FAR_SUPPORT_FACE_LESS_COVER",
+   "rule": "annotation -> parallel drawn bar within the binding distance (projection inside the bar extent); distribution width = clear distance between supports by perpendicular rays; per-metre count = floor(width / spacing) + 1; length = clear span + embedment (support width - cover) at each support; the drawn bar length is a symbol, reported only; open rays = UNBOUND (never estimated)",
+   "never": [
+    "nearest text alone when two bars compete",
+    "a width from an open ray",
+    "kg/m3 ratios"
+   ],
+   "digest": "b31faeb97e18f0b8e464437c8677a1ff6c22511acff5d8a9bc983289a8a14b32"
+  },
+  "dome_circles_on_slab_sheets": [
+   {
+    "c": [
+     63878.8,
+     40778.4
+    ],
+    "r": 2205.510986,
+    "handle": "2DB",
+    "type": "ARC"
+   },
+   {
+    "c": [
+     -22344.3,
+     41651.4
+    ],
+    "r": 2211.091524,
+    "handle": "3CD",
+    "type": "CIRCLE"
+   },
+   {
+    "c": [
+     -7896.5,
+     41651.4
+    ],
+    "r": 2211.091524,
+    "handle": "3F8",
+    "type": "CIRCLE"
+   },
+   {
+    "c": [
+     16380.1,
+     41651.4
+    ],
+    "r": 2211.091524,
+    "handle": "5FE",
+    "type": "ARC"
+   },
+   {
+    "c": [
+     30827.9,
+     41651.4
+    ],
+    "r": 2211.091524,
+    "handle": "649",
+    "type": "CIRCLE"
+   }
+  ]
+ },
+ "policy_slab": {
+  "policy_id": "SLAB_REBAR_BINDING_V1",
+  "angle_tol_deg": 8.0,
+  "bind_dist_mm": 700.0,
+  "tie_mm": 50.0,
+  "max_support_mm": 600.0,
+  "embed_rule": "BAR_TO_FAR_SUPPORT_FACE_LESS_COVER",
+  "rule": "annotation -> parallel drawn bar within the binding distance (projection inside the bar extent); distribution width = clear distance between supports by perpendicular rays; per-metre count = floor(width / spacing) + 1; length = clear span + embedment (support width - cover) at each support; the drawn bar length is a symbol, reported only; open rays = UNBOUND (never estimated)",
+  "never": [
+   "nearest text alone when two bars compete",
+   "a width from an open ray",
+   "kg/m3 ratios"
+  ],
+  "digest": "b31faeb97e18f0b8e464437c8677a1ff6c22511acff5d8a9bc983289a8a14b32"
+ }
+}

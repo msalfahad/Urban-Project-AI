@@ -1,0 +1,43 @@
+SCENARIO,ITEM,BAR_DIAMETER_MM,EQUIVALENT_LENGTH_M,KG,LANE,AUTHORITY,STATE
+A-28,"8Ø16/m main bottom bars, lower flight",16,35.939557423,56.793374693,RESEARCH_SENSITIVITY_NOT_RELEASED,plan callout rate (explicit); length from the alternative's geometry,"not released; anchorage, laps, transverse and top families excluded"
+A-28,"8Ø16/m main bottom bars, upper flight",16,35.939557423,56.793374693,RESEARCH_SENSITIVITY_NOT_RELEASED,plan callout rate (explicit); length from the alternative's geometry,"not released; anchorage, laps, transverse and top families excluded"
+A-28,8Ø16/m through the turn,16,,,BLOCKED_UNQUANTIFIED,,bar paths through the winders not established
+A-28,8Ø16/m main bars along the two flights (sum),16,,113.586749386,RESEARCH_SENSITIVITY_NOT_RELEASED,,context only
+A-28-M,"8Ø16/m main bottom bars, lower flight",16,35.939557423,56.793374693,RESEARCH_SENSITIVITY_NOT_RELEASED,plan callout rate (explicit); length from the alternative's geometry,"not released; anchorage, laps, transverse and top families excluded"
+A-28-M,"8Ø16/m main bottom bars, upper flight",16,33.428571453,52.825396865,RESEARCH_SENSITIVITY_NOT_RELEASED,plan callout rate (explicit); length from the alternative's geometry,"not released; anchorage, laps, transverse and top families excluded"
+A-28-M,8Ø16/m through the turn,16,,,BLOCKED_UNQUANTIFIED,,bar paths through the winders not established
+A-28-M,8Ø16/m main bars along the two flights (sum),16,,109.618771558,RESEARCH_SENSITIVITY_NOT_RELEASED,,context only
+B-27-S,"8Ø16/m main bottom bars, lower flight",16,29.651414806,46.856556731,RESEARCH_SENSITIVITY_NOT_RELEASED,plan callout rate (explicit); length from the alternative's geometry,"not released; anchorage, laps, transverse and top families excluded"
+B-27-S,"8Ø16/m main bottom bars, upper flight",16,36.240618096,57.269124893,RESEARCH_SENSITIVITY_NOT_RELEASED,plan callout rate (explicit); length from the alternative's geometry,"not released; anchorage, laps, transverse and top families excluded"
+B-27-S,8Ø16/m through the turn,16,,,BLOCKED_UNQUANTIFIED,,bar paths through the winders not established
+B-27-S,8Ø16/m main bars along the two flights (sum),16,,104.125681623,RESEARCH_SENSITIVITY_NOT_RELEASED,,context only
+B-27-SM,"8Ø16/m main bottom bars, lower flight",16,29.651414806,46.856556731,RESEARCH_SENSITIVITY_NOT_RELEASED,plan callout rate (explicit); length from the alternative's geometry,"not released; anchorage, laps, transverse and top families excluded"
+B-27-SM,"8Ø16/m main bottom bars, upper flight",16,33.752037,53.336552297,RESEARCH_SENSITIVITY_NOT_RELEASED,plan callout rate (explicit); length from the alternative's geometry,"not released; anchorage, laps, transverse and top families excluded"
+B-27-SM,8Ø16/m through the turn,16,,,BLOCKED_UNQUANTIFIED,,bar paths through the winders not established
+B-27-SM,8Ø16/m main bars along the two flights (sum),16,,100.193109027,RESEARCH_SENSITIVITY_NOT_RELEASED,,context only
+B-27-P,"8Ø16/m main bottom bars, lower flight",16,32.946016451,52.062840812,RESEARCH_SENSITIVITY_NOT_RELEASED,plan callout rate (explicit); length from the alternative's geometry,"not released; anchorage, laps, transverse and top families excluded"
+B-27-P,"8Ø16/m main bottom bars, upper flight",16,36.240618096,57.269124893,RESEARCH_SENSITIVITY_NOT_RELEASED,plan callout rate (explicit); length from the alternative's geometry,"not released; anchorage, laps, transverse and top families excluded"
+B-27-P,8Ø16/m through the turn,16,,,BLOCKED_UNQUANTIFIED,,bar paths through the winders not established
+B-27-P,8Ø16/m main bars along the two flights (sum),16,,109.331965705,RESEARCH_SENSITIVITY_NOT_RELEASED,,context only
+B-27-U,"8Ø16/m main bottom bars, lower flight",16,36.240618096,57.269124893,RESEARCH_SENSITIVITY_NOT_RELEASED,plan callout rate (explicit); length from the alternative's geometry,"not released; anchorage, laps, transverse and top families excluded"
+B-27-U,"8Ø16/m main bottom bars, upper flight",16,32.946016451,52.062840812,RESEARCH_SENSITIVITY_NOT_RELEASED,plan callout rate (explicit); length from the alternative's geometry,"not released; anchorage, laps, transverse and top families excluded"
+B-27-U,8Ø16/m through the turn,16,,,BLOCKED_UNQUANTIFIED,,bar paths through the winders not established
+B-27-U,8Ø16/m main bars along the two flights (sum),16,,109.331965705,RESEARCH_SENSITIVITY_NOT_RELEASED,,context only
+REF-25,"8Ø16/m main bottom bars, lower flight",16,30.227654623,47.767157923,RESEARCH_SENSITIVITY_NOT_RELEASED,plan callout rate (explicit); length from the alternative's geometry,"not released; anchorage, laps, transverse and top families excluded"
+REF-25,"8Ø16/m main bottom bars, upper flight",16,33.586282914,53.074619914,RESEARCH_SENSITIVITY_NOT_RELEASED,plan callout rate (explicit); length from the alternative's geometry,"not released; anchorage, laps, transverse and top families excluded"
+REF-25,8Ø16/m through the turn,16,,,BLOCKED_UNQUANTIFIED,,bar paths through the winders not established
+REF-25,8Ø16/m main bars along the two flights (sum),16,,100.841777837,RESEARCH_SENSITIVITY_NOT_RELEASED,,context only
+ALL,S8.7 released 8Ø16/m over A1-L1 / A2-T1 / C-T1,,,59.020862261,PRESERVED,,OWNED_BY_S8_7 (frozen; not counted again)
+ALL,S7 top extensions at the stair-adjacent supports (75 strip ends),,,71.895327413,PRESERVED,,OWNED_BY_S7 (frozen)
+ALL,B20 head beam bars,,,110,PRESERVED,,OWNED_BY_S6 (LOWER_BOUND; the B20 overlap zone is never a stair bar zone)
+ALL,B23 head beam bars,,,145.2,PRESERVED,,OWNED_BY_S6 (LOWER_BOUND)
+ALL,6Ø14/m junction / head top bars,,,,BLOCKED_UNQUANTIFIED,,TYPICAL_ONLY / not dimensioned
+ALL,6Ø12/m landing top,,,,BLOCKED_UNQUANTIFIED,,TYPICAL_ONLY / not dimensioned
+ALL,Ø12/20cm distribution,,,,BLOCKED_UNQUANTIFIED,,TYPICAL_ONLY / not dimensioned
+ALL,Ø8/15 step bars,,,,BLOCKED_UNQUANTIFIED,,TYPICAL_ONLY / not dimensioned
+ALL,1Ø12 nosing bars,,,,BLOCKED_UNQUANTIFIED,,TYPICAL_ONLY / not dimensioned
+ALL,6Ø16/m starters,,,,BLOCKED_UNQUANTIFIED,,TYPICAL_ONLY / not dimensioned
+ALL,landing edge beam 2Ø12 / 4Ø16,,,,BLOCKED_UNQUANTIFIED,,TYPICAL_ONLY / not dimensioned
+ALL,ground beam G.B,,,,BLOCKED_UNQUANTIFIED,,TYPICAL_ONLY / not dimensioned
+ALL,cranked stair beam 2Ø12 / 4Ø16 / 6Ø8/m,,,,BLOCKED_UNQUANTIFIED,,TYPICAL_ONLY / not dimensioned
+ALL,anchorage / development / laps / bends,,,,BLOCKED_UNQUANTIFIED,,TYPICAL_ONLY / not dimensioned

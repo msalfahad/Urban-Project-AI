@@ -1,0 +1,134 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A3_STRAPS_V1",
+ "rows": [
+  {
+   "type": "SB2",
+   "mark_key": "ALSENAN_ST7757_DXF|H6935|6930|TEXT|0",
+   "mark_value": "S.B2",
+   "mark_xy": [
+    135425.949,
+    38350.759
+   ],
+   "B_cm": 100.0,
+   "D_cm": 50.0,
+   "state": "MEASURED_WITH_WIDTH_DEVIATION",
+   "width_deviation_mm": -12.9,
+   "drawn_width_mm": 987.1,
+   "band": [
+    "ALSENAN_ST7757_DXF|H6920||SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H6921||SEGMENT|0"
+   ],
+   "span_native": [
+    0.0,
+    5105.116
+   ],
+   "clear": [
+    "RING:ALSENAN_ST7757_DXF|H6919|",
+    "RING:ALSENAN_ST7757_DXF|H6937|"
+   ],
+   "length_m": 2.294052,
+   "volume_m3": 1.147026,
+   "formula": "clear length x B x D",
+   "mark_normalised": true,
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "support_outline_conflicts": []
+  },
+  {
+   "type": "SB1",
+   "mark_key": "ALSENAN_ST7757_DXF|H6946|6941|TEXT|0",
+   "mark_value": "S.B1",
+   "mark_xy": [
+    149197.777,
+    39913.991
+   ],
+   "B_cm": 70.0,
+   "D_cm": 50.0,
+   "state": "MEASURED",
+   "width_deviation_mm": null,
+   "drawn_width_mm": 700.0,
+   "band": [
+    "ALSENAN_ST7757_DXF|H5769||SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H6940||SEGMENT|0"
+   ],
+   "span_native": [
+    0.0,
+    7350.052
+   ],
+   "clear": [
+    "RECTANGLE:146912.000,42298.000,150912.000,45898.000",
+    "RING:ALSENAN_ST7757_DXF|H6939|"
+   ],
+   "length_m": 4.551032,
+   "volume_m3": 1.592861,
+   "formula": "clear length x B x D",
+   "mark_normalised": true,
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "support_outline_conflicts": [
+    "RING:ALSENAN_ST7757_DXF|H6939|"
+   ],
+   "dependency": "a clear end lies on a drawn face of an outline whose footing size is a SOURCE_CONFLICT; the strap length is measured to that face as drawn and moves only if the owner answer moves that face"
+  },
+  {
+   "type": "SB3",
+   "mark_key": "ALSENAN_ST7757_DXF|H6952||TEXT|0",
+   "mark_value": "S.B3",
+   "mark_xy": [
+    124533.429,
+    39177.983
+   ],
+   "B_cm": 50.0,
+   "D_cm": 40.0,
+   "state": "MEASURED",
+   "width_deviation_mm": null,
+   "drawn_width_mm": 502.2,
+   "band": [
+    "ALSENAN_ST7757_DXF|H6950||SEGMENT|0",
+    "ALSENAN_ST7757_DXF|H6951||SEGMENT|0"
+   ],
+   "span_native": [
+    0.0,
+    4696.376
+   ],
+   "clear": [
+    "RECTANGLE:124742.000,36348.000,126542.000,37348.000",
+    "RECTANGLE:123192.000,40398.000,124792.000,41798.000"
+   ],
+   "length_m": 3.259261,
+   "volume_m3": 0.651852,
+   "formula": "clear length x B x D",
+   "mark_normalised": true,
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "support_outline_conflicts": []
+  }
+ ],
+ "library": {
+  "SB1": {
+   "B_cm": 70.0,
+   "D_cm": 50.0,
+   "bottom": "7 Ø 16",
+   "top": "13 Ø 18",
+   "stirrups": "8 Ø 8",
+   "remarks": "",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "SB2": {
+   "B_cm": 100.0,
+   "D_cm": 50.0,
+   "bottom": "10 Ø 16",
+   "top": "20 Ø 18",
+   "stirrups": "10 Ø 8",
+   "remarks": "",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  },
+  "SB3": {
+   "B_cm": 50.0,
+   "D_cm": 40.0,
+   "bottom": "5 Ø 16",
+   "top": "5 Ø 18",
+   "stirrups": "7 Ø 8",
+   "remarks": "",
+   "source": "SCHEDULE OF SIMPLE BEAMS (CAD table, cm)"
+  }
+ },
+ "rule": "strap = mark between a parallel pair of footing-layer lines at the scheduled breadth (+- 10.0 mm authoring tolerance); clear length between the footing outlines it joins; volume = clear length x B x D"
+}

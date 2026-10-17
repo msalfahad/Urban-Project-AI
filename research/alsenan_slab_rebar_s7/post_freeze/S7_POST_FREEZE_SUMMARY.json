@@ -1,0 +1,239 @@
+{
+ "christiannp": {
+  "areas_sha256": "6ac9ba9779f2ccf0a8d8df1f71ddbea2ae0f276d5af37a2ed554981d64d15c8f",
+  "evidence_sha256": "5a56ed585b03f86490c28f15481f8697a662b8fe43838b475f74bdc9d6386ae6",
+  "excluded_reasons": {
+   "EXCLUDED (UNRESOLVED_COMPONENT)": 130
+  },
+  "net_area_m2": {
+   "1F_ROOF_SLAB": 123.8618,
+   "2F_ROOF_SLAB": 45.1568,
+   "GF_ROOF_SLAB": 229.3774
+  },
+  "slab_kg": 0.0,
+  "slab_rows": 130,
+  "slab_rows_included": 0
+ },
+ "classes": [
+  "SCOPE",
+  "TEMPERATURE_EXCLUDED",
+  "SPECIAL_STRUCTURE_EXCLUDED",
+  "ANCHORAGE_EXCLUDED",
+  "COVER_BASIS",
+  "CURTAILMENT",
+  "TOP_SUPPORT_RULE",
+  "COUNT_CONVENTION",
+  "OPENING",
+  "TRANSITION",
+  "REFERENCE_ASSUMPTION",
+  "GEOMETRY",
+  "OTHER_KNOWN",
+  "UNKNOWN"
+ ],
+ "freelancer": {
+  "concrete_m3": 59.81739999999999,
+  "implied_kg_per_m3": 90.27473611357232,
+  "net_areas_m2_excl_tank": {
+   "1F_ROOF_SLAB": 120.0,
+   "2F_ROOF_SLAB": 31.84,
+   "GF_ROOF_SLAB": 206.99999999999997
+  },
+  "steel_kg": 5400.0,
+  "tank_t18_m3": 2.403
+ },
+ "freeze_commit": "16741eccb0c5e88f92e01d835a1a7e98b32d7442",
+ "freeze_manifest_sha256": "b23f97b6db334e641c38c498bf23b46236d68f4fcc26a6eafde1f3bfc156d175",
+ "freeze_manifest_verified": true,
+ "frozen_engine_stamp": "ac7a477+code:963a379b6a4a7e25",
+ "r4_tokens": {
+  "by_status": {
+   "MATCHED": 90,
+   "NOT_IN_S7_TOKEN_REGISTER": 8,
+   "S7_EXCLUDED": 12,
+   "S7_EXPLICIT_COUNT_LENGTH_BLOCKED": 4,
+   "S7_LOCAL_TOP_COUNT_ONLY": 1,
+   "S7_REFERENCE_ONLY_LABEL": 1,
+   "S7_SOURCE_CONFLICT": 4,
+   "S7_SOURCE_CONFLICT_FAMILY": 3
+  },
+  "total": 123
+ },
+ "reference_totals": [
+  {
+   "CLASSES": {
+    "ANCHORAGE_EXCLUDED": 239.9508417079671,
+    "COUNT_CONVENTION": 16.126939706491207,
+    "CURTAILMENT": 502.59250793266426,
+    "GEOMETRY": 29.290405661877497,
+    "REFERENCE_ASSUMPTION": 356.150944,
+    "SPECIAL_STRUCTURE_EXCLUDED": 1721.2847429999997,
+    "TOP_SUPPORT_RULE": -1463.678668549377
+   },
+   "CLASSES_CLOSE": true,
+   "DIFF_KG": 1401.7177134577773,
+   "MATCHING": "TOKEN_BY_TOKEN",
+   "REFERENCE": "OLD_URBAN_R4",
+   "REFERENCE_KG": 5203.733078,
+   "S7_KG": 3802.015364542223,
+   "SCOPE": "elevated slabs GF/1F/2F (all R4 slab callouts, bottom + T&B + tops)"
+  },
+  {
+   "CLASSES": {
+    "ANCHORAGE_EXCLUDED": 239.9508417079671,
+    "COUNT_CONVENTION": 16.126939706491207,
+    "CURTAILMENT": 502.59250793266426,
+    "GEOMETRY": 29.290405661877497,
+    "REFERENCE_ASSUMPTION": 367.72404300000017,
+    "SPECIAL_STRUCTURE_EXCLUDED": 1721.2847429999997,
+    "TOP_SUPPORT_RULE": -1463.678668549377
+   },
+   "CLASSES_CLOSE": true,
+   "DIFF_KG": 1413.2908124577775,
+   "MATCHING": "FLOOR (through R4)",
+   "REFERENCE": "OLD_URBAN_R3",
+   "REFERENCE_KG": 5215.306177,
+   "S7_KG": 3802.015364542223,
+   "SCOPE": "elevated slab populations GF/1F/2F (lower bound + provisional)"
+  },
+  {
+   "CLASSES": {
+    "ANCHORAGE_EXCLUDED": 239.9508417079671,
+    "COUNT_CONVENTION": 16.126939706491207,
+    "CURTAILMENT": 502.59250793266426,
+    "GEOMETRY": 29.290405661877497,
+    "REFERENCE_ASSUMPTION": 145.244866,
+    "SPECIAL_STRUCTURE_EXCLUDED": 1721.2847429999997,
+    "TOP_SUPPORT_RULE": -1463.678668549377
+   },
+   "CLASSES_CLOSE": true,
+   "DIFF_KG": 1190.8116354577774,
+   "MATCHING": "TOTAL (through R4)",
+   "NOTE": "V3b technical 4876.896 kg (multi-engine SLABS row)",
+   "REFERENCE": "OLD_URBAN_V3B",
+   "REFERENCE_KG": 4992.827,
+   "S7_KG": 3802.015364542223,
+   "SCOPE": "SLAB population row (net)"
+  },
+  {
+   "CLASSES": {
+    "GEOMETRY": 28.468963592265673,
+    "REFERENCE_ASSUMPTION": 1352.5854809845973,
+    "SPECIAL_STRUCTURE_EXCLUDED": 216.93019088091427
+   },
+   "CLASSES_CLOSE": true,
+   "DIFF_KG": 1597.9846354577771,
+   "MATCHING": "CATEGORY",
+   "NOTE": "lump 5.4 t over 59.8174 m3 = 90.27 kg/m3 implied",
+   "REFERENCE": "FREELANCER",
+   "REFERENCE_KG": 5400.0,
+   "S7_KG": 3802.015364542223,
+   "SCOPE": "SLABS category: net slab concrete GF/1F/2F incl. the 2F T18 slab, one steel lump"
+  },
+  {
+   "CLASSES": {},
+   "CLASSES_CLOSE": true,
+   "DIFF_KG": null,
+   "MATCHING": "NOT_COMPARABLE",
+   "NOTE": "22.619 t for the whole project, no slab figure: no matching scope",
+   "REFERENCE": "UC4N",
+   "REFERENCE_KG": null,
+   "S7_KG": 3802.015364542223,
+   "SCOPE": "project net rebar total only (KNOWN_INCOMPLETE)"
+  },
+  {
+   "CLASSES": {
+    "SCOPE": -3802.015364542223
+   },
+   "CLASSES_CLOSE": true,
+   "DIFF_KG": -3802.015364542223,
+   "MATCHING": "CATEGORY",
+   "NOTE": "130 slab rows, 0 included (callouts never bound)",
+   "REFERENCE": "CHRISTIANNP",
+   "REFERENCE_KG": 0.0,
+   "S7_KG": 3802.015364542223,
+   "SCOPE": "13_rebar SLAB rows"
+  },
+  {
+   "CLASSES": {
+    "REFERENCE_ASSUMPTION": 1336.898312411377
+   },
+   "CLASSES_CLOSE": true,
+   "DIFF_KG": 1336.898312411377,
+   "MATCHING": "SANITY_ONLY",
+   "NOTE": "S7 intensity 66.59 kg/m3 over 57.099 m3; rough on old-Urban 81.432 m3 = 7328.88 kg (other scope); never promoted to accurate S7",
+   "REFERENCE": "ROUGH_90_KG_PER_M3",
+   "REFERENCE_KG": 5138.9136769536,
+   "S7_KG": 3802.015364542223,
+   "SCOPE": "S7-scope slab concrete x 90 kg/m3 (SANITY_CHECK_ONLY)"
+  }
+ ],
+ "references": {
+  "CHRISTIANNP": {
+   "areas_sha256": "6ac9ba9779f2ccf0a8d8df1f71ddbea2ae0f276d5af37a2ed554981d64d15c8f",
+   "evidence_sha256": "5a56ed585b03f86490c28f15481f8697a662b8fe43838b475f74bdc9d6386ae6",
+   "path": "CHRISTIANNP_FORENSIC_RERUN (external, read-only)"
+  },
+  "FREELANCER": {
+   "path": "research/alsenan_multi_engine_comparison/FREELANCER_CATEGORY_LINEAGE.json",
+   "sha256": "8e525d73f2b2240c7f8bee196e95f4998f3c7f4459f29841bffffccc154b8ffa",
+   "workbook_sha256": "ae608411ed5b9e64811a15c353adbdd017fa3e51abfdffcf0aa1454b85d1957c"
+  },
+  "OLD_URBAN_R3": {
+   "path": "research/alsenan_rebar_truth_03/registers/SLAB_REBAR_AUDIT.json",
+   "sha256": "846a81bfef909380f0d9513c2f3f98a0d25643b7b82159763b5f899c625a125e"
+  },
+  "OLD_URBAN_R4": {
+   "path": "research/alsenan_rebar_source_exhaustion_04/registers/REBAR_POPULATION_REGISTER_V4.json",
+   "sha256": "c1dafb557c612c4ac3062ed2c988afa6bfa2b03bef6cb4a630911593f64bc752"
+  },
+  "OLD_URBAN_V3B": {
+   "path": "research/alsenan_control_plane_01/registers/STRUCTURAL_POPULATION_COVERAGE_REGISTER.json",
+   "sha256": "38460de145bb7e70de489c9b4bb2c7c996df8802d2560792b25ab1c65cca01c8"
+  },
+  "ROUGH_PROFILE": {
+   "path": "engine/profiles/URBAN_ROUGH_REBAR_PROFILE_V1.json",
+   "sha256": "60c04b3676cd126e3ddb01e1b9aa241773a012ed401180538896af6e3b4b669f"
+  },
+  "UC4N": {
+   "path": "research/alsenan_multi_engine_comparison/MULTI_ENGINE_REBAR_COMPARISON.json",
+   "sha256": "b0c378224eb44a30703da67eea318956be188048b90c50f5b5bca7fe9251f304"
+  }
+ },
+ "rough": {
+  "promoted": false,
+  "ratio_kg_per_m3": 90,
+  "reference_kg_on_s7_scope": 5138.9136769536,
+  "use": "SANITY_CHECK_ONLY"
+ },
+ "round": "S7_POST_FREEZE",
+ "rule": "comparison only: nothing here changes an S7 quantity; a correction needs a new issue, new source evidence, a new regression and a new version",
+ "s7_intensity_kg_per_m3": 66.58632627813446,
+ "s7_outputs_written": false,
+ "s7_scope_concrete_m3": {
+  "1F_ROOF_SLAB": 19.140954961759995,
+  "2F_ROOF_SLAB": 5.0,
+  "GF_ROOF_SLAB": 32.95808589328
+ },
+ "s7_totals_kg": {
+  "BOTTOM_IN_PANEL_FULL_DENSITY_KG": 155.66022352228399,
+  "BOTTOM_MAIN_PROJECT_BASIS_KG": 2338.3366959928458,
+  "BOTTOM_SUPPORT_CROSSING_KG": 20.694505841427134,
+  "CONTINUING_BOTTOM_KG": 1191.5248458386147,
+  "CURTAILED_BOTTOM_KG": 970.45712079052,
+  "LOCAL_TOP_EXPLICIT_KG": 0.0,
+  "RESTRICTED_S7_PROJECT_BASIS_KG": 3802.015364542223,
+  "SUPPORT_CROSSING_KG": 126.40001908096669,
+  "TOP_EXTENSION_KG": 1357.9731553098377,
+  "TOP_SUPPORT_CROSSING_KG": 105.70551323953954,
+  "TOP_SUPPORT_PROJECT_BASIS_KG": 1463.678668549377,
+  "TOTAL_RESTRICTED_S7_PROJECT_BASIS_KG": 3802.015364542223
+ },
+ "tuned": false,
+ "uc4n": {
+  "answer": "INCOMPLETE",
+  "net_rebar_t": 22.619,
+  "oracle": "UC4N",
+  "state": "KNOWN_INCOMPLETE"
+ },
+ "unknown_rows": []
+}

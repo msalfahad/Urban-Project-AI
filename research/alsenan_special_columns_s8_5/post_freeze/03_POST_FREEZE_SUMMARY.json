@@ -1,0 +1,72 @@
+{
+ "classes": {
+  "LABEL_ONLY": 1,
+  "MISSED_OBJECT": 1,
+  "NOT_COMPARABLE": 2,
+  "NO_DIFFERENCE": 15,
+  "OWNERSHIP_CLAIM": 6,
+  "SCOPE": 6,
+  "SEGMENTATION": 2,
+  "STOREY_CONVENTION": 5
+ },
+ "freelancer_objects": {
+  "COL09": "STOREY_CONVENTION",
+  "COL12": "STOREY_CONVENTION",
+  "COL16": "NO_DIFFERENCE",
+  "COL22": "SEGMENTATION",
+  "COL23": "SEGMENTATION",
+  "COL30": "STOREY_CONVENTION",
+  "COL31": "NO_DIFFERENCE"
+ },
+ "frozen_manifest_sha256": "522287d416f30d3eb0499017ea1a32c87bf530ca6bd6de5356fb5ed1e0e662fa",
+ "frozen_unchanged": true,
+ "round": "S8_5_POST_FREEZE",
+ "rows": 38,
+ "rule": "post-freeze only: explains differences, changes no frozen quantity",
+ "special_component_kg": {
+  "already_owned_s3_1": 25.284,
+  "already_owned_s6_1": 12.009877,
+  "freelancer": "objects only (no special-column steel)",
+  "pre_s8": "no quantity (ownership claim only)",
+  "s8_5_incremental": 0.0,
+  "v3b_equal_scope": 0.0
+ },
+ "v3b_missed_planted_columns_kg_held_by_s3_1": 268.838,
+ "v3b_type_level_ordinary_bars": [
+  {
+   "ITEM": "C8 GF vertical",
+   "S3_1_KG": 85.333,
+   "V3B_FORMULA": "12 x 4.5 x 16^2/162",
+   "V3B_KG": 85.333333,
+   "V3B_LAP_KG": 12.136296
+  },
+  {
+   "ITEM": "C9 GF vertical",
+   "S3_1_KG": 99.556,
+   "V3B_FORMULA": "14 x 4.5 x 16^2/162",
+   "V3B_KG": 99.555556,
+   "V3B_LAP_KG": 14.159012
+  },
+  {
+   "ITEM": "C11 GF vertical",
+   "S3_1_KG": 99.556,
+   "V3B_FORMULA": "14 x 4.5 x 16^2/162",
+   "V3B_KG": 99.555556,
+   "V3B_LAP_KG": 14.159012
+  },
+  {
+   "ITEM": "C8 1F vertical",
+   "S3_1_KG": 79.644,
+   "V3B_FORMULA": "12 x 4.2 x 16^2/162",
+   "V3B_KG": 79.644444,
+   "V3B_LAP_KG": 12.136296
+  },
+  {
+   "ITEM": "C9 1F vertical",
+   "S3_1_KG": 79.644,
+   "V3B_FORMULA": "12 x 4.2 x 16^2/162",
+   "V3B_KG": 79.644444,
+   "V3B_LAP_KG": 12.136296
+  }
+ ]
+}

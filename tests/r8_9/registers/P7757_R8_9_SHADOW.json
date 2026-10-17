@@ -1,0 +1,234 @@
+{
+ "SCHEMA": "URBAN_R8_9_P7757_SHADOW_V1",
+ "purpose": "second drawing family: does the R8.9 machinery survive another drafting style? NOT quantities; no P7757 published output changes",
+ "source": {
+  "decode": "data/runs/cad_convert/P7757_ARCHITECTURAL.json",
+  "dwg_sha256": "7f61f3acdd62d62dc745f8b522f8136cb41c575df36ec6d9f27c2fe48fea41e3",
+  "route": "K1 (pinned LibreDWG decode)"
+ },
+ "canonical_input": {
+  "parts": 9884,
+  "texts": 276,
+  "dimensions": 388,
+  "validation": "METHOD_INPUT_INCOMPLETE",
+  "missing": null
+ },
+ "effective_layers": {
+  "by_authority": {
+   "SOURCE_LAYER": 6556,
+   "BYLAYER_INSERT_CHAIN": 3328
+  },
+  "layer0_children_inside_inserts": 3328,
+  "differs_from_source": 3328
+ },
+ "roles": {
+  "by_rule": {
+   "ANNOTATION_GRAPHICS | GR-14": 120,
+   "STRUCTURAL_OBSTACLE | GR-06": 335,
+   "UNKNOWN_PHYSICAL | GR-99": 9423
+  },
+  "unknown_by_layer": {
+   "5": 4440,
+   "W": 2446,
+   "1": 1398,
+   "D": 487,
+   "2": 253,
+   "TOI": 215,
+   "LEVEL": 145,
+   "ST": 32,
+   "4": 7
+  }
+ },
+ "occurrence_contexts": {
+  "SYMBOL_OCCURRENCE": 92
+ },
+ "text_roles": {
+  "GENERAL_NOTE | TR-09": 50,
+  "LEVEL_MARK | TR-08": 1,
+  "ROOM_LABEL_CANDIDATE | TR-06": 55,
+  "ROOM_LABEL_CANDIDATE | TR-10": 1,
+  "ROOM_LABEL_ESTABLISHED | TR-03": 26,
+  "ROOM_LABEL_ESTABLISHED | TR-04": 34,
+  "UNKNOWN_TEXT_ROLE | TR-99": 106
+ },
+ "unrealised_entities": {
+  "IN_OCCURRENCE | BLOCK_NAME_UNREADABLE": 65,
+  "MODEL_SPACE | CUSTOM_CLASS": 4,
+  "MODEL_SPACE | DEGENERATE_GEOMETRY": 2,
+  "MODEL_SPACE | HANDLE_VALUE_TRUNCATED": 1
+ },
+ "doors": {
+  "proven_signatures": 0,
+  "closed": 0,
+  "unresolved": 0,
+  "accepted_ratios_needed": {},
+  "rejected_would_close_within_a_radius": 0
+ },
+ "numeric": {
+  "max_abs_coordinate": 811916.4636842273,
+  "eps_n": 0.0007561561313310892,
+  "end_to_curve_distance_decades": {
+   "0": 1704,
+   "1e5 eps_n": 1456
+  }
+ },
+ "uncertified_numeric_topology": {
+  "faces_at_eps_n": 118,
+  "state": "UNCERTIFIED: no eps_r without a unit"
+ },
+ "unit": {
+  "INSUNITS": 4,
+  "INSUNITS_meaning": "4 = millimetres (a DECLARATION, not a confirmation)",
+  "DIMLFAC": 0.1,
+  "DIMLFAC_meaning": "printed dimension text = measured length x DIMLFAC: 0.1 means the sheet prints one tenth of the drawn length (e.g. drawn in mm, printed in cm)",
+  "door_leaf_radii_native": {
+   "count": 0,
+   "median": null,
+   "min": null,
+   "max": null
+  },
+  "door_radius_reading": null,
+  "dimension_measurement_over_placed_length": [
+   [
+    0.1,
+    267
+   ],
+   [
+    0.09999,
+    3
+   ],
+   [
+    0.093938,
+    3
+   ],
+   [
+    0.099947,
+    3
+   ],
+   [
+    0.09988,
+    3
+   ]
+  ],
+  "classification": "SOURCE_UNIT_CANDIDATE (mm): the declaration, the door leaves and DIMLFAC 0.1 are consistent with millimetres; consistency is not confirmation - the unit claim policy requires an owner-confirmed claim",
+  "state": "UNIT_UNRESOLVED"
+ },
+ "source_scoped_layer_candidates": {
+  "layers": {
+   "W": {
+    "parts": 2446,
+    "kinds": {
+     "SEGMENT": 2438,
+     "ARC": 8
+    },
+    "in_inserts": 0,
+    "blocks": {}
+   },
+   "D": {
+    "parts": 487,
+    "kinds": {
+     "SEGMENT": 431,
+     "ARC": 56
+    },
+    "in_inserts": 356,
+    "blocks": {
+     "D315": 143,
+     "D120": 78,
+     "D115": 52,
+     "d220": 39,
+     "": 26,
+     "D200": 18
+    }
+   },
+   "TOI": {
+    "parts": 215,
+    "kinds": {
+     "SEGMENT": 35,
+     "ARC": 150,
+     "CIRCLE": 30
+    },
+    "in_inserts": 215,
+    "blocks": {
+     "WASH2": 215
+    }
+   },
+   "ST": {
+    "parts": 32,
+    "kinds": {
+     "SEGMENT": 27,
+     "ARC": 4,
+     "CIRCLE": 1
+    },
+    "in_inserts": 18,
+    "blocks": {
+     "AR1": 18
+    }
+   },
+   "5": {
+    "parts": 4440,
+    "kinds": {
+     "SEGMENT": 4361,
+     "ARC": 74,
+     "CIRCLE": 5
+    },
+    "in_inserts": 3496,
+    "blocks": {
+     "": 3491,
+     "cut": 5
+    }
+   },
+   "1": {
+    "parts": 1398,
+    "kinds": {
+     "SEGMENT": 1392,
+     "ARC": 6
+    },
+    "in_inserts": 90,
+    "blocks": {
+     "": 86,
+     "arch120": 4
+    }
+   },
+   "2": {
+    "parts": 253,
+    "kinds": {
+     "SEGMENT": 241,
+     "ARC": 11,
+     "CIRCLE": 1
+    },
+    "in_inserts": 4,
+    "blocks": {
+     "arch120": 4
+    }
+   },
+   "LEVEL": {
+    "parts": 145,
+    "kinds": {
+     "SEGMENT": 58,
+     "ARC": 58,
+     "CIRCLE": 29
+    },
+    "in_inserts": 145,
+    "blocks": {
+     "LE": 115,
+     "MARK": 30
+    }
+   }
+  },
+  "reading": "single-letter / numeric layer names (W, D, 5, 1, 2) and TOI / ST: the generic exact-token lexicon admits none of them, so about 95% of the parts are UNKNOWN and TS01 fails closed. The door blocks D315 / D120 / D115 sit on layer D. Candidate claims for THIS source only (W -> WALL, D -> DOOR, TOI -> SANITARY, ST -> STAIR) need the evidence paths of role_authority (paired faces, network connectivity, door signatures inside D blocks) and a review; they are NOT added to the Urban lexicon",
+  "state": "SOURCE_EVIDENCE_CANDIDATE (not applied)"
+ },
+ "second_family_findings": [
+  "effective layer decides 3328 parts (layer-0 children of inserts): the R8.8 gap would have mattered here",
+  "the generic layer lexicon does not survive this drafting style: source-scoped role claims are the mechanism, not a bigger generic lexicon",
+  "no door is proven: the door symbols are blocks named by size code (D315 ...) on layer D",
+  "text roles survive: 60 room tags established structurally (26 TR-03 + 34 TR-04 family), 55 tag candidates without corroboration",
+  "numeric separation is clean: end-to-curve decisions are 0 or ~1e5 x eps_n, none near eps_n",
+  "267 dimensions store 0.1 x their geometric length (= DIMLFAC): consistent with mm drawn / cm printed"
+ ],
+ "ts01_certificate": "UNIT_UNRESOLVED",
+ "owner_question_prepared_not_asked": {
+  "question": "P7757: what is the native drawing unit of the architectural DWG 7f61f3ac (one drawing unit = how many millimetres)? Choices: mm / cm / m / other.",
+  "why_not_asked_now": "the second-family shadow needs no physical value; ask only when P7757 quantities are in scope"
+ }
+}

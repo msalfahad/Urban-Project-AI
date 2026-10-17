@@ -1,0 +1,327 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A3_WALL_SURFACE_V1",
+ "rooms": [
+  {
+   "floor": "GF",
+   "room": "W.C",
+   "status": "BLOCKED",
+   "wall_face_length_m": null,
+   "door_closure_length_m": null,
+   "glazing_length_m": null,
+   "wall_face_area_m2": null,
+   "wall_face_area_blocker": "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+  },
+  {
+   "floor": "GF",
+   "room": "DEWANEYA / Wash",
+   "status": "BLOCKED",
+   "wall_face_length_m": null,
+   "door_closure_length_m": null,
+   "glazing_length_m": null,
+   "wall_face_area_m2": null,
+   "wall_face_area_blocker": "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+  },
+  {
+   "floor": "GF",
+   "room": "KITCHEN",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "wall_face_length_m": 12.0,
+   "door_closure_length_m": 1.75,
+   "glazing_length_m": 0.75,
+   "wall_face_area_m2": null,
+   "wall_face_area_blocker": "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+  },
+  {
+   "floor": "GF",
+   "room": "W.C",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "wall_face_length_m": 6.614037,
+   "door_closure_length_m": 0.8,
+   "glazing_length_m": 0.0,
+   "wall_face_area_m2": null,
+   "wall_face_area_blocker": "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+  },
+  {
+   "floor": "GF",
+   "room": "W.C",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "wall_face_length_m": 4.8,
+   "door_closure_length_m": 0.8,
+   "glazing_length_m": 0.0,
+   "wall_face_area_m2": null,
+   "wall_face_area_blocker": "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+  },
+  {
+   "floor": "GF",
+   "room": "W.C",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "wall_face_length_m": 4.802961,
+   "door_closure_length_m": 0.797039,
+   "glazing_length_m": 0.6,
+   "wall_face_area_m2": null,
+   "wall_face_area_blocker": "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+  },
+  {
+   "floor": "GF",
+   "room": "(label not decoded)",
+   "status": "BLOCKED",
+   "wall_face_length_m": null,
+   "door_closure_length_m": null,
+   "glazing_length_m": null,
+   "wall_face_area_m2": null,
+   "wall_face_area_blocker": "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+  },
+  {
+   "floor": "GF",
+   "room": "MASTER BED ROOM",
+   "status": "BLOCKED",
+   "wall_face_length_m": null,
+   "door_closure_length_m": null,
+   "glazing_length_m": null,
+   "wall_face_area_m2": null,
+   "wall_face_area_blocker": "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+  },
+  {
+   "floor": "GF",
+   "room": "W.C",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "wall_face_length_m": 6.7,
+   "door_closure_length_m": 0.8,
+   "glazing_length_m": 0.0,
+   "wall_face_area_m2": null,
+   "wall_face_area_blocker": "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+  },
+  {
+   "floor": "1F",
+   "room": "BATH",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "wall_face_length_m": 7.6,
+   "door_closure_length_m": 1.1,
+   "glazing_length_m": 0.3,
+   "wall_face_area_m2": null,
+   "wall_face_area_blocker": "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+  },
+  {
+   "floor": "1F",
+   "room": "BATH",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "wall_face_length_m": 7.416349,
+   "door_closure_length_m": 1.033651,
+   "glazing_length_m": 0.25,
+   "wall_face_area_m2": null,
+   "wall_face_area_blocker": "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+  },
+  {
+   "floor": "1F",
+   "room": "MASTER BED ROOM",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "wall_face_length_m": 14.3,
+   "door_closure_length_m": 1.4,
+   "glazing_length_m": 0.5,
+   "wall_face_area_m2": null,
+   "wall_face_area_blocker": "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+  },
+  {
+   "floor": "1F",
+   "room": "MASTER BED ROOM / MASTER BED ROOM",
+   "status": "BLOCKED",
+   "wall_face_length_m": null,
+   "door_closure_length_m": null,
+   "glazing_length_m": null,
+   "wall_face_area_m2": null,
+   "wall_face_area_blocker": "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+  },
+  {
+   "floor": "1F",
+   "room": "VOID / LAUNDRY / MASTER BED ROOM",
+   "status": "BLOCKED",
+   "wall_face_length_m": null,
+   "door_closure_length_m": null,
+   "glazing_length_m": null,
+   "wall_face_area_m2": null,
+   "wall_face_area_blocker": "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+  },
+  {
+   "floor": "1F",
+   "room": "BATH",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "wall_face_length_m": 6.2,
+   "door_closure_length_m": 0.8,
+   "glazing_length_m": 0.6,
+   "wall_face_area_m2": null,
+   "wall_face_area_blocker": "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+  }
+ ],
+ "rows": [
+  {
+   "item": "A3-WFL-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WALL_FACE_LENGTH",
+   "floor": "GF",
+   "element": "5 certified room(s): KITCHEN 9.63, W.C 2.68, W.C 1.95, W.C 2.36, W.C 3.38",
+   "ar": "طول أوجه الجدران",
+   "en": "Physical wall-face length (wall + column faces bounding the certified rooms)",
+   "qty": 34.916998,
+   "unit": "m",
+   "status": "AUTHORISED_SUBTOTAL",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "boundary role lengths TOPOLOGY_BOUNDARY + STRUCTURAL_OBSTACLE",
+   "blockers": [
+    "ROOM_NOT_CERTIFIED: W.C (GEOS_CROSSCHECK_DISAGREES)",
+    "ROOM_NOT_CERTIFIED: DEWANEYA / Wash (LABEL_OCCURRENCE_SPLIT; MULTIPLE_SEMANTIC_LABELS)",
+    "ROOM_NOT_CERTIFIED: (label not decoded) (LABEL_OCCURRENCE_SPLIT)",
+    "ROOM_NOT_CERTIFIED: MASTER BED ROOM (TOPOLOGY_ROLE_UNRESOLVED)"
+   ]
+  },
+  {
+   "item": "A3-WFA-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WALL_FACE_AREA",
+   "floor": "GF",
+   "element": "5 certified room(s): KITCHEN 9.63, W.C 2.68, W.C 1.95, W.C 2.36, W.C 3.38",
+   "ar": "مساحة أوجه الجدران",
+   "en": "Physical wall-face area",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "face length x clear height",
+   "blockers": [
+    "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+   ]
+  },
+  {
+   "item": "A3-WFN-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WALL_FINISH",
+   "floor": "GF",
+   "element": "5 certified room(s): KITCHEN 9.63, W.C 2.68, W.C 1.95, W.C 2.36, W.C 3.38",
+   "ar": "تشطيب الجدران (لياسة / دهان / بلاط)",
+   "en": "Wall finish (plaster / paint / tile)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "needs wall-face area AND a finish schedule",
+   "blockers": [
+    "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source",
+    "FINISH_MATERIAL_NOT_IN_SOURCE: no finish schedule exists (owner: the supplied files are all the files)"
+   ]
+  },
+  {
+   "item": "A3-WFL-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WALL_FACE_LENGTH",
+   "floor": "1F",
+   "element": "4 certified room(s): BATH 5.02, BATH 4.72, MASTER BED ROOM 16.34, BATH 3.58",
+   "ar": "طول أوجه الجدران",
+   "en": "Physical wall-face length (wall + column faces bounding the certified rooms)",
+   "qty": 35.516349,
+   "unit": "m",
+   "status": "AUTHORISED_SUBTOTAL",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "boundary role lengths TOPOLOGY_BOUNDARY + STRUCTURAL_OBSTACLE",
+   "blockers": [
+    "ROOM_NOT_CERTIFIED: MASTER BED ROOM / MASTER BED ROOM (MULTIPLE_SEMANTIC_LABELS)",
+    "ROOM_NOT_CERTIFIED: VOID / LAUNDRY / MASTER BED ROOM (MULTIPLE_SEMANTIC_LABELS; NEAR_MISS_BOUNDARY_GAP; OPENING_CLOSURE_UNRESOLVED; TEXT_ROLE_UNRESOLVED_IN_SITE; TOPOLOGY_ROLE_UNRESOLVED)"
+   ]
+  },
+  {
+   "item": "A3-WFA-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WALL_FACE_AREA",
+   "floor": "1F",
+   "element": "4 certified room(s): BATH 5.02, BATH 4.72, MASTER BED ROOM 16.34, BATH 3.58",
+   "ar": "مساحة أوجه الجدران",
+   "en": "Physical wall-face area",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "face length x clear height",
+   "blockers": [
+    "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+   ]
+  },
+  {
+   "item": "A3-WFN-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WALL_FINISH",
+   "floor": "1F",
+   "element": "4 certified room(s): BATH 5.02, BATH 4.72, MASTER BED ROOM 16.34, BATH 3.58",
+   "ar": "تشطيب الجدران (لياسة / دهان / بلاط)",
+   "en": "Wall finish (plaster / paint / tile)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "needs wall-face area AND a finish schedule",
+   "blockers": [
+    "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source",
+    "FINISH_MATERIAL_NOT_IN_SOURCE: no finish schedule exists (owner: the supplied files are all the files)"
+   ]
+  },
+  {
+   "item": "A3-WFL-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WALL_FACE_LENGTH",
+   "floor": "2F",
+   "element": "no certified room",
+   "ar": "طول أوجه الجدران",
+   "en": "Physical wall-face length (wall + column faces bounding the certified rooms)",
+   "qty": null,
+   "unit": "m",
+   "status": "BLOCKED",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "boundary role lengths TOPOLOGY_BOUNDARY + STRUCTURAL_OBSTACLE",
+   "blockers": [
+    "NO_CERTIFIED_ROOM_ON_FLOOR: 0 labelled site(s), 0 certified (see ROOM_TOPOLOGY_REGISTER)"
+   ]
+  },
+  {
+   "item": "A3-WFA-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WALL_FACE_AREA",
+   "floor": "2F",
+   "element": "no certified room",
+   "ar": "مساحة أوجه الجدران",
+   "en": "Physical wall-face area",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "face length x clear height",
+   "blockers": [
+    "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+   ]
+  },
+  {
+   "item": "A3-WFN-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WALL_FINISH",
+   "floor": "2F",
+   "element": "no certified room",
+   "ar": "تشطيب الجدران (لياسة / دهان / بلاط)",
+   "en": "Wall finish (plaster / paint / tile)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "needs wall-face area AND a finish schedule",
+   "blockers": [
+    "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source",
+    "FINISH_MATERIAL_NOT_IN_SOURCE: no finish schedule exists (owner: the supplied files are all the files)"
+   ]
+  }
+ ],
+ "rule": "PHYSICAL wall-face length is separate from TRADE assignment (plaster / paint / tile)"
+}

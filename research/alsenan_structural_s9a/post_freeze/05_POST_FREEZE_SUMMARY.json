@@ -1,0 +1,31 @@
+{
+ "classes": {
+  "AUTHORITY + METHOD": 1,
+  "METHOD + POPULATION": 2,
+  "NO_DIFFERENCE": 1,
+  "RESOLVED_BY_MEASUREMENT": 1,
+  "SAME_OBJECT": 1,
+  "SAME_OBJECTS": 1
+ },
+ "findings": [
+  "PF-01",
+  "PF-02",
+  "PF-03",
+  "PF-04",
+  "PF-05",
+  "PF-06",
+  "PF-07"
+ ],
+ "frozen": {
+  "frozen_manifests_verified": 30,
+  "manifest_sha256": "58ed85f9ce327367af44f21c4bd04660a312d352ef5865cc9cbe0e7bf2235aef",
+  "state": "DATED_CORRECTION_LAYER"
+ },
+ "hz_rows_same_object": 8,
+ "release_delta": {
+  "concrete_m3": 0.0,
+  "kg": 0.0
+ },
+ "round": "S9A post-freeze",
+ "rule": "comparison only, after the freeze: S9A is not tuned, no beam reading is selected, nothing is released and no frozen quantity changes; a finding that needs a change goes to a separately approved release"
+}

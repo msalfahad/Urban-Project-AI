@@ -1,0 +1,1096 @@
+{
+ "SCHEMA": "URBAN_R8_19_QORTUBA_STATUS_V1",
+ "six_rows": {
+  "Q-03": {
+   "row": "Q-03",
+   "STATE": "COMPUTED_SHADOW",
+   "VALUE": 17.7425,
+   "unit": "m2",
+   "final": false,
+   "BASE_PHYSICAL_SITES": [
+    {
+     "site": "SITE-1c4abf65f9b5db1e",
+     "zones": [
+      "BATH"
+     ],
+     "area_m2": 8.5525
+    },
+    {
+     "site": "SITE-a2b19efc492a6d0b",
+     "zones": [
+      "BATH"
+     ],
+     "area_m2": 5.1
+    },
+    {
+     "site": "SITE-fe8ed5548fb4310e",
+     "zones": [
+      "BATH"
+     ],
+     "area_m2": 4.09
+    }
+   ],
+   "BASE_SITE_AREA_M2": 17.7425,
+   "THRESHOLD_TREATMENT": [
+    {
+     "strip": "THRESHOLD-cf12fcdfd3e6a4a6",
+     "state": "MARBLE_THRESHOLD_EXPLICIT",
+     "contribution_m2": 0.0
+    },
+    {
+     "strip": "THRESHOLD-28f50f8dc18c1e90",
+     "state": "MARBLE_THRESHOLD_EXPLICIT",
+     "contribution_m2": 0.0
+    },
+    {
+     "strip": "THRESHOLD-f9846605acbce828",
+     "state": "MARBLE_THRESHOLD_EXPLICIT",
+     "contribution_m2": 0.0
+    }
+   ],
+   "THRESHOLD_CONTRIBUTION_M2": 0.0,
+   "MARBLE": {
+    "thresholds": [
+     {
+      "threshold": "THRESHOLD-cf12fcdfd3e6a4a6",
+      "marble_area_m2": 0.12,
+      "row_contribution_m2": 0.0
+     },
+     {
+      "threshold": "THRESHOLD-28f50f8dc18c1e90",
+      "marble_area_m2": 0.12,
+      "row_contribution_m2": 0.0
+     },
+     {
+      "threshold": "THRESHOLD-f9846605acbce828",
+      "marble_area_m2": 0.12,
+      "row_contribution_m2": 0.0
+     }
+    ],
+    "excluded_from_this_row_m2": 0.36,
+    "marble_counted_in": "MARBLE_THRESHOLD row only"
+   },
+   "PASSAGE_TREATMENT": [],
+   "SOFFIT_EXCLUSION_M2": 0,
+   "DUCT_TREATMENT": [],
+   "OBJECT_FOOTPRINT_POLICY": [
+    "NONE (no authority)"
+   ],
+   "SEMANTIC_CLASSES": [
+    "WET_SERVICE_ROOM"
+   ],
+   "TRADE_AUTHORITY": [
+    "QORTUBA-FLOOR-TREATMENT@v3",
+    "QORTUBA-SPACE-CLASS@v2"
+   ],
+   "TOPOLOGY_POLICY": "WALL_BAND_POLICY_V5 (d1ff58e755bb88f4) + TOPOLOGY_CLOSURE_POLICY_V1",
+   "TOPOLOGY_DIGEST": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "ROW_AUTHORITY_DIGEST": "4ba5280563aad8912d64953fab427f958fa6bd12753b8ff00ff943347d26235d",
+   "RELEASE_INPUT_DIGEST": "e5fb8dac747638a9201c881b71865cb2b8c40f202600bcc99a9f3711dc8233b7",
+   "OWNER_FACTS_APPLIED": [
+    "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1"
+   ],
+   "SOURCE_ANCHOR": {
+    "revision": "QORTUBA_REV_NEW",
+    "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "dwg_identity": "NOT_ESTABLISHED"
+   },
+   "RELEASE_BLOCKERS": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "COUNTERFACTUALS": {},
+   "blockers": [],
+   "blocker_classes": []
+  },
+  "Q-03P": {
+   "row": "Q-03P",
+   "STATE": "COMPUTED_SHADOW",
+   "VALUE": 11.685,
+   "unit": "m2",
+   "final": false,
+   "BASE_PHYSICAL_SITES": [
+    {
+     "site": "SITE-8c1c7563d5252c50",
+     "zones": [
+      "PAINTRY"
+     ],
+     "area_m2": 11.685
+    }
+   ],
+   "BASE_SITE_AREA_M2": 11.685,
+   "THRESHOLD_TREATMENT": [],
+   "THRESHOLD_CONTRIBUTION_M2": 0,
+   "MARBLE": {
+    "thresholds": [],
+    "excluded_from_this_row_m2": 0,
+    "marble_counted_in": "MARBLE_THRESHOLD row only"
+   },
+   "PASSAGE_TREATMENT": [],
+   "SOFFIT_EXCLUSION_M2": 0,
+   "DUCT_TREATMENT": [],
+   "OBJECT_FOOTPRINT_POLICY": [
+    "NONE (no authority)"
+   ],
+   "SEMANTIC_CLASSES": [
+    "SERVICE_ROOM"
+   ],
+   "TRADE_AUTHORITY": [
+    "QORTUBA-FLOOR-TREATMENT@v3",
+    "QORTUBA-SPACE-CLASS@v2"
+   ],
+   "TOPOLOGY_POLICY": "WALL_BAND_POLICY_V5 (d1ff58e755bb88f4) + TOPOLOGY_CLOSURE_POLICY_V1",
+   "TOPOLOGY_DIGEST": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "ROW_AUTHORITY_DIGEST": "12cbb5ec8e1657ad174b5767863237f6bb9e6e0a2b2545037b53c588efc42fdc",
+   "RELEASE_INPUT_DIGEST": "c009e63cdc0789ed80ad63d9e470f7a1f70fce9f49a6f880580d2e18d6823b93",
+   "OWNER_FACTS_APPLIED": [],
+   "SOURCE_ANCHOR": {
+    "revision": "QORTUBA_REV_NEW",
+    "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "dwg_identity": "NOT_ESTABLISHED"
+   },
+   "RELEASE_BLOCKERS": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "COUNTERFACTUALS": {},
+   "blockers": [],
+   "blocker_classes": []
+  },
+  "Q-11": {
+   "row": "Q-11",
+   "STATE": "COMPUTED_SHADOW",
+   "VALUE": 17.7425,
+   "unit": "m2",
+   "final": false,
+   "BASE_PHYSICAL_SITES": [
+    {
+     "site": "SITE-1c4abf65f9b5db1e",
+     "zones": [
+      "BATH"
+     ],
+     "area_m2": 8.5525
+    },
+    {
+     "site": "SITE-a2b19efc492a6d0b",
+     "zones": [
+      "BATH"
+     ],
+     "area_m2": 5.1
+    },
+    {
+     "site": "SITE-fe8ed5548fb4310e",
+     "zones": [
+      "BATH"
+     ],
+     "area_m2": 4.09
+    }
+   ],
+   "BASE_SITE_AREA_M2": 17.7425,
+   "THRESHOLD_TREATMENT": [
+    {
+     "strip": "THRESHOLD-cf12fcdfd3e6a4a6",
+     "state": "MARBLE_THRESHOLD_EXPLICIT",
+     "contribution_m2": 0.0
+    },
+    {
+     "strip": "THRESHOLD-28f50f8dc18c1e90",
+     "state": "MARBLE_THRESHOLD_EXPLICIT",
+     "contribution_m2": 0.0
+    },
+    {
+     "strip": "THRESHOLD-f9846605acbce828",
+     "state": "MARBLE_THRESHOLD_EXPLICIT",
+     "contribution_m2": 0.0
+    }
+   ],
+   "THRESHOLD_CONTRIBUTION_M2": 0.0,
+   "MARBLE": {
+    "thresholds": [
+     {
+      "threshold": "THRESHOLD-cf12fcdfd3e6a4a6",
+      "marble_area_m2": 0.12,
+      "row_contribution_m2": 0.0
+     },
+     {
+      "threshold": "THRESHOLD-28f50f8dc18c1e90",
+      "marble_area_m2": 0.12,
+      "row_contribution_m2": 0.0
+     },
+     {
+      "threshold": "THRESHOLD-f9846605acbce828",
+      "marble_area_m2": 0.12,
+      "row_contribution_m2": 0.0
+     }
+    ],
+    "excluded_from_this_row_m2": 0.36,
+    "marble_counted_in": "MARBLE_THRESHOLD row only"
+   },
+   "PASSAGE_TREATMENT": [],
+   "SOFFIT_EXCLUSION_M2": 0,
+   "DUCT_TREATMENT": [],
+   "OBJECT_FOOTPRINT_POLICY": [
+    "NONE (no authority)"
+   ],
+   "SEMANTIC_CLASSES": [
+    "WET_SERVICE_ROOM"
+   ],
+   "TRADE_AUTHORITY": [
+    "QORTUBA-FLOOR-TREATMENT@v3",
+    "QORTUBA-SPACE-CLASS@v2"
+   ],
+   "TOPOLOGY_POLICY": "WALL_BAND_POLICY_V5 (d1ff58e755bb88f4) + TOPOLOGY_CLOSURE_POLICY_V1",
+   "TOPOLOGY_DIGEST": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "ROW_AUTHORITY_DIGEST": "4a6e54181439fc9a2b6df0f38ab723dd1919156fee23e8901e0239ff31114bf0",
+   "RELEASE_INPUT_DIGEST": "084900947e954cda71897dbbe130c07df833ad7b3b1e694f70fa8fc38eba21a0",
+   "OWNER_FACTS_APPLIED": [
+    "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1"
+   ],
+   "SOURCE_ANCHOR": {
+    "revision": "QORTUBA_REV_NEW",
+    "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "dwg_identity": "NOT_ESTABLISHED"
+   },
+   "RELEASE_BLOCKERS": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "COUNTERFACTUALS": {},
+   "blockers": [],
+   "blocker_classes": []
+  },
+  "Q-12": {
+   "row": "Q-12",
+   "STATE": "COMPUTED_SHADOW",
+   "VALUE": 11.685,
+   "unit": "m2",
+   "final": false,
+   "BASE_PHYSICAL_SITES": [
+    {
+     "site": "SITE-8c1c7563d5252c50",
+     "zones": [
+      "PAINTRY"
+     ],
+     "area_m2": 11.685
+    }
+   ],
+   "BASE_SITE_AREA_M2": 11.685,
+   "THRESHOLD_TREATMENT": [],
+   "THRESHOLD_CONTRIBUTION_M2": 0,
+   "MARBLE": {
+    "thresholds": [],
+    "excluded_from_this_row_m2": 0,
+    "marble_counted_in": "MARBLE_THRESHOLD row only"
+   },
+   "PASSAGE_TREATMENT": [],
+   "SOFFIT_EXCLUSION_M2": 0,
+   "DUCT_TREATMENT": [],
+   "OBJECT_FOOTPRINT_POLICY": [
+    "NONE (no authority)"
+   ],
+   "SEMANTIC_CLASSES": [
+    "SERVICE_ROOM"
+   ],
+   "TRADE_AUTHORITY": [
+    "QORTUBA-FLOOR-TREATMENT@v3",
+    "QORTUBA-SPACE-CLASS@v2"
+   ],
+   "TOPOLOGY_POLICY": "WALL_BAND_POLICY_V5 (d1ff58e755bb88f4) + TOPOLOGY_CLOSURE_POLICY_V1",
+   "TOPOLOGY_DIGEST": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "ROW_AUTHORITY_DIGEST": "36c55cb88cd6fcae629b58541083ba4f82728e1a5d3c56801de3f9bcf7ae0a4b",
+   "RELEASE_INPUT_DIGEST": "36693d5b41e4d0d682a9678209bf8b464e8ce73fb8e8051f64be6b51278a8d94",
+   "OWNER_FACTS_APPLIED": [],
+   "SOURCE_ANCHOR": {
+    "revision": "QORTUBA_REV_NEW",
+    "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "dwg_identity": "NOT_ESTABLISHED"
+   },
+   "RELEASE_BLOCKERS": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "COUNTERFACTUALS": {},
+   "blockers": [],
+   "blocker_classes": []
+  },
+  "Q-13": {
+   "row": "Q-13",
+   "STATE": "COMPUTED_SHADOW",
+   "VALUE": 111.8988,
+   "unit": "m2",
+   "final": false,
+   "BASE_PHYSICAL_SITES": [
+    {
+     "site": "SITE-5f1762f1a93b91ca",
+     "zones": [
+      "BED.ROOM"
+     ],
+     "area_m2": 19.2725
+    },
+    {
+     "site": "SITE-77a2130eb275604c",
+     "zones": [
+      "HALL",
+      "whgm"
+     ],
+     "area_m2": 42.649289
+    },
+    {
+     "site": "SITE-a6405850100155ac",
+     "zones": [
+      "DRESS",
+      "M.B.ROOM"
+     ],
+     "area_m2": 33.2
+    },
+    {
+     "site": "SITE-daca396d6d730e60",
+     "zones": [
+      "BED.ROOM"
+     ],
+     "area_m2": 16.327
+    }
+   ],
+   "BASE_SITE_AREA_M2": 111.448789,
+   "THRESHOLD_TREATMENT": [
+    {
+     "strip": "THRESHOLD-cf12fcdfd3e6a4a6",
+     "state": "MARBLE_THRESHOLD_EXPLICIT",
+     "contribution_m2": 0.0
+    },
+    {
+     "strip": "THRESHOLD-bfcea08375237224",
+     "state": "MARBLE_THRESHOLD_EXPLICIT",
+     "contribution_m2": 0.0
+    },
+    {
+     "strip": "THRESHOLD-28f50f8dc18c1e90",
+     "state": "MARBLE_THRESHOLD_EXPLICIT",
+     "contribution_m2": 0.0
+    },
+    {
+     "strip": "THRESHOLD-c82365dd41b94abe",
+     "state": "CONTINUOUS_SAME_FINISH",
+     "contribution_m2": 0.15
+    },
+    {
+     "strip": "THRESHOLD-04910e5deeeed2fc",
+     "state": "CONTINUOUS_SAME_FINISH",
+     "contribution_m2": 0.15
+    },
+    {
+     "strip": "THRESHOLD-d4633eabc844b274",
+     "state": "CONTINUOUS_SAME_FINISH",
+     "contribution_m2": 0.15
+    },
+    {
+     "strip": "THRESHOLD-f9846605acbce828",
+     "state": "MARBLE_THRESHOLD_EXPLICIT",
+     "contribution_m2": 0.0
+    }
+   ],
+   "THRESHOLD_CONTRIBUTION_M2": 0.45,
+   "MARBLE": {
+    "thresholds": [
+     {
+      "threshold": "THRESHOLD-cf12fcdfd3e6a4a6",
+      "marble_area_m2": 0.12,
+      "row_contribution_m2": 0.0
+     },
+     {
+      "threshold": "THRESHOLD-bfcea08375237224",
+      "marble_area_m2": 0.15,
+      "row_contribution_m2": 0.0
+     },
+     {
+      "threshold": "THRESHOLD-28f50f8dc18c1e90",
+      "marble_area_m2": 0.12,
+      "row_contribution_m2": 0.0
+     },
+     {
+      "threshold": "THRESHOLD-f9846605acbce828",
+      "marble_area_m2": 0.12,
+      "row_contribution_m2": 0.0
+     }
+    ],
+    "excluded_from_this_row_m2": 0.51,
+    "marble_counted_in": "MARBLE_THRESHOLD row only"
+   },
+   "PASSAGE_TREATMENT": [
+    {
+     "strip": "OP-997f14d12b8e9bc1",
+     "state": "INCLUDED_IN_SITE_SAME_TREATMENT",
+     "area_m2": 0.239289,
+     "head_authority": "QORTUBA-NEW-OPEN-PASSAGE-SOFFIT-NOT-CEILING-OWNER-001@v1"
+    },
+    {
+     "strip": "OP-9e0fd219ca5cd391",
+     "state": "INCLUDED_IN_SITE_SAME_TREATMENT",
+     "area_m2": 0.18,
+     "head_authority": "QORTUBA-NEW-MB-DRESS-PASSAGE-FULL-HEIGHT-OWNER-001@v1"
+    }
+   ],
+   "SOFFIT_EXCLUSION_M2": 0,
+   "DUCT_TREATMENT": [
+    {
+     "site": "SITE-5f1762f1a93b91ca",
+     "hole_area_m2": 0.84,
+     "authorised": true,
+     "facts": [
+      "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1"
+     ],
+     "effect": "EXCLUDED_FROM_ROOM_FLOOR"
+    }
+   ],
+   "OBJECT_FOOTPRINT_POLICY": [
+    "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1:FLOOR_FINISH:FOOTPRINT_INCLUDED"
+   ],
+   "SEMANTIC_CLASSES": [
+    "DRY_INTERNAL_ROOM"
+   ],
+   "TRADE_AUTHORITY": [
+    "QORTUBA-FLOOR-TREATMENT@v3",
+    "QORTUBA-SPACE-CLASS@v2"
+   ],
+   "TOPOLOGY_POLICY": "WALL_BAND_POLICY_V5 (d1ff58e755bb88f4) + TOPOLOGY_CLOSURE_POLICY_V1",
+   "TOPOLOGY_DIGEST": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "ROW_AUTHORITY_DIGEST": "b53ed8ac248365a10b58bd862ddc180827b6b4d55db2ba55b67b4e89398a65b9",
+   "RELEASE_INPUT_DIGEST": "6082330059236262a7525ad62c3c7bec4359c376374cbfbf1599680f2ece4e55",
+   "OWNER_FACTS_APPLIED": [
+    "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1",
+    "QORTUBA-NEW-DOOR-THRESHOLD-CONTINUITY-OWNER-001@v1",
+    "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1",
+    "QORTUBA-NEW-MAIN-ENTRANCE-MARBLE-OWNER-001@v1",
+    "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1"
+   ],
+   "SOURCE_ANCHOR": {
+    "revision": "QORTUBA_REV_NEW",
+    "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "dwg_identity": "NOT_ESTABLISHED"
+   },
+   "RELEASE_BLOCKERS": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "COUNTERFACTUALS": {},
+   "blockers": [],
+   "blocker_classes": []
+  },
+  "Q-14": {
+   "row": "Q-14",
+   "STATE": "COMPUTED_SHADOW",
+   "VALUE": 140.637,
+   "unit": "m2",
+   "final": false,
+   "BASE_PHYSICAL_SITES": [
+    {
+     "site": "SITE-1c4abf65f9b5db1e",
+     "zones": [
+      "BATH"
+     ],
+     "area_m2": 8.5525
+    },
+    {
+     "site": "SITE-5f1762f1a93b91ca",
+     "zones": [
+      "BED.ROOM"
+     ],
+     "area_m2": 19.2725
+    },
+    {
+     "site": "SITE-77a2130eb275604c",
+     "zones": [
+      "HALL",
+      "whgm"
+     ],
+     "area_m2": 42.649289
+    },
+    {
+     "site": "SITE-8c1c7563d5252c50",
+     "zones": [
+      "PAINTRY"
+     ],
+     "area_m2": 11.685
+    },
+    {
+     "site": "SITE-a2b19efc492a6d0b",
+     "zones": [
+      "BATH"
+     ],
+     "area_m2": 5.1
+    },
+    {
+     "site": "SITE-a6405850100155ac",
+     "zones": [
+      "DRESS",
+      "M.B.ROOM"
+     ],
+     "area_m2": 33.2
+    },
+    {
+     "site": "SITE-daca396d6d730e60",
+     "zones": [
+      "BED.ROOM"
+     ],
+     "area_m2": 16.327
+    },
+    {
+     "site": "SITE-fe8ed5548fb4310e",
+     "zones": [
+      "BATH"
+     ],
+     "area_m2": 4.09
+    }
+   ],
+   "BASE_SITE_AREA_M2": 140.876289,
+   "THRESHOLD_TREATMENT": [
+    {
+     "strip": "THRESHOLD-cf12fcdfd3e6a4a6",
+     "state": "NOT_IN_TRADE",
+     "contribution_m2": 0.0
+    },
+    {
+     "strip": "THRESHOLD-bfcea08375237224",
+     "state": "NOT_IN_TRADE",
+     "contribution_m2": 0.0
+    },
+    {
+     "strip": "THRESHOLD-28f50f8dc18c1e90",
+     "state": "NOT_IN_TRADE",
+     "contribution_m2": 0.0
+    },
+    {
+     "strip": "THRESHOLD-c82365dd41b94abe",
+     "state": "NOT_IN_TRADE",
+     "contribution_m2": 0.0
+    },
+    {
+     "strip": "THRESHOLD-04910e5deeeed2fc",
+     "state": "NOT_IN_TRADE",
+     "contribution_m2": 0.0
+    },
+    {
+     "strip": "THRESHOLD-d4633eabc844b274",
+     "state": "NOT_IN_TRADE",
+     "contribution_m2": 0.0
+    },
+    {
+     "strip": "THRESHOLD-f9846605acbce828",
+     "state": "NOT_IN_TRADE",
+     "contribution_m2": 0.0
+    }
+   ],
+   "THRESHOLD_CONTRIBUTION_M2": 0,
+   "MARBLE": {
+    "thresholds": [],
+    "excluded_from_this_row_m2": 0,
+    "marble_counted_in": "MARBLE_THRESHOLD row only"
+   },
+   "PASSAGE_TREATMENT": [
+    {
+     "strip": "OP-997f14d12b8e9bc1",
+     "state": "SOFFIT_EXCLUDED_FROM_CEILING",
+     "area_m2": 0.239289,
+     "head_authority": "QORTUBA-NEW-OPEN-PASSAGE-SOFFIT-NOT-CEILING-OWNER-001@v1"
+    },
+    {
+     "strip": "OP-9e0fd219ca5cd391",
+     "state": "INCLUDED_IN_SITE_SAME_TREATMENT",
+     "area_m2": 0.18,
+     "head_authority": "QORTUBA-NEW-MB-DRESS-PASSAGE-FULL-HEIGHT-OWNER-001@v1"
+    }
+   ],
+   "SOFFIT_EXCLUSION_M2": 0.239289,
+   "DUCT_TREATMENT": [
+    {
+     "site": "SITE-5f1762f1a93b91ca",
+     "hole_area_m2": 0.84,
+     "authorised": true,
+     "facts": [
+      "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1"
+     ],
+     "effect": "EXCLUDED_FROM_NORMAL_CEILING"
+    }
+   ],
+   "OBJECT_FOOTPRINT_POLICY": [
+    "QORTUBA-CEILING-OBJECT-FOOTPRINT@v1:CEILING:FOOTPRINT_INCLUDED"
+   ],
+   "SEMANTIC_CLASSES": null,
+   "TRADE_AUTHORITY": [
+    "QORTUBA-Q14-CEILING-TREATMENT@v1"
+   ],
+   "TOPOLOGY_POLICY": "WALL_BAND_POLICY_V5 (d1ff58e755bb88f4) + TOPOLOGY_CLOSURE_POLICY_V1",
+   "TOPOLOGY_DIGEST": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "ROW_AUTHORITY_DIGEST": "d1c2f2a87820c25916f1d31732e74d7c774086b0369882a0b9dbc81b8bc0139b",
+   "RELEASE_INPUT_DIGEST": "3152437d199c8a1c328e4bfc4bc4fdd9bf5dd5811e9cd484805b4f2973fe9547",
+   "OWNER_FACTS_APPLIED": [
+    "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1",
+    "QORTUBA-NEW-MB-DRESS-PASSAGE-FULL-HEIGHT-OWNER-001@v1",
+    "QORTUBA-NEW-OPEN-PASSAGE-SOFFIT-NOT-CEILING-OWNER-001@v1"
+   ],
+   "SOURCE_ANCHOR": {
+    "revision": "QORTUBA_REV_NEW",
+    "dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+    "dwg_identity": "NOT_ESTABLISHED"
+   },
+   "RELEASE_BLOCKERS": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "COUNTERFACTUALS": {},
+   "blockers": [],
+   "blocker_classes": []
+  }
+ },
+ "extra_rows": {
+  "DRY_WALL_PLASTER": {
+   "state": "COMPUTED_SHADOW_COMPLETE",
+   "AUTHORISED_SUBTOTAL_M2": 307.361518,
+   "COMPLETE_M2": 307.361518,
+   "release_blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ]
+  },
+  "DRY_WALL_PAINT": {
+   "state": "COMPUTED_SHADOW_COMPLETE",
+   "AUTHORISED_SUBTOTAL_M2": 307.361518,
+   "COMPLETE_M2": 307.361518,
+   "release_blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ]
+  },
+  "WET_SERVICE_WALL_TILE": {
+   "state": "COMPUTED_SHADOW_COMPLETE",
+   "AUTHORISED_SUBTOTAL_M2": 127.693512,
+   "COMPLETE_M2": 127.693512,
+   "release_blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ]
+  },
+  "WET_WALL_TILE_PREP": {
+   "state": "COMPUTED_SHADOW_COMPLETE",
+   "AUTHORISED_SUBTOTAL_M2": 127.693512,
+   "COMPLETE_M2": 127.693512,
+   "release_blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ]
+  },
+  "WET_SERVICE_REVEAL_PLASTER": {
+   "state": "COMPUTED_SHADOW_COMPLETE",
+   "AUTHORISED_SUBTOTAL_M2": 1.510248,
+   "COMPLETE_M2": 1.510248,
+   "release_blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ]
+  },
+  "SKIRTING": {
+   "state": "COMPUTED_SHADOW",
+   "value_lm": 94.13682,
+   "release_blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ]
+  },
+  "HIDDEN_PROFILE": {
+   "state": "COMPUTED_SHADOW",
+   "value_lm": 94.13682,
+   "release_blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ]
+  },
+  "MARBLE_THRESHOLD": {
+   "state": "COMPUTED_SHADOW",
+   "MARBLE_THRESHOLD_PLAN_AREA_M2": 0.51,
+   "MARBLE_THRESHOLD_LENGTH_LM": 3.4,
+   "count": 4,
+   "blocked": [],
+   "release_blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ]
+  },
+  "WATERPROOFING_FLOOR_M2": {
+   "state": "COMPUTED_SHADOW",
+   "value_m2": 29.4275,
+   "release_blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ]
+  },
+  "WATERPROOFING_UPTURN_LM": {
+   "state": "COMPUTED_SHADOW",
+   "value_lm": 44.2,
+   "release_blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ]
+  }
+ },
+ "rows_old": {
+  "Q-03": {
+   "state": "COMPUTED_SHADOW",
+   "value": 17.7425
+  },
+  "Q-03P": {
+   "state": "COMPUTED_SHADOW",
+   "value": 11.685
+  },
+  "Q-11": {
+   "state": "COMPUTED_SHADOW",
+   "value": 17.7425
+  },
+  "Q-12": {
+   "state": "COMPUTED_SHADOW",
+   "value": 11.685
+  },
+  "Q-13": {
+   "state": "BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_TRADE_RULE",
+   "value": null
+  },
+  "Q-14": {
+   "state": "BLOCKED_OWNER_FACT",
+   "value": null
+  }
+ },
+ "old_revision_unchanged_vs_r8_18": {
+  "Q-03": true,
+  "Q-03P": true,
+  "Q-11": true,
+  "Q-12": true,
+  "Q-13": true,
+  "Q-14": true
+ },
+ "vs_r8_18": {
+  "Q-03": {
+   "R8.18": 17.7425,
+   "R8.19": 17.7425,
+   "delta": 0.0
+  },
+  "Q-03P": {
+   "R8.18": 11.685,
+   "R8.19": 11.685,
+   "delta": 0.0
+  },
+  "Q-11": {
+   "R8.18": 17.7425,
+   "R8.19": 17.7425,
+   "delta": 0.0
+  },
+  "Q-12": {
+   "R8.18": 11.685,
+   "R8.19": 11.685,
+   "delta": 0.0
+  },
+  "Q-13": {
+   "R8.18": 111.8988,
+   "R8.19": 111.8988,
+   "delta": 0.0
+  },
+  "Q-14": {
+   "R8.18": 140.637,
+   "R8.19": 140.637,
+   "delta": 0.0
+  }
+ },
+ "digest_vs_r8_18": {
+  "Q-03": {
+   "TOPOLOGY_DIGEST": "SAME",
+   "ROW_AUTHORITY_DIGEST": "SAME",
+   "RELEASE_INPUT_DIGEST": "SAME"
+  },
+  "Q-03P": {
+   "TOPOLOGY_DIGEST": "SAME",
+   "ROW_AUTHORITY_DIGEST": "SAME",
+   "RELEASE_INPUT_DIGEST": "SAME"
+  },
+  "Q-11": {
+   "TOPOLOGY_DIGEST": "SAME",
+   "ROW_AUTHORITY_DIGEST": "SAME",
+   "RELEASE_INPUT_DIGEST": "SAME"
+  },
+  "Q-12": {
+   "TOPOLOGY_DIGEST": "SAME",
+   "ROW_AUTHORITY_DIGEST": "SAME",
+   "RELEASE_INPUT_DIGEST": "SAME"
+  },
+  "Q-13": {
+   "TOPOLOGY_DIGEST": "SAME",
+   "ROW_AUTHORITY_DIGEST": "SAME",
+   "RELEASE_INPUT_DIGEST": "SAME"
+  },
+  "Q-14": {
+   "TOPOLOGY_DIGEST": "SAME",
+   "ROW_AUTHORITY_DIGEST": "SAME",
+   "RELEASE_INPUT_DIGEST": "SAME"
+  }
+ },
+ "determinism": {
+  "seed_5": true,
+  "seed_17": true
+ },
+ "reproduces": {
+  "r8_19_blind": {
+   "trade_rows": true,
+   "reveals": true,
+   "object_exposure": true,
+   "waterproofing": true,
+   "heights": true,
+   "sliding_door_physicality": true,
+   "paint_vs_plaster": true,
+   "surface_guard": true
+  },
+  "r8_18_blind": {
+   "heights": true,
+   "per_site": true,
+   "reveals": true,
+   "trade_rows": true,
+   "waterproofing": true,
+   "double_count_guard": true
+  },
+  "v4_blind": {
+   "payable": true,
+   "per_site": true,
+   "topology_digest": true
+  }
+ },
+ "plane_check_vs_r8_18_method_b": {
+  "all_agree": true,
+  "rooms": {
+   "DRY_WALL_PLASTER|SITE-5f1762f1a93b91ca": {
+    "rebuilt_plane_m2": 53.006962,
+    "r8_18_method_b_m2": 53.006962,
+    "agree": true
+   },
+   "DRY_WALL_PLASTER|SITE-77a2130eb275604c": {
+    "rebuilt_plane_m2": 85.773468,
+    "r8_18_method_b_m2": 85.773467,
+    "agree": true
+   },
+   "DRY_WALL_PLASTER|SITE-a6405850100155ac": {
+    "rebuilt_plane_m2": 84.086227,
+    "r8_18_method_b_m2": 84.086227,
+    "agree": true
+   },
+   "DRY_WALL_PLASTER|SITE-daca396d6d730e60": {
+    "rebuilt_plane_m2": 45.49267,
+    "r8_18_method_b_m2": 45.492669,
+    "agree": true
+   },
+   "DRY_WALL_PAINT|SITE-5f1762f1a93b91ca": {
+    "rebuilt_plane_m2": 53.006962,
+    "r8_18_method_b_m2": 53.006962,
+    "agree": true
+   },
+   "DRY_WALL_PAINT|SITE-77a2130eb275604c": {
+    "rebuilt_plane_m2": 85.773468,
+    "r8_18_method_b_m2": 85.773467,
+    "agree": true
+   },
+   "DRY_WALL_PAINT|SITE-a6405850100155ac": {
+    "rebuilt_plane_m2": 84.086227,
+    "r8_18_method_b_m2": 84.086227,
+    "agree": true
+   },
+   "DRY_WALL_PAINT|SITE-daca396d6d730e60": {
+    "rebuilt_plane_m2": 45.49267,
+    "r8_18_method_b_m2": 45.492669,
+    "agree": true
+   },
+   "WET_SERVICE_WALL_TILE|SITE-1c4abf65f9b5db1e": {
+    "rebuilt_plane_m2": 34.24,
+    "r8_18_method_b_m2": 34.24,
+    "agree": true
+   },
+   "WET_SERVICE_WALL_TILE|SITE-8c1c7563d5252c50": {
+    "rebuilt_plane_m2": 31.533512,
+    "r8_18_method_b_m2": 31.533512,
+    "agree": true
+   },
+   "WET_SERVICE_WALL_TILE|SITE-a2b19efc492a6d0b": {
+    "rebuilt_plane_m2": 23.84,
+    "r8_18_method_b_m2": 23.84,
+    "agree": true
+   },
+   "WET_SERVICE_WALL_TILE|SITE-fe8ed5548fb4310e": {
+    "rebuilt_plane_m2": 23.2,
+    "r8_18_method_b_m2": 23.2,
+    "agree": true
+   },
+   "WET_WALL_TILE_PREP|SITE-1c4abf65f9b5db1e": {
+    "rebuilt_plane_m2": 34.24,
+    "r8_18_method_b_m2": 34.24,
+    "agree": true
+   },
+   "WET_WALL_TILE_PREP|SITE-8c1c7563d5252c50": {
+    "rebuilt_plane_m2": 31.533512,
+    "r8_18_method_b_m2": 31.533512,
+    "agree": true
+   },
+   "WET_WALL_TILE_PREP|SITE-a2b19efc492a6d0b": {
+    "rebuilt_plane_m2": 23.84,
+    "r8_18_method_b_m2": 23.84,
+    "agree": true
+   },
+   "WET_WALL_TILE_PREP|SITE-fe8ed5548fb4310e": {
+    "rebuilt_plane_m2": 23.2,
+    "r8_18_method_b_m2": 23.2,
+    "agree": true
+   }
+  }
+ },
+ "blind_vs_rebuild": {
+  "WF3-L1": {
+   "cause": "the blind script admitted every V2 surface record as wall plane; V2 carries COLUMN_FACE / OBSTACLE_FACE records as separate classes, so each exposed object face was counted twice",
+   "removed_plane_copies": {
+    "DRY_WALL_PLASTER": {
+     "count": 15,
+     "area_m2": 26.6175
+    },
+    "DRY_WALL_PAINT": {
+     "count": 15,
+     "area_m2": 26.6175
+    },
+    "WET_SERVICE_WALL_TILE": {
+     "count": 8,
+     "area_m2": 14.88
+    },
+    "WET_WALL_TILE_PREP": {
+     "count": 8,
+     "area_m2": 14.88
+    },
+    "WET_SERVICE_REVEAL_PLASTER": {
+     "count": 0,
+     "area_m2": 0.0
+    }
+   },
+   "blind_physical_guard": {
+    "duplicates_by_row": {
+     "DRY_WALL_PLASTER": [
+      "[\"FACE\", \"SITE-5f1762f1a93b91ca\", \"COLUMN_FACE\", \"[[109808.0817, 14559.7196], [109808.0817, 14619.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-5f1762f1a93b91ca\", \"COLUMN_FACE\", \"[[110218.0817, 14509.7196], [110218.0817, 14529.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-5f1762f1a93b91ca\", \"OBSTACLE_FACE\", \"[[109828.1728, 14549.7196], [109828.1728, 14589.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-5f1762f1a93b91ca\", \"OBSTACLE_FACE\", \"[[109828.1728, 14589.7196], [110038.1728, 14589.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-5f1762f1a93b91ca\", \"OBSTACLE_FACE\", \"[[110038.1728, 14549.7196], [109828.1728, 14549.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-5f1762f1a93b91ca\", \"OBSTACLE_FACE\", \"[[110038.1728, 14589.7196], [110038.1728, 14549.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-77a2130eb275604c\", \"COLUMN_FACE\", \"[[109543.0817, 15574.7196], [109538.0817, 15574.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-77a2130eb275604c\", \"COLUMN_FACE\", \"[[109583.0817, 15574.7196], [109543.0817, 15574.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-77a2130eb275604c\", \"COLUMN_FACE\", \"[[110238.0817, 15114.7196], [110218.0817, 15114.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-a6405850100155ac\", \"COLUMN_FACE\", \"[[109583.0817, 15989.7196], [109583.0817, 16009.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-a6405850100155ac\", \"COLUMN_FACE\", \"[[110218.0817, 15989.7196], [110218.0817, 16009.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-a6405850100155ac\", \"COLUMN_FACE\", \"[[110278.0817, 15989.7196], [110218.0817, 15989.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-a6405850100155ac\", \"COLUMN_FACE\", \"[[110278.0817, 15989.7196], [110278.0817, 16009.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-daca396d6d730e60\", \"COLUMN_FACE\", \"[[109343.0817, 14619.7196], [109323.0817, 14619.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-daca396d6d730e60\", \"COLUMN_FACE\", \"[[109343.0817, 14619.7196], [109343.0817, 14559.7196]]\", null, null]"
+     ],
+     "DRY_WALL_PAINT": [
+      "[\"FACE\", \"SITE-5f1762f1a93b91ca\", \"COLUMN_FACE\", \"[[109808.0817, 14559.7196], [109808.0817, 14619.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-5f1762f1a93b91ca\", \"COLUMN_FACE\", \"[[110218.0817, 14509.7196], [110218.0817, 14529.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-5f1762f1a93b91ca\", \"OBSTACLE_FACE\", \"[[109828.1728, 14549.7196], [109828.1728, 14589.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-5f1762f1a93b91ca\", \"OBSTACLE_FACE\", \"[[109828.1728, 14589.7196], [110038.1728, 14589.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-5f1762f1a93b91ca\", \"OBSTACLE_FACE\", \"[[110038.1728, 14549.7196], [109828.1728, 14549.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-5f1762f1a93b91ca\", \"OBSTACLE_FACE\", \"[[110038.1728, 14589.7196], [110038.1728, 14549.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-77a2130eb275604c\", \"COLUMN_FACE\", \"[[109543.0817, 15574.7196], [109538.0817, 15574.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-77a2130eb275604c\", \"COLUMN_FACE\", \"[[109583.0817, 15574.7196], [109543.0817, 15574.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-77a2130eb275604c\", \"COLUMN_FACE\", \"[[110238.0817, 15114.7196], [110218.0817, 15114.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-a6405850100155ac\", \"COLUMN_FACE\", \"[[109583.0817, 15989.7196], [109583.0817, 16009.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-a6405850100155ac\", \"COLUMN_FACE\", \"[[110218.0817, 15989.7196], [110218.0817, 16009.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-a6405850100155ac\", \"COLUMN_FACE\", \"[[110278.0817, 15989.7196], [110218.0817, 15989.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-a6405850100155ac\", \"COLUMN_FACE\", \"[[110278.0817, 15989.7196], [110278.0817, 16009.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-daca396d6d730e60\", \"COLUMN_FACE\", \"[[109343.0817, 14619.7196], [109323.0817, 14619.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-daca396d6d730e60\", \"COLUMN_FACE\", \"[[109343.0817, 14619.7196], [109343.0817, 14559.7196]]\", null, null]"
+     ],
+     "WET_SERVICE_WALL_TILE": [
+      "[\"FACE\", \"SITE-1c4abf65f9b5db1e\", \"COLUMN_FACE\", \"[[109523.0817, 15989.7196], [109523.0817, 16009.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-1c4abf65f9b5db1e\", \"COLUMN_FACE\", \"[[109568.0817, 15989.7196], [109523.0817, 15989.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-8c1c7563d5252c50\", \"COLUMN_FACE\", \"[[109443.0817, 15049.7196], [109583.0817, 15049.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-a2b19efc492a6d0b\", \"COLUMN_FACE\", \"[[109443.0817, 15029.7196], [109583.0817, 15029.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-fe8ed5548fb4310e\", \"COLUMN_FACE\", \"[[109343.0817, 15574.7196], [109323.0817, 15574.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-fe8ed5548fb4310e\", \"COLUMN_FACE\", \"[[109343.0817, 15634.7196], [109323.0817, 15634.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-fe8ed5548fb4310e\", \"COLUMN_FACE\", \"[[109343.0817, 15634.7196], [109343.0817, 15574.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-fe8ed5548fb4310e\", \"COLUMN_FACE\", \"[[109523.0817, 15594.7196], [109523.0817, 15574.7196]]\", null, null]"
+     ],
+     "WET_WALL_TILE_PREP": [
+      "[\"FACE\", \"SITE-1c4abf65f9b5db1e\", \"COLUMN_FACE\", \"[[109523.0817, 15989.7196], [109523.0817, 16009.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-1c4abf65f9b5db1e\", \"COLUMN_FACE\", \"[[109568.0817, 15989.7196], [109523.0817, 15989.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-8c1c7563d5252c50\", \"COLUMN_FACE\", \"[[109443.0817, 15049.7196], [109583.0817, 15049.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-a2b19efc492a6d0b\", \"COLUMN_FACE\", \"[[109443.0817, 15029.7196], [109583.0817, 15029.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-fe8ed5548fb4310e\", \"COLUMN_FACE\", \"[[109343.0817, 15574.7196], [109323.0817, 15574.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-fe8ed5548fb4310e\", \"COLUMN_FACE\", \"[[109343.0817, 15634.7196], [109323.0817, 15634.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-fe8ed5548fb4310e\", \"COLUMN_FACE\", \"[[109343.0817, 15634.7196], [109343.0817, 15574.7196]]\", null, null]",
+      "[\"FACE\", \"SITE-fe8ed5548fb4310e\", \"COLUMN_FACE\", \"[[109523.0817, 15594.7196], [109523.0817, 15574.7196]]\", null, null]"
+     ],
+     "WET_SERVICE_REVEAL_PLASTER": []
+    },
+    "state": "FAIL",
+    "key": "site + vertical class + plan geometry + opening / side (wall plane and object faces); opening + owner + surface (reveals)"
+   }
+  },
+  "WF3-L2": {
+   "cause": "the blind surface guard keyed records by id (missed WF3-L1) and object faces by (site, class, segment) (flagged one segment exposed as two physical spans)",
+   "blind_guard": {
+    "surfaces": 408,
+    "duplicates_within_a_trade": [
+     "[\"OBJECT\", \"SITE-77a2130eb275604c\", \"COLUMN_FACE\", \"QORTUBA_REV_NEW|H716||SEGMENT|2\"]"
+    ],
+    "state": "FAIL"
+   },
+   "rebuild_guard": {
+    "duplicates_by_row": {
+     "DRY_WALL_PLASTER": [],
+     "DRY_WALL_PAINT": [],
+     "WET_SERVICE_WALL_TILE": [],
+     "WET_WALL_TILE_PREP": [],
+     "WET_SERVICE_REVEAL_PLASTER": []
+    },
+    "state": "PASS",
+    "key": "site + vertical class + plan geometry + opening / side (wall plane and object faces); opening + owner + surface (reveals)"
+   }
+  },
+  "trade_rows": {
+   "DRY_WALL_PLASTER": {
+    "blind": 333.979018,
+    "rebuild": 307.361518,
+    "delta": -26.6175
+   },
+   "DRY_WALL_PAINT": {
+    "blind": 333.979018,
+    "rebuild": 307.361518,
+    "delta": -26.6175
+   },
+   "WET_SERVICE_WALL_TILE": {
+    "blind": 142.573512,
+    "rebuild": 127.693512,
+    "delta": -14.88
+   },
+   "WET_WALL_TILE_PREP": {
+    "blind": 142.573512,
+    "rebuild": 127.693512,
+    "delta": -14.88
+   },
+   "WET_SERVICE_REVEAL_PLASTER": {
+    "blind": 1.510248,
+    "rebuild": 1.510248,
+    "delta": 0.0
+   }
+  },
+  "unchanged": [
+   "reveals and their physicality",
+   "object exposure",
+   "assignments",
+   "row states",
+   "waterproofing",
+   "heights"
+  ],
+  "engine": "identical frozen policies in both"
+ },
+ "final": "SHADOW only: no row is FINAL",
+ "production_migration": "NO"
+}

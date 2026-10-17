@@ -1,0 +1,160 @@
+{
+ "SCHEMA": "URBAN_BOQ_COMPLETENESS_MATRIX_V3",
+ "rows": [
+  {
+   "trade": "CONCRETE",
+   "trade_ar": "الخرسانة",
+   "expected_items": 29,
+   "computed": 15,
+   "partial": 6,
+   "core_items": 29,
+   "core_coverage_pct": 62.1,
+   "review": 1,
+   "blocked": 7,
+   "not_in_source": 0,
+   "coverage_pct": 62.1,
+   "remaining_reasons": [
+    "28 spans, 110.30 m measured; depth not printed",
+    "BLOCKED_ZONE_NOT_CLOSED",
+    "no footing-top / founding level and no ground-beam or ground-slab level is printed in the structural source (typical footing detail p.13 dimensions none); +1.00 FFL is corroboration only",
+    "no structural (shear / retaining) wall is tagged on any plan; the 'B.W' schedule row (20 x 60) is bound to no plan occurrence",
+    "p.14 typical boundary wall; the B.W schedule row is bound to no plan run",
+    "p.7 section gives walls 20 / base 40 / 10 cm plain concrete; depths 'as per arch.' are not printed in the architectural set"
+   ]
+  },
+  {
+   "trade": "REBAR",
+   "trade_ar": "حديد التسليح",
+   "expected_items": 32,
+   "computed": 16,
+   "partial": 10,
+   "core_items": 32,
+   "core_coverage_pct": 65.6,
+   "review": 0,
+   "blocked": 6,
+   "not_in_source": 0,
+   "coverage_pct": 65.6,
+   "remaining_reasons": [
+    "boxed bar shape not dimensioned",
+    "length depends on the neck height (founding level not printed)",
+    "p.8 note 21: 2/3/4 Ø12 by beam width - the width-to-count mapping is not printed",
+    "slab panel annotations (e.g. 5Ø10/m, 8Ø16/m) are printed per panel but their distribution extents are not bound to the bars (generic slab-bar binding not implemented this round)"
+   ]
+  },
+  {
+   "trade": "BLOCKWORK",
+   "trade_ar": "الطابوق",
+   "expected_items": 19,
+   "computed": 14,
+   "partial": 3,
+   "core_items": 19,
+   "core_coverage_pct": 81.6,
+   "review": 0,
+   "blocked": 2,
+   "not_in_source": 0,
+   "coverage_pct": 81.6,
+   "remaining_reasons": [
+    "boundary wall height / extent: p.14 typical only, plan run not bound",
+    "opening heights not printed (no door / window schedule)"
+   ]
+  },
+  {
+   "trade": "PLASTER_PAINT",
+   "trade_ar": "اللياسة والدهان",
+   "expected_items": 89,
+   "computed": 29,
+   "partial": 5,
+   "core_items": 38,
+   "core_coverage_pct": 82.9,
+   "review": 50,
+   "blocked": 5,
+   "not_in_source": 0,
+   "coverage_pct": 35.4,
+   "remaining_reasons": [
+    "facade heights from elevations not read this round (SW / NE raster only)",
+    "opening heights not printed",
+    "room controlling soffit unknown (an unbound beam band over the room)"
+   ]
+  },
+  {
+   "trade": "FLOORING_PORCELAIN",
+   "trade_ar": "الأرضيات (بورسلان)",
+   "expected_items": 41,
+   "computed": 39,
+   "partial": 0,
+   "core_items": 41,
+   "core_coverage_pct": 95.1,
+   "review": 0,
+   "blocked": 2,
+   "not_in_source": 0,
+   "coverage_pct": 95.1,
+   "remaining_reasons": [
+    "external works extent not measured this round",
+    "riser count / height not proved"
+   ]
+  },
+  {
+   "trade": "CEILINGS",
+   "trade_ar": "الأسقف",
+   "expected_items": 51,
+   "computed": 25,
+   "partial": 0,
+   "core_items": 25,
+   "core_coverage_pct": 100.0,
+   "review": 25,
+   "blocked": 0,
+   "not_in_source": 1,
+   "coverage_pct": 49.0,
+   "remaining_reasons": []
+  },
+  {
+   "trade": "WALL_TILE_WATERPROOFING",
+   "trade_ar": "تكسيات الجدران والعزل المائي",
+   "expected_items": 32,
+   "computed": 32,
+   "partial": 0,
+   "core_items": 32,
+   "core_coverage_pct": 100.0,
+   "review": 0,
+   "blocked": 0,
+   "not_in_source": 0,
+   "coverage_pct": 100.0,
+   "remaining_reasons": []
+  },
+  {
+   "trade": "ALUMINIUM_OPENINGS",
+   "trade_ar": "الألمنيوم والفتحات",
+   "expected_items": 24,
+   "computed": 16,
+   "partial": 0,
+   "core_items": 24,
+   "core_coverage_pct": 66.7,
+   "review": 0,
+   "blocked": 8,
+   "not_in_source": 0,
+   "coverage_pct": 66.7,
+   "remaining_reasons": [
+    "head / sill heights not printed (no schedule; SW / NE elevations raster)",
+    "height not printed"
+   ]
+  },
+  {
+   "trade": "STAIRS_RAILINGS",
+   "trade_ar": "الدرج والدرابزين",
+   "expected_items": 4,
+   "computed": 2,
+   "partial": 0,
+   "core_items": 4,
+   "core_coverage_pct": 50.0,
+   "review": 0,
+   "blocked": 2,
+   "not_in_source": 0,
+   "coverage_pct": 50.0,
+   "remaining_reasons": [
+    "flight lengths need the riser count per flight (not proved)",
+    "riser count / height not proved"
+   ]
+  }
+ ],
+ "rule": "coverage = (computed + 0.5 x partial) / expected items, by item count; review and blocked items count as not covered; not-in-source items stay in the denominator with their evidence"
+}

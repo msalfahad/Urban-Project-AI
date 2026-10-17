@@ -1,0 +1,189 @@
+{
+ "SCHEMA": "URBAN_R8_20_DECISION_REGISTER_V1",
+ "recommendation_before_coding": {
+  "SCHEMA": "URBAN_R8_20_RECOMMENDATION_BEFORE_CODING_V1",
+  "written": "after inspecting the R8.19 closure review packets (digests), the I1471 door record (OFFSET_JAMB_CAPS, depth 150 mm, stagger 50 mm), its hosting wall bands, the H716 column, H2430 / H2431 (TC-1013dbb787e56f65 / TC-5f9f2014f83ab0d4), CLOSURE_RELEASE_MODEL_V1 (engine/source/closure_release.py), the source-anchor record, BOQ_REPORT_LAYER_V1 and the R8.19 report rows, DONORS.lock / THIRD_PARTY_PROVENANCE.json, OWNER_UNIT_CLAIMS.json and the second-project records; before any R8.20 code",
+  "inspected": [
+   "I1471 left wall: band WB-d0fa2ebe87cedccd (faces H519 / H525, WALL_BAND_ESTABLISHED) is 200.0 mm wide; its end at x 109678.08 is an OPENING_JAMB of CLOSURE|I1471|B. Right wall: band WB-2c6e6cc37179fbc6 (H518 / H523) is 150.0 mm; its OPENING_JAMB end at x 109778.08 bounds CLOSURE|I1471|A and B. The 50 mm stagger is on the upper face (y 15594.72 vs 15589.72); the lower faces are coplanar (y 15574.72). The door record already reads OFFSET_JAMB_CAPS (depth 15, stagger 5 native = 150 / 50 mm)",
+   "column: H716 (layer COL, role STRUCTURAL_OBSTACLE, 600 x 200 mm, x 109523.08-109583.08, y 15574.72-15594.72): BOTH long faces are collinear with the 200 mm band faces (H519 at y 15594.72, H525 at y 15574.72) and the column depth (200 mm) equals the band width. The column is DETERMINISTICALLY the column the 200 mm wall is aligned to (geometry, not inference from the owner text). R8.19 already books its 0.45 m HALL-side face (flush with H525) as COLUMN_FACE with the room's plaster + paint",
+   "H2430 / H2431: zero-material topology closures (TC-1013dbb787e56f65 at x 109773.76, TC-5f9f2014f83ab0d4 at x 109893.40) capping two real wall ends at the open Hall / Lobby passage; AUTHORISED_FOR_SHADOW; R8.19 packet digests recorded",
+   "release model: CLOSURE_RELEASE_MODEL_V1 has NO released level at all (levels up to REVIEWED_FOR_RELEASE_CANDIDATE; 'never: a release'); REVIEWED requires POLICY_FROZEN + CROSS_ROUTE_AGREEMENT + OWNER_OR_SOURCE_CORROBORATION + SOURCE_ANCHOR + HUMAN_REVIEW, all True",
+   "BOQ: R8.19 report rows copy values correctly, BUT the evidence mapping marked Q-03P / Q-12 COMPUTED_SHADOW_COMPLETE while their release blockers include OBJECT_FOOTPRINT_IMPLICIT - an authority gap that can change the quantity (fixture footprints are inside the floor by topology convention, not by a floor-finish footprint authority). The status vocabulary was right; the mapping ignored quantity-affecting blockers",
+   "donors: DONORS.lock lists UC4N / OT / BM / SL / PW; already incorporated by clean reimplementation: OCS (kernel_ocs), topology / MINSERT / XREF rules, decoder pinning (decoder_pins), representation digests (run_manifest / digests), revision anchors (canonical_input); UC4N labels.plain is still PLANNED",
+   "second project: P7757 is UNIT_UNRESOLVED and its benchmark was unsealed in WT01.8; Al Rashed is IMAGE / OLE and its QS takeoff has been seen - neither can be BLIND gold any more"
+  ],
+  "1_h2430_h2431_human_review": "YES, bound to the exact closure digests of the R8.19 packets (TC-1013dbb787e56f65 = H2430, TC-5f9f2014f83ab0d4 = H2431): HUMAN_REVIEW = ACCEPTED as versioned owner evidence; it is void if the closure record (geometry / evidence parts) ever changes",
+  "2_i1471_human_review": "YES, bound to the I1471 packet digest (CLOSURE|I1471|A / B geometry + opening record): ACCEPTED",
+  "3_strengthens_physical_role": "YES as CORROBORATION, not as authority: the geometry already proves the 200 / 150 mm walls and the column alignment; the owner statement explains WHY (intentional), turning a geometric oddity into corroborated intent. It authorises no topology, geometry or quantity change",
+  "4_keep_200mm": "YES: the source geometry (200 mm band, 150 mm band, 50 mm stagger) is the measurement; nothing is normalised",
+  "5_project_bound_rationale": "YES: QORTUBA-NEW-I1471-200MM-WALL-COLUMN-CONCEALMENT-OWNER-001@v1, kind PHYSICAL_CONSTRUCTION_RATIONALE with NO allowed domains, fingerprint-bound to H519 / H525 / H518 / H523 / H1472 / H1473 / H716 segments; transfer forbidden; no Urban wall rule",
+  "6_missing_conditions": {
+   "H2430": [
+    "CROSS_ROUTE_AGREEMENT",
+    "SOURCE_ANCHOR"
+   ],
+   "H2431": [
+    "CROSS_ROUTE_AGREEMENT",
+    "SOURCE_ANCHOR"
+   ],
+   "I1471": [
+    "CROSS_ROUTE_AGREEMENT",
+    "SOURCE_ANCHOR"
+   ]
+  },
+  "7_reviewed_for_release_candidate": "NO: CROSS_ROUTE_AGREEMENT and SOURCE_ANCHOR are both absent for every closure (REV_NEW has one input route; the DWG does not decode)",
+  "8_released": "NO: the model has no released level; production stays blocked",
+  "9_boq_mature_for_xlsx": "YES, after one correction: the evidence mapping must treat quantity-affecting blockers (OBJECT_FOOTPRINT_IMPLICIT; any unknown blocker, fail closed) as unresolved, so Q-03P / Q-12 show AUTHORISED_SUBTOTAL, never COMPUTED_SHADOW_COMPLETE",
+  "10_xlsx_presentation_only": "YES: values written as plain numbers from the report rows, no formulas, no sums, no subtotals; a readback validator compares every cell with its report row; SHADOW banner and the status on every line; summary and room lines on separate sheets with an explicit 'breakdown - not additive to the summary' marker",
+  "11_source_anchor_route": "A+ (controlled owner re-export, done ONCE, now): in AutoCAD, open the authoritative DWG, no edits, SAVEAS (a) DXF and (b) DWG in an older format (AutoCAD 2013 / AC1027) that the pinned libredwg 0.13.3 decodes; record AutoCAD build, timestamps, hashes. Then: DXF-new vs current DXF identity by handle / layer / entity type / geometry (closes the DWG<->DXF anchor if identical) AND K1 (libredwg on the 2013 DWG) vs K2 (ezdxf on the DXF) topology agreement (makes CROSS_ROUTE_AGREEMENT evaluable). Route B (native AutoCAD readback via MCP / COM) stays a lab oracle; route C (building another DWG decoder) is costlier and less certain",
+  "12_second_project": "An UNSEEN Kuwait villa supplied with (i) DWG + controlled DXF/DWG-2013 export under the same protocol, (ii) the owner's unit statement, (iii) QS quantities SEALED by the owner (hash only) until our freeze is committed. P7757 can serve only as a NON-BLIND regression once its unit is confirmed; Al Rashed is not computable",
+  "13_disagreements_with_chatgpt": [
+   "The I1471 owner explanation must not be modelled as the evidence for the 200 mm wall or the column: the source geometry already proves both (band widths, column faces collinear with the band faces). The owner fact is corroborating rationale only, with no allowed domain",
+   "The column CAN be identified deterministically (H716) - the brief's fallback ('preserve the rationale without a column handle') is not needed, but the identification rests on geometry, not on the owner statement",
+   "The suggested sheets 02_FLOORS / 03_WALL_FINISHES / 04_OPENINGS / 05_WATERPROOFING would repeat quantities across sheets by trade; I recommend ONE summary sheet (TOTAL lines only) + ONE room-breakdown sheet (explicitly non-additive) + traceability / blockers / run-info sheets. There is no OPENINGS BOQ row (reveals live inside the finish rows), so an openings sheet would invent a quantity view",
+   "A controlled AutoCAD DXF re-export alone closes DWG<->DXF identity but NOT cross-route agreement (same K2 decoder); adding a DWG-2013 SAVEAS in the same session gives the independent K1 route",
+   "P7757 / Al Rashed cannot be 'blind' validations any more: their QS quantities were already seen; calling them blind would be calibration-by-memory",
+   "The R8.19 BOQ status for Q-03P / Q-12 was too optimistic (OBJECT_FOOTPRINT_IMPLICIT is quantity-affecting) - corrected here, disclosed as a silent-error path"
+  ],
+  "14_r8_21": "R8.21: (1) ingest the controlled re-export (DXF identity + K1/K2 cross-route) and re-evaluate the three closures; (2) resolve OBJECT_FOOTPRINT_IMPLICIT for Q-03P / Q-12 (one owner question if the source cannot); (3) the first unseen-villa intake under the freeze-then-blind protocol with sealed QS gold; (4) PDF lane step 1: section / elevation heights as rank-2 wall-height evidence into the SAME claim pipeline"
+ },
+ "decisions": [
+  {
+   "id": "R820-D01",
+   "decision": "owner reviews recorded as versioned evidence bound to the closure digests; HUMAN_REVIEW satisfied for H2430 / H2431 / I1471"
+  },
+  {
+   "id": "R820-D02",
+   "decision": "I1471 rationale stored as a no-domain physical construction rationale; geometry untouched; column H716 identified by geometry"
+  },
+  {
+   "id": "R820-D03",
+   "decision": "no closure reaches REVIEWED_FOR_RELEASE_CANDIDATE (cross-route, anchor); nothing released"
+  },
+  {
+   "id": "R820-D04",
+   "decision": "BOQ evidence mapping corrected (Q-03P / Q-12 AUTHORISED_SUBTOTAL); XLSX view exported and validated"
+  },
+  {
+   "id": "R820-D05",
+   "decision": "source anchor: controlled DXF + AC1027 re-export recommended now"
+  },
+  {
+   "id": "R820-D06",
+   "decision": "second project: unseen villa with sealed QS gold"
+  }
+ ],
+ "gates": {
+  "MIGRATION_PLANNING_READY": "YES",
+  "MIGRATION_EXECUTION_READY": "NO",
+  "PRODUCTION_MIGRATION": "NO"
+ },
+ "answers": {
+  "1_h2430_review": "ACCEPTED",
+  "2_h2431_review": "ACCEPTED",
+  "3_i1471_review": "ACCEPTED",
+  "4_200mm_intentional": "YES: owner fact QORTUBA-NEW-I1471-200MM-WALL-COLUMN-CONCEALMENT-OWNER-001@v1; geometry: bands {'WB-2c6e6cc37179fbc6': 150.0, 'WB-d0fa2ebe87cedccd': 200.0} mm, stagger 50.0 mm",
+  "5_rationale_recorded": "YES: kind PHYSICAL_CONSTRUCTION_RATIONALE, allowed domains [], binding APPLIES; column QORTUBA_REV_NEW|H716||SEGMENT identified deterministically by geometry: {'depth_mm': 200.0, 'length_mm': 600.0, 'collinear_faces': ['QORTUBA_REV_NEW|H716||SEGMENT|0', 'QORTUBA_REV_NEW|H716||SEGMENT|2'], 'both_long_faces_collinear': True, 'overlaps_band_faces_mm': 450.0, 'depth_equals_band_width': True, 'matches': True}",
+  "6_geometry_changed": "NO",
+  "7_quantity_changed": "NO: all 17 published rows unchanged (True), digests same (True)",
+  "8_i1471_level": {
+   "current_level_before_review": "AUTHORISED_FOR_SHADOW",
+   "maximum_justified_level": "AUTHORISED_FOR_SHADOW",
+   "missing_for_next_level": [
+    "CROSS_ROUTE_AGREEMENT",
+    "SOURCE_ANCHOR"
+   ]
+  },
+  "9_h2430_level": {
+   "current_level_before_review": "AUTHORISED_FOR_SHADOW",
+   "maximum_justified_level": "AUTHORISED_FOR_SHADOW",
+   "missing_for_next_level": [
+    "CROSS_ROUTE_AGREEMENT",
+    "SOURCE_ANCHOR"
+   ]
+  },
+  "10_h2431_level": {
+   "current_level_before_review": "AUTHORISED_FOR_SHADOW",
+   "maximum_justified_level": "AUTHORISED_FOR_SHADOW",
+   "missing_for_next_level": [
+    "CROSS_ROUTE_AGREEMENT",
+    "SOURCE_ANCHOR"
+   ]
+  },
+  "11_what_prevents_next_level": "CROSS_ROUTE_AGREEMENT (one input route for REV_NEW) and SOURCE_ANCHOR (DWG not decodable) - for all three; no RELEASED level exists in the model",
+  "12_human_review_satisfied": {
+   "H2430": true,
+   "H2431": true,
+   "I1471": true
+  },
+  "13_cross_route_satisfied": "NO",
+  "14_source_anchor_satisfied": "NO",
+  "15_xlsx_implemented": "YES: BOQ_XLSX_EXPORT_V1, readback PASS",
+  "16_xlsx_calculates": "NO: plain values copied from report rows, no formulas (readback checks every cell)",
+  "17_rows_exported": {
+   "summary": 17,
+   "room_breakdown": 33,
+   "traceability": 50
+  },
+  "18_statuses_visible": "YES: every line has its STATUS cell (colour by status) and 'NO - SHADOW' in APPROVED; {'COMPUTED_SHADOW_COMPLETE': 48, 'AUTHORISED_SUBTOTAL': 2, 'BLOCKED': 0, 'RELEASED': 0}",
+  "19_traceable": "YES: 03_TRACEABILITY carries run id, source revision, trade row, sites, surface ids, authority digest, rule ids, owner facts, release state, evidence row for every line",
+  "20_source_anchor_route": "owner-controlled AutoCAD re-export (DXF + AC1027 DWG, no edits, hashes)",
+  "21_reexport_now": "YES - it is the single action that materially closes the anchor and opens the cross-route check; protocol in SOURCE_ANCHOR_PLAN",
+  "22_donor_mechanisms_incorporated": {
+   "U-C4N/Autocad-MCP": [
+    "OCS arbitrary-axis -> engine/source/cad/kernel_ocs.py (CLEAN_REIMPLEMENTED, R8.1)",
+    "snapshot / topology / MINSERT / XREF rules (CLEAN_REIMPLEMENTED)"
+   ],
+   "beiming183-cloud/AutoCAD-MCP": [
+    "representation digest pattern -> run_manifest / digests",
+    "revision anchors -> canonical_input",
+    "field-level readback diff -> SOURCE_EXPORT_IDENTITY_POLICY_V1 (CLEAN_REIMPLEMENTED, R8.20)"
+   ]
+  },
+  "23_donor_mechanisms_remaining": {
+   "U-C4N/Autocad-MCP": {
+    "labels.plain (literal text decoding)": "COPY_ADAPTED when the document / PDF lane needs it (still PLANNED, licence notice kept)"
+   },
+   "Kentucky-ai/opentakeoff": {
+    "scale-confirmed gating, schedule scan without silent row drop, mixed-scale BLOCK": "CLEAN_REIMPLEMENT in the PDF lane",
+    "detectRooms / One-Click": "BENCHMARKED only"
+   },
+   "beiming183-cloud/AutoCAD-MCP": {
+    "native readback oracle": "DEFERRED (route B only)"
+   },
+   "Slacker-LLC/autocad-mcp": {
+    "COM handle readback": "DEFERRED (route B lab oracle)"
+   },
+   "puran-water/autocad-mcp": {
+    "whole server": "BENCHMARK_REFERENCE only"
+   }
+  },
+  "24_duplicating_engines": "NO",
+  "25_pdf_main_track": "as a main track AFTER (1) the controlled re-export is ingested and (2) the first unseen-villa CAD blind run is frozen and compared - target R8.22",
+  "26_second_project": "an unseen Kuwait villa (P7757 / Al Rashed are not blind-eligible)",
+  "27_before_blind_validation": [
+   "resolved units (source declaration + owner statement)",
+   "authoritative plan scope",
+   "certified source (hashed DWG + controlled DXF)",
+   "no expected quantity visible before the freeze",
+   "comparable architectural trades"
+  ],
+  "28_production_blockers": {
+   "source_anchor_strategy": "PLAN_READY_NOT_EXECUTED",
+   "closure_release_model_matured": "human review recorded; ['H2430', 'H2431', 'I1471'] still miss CROSS_ROUTE_AGREEMENT + SOURCE_ANCHOR",
+   "multiple_blind_projects": "0 clean blind projects",
+   "no_silent_critical_errors": "R8.20 found one (BOQ status mapping, quantity-neutral)",
+   "human_approval_workflow": "closure reviews recorded as versioned evidence; no BOQ approval workflow yet"
+  },
+  "29_new_silent_error": "R8.19 BOQ status mapping: rows with a QUANTITY-AFFECTING release blocker (OBJECT_FOOTPRINT_IMPLICIT) were shown as COMPUTED_SHADOW_COMPLETE - corrected by BOQ_EVIDENCE_MAPPING_V1 (fail closed for unknown blockers): {'Q-03P': {'R8.19': 'COMPUTED_SHADOW_COMPLETE', 'R8.20': 'AUTHORISED_SUBTOTAL'}, 'Q-12': {'R8.19': 'COMPUTED_SHADOW_COMPLETE', 'R8.20': 'AUTHORISED_SUBTOTAL'}}; quantities unchanged",
+  "30_r8_21": "R8.21: (1) ingest the controlled re-export (DXF identity + K1/K2 cross-route) and re-evaluate the three closures; (2) resolve OBJECT_FOOTPRINT_IMPLICIT for Q-03P / Q-12 (one owner question if the source cannot); (3) the first unseen-villa intake under the freeze-then-blind protocol with sealed QS gold; (4) PDF lane step 1: section / elevation heights as rank-2 wall-height evidence into the SAME claim pipeline",
+  "31_disagreements": [
+   "The I1471 owner explanation must not be modelled as the evidence for the 200 mm wall or the column: the source geometry already proves both (band widths, column faces collinear with the band faces). The owner fact is corroborating rationale only, with no allowed domain",
+   "The column CAN be identified deterministically (H716) - the brief's fallback ('preserve the rationale without a column handle') is not needed, but the identification rests on geometry, not on the owner statement",
+   "The suggested sheets 02_FLOORS / 03_WALL_FINISHES / 04_OPENINGS / 05_WATERPROOFING would repeat quantities across sheets by trade; I recommend ONE summary sheet (TOTAL lines only) + ONE room-breakdown sheet (explicitly non-additive) + traceability / blockers / run-info sheets. There is no OPENINGS BOQ row (reveals live inside the finish rows), so an openings sheet would invent a quantity view",
+   "A controlled AutoCAD DXF re-export alone closes DWG<->DXF identity but NOT cross-route agreement (same K2 decoder); adding a DWG-2013 SAVEAS in the same session gives the independent K1 route",
+   "P7757 / Al Rashed cannot be 'blind' validations any more: their QS quantities were already seen; calling them blind would be calibration-by-memory",
+   "The R8.19 BOQ status for Q-03P / Q-12 was too optimistic (OBJECT_FOOTPRINT_IMPLICIT is quantity-affecting) - corrected here, disclosed as a silent-error path"
+  ]
+ }
+}

@@ -1,0 +1,56 @@
+PRE_S8_FAMILY,ROW_KIND,ELEMENTS,IN_S9_BY_ID,EXAMPLE_IDS,PLAN_AREA_M2,CLASS,EXPLANATION
+BEAM (CONTINUOUS_BEAM),ELEMENT,13,0,"[""CBO-FFRS-CB10-BL001"", ""CBO-FFRS-CB11-BL024"", ""CBO-FFRS-CB12-BL003""]",,OTHER_ID,"S9 carries CB1, CB10, CB11, CB12, CB13, CB2, CB3, CB4, CB5, CB6, CB7, CB8, CB9 as S6 span occurrences"
+BEAM (SIMPLE_BEAM),ELEMENT,88,88,"[""BM-1F_ROOF-B1-BL014-6D0"", ""BM-1F_ROOF-B1-BL016-6CE"", ""BM-1F_ROOF-B1-BL028-6CB""]",,SAME_ID,every element is an S9 component
+BEAM (UNTAGGED_GEOMETRY),ELEMENT,32,32,"[""SPAN:FFRS:BL002:8912-14499"", ""SPAN:FFRS:BL005:11912-16087"", ""SPAN:FFRS:BL005:9062-11912""]",,SAME_ID,every element is an S9 component
+BEAM_IN_CASEMENT (typical only),TYPICAL_DETAIL_ONLY,1,1,"[""SPC-CASEMENT_DETAIL""]",,SAME_ID,every element is an S9 component
+BEAM_OPENING_DETAIL (typical only),TYPICAL_DETAIL_ONLY,1,1,"[""SPC-BEAM_OPENING""]",,SAME_ID,every element is an S9 component
+"BOUNDARY_WALL (RC columns 20x30, GB 20x40, pads 130x80x30)",POPULATION_RECORD,1,0,"[""SPC-BOUNDARY_WALL""]",,STAGE_RECORD,covered by the owning stage's rows (S8.x population record)
+CANTILEVER_BEAM (CA),ELEMENT,1,1,"[""BM-GF_ROOF-CA-BL015-69E""]",,SAME_ID,every element is an S9 component
+CANTILEVER_OR_BEARING_WALL_BAND,ELEMENT,8,0,"[""HZ-GFRS-273"", ""HZ-GFRS-2B1"", ""HZ-GFRS-2B4""]",4.947,MISSED_OBJECT,"hatch-zone bands on the slab sheets (S7 CLASSIFICATION_BLOCKED, no S1 panel, no owner): S9 registers none of them (F-01)"
+COLUMN,ELEMENT,56,56,"[""COL-C10-X15-Y01-GF"", ""COL-C-X01-Y01-GF"", ""COL-C3-X04-Y01-GF""]",,SAME_ID,every element is an S9 component
+COLUMN (DEAD_COLUMN bound),ELEMENT,1,1,"[""COL-C11-X06-Y04-GF""]",,SAME_ID,every element is an S9 component
+COLUMN (TURN_COLUMN bound),ELEMENT,2,2,"[""COL-C8-X15-Y06-GF"", ""COL-C9-X13-Y08-GF""]",,SAME_ID,every element is an S9 component
+COMBINED_FOOTING,ELEMENT,6,6,"[""FTG-F14-22408-7312"", ""FTG-CONFLICT_F_F10-30008-7312"", ""FTG-F13-11188-10712""]",,SAME_ID,every element is an S9 component
+DOME (slab face inside the dome circle),FACE_OF_ELEMENT,8,8,"[""SP-1F_ROOF_SLAB-13"", ""SP-1F_ROOF_SLAB-14"", ""SP-1F_ROOF_SLAB-15""]",,SAME_ID,every element is an S9 component
+DOME_OR_SPECIAL_ROOF,ELEMENT,2,0,"[""SPC-DOME-1"", ""SPC-DOME-2""]",,STAGE_RECORD,covered by the owning stage's rows (S8.x population record)
+"DOME_OR_SPECIAL_ROOF (tower roof, +13.90)",CONFLICT_CANDIDATE,1,0,"[""PS8-DOME-TOWER-ARCH-ONLY""]",,STAGE_RECORD,PRE-S8 evidence row
+"DOME_RING_BEAM (S1 DOME_RING arc, untagged in S6)",ELEMENT,6,6,"[""ARC:FFRS:BA003"", ""ARC:FFRS:BA004"", ""ARC:FFRS:BA005""]",,SAME_ID,every element is an S9 component
+ELEVATED_SLAB,ELEMENT,41,41,"[""SP-GF_ROOF_SLAB-02"", ""SP-GF_ROOF_SLAB-06"", ""SP-GF_ROOF_SLAB-07""]",,SAME_ID,every element is an S9 component
+GROUND_BEAM (exterior / interior detail conflict),ELEMENT,8,8,"[""GSO-109-7CB-1"", ""GSO-10B-7D1-1"", ""GSO-114-115-7DF-1""]",,SAME_ID,every element is an S9 component
+"GROUND_BEAM (exterior, depth FOLLOW ARCH.)",ELEMENT,22,22,"[""GSO-107-7CE-1"", ""GSO-109-7CB-2"", ""GSO-10A-7C9-1""]",,SAME_ID,every element is an S9 component
+GROUND_BEAM (interior),ELEMENT,29,29,"[""GSO-13C-7D9-1"", ""GSO-13E-7D6-1"", ""GSO-13F-7D3-1""]",,SAME_ID,every element is an S9 component
+GROUND_SLAB (cell),FACE_OF_ELEMENT,21,21,"[""SP-GBP-02"", ""SP-GBP-03"", ""SP-GBP-04""]",,SAME_ID,every element is an S9 component
+GROUND_SLAB (population record),ELEMENT,1,0,"[""SPC-GROUND_SLAB""]",,STAGE_RECORD,covered by the owning stage's rows (S8.x population record)
+ISOLATED_FOOTING,ELEMENT,19,19,"[""FTG-F-1888-7312"", ""FTG-F15-7088-7312"", ""FTG-F-13638-7312""]",,SAME_ID,every element is an S9 component
+LEAN_BLINDING_CONCRETE,POPULATION_RECORD,1,0,"[""PS8-BLINDING-UNDER-FOOTINGS""]",,STAGE_RECORD,PRE-S8 evidence row
+LIFT_FOOTING (lift base FF),ELEMENT,1,1,"[""FTG-FF-18688-14112""]",,SAME_ID,every element is an S9 component
+LIFT_PIT_AND_WALLS,ELEMENT,1,0,"[""SPC-LIFT_PIT""]",,STAGE_RECORD,covered by the owning stage's rows (S8.x population record)
+LIFT_PIT_AND_WALLS (walls 20 cm),COMPONENT_EVIDENCE,1,0,"[""PS8-LIFT-WALLS""]",,STAGE_RECORD,PRE-S8 evidence row
+LIFT_TIE_BEAM (conditional),ELEMENT,1,0,"[""SPC-LIFT_TIE_BEAM-GF""]",,STAGE_RECORD,covered by the owning stage's rows (S8.x population record)
+LINTEL,POPULATION_RECORD,1,0,"[""SPC-LINTELS""]",,STAGE_RECORD,covered by the owning stage's rows (S8.x population record)
+NECK_PEDESTAL (foundation storey of the column chain),ELEMENT,36,36,"[""COL-C10-X15-Y01-FOUNDATION"", ""COL-C-X01-Y01-FOUNDATION"", ""COL-C3-X04-Y01-FOUNDATION""]",,SAME_ID,every element is an S9 component
+OPENING (void),ELEMENT,3,3,"[""SP-GF_ROOF_SLAB-09"", ""SP-GF_ROOF_SLAB-13"", ""SP-1F_ROOF_SLAB-06""]",,SAME_ID,every element is an S9 component
+RC_PARAPET,POPULATION_RECORD,3,0,"[""SPC-PARAPET-GFRS"", ""SPC-PARAPET-FFRS"", ""SPC-PARAPET-SFRS""]",,STAGE_RECORD,covered by the owning stage's rows (S8.x population record)
+RIBBED_OR_HORDI_SLAB (typical only),TYPICAL_DETAIL_ONLY,1,1,"[""SPC-RIBBED_SLAB""]",,SAME_ID,every element is an S9 component
+SLAB_CORNER_BARS,COMPONENT_EVIDENCE,1,0,"[""SPC-CORNER_BARS""]",,STAGE_RECORD,covered by the owning stage's rows (S8.x population record)
+SPECIAL_COLUMN (dead),COMPONENT_EVIDENCE,1,0,"[""SPC-DEAD_COLUMN-GFRS-38A""]",,STAGE_RECORD,covered by the owning stage's rows (S8.x population record)
+SPECIAL_COLUMN (planted),COMPONENT_EVIDENCE,3,0,"[""SPC-PLANTED_COLUMN-GFRS-544"", ""SPC-PLANTED_COLUMN-GFRS-548"", ""SPC-PLANTED_COLUMN-FFRS-77C""]",,STAGE_RECORD,covered by the owning stage's rows (S8.x population record)
+SPECIAL_COLUMN (twisted),COMPONENT_EVIDENCE,2,0,"[""SPC-TURN_COLUMN-GFRS-31F"", ""SPC-TURN_COLUMN-GFRS-324""]",,STAGE_RECORD,covered by the owning stage's rows (S8.x population record)
+STAIR_AND_LANDING,ELEMENT,5,0,"[""SPC-STAIR-SP-GF_ROOF_SLAB-03"", ""SPC-STAIR-SP-GF_ROOF_SLAB-21"", ""SPC-STAIR-SP-GF_ROOF_SLAB-28""]",,STAGE_RECORD,covered by the owning stage's rows (S8.x population record)
+STAIR_AND_LANDING,FACE_OF_ELEMENT,3,3,"[""SP-GF_ROOF_SLAB-03"", ""SP-GF_ROOF_SLAB-28"", ""SP-1F_ROOF_SLAB-01""]",,SAME_ID,every element is an S9 component
+STAIR_AND_LANDING (ground flight),FACE_OF_ELEMENT,1,1,"[""SP-GBP-12""]",,SAME_ID,every element is an S9 component
+STAIR_BEAM,COMPONENT_EVIDENCE,3,0,"[""SPC-STAIR_BEAM-GFRS-6B6"", ""SPC-STAIR_BEAM-GFRS-1826"", ""SPC-STAIR_BEAM-FFRS-6B8""]",,STAGE_RECORD,covered by the owning stage's rows (S8.x population record)
+STAIR_IN_LIGHT_WELL,FACE_OF_ELEMENT,1,1,"[""SP-GF_ROOF_SLAB-21""]",,SAME_ID,every element is an S9 component
+STRAP_BEAM,ELEMENT,3,3,"[""SOCC-1689-1B1C"", ""SOCC-1B08-1B09"", ""SOCC-1B26-1B27""]",,SAME_ID,every element is an S9 component
+SUNKEN_SLAB,ELEMENT,6,6,"[""SP-GF_ROOF_SLAB-04"", ""SP-GF_ROOF_SLAB-05"", ""SP-GF_ROOF_SLAB-12""]",,SAME_ID,every element is an S9 component
+SWIMMING_POOL (base + walls),ELEMENT,1,0,"[""SPC-POOL""]",,STAGE_RECORD,covered by the owning stage's rows (S8.x population record)
+WATER_TANK_SUPPORT_SLAB,ELEMENT,1,0,"[""SPC-WATER_TANK-SFRS""]",,STAGE_RECORD,covered by the owning stage's rows (S8.x population record)
+WATER_TANK_SUPPORT_SLAB,FACE_OF_ELEMENT,2,2,"[""SP-2F_ROOF_SLAB-01"", ""SP-2F_ROOF_SLAB-02""]",,SAME_ID,every element is an S9 component
+03 coverage: CANTILEVER_OR_BEARING_WALL 1F_ROOF_SLAB,COVERAGE_MATRIX,1,,,,COVERAGE_NOTE,PRE-S8 NOT_MEASURED; S9 lane: no S9 row (F-01)
+03 coverage: CANTILEVER_OR_BEARING_WALL 2F_ROOF_SLAB,COVERAGE_MATRIX,3,,,,COVERAGE_NOTE,PRE-S8 NOT_MEASURED; S9 lane: no S9 row (F-01)
+03 coverage: CANTILEVER_OR_BEARING_WALL GF_ROOF_SLAB,COVERAGE_MATRIX,4,,,,COVERAGE_NOTE,PRE-S8 NOT_MEASURED; S9 lane: no S9 row (F-01)
+03 coverage: LIFT GF,COVERAGE_MATRIX,1,,,,COVERAGE_NOTE,"PRE-S8 NOT_MEASURED; S9 lane: BLOCKED (lift, S8.8)"
+03 coverage: RC_PARAPET 1F_ROOF_SLAB,COVERAGE_MATRIX,1,,,,COVERAGE_NOTE,"PRE-S8 NOT_MEASURED; S9 lane: BLOCKED (parapets, geometry not printed)"
+03 coverage: RC_PARAPET 2F_ROOF_SLAB,COVERAGE_MATRIX,1,,,,COVERAGE_NOTE,"PRE-S8 NOT_MEASURED; S9 lane: BLOCKED (parapets, geometry not printed)"
+03 coverage: RC_PARAPET GF_ROOF_SLAB,COVERAGE_MATRIX,1,,,,COVERAGE_NOTE,"PRE-S8 NOT_MEASURED; S9 lane: BLOCKED (parapets, geometry not printed)"
+03 coverage: WATER_TANK 2F_ROOF_SLAB,COVERAGE_MATRIX,1,,,,COVERAGE_NOTE,PRE-S8 NOT_MEASURED; S9 lane: tank roof RELEASED by S8.4; tank walls NOT_IN_SOURCE

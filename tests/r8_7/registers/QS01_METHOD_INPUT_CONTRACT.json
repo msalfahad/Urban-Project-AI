@@ -1,0 +1,88 @@
+{
+ "SCHEMA": "URBAN_R8_7_QS01_METHOD_INPUT_CONTRACT_V1",
+ "contract": {
+  "method_id": "QS01_METHOD_A_ARRANGEMENT_OF_BOUNDARY_LINES+OWNER_RULES_V1_FLOOR_ROWS",
+  "version": "1",
+  "input_fields": [
+   "revision",
+   "region_id",
+   "frame_id",
+   "unit_native_to_mm",
+   "unit_claim_id"
+  ],
+  "part_fields": [
+   "source_revision_id",
+   "source_handle",
+   "instance_path",
+   "block_identity",
+   "source_part_id",
+   "part_index",
+   "layer",
+   "visibility",
+   "curve_kind",
+   "geometry"
+  ],
+  "text_fields": [
+   "source_revision_id",
+   "text_identity",
+   "source_handle",
+   "instance_path",
+   "block_identity",
+   "text_value",
+   "world_placement",
+   "visibility"
+  ],
+  "dimension_fields": [
+   "source_revision_id",
+   "dimension_identity",
+   "source_handle",
+   "instance_path",
+   "placed_points",
+   "measurement",
+   "user_text",
+   "dimlfac",
+   "dimension_type",
+   "visibility"
+  ],
+  "accepted_part_kinds": [
+   "SEGMENT",
+   "ARC",
+   "CIRCLE"
+  ],
+  "declared_exclusions": {
+   "ELLIPTICAL_ARC": "the method's input has no elliptical primitive; the active reading never carried one (R8.6: canonical input equal to the active reading without them)"
+  },
+  "visibility_relevant": true,
+  "region_review_blocks": true,
+  "evidence": {
+   "parts.block_identity": "CHANGES_OUTPUT",
+   "parts.source_part_id": "CHANGES_OUTPUT",
+   "parts.block_identity+parts.source_part_id": "CHANGES_OUTPUT",
+   "parts.source_part_id(duplicate)": "CHANGES_OUTPUT",
+   "parts.instance_path": "CHANGES_OUTPUT",
+   "parts.layer": "NO_CHANGE_ON_THIS_SOURCE",
+   "texts.world_placement": "CHANGES_OUTPUT",
+   "texts.text_value": "CHANGES_OUTPUT",
+   "texts.text_height (not declared)": "NO_CHANGE_ON_THIS_SOURCE",
+   "dimensions.placed_points": "CHANGES_OUTPUT",
+   "dimensions.measurement": "CHANGES_OUTPUT",
+   "dimensions.dimension_type": "NO_CHANGE_ON_THIS_SOURCE",
+   "parts.visibility": "NO_CHANGE_ON_THIS_SOURCE",
+   "input.unit_claim_id": "NO_CHANGE_ON_THIS_SOURCE",
+   "source_revision (mixed)": "ISOLATION_CHECK",
+   "region_id (wrong plan variant)": "ISOLATION_CHECK",
+   "region membership (candidate bounds)": "CHANGES_OUTPUT"
+  }
+ },
+ "not_required": {
+  "texts.text_height": "no change when removed (R8.6 and R8.7)",
+  "linetype / lineweight": "not carried; R8.6 ablation: no change",
+  "HATCH / INSTANCES / BLOCK_DEFINITIONS / LAYERS tables": "not carried; R8.6 ablation: no change",
+  "dimensions.definition_points": "the method reads placed points only"
+ },
+ "policy_fields": {
+  "parts.visibility": "the method measures visible plan geometry; no hidden or dynamic-state geometry exists in the region of either revision, so the field is POLICY",
+  "dimensions.user_text / dimlfac": "read by the method; every dimension here has no override and DIMLFAC 1.0",
+  "input.unit_claim_id": "the unit must come from a claim scoped to the revision"
+ }
+}

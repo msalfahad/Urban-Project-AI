@@ -1,0 +1,126 @@
+{
+ "SCHEMA": "URBAN_FINAL_BLOCKER_REGISTER_V3",
+ "rows": [
+  {
+   "id": "B01",
+   "area": "STRUCTURE",
+   "blocker": "Exterior ground-beam depth ('follow arch.')",
+   "lines": "C-GB-EXT",
+   "class": "D",
+   "why": "outer ground level to GF slab level not printed"
+  },
+  {
+   "id": "B02",
+   "area": "STRUCTURE",
+   "blocker": "Column necks / founding level",
+   "lines": "C-NECK, R-COL-FDN",
+   "class": "D",
+   "why": "founding level left to site and soil (note 12)"
+  },
+  {
+   "id": "B03",
+   "area": "STRUCTURE",
+   "blocker": "Stairs: riser count / waist thickness",
+   "lines": "C-STAIR, F-STAIR, S-RAIL",
+   "class": "B + D",
+   "why": "waist drawn THICK without value"
+  },
+  {
+   "id": "B04",
+   "area": "STRUCTURE",
+   "blocker": "Pool depths",
+   "lines": "C-POOL",
+   "class": "D",
+   "why": "'as per arch.' - not in the architectural set"
+  },
+  {
+   "id": "B05",
+   "area": "STRUCTURE",
+   "blocker": "Dome location / number",
+   "lines": "C-DOME",
+   "class": "D",
+   "why": "p.7 detail N.T.S., not bound to a plan"
+  },
+  {
+   "id": "B06",
+   "area": "STRUCTURE",
+   "blocker": "F / F10 footing conflict",
+   "lines": "C-FTG",
+   "class": "D",
+   "why": "genuine drawing conflict (OQ3-S1)"
+  },
+  {
+   "id": "B07",
+   "area": "STRUCTURE",
+   "blocker": "Beam / column occurrences not bound",
+   "lines": "C-BEAM, C-COL",
+   "class": "B then D",
+   "why": "tag binding residue"
+  },
+  {
+   "id": "B08",
+   "area": "REBAR",
+   "blocker": "Hooks / bends / anchorage / stirrup closing",
+   "lines": "R-*-STRAIGHT",
+   "class": "F",
+   "why": "no bar-bending detail; OD-V3-3 forbids invention"
+  },
+  {
+   "id": "B09",
+   "area": "REBAR",
+   "blocker": "Slab panel bar extents",
+   "lines": "R-SLAB-ALL",
+   "class": "B",
+   "why": "per-panel annotations not bound to distribution extents"
+  },
+  {
+   "id": "B10",
+   "area": "STRUCTURE",
+   "blocker": "Annex ground-slab zone outline",
+   "lines": "C-GSLAB-ZONE-2",
+   "class": "B",
+   "why": "west exterior beam drawn on another layer"
+  },
+  {
+   "id": "B11",
+   "area": "OPENINGS",
+   "blocker": "Door / window heights",
+   "lines": "O-*-A, B-OVER-OPEN, P-REVEAL",
+   "class": "D / E",
+   "why": "no schedule; SW / NE elevations raster"
+  },
+  {
+   "id": "B12",
+   "area": "FINISHES",
+   "blocker": "Room soffit under unbound beams (paint)",
+   "lines": "P-PA-*",
+   "class": "B",
+   "why": "beam band type conflict over the room"
+  },
+  {
+   "id": "B13",
+   "area": "FINISHES",
+   "blocker": "Extras coverage rules (beads, spatter dash, cornice)",
+   "lines": "P-CB-*, P-SD-*, CE-CO-*",
+   "class": "F",
+   "why": "OD-V3-4 scope, coverage rule"
+  },
+  {
+   "id": "B14",
+   "area": "EXTERNAL",
+   "blocker": "Facades, boundary wall, courtyard",
+   "lines": "P-EXT, B-BWALL, F-COURT, C-BWALL",
+   "class": "A + E",
+   "why": "not measured this round"
+  },
+  {
+   "id": "B15",
+   "area": "TOPOLOGY",
+   "blocker": "Lift shaft confirmation",
+   "lines": "rooms 3.24 m2 x 3 storeys",
+   "class": "D",
+   "why": "repeated 1.8 x 1.8 m site; p.14 typical lift"
+  }
+ ],
+ "blocked_lines": 32
+}

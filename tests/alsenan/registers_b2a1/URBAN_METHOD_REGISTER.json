@@ -1,0 +1,155 @@
+{
+ "SCHEMA": "URBAN_METHOD_REGISTER_V1",
+ "methods": [
+  {
+   "id": "URBAN-BEAM-TYPE-FROM-SCHEDULE-LENGTH-FROM-PLAN@v1",
+   "statement": "beam type from the bound plan tag, section from its own schedule namespace, length from the bound plan band (four bases stored apart)",
+   "applies_to": [
+    "BEAM",
+    "CONTINUOUS_BEAM"
+   ],
+   "never_applies_to": [
+    "STRAP"
+   ],
+   "parameters": {},
+   "precedence": [
+    "EXPLICIT_LOCAL_DIMENSION"
+   ]
+  },
+  {
+   "id": "URBAN-COLUMN-HEIGHT-TO-CONTROLLING-MEMBER@v1",
+   "statement": "column concrete height = structural storey interval - depth of the deepest member framing into THAT column (slab thickness when none); never a global depth",
+   "applies_to": [
+    "COLUMN"
+   ],
+   "never_applies_to": [
+    "NECK",
+    "WALL"
+   ],
+   "parameters": {},
+   "precedence": [
+    "SOURCE_COLUMN_HEIGHT",
+    "STRUCTURAL_LEVELS"
+   ]
+  },
+  {
+   "id": "URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1",
+   "statement": "the floor finish is laid before fixed cabinetry / wardrobes / joinery and continues under them",
+   "applies_to": [
+    "WARDROBE",
+    "FIXED_JOINERY",
+    "KITCHEN_CABINET",
+    "VANITY_CABINET"
+   ],
+   "never_applies_to": [
+    "WALL",
+    "COLUMN",
+    "PLINTH",
+    "SHAFT",
+    "DUCT",
+    "CURB"
+   ],
+   "parameters": {},
+   "precedence": [
+    "PROJECT_SPECIFICATION"
+   ]
+  },
+  {
+   "id": "URBAN-NON-OVERLAPPING-SLAB-BEAM-MODEL@v1",
+   "statement": "slab = net plate x t; downstand = clear length x B x (D - t); joint = column area x (D_ctrl - t); gross beam view reported separately",
+   "applies_to": [
+    "SLAB",
+    "BEAM",
+    "JOINT"
+   ],
+   "never_applies_to": [],
+   "parameters": {},
+   "precedence": [
+    "PROJECT_SPECIFICATION"
+   ]
+  },
+  {
+   "id": "URBAN-PAINT-TO-FINISHED-CEILING@v1",
+   "statement": "paint runs to the finished ceiling, taken as the controlling soffit minus a ceiling allowance unless a ceiling level is in the source; concealed plaster in dry rooms is not painted",
+   "applies_to": [
+    "DRY_ROOM_WALL_FACE"
+   ],
+   "never_applies_to": [
+    "WET_ROOM_TILED_FACE"
+   ],
+   "parameters": {
+    "ceiling_allowance_m": 0.15
+   },
+   "precedence": [
+    "SOURCE_CEILING_LEVEL",
+    "PROJECT_SPECIFICATION"
+   ]
+  },
+  {
+   "id": "URBAN-PLASTER-TO-MASONRY-TERMINATION@v1",
+   "statement": "internal plaster covers the full masonry face to the structural termination, above a false ceiling included",
+   "applies_to": [
+    "MASONRY_WALL_FACE"
+   ],
+   "never_applies_to": [
+    "DRY_LINING"
+   ],
+   "parameters": {},
+   "precedence": [
+    "PROJECT_SPECIFICATION"
+   ]
+  },
+  {
+   "id": "URBAN-ROOF-WATERPROOF-UPTURN-200@v1",
+   "statement": "roof membrane upturn 0.20 m at every roof-region edge; wet-room upturn stays 0.15 m; laps are a separate procurement factor",
+   "applies_to": [
+    "ROOF_REGION"
+   ],
+   "never_applies_to": [
+    "WET_ROOM"
+   ],
+   "parameters": {
+    "roof_upturn_m": 0.2,
+    "wet_upturn_m": 0.15
+   },
+   "precedence": [
+    "PROJECT_SPECIFICATION"
+   ]
+  },
+  {
+   "id": "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1",
+   "statement": "wet / service rooms: visible wall tile to the finished ceiling",
+   "applies_to": [
+    "WET_ROOM",
+    "SERVICE_ROOM"
+   ],
+   "never_applies_to": [
+    "DRY_ROOM"
+   ],
+   "parameters": {
+    "to": "FINISHED_CEILING"
+   },
+   "precedence": [
+    "PROJECT_SPECIFICATION"
+   ]
+  },
+  {
+   "id": "URBAN_CURVED_ALUMINIUM_INNER_FACE_METHOD@v1",
+   "statement": "curved aluminium / glazing is measured commercially on the inner (smallest-radius) arc; inner, centre, outer and chord are always published",
+   "applies_to": [
+    "CURVED_GLAZING"
+   ],
+   "never_applies_to": [
+    "STRAIGHT_GLAZING"
+   ],
+   "parameters": {
+    "basis": "INNER"
+   },
+   "precedence": [
+    "PROJECT_OVERRIDE"
+   ]
+  }
+ ],
+ "rule": "a method is versioned, scope-limited and overrideable; it is never a project fact",
+ "digest": "dab008fc0178a35ee5b4d8fac16b24e39063ab3118ce4041590316b0ffbcf98f"
+}

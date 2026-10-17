@@ -1,0 +1,695 @@
+{
+ "checks": {
+  "buckets_equal_total": true,
+  "floors_equal_project": true,
+  "main_and_tie_parts_disjoint": true,
+  "no_duplicate_part": true,
+  "no_duplicate_segment": true,
+  "parts_equal_segments": true,
+  "segments_equal_floors": true
+ },
+ "floors": {
+  "1F": {
+   "lower_bound": 408.998,
+   "provisional": 197.608,
+   "total": 1680.505,
+   "unquantified_blocked_parts": 0.0,
+   "verified": 1073.9
+  },
+  "2F": {
+   "blocked": 8.622,
+   "lower_bound": 120.485,
+   "provisional": 52.527,
+   "total": 579.375,
+   "unquantified_blocked_parts": 0.0,
+   "verified": 397.741
+  },
+  "FOUNDATION": {
+   "blocked": 92.267,
+   "lower_bound": 1286.5,
+   "provisional": 824.244,
+   "total": 2203.011,
+   "unquantified_blocked_parts": 5.0
+  },
+  "GF": {
+   "blocked": 157.306,
+   "lower_bound": 690.887,
+   "provisional": 278.797,
+   "total": 3016.26,
+   "unquantified_blocked_parts": 2.0,
+   "verified": 1889.268
+  }
+ },
+ "occurrences_in": 95,
+ "project": {
+  "blocked": 258.195,
+  "lower_bound": 2506.871,
+  "provisional": 1353.176,
+  "total": 7479.151,
+  "unquantified_blocked_parts": 7.0,
+  "verified": 3360.909
+ },
+ "segments": {
+  "SEG-COL-C-X01-Y01-FOUNDATION": {
+   "lower_bound": 33.769,
+   "provisional": 22.854,
+   "total": 56.623,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C-X01-Y01-GF": {
+   "lower_bound": 11.961,
+   "provisional": 8.081,
+   "total": 76.863,
+   "unquantified_blocked_parts": 0,
+   "verified": 56.82
+  },
+  "SEG-COL-C-X01-Y05-FOUNDATION": {
+   "lower_bound": 33.769,
+   "provisional": 22.854,
+   "total": 56.623,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C-X01-Y05-GF": {
+   "lower_bound": 11.961,
+   "provisional": 8.081,
+   "total": 76.863,
+   "unquantified_blocked_parts": 0,
+   "verified": 56.82
+  },
+  "SEG-COL-C-X02-Y05-FOUNDATION": {
+   "lower_bound": 34.367,
+   "provisional": 22.854,
+   "total": 57.222,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C-X02-Y05-GF": {
+   "lower_bound": 13.002,
+   "provisional": 8.081,
+   "total": 77.903,
+   "unquantified_blocked_parts": 0,
+   "verified": 56.82
+  },
+  "SEG-COL-C-X06-Y01-FOUNDATION": {
+   "lower_bound": 34.367,
+   "provisional": 22.854,
+   "total": 57.222,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C-X06-Y01-GF": {
+   "lower_bound": 11.961,
+   "provisional": 8.081,
+   "total": 76.863,
+   "unquantified_blocked_parts": 0,
+   "verified": 56.82
+  },
+  "SEG-COL-C-X16-Y01-FOUNDATION": {
+   "lower_bound": 31.243,
+   "provisional": 8.081,
+   "total": 39.324,
+   "unquantified_blocked_parts": 1
+  },
+  "SEG-COL-C-X16-Y01-GF": {
+   "lower_bound": 11.961,
+   "provisional": 8.081,
+   "total": 76.863,
+   "unquantified_blocked_parts": 0,
+   "verified": 56.82
+  },
+  "SEG-COL-C1-X09-Y09-1F": {
+   "lower_bound": 10.921,
+   "provisional": 6.061,
+   "total": 56.756,
+   "unquantified_blocked_parts": 0,
+   "verified": 39.774
+  },
+  "SEG-COL-C1-X09-Y09-2F": {
+   "lower_bound": 11.961,
+   "provisional": 6.061,
+   "total": 57.796,
+   "unquantified_blocked_parts": 0,
+   "verified": 39.774
+  },
+  "SEG-COL-C1-X09-Y09-FOUNDATION": {
+   "lower_bound": 30.612,
+   "provisional": 26.011,
+   "total": 56.623,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C1-X09-Y09-GF": {
+   "lower_bound": 11.961,
+   "provisional": 8.081,
+   "total": 76.863,
+   "unquantified_blocked_parts": 0,
+   "verified": 56.82
+  },
+  "SEG-COL-C10-X15-Y01-FOUNDATION": {
+   "blocked": 4.084,
+   "lower_bound": 38.911,
+   "provisional": 10.101,
+   "total": 53.096,
+   "unquantified_blocked_parts": 1
+  },
+  "SEG-COL-C10-X15-Y01-GF": {
+   "blocked": 9.115,
+   "lower_bound": 17.084,
+   "provisional": 10.101,
+   "total": 107.325,
+   "unquantified_blocked_parts": 0,
+   "verified": 71.025
+  },
+  "SEG-COL-C11-X06-Y04-FOUNDATION": {
+   "blocked": 12.232,
+   "lower_bound": 56.102,
+   "provisional": 44.414,
+   "total": 112.748,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C11-X06-Y04-GF": {
+   "blocked": 25.174,
+   "lower_bound": 25.331,
+   "provisional": 14.142,
+   "total": 164.082,
+   "unquantified_blocked_parts": 0,
+   "verified": 99.435
+  },
+  "SEG-COL-C11-X?-Y01@17913-7462-FOUNDATION": {
+   "blocked": 11.009,
+   "lower_bound": 54.911,
+   "provisional": 44.414,
+   "total": 110.334,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C11-X?-Y01@17913-7462-GF": {
+   "blocked": 26.319,
+   "lower_bound": 26.482,
+   "provisional": 14.142,
+   "total": 166.378,
+   "unquantified_blocked_parts": 0,
+   "verified": 99.435
+  },
+  "SEG-COL-C2-X08-Y10-1F": {
+   "lower_bound": 11.961,
+   "provisional": 8.081,
+   "total": 73.075,
+   "unquantified_blocked_parts": 0,
+   "verified": 53.032
+  },
+  "SEG-COL-C2-X08-Y10-2F": {
+   "lower_bound": 9.361,
+   "provisional": 6.061,
+   "total": 55.196,
+   "unquantified_blocked_parts": 0,
+   "verified": 39.774
+  },
+  "SEG-COL-C2-X08-Y10-FOUNDATION": {
+   "lower_bound": 33.736,
+   "provisional": 23.486,
+   "total": 57.222,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C2-X08-Y10-GF": {
+   "lower_bound": 13.002,
+   "provisional": 8.081,
+   "total": 77.903,
+   "unquantified_blocked_parts": 0,
+   "verified": 56.82
+  },
+  "SEG-COL-C2-X09-Y07-1F": {
+   "lower_bound": 10.921,
+   "provisional": 8.081,
+   "total": 72.034,
+   "unquantified_blocked_parts": 0,
+   "verified": 53.032
+  },
+  "SEG-COL-C2-X09-Y07-2F": {
+   "lower_bound": 11.961,
+   "provisional": 6.061,
+   "total": 57.796,
+   "unquantified_blocked_parts": 0,
+   "verified": 39.774
+  },
+  "SEG-COL-C2-X09-Y07-FOUNDATION": {
+   "lower_bound": 30.612,
+   "provisional": 26.011,
+   "total": 56.623,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C2-X09-Y07-GF": {
+   "lower_bound": 11.961,
+   "provisional": 8.081,
+   "total": 76.863,
+   "unquantified_blocked_parts": 0,
+   "verified": 56.82
+  },
+  "SEG-COL-C2-X09-Y10-1F": {
+   "lower_bound": 11.961,
+   "provisional": 8.081,
+   "total": 73.075,
+   "unquantified_blocked_parts": 0,
+   "verified": 53.032
+  },
+  "SEG-COL-C2-X09-Y10-2F": {
+   "lower_bound": 10.921,
+   "provisional": 6.061,
+   "total": 56.756,
+   "unquantified_blocked_parts": 0,
+   "verified": 39.774
+  },
+  "SEG-COL-C2-X09-Y10-FOUNDATION": {
+   "lower_bound": 33.736,
+   "provisional": 23.486,
+   "total": 57.222,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C2-X09-Y10-GF": {
+   "lower_bound": 12.481,
+   "provisional": 8.081,
+   "total": 77.383,
+   "unquantified_blocked_parts": 0,
+   "verified": 56.82
+  },
+  "SEG-COL-C2-X10-Y09-1F": {
+   "lower_bound": 11.961,
+   "provisional": 8.081,
+   "total": 73.075,
+   "unquantified_blocked_parts": 0,
+   "verified": 53.032
+  },
+  "SEG-COL-C2-X10-Y09-2F": {
+   "lower_bound": 11.961,
+   "provisional": 6.061,
+   "total": 57.796,
+   "unquantified_blocked_parts": 0,
+   "verified": 39.774
+  },
+  "SEG-COL-C2-X10-Y09-FOUNDATION": {
+   "lower_bound": 30.612,
+   "provisional": 26.011,
+   "total": 56.623,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C2-X10-Y09-GF": {
+   "lower_bound": 13.002,
+   "provisional": 8.081,
+   "total": 77.903,
+   "unquantified_blocked_parts": 0,
+   "verified": 56.82
+  },
+  "SEG-COL-C3-X03-Y04-FOUNDATION": {
+   "lower_bound": 33.769,
+   "provisional": 22.854,
+   "total": 56.623,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C3-X03-Y04-GF": {
+   "lower_bound": 12.869,
+   "provisional": 8.081,
+   "total": 77.77,
+   "unquantified_blocked_parts": 0,
+   "verified": 56.82
+  },
+  "SEG-COL-C3-X04-Y01-FOUNDATION": {
+   "lower_bound": 56.024,
+   "total": 56.024,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C3-X04-Y01-GF": {
+   "blocked": 11.508,
+   "lower_bound": 66.262,
+   "total": 77.77,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C3-X05-Y02-1F": {
+   "lower_bound": 9.361,
+   "provisional": 6.061,
+   "total": 55.196,
+   "unquantified_blocked_parts": 0,
+   "verified": 39.774
+  },
+  "SEG-COL-C3-X05-Y02-FOUNDATION": {
+   "lower_bound": 34.367,
+   "provisional": 22.854,
+   "total": 57.222,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C3-X05-Y02-GF": {
+   "lower_bound": 13.428,
+   "provisional": 8.081,
+   "total": 78.33,
+   "unquantified_blocked_parts": 0,
+   "verified": 56.82
+  },
+  "SEG-COL-C3-X08-Y09-1F": {
+   "lower_bound": 9.361,
+   "provisional": 6.061,
+   "total": 55.196,
+   "unquantified_blocked_parts": 0,
+   "verified": 39.774
+  },
+  "SEG-COL-C3-X08-Y09-2F": {
+   "lower_bound": 9.361,
+   "provisional": 6.061,
+   "total": 55.196,
+   "unquantified_blocked_parts": 0,
+   "verified": 39.774
+  },
+  "SEG-COL-C3-X08-Y09-FOUNDATION": {
+   "lower_bound": 27.52,
+   "provisional": 27.905,
+   "total": 55.425,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C3-X08-Y09-GF": {
+   "lower_bound": 11.19,
+   "provisional": 8.081,
+   "total": 76.092,
+   "unquantified_blocked_parts": 0,
+   "verified": 56.82
+  },
+  "SEG-COL-C3-X12-Y01-FOUNDATION": {
+   "lower_bound": 30.644,
+   "provisional": 25.38,
+   "total": 56.024,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C3-X12-Y01-GF": {
+   "lower_bound": 12.869,
+   "provisional": 8.081,
+   "total": 77.77,
+   "unquantified_blocked_parts": 0,
+   "verified": 56.82
+  },
+  "SEG-COL-C3-X16-Y06-FOUNDATION": {
+   "lower_bound": 31.243,
+   "provisional": 25.38,
+   "total": 56.623,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C3-X16-Y06-GF": {
+   "lower_bound": 12.869,
+   "provisional": 8.081,
+   "total": 77.77,
+   "unquantified_blocked_parts": 0,
+   "verified": 56.82
+  },
+  "SEG-COL-C4-X13-Y10-1F": {
+   "lower_bound": 11.961,
+   "provisional": 8.081,
+   "total": 73.075,
+   "unquantified_blocked_parts": 0,
+   "verified": 53.032
+  },
+  "SEG-COL-C4-X13-Y10-FOUNDATION": {
+   "lower_bound": 33.105,
+   "provisional": 24.117,
+   "total": 57.222,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C4-X13-Y10-GF": {
+   "lower_bound": 12.869,
+   "provisional": 8.081,
+   "total": 77.77,
+   "unquantified_blocked_parts": 0,
+   "verified": 56.82
+  },
+  "SEG-COL-C4-X15-Y10-1F": {
+   "lower_bound": 10.921,
+   "provisional": 8.081,
+   "total": 72.034,
+   "unquantified_blocked_parts": 0,
+   "verified": 53.032
+  },
+  "SEG-COL-C4-X15-Y10-FOUNDATION": {
+   "lower_bound": 33.105,
+   "provisional": 24.117,
+   "total": 57.222,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C4-X15-Y10-GF": {
+   "lower_bound": 12.869,
+   "provisional": 8.081,
+   "total": 77.77,
+   "unquantified_blocked_parts": 0,
+   "verified": 56.82
+  },
+  "SEG-COL-C5-X05-Y04-1F": {
+   "lower_bound": 9.361,
+   "provisional": 8.081,
+   "total": 70.474,
+   "unquantified_blocked_parts": 0,
+   "verified": 53.032
+  },
+  "SEG-COL-C5-X05-Y04-FOUNDATION": {
+   "blocked": 3.729,
+   "lower_bound": 38.2,
+   "provisional": 31.725,
+   "total": 73.654,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C5-X05-Y04-GF": {
+   "blocked": 8.622,
+   "lower_bound": 16.045,
+   "provisional": 10.101,
+   "total": 105.794,
+   "unquantified_blocked_parts": 0,
+   "verified": 71.025
+  },
+  "SEG-COL-C5-X11-Y10-1F": {
+   "lower_bound": 11.961,
+   "provisional": 8.081,
+   "total": 73.075,
+   "unquantified_blocked_parts": 0,
+   "verified": 53.032
+  },
+  "SEG-COL-C5-X11-Y10-2F": {
+   "lower_bound": 10.921,
+   "provisional": 6.061,
+   "total": 56.756,
+   "unquantified_blocked_parts": 0,
+   "verified": 39.774
+  },
+  "SEG-COL-C5-X11-Y10-FOUNDATION": {
+   "blocked": 4.557,
+   "lower_bound": 41.253,
+   "provisional": 30.146,
+   "total": 75.957,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C5-X11-Y10-GF": {
+   "blocked": 8.997,
+   "lower_bound": 16.743,
+   "provisional": 10.101,
+   "total": 106.866,
+   "unquantified_blocked_parts": 0,
+   "verified": 71.025
+  },
+  "SEG-COL-C5-X14-Y02-1F": {
+   "lower_bound": 10.921,
+   "provisional": 8.081,
+   "total": 72.034,
+   "unquantified_blocked_parts": 0,
+   "verified": 53.032
+  },
+  "SEG-COL-C5-X14-Y02-FOUNDATION": {
+   "blocked": 3.729,
+   "lower_bound": 39.779,
+   "provisional": 30.146,
+   "total": 73.654,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C5-X14-Y02-GF": {
+   "blocked": 8.622,
+   "lower_bound": 16.045,
+   "provisional": 10.101,
+   "total": 105.794,
+   "unquantified_blocked_parts": 0,
+   "verified": 71.025
+  },
+  "SEG-COL-C6-X08-Y04-1F": {
+   "lower_bound": 21.285,
+   "provisional": 8.081,
+   "total": 82.398,
+   "unquantified_blocked_parts": 0,
+   "verified": 53.032
+  },
+  "SEG-COL-C6-X08-Y04-FOUNDATION": {
+   "blocked": 4.084,
+   "lower_bound": 38.911,
+   "provisional": 31.725,
+   "total": 74.719,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C6-X08-Y04-GF": {
+   "blocked": 9.944,
+   "lower_bound": 18.637,
+   "provisional": 10.101,
+   "total": 109.707,
+   "unquantified_blocked_parts": 0,
+   "verified": 71.025
+  },
+  "SEG-COL-C7-X07-Y?@15888-16162-1F": {
+   "lower_bound": 25.569,
+   "provisional": 10.101,
+   "total": 101.961,
+   "unquantified_blocked_parts": 0,
+   "verified": 66.29
+  },
+  "SEG-COL-C7-X07-Y?@15888-16162-FOUNDATION": {
+   "lower_bound": 50.537,
+   "provisional": 41.857,
+   "total": 92.395,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C7-X07-Y?@15888-16162-GF": {
+   "lower_bound": 34.177,
+   "provisional": 12.122,
+   "total": 131.529,
+   "unquantified_blocked_parts": 0,
+   "verified": 85.23
+  },
+  "SEG-COL-C8-X12-Y02-1F": {
+   "lower_bound": 29.831,
+   "provisional": 76.391,
+   "total": 106.222,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C8-X12-Y02-FOUNDATION": {
+   "lower_bound": 94.222,
+   "total": 94.222,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C8-X12-Y02-GF": {
+   "lower_bound": 124.534,
+   "provisional": 12.122,
+   "total": 136.656,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C8-X15-Y06-1F": {
+   "lower_bound": 43.307,
+   "total": 122.855,
+   "unquantified_blocked_parts": 0,
+   "verified": 79.548
+  },
+  "SEG-COL-C8-X15-Y06-FOUNDATION": {
+   "lower_bound": 57.573,
+   "provisional": 38.069,
+   "total": 95.642,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C8-X15-Y06-GF": {
+   "lower_bound": 53.347,
+   "provisional": 12.122,
+   "total": 150.699,
+   "unquantified_blocked_parts": 1,
+   "verified": 85.23
+  },
+  "SEG-COL-C9-X10-Y07-1F": {
+   "lower_bound": 36.383,
+   "provisional": 12.122,
+   "total": 128.053,
+   "unquantified_blocked_parts": 0,
+   "verified": 79.548
+  },
+  "SEG-COL-C9-X10-Y07-2F": {
+   "blocked": 8.622,
+   "lower_bound": 16.953,
+   "provisional": 10.101,
+   "total": 101.966,
+   "unquantified_blocked_parts": 0,
+   "verified": 66.29
+  },
+  "SEG-COL-C9-X10-Y07-FOUNDATION": {
+   "blocked": 27.075,
+   "lower_bound": 43.089,
+   "provisional": 45.519,
+   "total": 115.683,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C9-X10-Y07-GF": {
+   "blocked": 24.504,
+   "lower_bound": 24.667,
+   "provisional": 14.142,
+   "total": 162.748,
+   "unquantified_blocked_parts": 0,
+   "verified": 99.435
+  },
+  "SEG-COL-C9-X13-Y08-1F": {
+   "lower_bound": 51.97,
+   "total": 131.518,
+   "unquantified_blocked_parts": 0,
+   "verified": 79.548
+  },
+  "SEG-COL-C9-X13-Y08-FOUNDATION": {
+   "blocked": 10.299,
+   "lower_bound": 53.096,
+   "provisional": 45.519,
+   "total": 108.914,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-C9-X13-Y08-GF": {
+   "blocked": 24.504,
+   "lower_bound": 39.314,
+   "provisional": 12.122,
+   "total": 175.374,
+   "unquantified_blocked_parts": 1,
+   "verified": 99.435
+  },
+  "SEG-COL-CN-X15-Y?@31208-15726-FOUNDATION": {
+   "blocked": 5.294,
+   "lower_bound": 9.667,
+   "provisional": 8.942,
+   "total": 23.903,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-CN-X16-Y03-FOUNDATION": {
+   "lower_bound": 12.671,
+   "provisional": 2.707,
+   "total": 15.378,
+   "unquantified_blocked_parts": 1
+  },
+  "SEG-COL-CN-X?-Y10@31108-20498-FOUNDATION": {
+   "lower_bound": 15.003,
+   "provisional": 8.459,
+   "total": 23.462,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-CN-X?-Y?@24058-12787-FOUNDATION": {
+   "lower_bound": 12.671,
+   "provisional": 2.707,
+   "total": 15.378,
+   "unquantified_blocked_parts": 1
+  },
+  "SEG-COL-CN-X?-Y?@28583-12787-FOUNDATION": {
+   "lower_bound": 12.671,
+   "provisional": 2.707,
+   "total": 15.378,
+   "unquantified_blocked_parts": 1
+  },
+  "SEG-COL-CN-X?-Y?@29108-18112-FOUNDATION": {
+   "blocked": 6.176,
+   "lower_bound": 10.634,
+   "provisional": 7.976,
+   "total": 24.786,
+   "unquantified_blocked_parts": 0
+  },
+  "SEG-COL-P.C-X08-Y02-1F": {
+   "lower_bound": 43.553,
+   "total": 109.844,
+   "unquantified_blocked_parts": 0,
+   "verified": 66.29
+  },
+  "SEG-COL-P.C-X15-Y02-1F": {
+   "lower_bound": 25.523,
+   "total": 78.555,
+   "unquantified_blocked_parts": 0,
+   "verified": 53.032
+  },
+  "SEG-COL-P.C-X?-Y?@24888-15994-2F": {
+   "lower_bound": 27.083,
+   "total": 80.116,
+   "unquantified_blocked_parts": 0,
+   "verified": 53.032
+  }
+ },
+ "terminal_records_out": 95
+}

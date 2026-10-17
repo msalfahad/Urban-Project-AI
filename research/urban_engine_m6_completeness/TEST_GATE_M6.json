@@ -1,0 +1,47 @@
+{
+ "blocked_by_missing_path": {
+  "(a private path outside the repository)": 1,
+  "(generated prerequisite: run workbook_boq first)": 1,
+  "data/experiments/P7757_WALL_TREATMENT_ESTIMATE_01": 373,
+  "data/runs/7757": 1
+ },
+ "code_failure_reasons": {},
+ "code_failure_tests": [],
+ "commit": "6c20879 (V2 engine freeze) + the package tree of 7fc77eb",
+ "complete_project_regression_gate": "INCOMPLETE",
+ "counts": {
+  "CODE_FAILURE": 0,
+  "EXECUTED_PASSED": 7434,
+  "EXPECTED_FAILURE": 100,
+  "MANDATORY_BLOCKED_BY_MISSING_DATA": 376,
+  "SKIPPED_OTHER": 2,
+  "SKIPPED_PREREQUISITE_UNAVAILABLE": 136
+ },
+ "gate_reasons": [
+  "376 mandatory regression tests blocked by missing data",
+  "136 tests skipped for an unavailable prerequisite",
+  "108 locked prerequisites missing {'BENCHMARK': 14, 'DERIVED': 87, 'SOURCE': 7}"
+ ],
+ "junit": "junit_m6.xml (not committed)",
+ "locked_prerequisites": {
+  "entries": 113,
+  "lock": "research/environment_recovery/INPUTS.lock.proposed.json",
+  "missing": 108,
+  "missing_by_store": {
+   "BENCHMARK": 14,
+   "DERIVED": 87,
+   "SOURCE": 7
+  }
+ },
+ "note": "reduced from the classifier output (test ids and skip texts left out); reproduce with research/environment_recovery/classify_test_run.py on the junit of the run; a private local path outside the repository is named generically",
+ "raw_pytest": "344 failed, 7434 passed, 138 skipped, 100 xfailed, 32 errors in 467.74 s",
+ "rule": "only EXECUTED_PASSED proves anything; a prerequisite skip is not a pass; the gate is COMPLETE only with no blocked, skipped-for-prerequisite or failed test and every locked prerequisite present",
+ "schema": "URBAN_TEST_GATE_V1",
+ "total": 8048,
+ "vs_M5": {
+  "CODE_FAILURE": "0 -> 0",
+  "EXECUTED_PASSED": "7394 -> 7434 (+40: the M6 tests)",
+  "MANDATORY_BLOCKED_BY_MISSING_DATA": "376 -> 376",
+  "SKIPPED_PREREQUISITE_UNAVAILABLE": "136 -> 136"
+ }
+}

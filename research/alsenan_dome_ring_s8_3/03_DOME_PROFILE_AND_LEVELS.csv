@@ -1,0 +1,18 @@
+ITEM_ID,ITEM,VALUE,UNIT,STATE,SOURCE,NOTE
+PR-01,terrace dome outer chord at the springing plane,4.42,m,STATED_DIMENSION,p.7 dim 1A38 '442' between the ring outer faces at the springing level,plan ring inner circle 4.4222 m; section B-B outer widths 4.44 / 4.41 m
+PR-02,"terrace dome rise, springing to the outer apex",1.9,m,STATED_DIMENSION,p.7 dim 1A6D '190',section B-B 1.92 / 1.89 m; SE elevation '193' from +10.92
+PR-03,terrace dome shell thickness,0.1,m,STATED_DIMENSION,p.7 dim 19B1 '10' between the two shell surfaces,"drawn as concentric arcs: constant from the springing to the crown; no thickening, rib or opening drawn"
+PR-04,profile of the drawn shell,SPHERICAL_ABOUT_AXIS,,ESTABLISHED,"p.7 arcs ('182B', '182E') concentric, centred on the axis between the two ring cuts",structural plan: circular outline with 20 radial meridian lines (a surface of revolution)
+PR-05,architectural terrace profile (SE elevation),CIRCULAR,,CORROBORATES_FORM,P7757 SE elevation polyline,"circle fit R 2192.6 mm, residual 4.0 mm; apex +12.849"
+PR-06,architectural terrace profile (NW elevation),CIRCULAR,,CORROBORATES_FORM,P7757 NW elevation polyline,"circle fit R 2196.9 mm, residual 3.0 mm; apex +12.409 (0.44 m below the others)"
+PR-07,outer sphere radius from the stated chord and rise,2.235289474,m,DERIVED_FROM_STATED,R = (c^2/4 + h^2) / 2h,the drawn extrados proportion: 2.2373 m
+PR-08,centre of the sphere below the springing plane,0.335289474,m,DERIVED_FROM_STATED,R - h,the cap is less than a hemisphere
+PR-09,horizontal shell width at the springing plane,0.101198894,m,DERIVED_FROM_STATED,outer minus inner springing radius,the shell sits on the outer part of the ring top (as drawn)
+PR-10,terrace roof level (ring and drum stand on it),9.7,m,STATED_LEVEL,ST7757 p.6 '+9.70' (S1 level register); P7757 plan '+9.70',
+PR-11,terrace dome springing level,11,m,STATED_ON_ONE_SECTION,sheet 11 SECTION B-B '130' above the +9.70 roof,SE elevation lower line +10.92; section B-B measured +10.94 / +10.97
+PR-12,terrace dome apex level,12.9,m,DERIVED_FROM_STATED,springing + rise,section B-B +12.86 / +12.87; SE +12.849; NW +12.409 (conflict CF-S8.3-05)
+PR-13,ring beam depth,,m,NOT_ESTABLISHED,p.7 dim 182F 'AS PER ARCH' (bottom to top of the ring),architecture shows a drum to the springing but never the ring bottom (CF-S8.3-03)
+PR-14,tower dome chord at its springing,4.41,m,ARCHITECTURAL_ONLY,P7757 SE elevation '441',springing +14.40; drawn 4410.0 mm
+PR-15,tower dome rise,2.15,m,ARCHITECTURAL_ONLY,P7757 SE / NW elevations '215',drawn 2149.4 mm; circle fit R 2204.4 mm (residual 4.5)
+PR-16,tower dome shell thickness,,m,NOT_ESTABLISHED,no structural or architectural thickness,
+PR-17,openings in any dome shell,NONE_DRAWN,,ESTABLISHED,"p.7 detail, p.5 plan, elevations, sections","no oculus, lantern or penetration drawn in any source"

@@ -1,0 +1,982 @@
+{
+ "note": "ST7757 structural drawing transformed (tools/m7_metamorphic), route G with V5, M4 profile, no architectural drawing; quantities compared by trade/family/storey/category (base, low, high, exposure, item count). Runs in development order; each later run includes the fixes found by the earlier ones. Post-discovery: the drawing's own invariance failures motivated the fixes.",
+ "runs": {
+  "1_initial_V5": {
+   "items": 1111,
+   "ops": {
+    "dup_text": {
+     "differing_groups": [],
+     "largest": [],
+     "n_differences": 0,
+     "notes": {}
+    },
+    "explode": {
+     "differing_groups": [
+      "CONCRETE|BEAMS|1F|PROVISIONAL",
+      "CONCRETE|BEAMS|2F|PROVISIONAL",
+      "CONCRETE|BEAMS|2F|UNRESOLVED",
+      "CONCRETE|BEAMS|GF|PROVISIONAL",
+      "CONCRETE|BEAMS|GF|UNRESOLVED",
+      "CONCRETE|FOOTINGS|FOUNDATION|PROVISIONAL",
+      "CONCRETE|GROUND_BEAMS|FOUNDATION|PROVISIONAL",
+      "CONCRETE|GROUND_BEAMS|GROUND|PROVISIONAL",
+      "CONCRETE|GROUND_SLAB|GROUND|PROVISIONAL",
+      "CONCRETE|GROUND_SLAB|GROUND|UNRESOLVED",
+      "CONCRETE|PLAIN_CONCRETE|FOUNDATION|PROVISIONAL",
+      "CONCRETE|SLABS|2F|PROVISIONAL",
+      "CONCRETE|SLABS|GF|PROVISIONAL",
+      "REINFORCEMENT|BEAMS|2F|PROVISIONAL",
+      "REINFORCEMENT|BEAMS|GF|PROVISIONAL",
+      "REINFORCEMENT|GROUND_BEAMS|FOUNDATION|PROVISIONAL",
+      "REINFORCEMENT|GROUND_SLAB|GROUND|PROVISIONAL",
+      "REINFORCEMENT|SLABS|2F|PROVISIONAL",
+      "REINFORCEMENT|SLABS|GF|PROVISIONAL"
+     ],
+     "largest": [
+      {
+       "delta": 31.822690374,
+       "field": "high",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": 31.660984817,
+       "field": "base",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": 31.175868145,
+       "field": "low",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": 1.0,
+       "field": "n",
+       "key": "CONCRETE|GROUND_SLAB|GROUND|PROVISIONAL"
+      },
+      {
+       "delta": 1.0,
+       "field": "n",
+       "key": "REINFORCEMENT|GROUND_SLAB|GROUND|PROVISIONAL"
+      },
+      {
+       "delta": 0.362911613,
+       "field": "high",
+       "key": "CONCRETE|BEAMS|GF|PROVISIONAL"
+      }
+     ],
+     "n_differences": 56,
+     "notes": {}
+    },
+    "mirror_x": {
+     "differing_groups": [
+      "CONCRETE|SLABS|GF|PROVISIONAL",
+      "REINFORCEMENT|BEAMS|1F|PROVISIONAL",
+      "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+     ],
+     "largest": [
+      {
+       "delta": -6.728395062,
+       "field": "base",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": -6.728395062,
+       "field": "high",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": -6.728395062,
+       "field": "low",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": -0.380246914,
+       "field": "base",
+       "key": "REINFORCEMENT|BEAMS|1F|PROVISIONAL"
+      },
+      {
+       "delta": -0.380246914,
+       "field": "low",
+       "key": "REINFORCEMENT|BEAMS|1F|PROVISIONAL"
+      },
+      {
+       "delta": -0.380246913,
+       "field": "high",
+       "key": "REINFORCEMENT|BEAMS|1F|PROVISIONAL"
+      }
+     ],
+     "n_differences": 9,
+     "notes": {
+      "RTEXT:NotImplementedError": 10
+     }
+    },
+    "noise_layer": {
+     "differing_groups": [],
+     "largest": [],
+     "n_differences": 0,
+     "notes": {}
+    },
+    "reorder": {
+     "differing_groups": [],
+     "largest": [],
+     "n_differences": 0,
+     "notes": {}
+    },
+    "rot90": {
+     "differing_groups": [
+      "REINFORCEMENT|BEAMS|1F|PROVISIONAL",
+      "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+     ],
+     "largest": [
+      {
+       "delta": -10.687057683,
+       "field": "base",
+       "key": "REINFORCEMENT|BEAMS|1F|PROVISIONAL"
+      },
+      {
+       "delta": -10.081481482,
+       "field": "low",
+       "key": "REINFORCEMENT|BEAMS|1F|PROVISIONAL"
+      },
+      {
+       "delta": -9.661728395,
+       "field": "high",
+       "key": "REINFORCEMENT|BEAMS|1F|PROVISIONAL"
+      },
+      {
+       "delta": -4.037037037,
+       "field": "base",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": -4.037037037,
+       "field": "high",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": -4.037037037,
+       "field": "low",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      }
+     ],
+     "n_differences": 6,
+     "notes": {
+      "RTEXT:NotImplementedError": 10
+     }
+    },
+    "translate": {
+     "differing_groups": [
+      "CONCRETE|BEAMS|1F|UNRESOLVED"
+     ],
+     "largest": [
+      {
+       "delta": -1.0,
+       "field": "n",
+       "key": "CONCRETE|BEAMS|1F|UNRESOLVED"
+      },
+      {
+       "delta": 0.192,
+       "field": "exposure_high",
+       "key": "CONCRETE|BEAMS|1F|UNRESOLVED"
+      },
+      {
+       "delta": 0.064,
+       "field": "exposure_low",
+       "key": "CONCRETE|BEAMS|1F|UNRESOLVED"
+      }
+     ],
+     "n_differences": 3,
+     "notes": {
+      "RTEXT:NotImplementedError": 10
+     }
+    },
+    "units_m": {
+     "differing_groups": [
+      "CONCRETE|BEAMS|1F|PROVISIONAL",
+      "CONCRETE|BEAMS|2F|PROVISIONAL",
+      "CONCRETE|BEAMS|2F|UNRESOLVED",
+      "CONCRETE|BEAMS|GF|PROVISIONAL",
+      "CONCRETE|BEAMS|GF|UNRESOLVED",
+      "CONCRETE|GROUND_BEAMS|FOUNDATION|PROVISIONAL",
+      "CONCRETE|GROUND_BEAMS|GROUND|PROVISIONAL",
+      "CONCRETE|GROUND_SLAB|GROUND|PROVISIONAL",
+      "CONCRETE|GROUND_SLAB|GROUND|UNRESOLVED",
+      "CONCRETE|SLABS|2F|PROVISIONAL",
+      "CONCRETE|SLABS|GF|PROVISIONAL",
+      "REINFORCEMENT|BEAMS|2F|PROVISIONAL",
+      "REINFORCEMENT|BEAMS|GF|PROVISIONAL",
+      "REINFORCEMENT|GROUND_BEAMS|FOUNDATION|PROVISIONAL",
+      "REINFORCEMENT|GROUND_SLAB|GROUND|PROVISIONAL",
+      "REINFORCEMENT|SLABS|2F|PROVISIONAL",
+      "REINFORCEMENT|SLABS|GF|PROVISIONAL"
+     ],
+     "largest": [
+      {
+       "delta": 31.822690374,
+       "field": "high",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": 31.660984817,
+       "field": "base",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": 31.175868145,
+       "field": "low",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": 1.0,
+       "field": "n",
+       "key": "CONCRETE|GROUND_SLAB|GROUND|PROVISIONAL"
+      },
+      {
+       "delta": 1.0,
+       "field": "n",
+       "key": "REINFORCEMENT|GROUND_SLAB|GROUND|PROVISIONAL"
+      },
+      {
+       "delta": 0.362911613,
+       "field": "high",
+       "key": "CONCRETE|BEAMS|GF|PROVISIONAL"
+      }
+     ],
+     "n_differences": 50,
+     "notes": {
+      "RTEXT:NotImplementedError": 10
+     }
+    }
+   }
+  },
+  "2_after_column_and_unit_rules": {
+   "items": 1111,
+   "ops": {
+    "dup_text": {
+     "differing_groups": [],
+     "largest": [],
+     "n_differences": 0,
+     "notes": {}
+    },
+    "explode": {
+     "differing_groups": [
+      "CONCRETE|BEAMS|1F|PROVISIONAL",
+      "CONCRETE|BEAMS|2F|PROVISIONAL",
+      "CONCRETE|BEAMS|2F|UNRESOLVED",
+      "CONCRETE|BEAMS|GF|PROVISIONAL",
+      "CONCRETE|BEAMS|GF|UNRESOLVED",
+      "CONCRETE|FOOTINGS|FOUNDATION|PROVISIONAL",
+      "CONCRETE|GROUND_BEAMS|FOUNDATION|PROVISIONAL",
+      "CONCRETE|GROUND_BEAMS|GROUND|PROVISIONAL",
+      "CONCRETE|GROUND_SLAB|GROUND|PROVISIONAL",
+      "CONCRETE|GROUND_SLAB|GROUND|UNRESOLVED",
+      "CONCRETE|PLAIN_CONCRETE|FOUNDATION|PROVISIONAL",
+      "CONCRETE|SLABS|2F|PROVISIONAL",
+      "CONCRETE|SLABS|GF|PROVISIONAL",
+      "REINFORCEMENT|BEAMS|2F|PROVISIONAL",
+      "REINFORCEMENT|BEAMS|GF|PROVISIONAL",
+      "REINFORCEMENT|GROUND_BEAMS|FOUNDATION|PROVISIONAL",
+      "REINFORCEMENT|GROUND_SLAB|GROUND|PROVISIONAL",
+      "REINFORCEMENT|SLABS|2F|PROVISIONAL",
+      "REINFORCEMENT|SLABS|GF|PROVISIONAL"
+     ],
+     "largest": [
+      {
+       "delta": -3.37803833,
+       "field": "high",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": -3.360972944,
+       "field": "base",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": -3.309776789,
+       "field": "low",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": 1.0,
+       "field": "n",
+       "key": "CONCRETE|GROUND_SLAB|GROUND|PROVISIONAL"
+      },
+      {
+       "delta": 1.0,
+       "field": "n",
+       "key": "REINFORCEMENT|GROUND_SLAB|GROUND|PROVISIONAL"
+      },
+      {
+       "delta": -0.300131617,
+       "field": "low",
+       "key": "CONCRETE|GROUND_BEAMS|GROUND|PROVISIONAL"
+      }
+     ],
+     "n_differences": 56,
+     "notes": {}
+    },
+    "mirror_x": {
+     "differing_groups": [
+      "CONCRETE|SLABS|GF|PROVISIONAL",
+      "REINFORCEMENT|BEAMS|1F|PROVISIONAL",
+      "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+     ],
+     "largest": [
+      {
+       "delta": -6.728395062,
+       "field": "base",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": -6.728395062,
+       "field": "high",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": -6.728395062,
+       "field": "low",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": -0.380246914,
+       "field": "base",
+       "key": "REINFORCEMENT|BEAMS|1F|PROVISIONAL"
+      },
+      {
+       "delta": -0.380246914,
+       "field": "low",
+       "key": "REINFORCEMENT|BEAMS|1F|PROVISIONAL"
+      },
+      {
+       "delta": -0.380246913,
+       "field": "high",
+       "key": "REINFORCEMENT|BEAMS|1F|PROVISIONAL"
+      }
+     ],
+     "n_differences": 9,
+     "notes": {
+      "RTEXT:NotImplementedError": 10
+     }
+    },
+    "noise_layer": {
+     "differing_groups": [],
+     "largest": [],
+     "n_differences": 0,
+     "notes": {}
+    },
+    "reorder": {
+     "differing_groups": [],
+     "largest": [],
+     "n_differences": 0,
+     "notes": {}
+    },
+    "rot180": {
+     "differing_groups": [
+      "REINFORCEMENT|BEAMS|1F|PROVISIONAL",
+      "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+     ],
+     "largest": [
+      {
+       "delta": -11.067304597,
+       "field": "base",
+       "key": "REINFORCEMENT|BEAMS|1F|PROVISIONAL"
+      },
+      {
+       "delta": -10.765432077,
+       "field": "base",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": -10.765432077,
+       "field": "high",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": -10.765432077,
+       "field": "low",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": -10.461728395,
+       "field": "low",
+       "key": "REINFORCEMENT|BEAMS|1F|PROVISIONAL"
+      },
+      {
+       "delta": -10.041975308,
+       "field": "high",
+       "key": "REINFORCEMENT|BEAMS|1F|PROVISIONAL"
+      }
+     ],
+     "n_differences": 6,
+     "notes": {
+      "RTEXT:NotImplementedError": 10
+     }
+    },
+    "rot90": {
+     "differing_groups": [
+      "REINFORCEMENT|BEAMS|1F|PROVISIONAL",
+      "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+     ],
+     "largest": [
+      {
+       "delta": -10.687057683,
+       "field": "base",
+       "key": "REINFORCEMENT|BEAMS|1F|PROVISIONAL"
+      },
+      {
+       "delta": -10.081481482,
+       "field": "low",
+       "key": "REINFORCEMENT|BEAMS|1F|PROVISIONAL"
+      },
+      {
+       "delta": -9.661728395,
+       "field": "high",
+       "key": "REINFORCEMENT|BEAMS|1F|PROVISIONAL"
+      },
+      {
+       "delta": -4.037037037,
+       "field": "base",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": -4.037037037,
+       "field": "high",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": -4.037037037,
+       "field": "low",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      }
+     ],
+     "n_differences": 6,
+     "notes": {
+      "RTEXT:NotImplementedError": 10
+     }
+    },
+    "translate": {
+     "differing_groups": [
+      "CONCRETE|BEAMS|1F|UNRESOLVED"
+     ],
+     "largest": [
+      {
+       "delta": -1.0,
+       "field": "n",
+       "key": "CONCRETE|BEAMS|1F|UNRESOLVED"
+      },
+      {
+       "delta": 0.192,
+       "field": "exposure_high",
+       "key": "CONCRETE|BEAMS|1F|UNRESOLVED"
+      },
+      {
+       "delta": 0.064,
+       "field": "exposure_low",
+       "key": "CONCRETE|BEAMS|1F|UNRESOLVED"
+      }
+     ],
+     "n_differences": 3,
+     "notes": {
+      "RTEXT:NotImplementedError": 10
+     }
+    },
+    "units_m": {
+     "differing_groups": [
+      "CONCRETE|GROUND_BEAMS|GROUND|PROVISIONAL"
+     ],
+     "largest": [
+      {
+       "delta": -0.300000075,
+       "field": "low",
+       "key": "CONCRETE|GROUND_BEAMS|GROUND|PROVISIONAL"
+      }
+     ],
+     "n_differences": 1,
+     "notes": {
+      "RTEXT:NotImplementedError": 10
+     }
+    }
+   }
+  },
+  "3_after_local_origin_touch_cb_ends": {
+   "items": 1108,
+   "ops": {
+    "dup_text": {
+     "differing_groups": [],
+     "largest": [],
+     "n_differences": 0,
+     "notes": {}
+    },
+    "explode": {
+     "differing_groups": [
+      "CONCRETE|BEAMS|1F|PROVISIONAL",
+      "CONCRETE|BEAMS|1F|UNRESOLVED",
+      "CONCRETE|BEAMS|2F|PROVISIONAL",
+      "CONCRETE|BEAMS|2F|UNRESOLVED",
+      "CONCRETE|BEAMS|GF|PROVISIONAL",
+      "CONCRETE|BEAMS|GF|UNRESOLVED",
+      "CONCRETE|FOOTINGS|FOUNDATION|PROVISIONAL",
+      "CONCRETE|GROUND_BEAMS|FOUNDATION|PROVISIONAL",
+      "CONCRETE|GROUND_BEAMS|GROUND|PROVISIONAL",
+      "CONCRETE|GROUND_SLAB|GROUND|PROVISIONAL",
+      "CONCRETE|GROUND_SLAB|GROUND|UNRESOLVED",
+      "CONCRETE|PLAIN_CONCRETE|FOUNDATION|PROVISIONAL",
+      "CONCRETE|SLABS|1F|PROVISIONAL",
+      "CONCRETE|SLABS|2F|PROVISIONAL",
+      "CONCRETE|SLABS|GF|PROVISIONAL",
+      "REINFORCEMENT|BEAMS|1F|PROVISIONAL",
+      "REINFORCEMENT|BEAMS|2F|PROVISIONAL",
+      "REINFORCEMENT|BEAMS|GF|PROVISIONAL",
+      "REINFORCEMENT|GROUND_BEAMS|FOUNDATION|PROVISIONAL",
+      "REINFORCEMENT|GROUND_SLAB|GROUND|PROVISIONAL",
+      "REINFORCEMENT|SLABS|1F|PROVISIONAL",
+      "REINFORCEMENT|SLABS|2F|PROVISIONAL",
+      "REINFORCEMENT|SLABS|GF|PROVISIONAL"
+     ],
+     "largest": [
+      {
+       "delta": 1.0,
+       "field": "n",
+       "key": "CONCRETE|BEAMS|1F|UNRESOLVED"
+      },
+      {
+       "delta": -0.264027476,
+       "field": "exposure_high",
+       "key": "CONCRETE|BEAMS|1F|UNRESOLVED"
+      },
+      {
+       "delta": -0.088042683,
+       "field": "exposure_low",
+       "key": "CONCRETE|BEAMS|1F|UNRESOLVED"
+      },
+      {
+       "delta": 0.042,
+       "field": "base",
+       "key": "CONCRETE|FOOTINGS|FOUNDATION|PROVISIONAL"
+      },
+      {
+       "delta": 0.042,
+       "field": "high",
+       "key": "CONCRETE|FOOTINGS|FOUNDATION|PROVISIONAL"
+      },
+      {
+       "delta": 0.042,
+       "field": "low",
+       "key": "CONCRETE|FOOTINGS|FOUNDATION|PROVISIONAL"
+      }
+     ],
+     "n_differences": 66,
+     "notes": {}
+    },
+    "mirror_x": {
+     "differing_groups": [
+      "CONCRETE|GROUND_BEAMS|GROUND|PROVISIONAL",
+      "CONCRETE|GROUND_SLAB|GROUND|PROVISIONAL",
+      "CONCRETE|GROUND_SLAB|GROUND|UNRESOLVED",
+      "CONCRETE|SLABS|GF|PROVISIONAL",
+      "REINFORCEMENT|BEAMS|GF|PROVISIONAL",
+      "REINFORCEMENT|GROUND_SLAB|GROUND|PROVISIONAL"
+     ],
+     "largest": [
+      {
+       "delta": -67.31513542,
+       "field": "base",
+       "key": "REINFORCEMENT|GROUND_SLAB|GROUND|PROVISIONAL"
+      },
+      {
+       "delta": -67.31513542,
+       "field": "high",
+       "key": "REINFORCEMENT|GROUND_SLAB|GROUND|PROVISIONAL"
+      },
+      {
+       "delta": -67.31513542,
+       "field": "low",
+       "key": "REINFORCEMENT|GROUND_SLAB|GROUND|PROVISIONAL"
+      },
+      {
+       "delta": 1.090516229,
+       "field": "exposure_high",
+       "key": "CONCRETE|GROUND_SLAB|GROUND|UNRESOLVED"
+      },
+      {
+       "delta": 1.090516229,
+       "field": "exposure_low",
+       "key": "CONCRETE|GROUND_SLAB|GROUND|UNRESOLVED"
+      },
+      {
+       "delta": -1.090505194,
+       "field": "base",
+       "key": "CONCRETE|GROUND_SLAB|GROUND|PROVISIONAL"
+      }
+     ],
+     "n_differences": 18,
+     "notes": {
+      "RTEXT:NotImplementedError": 10
+     }
+    },
+    "noise_layer": {
+     "differing_groups": [],
+     "largest": [],
+     "n_differences": 0,
+     "notes": {}
+    },
+    "reorder": {
+     "differing_groups": [],
+     "largest": [],
+     "n_differences": 0,
+     "notes": {}
+    },
+    "rot180": {
+     "differing_groups": [
+      "CONCRETE|GROUND_BEAMS|GROUND|PROVISIONAL",
+      "CONCRETE|GROUND_SLAB|GROUND|PROVISIONAL",
+      "CONCRETE|GROUND_SLAB|GROUND|UNRESOLVED",
+      "REINFORCEMENT|BEAMS|GF|PROVISIONAL",
+      "REINFORCEMENT|GROUND_SLAB|GROUND|PROVISIONAL"
+     ],
+     "largest": [
+      {
+       "delta": -67.31513541,
+       "field": "base",
+       "key": "REINFORCEMENT|GROUND_SLAB|GROUND|PROVISIONAL"
+      },
+      {
+       "delta": -67.31513541,
+       "field": "high",
+       "key": "REINFORCEMENT|GROUND_SLAB|GROUND|PROVISIONAL"
+      },
+      {
+       "delta": -67.31513541,
+       "field": "low",
+       "key": "REINFORCEMENT|GROUND_SLAB|GROUND|PROVISIONAL"
+      },
+      {
+       "delta": 1.090516229,
+       "field": "exposure_high",
+       "key": "CONCRETE|GROUND_SLAB|GROUND|UNRESOLVED"
+      },
+      {
+       "delta": 1.090516229,
+       "field": "exposure_low",
+       "key": "CONCRETE|GROUND_SLAB|GROUND|UNRESOLVED"
+      },
+      {
+       "delta": -1.090505194,
+       "field": "base",
+       "key": "CONCRETE|GROUND_SLAB|GROUND|PROVISIONAL"
+      }
+     ],
+     "n_differences": 15,
+     "notes": {
+      "RTEXT:NotImplementedError": 10
+     }
+    },
+    "rot270": {
+     "differing_groups": [
+      "CONCRETE|GROUND_BEAMS|GROUND|PROVISIONAL",
+      "CONCRETE|GROUND_SLAB|GROUND|PROVISIONAL",
+      "CONCRETE|GROUND_SLAB|GROUND|UNRESOLVED",
+      "REINFORCEMENT|BEAMS|GF|PROVISIONAL",
+      "REINFORCEMENT|GROUND_SLAB|GROUND|PROVISIONAL"
+     ],
+     "largest": [
+      {
+       "delta": -67.315135422,
+       "field": "base",
+       "key": "REINFORCEMENT|GROUND_SLAB|GROUND|PROVISIONAL"
+      },
+      {
+       "delta": -67.315135422,
+       "field": "high",
+       "key": "REINFORCEMENT|GROUND_SLAB|GROUND|PROVISIONAL"
+      },
+      {
+       "delta": -67.315135422,
+       "field": "low",
+       "key": "REINFORCEMENT|GROUND_SLAB|GROUND|PROVISIONAL"
+      },
+      {
+       "delta": 1.090516229,
+       "field": "exposure_high",
+       "key": "CONCRETE|GROUND_SLAB|GROUND|UNRESOLVED"
+      },
+      {
+       "delta": 1.090516229,
+       "field": "exposure_low",
+       "key": "CONCRETE|GROUND_SLAB|GROUND|UNRESOLVED"
+      },
+      {
+       "delta": -1.090505194,
+       "field": "base",
+       "key": "CONCRETE|GROUND_SLAB|GROUND|PROVISIONAL"
+      }
+     ],
+     "n_differences": 15,
+     "notes": {
+      "RTEXT:NotImplementedError": 10
+     }
+    },
+    "rot90": {
+     "differing_groups": [],
+     "largest": [],
+     "n_differences": 0,
+     "notes": {
+      "RTEXT:NotImplementedError": 10
+     }
+    },
+    "translate": {
+     "differing_groups": [],
+     "largest": [],
+     "n_differences": 0,
+     "notes": {
+      "RTEXT:NotImplementedError": 10
+     }
+    },
+    "units_m": {
+     "differing_groups": [
+      "CONCRETE|GROUND_BEAMS|GROUND|PROVISIONAL",
+      "CONCRETE|GROUND_SLAB|GROUND|PROVISIONAL",
+      "REINFORCEMENT|GROUND_SLAB|GROUND|PROVISIONAL"
+     ],
+     "largest": [
+      {
+       "delta": 1.0,
+       "field": "n",
+       "key": "CONCRETE|GROUND_SLAB|GROUND|PROVISIONAL"
+      },
+      {
+       "delta": 1.0,
+       "field": "n",
+       "key": "REINFORCEMENT|GROUND_SLAB|GROUND|PROVISIONAL"
+      },
+      {
+       "delta": -0.29999993,
+       "field": "low",
+       "key": "CONCRETE|GROUND_BEAMS|GROUND|PROVISIONAL"
+      }
+     ],
+     "n_differences": 3,
+     "notes": {
+      "RTEXT:NotImplementedError": 10
+     }
+    }
+   }
+  },
+  "4_final": {
+   "items": 1108,
+   "ops": {
+    "dup_text": {
+     "differing_groups": [],
+     "largest": [],
+     "n_differences": 0,
+     "notes": {}
+    },
+    "explode": {
+     "differing_groups": [
+      "CONCRETE|BEAMS|1F|PROVISIONAL",
+      "CONCRETE|BEAMS|1F|UNRESOLVED",
+      "CONCRETE|BEAMS|2F|PROVISIONAL",
+      "CONCRETE|BEAMS|2F|UNRESOLVED",
+      "CONCRETE|BEAMS|GF|PROVISIONAL",
+      "CONCRETE|BEAMS|GF|UNRESOLVED",
+      "CONCRETE|FOOTINGS|FOUNDATION|PROVISIONAL",
+      "CONCRETE|GROUND_BEAMS|FOUNDATION|PROVISIONAL",
+      "CONCRETE|GROUND_BEAMS|GROUND|PROVISIONAL",
+      "CONCRETE|GROUND_SLAB|GROUND|PROVISIONAL",
+      "CONCRETE|GROUND_SLAB|GROUND|UNRESOLVED",
+      "CONCRETE|PLAIN_CONCRETE|FOUNDATION|PROVISIONAL",
+      "CONCRETE|SLABS|1F|PROVISIONAL",
+      "CONCRETE|SLABS|2F|PROVISIONAL",
+      "CONCRETE|SLABS|GF|PROVISIONAL",
+      "REINFORCEMENT|BEAMS|1F|PROVISIONAL",
+      "REINFORCEMENT|BEAMS|2F|PROVISIONAL",
+      "REINFORCEMENT|BEAMS|GF|PROVISIONAL",
+      "REINFORCEMENT|GROUND_BEAMS|FOUNDATION|PROVISIONAL",
+      "REINFORCEMENT|GROUND_SLAB|GROUND|PROVISIONAL",
+      "REINFORCEMENT|SLABS|1F|PROVISIONAL",
+      "REINFORCEMENT|SLABS|2F|PROVISIONAL",
+      "REINFORCEMENT|SLABS|GF|PROVISIONAL"
+     ],
+     "largest": [
+      {
+       "delta": 1.0,
+       "field": "n",
+       "key": "CONCRETE|BEAMS|1F|UNRESOLVED"
+      },
+      {
+       "delta": -0.264027476,
+       "field": "exposure_high",
+       "key": "CONCRETE|BEAMS|1F|UNRESOLVED"
+      },
+      {
+       "delta": -0.088042683,
+       "field": "exposure_low",
+       "key": "CONCRETE|BEAMS|1F|UNRESOLVED"
+      },
+      {
+       "delta": 0.042,
+       "field": "base",
+       "key": "CONCRETE|FOOTINGS|FOUNDATION|PROVISIONAL"
+      },
+      {
+       "delta": 0.042,
+       "field": "high",
+       "key": "CONCRETE|FOOTINGS|FOUNDATION|PROVISIONAL"
+      },
+      {
+       "delta": 0.042,
+       "field": "low",
+       "key": "CONCRETE|FOOTINGS|FOUNDATION|PROVISIONAL"
+      }
+     ],
+     "n_differences": 66,
+     "notes": {}
+    },
+    "mirror_x": {
+     "differing_groups": [
+      "CONCRETE|SLABS|GF|PROVISIONAL",
+      "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+     ],
+     "largest": [
+      {
+       "delta": -0.133333329,
+       "field": "base",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": -0.133333329,
+       "field": "high",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": -0.133333329,
+       "field": "low",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": -0.001788286,
+       "field": "base",
+       "key": "CONCRETE|SLABS|GF|PROVISIONAL"
+      },
+      {
+       "delta": -0.001788286,
+       "field": "high",
+       "key": "CONCRETE|SLABS|GF|PROVISIONAL"
+      },
+      {
+       "delta": -0.001788286,
+       "field": "low",
+       "key": "CONCRETE|SLABS|GF|PROVISIONAL"
+      }
+     ],
+     "n_differences": 6,
+     "notes": {
+      "RTEXT:NotImplementedError": 10
+     }
+    },
+    "noise_layer": {
+     "differing_groups": [],
+     "largest": [],
+     "n_differences": 0,
+     "notes": {}
+    },
+    "reorder": {
+     "differing_groups": [],
+     "largest": [],
+     "n_differences": 0,
+     "notes": {}
+    },
+    "rot180": {
+     "differing_groups": [
+      "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+     ],
+     "largest": [
+      {
+       "delta": -0.13333336,
+       "field": "base",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": -0.13333336,
+       "field": "high",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": -0.133333359,
+       "field": "low",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      }
+     ],
+     "n_differences": 3,
+     "notes": {
+      "RTEXT:NotImplementedError": 10
+     }
+    },
+    "rot270": {
+     "differing_groups": [
+      "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+     ],
+     "largest": [
+      {
+       "delta": -0.133333329,
+       "field": "base",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": -0.133333329,
+       "field": "high",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      },
+      {
+       "delta": -0.133333329,
+       "field": "low",
+       "key": "REINFORCEMENT|BEAMS|GF|PROVISIONAL"
+      }
+     ],
+     "n_differences": 3,
+     "notes": {
+      "RTEXT:NotImplementedError": 10
+     }
+    },
+    "rot90": {
+     "differing_groups": [],
+     "largest": [],
+     "n_differences": 0,
+     "notes": {
+      "RTEXT:NotImplementedError": 10
+     }
+    },
+    "translate": {
+     "differing_groups": [],
+     "largest": [],
+     "n_differences": 0,
+     "notes": {
+      "RTEXT:NotImplementedError": 10
+     }
+    },
+    "units_m": {
+     "differing_groups": [
+      "CONCRETE|GROUND_SLAB|GROUND|PROVISIONAL",
+      "REINFORCEMENT|GROUND_SLAB|GROUND|PROVISIONAL"
+     ],
+     "largest": [
+      {
+       "delta": 1.0,
+       "field": "n",
+       "key": "CONCRETE|GROUND_SLAB|GROUND|PROVISIONAL"
+      },
+      {
+       "delta": 1.0,
+       "field": "n",
+       "key": "REINFORCEMENT|GROUND_SLAB|GROUND|PROVISIONAL"
+      }
+     ],
+     "n_differences": 2,
+     "notes": {
+      "RTEXT:NotImplementedError": 10
+     }
+    }
+   }
+  }
+ }
+}

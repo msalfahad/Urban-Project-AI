@@ -1,0 +1,69 @@
+flag_id,occurrence_id,family,mark,flag,effect_on_release
+FLAG-001,GSO-109-7CB-1,GROUND_BEAM,GB (typical p.13),"CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 4, 'UNIDENTIFIED_SYMBOL': 1}; not auto-classified as PRESENT",BLOCKS_THE_INTERIOR_DETAIL
+FLAG-002,GSO-10B-7D1-1,GROUND_BEAM,GB (typical p.13),"LENGTH_BASIS_CHANGES_DETAIL: clear / centreline / clear-concrete give [""P13-GB-LT2_5M"", ""P13-GB-LT5M""] /  / [""P13-GB-LT2_5M"", ""P13-GB-LT5M""]",NONE (recorded in provenance)
+FLAG-003,GSO-10B-7D1-2,GROUND_BEAM,GB (typical p.13),"LENGTH_BASIS_CHANGES_DETAIL: clear / centreline / clear-concrete give [""P13-GB-LT2_5M"", ""P13-GB-LT5M""] / [""P13-GB-LT5M""] / [""P13-GB-LT2_5M"", ""P13-GB-LT5M""]",NONE (recorded in provenance)
+FLAG-004,GSO-10B-7D1-2,GROUND_BEAM,GB (typical p.13),ANNEX_DEPTH_SOURCE_CONFLICT: annex +0.30: the level bound (D <= 0.30 m) cannot hold the drawn three-level section; no 300 mm depth is adopted,BLOCKS_DEPTH_DEPENDENT_COMPONENTS
+FLAG-005,GSO-136-7D5-1,GROUND_BEAM,GB (typical p.13),LENGTH_GEOMETRY_CONFLICT: clear concrete 6400.0 > centreline 6350.0 mm (the concrete piece runs past a support centre: the support does not cut the full width),BLOCKS_LONGITUDINAL
+FLAG-006,GSO-136-7D5-1,GROUND_BEAM,GB (typical p.13),ANNEX_DEPTH_SOURCE_CONFLICT: annex +0.30: the level bound (D <= 0.30 m) cannot hold the drawn three-level section; no 300 mm depth is adopted,BLOCKS_DEPTH_DEPENDENT_COMPONENTS
+FLAG-007,GSO-137-138-1,GROUND_BEAM,GB (typical p.13),"LENGTH_BASIS_CHANGES_DETAIL: clear / centreline / clear-concrete give [""P13-GB-LT2_5M"", ""P13-GB-LT5M""] / [""P13-GB-LT5M""] / [""P13-GB-LT2_5M"", ""P13-GB-LT5M""]",NONE (recorded in provenance)
+FLAG-008,GSO-137-138-1,GROUND_BEAM,GB (typical p.13),ANNEX_DEPTH_SOURCE_CONFLICT: annex +0.30: the level bound (D <= 0.30 m) cannot hold the drawn three-level section; no 300 mm depth is adopted,BLOCKS_DEPTH_DEPENDENT_COMPONENTS
+FLAG-009,GSO-13D-7D2-1,GROUND_BEAM,GB (typical p.13),ANNEX_DEPTH_SOURCE_CONFLICT: annex +0.30: the level bound (D <= 0.30 m) cannot hold the drawn three-level section; no 300 mm depth is adopted,BLOCKS_DEPTH_DEPENDENT_COMPONENTS
+FLAG-010,GSO-13D-7D2-1,GROUND_BEAM,GB (typical p.13),CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 2}; not auto-classified as PRESENT,NONE (recorded in provenance)
+FLAG-011,GSO-13E-7D6-1,GROUND_BEAM,GB (typical p.13),CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 2}; not auto-classified as PRESENT,BLOCKS_THE_INTERIOR_DETAIL
+FLAG-012,GSO-13F-7D3-1,GROUND_BEAM,GB (typical p.13),CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT,BLOCKS_THE_INTERIOR_DETAIL
+FLAG-013,GSO-140-7D7-1,GROUND_BEAM,GB (typical p.13),CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT,BLOCKS_THE_INTERIOR_DETAIL
+FLAG-014,GSO-142-7D8-1,GROUND_BEAM,GB (typical p.13),"LENGTH_BASIS_CHANGES_DETAIL: clear / centreline / clear-concrete give [""P13-GB-LT2_5M"", ""P13-GB-LT5M""] / [""P13-GB-LT5M""] / [""P13-GB-LT2_5M"", ""P13-GB-LT5M""]",NONE (recorded in provenance)
+FLAG-015,GSO-142-7D8-1,GROUND_BEAM,GB (typical p.13),CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT,NONE (recorded in provenance)
+FLAG-016,GSO-145-7CA-2,GROUND_BEAM,GB (typical p.13),"LENGTH_BASIS_CHANGES_DETAIL: clear / centreline / clear-concrete give [""P13-GB-LT2_5M"", ""P13-GB-LT5M""] / [""P13-GB-LT5M""] / [""P13-GB-LT2_5M"", ""P13-GB-LT5M""]",NONE (recorded in provenance)
+FLAG-017,GSO-145-7CA-2,GROUND_BEAM,GB (typical p.13),CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT,NONE (recorded in provenance)
+FLAG-018,GSO-15C-7CC-1,GROUND_BEAM,GB (typical p.13),"LENGTH_BASIS_CHANGES_DETAIL: clear / centreline / clear-concrete give [""P13-GB-LT2_5M"", ""P13-GB-LT5M""] / [""P13-GB-LT5M""] / [""P13-GB-LT2_5M"", ""P13-GB-LT5M""]",NONE (recorded in provenance)
+FLAG-019,GSO-15C-7CC-1,GROUND_BEAM,GB (typical p.13),CONCENTRATED_LOAD_UNKNOWN: evidence {'UNIDENTIFIED_SYMBOL': 1}; not auto-classified as PRESENT,NONE (recorded in provenance)
+FLAG-020,GSO-15D-7C8-1,GROUND_BEAM,GB (typical p.13),FREE_END_CLASSIFIED end 1: FOOTING FOCC-1B2B (the end lies inside footing outline FOCC-1B2B),NONE (recorded in provenance)
+FLAG-021,GSO-15D-7C8-1,GROUND_BEAM,GB (typical p.13),"LENGTH_BASIS_CHANGES_DETAIL: clear / centreline / clear-concrete give [""P13-GB-LT2_5M"", ""P13-GB-LT5M""] / [""P13-GB-LT5M""] / [""P13-GB-LT5M""]",NONE (recorded in provenance)
+FLAG-022,GSO-15D-7C8-1,GROUND_BEAM,GB (typical p.13),CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT,NONE (recorded in provenance)
+FLAG-023,GSO-15E-15F-1,GROUND_BEAM,GB (typical p.13),"CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1, 'JUNCTION_AT_SUPPORT': 1}; not auto-classified as PRESENT",BLOCKS_THE_INTERIOR_DETAIL
+FLAG-024,GSO-170-7C3-1,GROUND_BEAM,GB (typical p.13),CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 3}; not auto-classified as PRESENT,NONE (recorded in provenance)
+FLAG-025,GSO-170-7C3-2,GROUND_BEAM,GB (typical p.13),"CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1, 'JUNCTION_AT_SUPPORT': 1}; not auto-classified as PRESENT",NONE (recorded in provenance)
+FLAG-026,GSO-175-7DE-1,GROUND_BEAM,GB (typical p.13),CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT,BLOCKS_THE_INTERIOR_DETAIL
+FLAG-027,GSO-176-7E6-1,GROUND_BEAM,GB (typical p.13),CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 3}; not auto-classified as PRESENT,BLOCKS_THE_INTERIOR_DETAIL
+FLAG-028,GSO-177-7CD-1,GROUND_BEAM,GB (typical p.13),FREE_END_CLASSIFIED end 1: COLUMN COL:1EC+1EC (column outline 50 mm from the end (drawing gap)),NONE (recorded in provenance)
+FLAG-029,GSO-177-7CD-1,GROUND_BEAM,GB (typical p.13),CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 3}; not auto-classified as PRESENT,BLOCKS_THE_INTERIOR_DETAIL
+FLAG-030,GSO-177-7CD-2,GROUND_BEAM,GB (typical p.13),LENGTH_GEOMETRY_CONFLICT: shortest bar line 1933.0 > clear concrete 1886.7 mm,BLOCKS_LONGITUDINAL
+FLAG-031,GSO-177-7CD-2,GROUND_BEAM,GB (typical p.13),CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT,NONE (recorded in provenance)
+FLAG-032,GSO-17C-7E3-1,GROUND_BEAM,GB (typical p.13),FREE_END_CLASSIFIED end 2: FOOTING FOCC-1B2B (the end lies inside footing outline FOCC-1B2B),NONE (recorded in provenance)
+FLAG-033,GSO-17C-7E3-1,GROUND_BEAM,GB (typical p.13),"LENGTH_BASIS_CHANGES_DETAIL: clear / centreline / clear-concrete give [""P13-GB-LT2_5M"", ""P13-GB-LT5M""] / [""P13-GB-LT5M""] / [""P13-GB-LT5M""]",NONE (recorded in provenance)
+FLAG-034,GSO-17C-7E3-1,GROUND_BEAM,GB (typical p.13),"CONCENTRATED_LOAD_UNKNOWN: evidence {'STAIR_BEARING_CANDIDATE': 1, 'UNIDENTIFIED_SYMBOL': 1}; not auto-classified as PRESENT",NONE (recorded in provenance)
+FLAG-035,GSO-17D-7E4-1,GROUND_BEAM,GB (typical p.13),"CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1, 'STAIR_BEARING_CANDIDATE': 1, 'UNIDENTIFIED_SYMBOL': 1}; not auto-classified as PRESENT",BLOCKS_THE_INTERIOR_DETAIL
+FLAG-036,GSO-17E-17F-1,GROUND_BEAM,GB (typical p.13),LENGTH_GEOMETRY_CONFLICT: shortest bar line 2687.0 > clear concrete 2466.8 mm,BLOCKS_LONGITUDINAL
+FLAG-037,GSO-17E-17F-1,GROUND_BEAM,GB (typical p.13),CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT,BLOCKS_THE_INTERIOR_DETAIL
+FLAG-038,GSO-180-181-1,GROUND_BEAM,GB (typical p.13),LENGTH_GEOMETRY_CONFLICT: shortest bar line 929.0 > clear concrete 789.0 mm,BLOCKS_LONGITUDINAL
+FLAG-039,GSO-180D-180E-1,GROUND_BEAM,GB (typical p.13),CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT,NONE (recorded in provenance)
+FLAG-040,GSO-1811-1812-1,GROUND_BEAM,GB (typical p.13),"FREE_END_CLASSIFIED end 1: COLUMN OUTLINE:1E6+1E8 (column outline lines 0 mm from the end (an outline the rectangle detector did not return, or closer than it))",NONE (recorded in provenance)
+FLAG-041,GSO-1811-1812-1,GROUND_BEAM,GB (typical p.13),FREE_END_UNRESOLVED end 2: BOUNDARY 7FE: the end lies on the plot boundary line (0 mm),BLOCKS_END_TREATMENT
+FLAG-042,GSO-1811-1812-1,GROUND_BEAM,GB (typical p.13),BAR_RUN_GEOMETRY_UNRESOLVED: end: no support polygon (BOUNDARY),BLOCKS_LONGITUDINAL
+FLAG-043,GSO-1811-1812-1,GROUND_BEAM,GB (typical p.13),"LENGTH_BASIS_CHANGES_DETAIL: clear / centreline / clear-concrete give [""P13-GB-LT2_5M"", ""P13-GB-LT5M""] /  / [""P13-GB-LT2_5M"", ""P13-GB-LT5M""]",NONE (recorded in provenance)
+FLAG-044,GSO-182-183-1,GROUND_BEAM,GB (typical p.13),LENGTH_GEOMETRY_CONFLICT: shortest bar line 2143.2 > clear concrete 2073.2 mm,BLOCKS_LONGITUDINAL
+FLAG-045,GSO-182-183-1,GROUND_BEAM,GB (typical p.13),"LENGTH_BASIS_CHANGES_DETAIL: clear / centreline / clear-concrete give [""P13-GB-LT2_5M"", ""P13-GB-LT5M""] / [""P13-GB-LT5M""] / [""P13-GB-LT2_5M"", ""P13-GB-LT5M""]",NONE (recorded in provenance)
+FLAG-046,GSO-184-7CF-1,GROUND_BEAM,GB (typical p.13),"CONCENTRATED_LOAD_UNKNOWN: evidence {'JUNCTION_AT_SUPPORT': 1, 'STAIR_BEARING_CANDIDATE': 1}; not auto-classified as PRESENT",BLOCKS_THE_INTERIOR_DETAIL
+FLAG-047,GSO-184-7CF-3,GROUND_BEAM,GB (typical p.13),"CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1, 'JUNCTION_AT_SUPPORT': 1}; not auto-classified as PRESENT",BLOCKS_THE_INTERIOR_DETAIL
+FLAG-048,GSO-7D0-FC-1,GROUND_BEAM,GB (typical p.13),"FREE_END_CLASSIFIED end 1: COLUMN OUTLINE:216+218 (column outline lines 0 mm from the end (an outline the rectangle detector did not return, or closer than it))",NONE (recorded in provenance)
+FLAG-049,GSO-7D0-FC-1,GROUND_BEAM,GB (typical p.13),CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT,NONE (recorded in provenance)
+FLAG-050,GSO-7D0-FC-2,GROUND_BEAM,GB (typical p.13),CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT,NONE (recorded in provenance)
+FLAG-051,GSO-7D0-FC-3,GROUND_BEAM,GB (typical p.13),CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT,NONE (recorded in provenance)
+FLAG-052,GSO-7D4-F8-1,GROUND_BEAM,GB (typical p.13),"FREE_END_CLASSIFIED end 1: COLUMN OUTLINE:205+207 (column outline lines 0 mm from the end (an outline the rectangle detector did not return, or closer than it))",NONE (recorded in provenance)
+FLAG-053,GSO-7D4-F8-1,GROUND_BEAM,GB (typical p.13),ANNEX_DEPTH_SOURCE_CONFLICT: annex +0.30: the level bound (D <= 0.30 m) cannot hold the drawn three-level section; no 300 mm depth is adopted,BLOCKS_DEPTH_DEPENDENT_COMPONENTS
+FLAG-054,GSO-7D4-F8-1,GROUND_BEAM,GB (typical p.13),"CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1, 'JUNCTION_AT_SUPPORT': 1}; not auto-classified as PRESENT",NONE (recorded in provenance)
+FLAG-055,GSO-7D4-F8-2,GROUND_BEAM,GB (typical p.13),ANNEX_DEPTH_SOURCE_CONFLICT: annex +0.30: the level bound (D <= 0.30 m) cannot hold the drawn three-level section; no 300 mm depth is adopted,BLOCKS_DEPTH_DEPENDENT_COMPONENTS
+FLAG-056,GSO-7D4-F8-2,GROUND_BEAM,GB (typical p.13),CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 2}; not auto-classified as PRESENT,NONE (recorded in provenance)
+FLAG-057,GSO-7DC-7DD-1,GROUND_BEAM,GB (typical p.13),"CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1, 'STAIR_BEARING_CANDIDATE': 1}; not auto-classified as PRESENT",BLOCKS_THE_INTERIOR_DETAIL
+FLAG-058,GSO-7E0-FD-1,GROUND_BEAM,GB (typical p.13),LENGTH_GEOMETRY_CONFLICT: clear concrete 3850.0 > centreline 3750.0 mm (the concrete piece runs past a support centre: the support does not cut the full width),BLOCKS_LONGITUDINAL
+FLAG-059,GSO-7E0-FD-1,GROUND_BEAM,GB (typical p.13),"CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1, 'JUNCTION_AT_SUPPORT': 1}; not auto-classified as PRESENT",NONE (recorded in provenance)
+FLAG-060,GSO-7E1-7E2-1,GROUND_BEAM,GB (typical p.13),"CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 2, 'STAIR_BEARING_CANDIDATE': 1, 'UNIDENTIFIED_SYMBOL': 1}; not auto-classified as PRESENT",BLOCKS_THE_INTERIOR_DETAIL
+FLAG-061,GSO-7E7-7E8-2,GROUND_BEAM,GB (typical p.13),CONCENTRATED_LOAD_UNKNOWN: evidence {'BEAM_END_REACTION': 1}; not auto-classified as PRESENT,BLOCKS_THE_INTERIOR_DETAIL
+FLAG-062,GSO-A-139-13A-1,GROUND_BEAM,GB (typical p.13),ANNEX_DEPTH_SOURCE_CONFLICT: annex +0.30: the level bound (D <= 0.30 m) cannot hold the drawn three-level section; no 300 mm depth is adopted,BLOCKS_DEPTH_DEPENDENT_COMPONENTS
+FLAG-063,GSO-A-157-158-1,GROUND_BEAM,GB (typical p.13),LENGTH_GEOMETRY_CONFLICT: shortest bar line 6177.7 > clear concrete 5878.4 mm,BLOCKS_LONGITUDINAL
+FLAG-064,GSO-A-157-158-1,GROUND_BEAM,GB (typical p.13),"LENGTH_BASIS_CHANGES_DETAIL: clear / centreline / clear-concrete give [""P13-GB-GT5M""] /  / [""P13-GB-GT5M""]",NONE (recorded in provenance)
+FLAG-065,SOCC-1689-1B1C,STRAP_BEAM,SB1,"START_SUPPORT_OUTLINE_SOURCE_CONFLICT (F|F10): the clear length is measured to the drawn face; every candidate footing is smaller than the drawn outline, so the measured clear length is a lower bound",NONE (recorded in provenance)
+FLAG-066,SOCC-1689-1B1C,STRAP_BEAM,SB1,START_SUPPORT_FOOTING_TYPE_CONFLICT F|F10 at FOCC-1B1B: preserved in provenance; the development into this footing stays blocked,NONE (recorded in provenance)
+FLAG-067,SOCC-1B08-1B09,STRAP_BEAM,SB2,"SCHEDULE_KEY_CONFLICT: 2 SBT rows for SB2 (80x50, 100x50)",NONE (recorded in provenance)
+FLAG-068,SOCC-1B08-1B09,STRAP_BEAM,SB2,"SB2_SECTION_CONFLICT: rows ['SBT:1FBB', 'SBT:2ABA'] give widths {'SBT:1FBB': 800, 'SBT:2ABA': 1000} mm; drawn width 987.1 mm is recorded and NOT used to choose",BLOCKS_LONGITUDINAL_AND_STIRRUP_PATH

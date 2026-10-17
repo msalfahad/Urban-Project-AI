@@ -1,0 +1,67 @@
+{"handles": ["5FE", "5FF", "600", "601", "602", "603"], "output": "02_DOME_POPULATION.csv", "record": "P-DOME-A", "source": "ST7757 p.5 + p.7; P7757 plan"}
+{"handles": ["649", "64A", "64B", "64C", "64D"], "output": "02_DOME_POPULATION.csv", "record": "P-DOME-B", "source": "ST7757 p.5 + p.7; P7757 plan"}
+{"handles": ["1300"], "output": "02_DOME_POPULATION.csv", "record": "P-DOME-TOWER", "source": "P7757 plan + elevations"}
+{"handles": ["3CD"], "output": "02_DOME_POPULATION.csv", "record": "O-SFRS-3CD", "source": "ST7757 p.6"}
+{"handles": ["3F8"], "output": "02_DOME_POPULATION.csv", "record": "O-SFRS-3F8", "source": "ST7757 p.6"}
+{"handles": ["12EB"], "output": "02_DOME_POPULATION.csv", "record": "O-ARCH-12EB", "source": "P7757 plan (set sheet 05)"}
+{"handles": ["2F33"], "output": "02_DOME_POPULATION.csv", "record": "O-ARCH-2F33", "source": "P7757 plan (set sheet 05)"}
+{"handles": [], "output": "02_DOME_POPULATION.csv", "record": "O-SE-TERRACE", "source": "P7757 DXF (set sheet 06)"}
+{"handles": [], "output": "02_DOME_POPULATION.csv", "record": "O-SE-TOWER", "source": "P7757 DXF (set sheet 06)"}
+{"handles": [], "output": "02_DOME_POPULATION.csv", "record": "O-NW-TERRACE", "source": "P7757 DXF (set sheet 08)"}
+{"handles": [], "output": "02_DOME_POPULATION.csv", "record": "O-NW-TOWER", "source": "P7757 DXF (set sheet 08)"}
+{"handles": [], "output": "02_DOME_POPULATION.csv", "record": "O-VR-S8.3-01", "source": "P7757_ARCH_PDF_SET_01-12 sheet 11 (ARCH_PART_2_PAGES_07-12 p.5)"}
+{"handles": [], "output": "02_DOME_POPULATION.csv", "record": "O-VR-S8.3-02", "source": "P7757_ARCH_PDF_SET_01-12 sheet 11 (ARCH_PART_2_PAGES_07-12 p.5)"}
+{"handles": [], "output": "02_DOME_POPULATION.csv", "record": "O-VR-S8.3-03", "source": "P7757_ARCH_PDF_SET_01-12 sheet 11 (ARCH_PART_2_PAGES_07-12 p.5)"}
+{"handles": [], "output": "02_DOME_POPULATION.csv", "record": "O-VR-S8.3-04", "source": "P7757_ARCH_PDF_SET_01-12 sheet 10 (ARCH_PART_2_PAGES_07-12 p.4)"}
+{"handles": [], "output": "02_DOME_POPULATION.csv", "record": "O-VR-S8.3-05", "source": "P7757_ARCH_PDF_SET_01-12 sheet 10 (ARCH_PART_2_PAGES_07-12 p.4)"}
+{"handles": ["182B", "182E", "1A0A", "1A07"], "output": "02_DOME_POPULATION.csv", "record": "O-DET", "source": "ST7757 p.7"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-A-BA001", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-A-BA002", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-A-BA003", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-A-BA004", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-A-COVERAGE", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-A-FACE+x", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-A-FACE-x", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-A-FACE+y", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-A-FACE-y", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-A-RING-PLAN", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-A-RING-DETAIL", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-A-OPENING", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-A-COL-685", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-A-COL-688", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-B-BA005", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-B-BA006", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-B-BA007", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-B-BA008", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-B-COVERAGE", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-B-FACE+x", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-B-FACE-x", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-B-FACE+y", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-B-FACE-y", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-B-RING-PLAN", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-B-RING-DETAIL", "sheet": "FFRS"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "output": "04_RING_GEOMETRY.csv", "record": "DOME-B-OPENING", "sheet": "FFRS"}
+{"baseline": "research/alsenan_superstructure_beam_rebar_s6_1/S6_1_FREEZE_MANIFEST.json (d39f5f6+code:add76dd5f5e9c59a+delta:d7ce0d2d09810083)", "component": "BM-1F_ROOF-B4-BA001-1829", "output": "05_S6_TO_S8_3_OWNERSHIP_DELTA.csv", "record": "S8.3-T01"}
+{"baseline": "research/alsenan_superstructure_beam_rebar_s6_1/S6_1_FREEZE_MANIFEST.json (d39f5f6+code:add76dd5f5e9c59a+delta:d7ce0d2d09810083)", "component": "BM-1F_ROOF-B4-BA002-1828", "output": "05_S6_TO_S8_3_OWNERSHIP_DELTA.csv", "record": "S8.3-T02"}
+{"baseline": "research/alsenan_superstructure_beam_rebar_s6_1/S6_1_FREEZE_MANIFEST.json (d39f5f6+code:add76dd5f5e9c59a+delta:d7ce0d2d09810083)", "component": "ARC:FFRS:BA003", "output": "05_S6_TO_S8_3_OWNERSHIP_DELTA.csv", "record": "S8.3-T03"}
+{"baseline": "research/alsenan_superstructure_beam_rebar_s6_1/S6_1_FREEZE_MANIFEST.json (d39f5f6+code:add76dd5f5e9c59a+delta:d7ce0d2d09810083)", "component": "ARC:FFRS:BA004", "output": "05_S6_TO_S8_3_OWNERSHIP_DELTA.csv", "record": "S8.3-T04"}
+{"baseline": "research/alsenan_superstructure_beam_rebar_s6_1/S6_1_FREEZE_MANIFEST.json (d39f5f6+code:add76dd5f5e9c59a+delta:d7ce0d2d09810083)", "component": "ARC:FFRS:BA005", "output": "05_S6_TO_S8_3_OWNERSHIP_DELTA.csv", "record": "S8.3-T05"}
+{"baseline": "research/alsenan_superstructure_beam_rebar_s6_1/S6_1_FREEZE_MANIFEST.json (d39f5f6+code:add76dd5f5e9c59a+delta:d7ce0d2d09810083)", "component": "ARC:FFRS:BA006", "output": "05_S6_TO_S8_3_OWNERSHIP_DELTA.csv", "record": "S8.3-T06"}
+{"baseline": "research/alsenan_superstructure_beam_rebar_s6_1/S6_1_FREEZE_MANIFEST.json (d39f5f6+code:add76dd5f5e9c59a+delta:d7ce0d2d09810083)", "component": "ARC:FFRS:BA007", "output": "05_S6_TO_S8_3_OWNERSHIP_DELTA.csv", "record": "S8.3-T07"}
+{"baseline": "research/alsenan_superstructure_beam_rebar_s6_1/S6_1_FREEZE_MANIFEST.json (d39f5f6+code:add76dd5f5e9c59a+delta:d7ce0d2d09810083)", "component": "ARC:FFRS:BA008", "output": "05_S6_TO_S8_3_OWNERSHIP_DELTA.csv", "record": "S8.3-T08"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "handles": ["1A0E", "1A0C"], "output": "07_REBAR_NOTATION_REGISTER.csv", "record": "N-1A0E", "sheet": "DET"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "handles": ["1A15", "1A13"], "output": "07_REBAR_NOTATION_REGISTER.csv", "record": "N-1A15", "sheet": "DET"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "handles": ["1A47", "1A68"], "output": "07_REBAR_NOTATION_REGISTER.csv", "record": "N-1A47", "sheet": "DET"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "handles": ["1A4B", "1A6C"], "output": "07_REBAR_NOTATION_REGISTER.csv", "record": "N-1A4B", "sheet": "DET"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "handles": ["1A37", "1A66"], "output": "07_REBAR_NOTATION_REGISTER.csv", "record": "N-1A37", "sheet": "DET"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "handles": ["1A29", "1A58"], "output": "07_REBAR_NOTATION_REGISTER.csv", "record": "N-1A29", "sheet": "DET"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "handles": ["1A09"], "output": "07_REBAR_NOTATION_REGISTER.csv", "record": "N-1A09", "sheet": "DET"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "handles": ["1A0B"], "output": "07_REBAR_NOTATION_REGISTER.csv", "record": "N-1A0B", "sheet": "DET"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "handles": ["1A0A", "1A07"], "output": "07_REBAR_NOTATION_REGISTER.csv", "record": "N-RING-DOTS", "sheet": "DET"}
+{"drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "handles": ["*U295"], "output": "07_REBAR_NOTATION_REGISTER.csv", "record": "N-HOOP-DOTS", "sheet": "DET"}
+{"box_upright_px": [2150, 1350, 3150, 2050], "drawing_sha256": "1e7087d3e61bbb682c9107193c97550a2837e5198bde0ee311319bf7f4a08459", "output": "02_DOME_POPULATION.csv", "page": 5, "part": "ARCH_PART_2_PAGES_07-12", "record": "VR-S8.3-01", "set": "P7757_ARCH_PDF_SET_01-12", "set_sheet": "11"}
+{"box_upright_px": [4400, 1250, 5900, 2050], "drawing_sha256": "1e7087d3e61bbb682c9107193c97550a2837e5198bde0ee311319bf7f4a08459", "output": "02_DOME_POPULATION.csv", "page": 5, "part": "ARCH_PART_2_PAGES_07-12", "record": "VR-S8.3-02", "set": "P7757_ARCH_PDF_SET_01-12", "set_sheet": "11"}
+{"box_upright_px": [3208, 869, 3912, 1201], "drawing_sha256": "1e7087d3e61bbb682c9107193c97550a2837e5198bde0ee311319bf7f4a08459", "output": "02_DOME_POPULATION.csv", "page": 5, "part": "ARCH_PART_2_PAGES_07-12", "record": "VR-S8.3-03", "set": "P7757_ARCH_PDF_SET_01-12", "set_sheet": "11"}
+{"box_upright_px": [2981, 1200, 4078, 1366], "drawing_sha256": "1e7087d3e61bbb682c9107193c97550a2837e5198bde0ee311319bf7f4a08459", "output": "02_DOME_POPULATION.csv", "page": 4, "part": "ARCH_PART_2_PAGES_07-12", "record": "VR-S8.3-04", "set": "P7757_ARCH_PDF_SET_01-12", "set_sheet": "10"}
+{"box_upright_px": [2422, 1449, 3001, 1966], "drawing_sha256": "1e7087d3e61bbb682c9107193c97550a2837e5198bde0ee311319bf7f4a08459", "output": "02_DOME_POPULATION.csv", "page": 4, "part": "ARCH_PART_2_PAGES_07-12", "record": "VR-S8.3-05", "set": "P7757_ARCH_PDF_SET_01-12", "set_sheet": "10"}
+{"box_upright_px": null, "drawing_sha256": ["1e7087d3e61bbb682c9107193c97550a2837e5198bde0ee311319bf7f4a08459", "cd3b8669d55998cb638bd8e2b572da4992ed64babcecacd73753d6a2f0c68b97"], "output": "02_DOME_POPULATION.csv", "page": null, "part": "ALL", "record": "VR-S8.3-06", "set": "P7757_ARCH_PDF_SET_01-12", "set_sheet": "01-12"}

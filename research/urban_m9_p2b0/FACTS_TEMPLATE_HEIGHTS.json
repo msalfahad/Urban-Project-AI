@@ -1,0 +1,40 @@
+{
+ "schema": "URBAN_ARCH_FACTS_V1",
+ "project_id": "<project id>",
+ "template": "URBAN_HEIGHTS_FACTS_TEMPLATE_V1",
+ "template_notes": [
+  "Fill every value_m from the sections, elevations or schedules and name the source in authority.",
+  "Leave a block out rather than guessing: a missing height keeps its quantities BLOCKED; nothing here is a default.",
+  "The engine refuses this file until every value_m present is a number with an authority (FactsError).",
+  "wall_heights: the finish height per trade; '*' applies to every floor, a floor key (GF, 1F, ...) overrides it.",
+  "WALL_TILE: the wall-tile height of wet rooms (UP-CER-004 compares it with the clear height for skirting).",
+  "opening_heights: door / window heights (DOOR, WINDOW; DOOR.MAIN_ENTRANCE, DOOR.INTERNAL.PVC, DOOR.EXTERNAL.ALUMINIUM for a class height). DOOR_ASSUMED is an owner-authorised fallback: it stays ASSUMED and never enters confirmed door areas.",
+  "Prepared for the blind round's assisted mode by a person who has not seen the benchmark; hash the filled file before the run (protocol URBAN_BLIND_V1, section 5)."
+ ],
+ "wall_heights": {
+  "*": {
+   "PLASTER": {
+    "value_m": null,
+    "authority": "SOURCE: <drawing / sheet / detail> | OWNER_PROJECT_FACT: <who, when>"
+   },
+   "PAINT": {
+    "value_m": null,
+    "authority": "SOURCE: <drawing / sheet / detail> | OWNER_PROJECT_FACT: <who, when>"
+   },
+   "WALL_TILE": {
+    "value_m": null,
+    "authority": "SOURCE: <drawing / sheet / detail> | OWNER_PROJECT_FACT: <who, when>"
+   }
+  }
+ },
+ "opening_heights": {
+  "DOOR": {
+   "value_m": null,
+   "authority": "SOURCE: <drawing / sheet / detail> | OWNER_PROJECT_FACT: <who, when>"
+  },
+  "WINDOW": {
+   "value_m": null,
+   "authority": "SOURCE: <drawing / sheet / detail> | OWNER_PROJECT_FACT: <who, when>"
+  }
+ }
+}

@@ -1,0 +1,21 @@
+CHECK_ID,WHAT,METHOD,VALUE,EXPECTED,RESULT,SHARED_CODE
+IV-01,freelancer leaf rows recomputed,count x B x C x D from the lineage dims (independent of the workbook's own value),149 / 149,all,PASS,
+IV-02,freelancer category sum = its RC total,sum of the 7 RC categories,352.436075,352.436075,PASS,
+IV-03,freelancer RC total excludes the plain concrete,leaf rows without the plain-concrete row,352.436075,352.436075,PASS,
+IV-04,brief figures reproduced from the records,lineage / M4 summary / S3.1 rows vs the brief,"FL 352.436, plain 47.055",352.436 / 47.055,PASS,
+IV-05U,UC4N total = sum of its categories,S3.1 rows (no per-floor double count),337.814,337.812,PASS,
+IV-05C,CHRISTIANNP total = sum of its categories,S3.1 rows (no per-floor double count),333.174,333.173,PASS,
+IV-06,every Urban item in exactly one lane,measured / conditional / unmeasurable / excluded,"{""CONDITIONAL"": 84, ""EXCLUDED"": 14, ""MEASURED"": 426, ""UNMEASURABLE"": 13}",537,PASS,
+IV-07,every record in exactly one crosswalk group,membership register,0 duplicates; 684 records,147 freelancer rows + 537 Urban items,PASS,
+IV-08,bridge closes,freelancer RC + sum of steps - Urban measured base,0,0,PASS,
+IV-09,element rows add to the family totals,sum of 03 vs sum of families,316.064969,316.064973,PASS,
+IV-10,"slab and ground-slab volumes, second method","shapely: (face - holes - union of bands and columns) x t, arc-bounded faces skipped","73 faces, worst 0.0000 m3",< 0.005 m3,PASS,the face polygons and band / column outlines of the M4 model
+IV-11,beam volumes,"net plan x depth; where the drawn band width differs from the schedule, the schedule width","worst relative 4.2e-05; schedule width used: ['B21 drawn 0.40 / schedule 0.45', 'B29 drawn 0.20 / schedule 0.25', 'B6 drawn 0.20 / schedule 0.25', 'CB2 drawn 0.25 / schedule 0.20']",< 1e-3,PASS,the M4 item dimensions and schedule reading
+IV-12,footing volumes,schedule L x W x H (FN overlap case separately),worst 0.00e+00,< 1e-6,PASS,the M4 schedule reading
+IV-13,"ground-beam network length, independent extractions",Urban net spans vs christiannp paired strips (report-explicit),Urban 194.29 m net; christiannp 200.04 m,within 5 %,PASS,
+IV-14,dome ring arcs and dome opening located,S-BOUN dome circles (ezdxf) vs M4 bands / faces,"4 arc bands, 1 opening face",>= 1 each,PASS,sheet origins of the M4 model
+IV-15,boundary-wall run,ezdxf S-BOUN strips on SH08: area / thickness,44.07 m,a drawn run exists,PASS,
+IV-16,plot plate of the freelancer's blinding,S-BOUN plot rectangle (SH10) vs the printed 15.00 x 31.37,31.37 x 15.00 m,31.37 x 15.00,PASS,
+IV-17,ground-slab area bridge closes,freelancer plate = measured + unresolved + members + outside,295.5,295.5,PASS,
+IV-18,M4 RC base reproduced,sum of M4 provisional concrete items without plain concrete,289.891262,the M4 SUMMARY concrete_rc PLANNING_BASE,PASS,
+IV-19,engine fix (V4) reproduces the M5 planted-column items and changes nothing else,"V3 vs V4 engine runs, item by item","3 concrete items added, 1.428 m3","3 items, 1.428 m3",PASS,the M4 intake and detection (both runs)

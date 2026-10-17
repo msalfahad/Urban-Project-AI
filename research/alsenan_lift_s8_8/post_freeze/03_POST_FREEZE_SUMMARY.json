@@ -1,0 +1,26 @@
+{
+ "classes": {
+  "AUTHORITY": 2,
+  "METHOD": 1,
+  "MISSED_OBJECT": 1,
+  "NOT_COMPARABLE": 1,
+  "NO_DIFFERENCE": 8,
+  "SCOPE": 3
+ },
+ "ff_r9_1_m3": 11.385,
+ "ff_s8_8_computed_m3": 11.385,
+ "ff_v3b_m3": 11.385,
+ "frozen_manifest_sha256": "fd1655dc3f60dde6ec1fc54495087de44e2ed25d5724ff8648a9f0729bb57cdb",
+ "round": "S8_8_POST_FREEZE",
+ "rows": 16,
+ "rule": "explains differences only; no frozen S8.8 quantity is changed or chosen here",
+ "s8_8_released": {
+  "concrete_m3": 0.0,
+  "kg": 0.0,
+  "kg_by_diameter": {},
+  "kg_by_role": {},
+  "pit_base_m3": 0.0,
+  "pit_wall_m3": 0.0
+ },
+ "v3b_lift_lines": 0
+}

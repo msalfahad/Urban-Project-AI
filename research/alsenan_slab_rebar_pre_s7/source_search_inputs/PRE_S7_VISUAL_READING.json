@@ -1,0 +1,89 @@
+{
+  "round": "PRE-S7",
+  "source_file": "ST7757.pdf",
+  "pdf_sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3",
+  "method": "pp.4-6 and p.15 rendered from the vector strokes with the pure-python pypdf renderer (1.0-10.0 px/pt, rotated 90) and read visually; text on these pages is drawn as strokes (no text layer). Readings record which line a printed dimension or label attaches to; nothing was measured by plotted scale. Renders stay in the session scratchpad; only their hashes are kept here.",
+  "renders_sha256": {
+    "p15_full": "250e8cd0f0de1ddb996c5d44a544409fe2d891cbc69a945ea2ade22c16537f5c",
+    "p15_slab_on_beams_left": "8ca037418f52e1170d4df8d30dc683c1d648becfe089bd86f53b052be41f00ec",
+    "p15_slab_on_beams_right": "886c1b908aa7b1a54520ba54df18308bae1dbbb763d924c152390236539a9fcf",
+    "p15_non_continuous_support_zoom": "f2e830c61225e9ce973e756dda1a5a01aee36374c931a405e9dfb0e96b623cca",
+    "p4_full": "16463a26b806ac703a2b3c9bd73831a3d18e41f37636b939fe10e21676612a64",
+    "p5_full": "3f35510647c0e657d1070a8e14adab265a3eccd1041be9928f46766955d0497e",
+    "p6_full": "6b59f69bb5893ed824ed2e9e7226f55108b4d78517def60b8a1dde0b847e9579",
+    "p4_void_and_curved_stair": "6d8ada747404db3b89f77a9fe0455415bc5b021896529ffdb0e31107ea9d9dbc",
+    "p4_legend": "e21beca955bba8abebd59f26dac23a045bb723b8457035a4fa730a81c56004a9",
+    "p4_plan_detail": "8e3d74c46d2bc4f93622a6a949a78ed87a30677d605e612ce88476e433909cdf"
+  },
+  "p15_slab_on_beams_detail": {
+    "title": "TYP.SLAB ON BEAMS DETAIL",
+    "printed_labels": [
+      "TOP ANCHOR BARS. FOR SIZE & SPACING SEE SCHEDULE OR PLAN",
+      "BOTTOM BARS. FOR SIZE & SPACING SEE SCHDULE OR PLAN",
+      "EXTEND 50% OF TOP REINF. INTO ADJACENT SLAB WHERE POSSIBLE",
+      "TEMP. REINFORCING",
+      ".25\"L1\"",
+      ".30\"L1\" OR .30\"L2\" WHICHEVER LARGER",
+      "STOP 50% OF BOT. REINF. BALANCE CONTINUOUS",
+      ".125\"L1\"",
+      ".125\"L2\"",
+      "\"L1\" CLEAR SPAN",
+      "\"L2\" CLEAR SPAN",
+      "NON CONTINUOUS SUPPORT",
+      "CONTINUOUS SUPPORT",
+      "40 CL.",
+      "25 CL",
+      "150",
+      "BEAM SIZE & REINF. SEE SHEDULE",
+      "FOR SIZE THICKNESS SEE PLAN",
+      "CL BEAM",
+      "D"
+    ],
+    "span_basis": {
+      "L1": "CLEAR_SPAN - the L1 dimension line runs from the inner face of the non-continuous support to the face of the continuous beam and is labelled CLEAR SPAN",
+      "L2": "CLEAR_SPAN - the L2 dimension line starts at the far face of the continuous beam and is labelled CLEAR SPAN"
+    },
+    "dimension_attachment": {
+      "TOP_ANCHOR_NON_CONTINUOUS": "0.25 L1: from the inner face of the non-continuous support to the end of the top anchor bar",
+      "TOP_CONTINUOUS_WHICHEVER_LARGER": "0.30 max(L1, L2): from the end of the top bar to the face of the continuous beam; drawn on the L1 side only - the extent on the L2 side is drawn (the bar continues across the beam) but not dimensioned",
+      "BOTTOM_50PCT_STOP": "0.125 L1 / 0.125 L2: from each face of the continuous beam to the end of the stopped bottom bars; the balance bottom bars run continuous through the beam"
+    },
+    "which_50_percent": "NOT_STATED",
+    "non_continuous_support": "the top anchor bar turns down into the support (leg drawn, not dimensioned); a bottom bar runs into the support; '40 CL.' is dimensioned from the outer face of the support but the bar it binds is not legible at the drawn scale",
+    "covers": {"25 CL": "vertical: slab soffit to the bottom bars", "40 CL.": "horizontal: at the outer face of the non-continuous support (binding unclear)"},
+    "nts_status": "TYPICAL_DETAIL - values only from the printed text; no length is scaled from the figure"
+  },
+  "p15_temperature": {
+    "table_title": "TEMPERATURE REINFORCEMENT SCHEDULE",
+    "rows": {"100": "Y10 @ 200", "125": "Y10 @ 200", "150": "Y10 @ 200", "175": "Y12 @ 200", "200": "Y12 @ 200", "250": "Y12 @ 200", "300": "Y12 @ 200"},
+    "notes": [
+      "1. LAP LENGHT FOR ALL TEMPERATUERE BARS SHALL BE 40xDIA.",
+      "2. WHERE BEAMS ARE PARALLEL TO MAIN SLAB REINFORCEMENT PROVIDE TEMP. REINF. X 2000 TOP OF SLAB AT RIGHT ANGLES TO BEAMS. 1000 @ SPANDREL",
+      "3. WHERE TOP REINF. DIFFERS BETWEEN ADJACENT SPANS USE LAGER REINF."
+    ],
+    "rows_160_or_180": "NONE"
+  },
+  "plan_sheets_pp4_6": {
+    "note_box": "NOTE- CHECK ARCHITECTURAL DETAIL OF PARAPET, BEFORE CASTING / 1- (Arabic) check parapet and architectural projections before casting / 2- (Arabic) top steel 5Ø10/m for the slabs over the beams, length one third of the span, in both directions",
+    "notes_column": "THE BUILDER TO WORK WITH STATED DIMENSIONS NOT TO SCALE DRAWING.",
+    "legend": {
+      "Cantilever-portion": "dense diagonal hatch",
+      "Sunken slab": "wide diagonal hatch",
+      "Bearing wall (B.W)": "dense diagonal hatch (same appearance as the cantilever portion)",
+      "Planted column (P.C)": "cross hatch",
+      "Foam Concrete": "dotted",
+      "Open To Below": "box with an X",
+      "Normal Slab Reinforcement": "bar line with end ticks (no TOP / BOTTOM word)",
+      "Corner Reinforcement": "diagonal bars",
+      "Extra Reinforcement": "double bar symbol",
+      "Cross Rib Reinforcement": "dashed bars",
+      "Ribs Slab Reinforcement": "bar symbol",
+      "Typical Boundary Wall": "brick hatch"
+    },
+    "legend_in_dxf": false,
+    "p6_extra_legend_line": "See main details for T1, T2, T3 & T4",
+    "p4_b29_void": "B29 light well (VOID / منور): the open-to-below X runs corner to corner over the whole B22 / B21 / B29 / B3 rectangle, through a curved stair flight (dashed treads) and an L flight on the right; 8Ø16/m bars are drawn along both flights; a hatched T 16 thickness mark sits at the landing corner",
+    "p6_water_tank_place": "a cloud outline labelled WATER TANK PLACE encloses the two top-left panels; each carries a T 18 mark and (T&B) callouts",
+    "p6_roof_area": "the area around the second-floor roof slab is labelled ROOF (سطح) at +9.70 - the first-floor roof seen on the second-floor sheet"
+  }
+}

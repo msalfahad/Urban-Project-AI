@@ -1,0 +1,359 @@
+{
+ "rule_set": "URBAN_RULES",
+ "version": "1.5.0",
+ "base": {
+  "library": "URBAN_PROJECTS_RULE_LIBRARY",
+  "version": "1.4.0",
+  "file": "rules/owner_library/URBAN_PROJECTS_RULE_LIBRARY_1.4.0.json"
+ },
+ "rule": "an OWNER_APPROVED record replaces the base record with the same rule_id (or adds a new rule); a PROPOSED record is ignored unless the caller asks for proposals; the base file is never edited; frozen results keep the version they were computed with",
+ "records": [
+  {
+   "rule_id": "UP-STAIR-012",
+   "version": "2.0.0",
+   "supersedes": "UP-STAIR-012@1.0.0",
+   "status": "OWNER_APPROVED",
+   "approval": {
+    "by": "owner (Urban Projects)",
+    "on": "2026-10-12",
+    "source": "M9A revised master prompt, Part 1"
+   },
+   "rule_name": "An open-edge guardrail is measured along its actual installed sloping path",
+   "trade": "STAIR_RAILING",
+   "scope": "STAIR",
+   "rule_kind": "MEASUREMENT_RULE",
+   "default_or_mandatory": "MANDATORY",
+   "project_override_allowed": false,
+   "unit": "lm",
+   "names": {
+    "ar": [
+     "درابزين الدرج",
+     "الطول المائل",
+     "متر طولي"
+    ],
+    "en": [
+     "stair guardrail",
+     "sloping length",
+     "linear metre"
+    ]
+   },
+   "calculation_method": "per open-edge rail segment: straight sloped segment L = sqrt(H^2 + V^2); horizontal landing segment L = H (added when it is part of the same installed system); curved / helical L = sqrt((r*theta)^2 + V^2); shared vertices counted once; without drawn rail extents the flight's nosing pitch line H = (n-1)*going, V = (n-1)*riser",
+   "value": "THE_INSTALLED_3D_OPEN_EDGE_PATH",
+   "never": [
+    "post spacing",
+    "rail height",
+    "fabrication allowance",
+    "undrawn returns",
+    "a wall-side railing",
+    "the plan projection as the billed length"
+   ],
+   "reported_separately": [
+    "plan length (diagnostic only)",
+    "H, V and 3D length per segment",
+    "source and formula per segment"
+   ],
+   "unknown_behavior": "OPEN_EDGE_NOT_ESTABLISHED | RAIL_EXTENT_NOT_ESTABLISHED",
+   "example": {
+    "H_m": 4.0,
+    "V_m": 2.0,
+    "L_lm": 4.472
+   },
+   "open_questions": [
+    "Q-ST-1 rail extents when not drawn",
+    "Q-ST-2 landing guard same system or separate"
+   ],
+   "country_context": "KUWAIT",
+   "owner_confirmed": true
+  },
+  {
+   "rule_id": "UP-STAIR-013",
+   "version": "1.0.0",
+   "supersedes": null,
+   "status": "OWNER_APPROVED",
+   "approval": {
+    "by": "owner (Urban Projects)",
+    "on": "2026-10-12",
+    "source": "M9A revised master prompt, Part 1"
+   },
+   "rule_name": "A wall-mounted handrail is measured only where shown, specified or owner-confirmed",
+   "trade": "STAIR_RAILING",
+   "scope": "STAIR",
+   "rule_kind": "MEASUREMENT_RULE",
+   "default_or_mandatory": "MANDATORY",
+   "project_override_allowed": true,
+   "unit": "lm",
+   "names": {
+    "ar": [
+     "مسكة الدرج"
+    ],
+    "en": [
+     "wall-mounted handrail"
+    ]
+   },
+   "calculation_method": "the UP-STAIR-012 3D path method along the wall-side rail line; its own BOQ line when the system differs from the guardrail",
+   "value": "SHOWN_OR_SPECIFIED_ONLY",
+   "unknown_behavior": "WALL_HANDRAIL_NOT_SPECIFIED (excluded with reason, never quantified)",
+   "country_context": "KUWAIT",
+   "owner_confirmed": true
+  },
+  {
+   "rule_id": "UP-WP-002",
+   "version": "2.0.0",
+   "supersedes": "UP-WP-002@1.0.0",
+   "status": "OWNER_APPROVED",
+   "approval": {
+    "by": "owner (Urban Projects)",
+    "on": "2026-10-12",
+    "source": "M9A revised master prompt, Part 1"
+   },
+   "rule_name": "The wet-room membrane turns up 0.20 m around the whole boundary, doorway included",
+   "trade": "WATERPROOFING",
+   "scope": "WET_ROOM",
+   "rule_kind": "MEASUREMENT_RULE",
+   "default_or_mandatory": "DEFAULT",
+   "project_override_allowed": true,
+   "unit": "m2",
+   "value": 0.2,
+   "names": {
+    "ar": [
+     "عازل الحمام",
+     "رفعة العازل",
+     "عازل عند الباب"
+    ],
+    "en": [
+     "wet-room waterproofing",
+     "upturn",
+     "doorway waterproofing"
+    ]
+   },
+   "calculation_method": "UPTURN_PERIMETER_LM = the full boundary of the waterproofed floor including every doorway / threshold segment (door openings are not deducted); UPTURN_M2 = UPTURN_PERIMETER_LM x 0.20",
+   "reported_separately": [
+    "DOORWAY_SEGMENT_LM per door",
+    "wall-run perimeter",
+    "internal obstacle perimeters"
+   ],
+   "construction_check": "DOORWAY_UPTURN_DETAIL_REQUIRED on each doorway segment until the project's threshold / water-stop / return detail is known",
+   "never": [
+    "the 0.15 m upturn of v1.0.0",
+    "a door-width deduction"
+   ],
+   "unknown_behavior": "UPTURN_RUN_NOT_ESTABLISHED",
+   "open_questions": [
+    "Q-WP-1 how the doorway 0.20 m is built and whether it is billed in addition to the doorway floor piece",
+    "Q-WP-3 internal obstacles, floor-level openings"
+   ],
+   "country_context": "KUWAIT",
+   "owner_confirmed": true
+  },
+  {
+   "rule_id": "UP-WP-003",
+   "version": "1.1.0",
+   "supersedes": "UP-WP-003@1.0.0",
+   "status": "OWNER_APPROVED",
+   "approval": {
+    "by": "owner (Urban Projects)",
+    "on": "2026-10-12",
+    "source": "M9A revised master prompt, Part 1"
+   },
+   "rule_name": "The floor membrane continues through the doorway; the doorway floor piece and the doorway upturn are never counted twice",
+   "trade": "WATERPROOFING",
+   "scope": "WET_ROOM",
+   "rule_kind": "MEASUREMENT_RULE",
+   "default_or_mandatory": "MANDATORY",
+   "project_override_allowed": false,
+   "unit": "m2",
+   "calculation_method": "doorway floor piece = door width x wall depth, part of the floor waterproofing area; the doorway segment of the upturn (UP-WP-002 v2.0.0) is its own row; where the project detail puts the 0.20 m coverage inside the doorway piece, only one is billed",
+   "value": "CONTINUES_THROUGH_THE_DOORWAY",
+   "unknown_behavior": "DOORWAY_CONTINUATION_NOT_ESTABLISHED",
+   "country_context": "KUWAIT",
+   "owner_confirmed": true
+  },
+  {
+   "rule_id": "UP-GEN-003",
+   "version": "1.1.0",
+   "supersedes": "UP-GEN-003@1.0.0",
+   "status": "OWNER_APPROVED",
+   "approval": {
+    "by": "owner (Urban Projects)",
+    "on": "2026-10-12",
+    "source": "M9A revised master prompt, Part 1"
+   },
+   "rule_name": "Openings are deducted per trade from one table; the waterproofing upturn is not deducted",
+   "trade": "ALL",
+   "scope": "OPENINGS",
+   "rule_kind": "MEASUREMENT_RULE",
+   "default_or_mandatory": "MANDATORY",
+   "project_override_allowed": false,
+   "unit": "NONE",
+   "calculation_method": "per-trade opening table: SKIRTING deduct door widths (UP-CER-003); WALL_TILE gross - openings (UP-CER-005); WATERPROOFING_UPTURN no deduction (UP-WP-002 v2.0.0); PLASTER / PAINT per owner decision Q-OPN-1 (unresolved)",
+   "value": {
+    "SKIRTING": "DEDUCT_DOOR_WIDTHS",
+    "WALL_TILE": "GROSS_MINUS_OPENINGS",
+    "WATERPROOFING_UPTURN": "NO_DEDUCTION",
+    "PLASTER_PAINT": "OWNER_DECISION_PENDING"
+   },
+   "note": "consequence of UP-WP-002 v2.0.0: v1.0.0 listed the waterproofing upturn among deducted quantities",
+   "country_context": "KUWAIT",
+   "owner_confirmed": true
+  },
+  {
+   "rule_id": "UP-CER-009",
+   "version": "1.0.0",
+   "supersedes": null,
+   "status": "OWNER_APPROVED",
+   "approval": {
+    "by": "owner (Urban Projects)",
+    "on": "2026-10-12",
+    "source": "M9A revised master prompt, Part 1"
+   },
+   "rule_name": "Wall ceramic / porcelain height is derived per face from the drawings, never a universal constant",
+   "trade": "WALL_TILE",
+   "scope": "ALL_ROOMS",
+   "rule_kind": "MEASUREMENT_RULE",
+   "default_or_mandatory": "MANDATORY",
+   "project_override_allowed": true,
+   "unit": "m",
+   "names": {
+    "ar": [
+     "سيراميك جدران",
+     "بورسلان جدران"
+    ],
+    "en": [
+     "wall tile height"
+    ]
+   },
+   "calculation_method": "ladder: (1) printed finish height; (2) section / RCP finished clear height; (3) derived = floor-to-floor - controlling soffit depth over the face - ceiling / services / decor zone - finished-floor build-up, each component sourced; (4) project owner fact; else BLOCKED. Each deduction once; never subtract a depth already inside a measured height",
+   "value": "DERIVED_PER_FACE",
+   "example_rationale_only": {
+    "floor_to_floor_m": 4.5,
+    "beam_m": 0.6,
+    "decor_m": 0.15,
+    "buildup_m": 0.08,
+    "height_m": 3.67
+   },
+   "unknown_behavior": "WALL_TILE_HEIGHT_NOT_ESTABLISHED",
+   "country_context": "KUWAIT",
+   "owner_confirmed": true
+  },
+  {
+   "rule_id": "UP-WP-005",
+   "version": "1.0.0",
+   "supersedes": null,
+   "status": "OWNER_APPROVED",
+   "approval": {
+    "by": "owner (Urban Projects)",
+    "on": "2026-10-12",
+    "source": "M9 S1 addendum, sections 1-3"
+   },
+   "rule_name": "Membrane material is calculated from the roll layout with a minimum 0.10 m overlap, never a flat waste rate",
+   "trade": "WATERPROOFING",
+   "scope": "ALL_SHEET_MEMBRANES",
+   "rule_kind": "COMMERCIAL_MEASUREMENT_BASIS",
+   "default_or_mandatory": "MANDATORY",
+   "project_override_allowed": true,
+   "unit": "m2 | rolls",
+   "names": {
+    "ar": [
+     "رولات عازل",
+     "تراكب لفات العازل"
+    ],
+    "en": [
+     "membrane rolls",
+     "membrane overlap"
+    ]
+   },
+   "calculation_method": "strips of the roll width laid across the polygon with at least the minimum side lap between adjoining strips (each additional 1.00 m strip contributes 1.00 - 0.10 = 0.90 m before edge conditions); end laps at transverse seams; upturn bands with a lap onto the floor membrane; pieces cut from rolls with offcut reuse; installed, overlap, cutting waste, reusable offcuts and packaging surplus reported separately; whole rolls from the cutting plan",
+   "value": {
+    "default_spec": "MEM-URBAN-DEFAULT-1x10",
+    "min_lap_m": 0.1
+   },
+   "never": [
+    "a fixed waste percentage",
+    "net area / roll area as the roll count",
+    "a lap smaller than the owner minimum",
+    "procurement area as the billed quantity"
+   ],
+   "stricter_wins": "a data-sheet lap larger than 0.10 m replaces it and its source is recorded",
+   "unknown_behavior": "MEMBRANE_SPEC_NOT_ESTABLISHED",
+   "country_context": "KUWAIT",
+   "owner_confirmed": true
+  },
+  {
+   "rule_id": "UP-CER-010",
+   "version": "1.0.0",
+   "supersedes": null,
+   "status": "OWNER_APPROVED",
+   "approval": {
+    "by": "owner (Urban Projects)",
+    "on": "2026-10-12",
+    "source": "M9 S1 addendum, sections 1-3"
+   },
+   "rule_name": "Tile cutting waste comes from the room's layout for the selected size; alternatives are recommendations only",
+   "trade": "FLOOR_FINISH",
+   "scope": "ALL_ROOMS",
+   "rule_kind": "COMMERCIAL_MEASUREMENT_BASIS",
+   "default_or_mandatory": "MANDATORY",
+   "project_override_allowed": true,
+   "unit": "m2 | pcs | boxes",
+   "names": {
+    "ar": [
+     "بورسلان أرضيات",
+     "هدر القص"
+    ],
+    "en": [
+     "floor porcelain",
+     "cutting waste"
+    ]
+   },
+   "calculation_method": "per candidate size (120x60, 60x60, 160x80 cm or custom): layout, orientation and start alignment under the same constraints; full / cut / consumed tiles; reusable offcuts; cutting waste = consumed tile area - installed tile area - reusable offcuts retained; cutting waste % = cutting waste / net installed area x 100; packaging surplus and any owner-approved spare allowance kept separate",
+   "value": {
+    "sizes": [
+     "TILE-120x60",
+     "TILE-60x60",
+     "TILE-160x80"
+    ],
+    "custom_allowed": true
+   },
+   "never": [
+    "a flat size-based waste percentage as the quantity",
+    "silent substitution of the selected size"
+   ],
+   "note": "the flat percentages of the takeoff skill (60x60 10 %, 120x60 12 %, 160x80 15 %) are unconfirmed defaults; they may be shown as a reference, never used",
+   "country_context": "KUWAIT",
+   "owner_confirmed": true
+  },
+  {
+   "rule_id": "UP-WP-004",
+   "version": "1.1.0",
+   "supersedes": "UP-WP-004@1.0.0",
+   "status": "PROPOSED",
+   "rule_name": "A shower takes the wet-room floor and the UP-WP-002 v2 upturn; higher tanking is separate",
+   "trade": "WATERPROOFING",
+   "scope": "SHOWER",
+   "rule_kind": "MEASUREMENT_RULE",
+   "default_or_mandatory": "DEFAULT",
+   "project_override_allowed": true,
+   "unit": "m2",
+   "open_questions": [
+    "Q-WP-4"
+   ],
+   "country_context": "KUWAIT",
+   "owner_confirmed": false
+  },
+  {
+   "rule_id": "UP-STAIR-014",
+   "version": "1.0.0",
+   "supersedes": null,
+   "status": "PROPOSED",
+   "rule_name": "Railing posts, balusters and glass panels are measured only when defined",
+   "trade": "STAIR_RAILING",
+   "scope": "STAIR",
+   "rule_kind": "MEASUREMENT_RULE",
+   "default_or_mandatory": "MANDATORY",
+   "project_override_allowed": true,
+   "unit": "pcs | m2 | lm",
+   "country_context": "KUWAIT",
+   "owner_confirmed": false
+  }
+ ]
+}

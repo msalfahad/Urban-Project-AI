@@ -1,0 +1,109 @@
+{
+ "frozen_v1_taken_at": "6b7a2e4",
+ "commit": "c757d8a",
+ "synthetic_v1": {
+  "ARCH_FLOOR_AREAS.json": {
+   "frozen": "8bd4b907bb0f07d091a98be806b2cba528a0b805a48ad1048f4bac2bdd991838",
+   "now": "8bd4b907bb0f07d091a98be806b2cba528a0b805a48ad1048f4bac2bdd991838",
+   "identical": true
+  },
+  "ARCH_OPENINGS.json": {
+   "frozen": "fe6f3bafc0fd8942a79605baaebbcec4f6f65fcf37de0958894e449e57081573",
+   "now": "fe6f3bafc0fd8942a79605baaebbcec4f6f65fcf37de0958894e449e57081573",
+   "identical": true
+  },
+  "ARCH_PLAN.json": {
+   "frozen": "e13406307bfe736e58bb3ede8e137f3dd820205611a16a06d39e7b88a2029c66",
+   "now": "e13406307bfe736e58bb3ede8e137f3dd820205611a16a06d39e7b88a2029c66",
+   "identical": true
+  },
+  "ARCH_ROOMS.json": {
+   "frozen": "8a1f0182f4b39fd443607d276a50e830afe1d9b7b139839d8eae98cc54d3f4c0",
+   "now": "8a1f0182f4b39fd443607d276a50e830afe1d9b7b139839d8eae98cc54d3f4c0",
+   "identical": true
+  },
+  "ARCH_WALLS.json": {
+   "frozen": "236d6a1e6619526c3160c10992486104fbd2413618a67c43d748db4e09b8f32b",
+   "now": "236d6a1e6619526c3160c10992486104fbd2413618a67c43d748db4e09b8f32b",
+   "identical": true
+  },
+  "BOQ_LINES.csv": {
+   "frozen": "32b6c106b5cf0799f03d5cc5489bcc8d48c328f1ce2b006fe71f3f61ec9ede4a",
+   "now": "32b6c106b5cf0799f03d5cc5489bcc8d48c328f1ce2b006fe71f3f61ec9ede4a",
+   "identical": true
+  },
+  "BOQ_LINES.json": {
+   "frozen": "fedb4ae2ce48add6884b94de90427e3bd415fe951bb95bc47b536b6fcda97464",
+   "now": "fedb4ae2ce48add6884b94de90427e3bd415fe951bb95bc47b536b6fcda97464",
+   "identical": true
+  },
+  "COVERAGE.csv": {
+   "frozen": "8e13d93952a12685035f4d6af934e5ff4033b83ca409ff95e27518c8a9bef1e6",
+   "now": "8e13d93952a12685035f4d6af934e5ff4033b83ca409ff95e27518c8a9bef1e6",
+   "identical": true
+  },
+  "COVERAGE.json": {
+   "frozen": "520ad3dc115e680db53340785d0bfeb885d341e862c4cfbc20f843483fbef59c",
+   "now": "520ad3dc115e680db53340785d0bfeb885d341e862c4cfbc20f843483fbef59c",
+   "identical": true
+  },
+  "MATERIAL_RESULTS.json": {
+   "frozen": "ef8effea5f5ab3e582780ee61b185f075d88cb35e73b581302ff01495e6e6262",
+   "now": "ef8effea5f5ab3e582780ee61b185f075d88cb35e73b581302ff01495e6e6262",
+   "identical": true
+  },
+  "OVERLAY_1F.svg": {
+   "frozen": "b12d89b0a0f9d8a3bf6c99490decaff27d5cf7a9e4e51cecdc1b5c968d086f46",
+   "now": "b12d89b0a0f9d8a3bf6c99490decaff27d5cf7a9e4e51cecdc1b5c968d086f46",
+   "identical": true
+  },
+  "OVERLAY_GF.svg": {
+   "frozen": "02ef6a7476bb23fc395b4420cfce2b5de4f4bfc1fc4177f30f7b3eb0875b0e2b",
+   "now": "02ef6a7476bb23fc395b4420cfce2b5de4f4bfc1fc4177f30f7b3eb0875b0e2b",
+   "identical": true
+  },
+  "RUN_RULES.json": {
+   "frozen": "0dcc220a10176de0fefceaf0ed57bf1f66e9ae6a31520a55cfb2553669780ae1",
+   "now": "0dcc220a10176de0fefceaf0ed57bf1f66e9ae6a31520a55cfb2553669780ae1",
+   "identical": true
+  },
+  "UNRESOLVED.json": {
+   "frozen": "4ae71183b92c3ac6a7e608bbfa163a55f7b6cbd6d5ccacfc5eb87e82fa0703b9",
+   "now": "4ae71183b92c3ac6a7e608bbfa163a55f7b6cbd6d5ccacfc5eb87e82fa0703b9",
+   "identical": true
+  },
+  "URBAN_ROOM_BOQ.xlsx": {
+   "frozen": "73c00b042a82bdfe489540c758c7e602cf4289db6dc7c50384aca3e7959e2a3a",
+   "now": "73c00b042a82bdfe489540c758c7e602cf4289db6dc7c50384aca3e7959e2a3a",
+   "identical": true
+  }
+ },
+ "synthetic_v2_outputs": {
+  "ARCH_FLOOR_AREAS.json": "3f5827a2403470acc55f5953a1efdf205a290c041387965f82d74f4eea0905a4",
+  "ARCH_OPENINGS.json": "3ef67c56af2187eb6a3684abf36ad451aa39cb0a61be31d32062123fb82644b2",
+  "ARCH_PLAN.json": "67a09ea4269d87568e58640226995faa7556a988e95209f76a982179485ccdc7",
+  "ARCH_ROOMS.json": "6aacc8a11e6d2df4a687ddf984dd4ec12d0e46170bc662f479b497c68f635876",
+  "ARCH_WALLS.json": "fd603a80284cdba9aaa9195169d12e6524e61afd4121d8c4148a418a78398ea8",
+  "BOQ_LINES.csv": "eb64294d8d0ec93632b16625543e096008f104d7611d753d24dc1aab891271fd",
+  "BOQ_LINES.json": "473b75e76e31c5e31b75d7ec4dee45fe0650e9d5a5dcae4250c8e161a1c39917",
+  "COVERAGE.csv": "bb87a8f3e5316e2576117180d1154fad884ba82920f55a4f4260d874d97208a1",
+  "COVERAGE.json": "faf159da6f83a73b7d40c7099e6037cf60c1029b02a83a0687168ed84b715d9c",
+  "DRAWING_DISCOVERY.json": "4e6f9811b0951848357c409272ef1c14811ca7e3c7207c64d2edc443f3ca8d1d",
+  "FINISH_COVERAGE.json": "3c1768f2c580d884f75674ae97e49ad755cdcdb86a91eeb69a5842cb3d00fc4f",
+  "MATERIAL_RESULTS.json": "17cc8b8ceba6e228fe5a2632fab730b49b274eb5e55c87117d503867fa4aa799",
+  "RUN_RULES.json": "052d7e65ee5dac3939d842917373966952f390392ba388d67b89aa9cefdb53c6",
+  "UNRESOLVED.json": "5940d9e04dba547ee2ad96a799e617e2b26d750693b2c69680451c3e3ccc8650",
+  "URBAN_ROOM_BOQ.xlsx": "2493f16489b654e14e320260fcdc32fc46724078875e3e533a17252ee66c7555"
+ },
+ "rules": {
+  "rules/RULES_MANIFEST.json": "6d2e694f2941ed0449ee0bde17e356a8f239d9728769e211e556eb80430fa7b1",
+  "rules/coverage/BOQ_FAMILY_MASTER_1.0.0.json": "71acb9983343dfec7096e5778803f180bdcdf784e426dbefeb00c513a8e6c8f5",
+  "rules/materials/URBAN_MATERIAL_SPECS_1.0.0.json": "a16ccec3c7e1ef0fc5734d533032bf6d405b30a54b5a1eca0462d8b28851d0c1",
+  "rules/methods/URBAN_METHOD_REGISTER_V1.json": "45f7e46fa4d19939adf64b075d25c6f7c77e7c5de0e79e99c5bac2cd92a19838",
+  "rules/methods/URBAN_METHOD_REGISTER_V3.json": "d124d19647cdd754f11045b259836f1ae1440656701bba5b7a0ca6b3f8a400b1",
+  "rules/owner_decisions/URBAN_RULES_1.5.0.json": "50c120c62d191ccfd08f2b3bc6fc79b2f13be4cc81f9a3c2478e4f797f283954",
+  "rules/owner_library/URBAN_PROJECTS_RULE_LIBRARY_1.4.0.json": "6881733f21015a247790fb7980850e4eb47054665684deb299e0b8413a6274ee"
+ },
+ "note": "reference-plan V1 / V2 hashes are in the PRIVATE package",
+ "synthetic_v1_all_identical": true
+}

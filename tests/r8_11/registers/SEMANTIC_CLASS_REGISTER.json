@@ -1,0 +1,113 @@
+{
+ "SCHEMA": "URBAN_R8_11_SEMANTIC_CLASS_REGISTER_V1",
+ "rule": {
+  "rule_id": "QORTUBA-SPACE-CLASS",
+  "version": 1,
+  "authority": "PROJECT_OWNER_RULE (owner rule store, rank 2)",
+  "refs": [
+   "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: US-01 WET_SERVICE_ROOM_CERAMIC",
+   "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: QP-07 QORTUBA_CERAMIC_SERVICE_ROOMS = BATH x3 + PAINTRY",
+   "research/qs_wall_treatment_01/pa08/qortuba/boq/owner_rules.py: QP-14 QORTUBA_DRY_FLOOR_FINISH = PORCELAIN"
+  ],
+  "scope": {
+   "project": "QORTUBA",
+   "region": "RC:MODEL_SPACE:4267:540:1649",
+   "plan": "PLAN_VARIANT_4_SELECTED"
+  },
+  "by_label": {
+   "BATH": "WET_ROOM",
+   "PAINTRY": "SERVICE_ROOM"
+  },
+  "otherwise_class": "DRY_INTERNAL_ROOM",
+  "scope_labels": [
+   "BED.ROOM",
+   "DRESS",
+   "HALL",
+   "M.B.ROOM",
+   "whgm"
+  ]
+ },
+ "floor_treatment_by_class": {
+  "WET_ROOM": "CERAMIC_WET_FLOOR",
+  "SERVICE_ROOM": "CERAMIC_SERVICE_FLOOR",
+  "DRY_INTERNAL_ROOM": "PORCELAIN_DRY_FLOOR"
+ },
+ "floor_rule": "QORTUBA-FLOOR-TREATMENT@v2",
+ "classes_in_use": {
+  "Q-03": {
+   "SITE-1c4abf65f9b5db1e": {
+    "BATH": "WET_ROOM"
+   },
+   "SITE-a2b19efc492a6d0b": {
+    "BATH": "WET_ROOM"
+   },
+   "SITE-fe8ed5548fb4310e": {
+    "BATH": "WET_ROOM"
+   }
+  },
+  "Q-03P": {
+   "SITE-8c1c7563d5252c50": {
+    "PAINTRY": "SERVICE_ROOM"
+   }
+  },
+  "Q-13": {
+   "SITE-5f1762f1a93b91ca": {
+    "BED.ROOM": "DRY_INTERNAL_ROOM"
+   },
+   "SITE-6d1ce80253b53f83": {
+    "HALL": "DRY_INTERNAL_ROOM",
+    "whgm": "DRY_INTERNAL_ROOM"
+   },
+   "SITE-a6405850100155ac": {
+    "DRESS": "DRY_INTERNAL_ROOM",
+    "M.B.ROOM": "DRY_INTERNAL_ROOM"
+   },
+   "SITE-daca396d6d730e60": {
+    "BED.ROOM": "DRY_INTERNAL_ROOM"
+   }
+  }
+ },
+ "equivalence_with_r8_10": {
+  "Q-03": {
+   "r8_10": [
+    "COMPUTED_SHADOW",
+    17.7425
+   ],
+   "r8_11": [
+    "COMPUTED_SHADOW",
+    17.7425
+   ]
+  },
+  "Q-03P": {
+   "r8_10": [
+    "COMPUTED_SHADOW",
+    11.685
+   ],
+   "r8_11": [
+    "COMPUTED_SHADOW",
+    11.685
+   ]
+  },
+  "Q-11": {
+   "r8_10": [
+    "COMPUTED_SHADOW",
+    17.7425
+   ],
+   "r8_11": [
+    "COMPUTED_SHADOW",
+    17.7425
+   ]
+  },
+  "Q-12": {
+   "r8_10": [
+    "COMPUTED_SHADOW",
+    11.685
+   ],
+   "r8_11": [
+    "COMPUTED_SHADOW",
+    11.685
+   ]
+  }
+ },
+ "never": "a raw label string is not a trade identity: 'Bath', 'BATH ' or 'M.B ROOM' map to no class"
+}

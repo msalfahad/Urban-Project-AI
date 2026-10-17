@@ -1,0 +1,2458 @@
+{
+ "WHAT": "the R4 packaged output, reduced to the facts the acceptance gate judges; kept as a committed fixture so the gate can be shown to reject the output it was written to reject",
+ "SOURCE_ARTIFACT": "ALRASHED_GENERIC_ENGINE_REGRESSION.json (R4, commit b2d8a8e)",
+ "PUBLISHED_TOTALS": [
+  {
+   "QUANTITY": "BLOCKWORK_50",
+   "UNIT": "m2",
+   "FROZEN_M2": 0.0,
+   "NEW_M2": 2.16,
+   "DELTA_M2": 2.16,
+   "WHY": "the frozen figure shared each floor's openings across thicknesses in proportion to wall length; the new figure deducts every opening from the wall line that hosts it, and blocks any line on a floor where a host is unproved",
+   "TRACE": "OPENING_REGISTER -> HOST_COMPONENT_REF -> WALL_LINE -> THICKNESS"
+  },
+  {
+   "QUANTITY": "BLOCKWORK_100",
+   "UNIT": "m2",
+   "FROZEN_M2": 0.0,
+   "NEW_M2": 0.72,
+   "DELTA_M2": 0.72,
+   "WHY": "the frozen figure shared each floor's openings across thicknesses in proportion to wall length; the new figure deducts every opening from the wall line that hosts it, and blocks any line on a floor where a host is unproved",
+   "TRACE": "OPENING_REGISTER -> HOST_COMPONENT_REF -> WALL_LINE -> THICKNESS"
+  },
+  {
+   "QUANTITY": "BLOCKWORK_126",
+   "UNIT": "m2",
+   "FROZEN_M2": 0.0,
+   "NEW_M2": 0.72,
+   "DELTA_M2": 0.72,
+   "WHY": "the frozen figure shared each floor's openings across thicknesses in proportion to wall length; the new figure deducts every opening from the wall line that hosts it, and blocks any line on a floor where a host is unproved",
+   "TRACE": "OPENING_REGISTER -> HOST_COMPONENT_REF -> WALL_LINE -> THICKNESS"
+  },
+  {
+   "QUANTITY": "BLOCKWORK_147",
+   "UNIT": "m2",
+   "FROZEN_M2": 0.0,
+   "NEW_M2": 0.72,
+   "DELTA_M2": 0.72,
+   "WHY": "the frozen figure shared each floor's openings across thicknesses in proportion to wall length; the new figure deducts every opening from the wall line that hosts it, and blocks any line on a floor where a host is unproved",
+   "TRACE": "OPENING_REGISTER -> HOST_COMPONENT_REF -> WALL_LINE -> THICKNESS"
+  },
+  {
+   "QUANTITY": "BLOCKWORK_150",
+   "UNIT": "m2",
+   "FROZEN_M2": 190.289,
+   "NEW_M2": 220.42,
+   "DELTA_M2": 30.131,
+   "WHY": "the frozen figure shared each floor's openings across thicknesses in proportion to wall length; the new figure deducts every opening from the wall line that hosts it, and blocks any line on a floor where a host is unproved",
+   "TRACE": "OPENING_REGISTER -> HOST_COMPONENT_REF -> WALL_LINE -> THICKNESS"
+  },
+  {
+   "QUANTITY": "BLOCKWORK_167",
+   "UNIT": "m2",
+   "FROZEN_M2": 0.0,
+   "NEW_M2": 0.36,
+   "DELTA_M2": 0.36,
+   "WHY": "the frozen figure shared each floor's openings across thicknesses in proportion to wall length; the new figure deducts every opening from the wall line that hosts it, and blocks any line on a floor where a host is unproved",
+   "TRACE": "OPENING_REGISTER -> HOST_COMPONENT_REF -> WALL_LINE -> THICKNESS"
+  },
+  {
+   "QUANTITY": "BLOCKWORK_200",
+   "UNIT": "m2",
+   "FROZEN_M2": 963.188,
+   "NEW_M2": 1087.388,
+   "DELTA_M2": 124.2,
+   "WHY": "the frozen figure shared each floor's openings across thicknesses in proportion to wall length; the new figure deducts every opening from the wall line that hosts it, and blocks any line on a floor where a host is unproved",
+   "TRACE": "OPENING_REGISTER -> HOST_COMPONENT_REF -> WALL_LINE -> THICKNESS"
+  },
+  {
+   "QUANTITY": "BLOCKWORK_202",
+   "UNIT": "m2",
+   "FROZEN_M2": 0.0,
+   "NEW_M2": 6.48,
+   "DELTA_M2": 6.48,
+   "WHY": "the frozen figure shared each floor's openings across thicknesses in proportion to wall length; the new figure deducts every opening from the wall line that hosts it, and blocks any line on a floor where a host is unproved",
+   "TRACE": "OPENING_REGISTER -> HOST_COMPONENT_REF -> WALL_LINE -> THICKNESS"
+  },
+  {
+   "QUANTITY": "BLOCKWORK_283",
+   "UNIT": "m2",
+   "FROZEN_M2": 0.0,
+   "NEW_M2": 0.72,
+   "DELTA_M2": 0.72,
+   "WHY": "the frozen figure shared each floor's openings across thicknesses in proportion to wall length; the new figure deducts every opening from the wall line that hosts it, and blocks any line on a floor where a host is unproved",
+   "TRACE": "OPENING_REGISTER -> HOST_COMPONENT_REF -> WALL_LINE -> THICKNESS"
+  }
+ ],
+ "WALL_ROW_STATUS_COUNTS": {
+  "BLOCKED_BY_UNRESOLVED_OPENING": 57,
+  "BLOCKED_BY_UNMEASURED_OPENING": 4
+ },
+ "WALL_ROWS": [
+  {
+   "COMPONENT_REF": "WALL-LINE::BASEMENT::X::152.7332::401.9269::0.2",
+   "FLOOR": "BASEMENT",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 26.549949,
+   "GROSS_AREA_M2": 95.579815,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 95.579815,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::BASEMENT::X::156.5832::401.9269::0.15",
+   "FLOOR": "BASEMENT",
+   "THICKNESS_M": 0.15,
+   "MATERIAL_LENGTH_M": 5.599988,
+   "GROSS_AREA_M2": 20.159955,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 20.159955,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::BASEMENT::X::159.0331::401.9269::0.2",
+   "FLOOR": "BASEMENT",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 6.829991,
+   "GROSS_AREA_M2": 27.827967,
+   "OPENING_DEDUCTION_M2": 1.98,
+   "NET_AREA_M2": 25.847967,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::BASEMENT::X::162.7831::416.1569::0.2",
+   "FLOOR": "BASEMENT",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 1.000051,
+   "GROSS_AREA_M2": 3.607383,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 3.607383,
+   "STATUS": "BLOCKED_BY_UNMEASURED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::BASEMENT::X::164.9831::410.2569::0.2",
+   "FLOOR": "BASEMENT",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 6.699999,
+   "GROSS_AREA_M2": 24.119997,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 24.119997,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::BASEMENT::X::166.4831::401.9269::0.2",
+   "FLOOR": "BASEMENT",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 0.99995,
+   "GROSS_AREA_M2": 6.487021,
+   "OPENING_DEDUCTION_M2": 1.7644,
+   "NET_AREA_M2": 4.722621,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::BASEMENT::X::166.7331::418.1569::0.2",
+   "FLOOR": "BASEMENT",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 9.650009,
+   "GROSS_AREA_M2": 38.343634,
+   "OPENING_DEDUCTION_M2": 2.2022,
+   "NET_AREA_M2": 36.141434,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::BASEMENT::X::167.8332::410.2569::0.1999",
+   "FLOOR": "BASEMENT",
+   "THICKNESS_M": 0.1999,
+   "MATERIAL_LENGTH_M": 7.099999,
+   "GROSS_AREA_M2": 25.559997,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 25.559997,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::BASEMENT::X::170.6831::401.9269::0.2",
+   "FLOOR": "BASEMENT",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 14.32999,
+   "GROSS_AREA_M2": 54.827965,
+   "OPENING_DEDUCTION_M2": 1.98,
+   "NET_AREA_M2": 52.847965,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::BASEMENT::X::174.5332::401.7269::0.2",
+   "FLOOR": "BASEMENT",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 27.080037,
+   "GROSS_AREA_M2": 97.488134,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 97.488134,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::BASEMENT::Y::401.7269::152.9331::0.2",
+   "FLOOR": "BASEMENT",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 16.999995,
+   "GROSS_AREA_M2": 61.199981,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 61.199981,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::BASEMENT::Y::403.7269::159.2331::0.2",
+   "FLOOR": "BASEMENT",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 1.700012,
+   "GROSS_AREA_M2": 6.120042,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 6.120042,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::BASEMENT::Y::403.7269::166.6831::0.2",
+   "FLOOR": "BASEMENT",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 3.999988,
+   "GROSS_AREA_M2": 14.399958,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 14.399958,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::BASEMENT::Y::407.5269::156.7332::0.2",
+   "FLOOR": "BASEMENT",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 1.39993,
+   "GROSS_AREA_M2": 8.279749,
+   "OPENING_DEDUCTION_M2": 1.98,
+   "NET_AREA_M2": 6.299749,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::BASEMENT::Y::410.0569::152.9331::0.2",
+   "FLOOR": "BASEMENT",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 14.249994,
+   "GROSS_AREA_M2": 61.012778,
+   "OPENING_DEDUCTION_M2": 5.9356,
+   "NET_AREA_M2": 55.077178,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::BASEMENT::Y::412.2069::168.0331::0.2",
+   "FLOOR": "BASEMENT",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 1.849991,
+   "GROSS_AREA_M2": 9.532766,
+   "OPENING_DEDUCTION_M2": 1.7556,
+   "NET_AREA_M2": 7.777166,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::BASEMENT::Y::415.3069::168.0331::0.2",
+   "FLOOR": "BASEMENT",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 1.849991,
+   "GROSS_AREA_M2": 9.532766,
+   "OPENING_DEDUCTION_M2": 1.7556,
+   "NET_AREA_M2": 7.777166,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::BASEMENT::Y::415.9569::160.9832::0.2",
+   "FLOOR": "BASEMENT",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 1.699942,
+   "GROSS_AREA_M2": 6.119791,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 6.119791,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::BASEMENT::Y::428.8069::152.9331::0.2",
+   "FLOOR": "BASEMENT",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 21.400035,
+   "GROSS_AREA_M2": 77.040127,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 77.040127,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::X::154.2331::363.3059::0.2",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 20.329996,
+   "GROSS_AREA_M2": 83.631586,
+   "OPENING_DEDUCTION_M2": 1.98,
+   "NET_AREA_M2": 81.651586,
+   "STATUS": "BLOCKED_BY_UNMEASURED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::X::156.5832::361.4059::0.2",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 1.699961,
+   "GROSS_AREA_M2": 6.119858,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 6.119858,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::X::160.7832::373.8381::0.2",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 1.797749,
+   "GROSS_AREA_M2": 6.471898,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 6.471898,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::X::164.9831::381.0359::0.15",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.15,
+   "MATERIAL_LENGTH_M": 3.800061,
+   "GROSS_AREA_M2": 13.68022,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 13.68022,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::X::166.5331::380.0359::0.15",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.15,
+   "MATERIAL_LENGTH_M": 4.500006,
+   "GROSS_AREA_M2": 16.200022,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 16.200022,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::X::167.9831::367.8859::0.15",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.15,
+   "MATERIAL_LENGTH_M": 8.702239,
+   "GROSS_AREA_M2": 37.800861,
+   "OPENING_DEDUCTION_M2": 3.9556,
+   "NET_AREA_M2": 33.845261,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::X::168.1331::375.1059::0.0501",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.0501,
+   "MATERIAL_LENGTH_M": 0.6,
+   "GROSS_AREA_M2": 2.16,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 2.16,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::X::168.3831::382.3859::0.15",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.15,
+   "MATERIAL_LENGTH_M": 2.450061,
+   "GROSS_AREA_M2": 8.82022,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 8.82022,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::X::170.0831::374.1459::0.15",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.15,
+   "MATERIAL_LENGTH_M": 1.0,
+   "GROSS_AREA_M2": 6.4836,
+   "OPENING_DEDUCTION_M2": 1.7622,
+   "NET_AREA_M2": 4.7214,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::X::170.5832::361.4059::0.1",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.1,
+   "MATERIAL_LENGTH_M": 0.200007,
+   "GROSS_AREA_M2": 0.720024,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 0.720024,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::X::170.6832::361.4059::0.2",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 1.699961,
+   "GROSS_AREA_M2": 6.119858,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 6.119858,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::X::171.1331::367.8859::0.15",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.15,
+   "MATERIAL_LENGTH_M": 1.0,
+   "GROSS_AREA_M2": 6.4836,
+   "OPENING_DEDUCTION_M2": 1.7622,
+   "NET_AREA_M2": 4.7214,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::X::173.0331::369.8359::0.2001",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.2001,
+   "MATERIAL_LENGTH_M": 9.700034,
+   "GROSS_AREA_M2": 51.487324,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 51.487324,
+   "STATUS": "BLOCKED_BY_UNMEASURED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::X::174.5331::363.3059::0.2",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 6.65,
+   "GROSS_AREA_M2": 23.94,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 23.94,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::X::174.5331::380.0359::0.2",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 4.950006,
+   "GROSS_AREA_M2": 17.820022,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 17.820022,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::Y::361.4059::156.7832::0.2",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 11.0,
+   "GROSS_AREA_M2": 46.0764,
+   "OPENING_DEDUCTION_M2": 3.9578,
+   "NET_AREA_M2": 42.1186,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::Y::363.1059::154.2331::0.2",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 2.350044,
+   "GROSS_AREA_M2": 8.460157,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 8.460157,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::Y::363.1059::170.8832::0.2",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 3.649956,
+   "GROSS_AREA_M2": 13.139843,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 13.139843,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::Y::367.7359::168.1331::0.15",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.15,
+   "MATERIAL_LENGTH_M": 6.250036,
+   "GROSS_AREA_M2": 22.500129,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 22.500129,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::Y::370.1059::173.2332::0.2",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 1.299956,
+   "GROSS_AREA_M2": 4.679843,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 4.679843,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::Y::371.6859::154.4331::0.15",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.15,
+   "MATERIAL_LENGTH_M": 3.849985,
+   "GROSS_AREA_M2": 13.859945,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 13.859945,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::Y::373.6359::160.9832::0.2023",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.2023,
+   "MATERIAL_LENGTH_M": 1.799942,
+   "GROSS_AREA_M2": 6.479791,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 6.479791,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::Y::373.9959::168.1331::0.15",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.15,
+   "MATERIAL_LENGTH_M": 3.85001,
+   "GROSS_AREA_M2": 17.107234,
+   "OPENING_DEDUCTION_M2": 1.9844,
+   "NET_AREA_M2": 15.122834,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::Y::375.9459::168.1331::0.15",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.15,
+   "MATERIAL_LENGTH_M": 3.85001,
+   "GROSS_AREA_M2": 13.860034,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 13.860034,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::Y::376.6359::154.4331::0.15",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.15,
+   "MATERIAL_LENGTH_M": 4.999985,
+   "GROSS_AREA_M2": 17.999945,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 17.999945,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::Y::379.8859::164.9831::0.15",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.15,
+   "MATERIAL_LENGTH_M": 1.849987,
+   "GROSS_AREA_M2": 10.267152,
+   "OPENING_DEDUCTION_M2": 2.2044,
+   "NET_AREA_M2": 8.062752,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::Y::381.2359::166.6831::0.15",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.15,
+   "MATERIAL_LENGTH_M": 1.850012,
+   "GROSS_AREA_M2": 6.660042,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 6.660042,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::Y::382.8359::165.1331::0.15",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.15,
+   "MATERIAL_LENGTH_M": 0.6,
+   "GROSS_AREA_M2": 5.0436,
+   "OPENING_DEDUCTION_M2": 1.7622,
+   "NET_AREA_M2": 3.2814,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::Y::383.0359::166.6831::0.15",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.15,
+   "MATERIAL_LENGTH_M": 0.900012,
+   "GROSS_AREA_M2": 6.123642,
+   "OPENING_DEDUCTION_M2": 1.7622,
+   "NET_AREA_M2": 4.361442,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::GROUND::Y::384.9859::154.4331::0.1999",
+   "FLOOR": "GROUND",
+   "THICKNESS_M": 0.1999,
+   "MATERIAL_LENGTH_M": 19.500031,
+   "GROSS_AREA_M2": 83.170911,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 83.170911,
+   "STATUS": "BLOCKED_BY_UNMEASURED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::FIRST::X::159.5831::325.8938::0.2",
+   "FLOOR": "FIRST",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 6.500054,
+   "GROSS_AREA_M2": 27.007396,
+   "OPENING_DEDUCTION_M2": 2.2044,
+   "NET_AREA_M2": 24.802996,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::FIRST::X::162.7831::331.7937::0.2",
+   "FLOOR": "FIRST",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 0.674324,
+   "GROSS_AREA_M2": 2.427568,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 2.427568,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::FIRST::X::162.9831::333.5938::0.1471",
+   "FLOOR": "FIRST",
+   "THICKNESS_M": 0.1471,
+   "MATERIAL_LENGTH_M": 0.199975,
+   "GROSS_AREA_M2": 0.719911,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 0.719911,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::FIRST::X::164.9832::325.8938::0.2",
+   "FLOOR": "FIRST",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 4.1,
+   "GROSS_AREA_M2": 14.76,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 14.76,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::FIRST::X::167.9831::325.8938::0.2001",
+   "FLOOR": "FIRST",
+   "THICKNESS_M": 0.2001,
+   "MATERIAL_LENGTH_M": 7.550049,
+   "GROSS_AREA_M2": 27.180178,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 27.180178,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::FIRST::Y::325.6937::159.7831::0.2001",
+   "FLOOR": "FIRST",
+   "THICKNESS_M": 0.2001,
+   "MATERIAL_LENGTH_M": 7.799983,
+   "GROSS_AREA_M2": 28.079937,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 28.079937,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::FIRST::Y::329.9938::163.6832::0.1499",
+   "FLOOR": "FIRST",
+   "THICKNESS_M": 0.1499,
+   "MATERIAL_LENGTH_M": 3.099942,
+   "GROSS_AREA_M2": 14.766991,
+   "OPENING_DEDUCTION_M2": 2.2044,
+   "NET_AREA_M2": 12.562591,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::FIRST::Y::330.1438::162.2831::0.2833",
+   "FLOOR": "FIRST",
+   "THICKNESS_M": 0.2833,
+   "MATERIAL_LENGTH_M": 0.200029,
+   "GROSS_AREA_M2": 0.720105,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 0.720105,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::FIRST::Y::331.4271::162.3832::0.1667",
+   "FLOOR": "FIRST",
+   "THICKNESS_M": 0.1667,
+   "MATERIAL_LENGTH_M": 0.099971,
+   "GROSS_AREA_M2": 0.359895,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 0.359895,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::FIRST::Y::331.5938::159.7831::0.1999",
+   "FLOOR": "FIRST",
+   "THICKNESS_M": 0.1999,
+   "MATERIAL_LENGTH_M": 2.899953,
+   "GROSS_AREA_M2": 10.439832,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 10.439832,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::FIRST::Y::333.468::162.7831::0.1258",
+   "FLOOR": "FIRST",
+   "THICKNESS_M": 0.1258,
+   "MATERIAL_LENGTH_M": 0.200023,
+   "GROSS_AREA_M2": 0.720084,
+   "OPENING_DEDUCTION_M2": 0.0,
+   "NET_AREA_M2": 0.720084,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  },
+  {
+   "COMPONENT_REF": "WALL-LINE::FIRST::Y::333.5938::159.7831::0.2",
+   "FLOOR": "FIRST",
+   "THICKNESS_M": 0.2,
+   "MATERIAL_LENGTH_M": 7.052961,
+   "GROSS_AREA_M2": 28.99066,
+   "OPENING_DEDUCTION_M2": 2.2,
+   "NET_AREA_M2": 26.79066,
+   "STATUS": "BLOCKED_BY_UNRESOLVED_OPENING",
+   "GROSS_BASIS": "the wall material plus the openings it hosts, so the wall over a door is counted before the door is deducted"
+  }
+ ],
+ "OPENING_REGISTER_SUMMARY": {
+  "BASEMENT": {
+   "OPENING_COUNT": 15,
+   "MEASURABLE_COUNT": 14,
+   "ASSIGNED_COUNT": 11,
+   "UNRESOLVED_COUNT": 4,
+   "UNRESOLVED_REFS": [
+    "BA-OP-001",
+    "BA-OP-003",
+    "BA-OP-012",
+    "BA-OP-014"
+   ],
+   "TOTAL_OPENING_AREA_M2": 29.9134,
+   "ASSIGNED_AREA_M2": 19.3534,
+   "UNRESOLVED_AREA_M2": 10.56,
+   "DEDUCTION_BY_WALL_COMPONENT_M2": {
+    "WALL-LINE::BASEMENT::X::159.0331::401.9269::0.2": 1.98,
+    "WALL-LINE::BASEMENT::X::166.4831::401.9269::0.2": 1.7644,
+    "WALL-LINE::BASEMENT::X::166.7331::418.1569::0.2": 2.2022,
+    "WALL-LINE::BASEMENT::X::170.6831::401.9269::0.2": 1.98,
+    "WALL-LINE::BASEMENT::Y::407.5269::156.7332::0.2": 1.98,
+    "WALL-LINE::BASEMENT::Y::410.0569::152.9331::0.2": 5.9356,
+    "WALL-LINE::BASEMENT::Y::412.2069::168.0331::0.2": 1.7556,
+    "WALL-LINE::BASEMENT::Y::415.3069::168.0331::0.2": 1.7556
+   },
+   "HOSTED_WIDTH_BY_WALL_COMPONENT_M": {
+    "WALL-LINE::BASEMENT::X::159.0331::401.9269::0.2": 0.9,
+    "WALL-LINE::BASEMENT::X::162.7831::416.1569::0.2": 0.002,
+    "WALL-LINE::BASEMENT::X::166.4831::401.9269::0.2": 0.802,
+    "WALL-LINE::BASEMENT::X::166.7331::418.1569::0.2": 1.001,
+    "WALL-LINE::BASEMENT::X::170.6831::401.9269::0.2": 0.9,
+    "WALL-LINE::BASEMENT::Y::407.5269::156.7332::0.2": 0.9,
+    "WALL-LINE::BASEMENT::Y::410.0569::152.9331::0.2": 2.698,
+    "WALL-LINE::BASEMENT::Y::412.2069::168.0331::0.2": 0.798,
+    "WALL-LINE::BASEMENT::Y::415.3069::168.0331::0.2": 0.798
+   },
+   "UNMEASURED_OPENINGS_BY_WALL_COMPONENT": {
+    "WALL-LINE::BASEMENT::X::162.7831::416.1569::0.2": [
+     "BA-OP-000"
+    ]
+   },
+   "DEDUCTION_BY_THICKNESS_M2": {
+    "0.2": 19.3534
+   },
+   "ALLOCATION_RULE": "an opening is deducted from exactly one host wall band, or from none; no deduction is ever divided between candidates",
+   "TOLERANCE_M": 0.005
+  },
+  "GROUND": {
+   "OPENING_COUNT": 24,
+   "MEASURABLE_COUNT": 16,
+   "ASSIGNED_COUNT": 17,
+   "UNRESOLVED_COUNT": 7,
+   "UNRESOLVED_REFS": [
+    "GR-OP-001",
+    "GR-OP-004",
+    "GR-OP-005",
+    "GR-OP-007",
+    "GR-OP-010",
+    "GR-OP-014",
+    "GR-OP-015"
+   ],
+   "TOTAL_OPENING_AREA_M2": 32.3576,
+   "ASSIGNED_AREA_M2": 21.131,
+   "UNRESOLVED_AREA_M2": 11.2266,
+   "DEDUCTION_BY_WALL_COMPONENT_M2": {
+    "WALL-LINE::GROUND::X::154.2331::363.3059::0.2": 1.98,
+    "WALL-LINE::GROUND::X::167.9831::367.8859::0.15": 3.9556,
+    "WALL-LINE::GROUND::X::170.0831::374.1459::0.15": 1.7622,
+    "WALL-LINE::GROUND::X::171.1331::367.8859::0.15": 1.7622,
+    "WALL-LINE::GROUND::Y::361.4059::156.7832::0.2": 3.9578,
+    "WALL-LINE::GROUND::Y::373.9959::168.1331::0.15": 1.9844,
+    "WALL-LINE::GROUND::Y::379.8859::164.9831::0.15": 2.2044,
+    "WALL-LINE::GROUND::Y::382.8359::165.1331::0.15": 1.7622,
+    "WALL-LINE::GROUND::Y::383.0359::166.6831::0.15": 1.7622
+   },
+   "HOSTED_WIDTH_BY_WALL_COMPONENT_M": {
+    "WALL-LINE::GROUND::X::154.2331::363.3059::0.2": 2.901,
+    "WALL-LINE::GROUND::X::167.9831::367.8859::0.15": 1.798,
+    "WALL-LINE::GROUND::X::170.0831::374.1459::0.15": 0.801,
+    "WALL-LINE::GROUND::X::171.1331::367.8859::0.15": 0.801,
+    "WALL-LINE::GROUND::X::173.0331::369.8359::0.2001": 4.602,
+    "WALL-LINE::GROUND::Y::361.4059::156.7832::0.2": 1.799,
+    "WALL-LINE::GROUND::Y::373.9959::168.1331::0.15": 0.902,
+    "WALL-LINE::GROUND::Y::379.8859::164.9831::0.15": 1.002,
+    "WALL-LINE::GROUND::Y::382.8359::165.1331::0.15": 0.801,
+    "WALL-LINE::GROUND::Y::383.0359::166.6831::0.15": 0.801,
+    "WALL-LINE::GROUND::Y::384.9859::154.4331::0.1999": 3.603
+   },
+   "UNMEASURED_OPENINGS_BY_WALL_COMPONENT": {
+    "WALL-LINE::GROUND::X::154.2331::363.3059::0.2": [
+     "GR-GL-002"
+    ],
+    "WALL-LINE::GROUND::X::173.0331::369.8359::0.2001": [
+     "GR-GL-000",
+     "GR-GL-001",
+     "GR-GL-005"
+    ],
+    "WALL-LINE::GROUND::Y::384.9859::154.4331::0.1999": [
+     "GR-GL-003",
+     "GR-GL-004",
+     "GR-GL-006"
+    ]
+   },
+   "DEDUCTION_BY_THICKNESS_M2": {
+    "0.15": 15.1932,
+    "0.2": 5.9378
+   },
+   "ALLOCATION_RULE": "an opening is deducted from exactly one host wall band, or from none; no deduction is ever divided between candidates",
+   "TOLERANCE_M": 0.005
+  },
+  "FIRST": {
+   "OPENING_COUNT": 5,
+   "MEASURABLE_COUNT": 5,
+   "ASSIGNED_COUNT": 3,
+   "UNRESOLVED_COUNT": 2,
+   "UNRESOLVED_REFS": [
+    "FI-OP-000",
+    "FI-OP-003"
+   ],
+   "TOTAL_OPENING_AREA_M2": 11.0088,
+   "ASSIGNED_AREA_M2": 6.6088,
+   "UNRESOLVED_AREA_M2": 4.4,
+   "DEDUCTION_BY_WALL_COMPONENT_M2": {
+    "WALL-LINE::FIRST::X::159.5831::325.8938::0.2": 2.2044,
+    "WALL-LINE::FIRST::Y::329.9938::163.6832::0.1499": 2.2044,
+    "WALL-LINE::FIRST::Y::333.5938::159.7831::0.2": 2.2
+   },
+   "HOSTED_WIDTH_BY_WALL_COMPONENT_M": {
+    "WALL-LINE::FIRST::X::159.5831::325.8938::0.2": 1.002,
+    "WALL-LINE::FIRST::Y::329.9938::163.6832::0.1499": 1.002,
+    "WALL-LINE::FIRST::Y::333.5938::159.7831::0.2": 1.0
+   },
+   "UNMEASURED_OPENINGS_BY_WALL_COMPONENT": {},
+   "DEDUCTION_BY_THICKNESS_M2": {
+    "0.1499": 2.2044,
+    "0.2": 4.4044
+   },
+   "ALLOCATION_RULE": "an opening is deducted from exactly one host wall band, or from none; no deduction is ever divided between candidates",
+   "TOLERANCE_M": 0.005
+  }
+ },
+ "OPENING_CANDIDATES": [
+  {
+   "OPENING_REF": "BA-OP-000",
+   "FLOOR": "BASEMENT",
+   "TYPE": "UNKNOWN",
+   "GEOMETRY": [
+    417.05,
+    162.793988,
+    417.052,
+    162.994012
+   ],
+   "AXIS": "X",
+   "WIDTH_M": 0.002,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": null,
+   "HEIGHT_SOURCE": "NOT_ESTABLISHED",
+   "AREA_M2": null,
+   "HOST_COMPONENT_REF": "WALL-LINE::BASEMENT::X::162.7831::416.1569::0.2",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "BA-OP-001",
+   "FLOOR": "BASEMENT",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    416.809803,
+    162.796,
+    416.890197,
+    165.096
+   ],
+   "AXIS": "Y",
+   "WIDTH_M": 2.3,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 5.06,
+   "HOST_COMPONENT_REF": null,
+   "HOST_ASSIGNMENT_STATUS": "HOST_WALL_UNRESOLVED"
+  },
+  {
+   "OPENING_REF": "BA-OP-002",
+   "FLOOR": "BASEMENT",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    402.013,
+    166.470007,
+    402.815,
+    166.669993
+   ],
+   "AXIS": "X",
+   "WIDTH_M": 0.802,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.7644,
+   "HOST_COMPONENT_REF": "WALL-LINE::BASEMENT::X::166.4831::401.9269::0.2",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "BA-OP-003",
+   "FLOOR": "BASEMENT",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    402.013,
+    160.992029,
+    402.815,
+    161.141971
+   ],
+   "AXIS": "X",
+   "WIDTH_M": 0.802,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.7644,
+   "HOST_COMPONENT_REF": null,
+   "HOST_ASSIGNMENT_STATUS": "HOST_WALL_UNRESOLVED"
+  },
+  {
+   "OPENING_REF": "BA-OP-004",
+   "FLOOR": "BASEMENT",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    407.54,
+    156.842,
+    407.74,
+    157.742
+   ],
+   "AXIS": "Y",
+   "WIDTH_M": 0.9,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.98,
+   "HOST_COMPONENT_REF": "WALL-LINE::BASEMENT::Y::407.5269::156.7332::0.2",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "BA-OP-005",
+   "FLOOR": "BASEMENT",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    410.023995,
+    156.842,
+    410.224005,
+    157.742
+   ],
+   "AXIS": "Y",
+   "WIDTH_M": 0.9,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.98,
+   "HOST_COMPONENT_REF": "WALL-LINE::BASEMENT::Y::410.0569::152.9331::0.2",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "BA-OP-006",
+   "FLOOR": "BASEMENT",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    408.432,
+    159.018,
+    409.332,
+    159.218
+   ],
+   "AXIS": "X",
+   "WIDTH_M": 0.9,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.98,
+   "HOST_COMPONENT_REF": "WALL-LINE::BASEMENT::X::159.0331::401.9269::0.2",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "BA-OP-007",
+   "FLOOR": "BASEMENT",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    410.023995,
+    165.345,
+    410.224005,
+    166.245
+   ],
+   "AXIS": "Y",
+   "WIDTH_M": 0.9,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.98,
+   "HOST_COMPONENT_REF": "WALL-LINE::BASEMENT::Y::410.0569::152.9331::0.2",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "BA-OP-008",
+   "FLOOR": "BASEMENT",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    410.397,
+    170.721994,
+    411.297,
+    170.922006
+   ],
+   "AXIS": "X",
+   "WIDTH_M": 0.9,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.98,
+   "HOST_COMPONENT_REF": "WALL-LINE::BASEMENT::X::170.6831::401.9269::0.2",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "BA-OP-009",
+   "FLOOR": "BASEMENT",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    410.071995,
+    168.197,
+    410.272005,
+    169.095
+   ],
+   "AXIS": "Y",
+   "WIDTH_M": 0.898,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.9756,
+   "HOST_COMPONENT_REF": "WALL-LINE::BASEMENT::Y::410.0569::152.9331::0.2",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "BA-OP-010",
+   "FLOOR": "BASEMENT",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    412.172,
+    168.198,
+    412.372,
+    168.996
+   ],
+   "AXIS": "Y",
+   "WIDTH_M": 0.798,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.7556,
+   "HOST_COMPONENT_REF": "WALL-LINE::BASEMENT::Y::412.2069::168.0331::0.2",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "BA-OP-011",
+   "FLOOR": "BASEMENT",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    415.276,
+    168.198,
+    415.476,
+    168.996
+   ],
+   "AXIS": "Y",
+   "WIDTH_M": 0.798,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.7556,
+   "HOST_COMPONENT_REF": "WALL-LINE::BASEMENT::Y::415.3069::168.0331::0.2",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "BA-OP-012",
+   "FLOOR": "BASEMENT",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    416.714197,
+    168.198,
+    416.833803,
+    168.996
+   ],
+   "AXIS": "Y",
+   "WIDTH_M": 0.798,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.7556,
+   "HOST_COMPONENT_REF": null,
+   "HOST_ASSIGNMENT_STATUS": "HOST_WALL_UNRESOLVED"
+  },
+  {
+   "OPENING_REF": "BA-OP-013",
+   "FLOOR": "BASEMENT",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    418.2515,
+    166.745993,
+    419.2525,
+    166.946007
+   ],
+   "AXIS": "X",
+   "WIDTH_M": 1.001,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 2.2022,
+   "HOST_COMPONENT_REF": "WALL-LINE::BASEMENT::X::166.7331::418.1569::0.2",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "BA-OP-014",
+   "FLOOR": "BASEMENT",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    417.985986,
+    165.345,
+    418.116014,
+    166.245
+   ],
+   "AXIS": "Y",
+   "WIDTH_M": 0.9,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.98,
+   "HOST_COMPONENT_REF": null,
+   "HOST_ASSIGNMENT_STATUS": "HOST_WALL_UNRESOLVED"
+  },
+  {
+   "OPENING_REF": "GR-GL-000",
+   "FLOOR": "GROUND",
+   "TYPE": "WINDOW",
+   "GEOMETRY": [
+    371.1145,
+    173.042,
+    373.1155,
+    173.244
+   ],
+   "AXIS": "X",
+   "WIDTH_M": 2.001,
+   "WIDTH_SOURCE": "MEASURED_FROM_PROJECT_GEOMETRY",
+   "HEIGHT_M": null,
+   "HEIGHT_SOURCE": "NOT_ESTABLISHED",
+   "AREA_M2": null,
+   "HOST_COMPONENT_REF": "WALL-LINE::GROUND::X::173.0331::369.8359::0.2001",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "GR-GL-001",
+   "FLOOR": "GROUND",
+   "TYPE": "WINDOW",
+   "GEOMETRY": [
+    376.9545,
+    173.043,
+    378.9555,
+    173.245
+   ],
+   "AXIS": "X",
+   "WIDTH_M": 2.001,
+   "WIDTH_SOURCE": "MEASURED_FROM_PROJECT_GEOMETRY",
+   "HEIGHT_M": null,
+   "HEIGHT_SOURCE": "NOT_ESTABLISHED",
+   "AREA_M2": null,
+   "HOST_COMPONENT_REF": "WALL-LINE::GROUND::X::173.0331::369.8359::0.2001",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "GR-GL-002",
+   "FLOOR": "GROUND",
+   "TYPE": "WINDOW",
+   "GEOMETRY": [
+    379.8475,
+    154.242,
+    381.8485,
+    154.444
+   ],
+   "AXIS": "X",
+   "WIDTH_M": 2.001,
+   "WIDTH_SOURCE": "MEASURED_FROM_PROJECT_GEOMETRY",
+   "HEIGHT_M": null,
+   "HEIGHT_SOURCE": "NOT_ESTABLISHED",
+   "AREA_M2": null,
+   "HOST_COMPONENT_REF": "WALL-LINE::GROUND::X::154.2331::363.3059::0.2",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "GR-GL-003",
+   "FLOOR": "GROUND",
+   "TYPE": "WINDOW",
+   "GEOMETRY": [
+    384.977,
+    170.5445,
+    385.175,
+    172.5455
+   ],
+   "AXIS": "Y",
+   "WIDTH_M": 2.001,
+   "WIDTH_SOURCE": "MEASURED_FROM_PROJECT_GEOMETRY",
+   "HEIGHT_M": null,
+   "HEIGHT_SOURCE": "NOT_ESTABLISHED",
+   "AREA_M2": null,
+   "HOST_COMPONENT_REF": "WALL-LINE::GROUND::Y::384.9859::154.4331::0.1999",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "GR-GL-004",
+   "FLOOR": "GROUND",
+   "TYPE": "WINDOW",
+   "GEOMETRY": [
+    384.9785,
+    163.244,
+    385.1755,
+    164.246
+   ],
+   "AXIS": "Y",
+   "WIDTH_M": 1.002,
+   "WIDTH_SOURCE": "MEASURED_FROM_PROJECT_GEOMETRY",
+   "HEIGHT_M": null,
+   "HEIGHT_SOURCE": "NOT_ESTABLISHED",
+   "AREA_M2": null,
+   "HOST_COMPONENT_REF": "WALL-LINE::GROUND::Y::384.9859::154.4331::0.1999",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "GR-GL-005",
+   "FLOOR": "GROUND",
+   "TYPE": "WINDOW",
+   "GEOMETRY": [
+    374.419,
+    173.0435,
+    375.019,
+    173.2445
+   ],
+   "AXIS": "X",
+   "WIDTH_M": 0.6,
+   "WIDTH_SOURCE": "MEASURED_FROM_PROJECT_GEOMETRY",
+   "HEIGHT_M": null,
+   "HEIGHT_SOURCE": "NOT_ESTABLISHED",
+   "AREA_M2": null,
+   "HOST_COMPONENT_REF": "WALL-LINE::GROUND::X::173.0331::369.8359::0.2001",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "GR-GL-006",
+   "FLOOR": "GROUND",
+   "TYPE": "WINDOW",
+   "GEOMETRY": [
+    384.9785,
+    167.244,
+    385.1755,
+    167.844
+   ],
+   "AXIS": "Y",
+   "WIDTH_M": 0.6,
+   "WIDTH_SOURCE": "MEASURED_FROM_PROJECT_GEOMETRY",
+   "HEIGHT_M": null,
+   "HEIGHT_SOURCE": "NOT_ESTABLISHED",
+   "AREA_M2": null,
+   "HOST_COMPONENT_REF": "WALL-LINE::GROUND::Y::384.9859::154.4331::0.1999",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "GR-OP-000",
+   "FLOOR": "GROUND",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    379.875995,
+    166.861,
+    380.026005,
+    167.863
+   ],
+   "AXIS": "Y",
+   "WIDTH_M": 1.002,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 2.2044,
+   "HOST_COMPONENT_REF": "WALL-LINE::GROUND::Y::379.8859::164.9831::0.15",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "GR-OP-001",
+   "FLOOR": "GROUND",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    372.244,
+    159.465961,
+    373.146,
+    159.566039
+   ],
+   "AXIS": "X",
+   "WIDTH_M": 0.902,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.9844,
+   "HOST_COMPONENT_REF": null,
+   "HOST_ASSIGNMENT_STATUS": "HOST_WALL_UNRESOLVED"
+  },
+  {
+   "OPENING_REF": "GR-OP-002",
+   "FLOOR": "GROUND",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    383.025,
+    167.4935,
+    383.175,
+    168.2945
+   ],
+   "AXIS": "Y",
+   "WIDTH_M": 0.801,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.7622,
+   "HOST_COMPONENT_REF": "WALL-LINE::GROUND::Y::383.0359::166.6831::0.15",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "GR-OP-003",
+   "FLOOR": "GROUND",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    361.391997,
+    162.8415,
+    361.592003,
+    164.6405
+   ],
+   "AXIS": "Y",
+   "WIDTH_M": 1.799,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 3.9578,
+   "HOST_COMPONENT_REF": "WALL-LINE::GROUND::Y::361.4059::156.7832::0.2",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "GR-OP-004",
+   "FLOOR": "GROUND",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    361.390997,
+    169.7925,
+    361.591003,
+    170.5935
+   ],
+   "AXIS": "Y",
+   "WIDTH_M": 0.801,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.7622,
+   "HOST_COMPONENT_REF": null,
+   "HOST_ASSIGNMENT_STATUS": "HOST_WALL_UNRESOLVED"
+  },
+  {
+   "OPENING_REF": "GR-OP-005",
+   "FLOOR": "GROUND",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    376.927,
+    159.466961,
+    377.827,
+    159.567039
+   ],
+   "AXIS": "X",
+   "WIDTH_M": 0.9,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.98,
+   "HOST_COMPONENT_REF": null,
+   "HOST_ASSIGNMENT_STATUS": "HOST_WALL_UNRESOLVED"
+  },
+  {
+   "OPENING_REF": "GR-OP-006",
+   "FLOOR": "GROUND",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    375.0675,
+    170.094,
+    375.8685,
+    170.244
+   ],
+   "AXIS": "X",
+   "WIDTH_M": 0.801,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.7622,
+   "HOST_COMPONENT_REF": "WALL-LINE::GROUND::X::170.0831::374.1459::0.15",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "GR-OP-007",
+   "FLOOR": "GROUND",
+   "TYPE": "UNKNOWN",
+   "GEOMETRY": [
+    374.525,
+    162.816017,
+    375.125,
+    162.965983
+   ],
+   "AXIS": "X",
+   "WIDTH_M": 0.6,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": null,
+   "HEIGHT_SOURCE": "NOT_ESTABLISHED",
+   "AREA_M2": null,
+   "HOST_COMPONENT_REF": null,
+   "HOST_ASSIGNMENT_STATUS": "HOST_WALL_UNRESOLVED"
+  },
+  {
+   "OPENING_REF": "GR-OP-008",
+   "FLOOR": "GROUND",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    373.983995,
+    169.122,
+    374.134005,
+    170.024
+   ],
+   "AXIS": "Y",
+   "WIDTH_M": 0.902,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.9844,
+   "HOST_COMPONENT_REF": "WALL-LINE::GROUND::Y::373.9959::168.1331::0.15",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "GR-OP-009",
+   "FLOOR": "GROUND",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    372.93,
+    167.995002,
+    373.828,
+    168.144998
+   ],
+   "AXIS": "X",
+   "WIDTH_M": 0.898,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.9756,
+   "HOST_COMPONENT_REF": "WALL-LINE::GROUND::X::167.9831::367.8859::0.15",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "GR-OP-010",
+   "FLOOR": "GROUND",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    367.776,
+    157.15,
+    367.926,
+    158.052
+   ],
+   "AXIS": "Y",
+   "WIDTH_M": 0.902,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.9844,
+   "HOST_COMPONENT_REF": null,
+   "HOST_ASSIGNMENT_STATUS": "HOST_WALL_UNRESOLVED"
+  },
+  {
+   "OPENING_REF": "GR-OP-011",
+   "FLOOR": "GROUND",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    382.826,
+    165.2555,
+    382.976,
+    166.0565
+   ],
+   "AXIS": "Y",
+   "WIDTH_M": 0.801,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.7622,
+   "HOST_COMPONENT_REF": "WALL-LINE::GROUND::Y::382.8359::165.1331::0.15",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "GR-OP-012",
+   "FLOOR": "GROUND",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    368.7565,
+    171.142,
+    369.5575,
+    171.292
+   ],
+   "AXIS": "X",
+   "WIDTH_M": 0.801,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.7622,
+   "HOST_COMPONENT_REF": "WALL-LINE::GROUND::X::171.1331::367.8859::0.15",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "GR-OP-013",
+   "FLOOR": "GROUND",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    376.239,
+    167.995002,
+    377.139,
+    168.144998
+   ],
+   "AXIS": "X",
+   "WIDTH_M": 0.9,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.98,
+   "HOST_COMPONENT_REF": "WALL-LINE::GROUND::X::167.9831::367.8859::0.15",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "GR-OP-014",
+   "FLOOR": "GROUND",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    370.7745,
+    156.966,
+    371.5755,
+    157.066
+   ],
+   "AXIS": "X",
+   "WIDTH_M": 0.801,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.7622,
+   "HOST_COMPONENT_REF": null,
+   "HOST_ASSIGNMENT_STATUS": "HOST_WALL_UNRESOLVED"
+  },
+  {
+   "OPENING_REF": "GR-OP-015",
+   "FLOOR": "GROUND",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    368.8265,
+    156.865,
+    369.6235,
+    156.965
+   ],
+   "AXIS": "X",
+   "WIDTH_M": 0.797,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.7534,
+   "HOST_COMPONENT_REF": null,
+   "HOST_ASSIGNMENT_STATUS": "HOST_WALL_UNRESOLVED"
+  },
+  {
+   "OPENING_REF": "GR-OP-016",
+   "FLOOR": "GROUND",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    376.928,
+    154.216009,
+    377.828,
+    154.415991
+   ],
+   "AXIS": "X",
+   "WIDTH_M": 0.9,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 1.98,
+   "HOST_COMPONENT_REF": "WALL-LINE::GROUND::X::154.2331::363.3059::0.2",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "FI-OP-000",
+   "FLOOR": "FIRST",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    330.421,
+    162.344015,
+    331.423,
+    162.443985
+   ],
+   "AXIS": "X",
+   "WIDTH_M": 1.002,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 2.2044,
+   "HOST_COMPONENT_REF": null,
+   "HOST_ASSIGNMENT_STATUS": "HOST_WALL_UNRESOLVED"
+  },
+  {
+   "OPENING_REF": "FI-OP-001",
+   "FLOOR": "FIRST",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    333.590012,
+    163.142,
+    333.789988,
+    164.142
+   ],
+   "AXIS": "Y",
+   "WIDTH_M": 1.0,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 2.2,
+   "HOST_COMPONENT_REF": "WALL-LINE::FIRST::Y::333.5938::159.7831::0.2",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "FI-OP-002",
+   "FLOOR": "FIRST",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    330.421,
+    159.594006,
+    331.423,
+    159.793994
+   ],
+   "AXIS": "X",
+   "WIDTH_M": 1.002,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 2.2044,
+   "HOST_COMPONENT_REF": "WALL-LINE::FIRST::X::159.5831::325.8938::0.2",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  },
+  {
+   "OPENING_REF": "FI-OP-003",
+   "FLOOR": "FIRST",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    332.465,
+    162.792988,
+    333.463,
+    162.993012
+   ],
+   "AXIS": "X",
+   "WIDTH_M": 0.998,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 2.1956,
+   "HOST_COMPONENT_REF": null,
+   "HOST_ASSIGNMENT_STATUS": "HOST_WALL_UNRESOLVED"
+  },
+  {
+   "OPENING_REF": "FI-OP-004",
+   "FLOOR": "FIRST",
+   "TYPE": "DOOR",
+   "GEOMETRY": [
+    329.989035,
+    166.846,
+    330.138965,
+    167.848
+   ],
+   "AXIS": "Y",
+   "WIDTH_M": 1.002,
+   "WIDTH_SOURCE": "DRAWING_JAMB_TO_JAMB",
+   "HEIGHT_M": 2.2,
+   "HEIGHT_SOURCE": "OWNER_CONFIRMED_PROJECT_INPUT",
+   "AREA_M2": 2.2044,
+   "HOST_COMPONENT_REF": "WALL-LINE::FIRST::Y::329.9938::163.6832::0.1499",
+   "HOST_ASSIGNMENT_STATUS": "HOST_ASSIGNED"
+  }
+ ],
+ "SPACES": [
+  {
+   "ROOM_ID": "ROOM::BASEMENT::BA-001",
+   "FLOOR": "BASEMENT",
+   "LABEL": "CAR PARKING",
+   "COMPONENTS": 1,
+   "AREA_M2": 140.911094,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::BASEMENT::BA-003",
+   "FLOOR": "BASEMENT",
+   "LABEL": null,
+   "COMPONENTS": 1,
+   "AREA_M2": 30.257238,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::BASEMENT::BA-005",
+   "FLOOR": "BASEMENT",
+   "LABEL": "STORE",
+   "COMPONENTS": 1,
+   "AREA_M2": 12.87958,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::BASEMENT::BA-007",
+   "FLOOR": "BASEMENT",
+   "LABEL": "PANTRY",
+   "COMPONENTS": 1,
+   "AREA_M2": 3.059936,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::BASEMENT::BA-009",
+   "FLOOR": "BASEMENT",
+   "LABEL": "DEWANIYA",
+   "COMPONENTS": 1,
+   "AREA_M2": 80.888729,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::BASEMENT::BA-011",
+   "FLOOR": "BASEMENT",
+   "LABEL": "BATH",
+   "COMPONENTS": 1,
+   "AREA_M2": 7.19978,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::BASEMENT::BA-022",
+   "FLOOR": "BASEMENT",
+   "LABEL": null,
+   "COMPONENTS": 1,
+   "AREA_M2": 2.277003,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::BASEMENT::BA-024",
+   "FLOOR": "BASEMENT",
+   "LABEL": null,
+   "COMPONENTS": 1,
+   "AREA_M2": 3.028977,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::BASEMENT::BA-036",
+   "FLOOR": "BASEMENT",
+   "LABEL": "MUGALLAT",
+   "COMPONENTS": 1,
+   "AREA_M2": 68.995334,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::BASEMENT::BA-038",
+   "FLOOR": "BASEMENT",
+   "LABEL": null,
+   "COMPONENTS": 1,
+   "AREA_M2": 18.249785,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::BASEMENT::BA-040",
+   "FLOOR": "BASEMENT",
+   "LABEL": null,
+   "COMPONENTS": 1,
+   "AREA_M2": 20.405446,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::BASEMENT::BA-043",
+   "FLOOR": "BASEMENT",
+   "LABEL": null,
+   "COMPONENTS": 1,
+   "AREA_M2": 4.874974,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::BASEMENT::BA-053",
+   "FLOOR": "BASEMENT",
+   "LABEL": null,
+   "COMPONENTS": 1,
+   "AREA_M2": 2.320014,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::BASEMENT::BA-054",
+   "FLOOR": "BASEMENT",
+   "LABEL": "DRIVER",
+   "COMPONENTS": 1,
+   "AREA_M2": 4.93,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::BASEMENT::BA-066",
+   "FLOOR": "BASEMENT",
+   "LABEL": null,
+   "COMPONENTS": 1,
+   "AREA_M2": 0.960006,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::BASEMENT::BA-067",
+   "FLOOR": "BASEMENT",
+   "LABEL": "PANTRY",
+   "COMPONENTS": 1,
+   "AREA_M2": 2.04,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::BASEMENT::BA-070",
+   "FLOOR": "BASEMENT",
+   "LABEL": null,
+   "COMPONENTS": 1,
+   "AREA_M2": 3.239987,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::BASEMENT::BA-077",
+   "FLOOR": "BASEMENT",
+   "LABEL": "BATH",
+   "COMPONENTS": 1,
+   "AREA_M2": 2.782531,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::BASEMENT::BA-092",
+   "FLOOR": "BASEMENT",
+   "LABEL": "HALL",
+   "COMPONENTS": 1,
+   "AREA_M2": 146.97004,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-000",
+   "FLOOR": "GROUND",
+   "LABEL": null,
+   "COMPONENTS": 1,
+   "AREA_M2": 3.994982,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-012",
+   "FLOOR": "GROUND",
+   "LABEL": null,
+   "COMPONENTS": 1,
+   "AREA_M2": 6.544849,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-013",
+   "FLOOR": "GROUND",
+   "LABEL": "BED ROOM",
+   "COMPONENTS": 1,
+   "AREA_M2": 27.268384,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-015",
+   "FLOOR": "GROUND",
+   "LABEL": "HALL",
+   "COMPONENTS": 1,
+   "AREA_M2": 84.178983,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-028",
+   "FLOOR": "GROUND",
+   "LABEL": null,
+   "COMPONENTS": 1,
+   "AREA_M2": 34.329177,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-030",
+   "FLOOR": "GROUND",
+   "LABEL": "WASH",
+   "COMPONENTS": 1,
+   "AREA_M2": 5.400038,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-032",
+   "FLOOR": "GROUND",
+   "LABEL": "BATH",
+   "COMPONENTS": 1,
+   "AREA_M2": 6.395948,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-033",
+   "FLOOR": "GROUND",
+   "LABEL": "BATH",
+   "COMPONENTS": 1,
+   "AREA_M2": 4.319976,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-035",
+   "FLOOR": "GROUND",
+   "LABEL": "HALL",
+   "COMPONENTS": 1,
+   "AREA_M2": 91.060386,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-047",
+   "FLOOR": "GROUND",
+   "LABEL": null,
+   "COMPONENTS": 1,
+   "AREA_M2": 1.127743,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-048",
+   "FLOOR": "GROUND",
+   "LABEL": "BED ROOM",
+   "COMPONENTS": 1,
+   "AREA_M2": 20.384264,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-049",
+   "FLOOR": "GROUND",
+   "LABEL": "BATH",
+   "COMPONENTS": 1,
+   "AREA_M2": 4.50003,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-051",
+   "FLOOR": "GROUND",
+   "LABEL": null,
+   "COMPONENTS": 1,
+   "AREA_M2": 4.229987,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-054",
+   "FLOOR": "GROUND",
+   "LABEL": "ROOF",
+   "COMPONENTS": 1,
+   "AREA_M2": 14.295052,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-064",
+   "FLOOR": "GROUND",
+   "LABEL": "M.BED ROOM",
+   "COMPONENTS": 1,
+   "AREA_M2": 23.999698,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-071",
+   "FLOOR": "GROUND",
+   "LABEL": null,
+   "COMPONENTS": 1,
+   "AREA_M2": 3.235844,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-076",
+   "FLOOR": "GROUND",
+   "LABEL": null,
+   "COMPONENTS": 1,
+   "AREA_M2": 3.47999,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-078",
+   "FLOOR": "GROUND",
+   "LABEL": "BATH",
+   "COMPONENTS": 1,
+   "AREA_M2": 5.039979,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-086",
+   "FLOOR": "GROUND",
+   "LABEL": null,
+   "COMPONENTS": 1,
+   "AREA_M2": 0.220005,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-095",
+   "FLOOR": "GROUND",
+   "LABEL": "BED ROOM",
+   "COMPONENTS": 1,
+   "AREA_M2": 18.325979,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-098",
+   "FLOOR": "GROUND",
+   "LABEL": "KITCHEN",
+   "COMPONENTS": 1,
+   "AREA_M2": 41.000181,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-106",
+   "FLOOR": "GROUND",
+   "LABEL": "WASH",
+   "COMPONENTS": 1,
+   "AREA_M2": 4.069971,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-108",
+   "FLOOR": "GROUND",
+   "LABEL": "M.BED ROOM",
+   "COMPONENTS": 1,
+   "AREA_M2": 31.920021,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-112",
+   "FLOOR": "GROUND",
+   "LABEL": "DRESS",
+   "COMPONENTS": 1,
+   "AREA_M2": 2.955097,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-117",
+   "FLOOR": "GROUND",
+   "LABEL": "BATH",
+   "COMPONENTS": 1,
+   "AREA_M2": 2.800021,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::GROUND::GR-121",
+   "FLOOR": "GROUND",
+   "LABEL": "BATH",
+   "COMPONENTS": 1,
+   "AREA_M2": 3.060047,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::FIRST::FI-003",
+   "FLOOR": "FIRST",
+   "LABEL": "MECH.ROOM",
+   "COMPONENTS": 1,
+   "AREA_M2": 11.33313,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::FIRST::FI-005",
+   "FLOOR": "FIRST",
+   "LABEL": null,
+   "COMPONENTS": 1,
+   "AREA_M2": 28.405211,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::FIRST::FI-007",
+   "FLOOR": "FIRST",
+   "LABEL": "STORE",
+   "COMPONENTS": 1,
+   "AREA_M2": 11.479761,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::FIRST::FI-018",
+   "FLOOR": "FIRST",
+   "LABEL": null,
+   "COMPONENTS": 1,
+   "AREA_M2": 2.500012,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  },
+  {
+   "ROOM_ID": "ROOM::FIRST::FI-025",
+   "FLOOR": "FIRST",
+   "LABEL": "HEATERS",
+   "COMPONENTS": 1,
+   "AREA_M2": 5.400318,
+   "STATUS": "ASSIGNED_TO_SPACE"
+  }
+ ],
+ "UNRESOLVED": [
+  {
+   "QUESTION": "Which wall hosts opening BA-OP-001?",
+   "KIND": "HOST_WALL_UNRESOLVED",
+   "FLOOR": "BASEMENT",
+   "AFFECTED_QUANTITY_M2": 5.06,
+   "CANDIDATES": [
+    "WALL-LINE::BASEMENT::X::162.7831::416.1569::0.2",
+    "WALL-LINE::BASEMENT::X::164.9831::410.2569::0.2"
+   ],
+   "EVIDENCE": [
+    {
+     "RULE": "HOST_AMBIGUOUS",
+     "DETAIL": {
+      "WHY": "two or more wall bands are equally plausible hosts; apportioning the deduction between them would put material against a wall that does not have this hole in it",
+      "BEST": {
+       "CONTAINMENT": 0.08136506649389898,
+       "AXIS_AGREEMENT": 0.0,
+       "THICKNESS_AGREEMENT": 0.4019694537049645,
+       "SPAN_OVERLAP": 1.0,
+       "PROXIMITY": 0.0,
+       "SCORE": 0.2629399173385525,
+       "WEIGHTS": {
+        "CONTAINMENT": 0.4,
+        "AXIS_AGREEMENT": 0.2,
+        "THICKNESS_AGREEMENT": 0.2,
+        "SPAN_OVERLAP": 0.15,
+        "PROXIMITY": 0.05
+       }
+      },
+      "RUNNER_UP_SCORE": 0.2500217771869083,
+      "MARGIN": 0.012918140151644164,
+      "DECISIVE_MARGIN": 0.15,
+      "CANDIDATES": [
+       "WALL-LINE::BASEMENT::X::162.7831::416.1569::0.2",
+       "WALL-LINE::BASEMENT::X::164.9831::410.2569::0.2"
+      ]
+     }
+    }
+   ],
+   "BLOCKS": "the split of wall quantity between thicknesses on this floor"
+  },
+  {
+   "QUESTION": "Which wall hosts opening BA-OP-003?",
+   "KIND": "HOST_WALL_UNRESOLVED",
+   "FLOOR": "BASEMENT",
+   "AFFECTED_QUANTITY_M2": 1.7644,
+   "CANDIDATES": [],
+   "EVIDENCE": [
+    {
+     "RULE": "NO_HOST_CANDIDATE",
+     "DETAIL": {
+      "WHY": "no wall band on this floor intersects or lies within tolerance of the opening",
+      "TOLERANCE_M": 0.005
+     }
+    }
+   ],
+   "BLOCKS": "the split of wall quantity between thicknesses on this floor"
+  },
+  {
+   "QUESTION": "Which wall hosts opening BA-OP-012?",
+   "KIND": "HOST_WALL_UNRESOLVED",
+   "FLOOR": "BASEMENT",
+   "AFFECTED_QUANTITY_M2": 1.7556,
+   "CANDIDATES": [],
+   "EVIDENCE": [
+    {
+     "RULE": "NO_HOST_CANDIDATE",
+     "DETAIL": {
+      "WHY": "no wall band on this floor intersects or lies within tolerance of the opening",
+      "TOLERANCE_M": 0.005
+     }
+    }
+   ],
+   "BLOCKS": "the split of wall quantity between thicknesses on this floor"
+  },
+  {
+   "QUESTION": "Which wall hosts opening BA-OP-014?",
+   "KIND": "HOST_WALL_UNRESOLVED",
+   "FLOOR": "BASEMENT",
+   "AFFECTED_QUANTITY_M2": 1.98,
+   "CANDIDATES": [],
+   "EVIDENCE": [
+    {
+     "RULE": "NO_HOST_CANDIDATE",
+     "DETAIL": {
+      "WHY": "no wall band on this floor intersects or lies within tolerance of the opening",
+      "TOLERANCE_M": 0.005
+     }
+    }
+   ],
+   "BLOCKS": "the split of wall quantity between thicknesses on this floor"
+  },
+  {
+   "QUESTION": "Which wall hosts opening GR-OP-001?",
+   "KIND": "HOST_WALL_UNRESOLVED",
+   "FLOOR": "GROUND",
+   "AFFECTED_QUANTITY_M2": 1.9844,
+   "CANDIDATES": [],
+   "EVIDENCE": [
+    {
+     "RULE": "NO_HOST_CANDIDATE",
+     "DETAIL": {
+      "WHY": "no wall band on this floor intersects or lies within tolerance of the opening",
+      "TOLERANCE_M": 0.005
+     }
+    }
+   ],
+   "BLOCKS": "the split of wall quantity between thicknesses on this floor"
+  },
+  {
+   "QUESTION": "Which wall hosts opening GR-OP-004?",
+   "KIND": "HOST_WALL_UNRESOLVED",
+   "FLOOR": "GROUND",
+   "AFFECTED_QUANTITY_M2": 1.7622,
+   "CANDIDATES": [
+    "WALL-LINE::GROUND::X::170.5832::361.4059::0.1"
+   ],
+   "EVIDENCE": [
+    {
+     "RULE": "HOST_NOT_CONTAINED",
+     "DETAIL": {
+      "WHY": "the leading candidate does not contain the opening, or runs across it rather than along it",
+      "BEST": {
+       "CONTAINMENT": 0.011930032554604722,
+       "AXIS_AGREEMENT": 0.0,
+       "THICKNESS_AGREEMENT": 0.0,
+       "SPAN_OVERLAP": 0.9254774408054489,
+       "PROXIMITY": 0.0,
+       "SCORE": 0.14359362914265922,
+       "WEIGHTS": {
+        "CONTAINMENT": 0.4,
+        "AXIS_AGREEMENT": 0.2,
+        "THICKNESS_AGREEMENT": 0.2,
+        "SPAN_OVERLAP": 0.15,
+        "PROXIMITY": 0.05
+       }
+      },
+      "RUNNER_UP_SCORE": null,
+      "MARGIN": null,
+      "DECISIVE_MARGIN": 0.15,
+      "CANDIDATES": [
+       "WALL-LINE::GROUND::X::170.5832::361.4059::0.1"
+      ]
+     }
+    }
+   ],
+   "BLOCKS": "the split of wall quantity between thicknesses on this floor"
+  },
+  {
+   "QUESTION": "Which wall hosts opening GR-OP-005?",
+   "KIND": "HOST_WALL_UNRESOLVED",
+   "FLOOR": "GROUND",
+   "AFFECTED_QUANTITY_M2": 1.98,
+   "CANDIDATES": [],
+   "EVIDENCE": [
+    {
+     "RULE": "NO_HOST_CANDIDATE",
+     "DETAIL": {
+      "WHY": "no wall band on this floor intersects or lies within tolerance of the opening",
+      "TOLERANCE_M": 0.005
+     }
+    }
+   ],
+   "BLOCKS": "the split of wall quantity between thicknesses on this floor"
+  },
+  {
+   "QUESTION": "Which wall hosts opening GR-OP-007?",
+   "KIND": "HOST_WALL_UNRESOLVED",
+   "FLOOR": "GROUND",
+   "AFFECTED_QUANTITY_M2": null,
+   "CANDIDATES": [],
+   "EVIDENCE": [
+    {
+     "RULE": "NO_HOST_CANDIDATE",
+     "DETAIL": {
+      "WHY": "no wall band on this floor intersects or lies within tolerance of the opening",
+      "TOLERANCE_M": 0.005
+     }
+    }
+   ],
+   "BLOCKS": "the split of wall quantity between thicknesses on this floor"
+  },
+  {
+   "QUESTION": "Which wall hosts opening GR-OP-010?",
+   "KIND": "HOST_WALL_UNRESOLVED",
+   "FLOOR": "GROUND",
+   "AFFECTED_QUANTITY_M2": 1.9844,
+   "CANDIDATES": [],
+   "EVIDENCE": [
+    {
+     "RULE": "NO_HOST_CANDIDATE",
+     "DETAIL": {
+      "WHY": "no wall band on this floor intersects or lies within tolerance of the opening",
+      "TOLERANCE_M": 0.005
+     }
+    }
+   ],
+   "BLOCKS": "the split of wall quantity between thicknesses on this floor"
+  },
+  {
+   "QUESTION": "Which wall hosts opening GR-OP-014?",
+   "KIND": "HOST_WALL_UNRESOLVED",
+   "FLOOR": "GROUND",
+   "AFFECTED_QUANTITY_M2": 1.7622,
+   "CANDIDATES": [],
+   "EVIDENCE": [
+    {
+     "RULE": "NO_HOST_CANDIDATE",
+     "DETAIL": {
+      "WHY": "no wall band on this floor intersects or lies within tolerance of the opening",
+      "TOLERANCE_M": 0.005
+     }
+    }
+   ],
+   "BLOCKS": "the split of wall quantity between thicknesses on this floor"
+  },
+  {
+   "QUESTION": "Which wall hosts opening GR-OP-015?",
+   "KIND": "HOST_WALL_UNRESOLVED",
+   "FLOOR": "GROUND",
+   "AFFECTED_QUANTITY_M2": 1.7534,
+   "CANDIDATES": [],
+   "EVIDENCE": [
+    {
+     "RULE": "NO_HOST_CANDIDATE",
+     "DETAIL": {
+      "WHY": "no wall band on this floor intersects or lies within tolerance of the opening",
+      "TOLERANCE_M": 0.005
+     }
+    }
+   ],
+   "BLOCKS": "the split of wall quantity between thicknesses on this floor"
+  },
+  {
+   "QUESTION": "Which wall hosts opening FI-OP-000?",
+   "KIND": "HOST_WALL_UNRESOLVED",
+   "FLOOR": "FIRST",
+   "AFFECTED_QUANTITY_M2": 2.2044,
+   "CANDIDATES": [
+    "WALL-LINE::FIRST::Y::330.1438::162.2831::0.2833"
+   ],
+   "EVIDENCE": [
+    {
+     "RULE": "HOST_NOT_CONTAINED",
+     "DETAIL": {
+      "WHY": "the leading candidate does not contain the opening, or runs across it rather than along it",
+      "BEST": {
+       "CONTAINMENT": 0.006040956167251132,
+       "AXIS_AGREEMENT": 0.0,
+       "THICKNESS_AGREEMENT": 0.3528800057833711,
+       "SPAN_OVERLAP": 1.0,
+       "PROXIMITY": 0.0,
+       "SCORE": 0.22299238362357465,
+       "WEIGHTS": {
+        "CONTAINMENT": 0.4,
+        "AXIS_AGREEMENT": 0.2,
+        "THICKNESS_AGREEMENT": 0.2,
+        "SPAN_OVERLAP": 0.15,
+        "PROXIMITY": 0.05
+       }
+      },
+      "RUNNER_UP_SCORE": null,
+      "MARGIN": null,
+      "DECISIVE_MARGIN": 0.15,
+      "CANDIDATES": [
+       "WALL-LINE::FIRST::Y::330.1438::162.2831::0.2833"
+      ]
+     }
+    }
+   ],
+   "BLOCKS": "the split of wall quantity between thicknesses on this floor"
+  },
+  {
+   "QUESTION": "Which wall hosts opening FI-OP-003?",
+   "KIND": "HOST_WALL_UNRESOLVED",
+   "FLOOR": "FIRST",
+   "AFFECTED_QUANTITY_M2": 2.1956,
+   "CANDIDATES": [
+    "WALL-LINE::FIRST::X::162.7831::331.7937::0.2"
+   ],
+   "EVIDENCE": [
+    {
+     "RULE": "HOST_NOT_CONTAINED",
+     "DETAIL": {
+      "WHY": "the leading candidate does not contain the opening, or runs across it rather than along it",
+      "BEST": {
+       "CONTAINMENT": 0.002884087047495387,
+       "AXIS_AGREEMENT": 1.0,
+       "THICKNESS_AGREEMENT": 1.0,
+       "SPAN_OVERLAP": 0.003033818681805552,
+       "PROXIMITY": 0.0,
+       "SCORE": 0.401608707621269,
+       "WEIGHTS": {
+        "CONTAINMENT": 0.4,
+        "AXIS_AGREEMENT": 0.2,
+        "THICKNESS_AGREEMENT": 0.2,
+        "SPAN_OVERLAP": 0.15,
+        "PROXIMITY": 0.05
+       }
+      },
+      "RUNNER_UP_SCORE": null,
+      "MARGIN": null,
+      "DECISIVE_MARGIN": 0.15,
+      "CANDIDATES": [
+       "WALL-LINE::FIRST::X::162.7831::331.7937::0.2"
+      ]
+     }
+    }
+   ],
+   "BLOCKS": "the split of wall quantity between thicknesses on this floor"
+  }
+ ]
+}

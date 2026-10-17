@@ -1,0 +1,147 @@
+{
+ "SCHEMA": "URBAN_R8_8_OLD_QORTUBA_CROSS_ROUTE_V1",
+ "revision": "QORTUBA_REV_OLD",
+ "routes": {
+  "K1": "pinned LibreDWG 0.13.3 decode -> kernel",
+  "K2": "ezdxf on LibreDWG's DXF of the same DWG"
+ },
+ "inputs": {
+  "OLD_K1": {
+   "parts": 1118,
+   "texts": 61,
+   "dimensions": 101,
+   "validation": "COMPLETE"
+  },
+  "OLD_K2": {
+   "parts": 1118,
+   "texts": 61,
+   "dimensions": 101,
+   "validation": "COMPLETE"
+  }
+ },
+ "admitted": {
+  "OLD_K1": {
+   "admitted_boundary": 225,
+   "closures": 19,
+   "probes": 893,
+   "labels": 61
+  },
+  "OLD_K2": {
+   "admitted_boundary": 225,
+   "closures": 19,
+   "probes": 893,
+   "labels": 61
+  }
+ },
+ "unrealised_source_entities": {
+  "OLD_K1": {
+   "blocking_input_count": 0,
+   "sites": {},
+   "recorded_by_disposition_layer_code": {
+    "IN_SHEET_FRAME_OCCURRENCE | FRAME | CUSTOM_CLASS": 1,
+    "NOT_IN_ANY_BOUNDED_SITE_BY_LAYER_EVIDENCE | OFFICE NAME | UNHANDLED": 38
+   },
+   "blocking_by_disposition_layer_code": {}
+  },
+  "OLD_K2": {
+   "blocking_input_count": 0,
+   "sites": {},
+   "recorded_by_disposition_layer_code": {
+    "NOT_IN_ANY_BOUNDED_SITE_BY_LAYER_EVIDENCE | OFFICE NAME | UNHANDLED": 38
+   },
+   "blocking_by_disposition_layer_code": {}
+  }
+ },
+ "comparison": {
+  "sites_K1": 75,
+  "sites_K2": 75,
+  "common_site_ids": 75,
+  "only_K1": [],
+  "only_K2": [],
+  "differences": [],
+  "max_area_difference_m2": 5.96074301029148e-11,
+  "same_topology": true,
+  "H584": {
+   "sites_bounded_by_H584": [
+    "SITE-167313f677c556ab",
+    "SITE-5613caf47fb31d11"
+   ],
+   "areas_m2": {
+    "SITE-167313f677c556ab": [
+     1.6650000000476837,
+     1.6650000000476837
+    ],
+    "SITE-5613caf47fb31d11": [
+     127.50995166003705,
+     127.5099516600132
+    ]
+   },
+   "labels": {
+    "SITE-167313f677c556ab": [],
+    "SITE-5613caf47fb31d11": [
+     "I1283"
+    ]
+   }
+  },
+  "openings_equal": true
+ },
+ "rows_K1": {
+  "Q-03": {
+   "state": "COMPUTED_SHADOW",
+   "value": 17.7425
+  },
+  "Q-03P": {
+   "state": "COMPUTED_SHADOW",
+   "value": 11.685
+  },
+  "Q-11": {
+   "state": "COMPUTED_SHADOW",
+   "value": 17.7425
+  },
+  "Q-12": {
+   "state": "COMPUTED_SHADOW",
+   "value": 11.685
+  },
+  "Q-13": {
+   "state": "BLOCKED",
+   "value": null
+  },
+  "Q-14": {
+   "state": "BLOCKED",
+   "value": null
+  }
+ },
+ "rows_K2": {
+  "Q-03": {
+   "state": "COMPUTED_SHADOW",
+   "value": 17.7425
+  },
+  "Q-03P": {
+   "state": "COMPUTED_SHADOW",
+   "value": 11.685
+  },
+  "Q-11": {
+   "state": "COMPUTED_SHADOW",
+   "value": 17.7425
+  },
+  "Q-12": {
+   "state": "COMPUTED_SHADOW",
+   "value": 11.685
+  },
+  "Q-13": {
+   "state": "BLOCKED",
+   "value": null
+  },
+  "Q-14": {
+   "state": "BLOCKED",
+   "value": null
+  }
+ },
+ "rows_equal": true,
+ "every_difference_classified": {
+  "topology": "none remain after the two post-freeze robustness fixes F-R88-08 / F-R88-09 (both found by this run; tolerance numbers unchanged)",
+  "coordinates": "1115 of 1118 parts differ by < 1e-9 units (decoder text / float paths); H584 is horizontal to 4e-12 in K1 and exactly in K2: PARSER_DIFFERENCE, absorbed by eps_n, no site changes",
+  "unrealised_entities": "K1 reports one custom-class RTEXT inside the sheet-frame occurrence; LibreDWG's DXF carries none: PARSER_DIFFERENCE, no effect (frame occurrence, recorded not blocking)"
+ },
+ "goal": "SAME PHYSICAL SOURCE -> ROUTE-STABLE TOPOLOGY (not: match the old BOQ)"
+}

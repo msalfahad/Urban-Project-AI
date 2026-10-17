@@ -1,0 +1,2699 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_B2A_PHYSICAL_CONCRETE_V1",
+ "policy": {
+  "policy_id": "PHYSICAL_CONCRETE_MODEL_V1",
+  "stair_policy_id": "STAIR_CONCRETE_V2",
+  "components": [
+   "SLAB",
+   "DOWNSTAND_BEAM",
+   "BEAM_COLUMN_JOINT",
+   "COLUMN"
+  ],
+  "reporting_views": [
+   "GROSS_BEAM"
+  ],
+  "stair": "STAIR_CONCRETE_V2: independent riser / tread counts; waist + wedges + landings; beams separate; blocked when any input is missing",
+  "digest": "42c468d139b78b057e5cb06306bfe4cd980ea7ac1f239463d4b3047c407fb7bb"
+ },
+ "storeys": {
+  "GF": {
+   "sheet": "GF_ROOF_SLAB",
+   "slab_thickness_cm": 16,
+   "model": {
+    "components": [
+     {
+      "component": "SLAB",
+      "id": "SLAB",
+      "volume_m3": 44.286118,
+      "formula": "net plate area x t"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B16:ALSENAN_ST7757_DXF|H1139||TEXT|0",
+      "volume_m3": 0.59295,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B13:ALSENAN_ST7757_DXF|H1127||TEXT|0",
+      "volume_m3": 0.805611,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B11:ALSENAN_ST7757_DXF|H1092||TEXT|0",
+      "volume_m3": 0.53986,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B1:ALSENAN_ST7757_DXF|H1093||TEXT|0",
+      "volume_m3": 0.07056,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B4:ALSENAN_ST7757_DXF|H1094||TEXT|0",
+      "volume_m3": 0.255,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B7:ALSENAN_ST7757_DXF|H1234||TEXT|0",
+      "volume_m3": 0.2006,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B20:ALSENAN_ST7757_DXF|H1110|1107|TEXT|0",
+      "volume_m3": 0.8437,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B3:ALSENAN_ST7757_DXF|H1122||TEXT|0",
+      "volume_m3": 0.1584,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B1:ALSENAN_ST7757_DXF|H1126||TEXT|0",
+      "volume_m3": 0.123334,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B4:ALSENAN_ST7757_DXF|H1243||TEXT|0",
+      "volume_m3": 0.23319,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B8:ALSENAN_ST7757_DXF|H1138||TEXT|0",
+      "volume_m3": 0.415377,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B1:ALSENAN_ST7757_DXF|H1294||TEXT|0",
+      "volume_m3": 0.0576,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B1:ALSENAN_ST7757_DXF|H1697||TEXT|0",
+      "volume_m3": 0.055075,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "CB7:ALSENAN_ST7757_DXF|H1145||TEXT|0",
+      "volume_m3": 1.3688,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B24:ALSENAN_ST7757_DXF|H6170|6164|TEXT|0",
+      "volume_m3": 1.121,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B3:ALSENAN_ST7757_DXF|H1719||TEXT|0",
+      "volume_m3": 0.12,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B5:ALSENAN_ST7757_DXF|H1176||TEXT|0",
+      "volume_m3": 0.245953,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B4:ALSENAN_ST7757_DXF|H1175||TEXT|0",
+      "volume_m3": 0.201584,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B2:ALSENAN_ST7757_DXF|H1170||TEXT|0",
+      "volume_m3": 0.1296,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "CB4:ALSENAN_ST7757_DXF|H1116||TEXT|0",
+      "volume_m3": 0.388272,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B22:ALSENAN_ST7757_DXF|H1174||TEXT|0",
+      "volume_m3": 2.301,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B14:ALSENAN_ST7757_DXF|H1119||TEXT|0",
+      "volume_m3": 0.2124,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B1:ALSENAN_ST7757_DXF|H1095||TEXT|0",
+      "volume_m3": 0.084,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B1:ALSENAN_ST7757_DXF|H1207||TEXT|0",
+      "volume_m3": 0.0336,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B3:ALSENAN_ST7757_DXF|H1096||TEXT|0",
+      "volume_m3": 0.1416,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B2:ALSENAN_ST7757_DXF|H1097||TEXT|0",
+      "volume_m3": 0.1296,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B7:ALSENAN_ST7757_DXF|H1206||TEXT|0",
+      "volume_m3": 0.1416,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B1:ALSENAN_ST7757_DXF|H1118||TEXT|0",
+      "volume_m3": 0.0864,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "CB1:ALSENAN_ST7757_DXF|H1249||TEXT|0",
+      "volume_m3": 2.49865,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B1:ALSENAN_ST7757_DXF|H1142||TEXT|0",
+      "volume_m3": 0.078,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B1:ALSENAN_ST7757_DXF|H1143||TEXT|0",
+      "volume_m3": 0.087657,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B9:ALSENAN_ST7757_DXF|H1469||TEXT|0",
+      "volume_m3": 0.708,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B4:ALSENAN_ST7757_DXF|H1288||TEXT|0",
+      "volume_m3": 0.306,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B1:ALSENAN_ST7757_DXF|H1144||TEXT|0",
+      "volume_m3": 0.0624,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B2:ALSENAN_ST7757_DXF|H1157||TEXT|0",
+      "volume_m3": 0.1248,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B28:ALSENAN_ST7757_DXF|H1132||TEXT|0",
+      "volume_m3": 0.118717,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B1:ALSENAN_ST7757_DXF|H1072||TEXT|0",
+      "volume_m3": 0.0552,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B17:ALSENAN_ST7757_DXF|H1074||TEXT|0",
+      "volume_m3": 1.453612,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B4:ALSENAN_ST7757_DXF|H1131||TEXT|0",
+      "volume_m3": 0.13463,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B27:ALSENAN_ST7757_DXF|H1330||TEXT|0",
+      "volume_m3": 2.272875,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B26:ALSENAN_ST7757_DXF|H1228||TEXT|0",
+      "volume_m3": 2.456366,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H2125||TEXT|0",
+      "volume_m3": 0.059
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4100||TEXT|0",
+      "volume_m3": 0.024
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4102||TEXT|0",
+      "volume_m3": 0.07375
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4104||TEXT|0",
+      "volume_m3": 0.059
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4106||TEXT|0",
+      "volume_m3": 0.07375
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4108||TEXT|0",
+      "volume_m3": 0.0
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4110||TEXT|0",
+      "volume_m3": 0.0425
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4112||TEXT|0",
+      "volume_m3": 0.0885
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4114||TEXT|0",
+      "volume_m3": 0.18975
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4116||TEXT|0",
+      "volume_m3": 0.10325
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4118||TEXT|0",
+      "volume_m3": 0.18975
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4120||TEXT|0",
+      "volume_m3": 0.07375
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4185||TEXT|0",
+      "volume_m3": 0.12075
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4187||TEXT|0",
+      "volume_m3": 0.059
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4189||TEXT|0",
+      "volume_m3": 0.118
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4191||TEXT|0",
+      "volume_m3": 0.03
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4193||TEXT|0",
+      "volume_m3": 0.024
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4195||TEXT|0",
+      "volume_m3": 0.024
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4197||TEXT|0",
+      "volume_m3": 0.07375
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4201||TEXT|0",
+      "volume_m3": 0.0885
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4207||TEXT|0",
+      "volume_m3": 0.07375
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4213||TEXT|0",
+      "volume_m3": 0.1475
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4215||TEXT|0",
+      "volume_m3": 0.024
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4217||TEXT|0",
+      "volume_m3": 0.059
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4219||TEXT|0",
+      "volume_m3": 0.059
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H2125||TEXT|0",
+      "volume_m3": 0.375
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4100||TEXT|0",
+      "volume_m3": 0.41
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4102||TEXT|0",
+      "volume_m3": 0.46875
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4104||TEXT|0",
+      "volume_m3": 0.375
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4106||TEXT|0",
+      "volume_m3": 0.46875
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4108||TEXT|0",
+      "volume_m3": 0.434
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4110||TEXT|0",
+      "volume_m3": 0.5
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4112||TEXT|0",
+      "volume_m3": 0.5625
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4114||TEXT|0",
+      "volume_m3": 1.00375
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4116||TEXT|0",
+      "volume_m3": 0.65625
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4118||TEXT|0",
+      "volume_m3": 1.00375
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4120||TEXT|0",
+      "volume_m3": 0.46875
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4185||TEXT|0",
+      "volume_m3": 0.63875
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4187||TEXT|0",
+      "volume_m3": 0.375
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4189||TEXT|0",
+      "volume_m3": 0.75
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4191||TEXT|0",
+      "volume_m3": 0.5125
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4193||TEXT|0",
+      "volume_m3": 0.41
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4195||TEXT|0",
+      "volume_m3": 0.41
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4197||TEXT|0",
+      "volume_m3": 0.46875
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4201||TEXT|0",
+      "volume_m3": 0.5625
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4207||TEXT|0",
+      "volume_m3": 0.46875
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4213||TEXT|0",
+      "volume_m3": 0.9375
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4215||TEXT|0",
+      "volume_m3": 0.41
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4217||TEXT|0",
+      "volume_m3": 0.375
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4219||TEXT|0",
+      "volume_m3": 0.375
+     }
+    ],
+    "blocked": [
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "CA:ALSENAN_ST7757_DXF|H1694||TEXT|0",
+      "reason": "TAG_INSIDE_SUPPORT"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "CB8:ALSENAN_ST7757_DXF|H1695||TEXT|0",
+      "reason": "SPAN_COUNT_MISMATCH"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B3:ALSENAN_ST7757_DXF|H6183||TEXT|0",
+      "reason": "BAND_TYPE_CONFLICT"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "CB3:ALSENAN_ST7757_DXF|H1171||TEXT|0",
+      "reason": "BAND_TYPE_CONFLICT"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "CB6:ALSENAN_ST7757_DXF|H1148||TEXT|0",
+      "reason": "SPAN_COUNT_MISMATCH"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "CB5:ALSENAN_ST7757_DXF|H1140||TEXT|0",
+      "reason": "SPAN_COUNT_MISMATCH"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "CB2:ALSENAN_ST7757_DXF|H1066||TEXT|0",
+      "reason": "TAG_NOT_BOUND: NO_BAND_ADJACENT_TO_TAG"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "CB2:ALSENAN_ST7757_DXF|H1067||TEXT|0",
+      "reason": "TAG_NOT_BOUND: NO_BAND_ADJACENT_TO_TAG"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B1:ALSENAN_ST7757_DXF|H1117||TEXT|0",
+      "reason": "TAG_NOT_BOUND: NO_BAND_ADJACENT_TO_TAG"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B29:ALSENAN_ST7757_DXF|H1125||TEXT|0",
+      "reason": "TAG_NOT_BOUND: NO_BAND_ADJACENT_TO_TAG"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B21:ALSENAN_ST7757_DXF|H1128||TEXT|0",
+      "reason": "TAG_NOT_BOUND: NO_BAND_AT_SCHEDULED_BREADTH"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B7:ALSENAN_ST7757_DXF|H1134||TEXT|0",
+      "reason": "TAG_NOT_BOUND: NO_BAND_AT_SCHEDULED_BREADTH"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B7:ALSENAN_ST7757_DXF|H1135||TEXT|0",
+      "reason": "TAG_NOT_BOUND: NO_BAND_PARALLEL_TO_TAG"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B7:ALSENAN_ST7757_DXF|H1136||TEXT|0",
+      "reason": "TAG_NOT_BOUND: NO_BAND_PARALLEL_TO_TAG"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B7:ALSENAN_ST7757_DXF|H1137||TEXT|0",
+      "reason": "TAG_NOT_BOUND: NO_BAND_PARALLEL_TO_TAG"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "CB5:ALSENAN_ST7757_DXF|H1141||TEXT|0",
+      "reason": "TAG_NOT_BOUND: NO_BAND_ADJACENT_TO_TAG"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B7:ALSENAN_ST7757_DXF|H1154|1149|TEXT|0",
+      "reason": "TAG_NOT_BOUND: NO_BAND_ADJACENT_TO_TAG"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B4:ALSENAN_ST7757_DXF|H1184|1179|TEXT|0",
+      "reason": "TAG_NOT_BOUND: NO_BAND_ADJACENT_TO_TAG"
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4122||TEXT|0",
+      "reason": "BLOCKED_UPPER_MEMBER_UNBOUND"
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4124||TEXT|0",
+      "reason": "BLOCKED_UPPER_MEMBER_UNBOUND"
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4199||TEXT|0",
+      "reason": "BLOCKED_TAG_NOT_BOUND"
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4203||TEXT|0",
+      "reason": "BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET"
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4205||TEXT|0",
+      "reason": "BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET"
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4122||TEXT|0",
+      "reason": "BLOCKED_UPPER_MEMBER_UNBOUND"
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4124||TEXT|0",
+      "reason": "BLOCKED_UPPER_MEMBER_UNBOUND"
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4199||TEXT|0",
+      "reason": "BLOCKED_TAG_NOT_BOUND"
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4203||TEXT|0",
+      "reason": "BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET"
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4205||TEXT|0",
+      "reason": "BLOCKED_SEVERAL_OUTLINES_ON_STOREY_SHEET"
+     }
+    ],
+    "by_component_m3": {
+     "SLAB": 44.286118,
+     "DOWNSTAND_BEAM": 21.413573,
+     "BEAM_COLUMN_JOINT": 1.87825,
+     "COLUMN": 13.42025
+    },
+    "computed_total_m3": 80.998191,
+    "total_state": "PARTIAL (blocked components excluded, listed)",
+    "invariant": "each cubic metre in exactly one component: slab owns the plate depth everywhere; beams own only the part below the slab between support faces; joints own the node under the slab; columns stop at the controlling soffit"
+   },
+   "gross_beam_view": [
+    {
+     "id": "B16:ALSENAN_ST7757_DXF|H1139||TEXT|0",
+     "volume_m3": 0.75375,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B13:ALSENAN_ST7757_DXF|H1127||TEXT|0",
+     "volume_m3": 1.024082,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B11:ALSENAN_ST7757_DXF|H1092||TEXT|0",
+     "volume_m3": 0.686262,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1093||TEXT|0",
+     "volume_m3": 0.1176,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B4:ALSENAN_ST7757_DXF|H1094||TEXT|0",
+     "volume_m3": 0.375,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B7:ALSENAN_ST7757_DXF|H1234||TEXT|0",
+     "volume_m3": 0.255,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B20:ALSENAN_ST7757_DXF|H1110|1107|TEXT|0",
+     "volume_m3": 1.0725,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B3:ALSENAN_ST7757_DXF|H1122||TEXT|0",
+     "volume_m3": 0.264,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1126||TEXT|0",
+     "volume_m3": 0.205556,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B4:ALSENAN_ST7757_DXF|H1243||TEXT|0",
+     "volume_m3": 0.342927,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B8:ALSENAN_ST7757_DXF|H1138||TEXT|0",
+     "volume_m3": 0.528021,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1294||TEXT|0",
+     "volume_m3": 0.096,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1697||TEXT|0",
+     "volume_m3": 0.091792,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "CB7:ALSENAN_ST7757_DXF|H1145||TEXT|0",
+     "volume_m3": 1.74,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B24:ALSENAN_ST7757_DXF|H6170|6164|TEXT|0",
+     "volume_m3": 1.425,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B3:ALSENAN_ST7757_DXF|H1719||TEXT|0",
+     "volume_m3": 0.2,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B5:ALSENAN_ST7757_DXF|H1176||TEXT|0",
+     "volume_m3": 0.361696,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B4:ALSENAN_ST7757_DXF|H1175||TEXT|0",
+     "volume_m3": 0.296447,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B2:ALSENAN_ST7757_DXF|H1170||TEXT|0",
+     "volume_m3": 0.216,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "CB4:ALSENAN_ST7757_DXF|H1116||TEXT|0",
+     "volume_m3": 0.570988,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B22:ALSENAN_ST7757_DXF|H1174||TEXT|0",
+     "volume_m3": 2.925,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B14:ALSENAN_ST7757_DXF|H1119||TEXT|0",
+     "volume_m3": 0.27,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1095||TEXT|0",
+     "volume_m3": 0.14,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1207||TEXT|0",
+     "volume_m3": 0.056,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B3:ALSENAN_ST7757_DXF|H1096||TEXT|0",
+     "volume_m3": 0.236,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B2:ALSENAN_ST7757_DXF|H1097||TEXT|0",
+     "volume_m3": 0.216,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B7:ALSENAN_ST7757_DXF|H1206||TEXT|0",
+     "volume_m3": 0.18,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1118||TEXT|0",
+     "volume_m3": 0.144,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "CB1:ALSENAN_ST7757_DXF|H1249||TEXT|0",
+     "volume_m3": 3.17625,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1142||TEXT|0",
+     "volume_m3": 0.13,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1143||TEXT|0",
+     "volume_m3": 0.146096,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B9:ALSENAN_ST7757_DXF|H1469||TEXT|0",
+     "volume_m3": 0.9,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B4:ALSENAN_ST7757_DXF|H1288||TEXT|0",
+     "volume_m3": 0.45,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1144||TEXT|0",
+     "volume_m3": 0.104,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B2:ALSENAN_ST7757_DXF|H1157||TEXT|0",
+     "volume_m3": 0.208,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B28:ALSENAN_ST7757_DXF|H1132||TEXT|0",
+     "volume_m3": 0.150911,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1072||TEXT|0",
+     "volume_m3": 0.092,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B17:ALSENAN_ST7757_DXF|H1074||TEXT|0",
+     "volume_m3": 1.847812,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B4:ALSENAN_ST7757_DXF|H1131||TEXT|0",
+     "volume_m3": 0.197986,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B27:ALSENAN_ST7757_DXF|H1330||TEXT|0",
+     "volume_m3": 2.799918,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B26:ALSENAN_ST7757_DXF|H1228||TEXT|0",
+     "volume_m3": 3.025958,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    }
+   ],
+   "gross_beam_view_m3": 28.018552,
+   "downstand_m3": 21.413573,
+   "beam_rows": [
+    {
+     "id": "B16:ALSENAN_ST7757_DXF|H1139||TEXT|0",
+     "type": "B16",
+     "length_m": 3.35,
+     "B_cm": 30.0,
+     "D_cm": 75.0,
+     "blocked": null
+    },
+    {
+     "id": "B13:ALSENAN_ST7757_DXF|H1127||TEXT|0",
+     "type": "B13",
+     "length_m": 5.461771,
+     "B_cm": 25.0,
+     "D_cm": 75.0,
+     "blocked": null
+    },
+    {
+     "id": "B11:ALSENAN_ST7757_DXF|H1092||TEXT|0",
+     "type": "B11",
+     "length_m": 4.575082,
+     "B_cm": 20.0,
+     "D_cm": 75.0,
+     "blocked": null
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1093||TEXT|0",
+     "type": "B1",
+     "length_m": 1.47,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B4:ALSENAN_ST7757_DXF|H1094||TEXT|0",
+     "type": "B4",
+     "length_m": 3.75,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "blocked": null
+    },
+    {
+     "id": "B7:ALSENAN_ST7757_DXF|H1234||TEXT|0",
+     "type": "B7",
+     "length_m": 1.7,
+     "B_cm": 20.0,
+     "D_cm": 75.0,
+     "blocked": null
+    },
+    {
+     "id": "B20:ALSENAN_ST7757_DXF|H1110|1107|TEXT|0",
+     "type": "B20",
+     "length_m": 3.575,
+     "B_cm": 40.0,
+     "D_cm": 75.0,
+     "blocked": null
+    },
+    {
+     "id": "B3:ALSENAN_ST7757_DXF|H1122||TEXT|0",
+     "type": "B3",
+     "length_m": 3.3,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1126||TEXT|0",
+     "type": "B1",
+     "length_m": 2.569456,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B4:ALSENAN_ST7757_DXF|H1243||TEXT|0",
+     "type": "B4",
+     "length_m": 3.429272,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "blocked": null
+    },
+    {
+     "id": "B8:ALSENAN_ST7757_DXF|H1138||TEXT|0",
+     "type": "B8",
+     "length_m": 3.52014,
+     "B_cm": 20.0,
+     "D_cm": 75.0,
+     "blocked": null
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1294||TEXT|0",
+     "type": "B1",
+     "length_m": 1.2,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "CA:ALSENAN_ST7757_DXF|H1694||TEXT|0",
+     "type": "CA",
+     "length_m": null,
+     "B_cm": 30.0,
+     "D_cm": 50.0,
+     "blocked": "TAG_INSIDE_SUPPORT"
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1697||TEXT|0",
+     "type": "B1",
+     "length_m": 1.147401,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "CB8:ALSENAN_ST7757_DXF|H1695||TEXT|0",
+     "type": "CB8",
+     "length_m": null,
+     "B_cm": 30,
+     "D_cm": 75,
+     "blocked": "SPAN_COUNT_MISMATCH"
+    },
+    {
+     "id": "CB7:ALSENAN_ST7757_DXF|H1145||TEXT|0",
+     "type": "CB7",
+     "length_m": 11.6,
+     "B_cm": 20,
+     "D_cm": 75,
+     "blocked": null
+    },
+    {
+     "id": "B24:ALSENAN_ST7757_DXF|H6170|6164|TEXT|0",
+     "type": "B24",
+     "length_m": 3.8,
+     "B_cm": 50.0,
+     "D_cm": 75.0,
+     "blocked": null
+    },
+    {
+     "id": "B3:ALSENAN_ST7757_DXF|H1719||TEXT|0",
+     "type": "B3",
+     "length_m": 2.5,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B5:ALSENAN_ST7757_DXF|H1176||TEXT|0",
+     "type": "B5",
+     "length_m": 3.61696,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "blocked": null
+    },
+    {
+     "id": "B4:ALSENAN_ST7757_DXF|H1175||TEXT|0",
+     "type": "B4",
+     "length_m": 2.964465,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "blocked": null
+    },
+    {
+     "id": "B3:ALSENAN_ST7757_DXF|H6183||TEXT|0",
+     "type": "B3",
+     "length_m": null,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": "BAND_TYPE_CONFLICT"
+    },
+    {
+     "id": "CB3:ALSENAN_ST7757_DXF|H1171||TEXT|0",
+     "type": "CB3",
+     "length_m": null,
+     "B_cm": 20,
+     "D_cm": 75,
+     "blocked": "BAND_TYPE_CONFLICT"
+    },
+    {
+     "id": "B2:ALSENAN_ST7757_DXF|H1170||TEXT|0",
+     "type": "B2",
+     "length_m": 2.7,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "CB4:ALSENAN_ST7757_DXF|H1116||TEXT|0",
+     "type": "CB4",
+     "length_m": 5.709877,
+     "B_cm": 20,
+     "D_cm": 50,
+     "blocked": null
+    },
+    {
+     "id": "B22:ALSENAN_ST7757_DXF|H1174||TEXT|0",
+     "type": "B22",
+     "length_m": 7.8,
+     "B_cm": 50.0,
+     "D_cm": 75.0,
+     "blocked": null
+    },
+    {
+     "id": "B14:ALSENAN_ST7757_DXF|H1119||TEXT|0",
+     "type": "B14",
+     "length_m": 1.8,
+     "B_cm": 20.0,
+     "D_cm": 75.0,
+     "blocked": null
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1095||TEXT|0",
+     "type": "B1",
+     "length_m": 1.75,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1207||TEXT|0",
+     "type": "B1",
+     "length_m": 0.7,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B3:ALSENAN_ST7757_DXF|H1096||TEXT|0",
+     "type": "B3",
+     "length_m": 2.95,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B2:ALSENAN_ST7757_DXF|H1097||TEXT|0",
+     "type": "B2",
+     "length_m": 2.7,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B7:ALSENAN_ST7757_DXF|H1206||TEXT|0",
+     "type": "B7",
+     "length_m": 1.2,
+     "B_cm": 20.0,
+     "D_cm": 75.0,
+     "blocked": null
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1118||TEXT|0",
+     "type": "B1",
+     "length_m": 1.8,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "CB1:ALSENAN_ST7757_DXF|H1249||TEXT|0",
+     "type": "CB1",
+     "length_m": 12.1,
+     "B_cm": 35,
+     "D_cm": 75,
+     "blocked": null
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1142||TEXT|0",
+     "type": "B1",
+     "length_m": 1.625,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1143||TEXT|0",
+     "type": "B1",
+     "length_m": 1.826196,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "CB6:ALSENAN_ST7757_DXF|H1148||TEXT|0",
+     "type": "CB6",
+     "length_m": null,
+     "B_cm": 20,
+     "D_cm": 75,
+     "blocked": "SPAN_COUNT_MISMATCH"
+    },
+    {
+     "id": "B9:ALSENAN_ST7757_DXF|H1469||TEXT|0",
+     "type": "B9",
+     "length_m": 6.0,
+     "B_cm": 20.0,
+     "D_cm": 75.0,
+     "blocked": null
+    },
+    {
+     "id": "B4:ALSENAN_ST7757_DXF|H1288||TEXT|0",
+     "type": "B4",
+     "length_m": 4.5,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "blocked": null
+    },
+    {
+     "id": "CB5:ALSENAN_ST7757_DXF|H1140||TEXT|0",
+     "type": "CB5",
+     "length_m": null,
+     "B_cm": 20,
+     "D_cm": 40,
+     "blocked": "SPAN_COUNT_MISMATCH"
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1144||TEXT|0",
+     "type": "B1",
+     "length_m": 1.3,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B2:ALSENAN_ST7757_DXF|H1157||TEXT|0",
+     "type": "B2",
+     "length_m": 2.6,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B28:ALSENAN_ST7757_DXF|H1132||TEXT|0",
+     "type": "B28",
+     "length_m": 0.80486,
+     "B_cm": 25.0,
+     "D_cm": 75.0,
+     "blocked": null
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1072||TEXT|0",
+     "type": "B1",
+     "length_m": 1.15,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B17:ALSENAN_ST7757_DXF|H1074||TEXT|0",
+     "type": "B17",
+     "length_m": 5.475,
+     "B_cm": 45.0,
+     "D_cm": 75.0,
+     "blocked": null
+    },
+    {
+     "id": "B4:ALSENAN_ST7757_DXF|H1131||TEXT|0",
+     "type": "B4",
+     "length_m": 1.97986,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "blocked": null
+    },
+    {
+     "id": "B27:ALSENAN_ST7757_DXF|H1330||TEXT|0",
+     "type": "B27",
+     "length_m": 3.660024,
+     "B_cm": 90.0,
+     "D_cm": 85.0,
+     "blocked": null
+    },
+    {
+     "id": "B26:ALSENAN_ST7757_DXF|H1228||TEXT|0",
+     "type": "B26",
+     "length_m": 5.476847,
+     "B_cm": 65.0,
+     "D_cm": 85.0,
+     "blocked": null
+    },
+    {
+     "id": "CB2:ALSENAN_ST7757_DXF|H1066||TEXT|0",
+     "type": "CB2",
+     "length_m": null,
+     "B_cm": 20,
+     "D_cm": 50,
+     "blocked": "TAG_NOT_BOUND: NO_BAND_ADJACENT_TO_TAG"
+    },
+    {
+     "id": "CB2:ALSENAN_ST7757_DXF|H1067||TEXT|0",
+     "type": "CB2",
+     "length_m": null,
+     "B_cm": 20,
+     "D_cm": 50,
+     "blocked": "TAG_NOT_BOUND: NO_BAND_ADJACENT_TO_TAG"
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1117||TEXT|0",
+     "type": "B1",
+     "length_m": null,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": "TAG_NOT_BOUND: NO_BAND_ADJACENT_TO_TAG"
+    },
+    {
+     "id": "B29:ALSENAN_ST7757_DXF|H1125||TEXT|0",
+     "type": "B29",
+     "length_m": null,
+     "B_cm": 25.0,
+     "D_cm": 75.0,
+     "blocked": "TAG_NOT_BOUND: NO_BAND_ADJACENT_TO_TAG"
+    },
+    {
+     "id": "B21:ALSENAN_ST7757_DXF|H1128||TEXT|0",
+     "type": "B21",
+     "length_m": null,
+     "B_cm": 45.0,
+     "D_cm": 75.0,
+     "blocked": "TAG_NOT_BOUND: NO_BAND_AT_SCHEDULED_BREADTH"
+    },
+    {
+     "id": "B7:ALSENAN_ST7757_DXF|H1134||TEXT|0",
+     "type": "B7",
+     "length_m": null,
+     "B_cm": 20.0,
+     "D_cm": 75.0,
+     "blocked": "TAG_NOT_BOUND: NO_BAND_AT_SCHEDULED_BREADTH"
+    },
+    {
+     "id": "B7:ALSENAN_ST7757_DXF|H1135||TEXT|0",
+     "type": "B7",
+     "length_m": null,
+     "B_cm": 20.0,
+     "D_cm": 75.0,
+     "blocked": "TAG_NOT_BOUND: NO_BAND_PARALLEL_TO_TAG"
+    },
+    {
+     "id": "B7:ALSENAN_ST7757_DXF|H1136||TEXT|0",
+     "type": "B7",
+     "length_m": null,
+     "B_cm": 20.0,
+     "D_cm": 75.0,
+     "blocked": "TAG_NOT_BOUND: NO_BAND_PARALLEL_TO_TAG"
+    },
+    {
+     "id": "B7:ALSENAN_ST7757_DXF|H1137||TEXT|0",
+     "type": "B7",
+     "length_m": null,
+     "B_cm": 20.0,
+     "D_cm": 75.0,
+     "blocked": "TAG_NOT_BOUND: NO_BAND_PARALLEL_TO_TAG"
+    },
+    {
+     "id": "CB5:ALSENAN_ST7757_DXF|H1141||TEXT|0",
+     "type": "CB5",
+     "length_m": null,
+     "B_cm": 20,
+     "D_cm": 40,
+     "blocked": "TAG_NOT_BOUND: NO_BAND_ADJACENT_TO_TAG"
+    },
+    {
+     "id": "B7:ALSENAN_ST7757_DXF|H1154|1149|TEXT|0",
+     "type": "B7",
+     "length_m": null,
+     "B_cm": 20.0,
+     "D_cm": 75.0,
+     "blocked": "TAG_NOT_BOUND: NO_BAND_ADJACENT_TO_TAG"
+    },
+    {
+     "id": "B4:ALSENAN_ST7757_DXF|H1184|1179|TEXT|0",
+     "type": "B4",
+     "length_m": null,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "blocked": "TAG_NOT_BOUND: NO_BAND_ADJACENT_TO_TAG"
+    }
+   ]
+  },
+  "1F": {
+   "sheet": "1F_ROOF_SLAB",
+   "slab_thickness_cm": 16,
+   "model": {
+    "components": [
+     {
+      "component": "SLAB",
+      "id": "SLAB",
+      "volume_m3": 27.160228,
+      "formula": "net plate area x t"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B3:ALSENAN_ST7757_DXF|H1721||TEXT|0",
+      "volume_m3": 0.12,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "CB9:ALSENAN_ST7757_DXF|H1734||TEXT|0",
+      "volume_m3": 0.75446,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B4:ALSENAN_ST7757_DXF|H1809||TEXT|0",
+      "volume_m3": 0.276198,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "CB11:ALSENAN_ST7757_DXF|H1754||TEXT|0",
+      "volume_m3": 2.470614,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B7:ALSENAN_ST7757_DXF|H1740||TEXT|0",
+      "volume_m3": 0.2124,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B1:ALSENAN_ST7757_DXF|H1742||TEXT|0",
+      "volume_m3": 0.0336,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B2:ALSENAN_ST7757_DXF|H1737||TEXT|0",
+      "volume_m3": 0.144,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B18:ALSENAN_ST7757_DXF|H1773||TEXT|0",
+      "volume_m3": 1.30095,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B1:ALSENAN_ST7757_DXF|H1744||TEXT|0",
+      "volume_m3": 0.077741,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B2:ALSENAN_ST7757_DXF|H1738||TEXT|0",
+      "volume_m3": 0.1296,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B7:ALSENAN_ST7757_DXF|H1741||TEXT|0",
+      "volume_m3": 0.1416,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B1:ALSENAN_ST7757_DXF|H1739||TEXT|0",
+      "volume_m3": 0.0864,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B2:ALSENAN_ST7757_DXF|H1722||TEXT|0",
+      "volume_m3": 0.1296,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B23:ALSENAN_ST7757_DXF|H1867||TEXT|0",
+      "volume_m3": 0.949162,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "CB13:ALSENAN_ST7757_DXF|H1898||TEXT|0",
+      "volume_m3": 0.6273,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B19:ALSENAN_ST7757_DXF|H1743||TEXT|0",
+      "volume_m3": 0.701294,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B4:ALSENAN_ST7757_DXF|H1717||TEXT|0",
+      "volume_m3": 0.2788,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B6:ALSENAN_ST7757_DXF|H1725||TEXT|0",
+      "volume_m3": 0.3485,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B4:ALSENAN_ST7757_DXF|H1753||TEXT|0",
+      "volume_m3": 0.2924,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B25:ALSENAN_ST7757_DXF|H1745||TEXT|0",
+      "volume_m3": 2.24187,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B11:ALSENAN_ST7757_DXF|H1752||TEXT|0",
+      "volume_m3": 0.560242,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B5:ALSENAN_ST7757_DXF|H1732||TEXT|0",
+      "volume_m3": 0.2397,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B6:ALSENAN_ST7757_DXF|H1748||TEXT|0",
+      "volume_m3": 0.371636,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B6:ALSENAN_ST7757_DXF|H1751||TEXT|0",
+      "volume_m3": 0.371636,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B6:ALSENAN_ST7757_DXF|H1900||TEXT|0",
+      "volume_m3": 0.3485,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B5:ALSENAN_ST7757_DXF|H1772||TEXT|0",
+      "volume_m3": 0.3145,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4116||TEXT|0",
+      "volume_m3": 0.0408
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4122||TEXT|0",
+      "volume_m3": 0.1062
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4124||TEXT|0",
+      "volume_m3": 0.059
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4189||TEXT|0",
+      "volume_m3": 0.0944
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4191||TEXT|0",
+      "volume_m3": 0.024
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4193||TEXT|0",
+      "volume_m3": 0.034
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4195||TEXT|0",
+      "volume_m3": 0.034
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4197||TEXT|0",
+      "volume_m3": 0.034
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4201||TEXT|0",
+      "volume_m3": 0.034
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4203||TEXT|0",
+      "volume_m3": 0.1062
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4205||TEXT|0",
+      "volume_m3": 0.1062
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4213||TEXT|0",
+      "volume_m3": 0.1062
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4215||TEXT|0",
+      "volume_m3": 0.024
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4217||TEXT|0",
+      "volume_m3": 0.059
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4219||TEXT|0",
+      "volume_m3": 0.059
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4116||TEXT|0",
+      "volume_m3": 0.444
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4122||TEXT|0",
+      "volume_m3": 0.621
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4124||TEXT|0",
+      "volume_m3": 0.345
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4189||TEXT|0",
+      "volume_m3": 0.552
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4191||TEXT|0",
+      "volume_m3": 0.38
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4193||TEXT|0",
+      "volume_m3": 0.37
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4195||TEXT|0",
+      "volume_m3": 0.37
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4197||TEXT|0",
+      "volume_m3": 0.37
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4201||TEXT|0",
+      "volume_m3": 0.37
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4203||TEXT|0",
+      "volume_m3": 0.621
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4205||TEXT|0",
+      "volume_m3": 0.621
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4213||TEXT|0",
+      "volume_m3": 0.621
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4215||TEXT|0",
+      "volume_m3": 0.38
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4217||TEXT|0",
+      "volume_m3": 0.345
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4219||TEXT|0",
+      "volume_m3": 0.345
+     }
+    ],
+    "blocked": [
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "CB12:ALSENAN_ST7757_DXF|H1758||TEXT|0",
+      "reason": "SPAN_COUNT_MISMATCH"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B6:ALSENAN_ST7757_DXF|H1733||TEXT|0",
+      "reason": "TAG_NOT_BOUND: NO_BAND_ADJACENT_TO_TAG"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "CB12:ALSENAN_ST7757_DXF|H1757||TEXT|0",
+      "reason": "TAG_NOT_BOUND: NO_BAND_ADJACENT_TO_TAG"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "CB10:ALSENAN_ST7757_DXF|H1815||TEXT|0",
+      "reason": "TAG_NOT_BOUND: NO_BAND_ADJACENT_TO_TAG"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "CB10:ALSENAN_ST7757_DXF|H1816||TEXT|0",
+      "reason": "TAG_NOT_BOUND: NO_BAND_ADJACENT_TO_TAG"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B4:ALSENAN_ST7757_DXF|H6184||TEXT|0",
+      "reason": "TAG_NOT_BOUND: NO_BAND_PARALLEL_TO_TAG"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B4:ALSENAN_ST7757_DXF|H6185||TEXT|0",
+      "reason": "TAG_NOT_BOUND: NO_BAND_PARALLEL_TO_TAG"
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4110||TEXT|0",
+      "reason": "BLOCKED_UPPER_MEMBER_UNBOUND"
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4112||TEXT|0",
+      "reason": "BLOCKED_UPPER_MEMBER_UNBOUND"
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4199||TEXT|0",
+      "reason": "BLOCKED_TAG_NOT_BOUND"
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4110||TEXT|0",
+      "reason": "BLOCKED_UPPER_MEMBER_UNBOUND"
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4112||TEXT|0",
+      "reason": "BLOCKED_UPPER_MEMBER_UNBOUND"
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4199||TEXT|0",
+      "reason": "BLOCKED_TAG_NOT_BOUND"
+     }
+    ],
+    "by_component_m3": {
+     "SLAB": 27.160228,
+     "DOWNSTAND_BEAM": 13.522703,
+     "BEAM_COLUMN_JOINT": 0.921,
+     "COLUMN": 6.755
+    },
+    "computed_total_m3": 48.358931,
+    "total_state": "PARTIAL (blocked components excluded, listed)",
+    "invariant": "each cubic metre in exactly one component: slab owns the plate depth everywhere; beams own only the part below the slab between support faces; joints own the node under the slab; columns stop at the controlling soffit"
+   },
+   "gross_beam_view": [
+    {
+     "id": "B3:ALSENAN_ST7757_DXF|H1721||TEXT|0",
+     "volume_m3": 0.2,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "CB9:ALSENAN_ST7757_DXF|H1734||TEXT|0",
+     "volume_m3": 1.1095,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B4:ALSENAN_ST7757_DXF|H1809||TEXT|0",
+     "volume_m3": 0.406173,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "CB11:ALSENAN_ST7757_DXF|H1754||TEXT|0",
+     "volume_m3": 3.140611,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B7:ALSENAN_ST7757_DXF|H1740||TEXT|0",
+     "volume_m3": 0.27,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1742||TEXT|0",
+     "volume_m3": 0.056,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B2:ALSENAN_ST7757_DXF|H1737||TEXT|0",
+     "volume_m3": 0.24,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B18:ALSENAN_ST7757_DXF|H1773||TEXT|0",
+     "volume_m3": 1.65375,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1744||TEXT|0",
+     "volume_m3": 0.129569,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B2:ALSENAN_ST7757_DXF|H1738||TEXT|0",
+     "volume_m3": 0.216,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B7:ALSENAN_ST7757_DXF|H1741||TEXT|0",
+     "volume_m3": 0.18,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1739||TEXT|0",
+     "volume_m3": 0.144,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B2:ALSENAN_ST7757_DXF|H1722||TEXT|0",
+     "volume_m3": 0.216,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B23:ALSENAN_ST7757_DXF|H1867||TEXT|0",
+     "volume_m3": 1.206562,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "CB13:ALSENAN_ST7757_DXF|H1898||TEXT|0",
+     "volume_m3": 0.9225,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B19:ALSENAN_ST7757_DXF|H1743||TEXT|0",
+     "volume_m3": 0.891475,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B4:ALSENAN_ST7757_DXF|H1717||TEXT|0",
+     "volume_m3": 0.41,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B6:ALSENAN_ST7757_DXF|H1725||TEXT|0",
+     "volume_m3": 0.5125,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B4:ALSENAN_ST7757_DXF|H1753||TEXT|0",
+     "volume_m3": 0.43,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B25:ALSENAN_ST7757_DXF|H1745||TEXT|0",
+     "volume_m3": 2.849835,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B11:ALSENAN_ST7757_DXF|H1752||TEXT|0",
+     "volume_m3": 0.712173,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B5:ALSENAN_ST7757_DXF|H1732||TEXT|0",
+     "volume_m3": 0.3525,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B6:ALSENAN_ST7757_DXF|H1748||TEXT|0",
+     "volume_m3": 0.546523,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B6:ALSENAN_ST7757_DXF|H1751||TEXT|0",
+     "volume_m3": 0.546523,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B6:ALSENAN_ST7757_DXF|H1900||TEXT|0",
+     "volume_m3": 0.5125,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B5:ALSENAN_ST7757_DXF|H1772||TEXT|0",
+     "volume_m3": 0.4625,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    }
+   ],
+   "gross_beam_view_m3": 18.317194,
+   "downstand_m3": 13.522703,
+   "beam_rows": [
+    {
+     "id": "B3:ALSENAN_ST7757_DXF|H1721||TEXT|0",
+     "type": "B3",
+     "length_m": 2.5,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "CB9:ALSENAN_ST7757_DXF|H1734||TEXT|0",
+     "type": "CB9",
+     "length_m": 11.095,
+     "B_cm": 20,
+     "D_cm": 50,
+     "blocked": null
+    },
+    {
+     "id": "B4:ALSENAN_ST7757_DXF|H1809||TEXT|0",
+     "type": "B4",
+     "length_m": 4.061731,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "blocked": null
+    },
+    {
+     "id": "CB11:ALSENAN_ST7757_DXF|H1754||TEXT|0",
+     "type": "CB11",
+     "length_m": 13.958269,
+     "B_cm": 30,
+     "D_cm": 75,
+     "blocked": null
+    },
+    {
+     "id": "B7:ALSENAN_ST7757_DXF|H1740||TEXT|0",
+     "type": "B7",
+     "length_m": 1.8,
+     "B_cm": 20.0,
+     "D_cm": 75.0,
+     "blocked": null
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1742||TEXT|0",
+     "type": "B1",
+     "length_m": 0.7,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B2:ALSENAN_ST7757_DXF|H1737||TEXT|0",
+     "type": "B2",
+     "length_m": 3.0,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B18:ALSENAN_ST7757_DXF|H1773||TEXT|0",
+     "type": "B18",
+     "length_m": 6.3,
+     "B_cm": 35.0,
+     "D_cm": 75.0,
+     "blocked": null
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1744||TEXT|0",
+     "type": "B1",
+     "length_m": 1.619614,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B2:ALSENAN_ST7757_DXF|H1738||TEXT|0",
+     "type": "B2",
+     "length_m": 2.7,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B7:ALSENAN_ST7757_DXF|H1741||TEXT|0",
+     "type": "B7",
+     "length_m": 1.2,
+     "B_cm": 20.0,
+     "D_cm": 75.0,
+     "blocked": null
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1739||TEXT|0",
+     "type": "B1",
+     "length_m": 1.8,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "CB12:ALSENAN_ST7757_DXF|H1758||TEXT|0",
+     "type": "CB12",
+     "length_m": null,
+     "B_cm": 25,
+     "D_cm": 75,
+     "blocked": "SPAN_COUNT_MISMATCH"
+    },
+    {
+     "id": "B2:ALSENAN_ST7757_DXF|H1722||TEXT|0",
+     "type": "B2",
+     "length_m": 2.7,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B23:ALSENAN_ST7757_DXF|H1867||TEXT|0",
+     "type": "B23",
+     "length_m": 3.575,
+     "B_cm": 45.0,
+     "D_cm": 75.0,
+     "blocked": null
+    },
+    {
+     "id": "CB13:ALSENAN_ST7757_DXF|H1898||TEXT|0",
+     "type": "CB13",
+     "length_m": 6.15,
+     "B_cm": 30,
+     "D_cm": 50,
+     "blocked": null
+    },
+    {
+     "id": "B19:ALSENAN_ST7757_DXF|H1743||TEXT|0",
+     "type": "B19",
+     "length_m": 2.971583,
+     "B_cm": 40.0,
+     "D_cm": 75.0,
+     "blocked": null
+    },
+    {
+     "id": "B4:ALSENAN_ST7757_DXF|H1717||TEXT|0",
+     "type": "B4",
+     "length_m": 4.1,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "blocked": null
+    },
+    {
+     "id": "B6:ALSENAN_ST7757_DXF|H1725||TEXT|0",
+     "type": "B6",
+     "length_m": 4.1,
+     "B_cm": 25.0,
+     "D_cm": 50.0,
+     "blocked": null
+    },
+    {
+     "id": "B4:ALSENAN_ST7757_DXF|H1753||TEXT|0",
+     "type": "B4",
+     "length_m": 4.3,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "blocked": null
+    },
+    {
+     "id": "B25:ALSENAN_ST7757_DXF|H1745||TEXT|0",
+     "type": "B25",
+     "length_m": 6.90869,
+     "B_cm": 55.0,
+     "D_cm": 75.0,
+     "blocked": null
+    },
+    {
+     "id": "B11:ALSENAN_ST7757_DXF|H1752||TEXT|0",
+     "type": "B11",
+     "length_m": 4.747817,
+     "B_cm": 20.0,
+     "D_cm": 75.0,
+     "blocked": null
+    },
+    {
+     "id": "B5:ALSENAN_ST7757_DXF|H1732||TEXT|0",
+     "type": "B5",
+     "length_m": 3.525,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "blocked": null
+    },
+    {
+     "id": "B6:ALSENAN_ST7757_DXF|H1748||TEXT|0",
+     "type": "B6",
+     "length_m": 4.372183,
+     "B_cm": 25.0,
+     "D_cm": 50.0,
+     "blocked": null
+    },
+    {
+     "id": "B6:ALSENAN_ST7757_DXF|H1751||TEXT|0",
+     "type": "B6",
+     "length_m": 4.372183,
+     "B_cm": 25.0,
+     "D_cm": 50.0,
+     "blocked": null
+    },
+    {
+     "id": "B6:ALSENAN_ST7757_DXF|H1900||TEXT|0",
+     "type": "B6",
+     "length_m": 4.1,
+     "B_cm": 25.0,
+     "D_cm": 50.0,
+     "blocked": null
+    },
+    {
+     "id": "B5:ALSENAN_ST7757_DXF|H1772||TEXT|0",
+     "type": "B5",
+     "length_m": 4.625,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "blocked": null
+    },
+    {
+     "id": "B6:ALSENAN_ST7757_DXF|H1733||TEXT|0",
+     "type": "B6",
+     "length_m": null,
+     "B_cm": 25.0,
+     "D_cm": 50.0,
+     "blocked": "TAG_NOT_BOUND: NO_BAND_ADJACENT_TO_TAG"
+    },
+    {
+     "id": "CB12:ALSENAN_ST7757_DXF|H1757||TEXT|0",
+     "type": "CB12",
+     "length_m": null,
+     "B_cm": 25,
+     "D_cm": 75,
+     "blocked": "TAG_NOT_BOUND: NO_BAND_ADJACENT_TO_TAG"
+    },
+    {
+     "id": "CB10:ALSENAN_ST7757_DXF|H1815||TEXT|0",
+     "type": "CB10",
+     "length_m": null,
+     "B_cm": 25,
+     "D_cm": 50,
+     "blocked": "TAG_NOT_BOUND: NO_BAND_ADJACENT_TO_TAG"
+    },
+    {
+     "id": "CB10:ALSENAN_ST7757_DXF|H1816||TEXT|0",
+     "type": "CB10",
+     "length_m": null,
+     "B_cm": 25,
+     "D_cm": 50,
+     "blocked": "TAG_NOT_BOUND: NO_BAND_ADJACENT_TO_TAG"
+    },
+    {
+     "id": "B4:ALSENAN_ST7757_DXF|H6184||TEXT|0",
+     "type": "B4",
+     "length_m": null,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "blocked": "TAG_NOT_BOUND: NO_BAND_PARALLEL_TO_TAG"
+    },
+    {
+     "id": "B4:ALSENAN_ST7757_DXF|H6185||TEXT|0",
+     "type": "B4",
+     "length_m": null,
+     "B_cm": 20.0,
+     "D_cm": 50.0,
+     "blocked": "TAG_NOT_BOUND: NO_BAND_PARALLEL_TO_TAG"
+    }
+   ]
+  },
+  "2F": {
+   "sheet": "2F_ROOF_SLAB",
+   "slab_thickness_cm": 18,
+   "model": {
+    "components": [
+     {
+      "component": "SLAB",
+      "id": "SLAB",
+      "volume_m3": 9.98611,
+      "formula": "net plate area x t"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B3:ALSENAN_ST7757_DXF|H1908||TEXT|0",
+      "volume_m3": 0.1078,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B3:ALSENAN_ST7757_DXF|H1949||TEXT|0",
+      "volume_m3": 0.11,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B8:ALSENAN_ST7757_DXF|H1950||TEXT|0",
+      "volume_m3": 0.41838,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B2:ALSENAN_ST7757_DXF|H1936||TEXT|0",
+      "volume_m3": 0.11,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B1:ALSENAN_ST7757_DXF|H1935||TEXT|0",
+      "volume_m3": 0.0792,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B2:ALSENAN_ST7757_DXF|H1934||TEXT|0",
+      "volume_m3": 0.132,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B15:ALSENAN_ST7757_DXF|H1961||TEXT|0",
+      "volume_m3": 0.5508,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B2:ALSENAN_ST7757_DXF|H1930||TEXT|0",
+      "volume_m3": 0.0792,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B2:ALSENAN_ST7757_DXF|H1909||TEXT|0",
+      "volume_m3": 0.132,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B1:ALSENAN_ST7757_DXF|H1931||TEXT|0",
+      "volume_m3": 0.044,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B3:ALSENAN_ST7757_DXF|H1947||TEXT|0",
+      "volume_m3": 0.132,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B7:ALSENAN_ST7757_DXF|H1953||TEXT|0",
+      "volume_m3": 0.503683,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B3:ALSENAN_ST7757_DXF|H1948||TEXT|0",
+      "volume_m3": 0.1188,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B1:ALSENAN_ST7757_DXF|H1932||TEXT|0",
+      "volume_m3": 0.0528,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "DOWNSTAND_BEAM",
+      "id": "B1:ALSENAN_ST7757_DXF|H1933||TEXT|0",
+      "volume_m3": 0.0792,
+      "formula": "clear length x B x (D - t)"
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4191||TEXT|0",
+      "volume_m3": 0.102
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4193||TEXT|0",
+      "volume_m3": 0.102
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4195||TEXT|0",
+      "volume_m3": 0.057
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4201||TEXT|0",
+      "volume_m3": 0.057
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4213||TEXT|0",
+      "volume_m3": 0.0308
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4215||TEXT|0",
+      "volume_m3": 0.022
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4217||TEXT|0",
+      "volume_m3": 0.022
+     },
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4219||TEXT|0",
+      "volume_m3": 0.022
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4191||TEXT|0",
+      "volume_m3": 0.3
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4193||TEXT|0",
+      "volume_m3": 0.3
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4195||TEXT|0",
+      "volume_m3": 0.345
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4201||TEXT|0",
+      "volume_m3": 0.345
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4213||TEXT|0",
+      "volume_m3": 0.532
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4215||TEXT|0",
+      "volume_m3": 0.38
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4217||TEXT|0",
+      "volume_m3": 0.38
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4219||TEXT|0",
+      "volume_m3": 0.38
+     }
+    ],
+    "blocked": [
+     {
+      "component": "BEAM_COLUMN_JOINT",
+      "id": "ALSENAN_ST7757_DXF|H4199||TEXT|0",
+      "reason": "BLOCKED_TAG_NOT_BOUND"
+     },
+     {
+      "component": "COLUMN",
+      "id": "ALSENAN_ST7757_DXF|H4199||TEXT|0",
+      "reason": "BLOCKED_TAG_NOT_BOUND"
+     }
+    ],
+    "by_component_m3": {
+     "SLAB": 9.98611,
+     "DOWNSTAND_BEAM": 2.649863,
+     "BEAM_COLUMN_JOINT": 0.4148,
+     "COLUMN": 2.962
+    },
+    "computed_total_m3": 16.012773,
+    "total_state": "PARTIAL (blocked components excluded, listed)",
+    "invariant": "each cubic metre in exactly one component: slab owns the plate depth everywhere; beams own only the part below the slab between support faces; joints own the node under the slab; columns stop at the controlling soffit"
+   },
+   "gross_beam_view": [
+    {
+     "id": "B3:ALSENAN_ST7757_DXF|H1908||TEXT|0",
+     "volume_m3": 0.196,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B3:ALSENAN_ST7757_DXF|H1949||TEXT|0",
+     "volume_m3": 0.2,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B8:ALSENAN_ST7757_DXF|H1950||TEXT|0",
+     "volume_m3": 0.5505,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B2:ALSENAN_ST7757_DXF|H1936||TEXT|0",
+     "volume_m3": 0.2,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1935||TEXT|0",
+     "volume_m3": 0.144,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B2:ALSENAN_ST7757_DXF|H1934||TEXT|0",
+     "volume_m3": 0.24,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B15:ALSENAN_ST7757_DXF|H1961||TEXT|0",
+     "volume_m3": 0.648,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B2:ALSENAN_ST7757_DXF|H1930||TEXT|0",
+     "volume_m3": 0.144,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B2:ALSENAN_ST7757_DXF|H1909||TEXT|0",
+     "volume_m3": 0.24,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1931||TEXT|0",
+     "volume_m3": 0.08,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B3:ALSENAN_ST7757_DXF|H1947||TEXT|0",
+     "volume_m3": 0.24,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B7:ALSENAN_ST7757_DXF|H1953||TEXT|0",
+     "volume_m3": 0.66274,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B3:ALSENAN_ST7757_DXF|H1948||TEXT|0",
+     "volume_m3": 0.216,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1932||TEXT|0",
+     "volume_m3": 0.096,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1933||TEXT|0",
+     "volume_m3": 0.144,
+     "basis": "length x B x full D (REPORTING VIEW - never added to the physical total)"
+    }
+   ],
+   "gross_beam_view_m3": 4.00124,
+   "downstand_m3": 2.649863,
+   "beam_rows": [
+    {
+     "id": "B3:ALSENAN_ST7757_DXF|H1908||TEXT|0",
+     "type": "B3",
+     "length_m": 2.45,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B3:ALSENAN_ST7757_DXF|H1949||TEXT|0",
+     "type": "B3",
+     "length_m": 2.5,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B8:ALSENAN_ST7757_DXF|H1950||TEXT|0",
+     "type": "B8",
+     "length_m": 3.67,
+     "B_cm": 20.0,
+     "D_cm": 75.0,
+     "blocked": null
+    },
+    {
+     "id": "B2:ALSENAN_ST7757_DXF|H1936||TEXT|0",
+     "type": "B2",
+     "length_m": 2.5,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1935||TEXT|0",
+     "type": "B1",
+     "length_m": 1.8,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B2:ALSENAN_ST7757_DXF|H1934||TEXT|0",
+     "type": "B2",
+     "length_m": 3.0,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B15:ALSENAN_ST7757_DXF|H1961||TEXT|0",
+     "type": "B15",
+     "length_m": 2.7,
+     "B_cm": 20.0,
+     "D_cm": 120.0,
+     "blocked": null
+    },
+    {
+     "id": "B2:ALSENAN_ST7757_DXF|H1930||TEXT|0",
+     "type": "B2",
+     "length_m": 1.8,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B2:ALSENAN_ST7757_DXF|H1909||TEXT|0",
+     "type": "B2",
+     "length_m": 3.0,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1931||TEXT|0",
+     "type": "B1",
+     "length_m": 1.0,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B3:ALSENAN_ST7757_DXF|H1947||TEXT|0",
+     "type": "B3",
+     "length_m": 3.0,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B7:ALSENAN_ST7757_DXF|H1953||TEXT|0",
+     "type": "B7",
+     "length_m": 4.418268,
+     "B_cm": 20.0,
+     "D_cm": 75.0,
+     "blocked": null
+    },
+    {
+     "id": "B3:ALSENAN_ST7757_DXF|H1948||TEXT|0",
+     "type": "B3",
+     "length_m": 2.7,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1932||TEXT|0",
+     "type": "B1",
+     "length_m": 1.2,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    },
+    {
+     "id": "B1:ALSENAN_ST7757_DXF|H1933||TEXT|0",
+     "type": "B1",
+     "length_m": 1.8,
+     "B_cm": 20.0,
+     "D_cm": 40.0,
+     "blocked": null
+    }
+   ]
+  }
+ },
+ "explicit_items": [
+  {
+   "item": "FOOTINGS",
+   "state": "COMPUTED_PARTIAL",
+   "volume_m3": 64.346,
+   "computed": 25,
+   "of": 27,
+   "blocked": [
+    "ALSENAN_ST7757_DXF|H4261||TEXT|0",
+    "ALSENAN_ST7757_DXF|H5771||TEXT|0"
+   ],
+   "basis": "A3 schedule-driven occurrences (unchanged); F / F10 stays SOURCE_CONFLICT"
+  },
+  {
+   "item": "STRAPS",
+   "state": "COMPUTED",
+   "volume_m3": 3.391739,
+   "computed": 3,
+   "of": 3,
+   "basis": "A3 strap bands (unchanged)"
+  },
+  {
+   "item": "BLINDING (under computed footings)",
+   "state": "COMPUTED_FROM_TYPICAL_DETAIL",
+   "volume_m3": 15.213,
+   "computed": 25,
+   "basis": "ST7757.pdf p.13 TYP. DETAIL OF ISOLATED FOOTING: 10 cm plain concrete, 10 cm beyond L x W each side",
+   "not_included": "blocked footings; straps / ground beams (their blinding is not dimensioned for straps)"
+  },
+  {
+   "item": "COLUMN NECKS",
+   "state": "BLOCKED_HEIGHT",
+   "volume_m3": null,
+   "why": "no footing-top / founding level and no ground-beam or ground-slab level is printed in the structural source (typical footing detail p.13 dimensions none); +1.00 FFL is corroboration only"
+  },
+  {
+   "item": "GROUND BEAMS",
+   "state": "BLOCKED_WITH_REASON",
+   "volume_m3": null,
+   "why": "the GROUND BEAMS plan carries no beam tags; p.13 gives typical sections by length (30x60 > 5 m, 30x40 < 5 m, 30x30, exterior 30 x 'FOLLOW ARCH.') whose exterior depth needs the outer ground level to the ground-slab level - not proved"
+  },
+  {
+   "item": "GROUND SLAB",
+   "state": "BLOCKED_WITH_REASON",
+   "volume_m3": null,
+   "why": "no ground-slab thickness / outline is printed (the details show 'Ground Floor slab level' only)"
+  },
+  {
+   "item": "COLUMNS GF",
+   "state": "COMPUTED_PARTIAL",
+   "volume_m3": 13.42025,
+   "joint_m3": 1.87825,
+   "computed": 25,
+   "blocked": 5
+  },
+  {
+   "item": "BEAMS GF (downstand)",
+   "state": "COMPUTED_PARTIAL",
+   "volume_m3": 21.413573,
+   "computed": 41,
+   "blocked": 18
+  },
+  {
+   "item": "SLAB GF ROOF",
+   "state": "COMPUTED",
+   "volume_m3": 44.286118,
+   "net_area_m2": 276.788238,
+   "why": null
+  },
+  {
+   "item": "COLUMNS 1F",
+   "state": "COMPUTED_PARTIAL",
+   "volume_m3": 6.755,
+   "joint_m3": 0.921,
+   "computed": 15,
+   "blocked": 3
+  },
+  {
+   "item": "BEAMS 1F (downstand)",
+   "state": "COMPUTED_PARTIAL",
+   "volume_m3": 13.522703,
+   "computed": 26,
+   "blocked": 7
+  },
+  {
+   "item": "SLAB 1F ROOF",
+   "state": "COMPUTED",
+   "volume_m3": 27.160228,
+   "net_area_m2": 169.751427,
+   "why": null
+  },
+  {
+   "item": "COLUMNS 2F",
+   "state": "COMPUTED_PARTIAL",
+   "volume_m3": 2.962,
+   "joint_m3": 0.4148,
+   "computed": 8,
+   "blocked": 1
+  },
+  {
+   "item": "BEAMS 2F (downstand)",
+   "state": "COMPUTED_PARTIAL",
+   "volume_m3": 2.649863,
+   "computed": 15,
+   "blocked": 0
+  },
+  {
+   "item": "SLAB 2F ROOF",
+   "state": "COMPUTED",
+   "volume_m3": 9.98611,
+   "net_area_m2": 55.478391,
+   "why": null
+  },
+  {
+   "item": "STAIRS",
+   "state": "BLOCKED_INPUT_MISSING",
+   "volume_m3": null,
+   "why": "waist thickness and riser height not printed"
+  },
+  {
+   "item": "STRUCTURAL WALLS",
+   "state": "BLOCKED_WITH_REASON",
+   "volume_m3": null,
+   "why": "no structural (shear / retaining) wall is tagged on any plan; the 'B.W' schedule row (20 x 60) is bound to no plan occurrence"
+  },
+  {
+   "item": "POOL",
+   "state": "BLOCKED_WITH_REASON",
+   "volume_m3": null,
+   "why": "DETAIL OF SWIMMING POOL is a section detail (N.T.S.) with no plan extent bound to it"
+  }
+ ],
+ "rule": "physical total never double counts; gross beam view reported separately; blocked components excluded and listed"
+}

@@ -1,0 +1,55 @@
+{
+ "files": {
+  "coverage/BOQ_FAMILY_MASTER_1.0.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "71acb9983343dfec7096e5778803f180bdcdf784e426dbefeb00c513a8e6c8f5"
+  },
+  "materials/URBAN_MATERIAL_SPECS_1.0.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "a16ccec3c7e1ef0fc5734d533032bf6d405b30a54b5a1eca0462d8b28851d0c1"
+  },
+  "methods/URBAN_METHOD_REGISTER_V1.json": {
+   "kind": "EXPORT",
+   "sha256": "45f7e46fa4d19939adf64b075d25c6f7c77e7c5de0e79e99c5bac2cd92a19838",
+   "source": "engine/source/urban_methods.py",
+   "source_sha256": "09c62bf244b685b515e8ffaeb8fb2ffad6b769618f3c9d0f4442ab25d23a69dc"
+  },
+  "methods/URBAN_METHOD_REGISTER_V3.json": {
+   "kind": "EXPORT",
+   "sha256": "d124d19647cdd754f11045b259836f1ae1440656701bba5b7a0ca6b3f8a400b1",
+   "source": "engine/source/urban_methods_v3.py",
+   "source_sha256": "68d3df7fe60c89cf1960cc40959d0948feea9c67b27c7580254297f8cd8c0cdc"
+  },
+  "owner_decisions/URBAN_RULES_1.5.0.json": {
+   "kind": "AUTHORED",
+   "sha256": "50c120c62d191ccfd08f2b3bc6fc79b2f13be4cc81f9a3c2478e4f797f283954"
+  },
+  "owner_library/URBAN_PROJECTS_RULE_LIBRARY_1.4.0.json": {
+   "kind": "COPY",
+   "sha256": "6881733f21015a247790fb7980850e4eb47054665684deb299e0b8413a6274ee",
+   "source": "data/trade_rules/URBAN_PROJECTS_RULE_LIBRARY.json",
+   "source_sha256": "6881733f21015a247790fb7980850e4eb47054665684deb299e0b8413a6274ee"
+  }
+ },
+ "latest_owner_approved": "1.5.0",
+ "referenced_not_copied": {
+  "engine/profiles/URBAN_M2_GENERIC_CONVENTIONS_V1.json": "5f454459c52bde9865dde55459230e3c52b6fbee775b71a9e43cfe6663f875f8",
+  "engine/profiles/URBAN_M3_GENERIC_CONVENTIONS_V2.json": "28c8235e5c76e906ad1fbb7d4f3d84bf3b31a820f1b111b8c432ef4cbd765d41",
+  "engine/profiles/URBAN_M4_GENERIC_CONVENTIONS_V3.json": "89be37321542a360a520af40da0a8253fe68610a6e9611c3cfa5f3387f1688ec",
+  "engine/profiles/URBAN_M5_GENERIC_CONVENTIONS_V4.json": "14cf36cb471df4e73b35e98806d85b98fea98d8c3c66f3246bbbb5f5cc24e67a",
+  "engine/profiles/URBAN_M7_GENERIC_CONVENTIONS_V5.json": "e12d86d07a1a69ca3cbe27cd54ea574f925dc61efcc2e6478a5c625d79102d91",
+  "engine/profiles/URBAN_M8_GENERIC_CONVENTIONS_V6.json": "c6e4dab8108ccd21807fb5d83ea811285682f57225c87b934f8e6c73ca173dca"
+ },
+ "rule": "copies and exports are byte-equal to what their source gives; authored files change only with a new version; the structural convention profiles are referenced in place (frozen packages pin them)",
+ "rule_sets": {
+  "1.4.0": [
+   "owner_library/URBAN_PROJECTS_RULE_LIBRARY_1.4.0.json"
+  ],
+  "1.5.0": [
+   "owner_library/URBAN_PROJECTS_RULE_LIBRARY_1.4.0.json",
+   "owner_decisions/URBAN_RULES_1.5.0.json"
+  ]
+ },
+ "store": "URBAN_RULE_STORE",
+ "version": "1.0.0"
+}

@@ -1,0 +1,1529 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_REBAR_REGISTER_V1",
+ "specifications": [
+  {
+   "element": "FOOTING F",
+   "direction": "SHORT_BARS",
+   "spec": "8 Ø 12",
+   "sub_rows": null,
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F",
+   "direction": "LONG_BARS",
+   "spec": "7 Ø 12",
+   "sub_rows": null,
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F2",
+   "direction": "SHORT_BARS",
+   "spec": "13 Ø 12",
+   "sub_rows": null,
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F2",
+   "direction": "LONG_BARS",
+   "spec": "13 Ø 12",
+   "sub_rows": null,
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F3",
+   "direction": "SHORT_BARS",
+   "spec": "8 Ø 12",
+   "sub_rows": null,
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F3",
+   "direction": "LONG_BARS",
+   "spec": "8 Ø 12",
+   "sub_rows": null,
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F4",
+   "direction": "SHORT_BARS",
+   "spec": "18 Ø 12",
+   "sub_rows": null,
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F4",
+   "direction": "LONG_BARS",
+   "spec": "17 Ø 12",
+   "sub_rows": null,
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F5",
+   "direction": "SHORT_BARS",
+   "spec": "22 Ø 12",
+   "sub_rows": null,
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F5",
+   "direction": "LONG_BARS",
+   "spec": "20 Ø 12",
+   "sub_rows": null,
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F6",
+   "direction": "SHORT_BARS",
+   "spec": "24 Ø 12",
+   "sub_rows": null,
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F6",
+   "direction": "LONG_BARS",
+   "spec": "22 Ø 12",
+   "sub_rows": null,
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F7",
+   "direction": "SHORT_BARS",
+   "spec": "24 Ø 14",
+   "sub_rows": null,
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F7",
+   "direction": "LONG_BARS",
+   "spec": "21 Ø 14",
+   "sub_rows": null,
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F8",
+   "direction": "SHORT_BARS",
+   "spec": "6 Ø 14/m",
+   "sub_rows": [
+    "9 Ø 14/m"
+   ],
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F8",
+   "direction": "LONG_BARS",
+   "spec": "6 Ø 14/m",
+   "sub_rows": [
+    "9 Ø 14/m"
+   ],
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F9",
+   "direction": "SHORT_BARS",
+   "spec": "28 Ø 14",
+   "sub_rows": null,
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F9",
+   "direction": "LONG_BARS",
+   "spec": "24 Ø 14",
+   "sub_rows": null,
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING FF",
+   "direction": "SHORT_BARS",
+   "spec": "6 9 Ø Ø 14/m 14/m",
+   "sub_rows": null,
+   "gate": {
+    "state": "BLOCKED",
+    "have": [
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_diameter_mm",
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING FF",
+   "direction": "LONG_BARS",
+   "spec": "6 9 Ø Ø 14/m 14/m",
+   "sub_rows": null,
+   "gate": {
+    "state": "BLOCKED",
+    "have": [
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_diameter_mm",
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING FN",
+   "direction": "SHORT_BARS",
+   "spec": "8 Ø 12",
+   "sub_rows": null,
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING FN",
+   "direction": "LONG_BARS",
+   "spec": "8 Ø 12",
+   "sub_rows": null,
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F10",
+   "direction": "SHORT_BARS",
+   "spec": "20 Ø 14",
+   "sub_rows": null,
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F10",
+   "direction": "LONG_BARS",
+   "spec": "10 Ø 14",
+   "sub_rows": null,
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F11",
+   "direction": "SHORT_BARS",
+   "spec": "32 Ø 14",
+   "sub_rows": null,
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F11",
+   "direction": "LONG_BARS",
+   "spec": "14 Ø 14",
+   "sub_rows": null,
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F12",
+   "direction": "SHORT_BARS",
+   "spec": "10 Ø 14/m",
+   "sub_rows": [
+    "9 Ø 16/m"
+   ],
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F12",
+   "direction": "LONG_BARS",
+   "spec": "10 Ø 14/m",
+   "sub_rows": [
+    "9 Ø 16/m"
+   ],
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F13",
+   "direction": "SHORT_BARS",
+   "spec": "7 Ø 14/m",
+   "sub_rows": [
+    "8 Ø 16/m"
+   ],
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F13",
+   "direction": "LONG_BARS",
+   "spec": "7 Ø 14/m",
+   "sub_rows": [
+    "8 Ø 16/m"
+   ],
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F14",
+   "direction": "SHORT_BARS",
+   "spec": "6 Ø 14/m",
+   "sub_rows": [
+    "9 Ø 14/m"
+   ],
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F14",
+   "direction": "LONG_BARS",
+   "spec": "6 Ø 14/m",
+   "sub_rows": [
+    "9 Ø 14/m"
+   ],
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F15",
+   "direction": "SHORT_BARS",
+   "spec": "15 Ø 12",
+   "sub_rows": null,
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "FOOTING F15",
+   "direction": "LONG_BARS",
+   "spec": "8 Ø 12",
+   "sub_rows": null,
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "COLUMN C",
+   "direction": ")1 1st  floor / REINF",
+   "spec": "Ø",
+   "gate": {
+    "state": "BLOCKED",
+    "have": [],
+    "missing": [
+     "bar_diameter_mm",
+     "count_or_spacing",
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "COLUMN C1",
+   "direction": ")1 1st  floor / REINF",
+   "spec": "6 Ø 16",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "COLUMN C2",
+   "direction": ")1 1st  floor / REINF",
+   "spec": "8 Ø 16",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "COLUMN C3",
+   "direction": ")1 1st  floor / REINF",
+   "spec": "6 Ø 16",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "COLUMN C4",
+   "direction": ")1 1st  floor / REINF",
+   "spec": "8 Ø 16",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "COLUMN C5",
+   "direction": ")1 1st  floor / REINF",
+   "spec": "8 Ø 16",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "COLUMN C6",
+   "direction": ")1 1st  floor / REINF",
+   "spec": "8 Ø 16",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "COLUMN C7",
+   "direction": ")1 1st  floor / REINF",
+   "spec": "10 Ø 16",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "COLUMN C8",
+   "direction": ")1 1st  floor / REINF",
+   "spec": "12 Ø 16",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "COLUMN C9",
+   "direction": ")1 1st  floor / REINF",
+   "spec": "12 Ø 16",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB 1F_ROOF_SLAB",
+   "direction": "label x2",
+   "spec": "11Ø18",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB 1F_ROOF_SLAB",
+   "direction": "label x1",
+   "spec": "3Ø18",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB 1F_ROOF_SLAB",
+   "direction": "label x1",
+   "spec": "5Ø10",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB 1F_ROOF_SLAB",
+   "direction": "label x17",
+   "spec": "5Ø10/m",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB 1F_ROOF_SLAB",
+   "direction": "label x6",
+   "spec": "6Ø10/m",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB 1F_ROOF_SLAB",
+   "direction": "label x3",
+   "spec": "7Ø10/m",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB 1F_ROOF_SLAB",
+   "direction": "label x1",
+   "spec": "8Ø10/m",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB 1F_ROOF_SLAB",
+   "direction": "label x1",
+   "spec": "8Ø16",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB 1F_ROOF_SLAB",
+   "direction": "label x3",
+   "spec": "8Ø16/m",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB 2F_ROOF_SLAB",
+   "direction": "label x1",
+   "spec": "4Ø16/Top",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB 2F_ROOF_SLAB",
+   "direction": "label x7",
+   "spec": "5Ø10/m",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB 2F_ROOF_SLAB",
+   "direction": "label x1",
+   "spec": "5Ø18/Top",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB 2F_ROOF_SLAB",
+   "direction": "label x2",
+   "spec": "6Ø10/m",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB 2F_ROOF_SLAB",
+   "direction": "label x2",
+   "spec": "6Ø12/m",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB 2F_ROOF_SLAB",
+   "direction": "label x1",
+   "spec": "6Ø14/m",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB 2F_ROOF_SLAB",
+   "direction": "label x1",
+   "spec": "7Ø10/m",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB 2F_ROOF_SLAB",
+   "direction": "label x1",
+   "spec": "7Ø14/m",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB GF_ROOF_SLAB",
+   "direction": "label x1",
+   "spec": "10Ø16",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB GF_ROOF_SLAB",
+   "direction": "label x2",
+   "spec": "11Ø18",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB GF_ROOF_SLAB",
+   "direction": "label x1",
+   "spec": "3Ø16/Top",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB GF_ROOF_SLAB",
+   "direction": "label x1",
+   "spec": "3Ø18",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB GF_ROOF_SLAB",
+   "direction": "label x2",
+   "spec": "5Ø10",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB GF_ROOF_SLAB",
+   "direction": "label x35",
+   "spec": "5Ø10/m",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB GF_ROOF_SLAB",
+   "direction": "label x12",
+   "spec": "6Ø10/m",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB GF_ROOF_SLAB",
+   "direction": "label x1",
+   "spec": "6Ø14/m",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB GF_ROOF_SLAB",
+   "direction": "label x6",
+   "spec": "7Ø10/m",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB GF_ROOF_SLAB",
+   "direction": "label x1",
+   "spec": "7Ø12/m",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB GF_ROOF_SLAB",
+   "direction": "label x1",
+   "spec": "8Ø16",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  },
+  {
+   "element": "SLAB GF_ROOF_SLAB",
+   "direction": "label x6",
+   "spec": "8Ø16/m",
+   "gate": {
+    "state": "PARTIAL",
+    "have": [
+     "bar_diameter_mm",
+     "count_or_spacing"
+    ],
+    "missing": [
+     "bar_length",
+     "bar_shape",
+     "laps",
+     "cover"
+    ],
+    "quantity_kg": null
+   },
+   "kg": null
+  }
+ ],
+ "tonnage_kg": null,
+ "state": "FAIL_CLOSED: every tonnage BLOCKED; no kg/m3 ratio",
+ "gate_fields": [
+  "bar_diameter_mm",
+  "count_or_spacing",
+  "bar_length",
+  "bar_shape",
+  "laps",
+  "cover"
+ ],
+ "by_gate_state": {
+  "PARTIAL": 70,
+  "BLOCKED": 3
+ },
+ "stirrups_note": "column stirrups '6Ø8/m' appear in the column-reinforcement detail notes: spec only"
+}

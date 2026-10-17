@@ -1,0 +1,1469 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_V3B_BLOCKER_RESOLUTION_V1",
+ "rows": [
+  {
+   "id": "B01",
+   "blocker": "Exterior ground beams",
+   "routes": "1 printed ±0.00 / +1.00 level chain (elevations, sections); 2 interior GB rule; 3 provisional depth with range",
+   "release_class": "PROVISIONAL_SOURCE_DERIVED",
+   "remaining_risk": "top (GF level) printed; bottom below ground not printed (OC-V3B-A)",
+   "lines": [
+    {
+     "code": "C-GB-EXT",
+     "unit": "m3",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 33.0898,
+     "confidence": "M"
+    },
+    {
+     "code": "R-GROUND_BEAM_EXT-GF",
+     "unit": "kg",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 2793.705959,
+     "confidence": "M"
+    },
+    {
+     "code": "T-FWP-GB-EXT",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 220.598,
+     "confidence": "M"
+    }
+   ]
+  },
+  {
+   "id": "B02",
+   "blocker": "Column necks / founding level",
+   "routes": "note 12 leaves founding to site: no drawing route; Urban fallback founding -1.50 ±0.5",
+   "release_class": "PROVISIONAL_URBAN_FALLBACK",
+   "remaining_risk": "TRUE technical gap; confidence L (not procurement eligible)",
+   "lines": [
+    {
+     "code": "C-NECK",
+     "unit": "m3",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_URBAN_FALLBACK",
+     "commercial_qty": 6.25,
+     "confidence": "L"
+    },
+    {
+     "code": "R-COLUMN_STARTERS-GF",
+     "unit": "kg",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_URBAN_FALLBACK",
+     "commercial_qty": 938.667,
+     "confidence": "L"
+    }
+   ]
+  },
+  {
+   "id": "B03",
+   "blocker": "Stairs",
+   "routes": "plan tread lines (incomplete), section A-A (raster, not machine-counted), 2R + G band with G = 0.30 printed",
+   "release_class": "PROVISIONAL_CODE_METHOD",
+   "remaining_risk": "waist 16 cm = note 18 default, not a proof (OC-V3B-B); riser count range",
+   "lines": [
+    {
+     "code": "C-STAIR",
+     "unit": "m3",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_CODE_METHOD",
+     "commercial_qty": 5.2312,
+     "confidence": "M"
+    },
+    {
+     "code": "S-RAIL",
+     "unit": "lm",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_CODE_METHOD",
+     "commercial_qty": 19.124,
+     "confidence": "M"
+    },
+    {
+     "code": "S-TREAD",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_CODE_METHOD",
+     "commercial_qty": 20.527,
+     "confidence": "M"
+    },
+    {
+     "code": "S-RISER",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_CODE_METHOD",
+     "commercial_qty": 10.005,
+     "confidence": "M"
+    },
+    {
+     "code": "S-NOSING",
+     "unit": "lm",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_CODE_METHOD",
+     "commercial_qty": 55.2,
+     "confidence": "M"
+    }
+   ]
+  },
+  {
+   "id": "B04",
+   "blocker": "Pool",
+   "routes": "S-BW outline + SWIM block (ST7757 GB sheet), pit depth 115 printed (NW elevation), DETAIL OF SWIMMING POOL",
+   "release_class": "DERIVED",
+   "remaining_risk": "sloped shallow end of the N.I.S. detail not shown on the small plan (deep-end bars used)",
+   "lines": [
+    {
+     "code": "C-POOL",
+     "unit": "m3",
+     "technical": "DERIVED",
+     "technical_qty": 5.053,
+     "commercial": "DERIVED",
+     "commercial_qty": 5.053,
+     "confidence": "H"
+    },
+    {
+     "code": "C-POOL-BLD",
+     "unit": "m3",
+     "technical": "DERIVED",
+     "technical_qty": 0.7955,
+     "commercial": "DERIVED",
+     "commercial_qty": 0.7955,
+     "confidence": "H"
+    },
+    {
+     "code": "R-POOL-OTHER_EXTERNAL",
+     "unit": "kg",
+     "technical": "DERIVED",
+     "technical_qty": 585.738272,
+     "commercial": "DERIVED",
+     "commercial_qty": 585.738272,
+     "confidence": "H"
+    },
+    {
+     "code": "T-POOL-WP-EXT",
+     "unit": "m2",
+     "technical": "DERIVED",
+     "technical_qty": 23.72,
+     "commercial": "DERIVED",
+     "commercial_qty": 23.72,
+     "confidence": "H"
+    },
+    {
+     "code": "T-POOL-FIN",
+     "unit": "m2",
+     "technical": "DERIVED",
+     "technical_qty": 15.5,
+     "commercial": "DERIVED",
+     "commercial_qty": 15.5,
+     "confidence": "H"
+    }
+   ]
+  },
+  {
+   "id": "B05",
+   "blocker": "Domes",
+   "routes": "3 plan circles (P7757) = 3 domes on the sections / elevations; spans 4.41 / 4.42 both routes; rises printed; shell / ring / bars from the DETAIL OF DOME (factor proved by its 442 dimension)",
+   "release_class": "DERIVED (shell) + PROVISIONAL_SOURCE_DERIVED (ring depth 'as per arch')",
+   "remaining_risk": "ring-beam depth",
+   "lines": [
+    {
+     "code": "C-DOME-SHELL-12EB",
+     "unit": "m3",
+     "technical": "DERIVED",
+     "technical_qty": 2.34,
+     "commercial": "DERIVED",
+     "commercial_qty": 2.34,
+     "confidence": "H"
+    },
+    {
+     "code": "C-DOME-RING-12EB",
+     "unit": "m3",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 1.989,
+     "confidence": "M"
+    },
+    {
+     "code": "C-DOME-SHELL-1300",
+     "unit": "m3",
+     "technical": "DERIVED",
+     "technical_qty": 2.843,
+     "commercial": "DERIVED",
+     "commercial_qty": 2.843,
+     "confidence": "H"
+    },
+    {
+     "code": "C-DOME-RING-1300",
+     "unit": "m3",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 1.989,
+     "confidence": "M"
+    },
+    {
+     "code": "C-DOME-SHELL-2F33",
+     "unit": "m3",
+     "technical": "DERIVED",
+     "technical_qty": 2.34,
+     "commercial": "DERIVED",
+     "commercial_qty": 2.34,
+     "confidence": "H"
+    },
+    {
+     "code": "C-DOME-RING-2F33",
+     "unit": "m3",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 1.989,
+     "confidence": "M"
+    },
+    {
+     "code": "R-DOME-1F",
+     "unit": "kg",
+     "technical": "PARTIAL",
+     "technical_qty": 1325.877218,
+     "commercial": "PROVISIONAL_CODE_METHOD",
+     "commercial_qty": 1342.468653,
+     "confidence": "M"
+    },
+    {
+     "code": "R-DOME-2F_ROOF",
+     "unit": "kg",
+     "technical": "PARTIAL",
+     "technical_qty": 728.349696,
+     "commercial": "PROVISIONAL_CODE_METHOD",
+     "commercial_qty": 736.645414,
+     "confidence": "M"
+    }
+   ]
+  },
+  {
+   "id": "B06",
+   "blocker": "F / F10",
+   "routes": "both schedule definitions computed on the one outline",
+   "release_class": "BLOCKED_SOURCE_CONFLICT / PROVISIONAL_SOURCE_RANGE (F10 selected, labelled)",
+   "remaining_risk": "owner / engineer to resolve",
+   "lines": [
+    {
+     "code": "C-FTG-FF10",
+     "unit": "m3",
+     "technical": "BLOCKED_SOURCE_CONFLICT",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_RANGE",
+     "commercial_qty": 1.96,
+     "confidence": "M"
+    },
+    {
+     "code": "R-FOOTING_F_F10-GF",
+     "unit": "kg",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_RANGE",
+     "commercial_qty": 62.671605,
+     "confidence": "M"
+    }
+   ]
+  },
+  {
+   "id": "B07",
+   "blocker": "Beam / column residue",
+   "routes": "drawn band x section (occurrences); same-type median length (unbound tags, may repeat)",
+   "release_class": "PROVISIONAL_GEOMETRIC_INFERENCE / BUDGET_ESTIMATE",
+   "remaining_risk": "unbound tags may duplicate measured beams",
+   "lines": [
+    {
+     "code": "C-COL-GF-RES",
+     "unit": "m3",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "commercial_qty": 3.6564,
+     "confidence": "M"
+    },
+    {
+     "code": "C-BEAM-GF-RES",
+     "unit": "m3",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "BUDGET_ESTIMATE",
+     "commercial_qty": 6.2801,
+     "confidence": "L"
+    },
+    {
+     "code": "C-COL-1F-RES",
+     "unit": "m3",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "commercial_qty": 1.035,
+     "confidence": "M"
+    },
+    {
+     "code": "C-BEAM-1F-RES",
+     "unit": "m3",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "BUDGET_ESTIMATE",
+     "commercial_qty": 1.6694,
+     "confidence": "L"
+    },
+    {
+     "code": "C-COL-2F-RES",
+     "unit": "m3",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "commercial_qty": 0.3625,
+     "confidence": "M"
+    },
+    {
+     "code": "R-BEAM_RESIDUE-1F",
+     "unit": "kg",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "BUDGET_ESTIMATE",
+     "commercial_qty": 162.096448,
+     "confidence": "L"
+    },
+    {
+     "code": "R-BEAM_RESIDUE-GF",
+     "unit": "kg",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "BUDGET_ESTIMATE",
+     "commercial_qty": 157.016972,
+     "confidence": "L"
+    }
+   ]
+  },
+  {
+   "id": "B08",
+   "blocker": "Hooks / bends / stirrup closing",
+   "routes": "project detail (none) > notes (laps / cover only) > ACI 318-19 Tables 25.3.1 / 25.3.2 (edition not verified)",
+   "release_class": "PROVISIONAL_CODE_METHOD",
+   "remaining_risk": "promote to CODE_METHOD once the governing edition is confirmed",
+   "lines": [
+    {
+     "code": "R-BEAMS-1F",
+     "unit": "kg",
+     "technical": "PARTIAL",
+     "technical_qty": 1474.807061,
+     "commercial": "PROVISIONAL_CODE_METHOD",
+     "commercial_qty": 1628.676271,
+     "confidence": "M"
+    },
+    {
+     "code": "R-BEAMS-2F_ROOF",
+     "unit": "kg",
+     "technical": "PARTIAL",
+     "technical_qty": 422.483525,
+     "commercial": "PROVISIONAL_CODE_METHOD",
+     "commercial_qty": 481.475668,
+     "confidence": "M"
+    },
+    {
+     "code": "R-BEAMS-GF",
+     "unit": "kg",
+     "technical": "PARTIAL",
+     "technical_qty": 2218.590104,
+     "commercial": "PROVISIONAL_CODE_METHOD",
+     "commercial_qty": 2451.412337,
+     "confidence": "M"
+    },
+    {
+     "code": "R-COLUMNS-1F",
+     "unit": "kg",
+     "technical": "PARTIAL",
+     "technical_qty": 1506.923457,
+     "commercial": "PROVISIONAL_CODE_METHOD",
+     "commercial_qty": 1551.270659,
+     "confidence": "M"
+    },
+    {
+     "code": "R-COLUMNS-2F_ROOF",
+     "unit": "kg",
+     "technical": "PARTIAL",
+     "technical_qty": 1298.488889,
+     "commercial": "PROVISIONAL_CODE_METHOD",
+     "commercial_qty": 1342.836091,
+     "confidence": "M"
+    },
+    {
+     "code": "R-COLUMNS-GF",
+     "unit": "kg",
+     "technical": "PARTIAL",
+     "technical_qty": 2524.444444,
+     "commercial": "PROVISIONAL_CODE_METHOD",
+     "commercial_qty": 2587.243804,
+     "confidence": "M"
+    },
+    {
+     "code": "R-GROUND-GF",
+     "unit": "kg",
+     "technical": "PARTIAL",
+     "technical_qty": 1687.527683,
+     "commercial": "PROVISIONAL_CODE_METHOD",
+     "commercial_qty": 1870.506818,
+     "confidence": "M"
+    },
+    {
+     "code": "R-GROUND_BEAM_EXT-GF",
+     "unit": "kg",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 2793.705959,
+     "confidence": "M"
+    },
+    {
+     "code": "R-GROUND_SLAB-GF",
+     "unit": "kg",
+     "technical": "DERIVED",
+     "technical_qty": 286.087168,
+     "commercial": "DERIVED",
+     "commercial_qty": 286.087168,
+     "confidence": "H"
+    },
+    {
+     "code": "R-LINTELS-1F",
+     "unit": "kg",
+     "technical": "PARTIAL",
+     "technical_qty": 190.642469,
+     "commercial": "PROVISIONAL_CODE_METHOD",
+     "commercial_qty": 206.381074,
+     "confidence": "M"
+    },
+    {
+     "code": "R-LINTELS-2F_ROOF",
+     "unit": "kg",
+     "technical": "PARTIAL",
+     "technical_qty": 62.049383,
+     "commercial": "PROVISIONAL_CODE_METHOD",
+     "commercial_qty": 67.554018,
+     "confidence": "M"
+    },
+    {
+     "code": "R-LINTELS-GF",
+     "unit": "kg",
+     "technical": "PARTIAL",
+     "technical_qty": 329.786963,
+     "commercial": "PROVISIONAL_CODE_METHOD",
+     "commercial_qty": 352.968455,
+     "confidence": "M"
+    }
+   ]
+  },
+  {
+   "id": "B09",
+   "blocker": "Slab reinforcement",
+   "routes": "slab_rebar_binding: annotation -> drawn bar -> panel rays; clear span + embedment; dedupe; SEE DETAIL -> dome",
+   "release_class": "DERIVED (+ PARTIAL open supports / DRAWN_EXTENT top bars provisional)",
+   "remaining_risk": "open far faces at slab edges",
+   "lines": [
+    {
+     "code": "R-SLAB-1F",
+     "unit": "kg",
+     "technical": "DERIVED",
+     "technical_qty": 1440.791958,
+     "commercial": "DERIVED",
+     "commercial_qty": 1440.791958,
+     "confidence": "H"
+    },
+    {
+     "code": "R-SLAB-2F_ROOF",
+     "unit": "kg",
+     "technical": "PARTIAL",
+     "technical_qty": 492.602469,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 574.652623,
+     "confidence": "M"
+    },
+    {
+     "code": "R-SLAB-GF",
+     "unit": "kg",
+     "technical": "PARTIAL",
+     "technical_qty": 2943.501319,
+     "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "commercial_qty": 2977.382915,
+     "confidence": "M"
+    }
+   ]
+  },
+  {
+   "id": "B10",
+   "blocker": "Annex ground-slab zone 2",
+   "routes": "cross-layer closure (layers 1 + 2, single lines as barriers)",
+   "release_class": "DERIVED",
+   "remaining_risk": "-",
+   "lines": [
+    {
+     "code": "C-GSLAB-ZONE-2",
+     "unit": "m3",
+     "technical": "DERIVED",
+     "technical_qty": 4.4983,
+     "commercial": "DERIVED",
+     "commercial_qty": 4.4983,
+     "confidence": "H"
+    },
+    {
+     "code": "R-GROUND_SLAB-GF",
+     "unit": "kg",
+     "technical": "DERIVED",
+     "technical_qty": 286.087168,
+     "commercial": "DERIVED",
+     "commercial_qty": 286.087168,
+     "confidence": "H"
+    }
+   ]
+  },
+  {
+   "id": "B11",
+   "blocker": "Opening heights",
+   "routes": "calibrated raster elevations / sections (6 sheets), width gate, type match; printed curved glazing 4.30",
+   "release_class": "RASTER_DERIVED (doors mostly) / PROVISIONAL / BUDGET (windows ambiguous)",
+   "remaining_risk": "window heights: width-only matching ambiguous; positional projection did not resolve",
+   "lines": [
+    {
+     "code": "B-OVER-OPEN",
+     "unit": "m2",
+     "technical": "PARTIAL",
+     "technical_qty": 17.00698,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 115.058167,
+     "confidence": "M"
+    },
+    {
+     "code": "O-DOO-GF",
+     "unit": "nr",
+     "technical": "DERIVED",
+     "technical_qty": 13.0,
+     "commercial": "DERIVED",
+     "commercial_qty": 13.0,
+     "confidence": "H"
+    },
+    {
+     "code": "O-DOO-GF-W",
+     "unit": "lm",
+     "technical": "DERIVED",
+     "technical_qty": 10.725,
+     "commercial": "DERIVED",
+     "commercial_qty": 10.725,
+     "confidence": "H"
+    },
+    {
+     "code": "O-DOO-GF-A",
+     "unit": "m2",
+     "technical": "PARTIAL",
+     "technical_qty": 13.035,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 25.311,
+     "confidence": "M"
+    },
+    {
+     "code": "O-DOU-GF",
+     "unit": "nr",
+     "technical": "DERIVED",
+     "technical_qty": 1.0,
+     "commercial": "DERIVED",
+     "commercial_qty": 1.0,
+     "confidence": "H"
+    },
+    {
+     "code": "O-DOU-GF-W",
+     "unit": "lm",
+     "technical": "DERIVED",
+     "technical_qty": 2.0,
+     "commercial": "DERIVED",
+     "commercial_qty": 2.0,
+     "confidence": "H"
+    },
+    {
+     "code": "O-DOU-GF-A",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 4.474,
+     "confidence": "M"
+    },
+    {
+     "code": "O-WIN-GF",
+     "unit": "nr",
+     "technical": "DERIVED",
+     "technical_qty": 16.0,
+     "commercial": "DERIVED",
+     "commercial_qty": 16.0,
+     "confidence": "H"
+    },
+    {
+     "code": "O-WIN-GF-W",
+     "unit": "lm",
+     "technical": "DERIVED",
+     "technical_qty": 23.042,
+     "commercial": "DERIVED",
+     "commercial_qty": 23.042,
+     "confidence": "H"
+    },
+    {
+     "code": "O-WIN-GF-A",
+     "unit": "m2",
+     "technical": "PARTIAL",
+     "technical_qty": 23.1118,
+     "commercial": "BUDGET_ESTIMATE",
+     "commercial_qty": 58.5814,
+     "confidence": "L"
+    },
+    {
+     "code": "O-DOO-1F",
+     "unit": "nr",
+     "technical": "DERIVED",
+     "technical_qty": 10.0,
+     "commercial": "DERIVED",
+     "commercial_qty": 10.0,
+     "confidence": "H"
+    },
+    {
+     "code": "O-DOO-1F-W",
+     "unit": "lm",
+     "technical": "DERIVED",
+     "technical_qty": 8.7,
+     "commercial": "DERIVED",
+     "commercial_qty": 8.7,
+     "confidence": "H"
+    },
+    {
+     "code": "O-DOO-1F-A",
+     "unit": "m2",
+     "technical": "PARTIAL",
+     "technical_qty": 8.468,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 18.4341,
+     "confidence": "M"
+    },
+    {
+     "code": "O-WIN-1F",
+     "unit": "nr",
+     "technical": "DERIVED",
+     "technical_qty": 12.0,
+     "commercial": "DERIVED",
+     "commercial_qty": 12.0,
+     "confidence": "H"
+    },
+    {
+     "code": "O-WIN-1F-W",
+     "unit": "lm",
+     "technical": "DERIVED",
+     "technical_qty": 13.606,
+     "commercial": "DERIVED",
+     "commercial_qty": 13.606,
+     "confidence": "H"
+    },
+    {
+     "code": "O-WIN-1F-A",
+     "unit": "m2",
+     "technical": "PARTIAL",
+     "technical_qty": 0.3565,
+     "commercial": "BUDGET_ESTIMATE",
+     "commercial_qty": 25.9179,
+     "confidence": "L"
+    },
+    {
+     "code": "O-DOO-2F",
+     "unit": "nr",
+     "technical": "DERIVED",
+     "technical_qty": 3.0,
+     "commercial": "DERIVED",
+     "commercial_qty": 3.0,
+     "confidence": "H"
+    },
+    {
+     "code": "O-DOO-2F-W",
+     "unit": "lm",
+     "technical": "DERIVED",
+     "technical_qty": 2.7,
+     "commercial": "DERIVED",
+     "commercial_qty": 2.7,
+     "confidence": "H"
+    },
+    {
+     "code": "O-DOO-2F-A",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 5.7321,
+     "confidence": "M"
+    },
+    {
+     "code": "O-WIN-2F",
+     "unit": "nr",
+     "technical": "DERIVED",
+     "technical_qty": 5.0,
+     "commercial": "DERIVED",
+     "commercial_qty": 5.0,
+     "confidence": "H"
+    },
+    {
+     "code": "O-WIN-2F-W",
+     "unit": "lm",
+     "technical": "DERIVED",
+     "technical_qty": 5.0,
+     "commercial": "DERIVED",
+     "commercial_qty": 5.0,
+     "confidence": "H"
+    },
+    {
+     "code": "O-WIN-2F-A",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "BUDGET_ESTIMATE",
+     "commercial_qty": 5.4806,
+     "confidence": "L"
+    },
+    {
+     "code": "O-SALON",
+     "unit": "m2",
+     "technical": "OWNER_PROJECT_FACT",
+     "technical_qty": 23.104,
+     "commercial": "OWNER_PROJECT_FACT",
+     "commercial_qty": 23.104,
+     "confidence": "H"
+    },
+    {
+     "code": "O-CURVED-L",
+     "unit": "lm",
+     "technical": "DERIVED",
+     "technical_qty": 6.725,
+     "commercial": "DERIVED",
+     "commercial_qty": 6.725,
+     "confidence": "H"
+    },
+    {
+     "code": "O-CURVED-A",
+     "unit": "m2",
+     "technical": "RASTER_DERIVED",
+     "technical_qty": 28.9175,
+     "commercial": "RASTER_DERIVED",
+     "commercial_qty": 28.9175,
+     "confidence": "H"
+    },
+    {
+     "code": "O-SILL-1F",
+     "unit": "lm",
+     "technical": "DERIVED",
+     "technical_qty": 14.756,
+     "commercial": "DERIVED",
+     "commercial_qty": 14.756,
+     "confidence": "H"
+    },
+    {
+     "code": "O-SILL-2F_ROOF",
+     "unit": "lm",
+     "technical": "DERIVED",
+     "technical_qty": 5.0,
+     "commercial": "DERIVED",
+     "commercial_qty": 5.0,
+     "confidence": "H"
+    },
+    {
+     "code": "O-SILL-GF",
+     "unit": "lm",
+     "technical": "DERIVED",
+     "technical_qty": 21.142,
+     "commercial": "DERIVED",
+     "commercial_qty": 21.142,
+     "confidence": "H"
+    }
+   ]
+  },
+  {
+   "id": "B12",
+   "blocker": "Paint under unbound beams",
+   "routes": "room modal known paint height for the blocked pieces",
+   "release_class": "PROVISIONAL_GEOMETRIC_INFERENCE",
+   "remaining_risk": "band type",
+   "lines": [
+    {
+     "code": "P-PA-GF-Z04",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "commercial_qty": 350.705695,
+     "confidence": "M"
+    },
+    {
+     "code": "P-PA-GF-R12",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "commercial_qty": 71.59607,
+     "confidence": "M"
+    },
+    {
+     "code": "P-PA-1F-Z06",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "commercial_qty": 296.01057,
+     "confidence": "M"
+    }
+   ]
+  },
+  {
+   "id": "B13",
+   "blocker": "Finish extras",
+   "routes": "owner methods OD-V3B-4..10 (sequences, beads, reveals, cornice only where established)",
+   "release_class": "DERIVED / PARTIAL / PROVISIONAL; cornice PENDING",
+   "remaining_risk": "cornice presence unknown (never zero)",
+   "lines": [
+    {
+     "code": "P-SD-GF-Z04",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 419.95,
+     "confidence": "H"
+    },
+    {
+     "code": "P-SD-GF-Z06",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 67.785,
+     "confidence": "L"
+    },
+    {
+     "code": "P-SD-GF-R12",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 85.566,
+     "confidence": "M"
+    },
+    {
+     "code": "P-SD-GF-R14",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 85.246,
+     "confidence": "H"
+    },
+    {
+     "code": "P-SD-1F-R03",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 74.209,
+     "confidence": "M"
+    },
+    {
+     "code": "P-SD-1F-R05",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 61.379,
+     "confidence": "H"
+    },
+    {
+     "code": "P-SD-1F-Z06",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 309.329,
+     "confidence": "M"
+    },
+    {
+     "code": "P-SD-1F-R08",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 24.331,
+     "confidence": "M"
+    },
+    {
+     "code": "P-SD-1F-R09",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 59.396,
+     "confidence": "M"
+    },
+    {
+     "code": "P-SD-1F-R11",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 42.669,
+     "confidence": "M"
+    },
+    {
+     "code": "P-SD-2F-R01",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 73.222,
+     "confidence": "H"
+    },
+    {
+     "code": "P-SD-2F-R02",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 64.483,
+     "confidence": "H"
+    },
+    {
+     "code": "P-DOOR_REVEAL-1F",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_URBAN_FALLBACK",
+     "commercial_qty": 7.92,
+     "confidence": "M"
+    },
+    {
+     "code": "P-WINDOW_REVEAL-1F",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_URBAN_FALLBACK",
+     "commercial_qty": 6.119,
+     "confidence": "M"
+    },
+    {
+     "code": "P-DOOR_REVEAL-2F_ROOF",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_URBAN_FALLBACK",
+     "commercial_qty": 2.179,
+     "confidence": "M"
+    },
+    {
+     "code": "P-WINDOW_REVEAL-2F_ROOF",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_URBAN_FALLBACK",
+     "commercial_qty": 1.597,
+     "confidence": "M"
+    },
+    {
+     "code": "P-DOOR_REVEAL-GF",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_URBAN_FALLBACK",
+     "commercial_qty": 9.28,
+     "confidence": "M"
+    },
+    {
+     "code": "P-WINDOW_REVEAL-GF",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_URBAN_FALLBACK",
+     "commercial_qty": 7.679,
+     "confidence": "M"
+    },
+    {
+     "code": "P-BEAD-1F",
+     "unit": "lm",
+     "technical": "PARTIAL",
+     "technical_qty": 30.204,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 125.527774,
+     "confidence": "M"
+    },
+    {
+     "code": "P-BEAD-2F_ROOF",
+     "unit": "lm",
+     "technical": "PARTIAL",
+     "technical_qty": 3.8,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 41.272,
+     "confidence": "M"
+    },
+    {
+     "code": "P-BEAD-GF",
+     "unit": "lm",
+     "technical": "PARTIAL",
+     "technical_qty": 50.915578,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 136.189417,
+     "confidence": "M"
+    },
+    {
+     "code": "CE-CO-GF-R02",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    },
+    {
+     "code": "CE-CO-GF-R03",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    },
+    {
+     "code": "CE-CO-GF-Z04",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    },
+    {
+     "code": "CE-CO-GF-R05",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    },
+    {
+     "code": "CE-CO-GF-Z06",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    },
+    {
+     "code": "CE-CO-GF-R07",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    },
+    {
+     "code": "CE-CO-GF-R09",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    },
+    {
+     "code": "CE-CO-GF-R10",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    },
+    {
+     "code": "CE-CO-GF-R12",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    },
+    {
+     "code": "CE-CO-GF-R13",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    },
+    {
+     "code": "CE-CO-GF-R14",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    },
+    {
+     "code": "CE-CO-GF-R15",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    },
+    {
+     "code": "CE-CO-1F-R01",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    },
+    {
+     "code": "CE-CO-1F-R03",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    },
+    {
+     "code": "CE-CO-1F-R04",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    },
+    {
+     "code": "CE-CO-1F-R05",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    },
+    {
+     "code": "CE-CO-1F-Z06",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    },
+    {
+     "code": "CE-CO-1F-R07",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    },
+    {
+     "code": "CE-CO-1F-R08",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    },
+    {
+     "code": "CE-CO-1F-R09",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    },
+    {
+     "code": "CE-CO-1F-R10",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    },
+    {
+     "code": "CE-CO-1F-R11",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    },
+    {
+     "code": "CE-CO-2F-R01",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    },
+    {
+     "code": "CE-CO-2F-R02",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    },
+    {
+     "code": "CE-CO-2F-R03",
+     "unit": "lm",
+     "technical": "REVIEW",
+     "technical_qty": null,
+     "commercial": "PENDING",
+     "commercial_qty": null,
+     "confidence": null
+    }
+   ]
+  },
+  {
+   "id": "B14",
+   "blocker": "Facades / boundary wall / courtyard",
+   "routes": "floor outline x printed level band; S-BOUN runs + fence sheet height; enclosure - footprints",
+   "release_class": "PROVISIONAL_GEOMETRIC_INFERENCE / PROVISIONAL_SOURCE_DERIVED",
+   "remaining_risk": "facade Route C not done; front run overlap",
+   "lines": [
+    {
+     "code": "C-BWALL",
+     "unit": "m3",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 5.2884,
+     "confidence": "M"
+    },
+    {
+     "code": "B-BWALL",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 156.5085,
+     "confidence": "M"
+    },
+    {
+     "code": "P-EXT-SD-GF",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "commercial_qty": 560.445,
+     "confidence": "M"
+    },
+    {
+     "code": "P-EXT-RP-GF",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "commercial_qty": 560.445,
+     "confidence": "M"
+    },
+    {
+     "code": "P-EXT-SP-GF",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "commercial_qty": 560.445,
+     "confidence": "M"
+    },
+    {
+     "code": "P-EXT-SIGMA-GF",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "commercial_qty": 560.445,
+     "confidence": "M"
+    },
+    {
+     "code": "P-EXT-SD-1F",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "commercial_qty": 288.729,
+     "confidence": "M"
+    },
+    {
+     "code": "P-EXT-RP-1F",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "commercial_qty": 288.729,
+     "confidence": "M"
+    },
+    {
+     "code": "P-EXT-SP-1F",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "commercial_qty": 288.729,
+     "confidence": "M"
+    },
+    {
+     "code": "P-EXT-SIGMA-1F",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "commercial_qty": 288.729,
+     "confidence": "M"
+    },
+    {
+     "code": "P-EXT-SD-2F",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "commercial_qty": 122.116,
+     "confidence": "M"
+    },
+    {
+     "code": "P-EXT-RP-2F",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "commercial_qty": 122.116,
+     "confidence": "M"
+    },
+    {
+     "code": "P-EXT-SP-2F",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "commercial_qty": 122.116,
+     "confidence": "M"
+    },
+    {
+     "code": "P-EXT-SIGMA-2F",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "commercial_qty": 122.116,
+     "confidence": "M"
+    },
+    {
+     "code": "P-EXT-PAR-2F_ROOF",
+     "unit": "m2",
+     "technical": "DERIVED",
+     "technical_qty": 36.8064,
+     "commercial": "DERIVED",
+     "commercial_qty": 36.8064,
+     "confidence": "H"
+    },
+    {
+     "code": "P-EXT-PAR-2F_ROOF",
+     "unit": "m2",
+     "technical": "DERIVED",
+     "technical_qty": 64.836,
+     "commercial": "DERIVED",
+     "commercial_qty": 64.836,
+     "confidence": "H"
+    },
+    {
+     "code": "P-EXT-PAR-2F_ROOF",
+     "unit": "m2",
+     "technical": "DERIVED",
+     "technical_qty": 80.1888,
+     "commercial": "DERIVED",
+     "commercial_qty": 80.1888,
+     "confidence": "H"
+    },
+    {
+     "code": "F-COURT",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_GEOMETRIC_INFERENCE",
+     "commercial_qty": 147.137,
+     "confidence": "L"
+    },
+    {
+     "code": "P-BWALL",
+     "unit": "m2",
+     "technical": "BLOCKED",
+     "technical_qty": null,
+     "commercial": "PROVISIONAL_SOURCE_DERIVED",
+     "commercial_qty": 313.018,
+     "confidence": "M"
+    }
+   ]
+  },
+  {
+   "id": "B15",
+   "blocker": "Lift shaft",
+   "routes": "repeated 1.8 x 1.8 site + S-BW shaft walls on the GB sheet; no pit on the sections",
+   "release_class": "POSSIBLE_PROJECT_ELEMENT (finishes excluded, area shown)",
+   "remaining_risk": "owner confirmation",
+   "lines": []
+  }
+ ],
+ "summary": {
+  "technically_solved": [
+   "B04",
+   "B05 (shell)",
+   "B09",
+   "B10",
+   "B11 (doors, curved glazing)"
+  ],
+  "commercially_provisional": [
+   "B01",
+   "B03",
+   "B05 (ring)",
+   "B07",
+   "B08",
+   "B11 (windows)",
+   "B12",
+   "B13",
+   "B14"
+  ],
+  "true_technical_gaps": [
+   "B02",
+   "B06"
+  ],
+  "true_blockers_no_commercial": []
+ }
+}

@@ -1,0 +1,644 @@
+{
+ "dome_detail_items": [
+  {
+   "component": "SHELL",
+   "dome_item_id": "DOME-SHELL-1A0E",
+   "position_mm": [
+    17656.109,
+    9146.633
+   ],
+   "raw": "%%C12MM/15cm",
+   "role": "MESH_TWO_LAYERS (second label)",
+   "source_id": "DETTXT:DET:1A0E",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "SHELL",
+   "dome_item_id": "DOME-SHELL-1A15",
+   "position_mm": [
+    29022.705,
+    14068.949
+   ],
+   "raw": "%%C12MM/15cm",
+   "role": "MESH_TWO_LAYERS",
+   "source_id": "DETTXT:DET:1A15",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "RING_BEAM",
+   "dome_item_id": "DOME-RING_BEAM-1A29",
+   "position_mm": [
+    14220.599,
+    2781.852
+   ],
+   "raw": "8%%c8/m",
+   "role": "STIRRUPS_PER_M",
+   "source_id": "DETTXT:DET:1A29",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "RING_BEAM",
+   "dome_item_id": "DOME-RING_BEAM-1A37",
+   "position_mm": [
+    13923.457,
+    1589.64
+   ],
+   "raw": "2%%c14/20cm",
+   "role": "SIDE_BARS",
+   "source_id": "DETTXT:DET:1A37",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "RING_BEAM",
+   "dome_item_id": "DOME-RING_BEAM-1A47",
+   "position_mm": [
+    14338.695,
+    3999.624
+   ],
+   "raw": "3%%c16",
+   "role": "TOP_BARS",
+   "source_id": "DETTXT:DET:1A47",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "RING_BEAM",
+   "dome_item_id": "DOME-RING_BEAM-1A4B",
+   "position_mm": [
+    14338.695,
+    589.64
+   ],
+   "raw": "3%%c18",
+   "role": "BOTTOM_BARS",
+   "source_id": "DETTXT:DET:1A4B",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "RING_BEAM",
+   "dome_item_id": "DOME-RING_BEAM-1A58",
+   "position_mm": [
+    32276.88,
+    2781.852
+   ],
+   "raw": "8%%c8/m",
+   "role": "STIRRUPS_PER_M",
+   "source_id": "DETTXT:DET:1A58",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "RING_BEAM",
+   "dome_item_id": "DOME-RING_BEAM-1A66",
+   "position_mm": [
+    31979.737,
+    1589.64
+   ],
+   "raw": "2%%c14/20cm",
+   "role": "SIDE_BARS",
+   "source_id": "DETTXT:DET:1A66",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "RING_BEAM",
+   "dome_item_id": "DOME-RING_BEAM-1A68",
+   "position_mm": [
+    32394.975,
+    3999.624
+   ],
+   "raw": "3%%c16",
+   "role": "TOP_BARS",
+   "source_id": "DETTXT:DET:1A68",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "component": "RING_BEAM",
+   "dome_item_id": "DOME-RING_BEAM-1A6C",
+   "position_mm": [
+    32394.975,
+    589.64
+   ],
+   "raw": "3%%c18",
+   "role": "BOTTOM_BARS",
+   "source_id": "DETTXT:DET:1A6C",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  }
+ ],
+ "frozen_before_benchmark": true,
+ "policy": {
+  "cb_states": [
+   "MATCH_CONFIRMED",
+   "SPAN_LENGTH_CONFLICT",
+   "SPAN_COUNT_CONFLICT",
+   "TAG_WITH_NO_MEMBER",
+   "MEMBER_WITH_NO_TAG",
+   "BLOCKED"
+  ],
+  "policy_id": "STRUCTURAL_CENSUS_V1",
+  "precedence": [
+   "LOCAL_PANEL_NOTE",
+   "FLOOR_SPECIFIC_NOTE",
+   "PROJECT_DEFAULT"
+  ],
+  "principles": [
+   "plan decides occurrence; schedule only defines",
+   "no default overrides a local note",
+   "a value is never rounded into a table row it does not match",
+   "every plan object ends in one terminal state"
+  ],
+  "rule_states": [
+   "EXACT_RULE",
+   "RULE_NOT_EXACT_MATCH",
+   "BLOCKED_METHOD"
+  ],
+  "terminal_states": [
+   "COUNTED_AND_DEFINED",
+   "COUNTED_DEFINITION_PARTIAL",
+   "COUNTED_BLOCKED",
+   "NOT_IN_SCOPE"
+  ]
+ },
+ "register": "SPECIAL_STRUCTURAL_OCCURRENCE_REGISTER",
+ "round": "S1",
+ "rows": [
+  {
+   "binding": "BOUND",
+   "bound_chain": "COLPOS-X15-Y06-31508-15062",
+   "floor": "GF_ROOF_SLAB",
+   "kind": "TURN_COLUMN",
+   "label": "T.C",
+   "rule": "P15-TWISTED",
+   "rule_status": "CANDIDATE",
+   "source_id": "SLABLABEL:GFRS:31F",
+   "special_id": "SPC-TURN_COLUMN-GFRS-31F",
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "binding": "BOUND",
+   "bound_chain": "COLPOS-X13-Y08-27308-16612",
+   "floor": "GF_ROOF_SLAB",
+   "kind": "TURN_COLUMN",
+   "label": "T.C",
+   "rule": "P15-TWISTED",
+   "rule_status": "CANDIDATE",
+   "source_id": "SLABLABEL:GFRS:324",
+   "special_id": "SPC-TURN_COLUMN-GFRS-324",
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "binding": "BOUND",
+   "bound_chain": "COLPOS-X06-Y04-14438-12062",
+   "floor": "GF_ROOF_SLAB",
+   "kind": "DEAD_COLUMN",
+   "label": "D.C",
+   "rule": "P3-LEGEND",
+   "rule_status": "EXACT_RULE",
+   "source_id": "SLABLABEL:GFRS:38A",
+   "special_id": "SPC-DEAD_COLUMN-GFRS-38A",
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "binding": "BOUND",
+   "bound_chain": "COLPOS-X08-Y02-16850-8912",
+   "floor": "GF_ROOF_SLAB",
+   "kind": "PLANTED_COLUMN",
+   "label": "P.C 20x70",
+   "rule": "P15-PLANTED",
+   "rule_status": "CANDIDATE",
+   "source_id": "SLABLABEL:GFRS:544",
+   "special_id": "SPC-PLANTED_COLUMN-GFRS-544",
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "binding": "BOUND",
+   "bound_chain": "COLPOS-X15-Y02-31508-8912",
+   "floor": "GF_ROOF_SLAB",
+   "kind": "PLANTED_COLUMN",
+   "label": "P.C 20x50",
+   "rule": "P15-PLANTED",
+   "rule_status": "CANDIDATE",
+   "source_id": "SLABLABEL:GFRS:548",
+   "special_id": "SPC-PLANTED_COLUMN-GFRS-548",
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "binding": "BOUND",
+   "bound_chain": "COLPOS-X?-Y?-24888-15994",
+   "floor": "1F_ROOF_SLAB",
+   "kind": "PLANTED_COLUMN",
+   "label": "P.C 20x50",
+   "rule": "P15-PLANTED",
+   "rule_status": "CANDIDATE",
+   "source_id": "SLABLABEL:FFRS:77C",
+   "special_id": "SPC-PLANTED_COLUMN-FFRS-77C",
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "accounted_in": "SLAB_PANEL_REGISTER",
+   "area_m2": 10.415,
+   "floor": "GF_ROOF_SLAB",
+   "kind": "STAIR_FLIGHT",
+   "panel": "SP-GF_ROOF_SLAB-03",
+   "rule": "P16-STAIR",
+   "rule_status": "BLOCKED_METHOD",
+   "source_id": null,
+   "special_id": "SPC-STAIR-SP-GF_ROOF_SLAB-03",
+   "status": "BLOCKED",
+   "terminal_state": "COUNTED_BLOCKED",
+   "thickness_note_mm": 160,
+   "treads": 26
+  },
+  {
+   "accounted_in": "SLAB_PANEL_REGISTER",
+   "area_m2": 20.146,
+   "floor": "GF_ROOF_SLAB",
+   "kind": "STAIR_FLIGHT",
+   "panel": "SP-GF_ROOF_SLAB-21",
+   "rule": "P16-STAIR",
+   "rule_status": "BLOCKED_METHOD",
+   "source_id": null,
+   "special_id": "SPC-STAIR-SP-GF_ROOF_SLAB-21",
+   "status": "BLOCKED",
+   "terminal_state": "COUNTED_BLOCKED",
+   "thickness_note_mm": null,
+   "treads": 14
+  },
+  {
+   "accounted_in": "SLAB_PANEL_REGISTER",
+   "area_m2": 6.979,
+   "floor": "GF_ROOF_SLAB",
+   "kind": "STAIR_FLIGHT",
+   "panel": "SP-GF_ROOF_SLAB-28",
+   "rule": "P16-STAIR",
+   "rule_status": "BLOCKED_METHOD",
+   "source_id": null,
+   "special_id": "SPC-STAIR-SP-GF_ROOF_SLAB-28",
+   "status": "BLOCKED",
+   "terminal_state": "COUNTED_BLOCKED",
+   "thickness_note_mm": 160,
+   "treads": 13
+  },
+  {
+   "accounted_in": "SLAB_PANEL_REGISTER",
+   "area_m2": 10.415,
+   "floor": "1F_ROOF_SLAB",
+   "kind": "STAIR_FLIGHT",
+   "panel": "SP-1F_ROOF_SLAB-01",
+   "rule": "P16-STAIR",
+   "rule_status": "BLOCKED_METHOD",
+   "source_id": null,
+   "special_id": "SPC-STAIR-SP-1F_ROOF_SLAB-01",
+   "status": "BLOCKED",
+   "terminal_state": "COUNTED_BLOCKED",
+   "thickness_note_mm": 160,
+   "treads": 24
+  },
+  {
+   "accounted_in": "SLAB_PANEL_REGISTER",
+   "area_m2": 8.372,
+   "floor": "GROUND_SLAB_SOG",
+   "kind": "STAIR_FLIGHT",
+   "panel": "SP-GBP-12",
+   "rule": "P16-STAIR",
+   "rule_status": "BLOCKED_METHOD",
+   "source_id": null,
+   "special_id": "SPC-STAIR-SP-GBP-12",
+   "status": "BLOCKED",
+   "terminal_state": "COUNTED_BLOCKED",
+   "thickness_note_mm": null,
+   "treads": 9
+  },
+  {
+   "accounted_in": "BEAM_OCCURRENCE_REGISTER (family STAIR)",
+   "floor": "GF_ROOF",
+   "kind": "STAIR_BEAM",
+   "rule": "schedule row of the tag",
+   "source_id": "STAIRQUAL:GFRS:6B6",
+   "special_id": "SPC-STAIR_BEAM-GFRS-6B6",
+   "status": "COUNTED",
+   "tag_handle": "6B7",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "accounted_in": "BEAM_OCCURRENCE_REGISTER (family STAIR)",
+   "floor": "GF_ROOF",
+   "kind": "STAIR_BEAM",
+   "rule": "schedule row of the tag",
+   "source_id": "STAIRQUAL:GFRS:1826",
+   "special_id": "SPC-STAIR_BEAM-GFRS-1826",
+   "status": "COUNTED",
+   "tag_handle": "1827",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "accounted_in": "BEAM_OCCURRENCE_REGISTER (family STAIR)",
+   "floor": "1F_ROOF",
+   "kind": "STAIR_BEAM",
+   "rule": "schedule row of the tag",
+   "source_id": "STAIRQUAL:FFRS:6B8",
+   "special_id": "SPC-STAIR_BEAM-FFRS-6B8",
+   "status": "COUNTED",
+   "tag_handle": "6B9",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "floor": "FOUNDATION",
+   "footing": [
+    "FTG-FF-18688-14112"
+   ],
+   "kind": "LIFT_PIT",
+   "rule": "P14-LIFT",
+   "rule_status": "BLOCKED_METHOD",
+   "source_id": null,
+   "special_id": "SPC-LIFT_PIT",
+   "status": "BLOCKED",
+   "terminal_state": "COUNTED_BLOCKED",
+   "walls": "200 mm, 6Ø12/m + 6Ø16/m; pit depth BLOCKED (manufacturer)"
+  },
+  {
+   "accounted_in": "BEAM_OCCURRENCE_REGISTER",
+   "drawn": false,
+   "floor": "GF",
+   "kind": "LIFT_TIE_BEAM",
+   "rule": "P8-N19",
+   "rule_status": "EXACT_RULE",
+   "source_id": null,
+   "special_id": "SPC-LIFT_TIE_BEAM-GF",
+   "status": "BLOCKED",
+   "terminal_state": "COUNTED_BLOCKED"
+  },
+  {
+   "floor": "ALL",
+   "kind": "LINTEL_POPULATION",
+   "rule": "P13-LINTEL",
+   "source_id": null,
+   "special_id": "SPC-LINTELS",
+   "status": "BLOCKED",
+   "terminal_state": "COUNTED_BLOCKED",
+   "why": "occurrences come from the architectural opening register (not structural plans)"
+  },
+  {
+   "floor": "SITE",
+   "kind": "BOUNDARY_WALL",
+   "rule": "P14-BOUNDARY",
+   "rule_status": "SOURCE_CONFLICT",
+   "schedule_row": "B.W (SBT) 20x60",
+   "source_id": null,
+   "special_id": "SPC-BOUNDARY_WALL",
+   "status": "SOURCE_CONFLICT",
+   "terminal_state": "COUNTED_BLOCKED",
+   "why": "boundary wall typical detail vs schedule row B.W; length not on the structural plans"
+  },
+  {
+   "floor": "GF_ROOF_SLAB",
+   "kind": "PARAPET",
+   "raw": "PARAPET, BEFORE CASTING",
+   "rule": "P4-6-NOTE-1",
+   "rule2": "P14-PARAPETS",
+   "source_id": "NOTE:GFRS:D3",
+   "special_id": "SPC-PARAPET-GFRS",
+   "status": "BLOCKED",
+   "terminal_state": "COUNTED_BLOCKED",
+   "why": "parapet geometry follows the architectural drawings"
+  },
+  {
+   "floor": "1F_ROOF_SLAB",
+   "kind": "PARAPET",
+   "raw": "PARAPET, BEFORE CASTING",
+   "rule": "P4-6-NOTE-1",
+   "rule2": "P14-PARAPETS",
+   "source_id": "NOTE:FFRS:DD",
+   "special_id": "SPC-PARAPET-FFRS",
+   "status": "BLOCKED",
+   "terminal_state": "COUNTED_BLOCKED",
+   "why": "parapet geometry follows the architectural drawings"
+  },
+  {
+   "floor": "2F_ROOF_SLAB",
+   "kind": "PARAPET",
+   "raw": "PARAPET, BEFORE CASTING",
+   "rule": "P4-6-NOTE-1",
+   "rule2": "P14-PARAPETS",
+   "source_id": "NOTE:SFRS:E6",
+   "special_id": "SPC-PARAPET-SFRS",
+   "status": "BLOCKED",
+   "terminal_state": "COUNTED_BLOCKED",
+   "why": "parapet geometry follows the architectural drawings"
+  },
+  {
+   "accounted_in": "SLAB_PANEL_REGISTER (T 18 local note)",
+   "floor": "2F_ROOF_SLAB",
+   "kind": "WATER_TANK_SLAB",
+   "panels": [
+    "SP-2F_ROOF_SLAB-01",
+    "SP-2F_ROOF_SLAB-02"
+   ],
+   "raw": "WATER TANK PLACE",
+   "source_id": "NOTE:SFRS:1A85",
+   "special_id": "SPC-WATER_TANK-SFRS",
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED"
+  },
+  {
+   "detail": "span 442 cm, rise 190 cm (p.7, N.I.S = not to scale)",
+   "dome_zone_faces": [
+    "SP-1F_ROOF_SLAB-13",
+    "SP-1F_ROOF_SLAB-14",
+    "SP-1F_ROOF_SLAB-19",
+    "SP-1F_ROOF_SLAB-20"
+   ],
+   "floor": "1F_ROOF_SLAB",
+   "kind": "DOME",
+   "rule": "P7-DOME",
+   "rule_status": "CANDIDATE",
+   "see_detail_labels": [
+    "182A",
+    "1A1B",
+    "1A1C",
+    "1A1A"
+   ],
+   "source_id": null,
+   "special_id": "SPC-DOME-1",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "detail": "span 442 cm, rise 190 cm (p.7, N.I.S = not to scale)",
+   "dome_zone_faces": [
+    "SP-1F_ROOF_SLAB-15",
+    "SP-1F_ROOF_SLAB-16",
+    "SP-1F_ROOF_SLAB-17",
+    "SP-1F_ROOF_SLAB-18"
+   ],
+   "floor": "1F_ROOF_SLAB",
+   "kind": "DOME",
+   "rule": "P7-DOME",
+   "rule_status": "CANDIDATE",
+   "see_detail_labels": [
+    "1A1D",
+    "1A1F",
+    "1A20",
+    "1A1E"
+   ],
+   "source_id": null,
+   "special_id": "SPC-DOME-2",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "floor": "GROUND",
+   "kind": "SWIMMING_POOL",
+   "rule": "P7-POOL",
+   "see": "POOL_STRUCTURAL_REGISTER",
+   "source_id": null,
+   "special_id": "SPC-POOL",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "accounted_in": "SLAB_PANEL_REGISTER (GBP cells)",
+   "cells": 21,
+   "floor": "GROUND_SLAB_SOG",
+   "kind": "GROUND_SLAB",
+   "notes": [
+    "1690:TT1>v",
+    "169D:TT1>v"
+   ],
+   "rule": "P3-GROUND-SLAB",
+   "source_id": null,
+   "special_id": "SPC-GROUND_SLAB",
+   "status": "PROVISIONAL",
+   "terminal_state": "COUNTED_DEFINITION_PARTIAL"
+  },
+  {
+   "accounted_in": "SLAB_REBAR_SOURCE_REGISTER",
+   "kind": "SLAB_CORNER_BARS",
+   "panels": [
+    "SP-1F_ROOF_SLAB-21"
+   ],
+   "source_id": null,
+   "special_id": "SPC-CORNER_BARS",
+   "status": "COUNTED",
+   "terminal_state": "COUNTED_AND_DEFINED",
+   "texts": [
+    "FFRS:71E",
+    "FFRS:725",
+    "FFRS:72E",
+    "FFRS:72F"
+   ]
+  },
+  {
+   "floor": "ALL",
+   "kind": "BEAM_OPENING",
+   "plan_occurrences": 0,
+   "rule": "P16-BEAM-OPENING",
+   "source_id": null,
+   "special_id": "SPC-BEAM_OPENING",
+   "status": "NO_OCCURRENCE_MARKED",
+   "terminal_state": "NOT_IN_SCOPE",
+   "why": "typical detail printed; no occurrence marked on any plan"
+  },
+  {
+   "floor": "ALL",
+   "kind": "CASEMENT_DETAIL",
+   "plan_occurrences": 0,
+   "rule": "P15-CASEMENT",
+   "source_id": null,
+   "special_id": "SPC-CASEMENT_DETAIL",
+   "status": "NO_OCCURRENCE_MARKED",
+   "terminal_state": "NOT_IN_SCOPE",
+   "why": "typical detail printed; no occurrence marked on any plan"
+  },
+  {
+   "floor": "ALL",
+   "kind": "RIBBED_SLAB",
+   "plan_occurrences": 0,
+   "rule": "P16-RIBS",
+   "source_id": null,
+   "special_id": "SPC-RIBBED_SLAB",
+   "status": "NO_OCCURRENCE_MARKED",
+   "terminal_state": "NOT_IN_SCOPE",
+   "why": "typical detail printed; no occurrence marked on any plan"
+  },
+  {
+   "floor": "GF_ROOF_SLAB",
+   "kind": "SECTION_DETAIL_CALLOUT",
+   "raw": "SECTION A-A",
+   "source_id": "NOTE:GFRS:1727",
+   "special_id": "SPC-SECTION-GFRS-1727",
+   "status": "DETAIL",
+   "terminal_state": "NOT_IN_SCOPE",
+   "why": "section drawing inside the plan sheet (its bar texts are SECTION_DETAIL owners)"
+  },
+  {
+   "floor": "GF_ROOF_SLAB",
+   "kind": "SECTION_DETAIL_CALLOUT",
+   "raw": "SECTION C-C",
+   "source_id": "NOTE:GFRS:176C",
+   "special_id": "SPC-SECTION-GFRS-176C",
+   "status": "DETAIL",
+   "terminal_state": "NOT_IN_SCOPE",
+   "why": "section drawing inside the plan sheet (its bar texts are SECTION_DETAIL owners)"
+  },
+  {
+   "floor": "GF_ROOF_SLAB",
+   "kind": "SECTION_DETAIL_CALLOUT",
+   "raw": "SECTION D-D",
+   "source_id": "NOTE:GFRS:17A2",
+   "special_id": "SPC-SECTION-GFRS-17A2",
+   "status": "DETAIL",
+   "terminal_state": "NOT_IN_SCOPE",
+   "why": "section drawing inside the plan sheet (its bar texts are SECTION_DETAIL owners)"
+  },
+  {
+   "floor": "1F_ROOF_SLAB",
+   "kind": "SECTION_DETAIL_CALLOUT",
+   "raw": "SECTION B-B",
+   "source_id": "NOTE:FFRS:1730",
+   "special_id": "SPC-SECTION-FFRS-1730",
+   "status": "DETAIL",
+   "terminal_state": "NOT_IN_SCOPE",
+   "why": "section drawing inside the plan sheet (its bar texts are SECTION_DETAIL owners)"
+  }
+ ],
+ "source": {
+  "drawing": "ST7757.dxf",
+  "dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "pdf": "ST7757.pdf",
+  "pdf_sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ },
+ "summary": {
+  "by_kind": {
+   "BEAM_OPENING": 1,
+   "BOUNDARY_WALL": 1,
+   "CASEMENT_DETAIL": 1,
+   "DEAD_COLUMN": 1,
+   "DOME": 2,
+   "GROUND_SLAB": 1,
+   "LIFT_PIT": 1,
+   "LIFT_TIE_BEAM": 1,
+   "LINTEL_POPULATION": 1,
+   "PARAPET": 3,
+   "PLANTED_COLUMN": 3,
+   "RIBBED_SLAB": 1,
+   "SECTION_DETAIL_CALLOUT": 4,
+   "SLAB_CORNER_BARS": 1,
+   "STAIR_BEAM": 3,
+   "STAIR_FLIGHT": 5,
+   "SWIMMING_POOL": 1,
+   "TURN_COLUMN": 2,
+   "WATER_TANK_SLAB": 1
+  },
+  "by_terminal_state": {
+   "COUNTED_AND_DEFINED": 5,
+   "COUNTED_BLOCKED": 12,
+   "COUNTED_DEFINITION_PARTIAL": 10,
+   "NOT_IN_SCOPE": 7
+  },
+  "rows": 34,
+  "special_population_cannot_disappear": true
+ }
+}

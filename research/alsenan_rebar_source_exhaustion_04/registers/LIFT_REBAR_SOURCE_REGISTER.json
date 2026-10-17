@@ -1,0 +1,106 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_LIFT_REBAR_V1",
+ "claims": [
+  "P14-LIFT-VALUES",
+  "P14-LIFT-ORIENTATION"
+ ],
+ "claim_states": {
+  "P14-LIFT-VALUES": "CROSS_VERIFIED_SOURCE",
+  "P14-LIFT-ORIENTATION": "AI_VISUAL_TRANSCRIPTION"
+ },
+ "pit": {
+  "state": "MACHINE_READ",
+  "inner_m": [
+   1.8,
+   1.8
+  ],
+  "outer_m": [
+   2.2,
+   2.2
+  ],
+  "wall_mm": 200.0,
+  "centreline_perimeter_m": 8.0,
+  "inner_perimeter_m": 7.2,
+  "handles": [
+   "10EA",
+   "10EB"
+  ],
+  "source": "ST7757.dxf S-BW closed outlines around the FF footing mark"
+ },
+ "population": "POP:FOOTING:FF#10",
+ "components": [
+  {
+   "comp_id": "POP:FOOTING:FF#10|TOP_SHORT",
+   "group": "FF_FOOTING_MESH",
+   "state": "PARTIAL",
+   "verified_kg": 142.426667,
+   "provisional_kg": 5.275062,
+   "why": null
+  },
+  {
+   "comp_id": "POP:FOOTING:FF#10|TOP_LONG",
+   "group": "FF_FOOTING_MESH",
+   "state": "PARTIAL",
+   "verified_kg": 145.693333,
+   "provisional_kg": 5.396049,
+   "why": null
+  },
+  {
+   "comp_id": "POP:FOOTING:FF#10|BOTTOM_SHORT",
+   "group": "FF_FOOTING_MESH",
+   "state": "PARTIAL",
+   "verified_kg": 216.277531,
+   "provisional_kg": 5.275062,
+   "why": null
+  },
+  {
+   "comp_id": "POP:FOOTING:FF#10|BOTTOM_LONG",
+   "group": "FF_FOOTING_MESH",
+   "state": "PARTIAL",
+   "verified_kg": 215.841975,
+   "provisional_kg": 5.396049,
+   "why": null
+  },
+  {
+   "comp_id": "POP:FOOTING:FF#10|TOP_LEGS",
+   "group": "OTHER_DETAIL_COMPONENTS",
+   "state": "PROVISIONAL",
+   "verified_kg": 0.0,
+   "provisional_kg": 55.557531,
+   "why": null
+  },
+  {
+   "comp_id": "POP:FOOTING:FF#10|LIFT_PIT_WALL_16MM",
+   "group": "LIFT_PIT_WALL_16MM",
+   "state": "BLOCKED",
+   "verified_kg": 0.0,
+   "provisional_kg": 0.0,
+   "why": "BLOCKED_DIMENSION: wall height = pit depth 'As Per Lift Manufactures recommendations' - not in the source"
+  },
+  {
+   "comp_id": "POP:FOOTING:FF#10|LIFT_PIT_WALL_12MM",
+   "group": "LIFT_PIT_WALL_12MM",
+   "state": "BLOCKED",
+   "verified_kg": 0.0,
+   "provisional_kg": 0.0,
+   "why": "BLOCKED_DIMENSION: bar count = 6/m x wall height; wall height = pit depth 'As Per Lift Manufactures recommendations' - not in the source"
+  },
+  {
+   "comp_id": "POP:FOOTING:FF#10|LIFT_PIT_BASE_2D16",
+   "group": "LIFT_PIT_BASE_2D16",
+   "state": "PARTIAL",
+   "verified_kg": 22.755556,
+   "provisional_kg": 27.812346,
+   "why": null
+  },
+  {
+   "comp_id": "POP:FOOTING:FF#10|PIT_WALL_TOP_2D12",
+   "group": "OTHER_DETAIL_COMPONENTS",
+   "state": "PROVISIONAL",
+   "verified_kg": 0.0,
+   "provisional_kg": 14.222222,
+   "why": null
+  }
+ ],
+ "blocked_dimension": "pit depth / wall height - lift manufacturer"
+}

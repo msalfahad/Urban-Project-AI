@@ -1,0 +1,46 @@
+{
+ "SCHEMA": "URBAN_R8_15_US07_REVEAL_DEPTH_REVIEW_V1",
+ "rule": "US-07 PLASTER_AND_PAINT_REVEALS_AT_0_25_M (a method default)",
+ "governing": "US-10 SOURCE_DIMENSIONS_OVERRIDE_DEFAULTS: 'an actual drawing dimension is never overwritten by a default, and a default never becomes source truth'",
+ "recommendation": "US-07 0.25 m becomes FALLBACK-ONLY: used where no source reveal depth exists; where the wall thickness at the opening is source-measured, the source depth governs and 0.25 m is kept as a counterfactual",
+ "implemented": "opening_reveals.reveal_depth (OPENING_REVEAL_POLICY_V2)",
+ "surfaces": [
+  {
+   "opening": "OP-997f14d12b8e9bc1",
+   "surface": "LEFT_JAMB",
+   "source_depth_m": 0.2,
+   "us07_depth_m": 0.25,
+   "area_source_m2": 0.44,
+   "area_us07_m2": 0.55,
+   "used": "SOURCE_PHYSICAL_DEPTH"
+  },
+  {
+   "opening": "OP-997f14d12b8e9bc1",
+   "surface": "RIGHT_JAMB",
+   "source_depth_m": 0.2,
+   "us07_depth_m": 0.25,
+   "area_source_m2": 0.44,
+   "area_us07_m2": 0.55,
+   "used": "SOURCE_PHYSICAL_DEPTH"
+  },
+  {
+   "opening": "OP-997f14d12b8e9bc1",
+   "surface": "TOP_SOFFIT",
+   "source_depth_m": 0.2,
+   "us07_depth_m": 0.25,
+   "area_source_m2": 0.239289,
+   "area_us07_m2": 0.299112,
+   "used": "SOURCE_PHYSICAL_DEPTH"
+  },
+  {
+   "opening": "OP-9e0fd219ca5cd391",
+   "surface": "LEFT_JAMB",
+   "source_depth_m": 0.15,
+   "us07_depth_m": 0.25,
+   "area_source_m2": 0.45,
+   "area_us07_m2": 0.75,
+   "used": "SOURCE_PHYSICAL_DEPTH"
+  }
+ ],
+ "rule_store_change": "none (the rule text is unchanged; its application order is now explicit)"
+}

@@ -1,0 +1,264 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_V3B_EXPECTED_SCOPE_V1",
+ "rows": [
+  {
+   "group": "Plaster",
+   "item": "internal plaster",
+   "urban_lines": 24,
+   "technical": "NOT_PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Plaster",
+   "item": "external plaster",
+   "urban_lines": 6,
+   "technical": "NOT_PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Plaster",
+   "item": "plaster corners (angle beads)",
+   "urban_lines": 3,
+   "technical": "PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Plaster",
+   "item": "spatter dash (wet rooms)",
+   "urban_lines": 13,
+   "technical": "PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Plaster",
+   "item": "spatter dash (dry, external)",
+   "urban_lines": 15,
+   "technical": "NOT_PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Paint",
+   "item": "internal paint",
+   "urban_lines": 12,
+   "technical": "NOT_PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Paint",
+   "item": "decor paint",
+   "urban_lines": 0,
+   "technical": "NOT_PRODUCED",
+   "commercial": "NOT_PRODUCED",
+   "scope_filter": "NOT_IN_SOURCE (no reflected ceiling / decor drawing)"
+  },
+  {
+   "group": "Paint",
+   "item": "external final finish (Sigma)",
+   "urban_lines": 3,
+   "technical": "NOT_PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Floors",
+   "item": "floor tile / porcelain",
+   "urban_lines": 41,
+   "technical": "PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Floors",
+   "item": "skirting",
+   "urban_lines": 12,
+   "technical": "PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Floors",
+   "item": "yard flooring",
+   "urban_lines": 1,
+   "technical": "NOT_PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Floors",
+   "item": "yard skirting",
+   "urban_lines": 0,
+   "technical": "NOT_PRODUCED",
+   "commercial": "NOT_PRODUCED",
+   "scope_filter": "NOT_IN_SOURCE (no yard detail)"
+  },
+  {
+   "group": "Floors",
+   "item": "marble stairs m2 + nosing + risers",
+   "urban_lines": 3,
+   "technical": "NOT_PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Floors",
+   "item": "stair skirting",
+   "urban_lines": 0,
+   "technical": "NOT_PRODUCED",
+   "commercial": "NOT_PRODUCED",
+   "scope_filter": "NOT_IN_SOURCE (no stair detail)"
+  },
+  {
+   "group": "Pool",
+   "item": "pool floor and wall tile",
+   "urban_lines": 1,
+   "technical": "PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Waterproofing",
+   "item": "wet-room floor + upturn lm",
+   "urban_lines": 26,
+   "technical": "PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Waterproofing",
+   "item": "roof floor + upturn lm",
+   "urban_lines": 3,
+   "technical": "PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Ceilings",
+   "item": "gypsum dry / wet",
+   "urban_lines": 51,
+   "technical": "PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Ceilings",
+   "item": "cornice dry / wet",
+   "urban_lines": 25,
+   "technical": "NOT_PRODUCED",
+   "commercial": "NOT_PRODUCED",
+   "scope_filter": "PENDING_OWNER_SCOPE (OD-V3B-10: only where established; geometry shown, never 0)"
+  },
+  {
+   "group": "Railings",
+   "item": "internal railing",
+   "urban_lines": 2,
+   "technical": "PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Blockwork",
+   "item": "external / 150 / 200",
+   "urban_lines": 14,
+   "technical": "PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Concrete",
+   "item": "blinding",
+   "urban_lines": 1,
+   "technical": "PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Concrete",
+   "item": "footings + straps",
+   "urban_lines": 3,
+   "technical": "PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Concrete",
+   "item": "ground slab + ground beams",
+   "urban_lines": 4,
+   "technical": "PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Concrete",
+   "item": "necks + columns",
+   "urban_lines": 7,
+   "technical": "PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Concrete",
+   "item": "structural walls",
+   "urban_lines": 1,
+   "technical": "NOT_PRODUCED",
+   "commercial": "NOT_PRODUCED",
+   "scope_filter": "POSSIBLE_PROJECT_ELEMENT (lift shaft walls S-BW, lift not confirmed)"
+  },
+  {
+   "group": "Concrete",
+   "item": "beams",
+   "urban_lines": 5,
+   "technical": "PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Concrete",
+   "item": "slabs",
+   "urban_lines": 3,
+   "technical": "PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Concrete",
+   "item": "stairs + domes",
+   "urban_lines": 7,
+   "technical": "PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Concrete",
+   "item": "pool",
+   "urban_lines": 2,
+   "technical": "PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Rebar",
+   "item": "rebar total",
+   "urban_lines": 30,
+   "technical": "PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  },
+  {
+   "group": "Openings",
+   "item": "aluminium doors / windows",
+   "urban_lines": 21,
+   "technical": "PRODUCED",
+   "commercial": "PRODUCED",
+   "scope_filter": "BOUND_PROJECT_ELEMENT"
+  }
+ ],
+ "source": "item NAMES only (V3B_FULL_BOQ_RECOMMENDATION §14); no benchmark quantity read",
+ "technical_scope_pct": 74.1,
+ "commercial_scope_pct": 100.0
+}

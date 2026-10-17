@@ -1,0 +1,1366 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_CARRIED_REAUDIT_V1",
+ "rows": [
+  {
+   "population": "GROUND",
+   "old_source": "V3a ground-beam sets: p.13 sections by clear length; hooks code method",
+   "old_formula": [
+    "5Ø10/m each way: 5 m of bar per m2 per direction (area x 5)",
+    "closed link: 2 x 135° tie hooks (ACI 318-19 Table 25.3.2, edition unverified)",
+    "end anchorage: 2 x 90° standard hooks (ACI 318-19 Table 25.3.1, edition unverified); low = no hook (bars continuous through supports)"
+   ],
+   "old_kg": {
+    "lower_bound_kg": 1252.923424,
+    "provisional_kg": 182.979135,
+    "budget_kg": 0.0,
+    "audit_kg": 0.0
+   },
+   "new_component_model": "p.13 sections as CROSS_VERIFIED claims; per-span candidate envelope (interior / exterior x length basis); anchorage BLOCKED",
+   "new_kg": {
+    "populations": 59,
+    "verified_kg": 2114.234598,
+    "provisional_kg": 1755.387763,
+    "audit_kg": 0.0,
+    "release_states": {
+     "VERIFIED_PARTIAL_LOWER_BOUND": 49,
+     "PROVISIONAL": 10
+    }
+   },
+   "source_coverage": "PDF claims + DXF geometry",
+   "release_state": {
+    "VERIFIED_PARTIAL_LOWER_BOUND": 49,
+    "PROVISIONAL": 10
+   },
+   "difference_verified_kg": 861.311174,
+   "difference_provisional_kg": 1572.408628,
+   "reason": "interior + exterior merged into one GB register; exterior flag re-tested"
+  },
+  {
+   "population": "GROUND_BEAM_EXT",
+   "old_source": "V3b exterior GB bars with D = 1.00 provisional",
+   "old_formula": [
+    "p.13 exterior GB bars; D = 1.00 provisional (ground to GF level)"
+   ],
+   "old_kg": {
+    "lower_bound_kg": 0.0,
+    "provisional_kg": 2793.705959,
+    "budget_kg": 0.0,
+    "audit_kg": 0.0
+   },
+   "new_component_model": "(merged into GROUND)",
+   "new_kg": {
+    "populations": 0,
+    "verified_kg": 0.0,
+    "provisional_kg": 0.0,
+    "audit_kg": 0.0
+   },
+   "source_coverage": "PDF claims + DXF geometry",
+   "release_state": null,
+   "difference_verified_kg": 0.0,
+   "difference_provisional_kg": -2793.705959,
+   "reason": "longitudinal bars no longer depend on D: verified where the governing detail is certain"
+  },
+  {
+   "population": "LINTELS",
+   "old_source": "p.13 lintel schedule, straight bars (W + 0.80 - 2c)",
+   "old_formula": [
+    "",
+    "closed link: 2 x 135° tie hooks (ACI 318-19 Table 25.3.2, edition unverified)",
+    "p.13 LINTEL SCHEDULE; straight bars over the lintel length less cover"
+   ],
+   "old_kg": {
+    "lower_bound_kg": 582.478815,
+    "provisional_kg": 44.424732,
+    "budget_kg": 0.0,
+    "audit_kg": 0.0
+   },
+   "new_component_model": "schedule CROSS_VERIFIED (core = opening width); MIN.40 bearing AI-only (provisional); drawn hooks BLOCKED; 5Ø8/M per-metre split",
+   "new_kg": {
+    "populations": 60,
+    "verified_kg": 373.831901,
+    "provisional_kg": 271.196538,
+    "audit_kg": 0.0,
+    "release_states": {
+     "VERIFIED_PARTIAL_LOWER_BOUND": 59,
+     "BLOCKED": 1
+    }
+   },
+   "source_coverage": "PDF claims + DXF geometry",
+   "release_state": {
+    "VERIFIED_PARTIAL_LOWER_BOUND": 59,
+    "BLOCKED": 1
+   },
+   "difference_verified_kg": -208.646914,
+   "difference_provisional_kg": 226.771806,
+   "reason": "bearing extension now provisional; hooks blocked"
+  },
+  {
+   "population": "COLUMN_STARTERS",
+   "old_source": "weight only: median FOUNDATION bars x (neck @ Urban founding -1.50 + H - 7 cm + 40Ø)",
+   "old_formula": [
+    "FOUNDATION bars of the column schedule: neck + footing embedment (H - 7 cm) + one 40Ø lap"
+   ],
+   "old_kg": {
+    "lower_bound_kg": 0.0,
+    "provisional_kg": 938.667,
+    "budget_kg": 0.0,
+    "audit_kg": 0.0
+   },
+   "new_component_model": "per GF column: FOUNDATION bars x (footing depth min - 70 + 300 foot + 40Ø projection); NECK BLOCKED",
+   "new_kg": {
+    "populations": 30,
+    "verified_kg": 346.453333,
+    "provisional_kg": 167.537778,
+    "audit_kg": 14.791111,
+    "release_states": {
+     "VERIFIED_PARTIAL_LOWER_BOUND": 27,
+     "BLOCKED": 1,
+     "PROVISIONAL": 2
+    }
+   },
+   "source_coverage": "PDF claims + DXF geometry",
+   "release_state": {
+    "VERIFIED_PARTIAL_LOWER_BOUND": 27,
+    "BLOCKED": 1,
+    "PROVISIONAL": 2
+   },
+   "difference_verified_kg": 346.453333,
+   "difference_provisional_kg": -771.129222,
+   "reason": "founding-level fallback removed; neck blocked"
+  },
+  {
+   "population": "BOUNDARY_WALL",
+   "old_source": "schedule row B.W over the S-BOUN run (provisional)",
+   "old_formula": [
+    "schedule B.W 20x60: bottom 4Ø16, top 2Ø14, 7Ø8/m; run = S-BOUN outline"
+   ],
+   "old_kg": {
+    "lower_bound_kg": 0.0,
+    "provisional_kg": 555.650126,
+    "budget_kg": 0.0,
+    "audit_kg": 0.0
+   },
+   "new_component_model": "SOURCE_CONFLICT schedule B.W vs p.14 typical; columns / pads / lower beam BLOCKED",
+   "new_kg": {
+    "populations": 1,
+    "verified_kg": 0.0,
+    "provisional_kg": 0.0,
+    "audit_kg": 0.0,
+    "release_states": {
+     "BLOCKED": 1
+    }
+   },
+   "source_coverage": "PDF claims + DXF geometry",
+   "release_state": {
+    "BLOCKED": 1
+   },
+   "difference_verified_kg": 0.0,
+   "difference_provisional_kg": -555.650126,
+   "reason": "no side of a conflict is selected"
+  },
+  {
+   "population": "DOME",
+   "old_source": "DETAIL OF DOME scaled by the printed 442; rise from elevations",
+   "old_formula": [
+    "DETAIL OF DOME (N.I.S., factor proved by the 442 dimension)",
+    "hoops: mid-surface area / meridian = mean hoop length",
+    "ring-beam links 8Ø8/m; 135° hooks code method"
+   ],
+   "old_kg": {
+    "lower_bound_kg": 2054.226914,
+    "provisional_kg": 24.887154,
+    "budget_kg": 0.0,
+    "audit_kg": 0.0
+   },
+   "new_component_model": "DXF-text bars; ring inner circle verified; shell lower bound = plan radius / plan area; rise-dependent parts provisional",
+   "new_kg": {
+    "populations": 3,
+    "verified_kg": 1264.212114,
+    "provisional_kg": 833.081944,
+    "audit_kg": 0.0,
+    "release_states": {
+     "VERIFIED_PARTIAL_LOWER_BOUND": 3
+    }
+   },
+   "source_coverage": "PDF claims + DXF geometry",
+   "release_state": {
+    "VERIFIED_PARTIAL_LOWER_BOUND": 3
+   },
+   "difference_verified_kg": -790.0148,
+   "difference_provisional_kg": 808.19479,
+   "reason": "rise (1.72 / 2.15 elevations vs 1.90 detail) no longer drives verified kg"
+  },
+  {
+   "population": "POOL",
+   "old_source": "deep-end callouts applied to the whole pool",
+   "old_formula": [
+    "DETAIL OF SWIMMING POOL",
+    "DETAIL OF SWIMMING POOL (deep-end values)"
+   ],
+   "old_kg": {
+    "lower_bound_kg": 585.738272,
+    "provisional_kg": 0.0,
+    "budget_kg": 0.0,
+    "audit_kg": 0.0
+   },
+   "new_component_model": "all bar sets PROVISIONAL (AI mapping of the N.I.S. detail; sloped floor not on plan)",
+   "new_kg": {
+    "populations": 1,
+    "verified_kg": 0.0,
+    "provisional_kg": 588.740741,
+    "audit_kg": 0.0,
+    "release_states": {
+     "PROVISIONAL": 1
+    }
+   },
+   "source_coverage": "PDF claims + DXF geometry",
+   "release_state": {
+    "PROVISIONAL": 1
+   },
+   "difference_verified_kg": -585.738272,
+   "difference_provisional_kg": 588.740741,
+   "reason": "R3 released it as a lower bound - now provisional"
+  },
+  {
+   "population": "BEAM_RESIDUE",
+   "old_source": "BUDGET: same-type median length x section per unbound tag",
+   "old_formula": [
+    "measured B1 straight + hook weight per m (7.41 kg/m) x residue length",
+    "measured B4 straight + hook weight per m (11.98 kg/m) x residue length",
+    "measured B6 straight + hook weight per m (16.17 kg/m) x residue length"
+   ],
+   "old_kg": {
+    "lower_bound_kg": 0.0,
+    "provisional_kg": 0.0,
+    "budget_kg": 319.11342,
+    "audit_kg": 0.0
+   },
+   "new_component_model": "one BLOCKED population per unbound tag, audit only",
+   "new_kg": {
+    "populations": 10,
+    "verified_kg": 0.0,
+    "provisional_kg": 0.0,
+    "audit_kg": 319.11342,
+    "release_states": {
+     "BLOCKED": 10
+    }
+   },
+   "source_coverage": "PDF claims + DXF geometry",
+   "release_state": {
+    "BLOCKED": 10
+   },
+   "difference_verified_kg": 0.0,
+   "difference_provisional_kg": -319.11342,
+   "reason": "BUDGET removed - no opaque kg"
+  },
+  {
+   "population": "FOOTING_F_F10",
+   "old_source": "F10 selected (provisional)",
+   "old_formula": [
+    "F / F10 conflict, F10 selected"
+   ],
+   "old_kg": {
+    "lower_bound_kg": 0.0,
+    "provisional_kg": 62.671605,
+    "budget_kg": 0.0,
+    "audit_kg": 0.0
+   },
+   "new_component_model": "RETIRED - duplicate of the blocked R3 F / F10 pair",
+   "new_kg": {
+    "populations": 0,
+    "verified_kg": 0.0,
+    "provisional_kg": 0.0,
+    "audit_kg": 0.0
+   },
+   "source_coverage": "none (retired)",
+   "release_state": null,
+   "difference_verified_kg": 0.0,
+   "difference_provisional_kg": -62.671605,
+   "reason": "selecting one side of a conflict is not allowed"
+  }
+ ],
+ "carried_populations_remaining": 0,
+ "starters": {
+  "footing_depth_min_m": 0.3,
+  "rows": [
+   {
+    "column": "COLUMN:GF:C:H2125",
+    "type": "C",
+    "foundation_bars": [
+     [
+      8,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 10.998519,
+    "provisional_kg": 3.792593,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C:H4100",
+    "type": "C",
+    "foundation_bars": [
+     [
+      8,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 10.998519,
+    "provisional_kg": 3.792593,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C3:H4102",
+    "type": "C3",
+    "foundation_bars": [
+     [
+      8,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 10.998519,
+    "provisional_kg": 3.792593,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C:H4104",
+    "type": "C",
+    "foundation_bars": [
+     [
+      8,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 10.998519,
+    "provisional_kg": 3.792593,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C3:H4106",
+    "type": "C3",
+    "foundation_bars": [
+     [
+      8,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 10.998519,
+    "provisional_kg": 3.792593,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C:H4108",
+    "type": "C",
+    "foundation_bars": [
+     [
+      8,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 10.998519,
+    "provisional_kg": 3.792593,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C3:H4110",
+    "type": "C3",
+    "foundation_bars": [
+     [
+      8,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 10.998519,
+    "provisional_kg": 3.792593,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C5:H4112",
+    "type": "C5",
+    "foundation_bars": [
+     [
+      10,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 13.748148,
+    "provisional_kg": 4.740741,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C11:H4114",
+    "type": "C11",
+    "foundation_bars": [
+     [
+      14,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 19.247407,
+    "provisional_kg": 6.637037,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C6:H4116",
+    "type": "C6",
+    "foundation_bars": [
+     [
+      10,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 13.748148,
+    "provisional_kg": 4.740741,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C11:H4118",
+    "type": "C11",
+    "foundation_bars": [
+     [
+      14,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 19.247407,
+    "provisional_kg": 6.637037,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C3:H4120",
+    "type": "C3",
+    "foundation_bars": [
+     [
+      8,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 10.998519,
+    "provisional_kg": 3.792593,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C8:H4122",
+    "type": "C8",
+    "foundation_bars": [
+     [
+      12,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 16.497778,
+    "provisional_kg": 5.688889,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C5:H4124",
+    "type": "C5",
+    "foundation_bars": [
+     [
+      10,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 13.748148,
+    "provisional_kg": 4.740741,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C10:H4185",
+    "type": "C10",
+    "foundation_bars": [
+     [
+      10,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 13.748148,
+    "provisional_kg": 4.740741,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C:H4187",
+    "type": "C",
+    "foundation_bars": [
+     [
+      8,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 10.998519,
+    "provisional_kg": 3.792593,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C7:H4189",
+    "type": "C7",
+    "foundation_bars": [
+     [
+      12,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 16.497778,
+    "provisional_kg": 5.688889,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C3:H4191",
+    "type": "C3",
+    "foundation_bars": [
+     [
+      8,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 10.998519,
+    "provisional_kg": 3.792593,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C2:H4193",
+    "type": "C2",
+    "foundation_bars": [
+     [
+      8,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 10.998519,
+    "provisional_kg": 3.792593,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C2:H4195",
+    "type": "C2",
+    "foundation_bars": [
+     [
+      8,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 10.998519,
+    "provisional_kg": 3.792593,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C4:H4197",
+    "type": "C4",
+    "foundation_bars": [
+     [
+      8,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 10.998519,
+    "provisional_kg": 3.792593,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C4:H4199",
+    "type": "C4",
+    "foundation_bars": [
+     [
+      8,
+      16
+     ]
+    ],
+    "release_state": "BLOCKED",
+    "verified_kg": 0.0,
+    "provisional_kg": 0.0,
+    "audit_kg": 14.791111
+   },
+   {
+    "column": "COLUMN:GF:C5:H4201",
+    "type": "C5",
+    "foundation_bars": [
+     [
+      10,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 13.748148,
+    "provisional_kg": 4.740741,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C9:H4203",
+    "type": "C9",
+    "foundation_bars": [
+     [
+      14,
+      16
+     ]
+    ],
+    "release_state": "PROVISIONAL",
+    "verified_kg": 0.0,
+    "provisional_kg": 25.884444,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C8:H4205",
+    "type": "C8",
+    "foundation_bars": [
+     [
+      12,
+      16
+     ]
+    ],
+    "release_state": "PROVISIONAL",
+    "verified_kg": 0.0,
+    "provisional_kg": 22.186667,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C3:H4207",
+    "type": "C3",
+    "foundation_bars": [
+     [
+      8,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 10.998519,
+    "provisional_kg": 3.792593,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C9:H4213",
+    "type": "C9",
+    "foundation_bars": [
+     [
+      14,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 19.247407,
+    "provisional_kg": 6.637037,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C2:H4215",
+    "type": "C2",
+    "foundation_bars": [
+     [
+      8,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 10.998519,
+    "provisional_kg": 3.792593,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C1:H4217",
+    "type": "C1",
+    "foundation_bars": [
+     [
+      8,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 10.998519,
+    "provisional_kg": 3.792593,
+    "audit_kg": 0.0
+   },
+   {
+    "column": "COLUMN:GF:C2:H4219",
+    "type": "C2",
+    "foundation_bars": [
+     [
+      8,
+      16
+     ]
+    ],
+    "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+    "verified_kg": 10.998519,
+    "provisional_kg": 3.792593,
+    "audit_kg": 0.0
+   }
+  ]
+ },
+ "lintels": [
+  {
+   "opening": "GF-D-641",
+   "width_m": 2.0,
+   "row_max_cm": 200,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 10.765432,
+   "provisional_kg": 5.496284
+  },
+  {
+   "opening": "GF-D-E820",
+   "width_m": 0.8,
+   "row_max_cm": 100,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.2,
+   "provisional_kg": 3.944684
+  },
+  {
+   "opening": "GF-D-I1023",
+   "state": "BLOCKED"
+  },
+  {
+   "opening": "GF-D-I350",
+   "width_m": 1.0,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 4.197531,
+   "provisional_kg": 4.219745
+  },
+  {
+   "opening": "GF-D-I402",
+   "width_m": 1.0,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 4.197531,
+   "provisional_kg": 4.219745
+  },
+  {
+   "opening": "GF-D-I414",
+   "width_m": 0.8,
+   "row_max_cm": 100,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.2,
+   "provisional_kg": 3.944684
+  },
+  {
+   "opening": "GF-D-I437",
+   "width_m": 0.9,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.896296,
+   "provisional_kg": 4.219745
+  },
+  {
+   "opening": "GF-D-I495",
+   "width_m": 0.8,
+   "row_max_cm": 100,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.2,
+   "provisional_kg": 3.944684
+  },
+  {
+   "opening": "GF-D-I711",
+   "width_m": 1.0,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 4.197531,
+   "provisional_kg": 4.219745
+  },
+  {
+   "opening": "GF-D-I754",
+   "width_m": 1.0,
+   "row_max_cm": 100,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 4.0,
+   "provisional_kg": 4.022214
+  },
+  {
+   "opening": "GF-D-I800",
+   "width_m": 0.828,
+   "row_max_cm": 100,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.481877,
+   "provisional_kg": 4.022214
+  },
+  {
+   "opening": "GF-D-I801",
+   "width_m": 0.8,
+   "row_max_cm": 100,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.2,
+   "provisional_kg": 3.944684
+  },
+  {
+   "opening": "GF-D-I825",
+   "width_m": 0.797,
+   "row_max_cm": 100,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.190963,
+   "provisional_kg": 3.944684
+  },
+  {
+   "opening": "GF-D-I830",
+   "width_m": 1.0,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 4.197531,
+   "provisional_kg": 4.219745
+  },
+  {
+   "opening": "GF-W01",
+   "width_m": 0.9,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.896296,
+   "provisional_kg": 4.219745
+  },
+  {
+   "opening": "GF-W02",
+   "width_m": 1.5,
+   "row_max_cm": 200,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 8.192593,
+   "provisional_kg": 5.341224
+  },
+  {
+   "opening": "GF-W03",
+   "width_m": 1.0,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 4.197531,
+   "provisional_kg": 4.219745
+  },
+  {
+   "opening": "GF-W04",
+   "width_m": 1.0,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 4.197531,
+   "provisional_kg": 4.219745
+  },
+  {
+   "opening": "GF-W05",
+   "width_m": 0.9,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.896296,
+   "provisional_kg": 4.219745
+  },
+  {
+   "opening": "GF-W06",
+   "width_m": 0.6,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 2.518519,
+   "provisional_kg": 4.064685
+  },
+  {
+   "opening": "GF-W07",
+   "width_m": 0.6,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 2.518519,
+   "provisional_kg": 4.064685
+  },
+  {
+   "opening": "GF-W08",
+   "width_m": 0.6,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 2.518519,
+   "provisional_kg": 4.064685
+  },
+  {
+   "opening": "GF-W09",
+   "width_m": 6.332,
+   "row_max_cm": 750,
+   "B_m": 0.2,
+   "D_m": 0.55,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 90.073383,
+   "provisional_kg": 14.158736
+  },
+  {
+   "opening": "GF-W10",
+   "width_m": 1.2,
+   "row_max_cm": 200,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 6.459259,
+   "provisional_kg": 5.186164
+  },
+  {
+   "opening": "GF-W11",
+   "width_m": 1.0,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 4.197531,
+   "provisional_kg": 4.219745
+  },
+  {
+   "opening": "GF-W12",
+   "width_m": 1.5,
+   "row_max_cm": 200,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 8.192593,
+   "provisional_kg": 5.341224
+  },
+  {
+   "opening": "GF-W13",
+   "width_m": 1.0,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 4.197531,
+   "provisional_kg": 4.219745
+  },
+  {
+   "opening": "GF-W14",
+   "width_m": 1.0,
+   "row_max_cm": 100,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 4.0,
+   "provisional_kg": 4.022214
+  },
+  {
+   "opening": "GF-W15",
+   "width_m": 1.955,
+   "row_max_cm": 200,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 10.576543,
+   "provisional_kg": 5.496284
+  },
+  {
+   "opening": "GF-W16",
+   "width_m": 1.955,
+   "row_max_cm": 200,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 10.576543,
+   "provisional_kg": 5.496284
+  },
+  {
+   "opening": "1F-D-I3054",
+   "width_m": 0.8,
+   "row_max_cm": 100,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.2,
+   "provisional_kg": 3.944684
+  },
+  {
+   "opening": "1F-D-I3055",
+   "width_m": 0.9,
+   "row_max_cm": 100,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.698765,
+   "provisional_kg": 4.022214
+  },
+  {
+   "opening": "1F-D-I3090",
+   "width_m": 0.8,
+   "row_max_cm": 100,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.2,
+   "provisional_kg": 3.944684
+  },
+  {
+   "opening": "1F-D-I3096",
+   "width_m": 0.9,
+   "row_max_cm": 100,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.698765,
+   "provisional_kg": 4.022214
+  },
+  {
+   "opening": "1F-D-I3098",
+   "width_m": 0.9,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.896296,
+   "provisional_kg": 4.219745
+  },
+  {
+   "opening": "1F-D-I3115",
+   "width_m": 0.8,
+   "row_max_cm": 100,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.2,
+   "provisional_kg": 3.944684
+  },
+  {
+   "opening": "1F-D-I3118",
+   "width_m": 0.8,
+   "row_max_cm": 100,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.2,
+   "provisional_kg": 3.944684
+  },
+  {
+   "opening": "1F-D-I3121",
+   "width_m": 1.0,
+   "row_max_cm": 100,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 4.0,
+   "provisional_kg": 4.022214
+  },
+  {
+   "opening": "1F-D-I3122",
+   "width_m": 1.0,
+   "row_max_cm": 100,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 4.0,
+   "provisional_kg": 4.022214
+  },
+  {
+   "opening": "1F-D-I4532",
+   "width_m": 0.8,
+   "row_max_cm": 100,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.2,
+   "provisional_kg": 3.944684
+  },
+  {
+   "opening": "1F-W01",
+   "width_m": 0.6,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 2.518519,
+   "provisional_kg": 4.064685
+  },
+  {
+   "opening": "1F-W02",
+   "width_m": 1.552,
+   "row_max_cm": 200,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 8.410864,
+   "provisional_kg": 5.341224
+  },
+  {
+   "opening": "1F-W03",
+   "width_m": 1.0,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 4.197531,
+   "provisional_kg": 4.219745
+  },
+  {
+   "opening": "1F-W04",
+   "width_m": 1.0,
+   "row_max_cm": 100,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 4.0,
+   "provisional_kg": 4.022214
+  },
+  {
+   "opening": "1F-W05",
+   "width_m": 1.0,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 4.197531,
+   "provisional_kg": 4.219745
+  },
+  {
+   "opening": "1F-W06",
+   "width_m": 0.6,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 2.518519,
+   "provisional_kg": 4.064685
+  },
+  {
+   "opening": "1F-W07",
+   "width_m": 0.6,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 2.518519,
+   "provisional_kg": 4.064685
+  },
+  {
+   "opening": "1F-W08",
+   "width_m": 1.552,
+   "row_max_cm": 200,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 8.410864,
+   "provisional_kg": 5.341224
+  },
+  {
+   "opening": "1F-W09",
+   "width_m": 1.552,
+   "row_max_cm": 200,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 8.410864,
+   "provisional_kg": 5.341224
+  },
+  {
+   "opening": "1F-W10",
+   "width_m": 0.5,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 2.217284,
+   "provisional_kg": 4.064685
+  },
+  {
+   "opening": "1F-W11",
+   "width_m": 1.2,
+   "row_max_cm": 200,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 6.459259,
+   "provisional_kg": 5.186164
+  },
+  {
+   "opening": "1F-W12",
+   "width_m": 2.45,
+   "row_max_cm": 300,
+   "B_m": 0.2,
+   "D_m": 0.3,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 24.616049,
+   "provisional_kg": 9.253566
+  },
+  {
+   "opening": "2F-D-I4794",
+   "width_m": 1.0,
+   "row_max_cm": 100,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 4.0,
+   "provisional_kg": 4.022214
+  },
+  {
+   "opening": "2F-D-I4795",
+   "width_m": 0.8,
+   "row_max_cm": 100,
+   "B_m": 0.15,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.2,
+   "provisional_kg": 3.944684
+  },
+  {
+   "opening": "2F-D-I4802",
+   "width_m": 0.9,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 3.896296,
+   "provisional_kg": 4.219745
+  },
+  {
+   "opening": "2F-W01",
+   "width_m": 1.0,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 4.197531,
+   "provisional_kg": 4.219745
+  },
+  {
+   "opening": "2F-W02",
+   "width_m": 1.0,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 4.197531,
+   "provisional_kg": 4.219745
+  },
+  {
+   "opening": "2F-W03",
+   "width_m": 0.6,
+   "row_max_cm": 100,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 2.518519,
+   "provisional_kg": 4.064685
+  },
+  {
+   "opening": "2F-W04",
+   "width_m": 1.2,
+   "row_max_cm": 200,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 6.459259,
+   "provisional_kg": 5.186164
+  },
+  {
+   "opening": "2F-W05",
+   "width_m": 1.2,
+   "row_max_cm": 200,
+   "B_m": 0.2,
+   "D_m": 0.2,
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 6.459259,
+   "provisional_kg": 5.186164
+  }
+ ],
+ "domes": [
+  {
+   "dome": "DOME-TERRACE-12EB",
+   "span_m": 4.422,
+   "rise_m": 1.72,
+   "rise_source": "ARCH-P08-NW-ELEV",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 421.733795,
+   "provisional_kg": 256.47764
+  },
+  {
+   "dome": "DOME-TOWER-1300",
+   "span_m": 4.41,
+   "rise_m": 2.15,
+   "rise_source": "ARCH-P06-SE-ELEV",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 420.744523,
+   "provisional_kg": 320.126664
+  },
+  {
+   "dome": "DOME-TERRACE-2F33",
+   "span_m": 4.422,
+   "rise_m": 1.72,
+   "rise_source": "ARCH-P08-NW-ELEV",
+   "release_state": "VERIFIED_PARTIAL_LOWER_BOUND",
+   "verified_kg": 421.733795,
+   "provisional_kg": 256.47764
+  }
+ ],
+ "boundary_wall": {
+  "run_m": 44.07,
+  "release_state": "BLOCKED",
+  "candidates_longitudinal_kg_audit_only": {
+   "schedule_B.W": 385.204444,
+   "typical_p14_as_read": 631.125926
+  },
+  "decision": "SOURCE_CONFLICT - no candidate selected (as SB2)"
+ },
+ "f_f10": {
+  "v3b_population": "FOOTING_F_F10",
+  "state": "RETIRED_DUPLICATE",
+  "why": "the conflict pair is already the BLOCKED Round-3 footing populations; no side is selected"
+ },
+ "new_required_blocked": {
+  "lift_tie_beams": [
+   {
+    "storey": "1F",
+    "interval_m": 4.2,
+    "required": false
+   },
+   {
+    "storey": "2F",
+    "interval_m": 4.2,
+    "required": false
+   },
+   {
+    "storey": "GF",
+    "interval_m": 4.5,
+    "required": true
+   }
+  ]
+ }
+}

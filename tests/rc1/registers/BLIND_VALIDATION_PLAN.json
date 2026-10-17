@@ -1,0 +1,50 @@
+{
+ "SCHEMA": "URBAN_BLIND_VALIDATION_PLAN_V1",
+ "gold_protocol": [
+  "the owner seals the manual QS BOQ (file hash recorded) BEFORE Urban sees any file",
+  "Urban / Claude never opens it until source admitted + engine frozen + blind result committed",
+  "then compare; no tuning after gold"
+ ],
+ "metrics": [
+  "ROOM_DETECTION_COMPLETENESS",
+  "ROOM_CLASSIFICATION",
+  "FLOOR_AREA_ERROR",
+  "CEILING_AREA_ERROR",
+  "SKIRTING_ERROR",
+  "PLASTER_ERROR",
+  "PAINT_ERROR",
+  "WALL_TILE_ERROR",
+  "TILE_PREP_ERROR",
+  "WATERPROOFING_ERROR",
+  "MARBLE_ERROR",
+  "DOOR_DETECTION",
+  "DOOR_SIZE_ACCURACY",
+  "WINDOW_DETECTION",
+  "WINDOW_AREA_ACCURACY",
+  "OPENING_CLASSIFICATION",
+  "SILENT_ERROR_COUNT",
+  "BLOCKED_ITEM_COUNT",
+  "OWNER_QUESTION_COUNT"
+ ],
+ "reporting": "per metric, per room and per trade - NO single global accuracy percentage",
+ "defect_classes": [
+  "SOURCE_DECODER_DEFECT",
+  "UNIT_FRAME_DEFECT",
+  "GEOMETRY_DEFECT",
+  "TOPOLOGY_DEFECT",
+  "ROOM_SEMANTIC_DEFECT",
+  "OPENING_DEFECT",
+  "HEIGHT_EVIDENCE_GAP",
+  "TRADE_RULE_GAP",
+  "PROJECT_FACT_GAP",
+  "DOCUMENT_EVIDENCE_GAP",
+  "REPORTING_DEFECT",
+  "GOLD/MANUAL_QS_QUESTION"
+ ],
+ "after_result": [
+  "classify every mismatch with exactly one defect class",
+  "fix the GENERIC system (versioned)",
+  "rerun Qortuba RC1 as regression",
+  "never fix the test villa"
+ ]
+}

@@ -1,0 +1,28 @@
+ID,KIND,S8_2_STATUS,S8_2A_STATUS,NOTE
+CF-S8.2-R1,DIAMETER_ON_ONE_DRAWN_BAR,OPEN,OPEN,no new evidence on this conflict
+CF-S8.2-1869,AMBIGUOUS_LABEL,OPEN,OPEN,no new evidence on this conflict
+CF-S8.2-18A8,SUB_DETAIL_DIAMETER_DISAGREES,OPEN,OPEN,no new evidence on this conflict
+CF-S8.2-18DD,SUB_DETAIL_TOPOLOGY_DISAGREES,OPEN,OPEN,no new evidence on this conflict
+CF-S8.2-M1,BAR_END_MARK,OPEN,OPEN,no new evidence on this conflict
+CF-S8.2-ROW-BF-18AD,DOT_ROW_CLAIMED_TWICE,OPEN,OPEN,no new evidence on this conflict
+CF-S8.2-ROW-BF-18D3,DOT_ROW_CLAIMED_TWICE,OPEN,OPEN,no new evidence on this conflict
+CF-S8.2-COUNT-DEEP_BASE-BOTTOM,COUNT_CONVENTION,OPEN,OPEN,no new evidence on this conflict
+CF-S8.2-COUNT-SHALLOW_BASE-BOTTOM,COUNT_CONVENTION,OPEN,OPEN,no new evidence on this conflict
+CF-S8.2-COUNT-SHALLOW_BASE-TOP,COUNT_CONVENTION,OPEN,OPEN,no new evidence on this conflict
+CF-S8.2-COUNT-SLOPE-BOTTOM,COUNT_CONVENTION,OPEN,OPEN,no new evidence on this conflict
+CF-S8.2-COUNT-SLOPE-TOP,COUNT_CONVENTION,OPEN,OPEN,no new evidence on this conflict
+CF-S8.2-TRANSVERSE-LAYERS,RATE_SCOPE,OPEN,OPEN,no new evidence on this conflict
+CF-S8.2-NTS-SCALE,NOT_TO_SCALE,CONFIRMED (no drawn length is used),CONFIRMED (no drawn length is used),no new evidence on this conflict
+CF-S8.2-SHALLOW-THICKNESS,THICKNESS_SCOPE,OPEN,OPEN,no new evidence on this conflict
+CF-S8.2-S1-ROLES,S1_PROVISIONAL_ROLES,SUPERSEDED_BY_BINDING,SUPERSEDED_BY_BINDING,no new evidence on this conflict
+CF-S8.2-BLINDING,DOUBLE_COUNT_RISK,GUARDED (no quantity on either side),GUARDED (no quantity on either side),no new evidence on this conflict
+CF-S8.2A-01,FLOOR_PROFILE_CONFLICT,,OPEN,"the architectural NW elevation draws one flat inner floor at -0.85 (1.15 below the +0.30 wall top); the structural p.7 detail draws a deep base, a slope and a shallow base"
+CF-S8.2A-02,BASE_THICKNESS_DRAWN,,RECORDED,the architectural elevation draws the base from the inner floor to -1.05 (about 0.15-0.20 m); the structural detail dimensions the deep base 40 cm. The structural dimension governs the structure; the architectural line is not a structural dimension
+CF-S8.2A-03,HOMONYM,,GUARDED,'115' appears twice: a vertical 1150 mm pool depth on the NW elevation (2E5E) and a horizontal 1150 mm plan offset beside the pool (4D0). Only the first is a depth
+CF-S8.2A-04,WALL_TOP_COMPOSITION,,OPEN,the walls rise 0.15 above the +0.15 deck to +0.30; whether the RC wall reaches +0.30 or a coping forms the top is not stated
+Q-S8.2-01,QUESTION,OPEN,PARTLY_ANSWERED,wall top +0.30 and one inner depth 1.15 (floor -0.85) at one drawn plane are now stated (NW elevation); the deep and shallow depths and the zone lengths are still not
+Q-S8.2-02,QUESTION,OPEN,NARROWED (inference only),"if the floor changes level, the change runs along plan x (between the straight sea-side end and the curved end): the NW elevation looks along x and shows no change across y"
+Q-S8.2A-01,QUESTION,,OPEN,"Architect / engineer: is the pool floor flat at -0.85 (NW elevation) or deep / slope / shallow (structural p.7)? If it changes, give both depths and where the change starts in plan"
+Q-S8.2A-02,QUESTION,,OPEN,"Engineer: does the RC wall reach the +0.30 top, or is the top 0.15 a coping?"
+Q-S8.2A-03,QUESTION,,OPEN,Architect: the base drawn on the elevation (to -1.05) is thinner than the structural 40 cm; confirm the structural thickness governs
+PF-01 (S8.2 post-freeze),SOURCE_NOT_IN_S8_2,OPEN,SOURCE HELD AND BOUND; SCOPE OPEN,the architectural elevation is now held; its 115 binds to the pool but only at one plane

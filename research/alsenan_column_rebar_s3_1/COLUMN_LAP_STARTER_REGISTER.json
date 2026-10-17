@@ -1,0 +1,3983 @@
+{
+ "anchorage_rule": {
+  "alternatives_D": [
+   70
+  ],
+  "current_D": 40,
+  "rule_id": "P8-N09",
+  "state": "UNRESOLVED",
+  "why": "no top-anchorage / planted-column anchorage length printed; development length of the same note used provisionally"
+ },
+ "lap_rule": {
+  "alternatives_D": [
+   70
+  ],
+  "current_D": 40,
+  "rule_id": "P8-N09",
+  "state": "UNRESOLVED",
+  "why": "the printed note gives starter development 40D (compression) / 70D (tension); column splice laps take the compression value provisionally"
+ },
+ "rows": [
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X01-Y01-2138-7462",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C-X01-Y01-FOUNDATION",
+   "part_id": "SEG-COL-C-X01-Y01-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X01-Y01-2138-7462",
+   "component": "STARTER",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 300.0,
+    "ref": "FTG-F-1888-7312",
+    "state": "DEFINED"
+   },
+   "kg": 14.791,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1170.0,
+   "occurrence_id": "COL-C-X01-Y01-FOUNDATION",
+   "part_id": "SEG-COL-C-X01-Y01-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 9.36,
+   "type": "C",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X01-Y05-2038-13762",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C-X01-Y05-FOUNDATION",
+   "part_id": "SEG-COL-C-X01-Y05-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X01-Y05-2038-13762",
+   "component": "STARTER",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 300.0,
+    "ref": "FTG-F-1888-13312",
+    "state": "DEFINED"
+   },
+   "kg": 14.791,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1170.0,
+   "occurrence_id": "COL-C-X01-Y05-FOUNDATION",
+   "part_id": "SEG-COL-C-X01-Y05-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 9.36,
+   "type": "C",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X02-Y05-4738-13862",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C-X02-Y05-FOUNDATION",
+   "part_id": "SEG-COL-C-X02-Y05-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X02-Y05-4738-13862",
+   "component": "STARTER",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 300.0,
+    "ref": "FTG-F-4288-13462",
+    "state": "DEFINED"
+   },
+   "kg": 14.791,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1170.0,
+   "occurrence_id": "COL-C-X02-Y05-FOUNDATION",
+   "part_id": "SEG-COL-C-X02-Y05-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 9.36,
+   "type": "C",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X06-Y01-14088-7462",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C-X06-Y01-FOUNDATION",
+   "part_id": "SEG-COL-C-X06-Y01-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X06-Y01-14088-7462",
+   "component": "STARTER",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 300.0,
+    "ref": "FTG-F-13638-7312",
+    "state": "DEFINED"
+   },
+   "kg": 14.791,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1170.0,
+   "occurrence_id": "COL-C-X06-Y01-FOUNDATION",
+   "part_id": "SEG-COL-C-X06-Y01-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 9.36,
+   "type": "C",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X16-Y01-33108-7562",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C-X16-Y01-FOUNDATION",
+   "part_id": "SEG-COL-C-X16-Y01-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "BLOCKED",
+   "chain_id": "COLPOS-X16-Y01-33108-7562",
+   "component": "STARTER",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": null,
+    "ref": "FTG-CONFLICT_F_F10-30008-7312",
+    "state": "TYPE_CONFLICT"
+   },
+   "kg": null,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": null,
+   "occurrence_id": "COL-C-X16-Y01-FOUNDATION",
+   "part_id": "SEG-COL-C-X16-Y01-FOUNDATION|STARTER",
+   "release_state": "BLOCKED",
+   "rule_id": null,
+   "total_length_m": null,
+   "type": "C",
+   "why": "starter rule or footing depth not established"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X09-Y09-19688-17362",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C1-X09-Y09-FOUNDATION",
+   "part_id": "SEG-COL-C1-X09-Y09-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C1",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X09-Y09-19688-17362",
+   "component": "STARTER",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 550.0,
+    "ref": "FTG-FF-18688-14112",
+    "state": "DEFINED"
+   },
+   "kg": 17.952,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1420.0,
+   "occurrence_id": "COL-C1-X09-Y09-FOUNDATION",
+   "part_id": "SEG-COL-C1-X09-Y09-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 11.36,
+   "type": "C1",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X15-Y01-31408-7462",
+   "component": "LAP",
+   "count": 10,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 10.114,
+   "kg_at_alternative": 17.699,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C10-X15-Y01-FOUNDATION",
+   "part_id": "SEG-COL-C10-X15-Y01-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 6.4,
+   "type": "C10",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "BLOCKED",
+   "chain_id": "COLPOS-X15-Y01-31408-7462",
+   "component": "STARTER",
+   "count": 10,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": null,
+    "ref": "FTG-CONFLICT_F_F10-30008-7312",
+    "state": "TYPE_CONFLICT"
+   },
+   "kg": null,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": null,
+   "occurrence_id": "COL-C10-X15-Y01-FOUNDATION",
+   "part_id": "SEG-COL-C10-X15-Y01-FOUNDATION|STARTER",
+   "release_state": "BLOCKED",
+   "rule_id": null,
+   "total_length_m": null,
+   "type": "C10",
+   "why": "starter rule or footing depth not established"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X06-Y04-14438-12062",
+   "component": "LAP",
+   "count": 14,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 14.159,
+   "kg_at_alternative": 24.778,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C11-X06-Y04-FOUNDATION",
+   "part_id": "SEG-COL-C11-X06-Y04-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 8.96,
+   "type": "C11",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X06-Y04-14438-12062",
+   "component": "STARTER",
+   "count": 14,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 500.0,
+    "ref": "FTG-F13-11188-10712",
+    "state": "DEFINED"
+   },
+   "kg": 30.309,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1370.0,
+   "occurrence_id": "COL-C11-X06-Y04-FOUNDATION",
+   "part_id": "SEG-COL-C11-X06-Y04-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 19.18,
+   "type": "C11",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X?-Y01-17913-7462",
+   "component": "LAP",
+   "count": 14,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 14.159,
+   "kg_at_alternative": 24.778,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+   "part_id": "SEG-COL-C11-X?-Y01@17913-7462-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 8.96,
+   "type": "C11",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X?-Y01-17913-7462",
+   "component": "STARTER",
+   "count": 14,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 500.0,
+    "ref": "FTG-F11-16163-7312",
+    "state": "DEFINED"
+   },
+   "kg": 30.309,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1370.0,
+   "occurrence_id": "COL-C11-X?-Y01@17913-7462-FOUNDATION",
+   "part_id": "SEG-COL-C11-X?-Y01@17913-7462-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 19.18,
+   "type": "C11",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X08-Y10-17038-20562",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C2-X08-Y10-FOUNDATION",
+   "part_id": "SEG-COL-C2-X08-Y10-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C2",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X08-Y10-17038-20562",
+   "component": "STARTER",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 350.0,
+    "ref": "FTG-F2-16188-19612",
+    "state": "DEFINED"
+   },
+   "kg": 15.423,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1220.0,
+   "occurrence_id": "COL-C2-X08-Y10-FOUNDATION",
+   "part_id": "SEG-COL-C2-X08-Y10-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 9.76,
+   "type": "C2",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X09-Y07-19688-15662",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C2-X09-Y07-FOUNDATION",
+   "part_id": "SEG-COL-C2-X09-Y07-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C2",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X09-Y07-19688-15662",
+   "component": "STARTER",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 550.0,
+    "ref": "FTG-FF-18688-14112",
+    "state": "DEFINED"
+   },
+   "kg": 17.952,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1420.0,
+   "occurrence_id": "COL-C2-X09-Y07-FOUNDATION",
+   "part_id": "SEG-COL-C2-X09-Y07-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 11.36,
+   "type": "C2",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X09-Y10-19738-20562",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C2-X09-Y10-FOUNDATION",
+   "part_id": "SEG-COL-C2-X09-Y10-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C2",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X09-Y10-19738-20562",
+   "component": "STARTER",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 350.0,
+    "ref": "FTG-F2-18888-19612",
+    "state": "DEFINED"
+   },
+   "kg": 15.423,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1220.0,
+   "occurrence_id": "COL-C2-X09-Y10-FOUNDATION",
+   "part_id": "SEG-COL-C2-X09-Y10-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 9.76,
+   "type": "C2",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X10-Y09-21688-17362",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C2-X10-Y09-FOUNDATION",
+   "part_id": "SEG-COL-C2-X10-Y09-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C2",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X10-Y09-21688-17362",
+   "component": "STARTER",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 550.0,
+    "ref": "FTG-FF-18688-14112",
+    "state": "DEFINED"
+   },
+   "kg": 17.952,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1420.0,
+   "occurrence_id": "COL-C2-X10-Y09-FOUNDATION",
+   "part_id": "SEG-COL-C2-X10-Y09-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 11.36,
+   "type": "C2",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X03-Y04-6338-12062",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C3-X03-Y04-FOUNDATION",
+   "part_id": "SEG-COL-C3-X03-Y04-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C3",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X03-Y04-6338-12062",
+   "component": "STARTER",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 300.0,
+    "ref": "FTG-F3-5538-11362",
+    "state": "DEFINED"
+   },
+   "kg": 14.791,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1170.0,
+   "occurrence_id": "COL-C3-X03-Y04-FOUNDATION",
+   "part_id": "SEG-COL-C3-X03-Y04-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 9.36,
+   "type": "C3",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {
+    "C": 8.091,
+    "C3": 8.091
+   },
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X04-Y01-7988-7462",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026",
+    "STR-COL-009"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C3-X04-Y01-FOUNDATION",
+   "part_id": "SEG-COL-C3-X04-Y01-FOUNDATION|LAP_TOP",
+   "release_state": "LOWER_BOUND",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C3",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {
+    "C": 16.055,
+    "C3": 16.055
+   },
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X04-Y01-7988-7462",
+   "component": "STARTER",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-009"
+   ],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 400.0,
+    "ref": "FTG-F15-7088-7312",
+    "state": "DEFINED"
+   },
+   "kg": 16.055,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1270.0,
+   "occurrence_id": "COL-C3-X04-Y01-FOUNDATION",
+   "part_id": "SEG-COL-C3-X04-Y01-FOUNDATION|STARTER",
+   "release_state": "LOWER_BOUND",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 10.16,
+   "type": "C3",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X05-Y02-12538-9062",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C3-X05-Y02-FOUNDATION",
+   "part_id": "SEG-COL-C3-X05-Y02-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C3",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X05-Y02-12538-9062",
+   "component": "STARTER",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 300.0,
+    "ref": "FTG-F3-11838-8262",
+    "state": "DEFINED"
+   },
+   "kg": 14.791,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1170.0,
+   "occurrence_id": "COL-C3-X05-Y02-FOUNDATION",
+   "part_id": "SEG-COL-C3-X05-Y02-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 9.36,
+   "type": "C3",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X08-Y09-17038-17362",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C3-X08-Y09-FOUNDATION",
+   "part_id": "SEG-COL-C3-X08-Y09-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C3",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X08-Y09-17038-17362",
+   "component": "STARTER",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 700.0,
+    "ref": "FTG-F12-13688-14562",
+    "state": "DEFINED"
+   },
+   "kg": 19.848,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1570.0,
+   "occurrence_id": "COL-C3-X08-Y09-FOUNDATION",
+   "part_id": "SEG-COL-C3-X08-Y09-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 12.56,
+   "type": "C3",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X12-Y01-24458-7462",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C3-X12-Y01-FOUNDATION",
+   "part_id": "SEG-COL-C3-X12-Y01-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C3",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X12-Y01-24458-7462",
+   "component": "STARTER",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 500.0,
+    "ref": "FTG-F14-22408-7312",
+    "state": "DEFINED"
+   },
+   "kg": 17.32,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1370.0,
+   "occurrence_id": "COL-C3-X12-Y01-FOUNDATION",
+   "part_id": "SEG-COL-C3-X12-Y01-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 10.96,
+   "type": "C3",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X16-Y06-33108-14962",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C3-X16-Y06-FOUNDATION",
+   "part_id": "SEG-COL-C3-X16-Y06-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C3",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X16-Y06-33108-14962",
+   "component": "STARTER",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 500.0,
+    "ref": "FTG-F8-29258-13262",
+    "state": "DEFINED"
+   },
+   "kg": 17.32,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1370.0,
+   "occurrence_id": "COL-C3-X16-Y06-FOUNDATION",
+   "part_id": "SEG-COL-C3-X16-Y06-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 10.96,
+   "type": "C3",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X13-Y10-27458-20662",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C4-X13-Y10-FOUNDATION",
+   "part_id": "SEG-COL-C4-X13-Y10-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C4",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X13-Y10-27458-20662",
+   "component": "STARTER",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 400.0,
+    "ref": "FTG-F4-26358-19662",
+    "state": "DEFINED"
+   },
+   "kg": 16.055,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1270.0,
+   "occurrence_id": "COL-C4-X13-Y10-FOUNDATION",
+   "part_id": "SEG-COL-C4-X13-Y10-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 10.16,
+   "type": "C4",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X15-Y10-31508-20687",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C4-X15-Y10-FOUNDATION",
+   "part_id": "SEG-COL-C4-X15-Y10-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C4",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X15-Y10-31508-20687",
+   "component": "STARTER",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 400.0,
+    "ref": "FTG-F4-30408-19687",
+    "state": "DEFINED"
+   },
+   "kg": 16.055,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1270.0,
+   "occurrence_id": "COL-C4-X15-Y10-FOUNDATION",
+   "part_id": "SEG-COL-C4-X15-Y10-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 10.16,
+   "type": "C4",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X05-Y04-12538-11912",
+   "component": "LAP",
+   "count": 10,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 10.114,
+   "kg_at_alternative": 17.699,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C5-X05-Y04-FOUNDATION",
+   "part_id": "SEG-COL-C5-X05-Y04-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 6.4,
+   "type": "C5",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X05-Y04-12538-11912",
+   "component": "STARTER",
+   "count": 10,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 500.0,
+    "ref": "FTG-F13-11188-10712",
+    "state": "DEFINED"
+   },
+   "kg": 21.649,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1370.0,
+   "occurrence_id": "COL-C5-X05-Y04-FOUNDATION",
+   "part_id": "SEG-COL-C5-X05-Y04-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 13.7,
+   "type": "C5",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X11-Y10-23558-20662",
+   "component": "LAP",
+   "count": 10,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 10.114,
+   "kg_at_alternative": 17.699,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C5-X11-Y10-FOUNDATION",
+   "part_id": "SEG-COL-C5-X11-Y10-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 6.4,
+   "type": "C5",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X11-Y10-23558-20662",
+   "component": "STARTER",
+   "count": 10,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 400.0,
+    "ref": "FTG-F5-22358-19612",
+    "state": "DEFINED"
+   },
+   "kg": 20.069,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1270.0,
+   "occurrence_id": "COL-C5-X11-Y10-FOUNDATION",
+   "part_id": "SEG-COL-C5-X11-Y10-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 12.7,
+   "type": "C5",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X14-Y02-27658-8962",
+   "component": "LAP",
+   "count": 10,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 10.114,
+   "kg_at_alternative": 17.699,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C5-X14-Y02-FOUNDATION",
+   "part_id": "SEG-COL-C5-X14-Y02-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 6.4,
+   "type": "C5",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X14-Y02-27658-8962",
+   "component": "STARTER",
+   "count": 10,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 400.0,
+    "ref": "FTG-F5-26458-7912",
+    "state": "DEFINED"
+   },
+   "kg": 20.069,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1270.0,
+   "occurrence_id": "COL-C5-X14-Y02-FOUNDATION",
+   "part_id": "SEG-COL-C5-X14-Y02-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 12.7,
+   "type": "C5",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X08-Y04-17038-12362",
+   "component": "LAP",
+   "count": 10,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 10.114,
+   "kg_at_alternative": 17.699,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C6-X08-Y04-FOUNDATION",
+   "part_id": "SEG-COL-C6-X08-Y04-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 6.4,
+   "type": "C6",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X08-Y04-17038-12362",
+   "component": "STARTER",
+   "count": 10,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 500.0,
+    "ref": "FTG-F6-15938-11062",
+    "state": "DEFINED"
+   },
+   "kg": 21.649,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1370.0,
+   "occurrence_id": "COL-C6-X08-Y04-FOUNDATION",
+   "part_id": "SEG-COL-C6-X08-Y04-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 13.7,
+   "type": "C6",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X07-Y?-15888-16162",
+   "component": "LAP",
+   "count": 12,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 12.136,
+   "kg_at_alternative": 21.239,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C7-X07-Y?@15888-16162-FOUNDATION",
+   "part_id": "SEG-COL-C7-X07-Y?@15888-16162-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 7.68,
+   "type": "C7",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X07-Y?-15888-16162",
+   "component": "STARTER",
+   "count": 12,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 700.0,
+    "ref": "FTG-F12-13688-14562",
+    "state": "DEFINED"
+   },
+   "kg": 29.772,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1570.0,
+   "occurrence_id": "COL-C7-X07-Y?@15888-16162-FOUNDATION",
+   "part_id": "SEG-COL-C7-X07-Y?@15888-16162-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 18.84,
+   "type": "C7",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {
+    "C7": 12.136,
+    "C8": 12.136
+   },
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X12-Y02-24308-8912",
+   "component": "LAP",
+   "count": 12,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026",
+    "STR-COL-010"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 12.136,
+   "kg_at_alternative": 21.239,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C8-X12-Y02-FOUNDATION",
+   "part_id": "SEG-COL-C8-X12-Y02-FOUNDATION|LAP_TOP",
+   "release_state": "LOWER_BOUND",
+   "rule_id": "P8-N09",
+   "total_length_m": 7.68,
+   "type": "C8",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {
+    "C7": 25.979,
+    "C8": 25.979
+   },
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X12-Y02-24308-8912",
+   "component": "STARTER",
+   "count": 12,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-010"
+   ],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 500.0,
+    "ref": "FTG-F14-22408-7312",
+    "state": "DEFINED"
+   },
+   "kg": 25.979,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1370.0,
+   "occurrence_id": "COL-C8-X12-Y02-FOUNDATION",
+   "part_id": "SEG-COL-C8-X12-Y02-FOUNDATION|STARTER",
+   "release_state": "LOWER_BOUND",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 16.44,
+   "type": "C8",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X15-Y06-31508-15062",
+   "component": "LAP",
+   "count": 12,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 12.136,
+   "kg_at_alternative": 21.239,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C8-X15-Y06-FOUNDATION",
+   "part_id": "SEG-COL-C8-X15-Y06-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 7.68,
+   "type": "C8",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X15-Y06-31508-15062",
+   "component": "STARTER",
+   "count": 12,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 500.0,
+    "ref": "FTG-F8-29258-13262",
+    "state": "DEFINED"
+   },
+   "kg": 25.979,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1370.0,
+   "occurrence_id": "COL-C8-X15-Y06-FOUNDATION",
+   "part_id": "SEG-COL-C8-X15-Y06-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 16.44,
+   "type": "C8",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X10-Y07-21713-15912",
+   "component": "LAP",
+   "count": 14,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 14.159,
+   "kg_at_alternative": 24.778,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C9-X10-Y07-FOUNDATION",
+   "part_id": "SEG-COL-C9-X10-Y07-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 8.96,
+   "type": "C9",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X10-Y07-21713-15912",
+   "component": "STARTER",
+   "count": 14,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 550.0,
+    "ref": "FTG-FF-18688-14112",
+    "state": "DEFINED"
+   },
+   "kg": 31.415,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1420.0,
+   "occurrence_id": "COL-C9-X10-Y07-FOUNDATION",
+   "part_id": "SEG-COL-C9-X10-Y07-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 19.88,
+   "type": "C9",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X13-Y08-27308-16612",
+   "component": "LAP",
+   "count": 14,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 14.159,
+   "kg_at_alternative": 24.778,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C9-X13-Y08-FOUNDATION",
+   "part_id": "SEG-COL-C9-X13-Y08-FOUNDATION|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 8.96,
+   "type": "C9",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X13-Y08-27308-16612",
+   "component": "STARTER",
+   "count": 14,
+   "dia_mm": 16,
+   "flags": [],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 550.0,
+    "ref": "FTG-F9-25608-15262",
+    "state": "DEFINED"
+   },
+   "kg": 31.415,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1420.0,
+   "occurrence_id": "COL-C9-X13-Y08-FOUNDATION",
+   "part_id": "SEG-COL-C9-X13-Y08-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 19.88,
+   "type": "C9",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X15-Y?-31208-15726",
+   "component": "ANCHORAGE",
+   "count": 4,
+   "dia_mm": 14,
+   "flags": [
+    "STR-COL-001",
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 2.71,
+   "kg_at_alternative": 4.743,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 560,
+   "occurrence_id": "COL-CN-X15-Y?@31208-15726-FOUNDATION",
+   "part_id": "SEG-COL-CN-X15-Y?@31208-15726-FOUNDATION|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 2.24,
+   "type": "CN",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X15-Y?-31208-15726",
+   "component": "STARTER",
+   "count": 4,
+   "dia_mm": 14,
+   "flags": [
+    "STR-COL-001"
+   ],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 500.0,
+    "ref": "FTG-F8-29258-13262",
+    "state": "DEFINED"
+   },
+   "kg": 6.243,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1290.0,
+   "occurrence_id": "COL-CN-X15-Y?@31208-15726-FOUNDATION",
+   "part_id": "SEG-COL-CN-X15-Y?@31208-15726-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 5.16,
+   "type": "CN",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X16-Y03-33108-11312",
+   "component": "ANCHORAGE",
+   "count": 4,
+   "dia_mm": 14,
+   "flags": [
+    "STR-COL-001",
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 2.71,
+   "kg_at_alternative": 4.743,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 560,
+   "occurrence_id": "COL-CN-X16-Y03-FOUNDATION",
+   "part_id": "SEG-COL-CN-X16-Y03-FOUNDATION|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 2.24,
+   "type": "CN",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "BLOCKED",
+   "chain_id": "COLPOS-X16-Y03-33108-11312",
+   "component": "STARTER",
+   "count": 4,
+   "dia_mm": 14,
+   "flags": [
+    "STR-COL-001"
+   ],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": null,
+    "ref": "FT:RB-93c296ab668f4cce",
+    "state": "UNRESOLVED_FOOTING"
+   },
+   "kg": null,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": null,
+   "occurrence_id": "COL-CN-X16-Y03-FOUNDATION",
+   "part_id": "SEG-COL-CN-X16-Y03-FOUNDATION|STARTER",
+   "release_state": "BLOCKED",
+   "rule_id": null,
+   "total_length_m": null,
+   "type": "CN",
+   "why": "starter rule or footing depth not established"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X?-Y10-31108-20498",
+   "component": "ANCHORAGE",
+   "count": 4,
+   "dia_mm": 14,
+   "flags": [
+    "STR-COL-001",
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 2.71,
+   "kg_at_alternative": 4.743,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 560,
+   "occurrence_id": "COL-CN-X?-Y10@31108-20498-FOUNDATION",
+   "part_id": "SEG-COL-CN-X?-Y10@31108-20498-FOUNDATION|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 2.24,
+   "type": "CN",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X?-Y10-31108-20498",
+   "component": "STARTER",
+   "count": 4,
+   "dia_mm": 14,
+   "flags": [
+    "STR-COL-001"
+   ],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 400.0,
+    "ref": "FTG-F4-30408-19687",
+    "state": "DEFINED"
+   },
+   "kg": 5.759,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1190.0,
+   "occurrence_id": "COL-CN-X?-Y10@31108-20498-FOUNDATION",
+   "part_id": "SEG-COL-CN-X?-Y10@31108-20498-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 4.76,
+   "type": "CN",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X?-Y?-24058-12787",
+   "component": "ANCHORAGE",
+   "count": 4,
+   "dia_mm": 14,
+   "flags": [
+    "STR-COL-001",
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 2.71,
+   "kg_at_alternative": 4.743,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 560,
+   "occurrence_id": "COL-CN-X?-Y?@24058-12787-FOUNDATION",
+   "part_id": "SEG-COL-CN-X?-Y?@24058-12787-FOUNDATION|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 2.24,
+   "type": "CN",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "BLOCKED",
+   "chain_id": "COLPOS-X?-Y?-24058-12787",
+   "component": "STARTER",
+   "count": 4,
+   "dia_mm": 14,
+   "flags": [
+    "STR-COL-001"
+   ],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": null,
+    "ref": "FT:RB-d03ae1c0114c9c48",
+    "state": "UNRESOLVED_FOOTING"
+   },
+   "kg": null,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": null,
+   "occurrence_id": "COL-CN-X?-Y?@24058-12787-FOUNDATION",
+   "part_id": "SEG-COL-CN-X?-Y?@24058-12787-FOUNDATION|STARTER",
+   "release_state": "BLOCKED",
+   "rule_id": null,
+   "total_length_m": null,
+   "type": "CN",
+   "why": "starter rule or footing depth not established"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X?-Y?-28583-12787",
+   "component": "ANCHORAGE",
+   "count": 4,
+   "dia_mm": 14,
+   "flags": [
+    "STR-COL-001",
+    "STR-COL-026"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 2.71,
+   "kg_at_alternative": 4.743,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 560,
+   "occurrence_id": "COL-CN-X?-Y?@28583-12787-FOUNDATION",
+   "part_id": "SEG-COL-CN-X?-Y?@28583-12787-FOUNDATION|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 2.24,
+   "type": "CN",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "BLOCKED",
+   "chain_id": "COLPOS-X?-Y?-28583-12787",
+   "component": "STARTER",
+   "count": 4,
+   "dia_mm": 14,
+   "flags": [
+    "STR-COL-001"
+   ],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": null,
+    "ref": "FT:RB-4f1fedf6f22d413e",
+    "state": "UNRESOLVED_FOOTING"
+   },
+   "kg": null,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": null,
+   "occurrence_id": "COL-CN-X?-Y?@28583-12787-FOUNDATION",
+   "part_id": "SEG-COL-CN-X?-Y?@28583-12787-FOUNDATION|STARTER",
+   "release_state": "BLOCKED",
+   "rule_id": null,
+   "total_length_m": null,
+   "type": "CN",
+   "why": "starter rule or footing depth not established"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X?-Y?-29108-18112",
+   "component": "ANCHORAGE",
+   "count": 4,
+   "dia_mm": 14,
+   "flags": [
+    "STR-COL-001",
+    "STR-COL-026",
+    "STR-COL-011"
+   ],
+   "floor": "FOUNDATION",
+   "kg": 2.71,
+   "kg_at_alternative": 4.743,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 560,
+   "occurrence_id": "COL-CN-X?-Y?@29108-18112-FOUNDATION",
+   "part_id": "SEG-COL-CN-X?-Y?@29108-18112-FOUNDATION|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 2.24,
+   "type": "CN",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X?-Y?-29108-18112",
+   "component": "STARTER",
+   "count": 4,
+   "dia_mm": 14,
+   "flags": [
+    "STR-COL-001",
+    "STR-COL-011"
+   ],
+   "floor": "FOUNDATION",
+   "footing": {
+    "depth_mm": 300.0,
+    "ref": "FTG-FN-28608-17612",
+    "state": "DEFINED"
+   },
+   "kg": 5.275,
+   "length_kind": "STARTER",
+   "length_per_piece_mm": 1090.0,
+   "occurrence_id": "COL-CN-X?-Y?@29108-18112-FOUNDATION",
+   "part_id": "SEG-COL-CN-X?-Y?@29108-18112-FOUNDATION|STARTER",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P13-FOOTING-TYP",
+   "total_length_m": 4.36,
+   "type": "CN",
+   "why": "embedded depth (footing depth - bottom cover) + foot + projection"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X01-Y01-2138-7462",
+   "component": "ANCHORAGE",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C-X01-Y01-GF",
+   "part_id": "SEG-COL-C-X01-Y01-GF|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X01-Y05-2038-13762",
+   "component": "ANCHORAGE",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C-X01-Y05-GF",
+   "part_id": "SEG-COL-C-X01-Y05-GF|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X02-Y05-4738-13862",
+   "component": "ANCHORAGE",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C-X02-Y05-GF",
+   "part_id": "SEG-COL-C-X02-Y05-GF|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X06-Y01-14088-7462",
+   "component": "ANCHORAGE",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C-X06-Y01-GF",
+   "part_id": "SEG-COL-C-X06-Y01-GF|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X16-Y01-33108-7562",
+   "component": "ANCHORAGE",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C-X16-Y01-GF",
+   "part_id": "SEG-COL-C-X16-Y01-GF|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X09-Y09-19688-17362",
+   "component": "LAP",
+   "count": 6,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 6.068,
+   "kg_at_alternative": 10.619,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C1-X09-Y09-GF",
+   "part_id": "SEG-COL-C1-X09-Y09-GF|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 3.84,
+   "type": "C1",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X09-Y09-19688-17362",
+   "component": "ANCHORAGE",
+   "count": 2,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 2.023,
+   "kg_at_alternative": 3.54,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C1-X09-Y09-GF",
+   "part_id": "SEG-COL-C1-X09-Y09-GF|ANCHORAGE_TOP_STOPPED",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 1.28,
+   "type": "C1",
+   "why": "bars not continued above are anchored at the floor"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X15-Y01-31408-7462",
+   "component": "ANCHORAGE",
+   "count": 10,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 10.114,
+   "kg_at_alternative": 17.699,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C10-X15-Y01-GF",
+   "part_id": "SEG-COL-C10-X15-Y01-GF|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 6.4,
+   "type": "C10",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X06-Y04-14438-12062",
+   "component": "ANCHORAGE",
+   "count": 14,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 14.159,
+   "kg_at_alternative": 24.778,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C11-X06-Y04-GF",
+   "part_id": "SEG-COL-C11-X06-Y04-GF|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 8.96,
+   "type": "C11",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X?-Y01-17913-7462",
+   "component": "ANCHORAGE",
+   "count": 14,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 14.159,
+   "kg_at_alternative": 24.778,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C11-X?-Y01@17913-7462-GF",
+   "part_id": "SEG-COL-C11-X?-Y01@17913-7462-GF|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 8.96,
+   "type": "C11",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X08-Y10-17038-20562",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C2-X08-Y10-GF",
+   "part_id": "SEG-COL-C2-X08-Y10-GF|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C2",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X09-Y07-19688-15662",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C2-X09-Y07-GF",
+   "part_id": "SEG-COL-C2-X09-Y07-GF|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C2",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X09-Y10-19738-20562",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C2-X09-Y10-GF",
+   "part_id": "SEG-COL-C2-X09-Y10-GF|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C2",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X10-Y09-21688-17362",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C2-X10-Y09-GF",
+   "part_id": "SEG-COL-C2-X10-Y09-GF|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C2",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X03-Y04-6338-12062",
+   "component": "ANCHORAGE",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C3-X03-Y04-GF",
+   "part_id": "SEG-COL-C3-X03-Y04-GF|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C3",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {
+    "C": 8.091,
+    "C3": 8.091
+   },
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X04-Y01-7988-7462",
+   "component": "ANCHORAGE",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026",
+    "STR-COL-009"
+   ],
+   "floor": "GF",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C3-X04-Y01-GF",
+   "part_id": "SEG-COL-C3-X04-Y01-GF|ANCHORAGE_TOP",
+   "release_state": "LOWER_BOUND",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C3",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X05-Y02-12538-9062",
+   "component": "LAP",
+   "count": 6,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 6.068,
+   "kg_at_alternative": 10.619,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C3-X05-Y02-GF",
+   "part_id": "SEG-COL-C3-X05-Y02-GF|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 3.84,
+   "type": "C3",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X05-Y02-12538-9062",
+   "component": "ANCHORAGE",
+   "count": 2,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 2.023,
+   "kg_at_alternative": 3.54,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C3-X05-Y02-GF",
+   "part_id": "SEG-COL-C3-X05-Y02-GF|ANCHORAGE_TOP_STOPPED",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 1.28,
+   "type": "C3",
+   "why": "bars not continued above are anchored at the floor"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X08-Y09-17038-17362",
+   "component": "LAP",
+   "count": 6,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 6.068,
+   "kg_at_alternative": 10.619,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C3-X08-Y09-GF",
+   "part_id": "SEG-COL-C3-X08-Y09-GF|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 3.84,
+   "type": "C3",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X08-Y09-17038-17362",
+   "component": "ANCHORAGE",
+   "count": 2,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 2.023,
+   "kg_at_alternative": 3.54,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C3-X08-Y09-GF",
+   "part_id": "SEG-COL-C3-X08-Y09-GF|ANCHORAGE_TOP_STOPPED",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 1.28,
+   "type": "C3",
+   "why": "bars not continued above are anchored at the floor"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X12-Y01-24458-7462",
+   "component": "ANCHORAGE",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C3-X12-Y01-GF",
+   "part_id": "SEG-COL-C3-X12-Y01-GF|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C3",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X16-Y06-33108-14962",
+   "component": "ANCHORAGE",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C3-X16-Y06-GF",
+   "part_id": "SEG-COL-C3-X16-Y06-GF|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C3",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X13-Y10-27458-20662",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C4-X13-Y10-GF",
+   "part_id": "SEG-COL-C4-X13-Y10-GF|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C4",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X15-Y10-31508-20687",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C4-X15-Y10-GF",
+   "part_id": "SEG-COL-C4-X15-Y10-GF|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C4",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X05-Y04-12538-11912",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C5-X05-Y04-GF",
+   "part_id": "SEG-COL-C5-X05-Y04-GF|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C5",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X05-Y04-12538-11912",
+   "component": "ANCHORAGE",
+   "count": 2,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 2.023,
+   "kg_at_alternative": 3.54,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C5-X05-Y04-GF",
+   "part_id": "SEG-COL-C5-X05-Y04-GF|ANCHORAGE_TOP_STOPPED",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 1.28,
+   "type": "C5",
+   "why": "bars not continued above are anchored at the floor"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X11-Y10-23558-20662",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C5-X11-Y10-GF",
+   "part_id": "SEG-COL-C5-X11-Y10-GF|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C5",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X11-Y10-23558-20662",
+   "component": "ANCHORAGE",
+   "count": 2,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 2.023,
+   "kg_at_alternative": 3.54,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C5-X11-Y10-GF",
+   "part_id": "SEG-COL-C5-X11-Y10-GF|ANCHORAGE_TOP_STOPPED",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 1.28,
+   "type": "C5",
+   "why": "bars not continued above are anchored at the floor"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X14-Y02-27658-8962",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C5-X14-Y02-GF",
+   "part_id": "SEG-COL-C5-X14-Y02-GF|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C5",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X14-Y02-27658-8962",
+   "component": "ANCHORAGE",
+   "count": 2,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 2.023,
+   "kg_at_alternative": 3.54,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C5-X14-Y02-GF",
+   "part_id": "SEG-COL-C5-X14-Y02-GF|ANCHORAGE_TOP_STOPPED",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 1.28,
+   "type": "C5",
+   "why": "bars not continued above are anchored at the floor"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X08-Y04-17038-12362",
+   "component": "LAP",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C6-X08-Y04-GF",
+   "part_id": "SEG-COL-C6-X08-Y04-GF|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C6",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X08-Y04-17038-12362",
+   "component": "ANCHORAGE",
+   "count": 2,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 2.023,
+   "kg_at_alternative": 3.54,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C6-X08-Y04-GF",
+   "part_id": "SEG-COL-C6-X08-Y04-GF|ANCHORAGE_TOP_STOPPED",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 1.28,
+   "type": "C6",
+   "why": "bars not continued above are anchored at the floor"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X07-Y?-15888-16162",
+   "component": "LAP",
+   "count": 10,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 10.114,
+   "kg_at_alternative": 17.699,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C7-X07-Y?@15888-16162-GF",
+   "part_id": "SEG-COL-C7-X07-Y?@15888-16162-GF|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 6.4,
+   "type": "C7",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X07-Y?-15888-16162",
+   "component": "ANCHORAGE",
+   "count": 2,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 2.023,
+   "kg_at_alternative": 3.54,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C7-X07-Y?@15888-16162-GF",
+   "part_id": "SEG-COL-C7-X07-Y?@15888-16162-GF|ANCHORAGE_TOP_STOPPED",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 1.28,
+   "type": "C7",
+   "why": "bars not continued above are anchored at the floor"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {
+    "C7": 10.114,
+    "C8": 12.136
+   },
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X12-Y02-24308-8912",
+   "component": "LAP",
+   "count": 10,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026",
+    "STR-COL-010"
+   ],
+   "floor": "GF",
+   "kg": 10.114,
+   "kg_at_alternative": 17.699,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C8-X12-Y02-GF",
+   "part_id": "SEG-COL-C8-X12-Y02-GF|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 6.4,
+   "type": "C7",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {
+    "C7": 2.023,
+    "C8": null
+   },
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X12-Y02-24308-8912",
+   "component": "ANCHORAGE",
+   "count": 2,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026",
+    "STR-COL-010"
+   ],
+   "floor": "GF",
+   "kg": 2.023,
+   "kg_at_alternative": 3.54,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C8-X12-Y02-GF",
+   "part_id": "SEG-COL-C8-X12-Y02-GF|ANCHORAGE_TOP_STOPPED",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 1.28,
+   "type": "C7",
+   "why": "bars not continued above are anchored at the floor"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X15-Y06-31508-15062",
+   "component": "LAP",
+   "count": 12,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 12.136,
+   "kg_at_alternative": 21.239,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C8-X15-Y06-GF",
+   "part_id": "SEG-COL-C8-X15-Y06-GF|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 7.68,
+   "type": "C8",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X10-Y07-21713-15912",
+   "component": "LAP",
+   "count": 12,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 12.136,
+   "kg_at_alternative": 21.239,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C9-X10-Y07-GF",
+   "part_id": "SEG-COL-C9-X10-Y07-GF|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 7.68,
+   "type": "C9",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X10-Y07-21713-15912",
+   "component": "ANCHORAGE",
+   "count": 2,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 2.023,
+   "kg_at_alternative": 3.54,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C9-X10-Y07-GF",
+   "part_id": "SEG-COL-C9-X10-Y07-GF|ANCHORAGE_TOP_STOPPED",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 1.28,
+   "type": "C9",
+   "why": "bars not continued above are anchored at the floor"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X13-Y08-27308-16612",
+   "component": "LAP",
+   "count": 12,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "GF",
+   "kg": 12.136,
+   "kg_at_alternative": 21.239,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C9-X13-Y08-GF",
+   "part_id": "SEG-COL-C9-X13-Y08-GF|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 7.68,
+   "type": "C9",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X13-Y08-27308-16612",
+   "component": "ANCHORAGE",
+   "count": 2,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026",
+    "STR-TUR-001"
+   ],
+   "floor": "GF",
+   "kg": 2.023,
+   "kg_at_alternative": 3.54,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C9-X13-Y08-GF",
+   "part_id": "SEG-COL-C9-X13-Y08-GF|ANCHORAGE_TOP_STOPPED",
+   "release_state": "LOWER_BOUND",
+   "rule_id": "P8-N09",
+   "total_length_m": 1.28,
+   "type": "C9",
+   "why": "bars not continued above are anchored at the floor"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X09-Y09-19688-17362",
+   "component": "LAP",
+   "count": 6,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 6.068,
+   "kg_at_alternative": 10.619,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C1-X09-Y09-1F",
+   "part_id": "SEG-COL-C1-X09-Y09-1F|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 3.84,
+   "type": "C1",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X08-Y10-17038-20562",
+   "component": "LAP",
+   "count": 6,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 6.068,
+   "kg_at_alternative": 10.619,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C2-X08-Y10-1F",
+   "part_id": "SEG-COL-C2-X08-Y10-1F|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 3.84,
+   "type": "C2",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X08-Y10-17038-20562",
+   "component": "ANCHORAGE",
+   "count": 2,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 2.023,
+   "kg_at_alternative": 3.54,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C2-X08-Y10-1F",
+   "part_id": "SEG-COL-C2-X08-Y10-1F|ANCHORAGE_TOP_STOPPED",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 1.28,
+   "type": "C2",
+   "why": "bars not continued above are anchored at the floor"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X09-Y07-19688-15662",
+   "component": "LAP",
+   "count": 6,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 6.068,
+   "kg_at_alternative": 10.619,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C2-X09-Y07-1F",
+   "part_id": "SEG-COL-C2-X09-Y07-1F|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 3.84,
+   "type": "C2",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X09-Y07-19688-15662",
+   "component": "ANCHORAGE",
+   "count": 2,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 2.023,
+   "kg_at_alternative": 3.54,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C2-X09-Y07-1F",
+   "part_id": "SEG-COL-C2-X09-Y07-1F|ANCHORAGE_TOP_STOPPED",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 1.28,
+   "type": "C2",
+   "why": "bars not continued above are anchored at the floor"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X09-Y10-19738-20562",
+   "component": "LAP",
+   "count": 6,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 6.068,
+   "kg_at_alternative": 10.619,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C2-X09-Y10-1F",
+   "part_id": "SEG-COL-C2-X09-Y10-1F|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 3.84,
+   "type": "C2",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X09-Y10-19738-20562",
+   "component": "ANCHORAGE",
+   "count": 2,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 2.023,
+   "kg_at_alternative": 3.54,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C2-X09-Y10-1F",
+   "part_id": "SEG-COL-C2-X09-Y10-1F|ANCHORAGE_TOP_STOPPED",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 1.28,
+   "type": "C2",
+   "why": "bars not continued above are anchored at the floor"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X10-Y09-21688-17362",
+   "component": "LAP",
+   "count": 6,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 6.068,
+   "kg_at_alternative": 10.619,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C2-X10-Y09-1F",
+   "part_id": "SEG-COL-C2-X10-Y09-1F|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 3.84,
+   "type": "C2",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X10-Y09-21688-17362",
+   "component": "ANCHORAGE",
+   "count": 2,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 2.023,
+   "kg_at_alternative": 3.54,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C2-X10-Y09-1F",
+   "part_id": "SEG-COL-C2-X10-Y09-1F|ANCHORAGE_TOP_STOPPED",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 1.28,
+   "type": "C2",
+   "why": "bars not continued above are anchored at the floor"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X05-Y02-12538-9062",
+   "component": "ANCHORAGE",
+   "count": 6,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 6.068,
+   "kg_at_alternative": 10.619,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C3-X05-Y02-1F",
+   "part_id": "SEG-COL-C3-X05-Y02-1F|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 3.84,
+   "type": "C3",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X08-Y09-17038-17362",
+   "component": "LAP",
+   "count": 6,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 6.068,
+   "kg_at_alternative": 10.619,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C3-X08-Y09-1F",
+   "part_id": "SEG-COL-C3-X08-Y09-1F|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 3.84,
+   "type": "C3",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X13-Y10-27458-20662",
+   "component": "ANCHORAGE",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C4-X13-Y10-1F",
+   "part_id": "SEG-COL-C4-X13-Y10-1F|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C4",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X15-Y10-31508-20687",
+   "component": "ANCHORAGE",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C4-X15-Y10-1F",
+   "part_id": "SEG-COL-C4-X15-Y10-1F|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C4",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X05-Y04-12538-11912",
+   "component": "ANCHORAGE",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C5-X05-Y04-1F",
+   "part_id": "SEG-COL-C5-X05-Y04-1F|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C5",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X11-Y10-23558-20662",
+   "component": "LAP",
+   "count": 6,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 6.068,
+   "kg_at_alternative": 10.619,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C5-X11-Y10-1F",
+   "part_id": "SEG-COL-C5-X11-Y10-1F|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 3.84,
+   "type": "C5",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X11-Y10-23558-20662",
+   "component": "ANCHORAGE",
+   "count": 2,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 2.023,
+   "kg_at_alternative": 3.54,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C5-X11-Y10-1F",
+   "part_id": "SEG-COL-C5-X11-Y10-1F|ANCHORAGE_TOP_STOPPED",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 1.28,
+   "type": "C5",
+   "why": "bars not continued above are anchored at the floor"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X14-Y02-27658-8962",
+   "component": "ANCHORAGE",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C5-X14-Y02-1F",
+   "part_id": "SEG-COL-C5-X14-Y02-1F|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C5",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X08-Y04-17038-12362",
+   "component": "ANCHORAGE",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C6-X08-Y04-1F",
+   "part_id": "SEG-COL-C6-X08-Y04-1F|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "C6",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X07-Y?-15888-16162",
+   "component": "ANCHORAGE",
+   "count": 10,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 10.114,
+   "kg_at_alternative": 17.699,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C7-X07-Y?@15888-16162-1F",
+   "part_id": "SEG-COL-C7-X07-Y?@15888-16162-1F|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 6.4,
+   "type": "C7",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {
+    "C7": 10.114,
+    "C8": 12.136
+   },
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X12-Y02-24308-8912",
+   "component": "ANCHORAGE",
+   "count": 10,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026",
+    "STR-COL-010"
+   ],
+   "floor": "1F",
+   "kg": 10.114,
+   "kg_at_alternative": 17.699,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C8-X12-Y02-1F",
+   "part_id": "SEG-COL-C8-X12-Y02-1F|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 6.4,
+   "type": "C7",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X15-Y06-31508-15062",
+   "component": "ANCHORAGE",
+   "count": 12,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026",
+    "STR-TUR-001"
+   ],
+   "floor": "1F",
+   "kg": 12.136,
+   "kg_at_alternative": 21.239,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C8-X15-Y06-1F",
+   "part_id": "SEG-COL-C8-X15-Y06-1F|ANCHORAGE_TOP",
+   "release_state": "LOWER_BOUND",
+   "rule_id": "P8-N09",
+   "total_length_m": 7.68,
+   "type": "C8",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X10-Y07-21713-15912",
+   "component": "LAP",
+   "count": 10,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 10.114,
+   "kg_at_alternative": 17.699,
+   "length_kind": "LAP_SPLICE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C9-X10-Y07-1F",
+   "part_id": "SEG-COL-C9-X10-Y07-1F|LAP_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 6.4,
+   "type": "C9",
+   "why": "splice of the bars continuing into the storey above"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X10-Y07-21713-15912",
+   "component": "ANCHORAGE",
+   "count": 2,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 2.023,
+   "kg_at_alternative": 3.54,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C9-X10-Y07-1F",
+   "part_id": "SEG-COL-C9-X10-Y07-1F|ANCHORAGE_TOP_STOPPED",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 1.28,
+   "type": "C9",
+   "why": "bars not continued above are anchored at the floor"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X13-Y08-27308-16612",
+   "component": "ANCHORAGE",
+   "count": 12,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026",
+    "STR-TUR-001"
+   ],
+   "floor": "1F",
+   "kg": 12.136,
+   "kg_at_alternative": 21.239,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C9-X13-Y08-1F",
+   "part_id": "SEG-COL-C9-X13-Y08-1F|ANCHORAGE_TOP",
+   "release_state": "LOWER_BOUND",
+   "rule_id": "P8-N09",
+   "total_length_m": 7.68,
+   "type": "C9",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X08-Y02-16850-8912",
+   "component": "ANCHORAGE",
+   "count": 10,
+   "dia_mm": 16,
+   "flags": [
+    "STR-PLA-001",
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 10.114,
+   "kg_at_alternative": 17.699,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-P.C-X08-Y02-1F",
+   "part_id": "SEG-COL-P.C-X08-Y02-1F|ANCHORAGE_TOP",
+   "release_state": "LOWER_BOUND",
+   "rule_id": "P8-N09",
+   "total_length_m": 6.4,
+   "type": "P.C",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X08-Y02-16850-8912",
+   "component": "ANCHORAGE",
+   "count": 10,
+   "dia_mm": 16,
+   "flags": [
+    "STR-PLA-001",
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 10.114,
+   "kg_at_alternative": 17.699,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-P.C-X08-Y02-1F",
+   "part_id": "SEG-COL-P.C-X08-Y02-1F|ANCHORAGE_BASE",
+   "release_state": "LOWER_BOUND",
+   "rule_id": "P8-N09",
+   "total_length_m": 6.4,
+   "type": "P.C",
+   "why": "planted column - bars anchored into the supporting member"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X15-Y02-31508-8912",
+   "component": "ANCHORAGE",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-PLA-001",
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-P.C-X15-Y02-1F",
+   "part_id": "SEG-COL-P.C-X15-Y02-1F|ANCHORAGE_TOP",
+   "release_state": "LOWER_BOUND",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "P.C",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X15-Y02-31508-8912",
+   "component": "ANCHORAGE",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-PLA-001",
+    "STR-COL-026"
+   ],
+   "floor": "1F",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-P.C-X15-Y02-1F",
+   "part_id": "SEG-COL-P.C-X15-Y02-1F|ANCHORAGE_BASE",
+   "release_state": "LOWER_BOUND",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "P.C",
+   "why": "planted column - bars anchored into the supporting member"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X09-Y09-19688-17362",
+   "component": "ANCHORAGE",
+   "count": 6,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "2F",
+   "kg": 6.068,
+   "kg_at_alternative": 10.619,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C1-X09-Y09-2F",
+   "part_id": "SEG-COL-C1-X09-Y09-2F|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 3.84,
+   "type": "C1",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X08-Y10-17038-20562",
+   "component": "ANCHORAGE",
+   "count": 6,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "2F",
+   "kg": 6.068,
+   "kg_at_alternative": 10.619,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C2-X08-Y10-2F",
+   "part_id": "SEG-COL-C2-X08-Y10-2F|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 3.84,
+   "type": "C2",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X09-Y07-19688-15662",
+   "component": "ANCHORAGE",
+   "count": 6,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "2F",
+   "kg": 6.068,
+   "kg_at_alternative": 10.619,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C2-X09-Y07-2F",
+   "part_id": "SEG-COL-C2-X09-Y07-2F|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 3.84,
+   "type": "C2",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X09-Y10-19738-20562",
+   "component": "ANCHORAGE",
+   "count": 6,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "2F",
+   "kg": 6.068,
+   "kg_at_alternative": 10.619,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C2-X09-Y10-2F",
+   "part_id": "SEG-COL-C2-X09-Y10-2F|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 3.84,
+   "type": "C2",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X10-Y09-21688-17362",
+   "component": "ANCHORAGE",
+   "count": 6,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "2F",
+   "kg": 6.068,
+   "kg_at_alternative": 10.619,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C2-X10-Y09-2F",
+   "part_id": "SEG-COL-C2-X10-Y09-2F|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 3.84,
+   "type": "C2",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X08-Y09-17038-17362",
+   "component": "ANCHORAGE",
+   "count": 6,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "2F",
+   "kg": 6.068,
+   "kg_at_alternative": 10.619,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C3-X08-Y09-2F",
+   "part_id": "SEG-COL-C3-X08-Y09-2F|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 3.84,
+   "type": "C3",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X11-Y10-23558-20662",
+   "component": "ANCHORAGE",
+   "count": 6,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "2F",
+   "kg": 6.068,
+   "kg_at_alternative": 10.619,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C5-X11-Y10-2F",
+   "part_id": "SEG-COL-C5-X11-Y10-2F|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 3.84,
+   "type": "C5",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X10-Y07-21713-15912",
+   "component": "ANCHORAGE",
+   "count": 10,
+   "dia_mm": 16,
+   "flags": [
+    "STR-COL-026"
+   ],
+   "floor": "2F",
+   "kg": 10.114,
+   "kg_at_alternative": 17.699,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-C9-X10-Y07-2F",
+   "part_id": "SEG-COL-C9-X10-Y07-2F|ANCHORAGE_TOP",
+   "release_state": "PROVISIONAL",
+   "rule_id": "P8-N09",
+   "total_length_m": 6.4,
+   "type": "C9",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X?-Y?-24888-15994",
+   "component": "ANCHORAGE",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-PLA-001",
+    "STR-COL-026"
+   ],
+   "floor": "2F",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-P.C-X?-Y?@24888-15994-2F",
+   "part_id": "SEG-COL-P.C-X?-Y?@24888-15994-2F|ANCHORAGE_TOP",
+   "release_state": "LOWER_BOUND",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "P.C",
+   "why": "column stops - bars anchored into the closing slab / beam"
+  },
+  {
+   "alternative_D": [
+    70
+   ],
+   "alternatives_kg": {},
+   "basis_state": "PROVISIONAL",
+   "chain_id": "COLPOS-X?-Y?-24888-15994",
+   "component": "ANCHORAGE",
+   "count": 8,
+   "dia_mm": 16,
+   "flags": [
+    "STR-PLA-001",
+    "STR-COL-026"
+   ],
+   "floor": "2F",
+   "kg": 8.091,
+   "kg_at_alternative": 14.159,
+   "length_kind": "ANCHORAGE",
+   "length_per_piece_mm": 640,
+   "occurrence_id": "COL-P.C-X?-Y?@24888-15994-2F",
+   "part_id": "SEG-COL-P.C-X?-Y?@24888-15994-2F|ANCHORAGE_BASE",
+   "release_state": "LOWER_BOUND",
+   "rule_id": "P8-N09",
+   "total_length_m": 5.12,
+   "type": "P.C",
+   "why": "planted column - bars anchored into the supporting member"
+  }
+ ],
+ "starter_rule": {
+  "bottom_cover_mm": 70,
+  "bottom_cover_rule": "COVER_AGAINST_SOIL_70MM",
+  "foot_mm": 300,
+  "projection_D": 40,
+  "rule_id": "P13-FOOTING-TYP",
+  "state": "CANDIDATE"
+ }
+}

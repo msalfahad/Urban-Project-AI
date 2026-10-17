@@ -1,0 +1,29 @@
+TRADE,FAMILY,UNIT,FROZEN_REPLAY_VERIFIED,FROZEN_REPLAY_PLANNING_BASE,FROZEN_REPLAY_N_UNRESOLVED,GENERIC_PROVISIONAL_LOW,GENERIC_PROVISIONAL_BASE,GENERIC_PROVISIONAL_HIGH,GENERIC_N_UNRESOLVED,GENERIC_MINUS_FROZEN,RATIO_GENERIC_TO_FROZEN,DISCREPANCY_CLASS,WHY
+CONCRETE,BEAMS,m3,0.0,63.842902,27,61.919653,62.56334,78.415222,16,-1.279561,0.979958,SAME_OBJECTS_CLOSE_RESULT,within 5 % of the frozen replay
+CONCRETE,BOUNDARY_WALL,m3,0.0,0.0,1,0.0,0.0,0.0,,0.0,,NOT_IN_GENERIC_SCOPE,the generic engine has no detector for this family yet
+CONCRETE,CANTILEVER_PORTIONS,m3,0.0,0.736375,0,0.0,0.0,0.0,,-0.736375,0.0,NOT_IN_GENERIC_SCOPE,the generic engine has no detector for this family yet
+CONCRETE,COLUMNS,m3,20.5845,47.1825,0,41.166,41.166,41.166,35,-6.0165,0.872485,DETECTION_GAP,column occurrences without a schedule type stay unresolved; necks need a founding level the drawing does not print
+CONCRETE,DOMES,m3,5.081361,6.736353,3,0.0,0.0,0.0,,-6.736353,0.0,NOT_IN_GENERIC_SCOPE,the generic engine has no detector for this family yet
+CONCRETE,FOOTINGS,m3,64.304,66.264,0,50.036,50.036,50.036,4,-16.228,0.755101,DETECTION_GAP,4 footing marks without an outline carry no quantity (no exposure from the schedule size yet)
+CONCRETE,GROUND_BEAMS,m3,3.8791,36.25223,8,26.935876,27.364934,27.364934,1,-8.887296,0.754848,CONVENTION_DIFFERENCE,generic route applies the p.13 class depths to every band; the frozen replay separates exterior depths and straps
+CONCRETE,GROUND_SLAB,m3,3.785852,16.763728,0,22.204017,22.204017,22.204017,0,5.440289,1.324527,SCOPE_DIFFERENCE,"see 06_GROUND_SLAB_GAP_AUDIT.csv: same 19 faces, plus generic-only faces"
+CONCRETE,LIFT,m3,0.0,2.145,2,0.0,0.0,0.0,,-2.145,0.0,NOT_IN_GENERIC_SCOPE,the generic engine has no detector for this family yet
+CONCRETE,LINTELS,m3,0.366,4.976978,0,0.0,0.0,0.0,,-4.976978,0.0,NOT_IN_GENERIC_SCOPE,the generic engine has no detector for this family yet
+CONCRETE,PARAPETS,m3,0.0,0.0,3,0.0,0.0,0.0,,0.0,,NOT_IN_GENERIC_SCOPE,the generic engine has no detector for this family yet
+CONCRETE,PLAIN_CONCRETE,m3,0.0,9.9747,1,0.0,0.0,0.0,,-9.9747,0.0,NOT_IN_GENERIC_SCOPE,the generic engine has no detector for this family yet
+CONCRETE,POOL,m3,0.0,7.08446,0,0.0,0.0,0.0,,-7.08446,0.0,NOT_IN_GENERIC_SCOPE,the generic engine has no detector for this family yet
+CONCRETE,SLABS,m3,57.09856,57.09856,6,60.100531,60.100531,60.100531,0,3.001971,1.052575,CONVENTION_DIFFERENCE,"same members, different section / thickness readings"
+CONCRETE,STAIRS,m3,0.516583,9.060994,0,0.0,0.0,0.0,,-9.060994,0.0,NOT_IN_GENERIC_SCOPE,the generic engine has no detector for this family yet
+CONCRETE,WATER_TANK_ROOF,m3,2.4543,2.4543,2,0.0,0.0,0.0,,-2.4543,0.0,NOT_IN_GENERIC_SCOPE,the generic engine has no detector for this family yet
+REINFORCEMENT,BEAMS,kg,4014.765444,5489.989,0,5327.821147,6881.687239,7278.1282,0,1391.698239,1.253497,BAR_MODEL_DIFFERENCE,"generic bar models (schedule bars, ACI hooks, anchorage / lap conventions) versus the frozen stage BBS"
+REINFORCEMENT,CANTILEVER_PORTIONS,kg,0.0,0.0,7,0.0,0.0,0.0,,0.0,,NOT_IN_GENERIC_SCOPE,the generic engine has no detector for this family yet
+REINFORCEMENT,COLUMNS,kg,4657.725,7488.184,2,5883.225514,6100.123884,6347.344032,0,-1388.060116,0.814633,BAR_MODEL_DIFFERENCE,"generic bar models (schedule bars, ACI hooks, anchorage / lap conventions) versus the frozen stage BBS"
+REINFORCEMENT,DOMES,kg,602.111304,914.044246,7,0.0,0.0,0.0,,-914.044246,0.0,NOT_IN_GENERIC_SCOPE,the generic engine has no detector for this family yet
+REINFORCEMENT,FOOTINGS,kg,3629.599513,3629.599513,6,2824.493086,2876.496296,3260.068154,0,-753.103217,0.792511,DETECTION_GAP,4 footing marks without an outline carry no quantity (no exposure from the schedule size yet)
+REINFORCEMENT,GROUND_BEAMS,kg,1436.23167,1516.04994,0,0.0,0.0,0.0,,-1516.04994,0.0,GENERIC_MISSING_DATA,"typical ground-beam bars are in the PDF detail only (vector glyphs, no OCR)"
+REINFORCEMENT,GROUND_SLAB,kg,233.694587,1034.799526,0,1370.618353,1370.618353,1370.618353,0,335.818828,1.324525,SCOPE_DIFFERENCE,"see 06_GROUND_SLAB_GAP_AUDIT.csv: same 19 faces, plus generic-only faces"
+REINFORCEMENT,LINTELS,kg,49.589037,571.680154,9,0.0,0.0,0.0,,-571.680154,0.0,NOT_IN_GENERIC_SCOPE,the generic engine has no detector for this family yet
+REINFORCEMENT,POOL,kg,0.0,0.0,1,0.0,0.0,0.0,,0.0,,NOT_IN_GENERIC_SCOPE,the generic engine has no detector for this family yet
+REINFORCEMENT,SLABS,kg,3802.015365,3802.015365,0,2512.014883,2512.014883,2814.531775,0,-1290.000482,0.660706,BAR_MODEL_DIFFERENCE,"generic bar models (schedule bars, ACI hooks, anchorage / lap conventions) versus the frozen stage BBS"
+REINFORCEMENT,STAIRS,kg,59.020862,59.020862,1,0.0,0.0,0.0,,-59.020862,0.0,NOT_IN_GENERIC_SCOPE,the generic engine has no detector for this family yet
+REINFORCEMENT,WATER_TANK_ROOF,kg,361.208565,361.208565,0,0.0,0.0,0.0,,-361.208565,0.0,NOT_IN_GENERIC_SCOPE,the generic engine has no detector for this family yet

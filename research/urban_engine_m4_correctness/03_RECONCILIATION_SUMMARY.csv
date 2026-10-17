@@ -1,0 +1,16 @@
+TRADE,FAMILY,CAUSE,COMPONENTS,DELTA,NOTE
+CONCRETE,BEAMS,ALIGNMENT_ONLY_SPAN_NOW_UNRESOLVED,10,-5.2004,M3 carried the collinear section across a support; M4 holds it
+CONCRETE,GROUND_BEAMS,GB_EXTERIOR_EXTERIOR_WALL,15,-6.2374,the architectural plan decides the exterior detail
+CONCRETE,GROUND_BEAMS,GB_EXTERIOR_PERIMETER_NO_WALL,1,-0.3252,the architectural plan decides the exterior detail
+CONCRETE,GROUND_SLAB,SLAB_MEMBER_OVERLAP_DEDUCTED,2,-0.0237,the slab face's overlap with beams / columns is the members'
+CONCRETE,LINTELS,LINTELS_NEW_FAMILY,10,0.4627,measured from the architectural openings / drawn treads
+CONCRETE,PLAIN_CONCRETE,BLINDING_UNION,2,-4.257,"blinding plan = union of footing and strip outlines, printed projection"
+CONCRETE,SLABS,SLAB_PROJECT_DEFAULT_THICKNESS,10,-0.7084,the printed project default replaces the sheet's one tag
+REINFORCEMENT,BEAMS,ALIGNMENT_ONLY_SPAN_NOW_UNRESOLVED,10,-1070.3773,M3 carried the collinear section across a support; M4 holds it
+REINFORCEMENT,BEAMS,CB_PHYSICAL_BARS,23,1835.1257,continuous-beam bars from the physical bar model
+REINFORCEMENT,BEAMS,SPAN_TAKEN_BY_PRINTED_SEQUENCE,1,30.5903,the printed span sequence of a continuous beam maps the span
+REINFORCEMENT,GROUND_BEAMS,GB_EXTERIOR_EXTERIOR_WALL,15,-150.1923,the exterior detail's bars follow the evidenced case
+REINFORCEMENT,GROUND_BEAMS,GB_EXTERIOR_PERIMETER_NO_WALL,1,-28.9537,the exterior detail's bars follow the evidenced case
+REINFORCEMENT,GROUND_SLAB,SLAB_MEMBER_OVERLAP_DEDUCTED,2,-1.4618,the slab face's overlap with beams / columns is the members'
+REINFORCEMENT,LINTELS,LINTELS_NEW_FAMILY,10,65.0374,measured from the architectural openings / drawn treads
+REINFORCEMENT,SLABS,SLAB_PROJECT_DEFAULT_THICKNESS,1,-0.0004,the printed project default replaces the sheet's one tag

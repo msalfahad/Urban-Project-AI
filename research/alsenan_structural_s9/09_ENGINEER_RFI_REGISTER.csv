@@ -1,0 +1,208 @@
+RFI_ID,PRIORITY,SOURCE_STAGE,SOURCE_ID,TO,FAMILY,QUESTION,STATUS
+RFI-001,CARRIED,S2,STR-BEA-001,consultant,CENSUS,P13 ground-beam typical details (<2.5 / <5 / >5 m): is the length measured centre-to-centre or clear span?,OPEN
+RFI-002,CARRIED,S2,STR-BEA-002,consultant,CENSUS,"Schedule row B.W has no occurrence on the plans. Is it unused, or is a mark missing on a plan?",OPEN
+RFI-003,CARRIED,S2,STR-BEA-003,consultant,CENSUS,"Schedule row B10 has no occurrence on the plans. Is it unused, or is a mark missing on a plan?",OPEN
+RFI-004,CARRIED,S2,STR-BEA-004,consultant,CENSUS,"Schedule row B12 has no occurrence on the plans. Is it unused, or is a mark missing on a plan?",OPEN
+RFI-005,CARRIED,S2,STR-BEA-005,consultant,CENSUS,"Beams deeper than 60 cm without side bars in their schedule row (CB1, CB11, CB12, CB3, CB6, CB7, CB8): how many 12 mm side bars per face?",OPEN
+RFI-006,CARRIED,S2,STR-BEA-006,consultant,CENSUS,Confirm the curved ground beam's supports and length (pool edge).,OPEN
+RFI-007,CARRIED,S2,STR-BEA-007,consultant,CENSUS,"Which beams are crossed by service pipes (drainage, water, electrical, AC) and must be widened by 5 cm?",OPEN
+RFI-008,CARRIED,S2,STR-BEA-008,consultant,CENSUS,These beam members at 1F_ROOF carry no mark. Which type is each (or are they not structural members)?,OPEN
+RFI-009,CARRIED,S2,STR-BEA-009,consultant,CENSUS,These beam members at 1F_ROOF carry no mark. Which type is each (or are they not structural members)?,OPEN
+RFI-010,CARRIED,S2,STR-BEA-010,consultant,CENSUS,These beam members at 2F_ROOF carry no mark. Which type is each (or are they not structural members)?,OPEN
+RFI-011,CARRIED,S2,STR-BEA-011,consultant,CENSUS,These beam members at GF_ROOF carry no mark. Which type is each (or are they not structural members)?,OPEN
+RFI-012,CARRIED,S2,STR-BEA-012,consultant,CENSUS,"For beam type B21: does the schedule width (cm) govern, or the drawn width (cm) (45.0 vs 40.0)?",OPEN
+RFI-013,CARRIED,S2,STR-BEA-013,consultant,CENSUS,"For beam type B29: does the schedule width (cm) govern, or the drawn width (cm) (25.0 vs 20.0)?",OPEN
+RFI-014,CARRIED,S2,STR-BEA-014,consultant,CENSUS,"For beam type B6: does the schedule width (cm) govern, or the drawn width (cm) (25.0 vs 20.0)?",OPEN
+RFI-015,CARRIED,S2,STR-BEA-015,consultant,CENSUS,"For beam type CB10: does the schedule width (cm) govern, or the drawn width (cm) (25.0 vs 20.0)?",OPEN
+RFI-016,CARRIED,S2,STR-BEA-016,consultant,CENSUS,"For beam type CB2: does the schedule width (cm) govern, or the drawn width (cm) (20.0 vs 25.0)?",OPEN
+RFI-017,CARRIED,S2,STR-BEA-017,consultant,CENSUS,This beam is marked CB3 and B3. Which type is it - or is it two members drawn as one?,OPEN
+RFI-018,CARRIED,S2,STR-BEA-018,consultant,CENSUS,"Which plan members form CB4 (schedule spans [3.3, 3.7])?",OPEN
+RFI-019,CARRIED,S2,STR-BEA-019,consultant,CENSUS,"Which plan members form CB5 (schedule spans [2.5, 4.5])?",OPEN
+RFI-020,CARRIED,S2,STR-BEA-020,consultant,CENSUS,"Which plan members form CB5 (schedule spans [2.5, 4.5])?",OPEN
+RFI-021,CARRIED,S2,STR-BEA-021,consultant,CENSUS,"Which plan members form CB8 (schedule spans [3.7, 6.4, 6.8])?",OPEN
+RFI-022,CARRIED,S2,STR-BEA-022,consultant,CENSUS,Schedule key SB2 appears twice. Which row is valid?,OPEN
+RFI-023,CARRIED,S2,STR-BEA-023,consultant,CENSUS,Which member does mark B6 refer to?,OPEN
+RFI-024,CARRIED,S2,STR-BEA-024,consultant,CENSUS,Which member does mark B6 refer to?,OPEN
+RFI-025,CARRIED,S2,STR-BEA-025,consultant,CENSUS,Which member does mark B6 refer to?,OPEN
+RFI-026,CARRIED,S2,STR-BEA-026,consultant,CENSUS,Which member does mark B6 refer to?,OPEN
+RFI-027,CARRIED,S2,STR-BEA-027,consultant,CENSUS,Which member does mark B1 refer to?,OPEN
+RFI-028,CARRIED,S2,STR-BEA-028,consultant,CENSUS,Which member does mark B8 refer to?,OPEN
+RFI-029,CARRIED,S2,STR-COL-001,consultant,CENSUS,"Is CN a column that stops at FOUNDATION, or a short stub / pedestal that belongs to the foundation item?",OPEN
+RFI-030,CARRIED,S2,STR-COL-002,consultant,CENSUS,ST. OF COLUMN- 6Ø8/m (column ties): is the per-metre count the number of tie sets (all closed ties at one level) or the number of single ties?,OPEN
+RFI-031,CARRIED,S2,STR-COL-003,consultant,CENSUS,"For C10 (FOUNDATION), C10 (GF), C5 (FOUNDATION), C5 (GF), C6 (FOUNDATION), C6 (GF), C9 (2F) (10 bars): which bars does each overlapping tie enclose?",OPEN
+RFI-032,CARRIED,S2,STR-COL-004,consultant,CENSUS,"For C11 (FOUNDATION), C11 (GF), C9 (FOUNDATION), C9 (GF) (14 bars): which bars does each overlapping tie enclose?",OPEN
+RFI-033,CARRIED,S2,STR-COL-005,consultant,CENSUS,"For C1 (1F), C1 (2F), C2 (2F), C3 (1F), C3 (2F), C5 (2F) (6 bars): which bars does each overlapping tie enclose?",OPEN
+RFI-034,CARRIED,S2,STR-COL-006,consultant,CENSUS,"For C (FOUNDATION), C (GF), C1 (FOUNDATION), C1 (GF), C2 (1F), C2 (FOUNDATION), C2 (GF), C3 (FOUNDATION), C3 (GF), C4 (1F), C4 (FOUNDATION), C4 (GF), C5 (1F) (8 bars): which bars does each overlapping tie enclose?",OPEN
+RFI-035,CARRIED,S2,STR-COL-007,consultant,CENSUS,"Over which vertical length are the column ties counted: floor-to-floor, clear height between slab and beam soffit, or clear height plus the beam-column joint?",OPEN
+RFI-036,CARRIED,S2,STR-COL-008,consultant,CENSUS,column tie rule (arrangement by long side L): which band applies where the value is exactly 80.0 cm?,OPEN
+RFI-037,CARRIED,S2,STR-COL-009,consultant,CENSUS,Which type is correct for this column (at grid X04/Y01): C3 or C?,OPEN
+RFI-038,CARRIED,S2,STR-COL-010,consultant,CENSUS,Which type is correct for this column (at grid X12/Y02): C8 or C7?,OPEN
+RFI-039,CARRIED,S2,STR-COL-011,consultant,CENSUS,Does this column exist (it is missing on COLUMN & AXIS PLAN)?,OPEN
+RFI-040,CARRIED,S2,STR-COL-012,consultant,CENSUS,"For column type C1: does the schedule section (storey band) govern, or the drawn outline ([30.0, 50.0] vs [20.0, 50.0])?",OPEN
+RFI-041,CARRIED,S2,STR-COL-013,consultant,CENSUS,"For column type C2: does the schedule section (storey band) govern, or the drawn outline ([30.0, 50.0] vs [20.0, 50.0])?",OPEN
+RFI-042,CARRIED,S2,STR-COL-014,consultant,CENSUS,"For column type C3: does the schedule section (storey band) govern, or the drawn outline ([20.0, 50.0] vs [25.0, 50.0]; [25.0, 50.0] vs [20.0, 40.0]; [25.0, 50.0] vs [20.0, 50.0])?",OPEN
+RFI-043,CARRIED,S2,STR-COL-015,consultant,CENSUS,"For column type C4: does the schedule section (storey band) govern, or the drawn outline ([20.0, 50.0] vs [25.0, 50.0]; [30.0, 50.0] vs [25.0, 50.0])?",OPEN
+RFI-044,CARRIED,S2,STR-COL-016,consultant,CENSUS,"For column type C5: does the schedule section (storey band) govern, or the drawn outline ([20.0, 50.0] vs [20.0, 60.0]; [20.0, 50.0] vs [25.0, 60.0])?",OPEN
+RFI-045,CARRIED,S2,STR-COL-017,consultant,CENSUS,"For column type C6: does the schedule section (storey band) govern, or the drawn outline ([20.0, 60.0] vs [25.0, 70.0])?",OPEN
+RFI-046,CARRIED,S2,STR-COL-018,consultant,CENSUS,"For column type C7: does the schedule section (storey band) govern, or the drawn outline ([20.0, 80.0] vs [25.0, 80.0])?",OPEN
+RFI-047,CARRIED,S2,STR-COL-019,consultant,CENSUS,"For column type C8: does the schedule section (storey band) govern, or the drawn outline ([20.0, 90.0] vs [25.0, 80.0]; [25.0, 90.0] vs [25.0, 80.0]; [30.0, 90.0] vs [30.0, 80.0])?",OPEN
+RFI-048,CARRIED,S2,STR-COL-020,consultant,CENSUS,"For column type C9: does the schedule section (storey band) govern, or the drawn outline ([20.0, 90.0] vs [20.0, 100.0]; [20.0, 90.0] vs [25.0, 100.0]; [30.0, 100.0] vs [25.0, 100.0])?",OPEN
+RFI-049,CARRIED,S2,STR-COL-021,consultant,CENSUS,"For column type C: does the schedule section (storey band) govern, or the drawn outline ([20.0, 50.0] vs [20.0, 40.0])?",OPEN
+RFI-050,CARRIED,S2,STR-COL-022,consultant,CENSUS,"For column type P.C: does the schedule section (storey band) govern, or the drawn outline ([20, 50] vs [20.0, 40.0])?",OPEN
+RFI-051,CARRIED,S2,STR-COL-023,consultant,CENSUS,"The schedule gives 20.0 where the general rule asks for at least 25. Is the schedule correct, or must the section increase?",OPEN
+RFI-052,CARRIED,S2,STR-DOM-001,consultant,CENSUS,"Does the dome detail (100 mm shell, ring beam) apply to both domes on the first-floor roof?",OPEN
+RFI-053,CARRIED,S2,STR-FOO-001,consultant,CENSUS,"What does the schedule field 'BOXED' mean (bar count, bar size, shape and position)?",OPEN
+RFI-054,CARRIED,S2,STR-FOO-002,consultant,CENSUS,"Schedule row F7 has no occurrence on the plans. Is it unused, or is a mark missing on a plan?",OPEN
+RFI-055,CARRIED,S2,STR-FOO-003,consultant,CENSUS,What is the founding level? (A lower ground beam is required where the ground beam is more than 2.5 m above the footing.),OPEN
+RFI-056,CARRIED,S2,STR-FOO-004,consultant,CENSUS,Are these two separate members or one combined member?,OPEN
+RFI-057,CARRIED,S2,STR-FOO-005,consultant,CENSUS,This footing is marked F and F10. Which type is it - or is it two members drawn as one?,OPEN
+RFI-058,CARRIED,S2,STR-GRO-001,consultant,CENSUS,"Which areas receive the 10 cm ground slab (5Ø10/m each way): every cell inside the ground beams, or only the cells marked with the note?",OPEN
+RFI-059,CARRIED,S2,STR-LIF-001,consultant,CENSUS,What is the lift-pit depth below the lift footing (manufacturer / engineer)?,OPEN
+RFI-060,CARRIED,S2,STR-LIF-002,consultant,CENSUS,"Lift tie beams at 3.00 m height around the lift shaft when the storey is higher than 4.30 m.: where are these lift tie beams, and what size and bars?",OPEN
+RFI-061,CARRIED,S2,STR-LIN-001,consultant,CENSUS,"Lintels by opening width; width = wall width; 40 cm minimum bearing each side.: where are these lintels, and what size and bars?",OPEN
+RFI-062,CARRIED,S2,STR-PAR-001,consultant,CENSUS,Give the parapet height and the roof edges that carry a parapet.,OPEN
+RFI-063,CARRIED,S2,STR-PLA-001,consultant,CENSUS,"Does the p.15 detail (Beam carrying a planted column: 4Ø16 extra, column bars anchored 100 into the beam.) apply to each of these columns, and do they use the normal tie bands?",OPEN
+RFI-064,CARRIED,S2,STR-POO-001,consultant,CENSUS,"Provide the pool plan and section (lengths, depths, slope) from the architect.",OPEN
+RFI-065,CARRIED,S2,STR-PRO-001,consultant,CENSUS,"boundary wall definition: which value governs, TYPICAL BOUNDARY WALL: (20x30) R.C columns 4Ø14; GROUND BEAM (20x40); 2Ø14 (T&B); Ø8/20 STIRRUPS; 3Ø16 (T&B); 7Ø12; 4Ø12 or 20x60 ['4', '16']?",OPEN
+RFI-066,CARRIED,S2,STR-PRO-002,consultant,CENSUS,"formwork rule: which value governs, formwork >= 14 days or formwork >= 21 days?",OPEN
+RFI-067,CARRIED,S2,STR-SLA-001,consultant,CENSUS,"The plan note asks for 5Ø10/m top bars over beams for one third of the span, and p.15 gives top-bar extensions of 0.25L / 0.30L. Is the plan note a minimum where no top bar is drawn, or does it replace p.15?",OPEN
+RFI-068,CARRIED,S2,STR-SLA-002,consultant,CENSUS,temperature reinforcement table (p.15): which value applies for 160 mm?,OPEN
+RFI-069,CARRIED,S2,STR-SLA-003,consultant,CENSUS,temperature reinforcement table (p.15): which value applies for 180 mm?,OPEN
+RFI-070,CARRIED,S2,STR-STA-001,consultant,CENSUS,"Does the typical stair detail (p.16) apply to each stair on the plans, including the stair inside the void? Please give flight / landing levels and waist thickness.",OPEN
+RFI-071,CARRIED,S2,STR-TUR-001,consultant,CENSUS,"Does the p.15 detail (Twisted (turned) column: spiral ties 6Ø8/m over 1 m each side of the floor, 4Ø16 extra.) apply to each of these columns, and do they use the normal tie bands?",OPEN
+RFI-072,CARRIED,S1,RQ-1,engineer,COLUMN_TIES,COLUMN_TIES: 6Ø8/m: is the count per metre a count of tie SETS (all closed ties of the band at one level) or of single closed ties?,OPEN
+RFI-073,CARRIED,S1,RQ-2,engineer,COLUMN_TIES,"COLUMN_TIES: L = 80 cm (C7 30x80) sits on the printed limit of both bands (50<L<80, 80<L<120): band 2 (2 ties) or band 3 (3 ties)?",OPEN
+RFI-074,CARRIED,S1,RQ-3,engineer,COLUMNS,COLUMNS: GF storey is 4.50 m -> Tmin 25 cm (p.9); these columns are 20 cm in the schedule. Accept the schedule (engineer's design) or flag to the engineer?,OPEN
+RFI-075,CARRIED,S1,RQ-4,engineer,COLUMNS,COLUMNS: Which tag is right for this column position?,OPEN
+RFI-076,CARRIED,S1,RQ-5,engineer,COLUMNS,COLUMNS: Which tag is right for this column position?,OPEN
+RFI-077,CARRIED,S1,RQ-6,engineer,COLUMNS,COLUMNS: Plan outline size differs from the schedule band for these occurrences (e.g. lift columns 20X50 / 25X100 on the axis plan vs 30 cm in the schedule). Schedule governs?,OPEN
+RFI-078,CARRIED,S1,RQ-7,engineer,FOOTINGS,"FOOTINGS: One outline carries tags F and F10 (and holds C + C10). Which footing is it, or is it two footings drawn as one outline?",OPEN
+RFI-079,CARRIED,S1,RQ-8,engineer,FOOTINGS,FOOTINGS: What does the BOXED value '3+4' (single-layer footings) mean - box/cage bars (3 one way + 4 the other) or starters?,OPEN
+RFI-080,CARRIED,S1,RQ-9,engineer,STRAPS,STRAPS: SB2 appears twice in the schedule (100x50 and 80x50). Drawn width on FP is ~987 mm (favours 100). Which row governs?,OPEN
+RFI-081,CARRIED,S1,RQ-10,engineer,CONTINUOUS_BEAMS,CONTINUOUS_BEAMS: Schedule spans vs plan spans disagree - which plan members form this CB?,OPEN
+RFI-082,CARRIED,S1,RQ-11,engineer,CONTINUOUS_BEAMS,CONTINUOUS_BEAMS: Schedule spans vs plan spans disagree - which plan members form this CB?,OPEN
+RFI-083,CARRIED,S1,RQ-12,engineer,CONTINUOUS_BEAMS,CONTINUOUS_BEAMS: Schedule spans vs plan spans disagree - which plan members form this CB?,OPEN
+RFI-084,CARRIED,S1,RQ-13,engineer,CONTINUOUS_BEAMS,CONTINUOUS_BEAMS: Schedule spans vs plan spans disagree - which plan members form this CB?,OPEN
+RFI-085,CARRIED,S1,RQ-14,engineer,BEAMS,BEAMS: These tags sit between two parallel beams at similar distance. Which beam does each tag name?,OPEN
+RFI-086,CARRIED,S1,RQ-15,engineer,BEAMS,"BEAMS: One span carries both 'B3 (With Stair)' and 'CB3'. Is B3 a separate stair beam beside CB3, or the same member?",OPEN
+RFI-087,CARRIED,S1,RQ-16,engineer,BEAMS,BEAMS: Members drawn as beams with no tag - which type are they (or are they drop / edge details)?,OPEN
+RFI-088,CARRIED,S1,RQ-17,engineer,GROUND_BEAMS,GROUND_BEAMS: GB category (<2.5 / <5 / >5 m): measured centre-to-centre of supports or clear span? These spans change category between the two.,OPEN
+RFI-089,CARRIED,S1,RQ-18,engineer,SLABS,SLABS: The p.15 temperature table has rows 150 and 175 only. For 160 mm and 180 mm slabs: which row (no interpolation is done)?,OPEN
+RFI-090,CARRIED,S1,RQ-19,engineer,STAIRS,"STAIRS: These faces are drawn as open-to-below (X lines) but hold stair treads and a bar text (8Ø16/m). Is this the main stair well (stair slab + landings), and which stair detail applies?",OPEN
+RFI-091,CARRIED,S1,RQ-20,engineer,SLABS,"SLABS: Plan note (pp.4-6): 5Ø10/m over beams for 1/3 span, vs p.15: top bars 0.25L / 0.30L. Is the plan note a minimum where no top bar is drawn, or an override?",OPEN
+RFI-092,CARRIED,S1,RQ-21,engineer,LEVELS,"LEVELS: Founding level is not printed (>= 1.5 m excavation). Confirm footing founding level and floor build-up, needed for column bar lengths next round.",OPEN
+RFI-093,CARRIED,S1,RQ-22,engineer,POOL,POOL: Pool lengths / depths are 'AS PER ARCH'. Provide the architectural pool plan and section.,OPEN
+RFI-094,CARRIED,S5,Q1,engineer,GROUND_BEAMS,Concentrated load: does a ground beam ending on another ground beam mid-span (or a stair start / the '******' marks) count as a 'concentrated load' for the p.13 sections titled 'without concentrated load'? Not auto-classified as PRESENT; the interior detail stays blocked.,ANSWERED
+RFI-095,CARRIED,S5,Q2,engineer,GROUND_BEAMS,Exterior ground-beam depth (FOLLOW ARCH.): the floor build-up is not printed (D <= 1.00 m main block); the annex +0.30 bound (D <= 0.30 m) cannot hold the drawn three-level section - SOURCE_CONFLICT. What is the depth?,ANSWERED
+RFI-096,CARRIED,S5,Q3,engineer,GROUND_BEAMS,"Length basis of the p.13 titles (clear span between support faces, or centreline)?",ANSWERED
+RFI-097,CARRIED,S5,Q3B,engineer,GROUND_BEAMS,"Bar run where the drawn band and the support faces disagree (narrow column, oblique / arc-trimmed ends): measure to the support face plane and correct the concrete piece?",ANSWERED
+RFI-098,CARRIED,S5,Q4,engineer,GROUND_BEAMS,"Below 2.5 m both 'Less than 2.5m' and 'Less than 5m' hold: which governs, and what link (size, spacing) has the 2.5 m section? (No stirrup is inherited from the 5 m section.)",ANSWERED
+RFI-099,CARRIED,S5,Q5,engineer,GROUND_BEAMS,SB2 governing schedule row: 80x50 (10Ø18 / 10Ø18) or 100x50 (20Ø18 / 10Ø16)? The drawn 987 mm width does not choose.,ANSWERED
+RFI-100,CARRIED,S5,Q6,engineer,GROUND_BEAMS,"Link geometry: legs / topology, hook angle and extension of ground-beam and strap links.",ANSWERED
+RFI-101,CARRIED,S5,Q7,engineer,GROUND_BEAMS,"Development / anchorage of ground-beam bars into columns, beams and footings and of strap bars into footings (the p.8 70Ø / 40Ø note is for starters only; a code value needs the project's code).",ANSWERED
+RFI-102,CARRIED,S5,Q8,engineer,GROUND_BEAMS,Partly exterior / mixed spans and slab-edge beams with no wall: which section applies?,ANSWERED
+RFI-103,CARRIED,S5,Q9,engineer,GROUND_BEAMS,"Meaning of the two '******' marks on the GBP sheet (S-TEXT, 300 mm, no legend).",ANSWERED
+RFI-104,CARRIED,S5,Q10,engineer,GROUND_BEAMS,"1811-1812 east end on the plot-boundary line, no column or footing: what supports it?",ANSWERED
+RFI-105,CARRIED,S6,Q1,engineer,BEAMS,"Anchorage / development of beam longitudinal bars at end supports, and bar-end hooks (note 9 70Ø / 40Ø is starter-bar context only).",ANSWERED
+RFI-106,CARRIED,S6,Q2,engineer,BEAMS,"CB top bars and hangers: the frames draw one top bar per span; the typical draws an end-support bar and an unlabelled second top row. Which governs, what extents, is the second row a hanger with its own bars?",ANSWERED
+RFI-107,CARRIED,S6,Q3,engineer,BEAMS,"Typical-detail labels: '0.3 Ln2' in the 2-span typicals (no Ln2 exists), the undimensioned left end top bar, 'L3' in the 3-span typical.",ANSWERED
+RFI-108,CARRIED,S6,Q4,engineer,BEAMS,3-span middle bottom bar '0.15L': is the extension 0.15 x the clear span it enters? (left out: lower bound),ANSWERED
+RFI-109,CARRIED,S6,Q5,engineer,BEAMS,Ln for the MID extent: the typical dimensions Ln axis to axis and L face to face; S6 uses the drawing's own definition (0.22 x axis-to-axis span from the face). Please confirm.,ANSWERED
+RFI-110,CARRIED,S6,Q6,engineer,BEAMS,"Side bars '2Ø12/30cm' (SBT REMARKS) / '2Ø12' + '30cm' (CB MIDDLE REINT.): per face or total, '/30cm' meaning, bar length, end treatment.",ANSWERED
+RFI-111,CARRIED,S6,Q7,engineer,BEAMS,"Stirrups: legs (STR2 / str3 icons have no legend), hook type and length, first stirrup position, end zones.",ANSWERED
+RFI-112,CARRIED,S6,Q8,engineer,BEAMS,"Simple-beam SBT bars run at least support face to support face, uncurtailed - please confirm.",ANSWERED
+RFI-113,CARRIED,S6,Q9,engineer,BEAMS,"Special simple beams: curved ring beams (bar stops), WITH STAIR spans (p.16 detail), the planted-column span (p.15 detail), the cantilever CA (free end, back-span anchorage).",ANSWERED
+RFI-114,CARRIED,S6,R1,engineer,BEAMS,"Bindings left as candidates (445, 45D, 474, 476, 78F).",ANSWERED
+RFI-115,CARRIED,S6,R2,engineer,BEAMS,"Width conflicts: FFRS B6, FFRS CB10, GFRS B21, GFRS B29, GFRS CB2 (drawn band vs schedule B).",ANSWERED
+RFI-116,CARRIED,S6,R3,engineer,BEAMS,"CB span conflicts: CB4, CB5 (span lengths), CB8 (2 tagged spans vs 3 schedule spans).",ANSWERED
+RFI-117,CARRIED,S6,R4,engineer,BEAMS,"CB reading direction: CB2, CB7, CB13 match the schedule both ways. Which end is span 1?",ANSWERED
+RFI-118,CARRIED,S6,R5,engineer,BEAMS,CB3: its middle span is also tagged 'B3 WITH STAIR'; MID1 differs from the typical (3Ø16 callout on a longer bar); MID2 is blank.,ANSWERED
+RFI-119,CARRIED,S6,R6,engineer,BEAMS,38 untagged spans / arcs (incl. six 1F dome-ring arcs): which marks apply?,ANSWERED
+RFI-120,CARRIED,PRE-S7,Q-COUNT,PROJECT_ENGINEER,SLABS,"How is a slab rate callout (e.g. 5Ø10/m) turned into a bar count across a panel: first bar at cover or at half a spacing from the face, and is there a bar at both edges?",OPEN
+RFI-121,CARRIED,PRE-S7,Q-LAYER,PROJECT_ENGINEER,SLABS,Are the plan callouts without '/Top' or '(T&B)' the bottom bars?,OPEN
+RFI-122,CARRIED,PRE-S7,Q-TOPEXT,PROJECT_ENGINEER,SLABS,"Top bars over beams: does plan note 2 ('5Ø10/m ... length one third of the span, both directions') replace the p.15 extents (0.25 L1 / 0.30 max(L1, L2))? Is 'one third of the span' the total bar length or the extension each side, and of which span?",OPEN
+RFI-123,CARRIED,PRE-S7,Q-TOPOVR,PROJECT_ENGINEER,SLABS,"Where a '/Top' callout is drawn at a support, does it replace plan note 2's 5Ø10/m there or add to it?",OPEN
+RFI-124,CARRIED,PRE-S7,Q-TEMP,PROJECT_ENGINEER,SLABS,Which temperature reinforcement applies to the 160 mm and 180 mm slabs? The p.15 table has no 160 or 180 row.,OPEN
+RFI-125,CARRIED,PRE-S7,Q-TEMPREG,PROJECT_ENGINEER,SLABS,Temperature note 2 ('where beams are parallel to the main slab reinforcement'): which direction is 'main' in a two-way panel?,OPEN
+RFI-126,CARRIED,PRE-S7,Q-GFVOID,PROJECT_ENGINEER,SLABS,"B29 light well (GF roof slab): the open-to-below X spans the stair flights, a T 16 mark and 8Ø16/m bars. Which part is void, which is stair slab?",OPEN
+RFI-127,CARRIED,PRE-S7,Q-TANK,PROJECT_ENGINEER,SLABS,WATER TANK PLACE (2F roof): are the two T 18 panels normal roof slab (S7) or part of a water-tank structure (S8)?,OPEN
+RFI-128,CARRIED,PRE-S7,Q-SUNKEN,PROJECT_ENGINEER,SLABS,Sunken slabs: drop depth and the step detail; do the bottom bars continue across the step?,OPEN
+RFI-129,CARRIED,PRE-S7,Q-HATCH,PROJECT_ENGINEER,SLABS,The dense-hatch strips: cantilever portions or bearing walls?,OPEN
+RFI-130,CARRIED,PRE-S7,Q-ENDCOVER,PROJECT_ENGINEER,SLABS,p.15 '40 CL.' at the non-continuous support: which bar does it dimension?,OPEN
+RFI-131,CARRIED,PRE-S7,Q-ANCHOR,PROJECT_ENGINEER,SLABS,Length of the top anchor leg and of the bottom bar end at a non-continuous support?,OPEN
+RFI-132,CARRIED,PRE-S7,Q-50PCT,PROJECT_ENGINEER,SLABS,"Which half of the bottom bars stops at 0.125 L (alternate bars?), and how is an odd count split?",OPEN
+RFI-133,CARRIED,PRE-S7,Q-ABSCOUNT,PROJECT_ENGINEER,SLABS,Callouts printed without '/m' (e.g. 5Ø10): absolute counts or rates?,OPEN
+RFI-134,CARRIED,PRE-S7,Q-TWOCALL,PROJECT_ENGINEER,SLABS,Panels with two callouts in one direction: which governs?,OPEN
+RFI-135,CARRIED,PRE-S7,Q-MISMATCH,PROJECT_ENGINEER,SLABS,"At a continuous support between panels with different bottom callouts, which bars run through ('balance continuous'): each span's own bars lapped at the support, or the larger?",OPEN
+RFI-136,CARRIED,PRE-S7,Q-LAP,PROJECT_ENGINEER,SLABS,Lap length and lap positions for main slab bars?,OPEN
+RFI-137,CARRIED,PRE-S7,Q-T1T4,PROJECT_ENGINEER,SLABS,"Where are the 'main details for T1, T2, T3 & T4' (p.6 legend)?",OPEN
+RFI-138,CARRIED,PRE-S7,Q-OPENING,PROJECT_ENGINEER,SLABS,Trim / diagonal bars at slab openings and shafts?,OPEN
+RFI-139,CARRIED,PRE-S7,Q-CORNER,PROJECT_ENGINEER,SLABS,Corner reinforcement (3Ø14): bar length and layer?,OPEN
+RFI-140,CARRIED,PRE-S7,Q-TOPBESIDE,PROJECT_ENGINEER,SLABS,"The '/Top' bars drawn beside beam lines outside the 2F panels (4Ø16/Top, 5Ø18/Top): beam top bars, edge / cantilever bars, or slab top bars?",OPEN
+RFI-141,CARRIED,S8.1A,Q-S8.1A-01,structural engineer,GROUND_SLAB,"Do the two 'T=10cm / 5Ø10/m E.W.' callouts on the ground-beams plan apply only to the cells that hold them, or to other ground-slab cells?",OPEN (revisit only on new source evidence or a consultant clarification)
+RFI-142,CARRIED,S8.1A,Q-S8.1A-02,structural engineer,GROUND_SLAB,"What is the ground slab cast on (soil, compacted fill, blinding, membrane), and which cover in note 22 governs its underside?",OPEN (no quantity effect on the face-to-face mesh run)
+RFI-143,CARRIED,S8.1A,Q-S8.1A-03,S8 stair family,GROUND_SLAB,"The recovered stair bay (+0.30 / +1.00 marks, two tread sets) is a second ground-level stair not in the PRE-S8 census; its flight and landing extents are not drawn as closed outlines.","OPEN (stair family, not ground slab)"
+RFI-144,CARRIED,S8.1A,Q-S8.1A-04,drawing review,GROUND_SLAB,"The two '******' S-TEXT marks (165A, 165B) beside the stair zones carry no stated meaning.",OPEN (no quantity effect)
+RFI-145,CARRIED,S8.1A,Q-S8.1A-05,lift supplier / engineer,GROUND_SLAB,"Pit depth is 'by the lift manufacturer' (P14-LIFT): needed by the lift-pit family, not by the ground slab.",OPEN (lift-pit family)
+RFI-146,CARRIED,S8.1A,CF-S8.1A-01,this round,GROUND_SLAB,S8.1 recorded the cover note as a SOURCE_CONFLICT; it is a conditional dimensional conflict that holds only for a slab cast against soil (06).,CORRECTED to COVER_APPLICABILITY_UNRESOLVED
+RFI-147,CARRIED,S8.2,Q-S8.2-01,architect,POOL,"Pool depths: deep-end and shallow-end water depths, wall top level against the court (+0.15), and the plan lengths of the deep, sloping and shallow zones ('AS PER ARCH'); the architectural set prints none of them.",OPEN (revisit only on new source evidence or a consultant clarification)
+RFI-148,CARRIED,S8.2,Q-S8.2-02,architect,POOL,Which plan end is deep: the straight east end or the curved west end? No section mark ties the p.7 section to the plan.,OPEN (revisit only on new source evidence or a consultant clarification)
+RFI-149,CARRIED,S8.2,Q-S8.2-03,structural engineer,POOL,Thickness of the sloping and shallow base (only the deep base is dimensioned 40).,OPEN (revisit only on new source evidence or a consultant clarification)
+RFI-150,CARRIED,S8.2,Q-S8.2-04,structural engineer,POOL,Deep-wall vertical bars: inner face 7Ø12/m (main section) or 7Ø14/m (corner sub-detail); one hairpin over the top or separate bars?,OPEN (revisit only on new source evidence or a consultant clarification)
+RFI-151,CARRIED,S8.2,Q-S8.2-05,structural engineer,POOL,"Count convention where two drawn bars carry the same rate, and whether each transverse rate is per layer.",OPEN (revisit only on new source evidence or a consultant clarification)
+RFI-152,CARRIED,S8.2,Q-S8.2-06,structural engineer,POOL,Side walls: the section cuts the two end walls; the reinforcement of the other walls (straight and curved) is not shown.,OPEN (revisit only on new source evidence or a consultant clarification)
+RFI-153,CARRIED,S8.2,Q-S8.2-07,structural engineer,POOL,"Laps, anchorage, hook and bend dimensions, and the cover for the water face and the membrane face.",OPEN (revisit only on new source evidence or a consultant clarification)
+RFI-154,CARRIED,S8.2,Q-S8.2-08,architect / engineer,POOL,Plain-concrete projection past the walls; what '5cm INSULATION MEMBRANE' is as a product; screed on the outer wall faces.,OPEN (revisit only on new source evidence or a consultant clarification)
+RFI-155,CARRIED,S8.2,Q-S8.2-09,architect / MEP,POOL,"Openings and penetrations (skimmers, drains, inlets, lights) - none are drawn.",OPEN (revisit only on new source evidence or a consultant clarification)
+RFI-156,CARRIED,S8.2,Q-S8.2-10,architect / engineer,POOL,The east pool wall lies on the site boundary-wall line: where the pool wall ends and the boundary wall starts above court level.,OPEN (revisit only on new source evidence or a consultant clarification)
+RFI-157,CARRIED,S8.2,Q-S8.2-11,structural engineer,POOL,"Confirm that '(N.I.S)' under DETAIL OF SWIMMING POOL means not to scale, as this round reads it. S1 recorded it as 'not in scope'; either way no drawn length is measured and nothing is released.",OPEN (revisit only on new source evidence or a consultant clarification)
+RFI-158,CARRIED,S8.3,Q-S8.3-01,engineer / architect,DOMES,Engineer,OPEN
+RFI-159,CARRIED,S8.3,Q-S8.3-02,engineer / architect,DOMES,Engineer,OPEN
+RFI-160,CARRIED,S8.3,Q-S8.3-03,engineer / architect,DOMES,Architect / engineer,OPEN
+RFI-161,CARRIED,S8.3,Q-S8.3-04,engineer / architect,DOMES,Engineer,OPEN
+RFI-162,CARRIED,S8.4,Q-S8.4-01,engineer / architect,WATER_TANK_ROOF,"Engineer: are the two T 18 panels the slab that carries the tank directly, or is there a tank base, plinth or RC tank (walls, cover slab)? If so, issue its drawings.",OPEN
+RFI-163,CARRIED,S8.4,Q-S8.4-02,engineer / architect,WATER_TANK_ROOF,"Engineer: does the typical slab-on-beams curtailment (50 % of bottom bars stop 0.125 L short of a continuous support) apply to the (T&B) mesh of the tank panels, or do all bars run through?",OPEN
+RFI-164,CARRIED,S8.4,Q-S8.4-03,engineer / architect,WATER_TANK_ROOF,"Engineer: does plan note 2 (5Ø10/m over beams, 1/3 span) also apply on the tank side, in addition to the (T&B) top layer?",OPEN
+RFI-165,CARRIED,S8.4,Q-S8.4-04,engineer / architect,WATER_TANK_ROOF,"Engineer: anchorage of the top and bottom bars into the edge beams, continuity or laps over BL003 (7Ø14 / 6Ø14 against 6Ø12), and the bar marks for a BBS.",OPEN
+RFI-166,CARRIED,S8.4,Q-S8.4-05,engineer / architect,WATER_TANK_ROOF,Engineer: confirm no temperature steel in a (T&B) panel (the table has no 180 mm row) and give the cover / exposure for a tank-bearing roof slab (P8-N22 states >= 25 mm).,OPEN
+RFI-167,CARRIED,S8.4,Q-S8.4-06,engineer / architect,WATER_TANK_ROOF,"Engineer: continuity of the tank panels with panels 06, 03 and 04 over BL008, BL011 and BL002 (same 180 / 160 mm level?), and at column 421 (S7A G-01).",OPEN
+RFI-168,CARRIED,S8.4,Q-S8.4-07,engineer / architect,WATER_TANK_ROOF,"Engineer / architect: tank type, capacity, footprint, support points and any upstand, curb or dowels; architecture shows no tank and no tower-roof plan.",OPEN
+RFI-169,CARRIED,S8.4,Q-S8.4-08,engineer / architect,WATER_TANK_ROOF,Engineer: dimension beam BL008's position (drawn 300 mm off the axis of BL011).,OPEN
+RFI-170,CARRIED,S8.5,Q-01,engineer / architect,SPECIAL_COLUMNS,"Twisted columns: the spiral's diameter (or its centreline dimensions in the 200 x 250 overlap), cover, closing turns. Does it supplement the ordinary ties in the 2 m zone or replace them?",OPEN
+RFI-171,CARRIED,S8.5,Q-02,engineer / architect,SPECIAL_COLUMNS,"Twisted columns: which four of the eight bars are the 4Ø16 extras, and the length of their top crank? Is the bottom end plain?",OPEN
+RFI-172,CARRIED,S8.5,Q-03,engineer / architect,SPECIAL_COLUMNS,"Twisted columns: do the upper column's bars start 1 m below the turn (as drawn) instead of a 40D lap, and what are the lower bars' top bends?",OPEN
+RFI-173,CARRIED,S8.5,Q-04,engineer / architect,SPECIAL_COLUMNS,"P.C 544: which beam carries it? B27 ends, B5 ends and B4 starts under it, and BL002 continues past it as an untagged span. Does the 4Ø16 / 10 cm-link detail apply, and along which beam?",OPEN
+RFI-174,CARRIED,S8.5,Q-05,engineer / architect,SPECIAL_COLUMNS,"P.C 77C: which beam carries it? B1 ends, B6 starts and B19 ends under it, and BL029 continues past it as an untagged span. Is the section 20x40 (drawn) or 20x50 (label)? Does the detail apply?",OPEN
+RFI-175,CARRIED,S8.5,Q-06,engineer / architect,SPECIAL_COLUMNS,"Planted columns: are the bars rising '100' above the beam separate starters lapping the column bars, or the column bars themselves? How many, and how long are the leg, the foot and the crank?",OPEN
+RFI-176,CARRIED,S8.5,Q-07,engineer / architect,SPECIAL_COLUMNS,"Dead column C11 at X06-Y04: how do its bars terminate in B27 / B1 / the GF roof (bend, hook, length)? Is any special end reinforcement required?",OPEN
+RFI-177,CARRIED,S8.5,Q-08,engineer / architect,SPECIAL_COLUMNS,"Planted-column detail: what is the unlabelled X in the beam under the column (the cranked 4Ø16, or separate diagonal bars)?",OPEN
+RFI-178,CARRIED,S8.7C,P1,architect,STAIRS,"GF -> 1F arrangement: section A-A draws 10 + 5-riser turn + 12 = 27 risers (166.667 mm) to the printed +3.50; the structural GF roof sheet draws 12 + 4 + 12 = 28 (landing +3.571, foot 600 mm south); the architectural GF plan draws 10 + 4 + 11 = 25. Confirm which arrangement governs. If it is the section's, redraw the plans' turn with five winder treads (four radial risers) and confirm the 218.5 mm walking-line going (600 mm from the fan centre) is acceptable.",OPEN
+RFI-179,CARRIED,S8.7C,P1,engineer,STAIRS,"B20 at the GF -> 1F head: every 12-riser upper flight at 300 goings (structural sheet, section A-A) puts the last riser 200 mm inside B20. Choose: lower / crank B20 locally under the top tread (about one riser), or let the architect shorten the upper goings to <= 272.7 mm (or 281.8 mm with no arrival strip).",OPEN
+RFI-180,CARRIED,S8.7C,P1,engineer,STAIRS,Round stair beam CA (30 x 50) crosses the straight flight over the tread at +3.411: if it sits at the 1F floor it leaves about 1.59 m headroom. State its level (support under the flight or an error).,OPEN
+RFI-181,CARRIED,S8.7C,P2,owner,STAIRS,Riser preference: 27 risers = 166.667 mm and 28 = 160.714 mm are both above 160 mm. Accept one of them; 27 is the count that matches the printed +3.50 with equal risers.,OPEN
+RFI-182,CARRIED,S8.7C,P2,architect / engineer,STAIRS,"1F -> 2F: the owner's 27 needs the architectural four-riser winder turn; the structural sheet and section A-A draw a flat quarter. Confirm the winders, their structural form and the landing level (+7.989 with 27; section scales +7.69).",OPEN
+RFI-183,CARRIED,S8.7C,P2,engineer,STAIRS,Structural waist and landing thickness (p.16 'THICK' has no value).,OPEN
+RFI-184,CARRIED,S8.7C,P3,architect,STAIRS,"Marble bedding / adhesive (is it inside the 30 mm?) and the floor build-ups at GF, 1F and 2F (they set the first and last concrete risers).",OPEN
+RFI-185,CARRIED,S8.7C,P3,engineer,STAIRS,"Applicable typical bars, anchorage and laps; whether the 'With Stair' B3 / CB3 beams are the p.16 cranked stair beam.",OPEN
+RFI-186,CARRIED,S8.8,Q-LIFT-01,lift manufacturer / engineer,LIFT,Pit depth (footing top to the slab-on-grade top) and the lift model: p.14 gives 'As Per Lift Manufactures recommendations'.,OPEN
+RFI-187,CARRIED,S8.8,Q-LIFT-02,engineer,LIFT,"Founding level of FF (and so its top = the pit floor). p.9 note 1 only gives a 1.5 m minimum excavation; with the 55 cm footing the pit floor would be at or below -0.95, at least 1.95 m under the GF floor. Does that match the manufacturer's pit, or is a raised pit floor intended?",OPEN
+RFI-188,CARRIED,S8.8,Q-LIFT-03,engineer,LIFT,Top of the pit walls: the slab-on-grade top (FFL +1.00 less the floor finish). What is the finish thickness?,OPEN
+RFI-189,CARRIED,S8.8,Q-LIFT-04,engineer,LIFT,Are 6Ø12/m and 6Ø16/m per face (both faces drawn) and do they apply to the W and E walls that the p.14 section does not cut?,OPEN
+RFI-190,CARRIED,S8.8,Q-LIFT-05,engineer,LIFT,"Vertical 6Ø16/m: anchorage at the foot (p.14 shows no bend at the footing bottom layer), the U over the wall top, and laps.",OPEN
+RFI-191,CARRIED,S8.8,Q-LIFT-06,engineer,LIFT,"Horizontal 6Ø12/m at the corner columns: through the column, stopped at its face, or lapped round the corner?",OPEN
+RFI-192,CARRIED,S8.8,Q-LIFT-07,engineer,LIFT,"'2 Ø16' top and bottom in the footing under each wall, and '2Ø12' at the wall top: length along the wall, end anchorage, and whether all four walls carry them (S4.1-T01, S4-Q1).",OPEN
+RFI-193,CARRIED,S8.8,Q-LIFT-08,engineer,LIFT,"Foundation-storey lift columns: the plans draw 200 x 500 (C2 / C1) and 250 x 1000 (C9) flush with the 200 pit walls; the column schedule gives 300 wide (S3 used the schedule, STR-COL-013). Which is right, and does the wider column project into the pit?",OPEN
+RFI-194,CARRIED,S8.8,Q-LIFT-09,engineer,LIFT,"P8-N19: which storey height is meant (floor to floor, clear to slab soffit, clear to beam soffit)? GF is 4.50 m floor to floor but at most 3.75 m clear under the 750 mm beams.",OPEN
+RFI-195,CARRIED,S8.8,Q-LIFT-10,engineer,LIFT,"If the GF tie beams are required: section, reinforcement, the 3.00 m datum (FFL or structural floor), and whether they run on all four sides or only between the columns; how they meet the landing-door lintel L1 on the S side.",OPEN
+RFI-196,CARRIED,S8.8,Q-LIFT-11,architect / engineer,LIFT,The shaft enclosure above GF is 200 walls on the architectural plans only ('AS PER PLAN'): confirm blockwork (not RC) on all three storeys.,OPEN
+RFI-197,CARRIED,S8.8,Q-LIFT-12,lift manufacturer / architect,LIFT,"Top-floor headroom (2F +9.70 to the roof +13.90) and any overrun, machine room or roof upstand: none is labelled.",OPEN
+RFI-198,CARRIED,S8.8,Q-LIFT-13,engineer,LIFT,"Pit drainage, sump or waterproofing details (p.14 shows a membrane and protection board only).",OPEN
+RFI-199,P1,S9,S9-RFI-01,engineer,FOUNDATION,"Founding level of every footing (only 'excavation >= 1.50 m below plot level' is printed): it fixes the foundation-storey columns, the lift pit walls, any lower ground beam (P13) and the pool levels.",OPEN
+RFI-200,P1,S9,S9-RFI-02,engineer,BEAMS,Beam schedule depth H: is it the overall depth including the slab (as S6 / D1.1 read it for links) or the depth below the slab? It decides about B x 0.16 m3 per metre of every beam.,OPEN
+RFI-201,P1,S9,S9-RFI-03,engineer,GROUND_BEAMS,"Ground-beam sections: which p.13 length class applies (centre-to-centre or clear length), the exterior 'FOLLOW ARCH' depths and the concentrated-load cases (S5).",OPEN
+RFI-202,P1,S9,S9-RFI-04,engineer,COLUMNS,Column drawn section vs schedule (28 occurrences) and the lift columns drawn 200 / 250 vs 300 at the pit.,OPEN
+RFI-203,P2,S9,S9-RFI-05,architect,ALL,Floor and roof build-ups (structural slab levels are not printed: column storeys use the printed floor-to-floor).,OPEN
+RFI-204,P2,S9,S9-RFI-06,engineer,COLUMNS,"Column ties: bend radius, hook and closure (S9-C01 holds 1,217.128 kg of S3.1 tie paths and hooks out of the released total until stated).",OPEN
+RFI-205,P2,S9,S9-RFI-07,engineer,FOOTINGS,Footing FTG-CONFLICT_F_F10 (F or F10?) and whether the F9 / FN outlines really overlap; blinding thickness and projection.,OPEN
+RFI-206,P2,S9,S9-RFI-08,architect,PARAPETS,"Parapet and boundary-wall geometry (lengths, heights, sections).",OPEN
+RFI-207,P3,S9,S9-RFI-09,engineer,SLABS,Sunken-slab drop depths and step details (6 panels).,OPEN

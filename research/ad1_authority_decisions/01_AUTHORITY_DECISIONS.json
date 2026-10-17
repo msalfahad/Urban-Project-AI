@@ -1,0 +1,264 @@
+{
+ "authority_policy": {
+  "applicability_authorities": [
+   "PROJECT_SOURCE",
+   "PROJECT_ENGINEER_CLAIM",
+   "ENGINEERING_DERIVED"
+  ],
+  "facet_states": [
+   "SOURCE_EXPLICIT",
+   "SOURCE_EXPLICIT_SHAPE_ONLY",
+   "PROJECT_PATTERN_ONLY",
+   "SOURCE_EXPECTED_NOT_LOCATED",
+   "NOT_ESTABLISHED",
+   "UNRESOLVED",
+   "BLOCKED_UNQUANTIFIED",
+   "CANDIDATE_ONLY",
+   "RETAINED_WHERE_SOURCE_ESTABLISHED",
+   "CONTEXT_RESTRICTED",
+   "BOUND_ONLY",
+   "RATE_COUNT_ONLY",
+   "CLASSIFIED_SIDE_SKIN_REINFORCEMENT",
+   "NOT_A_PROJECT_RULE",
+   "QA_ONLY",
+   "ENGINEERING_DERIVED_CONCENTRATED_REACTION"
+  ],
+  "never_promoted": [
+   "CLAUDE_ENGINEERING_ANALYSIS",
+   "CODE_OR_EXTERNAL"
+  ],
+  "provenance_classes": [
+   "PROJECT_SOURCE",
+   "PROJECT_ENGINEER_CLAIM",
+   "OWNER_AUTHORITY_DECISION",
+   "ENGINEERING_DERIVED",
+   "CLAUDE_ENGINEERING_ANALYSIS",
+   "CODE_OR_EXTERNAL"
+  ],
+  "quantity_authorities": [
+   "PROJECT_SOURCE",
+   "PROJECT_ENGINEER_CLAIM"
+  ],
+  "rules": [
+   "only project source or a project-engineer claim carries a quantity",
+   "engineering-derived logic decides applicability, never a quantity",
+   "analysis and code values are never promoted; no confidence value travels with a ruling",
+   "a facet erratum carries 0 kg; kg changes are delta_correction errata",
+   "a loaded span keeps, per length basis, only the details without a 'without concentrated load' clause"
+  ]
+ },
+ "decisions": [
+  {
+   "DECISION_ID": "AD-1",
+   "FORBIDS": [
+    "importing hooks from another bar",
+    "reading a blank FN cell as NOT_REQUIRED"
+   ],
+   "IS_DRAWING_NOTE": false,
+   "IS_ENGINEER_CLAIM": false,
+   "PRESERVES": [],
+   "PROVENANCE": "OWNER_AUTHORITY_DECISION",
+   "RECORDED": "2026-10-08",
+   "RECORD_TYPE": "OWNER_AUTHORITY_DECISION",
+   "RULINGS": {
+    "COMPONENT_EXISTENCE": "SOURCE_EXPLICIT",
+    "DIAMETER": "SOURCE_EXPECTED_NOT_LOCATED",
+    "EXISTENCE_WHERE_FN_CELL_BLANK": "UNRESOLVED",
+    "HOOKS": "NOT_ESTABLISHED",
+    "INVERTED_U_TOPOLOGY": "SOURCE_EXPLICIT",
+    "KG": "BLOCKED_UNQUANTIFIED",
+    "MEANING_OF_3_PLUS_N": "PROJECT_PATTERN_ONLY"
+   },
+   "TOPIC": "BOXED (footings)",
+   "scope_notes": {
+    "HOOKS": "earlier source-recovery evidence did not establish hooks on BOXED",
+    "INVERTED_U_TOPOLOGY": "where proven by vector geometry"
+   }
+  },
+  {
+   "DECISION_ID": "AD-2",
+   "FORBIDS": [
+    "generalising the note to beam or ground-beam anchorage",
+    "a universal beam anchorage rule"
+   ],
+   "IS_DRAWING_NOTE": false,
+   "IS_ENGINEER_CLAIM": false,
+   "PRESERVES": [
+    "the note's established starter / development context"
+   ],
+   "PROVENANCE": "OWNER_AUTHORITY_DECISION",
+   "RECORDED": "2026-10-08",
+   "RECORD_TYPE": "OWNER_AUTHORITY_DECISION",
+   "RULINGS": {
+    "BEAM_ANCHORAGE_FROM_NOTE": "NOT_A_PROJECT_RULE",
+    "GROUND_BEAM_ANCHORAGE_FROM_NOTE": "NOT_A_PROJECT_RULE",
+    "NOTE_SCOPE": "CONTEXT_RESTRICTED"
+   },
+   "TOPIC": "70Ø / 40Ø note"
+  },
+  {
+   "DECISION_ID": "AD-3",
+   "FORBIDS": [
+    "12Ø legs",
+    "legs from the beam depth",
+    "generic practice to create kg"
+   ],
+   "IS_DRAWING_NOTE": false,
+   "IS_ENGINEER_CLAIM": false,
+   "PRESERVES": [],
+   "PROVENANCE": "OWNER_AUTHORITY_DECISION",
+   "RECORDED": "2026-10-08",
+   "RECORD_TYPE": "OWNER_AUTHORITY_DECISION",
+   "RULINGS": {
+    "EXPLICIT_BEND_SHAPE": "SOURCE_EXPLICIT_SHAPE_ONLY",
+    "UNDIMENSIONED_LEG_LENGTH": "NOT_ESTABLISHED"
+   },
+   "TOPIC": "Beam end bends"
+  },
+  {
+   "DECISION_ID": "AD-4",
+   "FORBIDS": [
+    "a 20d allowance",
+    "an ACI hook value in the Accurate BOQ"
+   ],
+   "IS_DRAWING_NOTE": false,
+   "IS_ENGINEER_CLAIM": false,
+   "PRESERVES": [],
+   "PROVENANCE": "OWNER_AUTHORITY_DECISION",
+   "RECORDED": "2026-10-08",
+   "RECORD_TYPE": "OWNER_AUTHORITY_DECISION",
+   "RULINGS": {
+    "CODE_HOOK_VALUES": "QA_ONLY",
+    "HOOK_ANGLE_TOPOLOGY": "SOURCE_EXPLICIT_SHAPE_ONLY",
+    "HOOK_EXTENSION": "BLOCKED_UNQUANTIFIED"
+   },
+   "TOPIC": "Stirrup hooks",
+   "scope_notes": {
+    "HOOK_EXTENSION": "blocked unless the project source dimensions it"
+   }
+  },
+  {
+   "DECISION_ID": "AD-5",
+   "FORBIDS": [
+    "inheriting Ø8/15 from another project detail"
+   ],
+   "IS_DRAWING_NOTE": false,
+   "IS_ENGINEER_CLAIM": false,
+   "PRESERVES": [],
+   "PROVENANCE": "OWNER_AUTHORITY_DECISION",
+   "RECORDED": "2026-10-08",
+   "RECORD_TYPE": "OWNER_AUTHORITY_DECISION",
+   "RULINGS": {
+    "STIRRUP_DIAMETER": "SOURCE_EXPECTED_NOT_LOCATED",
+    "STIRRUP_RATE": "SOURCE_EXPECTED_NOT_LOCATED"
+   },
+   "TOPIC": "Ground beam LESS THAN 2.5M"
+  },
+  {
+   "DECISION_ID": "AD-6",
+   "FORBIDS": [
+    "recording the derivation as a drawing note"
+   ],
+   "IS_DRAWING_NOTE": false,
+   "IS_ENGINEER_CLAIM": false,
+   "PRESERVES": [],
+   "PROVENANCE": "OWNER_AUTHORITY_DECISION",
+   "RECORDED": "2026-10-08",
+   "RECORD_TYPE": "OWNER_AUTHORITY_DECISION",
+   "RULINGS": {
+    "BEAM_FRAMING_INTO_SPAN_BETWEEN_SUPPORTS": "ENGINEERING_DERIVED_CONCENTRATED_REACTION",
+    "PLANTED_COLUMN_LOAD": "ENGINEERING_DERIVED_CONCENTRATED_REACTION"
+   },
+   "TOPIC": "WITHOUT CONCENTRATED LOAD",
+   "scope_notes": {
+    "PROVENANCE": "engineering-derived applicability logic, not a claimed drawing note; project source and engineering derivation stay distinguished"
+   }
+  },
+  {
+   "DECISION_ID": "AD-7",
+   "FORBIDS": [
+    "publishing 0.9-1.0 m as an accurate depth",
+    "counting 10 cm plain concrete as RC beam depth"
+   ],
+   "IS_DRAWING_NOTE": false,
+   "IS_ENGINEER_CLAIM": false,
+   "PRESERVES": [],
+   "PROVENANCE": "OWNER_AUTHORITY_DECISION",
+   "RECORDED": "2026-10-08",
+   "RECORD_TYPE": "OWNER_AUTHORITY_DECISION",
+   "RULINGS": {
+    "ARCHITECTURAL_LEVELS": "BOUND_ONLY",
+    "EXACT_STRUCTURAL_BEAM_DEPTH": "NOT_ESTABLISHED",
+    "PLAIN_CONCRETE_10CM_IN_RC_DEPTH": "NOT_A_PROJECT_RULE"
+   },
+   "TOPIC": "FOLLOW ARCH"
+  },
+  {
+   "DECISION_ID": "AD-8",
+   "FORBIDS": [
+    "reading an NTS graphic scale"
+   ],
+   "IS_DRAWING_NOTE": false,
+   "IS_ENGINEER_CLAIM": false,
+   "PRESERVES": [],
+   "PROVENANCE": "OWNER_AUTHORITY_DECISION",
+   "RECORDED": "2026-10-08",
+   "RECORD_TYPE": "OWNER_AUTHORITY_DECISION",
+   "RULINGS": {
+    "NTS_GRAPHIC_SCALE": "NOT_A_PROJECT_RULE",
+    "RATE_5PHI8_PER_M": "RATE_COUNT_ONLY",
+    "RULE_0_15_L": "UNRESOLVED",
+    "RULE_0_22_LN": "RETAINED_WHERE_SOURCE_ESTABLISHED",
+    "RULE_0_3_LN2": "UNRESOLVED",
+    "TOP_AND_HANGER_ROLES": "UNRESOLVED"
+   },
+   "TOPIC": "Continuous beams",
+   "scope_notes": {
+    "RATE_5PHI8_PER_M": "establishes rate / count only, never the stirrup cut length",
+    "TOP_AND_HANGER_ROLES": "kept separate wherever the source association is ambiguous"
+   }
+  },
+  {
+   "DECISION_ID": "AD-9",
+   "FORBIDS": [
+    "adopting ceil(h/s) - 1 as a project rule"
+   ],
+   "IS_DRAWING_NOTE": false,
+   "IS_ENGINEER_CLAIM": false,
+   "PRESERVES": [],
+   "PROVENANCE": "OWNER_AUTHORITY_DECISION",
+   "RECORDED": "2026-10-08",
+   "RECORD_TYPE": "OWNER_AUTHORITY_DECISION",
+   "RULINGS": {
+    "CEIL_H_OVER_S_MINUS_1": "NOT_A_PROJECT_RULE",
+    "FIRST_LAST_ROW_EDGE_SPACING": "UNRESOLVED",
+    "SIDE_BAR_COUNT_AND_KG": "BLOCKED_UNQUANTIFIED",
+    "SIDE_SKIN_CLASSIFICATION": "CLASSIFIED_SIDE_SKIN_REINFORCEMENT"
+   },
+   "TOPIC": "Side / middle reinforcement",
+   "scope_notes": {
+    "SIDE_SKIN_CLASSIFICATION": "only where the project's MIDDLE REINF. field and notes support it; count / kg stay blocked unless deterministically established from project source geometry"
+   }
+  }
+ ],
+ "engineer_claims_on_record": [
+  {
+   "authorises_assumptions": false,
+   "claim_id": "PEC-CLAIM-2026-10-08-01",
+   "effect": "workflow only: a component not found is SOURCE_EXPECTED_NOT_LOCATED and the issued set is exhausted again; only explicit source conflicts go back to the engineer",
+   "path": "research/source_recovery_delta/01_ENGINEER_PROJECT_CLAIM.json"
+  }
+ ],
+ "policy": "AUTHORITY_DECISIONS_V1",
+ "q2_prior_analysis": {
+  "CONFIDENCE_CARRIED": false,
+  "ENGINEER_CONFIRMATION": "NONE",
+  "PROMOTED_TO": null,
+  "PROVENANCE": "CLAUDE_ENGINEERING_ANALYSIS",
+  "RECORD_ID": "Q2-PRIOR-ANALYSIS",
+  "STATEMENT": "the earlier Q2 answers were the assistant's own engineering analysis, not answers from the project engineer or consultant; no engineer confirmation exists for those items"
+ },
+ "recorded": "2026-10-08",
+ "round": "AD1",
+ "version": 1
+}

@@ -1,0 +1,81 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_ARCH_R5_REVIEW_QUEUE",
+ "items": [
+  {
+   "object": "ALL_MASONRY_BANDS",
+   "impact_m": 237.11,
+   "impact_m2": 875.77,
+   "kind": "MATERIAL_IDENTITY",
+   "decision": "confirm that the paired walls on the architectural wall layer that are not RC are concrete block (150 / 200) - releases blockwork from PROVISIONAL"
+  },
+  {
+   "object": "FINISHED_CEILING_LEVEL",
+   "impact_m2": 898.13,
+   "kind": "HEIGHT_METHOD",
+   "decision": "finished ceiling level / floor build-up (paint and wall tile heights use the Urban fallback 0.10 m + 0.150 allowance)"
+  },
+  {
+   "object": "TR:GF:SITE-67547ed37daadb5a:RB-684fc26661ba7dfc",
+   "impact_m2": 121.511633,
+   "kind": "MIXED_ZONE",
+   "decision": "where does the Wash zone end inside SALOON / RECEPTION / DINING / Wash? (floor finish, skirting, paint, wall tile)"
+  },
+  {
+   "object": "UR:GF:0:0",
+   "impact_m2": 23.347249,
+   "kind": "UNCLOSED_PLATE_AREA",
+   "decision": "close plate area at [-148239.9, -798793.5] (unlabelled): which opening / wall bounds it?"
+  },
+  {
+   "object": "TR:2F:SITE-22c718c6fc156ebe:R",
+   "impact_m2": 18.6,
+   "kind": "UNLABELLED_REGION",
+   "decision": "name / class of this region (corridor, stair hall, lobby ...)"
+  },
+  {
+   "object": "GLAZED_DOOR_CANDIDATES",
+   "impact_count": 24,
+   "impact_m": 34.35,
+   "kind": "OPENING_FUNCTION",
+   "decision": "window or full-height glazed door? (skirting continuity, opening area)"
+  },
+  {
+   "object": "TR:GF:SITE-b2553428a3dc90a0:R",
+   "impact_m2": 14.64,
+   "kind": "UNLABELLED_REGION",
+   "decision": "name / class of this region (corridor, stair hall, lobby ...)"
+  },
+  {
+   "object": "OPENINGS_WITHOUT_HEIGHT",
+   "impact_count": 27,
+   "impact_m": 29.22,
+   "kind": "OPENING_HEIGHT",
+   "decision": "door / window schedule or elevation dimensions for these openings"
+  },
+  {
+   "object": "UR:GF:1:0",
+   "impact_m2": 8.628367,
+   "kind": "UNCLOSED_PLATE_AREA",
+   "decision": "close plate area at [-132656.5, -794569.8] (unlabelled): which opening / wall bounds it?"
+  },
+  {
+   "object": "TR:GF:RR:GF:RB-2365eaef717b0fe9:R",
+   "impact_m2": 5.0,
+   "kind": "UNLABELLED_REGION",
+   "decision": "name / class of this region (corridor, stair hall, lobby ...)"
+  },
+  {
+   "object": "UR:1F:0:0",
+   "impact_m2": 4.156637,
+   "kind": "UNCLOSED_PLATE_AREA",
+   "decision": "close plate area at [-175037.3, -797942.0] (unlabelled): which opening / wall bounds it?"
+  },
+  {
+   "object": "TR:1F:SITE-aa3f3d9cc41ec54a:R",
+   "impact_m2": 2.97,
+   "kind": "UNLABELLED_REGION",
+   "decision": "name / class of this region (corridor, stair hall, lobby ...)"
+  }
+ ],
+ "rule": "the smallest set of decisions releasing the largest quantity; ranked by quantity impact"
+}

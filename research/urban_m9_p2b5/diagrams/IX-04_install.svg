@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="800" font-family="Arial" font-size="11">
+<rect width="760" height="800" fill="white"/>
+<text x="60" y="24" font-size="14" font-weight="bold">IX-04 L-shaped bathroom 3.00 x 3.00 m less 1.00 x 1.00 m (the audited WP-D)</text>
+<text x="60" y="40" fill="#555">ARCH_TAKEOFF_V2.6 installation plan as the engine planned it (the upturn band drawn on the floor beside its wall)</text>
+<rect x="60.0" y="340.0" width="420.0" height="140.0" fill="#9ec5e8" fill-opacity="0.45" stroke="#3d6e9e" stroke-width="0.6"/>
+<text x="165.0" y="410.0" text-anchor="middle" fill="#1c3d5a">S1 1.00x3.00</text>
+<rect x="60.0" y="214.0" width="420.0" height="140.0" fill="#6fa8dc" fill-opacity="0.45" stroke="#3d6e9e" stroke-width="0.6"/>
+<text x="165.0" y="284.0" text-anchor="middle" fill="#1c3d5a">S2 1.00x3.00</text>
+<rect x="60.0" y="88.0" width="420.0" height="140.0" fill="#9ec5e8" fill-opacity="0.45" stroke="#3d6e9e" stroke-width="0.6"/>
+<text x="165.0" y="158.0" text-anchor="middle" fill="#1c3d5a">S3 1.00x3.00</text>
+<rect x="60.0" y="60.0" width="280.0" height="42.0" fill="#6fa8dc" fill-opacity="0.45" stroke="#3d6e9e" stroke-width="0.6"/>
+<text x="130.0" y="81.0" text-anchor="middle" fill="#1c3d5a">S4 0.30x2.00</text>
+<rect x="60.0" y="340.0" width="420.0" height="14.0" fill="#3d85c6" fill-opacity="0.35"/>
+<rect x="60.0" y="214.0" width="420.0" height="14.0" fill="#3d85c6" fill-opacity="0.35"/>
+<rect x="60.0" y="88.0" width="280.0" height="14.0" fill="#3d85c6" fill-opacity="0.35"/>
+<polygon points="60.0,480.0 480.0,480.0 480.0,200.0 340.0,200.0 340.0,60.0 60.0,60.0" fill="none" stroke="#222222" stroke-width="1.6"/>
+<line x1="130.0" y1="480.0" x2="256.0" y2="480.0" stroke="#6aa84f" stroke-width="5" stroke-dasharray=""/>
+<text x="193.0" y="473.0" text-anchor="middle" fill="#6aa84f">D1</text>
+<polyline points="256.0,474.0 480.0,474.0 474.0,480.0 474.0,424.0" fill="none" stroke="#f6b26b" stroke-width="7" stroke-opacity="0.9"/>
+<text x="394.6" y="460.0" text-anchor="middle" fill="#7f4f00" font-weight="bold">B1</text>
+<polyline points="474.0,438.0 474.0,284.0" fill="none" stroke="#e69138" stroke-width="7" stroke-opacity="0.9"/>
+<text x="456.0" y="366.4" text-anchor="middle" fill="#7f4f00" font-weight="bold">B2</text>
+<polyline points="474.0,298.0 474.0,200.0 480.0,206.0 340.0,206.0 334.0,200.0 334.0,60.0 340.0,66.0 326.0,66.0" fill="none" stroke="#f6b26b" stroke-width="7" stroke-opacity="0.9"/>
+<text x="383.4" y="228.0" text-anchor="middle" fill="#7f4f00" font-weight="bold">B3</text>
+<polyline points="340.0,66.0 60.0,66.0 66.0,60.0 66.0,172.0" fill="none" stroke="#e69138" stroke-width="7" stroke-opacity="0.9"/>
+<text x="145.4" y="88.0" text-anchor="middle" fill="#7f4f00" font-weight="bold">B4</text>
+<polyline points="66.0,158.0 66.0,480.0 60.0,474.0 130.0,474.0" fill="none" stroke="#f6b26b" stroke-width="7" stroke-opacity="0.9"/>
+<text x="84.0" y="356.6" text-anchor="middle" fill="#7f4f00" font-weight="bold">B5</text>
+<line x1="474.0" y1="438.0" x2="474.0" y2="424.0" stroke="#cc0000" stroke-width="9"/>
+<line x1="474.0" y1="298.0" x2="474.0" y2="284.0" stroke="#cc0000" stroke-width="9"/>
+<line x1="340.0" y1="66.0" x2="326.0" y2="66.0" stroke="#cc0000" stroke-width="9"/>
+<line x1="66.0" y1="158.0" x2="66.0" y2="172.0" stroke="#cc0000" stroke-width="9"/>
+<circle cx="480.0" cy="480.0" r="5" fill="none" stroke="#b45f06" stroke-width="2"/>
+<circle cx="480.0" cy="200.0" r="5" fill="none" stroke="#b45f06" stroke-width="2"/>
+<rect x="335.0" y="195.0" width="10" height="10" fill="none" stroke="#7f6000" stroke-width="2"/>
+<circle cx="340.0" cy="60.0" r="5" fill="none" stroke="#b45f06" stroke-width="2"/>
+<circle cx="60.0" cy="60.0" r="5" fill="none" stroke="#b45f06" stroke-width="2"/>
+<circle cx="60.0" cy="480.0" r="5" fill="none" stroke="#b45f06" stroke-width="2"/>
+<text x="60" y="514.0">rolls 2; consumed 13.80 m2 = installed 12.52 + offcuts 1.28 (true waste 0.48, reusable subject to N-7 0.80);</text>
+<text x="60" y="530.0">    roll stock 6.20 m2</text>
+<text x="60" y="546.0">band joints 4: nearest corner 0.00 m, nearest floor-seam end 0.20 m; jamb junctions 2; corners 5 internal / 1</text>
+<text x="60" y="562.0">    external</text>
+<text x="60" y="578.0">floor-to-wall junction UNRESOLVED: rolls 2 - 2 over the alternatives (separate upstand flanges, continuous</text>
+<text x="60" y="594.0">    fold)</text>
+<text x="60" y="610.0">open: DRAIN_NOT_SHOWN, FLOOR_WALL_JUNCTION_UNRESOLVED, JOINT_AT_CORNER, JOINT_OFFSET_UNVERIFIED,</text>
+<text x="60" y="626.0">    LAY_ORDER_NOT_VALIDATED</text>
+<rect x="60" y="647.0" width="14" height="10" fill="#9ec5e8" fill-opacity="0.6"/>
+<text x="80" y="656.0">floor strip</text>
+<rect x="230" y="647.0" width="14" height="10" fill="#3d85c6" fill-opacity="0.6"/>
+<text x="250" y="656.0">floor lap zone</text>
+<line x1="400" y1="652.0" x2="414" y2="652.0" stroke="#f6b26b" stroke-width="6"/>
+<text x="420" y="656.0">band piece (upturn)</text>
+<line x1="570" y1="652.0" x2="584" y2="652.0" stroke="#cc0000" stroke-width="6"/>
+<text x="590" y="656.0">band joint (end lap)</text>
+<circle cx="67" cy="670.0" r="5" fill="none" stroke="#b45f06" stroke-width="2"/>
+<text x="80" y="674.0">internal corner</text>
+<rect x="232" y="665.0" width="10" height="10" fill="none" stroke="#7f6000" stroke-width="2"/>
+<text x="250" y="674.0">external corner</text>
+<line x1="400" y1="670.0" x2="414" y2="670.0" stroke="#6aa84f" stroke-width="6"/>
+<text x="420" y="674.0">doorway</text>
+<circle cx="577" cy="670.0" r="4" fill="#674ea7"/>
+<text x="590" y="674.0">drain / pipe</text>
+</svg>

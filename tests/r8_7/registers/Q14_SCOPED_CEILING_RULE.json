@@ -1,0 +1,133 @@
+{
+ "SCHEMA": "URBAN_R8_7_Q14_SCOPED_CEILING_RULE_V1",
+ "claim_id": "QORTUBA-Q14-CEILING-FOOTPRINT-OWNER-001",
+ "scope": {
+  "project": "QORTUBA",
+  "revision_id": "QORTUBA_REV_NEW",
+  "region_id": "RC:MODEL_SPACE:4267:540:1649",
+  "space_ids": [
+   "BATH",
+   "BED.ROOM",
+   "DRESS",
+   "HALL / whgm",
+   "M.B.ROOM",
+   "PAINTRY",
+   "UNLABELLED_INTERNAL_SPACE"
+  ],
+  "items": [
+   "Q-14|CEILING_BY_AREA"
+  ]
+ },
+ "purposes": [
+  "SHADOW_DIAGNOSTIC"
+ ],
+ "anchor_state": "OWNER_CONFIRMED_PENDING_EXACT_SOURCE_ANCHOR",
+ "spaces": [
+  {
+   "space": "whgm",
+   "floor_area_m2": 34.609,
+   "claim": "OWNER_SCOPE_MISMATCH",
+   "ceiling_area_m2": null
+  },
+  {
+   "space": "BED.ROOM / BATH",
+   "floor_area_m2": 24.6257,
+   "claim": "OWNER_SCOPE_MISMATCH",
+   "ceiling_area_m2": null
+  },
+  {
+   "space": "BED.ROOM",
+   "floor_area_m2": 17.1538,
+   "claim": "APPLIES",
+   "ceiling_area_m2": 17.1538
+  },
+  {
+   "space": "M.B.ROOM",
+   "floor_area_m2": null,
+   "claim": "APPLIES",
+   "ceiling_area_m2": null
+  },
+  {
+   "space": "PAINTRY",
+   "floor_area_m2": 11.685,
+   "claim": "APPLIES",
+   "ceiling_area_m2": 11.685
+  },
+  {
+   "space": "DRESS",
+   "floor_area_m2": 11.985,
+   "claim": "APPLIES",
+   "ceiling_area_m2": 11.985
+  },
+  {
+   "space": "BATH",
+   "floor_area_m2": 8.5525,
+   "claim": "APPLIES",
+   "ceiling_area_m2": 8.5525
+  },
+  {
+   "space": "BATH",
+   "floor_area_m2": 4.21,
+   "claim": "APPLIES",
+   "ceiling_area_m2": 4.21
+  },
+  {
+   "space": "HALL",
+   "floor_area_m2": null,
+   "claim": "OWNER_SCOPE_MISMATCH",
+   "ceiling_area_m2": null
+  },
+  {
+   "space": "UNLABELLED_INTERNAL_SPACE",
+   "floor_area_m2": null,
+   "claim": "APPLIES",
+   "ceiling_area_m2": null
+  }
+ ],
+ "expected_space_labels": {
+  "HALL / whgm": 1,
+  "M.B.ROOM": 1,
+  "BED.ROOM": 2,
+  "PAINTRY": 1,
+  "DRESS": 1,
+  "BATH": 3,
+  "UNLABELLED_INTERNAL_SPACE": 1
+ },
+ "remeasured_space_labels": {
+  "whgm": 1,
+  "BED.ROOM / BATH": 1,
+  "BED.ROOM": 1,
+  "M.B.ROOM": 1,
+  "PAINTRY": 1,
+  "DRESS": 1,
+  "BATH": 2,
+  "HALL": 1,
+  "UNLABELLED_INTERNAL_SPACE": 1
+ },
+ "label_multiset_matches_claim": false,
+ "all_spaces_established": false,
+ "Q14_NEW_REVISION": null,
+ "state": "BLOCKED: the owner rule does not rescue missing geometry (rooms not established or the space set changed)",
+ "scope_tests": {
+  "other_region": "OWNER_SCOPE_MISMATCH",
+  "other_revision": "OWNER_SCOPE_MISMATCH",
+  "other_project": "OWNER_SCOPE_MISMATCH",
+  "other_space": "OWNER_SCOPE_MISMATCH",
+  "other_item": "OWNER_SCOPE_MISMATCH",
+  "release_use": "PURPOSE_NOT_AUTHORISED"
+ },
+ "future_requirement": {
+  "method": "CEILING_NET_PLAN_AREA",
+  "status": "NOT_IMPLEMENTED (R9 trade rules)",
+  "must_evaluate": [
+   "room/space polygon",
+   "minus verified stair openings",
+   "minus elevator / lift shafts",
+   "minus service shafts",
+   "minus voids",
+   "minus double-height / open-to-above areas",
+   "minus explicit ceiling openings"
+  ],
+  "never": "an apartment-scoped owner confirmation is never an input to it"
+ }
+}

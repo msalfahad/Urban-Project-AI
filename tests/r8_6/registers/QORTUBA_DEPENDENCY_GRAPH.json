@@ -1,0 +1,309 @@
+{
+ "SCHEMA": "URBAN_R8_6_QORTUBA_DEPENDENCY_GRAPH_V1",
+ "states": [
+  "READY",
+  "BLOCKED",
+  "PENDING_OWNER",
+  "PENDING_EXTERNAL",
+  "NOT_MIGRATED"
+ ],
+ "chain": "SOURCE_FILE -> SOURCE_OBSERVATIONS -> CAPABILITY_SIGNATURES -> PHYSICAL_GEOMETRY -> REGION_DESIGNATION -> UNIT_CONTEXT -> MEASUREMENT_FRAME -> TRADE_METHOD -> QUANTITY_ROW",
+ "nodes": [
+  {
+   "node": "SOURCE_FILE",
+   "status": "READY",
+   "evidence": "source DWG sha256 2ec3a9c8b66eb2e1... matches the pinned decode",
+   "depends_on": []
+  },
+  {
+   "node": "SOURCE_OBSERVATIONS",
+   "status": "READY",
+   "evidence": "D1 decode; 108 observations bound the ten rooms",
+   "depends_on": [
+    "SOURCE_FILE"
+   ]
+  },
+  {
+   "node": "CAPABILITY_SIGNATURES",
+   "status": "PENDING_EXTERNAL",
+   "evidence": "10 required, 0 qualified; needs an admitted Qortuba AutoCAD/ODA export",
+   "depends_on": [
+    "SOURCE_OBSERVATIONS"
+   ]
+  },
+  {
+   "node": "PHYSICAL_GEOMETRY",
+   "status": "READY",
+   "evidence": "K1 realisation; the canonical rebuild reproduces every room exactly (shadow)",
+   "depends_on": [
+    "SOURCE_OBSERVATIONS"
+   ]
+  },
+  {
+   "node": "METHOD_INPUT_CONTRACT",
+   "status": "NOT_MIGRATED",
+   "evidence": "block names, part identity, texts and dimensions mapped from D1/K1 in the R8.6 lab; not yet an engine/source capability",
+   "depends_on": [
+    "PHYSICAL_GEOMETRY"
+   ]
+  },
+  {
+   "node": "REGION_DESIGNATION",
+   "status": "PENDING_OWNER",
+   "evidence": "candidate RC:MODEL_SPACE:4267:540:1649, PENDING_REVIEW",
+   "depends_on": [
+    "SOURCE_OBSERVATIONS"
+   ]
+  },
+  {
+   "node": "UNIT_CONTEXT",
+   "status": "READY",
+   "evidence": "CONFIRMED_BY_HUMAN 10.0 mm per unit by owner claim QORTUBA-NATIVE-UNIT-OWNER-001; INSUNITS declaration kept",
+   "depends_on": [
+    "SOURCE_FILE"
+   ]
+  },
+  {
+   "node": "MEASUREMENT_FRAME",
+   "status": "BLOCKED",
+   "evidence": "UNCONFIRMED: the only missing input is the CAD drawing-region designation (with it the frame would be CONFIRMED_BY_HUMAN); the independent parser is a release blocker, not a frame input",
+   "depends_on": [
+    "UNIT_CONTEXT",
+    "REGION_DESIGNATION"
+   ]
+  },
+  {
+   "node": "ROOM_METHOD",
+   "status": "NOT_MIGRATED",
+   "evidence": "QS01 Method A on pipeline7, research code in a project folder",
+   "depends_on": [
+    "PHYSICAL_GEOMETRY",
+    "METHOD_INPUT_CONTRACT",
+    "MEASUREMENT_FRAME"
+   ]
+  },
+  {
+   "node": "ROOM_IDENTITY",
+   "status": "READY",
+   "evidence": "labels from D1 (61 of 61 equal), wet/dry classes generic, QP-07 approved",
+   "depends_on": [
+    "SOURCE_OBSERVATIONS",
+    "ROOM_METHOD"
+   ]
+  },
+  {
+   "node": "TRADE_METHOD",
+   "status": "NOT_MIGRATED",
+   "evidence": "owner_rules row expressions (generic sums), project code",
+   "depends_on": [
+    "ROOM_METHOD",
+    "ROOM_IDENTITY"
+   ]
+  },
+  {
+   "node": "CEILING_CONDITIONS",
+   "status": "PENDING_OWNER",
+   "evidence": "void / stair / shaft / open-to-above asserted False, not tested",
+   "depends_on": [
+    "ROOM_METHOD"
+   ]
+  },
+  {
+   "node": "BASELINE_APPROVAL",
+   "status": "PENDING_OWNER",
+   "evidence": "current rows are FINAL but approval DRAFT",
+   "depends_on": []
+  }
+ ],
+ "rows": [
+  {
+   "node": "QUANTITY_ROW:Q-03",
+   "status": "BLOCKED",
+   "depends_on": [
+    "CAPABILITY_SIGNATURES",
+    "TRADE_METHOD",
+    "MEASUREMENT_FRAME",
+    "BASELINE_APPROVAL"
+   ],
+   "item": "WET_AREA_WATERPROOFING_FLOOR",
+   "value_state": "PREVIEW (shadow)",
+   "blocking_ancestors": [
+    "BASELINE_APPROVAL",
+    "CAPABILITY_SIGNATURES",
+    "MEASUREMENT_FRAME",
+    "METHOD_INPUT_CONTRACT",
+    "REGION_DESIGNATION",
+    "ROOM_METHOD",
+    "TRADE_METHOD"
+   ]
+  },
+  {
+   "node": "QUANTITY_ROW:Q-03P",
+   "status": "BLOCKED",
+   "depends_on": [
+    "CAPABILITY_SIGNATURES",
+    "TRADE_METHOD",
+    "MEASUREMENT_FRAME",
+    "BASELINE_APPROVAL"
+   ],
+   "item": "PANTRY_WATERPROOFING_FLOOR",
+   "value_state": "PREVIEW (shadow)",
+   "blocking_ancestors": [
+    "BASELINE_APPROVAL",
+    "CAPABILITY_SIGNATURES",
+    "MEASUREMENT_FRAME",
+    "METHOD_INPUT_CONTRACT",
+    "REGION_DESIGNATION",
+    "ROOM_METHOD",
+    "TRADE_METHOD"
+   ]
+  },
+  {
+   "node": "QUANTITY_ROW:Q-11",
+   "status": "BLOCKED",
+   "depends_on": [
+    "CAPABILITY_SIGNATURES",
+    "TRADE_METHOD",
+    "MEASUREMENT_FRAME",
+    "BASELINE_APPROVAL"
+   ],
+   "item": "FLOOR_CERAMIC_WET_ROOMS",
+   "value_state": "PREVIEW (shadow)",
+   "blocking_ancestors": [
+    "BASELINE_APPROVAL",
+    "CAPABILITY_SIGNATURES",
+    "MEASUREMENT_FRAME",
+    "METHOD_INPUT_CONTRACT",
+    "REGION_DESIGNATION",
+    "ROOM_METHOD",
+    "TRADE_METHOD"
+   ]
+  },
+  {
+   "node": "QUANTITY_ROW:Q-12",
+   "status": "BLOCKED",
+   "depends_on": [
+    "CAPABILITY_SIGNATURES",
+    "TRADE_METHOD",
+    "MEASUREMENT_FRAME",
+    "BASELINE_APPROVAL"
+   ],
+   "item": "FLOOR_CERAMIC_SERVICE_ROOM",
+   "value_state": "PREVIEW (shadow)",
+   "blocking_ancestors": [
+    "BASELINE_APPROVAL",
+    "CAPABILITY_SIGNATURES",
+    "MEASUREMENT_FRAME",
+    "METHOD_INPUT_CONTRACT",
+    "REGION_DESIGNATION",
+    "ROOM_METHOD",
+    "TRADE_METHOD"
+   ]
+  },
+  {
+   "node": "QUANTITY_ROW:Q-13",
+   "status": "BLOCKED",
+   "depends_on": [
+    "CAPABILITY_SIGNATURES",
+    "TRADE_METHOD",
+    "MEASUREMENT_FRAME",
+    "BASELINE_APPROVAL"
+   ],
+   "item": "PORCELAIN_FLOOR_DRY_ROOMS",
+   "value_state": "PREVIEW (shadow)",
+   "blocking_ancestors": [
+    "BASELINE_APPROVAL",
+    "CAPABILITY_SIGNATURES",
+    "MEASUREMENT_FRAME",
+    "METHOD_INPUT_CONTRACT",
+    "REGION_DESIGNATION",
+    "ROOM_METHOD",
+    "TRADE_METHOD"
+   ]
+  },
+  {
+   "node": "QUANTITY_ROW:Q-14",
+   "status": "BLOCKED",
+   "depends_on": [
+    "CAPABILITY_SIGNATURES",
+    "TRADE_METHOD",
+    "MEASUREMENT_FRAME",
+    "BASELINE_APPROVAL",
+    "CEILING_CONDITIONS"
+   ],
+   "item": "CEILING_BY_AREA",
+   "value_state": "PREVIEW (shadow)",
+   "blocking_ancestors": [
+    "BASELINE_APPROVAL",
+    "CAPABILITY_SIGNATURES",
+    "CEILING_CONDITIONS",
+    "MEASUREMENT_FRAME",
+    "METHOD_INPUT_CONTRACT",
+    "REGION_DESIGNATION",
+    "ROOM_METHOD",
+    "TRADE_METHOD"
+   ]
+  }
+ ],
+ "what_one_missing_fact_blocks": {
+  "CAPABILITY_SIGNATURES": [
+   "QUANTITY_ROW:Q-03",
+   "QUANTITY_ROW:Q-03P",
+   "QUANTITY_ROW:Q-11",
+   "QUANTITY_ROW:Q-12",
+   "QUANTITY_ROW:Q-13",
+   "QUANTITY_ROW:Q-14"
+  ],
+  "METHOD_INPUT_CONTRACT": [
+   "QUANTITY_ROW:Q-03",
+   "QUANTITY_ROW:Q-03P",
+   "QUANTITY_ROW:Q-11",
+   "QUANTITY_ROW:Q-12",
+   "QUANTITY_ROW:Q-13",
+   "QUANTITY_ROW:Q-14"
+  ],
+  "REGION_DESIGNATION": [
+   "QUANTITY_ROW:Q-03",
+   "QUANTITY_ROW:Q-03P",
+   "QUANTITY_ROW:Q-11",
+   "QUANTITY_ROW:Q-12",
+   "QUANTITY_ROW:Q-13",
+   "QUANTITY_ROW:Q-14"
+  ],
+  "MEASUREMENT_FRAME": [
+   "QUANTITY_ROW:Q-03",
+   "QUANTITY_ROW:Q-03P",
+   "QUANTITY_ROW:Q-11",
+   "QUANTITY_ROW:Q-12",
+   "QUANTITY_ROW:Q-13",
+   "QUANTITY_ROW:Q-14"
+  ],
+  "ROOM_METHOD": [
+   "QUANTITY_ROW:Q-03",
+   "QUANTITY_ROW:Q-03P",
+   "QUANTITY_ROW:Q-11",
+   "QUANTITY_ROW:Q-12",
+   "QUANTITY_ROW:Q-13",
+   "QUANTITY_ROW:Q-14"
+  ],
+  "TRADE_METHOD": [
+   "QUANTITY_ROW:Q-03",
+   "QUANTITY_ROW:Q-03P",
+   "QUANTITY_ROW:Q-11",
+   "QUANTITY_ROW:Q-12",
+   "QUANTITY_ROW:Q-13",
+   "QUANTITY_ROW:Q-14"
+  ],
+  "CEILING_CONDITIONS": [
+   "QUANTITY_ROW:Q-14"
+  ],
+  "BASELINE_APPROVAL": [
+   "QUANTITY_ROW:Q-03",
+   "QUANTITY_ROW:Q-03P",
+   "QUANTITY_ROW:Q-11",
+   "QUANTITY_ROW:Q-12",
+   "QUANTITY_ROW:Q-13",
+   "QUANTITY_ROW:Q-14"
+  ]
+ }
+}

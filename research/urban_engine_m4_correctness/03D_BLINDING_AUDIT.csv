@@ -1,0 +1,9 @@
+ITEM,M3_BASE_M3,M4_BASE_M3,M4_PLAN_M2,MEMBERS,FORMULA
+PLAIN_CONCRETE:FOUNDATION:BLINDING_FOOTINGS,15.693,15.6594,156.594,26,(L + 2p)(W + 2p) x t under each footing
+PLAIN_CONCRETE:FOUNDATION:BLINDING_GROUND_BEAMS,10.7191,6.4957,64.957,61,(net plan + 2p x clear length) x t under each ground / strap beam
+COUNTED_ONCE: beam strip lying on footing blinding,,,42.2369,,
+COUNTED_ONCE: strips crossing,,,5.924,,
+COUNTED_ONCE: footing projections meeting,,,0.3356,,
+CONVENTION BLINDING_THICKNESS_M,,,,,"base 0.1 (READING_OF_PRINTED_VALUE): ST7757 PDF p.13: '10cm Plain con.' in both typical footing details (OCR notes P13N01, P13N02 - each under a footing caption, read again visually) and a 10 cm ha"
+CONVENTION BLINDING_PROJECTION_M,,,,,"base 0.1 (READING_OF_PRINTED_VALUE): ST7757 PDF p.13 (vector drawing, read visually; not reviewed): the second typical footing detail dimensions the plain concrete 10 beyond the footing face; every"
+CONVENTION BLINDING_UNDER,,,,,"base FOOTINGS_AND_GROUND_BEAMS (READING_OF_PRINTED_VALUE): ST7757 PDF p.13: the plain-concrete layer is drawn and dimensioned (10 thick, 10 projection each side) under all four typical ground-beam sections and under bot"

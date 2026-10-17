@@ -1,0 +1,351 @@
+{
+ "difference_register": [
+  {
+   "basis_match": "MATCH",
+   "best_minus_donor": {
+    "CHRISTIANNP": -3.616,
+    "UC4N": 4.73
+   },
+   "donors": {
+    "CHRISTIANNP": 598.708,
+    "UC4N": 590.362
+   },
+   "element": "gross structural outline (sum of floors)",
+   "likely_donor_issue": false,
+   "likely_urban_issue": false,
+   "needs_source_review": false,
+   "note": "within 1 %; no change to gross-area logic",
+   "reason_class": "MEASUREMENT_CONVENTION",
+   "trade": "BUA",
+   "unit": "m2",
+   "urban_best_provisional": 595.092,
+   "urban_counts": null,
+   "urban_high": null,
+   "urban_low": null,
+   "urban_lower_bound": null,
+   "urban_official": 595.092
+  },
+  {
+   "basis_match": "MATCH",
+   "best_minus_donor": {
+    "CHRISTIANNP": 0.637,
+    "FREELANCER": 0.672,
+    "UC4N": -0.273
+   },
+   "donors": {
+    "CHRISTIANNP": 65.669,
+    "FREELANCER": 65.634,
+    "UC4N": 66.579
+   },
+   "element": "isolated / combined footings",
+   "likely_donor_issue": false,
+   "likely_urban_issue": false,
+   "needs_source_review": true,
+   "note": "F / F10 outline conflict and the F3 count; architecture healthy",
+   "reason_class": "SOURCE_CONFLICT",
+   "trade": "FOOTINGS",
+   "unit": "m3",
+   "urban_best_provisional": 66.306,
+   "urban_counts": null,
+   "urban_high": null,
+   "urban_low": 64.778,
+   "urban_lower_bound": 64.346,
+   "urban_official": 64.346
+  },
+  {
+   "basis_match": "PARTIAL",
+   "best_minus_donor": {
+    "CHRISTIANNP": 13.618,
+    "FREELANCER": 4.084,
+    "UC4N": 13.619
+   },
+   "donors": {
+    "CHRISTIANNP": 36.006,
+    "FREELANCER": 45.54,
+    "UC4N": 36.005
+   },
+   "element": "interior + exterior + boundary beam",
+   "likely_donor_issue": true,
+   "likely_urban_issue": false,
+   "needs_source_review": true,
+   "note": "the population is complete in Urban (59 spans, 110.3 m exterior). Exterior depth is unprinted ('FOLLOW ARCH.'); Urban brackets it 0.90-1.30 m from the elevations; the donors' totals imply an exterior depth of {'UC4N': 0.748, 'CHRISTIANNP': 0.748} m. Urban's low was never 'lost geometry' but technical-only publication.",
+   "reason_class": "SOURCE_CONFLICT",
+   "trade": "GROUND_BEAMS",
+   "unit": "m3",
+   "urban_best_provisional": 49.624,
+   "urban_counts": {
+    "exterior_spans": 28,
+    "interior_spans": 31
+   },
+   "urban_high": 61.401,
+   "urban_low": 45.786,
+   "urban_lower_bound": 11.245,
+   "urban_official": 11.245
+  },
+  {
+   "basis_match": "PARTIAL",
+   "best_minus_donor": {
+    "CHRISTIANNP": -2.661,
+    "FREELANCER": 0.0,
+    "UC4N": -2.73
+   },
+   "donors": {
+    "CHRISTIANNP": 6.053,
+    "FREELANCER": 3.392,
+    "UC4N": 6.122
+   },
+   "element": "strap beams",
+   "likely_donor_issue": true,
+   "likely_urban_issue": false,
+   "needs_source_review": true,
+   "note": "Urban = freelancer; both oracles ~6.1 m3 - likely band measured through the footings or a deeper section",
+   "reason_class": "DONOR_ASSUMPTION",
+   "trade": "STRAPS",
+   "unit": "m3",
+   "urban_best_provisional": 3.392,
+   "urban_counts": null,
+   "urban_high": null,
+   "urban_low": null,
+   "urban_lower_bound": null,
+   "urban_official": 3.392
+  },
+  {
+   "basis_match": "PARTIAL",
+   "best_minus_donor": {
+    "CHRISTIANNP": -10.703,
+    "FREELANCER": -7.849,
+    "UC4N": -10.482
+   },
+   "donors": {
+    "CHRISTIANNP": 32.404,
+    "FREELANCER": 29.55,
+    "UC4N": 32.183
+   },
+   "element": "slab on grade",
+   "likely_donor_issue": true,
+   "likely_urban_issue": true,
+   "needs_source_review": true,
+   "note": "Urban lost the unlabelled cells (now recovered: 217.012 m2 net of beams / columns at 0.10). The oracles equal the GF gross slab outline 322.413 m2 x 0.10 = 32.241 m3 - i.e. they include the ground-beam footprint and openings.",
+   "reason_class": "URBAN_BLOCKING_LOSS",
+   "trade": "GROUND_SLAB",
+   "unit": "m3",
+   "urban_best_provisional": 21.701,
+   "urban_counts": null,
+   "urban_high": 21.701,
+   "urban_low": 11.528,
+   "urban_lower_bound": 11.528,
+   "urban_official": 11.528
+  },
+  {
+   "basis_match": "PARTIAL",
+   "best_minus_donor": {
+    "CHRISTIANNP": 1.145,
+    "UC4N": 0.725
+   },
+   "donors": {
+    "CHRISTIANNP": 44.65,
+    "UC4N": 45.07
+   },
+   "element": "FOUNDATION + GF + 1F + 2F (column + joint)",
+   "likely_donor_issue": false,
+   "likely_urban_issue": true,
+   "needs_source_review": false,
+   "note": "totals within ~2 %; the FOUNDATION / GF split differs (Urban: footing top -> GF FFL; donors: footing -> ground beam / plinth). Urban's earlier low came from clear-height columns + 47 occurrences without a technical record (now 95 / 95).",
+   "reason_class": "MEASUREMENT_CONVENTION",
+   "trade": "COLUMNS",
+   "unit": "m3",
+   "urban_best_provisional": 45.795,
+   "urban_counts": {
+    "1F": 20,
+    "2F": 9,
+    "FOUNDATION": 36,
+    "GF": 30
+   },
+   "urban_high": 48.915,
+   "urban_low": 45.795,
+   "urban_lower_bound": 33.166,
+   "urban_official": 33.166
+  },
+  {
+   "basis_match": "MATCH",
+   "best_minus_donor": {
+    "CHRISTIANNP": -0.227,
+    "UC4N": -0.227
+   },
+   "donors": {
+    "CHRISTIANNP": 32.385,
+    "UC4N": 32.385
+   },
+   "element": "FOUNDATION + GF storey",
+   "likely_donor_issue": false,
+   "likely_urban_issue": false,
+   "needs_source_review": false,
+   "note": "the split, not the population, differs",
+   "reason_class": "MEASUREMENT_CONVENTION",
+   "trade": "COLUMNS_FOU_PLUS_GF",
+   "unit": "m3",
+   "urban_best_provisional": 32.158,
+   "urban_counts": null,
+   "urban_high": null,
+   "urban_low": null,
+   "urban_lower_bound": null,
+   "urban_official": null
+  },
+  {
+   "basis_match": "PARTIAL",
+   "best_minus_donor": {
+    "CHRISTIANNP": -1.054,
+    "UC4N": -5.304
+   },
+   "donors": {
+    "CHRISTIANNP": 46.591,
+    "UC4N": 50.841
+   },
+   "element": "downstands (clear length x B x (D - t)) + residue",
+   "likely_donor_issue": false,
+   "likely_urban_issue": true,
+   "needs_source_review": true,
+   "note": "24 residue objects (8 tags without a band - possibly repeats of measured beams); the remainder is occurrence interpretation",
+   "reason_class": "OCCURRENCE_MISSING",
+   "trade": "BEAMS",
+   "unit": "m3",
+   "urban_best_provisional": 45.537,
+   "urban_counts": null,
+   "urban_high": null,
+   "urban_low": 41.909,
+   "urban_lower_bound": 37.587,
+   "urban_official": 2.65
+  },
+  {
+   "basis_match": "PARTIAL",
+   "best_minus_donor": {
+    "CHRISTIANNP": -15.321,
+    "UC4N": -14.257
+   },
+   "donors": {
+    "CHRISTIANNP": 96.753,
+    "UC4N": 95.689
+   },
+   "element": "net plate x thickness",
+   "likely_donor_issue": true,
+   "likely_urban_issue": false,
+   "needs_source_review": true,
+   "note": "implied donor thickness 0.185 / 0.184 m vs printed 0.16 (GF, 1F) / 0.18 (2F); U-C4N assumed 0.20 for GF; the GF conflict void (T16 tag inside) is the remaining area question",
+   "reason_class": "DONOR_ASSUMPTION",
+   "trade": "SLABS",
+   "unit": "m3",
+   "urban_best_provisional": 81.432,
+   "urban_counts": null,
+   "urban_high": 85.765,
+   "urban_low": 81.432,
+   "urban_lower_bound": 81.432,
+   "urban_official": 81.432
+  },
+  {
+   "basis_match": "PARTIAL",
+   "best_minus_donor": {
+    "CHRISTIANNP": -23.138,
+    "FREELANCER": 129.827,
+    "UC4N": -16.233
+   },
+   "donors": {
+    "CHRISTIANNP": 525.155,
+    "FREELANCER": 372.19,
+    "UC4N": 518.25
+   },
+   "element": "gross outline - openings",
+   "likely_donor_issue": false,
+   "likely_urban_issue": false,
+   "needs_source_review": true,
+   "note": "Urban high adds back the GF 'VOID' face that carries a T16 tag; every deduction has an opening id (SLAB_OPENING_RECONCILIATION). The freelancer excludes beam footprints (different basis)",
+   "reason_class": "SOURCE_CONFLICT",
+   "trade": "NET_SLAB_AREA",
+   "unit": "m2",
+   "urban_best_provisional": 502.017,
+   "urban_counts": null,
+   "urban_high": 529.093,
+   "urban_low": 502.017,
+   "urban_lower_bound": 502.017,
+   "urban_official": 502.017
+  },
+  {
+   "basis_match": "PARTIAL",
+   "best_minus_donor": {
+    "CHRISTIANNP": -49.421,
+    "UC4N": -14.019
+   },
+   "donors": {
+    "CHRISTIANNP": 183.497,
+    "UC4N": 148.095
+   },
+   "element": "wall length",
+   "likely_donor_issue": true,
+   "likely_urban_issue": true,
+   "needs_source_review": true,
+   "note": "Urban never measured 44.336 m of WALL_BAND_AMBIGUOUS bands; with the column-overlap convention (+12.896 m) Urban is 146.972 m. Method B raw pairs = paired wall 111.616 + openings 34.571 + columns 28.819 + duplicates 9.893 m - the larger donor figure measures through openings and columns",
+   "reason_class": "URBAN_BLOCKING_LOSS",
+   "trade": "BLOCKWORK_200",
+   "unit": "m",
+   "urban_best_provisional": 134.076,
+   "urban_counts": null,
+   "urban_high": 134.076,
+   "urban_low": 89.74,
+   "urban_lower_bound": 89.74,
+   "urban_official": 89.74
+  },
+  {
+   "basis_match": "MATCH",
+   "best_minus_donor": {
+    "CHRISTIANNP": -1.57,
+    "UC4N": 6.812
+   },
+   "donors": {
+    "CHRISTIANNP": 79.971,
+    "UC4N": 71.589
+   },
+   "element": "wall length",
+   "likely_donor_issue": false,
+   "likely_urban_issue": false,
+   "needs_source_review": false,
+   "note": "positive test - inside the donor range",
+   "reason_class": "MEASUREMENT_CONVENTION",
+   "trade": "BLOCKWORK_150",
+   "unit": "m",
+   "urban_best_provisional": 78.401,
+   "urban_counts": null,
+   "urban_high": 78.401,
+   "urban_low": 77.507,
+   "urban_lower_bound": 77.507,
+   "urban_official": 77.507
+  },
+  {
+   "basis_match": "PARTIAL",
+   "best_minus_donor": {
+    "CHRISTIANNP": -746.52
+   },
+   "donors": {
+    "CHRISTIANNP": 2364.7
+   },
+   "element": "physical wall-face area (finish-independent)",
+   "likely_donor_issue": false,
+   "likely_urban_issue": true,
+   "needs_source_review": true,
+   "note": "Urban released only certified room faces before; physical faces now exist first. Urban bands are net of openings and exclude column / beam faces; the donor figure is gross",
+   "reason_class": "SCOPE_DIFFERENCE",
+   "trade": "WALL_FACES",
+   "unit": "m2",
+   "urban_best_provisional": 1618.18,
+   "urban_counts": null,
+   "urban_high": 1638.96,
+   "urban_low": 1564.987,
+   "urban_lower_bound": 1220.508,
+   "urban_official": 1220.508
+  }
+ ],
+ "donor_sources": {
+  "CHRISTIANNP": "blind MCP run (brief)",
+  "FREELANCER": "FREELANCER_QS_REFERENCE",
+  "UC4N": "blind MCP run (brief)"
+ },
+ "freeze_checked": true
+}

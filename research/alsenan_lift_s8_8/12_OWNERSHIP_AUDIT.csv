@@ -1,0 +1,26 @@
+COMPONENT,PART,OWNER,STATE,QUANTITY_RECORD
+LIFT-01-FTG,concrete,footing family (S1 / S2),OWNED_BUT_UNMEASURED,"11.385 m3 computable, unmeasured"
+LIFT-01-FTG,bars (four mats),S4 / S4.1,ALREADY_OWNED_AND_MEASURED,720.239506 kg Ø14 lower bound
+LIFT-01-FTG,'2 Ø16' wall-base bars,S8.8 (S4.1-T01),BLOCKED_UNQUANTIFIED,0 kg
+LIFT-01-PIT-BASE,concrete,footing family (the FF top is the pit floor),OWNED_BUT_UNMEASURED,no separate element
+LIFT-01-PIT-WALL-S/N/W/E,concrete,S8.8,BLOCKED_UNQUANTIFIED,1.1 m2 footprint; height blocked
+LIFT-01-PIT-WALL-S/N/W/E,6Ø16/m vertical,S8.8,BLOCKED_UNQUANTIFIED,0 kg
+LIFT-01-PIT-WALL-S/N/W/E,6Ø12/m horizontal,S8.8,BLOCKED_UNQUANTIFIED,0 kg
+LIFT-01-PIT-WALL-S/N/W/E,2Ø12 wall top,S8.8,BLOCKED_UNQUANTIFIED,0 kg
+LIFT-01-PIT-WALL ring vs columns,plan,S8.8 / column family,SOURCE_CONFLICT,drawn 200 (flush) vs schedule 300 (S3 STR-COL-013)
+LIFT-01-GROUND-SLAB-OPENING,area,S8.1A (RG-04 excluded from the ground slab),ALREADY_OWNED_AND_MEASURED,3.24 m2 excluded
+LIFT-01-ENCL-GF/1F/2F,walls,architectural blockwork (S8.6 wall owner),OWNED_BUT_UNMEASURED,not structural
+LIFT-01-DOOR-GF/1F/2F,openings + lintels,S8.6,OWNED_BUT_UNMEASURED,lintels BLOCKED_SUPPORT_IDENTITY in S8.6
+LIFT-01-TIE-GF,concrete + bars,"S8.8 (S1 SPC-LIFT_TIE_BEAM-GF, S2 BM-GF-LIFT_TIE)",BLOCKED_UNQUANTIFIED,not drawn; section not stated
+LIFT-01-COL-SW/NW/SE/NE,bars,S3 / S3.1,ALREADY_OWNED_AND_MEASURED,column family
+LIFT-01-COL-SW/NW/SE/NE,concrete,column family,OWNED_BUT_UNMEASURED,column family
+LIFT-01-COL-SW/NW/SE/NE,starters into FF,S3.1,ALREADY_OWNED_AND_MEASURED,85.271 kg
+LIFT-01-BEAMS-GF_ROOF,bars,S6,ALREADY_OWNED_AND_MEASURED,35.91605 kg lower bound
+LIFT-01-BEAMS-1F_ROOF,bars,S6,ALREADY_OWNED_AND_MEASURED,29.397531 kg lower bound
+LIFT-01-BEAMS-2F_ROOF,bars,S6,ALREADY_OWNED_AND_MEASURED,28.523457 kg lower bound
+LIFT-01-BEAMS-*,concrete,beam family,OWNED_BUT_UNMEASURED,no frozen m3
+LIFT-01-GROUND-BEAMS,bars,S5,ALREADY_OWNED_AND_MEASURED,41.682667 kg lower bound
+LIFT-01-VOID-GF_ROOF / 1F_ROOF,void,"S1 (OPEN_TO_BELOW, no slab concrete; S7 places no bars)",ALREADY_OWNED_AND_MEASURED,3.24 m2 each
+LIFT-01-ROOF,bars,S7,ALREADY_OWNED_AND_MEASURED,17.569444444 kg panel-owned
+LIFT-01-ROOF,concrete,"slab family (S1 160 mm, S2 3.24 m2 plan)",OWNED_BUT_UNMEASURED,no frozen m3
+LIFT-01-OVERRUN,-,-,BLOCKED_UNQUANTIFIED,none documented

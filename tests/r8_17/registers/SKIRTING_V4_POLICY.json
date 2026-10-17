@@ -1,0 +1,140 @@
+{
+ "SCHEMA": "URBAN_R8_17_SKIRTING_V4_POLICY_V1",
+ "policy": {
+  "policy_id": "WALL_CONTACT_PATH_POLICY_V4",
+  "extends": "WALL_CONTACT_PATH_POLICY_V3",
+  "classes": [
+   "PHYSICAL_OPENING_JAMB",
+   "TOPOLOGY_CLOSURE",
+   "DOOR_PRESENT",
+   "SLIDING_GLAZED_DOOR_TO_FLOOR",
+   "FULL_HEIGHT_GLAZED_OPENING",
+   "WINDOW_ABOVE_FLOOR",
+   "FLOOR_CONTACT_UNPROVEN",
+   "AUTHORISED_OBSTACLE_FACE",
+   "COLUMN_FACE",
+   "REAL_WALL_FACE",
+   "UNPROVEN_EDGE"
+  ],
+  "payable": [
+   "REAL_WALL_FACE",
+   "COLUMN_FACE",
+   "AUTHORISED_OBSTACLE_FACE",
+   "WINDOW_ABOVE_FLOOR"
+  ],
+  "excluded": [
+   "DOOR_PRESENT",
+   "SLIDING_GLAZED_DOOR_TO_FLOOR",
+   "TOPOLOGY_CLOSURE",
+   "FULL_HEIGHT_GLAZED_OPENING"
+  ],
+  "withheld": [
+   "FLOOR_CONTACT_UNPROVEN",
+   "UNPROVEN_EDGE"
+  ],
+  "door_classes": [
+   "SLIDING_GLAZED_DOOR",
+   "GLAZED_DOOR",
+   "EXTERNAL_DOOR"
+  ],
+  "jamb_records": {
+   "DOOR": "zero (STOP_AT_OPENING)",
+   "GLAZED_DOOR": "zero (a glazed DOOR is a door)",
+   "DOORLESS": "physical short sides counted once"
+  },
+  "physical_jamb": "physical = true by positive source evidence (strip reveal side, or an ESTABLISHED band end CAPPED / ALIGNED_FREE_END / OPENING_JAMB); never a topology closure source; never a CONTINUOUS_WALL_FACE side",
+  "consumption": "only a physical jamb record may consume path length; a non-physical record is an OPENING_SIDE annotation and never shortens an edge",
+  "conservation": "per site: boundary = consumed by physical jambs + payable spans + excluded spans + withheld spans (checked)",
+  "resolution_order": [
+   "physical class authority (a door is never a window)",
+   "floor-level authority",
+   "sill authority",
+   "otherwise FLOOR_CONTACT_UNPROVEN (withheld)"
+  ],
+  "physical_wall_ends": [
+   "CAPPED",
+   "ALIGNED_FREE_END",
+   "OPENING_JAMB"
+  ],
+  "fixes": [
+   "V3-O1: non-physical opening-side records consumed continuous wall face"
+  ],
+  "never": [
+   "a non-physical record consuming wall contact",
+   "a topology closure as material, skirting or a jamb",
+   "SKIRTING_CONTINUITY_UNDER_WINDOW at a door-class glazed occurrence",
+   "skirting across any clear opening",
+   "a door / glazed-door jamb return",
+   "a room polygon perimeter",
+   "a furniture / wardrobe deduction",
+   "skirting in a full-wall-tile room",
+   "a published quantity without a frozen, blind-tested policy"
+  ],
+  "digest": "0426020a17326bfed5d4f3e92e5b4b738cee9908844f5dcb6a26fa2760b72d8a"
+ },
+ "method": {
+  "method_id": "QORTUBA-NEW-SKIRTING-METHOD",
+  "version": 3,
+  "supersedes": "QORTUBA-NEW-SKIRTING-METHOD@v2 (R8.16, WALL_CONTACT_PATH_POLICY_V3)",
+  "scope": {
+   "project": "QORTUBA",
+   "source_revision_id": "QORTUBA_REV_NEW",
+   "rows": "dry tiled rooms (Q-13 sites)"
+  },
+  "system": "QP-06: hidden skirting + hidden profile on one payable path (US-08)",
+  "parameters": {
+   "door": "STOP_AT_OPENING_NO_JAMB",
+   "doorless_jambs": "INCLUDED",
+   "obstacle_faces": "INCLUDED",
+   "column_faces": "INCLUDED"
+  },
+  "rules": [
+   "1 dry / internal tiled room -> skirting on all eligible real wall contact",
+   "2 wardrobes / joinery / furniture do not deduct",
+   "3 authorised duct faces at floor contact are eligible",
+   "4 normal window above floor -> skirting continues below (SKIRTING_CONTINUITY_UNDER_WINDOW)",
+   "5 full-height floor opening -> no skirting across",
+   "5b floor-reaching sliding glazed door -> zero across and zero jambs (a door)",
+   "6 installed door -> stop at opening, no jamb return",
+   "7 doorless opening -> physical side jambs included",
+   "8 no skirting in full-wall-tile rooms",
+   "9 topology closure always zero material",
+   "10 no room-perimeter shortcut",
+   "11 only a physical jamb may replace wall contact; a continuous wall face stays payable"
+  ],
+  "authority": {
+   "rooms": "QORTUBA-NEW-DRY-ROOM-SKIRTING-ALL-REAL-WALLS-OWNER-001@v1 + QORTUBA-NEW-NO-SKIRTING-FULL-WALL-TILE-ROOMS-OWNER-001@v1",
+   "windows": "QORTUBA-NEW-SKIRTING-WINDOW-FLOOR-CONTACT-OWNER-001@v1 (supersedes QP-09 in scope) + QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v1 (sill ~1.00 m, normal windows only)",
+   "door": "URBAN-SKIRTING-OPENING-METHOD@v1 DOOR_PRESENT",
+   "doorless_jambs": "URBAN-SKIRTING-OPENING-METHOD@v1 DOORLESS_OPENING",
+   "obstacle_faces": "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1 + owner 'all real walls' + rule-store section E",
+   "column_faces": "rule-store section E ('a column is not an opening')",
+   "sliding_glazed_door": "QORTUBA-NEW-HALL-PAINTRY-SLIDING-GLASS-DOOR-OWNER-001@v1 + URBAN-SKIRTING-OPENING-METHOD@v1 DOOR_PRESENT",
+   "path_policy": "WALL_CONTACT_PATH_POLICY_V4"
+  },
+  "never": [
+   "93.98682 / 94.13682 / 96.73682 / 96.88682 / 84.795214 / 76.389 / 9.091605 / 0.15 / 2.75 as a target",
+   "a room polygon perimeter"
+  ],
+  "ref": "QORTUBA-NEW-SKIRTING-METHOD@v3",
+  "digest": "b33f9fdda1aa0e07583e41bae0013f9ea02f2e884d3987b292f9230a52a94d60"
+ },
+ "opening_class_policy": {
+  "policy_id": "OPENING_PHYSICAL_CLASS_POLICY_V1",
+  "kind": "OPENING_CONSTRUCTION",
+  "domains": [
+   "OPENING_PHYSICAL_CLASS",
+   "BLOCKER_CLASSIFICATION"
+  ],
+  "binding": "owner_facts.bind: revision + anchor + region + frame + every bound part fingerprint",
+  "resolution": "physical class first (a door class is never a window); floor contact from the fact",
+  "never": [
+   "a topology role or closure edit",
+   "an opening the fact does not bind",
+   "a transfer to another revision / project",
+   "'all glazed openings are sliding doors'",
+   "a quantity"
+  ],
+  "digest": "b36b0219d439227f39dec9c22ec75a5aed40f23503d804f42f03e5d817abf80f"
+ }
+}

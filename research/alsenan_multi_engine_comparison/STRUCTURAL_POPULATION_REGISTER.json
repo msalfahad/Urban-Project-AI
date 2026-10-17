@@ -1,0 +1,438 @@
+{
+ "complete_list": true,
+ "counts": {
+  "BLOCKED": 11,
+  "NOT_PRESENT": 5,
+  "PRESENT": 15,
+  "UNKNOWN": 8
+ },
+ "register": "SPECIAL_STRUCTURAL_POPULATION_REGISTER",
+ "rows": [
+  {
+   "flags": [],
+   "group": "FOUNDATIONS",
+   "population": "RAFT",
+   "quantity_state": null,
+   "refs": [
+    "S1 FOOTING_OCCURRENCE_REGISTER (foundation plan census, all outlines)"
+   ],
+   "state": "NOT_PRESENT",
+   "why": "all foundation outlines are isolated / combined pads"
+  },
+  {
+   "flags": [],
+   "group": "FOUNDATIONS",
+   "population": "ISOLATED_FOOTING",
+   "quantity_state": "LOWER_BOUND (F/F10 blocked)",
+   "refs": [
+    "S1 FOOTING_OCCURRENCE_REGISTER (foundation plan census, all outlines)"
+   ],
+   "state": "PRESENT",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "FOUNDATIONS",
+   "population": "COMBINED_FOOTING",
+   "quantity_state": null,
+   "refs": [
+    "S1 FOOTING_OCCURRENCE_REGISTER (foundation plan census, all outlines) combined_footings_with_several_columns"
+   ],
+   "state": "PRESENT",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "FOUNDATIONS",
+   "population": "STRIP_FOOTING",
+   "quantity_state": null,
+   "refs": [
+    "S1 FOOTING_OCCURRENCE_REGISTER (foundation plan census, all outlines)"
+   ],
+   "state": "NOT_PRESENT",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "FOUNDATIONS",
+   "population": "PILE_CAP",
+   "quantity_state": null,
+   "refs": [
+    "S1 FOOTING_OCCURRENCE_REGISTER (foundation plan census, all outlines)",
+    "ST7757 p.9 note 1 (shallow foundations)"
+   ],
+   "state": "NOT_PRESENT",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "FOUNDATIONS",
+   "population": "NECK_PEDESTAL",
+   "quantity_state": null,
+   "refs": [
+    "V3b C-NECK"
+   ],
+   "state": "BLOCKED",
+   "why": "founding / ground-beam level not printed"
+  },
+  {
+   "flags": [],
+   "group": "GROUND",
+   "population": "STRAP_BEAM",
+   "quantity_state": null,
+   "refs": [
+    "V3b C-STR"
+   ],
+   "state": "PRESENT",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "GROUND",
+   "population": "GROUND_BEAM",
+   "quantity_state": "exterior GB BLOCKED",
+   "refs": [
+    "V3b C-GB-INT"
+   ],
+   "state": "PRESENT",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "GROUND",
+   "population": "GROUND_SLAB",
+   "quantity_state": "LOWER_BOUND (extent)",
+   "refs": [
+    "V3b C-GSLAB-ZONE-1/2"
+   ],
+   "state": "PRESENT",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "VERTICAL",
+   "population": "COLUMN",
+   "quantity_state": null,
+   "refs": [
+    "S1 COLUMN_OCCURRENCE_REGISTER (95)"
+   ],
+   "state": "PRESENT",
+   "why": null
+  },
+  {
+   "flags": [
+    "FREELANCER_HINT_LIFT_WALLS"
+   ],
+   "group": "VERTICAL",
+   "population": "STRUCTURAL_WALL",
+   "quantity_state": null,
+   "refs": [
+    "V3b C-SWALL"
+   ],
+   "state": "BLOCKED",
+   "why": "lift walls appear only in the freelancer reference - source to confirm"
+  },
+  {
+   "flags": [],
+   "group": "VERTICAL",
+   "population": "PLANTED_COLUMN",
+   "quantity_state": null,
+   "refs": [
+    "S1 SPECIAL register"
+   ],
+   "state": "PRESENT",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "VERTICAL",
+   "population": "TURNED_COLUMN",
+   "quantity_state": null,
+   "refs": [
+    "S1 SPECIAL register"
+   ],
+   "state": "PRESENT",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "BEAMS",
+   "population": "SIMPLE_BEAM",
+   "quantity_state": null,
+   "refs": [
+    "S1 BEAM_OCCURRENCE_REGISTER"
+   ],
+   "state": "PRESENT",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "BEAMS",
+   "population": "CONTINUOUS_BEAM",
+   "quantity_state": null,
+   "refs": [
+    "S1 CONTINUOUS_BEAM_OCCURRENCE_REGISTER"
+   ],
+   "state": "PRESENT",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "BEAMS",
+   "population": "RING_BEAM",
+   "quantity_state": null,
+   "refs": [
+    "V3b C-DOME-RING-*"
+   ],
+   "state": "BLOCKED",
+   "why": "dome ring detail N.I.S."
+  },
+  {
+   "flags": [],
+   "group": "BEAMS",
+   "population": "LINTEL",
+   "quantity_state": null,
+   "refs": [
+    "V3b C-LINT-*"
+   ],
+   "state": "PRESENT",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "BEAMS",
+   "population": "BEAM_OPENING",
+   "quantity_state": null,
+   "refs": [],
+   "state": "UNKNOWN",
+   "why": "service widenings not located on plans (S2 STR-BEA-007)"
+  },
+  {
+   "flags": [],
+   "group": "SLABS",
+   "population": "SOLID_SLAB",
+   "quantity_state": null,
+   "refs": [
+    "S1 SLAB_PANEL_REGISTER (70 panels)"
+   ],
+   "state": "PRESENT",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "SLABS",
+   "population": "FLAT_SLAB",
+   "quantity_state": null,
+   "refs": [
+    "S1 SLAB_PANEL_REGISTER: all panels beam-supported"
+   ],
+   "state": "NOT_PRESENT",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "SLABS",
+   "population": "RIBBED_HORDI_SLAB",
+   "quantity_state": null,
+   "refs": [
+    "S1 SLAB_PANEL_REGISTER: solid panels only"
+   ],
+   "state": "NOT_PRESENT",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "SLABS",
+   "population": "CANTILEVER",
+   "quantity_state": null,
+   "refs": [
+    "S1 BEAM_OCCURRENCE_REGISTER family CANTILEVER"
+   ],
+   "state": "PRESENT",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "STAIRS",
+   "population": "STAIR",
+   "quantity_state": null,
+   "refs": [
+    "V3b C-STAIR"
+   ],
+   "state": "BLOCKED",
+   "why": "riser / waist inputs incomplete"
+  },
+  {
+   "flags": [],
+   "group": "STAIRS",
+   "population": "LANDING",
+   "quantity_state": null,
+   "refs": [
+    "V3b C-STAIR"
+   ],
+   "state": "BLOCKED",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "LIFT",
+   "population": "LIFT_PIT",
+   "quantity_state": null,
+   "refs": [
+    "S2 STR-LIF-001"
+   ],
+   "state": "BLOCKED",
+   "why": "pit dimensions not printed"
+  },
+  {
+   "flags": [
+    "FREELANCER_HINT_LIFT_WALLS"
+   ],
+   "group": "LIFT",
+   "population": "LIFT_WALL",
+   "quantity_state": null,
+   "refs": [
+    "V3b C-SWALL"
+   ],
+   "state": "BLOCKED",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "LIFT",
+   "population": "LIFT_TIE_BEAM",
+   "quantity_state": null,
+   "refs": [
+    "S1 STRUCTURAL_LEVEL_REGISTER lift_tie_beam_rule_check (GF)"
+   ],
+   "state": "BLOCKED",
+   "why": "required by p.8 note 19, not drawn"
+  },
+  {
+   "flags": [],
+   "group": "SPECIAL",
+   "population": "POOL",
+   "quantity_state": null,
+   "refs": [
+    "V3b C-POOL"
+   ],
+   "state": "PRESENT",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "SPECIAL",
+   "population": "WATER_TANK",
+   "quantity_state": null,
+   "refs": [],
+   "state": "UNKNOWN",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "SPECIAL",
+   "population": "DOME",
+   "quantity_state": null,
+   "refs": [
+    "V3b C-DOME-SHELL-*"
+   ],
+   "state": "PRESENT",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "BOUNDARY",
+   "population": "BOUNDARY_WALL",
+   "quantity_state": null,
+   "refs": [
+    "V3b C-BWALL"
+   ],
+   "state": "BLOCKED",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "BOUNDARY",
+   "population": "BOUNDARY_RC_COLUMN",
+   "quantity_state": null,
+   "refs": [],
+   "state": "UNKNOWN",
+   "why": null
+  },
+  {
+   "flags": [
+    "FREELANCER_HINT_BOUNDARY_BEAM_42M"
+   ],
+   "group": "BOUNDARY",
+   "population": "BOUNDARY_GROUND_BEAM",
+   "quantity_state": null,
+   "refs": [
+    "S1 BEAM_DEFINITION_REGISTER B.W (no plan occurrence)"
+   ],
+   "state": "BLOCKED",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "ROOF",
+   "population": "PARAPET",
+   "quantity_state": null,
+   "refs": [
+    "S2 STR-PAR-001"
+   ],
+   "state": "BLOCKED",
+   "why": "parapet geometry missing"
+  },
+  {
+   "flags": [
+    "PARAPET_STIFFENER_SPACING_REQUIRED"
+   ],
+   "group": "ROOF",
+   "population": "PARAPET_RC_STIFFENER_COLUMN",
+   "quantity_state": null,
+   "refs": [],
+   "state": "UNKNOWN",
+   "why": "not printed; Urban 4 m candidate is a provisional scenario only"
+  },
+  {
+   "flags": [
+    "PARAPET_TOP_RING_BEAM_DETAIL_REQUIRED"
+   ],
+   "group": "ROOF",
+   "population": "PARAPET_TOP_RING_BEAM",
+   "quantity_state": null,
+   "refs": [],
+   "state": "UNKNOWN",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "OTHER",
+   "population": "EQUIPMENT_BASE",
+   "quantity_state": null,
+   "refs": [],
+   "state": "UNKNOWN",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "OTHER",
+   "population": "PLANTER_STRUCTURAL_ELEMENT",
+   "quantity_state": null,
+   "refs": [],
+   "state": "UNKNOWN",
+   "why": null
+  },
+  {
+   "flags": [],
+   "group": "OTHER",
+   "population": "OTHER_SPECIAL_RC_DETAIL",
+   "quantity_state": null,
+   "refs": [
+    "ST7757 p.15 casement beam (candidate)"
+   ],
+   "state": "UNKNOWN",
+   "why": null
+  }
+ ]
+}

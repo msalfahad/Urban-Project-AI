@@ -1,0 +1,79 @@
+{
+  "SCHEMA": "R8_0_EXPOSURE_CENSUS_V1",
+  "computed": "2026-09-30",
+  "method": "read-only count of source classes in the LibreDWG JSON decode (tests/r8_0/exposure_census.py); counts classes, never quantities; not used to set any tolerance or formula",
+  "definitions": {
+    "INSERT_REALISED_MIRRORED": "realised INSERT placements whose composed scale determinant is negative",
+    "ARC_REALISED_IN_MIRRORED": "realised ARC instances under a mirrored composed placement (18 unique ARC entities on Al Rashed)",
+    "BULGE_SPAN_REALISED_IN_MIRRORED": "bulged LWPOLYLINE spans realised under a mirrored placement"
+  },
+  "correction": "The External Code Absorption Review (03 §0) called the P7757 decode 'Al Rashed'. P7757 is a different project. Al Rashed = ALRASHED_ARCHITECTURAL.json. OCS exposure on Al Rashed is 6 ELLIPSE entities with normal (0,0,-1), not zero.",
+  "projects": [
+    {
+      "source": "data/runs/cad_convert/ALRASHED_ARCHITECTURAL.json",
+      "sha256_16": "4196c03d6feae645",
+      "INSUNITS": 1,
+      "ARC_REALISED": 1620,
+      "INSERT_REALISED": 808,
+      "BULGE_SPAN_REALISED": 2132,
+      "INSERT_REALISED_MIRRORED": 68,
+      "BULGE_SPAN_REALISED_IN_MIRRORED": 0,
+      "ARC_REALISED_IN_MIRRORED": 46,
+      "MIRRORED_INSERTS_BY_LAYER": {
+        "0": 43,
+        "A-TARG": 6,
+        "WIN - EWAN": 7,
+        "SYM-EWAN": 12
+      },
+      "ARCS_IN_MIRRORED_BY_LAYER": {
+        "DOOR-EWAN": 43,
+        "A-TARG": 3
+      },
+      "ENTITIES_NON_DEFAULT_EXTRUSION": 6,
+      "ENTITIES_EXTRUSION_UNREADABLE": 0,
+      "BLOCK_HEADERS": 610,
+      "BLOCK_BASE_POINT_NON_ZERO": 0,
+      "XREF_BLOCK_HEADERS": 0,
+      "MINSERT": 0,
+      "OLE2FRAME": 0,
+      "ACAD_PROXY_ENTITY": 0,
+      "CUSTOM_CLASS_ENTITIES": 10,
+      "ELLIPSE": 319,
+      "SPLINE": 0,
+      "MTEXT": 515,
+      "DIMENSIONS": 514,
+      "DIMENSION_LINEAR_ROTATED_TYPE": 454
+    },
+    {
+      "source": "data/runs/cad_convert/P7757_ARCHITECTURAL.json",
+      "sha256_16": "c742657fab496d55",
+      "INSUNITS": 4,
+      "BULGE_SPAN_REALISED": 267,
+      "INSERT_REALISED": 180,
+      "ARC_REALISED": 175,
+      "INSERT_REALISED_MIRRORED": 13,
+      "BULGE_SPAN_REALISED_IN_MIRRORED": 0,
+      "ARC_REALISED_IN_MIRRORED": 11,
+      "MIRRORED_INSERTS_BY_LAYER": {
+        "4": 13
+      },
+      "ARCS_IN_MIRRORED_BY_LAYER": {
+        "D": 11
+      },
+      "ENTITIES_NON_DEFAULT_EXTRUSION": 0,
+      "ENTITIES_EXTRUSION_UNREADABLE": 0,
+      "BLOCK_HEADERS": 442,
+      "BLOCK_BASE_POINT_NON_ZERO": 0,
+      "XREF_BLOCK_HEADERS": 0,
+      "MINSERT": 0,
+      "OLE2FRAME": 0,
+      "ACAD_PROXY_ENTITY": 0,
+      "CUSTOM_CLASS_ENTITIES": 4,
+      "ELLIPSE": 0,
+      "SPLINE": 0,
+      "MTEXT": 389,
+      "DIMENSIONS": 388,
+      "DIMENSION_LINEAR_ROTATED_TYPE": 366
+    }
+  ]
+}

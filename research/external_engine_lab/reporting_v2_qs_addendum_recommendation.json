@@ -1,0 +1,63 @@
+{
+ "SCHEMA": "URBAN_REPORTING_V2_QS_ADDENDUM_RECOMMENDATION_V1",
+ "scope": "Addendum to Reporting V2: QS working & reconciliation Excel. Presentation only - no engine, quantity, status, authority, owner fact, method, blocker or release change.",
+ "timing_disclosure": "Drafted while the addendum code was being written (uncommitted); committed before the implementation commit.",
+ "formula_policy": {
+  "rule": "No formula creates or replaces an Urban engine quantity. Engine values are frozen register values (or declared sums of them) in locked cells.",
+  "allowed": [
+   "00 MAIN TOTALS BY TRADE: SUM over the frozen line totals of PROJECT BOQ LINES",
+   "00 TOTALS BY FLOOR: SUM over the frozen per-level line cells; TOTAL PROJECT row = SUM of the floors",
+   "00 coverage: COUNTIFS over the BOQ line status / class columns; share = DIV",
+   "08 subtotals / project totals of Urban values and of the manual checks",
+   "08 manual check arithmetic (COUNT x L x W x H, L x B x (D - t), COUNT x B x D x H, area x t)",
+   "08 difference, difference %, reconciliation status, check progress counts"
+  ],
+  "not_a_formula": [
+   "every engine quantity cell",
+   "every PROJECT BOQ LINES line total (the canonical line quantity stays a frozen value)",
+   "every Urban value on 08"
+  ],
+  "validation": "Each report total carries the deterministic value (exact decimal sum) it must equal; validate() fails otherwise. readback refuses any formula the model does not hold, any formula text that differs, an unprotected sheet, an unlocked engine cell or an unlocked non-input cell. LibreOffice Calc recalculates the workbook and every computed value must equal the Python evaluation; a what-if types manual values into a copy and checks every changed formula and status."
+ },
+ "sheet_08": {
+  "order": "after 07_METHODS_TRACEABILITY, before the TECH_ appendix",
+  "sections": [
+   "CHECK SETTINGS / LEGEND (editable MATCH / CLOSE tolerances)",
+   "CHECK PROGRESS BY FLOOR",
+   "ITEM RECONCILIATION - BY FLOOR (filterable; floor blocks with thick borders; group subtotals; PROJECT totals)",
+   "ARCHITECTURAL RECONCILIATION - PROJECT",
+   "adapter structural blocks: FOOTINGS / BEAMS / COLUMNS / SLABS (Alsenan)"
+  ],
+  "floor_blocks_alsenan": [
+   "FOUNDATION",
+   "GF",
+   "1F",
+   "SECOND FLOOR / ROOF (2F + ROOF)",
+   "EXTERNAL / OTHER (EXTERNAL + level not assigned)",
+   "PROJECT TOTAL"
+  ],
+  "columns": "ITEM CODE, FLOOR, TRADE, ITEM GROUP, ROOM / ELEMENT, DESCRIPTION EN, DESCRIPTION AR, URBAN ENGINE QTY (locked), UNIT, URBAN STATUS, MANUAL / CHECK QTY (input), DIFFERENCE (= manual - Urban), DIFFERENCE % (= difference / Urban), RECONCILIATION STATUS, CHECK NOTES (input); plus ROW TYPE for filtering",
+  "colours": "white / grey = engine (locked); light yellow = input; light blue = formula; green / amber / red = MATCH / CLOSE / REVIEW; grey = ENGINE BLOCKED / NOT CHECKED / NOT COMPARABLE",
+  "protection": "every sheet protected WITHOUT a password (filters, sorting, formatting allowed); only the yellow input cells are unlocked",
+  "qortuba": "generic 08 only (item, progress and architectural blocks): the RC1 registers carry no structural register"
+ },
+ "status_rules": {
+  "ENGINE BLOCKED": "Urban quantity is BLOCKED - never a mismatch, no difference, no %",
+  "NOT COMPARABLE": "Urban has no quantity on this basis (e.g. not measured / not on plan) or the manual value is not a number",
+  "NOT CHECKED": "no manual value yet",
+  "MATCH / CLOSE / REVIEW": "|manual / Urban - 1| <= MATCH tol (0.5 %) / <= CLOSE tol (3 %) / beyond; Urban = 0: MATCH only if manual = 0",
+  "defaults": "tolerances are editable report parameters, not engine values"
+ },
+ "prefill_policy": {
+  "footings": "COUNT = tags found on the plan, L / W / H = schedule dimensions (register type summary). Shows F at REVIEW (+25 %): 5 tags vs 4 computed - the F / F10 SOURCE_CONFLICT outline Urban excludes.",
+  "beams_columns_slabs": "Only source facts are pre-filled (B, D, slab t, column count found). The measured quantities (clear length, clear height, net slab area) are left blank for the QS's own take-off; the Urban value sits next to them, locked.",
+  "consistency_proof": "Typing the Urban length / height / area into the check inputs gives MATCH on every computed beam, column and slab row (test)."
+ },
+ "disagreements_or_extensions": [
+  "NOT CHECKED is a sixth reconciliation state: a row nobody has checked cannot honestly be MATCH or REVIEW.",
+  "PROJECT BOQ LINES line totals stay frozen values, not SUM formulas: the line total is the canonical QTO line; formulas only add frozen lines into trade / floor totals.",
+  "Marble and hidden profile have no Alsenan register: shown as NOT MEASURED (NOT COMPARABLE), not ENGINE BLOCKED and not 0.",
+  "The Excel file has no cached formula values (openpyxl); Excel / LibreOffice compute them on open (fullCalcOnLoad). The PDF prints the Python-evaluated values (= the LibreOffice-computed values, checked)."
+ ],
+ "owner_actions": "NONE (tolerances 0.5 % / 3 % are editable in the sheet)"
+}

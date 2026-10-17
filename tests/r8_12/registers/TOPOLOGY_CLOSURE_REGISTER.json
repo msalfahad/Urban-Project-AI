@@ -1,0 +1,197 @@
+{
+ "SCHEMA": "URBAN_R8_12_TOPOLOGY_CLOSURE_REGISTER_V1",
+ "policy": {
+  "policy_id": "TOPOLOGY_CLOSURE_POLICY_V1",
+  "rule": "WALL_END_CLOSURE_V1",
+  "material": "NONE: never wall length, area or finish",
+  "geometry": "the segment between the two face end points of an aligned free end (source coordinates of the faces; never a cap's coordinates; never a moved end point)",
+  "authorised_for_shadow_requires": [
+   "established band",
+   "aligned free end",
+   "drawn cap corroboration",
+   "label partition unchanged",
+   "separated pieces are pure band interiors (band faces, closures, cross edges parallel to the closure)",
+   "area balance"
+  ],
+  "release_levels": [
+   "TOPOLOGY_CLOSURE_CANDIDATE",
+   "DIAGNOSTIC_PASS",
+   "REVIEWED",
+   "AUTHORISED_FOR_SHADOW",
+   "AUTHORISED_FOR_RELEASE",
+   "TOPOLOGY_CLOSURE_UNRESOLVED"
+  ],
+  "never": [
+   "distance alone (a near-miss < 50 mm never joins anything)",
+   "a closure between two labelled rooms without stronger authority",
+   "an opening width change",
+   "a source edit"
+  ],
+  "digest": "46742c570b4d8a036fd6b7446f28055bfd4e1adbff51966e800e5986ca99ccb2"
+ },
+ "NEW_K2": [
+  {
+   "closure_id": "TC-502c8a0e35d1d748",
+   "band_id": "WB-87c8552f83e32a2d",
+   "release": "AUTHORISED_FOR_SHADOW",
+   "geometry": [
+    109773.7561,
+    15029.7196,
+    109773.7561,
+    15049.7196
+   ],
+   "evidence": [
+    "471",
+    "477",
+    "2430"
+   ],
+   "material": "NONE",
+   "safety": {
+    "label_partition_unchanged": true,
+    "area_balance_ok": true,
+    "passes": true,
+    "separated_pieces": [
+     {
+      "area_m2": 0.3813,
+      "pure_band_interior": true,
+      "boundary": [
+       "470",
+       "471",
+       "477",
+       "718",
+       "TCLOSURE|TC-502c8a0e35d1d748"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "closure_id": "TC-9f4609652793df15",
+   "band_id": "WB-7b3ad095cb4bcecb",
+   "release": "AUTHORISED_FOR_SHADOW",
+   "geometry": [
+    109893.4009,
+    15029.7196,
+    109893.4009,
+    15049.7196
+   ],
+   "evidence": [
+    "2296",
+    "2297",
+    "2431"
+   ],
+   "material": "NONE",
+   "safety": {
+    "label_partition_unchanged": true,
+    "area_balance_ok": true,
+    "passes": true,
+    "separated_pieces": [
+     {
+      "area_m2": 0.6494,
+      "pure_band_interior": true,
+      "boundary": [
+       "2296",
+       "2297",
+       "549",
+       "TCLOSURE|TC-9f4609652793df15"
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "OLD_K1": [],
+ "h2431_regression": {
+  "r8_11": {
+   "closure_id": "TC-aea10821cffe20ff",
+   "band_id": "WB-b1fe3d69cf126ddb",
+   "kind": "WALL_END_CLOSURE",
+   "rule": "WALL_END_CLOSURE_V1",
+   "release": "AUTHORISED_FOR_SHADOW",
+   "geometry": [
+    109893.4,
+    15029.72,
+    109893.4,
+    15049.72
+   ],
+   "source_evidence": [
+    "2296",
+    "2297",
+    "2431"
+   ],
+   "authority": "ENGINE_DERIVED (TOPOLOGY_CLOSURE_POLICY_V1)",
+   "physical_material": "NONE",
+   "affects_topology": true,
+   "affects_wall_quantity": false,
+   "affects_finish_quantity": false,
+   "reversible": true,
+   "corroboration": [
+    {
+     "source": "2431",
+     "role": "DIMENSION_GRAPHICS",
+     "grade": "WALL_END_CAP_CANDIDATE"
+    }
+   ],
+   "safety": {
+    "label_partition_unchanged": true,
+    "area_balance_ok": true,
+    "passes": true,
+    "separated_pieces": [
+     {
+      "area_m2": 0.6494,
+      "pure_band_interior": true,
+      "from_site": "SITE-8bb22e86906129c0",
+      "boundary": [
+       "2296",
+       "2297",
+       "549",
+       "TCLOSURE|TC-aea10821cffe20ff"
+      ]
+     }
+    ]
+   }
+  },
+  "r8_12": {
+   "closure_id": "TC-9f4609652793df15",
+   "band_id": "WB-7b3ad095cb4bcecb",
+   "release": "AUTHORISED_FOR_SHADOW",
+   "geometry": [
+    109893.4009,
+    15029.7196,
+    109893.4009,
+    15049.7196
+   ],
+   "evidence": [
+    "2296",
+    "2297",
+    "2431"
+   ],
+   "material": "NONE",
+   "safety": {
+    "label_partition_unchanged": true,
+    "area_balance_ok": true,
+    "passes": true,
+    "separated_pieces": [
+     {
+      "area_m2": 0.6494,
+      "pure_band_interior": true,
+      "boundary": [
+       "2296",
+       "2297",
+       "549",
+       "TCLOSURE|TC-9f4609652793df15"
+      ]
+     }
+    ]
+   }
+  },
+  "same_geometry": true,
+  "compared_at": "0.01 native (R8.11 recorded 2 decimals)",
+  "id_changed_because": "closure ids derive from the band id, and band ids are V3 assembly ids"
+ },
+ "h1316_control": {
+  "closures_with_1316": [],
+  "classification": "NOT_WALL_CAP (window jamb; unchanged)"
+ },
+ "material": "NONE for every closure"
+}

@@ -1,0 +1,13 @@
+ID,ITEM,STATE,EVIDENCE,QUESTIONS
+SC-01,A1-F1 foot,SOURCE_CONFLICT,GFRS 12 risers from y 16162 vs ARCH-GF 10 from y 16762 (GBP agrees with ARCH-GF on the foot),Q-ST7A-01
+SC-02,A1-F2 head,SOURCE_CONFLICT,"GFRS 12 (last at y 16112, inside head beam B20) and SECTION A-A 12 vs ARCH-GF 11 (last at y 16412)",Q-ST7A-02
+SC-03,A1 total,SOURCE_CONFLICT,GFRS 28 (owner A) vs ARCH-GF 25; owner B 29 not drawn,"Q-ST7A-01, Q-ST7A-05"
+SC-04,A1-L1 level,SOURCE_CONFLICT,section A-A +3.50 vs +3.571 (28 uniform) / +3.520 (25 uniform),Q-ST7A-03
+SC-05,A2-W1 winders,SOURCE_CONFLICT,ARCH-1F 3 radial + closing vs FFRS / ARCH-2F closing riser only,Q-ST7A-04
+SC-06,A2-F2 count,SOURCE_CONFLICT,every plan 11 vs SECTION A-A 12 (a 12th riser would fall inside head beam B23),Q-ST7A-04
+SC-07,A2 total,SOURCE_CONFLICT,ARCH-1F 27 (owner A) vs FFRS / ARCH-2F 24; owner B 26 not drawn,"Q-ST7A-04, Q-ST7A-05"
+SC-08,irregular goings (ARCH-GF A1-F1 top),DRAWING_FACT,"pitches 325, 250, 316.7 mm above the cut plane (pairs incomplete)",Q-ST7A-01
+SC-09,waist thickness,BLOCKED_UNQUANTIFIED,p.16 'THICK' without a value; 'T 16' zone tags only,Q-ST7A-07
+SC-10,light-well corner landing level,BLOCKED_UNQUANTIFIED,not printed (+4.696 if 28 uniform risers),Q-ST7A-11
+SC-11,floor and stair finishes,BLOCKED_UNQUANTIFIED,build-ups not printed; 30 mm marble owner scenario,Q-ST7A-06
+SC-12,counting method,NOT_A_CONFLICT,"nosing and riser-face lines are pairs (50 mm apart): counted once; the landing-edge lines (flight 1 last riser, the closing riser, flight 2 first riser) are real risers and are each counted once; repeated views (GBP, ARCH-2F, ARCH-GF light well) are not extra stairs",-

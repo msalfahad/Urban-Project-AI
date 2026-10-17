@@ -1,0 +1,14 @@
+STEP,MODULE,KIND,RUNS_ON_A_NEW_VILLA,MANUAL_WORK
+1 accept DXF / PDF,tools/urban_structural_boq.py accept(),GENERIC,YES,none
+"2 inventory sheets, layers, tags, outlines",engine/source/drawing_inventory.py,GENERIC,YES,none; role guesses are UNCONFIRMED
+"3a census of footings and columns (outlines, tags, schedule binding)",engine/source/profile_takeoff.py (structural_qto rectangles / associate / size_check),GENERIC + PROFILE,PARTIAL,"a person confirms the profile: layers, tag pattern, sheets, storey heights, schedule rows"
+"3b census of beams, slabs, ground beams, stairs, lintels, domes, lift, pool",research/external_engine_lab/alsenan_structural_s1.py + stage builders S4 - S8.8,PROJECT_SPECIFIC,NO,"the S1-type census and each family stage are written for this drawing (inserts, layers, tag regexes, DXF path)"
+3c schedule tables,engine/source/schedule_table.py (reader) + per-project table regions,"GENERIC READER, PROJECT REGIONS",PARTIAL,table regions and header bands per drawing; M1's profile takes typed rows
+"3d printed rules (cover, laps, mesh notes)",research rules_s1.py (hand transcription),MANUAL,NO,rules are transcribed from the PDF by hand
+4 supported quantities,"engine/source/structural_qto.py, structural_schedule.py, stage engines",GENERIC,PARTIAL,footings and columns only on a new villa
+5 provisional conventions,engine/source/provisional_estimate.py + a convention JSON,GENERIC,YES,a convention set per project (the ST7757 set is a template)
+"6 checks: one owner, order, unresolved apart",provisional_estimate.check / quantity_scenarios,GENERIC,YES,none
+6 missing components and overlaps,profile_takeoff exceptions; S9A-type overlap audit,GENERIC (outline level) / PROJECT (S9A),PARTIAL,outline-level only on a new villa
+"7 BOQ, registers, exception report",tools/urban_structural_boq.py,GENERIC,YES,none
+8 Excel and PDF,"engine/boq_m1_xlsx.py, tools/m1_report.py, Chromium",GENERIC,YES,none
+strict verified release,S1 - S9 stage gates + human review,PROJECT + MANUAL,NO,release needs the stage review; M1 never releases

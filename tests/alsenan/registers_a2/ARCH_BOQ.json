@@ -1,0 +1,1253 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A2_ARCH_BOQ_V1",
+ "columns": [
+  "ITEM CODE",
+  "DISCIPLINE",
+  "TRADE",
+  "FLOOR",
+  "ROOM/ELEMENT",
+  "DESCRIPTION AR",
+  "DESCRIPTION EN",
+  "QTY",
+  "UNIT",
+  "STATUS",
+  "CLASS",
+  "SOURCE",
+  "RULE",
+  "BLOCKER"
+ ],
+ "rows": [
+  {
+   "item": "A2-FLR-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "FLOOR_AREA",
+   "floor": "GF",
+   "element": "4 certified room(s): W.C 2.68, W.C 1.95, W.C 2.36, W.C 3.38",
+   "ar": "مساحة الأرضيات (صافي)",
+   "en": "Floor area per room, clear internal",
+   "qty": 10.362721,
+   "unit": "m2",
+   "status": "AUTHORISED_SUBTOTAL",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "site polygon of a CERTIFIED labelled site",
+   "blockers": [
+    "ROOM_NOT_CERTIFIED: W.C (GEOS_CROSSCHECK_DISAGREES)",
+    "ROOM_NOT_CERTIFIED: DEWANEYA / Wash (LABEL_OCCURRENCE_SPLIT; MULTIPLE_SEMANTIC_LABELS)",
+    "ROOM_NOT_CERTIFIED: KITCHEN (TOPOLOGY_ROLE_UNRESOLVED)",
+    "ROOM_NOT_CERTIFIED: (label not decoded) (LABEL_OCCURRENCE_SPLIT; TOPOLOGY_ROLE_UNRESOLVED)"
+   ]
+  },
+  {
+   "item": "A2-CLG-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "CEILING_BASE",
+   "floor": "GF",
+   "element": "4 certified room(s): W.C 2.68, W.C 1.95, W.C 2.36, W.C 3.38",
+   "ar": "مساحة السقف الأساسية",
+   "en": "Base physical ceiling area (= room plan area; false-ceiling adjustment blocked)",
+   "qty": 10.362721,
+   "unit": "m2",
+   "status": "AUTHORISED_SUBTOTAL",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "BASE_PHYSICAL_CEILING_AREA = clear plan area",
+   "blockers": [
+    "ROOM_NOT_CERTIFIED: W.C (GEOS_CROSSCHECK_DISAGREES)",
+    "ROOM_NOT_CERTIFIED: DEWANEYA / Wash (LABEL_OCCURRENCE_SPLIT; MULTIPLE_SEMANTIC_LABELS)",
+    "ROOM_NOT_CERTIFIED: KITCHEN (TOPOLOGY_ROLE_UNRESOLVED)",
+    "ROOM_NOT_CERTIFIED: (label not decoded) (LABEL_OCCURRENCE_SPLIT; TOPOLOGY_ROLE_UNRESOLVED)"
+   ]
+  },
+  {
+   "item": "A2-WFL-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WALL_FACE_LENGTH",
+   "floor": "GF",
+   "element": "4 certified room(s): W.C 2.68, W.C 1.95, W.C 2.36, W.C 3.38",
+   "ar": "طول أوجه الجدران",
+   "en": "Physical wall-face length (wall + column faces bounding the certified rooms)",
+   "qty": 22.916998,
+   "unit": "m",
+   "status": "AUTHORISED_SUBTOTAL",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "boundary role lengths TOPOLOGY_BOUNDARY + STRUCTURAL_OBSTACLE",
+   "blockers": [
+    "ROOM_NOT_CERTIFIED: W.C (GEOS_CROSSCHECK_DISAGREES)",
+    "ROOM_NOT_CERTIFIED: DEWANEYA / Wash (LABEL_OCCURRENCE_SPLIT; MULTIPLE_SEMANTIC_LABELS)",
+    "ROOM_NOT_CERTIFIED: KITCHEN (TOPOLOGY_ROLE_UNRESOLVED)",
+    "ROOM_NOT_CERTIFIED: (label not decoded) (LABEL_OCCURRENCE_SPLIT; TOPOLOGY_ROLE_UNRESOLVED)"
+   ]
+  },
+  {
+   "item": "A2-WFA-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WALL_FACE_AREA",
+   "floor": "GF",
+   "element": "4 certified room(s): W.C 2.68, W.C 1.95, W.C 2.36, W.C 3.38",
+   "ar": "مساحة أوجه الجدران",
+   "en": "Physical wall-face area",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "face length x clear height",
+   "blockers": [
+    "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+   ]
+  },
+  {
+   "item": "A2-SKP-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "SKIRTING_PATH",
+   "floor": "GF",
+   "element": "4 certified room(s): W.C 2.68, W.C 1.95, W.C 2.36, W.C 3.38",
+   "ar": "مسار الوزرة",
+   "en": "Skirting-eligible path (perimeter minus door closures; windows not deducted - none proved floor-reaching)",
+   "qty": 23.516999,
+   "unit": "m",
+   "status": "AUTHORISED_SUBTOTAL",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "perimeter - OPENING_BOUNDARY length",
+   "blockers": [
+    "ROOM_NOT_CERTIFIED: W.C (GEOS_CROSSCHECK_DISAGREES)",
+    "ROOM_NOT_CERTIFIED: DEWANEYA / Wash (LABEL_OCCURRENCE_SPLIT; MULTIPLE_SEMANTIC_LABELS)",
+    "ROOM_NOT_CERTIFIED: KITCHEN (TOPOLOGY_ROLE_UNRESOLVED)",
+    "ROOM_NOT_CERTIFIED: (label not decoded) (LABEL_OCCURRENCE_SPLIT; TOPOLOGY_ROLE_UNRESOLVED)"
+   ]
+  },
+  {
+   "item": "A2-FFN-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "FLOOR_FINISH",
+   "floor": "GF",
+   "element": "4 certified room(s): W.C 2.68, W.C 1.95, W.C 2.36, W.C 3.38",
+   "ar": "مادة التشطيب للأرضيات",
+   "en": "Floor finish material",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "physical floor area exists (A2-FLR); material assignment needs a finish schedule",
+   "blockers": [
+    "FINISH_MATERIAL_NOT_IN_SOURCE: no finish schedule exists (owner: the supplied files are all the files)"
+   ]
+  },
+  {
+   "item": "A2-WFN-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WALL_FINISH",
+   "floor": "GF",
+   "element": "4 certified room(s): W.C 2.68, W.C 1.95, W.C 2.36, W.C 3.38",
+   "ar": "تشطيب الجدران (لياسة / دهان / بلاط)",
+   "en": "Wall finish (plaster / paint / tile)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "needs wall-face area AND a finish schedule",
+   "blockers": [
+    "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source",
+    "FINISH_MATERIAL_NOT_IN_SOURCE: no finish schedule exists (owner: the supplied files are all the files)"
+   ]
+  },
+  {
+   "item": "A2-CFN-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "CEILING_FINISH",
+   "floor": "GF",
+   "element": "4 certified room(s): W.C 2.68, W.C 1.95, W.C 2.36, W.C 3.38",
+   "ar": "تشطيب الأسقف",
+   "en": "Ceiling finish / false ceiling",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "base ceiling area exists (A2-CLG); finish and false-ceiling levels not in source",
+   "blockers": [
+    "FINISH_MATERIAL_NOT_IN_SOURCE: no finish schedule exists (owner: the supplied files are all the files)"
+   ]
+  },
+  {
+   "item": "A2-SKM-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "SKIRTING_MATERIAL",
+   "floor": "GF",
+   "element": "4 certified room(s): W.C 2.68, W.C 1.95, W.C 2.36, W.C 3.38",
+   "ar": "مادة الوزرة",
+   "en": "Skirting material",
+   "qty": null,
+   "unit": "m",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "path exists (A2-SKP); material not in source",
+   "blockers": [
+    "FINISH_MATERIAL_NOT_IN_SOURCE: no finish schedule exists (owner: the supplied files are all the files)"
+   ]
+  },
+  {
+   "item": "A2-WET-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WET_ROOM_FLOOR",
+   "floor": "GF",
+   "element": "W.C, W.C, W.C",
+   "ar": "مساحة أرضيات المناطق المبتلة",
+   "en": "Wet-room floor area (waterproofing scope candidate)",
+   "qty": 8.000221,
+   "unit": "m2",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "TRADE_ASSIGNMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "certified room + wet label + fixture symbol inside (semantics only; sanitary PDF supporting)",
+   "blockers": []
+  },
+  {
+   "item": "A2-WPM-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WATERPROOFING_MATERIAL",
+   "floor": "GF",
+   "element": "wet rooms",
+   "ar": "مادة العزل المائي",
+   "en": "Waterproofing membrane / upturn",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "membrane type and upturn height not in source",
+   "blockers": [
+    "FINISH_MATERIAL_NOT_IN_SOURCE: no finish schedule exists (owner: the supplied files are all the files)"
+   ]
+  },
+  {
+   "item": "A2-BLK-GF-T150",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK_LENGTH",
+   "floor": "GF",
+   "element": "20 established bands, 150 mm",
+   "ar": "طول البلوك سماكة 150 مم",
+   "en": "Blockwork length, 150 mm wall bands (column overlaps excluded)",
+   "qty": 26.054482,
+   "unit": "m",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "WALL_BAND_ESTABLISHED interval length minus OBSTACLE_OVERLAP",
+   "blockers": [
+    "9 ambiguous band(s) on GF not included (WALL_BAND_AMBIGUOUS)",
+    "1 established band(s) outside the 80-400 mm wall range not included (920 mm: sheet / title-block linework)"
+   ]
+  },
+  {
+   "item": "A2-BLA-GF-T150",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK_AREA",
+   "floor": "GF",
+   "element": "150 mm",
+   "ar": "مساحة البلوك سماكة 150 مم",
+   "en": "Blockwork area, 150 mm",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "length x wall height",
+   "blockers": [
+    "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+   ]
+  },
+  {
+   "item": "A2-BLK-GF-T200",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK_LENGTH",
+   "floor": "GF",
+   "element": "34 established bands, 200 mm",
+   "ar": "طول البلوك سماكة 200 مم",
+   "en": "Blockwork length, 200 mm wall bands (column overlaps excluded)",
+   "qty": 34.381162,
+   "unit": "m",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "WALL_BAND_ESTABLISHED interval length minus OBSTACLE_OVERLAP",
+   "blockers": [
+    "9 ambiguous band(s) on GF not included (WALL_BAND_AMBIGUOUS)",
+    "1 established band(s) outside the 80-400 mm wall range not included (920 mm: sheet / title-block linework)"
+   ]
+  },
+  {
+   "item": "A2-BLA-GF-T200",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK_AREA",
+   "floor": "GF",
+   "element": "200 mm",
+   "ar": "مساحة البلوك سماكة 200 مم",
+   "en": "Blockwork area, 200 mm",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "length x wall height",
+   "blockers": [
+    "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+   ]
+  },
+  {
+   "item": "A2-DOR-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "DOORS",
+   "floor": "GF",
+   "element": "11 closed of 13 door symbols",
+   "ar": "عدد الأبواب",
+   "en": "Doors (existence: wall gap + door-symbol motif)",
+   "qty": 11,
+   "unit": "nr",
+   "status": "AUTHORISED_SUBTOTAL",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "inferred door occurrence admitted AND its opening closure CLOSED",
+   "blockers": [
+    "OPENING_CLOSURE_UNRESOLVED: I1023 (no leaf hypothesis lands on admitted walls at both ends)",
+    "OPENING_CLOSURE_UNRESOLVED: I754 (no leaf hypothesis lands on admitted walls at both ends)"
+   ]
+  },
+  {
+   "item": "A2-DRM-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "DOOR_TYPE_MATERIAL",
+   "floor": "GF",
+   "element": "doors",
+   "ar": "نوع ومادة الأبواب وارتفاعها",
+   "en": "Door type / material / height",
+   "qty": null,
+   "unit": "nr",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "door schedule",
+   "blockers": [
+    "DOOR_SCHEDULE_NOT_IN_SOURCE",
+    "DOOR_HEIGHT_NOT_PRINTED"
+   ]
+  },
+  {
+   "item": "A2-WIN-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WINDOWS",
+   "floor": "GF",
+   "element": "16 glazing-in-gap openings",
+   "ar": "عدد الشبابيك",
+   "en": "Windows (existence: glazing lines inside a wall gap)",
+   "qty": 16,
+   "unit": "nr",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "entity_role_inference glazing motif",
+   "blockers": []
+  },
+  {
+   "item": "A2-WNW-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WINDOW_WIDTH",
+   "floor": "GF",
+   "element": "windows",
+   "ar": "مجموع عروض الشبابيك",
+   "en": "Window widths (sum of wall-gap widths)",
+   "qty": 23.0414,
+   "unit": "m",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "gap width jamb to jamb",
+   "blockers": []
+  },
+  {
+   "item": "A2-WNA-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WINDOW_AREA",
+   "floor": "GF",
+   "element": "windows",
+   "ar": "مساحة الشبابيك",
+   "en": "Window area / aluminium / glazing",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "width x height",
+   "blockers": [
+    "WINDOW_HEIGHT_NOT_PRINTED: no sill / head level in any source for these openings",
+    "WINDOW_SCHEDULE_NOT_IN_SOURCE"
+   ]
+  },
+  {
+   "item": "A2-STT-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "STAIR_TREADS",
+   "floor": "GF",
+   "element": "4 lines @ 300 x 1150 mm; 7 lines @ 300 x 1150 mm; 6 lines @ 300 x 1150 mm; 5 lines @ 300 x 2800 mm",
+   "ar": "خطوط درجات السلم",
+   "en": "Stair tread lines in plan, continuous (at or below the cut plane)",
+   "qty": 22,
+   "unit": "nr",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "tread motif (>= 4 equal parallel lines at a regular going), continuous linetype only",
+   "blockers": [
+    "20 dashed tread line(s) (flights above the cut plane) reported, not counted"
+   ]
+  },
+  {
+   "item": "A2-STR-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "STAIR_RISE_FINISH",
+   "floor": "GF",
+   "element": "stairs",
+   "ar": "ارتفاع القائمة وتشطيب الدرج والدرابزين",
+   "en": "Riser height, stair finish, railing",
+   "qty": null,
+   "unit": "m",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "riser count per flight AND floor-to-floor",
+   "blockers": [
+    "RISER_COUNT_PER_FLIGHT_NOT_PROVED (plan shows tread lines of several flights; which belong to one floor-to-floor rise is not proved)",
+    "FINISH_MATERIAL_NOT_IN_SOURCE: no finish schedule exists (owner: the supplied files are all the files)"
+   ]
+  },
+  {
+   "item": "A2-FLR-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "FLOOR_AREA",
+   "floor": "1F",
+   "element": "4 certified room(s): BATH 5.02, BATH 4.72, MASTER BED ROOM 16.34, BATH 3.58",
+   "ar": "مساحة الأرضيات (صافي)",
+   "en": "Floor area per room, clear internal",
+   "qty": 29.665,
+   "unit": "m2",
+   "status": "AUTHORISED_SUBTOTAL",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "site polygon of a CERTIFIED labelled site",
+   "blockers": [
+    "ROOM_NOT_CERTIFIED: MASTER BED ROOM / MASTER BED ROOM (MULTIPLE_SEMANTIC_LABELS)"
+   ]
+  },
+  {
+   "item": "A2-CLG-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "CEILING_BASE",
+   "floor": "1F",
+   "element": "4 certified room(s): BATH 5.02, BATH 4.72, MASTER BED ROOM 16.34, BATH 3.58",
+   "ar": "مساحة السقف الأساسية",
+   "en": "Base physical ceiling area (= room plan area; false-ceiling adjustment blocked)",
+   "qty": 29.665,
+   "unit": "m2",
+   "status": "AUTHORISED_SUBTOTAL",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "BASE_PHYSICAL_CEILING_AREA = clear plan area",
+   "blockers": [
+    "ROOM_NOT_CERTIFIED: MASTER BED ROOM / MASTER BED ROOM (MULTIPLE_SEMANTIC_LABELS)"
+   ]
+  },
+  {
+   "item": "A2-WFL-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WALL_FACE_LENGTH",
+   "floor": "1F",
+   "element": "4 certified room(s): BATH 5.02, BATH 4.72, MASTER BED ROOM 16.34, BATH 3.58",
+   "ar": "طول أوجه الجدران",
+   "en": "Physical wall-face length (wall + column faces bounding the certified rooms)",
+   "qty": 35.516349,
+   "unit": "m",
+   "status": "AUTHORISED_SUBTOTAL",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "boundary role lengths TOPOLOGY_BOUNDARY + STRUCTURAL_OBSTACLE",
+   "blockers": [
+    "ROOM_NOT_CERTIFIED: MASTER BED ROOM / MASTER BED ROOM (MULTIPLE_SEMANTIC_LABELS)"
+   ]
+  },
+  {
+   "item": "A2-WFA-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WALL_FACE_AREA",
+   "floor": "1F",
+   "element": "4 certified room(s): BATH 5.02, BATH 4.72, MASTER BED ROOM 16.34, BATH 3.58",
+   "ar": "مساحة أوجه الجدران",
+   "en": "Physical wall-face area",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "face length x clear height",
+   "blockers": [
+    "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+   ]
+  },
+  {
+   "item": "A2-SKP-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "SKIRTING_PATH",
+   "floor": "1F",
+   "element": "4 certified room(s): BATH 5.02, BATH 4.72, MASTER BED ROOM 16.34, BATH 3.58",
+   "ar": "مسار الوزرة",
+   "en": "Skirting-eligible path (perimeter minus door closures; windows not deducted - none proved floor-reaching)",
+   "qty": 37.166349,
+   "unit": "m",
+   "status": "AUTHORISED_SUBTOTAL",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "perimeter - OPENING_BOUNDARY length",
+   "blockers": [
+    "ROOM_NOT_CERTIFIED: MASTER BED ROOM / MASTER BED ROOM (MULTIPLE_SEMANTIC_LABELS)"
+   ]
+  },
+  {
+   "item": "A2-FFN-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "FLOOR_FINISH",
+   "floor": "1F",
+   "element": "4 certified room(s): BATH 5.02, BATH 4.72, MASTER BED ROOM 16.34, BATH 3.58",
+   "ar": "مادة التشطيب للأرضيات",
+   "en": "Floor finish material",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "physical floor area exists (A2-FLR); material assignment needs a finish schedule",
+   "blockers": [
+    "FINISH_MATERIAL_NOT_IN_SOURCE: no finish schedule exists (owner: the supplied files are all the files)"
+   ]
+  },
+  {
+   "item": "A2-WFN-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WALL_FINISH",
+   "floor": "1F",
+   "element": "4 certified room(s): BATH 5.02, BATH 4.72, MASTER BED ROOM 16.34, BATH 3.58",
+   "ar": "تشطيب الجدران (لياسة / دهان / بلاط)",
+   "en": "Wall finish (plaster / paint / tile)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "needs wall-face area AND a finish schedule",
+   "blockers": [
+    "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source",
+    "FINISH_MATERIAL_NOT_IN_SOURCE: no finish schedule exists (owner: the supplied files are all the files)"
+   ]
+  },
+  {
+   "item": "A2-CFN-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "CEILING_FINISH",
+   "floor": "1F",
+   "element": "4 certified room(s): BATH 5.02, BATH 4.72, MASTER BED ROOM 16.34, BATH 3.58",
+   "ar": "تشطيب الأسقف",
+   "en": "Ceiling finish / false ceiling",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "base ceiling area exists (A2-CLG); finish and false-ceiling levels not in source",
+   "blockers": [
+    "FINISH_MATERIAL_NOT_IN_SOURCE: no finish schedule exists (owner: the supplied files are all the files)"
+   ]
+  },
+  {
+   "item": "A2-SKM-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "SKIRTING_MATERIAL",
+   "floor": "1F",
+   "element": "4 certified room(s): BATH 5.02, BATH 4.72, MASTER BED ROOM 16.34, BATH 3.58",
+   "ar": "مادة الوزرة",
+   "en": "Skirting material",
+   "qty": null,
+   "unit": "m",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "path exists (A2-SKP); material not in source",
+   "blockers": [
+    "FINISH_MATERIAL_NOT_IN_SOURCE: no finish schedule exists (owner: the supplied files are all the files)"
+   ]
+  },
+  {
+   "item": "A2-WET-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WET_ROOM_FLOOR",
+   "floor": "1F",
+   "element": "none",
+   "ar": "مساحة أرضيات المناطق المبتلة",
+   "en": "Wet-room floor area (waterproofing scope candidate)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "TRADE_ASSIGNMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "certified room + wet label + fixture symbol inside (semantics only; sanitary PDF supporting)",
+   "blockers": [
+    "NO_CERTIFIED_WET_CORROBORATED_ROOM"
+   ]
+  },
+  {
+   "item": "A2-WPM-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WATERPROOFING_MATERIAL",
+   "floor": "1F",
+   "element": "wet rooms",
+   "ar": "مادة العزل المائي",
+   "en": "Waterproofing membrane / upturn",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "membrane type and upturn height not in source",
+   "blockers": [
+    "FINISH_MATERIAL_NOT_IN_SOURCE: no finish schedule exists (owner: the supplied files are all the files)"
+   ]
+  },
+  {
+   "item": "A2-BLK-1F-T150",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK_LENGTH",
+   "floor": "1F",
+   "element": "24 established bands, 150 mm",
+   "ar": "طول البلوك سماكة 150 مم",
+   "en": "Blockwork length, 150 mm wall bands (column overlaps excluded)",
+   "qty": 41.013013,
+   "unit": "m",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "WALL_BAND_ESTABLISHED interval length minus OBSTACLE_OVERLAP",
+   "blockers": [
+    "4 ambiguous band(s) on 1F not included (WALL_BAND_AMBIGUOUS)",
+    "1 established band(s) outside the 80-400 mm wall range not included (920 mm: sheet / title-block linework)"
+   ]
+  },
+  {
+   "item": "A2-BLA-1F-T150",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK_AREA",
+   "floor": "1F",
+   "element": "150 mm",
+   "ar": "مساحة البلوك سماكة 150 مم",
+   "en": "Blockwork area, 150 mm",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "length x wall height",
+   "blockers": [
+    "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+   ]
+  },
+  {
+   "item": "A2-BLK-1F-T200",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK_LENGTH",
+   "floor": "1F",
+   "element": "25 established bands, 200 mm",
+   "ar": "طول البلوك سماكة 200 مم",
+   "en": "Blockwork length, 200 mm wall bands (column overlaps excluded)",
+   "qty": 24.963392,
+   "unit": "m",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "WALL_BAND_ESTABLISHED interval length minus OBSTACLE_OVERLAP",
+   "blockers": [
+    "4 ambiguous band(s) on 1F not included (WALL_BAND_AMBIGUOUS)",
+    "1 established band(s) outside the 80-400 mm wall range not included (920 mm: sheet / title-block linework)"
+   ]
+  },
+  {
+   "item": "A2-BLA-1F-T200",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK_AREA",
+   "floor": "1F",
+   "element": "200 mm",
+   "ar": "مساحة البلوك سماكة 200 مم",
+   "en": "Blockwork area, 200 mm",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "length x wall height",
+   "blockers": [
+    "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+   ]
+  },
+  {
+   "item": "A2-DOR-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "DOORS",
+   "floor": "1F",
+   "element": "9 closed of 10 door symbols",
+   "ar": "عدد الأبواب",
+   "en": "Doors (existence: wall gap + door-symbol motif)",
+   "qty": 9,
+   "unit": "nr",
+   "status": "AUTHORISED_SUBTOTAL",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "inferred door occurrence admitted AND its opening closure CLOSED",
+   "blockers": [
+    "OPENING_CLOSURE_UNRESOLVED: I3055 (no leaf hypothesis lands on admitted walls at both ends)"
+   ]
+  },
+  {
+   "item": "A2-DRM-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "DOOR_TYPE_MATERIAL",
+   "floor": "1F",
+   "element": "doors",
+   "ar": "نوع ومادة الأبواب وارتفاعها",
+   "en": "Door type / material / height",
+   "qty": null,
+   "unit": "nr",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "door schedule",
+   "blockers": [
+    "DOOR_SCHEDULE_NOT_IN_SOURCE",
+    "DOOR_HEIGHT_NOT_PRINTED"
+   ]
+  },
+  {
+   "item": "A2-WIN-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WINDOWS",
+   "floor": "1F",
+   "element": "12 glazing-in-gap openings",
+   "ar": "عدد الشبابيك",
+   "en": "Windows (existence: glazing lines inside a wall gap)",
+   "qty": 12,
+   "unit": "nr",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "entity_role_inference glazing motif",
+   "blockers": []
+  },
+  {
+   "item": "A2-WNW-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WINDOW_WIDTH",
+   "floor": "1F",
+   "element": "windows",
+   "ar": "مجموع عروض الشبابيك",
+   "en": "Window widths (sum of wall-gap widths)",
+   "qty": 13.6067,
+   "unit": "m",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "gap width jamb to jamb",
+   "blockers": []
+  },
+  {
+   "item": "A2-WNA-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WINDOW_AREA",
+   "floor": "1F",
+   "element": "windows",
+   "ar": "مساحة الشبابيك",
+   "en": "Window area / aluminium / glazing",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "width x height",
+   "blockers": [
+    "WINDOW_HEIGHT_NOT_PRINTED: no sill / head level in any source for these openings",
+    "WINDOW_SCHEDULE_NOT_IN_SOURCE"
+   ]
+  },
+  {
+   "item": "A2-STT-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "STAIR_TREADS",
+   "floor": "1F",
+   "element": "5 lines @ 300 x 1150 mm; 11 lines @ 300 x 1150 mm",
+   "ar": "خطوط درجات السلم",
+   "en": "Stair tread lines in plan, continuous (at or below the cut plane)",
+   "qty": 16,
+   "unit": "nr",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "tread motif (>= 4 equal parallel lines at a regular going), continuous linetype only",
+   "blockers": [
+    "16 dashed tread line(s) (flights above the cut plane) reported, not counted"
+   ]
+  },
+  {
+   "item": "A2-STR-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "STAIR_RISE_FINISH",
+   "floor": "1F",
+   "element": "stairs",
+   "ar": "ارتفاع القائمة وتشطيب الدرج والدرابزين",
+   "en": "Riser height, stair finish, railing",
+   "qty": null,
+   "unit": "m",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "riser count per flight AND floor-to-floor",
+   "blockers": [
+    "RISER_COUNT_PER_FLIGHT_NOT_PROVED (plan shows tread lines of several flights; which belong to one floor-to-floor rise is not proved)",
+    "FINISH_MATERIAL_NOT_IN_SOURCE: no finish schedule exists (owner: the supplied files are all the files)"
+   ]
+  },
+  {
+   "item": "A2-FLR-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "FLOOR_AREA",
+   "floor": "2F",
+   "element": "no certified room",
+   "ar": "مساحة الأرضيات (صافي)",
+   "en": "Floor area per room, clear internal",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "site polygon of a CERTIFIED labelled site",
+   "blockers": [
+    "NO_CERTIFIED_ROOM_ON_FLOOR: 0 labelled site(s), 0 certified (see ROOM_TOPOLOGY_REGISTER)"
+   ]
+  },
+  {
+   "item": "A2-CLG-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "CEILING_BASE",
+   "floor": "2F",
+   "element": "no certified room",
+   "ar": "مساحة السقف الأساسية",
+   "en": "Base physical ceiling area (= room plan area; false-ceiling adjustment blocked)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "BASE_PHYSICAL_CEILING_AREA = clear plan area",
+   "blockers": [
+    "NO_CERTIFIED_ROOM_ON_FLOOR: 0 labelled site(s), 0 certified (see ROOM_TOPOLOGY_REGISTER)"
+   ]
+  },
+  {
+   "item": "A2-WFL-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WALL_FACE_LENGTH",
+   "floor": "2F",
+   "element": "no certified room",
+   "ar": "طول أوجه الجدران",
+   "en": "Physical wall-face length (wall + column faces bounding the certified rooms)",
+   "qty": null,
+   "unit": "m",
+   "status": "BLOCKED",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "boundary role lengths TOPOLOGY_BOUNDARY + STRUCTURAL_OBSTACLE",
+   "blockers": [
+    "NO_CERTIFIED_ROOM_ON_FLOOR: 0 labelled site(s), 0 certified (see ROOM_TOPOLOGY_REGISTER)"
+   ]
+  },
+  {
+   "item": "A2-WFA-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WALL_FACE_AREA",
+   "floor": "2F",
+   "element": "no certified room",
+   "ar": "مساحة أوجه الجدران",
+   "en": "Physical wall-face area",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "face length x clear height",
+   "blockers": [
+    "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+   ]
+  },
+  {
+   "item": "A2-SKP-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "SKIRTING_PATH",
+   "floor": "2F",
+   "element": "no certified room",
+   "ar": "مسار الوزرة",
+   "en": "Skirting-eligible path (perimeter minus door closures; windows not deducted - none proved floor-reaching)",
+   "qty": null,
+   "unit": "m",
+   "status": "BLOCKED",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "perimeter - OPENING_BOUNDARY length",
+   "blockers": [
+    "NO_CERTIFIED_ROOM_ON_FLOOR: 0 labelled site(s), 0 certified (see ROOM_TOPOLOGY_REGISTER)"
+   ]
+  },
+  {
+   "item": "A2-FFN-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "FLOOR_FINISH",
+   "floor": "2F",
+   "element": "no certified room",
+   "ar": "مادة التشطيب للأرضيات",
+   "en": "Floor finish material",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "physical floor area exists (A2-FLR); material assignment needs a finish schedule",
+   "blockers": [
+    "FINISH_MATERIAL_NOT_IN_SOURCE: no finish schedule exists (owner: the supplied files are all the files)"
+   ]
+  },
+  {
+   "item": "A2-WFN-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WALL_FINISH",
+   "floor": "2F",
+   "element": "no certified room",
+   "ar": "تشطيب الجدران (لياسة / دهان / بلاط)",
+   "en": "Wall finish (plaster / paint / tile)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "needs wall-face area AND a finish schedule",
+   "blockers": [
+    "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source",
+    "FINISH_MATERIAL_NOT_IN_SOURCE: no finish schedule exists (owner: the supplied files are all the files)"
+   ]
+  },
+  {
+   "item": "A2-CFN-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "CEILING_FINISH",
+   "floor": "2F",
+   "element": "no certified room",
+   "ar": "تشطيب الأسقف",
+   "en": "Ceiling finish / false ceiling",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "base ceiling area exists (A2-CLG); finish and false-ceiling levels not in source",
+   "blockers": [
+    "FINISH_MATERIAL_NOT_IN_SOURCE: no finish schedule exists (owner: the supplied files are all the files)"
+   ]
+  },
+  {
+   "item": "A2-SKM-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "SKIRTING_MATERIAL",
+   "floor": "2F",
+   "element": "no certified room",
+   "ar": "مادة الوزرة",
+   "en": "Skirting material",
+   "qty": null,
+   "unit": "m",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "path exists (A2-SKP); material not in source",
+   "blockers": [
+    "FINISH_MATERIAL_NOT_IN_SOURCE: no finish schedule exists (owner: the supplied files are all the files)"
+   ]
+  },
+  {
+   "item": "A2-WET-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WET_ROOM_FLOOR",
+   "floor": "2F",
+   "element": "none",
+   "ar": "مساحة أرضيات المناطق المبتلة",
+   "en": "Wet-room floor area (waterproofing scope candidate)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "TRADE_ASSIGNMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "certified room + wet label + fixture symbol inside (semantics only; sanitary PDF supporting)",
+   "blockers": [
+    "NO_CERTIFIED_WET_CORROBORATED_ROOM"
+   ]
+  },
+  {
+   "item": "A2-WPM-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WATERPROOFING_MATERIAL",
+   "floor": "2F",
+   "element": "wet rooms",
+   "ar": "مادة العزل المائي",
+   "en": "Waterproofing membrane / upturn",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "membrane type and upturn height not in source",
+   "blockers": [
+    "FINISH_MATERIAL_NOT_IN_SOURCE: no finish schedule exists (owner: the supplied files are all the files)"
+   ]
+  },
+  {
+   "item": "A2-BLK-2F-T150",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK_LENGTH",
+   "floor": "2F",
+   "element": "5 established bands, 150 mm",
+   "ar": "طول البلوك سماكة 150 مم",
+   "en": "Blockwork length, 150 mm wall bands (column overlaps excluded)",
+   "qty": 8.7,
+   "unit": "m",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "WALL_BAND_ESTABLISHED interval length minus OBSTACLE_OVERLAP",
+   "blockers": [
+    "1 established band(s) outside the 80-400 mm wall range not included (920 mm: sheet / title-block linework)"
+   ]
+  },
+  {
+   "item": "A2-BLA-2F-T150",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK_AREA",
+   "floor": "2F",
+   "element": "150 mm",
+   "ar": "مساحة البلوك سماكة 150 مم",
+   "en": "Blockwork area, 150 mm",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "length x wall height",
+   "blockers": [
+    "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+   ]
+  },
+  {
+   "item": "A2-BLK-2F-T200",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK_LENGTH",
+   "floor": "2F",
+   "element": "13 established bands, 200 mm",
+   "ar": "طول البلوك سماكة 200 مم",
+   "en": "Blockwork length, 200 mm wall bands (column overlaps excluded)",
+   "qty": 19.898394,
+   "unit": "m",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "WALL_BAND_ESTABLISHED interval length minus OBSTACLE_OVERLAP",
+   "blockers": [
+    "1 established band(s) outside the 80-400 mm wall range not included (920 mm: sheet / title-block linework)"
+   ]
+  },
+  {
+   "item": "A2-BLA-2F-T200",
+   "discipline": "ARCHITECTURAL",
+   "trade": "BLOCKWORK_AREA",
+   "floor": "2F",
+   "element": "200 mm",
+   "ar": "مساحة البلوك سماكة 200 مم",
+   "en": "Blockwork area, 200 mm",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "length x wall height",
+   "blockers": [
+    "HEIGHT_NOT_PROVED: floor-to-floor is corroborated on the sections (GF->1F 4.50, 1F->2F 4.20, 2F->roof 4.20 m) but the clear height also needs the floor build-up and any false ceiling, which are not in the source"
+   ]
+  },
+  {
+   "item": "A2-DOR-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "DOORS",
+   "floor": "2F",
+   "element": "3 closed of 3 door symbols",
+   "ar": "عدد الأبواب",
+   "en": "Doors (existence: wall gap + door-symbol motif)",
+   "qty": 3,
+   "unit": "nr",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "inferred door occurrence admitted AND its opening closure CLOSED",
+   "blockers": []
+  },
+  {
+   "item": "A2-DRM-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "DOOR_TYPE_MATERIAL",
+   "floor": "2F",
+   "element": "doors",
+   "ar": "نوع ومادة الأبواب وارتفاعها",
+   "en": "Door type / material / height",
+   "qty": null,
+   "unit": "nr",
+   "status": "BLOCKED",
+   "class": "BLOCKED_MATERIAL",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "door schedule",
+   "blockers": [
+    "DOOR_SCHEDULE_NOT_IN_SOURCE",
+    "DOOR_HEIGHT_NOT_PRINTED"
+   ]
+  },
+  {
+   "item": "A2-WIN-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WINDOWS",
+   "floor": "2F",
+   "element": "5 glazing-in-gap openings",
+   "ar": "عدد الشبابيك",
+   "en": "Windows (existence: glazing lines inside a wall gap)",
+   "qty": 5,
+   "unit": "nr",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "entity_role_inference glazing motif",
+   "blockers": []
+  },
+  {
+   "item": "A2-WNW-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WINDOW_WIDTH",
+   "floor": "2F",
+   "element": "windows",
+   "ar": "مجموع عروض الشبابيك",
+   "en": "Window widths (sum of wall-gap widths)",
+   "qty": 5.0,
+   "unit": "m",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "gap width jamb to jamb",
+   "blockers": []
+  },
+  {
+   "item": "A2-WNA-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WINDOW_AREA",
+   "floor": "2F",
+   "element": "windows",
+   "ar": "مساحة الشبابيك",
+   "en": "Window area / aluminium / glazing",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "width x height",
+   "blockers": [
+    "WINDOW_HEIGHT_NOT_PRINTED: no sill / head level in any source for these openings",
+    "WINDOW_SCHEDULE_NOT_IN_SOURCE"
+   ]
+  },
+  {
+   "item": "A2-STT-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "STAIR_TREADS",
+   "floor": "2F",
+   "element": "none",
+   "ar": "خطوط درجات السلم",
+   "en": "Stair tread lines in plan, continuous (at or below the cut plane)",
+   "qty": null,
+   "unit": "nr",
+   "status": "BLOCKED",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "tread motif (>= 4 equal parallel lines at a regular going), continuous linetype only",
+   "blockers": [
+    "NO_TREAD_MOTIF_ON_THIS_FLOOR"
+   ]
+  },
+  {
+   "item": "A2-STR-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "STAIR_RISE_FINISH",
+   "floor": "2F",
+   "element": "stairs",
+   "ar": "ارتفاع القائمة وتشطيب الدرج والدرابزين",
+   "en": "Riser height, stair finish, railing",
+   "qty": null,
+   "unit": "m",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757.dxf plan region (entity_role_inference claims + TS01 + closure policy)",
+   "rule": "riser count per flight AND floor-to-floor",
+   "blockers": [
+    "RISER_COUNT_PER_FLIGHT_NOT_PROVED (plan shows tread lines of several flights; which belong to one floor-to-floor rise is not proved)",
+    "FINISH_MATERIAL_NOT_IN_SOURCE: no finish schedule exists (owner: the supplied files are all the files)"
+   ]
+  },
+  {
+   "item": "A2-EXT-FAC",
+   "discipline": "ARCHITECTURAL",
+   "trade": "EXTERNAL_FACADES",
+   "floor": "EXTERNAL",
+   "element": "all facades",
+   "ar": "لياسة ودهان الواجهات",
+   "en": "External plaster / paint",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "P7757 NW / SE elevations (vector) + SW / NE (raster only)",
+   "rule": "facade length x height minus openings",
+   "blockers": [
+    "ELEVATIONS_SW_NE_RASTER_ONLY",
+    "OPENING_HEIGHTS_NOT_PRINTED",
+    "FINISH_MATERIAL_NOT_IN_SOURCE: no finish schedule exists (owner: the supplied files are all the files)"
+   ]
+  }
+ ],
+ "by_status": {
+  "AUTHORISED_SUBTOTAL": 10,
+  "BLOCKED": 41,
+  "COMPUTED_SHADOW_COMPLETE": 16
+ },
+ "by_class": {
+  "PHYSICAL_MEASUREMENT": 30,
+  "BLOCKED_HEIGHT": 16,
+  "BLOCKED_MATERIAL": 18,
+  "TRADE_ASSIGNMENT": 3
+ }
+}

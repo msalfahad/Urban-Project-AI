@@ -1,0 +1,127 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_V3_OWNER_DECISIONS_V1",
+ "by": "Mohammad (owner)",
+ "date": "2026-10-04",
+ "accepts": "research/external_engine_lab/alsenan_final_boq_v3_recommendation.md (ee9339f)",
+ "decisions": [
+  {
+   "id": "OD-V3-1",
+   "topic": "floor build-up",
+   "decision": "URBAN_RESIDENTIAL_FLOOR_BUILDUP_FALLBACK = 0.10 m",
+   "authority": "SOURCE / DETAIL > PROJECT OWNER FACT > URBAN FALLBACK 0.10 m > BLOCKED",
+   "rules": [
+    "labelled URBAN_FALLBACK, never SOURCE",
+    "overrideable per project / floor",
+    "never used where the source contradicts it"
+   ],
+   "method": "URBAN-RESIDENTIAL-FLOOR-BUILDUP-FALLBACK@v1"
+  },
+  {
+   "id": "OD-V3-2",
+   "topic": "finish quantity vs material",
+   "decision": "YES - release geometry; material separate",
+   "rules": [
+    "MEASURED GEOMETRY and MATERIAL / FINISH AUTHORITY kept apart",
+    "never block a physical area only because material is unknown",
+    "dry internal floor: porcelain unless the specification overrides",
+    "wet / service floor: tiled finish",
+    "wet / service visible walls: full wall tile to the finished ceiling",
+    "floor finish continues beneath later-installed cabinetry / wardrobes / fixed joinery",
+    "no normal skirting in full-wall-tile wet / service rooms",
+    "ceilings: area independent; never assume gypsum without source / fact / method; MATERIAL = BY_SPEC / UNRESOLVED"
+   ],
+   "methods": [
+    "URBAN-FINISH-QUANTITY-INDEPENDENT-OF-MATERIAL@v1",
+    "URBAN-DRY-FLOOR-PORCELAIN-DEFAULT@v1",
+    "URBAN-WET-FLOOR-TILED@v1",
+    "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1",
+    "URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD@v1",
+    "URBAN-NO-SKIRTING-FULL-TILE-WET@v1",
+    "URBAN-CEILING-QUANTITY-WITHOUT-MATERIAL@v1"
+   ]
+  },
+  {
+   "id": "OD-V3-3",
+   "topic": "rebar detailing",
+   "decision": "source evidence first; never kg/m3; never invented hooks",
+   "accepted_source_evidence": {
+    "cover_normal_cm": 2.5,
+    "cover_against_soil_cm": 7.0,
+    "lap_tension": "70 x dia",
+    "lap_compression": "40 x dia",
+    "slab_notes": "source slab thickness / reinforcement notes where printed"
+   },
+   "rules": [
+    "report NET_DESIGN_WEIGHT and PROCUREMENT_WEIGHT_INCL_LAPS separately",
+    "12 m stock: a lap only where the continuous bar exceeds stock length, splicing is permitted and no detail contradicts it",
+    "hooks / bends / stirrup closing from explicit detail, structural notes or an adopted detailing standard; else BLOCKED_DETAILING",
+    "report straight length, hook / bend addition, lap addition, total bar length, kg/m, net weight, procurement weight"
+   ],
+   "method": "URBAN-REBAR-NET-AND-PROCUREMENT@v1"
+  },
+  {
+   "id": "OD-V3-4",
+   "topic": "extra finish / decor items",
+   "decision": "YES - separate BOQ items where source geometry supports them",
+   "items": [
+    "GYPSUM / DECOR AREA m2",
+    "CORNICE lm",
+    "COVE LIGHT / COVE PROFILE lm",
+    "PLASTER CORNER BEADS / PROFILES lm",
+    "SPATTER DASH m2",
+    "DOOR REVEALS m2",
+    "WINDOW REVEALS m2",
+    "OTHER FINISH PROFILES lm"
+   ],
+   "rules": [
+    "never buried inside plaster, paint or wall tile",
+    "opening deduction and reveal addition are separate calculations",
+    "every item traceable to source geometry / method"
+   ],
+   "method": "URBAN-FINISH-EXTRAS-SEPARATE-ITEMS@v1"
+  },
+  {
+   "id": "OD-V3-5",
+   "topic": "engine priority",
+   "order": [
+    "A Arabic / legacy label decoding",
+    "B physical room / site closure",
+    "C room semantic classification",
+    "D floor / ceiling completeness",
+    "E wall vertical termination",
+    "F plaster / paint / wall tile",
+    "G ground slab / ground beams",
+    "H deterministic rebar",
+    "I stairs / pool as far as source permits",
+    "J final trade workbooks",
+    "K final concise PDF"
+   ],
+   "rule": "no final trade workbook before A-H are exhausted"
+  },
+  {
+   "id": "OD-V3-6",
+   "topic": "Arabic labels",
+   "rule": "generic CAD legacy-text decoding lane; no Alsenan names by coordinates; an undecoded label leaves the site area published and the room UNKNOWN"
+  },
+  {
+   "id": "OD-V3-7",
+   "topic": "room closure",
+   "rule": "classify every large uncaptured site; zero-material topology closures only where positive geometry supports a real boundary; a closure never generates wall / material quantity"
+  },
+  {
+   "id": "OD-V3-8",
+   "topic": "completeness",
+   "rule": "trade completeness table before final reporting; BOQ not FINAL while major rooms / trades are unexamined"
+  },
+  {
+   "id": "OD-V3-9",
+   "topic": "remaining project questions",
+   "rule": "do not ask the secondary questions yet; exhaust the source; batch only unavoidable questions by STRUCTURE / ARCHITECTURE / FINISHES / OPENINGS; F / F10 stays blocked unless new source evidence resolves it"
+  },
+  {
+   "id": "OD-V3-10",
+   "topic": "benchmark firewall",
+   "rule": "freelancer / web-app quantities evaluation only; freeze Urban results first, compare afterwards"
+  }
+ ]
+}

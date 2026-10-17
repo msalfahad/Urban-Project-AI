@@ -1,0 +1,162 @@
+KIND,WHERE,DETAIL
+FOOTING_LABEL_TYPE_CONFLICT,SH10 F/F10,FTG:SH10:T652:10A5 and FTG:SH10:T788:168B: quantified once
+NECK_UNRESOLVED,SH10 C10,"NECK:COL:SH10:C10@148899,36778: no footing found under the column"
+NECK_UNRESOLVED,SH10 CN,"NECK:COL:SH10:CN@146123,41338: no FOUNDATION band in the schedule for CN"
+NECK_UNRESOLVED,SH10 CN,"NECK:COL:SH10:CN@140890,42630: no FOUNDATION band in the schedule for CN"
+NECK_UNRESOLVED,SH10 CN,"NECK:COL:SH10:CN@149929,40462: no FOUNDATION band in the schedule for CN"
+NECK_UNRESOLVED,SH10 C,"NECK:COL:SH10:C@150972,36507: no footing found under the column"
+NECK_UNRESOLVED,SH10 CN,"NECK:COL:SH10:CN@148005,44815: no FOUNDATION band in the schedule for CN"
+NECK_UNRESOLVED,SH10 CN,"NECK:COL:SH10:CN@148243,48963: no FOUNDATION band in the schedule for CN"
+NECK_UNRESOLVED,SH10 CN,"NECK:COL:SH10:CN@146847,47309: no FOUNDATION band in the schedule for CN"
+COLUMN_ABSENT_ON_STOREY_PLAN,1F C3,"COL:SH12:C3@162406,40325|1F: schedule band 1F exists but the 1F roof-slab plan shows no column here; not counted"
+COLUMN_ABSENT_ON_STOREY_PLAN,2F C3,"COL:SH12:C3@162406,40325|2F: schedule band 2F exists but the 2F roof-slab plan shows no column here; not counted"
+COLUMN_ABSENT_ON_STOREY_PLAN,1F C3,"COL:SH12:C3@165127,36809|1F: schedule band 1F exists but the 1F roof-slab plan shows no column here; not counted"
+COLUMN_ABSENT_ON_STOREY_PLAN,2F C3,"COL:SH12:C3@165127,36809|2F: schedule band 2F exists but the 2F roof-slab plan shows no column here; not counted"
+COLUMN_STOREY_PRESENCE_UNVERIFIED,1F C3,"COL:SH12:C3@167036,38502|1F: no column outline bound on the column plan; counted on the schedule band alone"
+COLUMN_STOREY_PRESENCE_UNVERIFIED,2F C3,"COL:SH12:C3@167036,38502|2F: no column outline bound on the column plan; counted on the schedule band alone"
+COLUMN_STOREY_PRESENCE_UNVERIFIED,GF C3,"COL:SH12:C3@167036,38502|GF: no column outline bound on the column plan; counted on the schedule band alone"
+COLUMN_STOREY_PRESENCE_UNVERIFIED,1F C5,"COL:SH12:C5@167134,41033|1F: no column outline bound on the column plan; counted on the schedule band alone"
+COLUMN_STOREY_PRESENCE_UNVERIFIED,2F C5,"COL:SH12:C5@167134,41033|2F: no column outline bound on the column plan; counted on the schedule band alone"
+COLUMN_STOREY_PRESENCE_UNVERIFIED,GF C5,"COL:SH12:C5@167134,41033|GF: no column outline bound on the column plan; counted on the schedule band alone"
+COLUMN_ABSENT_ON_STOREY_PLAN,2F C6,"COL:SH12:C6@174120,41652|2F: schedule band 2F exists but the 2F roof-slab plan shows no column here; not counted"
+COLUMN_STOREY_PRESENCE_UNVERIFIED,GF C11,"COL:SH12:C11@173942,37893|GF: no column outline bound on the column plan; counted on the schedule band alone"
+COLUMN_STOREY_PRESENCE_UNVERIFIED,1F C3,"COL:SH12:C3@178496,36874|1F: no column outline bound on the column plan; counted on the schedule band alone"
+COLUMN_STOREY_PRESENCE_UNVERIFIED,2F C3,"COL:SH12:C3@178496,36874|2F: no column outline bound on the column plan; counted on the schedule band alone"
+COLUMN_STOREY_PRESENCE_UNVERIFIED,GF C3,"COL:SH12:C3@178496,36874|GF: no column outline bound on the column plan; counted on the schedule band alone"
+COLUMN_STOREY_PRESENCE_UNVERIFIED,1F C8,"COL:SH12:C8@180193,39182|1F: no column outline bound on the column plan; counted on the schedule band alone"
+COLUMN_STOREY_PRESENCE_UNVERIFIED,2F C8,"COL:SH12:C8@180193,39182|2F: no column outline bound on the column plan; counted on the schedule band alone"
+COLUMN_STOREY_PRESENCE_UNVERIFIED,GF C8,"COL:SH12:C8@180193,39182|GF: no column outline bound on the column plan; counted on the schedule band alone"
+COLUMN_ABSENT_ON_STOREY_PLAN,2F C5,"COL:SH12:C5@183747,37338|2F: schedule band 2F exists but the 2F roof-slab plan shows no column here; not counted"
+COLUMN_STOREY_PRESENCE_UNVERIFIED,GF C10,"COL:SH12:C10@187123,37764|GF: no column outline bound on the column plan; counted on the schedule band alone"
+COLUMN_STOREY_PRESENCE_UNVERIFIED,GF C,"COL:SH12:C@189304,38185|GF: no column outline bound on the column plan; counted on the schedule band alone"
+COLUMN_ABSENT_ON_STOREY_PLAN,2F C7,"COL:SH12:C7@171987,44467|2F: schedule band 2F exists but the 2F roof-slab plan shows no column here; not counted"
+COLUMN_STOREY_PRESENCE_UNVERIFIED,1F C3,"COL:SH12:C3@171508,46863|1F: no column outline bound on the column plan; counted on the schedule band alone"
+COLUMN_STOREY_PRESENCE_UNVERIFIED,2F C3,"COL:SH12:C3@171508,46863|2F: no column outline bound on the column plan; counted on the schedule band alone"
+COLUMN_STOREY_PRESENCE_UNVERIFIED,GF C3,"COL:SH12:C3@171508,46863|GF: no column outline bound on the column plan; counted on the schedule band alone"
+COLUMN_STOREY_PRESENCE_UNVERIFIED,1F C2,"COL:SH12:C2@171718,49639|1F: no column outline bound on the column plan; counted on the schedule band alone"
+COLUMN_STOREY_PRESENCE_UNVERIFIED,2F C2,"COL:SH12:C2@171718,49639|2F: no column outline bound on the column plan; counted on the schedule band alone"
+COLUMN_STOREY_PRESENCE_UNVERIFIED,GF C2,"COL:SH12:C2@171718,49639|GF: no column outline bound on the column plan; counted on the schedule band alone"
+COLUMN_ABSENT_ON_STOREY_PLAN,2F C4,"COL:SH12:C4@183558,49034|2F: schedule band 2F exists but the 2F roof-slab plan shows no column here; not counted"
+COLUMN_ABSENT_ON_STOREY_PLAN,2F C4,"COL:SH12:C4@188844,49402|2F: schedule band 2F exists but the 2F roof-slab plan shows no column here; not counted"
+COLUMN_ABSENT_ON_STOREY_PLAN,2F C9,"COL:SH12:C9@183316,44994|2F: schedule band 2F exists but the 2F roof-slab plan shows no column here; not counted"
+COLUMN_ABSENT_ON_STOREY_PLAN,2F C8,"COL:SH12:C8@186799,43443|2F: schedule band 2F exists but the 2F roof-slab plan shows no column here; not counted"
+COLUMN_ABSENT_ON_STOREY_PLAN,1F C3,"COL:SH12:C3@189247,43302|1F: schedule band 1F exists but the 1F roof-slab plan shows no column here; not counted"
+COLUMN_ABSENT_ON_STOREY_PLAN,2F C3,"COL:SH12:C3@189247,43302|2F: schedule band 2F exists but the 2F roof-slab plan shows no column here; not counted"
+COLUMN_STOREY_PRESENCE_UNVERIFIED,1F C1,"COL:SH12:C1@175733,47896|1F: no column outline bound on the column plan; counted on the schedule band alone"
+COLUMN_STOREY_PRESENCE_UNVERIFIED,2F C1,"COL:SH12:C1@175733,47896|2F: no column outline bound on the column plan; counted on the schedule band alone"
+COLUMN_STOREY_PRESENCE_UNVERIFIED,GF C1,"COL:SH12:C1@175733,47896|GF: no column outline bound on the column plan; counted on the schedule band alone"
+STRAP_CANDIDATE_UNBOUND,SH10,"BAND0001 0.50 x 1.00 m clear, faces D2:4355:0,D2:6940:0: a strap-width pair no strap mark reaches"
+BEAM_UNLABELLED_SPAN_ACROSS_SUPPORT,SH02,"BEAMS:2F:BAND0001.3: collinear with B8 across a support, no label, no printed span sequence (alternative 0.169 m3)"
+BEAM_UNLABELLED_SPAN_ACROSS_SUPPORT,SH02,"BEAMS:2F:BAND0006.1: collinear with B15 across a support, no label, no printed span sequence (alternative 0.744 m3)"
+BEAM_UNLABELLED_SPAN_ACROSS_SUPPORT,SH02,"BEAMS:2F:BAND0008.1: collinear with B1 across a support, no label, no printed span sequence (alternative 0.112 m3)"
+BEAM_UNLABELLED_SPAN_ACROSS_SUPPORT,SH02,"BEAMS:2F:BAND0011.1: collinear with B1 across a support, no label, no printed span sequence (alternative 0.112 m3)"
+SLAB_THICKNESS_SHEET_TAG_VS_PROJECT_DEFAULT,SH02,"SITE-29936e52e9c9bb32 3.24 m2: untagged; the sheet's one printed tag gives 0.180 m, the project default 0.160 m (default used)"
+SLAB_THICKNESS_SHEET_TAG_VS_PROJECT_DEFAULT,SH02,"SITE-3ec9bc2fe28ad7a4 15.00 m2: untagged; the sheet's one printed tag gives 0.180 m, the project default 0.160 m (default used)"
+SLAB_THICKNESS_SHEET_TAG_VS_PROJECT_DEFAULT,SH02,"SITE-6d9a092e74ae2689 0.09 m2: untagged; the sheet's one printed tag gives 0.180 m, the project default 0.160 m (default used)"
+SLAB_THICKNESS_SHEET_TAG_VS_PROJECT_DEFAULT,SH02,"SITE-9020cd1f745a1792 0.27 m2: untagged; the sheet's one printed tag gives 0.180 m, the project default 0.160 m (default used)"
+SLAB_THICKNESS_SHEET_TAG_VS_PROJECT_DEFAULT,SH02,"SITE-d475d4d7db56ceb9 3.60 m2: untagged; the sheet's one printed tag gives 0.180 m, the project default 0.160 m (default used)"
+SLAB_THICKNESS_SHEET_TAG_VS_PROJECT_DEFAULT,SH02,"SITE-f9f3066dd0714584 7.25 m2: untagged; the sheet's one printed tag gives 0.180 m, the project default 0.160 m (default used)"
+SLAB_THICKNESS_SHEET_TAG_VS_PROJECT_DEFAULT,SH02,"SITE-fbb544778990fa6f 2.16 m2: untagged; the sheet's one printed tag gives 0.180 m, the project default 0.160 m (default used)"
+BEAM_UNLABELLED_SPAN_ACROSS_SUPPORT,SH04,"BEAMS:1F:BAND0005.1: collinear with B2 across a support, no label, no printed span sequence (alternative 0.064 m3)"
+BAND_UNBOUND,SH04,BEAMS:1F:BAND0013.1
+BAND_UNBOUND,SH04,BEAMS:1F:BAND0013.2
+BAND_UNBOUND,SH04,BEAMS:1F:BAND0014
+BAND_UNBOUND,SH04,BEAMS:1F:BAND0023
+BAND_UNBOUND,SH04,BEAMS:1F:BAND0025
+BAND_UNBOUND,SH04,BEAMS:1F:BAND0026.1
+BAND_UNBOUND,SH04,BEAMS:1F:BAND0026.2
+BEAM_UNLABELLED_SPAN_ACROSS_SUPPORT,SH04,"BEAMS:1F:BAND0031.1: collinear with B23 across a support, no label, no printed span sequence (alternative 1.013 m3)"
+BAND_UNBOUND,SH04,BEAMS:1F:BAND0035
+BAND_UNBOUND,SH04,BEAMS:1F:BAND0036
+MARK_AMBIGUOUS,SH04,"CB10 at 13619,38939"
+MARK_AMBIGUOUS,SH04,"CB10 at 13619,42699"
+SLAB_FACE_MEMBER_OVERLAP_DEDUCTED,SH04,SITE-9978da1860785741: 0.206 m2 of the face lies in beam bands / column outlines (deducted: the members own it)
+SLAB_FACE_MEMBER_OVERLAP_DEDUCTED,SH04,SITE-d50e79d29e4c7ca8: 0.270 m2 of the face lies in beam bands / column outlines (deducted: the members own it)
+OPENING_DEDUCTED,SH04,SITE-5ea72fe817bb2580 10.73 m2 []
+STAIR_ZONE_PARTIAL,SH04,SITE-b845e1e78b1f74a8: riser 0.221 m from rise 4.20 m over 19 risers lies outside 0.14 - 0.20 m - the zone holds part of a stair; slab-zone exposure kept
+SLAB_STAIR_ZONE,SH04,SLABS:1F:SITE-b845e1e78b1f74a8 17.13 m2: WINDER of 18 treads over 87% of the cell
+OPENING_DEDUCTED,SH04,SITE-d2272fc81ee63fb4 3.24 m2 []
+BAND_UNBOUND,SH06,BEAMS:GF:BAND0006
+CB_SPAN_MARK_CONFLICT,SH06,"BEAMS:GF:BAND0019.2: the printed span sequence of line SH06:CB3:1 maps this band, which also carries BEAM/B3, CONTINUOUS_BEAM/CB3 - section unresolved; its line bars 29.5 - 30.4 kg held as exposure"
+BAND_MULTIPLE_MARKS,SH06,BEAMS:GF:BAND0019.2
+BAND_UNBOUND,SH06,BEAMS:GF:BAND0031.1
+BAND_UNBOUND,SH06,BEAMS:GF:BAND0031.2
+BEAM_UNLABELLED_SPAN_ACROSS_SUPPORT,SH06,"BEAMS:GF:BAND0043.1: collinear with B20 across a support, no label, no printed span sequence (alternative 0.900 m3)"
+BEAM_UNLABELLED_SPAN_ACROSS_SUPPORT,SH06,"BEAMS:GF:BAND0046.2: collinear with B24 across a support, no label, no printed span sequence (alternative 0.563 m3)"
+BEAM_UNLABELLED_SPAN_ACROSS_SUPPORT,SH06,"BEAMS:GF:BAND0047.1: collinear with B26 across a support, no label, no printed span sequence (alternative 0.683 m3)"
+BEAM_UNLABELLED_SPAN_ACROSS_SUPPORT,SH06,"BEAMS:GF:BAND0048.2: collinear with B27 across a support, no label, no printed span sequence (alternative 0.841 m3)"
+BAND_UNBOUND,SH06,BEAMS:GF:BAND0053
+MARK_AMBIGUOUS,SH06,"B7 at 72446,48068"
+MARK_TAG_UNBOUND,SH06,"CB5 at 52368,42680"
+MARK_AMBIGUOUS,SH06,"B7 at 71869,48792"
+HEAL_EXTEND_WIDE,SH06,face D2:805:0 end extended 10.5 mm to TARGET45
+SLAB_FACE_MEMBER_OVERLAP_DEDUCTED,SH06,SITE-57446563a10862c2: 0.000 m2 of the face lies in beam bands / column outlines (deducted: the members own it)
+SLAB_OPEN_BOUNDARY_FACE,SH06,SITE-bdd75a9510f9b0c2 4.79 m2 (panel leaked into a beam strip; 0.86 m2 recovered as panel = face - beam bands - columns)
+OPENING_DEDUCTED,SH06,"SITE-08fe89dde2560af1 27.13 m2 ['STAIR', 'VOID']"
+OPENING_DEDUCTED,SH06,SITE-68ef3364e93ff07e 3.24 m2 []
+OPENING_DEDUCTED,SH06,SITE-84df2406a66df47d 10.72 m2 []
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0001.1: exterior wall on the band; floor level 0.30 gives an exterior depth 0.20 m, not deeper than the class section 0.40 m - source conflict, class section as base"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0001.2: exterior wall on the band; floor level 0.30 gives an exterior depth 0.20 m, not deeper than the class section 0.40 m - source conflict, class section as base"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0001.3: exterior wall on the band; floor level 0.30 gives an exterior depth 0.20 m, not deeper than the class section 0.40 m - source conflict, class section as base"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0001.4: exterior wall on the band; floor level 0.15 gives an exterior depth 0.05 m, not deeper than the class section 0.40 m - source conflict, class section as base"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0006.3: exterior wall on the band; floor level 0.30 gives an exterior depth 0.20 m, not deeper than the class section 0.40 m - source conflict, class section as base"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0011.1: exterior wall on the band; floor level 0.15 gives an exterior depth 0.05 m, not deeper than the class section 0.40 m - source conflict, class section as base"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0011.4: exterior wall on the band, but the printed floor level 0.0 gives no depth below it - class section"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0012.1: exterior wall on the band; floor level 0.30 gives an exterior depth 0.20 m, not deeper than the class section 0.30 m - source conflict, class section as base"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0012.2: exterior wall on the band; floor level 0.30 gives an exterior depth 0.20 m, not deeper than the class section 0.40 m - source conflict, class section as base"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0013.2: exterior wall on the band; floor level 0.30 gives an exterior depth 0.20 m, not deeper than the class section 0.60 m - source conflict, class section as base"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0015: exterior wall on the band; floor level 0.30 gives an exterior depth 0.20 m, not deeper than the class section 0.60 m - source conflict, class section as base"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0016: exterior wall on the band; floor level 0.30 gives an exterior depth 0.20 m, not deeper than the class section 0.60 m - source conflict, class section as base"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0017.2: exterior wall on the band; floor level 0.30 gives an exterior depth 0.20 m, not deeper than the class section 0.30 m - source conflict, class section as base"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0025.2: exterior wall on the band, but the printed floor level 0.0 gives no depth below it - class section"
+GB_EXTERIOR_SHALLOWER_THAN_CLASS,SH08,"GROUND_BEAMS:GROUND:BAND0035: exterior wall on the band; floor level 0.30 gives an exterior depth 0.20 m, not deeper than the class section 0.40 m - source conflict, class section as base"
+GB_PERIMETER_NO_WALL,SH08,GROUND_BEAMS:GROUND:BAND0042: perimeter band with no wall drawn on it in the architectural plan - the exterior detail ('for exterior walls') does not apply; class section
+SLAB_FACE_MEMBER_OVERLAP_DEDUCTED,SH08,SITE-01e75a66f002baa9: 0.000 m2 of the face lies in beam bands / column outlines (deducted: the members own it)
+SLAB_FACE_MEMBER_OVERLAP_DEDUCTED,SH08,SITE-49a7dae5c139aebb: 0.237 m2 of the face lies in beam bands / column outlines (deducted: the members own it)
+SLAB_FACE_MEMBER_OVERLAP_DEDUCTED,SH08,SITE-f65941a3e35ac31e: 4.154 m2 of the face lies in beam bands / column outlines (deducted: the members own it)
+STAIR_ZONE_PARTIAL,SH08,SITE-4df8fcd99d130701: riser 0.111 m from rise 1.00 m over 9 risers lies outside 0.14 - 0.20 m - the zone holds part of a stair; slab-zone exposure kept
+SLAB_STAIR_ZONE,SH08,GROUND_SLAB:GROUND:SITE-4df8fcd99d130701 8.37 m2: WINDER of 8 treads over 30% of the cell
+SLAB_CELL_FREE_COLUMNS,SH08,GROUND_SLAB:GROUND:SITE-f65941a3e35ac31e 44.92 m2: 1 free-standing column(s) inside a ground-slab cell
+BLINDING_OVERLAP_DEDUCTED,FOUNDATION,"blinding plan = union of the footing and beam-strip outlines: 42.24 m2 of beam strip on footing blinding, 5.92 m2 where strips cross, 0.34 m2 where footing projections meet, each counted once (52 strips; plans registered on 17 footings; 2 strips and 1 footings without a placed outline added whole)"
+LINTEL_OPENING_ABOVE_SCHEDULE,GF,LINTELS:GF:OP-003: opening 11.22 m in a 0.20 m wall - outside the lintel schedule's bands (not measured)
+LINTEL_SUMMARY,ARCH,"ABOVE_SCHEDULE 1, MEASURED 10, PARTIAL_BEAM_UNRESOLVED 3, UNDER_BEAM_UNRESOLVED 43"
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7427,C
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7474,C1
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7494,C2
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7514,C3
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7534,C4
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7554,C5
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7574,C6
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7594,C7
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7614,C8
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7634,C9
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7654,C10
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7674,C11
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7888,B10
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7910,B12
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 9200,CB10
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 11027,F15
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7289,F
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7317,F2
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7328,F3
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7339,F4
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7350,F5
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7361,F6
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7372,F7
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7383,F9
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7394,F10
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7405,F11
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 7416,FN
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 10846,F12
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 10904,F13
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 10965,F14
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 10998,F8
+SCHEDULE_ROW_NOT_FOUND_ON_PLAN,INSERT 11038,FF
+SCHEDULE_DUPLICATE_MARK,STRAP_BEAM,SB2
+FAMILY_PARTLY_QUANTIFIED,COLUMN_NECKS,"36 necks over footings (8 unresolved); necks from the foundation-plan columns, height from the printed levels; needs the printed founding depth and neck top level (profile FOUNDING_DEPTH_M, NECK_TOP_LEVEL_M) - not in any total"
+FAMILY_PARTLY_QUANTIFIED,LINTELS,"5 lintel captions in the detail evidence; 10 measured, 46 unresolved; openings of the architectural plans bound to the printed lintel schedule; needs the opening widths of the architectural drawings (route G reads the structural DXF only); the lintel schedule is by opening width - not in any total"
+FAMILY_NOT_QUANTIFIED,POOL,"2 labels (POOL, SWIMMING) on SH01, SH08; drawn or labelled, no generic measurement; needs the pool section and shell details (wall / floor thickness, depth); the pool shell is not a beam / slab network on the plans - not in any total"
+FAMILY_NOT_QUANTIFIED,STAIRS,"3 labels (STAIR) on SH04, SH06; 2 stair zones (25.50 m2) found by their tread lines and excluded from the slabs; drawn or labelled, no generic measurement; needs the stair section (waist, risers / goings, landing levels); the zones are found and excluded from the slabs - not in any total"
+FAMILY_NOT_QUANTIFIED,DOMES,"1 labels (DOME) on SH01; 11 curved bands (6 bound, measured as beams); drawn or labelled, no generic measurement; needs the dome section (shell thickness, rise); ring beams are measured as beam bands when bound - not in any total"
+FAMILY_NOT_QUANTIFIED,WATER_TANK,"1 labels (TANK, WATER TANK) on SH02; drawn or labelled, no generic measurement; needs the tank details (wall / base / cover thickness) - not in any total"
+FAMILY_NOT_QUANTIFIED,PARAPETS,"3 labels (PARAPET) on SH02, SH04, SH06; drawn or labelled, no generic measurement; needs the parapet section (height, thickness) and its length on the roof plan - not in any total"

@@ -1,0 +1,3097 @@
+{
+ "SCHEMA": "URBAN_R8_20_BOQ_REPORT_SHADOW_V1",
+ "report": {
+  "policy": "BOQ_REPORT_LAYER_V1",
+  "columns": [
+   "ITEM_CODE",
+   "TRADE",
+   "DESCRIPTION_AR",
+   "DESCRIPTION_EN",
+   "LOCATION_FLOOR",
+   "ROOM_ZONE",
+   "QTY",
+   "UNIT",
+   "STATUS",
+   "SOURCE",
+   "RULE_AUTHORITY",
+   "NOTES_BLOCKERS"
+  ],
+  "statuses": [
+   "COMPUTED_SHADOW_COMPLETE",
+   "AUTHORISED_SUBTOTAL",
+   "BLOCKED",
+   "RELEASED"
+  ],
+  "run": {
+   "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "source_revision": "QORTUBA_REV_NEW",
+   "source_dxf_sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315",
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)"
+  },
+  "rows": [
+   {
+    "ITEM_CODE": "QOR-R819-Q-03",
+    "TRADE": "ARCHITECTURAL_FLOOR_FINISH",
+    "DESCRIPTION_AR": "أرضيات سيراميك - المناطق الرطبة (الحمامات)",
+    "DESCRIPTION_EN": "Wet-room ceramic floor (CERAMIC_WET_FLOOR), row Q-03",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "QORTUBA-FLOOR-TREATMENT@v3",
+     "QORTUBA-SPACE-CLASS@v2"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "QORTUBA_R8_19_STATUS.six_rows.Q-03",
+     "sites": [
+      "SITE-1c4abf65f9b5db1e",
+      "SITE-a2b19efc492a6d0b",
+      "SITE-fe8ed5548fb4310e"
+     ],
+     "surface_ids": null,
+     "authority_digest": "4ba5280563aad8912d64953fab427f958fa6bd12753b8ff00ff943347d26235d",
+     "rule_ids": [
+      "QORTUBA-FLOOR-TREATMENT@v3",
+      "QORTUBA-SPACE-CLASS@v2"
+     ],
+     "owner_facts": [
+      "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1"
+     ],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "TOTAL",
+    "ROOM_ZONE": "ALL",
+    "QTY": 17.7425,
+    "evidence_row": "Q-03"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-Q-03P",
+    "TRADE": "ARCHITECTURAL_FLOOR_FINISH",
+    "DESCRIPTION_AR": "أرضيات سيراميك - غرفة التحضير (PAINTRY)",
+    "DESCRIPTION_EN": "Service ceramic floor (CERAMIC_SERVICE_FLOOR), row Q-03P",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "AUTHORISED_SUBTOTAL",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "QORTUBA-FLOOR-TREATMENT@v3",
+     "QORTUBA-SPACE-CLASS@v2"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+     "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "authorised_subtotal",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "QORTUBA_R8_19_STATUS.six_rows.Q-03P",
+     "sites": [
+      "SITE-8c1c7563d5252c50"
+     ],
+     "surface_ids": null,
+     "authority_digest": "12cbb5ec8e1657ad174b5767863237f6bb9e6e0a2b2545037b53c588efc42fdc",
+     "rule_ids": [
+      "QORTUBA-FLOOR-TREATMENT@v3",
+      "QORTUBA-SPACE-CLASS@v2"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "TOTAL",
+    "ROOM_ZONE": "ALL",
+    "QTY": 11.685,
+    "evidence_row": "Q-03P"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-Q-11",
+    "TRADE": "ARCHITECTURAL_FLOOR_FINISH",
+    "DESCRIPTION_AR": "أرضيات سيراميك - المناطق الرطبة (البند Q-11)",
+    "DESCRIPTION_EN": "Wet-room ceramic floor (CERAMIC_WET_FLOOR), row Q-11",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "QORTUBA-FLOOR-TREATMENT@v3",
+     "QORTUBA-SPACE-CLASS@v2"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "QORTUBA_R8_19_STATUS.six_rows.Q-11",
+     "sites": [
+      "SITE-1c4abf65f9b5db1e",
+      "SITE-a2b19efc492a6d0b",
+      "SITE-fe8ed5548fb4310e"
+     ],
+     "surface_ids": null,
+     "authority_digest": "4a6e54181439fc9a2b6df0f38ab723dd1919156fee23e8901e0239ff31114bf0",
+     "rule_ids": [
+      "QORTUBA-FLOOR-TREATMENT@v3",
+      "QORTUBA-SPACE-CLASS@v2"
+     ],
+     "owner_facts": [
+      "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1"
+     ],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "TOTAL",
+    "ROOM_ZONE": "ALL",
+    "QTY": 17.7425,
+    "evidence_row": "Q-11"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-Q-12",
+    "TRADE": "ARCHITECTURAL_FLOOR_FINISH",
+    "DESCRIPTION_AR": "أرضيات سيراميك - غرفة التحضير (البند Q-12)",
+    "DESCRIPTION_EN": "Service ceramic floor (CERAMIC_SERVICE_FLOOR), row Q-12",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "AUTHORISED_SUBTOTAL",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "QORTUBA-FLOOR-TREATMENT@v3",
+     "QORTUBA-SPACE-CLASS@v2"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+     "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "authorised_subtotal",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "QORTUBA_R8_19_STATUS.six_rows.Q-12",
+     "sites": [
+      "SITE-8c1c7563d5252c50"
+     ],
+     "surface_ids": null,
+     "authority_digest": "36c55cb88cd6fcae629b58541083ba4f82728e1a5d3c56801de3f9bcf7ae0a4b",
+     "rule_ids": [
+      "QORTUBA-FLOOR-TREATMENT@v3",
+      "QORTUBA-SPACE-CLASS@v2"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "TOTAL",
+    "ROOM_ZONE": "ALL",
+    "QTY": 11.685,
+    "evidence_row": "Q-12"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-Q-13",
+    "TRADE": "ARCHITECTURAL_FLOOR_FINISH",
+    "DESCRIPTION_AR": "أرضيات بورسلين - المناطق الجافة",
+    "DESCRIPTION_EN": "Dry-room porcelain floor (PORCELAIN_DRY_FLOOR), row Q-13",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "QORTUBA-FLOOR-TREATMENT@v3",
+     "QORTUBA-SPACE-CLASS@v2"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "QORTUBA_R8_19_STATUS.six_rows.Q-13",
+     "sites": [
+      "SITE-5f1762f1a93b91ca",
+      "SITE-77a2130eb275604c",
+      "SITE-a6405850100155ac",
+      "SITE-daca396d6d730e60"
+     ],
+     "surface_ids": null,
+     "authority_digest": "b53ed8ac248365a10b58bd862ddc180827b6b4d55db2ba55b67b4e89398a65b9",
+     "rule_ids": [
+      "QORTUBA-FLOOR-TREATMENT@v3",
+      "QORTUBA-SPACE-CLASS@v2"
+     ],
+     "owner_facts": [
+      "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1",
+      "QORTUBA-NEW-DOOR-THRESHOLD-CONTINUITY-OWNER-001@v1",
+      "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1",
+      "QORTUBA-NEW-MAIN-ENTRANCE-MARBLE-OWNER-001@v1",
+      "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1"
+     ],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "TOTAL",
+    "ROOM_ZONE": "ALL",
+    "QTY": 111.8988,
+    "evidence_row": "Q-13"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-Q-14",
+    "TRADE": "CEILING",
+    "DESCRIPTION_AR": "أسقف - حسب المساحة",
+    "DESCRIPTION_EN": "Ceiling by area, row Q-14",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "QORTUBA-Q14-CEILING-TREATMENT@v1"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "QORTUBA_R8_19_STATUS.six_rows.Q-14",
+     "sites": [
+      "SITE-1c4abf65f9b5db1e",
+      "SITE-5f1762f1a93b91ca",
+      "SITE-77a2130eb275604c",
+      "SITE-8c1c7563d5252c50",
+      "SITE-a2b19efc492a6d0b",
+      "SITE-a6405850100155ac",
+      "SITE-daca396d6d730e60",
+      "SITE-fe8ed5548fb4310e"
+     ],
+     "surface_ids": null,
+     "authority_digest": "d1c2f2a87820c25916f1d31732e74d7c774086b0369882a0b9dbc81b8bc0139b",
+     "rule_ids": [
+      "QORTUBA-Q14-CEILING-TREATMENT@v1"
+     ],
+     "owner_facts": [
+      "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1",
+      "QORTUBA-NEW-MB-DRESS-PASSAGE-FULL-HEIGHT-OWNER-001@v1",
+      "QORTUBA-NEW-OPEN-PASSAGE-SOFFIT-NOT-CEILING-OWNER-001@v1"
+     ],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "TOTAL",
+    "ROOM_ZONE": "ALL",
+    "QTY": 140.637,
+    "evidence_row": "Q-14"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-DRY-WALL-PLASTER",
+    "TRADE": "PLASTER_INTERNAL",
+    "DESCRIPTION_AR": "لياسة داخلية للجدران والأعمدة والدكت المكشوف - المناطق الجافة حتى 3.15 م",
+    "DESCRIPTION_EN": "Internal plaster - dry rooms (walls, exposed columns, duct, reveals) to 3.15 m",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+     "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+     "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "DRY_WALL_PLASTER (R8.19 rebuild)",
+     "sites": [
+      "SITE-5f1762f1a93b91ca",
+      "SITE-77a2130eb275604c",
+      "SITE-a6405850100155ac",
+      "SITE-daca396d6d730e60"
+     ],
+     "surface_ids": {
+      "count": 136,
+      "sha256": "f2afe8464c2d9d08714d317afa81acf3d4775184943ff9a63aa5241ffcb9b7b8"
+     },
+     "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+     "rule_ids": [
+      "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+      "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+      "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+     ],
+     "owner_facts": [
+      "QORTUBA-NEW-BED-ROOM-DUCT-FINISH-OWNER-001@v1"
+     ],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "TOTAL",
+    "ROOM_ZONE": "ALL",
+    "QTY": 307.361518,
+    "evidence_row": "DRY_WALL_PLASTER"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-DRY-WALL-PLASTER",
+    "TRADE": "PLASTER_INTERNAL",
+    "DESCRIPTION_AR": "لياسة داخلية للجدران والأعمدة والدكت المكشوف - المناطق الجافة حتى 3.15 م",
+    "DESCRIPTION_EN": "Internal plaster - dry rooms (walls, exposed columns, duct, reveals) to 3.15 m",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+     "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+     "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "DRY_WALL_PLASTER (R8.19 rebuild)",
+     "sites": [
+      "SITE-5f1762f1a93b91ca"
+     ],
+     "surface_ids": {
+      "count": 136,
+      "sha256": "f2afe8464c2d9d08714d317afa81acf3d4775184943ff9a63aa5241ffcb9b7b8"
+     },
+     "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+     "rule_ids": [
+      "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+      "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+      "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+     ],
+     "owner_facts": [
+      "QORTUBA-NEW-BED-ROOM-DUCT-FINISH-OWNER-001@v1"
+     ],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "BED.ROOM"
+    ],
+    "QTY": 72.328302,
+    "evidence_row": "DRY_WALL_PLASTER"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-DRY-WALL-PLASTER",
+    "TRADE": "PLASTER_INTERNAL",
+    "DESCRIPTION_AR": "لياسة داخلية للجدران والأعمدة والدكت المكشوف - المناطق الجافة حتى 3.15 م",
+    "DESCRIPTION_EN": "Internal plaster - dry rooms (walls, exposed columns, duct, reveals) to 3.15 m",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+     "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+     "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "DRY_WALL_PLASTER (R8.19 rebuild)",
+     "sites": [
+      "SITE-77a2130eb275604c"
+     ],
+     "surface_ids": {
+      "count": 136,
+      "sha256": "f2afe8464c2d9d08714d317afa81acf3d4775184943ff9a63aa5241ffcb9b7b8"
+     },
+     "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+     "rule_ids": [
+      "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+      "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+      "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+     ],
+     "owner_facts": [
+      "QORTUBA-NEW-BED-ROOM-DUCT-FINISH-OWNER-001@v1"
+     ],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "HALL",
+     "whgm"
+    ],
+    "QTY": 94.266868,
+    "evidence_row": "DRY_WALL_PLASTER"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-DRY-WALL-PLASTER",
+    "TRADE": "PLASTER_INTERNAL",
+    "DESCRIPTION_AR": "لياسة داخلية للجدران والأعمدة والدكت المكشوف - المناطق الجافة حتى 3.15 م",
+    "DESCRIPTION_EN": "Internal plaster - dry rooms (walls, exposed columns, duct, reveals) to 3.15 m",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+     "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+     "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "DRY_WALL_PLASTER (R8.19 rebuild)",
+     "sites": [
+      "SITE-a6405850100155ac"
+     ],
+     "surface_ids": {
+      "count": 136,
+      "sha256": "f2afe8464c2d9d08714d317afa81acf3d4775184943ff9a63aa5241ffcb9b7b8"
+     },
+     "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+     "rule_ids": [
+      "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+      "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+      "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+     ],
+     "owner_facts": [
+      "QORTUBA-NEW-BED-ROOM-DUCT-FINISH-OWNER-001@v1"
+     ],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "DRESS",
+     "M.B.ROOM"
+    ],
+    "QTY": 91.668106,
+    "evidence_row": "DRY_WALL_PLASTER"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-DRY-WALL-PLASTER",
+    "TRADE": "PLASTER_INTERNAL",
+    "DESCRIPTION_AR": "لياسة داخلية للجدران والأعمدة والدكت المكشوف - المناطق الجافة حتى 3.15 م",
+    "DESCRIPTION_EN": "Internal plaster - dry rooms (walls, exposed columns, duct, reveals) to 3.15 m",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+     "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+     "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "DRY_WALL_PLASTER (R8.19 rebuild)",
+     "sites": [
+      "SITE-daca396d6d730e60"
+     ],
+     "surface_ids": {
+      "count": 136,
+      "sha256": "f2afe8464c2d9d08714d317afa81acf3d4775184943ff9a63aa5241ffcb9b7b8"
+     },
+     "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+     "rule_ids": [
+      "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+      "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+      "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+     ],
+     "owner_facts": [
+      "QORTUBA-NEW-BED-ROOM-DUCT-FINISH-OWNER-001@v1"
+     ],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "BED.ROOM"
+    ],
+    "QTY": 49.098242,
+    "evidence_row": "DRY_WALL_PLASTER"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-DRY-WALL-PAINT",
+    "TRADE": "PAINT",
+    "DESCRIPTION_AR": "دهانات داخلية للجدران والأعمدة والدكت المكشوف - المناطق الجافة حتى 3.15 م",
+    "DESCRIPTION_EN": "Internal paint - dry rooms (walls, exposed columns, duct, reveals) to 3.15 m",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+     "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+     "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "DRY_WALL_PAINT (R8.19 rebuild)",
+     "sites": [
+      "SITE-5f1762f1a93b91ca",
+      "SITE-77a2130eb275604c",
+      "SITE-a6405850100155ac",
+      "SITE-daca396d6d730e60"
+     ],
+     "surface_ids": {
+      "count": 136,
+      "sha256": "f2afe8464c2d9d08714d317afa81acf3d4775184943ff9a63aa5241ffcb9b7b8"
+     },
+     "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+     "rule_ids": [
+      "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+      "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+      "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+     ],
+     "owner_facts": [
+      "QORTUBA-NEW-BED-ROOM-DUCT-FINISH-OWNER-001@v1"
+     ],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "TOTAL",
+    "ROOM_ZONE": "ALL",
+    "QTY": 307.361518,
+    "evidence_row": "DRY_WALL_PAINT"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-DRY-WALL-PAINT",
+    "TRADE": "PAINT",
+    "DESCRIPTION_AR": "دهانات داخلية للجدران والأعمدة والدكت المكشوف - المناطق الجافة حتى 3.15 م",
+    "DESCRIPTION_EN": "Internal paint - dry rooms (walls, exposed columns, duct, reveals) to 3.15 m",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+     "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+     "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "DRY_WALL_PAINT (R8.19 rebuild)",
+     "sites": [
+      "SITE-5f1762f1a93b91ca"
+     ],
+     "surface_ids": {
+      "count": 136,
+      "sha256": "f2afe8464c2d9d08714d317afa81acf3d4775184943ff9a63aa5241ffcb9b7b8"
+     },
+     "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+     "rule_ids": [
+      "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+      "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+      "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+     ],
+     "owner_facts": [
+      "QORTUBA-NEW-BED-ROOM-DUCT-FINISH-OWNER-001@v1"
+     ],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "BED.ROOM"
+    ],
+    "QTY": 72.328302,
+    "evidence_row": "DRY_WALL_PAINT"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-DRY-WALL-PAINT",
+    "TRADE": "PAINT",
+    "DESCRIPTION_AR": "دهانات داخلية للجدران والأعمدة والدكت المكشوف - المناطق الجافة حتى 3.15 م",
+    "DESCRIPTION_EN": "Internal paint - dry rooms (walls, exposed columns, duct, reveals) to 3.15 m",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+     "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+     "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "DRY_WALL_PAINT (R8.19 rebuild)",
+     "sites": [
+      "SITE-77a2130eb275604c"
+     ],
+     "surface_ids": {
+      "count": 136,
+      "sha256": "f2afe8464c2d9d08714d317afa81acf3d4775184943ff9a63aa5241ffcb9b7b8"
+     },
+     "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+     "rule_ids": [
+      "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+      "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+      "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+     ],
+     "owner_facts": [
+      "QORTUBA-NEW-BED-ROOM-DUCT-FINISH-OWNER-001@v1"
+     ],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "HALL",
+     "whgm"
+    ],
+    "QTY": 94.266868,
+    "evidence_row": "DRY_WALL_PAINT"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-DRY-WALL-PAINT",
+    "TRADE": "PAINT",
+    "DESCRIPTION_AR": "دهانات داخلية للجدران والأعمدة والدكت المكشوف - المناطق الجافة حتى 3.15 م",
+    "DESCRIPTION_EN": "Internal paint - dry rooms (walls, exposed columns, duct, reveals) to 3.15 m",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+     "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+     "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "DRY_WALL_PAINT (R8.19 rebuild)",
+     "sites": [
+      "SITE-a6405850100155ac"
+     ],
+     "surface_ids": {
+      "count": 136,
+      "sha256": "f2afe8464c2d9d08714d317afa81acf3d4775184943ff9a63aa5241ffcb9b7b8"
+     },
+     "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+     "rule_ids": [
+      "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+      "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+      "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+     ],
+     "owner_facts": [
+      "QORTUBA-NEW-BED-ROOM-DUCT-FINISH-OWNER-001@v1"
+     ],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "DRESS",
+     "M.B.ROOM"
+    ],
+    "QTY": 91.668106,
+    "evidence_row": "DRY_WALL_PAINT"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-DRY-WALL-PAINT",
+    "TRADE": "PAINT",
+    "DESCRIPTION_AR": "دهانات داخلية للجدران والأعمدة والدكت المكشوف - المناطق الجافة حتى 3.15 م",
+    "DESCRIPTION_EN": "Internal paint - dry rooms (walls, exposed columns, duct, reveals) to 3.15 m",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+     "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+     "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "DRY_WALL_PAINT (R8.19 rebuild)",
+     "sites": [
+      "SITE-daca396d6d730e60"
+     ],
+     "surface_ids": {
+      "count": 136,
+      "sha256": "f2afe8464c2d9d08714d317afa81acf3d4775184943ff9a63aa5241ffcb9b7b8"
+     },
+     "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+     "rule_ids": [
+      "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+      "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+      "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+     ],
+     "owner_facts": [
+      "QORTUBA-NEW-BED-ROOM-DUCT-FINISH-OWNER-001@v1"
+     ],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "BED.ROOM"
+    ],
+    "QTY": 49.098242,
+    "evidence_row": "DRY_WALL_PAINT"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-WET-SERVICE-WALL-TILE",
+    "TRADE": "ARCHITECTURAL_WALL_FINISH",
+    "DESCRIPTION_AR": "تكسيات جدران بورسلين / سيراميك - المناطق الرطبة حتى 3.20 م",
+    "DESCRIPTION_EN": "Porcelain / ceramic wall tile - wet / service rooms (walls, exposed columns) to 3.20 m",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+     "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "WET_SERVICE_WALL_TILE (R8.19 rebuild)",
+     "sites": [
+      "SITE-1c4abf65f9b5db1e",
+      "SITE-8c1c7563d5252c50",
+      "SITE-a2b19efc492a6d0b",
+      "SITE-fe8ed5548fb4310e"
+     ],
+     "surface_ids": {
+      "count": 42,
+      "sha256": "bdab3b794a5e273f54ece74b955b58dfc4aa605f43c8d5bc9dd71ba6ad59cd06"
+     },
+     "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+     "rule_ids": [
+      "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+      "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "TOTAL",
+    "ROOM_ZONE": "ALL",
+    "QTY": 127.693512,
+    "evidence_row": "WET_SERVICE_WALL_TILE"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-WET-SERVICE-WALL-TILE",
+    "TRADE": "ARCHITECTURAL_WALL_FINISH",
+    "DESCRIPTION_AR": "تكسيات جدران بورسلين / سيراميك - المناطق الرطبة حتى 3.20 م",
+    "DESCRIPTION_EN": "Porcelain / ceramic wall tile - wet / service rooms (walls, exposed columns) to 3.20 m",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+     "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "WET_SERVICE_WALL_TILE (R8.19 rebuild)",
+     "sites": [
+      "SITE-1c4abf65f9b5db1e"
+     ],
+     "surface_ids": {
+      "count": 42,
+      "sha256": "bdab3b794a5e273f54ece74b955b58dfc4aa605f43c8d5bc9dd71ba6ad59cd06"
+     },
+     "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+     "rule_ids": [
+      "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+      "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "BATH"
+    ],
+    "QTY": 36.32,
+    "evidence_row": "WET_SERVICE_WALL_TILE"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-WET-SERVICE-WALL-TILE",
+    "TRADE": "ARCHITECTURAL_WALL_FINISH",
+    "DESCRIPTION_AR": "تكسيات جدران بورسلين / سيراميك - المناطق الرطبة حتى 3.20 م",
+    "DESCRIPTION_EN": "Porcelain / ceramic wall tile - wet / service rooms (walls, exposed columns) to 3.20 m",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+     "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "WET_SERVICE_WALL_TILE (R8.19 rebuild)",
+     "sites": [
+      "SITE-8c1c7563d5252c50"
+     ],
+     "surface_ids": {
+      "count": 42,
+      "sha256": "bdab3b794a5e273f54ece74b955b58dfc4aa605f43c8d5bc9dd71ba6ad59cd06"
+     },
+     "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+     "rule_ids": [
+      "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+      "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "PAINTRY"
+    ],
+    "QTY": 36.013512,
+    "evidence_row": "WET_SERVICE_WALL_TILE"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-WET-SERVICE-WALL-TILE",
+    "TRADE": "ARCHITECTURAL_WALL_FINISH",
+    "DESCRIPTION_AR": "تكسيات جدران بورسلين / سيراميك - المناطق الرطبة حتى 3.20 م",
+    "DESCRIPTION_EN": "Porcelain / ceramic wall tile - wet / service rooms (walls, exposed columns) to 3.20 m",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+     "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "WET_SERVICE_WALL_TILE (R8.19 rebuild)",
+     "sites": [
+      "SITE-a2b19efc492a6d0b"
+     ],
+     "surface_ids": {
+      "count": 42,
+      "sha256": "bdab3b794a5e273f54ece74b955b58dfc4aa605f43c8d5bc9dd71ba6ad59cd06"
+     },
+     "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+     "rule_ids": [
+      "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+      "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "BATH"
+    ],
+    "QTY": 28.32,
+    "evidence_row": "WET_SERVICE_WALL_TILE"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-WET-SERVICE-WALL-TILE",
+    "TRADE": "ARCHITECTURAL_WALL_FINISH",
+    "DESCRIPTION_AR": "تكسيات جدران بورسلين / سيراميك - المناطق الرطبة حتى 3.20 م",
+    "DESCRIPTION_EN": "Porcelain / ceramic wall tile - wet / service rooms (walls, exposed columns) to 3.20 m",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+     "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "WET_SERVICE_WALL_TILE (R8.19 rebuild)",
+     "sites": [
+      "SITE-fe8ed5548fb4310e"
+     ],
+     "surface_ids": {
+      "count": 42,
+      "sha256": "bdab3b794a5e273f54ece74b955b58dfc4aa605f43c8d5bc9dd71ba6ad59cd06"
+     },
+     "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+     "rule_ids": [
+      "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+      "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "BATH"
+    ],
+    "QTY": 27.04,
+    "evidence_row": "WET_SERVICE_WALL_TILE"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-WET-WALL-TILE-PREP",
+    "TRADE": "ARCHITECTURAL_WALL_FINISH",
+    "DESCRIPTION_AR": "تحضير الجدران تحت التكسيات - المناطق الرطبة",
+    "DESCRIPTION_EN": "Wall preparation under the wall tile - wet / service rooms",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+     "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "WET_WALL_TILE_PREP (R8.19 rebuild)",
+     "sites": [
+      "SITE-1c4abf65f9b5db1e",
+      "SITE-8c1c7563d5252c50",
+      "SITE-a2b19efc492a6d0b",
+      "SITE-fe8ed5548fb4310e"
+     ],
+     "surface_ids": {
+      "count": 42,
+      "sha256": "bdab3b794a5e273f54ece74b955b58dfc4aa605f43c8d5bc9dd71ba6ad59cd06"
+     },
+     "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+     "rule_ids": [
+      "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+      "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "TOTAL",
+    "ROOM_ZONE": "ALL",
+    "QTY": 127.693512,
+    "evidence_row": "WET_WALL_TILE_PREP"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-WET-WALL-TILE-PREP",
+    "TRADE": "ARCHITECTURAL_WALL_FINISH",
+    "DESCRIPTION_AR": "تحضير الجدران تحت التكسيات - المناطق الرطبة",
+    "DESCRIPTION_EN": "Wall preparation under the wall tile - wet / service rooms",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+     "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "WET_WALL_TILE_PREP (R8.19 rebuild)",
+     "sites": [
+      "SITE-1c4abf65f9b5db1e"
+     ],
+     "surface_ids": {
+      "count": 42,
+      "sha256": "bdab3b794a5e273f54ece74b955b58dfc4aa605f43c8d5bc9dd71ba6ad59cd06"
+     },
+     "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+     "rule_ids": [
+      "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+      "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "BATH"
+    ],
+    "QTY": 36.32,
+    "evidence_row": "WET_WALL_TILE_PREP"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-WET-WALL-TILE-PREP",
+    "TRADE": "ARCHITECTURAL_WALL_FINISH",
+    "DESCRIPTION_AR": "تحضير الجدران تحت التكسيات - المناطق الرطبة",
+    "DESCRIPTION_EN": "Wall preparation under the wall tile - wet / service rooms",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+     "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "WET_WALL_TILE_PREP (R8.19 rebuild)",
+     "sites": [
+      "SITE-8c1c7563d5252c50"
+     ],
+     "surface_ids": {
+      "count": 42,
+      "sha256": "bdab3b794a5e273f54ece74b955b58dfc4aa605f43c8d5bc9dd71ba6ad59cd06"
+     },
+     "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+     "rule_ids": [
+      "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+      "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "PAINTRY"
+    ],
+    "QTY": 36.013512,
+    "evidence_row": "WET_WALL_TILE_PREP"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-WET-WALL-TILE-PREP",
+    "TRADE": "ARCHITECTURAL_WALL_FINISH",
+    "DESCRIPTION_AR": "تحضير الجدران تحت التكسيات - المناطق الرطبة",
+    "DESCRIPTION_EN": "Wall preparation under the wall tile - wet / service rooms",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+     "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "WET_WALL_TILE_PREP (R8.19 rebuild)",
+     "sites": [
+      "SITE-a2b19efc492a6d0b"
+     ],
+     "surface_ids": {
+      "count": 42,
+      "sha256": "bdab3b794a5e273f54ece74b955b58dfc4aa605f43c8d5bc9dd71ba6ad59cd06"
+     },
+     "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+     "rule_ids": [
+      "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+      "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "BATH"
+    ],
+    "QTY": 28.32,
+    "evidence_row": "WET_WALL_TILE_PREP"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-WET-WALL-TILE-PREP",
+    "TRADE": "ARCHITECTURAL_WALL_FINISH",
+    "DESCRIPTION_AR": "تحضير الجدران تحت التكسيات - المناطق الرطبة",
+    "DESCRIPTION_EN": "Wall preparation under the wall tile - wet / service rooms",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+     "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "WET_WALL_TILE_PREP (R8.19 rebuild)",
+     "sites": [
+      "SITE-fe8ed5548fb4310e"
+     ],
+     "surface_ids": {
+      "count": 42,
+      "sha256": "bdab3b794a5e273f54ece74b955b58dfc4aa605f43c8d5bc9dd71ba6ad59cd06"
+     },
+     "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+     "rule_ids": [
+      "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+      "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "BATH"
+    ],
+    "QTY": 27.04,
+    "evidence_row": "WET_WALL_TILE_PREP"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-WET-SERVICE-REVEAL-PLASTER",
+    "TRADE": "PLASTER_INTERNAL",
+    "DESCRIPTION_AR": "لياسة جوانب الفتحات - الحمامات وغرفة التحضير",
+    "DESCRIPTION_EN": "Plaster to reveals owned by wet / service rooms",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "WET_SERVICE_REVEAL_PLASTER (R8.19 rebuild)",
+     "sites": [
+      "SITE-1c4abf65f9b5db1e",
+      "SITE-8c1c7563d5252c50",
+      "SITE-a2b19efc492a6d0b",
+      "SITE-fe8ed5548fb4310e"
+     ],
+     "surface_ids": {
+      "count": 6,
+      "sha256": "751cc40d208316f1b28e0115ba71668c2e9121e37a3a3e0efe3f92b431fe0763"
+     },
+     "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+     "rule_ids": [
+      "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "TOTAL",
+    "ROOM_ZONE": "ALL",
+    "QTY": 1.510248,
+    "evidence_row": "WET_SERVICE_REVEAL_PLASTER"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-WET-SERVICE-REVEAL-PLASTER",
+    "TRADE": "PLASTER_INTERNAL",
+    "DESCRIPTION_AR": "لياسة جوانب الفتحات - الحمامات وغرفة التحضير",
+    "DESCRIPTION_EN": "Plaster to reveals owned by wet / service rooms",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "WET_SERVICE_REVEAL_PLASTER (R8.19 rebuild)",
+     "sites": [
+      "SITE-8c1c7563d5252c50"
+     ],
+     "surface_ids": {
+      "count": 6,
+      "sha256": "751cc40d208316f1b28e0115ba71668c2e9121e37a3a3e0efe3f92b431fe0763"
+     },
+     "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+     "rule_ids": [
+      "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "PAINTRY"
+    ],
+    "QTY": 1.510248,
+    "evidence_row": "WET_SERVICE_REVEAL_PLASTER"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-SKIRTING",
+    "TRADE": "SKIRTING_PROFILE",
+    "DESCRIPTION_AR": "نعلة مخفية - المناطق الجافة",
+    "DESCRIPTION_EN": "Hidden skirting - dry rooms",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "lm",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "QORTUBA-NEW-SKIRTING-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "SKIRTING_REGISTER",
+     "sites": [
+      "SITE-1c4abf65f9b5db1e",
+      "SITE-5f1762f1a93b91ca",
+      "SITE-77a2130eb275604c",
+      "SITE-8c1c7563d5252c50",
+      "SITE-a2b19efc492a6d0b",
+      "SITE-a6405850100155ac",
+      "SITE-daca396d6d730e60",
+      "SITE-fe8ed5548fb4310e"
+     ],
+     "surface_ids": null,
+     "authority_digest": "896f2b71cac726436b6e876a21a93a47f2f6ab07009a9c0398ad669a66bbf551",
+     "rule_ids": [
+      "QORTUBA-NEW-SKIRTING-METHOD@v3"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "TOTAL",
+    "ROOM_ZONE": "ALL",
+    "QTY": 94.13682,
+    "evidence_row": "SKIRTING"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-SKIRTING",
+    "TRADE": "SKIRTING_PROFILE",
+    "DESCRIPTION_AR": "نعلة مخفية - المناطق الجافة",
+    "DESCRIPTION_EN": "Hidden skirting - dry rooms",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "lm",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "QORTUBA-NEW-SKIRTING-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "SKIRTING_REGISTER",
+     "sites": [
+      "SITE-5f1762f1a93b91ca"
+     ],
+     "surface_ids": null,
+     "authority_digest": "896f2b71cac726436b6e876a21a93a47f2f6ab07009a9c0398ad669a66bbf551",
+     "rule_ids": [
+      "QORTUBA-NEW-SKIRTING-METHOD@v3"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "BED.ROOM"
+    ],
+    "QTY": 22.9,
+    "evidence_row": "SKIRTING"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-SKIRTING",
+    "TRADE": "SKIRTING_PROFILE",
+    "DESCRIPTION_AR": "نعلة مخفية - المناطق الجافة",
+    "DESCRIPTION_EN": "Hidden skirting - dry rooms",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "lm",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "QORTUBA-NEW-SKIRTING-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "SKIRTING_REGISTER",
+     "sites": [
+      "SITE-77a2130eb275604c"
+     ],
+     "surface_ids": null,
+     "authority_digest": "896f2b71cac726436b6e876a21a93a47f2f6ab07009a9c0398ad669a66bbf551",
+     "rule_ids": [
+      "QORTUBA-NEW-SKIRTING-METHOD@v3"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "HALL",
+     "whgm"
+    ],
+    "QTY": 26.157105,
+    "evidence_row": "SKIRTING"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-SKIRTING",
+    "TRADE": "SKIRTING_PROFILE",
+    "DESCRIPTION_AR": "نعلة مخفية - المناطق الجافة",
+    "DESCRIPTION_EN": "Hidden skirting - dry rooms",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "lm",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "QORTUBA-NEW-SKIRTING-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "SKIRTING_REGISTER",
+     "sites": [
+      "SITE-a6405850100155ac"
+     ],
+     "surface_ids": null,
+     "authority_digest": "896f2b71cac726436b6e876a21a93a47f2f6ab07009a9c0398ad669a66bbf551",
+     "rule_ids": [
+      "QORTUBA-NEW-SKIRTING-METHOD@v3"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "DRESS",
+     "M.B.ROOM"
+    ],
+    "QTY": 29.5,
+    "evidence_row": "SKIRTING"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-SKIRTING",
+    "TRADE": "SKIRTING_PROFILE",
+    "DESCRIPTION_AR": "نعلة مخفية - المناطق الجافة",
+    "DESCRIPTION_EN": "Hidden skirting - dry rooms",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "lm",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "QORTUBA-NEW-SKIRTING-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "SKIRTING_REGISTER",
+     "sites": [
+      "SITE-daca396d6d730e60"
+     ],
+     "surface_ids": null,
+     "authority_digest": "896f2b71cac726436b6e876a21a93a47f2f6ab07009a9c0398ad669a66bbf551",
+     "rule_ids": [
+      "QORTUBA-NEW-SKIRTING-METHOD@v3"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "BED.ROOM"
+    ],
+    "QTY": 15.579714,
+    "evidence_row": "SKIRTING"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-HIDDEN-PROFILE",
+    "TRADE": "SKIRTING_PROFILE",
+    "DESCRIPTION_AR": "بروفايل ألمنيوم مخفي للنعلة",
+    "DESCRIPTION_EN": "Hidden aluminium skirting profile",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "lm",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "QORTUBA-NEW-SKIRTING-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "HIDDEN_PROFILE_REGISTER",
+     "sites": [
+      "SITE-1c4abf65f9b5db1e",
+      "SITE-5f1762f1a93b91ca",
+      "SITE-77a2130eb275604c",
+      "SITE-8c1c7563d5252c50",
+      "SITE-a2b19efc492a6d0b",
+      "SITE-a6405850100155ac",
+      "SITE-daca396d6d730e60",
+      "SITE-fe8ed5548fb4310e"
+     ],
+     "surface_ids": null,
+     "authority_digest": "896f2b71cac726436b6e876a21a93a47f2f6ab07009a9c0398ad669a66bbf551",
+     "rule_ids": [
+      "QORTUBA-NEW-SKIRTING-METHOD@v3"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "TOTAL",
+    "ROOM_ZONE": "ALL",
+    "QTY": 94.13682,
+    "evidence_row": "HIDDEN_PROFILE"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-HIDDEN-PROFILE",
+    "TRADE": "SKIRTING_PROFILE",
+    "DESCRIPTION_AR": "بروفايل ألمنيوم مخفي للنعلة",
+    "DESCRIPTION_EN": "Hidden aluminium skirting profile",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "lm",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "QORTUBA-NEW-SKIRTING-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "HIDDEN_PROFILE_REGISTER",
+     "sites": [
+      "SITE-5f1762f1a93b91ca"
+     ],
+     "surface_ids": null,
+     "authority_digest": "896f2b71cac726436b6e876a21a93a47f2f6ab07009a9c0398ad669a66bbf551",
+     "rule_ids": [
+      "QORTUBA-NEW-SKIRTING-METHOD@v3"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "BED.ROOM"
+    ],
+    "QTY": 22.9,
+    "evidence_row": "HIDDEN_PROFILE"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-HIDDEN-PROFILE",
+    "TRADE": "SKIRTING_PROFILE",
+    "DESCRIPTION_AR": "بروفايل ألمنيوم مخفي للنعلة",
+    "DESCRIPTION_EN": "Hidden aluminium skirting profile",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "lm",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "QORTUBA-NEW-SKIRTING-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "HIDDEN_PROFILE_REGISTER",
+     "sites": [
+      "SITE-77a2130eb275604c"
+     ],
+     "surface_ids": null,
+     "authority_digest": "896f2b71cac726436b6e876a21a93a47f2f6ab07009a9c0398ad669a66bbf551",
+     "rule_ids": [
+      "QORTUBA-NEW-SKIRTING-METHOD@v3"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "HALL",
+     "whgm"
+    ],
+    "QTY": 26.157105,
+    "evidence_row": "HIDDEN_PROFILE"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-HIDDEN-PROFILE",
+    "TRADE": "SKIRTING_PROFILE",
+    "DESCRIPTION_AR": "بروفايل ألمنيوم مخفي للنعلة",
+    "DESCRIPTION_EN": "Hidden aluminium skirting profile",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "lm",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "QORTUBA-NEW-SKIRTING-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "HIDDEN_PROFILE_REGISTER",
+     "sites": [
+      "SITE-a6405850100155ac"
+     ],
+     "surface_ids": null,
+     "authority_digest": "896f2b71cac726436b6e876a21a93a47f2f6ab07009a9c0398ad669a66bbf551",
+     "rule_ids": [
+      "QORTUBA-NEW-SKIRTING-METHOD@v3"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "DRESS",
+     "M.B.ROOM"
+    ],
+    "QTY": 29.5,
+    "evidence_row": "HIDDEN_PROFILE"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-HIDDEN-PROFILE",
+    "TRADE": "SKIRTING_PROFILE",
+    "DESCRIPTION_AR": "بروفايل ألمنيوم مخفي للنعلة",
+    "DESCRIPTION_EN": "Hidden aluminium skirting profile",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "lm",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "QORTUBA-NEW-SKIRTING-METHOD@v3"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "HIDDEN_PROFILE_REGISTER",
+     "sites": [
+      "SITE-daca396d6d730e60"
+     ],
+     "surface_ids": null,
+     "authority_digest": "896f2b71cac726436b6e876a21a93a47f2f6ab07009a9c0398ad669a66bbf551",
+     "rule_ids": [
+      "QORTUBA-NEW-SKIRTING-METHOD@v3"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "BED.ROOM"
+    ],
+    "QTY": 15.579714,
+    "evidence_row": "HIDDEN_PROFILE"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-MARBLE-THRESHOLD-PLAN-AREA-M2",
+    "TRADE": "MARBLE_STONE",
+    "DESCRIPTION_AR": "عتبات رخام - المساحة",
+    "DESCRIPTION_EN": "Marble thresholds - plan area",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "MARBLE_THRESHOLD_REGISTER",
+     "sites": null,
+     "surface_ids": null,
+     "authority_digest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+     "rule_ids": [
+      "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "TOTAL",
+    "ROOM_ZONE": "ALL",
+    "QTY": 0.51,
+    "evidence_row": "MARBLE_THRESHOLD_PLAN_AREA_M2"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-MARBLE-THRESHOLD-LENGTH-LM",
+    "TRADE": "MARBLE_STONE",
+    "DESCRIPTION_AR": "عتبات رخام - الطول",
+    "DESCRIPTION_EN": "Marble thresholds - length",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "lm",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "MARBLE_THRESHOLD_REGISTER",
+     "sites": null,
+     "surface_ids": null,
+     "authority_digest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+     "rule_ids": [
+      "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "TOTAL",
+    "ROOM_ZONE": "ALL",
+    "QTY": 3.4,
+    "evidence_row": "MARBLE_THRESHOLD_LENGTH_LM"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-WATERPROOFING-FLOOR-M2",
+    "TRADE": "WATERPROOFING",
+    "DESCRIPTION_AR": "عزل مائي لأرضيات المناطق الرطبة",
+    "DESCRIPTION_EN": "Waterproofing membrane - wet-room floors",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "US-04",
+     "US-05",
+     "US-14",
+     "QP-13"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "WATERPROOFING_REGISTER",
+     "sites": [
+      "SITE-1c4abf65f9b5db1e",
+      "SITE-8c1c7563d5252c50",
+      "SITE-a2b19efc492a6d0b",
+      "SITE-fe8ed5548fb4310e"
+     ],
+     "surface_ids": null,
+     "authority_digest": "c4b6cad9dcf0389bfcbe7ee81db0d907ffaeaac8fb471afde2c85e2731ac09f0",
+     "rule_ids": [
+      "US-04",
+      "US-05",
+      "US-14",
+      "QP-13"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "TOTAL",
+    "ROOM_ZONE": "ALL",
+    "QTY": 29.4275,
+    "evidence_row": "WATERPROOFING_FLOOR_M2"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-WATERPROOFING-FLOOR-M2",
+    "TRADE": "WATERPROOFING",
+    "DESCRIPTION_AR": "عزل مائي لأرضيات المناطق الرطبة",
+    "DESCRIPTION_EN": "Waterproofing membrane - wet-room floors",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "US-04",
+     "US-05",
+     "US-14",
+     "QP-13"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "WATERPROOFING_REGISTER",
+     "sites": [
+      "SITE-1c4abf65f9b5db1e"
+     ],
+     "surface_ids": null,
+     "authority_digest": "c4b6cad9dcf0389bfcbe7ee81db0d907ffaeaac8fb471afde2c85e2731ac09f0",
+     "rule_ids": [
+      "US-04",
+      "US-05",
+      "US-14",
+      "QP-13"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "BATH"
+    ],
+    "QTY": 8.5525,
+    "evidence_row": "WATERPROOFING_FLOOR_M2"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-WATERPROOFING-FLOOR-M2",
+    "TRADE": "WATERPROOFING",
+    "DESCRIPTION_AR": "عزل مائي لأرضيات المناطق الرطبة",
+    "DESCRIPTION_EN": "Waterproofing membrane - wet-room floors",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "US-04",
+     "US-05",
+     "US-14",
+     "QP-13"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "WATERPROOFING_REGISTER",
+     "sites": [
+      "SITE-8c1c7563d5252c50"
+     ],
+     "surface_ids": null,
+     "authority_digest": "c4b6cad9dcf0389bfcbe7ee81db0d907ffaeaac8fb471afde2c85e2731ac09f0",
+     "rule_ids": [
+      "US-04",
+      "US-05",
+      "US-14",
+      "QP-13"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "PAINTRY"
+    ],
+    "QTY": 11.685,
+    "evidence_row": "WATERPROOFING_FLOOR_M2"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-WATERPROOFING-FLOOR-M2",
+    "TRADE": "WATERPROOFING",
+    "DESCRIPTION_AR": "عزل مائي لأرضيات المناطق الرطبة",
+    "DESCRIPTION_EN": "Waterproofing membrane - wet-room floors",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "US-04",
+     "US-05",
+     "US-14",
+     "QP-13"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "WATERPROOFING_REGISTER",
+     "sites": [
+      "SITE-a2b19efc492a6d0b"
+     ],
+     "surface_ids": null,
+     "authority_digest": "c4b6cad9dcf0389bfcbe7ee81db0d907ffaeaac8fb471afde2c85e2731ac09f0",
+     "rule_ids": [
+      "US-04",
+      "US-05",
+      "US-14",
+      "QP-13"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "BATH"
+    ],
+    "QTY": 5.1,
+    "evidence_row": "WATERPROOFING_FLOOR_M2"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-WATERPROOFING-FLOOR-M2",
+    "TRADE": "WATERPROOFING",
+    "DESCRIPTION_AR": "عزل مائي لأرضيات المناطق الرطبة",
+    "DESCRIPTION_EN": "Waterproofing membrane - wet-room floors",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "m2",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "US-04",
+     "US-05",
+     "US-14",
+     "QP-13"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "WATERPROOFING_REGISTER",
+     "sites": [
+      "SITE-fe8ed5548fb4310e"
+     ],
+     "surface_ids": null,
+     "authority_digest": "c4b6cad9dcf0389bfcbe7ee81db0d907ffaeaac8fb471afde2c85e2731ac09f0",
+     "rule_ids": [
+      "US-04",
+      "US-05",
+      "US-14",
+      "QP-13"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "BATH"
+    ],
+    "QTY": 4.09,
+    "evidence_row": "WATERPROOFING_FLOOR_M2"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-WATERPROOFING-UPTURN-LM",
+    "TRADE": "WATERPROOFING",
+    "DESCRIPTION_AR": "رفرف عزل مائي بارتفاع 15 سم على محيط المناطق الرطبة",
+    "DESCRIPTION_EN": "Waterproofing upturn 0.15 m - gross wet-room perimeter",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "lm",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "US-04",
+     "US-05",
+     "US-14",
+     "QP-13"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "WATERPROOFING_REGISTER",
+     "sites": [
+      "SITE-1c4abf65f9b5db1e",
+      "SITE-8c1c7563d5252c50",
+      "SITE-a2b19efc492a6d0b",
+      "SITE-fe8ed5548fb4310e"
+     ],
+     "surface_ids": null,
+     "authority_digest": "c4b6cad9dcf0389bfcbe7ee81db0d907ffaeaac8fb471afde2c85e2731ac09f0",
+     "rule_ids": [
+      "US-04",
+      "US-05",
+      "US-14",
+      "QP-13"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "TOTAL",
+    "ROOM_ZONE": "ALL",
+    "QTY": 44.2,
+    "evidence_row": "WATERPROOFING_UPTURN_LM"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-WATERPROOFING-UPTURN-LM",
+    "TRADE": "WATERPROOFING",
+    "DESCRIPTION_AR": "رفرف عزل مائي بارتفاع 15 سم على محيط المناطق الرطبة",
+    "DESCRIPTION_EN": "Waterproofing upturn 0.15 m - gross wet-room perimeter",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "lm",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "US-04",
+     "US-05",
+     "US-14",
+     "QP-13"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "WATERPROOFING_REGISTER",
+     "sites": [
+      "SITE-1c4abf65f9b5db1e"
+     ],
+     "surface_ids": null,
+     "authority_digest": "c4b6cad9dcf0389bfcbe7ee81db0d907ffaeaac8fb471afde2c85e2731ac09f0",
+     "rule_ids": [
+      "US-04",
+      "US-05",
+      "US-14",
+      "QP-13"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "BATH"
+    ],
+    "QTY": 11.9,
+    "evidence_row": "WATERPROOFING_UPTURN_LM"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-WATERPROOFING-UPTURN-LM",
+    "TRADE": "WATERPROOFING",
+    "DESCRIPTION_AR": "رفرف عزل مائي بارتفاع 15 سم على محيط المناطق الرطبة",
+    "DESCRIPTION_EN": "Waterproofing upturn 0.15 m - gross wet-room perimeter",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "lm",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "US-04",
+     "US-05",
+     "US-14",
+     "QP-13"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "WATERPROOFING_REGISTER",
+     "sites": [
+      "SITE-8c1c7563d5252c50"
+     ],
+     "surface_ids": null,
+     "authority_digest": "c4b6cad9dcf0389bfcbe7ee81db0d907ffaeaac8fb471afde2c85e2731ac09f0",
+     "rule_ids": [
+      "US-04",
+      "US-05",
+      "US-14",
+      "QP-13"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "PAINTRY"
+    ],
+    "QTY": 13.9,
+    "evidence_row": "WATERPROOFING_UPTURN_LM"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-WATERPROOFING-UPTURN-LM",
+    "TRADE": "WATERPROOFING",
+    "DESCRIPTION_AR": "رفرف عزل مائي بارتفاع 15 سم على محيط المناطق الرطبة",
+    "DESCRIPTION_EN": "Waterproofing upturn 0.15 m - gross wet-room perimeter",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "lm",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "US-04",
+     "US-05",
+     "US-14",
+     "QP-13"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "WATERPROOFING_REGISTER",
+     "sites": [
+      "SITE-a2b19efc492a6d0b"
+     ],
+     "surface_ids": null,
+     "authority_digest": "c4b6cad9dcf0389bfcbe7ee81db0d907ffaeaac8fb471afde2c85e2731ac09f0",
+     "rule_ids": [
+      "US-04",
+      "US-05",
+      "US-14",
+      "QP-13"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "BATH"
+    ],
+    "QTY": 9.4,
+    "evidence_row": "WATERPROOFING_UPTURN_LM"
+   },
+   {
+    "ITEM_CODE": "QOR-R819-WATERPROOFING-UPTURN-LM",
+    "TRADE": "WATERPROOFING",
+    "DESCRIPTION_AR": "رفرف عزل مائي بارتفاع 15 سم على محيط المناطق الرطبة",
+    "DESCRIPTION_EN": "Waterproofing upturn 0.15 m - gross wet-room perimeter",
+    "LOCATION_FLOOR": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+    "UNIT": "lm",
+    "STATUS": "COMPUTED_SHADOW_COMPLETE",
+    "SOURCE": "DXF (K2 ezdxf), TS01 certified topology",
+    "RULE_AUTHORITY": [
+     "US-04",
+     "US-05",
+     "US-14",
+     "QP-13"
+    ],
+    "NOTES_BLOCKERS": [
+     "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+     "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+    ],
+    "approved_for_boq": false,
+    "qty_field": "complete",
+    "trace": {
+     "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+     "source_revision": "QORTUBA_REV_NEW",
+     "trade_row": "WATERPROOFING_REGISTER",
+     "sites": [
+      "SITE-fe8ed5548fb4310e"
+     ],
+     "surface_ids": null,
+     "authority_digest": "c4b6cad9dcf0389bfcbe7ee81db0d907ffaeaac8fb471afde2c85e2731ac09f0",
+     "rule_ids": [
+      "US-04",
+      "US-05",
+      "US-14",
+      "QP-13"
+     ],
+     "owner_facts": [],
+     "release_state": "SHADOW"
+    },
+    "ROW_KIND": "ROOM",
+    "ROOM_ZONE": [
+     "BATH"
+    ],
+    "QTY": 9.0,
+    "evidence_row": "WATERPROOFING_UPTURN_LM"
+   }
+  ],
+  "pricing": null,
+  "calculates": false,
+  "digest": "46a1ac2978513db7d72ae6a84fa4d3f801ae8a4f37bef01e376f4ee372b871c5"
+ },
+ "validation": {
+  "state": "PASS",
+  "differences": [],
+  "status_violations": [],
+  "untraced": [],
+  "rows": 50
+ },
+ "evidence_rows": [
+  {
+   "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "source_revision": "QORTUBA_REV_NEW",
+   "release_state": "SHADOW",
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "source": "DXF (K2 ezdxf), TS01 certified topology",
+   "row_id": "Q-03",
+   "unit": "m2",
+   "trade_row": "QORTUBA_R8_19_STATUS.six_rows.Q-03",
+   "complete": 17.7425,
+   "authorised_subtotal": 17.7425,
+   "unresolved": [],
+   "sites": [
+    "SITE-1c4abf65f9b5db1e",
+    "SITE-a2b19efc492a6d0b",
+    "SITE-fe8ed5548fb4310e"
+   ],
+   "surface_ids": null,
+   "authority_digest": "4ba5280563aad8912d64953fab427f958fa6bd12753b8ff00ff943347d26235d",
+   "rule_ids": [
+    "QORTUBA-FLOOR-TREATMENT@v3",
+    "QORTUBA-SPACE-CLASS@v2"
+   ],
+   "owner_facts": [
+    "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "per_room": null
+  },
+  {
+   "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "source_revision": "QORTUBA_REV_NEW",
+   "release_state": "SHADOW",
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "source": "DXF (K2 ezdxf), TS01 certified topology",
+   "row_id": "Q-03P",
+   "unit": "m2",
+   "trade_row": "QORTUBA_R8_19_STATUS.six_rows.Q-03P",
+   "complete": 11.685,
+   "authorised_subtotal": 11.685,
+   "unresolved": [
+    {
+     "blocker": "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+     "effect": "QUANTITY_AFFECTING"
+    }
+   ],
+   "sites": [
+    "SITE-8c1c7563d5252c50"
+   ],
+   "surface_ids": null,
+   "authority_digest": "12cbb5ec8e1657ad174b5767863237f6bb9e6e0a2b2545037b53c588efc42fdc",
+   "rule_ids": [
+    "QORTUBA-FLOOR-TREATMENT@v3",
+    "QORTUBA-SPACE-CLASS@v2"
+   ],
+   "owner_facts": [],
+   "blockers": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "per_room": null
+  },
+  {
+   "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "source_revision": "QORTUBA_REV_NEW",
+   "release_state": "SHADOW",
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "source": "DXF (K2 ezdxf), TS01 certified topology",
+   "row_id": "Q-11",
+   "unit": "m2",
+   "trade_row": "QORTUBA_R8_19_STATUS.six_rows.Q-11",
+   "complete": 17.7425,
+   "authorised_subtotal": 17.7425,
+   "unresolved": [],
+   "sites": [
+    "SITE-1c4abf65f9b5db1e",
+    "SITE-a2b19efc492a6d0b",
+    "SITE-fe8ed5548fb4310e"
+   ],
+   "surface_ids": null,
+   "authority_digest": "4a6e54181439fc9a2b6df0f38ab723dd1919156fee23e8901e0239ff31114bf0",
+   "rule_ids": [
+    "QORTUBA-FLOOR-TREATMENT@v3",
+    "QORTUBA-SPACE-CLASS@v2"
+   ],
+   "owner_facts": [
+    "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "per_room": null
+  },
+  {
+   "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "source_revision": "QORTUBA_REV_NEW",
+   "release_state": "SHADOW",
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "source": "DXF (K2 ezdxf), TS01 certified topology",
+   "row_id": "Q-12",
+   "unit": "m2",
+   "trade_row": "QORTUBA_R8_19_STATUS.six_rows.Q-12",
+   "complete": 11.685,
+   "authorised_subtotal": 11.685,
+   "unresolved": [
+    {
+     "blocker": "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+     "effect": "QUANTITY_AFFECTING"
+    }
+   ],
+   "sites": [
+    "SITE-8c1c7563d5252c50"
+   ],
+   "surface_ids": null,
+   "authority_digest": "36c55cb88cd6fcae629b58541083ba4f82728e1a5d3c56801de3f9bcf7ae0a4b",
+   "rule_ids": [
+    "QORTUBA-FLOOR-TREATMENT@v3",
+    "QORTUBA-SPACE-CLASS@v2"
+   ],
+   "owner_facts": [],
+   "blockers": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "OBJECT_FOOTPRINT_IMPLICIT: proven furniture / fixture footprints are inside the measured floor by the topology convention, not by a FLOOR_FINISH footprint authority",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "per_room": null
+  },
+  {
+   "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "source_revision": "QORTUBA_REV_NEW",
+   "release_state": "SHADOW",
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "source": "DXF (K2 ezdxf), TS01 certified topology",
+   "row_id": "Q-13",
+   "unit": "m2",
+   "trade_row": "QORTUBA_R8_19_STATUS.six_rows.Q-13",
+   "complete": 111.8988,
+   "authorised_subtotal": 111.8988,
+   "unresolved": [],
+   "sites": [
+    "SITE-5f1762f1a93b91ca",
+    "SITE-77a2130eb275604c",
+    "SITE-a6405850100155ac",
+    "SITE-daca396d6d730e60"
+   ],
+   "surface_ids": null,
+   "authority_digest": "b53ed8ac248365a10b58bd862ddc180827b6b4d55db2ba55b67b4e89398a65b9",
+   "rule_ids": [
+    "QORTUBA-FLOOR-TREATMENT@v3",
+    "QORTUBA-SPACE-CLASS@v2"
+   ],
+   "owner_facts": [
+    "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1",
+    "QORTUBA-NEW-DOOR-THRESHOLD-CONTINUITY-OWNER-001@v1",
+    "QORTUBA-NEW-FLOOR-OBJECT-FOOTPRINT-OWNER-001@v1",
+    "QORTUBA-NEW-MAIN-ENTRANCE-MARBLE-OWNER-001@v1",
+    "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "per_room": null
+  },
+  {
+   "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "source_revision": "QORTUBA_REV_NEW",
+   "release_state": "SHADOW",
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "source": "DXF (K2 ezdxf), TS01 certified topology",
+   "row_id": "Q-14",
+   "unit": "m2",
+   "trade_row": "QORTUBA_R8_19_STATUS.six_rows.Q-14",
+   "complete": 140.637,
+   "authorised_subtotal": 140.637,
+   "unresolved": [],
+   "sites": [
+    "SITE-1c4abf65f9b5db1e",
+    "SITE-5f1762f1a93b91ca",
+    "SITE-77a2130eb275604c",
+    "SITE-8c1c7563d5252c50",
+    "SITE-a2b19efc492a6d0b",
+    "SITE-a6405850100155ac",
+    "SITE-daca396d6d730e60",
+    "SITE-fe8ed5548fb4310e"
+   ],
+   "surface_ids": null,
+   "authority_digest": "d1c2f2a87820c25916f1d31732e74d7c774086b0369882a0b9dbc81b8bc0139b",
+   "rule_ids": [
+    "QORTUBA-Q14-CEILING-TREATMENT@v1"
+   ],
+   "owner_facts": [
+    "QORTUBA-NEW-BED-ROOM-DUCT-OWNER-001@v1",
+    "QORTUBA-NEW-MB-DRESS-PASSAGE-FULL-HEIGHT-OWNER-001@v1",
+    "QORTUBA-NEW-OPEN-PASSAGE-SOFFIT-NOT-CEILING-OWNER-001@v1"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: the claims and the measurement are anchored to the DXF df0e1d690285...; DWG e4babbc2ded1... identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "per_room": null
+  },
+  {
+   "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "source_revision": "QORTUBA_REV_NEW",
+   "release_state": "SHADOW",
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "source": "DXF (K2 ezdxf), TS01 certified topology",
+   "row_id": "DRY_WALL_PLASTER",
+   "unit": "m2",
+   "trade_row": "DRY_WALL_PLASTER (R8.19 rebuild)",
+   "complete": 307.361518,
+   "authorised_subtotal": 307.361518,
+   "unresolved": [],
+   "sites": [
+    "SITE-5f1762f1a93b91ca",
+    "SITE-77a2130eb275604c",
+    "SITE-a6405850100155ac",
+    "SITE-daca396d6d730e60"
+   ],
+   "surface_ids": {
+    "count": 136,
+    "sha256": "f2afe8464c2d9d08714d317afa81acf3d4775184943ff9a63aa5241ffcb9b7b8"
+   },
+   "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+   "rule_ids": [
+    "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+    "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+    "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+   ],
+   "owner_facts": [
+    "QORTUBA-NEW-BED-ROOM-DUCT-FINISH-OWNER-001@v1"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "per_room": {
+    "SITE-5f1762f1a93b91ca": {
+     "zones": [
+      "BED.ROOM"
+     ],
+     "qty": 72.328302
+    },
+    "SITE-77a2130eb275604c": {
+     "zones": [
+      "HALL",
+      "whgm"
+     ],
+     "qty": 94.266868
+    },
+    "SITE-a6405850100155ac": {
+     "zones": [
+      "DRESS",
+      "M.B.ROOM"
+     ],
+     "qty": 91.668106
+    },
+    "SITE-daca396d6d730e60": {
+     "zones": [
+      "BED.ROOM"
+     ],
+     "qty": 49.098242
+    }
+   }
+  },
+  {
+   "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "source_revision": "QORTUBA_REV_NEW",
+   "release_state": "SHADOW",
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "source": "DXF (K2 ezdxf), TS01 certified topology",
+   "row_id": "DRY_WALL_PAINT",
+   "unit": "m2",
+   "trade_row": "DRY_WALL_PAINT (R8.19 rebuild)",
+   "complete": 307.361518,
+   "authorised_subtotal": 307.361518,
+   "unresolved": [],
+   "sites": [
+    "SITE-5f1762f1a93b91ca",
+    "SITE-77a2130eb275604c",
+    "SITE-a6405850100155ac",
+    "SITE-daca396d6d730e60"
+   ],
+   "surface_ids": {
+    "count": 136,
+    "sha256": "f2afe8464c2d9d08714d317afa81acf3d4775184943ff9a63aa5241ffcb9b7b8"
+   },
+   "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+   "rule_ids": [
+    "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+    "URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD@v1",
+    "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+   ],
+   "owner_facts": [
+    "QORTUBA-NEW-BED-ROOM-DUCT-FINISH-OWNER-001@v1"
+   ],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "per_room": {
+    "SITE-5f1762f1a93b91ca": {
+     "zones": [
+      "BED.ROOM"
+     ],
+     "qty": 72.328302
+    },
+    "SITE-77a2130eb275604c": {
+     "zones": [
+      "HALL",
+      "whgm"
+     ],
+     "qty": 94.266868
+    },
+    "SITE-a6405850100155ac": {
+     "zones": [
+      "DRESS",
+      "M.B.ROOM"
+     ],
+     "qty": 91.668106
+    },
+    "SITE-daca396d6d730e60": {
+     "zones": [
+      "BED.ROOM"
+     ],
+     "qty": 49.098242
+    }
+   }
+  },
+  {
+   "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "source_revision": "QORTUBA_REV_NEW",
+   "release_state": "SHADOW",
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "source": "DXF (K2 ezdxf), TS01 certified topology",
+   "row_id": "WET_SERVICE_WALL_TILE",
+   "unit": "m2",
+   "trade_row": "WET_SERVICE_WALL_TILE (R8.19 rebuild)",
+   "complete": 127.693512,
+   "authorised_subtotal": 127.693512,
+   "unresolved": [],
+   "sites": [
+    "SITE-1c4abf65f9b5db1e",
+    "SITE-8c1c7563d5252c50",
+    "SITE-a2b19efc492a6d0b",
+    "SITE-fe8ed5548fb4310e"
+   ],
+   "surface_ids": {
+    "count": 42,
+    "sha256": "bdab3b794a5e273f54ece74b955b58dfc4aa605f43c8d5bc9dd71ba6ad59cd06"
+   },
+   "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+   "rule_ids": [
+    "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+    "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+   ],
+   "owner_facts": [],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "per_room": {
+    "SITE-1c4abf65f9b5db1e": {
+     "zones": [
+      "BATH"
+     ],
+     "qty": 36.32
+    },
+    "SITE-8c1c7563d5252c50": {
+     "zones": [
+      "PAINTRY"
+     ],
+     "qty": 36.013512
+    },
+    "SITE-a2b19efc492a6d0b": {
+     "zones": [
+      "BATH"
+     ],
+     "qty": 28.32
+    },
+    "SITE-fe8ed5548fb4310e": {
+     "zones": [
+      "BATH"
+     ],
+     "qty": 27.04
+    }
+   }
+  },
+  {
+   "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "source_revision": "QORTUBA_REV_NEW",
+   "release_state": "SHADOW",
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "source": "DXF (K2 ezdxf), TS01 certified topology",
+   "row_id": "WET_WALL_TILE_PREP",
+   "unit": "m2",
+   "trade_row": "WET_WALL_TILE_PREP (R8.19 rebuild)",
+   "complete": 127.693512,
+   "authorised_subtotal": 127.693512,
+   "unresolved": [],
+   "sites": [
+    "SITE-1c4abf65f9b5db1e",
+    "SITE-8c1c7563d5252c50",
+    "SITE-a2b19efc492a6d0b",
+    "SITE-fe8ed5548fb4310e"
+   ],
+   "surface_ids": {
+    "count": 42,
+    "sha256": "bdab3b794a5e273f54ece74b955b58dfc4aa605f43c8d5bc9dd71ba6ad59cd06"
+   },
+   "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+   "rule_ids": [
+    "URBAN-EXPOSED-COLUMN-FINISH-METHOD@v1",
+    "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+   ],
+   "owner_facts": [],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "per_room": {
+    "SITE-1c4abf65f9b5db1e": {
+     "zones": [
+      "BATH"
+     ],
+     "qty": 36.32
+    },
+    "SITE-8c1c7563d5252c50": {
+     "zones": [
+      "PAINTRY"
+     ],
+     "qty": 36.013512
+    },
+    "SITE-a2b19efc492a6d0b": {
+     "zones": [
+      "BATH"
+     ],
+     "qty": 28.32
+    },
+    "SITE-fe8ed5548fb4310e": {
+     "zones": [
+      "BATH"
+     ],
+     "qty": 27.04
+    }
+   }
+  },
+  {
+   "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "source_revision": "QORTUBA_REV_NEW",
+   "release_state": "SHADOW",
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "source": "DXF (K2 ezdxf), TS01 certified topology",
+   "row_id": "WET_SERVICE_REVEAL_PLASTER",
+   "unit": "m2",
+   "trade_row": "WET_SERVICE_REVEAL_PLASTER (R8.19 rebuild)",
+   "complete": 1.510248,
+   "authorised_subtotal": 1.510248,
+   "unresolved": [],
+   "sites": [
+    "SITE-1c4abf65f9b5db1e",
+    "SITE-8c1c7563d5252c50",
+    "SITE-a2b19efc492a6d0b",
+    "SITE-fe8ed5548fb4310e"
+   ],
+   "surface_ids": {
+    "count": 6,
+    "sha256": "751cc40d208316f1b28e0115ba71668c2e9121e37a3a3e0efe3f92b431fe0763"
+   },
+   "authority_digest": "9660db81feba4286f5ec04bd1a29dac2beb5fa5c6840adee66c1630f98ebcf8a",
+   "rule_ids": [
+    "QORTUBA-NEW-WALL-FACE-METHOD@v3"
+   ],
+   "owner_facts": [],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "per_room": {
+    "SITE-8c1c7563d5252c50": {
+     "zones": [
+      "PAINTRY"
+     ],
+     "qty": 1.510248
+    }
+   }
+  },
+  {
+   "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "source_revision": "QORTUBA_REV_NEW",
+   "release_state": "SHADOW",
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "source": "DXF (K2 ezdxf), TS01 certified topology",
+   "row_id": "SKIRTING",
+   "unit": "lm",
+   "trade_row": "SKIRTING_REGISTER",
+   "complete": 94.13682,
+   "authorised_subtotal": 94.13682,
+   "unresolved": [],
+   "sites": [
+    "SITE-1c4abf65f9b5db1e",
+    "SITE-5f1762f1a93b91ca",
+    "SITE-77a2130eb275604c",
+    "SITE-8c1c7563d5252c50",
+    "SITE-a2b19efc492a6d0b",
+    "SITE-a6405850100155ac",
+    "SITE-daca396d6d730e60",
+    "SITE-fe8ed5548fb4310e"
+   ],
+   "surface_ids": null,
+   "authority_digest": "896f2b71cac726436b6e876a21a93a47f2f6ab07009a9c0398ad669a66bbf551",
+   "rule_ids": [
+    "QORTUBA-NEW-SKIRTING-METHOD@v3"
+   ],
+   "owner_facts": [],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "per_room": {
+    "SITE-5f1762f1a93b91ca": {
+     "zones": [
+      "BED.ROOM"
+     ],
+     "qty": 22.9
+    },
+    "SITE-77a2130eb275604c": {
+     "zones": [
+      "HALL",
+      "whgm"
+     ],
+     "qty": 26.157105
+    },
+    "SITE-a6405850100155ac": {
+     "zones": [
+      "DRESS",
+      "M.B.ROOM"
+     ],
+     "qty": 29.5
+    },
+    "SITE-daca396d6d730e60": {
+     "zones": [
+      "BED.ROOM"
+     ],
+     "qty": 15.579714
+    }
+   }
+  },
+  {
+   "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "source_revision": "QORTUBA_REV_NEW",
+   "release_state": "SHADOW",
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "source": "DXF (K2 ezdxf), TS01 certified topology",
+   "row_id": "HIDDEN_PROFILE",
+   "unit": "lm",
+   "trade_row": "HIDDEN_PROFILE_REGISTER",
+   "complete": 94.13682,
+   "authorised_subtotal": 94.13682,
+   "unresolved": [],
+   "sites": [
+    "SITE-1c4abf65f9b5db1e",
+    "SITE-5f1762f1a93b91ca",
+    "SITE-77a2130eb275604c",
+    "SITE-8c1c7563d5252c50",
+    "SITE-a2b19efc492a6d0b",
+    "SITE-a6405850100155ac",
+    "SITE-daca396d6d730e60",
+    "SITE-fe8ed5548fb4310e"
+   ],
+   "surface_ids": null,
+   "authority_digest": "896f2b71cac726436b6e876a21a93a47f2f6ab07009a9c0398ad669a66bbf551",
+   "rule_ids": [
+    "QORTUBA-NEW-SKIRTING-METHOD@v3"
+   ],
+   "owner_facts": [],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "per_room": {
+    "SITE-5f1762f1a93b91ca": {
+     "zones": [
+      "BED.ROOM"
+     ],
+     "qty": 22.9
+    },
+    "SITE-77a2130eb275604c": {
+     "zones": [
+      "HALL",
+      "whgm"
+     ],
+     "qty": 26.157105
+    },
+    "SITE-a6405850100155ac": {
+     "zones": [
+      "DRESS",
+      "M.B.ROOM"
+     ],
+     "qty": 29.5
+    },
+    "SITE-daca396d6d730e60": {
+     "zones": [
+      "BED.ROOM"
+     ],
+     "qty": 15.579714
+    }
+   }
+  },
+  {
+   "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "source_revision": "QORTUBA_REV_NEW",
+   "release_state": "SHADOW",
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "source": "DXF (K2 ezdxf), TS01 certified topology",
+   "row_id": "MARBLE_THRESHOLD_PLAN_AREA_M2",
+   "unit": "m2",
+   "trade_row": "MARBLE_THRESHOLD_REGISTER",
+   "complete": 0.51,
+   "authorised_subtotal": 0.51,
+   "unresolved": [],
+   "sites": null,
+   "surface_ids": null,
+   "authority_digest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+   "rule_ids": [
+    "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1"
+   ],
+   "owner_facts": [],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "per_room": null
+  },
+  {
+   "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "source_revision": "QORTUBA_REV_NEW",
+   "release_state": "SHADOW",
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "source": "DXF (K2 ezdxf), TS01 certified topology",
+   "row_id": "MARBLE_THRESHOLD_LENGTH_LM",
+   "unit": "lm",
+   "trade_row": "MARBLE_THRESHOLD_REGISTER",
+   "complete": 3.4,
+   "authorised_subtotal": 3.4,
+   "unresolved": [],
+   "sites": null,
+   "surface_ids": null,
+   "authority_digest": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+   "rule_ids": [
+    "URBAN-WET-SERVICE-MARBLE-THRESHOLD@v1"
+   ],
+   "owner_facts": [],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "per_room": null
+  },
+  {
+   "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "source_revision": "QORTUBA_REV_NEW",
+   "release_state": "SHADOW",
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "source": "DXF (K2 ezdxf), TS01 certified topology",
+   "row_id": "WATERPROOFING_FLOOR_M2",
+   "unit": "m2",
+   "trade_row": "WATERPROOFING_REGISTER",
+   "complete": 29.4275,
+   "authorised_subtotal": 29.4275,
+   "unresolved": [],
+   "sites": [
+    "SITE-1c4abf65f9b5db1e",
+    "SITE-8c1c7563d5252c50",
+    "SITE-a2b19efc492a6d0b",
+    "SITE-fe8ed5548fb4310e"
+   ],
+   "surface_ids": null,
+   "authority_digest": "c4b6cad9dcf0389bfcbe7ee81db0d907ffaeaac8fb471afde2c85e2731ac09f0",
+   "rule_ids": [
+    "US-04",
+    "US-05",
+    "US-14",
+    "QP-13"
+   ],
+   "owner_facts": [],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "per_room": {
+    "SITE-1c4abf65f9b5db1e": {
+     "zones": [
+      "BATH"
+     ],
+     "qty": 8.5525
+    },
+    "SITE-8c1c7563d5252c50": {
+     "zones": [
+      "PAINTRY"
+     ],
+     "qty": 11.685
+    },
+    "SITE-a2b19efc492a6d0b": {
+     "zones": [
+      "BATH"
+     ],
+     "qty": 5.1
+    },
+    "SITE-fe8ed5548fb4310e": {
+     "zones": [
+      "BATH"
+     ],
+     "qty": 4.09
+    }
+   }
+  },
+  {
+   "run_id": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+   "source_revision": "QORTUBA_REV_NEW",
+   "release_state": "SHADOW",
+   "floor": "the selected SECOND FLOOR apartment (PLAN_VARIANT_4_SELECTED, region RC:MODEL_SPACE:4267:540:1649)",
+   "source": "DXF (K2 ezdxf), TS01 certified topology",
+   "row_id": "WATERPROOFING_UPTURN_LM",
+   "unit": "lm",
+   "trade_row": "WATERPROOFING_REGISTER",
+   "complete": 44.2,
+   "authorised_subtotal": 44.2,
+   "unresolved": [],
+   "sites": [
+    "SITE-1c4abf65f9b5db1e",
+    "SITE-8c1c7563d5252c50",
+    "SITE-a2b19efc492a6d0b",
+    "SITE-fe8ed5548fb4310e"
+   ],
+   "surface_ids": null,
+   "authority_digest": "c4b6cad9dcf0389bfcbe7ee81db0d907ffaeaac8fb471afde2c85e2731ac09f0",
+   "rule_ids": [
+    "US-04",
+    "US-05",
+    "US-14",
+    "QP-13"
+   ],
+   "owner_facts": [],
+   "blockers": [
+    "SOURCE_ANCHOR: DXF anchored, DWG identity NOT_ESTABLISHED",
+    "SHADOW_ONLY: no baseline approval, no migration transaction, no release gate passed"
+   ],
+   "per_room": {
+    "SITE-1c4abf65f9b5db1e": {
+     "zones": [
+      "BATH"
+     ],
+     "qty": 11.9
+    },
+    "SITE-8c1c7563d5252c50": {
+     "zones": [
+      "PAINTRY"
+     ],
+     "qty": 13.9
+    },
+    "SITE-a2b19efc492a6d0b": {
+     "zones": [
+      "BATH"
+     ],
+     "qty": 9.4
+    },
+    "SITE-fe8ed5548fb4310e": {
+     "zones": [
+      "BATH"
+     ],
+     "qty": 9.0
+    }
+   }
+  }
+ ],
+ "status_counts": {
+  "COMPUTED_SHADOW_COMPLETE": 48,
+  "AUTHORISED_SUBTOTAL": 2,
+  "BLOCKED": 0,
+  "RELEASED": 0
+ },
+ "approved_for_boq": 0,
+ "status_changes_vs_r8_19": {
+  "Q-03P": {
+   "R8.19": "COMPUTED_SHADOW_COMPLETE",
+   "R8.20": "AUTHORISED_SUBTOTAL"
+  },
+  "Q-12": {
+   "R8.19": "COMPUTED_SHADOW_COMPLETE",
+   "R8.20": "AUTHORISED_SUBTOTAL"
+  }
+ },
+ "why": "R8.19 ignored quantity-affecting release blockers (OBJECT_FOOTPRINT_IMPLICIT) when deriving the status; BOQ_EVIDENCE_MAPPING_V1 keeps such rows at AUTHORISED_SUBTOTAL. Quantities unchanged",
+ "banner": "SHADOW BOQ - NOT APPROVED FOR TENDER / CONTRACT; NO PRODUCTION MIGRATION"
+}

@@ -1,0 +1,41 @@
+{
+ "SCHEMA": "URBAN_R8_9_TOPOLOGY_CROSSCHECK_V2",
+ "check": "TOPOLOGY_CROSSCHECK_GEOS_V2",
+ "before_R8_9": "R8.8 V1 counted a site as AGREES when ANY of four grid phases agreed (old K1/K2 75, new 67)",
+ "runs": {
+  "OLD_K1": {
+   "state": "ALL_PHASES_AGREE",
+   "counts": {
+    "ALL_PHASES_AGREE": 75,
+    "PHASE_SENSITIVE_INCONCLUSIVE": 0,
+    "ALL_PHASES_DISAGREE": 0,
+    "NOT_APPLICABLE_CURVE": 0,
+    "CHECK_INPUT_INVALID": 0
+   },
+   "inconclusive": {}
+  },
+  "OLD_K2": {
+   "state": "ALL_PHASES_AGREE",
+   "counts": {
+    "ALL_PHASES_AGREE": 75,
+    "PHASE_SENSITIVE_INCONCLUSIVE": 0,
+    "ALL_PHASES_DISAGREE": 0,
+    "NOT_APPLICABLE_CURVE": 0,
+    "CHECK_INPUT_INVALID": 0
+   },
+   "inconclusive": {}
+  },
+  "NEW_K2": {
+   "state": "ALL_PHASES_AGREE",
+   "counts": {
+    "ALL_PHASES_AGREE": 64,
+    "PHASE_SENSITIVE_INCONCLUSIVE": 0,
+    "ALL_PHASES_DISAGREE": 0,
+    "NOT_APPLICABLE_CURVE": 0,
+    "CHECK_INPUT_INVALID": 0
+   },
+   "inconclusive": {}
+  }
+ },
+ "invalid_polygon_policy": "CHECK_INPUT_INVALID; buffer(0) removed; interior stubs removed exactly"
+}

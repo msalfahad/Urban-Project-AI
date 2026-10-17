@@ -1,0 +1,13 @@
+GROUP,V3B_POPULATIONS,V3B_TECHNICAL_KG,V3B_HOOKS_OUTSIDE_KG,S9_RELEASED_KG,S9_NOT_RELEASED_MODELLED_KG,S9_RELEASED_MINUS_V3B_KG,CLASS,EXPLANATION
+COLUMNS,"[""COLUMNS"", ""COLUMN_STARTERS""]",5329.857,151.494,4657.725,2830.459,-672.132,METHOD,"S3.1 parts; S9-C01 holds the sharp-path ties and hook allowances (1,217.128 kg) conditional; V3b uses a code method for ties; laps are outside both nets; starters are provisional in both"
+FOOTINGS,"[""FOOTINGS"", ""FOOTING_F_F10""]",1132.674,0,3629.599513,0,2496.925513,NOT_DECOMPOSABLE,"V3b states 52 bar sets (4 blocked) and no per-set detail, so the gap cannot be decomposed from the V3b registers; S4 counts every schedule mat (bottom both ways at 25 footings, top both ways at 5) on cover-adjusted lengths; F / F10 is blocked in both (F-03)"
+GROUND_BEAMS,"[""GROUND"", ""GROUND_BEAM_EXT""]",1687.528,412.976,1436.23167,0,-251.29633,METHOD,"S5 straight bars + S5.1 through-support runs, less AD1 and D1.1 (link core paths are not lower bounds); V3b uses a code method and excludes hooks from its technical figure; exterior ground beams unquantified in both"
+BEAMS,"[""BEAMS"", ""BEAM_RESIDUE"", ""BEAM_SIDE_BARS""]",4115.881,445.684,4014.765444,0,-101.115556,METHOD,"S6 + S6.1 less D1.1 (1,332.264 kg of link core paths retracted); V3b uses a code method for links and keeps residue and side bars out of its technical figure"
+SLABS,"[""SLAB""]",4876.896,0,3802.015365,0,-1074.880635,SCOPE + METHOD,"S7 is the restricted project basis (anchorage, continuity, temperature steel, laps and trims blocked); V3b adds geometric inferences; the tank roof is a separate S8.4 family in S9 (361.209 kg)"
+GROUND_SLAB,"[""GROUND_SLAB""]",286.087,0,233.694587,0,-52.392413,SCOPE,S8.1 releases the two source-zoned cells only
+DOMES,"[""DOME""]",2054.227,24.887,602.111304,0,-1452.115696,SCOPE + AUTHORITY,"S8.3 releases the two shell meshes; rings, drums, junction bars and laps are blocked and the tower dome is a source conflict; V3b quantifies all of them"
+LINTELS,"[""LINTELS""]",582.479,44.425,49.589037,522.091117,-532.889963,AUTHORITY,S8.6A keeps the seven schedule-bound lintels only
+POOL,"[""POOL""]",585.738,0,0,0,-585.738,AUTHORITY,all pool families blocked (depths 'AS PER ARCH')
+STAIRS,"[""STAIRS""]",0,0,59.020862,0,59.020862,SCOPE,S8.7's three landing plates (8 Ø16 / m); flights blocked in both
+BOUNDARY_WALL,"[""BOUNDARY_WALL""]",0,23.957,0,0,0,NO_DIFFERENCE,no technical kg in either
+WATER_TANK_ROOF,[],,,361.208565,,,SCOPE,no V3b population of its own (V3b may carry it inside SLAB; not decomposable)

@@ -1,0 +1,2459 @@
+{
+ "frozen_before_benchmark": true,
+ "policy": {
+  "cb_states": [
+   "MATCH_CONFIRMED",
+   "SPAN_LENGTH_CONFLICT",
+   "SPAN_COUNT_CONFLICT",
+   "TAG_WITH_NO_MEMBER",
+   "MEMBER_WITH_NO_TAG",
+   "BLOCKED"
+  ],
+  "policy_id": "STRUCTURAL_CENSUS_V1",
+  "precedence": [
+   "LOCAL_PANEL_NOTE",
+   "FLOOR_SPECIFIC_NOTE",
+   "PROJECT_DEFAULT"
+  ],
+  "principles": [
+   "plan decides occurrence; schedule only defines",
+   "no default overrides a local note",
+   "a value is never rounded into a table row it does not match",
+   "every plan object ends in one terminal state"
+  ],
+  "rule_states": [
+   "EXACT_RULE",
+   "RULE_NOT_EXACT_MATCH",
+   "BLOCKED_METHOD"
+  ],
+  "terminal_states": [
+   "COUNTED_AND_DEFINED",
+   "COUNTED_DEFINITION_PARTIAL",
+   "COUNTED_BLOCKED",
+   "NOT_IN_SCOPE"
+  ]
+ },
+ "register": "COLUMN_VERTICAL_CHAIN_REGISTER",
+ "round": "S1",
+ "rows": [
+  {
+   "axis_plan_size_label": "30X70",
+   "chain_id": "COLPOS-X15-Y01-31408-7462",
+   "changes_type_at": [],
+   "column_type": "C10",
+   "continues_through": [
+    "FOUNDATION",
+    "GF"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X15",
+    "Y": "Y01"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "88D",
+    "FP": "10E8",
+    "GBP": "255",
+    "GFRS": "371"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 1448.3,
+     "handle": "1059",
+     "tag": "C10"
+    },
+    "FP": {
+     "distance_mm": 473.0,
+     "handle": "10D4",
+     "tag": "C10"
+    },
+    "GBP": {
+     "distance_mm": 739.2,
+     "handle": "23E",
+     "tag": "C10"
+    }
+   },
+   "terminates_at": "GF",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X50",
+   "chain_id": "COLPOS-X01-Y01-2138-7462",
+   "changes_type_at": [],
+   "column_type": "C",
+   "continues_through": [
+    "FOUNDATION",
+    "GF"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X01",
+    "Y": "Y01"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "849",
+    "FP": "10AB",
+    "GBP": "207",
+    "GFRS": "34D"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 1009.3,
+     "handle": "1008",
+     "tag": "C"
+    },
+    "FP": {
+     "distance_mm": 510.7,
+     "handle": "1680:CF>v",
+     "tag": "C"
+    },
+    "GBP": {
+     "distance_mm": 426.6,
+     "handle": "208",
+     "tag": "C"
+    }
+   },
+   "terminates_at": "GF",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X50",
+   "chain_id": "COLPOS-X04-Y01-7988-7462",
+   "changes_type_at": [],
+   "column_type": "C3",
+   "continues_through": [
+    "FOUNDATION",
+    "GF"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X04",
+    "Y": "Y01"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "84C",
+    "FP": "10AE",
+    "GBP": "20B",
+    "GFRS": "350"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 1101.0,
+     "handle": "100A",
+     "tag": "C3"
+    },
+    "FP": {
+     "distance_mm": 477.4,
+     "handle": "1681",
+     "tag": "C3"
+    },
+    "GBP": {
+     "distance_mm": 448.1,
+     "handle": "20D",
+     "tag": "C"
+    }
+   },
+   "terminates_at": "GF",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "TAG_CONFLICT"
+  },
+  {
+   "axis_plan_size_label": "30X50",
+   "chain_id": "COLPOS-X06-Y01-14088-7462",
+   "changes_type_at": [],
+   "column_type": "C",
+   "continues_through": [
+    "FOUNDATION",
+    "GF"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X06",
+    "Y": "Y01"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "85B",
+    "FP": "10B7",
+    "GBP": "218",
+    "GFRS": "359"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 1179.3,
+     "handle": "100C",
+     "tag": "C"
+    },
+    "FP": {
+     "distance_mm": 525.6,
+     "handle": "1682:CF>v",
+     "tag": "C"
+    },
+    "GBP": {
+     "distance_mm": 425.7,
+     "handle": "219:c>v",
+     "tag": "C"
+    }
+   },
+   "terminates_at": "GF",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X110",
+   "chain_id": "COLPOS-X?-Y01-17913-7462",
+   "changes_type_at": [],
+   "column_type": "C11",
+   "continues_through": [
+    "FOUNDATION",
+    "GF"
+   ],
+   "events": [],
+   "grid": {
+    "X": null,
+    "Y": "Y01"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "883",
+    "FP": "10DD",
+    "GBP": "249",
+    "GFRS": "37D"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 1545.3,
+     "handle": "1016",
+     "tag": "C11"
+    },
+    "FP": {
+     "distance_mm": 2293.6,
+     "handle": "1684:F11>v",
+     "tag": "C11"
+    },
+    "GBP": {
+     "distance_mm": 554.4,
+     "handle": "24A",
+     "tag": "C11"
+    }
+   },
+   "terminates_at": "GF",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X50",
+   "chain_id": "COLPOS-X12-Y01-24458-7462",
+   "changes_type_at": [],
+   "column_type": "C3",
+   "continues_through": [
+    "FOUNDATION",
+    "GF"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X12",
+    "Y": "Y01"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "88A",
+    "FP": "10E4",
+    "GBP": "251",
+    "GFRS": "383"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 2165.3,
+     "handle": "1018",
+     "tag": "C3"
+    },
+    "FP": {
+     "distance_mm": 816.4,
+     "handle": "10E5",
+     "tag": "C3"
+    },
+    "GBP": {
+     "distance_mm": 816.4,
+     "handle": "252",
+     "tag": "C3"
+    }
+   },
+   "terminates_at": "GF",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X50",
+   "chain_id": "COLPOS-X16-Y01-33108-7562",
+   "changes_type_at": [],
+   "column_type": "C",
+   "continues_through": [
+    "FOUNDATION",
+    "GF"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X16",
+    "Y": "Y01"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "840",
+    "FP": "10A4",
+    "GBP": "200",
+    "GFRS": "347"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 1738.3,
+     "handle": "105B",
+     "tag": "C"
+    },
+    "FP": {
+     "distance_mm": 335.0,
+     "handle": "166E",
+     "tag": "C"
+    },
+    "GBP": {
+     "distance_mm": 533.0,
+     "handle": "201",
+     "tag": "C"
+    }
+   },
+   "terminates_at": "GF",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": null,
+   "chain_id": "COLPOS-X08-Y02-16850-8912",
+   "changes_type_at": [],
+   "column_type": "P.C",
+   "continues_through": [
+    "1F"
+   ],
+   "events": [
+    {
+     "event": "NO_SUPPORT_BELOW",
+     "level": "GFRS"
+    }
+   ],
+   "grid": {
+    "X": "X08",
+    "Y": "Y02"
+   },
+   "labels": [
+    {
+     "bound_chain_id": "COLPOS-X08-Y02-16850-8912",
+     "distance_mm": 2927.8,
+     "handle": "544",
+     "label": "P.C20X70",
+     "position": [
+      15008.817,
+      6635.197
+     ],
+     "sheet": "GFRS",
+     "state": "BOUND",
+     "text": "P.C 20x70"
+    }
+   ],
+   "members_by_sheet": {
+    "FFRS": "66A",
+    "GFRS": "329"
+   },
+   "planted_on": "GF_ROOF_SLAB",
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "FFRS": 5,
+     "GFRS": 4
+    }
+   },
+   "starts_at": "1F",
+   "tags_by_plan": {},
+   "terminates_at": "1F",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "PLAN_LABEL"
+  },
+  {
+   "axis_plan_size_label": "30X80",
+   "chain_id": "COLPOS-X12-Y02-24308-8912",
+   "changes_type_at": [],
+   "column_type": "C8",
+   "continues_through": [
+    "FOUNDATION",
+    "GF",
+    "1F"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X12",
+    "Y": "Y02"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "886",
+    "FFRS": "69A",
+    "FP": "10E0",
+    "GBP": "24D",
+    "GFRS": "380"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FFRS": 5,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 1406.9,
+     "handle": "101A",
+     "tag": "C8"
+    },
+    "FP": {
+     "distance_mm": 586.4,
+     "handle": "10E1",
+     "tag": "C8"
+    },
+    "GBP": {
+     "distance_mm": 704.2,
+     "handle": "24E",
+     "tag": "C7"
+    }
+   },
+   "terminates_at": "1F",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "TAG_CONFLICT"
+  },
+  {
+   "axis_plan_size_label": null,
+   "chain_id": "COLPOS-X15-Y02-31508-8912",
+   "changes_type_at": [],
+   "column_type": "P.C",
+   "continues_through": [
+    "1F"
+   ],
+   "events": [
+    {
+     "event": "NO_SUPPORT_BELOW",
+     "level": "GFRS"
+    }
+   ],
+   "grid": {
+    "X": "X15",
+    "Y": "Y02"
+   },
+   "labels": [
+    {
+     "bound_chain_id": "COLPOS-X15-Y02-31508-8912",
+     "distance_mm": 2927.8,
+     "handle": "548",
+     "label": "P.C20X50",
+     "position": [
+      29667.086,
+      6635.197
+     ],
+     "sheet": "GFRS",
+     "state": "BOUND",
+     "text": "P.C 20x50"
+    }
+   ],
+   "members_by_sheet": {
+    "FFRS": "69D",
+    "GFRS": "386"
+   },
+   "planted_on": "GF_ROOF_SLAB",
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "FFRS": 5,
+     "GFRS": 4
+    }
+   },
+   "starts_at": "1F",
+   "tags_by_plan": {},
+   "terminates_at": "1F",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "PLAN_LABEL"
+  },
+  {
+   "axis_plan_size_label": "30X60",
+   "chain_id": "COLPOS-X14-Y02-27658-8962",
+   "changes_type_at": [],
+   "column_type": "C5",
+   "continues_through": [
+    "FOUNDATION",
+    "GF",
+    "1F"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X14",
+    "Y": "Y02"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "878",
+    "FFRS": "694",
+    "FP": "10D3",
+    "GBP": "23C",
+    "GFRS": "374"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FFRS": 5,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 512.1,
+     "handle": "101C",
+     "tag": "C5"
+    },
+    "FP": {
+     "distance_mm": 841.5,
+     "handle": "166F",
+     "tag": "C5"
+    },
+    "GBP": {
+     "distance_mm": 439.9,
+     "handle": "23D",
+     "tag": "C5"
+    }
+   },
+   "terminates_at": "1F",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X50",
+   "chain_id": "COLPOS-X05-Y02-12538-9062",
+   "changes_type_at": [],
+   "column_type": "C3",
+   "continues_through": [
+    "FOUNDATION",
+    "GF",
+    "1F"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X05",
+    "Y": "Y02"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "868",
+    "FFRS": "68B",
+    "FP": "10C5",
+    "GBP": "22C",
+    "GFRS": "365"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FFRS": 5,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 1731.3,
+     "handle": "100E",
+     "tag": "C3"
+    },
+    "FP": {
+     "distance_mm": 671.9,
+     "handle": "168E",
+     "tag": "C3"
+    },
+    "GBP": {
+     "distance_mm": 642.9,
+     "handle": "22D",
+     "tag": "C3"
+    }
+   },
+   "terminates_at": "1F",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X30",
+   "chain_id": "COLPOS-X16-Y03-33108-11312",
+   "changes_type_at": [],
+   "column_type": "CN",
+   "continues_through": [
+    "FOUNDATION"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X16",
+    "Y": "Y03"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "895",
+    "FP": "10FE",
+    "GBP": "809"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FP": 2,
+     "GBP": 3
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 1602.4,
+     "handle": "1071",
+     "tag": "CN"
+    },
+    "FP": {
+     "distance_mm": 649.3,
+     "handle": "10FD",
+     "tag": "CN"
+    },
+    "GBP": {
+     "distance_mm": 2527.2,
+     "handle": "808",
+     "tag": "CN"
+    }
+   },
+   "terminates_at": "FOUNDATION",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X60",
+   "chain_id": "COLPOS-X05-Y04-12538-11912",
+   "changes_type_at": [],
+   "column_type": "C5",
+   "continues_through": [
+    "FOUNDATION",
+    "GF",
+    "1F"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X05",
+    "Y": "Y04"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "862",
+    "FFRS": "685",
+    "FP": "10BD",
+    "GBP": "223",
+    "GFRS": "35F"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FFRS": 5,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 1560.2,
+     "handle": "1010",
+     "tag": "C5"
+    },
+    "FP": {
+     "distance_mm": 731.4,
+     "handle": "10BE",
+     "tag": "C5"
+    },
+    "GBP": {
+     "distance_mm": 731.4,
+     "handle": "224",
+     "tag": "C5"
+    }
+   },
+   "terminates_at": "1F",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X50",
+   "chain_id": "COLPOS-X03-Y04-6338-12062",
+   "changes_type_at": [],
+   "column_type": "C3",
+   "continues_through": [
+    "FOUNDATION",
+    "GF"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X03",
+    "Y": "Y04"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "853",
+    "FP": "10B1",
+    "GBP": "211",
+    "GFRS": "353"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 626.6,
+     "handle": "1006",
+     "tag": "C3"
+    },
+    "FP": {
+     "distance_mm": 631.8,
+     "handle": "168F",
+     "tag": "C3"
+    },
+    "GBP": {
+     "distance_mm": 569.8,
+     "handle": "20E",
+     "tag": "C3"
+    }
+   },
+   "terminates_at": "GF",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X110",
+   "chain_id": "COLPOS-X06-Y04-14438-12062",
+   "changes_type_at": [],
+   "column_type": "C11",
+   "continues_through": [
+    "FOUNDATION",
+    "GF"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X06",
+    "Y": "Y04"
+   },
+   "labels": [
+    {
+     "bound_chain_id": "COLPOS-X06-Y04-14438-12062",
+     "distance_mm": 1035.0,
+     "handle": "38A",
+     "label": "D.C",
+     "position": [
+      13610.833,
+      12709.185
+     ],
+     "sheet": "GFRS",
+     "state": "BOUND",
+     "text": "D.C"
+    }
+   ],
+   "members_by_sheet": {
+    "CAP": "85E",
+    "FP": "10BA",
+    "GBP": "220",
+    "GFRS": "35C"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 486.4,
+     "handle": "1012",
+     "tag": "C11"
+    },
+    "FP": {
+     "distance_mm": 519.5,
+     "handle": "10BF",
+     "tag": "C11"
+    },
+    "GBP": {
+     "distance_mm": 431.4,
+     "handle": "225",
+     "tag": "C11"
+    }
+   },
+   "terminates_at": "GF",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X70",
+   "chain_id": "COLPOS-X08-Y04-17038-12362",
+   "changes_type_at": [],
+   "column_type": "C6",
+   "continues_through": [
+    "FOUNDATION",
+    "GF",
+    "1F"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X08",
+    "Y": "Y04"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "865",
+    "FFRS": "688",
+    "FP": "10C2",
+    "GBP": "228",
+    "GFRS": "362"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FFRS": 5,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 1026.1,
+     "handle": "1014",
+     "tag": "C6"
+    },
+    "FP": {
+     "distance_mm": 987.9,
+     "handle": "168D",
+     "tag": "C6"
+    },
+    "GBP": {
+     "distance_mm": 518.9,
+     "handle": "229",
+     "tag": "C6"
+    }
+   },
+   "terminates_at": "1F",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X30",
+   "chain_id": "COLPOS-X?-Y?-24058-12787",
+   "changes_type_at": [],
+   "column_type": "CN",
+   "continues_through": [
+    "FOUNDATION"
+   ],
+   "events": [],
+   "grid": {
+    "X": null,
+    "Y": null
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "892",
+    "FP": "10F6",
+    "GBP": "7F5"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FP": 2,
+     "GBP": 3
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 864.8,
+     "handle": "17B6",
+     "tag": "CN"
+    },
+    "FP": {
+     "distance_mm": 1120.4,
+     "handle": "10F5",
+     "tag": "CN"
+    },
+    "GBP": {
+     "distance_mm": 959.2,
+     "handle": "7F4",
+     "tag": "CN"
+    }
+   },
+   "terminates_at": "FOUNDATION",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X30",
+   "chain_id": "COLPOS-X?-Y?-28583-12787",
+   "changes_type_at": [],
+   "column_type": "CN",
+   "continues_through": [
+    "FOUNDATION"
+   ],
+   "events": [],
+   "grid": {
+    "X": null,
+    "Y": null
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "88F",
+    "FP": "10EE",
+    "GBP": "7ED"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FP": 2,
+     "GBP": 3
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 881.1,
+     "handle": "1073",
+     "tag": "CN"
+    },
+    "FP": {
+     "distance_mm": 357.9,
+     "handle": "10ED",
+     "tag": "CN"
+    },
+    "GBP": {
+     "distance_mm": 959.2,
+     "handle": "7EC",
+     "tag": "CN"
+    }
+   },
+   "terminates_at": "FOUNDATION",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X50",
+   "chain_id": "COLPOS-X01-Y05-2038-13762",
+   "changes_type_at": [],
+   "column_type": "C",
+   "continues_through": [
+    "FOUNDATION",
+    "GF"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X01",
+    "Y": "Y05"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "844",
+    "FP": "10A8",
+    "GBP": "204",
+    "GFRS": "34A"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 650.4,
+     "handle": "84D",
+     "tag": "C"
+    },
+    "FP": {
+     "distance_mm": 331.0,
+     "handle": "167F:CF>v",
+     "tag": "C"
+    },
+    "GBP": {
+     "distance_mm": 403.4,
+     "handle": "20C",
+     "tag": "C"
+    }
+   },
+   "terminates_at": "GF",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X50",
+   "chain_id": "COLPOS-X02-Y05-4738-13862",
+   "changes_type_at": [],
+   "column_type": "C",
+   "continues_through": [
+    "FOUNDATION",
+    "GF"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X02",
+    "Y": "Y05"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "856",
+    "FP": "10B4",
+    "GBP": "214",
+    "GFRS": "356"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 1355.3,
+     "handle": "1004",
+     "tag": "C"
+    },
+    "FP": {
+     "distance_mm": 703.2,
+     "handle": "1678:CF>v",
+     "tag": "C"
+    },
+    "GBP": {
+     "distance_mm": 445.0,
+     "handle": "215",
+     "tag": "C"
+    }
+   },
+   "terminates_at": "GF",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X50",
+   "chain_id": "COLPOS-X16-Y06-33108-14962",
+   "changes_type_at": [],
+   "column_type": "C3",
+   "continues_through": [
+    "FOUNDATION",
+    "GF"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X16",
+    "Y": "Y06"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "83C",
+    "FP": "10A0",
+    "GBP": "1FC",
+    "GFRS": "344"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 545.7,
+     "handle": "106F",
+     "tag": "C3"
+    },
+    "FP": {
+     "distance_mm": 554.3,
+     "handle": "10A1",
+     "tag": "C3"
+    },
+    "GBP": {
+     "distance_mm": 732.6,
+     "handle": "1FD",
+     "tag": "C3"
+    }
+   },
+   "terminates_at": "GF",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X90",
+   "chain_id": "COLPOS-X15-Y06-31508-15062",
+   "changes_type_at": [
+    {
+     "event": "TURN_ORIENTATION_CHANGE",
+     "from": "X",
+     "level": "GFRS",
+     "to": "Y"
+    }
+   ],
+   "column_type": "C8",
+   "continues_through": [
+    "FOUNDATION",
+    "GF",
+    "1F"
+   ],
+   "events": [
+    {
+     "event": "TURN_ORIENTATION_CHANGE",
+     "from": "X",
+     "level": "GFRS",
+     "to": "Y"
+    }
+   ],
+   "grid": {
+    "X": "X15",
+    "Y": "Y06"
+   },
+   "labels": [
+    {
+     "bound_chain_id": "COLPOS-X15-Y06-31508-15062",
+     "distance_mm": 944.7,
+     "handle": "31F",
+     "label": "T.C",
+     "position": [
+      30685.576,
+      14621.946
+     ],
+     "sheet": "GFRS",
+     "state": "BOUND",
+     "text": "T.C"
+    }
+   ],
+   "members_by_sheet": {
+    "CAP": "873",
+    "FFRS": "664",
+    "FP": "10D0",
+    "GBP": "238",
+    "GFRS": "36E"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FFRS": 5,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 987.1,
+     "handle": "106D",
+     "tag": "C8"
+    },
+    "FP": {
+     "distance_mm": 569.7,
+     "handle": "1670",
+     "tag": "C8"
+    },
+    "GBP": {
+     "distance_mm": 463.3,
+     "handle": "239",
+     "tag": "C8"
+    }
+   },
+   "terminates_at": "1F",
+   "transition_outlines": {
+    "GFRS": "31B"
+   },
+   "turn": {
+    "lower_orientation": "X",
+    "lower_outline": "GFRS:36E",
+    "sheet": "GFRS",
+    "upper_orientation": "Y",
+    "upper_outline": "GFRS:31B"
+   },
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "20X50",
+   "chain_id": "COLPOS-X09-Y07-19688-15662",
+   "changes_type_at": [],
+   "column_type": "C2",
+   "continues_through": [
+    "FOUNDATION",
+    "GF",
+    "1F",
+    "2F"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X09",
+    "Y": "Y07"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "834",
+    "FFRS": "67F",
+    "FP": "1096",
+    "GBP": "1F2",
+    "GFRS": "33E",
+    "SFRS": "41E"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FFRS": 5,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4,
+     "SFRS": 6
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 631.7,
+     "handle": "107B",
+     "tag": "C2"
+    },
+    "FP": {
+     "distance_mm": 395.0,
+     "handle": "109B",
+     "tag": "C2"
+    },
+    "GBP": {
+     "distance_mm": 395.0,
+     "handle": "1F7",
+     "tag": "C2"
+    }
+   },
+   "terminates_at": "2F",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X30",
+   "chain_id": "COLPOS-X15-Y?-31208-15726",
+   "changes_type_at": [],
+   "column_type": "CN",
+   "continues_through": [
+    "FOUNDATION"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X15",
+    "Y": null
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "17CC",
+    "FP": "17C5",
+    "GBP": "17BD"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FP": 2,
+     "GBP": 3
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 1236.5,
+     "handle": "17D2",
+     "tag": "CN"
+    },
+    "FP": {
+     "distance_mm": 650.1,
+     "handle": "17C9",
+     "tag": "CN"
+    },
+    "GBP": {
+     "distance_mm": 552.8,
+     "handle": "17C2",
+     "tag": "CN"
+    }
+   },
+   "terminates_at": "FOUNDATION",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "25X100",
+   "chain_id": "COLPOS-X10-Y07-21713-15912",
+   "changes_type_at": [],
+   "column_type": "C9",
+   "continues_through": [
+    "FOUNDATION",
+    "GF",
+    "1F",
+    "2F"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X10",
+    "Y": "Y07"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "82E",
+    "FFRS": "679",
+    "FP": "1090",
+    "GBP": "1EC",
+    "GFRS": "338",
+    "SFRS": "418"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FFRS": 5,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4,
+     "SFRS": 6
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 844.8,
+     "handle": "1075",
+     "tag": "C9"
+    },
+    "FP": {
+     "distance_mm": 538.6,
+     "handle": "109A",
+     "tag": "C9"
+    },
+    "GBP": {
+     "distance_mm": 538.6,
+     "handle": "1F6",
+     "tag": "C9"
+    }
+   },
+   "terminates_at": "2F",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": null,
+   "chain_id": "COLPOS-X?-Y?-24888-15994",
+   "changes_type_at": [],
+   "column_type": "P.C",
+   "continues_through": [
+    "2F"
+   ],
+   "events": [
+    {
+     "event": "NO_SUPPORT_BELOW",
+     "level": "FFRS"
+    }
+   ],
+   "grid": {
+    "X": null,
+    "Y": null
+   },
+   "labels": [
+    {
+     "bound_chain_id": "COLPOS-X?-Y?-24888-15994",
+     "distance_mm": 3002.4,
+     "handle": "77C",
+     "label": "P.C20X50",
+     "position": [
+      22135.659,
+      17193.368
+     ],
+     "sheet": "FFRS",
+     "state": "BOUND",
+     "text": "P.C 20x50"
+    }
+   ],
+   "members_by_sheet": {
+    "FFRS": "77B",
+    "SFRS": "778"
+   },
+   "planted_on": "1F_ROOF_SLAB",
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "FFRS": 5,
+     "SFRS": 6
+    }
+   },
+   "starts_at": "2F",
+   "tags_by_plan": {},
+   "terminates_at": "2F",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "PLAN_LABEL"
+  },
+  {
+   "axis_plan_size_label": "30X80",
+   "chain_id": "COLPOS-X07-Y?-15888-16162",
+   "changes_type_at": [],
+   "column_type": "C7",
+   "continues_through": [
+    "FOUNDATION",
+    "GF",
+    "1F"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X07",
+    "Y": null
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "86C",
+    "FFRS": "68E",
+    "FP": "10C8",
+    "GBP": "230",
+    "GFRS": "368"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FFRS": 5,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 582.2,
+     "handle": "105D",
+     "tag": "C7"
+    },
+    "FP": {
+     "distance_mm": 427.3,
+     "handle": "10C9",
+     "tag": "C7"
+    },
+    "GBP": {
+     "distance_mm": 555.9,
+     "handle": "231",
+     "tag": "C7"
+    }
+   },
+   "terminates_at": "1F",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X100",
+   "chain_id": "COLPOS-X13-Y08-27308-16612",
+   "changes_type_at": [
+    {
+     "event": "TURN_ORIENTATION_CHANGE",
+     "from": "X",
+     "level": "GFRS",
+     "to": "Y"
+    }
+   ],
+   "column_type": "C9",
+   "continues_through": [
+    "FOUNDATION",
+    "GF",
+    "1F"
+   ],
+   "events": [
+    {
+     "event": "TURN_ORIENTATION_CHANGE",
+     "from": "X",
+     "level": "GFRS",
+     "to": "Y"
+    }
+   ],
+   "grid": {
+    "X": "X13",
+    "Y": "Y08"
+   },
+   "labels": [
+    {
+     "bound_chain_id": "COLPOS-X13-Y08-27308-16612",
+     "distance_mm": 992.3,
+     "handle": "324",
+     "label": "T.C",
+     "position": [
+      26485.576,
+      17142.361
+     ],
+     "sheet": "GFRS",
+     "state": "BOUND",
+     "text": "T.C"
+    }
+   ],
+   "members_by_sheet": {
+    "CAP": "880",
+    "FFRS": "667",
+    "FP": "10DA",
+    "GBP": "245",
+    "GFRS": "37A"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FFRS": 5,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 520.9,
+     "handle": "106B",
+     "tag": "C9"
+    },
+    "FP": {
+     "distance_mm": 906.1,
+     "handle": "1677",
+     "tag": "C9"
+    },
+    "GBP": {
+     "distance_mm": 360.1,
+     "handle": "246",
+     "tag": "C9"
+    }
+   },
+   "terminates_at": "1F",
+   "transition_outlines": {
+    "GFRS": "322"
+   },
+   "turn": {
+    "lower_orientation": "X",
+    "lower_outline": "GFRS:37A",
+    "sheet": "GFRS",
+    "upper_orientation": "Y",
+    "upper_outline": "GFRS:322"
+   },
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X50",
+   "chain_id": "COLPOS-X08-Y09-17038-17362",
+   "changes_type_at": [],
+   "column_type": "C3",
+   "continues_through": [
+    "FOUNDATION",
+    "GF",
+    "1F",
+    "2F"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X08",
+    "Y": "Y09"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "870",
+    "FFRS": "691",
+    "FP": "10CC",
+    "GBP": "234",
+    "GFRS": "36B",
+    "SFRS": "424"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FFRS": 5,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4,
+     "SFRS": 6
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 1778.0,
+     "handle": "105F",
+     "tag": "C3"
+    },
+    "FP": {
+     "distance_mm": 518.1,
+     "handle": "10CD",
+     "tag": "C3"
+    },
+    "GBP": {
+     "distance_mm": 606.0,
+     "handle": "235",
+     "tag": "C3"
+    }
+   },
+   "terminates_at": "2F",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "20X50",
+   "chain_id": "COLPOS-X09-Y09-19688-17362",
+   "changes_type_at": [],
+   "column_type": "C1",
+   "continues_through": [
+    "FOUNDATION",
+    "GF",
+    "1F",
+    "2F"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X09",
+    "Y": "Y09"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "837",
+    "FFRS": "682",
+    "FP": "1099",
+    "GBP": "1F5",
+    "GFRS": "341",
+    "SFRS": "421"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FFRS": 5,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4,
+     "SFRS": 6
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 1650.9,
+     "handle": "1079",
+     "tag": "C1"
+    },
+    "FP": {
+     "distance_mm": 417.7,
+     "handle": "109D",
+     "tag": "C1"
+    },
+    "GBP": {
+     "distance_mm": 417.7,
+     "handle": "1F9",
+     "tag": "C1"
+    }
+   },
+   "terminates_at": "2F",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "20X50",
+   "chain_id": "COLPOS-X10-Y09-21688-17362",
+   "changes_type_at": [],
+   "column_type": "C2",
+   "continues_through": [
+    "FOUNDATION",
+    "GF",
+    "1F",
+    "2F"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X10",
+    "Y": "Y09"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "831",
+    "FFRS": "67C",
+    "FP": "1093",
+    "GBP": "1EF",
+    "GFRS": "33B",
+    "SFRS": "41B"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FFRS": 5,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4,
+     "SFRS": 6
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 1027.6,
+     "handle": "1077",
+     "tag": "C2"
+    },
+    "FP": {
+     "distance_mm": 519.5,
+     "handle": "109C",
+     "tag": "C2"
+    },
+    "GBP": {
+     "distance_mm": 519.5,
+     "handle": "1F8",
+     "tag": "C2"
+    }
+   },
+   "terminates_at": "2F",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": null,
+   "chain_id": "COLPOS-X?-Y?-29108-18112",
+   "changes_type_at": [],
+   "column_type": "CN",
+   "continues_through": [
+    "FOUNDATION"
+   ],
+   "events": [
+    {
+     "event": "GAP_IN_CHAIN",
+     "level": "GBP",
+     "levels": [
+      "CAP"
+     ]
+    },
+    {
+     "event": "MISSING_ON_AXIS_PLAN",
+     "levels": [
+      "CAP"
+     ]
+    }
+   ],
+   "grid": {
+    "X": null,
+    "Y": null
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "FP": "180A",
+    "GBP": "17BA"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "FP": 2,
+     "GBP": 3
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "FP": {
+     "distance_mm": 449.9,
+     "handle": "1810",
+     "tag": "CN"
+    },
+    "GBP": {
+     "distance_mm": 601.3,
+     "handle": "17B9",
+     "tag": "CN"
+    }
+   },
+   "terminates_at": "FOUNDATION",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "FOUNDATION_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X30",
+   "chain_id": "COLPOS-X?-Y10-31108-20498",
+   "changes_type_at": [],
+   "column_type": "CN",
+   "continues_through": [
+    "FOUNDATION"
+   ],
+   "events": [],
+   "grid": {
+    "X": null,
+    "Y": "Y10"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "17CF",
+    "FP": "17C8",
+    "GBP": "17C0"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FP": 2,
+     "GBP": 3
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 505.4,
+     "handle": "17D0",
+     "tag": "CN"
+    },
+    "FP": {
+     "distance_mm": 505.4,
+     "handle": "17CA",
+     "tag": "CN"
+    },
+    "GBP": {
+     "distance_mm": 380.6,
+     "handle": "17C3",
+     "tag": "CN"
+    }
+   },
+   "terminates_at": "FOUNDATION",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X50",
+   "chain_id": "COLPOS-X08-Y10-17038-20562",
+   "changes_type_at": [],
+   "column_type": "C2",
+   "continues_through": [
+    "FOUNDATION",
+    "GF",
+    "1F",
+    "2F"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X08",
+    "Y": "Y10"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "817",
+    "FFRS": "66D",
+    "FP": "1084",
+    "GBP": "1DC",
+    "GFRS": "32C",
+    "SFRS": "40F"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FFRS": 5,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4,
+     "SFRS": 6
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 1471.5,
+     "handle": "1061",
+     "tag": "C2"
+    },
+    "FP": {
+     "distance_mm": 880.0,
+     "handle": "1675",
+     "tag": "C2"
+    },
+    "GBP": {
+     "distance_mm": 736.9,
+     "handle": "1DD",
+     "tag": "C2"
+    }
+   },
+   "terminates_at": "2F",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X50",
+   "chain_id": "COLPOS-X09-Y10-19738-20562",
+   "changes_type_at": [],
+   "column_type": "C2",
+   "continues_through": [
+    "FOUNDATION",
+    "GF",
+    "1F",
+    "2F"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X09",
+    "Y": "Y10"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "821",
+    "FFRS": "670",
+    "FP": "1087",
+    "GBP": "1E0",
+    "GFRS": "32F",
+    "SFRS": "412"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FFRS": 5,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4,
+     "SFRS": 6
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 897.6,
+     "handle": "1063",
+     "tag": "C2"
+    },
+    "FP": {
+     "distance_mm": 836.9,
+     "handle": "1674",
+     "tag": "C2"
+    },
+    "GBP": {
+     "distance_mm": 459.9,
+     "handle": "1E1",
+     "tag": "C2"
+    }
+   },
+   "terminates_at": "2F",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X60",
+   "chain_id": "COLPOS-X11-Y10-23558-20662",
+   "changes_type_at": [],
+   "column_type": "C5",
+   "continues_through": [
+    "FOUNDATION",
+    "GF",
+    "1F",
+    "2F"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X11",
+    "Y": "Y10"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "826",
+    "FFRS": "673",
+    "FP": "108A",
+    "GBP": "1E4",
+    "GFRS": "332",
+    "SFRS": "415"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FFRS": 5,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4,
+     "SFRS": 6
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 471.0,
+     "handle": "1069",
+     "tag": "C5"
+    },
+    "FP": {
+     "distance_mm": 802.2,
+     "handle": "1673",
+     "tag": "C5"
+    },
+    "GBP": {
+     "distance_mm": 457.3,
+     "handle": "1E5",
+     "tag": "C5"
+    }
+   },
+   "terminates_at": "2F",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X50",
+   "chain_id": "COLPOS-X13-Y10-27458-20662",
+   "changes_type_at": [],
+   "column_type": "C4",
+   "continues_through": [
+    "FOUNDATION",
+    "GF",
+    "1F"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X13",
+    "Y": "Y10"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "87C",
+    "FFRS": "697",
+    "FP": "10D7",
+    "GBP": "241",
+    "GFRS": "377"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FFRS": 5,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 515.5,
+     "handle": "1065",
+     "tag": "C4"
+    },
+    "FP": {
+     "distance_mm": 833.2,
+     "handle": "1672",
+     "tag": "C4"
+    },
+    "GBP": {
+     "distance_mm": 642.2,
+     "handle": "242",
+     "tag": "C4"
+    }
+   },
+   "terminates_at": "1F",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  },
+  {
+   "axis_plan_size_label": "30X50",
+   "chain_id": "COLPOS-X15-Y10-31508-20687",
+   "changes_type_at": [],
+   "column_type": "C4",
+   "continues_through": [
+    "FOUNDATION",
+    "GF",
+    "1F"
+   ],
+   "events": [],
+   "grid": {
+    "X": "X15",
+    "Y": "Y10"
+   },
+   "labels": [],
+   "members_by_sheet": {
+    "CAP": "82A",
+    "FFRS": "676",
+    "FP": "108D",
+    "GBP": "1E8",
+    "GFRS": "335"
+   },
+   "planted_on": null,
+   "source_evidence": {
+    "drawing": "ST7757.dxf",
+    "sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+    "sheets": {
+     "CAP": 1,
+     "FFRS": 5,
+     "FP": 2,
+     "GBP": 3,
+     "GFRS": 4
+    }
+   },
+   "starts_at": "FOUNDATION",
+   "tags_by_plan": {
+    "CAP": {
+     "distance_mm": 1209.4,
+     "handle": "1067",
+     "tag": "C4"
+    },
+    "FP": {
+     "distance_mm": 789.5,
+     "handle": "1671",
+     "tag": "C4"
+    },
+    "GBP": {
+     "distance_mm": 638.1,
+     "handle": "1E9",
+     "tag": "C4"
+    }
+   },
+   "terminates_at": "1F",
+   "transition_outlines": {},
+   "turn": null,
+   "type_authority": "AXIS_PLAN_TAG"
+  }
+ ],
+ "source": {
+  "drawing": "ST7757.dxf",
+  "dxf_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+  "pdf": "ST7757.pdf",
+  "pdf_sha256": "74da1523f05eb3c6a4fe3ddebaef2c3d841891f003efc03bc32a3fb4553337e3"
+ },
+ "summary": {
+  "chains": 39,
+  "events": {
+   "GAP_IN_CHAIN": 1,
+   "MISSING_ON_AXIS_PLAN": 1,
+   "NO_SUPPORT_BELOW": 3,
+   "TURN_ORIENTATION_CHANGE": 2
+  },
+  "hard_invariant_every_outline_in_exactly_one_chain": {
+   "state": "PASS",
+   "violations": []
+  },
+  "labels": [
+   {
+    "bound_chain_id": "COLPOS-X15-Y06-31508-15062",
+    "distance_mm": 944.7,
+    "handle": "31F",
+    "label": "T.C",
+    "position": [
+     30685.576,
+     14621.946
+    ],
+    "sheet": "GFRS",
+    "state": "BOUND",
+    "text": "T.C"
+   },
+   {
+    "bound_chain_id": "COLPOS-X13-Y08-27308-16612",
+    "distance_mm": 992.3,
+    "handle": "324",
+    "label": "T.C",
+    "position": [
+     26485.576,
+     17142.361
+    ],
+    "sheet": "GFRS",
+    "state": "BOUND",
+    "text": "T.C"
+   },
+   {
+    "bound_chain_id": "COLPOS-X06-Y04-14438-12062",
+    "distance_mm": 1035.0,
+    "handle": "38A",
+    "label": "D.C",
+    "position": [
+     13610.833,
+     12709.185
+    ],
+    "sheet": "GFRS",
+    "state": "BOUND",
+    "text": "D.C"
+   },
+   {
+    "bound_chain_id": "COLPOS-X08-Y02-16850-8912",
+    "distance_mm": 2927.8,
+    "handle": "544",
+    "label": "P.C20X70",
+    "position": [
+     15008.817,
+     6635.197
+    ],
+    "sheet": "GFRS",
+    "state": "BOUND",
+    "text": "P.C 20x70"
+   },
+   {
+    "bound_chain_id": "COLPOS-X15-Y02-31508-8912",
+    "distance_mm": 2927.8,
+    "handle": "548",
+    "label": "P.C20X50",
+    "position": [
+     29667.086,
+     6635.197
+    ],
+    "sheet": "GFRS",
+    "state": "BOUND",
+    "text": "P.C 20x50"
+   },
+   {
+    "bound_chain_id": "COLPOS-X?-Y?-24888-15994",
+    "distance_mm": 3002.4,
+    "handle": "77C",
+    "label": "P.C20X50",
+    "position": [
+     22135.659,
+     17193.368
+    ],
+    "sheet": "FFRS",
+    "state": "BOUND",
+    "text": "P.C 20x50"
+   }
+  ],
+  "outlines_per_sheet": {
+   "CAP": 35,
+   "FFRS": 21,
+   "FP": 36,
+   "GBP": 36,
+   "GFRS": 34,
+   "SFRS": 9
+  },
+  "planted": [
+   "COLPOS-X08-Y02-16850-8912",
+   "COLPOS-X15-Y02-31508-8912",
+   "COLPOS-X?-Y?-24888-15994"
+  ],
+  "starts_at": {
+   "1F": 2,
+   "2F": 1,
+   "FOUNDATION": 36
+  },
+  "terminates_at": {
+   "1F": 12,
+   "2F": 9,
+   "FOUNDATION": 6,
+   "GF": 12
+  },
+  "type_changes": [
+   "COLPOS-X15-Y06-31508-15062",
+   "COLPOS-X13-Y08-27308-16612"
+  ]
+ }
+}

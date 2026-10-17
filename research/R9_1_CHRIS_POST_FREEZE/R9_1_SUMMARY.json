@@ -1,0 +1,125 @@
+{
+ "class_counts": {
+  "BEAMS": {
+   "CHRIS_BINDING_FAILURE": 8,
+   "SAME_OBJECT_DIFFERENT_SEGMENTATION": 3,
+   "SAME_OBJECT_SAME_RESULT": 98,
+   "SOURCE_CONFLICT": 7,
+   "URBAN_BINDING_FAILURE": 6
+  },
+  "COLUMNS": {
+   "DONOR_FALSE_POSITIVE": 3,
+   "SAME_GEOMETRY_DIFFERENT_CONVENTION": 1,
+   "SAME_OBJECT_DIFFERENT_SEGMENTATION": 4,
+   "SAME_OBJECT_SAME_RESULT": 34
+  },
+  "FOOTINGS": {
+   "NOT_COMPARABLE": 1,
+   "SAME_OBJECT_SAME_RESULT": 25,
+   "SOURCE_CONFLICT": 1
+  },
+  "GAPS": {
+   "ASSUMPTION_DIFFERENCE": 4,
+   "CHRIS_BINDING_FAILURE": 8,
+   "DONOR_FALSE_POSITIVE": 3,
+   "SAME_GEOMETRY_DIFFERENT_CONVENTION": 30,
+   "SAME_OBJECT_DIFFERENT_SEGMENTATION": 10,
+   "SOURCE_AUTHORITY_DIFFERENCE": 4,
+   "SOURCE_CONFLICT": 8,
+   "URBAN_BINDING_FAILURE": 6,
+   "URBAN_FALSE_POSITIVE": 1,
+   "URBAN_MISSED_PHYSICAL_OBJECT": 3
+  },
+  "GB": {
+   "SAME_GEOMETRY_DIFFERENT_CONVENTION": 19,
+   "SAME_OBJECT_SAME_RESULT": 27,
+   "SOURCE_AUTHORITY_DIFFERENCE": 1,
+   "URBAN_MISSED_PHYSICAL_OBJECT": 1
+  },
+  "GROUND_SLAB_CELLS": {
+   "SAME_GEOMETRY_DIFFERENT_CONVENTION": 10,
+   "SAME_OBJECT_DIFFERENT_SEGMENTATION": 1,
+   "SAME_OBJECT_SAME_RESULT": 23,
+   "URBAN_FALSE_POSITIVE": 1
+  },
+  "SLAB_OPENINGS": {
+   "ASSUMPTION_DIFFERENCE": 4,
+   "SAME_OBJECT_DIFFERENT_SEGMENTATION": 2,
+   "SAME_OBJECT_SAME_RESULT": 3,
+   "SOURCE_AUTHORITY_DIFFERENCE": 3
+  },
+  "WALLS": {
+   "NOT_COMPARABLE": 169,
+   "SAME_GEOMETRY_DIFFERENT_CONVENTION": 128,
+   "SAME_OBJECT_SAME_RESULT": 60,
+   "URBAN_MISSED_PHYSICAL_OBJECT": 2
+  }
+ },
+ "gb_segmentation": {
+  "CHRIS": {
+   "MEASURED_NETWORK_LENGTH_NET_OF_COLUMN_OVERLAP_MM": 191872.9,
+   "MEASURED_NETWORK_LENGTH_STRIP_CENTERLINES_MM": 208129.0,
+   "NODE_TO_NODE_EDGE_LENGTH_MM": 214968.6,
+   "accepted_pairs": 44,
+   "bands": 41,
+   "curved_strip_length_mm": 8093.2,
+   "edges": 97,
+   "nodes_by_kind": {
+    "COLUMN": 34,
+    "CORNER": 3,
+    "FREE_END": 4,
+    "JUNCTION": 36,
+    "PIT_WALL": 3
+   },
+   "pair_candidates": 179,
+   "raw_segments_on_face_layer_1": 89,
+   "rejections_by_reason": {
+    "LAYER_NOT_ALLOWED": 134,
+    "TOO_WIDE": 1
+   },
+   "straight_strip_length_mm": 200035.8,
+   "strip_length_inside_column_boxes_mm": 16256.1,
+   "strips": 44,
+   "support_to_support_spans": 98
+  },
+  "URBAN": {
+   "bands": 43,
+   "columns_on_sheet": 36,
+   "exterior_spans": 28,
+   "frozen_register_length_m": 198.796,
+   "gross_band_length_m": 207.847,
+   "interior_spans": 31,
+   "layer1_arcs": 4,
+   "layer1_lines": 85,
+   "span_length_m": 198.796,
+   "spans": 59
+  }
+ },
+ "manual_decision_classes": {
+  "AUTOMATABLE_NOW": 12,
+  "INHERENT_REVIEW": 1,
+  "NEEDS_NEW_GEOMETRY_ROUTE": 1,
+  "NEEDS_SOURCE_AUTHORITY": 2,
+  "PROJECT_SPECIFIC": 2
+ },
+ "manual_decisions": {
+  "NO": 3,
+  "PARTIAL": 5,
+  "YES": 10
+ },
+ "rebar": {
+  "disagreement": {
+   "NONE": 74,
+   "NONE (not a bar token)": 6,
+   "SPLIT": 6
+  },
+  "occurrences": 507,
+  "patterns": 86
+ },
+ "stamp": {
+  "CALCULATION_ROUND": "R9.1",
+  "CHRIS_DATASET": "CHRISTIANNP_FORENSIC_RERUN_2026_10_07",
+  "CHRIS_MANIFEST_SHA256": "af2d3441cf2d464e5fb31c8651a540abf22ff5dc55f9d34786f9506038197bf2",
+  "URBAN_ENGINE_COMMIT": "2c00561"
+ }
+}

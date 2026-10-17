@@ -1,0 +1,18 @@
+{
+ "profile_id": "URBAN_STANDARD_CANDIDATES_V1",
+ "authority": "URBAN_STANDARD_CANDIDATE",
+ "use": "PROVISIONAL_SCENARIO_ONLY",
+ "candidates": {
+  "PARAPET_STIFFENER_COLUMN": {
+   "max_spacing_m": 4.0,
+   "statement": "Masonry roof / parapet walls commonly receive intermediate RC stiffener columns at about 4 m maximum spacing (Urban site practice).",
+   "never": "a verified structural quantity without a drawing, detail or consultant rule",
+   "flag": "PARAPET_STIFFENER_SPACING_REQUIRED"
+  },
+  "PARAPET_TOP_RING_BEAM": {
+   "statement": "An RC top / ring element where applicable (Urban site practice); section, bars, stirrups, path and connections need a source.",
+   "flag": "PARAPET_TOP_RING_BEAM_DETAIL_REQUIRED"
+  }
+ },
+ "source_owner": "Mohammad (Urban Projects)"
+}

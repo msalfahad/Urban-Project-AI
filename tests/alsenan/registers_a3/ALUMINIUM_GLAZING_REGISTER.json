@@ -1,0 +1,240 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_A3_ALUMINIUM_GLAZING_V1",
+ "salon": {
+  "owner_facts": [
+   "OF-A3-SALON-MATERIAL",
+   "OF-A3-SALON-HEIGHT"
+  ],
+  "binding": "UNIQUE_WIDTH_MATCH",
+  "window": "GF-W09",
+  "cad_gap_width_mm": 6331.6,
+  "printed_dimension": "2289",
+  "printed_value_cm": 633.158,
+  "width_m": 6.33,
+  "width_authority": "SOURCE (printed dimension 633 + glazing gap in CAD)",
+  "height_m": 3.65,
+  "height_authority": "PROJECT_OWNER_DERIVED_DIMENSION (OF-A3-SALON-HEIGHT) - not source-measured",
+  "material": "ALUMINIUM_GLASS (OWNER_FACT)",
+  "area_m2": 23.1045,
+  "area_formula": "6.33 x 3.65",
+  "status": "COMPUTED_SHADOW_COMPLETE",
+  "class": "TRADE_ASSIGNMENT",
+  "source_height_found": null,
+  "precedence": "an explicit SOURCE opening height, if one is found later, outranks this value; both are kept"
+ },
+ "curved": {
+  "items": [
+   {
+    "layer": "W",
+    "parts": [
+     "ALSENAN_P7757_DXF|H637||ARC|1",
+     "ALSENAN_P7757_DXF|H638||ARC|1",
+     "ALSENAN_P7757_DXF|H639||ARC|1",
+     "ALSENAN_P7757_DXF|H640||ARC|1",
+     "ALSENAN_P7757_DXF|H621||SEGMENT|0",
+     "ALSENAN_P7757_DXF|H637||SEGMENT|0",
+     "ALSENAN_P7757_DXF|H637||SEGMENT|2",
+     "ALSENAN_P7757_DXF|H638||SEGMENT|0",
+     "ALSENAN_P7757_DXF|H638||SEGMENT|2",
+     "ALSENAN_P7757_DXF|H639||SEGMENT|0",
+     "ALSENAN_P7757_DXF|H639||SEGMENT|2",
+     "ALSENAN_P7757_DXF|H640||SEGMENT|0",
+     "ALSENAN_P7757_DXF|H640||SEGMENT|2"
+    ],
+    "caps": 9,
+    "centre": [
+     -130619.856,
+     -794493.54
+    ],
+    "radii_mm": [
+     2330.0,
+     2370.0,
+     2410.0,
+     2450.0
+    ],
+    "sweep_rad": [
+     2.857375,
+     2.828074,
+     2.799681,
+     2.772148
+    ],
+    "arc_lengths_mm": [
+     6657.7,
+     6702.5,
+     6747.2,
+     6791.8
+    ],
+    "developed_length_mm": 6724.8,
+    "developed_length_range_mm": [
+     6657.7,
+     6791.8
+    ],
+    "chord_mm": 4749.7,
+    "band_mm": 120.0,
+    "form": "CURVED",
+    "floor": "GF",
+    "id": "GF-CG01",
+    "host_sites": [
+     "SITE-dda89794d15dfb61"
+    ],
+    "host_labels": [
+     "MASTER BED ROOM"
+    ],
+    "height": "BLOCKED_HEIGHT (no head / sill printed; the salon owner height is not transferred)",
+    "area_m2": null
+   },
+   {
+    "layer": "W",
+    "parts": [
+     "ALSENAN_P7757_DXF|H3026||ARC|0",
+     "ALSENAN_P7757_DXF|H3027||ARC|0",
+     "ALSENAN_P7757_DXF|H3028||ARC|0",
+     "ALSENAN_P7757_DXF|H3029||ARC|0",
+     "ALSENAN_P7757_DXF|H3032||SEGMENT|0",
+     "ALSENAN_P7757_DXF|H3034||SEGMENT|0"
+    ],
+    "caps": 2,
+    "centre": [
+     -174037.511,
+     -794493.54
+    ],
+    "radii_mm": [
+     2015.0,
+     2055.0,
+     2095.0,
+     2135.0
+    ],
+    "sweep_rad": [
+     1.539353,
+     1.496027,
+     1.497329,
+     1.540749
+    ],
+    "arc_lengths_mm": [
+     3101.8,
+     3074.3,
+     3136.9,
+     3289.5
+    ],
+    "developed_length_mm": 3150.6,
+    "developed_length_range_mm": [
+     3074.3,
+     3289.5
+    ],
+    "chord_mm": 2852.0,
+    "band_mm": 120.0,
+    "form": "CURVED",
+    "floor": "1F",
+    "id": "1F-CG01",
+    "host_sites": [
+     "SITE-8bddd8c3b8b698ad"
+    ],
+    "host_labels": [
+     "VOID / LAUNDRY / MASTER BED ROOM"
+    ],
+    "height": "BLOCKED_HEIGHT (no head / sill printed; the salon owner height is not transferred)",
+    "area_m2": null
+   }
+  ],
+  "master_bedroom": {
+   "owner_fact": "OF-A3-MASTER-BED-GLAZING",
+   "binding": "UNIQUE_CURVED_GLAZING_ON_GF",
+   "item": "GF-CG01",
+   "developed_length_m": 6.7248,
+   "length_range_m": [
+    6.6577,
+    6.7918
+   ],
+   "material": "ALUMINIUM_GLAZING (OWNER_FACT)",
+   "form": "CURVED (source: concentric arcs)",
+   "height_m": null,
+   "area_m2": null,
+   "status_length": "COMPUTED_SHADOW_COMPLETE",
+   "status_area": "BLOCKED_HEIGHT"
+  }
+ },
+ "rows": [
+  {
+   "item": "A3-ALU-SALON-W",
+   "discipline": "ARCHITECTURAL",
+   "trade": "ALUMINIUM_GLAZING",
+   "floor": "GF",
+   "element": "SALOON sea-view opening",
+   "ar": "عرض فتحة الألمنيوم - الصالون",
+   "en": "Salon sea-view opening width",
+   "qty": 6.33,
+   "unit": "m",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf GF dimension 2289 (633) + GF-W09 glazing in wall gap; OWNER facts OF-A3-SALON-*",
+   "rule": "printed dimension = CAD glazing gap (unique width match)",
+   "blockers": []
+  },
+  {
+   "item": "A3-ALU-SALON",
+   "discipline": "ARCHITECTURAL",
+   "trade": "ALUMINIUM_GLAZING",
+   "floor": "GF",
+   "element": "SALOON sea-view opening",
+   "ar": "ألمنيوم وزجاج - واجهة الصالون",
+   "en": "Salon aluminium + glass (width source, height OWNER-DERIVED 3.65)",
+   "qty": 23.1045,
+   "unit": "m2",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "TRADE_ASSIGNMENT",
+   "source": "P7757.dxf GF dimension 2289 (633) + GF-W09 glazing in wall gap; OWNER facts OF-A3-SALON-*",
+   "rule": "6.33 (source) x 3.65 (PROJECT_OWNER_DERIVED_DIMENSION, not source-measured; this opening only)",
+   "blockers": []
+  },
+  {
+   "item": "A3-CGL-MB-L",
+   "discipline": "ARCHITECTURAL",
+   "trade": "ALUMINIUM_GLAZING",
+   "floor": "GF",
+   "element": "MASTER BED ROOM curved glazing (pool side)",
+   "ar": "طول الزجاج المنحني - غرفة النوم الرئيسية",
+   "en": "Master bedroom curved aluminium glazing - developed length",
+   "qty": 6.7248,
+   "unit": "m",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf GF concentric glazing arcs (entity_role_inference CURVED_GLAZING); material OWNER_FACT",
+   "rule": "mean of the glazing lines' arc lengths (range [6.6577, 6.7918] m)",
+   "blockers": []
+  },
+  {
+   "item": "A3-CGL-MB-A",
+   "discipline": "ARCHITECTURAL",
+   "trade": "ALUMINIUM_GLAZING",
+   "floor": "GF",
+   "element": "MASTER BED ROOM curved glazing (pool side)",
+   "ar": "مساحة الزجاج المنحني",
+   "en": "Master bedroom curved glazing area",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "class": "BLOCKED_HEIGHT",
+   "source": "no head / sill in the source",
+   "rule": "length x height",
+   "blockers": [
+    "GLAZING_HEIGHT_NOT_IN_SOURCE (the salon owner-derived 3.65 m is not transferred)"
+   ]
+  },
+  {
+   "item": "A3-CGL-1F-CG01-L",
+   "discipline": "ARCHITECTURAL",
+   "trade": "GLAZING",
+   "floor": "1F",
+   "element": "curved glazing 1F-CG01 (host: VOID / LAUNDRY / MASTER BED ROOM)",
+   "ar": "طول زجاج منحني",
+   "en": "Curved glazing developed length (material not in source)",
+   "qty": 3.1506,
+   "unit": "m",
+   "status": "COMPUTED_SHADOW_COMPLETE",
+   "class": "PHYSICAL_MEASUREMENT",
+   "source": "P7757.dxf concentric glazing arcs (CURVED_GLAZING)",
+   "rule": "mean arc length of the glazing lines",
+   "blockers": []
+  }
+ ]
+}

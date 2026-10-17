@@ -1,0 +1,10 @@
+{
+ "SCHEMA": "URBAN_R8_6A_FIXTURE_MANIFEST_V1",
+ "rule": "hash-addressed external inputs of the R8.6A tests. Each lives at data/inputs/by_sha256/<sha256>.dxf (untracked). A missing input skips the test that needs it (stated reason); an input whose bytes do not hash to its name FAILS. Session upload folders are never read by a test.",
+ "store": "data/inputs/by_sha256",
+ "inputs": {
+  "QORTUBA_DXF": {"sha256": "df0e1d690285f5455b3b5acebe7e20eaee2d1c8aa3743b633a9fd257c6d6f315", "bytes": 214386861},
+  "P7757_DXF": {"sha256": "ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4", "bytes": 17227946},
+  "ST7757_DXF": {"sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079", "bytes": 3153037}
+ }
+}

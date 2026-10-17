@@ -1,0 +1,47 @@
+{
+ "baseline_round": "S6",
+ "code": {
+  "engine/source/delta_release.py": "7b0f72a6f5138b3e0f8515c80a42a38a2cfc035c8fb4c138aa64a4fd5c9708b9",
+  "engine/source/graphic_evidence.py": "e2c5050895f6eff32d420805fde8bdb6b87cd4a926560ea24ceebb97bd77b92d",
+  "engine/source/link_geometry.py": "ee5cd507ecd3caf95560a3290c8ca0f1ecbfe98314746be11bfbf50dfb7b919d",
+  "research/alsenan_superstructure_beam_rebar_s6_1/build_superstructure_beam_rebar_s6_1.py": "7d22a7ea82b68c15826bfd887d8648816721fc7b61eff8c780852ae3b9c9fb56"
+ },
+ "drawing_sha256": "9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079",
+ "engine_commit_stamp": "d39f5f6+code:add76dd5f5e9c59a+delta:d7ce0d2d09810083",
+ "frozen_baseline": {
+  "engine_commit_stamp": "d39f5f6+code:add76dd5f5e9c59a",
+  "files_checked": 33,
+  "manifest": "research/alsenan_superstructure_beam_rebar_s6/S6_FREEZE_MANIFEST.json",
+  "manifest_sha256": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+  "round": "S6"
+ },
+ "inputs": {
+  "research/alsenan_footing_rebar_s4_1/S4_1_FREEZE_MANIFEST.json": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+  "research/alsenan_rebar_source_exhaustion_04/registers/PROJECT_REBAR_RULE_REGISTER.json": "5536777ab000e65bd8bb61fabae04f0a09cfe58e75e9547c65c1b04e8633d6b8",
+  "research/alsenan_structural_census_s1/BEAM_DEFINITION_REGISTER.json": "6b490b8a17aab326a3233d7090c219d35f61e60c83ee290391cfa0f0a69df249",
+  "research/alsenan_structural_census_s1/COLUMN_OCCURRENCE_REGISTER.json": "fb3f2d0c45bc1fbee9f04709d9e06040fbeb7eb5e80f8038a76f8840da048f88",
+  "research/alsenan_superstructure_beam_rebar_s6/S6_FREEZE_MANIFEST.json": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+  "research/source_recovery_delta/02_UNRESOLVED_MASTER_REGISTER.csv": "ef8e27d89bf643363eb4ed3929ed9bfdbc66fb1fac71241a4ee5ed7a131e2407",
+  "research/source_recovery_delta/09_S6_1_CANDIDATES.csv": "cdd55459d22a650501f8f1899d9ccb14e554407241d0c392467c9e5f83e5ef30",
+  "research/source_recovery_delta/13_GRAPHIC_EVIDENCE.json": "2a8a307b3a3084cc537edaccd753b9865b5a33aa80e9137ae1383b0f0380a13b"
+ },
+ "outputs": {
+  "S6_1_CHANGELOG.md": "0c3a00ca848607a1626ed44e10de346f40a5f8b83966685c9bfe34cb50874e29",
+  "S6_1_DELTA_COMPONENTS.csv": "1005dc712e16c2a18e99b0d03ab7fb9b2fdd7d06d2b3b09a8352a8e56d0d69cb",
+  "S6_1_PROVENANCE.jsonl": "29e0039b29404454bc61a88d7c92c0159982da2c1c56476c78f72ecd6e59cf75",
+  "S6_1_RELEASE_SUMMARY.json": "5454ad9c4f0d9c31e47bef6164ed1440d3b089b280fa19ac4254d25ee053198f",
+  "S6_1_STIRRUP_TOPOLOGY.csv": "4ef195d525dff47c57d12cbf7b010f3d2dc65cf4d820d4a3d8d8c2b742df4790",
+  "S6_1_UNRESOLVED.csv": "2e74ff4d4a68732bd976f41f6fd93877847d8016a618a04495b03e53c862aee4"
+ },
+ "preceding_freeze": {
+  "engine_commit_stamp": "e3633af+code:0d11810b780ae8f8+delta:06346dac56faa12d",
+  "files_checked": 13,
+  "manifest": "research/alsenan_footing_rebar_s4_1/S4_1_FREEZE_MANIFEST.json",
+  "manifest_sha256": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+  "round": "S4.1"
+ },
+ "references_read_before_freeze": [],
+ "round": "S6.1",
+ "rule": "S6.1 is a delta over frozen S6; a correction needs a new delta round, never an edit of S6 or of these outputs",
+ "state": "FROZEN_BEFORE_S5_1"
+}

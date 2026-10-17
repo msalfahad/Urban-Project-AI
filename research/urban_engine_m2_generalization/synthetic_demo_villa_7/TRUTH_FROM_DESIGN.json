@@ -1,0 +1,1068 @@
+{
+ "seed": 7,
+ "quantities": {
+  "FOOTINGS": 16.656000000000002,
+  "COLUMNS": 12.539999999999992,
+  "BEAMS_TOTAL_DEPTH": 10.40375,
+  "BEAMS_BELOW_SLAB": 13.732950000000004,
+  "SLABS": 25.551200000000005,
+  "STEEL_FOOTINGS": 389.3333333333334,
+  "STEEL_COLUMNS_MAIN": 1395.6740740740736,
+  "STEEL_BEAMS": 1042.3002870814275
+ },
+ "components": {
+  "footings": 12,
+  "columns": 24,
+  "beams": 34,
+  "panels": 10
+ },
+ "component_list": {
+  "footings": [
+   {
+    "x": 0.0,
+    "y": 0.0,
+    "type": "F4",
+    "at": [
+     4.0,
+     4.0
+    ]
+   },
+   {
+    "x": 0.0,
+    "y": 3.45,
+    "type": "F1",
+    "at": [
+     4.0,
+     7.45
+    ]
+   },
+   {
+    "x": 0.0,
+    "y": 8.05,
+    "type": "F4",
+    "at": [
+     4.0,
+     12.05
+    ]
+   },
+   {
+    "x": 4.25,
+    "y": 0.0,
+    "type": "F1",
+    "at": [
+     8.25,
+     4.0
+    ]
+   },
+   {
+    "x": 4.25,
+    "y": 3.45,
+    "type": "F4",
+    "at": [
+     8.25,
+     7.45
+    ]
+   },
+   {
+    "x": 4.25,
+    "y": 8.05,
+    "type": "F1",
+    "at": [
+     8.25,
+     12.05
+    ]
+   },
+   {
+    "x": 7.6,
+    "y": 0.0,
+    "type": "F4",
+    "at": [
+     11.6,
+     4.0
+    ]
+   },
+   {
+    "x": 7.6,
+    "y": 3.45,
+    "type": "F1",
+    "at": [
+     11.6,
+     7.45
+    ]
+   },
+   {
+    "x": 7.6,
+    "y": 8.05,
+    "type": "F4",
+    "at": [
+     11.6,
+     12.05
+    ]
+   },
+   {
+    "x": 12.95,
+    "y": 0.0,
+    "type": "F1",
+    "at": [
+     16.95,
+     4.0
+    ]
+   },
+   {
+    "x": 12.95,
+    "y": 3.45,
+    "type": "F4",
+    "at": [
+     16.95,
+     7.45
+    ]
+   },
+   {
+    "x": 12.95,
+    "y": 8.05,
+    "type": "F1",
+    "at": [
+     16.95,
+     12.05
+    ]
+   }
+  ],
+  "columns": [
+   {
+    "x": 0.0,
+    "y": 0.0,
+    "storey": "GF"
+   },
+   {
+    "x": 0.0,
+    "y": 3.45,
+    "storey": "GF"
+   },
+   {
+    "x": 0.0,
+    "y": 8.05,
+    "storey": "GF"
+   },
+   {
+    "x": 4.25,
+    "y": 0.0,
+    "storey": "GF"
+   },
+   {
+    "x": 4.25,
+    "y": 3.45,
+    "storey": "GF"
+   },
+   {
+    "x": 4.25,
+    "y": 8.05,
+    "storey": "GF"
+   },
+   {
+    "x": 7.6,
+    "y": 0.0,
+    "storey": "GF"
+   },
+   {
+    "x": 7.6,
+    "y": 3.45,
+    "storey": "GF"
+   },
+   {
+    "x": 7.6,
+    "y": 8.05,
+    "storey": "GF"
+   },
+   {
+    "x": 12.95,
+    "y": 0.0,
+    "storey": "GF"
+   },
+   {
+    "x": 12.95,
+    "y": 3.45,
+    "storey": "GF"
+   },
+   {
+    "x": 12.95,
+    "y": 8.05,
+    "storey": "GF"
+   },
+   {
+    "x": 0.0,
+    "y": 0.0,
+    "storey": "1F"
+   },
+   {
+    "x": 0.0,
+    "y": 3.45,
+    "storey": "1F"
+   },
+   {
+    "x": 0.0,
+    "y": 8.05,
+    "storey": "1F"
+   },
+   {
+    "x": 4.25,
+    "y": 0.0,
+    "storey": "1F"
+   },
+   {
+    "x": 4.25,
+    "y": 3.45,
+    "storey": "1F"
+   },
+   {
+    "x": 4.25,
+    "y": 8.05,
+    "storey": "1F"
+   },
+   {
+    "x": 7.6,
+    "y": 0.0,
+    "storey": "1F"
+   },
+   {
+    "x": 7.6,
+    "y": 3.45,
+    "storey": "1F"
+   },
+   {
+    "x": 7.6,
+    "y": 8.05,
+    "storey": "1F"
+   },
+   {
+    "x": 12.95,
+    "y": 0.0,
+    "storey": "1F"
+   },
+   {
+    "x": 12.95,
+    "y": 3.45,
+    "storey": "1F"
+   },
+   {
+    "x": 12.95,
+    "y": 8.05,
+    "storey": "1F"
+   }
+  ],
+  "beams": [
+   {
+    "storey": "GF",
+    "axis": "x",
+    "a": [
+     0.0,
+     0.0
+    ],
+    "b": [
+     4.25,
+     0.0
+    ],
+    "type": "B1",
+    "in_schedule": true,
+    "at": [
+     51.125,
+     4.0
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "GF",
+    "axis": "x",
+    "a": [
+     4.25,
+     0.0
+    ],
+    "b": [
+     7.6,
+     0.0
+    ],
+    "type": "B1",
+    "in_schedule": true,
+    "at": [
+     54.925,
+     4.0
+    ],
+    "tagged": false
+   },
+   {
+    "storey": "GF",
+    "axis": "x",
+    "a": [
+     7.6,
+     0.0
+    ],
+    "b": [
+     12.95,
+     0.0
+    ],
+    "type": "B1",
+    "in_schedule": true,
+    "at": [
+     59.275,
+     4.0
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "GF",
+    "axis": "x",
+    "a": [
+     0.0,
+     3.45
+    ],
+    "b": [
+     4.25,
+     3.45
+    ],
+    "type": "B5",
+    "in_schedule": true,
+    "at": [
+     51.125,
+     7.45
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "GF",
+    "axis": "x",
+    "a": [
+     4.25,
+     3.45
+    ],
+    "b": [
+     7.6,
+     3.45
+    ],
+    "type": "B5",
+    "in_schedule": true,
+    "at": [
+     54.925,
+     7.45
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "GF",
+    "axis": "x",
+    "a": [
+     7.6,
+     3.45
+    ],
+    "b": [
+     12.95,
+     3.45
+    ],
+    "type": "B5",
+    "in_schedule": true,
+    "at": [
+     59.275,
+     7.45
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "GF",
+    "axis": "x",
+    "a": [
+     0.0,
+     8.05
+    ],
+    "b": [
+     4.25,
+     8.05
+    ],
+    "type": "B2",
+    "in_schedule": false,
+    "at": [
+     51.125,
+     12.05
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "GF",
+    "axis": "x",
+    "a": [
+     4.25,
+     8.05
+    ],
+    "b": [
+     7.6,
+     8.05
+    ],
+    "type": "B2",
+    "in_schedule": false,
+    "at": [
+     54.925,
+     12.05
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "GF",
+    "axis": "x",
+    "a": [
+     7.6,
+     8.05
+    ],
+    "b": [
+     12.95,
+     8.05
+    ],
+    "type": "B2",
+    "in_schedule": false,
+    "at": [
+     59.275,
+     12.05
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "GF",
+    "axis": "y",
+    "a": [
+     0.0,
+     0.0
+    ],
+    "b": [
+     0.0,
+     3.45
+    ],
+    "type": "B5",
+    "in_schedule": true,
+    "at": [
+     49.0,
+     5.725
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "GF",
+    "axis": "y",
+    "a": [
+     0.0,
+     3.45
+    ],
+    "b": [
+     0.0,
+     8.05
+    ],
+    "type": "B5",
+    "in_schedule": true,
+    "at": [
+     49.0,
+     9.75
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "GF",
+    "axis": "y",
+    "a": [
+     4.25,
+     0.0
+    ],
+    "b": [
+     4.25,
+     3.45
+    ],
+    "type": "B2",
+    "in_schedule": false,
+    "at": [
+     53.25,
+     5.725
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "GF",
+    "axis": "y",
+    "a": [
+     4.25,
+     3.45
+    ],
+    "b": [
+     4.25,
+     8.05
+    ],
+    "type": "B2",
+    "in_schedule": false,
+    "at": [
+     53.25,
+     9.75
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "GF",
+    "axis": "y",
+    "a": [
+     7.6,
+     0.0
+    ],
+    "b": [
+     7.6,
+     3.45
+    ],
+    "type": "B1",
+    "in_schedule": true,
+    "at": [
+     56.6,
+     5.725
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "GF",
+    "axis": "y",
+    "a": [
+     7.6,
+     3.45
+    ],
+    "b": [
+     7.6,
+     8.05
+    ],
+    "type": "B1",
+    "in_schedule": true,
+    "at": [
+     56.6,
+     9.75
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "GF",
+    "axis": "y",
+    "a": [
+     12.95,
+     0.0
+    ],
+    "b": [
+     12.95,
+     3.45
+    ],
+    "type": "B5",
+    "in_schedule": true,
+    "at": [
+     61.95,
+     5.725
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "GF",
+    "axis": "y",
+    "a": [
+     12.95,
+     3.45
+    ],
+    "b": [
+     12.95,
+     8.05
+    ],
+    "type": "B5",
+    "in_schedule": true,
+    "at": [
+     61.95,
+     9.75
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "1F",
+    "axis": "x",
+    "a": [
+     0.0,
+     0.0
+    ],
+    "b": [
+     4.25,
+     0.0
+    ],
+    "type": "B1",
+    "in_schedule": true,
+    "at": [
+     96.125,
+     4.0
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "1F",
+    "axis": "x",
+    "a": [
+     4.25,
+     0.0
+    ],
+    "b": [
+     7.6,
+     0.0
+    ],
+    "type": "B1",
+    "in_schedule": true,
+    "at": [
+     99.925,
+     4.0
+    ],
+    "tagged": false
+   },
+   {
+    "storey": "1F",
+    "axis": "x",
+    "a": [
+     7.6,
+     0.0
+    ],
+    "b": [
+     12.95,
+     0.0
+    ],
+    "type": "B1",
+    "in_schedule": true,
+    "at": [
+     104.275,
+     4.0
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "1F",
+    "axis": "x",
+    "a": [
+     0.0,
+     3.45
+    ],
+    "b": [
+     4.25,
+     3.45
+    ],
+    "type": "B5",
+    "in_schedule": true,
+    "at": [
+     96.125,
+     7.45
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "1F",
+    "axis": "x",
+    "a": [
+     4.25,
+     3.45
+    ],
+    "b": [
+     7.6,
+     3.45
+    ],
+    "type": "B5",
+    "in_schedule": true,
+    "at": [
+     99.925,
+     7.45
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "1F",
+    "axis": "x",
+    "a": [
+     7.6,
+     3.45
+    ],
+    "b": [
+     12.95,
+     3.45
+    ],
+    "type": "B5",
+    "in_schedule": true,
+    "at": [
+     104.275,
+     7.45
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "1F",
+    "axis": "x",
+    "a": [
+     0.0,
+     8.05
+    ],
+    "b": [
+     4.25,
+     8.05
+    ],
+    "type": "B2",
+    "in_schedule": false,
+    "at": [
+     96.125,
+     12.05
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "1F",
+    "axis": "x",
+    "a": [
+     4.25,
+     8.05
+    ],
+    "b": [
+     7.6,
+     8.05
+    ],
+    "type": "B2",
+    "in_schedule": false,
+    "at": [
+     99.925,
+     12.05
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "1F",
+    "axis": "x",
+    "a": [
+     7.6,
+     8.05
+    ],
+    "b": [
+     12.95,
+     8.05
+    ],
+    "type": "B2",
+    "in_schedule": false,
+    "at": [
+     104.275,
+     12.05
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "1F",
+    "axis": "y",
+    "a": [
+     0.0,
+     0.0
+    ],
+    "b": [
+     0.0,
+     3.45
+    ],
+    "type": "B5",
+    "in_schedule": true,
+    "at": [
+     94.0,
+     5.725
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "1F",
+    "axis": "y",
+    "a": [
+     0.0,
+     3.45
+    ],
+    "b": [
+     0.0,
+     8.05
+    ],
+    "type": "B5",
+    "in_schedule": true,
+    "at": [
+     94.0,
+     9.75
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "1F",
+    "axis": "y",
+    "a": [
+     4.25,
+     0.0
+    ],
+    "b": [
+     4.25,
+     3.45
+    ],
+    "type": "B2",
+    "in_schedule": false,
+    "at": [
+     98.25,
+     5.725
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "1F",
+    "axis": "y",
+    "a": [
+     4.25,
+     3.45
+    ],
+    "b": [
+     4.25,
+     8.05
+    ],
+    "type": "B2",
+    "in_schedule": false,
+    "at": [
+     98.25,
+     9.75
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "1F",
+    "axis": "y",
+    "a": [
+     7.6,
+     0.0
+    ],
+    "b": [
+     7.6,
+     3.45
+    ],
+    "type": "B1",
+    "in_schedule": true,
+    "at": [
+     101.6,
+     5.725
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "1F",
+    "axis": "y",
+    "a": [
+     7.6,
+     3.45
+    ],
+    "b": [
+     7.6,
+     8.05
+    ],
+    "type": "B1",
+    "in_schedule": true,
+    "at": [
+     101.6,
+     9.75
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "1F",
+    "axis": "y",
+    "a": [
+     12.95,
+     0.0
+    ],
+    "b": [
+     12.95,
+     3.45
+    ],
+    "type": "B5",
+    "in_schedule": true,
+    "at": [
+     106.95,
+     5.725
+    ],
+    "tagged": true
+   },
+   {
+    "storey": "1F",
+    "axis": "y",
+    "a": [
+     12.95,
+     3.45
+    ],
+    "b": [
+     12.95,
+     8.05
+    ],
+    "type": "B5",
+    "in_schedule": true,
+    "at": [
+     106.95,
+     9.75
+    ],
+    "tagged": true
+   }
+  ],
+  "panels": [
+   {
+    "storey": "GF",
+    "i": 0,
+    "j": 1,
+    "area": 17.39375,
+    "at": [
+     51.125,
+     9.75
+    ]
+   },
+   {
+    "storey": "GF",
+    "i": 1,
+    "j": 0,
+    "area": 10.067499999999999,
+    "at": [
+     54.9375,
+     5.7125
+    ]
+   },
+   {
+    "storey": "GF",
+    "i": 1,
+    "j": 1,
+    "area": 13.584375000000001,
+    "at": [
+     54.9375,
+     9.75
+    ]
+   },
+   {
+    "storey": "GF",
+    "i": 2,
+    "j": 0,
+    "area": 16.5175,
+    "at": [
+     59.2625,
+     5.7125
+    ]
+   },
+   {
+    "storey": "GF",
+    "i": 2,
+    "j": 1,
+    "area": 22.284375,
+    "at": [
+     59.2625,
+     9.75
+    ]
+   },
+   {
+    "storey": "1F",
+    "i": 0,
+    "j": 1,
+    "area": 17.39375,
+    "at": [
+     96.125,
+     9.75
+    ]
+   },
+   {
+    "storey": "1F",
+    "i": 1,
+    "j": 0,
+    "area": 10.067499999999999,
+    "at": [
+     99.9375,
+     5.7125
+    ]
+   },
+   {
+    "storey": "1F",
+    "i": 1,
+    "j": 1,
+    "area": 13.584375000000001,
+    "at": [
+     99.9375,
+     9.75
+    ]
+   },
+   {
+    "storey": "1F",
+    "i": 2,
+    "j": 0,
+    "area": 16.5175,
+    "at": [
+     104.2625,
+     5.7125
+    ]
+   },
+   {
+    "storey": "1F",
+    "i": 2,
+    "j": 1,
+    "area": 22.284375,
+    "at": [
+     104.2625,
+     9.75
+    ]
+   }
+  ]
+ },
+ "conventions_used": {
+  "cover_beam": 0.025,
+  "cover_col": 0.04,
+  "cover_ftg": 0.05,
+  "anch_d": 40,
+  "lap_d": 50
+ },
+ "variant": {
+  "units": "m",
+  "lang": "EN",
+  "tags": {
+   "ftg": [
+    "MARK",
+    "WIDTH",
+    "LENGTH",
+    "DEPTH",
+    "SH-N",
+    "SH-DIA",
+    "LO-N",
+    "LO-DIA"
+   ],
+   "col": "TYPE",
+   "beam": [
+    "TYPE",
+    "WIDTH",
+    "DEPTH",
+    "BOT-N",
+    "BOT-DIA",
+    "TOP-N",
+    "TOP-DIA",
+    "LINK-N",
+    "LINK-DIA"
+   ],
+   "unit": "mm"
+  },
+  "curved": false,
+  "untagged_span": true,
+  "width_conflict": false,
+  "missing_type": true,
+  "opening": true,
+  "defects": true,
+  "layers": {
+   "beam": "BEAM EDGE",
+   "col": "COLUMNS",
+   "ftg": "FOUNDATION",
+   "text": "ANNO",
+   "open": "VOIDS",
+   "frame": "BORDER",
+   "sched": "SCHEDULE"
+  }
+ },
+ "storey_heights": {
+  "GF": 4.0,
+  "1F": 3.6
+ },
+ "defects_applied": {
+  "TAG_PUSHED": 34,
+  "END_GAP": 47,
+  "BROKEN_FACE": 33,
+  "END_OVERSHOOT": 39,
+  "MTEXT_TAG": 19,
+  "DUPLICATE_LINE": 12,
+  "GRID_AXIS": 14,
+  "DIMENSION": 6
+ }
+}

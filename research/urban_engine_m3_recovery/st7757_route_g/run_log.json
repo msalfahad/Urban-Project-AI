@@ -1,0 +1,92 @@
+{
+ "manual_interventions_during_run": 0,
+ "outputs": {
+  "files": [
+   "ASSUMPTIONS.csv",
+   "BLOCKERS.csv",
+   "BOQ_REPORT.html",
+   "CONTRACTOR_BOQ.csv",
+   "COVERAGE_RISK.csv",
+   "EXCEPTIONS.csv",
+   "FAMILY_COVERAGE.csv",
+   "FAMILY_SUMMARY.csv",
+   "FLOOR_SUMMARY.csv",
+   "INVENTORY.json",
+   "MISSING_STEEL_BY_FAMILY_STOREY.csv",
+   "OVERLAYS.html",
+   "PROFILE_TEMPLATE.json",
+   "PROVISIONAL_REGISTER.csv",
+   "REBAR_COMPLETENESS.csv",
+   "SENSITIVITY.csv",
+   "STEEL_BY_DIAMETER.csv",
+   "SUMMARY.json",
+   "UNRESOLVED_REGISTER.csv",
+   "VERIFIED_REGISTER.csv",
+   "overlays/SH02_SLAB_PLAN_2F.svg",
+   "overlays/SH04_SLAB_PLAN_1F.svg",
+   "overlays/SH06_SLAB_PLAN_GF.svg",
+   "overlays/SH08_GROUND_BEAM_PLAN_GROUND.svg",
+   "overlays/SH10_FOUNDATION_PLAN_FOUNDATION.svg"
+  ],
+  "overlays_pdf": {
+   "html_sha256": "1dbe7d2750982a3c715b31a164c54f0a93acfb1e7eba6bc681f9b4c07ee4d9b4",
+   "pages": 5,
+   "pdf": "VISUAL_QA_OVERLAYS.pdf"
+  },
+  "pdf": {
+   "html_sha256": "e651a9ef6137cd7962c80f450e54de07d18a3bdff786691d9823379270b327eb",
+   "pages": 9,
+   "pdf": "BOQ_REPORT.pdf"
+  },
+  "xlsx": {
+   "bytes": 219573,
+   "content_digest": "33deb8202a38f6a99e36c9cb20af2ca8d4952a86cad2e700dd3516e1a9f9fc75",
+   "file_sha256": "f8a0d96326324eeb6e5f03751c4ff1621de93f19634e6e43c1cf20b448812c31",
+   "path": "research/urban_engine_m3_recovery/st7757_route_g/STRUCTURAL_BOQ.xlsx",
+   "sheets": [
+    "README",
+    "BOQ_CONCRETE",
+    "BOQ_PLAIN_CONCRETE",
+    "BOQ_REINFORCEMENT",
+    "BY_FLOOR",
+    "VERIFIED",
+    "PROVISIONAL",
+    "UNRESOLVED",
+    "ASSUMPTIONS",
+    "SENSITIVITY",
+    "EXCEPTIONS",
+    "NOT_DETECTED",
+    "COVERAGE_RISK",
+    "MISSING_STEEL",
+    "REBAR_COMPLETENESS"
+   ]
+  }
+ },
+ "seconds_compute": 2.901,
+ "steps": [
+  {
+   "seconds": 0.0,
+   "step": "1 accept"
+  },
+  {
+   "seconds": 0.883,
+   "step": "2 inventory"
+  },
+  {
+   "seconds": 0.871,
+   "step": "3-5 generic detection, quantities, conventions"
+  },
+  {
+   "seconds": 1.136,
+   "step": "6 checks, exceptions and sensitivity"
+  },
+  {
+   "seconds": 0.052,
+   "step": "7 registers and report"
+  },
+  {
+   "seconds": 4.596,
+   "step": "8 export"
+  }
+ ]
+}

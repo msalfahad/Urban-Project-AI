@@ -1,0 +1,310 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_WATERPROOFING_V1",
+ "method": "floor membrane = wet / service floor area; 0.15 m upturn on the gross perimeter; doorway not deducted (US-04 / US-05)",
+ "wet_label_candidates": [
+  {
+   "floor": "GF",
+   "occurrence": "396",
+   "label_en": "swimming pool",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "EXTERNAL_WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "456",
+   "label_en": "W.C",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "496",
+   "label_en": "Wash",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "503",
+   "label_en": "W.C",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "630",
+   "label_en": "KITCHEN",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "709",
+   "label_en": "Wash",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "730",
+   "label_en": "W.C",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "802",
+   "label_en": "W.C",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "803",
+   "label_en": "W.C",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "GF",
+   "occurrence": "E749",
+   "label_en": "BATH",
+   "label_ar": null,
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3037",
+   "label_en": "LAUNDRY",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3073",
+   "label_en": "BATH",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3089",
+   "label_en": "BATH",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3097",
+   "label_en": "W.C",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3116",
+   "label_en": "BATH",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "1F",
+   "occurrence": "3119",
+   "label_en": "BATH",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  },
+  {
+   "floor": "2F",
+   "occurrence": "4790",
+   "label_en": "W.C",
+   "label_ar": "UNDECODED_LEGACY_CODEPAGE",
+   "class_candidate": "WET_CANDIDATE",
+   "site": null,
+   "area_m2": null,
+   "status": "BLOCKED",
+   "blocker": "NO_CERTIFIED_ROOM_SITE: TS01 certified 0 room sites on this floor"
+  }
+ ],
+ "rows": [
+  {
+   "item": "A-WPF-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WATERPROOFING",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "عزل مائي أرضيات",
+   "en": "Waterproofing membrane = wet / service floor area",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "US-04 / US-14 (wet identity not from label text alone)",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 60 sites on GF, 0 certified (largest 0.138 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x60, TOPOLOGY_ROLE_UNRESOLVED x33, UNKNOWN_OBJECT_IN_SITE x27)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "WET_IDENTITY_LABEL_ONLY: 9 wet-label candidates (BATH, KITCHEN, W.C, Wash) with no certified room to host them; sanitary sheet is supporting evidence only"
+   ]
+  },
+  {
+   "item": "A-WPU-01-GF",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WATERPROOFING",
+   "floor": "GF",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "عزل مائي جوانب 15 سم",
+   "en": "Waterproofing upturn 0.15 m on the gross perimeter (doorway not deducted)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S05 (GROUND FLOOR PLAN 1:100)",
+   "rule": "US-05",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 60 sites on GF, 0 certified (largest 0.138 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x60, TOPOLOGY_ROLE_UNRESOLVED x33, UNKNOWN_OBJECT_IN_SITE x27)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "WET_IDENTITY_LABEL_ONLY: 9 wet-label candidates (BATH, KITCHEN, W.C, Wash) with no certified room to host them; sanitary sheet is supporting evidence only"
+   ]
+  },
+  {
+   "item": "A-WPF-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WATERPROOFING",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "عزل مائي أرضيات",
+   "en": "Waterproofing membrane = wet / service floor area",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "US-04 / US-14 (wet identity not from label text alone)",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 40 sites on 1F, 0 certified (largest 0.125 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x40, TOPOLOGY_ROLE_UNRESOLVED x21, UNKNOWN_OBJECT_IN_SITE x19)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "WET_IDENTITY_LABEL_ONLY: 6 wet-label candidates (BATH, LAUNDRY, W.C) with no certified room to host them; sanitary sheet is supporting evidence only"
+   ]
+  },
+  {
+   "item": "A-WPU-01-1F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WATERPROOFING",
+   "floor": "1F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "عزل مائي جوانب 15 سم",
+   "en": "Waterproofing upturn 0.15 m on the gross perimeter (doorway not deducted)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S04 (1st.FLOOR PLAN 1:100)",
+   "rule": "US-05",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 40 sites on 1F, 0 certified (largest 0.125 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x40, TOPOLOGY_ROLE_UNRESOLVED x21, UNKNOWN_OBJECT_IN_SITE x19)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "WET_IDENTITY_LABEL_ONLY: 6 wet-label candidates (BATH, LAUNDRY, W.C) with no certified room to host them; sanitary sheet is supporting evidence only"
+   ]
+  },
+  {
+   "item": "A-WPF-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WATERPROOFING",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "عزل مائي أرضيات",
+   "en": "Waterproofing membrane = wet / service floor area",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "US-04 / US-14 (wet identity not from label text alone)",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 18 sites on 2F, 0 certified (largest 0.07 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x18, UNKNOWN_OBJECT_IN_SITE x14, TOPOLOGY_ROLE_UNRESOLVED x4)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "WET_IDENTITY_LABEL_ONLY: 1 wet-label candidates (W.C) with no certified room to host them; sanitary sheet is supporting evidence only"
+   ]
+  },
+  {
+   "item": "A-WPU-01-2F",
+   "discipline": "ARCHITECTURAL",
+   "trade": "WATERPROOFING",
+   "floor": "2F",
+   "element": "ALL ROOMS OF THE FLOOR (room by room once certified)",
+   "ar": "عزل مائي جوانب 15 سم",
+   "en": "Waterproofing upturn 0.15 m on the gross perimeter (doorway not deducted)",
+   "qty": null,
+   "unit": "m2",
+   "status": "BLOCKED",
+   "source": "P7757.dxf ARCH-S03 (2nd.FLOOR PLAN 1:100)",
+   "rule": "US-05",
+   "blockers": [
+    "ROOM_TOPOLOGY_NOT_CERTIFIED: TS01 built 18 sites on 2F, 0 certified (largest 0.07 m2; UNREALISED_ENTITY_LAYER_UNKNOWN x18, UNKNOWN_OBJECT_IN_SITE x14, TOPOLOGY_ROLE_UNRESOLVED x4)",
+    "LAYER_ROLE_AUTHORITY_MISSING: numeric / single-letter layers carry no role (layer 1 = walls AND sheet frames; W = plot boundary) - OQ-A1",
+    "WET_IDENTITY_LABEL_ONLY: 1 wet-label candidates (W.C) with no certified room to host them; sanitary sheet is supporting evidence only"
+   ]
+  }
+ ],
+ "state": "BLOCKED: no certified room; wet identity from labels alone is not sufficient"
+}

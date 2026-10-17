@@ -1,0 +1,382 @@
+{
+ "A0_control_mm_origin.dxf": {
+  "unit_m": 0.001,
+  "short_piece": [
+   {
+    "id": "D2:49:0",
+    "a": [
+     200.0,
+     -100.0
+    ],
+    "b": [
+     200.0,
+     0.0
+    ],
+    "float_length_mm": "100.0",
+    "float_length_drawing_units": "100.0",
+    "below_min_len": false,
+    "exact_length_of_stored_coordinates": "100",
+    "drafted_length": "100 mm (by construction: the block's local coordinates are exact)"
+   }
+  ],
+  "FROZEN": [
+   [
+    {
+     "width_mm": 1000.0,
+     "jambs": [
+      "MASONRY_JAMB",
+      "MASONRY_JAMB"
+     ]
+    }
+   ],
+   {}
+  ],
+  "ROBUST": [
+   [
+    {
+     "width_mm": 1000.0,
+     "jambs": [
+      "MASONRY_JAMB",
+      "MASONRY_JAMB"
+     ]
+    }
+   ],
+   {}
+  ],
+  "CANON_MM": [
+   [
+    {
+     "width_mm": 1000.0,
+     "jambs": [
+      "MASONRY_JAMB",
+      "MASONRY_JAMB"
+     ]
+    }
+   ],
+   {}
+  ],
+  "CANON_MM_piece_length_mm": [
+   "100.0"
+  ]
+ },
+ "A1_mm_block_rotated_offset.dxf": {
+  "unit_m": 0.001,
+  "short_piece": [
+   {
+    "id": "D2:52@D2:58:0",
+    "a": [
+     -351134.567,
+     -702268.135
+    ],
+    "b": [
+     -351234.567,
+     -702268.135
+    ],
+    "float_length_mm": "100.0",
+    "float_length_drawing_units": "100.0",
+    "below_min_len": false,
+    "exact_length_of_stored_coordinates": "100.00000000000000000000000",
+    "drafted_length": "100 mm (by construction: the block's local coordinates are exact)"
+   }
+  ],
+  "FROZEN": [
+   [
+    {
+     "width_mm": 1000.0,
+     "jambs": [
+      "MASONRY_JAMB",
+      "MASONRY_JAMB"
+     ]
+    }
+   ],
+   {}
+  ],
+  "ROBUST": [
+   [
+    {
+     "width_mm": 1000.0,
+     "jambs": [
+      "MASONRY_JAMB",
+      "MASONRY_JAMB"
+     ]
+    }
+   ],
+   {}
+  ],
+  "CANON_MM": [
+   [
+    {
+     "width_mm": 1000.0,
+     "jambs": [
+      "MASONRY_JAMB",
+      "MASONRY_JAMB"
+     ]
+    }
+   ],
+   {}
+  ],
+  "CANON_MM_piece_length_mm": [
+   "100.0"
+  ]
+ },
+ "A2_m_direct_offset.dxf": {
+  "unit_m": 1.0,
+  "short_piece": [
+   {
+    "id": "D2:49:0",
+    "a": [
+     0.2,
+     249.90035
+    ],
+    "b": [
+     0.2,
+     250.00035
+    ],
+    "float_length_mm": "99.99999999999432",
+    "float_length_drawing_units": "0.09999999999999432",
+    "below_min_len": true,
+    "exact_length_of_stored_coordinates": "0.099999999999994315658113919198513031005859375000000",
+    "drafted_length": "100 mm (by construction: the block's local coordinates are exact)"
+   }
+  ],
+  "FROZEN": [
+   [],
+   {}
+  ],
+  "ROBUST": [
+   [
+    {
+     "width_mm": 1000.0,
+     "jambs": [
+      "MASONRY_JAMB",
+      "MASONRY_JAMB"
+     ]
+    }
+   ],
+   {}
+  ],
+  "CANON_MM": [
+   [
+    {
+     "width_mm": 1000.0,
+     "jambs": [
+      "MASONRY_JAMB",
+      "MASONRY_JAMB"
+     ]
+    }
+   ],
+   {}
+  ],
+  "CANON_MM_piece_length_mm": [
+   "100.0"
+  ]
+ },
+ "A3_m_block_rotated_offset.dxf": {
+  "unit_m": 1.0,
+  "short_piece": [
+   {
+    "id": "D2:52@D2:58:0",
+    "a": [
+     -351.134567,
+     -702.2681349999999
+    ],
+    "b": [
+     -351.234567,
+     -702.2681349999999
+    ],
+    "float_length_mm": "100.00000000002274",
+    "float_length_drawing_units": "0.10000000000002274",
+    "below_min_len": false,
+    "exact_length_of_stored_coordinates": "0.10000000000002273736754432320594787597656250000000",
+    "drafted_length": "100 mm (by construction: the block's local coordinates are exact)"
+   }
+  ],
+  "FROZEN": [
+   [
+    {
+     "width_mm": 1000.0,
+     "jambs": [
+      "MASONRY_JAMB",
+      "MASONRY_JAMB"
+     ]
+    }
+   ],
+   {}
+  ],
+  "ROBUST": [
+   [
+    {
+     "width_mm": 1000.0,
+     "jambs": [
+      "MASONRY_JAMB",
+      "MASONRY_JAMB"
+     ]
+    }
+   ],
+   {}
+  ],
+  "CANON_MM": [
+   [
+    {
+     "width_mm": 1000.0,
+     "jambs": [
+      "MASONRY_JAMB",
+      "MASONRY_JAMB"
+     ]
+    }
+   ],
+   {}
+  ],
+  "CANON_MM_piece_length_mm": [
+   "100.00000000005821"
+  ]
+ },
+ "A4_mm_direct_offset.dxf": {
+  "unit_m": 0.001,
+  "short_piece": [
+   {
+    "id": "D2:49:0",
+    "a": [
+     200.0,
+     249900.35
+    ],
+    "b": [
+     200.0,
+     250000.35
+    ],
+    "float_length_mm": "100.0",
+    "float_length_drawing_units": "100.0",
+    "below_min_len": false,
+    "exact_length_of_stored_coordinates": "100.00000000000000000000000",
+    "drafted_length": "100 mm (by construction: the block's local coordinates are exact)"
+   }
+  ],
+  "FROZEN": [
+   [
+    {
+     "width_mm": 1000.0,
+     "jambs": [
+      "MASONRY_JAMB",
+      "MASONRY_JAMB"
+     ]
+    }
+   ],
+   {}
+  ],
+  "ROBUST": [
+   [
+    {
+     "width_mm": 1000.0,
+     "jambs": [
+      "MASONRY_JAMB",
+      "MASONRY_JAMB"
+     ]
+    }
+   ],
+   {}
+  ],
+  "CANON_MM": [
+   [
+    {
+     "width_mm": 1000.0,
+     "jambs": [
+      "MASONRY_JAMB",
+      "MASONRY_JAMB"
+     ]
+    }
+   ],
+   {}
+  ],
+  "CANON_MM_piece_length_mm": [
+   "100.0"
+  ]
+ },
+ "A5_mm_block_rot30_offset.dxf": {
+  "unit_m": 0.001,
+  "short_piece": [
+   {
+    "id": "D2:52@D2:58:0",
+    "a": [
+     64810.81308075689,
+     -241746.55254037844
+    ],
+    "b": [
+     64760.81308075689,
+     -241659.95
+    ],
+    "float_length_mm": "99.99999999998772",
+    "float_length_drawing_units": "99.99999999998772",
+    "below_min_len": true,
+    "exact_length_of_stored_coordinates": "99.999999999987727921927015065986617726913517074044",
+    "drafted_length": "100 mm (by construction: the block's local coordinates are exact)"
+   }
+  ],
+  "FROZEN": [
+   [],
+   {}
+  ],
+  "ROBUST": [
+   [
+    {
+     "width_mm": 1000.0,
+     "jambs": [
+      "MASONRY_JAMB",
+      "MASONRY_JAMB"
+     ]
+    }
+   ],
+   {}
+  ],
+  "CANON_MM": [
+   [],
+   {}
+  ],
+  "CANON_MM_piece_length_mm": [
+   "99.99999999998772"
+  ]
+ },
+ "A6_m_block_rot30_offset.dxf": {
+  "unit_m": 1.0,
+  "short_piece": [
+   {
+    "id": "D2:52@D2:58:0",
+    "a": [
+     -795.3787299192431,
+     13.397717459621557
+    ],
+    "b": [
+     -795.4287299192431,
+     13.48432
+    ],
+    "float_length_mm": "99.99999999997685",
+    "float_length_drawing_units": "0.09999999999997686",
+    "below_min_len": true,
+    "exact_length_of_stored_coordinates": "0.099999999999976854464972611307330582555074265593828",
+    "drafted_length": "100 mm (by construction: the block's local coordinates are exact)"
+   }
+  ],
+  "FROZEN": [
+   [],
+   {}
+  ],
+  "ROBUST": [
+   [
+    {
+     "width_mm": 1000.0,
+     "jambs": [
+      "MASONRY_JAMB",
+      "MASONRY_JAMB"
+     ]
+    }
+   ],
+   {}
+  ],
+  "CANON_MM": [
+   [],
+   {}
+  ],
+  "CANON_MM_piece_length_mm": [
+   "99.99999999999875"
+  ]
+ }
+}

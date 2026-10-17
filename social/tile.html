@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ar">
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: "Cairo"; src: url("{{ font_cairo }}"); font-weight: 200 900; }
+  :root { --paper: {{ paper }}; --ink: {{ ink }}; --accent: {{ accent }}; --muted: #6b6b6b; --line: rgba(43,43,43,.18); }
+  html, body { margin: 0; padding: 0; background: var(--paper); }
+  .tile {
+    position: relative; width: {{ size }}px; height: {{ size }}px; overflow: hidden;
+    background: var(--paper); color: var(--ink); font-family: "Cairo", sans-serif;
+    box-sizing: border-box;
+  }
+  .tile.dark { --paper: #2b2b2b; --ink: #f4efe8; --line: rgba(244,239,232,.2); }
+  .pad { position: absolute; inset: 72px; display: flex; flex-direction: column; }
+  .blueprint { position: absolute; inset: 0; opacity: .07; pointer-events: none;
+    background-image: linear-gradient(var(--ink) 1px, transparent 1px), linear-gradient(90deg, var(--ink) 1px, transparent 1px);
+    background-size: 90px 90px; }
+  .badge { position: absolute; left: 0; bottom: 0; background: var(--accent); color: #fff;
+    font-weight: 700; font-size: 26px; padding: 6px 26px; letter-spacing: 2px; }
+  .logo svg { display: block; }
+  .kicker { color: var(--accent); font-weight: 700; font-size: 22px; letter-spacing: 4px; text-transform: uppercase; direction: ltr; text-align: left; }
+
+  .h-ar { direction: rtl; text-align: right; font-weight: 800; line-height: 1.25; font-size: 84px; }
+  .h-en { direction: ltr; text-align: left; font-weight: 300; line-height: 1.1; font-size: 54px; letter-spacing: 2px; text-transform: uppercase; }
+  .h-en.left, .h-ar.left { text-align: left; }
+  .h-ar.center, .h-en.center { text-align: center; }
+  .accent { color: var(--accent); }
+  .rule { width: 90px; height: 5px; background: var(--accent); margin: 26px 0; }
+  .rule.center { margin-left: auto; margin-right: auto; }
+  .b-ar { direction: rtl; text-align: right; font-size: 30px; line-height: 1.7; }
+  .b-en { direction: ltr; text-align: left; font-size: 24px; line-height: 1.55; color: var(--muted); }
+  .b-ar.center, .b-en.center { text-align: center; }
+  .grow { flex: 1; }
+
+  .icons { display: flex; justify-content: space-between; gap: 18px; border-top: 1px solid var(--line); padding-top: 34px; }
+  .icons .ic { flex: 1; text-align: center; }
+  .icons .ic svg { margin: 0 auto 10px; color: var(--accent); }
+  .icons .ic .l-ar { direction: rtl; font-weight: 700; font-size: 22px; line-height: 1.3; }
+  .icons .ic .l-en { font-size: 16px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); }
+
+  .steps { display: flex; gap: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .steps .st { flex: 1; padding: 34px 12px; text-align: center; border-left: 1px solid var(--line); }
+  .steps .st:first-child { border-left: 0; }
+  .steps .st .n { color: var(--accent); font-weight: 800; font-size: 40px; }
+  .steps .st .l-ar { direction: rtl; font-weight: 700; font-size: 22px; line-height: 1.3; }
+  .steps .st .l-en { font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); }
+
+  .photo { position: absolute; inset: 0; background-size: cover; background-position: center; }
+  .photo.left { right: 46%; clip-path: polygon(0 0, 100% 0, 88% 100%, 0 100%); }
+  .photo.right { left: 46%; clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%); }
+  .card { position: absolute; right: 72px; bottom: 120px; width: 520px; background: var(--paper); padding: 44px; box-sizing: border-box; }
+  .card .h-ar { font-size: 56px; } .card .h-en { font-size: 34px; } .card .b-ar { font-size: 24px; }
+  .side { position: absolute; left: 56%; right: 72px; top: 72px; bottom: 72px; display: flex; flex-direction: column; justify-content: center; }
+  .side.text-left { left: 72px; right: 56%; }
+  .side .h-ar { font-size: 62px; } .side .h-en { font-size: 40px; } .side .b-ar { font-size: 24px; } .side .b-en { font-size: 20px; }
+
+  .placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px;
+    background: repeating-linear-gradient(45deg, rgba(43,43,43,.05) 0 14px, transparent 14px 28px);
+    border: 3px dashed var(--accent); box-sizing: border-box; padding: 40px; text-align: center; }
+  .placeholder svg { color: var(--accent); }
+  .placeholder .needs { font-size: 19px; line-height: 1.45; color: var(--ink); direction: rtl; max-width: 92%; max-height: 62%; overflow: hidden; }
+  .placeholder .tag { font-size: 16px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); }
+
+  .stat .h-ar { font-size: 150px; line-height: 1; color: var(--accent); text-align: center; }
+  .stat.sentence .h-ar { font-size: 82px; line-height: 1.3; }
+  .contact { display: flex; flex-direction: column; gap: 26px; border-top: 1px solid var(--line); padding-top: 36px; }
+  .contact .row { display: flex; align-items: center; gap: 22px; direction: ltr; font-size: 30px; font-weight: 600; }
+  .contact .row svg { color: var(--accent); flex: none; }
+</style>
+</head>
+<body>
+<div class="tile {{ theme }}">
+{% if layout in ("photo_full", "split") %}
+  {% set side = tile.photo_side if layout == 'split' else '' %}
+  {% if photo %}
+    <div class="photo {{ side }}" style="background-image:url('{{ photo }}')"></div>
+  {% else %}
+    <div class="photo {{ side }} placeholder">
+      {{ icon("camera", 96) }}
+      <div class="tag">Photo {{ badge }}</div>
+      <div class="needs">{{ tile.photo_needs }}</div>
+    </div>
+  {% endif %}
+  {% if layout == "photo_full" %}
+    <div class="card">
+      <div class="h-ar">{{ headline_ar }}</div>
+      <div class="h-en">{{ headline_en }}</div>
+      {% if tile.body_ar %}<div class="rule"></div><div class="b-ar">{{ tile.body_ar }}</div>{% endif %}
+    </div>
+  {% else %}
+    <div class="side {{ 'text-left' if tile.photo_side == 'right' else '' }}">
+      <div class="h-ar">{{ headline_ar }}</div>
+      <div class="h-en">{{ headline_en }}</div>
+      <div class="rule"></div>
+      {% if tile.body_ar %}<div class="b-ar">{{ tile.body_ar }}</div>{% endif %}
+      {% if tile.body_en %}<div class="b-en">{{ tile.body_en }}</div>{% endif %}
+    </div>
+  {% endif %}
+
+{% elif layout == "cover" %}
+  <div class="blueprint"></div>
+  <div class="pad">
+    <div class="logo" style="text-align:center">{{ logo }}</div>
+    <div class="grow"></div>
+    <div class="h-ar center">{{ headline_ar }}</div>
+    <div class="h-en center">{{ headline_en }}</div>
+    {% if tile.body_ar %}<div class="rule center"></div><div class="b-ar center">{{ tile.body_ar }}</div>{% endif %}
+    <div class="grow"></div>
+    {% if tile.icons %}<div class="icons">{% for ic in tile.icons[:5] %}
+      <div class="ic">{{ icon(ic.icon, 52) }}<div class="l-ar">{{ ic.label_ar }}</div><div class="l-en">{{ ic.label_en }}</div></div>
+    {% endfor %}</div>{% endif %}
+  </div>
+
+{% elif layout == "icon_row" %}
+  <div class="pad">
+    {% if kicker %}<div class="kicker">{{ kicker }}</div>{% endif %}
+    <div class="h-ar">{{ headline_ar }}</div>
+    <div class="h-en">{{ headline_en }}</div>
+    {% if tile.body_ar %}<div class="rule"></div><div class="b-ar">{{ tile.body_ar }}</div>{% endif %}
+    {% if tile.body_en %}<div class="b-en">{{ tile.body_en }}</div>{% endif %}
+    <div class="grow"></div>
+    <div class="icons">{% for ic in tile.icons[:5] %}
+      <div class="ic">{{ icon(ic.icon, 56) }}<div class="l-ar">{{ ic.label_ar }}</div><div class="l-en">{{ ic.label_en }}</div></div>
+    {% endfor %}</div>
+  </div>
+
+{% elif layout == "process_steps" %}
+  <div class="pad">
+    {% if kicker %}<div class="kicker">{{ kicker }}</div>{% endif %}
+    <div class="h-ar">{{ headline_ar }}</div>
+    <div class="h-en">{{ headline_en }}</div>
+    <div class="grow"></div>
+    <div class="steps">{% for st in tile.steps[:5] %}
+      <div class="st"><div class="n">{{ "%02d" % loop.index }}</div><div class="l-ar">{{ st.label_ar }}</div><div class="l-en">{{ st.label_en }}</div></div>
+    {% endfor %}</div>
+    {% if tile.body_ar %}<div class="b-ar" style="margin-top:34px;font-size:24px">{{ tile.body_ar }}</div>{% endif %}
+  </div>
+
+{% elif layout == "stat" %}
+  <div class="blueprint"></div>
+  <div class="pad stat {{ '' if stat_big else 'sentence' }}">
+    {% if kicker %}<div class="kicker">{{ kicker }}</div>{% endif %}
+    <div class="grow"></div>
+    <div class="h-ar">{{ headline_ar }}</div>
+    <div class="h-en center">{{ headline_en }}</div>
+    <div class="rule center"></div>
+    {% if tile.body_ar %}<div class="b-ar center">{{ tile.body_ar }}</div>{% endif %}
+    {% if tile.body_en %}<div class="b-en center">{{ tile.body_en }}</div>{% endif %}
+    <div class="grow"></div>
+  </div>
+
+{% elif layout == "cta" %}
+  <div class="blueprint"></div>
+  <div class="pad">
+    <div class="logo">{{ logo }}</div>
+    <div class="grow"></div>
+    <div class="h-ar">{{ headline_ar }}</div>
+    <div class="h-en">{{ headline_en }}</div>
+    {% if tile.body_ar %}<div class="rule"></div><div class="b-ar">{{ tile.body_ar }}</div>{% endif %}
+    <div class="grow"></div>
+    <div class="contact">
+      {% for row in contact %}<div class="row">{{ icon(row.icon, 40) }}<span>{{ row.text }}</span></div>{% endfor %}
+    </div>
+  </div>
+
+{% else %}
+  <div class="blueprint"></div>
+  <div class="pad">
+    {% if kicker %}<div class="kicker">{{ kicker }}</div>{% endif %}
+    <div class="grow"></div>
+    <div class="h-ar">{{ headline_ar }}</div>
+    <div class="h-en">{{ headline_en }}</div>
+    <div class="rule"></div>
+    {% if tile.body_ar %}<div class="b-ar">{{ tile.body_ar }}</div>{% endif %}
+    {% if tile.body_en %}<div class="b-en">{{ tile.body_en }}</div>{% endif %}
+    <div class="grow"></div>
+    <div class="logo" style="opacity:.9">{{ logo_small }}</div>
+  </div>
+{% endif %}
+  <div class="badge">{{ badge }}</div>
+</div>
+</body>
+</html>

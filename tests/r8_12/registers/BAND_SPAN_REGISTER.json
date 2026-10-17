@@ -1,0 +1,1807 @@
+{
+ "SCHEMA": "URBAN_R8_12_BAND_SPAN_REGISTER_V1",
+ "NEW_K2": [
+  {
+   "span_id": "BS-0dd01bc90bdccb77",
+   "band_id": "WB-efb69156aa050622",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    67355.5115,
+    67508.6486
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "709",
+     "parameter_interval": [
+      8.284271,
+      161.421356
+     ],
+     "source_length": 169.705627
+    },
+    {
+     "source": "710",
+     "parameter_interval": [
+      0.0,
+      153.137085
+     ],
+     "source_length": 153.137085
+    }
+   ]
+  },
+  {
+   "span_id": "BS-0de30ad41e3883fd",
+   "band_id": "WB-37282fdfc4aec2b3",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    14549.7196,
+    14559.7196
+   ],
+   "width_mm": 200.91,
+   "source_intervals": [
+    {
+     "source": "2060",
+     "parameter_interval": [
+      0.0,
+      10.0
+     ],
+     "source_length": 40.0
+    },
+    {
+     "source": "552",
+     "parameter_interval": [
+      55.0,
+      65.0
+     ],
+     "source_length": 400.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-0de30ad41e3883fd",
+   "band_id": "WB-37282fdfc4aec2b3",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    14549.7196,
+    14559.7196
+   ],
+   "width_mm": 200.91,
+   "source_intervals": [
+    {
+     "source": "2060",
+     "parameter_interval": [
+      30.0,
+      40.0
+     ],
+     "source_length": 40.0
+    },
+    {
+     "source": "552",
+     "parameter_interval": [
+      55.0,
+      65.0
+     ],
+     "source_length": 400.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-106f41a587fddad1",
+   "band_id": "WB-c957c88f82988939",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    15474.7196,
+    15574.7196
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "462",
+     "parameter_interval": [
+      0.0,
+      100.0
+     ],
+     "source_length": 100.0
+    },
+    {
+     "source": "459",
+     "parameter_interval": [
+      470.0,
+      570.0
+     ],
+     "source_length": 1570.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-114e669ece29c7f4",
+   "band_id": "WB-003de0bbd8ac8fb7",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "s": [
+    15327.7692,
+    15459.7196
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "463",
+     "parameter_interval": [
+      0.0,
+      131.950399
+     ],
+     "source_length": 410.0
+    },
+    {
+     "source": "459",
+     "parameter_interval": [
+      585.0,
+      716.950399
+     ],
+     "source_length": 1570.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-135eff0c946c66f5",
+   "band_id": "WB-a1d57b5cbebeadc8",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    15049.7196,
+    15109.7196
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "535",
+     "parameter_interval": [
+      0.0,
+      60.0
+     ],
+     "source_length": 60.0
+    },
+    {
+     "source": "543",
+     "parameter_interval": [
+      0.0,
+      60.0
+     ],
+     "source_length": 60.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-2060bd1939aadd6f",
+   "band_id": "WB-3ec48d66e4ae938a",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    15564.7196,
+    15574.7196
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "538",
+     "parameter_interval": [
+      100.0,
+      110.0
+     ],
+     "source_length": 110.0
+    },
+    {
+     "source": "528",
+     "parameter_interval": [
+      100.0,
+      110.0
+     ],
+     "source_length": 110.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-267e57464aeca4b7",
+   "band_id": "WB-d9e43c661abd72ca",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    14494.7196,
+    14549.7196
+   ],
+   "width_mm": 210.14,
+   "source_intervals": [
+    {
+     "source": "554",
+     "parameter_interval": [
+      0.0,
+      55.0
+     ],
+     "source_length": 350.0
+    },
+    {
+     "source": "552",
+     "parameter_interval": [
+      0.0,
+      55.0
+     ],
+     "source_length": 400.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-2926201caee0caa5",
+   "band_id": "WB-eeb4fc032cff8699",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    110738.0817,
+    110753.0817
+   ],
+   "width_mm": 1800.0,
+   "source_intervals": [
+    {
+     "source": "584",
+     "parameter_interval": [
+      0.0,
+      15.0
+     ],
+     "source_length": 215.0
+    },
+    {
+     "source": "574",
+     "parameter_interval": [
+      0.0,
+      15.0
+     ],
+     "source_length": 265.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-2bb1d4eee5c362a0",
+   "band_id": "WB-5807171034af7fb1",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    14859.7196,
+    15029.7196
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "464",
+     "parameter_interval": [
+      0.0,
+      170.0
+     ],
+     "source_length": 170.0
+    },
+    {
+     "source": "459",
+     "parameter_interval": [
+      1015.0,
+      1185.0
+     ],
+     "source_length": 1570.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-2c70724dfd7f859a",
+   "band_id": "WB-0e397c7d26933e82",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "s": [
+    14619.7196,
+    14679.7196
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "469",
+     "parameter_interval": [
+      165.0,
+      225.0
+     ],
+     "source_length": 225.0
+    },
+    {
+     "source": "459",
+     "parameter_interval": [
+      1365.0,
+      1425.0
+     ],
+     "source_length": 1570.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-2e9f612fcb8f2328",
+   "band_id": "WB-0e397c7d26933e82",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "s": [
+    14813.9483,
+    14844.7196
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "469",
+     "parameter_interval": [
+      0.0,
+      30.771297
+     ],
+     "source_length": 225.0
+    },
+    {
+     "source": "459",
+     "parameter_interval": [
+      1200.0,
+      1230.771297
+     ],
+     "source_length": 1570.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-2fe1766b29cbb6e2",
+   "band_id": "WB-1bb50b95e0357657",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    110488.0817,
+    110523.0817
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "574",
+     "parameter_interval": [
+      230.0,
+      265.0
+     ],
+     "source_length": 265.0
+    },
+    {
+     "source": "572",
+     "parameter_interval": [
+      0.0,
+      35.0
+     ],
+     "source_length": 35.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-30e36483bc8de68e",
+   "band_id": "WB-c0b70306b128d173",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    109778.0817,
+    110363.0817
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "518",
+     "parameter_interval": [
+      0.0,
+      585.0
+     ],
+     "source_length": 585.0
+    },
+    {
+     "source": "523",
+     "parameter_interval": [
+      0.0,
+      585.0
+     ],
+     "source_length": 585.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-3551e9b6839aaaee",
+   "band_id": "WB-b88b3b20bb03b46d",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    110538.0817,
+    110738.0817
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "574",
+     "parameter_interval": [
+      15.0,
+      215.0
+     ],
+     "source_length": 265.0
+    },
+    {
+     "source": "571",
+     "parameter_interval": [
+      0.0,
+      200.0
+     ],
+     "source_length": 200.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-421cf86f5bdd017b",
+   "band_id": "WB-1567bb474e02284f",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    14579.7196,
+    14589.7196
+   ],
+   "width_mm": 200.91,
+   "source_intervals": [
+    {
+     "source": "2060",
+     "parameter_interval": [
+      30.0,
+      40.0
+     ],
+     "source_length": 40.0
+    },
+    {
+     "source": "552",
+     "parameter_interval": [
+      85.0,
+      95.0
+     ],
+     "source_length": 400.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-421cf86f5bdd017b",
+   "band_id": "WB-1567bb474e02284f",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    14579.7196,
+    14589.7196
+   ],
+   "width_mm": 200.91,
+   "source_intervals": [
+    {
+     "source": "2060",
+     "parameter_interval": [
+      0.0,
+      10.0
+     ],
+     "source_length": 40.0
+    },
+    {
+     "source": "552",
+     "parameter_interval": [
+      85.0,
+      95.0
+     ],
+     "source_length": 400.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-496dca9732ffb649",
+   "band_id": "WB-c2c9b76062ebaac8",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "s": [
+    15114.7196,
+    15324.7196
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "510",
+     "parameter_interval": [
+      0.0,
+      210.0
+     ],
+     "source_length": 460.0
+    },
+    {
+     "source": "506",
+     "parameter_interval": [
+      0.0,
+      210.0
+     ],
+     "source_length": 930.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-499a9212e4d30a5a",
+   "band_id": "WB-b98f5ef4b983f03c",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "s": [
+    109808.0817,
+    110083.5168
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "448",
+     "parameter_interval": [
+      0.0,
+      275.435036
+     ],
+     "source_length": 410.0
+    },
+    {
+     "source": "446",
+     "parameter_interval": [
+      520.0,
+      795.435036
+     ],
+     "source_length": 945.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-5004b809add038df",
+   "band_id": "WB-1e48b902ef5e317f",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    15689.7196,
+    16024.7196
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "460",
+     "parameter_interval": [
+      0.0,
+      335.0
+     ],
+     "source_length": 335.0
+    },
+    {
+     "source": "459",
+     "parameter_interval": [
+      20.0,
+      355.0
+     ],
+     "source_length": 1570.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-52a3c4e15a5b6ee0",
+   "band_id": "WB-006aaa6c7bf56187",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    14649.7196,
+    14979.7196
+   ],
+   "width_mm": 100.0,
+   "source_intervals": [
+    {
+     "source": "547",
+     "parameter_interval": [
+      0.0,
+      330.0
+     ],
+     "source_length": 330.0
+    },
+    {
+     "source": "548",
+     "parameter_interval": [
+      0.0,
+      330.0
+     ],
+     "source_length": 330.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-5afec7384c71ee05",
+   "band_id": "WB-f002b0911be00cd8",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    109583.0817,
+    109678.0817
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "525",
+     "parameter_interval": [
+      0.0,
+      95.0
+     ],
+     "source_length": 135.0
+    },
+    {
+     "source": "519",
+     "parameter_interval": [
+      0.0,
+      95.0
+     ],
+     "source_length": 140.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-5b669687bc8d9bc8",
+   "band_id": "WB-7136e1c6741b6985",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    110278.0817,
+    110363.0817
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "456",
+     "parameter_interval": [
+      0.0,
+      85.0
+     ],
+     "source_length": 85.0
+    },
+    {
+     "source": "455",
+     "parameter_interval": [
+      20.0,
+      105.0
+     ],
+     "source_length": 1095.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-5ec7419ff7f3354e",
+   "band_id": "WB-60fc64ce1230b3ba",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "s": [
+    109583.0817,
+    109878.0817
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "457",
+     "parameter_interval": [
+      340.0,
+      635.0
+     ],
+     "source_length": 635.0
+    },
+    {
+     "source": "455",
+     "parameter_interval": [
+      505.0,
+      800.0
+     ],
+     "source_length": 1095.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-63b1560ca92411cd",
+   "band_id": "WB-c21a42c500636d5e",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    14949.7196,
+    15029.7196
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "7117",
+     "parameter_interval": [
+      0.0,
+      80.0
+     ],
+     "source_length": 80.0
+    },
+    {
+     "source": "7116",
+     "parameter_interval": [
+      0.0,
+      80.0
+     ],
+     "source_length": 80.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-653ae9bb530a4b00",
+   "band_id": "WB-7b3ad095cb4bcecb",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    109893.4009,
+    110218.0817
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "2297",
+     "parameter_interval": [
+      0.0,
+      324.680893
+     ],
+     "source_length": 324.680893
+    },
+    {
+     "source": "2296",
+     "parameter_interval": [
+      0.0,
+      324.680893
+     ],
+     "source_length": 324.680893
+    }
+   ]
+  },
+  {
+   "span_id": "BS-65e918fc060a7d07",
+   "band_id": "WB-87c8552f83e32a2d",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    109583.0817,
+    109773.7561
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "477",
+     "parameter_interval": [
+      275.0,
+      465.674376
+     ],
+     "source_length": 465.674376
+    },
+    {
+     "source": "470",
+     "parameter_interval": [
+      275.0,
+      300.0
+     ],
+     "source_length": 300.0
+    },
+    {
+     "source": "471",
+     "parameter_interval": [
+      0.0,
+      165.674376
+     ],
+     "source_length": 165.674376
+    }
+   ]
+  },
+  {
+   "span_id": "BS-664051df40ea1d4a",
+   "band_id": "WB-5027ea5843e36ae8",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    14529.7196,
+    15054.7196
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "549",
+     "parameter_interval": [
+      35.0,
+      560.0
+     ],
+     "source_length": 620.0
+    },
+    {
+     "source": "546",
+     "parameter_interval": [
+      0.0,
+      525.0
+     ],
+     "source_length": 570.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-689b32c97ae1a54e",
+   "band_id": "WB-fb59fd8ea0ae205c",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    109308.0817,
+    109608.0817
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "472",
+     "parameter_interval": [
+      0.0,
+      300.0
+     ],
+     "source_length": 300.0
+    },
+    {
+     "source": "475",
+     "parameter_interval": [
+      0.0,
+      300.0
+     ],
+     "source_length": 375.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-68d6305d13996104",
+   "band_id": "WB-60fc64ce1230b3ba",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "s": [
+    110047.8333,
+    110218.0817
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "457",
+     "parameter_interval": [
+      0.0,
+      170.248468
+     ],
+     "source_length": 635.0
+    },
+    {
+     "source": "455",
+     "parameter_interval": [
+      165.0,
+      335.248468
+     ],
+     "source_length": 1095.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-786e2364d73f4f13",
+   "band_id": "WB-8ab73bc1a6bb71fb",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    110583.0817,
+    111244.7975
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "449",
+     "parameter_interval": [
+      0.0,
+      661.715729
+     ],
+     "source_length": 670.0
+    },
+    {
+     "source": "504",
+     "parameter_interval": [
+      45.0,
+      706.715729
+     ],
+     "source_length": 706.715729
+    }
+   ]
+  },
+  {
+   "span_id": "BS-7a8a83d1dd435f0e",
+   "band_id": "WB-3654d592eda4476f",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    15709.7196,
+    16024.7196
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "1893",
+     "parameter_interval": [
+      0.0,
+      315.0
+     ],
+     "source_length": 315.0
+    },
+    {
+     "source": "1895",
+     "parameter_interval": [
+      0.0,
+      315.0
+     ],
+     "source_length": 315.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-7d2901211d518ae1",
+   "band_id": "WB-2eaf560d0ffa9ed0",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    109538.0817,
+    109593.0817
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "481",
+     "parameter_interval": [
+      230.0,
+      285.0
+     ],
+     "source_length": 285.0
+    },
+    {
+     "source": "484",
+     "parameter_interval": [
+      0.0,
+      55.0
+     ],
+     "source_length": 70.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-7d97ee836932548b",
+   "band_id": "WB-1fb2745be012afd0",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    110538.0817,
+    110738.0817
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "583",
+     "parameter_interval": [
+      0.0,
+      200.0
+     ],
+     "source_length": 200.0
+    },
+    {
+     "source": "584",
+     "parameter_interval": [
+      15.0,
+      215.0
+     ],
+     "source_length": 215.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-7da34f97f75d0007",
+   "band_id": "WB-348b2a042f8dbd42",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    109308.0817,
+    109523.0817
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "521",
+     "parameter_interval": [
+      0.0,
+      215.0
+     ],
+     "source_length": 215.0
+    },
+    {
+     "source": "522",
+     "parameter_interval": [
+      45.0,
+      260.0
+     ],
+     "source_length": 260.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-8623c51110b08920",
+   "band_id": "WB-5f84d83837febf25",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    15079.7196,
+    15099.7196
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "556",
+     "parameter_interval": [
+      0.0,
+      20.0
+     ],
+     "source_length": 20.0
+    },
+    {
+     "source": "582",
+     "parameter_interval": [
+      0.0,
+      20.0
+     ],
+     "source_length": 20.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-87e29ed32be97b17",
+   "band_id": "WB-07772c3bae70b9d2",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    14909.7196,
+    15029.7196
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "7119",
+     "parameter_interval": [
+      15.0,
+      135.0
+     ],
+     "source_length": 135.0
+    },
+    {
+     "source": "7118",
+     "parameter_interval": [
+      0.0,
+      120.0
+     ],
+     "source_length": 120.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-8b5515a287a0c16b",
+   "band_id": "WB-545a50f20a1c97a0",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    15779.7196,
+    15989.7196
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "526",
+     "parameter_interval": [
+      0.0,
+      210.0
+     ],
+     "source_length": 210.0
+    },
+    {
+     "source": "531",
+     "parameter_interval": [
+      0.0,
+      210.0
+     ],
+     "source_length": 210.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-8ebc48b9531fa2c0",
+   "band_id": "WB-c2c9b76062ebaac8",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "s": [
+    15559.3641,
+    15574.7196
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "510",
+     "parameter_interval": [
+      444.644442,
+      460.0
+     ],
+     "source_length": 460.0
+    },
+    {
+     "source": "506",
+     "parameter_interval": [
+      444.644442,
+      460.0
+     ],
+     "source_length": 930.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-90cc0ca5e088f7e3",
+   "band_id": "WB-094d0bd29a2a051b",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    110383.0817,
+    111244.7975
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "515",
+     "parameter_interval": [
+      0.0,
+      861.715729
+     ],
+     "source_length": 861.715729
+    },
+    {
+     "source": "453",
+     "parameter_interval": [
+      8.284271,
+      870.0
+     ],
+     "source_length": 870.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-980aca6c0da8fdbc",
+   "band_id": "WB-87c8552f83e32a2d",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    109308.0817,
+    109443.0817
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "477",
+     "parameter_interval": [
+      0.0,
+      135.0
+     ],
+     "source_length": 465.674376
+    },
+    {
+     "source": "470",
+     "parameter_interval": [
+      0.0,
+      135.0
+     ],
+     "source_length": 300.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-a6299e193c5dcf95",
+   "band_id": "WB-15be5ce1c34a2873",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    15384.7196,
+    15459.7196
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "539",
+     "parameter_interval": [
+      15.0,
+      90.0
+     ],
+     "source_length": 90.0
+    },
+    {
+     "source": "540",
+     "parameter_interval": [
+      0.0,
+      75.0
+     ],
+     "source_length": 75.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-a82ba89e54e8bf1e",
+   "band_id": "WB-903a11c420cfc393",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    109623.0817,
+    109683.0817
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "475",
+     "parameter_interval": [
+      315.0,
+      375.0
+     ],
+     "source_length": 375.0
+    },
+    {
+     "source": "473",
+     "parameter_interval": [
+      0.0,
+      60.0
+     ],
+     "source_length": 60.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-ac4ac1135d144350",
+   "band_id": "WB-003de0bbd8ac8fb7",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "s": [
+    15049.7196,
+    15166.67
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "463",
+     "parameter_interval": [
+      293.049601,
+      410.0
+     ],
+     "source_length": 410.0
+    },
+    {
+     "source": "459",
+     "parameter_interval": [
+      878.049601,
+      995.0
+     ],
+     "source_length": 1570.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-ace0ab640312b9dd",
+   "band_id": "WB-c1d6accfada738cf",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    110238.0817,
+    110258.0817
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "1272",
+     "parameter_interval": [
+      0.0,
+      20.0
+     ],
+     "source_length": 25.0
+    },
+    {
+     "source": "1271",
+     "parameter_interval": [
+      0.0,
+      20.0
+     ],
+     "source_length": 40.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-b51a5e2f249cf181",
+   "band_id": "WB-e1ce84df8618a355",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    14949.7196,
+    14989.7196
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "581",
+     "parameter_interval": [
+      0.0,
+      40.0
+     ],
+     "source_length": 40.0
+    },
+    {
+     "source": "544",
+     "parameter_interval": [
+      420.0,
+      460.0
+     ],
+     "source_length": 460.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-bbb6b7871dff69d9",
+   "band_id": "WB-566cd40972fb4ca5",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    14529.7196,
+    14934.7196
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "580",
+     "parameter_interval": [
+      0.0,
+      405.0
+     ],
+     "source_length": 405.0
+    },
+    {
+     "source": "544",
+     "parameter_interval": [
+      0.0,
+      405.0
+     ],
+     "source_length": 460.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-c008aebfc19ff71a",
+   "band_id": "WB-daab0cfad91a81bc",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "s": [
+    15589.7196,
+    15669.9786
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "512",
+     "parameter_interval": [
+      0.0,
+      80.258976
+     ],
+     "source_length": 435.0
+    },
+    {
+     "source": "506",
+     "parameter_interval": [
+      475.0,
+      555.258976
+     ],
+     "source_length": 930.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-c33c03a7ed989a96",
+   "band_id": "WB-daab0cfad91a81bc",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "s": [
+    15919.9786,
+    16024.7196
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "512",
+     "parameter_interval": [
+      330.258976,
+      435.0
+     ],
+     "source_length": 435.0
+    },
+    {
+     "source": "506",
+     "parameter_interval": [
+      805.258976,
+      910.0
+     ],
+     "source_length": 930.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-c6a62939f132a630",
+   "band_id": "WB-b28d317a26b5ab8b",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    88936.0139,
+    89089.151
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "452",
+     "parameter_interval": [
+      0.0,
+      153.137085
+     ],
+     "source_length": 153.137085
+    },
+    {
+     "source": "451",
+     "parameter_interval": [
+      8.284271,
+      161.421356
+     ],
+     "source_length": 169.705627
+    }
+   ]
+  },
+  {
+   "span_id": "BS-d01791bd6882a288",
+   "band_id": "WB-04c5f7ad7eefd33a",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    110178.0817,
+    110218.0817
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "1948",
+     "parameter_interval": [
+      0.0,
+      40.0
+     ],
+     "source_length": 40.0
+    },
+    {
+     "source": "1947",
+     "parameter_interval": [
+      0.0,
+      40.0
+     ],
+     "source_length": 40.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-da10e3dd2eaf77ae",
+   "band_id": "WB-b98f5ef4b983f03c",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "s": [
+    110204.0526,
+    110218.0817
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "448",
+     "parameter_interval": [
+      395.970892,
+      410.0
+     ],
+     "source_length": 410.0
+    },
+    {
+     "source": "446",
+     "parameter_interval": [
+      915.970892,
+      930.0
+     ],
+     "source_length": 945.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-e0f0d02fcbc8ee17",
+   "band_id": "WB-c285e436ecdbf42c",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    109343.0817,
+    109787.0675
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "447",
+     "parameter_interval": [
+      0.0,
+      443.985713
+     ],
+     "source_length": 443.985713
+    },
+    {
+     "source": "446",
+     "parameter_interval": [
+      55.0,
+      498.985713
+     ],
+     "source_length": 945.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-e4507e918655fe22",
+   "band_id": "WB-3ec48d66e4ae938a",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    15594.7196,
+    15674.7196
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "538",
+     "parameter_interval": [
+      0.0,
+      80.0
+     ],
+     "source_length": 110.0
+    },
+    {
+     "source": "528",
+     "parameter_interval": [
+      0.0,
+      80.0
+     ],
+     "source_length": 110.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-e5170b803a1a20f2",
+   "band_id": "WB-526abeb9a871292d",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    110278.0817,
+    110523.0817
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "444",
+     "parameter_interval": [
+      60.0,
+      305.0
+     ],
+     "source_length": 365.0
+    },
+    {
+     "source": "489",
+     "parameter_interval": [
+      45.0,
+      290.0
+     ],
+     "source_length": 290.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-e6df8d8fe71436c7",
+   "band_id": "WB-f6ace28ab76f5ec1",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    109308.0817,
+    109523.0817
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "483",
+     "parameter_interval": [
+      0.0,
+      215.0
+     ],
+     "source_length": 215.0
+    },
+    {
+     "source": "481",
+     "parameter_interval": [
+      0.0,
+      215.0
+     ],
+     "source_length": 285.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-ea363bee3e8cd78a",
+   "band_id": "WB-41f7ee382fabcd8c",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    14638.0039,
+    15881.4353
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "450",
+     "parameter_interval": [
+      8.284271,
+      1251.715729
+     ],
+     "source_length": 1260.0
+    },
+    {
+     "source": "505",
+     "parameter_interval": [
+      0.0,
+      1243.431458
+     ],
+     "source_length": 1243.431458
+    }
+   ]
+  },
+  {
+   "span_id": "BS-f23974e3cec0b2de",
+   "band_id": "WB-a5ba73aea84116cd",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    14494.7196,
+    14559.7196
+   ],
+   "width_mm": 550.0,
+   "source_intervals": [
+    {
+     "source": "1672",
+     "parameter_interval": [
+      0.0,
+      65.0
+     ],
+     "source_length": 65.0
+    },
+    {
+     "source": "459",
+     "parameter_interval": [
+      1485.0,
+      1550.0
+     ],
+     "source_length": 1570.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-f33084e6ee7caf5a",
+   "band_id": "WB-d9bbc05523872f82",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    14949.7196,
+    15099.7196
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "579",
+     "parameter_interval": [
+      0.0,
+      150.0
+     ],
+     "source_length": 150.0
+    },
+    {
+     "source": "570",
+     "parameter_interval": [
+      15.0,
+      165.0
+     ],
+     "source_length": 180.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-f455796bc8f5ddef",
+   "band_id": "WB-26c22b6b7db1c393",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    109538.0817,
+    109568.0817
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "520",
+     "parameter_interval": [
+      15.0,
+      45.0
+     ],
+     "source_length": 45.0
+    },
+    {
+     "source": "522",
+     "parameter_interval": [
+      0.0,
+      30.0
+     ],
+     "source_length": 260.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-f73b8a32b67669bd",
+   "band_id": "WB-ce5da0a04fd55c86",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    14859.7196,
+    14894.7196
+   ],
+   "width_mm": 150.0,
+   "source_intervals": [
+    {
+     "source": "552",
+     "parameter_interval": [
+      365.0,
+      400.0
+     ],
+     "source_length": 400.0
+    },
+    {
+     "source": "555",
+     "parameter_interval": [
+      0.0,
+      35.0
+     ],
+     "source_length": 50.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-f77c0c161a46ed6c",
+   "band_id": "WB-e00510a0d58838b1",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    109308.0817,
+    109523.0817
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "458",
+     "parameter_interval": [
+      0.0,
+      215.0
+     ],
+     "source_length": 215.0
+    },
+    {
+     "source": "455",
+     "parameter_interval": [
+      860.0,
+      1075.0
+     ],
+     "source_length": 1095.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-f89f50e48d483b7a",
+   "band_id": "WB-b71a34e13da43ab4",
+   "state": "WALL_BAND_AMBIGUOUS",
+   "s": [
+    14619.7196,
+    14844.7196
+   ],
+   "width_mm": 210.14,
+   "source_intervals": [
+    {
+     "source": "554",
+     "parameter_interval": [
+      125.0,
+      350.0
+     ],
+     "source_length": 350.0
+    },
+    {
+     "source": "552",
+     "parameter_interval": [
+      125.0,
+      350.0
+     ],
+     "source_length": 400.0
+    }
+   ]
+  },
+  {
+   "span_id": "BS-fccb787ef64565d5",
+   "band_id": "WB-2ef2c74bf60c48a0",
+   "state": "WALL_BAND_ESTABLISHED",
+   "s": [
+    15634.7196,
+    15674.7196
+   ],
+   "width_mm": 200.0,
+   "source_intervals": [
+    {
+     "source": "461",
+     "parameter_interval": [
+      0.0,
+      40.0
+     ],
+     "source_length": 40.0
+    },
+    {
+     "source": "459",
+     "parameter_interval": [
+      370.0,
+      410.0
+     ],
+     "source_length": 1570.0
+    }
+   ]
+  }
+ ],
+ "OLD_K1_count": 65,
+ "rule": "every span keeps the exact source-part parameter intervals it uses; topology never implies that a whole source face belongs to one band"
+}

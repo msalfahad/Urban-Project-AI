@@ -1,0 +1,2676 @@
+{
+ "SCHEMA": "URBAN_R8_11_WALL_BAND_REGISTER_V1",
+ "policy": {
+  "policy_id": "WALL_BAND_POLICY_V2",
+  "band": [
+   "parallel within eps_r over the overlap",
+   "overlap > eps_r",
+   "separation > eps_r",
+   "elongated: overlap > separation (shape, not size)",
+   "mutual nearest facing faces; one side only; a face paired on both sides makes its bands AMBIGUOUS",
+   "empty strip: no label, no crossing boundary, no arc",
+   "TOPOLOGY_BOUNDARY faces; not self-dimensioned"
+  ],
+  "never": [
+   "thickness",
+   "area",
+   "nearest parallel pair alone",
+   "coordinates alone",
+   "material identity"
+  ],
+  "ends": [
+   "ALIGNED_FREE_END",
+   "CAPPED",
+   "RECEIVING_FACE_JUNCTION"
+  ],
+  "amendments": [
+   "A1 (post-freeze, R8.11): an end whose end line is continued beyond BOTH face end points by admitted boundary is a RECEIVING_FACE_JUNCTION (T-junction / merged cores), never a free end or a passage jamb; it can only remove closure candidates, never add one"
+  ],
+  "caps": [
+   "WALL_END_CAP_PROVEN",
+   "WALL_END_CAP_CANDIDATE",
+   "NOT_WALL_CAP",
+   "UNRESOLVED"
+  ],
+  "means": "TOPOLOGY_OBSTACLE_GEOMETRY, not MASONRY_CONFIRMED",
+  "digest": "93809f32b7ba416336d25924b84c4ad0f65cc6b3c08bf019241c372da3a8a9a5"
+ },
+ "frozen_at_commit": "5895981",
+ "amendment_A1": [
+  "A1 (post-freeze, R8.11): an end whose end line is continued beyond BOTH face end points by admitted boundary is a RECEIVING_FACE_JUNCTION (T-junction / merged cores), never a free end or a passage jamb; it can only remove closure candidates, never add one"
+ ],
+ "frozen_v1_first_run": {
+  "NEW_K2": {
+   "bands": 33,
+   "closures": {
+    "AUTHORISED_FOR_SHADOW": [
+     "TC-aea10821cffe20ff"
+    ],
+    "DIAGNOSTIC_PASS": [
+     "TC-afadb7261888249e",
+     "TC-bf49f65df1238aa5",
+     "TC-d34896b88d4f5e08"
+    ],
+    "TOPOLOGY_CLOSURE_UNRESOLVED": [
+     "TC-15aae08f263d7ca0",
+     "TC-46f92c3b43e4035f",
+     "TC-6c869e2577a6020f",
+     "TC-a573660d53d92d11"
+    ]
+   },
+   "passages": 17,
+   "rows": {
+    "Q-03": 17.7425,
+    "Q-03P": 11.685,
+    "Q-11": 17.7425,
+    "Q-12": 11.685,
+    "Q-13": "BLOCKED_MULTIPLE: BLOCKED_ROLE, BLOCKED_TRADE_RULE",
+    "Q-14": "BLOCKED_ROLE"
+   }
+  },
+  "OLD_K1": {
+   "bands": 35,
+   "closures": {
+    "AUTHORISED_FOR_SHADOW": [],
+    "DIAGNOSTIC_PASS": 3,
+    "TOPOLOGY_CLOSURE_UNRESOLVED": 4
+   },
+   "passages": 15
+  }
+ },
+ "means": "TOPOLOGY_OBSTACLE_GEOMETRY - not masonry, not a material quantity",
+ "NEW_K2": [
+  {
+   "band_id": "WB-55c29f71d76c8db7",
+   "faces": [
+    "1892",
+    "538"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 450.0,
+   "overlap_mm": 800.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 44.99999999992997,
+    "overlap": 79.9999999999427,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-fa3143c0ea1ff5a1",
+   "faces": [
+    "1893",
+    "1895"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 3150.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "RECEIVING_FACE_JUNCTION",
+     "caps": [],
+     "receiving_face": [
+      "457"
+     ]
+    },
+    {
+     "end": 1,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 15.000000000101863,
+    "overlap": 315.0000000000109,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-25b061fabe95986e",
+   "faces": [
+    "1947",
+    "1948"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 400.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "ALIGNED_FREE_END",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 14.999999999990905,
+    "overlap": 39.99999999989814,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-18a41b53f8d9eaea",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 100.0,
+   "overlap_mm": 200.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 10.0,
+    "overlap": 20.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-e2e2ebcb3719cd3e",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 100.0,
+   "overlap_mm": 1900.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 10.0,
+    "overlap": 190.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-2caa4cfe910bf3f1",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 100.0,
+   "overlap_mm": 200.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 10.0,
+    "overlap": 20.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-3ca48d80cd981b4f",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 100.0,
+   "overlap_mm": 1900.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 10.0,
+    "overlap": 190.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-b1fe3d69cf126ddb",
+   "faces": [
+    "2296",
+    "2297"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 200.0,
+   "overlap_mm": 3246.8,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "ALIGNED_FREE_END",
+     "caps": [
+      {
+       "source": "2431",
+       "role": "DIMENSION_GRAPHICS",
+       "grade": "WALL_END_CAP_CANDIDATE"
+      }
+     ],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "RECEIVING_FACE_JUNCTION",
+     "caps": [],
+     "receiving_face": [
+      "549"
+     ]
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 19.999999999990905,
+    "overlap": 324.6808934370929,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-a2df6911004beaa3",
+   "faces": [
+    "446",
+    "447"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 200.0,
+   "overlap_mm": 4439.9,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 20.0,
+    "overlap": 443.9857134769991,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-1229f9a7541c596f",
+   "faces": [
+    "450",
+    "505"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 200.0,
+   "overlap_mm": 12434.3,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 20.0,
+    "overlap": 1243.4314575050812,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-80eaceb8664dcd82",
+   "faces": [
+    "451",
+    "452"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 200.0,
+   "overlap_mm": 1531.4,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 19.99999999997508,
+    "overlap": 153.13708498979776,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-a3160ea99beb3e6b",
+   "faces": [
+    "453",
+    "515"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 200.0,
+   "overlap_mm": 8617.2,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "RECEIVING_FACE_JUNCTION",
+     "caps": [],
+     "receiving_face": [
+      "506"
+     ]
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 20.0,
+    "overlap": 861.7157287526061,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-03e3abac62c69e25",
+   "faces": [
+    "454",
+    "516"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 200.0,
+   "overlap_mm": 600.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 20.0,
+    "overlap": 60.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-d5c66eb15b9d1d88",
+   "faces": [
+    "455",
+    "456"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 200.0,
+   "overlap_mm": 850.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 20.0,
+    "overlap": 85.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-efec5c14f5c79ab7",
+   "faces": [
+    "459",
+    "460"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 200.0,
+   "overlap_mm": 3350.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 19.99999999994907,
+    "overlap": 335.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-298800ce16db4b79",
+   "faces": [
+    "472",
+    "475"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 3000.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "RECEIVING_FACE_JUNCTION",
+     "caps": [],
+     "receiving_face": [
+      "464",
+      "469"
+     ]
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 14.999999999998863,
+    "overlap": 299.99999999999955,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-cb65fe1a8f201b2f",
+   "faces": [
+    "481",
+    "483"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 2150.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "RECEIVING_FACE_JUNCTION",
+     "caps": [],
+     "receiving_face": [
+      "462",
+      "463"
+     ]
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 15.0,
+    "overlap": 215.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-82fa01a38ddcb8ec",
+   "faces": [
+    "518",
+    "523"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 5850.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "RECEIVING_FACE_JUNCTION",
+     "caps": [],
+     "receiving_face": [
+      "510",
+      "512"
+     ]
+    },
+    {
+     "end": 1,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 15.0,
+    "overlap": 584.9999999991996,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-7d515124fe87e3a5",
+   "faces": [
+    "520",
+    "522"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 300.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 14.999999999970289,
+    "overlap": 29.999999999996362,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-b0e2774b18433212",
+   "faces": [
+    "526",
+    "531"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 2100.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 14.999999999949068,
+    "overlap": 209.99999999999272,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-a0f614bd5f5a02d4",
+   "faces": [
+    "535",
+    "543"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 600.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "ALIGNED_FREE_END",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "RECEIVING_FACE_JUNCTION",
+     "caps": [],
+     "receiving_face": [
+      "477"
+     ]
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 14.999999999898137,
+    "overlap": 60.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-8645c0f3b6a8e8ba",
+   "faces": [
+    "539",
+    "540"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 750.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 14.999999999898137,
+    "overlap": 75.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-69d17535068ea469",
+   "faces": [
+    "544",
+    "581"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 400.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 14.999999999912689,
+    "overlap": 40.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-104bcfdbc4fad197",
+   "faces": [
+    "545",
+    "549"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 150.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 14.999999999141437,
+    "overlap": 14.999999999956344,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-97e74e1ca5e1cef7",
+   "faces": [
+    "547",
+    "548"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 100.0,
+   "overlap_mm": 3300.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 10.0,
+    "overlap": 330.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-7a6402794280e0e9",
+   "faces": [
+    "552",
+    "555"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 350.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 14.999999999898137,
+    "overlap": 35.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-4527d3a2609c5c42",
+   "faces": [
+    "556",
+    "582"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 200.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "RECEIVING_FACE_JUNCTION",
+     "caps": [],
+     "receiving_face": [
+      "571",
+      "572"
+     ]
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 14.999999999912689,
+    "overlap": 19.999999999939973,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-2d42c333f6f2df73",
+   "faces": [
+    "570",
+    "579"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 1500.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 15.000000000087311,
+    "overlap": 150.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-fb7691e979c5f56e",
+   "faces": [
+    "571",
+    "574"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 2000.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 15.0,
+    "overlap": 200.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-9e1dcdcb55044c92",
+   "faces": [
+    "583",
+    "584"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 2000.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "RECEIVING_FACE_JUNCTION",
+     "caps": [],
+     "receiving_face": [
+      "580",
+      "581"
+     ]
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 15.0,
+    "overlap": 200.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-90760545934a90a7",
+   "faces": [
+    "709",
+    "710"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 200.0,
+   "overlap_mm": 1531.4,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 19.99999999997508,
+    "overlap": 153.13708498979776,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-3f0c2b19ab151915",
+   "faces": [
+    "7116",
+    "7117"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 800.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "RECEIVING_FACE_JUNCTION",
+     "caps": [],
+     "receiving_face": [
+      "470",
+      "471"
+     ]
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 14.999999999949068,
+    "overlap": 80.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-908be65a229afc8d",
+   "faces": [
+    "7118",
+    "7119"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 1200.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "RECEIVING_FACE_JUNCTION",
+     "caps": [],
+     "receiving_face": [
+      "2296"
+     ]
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 14.999999999898137,
+    "overlap": 120.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  }
+ ],
+ "OLD_K1": [
+  {
+   "band_id": "WB-fb829dcd5c00e592",
+   "faces": [
+    "1547",
+    "1548"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 700.0,
+   "overlap_mm": 1900.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 70.0,
+    "overlap": 190.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-4ddbd6a0d30a5802",
+   "faces": [
+    "1892",
+    "538"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 450.0,
+   "overlap_mm": 800.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 44.99999999997999,
+    "overlap": 79.99999999998363,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-d1e7a2aa4ac08a11",
+   "faces": [
+    "1893",
+    "1895"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 3150.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "RECEIVING_FACE_JUNCTION",
+     "caps": [],
+     "receiving_face": [
+      "457"
+     ]
+    },
+    {
+     "end": 1,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 15.0,
+    "overlap": 315.0000000000073,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-3da6a2c605e160e0",
+   "faces": [
+    "1947",
+    "1948"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 400.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 15.0,
+    "overlap": 39.99999999998545,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-1c9af17d41114ca5",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 100.0,
+   "overlap_mm": 200.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 10.0,
+    "overlap": 20.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-aad9c62b3d266c54",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 100.0,
+   "overlap_mm": 1900.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 10.0,
+    "overlap": 190.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-d7a9e8bd743f332f",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 100.0,
+   "overlap_mm": 200.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 10.0,
+    "overlap": 20.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-c61ed649aa8225d3",
+   "faces": [
+    "2060",
+    "2061"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 100.0,
+   "overlap_mm": 1900.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 10.0,
+    "overlap": 190.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-1fc521b40d2e6874",
+   "faces": [
+    "444",
+    "504"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 200.0,
+   "overlap_mm": 450.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 19.999999999996646,
+    "overlap": 45.000000000058094,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-634413ee7c414373",
+   "faces": [
+    "450",
+    "505"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 200.0,
+   "overlap_mm": 12434.3,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 20.0,
+    "overlap": 1243.431457505074,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-262c6ae0e3bc78ed",
+   "faces": [
+    "451",
+    "452"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 200.0,
+   "overlap_mm": 1531.4,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 20.000000000002093,
+    "overlap": 153.1370849898518,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-4da5a5e224b43fc5",
+   "faces": [
+    "453",
+    "515"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 200.0,
+   "overlap_mm": 8617.2,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "RECEIVING_FACE_JUNCTION",
+     "caps": [],
+     "receiving_face": [
+      "506"
+     ]
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 20.0,
+    "overlap": 861.7157287525333,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-b37fd407b21d8870",
+   "faces": [
+    "454",
+    "516"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 200.0,
+   "overlap_mm": 600.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 20.0,
+    "overlap": 60.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-5a547b7a5103b325",
+   "faces": [
+    "455",
+    "456"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 200.0,
+   "overlap_mm": 850.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 20.0,
+    "overlap": 84.99999999998545,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-ce3fbffb8cc449d2",
+   "faces": [
+    "459",
+    "461"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 200.0,
+   "overlap_mm": 400.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 19.999999999992724,
+    "overlap": 40.00000000000546,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-71976314396b9eec",
+   "faces": [
+    "465",
+    "467"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 800.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "RECEIVING_FACE_JUNCTION",
+     "caps": [],
+     "receiving_face": [
+      "470",
+      "471"
+     ]
+    },
+    {
+     "end": 1,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 15.0,
+    "overlap": 79.99999999995453,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-41db8c165c63053a",
+   "faces": [
+    "472",
+    "475"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 3000.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "RECEIVING_FACE_JUNCTION",
+     "caps": [],
+     "receiving_face": [
+      "464",
+      "469"
+     ]
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 15.0,
+    "overlap": 299.99999999999966,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-b7d48b6103e855fe",
+   "faces": [
+    "481",
+    "483"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 2150.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "RECEIVING_FACE_JUNCTION",
+     "caps": [],
+     "receiving_face": [
+      "462",
+      "463"
+     ]
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 15.00000000000091,
+    "overlap": 215.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-ca5a3b98c858dcf8",
+   "faces": [
+    "513",
+    "817"
+   ],
+   "state": "WALL_BAND_AMBIGUOUS",
+   "width_mm": 150.0,
+   "overlap_mm": 1900.0,
+   "ends": [],
+   "evidence": {
+    "parallel": true,
+    "separation": 14.999999999941792,
+    "overlap": 189.99999999796637,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": [],
+    "face_paired_on_both_sides": true
+   }
+  },
+  {
+   "band_id": "WB-a60390939b7d66cf",
+   "faces": [
+    "518",
+    "523"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 5850.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "RECEIVING_FACE_JUNCTION",
+     "caps": [],
+     "receiving_face": [
+      "510",
+      "512"
+     ]
+    },
+    {
+     "end": 1,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 15.0,
+    "overlap": 584.999999999156,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-3fb71d8736d02ee0",
+   "faces": [
+    "520",
+    "522"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 300.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 14.999999999970289,
+    "overlap": 29.999999999967258,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-19c487fbb2f1570f",
+   "faces": [
+    "526",
+    "531"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 2100.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 15.000000000007276,
+    "overlap": 209.99999999999895,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-f302332377db138a",
+   "faces": [
+    "535",
+    "543"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 600.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "ALIGNED_FREE_END",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "RECEIVING_FACE_JUNCTION",
+     "caps": [],
+     "receiving_face": [
+      "477"
+     ]
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 15.0,
+    "overlap": 60.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-f730fff1aabc752f",
+   "faces": [
+    "539",
+    "540"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 750.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 15.000000000006064,
+    "overlap": 74.99999999999757,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-342bde9608da2d3b",
+   "faces": [
+    "544",
+    "581"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 400.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 14.999999999883585,
+    "overlap": 40.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-80a33b7c8b4d79f8",
+   "faces": [
+    "545",
+    "549"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 150.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 14.999999999862796,
+    "overlap": 14.999999999993765,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-f654fd9f5c1410ee",
+   "faces": [
+    "547",
+    "548"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 100.0,
+   "overlap_mm": 3300.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 10.0,
+    "overlap": 330.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-41322bac8a3779fc",
+   "faces": [
+    "551",
+    "513"
+   ],
+   "state": "WALL_BAND_AMBIGUOUS",
+   "width_mm": 450.0,
+   "overlap_mm": 550.0,
+   "ends": [],
+   "evidence": {
+    "parallel": true,
+    "separation": 45.0,
+    "overlap": 55.00000000000364,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": [],
+    "face_paired_on_both_sides": true
+   }
+  },
+  {
+   "band_id": "WB-beb2975a602c5542",
+   "faces": [
+    "552",
+    "555"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 350.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 14.999999999992724,
+    "overlap": 35.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-51e48c843bfcedb1",
+   "faces": [
+    "556",
+    "582"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 200.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "RECEIVING_FACE_JUNCTION",
+     "caps": [],
+     "receiving_face": [
+      "571",
+      "572"
+     ]
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 14.999999999883585,
+    "overlap": 19.999999999941792,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-66e51d06ba6fd222",
+   "faces": [
+    "570",
+    "579"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 1500.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 15.000000000116415,
+    "overlap": 150.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-57b25c708c8f70da",
+   "faces": [
+    "571",
+    "574"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 2000.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 15.0,
+    "overlap": 200.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-3524678e7daf68b9",
+   "faces": [
+    "583",
+    "584"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 2000.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "RECEIVING_FACE_JUNCTION",
+     "caps": [],
+     "receiving_face": [
+      "580",
+      "581"
+     ]
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 15.000000000001819,
+    "overlap": 200.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-b6a122630194f4e8",
+   "faces": [
+    "709",
+    "710"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 200.0,
+   "overlap_mm": 1531.4,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 20.000000000002093,
+    "overlap": 153.1370849898518,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  },
+  {
+   "band_id": "WB-fd8aa86916d2f6e7",
+   "faces": [
+    "815",
+    "816"
+   ],
+   "state": "WALL_BAND_ESTABLISHED",
+   "width_mm": 150.0,
+   "overlap_mm": 450.0,
+   "ends": [
+    {
+     "end": 0,
+     "kind": "CAPPED",
+     "caps": [],
+     "receiving_face": []
+    },
+    {
+     "end": 1,
+     "kind": "JUNCTION_OR_CONTINUATION",
+     "caps": [],
+     "receiving_face": []
+    }
+   ],
+   "evidence": {
+    "parallel": true,
+    "separation": 14.999999999998181,
+    "overlap": 45.0,
+    "mutual_nearest": true,
+    "labels_inside": 0,
+    "crossing_boundaries": [],
+    "arcs_in_strip": [],
+    "parallel_inside": [],
+    "self_dimensioned": []
+   }
+  }
+ ],
+ "counts": {
+  "NEW_K2": {
+   "WALL_BAND_ESTABLISHED": 33
+  },
+  "OLD_K1": {
+   "WALL_BAND_ESTABLISHED": 33,
+   "WALL_BAND_AMBIGUOUS": 2
+  }
+ },
+ "end_kinds": {
+  "NEW_K2": {
+   "CAPPED": 14,
+   "JUNCTION_OR_CONTINUATION": 38,
+   "RECEIVING_FACE_JUNCTION": 11,
+   "ALIGNED_FREE_END": 3
+  },
+  "OLD_K1": {
+   "CAPPED": 18,
+   "JUNCTION_OR_CONTINUATION": 38,
+   "RECEIVING_FACE_JUNCTION": 9,
+   "ALIGNED_FREE_END": 1
+  }
+ },
+ "cap_analysis": {
+  "2430": {
+   "handle": "2430",
+   "layer": "DIM",
+   "role": "DIMENSION_GRAPHICS",
+   "rule": "GR-13",
+   "geometry": [
+    109773.76,
+    15029.72,
+    109773.76,
+    15049.72
+   ],
+   "length_mm": 200.0,
+   "authority_grade": null,
+   "classification": "UNRESOLVED",
+   "faces_at_its_ends": [
+    {
+     "face": "471",
+     "in_established_band": null,
+     "collinear_fragments": [
+      "470"
+     ]
+    },
+    {
+     "face": "477",
+     "in_established_band": null,
+     "collinear_fragments": []
+    }
+   ],
+   "reason": "no ESTABLISHED wall band ends here, so the line corroborates nothing and no closure exists",
+   "pairing": {
+    "face_above": "477",
+    "face_above_span_x": [
+     109308.081744984,
+     109773.756120533
+    ],
+    "faces_below": {
+     "470": [
+      109308.0817449839,
+      109608.081744984
+     ],
+     "471": [
+      109608.081744984,
+      109773.756120533
+     ]
+    },
+    "separation_mm": 200.0,
+    "finding": "the lower face is drawn as two collinear fragments (H470 + H471) against one upper face (H477). WALL_BAND_POLICY_V1/V2 tests 'mutual nearest' over each face's FULL length: H477's nearest lower partner is H470 (a tie at 200 mm with H471, broken by source id), so H471 has no mutual partner; the H470 / H477 strip is crossed by the column outline 718 (STRUCTURAL_OBSTACLE), so that pair is no band either. No band => no aligned end => H2430 corroborates nothing.",
+    "column_in_strip": [
+     "718"
+    ],
+    "not_done_in_r8_11": "a fragment-aware pairing (mutual nearest over the OVERLAP; collinear face fragments as one face in the safety test) is generic, but it was identified AFTER seeing the Qortuba result; adopting it now would calibrate the frozen rule to H2430. It is engineering action E-R8.12-01 (synthetic tests first, then a blind re-run)."
+   },
+   "old_revision_counterpart": "H553 (WALL layer) caps the band at x = 109808.08 in the old revision: corroboration only (a different drawing; never transferred)",
+   "physical_role": {
+    "state": "RESOLVED: REAL_WALL_END",
+    "authority": [
+     "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1",
+     "source geometry: H2430 meets both face end points exactly (0.0 mm)"
+    ],
+    "generic_classification_unchanged": "UNRESOLVED",
+    "engine_representation": "NONE: no established band ends here (E-R8.12-01)"
+   }
+  },
+  "2431": {
+   "handle": "2431",
+   "layer": "DIM",
+   "role": "DIMENSION_GRAPHICS",
+   "rule": "GR-13",
+   "geometry": [
+    109893.45,
+    15030.64,
+    109893.45,
+    15049.72
+   ],
+   "length_mm": 190.8,
+   "authority_grade": null,
+   "classification": "WALL_END_CAP_CANDIDATE",
+   "band_id": "WB-b1fe3d69cf126ddb",
+   "faces": [
+    "2296",
+    "2297"
+   ],
+   "band_width_mm": 200.0,
+   "end_kind": "ALIGNED_FREE_END",
+   "gap_to_face_ends_mm": [
+    9.2,
+    0.49
+   ],
+   "shortfall_across_mm": 9.19,
+   "offset_along_mm": 0.49,
+   "closure": {
+    "closure_id": "TC-aea10821cffe20ff",
+    "release": "AUTHORISED_FOR_SHADOW",
+    "geometry": [
+     109893.4008515468,
+     15029.71961437815,
+     109893.4008515468,
+     15049.71961437814
+    ],
+    "physical_material": "NONE",
+    "reversible": true
+   },
+   "closure_geometry_is_face_end_points": true,
+   "old_revision_counterpart": "none drawn on DIM; the old revision's passage geometry differs",
+   "physical_role": {
+    "state": "RESOLVED: REAL_WALL_END",
+    "authority": [
+     "QORTUBA-NEW-HALL-LOBBY-OPEN-PASSAGE-OWNER-001@v1",
+     "source geometry: the H2296 / H2297 band end it sits across (9.2 mm short)"
+    ],
+    "generic_classification_unchanged": "WALL_END_CAP_CANDIDATE",
+    "engine_representation": "ZERO-MATERIAL CLOSURE (authorised for shadow, owner-reviewed)"
+   }
+  },
+  "1316": {
+   "handle": "1316",
+   "layer": "WALL",
+   "role": "TOPOLOGY_BOUNDARY",
+   "rule": "GR-05",
+   "geometry": [
+    110083.52,
+    14494.58,
+    110083.52,
+    14474.58
+   ],
+   "length_mm": 200.0,
+   "authority_grade": "CANDIDATE",
+   "classification": "NOT_WALL_CAP",
+   "glazing_ending_on_it": [
+    "1317",
+    "1318",
+    "1319",
+    "1320"
+   ],
+   "reason": "the line is the jamb of a glazed opening: glazing lines end on it; no wall band ends here (the glazing lies inside the wall strip, so the faces form no band)",
+   "old_revision_counterpart": "not compared (a window jamb line)"
+  }
+ },
+ "network_paired_face_corroboration": {
+  "NEW_K2": {
+   "NETWORK_BOUNDARY_CANDIDATE": 144,
+   "NETWORK_BOUNDARY_ESTABLISHED": 57
+  },
+  "OLD_K1": {
+   "NETWORK_BOUNDARY_CANDIDATE": 153,
+   "NETWORK_BOUNDARY_ESTABLISHED": 60
+  },
+  "NEW_K2_R8_10": {
+   "NETWORK_BOUNDARY_CANDIDATE": 197,
+   "NETWORK_BOUNDARY_ESTABLISHED": 4
+  }
+ }
+}

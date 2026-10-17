@@ -1,0 +1,100 @@
+{
+ "schema": "URBAN_OCR_INDEPENDENT_READINGS_V1",
+ "evidence": "research/urban_engine_m3_recovery/evidence/DETAIL_EVIDENCE.json",
+ "reader": "VISUAL_READING_BY_ASSISTANT_MODEL",
+ "status": "CHECK_ONLY - a model reading of the crops, not a person's confirmation; no record is promoted",
+ "method": "each record's crop of p.13 (rendered from the PDF at the evidence region) viewed by itself and in the context of its detail drawing; the notation transcribed as printed, without the OCR text",
+ "on": "2026-10-11",
+ "readings": {
+  "EV-0001": {
+   "text": "3Ø16",
+   "by": "VISUAL_READING_BY_ASSISTANT_MODEL",
+   "on": "2026-10-11",
+   "basis": "crop p13_EV-0001 + detail context"
+  },
+  "EV-0002": {
+   "text": "Ø8/15cm",
+   "by": "VISUAL_READING_BY_ASSISTANT_MODEL",
+   "on": "2026-10-11",
+   "basis": "crop p13_EV-0002 + detail context"
+  },
+  "EV-0003": {
+   "text": "3Ø16",
+   "by": "VISUAL_READING_BY_ASSISTANT_MODEL",
+   "on": "2026-10-11",
+   "basis": "crop p13_EV-0003 + detail context"
+  },
+  "EV-0004": {
+   "text": "3Ø16",
+   "by": "VISUAL_READING_BY_ASSISTANT_MODEL",
+   "on": "2026-10-11",
+   "basis": "crop p13_EV-0004 + detail context"
+  },
+  "EV-0005": {
+   "text": "3Ø16",
+   "by": "VISUAL_READING_BY_ASSISTANT_MODEL",
+   "on": "2026-10-11",
+   "basis": "crop p13_EV-0005 + detail context"
+  },
+  "EV-0006": {
+   "text": "3Ø14",
+   "by": "VISUAL_READING_BY_ASSISTANT_MODEL",
+   "on": "2026-10-11",
+   "basis": "crop p13_EV-0006 + detail context"
+  },
+  "EV-0007": {
+   "text": "Ø8/15cm",
+   "by": "VISUAL_READING_BY_ASSISTANT_MODEL",
+   "on": "2026-10-11",
+   "basis": "crop p13_EV-0007 + detail context"
+  },
+  "EV-0008": {
+   "text": "3Ø14",
+   "by": "VISUAL_READING_BY_ASSISTANT_MODEL",
+   "on": "2026-10-11",
+   "basis": "crop p13_EV-0008 + detail context"
+  },
+  "EV-0009": {
+   "text": "2Ø12/30cm",
+   "by": "VISUAL_READING_BY_ASSISTANT_MODEL",
+   "on": "2026-10-11",
+   "basis": "crop p13_EV-0009 + detail context"
+  },
+  "EV-0010": {
+   "text": "3Ø14",
+   "by": "VISUAL_READING_BY_ASSISTANT_MODEL",
+   "on": "2026-10-11",
+   "basis": "crop p13_EV-0010 + detail context"
+  },
+  "EV-0011": {
+   "text": "3Ø14",
+   "by": "VISUAL_READING_BY_ASSISTANT_MODEL",
+   "on": "2026-10-11",
+   "basis": "crop p13_EV-0011 + detail context"
+  },
+  "EV-0012": {
+   "text": "3Ø14",
+   "by": "VISUAL_READING_BY_ASSISTANT_MODEL",
+   "on": "2026-10-11",
+   "basis": "crop p13_EV-0012 + detail context"
+  },
+  "EV-0013": {
+   "text": "6Ø16",
+   "by": "VISUAL_READING_BY_ASSISTANT_MODEL",
+   "on": "2026-10-11",
+   "basis": "crop p13_EV-0013 + detail context"
+  },
+  "EV-0014": {
+   "text": "3Ø14",
+   "by": "VISUAL_READING_BY_ASSISTANT_MODEL",
+   "on": "2026-10-11",
+   "basis": "crop p13_EV-0014 + detail context"
+  },
+  "EV-0015": {
+   "text": "Ø8/15cm",
+   "by": "VISUAL_READING_BY_ASSISTANT_MODEL",
+   "on": "2026-10-11",
+   "basis": "crop p13_EV-0015 + detail context"
+  }
+ }
+}

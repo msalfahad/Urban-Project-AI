@@ -1,0 +1,264 @@
+{
+ "authority_policy": {
+  "applicability_authorities": [
+   "PROJECT_SOURCE",
+   "PROJECT_ENGINEER_CLAIM",
+   "ENGINEERING_DERIVED"
+  ],
+  "facet_states": [
+   "SOURCE_EXPLICIT",
+   "SOURCE_EXPLICIT_SHAPE_ONLY",
+   "PROJECT_PATTERN_ONLY",
+   "SOURCE_EXPECTED_NOT_LOCATED",
+   "NOT_ESTABLISHED",
+   "UNRESOLVED",
+   "BLOCKED_UNQUANTIFIED",
+   "CANDIDATE_ONLY",
+   "RETAINED_WHERE_SOURCE_ESTABLISHED",
+   "CONTEXT_RESTRICTED",
+   "BOUND_ONLY",
+   "RATE_COUNT_ONLY",
+   "CLASSIFIED_SIDE_SKIN_REINFORCEMENT",
+   "NOT_A_PROJECT_RULE",
+   "QA_ONLY",
+   "ENGINEERING_DERIVED_CONCENTRATED_REACTION"
+  ],
+  "never_promoted": [
+   "CLAUDE_ENGINEERING_ANALYSIS",
+   "CODE_OR_EXTERNAL"
+  ],
+  "provenance_classes": [
+   "PROJECT_SOURCE",
+   "PROJECT_ENGINEER_CLAIM",
+   "OWNER_AUTHORITY_DECISION",
+   "ENGINEERING_DERIVED",
+   "CLAUDE_ENGINEERING_ANALYSIS",
+   "CODE_OR_EXTERNAL"
+  ],
+  "quantity_authorities": [
+   "PROJECT_SOURCE",
+   "PROJECT_ENGINEER_CLAIM"
+  ],
+  "rules": [
+   "only project source or a project-engineer claim carries a quantity",
+   "engineering-derived logic decides applicability, never a quantity",
+   "analysis and code values are never promoted; no confidence value travels with a ruling",
+   "a facet erratum carries 0 kg; kg changes are delta_correction errata",
+   "a loaded span keeps, per length basis, only the details without a 'without concentrated load' clause"
+  ]
+ },
+ "baseline_head": "cbcbb36",
+ "compliance": {
+  "by_result": {
+   "COMPLIANT": 15,
+   "KG_ERRATUM": 2,
+   "LINEAGE_NOTE": 1,
+   "STATE_ERRATUM": 6
+  },
+  "checks": 24
+ },
+ "decisions": [
+  "AD-1",
+  "AD-2",
+  "AD-3",
+  "AD-4",
+  "AD-5",
+  "AD-6",
+  "AD-7",
+  "AD-8",
+  "AD-9"
+ ],
+ "details": {
+  "boxed": {
+   "boxed_rows": 26,
+   "fn_blank": 4,
+   "with_shape": 20
+  },
+  "cb": {
+   "mid_top_released": 9
+  },
+  "end_bends": {
+   "bends": 11,
+   "cb_end_legs": 14
+  },
+  "follow_arch": {
+   "bounds": {
+    "0.3": 7,
+    "1.0": 15,
+    "None": 7
+   },
+   "follow_arch_spans": 29
+  },
+  "gb_lt_2_5m_spans": 16,
+  "hooks": {
+   "s5_hooks": 124,
+   "s61_hooks": 90
+  },
+  "note9": {
+   "rule": "DEVELOPMENT_STARTER_70D_40D",
+   "scope": "development / tie length of starter bars only"
+  },
+  "side_bars": {
+   "classified": 7,
+   "remarks_tokens": 23
+  }
+ },
+ "engine_commit": "cab778a+code:2dc78fc0ff285ba2+delta:42f0849057343fb6+ad1:1ec11071ce551b67",
+ "engineer_claims_on_record": [
+  {
+   "authorises_assumptions": false,
+   "claim_id": "PEC-CLAIM-2026-10-08-01",
+   "effect": "workflow only: a component not found is SOURCE_EXPECTED_NOT_LOCATED and the issued set is exhausted again; only explicit source conflicts go back to the engineer",
+   "path": "research/source_recovery_delta/01_ENGINEER_PROJECT_CLAIM.json"
+  }
+ ],
+ "flags": {
+  "code_value_used_for_kg": false,
+  "confidence_carried": false,
+  "engineer_claim_created": false,
+  "frozen_outputs_changed": false,
+  "new_steel_released": false,
+  "pre_s7_started": false,
+  "q2_analysis_promoted": false,
+  "references_read": []
+ },
+ "frozen": {
+  "S4": {
+   "engine_commit_stamp": "e3633af+code:0d11810b780ae8f8",
+   "files_checked": 25,
+   "manifest": "research/alsenan_footing_rebar_s4/S4_FREEZE_MANIFEST.json",
+   "manifest_sha256": "0d63015a19953f295e331aab2d7e49e8facb277e1465fbdd1b6b5a40d1a2362b",
+   "round": "S4"
+  },
+  "S4.1": {
+   "engine_commit_stamp": "e3633af+code:0d11810b780ae8f8+delta:06346dac56faa12d",
+   "files_checked": 13,
+   "manifest": "research/alsenan_footing_rebar_s4_1/S4_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "468e90d9657548a7e9124b67ce0a55b63560f030e2f98b414c46ad4e970e030b",
+   "round": "S4.1"
+  },
+  "S5": {
+   "engine_commit_stamp": "cab778a+code:2dc78fc0ff285ba2",
+   "files_checked": 31,
+   "manifest": "research/alsenan_ground_system_rebar_s5/S5_FREEZE_MANIFEST.json",
+   "manifest_sha256": "ff488a92f3eaff80e84fca2d7e0b8e36cc40ddb84232cd315acfd1ce50b4b3d8",
+   "round": "S5"
+  },
+  "S5.1": {
+   "engine_commit_stamp": "cab778a+code:2dc78fc0ff285ba2+delta:42f0849057343fb6",
+   "files_checked": 17,
+   "manifest": "research/alsenan_ground_system_rebar_s5_1/S5_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "595d64b1bf5c8e0ef7b5bebfaf3ea4063dd884356390c84b4c8aac77cddb5a88",
+   "round": "S5.1"
+  },
+  "S6": {
+   "engine_commit_stamp": "d39f5f6+code:add76dd5f5e9c59a",
+   "files_checked": 33,
+   "manifest": "research/alsenan_superstructure_beam_rebar_s6/S6_FREEZE_MANIFEST.json",
+   "manifest_sha256": "c29a28bc66334d5294d71b0d5feb0dd5eae36baf91a04ef6e0105b2ca43be63e",
+   "round": "S6"
+  },
+  "S6.1": {
+   "engine_commit_stamp": "d39f5f6+code:add76dd5f5e9c59a+delta:d7ce0d2d09810083",
+   "files_checked": 18,
+   "manifest": "research/alsenan_superstructure_beam_rebar_s6_1/S6_1_FREEZE_MANIFEST.json",
+   "manifest_sha256": "c4744888ed2207ebff47c0a895e706d7e381b5f905b694eb92e3d1cdc411c0b2",
+   "round": "S6.1"
+  }
+ },
+ "gb_load": {
+  "candidates_changed": 19,
+  "effects": {
+   "CANDIDATES_NARROWED": 15,
+   "KG_RETRACTED": 2,
+   "NONE": 40,
+   "STATE_ONLY": 2
+  },
+  "engineering_derived_reaction": 28,
+  "no_detail_case_after": [
+   "GSO-109-7CB-1",
+   "GSO-13E-7D6-1",
+   "GSO-13F-7D3-1",
+   "GSO-140-7D7-1",
+   "GSO-142-7D8-1",
+   "GSO-145-7CA-2",
+   "GSO-15D-7C8-1",
+   "GSO-15E-15F-1",
+   "GSO-175-7DE-1",
+   "GSO-176-7E6-1",
+   "GSO-177-7CD-1",
+   "GSO-17D-7E4-1",
+   "GSO-17E-17F-1",
+   "GSO-184-7CF-1",
+   "GSO-184-7CF-3",
+   "GSO-7DC-7DD-1",
+   "GSO-7E1-7E2-1",
+   "GSO-7E7-7E8-2"
+  ],
+  "spans": 59
+ },
+ "kg_corrections": {
+  "conservation_s5": {
+   "all_pass": true,
+   "checks": {
+    "no_positive_correction": true,
+    "original_plus_correction_is_corrected": true,
+    "retained_plus_removed_is_original": true
+   },
+   "corrected_known": 1410.6316786790123,
+   "correction_kg": -47.366667,
+   "original_known": 1457.9983456790123
+  },
+  "conservation_s5_1": {
+   "all_pass": true,
+   "checks": {
+    "no_positive_correction": true,
+    "original_plus_correction_is_corrected": true,
+    "retained_plus_removed_is_original": true
+   },
+   "corrected_known": 1503.4869873209882,
+   "correction_kg": -47.366667,
+   "original_known": 1550.8536543209882
+  },
+  "kg": 47.366667,
+  "records": 6,
+  "s5_1_corrected_kg_before_d1_1": 1503.4869873209882,
+  "s5_1_known_kg_d1": 1550.8536543209882,
+  "s5_corrected_kg": 1410.6316786790123,
+  "s5_known_kg": 1457.9983456790123,
+  "spans": [
+   "GSO-142-7D8-1",
+   "GSO-15D-7C8-1"
+  ]
+ },
+ "policy": "AUTHORITY_DECISIONS_V1",
+ "q2_prior_analysis": {
+  "CONFIDENCE_CARRIED": false,
+  "ENGINEER_CONFIRMATION": "NONE",
+  "PROMOTED_TO": null,
+  "PROVENANCE": "CLAUDE_ENGINEERING_ANALYSIS",
+  "RECORD_ID": "Q2-PRIOR-ANALYSIS",
+  "STATEMENT": "the earlier Q2 answers were the assistant's own engineering analysis, not answers from the project engineer or consultant; no engineer confirmation exists for those items"
+ },
+ "recorded": "2026-10-08",
+ "rejected_analysis_values": 14,
+ "round": "AD1",
+ "state_errata": {
+  "by_decision": {
+   "AD-1": 44,
+   "AD-3": 28,
+   "AD-6": 28,
+   "AD-9": 7
+  },
+  "by_facet": {
+   "CONCENTRATED_LOAD_STATE": 28,
+   "EXISTENCE": 4,
+   "HOOKS": 20,
+   "LEG_LENGTH": 14,
+   "LEG_SHAPE": 14,
+   "MEANING_OF_3_PLUS_N": 20,
+   "SIDE_BAR_ROLE": 7
+  },
+  "total": 107
+ }
+}

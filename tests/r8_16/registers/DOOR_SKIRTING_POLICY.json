@@ -1,0 +1,130 @@
+{
+ "SCHEMA": "URBAN_R8_16_DOOR_SKIRTING_POLICY_V1",
+ "rule": {
+  "path": "STOP_AT_OPENING",
+  "across_opening": "NONE",
+  "jamb_skirting": "NONE"
+ },
+ "method_parameter": "STOP_AT_OPENING_NO_JAMB",
+ "door_jambs": [
+  {
+   "opening": "I1028",
+   "side": null,
+   "length_lm": 0.15,
+   "skirting_lm": 0.0,
+   "plaster_surface": "YES (independent)"
+  },
+  {
+   "opening": "I1028",
+   "side": null,
+   "length_lm": 0.15,
+   "skirting_lm": 0.0,
+   "plaster_surface": "YES (independent)"
+  },
+  {
+   "opening": "I1443",
+   "side": null,
+   "length_lm": 0.15,
+   "skirting_lm": 0.0,
+   "plaster_surface": "YES (independent)"
+  },
+  {
+   "opening": "I1443",
+   "side": null,
+   "length_lm": 0.15,
+   "skirting_lm": 0.0,
+   "plaster_surface": "YES (independent)"
+  },
+  {
+   "opening": "I1471",
+   "side": null,
+   "length_lm": 0.15,
+   "skirting_lm": 0.0,
+   "plaster_surface": "YES (independent)"
+  },
+  {
+   "opening": "I1471",
+   "side": null,
+   "length_lm": 0.15,
+   "skirting_lm": 0.0,
+   "plaster_surface": "YES (independent)"
+  },
+  {
+   "opening": "I1561",
+   "side": null,
+   "length_lm": 0.15,
+   "skirting_lm": 0.0,
+   "plaster_surface": "YES (independent)"
+  },
+  {
+   "opening": "I1561",
+   "side": null,
+   "length_lm": 0.15,
+   "skirting_lm": 0.0,
+   "plaster_surface": "YES (independent)"
+  },
+  {
+   "opening": "I1988",
+   "side": null,
+   "length_lm": 0.15,
+   "skirting_lm": 0.0,
+   "plaster_surface": "YES (independent)"
+  },
+  {
+   "opening": "I1988",
+   "side": null,
+   "length_lm": 0.15,
+   "skirting_lm": 0.0,
+   "plaster_surface": "YES (independent)"
+  },
+  {
+   "opening": "I2044",
+   "side": null,
+   "length_lm": 0.15,
+   "skirting_lm": 0.0,
+   "plaster_surface": "YES (independent)"
+  },
+  {
+   "opening": "I2044",
+   "side": null,
+   "length_lm": 0.15,
+   "skirting_lm": 0.0,
+   "plaster_surface": "YES (independent)"
+  },
+  {
+   "opening": "I677",
+   "side": null,
+   "length_lm": 0.15,
+   "skirting_lm": 0.0,
+   "plaster_surface": "YES (independent)"
+  },
+  {
+   "opening": "I677",
+   "side": null,
+   "length_lm": 0.15,
+   "skirting_lm": 0.0,
+   "plaster_surface": "YES (independent)"
+  },
+  {
+   "opening": "I841",
+   "side": null,
+   "length_lm": 0.15,
+   "skirting_lm": 0.0,
+   "plaster_surface": "YES (independent)"
+  },
+  {
+   "opening": "I841",
+   "side": null,
+   "length_lm": 0.15,
+   "skirting_lm": 0.0,
+   "plaster_surface": "YES (independent)"
+  }
+ ],
+ "excluded_across_doors_lm": 9.4,
+ "never_measured": [
+  "door swing",
+  "door frame",
+  "closure line"
+ ],
+ "jamb_return_inferred": "GONE: replaced by explicit owner authority (URBAN-SKIRTING-OPENING-METHOD@v1)"
+}

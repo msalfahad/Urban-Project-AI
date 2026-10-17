@@ -1,0 +1,848 @@
+{
+ "freeze": "2ded82aaba4437513860b56ff8987e4713a5be05",
+ "door_closure_policy": {
+  "id": "DOOR_OPENING_CLOSURE_POLICY_V2",
+  "digest": "23142e50a6f92ac4e540e973ba580d067e2983f6bb15b72d83c98a5666e7a790"
+ },
+ "wall_contact_path_policy": {
+  "id": "WALL_CONTACT_PATH_POLICY_V3",
+  "digest": "d2e6263a794acbd406b9903261640a6b8a786dff4f23607d6d3c1ebccfebbc99"
+ },
+ "blind": {
+  "expected_value_given": false,
+  "historical_totals_used": false,
+  "r8_15_values_read": false
+ },
+ "SCHEMA": "URBAN_R8_16_SKIRTING_BLIND_RESULT_V1",
+ "run_input_digest": "ca9909c47cf135da3f784676f0b3958d959fe8019eccfd54da2df763ec592d11",
+ "method": "QORTUBA-NEW-SKIRTING-METHOD@v2",
+ "windows_fact_binding": "APPLIES",
+ "windows": [
+  {
+   "site": "SITE-5f1762f1a93b91ca",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "sources": [
+    "1319",
+    "448"
+   ],
+   "length_mm": 1205.4,
+   "hosted_on_wall_face_line": true,
+   "floor_contact": {
+    "state": "ABOVE_FLOOR",
+    "sill_m": 1.0,
+    "authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v1"
+   }
+  },
+  {
+   "site": "SITE-77a2130eb275604c",
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "sources": [
+    "1518",
+    "510"
+   ],
+   "length_mm": 2346.4,
+   "hosted_on_wall_face_line": true,
+   "floor_contact": {
+    "state": "ABOVE_FLOOR",
+    "sill_m": 1.0,
+    "authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v1"
+   }
+  },
+  {
+   "site": "SITE-77a2130eb275604c",
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "sources": [
+    "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F2",
+    "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F1",
+    "542"
+   ],
+   "length_mm": 2750.0,
+   "hosted_on_wall_face_line": false,
+   "floor_contact": {
+    "state": "FLOOR_CONTACT_UNPROVEN",
+    "authority": null
+   }
+  },
+  {
+   "site": "SITE-a6405850100155ac",
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "sources": [
+    "1026",
+    "457"
+   ],
+   "length_mm": 1697.5,
+   "hosted_on_wall_face_line": true,
+   "floor_contact": {
+    "state": "ABOVE_FLOOR",
+    "sill_m": 1.0,
+    "authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v1"
+   }
+  },
+  {
+   "site": "SITE-a6405850100155ac",
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "sources": [
+    "1325",
+    "512"
+   ],
+   "length_mm": 2500.0,
+   "hosted_on_wall_face_line": true,
+   "floor_contact": {
+    "state": "ABOVE_FLOOR",
+    "sill_m": 1.0,
+    "authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v1"
+   }
+  },
+  {
+   "site": "SITE-daca396d6d730e60",
+   "zones": [
+    "BED.ROOM"
+   ],
+   "sources": [
+    "1020",
+    "469"
+   ],
+   "length_mm": 1342.3,
+   "hosted_on_wall_face_line": true,
+   "floor_contact": {
+    "state": "ABOVE_FLOOR",
+    "sill_m": 1.0,
+    "authority": "QORTUBA-NEW-NORMAL-WINDOWS-ABOVE-FLOOR-OWNER-001@v1"
+   }
+  }
+ ],
+ "per_site": {
+  "SITE-5f1762f1a93b91ca": {
+   "zones": [
+    "BED.ROOM"
+   ],
+   "state": "COMPUTED",
+   "payable_lm": 22.9,
+   "components_lm": {
+    "AUTHORISED_OBSTACLE_FACE": 5.0,
+    "COLUMN_FACE": 0.8,
+    "REAL_WALL_FACE": 15.894641,
+    "WINDOW_ABOVE_FLOOR": 1.205359
+   },
+   "excluded_lm": {
+    "DOOR_PRESENT": 1.0
+   },
+   "withheld": [],
+   "continuity_under_windows": [
+    {
+     "span": "SKIRTING_CONTINUITY_UNDER_WINDOW",
+     "length": 120.53585553489393,
+     "sources": [
+      "QORTUBA_REV_NEW|H1319||SEGMENT|0",
+      "QORTUBA_REV_NEW|H448||SEGMENT|0"
+     ],
+     "material_authority": "real wall below the window (floor contact)",
+     "length_lm": 1.205359
+    }
+   ],
+   "jambs": []
+  },
+  "SITE-77a2130eb275604c": {
+   "zones": [
+    "HALL",
+    "whgm"
+   ],
+   "state": "COMPUTED_WITH_WITHHELD_SPANS",
+   "payable_lm": 26.157105,
+   "components_lm": {
+    "COLUMN_FACE": 0.65,
+    "PHYSICAL_OPENING_JAMB": 0.4,
+    "REAL_WALL_FACE": 22.760661,
+    "WINDOW_ABOVE_FLOOR": 2.346444
+   },
+   "excluded_lm": {
+    "DOOR_PRESENT": 5.6
+   },
+   "withheld": [
+    {
+     "class": "FLOOR_CONTACT_UNPROVEN",
+     "length": 275.0,
+     "sources": [
+      "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F2",
+      "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F1",
+      "QORTUBA_REV_NEW|H542||SEGMENT|0"
+     ],
+     "length_lm": 2.75
+    }
+   ],
+   "continuity_under_windows": [
+    {
+     "span": "SKIRTING_CONTINUITY_UNDER_WINDOW",
+     "length": 234.64444247249048,
+     "sources": [
+      "QORTUBA_REV_NEW|H1518||SEGMENT|0",
+      "QORTUBA_REV_NEW|H510||SEGMENT|0"
+     ],
+     "material_authority": "real wall below the window (floor contact)",
+     "length_lm": 2.346444
+    }
+   ],
+   "jambs": [
+    {
+     "opening": "OP-997f14d12b8e9bc1",
+     "kind": "DOORLESS",
+     "side": "LEFT",
+     "source": "BANDEND|WB-0644b40d07c861d6|1",
+     "end_kind": "ALIGNED_FREE_END",
+     "physical": true,
+     "length_lm": 0.2,
+     "counted_lm": 0.2,
+     "why": null
+    },
+    {
+     "opening": "OP-997f14d12b8e9bc1",
+     "kind": "DOORLESS",
+     "side": "RIGHT",
+     "source": "BANDEND|WB-6c882c7cafa843e5|0",
+     "end_kind": "ALIGNED_FREE_END",
+     "physical": true,
+     "length_lm": 0.2,
+     "counted_lm": 0.2,
+     "why": null
+    }
+   ]
+  },
+  "SITE-a6405850100155ac": {
+   "zones": [
+    "DRESS",
+    "M.B.ROOM"
+   ],
+   "state": "COMPUTED",
+   "payable_lm": 29.35,
+   "components_lm": {
+    "COLUMN_FACE": 1.2,
+    "PHYSICAL_OPENING_JAMB": 0.15,
+    "REAL_WALL_FACE": 23.802485,
+    "WINDOW_ABOVE_FLOOR": 4.197515
+   },
+   "excluded_lm": {
+    "DOORLESS_JAMB_NOT_COUNTED": 0.15,
+    "DOOR_PRESENT": 1.8
+   },
+   "withheld": [],
+   "continuity_under_windows": [
+    {
+     "span": "SKIRTING_CONTINUITY_UNDER_WINDOW",
+     "length": 169.75153201649664,
+     "sources": [
+      "QORTUBA_REV_NEW|H1026||SEGMENT|0",
+      "QORTUBA_REV_NEW|H457||SEGMENT|0"
+     ],
+     "material_authority": "real wall below the window (floor contact)",
+     "length_lm": 1.697515
+    },
+    {
+     "span": "SKIRTING_CONTINUITY_UNDER_WINDOW",
+     "length": 250.0,
+     "sources": [
+      "QORTUBA_REV_NEW|H1325||SEGMENT|0",
+      "QORTUBA_REV_NEW|H512||SEGMENT|0"
+     ],
+     "material_authority": "real wall below the window (floor contact)",
+     "length_lm": 2.5
+    }
+   ],
+   "jambs": [
+    {
+     "opening": "OP-9e0fd219ca5cd391",
+     "kind": "DOORLESS",
+     "side": "LEFT",
+     "source": "BANDEND|WB-8549cc78e5a3af40|0",
+     "end_kind": "CAPPED",
+     "physical": true,
+     "length_lm": 0.15,
+     "counted_lm": 0.15,
+     "why": null
+    },
+    {
+     "opening": "OP-9e0fd219ca5cd391",
+     "kind": "DOORLESS",
+     "side": "RIGHT",
+     "source": "QORTUBA_REV_NEW|H518||SEGMENT|0",
+     "end_kind": "CONTINUOUS_WALL_FACE",
+     "physical": false,
+     "length_lm": 0.15,
+     "counted_lm": 0.0,
+     "why": "not physical"
+    }
+   ]
+  },
+  "SITE-daca396d6d730e60": {
+   "zones": [
+    "BED.ROOM"
+   ],
+   "state": "COMPUTED",
+   "payable_lm": 15.579714,
+   "components_lm": {
+    "COLUMN_FACE": 0.8,
+    "REAL_WALL_FACE": 13.437427,
+    "WINDOW_ABOVE_FLOOR": 1.342287
+   },
+   "excluded_lm": {
+    "DOOR_PRESENT": 1.0
+   },
+   "withheld": [],
+   "continuity_under_windows": [
+    {
+     "span": "SKIRTING_CONTINUITY_UNDER_WINDOW",
+     "length": 134.22870345105184,
+     "sources": [
+      "QORTUBA_REV_NEW|H1020||SEGMENT|0",
+      "QORTUBA_REV_NEW|H469||SEGMENT|0"
+     ],
+     "material_authority": "real wall below the window (floor contact)",
+     "length_lm": 1.342287
+    }
+   ],
+   "jambs": []
+  },
+  "SITE-1c4abf65f9b5db1e": {
+   "zones": [
+    "BATH"
+   ],
+   "state": "NO_SKIRTING_FULL_WALL_TILE",
+   "payable_lm": 0.0,
+   "class": "WET_SERVICE_ROOM - full wall tile (no skirting: owner fact + US-02)"
+  },
+  "SITE-8c1c7563d5252c50": {
+   "zones": [
+    "PAINTRY"
+   ],
+   "state": "NO_SKIRTING_FULL_WALL_TILE",
+   "payable_lm": 0.0,
+   "class": "SERVICE_ROOM - full wall tile (no skirting: owner fact + US-02)"
+  },
+  "SITE-a2b19efc492a6d0b": {
+   "zones": [
+    "BATH"
+   ],
+   "state": "NO_SKIRTING_FULL_WALL_TILE",
+   "payable_lm": 0.0,
+   "class": "WET_SERVICE_ROOM - full wall tile (no skirting: owner fact + US-02)"
+  },
+  "SITE-fe8ed5548fb4310e": {
+   "zones": [
+    "BATH"
+   ],
+   "state": "NO_SKIRTING_FULL_WALL_TILE",
+   "payable_lm": 0.0,
+   "class": "WET_SERVICE_ROOM - full wall tile (no skirting: owner fact + US-02)"
+  }
+ },
+ "PAYABLE_LM": 93.98682,
+ "components_lm": {
+  "REAL_WALL_FACE": 75.895214,
+  "COLUMN_FACE": 3.45,
+  "AUTHORISED_OBSTACLE_FACE": 5.0,
+  "WINDOW_ABOVE_FLOOR": 9.091605,
+  "PHYSICAL_OPENING_JAMB": 0.55
+ },
+ "excluded_lm": {
+  "DOOR_PRESENT": 9.4,
+  "TOPOLOGY_CLOSURE": 0.0,
+  "FULL_HEIGHT_GLAZED_OPENING": 0.0,
+  "DOOR_JAMB": 0.0,
+  "DOORLESS_JAMB_NOT_COUNTED": 0.15
+ },
+ "withheld": [
+  {
+   "class": "FLOOR_CONTACT_UNPROVEN",
+   "length": 275.0,
+   "sources": [
+    "CLOSURE|GLAZED|QORTUBA_REV_NEW|H533||SEGMENT|0|F2",
+    "CLOSURE|GLAZED|QORTUBA_REV_NEW|H542||SEGMENT|0|F1",
+    "QORTUBA_REV_NEW|H542||SEGMENT|0"
+   ],
+   "length_lm": 2.75,
+   "site": "SITE-77a2130eb275604c"
+  }
+ ],
+ "withheld_lm": 2.75,
+ "state": "COMPUTED_WITH_WITHHELD_SPANS",
+ "jamb_records": [
+  {
+   "opening": "OP-0165f08fad9e3b42",
+   "kind": "DOORLESS",
+   "segment": [
+    [
+     110373.0817,
+     14649.7196
+    ],
+    [
+     110383.0817,
+     14649.7196
+    ]
+   ],
+   "length": 10.0,
+   "side": "LEFT",
+   "source": "BANDEND|WB-2516d4915f702ebd|0",
+   "end_kind": "CAPPED",
+   "physical": true
+  },
+  {
+   "opening": "OP-0165f08fad9e3b42",
+   "kind": "DOORLESS",
+   "segment": [
+    [
+     110383.0817,
+     14529.7196
+    ],
+    [
+     110373.0817,
+     14529.7196
+    ]
+   ],
+   "length": 10.0,
+   "side": "RIGHT",
+   "source": "QORTUBA_REV_NEW|H489||SEGMENT|0",
+   "end_kind": "CONTINUOUS_WALL_FACE",
+   "physical": false,
+   "continuous_wall_face": true
+  },
+  {
+   "opening": "OP-35e4f04842d93fd7",
+   "kind": "DOORLESS",
+   "segment": [
+    [
+     110373.0817,
+     14979.7196
+    ],
+    [
+     110383.0817,
+     14979.7196
+    ]
+   ],
+   "length": 10.0,
+   "side": "LEFT",
+   "source": "BANDEND|WB-2516d4915f702ebd|1",
+   "end_kind": "CAPPED",
+   "physical": true
+  },
+  {
+   "opening": "OP-35e4f04842d93fd7",
+   "kind": "DOORLESS",
+   "segment": [
+    [
+     110383.0817,
+     15099.7196
+    ],
+    [
+     110373.0817,
+     15099.7196
+    ]
+   ],
+   "length": 10.0,
+   "side": "RIGHT",
+   "source": "QORTUBA_REV_NEW|H573||SEGMENT|0",
+   "end_kind": "CONTINUOUS_WALL_FACE",
+   "physical": false,
+   "continuous_wall_face": true
+  },
+  {
+   "opening": "OP-997f14d12b8e9bc1",
+   "kind": "DOORLESS",
+   "segment": [
+    [
+     109773.7561,
+     15029.7196
+    ],
+    [
+     109773.7561,
+     15049.7196
+    ]
+   ],
+   "length": 19.999999999989086,
+   "side": "LEFT",
+   "source": "BANDEND|WB-0644b40d07c861d6|1",
+   "end_kind": "ALIGNED_FREE_END",
+   "physical": true
+  },
+  {
+   "opening": "OP-997f14d12b8e9bc1",
+   "kind": "DOORLESS",
+   "segment": [
+    [
+     109893.4009,
+     15049.7196
+    ],
+    [
+     109893.4009,
+     15029.7196
+    ]
+   ],
+   "length": 19.999999999989086,
+   "side": "RIGHT",
+   "source": "BANDEND|WB-6c882c7cafa843e5|0",
+   "end_kind": "ALIGNED_FREE_END",
+   "physical": true
+  },
+  {
+   "opening": "OP-9e0fd219ca5cd391",
+   "kind": "DOORLESS",
+   "segment": [
+    [
+     109858.0817,
+     15709.7196
+    ],
+    [
+     109873.0817,
+     15709.7196
+    ]
+   ],
+   "length": 15.000000000101863,
+   "side": "LEFT",
+   "source": "BANDEND|WB-8549cc78e5a3af40|0",
+   "end_kind": "CAPPED",
+   "physical": true
+  },
+  {
+   "opening": "OP-9e0fd219ca5cd391",
+   "kind": "DOORLESS",
+   "segment": [
+    [
+     109873.0817,
+     15589.7196
+    ],
+    [
+     109858.0817,
+     15589.7196
+    ]
+   ],
+   "length": 15.000000000101863,
+   "side": "RIGHT",
+   "source": "QORTUBA_REV_NEW|H518||SEGMENT|0",
+   "end_kind": "CONTINUOUS_WALL_FACE",
+   "physical": false,
+   "continuous_wall_face": true
+  },
+  {
+   "opening": "OP-a136ccb3608d1bff",
+   "kind": "DOORLESS",
+   "segment": [
+    [
+     110523.0817,
+     14989.7196
+    ],
+    [
+     110538.0817,
+     14989.7196
+    ]
+   ],
+   "length": 14.999999999912689,
+   "side": "LEFT",
+   "source": "BANDEND|WB-8478ffb53dccd5c4|1",
+   "end_kind": "CAPPED",
+   "physical": true
+  },
+  {
+   "opening": "OP-a136ccb3608d1bff",
+   "kind": "DOORLESS",
+   "segment": [
+    [
+     110538.0817,
+     15079.7196
+    ],
+    [
+     110523.0817,
+     15079.7196
+    ]
+   ],
+   "length": 14.999999999912689,
+   "side": "RIGHT",
+   "source": "BANDEND|WB-12ea196dd7f4dcf0|0",
+   "end_kind": "CAPPED",
+   "physical": true
+  },
+  {
+   "opening": "I1028",
+   "kind": "DOOR",
+   "segment": [
+    [
+     110388.0817,
+     15114.7196
+    ],
+    [
+     110388.0817,
+     15099.7196
+    ]
+   ],
+   "length": 14.999999999881766,
+   "physical": true,
+   "source": "door strip reveal side"
+  },
+  {
+   "opening": "I1028",
+   "kind": "DOOR",
+   "segment": [
+    [
+     110488.0817,
+     15114.7196
+    ],
+    [
+     110488.0817,
+     15099.7196
+    ]
+   ],
+   "length": 15.000000002024535,
+   "physical": true,
+   "source": "door strip reveal side"
+  },
+  {
+   "opening": "I1443",
+   "kind": "DOOR",
+   "segment": [
+    [
+     109568.0817,
+     15699.7196
+    ],
+    [
+     109583.0817,
+     15699.7196
+    ]
+   ],
+   "length": 14.999999998239218,
+   "physical": true,
+   "source": "door strip reveal side"
+  },
+  {
+   "opening": "I1443",
+   "kind": "DOOR",
+   "segment": [
+    [
+     109568.0817,
+     15779.7196
+    ],
+    [
+     109583.0817,
+     15779.7196
+    ]
+   ],
+   "length": 14.999999999956344,
+   "physical": true,
+   "source": "door strip reveal side"
+  },
+  {
+   "opening": "I1471",
+   "kind": "DOOR",
+   "segment": [
+    [
+     109678.0817,
+     15589.7196
+    ],
+    [
+     109678.0817,
+     15574.7196
+    ]
+   ],
+   "length": 14.999999999881766,
+   "physical": true,
+   "source": "door strip reveal side"
+  },
+  {
+   "opening": "I1471",
+   "kind": "DOOR",
+   "segment": [
+    [
+     109778.0817,
+     15589.7196
+    ],
+    [
+     109778.0817,
+     15574.7196
+    ]
+   ],
+   "length": 15.000000002024535,
+   "physical": true,
+   "source": "door strip reveal side"
+  },
+  {
+   "opening": "I1561",
+   "kind": "DOOR",
+   "segment": [
+    [
+     109523.0817,
+     15484.7196
+    ],
+    [
+     109538.0817,
+     15484.7196
+    ]
+   ],
+   "length": 14.999999998239218,
+   "physical": true,
+   "source": "door strip reveal side"
+  },
+  {
+   "opening": "I1561",
+   "kind": "DOOR",
+   "segment": [
+    [
+     109523.0817,
+     15564.7196
+    ],
+    [
+     109538.0817,
+     15564.7196
+    ]
+   ],
+   "length": 14.999999999956344,
+   "physical": true,
+   "source": "door strip reveal side"
+  },
+  {
+   "opening": "I1988",
+   "kind": "DOOR",
+   "segment": [
+    [
+     109783.0817,
+     14844.7196
+    ],
+    [
+     109783.0817,
+     14859.7196
+    ]
+   ],
+   "length": 14.999999999881766,
+   "physical": true,
+   "source": "door strip reveal side"
+  },
+  {
+   "opening": "I1988",
+   "kind": "DOOR",
+   "segment": [
+    [
+     109683.0817,
+     14844.7196
+    ],
+    [
+     109683.0817,
+     14859.7196
+    ]
+   ],
+   "length": 15.000000002024535,
+   "physical": true,
+   "source": "door strip reveal side"
+  },
+  {
+   "opening": "I2044",
+   "kind": "DOOR",
+   "segment": [
+    [
+     109608.0817,
+     14869.7196
+    ],
+    [
+     109623.0817,
+     14869.7196
+    ]
+   ],
+   "length": 14.999999998239218,
+   "physical": true,
+   "source": "door strip reveal side"
+  },
+  {
+   "opening": "I2044",
+   "kind": "DOOR",
+   "segment": [
+    [
+     109608.0817,
+     14949.7196
+    ],
+    [
+     109623.0817,
+     14949.7196
+    ]
+   ],
+   "length": 14.999999999956344,
+   "physical": true,
+   "source": "door strip reveal side"
+  },
+  {
+   "opening": "I677",
+   "kind": "DOOR",
+   "segment": [
+    [
+     110358.0817,
+     15114.7196
+    ],
+    [
+     110358.0817,
+     15099.7196
+    ]
+   ],
+   "length": 14.999999999881766,
+   "physical": true,
+   "source": "door strip reveal side"
+  },
+  {
+   "opening": "I677",
+   "kind": "DOOR",
+   "segment": [
+    [
+     110258.0817,
+     15114.7196
+    ],
+    [
+     110258.0817,
+     15099.7196
+    ]
+   ],
+   "length": 14.999999999994543,
+   "physical": true,
+   "source": "door strip reveal side"
+  },
+  {
+   "opening": "I841",
+   "kind": "DOOR",
+   "segment": [
+    [
+     109818.0817,
+     14894.7196
+    ],
+    [
+     109818.0817,
+     14909.7196
+    ]
+   ],
+   "length": 14.999999999883585,
+   "physical": true,
+   "source": "door strip reveal side"
+  },
+  {
+   "opening": "I841",
+   "kind": "DOOR",
+   "segment": [
+    [
+     109918.0817,
+     14894.7196
+    ],
+    [
+     109918.0817,
+     14909.7196
+    ]
+   ],
+   "length": 15.000000002026354,
+   "physical": true,
+   "source": "door strip reveal side"
+  }
+ ]
+}

@@ -1,0 +1,588 @@
+{
+ "SCHEMA": "URBAN_R8_14_DOOR_THRESHOLD_REGISTER_V1",
+ "revision": "QORTUBA_REV_NEW",
+ "thresholds": [
+  {
+   "threshold": "THRESHOLD-cf12fcdfd3e6a4a6",
+   "physical_site": "SITE-1cc94d2ca98f6229",
+   "door_occurrence": "I2044",
+   "door_symbol": "QORTUBA_REV_NEW|H684|2044|ELLIPTICAL_ARC|0",
+   "wall_opening_sources": [
+    "2043",
+    "2045"
+   ],
+   "face_closures": {
+    "A": [
+     109608.0817,
+     14869.7196,
+     109608.0817,
+     14949.7196
+    ],
+    "B": [
+     109623.0817,
+     14869.7196,
+     109623.0817,
+     14949.7196
+    ]
+   },
+   "strip_m2": 0.12,
+   "width_mm": 800.0,
+   "thickness_mm": 150.0,
+   "hinge_offset_mm": -0.0,
+   "symbol": "SYMBOL_ANCHORED_AT_FACE",
+   "transition_plane_authority": "OWNER_CENTRED_DOOR",
+   "plane_offset_mm": 75.0,
+   "plane_fact": "QORTUBA-NEW-DRY-WET-TRANSITION-AT-DOOR-PLANE-OWNER-001@v1",
+   "side_A": {
+    "site": "SITE-a2b19efc492a6d0b",
+    "zones": [
+     "BATH"
+    ],
+    "class": "WET_SERVICE_ROOM",
+    "treatment": "CERAMIC_WET_FLOOR",
+    "area_m2": 5.1
+   },
+   "side_B": {
+    "site": "SITE-fdfa89fe0f5809a4",
+    "zones": [
+     "HALL",
+     "whgm"
+    ],
+    "class": "DRY_INTERNAL_ROOM",
+    "treatment": "PORCELAIN_DRY_FLOOR",
+    "area_m2": 42.799289
+   },
+   "marble_evidence": "NONE",
+   "sides_outside_unit": [],
+   "unit_boundary": false,
+   "allocation_state": "SPLIT_AT_DOOR_PLANE",
+   "allocation_authority": [
+    "QORTUBA-NEW-DOOR-THRESHOLD-CONTINUITY-OWNER-001@v1",
+    "QORTUBA-NEW-DRY-WET-TRANSITION-AT-DOOR-PLANE-OWNER-001@v1"
+   ],
+   "regions": [
+    {
+     "side": "A",
+     "site": "SITE-a2b19efc492a6d0b",
+     "treatment": "CERAMIC_WET_FLOOR",
+     "area": 600.0,
+     "area_m2": 0.06
+    },
+    {
+     "side": "B",
+     "site": "SITE-fdfa89fe0f5809a4",
+     "treatment": "PORCELAIN_DRY_FLOOR",
+     "area": 600.0,
+     "area_m2": 0.06
+    }
+   ],
+   "reconciles": true,
+   "receiving_rows": {
+    "Q-03": 0.06,
+    "Q-11": 0.06,
+    "Q-13": 0.06
+   }
+  },
+  {
+   "threshold": "THRESHOLD-bfcea08375237224",
+   "physical_site": "SITE-2bf3db64b092ac64",
+   "door_occurrence": "I677",
+   "door_symbol": "QORTUBA_REV_NEW|H684|677|ELLIPTICAL_ARC|0",
+   "wall_opening_sources": [
+    "1007",
+    "1273"
+   ],
+   "face_closures": {
+    "A": [
+     110358.0817,
+     15114.7196,
+     110258.0817,
+     15114.7196
+    ],
+    "B": [
+     110358.0817,
+     15099.7196,
+     110258.0817,
+     15099.7196
+    ]
+   },
+   "strip_m2": 0.15,
+   "width_mm": 1000.0,
+   "thickness_mm": 150.0,
+   "hinge_offset_mm": 0.0,
+   "symbol": "SYMBOL_ANCHORED_AT_FACE",
+   "transition_plane_authority": "OWNER_CENTRED_DOOR",
+   "plane_offset_mm": 75.0,
+   "plane_fact": "QORTUBA-NEW-DRY-WET-TRANSITION-AT-DOOR-PLANE-OWNER-001@v1",
+   "side_A": {
+    "site": "SITE-fdfa89fe0f5809a4",
+    "zones": [
+     "HALL",
+     "whgm"
+    ],
+    "class": "DRY_INTERNAL_ROOM",
+    "treatment": "PORCELAIN_DRY_FLOOR",
+    "area_m2": 42.799289
+   },
+   "side_B": {
+    "site": "SITE-788f30878ba9d2b3",
+    "scope": "OUTSIDE_MEASURED_UNIT",
+    "zones": [],
+    "class": null,
+    "treatment": "OUTSIDE_MEASURED_UNIT",
+    "area_m2": 19.3125
+   },
+   "marble_evidence": "NONE",
+   "sides_outside_unit": [
+    "B"
+   ],
+   "unit_boundary": true,
+   "allocation_state": "SPLIT_AT_DOOR_PLANE",
+   "allocation_authority": [
+    "QORTUBA-NEW-DOOR-THRESHOLD-CONTINUITY-OWNER-001@v1",
+    "QORTUBA-NEW-DRY-WET-TRANSITION-AT-DOOR-PLANE-OWNER-001@v1"
+   ],
+   "regions": [
+    {
+     "side": "A",
+     "site": "SITE-fdfa89fe0f5809a4",
+     "treatment": "PORCELAIN_DRY_FLOOR",
+     "area": 750.0000000596046,
+     "area_m2": 0.075
+    },
+    {
+     "side": "B",
+     "site": "SITE-788f30878ba9d2b3",
+     "treatment": "OUTSIDE_MEASURED_UNIT",
+     "area": 750.0000000596046,
+     "area_m2": 0.075
+    }
+   ],
+   "reconciles": true,
+   "receiving_rows": {
+    "Q-13": 0.075
+   }
+  },
+  {
+   "threshold": "THRESHOLD-28f50f8dc18c1e90",
+   "physical_site": "SITE-5b8e4f9259cdb19c",
+   "door_occurrence": "I1561",
+   "door_symbol": "QORTUBA_REV_NEW|H684|1561|ELLIPTICAL_ARC|0",
+   "wall_opening_sources": [
+    "1560",
+    "1562"
+   ],
+   "face_closures": {
+    "A": [
+     109523.0817,
+     15484.7196,
+     109523.0817,
+     15564.7196
+    ],
+    "B": [
+     109538.0817,
+     15484.7196,
+     109538.0817,
+     15564.7196
+    ]
+   },
+   "strip_m2": 0.12,
+   "width_mm": 800.0,
+   "thickness_mm": 150.0,
+   "hinge_offset_mm": -0.0,
+   "symbol": "SYMBOL_ANCHORED_AT_FACE",
+   "transition_plane_authority": "OWNER_CENTRED_DOOR",
+   "plane_offset_mm": 75.0,
+   "plane_fact": "QORTUBA-NEW-DRY-WET-TRANSITION-AT-DOOR-PLANE-OWNER-001@v1",
+   "side_A": {
+    "site": "SITE-fe8ed5548fb4310e",
+    "zones": [
+     "BATH"
+    ],
+    "class": "WET_SERVICE_ROOM",
+    "treatment": "CERAMIC_WET_FLOOR",
+    "area_m2": 4.09
+   },
+   "side_B": {
+    "site": "SITE-fdfa89fe0f5809a4",
+    "zones": [
+     "HALL",
+     "whgm"
+    ],
+    "class": "DRY_INTERNAL_ROOM",
+    "treatment": "PORCELAIN_DRY_FLOOR",
+    "area_m2": 42.799289
+   },
+   "marble_evidence": "NONE",
+   "sides_outside_unit": [],
+   "unit_boundary": false,
+   "allocation_state": "SPLIT_AT_DOOR_PLANE",
+   "allocation_authority": [
+    "QORTUBA-NEW-DOOR-THRESHOLD-CONTINUITY-OWNER-001@v1",
+    "QORTUBA-NEW-DRY-WET-TRANSITION-AT-DOOR-PLANE-OWNER-001@v1"
+   ],
+   "regions": [
+    {
+     "side": "A",
+     "site": "SITE-fe8ed5548fb4310e",
+     "treatment": "CERAMIC_WET_FLOOR",
+     "area": 600.0000000596046,
+     "area_m2": 0.06
+    },
+    {
+     "side": "B",
+     "site": "SITE-fdfa89fe0f5809a4",
+     "treatment": "PORCELAIN_DRY_FLOOR",
+     "area": 600.0000000596046,
+     "area_m2": 0.06
+    }
+   ],
+   "reconciles": true,
+   "receiving_rows": {
+    "Q-03": 0.06,
+    "Q-11": 0.06,
+    "Q-13": 0.06
+   }
+  },
+  {
+   "threshold": "THRESHOLD-e84ea1bf89bb6701",
+   "physical_site": "SITE-95292543249f37c6",
+   "door_occurrence": "I1028",
+   "door_symbol": "QORTUBA_REV_NEW|H684|1028|ELLIPTICAL_ARC|0",
+   "wall_opening_sources": [
+    "1029",
+    "1030"
+   ],
+   "face_closures": {
+    "A": [
+     110388.0817,
+     15114.7196,
+     110488.0817,
+     15114.7196
+    ],
+    "B": [
+     110388.0817,
+     15099.7196,
+     110488.0817,
+     15099.7196
+    ]
+   },
+   "strip_m2": 0.15,
+   "width_mm": 1000.0,
+   "thickness_mm": 150.0,
+   "hinge_offset_mm": 0.0,
+   "symbol": "SYMBOL_ANCHORED_AT_FACE",
+   "transition_plane_authority": "OWNER_CENTRED_DOOR",
+   "plane_offset_mm": 75.0,
+   "plane_fact": "QORTUBA-NEW-DRY-WET-TRANSITION-AT-DOOR-PLANE-OWNER-001@v1",
+   "side_A": {
+    "site": "SITE-eaae022599294151",
+    "scope": "OUTSIDE_MEASURED_UNIT",
+    "zones": [],
+    "class": null,
+    "treatment": "OUTSIDE_MEASURED_UNIT",
+    "area_m2": 127.509952
+   },
+   "side_B": {
+    "site": "SITE-788f30878ba9d2b3",
+    "scope": "OUTSIDE_MEASURED_UNIT",
+    "zones": [],
+    "class": null,
+    "treatment": "OUTSIDE_MEASURED_UNIT",
+    "area_m2": 19.3125
+   },
+   "marble_evidence": "NONE",
+   "sides_outside_unit": [
+    "A",
+    "B"
+   ],
+   "unit_boundary": false,
+   "allocation_state": "OUTSIDE_MEASURED_UNIT",
+   "allocation_authority": [],
+   "regions": [],
+   "reconciles": true,
+   "receiving_rows": {}
+  },
+  {
+   "threshold": "THRESHOLD-c82365dd41b94abe",
+   "physical_site": "SITE-9f4d8d389cb86869",
+   "door_occurrence": "I1988",
+   "door_symbol": "QORTUBA_REV_NEW|H684|1988|ELLIPTICAL_ARC|0",
+   "wall_opening_sources": [
+    "1989",
+    "1990"
+   ],
+   "face_closures": {
+    "A": [
+     109783.0817,
+     14844.7196,
+     109683.0817,
+     14844.7196
+    ],
+    "B": [
+     109783.0817,
+     14859.7196,
+     109683.0817,
+     14859.7196
+    ]
+   },
+   "strip_m2": 0.15,
+   "width_mm": 1000.0,
+   "thickness_mm": 150.0,
+   "hinge_offset_mm": 0.0,
+   "symbol": "SYMBOL_ANCHORED_AT_FACE",
+   "transition_plane_authority": "OWNER_CENTRED_DOOR",
+   "plane_offset_mm": 75.0,
+   "plane_fact": "QORTUBA-NEW-DRY-WET-TRANSITION-AT-DOOR-PLANE-OWNER-001@v1",
+   "side_A": {
+    "site": "SITE-daca396d6d730e60",
+    "zones": [
+     "BED.ROOM"
+    ],
+    "class": "DRY_INTERNAL_ROOM",
+    "treatment": "PORCELAIN_DRY_FLOOR",
+    "area_m2": 16.327
+   },
+   "side_B": {
+    "site": "SITE-fdfa89fe0f5809a4",
+    "zones": [
+     "HALL",
+     "whgm"
+    ],
+    "class": "DRY_INTERNAL_ROOM",
+    "treatment": "PORCELAIN_DRY_FLOOR",
+    "area_m2": 42.799289
+   },
+   "marble_evidence": "NONE",
+   "sides_outside_unit": [],
+   "unit_boundary": false,
+   "allocation_state": "CONTINUOUS_SAME_FINISH",
+   "allocation_authority": [
+    "QORTUBA-NEW-DOOR-THRESHOLD-CONTINUITY-OWNER-001@v1"
+   ],
+   "regions": [
+    {
+     "side": "AB",
+     "site": [
+      "SITE-daca396d6d730e60",
+      "SITE-fdfa89fe0f5809a4"
+     ],
+     "treatment": "PORCELAIN_DRY_FLOOR",
+     "area": 1500.0,
+     "area_m2": 0.15
+    }
+   ],
+   "reconciles": true,
+   "receiving_rows": {
+    "Q-13": 0.15
+   }
+  },
+  {
+   "threshold": "THRESHOLD-04910e5deeeed2fc",
+   "physical_site": "SITE-bd2b680527d056fa",
+   "door_occurrence": "I841",
+   "door_symbol": "QORTUBA_REV_NEW|H684|841|ELLIPTICAL_ARC|0",
+   "wall_opening_sources": [
+    "842",
+    "843"
+   ],
+   "face_closures": {
+    "A": [
+     109818.0817,
+     14894.7196,
+     109918.0817,
+     14894.7196
+    ],
+    "B": [
+     109818.0817,
+     14909.7196,
+     109918.0817,
+     14909.7196
+    ]
+   },
+   "strip_m2": 0.15,
+   "width_mm": 1000.0,
+   "thickness_mm": 150.0,
+   "hinge_offset_mm": 0.0,
+   "symbol": "SYMBOL_ANCHORED_AT_FACE",
+   "transition_plane_authority": "OWNER_CENTRED_DOOR",
+   "plane_offset_mm": 75.0,
+   "plane_fact": "QORTUBA-NEW-DRY-WET-TRANSITION-AT-DOOR-PLANE-OWNER-001@v1",
+   "side_A": {
+    "site": "SITE-5f1762f1a93b91ca",
+    "zones": [
+     "BED.ROOM"
+    ],
+    "class": "DRY_INTERNAL_ROOM",
+    "treatment": "PORCELAIN_DRY_FLOOR",
+    "area_m2": 19.2725
+   },
+   "side_B": {
+    "site": "SITE-fdfa89fe0f5809a4",
+    "zones": [
+     "HALL",
+     "whgm"
+    ],
+    "class": "DRY_INTERNAL_ROOM",
+    "treatment": "PORCELAIN_DRY_FLOOR",
+    "area_m2": 42.799289
+   },
+   "marble_evidence": "NONE",
+   "sides_outside_unit": [],
+   "unit_boundary": false,
+   "allocation_state": "CONTINUOUS_SAME_FINISH",
+   "allocation_authority": [
+    "QORTUBA-NEW-DOOR-THRESHOLD-CONTINUITY-OWNER-001@v1"
+   ],
+   "regions": [
+    {
+     "side": "AB",
+     "site": [
+      "SITE-5f1762f1a93b91ca",
+      "SITE-fdfa89fe0f5809a4"
+     ],
+     "treatment": "PORCELAIN_DRY_FLOOR",
+     "area": 1499.9999998807907,
+     "area_m2": 0.15
+    }
+   ],
+   "reconciles": true,
+   "receiving_rows": {
+    "Q-13": 0.15
+   }
+  },
+  {
+   "threshold": "THRESHOLD-f9846605acbce828",
+   "physical_site": "SITE-e639327cc873867d",
+   "door_occurrence": "I1443",
+   "door_symbol": "QORTUBA_REV_NEW|H684|1443|ELLIPTICAL_ARC|0",
+   "wall_opening_sources": [
+    "1442",
+    "1444"
+   ],
+   "face_closures": {
+    "A": [
+     109568.0817,
+     15699.7196,
+     109568.0817,
+     15779.7196
+    ],
+    "B": [
+     109583.0817,
+     15699.7196,
+     109583.0817,
+     15779.7196
+    ]
+   },
+   "strip_m2": 0.12,
+   "width_mm": 800.0,
+   "thickness_mm": 150.0,
+   "hinge_offset_mm": -0.0,
+   "symbol": "SYMBOL_ANCHORED_AT_FACE",
+   "transition_plane_authority": "OWNER_CENTRED_DOOR",
+   "plane_offset_mm": 75.0,
+   "plane_fact": "QORTUBA-NEW-DRY-WET-TRANSITION-AT-DOOR-PLANE-OWNER-001@v1",
+   "side_A": {
+    "site": "SITE-1c4abf65f9b5db1e",
+    "zones": [
+     "BATH"
+    ],
+    "class": "WET_SERVICE_ROOM",
+    "treatment": "CERAMIC_WET_FLOOR",
+    "area_m2": 8.5525
+   },
+   "side_B": {
+    "site": "SITE-a6405850100155ac",
+    "zones": [
+     "DRESS",
+     "M.B.ROOM"
+    ],
+    "class": "DRY_INTERNAL_ROOM",
+    "treatment": "PORCELAIN_DRY_FLOOR",
+    "area_m2": 33.2
+   },
+   "marble_evidence": "NONE",
+   "sides_outside_unit": [],
+   "unit_boundary": false,
+   "allocation_state": "SPLIT_AT_DOOR_PLANE",
+   "allocation_authority": [
+    "QORTUBA-NEW-DOOR-THRESHOLD-CONTINUITY-OWNER-001@v1",
+    "QORTUBA-NEW-DRY-WET-TRANSITION-AT-DOOR-PLANE-OWNER-001@v1"
+   ],
+   "regions": [
+    {
+     "side": "A",
+     "site": "SITE-1c4abf65f9b5db1e",
+     "treatment": "CERAMIC_WET_FLOOR",
+     "area": 599.9999999403954,
+     "area_m2": 0.06
+    },
+    {
+     "side": "B",
+     "site": "SITE-a6405850100155ac",
+     "treatment": "PORCELAIN_DRY_FLOOR",
+     "area": 599.9999999403954,
+     "area_m2": 0.06
+    }
+   ],
+   "reconciles": true,
+   "receiving_rows": {
+    "Q-03": 0.06,
+    "Q-11": 0.06,
+    "Q-13": 0.06
+   }
+  }
+ ],
+ "count": 7,
+ "by_state": {
+  "SPLIT_AT_DOOR_PLANE": 4,
+  "OUTSIDE_MEASURED_UNIT": 1,
+  "CONTINUOUS_SAME_FINISH": 2
+ },
+ "allocated": 6,
+ "reconciled_exactly": true,
+ "outside_measured_unit": [
+  "THRESHOLD-e84ea1bf89bb6701"
+ ],
+ "unit_boundary": [
+  "THRESHOLD-bfcea08375237224"
+ ],
+ "old_revision": [
+  {
+   "threshold": "THRESHOLD-8639087a5492f6c5",
+   "state": "EXCLUDED_SEPARATE_SITE",
+   "why": "the R8.14 facts are scoped to the new revision (REJECTED_SCOPE on the old one)"
+  },
+  {
+   "threshold": "THRESHOLD-0f2510f2d76fb0d8",
+   "state": "EXCLUDED_SEPARATE_SITE",
+   "why": "the R8.14 facts are scoped to the new revision (REJECTED_SCOPE on the old one)"
+  },
+  {
+   "threshold": "THRESHOLD-8732ee1c2cb4f9da",
+   "state": "EXCLUDED_SEPARATE_SITE",
+   "why": "the R8.14 facts are scoped to the new revision (REJECTED_SCOPE on the old one)"
+  },
+  {
+   "threshold": "THRESHOLD-39991b974260f19c",
+   "state": "EXCLUDED_SEPARATE_SITE",
+   "why": "the R8.14 facts are scoped to the new revision (REJECTED_SCOPE on the old one)"
+  },
+  {
+   "threshold": "THRESHOLD-f8e1494e02c5892d",
+   "state": "EXCLUDED_SEPARATE_SITE",
+   "why": "the R8.14 facts are scoped to the new revision (REJECTED_SCOPE on the old one)"
+  },
+  {
+   "threshold": "THRESHOLD-aa3fea7d5ebcdca0",
+   "state": "EXCLUDED_SEPARATE_SITE",
+   "why": "the R8.14 facts are scoped to the new revision (REJECTED_SCOPE on the old one)"
+  },
+  {
+   "threshold": "THRESHOLD-a1093604b1a5cb26",
+   "state": "EXCLUDED_SEPARATE_SITE",
+   "why": "the R8.14 facts are scoped to the new revision (REJECTED_SCOPE on the old one)"
+  }
+ ],
+ "ceiling": "every door threshold is NOT_IN_TRADE for CEILING (the door head is the door's top reveal)"
+}
