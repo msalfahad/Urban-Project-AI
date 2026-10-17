@@ -192,13 +192,14 @@ def _line(ctx, *, item_code, room, element, unit, net, formula, inputs, rule_id,
                         rule_set_digest=ref["rule_set_digest"], rfi=rfi, notes=notes, bounded_range=bounded)
 
 
-def _wall_finish_rs(ctx, room, tr, code, run, H, h, openings, oh, sp, floor, unresolved):
+def _wall_finish_rs(ctx, room, tr, code, run, H, h, openings, oh, sp, floor, unresolved, height_of=None):
     """ARCH_TAKEOFF_V2.2 (finding F-24): one wall-finish line from the room's own boundary (engine.source.release_safety:
     each opening deducted by its length on THIS boundary; checked; a range where a deduction is unknown; REVIEW where
     the boundary does not add up)."""
     from engine.source import release_safety as RSF
     rid = room["room_id"]
-    r = RSF.wall_finish(run_lm=run, height_m=H, openings=openings, opening_heights=oh, detail=sp["boundary_detail"])
+    r = RSF.wall_finish(run_lm=run, height_m=H, openings=openings, opening_heights=oh, detail=sp["boundary_detail"],
+                        **({"height_of": height_of} if height_of is not None else {}))
     inputs = {"wall_run_lm": round(run, 6), "height_m": H, "height_authority": h["authority"],
               "height_governing": h["governing"], "decomposition": r["decomposition"], "policy": RSF.POLICY_ID}
     dd = [dict(d, what=f"{d['what']}: {d['lm_on_this_boundary']:.3f} m on this boundary x {d['height_m']:.2f} m")
@@ -227,15 +228,22 @@ def _wall_finish_rs(ctx, room, tr, code, run, H, h, openings, oh, sp, floor, unr
                      gross=round(r["gross"], 6), deductions=dd, formula=formula,
                      inputs=dict(inputs, missing_heights=r["missing_heights"]), rule_id="UP-CER-009",
                      rfi={"question": q, "unlocks": rid})
+    if height_of is not None:
+        # ARCH_TAKEOFF_V2.8: a window is deducted by its own band; only a window without a sill keeps the assumption
+        assumed = any("WINDOW_POSITION_ASSUMED" in str(d.get("height_authority")) for d in r["deductions"])
+        formula = "wall run x height - each opening's own length on this boundary x its height inside the band " \
+                  "[min(head, H) - max(sill, 0)] (F-24, UP-OPEN-SCHED-001)"
+    else:
+        assumed = any(o["kind"] == "WINDOW" for o in openings)
     return _line(ctx, item_code=code, room=room, element=tr.lower(), unit="m2", net=round(r["net"], 6),
                  gross=round(r["gross"], 6), deductions=dd, formula=formula, inputs=inputs, rule_id="UP-CER-009",
                  notes=("WINDOW_POSITION_ASSUMED: sill / head levels are not in a plan - each window is deducted at "
-                        "its full height inside the finish height")
-                 if any(o["kind"] == "WINDOW" for o in openings) else "")
+                        "its full height inside the finish height") if assumed else "")
 
 
 def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_above_level_m=None, documents=(),
-            floor_level_m=None, release_safety=False, owner_scope=False, door_height=None, piece_box=False):
+            floor_level_m=None, release_safety=False, owner_scope=False, door_height=None, piece_box=False,
+            v28=None):
     """release_safety (ARCH_TAKEOFF_V2.2 only): wall finishes and skirting through engine.source.release_safety (the
     boundary detail of every face is required); False is the V1 / V2 / V2.1 path, unchanged.
     owner_scope (ARCH_TAKEOFF_V2.3 only): the owner wet-area scope and the surfaces an approved rule answers
@@ -243,7 +251,13 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
     door jamb plaster. False is the V1 .. V2.2 path, unchanged.
     piece_box (ARCH_TAKEOFF_V2.6 only, D-V26-07): the doorway piece of a door closed by its leaf and the wall's other
     face is the box between the two closures when its face runs on past them between wall lines
-    (arch_completeness.closure_box); False is the V1 .. V2.5 path, unchanged."""
+    (arch_completeness.closure_box); False is the V1 .. V2.5 path, unchanged.
+    v28 (ARCH_TAKEOFF_V2.8 only): {"evidence": arch_v28.Evidence, "schedule": {opening_id: opening record},
+    "height_of": arch_v28.height_of(...)} - the room heights from the drawing's evidence hierarchy, each opening
+    deducted by its own band, floor-level glazing not skirted and an unknown sill not skirted with certainty, the
+    opening inventory with height / sill / head / class; None is the V1 .. V2.7.1 path, unchanged."""
+    if v28:
+        from engine.source import arch_v28 as AV28
     if owner_scope:
         from engine.source import owner_finish_scope as OFS
     facts = validate_facts(facts) or {}
@@ -440,15 +454,50 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                              "under the other (" + ", ".join(f"{k} {v:.2f} m" for k, v in
                                                             sk_rs["unresolved_by_roles"].items()) +
                              "): not in this line, a separate range line")
+        if v28 and windows:
+            # ARCH_TAKEOFF_V2.8 (UP-OPEN-SCHED-001): floor-level glazing is never skirted; a window whose sill is not
+            # established is skirted under one reading only (a range, never a certain length) - edge by edge against
+            # the F-17 reading above, so an edge already held in its range is not moved twice
+            adj = AV28.skirting_adjustment(windows, sp["boundary_detail"], v28["schedule"])
+            room["skirting_windows_v28"] = adj
+            skirt = skirt - adj["floor_glazing_lm"] - adj["to_range_lm"]
+            if adj["floor_glazing_lm"] > 1e-9:
+                sk_notes += f"; floor-level glazing not skirted ({adj['floor_glazing_lm']:.2f} m)"
+            if adj["to_range_lm"] > 1e-9 or adj["floor_glazing_range_lm"] > 1e-9:
+                prev = sk_open or {"unresolved_lm": 0.0, "unresolved_by_roles": {}, "legacy_credit_lm": 0.0}
+                by = dict(prev["unresolved_by_roles"])
+                for k_, v_ in adj["range_out_by_roles"].items():
+                    by[k_] = round(by.get(k_, 0.0) - v_, 6)
+                    if by[k_] <= 1e-6:
+                        del by[k_]
+                for k_, v_ in adj["to_range_by"].items():
+                    by[k_] = round(by.get(k_, 0.0) + v_, 6)
+                un = prev["unresolved_lm"] + adj["to_range_lm"] - adj["floor_glazing_range_lm"]
+                sk_open = dict(prev, unresolved_lm=un, unresolved_by_roles=by,
+                               legacy_credit_lm=prev["legacy_credit_lm"] - adj["range_out_credit_lm"])
+                if adj["to_range_lm"] > 1e-9:
+                    sk_notes += (f"; {adj['to_range_lm']:.2f} m of window threshold skirted under one reading only "
+                                 "(sill not established / floor glazing on a wall line): not in this line, a separate "
+                                 "range line")
+                if adj["floor_glazing_range_lm"] > 1e-9:
+                    sk_notes += (f"; {adj['floor_glazing_range_lm']:.2f} m of floor-level glazing threshold out of the "
+                                 "F-17 range (skirted under no reading)")
+                if un <= RSF.TOL_M:
+                    sk_open = None
         sk_len0 = len(lines)
         if wet:
             hs0 = heights(floor, lvl, floor_above_level_m, facts)
+            if v28:
+                hs0 = v28["evidence"].room_heights(floor, rid, hs0)
             tile_h, clear_h = hs0["WALL_TILE"], hs0["PAINT"]
             full = None
             if owner_scope:
                 # UP-FIN-WALL-001: full height unless an explicit source / project height says otherwise
                 tile_h = OFS.wall_tile_height(hs0)
                 full = tile_h["full"]
+                if v28:
+                    room["wall_tile_v28"] = {k_: tile_h.get(k_) for k_ in ("state", "value_m", "governing",
+                                                                         "authority", "why")}
             elif tile_h["state"] == WH.ESTABLISHED and tile_h["governing"] == "DERIVED_CLEAR_HEIGHT":
                 full = True                               # derived to the ceiling: the tile is full height
             elif tile_h["state"] == WH.ESTABLISHED and clear_h["state"] == WH.ESTABLISHED:
@@ -573,6 +622,13 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                                     " is counted once, with the other wet space (UP-WP-003)") if shared_doors else "")
                                    if x)))
         hs = heights(floor, lvl, floor_above_level_m, facts)
+        if v28:
+            hs = v28["evidence"].room_heights(floor, rid, hs)
+            room["heights_v28"] = {tr_: {k_: hs[tr_].get(k_) for k_ in ("state", "value_m", "governing", "authority",
+                                                                       "why")} for tr_ in TRADES}
+            room["wet_v28"] = bool(wet)
+            if room.get("wall_tile_v28"):                # the owner full height applied (UP-FIN-WALL-001)
+                room["heights_v28"]["WALL_TILE"] = room["wall_tile_v28"]
         oh = (facts or {}).get("opening_heights") or {}
         run = runs["perimeter"] - zone_ln               # a drawn zone line has no wall: no wall finish along it
         if owner_scope and wet:
@@ -598,7 +654,7 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
             H = h["value_m"]
             if release_safety:
                 lines.append(_wall_finish_rs(ctx, room, tr, code, run, H, h, doors + windows + passages, oh, sp,
-                                             floor, unresolved))
+                                             floor, unresolved, **({"height_of": v28["height_of"]} if v28 else {})))
                 continue
             gross = run * H
             dd, missing = [], []
@@ -660,6 +716,13 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                 rec[k] = o[k]
         if o.get("opening_v27"):                              # ARCH_TAKEOFF_V2.7 (arch_v27.jamb_reconstruction)
             rec["opening_v27"] = o["opening_v27"]
+        sch = (v28 or {}).get("schedule", {}).get(o["opening_id"]) if v28 else None
+        if sch is not None:                                   # ARCH_TAKEOFF_V2.8 (UP-OPEN-SCHED-001)
+            hv = sch["height"].get("value_m")
+            rec.update(height_m=hv, height_state=sch["area_state"], area_m2=sch["area_m2"],
+                       status="WIDTH_MEASURED" + ("" if hv is not None else "_HEIGHT_NOT_ESTABLISHED"))
+            rec["v28"] = {k: sch[k] for k in ("mark", "class", "height", "sill", "head_m", "area_m2", "area_state",
+                                              "findings") if k in sch}
         if release_safety:
             # ARCH_TAKEOFF_V2.2: where the opening is (the blind-test scorer matches windows by position, not width)
             um = fr["unit_m"]
@@ -672,6 +735,23 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                   "name_en": " | ".join(r["name_en"] for r in rooms if r["room_id"] in host) or "exterior",
                   "name_ar": " | ".join(r["name_ar"] for r in rooms if r["room_id"] in host) or "خارجي"}
         hh = ((facts or {}).get("opening_heights") or {}).get(o["kind"])
+        if sch is not None:
+            hv, sv = sch["height"].get("value_m"), sch["sill"].get("value_m")
+            note = (f"height {hv:g} m ({sch['height'].get('authority')})" if hv is not None else
+                    "height NOT ESTABLISHED (" + "; ".join(sch["height"].get("why") or ["schedule / section / "
+                                                                                        "elevation needed"]) +
+                    "): width released, area held")
+            if o["kind"] == "WINDOW":
+                note += ("; sill " + (f"{sv:g} m ({sch['sill'].get('authority')})" if sv is not None else
+                                      "NOT ESTABLISHED: skirting, reveals and the band deduction stay open") +
+                         f"; class {sch['class']}")
+            lines.append(_line(ctx, item_code=code, room=pseudo, element=o["opening_id"], unit="pcs", net=1,
+                               formula="one opening (jambed wall-band gap)", rule_id=None,
+                               inputs={"width_m": rec["width_m"], "wall_t_m": rec["wall_t_m"], "height_m": hv,
+                                       "sill_m": sv, "head_m": sch["head_m"], "area_m2": sch["area_m2"],
+                                       "class": sch["class"], "mark": (sch.get("mark") or {}).get("mark")},
+                               notes=note))
+            continue
         lines.append(_line(ctx, item_code=code, room=pseudo, element=o["opening_id"], unit="pcs", net=1,
                            formula="one opening (jambed wall-band gap)", rule_id=None,
                            inputs={"width_m": rec["width_m"], "wall_t_m": rec["wall_t_m"],

@@ -677,7 +677,8 @@ def coverage(S, M, strips, lines, unresolved, floor):
     for ln in lines:
         # ARCH_TAKEOFF_V2.3 (UP-THR-001): a marble threshold / doorway-strip porcelain line accounts for its strips
         # (no V1 .. V2.2 floor line names strips)
-        if ln["item_code"] in STRIP_ITEMS.values() or ln["item_code"] in ("FIN.MARBLE.THRESHOLD", "FIN.FLOOR.PORCELAIN"):
+        if ln["item_code"] in STRIP_ITEMS.values() or ln["item_code"] in ("FIN.MARBLE.THRESHOLD", "FIN.FLOOR.PORCELAIN",
+                                                                          "FIN.FLOOR.WET_TILE"):
             for sid in ((ln.get("calculation") or {}).get("inputs") or {}).get("strips") or ():
                 strip_line_of[sid] = ln["line_id"]
     faces, cat = [], defaultdict(lambda: defaultdict(float))

@@ -58,9 +58,11 @@ def _key(roles):
 def boundary_detail(arr, cycle, hole_cycles, unit_m):
     """the boundary of one face, edge by edge (one-sided edges only, as the face perimeter): role set -> lm for the
     outer boundary and the holes; band opening id -> lm on this face's outer boundary; door-closure key -> lm; the lm
-    of outer edges that belong to two openings at once."""
+    of outer edges that belong to two openings at once; the outer threshold edges by (openings, role set) -> lm
+    (threshold_sets, read by ARCH_TAKEOFF_V2.8 only)."""
     out = {"outer_sets_lm": defaultdict(float), "hole_sets_lm": defaultdict(float), "opening_lm": defaultdict(float),
-           "closure_lm": defaultdict(float), "shared_opening_lm": 0.0, "shared_openings": []}
+           "closure_lm": defaultdict(float), "shared_opening_lm": 0.0, "shared_openings": [],
+           "threshold_sets": defaultdict(float)}
 
     def one_sided(cyc):
         seen = defaultdict(int)
@@ -75,6 +77,8 @@ def boundary_detail(arr, cycle, hole_cycles, unit_m):
         ops = sorted({s.split("|")[1] for s in e["sources"] if s.startswith("THR|")})
         for o in ops:
             out["opening_lm"][o] += ln
+        if ops:
+            out["threshold_sets"][(tuple(ops), _key(e["roles"]))] += ln
         if len(ops) > 1:
             out["shared_opening_lm"] += ln
             out["shared_openings"].append(ops)
@@ -90,7 +94,9 @@ def boundary_detail(arr, cycle, hole_cycles, unit_m):
             "opening_lm": dict(sorted(out["opening_lm"].items())),
             "closure_lm": dict(sorted(out["closure_lm"].items())),
             "shared_opening_lm": out["shared_opening_lm"],
-            "shared_openings": sorted({tuple(x) for x in out["shared_openings"]})}
+            "shared_openings": sorted({tuple(x) for x in out["shared_openings"]}),
+            "threshold_sets": [{"openings": list(k[0]), "roles": k[1], "lm": v}
+                               for k, v in sorted(out["threshold_sets"].items())]}
 
 
 def skirting(legacy_skirt_lm, detail):
@@ -113,7 +119,7 @@ def skirting(legacy_skirt_lm, detail):
             "unresolved_by_roles": {k: round(v, 6) for k, v in sorted(by.items())}, "legacy_credit_lm": credit}
 
 
-def wall_finish(*, run_lm, height_m, openings, opening_heights, detail):
+def wall_finish(*, run_lm, height_m, openings, opening_heights, detail, height_of=None):
     """F-24. One wall-finish quantity of one room (one trade).
 
     run_lm      the room's wall run (perimeter - zone lines), as V1
@@ -121,6 +127,8 @@ def wall_finish(*, run_lm, height_m, openings, opening_heights, detail):
     openings    [(opening dict with opening_id / kind / width_m)] of the room's band openings (doors, windows, passages)
     opening_heights  {kind: {"value_m", "authority"}} from the facts (DOOR / WINDOW); passages run full height
     detail      the face's boundary_detail
+    height_of   (ARCH_TAKEOFF_V2.8 only) height_of(opening, H) -> (the opening's own height inside [0, H], authority)
+                or None (not established); None is the V2.2 .. V2.7.1 reading (opening_heights by kind), unchanged
     -> {"state": "MEASURED" | "RANGE" | GEOMETRY_INCONSISTENT, "gross", "net", "low", "high", "deductions",
         "undeducted", "checks": [failed check, ...], "decomposition": {...}}"""
     H = height_m
@@ -133,6 +141,12 @@ def wall_finish(*, run_lm, height_m, openings, opening_heights, detail):
             checks.append(f"{o['opening_id']}: {own:.4f} m on this boundary > its width {w:.4f} m")
         if o["kind"] == "PASSAGE":
             h, auth = H, "passage: full finish height"
+        elif height_of is not None:
+            hv = height_of(o, H)
+            if hv is None:
+                missing.append({"what": f"{o['kind'].lower()} {o['opening_id']}", "lm": round(own, 6)})
+                continue
+            h, auth = hv
         else:
             hh = (opening_heights or {}).get(o["kind"])
             if not hh:

@@ -189,7 +189,12 @@ def _side(c, n, sign, half_t, S, wall_segs, unit_m, reach):
     return {"kind": "UNKNOWN", "face_id": None, "codes": [], "evidence": "no space and no facade found on this side"}
 
 
-def _height(cls, facts):
+def _height(cls, facts, opening_id=None, floor=None):
+    # ARCH_TAKEOFF_V2.8 (UP-HGT-001): the door's own height from the drawing's evidence, keyed by floor | opening (only
+    # V2.8 hands this key in; every earlier method's facts never carry it)
+    by_op = (facts or {}).get("opening_heights_by_opening") or {}
+    if opening_id is not None and f"{floor}|{opening_id}" in by_op:
+        return dict(by_op[f"{floor}|{opening_id}"])
     oh = (facts or {}).get("opening_heights") or {}
     for key in ([cls] if cls else []) + ["DOOR"]:
         if oh.get(key):
@@ -554,7 +559,8 @@ def finalise(els, *, main, unresolved_main_candidates, facts, guards=False):
                       height_m=None, area_m2=None, area_state="NOT_APPLICABLE: lift door (not measured)",
                       released=False, section="LIFT_EXCLUDED")
             continue
-        h = _height(el["boq_class"] if el["boq_class"] in RELEASED_CLASSES else None, facts)
+        h = _height(el["boq_class"] if el["boq_class"] in RELEASED_CLASSES else None, facts, el.get("opening_id"),
+                    el.get("floor"))
         el["height"] = h
         w = el["structural_opening_width_m"]
         el["height_m"] = h["value_m"]
