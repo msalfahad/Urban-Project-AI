@@ -14,7 +14,7 @@ their public classes and functions with line numbers). Never read `research/` un
 | `agents/` | 124 | Business agents a1-a17 (extraction, review, quotation, marketing...), each with prompt, schema, tests. |
 | `assets/` | 7 | Fonts and logo. |
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
-| `docs/` | 67 | Design notes and decisions per round. |
+| `docs/` | 69 | Design notes and decisions per round. |
 | `documents/` | 5 | Arabic document rendering (company profile, intake). |
 | `engine/` | 576 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 | WhatsApp integration. |
@@ -25,7 +25,7 @@ their public classes and functions with line numbers). Never read `research/` un
 | `runs/` | 7 | Small run pointers (current, golden). |
 | `social/` | 4 | Social media tile rendering. |
 | `tests/` | 1252 | pytest suites, one folder per round. Run only the folder for the area you touched. |
-| `tools/` | 90 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks. |
+| `tools/` | 91 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks. |
 
 ## `engine/` (254 modules)
 
@@ -637,7 +637,7 @@ their public classes and functions with line numbers). Never read `research/` un
 | `libredwg_map.py` | 489 | D1 route: LibreDWG `dwgread` JSON -> neutral SourceEntityObservations. |
 | `unit_evidence.py` | 139 | Deterministic unit / scale EVIDENCE from a D1 (LibreDWG JSON) decode — R8.3 §16. |
 
-## `tools/` (89 modules)
+## `tools/` (90 modules)
 
 | Module | Lines | Purpose (first docstring line) |
 |---|---|---|
@@ -663,6 +663,7 @@ their public classes and functions with line numbers). Never read `research/` un
 | `audit_dwf_source.py` | 175 | Structural audit of a DWF package. Representation only, no geometry read. |
 | `audit_submission_set.py` | 133 | Per-page representation census of a multi-sheet source. No measurement. |
 | `campaign.py` | 245 | Run and review a project marketing campaign (A17 + E21). |
+| `codemap.py` | 422 | CODE MAP - build or check docs/CODEMAP.md, docs/RULES_INDEX.md and docs/ROUTING.md (where every module, rule, test |
 | `compare_source_provenance.py` | 301 | Did a transformation destroy vector information, or recompress a scan? |
 | `connect_firestore.py` | 85 | Connect to the Urban Projects Manager Firestore and prove the link. |
 | `documents.py` | 187 | Write a quotation or contract for a client (A7 + E22 + the renderer). |

@@ -1,4 +1,5 @@
-"""CODE MAP - build or check docs/CODEMAP.md and docs/RULES_INDEX.md (where every module, rule and record lives).
+"""CODE MAP - build or check docs/CODEMAP.md, docs/RULES_INDEX.md and docs/ROUTING.md (where every module, rule, test
+and known defect lives; ROUTING.md routes a task topic to them, from the small hand-kept tools/routing_topics.json).
 
     python3 -I tools/codemap.py           rebuild both maps
     python3 -I tools/codemap.py --check   exit 1 when either map is out of date (no file is written)
@@ -118,7 +119,7 @@ def build_codemap(files):
     L += ["", "## `tests/` (test files per folder)", "", "| Folder | Test files |", "|---|---|"]
     L += [f"| `tests/{d}/` | {n} |" if d != "(root)" else f"| `tests/` (root) | {n} |" for d, n in sorted(tdirs.items())]
 
-    docs = [p for p in files if p.startswith("docs/") and p.endswith(".md") and p not in ("docs/CODEMAP.md", "docs/RULES_INDEX.md")]
+    docs = [p for p in files if p.startswith("docs/") and p.endswith(".md") and p not in ("docs/CODEMAP.md", "docs/RULES_INDEX.md", "docs/ROUTING.md")]
     L += ["", "## `docs/`", "", "| File | Title |", "|---|---|"]
     L += [f"| `{p[5:]}` | {md_title(p)} |" for p in docs]
 
@@ -224,13 +225,191 @@ def build_rules(files):
     return "\n".join(L) + "\n"
 
 
+ROUTING = ROOT / "docs" / "ROUTING.md"
+TOPICS = ROOT / "tools" / "routing_topics.json"
+DEFECT_ID = re.compile(r"^(?:[A-Z]{1,2}\d+(?: \([A-Z]-?\d+\))?|[A-Z]-[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*)$")
+
+
+def module_name(p):
+    return p[:-3].replace("/", ".").removesuffix(".__init__")
+
+
+def import_graph(files):
+    """imported_by[path] = set of tracked .py paths (engine/, tools/, tests/) that import it."""
+    pys = [p for p in files if p.endswith(".py") and p.startswith(("engine/", "tools/", "tests/", "pipeline/", "agents/"))]
+    by_mod = {module_name(p): p for p in pys}
+    imports, imported_by = defaultdict(set), defaultdict(set)
+    for p in pys:
+        try:
+            tree = ast.parse((ROOT / p).read_text(encoding="utf-8", errors="replace"))
+        except SyntaxError:
+            continue
+        pkg = module_name(p).rsplit(".", 1)[0] if not p.endswith("__init__.py") else module_name(p)
+        for n in ast.walk(tree):
+            names = []
+            if isinstance(n, ast.Import):
+                names = [a.name for a in n.names]
+            elif isinstance(n, ast.ImportFrom):
+                base = n.module or ""
+                if n.level:
+                    up = pkg.split(".")[: len(pkg.split(".")) - (n.level - 1)]
+                    base = ".".join(up + ([base] if base else []))
+                names = [base] + [f"{base}.{a.name}" for a in n.names]
+            for nm in names:
+                t = by_mod.get(nm)
+                if t and t != p:
+                    imports[p].add(t)
+                    imported_by[t].add(p)
+    return imports, imported_by
+
+
+def read_defects(sources):
+    """Rows of the defect registers whose first cell is a defect id; a later source replaces an earlier id."""
+    out = {}
+    for src in sources:
+        path, _, section = src.partition("#")
+        if not (ROOT / path).exists():
+            continue
+        heading, active, header, status_i = "", not section, None, None
+        lines = (ROOT / path).read_text(encoding="utf-8", errors="replace").splitlines()
+        for i, ln in enumerate(lines):
+            if ln.startswith("#"):
+                heading = ln.lstrip("#").strip()
+                if section:
+                    active = heading.startswith(section) or (active and not ln.startswith("## "))
+                header = None
+                continue
+            if not active or not ln.startswith("|"):
+                continue
+            cells = [c.strip() for c in ln.strip().strip("|").split("|")]
+            if i + 1 < len(lines) and re.match(r"^\|\s*:?-{3}", lines[i + 1]):
+                header = [c.lower() for c in cells]
+                status_i = next((k for k, h in enumerate(header) if "status" in h), None)
+                continue
+            if header is None or not cells or set(cells[0]) <= set("-: "):
+                continue
+            did = cells[0].replace("*", "").replace("`", "").strip()
+            if not DEFECT_ID.match(did) or not re.search(r"\d", did):
+                continue
+            if did.startswith("T-"):
+                continue  # audit-tooling defects, not engine behaviour
+            h = heading.lower()
+            status = cells[status_i] if status_i is not None and status_i < len(cells) else (
+                "limitation (recorded)" if "limitation" in h else "fixed (per section)" if re.search(r"fixed|closed|corrected", h)
+                else "-")
+            out[did] = {"id": did, "summary": cell(cells[1] if len(cells) > 1 else "", 130),
+                        "status": cell(status.replace("*", ""), 70), "evidence": f"{path} § {heading}",
+                        "text": " ".join(cells[: status_i if status_i else 3]).lower()}
+    return out
+
+
+def build_routing(files):
+    cfg = json.loads(TOPICS.read_text(encoding="utf-8"))
+    imports, imported_by = import_graph(files)
+    pys = [p for p in files if p.endswith(".py") and p.startswith(("engine/", "tools/")) and not p.endswith("__init__.py")]
+    tests = [p for p in files if p.startswith("tests/") and p.rsplit("/", 1)[-1].startswith("test_")]
+    kv = re.findall(r'"(\d+\.\d+\.\d+)":\s*ROOT', (ROOT / "engine/source/knowledge.py").read_text())
+    kb = load(f"knowledge/URBAN_ENGINEERING_KNOWLEDGE_{kv[-1]}.json")["rules"]
+    lib = load("rules/owner_library/URBAN_PROJECTS_RULE_LIBRARY_1.4.0.json")["rules"]
+    fam = load("rules/coverage/BOQ_FAMILY_MASTER_1.0.0.json")["families"]
+    defects = read_defects(cfg["defect_sources"])
+    shared = cfg.get("shared_threshold", 10)
+    problems = [f"defect source missing: {s}" for s in cfg["defect_sources"] if not (ROOT / s.partition('#')[0]).exists()]
+
+    L = ["# Task routing index", "",
+         "Generated by `tools/codemap.py` from the code, the rule files and the defect registers; the only hand-kept input is",
+         "the small topic list in `tools/routing_topics.json`. Find the task's topic, open its **start here** modules, and read",
+         "its known defects before changing anything. Regenerate with `python3 -I tools/codemap.py` (`--check` reports staleness).", "",
+         "## Choosing tests (manual and risk-based; nothing is skipped automatically)", "",
+         "- Run the topic's tests for the module you changed while you work.",
+         f"- If a changed module is marked **SHARED** (imported by {shared} or more modules), it can move quantities elsewhere: also run the",
+         "  test folders of its importers listed below, and the full suite once before you finish.",
+         "- Geometry, units, BOQ line or release-model changes are always SHARED-risk: full suite once at the end.",
+         "- The freeze check is never skipped after a change under `engine/`, `tools/`, `rules/`, `knowledge/` or `data/registry/`.", "",
+         f"Rules come from engineering knowledge {kv[-1]} (methods V2.3+) and the rule store 1.4.0 library (frozen methods). "
+         f"Defects come from: " + ", ".join(f"`{s}`" for s in cfg["defect_sources"]) + " (a later register overrides an earlier id).", "",
+         "| Topic | Start here | Rules | Open defects | BOQ items (implemented / all) |", "|---|---|---|---|---|"]
+    body = []
+    for t in cfg["topics"]:
+        rx = lambda pats: [re.compile(x) for x in pats]
+        mods = [p for p in pys if any(r.search(p) for r in rx(t["modules"]))]
+        rules = [r for r in kb if any(re.search(x, r["rule_id"]) for x in t["rules"])]
+        lrules = [r for r in lib if any(re.search(x, r["rule_id"]) for x in t["rules"])]
+        fams = [f for f in fam if any(re.search(x, f["code"]) for x in t["families"])]
+        code = []
+        for r in rules:
+            for c in r.get("code") or []:
+                c = c.split("::")[0]
+                if c.endswith(".py") and c not in code and (ROOT / c).exists():
+                    code.append(c)
+        hint = [h for h in t.get("start", []) if (ROOT / h).exists()]
+        problems += [f"topic {t['id']}: start module missing: {h}" for h in t.get("start", []) if not (ROOT / h).exists()]
+        top = sorted([m for m in mods if m.startswith("engine/source/")], key=lambda m: (-len(imported_by[m]), m))
+        start = hint + [c for c in code if c in mods and c not in hint][: max(0, 4 - len(hint))]
+        start += [m for m in top if m not in start][: max(0, 3 - len(start))]
+        start += [c for c in code if c not in start][: max(0, 6 - len(start))]
+        ttests = sorted({x.split("::")[0] for r in rules for x in (r.get("tests") or []) if (ROOT / x.split("::")[0]).exists()})
+        tdirs = Counter(p.rsplit("/", 1)[0] for p in tests if any(r.search(p) for r in rx(t["tests"])))
+        tdefs = sorted((d for d in defects.values() if any(term in d["text"] for term in t["defect_terms"])), key=lambda d: d["id"])
+        open_defs = [d for d in tdefs if not re.search(r"fixed|closed|resolved|corrected", d["status"].lower())]
+        impl = sum(1 for f in fams if f.get("capability") not in ("NOT_IMPLEMENTED",))
+        if not mods and t["modules"]:
+            problems.append(f"topic {t['id']}: no module matches (fine only if the BOQ items are NOT_IMPLEMENTED)") if impl else None
+        L.append(f"| [{t['title']}](#{t['id']}) | {', '.join(f'`{s.rsplit(chr(47), 1)[1]}`' for s in start[:3]) or 'not implemented'} | "
+                 f"{len(rules) + len(lrules)} | {len(open_defs)} | {impl} / {len(fams)} |")
+
+        B = ["", f"<a id=\"{t['id']}\"></a>", f"## {t['title']}", ""]
+        if not mods:
+            B += ["**No module implements this topic yet.** " +
+                  ("BOQ items: " + "; ".join(f"{f['code']} {f['item_en']} ({f['capability']})" for f in fams) if fams else ""), ""]
+        else:
+            B += ["**Start here** (modules that apply this topic's rules, or its most used modules):", ""]
+            for s in start:
+                n = len(imported_by[s])
+                flag = " **SHARED**" if n >= shared else ""
+                dirs = Counter(sorted(p.rsplit("/", 1)[0] for p in imported_by[s] if p.startswith("tests/")))
+                B.append(f"- `{s}` ({py_info(s)[0]} lines; imported by {n}{flag})" +
+                         (f"; importer tests: {', '.join(f'`{d}/`' for d, _ in sorted(dirs.items(), key=lambda kv: (-kv[1], kv[0]))[:4])}" if flag and dirs else ""))
+            deps = Counter(sorted(d for s in start for d in imports[s] if d not in start))
+            if deps:
+                B += ["", "**Depends on:** " + ", ".join(f"`{d}`" for d, _ in sorted(deps.items(), key=lambda kv: (-kv[1], kv[0]))[:10])]
+            cur = [m for m in mods if m.startswith("engine/source/") and m not in start]
+            old = [m for m in mods if not m.startswith("engine/source/") and m not in start]
+            if cur:
+                B += ["", "**Other current modules:** " + ", ".join(f"`{m.rsplit('/', 1)[1]}`" for m in cur)]
+            if old:
+                B += ["", "**Earlier generations / tools (check before reusing):** " + ", ".join(f"`{m}`" for m in old[:20]) +
+                      (f" +{len(old) - 20} more" if len(old) > 20 else "")]
+        if rules or lrules:
+            B += ["", "**Rules:** " + "; ".join(f"{r['rule_id']} {cell(r.get('title', ''), 70)}" for r in sorted(rules, key=lambda r: r['rule_id'])) +
+                  ("; rule store: " + ", ".join(r["rule_id"] for r in lrules) if lrules else "") + " (details: `docs/RULES_INDEX.md`)"]
+        if fams:
+            caps = Counter(f.get("capability", "") for f in fams)
+            gaps = [f"{f['code']} {f['item_en']}" for f in fams if f.get("capability") == "NOT_IMPLEMENTED"]
+            B += ["", "**BOQ coverage:** " + ", ".join(f"{k} {v}" for k, v in sorted(caps.items())) +
+                  (f". Not implemented: {'; '.join(gaps)}" if gaps else "")]
+        if ttests or tdirs:
+            B += ["", "**Tests:** " + ", ".join(f"`{x}`" for x in ttests[:10]) +
+                  ("; folders: " + ", ".join(f"`{d}/` ({n})" for d, n in sorted(tdirs.items())[:12]) if tdirs else "")]
+        if tdefs:
+            B += ["", f"**Known defects** ({len(open_defs)} open of {len(tdefs)}):", "", "| Id | Status | Defect | Evidence |", "|---|---|---|---|"]
+            B += [f"| {d['id']} | {d['status']} | {d['summary']} | `{d['evidence']}` |" for d in tdefs]
+        body += B
+    if problems:
+        L += ["", "**Index warnings:** " + "; ".join(problems)]
+    return "\n".join(L + body) + "\n", problems
+
+
 def main(argv):
     files = tracked()
-    want = {CODEMAP: build_codemap(files), RULES: build_rules(files)}
+    routing, problems = build_routing(files)
+    want = {CODEMAP: build_codemap(files), RULES: build_rules(files), ROUTING: routing}
     if "--check" in argv:
         stale = [p.relative_to(ROOT).as_posix() for p, t in want.items()
                  if not p.exists() or p.read_text(encoding="utf-8") != t]
         print("stale:", ", ".join(stale) if stale else "none")
+        for w in problems:
+            print("warning:", w)
         return 1 if stale else 0
     for p, t in want.items():
         p.write_text(t, encoding="utf-8")
