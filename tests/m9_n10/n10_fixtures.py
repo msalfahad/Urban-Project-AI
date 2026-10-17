@@ -22,6 +22,16 @@ schedule, a section). Every truth in n10_truth.py is derived by hand from the co
           WALL_ARC_IN_GAP  an arc r 3.10 m on A-WALL across the gap (a wall line inside it: not an opening)
     nested(path)   the WINDOW room drawn inside a block inserted at (5000, 2000), turned 30 degrees, with the
                    walls, glazing and door in the block (the evidence texts stay in model space, moved with it)
+    masonry_room(path, section="TOS", partition=False)
+        Phase 2B-9 example 1 (a 4.00 x 3.00 m BEDROOM, 0.20 m walls, door D1 1.00 x 2.20 in the south wall x
+        1000..2000, window W1 1.50 x 1.20 sill 1.00 in the north wall x 1250..2750, glazing at mid wall), its tags and
+        schedule, and its own SECTION A-A on the GROUND FLOOR band:
+          section="TOS"     F.F.L. +-0.00, T.O.S. -0.10, F.C.L. +3.00, U/S SLAB +3.10 (panel 3.20 m, build-up 0.10)
+          section="BOB"     the same with B.O.B. +2.60 (a beam bottom: beam depth 0.50 m below the soffit)
+          section="NO_TOS"  F.F.L., F.C.L., U/S SLAB only (no structural slab top: the masonry height is not given)
+          section="TWO"     SECTION A-A (T.O.S. -0.10) and SECTION B-B (T.O.S. -0.15): the sections disagree
+          section=None      no section at all
+        partition=True adds a 0.15 m partition x 3000..3150 from the south to the north wall's inner faces
 Every plan has the sheet frame and title the admission needs."""
 
 from __future__ import annotations
@@ -174,5 +184,42 @@ def nested(path, evidence=FULL):
         F9._schedule(msp, ["D1", "W4"], ROWS)
     if "SECTION" in evidence:
         F9._section(msp)
+    doc.saveas(str(path))
+    return Path(path)
+
+
+def _level_section(msp, x0, title, levels):
+    """a section sheet on the GROUND FLOOR band: each (label, value_m) text at its level line (y = value x 1000)."""
+    F9._frame(msp, x0, x0 + 30000, title)
+    for label, v in levels:
+        y = v * 1000
+        msp.add_line((x0 + 2000, y), (x0 + 12000, y), dxfattribs={"layer": "A-SECT"})
+        F9._text(msp, f"{label} {'+' if v > 0 else ('-' if v < 0 else '%s' % chr(177))}{abs(v):.2f}", x0 + 12500, y)
+    F9._text(msp, "GROUND FLOOR", x0 + 3000, 1500)
+
+
+TOS_LEVELS = [("F.F.L.", 0.0), ("T.O.S.", -0.10), ("F.C.L.", 3.00), ("U/S SLAB", 3.10)]
+
+
+def masonry_room(path, section="TOS", partition=False):
+    doc, msp = F6._doc()
+    doc.layers.add("A-SECT")
+    F9._walls_rect(msp, [(1000, 2000)], [(1250, 2750)])
+    F6._door(msp, 1000, 2000)
+    msp.add_line((1250, 3300), (2750, 3300), dxfattribs={"layer": GLAZ})
+    if partition:
+        F6._lines(msp, [((3000, 200), (3000, 3200)), ((3150, 200), (3150, 3200))])
+    F9._text(msp, "BEDROOM", 2000, 1700)
+    F9._evidence(msp, frozenset({"TAGS", "SCHEDULE"}), ["D1", "W1"], {"D1": (1400, -500), "W1": (1900, 3700)},
+                 (2000, 1700))
+    if section == "TOS":
+        _level_section(msp, 58000, "SECTION A-A", TOS_LEVELS)
+    elif section == "BOB":
+        _level_section(msp, 58000, "SECTION A-A", TOS_LEVELS + [("B.O.B.", 2.60)])
+    elif section == "NO_TOS":
+        _level_section(msp, 58000, "SECTION A-A", [x for x in TOS_LEVELS if x[0] != "T.O.S."])
+    elif section == "TWO":
+        _level_section(msp, 58000, "SECTION A-A", TOS_LEVELS)
+        _level_section(msp, 90000, "SECTION B-B", [x if x[0] != "T.O.S." else ("T.O.S.", -0.15) for x in TOS_LEVELS])
     doc.saveas(str(path))
     return Path(path)

@@ -132,7 +132,7 @@ Risk **HIGH** (recommended validation L3). Ask about: wall, blockwork, block, ma
 - `engine/source/wall_contact_path.py` (695 lines, HIGH; imported by 21 directly, 24 transitively, SHARED)
 - `engine/source/wall_bands.py` (1036 lines, HIGH; imported by 20 directly, 50 transitively, SHARED)
 - `engine/source/arch_rooms.py` (2236 lines, HIGH; imported by 27 directly, 57 transitively, SHARED)
-- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 4 directly, 44 transitively)
+- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 5 directly, 58 transitively)
 
 **Depends on:** `engine/source/arch_plan.py`, `engine/source/arch_v27.py`, `engine/source/member_detection.py`, `engine/source/release_safety.py`, `engine/source/topology.py`, `engine/source/arch_v29.py`, `engine/source/drawing_model.py`, `engine/source/geometry_role.py`, `engine/source/lintel_measure.py`, `engine/source/plane_poly.py`
 
@@ -144,7 +144,7 @@ Risk **HIGH** (recommended validation L3). Ask about: wall, blockwork, block, ma
 
 **Validation:** L1 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b8/test_p2b8_recognition.py tests/m9_p2b9/test_p2b9_walls.py`
 L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b7 tests/m9_p2b8 tests/m9_p2b9 tests/m9_p2b6 tests/m9_s2_arch`
-L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b7 tests/m9_p2b8 tests/m9_p2b9 tests/m9_p2b6 tests/m9_s2_arch tests/m9_s6 tests/m9_p2b0 tests/m9_p2a tests/m9_kb tests/m9_p2b2 tests/m9_s5` + freeze check
+L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b7 tests/m9_p2b8 tests/m9_p2b9 tests/m9_p2b6 tests/m9_s2_arch tests/m9_s6 tests/m9_p2b0 tests/m9_kb tests/m9_p2a tests/m9_p2b2 tests/m9_s5` + freeze check
 L4 full suite + freeze check (see above)
 
 **Known defects** (3 unresolved of 4):
@@ -203,7 +203,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: window, glazing, sill,
 - `engine/source/schedule_reader.py` (352 lines, CRITICAL, frozen; imported by 3 directly, 65 transitively)
 - `engine/source/opening_census.py` (474 lines, CRITICAL, frozen; imported by 9 directly, 102 transitively)
 - `engine/source/schedule_grammar.py` (98 lines, CRITICAL, frozen; imported by 7 directly, 74 transitively)
-- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 4 directly, 44 transitively)
+- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 5 directly, 58 transitively)
 
 **Depends on:** `engine/source/drawing_model.py`, `engine/source/release_safety.py`
 
@@ -242,7 +242,7 @@ Risk **HIGH** (recommended validation L3). Ask about: plaster, paint, tile, tili
 - `engine/source/arch_measure.py` (1165 lines, HIGH; imported by 16 directly, 42 transitively, SHARED)
 - `engine/source/wall_height.py` (90 lines, MEDIUM; imported by 4 directly, 45 transitively)
 - `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 8 directly, 47 transitively)
-- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 4 directly, 44 transitively)
+- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 5 directly, 58 transitively)
 
 **Depends on:** `engine/source/arch_rooms.py`, `engine/source/knowledge.py`, `engine/source/release_safety.py`, `engine/source/arch_completeness.py`, `engine/source/arch_floor.py`, `engine/source/boq_line.py`, `engine/source/material_result.py`, `engine/source/material_spec.py`, `engine/source/membrane_layout.py`, `engine/source/plane_poly.py`
 
@@ -254,7 +254,7 @@ Risk **HIGH** (recommended validation L3). Ask about: plaster, paint, tile, tili
 
 **Validation:** L1 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_kb/test_kb_finish_scope.py tests/m9_p2b9/test_p2b9_heights.py tests/m9_p2b9/test_p2b9_openings.py tests/m9_s5/test_s5_ceilings_wp.py`
 L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b5 tests/m9_p2b7 tests/m9_p2b8 tests/m9_p2b9 tests/m9_p2b3 tests/m9_p2b4`
-L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b5 tests/m9_p2b7 tests/m9_p2b8 tests/m9_p2b9 tests/m9_p2b3 tests/m9_p2b4 tests/m9_s6 tests/m9_p2b0 tests/m9_p2a tests/m9_p2b2 tests/m9_s5 tests/m9_kb` + freeze check
+L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b5 tests/m9_p2b7 tests/m9_p2b8 tests/m9_p2b9 tests/m9_p2b3 tests/m9_p2b4 tests/m9_s6 tests/m9_p2b0 tests/m9_p2a tests/m9_kb tests/m9_p2b2 tests/m9_s5` + freeze check
 L4 full suite + freeze check (see above)
 
 **Known defects** (6 unresolved of 12):
@@ -450,7 +450,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: boq, total, release, r
 
 **Open first:**
 
-- `tools/urban_boq_m9.py` (2771 lines, HIGH; imported by 28 directly, 28 transitively, SHARED)
+- `tools/urban_boq_m9.py` (2916 lines, HIGH; imported by 28 directly, 28 transitively, SHARED)
 - `engine/source/delta_release.py` (159 lines, CRITICAL, frozen; imported by 37 directly, 37 transitively, SHARED)
 - `engine/source/boq_line.py` (386 lines, HIGH; imported by 17 directly, 57 transitively, SHARED)
 - `engine/source/knowledge.py` (286 lines, HIGH; imported by 22 directly, 59 transitively, SHARED)

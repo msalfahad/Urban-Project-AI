@@ -60,3 +60,29 @@ D2_H = 2.20                                            # no D2 row: the owner re
 D2_PLASTER = GROSS - DOOR1_W * DOOR1_H - GAP_INNER * D2_H      # 27.737167 m2
 PASSAGE_PLASTER = GROSS - DOOR1_W * DOOR1_H - GAP_INNER * H    # 26.937167 m2 (a passage is deducted full height)
 GAP_SKIRTING = PERIM - DOOR1_W - GAP_INNER                     # 8.712389 m
+
+# ------------------------------------------------------------------------------------- masonry (masonry_room)
+# Phase 2B-9 example 1: outer 4.40 x 3.40 m, inner 4.00 x 3.00 m, 0.20 m walls; door D1 1.00 m (south), window W1
+# 1.50 m (north); SECTION A-A: F.F.L. +-0.00, T.O.S. -0.10, U/S SLAB +3.10, (B.O.B. +2.60)
+MAS_T = 0.20
+MAS_PLAN = 4.40 * 3.40 - 4.00 * 3.00 - 1.00 * MAS_T - 1.50 * MAS_T     # 2.46 m2 wall mass in plan (gaps are open)
+MAS_RUN_EQ = MAS_PLAN / MAS_T                                           # 12.30 m = centreline 14.80 - 1.00 - 1.50
+MAS_PANEL = 3.10 - (-0.10)                                              # 3.20 m: T.O.S. to U/S SLAB
+MAS_BUILDUP = 0.00 - (-0.10)                                            # 0.10 m: F.F.L. - T.O.S.
+MAS_DOOR_IN_PANEL = 2.20 + MAS_BUILDUP                                  # 2.30 m: the door opening stands on the slab
+MAS_ABOVE_DOOR = 1.00 * (MAS_PANEL - MAS_DOOR_IN_PANEL)                 # 0.90 m2 of wall over the door
+MAS_WIN_WALL = 1.50 * (MAS_PANEL - 1.20)                                # 3.00 m2 of wall below and above the window
+MAS_AREA = MAS_RUN_EQ * MAS_PANEL + MAS_ABOVE_DOOR + MAS_WIN_WALL       # 39.36 + 0.90 + 3.00 = 43.26 m2
+MAS_AREA_CENTRELINE_CHECK = 2 * (4.20 + 3.20) * MAS_PANEL - 1.00 * MAS_DOOR_IN_PANEL - 1.50 * 1.20   # 43.26 m2 too
+MAS_VOLUME = MAS_AREA * MAS_T                                           # 8.652 m3
+# with a beam bottom B.O.B. +2.60 (0.50 m below the soffit) and no plan of which walls carry it: a range
+MAS_PANEL_BEAM = 2.60 - (-0.10)                                         # 2.70 m
+MAS_AREA_LOW = MAS_RUN_EQ * MAS_PANEL_BEAM + 1.00 * (MAS_PANEL_BEAM - MAS_DOOR_IN_PANEL) + \
+    1.50 * (MAS_PANEL_BEAM - 1.20)                                      # 33.21 + 0.40 + 2.25 = 35.86 m2
+# a 0.15 m partition x 3.00 .. 3.15 between the south and north inner faces: two thickness families, the four 0.20
+# corners (4 x 0.20 x 0.20 = 0.16 m2) are not given to a thickness
+MAS_PART_T = 0.15
+MAS_PART_AREA = (MAS_PART_T * 3.00) / MAS_PART_T * MAS_PANEL            # 3.00 m x 3.20 = 9.60 m2
+MAS_PART_VOLUME = MAS_PART_AREA * MAS_PART_T                            # 1.44 m3
+MAS_EXT_AREA_WITH_PART = (MAS_PLAN - 4 * MAS_T * MAS_T) / MAS_T * MAS_PANEL + MAS_ABOVE_DOOR + MAS_WIN_WALL  # 40.70
+MAS_JUNCTION_VOLUME = 4 * MAS_T * MAS_T * MAS_PANEL                     # 0.512 m3

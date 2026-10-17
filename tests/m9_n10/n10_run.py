@@ -9,6 +9,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent / "m9_p2b9"))
+sys.path.insert(0, str(HERE.parent / "m9_p2b6"))
 
 import p2b9_run as R9                                         # noqa: E402
 
@@ -32,3 +33,24 @@ def floor_area(out):
 def range_of(out, item_code, element):
     ln = the(out, item_code, element)
     return ln.get("bounded_range") or {}
+
+
+def run_facts(dxf, out, facts, *, method=V29, roles=None):
+    """the CLI with a stated facts file (URBAN_ARCH_FACTS_V1) written next to the output."""
+    import subprocess
+    import p2b6_run as R6
+    out = Path(out)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    fp = out.parent / (out.name + "_facts.json")
+    fp.write_text(json.dumps(dict({"schema": "URBAN_ARCH_FACTS_V1"}, **facts)), encoding="utf-8")
+    argv = [sys.executable, "-I", str(R6.CLI), "arch", "--drawings", str(dxf), "--out", str(out), "--method", method,
+            "--facts", str(fp)]
+    if roles:
+        argv += ["--layer-roles", *roles]
+    r = subprocess.run(argv, capture_output=True, text=True, cwd=str(out.parent))
+    assert r.returncode == 0, r.stdout[-1500:] + r.stderr[-1500:]
+    return out
+
+
+def masonry(out):
+    return load(out, "MASONRY.json")["floors"]

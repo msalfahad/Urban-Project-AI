@@ -31,7 +31,9 @@ the locations its drawn entities touch):
     REVIEW_INVARIANT_RELEASE    its room, its released item only
     WALL_STUB / WINDOW_SKIRTING (Phase 2B-9) the floor's walls, ARCH.WALL_RUN only / its room, FIN.SKIRTING only
     CURVED_OPENING (Phase N10)  its rooms, the opening and every strip line of it; CURVED_GLAZING_LAYER the rooms within
-                                0.35 m of the layer's entities and their openings
+                                0.35 m of the layer's entities and their openings; MASONRY_PANEL the floor's walls,
+                                ARCH.WALL_PANEL / ARCH.WALL_VOLUME / MAS.BLOCK only (no independent masonry reading:
+                                EXPLAINED_UNVERIFIED; the arithmetic is proved on hand-truth fixtures, tests/m9_n10)
     PROVENANCE                  nothing
 Independent checks (heights from the facts file, a stated project input; widths and lengths from the drawing):
     INDEPENDENT_FACE            FIN.CEILING, FIN.FLOOR.*, FIN.WP.FLOOR, ARCH.SPACE: the face area at the room
@@ -307,6 +309,8 @@ class Verifier:
             locs |= {(ln.get("location") or {}).get("room_id") for r in (self.a, self.b) for ln in r.lines
                      if sub in str((ln.get("location") or {}).get("room_id") or "") and
                      (ln.get("location") or {}).get("floor") == fl}
+        elif kind == "MASONRY_PANEL":
+            locs, items = {f"{fl}-WALLS"}, {"ARCH.WALL_PANEL", "ARCH.WALL_VOLUME", "MAS.BLOCK"}
         elif kind == "CURVED_GLAZING_LAYER":
             rooms, ops = set(), set()
             for (f2, lay), role in self.a.roles.items():

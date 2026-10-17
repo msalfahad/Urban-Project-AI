@@ -404,3 +404,192 @@ def policy_record():
             "never": ["a glazing line taken as the room boundary of a curved opening (the room ends at its own wall "
                       "face)", "a curved gap without a jamb line at both ends read as an opening",
                       "a declared layer role changed", "a mean radius used for a face's width"]}
+
+
+# ======================================================================================== masonry (UP-MAS-HEIGHT-001)
+# The wall panel of a floor runs from the top of its structural slab (T.O.S.) to the soffit above (U/S SLAB), or to
+# the bottom of a beam standing on the wall (B.O.B.). Finish heights (plaster / paint) and floor-to-floor are never a
+# masonry height; nothing is defaulted.
+MAX_BUILDUP_M = 0.30                 # the T.O.S. of a floor lies at most this below its F.F.L. (screed + finish)
+BOB_RE = r"U\s?/\s?S\.?\s*(?:OF\s*)?BEAM|B\.?\s?O\.?\s?B\.?|BOTTOM\s+OF\s+BEAM|BEAM\s+SOFFIT"
+MAS_AGREE_M = 0.005
+
+
+def _fact(facts, floor, key):
+    m = (facts or {}).get("masonry") or {}
+    v = (m.get(floor) or {}).get(key)
+    if v is None:
+        v = (m.get("*") or {}).get(key)
+    return v
+
+
+def masonry_evidence(views, texts, floor, facts, unit_m):
+    """the floor's masonry panel: {"state", "panel_m" (T.O.S. to soffit), "buildup_m" (F.F.L. - T.O.S.),
+    "beam": {"state": NONE | DEPTH | NOT_ESTABLISHED, "depth_m"}, "sources": [...], "why"}. Evidence: the section bands
+    bound to this floor carrying F.F.L., T.O.S. and U/S SLAB (and B.O.B. for beams), or the project facts
+    masonry.{floor|*}.{panel_height_m, floor_buildup_m, beams_over_walls} (stated, labelled)."""
+    import re
+    from engine.source import arch_v28 as V28
+    found = []
+    for v in (views or {}).get("views") or ():
+        lv = v.get("levels") or []
+        box = v.get("sheet_box")
+        bobs = []
+        if box:
+            for t in texts:
+                if not V28._in_box((t["x"], t["y"]), box):
+                    continue
+                s = V28.norm(t["value"])
+                if re.search(r"(?:^|[^A-Z])(?:" + BOB_RE + r")(?:$|[^A-Z])", s):
+                    vm = re.search(V28.LEVEL_VALUE, s)
+                    if vm:
+                        bobs.append({"value_m": V28._f(vm.group(1).replace("±", "").replace(" ", "")),
+                                     "text_id": t["id"], "text": t["value"]})
+        for b in v.get("bands") or ():
+            if b.get("floor") != floor:
+                continue
+            ffl, top = b["ffl_m"], b.get("next_ffl_m")
+            tos = sorted({x["value_m"] for x in lv if x["kind"] == "TOS" and ffl - MAX_BUILDUP_M - 1e-9 <=
+                          x["value_m"] <= ffl + 1e-9})
+            sof = sorted({x["value_m"] for x in lv if x["kind"] == "SOFFIT" and ffl < x["value_m"] and
+                          (top is None or x["value_m"] <= top + 1e-9)})
+            bob = sorted({x["value_m"] for x in bobs if ffl < x["value_m"] and (top is None or x["value_m"] <= top)})
+            found.append({"view": v["view_id"], "ffl_m": ffl, "tos_m": tos, "soffit_m": sof, "beam_bottom_m": bob})
+    rec = {"floor": floor, "sections": found, "sources": []}
+    tos = sorted({x for f in found for x in f["tos_m"]})
+    sof = sorted({x for f in found for x in f["soffit_m"]})
+    ffl = sorted({f["ffl_m"] for f in found if f["tos_m"] and f["soffit_m"]})
+    if tos and sof and ffl:
+        if tos[-1] - tos[0] > MAS_AGREE_M or sof[-1] - sof[0] > MAS_AGREE_M or ffl[-1] - ffl[0] > MAS_AGREE_M:
+            rec.update(state="CONFLICT", why="SECTIONS_DISAGREE: T.O.S. " + str(tos) + ", U/S SLAB " + str(sof))
+            return rec
+        rec.update(state="ESTABLISHED", panel_m=round(sof[0] - tos[0], 6), buildup_m=round(ffl[0] - tos[0], 6),
+                   kind="SECTION", sources=[{"view": f["view"], "formula": f"U/S SLAB {sof[0]:+.3f} - T.O.S. "
+                                             f"{tos[0]:+.3f}; F.F.L. {ffl[0]:+.3f}"} for f in found
+                                            if f["tos_m"] and f["soffit_m"]])
+        bob = sorted({x for f in found for x in f["beam_bottom_m"]})
+        if bob:
+            rec["beam"] = {"state": "DEPTH", "depth_m": round(sof[0] - bob[0], 6), "kind": "SECTION",
+                           "beam_bottom_m": bob[0],
+                           "note": "a beam bottom level on the floor's section: the walls under beams are not known "
+                                   "from the plan, so the panel is a range between the beam bottom and the soffit"}
+    else:
+        ph, bu = _fact(facts, floor, "panel_height_m"), _fact(facts, floor, "floor_buildup_m")
+        if ph and bu and ph.get("value_m") and bu.get("value_m") is not None:
+            rec.update(state="ESTABLISHED", panel_m=ph["value_m"], buildup_m=bu["value_m"], kind="PROJECT_RULE",
+                       sources=[{"fact": "masonry.panel_height_m", "authority": ph.get("authority")},
+                                {"fact": "masonry.floor_buildup_m", "authority": bu.get("authority")}])
+        else:
+            miss = [k for k, ok in (("T.O.S. (top of the structural slab)", bool(tos)), ("U/S SLAB", bool(sof)))
+                    if not ok]
+            rec.update(state="NOT_ESTABLISHED",
+                       why="MASONRY_HEIGHT_NOT_IN_THE_DRAWING: no section of this floor gives " + " and ".join(miss) +
+                           " (a finish height or floor-to-floor is never a masonry height)" if miss else
+                           "MASONRY_HEIGHT_NOT_IN_THE_DRAWING")
+            return rec
+    if "beam" not in rec:
+        bw = _fact(facts, floor, "beams_over_walls")
+        if bw and bw.get("state") == "NONE":
+            rec["beam"] = {"state": "NONE", "kind": "PROJECT_RULE", "authority": bw.get("authority")}
+        elif bw and bw.get("state") == "DEPTH" and bw.get("depth_m") is not None:
+            rec["beam"] = {"state": "DEPTH", "depth_m": bw["depth_m"], "kind": "PROJECT_RULE",
+                           "authority": bw.get("authority")}
+        else:
+            rec["beam"] = {"state": "NOT_ESTABLISHED",
+                           "why": "BEAMS_OVER_WALLS_NOT_ESTABLISHED: which walls carry a beam, and its depth, are not "
+                                  "in the architectural drawing (the structural plan / a section with B.O.B.)"}
+    return rec
+
+
+def masonry_family(t_m):
+    return f"{round(t_m * 100) / 100:.2f}"
+
+
+def masonry_takeoff(walls, stubs, openings, schedule, mev, unit_m=None):
+    """per thickness family: the wall panel area (m2) and volume (m3) of one floor.
+    walls: arch_walls.walls() of the floor (ARCH_TAKEOFF_V2.8 has already joined its stubs to them); stubs: further
+    stub records not in walls (normally none); openings: the floor's openings (width_m, wall_t_m, kind; a curved one
+    by its MID_BAND_ARC); schedule: {opening_id: V2.8 opening record (height)}; mev: masonry_evidence().
+    Run basis: the wall-mass plan area / t (the bands' strips, the stubs, and the floor's junction pieces when the floor
+    has one thickness family): corners and T-junctions counted once, never by the centreline twice; that run already
+    leaves every opening's width out over the full panel height, so the wall above / below each opening is added back:
+        area = run_eq x panel + sum over the family's openings of width x (panel - its height inside the panel)
+    (a door or passage stands on the slab: its height + the build-up; a window: min(its height, the panel)); an
+    opening without a height adds a range [0, width x panel]. Volume = area x t. A beam bottom of the floor's section
+    lowers the panel of the walls under beams, which the plan does not show: the area is then a range between the beam
+    bottom and the soffit. -> {"families": {...}, "junction": {...}, "state"}"""
+    out = {"families": {}, "junction": None, "evidence": mev}
+    if mev.get("state") != "ESTABLISHED":
+        return dict(out, state=mev.get("state") or "NOT_ESTABLISHED")
+    hp, b = mev["panel_m"], mev["buildup_m"]
+    beam = mev.get("beam") or {}
+    lo_h = hp - (beam.get("depth_m") or 0.0) if beam.get("state") == "DEPTH" else hp
+    fam = {}
+    for w in walls["walls"]:
+        f = fam.setdefault(w["family"], {"t_m": w["t_m"], "strip_m2": 0.0, "run_lm": 0.0, "walls": 0, "stubs": 0})
+        f["strip_m2"] += w["strip_m2"]
+        f["run_lm"] += w["net_lm"]
+        f["walls"] += 1
+        f["stubs"] += 1 if w.get("stub") else 0
+    for s in stubs or ():
+        f = fam.setdefault(masonry_family(s["t_m"]), {"t_m": s["t_m"], "strip_m2": 0.0, "run_lm": 0.0, "walls": 0,
+                                                       "stubs": 0})
+        f["strip_m2"] += s.get("plan_m2") or 0.0
+        f["run_lm"] += s.get("run_lm") or 0.0
+        f["stubs"] += 1
+    cons = walls.get("conservation") or {}
+    junction = max(0.0, (cons.get("wall_faces_m2") or 0.0) - sum(f["strip_m2"] for f in fam.values()))
+    single = len(fam) == 1
+    for k, f in sorted(fam.items()):
+        t = float(k)
+        plan = f["strip_m2"] + (junction if single else 0.0)
+        run_eq = plan / t if t > 0 else 0.0
+        add_lo, add_hi, ops, held = 0.0, 0.0, [], []
+        for o in openings:
+            if masonry_family(o["wall_t_m"]) != k:
+                continue
+            w = o["curved"]["bases_m"]["MID_BAND_ARC"] if o.get("curved") else o["width_m"]
+            hv = ((schedule.get(o["opening_id"]) or {}).get("height") or {}).get("value_m")
+            gov = ((schedule.get(o["opening_id"]) or {}).get("height") or {}).get("governing")
+            if hv is None:
+                held.append(o["opening_id"])
+                add_hi += w * hp                              # nothing of the opening is wall .. all of it is
+                ops.append({"opening_id": o["opening_id"], "kind": o["kind"], "width_m": round(w, 6),
+                            "added_back_m2": None, "why": f"{o['kind']}_HEIGHT_NOT_ESTABLISHED"})
+                continue
+            h_in = min(hv + (b if o["kind"] in ("DOOR", "PASSAGE") else 0.0), hp)
+            a_hi_i, a_lo_i = w * (hp - h_in), w * max(0.0, lo_h - h_in)
+            add_lo += a_lo_i
+            add_hi += a_hi_i
+            ops.append({"opening_id": o["opening_id"], "kind": o["kind"], "width_m": round(w, 6),
+                        "height_in_panel_m": round(h_in, 6), "added_back_m2": round(a_hi_i, 6),
+                        **({"height_assumed": gov} if gov in ("URBAN_DEFAULT", "PROJECT_RULE") else {})})
+        a_hi = run_eq * hp + add_hi
+        a_lo = run_eq * lo_h + add_lo
+        rec = {"t_m": round(t, 4), "walls": f["walls"], "stubs": f["stubs"], "band_run_lm": round(f["run_lm"], 6),
+               "plan_m2": round(plan, 6), "run_equivalent_lm": round(run_eq, 6),
+               "junction_in_family_m2": round(junction if single else 0.0, 6), "panel_m": hp,
+               "panel_to_beam_m": round(lo_h, 6) if lo_h != hp else None, "openings": ops,
+               "openings_held": sorted(held)}
+        if beam.get("state") == "NOT_ESTABLISHED":
+            rec.update(state="HELD_UPPER_BOUND", area_upper_m2=round(a_hi, 6), volume_upper_m3=round(a_hi * t, 6),
+                       why=beam["why"] + ("; opening height not established: " + ", ".join(sorted(held))
+                                          if held else ""))
+        elif abs(a_hi - a_lo) <= 1e-9:
+            rec.update(state="MEASURED", area_m2=round(a_hi, 6), volume_m3=round(a_hi * t, 6))
+        else:
+            rec.update(state="RANGE", area_low_m2=round(a_lo, 6), area_high_m2=round(a_hi, 6),
+                       volume_low_m3=round(a_lo * t, 6), volume_high_m3=round(a_hi * t, 6),
+                       why="; ".join(x for x in ((beam.get("note") if beam.get("state") == "DEPTH" else None),
+                                                 ("opening height not established: " + ", ".join(sorted(held))
+                                                  if held else None)) if x))
+        out["families"][k] = rec
+    if not single and junction > 1e-9:
+        out["junction"] = {"plan_m2": round(junction, 6), "volume_m3": round(junction * hp, 6),
+                           "volume_low_m3": round(junction * lo_h, 6),
+                           "state": "HELD_UPPER_BOUND" if beam.get("state") == "NOT_ESTABLISHED" else
+                           ("MEASURED" if lo_h == hp else "RANGE"),
+                           "note": "junction pieces between walls of different thicknesses: their plan area is "
+                                   "measured, not given to a thickness (a corner of a 0.20 and a 0.10 wall belongs "
+                                   "to neither alone)"}
+    return dict(out, state="ESTABLISHED")
