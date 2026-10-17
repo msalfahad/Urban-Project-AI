@@ -56,8 +56,48 @@ The same check passed after every engine change of this phase:
 
 ## 3. Full suite against the Phase 2B-6 end, test by test
 
-The full suite is running in a clean clone of `b933a16`. Its test-by-test comparison with the Phase 2B-6 end
-(`566ee88`) will replace this paragraph. Until then no full-suite result is claimed.
+Run in a clean clone of `b933a16` (the V2.7 code commit), with its own `--basetemp`, in 26 min 54 s. The clone links
+the git-ignored private drawings folder `data/inputs` exactly as the Phase 2B-6 baseline clone did. pytest exits 1
+because of the known private-data failures.
+
+| run | tests | passed | failed | errors | skipped | xfailed |
+|---|---|---|---|---|---|---|
+| `566ee88` (Phase 2B-6 end) | 9 040 | 8 401 | 345 | 32 | 160 | 102 |
+| `b933a16` (Phase 2B-7) | 9 187 | 8 544 | 346 | 32 | 161 | 104 |
+
+The JUnit results were compared **test by test, by identity**:
+
+| comparison | count |
+|---|---|
+| new tests | 147: the tests of `tests/m9_p2b7`, 145 passed and 2 strict xfails |
+| removed tests | 0 |
+| passed → failed | 1: `tests/test_perf_guard.py::test_quadrupling_the_pixels_does_not_multiply_the_work_by_the_pixels` (below) |
+| failed → passed | 0 |
+| passed → skipped | 1: `tests/m1_usable_boq/test_m1_package.py::test_workbook_if_present` (below) |
+| new tests failing | 0 |
+
+The 345 failures + 32 errors common to both runs are the known private-data set (git-ignored datasets and
+workbooks not in the repository), as in Phase 2B-6. The full suite is **not** green, and these are never reported
+as passing.
+
+**The one passed → failed test is a wall-clock timing ratio, not a V2.7 change.**
+
+- **What it checks:** `engine/walls.py`, which has no changed line since the Phase 2B-6 end.
+- **What failed:** it times a 400 × 560 and an 800 × 1120 trace and requires the second to take under 12 times the
+  first. In the full run, the small trace took 0.017 s and the large one 0.244 s (ratio 14.7).
+- **Evidence it is timing, not code:**
+  - The same test passed at the same commit in an earlier full run of this phase.
+  - It passed 10 of 10 isolated re-runs in the clone.
+  - Over 20 timed trials the ratio was 2.0 – 5.4, median 4.3.
+- **Root cause:** a 17 ms baseline on a shared container. One delay in the large trace exceeds the bound. The test is
+  not changed or skipped.
+
+**The one passed → skipped test** reads a git-ignored workbook that the program's build writes. It existed in the
+baseline clone and not in the fresh one.
+
+**An earlier full run is kept for the record.** It was run in a clone without `data/inputs`, which is not comparable
+with the baseline. There, 68 tests changed state; every one of them reads the private drawings, and the run had 0
+failing new tests. It was repeated with the inputs linked, as above.
 
 ## 4. The reference plan (private; aggregates)
 

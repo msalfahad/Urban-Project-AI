@@ -3,6 +3,9 @@
 **Scope.** ARCH_TAKEOFF_V2.7 is built, opt-in, and frozen nowhere:
 
 - V1 – V2.6 are byte-identical (1240 files, 0 differ, 39 runs).
+- Full suite, compared test by test with the Phase 2B-6 end: 147 new tests, none failing; 0 failed → passed.
+  - One timing-ratio test failed once. Its module is unchanged, and it passed 10 of 10 re-runs.
+  - The suite is not green: the known 345 failures + 32 errors need private data (`TEST_EVIDENCE.md` §3).
 - No owner policy was changed.
 - No accuracy claim is made, and the blind evaluation has not started.
 
