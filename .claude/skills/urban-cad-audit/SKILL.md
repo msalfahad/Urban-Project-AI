@@ -20,7 +20,16 @@ not deducted; an area seems to include a lobby or corridor.
 
 ## Tools
 1. Run the engine read-only into a private output folder:
-   `python3 -I tools/urban_boq_m9.py arch --drawings PLAN.dxf --out OUT --method ARCH_TAKEOFF_V2.5`
+   `python3 -I tools/urban_boq_m9.py arch --drawings PLAN.dxf --out OUT --method ARCH_TAKEOFF_V2.6`
+   then the run audit (read-only; it never writes into OUT):
+   `python3 -I tools/arch_run_audit.py --run OUT --dxf PLAN.dxf --out AUDIT.json`
+   It names the known silent failure modes with their evidence and the `--layer-roles` to declare: A01 a door layer
+   typed WINDOW (an exploded single door: its swing bounds the room), A02 / A03 / A11 single-instance door / column /
+   window layers, A04 an inferred column layer (drains typed COLUMN), A05 a plan inside one block (every door held),
+   A06 column squares the inference cannot see (turned off the axes, or four LINEs), A07 curved wall bands missing
+   from the wall run, A08 a held door whose width follows its wall gap, A09 a space typed wet from wash basins alone,
+   A10 a zero-length termination line. Every HIGH finding is resolved (declare the role and re-run, or record why
+   not) before a quantity is used.
 2. Read `OUT/DRAWING_DISCOVERY.json` (gates, units, frames), `OUT/RUN_RULES.json` (`layer_roles_override`, policies),
    `OUT/ARCH_ROOMS.json` (rooms, `attached_cells`), `OUT/ARCH_OPENINGS.json` (kind, evidence, jambs),
    `OUT/DOOR_SCHEDULE.csv` (provisional doors).
@@ -56,6 +65,8 @@ A findings list: finding id, evidence (file + field), class (ENGINE DEFECT / DRA
 BOQ impact (relative), and the next action (declare a role, raise an RFI, open an opt-in method change).
 
 ## Tests
+`tests/m9_p2b6/test_p2b6_run_audit.py` (every audit finding on its synthetic case, read-only safety),
+`tests/m9_p2b6/test_p2b6_found_defects.py` (the defects as found, with hand truth; invariance under transformations),
 `tests/m9_p2b5_bench/test_bench.py::test_the_engine_with_inferred_layer_roles` (single-instance layers),
 `::test_openings_of_the_exact_dxf_readers` (declared roles), `::test_the_cad_encodings` (blocks, units, XREF),
 `tests/m9_p2b5/test_p2b5_door_reconcile.py` (D-C1), `tests/m9_p2b5/test_p2b5_curved_wall.py` (D-D2),
