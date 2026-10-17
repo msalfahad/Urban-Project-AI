@@ -16,14 +16,14 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `documents/` | 5 |  |
 | `engine/` | 578 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
-| `knowledge/` | 6 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
+| `knowledge/` | 7 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
 | `research/` | 2267 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1261 | pytest suites, one folder per round. |
-| `tools/` | 93 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
+| `tests/` | 1262 | pytest suites, one folder per round. |
+| `tools/` | 94 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
 
@@ -480,7 +480,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `ground_system_rebar.py` | 699 | CRITICAL | 1 | GROUND_SYSTEM_REBAR (S5) - accurate ground-beam and strap-beam reinforcement, occurrence by occurrence, component |
 | `ground_system_resolution.py` | 369 | MEDIUM | 1 | Ground-system source resolution (pre-S5.1): generic decisions over measured evidence, no geometry library, no kg. |
 | `independent_export.py` | 251 | MEDIUM | 2 | INDEPENDENT EXPORT ADMISSION (R8.5 follow-up) — may this DXF serve as the independent parser route? |
-| `knowledge.py` | 286 | HIGH | 22 | ENGINEERING KNOWLEDGE (M9 Phase 2B-1, ARCH_TAKEOFF_V2.3 only) - the owner rules, conflicts, question catalogue and |
+| `knowledge.py` | 287 | HIGH | 23 | ENGINEERING KNOWLEDGE (M9 Phase 2B-1, ARCH_TAKEOFF_V2.3 only) - the owner rules, conflicts, question catalogue and |
 | `legacy_text.py` | 136 | CRITICAL | 2 | LEGACY CAD TEXT DECODING (V3) - Arabic written with legacy AutoCAD SHX fonts. |
 | `level_marks.py` | 144 | MEDIUM | 3 | LEVEL MARK UNIT EVIDENCE (V1) - authored level annotations of ONE elevation / section view as unit evidence. |
 | `link_geometry.py` | 96 | CRITICAL | 2 | LINK GEOMETRY - stirrup / link topology and envelope lower bounds for accurate beam reinforcement (generic). |
@@ -637,7 +637,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `libredwg_map.py` | 489 | HIGH | 10 | D1 route: LibreDWG `dwgread` JSON -> neutral SourceEntityObservations. |
 | `unit_evidence.py` | 139 | HIGH | 2 | Deterministic unit / scale EVIDENCE from a D1 (LibreDWG JSON) decode — R8.3 §16. |
 
-## `tools/` (91 modules)
+## `tools/` (92 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -690,6 +690,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `kb_build_1_2.py` | 194 | MEDIUM | 0 | KNOWLEDGE REGISTRY 1.2.0 BUILDER (M9 Phase 2B-7) - knowledge/URBAN_ENGINEERING_KNOWLEDGE_1.2.0.json is the frozen |
 | `kb_build_1_3.py` | 197 | MEDIUM | 0 | KNOWLEDGE REGISTRY 1.3.0 BUILDER (M9 Phase 2B-8) - knowledge/URBAN_ENGINEERING_KNOWLEDGE_1.3.0.json is the frozen |
 | `kb_build_1_4.py` | 197 | MEDIUM | 0 | KNOWLEDGE REGISTRY 1.4.0 BUILDER (M9 Phase 2B-9) - knowledge/URBAN_ENGINEERING_KNOWLEDGE_1.4.0.json is the frozen |
+| `kb_build_1_5.py` | 248 | MEDIUM | 0 | KNOWLEDGE REGISTRY 1.5.0 BUILDER (M9 Phase N10) - knowledge/URBAN_ENGINEERING_KNOWLEDGE_1.5.0.json is the frozen |
 | `kb_index.py` | 178 | MEDIUM | 0 | KNOWLEDGE SOURCE INDEX (M9 Phase 2B-1) - one generated inventory of every place an owner rule, owner fact, |
 | `lineage_chain.py` | 101 | MEDIUM | 1 | §5, §6. The real 6C -> 6D -> 6E lineage, from the frozen bundles. |
 | `live_smoke.py` | 95 | MEDIUM | 0 | LIVE smoke test of every agent on real Urban Projects inputs. Cheap models for |
@@ -727,7 +728,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `synthetic_villa_m6.py` | 698 | CRITICAL | 5 | SYNTHETIC VILLA M6 - completeness cases drawn onto the M2 synthetic villa, with the truth of what was drawn. |
 | `synthetic_villa_m8.py` | 211 | CRITICAL | 4 | SYNTHETIC VILLA M8 - the M6 completeness villa with the DESIGN of every scope element it draws, so that the |
 | `urban_boq_m2.py` | 603 | CRITICAL | 16 | URBAN BOQ M2 - the one-command BOQ with ROUTE G, the generic engine, on top of the frozen M1 pipeline. |
-| `urban_boq_m9.py` | 3039 | HIGH | 28 | URBAN BOQ M9 (S1) - canonical BOQ lines, room material plans and the room-by-room workbook, on top of route G. |
+| `urban_boq_m9.py` | 3044 | HIGH | 28 | URBAN BOQ M9 (S1) - canonical BOQ lines, room material plans and the room-by-room workbook, on top of route G. |
 | `urban_intake.py` | 225 | CRITICAL | 24 | URBAN INTAKE (M2) - one drawing file -> a plain, source-pointed geometry record for the generic engine. |
 | `urban_project_run.py` | 321 | CRITICAL | 1 | URBAN PROJECT RUN (M7) - one manifest per project; the blind protocol enforced by the tool, not remembered. |
 | `urban_structural_boq.py` | 602 | CRITICAL | 3 | URBAN STRUCTURAL BOQ (M1) - one command from a drawing set to a planning BOQ, an exception report, Excel and PDF. |
@@ -741,7 +742,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 
 `tools/run_pipeline.py` symbols: def bands_to_pairs (L169-178), def side_coverage (L181-206), def host_band_for (L209-224), def raster_overlap (L227-274), def tolerance_sensitivity (L287-328), class NoSpaceMap (L359-376), def load_space_map (L379-399), def run (L402-2060), def main (L2063-2118)
 
-`tools/urban_boq_m9.py` symbols: def revision_set_sha256 (L170-171), def structural_lines (L174-181), def run_rules (L184-188), def write_m9 (L191-230), def cmd_run (L233-253), def cmd_rooms (L256-262), class CompletenessFailed (L275-281), def arch_compute (L284-307), def K_value (L2349-2351), def v21_files (L2517-2590), def cmd_arch (L2717-2874), def cmd_tiles (L2888-2900), def cmd_membrane (L2903-2916), def cmd_rooms_check (L2919-2921), def cmd_rules (L2924-2930), def main (L2933-3034)
+`tools/urban_boq_m9.py` symbols: def revision_set_sha256 (L170-171), def structural_lines (L174-181), def run_rules (L184-188), def write_m9 (L191-230), def cmd_run (L233-253), def cmd_rooms (L256-262), class CompletenessFailed (L275-281), def arch_compute (L284-307), def K_value (L2354-2356), def v21_files (L2522-2595), def cmd_arch (L2722-2879), def cmd_tiles (L2893-2905), def cmd_membrane (L2908-2921), def cmd_rooms_check (L2924-2926), def cmd_rules (L2929-2935), def main (L2938-3039)
 
 ## `pipeline/` (4 modules)
 
@@ -843,7 +844,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/m8_full_scope/` | 2 |
 | `tests/m9_foundation/` | 8 |
 | `tests/m9_kb/` | 7 |
-| `tests/m9_n10/` | 5 |
+| `tests/m9_n10/` | 6 |
 | `tests/m9_p2a/` | 6 |
 | `tests/m9_p2b0/` | 6 |
 | `tests/m9_p2b2/` | 5 |

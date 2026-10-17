@@ -146,7 +146,7 @@ V28_KNOWLEDGE = "1.4.0"           # the registry V2.8 reads (UP-HGT-001, UP-OPEN
 # no earlier method reaches it (their call paths pass no v29 flag and no opening of theirs carries "curved").
 V29 = "ARCH_TAKEOFF_V2.9"
 ARCH_POLICY_ID_V29 = "URBAN_BOQ_M9_N10_ARCH_V2_9"
-V29_KNOWLEDGE = "1.4.0"
+V29_KNOWLEDGE = "1.5.0"           # the registry V2.9 reads (UP-OPEN-CURVED-001, UP-MAS-HEIGHT-001, UP-FACADE-001)
 V271_FAMILY = (V271, V28, V29)
 V27_FAMILY = (V27, V271, V28, V29)
 M9_DIR = "m9"
@@ -1006,13 +1006,14 @@ V29_ITEMS = {"ARCH.WALL_PANEL": ("Wall panel area by thickness (T.O.S. to soffit
 
 
 def _v29_line(ctx, *, item_code, room, element, unit, net, formula, inputs, ev=None, bounded=None, rfi=None,
-              notes="", material_state="BY_SPEC"):
-    """an ARCH_TAKEOFF_V2.9 line (the arch_measure line contract; new item codes carry their own names)."""
+              notes="", material_state="BY_SPEC", rule_id=ARCH_POLICY_ID_V29):
+    """an ARCH_TAKEOFF_V2.9 line (the arch_measure line contract; new item codes carry their own names; rule_id: the
+    registry 1.5.0 rule the line applies)."""
     from engine.source import arch_measure as AM
     en, ar, tr = V29_ITEMS.get(item_code, (None, None, None))
     if ev is None:
         ev = "SOURCE_DERIVED" if net is not None else ("BOUNDED_EXPOSURE" if bounded else "BLOCKED_RFI")
-    ref = {"rule_id": ARCH_POLICY_ID_V29, "version": "1", "rule_set": AM.RULE_SET,
+    ref = {"rule_id": rule_id, "version": "1", "rule_set": AM.RULE_SET,
            "rule_set_digest": RS.rule_set(AM.RULE_SET)["digest"]}
     return BL.make_line(project_id=ctx["project_id"], revision_set_sha256=ctx["revision_set_sha256"],
                         item_code=item_code, unit=unit, evidence_state=ev,
@@ -1031,7 +1032,9 @@ def _v29_masonry(S, floor, schedule, HE, texts, facts, u, ctx):
     (ARCH.WALL_VOLUME, m3) from the evidenced masonry height (engine.source.arch_v29.masonry_takeoff); MAS.BLOCK takes
     the panel area only when the family's material is stated (facts masonry.materials) - otherwise it stays an RFI
     naming exactly what is missing. -> (lines, unresolved, record)"""
+    from functools import partial
     from engine.source import arch_v29 as V29M
+    line = partial(_v29_line, rule_id="UP-MAS-HEIGHT-001")
     mev = V29M.masonry_evidence(HE.views, texts, floor, facts, u)
     take = V29M.masonry_takeoff(S["walls"], (), S["openings"], schedule, mev, u)   # V2.8 stubs are in the walls
     walls = {"room_id": f"{floor}-WALLS", "floor": floor, "name_en": "Walls", "name_ar": BL.ITEMS["ARCH.WALL_RUN"][1]}
@@ -1046,7 +1049,7 @@ def _v29_masonry(S, floor, schedule, HE, texts, facts, u, ctx):
             why = mev.get("why") or take.get("state")
             q = f"MASONRY_NOT_MEASURED (walls t={k} m): {why}"
             for code, unit in (("ARCH.WALL_PANEL", "m2"), ("ARCH.WALL_VOLUME", "m3")):
-                lines.append(_v29_line(ctx, item_code=code, room=walls, element=el, unit=unit, net=None,
+                lines.append(line(ctx, item_code=code, room=walls, element=el, unit=unit, net=None,
                                        formula="wall-mass plan area / t x masonry height - openings",
                                        inputs={"thickness_family_m": k, "masonry_evidence": mev.get("state")},
                                        rfi={"question": q, "unlocks": walls["room_id"]}))
@@ -1062,14 +1065,14 @@ def _v29_masonry(S, floor, schedule, HE, texts, facts, u, ctx):
             if r["state"] == "MEASURED":
                 pairs = (("ARCH.WALL_PANEL", "m2", r["area_m2"], None), ("ARCH.WALL_VOLUME", "m3", r["volume_m3"], None))
                 for code, unit, v, b in pairs:
-                    lines.append(_v29_line(ctx, item_code=code, room=walls, element=el, unit=unit, net=v,
+                    lines.append(line(ctx, item_code=code, room=walls, element=el, unit=unit, net=v,
                                            ev="PROVISIONAL", formula=f_area + (" x t" if unit == "m3" else ""),
                                            inputs=inp, notes="MASONRY_PANEL: the geometry of the wall panel; the "
                                            "wall material is a separate item (MAS.BLOCK)"))
             elif r["state"] == "RANGE":
                 for code, unit, lo, hi in (("ARCH.WALL_PANEL", "m2", r["area_low_m2"], r["area_high_m2"]),
                                            ("ARCH.WALL_VOLUME", "m3", r["volume_low_m3"], r["volume_high_m3"])):
-                    lines.append(_v29_line(ctx, item_code=code, room=walls, element=el, unit=unit, net=None,
+                    lines.append(line(ctx, item_code=code, room=walls, element=el, unit=unit, net=None,
                                            formula=f_area, inputs=inp,
                                            bounded={"low": lo, "high": hi, "basis": r["why"]}))
                 unres.append({"room_id": walls["room_id"], "floor": floor, "item": f"ARCH.WALL_PANEL {el}",
@@ -1078,14 +1081,14 @@ def _v29_masonry(S, floor, schedule, HE, texts, facts, u, ctx):
                 q = f"MASONRY_PANEL_HELD (walls t={k} m): {r['why']}; upper bound {r['area_upper_m2']:.2f} m2"
                 for code, unit, up in (("ARCH.WALL_PANEL", "m2", r["area_upper_m2"]),
                                        ("ARCH.WALL_VOLUME", "m3", r["volume_upper_m3"])):
-                    lines.append(_v29_line(ctx, item_code=code, room=walls, element=el, unit=unit, net=None,
+                    lines.append(line(ctx, item_code=code, room=walls, element=el, unit=unit, net=None,
                                            formula=f_area, inputs=dict(inp, upper_bound=up),
                                            rfi={"question": q, "unlocks": walls["room_id"]}))
                 unres.append({"room_id": walls["room_id"], "floor": floor, "item": f"ARCH.WALL_PANEL {el}",
                               "reason": q})
         # MAS.BLOCK: the material item - the panel area when the family's material is stated
         if r is not None and r["state"] == "MEASURED" and mat and mat.get("authority"):
-            lines.append(_v29_line(ctx, item_code="MAS.BLOCK", room=walls, element=el, unit="m2", net=r["area_m2"],
+            lines.append(line(ctx, item_code="MAS.BLOCK", room=walls, element=el, unit="m2", net=r["area_m2"],
                                    ev="PROVISIONAL", formula="ARCH.WALL_PANEL of the family (its material stated)",
                                    inputs={"thickness_family_m": k, "material": mat.get("value"),
                                            "material_authority": mat.get("authority"), "panel_m2": r["area_m2"]},
@@ -1097,7 +1100,7 @@ def _v29_masonry(S, floor, schedule, HE, texts, facts, u, ctx):
                 ([] if mat and mat.get("authority") else ["the wall material of t=" + k + " m (block type / RC / "
                                                          "partition: legend, specification or a project fact)"])
             q = f"BLOCK_WALL_NOT_ESTABLISHED (walls t={k} m): " + "; ".join(miss)
-            lines.append(_v29_line(ctx, item_code="MAS.BLOCK", room=walls, element=el, unit="m2", net=None,
+            lines.append(line(ctx, item_code="MAS.BLOCK", room=walls, element=el, unit="m2", net=None,
                                    formula="ARCH.WALL_PANEL of the family x its stated material",
                                    inputs={"thickness_family_m": k, "panel": (r or {}).get("state"),
                                            "material": (mat or {}).get("value")},
@@ -1109,17 +1112,17 @@ def _v29_masonry(S, floor, schedule, HE, texts, facts, u, ctx):
         el = "walls junctions (mixed thickness)"
         inp = {"plan_m2": j["plan_m2"], "panel_m": mev.get("panel_m"), "note": j["note"]}
         if j["state"] == "MEASURED":
-            lines.append(_v29_line(ctx, item_code="ARCH.WALL_VOLUME", room=walls, element=el, unit="m3",
+            lines.append(line(ctx, item_code="ARCH.WALL_VOLUME", room=walls, element=el, unit="m3",
                                    net=j["volume_m3"], ev="PROVISIONAL", formula="junction plan area x panel height",
                                    inputs=inp))
         elif j["state"] == "RANGE":
-            lines.append(_v29_line(ctx, item_code="ARCH.WALL_VOLUME", room=walls, element=el, unit="m3", net=None,
+            lines.append(line(ctx, item_code="ARCH.WALL_VOLUME", room=walls, element=el, unit="m3", net=None,
                                    formula="junction plan area x panel height", inputs=inp,
                                    bounded={"low": j["volume_low_m3"], "high": j["volume_m3"],
                                             "basis": "the beam bottom of the floor's section"}))
         else:
             q = f"MASONRY_PANEL_HELD (junctions): upper bound {j['volume_m3']:.3f} m3; beams over walls not established"
-            lines.append(_v29_line(ctx, item_code="ARCH.WALL_VOLUME", room=walls, element=el, unit="m3", net=None,
+            lines.append(line(ctx, item_code="ARCH.WALL_VOLUME", room=walls, element=el, unit="m3", net=None,
                                    formula="junction plan area x panel height", inputs=dict(inp, upper_bound=j["volume_m3"]),
                                    rfi={"question": q, "unlocks": walls["room_id"]}))
     rec = {"floor": floor, "evidence": mev, "families": take["families"], "junction": j, "state": take.get("state")}
@@ -1133,7 +1136,9 @@ def _v29_facade(S, floor, schedule, HE, facts, ctx, lowest):
     facade area when the finish is stated, otherwise an RFI). A second outline is reported, never added; an outline
     around the building holds the facade; the lowest floor's plinth (below its F.F.L.) is an RFI.
     -> (lines, unresolved, record)"""
+    from functools import partial
     from engine.source import arch_v29 as V29M
+    line = partial(_v29_line, rule_id="UP-FACADE-001")
     fo = (S.get("v29") or {}).get("facade") or {"state": "NO_OUTLINE", "outlines": [], "islands": 0}
     ev = V29M.facade_evidence(HE.views, floor, facts)
     fac = {"room_id": f"{floor}-FACADE", "floor": floor, "name_en": "Facade", "name_ar": V29_ITEMS["ARCH.FACADE"][1]}
@@ -1147,7 +1152,7 @@ def _v29_facade(S, floor, schedule, HE, facts, ctx, lowest):
     f_area = "facade run x (next F.F.L. - F.F.L.) - each opening on the outline x its own band"
 
     def held(code, el, unit, q, inputs, formula):
-        lines.append(_v29_line(ctx, item_code=code, room=fac, element=el, unit=unit, net=None, formula=formula,
+        lines.append(line(ctx, item_code=code, room=fac, element=el, unit=unit, net=None, formula=formula,
                                inputs=inputs, rfi={"question": q, "unlocks": fac["room_id"]}))
         unres.append({"room_id": fac["room_id"], "floor": floor, "item": f"{code} {el}", "reason": q})
 
@@ -1163,7 +1168,7 @@ def _v29_facade(S, floor, schedule, HE, facts, ctx, lowest):
         return lines, unres, rec
     main = fo["outlines"][0]
     several = fo["state"] == "SEVERAL_OUTLINES"
-    lines.append(_v29_line(ctx, item_code="ARCH.FACADE_RUN", room=fac, element="facade", unit="lm",
+    lines.append(line(ctx, item_code="ARCH.FACADE_RUN", room=fac, element="facade", unit="lm",
                            net=main["perimeter_m"], ev="PROVISIONAL" if several else "SOURCE_DERIVED", formula=f_run,
                            inputs={k: main[k] for k in ("perimeter_m", "plate_m2", "face_lm", "by_role", "openings",
                                                         "door_closures", "other_lm", "twice_lm")},
@@ -1182,19 +1187,19 @@ def _v29_facade(S, floor, schedule, HE, facts, ctx, lowest):
         held("ARCH.FACADE", "facade", "m2", f"FACADE_AREA_NOT_MEASURED: {ev.get('why')}; run {main['perimeter_m']:.2f} m",
              inp, f_area)
     elif take["state"] == "MEASURED":
-        lines.append(_v29_line(ctx, item_code="ARCH.FACADE", room=fac, element="facade", unit="m2",
+        lines.append(line(ctx, item_code="ARCH.FACADE", room=fac, element="facade", unit="m2",
                                net=take["net_m2"], ev="PROVISIONAL", formula=f_area,
                                inputs=dict(inp, gross_m2=take["gross_m2"], openings=take["openings"]),
                                notes="FACADE: the geometry of the exterior face; the finish is a separate item"))
     else:
-        lines.append(_v29_line(ctx, item_code="ARCH.FACADE", room=fac, element="facade", unit="m2", net=None,
+        lines.append(line(ctx, item_code="ARCH.FACADE", room=fac, element="facade", unit="m2", net=None,
                                formula=f_area, inputs=dict(inp, gross_m2=take["gross_m2"], openings=take["openings"]),
                                bounded={"low": take["net_low_m2"], "high": take["net_high_m2"],
                                         "basis": "openings on the outline without an established height"}))
         unres.append({"room_id": fac["room_id"], "floor": floor, "item": "ARCH.FACADE facade",
                       "reason": "FACADE_RANGE: openings on the outline without an established height"})
     if take["state"] == "MEASURED" and fin.get("authority"):
-        lines.append(_v29_line(ctx, item_code="FIN.EXT.FINISH", room=fac, element="facade", unit="m2",
+        lines.append(line(ctx, item_code="FIN.EXT.FINISH", room=fac, element="facade", unit="m2",
                                net=take["net_m2"], ev="PROVISIONAL", formula="ARCH.FACADE (its finish stated)",
                                inputs={"finish": fin.get("value"), "finish_authority": fin.get("authority"),
                                        "facade_net_m2": take["net_m2"]},

@@ -1,0 +1,4954 @@
+{
+ "base": {
+  "sha256": "437c62ece91af49e5826852c5f6dbcc9feba201d59a6d7b721a439f53857dc06",
+  "version": "1.4.0"
+ },
+ "conflicts": [
+  {
+   "between": [
+    "UP-DOOR-MIN-001",
+    "UP-DOOR-OPEN-002"
+   ],
+   "id": "CF-01",
+   "resolution": "the owner correction supersedes the Part C section 7 dimensional reading",
+   "state": "RESOLVED"
+  },
+  {
+   "between": [
+    "data/registry/OWNER_METHOD_FACTS.json#/facts/2",
+    "URBAN-WET-SERVICE-MARBLE-THRESHOLD",
+    "UP-THR-001"
+   ],
+   "id": "CF-02",
+   "resolution": "the 'marble only if explicit' fact is project-specific (one other project's revision); the Urban-wide rule and the master prompt govern the reference project and new projects",
+   "state": "RESOLVED"
+  },
+  {
+   "between": [
+    "URBAN-WET-SERVICE-MARBLE-THRESHOLD (pantry not applicable)",
+    "UP-WET-001 (pantry is wet)",
+    "UP-THR-001"
+   ],
+   "id": "CF-03",
+   "resolution": "wet scope applies to an enclosed pantry; its doorway threshold is measured PROVISIONAL with the conflict named; owner question OQ-01",
+   "state": "CONFLICTED"
+  },
+  {
+   "between": [
+    "URBAN-WET-WALL-TILE-FULL-HEIGHT@v1",
+    "UP-CER-009"
+   ],
+   "id": "CF-04",
+   "resolution": "full height is the face's own derived clear height (UP-FIN-WALL-001); no universal constant",
+   "state": "RESOLVED"
+  },
+  {
+   "between": [
+    "data/registry/OWNER_METHOD_FACTS.json#/facts/1 (dry / wet split at the door plane)",
+    "UP-THR-001"
+   ],
+   "id": "CF-05",
+   "resolution": "where a marble threshold is built the wet and dry floors end at the marble; the door-plane split is that other project's own method",
+   "state": "RESOLVED"
+  },
+  {
+   "between": [
+    "UP-DOOR-MIN-001 main entrance 1.00 m minimum",
+    "UP-DOOR-CLS-004"
+   ],
+   "id": "CF-06",
+   "resolution": "the main entrance is measured as drawn and specified (owner correction)",
+   "state": "RESOLVED"
+  },
+  {
+   "between": [
+    "arch_rooms LEXICON LAUNDRY = WET",
+    "UP-WET-001 laundry project-specific"
+   ],
+   "id": "CF-07",
+   "resolution": "laundry keeps the wet scope with the flag WET_SCOPE_PROJECT_CONFIRMATION",
+   "state": "RESOLVED"
+  },
+  {
+   "between": [
+    "URBAN-SKIRTING-OPENING-METHOD (doorless-opening jambs skirted)",
+    "arch_measure skirting (passage jambs never skirted)"
+   ],
+   "id": "CF-08",
+   "resolution": "category E: the rule was not implemented; ARCH_TAKEOFF_V2.3 adds PROVISIONAL passage-jamb skirting",
+   "state": "RESOLVED"
+  },
+  {
+   "between": [
+    "UP-WP-002 v2.0.0 (0.20 m upturn)",
+    "engine/source/waterproofing_policy.py wet() (0.15 m, the 1.4.0 value)"
+   ],
+   "id": "CF-09",
+   "resolution": "the 1.5.0 owner decision (0.20 m) governs the M9 route; the lab policy keeps its frozen value",
+   "state": "RESOLVED"
+  },
+  {
+   "between": [
+    "facts opening_heights.DOOR_ASSUMED (project fallback)",
+    "UP-DOOR-HGT-001 owner reference heights"
+   ],
+   "id": "CF-10",
+   "resolution": "the project fallback (precedence 4) is used before the general owner reference (5)",
+   "state": "RESOLVED"
+  },
+  {
+   "between": [
+    "UP-DOOR-OPEN-002 (width + 0.10 m)",
+    "wall-opening head height"
+   ],
+   "id": "CF-11",
+   "resolution": "the rule covers the width only; the head allowance of the wall opening is not an owner rule: owner question OQ-02 (the head is taken at the door height, ASSUMED)",
+   "state": "OPEN"
+  },
+  {
+   "between": [
+    "rules/ UP-WP-002 2.0.0 (upturn around the full boundary including every doorway segment, no door deduction)",
+    "UP-WP-DOOR-001 / owner program 2026-10-16 Part 3.4 (never every doorway width x 0.20 m; a transition by detail)"
+   ],
+   "id": "CF-12",
+   "resolution": "the newer owner instruction governs ARCH_TAKEOFF_V2.4: the wall upturn leaves the doorway segments out and each doorway is a transition item (alternatives listed, withheld until a detail); V1 .. V2.3 keep the rule store reading (frozen)",
+   "state": "RESOLVED"
+  },
+  {
+   "between": [
+    "rules/ UP-WP-001 floor, 002 upturn, 003 doorway, 004 shower, 005 lap",
+    "registry UP-WP-001 roll, 002 lap, 003 upturn, 004 penetrations"
+   ],
+   "id": "CF-13",
+   "resolution": "the same identifiers name different rules in the two rule sets: every reference carries its rule set (rules/ 1.5.0 or URBAN_KB_1.1.0); ARCH_TAKEOFF_V2.4 cites the waterproofing standards from the registry; the crosswalk below relates them",
+   "state": "RESOLVED"
+  },
+  {
+   "between": [
+    "UP-WP-ROOF-001 1.0.0 (balcony upturn by specification)",
+    "UP-WP-003 (0.20 m along eligible wall boundaries)"
+   ],
+   "id": "CF-14",
+   "resolution": "ARCH_TAKEOFF_V2.4 applies 0.20 m on the balcony's wall boundaries (OWNER_STANDARD_ASSUMED); an approved project detail overrides it; the open edge is a termination by detail",
+   "state": "RESOLVED"
+  }
+ ],
+ "consumed_by": [
+  "ARCH_TAKEOFF_V2.9 (engine/source/knowledge.py, using('1.5.0'))",
+  "engine/source/struct_n10.py (rule ids only)"
+ ],
+ "delta": {
+  "amended": [],
+  "builder": "tools/kb_build_1_5.py",
+  "new": [
+   "UP-EXC-001",
+   "UP-FACADE-001",
+   "UP-FW-001",
+   "UP-MAS-HEIGHT-001",
+   "UP-OPEN-CURVED-001"
+  ],
+  "owner_questions": [
+   "OQ-06",
+   "OQ-07",
+   "OQ-08",
+   "OQ-09",
+   "OQ-10",
+   "OQ-11",
+   "OQ-12",
+   "OQ-13"
+  ],
+  "status_note": "every new rule is REQUIRES_CONFIRMATION: the engine's reading of the owner program, not an owner statement"
+ },
+ "effective": "2026-10-17",
+ "index": "knowledge/RULE_SOURCE_INDEX.json (generated by tools/kb_index.py: every rule, fact and question source in the repository)",
+ "levels": {
+  "A": "Urban Project master standards (this registry)",
+  "B": "project-specific approved rules (URBAN_PROJECT_RULES_V1, engine/source/project_rules.py)"
+ },
+ "not_consumed_by": "ARCH_TAKEOFF_V1 / V2 / V2.1 / V2.2 (frozen; rules/ 1.5.0); ARCH_TAKEOFF_V2.3 reads registry 1.0.0; ARCH_TAKEOFF_V2.4 .. V2.6 read registry 1.1.0; ARCH_TAKEOFF_V2.7 reads registry 1.2.0; ARCH_TAKEOFF_V2.7.1 reads registry 1.3.0; ARCH_TAKEOFF_V2.8 reads registry 1.4.0 (frozen)",
+ "owner_questions": [
+  {
+   "affects": [
+    "FIN.MARBLE.THRESHOLD",
+    "FIN.FLOOR.PORCELAIN doorway strips"
+   ],
+   "alternatives": [
+    "marble threshold at pantry doorways",
+    "pantry floor porcelain continues through the doorway (no threshold)"
+   ],
+   "category": "C_RULE_CONFLICT",
+   "continue_safely": true,
+   "found": "an enclosed pantry with a door is a wet area under the master prompt (UP-WET-001), but the Urban-wide marble-threshold rule lists the pantry as not applicable",
+   "group": "PANTRY_THRESHOLD",
+   "id": "OQ-01",
+   "recommendation": "marble threshold (the newer, general statement); measured PROVISIONAL meanwhile",
+   "rules_checked": [
+    "UP-WET-001",
+    "UP-THR-001",
+    "URBAN-WET-SERVICE-MARBLE-THRESHOLD"
+   ],
+   "why_unresolved": "two approved owner statements disagree for the same doorway; precedence by date is not explicit"
+  },
+  {
+   "affects": [
+    "owner-required wall-opening areas (blockwork, plaster, paint deductions)"
+   ],
+   "alternatives": [
+    "the wall-opening head = the door height",
+    "door height + an allowance (owner value)"
+   ],
+   "category": "D_MISSING_OWNER_POLICY",
+   "continue_safely": true,
+   "found": "the owner rule adds 0.10 m to the width of the architectural wall opening; it says nothing about its head height",
+   "group": "DOOR_HEAD_ALLOWANCE",
+   "id": "OQ-02",
+   "recommendation": "door height until the owner states an allowance (labelled ASSUMED)",
+   "rules_checked": [
+    "UP-DOOR-OPEN-002",
+    "UP-DOOR-HGT-001"
+   ],
+   "why_unresolved": "no approved rule gives the wall-opening head allowance"
+  },
+  {
+   "affects": [
+    "FIN.PLASTER / FIN.PAINT / FIN.SKIRTING of stair halls"
+   ],
+   "alternatives": [
+    "dry-room treatment (plaster + paint + stair skirting)",
+    "a specified wall finish"
+   ],
+   "category": "D_MISSING_OWNER_POLICY",
+   "continue_safely": true,
+   "found": "stair enclosures have plaster, paint and skirting RFIs",
+   "group": "STAIR_HALL_FINISHES",
+   "id": "OQ-03",
+   "recommendation": "dry-room treatment with the stair skirting measured along the stair",
+   "rules_checked": [
+    "UP-STAIR-001..014",
+    "UP-VOCAB-004/005"
+   ],
+   "why_unresolved": "the stair rules cover treads, risers, landings, stair skirting and railings, not the enclosure walls"
+  },
+  {
+   "affects": [
+    "ARCH.EXTERIOR"
+   ],
+   "alternatives": [
+    "interlock / external tiles by specification",
+    "excluded from the architectural BOQ"
+   ],
+   "category": "D_MISSING_OWNER_POLICY",
+   "continue_safely": true,
+   "found": "exterior spaces (garden, terrace, hardscape) carry an area only",
+   "group": "EXTERIOR_SCOPE",
+   "id": "OQ-04",
+   "recommendation": "keep the areas as information until a scope is given",
+   "rules_checked": [
+    "UP-WP-ROOF-001",
+    "external interlock (no approved record found)"
+   ],
+   "why_unresolved": "no approved exterior finish scope exists beyond waterproofing"
+  },
+  {
+   "affects": [
+    "DOOR_SCENARIOS opening_record",
+    "proposed enlargements",
+    "door feasibility"
+   ],
+   "alternatives": [
+    "the minimum is the wall's structural opening (no allowance)",
+    "the minimum is the door (leaf); the wall opening = minimum + a frame / installation allowance from a schedule, a detail or a project rule",
+    "the minimum is the finished clear passage"
+   ],
+   "category": "C_RULE_CONFLICT",
+   "continue_safely": true,
+   "found": "the owner minimum openings (1.00 / 0.90 m) and the registry 1.1.0 reading (the minimums are nominal doors; the wall opening is nominal + 0.10 m) give different required openings for the same door",
+   "group": "DOOR_MINIMUM_REFERENCE",
+   "id": "OQ-05",
+   "recommendation": "keep every reading side by side; the structural reading is the lower bound; no enlargement is applied",
+   "rules_checked": [
+    "UP-DOOR-OPEN-003",
+    "UP-DOOR-OPEN-002"
+   ],
+   "why_unresolved": "the owner's minimum does not say which width it measures; the 0.10 m allowance is not independently supported"
+  },
+  {
+   "affects": [
+    "ARCH.WALL_PANEL",
+    "ARCH.WALL_VOLUME",
+    "MAS.BLOCK"
+   ],
+   "alternatives": [
+    "no beams over walls (a stated project fact)",
+    "the structural plan's beam layout and depths"
+   ],
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "continue_safely": true,
+   "found": "the architectural plan does not say which walls carry a beam, nor its depth",
+   "group": "MASONRY_BEAMS_OVER_WALLS",
+   "id": "OQ-06",
+   "recommendation": "hold the panel at its upper bound until the structural plan or a fact says so",
+   "rules_checked": [
+    "UP-MAS-HEIGHT-001"
+   ],
+   "why_unresolved": "a beam bottom on a section applies to the walls under beams only"
+  },
+  {
+   "affects": [
+    "MAS.BLOCK"
+   ],
+   "alternatives": [
+    "a legend or specification on the drawing",
+    "a project fact masonry.materials.{family}"
+   ],
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "continue_safely": true,
+   "found": "the wall material of each thickness family (block type, RC wall, partition) is not stated",
+   "group": "MASONRY_MATERIAL",
+   "id": "OQ-07",
+   "recommendation": "MAS.BLOCK stays an RFI naming the family",
+   "rules_checked": [
+    "UP-MAS-HEIGHT-001"
+   ],
+   "why_unresolved": "a thickness is never evidence of a material"
+  },
+  {
+   "affects": [
+    "ARCH.FACADE"
+   ],
+   "alternatives": [
+    "F.F.L. to the next F.F.L. (each floor's own band, stacked)",
+    "structural levels (slab top to slab top)",
+    "a stated height per floor"
+   ],
+   "category": "D_MISSING_OWNER_POLICY",
+   "continue_safely": true,
+   "found": "the facade of a floor is measured from its F.F.L. to the next floor's F.F.L.",
+   "group": "FACADE_HEIGHT_CONVENTION",
+   "id": "OQ-08",
+   "recommendation": "F.F.L. to F.F.L. (the bands meet without overlap); confirm",
+   "rules_checked": [
+    "UP-FACADE-001"
+   ],
+   "why_unresolved": "the engine's reading of the program; no owner statement yet"
+  },
+  {
+   "affects": [
+    "ARCH.FACADE plinth",
+    "FIN.EXT.FINISH"
+   ],
+   "alternatives": [
+    "external ground level from a section / site plan",
+    "exterior finish from elevations / specification / a project fact facade.finish"
+   ],
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "continue_safely": true,
+   "found": "the external ground level (plinth below the lowest F.F.L.) and the exterior finish system are not read",
+   "group": "FACADE_PLINTH_AND_FINISH",
+   "id": "OQ-09",
+   "recommendation": "hold the plinth and the finish",
+   "rules_checked": [
+    "UP-FACADE-001"
+   ],
+   "why_unresolved": "neither is in the plan"
+  },
+  {
+   "affects": [
+    "formwork FOOTINGS / GROUND_BEAMS SIDES"
+   ],
+   "alternatives": [
+    "FORMED (formwork measured)",
+    "EARTH_CAST (no formwork)"
+   ],
+   "category": "D_MISSING_OWNER_POLICY",
+   "continue_safely": true,
+   "found": "footing and ground-beam sides: formed, or cast against the excavation",
+   "group": "FORMWORK_EARTH_FACES",
+   "id": "OQ-10",
+   "recommendation": "keep both readings side by side",
+   "rules_checked": [
+    "UP-FW-001"
+   ],
+   "why_unresolved": "a contract / method statement decision"
+  },
+  {
+   "affects": [
+    "formwork BEAMS SIDES",
+    "beam concrete"
+   ],
+   "alternatives": [
+    "BELOW_SLAB",
+    "TOTAL"
+   ],
+   "category": "D_MISSING_OWNER_POLICY",
+   "continue_safely": true,
+   "found": "the schedule beam depth: below the slab, or total including the slab (route G BEAM_DEPTH_CONVENTION)",
+   "group": "FORMWORK_BEAM_DEPTH",
+   "id": "OQ-11",
+   "recommendation": "keep both readings side by side",
+   "rules_checked": [
+    "UP-FW-001"
+   ],
+   "why_unresolved": "the schedule does not say; route G keeps the same two readings for the concrete"
+  },
+  {
+   "affects": [
+    "formwork COLUMNS SIDES",
+    "formwork SLABS EDGES"
+   ],
+   "alternatives": [
+    "the structural plan adjacency (beam ends at columns; slab perimeter and openings)"
+   ],
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "continue_safely": true,
+   "found": "which beams frame into each column, and the free edges of each slab, are not in the register",
+   "group": "FORMWORK_COLUMN_JUNCTIONS_AND_SLAB_EDGES",
+   "id": "OQ-12",
+   "recommendation": "column sides stay an upper bound; slab edges held",
+   "rules_checked": [
+    "UP-FW-001"
+   ],
+   "why_unresolved": "the register keeps elements, not their contacts"
+  },
+  {
+   "affects": [
+    "excavation",
+    "backfill"
+   ],
+   "alternatives": [
+    "levels from the foundation section / soil report; the working space from the specification or a fact"
+   ],
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "continue_safely": true,
+   "found": "the natural ground level, the founding level and the working space are not stated",
+   "group": "EXCAVATION_LEVELS_AND_WORKING_SPACE",
+   "id": "OQ-13",
+   "recommendation": "footprints only; volume and backfill held",
+   "rules_checked": [
+    "UP-EXC-001"
+   ],
+   "why_unresolved": "an excavation depth is never assumed"
+  }
+ ],
+ "precedence_rule": "UP-KB-PREC-001",
+ "question_catalogue": [
+  {
+   "category": "A_ESTABLISHED",
+   "example": {
+    "item": "ARCH.THRESHOLD",
+    "reason": "THRESHOLD_FINISH_NOT_ESTABLISHED (Q-S6-1): the strip ..."
+   },
+   "group": "DOORWAY_STRIP_FINISH",
+   "history": [
+    "Q-S6-1",
+    "O4",
+    "OD-8"
+   ],
+   "pattern": "^THRESHOLD_FINISH_NOT_ESTABLISHED",
+   "resolved_in": "ARCH_TAKEOFF_V2.3",
+   "rule": "UP-THR-001"
+  },
+  {
+   "category": "A_ESTABLISHED",
+   "example": {
+    "item": "FIN.SKIRTING",
+    "reason": "UP-CER-004: the wall tile height of the wet room is not established"
+   },
+   "group": "WET_ROOM_SKIRTING",
+   "history": [
+    "ORR-008",
+    "Q7",
+    "O5"
+   ],
+   "pattern": "^UP-CER-004",
+   "resolved_in": "ARCH_TAKEOFF_V2.3",
+   "rule": "UP-WET-001"
+  },
+  {
+   "category": "A_ESTABLISHED",
+   "example": {
+    "item": "FIN.PAINT",
+    "reason": "FINISH_ABOVE_WALL_TILE_NOT_ESTABLISHED (Q7): the band"
+   },
+   "group": "WET_ROOM_WALL_TILE_HEIGHT",
+   "history": [
+    "Q7",
+    "O5",
+    "S6R-B4",
+    "OD-9"
+   ],
+   "pattern": "^FINISH_ABOVE_WALL_TILE_NOT_ESTABLISHED",
+   "resolved_in": "ARCH_TAKEOFF_V2.3",
+   "rule": "UP-FIN-WALL-001"
+  },
+  {
+   "category": "A_ESTABLISHED",
+   "example": {
+    "item": "DOOR HEIGHTS",
+    "reason": "MISSING_SOURCE: no door height"
+   },
+   "group": "DOOR_HEIGHT",
+   "history": [
+    "DR-07"
+   ],
+   "item": "^DOOR HEIGHTS",
+   "pattern": "^MISSING_SOURCE",
+   "resolved_in": "ARCH_TAKEOFF_V2.3 (ASSUMED)",
+   "rule": "UP-DOOR-HGT-001"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "FIN.PAINT",
+    "reason": "WALL_FINISH_HEIGHT_NOT_ESTABLISHED (UP-CER-009, PAINT): ..."
+   },
+   "group": "WALL_FINISH_HEIGHTS",
+   "history": [
+    "O8",
+    "OD-6"
+   ],
+   "pattern": "^WALL_FINISH_HEIGHT_NOT_ESTABLISHED",
+   "request": "sections / schedules or the filled heights facts template (FACTS_TEMPLATE_HEIGHTS.json)",
+   "rule": "URBAN-WALL-FINISH-HEIGHT-METHOD"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "FIN.PAINT",
+    "reason": "PAINT net is a range: closure position unknown"
+   },
+   "group": "FACE_OPENING_DEDUCTION",
+   "history": [
+    "F-26",
+    "OD-7"
+   ],
+   "pattern": "^(PLASTER|PAINT|WALL_TILE) net is a range",
+   "request": "door closure and glazing positions (door schedule / elevations); owner rule OD-7 if none",
+   "rule": "UP-GEN-003"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "ARCH.WINDOW_REVEAL",
+    "reason": "WINDOW_REVEAL_FLOOR_STATUS_NOT_ESTABLISHED: the strip"
+   },
+   "group": "WINDOW_TYPE_AND_SILL",
+   "history": [
+    "SE-01",
+    "OD-11",
+    "O8"
+   ],
+   "pattern": "^WINDOW_REVEAL_FLOOR_STATUS_NOT_ESTABLISHED",
+   "request": "window schedule / elevations (sill or floor-level glazing)",
+   "rule": "URBAN-REVEAL-FINISH-METHOD"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "FIN.SKIRTING",
+    "reason": "F-17: the sill status of the window is unknown"
+   },
+   "group": "WINDOW_TYPE_AND_SILL",
+   "history": [
+    "BA-12",
+    "OD-1"
+   ],
+   "pattern": "^F-17",
+   "request": "window schedule / elevations",
+   "rule": "UP-SKIRT-001"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "FIN.FLOOR.PORCELAIN (material)",
+    "reason": "FLOOR_FINISH_SPEC_NOT_ESTABLISHED: no selected tile size"
+   },
+   "group": "FLOOR_FINISH_SPECIFICATION",
+   "pattern": "^FLOOR_FINISH_SPEC_NOT_ESTABLISHED",
+   "request": "the project finish specification (selected tile sizes)",
+   "rule": "UP-CER-010"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "FIN.MARBLE.RISER",
+    "reason": "STAIR_RISER_NOT_ESTABLISHED: flight 1"
+   },
+   "group": "STAIR_SECTIONS",
+   "pattern": "^STAIR_(?!HALL_FINISH)",
+   "request": "stair sections / rise and riser count",
+   "rule": "UP-STAIR-002"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "MAS.BLOCK",
+    "reason": "BLOCK_WALL_NOT_ESTABLISHED (walls t=0.20 m)"
+   },
+   "group": "BLOCKWORK_SPECIFICATION",
+   "pattern": "^BLOCK_WALL_NOT_ESTABLISHED",
+   "request": "block material and wall heights",
+   "rule": "UP-GEN-001"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "FIN.FLOOR",
+    "reason": "UNLABELLED_SPACE: no room word"
+   },
+   "group": "SPACE_IDENTITY",
+   "pattern": "^(UNLABELLED_SPACE|MERGED_SPACE|MIXED_SPACE|ATTACHED_THROUGH_OPEN_PASSAGE|ZONE_FROM_DRAWN_LINES)",
+   "request": "room labels / the architect's room schedule",
+   "rule": "UP-SPACE-001"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "ARCH.SPACE",
+    "reason": "ROOM_TYPE_FROM_STACKED_FOOTPRINT: the same footprint"
+   },
+   "group": "LIFT_IDENTITY",
+   "pattern": "^ROOM_TYPE_FROM_STACKED_FOOTPRINT",
+   "request": "lift label or lift schedule",
+   "rule": "UP-DOOR-CLS-005"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "FIN.CEILING",
+    "reason": "STAIRWELL_CEILING_SCOPE_NOT_ESTABLISHED: the enclosure"
+   },
+   "group": "STAIR_SECTIONS",
+   "pattern": "^STAIRWELL_CEILING_SCOPE_NOT_ESTABLISHED",
+   "request": "stair section / ceiling plan",
+   "rule": "UP-CEIL-001"
+  },
+  {
+   "category": "D_MISSING_OWNER_POLICY",
+   "example": {
+    "item": "FIN.PAINT",
+    "reason": "STAIR_HALL_FINISH_NOT_ESTABLISHED (Q-S6-4): the walls"
+   },
+   "group": "STAIR_HALL_FINISHES",
+   "history": [
+    "Q-S6-4",
+    "O6",
+    "OD-10"
+   ],
+   "pattern": "^STAIR_HALL_FINISH_NOT_ESTABLISHED",
+   "question_id": "OQ-03",
+   "rule": null
+  },
+  {
+   "category": "D_MISSING_OWNER_POLICY",
+   "example": {
+    "item": "ARCH.EXTERIOR",
+    "reason": "EXTERIOR_FINISH_SCOPE_NOT_ESTABLISHED (Q1): a garden"
+   },
+   "group": "EXTERIOR_SCOPE",
+   "history": [
+    "Q1",
+    "O7"
+   ],
+   "pattern": "^EXTERIOR_FINISH_SCOPE_NOT_ESTABLISHED",
+   "question_id": "OQ-04",
+   "rule": null
+  },
+  {
+   "category": "E_ENGINEERING_DEFECT",
+   "example": {
+    "item": "ARCH.THRESHOLD",
+    "reason": "STRIP_NOT_ATTRIBUTED: a strip in the wall thickness"
+   },
+   "group": "STRIP_ATTRIBUTION",
+   "pattern": "^STRIP_NOT_ATTRIBUTED",
+   "rule": "UP-THR-001"
+  },
+  {
+   "category": "E_ENGINEERING_DEFECT",
+   "example": {
+    "item": "FIN.FLOOR",
+    "reason": "GEOMETRY_INCONSISTENT: the parts do not add up"
+   },
+   "group": "GEOMETRY_CHECKS",
+   "pattern": "^GEOMETRY_INCONSISTENT",
+   "rule": "UP-KB-PREC-001"
+  },
+  {
+   "category": "E_ENGINEERING_DEFECT",
+   "example": {
+    "item": "ADMISSION:ENTITY_KIND_NOT_MEASURED",
+    "reason": "WARNING: 3 HATCH: READ_ONE_BLOCK_LEVEL"
+   },
+   "group": "READER_LIMITS",
+   "pattern": "^(WARNING|ENGINEERING)",
+   "rule": null
+  },
+  {
+   "category": "E_ENGINEERING_DEFECT",
+   "example": {
+    "item": "door symbol D1",
+    "reason": "DOOR_CLOSURE_UNRESOLVED: no leaf hypothesis"
+   },
+   "group": "READER_LIMITS",
+   "pattern": "^(DOOR_CLOSURE_UNRESOLVED|VOID_EXTENT_UNRESOLVED)",
+   "rule": null
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "DOORS:DOOR_PROVISIONAL",
+    "reason": "REVIEW: a provisional door"
+   },
+   "group": "DOOR_EVIDENCE",
+   "item": "^DOORS:(DOOR_PROVISIONAL|DOOR_UNRESOLVED|DOOR_CLASS_UNRESOLVED)",
+   "pattern": "^REVIEW",
+   "request": "door schedule, or the independent opening and two typed sides",
+   "rule": "UP-DOOR-CLS-001"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "DOORS:DOOR_HELD_WIDTH_REVIEW",
+    "reason": "REVIEW: frame and opening disagree"
+   },
+   "group": "DOOR_WIDTH_CONFLICT",
+   "history": [
+    "DR-02",
+    "OD-2"
+   ],
+   "item": "^DOORS:(DOOR_HELD_WIDTH_REVIEW|DOOR_CLOSURE_FRAME_DISAGREE)",
+   "pattern": "^REVIEW",
+   "request": "door schedule or a dimension",
+   "rule": "UP-DOOR-OPEN-002"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "DOORS:DOOR_CLASS_REVIEW",
+    "reason": "REVIEW: possibly external"
+   },
+   "group": "SPACE_ENCLOSURE",
+   "history": [
+    "DR-03",
+    "OD-3"
+   ],
+   "item": "^DOORS:DOOR_CLASS_REVIEW",
+   "pattern": "^REVIEW",
+   "request": "is the space inside the envelope (label, elevation, or a project decision)",
+   "rule": "UP-SPACE-001"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "DOORS:LIFT_ENTRANCE_CANDIDATE",
+    "reason": "REVIEW: an opening into a shaft"
+   },
+   "group": "LIFT_IDENTITY",
+   "history": [
+    "DR-06",
+    "OD-4"
+   ],
+   "item": "^DOORS:LIFT_ENTRANCE_CANDIDATE",
+   "pattern": "^REVIEW",
+   "request": "lift label or lift schedule",
+   "rule": "UP-DOOR-CLS-005"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "DOORS:MAIN_ENTRANCE_UNRESOLVED",
+    "reason": "REVIEW: no external door carries entrance evidence"
+   },
+   "group": "MAIN_ENTRANCE",
+   "history": [
+    "DR-01",
+    "OD-5"
+   ],
+   "item": "^DOORS:MAIN_ENTRANCE",
+   "pattern": "^REVIEW",
+   "request": "entrance label, elevation or door schedule",
+   "rule": "UP-DOOR-CLS-004"
+  },
+  {
+   "category": "C_RULE_CONFLICT",
+   "example": {
+    "item": "DOOR.INTERNAL.PVC",
+    "reason": "OPENING_BELOW_OWNER_STANDARD: 0.90 m < 1.10 m"
+   },
+   "group": "DOOR_ENLARGEMENT",
+   "handled_by": "scenarios (AS_DRAWN / OWNER_REQUIRED); not a question",
+   "pattern": "^OPENING_BELOW_OWNER_STANDARD",
+   "rule": "UP-DOOR-OPEN-002"
+  },
+  {
+   "category": "C_RULE_CONFLICT",
+   "example": {
+    "item": "FIN.WALL.TILE",
+    "reason": "WALL_TILE_BELOW_OWNER_FULL_HEIGHT: the explicit wall-tile height"
+   },
+   "group": "WET_ROOM_WALL_TILE_HEIGHT",
+   "handled_by": "the explicit source governs; flagged",
+   "pattern": "^WALL_TILE_BELOW_OWNER_FULL_HEIGHT",
+   "rule": "UP-FIN-WALL-001"
+  },
+  {
+   "category": "C_RULE_CONFLICT",
+   "example": {
+    "item": "FIN.PAINT",
+    "reason": "WALL_BAND_ABOVE_EXPLICIT_TILE (Q7, UP-FIN-WALL-001): the band"
+   },
+   "group": "WET_ROOM_WALL_TILE_HEIGHT",
+   "handled_by": "the explicit source governs the tile; the band above it follows the same project source (confirmed with it)",
+   "history": [
+    "Q7",
+    "O5"
+   ],
+   "pattern": "^WALL_BAND_ABOVE_EXPLICIT_TILE",
+   "rule": "UP-FIN-WALL-001"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "FINISH_SCOPE",
+    "reason": "OPEN_PLAN_WET_SCOPE_EXTENT: the wet area of this open plan"
+   },
+   "group": "WET_ZONE_EXTENT",
+   "pattern": "^OPEN_PLAN_WET_SCOPE_EXTENT",
+   "request": "the kitchen / pantry zone of the open plan (a finish-plan line or hatch)",
+   "rule": "UP-WET-001"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "FINISH_SCOPE",
+    "reason": "WET_SCOPE_PROJECT_CONFIRMATION: LAUNDRY is a wet area"
+   },
+   "group": "WET_SCOPE_CONFIRMATION",
+   "pattern": "^WET_SCOPE_PROJECT_CONFIRMATION",
+   "request": "the project finish schedule (whether the room is a wet area)",
+   "rule": "UP-WET-001"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "FIN.WP.UPTURN",
+    "reason": "EXTERIOR_WP_UPTURN_BY_SPECIFICATION: the balcony membrane"
+   },
+   "group": "WATERPROOFING_SPECIFICATION",
+   "pattern": "^EXTERIOR_WP_UPTURN_BY_SPECIFICATION",
+   "request": "the balcony / terrace membrane system and its upturn height (specification)",
+   "rule": "UP-WP-ROOF-001"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "ARCH.THRESHOLD",
+    "reason": "THRESHOLD_OF_PROVISIONAL_DOOR (UP-THR-001 sets the finish)"
+   },
+   "group": "DOOR_EVIDENCE",
+   "pattern": "^THRESHOLD_OF_PROVISIONAL_DOOR",
+   "request": "door schedule, or the independent opening and two typed sides",
+   "rule": "UP-THR-001"
+  },
+  {
+   "category": "E_ENGINEERING_DEFECT",
+   "example": {
+    "item": "ARCH.THRESHOLD",
+    "reason": "THRESHOLD_STRIP_NOT_ATTRIBUTED (UP-THR-001 sets the finish)"
+   },
+   "group": "STRIP_ATTRIBUTION",
+   "pattern": "^THRESHOLD_STRIP_NOT_ATTRIBUTED",
+   "rule": "UP-THR-001"
+  },
+  {
+   "category": "C_RULE_CONFLICT",
+   "example": {
+    "item": "FIN.MARBLE.THRESHOLD",
+    "reason": "PANTRY_THRESHOLD_RULE_CONFLICT (OQ-01): marble threshold"
+   },
+   "group": "PANTRY_THRESHOLD",
+   "pattern": "^PANTRY_THRESHOLD_RULE_CONFLICT",
+   "question_id": "OQ-01",
+   "rule": "UP-THR-001"
+  },
+  {
+   "category": "D_MISSING_OWNER_POLICY",
+   "example": {
+    "item": "DOOR.INTERNAL.PVC",
+    "reason": "DOOR_OPENING_HEAD_ALLOWANCE: the head of the wall opening"
+   },
+   "group": "DOOR_HEAD_ALLOWANCE",
+   "pattern": "^DOOR_OPENING_HEAD_ALLOWANCE",
+   "question_id": "OQ-02",
+   "rule": "UP-DOOR-OPEN-002"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "FIN.WP.DOORWAY_TRANSITION",
+    "reason": "DOORWAY_WP_TRANSITION_DETAIL_REQUIRED (UP-WP-DOOR-001): door OP-005"
+   },
+   "group": "WATERPROOFING_DOORWAY_DETAIL",
+   "pattern": "^DOORWAY_WP_TRANSITION_DETAIL_REQUIRED",
+   "request": "the project waterproofing detail at the doorway (upturn across the threshold, continuation with a termination, or jamb returns)",
+   "rule": "UP-WP-DOOR-001"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "FIN.WP.TERMINATION",
+    "reason": "WP_TERMINATION_DETAIL_REQUIRED (UP-WP-003): an open edge"
+   },
+   "group": "WATERPROOFING_EDGE_DETAIL",
+   "pattern": "^WP_TERMINATION_DETAIL_REQUIRED",
+   "request": "the termination detail at an open edge, a floor-level frame or a doorless opening to a dry space",
+   "rule": "UP-WP-003"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "FIN.WP.PENETRATION",
+    "reason": "WP_PENETRATIONS_NOT_SHOWN (UP-WP-004): no drain drawn"
+   },
+   "group": "WATERPROOFING_PENETRATIONS",
+   "pattern": "^WP_PENETRATIONS_NOT_SHOWN",
+   "request": "the drainage / plumbing layout (floor drains, outlets, sleeves) of the waterproofed areas",
+   "rule": "UP-WP-004"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "FIN.WP.PENETRATION",
+    "reason": "WP_PENETRATION_DETAIL_REQUIRED (UP-WP-004): 2 floor drains"
+   },
+   "group": "WATERPROOFING_PENETRATIONS",
+   "pattern": "^WP_PENETRATION_DETAIL_REQUIRED",
+   "request": "the penetration / collar detail of the membrane system",
+   "rule": "UP-WP-004"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "FIN.WP (material)",
+    "reason": "WP_CORNER_DETAIL_REQUIRED (UP-WP-004): 6 corners"
+   },
+   "group": "WATERPROOFING_SYSTEM_DETAILS",
+   "pattern": "^WP_CORNER_DETAIL_REQUIRED",
+   "request": "the corner / junction reinforcement of the membrane system",
+   "rule": "UP-WP-004"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "FIN.WP (procurement)",
+    "reason": "WP_SYSTEM_NOT_SPECIFIED (UP-WP-MAT-001): the wet-area membrane"
+   },
+   "group": "WATERPROOFING_SPECIFICATION",
+   "pattern": "^WP_SYSTEM_NOT_SPECIFIED",
+   "request": "the membrane system of each waterproofed location (specification / data sheet)",
+   "rule": "UP-WP-MAT-001"
+  },
+  {
+   "category": "E_ENGINEERING_DEFECT",
+   "example": {
+    "item": "FIN.WP (material)",
+    "reason": "WP_BOUNDARY_SEGMENTATION_REVIEW: the ring roles disagree"
+   },
+   "group": "WATERPROOFING_BOUNDARY",
+   "pattern": "^WP_BOUNDARY_SEGMENTATION_REVIEW",
+   "rule": "UP-WP-003"
+  },
+  {
+   "category": "E_ENGINEERING_DEFECT",
+   "example": {
+    "item": "FIN.WP (material)",
+    "reason": "WP_LAYOUT_BLOCKED: a doorway piece wider than the roll"
+   },
+   "group": "WATERPROOFING_LAYOUT",
+   "pattern": "^WP_LAYOUT_BLOCKED",
+   "rule": "UP-WP-LAY-001"
+  },
+  {
+   "category": "C_RULE_CONFLICT",
+   "example": {
+    "item": "FIN.WP.WALL_UPTURN",
+    "reason": "PROJECT_RULE_CONFLICT (UP-RULES-001): PR-1 and PR-2 disagree"
+   },
+   "group": "PROJECT_RULE_CONFLICT",
+   "handled_by": "both project values kept; the affected quantity is unresolved until the project documents are reconciled (not an owner question)",
+   "pattern": "^PROJECT_RULE_CONFLICT",
+   "rule": "UP-RULES-001"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "PROJECT_RULES",
+    "reason": "PROJECT_RULE_UNBOUND (UP-RULES-001): PR-3"
+   },
+   "group": "PROJECT_RULE_BINDING",
+   "pattern": "^PROJECT_RULE_UNBOUND",
+   "request": "the element the project rule names (its point lies in no room / opening)",
+   "rule": "UP-RULES-001"
+  },
+  {
+   "category": "E_ENGINEERING_DEFECT",
+   "example": {
+    "item": "PROJECT_RULES",
+    "reason": "PROJECT_RULE_NOT_SUPPORTED: the engine has no parameter 'x' for UP-WP-003"
+   },
+   "group": "PROJECT_RULE_SUPPORT",
+   "handled_by": "the rule is listed in the rules sheet (ENGINE_LIMITATION) and never applied; the engine needs the parameter before the rule can govern",
+   "pattern": "^PROJECT_RULE_NOT_SUPPORTED",
+   "rule": "UP-RULES-001"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "FIN.PLASTER",
+    "reason": "JAMB_HEIGHT_CLASS_PENDING (UP-DOOR-HGT-001): a main-entrance candidate"
+   },
+   "group": "MAIN_ENTRANCE",
+   "pattern": "^JAMB_HEIGHT_CLASS_PENDING",
+   "request": "entrance label, elevation or door schedule",
+   "rule": "UP-DOOR-HGT-001"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "FIN.PLASTER",
+    "reason": "JAMB_HEIGHT_NOT_ESTABLISHED (UP-DOOR-HGT-001): a lift landing"
+   },
+   "group": "LIFT_IDENTITY",
+   "pattern": "^JAMB_HEIGHT_NOT_ESTABLISHED",
+   "request": "the elevator landing door data (height)",
+   "rule": "UP-DOOR-HGT-001"
+  },
+  {
+   "category": "C_RULE_CONFLICT",
+   "example": {
+    "item": "DOOR.OPENING_RECORD (owner minimum)",
+    "reason": "DOOR_MINIMUM_REFERENCE (OQ-05): 4 door(s) - the owner minimum ..."
+   },
+   "group": "DOOR_MINIMUM_REFERENCE",
+   "pattern": "^DOOR_MINIMUM_REFERENCE",
+   "question_id": "OQ-05",
+   "rule": "UP-DOOR-OPEN-003"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "LAYER A-OPEN",
+    "reason": "LAYER_ROLE_REFUSED: layer A-OPEN: TWO_ROLES ..."
+   },
+   "group": "LAYER_ROLE_REFUSED",
+   "pattern": "^LAYER_ROLE_REFUSED",
+   "request": "the layer's role (a layer legend, or --layer-roles LAYER=ROLE): its geometry fits two roles",
+   "rule": "UP-REF-COLUMN-001"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "LAYER P-DRAIN",
+    "reason": "COLUMN_ROLE_REFUSED: layer P-DRAIN: TOO_SMALL ..."
+   },
+   "group": "COLUMN_ROLE_REFUSED",
+   "pattern": "^COLUMN_ROLE_REFUSED",
+   "request": "the structural plan (column positions) or the layer's role (--layer-roles LAYER=COLUMN)",
+   "rule": "UP-REF-COLUMN-001"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "ARCH.SPACE",
+    "reason": "WET_CLASSIFICATION_REVIEW (UP-WET-002): no room word inside; it holds only wash basin(s) ..."
+   },
+   "group": "WET_CLASSIFICATION_REVIEW",
+   "pattern": "^WET_CLASSIFICATION_REVIEW",
+   "request": "the space's room name, or its sanitary fixtures (a water closet, shower or bath)",
+   "rule": "UP-WET-002"
+  },
+  {
+   "category": "B_MISSING_DRAWING_EVIDENCE",
+   "example": {
+    "item": "ARCH.SPACE",
+    "reason": "WC_CANDIDATE_REVIEW (UP-WET-002): no room word inside; a water-closet shape ..."
+   },
+   "group": "WET_CLASSIFICATION_REVIEW",
+   "pattern": "^WC_CANDIDATE_REVIEW",
+   "request": "the space's room name, or a second piece of sanitary evidence",
+   "rule": "UP-WET-002"
+  }
+ ],
+ "question_rule": "UP-KB-QUES-001",
+ "rule_store_crosswalk": [
+  {
+   "registry": "UP-WP-001",
+   "rule_store": "MEM-URBAN-DEFAULT-1x10 (rules/materials): the same roll"
+  },
+  {
+   "registry": "UP-WP-002",
+   "rule_store": "UP-WP-005 1.0.0 (minimum 0.10 m lap, never a flat waste rate)"
+  },
+  {
+   "registry": "UP-WP-003",
+   "rule_store": "UP-WP-002 2.0.0 (0.20 m; its doorway segment reading superseded: CF-12)"
+  },
+  {
+   "registry": "UP-WP-004",
+   "rule_store": "none (the default membrane's corner / penetration treatment is null)"
+  },
+  {
+   "registry": "UP-WP-DOOR-001",
+   "rule_store": "UP-WP-003 1.1.0 (continuation through the doorway: kept)"
+  },
+  {
+   "registry": "UP-WP-UPTURN-015",
+   "rule_store": "UP-WP-002 1.0.0 (0.15 m, superseded)"
+  },
+  {
+   "registry": "(none)",
+   "rule_store": "UP-WP-001 1.0.0 floor in m2 (unchanged); UP-WP-004 1.1.0 shower (PROPOSED, not promoted)"
+  }
+ ],
+ "rules": [
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER_PROJECT",
+    "received": "2026-10-14",
+    "source": "owner master prompt 2026-10-14 (URBAN PROJECT AI - master engineering intelligence program) Part C section 9"
+   },
+   "code": [
+    "engine/source/space_model.py::apply_decisions"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "OPENINGS"
+   ],
+   "effective_version": "1.0.0",
+   "elements": [
+    "SPACE"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-1 knowledge audit)",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    }
+   ],
+   "kind": "PROJECT_DECISION",
+   "limitations": [
+    "the corridor is named by description, not by drawing reference: the binding needs a reviewer"
+   ],
+   "locations": [
+    "OUTDOOR_SERVICE_CORRIDOR"
+   ],
+   "logic": {
+    "binding": "PROJECT_SPECIFIC_UNBOUND in the public registry; the binding (floor + point) lives in the project's private decision file once the corridor is identified",
+    "never": "applied to any other corridor or project",
+    "statement": "the service corridor connecting separate building areas is outdoors"
+   },
+   "preconditions": [],
+   "purpose": "the owner's decision for one corridor of the reference project",
+   "required_evidence": [],
+   "rule_id": "PS-REF-001",
+   "scope": "the reference project only",
+   "status": "PROJECT_SPECIFIC",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_kb/test_kb_space_model.py::test_a_project_decision_binds_one_space_only"
+   ],
+   "title": "Reference project: a service corridor connecting separate building areas is outdoors"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-14",
+    "source": "owner master prompt 2026-10-14 (URBAN PROJECT AI - master engineering intelligence program) Part D section 18; rules/methods URBAN-CEILING-QUANTITY-WITHOUT-MATERIAL@v1"
+   },
+   "code": [
+    "engine/source/arch_measure.py::measure"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "CEILING"
+   ],
+   "effective_version": "1.0.0",
+   "elements": [
+    "CEILING"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-1 knowledge audit)",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    }
+   ],
+   "kind": "ENGINEERING_RULE",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "implemented_in": "ARCH_TAKEOFF_V2 and later (S5 double height, voids, stair wells, shafts)"
+   },
+   "preconditions": [],
+   "purpose": "no ceiling over voids, open-to-below, shafts or stair voids; no surface on two floors",
+   "required_evidence": [],
+   "rule_id": "UP-CEIL-001",
+   "scope": "every room",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_s5/test_s5_ceilings_wp.py::test_double_height_ceiling_counted_once"
+   ],
+   "title": "Ceilings: actual eligible surfaces only"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-17",
+    "source": "owner program 2026-10-17 (URBAN PROJECT AI - V2.7 acceptance hardening and second-villa readiness) section 3 (turned columns used as door jambs or wall interruptions)"
+   },
+   "code": [
+    "engine/source/arch_rooms.py::spaces",
+    "engine/source/arch_walls.py::walls"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "MASONRY",
+    "PLASTER",
+    "PAINT",
+    "WALL_FINISH",
+    "OPENINGS"
+   ],
+   "effective_version": "1.3.0",
+   "elements": [
+    "COLUMN",
+    "WALL",
+    "OPENING"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-8)",
+     "date": "2026-10-17",
+     "version": "1.3.0"
+    }
+   ],
+   "kind": "ENGINEERING_RULE",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "invariance": "rot30 / rot90 / mirror / metres of a plan give the unturned plan's totals",
+    "jamb": "the turned column's polygon is an obstacle of the band-opening search (COLUMN_JAMB)",
+    "wall": "the stretch of a wall band the turned polygon occupies across more than half the band thickness is cut from the wall run"
+   },
+   "preconditions": [],
+   "purpose": "a plan measures the same at every angle: a column standing at a wall gap bounds the opening, and a column standing in a wall line is concrete, not wall, whatever its orientation",
+   "required_evidence": [],
+   "rule_id": "UP-COL-ORIENT-001",
+   "scope": "COLUMN-role rectangles of any orientation (ARCH_TAKEOFF_V2.7.1)",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_p2b8/test_p2b8_recognition.py::test_turned_column_is_a_jamb",
+    "tests/m9_p2b8/test_p2b8_recognition.py::test_turned_column_interrupts_the_wall"
+   ],
+   "title": "A column turned off the drawing axes is a jamb and a wall interruption"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-14",
+    "source": "owner master prompt 2026-10-14 (URBAN PROJECT AI - master engineering intelligence program) Part C section 11, Part F section 25; owner correction 2026-10-14 (CRITICAL OWNER CORRECTION - door opening dimensions)"
+   },
+   "code": [
+    "engine/source/door_standards.py::door_scenarios",
+    "engine/source/door_feasibility.py::views"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "OPENINGS"
+   ],
+   "effective_version": "1.1.0",
+   "elements": [
+    "DOOR"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-1 knowledge audit)",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    },
+    {
+     "change": "the PROPOSED_MODIFICATION view of the door feasibility engine (Part 4.6); never combined",
+     "date": "2026-10-16",
+     "version": "1.1.0"
+    }
+   ],
+   "kind": "OWNER_RULE",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "as_drawn": "wall opening area = CAD wall opening x height",
+    "formula": "DOOR_AREA_M2 = WIDTH_M x HEIGHT_M",
+    "never": [
+     "a fabricated confirmed area when either dimension is unresolved",
+     "the two scenarios added together"
+    ],
+    "owner_required": [
+     "wall opening area = owner-required wall opening x height",
+     "nominal door area = nominal door width x height"
+    ],
+    "states": [
+     "CONFIRMED (width and height from sources)",
+     "ASSUMED (an assumed height)",
+     "BLOCKED"
+    ],
+    "views_v2_4": [
+     "AS_DRAWN",
+     "OWNER_STANDARD",
+     "PROPOSED_MODIFICATION",
+     "UNRESOLVED",
+     "EXCLUDED (elevators)"
+    ]
+   },
+   "preconditions": [],
+   "purpose": "door BOQ areas that show the drawing and the owner's requirement side by side",
+   "required_evidence": [],
+   "rule_id": "UP-DOOR-AREA-001",
+   "scope": "every door with a width and a height",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_kb/test_kb_door_standards.py::test_scenario_areas_are_kept_apart",
+    "tests/m9_p2b2/test_p2b2_door_feasibility.py::test_no_proposed_modification_is_released_as_drawn"
+   ],
+   "title": "Door areas: as-drawn and owner-required, confirmed and assumed, never mixed"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-13",
+    "source": "owner door rules 2026-10-13 (engine/source/door_model.py DOOR_RULE_ID OWNER_DOOR_CLASSES_2026_10_13); owner master prompt 2026-10-14 (URBAN PROJECT AI - master engineering intelligence program) Part C section 8"
+   },
+   "code": [
+    "engine/source/door_model.py::_classify",
+    "engine/source/door_standards.py::door_category"
+   ],
+   "conflicts": [
+    {
+     "note": "a space of UNKNOWN or POSSIBLY_EXTERIOR status makes the door CLASS_REVIEW (never PVC by default)",
+     "with": "UP-SPACE-001"
+    }
+   ],
+   "dependent_trades": [
+    "OPENINGS"
+   ],
+   "effective_version": "1.0.0",
+   "elements": [
+    "DOOR"
+   ],
+   "examples": [],
+   "exceptions": [
+    "main entrance (UP-DOOR-CLS-004)",
+    "elevator entrances (UP-DOOR-CLS-005)",
+    "a project specification naming another material"
+   ],
+   "history": [
+    {
+     "change": "owner door rule (code constant only)",
+     "date": "2026-10-13",
+     "version": "1.0.0"
+    },
+    {
+     "change": "first registry record; connectivity precondition stated",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    }
+   ],
+   "kind": "OWNER_RULE",
+   "limitations": [],
+   "locations": [
+    "INTERIOR"
+   ],
+   "logic": {
+    "boq_item": "DOOR.INTERNAL.PVC",
+    "classification": "connectivity, never the symbol lying inside a drawing outline, a layer name or the swing direction",
+    "material": "PVC"
+   },
+   "preconditions": [
+    "both sides of the door are spaces with INTERIOR status (space connectivity model, UP-SPACE-001)"
+   ],
+   "purpose": "the owner's default door material for doors between spaces of the enclosed building",
+   "required_evidence": [
+    "the two spaces joined by the door and their enclosure status"
+   ],
+   "rule_id": "UP-DOOR-CLS-001",
+   "scope": "every ordinary door that connects two spaces inside the enclosed building",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_kb/test_kb_door_standards.py::test_categories_follow_the_space_model",
+    "tests/m9_kb/test_kb_wp5.py::test_a_wall_gap_without_a_door_symbol_is_a_passage_not_a_door",
+    "tests/m9_kb/test_kb_wp5.py::test_a_door_symbol_with_no_wall_gap_is_never_measured"
+   ],
+   "title": "Ordinary internal doors are PVC"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-13",
+    "source": "owner door rules 2026-10-13 (engine/source/door_model.py DOOR_RULE_ID OWNER_DOOR_CLASSES_2026_10_13); owner master prompt 2026-10-14 (URBAN PROJECT AI - master engineering intelligence program) Part C section 9"
+   },
+   "code": [
+    "engine/source/door_model.py::_classify",
+    "engine/source/door_standards.py::door_category"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "OPENINGS",
+    "ALUMINIUM"
+   ],
+   "effective_version": "1.0.0",
+   "elements": [
+    "DOOR"
+   ],
+   "examples": [],
+   "exceptions": [
+    "the main entrance (UP-DOOR-CLS-004)",
+    "a pantry or kitchen door into an enclosed interior corridor stays internal"
+   ],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-1 knowledge audit)",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    }
+   ],
+   "kind": "OWNER_RULE",
+   "limitations": [],
+   "locations": [
+    "FACADE",
+    "OUTDOOR_SERVICE_CORRIDOR",
+    "ROOF",
+    "COURTYARD",
+    "BALCONY"
+   ],
+   "logic": {
+    "boq_item": "DOOR.EXTERNAL.ALUMINIUM",
+    "examples_of_outdoor_access": [
+     "kitchen external access",
+     "pantry external access",
+     "outdoor service corridors",
+     "driver-room access from outdoors",
+     "diwaniya access from outdoors",
+     "roof access",
+     "courtyard access"
+    ],
+    "material": "ALUMINIUM"
+   },
+   "preconditions": [
+    "one side is EXTERIOR by evidence: an exterior-coded space, nothing drawn beyond the facade, or a project-specific decision binding that space as outdoors (UP-SPACE-002)"
+   ],
+   "purpose": "the owner's default material for doors that lead outdoors",
+   "required_evidence": [
+    "exterior adjacency evidence, never the room name alone"
+   ],
+   "rule_id": "UP-DOOR-CLS-002",
+   "scope": "every ordinary door with an exterior space (or the facade) on one side and an interior space on the other",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_kb/test_kb_door_standards.py::test_a_kitchen_door_to_outdoors_is_aluminium",
+    "tests/m9_kb/test_kb_door_standards.py::test_a_pantry_door_to_an_indoor_corridor_stays_pvc",
+    "tests/m9_kb/test_kb_wp5.py::test_a_balcony_door_is_aluminium_and_the_balcony_is_waterproofed"
+   ],
+   "title": "Ordinary doors to genuine outdoor spaces are aluminium"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-14",
+    "source": "owner master prompt 2026-10-14 (URBAN PROJECT AI - master engineering intelligence program) Part C section 8; owner correction 2026-10-14 (CRITICAL OWNER CORRECTION - door opening dimensions)"
+   },
+   "code": [
+    "engine/source/door_standards.py::door_category"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "OPENINGS"
+   ],
+   "effective_version": "1.0.0",
+   "elements": [
+    "DOOR"
+   ],
+   "examples": [],
+   "exceptions": [
+    "a project specification naming another material or size",
+    "an accessible bathroom (clearance requirements are not covered by this rule: flagged)"
+   ],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-1 knowledge audit)",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    }
+   ],
+   "kind": "OWNER_RULE",
+   "limitations": [],
+   "locations": [
+    "BATHROOM"
+   ],
+   "logic": {
+    "boq_item": "DOOR.INTERNAL.PVC",
+    "dimension_category": "BATHROOM_PVC",
+    "material": "PVC"
+   },
+   "preconditions": [
+    "the door is internal (UP-DOOR-CLS-001)",
+    "one side space carries the BATHROOM room code"
+   ],
+   "purpose": "bathroom doors are internal doors for material, with their own (smaller) opening standard",
+   "required_evidence": [],
+   "rule_id": "UP-DOOR-CLS-003",
+   "scope": "an internal door with a bathroom / W.C. space on one side",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_kb/test_kb_door_standards.py::test_the_owner_correction_table[bath-0.90]"
+   ],
+   "title": "Bathroom doors: PVC material, bathroom opening standard"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-14",
+    "source": "owner door rules 2026-10-13 (engine/source/door_model.py DOOR_RULE_ID OWNER_DOOR_CLASSES_2026_10_13); owner master prompt 2026-10-14 (URBAN PROJECT AI - master engineering intelligence program) Part C section 10; owner correction 2026-10-14 (CRITICAL OWNER CORRECTION - door opening dimensions)"
+   },
+   "code": [
+    "engine/source/door_model.py::main_entrance",
+    "engine/source/door_standards.py::required_opening"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "OPENINGS"
+   ],
+   "effective_version": "1.0.0",
+   "elements": [
+    "DOOR"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-1 knowledge audit)",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    }
+   ],
+   "kind": "OWNER_RULE",
+   "limitations": [
+    "a single-leaf main entrance is identified only through entrance evidence"
+   ],
+   "locations": [
+    "ENTRANCE"
+   ],
+   "logic": {
+    "boq_item": "DOOR.MAIN_ENTRANCE",
+    "dimensions": "actual drawing dimensions and approved specifications; the ordinary PVC / aluminium opening standard is never applied",
+    "examples_not_mandatory_widths_m": [
+     2.0,
+     2.5
+    ],
+    "never_also": [
+     "PVC",
+     "ALUMINIUM"
+    ]
+   },
+   "preconditions": [
+    "identified by labels, exterior access, entrance sequence, topology, geometry, elevations or schedules; a double-leaf symbol alone is not enough"
+   ],
+   "purpose": "the first principal door into the main building is a separate item, larger and differently specified",
+   "required_evidence": [
+    "entrance evidence (word, sequence, schedule); zero or several candidates -> a REVIEW finding"
+   ],
+   "rule_id": "UP-DOOR-CLS-004",
+   "scope": "the main entrance of the main building",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_kb/test_kb_door_standards.py::test_the_main_entrance_keeps_its_drawn_width",
+    "tests/m9_kb/test_kb_wp5.py::test_a_balcony_door_is_aluminium_and_the_balcony_is_waterproofed"
+   ],
+   "title": "The main entrance is its own door category, measured as drawn"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-13",
+    "source": "owner door rules 2026-10-13 (engine/source/door_model.py DOOR_RULE_ID OWNER_DOOR_CLASSES_2026_10_13); owner master prompt 2026-10-14 (URBAN PROJECT AI - master engineering intelligence program) Part C section 12"
+   },
+   "code": [
+    "engine/source/door_model.py::lift_openings",
+    "engine/source/door_model.py::lift_candidates",
+    "engine/source/door_standards.py::elevator_schedule"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "OPENINGS",
+    "ELEVATOR"
+   ],
+   "effective_version": "1.0.0",
+   "elements": [
+    "DOOR",
+    "OPENING",
+    "SHAFT"
+   ],
+   "examples": [],
+   "exceptions": [
+    "a door beside a shaft is not automatically an elevator entrance"
+   ],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-1 knowledge audit)",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    }
+   ],
+   "kind": "OWNER_RULE",
+   "limitations": [],
+   "locations": [
+    "ELEVATOR_SHAFT"
+   ],
+   "logic": {
+    "door_boq": "EXCLUDED (never PVC, aluminium or main entrance)",
+    "lift_shaft_finishes": "excluded from room finishes",
+    "schedule": "UP-ELEV-SCHED-001"
+   },
+   "preconditions": [
+    "a lift word, a lift schedule, a lift door block, or the owner confirms the landing; an opening into a stacked shaft is a CANDIDATE until then"
+   ],
+   "purpose": "the elevator company supplies the landing doors; they are quoted on a separate elevator schedule",
+   "required_evidence": [],
+   "rule_id": "UP-DOOR-CLS-005",
+   "scope": "every opening or door that serves an elevator landing",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_kb/test_kb_door_standards.py::test_no_elevator_entrance_reaches_the_door_quantities"
+   ],
+   "title": "Elevator entrances are not ordinary doors"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-13",
+    "source": "owner door rules 2026-10-13 (engine/source/door_model.py DOOR_RULE_ID OWNER_DOOR_CLASSES_2026_10_13)"
+   },
+   "code": [
+    "engine/source/door_model.py::elements"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "OPENINGS"
+   ],
+   "effective_version": "1.0.0",
+   "elements": [
+    "DOOR"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-1 knowledge audit)",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    }
+   ],
+   "kind": "OWNER_RULE",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "count": "1 per physical door element",
+    "leaf_count": "recorded"
+   },
+   "preconditions": [],
+   "purpose": "never count leaves as door items",
+   "required_evidence": [],
+   "rule_id": "UP-DOOR-CLS-006",
+   "scope": "every door element",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_p2a/test_p2a_doors.py::test_a_double_leaf_door_is_one_door_assembly"
+   ],
+   "title": "One physical double-leaf door is one door set"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-14",
+    "source": "owner master prompt 2026-10-14 (URBAN PROJECT AI - master engineering intelligence program) Part F section 26"
+   },
+   "code": [
+    "engine/source/door_standards.py::dependency_impacts",
+    "engine/source/door_feasibility.py::feasibility"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "MASONRY",
+    "PLASTER",
+    "PAINT",
+    "WALL_FINISH",
+    "FLOOR_FINISH",
+    "MARBLE",
+    "WATERPROOFING",
+    "CONCRETE"
+   ],
+   "effective_version": "1.1.0",
+   "elements": [
+    "DOOR",
+    "WALL",
+    "LINTEL",
+    "COLUMN"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-1 knowledge audit)",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    },
+    {
+     "change": "dependency impacts carried into the door feasibility schedule",
+     "date": "2026-10-16",
+     "version": "1.1.0"
+    }
+   ],
+   "kind": "ENGINEERING_RULE",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "affected": {
+     "blockwork deduction": "+enlargement x height",
+     "door area": "+enlargement x height",
+     "lintel": "span +enlargement (bearing to check)",
+     "plaster / paint / wall tile deductions": "+enlargement x height per finished face",
+     "reveals and jambs": "jamb surfaces move; head soffit +enlargement x wall thickness",
+     "skirting": "-enlargement on each skirted side face",
+     "structural interface": "a column or wall end within the enlargement blocks it: review",
+     "threshold / doorway strip": "+enlargement x wall thickness"
+    },
+    "feasibility": "the dependency map is read with the feasibility of the enlargement (UP-DOOR-FEAS-001): the column / junction / corner / opening / swing constraints and the structural status",
+    "release": "REVIEW_REQUIRED: indicative impacts only, no BOQ line changes"
+   },
+   "preconditions": [],
+   "purpose": "show what an owner-required enlargement touches before anyone builds it",
+   "required_evidence": [],
+   "rule_id": "UP-DOOR-DEP-001",
+   "scope": "every door with a required enlargement",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_kb/test_kb_door_standards.py::test_an_enlargement_lists_its_dependent_trades_and_releases_nothing",
+    "tests/m9_p2b2/test_p2b2_door_feasibility.py::test_opening_beside_a_column"
+   ],
+   "title": "An enlarged opening changes other trades: listed for review, never auto-released"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-16",
+    "source": "owner program 2026-10-16 (URBAN PROJECT AI - master engineering rules, waterproofing optimization and door feasibility) Part 4.3 - 4.7"
+   },
+   "code": [
+    "engine/source/door_feasibility.py::feasibility",
+    "engine/source/door_feasibility.py::clearances",
+    "engine/source/door_feasibility.py::classify",
+    "engine/source/door_feasibility.py::swing"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "OPENINGS",
+    "MASONRY",
+    "PLASTER",
+    "PAINT",
+    "WALL_FINISH",
+    "FLOOR_FINISH",
+    "CONCRETE"
+   ],
+   "effective_version": "1.1.0",
+   "elements": [
+    "DOOR"
+   ],
+   "examples": [
+    {
+     "available_nominal_m": 0.7,
+     "case": "bathroom CAD wall opening 0.80 m",
+     "compliance": "ENLARGEMENT_REQUIRED",
+     "enlargement_m": 0.2,
+     "required_wall_opening_m": 1.0
+    }
+   ],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-2)",
+     "date": "2026-10-16",
+     "version": "1.1.0"
+    }
+   ],
+   "kind": "ENGINEERING_RULE",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "alternative": "if the enlargement is not approved, the door that fits = CAD wall opening - allowance",
+    "classes": [
+     "STANDARD_FITS_AS_DRAWN",
+     "ENLARGEMENT_GEOMETRICALLY_POSSIBLE",
+     "ENLARGEMENT_CONSTRAINED",
+     "ENLARGEMENT_REQUIRES_ENGINEERING_REVIEW",
+     "INSUFFICIENT_DRAWING_EVIDENCE"
+    ],
+    "constraints_read": [
+     "the wall run on both faces beyond each jamb",
+     "columns",
+     "wall junctions and returns",
+     "corners and wall ends",
+     "the swing of the larger leaf",
+     "nearby openings (doors, windows, passages)",
+     "stair / shaft / lift spaces at the enlarged jamb",
+     "fixtures drawn in the swing",
+     "the structural status of the host wall"
+    ],
+    "never": [
+     "geometric clearance taken as structural approval",
+     "a column, beam or structural wall cut or altered by recommendation without qualified engineering review",
+     "a proposed modification released as an as-drawn quantity",
+     "the preferred door treated as already fitting"
+    ],
+    "per_door": [
+     "actual CAD wall opening",
+     "owner-preferred nominal door",
+     "required wall opening",
+     "available nominal under the allowance (CAD - 0.10 m)",
+     "difference to the required opening",
+     "whether enlargement is needed",
+     "whether it appears geometrically feasible",
+     "what constrains it"
+    ],
+    "pier": "the wall left beside a junction, corner or opening after the enlargement: a project value (UP-RULES-001), engine default 0.10 m labelled ENGINE_REVIEW_THRESHOLD - not an owner standard",
+    "structure_states": [
+     "STRUCTURAL (project rule)",
+     "NON_STRUCTURAL_SPECIFIED (project rule)",
+     "MASONRY_INDICATED (a masonry wall layer in a plan that draws a column frame; not verified)",
+     "UNKNOWN (no frame drawn, or the project says so)"
+    ],
+    "views": [
+     "AS_DRAWN",
+     "OWNER_STANDARD",
+     "PROPOSED_MODIFICATION",
+     "UNRESOLVED"
+    ]
+   },
+   "preconditions": [],
+   "purpose": "tell what the drawing shows, what Urban requires, where they differ and whether the required modification can physically fit - without approving it",
+   "required_evidence": [],
+   "rule_id": "UP-DOOR-FEAS-001",
+   "scope": "every ordinary door (internal PVC, bathroom PVC, external aluminium); the main entrance as drawn; elevators excluded",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_p2b2/test_p2b2_door_feasibility.py::test_bathroom_0_80_needs_0_20_and_is_not_treated_as_fitting",
+    "tests/m9_p2b2/test_p2b2_door_feasibility.py::test_opening_beside_a_column",
+    "tests/m9_p2b2/test_p2b2_door_feasibility.py::test_unknown_structural_classification_requires_engineering_review",
+    "tests/m9_p2b2/test_p2b2_door_feasibility.py::test_no_proposed_modification_is_released_as_drawn",
+    "tests/m9_p2b2/test_p2b2_door_feasibility.py::test_door_opening_into_a_corridor_swing_clearance",
+    "tests/m9_p2b2/test_p2b2_door_feasibility.py::test_mirrored_and_rotated_geometry_give_the_same_result",
+    "tests/m9_p2b2/test_p2b2_door_feasibility.py::test_a_swing_symbol_closing_outside_its_gap_is_reported_not_evaluated",
+    "tests/m9_p2b2/test_p2b2_door_feasibility.py::test_a_stair_at_the_enlarged_jamb_constrains_and_says_why_first"
+   ],
+   "title": "Door opening feasibility: does the owner-standard door fit, and can the opening be enlarged"
+  },
+  {
+   "assumptions_permitted": "the owner reference heights, labelled HEIGHT_ASSUMED",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-14",
+    "source": "owner master prompt 2026-10-14 (URBAN PROJECT AI - master engineering intelligence program) Part C section 11"
+   },
+   "code": [
+    "engine/source/door_standards.py::door_height",
+    "engine/source/door_feasibility.py::jamb_plaster_lines"
+   ],
+   "conflicts": [
+    {
+     "resolution": "no conflict: that rule forbids a company-wide WALL FINISH height; these are door fallbacks, always labelled ASSUMED",
+     "with": "URBAN-WALL-FINISH-HEIGHT-METHOD"
+    }
+   ],
+   "dependent_trades": [
+    "OPENINGS"
+   ],
+   "effective_version": "1.4.0",
+   "elements": [
+    "DOOR"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-1 knowledge audit)",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    },
+    {
+     "change": "the owner's state label (never DRAWING_MEASURED); jamb plaster by category (Part 4.2)",
+     "date": "2026-10-16",
+     "version": "1.1.0"
+    },
+    {
+     "change": "the element annotation ranks first (UP-HGT-001, Phase 2B-9)",
+     "date": "2026-10-17",
+     "version": "1.4.0"
+    }
+   ],
+   "kind": "OWNER_RULE",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "applies_to": "door areas and the related finish calculations (door jamb / head plaster) by door category; the main entrance 2.50 m; a main-entrance candidate between 2.20 and 2.50 m",
+    "flags": [
+     "HEIGHT_ASSUMED",
+     "AREA_ASSUMED"
+    ],
+    "main_entrance_note": "2.50 m is a possible fallback subject to project context: used only as ASSUMED with a review flag",
+    "never": [
+     "replace a verified height",
+     "a confirmed area from an assumed height"
+    ],
+    "order": [
+     "door schedule",
+     "section",
+     "elevation",
+     "explicit dimension",
+     "project fallback (facts opening_heights.DOOR_ASSUMED)",
+     "owner reference height"
+    ],
+    "order_1_4_0": [
+     "element annotation",
+     "door schedule",
+     "section",
+     "elevation",
+     "floor note",
+     "project rule (facts)",
+     "owner reference height (HEIGHT_ASSUMED)"
+    ],
+    "owner_reference_height_m": {
+     "BATHROOM_PVC": 2.2,
+     "EXTERNAL_ALUMINIUM": 2.2,
+     "INTERNAL_PVC": 2.2,
+     "MAIN_ENTRANCE": 2.5
+    },
+    "state_label": "OWNER_STANDARD_ASSUMED"
+   },
+   "preconditions": [],
+   "purpose": "door areas need a height; a verified height always wins, a fallback is never a measurement",
+   "required_evidence": [],
+   "rule_id": "UP-DOOR-HGT-001",
+   "scope": "ordinary PVC / aluminium doors and the main entrance",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_kb/test_kb_door_standards.py::test_a_schedule_height_wins_over_the_owner_fallback",
+    "tests/m9_kb/test_kb_door_standards.py::test_an_owner_fallback_height_is_assumed_never_confirmed",
+    "tests/m9_kb/test_kb_integration.py::test_an_assumption_is_never_released_as_confirmed",
+    "tests/m9_p2b2/test_p2b2_integration.py::test_v2_4_jamb_plaster_uses_the_category_height",
+    "tests/m9_p2b9/test_p2b9_heights.py::test_the_evidence_hierarchy_order"
+   ],
+   "title": "Door heights: sources first, owner reference heights as labelled fallbacks"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-14",
+    "source": "owner master prompt 2026-10-14 (URBAN PROJECT AI - master engineering intelligence program) Part C section 7"
+   },
+   "code": [],
+   "conflicts": [],
+   "dependent_trades": [
+    "OPENINGS"
+   ],
+   "effective_version": "1.0.0",
+   "elements": [
+    "DOOR"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "received with the master prompt",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    },
+    {
+     "change": "DEPRECATED by the owner correction before implementation",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    }
+   ],
+   "kind": "OWNER_RULE",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "superseded_reading": "OWNER_REQUIRED_WIDTH = max(DRAWN_OPENING_WIDTH, minimum 1.00 / 0.90 / 1.00 m) applied to the architectural wall opening",
+    "why_superseded": "the owner distinguishes the nominal door opening from the architectural wall opening (nominal + 0.10 m); the minimums 1.00 / 0.90 / 1.00 are NOMINAL door openings"
+   },
+   "preconditions": [],
+   "purpose": "historical record: the dimensional reading of Part C section 7 was replaced before implementation",
+   "required_evidence": [],
+   "rule_id": "UP-DOOR-MIN-001",
+   "scope": "ordinary PVC / bathroom / aluminium doors",
+   "status": "DEPRECATED",
+   "superseded_by": "UP-DOOR-OPEN-002",
+   "supersedes": [],
+   "tests": [
+    "tests/m9_kb/test_kb_door_standards.py::test_the_superseded_part_c_reading_is_not_applied"
+   ],
+   "title": "Minimum door opening widths (master prompt Part C section 7) - SUPERSEDED"
+  },
+  {
+   "assumptions_permitted": "the 0.10 m allowance is an owner planning rule; conflicts with shop drawings, structural constraints or manufacturer details are flagged",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-14",
+    "source": "owner correction 2026-10-14 (CRITICAL OWNER CORRECTION - door opening dimensions)"
+   },
+   "code": [
+    "engine/source/door_standards.py::required_opening",
+    "engine/source/door_standards.py::door_scenarios",
+    "engine/source/door_feasibility.py::feasibility"
+   ],
+   "conflicts": [
+    {
+     "resolution": "supersedes it",
+     "with": "UP-DOOR-MIN-001"
+    },
+    {
+     "resolution": "the schedule establishes the nominal door and its convention (precedence 1); the owner rule then sets only the required wall opening; a disagreement is flagged DOOR_SCHEDULE_CONVENTION_CONFLICT",
+     "with": "approved door schedule"
+    }
+   ],
+   "dependent_trades": [
+    "OPENINGS",
+    "MASONRY",
+    "PLASTER",
+    "PAINT",
+    "WALL_FINISH",
+    "FLOOR_FINISH",
+    "MARBLE",
+    "WATERPROOFING",
+    "CONCRETE"
+   ],
+   "effective_version": "1.2.0",
+   "elements": [
+    "DOOR"
+   ],
+   "examples": [
+    {
+     "cad_m": 0.9,
+     "category": "INTERNAL_PVC",
+     "enlargement_m": 0.2,
+     "required_wall_opening_m": 1.1
+    },
+    {
+     "cad_m": 0.9,
+     "category": "BATHROOM_PVC",
+     "enlargement_m": 0.1,
+     "required_wall_opening_m": 1.0
+    },
+    {
+     "cad_m": 1.0,
+     "category": "EXTERNAL_ALUMINIUM",
+     "enlargement_m": 0.1,
+     "required_wall_opening_m": 1.1
+    },
+    {
+     "cad_m": 1.2,
+     "category": "INTERNAL_PVC",
+     "enlargement_m": 0.0,
+     "required_wall_opening_m": 1.2
+    },
+    {
+     "cad_m": 0.8,
+     "category": "INTERNAL_PVC",
+     "enlargement_m": 0.3,
+     "required_wall_opening_m": 1.1
+    },
+    {
+     "cad_m": 0.75,
+     "category": "INTERNAL_PVC",
+     "enlargement_m": 0.35,
+     "required_wall_opening_m": 1.1
+    },
+    {
+     "cad_m": 0.8,
+     "category": "BATHROOM_PVC",
+     "enlargement_m": 0.2,
+     "required_wall_opening_m": 1.0
+    },
+    {
+     "cad_m": 1.0,
+     "category": "BATHROOM_PVC",
+     "enlargement_m": 0.0,
+     "required_wall_opening_m": 1.0
+    },
+    {
+     "cad_m": 0.9,
+     "category": "EXTERNAL_ALUMINIUM",
+     "enlargement_m": 0.2,
+     "required_wall_opening_m": 1.1
+    }
+   ],
+   "exceptions": [
+    "main entrance: actual drawing dimensions and specifications (UP-DOOR-CLS-004)",
+    "elevator entrances: excluded (UP-DOOR-CLS-005)",
+    "an approved door schedule with another dimensional convention: recorded, conflict flagged"
+   ],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-1 knowledge audit)",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    },
+    {
+     "change": "available nominal for every door, compliance status, project override (Part 4.3, Part 5)",
+     "date": "2026-10-16",
+     "version": "1.1.0"
+    },
+    {
+     "change": "requires confirmation: the 0.10 m allowance is not imposed by ARCH_TAKEOFF_V2.7 (Phase 2B-7 section 4)",
+     "date": "2026-10-17",
+     "version": "1.2.0"
+    }
+   ],
+   "kind": "OWNER_RULE",
+   "limitations": [
+    "accessibility, fire-safety and structural conditions are not checked: flagged only",
+    "the head height of the wall opening is not covered by the 0.10 m rule (width only)"
+   ],
+   "locations": [
+    "INTERIOR",
+    "BATHROOM",
+    "FACADE"
+   ],
+   "logic": {
+    "allowance_m": null,
+    "allowance_registry_1_1_0_m": 0.1,
+    "available_nominal": "every door: the CAD wall opening - 0.10 m is the largest nominal door it takes under the allowance (owner example: a 0.80 m bathroom opening takes a 0.70 m door)",
+    "available_nominal_example": {
+     "available_nominal_m": 0.7,
+     "cad_wall_opening_m": 0.8,
+     "category": "BATHROOM_PVC",
+     "required_enlargement_m": 0.2,
+     "required_nominal_door_m": 0.9,
+     "required_wall_opening_m": 1.0,
+     "status": "ENLARGEMENT_REQUIRED"
+    },
+    "compliance": [
+     "MEETS_STANDARD",
+     "ENLARGEMENT_REQUIRED",
+     "NOT_APPLICABLE",
+     "NOT_ESTABLISHED"
+    ],
+    "flag": "OPENING_BELOW_OWNER_STANDARD (enlargement > 1 mm)",
+    "formulas": [
+     "ARCHITECTURAL_WALL_OPENING = REQUIRED_NOMINAL_DOOR_OPENING + 0.10 m",
+     "OWNER_REQUIRED_WALL_OPENING = max(CAD_WALL_OPENING, ARCHITECTURAL_WALL_OPENING)",
+     "REQUIRED_ENLARGEMENT = OWNER_REQUIRED_WALL_OPENING - CAD_WALL_OPENING"
+    ],
+    "kept_apart": [
+     "CAD_WALL_OPENING",
+     "REQUIRED_NOMINAL_DOOR_OPENING",
+     "OWNER_REQUIRED_WALL_OPENING",
+     "frame width (door block)",
+     "nominal leaf width (swing radius, evidence only)",
+     "finished clear passage width (not measured from a plan)"
+    ],
+    "never": [
+     "add another 0.10 m after applying the rule",
+     "overwrite the CAD measurement",
+     "treat the 0.10 m as a verified manufacturer installation requirement",
+     "declare an enlarged opening buildable"
+    ],
+    "nominal_door_for_a_larger_opening": "where the CAD wall opening already exceeds the architectural wall opening, the door that fits it is (CAD opening - 0.10 m), recorded as RULE_DERIVED (a schedule overrides it)",
+    "project_override": "a project width standard (UP-RULES-001, scope DOOR_CATEGORY / OPENING) replaces the required nominal door; the Urban value is kept beside it",
+    "requires_confirmation": "the reading of the owner minimums as nominal doors and the 0.10 m wall-opening allowance (OQ-05): kept as one reading, never imposed (UP-DOOR-OPEN-003)",
+    "table": {
+     "BATHROOM_PVC": {
+      "required_nominal_door_m": 0.9,
+      "required_wall_opening_m": null
+     },
+     "EXTERNAL_ALUMINIUM": {
+      "required_nominal_door_m": 1.0,
+      "required_wall_opening_m": null
+     },
+     "INTERNAL_PVC": {
+      "required_nominal_door_m": 1.0,
+      "required_wall_opening_m": null
+     }
+    }
+   },
+   "preconditions": [
+    "the door category is established (UP-DOOR-CLS-001..003)",
+    "the CAD architectural wall opening is measured jamb to jamb (or wall to wall for a provisional door, which stays provisional)"
+   ],
+   "purpose": "the owner orders doors of a required nominal size and builds the wall opening 0.10 m wider for installation / frame coordination; an undersized drawn opening is enlarged to that wall opening",
+   "required_evidence": [
+    "CAD wall opening (band gap between jambs)",
+    "door category"
+   ],
+   "rule_id": "UP-DOOR-OPEN-002",
+   "scope": "ordinary internal PVC, bathroom PVC and ordinary external aluminium doors",
+   "status": "REQUIRES_CONFIRMATION",
+   "superseded_by": "UP-DOOR-OPEN-003",
+   "supersedes": [
+    "UP-DOOR-MIN-001"
+   ],
+   "tests": [
+    "tests/m9_kb/test_kb_door_standards.py::test_the_owner_correction_table",
+    "tests/m9_kb/test_kb_door_standards.py::test_no_second_allowance_is_added",
+    "tests/m9_kb/test_kb_door_standards.py::test_the_drawn_width_is_never_overwritten",
+    "tests/m9_kb/test_kb_wp5.py::test_conflicting_opening_dimensions_keep_both_values_and_hold_the_door",
+    "tests/m9_kb/test_kb_integration.py::test_the_owner_required_view_never_reaches_the_boq_lines",
+    "tests/m9_p2b2/test_p2b2_door_feasibility.py::test_bathroom_0_80_needs_0_20_and_is_not_treated_as_fitting",
+    "tests/m9_p2b2/test_p2b2_door_feasibility.py::test_a_project_specific_width_standard"
+   ],
+   "title": "Required nominal door opening and architectural wall opening"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-17",
+    "source": "owner program 2026-10-17 (URBAN PROJECT AI - Phase 2B-7 controlled implementation authorization) section 4; the minimums: owner program 2026-10-16 (URBAN PROJECT AI - overnight engineering intelligence and BOQ development) Part 4 (minimum openings: ordinary 1.00, bathroom 0.90)"
+   },
+   "code": [
+    "engine/source/door_standards.py::opening_record_v27"
+   ],
+   "conflicts": [
+    {
+     "resolution": "1.2.0: UP-DOOR-OPEN-002 requires confirmation (its reading of the minimums as nominal doors and its 0.10 m allowance are one reading, OQ-05)",
+     "with": "UP-DOOR-OPEN-002"
+    }
+   ],
+   "dependent_trades": [
+    "OPENINGS",
+    "MASONRY",
+    "PLASTER",
+    "WALL_FINISH",
+    "FLOOR_FINISH",
+    "MARBLE",
+    "WATERPROOFING"
+   ],
+   "effective_version": "1.3.0",
+   "elements": [
+    "DOOR"
+   ],
+   "examples": [],
+   "exceptions": [
+    "main entrance: drawing and specification (UP-DOOR-CLS-004)",
+    "elevator entrances: excluded (UP-DOOR-CLS-005)"
+   ],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-7)",
+     "date": "2026-10-17",
+     "version": "1.2.0"
+    },
+    {
+     "change": "the door-standard reconciliation record (Phase 2B-8 section 2)",
+     "date": "2026-10-17",
+     "version": "1.3.0"
+    }
+   ],
+   "kind": "OWNER_RULE",
+   "limitations": [],
+   "locations": [
+    "INTERIOR",
+    "BATHROOM",
+    "FACADE"
+   ],
+   "logic": {
+    "allowance_sources": [
+     "an approved door schedule or shop drawing",
+     "a manufacturer installation detail",
+     "a project rule (UP-RULES-001, scope DOOR_CATEGORY / OPENING)"
+    ],
+    "applies_to": "UNRESOLVED (OQ-05): the structural opening, the door leaf or the clear passage",
+    "kept_apart": [
+     "CAD_STRUCTURAL_OPENING",
+     "DOOR_LEAF (if established)",
+     "FINISHED_CLEAR_PASSAGE (if established)",
+     "OWNER_REQUIRED_MINIMUM",
+     "FRAME_OR_INSTALLATION_ALLOWANCE (if independently supported)",
+     "PROPOSED_ENLARGEMENT",
+     "CONFLICT_REVIEW_STATUS"
+    ],
+    "never": [
+     "the 0.10 m allowance of registry 1.1.0 imposed as an unconditional owner rule",
+     "a measured width overwritten",
+     "an enlargement applied to a quantity"
+    ],
+    "owner_minimum_m": {
+     "BATHROOM_PVC": 0.9,
+     "EXTERNAL_ALUMINIUM": 1.0,
+     "INTERNAL_PVC": 1.0
+    },
+    "question": "OQ-05",
+    "readings": [
+     "STRUCTURAL_OPENING",
+     "DOOR_LEAF",
+     "CLEAR_PASSAGE"
+    ],
+    "reconciliation_1_3_0": {
+     "drawn_symbol_difference": "the structural opening minus the drawn leaf is CAD symbol geometry, reported, never an allowance",
+     "fields": [
+      "AS_DRAWN_WALL_OPENING (the band gap jamb to jamb)",
+      "MEASURED_JAMB_SPAN (the door symbol's own jamb lines)",
+      "DOOR_LEAF (if established)",
+      "FINISHED_CLEAR_WIDTH (if established; not in a plan)",
+      "OWNER_MINIMUM",
+      "FRAME_ALLOWANCE (only from an accepted source)",
+      "PROPOSED_ENLARGEMENT",
+      "CONSULTANT_REVIEW",
+      "STRUCTURAL_REVIEW"
+     ],
+     "never": [
+      "the CAD geometry changed to satisfy the minimum",
+      "an enlargement applied to a quantity",
+      "the registry 1.1.0 allowance imposed"
+     ],
+     "review": {
+      "consultant": "every proposed enlargement (UP-DOOR-DEP-001)",
+      "structural": "an enlargement that cuts drawn wall (beyond the drawn opening, or into a wall remainder inside the gap) or lengthens the lintel span"
+     }
+    }
+   },
+   "preconditions": [],
+   "purpose": "the owner's minimum openings (ordinary doors 1.00 m, bathroom doors 0.90 m) are checked without assuming what they measure: the CAD structural opening, the door leaf, the finished clear passage, the frame / installation allowance and the proposed enlargement are separate values",
+   "required_evidence": [],
+   "rule_id": "UP-DOOR-OPEN-003",
+   "scope": "ordinary internal PVC, bathroom PVC and ordinary external aluminium doors (ARCH_TAKEOFF_V2.7)",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [
+    "UP-DOOR-OPEN-002"
+   ],
+   "tests": [
+    "tests/m9_p2b7/test_p2b7_doors.py::test_crossing_door_opening_record",
+    "tests/m9_p2b8/test_p2b8_doors.py::test_bathroom_door_every_value_kept_apart",
+    "tests/m9_p2b8/test_p2b8_doors.py::test_bathroom_door_proposed_enlargement_and_review"
+   ],
+   "title": "Owner minimum door openings, kept apart from every measured and derived door width"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-14",
+    "source": "owner master prompt 2026-10-14 (URBAN PROJECT AI - master engineering intelligence program) Part C section 12"
+   },
+   "code": [
+    "engine/source/door_standards.py::elevator_schedule"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "ELEVATOR"
+   ],
+   "effective_version": "1.0.0",
+   "elements": [
+    "SHAFT",
+    "OPENING"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-1 knowledge audit)",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    }
+   ],
+   "kind": "OWNER_RULE",
+   "limitations": [],
+   "locations": [
+    "ELEVATOR_SHAFT"
+   ],
+   "logic": {
+    "fields": [
+     "shaft id",
+     "shaft dimensions (CAD geometry)",
+     "door-opening dimensions",
+     "number of landings",
+     "floors served",
+     "number of elevators",
+     "evidence source",
+     "missing information"
+    ],
+    "reference_shaft_m": [
+     1.8,
+     1.8
+    ],
+    "reference_use": "a comparison only; never an assumed shaft size",
+    "status": [
+     "CONFIRMED_LIFT (lift word / schedule / owner)",
+     "CANDIDATE (stacked shaft with an opening)"
+    ]
+   },
+   "preconditions": [],
+   "purpose": "the information the elevator company quotes from, kept out of the architectural door BOQ",
+   "required_evidence": [],
+   "rule_id": "UP-ELEV-SCHED-001",
+   "scope": "every shaft that may hold an elevator",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_kb/test_kb_door_standards.py::test_the_elevator_schedule_uses_cad_geometry"
+   ],
+   "title": "Separate elevator quotation schedule"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-17",
+    "source": "owner program 2026-10-17 (URBAN PROJECT AI - Phase N10: autonomous engineering development - curved geometry, architectural and structural completeness, independent proofs): the workstream asks for the quantity; the convention below is the engine's reading, pending the owner's confirmation"
+   },
+   "code": [
+    "engine/source/struct_n10.py::excavation"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "EARTHWORKS"
+   ],
+   "effective_version": "1.5.0",
+   "elements": [
+    "FOOTING",
+    "GROUND_BEAM"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase N10)",
+     "date": "2026-10-17",
+     "version": "1.5.0"
+    }
+   ],
+   "kind": "ENGINEERING_RULE",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "backfill": "held: it needs the buried concrete below ground level",
+    "never": [
+     "an excavation depth or working space assumed"
+    ],
+    "plan": "a pit per footing (L + 2 ws) x (W + 2 ws); a trench per ground beam clear length x (width + 2 ws)",
+    "volume": "plan x depth when the depth (or NGL and founding level) and the working space are stated facts; neighbouring pits are not merged (positions are not in the register): an upper bound"
+   },
+   "preconditions": [],
+   "purpose": "excavation and backfill never invented from missing levels",
+   "required_evidence": [
+    "natural ground level, founding level / blinding, working space"
+   ],
+   "rule_id": "UP-EXC-001",
+   "scope": "engine.source.struct_n10.excavation on the route G register (read only)",
+   "status": "REQUIRES_CONFIRMATION",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_n10/test_n10_structural.py::test_excavation_is_held_without_levels_and_working_space",
+    "tests/m9_n10/test_n10_structural.py::test_excavation_with_stated_depth_and_working_space"
+   ],
+   "title": "Excavation footprints; the volume only with stated depth and working space"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-17",
+    "source": "owner program 2026-10-17 (URBAN PROJECT AI - Phase N10: autonomous engineering development - curved geometry, architectural and structural completeness, independent proofs): the workstream asks for the quantity; the convention below is the engine's reading, pending the owner's confirmation"
+   },
+   "code": [
+    "engine/source/arch_v29.py::facade_outlines",
+    "engine/source/arch_v29.py::facade_evidence",
+    "engine/source/arch_v29.py::facade_takeoff"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "FACADE"
+   ],
+   "effective_version": "1.5.0",
+   "elements": [
+    "WALL",
+    "WINDOW",
+    "DOOR"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase N10)",
+     "date": "2026-10-17",
+     "version": "1.5.0"
+    }
+   ],
+   "kind": "ENGINEERING_RULE",
+   "limitations": [
+    "an undetected window recess on the outline is walked (its returns are in the run: D-N10-03)",
+    "set-back floors: the lower floor's exposed slab edge and parapet are not separate items"
+   ],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "deductions": "each opening on the outline: its width on the outline x its own band (a door from the F.F.L., a window min(sill + h, H) - max(sill, 0)); unknown heights give a range",
+    "finish": "FIN.EXT.FINISH = the facade area only when the exterior finish is stated",
+    "height": "the floor's section band: F.F.L. to the next floor's F.F.L.; above the top floor, to the lowest parapet top; or the stated fact facade.{floor|*}.height_m",
+    "never": [
+     "a ceiling or finish height used as a facade height",
+     "a second outline added",
+     "a finish measured without a specification"
+    ],
+    "outlines": "a second exterior outline is an RFI, never added; an outline around the building (a boundary wall) holds the facade",
+    "plinth": "below the lowest floor's F.F.L. down to the external ground level: an RFI",
+    "run": "the outer cycle of the plan topology, each opening closed on its outer wall face (the run includes the openings); a network inside a room is an island, never a facade"
+   },
+   "preconditions": [],
+   "purpose": "the exterior wall face of each floor: its run, its area and its finish",
+   "required_evidence": [],
+   "rule_id": "UP-FACADE-001",
+   "scope": "ARCH_TAKEOFF_V2.9: ARCH.FACADE_RUN, ARCH.FACADE and FIN.EXT.FINISH",
+   "status": "REQUIRES_CONFIRMATION",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_n10/test_n10_facade.py::test_facade_run_and_area_from_floor_to_floor",
+    "tests/m9_n10/test_n10_facade.py::test_second_outline_is_reported_never_added",
+    "tests/m9_n10/test_n10_facade.py::test_outline_around_the_building_holds_the_facade",
+    "tests/m9_n10/test_n10_facade.py::test_facade_run_is_independently_verified"
+   ],
+   "title": "The facade is the exterior outline of the floor's wall network, F.F.L. to the next F.F.L."
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-14",
+    "source": "owner master prompt 2026-10-14 (URBAN PROJECT AI - master engineering intelligence program) Part D section 15"
+   },
+   "code": [
+    "engine/source/owner_finish_scope.py::finish_scope"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "PAINT",
+    "WALL_FINISH",
+    "PLASTER"
+   ],
+   "effective_version": "1.0.0",
+   "elements": [
+    "WALL_FACE"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-1 knowledge audit)",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    }
+   ],
+   "kind": "OWNER_RULE",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "dry": "plaster + paint",
+    "substrate": "the cementitious substrate / plaster behind porcelain is its own line",
+    "wet_full_height": "PAINT NOT_APPLICABLE_WITH_EVIDENCE"
+   },
+   "preconditions": [],
+   "purpose": "never count paint and porcelain on the same wall face",
+   "required_evidence": [],
+   "rule_id": "UP-FIN-PAINT-001",
+   "scope": "every wall face",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_kb/test_kb_finish_scope.py::test_wall_porcelain_runs_full_height_and_no_paint_band_is_asked"
+   ],
+   "title": "No paint over full-height porcelain; one finish per face"
+  },
+  {
+   "assumptions_permitted": "door height may be the owner fallback (then the line says HEIGHT_ASSUMED)",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-14",
+    "source": "owner master prompt 2026-10-14 (URBAN PROJECT AI - master engineering intelligence program) Part D section 15; data/registry/URBAN_OWNER_METHOD_RULES.json URBAN-REVEAL-FINISH-METHOD (reveal default PLASTER)"
+   },
+   "code": [
+    "engine/source/owner_finish_scope.py::jamb_plaster_lines"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "PLASTER"
+   ],
+   "effective_version": "1.0.0",
+   "elements": [
+    "DOOR_JAMB",
+    "REVEAL"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-1 knowledge audit)",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    }
+   ],
+   "kind": "OWNER_RULE",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "area": "2 jambs x wall thickness x door height + head soffit wall thickness x opening width",
+    "never": [
+     "porcelain because an adjacent room is wet",
+     "one reveal in two room finishes"
+    ],
+    "state": "PROVISIONAL (the frame detail decides how much of it is plastered)"
+   },
+   "preconditions": [],
+   "purpose": "plaster around door frames may be needed for frame alignment; it is not omitted because a PVC frame is installed",
+   "required_evidence": [],
+   "rule_id": "UP-FIN-PLASTER-001",
+   "scope": "every door opening in a plastered wall",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_kb/test_kb_finish_scope.py::test_door_jamb_plaster_is_measured_and_provisional"
+   ],
+   "title": "Door jamb and head plaster is measured from geometry"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-14",
+    "source": "owner master prompt 2026-10-14 (URBAN PROJECT AI - master engineering intelligence program) Part D sections 13, 15; rules/methods/URBAN_METHOD_REGISTER_V1.json URBAN-WET-WALL-TILE-FULL-HEIGHT@v1"
+   },
+   "code": [
+    "engine/source/owner_finish_scope.py::wall_tile_height"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "WALL_FINISH"
+   ],
+   "effective_version": "1.0.0",
+   "elements": [
+    "WALL_FACE"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-1 knowledge audit)",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    }
+   ],
+   "kind": "OWNER_RULE",
+   "limitations": [],
+   "locations": [
+    "BATHROOM",
+    "KITCHEN",
+    "PANTRY",
+    "IRONING",
+    "LAUNDRY"
+   ],
+   "logic": {
+    "height": "the room's established clear (ceiling) height: the same ladder as paint (engine/source/arch_measure.py heights, URBAN-PAINT-TO-FINISHED-CEILING)",
+    "precedence": "an explicit wall-tile height from a drawing, schedule or project decision governs; a lower one is flagged WALL_TILE_BELOW_OWNER_FULL_HEIGHT and the band above stays a question",
+    "unknown_height": "the area is BLOCKED (the height is a document request), the scope is not"
+   },
+   "preconditions": [],
+   "purpose": "the visible wall tile of a wet area runs to the finished ceiling",
+   "required_evidence": [],
+   "rule_id": "UP-FIN-WALL-001",
+   "scope": "the walls of owner wet areas",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_kb/test_kb_finish_scope.py::test_wall_porcelain_runs_full_height_and_no_paint_band_is_asked",
+    "tests/m9_kb/test_kb_finish_scope.py::test_an_explicit_lower_tile_height_wins_and_is_flagged"
+   ],
+   "title": "Full-height wall porcelain in wet areas"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-17",
+    "source": "owner program 2026-10-17 (URBAN PROJECT AI - Phase N10: autonomous engineering development - curved geometry, architectural and structural completeness, independent proofs): the workstream asks for the quantity; the convention below is the engine's reading, pending the owner's confirmation"
+   },
+   "code": [
+    "engine/source/struct_n10.py::element_faces",
+    "engine/source/struct_n10.py::formwork"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "FORMWORK"
+   ],
+   "effective_version": "1.5.0",
+   "elements": [
+    "SLAB",
+    "BEAM",
+    "COLUMN",
+    "FOOTING",
+    "GROUND_BEAM"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase N10)",
+     "date": "2026-10-17",
+     "version": "1.5.0"
+    }
+   ],
+   "kind": "ENGINEERING_RULE",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "BEAMS": "soffit = the net plan (MEASURED); sides 2 x net length x (depth | depth - slab): CONDITIONAL",
+    "COLUMNS": "perimeter x (storey height - slab thickness): UPPER_BOUND (framing beams not deducted)",
+    "FOOTINGS / GROUND_BEAMS": "sides CONDITIONAL on FORMED / EARTH_CAST; base on blinding: no form",
+    "SLABS": "soffit = the slab face area (MEASURED); free edges HELD; a ground slab has no soffit",
+    "never": [
+     "conditional alternatives summed",
+     "a held face counted as zero"
+    ],
+    "other": "HELD with the reason (necks without a height, stairs, lintels, unresolved rows)"
+   },
+   "preconditions": [],
+   "purpose": "the faces a form shapes, element by element, without choosing an open convention",
+   "required_evidence": [],
+   "rule_id": "UP-FW-001",
+   "scope": "engine.source.struct_n10.formwork on the route G register (read only)",
+   "status": "REQUIRES_CONFIRMATION",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_n10/test_n10_structural.py::test_hand_truth_faces",
+    "tests/m9_n10/test_n10_structural.py::test_formwork_matches_the_design",
+    "tests/m9_n10/test_n10_structural.py::test_faces_conserve_the_route_g_concrete"
+   ],
+   "title": "Formwork contact faces by element from the concrete register"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-17",
+    "source": "owner program 2026-10-17 (URBAN PROJECT AI - Phase 2B-9: architectural BOQ completion, drawing-derived heights, wall geometry and independent quantity proof) section 3"
+   },
+   "code": [
+    "engine/source/arch_v28.py::read_schedules",
+    "engine/source/arch_v28.py::read_views",
+    "engine/source/arch_v28.py::bind_floor",
+    "engine/source/arch_v28.py::resolve"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "PLASTER",
+    "PAINT",
+    "WALL_FINISH",
+    "OPENINGS"
+   ],
+   "effective_version": "1.4.0",
+   "elements": [
+    "WALL_FACE",
+    "CEILING",
+    "DOOR",
+    "WINDOW"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-9)",
+     "date": "2026-10-17",
+     "version": "1.4.0"
+    }
+   ],
+   "kind": "ENGINEERING_RULE",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "conflict": "two candidates of the governing rank and scope that disagree by more than 5 mm: CONFLICT, no value; a lower-ranked disagreeing candidate is kept as overridden",
+    "never": [
+     "a floor-to-floor height as a wall height",
+     "a real-project height invented",
+     "an Urban default presented as a drawing value"
+    ],
+    "order": [
+     "ELEMENT_ANNOTATION (a text on the opening or inside the room)",
+     "SCHEDULE (door / window schedule row, bound by the mark next to the opening)",
+     "SECTION / ELEVATION (level texts on the floor's band)",
+     "DERIVED (the plan-level interval minus every sourced component)",
+     "FLOOR_NOTE (a general note on the plan sheet)",
+     "PROJECT_NOTE (a general note elsewhere)",
+     "PROJECT_RULE (the project facts / approved project rules)",
+     "URBAN_DEFAULT (UP-DOOR-HGT-001 door heights only, HEIGHT_ASSUMED)"
+    ],
+    "scope_order": [
+     "OPENING",
+     "ROOM",
+     "FLOOR",
+     "PROJECT"
+    ],
+    "trades": {
+     "PAINT": "to the finished ceiling (F.C.L. - F.F.L.; URBAN-PAINT-TO-FINISHED-CEILING)",
+     "PLASTER": "to the structural soffit (U/S SLAB - F.F.L.)",
+     "WALL_TILE": "a printed tile height, else full height to the finished ceiling (UP-FIN-WALL-001)"
+    },
+    "units": "a stated unit converts; otherwise only a reading that is physically plausible and unique is used (else UNIT_AMBIGUOUS)"
+   },
+   "preconditions": [],
+   "purpose": "every wall, ceiling, tile and opening height a quantity uses comes from the project's own drawings where they state it; an Urban default is the last fallback and always labelled",
+   "required_evidence": [],
+   "rule_id": "UP-HGT-001",
+   "scope": "every height-dependent quantity of ARCH_TAKEOFF_V2.8",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_p2b9/test_p2b9_heights.py::test_section_heights_govern_the_wall_finish",
+    "tests/m9_p2b9/test_p2b9_heights.py::test_the_evidence_hierarchy_order",
+    "tests/m9_p2b9/test_p2b9_heights.py::test_a_same_rank_conflict_holds_the_value",
+    "tests/m9_p2b9/test_p2b9_heights.py::test_the_missing_evidence_report"
+   ],
+   "title": "Heights are read from the drawing, by an evidence hierarchy, each with its source and scope"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-14",
+    "source": "owner master prompt 2026-10-14 (URBAN PROJECT AI - master engineering intelligence program) Part B section 5"
+   },
+   "code": [
+    "engine/source/knowledge.py::precedence_rank",
+    "engine/source/door_standards.py::door_scenarios"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "ALL"
+   ],
+   "effective_version": "1.0.0",
+   "elements": [
+    "ALL"
+   ],
+   "examples": [
+    {
+     "as_drawn_m": 0.9,
+     "case": "CAD opening 0.90 m, owner-required wall opening 1.10 m",
+     "modification_m": 0.2,
+     "owner_required_m": 1.1
+    }
+   ],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-1 knowledge audit)",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    }
+   ],
+   "kind": "KNOWLEDGE_POLICY",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "design_requirement": "an explicit owner-required minimum may set the REQUIRED value without changing the AS-DRAWN measurement; both are kept, each with its own source; the difference is a modification, never a correction of the drawing",
+    "never": [
+     "overwrite original evidence",
+     "add the AS_DRAWN and OWNER_REQUIRED scenarios together",
+     "release an owner-required quantity as measured"
+    ],
+    "physical_fact_hierarchy": [
+     "1 approved drawing dimensions and schedules",
+     "2 approved project specifications and details",
+     "3 verified geometric evidence",
+     "4 project-specific owner decisions",
+     "5 general owner rules",
+     "6 labelled assumptions",
+     "7 unresolved questions"
+    ],
+    "scenarios": [
+     "AS_DRAWN",
+     "OWNER_REQUIRED",
+     "UNRESOLVED"
+    ]
+   },
+   "preconditions": [],
+   "purpose": "decide which source establishes a physical fact, and never let an owner design requirement overwrite what the drawing shows",
+   "required_evidence": [
+    "the source of each value (schedule, specification, geometry, decision, rule, assumption)"
+   ],
+   "rule_id": "UP-KB-PREC-001",
+   "scope": "every quantity, classification and dimension of every project",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_kb/test_kb_registry.py::test_precedence_puts_drawing_evidence_above_owner_rules",
+    "tests/m9_kb/test_kb_door_standards.py::test_the_drawn_width_is_never_overwritten",
+    "tests/m9_kb/test_kb_integration.py::test_no_drawn_dimension_is_replaced",
+    "tests/m9_kb/test_kb_integration.py::test_an_assumption_is_never_released_as_confirmed",
+    "tests/m9_kb/test_kb_integration.py::test_v2_2_never_reads_the_registry"
+   ],
+   "title": "Source authority hierarchy, and as-drawn kept apart from owner-required"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-14",
+    "source": "owner master prompt 2026-10-14 (URBAN PROJECT AI - master engineering intelligence program) Part A sections 2-3, Part E section 23"
+   },
+   "code": [
+    "engine/source/knowledge.py::classify_question",
+    "engine/source/knowledge.py::owner_questions"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "ALL"
+   ],
+   "effective_version": "1.0.0",
+   "elements": [
+    "ALL"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-1 knowledge audit)",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    }
+   ],
+   "kind": "KNOWLEDGE_POLICY",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "before_asking": [
+     "search the registry",
+     "check project-specific decisions",
+     "inspect the drawing and schedules",
+     "check existing owner answers",
+     "decide whether it is a software defect",
+     "attempt safe evidence-based classification",
+     "group repeated instances"
+    ],
+    "categories": {
+     "A_ESTABLISHED": "an approved rule applies: apply it, never ask",
+     "B_MISSING_DRAWING_EVIDENCE": "a rule exists but the drawings do not show whether it applies: investigate geometry, connectivity, levels, annotations and other drawings; request the document (schedule, section, label), not a policy",
+     "C_RULE_CONFLICT": "two approved rules, or a drawing and an owner requirement, disagree: keep both facts and explain the modification; ask only where precedence does not decide it",
+     "D_MISSING_OWNER_POLICY": "no approved rule resolves it: the only category that is an owner question",
+     "E_ENGINEERING_DEFECT": "the engine cannot read the geometry or has not implemented an existing rule: an engineering backlog item, never an owner question"
+    },
+    "each_question_shows": [
+     "what was found",
+     "the rule checked",
+     "why it did not resolve the issue",
+     "the alternatives",
+     "the BOQ quantities affected",
+     "the engine's recommendation",
+     "whether work can continue safely without the answer"
+    ],
+    "never_ask": [
+     "whether ordinary internal doors are PVC",
+     "whether elevator doors belong in the architectural door count",
+     "whether fully tiled wet rooms receive conventional skirting"
+    ]
+   },
+   "preconditions": [],
+   "purpose": "stop asking answered questions, and stop reporting software failures as owner decisions",
+   "required_evidence": [],
+   "rule_id": "UP-KB-QUES-001",
+   "scope": "every unresolved item the engine emits",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_kb/test_kb_questions.py::test_established_rules_are_never_asked",
+    "tests/m9_kb/test_kb_questions.py::test_repeated_instances_are_grouped_into_one_question",
+    "tests/m9_kb/test_kb_questions.py::test_engine_defects_are_never_owner_questions",
+    "tests/m9_kb/test_kb_questions.py::test_every_catalogue_entry_is_reached_by_its_example",
+    "tests/m9_kb/test_kb_questions.py::test_an_unknown_reason_is_reported_unclassified_never_dropped"
+   ],
+   "title": "Question policy: what may be asked of the owner"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-17",
+    "source": "owner program 2026-10-17 (URBAN PROJECT AI - Phase N10: autonomous engineering development - curved geometry, architectural and structural completeness, independent proofs): the workstream asks for the quantity; the convention below is the engine's reading, pending the owner's confirmation"
+   },
+   "code": [
+    "engine/source/arch_v29.py::masonry_evidence",
+    "engine/source/arch_v29.py::masonry_takeoff"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "MASONRY"
+   ],
+   "effective_version": "1.5.0",
+   "elements": [
+    "WALL"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase N10)",
+     "date": "2026-10-17",
+     "version": "1.5.0"
+    }
+   ],
+   "kind": "ENGINEERING_RULE",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "area": "wall-mass plan area / t x panel + the wall above / below each opening (a door or passage from the slab: its height + the build-up; a window: min(h, panel); unknown: a range)",
+    "beams": "a section B.O.B. level gives a beam depth: a range between the beam bottom and the soffit (which walls carry a beam is not in the plan); without beam evidence the panel is held at its upper bound",
+    "material": "MAS.BLOCK takes the panel only when the family's material is stated",
+    "never": [
+     "a finish height or floor-to-floor used as a masonry height",
+     "a material inferred from a thickness"
+    ],
+    "panel": "U/S SLAB - T.O.S. of the floor's own section band (T.O.S. within 0.30 m below the F.F.L.); or the stated facts masonry.{floor|*}.panel_height_m and floor_buildup_m",
+    "volume": "area x t; the junction pieces of different thicknesses are their own volume"
+   },
+   "preconditions": [],
+   "purpose": "masonry area and volume by wall thickness from an evidenced panel height, never a finish height",
+   "required_evidence": [
+    "SECTION T.O.S. / U/S SLAB / B.O.B. levels, or stated project facts"
+   ],
+   "rule_id": "UP-MAS-HEIGHT-001",
+   "scope": "ARCH_TAKEOFF_V2.9: ARCH.WALL_PANEL, ARCH.WALL_VOLUME and MAS.BLOCK",
+   "status": "REQUIRES_CONFIRMATION",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_n10/test_n10_masonry.py::test_panel_measured_with_beams_stated_absent",
+    "tests/m9_n10/test_n10_masonry.py::test_beams_not_established_hold_the_panel_at_its_upper_bound",
+    "tests/m9_n10/test_n10_masonry.py::test_no_masonry_height_without_its_evidence"
+   ],
+   "title": "The masonry panel runs from the floor's structural slab top to the soffit above"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-17",
+    "source": "owner program 2026-10-17 (URBAN PROJECT AI - Phase N10: autonomous engineering development - curved geometry, architectural and structural completeness, independent proofs): the workstream asks for the quantity; the convention below is the engine's reading, pending the owner's confirmation"
+   },
+   "code": [
+    "engine/source/arch_v29.py::curved_gaps",
+    "engine/source/arch_v29.py::curved_openings",
+    "engine/source/arch_v29.py::curved_glazing_roles"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "FLOOR_FINISH",
+    "PLASTER",
+    "PAINT",
+    "SKIRTING",
+    "OPENINGS"
+   ],
+   "effective_version": "1.5.0",
+   "elements": [
+    "WALL",
+    "WINDOW",
+    "DOOR",
+    "PASSAGE"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase N10)",
+     "date": "2026-10-17",
+     "version": "1.5.0"
+    }
+   ],
+   "kind": "ENGINEERING_RULE",
+   "limitations": [
+    "ARCH_TAKEOFF_V2.9 only; earlier methods are unchanged"
+   ],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "closure": "an arc threshold on each wall face",
+    "glazing_layer": "an OTHER layer whose concentric arcs glaze the jambed curved gaps (most of its linework in wall gaps) is read as a WINDOW layer; a declared role is never changed",
+    "kind": "DOOR (a free swing hinged within 0.30 m of a jamb end, its radius fitting the mid chord), WINDOW (glazing arcs over half the gap), else PASSAGE",
+    "never": [
+     "the glazing line as the room boundary",
+     "a gap without a jamb line at both ends read as an opening",
+     "a mean radius used for a face's width"
+    ],
+    "opening": "both faces open over the same span (the outer face may stop up to 0.03 m further along the arc), a radial or splayed jamb line on a wall layer at each end, sweep <= half a turn, mid-band arc >= 0.40 m, no wall arc inside the gap",
+    "strips": "the strip between the face and the glazing is a reveal / sill strip, measured radially",
+    "width": "the arc of the face the room meets (MIN_RADIUS_ARC; MAX_RADIUS_ARC when only the outer face bounds a room); every basis (inner, mid-band, outer arc, chord) is published"
+   },
+   "preconditions": [],
+   "purpose": "a curved window, door or passage ends the room at the room's own wall face (never at the glazing line) and takes the width of the face the room meets (D-P9-01, D-P9-02)",
+   "required_evidence": [],
+   "rule_id": "UP-OPEN-CURVED-001",
+   "scope": "ARCH_TAKEOFF_V2.9: curved wall bands (concentric wall-layer arcs 0.10 - 0.45 m apart)",
+   "status": "REQUIRES_CONFIRMATION",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_n10/test_n10_curved_openings.py::test_curved_window_room_ends_at_its_own_wall_face",
+    "tests/m9_n10/test_n10_curved_openings.py::test_gap_without_jamb_lines_is_not_an_opening",
+    "tests/m9_n10/test_n10_curved_openings.py::test_splayed_jamb_is_still_an_opening",
+    "tests/m9_n10/test_n10_indep_curved.py::test_v28_to_v29_curved_window_changes_are_independently_verified"
+   ],
+   "title": "A jambed gap in a curved wall band is an opening closed on its own wall faces"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-17",
+    "source": "owner program 2026-10-17 (URBAN PROJECT AI - Phase 2B-9: architectural BOQ completion, drawing-derived heights, wall geometry and independent quantity proof) sections 4 (example 1) and 6"
+   },
+   "code": [
+    "engine/source/arch_v28.py::band_height",
+    "engine/source/arch_v28.py::height_of",
+    "engine/source/arch_v28.py::skirting_adjustment"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "PLASTER",
+    "PAINT",
+    "WALL_FINISH",
+    "FLOOR_FINISH",
+    "OPENINGS"
+   ],
+   "effective_version": "1.4.0",
+   "elements": [
+    "DOOR",
+    "WINDOW"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-9)",
+     "date": "2026-10-17",
+     "version": "1.4.0"
+    }
+   ],
+   "kind": "ENGINEERING_RULE",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "fields": [
+     "plan width",
+     "schedule width (checked within 0.03 m)",
+     "height",
+     "sill",
+     "head = sill + height",
+     "class: DOOR / WINDOW / FLOOR_GLAZING"
+    ],
+    "never": [
+     "a window area from a schedule row whose width is not the window's"
+    ],
+    "skirting": "floor-level glazing (sill <= 0.02 m) is not skirted; a sill window is; an unknown sill is a range",
+    "unknown_height": "the width is released, the area held with the reason",
+    "wall_finish_deduction": "the opening's own length on the boundary x (min(head, H) - max(sill, 0))"
+   },
+   "preconditions": [],
+   "purpose": "a window in a plan without its height is not enough for its area; each opening's effect on plaster, paint, porcelain and skirting follows from its own band",
+   "required_evidence": [],
+   "rule_id": "UP-OPEN-SCHED-001",
+   "scope": "every door and window opening of ARCH_TAKEOFF_V2.8",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_p2b9/test_p2b9_openings.py::test_example1_wall_face_and_openings",
+    "tests/m9_p2b9/test_p2b9_openings.py::test_floor_glazing_is_not_skirted",
+    "tests/m9_p2b9/test_p2b9_openings.py::test_an_unknown_sill_makes_skirting_a_range",
+    "tests/m9_p2b9/test_p2b9_openings.py::test_a_window_without_a_height_holds_its_area"
+   ],
+   "title": "The opening schedule: width, height, sill, head and class, and their effect on finishes"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-17",
+    "source": "owner program 2026-10-17 (URBAN PROJECT AI - V2.7 acceptance hardening and second-villa readiness) section 1"
+   },
+   "code": [
+    "tools/urban_boq_m9.py::_release_report"
+   ],
+   "conflicts": [],
+   "dependent_trades": [],
+   "effective_version": "1.3.0",
+   "elements": [
+    "BOQ_LINE"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-8)",
+     "date": "2026-10-17",
+     "version": "1.3.0"
+    }
+   ],
+   "kind": "ENGINEERING_RULE",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "CONDITIONAL": "scenario quantities (review classifications, owner door minimum): never in a confirmed total, scenarios of one set never added together",
+    "CONFIRMED": "a line with a quantity (MEASURED, SOURCE_DERIVED or PROVISIONAL)",
+    "EXCLUDED": "NOT_APPLICABLE_WITH_EVIDENCE / EXCLUDED_WITH_REASON, with the reason",
+    "HELD": {
+     "BLOCKED_RFI": "no quantity, its question",
+     "BOUNDED_EXPOSURE": "a range, its bounds kept",
+     "CANNOT_BE_ESTABLISHED": "a hold whose value no design document can give before construction or product selection (catalogue groups listed in cannot_be_established_groups; none in this registry)",
+     "cannot_be_established_groups": [],
+     "reason_class": {
+      "A_ESTABLISHED": "ENGINEERING_REVIEW (an established item still held is a defect of the run)",
+      "B_MISSING_DRAWING_EVIDENCE": "REQUIRES_DRAWING_EVIDENCE",
+      "C_RULE_CONFLICT": "REQUIRES_OWNER_DECISION",
+      "D_MISSING_OWNER_POLICY": "REQUIRES_OWNER_DECISION",
+      "E_ENGINEERING_DEFECT": "ENGINEERING_REVIEW",
+      "unclassified": "ENGINEERING_REVIEW (the hold is in no catalogue group: an engineering item to classify)"
+     }
+    },
+    "never": [
+     "a line in two categories",
+     "a conditional quantity in a confirmed total",
+     "an unsupported quantity reported as zero"
+    ]
+   },
+   "preconditions": [],
+   "purpose": "the BOQ shows what is confirmed, what depends on an open classification or decision, what is held for missing evidence and what is excluded, without double counting",
+   "required_evidence": [],
+   "rule_id": "UP-QTY-STATUS-001",
+   "scope": "the BOQ release report of ARCH_TAKEOFF_V2.7.1 (BOQ_RELEASE_REPORT.json / .csv)",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_p2b8/test_p2b8_review_release.py::test_every_line_is_reported_exactly_once",
+    "tests/m9_p2b8/test_p2b8_review_release.py::test_scenarios_are_never_added_to_the_main_boq"
+   ],
+   "title": "Every BOQ line reported once: confirmed, conditional, held or excluded"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER_METHOD",
+    "received": "before 2026-10-14",
+    "source": "data/registry/URBAN_OWNER_METHOD_RULES.json URBAN-FLOOR-FINISH-BEFORE-CABINETRY-METHOD"
+   },
+   "code": [],
+   "conflicts": [],
+   "dependent_trades": [
+    "PLASTER"
+   ],
+   "effective_version": "1.1.0",
+   "elements": [
+    "FINISH"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-2)",
+     "date": "2026-10-16",
+     "version": "1.1.0"
+    }
+   ],
+   "kind": "OWNER_METHOD_REFERENCE",
+   "limitations": [
+    "not applied: no ARCH_TAKEOFF route emits these surfaces"
+   ],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "applied_by": "no emitter in ARCH_TAKEOFF_V2.4",
+    "principle": "cabinetry installed after the floor finish does not reduce the floor-finish area"
+   },
+   "preconditions": [],
+   "purpose": "knowledge retention: an approved Urban owner method the architectural route does not apply, kept findable (Part 6)",
+   "required_evidence": [],
+   "rule_id": "UP-REF-CABINET-001",
+   "scope": "every Urban project (as the source states)",
+   "status": "REFERENCE_ONLY",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [],
+   "title": "Floor finish continues under cabinetry (owner method, reference only)"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER_METHOD",
+    "received": "before 2026-10-14",
+    "source": "data/registry/URBAN_OWNER_METHOD_RULES.json URBAN-EXPOSED-COLUMN-FINISH-METHOD"
+   },
+   "code": [],
+   "conflicts": [],
+   "dependent_trades": [
+    "PLASTER"
+   ],
+   "effective_version": "1.1.0",
+   "elements": [
+    "FINISH"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-2)",
+     "date": "2026-10-16",
+     "version": "1.1.0"
+    }
+   ],
+   "kind": "OWNER_METHOD_REFERENCE",
+   "limitations": [
+    "not applied: no ARCH_TAKEOFF route emits these surfaces"
+   ],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "applied_by": "no emitter in ARCH_TAKEOFF_V2.4",
+    "principle": "an exposed column face inside a room follows the surrounding room treatment at the room's own finish height"
+   },
+   "preconditions": [],
+   "purpose": "knowledge retention: an approved Urban owner method the architectural route does not apply, kept findable (Part 6)",
+   "required_evidence": [],
+   "rule_id": "UP-REF-COLUMN-001",
+   "scope": "every Urban project (as the source states)",
+   "status": "REFERENCE_ONLY",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [],
+   "title": "Exposed column faces follow the room treatment (owner method, reference only)"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER_METHOD",
+    "received": "before 2026-10-14",
+    "source": "data/registry/URBAN_OWNER_METHOD_RULES.json URBAN-EXPOSED-INTERIOR-DUCT-FINISH-METHOD"
+   },
+   "code": [],
+   "conflicts": [],
+   "dependent_trades": [
+    "PLASTER"
+   ],
+   "effective_version": "1.1.0",
+   "elements": [
+    "FINISH"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-2)",
+     "date": "2026-10-16",
+     "version": "1.1.0"
+    }
+   ],
+   "kind": "OWNER_METHOD_REFERENCE",
+   "limitations": [
+    "not applied: no ARCH_TAKEOFF route emits these surfaces"
+   ],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "applied_by": "no emitter in ARCH_TAKEOFF_V2.4",
+    "principle": "an exposed interior duct face takes the surrounding dry-room treatment"
+   },
+   "preconditions": [],
+   "purpose": "knowledge retention: an approved Urban owner method the architectural route does not apply, kept findable (Part 6)",
+   "required_evidence": [],
+   "rule_id": "UP-REF-DUCT-001",
+   "scope": "every Urban project (as the source states)",
+   "status": "REFERENCE_ONLY",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [],
+   "title": "Exposed duct / boxed-out faces take the dry-room treatment (owner method, reference only)"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER_METHOD",
+    "received": "before 2026-10-14",
+    "source": "data/registry/URBAN_OWNER_METHOD_RULES.json URBAN-REVEAL-FINISH-METHOD"
+   },
+   "code": [],
+   "conflicts": [],
+   "dependent_trades": [
+    "PLASTER"
+   ],
+   "effective_version": "1.4.0",
+   "elements": [
+    "FINISH"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-2)",
+     "date": "2026-10-16",
+     "version": "1.1.0"
+    },
+    {
+     "change": "applied by UP-REVEAL-001 in ARCH_TAKEOFF_V2.8 (Phase 2B-9)",
+     "date": "2026-10-17",
+     "version": "1.4.0"
+    }
+   ],
+   "kind": "OWNER_METHOD_REFERENCE",
+   "limitations": [
+    "applied in ARCH_TAKEOFF_V2.8 only (UP-REVEAL-001); no earlier route emits these surfaces"
+   ],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "applied_by": "no emitter in ARCH_TAKEOFF_V2.4",
+    "applied_by_1_4_0": "UP-REVEAL-001 in ARCH_TAKEOFF_V2.8 (window reveals; door jamb plaster stays UP-FIN-PLASTER-001)",
+    "default": "PLASTER",
+    "paint": "on a reveal owned by a painted dry surface",
+    "porcelain": "only when requested, shown or project-authorised"
+   },
+   "preconditions": [],
+   "purpose": "knowledge retention: an approved Urban owner method the architectural route does not apply, kept findable (Part 6)",
+   "required_evidence": [],
+   "rule_id": "UP-REF-REVEAL-001",
+   "scope": "every Urban project (as the source states)",
+   "status": "REFERENCE_ONLY",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_p2b9/test_p2b9_openings.py::test_example1_reveals_and_sill_surface"
+   ],
+   "title": "Reveal finishes: plaster by default (owner method, reference only)"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-17",
+    "source": "owner program 2026-10-17 (URBAN PROJECT AI - Phase 2B-9: architectural BOQ completion, drawing-derived heights, wall geometry and independent quantity proof) section 4 example 1; data/registry/URBAN_OWNER_METHOD_RULES.json URBAN-REVEAL-FINISH-METHOD"
+   },
+   "code": [
+    "engine/source/arch_v28.py::window_strip_lines"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "PLASTER",
+    "FLOOR_FINISH"
+   ],
+   "effective_version": "1.4.0",
+   "elements": [
+    "REVEAL",
+    "WINDOW"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-9)",
+     "date": "2026-10-17",
+     "version": "1.4.0"
+    }
+   ],
+   "kind": "ENGINEERING_RULE",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "depth": "the strip between the room's wall face and the glazing / its opening width (measured)",
+    "head": "depth x width, only where wall remains above the head inside the plaster band",
+    "jambs": "2 x depth x the window's height inside the plaster band",
+    "never": [
+     "a fixed reveal depth",
+     "a reveal inside the main wall face",
+     "the door jamb plaster counted again"
+    ],
+    "sill": "a sill window: the strip is its internal sill surface, released as geometry, finish by the window detail; floor-level glazing: the strip is floor (the room's floor finish)",
+    "state": "PROVISIONAL (plaster by the owner method; a frame detail can change it)"
+   },
+   "preconditions": [],
+   "purpose": "reveals are real plaster surfaces, measured from the geometry, never inside the main wall face and never double counted",
+   "required_evidence": [],
+   "rule_id": "UP-REVEAL-001",
+   "scope": "window openings with an established height and sill in ARCH_TAKEOFF_V2.8",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_p2b9/test_p2b9_openings.py::test_example1_reveals_and_sill_surface",
+    "tests/m9_p2b9/test_p2b9_openings.py::test_floor_glazing_reveals_and_floor_strip"
+   ],
+   "title": "Window reveals from the measured depth to the glazing; the sill surface is its own item"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-17",
+    "source": "owner program 2026-10-17 (URBAN PROJECT AI - V2.7 acceptance hardening and second-villa readiness) section 1"
+   },
+   "code": [
+    "tools/urban_boq_m9.py::_arch_v271",
+    "tools/urban_boq_m9.py::_review_release"
+   ],
+   "conflicts": [
+    {
+     "resolution": "no conflict: UP-WET-002 keeps the space REVIEW (no type); UP-REVIEW-001 says which of its quantities are known without the type",
+     "with": "UP-WET-002"
+    }
+   ],
+   "dependent_trades": [
+    "CEILING",
+    "PLASTER",
+    "FLOOR_FINISH",
+    "WALL_FINISH",
+    "PAINT",
+    "WATERPROOFING",
+    "MARBLE"
+   ],
+   "effective_version": "1.3.0",
+   "elements": [
+    "ROOM"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-8)",
+     "date": "2026-10-17",
+     "version": "1.3.0"
+    }
+   ],
+   "kind": "ENGINEERING_RULE",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "never": [
+     "two scenarios added together",
+     "a scenario quantity in the main BOQ",
+     "a quantity released whose rule or system differs between classifications",
+     "a classification chosen to release a quantity"
+    ],
+    "plausible": {
+     "UNLABELLED_SPACE": "NOT_ESTABLISHED (no fixture says what the space is: nothing is released)",
+     "WC_CANDIDATE_REVIEW": [
+      "WET_SCOPE (UP-WET-001, as a W.C.)",
+      "DRY_SCOPE (a lobby / wash area)"
+     ],
+     "WET_CLASSIFICATION_REVIEW": [
+      "WET_SCOPE (UP-WET-001, as a W.C.)",
+      "DRY_SCOPE (a lobby / wash area)"
+     ]
+    },
+    "plausible_requires": [
+     "a sanitary fixture or a water-closet shape drawn inside",
+     "no stair flight and no void outline inside",
+     "not possibly exterior (space model)"
+    ],
+    "release_when": [
+     "the same item, element and unit in every plausible classification",
+     "the same quantity (or range), evidence state and rule",
+     "a system that does not depend on the classification"
+    ],
+    "system_dependent": {
+     "FIN.PLASTER": "the substrate behind wall porcelain is its own line (UP-FIN-PAINT-001): plaster is released only when the wall finish over it is the same in every classification"
+    }
+   },
+   "preconditions": [],
+   "purpose": "a space whose type is under review is not left without quantities: its geometry is reported, the quantities identical under every plausible classification are released, the others are kept as conditional scenario quantities",
+   "required_evidence": [],
+   "rule_id": "UP-REVIEW-001",
+   "scope": "spaces under classification review (UP-WET-002) in ARCH_TAKEOFF_V2.7.1",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_p2b8/test_p2b8_review_release.py::test_basin_space_releases_its_ceiling_and_nothing_else",
+    "tests/m9_p2b8/test_p2b8_review_release.py::test_equal_quantities_are_not_released_when_the_system_or_rule_differs"
+   ],
+   "title": "Review spaces: release only what every plausible classification measures the same way"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-16",
+    "source": "owner program 2026-10-16 (URBAN PROJECT AI - master engineering rules, waterproofing optimization and door feasibility) Part 2, Part 5"
+   },
+   "code": [
+    "engine/source/project_rules.py::bind",
+    "engine/source/project_rules.py::_rank",
+    "engine/source/project_rules.py::rules_sheet",
+    "engine/source/project_rules.py::invalidation"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "ALL"
+   ],
+   "effective_version": "1.1.0",
+   "elements": [
+    "ALL"
+   ],
+   "examples": [
+    {
+     "applied_m": 0.3,
+     "case": "Urban upturn 0.20 m; an approved project detail specifies 0.30 m for the first-floor bathrooms",
+     "project_m": 0.3,
+     "scope": "FLOOR 1F + LOCATION_TYPE BATHROOM",
+     "state": "PROJECT_SPECIFIED",
+     "urban_m": 0.2
+    }
+   ],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-2)",
+     "date": "2026-10-16",
+     "version": "1.1.0"
+    }
+   ],
+   "kind": "KNOWLEDGE_POLICY",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "both_kept": "the Urban standard and the project requirement are both recorded, each with its source",
+    "change": "a rules sheet with another hash supersedes the earlier outputs (moved aside, never reused) and names the changed rules and the trades they affect",
+    "conflict": "two project rules of the same rank that disagree for one element: CONFLICT_REVIEW, the affected quantity unresolved - never silently discarded",
+    "level_A": "Urban Project master standards: this registry (door heights and widths, opening allowance, membrane roll, overlap, upturn, wet-area classes, skirting, thresholds)",
+    "level_B": "project-specific approved requirements: drawings, schedules, details, specifications and owner project approvals (input URBAN_PROJECT_RULES_V1)",
+    "most_specific_scope_wins": "OPENING > WALL > ROOM > FLOOR > LOCATION_TYPE / DOOR_CATEGORY > PROJECT > the Urban standard; a type filter added to a floor or room scope ranks it higher",
+    "never": [
+     "a project rule applied outside its scope",
+     "a conflict discarded",
+     "a stale result kept after the rules changed"
+    ],
+    "precedence": "Level B overrides Level A for that project, only within the scope it names",
+    "rules_sheet": "the Project Engineering Rules Sheet is generated before the BOQ calculation; its version and sha256 travel with every output",
+    "scopes": [
+     "PROJECT",
+     "LOCATION_TYPE",
+     "DOOR_CATEGORY",
+     "FLOOR",
+     "ROOM",
+     "WALL",
+     "OPENING"
+    ],
+    "states": [
+     "DRAWING_CONFIRMED",
+     "PROJECT_SPECIFIED",
+     "OWNER_STANDARD_ASSUMED",
+     "OWNER_PROJECT_APPROVED",
+     "CONFLICT_REVIEW",
+     "ENGINE_LIMITATION",
+     "MISSING_DOCUMENT"
+    ]
+   },
+   "preconditions": [],
+   "purpose": "apply the company standards to every project, let a project's approved requirements govern within their scope, keep both, and show which rule governs every quantity",
+   "required_evidence": [
+    "the project rule's source (drawing, page, detail, schedule, specification, owner approval)"
+   ],
+   "rule_id": "UP-RULES-001",
+   "scope": "every project and every quantity",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_p2b2/test_p2b2_project_rules.py::test_a_project_upturn_overrides_the_urban_standard_only_in_its_scope",
+    "tests/m9_p2b2/test_p2b2_project_rules.py::test_the_most_specific_scope_wins",
+    "tests/m9_p2b2/test_p2b2_project_rules.py::test_two_project_rules_that_disagree_are_a_conflict_never_discarded",
+    "tests/m9_p2b2/test_p2b2_project_rules.py::test_a_conflicting_project_rule_is_never_shown_as_applied",
+    "tests/m9_p2b2/test_p2b2_project_rules.py::test_the_rules_sheet_has_every_section_and_state",
+    "tests/m9_p2b2/test_p2b2_project_rules.py::test_a_changed_rules_sheet_invalidates_earlier_outputs",
+    "tests/m9_p2b2/test_p2b2_integration.py::test_the_rules_sheet_hash_is_in_every_v2_4_output"
+   ],
+   "title": "Two rule levels: Urban master standards (A) and project-specific rules (B), one rules sheet per project"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-14",
+    "source": "owner master prompt 2026-10-14 (URBAN PROJECT AI - master engineering intelligence program) Part D section 14; rules/owner_library UP-CER-002, UP-CER-003; data/registry/URBAN_OWNER_METHOD_RULES.json URBAN-SKIRTING-OPENING-METHOD"
+   },
+   "code": [
+    "engine/source/arch_measure.py::measure",
+    "engine/source/owner_finish_scope.py::passage_jamb_skirting"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "FLOOR_FINISH"
+   ],
+   "effective_version": "1.4.0",
+   "elements": [
+    "WALL_FACE",
+    "COLUMN_FACE"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-1 knowledge audit)",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    },
+    {
+     "change": "floor-level glazing and unknown sills (Phase 2B-9)",
+     "date": "2026-10-17",
+     "version": "1.4.0"
+    }
+   ],
+   "kind": "OWNER_RULE",
+   "limitations": [],
+   "locations": [
+    "DRY_ROOMS"
+   ],
+   "logic": {
+    "doorless_opening_jambs": "included by URBAN-SKIRTING-OPENING-METHOD; ARCH_TAKEOFF_V2.3 adds them as a PROVISIONAL line per passage",
+    "eligible": "dry-room wall and column faces; not across door / passage openings",
+    "never": [
+     "a 50 / 50 allocation of uncertain edges",
+     "omission because the drawing is complex",
+     "an uncertain range converted to a confirmed quantity"
+    ],
+    "separate_items": [
+     "conventional skirting",
+     "hidden skirting / profile system"
+    ],
+    "uncertain": "a conservative released length plus an explicit range (F-17, ARCH_TAKEOFF_V2.2)",
+    "windows_1_4_0": {
+     "floor_glazing": "not skirted (sill <= 0.02 m, UP-OPEN-SCHED-001)",
+     "sill_not_established": "not in the released skirting: a range line [0, its length]",
+     "sill_window": "skirted under the sill"
+    }
+   },
+   "preconditions": [],
+   "purpose": "skirting where it is built, measured along real wall faces at floor level",
+   "required_evidence": [],
+   "rule_id": "UP-SKIRT-001",
+   "scope": "dry rooms with a tiled floor",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_kb/test_kb_finish_scope.py::test_a_dry_room_keeps_its_skirting",
+    "tests/m9_kb/test_kb_finish_scope.py::test_passage_jambs_are_skirted_provisionally",
+    "tests/m9_p2b9/test_p2b9_openings.py::test_floor_glazing_is_not_skirted"
+   ],
+   "title": "Conventional skirting on eligible dry-room wall boundaries"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-14",
+    "source": "owner master prompt 2026-10-14 (URBAN PROJECT AI - master engineering intelligence program) Part A section 6, Part C section 8, Part E section 20"
+   },
+   "code": [
+    "engine/source/space_model.py::build"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "OPENINGS",
+    "FLOOR_FINISH",
+    "WALL_FINISH",
+    "WATERPROOFING"
+   ],
+   "effective_version": "1.0.0",
+   "elements": [
+    "SPACE",
+    "ROOM",
+    "CORRIDOR",
+    "OUTDOOR_AREA"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-1 knowledge audit)",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    }
+   ],
+   "kind": "ENGINEERING_RULE",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "building_parts": "interior spaces joined by doors / passages form one building part per floor; an exterior space joining two parts is a connecting outdoor area",
+    "evidence_order": [
+     "project-specific decision binding the space (UP-SPACE-002)",
+     "an exterior room word (balcony, terrace, roof, garden, court, pool)",
+     "an interior room word (a room function implies an enclosed room)",
+     "an unlabelled space with a doorless facade opening -> POSSIBLY_EXTERIOR",
+     "otherwise UNKNOWN (never assumed interior)"
+    ],
+    "never": [
+     "a label alone defines every construction property",
+     "an unlabelled corridor generalized as outdoors"
+    ],
+    "statuses": [
+     "INTERIOR",
+     "EXTERIOR",
+     "POSSIBLY_EXTERIOR",
+     "UNKNOWN"
+    ]
+   },
+   "preconditions": [],
+   "purpose": "door materials and finish scopes depend on whether a space is inside the enclosed building",
+   "required_evidence": [],
+   "rule_id": "UP-SPACE-001",
+   "scope": "every space of every floor",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_kb/test_kb_space_model.py::test_indoor_and_outdoor_corridors_are_told_apart",
+    "tests/m9_kb/test_kb_space_model.py::test_an_unlabelled_space_is_never_assumed_interior",
+    "tests/m9_kb/test_kb_integration.py::test_v2_3_is_invariant_under_moving_mirroring_and_turning"
+   ],
+   "title": "Interior / exterior status from enclosure and connectivity, with evidence"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-14",
+    "source": "owner master prompt 2026-10-14 (URBAN PROJECT AI - master engineering intelligence program) Part C section 9"
+   },
+   "code": [
+    "engine/source/space_model.py::apply_decisions"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "ALL"
+   ],
+   "effective_version": "1.0.0",
+   "elements": [
+    "SPACE"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-1 knowledge audit)",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    }
+   ],
+   "kind": "KNOWLEDGE_POLICY",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "binding": "floor + a point inside the space (drawing coordinates, m) or the space's room code; the decision applies to the space containing that point only",
+    "file": "kept with the project's private inputs (never in the public repository)",
+    "unbound": "a decision whose space is not identified is recorded PROJECT_SPECIFIC_UNBOUND and applies to nothing"
+   },
+   "preconditions": [],
+   "purpose": "apply an owner decision about one space exactly where it was given",
+   "required_evidence": [],
+   "rule_id": "UP-SPACE-002",
+   "scope": "project decision files (URBAN_PROJECT_DECISIONS_V1)",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_kb/test_kb_space_model.py::test_a_project_decision_binds_one_space_only"
+   ],
+   "title": "Project-specific space decisions bind one space and are never generalized"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-14",
+    "source": "owner master prompt 2026-10-14 (URBAN PROJECT AI - master engineering intelligence program) Part D section 16; data/registry/URBAN_OWNER_METHOD_RULES.json URBAN-WET-SERVICE-MARBLE-THRESHOLD (Urban-wide); data/registry/OWNER_METHOD_FACTS.json#/facts/0 (floor continues through doorways)"
+   },
+   "code": [
+    "engine/source/owner_finish_scope.py::threshold_lines"
+   ],
+   "conflicts": [
+    {
+     "resolution": "project-specific for that project's revision only; the later Urban-wide rule and the master prompt govern every other project",
+     "with": "data/registry/OWNER_METHOD_FACTS.json#/facts/2 (marble only if explicit, one other project)"
+    },
+    {
+     "resolution": "CONFLICTED (CF-03): ARCH_TAKEOFF_V2.3 measures a pantry doorway threshold as PROVISIONAL with the conflict named; owner question OQ-01",
+     "with": "URBAN-WET-SERVICE-MARBLE-THRESHOLD not_applicable_to pantry"
+    }
+   ],
+   "dependent_trades": [
+    "MARBLE",
+    "FLOOR_FINISH"
+   ],
+   "effective_version": "1.0.0",
+   "elements": [
+    "DOOR_THRESHOLD",
+    "DOORWAY_STRIP"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-1 knowledge audit)",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    }
+   ],
+   "kind": "OWNER_RULE",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "dry": {
+     "count": "once, as its own line",
+     "item": "FIN.FLOOR.PORCELAIN (doorway strip)"
+    },
+    "never": [
+     "an invented threshold depth",
+     "the strip counted in two floors"
+    ],
+    "wet": {
+     "area": "length x depth",
+     "depth": "the doorway strip depth (wall thickness, geometry)",
+     "item": "FIN.MARBLE.THRESHOLD",
+     "length": "clear door opening width (CAD)",
+     "porcelain": "the strip is not in the adjacent room floors (deducted by construction)"
+    }
+   },
+   "preconditions": [],
+   "purpose": "water containment at wet doorways; no unmeasured strip at any other doorway",
+   "required_evidence": [],
+   "rule_id": "UP-THR-001",
+   "scope": "the doorway strip (wall thickness) of every door",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_kb/test_kb_finish_scope.py::test_wet_doorways_take_a_marble_threshold_from_geometry",
+    "tests/m9_kb/test_kb_finish_scope.py::test_dry_doorways_continue_the_floor_porcelain_once",
+    "tests/m9_kb/test_kb_wp5.py::test_several_strip_faces_of_one_opening_make_one_line",
+    "tests/m9_kb/test_kb_wp5.py::test_a_door_closure_strip_asks_for_the_door_not_the_finish"
+   ],
+   "title": "Wet-room doorways take a marble threshold; other doorways continue the floor porcelain"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-17",
+    "source": "owner program 2026-10-17 (URBAN PROJECT AI - Phase 2B-9: architectural BOQ completion, drawing-derived heights, wall geometry and independent quantity proof) sections 4 (examples 3, 4) and 5"
+   },
+   "code": [
+    "engine/source/arch_v28.py::straight_stubs",
+    "engine/source/arch_v28.py::curved_stubs"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "MASONRY",
+    "PLASTER"
+   ],
+   "effective_version": "1.4.0",
+   "elements": [
+    "WALL"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-9)",
+     "date": "2026-10-17",
+     "version": "1.4.0"
+    }
+   ],
+   "kind": "ENGINEERING_RULE",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "curved": "inner face, centreline and outer face arcs kept apart; a finish uses its own face",
+    "measures": [
+     "centreline (masonry run)",
+     "each face (finishing)",
+     "plan strip (centreline x t)"
+    ],
+    "never": [
+     "one wall-length convention for every trade",
+     "a mean-radius length for a face finish"
+    ],
+    "stubs": "a both-faces stretch of 0.05 - 0.30 m that no band holds: a straight return closed at one end at least, of a thickness family the floor has, or a pair of concentric arcs: measured as wall, its plan area moved out of the junction pieces"
+   },
+   "preconditions": [],
+   "purpose": "masonry and finishing faces are measured on their own bases; a wall stretch is not dropped because it is short",
+   "required_evidence": [],
+   "rule_id": "UP-WALL-GEOM-001",
+   "scope": "the wall bands of ARCH_TAKEOFF_V2.8",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_p2b9/test_p2b9_walls.py::test_a_short_return_is_measured_as_wall",
+    "tests/m9_p2b9/test_p2b9_walls.py::test_collinear_stubs_were_already_counted",
+    "tests/m9_p2b9/test_p2b9_walls.py::test_curved_wall_faces_kept_apart"
+   ],
+   "title": "Wall geometry per face; short returns and curved stubs are wall"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-14",
+    "source": "owner master prompt 2026-10-14 (URBAN PROJECT AI - master engineering intelligence program) Part D section 13; rules/methods/URBAN_METHOD_REGISTER_V1.json URBAN-WET-WALL-TILE-FULL-HEIGHT@v1; rules/methods/URBAN_METHOD_REGISTER_V3.json URBAN-NO-SKIRTING-FULL-TILE-WET@v1"
+   },
+   "code": [
+    "engine/source/owner_finish_scope.py::finish_scope",
+    "engine/source/waterproofing_system.py::area_schedule"
+   ],
+   "conflicts": [
+    {
+     "resolution": "ARCH_TAKEOFF_V2.3 applies the owner wet scope; V1 .. V2.2 stay frozen (category E: an existing rule not implemented)",
+     "with": "engine/source/arch_rooms.py LEXICON (kitchen / pantry / ironing are SERVICE = dry)"
+    },
+    {
+     "resolution": "no conflict: full height is the face's own established clear height, not a constant",
+     "with": "UP-CER-009 (wall tile height derived per face, never a universal constant)"
+    }
+   ],
+   "dependent_trades": [
+    "FLOOR_FINISH",
+    "WALL_FINISH",
+    "WATERPROOFING",
+    "PAINT",
+    "MARBLE"
+   ],
+   "effective_version": "1.1.0",
+   "elements": [
+    "ROOM",
+    "WALL_FACE",
+    "FLOOR"
+   ],
+   "examples": [],
+   "exceptions": [
+    "an American (open) pantry: a functional zone, never forced into a closed room (UP-PANTRY-001)",
+    "laundry / washing rooms: wet where the project scope establishes it (kept wet, flagged)",
+    "a project specification or approved detail stating another treatment"
+   ],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-1 knowledge audit)",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    },
+    {
+     "change": "waterproofing scope text names its rule sets (the rule store and the registry both use UP-WP-00x)",
+     "date": "2026-10-16",
+     "version": "1.1.0"
+    }
+   ],
+   "kind": "OWNER_RULE",
+   "limitations": [],
+   "locations": [
+    "BATHROOM",
+    "KITCHEN",
+    "PANTRY",
+    "IRONING",
+    "LAUNDRY"
+   ],
+   "logic": {
+    "never": "wet finishes applied to adjacent dry spaces",
+    "project_confirmation_codes": [
+     "LAUNDRY"
+    ],
+    "scope": {
+     "floor": "porcelain (wet-area floor item)",
+     "paint": "none over full-height porcelain (UP-FIN-PAINT-001)",
+     "skirting": "none on fully porcelain-tiled faces (UP-CER-004)",
+     "threshold": "marble at the doorway (UP-THR-001)",
+     "walls": "full-height wall porcelain (UP-FIN-WALL-001)",
+     "waterproofing": "floor (rules/ UP-WP-001) + wall upturn on eligible boundaries (registry UP-WP-003) + doorway continuation (rules/ UP-WP-003 1.1.0) and transition (registry UP-WP-DOOR-001)"
+    },
+    "wet_codes": [
+     "BATHROOM",
+     "KITCHEN",
+     "PANTRY",
+     "IRONING",
+     "LAUNDRY"
+    ]
+   },
+   "preconditions": [
+    "the room is a closed room (ROOM, or one function only); an open-plan face that joins a wet function with a dry one is not given the wet scope (zone extent needed)"
+   ],
+   "purpose": "rooms where water is used receive floor porcelain, full-height wall porcelain and waterproofing; their tiled walls carry no conventional skirting",
+   "required_evidence": [],
+   "rule_id": "UP-WET-001",
+   "scope": "enclosed rooms whose function is a wet area",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_kb/test_kb_finish_scope.py::test_kitchen_pantry_and_ironing_rooms_take_the_wet_scope",
+    "tests/m9_kb/test_kb_finish_scope.py::test_wet_scope_never_spreads_to_an_open_plan_dry_space",
+    "tests/m9_p2b2/test_p2b2_waterproofing.py::test_kitchen_and_pantry_get_membrane_material"
+   ],
+   "title": "Owner wet areas and their finish scope"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-17",
+    "source": "owner program 2026-10-17 (URBAN PROJECT AI - Phase 2B-7 controlled implementation authorization) section 5; owner program 2026-10-16 (URBAN PROJECT AI - overnight engineering intelligence and BOQ development) Part 4 (do not classify a lobby as wet merely because it contains a wash basin; if classification is unresolved, keep a review status)"
+   },
+   "code": [
+    "engine/source/arch_v27.py::wet_evidence",
+    "engine/source/arch_v27.py::wc_shapes"
+   ],
+   "conflicts": [
+    {
+     "resolution": "no conflict: UP-WET-001 gives the scope of a wet room, UP-WET-002 when an unlabelled space is one",
+     "with": "UP-WET-001"
+    }
+   ],
+   "dependent_trades": [
+    "FLOOR_FINISH",
+    "WALL_FINISH",
+    "WATERPROOFING",
+    "PAINT",
+    "MARBLE"
+   ],
+   "effective_version": "1.3.0",
+   "elements": [
+    "ROOM"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-7)",
+     "date": "2026-10-17",
+     "version": "1.2.0"
+    },
+    {
+     "change": "the water-closet linework profile and the basin's own linework (Phase 2B-8)",
+     "date": "2026-10-17",
+     "version": "1.3.0"
+    }
+   ],
+   "kind": "OWNER_RULE",
+   "limitations": [],
+   "locations": [
+    "BATHROOM",
+    "LOBBY",
+    "CORRIDOR"
+   ],
+   "logic": {
+    "basin_linework_1_3_0": "a basin block's own linework (every entity whose insert path contains the basin's insert) is the basin, never a second piece of evidence",
+    "basin_only": "REVIEW (no room type; no wet and no dry scope)",
+    "basin_plus_independent": "BATHROOM (two independent pieces of evidence), flagged for review",
+    "evidence_sources": [
+     "a room word in the space (Arabic or English, arch_rooms.LEXICON)",
+     "a room-tag block",
+     "a WC / shower / bath fixture block",
+     "a water closet drawn as linework (bowl + cistern, arch_v27.wc_shapes)",
+     "sanitary-layer linework that is not the basin's own"
+    ],
+    "kept_from_v2_6": [
+     "a WC / shower / bath block types the space (an explicit sanitary symbol)",
+     "sanitary-layer linework (3+ segments) types the space"
+    ],
+    "never": [
+     "a basin-only space typed wet",
+     "an ambiguous space typed dry"
+    ],
+    "one_shape_alone": "REVIEW (WC_CANDIDATE_REVIEW): one geometric shape never types a space",
+    "wc_profile_1_3_0": {
+     "bowl_width_m": [
+      0.32,
+      0.42
+     ],
+     "cistern_on_wall_face_m": 0.1,
+     "limitation": "a seat at a pan's size touching a back on a wall face is a WC outline: geometry alone cannot tell them apart (L-P8-01)",
+     "round_bowl": {
+      "centred_on_cistern_m": 0.05,
+      "diameter_m": [
+       0.32,
+       0.42
+      ]
+     },
+     "why": "a WC pan's cistern stands against a wall (the flush and soil connection) and the pan is narrower than a seat; a weak resemblance stays REVIEW"
+    }
+   },
+   "preconditions": [],
+   "purpose": "a space is typed a wet room from evidence that it is one, never from a wash basin alone; a water closet may be drawn as a block, as loose linework or named by an Arabic or English room word",
+   "required_evidence": [],
+   "rule_id": "UP-WET-002",
+   "scope": "spaces without a room word (ARCH_TAKEOFF_V2.7)",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_p2b7/test_p2b7_wet.py::test_basin_alone_is_review",
+    "tests/m9_p2b7/test_p2b7_wet.py::test_basin_and_drawn_wc",
+    "tests/m9_p2b8/test_p2b8_recognition.py::test_wc_evidence_to_truth",
+    "tests/m9_p2b8/test_p2b8_recognition.py::test_basin_block_linework_is_the_basin"
+   ],
+   "title": "Wet-room evidence: a wash basin alone does not make a space wet"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-16",
+    "source": "owner program 2026-10-16 (URBAN PROJECT AI - master engineering rules, waterproofing optimization and door feasibility) Part 3.1 (UP-WP-001)"
+   },
+   "code": [
+    "engine/source/waterproofing_system.py::system_spec"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "WATERPROOFING"
+   ],
+   "effective_version": "1.1.0",
+   "elements": [
+    "WATERPROOFING"
+   ],
+   "examples": [
+    {
+     "case": "a 12.4 m2 cutting plan",
+     "rolls": "from the cutting plan, never ceil(12.4 / 10) by rule"
+    }
+   ],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-2)",
+     "date": "2026-10-16",
+     "version": "1.1.0"
+    }
+   ],
+   "kind": "OWNER_STANDARD",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "gross_roll_area_m2": 10.0,
+    "level": "A",
+    "never": [
+     "the net area / roll area rounded up as the roll count",
+     "a waste percentage in place of a cutting plan"
+    ],
+    "override": "the roll of a project-specified membrane system replaces it within that system's scope (UP-RULES-001)",
+    "roll_length_m": 10.0,
+    "roll_width_m": 1.0,
+    "same_values_as": "rules/materials MEM-URBAN-DEFAULT-1x10 (the rule store's default membrane)"
+   },
+   "preconditions": [],
+   "purpose": "the roll the procurement quantity is counted in",
+   "required_evidence": [],
+   "rule_id": "UP-WP-001",
+   "scope": "every sheet-membrane waterproofing quantity",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_p2b2/test_p2b2_registry.py::test_the_approved_waterproofing_values_cannot_silently_change",
+    "tests/m9_p2b2/test_p2b2_waterproofing.py::test_rectangular_bathroom_hand_calculation"
+   ],
+   "title": "Waterproofing membrane roll: 1.00 m x 10.00 m (10.00 m2 gross)"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-16",
+    "source": "owner program 2026-10-16 (URBAN PROJECT AI - master engineering rules, waterproofing optimization and door feasibility) Part 3.1 (UP-WP-002)"
+   },
+   "code": [
+    "engine/source/waterproofing_system.py::system_spec"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "WATERPROOFING"
+   ],
+   "effective_version": "1.1.0",
+   "elements": [
+    "WATERPROOFING"
+   ],
+   "examples": [
+    {
+     "basis": "1.00 + (1.00 - 0.10) >= 1.90",
+     "case": "cross width 1.90 m, roll 1.00 m",
+     "strips": 2
+    }
+   ],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-2)",
+     "date": "2026-10-16",
+     "version": "1.1.0"
+    }
+   ],
+   "kind": "OWNER_STANDARD",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "applies_to": [
+     "side laps between adjacent floor strips",
+     "end laps where a strip is spliced along its length",
+     "upturn band joints and the band's lap onto the floor membrane",
+     "a doorway piece's lap onto the floor membrane"
+    ],
+    "lap_m": 0.1,
+    "level": "A",
+    "never": [
+     "a flat 10 % waste allowance in place of the laps",
+     "a lap smaller than the applied value"
+    ],
+    "stricter_wins": "a project or manufacturer lap larger than 0.10 m governs within its scope (Level B)"
+   },
+   "preconditions": [],
+   "purpose": "the lap material between adjoining membrane pieces",
+   "required_evidence": [],
+   "rule_id": "UP-WP-002",
+   "scope": "every sheet-membrane layout",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_p2b2/test_p2b2_registry.py::test_the_approved_waterproofing_values_cannot_silently_change",
+    "tests/m9_p2b2/test_p2b2_waterproofing.py::test_project_overlap_overrides_the_standard"
+   ],
+   "title": "Membrane overlap 0.10 m at the joints between adjacent strips"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-16",
+    "source": "owner program 2026-10-16 (URBAN PROJECT AI - master engineering rules, waterproofing optimization and door feasibility) Part 3.1 (UP-WP-003), Part 3.4"
+   },
+   "code": [
+    "engine/source/wp_geometry.py::boundary",
+    "engine/source/wp_geometry.py::segments",
+    "engine/source/waterproofing_system.py::area_schedule"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "WATERPROOFING"
+   ],
+   "effective_version": "1.1.0",
+   "elements": [
+    "WATERPROOFING"
+   ],
+   "examples": [
+    {
+     "case": "bathroom 2.00 x 1.50 m, one 0.80 m door",
+     "doorway": "a transition item, not 0.80 x 0.20 in the upturn",
+     "eligible_lm": 6.2,
+     "upturn_m2": 1.24
+    }
+   ],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-2); replaces the earlier general 0.15 m upturn (UP-WP-UPTURN-015)",
+     "date": "2026-10-16",
+     "version": "1.1.0"
+    }
+   ],
+   "kind": "OWNER_STANDARD",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "eligible": [
+     "WALL",
+     "COLUMN",
+     "WINDOW_THRESHOLD (the wall below a sill)",
+     "obstruction (column / shaft) rings inside the area"
+    ],
+    "level": "A",
+    "never": [
+     "every doorway width x 0.20 m as a wall upturn",
+     "the 0.15 m value of the superseded rule"
+    ],
+    "not_a_wall_upturn": {
+     "DOOR": "doorway transition (UP-WP-DOOR-001)",
+     "GLAZING_EDGE": "threshold transition at a floor-level frame (by detail)",
+     "OPEN_EDGE": "termination (by detail)",
+     "PASSAGE": "continuation into an adjacent waterproofed area, else a termination (by detail)",
+     "ZONE_LINE": "continuation into a waterproofed zone, else a termination (by detail)"
+    },
+    "override": "an approved project detail (Level B) governs within its scope; both values are kept",
+    "upturn_h_m": 0.2
+   },
+   "preconditions": [],
+   "purpose": "the vertical membrane turned up the walls of a waterproofed area",
+   "required_evidence": [],
+   "rule_id": "UP-WP-003",
+   "scope": "wet areas, balconies, terraces and roofs",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [
+    "UP-WP-UPTURN-015"
+   ],
+   "tests": [
+    "tests/m9_p2b2/test_p2b2_registry.py::test_the_superseded_upturn_keeps_its_history",
+    "tests/m9_p2b2/test_p2b2_waterproofing.py::test_doorways_are_transitions_not_wall_upturns",
+    "tests/m9_p2b2/test_p2b2_waterproofing.py::test_project_upturn_overrides_the_standard",
+    "tests/m9_p2b2/test_p2b2_waterproofing.py::test_balcony_upturn_on_walls_and_open_edge_termination",
+    "tests/m9_p2b2/test_p2b2_waterproofing.py::test_a_window_frame_line_on_the_wall_face_is_a_sill_upturn_not_glazing",
+    "tests/m9_p2b2/test_p2b2_waterproofing.py::test_the_segmentation_check_accepts_window_frames_and_flags_anything_else"
+   ],
+   "title": "Waterproofing upturn 0.20 m along eligible wall boundaries"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-16",
+    "source": "owner program 2026-10-16 (URBAN PROJECT AI - master engineering rules, waterproofing optimization and door feasibility) Part 3.1 (UP-WP-004)"
+   },
+   "code": [
+    "engine/source/waterproofing_system.py::penetrations",
+    "engine/source/waterproofing_system.py::area_schedule"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "WATERPROOFING"
+   ],
+   "effective_version": "1.1.0",
+   "elements": [
+    "WATERPROOFING"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-2)",
+     "date": "2026-10-16",
+     "version": "1.1.0"
+    }
+   ],
+   "kind": "OWNER_STANDARD",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "count_from": [
+     "drain / gully / trap / outlet / sleeve symbols and texts drawn inside the area",
+     "the area polygon's corners where two upturned boundaries meet; obstruction corners",
+     "sanitary fixtures are indicative only: a fixture symbol does not establish an outlet through the membrane"
+    ],
+    "kinds": [
+     "FLOOR_DRAIN",
+     "PIPE_PENETRATION",
+     "PLUMBING_OUTLET",
+     "ROOF_DRAIN",
+     "OTHER_INTERRUPTION",
+     "DOORWAY_TRANSITION",
+     "CORNER_INTERNAL",
+     "CORNER_EXTERNAL",
+     "JUNCTION"
+    ],
+    "missing": "the missing detail is named and the extra quantity withheld (in no total)",
+    "never": [
+     "an invented dimension or count",
+     "'not shown' reported as zero"
+    ],
+    "quantity_from": "the project waterproofing detail or the system data sheet (patch size, collar, reinforcement strip) - UP-RULES-001 Level B"
+   },
+   "preconditions": [],
+   "purpose": "the extra waterproofing work around drains, pipes, outlets, corners, junctions and doorways, never invented",
+   "required_evidence": [],
+   "rule_id": "UP-WP-004",
+   "scope": "every waterproofed area",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_p2b2/test_p2b2_waterproofing.py::test_multiple_floor_drains_are_counted_and_their_treatment_withheld",
+    "tests/m9_p2b2/test_p2b2_waterproofing.py::test_l_shaped_bathroom_corners_and_upturn",
+    "tests/m9_p2b2/test_p2b2_waterproofing.py::test_missing_detail_blocks_the_quantity"
+   ],
+   "title": "Penetrations, corners and other interruptions: counted from the drawings, treated by the detail"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-16",
+    "source": "owner program 2026-10-16 (URBAN PROJECT AI - master engineering rules, waterproofing optimization and door feasibility) Part 3.4"
+   },
+   "code": [
+    "engine/source/waterproofing_system.py::transitions"
+   ],
+   "conflicts": [
+    "CF-12"
+   ],
+   "dependent_trades": [
+    "WATERPROOFING"
+   ],
+   "effective_version": "1.1.0",
+   "elements": [
+    "WATERPROOFING",
+    "DOOR"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-2)",
+     "date": "2026-10-16",
+     "version": "1.1.0"
+    }
+   ],
+   "kind": "ENGINEERING_RULE",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "continuation": "the floor membrane continues through the doorway (door width x wall depth): the approved owner method (rules/ UP-WP-003 1.1.0), released",
+    "detail": "a project waterproofing detail (UP-RULES-001) selects the alternative",
+    "never": "every doorway width x 0.20 m added to the wall upturn",
+    "no_detail": "UNRESOLVED: the alternatives are listed with their quantities; the item is withheld",
+    "transition_alternatives": {
+     "CONTINUATION_TERMINATED": "no extra membrane; a door-width termination at the outer face (by system)",
+     "JAMB_RETURNS": "2 x wall depth x upturn height",
+     "UPTURN_ACROSS_THRESHOLD": "door width x upturn height"
+    },
+    "types": [
+     "WALL_UPTURN",
+     "DOOR_THRESHOLD_TRANSITION",
+     "DOORWAY_CONTINUATION",
+     "TERMINATION",
+     "PENETRATION_COLLAR",
+     "CORNER_REINFORCEMENT"
+    ]
+   },
+   "preconditions": [],
+   "purpose": "a doorway neither stops the waterproofing nor becomes a 0.20 m wall upturn by default",
+   "required_evidence": [],
+   "rule_id": "UP-WP-DOOR-001",
+   "scope": "every doorway of a waterproofed area",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_p2b2/test_p2b2_waterproofing.py::test_doorways_are_transitions_not_wall_upturns",
+    "tests/m9_p2b2/test_p2b2_waterproofing.py::test_missing_detail_blocks_the_quantity"
+   ],
+   "title": "Doorway waterproofing transitions are modelled on their own"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-16",
+    "source": "owner program 2026-10-16 (URBAN PROJECT AI - master engineering rules, waterproofing optimization and door feasibility) Part 3.3"
+   },
+   "code": [
+    "engine/source/waterproofing_system.py::room_layout",
+    "engine/source/waterproofing_system.py::cutting_plan"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "WATERPROOFING"
+   ],
+   "effective_version": "1.1.0",
+   "elements": [
+    "WATERPROOFING"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-2)",
+     "date": "2026-10-16",
+     "version": "1.1.0"
+    }
+   ],
+   "kind": "ENGINEERING_RULE",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "never": [
+     "a strip joined to another without its lap",
+     "a reuse the plan does not show",
+     "the lowest waste taken as the buildable sequence regardless of the constraints"
+    ],
+    "not_validated": "lap shingling against the falls (no drain or fall plan is read)",
+    "orientations": "at least two (along and across the area frame) where the geometry permits",
+    "reuse": "the project plan cuts the areas' full-width pieces from shared rolls of the same system (a roll remainder reused only where a piece is cut from it); a narrow offcut is retained only under a project minimum reusable size",
+    "roll_count_state": "CONFIRMED only with a project-specified system, measured geometry and resolved doorway, penetration and corner details; otherwise PROVISIONAL with what is withheld",
+    "selection": [
+     "valid laps, details and installation constraints",
+     "fewest rolls for the area installed on its own",
+     "fewest seams (fewer potential leak paths)",
+     "least consumed membrane",
+     "direction order (frame x before frame y)"
+    ],
+    "steps": [
+     "the waterproofing boundary",
+     "openings, doorways, columns and interruptions",
+     "eligible upturn paths",
+     "drains and known penetrations",
+     "candidate strip layouts",
+     "0.10 m laps (UP-WP-002)",
+     "cut lengths and strip counts",
+     "upturns and eligible transitions",
+     "offcut reuse only where the cutting plan demonstrates it",
+     "roll count",
+     "unused material and cutting waste",
+     "a reviewable layout and material schedule"
+    ]
+   },
+   "preconditions": [],
+   "purpose": "the installed and procurement quantities from a buildable layout, not from a ratio",
+   "required_evidence": [],
+   "rule_id": "UP-WP-LAY-001",
+   "scope": "every sheet-membrane waterproofed area",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_p2b2/test_p2b2_waterproofing.py::test_both_strip_orientations_are_evaluated_and_the_choice_is_deterministic",
+    "tests/m9_p2b2/test_p2b2_waterproofing.py::test_partial_roll_reuse_only_with_a_cutting_plan",
+    "tests/m9_p2b2/test_p2b2_waterproofing.py::test_roll_count_never_confirmed_without_a_valid_basis"
+   ],
+   "title": "Deterministic membrane layout and cutting plan from the area polygon"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-16",
+    "source": "owner program 2026-10-16 (URBAN PROJECT AI - master engineering rules, waterproofing optimization and door feasibility) Part 3.2, Part 3.5"
+   },
+   "code": [
+    "engine/source/waterproofing_system.py::schedule",
+    "engine/source/waterproofing_system.py::cutting_plan"
+   ],
+   "conflicts": [],
+   "dependent_trades": [
+    "WATERPROOFING"
+   ],
+   "effective_version": "1.1.0",
+   "elements": [
+    "WATERPROOFING"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-2)",
+     "date": "2026-10-16",
+     "version": "1.1.0"
+    }
+   ],
+   "kind": "OWNER_STANDARD",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "A_net": "the floor / roof area requiring waterproofing (horizontal)",
+    "B_installed": [
+     "horizontal coverage",
+     "wall upturns",
+     "required doorway waterproofing",
+     "joint overlaps",
+     "penetration detailing (only from a detail)",
+     "specified reinforcement (only from a detail)",
+     "the cutting and layout losses of the supported cutting plan"
+    ],
+    "C_procurement": "whole rolls of the feasible cutting plan of each membrane system",
+    "never": [
+     "net / roll area rounded up",
+     "an arbitrary waste percentage unless a source or an owner decision authorizes it",
+     "incompatible membrane systems in one procurement total"
+    ],
+    "systems": "one procurement group per membrane system; until the project names its systems the wet-area and exterior (balcony / roof) groups are kept apart"
+   },
+   "preconditions": [],
+   "purpose": "a membrane quantity that can be checked and bought",
+   "required_evidence": [],
+   "rule_id": "UP-WP-MAT-001",
+   "scope": "every waterproofed area and the project total",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_p2b2/test_p2b2_waterproofing.py::test_separate_systems_are_never_combined",
+    "tests/m9_p2b2/test_p2b2_waterproofing.py::test_rectangular_bathroom_hand_calculation",
+    "tests/m9_p2b2/test_p2b2_waterproofing.py::test_same_area_different_shape_changes_material_and_rolls"
+   ],
+   "title": "Three waterproofing quantities kept apart: net area, installed membrane, procurement rolls"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-14",
+    "source": "owner master prompt 2026-10-14 (URBAN PROJECT AI - master engineering intelligence program) Part D section 17; rules/methods/URBAN_METHOD_REGISTER_V1.json URBAN-ROOF-WATERPROOF-UPTURN-200@v1"
+   },
+   "code": [
+    "engine/source/owner_finish_scope.py::exterior_wp_lines",
+    "engine/source/waterproofing_system.py::area_schedule"
+   ],
+   "conflicts": [
+    "CF-14"
+   ],
+   "dependent_trades": [
+    "WATERPROOFING"
+   ],
+   "effective_version": "1.1.0",
+   "elements": [
+    "FLOOR"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "first registry record (Phase 2B-1 knowledge audit)",
+     "date": "2026-10-14",
+     "version": "1.0.0"
+    },
+    {
+     "change": "the balcony upturn follows UP-WP-003 (was: by specification); the roof upturn follows the eligible boundaries (was: the whole region perimeter)",
+     "date": "2026-10-16",
+     "version": "1.1.0"
+    }
+   ],
+   "kind": "OWNER_RULE",
+   "limitations": [],
+   "locations": [
+    "BALCONY",
+    "ROOF"
+   ],
+   "logic": {
+    "area": "the drawn exterior space area",
+    "state": "PROVISIONAL (membrane system and upturn by specification; one system never assumed for every location)",
+    "system": "by specification; a separate procurement group from the wet-area membrane (UP-WP-MAT-001)",
+    "upturn": "UP-WP-003: 0.20 m on wall / parapet boundaries (owner standard, project detail overrides); doorways are transitions (UP-WP-DOOR-001); open edges are terminations (by detail)"
+   },
+   "preconditions": [],
+   "purpose": "exterior horizontal surfaces exposed to water",
+   "required_evidence": [],
+   "rule_id": "UP-WP-ROOF-001",
+   "scope": "balconies, terraces and roofs drawn as spaces",
+   "status": "OWNER_APPROVED",
+   "superseded_by": null,
+   "supersedes": [],
+   "tests": [
+    "tests/m9_kb/test_kb_finish_scope.py::test_balconies_get_provisional_waterproofing",
+    "tests/m9_kb/test_kb_wp5.py::test_a_balcony_door_is_aluminium_and_the_balcony_is_waterproofed",
+    "tests/m9_p2b2/test_p2b2_waterproofing.py::test_balcony_upturn_on_walls_and_open_edge_termination"
+   ],
+   "title": "Roofs and balconies are waterproofed under the default scope"
+  },
+  {
+   "assumptions_permitted": "NONE",
+   "authority": {
+    "kind": "OWNER",
+    "received": "2026-10-12",
+    "source": "rules/owner_library URBAN_PROJECTS_RULE_LIBRARY 1.4.0 UP-WP-002 1.0.0; engine/source/waterproofing_policy.py WET_UPTURN_M"
+   },
+   "code": [],
+   "conflicts": [],
+   "dependent_trades": [
+    "WATERPROOFING"
+   ],
+   "effective_version": "1.1.0",
+   "elements": [
+    "WATERPROOFING"
+   ],
+   "examples": [],
+   "exceptions": [],
+   "history": [
+    {
+     "change": "rule library 1.4.0 value (0.15 m)",
+     "date": "2026-10-12",
+     "version": "1.0.0"
+    },
+    {
+     "change": "registered as DEPRECATED, superseded by UP-WP-003 (0.20 m)",
+     "date": "2026-10-16",
+     "version": "1.1.0"
+    }
+   ],
+   "kind": "OWNER_STANDARD",
+   "limitations": [],
+   "locations": [
+    "ALL"
+   ],
+   "logic": {
+    "superseded_on": [
+     "2026-10-12 (rule store UP-WP-002 2.0.0 = 0.20 m)",
+     "2026-10-16 (UP-WP-003)"
+    ],
+    "upturn_h_m": 0.15
+   },
+   "preconditions": [],
+   "purpose": "history: the value the Urban rule library 1.4.0 and the lab waterproofing policy carried",
+   "required_evidence": [],
+   "rule_id": "UP-WP-UPTURN-015",
+   "scope": "none (superseded)",
+   "status": "DEPRECATED",
+   "superseded_by": "UP-WP-003",
+   "supersedes": [],
+   "tests": [
+    "tests/m9_p2b2/test_p2b2_registry.py::test_the_superseded_upturn_keeps_its_history"
+   ],
+   "title": "The earlier general waterproofing upturn of 0.15 m - SUPERSEDED"
+  }
+ ],
+ "schema": "URBAN_ENGINEERING_KNOWLEDGE_V1",
+ "statuses": [
+  "OWNER_APPROVED",
+  "DRAWING_VERIFIED",
+  "PROJECT_SPECIFIC",
+  "REFERENCE_ONLY",
+  "ASSUMPTION",
+  "CONFLICTED",
+  "REQUIRES_CONFIRMATION",
+  "DEPRECATED"
+ ],
+ "version": "1.5.0"
+}

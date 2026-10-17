@@ -8,10 +8,10 @@ Rule files are versioned: never edit an existing version; add the next one (see 
 | Rule set | Files | Loader | Read by |
 |---|---|---|---|
 | Rule store (library + owner overlay) | `rules/owner_library/`, `rules/owner_decisions/` | `engine/source/rule_store.py` (LATEST_APPROVED = "1.5.0") | ARCH_TAKEOFF_V1 to V2.2 (frozen) |
-| Engineering knowledge registry | `knowledge/URBAN_ENGINEERING_KNOWLEDGE_<v>.json` | `engine/source/knowledge.py` (`using(version)`) | V2.3 = 1.0.0, V2.4 = 1.1.0, V2.7 = 1.2.0, V2.7.1 = 1.3.0, V2.8 = 1.4.0 |
+| Engineering knowledge registry | `knowledge/URBAN_ENGINEERING_KNOWLEDGE_<v>.json` | `engine/source/knowledge.py` (`using(version)`) | V2.3 = 1.0.0, V2.4 = 1.1.0, V2.7 = 1.2.0, V2.7.1 = 1.3.0, V2.8 = 1.4.0, V2.9 = 1.5.0 |
 | Methods | `tools/urban_boq_m9.py` `ARCH_METHODS` | `arch_compute(method=...)` | CLI route |
 
-## Engineering knowledge 1.4.0 (48 rules)
+## Engineering knowledge 1.5.0 (53 rules)
 
 | Rule | Version | Status | Title | Supersedes / superseded by | Code | Tests |
 |---|---|---|---|---|---|---|
@@ -32,12 +32,17 @@ Rule files are versioned: never edit an existing version; add the next one (see 
 | UP-DOOR-OPEN-002 | 1.2.0 | REQUIRES_CONFIRMATION | Required nominal door opening and architectural wall opening | UP-DOOR-MIN-001 / UP-DOOR-OPEN-003 | `engine/source/door_standards.py::required_opening`, `engine/source/door_standards.py::door_scenarios`, `engine/source/door_feasibility.py::feasibility` | `tests/m9_kb/test_kb_door_standards.py`, `tests/m9_kb/test_kb_integration.py` |
 | UP-DOOR-OPEN-003 | 1.3.0 | OWNER_APPROVED | Owner minimum door openings, kept apart from every measured and derived door width | UP-DOOR-OPEN-002 | `engine/source/door_standards.py::opening_record_v27` | `tests/m9_p2b7/test_p2b7_doors.py`, `tests/m9_p2b8/test_p2b8_doors.py` |
 | UP-ELEV-SCHED-001 | 1.0.0 | OWNER_APPROVED | Separate elevator quotation schedule | - | `engine/source/door_standards.py::elevator_schedule` | `tests/m9_kb/test_kb_door_standards.py` |
+| UP-EXC-001 | 1.5.0 | REQUIRES_CONFIRMATION | Excavation footprints; the volume only with stated depth and working space | - | `engine/source/struct_n10.py::excavation` | `tests/m9_n10/test_n10_structural.py` |
+| UP-FACADE-001 | 1.5.0 | REQUIRES_CONFIRMATION | The facade is the exterior outline of the floor's wall network, F.F.L. to the next F.F.L. | - | `engine/source/arch_v29.py::facade_outlines`, `engine/source/arch_v29.py::facade_evidence`, `engine/source/arch_v29.py::facade_takeoff` | `tests/m9_n10/test_n10_facade.py` |
 | UP-FIN-PAINT-001 | 1.0.0 | OWNER_APPROVED | No paint over full-height porcelain; one finish per face | - | `engine/source/owner_finish_scope.py::finish_scope` | `tests/m9_kb/test_kb_finish_scope.py` |
 | UP-FIN-PLASTER-001 | 1.0.0 | OWNER_APPROVED | Door jamb and head plaster is measured from geometry | - | `engine/source/owner_finish_scope.py::jamb_plaster_lines` | `tests/m9_kb/test_kb_finish_scope.py` |
 | UP-FIN-WALL-001 | 1.0.0 | OWNER_APPROVED | Full-height wall porcelain in wet areas | - | `engine/source/owner_finish_scope.py::wall_tile_height` | `tests/m9_kb/test_kb_finish_scope.py` |
+| UP-FW-001 | 1.5.0 | REQUIRES_CONFIRMATION | Formwork contact faces by element from the concrete register | - | `engine/source/struct_n10.py::element_faces`, `engine/source/struct_n10.py::formwork` | `tests/m9_n10/test_n10_structural.py` |
 | UP-HGT-001 | 1.4.0 | OWNER_APPROVED | Heights are read from the drawing, by an evidence hierarchy, each with its source and scope | - | `engine/source/arch_v28.py::read_schedules`, `engine/source/arch_v28.py::read_views`, `engine/source/arch_v28.py::bind_floor` | `tests/m9_p2b9/test_p2b9_heights.py` |
 | UP-KB-PREC-001 | 1.0.0 | OWNER_APPROVED | Source authority hierarchy, and as-drawn kept apart from owner-required | - | `engine/source/knowledge.py::precedence_rank`, `engine/source/door_standards.py::door_scenarios` | `tests/m9_kb/test_kb_door_standards.py`, `tests/m9_kb/test_kb_integration.py` |
 | UP-KB-QUES-001 | 1.0.0 | OWNER_APPROVED | Question policy: what may be asked of the owner | - | `engine/source/knowledge.py::classify_question`, `engine/source/knowledge.py::owner_questions` | `tests/m9_kb/test_kb_questions.py` |
+| UP-MAS-HEIGHT-001 | 1.5.0 | REQUIRES_CONFIRMATION | The masonry panel runs from the floor's structural slab top to the soffit above | - | `engine/source/arch_v29.py::masonry_evidence`, `engine/source/arch_v29.py::masonry_takeoff` | `tests/m9_n10/test_n10_masonry.py` |
+| UP-OPEN-CURVED-001 | 1.5.0 | REQUIRES_CONFIRMATION | A jambed gap in a curved wall band is an opening closed on its own wall faces | - | `engine/source/arch_v29.py::curved_gaps`, `engine/source/arch_v29.py::curved_openings`, `engine/source/arch_v29.py::curved_glazing_roles` | `tests/m9_n10/test_n10_curved_openings.py`, `tests/m9_n10/test_n10_indep_curved.py` |
 | UP-OPEN-SCHED-001 | 1.4.0 | OWNER_APPROVED | The opening schedule: width, height, sill, head and class, and their effect on finishes | - | `engine/source/arch_v28.py::band_height`, `engine/source/arch_v28.py::height_of`, `engine/source/arch_v28.py::skirting_adjustment` | `tests/m9_p2b9/test_p2b9_openings.py` |
 | UP-QTY-STATUS-001 | 1.3.0 | OWNER_APPROVED | Every BOQ line reported once: confirmed, conditional, held or excluded | - | `tools/urban_boq_m9.py::_release_report` | `tests/m9_p2b8/test_p2b8_review_release.py` |
 | UP-REF-CABINET-001 | 1.1.0 | REFERENCE_ONLY | Floor finish continues under cabinetry (owner method, reference only) | - |  |  |
@@ -316,6 +321,6 @@ Proposed, not in force: UP-WP-004 (A shower takes the wet-room floor and the UP-
 ## How to change a rule
 
 1. Find the rule above: its rule set, the code that applies it and its tests.
-2. Methods V2.3+: build the next `knowledge/URBAN_ENGINEERING_KNOWLEDGE_<v>.json` from 1.4.0 (follow the latest `tools/kb_build_*.py`), register it in `VERSIONS` in `engine/source/knowledge.py`, bind it to a new method version.
+2. Methods V2.3+: build the next `knowledge/URBAN_ENGINEERING_KNOWLEDGE_<v>.json` from 1.5.0 (follow the latest `tools/kb_build_*.py`), register it in `VERSIONS` in `engine/source/knowledge.py`, bind it to a new method version.
 3. Frozen V1-V2.2 rule store: a new `rules/owner_decisions/URBAN_RULES_<next>.json` overlay, added to `VERSIONS` in `engine/source/rule_store.py`; then `python3 -I tools/m9_rules_manifest.py build` and `check`.
 4. Run the rule's tests and the freeze check; regenerate the maps (`python3 -I tools/codemap.py`).
