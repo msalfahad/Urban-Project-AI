@@ -530,7 +530,7 @@ def render_routing(repo, cfg, facts, dmap, P, shared):
          "| L3 | HIGH: shared code, geometry, CAD, units, rooms, walls, release | L2 + the test folders that import the changed module (`impact`) + the freeze check |",
          "| L4 | CRITICAL, method-version release, acceptance handoff | full suite on the final commit, compared test by test with the baseline; freeze check; record the commit |",
          "", "The freeze check runs after any change under `engine/`, `tools/`, `rules/`, `knowledge/` or `data/registry/`, at every level:",
-         "`PYTHONDONTWRITEBYTECODE=1 python3 -I tools/freeze_verify.py check --index research/freeze_integrity/FREEZE_BASELINE_INDEX.jsonl`.",
+         f"`{cfg['freeze_check']}`." if cfg.get("freeze_check") else "the freeze check command in `CLAUDE.md`.",
          "A full-suite result belongs to the commit it ran on; later changes need their own validation.", "",
          "## Defect classes", "",
          f"VERIFIED_OPEN / VERIFIED_FIXED: as stated by the newest register (`{newest}`), not re-tested by this tool. "

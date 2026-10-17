@@ -1,5 +1,6 @@
 {
- "_comment": "Hand-kept input for tools/codemap.py (the only one). Patterns are Python regexes over repository paths (modules, tests), rule ids (rules) or BOQ family codes (families). keywords: words a task uses for this topic (prefix match). start: modules to open first when the generated choice is not the best entry. related: topics routed as secondary. risk: floor for the topic's risk class. Add each new phase defect register to defect_sources, oldest first: the newest one sets VERIFIED_* classes. Run python3 -I tools/codemap.py after editing.",
+ "_comment": "Hand-kept input for tools/codemap.py (the only one). freeze_check: the freeze-integrity command quoted in docs/ROUTING.md (kept here so no production module names the verifier). Patterns are Python regexes over repository paths (modules, tests), rule ids (rules) or BOQ family codes (families). keywords: words a task uses for this topic (prefix match). start: modules to open first when the generated choice is not the best entry. related: topics routed as secondary. risk: floor for the topic's risk class. Add each new phase defect register to defect_sources, oldest first: the newest one sets VERIFIED_* classes. Run python3 -I tools/codemap.py after editing.",
+ "freeze_check": "PYTHONDONTWRITEBYTECODE=1 python3 -I tools/freeze_verify.py check --index research/freeze_integrity/FREEZE_BASELINE_INDEX.jsonl",
  "defect_sources": [
   "URBAN_PROJECTS_CLAUDE_HANDOFF.md#21. Known bugs",
   "research/urban_m9_p2b8/REMAINING_DEFECT_REGISTER.md",
