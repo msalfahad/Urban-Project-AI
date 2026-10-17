@@ -30,4 +30,10 @@ Client drawings and the freelancer's original BOQ live in the private repository
 ## Working rules
 
 Use `docs/ROUTE_QUICK.md` and `route` / `impact` (CLAUDE.md). One task per run, small and reversible. Ask the owner only
-what an agent cannot decide from drawings, rules or evidence; at most 5 open questions at a time.
+what an agent cannot decide from drawings, rules or evidence; at most 5 open questions at a time. A question goes into
+OWNER_QUESTIONS.md AND into the run's final message (the owner gets a push notification and answers directly; there is
+no daily digest). Answers are written back under "Answer:" in OWNER_QUESTIONS.md.
+
+Cadence: research scout daily, lead every 6 h, worker every 2 h (one task per run), verifier every 3 h.
+The verifier merges into `claude/access-permissions-setup-ii24ws` only clean merges; anything that conflicts with work
+from an owner's own Claude Code session stays READY with a note.
