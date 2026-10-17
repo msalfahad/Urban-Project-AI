@@ -20,6 +20,15 @@ answers it, and gives what remains.
 | 6 | A held door still moves lines: its strip from porcelain to a marble threshold, and door jamb plaster is added. | Those lines are PROVISIONAL. The doorway waterproofing piece of a held door is now PROVISIONAL too, a change made after this review raised it (`arch_measure.py`, tested). | Plaster / skirting / upturn deductions follow the DOOR kind (door height instead of a full-height passage), with their usual states. | L |
 | 7 | The first version merged two real rooms. What else might a rule like this do? | Fixed with the CLOSED-swing guard and recorded (E-01). V1 - V2.5 are byte-identical, and V2.6 changes exactly one opening on the real plan. | Any further door rule needs the same real-plan diff before commit. | M |
 
+## 2b. The D-V26-07 correction
+
+| # | objection | answer | remains | sev |
+|---|---|---|---|---|
+| 7a | The split reads "wall" where it might be floor (an open recess beside a door). | It splits only when every non-threshold edge of the face is a wall line, so the part beyond the jamb is enclosed by the wall's two faces. A raw-line reading found the door symbol's own jamb lines at every split doorway, and the remainders match the raw wall stubs to 0.1 mm. | A drawing whose recess is drawn with wall lines on both faces would read as wall; its floor would then be missing from the strip. The floor itself is unchanged (the face stays in the floor areas). | M |
+| 7b | The rule was built after seeing four real faces. | Its tests are exact identities (edge lengths, box cover to 1 mm), not tuned limits. It was reproduced synthetically only after the real cause was read from the raw geometry, and its refusals are tested one by one. | Proven on one plan; a second plan is needed. | M |
+| 7c | Changing the scoring script (C-06) after seeing results. | The change makes the script read the threshold line when a pseudo room has two lines. Counts before and after are identical in V2.5 and in V2.6 before the split, so it changes no earlier result. | - | L |
+| 7d | R-E's remaining failure is waved away as "attribution". | It is kept as FAIL. The piece's size is verified (0.12 m2) and it is counted once. Which room carries it depends on an owner scope question, now listed (decision 11). | Until the owner answers, the room-level figure stays wrong for one of the two rooms. | L |
+
 ## 3. Calculations and claims
 
 | # | objection | answer | remains | sev |

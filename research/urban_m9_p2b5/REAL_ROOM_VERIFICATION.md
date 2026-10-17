@@ -65,7 +65,7 @@ recess and the lobby add up to the engine's areas to the millimetre.
 | id | discrepancy | cause | BOQ impact (sample) | class |
 |---|---|---|---|---|
 | D-C1 | A drawn door (leaf + 90-degree swing, the standard door block, mirrored) between R-C's lobby and a bathroom is read by the room / opening model as a **1.02 m PASSAGE of unknown height**. The door schedule holds the same opening as a 0.80 m door, PROVISIONAL and not released. *Refined in Stage D (§7): of the three bathroom door blocks near passages on the plan, only this one is a door drawn two ways at one opening; the other two close their own doorways next to a passage and are correctly separate doors* | the leaf-ray closure (0.80 m) lies inside the band opening (1.023 m): the two views of one opening are not reconciled | R-C: plaster -2.0 %, wall porcelain -1.1 %, skirting -0.5 %, upturn -0.5 %, doorway waterproofing +11 %; one door not released; that doorway's marble threshold missing. Over the sample: plaster -0.5 %, wall porcelain -0.4 % | ENGINE DEFECT (recognition), conservative on doors (held, not lost) |
-| D-C2 | 3 of 5 wet-room doorway thresholds are withheld: two strips are STRIP_NOT_ATTRIBUTED (in R-E two doors on the splayed wall share one merged strip); one has no strip line (the D-C1 door). R-E also has no doorway waterproofing line | strip attribution fails at a splayed wall and where an opening is read as a passage | marble thresholds: -49 % of the sample's threshold area (withheld with an RFI, not silently lost); doorway waterproofing -12 % | ENGINE DEFECT (attribution), conservative |
+| D-C2 | 3 of 5 wet-room doorway thresholds are withheld: two strips are STRIP_NOT_ATTRIBUTED (in R-E two doors on the splayed wall share one merged strip); one has no strip line (the D-C1 door). R-E also has no doorway waterproofing line. *Refined in Stage G (§8): the merged strips are doorway faces running on past a jamb drawn only with the door symbol into a wall junction (split in V2.6, D-V26-07); R-E's doorway piece is in the BOQ, carried by the basin lobby beyond the door (C-07)* | strip attribution fails at a splayed wall and where an opening is read as a passage | marble thresholds: -49 % of the sample's threshold area (withheld with an RFI, not silently lost); doorway waterproofing -12 % | ENGINE DEFECT (attribution), conservative |
 | D-C3 | R-C's doorless lobby (44 % of the room's area) is part of the laundry's face with **no attachment note**. R-A's recess, attached the same way, is flagged ATTACHED_THROUGH_OPEN_PASSAGE | the lobby and the laundry form one cell (no jambs at the joint), so the attachment path is not taken | none on geometry. The lobby takes the laundry's wet scope (waterproofing, full porcelain) without a visible note; if the owner treats it as a dry lobby, the wet items fall by that share | VISIBILITY / SCOPE (owner review) |
 | D-C4 | Wet rooms with a 2.40 m tile below a 3.00 m finish height keep a released skirting (UP-CER-004's exception), while the program states "no skirting in wet rooms" | rule conflict between the owner library's exception and the program statement | about 41 lm of skirting in the four wet rooms of the sample | RULE CONFLICT (owner decision) |
 | D-C5 | Mode A heights are synthetic test parameters. The door height 2.10 m differs from the owner reference 2.20 m (UP-DOOR-HGT-001), so door-area deductions use 2.10 | input, not engine | every wall-area line depends on heights that are not project values | INPUT (project values needed before release) |
@@ -129,3 +129,75 @@ The remaining R-C differences come from the width: the engine's 1.023 m against 
 drawing question now recorded on the held door. In the whole plan's BOQ, one doorway strip moves from porcelain to
 a marble threshold (0.15 m2; floor area conserved) and door jamb plaster adds 0.81 m2 (PROVISIONAL). V1 - V2.5
 outputs are byte-identical (968 files).
+
+## 8. Stage G follow-up: D-C2 diagnosed and split in ARCH_TAKEOFF_V2.6 (D-V26-07)
+
+An instrumented private run read every door / passage doorway face the strip register withholds, and every doorway
+piece of a door closed by its leaf (aggregates only).
+
+**The pattern.** A door's jamb is drawn only with the door symbol (the door layer), not on the wall layer. The
+wall-face piece beside it is shorter than the band census's 100 mm minimum (a 70 - 77 mm return), and beyond it is a
+junction with a perpendicular wall. No wall cap seals the wall body there, so the doorway face runs on past the jamb
+into 0.20 - 0.27 m of wall. Where two doors share a wall with a partition meeting it between them, one face holds both
+doors and the 0.24 m of wall between them (the sample's W.C. and its neighbour). The strip then fails the opening-box
+check, and its threshold is withheld. A door that is not a band opening (closed by its leaf and the wall's other face)
+takes the whole face as its doorway waterproofing piece.
+
+**The rule** (D-V26-07, `engine/source/arch_completeness.py` `split_strips`, `closure_box`). A face is split at its
+openings' boxes, or at the box between a leaf-closed door's two closures, only when its own boundary proves the
+reading:
+
+- its threshold / closure edges are both faces of its openings (2 x the sum of the widths);
+- every other edge is a WALL line;
+- it is no wider across than the wall;
+- its openings lie on one wall line;
+- it covers each box whole (to 1 mm).
+
+The box takes the doorway's treatment (UP-THR-001, UP-WP-003) as any other doorway. The rest becomes a
+WALL_BAND_REMAINDER strip (BLOCKED_RFI, no quantity). Floor areas, room areas and coverage do not change.
+
+**On the reference plan:**
+
+| | faces | outcome |
+|---|---|---|
+| band-opening faces split | 4 (5 doorways) | 4 marble thresholds of 0.12 m2 each, 1 doorway-strip porcelain of 0.135 m2; 0.14 m2 of wall left as 4 remainder strips |
+| band-opening faces refused | 6 | wider across than the wall (the held two-way door's perpendicular wall cells, a garden passage), threshold edges not both faces of the opening |
+| leaf-closed doorway pieces boxed | 2 of 4 in wet rooms | doorway waterproofing −0.0715 m2 (each face held 0.034 / 0.038 m2 of wall) |
+| leaf-closed pieces refused | 2 | an irregular face wider than the wall; a face bounded by a column |
+
+**Independent check.** A raw-line reading (ezdxf, unrounded coordinates, every layer, never the engine's reader;
+`indep_jambs`, private) finds the lines crossing the wall at full thickness. In all six boxed doorways these are the
+door symbol's own jamb and frame lines (layer D): spans of 0.800 m (five) and 0.900 m (one), frames 50 mm. The
+engine's boxes agree to 0.1 mm, except one leaf-closed box that is 0.4 % small: its width comes from the leaf
+closure, 0.797 m. The remainders agree with the raw wall stubs to 0.1 mm. No wall-layer jamb line exists at any of
+them.
+
+The Stage C automated reader mis-reads the 45-degree W.C. pair: its 1 mm snap separates the 27 / 61 mm wall pieces
+from their face line (E-05). Read by hand from the raw coordinates, the pair is two 0.80 m doors and 0.238 m of wall.
+
+**Stage C re-scored:**
+
+| | checks | fail | thresholds pass | sample threshold area |
+|---|---|---|---|---|
+| V2.5 | 66 | 11 | 2 of 5 | −49 % (withheld) |
+| V2.6 with D-V26-06 | 66 | 10 | 2 of 5 | −28 % |
+| V2.6 with D-V26-06 and D-V26-07 | 66 | **8** | **4 of 5** | **+4.5 %** (the two-way door's width) |
+
+The comparison script had a scoring fault, now fixed. When one pseudo room carried a threshold line and a left-over
+strip line, it scored whichever came last. It now scores the threshold line. No count changes in V2.5 or in V2.6
+before the split (C-06).
+
+**What is left in the sample** (8 checks, two causes):
+
+1. **The held two-way door's width (R-C: seven checks).** The raw reading settles it. The door symbol's jamb lines
+   are 0.80 m apart. Of the rest of the 1.023 m wall gap, 73 mm is a wall return with both faces drawn and 150 mm is
+   the crossing of a perpendicular wall. The drawing answers the width question; it is not an owner decision
+   (`OWNER_DECISIONS.md` 6 is withdrawn). Applying it means narrowing the opening to the symbol's jambs and closing the
+   rest as wall inside the face partition. That changes the room's boundary, so it was not done in this program
+   (`ROADMAP.md` 1).
+2. **R-E's doorway waterproofing (one check).** The piece is in the BOQ once, at the right size (0.12 m2). It is
+   carried by the space beyond the door, a lobby with three wash basins that the engine types wet from its fixtures
+   (ROOM_TYPE_FROM_FIXTURES, review). UP-WP-003 counts a doorway piece once, so the room that carries it depends on
+   whether a basin lobby is a wet area. The check stays FAIL per room; at the opening it is right. The statement in
+   §3 that R-E has no doorway waterproofing line is corrected (C-07). Whether a basin lobby is a wet area is an
+   owner decision (`OWNER_DECISIONS.md` 11).

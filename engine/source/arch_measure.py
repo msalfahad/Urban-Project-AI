@@ -235,12 +235,15 @@ def _wall_finish_rs(ctx, room, tr, code, run, H, h, openings, oh, sp, floor, unr
 
 
 def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_above_level_m=None, documents=(),
-            floor_level_m=None, release_safety=False, owner_scope=False, door_height=None):
+            floor_level_m=None, release_safety=False, owner_scope=False, door_height=None, piece_box=False):
     """release_safety (ARCH_TAKEOFF_V2.2 only): wall finishes and skirting through engine.source.release_safety (the
     boundary detail of every face is required); False is the V1 / V2 / V2.1 path, unchanged.
     owner_scope (ARCH_TAKEOFF_V2.3 only): the owner wet-area scope and the surfaces an approved rule answers
     (engine.source.owner_finish_scope, knowledge registry 1.0.0); door_height(opening) -> {"value_m", "state"} for the
-    door jamb plaster. False is the V1 .. V2.2 path, unchanged."""
+    door jamb plaster. False is the V1 .. V2.2 path, unchanged.
+    piece_box (ARCH_TAKEOFF_V2.6 only, D-V26-07): the doorway piece of a door closed by its leaf and the wall's other
+    face is the box between the two closures when its face runs on past them between wall lines
+    (arch_completeness.closure_box); False is the V1 .. V2.5 path, unchanged."""
     if owner_scope:
         from engine.source import owner_finish_scope as OFS
     facts = validate_facts(facts) or {}
@@ -254,6 +257,7 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
             if len(keys) == 1:
                 closure_pieces[keys.pop()] = f
     done_pieces = set()
+    box_recs = []                           # ARCH_TAKEOFF_V2.6 (D-V26-07): the doorway boxes tried, with their outcome
     wp_door_owner = {}                      # S5: a door between two wet spaces has ONE doorway piece (UP-WP-003)
     for sp in sorted(fr["spaces"], key=lambda s: (-s["area_m2"], s["face_id"])):
         rid = room_id(floor, sp["face_id"])
@@ -534,14 +538,26 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                     continue
                 done_pieces.add(door_key)
                 w = (piece["outer_role_lm"].get("DOOR_CLOSURE") or 0.0) / 2.0     # both closures span the door
+                m2, note, extra = piece["area_m2"], "", {}
+                if piece_box:                                 # ARCH_TAKEOFF_V2.6 (D-V26-07)
+                    from engine.source import arch_completeness as AC
+                    got = AC.closure_box(piece, fr.get("repairs"), fr["unit_m"])
+                    box_recs.append({"floor": floor, "door": door_key, "face_m2": round(piece["area_m2"], 6),
+                                     **({"split": False, "reason": got} if isinstance(got, str) else
+                                        {"split": True, "box_m2": got[0], "remainder_m2": got[1]})})
+                    if not isinstance(got, str):
+                        m2, extra = got[0], {"face_m2": round(piece["area_m2"], 6), "remainder_m2": got[1]}
+                        note = (f"; STRIP_SPLIT_AT_OPENING_BOX (D-V26-07): the doorway face "
+                                f"({piece['area_m2']:.4f} m2) runs on past the jambs between wall lines; the box "
+                                f"between the closures is taken, {got[1]:.4f} m2 beyond them is wall")
                 lines.append(_line(ctx, item_code="FIN.WP.DOORWAY", room=room, element=f"doorway {door_key}",
-                                   unit="m2", net=round(piece["area_m2"], 6),
+                                   unit="m2", net=round(m2, 6),
                                    formula="the doorway piece between the door's two closures (leaf face and the "
                                            "wall's other face)", rule_id="UP-WP-003",
                                    inputs={"width_m": round(w, 4),
-                                           "depth_m": round(piece["area_m2"] / w, 4) if w > 0 else None,
-                                           "face_id": piece["face_id"], "closures": piece["closure_ids"]},
-                                   notes="DOORWAY_UPTURN_DETAIL_REQUIRED; DOORWAY_DOUBLE_COVERAGE_REVIEW"))
+                                           "depth_m": round(m2 / w, 4) if w > 0 else None,
+                                           "face_id": piece["face_id"], "closures": piece["closure_ids"], **extra},
+                                   notes="DOORWAY_UPTURN_DETAIL_REQUIRED; DOORWAY_DOUBLE_COVERAGE_REVIEW" + note))
             if open_doors:
                 q = (f"{len(open_doors)} door(s) closed by a door-symbol closure: the doorway depth (wall "
                      "thickness) is not established for their doorway pieces")
@@ -665,7 +681,8 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
             unresolved.append({"room_id": "-", "floor": floor, "item": "door symbol " + occ.split("|")[-1],
                                "reason": "DOOR_CLOSURE_UNRESOLVED: " + st.get("why", "")})
     return {"policy": POLICY_ID, "floor": floor, "rooms": rooms, "lines": lines, "openings": openings,
-            "unresolved": unresolved, "counts": dict(Counter(r["class"] for r in rooms))}
+            "unresolved": unresolved, "counts": dict(Counter(r["class"] for r in rooms)),
+            **({"piece_box": box_recs} if piece_box else {})}
 
 
 def _host_wall(o, walls, unit_m):

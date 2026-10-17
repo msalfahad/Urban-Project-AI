@@ -390,6 +390,7 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
     lines, mats, comps, unresolved, rooms, openings, regions, walls_of = [], [], [], [], [], [], [], []
     floor_areas = []
     v2_unresolved, coverage, column_ev, arc_recs, unread_ev = [], [], [], [], []
+    strip_split, strip_split_pieces = [], []                  # ARCH_TAKEOFF_V2.6 (D-V26-07)
     geom_of = {}
     if v21:
         from engine.source import robust_geometry as RG
@@ -456,7 +457,8 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
                        floor_above_level_m=above, floor_level_m=level[rid], documents=docs,
                        **({"release_safety": True} if v22 else {}),
                        **({"owner_scope": True, "door_height": lambda o_: DSTD.door_height(DSTD.INTERNAL, facts)}
-                          if v23 else {}))
+                          if v23 else {}), **({"piece_box": True} if v26 else {}))
+        strip_split_pieces += M.get("piece_box") or []                       # ARCH_TAKEOFF_V2.6 (D-V26-07)
         X = AM.materials(M, facts)
         ref = (reference_areas or {}).get(floor)
         rec["repairs"] = {"counts": dict(Counter(x["kind"] + ":" + x["rule"] for x in S.get("repairs") or ())),
@@ -510,7 +512,14 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
                 # Phase 2B-1 (UP-THR-001): doorway strips of single verified door / passage openings take their
                 # owner treatment; every other strip stays in the V2 strip register
                 from engine.source import owner_finish_scope as OFS
-                t_lines, t_unres, rest = OFS.threshold_lines(ctx, strips, M["rooms"], floor, line=AM._line)
+                t_strips = strips
+                if v26:
+                    # D-V26-07 (Phase 2B-5 D-C2): a doorway face running on past its openings' jambs
+                    # between wall lines is split at the openings' boxes; the face itself is unchanged
+                    t_strips, split_recs = AC.split_strips(S, strips, floor)
+                    strip_split += split_recs
+                    fa["strip_split"] = split_recs
+                t_lines, t_unres, rest = OFS.threshold_lines(ctx, t_strips, M["rooms"], floor, line=AM._line)
                 s_lines, s_unres = AC.strip_lines(ctx, rest, floor)
                 s_lines, s_unres = t_lines + s_lines, t_unres + s_unres
             else:
@@ -654,7 +663,16 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
                                "reconciled": sorted(f"{o['floor']}:{o['opening_id']}" for o in openings
                                                     if o.get("door_fit_review")),
                                "noted": sorted(f"{o['floor']}:{o['opening_id']}" for o in openings
-                                               if o.get("door_symbol_note"))}}
+                                               if o.get("door_symbol_note"))},
+                           "strip_split": {"rule": "D-V26-07", "geom_tol_m": AC.GEOM_TOL_M,
+                                           "cover_tol_m": AC.SPLIT_COVER_TOL_M,
+                                           "parallel_deg": 1.0,
+                                           "split": [f"{r['floor']}:{'+'.join(r['openings'])}"
+                                                     for r in strip_split if r["split"]],
+                                           "not_split": [{"strip": f"{r['floor']}:{'+'.join(r['openings'])}",
+                                                          "reason": r["reason"]}
+                                                         for r in strip_split if not r["split"]],
+                                           "doorway_pieces": strip_split_pieces}}
     if admit:
         _finish_discovery(report, E, facts, regions, lines, coverage if v2 else None,
                           entity_checks={"column_evidence": column_ev, "door_symbols": arc_recs,
@@ -784,7 +802,12 @@ V26_CORRECTIONS = (
     "D-V26-06 door symbol reconciliation (Phase 2B-5 D-C1, arch_rooms.closure_in_passage / match_swings_review): a "
     "door leaf whose leaf-ray closure lies in a passage's gap, or a swing closing no gap whose hinge / leaf fits a "
     "passage within the review limits, makes that passage a DOOR held from every released total with both widths; "
-    "a passage near an idle swing carries a note")
+    "a passage near an idle swing carries a note",
+    "D-V26-07 doorway strip split at the opening boxes (Phase 2B-5 D-C2, arch_completeness.split_strips): a "
+    "door / passage doorway face that runs on past its openings' jambs is split per opening when its threshold "
+    "edges are both faces of its openings and every other edge is a wall line; each opening takes its box, the "
+    "rest stays a WALL_BAND_REMAINDER strip with no quantity; the doorway waterproofing piece of a door closed by "
+    "its leaf is the box between its two closures on the same proof")
 
 
 def _v25_binding(doc, docs):

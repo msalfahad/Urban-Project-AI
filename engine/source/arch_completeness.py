@@ -2,6 +2,8 @@
 in a measured quantity, an explicit exclusion with its reason, or a BLOCKED / RFI record. Never a silent gap.
 
     strip_register(S, floor)                 every DOORWAY face (a strip in the wall thickness) reviewed one by one
+    split_strips(S, strips, floor)           ARCH_TAKEOFF_V2.6 (D-V26-07): a doorway face running on past its openings'
+                                             jambs between wall lines is split at the openings' boxes
     strip_lines(ctx, strips, floor)          one BLOCKED_RFI line per opening: the measured strip, no material
     surface_rfis(ctx, M, floor, facts, ...)  RFI lines / records for surfaces V1 leaves silent (stair walls and
                                              skirting, the band above partial-height wet tile, exterior finish scope)
@@ -41,6 +43,7 @@ from engine.source import arch_measure as AM
 from engine.source import arch_plan as AP
 from engine.source import arch_rooms as AR
 from engine.source import member_detection as MD
+from engine.source import plane_poly as PP
 
 POLICY_ID = "ARCH_COMPLETENESS_V1"
 TOL_M2 = 0.05
@@ -86,6 +89,9 @@ EXCLUSIONS = {
              "a shaft finish needs its own specification)",
 }
 FLAG_RULES = (
+    # ARCH_TAKEOFF_V2.6 (D-V26-07) - a prefix no earlier method emits
+    (r"^WALL_BAND_REMAINDER", "SOURCE", "arch_completeness.split_strips",
+     "confirm the jamb against the drawing (or draw its line): the part of the face beyond it is wall, not floor"),
     # ARCH_TAKEOFF_V2.3 (owner_finish_scope; knowledge registry 1.0.0) - prefixes no earlier method emits
     (r"^WALL_BAND_ABOVE_EXPLICIT_TILE", "SOURCE", "arch_completeness.surface_rfis",
      "confirm the project's wall-tile height (it governs UP-FIN-WALL-001 full height) and give the band's finish"),
@@ -208,6 +214,151 @@ def strip_register(S, floor):
                     "disposition": "BLOCKED_RFI", "question": q,
                     "polygon_m": [(round(x * u, 4), round(y * u, 4)) for x, y in f["polygon"]]})
     return out
+
+
+# ARCH_TAKEOFF_V2.6 (D-V26-07, Phase 2B-5 D-C2): a doorway face that runs on past its openings' jambs
+SPLIT_FAILS = {"OUTSIDE_OPENING_BOX", "DEPTH_OVER_WALL", "SPANS_SEVERAL_OPENINGS", "MIXED_OPENING_KINDS"}
+SPLIT_THR_ROLES = ("DOOR_THRESHOLD", "PASSAGE_THRESHOLD")
+SPLIT_PARALLEL_SIN = math.sin(math.radians(1.0))
+SPLIT_COVER_TOL_M = 0.001                     # the face covers each box to 1 mm (mean depth over the width)
+Q_WALL_BAND = ("WALL_BAND_REMAINDER (D-V26-07): this part of a doorway face lies beyond its openings' jambs, between "
+               "the wall lines of both wall faces - a wall body with no jamb line on the wall layer (a jamb drawn "
+               "only with the door symbol leaves the wall open); it is taken as neither floor nor threshold; confirm "
+               "the jamb")
+
+
+def _split_test(s, f, ops, u):
+    """-> ({opening_id: (m2, polygon_m)}, remainder_m2) when the face proves the reading, else the reason (str)."""
+    oids = s["opening_ids"]
+    os_ = [ops[i] for i in oids if i in ops]
+    if len(os_) != len(oids) or any(o["kind"] not in ("DOOR", "PASSAGE") for o in os_):
+        return "an opening that is not a door or passage"
+    bad = sorted(set(s["geometry"].get("failed_checks") or ()) - SPLIT_FAILS)
+    if bad:
+        return "fails " + ", ".join(bad)
+    (ux, uy), (nx, ny) = os_[0]["u"], os_[0]["n"]
+    t = os_[0].get("wall_t_m") or 0.0
+    for o in os_[1:]:
+        if abs(o["u"][0] * uy - o["u"][1] * ux) > SPLIT_PARALLEL_SIN or abs((o.get("wall_t_m") or 0.0) - t) > GEOM_TOL_M:
+            return "its openings are not on one wall line"
+    tt = [x * nx + y * ny for x, y in f["polygon"]]
+    if (max(tt) - min(tt)) * u > t + GEOM_TOL_M:
+        return "wider across than the wall"
+    roles = s["bounded_by_lm"]
+    if set(roles) - {"WALL", *SPLIT_THR_ROLES}:
+        return "bounded by " + ", ".join(sorted(set(roles) - {"WALL", *SPLIT_THR_ROLES}))
+    thr = sum(roles.get(r, 0.0) for r in SPLIT_THR_ROLES)
+    if abs(thr - 2 * sum(o["width_m"] for o in os_)) > 2 * len(os_) * GEOM_TOL_M:
+        return "its threshold edges are not both faces of its openings"
+    pieces = {}
+    for o in os_:
+        (oux, ouy), (onx, ony), s0, s1, o0, o1 = _box_of(o)
+        loc = [(x * oux + y * ouy, x * onx + y * ony) for x, y in f["polygon"]]
+        cut = PP.clip_rect(loc, s0, o0, s1, o1)
+        m2 = abs(PP.area(cut)) * u * u
+        if abs(m2 - o["width_m"] * o["wall_t_m"]) > SPLIT_COVER_TOL_M * o["width_m"]:
+            return f"it does not cover the box of {o['opening_id']}"
+        det = oux * ony - ouy * onx                    # back to the drawing frame (the inverse of the rotation)
+        back = [((p * ony - q * ouy) / det, (q * oux - p * onx) / det) for p, q in cut]
+        pieces[o["opening_id"]] = (m2, [(round(x * u, 4), round(y * u, 4)) for x, y in back])
+    rem = s["area_m2"] - sum(m2 for m2, _ in pieces.values())
+    if rem < -GEOM_TOL_M * t:
+        return "its openings' boxes overlap"
+    if rem <= GEOM_TOL_M * t:
+        return "nothing lies beyond the jambs"
+    return pieces, rem
+
+
+def split_strips(S, strips, floor):
+    """ARCH_TAKEOFF_V2.6 (D-V26-07) -> (strips, records). A door / passage doorway face that no single opening owns
+    because it runs on past its openings' jambs into the wall band is split at the openings' band boxes when its own
+    boundary proves the reading:
+        its openings are doors / passages on one wall line (parallel within 1 degree, one wall thickness) and the
+        face is no wider across than that wall;
+        its threshold edges are both faces of those openings (2 x the sum of their widths) and every other edge is a
+        WALL line - so what lies beyond the jambs is enclosed by the wall's two faces: a wall body whose jamb line
+        is not drawn;
+        the face covers each opening's box whole (the clip is width x wall thickness, to 1 mm).
+    Each opening then gets its own verified THRESHOLD strip (the clip), which UP-THR-001 treats as any other; the
+    rest of the face stays a BLOCKED_RFI strip (WALL_BAND_REMAINDER) with no quantity. The strip areas are
+    conserved and the face itself (floor areas, coverage) is unchanged. Every other strip is returned unchanged."""
+    u = S["unit_m"]
+    ops = S.get("openings_by_id") or {o["opening_id"]: o for o in S.get("openings") or ()}
+    faces = {f["face_id"]: f for f in S["faces"]}
+    out, records = [], []
+    for s in strips:
+        cand = (not s["geometry_verified"] and s["opening_ids"] and not s["door_closures"]
+                and s["opening_kinds"] and set(s["opening_kinds"]) <= {"DOOR", "PASSAGE"} and s["strip_id"] in faces)
+        if not cand:
+            out.append(s)
+            continue
+        got = _split_test(s, faces[s["strip_id"]], ops, u)
+        rec = {"floor": floor, "strip_id": s["strip_id"], "openings": list(s["opening_ids"]),
+               "face_m2": s["area_m2"]}
+        if isinstance(got, str):
+            records.append(dict(rec, split=False, reason=got))
+            out.append(s)
+            continue
+        pieces, rem = got
+        src = {"rule": "D-V26-07", "face_id": s["strip_id"], "face_m2": s["area_m2"], "openings": list(s["opening_ids"]),
+               "remainder_m2": round(rem, 6)}
+        for oid, (m2, poly) in pieces.items():
+            o = ops[oid]
+            out.append({**s, "area_m2": round(m2, 6), "opening_ids": [oid], "opening_kinds": [o["kind"]],
+                        "class": "THRESHOLD",
+                        "geometry": {"checked_against": [oid], "within_opening_box": True,
+                                     "depth_m": round(m2 / o["width_m"], 4), "wall_t_m": round(o["wall_t_m"], 4),
+                                     "opening_width_m": round(o["width_m"], 4), "depth_within_wall": True,
+                                     "extent_along_m": round(o["width_m"], 4),
+                                     "extent_across_m": round(o["wall_t_m"], 4), "failed_checks": []},
+                        "geometry_verified": True, "floor_status": "FLOOR (finish not established)",
+                        "question": Q_THRESHOLD, "polygon_m": poly, "split_from": src})
+        out.append({**s, "area_m2": round(rem, 6), "opening_ids": [], "opening_kinds": [],
+                    "beside_openings": list(s["opening_ids"]), "class": "UNATTRIBUTED", "geometry_verified": False,
+                    "floor_status": "NOT_ESTABLISHED",
+                    "question": Q_WALL_BAND + f" (beside {', '.join(s['opening_ids'])})", "split_from": src})
+        records.append(dict(rec, split=True, pieces_m2={k: round(v[0], 6) for k, v in pieces.items()},
+                            remainder_m2=round(rem, 6)))
+    return out, records
+
+
+def closure_box(f, repairs, u):
+    """ARCH_TAKEOFF_V2.6 (D-V26-07) -> (box_m2, remainder_m2, depth_m) or the reason (str). The doorway piece of a door
+    closed by its leaf (closure A, on one wall face) and by the wall's other face (closure B, arch_rooms.closures_b)
+    is the box between the two closures. When the face runs on past them it is that box only, on the same proof as
+    split_strips: the face's closure edges are the two closures, every other edge is a WALL line, the face is no
+    wider across than the box and covers it whole; the rest is wall (no quantity)."""
+    geo = {r["id"]: (tuple(r["a"]), tuple(r["b"])) for r in repairs or () if r.get("kind") == "DOOR_CLOSURE"}
+    segs = [geo.get(i) for i in sorted(f.get("closure_ids") or ())]
+    if len(segs) != 2 or None in segs:
+        return "not closed by two closures"
+    (a0, a1), (b0, b1) = segs
+    la, lb = math.dist(a0, a1), math.dist(b0, b1)
+    if la <= 0 or lb <= 0:
+        return "a closure of no length"
+    ux, uy = (a1[0] - a0[0]) / la, (a1[1] - a0[1]) / la
+    nx, ny = -uy, ux
+    if abs((b1[0] - b0[0]) * uy - (b1[1] - b0[1]) * ux) > SPLIT_PARALLEL_SIN * lb:
+        return "its closures are not parallel"
+    roles = f.get("outer_role_lm") or {}
+    if set(roles) - {"WALL", "DOOR_CLOSURE"}:
+        return "bounded by " + ", ".join(sorted(set(roles) - {"WALL", "DOOR_CLOSURE"}))
+    if abs(roles.get("DOOR_CLOSURE", 0.0) - (la + lb) * u) > 2 * GEOM_TOL_M:
+        return "its closure edges are not the two closures"
+    bn, bo = (b0, b1) if math.dist(b0, a1) <= math.dist(b1, a1) else (b1, b0)
+    window = [a0, a1, bn, bo]                         # closure A, then B from the end beside a1: a convex box
+    box = abs(PP.area(window)) * u * u
+    depth = abs((b0[0] - a0[0]) * nx + (b0[1] - a0[1]) * ny) * u
+    tt = [(x - a0[0]) * nx + (y - a0[1]) * ny for x, y in f["polygon"]]
+    if (max(tt) - min(tt)) * u > depth + GEOM_TOL_M:
+        return "wider across than the wall"
+    m2 = abs(PP.area(PP.clip_convex(f["polygon"], window))) * u * u
+    if abs(m2 - box) > SPLIT_COVER_TOL_M * la * u:
+        return "it does not cover the box between its closures"
+    rem = f["area_m2"] - box
+    if rem <= GEOM_TOL_M * depth:
+        return "nothing lies beyond the closures"
+    return round(box, 6), round(rem, 6), round(depth, 4)
 
 
 def _pseudo_room(floor, key, what):

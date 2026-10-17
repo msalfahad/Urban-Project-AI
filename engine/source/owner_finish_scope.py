@@ -148,12 +148,17 @@ def threshold_lines(ctx, strips, rooms, floor, *, line):
                 ev = "PROVISIONAL"
                 notes.append("an external doorway: the strip is taken as the interior floor porcelain (UP-THR-001 "
                              "'other doorways'); an exterior sill is by specification")
+        inputs = {"opening_id": oid, "opening_kind": kind, "length_m": width, "depth_m": depth,
+                  "strips": [x["strip_id"] for x in ss], "sides": names, "side_codes": codes, "geometry_verified": True}
+        split = [x["split_from"] for x in ss if x.get("split_from")]
+        if split:                                   # ARCH_TAKEOFF_V2.6 (D-V26-07): the clip of a longer face
+            inputs["split_from"] = split[0]
+            notes.append(f"STRIP_SPLIT_AT_OPENING_BOX (D-V26-07): the doorway face ({split[0]['face_m2']:.4f} m2) "
+                         f"runs on past the jambs between wall lines; this opening's box is taken, "
+                         f"{split[0]['remainder_m2']:.4f} m2 beyond the jambs is wall (WALL_BAND_REMAINDER)")
         lines.append(line(ctx, item_code=code, room=room, element=element, unit="m2",
                           net=round(sum(x["area_m2"] for x in ss), 6), ev=ev, formula=formula,
-                          inputs={"opening_id": oid, "opening_kind": kind, "length_m": width, "depth_m": depth,
-                                  "strips": [x["strip_id"] for x in ss], "sides": names, "side_codes": codes,
-                                  "geometry_verified": True},
-                          rule_id=rule, notes="; ".join(notes)))
+                          inputs=inputs, rule_id=rule, notes="; ".join(notes)))
     # the strips left to the V2 register keep their measurement and lose the finish question UP-THR-001 answers:
     # what is still open is which doorway owns the strip (E) or the door itself (B: no band opening)
     rest = [dict(s, question=Q_STRIP_PROVISIONAL_DOOR if s["door_closures"] and not s["opening_ids"] else

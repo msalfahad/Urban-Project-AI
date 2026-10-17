@@ -25,7 +25,7 @@ rules govern (`MCP_SKILLS_AUDIT.md` §5).
 | wet rooms: full-height wall porcelain (company default, subject to drawings) | UP-FIN-WALL-001 (an explicit drawn height governs) | OWNER_APPROVED | Stage C wall porcelain checks | - |
 | no conventional skirting under full-height tiles | UP-WET-001 scope + UP-SKIRT-001 + UP-CER-004 (owner library) | OWNER_APPROVED | B10: skirting NOT_APPLICABLE_WITH_EVIDENCE | **D-C4 conflict**: UP-CER-004's exception keeps skirting where the tile is not full height (2.40 m tile, 3.00 m finish), while the program says "no skirting in wet rooms" - an owner decision |
 | wet-room thresholds marble | UP-THR-001 | OWNER_APPROVED | thresholds PROVISIONAL; D-C2 attribution | - |
-| no double counting of jambs, openings, strips, thresholds | UP-THR-001 (`never: the strip counted in two floors`), UP-DOOR-CLS-006 (one double-leaf door = one set) | OWNER_APPROVED | D-V26-06 moves a strip from porcelain to threshold; floor area conserved (`BOQ_IMPACT.md`) | - |
+| no double counting of jambs, openings, strips, thresholds | UP-THR-001 (`never: the strip counted in two floors`), UP-DOOR-CLS-006 (one double-leaf door = one set) | OWNER_APPROVED | D-V26-06 moves a strip from porcelain to threshold; floor area conserved (`BOQ_IMPACT.md`). D-V26-07 splits a face at its openings' boxes: the pieces and the remainder add back to the face, which stays counted once in the floor areas (`test_p2b5_strip_split.py`) | - |
 | ceilings exclude voids / open-to-below | UP-CEIL-001 | OWNER_APPROVED | `tests/m9_s5` (voids, double height) | - |
 
 ## 2. Precedence
