@@ -217,6 +217,23 @@ def test_the_hybrid_rules_on_the_benchmark(bench):
     assert "AGREE" not in {r["status"] for r in by["SCAN_25MM"]}
 
 
+def test_every_hybrid_record_carries_its_provenance(bench):
+    """Part 6.2: drawing, revision, input hash, source kind, coordinate system, scale evidence, method, vertices, label,
+    confidence indicators and discrepancy flags on every record (absent keys recorded as None, never guessed)."""
+    for h in bench["hybrid"]:
+        for r in h["records"]:
+            assert r["status"] in HY.STATUSES and isinstance(r["flags"], list)
+            for side in ("cad", "vision"):
+                if r[side] is None:
+                    continue
+                pv = r[side]["provenance"]
+                assert set(pv) == set(HY.PROVENANCE_KEYS) and len(pv["input_sha256"]) == 64 and pv["coordinate_system"]
+                assert len(r[side]["vertices_mm"]) >= 3 and pv["drawing"] == h["case"]
+            if r["status"] in ("AGREE", "REVIEW_CANDIDATE", "DISAGREEMENT"):
+                assert set(r["confidence"]) == {"iou", "area_diff_pct", "label_match"}
+            assert (r["status"] == "AGREE") == (r["flags"] == [])
+
+
 def _sq(x0, y0, x1, y1):
     return [(x0, y0), (x1, y0), (x1, y1), (x0, y1)]
 

@@ -159,15 +159,31 @@ def score(method, case, work):
     return res
 
 
+def _sha(path):
+    import hashlib
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
 def hybrid_pairs(work):
-    """the DXF / PDF pair and the DXF / raster pair of every case, through the reconciliation rules."""
+    """the DXF / PDF pair and the DXF / raster pair of every case, through the reconciliation rules, with the
+    provenance of both sides (Part 6.2)."""
     out = []
+    work = Path(work)
     for c in BC.CASES:                                            # the encoding cases draw the same pictures
         cad, _, _, _ = _rooms("REF_DXF", c, work)
+        cad_src = {"drawing": c["id"], "revision": "synthetic", "input_sha256": _sha(work / f"{c['id']}.dxf"),
+                   "kind": "CAD_DXF", "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+                   "scale_evidence": "$INSUNITS", "reader": "ref_reader", "version": "1", "method": "REF_DXF"}
         for vm in ("PDF_VECTOR", "RASTER_10MM", "SCAN_25MM"):
-            vis, _, _, _ = _rooms(vm, c, work)
-            recs = HY.reconcile(cad, vis, {"kind": "CAD", "reader": "ref_reader", "version": "1", "method": "REF_DXF"},
-                                {"kind": vm, "reader": "vision", "version": "1", "method": vm})
+            vis, _, extra, _ = _rooms(vm, c, work)
+            f = work / (f"{c['id']}.pdf" if vm == "PDF_VECTOR" else f"{c['id']}_{vm}.png")
+            vis_src = {"drawing": c["id"], "revision": "synthetic", "input_sha256": _sha(f), "kind": vm,
+                       "coordinate_system": "PDF page at 1:100 -> mm" if vm == "PDF_VECTOR" else
+                       "pixel -> mm by the stated scale (x0, y1, mm / px)",
+                       "scale_evidence": "stated drawing scale 1:100" if vm == "PDF_VECTOR" else
+                       f"stated mm / px; wall-thickness check {extra.get('wall_thickness_mm')} mm",
+                       "reader": "vision", "version": "1", "method": vm}
+            recs = HY.reconcile(cad, vis, cad_src, vis_src)
             out.append({"case": c["id"], "vision": vm, "records": recs})
     return out
 

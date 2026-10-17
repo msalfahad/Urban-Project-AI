@@ -514,11 +514,14 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
                     shared_doors.append(f"{d['opening_id']} (counted with {wp_door_owner[d['opening_id']]})")
                     continue
                 wp_door_owner[d["opening_id"]] = rid
+                held = d.get("door_fit_review")               # ARCH_TAKEOFF_V2.6 (D-V26-06): a door held for review
                 lines.append(_line(ctx, item_code="FIN.WP.DOORWAY", room=room, element=f"doorway {d['opening_id']}",
                                    unit="m2", net=round(d["width_m"] * d["wall_t_m"], 6),
                                    formula="door width x wall thickness", rule_id="UP-WP-003",
                                    inputs={"width_m": round(d["width_m"], 4), "depth_m": round(d["wall_t_m"], 4)},
-                                   notes="DOORWAY_UPTURN_DETAIL_REQUIRED; DOORWAY_DOUBLE_COVERAGE_REVIEW"))
+                                   ev="PROVISIONAL" if held else None,
+                                   notes="DOORWAY_UPTURN_DETAIL_REQUIRED; DOORWAY_DOUBLE_COVERAGE_REVIEW" +
+                                         (f"; DOOR_SYMBOL_FIT_REVIEW: {held}" if held else "")))
             # (S4) a door closed by its leaf and by the wall's other face (closure B) has its doorway piece as a face
             open_doors = []
             for cid in sp["closure_ids"]:

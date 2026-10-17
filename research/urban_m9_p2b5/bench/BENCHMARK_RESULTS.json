@@ -75,13 +75,65 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 12.0,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B01",
+       "input_sha256": "c80528368072df7a79e9130e5814b1f42bf747b1e432f60e4a7186df1caf2617",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1000.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        4200.0,
+        3200.0
+       ],
+       [
+        4200.0,
+        1600.0
+       ],
+       [
+        4200.0,
+        1000.0
+       ],
+       [
+        4200.0,
+        200.0
+       ],
+       [
+        1800.0,
+        200.0
+       ],
+       [
+        1000.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 0.0,
+      "iou": 1.0,
+      "label_match": true
+     },
+     "flags": [],
      "iou": 1.0,
      "label": "BATH",
      "label_conflict": false,
@@ -89,12 +141,58 @@
      "status": "AGREE",
      "vision": {
       "area_m2": 11.999999823214836,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
+       "coordinate_system": "PDF page at 1:100 -> mm",
+       "drawing": "B01",
+       "input_sha256": "aa0303474d283eb4149885e3807f293c9c743acb4550ddacfd96bf91b143d38b",
        "kind": "PDF_VECTOR",
        "method": "PDF_VECTOR",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated drawing scale 1:100",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1000.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        4200.0,
+        3200.0
+       ],
+       [
+        4200.0,
+        1600.0
+       ],
+       [
+        4200.0,
+        1000.0
+       ],
+       [
+        4200.0,
+        200.0
+       ],
+       [
+        1800.0,
+        200.0
+       ],
+       [
+        1000.0,
+        200.0
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -109,13 +207,65 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 12.0,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B01",
+       "input_sha256": "c80528368072df7a79e9130e5814b1f42bf747b1e432f60e4a7186df1caf2617",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1000.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        4200.0,
+        3200.0
+       ],
+       [
+        4200.0,
+        1600.0
+       ],
+       [
+        4200.0,
+        1000.0
+       ],
+       [
+        4200.0,
+        200.0
+       ],
+       [
+        1800.0,
+        200.0
+       ],
+       [
+        1000.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 0.209,
+      "iou": 0.9929,
+      "label_match": null
+     },
+     "flags": [],
      "iou": 0.9929,
      "label": "BATH",
      "label_conflict": false,
@@ -123,12 +273,42 @@
      "status": "AGREE",
      "vision": {
       "area_m2": 11.974925,
+      "label": null,
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B01",
+       "input_sha256": "c45a2ff60cce003d2b2649f2b7022d2f777a742173906e63569fea4fed8441b7",
        "kind": "RASTER_10MM",
        "method": "RASTER_10MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 220.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        212.5,
+        192.5
+       ],
+       [
+        4197.5,
+        192.5
+       ],
+       [
+        4197.5,
+        3197.5
+       ],
+       [
+        212.5,
+        3197.5
+       ],
+       [
+        212.5,
+        192.5
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -143,13 +323,68 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 12.0,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B01",
+       "input_sha256": "c80528368072df7a79e9130e5814b1f42bf747b1e432f60e4a7186df1caf2617",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1000.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        4200.0,
+        3200.0
+       ],
+       [
+        4200.0,
+        1600.0
+       ],
+       [
+        4200.0,
+        1000.0
+       ],
+       [
+        4200.0,
+        200.0
+       ],
+       [
+        1800.0,
+        200.0
+       ],
+       [
+        1000.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 2.207,
+      "iou": 0.975,
+      "label_match": null
+     },
+     "flags": [
+      "IOU_0.975_BELOW_0.98",
+      "AREA_DIFF_2.21_PCT"
+     ],
      "iou": 0.975,
      "label": "BATH",
      "label_conflict": false,
@@ -157,12 +392,62 @@
      "status": "REVIEW_CANDIDATE",
      "vision": {
       "area_m2": 11.735162500000001,
+      "label": null,
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B01",
+       "input_sha256": "4a2f471718b3b3fecbd791d323b7649748bb49cc6db85610d499813aed56807f",
        "kind": "SCAN_25MM",
        "method": "SCAN_25MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 200.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        232.5,
+        782.5
+       ],
+       [
+        257.5,
+        782.5
+       ],
+       [
+        257.5,
+        207.5
+       ],
+       [
+        3867.5,
+        207.5
+       ],
+       [
+        3867.5,
+        232.5
+       ],
+       [
+        4217.5,
+        232.5
+       ],
+       [
+        4192.5,
+        3142.5
+       ],
+       [
+        4167.5,
+        3167.5
+       ],
+       [
+        232.5,
+        3167.5
+       ],
+       [
+        232.5,
+        782.5
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -177,13 +462,65 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 12.0,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B02",
+       "input_sha256": "4163b787e840bd7dc421e3f4950f071786d9add7a739376cafbc87b73d3cfc8e",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1000.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        4200.0,
+        3200.0
+       ],
+       [
+        4200.0,
+        1600.0
+       ],
+       [
+        4200.0,
+        1000.0
+       ],
+       [
+        4200.0,
+        200.0
+       ],
+       [
+        1800.0,
+        200.0
+       ],
+       [
+        1000.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 0.0,
+      "iou": 1.0,
+      "label_match": true
+     },
+     "flags": [],
      "iou": 1.0,
      "label": "BATH",
      "label_conflict": false,
@@ -191,12 +528,58 @@
      "status": "AGREE",
      "vision": {
       "area_m2": 11.999999823214836,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
+       "coordinate_system": "PDF page at 1:100 -> mm",
+       "drawing": "B02",
+       "input_sha256": "31d496859e5f6e652d3862c3f44facca2a9e37d4ab51b876c85260c576914afb",
        "kind": "PDF_VECTOR",
        "method": "PDF_VECTOR",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated drawing scale 1:100",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1000.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        4200.0,
+        3200.0
+       ],
+       [
+        4200.0,
+        1600.0
+       ],
+       [
+        4200.0,
+        1000.0
+       ],
+       [
+        4200.0,
+        200.0
+       ],
+       [
+        1800.0,
+        200.0
+       ],
+       [
+        1000.0,
+        200.0
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -211,13 +594,65 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 12.0,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B02",
+       "input_sha256": "4163b787e840bd7dc421e3f4950f071786d9add7a739376cafbc87b73d3cfc8e",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1000.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        4200.0,
+        3200.0
+       ],
+       [
+        4200.0,
+        1600.0
+       ],
+       [
+        4200.0,
+        1000.0
+       ],
+       [
+        4200.0,
+        200.0
+       ],
+       [
+        1800.0,
+        200.0
+       ],
+       [
+        1000.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 0.209,
+      "iou": 0.9929,
+      "label_match": null
+     },
+     "flags": [],
      "iou": 0.9929,
      "label": "BATH",
      "label_conflict": false,
@@ -225,12 +660,42 @@
      "status": "AGREE",
      "vision": {
       "area_m2": 11.974925,
+      "label": null,
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B02",
+       "input_sha256": "a8692606d46ce44500131f5770827891e569ca99139f09b6593d4c8fbbb0c0a8",
        "kind": "RASTER_10MM",
        "method": "RASTER_10MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 220.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        212.5,
+        192.5
+       ],
+       [
+        4197.5,
+        192.5
+       ],
+       [
+        4197.5,
+        3197.5
+       ],
+       [
+        212.5,
+        3197.5
+       ],
+       [
+        212.5,
+        192.5
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -245,13 +710,68 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 12.0,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B02",
+       "input_sha256": "4163b787e840bd7dc421e3f4950f071786d9add7a739376cafbc87b73d3cfc8e",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1000.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        4200.0,
+        3200.0
+       ],
+       [
+        4200.0,
+        1600.0
+       ],
+       [
+        4200.0,
+        1000.0
+       ],
+       [
+        4200.0,
+        200.0
+       ],
+       [
+        1800.0,
+        200.0
+       ],
+       [
+        1000.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 2.207,
+      "iou": 0.975,
+      "label_match": null
+     },
+     "flags": [
+      "IOU_0.975_BELOW_0.98",
+      "AREA_DIFF_2.21_PCT"
+     ],
      "iou": 0.975,
      "label": "BATH",
      "label_conflict": false,
@@ -259,12 +779,62 @@
      "status": "REVIEW_CANDIDATE",
      "vision": {
       "area_m2": 11.735162500000001,
+      "label": null,
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B02",
+       "input_sha256": "359b893c1e5bacfbd859430c0c3acdd99766e68a4c442a272ed14081ec8eaadf",
        "kind": "SCAN_25MM",
        "method": "SCAN_25MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 200.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        232.5,
+        782.5
+       ],
+       [
+        257.5,
+        782.5
+       ],
+       [
+        257.5,
+        207.5
+       ],
+       [
+        3867.5,
+        207.5
+       ],
+       [
+        3867.5,
+        232.5
+       ],
+       [
+        4217.5,
+        232.5
+       ],
+       [
+        4192.5,
+        3142.5
+       ],
+       [
+        4167.5,
+        3167.5
+       ],
+       [
+        232.5,
+        3167.5
+       ],
+       [
+        232.5,
+        782.5
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -279,13 +849,65 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 8.0,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B03",
+       "input_sha256": "7bec9fbd15348f08682e19b74ea90479b25ab61180f5b5f080f044f6eacf3ffb",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        800.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        2200.0,
+        3200.0
+       ],
+       [
+        2200.0,
+        2200.0
+       ],
+       [
+        3200.0,
+        2200.0
+       ],
+       [
+        3200.0,
+        200.0
+       ],
+       [
+        1700.0,
+        200.0
+       ],
+       [
+        800.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 0.0,
+      "iou": 1.0,
+      "label_match": true
+     },
+     "flags": [],
      "iou": 1.0,
      "label": "BATH",
      "label_conflict": false,
@@ -293,12 +915,58 @@
      "status": "AGREE",
      "vision": {
       "area_m2": 7.999999985372385,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
+       "coordinate_system": "PDF page at 1:100 -> mm",
+       "drawing": "B03",
+       "input_sha256": "16e000fa6488126474d22edcd090e5f0704d9b1d50c372ff4ad4a17c761f0dfd",
        "kind": "PDF_VECTOR",
        "method": "PDF_VECTOR",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated drawing scale 1:100",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        800.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        2200.0,
+        3200.0
+       ],
+       [
+        2200.0,
+        2200.0
+       ],
+       [
+        3200.0,
+        2200.0
+       ],
+       [
+        3200.0,
+        200.0
+       ],
+       [
+        1700.0,
+        200.0
+       ],
+       [
+        800.0,
+        200.0
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -313,13 +981,65 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 8.0,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B03",
+       "input_sha256": "7bec9fbd15348f08682e19b74ea90479b25ab61180f5b5f080f044f6eacf3ffb",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        800.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        2200.0,
+        3200.0
+       ],
+       [
+        2200.0,
+        2200.0
+       ],
+       [
+        3200.0,
+        2200.0
+       ],
+       [
+        3200.0,
+        200.0
+       ],
+       [
+        1700.0,
+        200.0
+       ],
+       [
+        800.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 0.373,
+      "iou": 0.9907,
+      "label_match": null
+     },
+     "flags": [],
      "iou": 0.9907,
      "label": "BATH",
      "label_conflict": false,
@@ -327,12 +1047,58 @@
      "status": "AGREE",
      "vision": {
       "area_m2": 7.970125,
+      "label": null,
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B03",
+       "input_sha256": "2628e86db8bf12e4178b91b47fdec87965ecc7a8a27180f928091cf68f67d653",
        "kind": "RASTER_10MM",
        "method": "RASTER_10MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 220.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        212.5,
+        192.5
+       ],
+       [
+        3197.5,
+        192.5
+       ],
+       [
+        3197.5,
+        2197.5
+       ],
+       [
+        2217.5,
+        2197.5
+       ],
+       [
+        2217.5,
+        2207.5
+       ],
+       [
+        2197.5,
+        2207.5
+       ],
+       [
+        2197.5,
+        3197.5
+       ],
+       [
+        212.5,
+        3197.5
+       ],
+       [
+        212.5,
+        192.5
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -347,13 +1113,68 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 8.0,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B03",
+       "input_sha256": "7bec9fbd15348f08682e19b74ea90479b25ab61180f5b5f080f044f6eacf3ffb",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        800.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        2200.0,
+        3200.0
+       ],
+       [
+        2200.0,
+        2200.0
+       ],
+       [
+        3200.0,
+        2200.0
+       ],
+       [
+        3200.0,
+        200.0
+       ],
+       [
+        1700.0,
+        200.0
+       ],
+       [
+        800.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 2.832,
+      "iou": 0.9715,
+      "label_match": null
+     },
+     "flags": [
+      "IOU_0.972_BELOW_0.98",
+      "AREA_DIFF_2.83_PCT"
+     ],
      "iou": 0.9715,
      "label": "BATH",
      "label_conflict": false,
@@ -361,12 +1182,70 @@
      "status": "REVIEW_CANDIDATE",
      "vision": {
       "area_m2": 7.773475,
+      "label": null,
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B03",
+       "input_sha256": "dd92e67d991f3a1eda38b4b08460bd098ad7c22bc7f9103862710efddfc342ee",
        "kind": "SCAN_25MM",
        "method": "SCAN_25MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 200.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        232.5,
+        207.5
+       ],
+       [
+        3167.5,
+        207.5
+       ],
+       [
+        3192.5,
+        232.5
+       ],
+       [
+        3192.5,
+        2167.5
+       ],
+       [
+        2217.5,
+        2192.5
+       ],
+       [
+        2217.5,
+        2242.5
+       ],
+       [
+        2192.5,
+        2242.5
+       ],
+       [
+        2192.5,
+        3167.5
+       ],
+       [
+        307.5,
+        3167.5
+       ],
+       [
+        307.5,
+        3142.5
+       ],
+       [
+        232.5,
+        3142.5
+       ],
+       [
+        232.5,
+        207.5
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -381,13 +1260,57 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 7.34,
+      "label": "BEDROOM",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B04",
+       "input_sha256": "b4ce29bb0265184eb8885129bcba6922b7aa4bf02b42009b117ea0516cd1ea34",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        3200.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        1000.0
+       ],
+       [
+        200.0,
+        1900.0
+       ],
+       [
+        200.0,
+        2700.0
+       ],
+       [
+        3200.0,
+        2700.0
+       ],
+       [
+        3200.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 0.0,
+      "iou": 1.0,
+      "label_match": true
+     },
+     "flags": [],
      "iou": 1.0,
      "label": "BEDROOM",
      "label_conflict": false,
@@ -395,12 +1318,50 @@
      "status": "AGREE",
      "vision": {
       "area_m2": 7.339999862008099,
+      "label": "BEDROOM",
+      "openings": null,
       "provenance": {
+       "coordinate_system": "PDF page at 1:100 -> mm",
+       "drawing": "B04",
+       "input_sha256": "636a8329a7cf090a278365d67c29b3193f505f3275af6ae65be51490162a9507",
        "kind": "PDF_VECTOR",
        "method": "PDF_VECTOR",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated drawing scale 1:100",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        3200.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        1000.0
+       ],
+       [
+        200.0,
+        1900.0
+       ],
+       [
+        200.0,
+        2700.0
+       ],
+       [
+        3200.0,
+        2700.0
+       ],
+       [
+        3200.0,
+        200.0
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -415,13 +1376,57 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 7.34,
+      "label": "BEDROOM",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B04",
+       "input_sha256": "b4ce29bb0265184eb8885129bcba6922b7aa4bf02b42009b117ea0516cd1ea34",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        3200.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        1000.0
+       ],
+       [
+        200.0,
+        1900.0
+       ],
+       [
+        200.0,
+        2700.0
+       ],
+       [
+        3200.0,
+        2700.0
+       ],
+       [
+        3200.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 0.009,
+      "iou": 0.9944,
+      "label_match": true
+     },
+     "flags": [],
      "iou": 0.9944,
      "label": "BEDROOM",
      "label_conflict": false,
@@ -429,12 +1434,42 @@
      "status": "AGREE",
      "vision": {
       "area_m2": 7.3393500000000005,
+      "label": "BEDROOM",
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B04",
+       "input_sha256": "0bfc76a133a4c0323c485321341e532da54893aa9f31d67058b21eb8cb3ecadd",
        "kind": "RASTER_10MM",
        "method": "RASTER_10MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 220.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        202.5,
+        192.5
+       ],
+       [
+        3197.5,
+        192.5
+       ],
+       [
+        3197.5,
+        2697.5
+       ],
+       [
+        202.5,
+        2697.5
+       ],
+       [
+        202.5,
+        192.5
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -449,13 +1484,60 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 7.34,
+      "label": "BEDROOM",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B04",
+       "input_sha256": "b4ce29bb0265184eb8885129bcba6922b7aa4bf02b42009b117ea0516cd1ea34",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        3200.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        1000.0
+       ],
+       [
+        200.0,
+        1900.0
+       ],
+       [
+        200.0,
+        2700.0
+       ],
+       [
+        3200.0,
+        2700.0
+       ],
+       [
+        3200.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 1.393,
+      "iou": 0.9706,
+      "label_match": null
+     },
+     "flags": [
+      "IOU_0.971_BELOW_0.98",
+      "AREA_DIFF_1.39_PCT"
+     ],
      "iou": 0.9706,
      "label": "BEDROOM",
      "label_conflict": false,
@@ -463,12 +1545,50 @@
      "status": "REVIEW_CANDIDATE",
      "vision": {
       "area_m2": 7.23775,
+      "label": null,
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B04",
+       "input_sha256": "98fa2fd42f25f775dd39c46c4d78a83172081d0065ab321df08ecdc02af340c6",
        "kind": "SCAN_25MM",
        "method": "SCAN_25MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 250.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        232.5,
+        207.5
+       ],
+       [
+        3192.5,
+        207.5
+       ],
+       [
+        3192.5,
+        2667.5
+       ],
+       [
+        307.5,
+        2667.5
+       ],
+       [
+        307.5,
+        2642.5
+       ],
+       [
+        232.5,
+        2642.5
+       ],
+       [
+        232.5,
+        207.5
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -483,13 +1603,65 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 9.0,
+      "label": "BEDROOM",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B05",
+       "input_sha256": "26b0d3c8bde1fcb13720ac91bf27b75482ef26916f393ed2badb59c989b57ea2",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1200.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        3200.0,
+        3200.0
+       ],
+       [
+        3200.0,
+        1800.0
+       ],
+       [
+        3200.0,
+        1000.0
+       ],
+       [
+        3200.0,
+        200.0
+       ],
+       [
+        2100.0,
+        200.0
+       ],
+       [
+        1200.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 0.0,
+      "iou": 1.0,
+      "label_match": true
+     },
+     "flags": [],
      "iou": 1.0,
      "label": "BEDROOM",
      "label_conflict": false,
@@ -497,12 +1669,58 @@
      "status": "AGREE",
      "vision": {
       "area_m2": 9.000000473418403,
+      "label": "BEDROOM",
+      "openings": null,
       "provenance": {
+       "coordinate_system": "PDF page at 1:100 -> mm",
+       "drawing": "B05",
+       "input_sha256": "4ffe7e06dc5cb3ad972b715d6a560b2a86bf3c768fdfca8407319f96e5fa1a9b",
        "kind": "PDF_VECTOR",
        "method": "PDF_VECTOR",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated drawing scale 1:100",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1200.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        3200.0,
+        3200.0
+       ],
+       [
+        3200.0,
+        1800.0
+       ],
+       [
+        3200.0,
+        1000.0
+       ],
+       [
+        3200.0,
+        200.0
+       ],
+       [
+        2100.0,
+        200.0
+       ],
+       [
+        1200.0,
+        200.0
+       ]
+      ],
+      "walls": null
      }
     },
     {
@@ -511,13 +1729,57 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 6.0,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B05",
+       "input_sha256": "26b0d3c8bde1fcb13720ac91bf27b75482ef26916f393ed2badb59c989b57ea2",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        5400.0,
+        200.0
+       ],
+       [
+        3400.0,
+        200.0
+       ],
+       [
+        3400.0,
+        1000.0
+       ],
+       [
+        3400.0,
+        1800.0
+       ],
+       [
+        3400.0,
+        3200.0
+       ],
+       [
+        5400.0,
+        3200.0
+       ],
+       [
+        5400.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 0.0,
+      "iou": 1.0,
+      "label_match": true
+     },
+     "flags": [],
      "iou": 1.0,
      "label": "BATH",
      "label_conflict": false,
@@ -525,12 +1787,50 @@
      "status": "AGREE",
      "vision": {
       "area_m2": 5.999999642742045,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
+       "coordinate_system": "PDF page at 1:100 -> mm",
+       "drawing": "B05",
+       "input_sha256": "4ffe7e06dc5cb3ad972b715d6a560b2a86bf3c768fdfca8407319f96e5fa1a9b",
        "kind": "PDF_VECTOR",
        "method": "PDF_VECTOR",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated drawing scale 1:100",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        5400.0,
+        200.0
+       ],
+       [
+        3400.0,
+        200.0
+       ],
+       [
+        3400.0,
+        1000.0
+       ],
+       [
+        3400.0,
+        1800.0
+       ],
+       [
+        3400.0,
+        3200.0
+       ],
+       [
+        5400.0,
+        3200.0
+       ],
+       [
+        5400.0,
+        200.0
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -545,13 +1845,57 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 6.0,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B05",
+       "input_sha256": "26b0d3c8bde1fcb13720ac91bf27b75482ef26916f393ed2badb59c989b57ea2",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        5400.0,
+        200.0
+       ],
+       [
+        3400.0,
+        200.0
+       ],
+       [
+        3400.0,
+        1000.0
+       ],
+       [
+        3400.0,
+        1800.0
+       ],
+       [
+        3400.0,
+        3200.0
+       ],
+       [
+        5400.0,
+        3200.0
+       ],
+       [
+        5400.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 0.084,
+      "iou": 0.9942,
+      "label_match": true
+     },
+     "flags": [],
      "iou": 0.9942,
      "label": "BATH",
      "label_conflict": false,
@@ -559,12 +1903,42 @@
      "status": "AGREE",
      "vision": {
       "area_m2": 5.994975,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B05",
+       "input_sha256": "b59bf11f44e81c0ead834b01fca962befd2da13790f02d8c49e821478cfcab18",
        "kind": "RASTER_10MM",
        "method": "RASTER_10MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 220.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        3402.5,
+        192.5
+       ],
+       [
+        5397.5,
+        192.5
+       ],
+       [
+        5397.5,
+        3197.5
+       ],
+       [
+        3402.5,
+        3197.5
+       ],
+       [
+        3402.5,
+        192.5
+       ]
+      ],
+      "walls": null
      }
     },
     {
@@ -573,13 +1947,65 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 9.0,
+      "label": "BEDROOM",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B05",
+       "input_sha256": "26b0d3c8bde1fcb13720ac91bf27b75482ef26916f393ed2badb59c989b57ea2",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1200.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        3200.0,
+        3200.0
+       ],
+       [
+        3200.0,
+        1800.0
+       ],
+       [
+        3200.0,
+        1000.0
+       ],
+       [
+        3200.0,
+        200.0
+       ],
+       [
+        2100.0,
+        200.0
+       ],
+       [
+        1200.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 0.334,
+      "iou": 0.9917,
+      "label_match": true
+     },
+     "flags": [],
      "iou": 0.9917,
      "label": "BEDROOM",
      "label_conflict": false,
@@ -587,12 +2013,42 @@
      "status": "AGREE",
      "vision": {
       "area_m2": 8.969925,
+      "label": "BEDROOM",
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B05",
+       "input_sha256": "b59bf11f44e81c0ead834b01fca962befd2da13790f02d8c49e821478cfcab18",
        "kind": "RASTER_10MM",
        "method": "RASTER_10MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 220.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        212.5,
+        192.5
+       ],
+       [
+        3197.5,
+        192.5
+       ],
+       [
+        3197.5,
+        3197.5
+       ],
+       [
+        212.5,
+        3197.5
+       ],
+       [
+        212.5,
+        192.5
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -607,13 +2063,68 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 9.0,
+      "label": "BEDROOM",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B05",
+       "input_sha256": "26b0d3c8bde1fcb13720ac91bf27b75482ef26916f393ed2badb59c989b57ea2",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1200.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        3200.0,
+        3200.0
+       ],
+       [
+        3200.0,
+        1800.0
+       ],
+       [
+        3200.0,
+        1000.0
+       ],
+       [
+        3200.0,
+        200.0
+       ],
+       [
+        2100.0,
+        200.0
+       ],
+       [
+        1200.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 2.425,
+      "iou": 0.9718,
+      "label_match": null
+     },
+     "flags": [
+      "IOU_0.972_BELOW_0.98",
+      "AREA_DIFF_2.43_PCT"
+     ],
      "iou": 0.9718,
      "label": "BEDROOM",
      "label_conflict": false,
@@ -621,12 +2132,50 @@
      "status": "REVIEW_CANDIDATE",
      "vision": {
       "area_m2": 8.781725000000002,
+      "label": null,
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B05",
+       "input_sha256": "e3599a801d5c74643c739579168c38caccc17dc44f551b3458b6687e3ee21da3",
        "kind": "SCAN_25MM",
        "method": "SCAN_25MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 200.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        232.5,
+        182.5
+       ],
+       [
+        3192.5,
+        207.5
+       ],
+       [
+        3192.5,
+        3167.5
+       ],
+       [
+        907.5,
+        3167.5
+       ],
+       [
+        907.5,
+        3142.5
+       ],
+       [
+        232.5,
+        3142.5
+       ],
+       [
+        232.5,
+        182.5
+       ]
+      ],
+      "walls": null
      }
     },
     {
@@ -635,13 +2184,60 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 6.0,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B05",
+       "input_sha256": "26b0d3c8bde1fcb13720ac91bf27b75482ef26916f393ed2badb59c989b57ea2",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        5400.0,
+        200.0
+       ],
+       [
+        3400.0,
+        200.0
+       ],
+       [
+        3400.0,
+        1000.0
+       ],
+       [
+        3400.0,
+        1800.0
+       ],
+       [
+        3400.0,
+        3200.0
+       ],
+       [
+        5400.0,
+        3200.0
+       ],
+       [
+        5400.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 2.855,
+      "iou": 0.9715,
+      "label_match": null
+     },
+     "flags": [
+      "IOU_0.971_BELOW_0.98",
+      "AREA_DIFF_2.85_PCT"
+     ],
      "iou": 0.9715,
      "label": "BATH",
      "label_conflict": false,
@@ -649,12 +2245,58 @@
      "status": "REVIEW_CANDIDATE",
      "vision": {
       "area_m2": 5.828724999999999,
+      "label": null,
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B05",
+       "input_sha256": "e3599a801d5c74643c739579168c38caccc17dc44f551b3458b6687e3ee21da3",
        "kind": "SCAN_25MM",
        "method": "SCAN_25MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 200.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        3407.5,
+        1007.5
+       ],
+       [
+        3457.5,
+        1007.5
+       ],
+       [
+        3457.5,
+        207.5
+       ],
+       [
+        5217.5,
+        207.5
+       ],
+       [
+        5217.5,
+        232.5
+       ],
+       [
+        5392.5,
+        232.5
+       ],
+       [
+        5392.5,
+        3192.5
+       ],
+       [
+        3432.5,
+        3167.5
+       ],
+       [
+        3407.5,
+        1007.5
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -669,13 +2311,65 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 11.999999999999998,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B06",
+       "input_sha256": "a19dc7a8da488949ea4dbdb2cff8a742d471f27fac06f7465777d16ea76f3875",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1811.8,
+        -181.3
+       ],
+       [
+        1099.0,
+        -544.5
+       ],
+       [
+        -263.0,
+        2128.5
+       ],
+       [
+        3301.0,
+        3944.5
+       ],
+       [
+        4027.4,
+        2518.9
+       ],
+       [
+        4299.8,
+        1984.3
+       ],
+       [
+        4663.0,
+        1271.5
+       ],
+       [
+        2524.6,
+        181.9
+       ],
+       [
+        1811.8,
+        -181.3
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 0.0,
+      "iou": 1.0,
+      "label_match": true
+     },
+     "flags": [],
      "iou": 1.0,
      "label": "BATH",
      "label_conflict": false,
@@ -683,12 +2377,58 @@
      "status": "AGREE",
      "vision": {
       "area_m2": 12.000000258223343,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
+       "coordinate_system": "PDF page at 1:100 -> mm",
+       "drawing": "B06",
+       "input_sha256": "478e1d591aefd424c349d29d2e8b5c23d90608f1e97d189a0bcff3c5fb06a73a",
        "kind": "PDF_VECTOR",
        "method": "PDF_VECTOR",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated drawing scale 1:100",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1811.8,
+        -181.3
+       ],
+       [
+        1099.0,
+        -544.5
+       ],
+       [
+        -263.0,
+        2128.5
+       ],
+       [
+        3301.0,
+        3944.5
+       ],
+       [
+        4027.4,
+        2518.9
+       ],
+       [
+        4299.8,
+        1984.3
+       ],
+       [
+        4663.0,
+        1271.5
+       ],
+       [
+        2524.6,
+        181.9
+       ],
+       [
+        1811.8,
+        -181.3
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -703,13 +2443,65 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 11.999999999999998,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B06",
+       "input_sha256": "a19dc7a8da488949ea4dbdb2cff8a742d471f27fac06f7465777d16ea76f3875",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1811.8,
+        -181.3
+       ],
+       [
+        1099.0,
+        -544.5
+       ],
+       [
+        -263.0,
+        2128.5
+       ],
+       [
+        3301.0,
+        3944.5
+       ],
+       [
+        4027.4,
+        2518.9
+       ],
+       [
+        4299.8,
+        1984.3
+       ],
+       [
+        4663.0,
+        1271.5
+       ],
+       [
+        2524.6,
+        181.9
+       ],
+       [
+        1811.8,
+        -181.3
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 0.405,
+      "iou": 0.9951,
+      "label_match": null
+     },
+     "flags": [],
      "iou": 0.9951,
      "label": "BATH",
      "label_conflict": false,
@@ -717,12 +2509,58 @@
      "status": "AGREE",
      "vision": {
       "area_m2": 11.951450000000001,
+      "label": null,
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B06",
+       "input_sha256": "c78abc3cabdabe64006f97b6a04481e48f1acbf21d946b75cc3d6f2475876b3b",
        "kind": "RASTER_10MM",
        "method": "RASTER_10MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 220.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1105.9,
+        -542.9
+       ],
+       [
+        4655.2,
+        1269.0
+       ],
+       [
+        4005.9,
+        2548.7
+       ],
+       [
+        3997.0,
+        2544.2
+       ],
+       [
+        3836.4,
+        2860.8
+       ],
+       [
+        3845.3,
+        2865.3
+       ],
+       [
+        3300.1,
+        3939.9
+       ],
+       [
+        -253.7,
+        2136.9
+       ],
+       [
+        1105.9,
+        -542.9
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -737,13 +2575,68 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 11.999999999999998,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B06",
+       "input_sha256": "a19dc7a8da488949ea4dbdb2cff8a742d471f27fac06f7465777d16ea76f3875",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1811.8,
+        -181.3
+       ],
+       [
+        1099.0,
+        -544.5
+       ],
+       [
+        -263.0,
+        2128.5
+       ],
+       [
+        3301.0,
+        3944.5
+       ],
+       [
+        4027.4,
+        2518.9
+       ],
+       [
+        4299.8,
+        1984.3
+       ],
+       [
+        4663.0,
+        1271.5
+       ],
+       [
+        2524.6,
+        181.9
+       ],
+       [
+        1811.8,
+        -181.3
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 2.32,
+      "iou": 0.9768,
+      "label_match": null
+     },
+     "flags": [
+      "IOU_0.977_BELOW_0.98",
+      "AREA_DIFF_2.32_PCT"
+     ],
      "iou": 0.9768,
      "label": "BATH",
      "label_conflict": false,
@@ -751,12 +2644,42 @@
      "status": "REVIEW_CANDIDATE",
      "vision": {
       "area_m2": 11.7216,
+      "label": null,
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B06",
+       "input_sha256": "5714dfda7744a9ce3606f1ff320badda4e052f6e2c4efd4b90040b114cd87072",
        "kind": "SCAN_25MM",
        "method": "SCAN_25MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 250.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1117.2,
+        -522.7
+       ],
+       [
+        4637.7,
+        1290.4
+       ],
+       [
+        3282.4,
+        3921.9
+       ],
+       [
+        -238.1,
+        2108.8
+       ],
+       [
+        1117.2,
+        -522.7
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -771,13 +2694,61 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 11.875,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B07",
+       "input_sha256": "4088800d86dbeb54a01f68c30e5a9ad19a7b1882d9edd7da2e79d51cad1869d8",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1000.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        4200.0
+       ],
+       [
+        2700.0,
+        4200.0
+       ],
+       [
+        3200.0,
+        3700.0
+       ],
+       [
+        3200.0,
+        200.0
+       ],
+       [
+        1800.0,
+        200.0
+       ],
+       [
+        1000.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 0.0,
+      "iou": 1.0,
+      "label_match": true
+     },
+     "flags": [],
      "iou": 1.0,
      "label": "BATH",
      "label_conflict": false,
@@ -785,12 +2756,54 @@
      "status": "AGREE",
      "vision": {
       "area_m2": 11.874998939811515,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
+       "coordinate_system": "PDF page at 1:100 -> mm",
+       "drawing": "B07",
+       "input_sha256": "981f6cda6d5852b9a9698c370391af18523fcc6d7e1a59dd83d6d4500cc1cb7b",
        "kind": "PDF_VECTOR",
        "method": "PDF_VECTOR",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated drawing scale 1:100",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1000.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        4200.0
+       ],
+       [
+        2700.0,
+        4200.0
+       ],
+       [
+        3200.0,
+        3700.0
+       ],
+       [
+        3200.0,
+        200.0
+       ],
+       [
+        1800.0,
+        200.0
+       ],
+       [
+        1000.0,
+        200.0
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -805,13 +2818,61 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 11.875,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B07",
+       "input_sha256": "4088800d86dbeb54a01f68c30e5a9ad19a7b1882d9edd7da2e79d51cad1869d8",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1000.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        4200.0
+       ],
+       [
+        2700.0,
+        4200.0
+       ],
+       [
+        3200.0,
+        3700.0
+       ],
+       [
+        3200.0,
+        200.0
+       ],
+       [
+        1800.0,
+        200.0
+       ],
+       [
+        1000.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 0.297,
+      "iou": 0.992,
+      "label_match": true
+     },
+     "flags": [],
      "iou": 0.992,
      "label": "BATH",
      "label_conflict": false,
@@ -819,12 +2880,46 @@
      "status": "AGREE",
      "vision": {
       "area_m2": 11.839725000000001,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B07",
+       "input_sha256": "2279bdd12f20c961590ccf59acbc33573f2b04034a70419d8487055fa8b590de",
        "kind": "RASTER_10MM",
        "method": "RASTER_10MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 220.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        212.5,
+        192.5
+       ],
+       [
+        3197.5,
+        192.5
+       ],
+       [
+        3197.5,
+        3717.5
+       ],
+       [
+        2717.5,
+        4197.5
+       ],
+       [
+        212.5,
+        4197.5
+       ],
+       [
+        212.5,
+        192.5
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -839,13 +2934,64 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 11.875,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B07",
+       "input_sha256": "4088800d86dbeb54a01f68c30e5a9ad19a7b1882d9edd7da2e79d51cad1869d8",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1000.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        4200.0
+       ],
+       [
+        2700.0,
+        4200.0
+       ],
+       [
+        3200.0,
+        3700.0
+       ],
+       [
+        3200.0,
+        200.0
+       ],
+       [
+        1800.0,
+        200.0
+       ],
+       [
+        1000.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 1.917,
+      "iou": 0.9766,
+      "label_match": null
+     },
+     "flags": [
+      "IOU_0.977_BELOW_0.98",
+      "AREA_DIFF_1.92_PCT"
+     ],
      "iou": 0.9766,
      "label": "BATH",
      "label_conflict": false,
@@ -853,12 +2999,110 @@
      "status": "REVIEW_CANDIDATE",
      "vision": {
       "area_m2": 11.647349999999992,
+      "label": null,
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B07",
+       "input_sha256": "93850206a9f33c8a2127be4a8f2a092ac369351e062ce56ac550789496670670",
        "kind": "SCAN_25MM",
        "method": "SCAN_25MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 200.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        232.5,
+        257.5
+       ],
+       [
+        257.5,
+        257.5
+       ],
+       [
+        257.5,
+        207.5
+       ],
+       [
+        2992.5,
+        207.5
+       ],
+       [
+        2992.5,
+        232.5
+       ],
+       [
+        3217.5,
+        232.5
+       ],
+       [
+        3192.5,
+        3592.5
+       ],
+       [
+        3167.5,
+        3592.5
+       ],
+       [
+        3167.5,
+        3742.5
+       ],
+       [
+        3092.5,
+        3792.5
+       ],
+       [
+        3092.5,
+        3867.5
+       ],
+       [
+        2992.5,
+        3867.5
+       ],
+       [
+        2992.5,
+        3942.5
+       ],
+       [
+        2942.5,
+        3992.5
+       ],
+       [
+        2842.5,
+        4017.5
+       ],
+       [
+        2842.5,
+        4067.5
+       ],
+       [
+        2767.5,
+        4092.5
+       ],
+       [
+        2742.5,
+        4167.5
+       ],
+       [
+        307.5,
+        4167.5
+       ],
+       [
+        307.5,
+        4142.5
+       ],
+       [
+        232.5,
+        4142.5
+       ],
+       [
+        232.5,
+        257.5
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -873,13 +3117,57 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 6.0,
+      "label": "LAUNDRY",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B08",
+       "input_sha256": "083806655133d81bec23f28f5f56055cd030a19e87f1cf508d5a75a9fb787d8c",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        2200.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        2200.0,
+        3200.0
+       ],
+       [
+        2200.0,
+        2000.0
+       ],
+       [
+        2200.0,
+        1000.0
+       ],
+       [
+        2200.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 0.0,
+      "iou": 1.0,
+      "label_match": true
+     },
+     "flags": [],
      "iou": 1.0,
      "label": "LAUNDRY",
      "label_conflict": false,
@@ -887,12 +3175,50 @@
      "status": "AGREE",
      "vision": {
       "area_m2": 6.000000203517016,
+      "label": "LAUNDRY",
+      "openings": null,
       "provenance": {
+       "coordinate_system": "PDF page at 1:100 -> mm",
+       "drawing": "B08",
+       "input_sha256": "a8a36634191f1405b6906b58b839bbad2e37081df57b5ae35cd80ff24f3e7cfb",
        "kind": "PDF_VECTOR",
        "method": "PDF_VECTOR",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated drawing scale 1:100",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        2200.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        2200.0,
+        3200.0
+       ],
+       [
+        2200.0,
+        2000.0
+       ],
+       [
+        2200.0,
+        1000.0
+       ],
+       [
+        2200.0,
+        200.0
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -907,13 +3233,57 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 6.0,
+      "label": "LAUNDRY",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B08",
+       "input_sha256": "083806655133d81bec23f28f5f56055cd030a19e87f1cf508d5a75a9fb787d8c",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        2200.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        2200.0,
+        3200.0
+       ],
+       [
+        2200.0,
+        2000.0
+       ],
+       [
+        2200.0,
+        1000.0
+       ],
+       [
+        2200.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 0.585,
+      "iou": 0.9892,
+      "label_match": true
+     },
+     "flags": [],
      "iou": 0.9892,
      "label": "LAUNDRY",
      "label_conflict": false,
@@ -921,29 +3291,93 @@
      "status": "AGREE",
      "vision": {
       "area_m2": 5.964925,
+      "label": "LAUNDRY",
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B08",
+       "input_sha256": "9d6aab462f6f87462a12c9d304588fd21b31cfbf7da7f1e497b3a333ab15a637",
        "kind": "RASTER_10MM",
        "method": "RASTER_10MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 220.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        212.5,
+        192.5
+       ],
+       [
+        2197.5,
+        192.5
+       ],
+       [
+        2197.5,
+        3197.5
+       ],
+       [
+        212.5,
+        3197.5
+       ],
+       [
+        212.5,
+        192.5
+       ]
+      ],
+      "walls": null
      }
     },
     {
      "boq_area_m2": null,
      "boq_basis": null,
      "cad": null,
+     "confidence": null,
+     "flags": [
+      "NOT_IN_CAD"
+     ],
      "label": null,
      "release": "NO_BOQ_CANDIDATE_ONLY",
      "status": "VISUAL_OMISSION",
      "vision": {
       "area_m2": 4.492475,
+      "label": null,
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B08",
+       "input_sha256": "9d6aab462f6f87462a12c9d304588fd21b31cfbf7da7f1e497b3a333ab15a637",
        "kind": "RASTER_10MM",
        "method": "RASTER_10MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 220.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        2402.5,
+        192.5
+       ],
+       [
+        3897.5,
+        192.5
+       ],
+       [
+        3897.5,
+        3197.5
+       ],
+       [
+        2402.5,
+        3197.5
+       ],
+       [
+        2402.5,
+        192.5
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -958,13 +3392,60 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 6.0,
+      "label": "LAUNDRY",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B08",
+       "input_sha256": "083806655133d81bec23f28f5f56055cd030a19e87f1cf508d5a75a9fb787d8c",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        2200.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        2200.0,
+        3200.0
+       ],
+       [
+        2200.0,
+        2000.0
+       ],
+       [
+        2200.0,
+        1000.0
+       ],
+       [
+        2200.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 3.38,
+      "iou": 0.9662,
+      "label_match": null
+     },
+     "flags": [
+      "IOU_0.966_BELOW_0.98",
+      "AREA_DIFF_3.38_PCT"
+     ],
      "iou": 0.9662,
      "label": "LAUNDRY",
      "label_conflict": false,
@@ -972,29 +3453,125 @@
      "status": "REVIEW_CANDIDATE",
      "vision": {
       "area_m2": 5.797225000000001,
+      "label": null,
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B08",
+       "input_sha256": "b260a9a2ccc27c7d6f5b5fbd3b03063e5ef197a64a15096342e955e5bf1ce6fb",
        "kind": "SCAN_25MM",
        "method": "SCAN_25MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 200.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        232.5,
+        307.5
+       ],
+       [
+        257.5,
+        307.5
+       ],
+       [
+        257.5,
+        207.5
+       ],
+       [
+        2192.5,
+        207.5
+       ],
+       [
+        2192.5,
+        3167.5
+       ],
+       [
+        307.5,
+        3167.5
+       ],
+       [
+        307.5,
+        3142.5
+       ],
+       [
+        232.5,
+        3142.5
+       ],
+       [
+        232.5,
+        307.5
+       ]
+      ],
+      "walls": null
      }
     },
     {
      "boq_area_m2": null,
      "boq_basis": null,
      "cad": null,
+     "confidence": null,
+     "flags": [
+      "NOT_IN_CAD"
+     ],
      "label": null,
      "release": "NO_BOQ_CANDIDATE_ONLY",
      "status": "VISUAL_OMISSION",
      "vision": {
       "area_m2": 4.3420375,
+      "label": null,
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B08",
+       "input_sha256": "b260a9a2ccc27c7d6f5b5fbd3b03063e5ef197a64a15096342e955e5bf1ce6fb",
        "kind": "SCAN_25MM",
        "method": "SCAN_25MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 200.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        2407.5,
+        982.5
+       ],
+       [
+        2432.5,
+        982.5
+       ],
+       [
+        2432.5,
+        207.5
+       ],
+       [
+        3617.5,
+        207.5
+       ],
+       [
+        3617.5,
+        232.5
+       ],
+       [
+        3892.5,
+        232.5
+       ],
+       [
+        3892.5,
+        3167.5
+       ],
+       [
+        2432.5,
+        3167.5
+       ],
+       [
+        2407.5,
+        982.5
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -1009,13 +3586,57 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 6.0,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B09",
+       "input_sha256": "b1882e0120ec1ad97915efb2e1cbbb8d8b2ca6b2784b8ab9ad0a1c7d2dcd0682",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        2200.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        2200.0,
+        3200.0
+       ],
+       [
+        2200.0,
+        1800.0
+       ],
+       [
+        2200.0,
+        1000.0
+       ],
+       [
+        2200.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 0.0,
+      "iou": 1.0,
+      "label_match": true
+     },
+     "flags": [],
      "iou": 1.0,
      "label": "BATH",
      "label_conflict": false,
@@ -1023,12 +3644,50 @@
      "status": "AGREE",
      "vision": {
       "area_m2": 6.000000248325247,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
+       "coordinate_system": "PDF page at 1:100 -> mm",
+       "drawing": "B09",
+       "input_sha256": "8d31b3545f7ca47687e0952d91b2233bf8ced9da16b5898b2bd646a09397427f",
        "kind": "PDF_VECTOR",
        "method": "PDF_VECTOR",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated drawing scale 1:100",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        2200.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        2200.0,
+        3200.0
+       ],
+       [
+        2200.0,
+        1800.0
+       ],
+       [
+        2200.0,
+        1000.0
+       ],
+       [
+        2200.0,
+        200.0
+       ]
+      ],
+      "walls": null
      }
     },
     {
@@ -1037,13 +3696,65 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 9.0,
+      "label": "BEDROOM",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B09",
+       "input_sha256": "b1882e0120ec1ad97915efb2e1cbbb8d8b2ca6b2784b8ab9ad0a1c7d2dcd0682",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        5400.0,
+        200.0
+       ],
+       [
+        4400.0,
+        200.0
+       ],
+       [
+        3500.0,
+        200.0
+       ],
+       [
+        2400.0,
+        200.0
+       ],
+       [
+        2400.0,
+        1000.0
+       ],
+       [
+        2400.0,
+        1800.0
+       ],
+       [
+        2400.0,
+        3200.0
+       ],
+       [
+        5400.0,
+        3200.0
+       ],
+       [
+        5400.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 0.0,
+      "iou": 1.0,
+      "label_match": true
+     },
+     "flags": [],
      "iou": 1.0,
      "label": "BEDROOM",
      "label_conflict": false,
@@ -1051,12 +3762,58 @@
      "status": "AGREE",
      "vision": {
       "area_m2": 8.999999867835204,
+      "label": "BEDROOM",
+      "openings": null,
       "provenance": {
+       "coordinate_system": "PDF page at 1:100 -> mm",
+       "drawing": "B09",
+       "input_sha256": "8d31b3545f7ca47687e0952d91b2233bf8ced9da16b5898b2bd646a09397427f",
        "kind": "PDF_VECTOR",
        "method": "PDF_VECTOR",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated drawing scale 1:100",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        5400.0,
+        200.0
+       ],
+       [
+        4400.0,
+        200.0
+       ],
+       [
+        3500.0,
+        200.0
+       ],
+       [
+        2400.0,
+        200.0
+       ],
+       [
+        2400.0,
+        1000.0
+       ],
+       [
+        2400.0,
+        1800.0
+       ],
+       [
+        2400.0,
+        3200.0
+       ],
+       [
+        5400.0,
+        3200.0
+       ],
+       [
+        5400.0,
+        200.0
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -1071,13 +3828,57 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 6.0,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B09",
+       "input_sha256": "b1882e0120ec1ad97915efb2e1cbbb8d8b2ca6b2784b8ab9ad0a1c7d2dcd0682",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        2200.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        2200.0,
+        3200.0
+       ],
+       [
+        2200.0,
+        1800.0
+       ],
+       [
+        2200.0,
+        1000.0
+       ],
+       [
+        2200.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 0.749,
+      "iou": 0.9925,
+      "label_match": true
+     },
+     "flags": [],
      "iou": 0.9925,
      "label": "BATH",
      "label_conflict": false,
@@ -1085,12 +3886,42 @@
      "status": "AGREE",
      "vision": {
       "area_m2": 5.955075,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B09",
+       "input_sha256": "f5034468e586124c2a2b1269a0b38e5ccb46405bd559e836673ff3d9b6b1181a",
        "kind": "RASTER_10MM",
        "method": "RASTER_10MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 220.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        202.5,
+        202.5
+       ],
+       [
+        2197.5,
+        202.5
+       ],
+       [
+        2197.5,
+        3187.5
+       ],
+       [
+        202.5,
+        3187.5
+       ],
+       [
+        202.5,
+        202.5
+       ]
+      ],
+      "walls": null
      }
     },
     {
@@ -1099,13 +3930,65 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 9.0,
+      "label": "BEDROOM",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B09",
+       "input_sha256": "b1882e0120ec1ad97915efb2e1cbbb8d8b2ca6b2784b8ab9ad0a1c7d2dcd0682",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        5400.0,
+        200.0
+       ],
+       [
+        4400.0,
+        200.0
+       ],
+       [
+        3500.0,
+        200.0
+       ],
+       [
+        2400.0,
+        200.0
+       ],
+       [
+        2400.0,
+        1000.0
+       ],
+       [
+        2400.0,
+        1800.0
+       ],
+       [
+        2400.0,
+        3200.0
+       ],
+       [
+        5400.0,
+        3200.0
+       ],
+       [
+        5400.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 0.334,
+      "iou": 0.9917,
+      "label_match": true
+     },
+     "flags": [],
      "iou": 0.9917,
      "label": "BEDROOM",
      "label_conflict": false,
@@ -1113,12 +3996,42 @@
      "status": "AGREE",
      "vision": {
       "area_m2": 8.969925,
+      "label": "BEDROOM",
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B09",
+       "input_sha256": "f5034468e586124c2a2b1269a0b38e5ccb46405bd559e836673ff3d9b6b1181a",
        "kind": "RASTER_10MM",
        "method": "RASTER_10MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 220.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        2402.5,
+        202.5
+       ],
+       [
+        5407.5,
+        202.5
+       ],
+       [
+        5407.5,
+        3187.5
+       ],
+       [
+        2402.5,
+        3187.5
+       ],
+       [
+        2402.5,
+        202.5
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -1133,13 +4046,60 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 6.0,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B09",
+       "input_sha256": "b1882e0120ec1ad97915efb2e1cbbb8d8b2ca6b2784b8ab9ad0a1c7d2dcd0682",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        2200.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        2200.0,
+        3200.0
+       ],
+       [
+        2200.0,
+        1800.0
+       ],
+       [
+        2200.0,
+        1000.0
+       ],
+       [
+        2200.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 3.731,
+      "iou": 0.9627,
+      "label_match": null
+     },
+     "flags": [
+      "IOU_0.963_BELOW_0.98",
+      "AREA_DIFF_3.73_PCT"
+     ],
      "iou": 0.9627,
      "label": "BATH",
      "label_conflict": false,
@@ -1147,12 +4107,50 @@
      "status": "REVIEW_CANDIDATE",
      "vision": {
       "area_m2": 5.776162500000002,
+      "label": null,
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B09",
+       "input_sha256": "55a0b2ffd25cbe92a89e8d6695fb7292fb1f0ff799c6539cf4f55723bb493b8c",
        "kind": "SCAN_25MM",
        "method": "SCAN_25MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 200.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        232.5,
+        207.5
+       ],
+       [
+        2192.5,
+        207.5
+       ],
+       [
+        2192.5,
+        3142.5
+       ],
+       [
+        2117.5,
+        3142.5
+       ],
+       [
+        2117.5,
+        3167.5
+       ],
+       [
+        232.5,
+        3142.5
+       ],
+       [
+        232.5,
+        207.5
+       ]
+      ],
+      "walls": null
      }
     },
     {
@@ -1161,13 +4159,68 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 9.0,
+      "label": "BEDROOM",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B09",
+       "input_sha256": "b1882e0120ec1ad97915efb2e1cbbb8d8b2ca6b2784b8ab9ad0a1c7d2dcd0682",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        5400.0,
+        200.0
+       ],
+       [
+        4400.0,
+        200.0
+       ],
+       [
+        3500.0,
+        200.0
+       ],
+       [
+        2400.0,
+        200.0
+       ],
+       [
+        2400.0,
+        1000.0
+       ],
+       [
+        2400.0,
+        1800.0
+       ],
+       [
+        2400.0,
+        3200.0
+       ],
+       [
+        5400.0,
+        3200.0
+       ],
+       [
+        5400.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 4.139,
+      "iou": 0.9586,
+      "label_match": null
+     },
+     "flags": [
+      "IOU_0.959_BELOW_0.98",
+      "AREA_DIFF_4.14_PCT"
+     ],
      "iou": 0.9586,
      "label": "BEDROOM",
      "label_conflict": false,
@@ -1175,12 +4228,66 @@
      "status": "REVIEW_CANDIDATE",
      "vision": {
       "area_m2": 8.627475,
+      "label": null,
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B09",
+       "input_sha256": "55a0b2ffd25cbe92a89e8d6695fb7292fb1f0ff799c6539cf4f55723bb493b8c",
        "kind": "SCAN_25MM",
        "method": "SCAN_25MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 200.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        2432.5,
+        207.5
+       ],
+       [
+        5217.5,
+        207.5
+       ],
+       [
+        5217.5,
+        232.5
+       ],
+       [
+        5392.5,
+        232.5
+       ],
+       [
+        5392.5,
+        2217.5
+       ],
+       [
+        3942.5,
+        2217.5
+       ],
+       [
+        3942.5,
+        2332.5
+       ],
+       [
+        5392.5,
+        2332.5
+       ],
+       [
+        5392.5,
+        3192.5
+       ],
+       [
+        2432.5,
+        3167.5
+       ],
+       [
+        2432.5,
+        207.5
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -1195,13 +4302,185 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 13.02086245690957,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B10",
+       "input_sha256": "ccd43f816f26536886d125f94efcb558734059b0fb5d2b08afa1dfa3307a1858",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1000.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        4200.0,
+        3200.0
+       ],
+       [
+        4257.0,
+        3120.9
+       ],
+       [
+        4310.8,
+        3039.6
+       ],
+       [
+        4361.4,
+        2956.3
+       ],
+       [
+        4408.8,
+        2871.0
+       ],
+       [
+        4452.7,
+        2784.0
+       ],
+       [
+        4493.3,
+        2695.4
+       ],
+       [
+        4530.4,
+        2605.2
+       ],
+       [
+        4563.9,
+        2513.7
+       ],
+       [
+        4593.8,
+        2420.9
+       ],
+       [
+        4620.1,
+        2327.0
+       ],
+       [
+        4642.7,
+        2232.1
+       ],
+       [
+        4661.6,
+        2136.5
+       ],
+       [
+        4676.7,
+        2040.2
+       ],
+       [
+        4688.1,
+        1943.4
+       ],
+       [
+        4695.7,
+        1846.2
+       ],
+       [
+        4699.5,
+        1748.7
+       ],
+       [
+        4699.5,
+        1651.3
+       ],
+       [
+        4695.7,
+        1553.8
+       ],
+       [
+        4688.1,
+        1456.6
+       ],
+       [
+        4676.7,
+        1359.8
+       ],
+       [
+        4661.6,
+        1263.5
+       ],
+       [
+        4642.7,
+        1167.9
+       ],
+       [
+        4620.1,
+        1073.0
+       ],
+       [
+        4593.8,
+        979.1
+       ],
+       [
+        4563.9,
+        886.3
+       ],
+       [
+        4530.4,
+        794.8
+       ],
+       [
+        4493.3,
+        704.6
+       ],
+       [
+        4452.7,
+        616.0
+       ],
+       [
+        4408.8,
+        529.0
+       ],
+       [
+        4361.4,
+        443.7
+       ],
+       [
+        4310.8,
+        360.4
+       ],
+       [
+        4257.0,
+        279.1
+       ],
+       [
+        4200.0,
+        200.0
+       ],
+       [
+        1800.0,
+        200.0
+       ],
+       [
+        1000.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 0.006,
+      "iou": 0.9999,
+      "label_match": true
+     },
+     "flags": [],
      "iou": 0.9999,
      "label": "BATH",
      "label_conflict": false,
@@ -1209,12 +4488,342 @@
      "status": "AGREE",
      "vision": {
       "area_m2": 13.021678735878663,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
+       "coordinate_system": "PDF page at 1:100 -> mm",
+       "drawing": "B10",
+       "input_sha256": "d7414b255846471cfe61495e2f3f08d27ed05f49aeb5d1ba6854ca7cb0226eb5",
        "kind": "PDF_VECTOR",
        "method": "PDF_VECTOR",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated drawing scale 1:100",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1000.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        4200.0,
+        3200.0
+       ],
+       [
+        4222.5,
+        3169.5
+       ],
+       [
+        4247.9,
+        3133.9
+       ],
+       [
+        4272.6,
+        3098.0
+       ],
+       [
+        4296.7,
+        3061.6
+       ],
+       [
+        4320.1,
+        3024.8
+       ],
+       [
+        4342.9,
+        2987.6
+       ],
+       [
+        4365.1,
+        2950.0
+       ],
+       [
+        4386.5,
+        2912.0
+       ],
+       [
+        4407.4,
+        2873.7
+       ],
+       [
+        4427.5,
+        2835.0
+       ],
+       [
+        4447.0,
+        2795.9
+       ],
+       [
+        4465.8,
+        2756.5
+       ],
+       [
+        4483.9,
+        2716.8
+       ],
+       [
+        4501.3,
+        2676.8
+       ],
+       [
+        4518.0,
+        2636.5
+       ],
+       [
+        4534.0,
+        2595.9
+       ],
+       [
+        4549.2,
+        2555.1
+       ],
+       [
+        4563.8,
+        2513.9
+       ],
+       [
+        4577.6,
+        2472.5
+       ],
+       [
+        4590.8,
+        2430.9
+       ],
+       [
+        4603.2,
+        2389.1
+       ],
+       [
+        4614.8,
+        2347.0
+       ],
+       [
+        4625.7,
+        2304.8
+       ],
+       [
+        4635.9,
+        2262.4
+       ],
+       [
+        4645.4,
+        2219.8
+       ],
+       [
+        4654.1,
+        2177.0
+       ],
+       [
+        4662.0,
+        2134.1
+       ],
+       [
+        4669.2,
+        2091.1
+       ],
+       [
+        4675.7,
+        2047.9
+       ],
+       [
+        4681.4,
+        2004.7
+       ],
+       [
+        4686.3,
+        1961.3
+       ],
+       [
+        4690.5,
+        1917.9
+       ],
+       [
+        4693.9,
+        1874.4
+       ],
+       [
+        4696.6,
+        1830.8
+       ],
+       [
+        4698.5,
+        1787.2
+       ],
+       [
+        4699.6,
+        1743.6
+       ],
+       [
+        4700.0,
+        1700.0
+       ],
+       [
+        4699.6,
+        1656.4
+       ],
+       [
+        4698.5,
+        1612.8
+       ],
+       [
+        4696.6,
+        1569.2
+       ],
+       [
+        4693.9,
+        1525.6
+       ],
+       [
+        4690.5,
+        1482.1
+       ],
+       [
+        4686.3,
+        1438.7
+       ],
+       [
+        4681.4,
+        1395.3
+       ],
+       [
+        4675.7,
+        1352.1
+       ],
+       [
+        4669.2,
+        1308.9
+       ],
+       [
+        4662.0,
+        1265.9
+       ],
+       [
+        4654.1,
+        1223.0
+       ],
+       [
+        4645.4,
+        1180.2
+       ],
+       [
+        4635.9,
+        1137.6
+       ],
+       [
+        4625.7,
+        1095.2
+       ],
+       [
+        4614.8,
+        1053.0
+       ],
+       [
+        4603.2,
+        1010.9
+       ],
+       [
+        4590.8,
+        969.1
+       ],
+       [
+        4577.6,
+        927.5
+       ],
+       [
+        4563.8,
+        886.1
+       ],
+       [
+        4549.2,
+        844.9
+       ],
+       [
+        4534.0,
+        804.1
+       ],
+       [
+        4518.0,
+        763.5
+       ],
+       [
+        4501.3,
+        723.2
+       ],
+       [
+        4483.9,
+        683.2
+       ],
+       [
+        4465.8,
+        643.5
+       ],
+       [
+        4447.0,
+        604.1
+       ],
+       [
+        4427.5,
+        565.0
+       ],
+       [
+        4407.4,
+        526.3
+       ],
+       [
+        4386.5,
+        488.0
+       ],
+       [
+        4365.1,
+        450.0
+       ],
+       [
+        4342.9,
+        412.4
+       ],
+       [
+        4320.1,
+        375.2
+       ],
+       [
+        4296.7,
+        338.4
+       ],
+       [
+        4272.6,
+        302.0
+       ],
+       [
+        4247.9,
+        266.1
+       ],
+       [
+        4222.5,
+        230.5
+       ],
+       [
+        4200.0,
+        200.0
+       ],
+       [
+        1800.0,
+        200.0
+       ],
+       [
+        1000.0,
+        200.0
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -1229,13 +4838,185 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 13.02086245690957,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B10",
+       "input_sha256": "ccd43f816f26536886d125f94efcb558734059b0fb5d2b08afa1dfa3307a1858",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1000.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        4200.0,
+        3200.0
+       ],
+       [
+        4257.0,
+        3120.9
+       ],
+       [
+        4310.8,
+        3039.6
+       ],
+       [
+        4361.4,
+        2956.3
+       ],
+       [
+        4408.8,
+        2871.0
+       ],
+       [
+        4452.7,
+        2784.0
+       ],
+       [
+        4493.3,
+        2695.4
+       ],
+       [
+        4530.4,
+        2605.2
+       ],
+       [
+        4563.9,
+        2513.7
+       ],
+       [
+        4593.8,
+        2420.9
+       ],
+       [
+        4620.1,
+        2327.0
+       ],
+       [
+        4642.7,
+        2232.1
+       ],
+       [
+        4661.6,
+        2136.5
+       ],
+       [
+        4676.7,
+        2040.2
+       ],
+       [
+        4688.1,
+        1943.4
+       ],
+       [
+        4695.7,
+        1846.2
+       ],
+       [
+        4699.5,
+        1748.7
+       ],
+       [
+        4699.5,
+        1651.3
+       ],
+       [
+        4695.7,
+        1553.8
+       ],
+       [
+        4688.1,
+        1456.6
+       ],
+       [
+        4676.7,
+        1359.8
+       ],
+       [
+        4661.6,
+        1263.5
+       ],
+       [
+        4642.7,
+        1167.9
+       ],
+       [
+        4620.1,
+        1073.0
+       ],
+       [
+        4593.8,
+        979.1
+       ],
+       [
+        4563.9,
+        886.3
+       ],
+       [
+        4530.4,
+        794.8
+       ],
+       [
+        4493.3,
+        704.6
+       ],
+       [
+        4452.7,
+        616.0
+       ],
+       [
+        4408.8,
+        529.0
+       ],
+       [
+        4361.4,
+        443.7
+       ],
+       [
+        4310.8,
+        360.4
+       ],
+       [
+        4257.0,
+        279.1
+       ],
+       [
+        4200.0,
+        200.0
+       ],
+       [
+        1800.0,
+        200.0
+       ],
+       [
+        1000.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 0.566,
+      "iou": 0.9891,
+      "label_match": true
+     },
+     "flags": [],
      "iou": 0.9891,
      "label": "BATH",
      "label_conflict": false,
@@ -1243,12 +5024,342 @@
      "status": "AGREE",
      "vision": {
       "area_m2": 12.947125,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B10",
+       "input_sha256": "dc2541e7bad54b1760f3eb2e647c5c2daa8896a5262ef05f1d9fc4ac041c2e4c",
        "kind": "RASTER_10MM",
        "method": "RASTER_10MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 220.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        212.5,
+        192.5
+       ],
+       [
+        4197.5,
+        192.5
+       ],
+       [
+        4207.5,
+        222.5
+       ],
+       [
+        4227.5,
+        232.5
+       ],
+       [
+        4227.5,
+        252.5
+       ],
+       [
+        4277.5,
+        302.5
+       ],
+       [
+        4277.5,
+        322.5
+       ],
+       [
+        4337.5,
+        382.5
+       ],
+       [
+        4347.5,
+        432.5
+       ],
+       [
+        4377.5,
+        452.5
+       ],
+       [
+        4377.5,
+        472.5
+       ],
+       [
+        4387.5,
+        472.5
+       ],
+       [
+        4387.5,
+        492.5
+       ],
+       [
+        4397.5,
+        492.5
+       ],
+       [
+        4397.5,
+        512.5
+       ],
+       [
+        4407.5,
+        512.5
+       ],
+       [
+        4407.5,
+        532.5
+       ],
+       [
+        4417.5,
+        532.5
+       ],
+       [
+        4417.5,
+        552.5
+       ],
+       [
+        4427.5,
+        552.5
+       ],
+       [
+        4427.5,
+        572.5
+       ],
+       [
+        4437.5,
+        572.5
+       ],
+       [
+        4437.5,
+        592.5
+       ],
+       [
+        4447.5,
+        592.5
+       ],
+       [
+        4447.5,
+        612.5
+       ],
+       [
+        4457.5,
+        612.5
+       ],
+       [
+        4457.5,
+        632.5
+       ],
+       [
+        4467.5,
+        632.5
+       ],
+       [
+        4467.5,
+        652.5
+       ],
+       [
+        4477.5,
+        652.5
+       ],
+       [
+        4477.5,
+        672.5
+       ],
+       [
+        4497.5,
+        692.5
+       ],
+       [
+        4507.5,
+        752.5
+       ],
+       [
+        4527.5,
+        772.5
+       ],
+       [
+        4537.5,
+        832.5
+       ],
+       [
+        4547.5,
+        832.5
+       ],
+       [
+        4567.5,
+        912.5
+       ],
+       [
+        4587.5,
+        932.5
+       ],
+       [
+        4587.5,
+        972.5
+       ],
+       [
+        4597.5,
+        972.5
+       ],
+       [
+        4597.5,
+        1012.5
+       ],
+       [
+        4607.5,
+        1012.5
+       ],
+       [
+        4607.5,
+        1052.5
+       ],
+       [
+        4617.5,
+        1052.5
+       ],
+       [
+        4617.5,
+        1092.5
+       ],
+       [
+        4627.5,
+        1092.5
+       ],
+       [
+        4627.5,
+        2307.5
+       ],
+       [
+        4617.5,
+        2307.5
+       ],
+       [
+        4587.5,
+        2467.5
+       ],
+       [
+        4567.5,
+        2487.5
+       ],
+       [
+        4567.5,
+        2517.5
+       ],
+       [
+        4557.5,
+        2517.5
+       ],
+       [
+        4557.5,
+        2547.5
+       ],
+       [
+        4537.5,
+        2567.5
+       ],
+       [
+        4527.5,
+        2627.5
+       ],
+       [
+        4507.5,
+        2647.5
+       ],
+       [
+        4497.5,
+        2707.5
+       ],
+       [
+        4487.5,
+        2707.5
+       ],
+       [
+        4487.5,
+        2727.5
+       ],
+       [
+        4477.5,
+        2727.5
+       ],
+       [
+        4477.5,
+        2747.5
+       ],
+       [
+        4467.5,
+        2747.5
+       ],
+       [
+        4467.5,
+        2767.5
+       ],
+       [
+        4457.5,
+        2767.5
+       ],
+       [
+        4457.5,
+        2787.5
+       ],
+       [
+        4447.5,
+        2787.5
+       ],
+       [
+        4447.5,
+        2807.5
+       ],
+       [
+        4437.5,
+        2807.5
+       ],
+       [
+        4397.5,
+        2907.5
+       ],
+       [
+        4367.5,
+        2927.5
+       ],
+       [
+        4337.5,
+        3017.5
+       ],
+       [
+        4307.5,
+        3037.5
+       ],
+       [
+        4307.5,
+        3057.5
+       ],
+       [
+        4277.5,
+        3077.5
+       ],
+       [
+        4257.5,
+        3127.5
+       ],
+       [
+        4227.5,
+        3147.5
+       ],
+       [
+        4217.5,
+        3187.5
+       ],
+       [
+        4207.5,
+        3197.5
+       ],
+       [
+        212.5,
+        3197.5
+       ],
+       [
+        212.5,
+        192.5
+       ]
+      ],
+      "walls": null
      }
     }
    ],
@@ -1263,13 +5374,188 @@
      "boq_basis": "CAD",
      "cad": {
       "area_m2": 13.02086245690957,
+      "label": "BATH",
+      "openings": null,
       "provenance": {
-       "kind": "CAD",
+       "coordinate_system": "DXF model space (WCS), mm ($INSUNITS)",
+       "drawing": "B10",
+       "input_sha256": "ccd43f816f26536886d125f94efcb558734059b0fb5d2b08afa1dfa3307a1858",
+       "kind": "CAD_DXF",
        "method": "REF_DXF",
        "reader": "ref_reader",
+       "revision": "synthetic",
+       "scale_evidence": "$INSUNITS",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        1000.0,
+        200.0
+       ],
+       [
+        200.0,
+        200.0
+       ],
+       [
+        200.0,
+        3200.0
+       ],
+       [
+        4200.0,
+        3200.0
+       ],
+       [
+        4257.0,
+        3120.9
+       ],
+       [
+        4310.8,
+        3039.6
+       ],
+       [
+        4361.4,
+        2956.3
+       ],
+       [
+        4408.8,
+        2871.0
+       ],
+       [
+        4452.7,
+        2784.0
+       ],
+       [
+        4493.3,
+        2695.4
+       ],
+       [
+        4530.4,
+        2605.2
+       ],
+       [
+        4563.9,
+        2513.7
+       ],
+       [
+        4593.8,
+        2420.9
+       ],
+       [
+        4620.1,
+        2327.0
+       ],
+       [
+        4642.7,
+        2232.1
+       ],
+       [
+        4661.6,
+        2136.5
+       ],
+       [
+        4676.7,
+        2040.2
+       ],
+       [
+        4688.1,
+        1943.4
+       ],
+       [
+        4695.7,
+        1846.2
+       ],
+       [
+        4699.5,
+        1748.7
+       ],
+       [
+        4699.5,
+        1651.3
+       ],
+       [
+        4695.7,
+        1553.8
+       ],
+       [
+        4688.1,
+        1456.6
+       ],
+       [
+        4676.7,
+        1359.8
+       ],
+       [
+        4661.6,
+        1263.5
+       ],
+       [
+        4642.7,
+        1167.9
+       ],
+       [
+        4620.1,
+        1073.0
+       ],
+       [
+        4593.8,
+        979.1
+       ],
+       [
+        4563.9,
+        886.3
+       ],
+       [
+        4530.4,
+        794.8
+       ],
+       [
+        4493.3,
+        704.6
+       ],
+       [
+        4452.7,
+        616.0
+       ],
+       [
+        4408.8,
+        529.0
+       ],
+       [
+        4361.4,
+        443.7
+       ],
+       [
+        4310.8,
+        360.4
+       ],
+       [
+        4257.0,
+        279.1
+       ],
+       [
+        4200.0,
+        200.0
+       ],
+       [
+        1800.0,
+        200.0
+       ],
+       [
+        1000.0,
+        200.0
+       ]
+      ],
+      "walls": null
      },
+     "confidence": {
+      "area_diff_pct": 2.279,
+      "iou": 0.9746,
+      "label_match": null
+     },
+     "flags": [
+      "IOU_0.975_BELOW_0.98",
+      "AREA_DIFF_2.28_PCT"
+     ],
      "iou": 0.9746,
      "label": "BATH",
      "label_conflict": false,
@@ -1277,12 +5563,182 @@
      "status": "REVIEW_CANDIDATE",
      "vision": {
       "area_m2": 12.724099999999996,
+      "label": null,
+      "openings": null,
       "provenance": {
+       "coordinate_system": "pixel -> mm by the stated scale (x0, y1, mm / px)",
+       "drawing": "B10",
+       "input_sha256": "749d906d1b11f4a78cc191ca6d2be0aee5c59f2e36d767bdc3ede655db04e88e",
        "kind": "SCAN_25MM",
        "method": "SCAN_25MM",
        "reader": "vision",
+       "revision": "synthetic",
+       "scale_evidence": "stated mm / px; wall-thickness check 200.0 mm",
        "version": "1"
-      }
+      },
+      "vertices_mm": [
+       [
+        232.5,
+        332.5
+       ],
+       [
+        257.5,
+        332.5
+       ],
+       [
+        257.5,
+        207.5
+       ],
+       [
+        557.5,
+        207.5
+       ],
+       [
+        557.5,
+        182.5
+       ],
+       [
+        4217.5,
+        232.5
+       ],
+       [
+        4267.5,
+        282.5
+       ],
+       [
+        4267.5,
+        332.5
+       ],
+       [
+        4317.5,
+        357.5
+       ],
+       [
+        4317.5,
+        407.5
+       ],
+       [
+        4367.5,
+        407.5
+       ],
+       [
+        4392.5,
+        532.5
+       ],
+       [
+        4442.5,
+        557.5
+       ],
+       [
+        4442.5,
+        632.5
+       ],
+       [
+        4467.5,
+        632.5
+       ],
+       [
+        4467.5,
+        682.5
+       ],
+       [
+        4517.5,
+        732.5
+       ],
+       [
+        4567.5,
+        957.5
+       ],
+       [
+        4617.5,
+        982.5
+       ],
+       [
+        4617.5,
+        2342.5
+       ],
+       [
+        4592.5,
+        2342.5
+       ],
+       [
+        4567.5,
+        2542.5
+       ],
+       [
+        4517.5,
+        2567.5
+       ],
+       [
+        4517.5,
+        2642.5
+       ],
+       [
+        4492.5,
+        2642.5
+       ],
+       [
+        4492.5,
+        2742.5
+       ],
+       [
+        4417.5,
+        2817.5
+       ],
+       [
+        4417.5,
+        2892.5
+       ],
+       [
+        4367.5,
+        2917.5
+       ],
+       [
+        4367.5,
+        2967.5
+       ],
+       [
+        4317.5,
+        2967.5
+       ],
+       [
+        4317.5,
+        3042.5
+       ],
+       [
+        4267.5,
+        3042.5
+       ],
+       [
+        4267.5,
+        3117.5
+       ],
+       [
+        4217.5,
+        3117.5
+       ],
+       [
+        4217.5,
+        3192.5
+       ],
+       [
+        507.5,
+        3167.5
+       ],
+       [
+        507.5,
+        3142.5
+       ],
+       [
+        232.5,
+        3142.5
+       ],
+       [
+        232.5,
+        332.5
+       ]
+      ],
+      "walls": null
      }
     }
    ],

@@ -168,6 +168,7 @@ def test_a_strict_door_is_the_same_in_both_methods(runs):
         r = runs[("strict", m)]
         assert r["door"]["kind"] == "DOOR" and "door_fit_review" not in r["door"]
         assert [x["measured_net"] for x in _code(r, "DOOR.EXTERNAL.ALUMINIUM")] == ["1"]
+        assert [x["evidence_state"] for x in _code(r, "FIN.WP.DOORWAY")] == ["SOURCE_DERIVED"]
 
 
 @pytest.mark.parametrize("name,why", [("hinge_035", "hinge 0.350 m from the jamb (strict 0.30 m)"),
@@ -181,8 +182,10 @@ def test_a_review_fit_makes_a_held_door(runs, name, why):
     assert any(f["code"] == "DOOR_SYMBOL_FIT_REVIEW" for f in new["doors"]["findings"])
     assert not _code(new, "DOOR.EXTERNAL.ALUMINIUM") and not _code(new, "DOOR.INTERNAL.PVC")
     w = new["door"]["width_m"]
-    # the doorway pieces exist now: door width x wall thickness 0.20 m (the band opening is measured)
-    assert [round(float(x["measured_net"]), 6) for x in _code(new, "FIN.WP.DOORWAY")] == [round(w * 0.2, 6)]
+    # the doorway piece exists now: door width x wall thickness 0.20 m - PROVISIONAL while the door is held
+    wp = _code(new, "FIN.WP.DOORWAY")
+    assert [round(float(x["measured_net"]), 6) for x in wp] == [round(w * 0.2, 6)]
+    assert [x["evidence_state"] for x in wp] == ["PROVISIONAL"] and "DOOR_SYMBOL_FIT_REVIEW" in wp[0]["notes"]
     assert not _code(old, "FIN.WP.DOORWAY")
     thr = _code(new, "FIN.MARBLE.THRESHOLD")
     assert [x["evidence_state"] for x in thr] == ["PROVISIONAL"]

@@ -85,4 +85,4 @@ Synthetic plans with hand-derived truth (tests/m9_p2b5_bench/bench_cases.py). Se
 
 CAD MCP servers: U-C4N/Autocad-MCP: NOT_AVAILABLE: not connected in this session; beiming183-cloud/AutoCAD-MCP: NOT_AVAILABLE: not connected in this session; christiannp/autocad: NOT_AVAILABLE: repository inaccessible (earlier audit)
 
-Runtime per case (s, indicative, varies by machine): NATIVE_AUTO median 1.10; NATIVE_DECLARED median 1.13; REF_DXF median 0.01; RASTER_10MM median 0.58; SCAN_25MM median 0.24; PDF_VECTOR median 0.01
+Runtime per case (s, indicative, varies by machine): NATIVE_AUTO median 1.09; NATIVE_DECLARED median 1.10; REF_DXF median 0.01; RASTER_10MM median 0.67; SCAN_25MM median 0.24; PDF_VECTOR median 0.01
