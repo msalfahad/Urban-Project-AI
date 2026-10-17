@@ -22,7 +22,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1257 | pytest suites, one folder per round. |
+| `tests/` | 1258 | pytest suites, one folder per round. |
 | `tools/` | 92 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -650,7 +650,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `a18_review_package.py` | 378 | MEDIUM | 0 | Package a frozen blind run for external review. Packaging only. |
 | `a18_zone_register.py` | 127 | MEDIUM | 0 | The visual zone register, transcribed from a frozen pass, and drawn. |
 | `align_sanitary.py` | 205 | MEDIUM | 0 | Register the sanitary set, align it to the plan, and ask the pantry. |
-| `arch_change_verify.py` | 583 | MEDIUM | 0 | BOQ CHANGE ATTRIBUTION WITH INDEPENDENT VERIFICATION (Phase 2B-8) - every BOQ total that differs between two runs of |
+| `arch_change_verify.py` | 669 | MEDIUM | 0 | BOQ CHANGE ATTRIBUTION WITH INDEPENDENT VERIFICATION (Phase 2B-8) - every BOQ total that differs between two runs of |
 | `arch_dimensions.py` | 70 | MEDIUM | 2 | ARCH DIMENSIONS (M9 Phase 2A P2-09a) - the DIMENSION entities of a plan DXF as plain records for the read-only |
 | `arch_discovery.py` | 265 | MEDIUM | 5 | ARCHITECTURAL DRAWING DISCOVERY (M9 S6) - the ezdxf side of engine.source.discovery: a source census of the whole |
 | `arch_intake.py` | 328 | MEDIUM | 7 | ARCH INTAKE (M9 S2 / S3) - the architectural route's extra readings of a DXF, next to tools/urban_intake.py |
@@ -683,7 +683,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `freeze_verify.py` | 676 | MEDIUM | 2 | Freeze integrity verifier (P2-00 Stage 1). Stdlib only. It never writes into the repository: every rebuild runs in a |
 | `graph_diagnostic.py` | 187 | MEDIUM | 1 | The first authoritative full-sheet wall-graph run on the real drawing. |
 | `grid.py` | 132 | MEDIUM | 0 | Design and render an Instagram grid (A16 grid mode + social/render). |
-| `indep_reader.py` | 583 | MEDIUM | 0 | INDEPENDENT DRAWING READER (Phase 2B-8) - a second reading of a DXF plan with ezdxf, shapely and arithmetic only: |
+| `indep_reader.py` | 719 | MEDIUM | 0 | INDEPENDENT DRAWING READER (Phase 2B-8) - a second reading of a DXF plan with ezdxf, shapely and arithmetic only: |
 | `kb_build.py` | 761 | MEDIUM | 0 | KNOWLEDGE REGISTRY BUILDER (M9 Phase 2B-1) - the one place the engineering knowledge registry is written from: |
 | `kb_build_1_1.py` | 502 | MEDIUM | 0 | KNOWLEDGE REGISTRY 1.1.0 BUILDER (M9 Phase 2B-2) - knowledge/URBAN_ENGINEERING_KNOWLEDGE_1.1.0.json is the frozen |
 | `kb_build_1_2.py` | 194 | MEDIUM | 0 | KNOWLEDGE REGISTRY 1.2.0 BUILDER (M9 Phase 2B-7) - knowledge/URBAN_ENGINEERING_KNOWLEDGE_1.2.0.json is the frozen |
@@ -841,7 +841,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/m8_full_scope/` | 2 |
 | `tests/m9_foundation/` | 8 |
 | `tests/m9_kb/` | 7 |
-| `tests/m9_n10/` | 1 |
+| `tests/m9_n10/` | 2 |
 | `tests/m9_p2a/` | 6 |
 | `tests/m9_p2b0/` | 6 |
 | `tests/m9_p2b2/` | 5 |

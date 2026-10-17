@@ -30,6 +30,8 @@ the locations its drawn entities touch):
     DOOR_OPENING, DOOR_FRAME, CURVED_WALL_BAND, WET_EVIDENCE, ARC_POLYGON, SLIVER_MERGE   as tools/arch_v27_explain
     REVIEW_INVARIANT_RELEASE    its room, its released item only
     WALL_STUB / WINDOW_SKIRTING (Phase 2B-9) the floor's walls, ARCH.WALL_RUN only / its room, FIN.SKIRTING only
+    CURVED_OPENING (Phase N10)  its rooms, the opening and every strip line of it; CURVED_GLAZING_LAYER the rooms within
+                                0.35 m of the layer's entities and their openings
     PROVENANCE                  nothing
 Independent checks (heights from the facts file, a stated project input; widths and lengths from the drawing):
     INDEPENDENT_FACE            FIN.CEILING, FIN.FLOOR.*, FIN.WP.FLOOR, ARCH.SPACE: the face area at the room
@@ -49,8 +51,17 @@ Independent checks (heights from the facts file, a stated project input; widths 
                                 CURVED_WALL_BAND)
     INDEPENDENT_FIXTURE_CENSUS  under WET_EVIDENCE: the fixture inserts and loose sanitary-layer pieces inside the
                                 face equal the evidence the record states (it verifies the evidence, not the rule)
+    INDEPENDENT_OPENING_COUNT   ARCH.WINDOW at a room under CURVED_OPENING (Phase N10): the windows on the reader's
+                                face of the room (straight window symbols and glazed curved gaps)
+    Under CURVED_OPENING the reader closes every jambed curved gap on both faces and reads a glazed one on a face as a
+    window of that face's arc (indep_reader curved_closures); INDEPENDENT_TAKEOFF then uses that width, and
+    FIN.SKIRTING skips every gap of the face when no window of the room has an established sill.
 The seed of a face is a point inside the run's room polygon: it selects which independent face; the face's area,
-perimeter and openings come from the raw drawing only."""
+perimeter and openings come from the raw drawing only. A room the run joined through clear passages (attached cells)
+is the union of the reader's own faces inside its polygon, only when that union is one polygon of the room's area
+(Phase N10); otherwise no wall-face check applies to it. A space the wall lines leave open but the run closes with a
+drawn zone line (DRAWN_LINE_ZONES) is read with that line, taken again from the drawing by its own handle, the same
+way (Phase N10, D-P9-04): the boundary is then the run's zone-line decision, the area and lengths the reader's own."""
 
 from __future__ import annotations
 
@@ -171,7 +182,9 @@ class Verifier:
     @property
     def D(self):
         if self._D is None:
-            self._D = IR.Drawing(self.dxf, roles=self.roles)
+            # Phase N10: the reader closes curved gaps only when the after run carries a curved opening record
+            curved = any(c["correction"] == "CURVED_OPENING" for c in self.a.corrections)
+            self._D = IR.Drawing(self.dxf, roles=self.roles, **({"curved_closures": True} if curved else {}))
         return self._D
 
     # ------------------------------------------------------------------------------------------ locations
@@ -289,6 +302,18 @@ class Verifier:
             locs = {self.canon(sub)}
         elif kind == "REVIEW_INVARIANT_RELEASE":
             locs, items = {self.canon(sub)}, {det.get("item_code")}
+        elif kind == "CURVED_OPENING":
+            locs = {self.canon(x) for x in det.get("rooms") or ()} | self._op_keys(fl, sub)
+            locs |= {(ln.get("location") or {}).get("room_id") for r in (self.a, self.b) for ln in r.lines
+                     if sub in str((ln.get("location") or {}).get("room_id") or "") and
+                     (ln.get("location") or {}).get("floor") == fl}
+        elif kind == "CURVED_GLAZING_LAYER":
+            rooms, ops = set(), set()
+            for (f2, lay), role in self.a.roles.items():
+                if f2 == fl and role == IR.WINDOW and self.b.roles.get((f2, lay)) != IR.WINDOW:
+                    r_, o_ = self._near(fl, self._layer_geoms(layer=lay))
+                    rooms, ops = rooms | r_, ops | o_
+            locs = rooms | ops | self._room_openings(fl, rooms)
         return {"floor": fl, "locations": locs, "items": items}
 
     # ------------------------------------------------------------------------------------------ checks
@@ -303,6 +328,14 @@ class Verifier:
         p = _polygon(rm) if rm else None
         if p is None:
             return None, "NO_ROOM_POLYGON"
+        if rm.get("attached_cells"):
+            # Phase N10: the run joined cells through clear passages into one room; the reader's face is then the
+            # union of its own faces lying inside the room (it must close as one polygon of the room's area)
+            from shapely.ops import unary_union
+            u = unary_union(self.D.faces_within(p))
+            if u.is_empty or u.geom_type != "Polygon" or abs(u.area - p.area) > max(0.05, 0.01 * p.area):
+                return None, "ROOM_JOINS_CELLS_THROUGH_A_PASSAGE (the reader's faces inside it do not make the room)"
+            return self.D.face_of(u), None
         f = self.D.face_at(p.representative_point().coords[0])
         if f is None:
             return None, "NO_CLOSED_INDEPENDENT_FACE"
@@ -312,8 +345,45 @@ class Verifier:
         # a face a little larger (two rooms merged, a missed closure) stays a disagreement
         if f["area_m2"] > max(UNCLOSED_FACTOR * p.area, p.area + UNCLOSED_EXTRA_M2) and \
                 f["polygon"].intersection(p).area >= 0.5 * p.area:
+            zf = self._zone_face(rm, p)
+            if zf is not None:
+                return zf, None
             return None, "NOT_CLOSED_BY_WALL_LINES (the space is bounded by a line of a non-wall layer)"
         return f, None
+
+    def _zone_face(self, rm, p):
+        """Phase N10 (D-P9-04): the drawn zone lines the run closes its spaces with on this floor (DRAWN_LINE_ZONES),
+        read again from the drawing by their own handles; the space is the reader's face at its seed, or the union of
+        the reader's faces inside it, when that closes as one polygon of the space's area (the reader's own gap rule
+        can split a recess off). None when no such line or no such face."""
+        from shapely.geometry import Point
+        from shapely.ops import unary_union
+        fl = rm.get("floor")
+        handles = set()
+        for r in (self.a, self.b):
+            for x in r.rooms.values():
+                if x.get("floor") != fl:
+                    continue
+                for ln in ((x.get("zone") or {}).get("lines") or ()):
+                    src = str(ln.get("source") or "").split(":")
+                    if len(src) >= 2 and src[1].isdigit():
+                        handles.add(format(int(src[1]), "X"))
+        if not handles:
+            return None
+        faces, used = self.D.faces_closed_by(sorted(handles))
+        if not used:
+            return None
+        tol = max(0.05, 0.01 * p.area)
+        seed = [g for g in faces if g.contains(Point(p.representative_point()))]
+        cand = min(seed, key=lambda g: g.area) if seed else None
+        if cand is None or abs(cand.area - p.area) > tol:
+            u = unary_union([g for g in self.D.faces_within(p, faces=faces) if g.area > 1e-3])
+            cand = u if (not u.is_empty and u.geom_type == "Polygon" and abs(u.area - p.area) <= tol) else None
+        if cand is None:
+            return None
+        f = self.D.face_of(cand)
+        f["zone_lines"] = sorted(x["handle"] for x in used)
+        return f
 
     def _face(self, key):
         return self._face_of(self.room(key))
@@ -341,6 +411,15 @@ class Verifier:
                         "evidence": {"door_m": round(w, 6), "wall_t_m": t, "door_h_m": hd,
                                      "formula": "2 x t x H_door + w x t"}}, None
             return None, "NO_INDEPENDENT_CHECK_FOR_THIS_ITEM"
+        if item == "ARCH.WINDOW" and "CURVED_OPENING" in kinds:
+            f, why = self._face(key)
+            if f is None:
+                return None, why
+            ops, _free = self.D.openings_on(f)
+            wins = [o for o in ops if o["kind"] == "WINDOW"]
+            return {"value": float(len(wins)), "method": "INDEPENDENT_OPENING_COUNT",
+                    "evidence": {"windows_on_face": [{"width_m": round(o["width_m"], 6),
+                                                      "curved_face": o.get("curved_face")} for o in wins]}}, None
         area_item = item in AREA_ITEMS or item.startswith("FIN.FLOOR.")
         wall_item = item in ("FIN.PLASTER", "FIN.PAINT", "FIN.WALL.TILE", "FIN.SKIRTING", "FIN.WP.DOORWAY")
         if not (area_item or wall_item):
@@ -355,6 +434,12 @@ class Verifier:
                 return None, "VOID_OR_OBSTRUCTION_NOT_READ_INDEPENDENTLY"
             return {"value": f["area_m2"],
                     "evidence": {"face_area_m2": round(f["area_m2"], 6), "holes": f["holes"]}}, None
+        if item == "FIN.SKIRTING" and "CURVED_OPENING" in kinds:
+            # Phase N10: the room's windows (straight and curved) with an established sill, from the after run
+            win_classes = set(win_classes) | {(o.get("v28") or {}).get("class") for o in self.a.openings
+                                              if o["floor"] == floor and o.get("kind") == "WINDOW" and
+                                              key in {self.canon(x) for x in o.get("rooms") or ()}}
+            kinds = tuple(kinds) + ("WINDOW_SKIRTING",)
         if item == "FIN.SKIRTING" and "WINDOW_SKIRTING" in kinds and "WINDOW" not in win_classes:
             # Phase 2B-9: no window's sill is established, so the certain skirting skips every gap of the face - a
             # door, a passage (a gap without a symbol) and a window alike are not certainly skirted; a hole of the
@@ -519,8 +604,9 @@ class Verifier:
                 if res is None:
                     checks.append({"method": "INDEPENDENT_TAKEOFF", "agrees": None, "reason": why})
                 else:
-                    meth = "INDEPENDENT_FACE" if (item in AREA_ITEMS or item.startswith("FIN.FLOOR.")) else \
-                        "INDEPENDENT_TAKEOFF"
+                    meth = res.get("method") or ("INDEPENDENT_FACE" if (item in AREA_ITEMS or
+                                                                        item.startswith("FIN.FLOOR.")) else
+                                                 "INDEPENDENT_TAKEOFF")
                     v = round(res["value"], 6)
                     checks.append({"method": meth, "independent": v, "after": row["after"], "tolerance": _tol(v),
                                    "agrees": abs(v - row["after"]) <= _tol(v), "evidence": res["evidence"]})

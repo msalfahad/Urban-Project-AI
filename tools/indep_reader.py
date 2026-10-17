@@ -23,6 +23,14 @@ no engine module is imported, no engine output is read. tools/arch_change_verify
                                       over 0.30 m in total is a band; one overlapping 0.05 - 0.30 m, with no wall
                                       line between the faces and a wall line across at least one end, at a band
                                       thickness, is a short return / nib (Phase 2B-9)
+    D.curved_gaps()                   (Phase N10) the jambed gaps of the curved wall bands: concentric wall-layer arcs
+                                      at a wall thickness whose faces both stop over one span (the outer face within
+                                      CURVED_SPLAY_M of the inner face's ends along its arc), a wall line joining each
+                                      pair of face ends (CURVED_JAMB_M); the glazing inside (window-role arcs strictly
+                                      between the faces): each face's arc length, the glazing's share of the gap
+    Drawing(..., curved_closures=True) faces() also closes every jambed curved gap on both faces with the faces' own
+                                      arcs, and openings_on() lists a glazed curved gap on a face boundary as a window
+                                      of that face's arc length (off by default: the earlier readings are unchanged)
     D.fixture_census(polygon)         the inserts inside a polygon by block-name word (basin / water closet / shower
                                       or bath) and the loose sanitary-layer pieces (not a fixture block's own lines)
 Layer roles: given ({layer: role}) or read from the layer name: WALL, COL -> COLUMN, GLAZ / WIN -> WINDOW, DOOR.
@@ -56,6 +64,9 @@ STUB_MIN_M = 0.05                          # a both-faces stretch shorter than t
 FLAT_M = 0.005                             # curve flattening step
 GRID_M = 1e-6                              # noding: snap rounding on this grid
 SAG_M = 1e-5                               # curve flattening: largest chord-to-curve distance
+CURVED_SPLAY_M = 0.03                      # a curved gap: the outer face stops within this of the inner face's ends
+CURVED_JAMB_M = 0.01                       # a jamb line joins two face ends within this
+CURVED_MAX_SWEEP = math.pi                 # a curved opening sweeps at most half a turn
 FIXTURE_WORDS = {"basins": ("WASH", "BASIN", "SINK", "LAV", "VANITY"),
                  "water_closets": ("WC", "W.C", "TOILET", "CLOSET"),
                  "showers_baths": ("SHOWER", "BATH", "TUB", "JACUZZI")}
@@ -114,7 +125,7 @@ def _overlap_mid(s1, w1, s2, w2):
 
 
 class Drawing:
-    def __init__(self, path, roles=None, unit_m=None):
+    def __init__(self, path, roles=None, unit_m=None, curved_closures=False):
         self.doc = ezdxf.readfile(str(path))
         k = unit_m if unit_m else UNITS_M.get(self.doc.header.get("$INSUNITS", 0))
         if not k:
@@ -126,6 +137,8 @@ class Drawing:
         self._inserts = []
         self._walk(self.doc.modelspace(), Matrix44(), None, ())
         self._faces = None
+        self._curved_closures = curved_closures
+        self._curved = None
 
     # ----------------------------------------------------------------------------------------- reading
     def role(self, layer):
@@ -302,6 +315,10 @@ class Drawing:
         if self._faces is None:
             segs = self._segments((WALL, COLUMN))
             self._closure_lines = self._closures(segs)
+            if self._curved_closures:                         # Phase N10: both faces of every jambed curved gap
+                for g in self.curved_gaps():
+                    for pts in (g["inner_pts"], g["outer_pts"]):
+                        self._closure_lines += list(zip(pts, pts[1:]))
             # noded together by snap rounding on a GRID_M grid: a line ending on another (a T-junction after a
             # rotation, an arc's computed end) meets it; nothing is extended or moved by more than the grid
             geo = [LineString([a, b]) for a, b, _s in segs] + [LineString([a, b]) for a, b in self._closure_lines]
@@ -315,7 +332,27 @@ class Drawing:
         hit = [f for f in self.faces() if f.contains(pt)]
         if not hit:
             return None
-        f = min(hit, key=lambda x: x.area)
+        return self.face_of(min(hit, key=lambda x: x.area))
+
+    def faces_closed_by(self, handles):
+        """the faces with the drawn pieces of the given handles (hex, as the DXF writes them) added as boundaries:
+        a space the run bounds by a drawn line on a non-wall layer (a zone line; Phase N10). -> (faces, pieces used)."""
+        want = {h.upper() for h in handles}
+        extra = [p for p in self._pieces if p["handle"].upper() in want and len(p["pts"]) >= 2]
+        self.faces()
+        geo = [LineString([a, b]) for a, b, _s in self._segments((WALL, COLUMN))] + \
+            [LineString([a, b]) for a, b in self._closure_lines] + [LineString(p["pts"]) for p in extra]
+        return list(polygonize(shapely.unary_union(geo, grid_size=GRID_M))), extra
+
+    def faces_within(self, polygon, pad=0.01, faces=None):
+        """the faces whose interior point lies inside polygon (buffered by pad): the cells of a room the run joined
+        through clear passages (Phase N10)."""
+        g = polygon.buffer(pad)
+        return [f for f in (self.faces() if faces is None else faces) if g.contains(f.representative_point())]
+
+    def face_of(self, f):
+        """the face record of one polygon of the reader's own faces (or a union of them)."""
+        self.faces()
         clos = f.boundary.intersection(self._closure_union.buffer(1e-6)) if self._closure_union is not None else None
         return {"polygon": f, "area_m2": f.area, "perimeter_m": f.exterior.length,
                 "holes": len(f.interiors), "holes_perimeter_m": sum(r.length for r in f.interiors),
@@ -411,6 +448,18 @@ class Drawing:
             if on.length >= 0.9 * o["width_m"]:
                 found.append(o)
                 cover.append(band)
+        if self._curved_closures:
+            # Phase N10: a glazed curved gap whose inner or outer face arc lies on the boundary is a window of that
+            # arc's length (a gap with no glazing stays a gap without a symbol)
+            for g in self.curved_gaps():
+                if g["glazing_share"] < 0.5:
+                    continue
+                for side in ("inner", "outer"):
+                    arc = LineString(g[side + "_pts"])
+                    if bd.intersection(arc.buffer(1e-4)).length >= 0.9 * arc.length:
+                        found.append({"kind": "WINDOW", "width_m": g[side + "_lm"], "curved_face": side,
+                                      "handles": g["handles"]})
+                        cover.append(arc.buffer(1e-4))
         clos = face["closure_geom"]
         free = 0.0
         if clos is not None and not clos.is_empty:
@@ -427,6 +476,93 @@ class Drawing:
         return best[1] if best else None
 
     # ----------------------------------------------------------------------------------------- census
+    def curved_gaps(self):
+        """-> [{"centre", "r_inner_m", "r_outer_m", "inner": (start, sweep), "outer": (start, sweep), "inner_lm",
+        "outer_lm", "inner_pts", "outer_pts", "glazing_share", "glazing_radii_m", "jambs", "handles"}] (see the module
+        docstring); world metres, angles CCW from +x."""
+        if self._curved is not None:
+            return self._curved
+        tw = 2 * math.pi
+        walls = [a for a in self._arcs if self.role(a["layer"]) == WALL]
+        glaz = [a for a in self._arcs if self.role(a["layer"]) == WINDOW]
+        ends = [(p["pts"][0], p["pts"][-1], p["handle"]) for p in self.pieces(WALL) if p["straight"]]
+        groups = []                                       # [centre, {radius: [arcs]}]
+        for a in walls:
+            g = next((g for g in groups if math.dist(g[0], a["centre"]) <= 0.01), None)
+            if g is None:
+                g = [a["centre"], {}]
+                groups.append(g)
+            rk = next((r for r in g[1] if abs(r - a["r"]) <= 0.001), a["r"])
+            g[1].setdefault(rk, []).append(a)
+
+        def open_spans(arcs):
+            """the angular spans of the circle no arc of this face covers: (start, sweep)."""
+            iv = sorted(((a["start"] % tw, a["sweep"]) for a in arcs))
+            cov = []
+            for st, sw in iv:
+                if cov and st <= cov[-1][1] + 1e-9:
+                    cov[-1][1] = max(cov[-1][1], st + sw)
+                else:
+                    cov.append([st, st + sw])
+            while len(cov) > 1 and cov[-1][1] - tw >= cov[0][0] - 1e-9:     # wrap through 2 pi
+                last = cov.pop()
+                cov[0] = [last[0] - tw, max(cov[0][1], last[1] - tw)]
+            if any(b - a >= tw - 1e-9 for a, b in cov):
+                return []
+            return [(cov[i][1], (cov[(i + 1) % len(cov)][0] + (tw if i == len(cov) - 1 else 0)) - cov[i][1])
+                    for i in range(len(cov))]
+
+        def pt(c, r, t):
+            return (c[0] + r * math.cos(t), c[1] + r * math.sin(t))
+
+        def dang(a, b):
+            return abs((a - b + math.pi) % tw - math.pi)
+
+        out = []
+        for c, by_r in groups:
+            radii = sorted(by_r)
+            for i, r1 in enumerate(radii):
+                for r2 in radii[i + 1:]:
+                    if not 0.08 <= r2 - r1 <= 0.45 or any(r1 < r < r2 for r in radii):
+                        continue
+                    for st, sw in open_spans(by_r[r1]):
+                        if sw > CURVED_MAX_SWEEP:
+                            continue
+                        mo = [(s2, w2) for s2, w2 in open_spans(by_r[r2])
+                              if dang(s2, st) * r2 <= CURVED_SPLAY_M and dang(s2 + w2, st + sw) * r2 <= CURVED_SPLAY_M]
+                        if not mo:
+                            continue
+                        s2, w2 = mo[0]
+                        s2 = st + ((s2 - st + math.pi) % tw - math.pi)
+                        jambs = []
+                        for t1, t2 in ((st, s2), (st + sw, s2 + w2)):
+                            p1, p2 = pt(c, r1, t1), pt(c, r2, t2)
+                            hit = [h for a, b, h in ends if (math.dist(a, p1) <= CURVED_JAMB_M and
+                                                             math.dist(b, p2) <= CURVED_JAMB_M) or
+                                   (math.dist(a, p2) <= CURVED_JAMB_M and math.dist(b, p1) <= CURVED_JAMB_M)]
+                            jambs.append(sorted(hit)[0] if hit else None)
+                        if None in jambs:
+                            continue
+                        cover, rads = [], set()
+                        for a in glaz:
+                            if math.dist(a["centre"], c) > 0.01 or not r1 + 0.001 < a["r"] < r2 - 0.001:
+                                continue
+                            w = _overlap(st, sw, a["start"], a["sweep"])
+                            if w > 0:
+                                cover.append(w)
+                                rads.add(round(a["r"], 6))
+                        n = max(8, int(sw * r2 / FLAT_M))
+                        out.append({"centre": [round(c[0], 6), round(c[1], 6)], "r_inner_m": round(r1, 6),
+                                    "r_outer_m": round(r2, 6), "inner": (st, sw), "outer": (s2, w2),
+                                    "inner_lm": r1 * sw, "outer_lm": r2 * w2,
+                                    "inner_pts": [pt(c, r1, st + sw * k / n) for k in range(n + 1)],
+                                    "outer_pts": [pt(c, r2, s2 + w2 * k / n) for k in range(n + 1)],
+                                    "glazing_share": min(1.0, max(cover) / sw) if cover else 0.0,
+                                    "glazing_radii_m": sorted(rads), "jambs": jambs,
+                                    "handles": sorted({a["handle"] for a in by_r[r1] + by_r[r2]} | set(jambs))})
+        self._curved = out
+        return out
+
     def arc_census(self, layers=None, min_run_m=BAND_MIN_RUN_M):
         arcs = [a for a in self._arcs if (self.role(a["layer"]) == WALL if layers is None else a["layer"] in layers)]
         uniq = []
