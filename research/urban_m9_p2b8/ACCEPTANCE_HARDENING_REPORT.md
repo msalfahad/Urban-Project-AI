@@ -184,7 +184,15 @@ See `TEST_EVIDENCE.md`:
 - freeze verification;
 - the full-suite comparison by test identity against the Phase 2B-7 baseline.
 
-**The full suite is not green.** Its known failures are carried forward and kept apart from new regressions there.
+**In brief:**
+- V1 – V2.7: 1518 files, 0 differ.
+- Freeze check: 0 frozen artefacts differing.
+- `tests/m9_p2b8`: 97 passed, 1 strict xfail.
+- `tests/m9_p2b7`: 145 passed, 2 strict xfails.
+- `tests/m9_kb`: 78 passed.
+- Full suite against Phase 2B-7, by test identity: 0 passed → failed, 0 new tests failing, 1 failed → passed (a timing test).
+
+**The full suite is not green.** Its 345 failures + 32 errors are the known private-data set, carried forward unchanged and kept apart from new regressions there.
 
 ## What did not work, and what remains
 

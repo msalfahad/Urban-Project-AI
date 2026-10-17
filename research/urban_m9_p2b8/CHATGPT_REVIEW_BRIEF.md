@@ -36,6 +36,11 @@ No overall accuracy is claimed, and the full test suite is not green; its known 
    - UNSUPPORTED never scored as zero;
    - a scorer that refuses engine-derived, uncommitted or changed references;
    - acceptance criteria PROPOSED.
+7. **No regression found.**
+   - V1 – V2.7 are byte-identical: 1518 files, 0 differ.
+   - Freeze verification: 0 frozen artefacts differ.
+   - Full suite, test by test against Phase 2B-7: 98 new tests (97 passed, 1 strict xfail), 0 passed → failed.
+   - The 377 known private-data failures are carried forward, so the suite is still not green.
 
 ## What did not work / is not done
 
