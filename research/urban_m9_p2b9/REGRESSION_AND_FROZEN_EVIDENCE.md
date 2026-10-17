@@ -78,6 +78,8 @@ rule or knowledge file changed after 065f3de.
 
 The mirror runs equal the unmirrored runs on every changed item.
 
+**V2.8 determinism.** V2.8 was run a second time on the same code: 344 files, **0 differ**, 6 × exit 0.
+
 Between the interim snapshot and this one, V2.8's `BOQ_LINES` did not change on any run. The supporting outputs did
 change, by design: the per-change records, the unclosed-label findings, the curved-wall arcs and the schedule-width
 hold were added after the interim snapshot.
