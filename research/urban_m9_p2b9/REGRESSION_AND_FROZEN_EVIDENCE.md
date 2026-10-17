@@ -43,7 +43,7 @@ per-opening threshold role sets, which only V2.8 reads; byte identity confirms n
 | `tests/m9_kb` | 78 passed |
 | `tests/m9_p2b8` | all passed (1 strict xfail by design, L-P8-01) |
 | `tests/m9_p2b7` | all passed (2 strict xfail by design) |
-| **full suite, clean clone at 065f3de** | see §4 |
+| **full suite, clean clone at 065f3de** | 9,331 tests: 8,688 passed, 345 failed, 32 errors (the known 377), 161 skipped, 105 xfailed; no new failure (§4). **Not green** |
 
 Every run used a separate `--basetemp` and `python3 -I`.
 
@@ -52,7 +52,36 @@ Every run used a separate `--basetemp` and `python3 -I`.
 The suite ran from a fresh clone of the committed tree, with `data/inputs` linked to the private inputs. It is
 compared test by test with the Phase 2B-8 run (clean clone at e603162).
 
-*(filled in below once the run completes)*
+**Setup.**
+- Clean clone of `065f3de`, which holds every engine, tool and test change of this phase. Later commits change
+  documentation only.
+- The clone links the git-ignored private drawings folder `data/inputs`, as the Phase 2B-8 clone did.
+- `python3 -I`, its own `--basetemp`; the run took 39 min 41 s.
+- pytest exits 1, because of the known private-data failures.
+
+| Run | Tests | Passed | Failed | Errors | Skipped | xfailed |
+|---|---|---|---|---|---|---|
+| `e603162` (Phase 2B-8) | 9,285 | 8,642 | 345 | 32 | 161 | 105 |
+| `065f3de` (Phase 2B-9) | 9,331 | 8,688 | 345 | 32 | 161 | 105 |
+
+The JUnit results were compared **test by test, by identity**:
+
+| Comparison | Count |
+|---|---|
+| new tests | 46: the tests of `tests/m9_p2b9`, all passed |
+| removed tests | 0 |
+| passed → failed | **0** |
+| failed → passed | 0 |
+| any other state change | 0 |
+| new tests failing | 0 |
+
+**Known failures, carried forward unchanged.**
+- 345 failures and 32 errors, 377 in all: the same 377 tests as in Phase 2B-8.
+- They are spread over the same 26 legacy test modules, all of which read git-ignored private datasets and workbooks
+  that are not in the repository. None is in `tests/m9_*`.
+- They are never reported as passing. **The full suite is not green.**
+
+**No newly introduced regression was found.**
 
 ## 5. Final snapshot
 

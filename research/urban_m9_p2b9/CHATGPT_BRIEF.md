@@ -29,7 +29,11 @@ This is an Urban Projects bilingual Kuwait villa BOQ / QTO engine (architectural
 6. **Independent verification of every V2.8 change.**
    - Reference plan: +0.16854 m wall run VERIFIED by an arc census of the raw entities.
    - Synthetic villa: 7 / 7 skirting changes VERIFIED by an independent face takeoff.
-7. **A double count caught before release.** The first draft took 30.75 m of window thresholds off the reference
+7. **No regression.**
+   - V1 – V2.7.1 are byte-identical in the final snapshot: 1,826 files, 0 differ.
+   - V2.8 is deterministic: 344 files, 0 differ on a second run.
+   - Full suite, clean clone: 0 tests went from pass to fail, and the 46 new tests pass.
+8. **A double count caught before release.** The first draft took 30.75 m of window thresholds off the reference
    plan's skirting although they were already in a range. It was fixed edge by edge.
 
 ## What did not work, or is not done
@@ -44,6 +48,10 @@ This is an Urban Projects bilingual Kuwait villa BOQ / QTO engine (architectural
    blocked.
 5. **A turned schedule sheet** is not read (L-P9-01).
 6. **No second villa exists.** The blind run cannot start.
+7. **The full suite is not green.**
+   - The same 377 legacy failures (345 failed, 32 errors) as in Phase 2B-8, in 26 modules that need private data
+     not in the repository.
+   - None is new.
 
 ## Questions for the reviewer
 
