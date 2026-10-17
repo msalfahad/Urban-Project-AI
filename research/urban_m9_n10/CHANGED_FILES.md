@@ -43,7 +43,7 @@ Generated with `git diff --name-status / --numstat 504b56a 24db651`, leaving out
 | `tests/m9_n10/test_n10_masonry.py` | new | +117 / -0 | test | f32107c | `cdb936363e8a73a1b8fd8bd8dd4e982c15fe4b7fa650f992952dbda5107092da` |
 | `tests/m9_n10/test_n10_registry.py` | new | +52 / -0 | test | 9a52c34 | `792132b4bca38e87f55cb4e036df7dfed9115cddda9c36e62f4fc477adc56bd2` |
 | `tests/m9_n10/test_n10_structural.py` | new | +206 / -0 | test | 40f3184 | `aebc423184f02fcde10416cdb6514ed452c0044bff0e6f3ba91137d0ddd34bf4` |
-| `tests/structural_comparison_engine/rebar_product_registry.py` | changed | +3 / -0 | test | 24db651 | `43bd3192043969aa504b93bd15f0b8c080b2970946e24c5bc54bc324163cd5df` |
+| `tests/structural_comparison_engine/rebar_product_registry.py` | changed | +3 / -0 | test (diff only in the ZIP: the full file names pre-existing private project builders) | 24db651 | `43bd3192043969aa504b93bd15f0b8c080b2970946e24c5bc54bc324163cd5df` |
 | `tools/arch_change_verify.py` | changed | +131 / -4 | source | f6dad61, f32107c, 9f98d3f | `a3d191bc03c0861a6989901773a9f9f64ac0a6166183dbbfac92d34ef4143506` |
 | `tools/codemap.py` | changed | +1 / -1 | source | dec6766 | `3c21726bb34c691ef4cc35c39813111110b64d660d1d7660d52bf6fea13d9a5d` |
 | `tools/indep_reader.py` | changed | +138 / -2 | source | f6dad61 | `7383bc48bfc3e2fb9bfe247d64d534d3c0ccf4d6e03fba1fe9aa0f8ba8d6b808` |
