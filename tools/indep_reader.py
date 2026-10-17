@@ -18,6 +18,11 @@ no engine module is imported, no engine output is read. tools/arch_change_verify
     D.arc_census()                    concentric wall-layer arc pairs 0.08 - 0.45 m apart (ARC entities and polyline
                                       bulges, read from their own parameters): the curved bands, mid-radius x sweep,
                                       both faces over 0.30 m at least; shorter stubs listed apart
+    D.return_census()                 straight wall-face pairs (each face the union of its collinear pieces, split
+                                      where a gap exceeds an opening): a pair at a wall thickness whose faces overlap
+                                      over 0.30 m in total is a band; one overlapping 0.05 - 0.30 m, with no wall
+                                      line between the faces and a wall line across at least one end, at a band
+                                      thickness, is a short return / nib (Phase 2B-9)
     D.fixture_census(polygon)         the inserts inside a polygon by block-name word (basin / water closet / shower
                                       or bath) and the loose sanitary-layer pieces (not a fixture block's own lines)
 Layer roles: given ({layer: role}) or read from the layer name: WALL, COL -> COLUMN, GLAZ / WIN -> WINDOW, DOOR.
@@ -47,6 +52,7 @@ REACH_M = 0.30                             # an opening's mid-wall line to the f
 BAND_MIN_RUN_M = 0.30                      # a wall band: both faces drawn over at least this (the measurement
                                            # convention of the wall run, straight and curved alike); shorter
                                            # stubs are reported apart, never dropped silently
+STUB_MIN_M = 0.05                          # a both-faces stretch shorter than this is a drafting artefact
 FLAT_M = 0.005                             # curve flattening step
 GRID_M = 1e-6                              # noding: snap rounding on this grid
 SAG_M = 1e-5                               # curve flattening: largest chord-to-curve distance
@@ -94,6 +100,17 @@ def _overlap(s1, w1, s2, w2):
         b = s2 + k * 2 * math.pi
         best = max(best, min(s1 + w1, b + w2) - max(s1, b))
     return max(0.0, best)
+
+
+def _overlap_mid(s1, w1, s2, w2):
+    """the common sweep of two CCW intervals and the angle at its middle."""
+    best = (0.0, None)
+    for k in (-1, 0, 1):
+        b = s2 + k * 2 * math.pi
+        lo, hi = max(s1, b), min(s1 + w1, b + w2)
+        if hi - lo > best[0]:
+            best = (hi - lo, (lo + hi) / 2)
+    return best
 
 
 class Drawing:
@@ -433,12 +450,115 @@ class Drawing:
                 continue
             used |= {id(a), id(b)}
             rm = (a["r"] + b["r"]) / 2
+            _w, am = _overlap_mid(a["start"], a["sweep"], b["start"], b["sweep"])
             (bands if w * min(a["r"], b["r"]) >= min_run_m - 1e-9 else short).append({"centre": [round(a["centre"][0], 6), round(a["centre"][1], 6)],
                           "r_inner_m": round(min(a["r"], b["r"]), 6), "r_outer_m": round(max(a["r"], b["r"]), 6),
                           "sweep_rad": round(w, 9), "mid_lm": round(rm * w, 6), "t_m": round(dr, 6),
+                          "inner_lm": round(min(a["r"], b["r"]) * w, 6),
+                          "mid": [round(a["centre"][0] + rm * math.cos(am), 4),
+                                  round(a["centre"][1] + rm * math.sin(am), 4)],
                           "handles": sorted({a["handle"], b["handle"]})})
         return {"bands": bands, "mid_lm": round(sum(x["mid_lm"] for x in bands), 6), "min_run_m": min_run_m,
                 "short_stubs": short, "short_stubs_mid_lm": round(sum(x["mid_lm"] for x in short), 6)}
+
+    def return_census(self, min_m=STUB_MIN_M, max_m=BAND_MIN_RUN_M, t_range=(0.08, 0.45), ang_tol=1e-5,
+                      off_tol=5e-4, regions=None):
+        """regions: plan boxes [(x0, y0, x1, y1)] in metres - only wall lines inside one are read (a section or an
+        elevation sheet draws wall layers too); a stretch whose middle lies inside a column outline is a column, not
+        a wall return (excluded, listed). -> {"band_thicknesses_m", "bands", "returns": [{t_m, length_m,
+        ends_closed, mid}], "returns_lm", "excluded": [...]}."""
+        def inside(p, boxes):
+            return any(b[0] <= p[0] <= b[2] and b[1] <= p[1] <= b[3] for b in boxes)
+        segs = [(a, b) for a, b, straight in self._segments((WALL,)) if straight and math.dist(a, b) > 1e-4 and
+                (regions is None or (inside(a, regions) and inside(b, regions)))]
+        from shapely.geometry import Polygon
+        cols = [Polygon(p["pts"]) for p in self.pieces(role=COLUMN) if p["closed"] and len(p["pts"]) >= 3]
+        cols = [c if c.is_valid else c.buffer(0) for c in cols]
+        lines = []                                     # (theta, d, [(s0, s1)], segs) per infinite line
+        for a, b in segs:
+            L = math.dist(a, b)
+            ux, uy = (b[0] - a[0]) / L, (b[1] - a[1]) / L
+            if ux < -1e-9 or (abs(ux) <= 1e-9 and uy < 0):
+                ux, uy = -ux, -uy
+            th, d = math.atan2(uy, ux), -uy * a[0] + ux * a[1]
+            s0, s1 = sorted((ux * a[0] + uy * a[1], ux * b[0] + uy * b[1]))
+            for ln in lines:
+                if abs(ln["th"] - th) <= ang_tol and abs(ln["d"] - d) <= off_tol:
+                    ln["iv"].append((s0, s1))
+                    break
+            else:
+                lines.append({"th": th, "d": d, "u": (ux, uy), "iv": [(s0, s1)]})
+        runs = []                                      # each line split into runs where a gap exceeds an opening
+        for ln in lines:
+            iv = sorted(ln["iv"])
+            merged = [list(iv[0])]
+            for x0, x1 in iv[1:]:
+                if x0 <= merged[-1][1] + 1e-6:
+                    merged[-1][1] = max(merged[-1][1], x1)
+                else:
+                    merged.append([x0, x1])
+            cur = [merged[0]]
+            for m in merged[1:]:
+                if m[0] - cur[-1][1] > GAP_MAX_M:
+                    runs.append(dict(ln, pieces=cur))
+                    cur = []
+                cur.append(m)
+            runs.append(dict(ln, pieces=cur))
+
+        def overlap(p, q):
+            out = []
+            for a0, a1 in p:
+                for b0, b1 in q:
+                    lo, hi = max(a0, b0), min(a1, b1)
+                    if hi - lo > 1e-6:
+                        out.append((lo, hi))
+            return out
+
+        pairs = []
+        for i, A in enumerate(runs):
+            for B in runs[i + 1:]:
+                if abs(A["th"] - B["th"]) > ang_tol:
+                    continue
+                t = abs(A["d"] - B["d"])
+                if not t_range[0] - 1e-9 <= t <= t_range[1] + 1e-9:
+                    continue
+                ov = overlap(A["pieces"], B["pieces"])
+                if ov:
+                    pairs.append((A, B, t, ov, sum(h - l for l, h in ov)))
+        bands = [x for x in pairs if x[4] >= max_m - 1e-9]
+        fam = sorted({round(round(x[2] / 0.005) * 0.005, 3) for x in bands})
+        returns, excluded = [], []
+        for A, B, t, ov, tot in pairs:
+            if not min_m - 1e-9 <= tot < max_m - 1e-9 or not any(abs(t - f) <= 0.005 for f in fam):
+                continue
+            ux, uy = A["u"]
+            nx, ny = -uy, ux
+            dlo, dhi = sorted((A["d"], B["d"]))
+            if any(R is not A and R is not B and abs(R["th"] - A["th"]) <= ang_tol and dlo + 1e-6 < R["d"] < dhi - 1e-6
+                   and overlap(R["pieces"], ov) for R in runs):
+                continue                               # a wall line between the faces: not one wall stretch
+
+            def closed(s_):
+                for a, b in segs:
+                    pa, pb = (ux * a[0] + uy * a[1], nx * a[0] + ny * a[1]), (ux * b[0] + uy * b[1], nx * b[0] + ny * b[1])
+                    if abs(pa[0] - s_) <= 1e-3 and abs(pb[0] - s_) <= 1e-3 and \
+                            min(pa[1], pb[1]) <= dlo + 1e-3 and max(pa[1], pb[1]) >= dhi - 1e-3:
+                        return True
+                return False
+            ends = sum(1 for lo, hi in ov for s_ in (lo, hi) if closed(s_))
+            if ends < 1:
+                continue
+            sm, dm = (ov[0][0] + ov[-1][1]) / 2, (dlo + dhi) / 2
+            rec = {"t_m": round(t, 4), "length_m": round(tot, 6), "ends_closed": ends,
+                   "mid": [round(ux * sm + nx * dm, 4), round(uy * sm + ny * dm, 4)]}
+            if any(c.contains(Point(ux * sm + nx * dm, uy * sm + ny * dm)) for c in cols):
+                excluded.append(dict(rec, why="INSIDE_A_COLUMN_OUTLINE"))
+                continue
+            returns.append(rec)
+        returns.sort(key=lambda r: (r["mid"][0], r["mid"][1]))
+        return {"band_thicknesses_m": fam, "bands": len(bands), "returns": returns,
+                "returns_lm": round(sum(r["length_m"] for r in returns), 6), "min_m": min_m, "max_m": max_m,
+                "excluded": excluded}
 
     def fixture_census(self, polygon):
         poly = polygon.buffer(0.01)

@@ -1129,6 +1129,27 @@ def _opening_rows(v28):
 
 
 def _v28_outputs(arch):
+    # D-V28-05: one correction record per stub measured as wall (it continues the V2.7 / V2.7.1 numbering)
+    log = arch["v27"]["corrections"]
+    n = max([int(x["id"][4:]) for x in log + (arch["v27"].get("refusals") or []) if x.get("id")] or [0])
+    for st in arch["v28"]["stubs"]:
+        n += 1
+        log.append({"id": f"C27-{n:04d}", "correction": "WALL_STUB", "floor": st["floor"], "region_id": "-",
+                    "subject": st["stub_id"], "decision": "MEASURED_AS_WALL",
+                    "detail": {k: st[k] for k in ("kind", "run_lm", "t_m", "family", "length_m", "inner_m", "outer_m",
+                                                  "sweep_rad", "plan_m2", "centreline_m") if k in st}})
+    # D-V28-03: one record per room whose window thresholds left the certain skirting
+    for r in arch["v28"]["rooms"]:
+        a = r.get("skirting_windows") or {}
+        moved = {k: a.get(k, 0.0) for k in ("floor_glazing_lm", "to_range_lm", "floor_glazing_range_lm")}
+        if not any(v > 1e-9 for v in moved.values()):
+            continue
+        n += 1
+        log.append({"id": f"C27-{n:04d}", "correction": "WINDOW_SKIRTING", "floor": r["floor"], "region_id": "-",
+                    "subject": r["room_id"], "decision": "CERTAIN_SKIRTING_ONLY",
+                    "detail": dict(moved, windows={k: v["class"] for k, v in (a.get("by_window") or {}).items()},
+                                   to_range_by=a.get("to_range_by") or {})})
+    arch["v27"]["summary"]["corrections"] = dict(Counter(c["correction"] for c in log))
     run = arch["run"]
     run.update(policy=ARCH_POLICY_ID_V28)
     run["v2_8"] = {"corrections": list(V28_CORRECTIONS), "knowledge": V28_KNOWLEDGE,

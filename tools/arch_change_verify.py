@@ -29,17 +29,24 @@ the locations its drawn entities touch):
                                 jamb openings, the floor's walls
     DOOR_OPENING, DOOR_FRAME, CURVED_WALL_BAND, WET_EVIDENCE, ARC_POLYGON, SLIVER_MERGE   as tools/arch_v27_explain
     REVIEW_INVARIANT_RELEASE    its room, its released item only
+    WALL_STUB / WINDOW_SKIRTING (Phase 2B-9) the floor's walls, ARCH.WALL_RUN only / its room, FIN.SKIRTING only
     PROVENANCE                  nothing
 Independent checks (heights from the facts file, a stated project input; widths and lengths from the drawing):
     INDEPENDENT_FACE            FIN.CEILING, FIN.FLOOR.*, FIN.WP.FLOOR, ARCH.SPACE: the face area at the room
     INDEPENDENT_TAKEOFF         FIN.PLASTER / FIN.PAINT = P x H - doors x H_door - windows x H_window;
                                 FIN.WALL.TILE = P x H_tile - doors x min(H_door, H_tile) (no window on the face);
-                                FIN.SKIRTING = P - doors (no window on the face); FIN.WP.DOORWAY = sum of door width x wall thickness;
+                                FIN.SKIRTING = P - doors (no window on the face; under WINDOW_SKIRTING, whose
+                                windows have no established sill, P - every gap closed on the face: doors,
+                                passages and windows alike are not certainly skirted); FIN.WP.DOORWAY = sum of door width x wall thickness;
                                 at an opening: FIN.MARBLE.THRESHOLD = w x t, FIN.PLASTER = 2 t H_door + w t
                                 (the face must have no hole and no gap without a door or window symbol)
     INDEPENDENT_ARC_CENSUS      ARCH.WALL_RUN under CURVED_WALL_BAND: the change equals the curved bands'
                                 mid-radius length (concentric wall-layer arc pairs read from their own parameters,
                                 both faces over 0.30 m - the wall run's convention; shorter stubs reported apart)
+    INDEPENDENT_STUB_CENSUS     ARCH.WALL_RUN under WALL_STUB (Phase 2B-9): the change equals the floor's short
+                                curved pairs (inner face 0.05 - 0.30 m) plus its straight returns (return_census),
+                                both read again inside the floor's plan region (plus the curved bands under
+                                CURVED_WALL_BAND)
     INDEPENDENT_FIXTURE_CENSUS  under WET_EVIDENCE: the fixture inserts and loose sanitary-layer pieces inside the
                                 face equal the evidence the record states (it verifies the evidence, not the rule)
 The seed of a face is a point inside the run's room polygon: it selects which independent face; the face's area,
@@ -86,9 +93,12 @@ class Run:
         self.corrections = (_load(d, "CORRECTIONS_V2_7.json") or {}).get("corrections") or []
         plan = _load(d, "ARCH_PLAN.json") or {}
         self.roles = {}
+        self.boxes = {}                               # the plan region of each floor (drawing units): a stated layout
         for reg in plan.get("regions") or ():
             for lay, role in (reg.get("layer_roles") or {}).items():
                 self.roles.setdefault((reg.get("floor"), lay), role)
+            if reg.get("box"):
+                self.boxes.setdefault(reg.get("floor"), reg["box"])
 
 
 def _polygon(room):
@@ -266,6 +276,10 @@ class Verifier:
                 locs |= self._op_keys(fl, det["opening_id"])
         elif kind == "CURVED_WALL_BAND":
             locs = {f"{fl}-WALLS"}
+        elif kind == "WALL_STUB":
+            locs, items = {f"{fl}-WALLS"}, {"ARCH.WALL_RUN"}
+        elif kind == "WINDOW_SKIRTING":
+            locs, items = {self.canon(sub)}, {"FIN.SKIRTING"}
         elif kind in ("WET_EVIDENCE", "ARC_POLYGON"):
             faces = set(det.get("faces") or ()) if kind == "ARC_POLYGON" else {sub}
             rooms = {self.canon(rid) for r in (self.a, self.b) for rid, rm in r.rooms.items()
@@ -304,8 +318,9 @@ class Verifier:
     def _face(self, key):
         return self._face_of(self.room(key))
 
-    def check_quantity(self, item, key, floor, after_net):
-        """the independent value of a measured line, or (None, reason)."""
+    def check_quantity(self, item, key, floor, after_net, kinds=(), win_classes=()):
+        """the independent value of a measured line, or (None, reason). kinds: the explaining records' kinds
+        (WINDOW_SKIRTING: no window's sill is established, so no window threshold is certainly skirted)."""
         if key and (key.endswith("-WALLS")):
             return None, "NO_INDEPENDENT_CHECK_FOR_THIS_ITEM"
         if "-OPENING-" in (key or "") or "-STRIP-" in (key or ""):
@@ -340,6 +355,19 @@ class Verifier:
                 return None, "VOID_OR_OBSTRUCTION_NOT_READ_INDEPENDENTLY"
             return {"value": f["area_m2"],
                     "evidence": {"face_area_m2": round(f["area_m2"], 6), "holes": f["holes"]}}, None
+        if item == "FIN.SKIRTING" and "WINDOW_SKIRTING" in kinds and "WINDOW" not in win_classes:
+            # Phase 2B-9: no window's sill is established, so the certain skirting skips every gap of the face - a
+            # door, a passage (a gap without a symbol) and a window alike are not certainly skirted; a hole of the
+            # face (a free-standing column or wall, read from wall and column lines only) is skirted all round
+            clos = f.get("closure_geom")
+            gaps = 0.0 if clos is None or clos.is_empty else clos.length
+            _ops, free = self.D.openings_on(f)
+            return {"value": f["perimeter_m"] + f["holes_perimeter_m"] - gaps,
+                    "evidence": {"perimeter_m": round(f["perimeter_m"], 6), "gaps_m": round(gaps, 6),
+                                 "holes": f["holes"], "holes_perimeter_m": round(f["holes_perimeter_m"], 6),
+                                 "symbol_less_gaps_m": round(free or 0.0, 6),
+                                 "formula": "P + hole perimeters - every gap closed on the face (doors, passages, "
+                                            "windows without an established sill)"}}, None
         if f["holes"]:
             return None, "FACE_HAS_A_HOLE"
         ops, free = self.D.openings_on(f)
@@ -378,6 +406,25 @@ class Verifier:
         return {"value": P * H - dw * hd - ww * (hw or 0),
                 "evidence": dict(ev, H_m=H, door_h_m=hd, window_h_m=hw,
                                  formula="P x H - doors x H_door - windows x H_window")}, None
+
+    def check_stubs(self, fl):
+        """the wall stubs of one floor read again from the drawing: the arc census's short curved pairs (inner face
+        at least STUB_MIN_M, their middle inside the floor's plan region) and the straight return census in that
+        region. -> {"lm", "curved", "returns", "excluded_curved"}"""
+        box = [v * self.D.k for v in self.a.boxes.get(fl) or ()]
+        if len(box) != 4:
+            return {"lm": 0.0, "curved": [], "returns": [], "reason": "NO_PLAN_REGION"}
+        ac = self.D.arc_census()
+
+        def inside(p):
+            return box[0] <= p[0] <= box[2] and box[1] <= p[1] <= box[3]
+        curved = [x for x in ac["short_stubs"] if inside(x["mid"]) and x["inner_lm"] >= IR.STUB_MIN_M - 1e-9]
+        small = [x for x in ac["short_stubs"] if inside(x["mid"]) and x["inner_lm"] < IR.STUB_MIN_M - 1e-9]
+        rc = self.D.return_census(regions=[box])
+        lm = round(sum(x["mid_lm"] for x in curved) + rc["returns_lm"], 6)
+        strip = lambda x: {k: v for k, v in x.items() if k not in ("handles", "centre", "mid")}  # noqa: E731
+        return {"lm": lm, "curved": [strip(x) for x in curved], "returns": [strip(x) for x in rc["returns"]],
+                "below_stub_minimum": [strip(x) for x in small], "stub_min_m": IR.STUB_MIN_M}
 
     def check_census(self, c):
         """INDEPENDENT_FIXTURE_CENSUS of a WET_EVIDENCE record: the census of its face against its stated evidence."""
@@ -436,7 +483,17 @@ class Verifier:
                 rows.append(row)
                 continue
             checks = []
-            if "CURVED_WALL_BAND" in kinds and item == "ARCH.WALL_RUN":
+            if "WALL_STUB" in kinds and item == "ARCH.WALL_RUN":
+                res = self.check_stubs(fl)
+                ind = res["lm"]
+                if "CURVED_WALL_BAND" in kinds:
+                    ac = self.D.arc_census()
+                    ind = round(ind + ac["mid_lm"], 6)
+                    res = dict(res, curved_bands_lm=ac["mid_lm"])
+                checks.append({"method": "INDEPENDENT_STUB_CENSUS", "independent_delta": ind, "delta": row["delta"],
+                               "tolerance": _tol(ind), "agrees": abs(ind - row["delta"]) <= _tol(ind),
+                               "evidence": res})
+            elif "CURVED_WALL_BAND" in kinds and item == "ARCH.WALL_RUN":
                 ac = self.D.arc_census()
                 checks.append({"method": "INDEPENDENT_ARC_CENSUS", "independent_delta": ac["mid_lm"],
                                "delta": row["delta"], "tolerance": _tol(ac["mid_lm"]),
@@ -456,7 +513,9 @@ class Verifier:
                         checks.append({"method": "INDEPENDENT_FIXTURE_CENSUS", "record": cid, **res})
             measured = vb[1] > 0 and vb[2] < vb[1]
             if measured and item != "ARCH.WALL_RUN":
-                res, why = self.check_quantity(item, key, fl, vb[0])
+                wcls = {v for cid in by for c in recs if c["id"] == cid and c["correction"] == "WINDOW_SKIRTING"
+                        for v in ((c.get("detail") or {}).get("windows") or {}).values()}
+                res, why = self.check_quantity(item, key, fl, vb[0], kinds, wcls)
                 if res is None:
                     checks.append({"method": "INDEPENDENT_TAKEOFF", "agrees": None, "reason": why})
                 else:
