@@ -197,4 +197,7 @@ OTHER_REBAR_AWARE = (
     # never a ratio); the coverage census reports which families' steel is MISSING_DATA
     "engine/source/boq_line.py",
     "engine/source/coverage_census.py",
+    # Phase N10: the structural formwork / excavation module audits route G's reinforcement rows (unit mass vs
+    # d^2/162, each row's derivation, no ratio labelled as measured); stdlib only, writes no reinforcement quantity
+    "engine/source/struct_n10.py",
 )
