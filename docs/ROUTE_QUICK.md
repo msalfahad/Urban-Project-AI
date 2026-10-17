@@ -17,8 +17,8 @@ Details per topic: `docs/ROUTING.md`. Risk is a validation guide, never a reason
 | [stairs](ROUTING.md#stairs) | stair, railing, riser, tread, landing | `engine/source/stair_geometry.py`, `engine/source/stair_measure.py` | CRITICAL | 13 | 1 / 0 | 1 / 14 |
 | [concrete](ROUTING.md#concrete) | concrete, slab, beam, column, footing | `engine/source/concrete_completeness.py`, `engine/source/slab_rebar_qto.py` | CRITICAL | 0 | 10 / 0 | 6 / 13 |
 | [rebar](ROUTING.md#rebar) | rebar, reinforcement, bar, steel, bbs | `engine/source/accurate_boq_rebar.py`, `engine/source/rebar_unit_mass.py` | CRITICAL | 0 | 7 / 0 | 0 / 4 |
-| [formwork](ROUTING.md#formwork) | formwork, shuttering, form work | **not implemented** | LOW | 0 | 0 / 0 | 0 / 2 |
-| [excavation](ROUTING.md#excavation) | excavation, excavate, backfill, earthwork, dig | **not implemented** | LOW | 0 | 0 / 0 | 0 / 2 |
+| [formwork](ROUTING.md#formwork) | formwork, shuttering, form work | `engine/source/struct_n10.py` | MEDIUM | 0 | 0 / 0 | 0 / 2 |
+| [excavation](ROUTING.md#excavation) | excavation, excavate, backfill, earthwork, dig | `engine/source/struct_n10.py` | MEDIUM | 0 | 0 / 0 | 0 / 2 |
 | [boq_output](ROUTING.md#boq_output) | boq, total, release, report, export | `tools/urban_boq_m9.py`, `engine/source/delta_release.py` | CRITICAL | 11 | 5 / 0 | 0 / 7 |
 
 Risk: CRITICAL = frozen code or engineering authority; HIGH = geometry, CAD, units, rooms, walls, release, aggregation or
