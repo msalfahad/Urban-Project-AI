@@ -12,8 +12,9 @@ from CAD; a reading is a cross-check, and a disagreement goes to a person (exist
    pypdfium2, Apache-2.0 / BSD; not PyMuPDF, AGPL). Scans and photos: Tesseract `eng+ara` (Apache-2.0; `ara.traineddata`
    from `tesseract-ocr/tessdata_fast`, fetched by sparse git clone and pinned by SHA-256, not committed). Tested on a
    synthetic bilingual sheet: every Arabic label, English label, dimension, D/W tag and the scale read exactly.
-2. **Visual layer (needs owner consent, Q-01).** Claude looks at the rendered page and assigns labels to rooms, counts
-   rooms, bathrooms, kitchens, door swings, windows and wet zones. Off until Q-01 is answered yes.
+2. **Visual layer (owner consent Q-01: yes, always).** Claude looks at the rendered page and assigns labels to rooms,
+   counts rooms, bathrooms, kitchens, door swings, windows and wet zones. This consent replaces the "never sent to a
+   hosted model" line of the vision skill for the owner's project drawings; the skill text is updated with T-003.
 
 ## Output per sheet: `plan_reading.json`
 

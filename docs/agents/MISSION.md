@@ -18,6 +18,14 @@ Working targets (not yet owner-approved, see OWNER_QUESTIONS): WAPE <= 5 % per c
 <= 2-3 %; waterproofing <= 2-3 % with no wet room missed; doors and windows exact counts; floor areas <= 1-2 % with no
 room lost; blockwork and finishes <= 3 % where sections and schedules exist.
 
+## Who is right (owner, 2026-10-18)
+
+The goal is every quantity correct. Matching the freelancer within 95 % is a floor, not the finish line: the engine may
+become more accurate than the freelancer. For every difference the verifier records a verdict from the drawing and the
+owner rules: ENGINE_RIGHT, FREELANCER_RIGHT, RULE_DIFFERENCE (different measurement basis) or UNRESOLVED (owner
+question). Only FREELANCER_RIGHT and UNRESOLVED count against the engine; ENGINE_RIGHT needs a hand calculation
+from the drawing, never the engine's own output.
+
 ## Alsenan is the DEVELOPMENT villa, not a blind test
 
 The freelancer's BOQ is our development reference: we may tune against it, so it can never prove accuracy. Proof needs

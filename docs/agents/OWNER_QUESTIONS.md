@@ -6,26 +6,29 @@ WP-KITCHEN membrane scope, WP-JOINT details, WIN-REVEAL finish, STUB-LIMIT, MEAS
 
 ## Open
 
-### Q-01 Plan reader: may Claude look at the drawings?
-The vision skill says private plans are never sent to a hosted model. Claude reading a page like a person (assigning
-labels to rooms, counting doors and bathrooms) is exactly that. The local text layer works without it.
-Answer:
-
-### Q-02 Working accuracy targets (ACCEPT-95, not the sealed blind protocol)
-May agents work to: WAPE <= 5 % per category, concrete <= 2 %, rebar <= 2-3 %, waterproofing <= 2-3 % with no wet room
-missed, exact door / window counts, floor area <= 1-2 % with no room lost, zero silent omissions?
-Answer:
-
-### Q-03 Waterproofing upturn (WP-UPTURN): 0.15 m or 0.20 m?
-Historical rules say 0.15 m, later ones 0.20 m.
-Answer:
-
-### Q-04 Door minimum (D-16): 1.00 m ordinary / 0.90 m bathroom measured as opening, leaf or clear width?
-Answer:
-
-### Q-05 Second villa and independent QS
-Proof needs a complete second villa (plans, structure, sections, elevations, door / window / finish schedules) and a QS
-who measures it before seeing engine output. Can you get one, and who could be the QS?
-Answer:
+(none; next candidates from the queue above)
 
 ## Answered
+
+### Q-01 Plan reader: may Claude look at the drawings? (answered 2026-10-18)
+Answer: Yes, always. The visual layer of PLAN_READER.md is on for every project drawing.
+
+### Q-02 Working accuracy targets (answered 2026-10-18)
+Answer: The main target is to get everything correct. 95 %+ against the freelancer is a floor, not the goal: the engine
+may become more accurate than the freelancer. So a difference from the freelancer is not automatically an engine error;
+the verifier decides from the drawing who is right (MISSION.md "Who is right").
+
+### Q-03 Waterproofing upturn (answered 2026-10-18)
+Answer: 0.20 m. Already the current rule (knowledge 1.4.0 rules[41], UP-WP-003; 0.15 m is superseded, rules[47]). No change.
+
+### Q-04 Door minimum, D-16 (answered 2026-10-18)
+Answer: The minimum is the door opening: ordinary 1.00 m opening = 1.10 m wall to wall. These are minimums: when the plan
+is drawn wider, the drawn size is used. The main door is measured as drawn. Matches the registry 1.1.0 reading
+"wall opening = nominal + 0.10 m" (owner_questions[4], rules[13]); by the same rule a bathroom 0.90 m opening = 1.00 m
+wall to wall (inferred from the owner's rule, confirm if different). Recorded as a new knowledge version (task T-011).
+
+### Q-05 Second villa and independent QS (answered 2026-10-18)
+Answer: Yes. Other villas exist as AutoCAD and PDF, but without full concrete and rebar drawings. Use them as development
+villas for architectural trades, the plan reader and silent-omission checks (Gates 1, 2, 4); not for concrete / rebar,
+and not as blind proof until an independent QS measures one (task T-012).
+
