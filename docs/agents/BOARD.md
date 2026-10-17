@@ -1,10 +1,25 @@
 # Task board (Lead writes; workers claim one row; verifier records the verdict)
 
 Status: TODO -> CLAIMED (worker, branch) -> READY (worker done) -> MERGED or REJECTED (verifier, reason).
+BLOCKED-DATA = needs `urban-boq-private-data`; BLOCKED-OWNER = needs an answer in OWNER_QUESTIONS.md.
+Order: lowest gate first, then money at risk. Statuses from the master study are claims: check them against code first.
 
-| Id | Priority | Trade | Task | Status | Branch | Verdict |
+| Id | Gate | Trade | Task | Status | Branch | Verdict |
 |---|---|---|---|---|---|---|
-| T-001 | 1 | scoreboard | Build `tools/alsenan_scoreboard.py`: engine vs freelancer per trade from the private data repo; write SCOREBOARD.md | TODO | | |
+| T-001 | 0 | scoreboard | `tools/alsenan_scoreboard.py`: engine vs freelancer per trade and unit: coverage, silent omissions, WAPE, signed error, false positives; writes SCOREBOARD.md. Synthetic tests in tmp | BLOCKED-DATA (code + tests can start) | | |
+| T-002 | 0 | baseline | Capability matrix from the code and the BOQ family registry vs the study's `03_CAPABILITY_MATRIX` (e.g. blockwork "UNSUPPORTED" there); triage the 377 known suite failures into private-input-absent vs real | TODO | | |
+| T-003 | 4 | plan reader | `tools/plan_reader/`: text layer of PLAN_READER.md (pdfplumber, pypdfium2, Tesseract eng+ara pinned by SHA-256); `plan_reading.json`; tests on generated bilingual sheets (rotation, scan noise, missing scale -> NOT_SCALABLE) | TODO | | |
+| T-004 | 1 | rooms, doors, windows | Census check: every room label and opening tag in CAD text and in the plan reading appears in the engine output as measured / held / unsupported; list silent omissions | TODO (after T-003 for PDF sheets) | | |
+| T-005 | 1 | floor area, windows | D-P9-01 curved glazing without wall gap loses the room; D-P9-02 curved window closes at glazing line (0.438423 m2 reveal strip in floor). New method version | TODO | | |
+| T-006 | 1 | floor area | D-P9-04 zone-bounded space 3.832 vs 4.731 m2: cell-by-cell face decomposition; then audit the 23 explained-unverified changes | TODO | | |
+| T-007 | 2 | blockwork | Blockwork m2 / m3 by thickness from wall runs x evidenced soffit / beam height, minus openings and column / beam intersections; HOLD when height absent | TODO | | |
+| T-008 | 2 | doors, windows | L-P9-01 rotated schedule header; schedule match by id + width + geometry, ambiguous row rejected | TODO | | |
+| T-009 | 3 | rebar, concrete | Read structural schedules and tables (bar marks, element populations) so rebar is counted per population, never a kg/m3 proxy as measured tonnage | TODO | | |
+| T-010 | 1 | wet areas | L-P8-01 WC-sized chair classified as toilet: symbol class + context, adversarial fixture | TODO | | |
+
+## Later (lead promotes when the gate is reached)
+Revision delta between drawing issues; push released BOQ lines to the Firestore app; facade finishes; roof build-up;
+formwork; excavation.
 
 ## Ideas (from the research scout; the lead turns useful ones into tasks)
 
