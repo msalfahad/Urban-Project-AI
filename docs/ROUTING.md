@@ -24,7 +24,7 @@ A full-suite result belongs to the commit it ran on; later changes need their ow
 
 ## Defect classes
 
-VERIFIED_OPEN / VERIFIED_FIXED: as stated by the newest register (`research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md`), not re-tested by this tool. REGRESSION_RISK: reported fixed in an older register; only its tests protect it. HISTORICAL_UNVERIFIED: reported open in an older register and not restated since; confirm before relying on it. UNKNOWN: no status recorded. SUPERSEDED: replaced. A defect is never marked fixed because a newer report omits it.
+VERIFIED_OPEN / VERIFIED_FIXED: as stated by the newest register (`research/urban_m9_n10/DEFECT_REGISTER.md`), not re-tested by this tool. REGRESSION_RISK: reported fixed in an older register; only its tests protect it. HISTORICAL_UNVERIFIED: reported open in an older register and not restated since; confirm before relying on it. UNKNOWN: no status recorded. SUPERSEDED: replaced. A defect is never marked fixed because a newer report omits it.
 
 ## Dependency limits
 
@@ -78,12 +78,12 @@ L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests`
 L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests tests/m9_s6 tests/m9_p2a tests/m9_p2b0 tests/r8_4 tests/r8_3 tests/alsenan` + freeze check
 L4 full suite + freeze check (see above)
 
-**Known defects** (2 unresolved of 2):
+**Known defects** (1 unresolved of 2):
 
 | Id | Class | Reported status | Defect | Modules | Evidence (date) |
 |---|---|---|---|---|---|
-| L-P9-03 | VERIFIED_OPEN | limitation (recorded) | a metres drawing whose only closed rectangles are sheet frames is refused at admission (UNITS_CONTRADICTED) until a reviewer conf… | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 3. Limitations recorded` (phase urban_m9_p2b9) |
 | B17 | HISTORICAL_UNVERIFIED | OPEN (by design) | Al Rashed unit conflict | - | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-04) |
+| L-P9-03 | VERIFIED_FIXED | limitation: a metres drawing whose only closed rectangles are sheet frames is r… | limitation: a metres drawing whose only closed rectangles are sheet frames is refused at admission until confirmed | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 4. Still open from earlier phases (restated, unchanged in N10)` (phase urban_m9_n10) |
 
 <a id="rooms"></a>
 ## Rooms, spaces, zones and closure
@@ -112,14 +112,14 @@ L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_
 L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_s6 tests/m9_s5 tests/m9_s4 tests/m9_kb tests/m9_s3 tests/m9_p2b0 tests/m9_p2a tests/m9_p2b2 tests/m9_p2b5 tests/m9_p2b3 tests/m9_s2_arch` + freeze check
 L4 full suite + freeze check (see above)
 
-**Known defects** (3 unresolved of 4):
+**Known defects** (2 unresolved of 4):
 
 | Id | Class | Reported status | Defect | Modules | Evidence (date) |
 |---|---|---|---|---|---|
-| D-C3 | VERIFIED_OPEN | open | a doorless cell merged into a wet room takes the wet scope silently | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 5. Still open from earlier phases` (phase urban_m9_p2b9) |
-| D-P9-04 | VERIFIED_OPEN | open: a cell-by-cell comparison; until then its 13 differences (V2.6 → V2.7.1)… | the zone-bounded ground-floor space (a drawn zone line, 1.256 m, on a non-wall layer) cannot be verified: closed by that line, re… | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 2. Found in Phase 2B-9` (phase urban_m9_p2b9) |
+| D-C3 | VERIFIED_OPEN | open: a doorless cell merged into a wet room takes the wet scope silently | a doorless cell merged into a wet room takes the wet scope silently | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 4. Still open from earlier phases (restated, unchanged in N10)` (phase urban_m9_n10) |
+| D-P9-03 | REGRESSION_RISK | fixed for the V2.8 finding (open-area phrases first); the lexicon itself is unc… | the room lexicon reads the Arabic phrase for "swimming pool" as BATHROOM (it contains the word for bath) | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 2. Found in Phase 2B-9` (phase urban_m9_p2b9) |
 | B9 (L-17) | HISTORICAL_UNVERIFIED | OPEN | Wet rooms merged into dry zones; GARDEN inside a floor zone | - | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-04) |
-| D-P9-03 | VERIFIED_FIXED | fixed for the V2.8 finding (open-area phrases first); the lexicon itself is unc… | the room lexicon reads the Arabic phrase for "swimming pool" as BATHROOM (it contains the word for bath) | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 2. Found in Phase 2B-9` (phase urban_m9_p2b9) |
+| D-P9-04 | VERIFIED_FIXED | resolved (verification). Root cause: the reader's gap rule split two recesses (… | the zone-bounded ground-floor space cannot be verified (the reader's face is 0.899 m² smaller) | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 1. Closed, corrected or addressed in this phase` (phase urban_m9_n10) |
 
 <a id="walls"></a>
 ## Walls, blockwork and masonry
@@ -147,14 +147,15 @@ L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_
 L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b7 tests/m9_n10 tests/m9_p2b8 tests/m9_p2b9 tests/m9_p2b6 tests/m9_s2_arch tests/m9_s6 tests/m9_p2b0 tests/m9_kb tests/m9_p2a tests/m9_p2b2 tests/m9_s5` + freeze check
 L4 full suite + freeze check (see above)
 
-**Known defects** (3 unresolved of 4):
+**Known defects** (4 unresolved of 5):
 
 | Id | Class | Reported status | Defect | Modules | Evidence (date) |
 |---|---|---|---|---|---|
-| L-P9-04 | VERIFIED_OPEN | limitation (recorded) | wall stubs under 0.05 m are treated as drafting artefacts (stated convention; the reference plan has one, 0.0414 m) | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 3. Limitations recorded` (phase urban_m9_p2b9) |
-| L-P9-05 | VERIFIED_OPEN | limitation (recorded) | masonry by thickness stays BLOCKED: the block height (T.O.S. to soffit / beam) and the material are not read | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 3. Limitations recorded` (phase urban_m9_p2b9) |
+| D-N10-03 | VERIFIED_OPEN | open: a reader-side wall-mass census (plan area / t) | there is no independent masonry reading: masonry differences are explained by the MASONRY_PANEL record but not verified | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 2. Found in Phase N10` (phase urban_m9_n10) |
+| L-P9-04 | VERIFIED_OPEN | limitation: wall stubs under 0.05 m are treated as drafting artefacts | wall stubs under 0.05 m are treated as drafting artefacts (stated convention; the reference plan has one, 0.0414 m) | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 4. Still open from earlier phases (restated, unchanged in N10)` (phase urban_m9_n10) |
+| L-P9-05 | VERIFIED_OPEN | open, partly addressed in V2.9 (UP-MAS-HEIGHT-001). Panel area and volume by th… | masonry by thickness stays BLOCKED: the block height and the material are not read | `tests/m9_n10/test_n10_masonry.py` | `research/urban_m9_n10/DEFECT_REGISTER.md § 1. Closed, corrected or addressed in this phase` (phase urban_m9_n10) |
+| D-P8-03 | REGRESSION_RISK | corrected description + fixed in V2.8. Collinear stubs were already counted (me… | a wall stretch with both faces drawn over less than 0.30 m is not in the wall run | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 1. Closed or corrected in this phase` (phase urban_m9_p2b9) |
 | B8 | HISTORICAL_UNVERIFIED | OPEN | Blockwork wall-length deficit ≈140 m | - | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-04) |
-| D-P8-03 | VERIFIED_FIXED | corrected description + fixed in V2.8. Collinear stubs were already counted (me… | a wall stretch with both faces drawn over less than 0.30 m is not in the wall run | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 1. Closed or corrected in this phase` (phase urban_m9_p2b9) |
 
 <a id="doors"></a>
 ## Doors (classes, openings, heights, feasibility)
@@ -181,17 +182,17 @@ L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_
 L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2a tests/m9_p2b2 tests/m9_kb tests/m9_s6 tests/m9_p2b0 tests/m9_s5 tests/m9_p2b3 tests/m9_s4 tests/m9_p2b5` + freeze check
 L4 full suite + freeze check (see above)
 
-**Known defects** (6 unresolved of 7):
+**Known defects** (4 unresolved of 7):
 
 | Id | Class | Reported status | Defect | Modules | Evidence (date) |
 |---|---|---|---|---|---|
-| D-C2 | VERIFIED_OPEN | open | leaf-closed doorways: threshold withheld; two leaf-closed pieces take their whole face | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 5. Still open from earlier phases` (phase urban_m9_p2b9) |
-| D-C2b | VERIFIED_OPEN | open | leaf-closed doorways: threshold withheld; two leaf-closed pieces take their whole face | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 5. Still open from earlier phases` (phase urban_m9_p2b9) |
-| D-C3 | VERIFIED_OPEN | open | a doorless cell merged into a wet room takes the wet scope silently | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 5. Still open from earlier phases` (phase urban_m9_p2b9) |
-| D-P8-05 | VERIFIED_OPEN | a face with a symbol-less gap has no independent check for plaster / paint / ti… | a face with a symbol-less gap has no independent check for plaster / paint / tile (skirting under unknown sills is now checked: P… | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 5. Still open from earlier phases` (phase urban_m9_p2b9) |
-| O-P8-01 | VERIFIED_OPEN | by design / input (door class by space type; ceiling type PROVISIONAL) | in the DRY_SCOPE scenario, a lobby's external door becomes a main-entrance candidate (the door class depends on the space type, U… | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 5. Still open from earlier phases` (phase urban_m9_p2b9) |
+| D-C3 | VERIFIED_OPEN | open: a doorless cell merged into a wet room takes the wet scope silently | a doorless cell merged into a wet room takes the wet scope silently | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 4. Still open from earlier phases (restated, unchanged in N10)` (phase urban_m9_n10) |
+| D-P8-05 | VERIFIED_OPEN | open: a face with a symbol-less gap has no independent check for plaster / pain… | open: a face with a symbol-less gap has no independent check for plaster / paint / tile | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 4. Still open from earlier phases (restated, unchanged in N10)` (phase urban_m9_n10) |
+| O-P8-01 | VERIFIED_OPEN | by design / input: door class by space type | in the DRY_SCOPE scenario, a lobby's external door becomes a main-entrance candidate (the door class depends on the space type, U… | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 4. Still open from earlier phases (restated, unchanged in N10)` (phase urban_m9_n10) |
+| D-V28-draft-01 | REGRESSION_RISK | fixed before release: edge by edge against the F-17 reading | **V2.8 draft** subtracted every window threshold from the certain skirting, though F-17 had already moved those edges to its rang… | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 2. Found in Phase 2B-9` (phase urban_m9_p2b9) |
 | B1 | HISTORICAL_UNVERIFIED | OPEN | Mirrored ARC sweep / bulge side (+8 other transform defects) | `engine/cad_adapter.py` | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-04) |
-| D-V28-draft-01 | VERIFIED_FIXED | fixed before release: edge by edge against the F-17 reading | **V2.8 draft** subtracted every window threshold from the certain skirting, though F-17 had already moved those edges to its rang… | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 2. Found in Phase 2B-9` (phase urban_m9_p2b9) |
+| D-C2 | VERIFIED_FIXED | open: leaf-closed doorways (threshold withheld) | leaf-closed doorways: threshold withheld; two leaf-closed pieces take their whole face | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 4. Still open from earlier phases (restated, unchanged in N10)` (phase urban_m9_n10) |
+| D-C2b | VERIFIED_FIXED | open: leaf-closed doorways (threshold withheld) | leaf-closed doorways: threshold withheld; two leaf-closed pieces take their whole face | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 4. Still open from earlier phases (restated, unchanged in N10)` (phase urban_m9_n10) |
 
 <a id="windows"></a>
 ## Windows, glazing, sills and opening schedules
@@ -218,19 +219,20 @@ L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_
 L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b9 tests/m9_s6 tests/m9_p2b0 tests/m9_p2a tests/m3_recovery tests/m6_completeness tests/m4_correctness` + freeze check
 L4 full suite + freeze check (see above)
 
-**Known defects** (6 unresolved of 9):
+**Known defects** (5 unresolved of 10):
 
 | Id | Class | Reported status | Defect | Modules | Evidence (date) |
 |---|---|---|---|---|---|
-| D-P8-05 | VERIFIED_OPEN | a face with a symbol-less gap has no independent check for plaster / paint / ti… | a face with a symbol-less gap has no independent check for plaster / paint / tile (skirting under unknown sills is now checked: P… | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 5. Still open from earlier phases` (phase urban_m9_p2b9) |
-| D-P9-01 | VERIFIED_OPEN | open: infer a WINDOW role for a glazing arc concentric with a wall arc pair (ne… | curved glazing alone, with no wall gap, is not read as a window: the room it bounds is not closed and is in no quantity | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 2. Found in Phase 2B-9` (phase urban_m9_p2b9) |
-| D-P9-02 | VERIFIED_OPEN | open: close a curved opening on the room face, as straight ones are | with roles declared, a curved window is closed at its glazing line: the floor and ceiling take the 0.438423 m² strip between the… | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 2. Found in Phase 2B-9` (phase urban_m9_p2b9) |
-| L-P9-01 | VERIFIED_OPEN | limitation (recorded) | a schedule sheet turned on the drawing is not read (SCHEDULE_HEADER_NOT_READ): openings held, nothing invented | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 3. Limitations recorded` (phase urban_m9_p2b9) |
-| L-P9-02 | VERIFIED_OPEN | limitation (recorded) | elevation views are read only for their level texts; window heights / sills are not read from elevation geometry (the reference p… | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 3. Limitations recorded` (phase urban_m9_p2b9) |
+| D-N10-01 | VERIFIED_OPEN | open: close a glazing-lined gap on the outline at the face line, or detect the… | the facade run walks the recess of a window that the opening census did not detect (glazing frame lines beside a column): the rec… | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 2. Found in Phase N10` (phase urban_m9_n10) |
+| D-P8-05 | VERIFIED_OPEN | open: a face with a symbol-less gap has no independent check for plaster / pain… | open: a face with a symbol-less gap has no independent check for plaster / paint / tile | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 4. Still open from earlier phases (restated, unchanged in N10)` (phase urban_m9_n10) |
+| L-P9-01 | VERIFIED_OPEN | limitation: a schedule sheet turned on the drawing is not read | a schedule sheet turned on the drawing is not read (SCHEDULE_HEADER_NOT_READ): openings held, nothing invented | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 4. Still open from earlier phases (restated, unchanged in N10)` (phase urban_m9_n10) |
+| L-P9-02 | VERIFIED_OPEN | limitation: elevation views are read for their level texts only | elevation views are read only for their level texts; window heights / sills are not read from elevation geometry (the reference p… | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 4. Still open from earlier phases (restated, unchanged in N10)` (phase urban_m9_n10) |
+| D-P8-06 | REGRESSION_RISK | fixed in V2.8 where the drawing gives the sill (schedule / annotation / note);… | skirting / wall tile at a window cannot be decided without the sill | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 1. Closed or corrected in this phase` (phase urban_m9_p2b9) |
+| D-V28-draft-01 | REGRESSION_RISK | fixed before release: edge by edge against the F-17 reading | **V2.8 draft** subtracted every window threshold from the certain skirting, though F-17 had already moved those edges to its rang… | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 2. Found in Phase 2B-9` (phase urban_m9_p2b9) |
+| D-V28-draft-03 | REGRESSION_RISK | fixed: neither height nor sill from such a row | **V2.8 draft** took the sill from a schedule row whose width is not the window's | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 2. Found in Phase 2B-9` (phase urban_m9_p2b9) |
 | B15 | HISTORICAL_UNVERIFIED | OPEN | Window heights mostly budget estimates | - | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-04) |
-| D-P8-06 | VERIFIED_FIXED | fixed in V2.8 where the drawing gives the sill (schedule / annotation / note);… | skirting / wall tile at a window cannot be decided without the sill | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 1. Closed or corrected in this phase` (phase urban_m9_p2b9) |
-| D-V28-draft-01 | VERIFIED_FIXED | fixed before release: edge by edge against the F-17 reading | **V2.8 draft** subtracted every window threshold from the certain skirting, though F-17 had already moved those edges to its rang… | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 2. Found in Phase 2B-9` (phase urban_m9_p2b9) |
-| D-V28-draft-03 | VERIFIED_FIXED | fixed: neither height nor sill from such a row | **V2.8 draft** took the sill from a schedule row whose width is not the window's | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 2. Found in Phase 2B-9` (phase urban_m9_p2b9) |
+| D-P9-01 | VERIFIED_FIXED | fixed in V2.9. A glazing layer is inferred only when all three hold: it is an O… | curved glazing alone, with no wall gap, is not read as a window: the room it bounds is not closed and is in no quantity | `tests/m9_n10/test_n10_curved_openings.py` | `research/urban_m9_n10/DEFECT_REGISTER.md § 1. Closed, corrected or addressed in this phase` (phase urban_m9_n10) |
+| D-P9-02 | VERIFIED_FIXED | fixed in V2.9 (UP-OPEN-CURVED-001). The opening is closed on both wall faces by… | with roles declared, a curved window is closed at its glazing line: the floor and ceiling take the 0.438423 m² strip between the… | `tests/m9_n10/test_n10_indep_curved.py` | `research/urban_m9_n10/DEFECT_REGISTER.md § 1. Closed, corrected or addressed in this phase` (phase urban_m9_n10) |
 
 <a id="finishes"></a>
 ## Finishes: plaster, paint, wall/floor tile, skirting, ceilings, heights
@@ -257,22 +259,23 @@ L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_
 L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b5 tests/m9_p2b7 tests/m9_n10 tests/m9_p2b8 tests/m9_p2b9 tests/m9_p2b3 tests/m9_s6 tests/m9_p2b0 tests/m9_p2a tests/m9_kb tests/m9_p2b2 tests/m9_s5` + freeze check
 L4 full suite + freeze check (see above)
 
-**Known defects** (6 unresolved of 12):
+**Known defects** (6 unresolved of 13):
 
 | Id | Class | Reported status | Defect | Modules | Evidence (date) |
 |---|---|---|---|---|---|
-| D-P8-05 | VERIFIED_OPEN | a face with a symbol-less gap has no independent check for plaster / paint / ti… | a face with a symbol-less gap has no independent check for plaster / paint / tile (skirting under unknown sills is now checked: P… | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 5. Still open from earlier phases` (phase urban_m9_p2b9) |
-| D-P9-02 | VERIFIED_OPEN | open: close a curved opening on the room face, as straight ones are | with roles declared, a curved window is closed at its glazing line: the floor and ceiling take the 0.438423 m² strip between the… | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 2. Found in Phase 2B-9` (phase urban_m9_p2b9) |
-| O-P8-02 | VERIFIED_OPEN | by design / input (door class by space type; ceiling type PROVISIONAL) | every ceiling line is PROVISIONAL (the ceiling type is not in a plan); a released invariant ceiling is still a provisional quanti… | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 5. Still open from earlier phases` (phase urban_m9_p2b9) |
+| D-P8-05 | VERIFIED_OPEN | open: a face with a symbol-less gap has no independent check for plaster / pain… | open: a face with a symbol-less gap has no independent check for plaster / paint / tile | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 4. Still open from earlier phases (restated, unchanged in N10)` (phase urban_m9_n10) |
+| L-N10-02 | VERIFIED_OPEN | limitation (recorded) | facade: set-back floors' exposed slab edges and parapets are not separate items; the plinth below the lowest F.F.L. and the exter… | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 3. Limitations recorded` (phase urban_m9_n10) |
+| O-P8-02 | VERIFIED_OPEN | by design / input: every ceiling line is PROVISIONAL (the ceiling type is not i… | by design / input: every ceiling line is PROVISIONAL (the ceiling type is not in a plan) | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 4. Still open from earlier phases (restated, unchanged in N10)` (phase urban_m9_n10) |
+| D-04 | REGRESSION_RISK | fixed in V2.8 where the drawing carries the evidence (sections, notes, schedule… | wall areas rest on synthetic heights | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 1. Closed or corrected in this phase` (phase urban_m9_p2b9) |
+| D-C5 | REGRESSION_RISK | fixed in V2.8 where the drawing carries the evidence (sections, notes, schedule… | wall areas rest on synthetic heights | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 1. Closed or corrected in this phase` (phase urban_m9_p2b9) |
+| D-P8-06 | REGRESSION_RISK | fixed in V2.8 where the drawing gives the sill (schedule / annotation / note);… | skirting / wall tile at a window cannot be decided without the sill | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 1. Closed or corrected in this phase` (phase urban_m9_p2b9) |
+| D-V28-draft-01 | REGRESSION_RISK | fixed before release: edge by edge against the F-17 reading | **V2.8 draft** subtracted every window threshold from the certain skirting, though F-17 had already moved those edges to its rang… | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 2. Found in Phase 2B-9` (phase urban_m9_p2b9) |
+| D-V28-draft-02 | REGRESSION_RISK | fixed | **V2.8 draft** asked for a wall-tile height in dry rooms and in wet rooms whose owner full height was already resolved | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 2. Found in Phase 2B-9` (phase urban_m9_p2b9) |
 | L-P7-04 | REGRESSION_RISK | fixed in V2.7.1 (UP-REVIEW-001): the invariant ceiling is released; the wall fa… | a space under wet review carried no finish line at all | - | `research/urban_m9_p2b8/REMAINING_DEFECT_REGISTER.md § Closed in Phase 2B-8` (phase urban_m9_p2b8) |
 | B12 (L-18) | HISTORICAL_UNVERIFIED | SUSPECTED | Skirting may run along void / railing edges | - | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-04) |
 | B16 | HISTORICAL_UNVERIFIED | OPEN | Boundary debt: engine imports research | `engine/plaster_trade_engine.py`, `engine/wall_treatment_engine.py` | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-04) |
 | B9 (L-17) | HISTORICAL_UNVERIFIED | OPEN | Wet rooms merged into dry zones; GARDEN inside a floor zone | - | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-04) |
-| D-04 | VERIFIED_FIXED | fixed in V2.8 where the drawing carries the evidence (sections, notes, schedule… | wall areas rest on synthetic heights | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 1. Closed or corrected in this phase` (phase urban_m9_p2b9) |
-| D-C5 | VERIFIED_FIXED | fixed in V2.8 where the drawing carries the evidence (sections, notes, schedule… | wall areas rest on synthetic heights | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 1. Closed or corrected in this phase` (phase urban_m9_p2b9) |
-| D-P8-06 | VERIFIED_FIXED | fixed in V2.8 where the drawing gives the sill (schedule / annotation / note);… | skirting / wall tile at a window cannot be decided without the sill | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 1. Closed or corrected in this phase` (phase urban_m9_p2b9) |
-| D-V28-draft-01 | VERIFIED_FIXED | fixed before release: edge by edge against the F-17 reading | **V2.8 draft** subtracted every window threshold from the certain skirting, though F-17 had already moved those edges to its rang… | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 2. Found in Phase 2B-9` (phase urban_m9_p2b9) |
-| D-V28-draft-02 | VERIFIED_FIXED | fixed | **V2.8 draft** asked for a wall-tile height in dry rooms and in wet rooms whose owner full height was already resolved | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 2. Found in Phase 2B-9` (phase urban_m9_p2b9) |
+| D-P9-02 | VERIFIED_FIXED | fixed in V2.9 (UP-OPEN-CURVED-001). The opening is closed on both wall faces by… | with roles declared, a curved window is closed at its glazing line: the floor and ceiling take the 0.438423 m² strip between the… | `tests/m9_n10/test_n10_indep_curved.py` | `research/urban_m9_n10/DEFECT_REGISTER.md § 1. Closed, corrected or addressed in this phase` (phase urban_m9_n10) |
 
 <a id="waterproofing"></a>
 ## Waterproofing (wet rooms, roof, membranes, upturns)
@@ -303,8 +306,8 @@ L4 full suite + freeze check (see above)
 
 | Id | Class | Reported status | Defect | Modules | Evidence (date) |
 |---|---|---|---|---|---|
-| D-16 | VERIFIED_OPEN | owner decisions | (no description in the registers; open the evidence) | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 5. Still open from earlier phases` (phase urban_m9_p2b9) |
-| D-17 | VERIFIED_OPEN | owner decisions | (no description in the registers; open the evidence) | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 5. Still open from earlier phases` (phase urban_m9_p2b9) |
+| D-16 | VERIFIED_OPEN | owner decisions (kitchen membrane, junction details) | (no description in the registers; open the evidence) | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 4. Still open from earlier phases (restated, unchanged in N10)` (phase urban_m9_n10) |
+| D-17 | VERIFIED_OPEN | owner decisions (kitchen membrane, junction details) | (no description in the registers; open the evidence) | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 4. Still open from earlier phases (restated, unchanged in N10)` (phase urban_m9_n10) |
 | B11 (L-2) | HISTORICAL_UNVERIFIED | OPEN | Roof WP mixes flat m² + upturn; wet-room WP split | - | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-04) |
 | B9 (L-17) | HISTORICAL_UNVERIFIED | OPEN | Wet rooms merged into dry zones; GARDEN inside a floor zone | - | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-04) |
 
@@ -364,12 +367,15 @@ L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/rc1
 L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/rc1 tests/slab_rebar_s7 tests/structural_s9 tests/structural_s9a tests/footing_rebar_s4 tests/ground_system_rebar_s5 tests/m9_s6 tests/m3_recovery tests/m6_completeness tests/m4_correctness tests/m7_reliability tests/m9_p2a` + freeze check
 L4 full suite + freeze check (see above)
 
-**Known defects** (10 unresolved of 10):
+**Known defects** (13 unresolved of 13):
 
 | Id | Class | Reported status | Defect | Modules | Evidence (date) |
 |---|---|---|---|---|---|
-| D-P6-03 | VERIFIED_OPEN | open | a drain of column size still needs a second source | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 5. Still open from earlier phases` (phase urban_m9_p2b9) |
-| L-P9-05 | VERIFIED_OPEN | limitation (recorded) | masonry by thickness stays BLOCKED: the block height (T.O.S. to soffit / beam) and the material are not read | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 3. Limitations recorded` (phase urban_m9_p2b9) |
+| D-N10-01 | VERIFIED_OPEN | open: close a glazing-lined gap on the outline at the face line, or detect the… | the facade run walks the recess of a window that the opening census did not detect (glazing frame lines beside a column): the rec… | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 2. Found in Phase N10` (phase urban_m9_n10) |
+| D-N10-04 | VERIFIED_OPEN | open: carry beam-column adjacency in the register | formwork column sides are an upper bound: which beams frame into each column is not in the route G register | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 2. Found in Phase N10` (phase urban_m9_n10) |
+| D-P6-03 | VERIFIED_OPEN | open: a drain of column size still needs a second source | a drain of column size still needs a second source | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 4. Still open from earlier phases (restated, unchanged in N10)` (phase urban_m9_n10) |
+| L-N10-02 | VERIFIED_OPEN | limitation (recorded) | facade: set-back floors' exposed slab edges and parapets are not separate items; the plinth below the lowest F.F.L. and the exter… | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 3. Limitations recorded` (phase urban_m9_n10) |
+| L-P9-05 | VERIFIED_OPEN | open, partly addressed in V2.9 (UP-MAS-HEIGHT-001). Panel area and volume by th… | masonry by thickness stays BLOCKED: the block height and the material are not read | `tests/m9_n10/test_n10_masonry.py` | `research/urban_m9_n10/DEFECT_REGISTER.md § 1. Closed, corrected or addressed in this phase` (phase urban_m9_n10) |
 | B14 | HISTORICAL_UNVERIFIED | OPEN | De-dup of identical slab labels may merge two layers | `engine/source/slab_rebar_binding.py` | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-04) |
 | B2 (D1) | HISTORICAL_UNVERIFIED | OPEN | Continuous beams CB1–13 carry no rebar; silent | `research/external_engine_lab/alsenan_phase_a3.py`, `research/external_engine_lab/alsenan_v3_structure.py` | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-04) |
 | B3 (D2) | HISTORICAL_UNVERIFIED | OPEN | Per-metre footing bars used as an absolute count | `research/external_engine_lab/alsenan_v3_structure.py` | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-04) |
@@ -401,10 +407,11 @@ L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/als
 L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/alsenan tests/slab_rebar_s7 tests/superstructure_beam_rebar_s6 tests/footing_rebar_s4 tests/ground_system_rebar_s5 tests/slab_rebar_pre_s7 tests/swimming_pool_s8_2 tests/ground_slab_s8_1 tests/pre_s4_footing_readiness tests/structural_comparison_engine tests/alsenan_structural_census tests/ground_slab_s8_1a` + freeze check
 L4 full suite + freeze check (see above)
 
-**Known defects** (7 unresolved of 7):
+**Known defects** (8 unresolved of 8):
 
 | Id | Class | Reported status | Defect | Modules | Evidence (date) |
 |---|---|---|---|---|---|
+| L-N10-04 | VERIFIED_OPEN | limitation (recorded) | `engine/source/struct_n10.py` writes its own files (FORMWORK.json, EXCAVATION.json, REBAR_AUDIT.json); its quantities are not yet… | `engine/source/struct_n10.py` | `research/urban_m9_n10/DEFECT_REGISTER.md § 3. Limitations recorded` (phase urban_m9_n10) |
 | B14 | HISTORICAL_UNVERIFIED | OPEN | De-dup of identical slab labels may merge two layers | `engine/source/slab_rebar_binding.py` | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-04) |
 | B2 (D1) | HISTORICAL_UNVERIFIED | OPEN | Continuous beams CB1–13 carry no rebar; silent | `research/external_engine_lab/alsenan_phase_a3.py`, `research/external_engine_lab/alsenan_v3_structure.py` | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-04) |
 | B20 | HISTORICAL_UNVERIFIED | OPEN | Hooks from unverified ACI edition | `engine/source/bbs_optimiser.py` | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-04) |
@@ -433,6 +440,13 @@ L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_
 L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_n10` + freeze check
 L4 full suite + freeze check (see above)
 
+**Known defects** (2 unresolved of 2):
+
+| Id | Class | Reported status | Defect | Modules | Evidence (date) |
+|---|---|---|---|---|---|
+| D-N10-04 | VERIFIED_OPEN | open: carry beam-column adjacency in the register | formwork column sides are an upper bound: which beams frame into each column is not in the route G register | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 2. Found in Phase N10` (phase urban_m9_n10) |
+| L-N10-04 | VERIFIED_OPEN | limitation (recorded) | `engine/source/struct_n10.py` writes its own files (FORMWORK.json, EXCAVATION.json, REBAR_AUDIT.json); its quantities are not yet… | `engine/source/struct_n10.py` | `research/urban_m9_n10/DEFECT_REGISTER.md § 3. Limitations recorded` (phase urban_m9_n10) |
+
 <a id="excavation"></a>
 ## Excavation and backfill
 
@@ -450,6 +464,13 @@ Risk **MEDIUM** (recommended validation L2). Ask about: excavation, excavate, ba
 L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_n10`
 L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_n10` + freeze check
 L4 full suite + freeze check (see above)
+
+**Known defects** (2 unresolved of 2):
+
+| Id | Class | Reported status | Defect | Modules | Evidence (date) |
+|---|---|---|---|---|---|
+| L-N10-03 | VERIFIED_OPEN | limitation (recorded) | excavation pits are not merged where neighbours overlap (pit positions are not in the register): a stated volume is an upper bound | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 3. Limitations recorded` (phase urban_m9_n10) |
+| L-N10-04 | VERIFIED_OPEN | limitation (recorded) | `engine/source/struct_n10.py` writes its own files (FORMWORK.json, EXCAVATION.json, REBAR_AUDIT.json); its quantities are not yet… | `engine/source/struct_n10.py` | `research/urban_m9_n10/DEFECT_REGISTER.md § 3. Limitations recorded` (phase urban_m9_n10) |
 
 <a id="boq_output"></a>
 ## BOQ lines, release model, reports and exports
@@ -480,16 +501,17 @@ L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_
 L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_foundation tests/m9_p2b5 tests/m9_p2b7 tests/m9_p2b0 tests/m9_p2b8 tests/m9_p2b9 tests/m9_s6 tests/m9_p2a tests/m9_p2b2 tests/m9_kb tests/m9_s5 tests/m9_p2b3` + freeze check
 L4 full suite + freeze check (see above)
 
-**Known defects** (5 unresolved of 6):
+**Known defects** (6 unresolved of 7):
 
 | Id | Class | Reported status | Defect | Modules | Evidence (date) |
 |---|---|---|---|---|---|
-| L-P8-01 | VERIFIED_OPEN | a WC-sized chair touching a back on the wall face reads as a WC outline: open (… | a WC-sized chair touching a back on the wall face reads as a WC outline: open (strict xfail) | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 5. Still open from earlier phases` (phase urban_m9_p2b9) |
-| O-P8-02 | VERIFIED_OPEN | by design / input (door class by space type; ceiling type PROVISIONAL) | every ceiling line is PROVISIONAL (the ceiling type is not in a plan); a released invariant ceiling is still a provisional quanti… | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 5. Still open from earlier phases` (phase urban_m9_p2b9) |
+| L-N10-01 | VERIFIED_OPEN | limitation (recorded) | a second exterior outline on a floor is reported as an RFI and never added (each reference-plan floor has a thin 10.84 m outline… | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 3. Limitations recorded` (phase urban_m9_n10) |
+| L-P8-01 | VERIFIED_OPEN | open (strict xfail): a WC-sized chair touching a back on the wall face reads as… | open (strict xfail): a WC-sized chair touching a back on the wall face reads as a WC outline | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 4. Still open from earlier phases (restated, unchanged in N10)` (phase urban_m9_n10) |
+| O-P8-02 | VERIFIED_OPEN | by design / input: every ceiling line is PROVISIONAL (the ceiling type is not i… | by design / input: every ceiling line is PROVISIONAL (the ceiling type is not in a plan) | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 4. Still open from earlier phases (restated, unchanged in N10)` (phase urban_m9_n10) |
+| D-V28-draft-02 | REGRESSION_RISK | fixed | **V2.8 draft** asked for a wall-tile height in dry rooms and in wet rooms whose owner full height was already resolved | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 2. Found in Phase 2B-9` (phase urban_m9_p2b9) |
 | B10 (L-1) | HISTORICAL_UNVERIFIED | OPEN | PARTIAL rows in the technical total, not labelled | `engine/source/release_model.py` | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-04) |
 | B13 | HISTORICAL_UNVERIFIED | OPEN | Evaluation map errors E1–E4 hid defects | `research/external_engine_lab/alsenan_v3b_evaluation.py` | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-04) |
 | B14 | HISTORICAL_UNVERIFIED | OPEN | De-dup of identical slab labels may merge two layers | `engine/source/slab_rebar_binding.py` | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-04) |
-| D-V28-draft-02 | VERIFIED_FIXED | fixed | **V2.8 draft** asked for a wall-tile height in dry rooms and in wet rooms whose owner full height was already resolved | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 2. Found in Phase 2B-9` (phase urban_m9_p2b9) |
 
 ## Defects not matched to a topic
 
@@ -498,9 +520,15 @@ Listed so none is hidden; add a defect term to a topic to route them.
 | Id | Class | Reported status | Defect | Evidence (date) |
 |---|---|---|---|---|
 | B18 | HISTORICAL_UNVERIFIED | OPEN | README / ARCHITECTURE docs stale | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-04) |
+| D-N10-00 | VERIFIED_FIXED | fixed (dec6766): the command lives in `tools/routing_topics.json` | the session guard failed at the baseline 504b56a: `tools/codemap.py` named the freeze verifier | `research/urban_m9_n10/DEFECT_REGISTER.md § 1. Closed, corrected or addressed in this phase` (phase urban_m9_n10) |
+| D-N10-02 | VERIFIED_OPEN | open: reader closures for wide glazed openings | the independent reader closes only 0.30 – 2.60 m wall gaps: a wider glazed opening leaks, so a floor with one cannot be read inde… | `research/urban_m9_n10/DEFECT_REGISTER.md § 2. Found in Phase N10` (phase urban_m9_n10) |
+| D-N10-draft-01 | VERIFIED_FIXED | fixed before commit: counted apart as line networks | **facade draft** counted networks made only of loose lines (zero plate) as exterior outlines | `research/urban_m9_n10/DEFECT_REGISTER.md § 2. Found in Phase N10` (phase urban_m9_n10) |
+| D-N10-draft-02 | VERIFIED_FIXED | fixed before commit (the ring now equals the perimeter on all three floors) | **facade draft** drew curved edges of the outline ring from the arc's own parameter as an absolute angle | `research/urban_m9_n10/DEFECT_REGISTER.md § 2. Found in Phase N10` (phase urban_m9_n10) |
+| D-N10-draft-03 | VERIFIED_FIXED | fixed before commit: faces inside the floor's plan region only; not established… | **verifier draft** compared the facade run against a reader face spanning all three floors | `research/urban_m9_n10/DEFECT_REGISTER.md § 2. Found in Phase N10` (phase urban_m9_n10) |
 | D-P8-01 | REGRESSION_RISK | fixed before release: the records continue the numbering | **V2.7.1 draft**: REVIEW_INVARIANT_RELEASE and TURNED_COLUMN records were appended after the ids were given (no id), and the summ… | `research/urban_m9_p2b8/REMAINING_DEFECT_REGISTER.md § Closed in Phase 2B-8` (phase urban_m9_p2b8) |
 | D-P8-04 | UNKNOWN | - | a space closed on one side by a line of a non-wall layer (1.256 m) cannot be verified independently: the wall lines alone do not… | `research/urban_m9_p2b8/REMAINING_DEFECT_REGISTER.md § Found in Phase 2B-8, still open` (phase urban_m9_p2b8) |
 | L-01 | HISTORICAL_UNVERIFIED | by design (safe) | a sheet frame turned with its plan is refused at admission | `research/urban_m9_p2b8/REMAINING_DEFECT_REGISTER.md § Still open from earlier phases` (phase urban_m9_p2b8) |
+| L-N10-05 | VERIFIED_OPEN | limitation (recorded) | a curved opening wider than half a turn, or one whose jamb lines are on a non-wall layer, is refused (listed with its reason, nev… | `research/urban_m9_n10/DEFECT_REGISTER.md § 3. Limitations recorded` (phase urban_m9_n10) |
 | L-P7-01 | REGRESSION_RISK | fixed in V2.7.1 (UP-WET-002 1.3.0): a pan-size circle centred on a wall cistern | the WC-shape rule missed a round bowl | `research/urban_m9_p2b8/REMAINING_DEFECT_REGISTER.md § Closed in Phase 2B-8` (phase urban_m9_p2b8) |
 | L-P7-02 | REGRESSION_RISK | fixed in V2.7.1 for a seat wider than a pan and for a free-standing chair: BOWL… | an armchair drawn with a WC outline passed the WC-shape rule | `research/urban_m9_p2b8/REMAINING_DEFECT_REGISTER.md § Closed in Phase 2B-8` (phase urban_m9_p2b8) |
 | L-P7-03 | REGRESSION_RISK | fixed in V2.7.1: matched by the decimal handle of every insert path | a basin block's own linework compared ids of two forms (ineffective exclusion) | `research/urban_m9_p2b8/REMAINING_DEFECT_REGISTER.md § Closed in Phase 2B-8` (phase urban_m9_p2b8) |

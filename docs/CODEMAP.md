@@ -18,7 +18,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 7 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2267 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2270 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
@@ -1051,6 +1051,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/urban_engine_m6_completeness/` | 30 |
 | `research/urban_engine_m7_reliability/` | 45 |
 | `research/urban_engine_m8_full_scope/` | 42 |
+| `research/urban_m9_n10/` | 3 |
 | `research/urban_m9_p2a/` | 4 |
 | `research/urban_m9_p2a_acceptance/` | 12 |
 | `research/urban_m9_p2b0/` | 10 |

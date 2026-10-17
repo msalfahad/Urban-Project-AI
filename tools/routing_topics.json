@@ -4,7 +4,8 @@
  "defect_sources": [
   "URBAN_PROJECTS_CLAUDE_HANDOFF.md#21. Known bugs",
   "research/urban_m9_p2b8/REMAINING_DEFECT_REGISTER.md",
-  "research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md"
+  "research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md",
+  "research/urban_m9_n10/DEFECT_REGISTER.md"
  ],
  "shared_threshold": 10,
  "topics": [
