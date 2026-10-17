@@ -2,12 +2,12 @@
 
 **Scope.** The work extends the Kuwait villa BOQ / QTO engine. Prices and Urban Projects Manager integration are excluded.
 
-**Time.** The program allowed ten hours. The commit timestamps show about **3 hours** of elapsed work:
+**Time.** The program allowed ten hours. The commit timestamps show about **3.5 hours** of elapsed work (19:55 → about 23:30 UTC):
 
 - baseline 504b56a at 19:55 UTC;
 - last engine change 9a52c34 at 22:13 UTC;
 - final code commit 24db651 at 22:56 UTC: a test-side declaration that fixes the one regression the first full suite found (D-N10-05);
-- deliverables after that.
+- deliverables, the second full suite (on 24db651) and the handoff ZIP after that, until about 23:30 UTC.
 
 **This is not a ten-hour result.** The resumable checkpoint is in `NEXT_PHASE_PLAN.md`.
 

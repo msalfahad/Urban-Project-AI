@@ -8,7 +8,7 @@
 - **Blind evaluation.** None was run.
 - **Accuracy.** The 95 % target is **not achieved and not claimed**.
 
-**Time.** About three hours of elapsed work, by the commit timestamps; not ten.
+**Time.** About three and a half hours of elapsed work by the commit timestamps (19:55 → about 23:30 UTC); not ten.
 
 ## Deliverables (program Part 14)
 

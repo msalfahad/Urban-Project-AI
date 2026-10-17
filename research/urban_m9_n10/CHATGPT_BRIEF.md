@@ -11,7 +11,7 @@
 - a separate structural formwork, excavation and rebar-audit tool;
 - registry 1.5.0.
 
-**Time.** The program allowed ten hours. About three hours of elapsed work are evidenced by the commit timestamps.
+**Time.** The program allowed ten hours. About three and a half hours of elapsed work are evidenced by the commit timestamps (19:55 → about 23:30 UTC), including a second full-suite run.
 
 ## What worked
 
