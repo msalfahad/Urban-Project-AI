@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1300" font-family="Arial" font-size="10">
+<rect width="760" height="1300" fill="white"/>
+<text x="20" y="24" font-size="14" font-weight="bold">IX-08 cutting plan (ARCH_TAKEOFF_V2.6, 10 roll(s))</text>
+<text x="20" y="40" fill="#555">each roll 1.00 m wide drawn to scale along its length; cuts across, rips along the roll (lanes), cross-cuts within a lane</text>
+<text x="20" y="109.0" font-weight="bold">roll 1</text>
+<rect x="70.0" y="70.0" width="640.0" height="70.0" fill="#6fa8dc" stroke="#444" stroke-width="0.6"/>
+<text x="72.0" y="80.0">S1.1</text>
+<text x="72.0" y="152.0" fill="#333">R1-1 10.00 m</text>
+<text x="20" y="223.0" font-weight="bold">roll 2</text>
+<rect x="70.0" y="184.0" width="640.0" height="70.0" fill="#6fa8dc" stroke="#444" stroke-width="0.6"/>
+<text x="72.0" y="194.0">S2.1</text>
+<text x="72.0" y="266.0" fill="#333">R2-1 10.00 m</text>
+<text x="20" y="337.0" font-weight="bold">roll 3</text>
+<rect x="70.0" y="298.0" width="640.0" height="70.0" fill="#6fa8dc" stroke="#444" stroke-width="0.6"/>
+<text x="72.0" y="308.0">S3.1</text>
+<text x="72.0" y="380.0" fill="#333">R3-1 10.00 m</text>
+<text x="20" y="451.0" font-weight="bold">roll 4</text>
+<rect x="70.0" y="412.0" width="640.0" height="70.0" fill="#6fa8dc" stroke="#444" stroke-width="0.6"/>
+<text x="72.0" y="422.0">S4.1</text>
+<text x="72.0" y="494.0" fill="#333">R4-1 10.00 m</text>
+<text x="20" y="565.0" font-weight="bold">roll 5</text>
+<rect x="70.0" y="526.0" width="640.0" height="70.0" fill="#6fa8dc" stroke="#444" stroke-width="0.6"/>
+<text x="72.0" y="536.0">S5.1</text>
+<text x="72.0" y="608.0" fill="#333">R5-1 10.00 m</text>
+<text x="20" y="679.0" font-weight="bold">roll 6</text>
+<rect x="70.0" y="640.0" width="640.0" height="70.0" fill="#6fa8dc" stroke="#444" stroke-width="0.6"/>
+<text x="72.0" y="650.0">S6.1</text>
+<text x="72.0" y="722.0" fill="#333">R6-1 10.00 m</text>
+<text x="20" y="793.0" font-weight="bold">roll 7</text>
+<rect x="70.0" y="754.0" width="640.0" height="42.0" fill="#6fa8dc" stroke="#444" stroke-width="0.6"/>
+<text x="72.0" y="764.0">S7.1</text>
+<rect x="70.0" y="796.0" width="512.0" height="21.0" fill="#e69138" stroke="#444" stroke-width="0.6"/>
+<text x="72.0" y="806.0">B1</text>
+<rect x="582.0" y="796.0" width="128.0" height="21.0" fill="#e69138" stroke="#444" stroke-width="0.6"/>
+<text x="584.0" y="806.0">B2</text>
+<rect x="70.0" y="817.0" width="640.0" height="7.0" fill="#e06666" stroke="#444" stroke-width="0.6"/>
+<text x="72.0" y="836.0" fill="#333">R7-1 10.00 m</text>
+<text x="20" y="907.0" font-weight="bold">roll 8</text>
+<rect x="70.0" y="868.0" width="476.2" height="21.0" fill="#e69138" stroke="#444" stroke-width="0.6"/>
+<text x="72.0" y="878.0">B4</text>
+<rect x="70.0" y="889.0" width="476.2" height="21.0" fill="#e69138" stroke="#444" stroke-width="0.6"/>
+<text x="72.0" y="899.0">B5</text>
+<rect x="70.0" y="910.0" width="474.9" height="21.0" fill="#e69138" stroke="#444" stroke-width="0.6"/>
+<text x="72.0" y="920.0">B6</text>
+<rect x="544.9" y="910.0" width="1.3" height="21.0" fill="#e06666" stroke="#444" stroke-width="0.6"/>
+<rect x="70.0" y="931.0" width="476.2" height="7.0" fill="#e06666" stroke="#444" stroke-width="0.6"/>
+<text x="72.0" y="950.0" fill="#333">R8-1 7.44 m</text>
+<rect x="546.2" y="868.0" width="134.4" height="70.0" fill="#6fa8dc" stroke="#444" stroke-width="0.6"/>
+<text x="548.2" y="878.0">S1.2</text>
+<text x="548.2" y="950.0" fill="#333">R8-2 2.10 m</text>
+<rect x="680.6" y="868" width="29.4" height="70" fill="#eeeeee" stroke="#999" stroke-dasharray="4,3"/><text x="683.6" y="903.0" fill="#777">stock 0.46 m</text>
+<text x="20" y="1021.0" font-weight="bold">roll 9</text>
+<rect x="70.0" y="982.0" width="134.4" height="70.0" fill="#6fa8dc" stroke="#444" stroke-width="0.6"/>
+<text x="72.0" y="992.0">S2.2</text>
+<text x="72.0" y="1064.0" fill="#333">R9-1 2.10 m</text>
+<rect x="204.4" y="982.0" width="134.4" height="70.0" fill="#6fa8dc" stroke="#444" stroke-width="0.6"/>
+<text x="206.4" y="992.0">S3.2</text>
+<text x="206.4" y="1064.0" fill="#333">R9-2 2.10 m</text>
+<rect x="338.8" y="982.0" width="134.4" height="70.0" fill="#6fa8dc" stroke="#444" stroke-width="0.6"/>
+<text x="340.8" y="992.0">S4.2</text>
+<text x="340.8" y="1064.0" fill="#333">R9-3 2.10 m</text>
+<rect x="473.2" y="982.0" width="134.4" height="70.0" fill="#6fa8dc" stroke="#444" stroke-width="0.6"/>
+<text x="475.2" y="992.0">S5.2</text>
+<text x="475.2" y="1064.0" fill="#333">R9-4 2.10 m</text>
+<rect x="607.6" y="982" width="102.4" height="70" fill="#eeeeee" stroke="#999" stroke-dasharray="4,3"/><text x="610.6" y="1017.0" fill="#777">stock 1.60 m</text>
+<text x="20" y="1135.0" font-weight="bold">roll 10</text>
+<rect x="70.0" y="1096.0" width="134.4" height="70.0" fill="#6fa8dc" stroke="#444" stroke-width="0.6"/>
+<text x="72.0" y="1106.0">S6.2</text>
+<text x="72.0" y="1178.0" fill="#333">R10-1 2.10 m</text>
+<rect x="204.4" y="1096.0" width="134.4" height="42.0" fill="#6fa8dc" stroke="#444" stroke-width="0.6"/>
+<text x="206.4" y="1106.0">S7.2</text>
+<rect x="204.4" y="1138.0" width="64.0" height="21.0" fill="#6aa84f" stroke="#444" stroke-width="0.6"/>
+<text x="206.4" y="1148.0">DW-D1</text>
+<rect x="268.4" y="1138.0" width="70.4" height="21.0" fill="#e69138" stroke="#444" stroke-width="0.6"/>
+<text x="270.4" y="1148.0">B3</text>
+<rect x="204.4" y="1159.0" width="134.4" height="7.0" fill="#e06666" stroke="#444" stroke-width="0.6"/>
+<text x="206.4" y="1178.0" fill="#333">R10-2 2.10 m</text>
+<rect x="338.8" y="1096" width="371.2" height="70" fill="#eeeeee" stroke="#999" stroke-dasharray="4,3"/><text x="341.8" y="1131.0" fill="#777">stock 5.80 m</text>
+<rect x="20" y="1201" width="14" height="10" fill="#6fa8dc" stroke="#444" stroke-width="0.5"/><text x="40" y="1210">floor piece</text>
+<rect x="240" y="1201" width="14" height="10" fill="#e69138" stroke="#444" stroke-width="0.5"/><text x="260" y="1210">band piece</text>
+<rect x="460" y="1201" width="14" height="10" fill="#6aa84f" stroke="#444" stroke-width="0.5"/><text x="480" y="1210">doorway piece</text>
+<rect x="20" y="1219" width="14" height="10" fill="#e06666" stroke="#444" stroke-width="0.5"/><text x="40" y="1228">TRUE_WASTE</text>
+<rect x="240" y="1219" width="14" height="10" fill="#ffe599" stroke="#444" stroke-width="0.5"/><text x="260" y="1228">REUSABLE_SUBJECT_TO_N7</text>
+<rect x="460" y="1219" width="14" height="10" fill="#eeeeee" stroke="#444" stroke-width="0.5"/><text x="480" y="1228">untouched roll stock</text>
+</svg>

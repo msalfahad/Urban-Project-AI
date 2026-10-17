@@ -222,5 +222,19 @@ def boundary(room, feats, tol=TOL_M):
             "rings": ring_out, "total_lm": round(sum(by_role.values()), 6)}
 
 
+def ring_segments(room, feats, tol=TOL_M):
+    """ARCH_TAKEOFF_V2.6: the typed segments of the outer ring and of every obstruction ring, as boundary() types
+    them (counter-clockwise rings; an untyped obstruction face is COLUMN). -> [{"ring", "segments"}]."""
+    out = []
+    rings = [("OUTER", _ccw(room.get("polygon_m") or ()))] + [("HOLE", _ccw(h))
+                                                               for h in room.get("hole_polygons_m") or ()]
+    for kind, ring in rings:
+        segs = segments(ring, feats, tol) if len(ring) >= 3 else []
+        if kind == "HOLE":
+            segs = [dict(s, role="COLUMN" if s["role"] == "OTHER" else s["role"]) for s in segs]
+        out.append({"ring": kind, "segments": segs})
+    return out
+
+
 def policy_record():
     return {"policy": "WP_GEOMETRY_V1", "priority": list(PRIORITY), "eligible": list(ELIGIBLE), "tolerance_m": TOL_M}

@@ -28,6 +28,7 @@ from __future__ import annotations
 import copy
 import math
 import re
+from collections import Counter
 
 from engine.source import knowledge as K
 from engine.source import material_spec as MS
@@ -37,6 +38,9 @@ POLICY_ID = "WATERPROOFING_SYSTEM_V1"
 METHOD = "MEMBRANE_POLYGON_STRIPS_V2_4"
 # ARCH_TAKEOFF_V2.5 (Phase 2B-3): the layout with membrane_layout's proven band planner (build_area(..., v25=True))
 METHOD_V25 = "MEMBRANE_POLYGON_STRIPS_V2_5"
+# ARCH_TAKEOFF_V2.6 (Phase 2B-5): the V2.5 layout with its trace and the installation layer of wp_install
+# (build_area(..., v26=True)); the quantities of the V2.5 layout are unchanged
+METHOD_V26 = "MEMBRANE_POLYGON_STRIPS_V2_6"
 TOL_M = 0.02
 WET, EXTERIOR = "WET", "EXTERIOR"
 DEFAULT_SYSTEM = {WET: "URBAN_DEFAULT_WET_AREA", EXTERIOR: "URBAN_DEFAULT_EXTERIOR"}
@@ -213,13 +217,15 @@ def transitions(area, basis):
 
 # ------------------------------------------------------------------------------------------------ areas
 def make_area(room, feats, *, scope, net_m2, continuation_pieces=(), doorways=(), beyond=None, ents=None,
-              unit_m=1.0, provisional_geometry=False, wp_floor_line_id=None, agg_eligible_lm=None, agg_glazing_lm=0.0):
+              unit_m=1.0, provisional_geometry=False, wp_floor_line_id=None, agg_eligible_lm=None, agg_glazing_lm=0.0,
+              keep_segments=False):
     """one waterproofed area: its boundary (wp_geometry.boundary) checked against the plan's own boundary roles
     (agg_eligible_lm: wall + column + sill-wall run of the room; agg_glazing_lm: its glazing-edge run), its doorways
     with what lies beyond them (WATERPROOFED / DRY / EXTERIOR / NOT_ESTABLISHED), its other breaks and its drawn
     penetrations. The segmentation agrees when it lies between the boundary roles' upturn and that plus their glazing
     edge: a window frame / sash line on the face of a recognised window is its sill threshold, not floor glazing.
-    room: {room_id, floor, name_en, codes, polygon_m, hole_polygons_m, polygon, hole_polygons (drawing units)}."""
+    room: {room_id, floor, name_en, codes, polygon_m, hole_polygons_m, polygon, hole_polygons (drawing units)}.
+    keep_segments (ARCH_TAKEOFF_V2.6): the typed ring segments are kept for the installation layer."""
     from engine.source import wp_geometry as WG
     bd = WG.boundary(room, feats)
     found_doors = {b["id"] for b in bd["breaks"] if b["role"] == "DOOR"}
@@ -252,20 +258,24 @@ def make_area(room, feats, *, scope, net_m2, continuation_pieces=(), doorways=()
         elig = agg_eligible_lm if agg_eligible_lm is not None else bd["eligible_lm"]
         bd = dict(bd, approximate=True, approximate_why="; ".join(why), eligible_lm=round(elig, 6),
                   runs=[{"length_m": round(elig, 6), "closed": not breaks and not doorways}], corners_unreliable=True)
-    return {"room_id": room["room_id"], "floor": room["floor"], "name_en": room.get("name_en"),
-            "name_ar": room.get("name_ar"), "codes": list(room.get("codes") or ()), "scope": scope,
-            "location_types": sorted(_location_types(room.get("codes"))), "net_m2": round(net_m2, 6),
-            "provisional_geometry": provisional_geometry, "wp_floor_line_id": wp_floor_line_id,
-            "polygon_m": [tuple(p) for p in room["polygon_m"]],
-            "hole_polygons_m": [[tuple(p) for p in h] for h in room.get("hole_polygons_m") or ()],
-            "boundary": bd, "continuation_pieces": [dict(p) for p in continuation_pieces],
-            "doorways": sorted(doorways, key=lambda d: str(d["opening_id"])), "breaks": breaks,
-            "penetrations": penetrations(room, ents or {}, unit_m)}
+    out = {"room_id": room["room_id"], "floor": room["floor"], "name_en": room.get("name_en"),
+           "name_ar": room.get("name_ar"), "codes": list(room.get("codes") or ()), "scope": scope,
+           "location_types": sorted(_location_types(room.get("codes"))), "net_m2": round(net_m2, 6),
+           "provisional_geometry": provisional_geometry, "wp_floor_line_id": wp_floor_line_id,
+           "polygon_m": [tuple(p) for p in room["polygon_m"]],
+           "hole_polygons_m": [[tuple(p) for p in h] for h in room.get("hole_polygons_m") or ()],
+           "boundary": bd, "continuation_pieces": [dict(p) for p in continuation_pieces],
+           "doorways": sorted(doorways, key=lambda d: str(d["opening_id"])), "breaks": breaks,
+           "penetrations": penetrations(room, ents or {}, unit_m)}
+    if keep_segments:                                           # ARCH_TAKEOFF_V2.6
+        out["ring_segments"] = WG.ring_segments(room, feats)
+    return out
 
 
-def areas_from_floor(S, M, ents, roles, unit_m, *, wp_room_ids):
+def areas_from_floor(S, M, ents, roles, unit_m, *, wp_room_ids, v26=False):
     """the waterproofed areas of one measured floor: every space with a FIN.WP.FLOOR quantity line (wet rooms of the
-    owner scope, balconies and roofs). wp_room_ids: every waterproofed room of the run (what lies beyond a doorway)."""
+    owner scope, balconies and roofs). wp_room_ids: every waterproofed room of the run (what lies beyond a doorway).
+    v26 (ARCH_TAKEOFF_V2.6): each area keeps its typed ring segments (make_area keep_segments)."""
     from engine.source import wp_geometry as WG
     by_room = {}
     for ln in M["lines"]:
@@ -297,7 +307,8 @@ def areas_from_floor(S, M, ents, roles, unit_m, *, wp_room_ids):
                              continuation_pieces=pieces, doorways=doorways, beyond=beyond, ents=ents, unit_m=unit_m,
                              provisional_geometry=fl["evidence_state"] == "PROVISIONAL",
                              wp_floor_line_id=fl["line_id"], agg_eligible_lm=agg,
-                             agg_glazing_lm=r.get("glazing_edge", 0.0) if r else 0.0))
+                             agg_glazing_lm=r.get("glazing_edge", 0.0) if r else 0.0,
+                             **({"keep_segments": True} if v26 else {})))
     return out
 
 
@@ -370,6 +381,11 @@ def room_layout(area, spec, c):
         cc["band_planner"], method = c["band_planner"], METHOD_V25
         if c.get("detail_pieces"):
             cc["detail_pieces"] = c["detail_pieces"]
+    if c.get("trace"):                                          # ARCH_TAKEOFF_V2.6: the plan as cut
+        cc["trace"], method = True, METHOD_V26
+        if c.get("junction_flange_m") is not None:
+            cc["junction_flange_m"] = c["junction_flange_m"]
+            sf["_band"] = h + c["junction_flange_m"]
     try:
         fl = ML._poly_floor(sf, spec)
         opts = [ML._one(sf, spec, cc, d, loc, geo, floor_fn=fl, method=method) for d in ("ALONG_X", "ALONG_Y")]
@@ -404,9 +420,13 @@ def _treatment_qty(tr, count):
     return {"pcs": count, "m2": None, "name": tr.get("name")}
 
 
-def build_area(area, resolver, *, v25=False):
+def build_area(area, resolver, *, v25=False, v26=False):
     """resolve the area's values, its transitions, corners and penetrations, its layout and its schedule row.
-    v25 (ARCH_TAKEOFF_V2.5): the layout uses membrane_layout's proven band planner (MIN_SEGMENT_V2_5)."""
+    v25 (ARCH_TAKEOFF_V2.5): the layout uses membrane_layout's proven band planner (MIN_SEGMENT_V2_5).
+    v26 (ARCH_TAKEOFF_V2.6): V2.5 plus the layout's trace and the installation layer (wp_install): the piece-level
+    cutting plan, the installation geometry and the floor-to-wall junction alternatives; the V2.5 quantities are
+    unchanged."""
+    v25 = v25 or v26
     t = target_of(area)
     spec, basis, sysinfo = system_spec(resolver, t, area["scope"])
     tr = transitions(area, basis)
@@ -473,10 +493,17 @@ def build_area(area, resolver, *, v25=False):
             concerns.append("WP_BAND_TOPOLOGY_APPROXIMATED: a resolved doorway detail on an area with more than one "
                             "boundary break is added as separate band runs (their joints to the wall upturn are not "
                             "lapped)")
+    if v26:
+        c["trace"] = True
     lay = room_layout(area, spec, c)
     area = dict(area, basis=basis, system=sysinfo, transitions=tr, withheld=withheld, layout=lay, details=details)
     if v25:
         area["v25"] = _v25_material_basis(area, spec, c, tr, runs)
+    if v26:
+        from engine.source import wp_install as WI
+        area["v26"] = WI.install(area, spec, c, lay, transitions=tr, topology_applied=topology is not None,
+                                 relayout=lambda j: room_layout(area, spec, dict(c, junction_flange_m=j,
+                                                                                 concerns=list(c["concerns"]))))
     area["row"] = area_schedule(area)
     return area
 
@@ -605,7 +632,40 @@ def area_schedule(area):
                       "UP-WP-DOOR-001", "UP-RULES-001"],
             "basis": {k: {"value": v["value"], "state": v["state"], "project_rule_ids": v["project_rule_ids"]}
                       for k, v in b.items()},
-            **(_v25_row(area) if area.get("v25") else {})}
+            **(_v25_row(area) if area.get("v25") else {}),
+            **(_v26_row(area) if area.get("v26") else {})}
+
+
+def _v26_row(area):
+    """ARCH_TAKEOFF_V2.6: the installation layer's summary on the schedule row. An open floor-to-wall junction keeps
+    the material requirement provisional (the V2.5 figure is one of its alternatives)."""
+    v = area["v26"]
+    if v["state"] != "COMPUTED":
+        return {"installation_state": v["state"], "installation_reason": v.get("reason")}
+    pp, inst, jun = v["piece_plan"], v["installation"], v["junction"]
+    st = area["v25"]["final_material_state"]
+    reasons = ["FLOOR_WALL_JUNCTION_UNRESOLVED (N-11 / P-1)"] if jun["state"] == "UNRESOLVED" else []
+    if st == "COMPLETE_BASIS" and reasons:
+        st = "PROVISIONAL_DETAILS_OPEN"
+    runs = inst.get("runs") or ()
+    lo = lambda k: min((r[k] for r in runs if r[k] is not None), default=None)                    # noqa: E731
+    best = [r["best_arrangement"] for r in runs if r.get("best_arrangement")]
+    bal = pp["balance"]
+    return {"final_material_state": st, "material_state_reasons": reasons, "installation_state": inst["state"],
+            "installation_flags": v["flags"], "true_waste_m2": bal["true_waste_m2"],
+            "reusable_offcuts_subject_to_n7_m2": bal["reusable_m2"], "roll_stock_m2": bal["roll_stock_m2"],
+            "band_joints": inst.get("band_joints"), "min_joint_corner_m": lo("min_joint_corner_m"),
+            "min_joint_seam_end_m": lo("min_joint_seam_end_m"),
+            "best_order_min_corner_m": min((b["min_corner_m"] for b in best if b["min_corner_m"] is not None),
+                                           default=None),
+            "best_order_min_seam_end_m": min((b["min_seam_end_m"] for b in best if b["min_seam_end_m"] is not None),
+                                             default=None),
+            "junction": {"state": jun["state"], "rolls_range": jun["rolls_range"],
+                         "changes_roll_count": jun["changes_roll_count"],
+                         "alternatives": [{k: a.get(k) for k in ("method", "flange_m", "rolls", "consumed_m2",
+                                                                 "seams")} for a in jun["alternatives"]]},
+            "roll_sensitivity_v26": {"doorway_details": (area["v25"].get("roll_sensitivity") or {}).get(
+                "changes_roll_count"), "floor_wall_junction": jun["changes_roll_count"]}}
 
 
 def _v25_row(area):
@@ -627,11 +687,12 @@ def _range(rs):
 
 
 # ------------------------------------------------------------------------------------------------ procurement
-def cutting_plan(areas, *, exact=False):
+def cutting_plan(areas, *, exact=False, cut_ids=False):
     """per membrane system (system id + roll + lap): every computed area's full-width pieces cut from shared rolls,
     first fit decreasing (deterministic). A roll remainder is reused only where the plan cuts a piece from it.
     exact (ARCH_TAKEOFF_V2.5): the fewest rolls for the same pieces (membrane_layout.pack_rolls: first fit decreasing
-    unless it misses the lower bound, then an exact search), the sharing conditions of each roll recorded."""
+    unless it misses the lower bound, then an exact search), the sharing conditions of each roll recorded.
+    cut_ids (ARCH_TAKEOFF_V2.6): each shared-roll piece names its cut in the area's piece plan (room:R<roll>-<k>)."""
     groups = {}
     for a in areas:
         lay = a["layout"]
@@ -654,7 +715,11 @@ def cutting_plan(areas, *, exact=False):
             for b_ in bins:
                 rolls.append({"roll": len(rolls) + 1, "pieces": [{"room_id": pieces[i][1],
                                                                   "length_m": round(pieces[i][0], 4),
-                                                                  "for": pieces[i][4]} for i in b_],
+                                                                  "for": pieces[i][4],
+                                                                  **({"cut_id": f"{pieces[i][1]}:R{pieces[i][2]}-"
+                                                                                f"{pieces[i][3] + 1}"}
+                                                                     if cut_ids else {})}
+                                                                 for i in b_],
                               "cut_m": round(sum(pieces[i][0] for i in b_), 6)})
         for ln, rid, rr, k, why in (() if exact else pieces):
             for roll in rolls:
@@ -710,6 +775,71 @@ def cutting_plan(areas, *, exact=False):
         if abs(bal) > 1e-6 or abs(sum(r["cut_m"] for r in rolls) * W - consumed) > 1e-4:
             raise WaterproofingError(f"cutting plan of {sid} does not balance")
     return out
+
+
+PIECE_COLUMNS = ("room_id", "floor", "id", "kind", "w_m", "l_m", "area_m2", "from", "roll", "destination", "class",
+                 "why")
+INSTALL_COLUMNS = ("room_id", "floor", "state", "direction", "rolls", "consumed_m2", "installed_m2", "true_waste_m2",
+                   "reusable_offcuts_subject_to_n7_m2", "roll_stock_m2", "band_joints", "min_joint_corner_m",
+                   "min_joint_seam_end_m", "joints_stacked_on_seam_ends", "best_order_min_corner_m",
+                   "best_order_min_seam_end_m", "jamb_junctions", "terminations", "corners_internal",
+                   "corners_external", "flange_over_seam_end", "doorway_lap_over_seam_end", "drains", "lay_order",
+                   "junction_state", "junction_rolls_range", "junction_changes_roll_count", "flags")
+
+
+def installation_outputs(areas):
+    """ARCH_TAKEOFF_V2.6: the installation layer of every area as outputs - the piece plans (MEMBRANE_PIECE_PLAN),
+    one CSV row per piece and offcut, the installation records and one summary row per area (WP_INSTALLATION)."""
+    plans, inst, prow, irow = [], [], [], []
+    flags = Counter()
+    for a in sorted(areas, key=lambda a: (a["floor"], a["room_id"])):
+        v = a.get("v26") or {"state": "BLOCKED", "reason": "NO_INSTALLATION_LAYER"}
+        key = {"room_id": a["room_id"], "floor": a["floor"]}
+        if v["state"] != "COMPUTED":
+            plans.append(dict(key, state=v["state"], reason=v.get("reason")))
+            inst.append(dict(key, state=v["state"], reason=v.get("reason")))
+            irow.append(dict(key, state=v["state"], flags=v.get("reason")))
+            continue
+        pp, ins, jun = v["piece_plan"], v["installation"], v["junction"]
+        plans.append(dict(key, state="COMPUTED", **pp))
+        inst.append(dict(key, state=ins["state"], installation=ins, junction=jun, flags=v["flags"]))
+        for x in pp["pieces"]:
+            prow.append(dict(key, id=x["id"], kind=x["kind"], w_m=x["w_m"], l_m=x["l_m"], area_m2=x["laid_m2"],
+                             **{"from": x["from"]}, roll=x["roll"], destination=x["destination"]))
+        for x in pp["offcuts"]:
+            prow.append(dict(key, id=x["id"], kind="OFFCUT", w_m=x["w_m"], l_m=x["l_m"], area_m2=x["area_m2"],
+                             **{"from": x["from"]}, roll=x["roll"], **{"class": x["class"]}, why=x["why"]))
+        r, lay = a["row"], a["layout"]
+        mlp = ins.get("multi_layer_points") or {}
+        runs = ins.get("runs") or ()
+        irow.append(dict(key, state=ins["state"], direction=(lay.get("layout") or {}).get("direction"),
+                         rolls=r["rolls_if_installed_alone"], consumed_m2=r["consumed_m2"],
+                         installed_m2=r["B_installed_m2"], true_waste_m2=r.get("true_waste_m2"),
+                         reusable_offcuts_subject_to_n7_m2=r.get("reusable_offcuts_subject_to_n7_m2"),
+                         roll_stock_m2=r.get("roll_stock_m2"), band_joints=ins.get("band_joints"),
+                         min_joint_corner_m=r.get("min_joint_corner_m"),
+                         min_joint_seam_end_m=r.get("min_joint_seam_end_m"),
+                         joints_stacked_on_seam_ends=sum(x["joints_stacked_on_seam_ends"] for x in runs),
+                         best_order_min_corner_m=r.get("best_order_min_corner_m"),
+                         best_order_min_seam_end_m=r.get("best_order_min_seam_end_m"),
+                         jamb_junctions=ins.get("jamb_junctions"), terminations=len(ins.get("terminations") or ()),
+                         corners_internal=(ins.get("corners") or {}).get("internal"),
+                         corners_external=(ins.get("corners") or {}).get("external"),
+                         flange_over_seam_end=mlp.get("flange_over_seam_end"),
+                         doorway_lap_over_seam_end=mlp.get("doorway_lap_over_seam_end"),
+                         drains=((ins.get("penetrations") or {}).get("drains") or {}).get("state"),
+                         lay_order=(ins.get("lay_order") or {}).get("state"), junction_state=jun["state"],
+                         junction_rolls_range=f"{jun['rolls_range'][0]} - {jun['rolls_range'][1]}",
+                         junction_changes_roll_count=jun["changes_roll_count"], flags="; ".join(v["flags"])))
+        flags.update(v["flags"])
+    summary = {"areas": len(plans), "computed": sum(1 for x in plans if x["state"] == "COMPUTED"),
+               "flags": dict(sorted(flags.items())),
+               "junction_unresolved": sum(1 for x in inst if (x.get("junction") or {}).get("state") == "UNRESOLVED"),
+               "junction_changes_roll_count": sum(1 for x in inst if (x.get("junction") or {}).get(
+                   "changes_roll_count")),
+               "never": "a detail selected by default, a product value invented, a quantity of the V2.5 layout "
+                        "changed"}
+    return {"piece_plans": plans, "installation": inst, "piece_rows": prow, "install_rows": irow, "summary": summary}
 
 
 def _gkey(g):

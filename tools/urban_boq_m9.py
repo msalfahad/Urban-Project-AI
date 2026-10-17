@@ -64,7 +64,7 @@ POLICY_ID = "URBAN_BOQ_M9_S1"
 ARCH_POLICY_ID = "URBAN_BOQ_M9_S2_ARCH"
 ARCH_POLICY_ID_V2 = "URBAN_BOQ_M9_S6_ARCH_V2"
 ARCH_METHODS = ("ARCH_TAKEOFF_V1", "ARCH_TAKEOFF_V2", "ARCH_TAKEOFF_V2.1", "ARCH_TAKEOFF_V2.2", "ARCH_TAKEOFF_V2.3",
-                "ARCH_TAKEOFF_V2.4", "ARCH_TAKEOFF_V2.5")
+                "ARCH_TAKEOFF_V2.4", "ARCH_TAKEOFF_V2.5", "ARCH_TAKEOFF_V2.6")
 # S6: ARCH_TAKEOFF_V2 = V1 + drawing admission (stop, exit 2, no BOQ on a fatal finding) + unit-relative geometric
 # tolerances + plan regions cut only along empty bands + floor-category and finish-surface completeness. V1 is
 # unchanged; --strict-admission puts the same admission in front of V1 (its outputs are V1's own).
@@ -102,6 +102,14 @@ ARCH_POLICY_ID_V24 = "URBAN_BOQ_M9_P2B2_ARCH_V2_4"
 # no earlier method reaches it (their call paths pass no v25 flag).
 V25 = "ARCH_TAKEOFF_V2.5"
 ARCH_POLICY_ID_V25 = "URBAN_BOQ_M9_P2B3_ARCH_V2_5"
+# Phase 2B-5: ARCH_TAKEOFF_V2.6 = ARCH_TAKEOFF_V2.5 + the waterproofing installation layer (engine.source.wp_install):
+# the piece-level cutting plan the engine actually cut (every cut, rip and cross-cut, each piece with its source and
+# destination, offcuts as real rectangles in classes), the band joints against corners and floor-seam ends, the doorway
+# jamb junctions, multi-layer points, penetration clearances, drains and lay order, and the floor-to-wall junction as
+# an open detail with its alternatives. The V2.5 quantities are unchanged. Opt-in only: no earlier method reaches it
+# (their call paths pass no v26 flag).
+V26 = "ARCH_TAKEOFF_V2.6"
+ARCH_POLICY_ID_V26 = "URBAN_BOQ_M9_P2B5_ARCH_V2_6"
 M9_DIR = "m9"
 CREATED = datetime(2026, 1, 1)
 
@@ -244,16 +252,18 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
               project_id=project_id, intake=intake, strict=strict, units=units, region_specs=region_specs,
               accept_xrefs=accept_xrefs, extra_documents=extra_documents, admission_findings=admission_findings,
               decisions=decisions)
-    if independent_checks is not None and method != V25:
-        raise SystemExit("--independent-checks (URBAN_INDEPENDENT_CHECKS_V1) needs --method ARCH_TAKEOFF_V2.5")
-    if method in (V24, V25):
+    if independent_checks is not None and method not in (V25, V26):
+        raise SystemExit("--independent-checks (URBAN_INDEPENDENT_CHECKS_V1) needs --method ARCH_TAKEOFF_V2.5 or "
+                         "ARCH_TAKEOFF_V2.6")
+    if method in (V24, V25, V26):
         from engine.source import knowledge as K
         with K.using("1.1.0"):
             return _arch_compute(drawing, project_rules=project_rules,
-                                 **({"independent_checks": independent_checks} if method == V25 else {}), **kw)
+                                 **({"independent_checks": independent_checks} if method in (V25, V26) else {}),
+                                 **kw)
     if project_rules is not None:
-        raise SystemExit("--project-rules (URBAN_PROJECT_RULES_V1) needs --method ARCH_TAKEOFF_V2.4 or "
-                         "ARCH_TAKEOFF_V2.5")
+        raise SystemExit("--project-rules (URBAN_PROJECT_RULES_V1) needs --method ARCH_TAKEOFF_V2.4, "
+                         "ARCH_TAKEOFF_V2.5 or ARCH_TAKEOFF_V2.6")
     return _arch_compute(drawing, **kw)
 
 
@@ -274,12 +284,13 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
     from tools import urban_intake as UI
     if method not in ARCH_METHODS:
         raise SystemExit(f"--method must be one of {ARCH_METHODS} (the architectural route is behind a versioned flag)")
-    v25 = method == V25                                       # ARCH_TAKEOFF_V2.4 plus the proven corrections
-    v24 = method in (V24, V25)                                # V2.3 plus the registry 1.1.0 and the project rules
-    v23 = method in (V23, V24, V25)                           # V2.3 is V2.2 plus the knowledge registry
-    v22 = method in (V22, V23, V24, V25)                      # V2.2 is V2.1 plus the Phase 2B-0 corrections
-    v21 = method in (V21, V22, V23, V24, V25)
-    v2 = method in (V2, V21, V22, V23, V24, V25)              # V2.1 is V2 plus the Phase 2A additions
+    v26 = method == V26                                       # ARCH_TAKEOFF_V2.5 plus the installation layer
+    v25 = method in (V25, V26)                                # ARCH_TAKEOFF_V2.4 plus the proven corrections
+    v24 = method in (V24, V25, V26)                           # V2.3 plus the registry 1.1.0 and the project rules
+    v23 = method in (V23, V24, V25, V26)                      # V2.3 is V2.2 plus the knowledge registry
+    v22 = method in (V22, V23, V24, V25, V26)                 # V2.2 is V2.1 plus the Phase 2B-0 corrections
+    v21 = method in (V21, V22, V23, V24, V25, V26)
+    v2 = method in (V2, V21, V22, V23, V24, V25, V26)         # V2.1 is V2 plus the Phase 2A additions
     admit = v2 or strict
     if not admit and (units or region_specs or accept_xrefs):
         raise SystemExit("--units / --region / --accept-missing-xref are reviewer inputs of the admission: use them "
@@ -564,7 +575,7 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
         lines, mats, unresolved, v24_out = _v24_stage(v24_floors, doors, lines, mats, unresolved, facts, decisions,
                                                       project_rules, pid, rev, docs, u,
                                                       **({"v25": True, "independent": independent_checks}
-                                                         if v25 else {}))
+                                                         if v25 else {}), **({"v26": True} if v26 else {}))
     by_room = {r["room_id"]: r for r in rooms}
     reg_of = {r["floor"]: r for r in regions}
     unresolved = [AM.flag(u_, drawing=path.name, region=reg_of.get(u_.get("floor")), room=by_room.get(u_.get("room_id")))
@@ -630,6 +641,11 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
             run.update(policy=ARCH_POLICY_ID_V25)
             run["v2_5"] = {"corrections": list(V25_CORRECTIONS), "drawing_binding": v24_out["drawing_binding"],
                            "traceability": v24_out["traceability"]["summary"]}
+        if v26:
+            from engine.source import wp_install as WI
+            run.update(policy=ARCH_POLICY_ID_V26)
+            run["policies"]["wp_install"] = WI.policy_record()
+            run["v2_6"] = {"corrections": list(V26_CORRECTIONS), "installation": v24_out["wp_install"]["summary"]}
     if admit:
         _finish_discovery(report, E, facts, regions, lines, coverage if v2 else None,
                           entity_checks={"column_evidence": column_ev, "door_symbols": arc_recs,
@@ -744,6 +760,20 @@ V25_CORRECTIONS = (
     "line)")
 
 
+V26_CORRECTIONS = (
+    "D-V26-01 the floor-to-wall junction is an open detail (UNRESOLVED) with its alternatives: separate upstand at "
+    "the plan's flange, the widest flange with the same rolls and the first that adds one, continuous fold "
+    "(rectangles); the material requirement stays provisional while it is open (F-01, F-09)",
+    "D-V26-02 the piece-level cutting plan the engine cut: every cut, rip and cross-cut, each piece with id, size, "
+    "source roll and destination; offcuts as real rectangles (the floor beyond a stepped wall included), classed "
+    "TRUE_WASTE / REUSABLE_SUBJECT_TO_N7; roll stock apart (F-02, F-07)",
+    "D-V26-03 band joints placed on their runs: distance to every corner and floor-seam end, JOINT_AT_CORNER / "
+    "JOINT_ON_SEAM_END, the best order of the same pieces; JOINT_OFFSET_UNVERIFIED without a product value (F-03)",
+    "D-V26-04 doorway jamb junctions named (BUTT_JOINT_OPEN, two per door), terminations at other breaks (F-04)",
+    "D-V26-05 multi-layer points, end-lap stagger, penetration clearances, drains (NOT_SHOWN when not drawn) and the "
+    "lay order from the drain (F-05, F-06, F-08)")
+
+
 def _v25_binding(doc, docs):
     """ARCH_TAKEOFF_V2.5 (O-8): a project rules file names the drawing it was written for (drawing_sha256); another
     drawing's file is refused; a file that names none is applied but flagged (PROJECT_RULES_NOT_BOUND)."""
@@ -762,7 +792,7 @@ def _v25_binding(doc, docs):
 
 
 def _v24_stage(floors, doors, lines, mats, unresolved, facts, decisions, project_rules, pid, rev, docs, u, v25=False,
-               independent=None):
+               independent=None, v26=False):
     """Phase 2B-2 (ARCH_TAKEOFF_V2.4): the Project Engineering Rules Sheet (project rules bound to the drawing's
     elements), then the quantities that depend on a rule value - the waterproofing system (the wet-room / exterior
     upturn, doorway transitions, terminations, penetrations, layouts, the cutting plan per membrane system), the door
@@ -792,9 +822,11 @@ def _v24_stage(floors, doors, lines, mats, unresolved, facts, decisions, project
     areas = []
     for f in floors:
         mf = dict(f["M"], lines=[ln for ln in lines if ln["location"].get("floor") == f["floor"]])
-        areas += WS.areas_from_floor(f["S"], mf, f["ents"], f["roles"], u, wp_room_ids=wp_ids)
-    built = [WS.build_area(a, resolver, **({"v25": True} if v25 else {})) for a in areas]
-    plans = WS.cutting_plan(built, **({"exact": True} if v25 else {}))
+        areas += WS.areas_from_floor(f["S"], mf, f["ents"], f["roles"], u, wp_room_ids=wp_ids,
+                                     **({"v26": True} if v26 else {}))
+    built = [WS.build_area(a, resolver, **({"v25": True} if v25 else {}), **({"v26": True} if v26 else {}))
+             for a in areas]
+    plans = WS.cutting_plan(built, **({"exact": True} if v25 else {}), **({"cut_ids": True} if v26 else {}))
     sched = WS.schedule(built, plans)
     wl, wu = WS.boq_lines(ctx, built, WS.wp_line)
     ids = {a["room_id"] for a in built}
@@ -837,6 +869,8 @@ def _v24_stage(floors, doors, lines, mats, unresolved, facts, decisions, project
                               "rules to the drawing revision (drawing_sha256)"})
         out["drawing_binding"] = binding
         out["traceability"] = TR.chain(lines, sheet, independent=independent)
+    if v26:
+        out["wp_install"] = WS.installation_outputs(built)
     return lines, mats, unresolved, out
 
 
@@ -847,6 +881,8 @@ def _v24_outputs(arch, out):
     arch["rules_sheet"] = out["rules_sheet"]
     if out.get("traceability") is not None:                     # ARCH_TAKEOFF_V2.5
         arch["traceability"] = out["traceability"]
+    if out.get("wp_install") is not None:                       # ARCH_TAKEOFF_V2.6
+        arch["wp_install"] = out["wp_install"]
     arch["waterproofing"] = out["waterproofing"]
     arch["door_feasibility"] = out["door_feasibility"]
     arch["approvals"] = {"policy": "APPROVALS_REQUIRED_V1", "items": out["approvals"],
@@ -926,7 +962,8 @@ def _v24_manifest(out, names, arch):
     of each file (a file without an embedded run record - CSV, BOQ lines, workbook, overlay - is bound here)."""
     import hashlib
     sh, k = arch["rules_sheet"], arch["run"]["v2_4"]["knowledge"]
-    return {"policy": "URBAN_OUTPUT_MANIFEST_V2_5" if arch["run"]["method"] == V25 else "URBAN_OUTPUT_MANIFEST_V2_4",
+    return {"policy": {V25: "URBAN_OUTPUT_MANIFEST_V2_5", V26: "URBAN_OUTPUT_MANIFEST_V2_6"}.get(
+                arch["run"]["method"], "URBAN_OUTPUT_MANIFEST_V2_4"),
             "method": arch["run"]["method"],
             "rules_sheet": {"schema": sh["schema"], "rules_sha256": sh["rules_sha256"],
                             "sheet_sha256": sh["sheet_sha256"], "invalidation": (sh.get("invalidation") or {})
@@ -1134,6 +1171,13 @@ def v21_files(arch):
         from engine.source import traceability as TR
         files["BOQ_TRACEABILITY.json"] = _j({"run": run, "traceability": arch["traceability"]})
         files["BOQ_TRACEABILITY.csv"] = _csv(arch["traceability"]["rows"], TR.CSV_COLUMNS)
+    if arch.get("wp_install") is not None:                      # ARCH_TAKEOFF_V2.6
+        from engine.source import waterproofing_system as WS
+        wi = arch["wp_install"]
+        files["MEMBRANE_PIECE_PLAN.json"] = _j({"run": run, "piece_plans": wi["piece_plans"]})
+        files["MEMBRANE_PIECE_PLAN.csv"] = _csv(wi["piece_rows"], WS.PIECE_COLUMNS)
+        files["WP_INSTALLATION.json"] = _j({"run": run, "installation": wi["installation"], "summary": wi["summary"]})
+        files["WP_INSTALLATION.csv"] = _csv(wi["install_rows"], WS.INSTALL_COLUMNS)
     if arch.get("rules_sheet") is not None:                     # ARCH_TAKEOFF_V2.4
         from engine.source import door_feasibility as DF
         from engine.source import project_rules as PRJ
@@ -1208,7 +1252,8 @@ PUBLISHED = ("BOQ_LINES.json", "BOQ_LINES.csv", "MATERIAL_RESULTS.json", "COVERA
              "DOOR_SCENARIOS.json", "DOOR_SCENARIOS.csv", "ELEVATOR_SCHEDULE.json", "OWNER_QUESTIONS.json",
              "BOQ_SCENARIOS.json", "PROJECT_RULES_SHEET.json", "PROJECT_RULES_SHEET.csv", "WATERPROOFING_SCHEDULE.json",
              "WATERPROOFING_SCHEDULE.csv", "MEMBRANE_CUTTING_PLAN.json", "DOOR_FEASIBILITY.json", "DOOR_FEASIBILITY.csv",
-             "APPROVALS_REQUIRED.json", "ENGINEERING_SUMMARY.json", "OUTPUT_MANIFEST.json")
+             "APPROVALS_REQUIRED.json", "ENGINEERING_SUMMARY.json", "OUTPUT_MANIFEST.json",
+             "MEMBRANE_PIECE_PLAN.json", "MEMBRANE_PIECE_PLAN.csv", "WP_INSTALLATION.json", "WP_INSTALLATION.csv")
 
 
 def _supersede(out):
@@ -1255,28 +1300,29 @@ def cmd_arch(a):
     facts = json.loads(Path(a.facts).read_text(encoding="utf-8")) if a.facts else None
     decisions = None
     if getattr(a, "decisions", None):
-        if a.method not in (V23, V24, V25):
+        if a.method not in (V23, V24, V25, V26):
             raise SystemExit("--decisions (project decisions, URBAN_PROJECT_DECISIONS_V1) needs --method "
-                             "ARCH_TAKEOFF_V2.3, ARCH_TAKEOFF_V2.4 or ARCH_TAKEOFF_V2.5")
+                             "ARCH_TAKEOFF_V2.3, ARCH_TAKEOFF_V2.4, ARCH_TAKEOFF_V2.5 or ARCH_TAKEOFF_V2.6")
         decisions = json.loads(Path(a.decisions).read_text(encoding="utf-8"))
         if decisions.get("schema") != "URBAN_PROJECT_DECISIONS_V1":
             raise SystemExit("--decisions: schema must be URBAN_PROJECT_DECISIONS_V1")
     project_rules = None
     if getattr(a, "project_rules", None):
-        if a.method not in (V24, V25):
-            raise SystemExit("--project-rules (URBAN_PROJECT_RULES_V1) needs --method ARCH_TAKEOFF_V2.4 or "
-                             "ARCH_TAKEOFF_V2.5")
+        if a.method not in (V24, V25, V26):
+            raise SystemExit("--project-rules (URBAN_PROJECT_RULES_V1) needs --method ARCH_TAKEOFF_V2.4, "
+                             "ARCH_TAKEOFF_V2.5 or ARCH_TAKEOFF_V2.6")
         project_rules = json.loads(Path(a.project_rules).read_text(encoding="utf-8"))
     independent_checks = None
     if getattr(a, "independent_checks", None):
-        if a.method != V25:
-            raise SystemExit("--independent-checks (URBAN_INDEPENDENT_CHECKS_V1) needs --method ARCH_TAKEOFF_V2.5")
+        if a.method not in (V25, V26):
+            raise SystemExit("--independent-checks (URBAN_INDEPENDENT_CHECKS_V1) needs --method ARCH_TAKEOFF_V2.5 or "
+                             "ARCH_TAKEOFF_V2.6")
         independent_checks = json.loads(Path(a.independent_checks).read_text(encoding="utf-8"))
     roles = _kv(a.layer_roles, "--layer-roles")
     refs = {k: float(v) for k, v in _kv(a.reference_areas, "--reference-areas").items()}
     out = Path(a.out)
     conversions = []
-    v2 = a.method in (V2, V21, V22, V23, V24, V25)
+    v2 = a.method in (V2, V21, V22, V23, V24, V25, V26)
     admit = v2 or a.strict_admission
     if not admit and (a.units or a.region or a.accept_missing_xref):
         raise SystemExit("--units / --region / --accept-missing-xref are reviewer inputs of the admission: use them "

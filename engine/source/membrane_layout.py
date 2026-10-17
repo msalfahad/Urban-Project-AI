@@ -27,6 +27,9 @@ Roll plan (constraints and spec values recorded in the result; nothing defaulted
     corners / penetrations   counted and flagged (CORNER_TREATMENT_NOT_SPECIFIED / PENETRATION_DETAIL_NOT_SPECIFIED)
               unless the selected system defines them: never quantified by a guess
     rolls     full-width segments first-fit into whole rolls; an untouched roll tail is PACKAGING SURPLUS, not waste
+    trace (constraints trace; ARCH_TAKEOFF_V2.6 only): the plan as cut - every segment, the lanes ripped from it and
+              every piece cut from them with its place (layout["trace"]); junction_flange_m (ARCH_TAKEOFF_V2.6 only)
+              sets the band's flange onto the floor membrane apart from the side lap. Without either key nothing changes
 
 Balance: rolls x roll area = net installed + overlap + cutting waste + reusable offcuts + packaging surplus.
 Never: a fixed waste percentage, net / roll area as the roll count, a lap below the spec minimum.
@@ -119,19 +122,60 @@ def _runs(X, Y, dws, within):
     return {"runs": [{"length_m": P - sum(d["width_m"] for d in dws), "closed": False}], "approximate": len(dws) > 1}
 
 
+class _Seg(tuple):
+    """ARCH_TAKEOFF_V2.6 trace: a (length, purpose) segment with its identity (sid), its floor place and its rip."""
+
+
+class _Lane(float):
+    """ARCH_TAKEOFF_V2.6 trace: a band lane - its length, the segment it is ripped from, its offset across the roll
+    width (y) and along the segment (off). Equal in value to the plain float the planner uses without the trace."""
+
+
+class _Piece(float):
+    """ARCH_TAKEOFF_V2.6 trace: a band piece - the length used (end lap included), its lane (src), its end lap."""
+
+
+def _lane(length, seg, y, off=0.0):
+    x = _Lane(length)
+    x.seg, x.y, x.off = seg, y, off
+    return x
+
+
+def _rest(x, used):
+    """what is left of lane x once a piece of length used is cut from its start (traced lanes keep their origin)."""
+    if isinstance(x, _Lane):
+        return _lane(x - used, x.seg, x.y, x.off + used)
+    return x - used
+
+
+def _piece(x, used, lap):
+    if isinstance(x, _Lane):
+        p = _Piece(used)
+        p.src, p.lap = x, lap
+        return p
+    return used
+
+
 class _Rolls:
-    def __init__(self, W, L):
+    def __init__(self, W, L, trace=False):
         self.W, self.L, self.used = W, L, []
+        self.trace, self.last, self.n = trace, None, 0
 
     def cut(self, length, purpose):
         """a full-width segment from the first roll with room for it (first fit), else a new roll."""
         if length > self.L + EPS:
             raise MembraneError(f"a segment of {length} m is longer than the roll")
+        x = (length, purpose)
+        if self.trace:                                              # ARCH_TAKEOFF_V2.6
+            self.n += 1
+            x = _Seg(x)
+            x.sid, x.place, x.rip = self.n, None, None
+            self.last = x
         for i, u in enumerate(self.used):
-            if self.L - sum(x[0] for x in u) >= length - EPS:
-                u.append((length, purpose))
+            if self.L - sum(y[0] for y in u) >= length - EPS:
+                u.append(x)
                 return i
-        self.used.append([(length, purpose)])
+        self.used.append([x])
         return len(self.used) - 1
 
     def records(self):
@@ -181,11 +225,14 @@ def _one(sf, spec, c, direction, loc, room, floor_fn=None, method=METHOD):
     W, L_r = spec["roll_width_m"], spec["roll_length_m"]
     side, end = spec["min_side_lap_m"], spec["min_end_lap_m"]
     h = c["upturn_h_m"]
-    b = h + side                                                    # band: upturn + lap onto the floor membrane
+    jf = c.get("junction_flange_m")                                 # ARCH_TAKEOFF_V2.6: the flange apart from the lap
+    flange = side if jf is None else jf
+    b = h + flange                                                  # band: upturn + lap onto the floor membrane
     min_re = c.get("min_reusable_m")
     L_s, D_c = (X, Y) if direction == "ALONG_X" else (Y, X)
-    rolls = _Rolls(W, L_r)
+    rolls = _Rolls(W, L_r, trace=bool(c.get("trace")))
     lanes, scrap, retained, laid = [], [], [], {"floor": 0.0, "doorway": 0.0, "upturn": 0.0}
+    dw_trace, det_trace = [], []                                    # ARCH_TAKEOFF_V2.6 trace
     concerns = list(sf["flags"])
     if b > W + EPS:
         raise MembraneError("the upturn band is wider than the roll")
@@ -199,8 +246,10 @@ def _one(sf, spec, c, direction, loc, room, floor_fn=None, method=METHOD):
     def lanes_from(w, ln, why):
         """a strip of width w and length ln, cut into band lanes; the residue is left over."""
         k = int(math.floor(w / b + EPS))
-        for _ in range(k):
-            lanes.append(ln)
+        for q in range(k):
+            lanes.append(ln if not rolls.trace else _lane(ln, rolls.last, W - w + q * b))
+        if rolls.trace:                                             # the last segment cut: lanes from W - w across
+            rolls.last.rip = (W - w, k)
         leftover(w - k * b, ln, why + " residue")
 
     # floor strips
@@ -233,11 +282,16 @@ def _one(sf, spec, c, direction, loc, room, floor_fn=None, method=METHOD):
         laid["doorway"] += pw * pl
         dw_pieces.append({"doorway": r["doorway"], "piece_m": [round(pw, 4), round(pl, 4)], "lap_lm": pw})
         if md <= b + EPS:
-            _band_piece(Md, md, lanes, rolls, leftover, k_lanes, b, f"doorway {r['doorway']}")
+            x = _band_piece(Md, md, lanes, rolls, leftover, k_lanes, b, f"doorway {r['doorway']}")
+            if rolls.trace:
+                dw_trace.append({"doorway": r["doorway"], "src": x, "length": Md, "width": md, "piece_m": (pw, pl)})
         elif md <= W + EPS:
             seg = Md if Md > W + EPS else md
             across = md if seg == Md else Md
             rolls.cut(seg, f"doorway {r['doorway']}")
+            if rolls.trace:
+                dw_trace.append({"doorway": r["doorway"], "seg": rolls.last, "length": seg, "width": across,
+                                 "piece_m": (pw, pl)})
             lanes_from(W - across, seg, f"doorway {r['doorway']} side")
         else:
             raise MembraneError("a doorway piece wider than the roll in both directions (splice it: S2)")
@@ -249,11 +303,16 @@ def _one(sf, spec, c, direction, loc, room, floor_fn=None, method=METHOD):
         laid["detailing"] = laid.get("detailing", 0.0) + n_ * a_ * b_
         if a_ <= b + EPS:                                          # narrower than a band lane: from the lanes
             for i in range(n_):
-                _band_piece(b_, a_, lanes, rolls, leftover, k_lanes, b, f"{dp['what']} {i + 1}")
+                x = _band_piece(b_, a_, lanes, rolls, leftover, k_lanes, b, f"{dp['what']} {i + 1}")
+                if rolls.trace:
+                    det_trace.append({"what": dp["what"], "src": x, "length": b_, "width": a_, "count": 1})
         elif a_ <= W + EPS:                                        # side by side across a full-width segment
             per = int(math.floor(W / a_ + EPS))
             for s_ in range(-(-n_ // per)):
                 rolls.cut(b_, dp["what"])
+                if rolls.trace:
+                    det_trace.append({"what": dp["what"], "seg": rolls.last, "length": b_, "width": a_,
+                                      "count": min(per, n_ - s_ * per)})
                 lanes_from(W - min(per, n_ - s_ * per) * a_, b_, f"{dp['what']} residue")
         else:
             raise MembraneError("a patch wider than the roll")
@@ -293,9 +352,9 @@ def _one(sf, spec, c, direction, loc, room, floor_fn=None, method=METHOD):
                 continue
             cover = min(ln - lap, remaining)
             used = cover + lap
-            band_pieces.append(used)
+            band_pieces.append(_piece(ln, used, lap))
             if ln - used > EPS:
-                lanes.append(ln - used)
+                lanes.append(_rest(ln, used))
             if lap > 0:
                 joints += 1
             remaining -= cover
@@ -306,7 +365,7 @@ def _one(sf, spec, c, direction, loc, room, floor_fn=None, method=METHOD):
         leftover(b, ln, "unused lane")
     runs = sf["runs"]["runs"]
     seams["upturn_end_laps"] = {"count": joints, "lap_m": end, "running_lm": round(joints * b, 6)}
-    seams["upturn_to_floor_lap"] = {"lap_m": side, "running_lm": round(sum(r["length_m"] for r in runs), 6)}
+    seams["upturn_to_floor_lap"] = {"lap_m": flange, "running_lm": round(sum(r["length_m"] for r in runs), 6)}
     seams["doorway_to_floor_lap"] = {"lap_m": side, "running_lm": round(sum(p["lap_lm"] for p in dw_pieces), 6)}
     # net, overlap, balance
     net = sum(r["net_m2"] for r in sf["rows"])
@@ -380,9 +439,11 @@ def _one(sf, spec, c, direction, loc, room, floor_fn=None, method=METHOD):
                                        "band; when that segment would open a roll, filling the largest open roll tail "
                                        "first is evaluated and kept if it gives fewer rolls (then fewer joints, then "
                                        "less membrane)"}
+    if rolls.trace:                                                # ARCH_TAKEOFF_V2.6
+        lay["trace"] = _trace_record(rolls, band_pieces, dw_trace, det_trace, b, flange)
     assumptions = [f"roll {W:g} x {L_r:g} m ({spec.get('spec_id')})", f"side lap {side:g} m ({(spec.get('lap_source') or {}).get('side')})",
                    f"end lap {end:g} m ({(spec.get('lap_source') or {}).get('end')})", f"upturn {h:g} m",
-                   f"upturn band laps {side:g} m onto the floor membrane (band width {b:g} m)",
+                   f"upturn band laps {flange:g} m onto the floor membrane (band width {b:g} m)",
                    f"doorway piece laps {side:g} m onto the floor membrane; jamb returns / water stop not modelled",
                    "the last floor strip is trimmed lengthwise; a trim at least one band wide is cut into band lanes",
                    f"doorway detail {c.get('doorway_detail', 'NOT_ESTABLISHED')}",
@@ -478,6 +539,9 @@ def _poly_floor(sf, spec):
                 pos = xa
                 for ln in lens:
                     rolls.cut(ln, f"floor strip {i + 1}")
+                    if rolls.trace:                         # ARCH_TAKEOFF_V2.6: the place in the strip frame
+                        rolls.last.place = {"strip": i + 1, "a0": pos, "c0": ya, "w": w, "interval": (xa, xb),
+                                            "theta": theta, "direction": direction}
                     if W - w > EPS:
                         trim = W - w
                         if trim >= (sf["_band"]) - EPS:
@@ -546,23 +610,70 @@ def _take_lane(lanes, need, lap, min_cover):
     return x
 
 
+def _trace_record(rolls, band_pieces, dw_trace, det_trace, b, flange):
+    """ARCH_TAKEOFF_V2.6: the plan as cut, as plain data - the segments in roll order (after any repack) with their
+    floor place and their rip into lanes; every band, doorway and detail piece with the segment it is cut from, its
+    offset across the roll width (y_m) and along the segment (off_m)."""
+    def r6(v):
+        return round(v, 6)
+    segs, known = [], set()
+    for r, u in enumerate(rolls.used, 1):
+        pos = 0.0
+        for k, s in enumerate(u, 1):
+            rec = {"sid": s.sid, "roll": r, "k": k, "at_m": r6(pos), "length_m": r6(s[0]), "for": s[1]}
+            if s.place:
+                p = s.place
+                rec["place"] = {"strip": p["strip"], "a0_m": r6(p["a0"]), "c0_m": r6(p["c0"]), "w_m": r6(p["w"]),
+                                "interval_m": [r6(p["interval"][0]), r6(p["interval"][1])],
+                                "theta_rad": p["theta"], "direction": p["direction"]}
+            if s.rip:
+                rec["rip"] = {"y0_m": r6(s.rip[0]), "lanes": s.rip[1]}
+            segs.append(rec)
+            known.add(s.sid)
+            pos += s[0]
+
+    def src(x):
+        if not isinstance(x, _Lane) or x.seg.sid not in known:
+            raise MembraneError("trace: a piece is cut from material outside the plan")
+        return {"sid": x.seg.sid, "from": "LANE", "y_m": r6(x.y), "off_m": r6(x.off)}
+
+    def cut_from(t):
+        if "seg" in t:                                             # side by side across the segment, from y = 0
+            if t["seg"].sid not in known:
+                raise MembraneError("trace: a piece is cut from material outside the plan")
+            return {"sid": t["seg"].sid, "from": "SEGMENT", "y_m": 0.0, "off_m": 0.0}
+        return src(t["src"])
+    band = [dict(src(p.src), seq=i + 1, length_m=r6(p), lap_m=r6(p.lap)) for i, p in enumerate(band_pieces)]
+    dws = [dict(cut_from(t), doorway=t["doorway"], length_m=r6(t["length"]), width_m=r6(t["width"]),
+                piece_m=[r6(t["piece_m"][0]), r6(t["piece_m"][1])]) for t in dw_trace]
+    dets = [dict(cut_from(t), what=t["what"], length_m=r6(t["length"]), width_m=r6(t["width"]), count=t["count"])
+            for t in det_trace]
+    return {"schema": "URBAN_MEMBRANE_TRACE_V1", "roll_width_m": rolls.W, "roll_length_m": rolls.L,
+            "band_width_m": r6(b), "junction_flange_m": r6(flange), "segments": segs, "band_pieces": band,
+            "doorway_pieces": dws, "detail_pieces": dets}
+
+
 def _band_piece(length, width, lanes, rolls, leftover, k_lanes, b, why):
-    """a narrow piece (width <= band width) from a lane; a new lane segment when none is long enough."""
+    """a narrow piece (width <= band width) from a lane; a new lane segment when none is long enough. -> the lane
+    the piece is cut from (the ARCH_TAKEOFF_V2.6 trace reads it; earlier callers ignore it)."""
     fit = [x for x in lanes if x >= length - EPS]
     if not fit:
         rolls.cut(length, why)
         # the segment gives k lanes of this length; one is used here, the others join the pool
-        for _ in range(k_lanes - 1):
-            lanes.append(length)
+        for q in range(1, k_lanes):
+            lanes.append(length if not rolls.trace else _lane(length, rolls.last, q * b))
+        if rolls.trace:
+            rolls.last.rip = (0.0, k_lanes)
         leftover(rolls.W - k_lanes * b, length, why + " residue")
-        x = length
+        x = length if not rolls.trace else _lane(length, rolls.last, 0.0)
     else:
         x = min(fit)
         lanes.remove(x)
     if b - width > EPS:
         leftover(b - width, length, why + " width trim")
     if x - length > EPS:
-        lanes.append(x - length)
+        lanes.append(_rest(x, length))
+    return x
 
 
 # ------------------------------------------------------------------------------------- ARCH_TAKEOFF_V2.5 band planner
@@ -580,9 +691,9 @@ def _fill_band(todo, lanes, end, b):
                 return pieces, joints, lanes, todo
             cover = min(ln - lap, rem)
             used = cover + lap
-            pieces.append(used)
+            pieces.append(_piece(ln, used, lap))
             if ln - used > EPS:
-                lanes.append(ln - used)
+                lanes.append(_rest(ln, used))
             joints += lap > 0
             rem -= cover
             started = True

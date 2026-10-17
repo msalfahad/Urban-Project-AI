@@ -973,6 +973,23 @@ def write(path, *, room_boq=None, structural_lines=(), census_rows=(), meta, cre
            ["MATERIAL SIZE", "UNIT", "UNITS CONSUMED", "MATERIAL M²", "WASTE M²", "REUSABLE OFFCUT M²",
             "PACKAGING SURPLUS M²", "PACKS (PER-ROOM SUM)", "PACKS (POOLED)", "NOTE"], prow,
            {c: "0.000" for c in (4, 5, 6, 7)})
+    if arch is not None and arch.get("wp_install") is not None:       # ARCH_TAKEOFF_V2.6 only
+        wi = arch["wp_install"]
+        cols = ("room_id", "floor", "id", "kind", "w_m", "l_m", "area_m2", "from", "roll", "destination", "class",
+                "why")
+        _table(wb, "WP PIECE PLAN", "ARCH_TAKEOFF_V2.6: every membrane piece and offcut of each area's cutting plan "
+               "(id, size, the cut it comes from, roll, destination; offcut class) - a site cutting list, not a BOQ "
+               "quantity; offcut reuse is the owner's N-7", [c.upper().replace("_", " ") for c in cols],
+               [[r.get(c) for c in cols] for r in wi["piece_rows"]], {5: "0.000", 6: "0.000", 7: "0.000"})
+        icols = ("room_id", "floor", "state", "rolls", "consumed_m2", "installed_m2", "true_waste_m2",
+                 "reusable_offcuts_subject_to_n7_m2", "band_joints", "min_joint_corner_m", "min_joint_seam_end_m",
+                 "best_order_min_corner_m", "best_order_min_seam_end_m", "jamb_junctions", "terminations",
+                 "flange_over_seam_end", "drains", "lay_order", "junction_state", "junction_rolls_range", "flags")
+        _table(wb, "WP INSTALLATION", "ARCH_TAKEOFF_V2.6: per area the installation inventory - band joints against "
+               "corners and floor-seam ends (as planned and in the best order of the same pieces), doorway jambs, "
+               "multi-layer points, drains and lay order, and the open floor-to-wall junction with its roll range",
+               [c.upper().replace("_", " ") for c in icols], [[r.get(c) for c in icols] for r in wi["install_rows"]],
+               {5: "0.000", 6: "0.000", 7: "0.000", 8: "0.000"})
     crow = [[c["floor"], c["room_id"], c["spec_id"], c["role"], c["layout"], c["net_m2"], c["full"], c["cut"],
              c["consumed"], c["material_consumed_m2"], c["reusable_offcuts_m2"], c["cutting_waste_m2"],
              (c["cutting_waste_pct"] or 0) / 100.0 if c["cutting_waste_pct"] is not None else None,
