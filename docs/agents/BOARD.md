@@ -36,3 +36,7 @@ From the 2026-10-17 BOQ engines study, which the owner supplied (see RESEARCH_LO
 7. Three-band confidence: commit, withhold with location (an owner question), or reject.
 8. Skirting = perimeter minus stated door widths, with the inputs recorded.
 9. DXF revision diff that flags affected BOQ lines (needed for the second villa).
+10. (scout 2026-10-17) Rebar: link every schedule value to (element, location, parameter) and hold it for review before tonnage (Li et al. 2026; T-009).
+11. (scout 2026-10-17) Rebar: bar-mark and count-expression parser tested on dxfstructure notation (`[1] - #12 L=2120`, `2*2#12-[4]`); own code only, GPL source (T-009).
+12. (scout 2026-10-17) Blockwork: sandbox test of pygeoops.centerline (BSD-3) on wall polygons as an independent wall-length check (T-007).
+13. (scout 2026-10-17) Blockwork / finishes: girth diagnostic, external girth - 4T vs engine external-wall centreline, per floor (K.C. Tang centre-line rules).
