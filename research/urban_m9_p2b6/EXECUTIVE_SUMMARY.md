@@ -9,6 +9,7 @@ The reported baseline was reproduced in full:
 | check | result |
 |---|---|
 | full suite, by test identity | 9 017 tests, 0 state changes |
+| final suite, at this program's commit | 9 040 tests: 23 new, all passing; 0 state changes; the same 345 + 32 private-data failures |
 | frozen outputs | 968 + 272 files byte-identical |
 | freeze verifier | 0 differing |
 | the five independently read real rooms | 8 of 66 checks failing |

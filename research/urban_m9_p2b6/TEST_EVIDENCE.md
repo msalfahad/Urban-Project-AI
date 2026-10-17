@@ -18,7 +18,7 @@ covers one plan.
 | run | tests | passed | failed | errors | skipped | xfailed |
 |---|---|---|---|---|---|---|
 | `5dc2753` (start, reproduced tonight; identical by test identity to `b9baa7b`) | 9 017 | 8 378 | 345 | 32 | 160 | 102 |
-| final commit of this program | see §2a | | | | | |
+| `566ee88` (final code commit of this program) | 9 040 | 8 401 | 345 | 32 | 160 | 102 |
 
 The 345 failures + 32 errors are the known private-data set: 26 earlier test files whose git-ignored datasets and
 workbooks are not in the repository. 375 of them are `FileNotFoundError`; the other 2 need a private inventory and a
@@ -27,7 +27,25 @@ called green.
 
 ### 2a. Final full suite
 
-Filled in after the final run (below).
+Run in a clean clone at `566ee88`, with its own `--basetemp`, in 22 min 24 s. pytest exits 1 because of the
+private-data failures above.
+
+The JUnit results were compared with the start run (`5dc2753`) **test by test, by identity**:
+
+| comparison | count |
+|---|---|
+| tests at the start / at the end | 9 017 / 9 040 |
+| new tests | 23 (all passing: the 23 tests of `tests/m9_p2b6`) |
+| removed tests | 0 |
+| passed → failed | 0 |
+| failed → passed | 0 |
+| any other state change | 0 |
+
+So every one of the 345 failures and 32 errors is the **same test** as at the start, failing for the same
+private-data reason. No existing test changed state. The full suite is **not** green, and this program does not
+claim it is.
+
+The commit that records this result changes only documents in this folder.
 
 ## 3. Frozen integrity (after every change of this program)
 

@@ -18,6 +18,8 @@ Everything reported by Phase 2B-5 was re-run, not copied:
 
 - **Full suite.** 9 017 tests, identical to the previous head by test identity. The 345 failures + 32 errors are all
   private datasets that are not in the repository. The suite is not called green.
+- **Final suite, at this program's commit.** 9 040 tests: the 23 new tests all pass, and none of the 9 017
+  existing tests changed state. The same 345 + 32 private-data failures remain.
 - **Frozen outputs.** 968 V1 - V2.5 files and 272 V2.6 files, byte-identical.
 - **Freeze verifier.** 0 differing; environment in lock.
 - **Real rooms.** The five independently read rooms: 8 of 66 checks failing, as reported.
