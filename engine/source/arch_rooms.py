@@ -54,6 +54,17 @@ THIN_LIMIT_M = 0.45            # 2A/P below this: a face in the wall thickness (
 MIN_SPACE_M2 = 1.0
 HINGE_AT_GAP_M = 0.30
 DOOR_LEAF_FIT_M = 0.15         # a door leaf (swing radius) fits its opening within this (or 25 % of the width)
+# ARCH_TAKEOFF_V2.6 door-fit review (match_swings_review): a swing the strict fit leaves free, whose hinge stands
+# within HINGE_REVIEW_M of a jamb or whose leaf is at least LEAF_REVIEW_MIN_SHARE of the opening, makes the
+# opening a door HELD for review (never released); a free swing near a passage beyond that is only noted
+HINGE_REVIEW_M = 0.45
+LEAF_REVIEW_MIN_SHARE = 0.60
+SWING_NOTE_REACH_M = 1.0
+# ARCH_TAKEOFF_V2.6 (closure_in_passage): a door leaf whose leaf-ray closure lies in a passage's gap - parallel to the
+# wall within CLOSURE_PARALLEL_DEG, its middle between the jambs and within CLOSURE_BAND_M of the wall band - is
+# that passage's door, drawn a second way; the opening becomes a DOOR held for review with both widths
+CLOSURE_PARALLEL_DEG = 2.0
+CLOSURE_BAND_M = 0.05
 DRY, WET, SERVICE, CIRCULATION, STAIR, SHAFT, VOID, EXTERIOR = ("DRY", "WET", "SERVICE", "CIRCULATION", "STAIR",
                                                                 "SHAFT", "VOID", "EXTERIOR")
 # (code, English, Arabic, kind, patterns) - most specific first; patterns on the normalized upper-case text
@@ -251,6 +262,80 @@ def match_swings(ops, swings, unit_m):
         used_w[oid] = used_w.get(oid, 0.0) + r
         taken.add(occ)
     return out
+
+
+def match_swings_review(ops, swings, unit_m, served):
+    """ARCH_TAKEOFF_V2.6 (Phase 2B-5 D-C1): a second, review-only fit for the passages match_swings left without a
+    door and the idle swings (left free by match_swings AND closing no wall-to-wall gap by their leaf - the caller
+    selects both). One single leaf per opening, the same tests as match_swings except two:
+        - the hinge may stand up to HINGE_REVIEW_M from a jamb (strict HINGE_AT_GAP_M)
+        - the leaf may be as narrow as LEAF_REVIEW_MIN_SHARE of the opening (strict: within DOOR_LEAF_FIT_M or 25 %)
+    -> ({opening_id: (swing occ, why)}, {opening_id: note}). The why names every relaxed test with its value; the
+    caller holds such a door from every released total. A free swing whose hinge stands within SWING_NOTE_REACH_M of
+    a still unmatched opening, beyond these limits, gives only a note (the symbol is drawn off its opening)."""
+    T, TR = HINGE_AT_GAP_M / unit_m, HINGE_REVIEW_M / unit_m
+    fit, reach = DOOR_LEAF_FIT_M / unit_m, SWING_NOTE_REACH_M / unit_m
+    used = {occ for v in served.values() for occ in v}
+    free = {k: v for k, v in swings.items() if k not in used}         # the caller passes the idle swings only
+    cands, near = [], {}
+    for o in ops:
+        if o["opening_id"] in served:
+            continue
+        w = o["s1"] - o["s0"]
+        om, half_t = (o["o0"] + o["o1"]) / 2, abs(o["o1"] - o["o0"]) / 2
+        for occ, sw in free.items():
+            sh, oh = _frame(o, sw["hinge"])
+            if abs(oh - om) > half_t + T:
+                continue
+            dj = min(abs(sh - o["s0"]), abs(sh - o["s1"]))
+            r = sw["radius"]
+            fails = []
+            if dj > TR:
+                fails.append(f"hinge {dj * unit_m:.3f} m from the nearest jamb (review limit {HINGE_REVIEW_M:.2f} m)")
+            if r > w + fit:
+                fails.append(f"leaf {r * unit_m:.3f} m wider than the {w * unit_m:.3f} m opening")
+            elif r < LEAF_REVIEW_MIN_SHARE * w:
+                fails.append(f"leaf {r * unit_m:.3f} m under {100 * LEAF_REVIEW_MIN_SHARE:.0f} % of the "
+                             f"{w * unit_m:.3f} m opening")
+            far = o["s1"] if abs(sh - o["s0"]) <= abs(sh - o["s1"]) else o["s0"]
+            miss = None
+            for e in sw["ends"]:
+                se, oe = _frame(o, e)
+                if abs(oe - om) > half_t + T or abs(se - sh) < 0.7 * r:
+                    continue
+                m = min(abs(se - far), abs(se - (o["s0"] + o["s1"]) / 2))
+                miss = m if miss is None else min(miss, m)
+            if miss is None:
+                fails.append("the closed leaf does not lie along the opening's wall line")
+            if fails:
+                if dj <= reach:
+                    near.setdefault(o["opening_id"], []).append((dj, occ, r, "; ".join(fails)))
+                continue
+            why = []
+            if dj > T:
+                why.append(f"hinge {dj * unit_m:.3f} m from the jamb (strict {HINGE_AT_GAP_M:.2f} m)")
+            if abs(r - w) > max(fit, 0.25 * w):
+                why.append(f"leaf {r * unit_m:.3f} m = {100 * r / w:.0f} % of the {w * unit_m:.3f} m opening (strict: "
+                           f"within {DOOR_LEAF_FIT_M:.2f} m or 25 %)")
+            if why:                                       # no relaxed test: a strict fit, match_swings' to take
+                cands.append((dj + miss, o["opening_id"], occ, "; ".join(why)))
+    cands.sort(key=lambda c: (c[0], c[1], c[2]))
+    out, taken = {}, set()
+    for _score, oid, occ, why in cands:
+        if oid in out or occ in taken:
+            continue
+        out[oid] = (occ, why)
+        taken.add(occ)
+    notes = {}
+    for oid, lst in near.items():
+        if oid in out:
+            continue
+        lst = sorted(x for x in lst if x[1] not in taken)
+        if lst:
+            dj, occ, r, fails = lst[0]
+            notes[oid] = {"swing": occ, "hinge_from_jamb_m": round(dj * unit_m, 3), "leaf_m": round(r * unit_m, 3),
+                          "why_not_a_door": fails + " - the symbol is drawn off this opening; a reviewer decides"}
+    return out, notes
 
 
 OPEN_MARK_TOL_M = 0.02
@@ -851,10 +936,42 @@ def _apply_zones(out, plan, rec, by_line):
     return True
 
 
-def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, release_safety=False):
+def closure_in_passage(seg, passages, unit_m, fit_m=DOOR_LEAF_FIT_M):
+    """ARCH_TAKEOFF_V2.6 (Phase 2B-5 D-C1): the passage whose gap holds the leaf-ray closure seg (x0, y0, x1, y1):
+    parallel to its wall line within CLOSURE_PARALLEL_DEG, the middle between its jambs (along) and within
+    CLOSURE_BAND_M of its wall band (across), no longer than the gap + fit_m; the nearest to the gap centre.
+    -> (opening, closure length in drawing units) or None. A closure on another wall (a door into a room beyond the
+    passage) is never taken: the angle or the band test fails."""
+    x0, y0, x1, y1 = seg[:4]
+    L = math.dist((x0, y0), (x1, y1))
+    if L <= 0:
+        return None
+    mid = ((x0 + x1) / 2, (y0 + y1) / 2)
+    band, fit = CLOSURE_BAND_M / unit_m, fit_m / unit_m
+    best = None
+    for o in passages:
+        (ux, uy) = o["u"]
+        ang = abs(((math.degrees(math.atan2(y1 - y0, x1 - x0)) - math.degrees(math.atan2(uy, ux)) + 90) % 180) - 90)
+        sm, om = _frame(o, mid)
+        lo, hi = min(o["o0"], o["o1"]), max(o["o0"], o["o1"])
+        if ang > CLOSURE_PARALLEL_DEG or not o["s0"] <= sm <= o["s1"] or not lo - band <= om <= hi + band or \
+                L > o["s1"] - o["s0"] + fit:
+            continue
+        d = abs(sm - (o["s0"] + o["s1"]) / 2) + abs(om - (lo + hi) / 2)
+        if best is None or d < best[0]:
+            best = (d, o)
+    return (best[1], L) if best else None
+
+
+def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, release_safety=False,
+           door_review=False):
     """geom (ARCH_TAKEOFF_V2.1 only): an engine.source.robust_geometry.Geometry for the band openings; None is the
     V1 / V2 path, unchanged. release_safety (ARCH_TAKEOFF_V2.2 only): every face also carries its boundary_detail
-    (engine.source.release_safety); False is the V1 / V2 / V2.1 path, unchanged."""
+    (engine.source.release_safety); False is the V1 / V2 / V2.1 path, unchanged. door_review (ARCH_TAKEOFF_V2.6
+    only): after the leaf-ray closures, match_swings_review (the swings closing no gap) and closure_in_passage (a
+    leaf closure lying in a passage's gap) - an opening either takes is a DOOR carrying door_fit_review (held from
+    released totals by door_model), its swing's closure is dropped; a passage near an idle swing carries
+    door_symbol_note; False is unchanged."""
     eps = 0.5e-3 / unit_m
     wall_l = sorted(l for l, r in roles.items() if r == AP.WALL)
     col_l = {l for l, r in roles.items() if r == AP.COLUMN}
@@ -918,6 +1035,46 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, re
               for c in caps]
     free = {k: v for k, v in swings.items() if k not in used_swings}
     closures, cstatus = TP.opening_closures(free, items + [t for _, t in thr_items], eps) if free else ([], {})
+    if door_review:
+        # ARCH_TAKEOFF_V2.6: only a swing whose leaf closes no gap (its leaf-ray closure is not CLOSED) is offered to
+        # the review fit, and only a passage takes it - a swing closing its own wall-to-wall doorway keeps it
+        idle = {k: v for k, v in free.items() if (cstatus.get(k) or {}).get("state") != "CLOSED"}
+        passages = [o for o in ops if o["kind"] == "PASSAGE"]
+        review, notes = match_swings_review(passages, idle, unit_m, served)
+        # a leaf-closed swing whose closure lies in a passage's gap: one opening drawn two ways
+        geo = {c.source_id: c.geometry for c in closures}
+        taken = {occ for occ, _ in review.values()}
+        for occ in sorted(free):
+            st = cstatus.get(occ) or {}
+            g = geo.get(st.get("closure_a")) if st.get("state") == "CLOSED" else None
+            hit = closure_in_passage(g, [o for o in passages if o["opening_id"] not in review], unit_m) \
+                if g is not None and occ not in taken else None
+            if hit:
+                o, L = hit
+                w = o["s1"] - o["s0"]
+                review[o["opening_id"]] = (occ, f"the door leaf closes {L * unit_m:.3f} m inside this "
+                                                f"{w * unit_m:.3f} m band opening: one opening drawn two ways (jamb to "
+                                                f"jamb {w * unit_m:.3f} m, leaf closure {L * unit_m:.3f} m)")
+                taken.add(occ)
+        by_op = {o["opening_id"]: o for o in ops}
+        if review:
+            for oid, (occ, why) in review.items():
+                by_op[oid].update(kind="DOOR", door_symbol=occ, glazing_m=0.0, door_fit_review=why)
+                by_op[oid].pop("marks", None)
+                served[oid] = [occ]
+            for t in thresholds:
+                if t["opening_id"] in review:
+                    t["kind"] = "DOOR"
+            thr_items = [(t["opening_id"], TP.BoundaryItem(t["id"], "SEGMENT", (t["a"][0], t["a"][1], t["b"][0],
+                                                                                t["b"][1]), role_of_thr[t["kind"]]))
+                         for t in thresholds]
+            used_swings = {occ for v in served.values() for occ in v}
+            free = {k: v for k, v in swings.items() if k not in used_swings}
+            closures, cstatus = TP.opening_closures(free, items + [t for _, t in thr_items], eps) if free else \
+                ([], {})
+        for oid, note in notes.items():
+            if by_op[oid]["kind"] == "PASSAGE":
+                by_op[oid]["door_symbol_note"] = note
     closures = [TP.BoundaryItem(c.source_id, c.kind, c.geometry, "DOOR_CLOSURE", c.derived_from) for c in closures]
     closures += closures_b(closures, ents, wall_l, unit_m)
     if not items:

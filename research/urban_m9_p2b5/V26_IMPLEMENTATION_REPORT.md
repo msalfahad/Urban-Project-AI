@@ -160,3 +160,19 @@ pass; none skipped, none failed. The full repository suite is re-run in Stage I.
 and above is the audit planner's least-membrane plan, not what the V2.5 planner produces at that flange (F-13). The
 roll counts and F-09's conclusion (a flange of 0.16 m or more adds a roll) stand. The membrane figures should read
 19.25 m2 (0.14 - 0.15 m) and 21.10 m2 (0.16 m) for the engine's own plans.
+
+## 10. Addendum (Stage D): D-V26-06 door symbol reconciliation
+
+V2.6 gains one more opt-in correction, from the real-room finding D-C1 (`REAL_ROOM_VERIFICATION.md` §7). It is the
+only V2.6 change that can move a BOQ quantity, and it moves only a door's own lines.
+
+| item | content |
+|---|---|
+| rule | after the leaf-ray closures: (a) a door leaf whose closure lies in a passage's gap (parallel to its wall within 2 degrees, its middle between the jambs, within 50 mm of the band) is that passage's door; (b) a swing closing no gap fits a passage with no door when its hinge is within 0.45 m of a jamb (strict 0.30) or its leaf at least 60 % of the width (strict: within 0.15 m or 25 %), its closed leaf along the wall line; (c) a swing closing its own wall-to-wall doorway is never taken |
+| effect | the passage becomes a DOOR with `door_fit_review` (both widths / the relaxed test named); the door element stays CONFIRMED (the band opening is measured) but is **held** from every released total (`DOOR_SYMBOL_FIT_REVIEW`); the door's own leaf closure is dropped; doorway pieces, threshold and jamb plaster follow the DOOR kind with their usual states (threshold and plaster PROVISIONAL). A passage near an idle swing beyond the limits carries `door_symbol_note` |
+| files | `engine/source/arch_rooms.py` (`match_swings_review`, `closure_in_passage`, `spaces(door_review=True)`), `engine/source/door_model.py` (the hold), `engine/source/arch_measure.py` (the two fields on the opening record), `tools/urban_boq_m9.py` (`door_review` for V2.6 only; RUN_RULES `v2_6.door_reconciliation` with the limits and the reconciled / noted openings) |
+| frozen methods | every key is set by V2.6 only; V1 - V2.5 outputs byte-identical on three drawings, Mode U and Mode A: 968 files, 0 differ (39 runs, exit 0) |
+| V2.6 on the synthetic villa | only RUN_RULES (the new correction and an empty reconciliation record) and the manifest hashes change; every quantity file is byte-identical |
+| V2.6 on the reference plan | one opening reconciled (a 1.023 m band opening holding a 0.80 m leaf closure); room areas unchanged; one doorway strip moves from porcelain to a marble threshold (0.15 m2), door jamb plaster +0.81 m2 PROVISIONAL, one passage line fewer; the Stage C re-score improves from 11 to 10 failing checks of 66 |
+| tests | `tests/m9_p2b5/test_p2b5_door_reconcile.py` (20: the hinge, leaf-share and closure limits at their boundaries, one swing per opening, the strict fit untouched, held doors through the command line, notes) |
+| caught before commit | a first version offered every free swing to the review fit and merged two cells of a bathroom on the reference plan (the swing served its own inner doorway); the independent reader showed the error and the CLOSED-swing guard (c) was added |

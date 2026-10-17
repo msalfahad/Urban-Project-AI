@@ -400,7 +400,8 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
     spaces_of = {r["region_id"]: AR.spaces(ents_of[r["region_id"]], roles_of[r["region_id"]]["roles"], u,
                                            region_id=r["region_id"], tol=tol,
                                            **({"geom": geom_of[r["region_id"]]} if v21 else {}),
-                                           **({"release_safety": True} if v22 else {}))
+                                           **({"release_safety": True} if v22 else {}),
+                                           **({"door_review": True} if v26 else {}))
                  for r in regs if roles_of[r["region_id"]]["state"] != "BLOCKED"}
     # one stair drawn on two plans: the plans are aligned on their column grid, and a flight lying over a flight of
     # the plan below is counted once (the repeat is exposure until a reviewer says which it is)
@@ -645,7 +646,15 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
             from engine.source import wp_install as WI
             run.update(policy=ARCH_POLICY_ID_V26)
             run["policies"]["wp_install"] = WI.policy_record()
-            run["v2_6"] = {"corrections": list(V26_CORRECTIONS), "installation": v24_out["wp_install"]["summary"]}
+            run["v2_6"] = {"corrections": list(V26_CORRECTIONS), "installation": v24_out["wp_install"]["summary"],
+                           "door_reconciliation": {
+                               "hinge_review_m": AR.HINGE_REVIEW_M, "leaf_review_min_share": AR.LEAF_REVIEW_MIN_SHARE,
+                               "swing_note_reach_m": AR.SWING_NOTE_REACH_M,
+                               "closure_parallel_deg": AR.CLOSURE_PARALLEL_DEG, "closure_band_m": AR.CLOSURE_BAND_M,
+                               "reconciled": sorted(f"{o['floor']}:{o['opening_id']}" for o in openings
+                                                    if o.get("door_fit_review")),
+                               "noted": sorted(f"{o['floor']}:{o['opening_id']}" for o in openings
+                                               if o.get("door_symbol_note"))}}
     if admit:
         _finish_discovery(report, E, facts, regions, lines, coverage if v2 else None,
                           entity_checks={"column_evidence": column_ev, "door_symbols": arc_recs,
@@ -771,7 +780,11 @@ V26_CORRECTIONS = (
     "JOINT_ON_SEAM_END, the best order of the same pieces; JOINT_OFFSET_UNVERIFIED without a product value (F-03)",
     "D-V26-04 doorway jamb junctions named (BUTT_JOINT_OPEN, two per door), terminations at other breaks (F-04)",
     "D-V26-05 multi-layer points, end-lap stagger, penetration clearances, drains (NOT_SHOWN when not drawn) and the "
-    "lay order from the drain (F-05, F-06, F-08)")
+    "lay order from the drain (F-05, F-06, F-08)",
+    "D-V26-06 door symbol reconciliation (Phase 2B-5 D-C1, arch_rooms.closure_in_passage / match_swings_review): a "
+    "door leaf whose leaf-ray closure lies in a passage's gap, or a swing closing no gap whose hinge / leaf fits a "
+    "passage within the review limits, makes that passage a DOOR held from every released total with both widths; "
+    "a passage near an idle swing carries a note")
 
 
 def _v25_binding(doc, docs):

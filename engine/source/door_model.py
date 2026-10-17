@@ -219,6 +219,8 @@ def elements(S, rooms, ents, unit_m, floor, *, wall_layers=(), origin=(0.0, 0.0)
                                jambs=[o["start_jamb"], o["end_jamb"]], width_m=o["width_m"])]
               + [_ev(f"EV-{x.split('|')[-1]}-SWING", "SWING", occ=x, radius_m=swings[x]["radius"] * unit_m)
                  for x in leaves if x in swings]}
+        if o.get("door_fit_review"):                     # ARCH_TAKEOFF_V2.6: the swing fits only the review limits
+            el["fit_review"] = o["door_fit_review"]
         el["history"] = [{"from": None, "to": CONFIRMED, "evidence": el["evidence"][0]["id"]}]
         add(el)
     # 2. swings closed by their leaf with no band opening: PROVISIONAL (an exploded pair is one element)
@@ -510,6 +512,11 @@ def finalise(els, *, main, unresolved_main_candidates, facts, guards=False):
             el["area_m2"] = None
             el["area_state"] = "BLOCKED: " + ("width not established" if w is None else h["source"])
         el["released"] = el["state"] == CONFIRMED and el["boq_class"] in RELEASED_CLASSES
+        if el.get("fit_review") and el["released"]:      # ARCH_TAKEOFF_V2.6 (arch_rooms.match_swings_review)
+            el["released"] = False
+            el["hold"] = (f"SYMBOL_FIT_REVIEW: {el['fit_review']} - the band opening is measured; the door symbol "
+                          "fits it only within the review limits, held until a schedule, a dimension or the owner "
+                          "settles it")
         if guards and el["released"]:
             fw = el["frame_width_m"]
             if fw is not None and w is not None and abs(fw - w) * 1000.0 > FRAME_DISAGREE_MM:
@@ -659,7 +666,9 @@ def withheld_findings(els, lift_cands):
             continue
         w = el["structural_opening_width_m"]
         ws = f"{w:.2f} m" if w is not None else "no width"
-        if el.get("hold"):
+        if el.get("fit_review"):
+            code, msg = "DOOR_SYMBOL_FIT_REVIEW", el.get("hold") or el["fit_review"]
+        elif el.get("hold"):
             code, msg = "DOOR_HELD_WIDTH_REVIEW", el["hold"]
         elif el.get("class") == CLASS_REVIEW:
             code, msg = "DOOR_CLASS_REVIEW", el["class_evidence"]

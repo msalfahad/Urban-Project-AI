@@ -1,0 +1,3839 @@
+{
+ "cases": [
+  {
+   "id": "B01",
+   "title": "rectangular bathroom 4.00 x 3.00 m, one 0.80 m door, one 0.60 m window"
+  },
+  {
+   "id": "B02",
+   "title": "the same bathroom, the door drawn as a MIRRORED block (xscale -1)"
+  },
+  {
+   "id": "B03",
+   "title": "L-shaped bathroom 3.00 x 3.00 m less 1.00 x 1.00 m, one 0.90 m door"
+  },
+  {
+   "id": "B04",
+   "title": "bedroom 3.00 x 2.50 m with a free-standing 0.40 x 0.40 m column, one 0.90 m door"
+  },
+  {
+   "id": "B05",
+   "title": "two adjacent rooms (bedroom 3.00 x 3.00, bathroom 2.00 x 3.00) sharing a 0.80 m door"
+  },
+  {
+   "id": "B06",
+   "title": "B01 turned by 27 degrees about the plan centre"
+  },
+  {
+   "id": "B07",
+   "title": "bathroom 3.00 x 4.00 m with a 45-degree splayed corner (0.50 m legs), one 0.80 m door"
+  },
+  {
+   "id": "B08",
+   "title": "laundry 2.00 x 3.00 m and an unlabelled lobby 1.50 x 3.00 m joined by a 1.00 m passage"
+  },
+  {
+   "id": "B09",
+   "title": "B05 mirrored as a whole plan (x -> -x about the plan centre): walls, doors, labels"
+  },
+  {
+   "id": "B10",
+   "title": "bathroom 4.00 x 3.00 m whose east wall is a circular arc (chord 3.00 m, rise 0.50 m, radius 2.50 m); the inner face an ARC, the outer face a bulged LWPOLYLINE; one 0.80 m door"
+  },
+  {
+   "id": "C01",
+   "title": "B01 with its walls inside two nested blocks: the outer INSERT mirrored (xscale -1), turned 90 degrees and moved; the inner INSERT scaled non-uniformly (x 2.0, y 0.5)"
+  },
+  {
+   "id": "C02",
+   "title": "B01 drawn in metres ($INSUNITS 6): every coordinate and text height / 1000"
+  },
+  {
+   "id": "C03",
+   "title": "B04 with its wall faces chained into LWPOLYLINEs - closed wall bands and open runs - and the column a closed LWPOLYLINE"
+  },
+  {
+   "id": "C04",
+   "title": "B05 with Arabic room words (bedroom, bathroom) and linear DIMENSION entities across both rooms (one with a text override)"
+  },
+  {
+   "id": "C05",
+   "title": "B01 with its window as an INSERT of a unit glazing block (xscale = the window width)"
+  },
+  {
+   "id": "C06",
+   "title": "B01 whose walls are an external reference (XREF) to a file that is not supplied"
+  }
+ ],
+ "hybrid": [
+  {
+   "case": "B01",
+   "records": [
+    {
+     "area_diff_pct": 0.0,
+     "boq_area_m2": 12.0,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 12.0,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 1.0,
+     "label": "BATH",
+     "label_conflict": false,
+     "release": "CAD_CORROBORATED",
+     "status": "AGREE",
+     "vision": {
+      "area_m2": 11.999999823214836,
+      "provenance": {
+       "kind": "PDF_VECTOR",
+       "method": "PDF_VECTOR",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "PDF_VECTOR"
+  },
+  {
+   "case": "B01",
+   "records": [
+    {
+     "area_diff_pct": 0.209,
+     "boq_area_m2": 12.0,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 12.0,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.9929,
+     "label": "BATH",
+     "label_conflict": false,
+     "release": "CAD_CORROBORATED",
+     "status": "AGREE",
+     "vision": {
+      "area_m2": 11.974925,
+      "provenance": {
+       "kind": "RASTER_10MM",
+       "method": "RASTER_10MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "RASTER_10MM"
+  },
+  {
+   "case": "B01",
+   "records": [
+    {
+     "area_diff_pct": 2.207,
+     "boq_area_m2": 12.0,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 12.0,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.975,
+     "label": "BATH",
+     "label_conflict": false,
+     "release": "CAD_REVIEW",
+     "status": "REVIEW_CANDIDATE",
+     "vision": {
+      "area_m2": 11.735162500000001,
+      "provenance": {
+       "kind": "SCAN_25MM",
+       "method": "SCAN_25MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "SCAN_25MM"
+  },
+  {
+   "case": "B02",
+   "records": [
+    {
+     "area_diff_pct": 0.0,
+     "boq_area_m2": 12.0,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 12.0,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 1.0,
+     "label": "BATH",
+     "label_conflict": false,
+     "release": "CAD_CORROBORATED",
+     "status": "AGREE",
+     "vision": {
+      "area_m2": 11.999999823214836,
+      "provenance": {
+       "kind": "PDF_VECTOR",
+       "method": "PDF_VECTOR",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "PDF_VECTOR"
+  },
+  {
+   "case": "B02",
+   "records": [
+    {
+     "area_diff_pct": 0.209,
+     "boq_area_m2": 12.0,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 12.0,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.9929,
+     "label": "BATH",
+     "label_conflict": false,
+     "release": "CAD_CORROBORATED",
+     "status": "AGREE",
+     "vision": {
+      "area_m2": 11.974925,
+      "provenance": {
+       "kind": "RASTER_10MM",
+       "method": "RASTER_10MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "RASTER_10MM"
+  },
+  {
+   "case": "B02",
+   "records": [
+    {
+     "area_diff_pct": 2.207,
+     "boq_area_m2": 12.0,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 12.0,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.975,
+     "label": "BATH",
+     "label_conflict": false,
+     "release": "CAD_REVIEW",
+     "status": "REVIEW_CANDIDATE",
+     "vision": {
+      "area_m2": 11.735162500000001,
+      "provenance": {
+       "kind": "SCAN_25MM",
+       "method": "SCAN_25MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "SCAN_25MM"
+  },
+  {
+   "case": "B03",
+   "records": [
+    {
+     "area_diff_pct": 0.0,
+     "boq_area_m2": 8.0,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 8.0,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 1.0,
+     "label": "BATH",
+     "label_conflict": false,
+     "release": "CAD_CORROBORATED",
+     "status": "AGREE",
+     "vision": {
+      "area_m2": 7.999999985372385,
+      "provenance": {
+       "kind": "PDF_VECTOR",
+       "method": "PDF_VECTOR",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "PDF_VECTOR"
+  },
+  {
+   "case": "B03",
+   "records": [
+    {
+     "area_diff_pct": 0.373,
+     "boq_area_m2": 8.0,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 8.0,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.9907,
+     "label": "BATH",
+     "label_conflict": false,
+     "release": "CAD_CORROBORATED",
+     "status": "AGREE",
+     "vision": {
+      "area_m2": 7.970125,
+      "provenance": {
+       "kind": "RASTER_10MM",
+       "method": "RASTER_10MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "RASTER_10MM"
+  },
+  {
+   "case": "B03",
+   "records": [
+    {
+     "area_diff_pct": 2.832,
+     "boq_area_m2": 8.0,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 8.0,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.9715,
+     "label": "BATH",
+     "label_conflict": false,
+     "release": "CAD_REVIEW",
+     "status": "REVIEW_CANDIDATE",
+     "vision": {
+      "area_m2": 7.773475,
+      "provenance": {
+       "kind": "SCAN_25MM",
+       "method": "SCAN_25MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "SCAN_25MM"
+  },
+  {
+   "case": "B04",
+   "records": [
+    {
+     "area_diff_pct": 0.0,
+     "boq_area_m2": 7.34,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 7.34,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 1.0,
+     "label": "BEDROOM",
+     "label_conflict": false,
+     "release": "CAD_CORROBORATED",
+     "status": "AGREE",
+     "vision": {
+      "area_m2": 7.339999862008099,
+      "provenance": {
+       "kind": "PDF_VECTOR",
+       "method": "PDF_VECTOR",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "PDF_VECTOR"
+  },
+  {
+   "case": "B04",
+   "records": [
+    {
+     "area_diff_pct": 0.009,
+     "boq_area_m2": 7.34,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 7.34,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.9944,
+     "label": "BEDROOM",
+     "label_conflict": false,
+     "release": "CAD_CORROBORATED",
+     "status": "AGREE",
+     "vision": {
+      "area_m2": 7.3393500000000005,
+      "provenance": {
+       "kind": "RASTER_10MM",
+       "method": "RASTER_10MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "RASTER_10MM"
+  },
+  {
+   "case": "B04",
+   "records": [
+    {
+     "area_diff_pct": 1.393,
+     "boq_area_m2": 7.34,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 7.34,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.9706,
+     "label": "BEDROOM",
+     "label_conflict": false,
+     "release": "CAD_REVIEW",
+     "status": "REVIEW_CANDIDATE",
+     "vision": {
+      "area_m2": 7.23775,
+      "provenance": {
+       "kind": "SCAN_25MM",
+       "method": "SCAN_25MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "SCAN_25MM"
+  },
+  {
+   "case": "B05",
+   "records": [
+    {
+     "area_diff_pct": 0.0,
+     "boq_area_m2": 9.0,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 9.0,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 1.0,
+     "label": "BEDROOM",
+     "label_conflict": false,
+     "release": "CAD_CORROBORATED",
+     "status": "AGREE",
+     "vision": {
+      "area_m2": 9.000000473418403,
+      "provenance": {
+       "kind": "PDF_VECTOR",
+       "method": "PDF_VECTOR",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    },
+    {
+     "area_diff_pct": 0.0,
+     "boq_area_m2": 6.0,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 6.0,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 1.0,
+     "label": "BATH",
+     "label_conflict": false,
+     "release": "CAD_CORROBORATED",
+     "status": "AGREE",
+     "vision": {
+      "area_m2": 5.999999642742045,
+      "provenance": {
+       "kind": "PDF_VECTOR",
+       "method": "PDF_VECTOR",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "PDF_VECTOR"
+  },
+  {
+   "case": "B05",
+   "records": [
+    {
+     "area_diff_pct": 0.084,
+     "boq_area_m2": 6.0,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 6.0,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.9942,
+     "label": "BATH",
+     "label_conflict": false,
+     "release": "CAD_CORROBORATED",
+     "status": "AGREE",
+     "vision": {
+      "area_m2": 5.994975,
+      "provenance": {
+       "kind": "RASTER_10MM",
+       "method": "RASTER_10MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    },
+    {
+     "area_diff_pct": 0.334,
+     "boq_area_m2": 9.0,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 9.0,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.9917,
+     "label": "BEDROOM",
+     "label_conflict": false,
+     "release": "CAD_CORROBORATED",
+     "status": "AGREE",
+     "vision": {
+      "area_m2": 8.969925,
+      "provenance": {
+       "kind": "RASTER_10MM",
+       "method": "RASTER_10MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "RASTER_10MM"
+  },
+  {
+   "case": "B05",
+   "records": [
+    {
+     "area_diff_pct": 2.425,
+     "boq_area_m2": 9.0,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 9.0,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.9718,
+     "label": "BEDROOM",
+     "label_conflict": false,
+     "release": "CAD_REVIEW",
+     "status": "REVIEW_CANDIDATE",
+     "vision": {
+      "area_m2": 8.781725000000002,
+      "provenance": {
+       "kind": "SCAN_25MM",
+       "method": "SCAN_25MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    },
+    {
+     "area_diff_pct": 2.855,
+     "boq_area_m2": 6.0,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 6.0,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.9715,
+     "label": "BATH",
+     "label_conflict": false,
+     "release": "CAD_REVIEW",
+     "status": "REVIEW_CANDIDATE",
+     "vision": {
+      "area_m2": 5.828724999999999,
+      "provenance": {
+       "kind": "SCAN_25MM",
+       "method": "SCAN_25MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "SCAN_25MM"
+  },
+  {
+   "case": "B06",
+   "records": [
+    {
+     "area_diff_pct": 0.0,
+     "boq_area_m2": 11.999999999999998,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 11.999999999999998,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 1.0,
+     "label": "BATH",
+     "label_conflict": false,
+     "release": "CAD_CORROBORATED",
+     "status": "AGREE",
+     "vision": {
+      "area_m2": 12.000000258223343,
+      "provenance": {
+       "kind": "PDF_VECTOR",
+       "method": "PDF_VECTOR",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "PDF_VECTOR"
+  },
+  {
+   "case": "B06",
+   "records": [
+    {
+     "area_diff_pct": 0.405,
+     "boq_area_m2": 11.999999999999998,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 11.999999999999998,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.9951,
+     "label": "BATH",
+     "label_conflict": false,
+     "release": "CAD_CORROBORATED",
+     "status": "AGREE",
+     "vision": {
+      "area_m2": 11.951450000000001,
+      "provenance": {
+       "kind": "RASTER_10MM",
+       "method": "RASTER_10MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "RASTER_10MM"
+  },
+  {
+   "case": "B06",
+   "records": [
+    {
+     "area_diff_pct": 2.32,
+     "boq_area_m2": 11.999999999999998,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 11.999999999999998,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.9768,
+     "label": "BATH",
+     "label_conflict": false,
+     "release": "CAD_REVIEW",
+     "status": "REVIEW_CANDIDATE",
+     "vision": {
+      "area_m2": 11.7216,
+      "provenance": {
+       "kind": "SCAN_25MM",
+       "method": "SCAN_25MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "SCAN_25MM"
+  },
+  {
+   "case": "B07",
+   "records": [
+    {
+     "area_diff_pct": 0.0,
+     "boq_area_m2": 11.875,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 11.875,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 1.0,
+     "label": "BATH",
+     "label_conflict": false,
+     "release": "CAD_CORROBORATED",
+     "status": "AGREE",
+     "vision": {
+      "area_m2": 11.874998939811515,
+      "provenance": {
+       "kind": "PDF_VECTOR",
+       "method": "PDF_VECTOR",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "PDF_VECTOR"
+  },
+  {
+   "case": "B07",
+   "records": [
+    {
+     "area_diff_pct": 0.297,
+     "boq_area_m2": 11.875,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 11.875,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.992,
+     "label": "BATH",
+     "label_conflict": false,
+     "release": "CAD_CORROBORATED",
+     "status": "AGREE",
+     "vision": {
+      "area_m2": 11.839725000000001,
+      "provenance": {
+       "kind": "RASTER_10MM",
+       "method": "RASTER_10MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "RASTER_10MM"
+  },
+  {
+   "case": "B07",
+   "records": [
+    {
+     "area_diff_pct": 1.917,
+     "boq_area_m2": 11.875,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 11.875,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.9766,
+     "label": "BATH",
+     "label_conflict": false,
+     "release": "CAD_REVIEW",
+     "status": "REVIEW_CANDIDATE",
+     "vision": {
+      "area_m2": 11.647349999999992,
+      "provenance": {
+       "kind": "SCAN_25MM",
+       "method": "SCAN_25MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "SCAN_25MM"
+  },
+  {
+   "case": "B08",
+   "records": [
+    {
+     "area_diff_pct": 0.0,
+     "boq_area_m2": 6.0,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 6.0,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 1.0,
+     "label": "LAUNDRY",
+     "label_conflict": false,
+     "release": "CAD_CORROBORATED",
+     "status": "AGREE",
+     "vision": {
+      "area_m2": 6.000000203517016,
+      "provenance": {
+       "kind": "PDF_VECTOR",
+       "method": "PDF_VECTOR",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "PDF_VECTOR"
+  },
+  {
+   "case": "B08",
+   "records": [
+    {
+     "area_diff_pct": 0.585,
+     "boq_area_m2": 6.0,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 6.0,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.9892,
+     "label": "LAUNDRY",
+     "label_conflict": false,
+     "release": "CAD_CORROBORATED",
+     "status": "AGREE",
+     "vision": {
+      "area_m2": 5.964925,
+      "provenance": {
+       "kind": "RASTER_10MM",
+       "method": "RASTER_10MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    },
+    {
+     "boq_area_m2": null,
+     "boq_basis": null,
+     "cad": null,
+     "label": null,
+     "release": "NO_BOQ_CANDIDATE_ONLY",
+     "status": "VISUAL_OMISSION",
+     "vision": {
+      "area_m2": 4.492475,
+      "provenance": {
+       "kind": "RASTER_10MM",
+       "method": "RASTER_10MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "RASTER_10MM"
+  },
+  {
+   "case": "B08",
+   "records": [
+    {
+     "area_diff_pct": 3.38,
+     "boq_area_m2": 6.0,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 6.0,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.9662,
+     "label": "LAUNDRY",
+     "label_conflict": false,
+     "release": "CAD_REVIEW",
+     "status": "REVIEW_CANDIDATE",
+     "vision": {
+      "area_m2": 5.797225000000001,
+      "provenance": {
+       "kind": "SCAN_25MM",
+       "method": "SCAN_25MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    },
+    {
+     "boq_area_m2": null,
+     "boq_basis": null,
+     "cad": null,
+     "label": null,
+     "release": "NO_BOQ_CANDIDATE_ONLY",
+     "status": "VISUAL_OMISSION",
+     "vision": {
+      "area_m2": 4.3420375,
+      "provenance": {
+       "kind": "SCAN_25MM",
+       "method": "SCAN_25MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "SCAN_25MM"
+  },
+  {
+   "case": "B09",
+   "records": [
+    {
+     "area_diff_pct": 0.0,
+     "boq_area_m2": 6.0,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 6.0,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 1.0,
+     "label": "BATH",
+     "label_conflict": false,
+     "release": "CAD_CORROBORATED",
+     "status": "AGREE",
+     "vision": {
+      "area_m2": 6.000000248325247,
+      "provenance": {
+       "kind": "PDF_VECTOR",
+       "method": "PDF_VECTOR",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    },
+    {
+     "area_diff_pct": 0.0,
+     "boq_area_m2": 9.0,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 9.0,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 1.0,
+     "label": "BEDROOM",
+     "label_conflict": false,
+     "release": "CAD_CORROBORATED",
+     "status": "AGREE",
+     "vision": {
+      "area_m2": 8.999999867835204,
+      "provenance": {
+       "kind": "PDF_VECTOR",
+       "method": "PDF_VECTOR",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "PDF_VECTOR"
+  },
+  {
+   "case": "B09",
+   "records": [
+    {
+     "area_diff_pct": 0.749,
+     "boq_area_m2": 6.0,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 6.0,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.9925,
+     "label": "BATH",
+     "label_conflict": false,
+     "release": "CAD_CORROBORATED",
+     "status": "AGREE",
+     "vision": {
+      "area_m2": 5.955075,
+      "provenance": {
+       "kind": "RASTER_10MM",
+       "method": "RASTER_10MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    },
+    {
+     "area_diff_pct": 0.334,
+     "boq_area_m2": 9.0,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 9.0,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.9917,
+     "label": "BEDROOM",
+     "label_conflict": false,
+     "release": "CAD_CORROBORATED",
+     "status": "AGREE",
+     "vision": {
+      "area_m2": 8.969925,
+      "provenance": {
+       "kind": "RASTER_10MM",
+       "method": "RASTER_10MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "RASTER_10MM"
+  },
+  {
+   "case": "B09",
+   "records": [
+    {
+     "area_diff_pct": 3.731,
+     "boq_area_m2": 6.0,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 6.0,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.9627,
+     "label": "BATH",
+     "label_conflict": false,
+     "release": "CAD_REVIEW",
+     "status": "REVIEW_CANDIDATE",
+     "vision": {
+      "area_m2": 5.776162500000002,
+      "provenance": {
+       "kind": "SCAN_25MM",
+       "method": "SCAN_25MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    },
+    {
+     "area_diff_pct": 4.139,
+     "boq_area_m2": 9.0,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 9.0,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.9586,
+     "label": "BEDROOM",
+     "label_conflict": false,
+     "release": "CAD_REVIEW",
+     "status": "REVIEW_CANDIDATE",
+     "vision": {
+      "area_m2": 8.627475,
+      "provenance": {
+       "kind": "SCAN_25MM",
+       "method": "SCAN_25MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "SCAN_25MM"
+  },
+  {
+   "case": "B10",
+   "records": [
+    {
+     "area_diff_pct": 0.006,
+     "boq_area_m2": 13.02086245690957,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 13.02086245690957,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.9999,
+     "label": "BATH",
+     "label_conflict": false,
+     "release": "CAD_CORROBORATED",
+     "status": "AGREE",
+     "vision": {
+      "area_m2": 13.021678735878663,
+      "provenance": {
+       "kind": "PDF_VECTOR",
+       "method": "PDF_VECTOR",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "PDF_VECTOR"
+  },
+  {
+   "case": "B10",
+   "records": [
+    {
+     "area_diff_pct": 0.566,
+     "boq_area_m2": 13.02086245690957,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 13.02086245690957,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.9891,
+     "label": "BATH",
+     "label_conflict": false,
+     "release": "CAD_CORROBORATED",
+     "status": "AGREE",
+     "vision": {
+      "area_m2": 12.947125,
+      "provenance": {
+       "kind": "RASTER_10MM",
+       "method": "RASTER_10MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "RASTER_10MM"
+  },
+  {
+   "case": "B10",
+   "records": [
+    {
+     "area_diff_pct": 2.279,
+     "boq_area_m2": 13.02086245690957,
+     "boq_basis": "CAD",
+     "cad": {
+      "area_m2": 13.02086245690957,
+      "provenance": {
+       "kind": "CAD",
+       "method": "REF_DXF",
+       "reader": "ref_reader",
+       "version": "1"
+      }
+     },
+     "iou": 0.9746,
+     "label": "BATH",
+     "label_conflict": false,
+     "release": "CAD_REVIEW",
+     "status": "REVIEW_CANDIDATE",
+     "vision": {
+      "area_m2": 12.724099999999996,
+      "provenance": {
+       "kind": "SCAN_25MM",
+       "method": "SCAN_25MM",
+       "reader": "vision",
+       "version": "1"
+      }
+     }
+    }
+   ],
+   "vision": "SCAN_25MM"
+  }
+ ],
+ "mcp": {
+  "U-C4N/Autocad-MCP": "NOT_AVAILABLE: not connected in this session",
+  "beiming183-cloud/AutoCAD-MCP": "NOT_AVAILABLE: not connected in this session",
+  "christiannp/autocad": "NOT_AVAILABLE: repository inaccessible (earlier audit)"
+ },
+ "methods": [
+  "NATIVE_AUTO",
+  "NATIVE_DECLARED",
+  "REF_DXF",
+  "RASTER_10MM",
+  "SCAN_25MM",
+  "PDF_VECTOR"
+ ],
+ "results": [
+  {
+   "case": "B01",
+   "false_rooms": 0,
+   "method": "NATIVE_AUTO",
+   "openings": {
+    "correct": 0,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 2
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 12.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bathroom / W.C.",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B01",
+   "false_rooms": 0,
+   "method": "NATIVE_DECLARED",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 12.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bathroom / W.C.",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B01",
+   "false_rooms": 0,
+   "method": "REF_DXF",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 12.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "BATH",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B01",
+   "deskew_deg": 0.0,
+   "false_rooms": 0,
+   "method": "RASTER_10MM",
+   "ocr": "OK",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -0.209,
+     "area_m2": 11.9749,
+     "boundary_err_mm": 12.7,
+     "corner_err_mm": 9.7,
+     "found": true,
+     "iou": 0.9929,
+     "label": null,
+     "label_ok": false,
+     "perimeter_err_pct": -0.143,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "scale_check_err_mm": 20.0,
+   "wall_thickness_mm": 220.0
+  },
+  {
+   "case": "B01",
+   "deskew_deg": 0.0,
+   "false_rooms": 0,
+   "method": "SCAN_25MM",
+   "ocr": "OK",
+   "openings": {
+    "correct": 1,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 5,
+    "state": "OK",
+    "wrong_kind": 1
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -2.207,
+     "area_m2": 11.7352,
+     "boundary_err_mm": 58.0,
+     "corner_err_mm": 46.7,
+     "found": true,
+     "iou": 0.975,
+     "label": null,
+     "label_ok": false,
+     "perimeter_err_pct": -1.068,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "scale_check_err_mm": 0.0,
+   "wall_thickness_mm": 200.0
+  },
+  {
+   "case": "B01",
+   "false_rooms": 0,
+   "method": "PDF_VECTOR",
+   "openings": {
+    "state": "NOT_SUPPORTED"
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -0.0,
+     "area_m2": 12.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "BATH",
+     "label_ok": true,
+     "perimeter_err_pct": -0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ]
+  },
+  {
+   "case": "B02",
+   "false_rooms": 0,
+   "method": "NATIVE_AUTO",
+   "openings": {
+    "correct": 0,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 2
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 12.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bathroom / W.C.",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B02",
+   "false_rooms": 0,
+   "method": "NATIVE_DECLARED",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 12.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bathroom / W.C.",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B02",
+   "false_rooms": 0,
+   "method": "REF_DXF",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 12.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "BATH",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B02",
+   "deskew_deg": 0.0,
+   "false_rooms": 0,
+   "method": "RASTER_10MM",
+   "ocr": "OK",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -0.209,
+     "area_m2": 11.9749,
+     "boundary_err_mm": 12.7,
+     "corner_err_mm": 9.7,
+     "found": true,
+     "iou": 0.9929,
+     "label": null,
+     "label_ok": false,
+     "perimeter_err_pct": -0.143,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "scale_check_err_mm": 20.0,
+   "wall_thickness_mm": 220.0
+  },
+  {
+   "case": "B02",
+   "deskew_deg": 0.0,
+   "false_rooms": 0,
+   "method": "SCAN_25MM",
+   "ocr": "OK",
+   "openings": {
+    "correct": 1,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 5,
+    "state": "OK",
+    "wrong_kind": 1
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -2.207,
+     "area_m2": 11.7352,
+     "boundary_err_mm": 58.0,
+     "corner_err_mm": 46.7,
+     "found": true,
+     "iou": 0.975,
+     "label": null,
+     "label_ok": false,
+     "perimeter_err_pct": -1.068,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "scale_check_err_mm": 0.0,
+   "wall_thickness_mm": 200.0
+  },
+  {
+   "case": "B02",
+   "false_rooms": 0,
+   "method": "PDF_VECTOR",
+   "openings": {
+    "state": "NOT_SUPPORTED"
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -0.0,
+     "area_m2": 12.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "BATH",
+     "label_ok": true,
+     "perimeter_err_pct": -0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ]
+  },
+  {
+   "case": "B03",
+   "false_rooms": 0,
+   "method": "NATIVE_AUTO",
+   "openings": {
+    "correct": 0,
+    "expected": 1,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 1
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 8.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bathroom / W.C.",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B03",
+   "false_rooms": 0,
+   "method": "NATIVE_DECLARED",
+   "openings": {
+    "correct": 1,
+    "expected": 1,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 8.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bathroom / W.C.",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B03",
+   "false_rooms": 0,
+   "method": "REF_DXF",
+   "openings": {
+    "correct": 1,
+    "expected": 1,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 8.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "BATH",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B03",
+   "deskew_deg": 0.0,
+   "false_rooms": 0,
+   "method": "RASTER_10MM",
+   "ocr": "OK",
+   "openings": {
+    "correct": 1,
+    "expected": 1,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -0.373,
+     "area_m2": 7.9701,
+     "boundary_err_mm": 12.7,
+     "corner_err_mm": 8.4,
+     "found": true,
+     "iou": 0.9907,
+     "label": null,
+     "label_ok": false,
+     "perimeter_err_pct": -0.167,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "scale_check_err_mm": 20.0,
+   "wall_thickness_mm": 220.0
+  },
+  {
+   "case": "B03",
+   "deskew_deg": 0.0,
+   "false_rooms": 0,
+   "method": "SCAN_25MM",
+   "ocr": "OK",
+   "openings": {
+    "correct": 0,
+    "expected": 1,
+    "missed": 1,
+    "spurious": 5,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -2.832,
+     "area_m2": 7.7735,
+     "boundary_err_mm": 66.0,
+     "corner_err_mm": 36.4,
+     "found": true,
+     "iou": 0.9715,
+     "label": null,
+     "label_ok": false,
+     "perimeter_err_pct": -1.661,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "scale_check_err_mm": 0.0,
+   "wall_thickness_mm": 200.0
+  },
+  {
+   "case": "B03",
+   "false_rooms": 0,
+   "method": "PDF_VECTOR",
+   "openings": {
+    "state": "NOT_SUPPORTED"
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -0.0,
+     "area_m2": 8.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "BATH",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ]
+  },
+  {
+   "case": "B04",
+   "false_rooms": 0,
+   "method": "NATIVE_AUTO",
+   "openings": {
+    "correct": 0,
+    "expected": 1,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 1
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 2.18,
+     "area_m2": 7.5,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bedroom",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BEDROOM",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B04",
+   "false_rooms": 0,
+   "method": "NATIVE_DECLARED",
+   "openings": {
+    "correct": 1,
+    "expected": 1,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 7.34,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bedroom",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BEDROOM",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B04",
+   "false_rooms": 0,
+   "method": "REF_DXF",
+   "openings": {
+    "correct": 1,
+    "expected": 1,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 7.34,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "BEDROOM",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BEDROOM",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B04",
+   "deskew_deg": 0.0,
+   "false_rooms": 0,
+   "method": "RASTER_10MM",
+   "ocr": "OK",
+   "openings": {
+    "correct": 1,
+    "expected": 1,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -0.009,
+     "area_m2": 7.3394,
+     "boundary_err_mm": 7.5,
+     "corner_err_mm": 5.7,
+     "found": true,
+     "iou": 0.9944,
+     "label": "BEDROOM",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BEDROOM",
+     "unlabelled": false
+    }
+   ],
+   "scale_check_err_mm": 20.0,
+   "wall_thickness_mm": 220.0
+  },
+  {
+   "case": "B04",
+   "deskew_deg": 0.0,
+   "false_rooms": 0,
+   "method": "SCAN_25MM",
+   "ocr": "OK",
+   "openings": {
+    "correct": 1,
+    "expected": 1,
+    "missed": 0,
+    "spurious": 4,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -1.393,
+     "area_m2": 7.2378,
+     "boundary_err_mm": 66.0,
+     "corner_err_mm": 35.8,
+     "found": true,
+     "iou": 0.9706,
+     "label": null,
+     "label_ok": false,
+     "perimeter_err_pct": -1.455,
+     "truth": "BEDROOM",
+     "unlabelled": false
+    }
+   ],
+   "scale_check_err_mm": 50.0,
+   "wall_thickness_mm": 250.0
+  },
+  {
+   "case": "B04",
+   "false_rooms": 0,
+   "method": "PDF_VECTOR",
+   "openings": {
+    "state": "NOT_SUPPORTED"
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -0.0,
+     "area_m2": 7.34,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "BEDROOM",
+     "label_ok": true,
+     "perimeter_err_pct": -0.0,
+     "truth": "BEDROOM",
+     "unlabelled": false
+    }
+   ]
+  },
+  {
+   "case": "B05",
+   "false_rooms": 0,
+   "method": "NATIVE_AUTO",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 9.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bedroom",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BEDROOM",
+     "unlabelled": false
+    },
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 6.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bathroom / W.C.",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B05",
+   "false_rooms": 0,
+   "method": "NATIVE_DECLARED",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 9.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bedroom",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BEDROOM",
+     "unlabelled": false
+    },
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 6.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bathroom / W.C.",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B05",
+   "false_rooms": 0,
+   "method": "REF_DXF",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 9.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "BEDROOM",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BEDROOM",
+     "unlabelled": false
+    },
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 6.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "BATH",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B05",
+   "deskew_deg": 0.0,
+   "false_rooms": 0,
+   "method": "RASTER_10MM",
+   "ocr": "OK",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -0.334,
+     "area_m2": 8.9699,
+     "boundary_err_mm": 12.7,
+     "corner_err_mm": 9.7,
+     "found": true,
+     "iou": 0.9917,
+     "label": "BEDROOM",
+     "label_ok": true,
+     "perimeter_err_pct": -0.167,
+     "truth": "BEDROOM",
+     "unlabelled": false
+    },
+    {
+     "area_err_pct": -0.084,
+     "area_m2": 5.995,
+     "boundary_err_mm": 7.5,
+     "corner_err_mm": 5.7,
+     "found": true,
+     "iou": 0.9942,
+     "label": "BATH",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "scale_check_err_mm": 20.0,
+   "wall_thickness_mm": 220.0
+  },
+  {
+   "case": "B05",
+   "deskew_deg": 0.0,
+   "false_rooms": 0,
+   "method": "SCAN_25MM",
+   "ocr": "OK",
+   "openings": {
+    "correct": 1,
+    "expected": 2,
+    "missed": 1,
+    "spurious": 9,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -2.425,
+     "area_m2": 8.7817,
+     "boundary_err_mm": 66.0,
+     "corner_err_mm": 36.7,
+     "found": true,
+     "iou": 0.9718,
+     "label": null,
+     "label_ok": false,
+     "perimeter_err_pct": -1.124,
+     "truth": "BEDROOM",
+     "unlabelled": false
+    },
+    {
+     "area_err_pct": -2.855,
+     "area_m2": 5.8287,
+     "boundary_err_mm": 58.0,
+     "corner_err_mm": 37.0,
+     "found": true,
+     "iou": 0.9715,
+     "label": null,
+     "label_ok": false,
+     "perimeter_err_pct": -1.097,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "scale_check_err_mm": 0.0,
+   "wall_thickness_mm": 200.0
+  },
+  {
+   "case": "B05",
+   "false_rooms": 0,
+   "method": "PDF_VECTOR",
+   "openings": {
+    "state": "NOT_SUPPORTED"
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 9.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "BEDROOM",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BEDROOM",
+     "unlabelled": false
+    },
+    {
+     "area_err_pct": -0.0,
+     "area_m2": 6.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "BATH",
+     "label_ok": true,
+     "perimeter_err_pct": -0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ]
+  },
+  {
+   "case": "B06",
+   "false_rooms": 0,
+   "method": "NATIVE_AUTO",
+   "openings": {
+    "correct": 0,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 2
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 12.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bathroom / W.C.",
+     "label_ok": true,
+     "perimeter_err_pct": -0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B06",
+   "false_rooms": 0,
+   "method": "NATIVE_DECLARED",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 12.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bathroom / W.C.",
+     "label_ok": true,
+     "perimeter_err_pct": -0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B06",
+   "false_rooms": 0,
+   "method": "REF_DXF",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -0.0,
+     "area_m2": 12.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "BATH",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B06",
+   "deskew_deg": -26.9,
+   "false_rooms": 0,
+   "method": "RASTER_10MM",
+   "ocr": "OK",
+   "openings": {
+    "correct": 1,
+    "expected": 2,
+    "missed": 1,
+    "spurious": 5,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -0.405,
+     "area_m2": 11.9515,
+     "boundary_err_mm": 15.6,
+     "corner_err_mm": 8.1,
+     "found": true,
+     "iou": 0.9951,
+     "label": null,
+     "label_ok": false,
+     "perimeter_err_pct": -0.071,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "scale_check_err_mm": 20.0,
+   "wall_thickness_mm": 220.0
+  },
+  {
+   "case": "B06",
+   "deskew_deg": -27.25,
+   "false_rooms": 0,
+   "method": "SCAN_25MM",
+   "ocr": "OK",
+   "openings": {
+    "correct": 0,
+    "expected": 2,
+    "missed": 1,
+    "spurious": 4,
+    "state": "OK",
+    "wrong_kind": 1
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -2.32,
+     "area_m2": 11.7216,
+     "boundary_err_mm": 31.8,
+     "corner_err_mm": 30.3,
+     "found": true,
+     "iou": 0.9768,
+     "label": null,
+     "label_ok": false,
+     "perimeter_err_pct": -1.143,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "scale_check_err_mm": 50.0,
+   "wall_thickness_mm": 250.0
+  },
+  {
+   "case": "B06",
+   "false_rooms": 0,
+   "method": "PDF_VECTOR",
+   "openings": {
+    "state": "NOT_SUPPORTED"
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 12.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "BATH",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ]
+  },
+  {
+   "case": "B07",
+   "false_rooms": 0,
+   "method": "NATIVE_AUTO",
+   "openings": {
+    "correct": 0,
+    "expected": 1,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 1
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 11.875,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bathroom / W.C.",
+     "label_ok": true,
+     "perimeter_err_pct": -0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B07",
+   "false_rooms": 0,
+   "method": "NATIVE_DECLARED",
+   "openings": {
+    "correct": 1,
+    "expected": 1,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 11.875,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bathroom / W.C.",
+     "label_ok": true,
+     "perimeter_err_pct": -0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B07",
+   "false_rooms": 0,
+   "method": "REF_DXF",
+   "openings": {
+    "correct": 1,
+    "expected": 1,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 11.875,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "BATH",
+     "label_ok": true,
+     "perimeter_err_pct": -0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B07",
+   "deskew_deg": 0.0,
+   "false_rooms": 0,
+   "method": "RASTER_10MM",
+   "ocr": "OK",
+   "openings": {
+    "correct": 1,
+    "expected": 1,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -0.297,
+     "area_m2": 11.8397,
+     "boundary_err_mm": 12.7,
+     "corner_err_mm": 14.1,
+     "found": true,
+     "iou": 0.992,
+     "label": "BATH",
+     "label_ok": true,
+     "perimeter_err_pct": -0.06,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "scale_check_err_mm": 20.0,
+   "wall_thickness_mm": 220.0
+  },
+  {
+   "case": "B07",
+   "deskew_deg": 0.0,
+   "false_rooms": 0,
+   "method": "SCAN_25MM",
+   "ocr": "OK",
+   "openings": {
+    "correct": 1,
+    "expected": 1,
+    "missed": 0,
+    "spurious": 4,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -1.917,
+     "area_m2": 11.6473,
+     "boundary_err_mm": 66.0,
+     "corner_err_mm": 53.6,
+     "found": true,
+     "iou": 0.9766,
+     "label": null,
+     "label_ok": false,
+     "perimeter_err_pct": 0.219,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "scale_check_err_mm": 0.0,
+   "wall_thickness_mm": 200.0
+  },
+  {
+   "case": "B07",
+   "false_rooms": 0,
+   "method": "PDF_VECTOR",
+   "openings": {
+    "state": "NOT_SUPPORTED"
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -0.0,
+     "area_m2": 11.875,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "BATH",
+     "label_ok": true,
+     "perimeter_err_pct": -0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ]
+  },
+  {
+   "case": "B08",
+   "false_rooms": 0,
+   "method": "NATIVE_AUTO",
+   "openings": {
+    "correct": 1,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 1
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 6.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Laundry",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "LAUNDRY",
+     "unlabelled": false
+    },
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 4.5,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Unnamed space",
+     "label_ok": null,
+     "perimeter_err_pct": 0.0,
+     "truth": "LOBBY",
+     "unlabelled": true
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B08",
+   "false_rooms": 0,
+   "method": "NATIVE_DECLARED",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 6.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Laundry",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "LAUNDRY",
+     "unlabelled": false
+    },
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 4.5,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Unnamed space",
+     "label_ok": null,
+     "perimeter_err_pct": 0.0,
+     "truth": "LOBBY",
+     "unlabelled": true
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B08",
+   "false_rooms": 0,
+   "method": "REF_DXF",
+   "openings": {
+    "correct": 1,
+    "expected": 2,
+    "missed": 1,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 6.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "LAUNDRY",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "LAUNDRY",
+     "unlabelled": false
+    },
+    {
+     "found": false,
+     "truth": "LOBBY",
+     "unlabelled": true
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B08",
+   "deskew_deg": 0.0,
+   "false_rooms": 0,
+   "method": "RASTER_10MM",
+   "ocr": "OK",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -0.585,
+     "area_m2": 5.9649,
+     "boundary_err_mm": 12.7,
+     "corner_err_mm": 9.7,
+     "found": true,
+     "iou": 0.9892,
+     "label": "LAUNDRY",
+     "label_ok": true,
+     "perimeter_err_pct": -0.2,
+     "truth": "LAUNDRY",
+     "unlabelled": false
+    },
+    {
+     "area_err_pct": -0.167,
+     "area_m2": 4.4925,
+     "boundary_err_mm": 7.5,
+     "corner_err_mm": 5.7,
+     "found": true,
+     "iou": 0.9934,
+     "label": null,
+     "label_ok": null,
+     "perimeter_err_pct": 0.0,
+     "truth": "LOBBY",
+     "unlabelled": true
+    }
+   ],
+   "scale_check_err_mm": 20.0,
+   "wall_thickness_mm": 220.0
+  },
+  {
+   "case": "B08",
+   "deskew_deg": 0.0,
+   "false_rooms": 0,
+   "method": "SCAN_25MM",
+   "ocr": "OK",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 8,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -3.38,
+     "area_m2": 5.7972,
+     "boundary_err_mm": 66.0,
+     "corner_err_mm": 42.0,
+     "found": true,
+     "iou": 0.9662,
+     "label": null,
+     "label_ok": false,
+     "perimeter_err_pct": -1.6,
+     "truth": "LAUNDRY",
+     "unlabelled": false
+    },
+    {
+     "area_err_pct": -3.51,
+     "area_m2": 4.342,
+     "boundary_err_mm": 46.0,
+     "corner_err_mm": 36.5,
+     "found": true,
+     "iou": 0.9649,
+     "label": null,
+     "label_ok": null,
+     "perimeter_err_pct": -1.498,
+     "truth": "LOBBY",
+     "unlabelled": true
+    }
+   ],
+   "scale_check_err_mm": 0.0,
+   "wall_thickness_mm": 200.0
+  },
+  {
+   "case": "B08",
+   "false_rooms": 0,
+   "method": "PDF_VECTOR",
+   "openings": {
+    "state": "NOT_SUPPORTED"
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 6.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "LAUNDRY",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "LAUNDRY",
+     "unlabelled": false
+    },
+    {
+     "found": false,
+     "truth": "LOBBY",
+     "unlabelled": true
+    }
+   ]
+  },
+  {
+   "case": "B09",
+   "false_rooms": 0,
+   "method": "NATIVE_AUTO",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 9.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bedroom",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BEDROOM",
+     "unlabelled": false
+    },
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 6.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bathroom / W.C.",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B09",
+   "false_rooms": 0,
+   "method": "NATIVE_DECLARED",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 9.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bedroom",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BEDROOM",
+     "unlabelled": false
+    },
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 6.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bathroom / W.C.",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B09",
+   "false_rooms": 0,
+   "method": "REF_DXF",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 9.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "BEDROOM",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BEDROOM",
+     "unlabelled": false
+    },
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 6.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "BATH",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B09",
+   "deskew_deg": 0.0,
+   "false_rooms": 0,
+   "method": "RASTER_10MM",
+   "ocr": "OK",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -0.334,
+     "area_m2": 8.9699,
+     "boundary_err_mm": 12.7,
+     "corner_err_mm": 9.7,
+     "found": true,
+     "iou": 0.9917,
+     "label": "BEDROOM",
+     "label_ok": true,
+     "perimeter_err_pct": -0.167,
+     "truth": "BEDROOM",
+     "unlabelled": false
+    },
+    {
+     "area_err_pct": -0.749,
+     "area_m2": 5.9551,
+     "boundary_err_mm": 12.7,
+     "corner_err_mm": 8.1,
+     "found": true,
+     "iou": 0.9925,
+     "label": "BATH",
+     "label_ok": true,
+     "perimeter_err_pct": -0.4,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "scale_check_err_mm": 20.0,
+   "wall_thickness_mm": 220.0
+  },
+  {
+   "case": "B09",
+   "deskew_deg": 0.0,
+   "false_rooms": 0,
+   "method": "SCAN_25MM",
+   "ocr": "OK",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 9,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -4.139,
+     "area_m2": 8.6275,
+     "boundary_err_mm": 982.5,
+     "corner_err_mm": 30.8,
+     "found": true,
+     "iou": 0.9586,
+     "label": null,
+     "label_ok": false,
+     "perimeter_err_pct": 23.043,
+     "truth": "BEDROOM",
+     "unlabelled": false
+    },
+    {
+     "area_err_pct": -3.731,
+     "area_m2": 5.7762,
+     "boundary_err_mm": 66.0,
+     "corner_err_mm": 42.0,
+     "found": true,
+     "iou": 0.9627,
+     "label": null,
+     "label_ok": false,
+     "perimeter_err_pct": -1.848,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "scale_check_err_mm": 0.0,
+   "wall_thickness_mm": 200.0
+  },
+  {
+   "case": "B09",
+   "false_rooms": 0,
+   "method": "PDF_VECTOR",
+   "openings": {
+    "state": "NOT_SUPPORTED"
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -0.0,
+     "area_m2": 9.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "BEDROOM",
+     "label_ok": true,
+     "perimeter_err_pct": -0.0,
+     "truth": "BEDROOM",
+     "unlabelled": false
+    },
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 6.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "BATH",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ]
+  },
+  {
+   "case": "B10",
+   "false_rooms": 0,
+   "method": "NATIVE_AUTO",
+   "openings": {
+    "correct": 0,
+    "expected": 1,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 1
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 13.0219,
+     "boundary_err_mm": 500.0,
+     "corner_err_mm": 794.7,
+     "found": true,
+     "iou": 0.9215,
+     "label": "Bathroom / W.C.",
+     "label_ok": true,
+     "perimeter_err_pct": -1.53,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B10",
+   "false_rooms": 0,
+   "method": "NATIVE_DECLARED",
+   "openings": {
+    "correct": 1,
+    "expected": 1,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 13.0219,
+     "boundary_err_mm": 500.0,
+     "corner_err_mm": 794.7,
+     "found": true,
+     "iou": 0.9215,
+     "label": "Bathroom / W.C.",
+     "label_ok": true,
+     "perimeter_err_pct": -1.53,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B10",
+   "false_rooms": 0,
+   "method": "REF_DXF",
+   "openings": {
+    "correct": 1,
+    "expected": 1,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -0.008,
+     "area_m2": 13.0209,
+     "boundary_err_mm": 0.5,
+     "corner_err_mm": 24.3,
+     "found": true,
+     "iou": 0.9999,
+     "label": "BATH",
+     "label_ok": true,
+     "perimeter_err_pct": -0.001,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "B10",
+   "deskew_deg": 0.0,
+   "false_rooms": 0,
+   "method": "RASTER_10MM",
+   "ocr": "OK",
+   "openings": {
+    "correct": 1,
+    "expected": 1,
+    "missed": 0,
+    "spurious": 1,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -0.574,
+     "area_m2": 12.9471,
+     "boundary_err_mm": 72.5,
+     "corner_err_mm": 126.2,
+     "found": true,
+     "iou": 0.9891,
+     "label": "BATH",
+     "label_ok": true,
+     "perimeter_err_pct": 1.571,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "scale_check_err_mm": 20.0,
+   "wall_thickness_mm": 220.0
+  },
+  {
+   "case": "B10",
+   "deskew_deg": 0.0,
+   "false_rooms": 0,
+   "method": "SCAN_25MM",
+   "ocr": "OK",
+   "openings": {
+    "correct": 1,
+    "expected": 1,
+    "missed": 0,
+    "spurious": 5,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -2.287,
+     "area_m2": 12.7241,
+     "boundary_err_mm": 82.5,
+     "corner_err_mm": 164.2,
+     "found": true,
+     "iou": 0.9746,
+     "label": null,
+     "label_ok": false,
+     "perimeter_err_pct": 1.473,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "scale_check_err_mm": 0.0,
+   "wall_thickness_mm": 200.0
+  },
+  {
+   "case": "B10",
+   "false_rooms": 0,
+   "method": "PDF_VECTOR",
+   "openings": {
+    "state": "NOT_SUPPORTED"
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": -0.002,
+     "area_m2": 13.0217,
+     "boundary_err_mm": 0.1,
+     "corner_err_mm": 10.8,
+     "found": true,
+     "iou": 1.0,
+     "label": "BATH",
+     "label_ok": true,
+     "perimeter_err_pct": -0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ]
+  },
+  {
+   "case": "C01",
+   "false_rooms": 0,
+   "method": "NATIVE_AUTO",
+   "openings": {
+    "correct": 0,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 2
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 12.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bathroom / W.C.",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "C01",
+   "false_rooms": 0,
+   "method": "NATIVE_DECLARED",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 12.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bathroom / W.C.",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "C01",
+   "false_rooms": 0,
+   "method": "REF_DXF",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 12.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "BATH",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "C02",
+   "false_rooms": 0,
+   "method": "NATIVE_AUTO",
+   "openings": {
+    "correct": 0,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 2
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 12.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bathroom / W.C.",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "C02",
+   "false_rooms": 0,
+   "method": "NATIVE_DECLARED",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 12.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bathroom / W.C.",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "C02",
+   "false_rooms": 0,
+   "method": "REF_DXF",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 12.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "BATH",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "C03",
+   "false_rooms": 0,
+   "method": "NATIVE_AUTO",
+   "openings": {
+    "correct": 0,
+    "expected": 1,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 1
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 2.18,
+     "area_m2": 7.5,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bedroom",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BEDROOM",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "C03",
+   "false_rooms": 0,
+   "method": "NATIVE_DECLARED",
+   "openings": {
+    "correct": 1,
+    "expected": 1,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 7.34,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bedroom",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BEDROOM",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "C03",
+   "false_rooms": 0,
+   "method": "REF_DXF",
+   "openings": {
+    "correct": 1,
+    "expected": 1,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 7.34,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "BEDROOM",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BEDROOM",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "C04",
+   "false_rooms": 0,
+   "method": "NATIVE_AUTO",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 9.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bedroom",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BEDROOM",
+     "unlabelled": false
+    },
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 6.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bathroom / W.C.",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "C04",
+   "false_rooms": 0,
+   "method": "NATIVE_DECLARED",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 9.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bedroom",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BEDROOM",
+     "unlabelled": false
+    },
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 6.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bathroom / W.C.",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "C04",
+   "false_rooms": 0,
+   "method": "REF_DXF",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 9.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "\u063a\u0631\u0641\u0629 \u0646\u0648\u0645",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BEDROOM",
+     "unlabelled": false
+    },
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 6.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "\u062d\u0645\u0627\u0645",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "C05",
+   "false_rooms": 0,
+   "method": "NATIVE_AUTO",
+   "openings": {
+    "correct": 0,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 2
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 12.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bathroom / W.C.",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "C05",
+   "false_rooms": 0,
+   "method": "NATIVE_DECLARED",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 12.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "Bathroom / W.C.",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "C05",
+   "false_rooms": 0,
+   "method": "REF_DXF",
+   "openings": {
+    "correct": 2,
+    "expected": 2,
+    "missed": 0,
+    "spurious": 0,
+    "state": "OK",
+    "wrong_kind": 0
+   },
+   "recall": 1.0,
+   "rooms": [
+    {
+     "area_err_pct": 0.0,
+     "area_m2": 12.0,
+     "boundary_err_mm": 0.0,
+     "corner_err_mm": 0.0,
+     "found": true,
+     "iou": 1.0,
+     "label": "BATH",
+     "label_ok": true,
+     "perimeter_err_pct": 0.0,
+     "truth": "BATH",
+     "unlabelled": false
+    }
+   ],
+   "status": "OK"
+  },
+  {
+   "case": "C06",
+   "expected_state": "XREF_UNRESOLVED",
+   "method": "NATIVE_AUTO",
+   "refused_ok": true,
+   "rooms": [],
+   "status": "BLOCKED: XREF_NOT_SUPPLIED"
+  },
+  {
+   "case": "C06",
+   "expected_state": "XREF_UNRESOLVED",
+   "method": "NATIVE_DECLARED",
+   "refused_ok": true,
+   "rooms": [],
+   "status": "BLOCKED: XREF_NOT_SUPPLIED"
+  },
+  {
+   "case": "C06",
+   "expected_state": "XREF_UNRESOLVED",
+   "method": "REF_DXF",
+   "refused_ok": true,
+   "rooms": [],
+   "status": "NOT_SUPPORTED: XREF WALLS_XREF -> walls_not_supplied.dxf is not resolved (the walls it draws are not in this file)"
+  }
+ ],
+ "schema": "URBAN_ROOM_READER_BENCHMARK_V1"
+}
