@@ -34,7 +34,7 @@
 | `knowledge/URBAN_ENGINEERING_KNOWLEDGE_1.3.0.json`, `tools/kb_build_1_3.py` | registry 1.3.0: UP-REVIEW-001, UP-QTY-STATUS-001, UP-COL-ORIENT-001; UP-WET-002 and UP-DOOR-OPEN-003 amended |
 | `tools/indep_reader.py` | the independent reader (ezdxf + shapely, no engine import) |
 | `tools/arch_change_verify.py` | change attribution with independent verification |
-| `tests/m9_p2b8/` | 7 test files (review release, doors, recognition, attribution, independent reader, benchmark) |
+| `tests/m9_p2b8/` | 6 test files (review release 18, doors 7, recognition 37, attribution 7, independent reader 15, benchmark 14) and 2 helpers |
 
 ## Privacy
 
