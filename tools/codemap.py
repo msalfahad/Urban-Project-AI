@@ -14,7 +14,7 @@ Maps (generated, never edited by hand):
 The only hand-kept input is tools/routing_topics.json. Everything else is derived from the repository: git file list,
 the Python import graph, the knowledge registry and rule store, the BOQ family master, the freeze baseline index and the
 defect registers named in the topic file. Indexes are navigation aids: the code, the approved rule records, the drawings
-and the original evidence stay authoritative. Stdlib only; deterministic (no dates except the git date of a register).
+and the original evidence stay authoritative. Stdlib only; deterministic (no timestamps; a register's date is read from its own text).
 """
 
 from __future__ import annotations
@@ -113,10 +113,6 @@ class Repo:
     @cached_property
     def test_files(self):
         return [p for p in self.pys if p.startswith("tests/") and p.rsplit("/", 1)[-1].startswith("test_")]
-
-    def git_date(self, p):
-        r = subprocess.run(["git", "-C", str(self.root), "log", "-1", "--format=%cs", "--", p], capture_output=True, text=True)
-        return r.stdout.strip() or "unknown (not in local history)"
 
     # ------------------------------------------------------------------ python structure
     @cached_property
@@ -337,7 +333,7 @@ def read_defects(repo, sources):
         path, _, section = src.partition("#")
         if not repo.exists(path):
             continue
-        date = repo.git_date(path)
+        date = register_date(repo, path)
         heading, active, header, status_i, sev_i = "", not section, None, None, None
         lines = repo.text(path).splitlines()
         for i, ln in enumerate(lines):
@@ -379,6 +375,17 @@ def read_defects(repo, sources):
                     "status": cell(status.replace("*", ""), 80), "severity": cell(cells[sev_i], 20) if sev_i is not None and sev_i < len(cells) else "-",
                     "evidence": f"{path} § {heading}", "evidence_date": date, "text": body.lower(), "modules": mods, "tests": tests})
     return rows
+
+
+def register_date(repo, path):
+    """The register's own date (first ISO date in its first 60 lines), else its phase folder. Never git history: a
+    shallow clone would give a different answer and make the maps depend on clone depth."""
+    head = "\n".join(repo.text(path).splitlines()[:60])
+    m = re.search(r"\b(20\d\d-[01]\d-[0-3]\d)\b", head)
+    if m:
+        return m.group(1)
+    parts = path.split("/")
+    return f"phase {parts[-2]}" if len(parts) > 1 else "undated"
 
 
 def resolve_module(repo, tok):

@@ -661,7 +661,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `audit_dwf_source.py` | 175 | MEDIUM | 0 | Structural audit of a DWF package. Representation only, no geometry read. |
 | `audit_submission_set.py` | 133 | MEDIUM | 1 | Per-page representation census of a multi-sheet source. No measurement. |
 | `campaign.py` | 245 | MEDIUM | 1 | Run and review a project marketing campaign (A17 + E21). |
-| `codemap.py` | 930 | MEDIUM | 0 | CODE MAP - the navigation layer for Claude Code (and people): where code, rules, tests and known defects live. |
+| `codemap.py` | 937 | MEDIUM | 0 | CODE MAP - the navigation layer for Claude Code (and people): where code, rules, tests and known defects live. |
 | `compare_source_provenance.py` | 301 | MEDIUM | 1 | Did a transformation destroy vector information, or recompress a scan? |
 | `connect_firestore.py` | 85 | MEDIUM | 0 | Connect to the Urban Projects Manager Firestore and prove the link. |
 | `documents.py` | 187 | MEDIUM | 1 | Write a quotation or contract for a client (A7 + E22 + the renderer). |

@@ -67,7 +67,7 @@ def repo(tmp_path):
         {"code": "B10-13", "group": "B10", "item_en": "Formwork", "unit": "m2", "capability": "NOT_IMPLEMENTED"}]})
     _w(r, "research/freeze_integrity/FREEZE_BASELINE_INDEX.jsonl",
        json.dumps({"pinned_code": ["engine/source/frame.py"]}) + "\n")
-    _w(r, "research/old/REGISTER.md", "# Old\n\n## Known bugs\n\n| id | Defect | Status |\n|---|---|---|\n"
+    _w(r, "research/old/REGISTER.md", "# Old\n\nSnapshot 2026-01-02.\n\n## Known bugs\n\n| id | Defect | Status |\n|---|---|---|\n"
        "| B1 | door width read in the wrong unit | OPEN |\n| B2 | door swing mirrored | fixed |\n"
        "| B3 | unit conflict | OPEN |\n| B4 | door leaf missing | - |\n")
     _w(r, "research/new/REGISTER.md", "# New\n\n## Still open\n\n| id | Status |\n|---|---|\n| B3 / B5 | open |\n\n"
@@ -162,6 +162,7 @@ def test_historical_defect_status_handling(repo):
     assert allc["B3"]["history"] and "OPEN" in allc["B3"]["history"][0]
     assert "B1" in {d["id"] for d in by_topic["doors"]} and "B3" in {d["id"] for d in by_topic["units"]}
     assert allc["B1"]["evidence"].startswith("research/old/REGISTER.md") and allc["B1"]["evidence_date"] == "2026-01-02"
+    assert allc["D-P9-01"]["evidence_date"] == "phase new"   # undated register: its phase folder, never git history
 
 
 def test_capability_status_is_exact(repo):
