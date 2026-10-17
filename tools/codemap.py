@@ -578,6 +578,12 @@ def render_routing(repo, cfg, facts, dmap, P, shared):
                 L.append(f"| {d['id']} | {d['defect_class']} | {d['status']} | {d['summary']} | "
                          f"{', '.join(f'`{m}`' for m in d['modules']) or '-'} | `{d['evidence']}` ({d['evidence_date']}) |")
         L.append("")
+    if cfg.get("_unrouted"):
+        L += ["## Defects not matched to a topic", "", "Listed so none is hidden; add a defect term to a topic to route them.", "",
+              "| Id | Class | Reported status | Defect | Evidence (date) |", "|---|---|---|---|---|"]
+        L += [f"| {d['id']} | {d['defect_class']} | {d['status']} | {d['summary']} | `{d['evidence']}` ({d['evidence_date']}) |"
+              for d in cfg["_unrouted"]]
+        L.append("")
     if P.warnings:
         L += ["## Index warnings", ""] + [f"- {w}" for w in P.warnings]
     return "\n".join(L).rstrip() + "\n"
@@ -723,7 +729,9 @@ def prepare(repo):
         for pat in t["rules"]:
             if not any(re.search(pat, rid) for rid in repo.all_rule_ids):
                 P.error(f"topic {t['id']}: rule pattern {pat!r} matches no rule in the knowledge registry or rule store")
-    _, dmap = defects_by_topic(repo, cfg) if cfg["topics"] else ({}, {})
+    allc, dmap = defects_by_topic(repo, cfg) if cfg["topics"] else ({}, {})
+    routed = {d["id"] for ds in dmap.values() for d in ds}
+    cfg["_unrouted"] = sorted((d for k, d in allc.items() if k not in routed), key=lambda d: d["id"])
     return P, cfg, facts, dmap
 
 

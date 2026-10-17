@@ -482,3 +482,18 @@ L4 full suite + freeze check (see above)
 | B13 | HISTORICAL_UNVERIFIED | OPEN | Evaluation map errors E1–E4 hid defects | `research/external_engine_lab/alsenan_v3b_evaluation.py` | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-12) |
 | B14 | HISTORICAL_UNVERIFIED | OPEN | De-dup of identical slab labels may merge two layers | `engine/source/slab_rebar_binding.py` | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-12) |
 | D-V28-draft-02 | VERIFIED_FIXED | fixed | **V2.8 draft** asked for a wall-tile height in dry rooms and in wet rooms whose owner full height was already resolved | - | `research/urban_m9_p2b9/DEFECT_AND_EVIDENCE_REGISTER.md § 2. Found in Phase 2B-9` (2026-10-17) |
+
+## Defects not matched to a topic
+
+Listed so none is hidden; add a defect term to a topic to route them.
+
+| Id | Class | Reported status | Defect | Evidence (date) |
+|---|---|---|---|---|
+| B18 | HISTORICAL_UNVERIFIED | OPEN | README / ARCHITECTURE docs stale | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-12) |
+| D-P8-01 | REGRESSION_RISK | fixed before release: the records continue the numbering | **V2.7.1 draft**: REVIEW_INVARIANT_RELEASE and TURNED_COLUMN records were appended after the ids were given (no id), and the summ… | `research/urban_m9_p2b8/REMAINING_DEFECT_REGISTER.md § Closed in Phase 2B-8` (2026-10-17) |
+| D-P8-04 | UNKNOWN | - | a space closed on one side by a line of a non-wall layer (1.256 m) cannot be verified independently: the wall lines alone do not… | `research/urban_m9_p2b8/REMAINING_DEFECT_REGISTER.md § Found in Phase 2B-8, still open` (2026-10-17) |
+| L-01 | HISTORICAL_UNVERIFIED | by design (safe) | a sheet frame turned with its plan is refused at admission | `research/urban_m9_p2b8/REMAINING_DEFECT_REGISTER.md § Still open from earlier phases` (2026-10-17) |
+| L-P7-01 | REGRESSION_RISK | fixed in V2.7.1 (UP-WET-002 1.3.0): a pan-size circle centred on a wall cistern | the WC-shape rule missed a round bowl | `research/urban_m9_p2b8/REMAINING_DEFECT_REGISTER.md § Closed in Phase 2B-8` (2026-10-17) |
+| L-P7-02 | REGRESSION_RISK | fixed in V2.7.1 for a seat wider than a pan and for a free-standing chair: BOWL… | an armchair drawn with a WC outline passed the WC-shape rule | `research/urban_m9_p2b8/REMAINING_DEFECT_REGISTER.md § Closed in Phase 2B-8` (2026-10-17) |
+| L-P7-03 | REGRESSION_RISK | fixed in V2.7.1: matched by the decimal handle of every insert path | a basin block's own linework compared ids of two forms (ineffective exclusion) | `research/urban_m9_p2b8/REMAINING_DEFECT_REGISTER.md § Closed in Phase 2B-8` (2026-10-17) |
+| L-P7-05 | REGRESSION_RISK | fixed in V2.7.1: all 10 are threshold strips, now traced through the strip (STR… | 10 reference-plan lines carried no source entity | `research/urban_m9_p2b8/REMAINING_DEFECT_REGISTER.md § Closed in Phase 2B-8` (2026-10-17) |
