@@ -27,6 +27,7 @@ ELIGIBLE = ("WALL", "COLUMN", "WINDOW_THRESHOLD")
 TOL_M = 0.01
 ANG_TOL = 1e-3
 EPS = 1e-9
+SLIVER_M = 1e-4                       # ARCH_TAKEOFF_V2.7: ring edges at most 0.1 mm long are numerical slivers
 
 
 def _sub(a, b):
@@ -45,8 +46,11 @@ def signed_area(ring):
     return 0.5 * sum(_cross(ring[i], ring[(i + 1) % len(ring)]) for i in range(len(ring)))
 
 
-def features(S, ents, roles, unit_m, room, *, wall_roles=("WALL",), window_roles=("WINDOW",)):
-    """typed segments in metres: {"role", "id", "a", "b"} (roles maps a layer to its role)."""
+def features(S, ents, roles, unit_m, room, *, wall_roles=("WALL",), window_roles=("WINDOW",), v27=False):
+    """typed segments in metres: {"role", "id", "a", "b"} (roles maps a layer to its role).
+    v27 (ARCH_TAKEOFF_V2.7 only): wall-role arcs are WALL features {"role", "id", "arc": (cx, cy, r, a0, a1)} (a curved
+    wall is wall, never an open edge), the column-role layers' own segments are COLUMN features (a turned column is a
+    column), the zero-material wall pieces of a narrowed door opening are WALL; False is unchanged."""
     u = unit_m
     m = lambda p: (p[0] * u, p[1] * u)                                    # noqa: E731
     out = []
@@ -56,6 +60,22 @@ def features(S, ents, roles, unit_m, room, *, wall_roles=("WALL",), window_roles
             out.append({"role": "WALL", "id": s["id"], "a": m(s["a"]), "b": m(s["b"])})
         elif ro in window_roles:
             out.append({"role": "GLAZING", "id": s["id"], "a": m(s["a"]), "b": m(s["b"])})
+        elif v27 and ro == "COLUMN":
+            out.append({"role": "COLUMN", "id": s["id"], "a": m(s["a"]), "b": m(s["b"])})
+    if v27:
+        for a in ents.get("arcs") or ():
+            if roles.get(a["layer"]) in wall_roles:
+                cx, cy = a["c"]
+                a0 = math.atan2(a["s"][1] - cy, a["s"][0] - cx)
+                a1 = math.atan2(a["e"][1] - cy, a["e"][0] - cx)
+                if a.get("dir") == "CW":
+                    a0, a1 = a1, a0
+                if a1 <= a0:
+                    a1 += 2 * math.pi
+                out.append({"role": "WALL", "id": a["id"], "arc": (cx * u, cy * u, a["r"] * u, a0, a1),
+                            "a": m(a["s"]), "b": m(a["e"])})
+        for r in S.get("repairs_v27") or ():
+            out.append({"role": "WALL", "id": r["id"], "a": m(r["a"]), "b": m(r["b"])})
     for k, b in enumerate(S.get("column_boxes") or (), 1):
         x0, y0, x1, y1 = b
         for i, (a_, b_) in enumerate((((x0, y0), (x1, y0)), ((x1, y0), (x1, y1)), ((x1, y1), (x0, y1)),
@@ -76,9 +96,39 @@ def features(S, ents, roles, unit_m, room, *, wall_roles=("WALL",), window_roles
     return out
 
 
-def segments(ring, feats, tol=TOL_M):
+def _on_arc(f, p, q, tol):
+    """ARCH_TAKEOFF_V2.7: a ring edge p-q lies on the arc feature f (both ends on its circle within tol, its middle's
+    angle inside the arc's sweep, the chord's sagitta within tol of the circle)."""
+    cx, cy, r, a0, a1 = f["arc"]
+    if abs(math.dist(p, (cx, cy)) - r) > tol or abs(math.dist(q, (cx, cy)) - r) > tol:
+        return False
+    mid = ((p[0] + q[0]) / 2, (p[1] + q[1]) / 2)
+    if r - math.dist(mid, (cx, cy)) > tol + (math.dist(p, q) / 2) ** 2 / max(r, 1e-12):
+        return False
+    t = math.atan2(mid[1] - cy, mid[0] - cx)
+    while t < a0:
+        t += 2 * math.pi
+    return t <= a1 + 1e-9
+
+
+def dedupe(ring, sliver_m):
+    """ARCH_TAKEOFF_V2.7: the ring without vertices closer than sliver_m to the last kept vertex (a near-zero edge left
+    by turning and rescaling a drawing is merged, never typed as an open edge)."""
+    out = []
+    for p in ring:
+        if out and math.dist(p, out[-1]) <= sliver_m:
+            continue
+        out.append(p)
+    while len(out) > 1 and math.dist(out[0], out[-1]) <= sliver_m:
+        out.pop()
+    return out
+
+
+def segments(ring, feats, tol=TOL_M, sliver_m=None):
     """-> [{"role", "id", "length_m", "a", "b", "edge"}] covering the ring exactly, in ring order (consecutive pieces
-    of one role and id merged within an edge)."""
+    of one role and id merged within an edge). sliver_m (ARCH_TAKEOFF_V2.7 only): a piece at most sliver_m long is
+    merged into its neighbour on the same edge (a feature ending a rounding error short of a vertex never leaves an
+    open edge); None is unchanged."""
     out = []
     n = len(ring)
     for i in range(n):
@@ -91,6 +141,10 @@ def segments(ring, feats, tol=TOL_M):
         nn = (-uu[1], uu[0])
         ivs = []
         for f in feats:
+            if "arc" in f:
+                if _on_arc(f, p, q, tol):
+                    ivs.append((0.0, L, f["role"], f["id"]))
+                continue
             fa, fb = f["a"], f["b"]
             fd = _sub(fb, fa)
             fl = math.hypot(*fd)
@@ -116,6 +170,21 @@ def segments(ring, feats, tol=TOL_M):
                 pieces[-1][1] = s1
             else:
                 pieces.append([s0, s1, role, fid])
+        if sliver_m is not None and len(pieces) > 1:
+            kept = []
+            for pc in pieces:
+                if pc[1] - pc[0] <= sliver_m:
+                    if kept:
+                        kept[-1][1] = pc[1]
+                        continue
+                    pc = [pc[0], pc[1], None, None]           # merged into the next piece below
+                if kept and kept[-1][2] is None:
+                    pc = [kept.pop()[0], pc[1], pc[2], pc[3]]
+                if kept and kept[-1][2] == pc[2] and kept[-1][3] == pc[3]:
+                    kept[-1][1] = pc[1]
+                else:
+                    kept.append(pc)
+            pieces = [pc if pc[2] is not None else [pc[0], pc[1], "OTHER", None] for pc in kept]
         for s0, s1, role, fid in pieces:
             out.append({"role": role, "id": fid, "length_m": s1 - s0, "edge": i,
                         "a": (p[0] + uu[0] * s0, p[1] + uu[1] * s0), "b": (p[0] + uu[0] * s1, p[1] + uu[1] * s1)})
@@ -185,15 +254,19 @@ def _ccw(ring):
     return r if signed_area(r) >= 0 else r[::-1]
 
 
-def boundary(room, feats, tol=TOL_M):
+def boundary(room, feats, tol=TOL_M, sliver_m=None):
     """the boundary of one room: outer ring (counter-clockwise) and obstruction rings, typed; lengths by role; the
-    eligible runs; the corners; the breaks (doorways, passages, glazing, zone lines, open edges) with their ids."""
+    eligible runs; the corners; the breaks (doorways, passages, glazing, zone lines, open edges) with their ids.
+    sliver_m (ARCH_TAKEOFF_V2.7 only): rings are first cleaned of near-zero edges (dedupe); None is unchanged."""
     outer = _ccw(room.get("polygon_m") or ())
     rings = [("OUTER", outer)] + [("HOLE", _ccw(h)) for h in room.get("hole_polygons_m") or ()]
+    if sliver_m is not None:
+        rings = [(k, dedupe(r, sliver_m)) for k, r in rings]
     by_role, all_runs, cor = {}, [], {"internal": 0, "external": 0, "upturn_ends": 0, "items": []}
     breaks, ring_out = [], []
     for kind, ring in rings:
-        segs = segments(ring, feats, tol) if len(ring) >= 3 else []
+        segs = segments(ring, feats, tol, **({"sliver_m": sliver_m} if sliver_m is not None else {})) \
+            if len(ring) >= 3 else []
         if kind == "HOLE":
             # an obstruction inside the area (a column or a boxed shaft): its faces are upturned unless a feature says
             # otherwise
@@ -222,14 +295,17 @@ def boundary(room, feats, tol=TOL_M):
             "rings": ring_out, "total_lm": round(sum(by_role.values()), 6)}
 
 
-def ring_segments(room, feats, tol=TOL_M):
+def ring_segments(room, feats, tol=TOL_M, sliver_m=None):
     """ARCH_TAKEOFF_V2.6: the typed segments of the outer ring and of every obstruction ring, as boundary() types
     them (counter-clockwise rings; an untyped obstruction face is COLUMN). -> [{"ring", "segments"}]."""
     out = []
     rings = [("OUTER", _ccw(room.get("polygon_m") or ()))] + [("HOLE", _ccw(h))
                                                                for h in room.get("hole_polygons_m") or ()]
+    if sliver_m is not None:
+        rings = [(k, dedupe(r, sliver_m)) for k, r in rings]
     for kind, ring in rings:
-        segs = segments(ring, feats, tol) if len(ring) >= 3 else []
+        segs = segments(ring, feats, tol, **({"sliver_m": sliver_m} if sliver_m is not None else {})) \
+            if len(ring) >= 3 else []
         if kind == "HOLE":
             segs = [dict(s, role="COLUMN" if s["role"] == "OTHER" else s["role"]) for s in segs]
         out.append({"ring": kind, "segments": segs})

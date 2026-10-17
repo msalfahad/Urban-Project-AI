@@ -92,16 +92,44 @@ def _closure_geom(S, occ):
     return None
 
 
-def _frame_span(occ, swings, ents, u, n, o_lo, o_hi, unit_m):
+SYMBOL_REACH = 1.5                       # ARCH_TAKEOFF_V2.7: a door symbol's own linework lies within 1.5 x the leaf
+SYMBOL_REACH_PAD_M = 0.30                # radius + 0.30 m of its hinge
+
+
+def symbol_prefix(sw, ents, unit_m):
+    """ARCH_TAKEOFF_V2.7: the block-instance path prefix of the door symbol that holds this swing - the innermost
+    occurrence on the swing's path whose own linework all lies within SYMBOL_REACH x radius + SYMBOL_REACH_PAD_M of
+    the hinge (a door block, even nested inside plan blocks); None when every occurrence is wider (a door drawn
+    exploded inside a plan block, or loose in model space)."""
+    path = list(sw.get("path") or ())
+    reach = SYMBOL_REACH * sw["radius"] + SYMBOL_REACH_PAD_M / unit_m
+    for k in range(len(path), 0, -1):
+        pre = path[:k]
+        segs = [x for x in ents.get("segments") or () if list(x.get("path") or ())[:k] == pre]
+        if segs and all(math.dist(p, sw["hinge"]) <= reach for x in segs for p in (x["a"], x["b"])):
+            return pre
+    return None
+
+
+def _frame_span(occ, swings, ents, u, n, o_lo, o_hi, unit_m, symbol_scope=False):
     """the door block's own lines (same insert occurrence) lying in the wall strip, projected on the wall axis, every
-    leaf line of the insert excluded: their span is the frame width. None when the block draws no such line."""
-    insert = occ.split("|")[0]
-    leaves = [sw for k, sw in swings.items() if k.split("|")[0] == insert]
+    leaf line of the insert excluded: their span is the frame width. None when the block draws no such line.
+    symbol_scope (ARCH_TAKEOFF_V2.7 only): the occurrence is the door symbol's own (symbol_prefix), not the outermost
+    insert of the swing's path - a plan nested in blocks no longer pools every door's lines into one frame."""
+    if symbol_scope:
+        pre = symbol_prefix(swings[occ], ents, unit_m) if occ in swings else None
+        if pre is None:
+            return None
+        k = len(pre)
+        leaves = [sw for sw in swings.values() if list(sw.get("path") or ())[:k] == pre]
+        mine = [x for x in ents.get("segments") or () if list(x.get("path") or ())[:k] == pre]
+    else:
+        insert = occ.split("|")[0]
+        leaves = [sw for k, sw in swings.items() if k.split("|")[0] == insert]
+        mine = [x for x in ents.get("segments") or () if (x.get("path") or [None])[0] == insert]
     tol = 0.02 / unit_m
     xs = []
-    for s in ents.get("segments") or ():
-        if (s.get("path") or [None])[0] != insert:
-            continue
+    for s in mine:
         L = math.dist(s["a"], s["b"])
         if any(min(math.dist(s["a"], sw["hinge"]), math.dist(s["b"], sw["hinge"])) <= tol * 5 and
                abs(L - sw["radius"]) <= 0.15 * sw["radius"] for sw in leaves):
@@ -181,7 +209,7 @@ def _height(cls, facts):
 
 
 def elements(S, rooms, ents, unit_m, floor, *, wall_layers=(), origin=(0.0, 0.0), facts=None,
-             promote_by_dimension=False, dimensions=(), decisions=None):
+             promote_by_dimension=False, dimensions=(), decisions=None, symbol_scope=False):
     """the door elements of one floor from the V2.1 spaces result S (arch_rooms.spaces) and its rooms."""
     swings = S.get("doors") or {}
     status = S.get("door_status") or {}
@@ -207,11 +235,21 @@ def elements(S, rooms, ents, unit_m, floor, *, wall_layers=(), origin=(0.0, 0.0)
         c = o["centre"]
         frame = None
         for occ in leaves:
-            f = _frame_span(occ, swings, ents, u, n, o["o0"], o["o1"], unit_m) if occ in swings else None
+            f = _frame_span(occ, swings, ents, u, n, o["o0"], o["o1"], unit_m,
+                            **({"symbol_scope": True} if symbol_scope else {})) if occ in swings else None
             frame = f if f is not None and (frame is None or f > frame) else frame
+        if symbol_scope:                                 # ARCH_TAKEOFF_V2.7: the V2.6 reading, kept for the log
+            frame26 = None
+            for occ in leaves:
+                f = _frame_span(occ, swings, ents, u, n, o["o0"], o["o1"], unit_m) if occ in swings else None
+                frame26 = f if f is not None and (frame26 is None or f > frame26) else frame26
         el = {"floor": floor, "opening_id": o["opening_id"], "swings": list(leaves), "leaf_count": len(leaves),
               "state": CONFIRMED, "centre": list(c), "u": list(u), "n": list(n), "wall_t_m": o["wall_t_m"],
-              "structural_opening_width_m": o["width_m"], "structural_opening_source": "BAND_OPENING (jamb to jamb)",
+              "structural_opening_width_m": o["width_m"],
+              "structural_opening_source": "JAMB_SPAN (the door symbol's jamb lines; the rest of the wall gap proven wall "
+                                           "on both faces - ARCH_TAKEOFF_V2.7)"
+              if (o.get("opening_v27") or {}).get("decision") == "NARROWED_TO_JAMB_SPAN" else
+              "BAND_OPENING (jamb to jamb)",
               "frame_width_m": frame * unit_m if frame is not None else None,
               "frame_source": "door block frame span" if frame is not None else "NOT_DRAWN",
               "nominal_leaf_width_m": [swings[x]["radius"] * unit_m for x in leaves if x in swings],
@@ -221,6 +259,8 @@ def elements(S, rooms, ents, unit_m, floor, *, wall_layers=(), origin=(0.0, 0.0)
                  for x in leaves if x in swings]}
         if o.get("door_fit_review"):                     # ARCH_TAKEOFF_V2.6: the swing fits only the review limits
             el["fit_review"] = o["door_fit_review"]
+        if symbol_scope and frame26 != frame:
+            el["frame_scope_v27"] = _frame_change(frame26, frame, unit_m)
         el["history"] = [{"from": None, "to": CONFIRMED, "evidence": el["evidence"][0]["id"]}]
         add(el)
     # 2. swings closed by their leaf with no band opening: PROVISIONAL (an exploded pair is one element)
@@ -238,7 +278,8 @@ def elements(S, rooms, ents, unit_m, floor, *, wall_layers=(), origin=(0.0, 0.0)
                 g = _closure_geom(S, a) or (tuple(sa["hinge"]), tuple(sb["hinge"]))
                 add(_provisional(floor, [a, b], swings, status, g, span, ents, unit_m,
                                  extra=[_ev(f"EV-{a.split('|')[-1]}-PAIR", "EXPLODED_PAIR", hinge_span_m=span * unit_m,
-                                            leaves_m=[sa["radius"] * unit_m, sb["radius"] * unit_m])]))
+                                            leaves_m=[sa["radius"] * unit_m, sb["radius"] * unit_m])],
+                                 symbol_scope=symbol_scope))
             elif span <= 1.3 * rr:
                 findings.append({"level": "REVIEW", "code": "DOUBLE_LEAF_UNCERTAIN", "floor": floor,
                                  "swings": [a, b], "message": f"two leaf-closed swings {span * unit_m:.3f} m apart "
@@ -248,7 +289,7 @@ def elements(S, rooms, ents, unit_m, floor, *, wall_layers=(), origin=(0.0, 0.0)
             continue
         st = status[occ]
         g = _closure_geom(S, occ)
-        add(_provisional(floor, [occ], swings, status, g, st.get("width"), ents, unit_m))
+        add(_provisional(floor, [occ], swings, status, g, st.get("width"), ents, unit_m, symbol_scope=symbol_scope))
     # 3. swings closing no gap: UNRESOLVED
     for occ in sorted(swings):
         if used[occ]:
@@ -296,7 +337,7 @@ def elements(S, rooms, ents, unit_m, floor, *, wall_layers=(), origin=(0.0, 0.0)
             "conservation": conservation(swings, out, floor)}
 
 
-def _provisional(floor, occs, swings, status, g, width_du, ents, unit_m, extra=()):
+def _provisional(floor, occs, swings, status, g, width_du, ents, unit_m, extra=(), symbol_scope=False):
     sw0 = swings[occs[0]]
     if g is not None:
         a, b = g
@@ -325,12 +366,24 @@ def _provisional(floor, occs, swings, status, g, width_du, ents, unit_m, extra=(
                          "jamb drawn); width between the swing radius and the wall-to-wall closure"}
     if u:
         ins = occs[0]
-        f = _frame_span(ins, swings, ents, u, n, *sorted((c[0] * n[0] + c[1] * n[1] - 0.15 / unit_m,
-                                                        c[0] * n[0] + c[1] * n[1] + 0.15 / unit_m)), unit_m)
+        strip = sorted((c[0] * n[0] + c[1] * n[1] - 0.15 / unit_m, c[0] * n[0] + c[1] * n[1] + 0.15 / unit_m))
+        f = _frame_span(ins, swings, ents, u, n, *strip, unit_m, **({"symbol_scope": True} if symbol_scope else {}))
         if f is not None:
             el["frame_width_m"], el["frame_source"] = f * unit_m, "door block frame span"
+        if symbol_scope:                                 # ARCH_TAKEOFF_V2.7: the V2.6 reading, kept for the log
+            f26 = _frame_span(ins, swings, ents, u, n, *strip, unit_m)
+            if f26 != f:
+                el["frame_scope_v27"] = _frame_change(f26, f, unit_m)
     el["history"] = [{"from": None, "to": PROVISIONAL, "evidence": el["evidence"][0]["id"]}]
     return el
+
+
+def _frame_change(f26, f27, unit_m):
+    """ARCH_TAKEOFF_V2.7: a door frame read from the door symbol's own insert where the V2.6 reading (the outermost
+    insert of the swing's path) differs."""
+    return {"v26_frame_m": None if f26 is None else round(f26 * unit_m, 6),
+            "frame_m": None if f27 is None else round(f27 * unit_m, 6),
+            "basis": "the door symbol's own insert (symbol_prefix), not the group or plan block around it"}
 
 
 def _transition(el, to, evidence_id):

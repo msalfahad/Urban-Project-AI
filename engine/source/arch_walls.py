@@ -105,7 +105,10 @@ def _columns_on(band, columns, lo_off, hi_off):
     return sorted(cuts)
 
 
-def walls(ents, roles, unit_m, faces, openings=(), columns=(), geom=None):
+def walls(ents, roles, unit_m, faces, openings=(), columns=(), geom=None, arc_bands=False, trace=False):
+    """arc_bands (ARCH_TAKEOFF_V2.7 only): the curved wall bands (engine.source.arch_v27.arc_bands) join the walls;
+    trace (ARCH_TAKEOFF_V2.7 only): each wall carries the ids of the drawn face segments over its run (source_ids).
+    False is the V1 .. V2.6 path, unchanged."""
     wall_l = sorted(l for l, r in roles.items() if r == AP.WALL)
     loc = _Locator(faces)
     probe = SIDE_PROBE_M / unit_m
@@ -144,9 +147,15 @@ def walls(ents, roles, unit_m, faces, openings=(), columns=(), geom=None):
                         "centreline": [(ux * b["lo"] + nx * mid_off, uy * b["lo"] + ny * mid_off),
                                        (ux * b["hi"] + nx * mid_off, uy * b["hi"] + ny * mid_off)],
                         "_ang": b["ang"], "_off": mid_off, "_lo": b["lo"], "_hi": b["hi"]})
+            if trace:
+                out[-1]["source_ids"] = sorted({i for F in (A, B) for t0, t1, ids in F["cover"]
+                                                if min(t1, b["hi"]) - max(t0, b["lo"]) > 0 for i in ids})
+    if arc_bands:
+        from engine.source import arch_v27 as V27
+        out += V27.arc_bands(ents, wall_l, unit_m, loc, probe, _family)
     for w in out:
         for k in ("_ang", "_off", "_lo", "_hi"):
-            w.pop(k)
+            w.pop(k, None)
     fam = defaultdict(lambda: {"walls": 0, "net_lm": 0.0, "gross_lm": 0.0, "strip_m2": 0.0, "external_lm": 0.0,
                                "internal_lm": 0.0, "columns_in_wall_lm": 0.0})
     for w in out:

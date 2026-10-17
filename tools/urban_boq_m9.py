@@ -43,8 +43,9 @@ import csv
 import hashlib
 import io
 import json
+import re
 import sys
-from collections import Counter
+from collections import Counter, defaultdict
 from datetime import datetime
 from pathlib import Path
 
@@ -64,7 +65,7 @@ POLICY_ID = "URBAN_BOQ_M9_S1"
 ARCH_POLICY_ID = "URBAN_BOQ_M9_S2_ARCH"
 ARCH_POLICY_ID_V2 = "URBAN_BOQ_M9_S6_ARCH_V2"
 ARCH_METHODS = ("ARCH_TAKEOFF_V1", "ARCH_TAKEOFF_V2", "ARCH_TAKEOFF_V2.1", "ARCH_TAKEOFF_V2.2", "ARCH_TAKEOFF_V2.3",
-                "ARCH_TAKEOFF_V2.4", "ARCH_TAKEOFF_V2.5", "ARCH_TAKEOFF_V2.6")
+                "ARCH_TAKEOFF_V2.4", "ARCH_TAKEOFF_V2.5", "ARCH_TAKEOFF_V2.6", "ARCH_TAKEOFF_V2.7")
 # S6: ARCH_TAKEOFF_V2 = V1 + drawing admission (stop, exit 2, no BOQ on a fatal finding) + unit-relative geometric
 # tolerances + plan regions cut only along empty bands + floor-category and finish-surface completeness. V1 is
 # unchanged; --strict-admission puts the same admission in front of V1 (its outputs are V1's own).
@@ -110,6 +111,14 @@ ARCH_POLICY_ID_V25 = "URBAN_BOQ_M9_P2B3_ARCH_V2_5"
 # (their call paths pass no v26 flag).
 V26 = "ARCH_TAKEOFF_V2.6"
 ARCH_POLICY_ID_V26 = "URBAN_BOQ_M9_P2B5_ARCH_V2_6"
+# Phase 2B-7: ARCH_TAKEOFF_V2.7 = ARCH_TAKEOFF_V2.6 + the drawing-interpretation corrections proven by independent
+# acceptance tests (engine.source.arch_v27, tests/m9_p2b7): the door opening from its own jamb evidence, layer roles
+# from geometry with explicit refusal, oriented and four-line columns, arc-aware room boundaries and curved wall
+# bands, the separate door-opening record and the wet-room evidence rule of knowledge registry 1.2.0. Opt-in only:
+# no earlier method reaches it (their call paths pass no v27 flag).
+V27 = "ARCH_TAKEOFF_V2.7"
+ARCH_POLICY_ID_V27 = "URBAN_BOQ_M9_P2B7_ARCH_V2_7"
+V27_KNOWLEDGE = "1.2.0"           # the registry V2.7 reads (UP-DOOR-OPEN-003, UP-WET-002; tools/kb_build_1_2.py)
 M9_DIR = "m9"
 CREATED = datetime(2026, 1, 1)
 
@@ -252,18 +261,18 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
               project_id=project_id, intake=intake, strict=strict, units=units, region_specs=region_specs,
               accept_xrefs=accept_xrefs, extra_documents=extra_documents, admission_findings=admission_findings,
               decisions=decisions)
-    if independent_checks is not None and method not in (V25, V26):
-        raise SystemExit("--independent-checks (URBAN_INDEPENDENT_CHECKS_V1) needs --method ARCH_TAKEOFF_V2.5 or "
-                         "ARCH_TAKEOFF_V2.6")
-    if method in (V24, V25, V26):
+    if independent_checks is not None and method not in (V25, V26, V27):
+        raise SystemExit("--independent-checks (URBAN_INDEPENDENT_CHECKS_V1) needs --method ARCH_TAKEOFF_V2.5, "
+                         "ARCH_TAKEOFF_V2.6 or ARCH_TAKEOFF_V2.7")
+    if method in (V24, V25, V26, V27):
         from engine.source import knowledge as K
-        with K.using("1.1.0"):
+        with K.using(V27_KNOWLEDGE if method == V27 else "1.1.0"):
             return _arch_compute(drawing, project_rules=project_rules,
-                                 **({"independent_checks": independent_checks} if method in (V25, V26) else {}),
+                                 **({"independent_checks": independent_checks} if method in (V25, V26, V27) else {}),
                                  **kw)
     if project_rules is not None:
         raise SystemExit("--project-rules (URBAN_PROJECT_RULES_V1) needs --method ARCH_TAKEOFF_V2.4, "
-                         "ARCH_TAKEOFF_V2.5 or ARCH_TAKEOFF_V2.6")
+                         "ARCH_TAKEOFF_V2.5, ARCH_TAKEOFF_V2.6 or ARCH_TAKEOFF_V2.7")
     return _arch_compute(drawing, **kw)
 
 
@@ -284,13 +293,14 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
     from tools import urban_intake as UI
     if method not in ARCH_METHODS:
         raise SystemExit(f"--method must be one of {ARCH_METHODS} (the architectural route is behind a versioned flag)")
-    v26 = method == V26                                       # ARCH_TAKEOFF_V2.5 plus the installation layer
-    v25 = method in (V25, V26)                                # ARCH_TAKEOFF_V2.4 plus the proven corrections
-    v24 = method in (V24, V25, V26)                           # V2.3 plus the registry 1.1.0 and the project rules
-    v23 = method in (V23, V24, V25, V26)                      # V2.3 is V2.2 plus the knowledge registry
-    v22 = method in (V22, V23, V24, V25, V26)                 # V2.2 is V2.1 plus the Phase 2B-0 corrections
-    v21 = method in (V21, V22, V23, V24, V25, V26)
-    v2 = method in (V2, V21, V22, V23, V24, V25, V26)         # V2.1 is V2 plus the Phase 2A additions
+    v27 = method == V27                                       # ARCH_TAKEOFF_V2.6 plus the Phase 2B-7 corrections
+    v26 = method in (V26, V27)                                # ARCH_TAKEOFF_V2.5 plus the installation layer
+    v25 = method in (V25, V26, V27)                           # ARCH_TAKEOFF_V2.4 plus the proven corrections
+    v24 = method in (V24, V25, V26, V27)                      # V2.3 plus the registry 1.1.0 and the project rules
+    v23 = method in (V23, V24, V25, V26, V27)                 # V2.3 is V2.2 plus the knowledge registry
+    v22 = method in (V22, V23, V24, V25, V26, V27)            # V2.2 is V2.1 plus the Phase 2B-0 corrections
+    v21 = method in (V21, V22, V23, V24, V25, V26, V27)
+    v2 = method in (V2, V21, V22, V23, V24, V25, V26, V27)    # V2.1 is V2 plus the Phase 2A additions
     admit = v2 or strict
     if not admit and (units or region_specs or accept_xrefs):
         raise SystemExit("--units / --region / --accept-missing-xref are reviewer inputs of the admission: use them "
@@ -388,6 +398,7 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
             ents_of[r["region_id"]] = dict(ents_of[r["region_id"]], segments=keep)
     level = {r["region_id"]: AR.dominant_level(ents_of[r["region_id"]]["texts"]) for r in regs}
     lines, mats, comps, unresolved, rooms, openings, regions, walls_of = [], [], [], [], [], [], [], []
+    line_region = {}                                  # ARCH_TAKEOFF_V2.7: id(line) -> (line, its plan region)
     floor_areas = []
     v2_unresolved, coverage, column_ev, arc_recs, unread_ev = [], [], [], [], []
     strip_split, strip_split_pieces = [], []                  # ARCH_TAKEOFF_V2.6 (D-V26-07)
@@ -395,14 +406,16 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
     if v21:
         from engine.source import robust_geometry as RG
         geom_of = {r["region_id"]: RG.Geometry(u) for r in regs}
-    roles_of = {r["region_id"]: AP.layer_roles(ents_of[r["region_id"]], u, override=layer_roles, tol=tol,
-                                               **({"geom": geom_of[r["region_id"]]} if v21 else {}))
+    if v27:
+        from engine.source import arch_v27 as V27M          # ARCH_TAKEOFF_V2.7: layer roles from geometry + refusals
+    roles_of = {r["region_id"]: (V27M.layer_roles if v27 else AP.layer_roles)(
+        ents_of[r["region_id"]], u, override=layer_roles, tol=tol, **({"geom": geom_of[r["region_id"]]} if v21 else {}))
                 for r in regs}
     spaces_of = {r["region_id"]: AR.spaces(ents_of[r["region_id"]], roles_of[r["region_id"]]["roles"], u,
                                            region_id=r["region_id"], tol=tol,
                                            **({"geom": geom_of[r["region_id"]]} if v21 else {}),
                                            **({"release_safety": True} if v22 else {}),
-                                           **({"door_review": True} if v26 else {}))
+                                           **({"door_review": True} if v26 else {}), **({"v27": True} if v27 else {}))
                  for r in regs if roles_of[r["region_id"]]["state"] != "BLOCKED"}
     # one stair drawn on two plans: the plans are aligned on their column grid, and a flight lying over a flight of
     # the plan below is counted once (the repeat is exposure until a reviewer says which it is)
@@ -423,6 +436,7 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
                                     for r in stacked], u)
     col_layers = sorted({lay for v in roles_of.values() for lay, ro in v["roles"].items() if ro == AP.COLUMN})
     door_floors, door_texts, door_face_texts = [], {}, {}
+    v27_log = []                                              # ARCH_TAKEOFF_V2.7: every correction and refusal
     decided, possibly_ext = {}, {}
     v24_floors = []
     door_facts = facts
@@ -452,7 +466,13 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
             continue
         S = spaces_of[rid]
         S["walls"] = AW.walls(ents, L["roles"], u, S["faces"], S["openings"], columns=S["column_boxes"],
-                              **({"geom": geom_of[rid]} if v21 else {}))
+                              **({"geom": geom_of[rid]} if v21 else {}), **({"arc_bands": True, "trace": True} if v27 else {}))
+        if v27:
+            L26 = AP.layer_roles(ents, u, override=layer_roles, tol=tol, **({"geom": RG.Geometry(u)} if v21 else {}))
+            v27_log += _v27_region_log(floor, rid, L, S, L26["roles"], set(layer_roles or ()))
+            for x in L.get("refusals") or ():
+                unresolved.append({"room_id": "-", "floor": floor, "item": f"LAYER {x['layer']}",
+                                   "reason": f"{x['code']}: layer {x['layer']}: {x['reason']}"})
         M = AM.measure(S, floor=floor, project_id=pid, revision_set_sha256=rev, facts=facts,
                        floor_above_level_m=above, floor_level_m=level[rid], documents=docs,
                        **({"release_safety": True} if v22 else {}),
@@ -519,7 +539,8 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
                     t_strips, split_recs = AC.split_strips(S, strips, floor)
                     strip_split += split_recs
                     fa["strip_split"] = split_recs
-                t_lines, t_unres, rest = OFS.threshold_lines(ctx, t_strips, M["rooms"], floor, line=AM._line)
+                t_lines, t_unres, rest = OFS.threshold_lines(ctx, t_strips, M["rooms"], floor, line=AM._line,
+                                                             **({"wet_review": True} if v27 else {}))
                 s_lines, s_unres = AC.strip_lines(ctx, rest, floor)
                 s_lines, s_unres = t_lines + s_lines, t_unres + s_unres
             else:
@@ -554,7 +575,8 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
             door_floors.append((floor, DMOD.floor_model(S, M["rooms"], ents, u, floor, wall_layers=walls_here,
                                                         origin=(reg["box"][0], reg["box"][1]), facts=door_facts,
                                                         **({"guards": True} if v22 else {}),
-                                                        **({"decided_exterior": dec_here} if dec_here else {}))))
+                                                        **({"decided_exterior": dec_here} if dec_here else {}),
+                                                        **({"symbol_scope": True} if v27 else {}))))
             tx = {t_["id"]: t_ for t_ in ents["texts"]}
             door_texts[floor] = ents["texts"]
             door_face_texts[floor] = {f_["face_id"]: [tx[i_] for i_ in f_.get("label_text_ids") or () if i_ in tx]
@@ -566,6 +588,8 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
         rooms += M["rooms"]
         openings += M["openings"]
         lines += M["lines"]
+        if v27:
+            line_region.update((id(ln), (ln, rid)) for ln in M["lines"])     # the line held: its id stays its own
         mats += X["materials"]
         comps += X["comparisons"]
         unresolved += M["unresolved"] + X["unresolved"]
@@ -585,7 +609,55 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
         lines, mats, unresolved, v24_out = _v24_stage(v24_floors, doors, lines, mats, unresolved, facts, decisions,
                                                       project_rules, pid, rev, docs, u,
                                                       **({"v25": True, "independent": independent_checks}
-                                                         if v25 else {}), **({"v26": True} if v26 else {}))
+                                                         if v25 else {}), **({"v26": True} if v26 else {}),
+                                                      **({"v27": True} if v27 else {}))
+    if v27:
+        # ARCH_TAKEOFF_V2.7: the door frames read from the door symbol's own insert, the waterproofing boundaries
+        # whose near-zero pieces were merged - the corrections that change a quantity outside a plan region's log
+        for e in (doors or {}).get("elements") or ():
+            if e.get("frame_scope_v27"):
+                v27_log.append({"correction": "DOOR_FRAME", "floor": e["floor"], "region_id": "-",
+                                "subject": e["element_id"], "decision": "FRAME_FROM_SYMBOL_INSERT",
+                                "detail": dict(e["frame_scope_v27"], opening_id=e.get("opening_id"))})
+        for x in v24_out.get("v27_slivers") or ():
+            v27_log.append({"correction": "SLIVER_MERGE", "floor": x["floor"], "region_id": "-",
+                            "subject": x["room_id"], "decision": "MERGED_INTO_NEIGHBOUR", "detail": x["sliver"]})
+        # ARCH_TAKEOFF_V2.7: per-line source entities (arch_v27.attach_provenance)
+        # one plan region at a time: a line belongs to the region that measured it (opening and wall lines repeat
+        # their location in every region of a floor), else to the region of its door's or its own room
+        region_of_room = {r_["room_id"]: r_.get("region_id") for r_ in rooms}
+        door_rooms = {e["element_id"]: (e.get("from_room"), e.get("to_room"))
+                      for e in (doors or {}).get("elements") or ()}
+        def _region(ln):
+            if line_region.get(id(ln), (None,))[0] is ln:
+                return line_region[id(ln)][1]
+            for r_ in door_rooms.get(ln.get("physical_element")) or ():
+                if r_ in region_of_room:
+                    return region_of_room[r_]
+            loc_ = ln.get("location") or {}
+            m_ = re.fullmatch(r"(.+)-(?:OPENING|STRIP)-(OP-\d+)", str(loc_.get("room_id") or ""))
+            if m_:                         # an opening's own line: the region of its door, else the floor's one region
+                cand = {region_of_room.get(r_) for e in (doors or {}).get("elements") or ()
+                        if e.get("floor") == m_.group(1) and e.get("opening_id") == m_.group(2)
+                        for r_ in door_rooms[e["element_id"]] if r_ in region_of_room} or \
+                    {r_["region_id"] for r_ in regions if r_["floor"] == m_.group(1)}
+                return next(iter(cand)) if len(cand) == 1 else None
+            return region_of_room.get(loc_.get("room_id"))
+        by_region = defaultdict(list)
+        for ln in lines:
+            by_region[_region(ln)].append(ln)
+        prov = Counter()
+        for rid_, S_ in spaces_of.items():
+            fl_ = next((r_["floor"] for r_ in regions if r_["region_id"] == rid_), None)
+            prov.update(V27M.attach_provenance(
+                by_region.pop(rid_, []), [r_ for r_ in rooms if r_.get("region_id") == rid_], S_.get("faces") or [],
+                S_.get("openings") or [], {"elements": [e for e in (doors or {}).get("elements") or ()
+                                                       if any(region_of_room.get(r_) == rid_
+                                                              for r_ in door_rooms[e["element_id"]])]},
+                (S_.get("walls") or {}).get("walls") or (), fl_, rid_))
+        prov.update(V27M.attach_provenance([ln for v_ in by_region.values() for ln in v_], [], [], [], {}))
+        v27_log.append({"correction": "PROVENANCE", "floor": "-", "region_id": "-", "subject": "lines",
+                        "decision": "SOURCE_ENTITIES_ATTACHED", "detail": dict(prov)})
     by_room = {r["room_id"]: r for r in rooms}
     reg_of = {r["floor"]: r for r in regions}
     unresolved = [AM.flag(u_, drawing=path.name, region=reg_of.get(u_.get("floor")), room=by_room.get(u_.get("room_id")))
@@ -653,7 +725,7 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
                            "traceability": v24_out["traceability"]["summary"]}
         if v26:
             from engine.source import wp_install as WI
-            run.update(policy=ARCH_POLICY_ID_V26)
+            run.update(policy=ARCH_POLICY_ID_V27 if v27 else ARCH_POLICY_ID_V26)
             run["policies"]["wp_install"] = WI.policy_record()
             run["v2_6"] = {"corrections": list(V26_CORRECTIONS), "installation": v24_out["wp_install"]["summary"],
                            "door_reconciliation": {
@@ -673,6 +745,11 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
                                                           "reason": r["reason"]}
                                                          for r in strip_split if not r["split"]],
                                            "doorway_pieces": strip_split_pieces}}
+    if v27:
+        arch_v27 = _v27_outputs(v27_log)
+        run["v2_7"] = {"corrections": list(V27_CORRECTIONS), "summary": arch_v27["summary"],
+                       "knowledge": V27_KNOWLEDGE}
+        run["policies"]["arch_v27"] = V27M.POLICY
     if admit:
         _finish_discovery(report, E, facts, regions, lines, coverage if v2 else None,
                           entity_checks={"column_evidence": column_ev, "door_symbols": arc_recs,
@@ -683,6 +760,8 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
             "walls": walls_of, "reference_areas": reference_areas or {}, "floor_areas": floor_areas}
     if admit:
         arch["discovery"] = report
+    if v27:
+        arch["v27"] = arch_v27
     if v21:
         from engine.source import door_model as DMOD
         arch["geometry"] = {rid: g.report() for rid, g in geom_of.items()}
@@ -731,7 +810,21 @@ def _v23_outputs(arch, room_boq, rooms, openings, doors, facts, decisions, decid
                        "bound": sorted({d["id"] for d in by_face.values()}),
                        "unbound": [d.get("id") for d in SMOD.unbound(decisions, {d["id"] for d in by_face.values()})]}
     arch["space_model"] = sm
-    arch["door_scenarios"] = DSTD.door_scenarios(doors, facts, openings=openings, rooms=rooms)
+    v27 = method == V27
+    arch["door_scenarios"] = DSTD.door_scenarios(doors, facts, openings=openings, rooms=rooms,
+                                                 **({"v27": True} if v27 else {}))
+    if v27:
+        # ARCH_TAKEOFF_V2.7 (UP-DOOR-OPEN-003): which reading the owner minimum refers to is one owner question for
+        # the run (OQ-05), never one per door; the readings stay side by side meanwhile
+        ordinary = [r for r in arch["door_scenarios"]["rows"] if (r.get("opening_record") or {}).get("owner_question")]
+        if ordinary:
+            from engine.source import arch_completeness as AC
+            unresolved.append(AC.flag({"room_id": "-", "floor": "-", "item": "DOOR.OPENING_RECORD (owner minimum)",
+                                       "reason": f"DOOR_MINIMUM_REFERENCE (OQ-05): {len(ordinary)} door(s) - the "
+                                                 "owner minimum (1.00 / 0.90 m) may refer to the structural opening, "
+                                                 "the door leaf or the clear passage, and the 0.10 m frame allowance "
+                                                 "of registry 1.1.0 requires confirmation; every reading is kept side "
+                                                 "by side (UP-DOOR-OPEN-003)"}, drawing=drawing))
     arch["elevator_schedule"] = DSTD.elevator_schedule(doors, rooms, shafts)
     enlarged = [r for r in arch["door_scenarios"]["rows"] if r["review_status"] == "MODIFICATION_PROPOSED_NOT_APPROVED"]
     if enlarged:
@@ -754,7 +847,11 @@ def _v23_outputs(arch, room_boq, rooms, openings, doors, facts, decisions, decid
                              "is never confirmed)",
                      "by_item": [{"item_code": c, "unit": un, "state": st, "quantity": round(q, 6)}
                                  for (c, un, st), q in sorted(rel.items())]},
-        "OWNER_REQUIRED": {"what": "the owner's approved design standards applied to the same elements (proposed "
+        "OWNER_REQUIRED": {"what": ("the owner minimum door openings (UP-DOOR-OPEN-003, registry 1.2.0) on the "
+                                    "structural opening - the lower bound of every reading, no allowance added; the "
+                                    "leaf and clear-passage readings are in each door's opening record (OQ-05); "
+                                    "proposed modifications, not approved") if v27 else
+                                   "the owner's approved design standards applied to the same elements (proposed "
                                    "modifications, not approved): doors (UP-DOOR-OPEN-002); no other owner-required "
                                    "modification is defined in knowledge registry 1.0.0",
                            "doors": arch["door_scenarios"]["views"]["OWNER_REQUIRED"],
@@ -810,6 +907,85 @@ V26_CORRECTIONS = (
     "its leaf is the box between its two closures on the same proof")
 
 
+V27_CORRECTIONS = (
+    "D-V27-01 the door's structural opening from its own jamb lines when every remainder of the wall gap is wall on "
+    "both faces (a wall return or a junction mouth); a wider opening is kept with the remainder's nature (open, "
+    "column, glazed side panel, wall on one face); a held door that now fits strictly is released "
+    "(arch_v27.jamb_reconstruction)",
+    "D-V27-02 layer roles from geometry with explicit refusal (arch_v27.layer_roles): a single exploded or inserted "
+    "door hinged at a wall-gap jamb is a DOOR, one to three glazing lines in door-free gaps a WINDOW; a layer "
+    "carrying door swings is never a WINDOW; a layer drawing a door and glazing is refused",
+    "D-V27-03 columns of any orientation, one polyline or four LINEs; a marked square under a 0.20 x 0.20 m column "
+    "section is never a column (drains); one or two columns need a wall and must explain their layer, else refused",
+    "D-V27-04 arc-aware room polygons (chords of sagitta <= 1 mm, vertices on the arc) and curved wall bands in the "
+    "wall run on the centreline (MIN / MID / MAX bases published; D-07)",
+    "D-V27-05 wet-room evidence UP-WET-002 (knowledge 1.2.0): a wash basin alone never makes a space wet; a basin "
+    "and a second, independent piece of sanitary evidence (a water closet drawn as linework, sanitary-layer linework) "
+    "do; one shape alone or an ambiguous space stays REVIEW, never DRY (arch_v27.wet_evidence)",
+    "D-V27-06 the door opening record UP-DOOR-OPEN-003: structural opening, leaf, frame, clear passage, owner "
+    "minimum, allowance (not established: the 1.1.0 registry's 0.10 m requires confirmation, OQ-05) and the "
+    "proposed enlargement kept apart (door_standards.opening_record_v27); no quantity changes",
+    "D-V27-07 a door block's frame read from the door symbol's own insert, not from a group or plan block around it "
+    "(door_model.symbol_prefix)",
+    "D-V27-08 a waterproofing boundary piece of at most 0.1 mm merged into its neighbour on the same edge "
+    "(wp_geometry SLIVER_M), never typed as an open edge",
+    "D-V27-09 per-line source entities: every room, opening and wall line carries the drawn entities it is measured "
+    "from (handle, insert path, part; arch_v27.attach_provenance); no quantity changes")
+
+
+def _v27_region_log(floor, rid, L, S, roles26, declared):
+    """ARCH_TAKEOFF_V2.7: the corrections and refusals of one plan region - each layer whose role differs from the
+    V2.6 inference (roles26) with the rule that decided it, jamb spans, turned columns, curved walls, arc polygons."""
+    out = []
+    for lay in sorted(L["roles"]):
+        if lay in declared or L["roles"][lay] == roles26.get(lay):
+            continue
+        e = (L.get("evidence") or {}).get(lay) or {}
+        out.append({"correction": "LAYER_ROLE", "floor": floor, "region_id": rid, "subject": lay,
+                    "decision": L["roles"][lay], "before": roles26.get(lay),
+                    "rule": e.get("column_rule") or e.get("door_rule") or e.get("window_rule") or
+                    ("REFUSED (see refusals)" if any(x["layer"] == lay for x in L.get("refusals") or ()) else None)})
+    for x in L.get("refusals") or ():
+        out.append({"correction": "REFUSAL", "floor": floor, "region_id": rid, "subject": x["layer"],
+                    "decision": "OTHER", **x})
+    v = S.get("v27") or {}
+    for j in v.get("jamb") or ():
+        if j["decision"] in ("NARROWED_TO_JAMB_SPAN", "WIDER_OPENING_KEPT"):
+            out.append({"correction": "DOOR_OPENING", "floor": floor, "region_id": rid, "subject": j["opening_id"],
+                        "decision": j["decision"], "detail": j})
+    if (v.get("columns") or {}).get("turned") or (v.get("columns") or {}).get("added"):
+        out.append({"correction": "COLUMN_SHAPES", "floor": floor, "region_id": rid, "subject": "columns",
+                    "decision": "TURNED_COLUMNS_IN_BOUNDARY" if v["columns"].get("turned") else
+                    "COLUMN_BOXES_ADDED", "detail": v["columns"]})
+    for w in (S.get("walls") or {}).get("walls") or ():
+        if w.get("curved"):
+            out.append({"correction": "CURVED_WALL_BAND", "floor": floor, "region_id": rid, "subject": w["wall_id"],
+                        "decision": "IN_WALL_RUN", "detail": {k: w[k] for k in ("t_m", "gross_lm", "net_lm",
+                                                                                 "strip_m2", "sides", "curved")}})
+    final = {f["face_id"] for f in S.get("faces") or ()}
+    for fid, w in sorted((v.get("wet") or {}).items()):
+        if fid in final and w.get("decision") != "V2_6_READING":
+            out.append({"correction": "WET_EVIDENCE", "floor": floor, "region_id": rid, "subject": fid,
+                        "decision": w["decision"], "detail": w})
+    arc_faces = [f["face_id"] for f in S.get("faces") or () if f.get("arc_vertices")]
+    if arc_faces:
+        out.append({"correction": "ARC_POLYGON", "floor": floor, "region_id": rid, "subject": "faces",
+                    "decision": "POLYGON_FOLLOWS_ARCS", "detail": {"faces": arc_faces}})
+    return out
+
+
+def _v27_outputs(log):
+    for i, x in enumerate(log, 1):
+        x["id"] = f"C27-{i:04d}"
+    corr = [x for x in log if x["correction"] != "REFUSAL"]
+    ref = [{k: v for k, v in x.items() if k not in ("correction", "decision")} for x in log
+           if x["correction"] == "REFUSAL"]
+    return {"policy": "URBAN_V27_CORRECTIONS_V1", "corrections": corr, "refusals": ref,
+            "summary": {"corrections": dict(Counter(x["correction"] for x in corr)),
+                        "refusals": dict(Counter(x["code"] for x in ref))},
+            "never": "a quantity changed by V2.7 without a record here"}
+
+
 def _v25_binding(doc, docs):
     """ARCH_TAKEOFF_V2.5 (O-8): a project rules file names the drawing it was written for (drawing_sha256); another
     drawing's file is refused; a file that names none is applied but flagged (PROJECT_RULES_NOT_BOUND)."""
@@ -828,7 +1004,7 @@ def _v25_binding(doc, docs):
 
 
 def _v24_stage(floors, doors, lines, mats, unresolved, facts, decisions, project_rules, pid, rev, docs, u, v25=False,
-               independent=None, v26=False):
+               independent=None, v26=False, v27=False):
     """Phase 2B-2 (ARCH_TAKEOFF_V2.4): the Project Engineering Rules Sheet (project rules bound to the drawing's
     elements), then the quantities that depend on a rule value - the waterproofing system (the wet-room / exterior
     upturn, doorway transitions, terminations, penetrations, layouts, the cutting plan per membrane system), the door
@@ -859,7 +1035,7 @@ def _v24_stage(floors, doors, lines, mats, unresolved, facts, decisions, project
     for f in floors:
         mf = dict(f["M"], lines=[ln for ln in lines if ln["location"].get("floor") == f["floor"]])
         areas += WS.areas_from_floor(f["S"], mf, f["ents"], f["roles"], u, wp_room_ids=wp_ids,
-                                     **({"v26": True} if v26 else {}))
+                                     **({"v26": True} if v26 else {}), **({"v27": True} if v27 else {}))
     built = [WS.build_area(a, resolver, **({"v25": True} if v25 else {}), **({"v26": True} if v26 else {}))
              for a in areas]
     plans = WS.cutting_plan(built, **({"exact": True} if v25 else {}), **({"cut_ids": True} if v26 else {}))
@@ -896,6 +1072,9 @@ def _v24_stage(floors, doors, lines, mats, unresolved, facts, decisions, project
     sheet = dict(sheet, usage=resolver.usage())
     out = {"rules_sheet": sheet, "waterproofing": sched, "door_feasibility": rep, "approvals": approvals,
            "areas": built}
+    if v27:
+        out["v27_slivers"] = [{"room_id": a["room_id"], "floor": a["floor"], "sliver": a["sliver_v27"]}
+                              for a in areas if a.get("sliver_v27")]
     if v25:
         from engine.source import traceability as TR
         sheet["drawing_binding"] = binding
@@ -998,7 +1177,8 @@ def _v24_manifest(out, names, arch):
     of each file (a file without an embedded run record - CSV, BOQ lines, workbook, overlay - is bound here)."""
     import hashlib
     sh, k = arch["rules_sheet"], arch["run"]["v2_4"]["knowledge"]
-    return {"policy": {V25: "URBAN_OUTPUT_MANIFEST_V2_5", V26: "URBAN_OUTPUT_MANIFEST_V2_6"}.get(
+    return {"policy": {V25: "URBAN_OUTPUT_MANIFEST_V2_5", V26: "URBAN_OUTPUT_MANIFEST_V2_6",
+                       V27: "URBAN_OUTPUT_MANIFEST_V2_7"}.get(
                 arch["run"]["method"], "URBAN_OUTPUT_MANIFEST_V2_4"),
             "method": arch["run"]["method"],
             "rules_sheet": {"schema": sh["schema"], "rules_sha256": sh["rules_sha256"],
@@ -1203,6 +1383,8 @@ def v21_files(arch):
         files["ELEVATOR_SCHEDULE.json"] = _j({"run": run, "elevators": arch["elevator_schedule"]})
         files["OWNER_QUESTIONS.json"] = _j({"run": run, "questions": arch["owner_questions"]})
         files["BOQ_SCENARIOS.json"] = _j({"run": run, "scenarios": arch["boq_scenarios"]})
+    if arch.get("v27") is not None:                            # ARCH_TAKEOFF_V2.7
+        files["CORRECTIONS_V2_7.json"] = _j({"run": run, **arch["v27"]})
     if arch.get("traceability") is not None:                    # ARCH_TAKEOFF_V2.5
         from engine.source import traceability as TR
         files["BOQ_TRACEABILITY.json"] = _j({"run": run, "traceability": arch["traceability"]})
@@ -1289,7 +1471,8 @@ PUBLISHED = ("BOQ_LINES.json", "BOQ_LINES.csv", "MATERIAL_RESULTS.json", "COVERA
              "BOQ_SCENARIOS.json", "PROJECT_RULES_SHEET.json", "PROJECT_RULES_SHEET.csv", "WATERPROOFING_SCHEDULE.json",
              "WATERPROOFING_SCHEDULE.csv", "MEMBRANE_CUTTING_PLAN.json", "DOOR_FEASIBILITY.json", "DOOR_FEASIBILITY.csv",
              "APPROVALS_REQUIRED.json", "ENGINEERING_SUMMARY.json", "OUTPUT_MANIFEST.json",
-             "MEMBRANE_PIECE_PLAN.json", "MEMBRANE_PIECE_PLAN.csv", "WP_INSTALLATION.json", "WP_INSTALLATION.csv")
+             "MEMBRANE_PIECE_PLAN.json", "MEMBRANE_PIECE_PLAN.csv", "WP_INSTALLATION.json", "WP_INSTALLATION.csv",
+             "CORRECTIONS_V2_7.json")
 
 
 def _supersede(out):
@@ -1336,29 +1519,30 @@ def cmd_arch(a):
     facts = json.loads(Path(a.facts).read_text(encoding="utf-8")) if a.facts else None
     decisions = None
     if getattr(a, "decisions", None):
-        if a.method not in (V23, V24, V25, V26):
+        if a.method not in (V23, V24, V25, V26, V27):
             raise SystemExit("--decisions (project decisions, URBAN_PROJECT_DECISIONS_V1) needs --method "
-                             "ARCH_TAKEOFF_V2.3, ARCH_TAKEOFF_V2.4, ARCH_TAKEOFF_V2.5 or ARCH_TAKEOFF_V2.6")
+                             "ARCH_TAKEOFF_V2.3, ARCH_TAKEOFF_V2.4, ARCH_TAKEOFF_V2.5, ARCH_TAKEOFF_V2.6 or "
+                             "ARCH_TAKEOFF_V2.7")
         decisions = json.loads(Path(a.decisions).read_text(encoding="utf-8"))
         if decisions.get("schema") != "URBAN_PROJECT_DECISIONS_V1":
             raise SystemExit("--decisions: schema must be URBAN_PROJECT_DECISIONS_V1")
     project_rules = None
     if getattr(a, "project_rules", None):
-        if a.method not in (V24, V25, V26):
+        if a.method not in (V24, V25, V26, V27):
             raise SystemExit("--project-rules (URBAN_PROJECT_RULES_V1) needs --method ARCH_TAKEOFF_V2.4, "
-                             "ARCH_TAKEOFF_V2.5 or ARCH_TAKEOFF_V2.6")
+                             "ARCH_TAKEOFF_V2.5, ARCH_TAKEOFF_V2.6 or ARCH_TAKEOFF_V2.7")
         project_rules = json.loads(Path(a.project_rules).read_text(encoding="utf-8"))
     independent_checks = None
     if getattr(a, "independent_checks", None):
-        if a.method not in (V25, V26):
-            raise SystemExit("--independent-checks (URBAN_INDEPENDENT_CHECKS_V1) needs --method ARCH_TAKEOFF_V2.5 or "
-                             "ARCH_TAKEOFF_V2.6")
+        if a.method not in (V25, V26, V27):
+            raise SystemExit("--independent-checks (URBAN_INDEPENDENT_CHECKS_V1) needs --method ARCH_TAKEOFF_V2.5, "
+                             "ARCH_TAKEOFF_V2.6 or ARCH_TAKEOFF_V2.7")
         independent_checks = json.loads(Path(a.independent_checks).read_text(encoding="utf-8"))
     roles = _kv(a.layer_roles, "--layer-roles")
     refs = {k: float(v) for k, v in _kv(a.reference_areas, "--reference-areas").items()}
     out = Path(a.out)
     conversions = []
-    v2 = a.method in (V2, V21, V22, V23, V24, V25, V26)
+    v2 = a.method in (V2, V21, V22, V23, V24, V25, V26, V27)
     admit = v2 or a.strict_admission
     if not admit and (a.units or a.region or a.accept_missing_xref):
         raise SystemExit("--units / --region / --accept-missing-xref are reviewer inputs of the admission: use them "

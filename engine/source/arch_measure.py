@@ -658,6 +658,8 @@ def measure(fr, *, floor, project_id, revision_set_sha256, facts=None, floor_abo
         for k in ("door_fit_review", "door_symbol_note"):     # ARCH_TAKEOFF_V2.6 (arch_rooms.match_swings_review)
             if o.get(k):
                 rec[k] = o[k]
+        if o.get("opening_v27"):                              # ARCH_TAKEOFF_V2.7 (arch_v27.jamb_reconstruction)
+            rec["opening_v27"] = o["opening_v27"]
         if release_safety:
             # ARCH_TAKEOFF_V2.2: where the opening is (the blind-test scorer matches windows by position, not width)
             um = fr["unit_m"]

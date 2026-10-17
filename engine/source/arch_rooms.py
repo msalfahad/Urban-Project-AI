@@ -179,14 +179,16 @@ def _arc_item(a, role):
     return TP.BoundaryItem(a["id"], "ARC", (cx, cy, a["r"], a0, a1), role)
 
 
-def door_swings(ents, door_layers, unit_m):
-    """{occ: {hinge, radius, ends, swing_part, layer}} from door-role arcs (radius 0.5 - 1.3 m, sweep 0.7 - 2.1)."""
+def door_swings(ents, door_layers, unit_m, path=False):
+    """{occ: {hinge, radius, ends, swing_part, layer}} from door-role arcs (radius 0.5 - 1.3 m, sweep 0.7 - 2.1).
+    path (ARCH_TAKEOFF_V2.7 only): each swing also carries its block-instance path (outermost first)."""
     out = {}
     for a in ents["arcs"]:
         if a["layer"] in door_layers and AP.is_swing(a, unit_m):
             occ = (a.get("path") or [a["id"]])[0] + "|" + a["id"]
             out[occ] = {"hinge": tuple(a["c"]), "radius": a["r"], "ends": [tuple(a["s"]), tuple(a["e"])],
-                        "swing_part": a["id"], "layer": a["layer"]}
+                        "swing_part": a["id"], "layer": a["layer"], **({"path": list(a.get("path") or ())}
+                                                                        if path else {})}
     return out
 
 
@@ -376,16 +378,23 @@ def opening_marks(o, segments, arcs, unit_m):
     return {"head_lines": heads, "marks": marks, "blocks": sorted(blocks), "clear": marks == 0 and heads <= 2}
 
 
-def _faces_of(arr, sites, texts, unit_m, eps, detail=False):
-    """detail (ARCH_TAKEOFF_V2.2 only): also record each face's boundary edge by edge (engine.source.release_safety)."""
+def _faces_of(arr, sites, texts, unit_m, eps, detail=False, v27=None):
+    """detail (ARCH_TAKEOFF_V2.2 only): also record each face's boundary edge by edge (engine.source.release_safety).
+    v27 (ARCH_TAKEOFF_V2.7 only): the polygon follows its arc edges (arch_v27.cycle_points, sagitta <= 1 mm)."""
     faces = []
+    if v27 is not None:
+        from engine.source import arch_v27 as V27
     for st in sites:
         pt = TP.interior_point(arr, st["cycle"], eps)
         if pt is None:
             continue
-        poly = [arr.nodes[arr.edges[ei]["n0"]] if fw else arr.nodes[arr.edges[ei]["n1"]] for ei, fw in st["cycle"]]
-        holes = [[arr.nodes[arr.edges[ei]["n0"]] if fw else arr.nodes[arr.edges[ei]["n1"]] for ei, fw in hc]
-                 for hc in st["hole_cycles"]]
+        if v27 is not None:
+            poly = V27.cycle_points(arr, st["cycle"], V27.ARC_SAGITTA_M / unit_m)
+            holes = [V27.cycle_points(arr, hc, V27.ARC_SAGITTA_M / unit_m) for hc in st["hole_cycles"]]
+        else:
+            poly = [arr.nodes[arr.edges[ei]["n0"]] if fw else arr.nodes[arr.edges[ei]["n1"]] for ei, fw in st["cycle"]]
+            holes = [[arr.nodes[arr.edges[ei]["n0"]] if fw else arr.nodes[arr.edges[ei]["n1"]] for ei, fw in hc]
+                     for hc in st["hole_cycles"]]
         area = st["area"] * unit_m ** 2
         per = st["boundary_perimeter"] * unit_m
         hole_roles = defaultdict(float)
@@ -441,6 +450,13 @@ def _faces_of(arr, sites, texts, unit_m, eps, detail=False):
                       "closure_ids": sorted({sid for sid in st["outer_boundary_source_ids"] if sid.startswith("CLOSURE|")}),
                       "interior_stub_lm": st["interior_stub_length"] * unit_m,
                       "undecoded_texts": sum(1 for t in inside if t.get("encoding") == "SHX_UNMAPPED")})
+        if v27 is not None:                              # ARCH_TAKEOFF_V2.7: the drawn entities bounding the face
+            faces[-1]["boundary_source_ids"] = sorted(set(st["outer_boundary_source_ids"]) |
+                                                      set(st["hole_boundary_source_ids"]))
+        if v27 is not None and len(poly) + sum(len(h) for h in holes) > len(st["cycle"]) + \
+                sum(len(hc) for hc in st["hole_cycles"]):
+            faces[-1]["arc_vertices"] = len(poly) + sum(len(h) for h in holes) - len(st["cycle"]) - \
+                sum(len(hc) for hc in st["hole_cycles"])
         zl = sorted({x for x in st["outer_boundary_source_ids"] + st["hole_boundary_source_ids"]
                      if x.startswith("ZONE|")})
         if zl:
@@ -451,7 +467,7 @@ def _faces_of(arr, sites, texts, unit_m, eps, detail=False):
     return faces
 
 
-def _symbols(faces, ents, roles, unit_m):
+def _symbols(faces, ents, roles, unit_m, v27=None):
     other_segs = [sg for sg in ents["segments"] if roles.get(sg["layer"], AP.OTHER) == AP.OTHER]
     for f in faces:
         if f["class"] in ("ROOM", "MERGED", "MIXED", "UNLABELLED") and f["area_m2"] >= MIN_SPACE_M2:
@@ -463,7 +479,7 @@ def _symbols(faces, ents, roles, unit_m):
                 x["flight_id"] = f"{f['face_id']}:F{k}"
             if fl or vs:
                 f["symbols_inside"] = {"stair_flights": fl, "void_symbols": vs}
-    _evidence(faces, ents, roles, unit_m)
+    _evidence(faces, ents, roles, unit_m, v27=v27)
 
 
 def _issues(faces):
@@ -488,7 +504,8 @@ def _issues(faces):
             f["class"] = "ROOM"
             f["issue"] = "STAIR_SPACE_FROM_TREAD_LINES: no room word inside; named STAIR from the drawn flights" + sym_txt
         elif f["class"] == "UNLABELLED":
-            f["issue"] = ("UNLABELLED_SPACE: no room word inside (name it, or confirm it is not a room)" +
+            f["issue"] = ((f["wet_review"] + "; " if f.get("wet_review") else "") +      # ARCH_TAKEOFF_V2.7
+                          "UNLABELLED_SPACE: no room word inside (name it, or confirm it is not a room)" +
                           (f"; {f['undecoded_texts']} text(s) inside are in an undecoded SHX font"
                            if f.get("undecoded_texts") else "") + sym_txt)
         elif f["class"] == "ROOM" and sym.get("stair_flights") and LEX[f["codes"][0]][2] != STAIR:
@@ -788,7 +805,7 @@ def _zone_groups(zc, pairs, outward=frozenset()):
     return {k: find(k) for k in cell}, shared, functional
 
 
-def zone_partition(faces, items, ents, roles, unit_m, eps, texts, region_id, ops_by_id=None, detail=False):
+def zone_partition(faces, items, ents, roles, unit_m, eps, texts, region_id, ops_by_id=None, detail=False, v27=None):
     """S5: split each MERGED face along the drawn lines that separate its labelled parts (see ZONE_*).
     -> (faces, records): the faces of the plan with each split face replaced by its zones, and one record per MERGED
     face (split or not, and why)."""
@@ -808,8 +825,8 @@ def zone_partition(faces, items, ents, roles, unit_m, eps, texts, region_id, ops
               for c in allc}
     arr = TP.build(items + list(z_item.values()), eps)
     sites = TP.sites_of(arr, "ARCH", region_id)
-    cells = _faces_of(arr, sites, texts, unit_m, eps, detail)
-    _symbols(cells, ents, roles, unit_m)
+    cells = _faces_of(arr, sites, texts, unit_m, eps, detail, v27=v27)
+    _symbols(cells, ents, roles, unit_m, v27=v27)
     sides = defaultdict(set)                      # (zone source, edge) -> the cells on its two sides
     for st in sites:
         for cyc in [st["cycle"]] + st["hole_cycles"]:
@@ -882,8 +899,8 @@ def zone_partition(faces, items, ents, roles, unit_m, eps, texts, region_id, ops
     by_line = {c["id"]: c for c in allc}
     while keep:
         arr2 = TP.build(items + [z_item[k] for k in sorted(keep)], eps)
-        out = _faces_of(arr2, TP.sites_of(arr2, "ARCH", region_id), texts, unit_m, eps, detail)
-        _symbols(out, ents, roles, unit_m)
+        out = _faces_of(arr2, TP.sites_of(arr2, "ARCH", region_id), texts, unit_m, eps, detail, v27=v27)
+        _symbols(out, ents, roles, unit_m, v27=v27)
         bad = [fid for fid in plan if not _apply_zones(out, plan[fid], next(r for r in records
                                                                               if r["parent_face_id"] == fid), by_line)]
         if not bad:
@@ -964,8 +981,10 @@ def closure_in_passage(seg, passages, unit_m, fit_m=DOOR_LEAF_FIT_M):
 
 
 def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, release_safety=False,
-           door_review=False):
-    """geom (ARCH_TAKEOFF_V2.1 only): an engine.source.robust_geometry.Geometry for the band openings; None is the
+           door_review=False, v27=False):
+    """v27 (ARCH_TAKEOFF_V2.7 only): column rectangles of any orientation, the door's structural opening from its own
+    jamb lines and arc-aware face polygons (engine.source.arch_v27); False is the V1 .. V2.6 path, unchanged.
+    geom (ARCH_TAKEOFF_V2.1 only): an engine.source.robust_geometry.Geometry for the band openings; None is the
     V1 / V2 path, unchanged. release_safety (ARCH_TAKEOFF_V2.2 only): every face also carries its boundary_detail
     (engine.source.release_safety); False is the V1 / V2 / V2.1 path, unchanged. door_review (ARCH_TAKEOFF_V2.6
     only): after the leaf-ray closures, match_swings_review (the swings closing no gap) and closure_in_passage (a
@@ -979,13 +998,22 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, re
     door_l = {l for l, r in roles.items() if r == AP.DOOR}
     warnings = []
     cols = _columns(ents, roles, unit_m, tol)
+    v27rec, col_polys = None, []
+    if v27:
+        # ARCH_TAKEOFF_V2.7: column rectangles of any orientation, one polyline or four LINEs (arch_v27)
+        from engine.source import arch_v27 as V27
+        boxes, col_polys = V27.column_shapes(ents, roles, unit_m)
+        same = 1e-3 / unit_m                             # the same column found by both readers (1 mm)
+        added = [x for x in boxes if not any(all(abs(p - q) <= same for p, q in zip(x, c)) for c in cols)]
+        cols = cols + added
+        v27rec = {"columns": {"boxes": len(cols), "added": len(added), "turned": len(col_polys)}, "jamb": []}
     if geom is None:
         ops, rej = LM.openings(ents["segments"], unit_m, wall_l, cols, tol=tol)
     else:
         from engine.source import robust_geometry as RG
         geom.context = f"{region_id}"
         ops, rej = RG.openings(ents["segments"], unit_m, wall_l, cols, tol=tol, geom=geom)
-    swings = door_swings(ents, door_l, unit_m)
+    swings = door_swings(ents, door_l, unit_m, **({"path": True} if v27 else {}))
     win_segs = [s for s in ents["segments"] if s["layer"] in win_l]
     served = match_swings(ops, swings, unit_m)
     used_swings = {occ for v in served.values() for occ in v}
@@ -993,7 +1021,7 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, re
     for o in ops:
         faces = _opening_geometry(o)
         door = (served.get(o["opening_id"]) or [None])[0]
-        glazing = 0.0
+        glazing, glazing_ids = 0.0, []
         if door is None:
             (ux, uy), (nx, ny) = o["u"], o["n"]
             for s in win_segs:
@@ -1001,8 +1029,16 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, re
                 su, so = m[0] * ux + m[1] * uy, m[0] * nx + m[1] * ny
                 if o["s0"] - eps <= su <= o["s1"] + eps and o["o0"] - eps <= so <= o["o1"] + eps:
                     glazing += math.dist(s["a"], s["b"]) * unit_m
+                    glazing_ids.append(s["id"])
         kind = "DOOR" if door else ("WINDOW" if glazing >= 0.5 * o["width_m"] else "PASSAGE")
         o.update(kind=kind, door_symbol=door, glazing_m=round(glazing, 3))
+        if v27 and kind == "WINDOW":                     # ARCH_TAKEOFF_V2.7: the glazing lines (provenance)
+            o["glazing_ids"] = sorted(glazing_ids)
+        if v27 and kind == "PASSAGE":                    # ARCH_TAKEOFF_V2.7: the wall faces ending at its jambs
+            (ux, uy), (nx, ny) = o["u"], o["n"]
+            cs = [(ux * a + nx * b, uy * a + ny * b) for a in (o["s0"], o["s1"]) for b in (o["o0"], o["o1"])]
+            o["gap_ids"] = sorted(x["id"] for x in ents["segments"] if x["layer"] in wall_l and
+                                  any(math.dist(p, c) <= eps for p in (x["a"], x["b"]) for c in cs))
         if kind == "PASSAGE":
             o["marks"] = opening_marks(o, [s for s in ents["segments"] if s["layer"] not in wall_l],
                                        [a for a in ents["arcs"] if a["layer"] not in wall_l], unit_m)
@@ -1075,6 +1111,16 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, re
         for oid, note in notes.items():
             if by_op[oid]["kind"] == "PASSAGE":
                 by_op[oid]["door_symbol_note"] = note
+    if v27:
+        # ARCH_TAKEOFF_V2.7: the door's structural opening from its own jamb lines (arch_v27.jamb_reconstruction)
+        jitems, v27rec["jamb"] = V27.jamb_reconstruction(ops, ents, roles, swings, thresholds, cols, unit_m,
+                                                         match_strict=match_swings)
+        v27rec["jamb_items"] = [{"id": i, "a": g[:2], "b": g[2:]} for i, g in jitems]
+        if jitems:
+            items += [TP.BoundaryItem(i, "SEGMENT", g, "WALL") for i, g in jitems]
+            thr_items = [(t["opening_id"], TP.BoundaryItem(t["id"], "SEGMENT", (t["a"][0], t["a"][1], t["b"][0],
+                                                                                t["b"][1]), role_of_thr[t["kind"]]))
+                         for t in thresholds]
     closures = [TP.BoundaryItem(c.source_id, c.kind, c.geometry, "DOOR_CLOSURE", c.derived_from) for c in closures]
     closures += closures_b(closures, ents, wall_l, unit_m)
     if not items:
@@ -1083,18 +1129,18 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, re
     by_op = {o["opening_id"]: o for o in ops}
     # pass 1: every opening closed by its thresholds -> the cells of the floor
     arr = TP.build(items + [t for _, t in thr_items] + closures, eps)
-    cells = _faces_of(arr, TP.sites_of(arr, "ARCH", region_id), texts, unit_m, eps, release_safety)
-    _symbols(cells, ents, roles, unit_m)
+    cells = _faces_of(arr, TP.sites_of(arr, "ARCH", region_id), texts, unit_m, eps, release_safety, v27=v27rec)
+    _symbols(cells, ents, roles, unit_m, v27=v27rec)
     drop, zoning = open_passages(cells, by_op)
     faces = cells
     if drop:
         # pass 2: the passages inside one room's floor are not boundaries -> the room is its whole floor
         arr = TP.build(items + [t for oid, t in thr_items if oid not in drop] + closures, eps)
-        faces = _faces_of(arr, TP.sites_of(arr, "ARCH", region_id), texts, unit_m, eps, release_safety)
-        _symbols(faces, ents, roles, unit_m)
+        faces = _faces_of(arr, TP.sites_of(arr, "ARCH", region_id), texts, unit_m, eps, release_safety, v27=v27rec)
+        _symbols(faces, ents, roles, unit_m, v27=v27rec)
     # pass 3 (S5): a MERGED face is split only along the lines drawn inside it that separate its labelled parts
     faces, zones = zone_partition(faces, items + [t for oid, t in thr_items if oid not in drop] + closures, ents,
-                                  roles, unit_m, eps, texts, region_id, by_op, detail=release_safety)
+                                  roles, unit_m, eps, texts, region_id, by_op, detail=release_safety, v27=v27rec)
     for o in ops:
         if o["opening_id"] in drop:
             o["inside_one_floor"] = True                     # an open passage inside one room's floor (not a boundary)
@@ -1133,6 +1179,12 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, re
                 "reason": "the wall's other face at a door closed by its leaf (Round 5 closure B)"
                 if c.source_id.endswith("|B") else "the door leaf's closed position (a proven door symbol only)"}
                for c in closures]
+    if v27:
+        repairs += [{"kind": "JAMB_REMAINDER_WALL" if j["id"].startswith("JAMBREM") else "JAMB_CAP", "id": j["id"],
+                     "a": j["a"], "b": j["b"], "rule": "arch_v27.jamb_reconstruction", "tolerance_m": V27.JAMB_TOL_M,
+                     "reason": "the rest of a door's wall gap is proven wall on both faces: closed as zero-material "
+                               "wall, the doorway piece ends at the door's own jamb (ARCH_TAKEOFF_V2.7)"}
+                    for j in v27rec.get("jamb_items") or ()]
     return {"policy": POLICY_ID, "region_id": region_id, "unit_m": unit_m, "spaces": spaces_, "faces": faces,
             "repairs": repairs,
             "openings": ops,
@@ -1144,7 +1196,9 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, re
             "zoning": zoning, "voids": voids, "zones": zones,
             "arrangement": {"nodes": len(arr.nodes), "edges": len(arr.edges), "sites": len(faces),
                             "cells": len(cells), "passages_inside_one_floor": len(drop),
-                            "zone_lines": sum(len(r.get("kept_lines") or ()) for r in zones)}}
+                            "zone_lines": sum(len(r.get("kept_lines") or ()) for r in zones)},
+            **({"v27": v27rec, "column_polys": col_polys, "repairs_v27": v27rec.get("jamb_items") or []}
+               if v27 else {})}
 
 
 CAP_TOL_M = 0.03
@@ -1309,7 +1363,7 @@ TREAD_LEN_M = (0.6, 2.2)              # ... of a flight width
 TREAD_MIN = 4
 
 
-def _evidence(faces, ents, roles, unit_m):
+def _evidence(faces, ents, roles, unit_m, v27=None):
     """room-tag blocks and fixtures inside each space: a space without a room word is named from them (label_source
     BLOCK_NAME / FIXTURES, flagged for review); a labelled room keeps its word and records the fixtures (a fixture
     that contradicts the word is flagged)."""
@@ -1346,6 +1400,18 @@ def _evidence(faces, ents, roles, unit_m):
         layer_ev = [{"layer": l, "evidences": c, "segments": n} for (l, c), n in sorted(lay_hits.items())
                     if n >= FIXTURE_LAYER_MIN_SEGMENTS]
         f["evidence"] = {"tags": tags, "fixtures": fixtures, "fixture_layers": layer_ev}
+        if f["class"] == "UNLABELLED" and v27 is not None and len({t["code"] for t in tags}) != 1:
+            # ARCH_TAKEOFF_V2.7 (UP-WET-002, arch_v27.wet_evidence): a basin alone never types a space wet
+            from engine.source import arch_v27 as V27
+            codes, src, issue, rec = V27.wet_evidence(f, fixtures, layer_ev, ents, roles, unit_m, inside)
+            v27.setdefault("wet", {})[f["face_id"]] = rec
+            if codes is not False:
+                if codes:
+                    f.update(codes=codes, label_source=src, issue=issue)
+                    f["class"] = "ROOM"
+                else:
+                    f["wet_review"] = issue
+                continue
         if f["class"] == "UNLABELLED":
             tag_codes = sorted({t["code"] for t in tags})
             fx_codes = sorted({x["evidences"] for x in fixtures})

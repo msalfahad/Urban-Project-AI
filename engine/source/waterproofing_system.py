@@ -218,7 +218,7 @@ def transitions(area, basis):
 # ------------------------------------------------------------------------------------------------ areas
 def make_area(room, feats, *, scope, net_m2, continuation_pieces=(), doorways=(), beyond=None, ents=None,
               unit_m=1.0, provisional_geometry=False, wp_floor_line_id=None, agg_eligible_lm=None, agg_glazing_lm=0.0,
-              keep_segments=False):
+              keep_segments=False, sliver_m=None):
     """one waterproofed area: its boundary (wp_geometry.boundary) checked against the plan's own boundary roles
     (agg_eligible_lm: wall + column + sill-wall run of the room; agg_glazing_lm: its glazing-edge run), its doorways
     with what lies beyond them (WATERPROOFED / DRY / EXTERIOR / NOT_ESTABLISHED), its other breaks and its drawn
@@ -227,7 +227,13 @@ def make_area(room, feats, *, scope, net_m2, continuation_pieces=(), doorways=()
     room: {room_id, floor, name_en, codes, polygon_m, hole_polygons_m, polygon, hole_polygons (drawing units)}.
     keep_segments (ARCH_TAKEOFF_V2.6): the typed ring segments are kept for the installation layer."""
     from engine.source import wp_geometry as WG
-    bd = WG.boundary(room, feats)
+    bd = WG.boundary(room, feats, **({"sliver_m": sliver_m} if sliver_m is not None else {}))
+    sliver = None
+    if sliver_m is not None:                     # ARCH_TAKEOFF_V2.7: what the sliver merge changed (the log)
+        b26 = WG.boundary(room, feats)
+        if b26["by_role_lm"] != bd["by_role_lm"] or len(b26["breaks"]) != len(bd["breaks"]):
+            sliver = {"v26_by_role_lm": b26["by_role_lm"], "by_role_lm": bd["by_role_lm"],
+                      "v26_breaks": len(b26["breaks"]), "breaks": len(bd["breaks"])}
     found_doors = {b["id"] for b in bd["breaks"] if b["role"] == "DOOR"}
     missing = [d["opening_id"] for d in doorways if d["opening_id"] not in found_doors]
     why = []
@@ -268,11 +274,14 @@ def make_area(room, feats, *, scope, net_m2, continuation_pieces=(), doorways=()
            "doorways": sorted(doorways, key=lambda d: str(d["opening_id"])), "breaks": breaks,
            "penetrations": penetrations(room, ents or {}, unit_m)}
     if keep_segments:                                           # ARCH_TAKEOFF_V2.6
-        out["ring_segments"] = WG.ring_segments(room, feats)
+        out["ring_segments"] = WG.ring_segments(room, feats, **({"sliver_m": sliver_m} if sliver_m is not None
+                                                                 else {}))
+    if sliver is not None:
+        out["sliver_v27"] = sliver
     return out
 
 
-def areas_from_floor(S, M, ents, roles, unit_m, *, wp_room_ids, v26=False):
+def areas_from_floor(S, M, ents, roles, unit_m, *, wp_room_ids, v26=False, v27=False):
     """the waterproofed areas of one measured floor: every space with a FIN.WP.FLOOR quantity line (wet rooms of the
     owner scope, balconies and roofs). wp_room_ids: every waterproofed room of the run (what lies beyond a doorway).
     v26 (ARCH_TAKEOFF_V2.6): each area keeps its typed ring segments (make_area keep_segments)."""
@@ -303,12 +312,14 @@ def areas_from_floor(S, M, ents, roles, unit_m, *, wp_room_ids, v26=False):
         beyond = {oid: side(rid, oid) for oid in (room.get("passages") or ())}
         r = room.get("runs_lm") or {}
         agg = r.get("wall", 0.0) + r.get("column", 0.0) + r.get("window_threshold", 0.0) if r else None
-        out.append(make_area(room, WG.features(S, ents, roles, unit_m, room), scope=scope, net_m2=fl["measured_net"],
+        out.append(make_area(room, WG.features(S, ents, roles, unit_m, room, **({"v27": True} if v27 else {})),
+                             scope=scope, net_m2=fl["measured_net"],
                              continuation_pieces=pieces, doorways=doorways, beyond=beyond, ents=ents, unit_m=unit_m,
                              provisional_geometry=fl["evidence_state"] == "PROVISIONAL",
                              wp_floor_line_id=fl["line_id"], agg_eligible_lm=agg,
                              agg_glazing_lm=r.get("glazing_edge", 0.0) if r else 0.0,
-                             **({"keep_segments": True} if v26 else {})))
+                             **({"keep_segments": True} if v26 else {}),
+                             **({"sliver_m": WG.SLIVER_M} if v27 else {})))
     return out
 
 

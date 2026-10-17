@@ -13,16 +13,18 @@ evidence for (A06, A07). It never writes into the run folder; --strict exits 1 w
     A02   HIGH    a layer left OTHER with one anchored door swing (D-D1)         its doors read as passages: no door
                                                                                  set, threshold or doorway lines
     A03   MEDIUM  a layer left OTHER with one or two filled / crossed squares    the columns are not deducted
-                  (D-D1)
+                  (D-D1); REVIEW when the engine refused the role itself
     A04   REVIEW  a COLUMN layer inferred from small filled squares (D-P6-03)    a drain or floor box typed COLUMN is
                                                                                  deducted and its faces finished
     A05   HIGH    door frame evidence spanning far more than the opening         every door held (no door set
                   (D-P6-05: the plan inside one block occurrence)                released)
     A06   HIGH    column-size filled / crossed rectangles the inference cannot   the columns are not deducted (the
                   see - turned off the axes or drawn as four LINEs - on a layer  inference reads axis-aligned closed
-                  not typed COLUMN (D-P6-04, D-P6-08)                            polylines only)
+                  not typed COLUMN (D-P6-04, D-P6-08); REVIEW when the engine    polylines only)
+                  refused the layer's role itself (ARCH_TAKEOFF_V2.7)
     A07   MEDIUM  concentric wall-layer arcs a wall thickness apart (D-D2)       the curved band is missing from
-                                                                                 ARCH.WALL_RUN (lengths given)
+                  not already measured by the run (ARCH_TAKEOFF_V2.7 measures    ARCH.WALL_RUN (lengths given)
+                  them: ARCH_WALLS curved)
     A08   INFO    a door whose symbol is narrower than its wall gap,             its width and the lines that use it
                   held for review (D-V26-06)                                     follow the wall gap
     A09   MEDIUM  a space typed wet from wash-basin blocks alone (D-P6-07)       wet scope imposed by a basin, which
@@ -86,6 +88,8 @@ def from_records(run):
     out = []
     plan = _load(run, "ARCH_PLAN.json") or {"regions": []}
     declared_layers = _declared(run)
+    refused = {(x.get("region_id"), x.get("layer")): x for x in
+               (_load(run, "CORRECTIONS_V2_7.json") or {}).get("refusals") or [] if x.get("code") == "COLUMN_ROLE_REFUSED"}
     for r in plan.get("regions", []):
         rid, roles, ev = r.get("region_id"), r.get("layer_roles") or {}, r.get("layer_evidence") or {}
         for lay, e in sorted(ev.items()):
@@ -113,21 +117,28 @@ def from_records(run):
                                     "windows read as passages",
                                     f"if {lay} is the glazing layer: --layer-roles {lay}=WINDOW", region=rid,
                                     layer=lay, segments=e["segments"], share_in_wall_gaps=e["share_in_wall_gaps"]))
-            elif role == "OTHER" and 1 <= e.get("filled_or_crossed_rects", 0) < 3:
-                out.append(_finding("A03", "MEDIUM",
-                                    f"layer {lay} holds {e['filled_or_crossed_rects']} filled / crossed column-size "
-                                    "square(s) and is not typed COLUMN (the inference needs three): not deducted",
+            elif role == "OTHER" and 1 <= e.get("filled_or_crossed_rects", e.get("column_marked", 0)) < 3:
+                n = e.get("filled_or_crossed_rects", e.get("column_marked"))
+                ref = refused.get((rid, lay))
+                out.append(_finding("A03", "REVIEW" if ref else "MEDIUM",
+                                    f"layer {lay} holds {n} filled / crossed column-size "
+                                    "square(s) and is not typed COLUMN " + (
+                                        f"(the engine refused the role, {ref.get('id')}: {ref.get('reason')})" if ref
+                                        else "(the inference needs three): not deducted"),
                                     f"if they are columns: --layer-roles {lay}=COLUMN", region=rid, layer=lay,
-                                    filled_or_crossed_rects=e["filled_or_crossed_rects"],
-                                    small_rects=e.get("small_rects")))
+                                    filled_or_crossed_rects=n, small_rects=e.get("small_rects", e.get("column_rects")),
+                                    **({"refusal": ref.get("id")} if ref else {})))
             elif role == "COLUMN":
+                # ARCH_TAKEOFF_V2.7 records its column rule's evidence as column_marked / column_rects / sections
+                n = e.get("filled_or_crossed_rects", e.get("column_marked"))
                 out.append(_finding("A04", "REVIEW",
-                                    f"layer {lay} was typed COLUMN from {e.get('filled_or_crossed_rects')} small "
+                                    f"layer {lay} was typed COLUMN from {n} small "
                                     "filled / crossed squares: any such square (a drain, a floor box) is deducted as "
                                     "a column and its faces finished",
                                     f"confirm the layer: --layer-roles {lay}=COLUMN, or name it OTHER", region=rid,
-                                    layer=lay, filled_or_crossed_rects=e.get("filled_or_crossed_rects"),
-                                    small_rects=e.get("small_rects")))
+                                    layer=lay, filled_or_crossed_rects=n,
+                                    small_rects=e.get("small_rects", e.get("column_rects")),
+                                    **({"column_sections_m": e["column_sections"]} if "column_sections" in e else {})))
     doors = (_load(run, "DOOR_SCHEDULE.json") or {}).get("doors") or {}
     wide = [f for f in doors.get("findings") or [] if f.get("code") == "DOOR_CLOSURE_FRAME_DISAGREE"
             and f.get("frame_m") is not None and f.get("opening_m")
@@ -319,13 +330,28 @@ def from_drawing(run, dxf):
                 continue
             turned[(rid, lay)].append({"w_m": round(w, 4), "h_m": round(h, 4), "angle_deg": round(ang, 3),
                                        "drawn_as": src})
+    # a layer whose role the engine refused (ARCH_TAKEOFF_V2.7 CORRECTIONS_V2_7 refusals) is already a question
+    refused = {(x.get("region_id"), x.get("layer")): x for x in
+               (_load(run, "CORRECTIONS_V2_7.json") or {}).get("refusals") or [] if x.get("code") == "COLUMN_ROLE_REFUSED"}
     for (rid, lay), xs in sorted(turned.items()):
+        ref = refused.get((rid, lay))
+        if ref:
+            out.append(_finding("A06", "REVIEW",
+                                f"layer {lay} holds {len(xs)} filled / crossed column-size rectangle(s); the engine "
+                                f"refused the layer's COLUMN role ({ref.get('id')}: {ref.get('reason')})",
+                                f"declare the layer: --layer-roles {lay}=COLUMN or {lay}=OTHER", region=rid,
+                                layer=lay, rectangles=xs[:20], refusal=ref.get("id")))
+            continue
         out.append(_finding("A06", "HIGH",
                             f"layer {lay} holds {len(xs)} filled / crossed column-size rectangle(s) the role "
                             "inference cannot see (turned off the drawing axes, or drawn as four separate lines) and "
                             "is not typed COLUMN: if they are columns, they are not deducted",
                             f"if they are columns: --layer-roles {lay}=COLUMN", region=rid, layer=lay,
                             rectangles=xs[:20]))
+    # a curved band the run already measures (ARCH_TAKEOFF_V2.7: ARCH_WALLS carries it) is not a finding
+    measured = [(w["curved"]["centre"], w["curved"]["r1_m"], w["curved"]["r2_m"])
+                for fl in (_load(run, "ARCH_WALLS.json") or {}).get("floors") or []
+                for w in fl.get("walls") or [] if w.get("curved")]
     for rid, b, roles in boxes:
         for lay in sorted(l for l, r in roles.items() if r == "WALL"):
             A = [a for a in arcs.get(lay, []) if b and b[0] <= a[0][0] <= b[2] and b[1] <= a[0][1] <= b[3]]
@@ -348,6 +374,9 @@ def from_drawing(run, dxf):
                     continue
                 used |= {i, j}
                 r1, r2 = sorted((A[i][1], A[j][1]))
+                if any(math.dist(c_, A[i][0]) <= tol and abs(m1 - r1 * u) <= 1e-3 and abs(m2 - r2 * u) <= 1e-3
+                       for c_, m1, m2 in measured):
+                    continue
                 pairs.append({"t_m": round(t, 4), "sweep_deg": round(math.degrees(th), 3),
                               "MIN_RADIUS_ARC_lm": round(r1 * th * u, 6),
                               "MID_BAND_ARC_lm": round((r1 + r2) / 2 * th * u, 6),

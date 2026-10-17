@@ -36,7 +36,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 VERSIONS = {"1.0.0": ROOT / "knowledge" / "URBAN_ENGINEERING_KNOWLEDGE_1.0.0.json",
-            "1.1.0": ROOT / "knowledge" / "URBAN_ENGINEERING_KNOWLEDGE_1.1.0.json"}
+            "1.1.0": ROOT / "knowledge" / "URBAN_ENGINEERING_KNOWLEDGE_1.1.0.json",
+            "1.2.0": ROOT / "knowledge" / "URBAN_ENGINEERING_KNOWLEDGE_1.2.0.json"}       # ARCH_TAKEOFF_V2.7
 DEFAULT_VERSION = "1.0.0"
 _ACTIVE = contextvars.ContextVar("urban_knowledge_version", default=DEFAULT_VERSION)
 POLICY_ID = "URBAN_ENGINEERING_KNOWLEDGE_V1"

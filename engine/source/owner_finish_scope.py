@@ -32,6 +32,10 @@ Q_STRIP_PROVISIONAL_DOOR = ("THRESHOLD_OF_PROVISIONAL_DOOR (UP-THR-001 sets the 
 Q_STRIP_NOT_TAKEN = ("THRESHOLD_STRIP_NOT_ATTRIBUTED (UP-THR-001 sets the finish): the strip is bounded by several "
                      "openings, or a face of its opening does not fit the opening; which doorway owns it is not "
                      "established - measured strip shown")
+Q_STRIP_WET_REVIEW = ("THRESHOLD_OF_SPACE_UNDER_WET_REVIEW (UP-THR-001, UP-WET-002): the doorway of a space whose wet / "
+                      "dry type is under review - marble threshold if it is wet, floor porcelain if it is dry; the "
+                      "finish follows the review - measured strip shown")
+WET_REVIEW_ISSUES = ("WET_CLASSIFICATION_REVIEW", "WC_CANDIDATE_REVIEW")
 
 
 def finish_scope(room):
@@ -94,13 +98,15 @@ def _rooms_of_opening(rooms, oid):
     return [r for r in rooms if oid in (r.get("doors") or []) + (r.get("passages") or [])]
 
 
-def threshold_lines(ctx, strips, rooms, floor, *, line):
+def threshold_lines(ctx, strips, rooms, floor, *, line, wet_review=False):
     """-> (lines, unresolved, remaining_strips). The doorway strip faces of ONE door / passage opening (one line per
     opening, as the V2 strip register groups them), every face geometry-verified: next to a WET room (UP-WET-001) at a door -> FIN.MARBLE.THRESHOLD (clear opening width x the strip
     depth; the strip is in no room floor, so the adjacent porcelain is deducted by construction); any other doorway ->
     FIN.FLOOR.PORCELAIN for the strip, counted once (UP-THR-001). A pantry doorway is PROVISIONAL (conflict CF-03);
     an external doorway and a doorless opening into a wet area are PROVISIONAL. Every other strip is returned to the
-    V2 strip register unchanged."""
+    V2 strip register unchanged. wet_review (ARCH_TAKEOFF_V2.7 only): a doorway with no wet side and a side whose type
+    is under wet-classification review (UP-WET-002) is not given a dry finish - its strips go back to the register
+    with the review question; False is the V2.3 .. V2.6 path, unchanged."""
     lines, unresolved, rest = [], [], []
     groups = {}                                     # the strip faces of one opening make one line (as the V2 register)
     for s in strips:
@@ -117,6 +123,9 @@ def threshold_lines(ctx, strips, rooms, floor, *, line):
         side = _rooms_of_opening(rooms, oid)
         scopes = [(r, finish_scope(r)) for r in side]
         wet_sides = [r for r, sc in scopes if sc["scope"] == WET]
+        if wet_review and not wet_sides and any(str(r.get("issue") or "").startswith(WET_REVIEW_ISSUES) for r in side):
+            rest.extend(dict(x, question=Q_STRIP_WET_REVIEW) for x in ss)
+            continue
         g = s["geometry"]
         width, depth = g.get("opening_width_m"), g.get("depth_m")
         room = _strip_room(floor, oid, f"doorway {oid}")
@@ -161,7 +170,8 @@ def threshold_lines(ctx, strips, rooms, floor, *, line):
                           inputs=inputs, rule_id=rule, notes="; ".join(notes)))
     # the strips left to the V2 register keep their measurement and lose the finish question UP-THR-001 answers:
     # what is still open is which doorway owns the strip (E) or the door itself (B: no band opening)
-    rest = [dict(s, question=Q_STRIP_PROVISIONAL_DOOR if s["door_closures"] and not s["opening_ids"] else
+    rest = [s if s.get("question") == Q_STRIP_WET_REVIEW else
+            dict(s, question=Q_STRIP_PROVISIONAL_DOOR if s["door_closures"] and not s["opening_ids"] else
                  Q_STRIP_NOT_TAKEN) if s["class"] == "THRESHOLD" else s for s in rest]
     return lines, unresolved, rest
 

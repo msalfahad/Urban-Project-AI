@@ -96,6 +96,94 @@ def required_opening(category, cad_m):
     return out
 
 
+READINGS = ("STRUCTURAL_OPENING", "DOOR_LEAF", "CLEAR_PASSAGE")
+
+
+def opening_record_v27(el, category):
+    """ARCH_TAKEOFF_V2.7 (UP-DOOR-OPEN-003, knowledge registry 1.2.0): the door's opening values kept apart - the
+    CAD-measured structural opening, the door leaf (swing radius, per leaf), the frame span, the finished clear
+    passage (not in a plan), the owner minimum (1.00 / 0.90 m) and the frame / installation allowance (only from an
+    independently supported source; the 1.1.0 registry's 0.10 m requires confirmation, UP-DOOR-OPEN-002) - and the
+    minimum checked against each reading it may refer to. The enlargement is proposed, never applied; which reading
+    the owner minimum refers to is owner question OQ-05. Nothing measured is changed."""
+    lg = K.rule("UP-DOOR-OPEN-003")["logic"]
+    old = K.rule("UP-DOOR-OPEN-002")["logic"]
+    cad = el.get("structural_opening_width_m")
+    leaves = [round(x, 6) for x in el.get("nominal_leaf_width_m") or ()]
+    frame = el.get("frame_width_m")
+    mn = lg["owner_minimum_m"].get(category)
+    rec = {"rule": "UP-DOOR-OPEN-003", "category": category,
+           "structural_opening_m": None if cad is None else round(cad, 6),
+           "structural_opening_source": el.get("structural_opening_source"),
+           "door_leaf_m": leaves, "door_leaf_source": "the swing radius, one per leaf (the drawn leaf)",
+           "frame_m": None if frame is None else round(frame, 6), "frame_source": el.get("frame_source"),
+           "clear_passage_m": None, "clear_passage_state": "NOT_ESTABLISHED (a finished clear width is not in a plan)",
+           "owner_minimum_m": mn, "minimum_applies_to": lg["applies_to"],
+           "allowance": {"value_m": None, "state": "NOT_ESTABLISHED", "supported_by": None,
+                         "registry_1_1_0_m": old.get("allowance_registry_1_1_0_m"),
+                         "registry_1_1_0_state": "REQUIRES_CONFIRMATION (UP-DOOR-OPEN-002, registry 1.2.0)",
+                         "accepted_sources": lg["allowance_sources"]}}
+    if category == ELEVATOR:
+        return dict(rec, status="EXCLUDED", readings=[], review_status="NO_MODIFICATION", owner_question=None,
+                    why="elevator entrance: the elevator schedule (UP-DOOR-CLS-005)")
+    if mn is None:
+        return dict(rec, status="AS_DRAWN_ONLY", readings=[], review_status="NO_MODIFICATION", owner_question=None,
+                    why="no ordinary minimum for this category (main entrance: drawing and specification, "
+                        "UP-DOOR-CLS-004; an unsettled class: the class first)")
+    reg_alw = old.get("allowance_registry_1_1_0_m") or 0.0
+    rd = []
+    if cad is None:
+        rd.append({"reading": "STRUCTURAL_OPENING", "state": "NOT_ESTABLISHED", "why": "no structural opening"})
+    else:
+        sh = round(max(0.0, mn - cad), 6)
+        rd.append({"reading": "STRUCTURAL_OPENING", "state": "EVALUATED", "value_m": round(cad, 6), "shortfall_m": sh,
+                   "proposed_enlargement_m": sh,
+                   "meaning": "the minimum is the wall's structural opening (no allowance added)"})
+    if not leaves or cad is None:
+        rd.append({"reading": "DOOR_LEAF", "state": "NOT_ESTABLISHED", "why": "no leaf drawn" if not leaves else
+                   "no structural opening"})
+    else:
+        lw = round(sum(leaves), 6)
+        sh = round(max(0.0, mn - lw), 6)
+        rd.append({"reading": "DOOR_LEAF", "state": "EVALUATED", "value_m": lw, "shortfall_m": sh,
+                   "proposed_enlargement_m": {"low": round(max(0.0, mn - cad), 6),
+                                              "high_with_registry_allowance": round(max(0.0, mn + reg_alw - cad), 6)},
+                   "meaning": "the minimum is the door (its leaf); the wall opening then needs the minimum plus the "
+                              "frame / installation allowance, which is not established (low: no allowance; high: the "
+                              "1.1.0 registry's value, requiring confirmation)"})
+    rd.append({"reading": "CLEAR_PASSAGE", "state": "NOT_ESTABLISHED",
+               "why": "the finished clear passage (frame stops, leaf thickness) is not in a plan"})
+    ev = [r for r in rd if r["state"] == "EVALUATED"]
+    below = [r for r in ev if r["shortfall_m"] > TOL_M]
+    status = ("NOT_ESTABLISHED" if not ev else "BELOW_MINIMUM_ON_EVERY_READING" if len(below) == len(ev) else
+              "COMPLIES_ON_EVERY_READING" if not below else "READINGS_DISAGREE")
+    return dict(rec, readings=rd, status=status,
+                review_status="MODIFICATION_PROPOSED_NOT_APPROVED" if below else "NO_MODIFICATION",
+                owner_question=lg["question"])
+
+
+def _required_v27(rec, cad_m):
+    """the V2.6 row fields of required_opening, from the V2.7 opening record (the structural reading: the lower bound
+    of every reading; never the 0.10 m allowance)."""
+    st = next((r for r in rec.get("readings") or () if r["reading"] == "STRUCTURAL_OPENING"), None)
+    if rec["status"] in ("EXCLUDED",):
+        return {"state": "EXCLUDED", "why": rec["why"]}
+    if rec["status"] == "AS_DRAWN_ONLY":
+        return {"state": "AS_DRAWN_ONLY", "cad_wall_opening_m": cad_m, "owner_required_wall_opening_m": cad_m,
+                "enlargement_m": 0.0, "required_nominal_door_m": None, "why": rec["why"], "flags": []}
+    if st is None or st["state"] != "EVALUATED":
+        return {"state": "BLOCKED", "why": "no CAD wall opening (the door closes no gap)", "flags": []}
+    flags = [f"OPENING_BELOW_OWNER_MINIMUM_{r['reading']}" for r in rec["readings"]
+             if r["state"] == "EVALUATED" and r["shortfall_m"] > TOL_M]
+    flags.append("DOOR_MINIMUM_REFERENCE_UNRESOLVED (OQ-05)")
+    return {"state": "ESTABLISHED_ON_THE_STRUCTURAL_READING", "cad_wall_opening_m": cad_m,
+            "owner_required_wall_opening_m": round(max(cad_m, rec["owner_minimum_m"]), 6),
+            "enlargement_m": st["shortfall_m"], "required_nominal_door_m": None, "nominal_door_for_opening_m": None,
+            "nominal_basis": "NOT_ESTABLISHED (the allowance is not established: UP-DOOR-OPEN-003)",
+            "why": "the owner minimum on the structural opening, no allowance added; the other readings are in the "
+                   "opening record", "rule": K.ref("UP-DOOR-OPEN-003"), "flags": flags}
+
+
 def door_height(category, facts):
     """UP-DOOR-HGT-001: a facts height with its authority (schedule / section / elevation / dimension: SOURCE ...;
     an owner project fact), then the project fallback DOOR_ASSUMED, then the owner reference height (ASSUMED)."""
@@ -178,8 +266,10 @@ def _view(el):
     return "AS_DRAWN" if el.get("released") else "UNRESOLVED"
 
 
-def door_scenarios(model, facts, *, openings, rooms):
-    """-> {"rows": [...], "views": {...}, "conservation": {...}} for every door element of the building model."""
+def door_scenarios(model, facts, *, openings, rooms, v27=False):
+    """-> {"rows": [...], "views": {...}, "conservation": {...}} for every door element of the building model.
+    v27 (ARCH_TAKEOFF_V2.7 only): each row carries its opening_record (opening_record_v27) and the owner-required
+    values come from it (the 1.1.0 0.10 m allowance is never applied); False is the V2.3 .. V2.6 path, unchanged."""
     from engine.source import owner_finish_scope as OFS
     op = {(o["floor"], o["opening_id"]): o for o in openings}
     scope_of = {r["room_id"]: OFS.finish_scope(r)["scope"] for r in rooms}
@@ -187,7 +277,8 @@ def door_scenarios(model, facts, *, openings, rooms):
     for el in model["elements"]:
         cat, basis = door_category(el)
         cad = el.get("structural_opening_width_m")
-        req = required_opening(cat, cad)
+        orec = opening_record_v27(el, cat) if v27 else None
+        req = _required_v27(orec, cad) if v27 else required_opening(cat, cad)
         h = door_height(cat, facts)
         o = op.get((el["floor"], el.get("opening_id"))) or {}
         width_state = "CONFIRMED" if el["state"] == DM.CONFIRMED else el["state"]
@@ -226,11 +317,15 @@ def door_scenarios(model, facts, *, openings, rooms):
                                   "nominal_door_area": area(req.get("nominal_door_for_opening_m"), width_state)
                                   if req.get("nominal_door_for_opening_m") is not None else
                                   {"m2": None, "state": "NOT_APPLICABLE"},
-                                  "head_height_basis": "the door height (the 0.10 m rule covers the width only: OQ-02)",
+                                  "head_height_basis": "the door height (no head allowance is established: OQ-02)"
+                                  if v27 else "the door height (the 0.10 m rule covers the width only: OQ-02)",
                                   "why": req.get("why"), "candidates": req.get("candidates")},
                "review_status": "MODIFICATION_PROPOSED_NOT_APPROVED" if (req.get("enlargement_m") or 0) > TOL_M else
                                 "NO_MODIFICATION",
                "flags": flags, "rules": ["UP-DOOR-OPEN-002", "UP-DOOR-HGT-001", "UP-DOOR-AREA-001"]}
+        if v27:
+            row["rules"][0] = "UP-DOOR-OPEN-003"
+            row["opening_record"] = orec
         if (req.get("enlargement_m") or 0) > TOL_M:
             sides = [scope_of.get(sd.get("room_id")) for sd in el.get("sides") or ()]
             row["dependency_impacts"] = dependency_impacts(req["enlargement_m"], h, el.get("wall_t_m"),
