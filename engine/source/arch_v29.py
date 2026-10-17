@@ -403,7 +403,12 @@ def policy_record():
             "hinge_at_jamb_m": HINGE_AT_JAMB_M, "leaf_fit_m": LEAF_FIT_M,
             "never": ["a glazing line taken as the room boundary of a curved opening (the room ends at its own wall "
                       "face)", "a curved gap without a jamb line at both ends read as an opening",
-                      "a declared layer role changed", "a mean radius used for a face's width"]}
+                      "a declared layer role changed", "a mean radius used for a face's width",
+                      "a finish height or floor-to-floor used as a masonry height",
+                      "a ceiling or finish height used as a facade height", "a second exterior outline added to the "
+                      "facade", "an exterior finish measured without a stated specification"],
+            "masonry": {"max_buildup_m": MAX_BUILDUP_M, "agree_m": MAS_AGREE_M},
+            "facade": {"agree_m": FACADE_AGREE_M, "face_roles": list(FACE_ROLES)}}
 
 
 # ======================================================================================== masonry (UP-MAS-HEIGHT-001)
@@ -593,3 +598,211 @@ def masonry_takeoff(walls, stubs, openings, schedule, mev, unit_m=None):
                                    "measured, not given to a thickness (a corner of a 0.20 and a 0.10 wall belongs "
                                    "to neither alone)"}
     return dict(out, state="ESTABLISHED")
+
+
+# ========================================================================================= facade (UP-FACADE-001)
+# The facade of a floor is the exterior face of its wall network: the outer cycle of the plan topology, where every
+# opening is closed on its outer wall face by its threshold, so the run includes the openings. Its height runs from the
+# floor's F.F.L. to the next floor's F.F.L. (the floor's section band) or, above the top floor, to the parapet top;
+# nothing is defaulted. The exterior finish is a separate item, held without a stated specification.
+FACADE_AGREE_M = 0.005
+FACE_ROLES = ("WALL", "COLUMN", "WALL_CAP")
+RING_STEP_M = 0.05
+
+
+def _edge_m(arr, e, unit_m):
+    if e["kind"] == "S":
+        a, b = arr.nodes[e["n0"]], arr.nodes[e["n1"]]
+        return math.hypot(a[0] - b[0], a[1] - b[1]) * unit_m
+    return e["prim"].r * (e["t1"] - e["t0"]) * unit_m
+
+
+def _outline(arr, k, unit_m):
+    from collections import Counter, defaultdict
+    cyc = arr.faces[k]["cycle"]
+    walks = Counter(ei for ei, _ in cyc)
+    per, twice = 0.0, 0.0
+    roles, ops, doors = defaultdict(float), defaultdict(float), defaultdict(float)
+    for ei in sorted(walks):
+        e = arr.edges[ei]
+        ln = _edge_m(arr, e, unit_m)
+        if walks[ei] > 1:                     # walked on both sides: a lone line sticking out, not a face
+            twice += ln
+            continue
+        per += ln
+        src = sorted(str(s) for s in e["sources"])
+        thr = [s.split("|")[1] for s in src if s.startswith("THR|")]
+        dcl = [s[len("CLOSURE|"):].rsplit("|", 1)[0] for s in src if s.startswith("CLOSURE|")]
+        if thr:
+            ops[thr[0]] += ln
+        elif dcl:
+            doors[dcl[0]] += ln
+        else:
+            rr = sorted(e["roles"]) or ["NONE"]
+            for r in rr:
+                roles[r] += ln / len(rr)
+    face = sum(v for r, v in roles.items() if r in FACE_ROLES)
+    ring = []                                 # the outline in metres, arcs in steps of at most RING_STEP_M
+    for ei, fw in cyc:
+        e = arr.edges[ei]
+        if e["kind"] == "S":
+            p = arr.nodes[e["n0"] if fw else e["n1"]]
+            ring.append([round(p[0] * unit_m, 6), round(p[1] * unit_m, 6)])
+            continue
+        pr = e["prim"]
+        t0, t1 = (e["t0"], e["t1"]) if fw else (e["t1"], e["t0"])
+        n = max(2, int(math.ceil(abs(t1 - t0) * pr.r * unit_m / RING_STEP_M)))
+        for i in range(n):
+            x, y = pr.point(t0 + (t1 - t0) * i / n)
+            ring.append([round(x * unit_m, 6), round(y * unit_m, 6)])
+    return {"perimeter_m": round(per, 6), "plate_m2": round(abs(arr.faces[k]["area"]) * unit_m * unit_m, 6),
+            "face_lm": round(face, 6), "by_role": {r: round(v, 6) for r, v in sorted(roles.items())},
+            "openings": [{"opening_id": o, "width_m": round(v, 6)} for o, v in sorted(ops.items())],
+            "door_closures": [{"door": d, "width_m": round(v, 6)} for d, v in sorted(doors.items())],
+            "other_lm": round(sum(v for r, v in roles.items() if r not in FACE_ROLES), 6),
+            "twice_lm": round(twice, 6), "ring_m": ring}
+
+
+def facade_outlines(arr, unit_m, min_space_m2):
+    """the exterior outlines of a floor's plan topology (an engine.source.topology arrangement, every opening closed
+    on both wall faces). An outline is the outer cycle of a connected wall network that stands outside every other
+    network. A network inside another network's face is an island (a column or a wall inside a room: never a facade);
+    when the island has a space of its own (a face of min_space_m2 or more) the network around it is an enclosure
+    around a building (a boundary wall) and the facade is held. Per outline: perimeter (openings included), the plate
+    inside it, the length by boundary role, each opening it crosses (the length of that opening's outer threshold on
+    it), the door closures on it, the length of other roles (glazing drawn on the outline) and the length walked twice.
+    A network enclosing nothing (loose lines) is counted apart (line_networks), never an outline.
+    -> {"state": ONE_OUTLINE | SEVERAL_OUTLINES | ENCLOSED_BUILDING | NO_OUTLINE, "outlines", "islands",
+        "line_networks"}"""
+    from engine.source import topology as TP
+    if not arr.faces:
+        return {"state": "NO_OUTLINE", "outlines": [], "islands": 0}
+    uf = TP._components(arr)
+    comp = {k: uf.find(arr.edges[f["cycle"][0][0]]["n0"]) for k, f in enumerate(arr.faces) if f["cycle"]}
+    pos = [k for k in comp if arr.faces[k]["area"] > 0]
+    bbox = {k: TP._cycle_bbox(arr, arr.faces[k]["cycle"]) for k in pos}
+    outer = {}
+    for k in sorted(comp):
+        if arr.faces[k]["area"] <= 0:
+            c = comp[k]
+            if c not in outer or arr.faces[k]["area"] < arr.faces[outer[c]]["area"]:
+                outer[c] = k
+    u2 = unit_m * unit_m
+    spaced = {c for c in outer if any(comp[j] == c and arr.faces[j]["area"] * u2 >= min_space_m2 for j in pos)}
+    host = {}
+    for c, k in sorted(outer.items()):
+        e0 = arr.edges[arr.faces[k]["cycle"][0][0]]
+        pt = arr.nodes[e0["n0"]]
+        best = None
+        for j in pos:
+            b = bbox[j]
+            if comp[j] == c or not (b[0] <= pt[0] <= b[2] and b[1] <= pt[1] <= b[3]):
+                continue
+            if TP._winding(arr, arr.faces[j]["cycle"], pt) != 0 and \
+                    (best is None or arr.faces[j]["area"] < arr.faces[best]["area"]):
+                best = j
+        if best is not None:
+            host[c] = comp[best]
+    enclosing = sorted({host[c] for c in host if c in spaced})
+    found = [_outline(arr, k, unit_m) for c, k in outer.items() if c not in host]
+    # a network that encloses nothing (every edge walked on both sides: loose lines) is not an outline
+    outlines = sorted((o for o in found if o["plate_m2"] > 0), key=lambda o: (-o["plate_m2"], -o["perimeter_m"]))
+    state = ("ENCLOSED_BUILDING" if enclosing else "NO_OUTLINE" if not outlines else
+             "SEVERAL_OUTLINES" if len(outlines) > 1 else "ONE_OUTLINE")
+    out = {"state": state, "outlines": outlines, "islands": sum(1 for c in host if c not in spaced),
+           "line_networks": {"count": len(found) - len(outlines),
+                             "lm": round(sum(o["twice_lm"] for o in found if o["plate_m2"] <= 0), 6)}}
+    if enclosing:
+        out["enclosed"] = [_outline(arr, outer[c], unit_m) for c in sorted(host) if c in spaced]
+    return out
+
+
+def _facade_fact(facts, floor, key):
+    m = (facts or {}).get("facade") or {}
+    v = (m.get(floor) or {}).get(key)
+    return v if v is not None else (m.get("*") or {}).get(key)
+
+
+def facade_evidence(views, floor, facts):
+    """the facade height of a floor: its section band's F.F.L. to the next floor's F.F.L. (FLOOR_TO_FLOOR), or above
+    the top floor to the lowest parapet top over its F.F.L. (TO_PARAPET), or the project fact
+    facade.{floor|*}.height_m (stated, labelled). -> {"state": ESTABLISHED | CONFLICT | NOT_ESTABLISHED, "height_m",
+    "ffl_m", "kind", "basis", "sources", "why"}"""
+    found = []
+    for v in (views or {}).get("views") or ():
+        lv = v.get("levels") or []
+        for b in v.get("bands") or ():
+            if b.get("floor") != floor:
+                continue
+            ffl, top = b["ffl_m"], b.get("next_ffl_m")
+            par = sorted({x["value_m"] for x in lv if x["kind"] == "PARAPET" and x["value_m"] > ffl})
+            found.append({"view": v["view_id"], "ffl_m": ffl, "next_ffl_m": top, "parapet_m": par})
+    rec = {"floor": floor, "sections": found}
+    for basis, rows, top_of in (("FLOOR_TO_FLOOR", [f for f in found if f["next_ffl_m"] is not None],
+                                 lambda f: f["next_ffl_m"]),
+                                ("TO_PARAPET", [f for f in found if f["next_ffl_m"] is None and f["parapet_m"]],
+                                 lambda f: f["parapet_m"][0])):
+        if not rows:
+            continue
+        hs = sorted({round(top_of(f) - f["ffl_m"], 6) for f in rows})
+        if hs[-1] - hs[0] > FACADE_AGREE_M:
+            return dict(rec, state="CONFLICT", why=f"SECTIONS_DISAGREE: {basis} {hs}")
+        word = "F.F.L." if basis == "FLOOR_TO_FLOOR" else "PARAPET"
+        return dict(rec, state="ESTABLISHED", height_m=hs[0], ffl_m=rows[0]["ffl_m"], kind="SECTION", basis=basis,
+                    sources=[{"view": f["view"], "formula": f"{word} {top_of(f):+.3f} - F.F.L. {f['ffl_m']:+.3f}"}
+                             for f in rows])
+    h = _facade_fact(facts, floor, "height_m")
+    if h and h.get("value_m"):
+        return dict(rec, state="ESTABLISHED", height_m=h["value_m"], ffl_m=None, kind="PROJECT_RULE",
+                    basis="STATED", sources=[{"fact": "facade.height_m", "authority": h.get("authority")}])
+    return dict(rec, state="NOT_ESTABLISHED",
+                why="FACADE_HEIGHT_NOT_IN_THE_DRAWING: no section band of this floor gives the next floor's F.F.L. "
+                    "or a parapet top (a ceiling or finish height is never a facade height)")
+
+
+def facade_takeoff(outline, ev, schedule, ops):
+    """the facade area of one outline: gross = perimeter x height; each opening on the outline deducted by its width
+    on the outline x its own band (a door or passage from the F.F.L., a window min(sill + h, H) - max(sill, 0); a
+    window without a sill is taken inside the band); an opening, door closure or glazing line without a height adds
+    a range [0, width x H]. schedule: {opening_id: V2.8 opening record}; ops: {opening_id: opening}.
+    -> {"state": MEASURED | RANGE | NOT_ESTABLISHED, "gross_m2", "net_m2" | "net_low_m2" / "net_high_m2", "openings"}"""
+    if ev.get("state") != "ESTABLISHED":
+        return {"state": "NOT_ESTABLISHED", "why": ev.get("why")}
+    H = ev["height_m"]
+    gross = outline["perimeter_m"] * H
+    known, unknown, rows = 0.0, 0.0, []
+    for x in outline["openings"]:
+        o = ops.get(x["opening_id"]) or {}
+        rec = schedule.get(x["opening_id"]) or {}
+        hv = (rec.get("height") or {}).get("value_m")
+        sv = (rec.get("sill") or {}).get("value_m")
+        gov = (rec.get("height") or {}).get("governing")
+        w = x["width_m"]
+        row = {"opening_id": x["opening_id"], "kind": o.get("kind"), "width_m": w}
+        if hv is None:
+            unknown += w * H
+            row.update(deducted_m2=None, why=f"{o.get('kind') or 'OPENING'}_HEIGHT_NOT_ESTABLISHED")
+        else:
+            lo = 0.0 if o.get("kind") != "WINDOW" or sv is None else max(sv, 0.0)
+            hi = min(lo + hv, H)
+            d = w * max(0.0, hi - lo)
+            known += d
+            row.update(height_m=hv, sill_m=sv if o.get("kind") == "WINDOW" else 0.0, deducted_m2=round(d, 6))
+            if o.get("kind") == "WINDOW" and sv is None:
+                row["note"] = "SILL_NOT_ESTABLISHED: the window is taken inside the floor's band"
+            if gov in ("URBAN_DEFAULT", "PROJECT_RULE"):
+                row["height_assumed"] = gov
+        rows.append(row)
+    for x in outline["door_closures"]:
+        unknown += x["width_m"] * H
+        rows.append({"door": x["door"], "kind": "DOOR_CLOSURE", "width_m": x["width_m"], "deducted_m2": None,
+                     "why": "A_DOOR_SWING_CLOSES_THE_OUTLINE: no band opening, no schedule height"})
+    if outline["other_lm"] > 0:
+        unknown += outline["other_lm"] * H
+        rows.append({"kind": "OTHER_LINES_ON_THE_OUTLINE", "width_m": outline["other_lm"], "deducted_m2": None,
+                     "why": "lines other than walls on the outline (glazing drawn on the face): an opening of "
+                            "unknown height"})
+    out = {"gross_m2": round(gross, 6), "height_m": H, "openings": rows, "deducted_m2": round(known, 6)}
+    if unknown <= 1e-9:
+        return dict(out, state="MEASURED", net_m2=round(gross - known, 6))
+    return dict(out, state="RANGE", net_low_m2=round(gross - known - unknown, 6), net_high_m2=round(gross - known, 6))

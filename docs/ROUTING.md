@@ -92,7 +92,7 @@ Risk **HIGH** (recommended validation L3). Ask about: room, space, zone, closure
 
 **Open first:**
 
-- `engine/source/arch_rooms.py` (2236 lines, HIGH; imported by 27 directly, 57 transitively, SHARED)
+- `engine/source/arch_rooms.py` (2238 lines, HIGH; imported by 27 directly, 57 transitively, SHARED)
 - `engine/source/arch_plan.py` (449 lines, HIGH; imported by 15 directly, 60 transitively, SHARED)
 - `engine/source/space_model.py` (196 lines, MEDIUM; imported by 3 directly, 30 transitively)
 - `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 8 directly, 47 transitively)
@@ -131,7 +131,7 @@ Risk **HIGH** (recommended validation L3). Ask about: wall, blockwork, block, ma
 - `engine/source/arch_walls.py` (236 lines, HIGH; imported by 5 directly, 57 transitively)
 - `engine/source/wall_contact_path.py` (695 lines, HIGH; imported by 21 directly, 24 transitively, SHARED)
 - `engine/source/wall_bands.py` (1036 lines, HIGH; imported by 20 directly, 50 transitively, SHARED)
-- `engine/source/arch_rooms.py` (2236 lines, HIGH; imported by 27 directly, 57 transitively, SHARED)
+- `engine/source/arch_rooms.py` (2238 lines, HIGH; imported by 27 directly, 57 transitively, SHARED)
 - `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 5 directly, 58 transitively)
 
 **Depends on:** `engine/source/arch_plan.py`, `engine/source/arch_v27.py`, `engine/source/member_detection.py`, `engine/source/release_safety.py`, `engine/source/topology.py`, `engine/source/arch_v29.py`, `engine/source/drawing_model.py`, `engine/source/geometry_role.py`, `engine/source/lintel_measure.py`, `engine/source/plane_poly.py`
@@ -450,7 +450,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: boq, total, release, r
 
 **Open first:**
 
-- `tools/urban_boq_m9.py` (2916 lines, HIGH; imported by 28 directly, 28 transitively, SHARED)
+- `tools/urban_boq_m9.py` (3039 lines, HIGH; imported by 28 directly, 28 transitively, SHARED)
 - `engine/source/delta_release.py` (159 lines, CRITICAL, frozen; imported by 37 directly, 37 transitively, SHARED)
 - `engine/source/boq_line.py` (386 lines, HIGH; imported by 17 directly, 57 transitively, SHARED)
 - `engine/source/knowledge.py` (286 lines, HIGH; imported by 22 directly, 59 transitively, SHARED)

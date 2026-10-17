@@ -30,8 +30,11 @@ schedule, a section). Every truth in n10_truth.py is derived by hand from the co
           section="BOB"     the same with B.O.B. +2.60 (a beam bottom: beam depth 0.50 m below the soffit)
           section="NO_TOS"  F.F.L., F.C.L., U/S SLAB only (no structural slab top: the masonry height is not given)
           section="TWO"     SECTION A-A (T.O.S. -0.10) and SECTION B-B (T.O.S. -0.15): the sections disagree
+          section="FACADE"  the TOS section plus F.F.L. +3.50 named FIRST FLOOR (floor-to-floor 3.50 m)
           section=None      no section at all
-        partition=True adds a 0.15 m partition x 3000..3150 from the south to the north wall's inner faces
+        partition=True adds a 0.15 m partition x 3000..3150 from the south to the north wall's inner faces;
+        column / enclosure / annex: a free-standing column inside the room, a closed boundary-wall box 2.00 m around
+        the room, a closed 2.00 x 2.00 m wall box 3.00 m east of it (masonry_room's docstring)
 Every plan has the sheet frame and title the admission needs."""
 
 from __future__ import annotations
@@ -188,20 +191,38 @@ def nested(path, evidence=FULL):
     return Path(path)
 
 
-def _level_section(msp, x0, title, levels):
-    """a section sheet on the GROUND FLOOR band: each (label, value_m) text at its level line (y = value x 1000)."""
+def _level_section(msp, x0, title, levels, names=(("GROUND FLOOR", 1500),)):
+    """a section sheet on the GROUND FLOOR band: each (label, value_m) text at its level line (y = value x 1000);
+    names: the floor names written inside their bands (y in mm)."""
     F9._frame(msp, x0, x0 + 30000, title)
     for label, v in levels:
         y = v * 1000
         msp.add_line((x0 + 2000, y), (x0 + 12000, y), dxfattribs={"layer": "A-SECT"})
         F9._text(msp, f"{label} {'+' if v > 0 else ('-' if v < 0 else '%s' % chr(177))}{abs(v):.2f}", x0 + 12500, y)
-    F9._text(msp, "GROUND FLOOR", x0 + 3000, 1500)
+    for name, y in names:
+        F9._text(msp, name, x0 + 3000, y)
 
 
 TOS_LEVELS = [("F.F.L.", 0.0), ("T.O.S.", -0.10), ("F.C.L.", 3.00), ("U/S SLAB", 3.10)]
+FACADE_LEVELS = TOS_LEVELS + [("F.F.L.", 3.50)]
+FACADE_NAMES = (("GROUND FLOOR", 1500), ("FIRST FLOOR", 5000))
 
 
-def masonry_room(path, section="TOS", partition=False):
+def _box(msp, x0, y0, x1, y1, t, layer=W):
+    """a closed box: outer x0..x1 / y0..y1 and, when t is given, the inner face offset t (drawing units); no gap."""
+    sq = [((x0, y0), (x1, y0)), ((x1, y0), (x1, y1)), ((x1, y1), (x0, y1)), ((x0, y1), (x0, y0))]
+    if t:
+        sq += [((x0 + t, y0 + t), (x1 - t, y0 + t)), ((x1 - t, y0 + t), (x1 - t, y1 - t)),
+               ((x1 - t, y1 - t), (x0 + t, y1 - t)), ((x0 + t, y1 - t), (x0 + t, y0 + t))]
+    for a, b in sq:
+        msp.add_line(a, b, dxfattribs={"layer": layer})
+
+
+def masonry_room(path, section="TOS", partition=False, column=False, enclosure=False, annex=False):
+    """column: a free-standing 0.30 m column (A-COL) inside the room (an island: never a facade); enclosure: a closed
+    0.20 m wall box 2.00 m outside the room on the wall layer (a boundary wall around the building); annex: a closed
+    2.00 x 2.00 m wall box (0.20 m) 3.00 m east of the room, raised 0.60 m so no face is collinear with the room's
+    walls (a second outline on the floor; collinear faces with jambs at both ends would read as an opening)."""
     doc, msp = F6._doc()
     doc.layers.add("A-SECT")
     F9._walls_rect(msp, [(1000, 2000)], [(1250, 2750)])
@@ -209,6 +230,12 @@ def masonry_room(path, section="TOS", partition=False):
     msp.add_line((1250, 3300), (2750, 3300), dxfattribs={"layer": GLAZ})
     if partition:
         F6._lines(msp, [((3000, 200), (3000, 3200)), ((3150, 200), (3150, 3200))])
+    if column:
+        _box(msp, 3300, 2400, 3600, 2700, None, layer=F6.COL)
+    if enclosure:
+        _box(msp, -2000, -2000, 6400, 5400, 200)
+    if annex:
+        _box(msp, 7400, 600, 9400, 2600, 200)
     F9._text(msp, "BEDROOM", 2000, 1700)
     F9._evidence(msp, frozenset({"TAGS", "SCHEDULE"}), ["D1", "W1"], {"D1": (1400, -500), "W1": (1900, 3700)},
                  (2000, 1700))
@@ -221,5 +248,7 @@ def masonry_room(path, section="TOS", partition=False):
     elif section == "TWO":
         _level_section(msp, 58000, "SECTION A-A", TOS_LEVELS)
         _level_section(msp, 90000, "SECTION B-B", [x if x[0] != "T.O.S." else ("T.O.S.", -0.15) for x in TOS_LEVELS])
+    elif section == "FACADE":
+        _level_section(msp, 58000, "SECTION A-A", FACADE_LEVELS, FACADE_NAMES)
     doc.saveas(str(path))
     return Path(path)

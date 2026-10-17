@@ -22,7 +22,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1259 | pytest suites, one folder per round. |
+| `tests/` | 1260 | pytest suites, one folder per round. |
 | `tools/` | 92 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -398,10 +398,10 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_measure.py` | 1165 | HIGH | 16 | ARCHITECTURAL MEASUREMENT (M9 S2) - canonical BOQ lines per room from the spaces of arch_rooms (generic, stdlib). |
 | `arch_plan.py` | 449 | HIGH | 15 | ARCHITECTURAL PLAN READING (M9 S2) - which part of a drawing is which floor plan, and what each layer IS (generic). |
 | `arch_quantity_truth.py` | 536 | MEDIUM | 2 | ARCH_QUANTITY_TRUTH_V1 - generic architectural quantity calculators with explicit evidence states. |
-| `arch_rooms.py` | 2236 | HIGH | 27 | ARCHITECTURAL SPACES (M9 S2, S4) - rooms of one floor plan from its wall linework, on the TS01 topology (generic). |
+| `arch_rooms.py` | 2238 | HIGH | 27 | ARCHITECTURAL SPACES (M9 S2, S4) - rooms of one floor plan from its wall linework, on the TS01 topology (generic). |
 | `arch_v27.py` | 1135 | MEDIUM | 4 | ARCH_TAKEOFF_V2.7 (M9 Phase 2B-7) - the drawing-interpretation corrections proven by independent acceptance tests |
 | `arch_v28.py` | 1028 | MEDIUM | 5 | ARCHITECTURAL TAKEOFF V2.8 (M9 Phase 2B-9) - heights read from the drawing, the opening schedule, window reveals |
-| `arch_v29.py` | 596 | MEDIUM | 4 | ARCH_TAKEOFF_V2.9 (Phase N10) - curved wall openings (generic; stdlib only). Read only by ARCH_TAKEOFF_V2.9. |
+| `arch_v29.py` | 809 | MEDIUM | 4 | ARCH_TAKEOFF_V2.9 (Phase N10) - curved wall openings (generic; stdlib only). Read only by ARCH_TAKEOFF_V2.9. |
 | `arch_walls.py` | 236 | HIGH | 5 | WALL RUNS AND THE ROOM GRAPH (M9 S3) - the walls of one floor plan by thickness, and which spaces each wall and |
 | `authority_decisions.py` | 206 | CRITICAL | 2 | AUTHORITY DECISIONS - owner authority rulings, provenance classes and facet-state errata (generic, stdlib only). |
 | `bar_shapes.py` | 67 | MEDIUM | 3 | BAR SHAPES (M2) - developed bar lengths by shape, diameter-aware bends and hooks (generic, stdlib). |
@@ -618,7 +618,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `wp_geometry.py` | 317 | MEDIUM | 7 | WATERPROOFING BOUNDARY GEOMETRY (M9 Phase 2B-2, ARCH_TAKEOFF_V2.4 only) - the boundary of a waterproofed area, |
 | `wp_install.py` | 1085 | MEDIUM | 4 | WATERPROOFING INSTALLATION LAYER (M9 Phase 2B-5, ARCH_TAKEOFF_V2.6 only) - what a membrane cutting plan means on |
 
-`engine/source/arch_rooms.py` symbols: def fixture_of (L133-139), def tag_of (L142-152), def room_word (L155-164), def door_swings (L182-192), def match_swings (L221-266), def match_swings_review (L269-340), def opening_marks (L347-378), def open_passages (L532-624), def zone_candidates (L714-745), def zone_partition (L808-910), def closure_in_passage (L956-980), def spaces (L983-1226), def closures_b (L1259-1304), def wall_caps (L1307-1346), def tread_flights (L1476-1502), def stair_flights (L1543-1555), def quads_overlap (L1561-1570), def radial_flights (L1610-1664), def void_symbols (L1771-1801), def x_rect_at (L1848-1892), def void_outlines (L1895-1965), def stacked_shafts (L1981-2026), def floor_offset (L2033-2054), def voids_above (L2060-2107), def void_marks (L2114-2120), def cross_plan_flights (L2147-2183), def dominant_level (L2186-2192), def policy_record (L2207-2235)
+`engine/source/arch_rooms.py` symbols: def fixture_of (L133-139), def tag_of (L142-152), def room_word (L155-164), def door_swings (L182-192), def match_swings (L221-266), def match_swings_review (L269-340), def opening_marks (L347-378), def open_passages (L532-624), def zone_candidates (L714-745), def zone_partition (L808-910), def closure_in_passage (L956-980), def spaces (L983-1228), def closures_b (L1261-1306), def wall_caps (L1309-1348), def tread_flights (L1478-1504), def stair_flights (L1545-1557), def quads_overlap (L1563-1572), def radial_flights (L1612-1666), def void_symbols (L1773-1803), def x_rect_at (L1850-1894), def void_outlines (L1897-1967), def stacked_shafts (L1983-2028), def floor_offset (L2035-2056), def voids_above (L2062-2109), def void_marks (L2116-2122), def cross_plan_flights (L2149-2185), def dominant_level (L2188-2194), def policy_record (L2209-2237)
 
 `engine/source/concrete_completeness.py` symbols: class CompletenessError (L201-202), def annotation_layer (L222-225), def hatch_drawn (L232-235), def footing_content_layer (L238-240), def layer_family (L243-253), def note_families (L284-300), def section_label (L303-316), def thickness_m (L319-327), def items_of (L755-756), def geometry_ledger (L759-954), def member_ledger (L1532-1564), def label_ledger (L1587-1680), def schedule_ledger (L1700-1783), def storey_ledger (L1790-1824), def vertical_ledger (L1852-1965), def note_ledger (L1969-2031), def overlap_ledger (L2035-2072), def coverage_ledger (L2090-2175), def unresolved_ledger (L2178-2194), def scope_checklist (L2207-2272), def assess (L2276-2312), def policy_record (L2358-2361)
 
@@ -650,7 +650,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `a18_review_package.py` | 378 | MEDIUM | 0 | Package a frozen blind run for external review. Packaging only. |
 | `a18_zone_register.py` | 127 | MEDIUM | 0 | The visual zone register, transcribed from a frozen pass, and drawn. |
 | `align_sanitary.py` | 205 | MEDIUM | 0 | Register the sanitary set, align it to the plan, and ask the pantry. |
-| `arch_change_verify.py` | 673 | MEDIUM | 0 | BOQ CHANGE ATTRIBUTION WITH INDEPENDENT VERIFICATION (Phase 2B-8) - every BOQ total that differs between two runs of |
+| `arch_change_verify.py` | 710 | MEDIUM | 0 | BOQ CHANGE ATTRIBUTION WITH INDEPENDENT VERIFICATION (Phase 2B-8) - every BOQ total that differs between two runs of |
 | `arch_dimensions.py` | 70 | MEDIUM | 2 | ARCH DIMENSIONS (M9 Phase 2A P2-09a) - the DIMENSION entities of a plan DXF as plain records for the read-only |
 | `arch_discovery.py` | 265 | MEDIUM | 5 | ARCHITECTURAL DRAWING DISCOVERY (M9 S6) - the ezdxf side of engine.source.discovery: a source census of the whole |
 | `arch_intake.py` | 328 | MEDIUM | 7 | ARCH INTAKE (M9 S2 / S3) - the architectural route's extra readings of a DXF, next to tools/urban_intake.py |
@@ -725,7 +725,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `synthetic_villa_m6.py` | 698 | CRITICAL | 5 | SYNTHETIC VILLA M6 - completeness cases drawn onto the M2 synthetic villa, with the truth of what was drawn. |
 | `synthetic_villa_m8.py` | 211 | CRITICAL | 4 | SYNTHETIC VILLA M8 - the M6 completeness villa with the DESIGN of every scope element it draws, so that the |
 | `urban_boq_m2.py` | 603 | CRITICAL | 16 | URBAN BOQ M2 - the one-command BOQ with ROUTE G, the generic engine, on top of the frozen M1 pipeline. |
-| `urban_boq_m9.py` | 2916 | HIGH | 28 | URBAN BOQ M9 (S1) - canonical BOQ lines, room material plans and the room-by-room workbook, on top of route G. |
+| `urban_boq_m9.py` | 3039 | HIGH | 28 | URBAN BOQ M9 (S1) - canonical BOQ lines, room material plans and the room-by-room workbook, on top of route G. |
 | `urban_intake.py` | 225 | CRITICAL | 24 | URBAN INTAKE (M2) - one drawing file -> a plain, source-pointed geometry record for the generic engine. |
 | `urban_project_run.py` | 321 | CRITICAL | 1 | URBAN PROJECT RUN (M7) - one manifest per project; the blind protocol enforced by the tool, not remembered. |
 | `urban_structural_boq.py` | 602 | CRITICAL | 3 | URBAN STRUCTURAL BOQ (M1) - one command from a drawing set to a planning BOQ, an exception report, Excel and PDF. |
@@ -739,7 +739,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 
 `tools/run_pipeline.py` symbols: def bands_to_pairs (L169-178), def side_coverage (L181-206), def host_band_for (L209-224), def raster_overlap (L227-274), def tolerance_sensitivity (L287-328), class NoSpaceMap (L359-376), def load_space_map (L379-399), def run (L402-2060), def main (L2063-2118)
 
-`tools/urban_boq_m9.py` symbols: def revision_set_sha256 (L170-171), def structural_lines (L174-181), def run_rules (L184-188), def write_m9 (L191-230), def cmd_run (L233-253), def cmd_rooms (L256-262), class CompletenessFailed (L275-281), def arch_compute (L284-307), def K_value (L2228-2230), def v21_files (L2396-2467), def cmd_arch (L2594-2751), def cmd_tiles (L2765-2777), def cmd_membrane (L2780-2793), def cmd_rooms_check (L2796-2798), def cmd_rules (L2801-2807), def main (L2810-2911)
+`tools/urban_boq_m9.py` symbols: def revision_set_sha256 (L170-171), def structural_lines (L174-181), def run_rules (L184-188), def write_m9 (L191-230), def cmd_run (L233-253), def cmd_rooms (L256-262), class CompletenessFailed (L275-281), def arch_compute (L284-307), def K_value (L2349-2351), def v21_files (L2517-2590), def cmd_arch (L2717-2874), def cmd_tiles (L2888-2900), def cmd_membrane (L2903-2916), def cmd_rooms_check (L2919-2921), def cmd_rules (L2924-2930), def main (L2933-3034)
 
 ## `pipeline/` (4 modules)
 
@@ -841,7 +841,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/m8_full_scope/` | 2 |
 | `tests/m9_foundation/` | 8 |
 | `tests/m9_kb/` | 7 |
-| `tests/m9_n10/` | 3 |
+| `tests/m9_n10/` | 4 |
 | `tests/m9_p2a/` | 6 |
 | `tests/m9_p2b0/` | 6 |
 | `tests/m9_p2b2/` | 5 |

@@ -86,3 +86,19 @@ MAS_PART_AREA = (MAS_PART_T * 3.00) / MAS_PART_T * MAS_PANEL            # 3.00 m
 MAS_PART_VOLUME = MAS_PART_AREA * MAS_PART_T                            # 1.44 m3
 MAS_EXT_AREA_WITH_PART = (MAS_PLAN - 4 * MAS_T * MAS_T) / MAS_T * MAS_PANEL + MAS_ABOVE_DOOR + MAS_WIN_WALL  # 40.70
 MAS_JUNCTION_VOLUME = 4 * MAS_T * MAS_T * MAS_PANEL                     # 0.512 m3
+
+# ------------------------------------------------------------------------------- facade (masonry_room, UP-FACADE-001)
+# the exterior outline of the 4.40 x 3.40 m box: each opening is closed on its outer face, so the outline runs along
+# the outer face across the door (south) and the window (north) gaps
+FAC_RUN = 2 * (4.40 + 3.40)                                             # 15.60 m
+FAC_PLATE = 4.40 * 3.40                                                 # 14.96 m2 inside the outline
+FAC_H = 3.50 - 0.00                                                     # F.F.L. +3.50 (FIRST FLOOR) - F.F.L. +-0.00
+FAC_GROSS = FAC_RUN * FAC_H                                             # 54.60 m2
+FAC_DOOR = 1.00 * 2.20                                                  # D1 1000 x 2200 from the F.F.L.
+FAC_WIN = 1.50 * (min(1.00 + 1.20, FAC_H) - 1.00)                       # W1 1500 x 1200, sill 1.00: 1.80 m2
+FAC_NET = FAC_GROSS - FAC_DOOR - FAC_WIN                                # 50.60 m2
+FAC_ANNEX_RUN = 4 * 2.00                                                # 8.00 m: the second outline (annex)
+# the curved room (curved_room WINDOW): west outer face 3.40 + the cap 0.20 at (0..200, 3400) + the outer arc
+# r 3.20 over 90 degrees + the cap 0.20 at (3400, 0..200) + the south outer face 3.40 (door gap closed on it)
+CUR_FAC_RUN = 3.40 + 0.20 + R_OUT * QUARTER + 0.20 + 3.40               # 12.226548 m
+CUR_FAC_OPENINGS = sorted([1.00, WIN_OUTER])                            # D1 1.00 m; W4 on its outer face 4.599882 m

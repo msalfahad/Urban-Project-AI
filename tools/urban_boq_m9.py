@@ -490,7 +490,7 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
         door_facts = DSTD.door_model_facts(facts)
     HE, v28_recs = None, {"openings": [], "rooms": [], "walls": [], "stubs": [], "reveals": [], "bindings": {},
                           "lost_labels": []}
-    v29_recs = {"curved_openings": [], "curved_rejected": [], "glazing_layers": [], "masonry": []}
+    v29_recs = {"curved_openings": [], "curved_rejected": [], "glazing_layers": [], "masonry": [], "facade": []}
     if v28:
         # ARCH_TAKEOFF_V2.8 (UP-HGT-001): the height evidence of the whole drawing - schedules, sections /
         # elevations and project notes on their sheets; each floor's own texts are bound below
@@ -582,6 +582,13 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
                                                           ln_["location"]["floor"] == floor)] + ml_
             M["unresolved"] = [x_ for x_ in M["unresolved"] if not str(x_.get("item", "")).startswith("MAS.BLOCK")] + mu_
             v29_recs["masonry"].append(mr_)
+            # ARCH_TAKEOFF_V2.9 (UP-FACADE-001): the floor's exterior outline, its area and finish
+            fl_, fu_, fr_ = _v29_facade(S, floor, v28_ctx["schedule"], HE, facts,
+                                        {"project_id": pid, "revision_set_sha256": rev, "documents": docs},
+                                        reg["order"] == min(r_["order"] for r_ in regs))
+            M["lines"] += fl_
+            M["unresolved"] += fu_
+            v29_recs["facade"].append(fr_)
         if v28:
             v28_recs["rooms"] += [{"floor": floor, "room_id": r_["room_id"], "name_en": r_["name_en"],
                                    "heights": r_.get("heights_v28"), "wet": r_.get("wet_v28"),
@@ -973,6 +980,14 @@ V29_CORRECTIONS = (
     "the glazing is a reveal / sill strip (never floor); its width is the arc of the face the room meets",
     "D-V29-02 curved glazing layers (UP-OPEN-CURVED-001, D-P9-01): a layer whose concentric arcs glaze the jambed curved "
     "wall gaps (most of its linework in wall gaps) is a WINDOW layer; a declared role is never changed",
+    "D-V29-03 masonry by thickness (UP-MAS-HEIGHT-001, L-P9-05): the wall panel from the floor's T.O.S. to the soffit "
+    "(its own section band, or stated facts), never a finish height; area = wall-mass plan area / t x panel + the "
+    "wall above / below each opening, volume = area x t; a beam bottom gives a range, no beam evidence holds it; "
+    "MAS.BLOCK takes the panel only when the family's material is stated (MASONRY.json)",
+    "D-V29-04 facade (UP-FACADE-001): the exterior outline of the floor's wall network (openings closed on their outer "
+    "face), its area F.F.L. to the next F.F.L. (or to the parapet top) with each opening on it deducted by its own "
+    "band; a second outline is reported, never added; an outline around the building holds the facade; the exterior "
+    "finish is held without a stated specification (FACADE.json)",
 )
 
 
@@ -981,7 +996,13 @@ MAS_PANEL_AR = BL.ITEMS["ARCH.WALL_RUN"][1].replace(BL.ITEMS["ARCH.WALL_RUN"][1]
 V29_ITEMS = {"ARCH.WALL_PANEL": ("Wall panel area by thickness (T.O.S. to soffit, openings deducted)", MAS_PANEL_AR,
                                  "MASONRY"),
              "ARCH.WALL_VOLUME": ("Wall volume by thickness (panel area x thickness)",
-                                  BL.ITEMS["ARCH.WALL_RUN"][1] + " (m3)", "MASONRY")}
+                                  BL.ITEMS["ARCH.WALL_RUN"][1] + " (m3)", "MASONRY"),
+             "ARCH.FACADE_RUN": ("Facade run: exterior wall face length in plan (openings included)",
+                                 "\u0637\u0648\u0644 \u0627\u0644\u0648\u0627\u062c\u0647\u0629", "FACADE"),
+             "ARCH.FACADE": ("Facade area: exterior wall face, F.F.L. to the next F.F.L., openings deducted",
+                             "\u0645\u0633\u0627\u062d\u0629 \u0627\u0644\u0648\u0627\u062c\u0647\u0629", "FACADE"),
+             "FIN.EXT.FINISH": ("Exterior wall finish (plaster / paint / cladding as specified)",
+                                "\u062a\u0634\u0637\u064a\u0628 \u062e\u0627\u0631\u062c\u064a", "FACADE")}
 
 
 def _v29_line(ctx, *, item_code, room, element, unit, net, formula, inputs, ev=None, bounded=None, rfi=None,
@@ -1105,6 +1126,98 @@ def _v29_masonry(S, floor, schedule, HE, texts, facts, u, ctx):
     return lines, unres, rec
 
 
+def _v29_facade(S, floor, schedule, HE, facts, ctx, lowest):
+    """ARCH_TAKEOFF_V2.9 (UP-FACADE-001): the floor's facade run (ARCH.FACADE_RUN, lm: the exterior outline of its wall
+    network, openings included), its area from the F.F.L. to the next floor's F.F.L. with each opening on the outline
+    deducted (ARCH.FACADE, m2; engine.source.arch_v29.facade_takeoff) and the exterior finish (FIN.EXT.FINISH: the
+    facade area when the finish is stated, otherwise an RFI). A second outline is reported, never added; an outline
+    around the building holds the facade; the lowest floor's plinth (below its F.F.L.) is an RFI.
+    -> (lines, unresolved, record)"""
+    from engine.source import arch_v29 as V29M
+    fo = (S.get("v29") or {}).get("facade") or {"state": "NO_OUTLINE", "outlines": [], "islands": 0}
+    ev = V29M.facade_evidence(HE.views, floor, facts)
+    fac = {"room_id": f"{floor}-FACADE", "floor": floor, "name_en": "Facade", "name_ar": V29_ITEMS["ARCH.FACADE"][1]}
+    ops = {o["opening_id"]: o for o in S["openings"]}
+    fin = (((facts or {}).get("facade") or {}).get("finish") or {})
+    rec = {"floor": floor, "state": fo["state"], "outlines": fo["outlines"], "islands": fo["islands"],
+           "line_networks": fo.get("line_networks"), "enclosed": fo.get("enclosed"), "height": ev,
+           "lowest_floor": lowest}
+    lines, unres = [], []
+    f_run = "the outer cycle of the plan topology: wall faces + each opening's outer threshold"
+    f_area = "facade run x (next F.F.L. - F.F.L.) - each opening on the outline x its own band"
+
+    def held(code, el, unit, q, inputs, formula):
+        lines.append(_v29_line(ctx, item_code=code, room=fac, element=el, unit=unit, net=None, formula=formula,
+                               inputs=inputs, rfi={"question": q, "unlocks": fac["room_id"]}))
+        unres.append({"room_id": fac["room_id"], "floor": floor, "item": f"{code} {el}", "reason": q})
+
+    if fo["state"] in ("ENCLOSED_BUILDING", "NO_OUTLINE"):
+        q = ("FACADE_NOT_MEASURED (ENCLOSED_BUILDING): the building's wall network stands inside another closed wall "
+             "network (a boundary wall on a wall layer?): which outline is the facade is not established"
+             if fo["state"] == "ENCLOSED_BUILDING" else "FACADE_NOT_MEASURED (NO_OUTLINE): no exterior outline")
+        inp = {"outlines": [{k: o[k] for k in ("perimeter_m", "plate_m2")} for o in fo["outlines"]],
+               "enclosed": [{k: o[k] for k in ("perimeter_m", "plate_m2")} for o in fo.get("enclosed") or ()]}
+        for code, unit, f_ in (("ARCH.FACADE_RUN", "lm", f_run), ("ARCH.FACADE", "m2", f_area),
+                               ("FIN.EXT.FINISH", "m2", "ARCH.FACADE x the stated exterior finish")):
+            held(code, "facade", unit, q, inp, f_)
+        return lines, unres, rec
+    main = fo["outlines"][0]
+    several = fo["state"] == "SEVERAL_OUTLINES"
+    lines.append(_v29_line(ctx, item_code="ARCH.FACADE_RUN", room=fac, element="facade", unit="lm",
+                           net=main["perimeter_m"], ev="PROVISIONAL" if several else "SOURCE_DERIVED", formula=f_run,
+                           inputs={k: main[k] for k in ("perimeter_m", "plate_m2", "face_lm", "by_role", "openings",
+                                                        "door_closures", "other_lm", "twice_lm")},
+                           notes="FACADE: the largest of several exterior outlines (the others are RFIs, never "
+                                 "added)" if several else "FACADE: the floor's one exterior outline"))
+    for i, o in enumerate(fo["outlines"][1:], 2):
+        held("ARCH.FACADE_RUN", f"facade outline {i}", "lm",
+             f"ANOTHER_EXTERIOR_OUTLINE (facade outline {i}): {o['perimeter_m']:.2f} m around {o['plate_m2']:.2f} m2 - "
+             "a separate building, a boundary wall or a drawing element; never added to the facade",
+             {k: o[k] for k in ("perimeter_m", "plate_m2", "face_lm", "openings")}, f_run)
+    take = V29M.facade_takeoff(main, ev, schedule, ops)
+    rec["takeoff"] = take
+    inp = {"perimeter_m": main["perimeter_m"], "height": {k: ev.get(k) for k in ("state", "height_m", "ffl_m", "kind",
+                                                                                  "basis", "sources")}}
+    if take["state"] == "NOT_ESTABLISHED":
+        held("ARCH.FACADE", "facade", "m2", f"FACADE_AREA_NOT_MEASURED: {ev.get('why')}; run {main['perimeter_m']:.2f} m",
+             inp, f_area)
+    elif take["state"] == "MEASURED":
+        lines.append(_v29_line(ctx, item_code="ARCH.FACADE", room=fac, element="facade", unit="m2",
+                               net=take["net_m2"], ev="PROVISIONAL", formula=f_area,
+                               inputs=dict(inp, gross_m2=take["gross_m2"], openings=take["openings"]),
+                               notes="FACADE: the geometry of the exterior face; the finish is a separate item"))
+    else:
+        lines.append(_v29_line(ctx, item_code="ARCH.FACADE", room=fac, element="facade", unit="m2", net=None,
+                               formula=f_area, inputs=dict(inp, gross_m2=take["gross_m2"], openings=take["openings"]),
+                               bounded={"low": take["net_low_m2"], "high": take["net_high_m2"],
+                                        "basis": "openings on the outline without an established height"}))
+        unres.append({"room_id": fac["room_id"], "floor": floor, "item": "ARCH.FACADE facade",
+                      "reason": "FACADE_RANGE: openings on the outline without an established height"})
+    if take["state"] == "MEASURED" and fin.get("authority"):
+        lines.append(_v29_line(ctx, item_code="FIN.EXT.FINISH", room=fac, element="facade", unit="m2",
+                               net=take["net_m2"], ev="PROVISIONAL", formula="ARCH.FACADE (its finish stated)",
+                               inputs={"finish": fin.get("value"), "finish_authority": fin.get("authority"),
+                                       "facade_net_m2": take["net_m2"]},
+                               material_state="PROJECT_OWNER_FACT", notes=f"FINISH {fin.get('value')} "
+                                                                          f"({fin.get('authority')})"))
+    else:
+        miss = ([] if take["state"] == "MEASURED" else ["the facade area (" + (
+            "its height" if take["state"] == "NOT_ESTABLISHED" else "opening heights") + ")"]) + \
+            ([] if fin.get("authority") else ["the exterior finish (plaster / paint / cladding system: elevation "
+                                              "notes, specification or a project fact)"])
+        held("FIN.EXT.FINISH", "facade", "m2", "EXTERIOR_FINISH_NOT_SPECIFIED: " + "; ".join(miss)
+             if not fin.get("authority") else "EXTERIOR_FINISH_HELD: " + "; ".join(miss),
+             {"facade_net_m2": take.get("net_m2"), "facade_range_m2": [take.get("net_low_m2"), take.get("net_high_m2")]
+              if take["state"] == "RANGE" else None, "finish": fin.get("value")},
+             "ARCH.FACADE x the stated exterior finish")
+    if lowest:
+        held("ARCH.FACADE", "facade below F.F.L. (plinth)", "m2",
+             "PLINTH_NOT_MEASURED: the facade below the lowest floor's F.F.L. down to the external ground level - the "
+             "external ground level is not read from the drawing", {"perimeter_m": main["perimeter_m"]},
+             "facade run x (F.F.L. - external ground level)")
+    return lines, unres, rec
+
+
 def _v29_curved_record(o, floor, rooms):
     """one curved opening of a floor: kind, room side, every published basis and the width taken."""
     cv = o["curved"]
@@ -1120,16 +1233,18 @@ def _v29_curved_record(o, floor, rooms):
 
 def _v29_record(recs):
     from engine.source import arch_v29 as V29M
-    return {"policy": V29M.policy_record(), "masonry": recs["masonry"], "curved_openings": recs["curved_openings"],
+    return {"policy": V29M.policy_record(), "masonry": recs["masonry"], "facade": recs["facade"],
+            "curved_openings": recs["curved_openings"],
             "curved_gaps_rejected": recs["curved_rejected"], "glazing_layers": recs["glazing_layers"],
             "summary": {"curved_openings": dict(Counter(x["kind"] for x in recs["curved_openings"])),
                         "curved_gaps_rejected": dict(Counter(x["reason"] for x in recs["curved_rejected"])),
-                        "glazing_layers_inferred": len(recs["glazing_layers"])}}
+                        "glazing_layers_inferred": len(recs["glazing_layers"]),
+                        "facade": {x["floor"]: x["state"] for x in recs["facade"]}}}
 
 
 def _v29_outputs(arch):
     """ARCH_TAKEOFF_V2.9: one correction record per curved opening, per glazing layer inferred and per floor's
-    masonry panel (continuing the V2.7 numbering), the run policy and the V2.9 summary."""
+    masonry panel and facade (continuing the V2.7 numbering), the run policy and the V2.9 summary."""
     log = arch["v27"]["corrections"]
     n = len(log)
     for x in arch["v29"]["curved_openings"]:
@@ -1151,6 +1266,12 @@ def _v29_outputs(arch):
                     "detail": {"evidence": x["evidence"].get("state"), "height_kind": x["evidence"].get("kind"),
                                "beam": x["evidence"].get("beam"), "families": fam,
                                "junction": (x.get("junction") or {}).get("state")}})
+    for x in arch["v29"]["facade"]:
+        n += 1
+        log.append({"id": f"C27-{n:04d}", "correction": "FACADE", "floor": x["floor"], "region_id": "-",
+                    "subject": f"{x['floor']}-FACADE", "decision": f"FACADE_{x['state']}",
+                    "detail": {"outlines": [o["perimeter_m"] for o in x["outlines"]], "islands": x["islands"],
+                               "height": x["height"].get("state"), "takeoff": (x.get("takeoff") or {}).get("state")}})
     arch["v27"]["summary"]["corrections"] = dict(Counter(c["correction"] for c in log))
     run = arch["run"]
     run.update(policy=ARCH_POLICY_ID_V29)
@@ -2437,8 +2558,10 @@ def v21_files(arch):
         files["WALL_GEOMETRY.json"] = _j({"run": run, "walls": v8["walls"], "stubs": v8["stubs"],
                                           "conservation": v8["conservation"], "unclosed_labels": v8["lost_labels"]})
     if arch.get("v29") is not None:                            # ARCH_TAKEOFF_V2.9
-        files["CURVED_OPENINGS.json"] = _j({"run": run, **{k: v for k, v in arch["v29"].items() if k != "masonry"}})
+        files["CURVED_OPENINGS.json"] = _j({"run": run, **{k: v for k, v in arch["v29"].items()
+                                                           if k not in ("masonry", "facade")}})
         files["MASONRY.json"] = _j({"run": run, "policy": arch["v29"]["policy"], "floors": arch["v29"]["masonry"]})
+        files["FACADE.json"] = _j({"run": run, "policy": arch["v29"]["policy"], "floors": arch["v29"]["facade"]})
     if arch.get("traceability") is not None:                    # ARCH_TAKEOFF_V2.5
         from engine.source import traceability as TR
         files["BOQ_TRACEABILITY.json"] = _j({"run": run, "traceability": arch["traceability"]})

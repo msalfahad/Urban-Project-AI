@@ -1185,6 +1185,8 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, re
     for s_ in zoning["shared"]:
         s_["final_faces"] = sorted({cell_of.get(x) for x in s_["cells"]} - {None})
     plate = _plate(arr, unit_m)
+    if v29:
+        v29rec["facade"] = V29.facade_outlines(arr, unit_m, MIN_SPACE_M2)   # ARCH_TAKEOFF_V2.9 (UP-FACADE-001)
     door_status = {k: dict(v, matched=False) for k, v in cstatus.items()}
     for occ in used_swings:
         door_status[occ] = {"state": "MATCHED_TO_BAND_OPENING", "matched": True}

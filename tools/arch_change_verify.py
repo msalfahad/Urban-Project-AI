@@ -33,7 +33,8 @@ the locations its drawn entities touch):
     CURVED_OPENING (Phase N10)  its rooms, the opening and every strip line of it; CURVED_GLAZING_LAYER the rooms within
                                 0.35 m of the layer's entities and their openings; MASONRY_PANEL the floor's walls,
                                 ARCH.WALL_PANEL / ARCH.WALL_VOLUME / MAS.BLOCK only (no independent masonry reading:
-                                EXPLAINED_UNVERIFIED; the arithmetic is proved on hand-truth fixtures, tests/m9_n10)
+                                EXPLAINED_UNVERIFIED; the arithmetic is proved on hand-truth fixtures, tests/m9_n10);
+                                FACADE the floor's facade, ARCH.FACADE_RUN / ARCH.FACADE / FIN.EXT.FINISH only
     PROVENANCE                  nothing
 Independent checks (heights from the facts file, a stated project input; widths and lengths from the drawing):
     INDEPENDENT_FACE            FIN.CEILING, FIN.FLOOR.*, FIN.WP.FLOOR, ARCH.SPACE: the face area at the room
@@ -53,6 +54,8 @@ Independent checks (heights from the facts file, a stated project input; widths 
                                 CURVED_WALL_BAND)
     INDEPENDENT_FIXTURE_CENSUS  under WET_EVIDENCE: the fixture inserts and loose sanitary-layer pieces inside the
                                 face equal the evidence the record states (it verifies the evidence, not the rule)
+    INDEPENDENT_OUTLINE         ARCH.FACADE_RUN under FACADE (Phase N10): the exterior ring of the union of the
+                                reader's faces inside the floor's plan region that holds the most of its rooms
     INDEPENDENT_OPENING_COUNT   ARCH.WINDOW at a room under CURVED_OPENING (Phase N10): the windows on the reader's
                                 face of the room (straight window symbols and glazed curved gaps)
     Under CURVED_OPENING the reader closes every jambed curved gap on both faces and reads a glazed one on a face as a
@@ -309,6 +312,8 @@ class Verifier:
             locs |= {(ln.get("location") or {}).get("room_id") for r in (self.a, self.b) for ln in r.lines
                      if sub in str((ln.get("location") or {}).get("room_id") or "") and
                      (ln.get("location") or {}).get("floor") == fl}
+        elif kind == "FACADE":
+            locs, items = {f"{fl}-FACADE"}, {"ARCH.FACADE_RUN", "ARCH.FACADE", "FIN.EXT.FINISH"}
         elif kind == "MASONRY_PANEL":
             locs, items = {f"{fl}-WALLS"}, {"ARCH.WALL_PANEL", "ARCH.WALL_VOLUME", "MAS.BLOCK"}
         elif kind == "CURVED_GLAZING_LAYER":
@@ -392,11 +397,43 @@ class Verifier:
     def _face(self, key):
         return self._face_of(self.room(key))
 
+    def check_outline(self, floor):
+        """the independent facade run of a floor: the exterior ring of the union of the reader's faces (every 0.30 -
+        2.60 m wall gap closed on both faces) inside the floor's plan region that holds the most of the run's rooms of
+        that floor (the region box is the run's stated layout, as the seeds are its rooms: it selects, never measures).
+        None unless that outline holds every room of the floor."""
+        from shapely.geometry import box as _box
+        from shapely.ops import unary_union
+        b = [v * self.D.k for v in self.a.boxes.get(floor) or ()]
+        region = _box(*b) if len(b) == 4 else None
+        faces = [f for f in self.D.faces() if f.area > 1e-6 and (region is None or region.contains(f))]
+        if not faces:
+            return None, "NO_INDEPENDENT_FACES"
+        u = unary_union(faces)
+        polys = list(u.geoms) if u.geom_type == "MultiPolygon" else [u]
+        pts = [g.representative_point() for g in (_polygon(rm) for rm in self.a.rooms.values()
+                                                   if rm.get("floor") == floor) if g is not None]
+        if not pts:
+            return None, "NO_ROOM_OF_THE_FLOOR"
+        n, _, i = max((sum(1 for p in pts if g.contains(p)), g.area, i) for i, g in enumerate(polys))
+        if n < len(pts):
+            # an outline that leaves rooms of the floor outside is not the building's: a wall gap wider than the
+            # reader's closure limit (or a gap it cannot close) leaks
+            return None, f"INDEPENDENT_OUTLINE_INCOMPLETE: the reader's outline holds {n} of the floor's {len(pts)} rooms"
+        g = polys[i]
+        return {"method": "INDEPENDENT_OUTLINE", "value": g.exterior.length,
+                "evidence": {"outline_area_m2": round(g.area, 6), "holes": len(g.interiors), "rooms_inside": n,
+                             "rooms_of_the_floor": len(pts), "outlines": len(polys),
+                             "within_region": region is not None}}, None
+
     def check_quantity(self, item, key, floor, after_net, kinds=(), win_classes=()):
         """the independent value of a measured line, or (None, reason). kinds: the explaining records' kinds
         (WINDOW_SKIRTING: no window's sill is established, so no window threshold is certainly skirted)."""
         if key and (key.endswith("-WALLS")):
             return None, "NO_INDEPENDENT_CHECK_FOR_THIS_ITEM"
+        if key and key.endswith("-FACADE"):
+            return self.check_outline(floor) if item == "ARCH.FACADE_RUN" else \
+                (None, "NO_INDEPENDENT_CHECK_FOR_THIS_ITEM")
         if "-OPENING-" in (key or "") or "-STRIP-" in (key or ""):
             oid = key.split("-OPENING-")[-1] if "-OPENING-" in key else key.split("-STRIP-")[-1]
             op = next((o for r in (self.a, self.b) for o in r.openings
