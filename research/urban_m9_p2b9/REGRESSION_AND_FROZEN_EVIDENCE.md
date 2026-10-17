@@ -56,4 +56,28 @@ compared test by test with the Phase 2B-8 run (clean clone at e603162).
 
 ## 5. Final snapshot
 
-*(filled in below once the run completes)*
+The final snapshot ran on the committed code of 065f3de. The later commits change documentation only; no engine, tool,
+rule or knowledge file changed after 065f3de.
+
+| Methods | Files | Differ | Run exits |
+|---|---|---|---|
+| V1 | 46 | 0 | |
+| V2 – V2.6 (per method: 52, 70, 140, 176, 236, 248, 272) | 1,194 | 0 | |
+| **V1 – V2.6 total** | **1,240** | **0** | 57 × exit 0 |
+| V2.7 | 278 | **0** | 57 × exit 0 |
+| V2.7.1 | 308 | **0** | 57 × exit 0 |
+
+**V2.8 against V2.7.1 in the same snapshot** (`cmp_items`, item totals, line counts, states and ranges):
+
+| Run | Lines | Changed items |
+|---|---|---|
+| reference plan, Mode A | 487 → 487 | ARCH.WALL_RUN 216.7625 → 216.9311 m (+0.1685); nothing else |
+| reference plan, Mode U | 476 → 476 | the same single change |
+| synthetic villa, Mode A (and its mirror) | 101 → 108 | FIN.SKIRTING 123.40 → 114.70 m certain, plus a range of 0 – 8.70 m (7 new BOUNDED_EXPOSURE lines) |
+| synthetic villa, Mode U (and its mirror) | 101 → 105 | FIN.SKIRTING 86.70 → 80.70 m certain, plus a range of 0 – 6.00 m (4 new BOUNDED_EXPOSURE lines) |
+
+The mirror runs equal the unmirrored runs on every changed item.
+
+Between the interim snapshot and this one, V2.8's `BOQ_LINES` did not change on any run. The supporting outputs did
+change, by design: the per-change records, the unclosed-label findings, the curved-wall arcs and the schedule-width
+hold were added after the interim snapshot.

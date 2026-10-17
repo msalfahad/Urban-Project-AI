@@ -28,7 +28,7 @@ No accuracy is claimed, no blind evaluation was started and nothing was frozen f
 | **The 1,518 frozen files** (V1 – V2.6: 1,240; V2.7: 278) | regenerated at the new tree: **0 differ**. V2.7.1 (308 files) also 0 differ. See `REGRESSION_AND_FROZEN_EVIDENCE.md` |
 | **V2.7.1 behaviour** | re-run on the worked examples: plaster 37.65 m² on example 1 with the synthetic facts (window deducted at full height without a sill; door 2.10 m from the facts); window reveal BLOCKED; short returns lost from the wall run; the curved-glazing room lost silently. Each is now an as-found test or a V2.8 correction |
 | **The 23 unverified changes** (V2.6 → V2.7.1) | re-run with the current verifier: still **32 / 55 verified, 23 explained-unverified, 0 contradicted**. 13 depend on one zone-bounded space (D-P9-04: when the reader closes it with the drawn zone line, it disagrees by 0.899 m², recorded and not forced); 4 symbol-less gaps; 2 sills; 4 with no independent check yet |
-| **The 377 full-suite failures** | compared test by test with the new clean-clone run (see `REGRESSION_AND_FROZEN_EVIDENCE.md` §3) |
+| **The 377 full-suite failures** | compared test by test with the new clean-clone run (see `REGRESSION_AND_FROZEN_EVIDENCE.md` §4) |
 | **D-P8-03 (stubs)** | its description was wrong: collinear stubs were already counted; only non-collinear returns and short curved stubs were lost. Corrected and fixed in V2.8 |
 
 ## 3. Answers to the closing questions

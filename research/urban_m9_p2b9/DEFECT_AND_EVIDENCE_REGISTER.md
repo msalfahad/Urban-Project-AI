@@ -65,12 +65,13 @@ This is from `MISSING_HEIGHT_EVIDENCE.json` of the V2.8 runs. Each item names wh
 
 | Item | Mode A (project facts used) | Mode U (no facts) | What the owner must supply |
 |---|---|---|---|
-| room plaster height | 25 rooms (facts, not drawing) | see `REF_BOQ_BEFORE_AFTER.md` §3 | a section per floor with the structural soffit (U/S SLAB) on each floor's band |
-| room paint height | 25 rooms (facts) | same | the finished ceiling level (F.C.L.) per floor, or a reflected ceiling plan |
-| wet-room wall tile height | 14 wet rooms (facts) | same | F.C.L. (full height), or a printed tile height where lower |
-| window height | 26 windows (facts) | same | a window schedule (mark, width, height, sill) with marks on the plan |
-| window sill | 26 windows (none) | same | same |
-| door height | 22 doors (facts) | same | a door schedule, or heights printed by the doors |
+| room plaster height | 25 rooms (facts, not drawing) | 25 BLOCKED | a section per floor with the structural soffit (U/S SLAB) on each floor's band |
+| room paint height | 25 rooms (facts) | 25 BLOCKED | the finished ceiling level (F.C.L.) per floor, or a reflected ceiling plan |
+| wet-room wall tile height | 14 wet rooms (facts) | 14 BLOCKED | F.C.L. (full height), or a printed tile height where lower |
+| window height | 26 windows (facts) | 26 BLOCKED | a window schedule (mark, width, height, sill) with marks on the plan |
+| window sill | 26 windows (none) | 26 BLOCKED | same |
+| door height | 22 doors (facts) | 22 at the Urban default 2.20 m, labelled assumed | a door schedule, or heights printed by the doors |
 
 No height for the reference plan was invented. Mode A shows these as PROJECT_RULE (the stated facts file) and lists
-them, because a project fact is not drawing evidence.
+them, because a project fact is not drawing evidence. Both modes list 138 items (Mode A: 112 from facts, 26 blocked;
+Mode U: 22 from the Urban default, 116 blocked).

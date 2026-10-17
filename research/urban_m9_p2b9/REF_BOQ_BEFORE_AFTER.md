@@ -36,17 +36,22 @@ The figures are from the final snapshot of the committed tree (`REGRESSION_AND_F
 
 ## 3. Missing height evidence on the reference plan
 
-| Item | Mode A | Mode U |
-|---|---|---|
-| rooms: plaster height (soffit) | 25 (project facts, not drawing) | 25 (none) |
-| rooms: paint height (finished ceiling) | 25 (facts) | 25 (none) |
-| wet rooms: wall-tile height | 14 (facts) | 14 (none) |
-| windows: height | 26 (facts) | 26 (none) |
-| windows: sill | 26 (none) | 26 (none) |
-| doors: height | 22 (facts) | 22 (Urban default, labelled assumed) |
-| **items** | **138** | see the note below |
+From `MISSING_HEIGHT_EVIDENCE.json` in the final snapshot (V2.8, both modes):
 
-Mode U is confirmed from the final snapshot below.
+| Item | Mode A: count, value used | Mode U: count, value used |
+|---|---|---|
+| rooms: plaster height (soffit) | 25, 3.0 m from the project facts (not the drawing) | 25, none (BLOCKED) |
+| rooms: paint height (finished ceiling) | 25, 3.0 m (facts) | 25, none (BLOCKED) |
+| wet rooms: wall-tile height | 14, 2.4 m (facts) | 14, none (BLOCKED) |
+| windows: height | 26, 1.5 m (facts) | 26, none (BLOCKED) |
+| windows: sill | 26, none (BLOCKED) | 26, none (BLOCKED) |
+| doors: height | 22, 2.1 m (facts) | 22, 2.2 m (Urban default UP-DOOR-HGT-001, labelled assumed) |
+| **items** | **138** (112 from facts, 26 blocked) | **138** (22 from the Urban default, 116 blocked) |
+
+By floor, both modes: GF 64, 1F 58, 2F 16.
+
+Mode A's 2.1 m door height is the stated synthetic facts value, which outranks the Urban default. With no facts, Mode U
+falls back to the owner's 2.20 m rule and labels it assumed.
 
 ## 4. Other V2.8 outputs on the reference plan
 
