@@ -14,7 +14,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 71 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 577 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 578 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 6 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
@@ -22,8 +22,8 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1260 | pytest suites, one folder per round. |
-| `tools/` | 92 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
+| `tests/` | 1261 | pytest suites, one folder per round. |
+| `tools/` | 93 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
 
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (226 modules)
+## `engine/source/` (227 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -530,7 +530,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rebar_provenance.py` | 143 | CRITICAL | 4 | Generic accurate-rebar provenance contract: one contract for every element family (no second system). |
 | `rebar_sanity_qa.py` | 34 | MEDIUM | 2 | kg/m3 QA helpers - sanity layer, not the accurate reinforcement implementation (generic). |
 | `rebar_sanity_variance.py` | 156 | MEDIUM | 3 | REBAR SANITY VARIANCE - report layer between ACCURATE_BOQ_REBAR and ROUGH_REBAR_SUMMARY (generic). |
-| `rebar_unit_mass.py` | 72 | CRITICAL | 10 | REBAR UNIT MASS - one project-wide method (generic). |
+| `rebar_unit_mass.py` | 72 | CRITICAL | 11 | REBAR UNIT MASS - one project-wide method (generic). |
 | `reconcile.py` | 394 | MEDIUM | 4 | Tolerance-aware reconciliation of two CAD routes (K1 vs K2, or D1 vs D1') — R8.2 §14-§16. |
 | `region_candidates.py` | 191 | MEDIUM | 1 | Deterministic model-space REGION CANDIDATES (R8.4 §19-§20). |
 | `region_membership.py` | 218 | MEDIUM | 4 | Exact region membership of a curve (R8.8): SEGMENT, ARC, CIRCLE, ELLIPTICAL_ARC against an axis-aligned region. |
@@ -579,6 +579,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `stair_measure.py` | 119 | CRITICAL | 3 | STAIR MEASURE (M4) - structural stair quantities from the drawn treads of a stair zone (generic; stdlib + |
 | `stair_riser_schedule.py` | 155 | CRITICAL | 2 | STAIR RISER SCHEDULE - riser counts from drawn lines, uniform finished risers, finished and structural levels, |
 | `stair_scenario_checks.py` | 215 | CRITICAL | 1 | STAIR SCENARIO CHECKS - what a proposed riser count implies against a printed level, how it is set out on site, |
+| `struct_n10.py` | 306 | MEDIUM | 2 | STRUCTURAL N10 (Phase N10) - formwork contact faces, excavation footprints and a reinforcement audit, read from the |
 | `structural_authority.py` | 142 | MEDIUM | 2 | SOURCE AUTHORITY MODEL (generic, project-independent). |
 | `structural_census.py` | 356 | CRITICAL | 1 | STRUCTURAL_CENSUS_V1 - source rules + occurrence census, before any reinforcement calculation. |
 | `structural_completeness.py` | 168 | MEDIUM | 1 | STRUCTURAL COMPLETENESS - plan overlap, hatch reading and beam depth-convention arithmetic (generic). |
@@ -636,7 +637,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `libredwg_map.py` | 489 | HIGH | 10 | D1 route: LibreDWG `dwgread` JSON -> neutral SourceEntityObservations. |
 | `unit_evidence.py` | 139 | HIGH | 2 | Deterministic unit / scale EVIDENCE from a D1 (LibreDWG JSON) decode — R8.3 §16. |
 
-## `tools/` (90 modules)
+## `tools/` (91 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -721,6 +722,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `run_supervised_benchmark.py` | 300 | MEDIUM | 0 | Run P7757 as a supervised development set and report the geometry effect. |
 | `scan_vertical_evidence.py` | 259 | MEDIUM | 1 | §14. Search the architectural source set for what a plan cannot say. |
 | `split_submission_set.py` | 139 | MEDIUM | 0 | Split a submission set into DRAWINGS the engine may read and a SEALED part. |
+| `struct_n10.py` | 73 | MEDIUM | 0 | STRUCTURAL N10 (Phase N10) - formwork faces, excavation footprints and the reinforcement audit for a route G run. |
 | `synthetic_villa.py` | 603 | CRITICAL | 10 | SYNTHETIC VILLA (M2) - structural DXF drawings generated from a design spec, with ground truth from the SPEC. |
 | `synthetic_villa_m6.py` | 698 | CRITICAL | 5 | SYNTHETIC VILLA M6 - completeness cases drawn onto the M2 synthetic villa, with the truth of what was drawn. |
 | `synthetic_villa_m8.py` | 211 | CRITICAL | 4 | SYNTHETIC VILLA M8 - the M6 completeness villa with the DESIGN of every scope element it draws, so that the |
@@ -841,7 +843,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/m8_full_scope/` | 2 |
 | `tests/m9_foundation/` | 8 |
 | `tests/m9_kb/` | 7 |
-| `tests/m9_n10/` | 4 |
+| `tests/m9_n10/` | 5 |
 | `tests/m9_p2a/` | 6 |
 | `tests/m9_p2b0/` | 6 |
 | `tests/m9_p2b2/` | 5 |

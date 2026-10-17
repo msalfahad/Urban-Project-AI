@@ -183,7 +183,7 @@
     "engine/source/arch_walls.py"
    ],
    "modules": [
-    "engine/source/(arch_walls|wall_[a-z0-9_]+|physical_wall[a-z_]*|curved_member_geometry)\\.py$"
+    "engine/source/(arch_walls|arch_v29|wall_[a-z0-9_]+|physical_wall[a-z_]*|curved_member_geometry)\\.py$"
    ],
    "rules": [
     "^UP-WALL",
@@ -196,7 +196,8 @@
    ],
    "tests": [
     "tests/m9_p2b[6-9]/",
-    "tests/m9_s2_arch/"
+    "tests/m9_s2_arch/",
+    "tests/m9_n10/"
    ],
    "defect_terms": [
     "wall run",
@@ -326,7 +327,7 @@
     "engine/source/owner_finish_scope.py"
    ],
    "modules": [
-    "engine/source/(arch_measure|finish_height[a-z0-9_]*|exposed_finish|owner_finish_scope|tile_layout|wall_height|surface_ledger|physical_measurement_state)\\.py$"
+    "engine/source/(arch_measure|arch_v29|finish_height[a-z0-9_]*|exposed_finish|owner_finish_scope|tile_layout|wall_height|surface_ledger|physical_measurement_state)\\.py$"
    ],
    "rules": [
     "^UP-FIN",
@@ -341,7 +342,8 @@
    ],
    "tests": [
     "tests/m9_s5/",
-    "tests/m9_p2b[3-9]/"
+    "tests/m9_p2b[3-9]/",
+    "tests/m9_n10/"
    ],
    "defect_terms": [
     "plaster",
@@ -533,7 +535,9 @@
     "form work"
    ],
    "modules": [
-    "formwork"
+    "formwork",
+    "engine/source/struct_n10\\.py$",
+    "tools/struct_n10\\.py$"
    ],
    "rules": [],
    "families": [
@@ -541,7 +545,8 @@
     "B7-13"
    ],
    "tests": [
-    "formwork"
+    "formwork",
+    "tests/m9_n10/test_n10_structural"
    ],
    "defect_terms": [
     "formwork",
@@ -550,7 +555,10 @@
    "related": [
     "concrete"
    ],
-   "note": "Not implemented: registry items B10-13 and B7-13 are NOT_IMPLEMENTED."
+   "note": "Phase N10: engine/source/struct_n10.py (tools/struct_n10.py) reads the route G register and gives the formwork faces (MEASURED / CONDITIONAL / UPPER_BOUND / HELD; owner decisions FW-D1..D4); not yet in the BOQ (registry items B10-13 and B7-13 stay NOT_IMPLEMENTED there).",
+   "start": [
+    "engine/source/struct_n10.py"
+   ]
   },
   {
    "id": "excavation",
@@ -565,14 +573,16 @@
    ],
    "modules": [
     "excavat",
-    "backfill"
+    "backfill",
+    "engine/source/struct_n10\\.py$"
    ],
    "rules": [],
    "families": [
     "^B1-0[23]$"
    ],
    "tests": [
-    "excavat"
+    "excavat",
+    "tests/m9_n10/test_n10_structural"
    ],
    "defect_terms": [
     "excavat",
@@ -581,7 +591,10 @@
    "related": [
     "concrete"
    ],
-   "note": "Not implemented: registry items B1-02 and B1-03 are NOT_IMPLEMENTED."
+   "note": "Phase N10: engine/source/struct_n10.excavation gives the pit / trench footprints; the volume only with stated depth and working space (EX-D1, EX-D2); backfill held. Not yet in the BOQ (registry items B1-02 and B1-03 stay NOT_IMPLEMENTED there).",
+   "start": [
+    "engine/source/struct_n10.py"
+   ]
   },
   {
    "id": "boq_output",

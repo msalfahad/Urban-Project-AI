@@ -136,15 +136,15 @@ Risk **HIGH** (recommended validation L3). Ask about: wall, blockwork, block, ma
 
 **Depends on:** `engine/source/arch_plan.py`, `engine/source/arch_v27.py`, `engine/source/member_detection.py`, `engine/source/release_safety.py`, `engine/source/topology.py`, `engine/source/arch_v29.py`, `engine/source/drawing_model.py`, `engine/source/geometry_role.py`, `engine/source/lintel_measure.py`, `engine/source/plane_poly.py`
 
-**Other current modules:** `curved_member_geometry.py`, `physical_wall_faces.py`, `wall_band_reconciliation.py`, `wall_faces.py`, `wall_faces_v2.py`, `wall_height.py`
+**Other current modules:** `arch_v29.py`, `curved_member_geometry.py`, `physical_wall_faces.py`, `wall_band_reconciliation.py`, `wall_faces.py`, `wall_faces_v2.py`, `wall_height.py`
 
 **Rules** (knowledge 1.4.0; full records in `docs/RULES_INDEX.md`): UP-COL-ORIENT-001 [OWNER_APPROVED] A column turned off the drawing axes is a jamb and a wall i…; UP-REF-COLUMN-001 [REFERENCE_ONLY] Exposed column faces follow the room treatment (owner metho…; UP-WALL-GEOM-001 [OWNER_APPROVED] Wall geometry per face; short returns and curved stubs are…
 
 **BOQ capability** (exact registry statuses): INTEGRATED_AND_TESTED 1, PARTIAL 1, EXPERIMENTAL 3, IMPLEMENTED_NOT_INTEGRATED 5, NOT_IMPLEMENTED 6. Only INTEGRATED_AND_TESTED counts as supported; a module or a synthetic test is not real-villa validation.
 
 **Validation:** L1 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b8/test_p2b8_recognition.py tests/m9_p2b9/test_p2b9_walls.py`
-L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b7 tests/m9_p2b8 tests/m9_p2b9 tests/m9_p2b6 tests/m9_s2_arch`
-L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b7 tests/m9_p2b8 tests/m9_p2b9 tests/m9_p2b6 tests/m9_s2_arch tests/m9_s6 tests/m9_p2b0 tests/m9_kb tests/m9_p2a tests/m9_p2b2 tests/m9_s5` + freeze check
+L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b7 tests/m9_p2b8 tests/m9_p2b9 tests/m9_n10 tests/m9_p2b6 tests/m9_s2_arch`
+L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b7 tests/m9_p2b8 tests/m9_p2b9 tests/m9_n10 tests/m9_p2b6 tests/m9_s2_arch tests/m9_s6 tests/m9_p2b0 tests/m9_kb tests/m9_p2a tests/m9_p2b2 tests/m9_s5` + freeze check
 L4 full suite + freeze check (see above)
 
 **Known defects** (3 unresolved of 4):
@@ -246,15 +246,15 @@ Risk **HIGH** (recommended validation L3). Ask about: plaster, paint, tile, tili
 
 **Depends on:** `engine/source/arch_rooms.py`, `engine/source/knowledge.py`, `engine/source/release_safety.py`, `engine/source/arch_completeness.py`, `engine/source/arch_floor.py`, `engine/source/boq_line.py`, `engine/source/material_result.py`, `engine/source/material_spec.py`, `engine/source/membrane_layout.py`, `engine/source/plane_poly.py`
 
-**Other current modules:** `exposed_finish.py`, `finish_height.py`, `finish_height_v3.py`, `physical_measurement_state.py`, `surface_ledger.py`, `tile_layout.py`
+**Other current modules:** `arch_v29.py`, `exposed_finish.py`, `finish_height.py`, `finish_height_v3.py`, `physical_measurement_state.py`, `surface_ledger.py`, `tile_layout.py`
 
 **Rules** (knowledge 1.4.0; full records in `docs/RULES_INDEX.md`): UP-CEIL-001 [OWNER_APPROVED] Ceilings: actual eligible surfaces only; UP-FIN-PAINT-001 [OWNER_APPROVED] No paint over full-height porcelain; one finish per face; UP-FIN-PLASTER-001 [OWNER_APPROVED] Door jamb and head plaster is measured from geometry; UP-FIN-WALL-001 [OWNER_APPROVED] Full-height wall porcelain in wet areas; UP-HGT-001 [OWNER_APPROVED] Heights are read from the drawing, by an evidence hierarchy…; UP-SKIRT-001 [OWNER_APPROVED] Conventional skirting on eligible dry-room wall boundaries; rule store (frozen methods): UP-CER-001, UP-CER-002, UP-CER-003, UP-CER-004, UP-CER-005, UP-CER-006, UP-CER-007, UP-CER-008, UP-CER-009, UP-CER-010
 
 **BOQ capability** (exact registry statuses): IMPLEMENTED_NOT_INTEGRATED 6, BLOCKED_BY_SOURCE 4, NOT_IMPLEMENTED 2. Only INTEGRATED_AND_TESTED counts as supported; a module or a synthetic test is not real-villa validation.
 
 **Validation:** L1 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_kb/test_kb_finish_scope.py tests/m9_p2b9/test_p2b9_heights.py tests/m9_p2b9/test_p2b9_openings.py tests/m9_s5/test_s5_ceilings_wp.py`
-L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b5 tests/m9_p2b7 tests/m9_p2b8 tests/m9_p2b9 tests/m9_p2b3 tests/m9_p2b4`
-L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b5 tests/m9_p2b7 tests/m9_p2b8 tests/m9_p2b9 tests/m9_p2b3 tests/m9_p2b4 tests/m9_s6 tests/m9_p2b0 tests/m9_p2a tests/m9_kb tests/m9_p2b2 tests/m9_s5` + freeze check
+L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b5 tests/m9_p2b7 tests/m9_p2b8 tests/m9_p2b9 tests/m9_n10 tests/m9_p2b3`
+L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b5 tests/m9_p2b7 tests/m9_p2b8 tests/m9_p2b9 tests/m9_n10 tests/m9_p2b3 tests/m9_s6 tests/m9_p2b0 tests/m9_p2a tests/m9_kb tests/m9_p2b2 tests/m9_s5` + freeze check
 L4 full suite + freeze check (see above)
 
 **Known defects** (6 unresolved of 12):
@@ -387,7 +387,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: rebar, reinforcement, 
 **Open first:**
 
 - `engine/source/accurate_boq_rebar.py` (256 lines, CRITICAL, frozen; imported by 17 directly, 21 transitively, SHARED)
-- `engine/source/rebar_unit_mass.py` (72 lines, CRITICAL, frozen; imported by 10 directly, 30 transitively, SHARED)
+- `engine/source/rebar_unit_mass.py` (72 lines, CRITICAL, frozen; imported by 11 directly, 33 transitively, SHARED)
 - `engine/source/slab_rebar_qto.py` (314 lines, CRITICAL, frozen; imported by 9 directly, 12 transitively)
 
 **Other current modules:** `bar_shapes.py`, `bbs_optimiser.py`, `beam_rebar_readiness.py`, `column_rebar.py`, `footing_rebar.py`, `footing_rebar_guard.py`, `ground_system_rebar.py`, `rebar_boq_sections.py`, `rebar_model.py`, `rebar_provenance.py`, `rebar_sanity_qa.py`, `rebar_sanity_variance.py`, `rough_rebar_sanity.py`, `slab_rebar_binding.py`, `slab_rebar_readiness.py`, `superstructure_beam_rebar.py`
@@ -416,31 +416,39 @@ L4 full suite + freeze check (see above)
 <a id="formwork"></a>
 ## Formwork
 
-Risk **LOW** (recommended validation L1). Ask about: formwork, shuttering, form work. Related topics: concrete. Note: Not implemented: registry items B10-13 and B7-13 are NOT_IMPLEMENTED.
+Risk **MEDIUM** (recommended validation L2). Ask about: formwork, shuttering, form work. Related topics: concrete. Note: Phase N10: engine/source/struct_n10.py (tools/struct_n10.py) reads the route G register and gives the formwork faces (MEASURED / CONDITIONAL / UPPER_BOUND / HELD; owner decisions FW-D1..D4); not yet in the BOQ (registry items B10-13 and B7-13 stay NOT_IMPLEMENTED there).
 
-**No module implements this topic.** BOQ families: B7-13 Stair formwork (NOT_IMPLEMENTED); B10-13 Formwork (all elements) (NOT_IMPLEMENTED).
+**Open first:**
 
+- `engine/source/struct_n10.py` (306 lines, MEDIUM; imported by 2 directly, 2 transitively)
+
+**Depends on:** `engine/source/rebar_unit_mass.py`
+
+**Earlier generations and tools** (check which method uses them before reuse): `tools/struct_n10.py`
 
 **BOQ capability** (exact registry statuses): NOT_IMPLEMENTED 2. Only INTEGRATED_AND_TESTED counts as supported; a module or a synthetic test is not real-villa validation.
 
-**Validation:** L1 `(no test mapped: write a focused test first)`
-L2 `(no test mapped: write a focused test first)`
-L3 `(no test mapped: write a focused test first)` + freeze check
+**Validation:** L1 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_n10`
+L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_n10`
+L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_n10` + freeze check
 L4 full suite + freeze check (see above)
 
 <a id="excavation"></a>
 ## Excavation and backfill
 
-Risk **LOW** (recommended validation L1). Ask about: excavation, excavate, backfill, earthwork, dig, compaction. Related topics: concrete. Note: Not implemented: registry items B1-02 and B1-03 are NOT_IMPLEMENTED.
+Risk **MEDIUM** (recommended validation L2). Ask about: excavation, excavate, backfill, earthwork, dig, compaction. Related topics: concrete. Note: Phase N10: engine/source/struct_n10.excavation gives the pit / trench footprints; the volume only with stated depth and working space (EX-D1, EX-D2); backfill held. Not yet in the BOQ (registry items B1-02 and B1-03 stay NOT_IMPLEMENTED there).
 
-**No module implements this topic.** BOQ families: B1-02 Excavation by type and depth (NOT_IMPLEMENTED); B1-03 Backfill and compaction (NOT_IMPLEMENTED).
+**Open first:**
 
+- `engine/source/struct_n10.py` (306 lines, MEDIUM; imported by 2 directly, 2 transitively)
+
+**Depends on:** `engine/source/rebar_unit_mass.py`
 
 **BOQ capability** (exact registry statuses): NOT_IMPLEMENTED 2. Only INTEGRATED_AND_TESTED counts as supported; a module or a synthetic test is not real-villa validation.
 
-**Validation:** L1 `(no test mapped: write a focused test first)`
-L2 `(no test mapped: write a focused test first)`
-L3 `(no test mapped: write a focused test first)` + freeze check
+**Validation:** L1 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_n10`
+L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_n10`
+L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_n10` + freeze check
 L4 full suite + freeze check (see above)
 
 <a id="boq_output"></a>
