@@ -34,11 +34,12 @@ Independent checks (heights from the facts file, a stated project input; widths 
     INDEPENDENT_FACE            FIN.CEILING, FIN.FLOOR.*, FIN.WP.FLOOR, ARCH.SPACE: the face area at the room
     INDEPENDENT_TAKEOFF         FIN.PLASTER / FIN.PAINT = P x H - doors x H_door - windows x H_window;
                                 FIN.WALL.TILE = P x H_tile - doors x min(H_door, H_tile) (no window on the face);
-                                FIN.SKIRTING = P - doors; FIN.WP.DOORWAY = sum of door width x wall thickness;
+                                FIN.SKIRTING = P - doors (no window on the face); FIN.WP.DOORWAY = sum of door width x wall thickness;
                                 at an opening: FIN.MARBLE.THRESHOLD = w x t, FIN.PLASTER = 2 t H_door + w t
                                 (the face must have no hole and no gap without a door or window symbol)
     INDEPENDENT_ARC_CENSUS      ARCH.WALL_RUN under CURVED_WALL_BAND: the change equals the curved bands'
-                                mid-radius length (concentric wall-layer arc pairs read from their own parameters)
+                                mid-radius length (concentric wall-layer arc pairs read from their own parameters,
+                                both faces over 0.30 m - the wall run's convention; shorter stubs reported apart)
     INDEPENDENT_FIXTURE_CENSUS  under WET_EVIDENCE: the fixture inserts and loose sanitary-layer pieces inside the
                                 face equal the evidence the record states (it verifies the evidence, not the rule)
 The seed of a face is a point inside the run's room polygon: it selects which independent face; the face's area,
@@ -60,6 +61,7 @@ import indep_reader as IR                                     # noqa: E402
 POLICY = "URBAN_BOQ_CHANGE_VERIFY_V1"
 TOL = 1e-6
 REACH_M = 0.35
+UNCLOSED_FACTOR, UNCLOSED_EXTRA_M2 = 3.0, 20.0
 AREA_ITEMS = ("FIN.CEILING", "FIN.WP.FLOOR", "ARCH.SPACE")
 STATUSES = ("VERIFIED", "EXPLAINED_UNVERIFIED", "CONTRADICTED", "UNEXPLAINED")
 
@@ -283,15 +285,24 @@ class Verifier:
         v = tab.get(key)
         return v.get("value_m") if isinstance(v, dict) else v
 
-    def _face(self, key):
-        rm = self.room(key)
+    def _face_of(self, rm):
         p = _polygon(rm) if rm else None
         if p is None:
             return None, "NO_ROOM_POLYGON"
         f = self.D.face_at(p.representative_point().coords[0])
         if f is None:
             return None, "NO_CLOSED_INDEPENDENT_FACE"
+        # the wall and column lines do not enclose the space: the face holds most of the run's polygon and runs on far
+        # beyond it (UNCLOSED_FACTOR times and UNCLOSED_EXTRA_M2 more: the space is closed by a line of another layer,
+        # the face is the open region around it) - a reading the independent reader cannot make, not a disagreement;
+        # a face a little larger (two rooms merged, a missed closure) stays a disagreement
+        if f["area_m2"] > max(UNCLOSED_FACTOR * p.area, p.area + UNCLOSED_EXTRA_M2) and \
+                f["polygon"].intersection(p).area >= 0.5 * p.area:
+            return None, "NOT_CLOSED_BY_WALL_LINES (the space is bounded by a line of a non-wall layer)"
         return f, None
+
+    def _face(self, key):
+        return self._face_of(self.room(key))
 
     def check_quantity(self, item, key, floor, after_net):
         """the independent value of a measured line, or (None, reason)."""
@@ -341,6 +352,8 @@ class Verifier:
         ev = {"perimeter_m": round(P, 6), "doors_m": [round(o["width_m"], 6) for o in doors],
               "windows_m": [round(o["width_m"], 6) for o in wins]}
         if item == "FIN.SKIRTING":
+            if wins:
+                return None, "WINDOW_SILL_NOT_IN_THE_DRAWING (skirting runs under a sill window, not floor glazing)"
             return {"value": P - dw, "evidence": dict(ev, formula="P - doors")}, None
         if item == "FIN.WP.DOORWAY":
             return {"value": sum(o["width_m"] * o["wall_t_m"] for o in doors),
@@ -371,12 +384,9 @@ class Verifier:
         det = c.get("detail") or {}
         rm = next((rm for r in (self.a, self.b) for rm in r.rooms.values()
                    if rm.get("face_id") == c.get("subject") and rm.get("floor") == c.get("floor")), None)
-        p = _polygon(rm) if rm else None
-        if p is None:
-            return None, "NO_ROOM_POLYGON"
-        f = self.D.face_at(p.representative_point().coords[0])
+        f, why = self._face_of(rm)
         if f is None:
-            return None, "NO_CLOSED_INDEPENDENT_FACE"
+            return None, why
         census = self.D.fixture_census(f["polygon"])
         stated = {k: 0 for k in IR.FIXTURE_WORDS}
         for x in det.get("fixtures") or ():
@@ -431,7 +441,9 @@ class Verifier:
                 checks.append({"method": "INDEPENDENT_ARC_CENSUS", "independent_delta": ac["mid_lm"],
                                "delta": row["delta"], "tolerance": _tol(ac["mid_lm"]),
                                "agrees": abs(ac["mid_lm"] - row["delta"]) <= _tol(ac["mid_lm"]),
-                               "evidence": {"bands": ac["bands"]}})
+                               "evidence": {"bands": ac["bands"], "min_run_m": ac["min_run_m"],
+                                            "short_stubs_not_in_the_run_lm": ac["short_stubs_mid_lm"],
+                                            "short_stubs": ac["short_stubs"]}})
             for cid in by:
                 c = next(x for x in recs if x["id"] == cid)
                 if c["correction"] == "WET_EVIDENCE":
@@ -458,6 +470,9 @@ class Verifier:
                                "reason": "NO_MEASURED_VALUE_AFTER (the line was withheld, held or removed)"})
             applied = [x for x in checks if x.get("agrees") is not None]
             bad = [x for x in applied if not x["agrees"]]
+            # the check shown: a quantity reading for a quantity correction, the fixture census for an evidence one
+            census_first = set(kinds) <= {"WET_EVIDENCE"}
+            applied.sort(key=lambda x: (x["method"] == "INDEPENDENT_FIXTURE_CENSUS") != census_first)
             if bad:
                 status, ver = "CONTRADICTED", bad[0]
             elif applied:

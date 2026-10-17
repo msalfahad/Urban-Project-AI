@@ -16,7 +16,8 @@ no engine module is imported, no engine output is read. tools/arch_change_verify
     D.openings_on(face)               the doors / windows whose mid-wall line lies on the face boundary (0.30 m reach,
                                       90 % of the width), and the closure length no opening covers (a passage)
     D.arc_census()                    concentric wall-layer arc pairs 0.08 - 0.45 m apart (ARC entities and polyline
-                                      bulges, read from their own parameters): the curved bands, mid-radius x sweep
+                                      bulges, read from their own parameters): the curved bands, mid-radius x sweep,
+                                      both faces over 0.30 m at least; shorter stubs listed apart
     D.fixture_census(polygon)         the inserts inside a polygon by block-name word (basin / water closet / shower
                                       or bath) and the loose sanitary-layer pieces (not a fixture block's own lines)
 Layer roles: given ({layer: role}) or read from the layer name: WALL, COL -> COLUMN, GLAZ / WIN -> WINDOW, DOOR.
@@ -43,8 +44,11 @@ CLUSTER_M = 0.06                           # pieces of one symbol touch (a frame
 JAMB_MAX_M = 0.45                          # a line across a wall is no longer than the thickest wall
 LEAF_MIN_M = 0.40
 REACH_M = 0.30                             # an opening's mid-wall line to the face boundary
+BAND_MIN_RUN_M = 0.30                      # a wall band: both faces drawn over at least this (the measurement
+                                           # convention of the wall run, straight and curved alike); shorter
+                                           # stubs are reported apart, never dropped silently
 FLAT_M = 0.005                             # curve flattening step
-GRID_M = 1e-6                              # noding grid
+GRID_M = 1e-6                              # noding: snap rounding on this grid
 SAG_M = 1e-5                               # curve flattening: largest chord-to-curve distance
 FIXTURE_WORDS = {"basins": ("WASH", "BASIN", "SINK", "LAV", "VANITY"),
                  "water_closets": ("WC", "W.C", "TOILET", "CLOSET"),
@@ -115,6 +119,8 @@ class Drawing:
     def _walk(self, layout, m, parent_layer, ipath):
         for e in layout:
             t = e.dxftype()
+            if t not in ("INSERT", "LINE", "ARC", "CIRCLE", "ELLIPSE", "LWPOLYLINE", "POLYLINE", "SPLINE"):
+                continue
             lay = e.dxf.get("layer", "0")
             eff = parent_layer if (lay == "0" and parent_layer) else lay
             if t == "INSERT":
@@ -125,8 +131,6 @@ class Drawing:
                 self._inserts.append({"name": e.dxf.name, "layer": eff, "handle": e.dxf.handle,
                                       "insert_path": ipath, "point": self._xy(mm.transform(Vec3(blk.block.dxf.base_point)))})
                 self._walk(blk, mm, eff, ipath + (e.dxf.name,))
-                continue
-            if t not in ("LINE", "ARC", "CIRCLE", "ELLIPSE", "LWPOLYLINE", "POLYLINE", "SPLINE"):
                 continue
             rec = {"layer": eff, "type": t, "handle": e.dxf.handle, "insert_path": ipath}
             if t == "LWPOLYLINE":
@@ -281,10 +285,10 @@ class Drawing:
         if self._faces is None:
             segs = self._segments((WALL, COLUMN))
             self._closure_lines = self._closures(segs)
+            # noded together by snap rounding on a GRID_M grid: a line ending on another (a T-junction after a
+            # rotation, an arc's computed end) meets it; nothing is extended or moved by more than the grid
             geo = [LineString([a, b]) for a, b, _s in segs] + [LineString([a, b]) for a, b in self._closure_lines]
-            # coordinates on a 1 micrometre grid: an arc's computed end meets the line drawn to it
-            geo = [shapely.set_precision(g, GRID_M) for g in geo]
-            self._faces = list(polygonize(unary_union([g for g in geo if not g.is_empty]))) if geo else []
+            self._faces = list(polygonize(shapely.unary_union(geo, grid_size=GRID_M))) if geo else []
             self._closure_union = unary_union([LineString([a, b]) for a, b in self._closure_lines]) \
                 if self._closure_lines else None
         return self._faces
@@ -406,7 +410,7 @@ class Drawing:
         return best[1] if best else None
 
     # ----------------------------------------------------------------------------------------- census
-    def arc_census(self, layers=None):
+    def arc_census(self, layers=None, min_run_m=BAND_MIN_RUN_M):
         arcs = [a for a in self._arcs if (self.role(a["layer"]) == WALL if layers is None else a["layer"] in layers)]
         uniq = []
         for a in arcs:
@@ -423,17 +427,18 @@ class Drawing:
                 if w > 0.01:
                     pairs.append((dr, a, b, w))
         pairs.sort(key=lambda x: x[0])
-        used, bands = set(), []
+        used, bands, short = set(), [], []
         for dr, a, b, w in pairs:
             if id(a) in used or id(b) in used:
                 continue
             used |= {id(a), id(b)}
             rm = (a["r"] + b["r"]) / 2
-            bands.append({"centre": [round(a["centre"][0], 6), round(a["centre"][1], 6)],
+            (bands if w * min(a["r"], b["r"]) >= min_run_m - 1e-9 else short).append({"centre": [round(a["centre"][0], 6), round(a["centre"][1], 6)],
                           "r_inner_m": round(min(a["r"], b["r"]), 6), "r_outer_m": round(max(a["r"], b["r"]), 6),
                           "sweep_rad": round(w, 9), "mid_lm": round(rm * w, 6), "t_m": round(dr, 6),
                           "handles": sorted({a["handle"], b["handle"]})})
-        return {"bands": bands, "mid_lm": round(sum(x["mid_lm"] for x in bands), 6)}
+        return {"bands": bands, "mid_lm": round(sum(x["mid_lm"] for x in bands), 6), "min_run_m": min_run_m,
+                "short_stubs": short, "short_stubs_mid_lm": round(sum(x["mid_lm"] for x in short), 6)}
 
     def fixture_census(self, polygon):
         poly = polygon.buffer(0.01)

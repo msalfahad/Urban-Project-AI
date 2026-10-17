@@ -958,31 +958,46 @@ def _review_release(targets, scen):
         rel, notr = [], []
         for k in keys:
             got = [per[n].get(k) or [] for n in names]
+            vals = {n: (round(sum(x.get("measured_net") or 0.0 for x in g), 6)
+                        if any(x.get("measured_net") is not None for x in g) else None) for n, g in zip(names, got)}
             if any(len(g) != 1 for g in got):
                 notr.append({"item_code": k[0], "element": k[1], "reason": "ONLY_IN_SOME_SCENARIOS" if
-                             any(not g for g in got) else "REPEATED_IN_A_SCENARIO"})
+                             any(not g for g in got) else "REPEATED_IN_A_SCENARIO", "values": vals})
                 continue
             ls = [g[0] for g in got]
             if any(ln.get("measured_net") != ls[0].get("measured_net") or
                    ln.get("bounded_range") != ls[0].get("bounded_range") for ln in ls):
-                notr.append({"item_code": k[0], "element": k[1], "reason": "QUANTITY_DIFFERS"})
+                notr.append({"item_code": k[0], "element": k[1], "reason": "QUANTITY_DIFFERS", "values": vals})
             elif any(_rule_of(ln) != _rule_of(ls[0]) for ln in ls):
-                notr.append({"item_code": k[0], "element": k[1], "reason": "RULE_DIFFERS"})
+                notr.append({"item_code": k[0], "element": k[1], "reason": "RULE_DIFFERS", "values": vals})
             elif any(ln["evidence_state"] != ls[0]["evidence_state"] for ln in ls):
-                notr.append({"item_code": k[0], "element": k[1], "reason": "STATE_DIFFERS"})
+                notr.append({"item_code": k[0], "element": k[1], "reason": "STATE_DIFFERS", "values": vals})
             elif k[0] == "FIN.PLASTER" and len({tuple(v) for v in finishes.values()}) > 1:
                 notr.append({"item_code": k[0], "element": k[1], "reason": "SYSTEM_DEPENDS_ON_WALL_FINISH",
-                             "detail": {n: v for n, v in finishes.items()}})
+                             "detail": {n: v for n, v in finishes.items()}, "values": vals})
             elif not k[0].startswith("FIN."):
                 # only the space's own finish surfaces are released: a door / opening / count line is measured
                 # elsewhere in the main BOQ (it may sit at another room there)
-                notr.append({"item_code": k[0], "element": k[1], "reason": "NOT_A_FINISH_OF_THE_SPACE"})
+                notr.append({"item_code": k[0], "element": k[1], "reason": "NOT_A_FINISH_OF_THE_SPACE",
+                             "values": vals})
             else:
                 rel.append(ls[0])
         if rel:
             release[(tg["floor"], tg["face_id"])] = rel
+        # the wall face: the plaster measurement (wall run x plaster height - openings) when every scenario measures
+        # it once and the same - geometry, whatever finish system the classification puts on it
+        pl = [[ln for k, g in per[n].items() if k[0] == "FIN.PLASTER" for ln in g] for n in names]
+        wall_face = None
+        if all(len(g) == 1 and g[0].get("measured_net") is not None for g in pl) and \
+                len({g[0]["measured_net"] for g in pl}) == 1:
+            ln = pl[0][0]
+            wall_face = {"m2": ln["measured_net"], "state": "CONFIRMED_GEOMETRY",
+                         "height_m": ((ln.get("calculation") or {}).get("inputs") or {}).get("height_m"),
+                         "basis": "the wall face measured (wall run x plaster height - each opening), the same in "
+                                  "every scenario; the finish system over it depends on the classification - "
+                                  "geometry, not a BOQ line"}
         analysis[tg["room_id"]] = {"released": [(ln["item_code"], ln.get("physical_element"), ln["unit"])
-                                                for ln in rel], "not_released": notr}
+                                                for ln in rel], "not_released": notr, "wall_face": wall_face}
     return release, analysis
 
 
@@ -1052,6 +1067,32 @@ def _conditional(tg, scen_lines, main_lines):
     return out
 
 
+def _quantity_classes(tg, geo, an):
+    """the review space's quantities in the five classes of UP-REVIEW-001 (each item in one class only)."""
+    g = [{"what": k, "value": geo.get(k)} for k in ("area_m2", "ceiling_plan_m2", "perimeter_lm", "wall_run_lm")]
+    if (geo.get("wall_face") or {}).get("m2") is not None:
+        g.append({"what": "wall_face_m2", "value": geo["wall_face"]["m2"]})
+    cls = {"GEOMETRY_CONFIRMED": g,
+           "INDEPENDENT_OF_CLASSIFICATION": [{"item_code": c, "element": e, "unit": u}
+                                             for c, e, u in an.get("released") or ()],
+           "CONDITIONAL_ON_CLASSIFICATION": [], "REQUIRES_DRAWING_EVIDENCE": [], "NOT_ESTABLISHABLE": []}
+    if not tg["plausible"]:
+        cls["NOT_ESTABLISHABLE"].append({"item_code": "FIN.*", "reason": tg["plausible_basis"]})
+        return cls
+    for x in an.get("not_released") or ():
+        vals = x.get("values") or {}
+        if x["reason"] == "SCENARIO_NOT_MEASURABLE":
+            cls["NOT_ESTABLISHABLE"].append({"item_code": x["item_code"], "reason": x["reason"]})
+        elif any(v is not None for v in vals.values()):
+            cls["CONDITIONAL_ON_CLASSIFICATION"].append({"item_code": x["item_code"], "element": x["element"],
+                                                         "reason": x["reason"], "by_scenario": vals})
+        else:
+            cls["REQUIRES_DRAWING_EVIDENCE"].append({"item_code": x["item_code"], "element": x["element"],
+                                                     "reason": "NO_SCENARIO_MEASURES_IT (a detail, a drain or a "
+                                                               "height not in the drawing): " + x["reason"]})
+    return cls
+
+
 def _v271_outputs(room_boq, arch, targets, scen, analysis):
     """the review spaces, the door-standard reconciliation, the release report and the V2.7.1 correction records."""
     from engine.source import door_standards as DSTD
@@ -1075,8 +1116,12 @@ def _v271_outputs(room_boq, arch, targets, scen, analysis):
             doors[n] = [{"opening_id": d.get("opening_id"), "category": d["category"],
                          "owner_minimum_m": (d.get("opening_record") or {}).get("owner_minimum_m")}
                         for d in scen[n]["doors"] if d["floor"] == tg["floor"] and d.get("opening_id") in ops]
+        geo = dict(tg["geometry"], wall_face=an.get("wall_face") or
+                   {"m2": None, "state": "NOT_INVARIANT" if tg["plausible"] else "NOT_ESTABLISHED"})
         spaces.append({**{k: tg[k] for k in ("floor", "room_id", "face_id", "issue_code", "plausible",
-                                             "plausible_basis", "geometry")},
+                                             "plausible_basis")},
+                       "geometry": geo,
+                       "quantity_classes": _quantity_classes(tg, geo, an),
                        "name_en": (by_id.get(rid) or {}).get("name_en"),
                        "released": [{"line_id": ln["line_id"], "item_code": ln["item_code"],
                                      "element": ln.get("physical_element"), "unit": ln["unit"],

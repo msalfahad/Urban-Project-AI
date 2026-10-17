@@ -91,6 +91,51 @@ def test_basin_space_releases_its_ceiling_and_nothing_else(work):
     assert sp["released"][0]["line_id"] == ceil["line_id"]
 
 
+def test_the_wall_face_is_confirmed_geometry_not_a_boq_line(work):
+    """the lobby's wall face 12.80 x 3.00 - 1.80 x 2.10 = 34.62 m2 is measured the same in both scenarios: it is
+    reported as confirmed geometry, while plaster - the same area, but a different system behind wall porcelain - stays
+    conditional and is not in the main BOQ."""
+    out = _run(work, "BASIN")
+    sp = _space(out)
+    wf = sp["geometry"]["wall_face"]
+    assert wf["state"] == "CONFIRMED_GEOMETRY" and abs(wf["m2"] - T["plaster_m2"]) < TOL and wf["height_m"] == 3.0
+    lob = R.lobby(out)
+    assert not [ln for ln in R.room_lines(out, lob["room_id"]) if ln["item_code"] == "FIN.PLASTER"]
+    cond = {(c["item_code"], c["element"]): c for c in sp["quantity_classes"]["CONDITIONAL_ON_CLASSIFICATION"]}
+    pl = cond[("FIN.PLASTER", "plaster")]
+    assert pl["reason"] == "SYSTEM_DEPENDS_ON_WALL_FINISH"
+    assert all(abs(v - T["plaster_m2"]) < TOL for v in pl["by_scenario"].values())
+
+
+def test_every_quantity_in_exactly_one_class(work):
+    """the five classes: confirmed geometry (area, ceiling plan, perimeter, wall run, wall face), independent of the
+    classification (the ceiling), conditional on it (floor, wall finishes, skirting, waterproofing), requiring drawing
+    evidence (no scenario measures it: a detail, a drain), not establishable (none here); no item in two classes."""
+    sp = _space(_run(work, "BASIN"))
+    qc = sp["quantity_classes"]
+    geo = {g["what"]: g["value"] for g in qc["GEOMETRY_CONFIRMED"]}
+    assert abs(geo["area_m2"] - T["ceiling_m2"]) < TOL and abs(geo["wall_face_m2"] - T["plaster_m2"]) < TOL
+    assert [x["item_code"] for x in qc["INDEPENDENT_OF_CLASSIFICATION"]] == ["FIN.CEILING"]
+    keys = [(c, x["item_code"], x.get("element")) for c in qc if c != "GEOMETRY_CONFIRMED" for x in qc[c]]
+    assert len({k[1:] for k in keys}) == len(keys)
+    cond = {x["item_code"] for x in qc["CONDITIONAL_ON_CLASSIFICATION"]}
+    assert {"FIN.FLOOR.WET_TILE", "FIN.FLOOR.PORCELAIN", "FIN.WALL.TILE", "FIN.PLASTER", "FIN.SKIRTING",
+            "FIN.WP.FLOOR"} <= cond
+    assert all(all(v is None for v in (x.get("by_scenario") or {}).values())
+               for x in qc["REQUIRES_DRAWING_EVIDENCE"])
+    assert qc["NOT_ESTABLISHABLE"] == []
+
+
+def test_a_space_with_no_plausible_set_is_not_establishable(work):
+    """the plain unlabelled lobby: geometry only; every finish NOT_ESTABLISHABLE, with the reason."""
+    out = _run(work, "PLAIN_LOBBY")
+    sp = _space(out)
+    qc = sp["quantity_classes"]
+    assert qc["INDEPENDENT_OF_CLASSIFICATION"] == [] and qc["CONDITIONAL_ON_CLASSIFICATION"] == []
+    assert len(qc["NOT_ESTABLISHABLE"]) == 1 and qc["NOT_ESTABLISHABLE"][0]["reason"].startswith("NOT_ESTABLISHED")
+    assert sp["geometry"]["wall_face"]["state"] == "NOT_ESTABLISHED"
+
+
 def test_v2_7_is_unchanged(work):
     """ARCH_TAKEOFF_V2.7 keeps the lobby without a ceiling line (the behaviour V2.7.1 versions)."""
     out = _run(work, "BASIN", method=R.V27)
