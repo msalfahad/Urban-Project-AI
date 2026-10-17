@@ -176,7 +176,14 @@ def strip_register(S, floor):
         else:
             cls = "UNATTRIBUTED"
         geom = {"checked_against": oids, "within_opening_box": None, "depth_m": None, "wall_t_m": None}
-        if oids and all(i in ops for i in oids):
+        if oids and all(i in ops for i in oids) and ops[oids[0]].get("curved") and len(oids) == 1:
+            # ARCH_TAKEOFF_V2.9 (D-P9-02): a strip beside a curved opening is checked inside its annular sector; its
+            # depth is radial (area / the strip's mid arc), never area / the room-face width
+            from engine.source import arch_v29 as V29
+            geom.update(V29.strip_geometry(f, ops[oids[0]], u, GEOM_TOL_M))
+            if geom["depth_m"] is not None and geom["wall_t_m"]:
+                geom["depth_within_wall"] = geom["depth_m"] <= geom["wall_t_m"] + GEOM_TOL_M
+        elif oids and all(i in ops for i in oids):
             o = ops[oids[0]]
             width = o.get("width_m") or 0.0
             geom.update(within_opening_box=all(_within(f["polygon"], ops[i], GEOM_TOL_M / u) for i in oids),

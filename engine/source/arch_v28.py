@@ -712,6 +712,12 @@ def skirting_adjustment(room_windows, detail, schedule):
 def _strip_side(strip, rooms):
     """the room on the strip's side: a room listing the window whose boundary the strip touches (its centroid within
     half the strip's depth + 2 cm of the room polygon); None = the strip lies beyond the glazing, outside every room."""
+    ids = strip["geometry"].get("room_face_ids")
+    if ids is not None:
+        # a curved opening's strip (ARCH_TAKEOFF_V2.9 records the faces meeting its wall face): its centroid can lie
+        # off the strip, so the side is the room meeting the strip's own wall face
+        return next((r for r in rooms if r.get("face_id") in ids and strip["opening_ids"][0] in
+                     (r.get("windows") or ())), None)
     pm = strip["polygon_m"]
     c = (sum(x for x, _ in pm) / len(pm), sum(y for _, y in pm) / len(pm))
     reach = 0.5 * (strip["geometry"].get("depth_m") or 0.0) + 0.02
@@ -801,7 +807,9 @@ def window_strip_lines(ctx, strips, rooms, floor, schedule, heights_of_room, *, 
                 continue
             band = max(0.0, min(head, Hp) - max(sill, 0.0))
             jambs = 2 * d * band
-            headsoffit = d * w if head < Hp - 1e-9 else 0.0
+            # a curved opening's head soffit is its strip's own plan area (ARCH_TAKEOFF_V2.9 records it), not d x w
+            headsoffit = (g["curved_soffit_m2"] if g.get("curved_soffit_m2") is not None else d * w) \
+                if head < Hp - 1e-9 else 0.0
             rec.update(jambs_m2=round(jambs, 6), head_m2=round(headsoffit, 6), band_m=round(band, 6),
                        plaster_m2=round(jambs + headsoffit, 6), state="MEASURED")
             recs.append(rec)

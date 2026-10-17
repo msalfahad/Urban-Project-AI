@@ -981,7 +981,7 @@ def closure_in_passage(seg, passages, unit_m, fit_m=DOOR_LEAF_FIT_M):
 
 
 def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, release_safety=False,
-           door_review=False, v27=False, v271=None):
+           door_review=False, v27=False, v271=None, v29=False):
     """v27 (ARCH_TAKEOFF_V2.7 only): column rectangles of any orientation, the door's structural opening from its own
     jamb lines and arc-aware face polygons (engine.source.arch_v27); False is the V1 .. V2.6 path, unchanged.
     v271 (ARCH_TAKEOFF_V2.7.1 only, with v27): a dict - the turned columns are obstacles of the band-opening search
@@ -994,7 +994,9 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, re
     only): after the leaf-ray closures, match_swings_review (the swings closing no gap) and closure_in_passage (a
     leaf closure lying in a passage's gap) - an opening either takes is a DOOR carrying door_fit_review (held from
     released totals by door_model), its swing's closure is dropped; a passage near an idle swing carries
-    door_symbol_note; False is unchanged."""
+    door_symbol_note; False is unchanged. v29 (ARCH_TAKEOFF_V2.9 only, D-P9-01 / D-P9-02): the jambed gaps of the
+    curved wall bands are openings too (engine.source.arch_v29), closed on both wall faces by arcs; False is
+    unchanged (no opening carries "curved", so every reader of the straight records sees the earlier openings)."""
     eps = 0.5e-3 / unit_m
     wall_l = sorted(l for l, r in roles.items() if r == AP.WALL)
     col_l = {l for l, r in roles.items() if r == AP.COLUMN}
@@ -1055,6 +1057,18 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, re
             thresholds.append({"id": f"THR|{o['opening_id']}|{i}", "a": a, "b": b, "kind": kind,
                                "opening_id": o["opening_id"]})
     role_of_thr = {"DOOR": "DOOR_THRESHOLD", "WINDOW": "WINDOW_THRESHOLD", "PASSAGE": "PASSAGE_THRESHOLD"}
+    cthr, v29rec = [], None
+    if v29:
+        # ARCH_TAKEOFF_V2.9 (D-P9-01 / D-P9-02): the jambed gaps of the curved wall bands, closed on both wall faces
+        from engine.source import arch_v29 as V29
+        cgaps, crej = V29.curved_gaps(ents, wall_l, unit_m)
+        cops = V29.curved_openings(cgaps, ents, win_l, swings, unit_m, served)
+        used_swings = {occ for v in served.values() for occ in v}
+        for o in cops:
+            cthr += V29.thresholds(o, role_of_thr[o["kind"]])
+        ops.extend(cops)
+        v29rec = {"policy": V29.POLICY_ID, "curved_gaps": len(cgaps), "rejected": crej,
+                  "openings": [{"opening_id": o["opening_id"], "kind": o["kind"]} for o in cops]}
     items = []
     for s in ents["segments"]:
         lay = s["layer"]
@@ -1077,12 +1091,13 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, re
     items += [TP.BoundaryItem(c["id"], "SEGMENT", (c["a"][0], c["a"][1], c["b"][0], c["b"][1]), "WALL_CAP")
               for c in caps]
     free = {k: v for k, v in swings.items() if k not in used_swings}
-    closures, cstatus = TP.opening_closures(free, items + [t for _, t in thr_items], eps) if free else ([], {})
+    closures, cstatus = TP.opening_closures(free, items + [t for _, t in thr_items] + [t for _, t in cthr], eps) \
+        if free else ([], {})
     if door_review:
         # ARCH_TAKEOFF_V2.6: only a swing whose leaf closes no gap (its leaf-ray closure is not CLOSED) is offered to
         # the review fit, and only a passage takes it - a swing closing its own wall-to-wall doorway keeps it
         idle = {k: v for k, v in free.items() if (cstatus.get(k) or {}).get("state") != "CLOSED"}
-        passages = [o for o in ops if o["kind"] == "PASSAGE"]
+        passages = [o for o in ops if o["kind"] == "PASSAGE" and not o.get("curved")]
         review, notes = match_swings_review(passages, idle, unit_m, served)
         # a leaf-closed swing whose closure lies in a passage's gap: one opening drawn two ways
         geo = {c.source_id: c.geometry for c in closures}
@@ -1113,14 +1128,15 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, re
                          for t in thresholds]
             used_swings = {occ for v in served.values() for occ in v}
             free = {k: v for k, v in swings.items() if k not in used_swings}
-            closures, cstatus = TP.opening_closures(free, items + [t for _, t in thr_items], eps) if free else \
-                ([], {})
+            closures, cstatus = TP.opening_closures(free, items + [t for _, t in thr_items] + [t for _, t in cthr],
+                                                    eps) if free else ([], {})
         for oid, note in notes.items():
             if by_op[oid]["kind"] == "PASSAGE":
                 by_op[oid]["door_symbol_note"] = note
     if v27:
         # ARCH_TAKEOFF_V2.7: the door's structural opening from its own jamb lines (arch_v27.jamb_reconstruction)
-        jitems, v27rec["jamb"] = V27.jamb_reconstruction(ops, ents, roles, swings, thresholds, cols, unit_m,
+        jitems, v27rec["jamb"] = V27.jamb_reconstruction([o for o in ops if not o.get("curved")], ents, roles,
+                                                         swings, thresholds, cols, unit_m,
                                                          match_strict=match_swings)
         v27rec["jamb_items"] = [{"id": i, "a": g[:2], "b": g[2:]} for i, g in jitems]
         if jitems:
@@ -1135,22 +1151,24 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, re
     texts = ents["texts"]
     by_op = {o["opening_id"]: o for o in ops}
     # pass 1: every opening closed by its thresholds -> the cells of the floor
-    arr = TP.build(items + [t for _, t in thr_items] + closures, eps)
+    arr = TP.build(items + [t for _, t in thr_items] + [t for _, t in cthr] + closures, eps)
     cells = _faces_of(arr, TP.sites_of(arr, "ARCH", region_id), texts, unit_m, eps, release_safety, v27=v27rec)
     _symbols(cells, ents, roles, unit_m, v27=v27rec)
     drop, zoning = open_passages(cells, by_op)
     faces = cells
     if drop:
         # pass 2: the passages inside one room's floor are not boundaries -> the room is its whole floor
-        arr = TP.build(items + [t for oid, t in thr_items if oid not in drop] + closures, eps)
+        arr = TP.build(items + [t for oid, t in thr_items + cthr if oid not in drop] + closures, eps)
         faces = _faces_of(arr, TP.sites_of(arr, "ARCH", region_id), texts, unit_m, eps, release_safety, v27=v27rec)
         _symbols(faces, ents, roles, unit_m, v27=v27rec)
     # pass 3 (S5): a MERGED face is split only along the lines drawn inside it that separate its labelled parts
-    faces, zones = zone_partition(faces, items + [t for oid, t in thr_items if oid not in drop] + closures, ents,
+    faces, zones = zone_partition(faces, items + [t for oid, t in thr_items + cthr if oid not in drop] + closures, ents,
                                   roles, unit_m, eps, texts, region_id, by_op, detail=release_safety, v27=v27rec)
     for o in ops:
         if o["opening_id"] in drop:
             o["inside_one_floor"] = True                     # an open passage inside one room's floor (not a boundary)
+    if v29:
+        V29.room_side(ops, faces)                        # ARCH_TAKEOFF_V2.9: each curved opening's room side
     voids = void_outlines(ents, faces, unit_m)
     _issues(faces)
     cell_of = {}
@@ -1205,7 +1223,7 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, re
                             "cells": len(cells), "passages_inside_one_floor": len(drop),
                             "zone_lines": sum(len(r.get("kept_lines") or ()) for r in zones)},
             **({"v27": v27rec, "column_polys": col_polys, "repairs_v27": v27rec.get("jamb_items") or []}
-               if v27 else {})}
+               if v27 else {}), **({"v29": v29rec} if v29 else {})}
 
 
 CAP_TOL_M = 0.03
