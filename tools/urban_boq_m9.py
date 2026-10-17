@@ -958,8 +958,7 @@ def _review_release(targets, scen):
         rel, notr = [], []
         for k in keys:
             got = [per[n].get(k) or [] for n in names]
-            vals = {n: (round(sum(x.get("measured_net") or 0.0 for x in g), 6)
-                        if any(x.get("measured_net") is not None for x in g) else None) for n, g in zip(names, got)}
+            vals = {n: _scenario_value(g) for n, g in zip(names, got)}
             if any(len(g) != 1 for g in got):
                 notr.append({"item_code": k[0], "element": k[1], "reason": "ONLY_IN_SOME_SCENARIOS" if
                              any(not g for g in got) else "REPEATED_IN_A_SCENARIO", "values": vals})
@@ -987,18 +986,43 @@ def _review_release(targets, scen):
         # the wall face: the plaster measurement (wall run x plaster height - openings) when every scenario measures
         # it once and the same - geometry, whatever finish system the classification puts on it
         pl = [[ln for k, g in per[n].items() if k[0] == "FIN.PLASTER" for ln in g] for n in names]
-        wall_face = None
-        if all(len(g) == 1 and g[0].get("measured_net") is not None for g in pl) and \
-                len({g[0]["measured_net"] for g in pl}) == 1:
-            ln = pl[0][0]
-            wall_face = {"m2": ln["measured_net"], "state": "CONFIRMED_GEOMETRY",
-                         "height_m": ((ln.get("calculation") or {}).get("inputs") or {}).get("height_m"),
-                         "basis": "the wall face measured (wall run x plaster height - each opening), the same in "
-                                  "every scenario; the finish system over it depends on the classification - "
-                                  "geometry, not a BOQ line"}
+        wall_face = _wall_face(names, pl)
         analysis[tg["room_id"]] = {"released": [(ln["item_code"], ln.get("physical_element"), ln["unit"])
                                                 for ln in rel], "not_released": notr, "wall_face": wall_face}
     return release, analysis
+
+
+def _scenario_value(lines):
+    """a scenario's quantity of one item: the measured net, else its range ({"low", "high"}), else None."""
+    if any(x.get("measured_net") is not None for x in lines):
+        return round(sum(x.get("measured_net") or 0.0 for x in lines), 6)
+    rng = [x.get("bounded_range") for x in lines if x.get("bounded_range")]
+    if rng:
+        return {"low": round(sum(r.get("low") or 0.0 for r in rng), 6),
+                "high": round(sum(r.get("high") or 0.0 for r in rng), 6)}
+    return None
+
+
+def _wall_face(names, pl):
+    """the wall face of a review space from each scenario's plaster line (wall run x plaster height - each opening):
+    geometry whatever finish system the classification puts on it - never a BOQ line."""
+    if not any(pl):
+        return {"m2": None, "state": "NOT_MEASURED", "basis": "no scenario measures the wall face (heights)"}
+    vals = [_scenario_value(g) if len(g) == 1 else None for g in pl]
+    if all(v is None for v in vals):
+        return {"m2": None, "state": "NOT_MEASURED",
+                "basis": "no scenario measures the wall face (a height is not established: see the held plaster)"}
+    ln = pl[0][0] if pl[0] else {}
+    height = ((ln.get("calculation") or {}).get("inputs") or {}).get("height_m")
+    if all(isinstance(v, (int, float)) for v in vals) and len(set(vals)) == 1:
+        return {"m2": vals[0], "state": "CONFIRMED_GEOMETRY", "height_m": height,
+                "basis": "the wall face measured (wall run x plaster height - each opening), the same in every "
+                         "scenario; the finish system over it depends on the classification - geometry, not a BOQ line"}
+    if all(isinstance(v, dict) for v in vals) and all(v == vals[0] for v in vals):
+        return {"m2": None, "low_m2": vals[0]["low"], "high_m2": vals[0]["high"], "state": "BOUNDED_GEOMETRY",
+                "height_m": height, "basis": (ln.get("bounded_range") or {}).get("basis") or
+                "a range, the same in every scenario"}
+    return {"m2": None, "state": "NOT_INVARIANT", "by_scenario": dict(zip(names, vals))}
 
 
 def _released_lines(release, floor, rooms, ctx):
@@ -1070,8 +1094,11 @@ def _conditional(tg, scen_lines, main_lines):
 def _quantity_classes(tg, geo, an):
     """the review space's quantities in the five classes of UP-REVIEW-001 (each item in one class only)."""
     g = [{"what": k, "value": geo.get(k)} for k in ("area_m2", "ceiling_plan_m2", "perimeter_lm", "wall_run_lm")]
-    if (geo.get("wall_face") or {}).get("m2") is not None:
-        g.append({"what": "wall_face_m2", "value": geo["wall_face"]["m2"]})
+    wf = geo.get("wall_face") or {}
+    if wf.get("m2") is not None:
+        g.append({"what": "wall_face_m2", "value": wf["m2"]})
+    elif wf.get("state") == "BOUNDED_GEOMETRY":
+        g.append({"what": "wall_face_m2", "value": {"low": wf["low_m2"], "high": wf["high_m2"]}, "basis": wf["basis"]})
     cls = {"GEOMETRY_CONFIRMED": g,
            "INDEPENDENT_OF_CLASSIFICATION": [{"item_code": c, "element": e, "unit": u}
                                              for c, e, u in an.get("released") or ()],
@@ -1117,7 +1144,7 @@ def _v271_outputs(room_boq, arch, targets, scen, analysis):
                          "owner_minimum_m": (d.get("opening_record") or {}).get("owner_minimum_m")}
                         for d in scen[n]["doors"] if d["floor"] == tg["floor"] and d.get("opening_id") in ops]
         geo = dict(tg["geometry"], wall_face=an.get("wall_face") or
-                   {"m2": None, "state": "NOT_INVARIANT" if tg["plausible"] else "NOT_ESTABLISHED"})
+                   {"m2": None, "state": "NOT_MEASURED" if tg["plausible"] else "NOT_ESTABLISHED"})
         spaces.append({**{k: tg[k] for k in ("floor", "room_id", "face_id", "issue_code", "plausible",
                                              "plausible_basis")},
                        "geometry": geo,

@@ -256,6 +256,9 @@ def test_without_heights_the_ceiling_is_still_released(work):
     wet_sk = _sq(sp, "WET_SCOPE", "FIN.SKIRTING", rid)
     assert wet_sk["quantity"] is None and wet_sk["evidence_state"] == "NOT_APPLICABLE_WITH_EVIDENCE"
     assert _sq(sp, "WET_SCOPE", "FIN.PLASTER", rid)["evidence_state"] == "BLOCKED_RFI"
+    # no height: the wall face is not measured (never reported as a disagreement between the scenarios)
+    assert sp["geometry"]["wall_face"]["state"] == "NOT_MEASURED" and sp["geometry"]["wall_face"]["m2"] is None
+    assert "FIN.PLASTER" in {x["item_code"] for x in sp["quantity_classes"]["REQUIRES_DRAWING_EVIDENCE"]}
 
 
 def test_wc_shape_alone_is_a_review_space_with_scenarios(work):
