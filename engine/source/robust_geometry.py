@@ -248,16 +248,19 @@ def face_lines_mean_axis(segments, ang_res_deg=0.1, off_tol=2.0, join_tol=1.0, m
     return lines
 
 
-def openings(segments, unit_m, layers, columns=(), *, t_m=(0.10, 0.45), min_gap_m=0.5, tol="LEGACY", geom=None):
+def openings(segments, unit_m, layers, columns=(), *, t_m=(0.10, 0.45), min_gap_m=0.5, tol="LEGACY", geom=None,
+             column_polys=()):
     """lintel_measure.openings with the band geometry injected. geom=Geometry.frozen(unit_m) reproduces
     lintel_measure.openings exactly (the delegation test); the column split keeps its frozen comparison (it is not a
-    reviewed site)."""
+    reviewed site). column_polys (ARCH_TAKEOFF_V2.7.1 only, UP-COL-ORIENT-001): column rectangles of any orientation
+    as polygons, obstacles like the boxes; () is the V2.1 .. V2.7 path, unchanged."""
     geom = geom or Geometry.frozen(unit_m)
     k = 1.0 / unit_m / 1000.0
     merge_tol = 1.0 if tol == "LEGACY" else 1e-3 / unit_m
     closures = [(s["id"], tuple(s["a"]), tuple(s["b"])) for s in segments
                 if MD._layer_role(s["layer"]) not in MD.ANNOTATION_ROLES]
     obst = [(f"COL{i}", MD.box_poly(c)) for i, c in enumerate(columns)]
+    obst += [(f"CPOLY{i}", [tuple(p) for p in poly]) for i, poly in enumerate(column_polys)]
     out, rej = [], Counter()
     for lay in layers:
         ctx0 = geom.context

@@ -65,7 +65,7 @@ POLICY_ID = "URBAN_BOQ_M9_S1"
 ARCH_POLICY_ID = "URBAN_BOQ_M9_S2_ARCH"
 ARCH_POLICY_ID_V2 = "URBAN_BOQ_M9_S6_ARCH_V2"
 ARCH_METHODS = ("ARCH_TAKEOFF_V1", "ARCH_TAKEOFF_V2", "ARCH_TAKEOFF_V2.1", "ARCH_TAKEOFF_V2.2", "ARCH_TAKEOFF_V2.3",
-                "ARCH_TAKEOFF_V2.4", "ARCH_TAKEOFF_V2.5", "ARCH_TAKEOFF_V2.6", "ARCH_TAKEOFF_V2.7")
+                "ARCH_TAKEOFF_V2.4", "ARCH_TAKEOFF_V2.5", "ARCH_TAKEOFF_V2.6", "ARCH_TAKEOFF_V2.7", "ARCH_TAKEOFF_V2.7.1")
 # S6: ARCH_TAKEOFF_V2 = V1 + drawing admission (stop, exit 2, no BOQ on a fatal finding) + unit-relative geometric
 # tolerances + plan regions cut only along empty bands + floor-category and finish-surface completeness. V1 is
 # unchanged; --strict-admission puts the same admission in front of V1 (its outputs are V1's own).
@@ -119,6 +119,17 @@ ARCH_POLICY_ID_V26 = "URBAN_BOQ_M9_P2B5_ARCH_V2_6"
 V27 = "ARCH_TAKEOFF_V2.7"
 ARCH_POLICY_ID_V27 = "URBAN_BOQ_M9_P2B7_ARCH_V2_7"
 V27_KNOWLEDGE = "1.2.0"           # the registry V2.7 reads (UP-DOOR-OPEN-003, UP-WET-002; tools/kb_build_1_2.py)
+# Phase 2B-8: ARCH_TAKEOFF_V2.7.1 = ARCH_TAKEOFF_V2.7 + the acceptance hardening of its review (tests/m9_p2b8): the
+# quantities of a review space identical under every plausible classification released, the rest kept as conditional
+# scenario quantities (UP-REVIEW-001); every BOQ line reported once as confirmed / conditional / held / excluded
+# (UP-QTY-STATUS-001); the door-standard reconciliation (UP-DOOR-OPEN-003 1.3.0); the WC linework profile and the
+# basin's own linework by insert path (UP-WET-002 1.3.0); turned columns as jambs and wall interruptions
+# (UP-COL-ORIENT-001); doorway-strip lines traced to their entities. Opt-in only: no earlier method reaches it (their
+# call paths pass no v271 flag); V2.7 itself is unchanged.
+V271 = "ARCH_TAKEOFF_V2.7.1"
+ARCH_POLICY_ID_V271 = "URBAN_BOQ_M9_P2B8_ARCH_V2_7_1"
+V271_KNOWLEDGE = "1.3.0"          # the registry V2.7.1 reads (UP-REVIEW-001, UP-QTY-STATUS-001, UP-COL-ORIENT-001)
+V27_FAMILY = (V27, V271)
 M9_DIR = "m9"
 CREATED = datetime(2026, 1, 1)
 
@@ -261,24 +272,26 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
               project_id=project_id, intake=intake, strict=strict, units=units, region_specs=region_specs,
               accept_xrefs=accept_xrefs, extra_documents=extra_documents, admission_findings=admission_findings,
               decisions=decisions)
-    if independent_checks is not None and method not in (V25, V26, V27):
+    if independent_checks is not None and method not in (V25, V26, V27, V271):
         raise SystemExit("--independent-checks (URBAN_INDEPENDENT_CHECKS_V1) needs --method ARCH_TAKEOFF_V2.5, "
-                         "ARCH_TAKEOFF_V2.6 or ARCH_TAKEOFF_V2.7")
-    if method in (V24, V25, V26, V27):
+                         "ARCH_TAKEOFF_V2.6, ARCH_TAKEOFF_V2.7 or ARCH_TAKEOFF_V2.7.1")
+    if method in (V24, V25, V26, V27, V271):
         from engine.source import knowledge as K
-        with K.using(V27_KNOWLEDGE if method == V27 else "1.1.0"):
-            return _arch_compute(drawing, project_rules=project_rules,
-                                 **({"independent_checks": independent_checks} if method in (V25, V26, V27) else {}),
-                                 **kw)
+        with K.using({V27: V27_KNOWLEDGE, V271: V271_KNOWLEDGE}.get(method, "1.1.0")):
+            ic = {"independent_checks": independent_checks} if method in (V25, V26, V27, V271) else {}
+            if method == V271:
+                return _arch_v271(drawing, project_rules=project_rules, **ic, **kw)
+            return _arch_compute(drawing, project_rules=project_rules, **ic, **kw)
     if project_rules is not None:
         raise SystemExit("--project-rules (URBAN_PROJECT_RULES_V1) needs --method ARCH_TAKEOFF_V2.4, "
-                         "ARCH_TAKEOFF_V2.5, ARCH_TAKEOFF_V2.6 or ARCH_TAKEOFF_V2.7")
+                         "ARCH_TAKEOFF_V2.5, ARCH_TAKEOFF_V2.6, ARCH_TAKEOFF_V2.7 or ARCH_TAKEOFF_V2.7.1")
     return _arch_compute(drawing, **kw)
 
 
 def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_areas=None, project_id=None, intake=None,
                   strict=False, units=None, region_specs=None, accept_xrefs=(), extra_documents=(),
-                  admission_findings=(), decisions=None, project_rules=None, independent_checks=None):
+                  admission_findings=(), decisions=None, project_rules=None, independent_checks=None, _scenario=None,
+                  _release=None):
     """the architectural route on one plan drawing: every stage recorded, nothing silently skipped. `intake` (the
     urban_intake.read result of this same drawing) skips the read for repeated runs / tests.
     S6: method ARCH_TAKEOFF_V2, or strict=True (V1 behind the same admission), run the drawing discovery first and
@@ -293,14 +306,15 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
     from tools import urban_intake as UI
     if method not in ARCH_METHODS:
         raise SystemExit(f"--method must be one of {ARCH_METHODS} (the architectural route is behind a versioned flag)")
-    v27 = method == V27                                       # ARCH_TAKEOFF_V2.6 plus the Phase 2B-7 corrections
-    v26 = method in (V26, V27)                                # ARCH_TAKEOFF_V2.5 plus the installation layer
-    v25 = method in (V25, V26, V27)                           # ARCH_TAKEOFF_V2.4 plus the proven corrections
-    v24 = method in (V24, V25, V26, V27)                      # V2.3 plus the registry 1.1.0 and the project rules
-    v23 = method in (V23, V24, V25, V26, V27)                 # V2.3 is V2.2 plus the knowledge registry
-    v22 = method in (V22, V23, V24, V25, V26, V27)            # V2.2 is V2.1 plus the Phase 2B-0 corrections
-    v21 = method in (V21, V22, V23, V24, V25, V26, V27)
-    v2 = method in (V2, V21, V22, V23, V24, V25, V26, V27)    # V2.1 is V2 plus the Phase 2A additions
+    v271 = method == V271                                     # ARCH_TAKEOFF_V2.7 plus the Phase 2B-8 hardening
+    v27 = method in (V27, V271)                               # ARCH_TAKEOFF_V2.6 plus the Phase 2B-7 corrections
+    v26 = method in (V26, V27, V271)                          # ARCH_TAKEOFF_V2.5 plus the installation layer
+    v25 = method in (V25, V26, V27, V271)                     # ARCH_TAKEOFF_V2.4 plus the proven corrections
+    v24 = method in (V24, V25, V26, V27, V271)                # V2.3 plus the registry 1.1.0 and the project rules
+    v23 = method in (V23, V24, V25, V26, V27, V271)           # V2.3 is V2.2 plus the knowledge registry
+    v22 = method in (V22, V23, V24, V25, V26, V27, V271)      # V2.2 is V2.1 plus the Phase 2B-0 corrections
+    v21 = method in (V21, V22, V23, V24, V25, V26, V27, V271)
+    v2 = method in (V2, V21, V22, V23, V24, V25, V26, V27, V271)  # V2.1 is V2 plus the Phase 2A additions
     admit = v2 or strict
     if not admit and (units or region_specs or accept_xrefs):
         raise SystemExit("--units / --region / --accept-missing-xref are reviewer inputs of the admission: use them "
@@ -415,7 +429,8 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
                                            region_id=r["region_id"], tol=tol,
                                            **({"geom": geom_of[r["region_id"]]} if v21 else {}),
                                            **({"release_safety": True} if v22 else {}),
-                                           **({"door_review": True} if v26 else {}), **({"v27": True} if v27 else {}))
+                                           **({"door_review": True} if v26 else {}), **({"v27": True} if v27 else {}),
+                                           **({"v271": {"scenario": _scenario}} if v271 else {}))
                  for r in regs if roles_of[r["region_id"]]["state"] != "BLOCKED"}
     # one stair drawn on two plans: the plans are aligned on their column grid, and a flight lying over a flight of
     # the plan below is counted once (the repeat is exposure until a reviewer says which it is)
@@ -437,6 +452,7 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
     col_layers = sorted({lay for v in roles_of.values() for lay, ro in v["roles"].items() if ro == AP.COLUMN})
     door_floors, door_texts, door_face_texts = [], {}, {}
     v27_log = []                                              # ARCH_TAKEOFF_V2.7: every correction and refusal
+    v271_turned = []                                          # ARCH_TAKEOFF_V2.7.1: turned columns used
     decided, possibly_ext = {}, {}
     v24_floors = []
     door_facts = facts
@@ -466,7 +482,14 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
             continue
         S = spaces_of[rid]
         S["walls"] = AW.walls(ents, L["roles"], u, S["faces"], S["openings"], columns=S["column_boxes"],
-                              **({"geom": geom_of[rid]} if v21 else {}), **({"arc_bands": True, "trace": True} if v27 else {}))
+                              **({"geom": geom_of[rid]} if v21 else {}), **({"arc_bands": True, "trace": True} if v27 else {}),
+                              **({"column_polys": S.get("column_polys") or ()} if v271 else {}))
+        if v271 and S.get("column_polys"):
+            # ARCH_TAKEOFF_V2.7.1 (UP-COL-ORIENT-001): the turned columns used as jambs and wall cuts
+            v271_turned.append({"correction": "TURNED_COLUMN", "floor": floor, "region_id": rid, "subject": "columns",
+                                "decision": "TURNED_COLUMNS_AS_JAMBS_AND_WALL_CUTS",
+                                "detail": {"turned": len(S["column_polys"]),
+                                           "jamb_openings": _turned_jambs(S, u)}})
         if v27:
             L26 = AP.layer_roles(ents, u, override=layer_roles, tol=tol, **({"geom": RG.Geometry(u)} if v21 else {}))
             v27_log += _v27_region_log(floor, rid, L, S, L26["roles"], set(layer_roles or ()))
@@ -479,6 +502,11 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
                        **({"owner_scope": True, "door_height": lambda o_: DSTD.door_height(DSTD.INTERNAL, facts)}
                           if v23 else {}), **({"piece_box": True} if v26 else {}))
         strip_split_pieces += M.get("piece_box") or []                       # ARCH_TAKEOFF_V2.6 (D-V26-07)
+        if v271 and _release:
+            # ARCH_TAKEOFF_V2.7.1 (UP-REVIEW-001): a review space's quantities identical under every plausible
+            # classification, measured by the scenario runs, join its lines (the space keeps its own identity)
+            M["lines"] += _released_lines(_release, floor, M["rooms"], {"project_id": pid, "revision_set_sha256": rev,
+                                                                        "documents": docs})
         X = AM.materials(M, facts)
         ref = (reference_areas or {}).get(floor)
         rec["repairs"] = {"counts": dict(Counter(x["kind"] + ":" + x["rule"] for x in S.get("repairs") or ())),
@@ -654,8 +682,9 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
                 S_.get("openings") or [], {"elements": [e for e in (doors or {}).get("elements") or ()
                                                        if any(region_of_room.get(r_) == rid_
                                                               for r_ in door_rooms[e["element_id"]])]},
-                (S_.get("walls") or {}).get("walls") or (), fl_, rid_))
-        prov.update(V27M.attach_provenance([ln for v_ in by_region.values() for ln in v_], [], [], [], {}))
+                (S_.get("walls") or {}).get("walls") or (), fl_, rid_, **({"v271": True} if v271 else {})))
+        prov.update(V27M.attach_provenance([ln for v_ in by_region.values() for ln in v_], [], [], [], {},
+                                           **({"v271": True} if v271 else {})))
         v27_log.append({"correction": "PROVENANCE", "floor": "-", "region_id": "-", "subject": "lines",
                         "decision": "SOURCE_ENTITIES_ATTACHED", "detail": dict(prov)})
     by_room = {r["room_id"]: r for r in rooms}
@@ -762,6 +791,8 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
         arch["discovery"] = report
     if v27:
         arch["v27"] = arch_v27
+    if v271:
+        arch["v271_turned"] = v271_turned
     if v21:
         from engine.source import door_model as DMOD
         arch["geometry"] = {rid: g.report() for rid, g in geom_of.items()}
@@ -797,6 +828,413 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
     return room_boq, arch, E
 
 
+# ---------------------------------------------------------------- ARCH_TAKEOFF_V2.7.1 (Phase 2B-8)
+REVIEW_SCENARIOS = (("WET_SCOPE", ("BATHROOM",), "the owner wet scope UP-WET-001, as a W.C. / wash room"),
+                    ("DRY_SCOPE", ("CORRIDOR",), "the dry scope, as a lobby / wash area"))
+WET_REVIEW_KINDS = ("WET_CLASSIFICATION_REVIEW", "WC_CANDIDATE_REVIEW")
+RELEASE_FIELDS = ("measured_net", "bounded_range", "evidence_state")
+WALL_FINISH_CODES = ("FIN.PAINT", "FIN.WALL.TILE")
+
+
+def _arch_v271(drawing, **kw):
+    """ARCH_TAKEOFF_V2.7.1: the V2.7 route with the Phase 2B-8 hardening, then (UP-REVIEW-001) when a space is under
+    wet-classification review: one run per plausible classification (REVIEW_SCENARIOS, every review space typed by
+    the scenario), the quantities identical in every scenario released (one more run, so every derived output holds
+    them), the rest kept as conditional scenario quantities. A plan without such a space is one run."""
+    if kw.get("intake") is None:
+        from tools import urban_intake as UI
+        kw = dict(kw, intake=UI.read(str(drawing)))
+    room_boq, arch, E = _arch_compute(drawing, **kw)
+    targets = _review_targets(arch)
+    scen, release, analysis = {}, {}, {}
+    if any(x["plausible"] for x in targets):
+        for name, codes, why in REVIEW_SCENARIOS:
+            try:
+                rb, ar_, _ = _arch_compute(drawing, _scenario={"name": name, "codes": list(codes)}, **kw)
+                scen[name] = {"lines": rb["lines"], "rooms": ar_["rooms"],
+                              "doors": (ar_.get("door_scenarios") or {}).get("rows") or []}
+            except CompletenessFailed:
+                scen[name] = None                          # a scenario that cannot be measured releases nothing
+        release, analysis = _review_release(targets, scen)
+        if release:
+            room_boq, arch, E = _arch_compute(drawing, _release=release, **kw)
+    _v271_outputs(room_boq, arch, targets, scen, analysis)
+    return room_boq, arch, E
+
+
+def _turned_jambs(S, u):
+    """the openings with a COLUMN_JAMB end at a turned column (within the band-gap column reach + 10 mm)."""
+    from engine.source import arch_plan as AP
+    reach = 0.07 / u
+    out = []
+    for o in S.get("openings") or ():
+        (ux, uy), (nx, ny) = o["u"], o["n"]
+        mid = (o["o0"] + o["o1"]) / 2
+        for s_, jamb in ((o["s0"], o.get("start_jamb")), (o["s1"], o.get("end_jamb"))):
+            if jamb != "COLUMN_JAMB":
+                continue
+            pt = (ux * s_ + nx * mid, uy * s_ + ny * mid)
+            if any(min(AP._d_point_seg(pt, poly[i - 1], poly[i]) for i in range(len(poly))) <= reach
+                   for poly in S.get("column_polys") or ()):
+                out.append(o["opening_id"])
+    return sorted(set(out))
+
+
+def _review_targets(arch):
+    """the spaces under classification review (no room type) with their geometry and plausible classifications."""
+    sm = {s["space_id"]: s for s in ((arch.get("space_model") or {}).get("spaces") or ())}
+    by_op = {(o["floor"], o["opening_id"]): o for o in arch.get("openings") or ()}
+    out = []
+    for r in arch["rooms"]:
+        issue = str(r.get("issue") or "")
+        kind = next((k for k in WET_REVIEW_KINDS if issue.startswith(k)), None) or \
+            ("UNLABELLED_SPACE" if r["class"] == "UNLABELLED" and "UNLABELLED_SPACE" in issue else None)
+        if r["class"] != "UNLABELLED" or kind is None:
+            continue
+        node = sm.get(r["room_id"]) or {}
+        sym = r.get("symbols_inside") or {}
+        ops = [by_op[(r["floor"], i)] for i in r["doors"] + r["windows"] + r["passages"] if (r["floor"], i) in by_op]
+        if kind == "UNLABELLED_SPACE":
+            plausible, basis = [], ("NOT_ESTABLISHED: no fixture, water-closet shape or room word says what the "
+                                    "space is (a store, a duct, an open court ...): nothing is released")
+        elif sym.get("stair_flights") or sym.get("void_symbols"):
+            plausible, basis = [], "NOT_ESTABLISHED: a stair or a void is drawn inside: the space may be unfinished"
+        elif node.get("interior_status") in ("EXTERIOR", "POSSIBLY_EXTERIOR"):
+            plausible, basis = [], (f"NOT_ESTABLISHED: the space may be exterior ({node.get('interior_status')}): "
+                                    "its ceiling and finishes depend on it")
+        else:
+            plausible = [{"scenario": n, "codes": list(c), "why": w} for n, c, w in REVIEW_SCENARIOS]
+            basis = ("a sanitary fixture or a water-closet shape is drawn inside an enclosed space reached by "
+                     f"{len(r['doors'])} door(s) (space model: {node.get('interior_status') or 'UNKNOWN'}): a W.C. / "
+                     "wash room (wet scope) or a lobby / wash area (dry scope); unfinished and exterior readings have "
+                     "no evidence")
+        out.append({"floor": r["floor"], "room_id": r["room_id"], "face_id": r["face_id"],
+                    "region_id": r.get("region_id"), "issue_code": kind, "issue": issue,
+                    "plausible": plausible, "plausible_basis": basis,
+                    "geometry": {"area_m2": r["area_m2"], "gross_m2": r["gross_m2"],
+                                 "obstruction_m2": r["obstruction_m2"], "perimeter_lm": r["perimeter_lm"],
+                                 "wall_run_lm": round(r["runs_lm"].get("perimeter", 0.0) -
+                                                      (r["runs_lm"].get("zone_line") or 0.0), 6),
+                                 "openings": [{"opening_id": o["opening_id"], "kind": o["kind"], "width_m": o["width_m"],
+                                               "wall_t_m": o["wall_t_m"]} for o in ops],
+                                 "ceiling_plan_m2": round(max(r["area_m2"] - (r.get("void_m2") or 0.0) -
+                                                              (r.get("double_height_m2") or 0.0), 0.0), 6),
+                                 "double_height_m2": r.get("double_height_m2") or 0.0,
+                                 "dims": r.get("dims")}})
+    return out
+
+
+def _key(ln):
+    loc = ln.get("location") or {}
+    return (loc.get("floor"), loc.get("room_id"), ln["item_code"], ln.get("physical_element"), ln["unit"])
+
+
+def _rule_of(ln):
+    return (ln.get("rule") or {}).get("rule_id")
+
+
+def _review_release(targets, scen):
+    """UP-REVIEW-001: per review space, the lines of its own location in every scenario run; a line is released when
+    every scenario has it once with the same quantity, range, state and rule, and its system does not depend on the
+    classification (plaster: the wall finish over it the same in every scenario). -> (release {(floor, face_id):
+    [scenario line]}, analysis {room_id: {"released", "not_released"}})."""
+    release, analysis = {}, {}
+    names = [n for n, _c, _w in REVIEW_SCENARIOS]
+    for tg in targets:
+        if not tg["plausible"]:
+            continue
+        if any(scen.get(n) is None for n in names):
+            analysis[tg["room_id"]] = {"released": [], "not_released": [
+                {"item_code": "*", "element": "*", "reason": "SCENARIO_NOT_MEASURABLE"}]}
+            continue
+        per = {}
+        for n in names:
+            mine = [ln for ln in scen[n]["lines"] if (ln.get("location") or {}).get("room_id") == tg["room_id"]]
+            per[n] = {}
+            for ln in mine:
+                per[n].setdefault((ln["item_code"], ln.get("physical_element"), ln["unit"]), []).append(ln)
+        finishes = {n: sorted({k[0] for k in per[n] if k[0] in WALL_FINISH_CODES}) for n in names}
+        keys = sorted(set().union(*[set(per[n]) for n in names]), key=lambda k: (k[0], str(k[1]), k[2]))
+        rel, notr = [], []
+        for k in keys:
+            got = [per[n].get(k) or [] for n in names]
+            if any(len(g) != 1 for g in got):
+                notr.append({"item_code": k[0], "element": k[1], "reason": "ONLY_IN_SOME_SCENARIOS" if
+                             any(not g for g in got) else "REPEATED_IN_A_SCENARIO"})
+                continue
+            ls = [g[0] for g in got]
+            if any(ln.get("measured_net") != ls[0].get("measured_net") or
+                   ln.get("bounded_range") != ls[0].get("bounded_range") for ln in ls):
+                notr.append({"item_code": k[0], "element": k[1], "reason": "QUANTITY_DIFFERS"})
+            elif any(_rule_of(ln) != _rule_of(ls[0]) for ln in ls):
+                notr.append({"item_code": k[0], "element": k[1], "reason": "RULE_DIFFERS"})
+            elif any(ln["evidence_state"] != ls[0]["evidence_state"] for ln in ls):
+                notr.append({"item_code": k[0], "element": k[1], "reason": "STATE_DIFFERS"})
+            elif k[0] == "FIN.PLASTER" and len({tuple(v) for v in finishes.values()}) > 1:
+                notr.append({"item_code": k[0], "element": k[1], "reason": "SYSTEM_DEPENDS_ON_WALL_FINISH",
+                             "detail": {n: v for n, v in finishes.items()}})
+            elif not k[0].startswith("FIN."):
+                # only the space's own finish surfaces are released: a door / opening / count line is measured
+                # elsewhere in the main BOQ (it may sit at another room there)
+                notr.append({"item_code": k[0], "element": k[1], "reason": "NOT_A_FINISH_OF_THE_SPACE"})
+            else:
+                rel.append(ls[0])
+        if rel:
+            release[(tg["floor"], tg["face_id"])] = rel
+        analysis[tg["room_id"]] = {"released": [(ln["item_code"], ln.get("physical_element"), ln["unit"])
+                                                for ln in rel], "not_released": notr}
+    return release, analysis
+
+
+def _released_lines(release, floor, rooms, ctx):
+    """the released lines of this floor's review spaces: the scenario line itself (its id is the space's: the same room
+    id, element, rule and unit) with the space's own names and the release note."""
+    import copy
+    out = []
+    for r in rooms:
+        for ln in release.get((floor, r["face_id"])) or ():
+            x = copy.deepcopy(ln)
+            x["location"] = dict(x["location"], room_name_en=r["name_en"], room_name_ar=r["name_ar"])
+            x["notes"] = "; ".join(y for y in (
+                "CLASSIFICATION_INVARIANT (UP-REVIEW-001): identical under every plausible classification of this "
+                "review space (" + ", ".join(n for n, _c, _w in REVIEW_SCENARIOS) + "); the space's type stays under "
+                "review", ln.get("notes") or "") if y)
+            x["source"] = dict(x["source"], documents=list(ctx["documents"]))
+            out.append(x)
+    return out
+
+
+def _opening_ids_of(ln):
+    loc = ln.get("location") or {}
+    text = " ".join(str(x) for x in (loc.get("room_id"), loc.get("element_id"), loc.get("room_name_en"),
+                                     ln.get("physical_element")))
+    return set(re.findall(r"OP-\d+", text))
+
+
+def _conditional(tg, scen_lines, main_lines):
+    """the scenario's lines that differ from the main BOQ at the review space and its openings: ADDED (only in the
+    scenario), REMOVED (only in the main BOQ), CHANGED (another quantity / state)."""
+    ops = {o["opening_id"] for o in tg["geometry"]["openings"]}
+
+    def mine(ln):
+        loc = ln.get("location") or {}
+        if loc.get("room_id") == tg["room_id"] and ln["item_code"] == "ARCH.SPACE":
+            return False                    # the space's own area record: a scenario measures the space as a room
+        return loc.get("floor") == tg["floor"] and (loc.get("room_id") == tg["room_id"] or _opening_ids_of(ln) & ops)
+    a = {}
+    for ln in main_lines:
+        if mine(ln):
+            a.setdefault(_key(ln), []).append(ln)
+    b = {}
+    for ln in scen_lines:
+        if mine(ln):
+            b.setdefault(_key(ln), []).append(ln)
+    out = []
+    for k in sorted(set(a) | set(b), key=lambda k: tuple(str(x) for x in k)):
+        la, lb = a.get(k) or [], b.get(k) or []
+        qa = [(x.get("measured_net"), x.get("bounded_range"), x["evidence_state"]) for x in la]
+        qb = [(x.get("measured_net"), x.get("bounded_range"), x["evidence_state"]) for x in lb]
+        if qa == qb:
+            continue
+        sq = sum(x.get("measured_net") or 0.0 for x in lb) if lb and any(x.get("measured_net") is not None
+                                                                          for x in lb) else None
+        mq = sum(x.get("measured_net") or 0.0 for x in la) if la and any(x.get("measured_net") is not None
+                                                                          for x in la) else None
+        rng = next((x.get("bounded_range") for x in lb if x.get("bounded_range")), None)
+        out.append({"floor": k[0], "room_id": k[1], "item_code": k[2], "element": k[3], "unit": k[4],
+                    "change": "ADDED" if not la else ("REMOVED" if not lb else "CHANGED"),
+                    "quantity": None if sq is None else round(sq, 6),
+                    "low": (rng or {}).get("low"), "high": (rng or {}).get("high"),
+                    "evidence_state": lb[0]["evidence_state"] if lb else None,
+                    "rule_id": _rule_of(lb[0]) if lb else None,
+                    "main_quantity": None if mq is None else round(mq, 6),
+                    "main_evidence_state": la[0]["evidence_state"] if la else None})
+    return out
+
+
+def _v271_outputs(room_boq, arch, targets, scen, analysis):
+    """the review spaces, the door-standard reconciliation, the release report and the V2.7.1 correction records."""
+    from engine.source import door_standards as DSTD
+    from engine.source import knowledge as K
+    lines = room_boq["lines"]
+    by_id = {r["room_id"]: r for r in arch["rooms"]}
+    spaces = []
+    for tg in targets:
+        rid = tg["room_id"]
+        an = analysis.get(rid) or {"released": [], "not_released": []}
+        rel_lines = [ln for ln in lines if (ln.get("location") or {}).get("room_id") == rid and
+                     "CLASSIFICATION_INVARIANT" in (ln.get("notes") or "")]
+        cond = {}
+        doors = {}
+        for n, _c, _w in REVIEW_SCENARIOS:
+            if not tg["plausible"] or not scen.get(n):
+                cond[n] = []
+                continue
+            cond[n] = _conditional(tg, scen[n]["lines"], lines)
+            ops = {o["opening_id"] for o in tg["geometry"]["openings"]}
+            doors[n] = [{"opening_id": d.get("opening_id"), "category": d["category"],
+                         "owner_minimum_m": (d.get("opening_record") or {}).get("owner_minimum_m")}
+                        for d in scen[n]["doors"] if d["floor"] == tg["floor"] and d.get("opening_id") in ops]
+        spaces.append({**{k: tg[k] for k in ("floor", "room_id", "face_id", "issue_code", "plausible",
+                                             "plausible_basis", "geometry")},
+                       "name_en": (by_id.get(rid) or {}).get("name_en"),
+                       "released": [{"line_id": ln["line_id"], "item_code": ln["item_code"],
+                                     "element": ln.get("physical_element"), "unit": ln["unit"],
+                                     "quantity": ln.get("measured_net"), "evidence_state": ln["evidence_state"],
+                                     "why": "identical under every plausible classification (same quantity, state, "
+                                            "rule; a classification-independent system)"} for ln in rel_lines],
+                       "not_released": an["not_released"], "conditional": cond, "doors_by_scenario": doors,
+                       "never": "the scenarios added together or to the main BOQ"})
+    arch["review_spaces"] = {"policy": "URBAN_REVIEW_SPACES_V1", "rule": "UP-REVIEW-001",
+                             "scenarios": [{"scenario": n, "codes": list(c), "why": w} for n, c, w in REVIEW_SCENARIOS],
+                             "spaces": spaces,
+                             "summary": {"spaces": len(spaces),
+                                         "with_plausible_scenarios": sum(1 for s in spaces if s["plausible"]),
+                                         "released_lines": sum(len(s["released"]) for s in spaces),
+                                         "released_by_item": dict(Counter(x["item_code"] for s in spaces
+                                                                          for x in s["released"]))}}
+    recon = DSTD.reconciliation_v271((arch.get("door_scenarios") or {}).get("rows") or [], arch.get("openings") or [])
+    arch["door_reconciliation"] = recon
+    sets = []
+    for s in spaces:
+        if s["plausible"]:
+            sets.append({"set_id": f"REVIEW_CLASSIFICATION:{s['floor']}:{s['room_id']}", "kind": "REVIEW_CLASSIFICATION",
+                         "subject": s["room_id"], "depends_on": ["the space's classification (UP-WET-002)"],
+                         "scenarios": [n for n, _c, _w in REVIEW_SCENARIOS], "mutually_exclusive": True,
+                         "by_scenario": {n: _totals(s["conditional"][n]) for n, _c, _w in REVIEW_SCENARIOS}})
+    below = [d for d in recon["doors"] if (d["proposed_enlargement"]["STRUCTURAL_OPENING"]["m"] or 0) > 1e-6 or
+             (d["proposed_enlargement"]["DOOR_LEAF"].get("high_m_with_unconfirmed_allowance") or 0) > 1e-6]
+    if below:
+        sets.append({"set_id": "DOOR_OWNER_MINIMUM", "kind": "DOOR_OWNER_MINIMUM", "subject": "doors below the owner "
+                     "minimum on a reading", "depends_on": ["D-16"],
+                     "scenarios": ["STRUCTURAL_OPENING_READING", "DOOR_LEAF_READING"], "mutually_exclusive": True,
+                     "by_scenario": {
+                         "STRUCTURAL_OPENING_READING": {
+                             "doors": sum(1 for d in below if d["proposed_enlargement"]["STRUCTURAL_OPENING"]["m"]),
+                             "enlargement_m": round(sum(d["proposed_enlargement"]["STRUCTURAL_OPENING"]["m"] or 0
+                                                        for d in below), 6)},
+                         "DOOR_LEAF_READING": {
+                             "doors": len(below),
+                             "enlargement_m": {"low": round(sum(d["proposed_enlargement"]["DOOR_LEAF"]["low_m"] or 0
+                                                                for d in below), 6),
+                                               "high_with_unconfirmed_allowance": round(sum(
+                                                   d["proposed_enlargement"]["DOOR_LEAF"]
+                                                   ["high_m_with_unconfirmed_allowance"] or 0 for d in below), 6)}}},
+                     "note": "proposed modifications, not approved: never in the main BOQ"})
+    arch["boq_scenarios"]["REVIEW_CLASSIFICATION"] = {"what": "the conditional quantities of each review space per "
+                                                              "plausible classification (UP-REVIEW-001)",
+                                                      "sets": [x for x in sets if x["kind"] == "REVIEW_CLASSIFICATION"]}
+    arch["release_report"] = _release_report(lines, sets, arch.get("owner_questions"))
+    log = arch["v27"]["corrections"]
+    for s in spaces:
+        for x in s["released"]:
+            log.append({"correction": "REVIEW_INVARIANT_RELEASE", "floor": s["floor"], "region_id": "-",
+                        "subject": s["room_id"], "decision": "RELEASED_INVARIANT_QUANTITY",
+                        "detail": {"item_code": x["item_code"], "element": x["element"], "quantity": x["quantity"],
+                                   "scenarios": [n for n, _c, _w in REVIEW_SCENARIOS]}})
+    for rec in arch.get("v271_turned") or ():
+        log.append(rec)
+    # the V2.7.1 records continue the run's numbering (after every V2.7 correction and refusal)
+    n = max([int(x["id"][4:]) for x in log + (arch["v27"].get("refusals") or []) if x.get("id")] or [0])
+    for x in log:
+        if not x.get("id"):
+            n += 1
+            x["id"] = f"C27-{n:04d}"
+    arch["v27"]["summary"]["corrections"] = dict(Counter(c["correction"] for c in log))
+    run = arch["run"]
+    run.update(policy=ARCH_POLICY_ID_V271)
+    run["v2_7_1"] = {"corrections": list(V271_CORRECTIONS), "knowledge": V271_KNOWLEDGE,
+                     "review_spaces": arch["review_spaces"]["summary"], "door_reconciliation": recon["summary"],
+                     "release_report": arch["release_report"]["conservation"],
+                     "scenario_runs": sorted(n for n, v in scen.items() if v is not None)}
+    run["policies"]["knowledge_1_3_0"] = K.policy_record()
+
+
+def _totals(entries):
+    t = {}
+    for c in entries:
+        k = f"{c['item_code']} [{c['unit']}]"
+        t[k] = round(t.get(k, 0.0) + (c["quantity"] or 0.0) - (c["main_quantity"] or 0.0), 6)
+    return {k: v for k, v in sorted(t.items()) if abs(v) > 1e-9}
+
+
+HELD_CLASS = {"B_MISSING_DRAWING_EVIDENCE": "REQUIRES_DRAWING_EVIDENCE", "C_RULE_CONFLICT": "REQUIRES_OWNER_DECISION",
+              "D_MISSING_OWNER_POLICY": "REQUIRES_OWNER_DECISION", "E_ENGINEERING_DEFECT": "ENGINEERING_REVIEW",
+              "A_ESTABLISHED": "ENGINEERING_REVIEW"}
+
+
+def _release_report(lines, sets, questions=None):
+    """UP-QTY-STATUS-001: every BOQ line once - CONFIRMED (a quantity), HELD (a range or no quantity, with its reason
+    class from the question catalogue), EXCLUDED (not applicable, with its reason) - and the CONDITIONAL scenario sets,
+    never in a confirmed total."""
+    from engine.source import knowledge as K
+    cats = {"CONFIRMED": [], "HELD": [], "EXCLUDED": []}
+    for ln in sorted(lines, key=lambda x: (str((x.get("location") or {}).get("floor")),
+                                           str((x.get("location") or {}).get("room_id")), x["item_code"],
+                                           str(x.get("physical_element")), x["line_id"])):
+        loc = ln.get("location") or {}
+        base = {"line_id": ln["line_id"], "item_code": ln["item_code"], "floor": loc.get("floor"),
+                "room_id": loc.get("room_id"), "element": ln.get("physical_element"), "unit": ln["unit"],
+                "evidence_state": ln["evidence_state"],
+                "nature": "GEOMETRY_RECORD" if ln["item_code"].startswith("ARCH.") else "BOQ_ITEM"}
+        ev = ln["evidence_state"]
+        if ev in BL.QUANTITY_STATES and ln.get("measured_net") is not None:
+            cats["CONFIRMED"].append(dict(base, quantity=ln["measured_net"]))
+        elif ev in ("NOT_APPLICABLE_WITH_EVIDENCE", "EXCLUDED_WITH_REASON"):
+            cats["EXCLUDED"].append(dict(base, reason=(ln.get("notes") or (ln.get("calculation") or {})
+                                                       .get("formula") or ev)))
+        else:
+            q = ((ln.get("rfi") or {}).get("question") or (ln.get("bounded_range") or {}).get("basis") or
+                 ln.get("notes") or "")
+            c = K.classify_question({"item": ln["item_code"], "reason": q})
+            rng = ln.get("bounded_range") or {}
+            cats["HELD"].append(dict(base, low=rng.get("low"), high=rng.get("high"),
+                                     reason_class=HELD_CLASS.get((c or {}).get("category"), "ENGINEERING_REVIEW"),
+                                     question_group=(c or {}).get("group"), reason=q[:400]))
+    tot = {}
+    for x in cats["CONFIRMED"]:
+        k = (x["item_code"], x["unit"], x["evidence_state"])
+        tot[k] = tot.get(k, 0.0) + x["quantity"]
+    ids = [x["line_id"] for c in cats.values() for x in c]
+    held_by = Counter(x["reason_class"] for x in cats["HELD"])
+    return {"policy": "URBAN_BOQ_RELEASE_REPORT_V1", "rule": "UP-QTY-STATUS-001",
+            "categories": {"CONFIRMED": {"lines": cats["CONFIRMED"],
+                                         "totals": [{"item_code": c, "unit": u_, "evidence_state": s,
+                                                     "quantity": round(q, 6)} for (c, u_, s), q in sorted(tot.items())]},
+                           "CONDITIONAL": {"scenario_sets": sets},
+                           "HELD": {"lines": cats["HELD"], "by_reason_class": dict(sorted(held_by.items())),
+                                    "ranges": {"low": round(sum(x["low"] or 0 for x in cats["HELD"]
+                                                                if x["low"] is not None), 6),
+                                               "high": round(sum(x["high"] or 0 for x in cats["HELD"]
+                                                                 if x["high"] is not None), 6),
+                                               "note": "summed over units: a count of exposure, never a quantity"}},
+                           "EXCLUDED": {"lines": cats["EXCLUDED"],
+                                        "by_item": dict(Counter(x["item_code"] for x in cats["EXCLUDED"]))}},
+            "conservation": {"boq_lines": len(lines), "confirmed": len(cats["CONFIRMED"]), "held": len(cats["HELD"]),
+                             "excluded": len(cats["EXCLUDED"]), "conditional_sets": len(sets),
+                             "every_line_once": sorted(ids) == sorted(ln["line_id"] for ln in lines) and
+                             len(set(ids)) == len(ids)},
+            "never": ["a conditional quantity added to a confirmed total",
+                      "two scenarios of one set added together", "a line in two categories",
+                      "an unsupported quantity reported as zero"]}
+
+
+V271_CORRECTIONS = (
+    "D-V271-01 review spaces (UP-REVIEW-001): measured under every plausible classification; the quantities identical "
+    "in all of them (same quantity, state and rule, a classification-independent system) released, the rest kept as "
+    "conditional scenario quantities (REVIEW_SPACES.json), never added together",
+    "D-V271-02 the BOQ release report (UP-QTY-STATUS-001): every line once as CONFIRMED / HELD (with its reason "
+    "class) / EXCLUDED, the scenario sets CONDITIONAL (BOQ_RELEASE_REPORT.json / .csv)",
+    "D-V271-03 the door-standard reconciliation (UP-DOOR-OPEN-003 1.3.0): as-drawn wall opening, measured jamb span, "
+    "leaf, finished clear width, owner minimum, evidenced allowance only, proposed enlargement inside or beyond the "
+    "drawn gap, consultant / structural review (DOOR_STANDARD_RECONCILIATION.json / .csv); nothing applied",
+    "D-V271-04 water closets drawn as linework (UP-WET-002 1.3.0): the cistern on a wall face, a pan-width bowl, a "
+    "round bowl centred on its cistern; every rejected candidate named",
+    "D-V271-05 a basin block's own linework matched through the insert path of every entity drawn inside it (L-P7-03)",
+    "D-V271-06 turned columns are jambs and wall interruptions (UP-COL-ORIENT-001)",
+    "D-V271-07 doorway-strip lines traced to their strip faces and door closures; every untraced line says why")
+
+
 def _v23_outputs(arch, room_boq, rooms, openings, doors, facts, decisions, decided, possibly_ext, shafts, method,
                  unresolved, drawing=None):
     """Phase 2B-1: the space model, the door scenarios (AS_DRAWN / OWNER_REQUIRED / UNRESOLVED), the elevator
@@ -810,7 +1248,7 @@ def _v23_outputs(arch, room_boq, rooms, openings, doors, facts, decisions, decid
                        "bound": sorted({d["id"] for d in by_face.values()}),
                        "unbound": [d.get("id") for d in SMOD.unbound(decisions, {d["id"] for d in by_face.values()})]}
     arch["space_model"] = sm
-    v27 = method == V27
+    v27 = method in V27_FAMILY
     arch["door_scenarios"] = DSTD.door_scenarios(doors, facts, openings=openings, rooms=rooms,
                                                  **({"v27": True} if v27 else {}))
     if v27:
@@ -1178,7 +1616,7 @@ def _v24_manifest(out, names, arch):
     import hashlib
     sh, k = arch["rules_sheet"], arch["run"]["v2_4"]["knowledge"]
     return {"policy": {V25: "URBAN_OUTPUT_MANIFEST_V2_5", V26: "URBAN_OUTPUT_MANIFEST_V2_6",
-                       V27: "URBAN_OUTPUT_MANIFEST_V2_7"}.get(
+                       V27: "URBAN_OUTPUT_MANIFEST_V2_7", V271: "URBAN_OUTPUT_MANIFEST_V2_7_1"}.get(
                 arch["run"]["method"], "URBAN_OUTPUT_MANIFEST_V2_4"),
             "method": arch["run"]["method"],
             "rules_sheet": {"schema": sh["schema"], "rules_sha256": sh["rules_sha256"],
@@ -1385,6 +1823,14 @@ def v21_files(arch):
         files["BOQ_SCENARIOS.json"] = _j({"run": run, "scenarios": arch["boq_scenarios"]})
     if arch.get("v27") is not None:                            # ARCH_TAKEOFF_V2.7
         files["CORRECTIONS_V2_7.json"] = _j({"run": run, **arch["v27"]})
+    if arch.get("release_report") is not None:                 # ARCH_TAKEOFF_V2.7.1
+        from engine.source import door_standards as DSTD
+        files["REVIEW_SPACES.json"] = _j({"run": run, **arch["review_spaces"]})
+        files["BOQ_RELEASE_REPORT.json"] = _j({"run": run, **arch["release_report"]})
+        files["BOQ_RELEASE_REPORT.csv"] = _csv(_release_rows(arch["release_report"]), RELEASE_COLUMNS)
+        files["DOOR_STANDARD_RECONCILIATION.json"] = _j({"run": run, **arch["door_reconciliation"]})
+        files["DOOR_STANDARD_RECONCILIATION.csv"] = _csv(DSTD.reconciliation_csv_rows(arch["door_reconciliation"]),
+                                                         DSTD.RECON_COLUMNS)
     if arch.get("traceability") is not None:                    # ARCH_TAKEOFF_V2.5
         from engine.source import traceability as TR
         files["BOQ_TRACEABILITY.json"] = _j({"run": run, "traceability": arch["traceability"]})
@@ -1411,6 +1857,26 @@ def v21_files(arch):
         files["APPROVALS_REQUIRED.json"] = _j({"run": run, "approvals": arch["approvals"]})
         files["ENGINEERING_SUMMARY.json"] = _j({"run": run, "summary": arch["engineering_summary"]})
     return files
+
+
+RELEASE_COLUMNS = ("category", "line_id", "floor", "room_id", "item_code", "element", "unit", "quantity", "low", "high",
+                   "evidence_state", "nature", "reason_class", "reason")
+
+
+def _release_rows(rep):
+    rows = []
+    for cat in ("CONFIRMED", "HELD", "EXCLUDED"):
+        for x in rep["categories"][cat]["lines"]:
+            rows.append({"category": cat, **{k: x.get(k) for k in RELEASE_COLUMNS if k != "category"}})
+    for s in rep["categories"]["CONDITIONAL"]["scenario_sets"]:
+        for sc, tot in s["by_scenario"].items():
+            for k, v in (tot.items() if isinstance(tot, dict) else ()):
+                rows.append({"category": "CONDITIONAL", "line_id": s["set_id"], "floor": None, "room_id": s["subject"],
+                             "item_code": k, "element": sc, "unit": None,
+                             "quantity": v if not isinstance(v, dict) else None, "low": None, "high": None,
+                             "evidence_state": None, "nature": s["kind"], "reason_class": None,
+                             "reason": "depends on " + ", ".join(s["depends_on"])})
+    return rows
 
 
 WP_COLUMNS = ("room_id", "floor", "scope", "system_id", "A_net_horizontal_m2", "eligible_upturn_lm", "upturn_h_m",
@@ -1472,7 +1938,8 @@ PUBLISHED = ("BOQ_LINES.json", "BOQ_LINES.csv", "MATERIAL_RESULTS.json", "COVERA
              "WATERPROOFING_SCHEDULE.csv", "MEMBRANE_CUTTING_PLAN.json", "DOOR_FEASIBILITY.json", "DOOR_FEASIBILITY.csv",
              "APPROVALS_REQUIRED.json", "ENGINEERING_SUMMARY.json", "OUTPUT_MANIFEST.json",
              "MEMBRANE_PIECE_PLAN.json", "MEMBRANE_PIECE_PLAN.csv", "WP_INSTALLATION.json", "WP_INSTALLATION.csv",
-             "CORRECTIONS_V2_7.json")
+             "CORRECTIONS_V2_7.json", "REVIEW_SPACES.json", "BOQ_RELEASE_REPORT.json", "BOQ_RELEASE_REPORT.csv",
+             "DOOR_STANDARD_RECONCILIATION.json", "DOOR_STANDARD_RECONCILIATION.csv")
 
 
 def _supersede(out):
@@ -1519,30 +1986,30 @@ def cmd_arch(a):
     facts = json.loads(Path(a.facts).read_text(encoding="utf-8")) if a.facts else None
     decisions = None
     if getattr(a, "decisions", None):
-        if a.method not in (V23, V24, V25, V26, V27):
+        if a.method not in (V23, V24, V25, V26, V27, V271):
             raise SystemExit("--decisions (project decisions, URBAN_PROJECT_DECISIONS_V1) needs --method "
-                             "ARCH_TAKEOFF_V2.3, ARCH_TAKEOFF_V2.4, ARCH_TAKEOFF_V2.5, ARCH_TAKEOFF_V2.6 or "
-                             "ARCH_TAKEOFF_V2.7")
+                             "ARCH_TAKEOFF_V2.3, ARCH_TAKEOFF_V2.4, ARCH_TAKEOFF_V2.5, ARCH_TAKEOFF_V2.6, "
+                             "ARCH_TAKEOFF_V2.7 or ARCH_TAKEOFF_V2.7.1")
         decisions = json.loads(Path(a.decisions).read_text(encoding="utf-8"))
         if decisions.get("schema") != "URBAN_PROJECT_DECISIONS_V1":
             raise SystemExit("--decisions: schema must be URBAN_PROJECT_DECISIONS_V1")
     project_rules = None
     if getattr(a, "project_rules", None):
-        if a.method not in (V24, V25, V26, V27):
+        if a.method not in (V24, V25, V26, V27, V271):
             raise SystemExit("--project-rules (URBAN_PROJECT_RULES_V1) needs --method ARCH_TAKEOFF_V2.4, "
-                             "ARCH_TAKEOFF_V2.5, ARCH_TAKEOFF_V2.6 or ARCH_TAKEOFF_V2.7")
+                             "ARCH_TAKEOFF_V2.5, ARCH_TAKEOFF_V2.6, ARCH_TAKEOFF_V2.7 or ARCH_TAKEOFF_V2.7.1")
         project_rules = json.loads(Path(a.project_rules).read_text(encoding="utf-8"))
     independent_checks = None
     if getattr(a, "independent_checks", None):
-        if a.method not in (V25, V26, V27):
+        if a.method not in (V25, V26, V27, V271):
             raise SystemExit("--independent-checks (URBAN_INDEPENDENT_CHECKS_V1) needs --method ARCH_TAKEOFF_V2.5, "
-                             "ARCH_TAKEOFF_V2.6 or ARCH_TAKEOFF_V2.7")
+                             "ARCH_TAKEOFF_V2.6, ARCH_TAKEOFF_V2.7 or ARCH_TAKEOFF_V2.7.1")
         independent_checks = json.loads(Path(a.independent_checks).read_text(encoding="utf-8"))
     roles = _kv(a.layer_roles, "--layer-roles")
     refs = {k: float(v) for k, v in _kv(a.reference_areas, "--reference-areas").items()}
     out = Path(a.out)
     conversions = []
-    v2 = a.method in (V2, V21, V22, V23, V24, V25, V26, V27)
+    v2 = a.method in (V2, V21, V22, V23, V24, V25, V26, V27, V271)
     admit = v2 or a.strict_admission
     if not admit and (a.units or a.region or a.accept_missing_xref):
         raise SystemExit("--units / --region / --accept-missing-xref are reviewer inputs of the admission: use them "

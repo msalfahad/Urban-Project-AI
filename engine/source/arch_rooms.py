@@ -981,9 +981,13 @@ def closure_in_passage(seg, passages, unit_m, fit_m=DOOR_LEAF_FIT_M):
 
 
 def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, release_safety=False,
-           door_review=False, v27=False):
+           door_review=False, v27=False, v271=None):
     """v27 (ARCH_TAKEOFF_V2.7 only): column rectangles of any orientation, the door's structural opening from its own
     jamb lines and arc-aware face polygons (engine.source.arch_v27); False is the V1 .. V2.6 path, unchanged.
+    v271 (ARCH_TAKEOFF_V2.7.1 only, with v27): a dict - the turned columns are obstacles of the band-opening search
+    (UP-COL-ORIENT-001), the wet-room evidence takes the 1.3.0 WC profile and the basin's own linework by insert path,
+    and v271["scenario"] ({"name", "codes"}, a review-scenario run only) types every space under wet-classification
+    review with the scenario's codes (UP-REVIEW-001); None is the V2.7 path, unchanged.
     geom (ARCH_TAKEOFF_V2.1 only): an engine.source.robust_geometry.Geometry for the band openings; None is the
     V1 / V2 path, unchanged. release_safety (ARCH_TAKEOFF_V2.2 only): every face also carries its boundary_detail
     (engine.source.release_safety); False is the V1 / V2 / V2.1 path, unchanged. door_review (ARCH_TAKEOFF_V2.6
@@ -1007,12 +1011,15 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, re
         added = [x for x in boxes if not any(all(abs(p - q) <= same for p, q in zip(x, c)) for c in cols)]
         cols = cols + added
         v27rec = {"columns": {"boxes": len(cols), "added": len(added), "turned": len(col_polys)}, "jamb": []}
+        if v271 is not None:                             # ARCH_TAKEOFF_V2.7.1
+            v27rec["v271"] = v271
     if geom is None:
         ops, rej = LM.openings(ents["segments"], unit_m, wall_l, cols, tol=tol)
     else:
         from engine.source import robust_geometry as RG
         geom.context = f"{region_id}"
-        ops, rej = RG.openings(ents["segments"], unit_m, wall_l, cols, tol=tol, geom=geom)
+        ops, rej = RG.openings(ents["segments"], unit_m, wall_l, cols, tol=tol, geom=geom,
+                               **({"column_polys": col_polys} if v271 is not None else {}))
     swings = door_swings(ents, door_l, unit_m, **({"path": True} if v27 else {}))
     win_segs = [s for s in ents["segments"] if s["layer"] in win_l]
     served = match_swings(ops, swings, unit_m)
@@ -1403,8 +1410,20 @@ def _evidence(faces, ents, roles, unit_m, v27=None):
         if f["class"] == "UNLABELLED" and v27 is not None and len({t["code"] for t in tags}) != 1:
             # ARCH_TAKEOFF_V2.7 (UP-WET-002, arch_v27.wet_evidence): a basin alone never types a space wet
             from engine.source import arch_v27 as V27
-            codes, src, issue, rec = V27.wet_evidence(f, fixtures, layer_ev, ents, roles, unit_m, inside)
+            v271 = v27.get("v271")
+            codes, src, issue, rec = V27.wet_evidence(f, fixtures, layer_ev, ents, roles, unit_m, inside,
+                                                      **({"v271": True} if v271 is not None else {}))
             v27.setdefault("wet", {})[f["face_id"]] = rec
+            scn = (v271 or {}).get("scenario")
+            sym = f.get("symbols_inside") or {}
+            if scn and codes is None and not sym.get("stair_flights") and not sym.get("void_symbols"):
+                # ARCH_TAKEOFF_V2.7.1 (UP-REVIEW-001): a review-scenario run measures the space as the scenario's type
+                f.update(codes=list(scn["codes"]), label_source="SCENARIO:" + scn["name"],
+                         issue=f"REVIEW_SCENARIO {scn['name']} (UP-REVIEW-001): measured as "
+                               f"{'+'.join(scn['codes'])} for the scenario only; " + issue)
+                f["class"] = "ROOM"
+                rec["scenario"] = scn["name"]
+                continue
             if codes is not False:
                 if codes:
                     f.update(codes=codes, label_source=src, issue=issue)

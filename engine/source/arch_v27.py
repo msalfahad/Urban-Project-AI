@@ -837,12 +837,125 @@ def wc_shapes(segs, arcs, unit_m, wall_segs=()):
     return out
 
 
-def wet_evidence(face, fixtures, layer_ev, ents, roles, unit_m, inside):
+# ARCH_TAKEOFF_V2.7.1 (Phase 2B-8, UP-WET-002 1.3.0): the WC linework profile. A pan's cistern stands on a wall face
+# (the flush and the soil connection); its bowl is no wider than a pan; a round bowl is centred on its cistern. Loops
+# beyond the profile are tried and named, so a weak resemblance is reported, never typed.
+PAN_WIDTH_M = (0.32, 0.42)            # the bowl's width, elliptical or round (a seat is wider)
+CISTERN_ON_WALL_M = 0.10              # the cistern within this of a wall-layer segment
+ROUND_CENTRE_M = 0.05                 # a round bowl's centre within this of the cistern's centre line
+CAND_SHORT_M = (0.25, 0.70)           # the curved loops tried as bowls ...
+CAND_LONG_M = (0.25, 0.90)            # ... (outside the profile: a named rejection)
+
+
+def _circle_pts(c, n=24):
+    return [(c["c"][0] + c["r"] * math.cos(2 * math.pi * k / n), c["c"][1] + c["r"] * math.sin(2 * math.pi * k / n))
+            for k in range(n)]
+
+
+def wc_shapes_v271(segs, arcs, circles, unit_m, wall_segs=()):
+    """ARCH_TAKEOFF_V2.7.1: water closets drawn as linework under the 1.3.0 profile. Every curved loop or circle
+    touching a cistern-sized rectangle is a candidate; it is a WC when its cistern stands on a wall face, an elongated
+    bowl is a pan's width and length, and a round bowl is a pan's width and centred on its cistern.
+    -> (accepted [{"bowl_ids", "cistern_ids", "bowl_m", "cistern_m", "against_wall", "bowl_shape"}],
+        rejected [{"bowl_ids", "cistern_ids", "bowl_m", "reason"}])."""
+    loops = _loops(segs, arcs, unit_m)
+    bowls, cisterns = [], []
+    for lp in loops:
+        f = _frame(lp["points"])
+        L, S = f["long"] * unit_m, f["short"] * unit_m
+        if lp["vertices"] == 4 and not lp["has_arc"] and CISTERN_SHORT_M[0] <= S <= CISTERN_SHORT_M[1] and \
+                CISTERN_LONG_M[0] <= L <= CISTERN_LONG_M[1]:
+            cisterns.append((lp, f))
+        elif (lp["vertices"] >= BOWL_MIN_VERTICES or lp["has_arc"]) and CAND_SHORT_M[0] <= S <= CAND_SHORT_M[1] and \
+                CAND_LONG_M[0] <= L <= CAND_LONG_M[1]:
+            shape = "ELLIPTICAL" if L / max(S, 1e-9) >= BOWL_ASPECT[0] else "ROUND"
+            bowls.append((lp["ids"], shape, f, None))
+    for c in circles:
+        d = 2 * c["r"] * unit_m
+        if CAND_SHORT_M[0] <= d <= CAND_SHORT_M[1]:
+            pts = _circle_pts(c)
+            f = dict(_frame(pts), c=tuple(c["c"]), long=2 * c["r"], short=2 * c["r"])
+            bowls.append(([c["id"]], "ROUND", f, c))
+    touch = WC_TOUCH_M / unit_m
+    accepted, rejected = [], []
+    for ids, shape, bf, circ in bowls:
+        for cl, cf in cisterns:
+            cu, cv = cf["u"], (-cf["u"][1], cf["u"][0])
+            if shape == "ELLIPTICAL":
+                if abs(bf["u"][0] * cu[0] + bf["u"][1] * cu[1]) > WC_PERP_COS:
+                    continue
+                ends = []
+                for sgn in (1, -1):
+                    k = max(range(len(bf["pts"])), key=lambda i: sgn * ((bf["pts"][i][0] - bf["c"][0]) * bf["u"][0] +
+                                                                        (bf["pts"][i][1] - bf["c"][1]) * bf["u"][1]))
+                    ends.append(bf["pts"][k])
+                near = min(ends, key=lambda p: math.dist(p, cf["c"]))
+                du = (near[0] - cf["c"][0]) * cu[0] + (near[1] - cf["c"][1]) * cu[1]
+                dv = (near[0] - cf["c"][0]) * cv[0] + (near[1] - cf["c"][1]) * cv[1]
+                if abs(du) > cf["long"] / 2 + touch or abs(dv) > cf["short"] / 2 + touch:
+                    continue
+                if math.dist(bf["c"], cf["c"]) < (bf["long"] / 2 + cf["short"] / 2) * 0.8:
+                    continue
+                off = 0.0
+            else:
+                r = bf["short"] / 2
+                du = (bf["c"][0] - cf["c"][0]) * cu[0] + (bf["c"][1] - cf["c"][1]) * cu[1]
+                dv = (bf["c"][0] - cf["c"][0]) * cv[0] + (bf["c"][1] - cf["c"][1]) * cv[1]
+                # tangent to the cistern's long side (outside it), the centre's projection on the cistern
+                if abs(abs(dv) - (cf["short"] / 2 + r)) > touch or abs(du) > cf["long"] / 2:
+                    continue
+                off = abs(du) * unit_m
+            wall = any(min(AP._d_point_seg(p, s["a"], s["b"]) for p in cl["points"]) * unit_m <= CISTERN_ON_WALL_M
+                       for s in wall_segs)
+            bw, bl = bf["short"] * unit_m, bf["long"] * unit_m
+            why = []
+            if not wall:
+                why.append("CISTERN_NOT_ON_A_WALL")
+            if shape == "ELLIPTICAL":
+                if bw > PAN_WIDTH_M[1]:
+                    why.append("BOWL_WIDER_THAN_A_WC_PAN")
+                elif bw < PAN_WIDTH_M[0]:
+                    why.append("BOWL_NARROWER_THAN_A_WC_PAN")
+                if not BOWL_LONG_M[0] <= bl <= BOWL_LONG_M[1] or bl / max(bw, 1e-9) > BOWL_ASPECT[1]:
+                    why.append("BOWL_LENGTH_NOT_A_WC_PAN")
+            else:
+                if bw > PAN_WIDTH_M[1]:
+                    why.append("ROUND_BOWL_TOO_LARGE")
+                elif bw < PAN_WIDTH_M[0]:
+                    why.append("ROUND_BOWL_TOO_SMALL")
+                if off > ROUND_CENTRE_M:
+                    why.append("ROUND_BOWL_OFF_CISTERN_CENTRE")
+            rec = {"bowl_ids": sorted(ids), "cistern_ids": cl["ids"], "bowl_m": [round(bw, 3), round(bl, 3)],
+                   "cistern_m": [round(cf["short"] * unit_m, 3), round(cf["long"] * unit_m, 3)], "bowl_shape": shape,
+                   "centre": list(bf["c"])}
+            if why:
+                rejected += [dict(rec, reason=w) for w in why]
+            else:
+                accepted.append(dict(rec, against_wall=True))
+    return accepted, rejected
+
+
+def _decimal_handle(sid):
+    """an insert id of either reader (I:<hex>:<n> of arch_intake, D<k>:<dec> of an insert path) -> its decimal
+    handle (str), so a fixture and the entities drawn inside it can be matched."""
+    s = str(sid)
+    if s.startswith("I:"):
+        try:
+            return str(int(s.split(":")[1], 16))
+        except (IndexError, ValueError):
+            return None
+    return s.split(":")[-1] if re.match(r"^D\d+:\d+$", s) else None
+
+
+def wet_evidence(face, fixtures, layer_ev, ents, roles, unit_m, inside, v271=False):
     """UP-WET-002 for a space with no room word and no room-tag block: what types it. -> (codes or None, label_source,
     issue, record). A wash basin alone never makes it wet; a basin with a second, independent piece of sanitary
     evidence (a water closet drawn as linework, or sanitary-layer linework that is not the basin's own) does; a
     water-closet shape alone is one geometric shape - review; ambiguous spaces stay REVIEW (no room type), never
-    DRY. Spaces typed by a WC / shower / bath fixture block or by sanitary-layer linework keep the V2.6 reading."""
+    DRY. Spaces typed by a WC / shower / bath fixture block or by sanitary-layer linework keep the V2.6 reading.
+    v271 (ARCH_TAKEOFF_V2.7.1 only): the WC linework profile of registry 1.3.0 (wc_shapes_v271, its rejections
+    recorded) and the basin's own linework matched through the insert path of every entity drawn inside it; False is
+    the V2.7 path, unchanged."""
     from engine.source import arch_rooms as AR
     basins = [x for x in fixtures if x["fixture"] == "BASIN"]
     wet_fx = [x for x in fixtures if x["evidences"] == "BATHROOM"]
@@ -856,19 +969,39 @@ def wet_evidence(face, fixtures, layer_ev, ents, roles, unit_m, inside):
         return box[0] <= p[0] <= box[2] and box[1] <= p[1] <= box[3]
     # loose linework of the space's box (a fixture set against a wall has edges ON the boundary); a shape counts when
     # its centre is inside the space
+    if v271:
+        basin_h = {_decimal_handle(x) for x in basin_ins} - {None}
+
+        def own(e):
+            return any(_decimal_handle(p) in basin_h for p in e.get("path") or ())
+    else:
+        def own(e):
+            return bool(set(e.get("path") or ()) & basin_ins)
     other = [s for s in ents["segments"] if roles.get(s["layer"], AP.OTHER) == AP.OTHER and
-             not (set(s.get("path") or ()) & basin_ins) and in_box(s["a"]) and in_box(s["b"])]
+             not own(s) and in_box(s["a"]) and in_box(s["b"])]
     o_arcs = [a for a in ents["arcs"] if roles.get(a["layer"], AP.OTHER) == AP.OTHER and
-              not (set(a.get("path") or ()) & basin_ins) and in_box(a["c"])]
+              not own(a) and in_box(a["c"])]
     wall_segs = [s for s in ents["segments"] if roles.get(s["layer"]) == AP.WALL]
     seg_by = {s["id"]: s for s in other}
     wcs = []
-    for w in wc_shapes(other, o_arcs, unit_m, wall_segs):
-        pts = [p for i in w["bowl_ids"] if i in seg_by for p in (seg_by[i]["a"], seg_by[i]["b"])]
-        if pts and inside(sum(p[0] for p in pts) / len(pts), sum(p[1] for p in pts) / len(pts)):
-            wcs.append(w)
+    if v271:
+        o_circ = [c for c in ents.get("circles") or () if roles.get(c["layer"], AP.OTHER) == AP.OTHER and
+                  not own(c) and in_box(c["c"])]
+        excl = sum(1 for e in list(ents["segments"]) + list(ents["arcs"]) + list(ents.get("circles") or ())
+                   if roles.get(e["layer"], AP.OTHER) == AP.OTHER and own(e) and
+                   in_box(e["a"] if "a" in e else e["c"]))
+        acc, rej = wc_shapes_v271(other, o_arcs, o_circ, unit_m, wall_segs)
+        wcs = [w for w in acc if inside(*w["centre"])]
+        wc_rejected = [w for w in rej if inside(*w["centre"])]
+    else:
+        for w in wc_shapes(other, o_arcs, unit_m, wall_segs):
+            pts = [p for i in w["bowl_ids"] if i in seg_by for p in (seg_by[i]["a"], seg_by[i]["b"])]
+            if pts and inside(sum(p[0] for p in pts) / len(pts), sum(p[1] for p in pts) / len(pts)):
+                wcs.append(w)
     other = [s for s in other if inside((s["a"][0] + s["b"][0]) / 2, (s["a"][1] + s["b"][1]) / 2)]
     rec = {"face_id": face["face_id"], "fixtures": sorted(x["fixture"] for x in fixtures), "wc_shapes": wcs}
+    if v271:
+        rec.update(wc_rejected=wc_rejected, basin_linework_excluded=excl, wc_profile="UP-WET-002 1.3.0")
     if fx_codes and len(fx_codes) == 1 and wet_fx and len(basins) == len(wet_fx):
         corr = []
         if wcs:
@@ -924,12 +1057,14 @@ def entity_ref(sid):
     return {"id": sid, "handle": format(int(m.group(1)), "X"), "insert_path": path, "part": int(m.group(3))}
 
 
-def attach_provenance(lines, rooms, faces, openings, doors, walls=(), floor=None, region_id=None):
+def attach_provenance(lines, rooms, faces, openings, doors, walls=(), floor=None, region_id=None, v271=False):
     """every line of a measured room carries the drawn entities that bound the room (source.entities); every opening
     and door line the door symbol and jamb entities (a window: its glazing lines; a passage: the wall faces ending at
     its jambs) of its opening; a wall line of a
     thickness family the face segments of the region's walls of that family. A line of none of these carries none
-    (recorded as such). -> counts."""
+    (recorded as such). -> counts. v271 (ARCH_TAKEOFF_V2.7.1 only): a doorway-strip line carries its strip faces'
+    boundary entities and the door-closure entities that close them (basis STRIP); a line still without entities says
+    why (reason); False is the V2.7 path, unchanged."""
     by_face = {f["face_id"]: f for f in faces}
     room_ents = {}
     for r in rooms:
@@ -972,7 +1107,28 @@ def attach_provenance(lines, rooms, faces, openings, doors, walls=(), floor=None
             ln["source"]["entities"] = {"basis": "OPENING", "floor": floor, "region_id": region_id, "opening_id": oid,
                                         "entities": op_ents.get(oid) or []}
             n["opening"] += 1
+        elif v271 and _strip_entities(ln, by_face):
+            ids, strips = _strip_entities(ln, by_face)
+            ln["source"]["entities"] = {"basis": "STRIP", "floor": floor, "region_id": region_id, "strips": strips,
+                                        "entities": [entity_ref(x) for x in ids]}
+            n["strip"] = n.get("strip", 0) + 1
         else:
             ln["source"]["entities"] = {"basis": "NOT_TRACED", "entities": []}
+            if v271:
+                ln["source"]["entities"]["reason"] = (
+                    "NOT_IN_A_PLAN_REGION: the line is not measured from one region's drawn entities (a run-level "
+                    "item)" if floor is None else "NO_DRAWN_ENTITY: the line is not measured from drawn entities of "
+                    "its own (an engine count, a rule-derived item or a question)")
             n["none"] += 1
     return n
+
+
+def _strip_entities(ln, by_face):
+    """ARCH_TAKEOFF_V2.7.1: the drawn entities of a doorway-strip line - the boundary entities of its strip faces and
+    the entities of the door closures that close them. -> (ids, strips) or None."""
+    inp = (ln.get("calculation") or {}).get("inputs") or {}
+    strips = [s for s in inp.get("strips") or () if s in by_face]
+    ids = {x for s in strips for x in by_face[s].get("boundary_source_ids") or () if entity_ref(x)}
+    for c in inp.get("door_closures") or ():
+        ids |= {x for x in str(c).split("|")[1:] if entity_ref(x)}
+    return (sorted(ids), strips) if ids else None

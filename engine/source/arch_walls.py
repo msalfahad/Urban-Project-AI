@@ -91,13 +91,13 @@ def _minus(ivs, cuts):
     return out
 
 
-def _columns_on(band, columns, lo_off, hi_off):
-    """the stretches of a band a column occupies (a column standing in the wall line is concrete, not wall)."""
+def _columns_on(band, columns, lo_off, hi_off, polys=()):
+    """the stretches of a band a column occupies (a column standing in the wall line is concrete, not wall). polys
+    (ARCH_TAKEOFF_V2.7.1 only, UP-COL-ORIENT-001): columns of any orientation as polygons, cut like the boxes."""
     (ux, uy), (nx, ny) = band["u"], band["n"]
     t = hi_off - lo_off
     cuts = []
-    for x0, y0, x1, y1 in columns:
-        pts = [(x0, y0), (x1, y0), (x1, y1), (x0, y1)]
+    for pts in [[(x0, y0), (x1, y0), (x1, y1), (x0, y1)] for x0, y0, x1, y1 in columns] + [list(p) for p in polys]:
         us = [p[0] * ux + p[1] * uy for p in pts]
         ns = [p[0] * nx + p[1] * ny for p in pts]
         if min(hi_off, max(ns)) - max(lo_off, min(ns)) > 0.5 * t:
@@ -105,10 +105,12 @@ def _columns_on(band, columns, lo_off, hi_off):
     return sorted(cuts)
 
 
-def walls(ents, roles, unit_m, faces, openings=(), columns=(), geom=None, arc_bands=False, trace=False):
+def walls(ents, roles, unit_m, faces, openings=(), columns=(), geom=None, arc_bands=False, trace=False,
+          column_polys=()):
     """arc_bands (ARCH_TAKEOFF_V2.7 only): the curved wall bands (engine.source.arch_v27.arc_bands) join the walls;
     trace (ARCH_TAKEOFF_V2.7 only): each wall carries the ids of the drawn face segments over its run (source_ids).
-    False is the V1 .. V2.6 path, unchanged."""
+    False is the V1 .. V2.6 path, unchanged. column_polys (ARCH_TAKEOFF_V2.7.1 only, UP-COL-ORIENT-001): turned
+    columns cut from the wall run like the boxes; () is the V1 .. V2.7 path, unchanged."""
     wall_l = sorted(l for l, r in roles.items() if r == AP.WALL)
     loc = _Locator(faces)
     probe = SIDE_PROBE_M / unit_m
@@ -118,7 +120,7 @@ def walls(ents, roles, unit_m, faces, openings=(), columns=(), geom=None, arc_ba
         for b in AP._bands(segs, unit_m, geom):
             A, B = b["A"], b["B"]
             both = _iv_intersect(_cover(A, b["lo"], b["hi"]), _cover(B, b["lo"], b["hi"]))
-            cuts = _columns_on(b, columns, *sorted((A["off"], B["off"])))
+            cuts = _columns_on(b, columns, *sorted((A["off"], B["off"])), polys=column_polys)
             net_iv = _minus(both, cuts)
             col_lm = (sum(hi - lo for lo, hi in both) - sum(hi - lo for lo, hi in net_iv)) * unit_m
             net = sum(hi - lo for lo, hi in net_iv) * unit_m

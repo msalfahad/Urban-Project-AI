@@ -461,6 +461,136 @@ def elevator_schedule(model, rooms, stacked_shafts):
                     "quantities (UP-DOOR-CLS-005)"}
 
 
+RECON_COLUMNS = ("element_id", "floor", "opening_id", "category", "as_drawn_wall_opening_m", "measured_jamb_span_m",
+                 "jamb_basis", "door_leaf_m", "finished_clear_width_m", "owner_minimum_m", "frame_allowance_m",
+                 "drawn_symbol_difference_m", "boq_width_m", "enlargement_structural_m", "enlargement_leaf_low_m",
+                 "enlargement_leaf_high_m", "within_gap_low", "within_gap_high", "consultant_review",
+                 "structural_review", "review_reasons", "status")
+
+
+def reconciliation_v271(rows, openings):
+    """ARCH_TAKEOFF_V2.7.1 (UP-DOOR-OPEN-003 1.3.0): the door-standard reconciliation of every door row of
+    door_scenarios(v27=True) - the as-drawn wall opening (the band gap jamb to jamb) and the measured jamb span (the
+    door symbol's own jamb lines) apart, the leaf, the finished clear width (not in a plan), the owner minimum, a frame
+    allowance only from an accepted source (the drawn leaf-to-opening difference is CAD geometry, reported, never an
+    allowance), the proposed enlargement on each reading, whether it fits inside the drawn gap, and the consultant /
+    structural review it needs. Nothing is applied: boq_width_m is the width every BOQ line measures.
+    -> {"policy", "rule", "doors", "summary", "never"}."""
+    lg = K.rule("UP-DOOR-OPEN-003")["logic"]
+    reg_alw = (K.rule("UP-DOOR-OPEN-002")["logic"].get("allowance_registry_1_1_0_m") or 0.0)
+    op = {(o["floor"], o["opening_id"]): o for o in openings}
+    out = []
+    for r in rows:
+        rec = r.get("opening_record") or {}
+        o = op.get((r["floor"], r.get("opening_id"))) or {}
+        v = o.get("opening_v27") or {}
+        cad = rec.get("structural_opening_m")
+        gap = v.get("wall_gap_m") if v.get("wall_gap_m") is not None else cad
+        span = v.get("jamb_span_m") if v.get("jamb_span_m") is not None else cad
+        leaves = list(rec.get("door_leaf_m") or ())
+        mn = rec.get("owner_minimum_m")
+        alw = rec.get("allowance") or {}
+        d = {"element_id": r["element_id"], "floor": r["floor"], "opening_id": r.get("opening_id"),
+             "category": r["category"], "spaces": r.get("spaces"),
+             "as_drawn_wall_opening_m": None if gap is None else round(gap, 6),
+             "measured_jamb_span_m": None if span is None else round(span, 6),
+             "jamb_basis": v.get("decision") or ("NO_JAMB_LINES" if cad is not None else "NOT_ESTABLISHED"),
+             "jambs": o.get("jambs"),
+             "door_leaf_m": leaves, "door_leaf_state": "DRAWN_LEAF (swing radius)" if leaves else "NOT_ESTABLISHED",
+             "finished_clear_width_m": None,
+             "finished_clear_width_state": "NOT_ESTABLISHED (frame stops and leaf thickness are not in a plan)",
+             "owner_minimum_m": mn,
+             "owner_minimum_reference": "UNRESOLVED (D-16 / OQ-05): " + str(lg.get("applies_to")),
+             "frame_allowance": {
+                 "value_m": alw.get("value_m"), "state": alw.get("state") or "NOT_ESTABLISHED",
+                 "supported_by": alw.get("supported_by"), "accepted_sources": alw.get("accepted_sources"),
+                 "registry_1_1_0_m": alw.get("registry_1_1_0_m"),
+                 "registry_1_1_0_state": alw.get("registry_1_1_0_state"),
+                 "drawn_symbol_difference_m": round(cad - sum(leaves), 6) if cad is not None and leaves else None,
+                 "drawn_symbol_difference_note": "the structural opening minus the drawn leaf: CAD symbol geometry, "
+                                                 "not an accepted allowance source"},
+             "boq_width_m": None if cad is None else round(cad, 6),
+             "status": rec.get("status") or "NOT_ESTABLISHED", "applied_to_boq": False}
+        if mn is None or cad is None:
+            d.update(proposed_enlargement={"STRUCTURAL_OPENING": {"m": None, "required_opening_m": None},
+                                           "DOOR_LEAF": {"leaf_shortfall_m": None, "low_m": None,
+                                                         "high_m_with_unconfirmed_allowance": None},
+                                           "CLEAR_PASSAGE": {"state": "NOT_ESTABLISHED"}},
+                     wall_remainder_m=None, within_as_drawn_gap=None, remainder_after_m=None,
+                     review={"consultant": "NOT_REQUIRED", "structural": "NOT_REQUIRED", "reasons": [],
+                             "why": rec.get("why") or "no owner minimum applies (or no structural opening)"})
+            out.append(d)
+            continue
+        lw = sum(leaves) if leaves else None
+        low = round(max(0.0, mn - cad), 6)
+        high = round(max(0.0, mn + reg_alw - cad), 6) if lw is not None else low
+        req_low, req_high = round(cad + low, 6), round(cad + high, 6)
+        rem = round(max(0.0, (gap or cad) - (span or cad)), 6)
+        within = {"low": req_low <= (gap or cad) + TOL_M, "high": req_high <= (gap or cad) + TOL_M}
+        reasons = []
+        if low > TOL_M or high > TOL_M:
+            if rem > TOL_M and min(req_low, req_high) > (span or cad) + TOL_M:
+                reasons.append("WALL_REMAINDER_CUT")
+            if not within["low"] or not within["high"]:
+                reasons.append("WALL_CUT_BEYOND_DRAWN_OPENING")
+            reasons.append("LINTEL_SPAN_INCREASE")
+            if "COLUMN_JAMB" in (o.get("jambs") or ()):
+                reasons.append("COLUMN_AT_A_JAMB")
+        definite = low > TOL_M
+        d.update(proposed_enlargement={
+            "STRUCTURAL_OPENING": {"m": low, "required_opening_m": req_low,
+                                   "meaning": "the minimum is the structural opening (no allowance)"},
+            "DOOR_LEAF": {"leaf_shortfall_m": None if lw is None else round(max(0.0, mn - lw), 6),
+                          "low_m": low if lw is not None else None,
+                          "high_m_with_unconfirmed_allowance": high if lw is not None else None,
+                          "meaning": "the minimum is the door leaf: the opening grows by the minimum minus the opening "
+                                     "(no allowance) up to the minimum plus the registry 1.1.0 allowance "
+                                     f"({reg_alw:g} m, requires confirmation) minus the opening"},
+            "CLEAR_PASSAGE": {"state": "NOT_ESTABLISHED", "why": "the finished clear passage is not in a plan"}},
+            wall_remainder_m=rem, within_as_drawn_gap=within,
+            remainder_after_m={"low": round((gap or cad) - req_low, 6) if within["low"] else None,
+                               "high": round((gap or cad) - req_high, 6) if within["high"] else None},
+            review={"consultant": "REQUIRED" if definite else ("REQUIRED_UNDER_THE_LEAF_READING" if high > TOL_M
+                                                               else "NOT_REQUIRED"),
+                    "structural": "REQUIRED" if definite and reasons else (
+                        "REQUIRED_UNDER_THE_LEAF_READING" if high > TOL_M else "NOT_REQUIRED"),
+                    "reasons": reasons,
+                    "why": "a proposed enlargement changes other trades and is never auto-released "
+                           "(UP-DOOR-DEP-001); cutting drawn wall or lengthening the lintel needs the structural "
+                           "engineer" if reasons else "the door meets the minimum on every reading"})
+        out.append(d)
+    out.sort(key=lambda d: (d["floor"], str(d["opening_id"]), d["element_id"]))
+    below = [d for d in out if (d["proposed_enlargement"]["STRUCTURAL_OPENING"]["m"] or 0) > TOL_M]
+    return {"policy": "URBAN_DOOR_STANDARD_RECONCILIATION_V1", "rule": "UP-DOOR-OPEN-003", "doors": out,
+            "summary": {"doors": len(out), "below_minimum_structural": len(below),
+                        "within_drawn_gap": sum(1 for d in below if d["within_as_drawn_gap"]["low"]),
+                        "structural_review": sum(1 for d in out if d["review"]["structural"] == "REQUIRED"),
+                        "consultant_review": sum(1 for d in out if d["review"]["consultant"] == "REQUIRED")},
+            "never": ["the CAD geometry changed to satisfy the minimum", "an enlargement applied to a quantity",
+                      "the registry 1.1.0 allowance imposed", "the drawn symbol difference read as an allowance"]}
+
+
+def reconciliation_csv_rows(rec):
+    rows = []
+    for d in rec["doors"]:
+        pe = d["proposed_enlargement"]
+        rows.append({"element_id": d["element_id"], "floor": d["floor"], "opening_id": d["opening_id"],
+                     "category": d["category"], "as_drawn_wall_opening_m": d["as_drawn_wall_opening_m"],
+                     "measured_jamb_span_m": d["measured_jamb_span_m"], "jamb_basis": d["jamb_basis"],
+                     "door_leaf_m": " + ".join(f"{x:g}" for x in d["door_leaf_m"]),
+                     "finished_clear_width_m": d["finished_clear_width_m"], "owner_minimum_m": d["owner_minimum_m"],
+                     "frame_allowance_m": d["frame_allowance"]["value_m"],
+                     "drawn_symbol_difference_m": d["frame_allowance"]["drawn_symbol_difference_m"],
+                     "boq_width_m": d["boq_width_m"], "enlargement_structural_m": pe["STRUCTURAL_OPENING"]["m"],
+                     "enlargement_leaf_low_m": pe["DOOR_LEAF"]["low_m"],
+                     "enlargement_leaf_high_m": pe["DOOR_LEAF"]["high_m_with_unconfirmed_allowance"],
+                     "within_gap_low": (d["within_as_drawn_gap"] or {}).get("low"),
+                     "within_gap_high": (d["within_as_drawn_gap"] or {}).get("high"),
+                     "consultant_review": d["review"]["consultant"], "structural_review": d["review"]["structural"],
+                     "review_reasons": "; ".join(d["review"]["reasons"]), "status": d["status"]})
+    return rows
+
+
 def policy_record():
     return {"policy": POLICY_ID, "rule_set": K.RULE_SET, "rule_set_digest": K.digest(),
             "rules": ["UP-DOOR-CLS-001", "UP-DOOR-CLS-002", "UP-DOOR-CLS-003", "UP-DOOR-CLS-004", "UP-DOOR-CLS-005",
