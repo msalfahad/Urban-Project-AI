@@ -10,6 +10,7 @@
 | Wall thickness and reveal depths from geometry | curved reveal depth = strip area / (sweep × mid radius); wall thickness = radius difference | UP-OPEN-CURVED-001 |
 | No invented stair dimensions, reinforcement or concrete geometry | the structural N10 module reads route G's register only; it never creates a dimension; necks without a height and columns without a storey height are held | `engine/source/struct_n10.py` |
 | Roof and balcony waterproofing kept separate | unchanged (no N10 change) | — |
+| Minimum door widths 1.00 m (0.90 m bathroom); no universal frame allowance; wet rooms full-height porcelain and waterproofing, no skirting or paint over it; marble thresholds at wet-room doorways | unchanged in N10: already OWNER_APPROVED (UP-DOOR-OPEN-003, UP-DOOR-HGT-001, UP-FIN-WALL-001, UP-FIN-PAINT-001, UP-SKIRT-001, UP-WET-001, UP-THR-001); V2.9 inherits them from V2.8 | registry 1.5.0 (carried from 1.4.0) |
 | Unresolved decisions: set out alternatives and hold the dependent quantities | formwork FW-D1 / FW-D2 kept side by side, never summed; masonry beams over walls held at the upper bound; facade finish held | OQ-06 – OQ-13 |
 
 ## 2. Decisions this phase needs from the owner
