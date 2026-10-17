@@ -25,7 +25,8 @@ Answer: 0.20 m. Already the current rule (knowledge 1.4.0 rules[41], UP-WP-003; 
 Answer: The minimum is the door opening: ordinary 1.00 m opening = 1.10 m wall to wall. These are minimums: when the plan
 is drawn wider, the drawn size is used. The main door is measured as drawn. Matches the registry 1.1.0 reading
 "wall opening = nominal + 0.10 m" (owner_questions[4], rules[13]); by the same rule a bathroom 0.90 m opening = 1.00 m
-wall to wall (inferred from the owner's rule, confirm if different). Recorded as a new knowledge version (task T-011).
+wall to wall (owner confirmed 2026-10-18, also "unless the measurements say more": drawn size when wider). Recorded
+as a new knowledge version (task T-011).
 
 ### Q-05 Second villa and independent QS (answered 2026-10-18)
 Answer: Yes. Other villas exist as AutoCAD and PDF, but without full concrete and rebar drawings. Use them as development

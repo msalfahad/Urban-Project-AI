@@ -16,7 +16,7 @@ Order: lowest gate first, then money at risk. Statuses from the master study are
 | T-008 | 2 | doors, windows | L-P9-01 rotated schedule header; schedule match by id + width + geometry, ambiguous row rejected | TODO | | |
 | T-009 | 3 | rebar, concrete | Read structural schedules and tables (bar marks, element populations) so rebar is counted per population, never a kg/m3 proxy as measured tonnage | TODO | | |
 | T-010 | 1 | wet areas | L-P8-01 WC-sized chair classified as toilet: symbol class + context, adversarial fixture | TODO | | |
-| T-011 | 1 | doors | Knowledge 1.5.0 (new version file, 1.4.0 untouched): owner answer Q-04 / D-16 resolves owner_questions[4] and rules[15]: minimum = nominal door opening (ordinary 1.00, bathroom 0.90), wall to wall = nominal + 0.10 m, drawn size used when wider, main door as drawn. Use the urban-rule-reconciliation skill; new method version only if behaviour changes | TODO | | |
+| T-011 | 1 | doors | Knowledge 1.5.0 (new version file, 1.4.0 untouched): owner answer Q-04 / D-16 resolves owner_questions[4] and rules[15]: minimum = nominal door opening (ordinary 1.00 -> 1.10, bathroom 0.90 -> 1.00 wall to wall, both confirmed), drawn size used when wider, main door as drawn. Use the urban-rule-reconciliation skill; new method version only if behaviour changes | TODO | | |
 | T-012 | 4 | intake | Intake the owner's other villas (AutoCAD + PDF, no full structure) into `urban-boq-private-data/dev_villas/`: inventory each sheet, run the CAD audit and the plan reader, record rooms / openings census. Development set for architectural trades only | BLOCKED-DATA | | |
 
 ## Later (lead promotes when the gate is reached)
