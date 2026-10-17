@@ -5,7 +5,8 @@
 **Time.** The program allowed ten hours. The commit timestamps show about **3 hours** of elapsed work:
 
 - baseline 504b56a at 19:55 UTC;
-- last code-affecting commit 4b299ae at 22:23 UTC;
+- last engine change 9a52c34 at 22:13 UTC;
+- final code commit 24db651 at 22:56 UTC: a test-side declaration that fixes the one regression the first full suite found (D-N10-05);
 - deliverables after that.
 
 **This is not a ten-hour result.** The resumable checkpoint is in `NEXT_PHASE_PLAN.md`.
@@ -66,6 +67,7 @@ On the reference plan, Mode A, lines went from 487 to 517:
 6. **Formwork and excavation are not yet BOQ workbook lines;** they are separate files.
 7. **Roofs, balconies and external works are unsupported.**
 8. **The full suite is not green:** the known legacy failures remain. See `FULL_SUITE_COMPARISON.md`.
+9. **A regression slipped past the targeted tests (D-N10-05, fixed).** The first full suite at 4b299ae found one pass → fail: the new structural module was not declared in the rebar product firewall. It was fixed in 24db651, and the full suite ran again.
 
 ## 5. Readiness
 

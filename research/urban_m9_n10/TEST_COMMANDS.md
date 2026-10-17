@@ -22,6 +22,7 @@ The hand truth is in `tests/m9_n10/n10_truth.py`. It is arithmetic on the fixtur
 python3 -I -m pytest -p no:cacheprovider --basetemp=$BT/p2b9 tests/m9_p2b9
 python3 -I -m pytest -p no:cacheprovider --basetemp=$BT/kb tests/m9_kb
 python3 -I -m pytest -p no:cacheprovider --basetemp=$BT/codemap tests/codemap
+python3 -I -m pytest -p no:cacheprovider --basetemp=$BT/fw tests/structural_comparison_engine   # static scans over engine/: a new module that names rebar must be declared
 ```
 
 ## 3. Freeze, registry and maps

@@ -16,7 +16,7 @@ Ranked by the BOQ quantity they would make trustworthy, not by effort.
 
 ## Resumable checkpoint
 
-- **Branch:** `claude/access-permissions-setup-ii24ws`. The code is final at 4b299ae (validated by the full suite at that commit). Deliverables follow it.
+- **Branch:** `claude/access-permissions-setup-ii24ws`. The code is final at 24db651, validated by the full suite at that commit (`FULL_SUITE_COMPARISON.md`). Deliverables follow it.
 - **Methods:** `ARCH_TAKEOFF_V2.9` (opt-in). Structural: `tools/struct_n10.py --run OUT --out DIR`.
 - **Registry:** 1.5.0 (`tools/kb_build_1_5.py --check`).
 - **Tests:** `tests/m9_n10/` (70 tests in 6 files). Hand truth is in `tests/m9_n10/n10_truth.py`.

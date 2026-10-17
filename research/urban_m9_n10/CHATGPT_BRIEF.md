@@ -60,6 +60,7 @@
 7. **Excavation volume is held everywhere real.** It needs NGL, the founding level and the working space.
 8. **Roofs, balconies and external works:** not attempted.
 9. **The full suite is not green.** The known legacy failures in modules that need private data remain.
+10. **One regression slipped past the targeted tests (D-N10-05).** The first full suite (4b299ae) caught it: a static firewall scan requires every engine module that names rebar to be declared. It was fixed in 24db651, and the suite re-ran. Lesson: when adding an engine module, include the static-scan folders (`tests/structural_comparison_engine`) in the targeted level.
 
 ## Questions for the reviewer
 

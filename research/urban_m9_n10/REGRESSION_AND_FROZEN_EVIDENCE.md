@@ -4,7 +4,10 @@
 
 The private snapshot `n10_a` ran every method (V1 – V2.9) on the three private drawings: the synthetic villa, its mirror and the reference plan. Each ran in Mode U and, for V2.2 and later, in Mode A.
 
-The snapshot tree is the committed code at **9a52c34**, with a clean working tree. The only later code commit, 4b299ae, changes documentation, the routing maps and one entry in `tools/routing_topics.json` (the defect source). It changes no engine, tool logic, rule or knowledge file.
+The snapshot tree is the committed code at **9a52c34**, with a clean working tree. Two later commits touch code-adjacent files, and neither changes an engine, tool-logic, rule or knowledge file:
+
+- 4b299ae changes documentation, the routing maps and one entry in `tools/routing_topics.json` (the defect source);
+- 24db651 changes a test-side declaration (`tests/structural_comparison_engine/rebar_product_registry.py`).
 
 V1 – V2.8 outputs were compared file by file with the Phase 2B-9 final snapshot:
 
@@ -59,7 +62,7 @@ No floor area changed on any run. The details are in `REAL_PLAN_BEFORE_AFTER.md`
 | `tools/freeze_verify.py env` / `closure` | exit 0 / exit 0 |
 | `tools/kb_build_1_4.py --check` | registry 1.4.0 up to date (unchanged) |
 | `tools/kb_build_1_5.py --check` | registry 1.5.0 up to date (53 rules; every link resolves) |
-| `rules/`, `data/` | unchanged (`git diff 504b56a 4b299ae -- rules/ data/` is empty) |
+| `rules/`, `data/` | unchanged (`git diff 504b56a 24db651 -- rules/ data/` is empty) |
 | `engine/source/topology.py` | unchanged (frozen, read only) |
 | `tools/codemap.py check` | no stale map at each code commit; the map is rebuilt with the docs commits, since it counts the research files |
 
@@ -68,6 +71,7 @@ No floor area changed on any run. The details are in `REAL_PLAN_BEFORE_AFTER.md`
 | Suite | Result |
 |---|---|
 | `tests/m9_n10` (new: curved 21, independent curved 6, masonry 11, facade 14, structural 14, registry 4) | **70 passed** (at the final tree, 75 s) |
-| full suite, clean clone at 4b299ae | see `FULL_SUITE_COMPARISON.md`. **Not green** (the known legacy failures remain) |
+| `tests/structural_comparison_engine` (the rebar product firewall) | 54 passed at 24db651 (1 failed before the D-N10-05 fix) |
+| full suite, clean clones at 4b299ae and 24db651 | see `FULL_SUITE_COMPARISON.md`. **Not green** (the known legacy failures remain) |
 
 Every run used `python3 -I`, `PYTHONDONTWRITEBYTECODE=1` and its own `--basetemp`.

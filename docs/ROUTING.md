@@ -407,7 +407,7 @@ L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/als
 L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/alsenan tests/slab_rebar_s7 tests/superstructure_beam_rebar_s6 tests/footing_rebar_s4 tests/ground_system_rebar_s5 tests/slab_rebar_pre_s7 tests/swimming_pool_s8_2 tests/ground_slab_s8_1 tests/pre_s4_footing_readiness tests/structural_comparison_engine tests/alsenan_structural_census tests/ground_slab_s8_1a` + freeze check
 L4 full suite + freeze check (see above)
 
-**Known defects** (8 unresolved of 8):
+**Known defects** (8 unresolved of 9):
 
 | Id | Class | Reported status | Defect | Modules | Evidence (date) |
 |---|---|---|---|---|---|
@@ -419,6 +419,7 @@ L4 full suite + freeze check (see above)
 | B4 (D3) | HISTORICAL_UNVERIFIED | OPEN | FF footing zero rebar (merged cell); silent | - | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-04) |
 | B5 (D4) | HISTORICAL_UNVERIFIED | OPEN | Strap beams have no rebar | - | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-04) |
 | B6 (D5) | HISTORICAL_UNVERIFIED | OPEN | 17 off-storey columns get rebar | `research/external_engine_lab/alsenan_v3_structure.py` | `URBAN_PROJECTS_CLAUDE_HANDOFF.md § 21. Known bugs` (2026-10-04) |
+| D-N10-05 | VERIFIED_FIXED | fixed (24db651): declared as OTHER_REBAR_AWARE (stdlib only, writes no reinforc… | the new structural module `engine/source/struct_n10.py` names reinforcement (its rebar audit) but was not declared in the rebar p… | `engine/source/struct_n10.py` | `research/urban_m9_n10/DEFECT_REGISTER.md § 2. Found in Phase N10` (phase urban_m9_n10) |
 
 <a id="formwork"></a>
 ## Formwork
@@ -440,12 +441,13 @@ L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_
 L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_n10` + freeze check
 L4 full suite + freeze check (see above)
 
-**Known defects** (2 unresolved of 2):
+**Known defects** (2 unresolved of 3):
 
 | Id | Class | Reported status | Defect | Modules | Evidence (date) |
 |---|---|---|---|---|---|
 | D-N10-04 | VERIFIED_OPEN | open: carry beam-column adjacency in the register | formwork column sides are an upper bound: which beams frame into each column is not in the route G register | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 2. Found in Phase N10` (phase urban_m9_n10) |
 | L-N10-04 | VERIFIED_OPEN | limitation (recorded) | `engine/source/struct_n10.py` writes its own files (FORMWORK.json, EXCAVATION.json, REBAR_AUDIT.json); its quantities are not yet… | `engine/source/struct_n10.py` | `research/urban_m9_n10/DEFECT_REGISTER.md § 3. Limitations recorded` (phase urban_m9_n10) |
+| D-N10-05 | VERIFIED_FIXED | fixed (24db651): declared as OTHER_REBAR_AWARE (stdlib only, writes no reinforc… | the new structural module `engine/source/struct_n10.py` names reinforcement (its rebar audit) but was not declared in the rebar p… | `engine/source/struct_n10.py` | `research/urban_m9_n10/DEFECT_REGISTER.md § 2. Found in Phase N10` (phase urban_m9_n10) |
 
 <a id="excavation"></a>
 ## Excavation and backfill
@@ -465,12 +467,13 @@ L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_
 L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_n10` + freeze check
 L4 full suite + freeze check (see above)
 
-**Known defects** (2 unresolved of 2):
+**Known defects** (2 unresolved of 3):
 
 | Id | Class | Reported status | Defect | Modules | Evidence (date) |
 |---|---|---|---|---|---|
 | L-N10-03 | VERIFIED_OPEN | limitation (recorded) | excavation pits are not merged where neighbours overlap (pit positions are not in the register): a stated volume is an upper bound | - | `research/urban_m9_n10/DEFECT_REGISTER.md § 3. Limitations recorded` (phase urban_m9_n10) |
 | L-N10-04 | VERIFIED_OPEN | limitation (recorded) | `engine/source/struct_n10.py` writes its own files (FORMWORK.json, EXCAVATION.json, REBAR_AUDIT.json); its quantities are not yet… | `engine/source/struct_n10.py` | `research/urban_m9_n10/DEFECT_REGISTER.md § 3. Limitations recorded` (phase urban_m9_n10) |
+| D-N10-05 | VERIFIED_FIXED | fixed (24db651): declared as OTHER_REBAR_AWARE (stdlib only, writes no reinforc… | the new structural module `engine/source/struct_n10.py` names reinforcement (its rebar audit) but was not declared in the rebar p… | `engine/source/struct_n10.py` | `research/urban_m9_n10/DEFECT_REGISTER.md § 2. Found in Phase N10` (phase urban_m9_n10) |
 
 <a id="boq_output"></a>
 ## BOQ lines, release model, reports and exports

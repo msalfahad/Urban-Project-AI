@@ -36,7 +36,7 @@
 | 20 | Full-suite comparison | `FULL_SUITE_COMPARISON.md` |
 | 21 | Changed-file manifest | `CHANGED_FILES.md` §2 |
 | 22 | Commit ids | `CHANGED_FILES.md` §1 |
-| 23 | Patch | ZIP `patch/n10_504b56a_4b299ae.patch` |
+| 23 | Patch | ZIP `patch/n10_504b56a_24db651.patch` |
 | 24 | README | this file |
 | 25 | SHA-256 manifest | ZIP `SHA256SUMS.txt` |
 | 26 | Archive checksum | `<zip>.sha256`, delivered beside the ZIP |
