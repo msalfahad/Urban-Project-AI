@@ -6,6 +6,13 @@ WP-KITCHEN membrane scope, WP-JOINT details, WIN-REVEAL finish, STUB-LIMIT, MEAS
 
 ## Open
 
+### Q-10 Alsenan AutoCAD DXF files for the scoreboard (T-001b; added 2026-10-18)
+The Drive folder "Alsenan chalet project" has the DWGs but not the two DXF files the engine was always run on, and P7757.dwg cannot be
+converted here: please (a) upload your existing AutoCAD exports P7757.dxf (about 17 MB) and ST7757.dxf (about 3 MB) to that folder,
+(b) re-export both from AutoCAD (SAVEAS DXF 2018) and upload them, or (c) let agents score only the structural trades from a
+LibreDWG conversion of ST7757.dwg (13 of 4473 entities lost) and leave the architectural rows unmeasured? Blocks T-001b (the first
+real scoreboard).
+
 ## Answered
 
 ### Q-09 Measurement basis for every BOQ line (MEAS-STD; added 2026-10-18)
