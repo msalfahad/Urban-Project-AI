@@ -97,3 +97,4 @@ Q-07 facade height slab top to slab top (T-031). Full list: OWNER_QUESTIONS.md "
 
 Only what no drawing, rule or evidence settles; at most 5 open; every new one also goes to the owner in the run's final
 message and push notification (lead) or through the hub chat.
+How to write them (owner, 2026-10-18): plain words, the real example from the drawing (file, floor, room, numbers) and how the owner checks it by hand; format and example in OWNER_QUESTIONS.md "How to write a question for the owner". The hub report and every notification use the same plain wording.

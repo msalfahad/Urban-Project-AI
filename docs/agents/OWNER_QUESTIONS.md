@@ -33,6 +33,29 @@ settings). Instructions:
 3. **If you cannot do something** (repository not attachable, Drive file unreadable, a setting only the owner can change), say exactly what
    in the first line of your report; the main chat will fix it.
 
+## How to write a question for the owner (owner, 2026-10-18; every agent follows this)
+
+The owner must understand the question without opening the code. Write it in plain words, like talking to a site
+engineer, and always give the real case from the drawing so he can check it by hand:
+
+1. **What we found** (1-2 short sentences, no code words, no file paths, no rule ids in the sentence).
+2. **The real example**: project folder and file title on Drive, sheet / floor, room or element name as written on
+   the drawing, and the numbers (size, area, count) with the simple sum, e.g. "1.20 x 2.10 = 2.52 m2".
+3. **How to check it yourself**: what to open and what to measure or count (e.g. "open the ground floor plan, the
+   bathroom next to the kitchen, measure the door gap wall to wall").
+4. **The choices**: (a) / (b) / (c), each one short sentence saying what the BOQ will then show.
+5. **What waits on the answer**: the trade and the task in plain words (task id in brackets at the end).
+
+Never send a question without a real example; if the agent has none, it finds one first. No client names or personal
+data (the Drive folder title of a client project is a client name: say "development project 2" instead).
+
+Example (Q-06 written this way):
+"We found 3 small spaces with only a hand-wash basin (no WC, no shower). The plan does not say if they are wet or dry.
+Real example: Alsenan, architectural plan, 3 basin-only spaces, 9.35 m2 together. Check: open the plan, find the
+spaces with a basin and nothing else, add their areas. Choices: (a) wet: porcelain floor and walls full height,
+waterproofing, marble threshold; (b) dry: plaster, paint, skirting, normal floor tiles; (c) you decide per space.
+Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
+
 ## Open
 
 ## Answered

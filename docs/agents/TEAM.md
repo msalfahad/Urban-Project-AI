@@ -27,6 +27,9 @@ Schedule (UTC): worker 1 at :19, worker 2 at :39, worker 3 at :59 every hour; ve
   verifier run skips tasks marked VERIFYING less than 2 h ago.
 - Lead keeps 8-12 TODO tasks (at most 2 Track B) so no worker finds an empty board.
 
+Owner questions and anything the owner must check (owner, 2026-10-18): plain words, a real example from the drawing
+he can check by hand, simple choices; see OWNER_QUESTIONS.md "How to write a question for the owner".
+
 ## Chain of command
 
 ```
