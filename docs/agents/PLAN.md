@@ -34,7 +34,7 @@ regression.
 1b. Development project 2 (owner, 2026-10-18): a finishing-only apartment in its own subfolder of "Urban BOQ private
    data" (the lead finds it by listing that folder; never write its client name in this repo). Architectural plan as a
    DWG (owner, Q-10; file name ends in -STR.dwg: confirm by a read-only CAD audit that it holds the floor plans) and as
-   a PDF with no extractable text (probably a scan), plus a manual QS takeoff for finishes (tiles, plaster, paint,
+   a 2-page vector PDF whose text is drawn as outlines (no text layer, no raster image; lead checked 2026-10-18: Claude reads it visually, rooms, Arabic / English labels and printed mm dimensions are legible; the title block names a different source DWG than the uploaded -STR.dwg, so the CAD audit must confirm which file holds the plans), plus a manual QS takeoff for finishes (tiles, plaster, paint,
    decor and waterproofing, finishing invoice). No concrete or rebar. Use: reference for finishes trades
    (tiles, plaster, paint, floor area, wet vs dry, doors, windows) measured from the DWG; the PDF is a second, independent check through the plan reader (T-003, gate 4). Score it only on
    the trades it covers.
