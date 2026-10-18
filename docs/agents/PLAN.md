@@ -33,10 +33,10 @@ regression.
    project".
 1b. Development project 2 (owner, 2026-10-18): a finishing-only apartment in its own subfolder of "Urban BOQ private
    data" (the lead finds it by listing that folder; never write its client name in this repo). Architectural plan as a
-   PDF only (no DWG so far; the PDF has no extractable text, so it is probably a scan) plus a manual QS takeoff for
-   finishes (tiles, plaster, paint, finishing invoice). No concrete or rebar. Use: reference for finishes trades
-   (tiles, plaster, paint, floor area, wet vs dry, doors, windows) and the first real test of PDF / scan intake through
-   the plan reader (T-003, gate 4), which makes T-003 worth promoting as soon as a gate-1 slot frees. Score it only on
+   DWG (owner, Q-10; file name ends in -STR.dwg: confirm by a read-only CAD audit that it holds the floor plans) and as
+   a PDF with no extractable text (probably a scan), plus a manual QS takeoff for finishes (tiles, plaster, paint,
+   decor and waterproofing, finishing invoice). No concrete or rebar. Use: reference for finishes trades
+   (tiles, plaster, paint, floor area, wet vs dry, doors, windows) measured from the DWG; the PDF is a second, independent check through the plan reader (T-003, gate 4). Score it only on
    the trades it covers.
 2. T-019 synthetic villas (hand truth, other layer names, units, rotation, mirror, Arabic / English).
 3. Two or more further real villas (owner, 2026-10-18: plans only, no freelancer BOQ and no structural drawings). Each
