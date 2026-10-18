@@ -55,6 +55,8 @@ Lead 2026-10-18 15:40: working branch head 7b040f6 (T-020 merge, re-read: tests 
 
 Lead 2026-10-18 12:30: working branch head 1583c85 (T-018 merge); no new owner-session commits since N10 (892a318), so nothing to close as DONE (owner session). T-020 went READY during this run (521fea2); T-019 CLAIMED 12:20, under 12 h; no REJECTED verdict. T-002b is READY but still conflicts on `docs/CODEMAP.md`: its worker merges the working branch, reruns `python3 tools/codemap.py` + `check`, pushes. TODO now (4, by gate then money): T-021 (gate 0), T-022 pool-as-bathroom wet false positive, T-010 chair-as-WC wet false positive (both waterproofing money), T-011 doors. New from the T-018 audit: T-022 (P-04, TODO), T-023 (P-11 slice), T-024 (P-01), T-025 (P-18) queued. T-014 / T-016 wait on the real drawing. `urban-boq-private-data` could not be attached in this run, so T-001b stays BLOCKED-DATA and the scoreboard is still seeded estimates.
 
+Verifier 2026-10-18 21:40 (8th run): no READY task (T-019 back to TODO as a CODEMAP rework, T-001b BLOCKED-OWNER Q-11); nothing merged, working branch head b35c944 unchanged. Drive private folder readable; scoreboard still not measured (no key map until T-001b).
+
 Verifier 2026-10-18 19:40 (7th run): merged T-002b (5be347d) and T-022 (b35c944) into `claude/access-permissions-setup-ii24ws`, both verified (see rows). Working branch head b35c944. `urban-boq-private-data` still not attachable to the verifier (no repository-attach tool; private clone refused), so the scoreboard stays NOT MEASURED. No new owner question, no gate broken by an earlier merge.
 
 ## Later (lead promotes when the gate is reached)
