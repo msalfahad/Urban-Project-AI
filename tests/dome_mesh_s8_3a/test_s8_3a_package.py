@@ -17,6 +17,7 @@ from pathlib import Path
 import pytest
 
 from engine.source import delta_release as DR
+from tests.rebuild_sandbox import rebuilt_package
 
 ROOT = Path(__file__).resolve().parents[2]
 PKG = ROOT / "research" / "alsenan_dome_mesh_s8_3a"
@@ -144,5 +145,5 @@ def test_rebuild_is_byte_identical():
     m = J(PKG / "09_S8_3A_FREEZE_MANIFEST.json")
     names = list(m["outputs"]) + ["09_S8_3A_FREEZE_MANIFEST.json"]
     before = {o: hashlib.sha256((PKG / o).read_bytes()).hexdigest() for o in names}
-    subprocess.run([sys.executable, "-I", str(PKG / "build_s8_3a.py")], check=True, cwd=ROOT, capture_output=True)
-    assert before == {o: hashlib.sha256((PKG / o).read_bytes()).hexdigest() for o in names}
+    with rebuilt_package(ROOT, PKG / "build_s8_3a.py") as out:
+        assert before == {o: hashlib.sha256((out / o).read_bytes()).hexdigest() for o in names}

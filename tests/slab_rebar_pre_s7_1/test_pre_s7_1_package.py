@@ -20,6 +20,7 @@ import pytest
 from engine.source import delta_release as DR
 from engine.source import slab_qto_authority as Q
 from engine.source import slab_rebar_readiness as SR
+from tests.rebuild_sandbox import rebuilt_package
 
 ROOT = Path(__file__).resolve().parents[2]
 PKG = ROOT / "research" / "alsenan_slab_rebar_pre_s7_1"
@@ -126,8 +127,8 @@ def test_frozen_stages_including_pre_s7_are_immutable(summary):
 
 def test_rebuild_is_byte_identical():
     before = {o: sha(PKG / o) for o in OUTPUTS}
-    subprocess.run([sys.executable, "-I", str(ROOT / BUILDER)], check=True, capture_output=True, cwd=ROOT)
-    assert {o: sha(PKG / o) for o in OUTPUTS} == before
+    with rebuilt_package(ROOT, ROOT / BUILDER) as out:
+        assert {o: sha(out / o) for o in OUTPUTS} == before
 
 
 def test_builder_is_blind_and_registered():

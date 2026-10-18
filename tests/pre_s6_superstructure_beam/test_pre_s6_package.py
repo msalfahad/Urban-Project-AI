@@ -24,6 +24,7 @@ from pathlib import Path
 import pytest
 
 from engine.source import beam_rebar_readiness as BR
+from tests.rebuild_sandbox import rebuilt_package
 
 ROOT = Path(__file__).resolve().parents[2]
 PKG = ROOT / "research" / "pre_s6_superstructure_beam_readiness"
@@ -65,10 +66,9 @@ def test_outputs_match_index():
 def test_rebuild_is_byte_identical():
     idx = J("INDEX.json")
     before = {k: (PKG / k).read_bytes() for k in list(idx["outputs"]) + ["INDEX.json"]}
-    subprocess.run([sys.executable, "-I", str(PKG / "build_pre_s6.py"), str(DXF)], check=True, capture_output=True,
-                   cwd=ROOT)
-    for k, v in before.items():
-        assert (PKG / k).read_bytes() == v, k
+    with rebuilt_package(ROOT, PKG / "build_pre_s6.py", str(DXF)) as out:
+        for k, v in before.items():
+            assert (out / k).read_bytes() == v, k
 
 
 # ------------------------------------------------------------------------------------------------ conservation

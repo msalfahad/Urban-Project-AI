@@ -17,6 +17,7 @@ from pathlib import Path
 import pytest
 
 from engine.source import cover_authority as CA
+from tests.rebuild_sandbox import rebuilt_package
 
 ROOT = Path(__file__).resolve().parents[2]
 PKG = ROOT / "research" / "d1_2_footing_cover_audit"
@@ -114,9 +115,9 @@ def test_rebuild_is_byte_identical():
     man = J(PKG / "D1_2_FREEZE_MANIFEST.json")
     before = {k: (PKG / k).read_bytes() for k in man["outputs"]}
     before["D1_2_FREEZE_MANIFEST.json"] = (PKG / "D1_2_FREEZE_MANIFEST.json").read_bytes()
-    subprocess.run([sys.executable, "-I", str(ROOT / BUILDER)], check=True, capture_output=True, cwd=ROOT)
-    for k, v in before.items():
-        assert (PKG / k).read_bytes() == v, k
+    with rebuilt_package(ROOT, ROOT / BUILDER) as out:
+        for k, v in before.items():
+            assert (out / k).read_bytes() == v, k
 
 
 def test_builder_is_blind_and_registered():

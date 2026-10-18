@@ -26,6 +26,7 @@ import pytest
 from engine.source import delta_release as DR
 from engine.source import elevation_binding as EB
 from engine.source import source_identity as SI
+from tests.rebuild_sandbox import rebuilt_package
 
 ROOT = Path(__file__).resolve().parents[2]
 PKG = ROOT / "research" / "alsenan_swimming_pool_s8_2a"
@@ -230,6 +231,6 @@ def test_registry_declares_the_builder():
 def test_rebuild_is_byte_identical():
     names = OUTPUTS + [MANIFEST.name]
     before = {o: hashlib.sha256((PKG / o).read_bytes()).hexdigest() for o in names}
-    subprocess.run([sys.executable, "-I", str(PKG / "build_s8_2a.py")], check=True, cwd=ROOT, capture_output=True)
-    after = {o: hashlib.sha256((PKG / o).read_bytes()).hexdigest() for o in names}
-    assert before == after
+    with rebuilt_package(ROOT, PKG / "build_s8_2a.py") as out:
+        after = {o: hashlib.sha256((out / o).read_bytes()).hexdigest() for o in names}
+        assert before == after
