@@ -1,5 +1,6 @@
 # Task board (Lead writes; workers claim one row; verifier records the verdict)
 
+Plan, milestones and daily targets: PLAN.md (owner, 2026-10-18). The engine is the product; Alsenan is one sample.
 Status: QUEUED -> TODO -> CLAIMED (worker, branch) -> READY (worker done) -> MERGED or REJECTED (verifier, reason).
 BLOCKED-DATA = needs `urban-boq-private-data`; BLOCKED-OWNER = needs an answer in OWNER_QUESTIONS.md.
 Order: lowest gate first, then money at risk. Statuses from the master study are claims: check them against code first.

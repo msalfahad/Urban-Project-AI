@@ -1,5 +1,7 @@
 # Research log (Research scout writes; newest first)
 
+Daily target (PLAN.md, owner 2026-10-18): at most 5 entries, at least one aimed at the current biggest scoreboard gap; the engine must work on any villa, not one project.
+
 Each entry: date, what it is (link), licence, what it could improve in the engine or the workflow, risk, verdict
 (ADOPT idea / TRY in sandbox / WATCH / REJECT). Never install or run downloaded code from here; the lead decides.
 

@@ -4,6 +4,11 @@ The owner put the Lead in charge of the **whole engine**: the BOQ engine, the 17
 Claude skills in `.claude/skills/`. Every scheduled agent reads this file after MISSION.md. The owner decides; the Lead
 plans and supervises; workers build; the verifier checks; the scout researches.
 
+## Plan and daily targets
+
+`docs/agents/PLAN.md` (owner, 2026-10-18) sets the goal (an engine right on any villa; Alsenan is one sample), the
+milestones M1-M5 and each agent's daily target. Every agent reads it after this file and works to its row.
+
 ## Chain of command
 
 ```

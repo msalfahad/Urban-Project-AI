@@ -6,6 +6,13 @@ WP-KITCHEN membrane scope, WP-JOINT details, WIN-REVEAL finish, STUB-LIMIT, MEAS
 
 ## Open
 
+### Q-09 Measurement basis for every BOQ line (MEAS-STD; added 2026-10-18)
+Should the engine's quantities be (a) net geometric quantities from the drawing, with waste and rounding shown in a
+separate column, (b) quantities with waste already included as the freelancer does, or (c) all three side by side
+(measured, with waste, order quantity)? Blocks how the verifier classes freelancer differences (RULE_DIFFERENCE vs
+FREELANCER_RIGHT) on every trade, from M2 onward.
+Answer:
+
 ### Q-06 Hand-wash spaces: wet or dry? (D-17; added 2026-10-18)
 The three basin-only hand-wash spaces on Alsenan (9.35 m2 in all; the drawing does not establish their type) are:
 (a) wet: porcelain floor, full-height wall porcelain, waterproofing, marble threshold; (b) dry: plaster, paint, skirting,

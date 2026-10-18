@@ -1,0 +1,81 @@
+# Plan: an engine that is right on any Kuwait villa (owner, 2026-10-18)
+
+Every scheduled agent reads this file after MISSION.md and TEAM.md. MISSION.md says WHAT (gates, scoring, who is
+right); this file says HOW FAST and WHO DOES WHAT EACH DAY. The owner can change any target in a session or in
+OWNER_QUESTIONS.md.
+
+## The goal
+
+**The product is the engine, not a project.** Alsenan is one development sample. Success means: give the engine the
+drawings of a villa it has never seen and get a correct, evidenced, unpriced BOQ for concrete, rebar, blockwork,
+plaster, paint, floor areas, wet vs dry areas, waterproofing, tiles, doors and windows.
+
+Engine targets (per villa, per trade and unit; MISSION.md scoring):
+
+| Measure | Target |
+|---|---|
+| Silent omissions (room, opening, element with no engine line) | 0 |
+| WAPE, finishes and blockwork | <= 3 % (95 % floor = 5 %) |
+| WAPE, concrete | <= 2 % |
+| WAPE, rebar (counted from schedules, never kg/m3) | <= 3 % |
+| WAPE, waterproofing | <= 3 %, no wet room missed |
+| Doors, windows | exact counts |
+| Floor area | <= 1-2 %, no room lost |
+| Differences against the engine (FREELANCER_RIGHT + UNRESOLVED) | trending to 0; ENGINE_RIGHT needs a hand calculation |
+
+A trade counts as **done** only when it meets its target on **every villa in the development set** (at least 3 real
+villas + the T-019 synthetic villas), not on Alsenan alone. A change that helps one villa and hurts another is a
+regression.
+
+## Development set (the engine is judged on all of it)
+
+1. Alsenan (structural + architectural + freelancer BOQ per trade): Drive "Urban BOQ private data" / "Alsenan chalet
+   project".
+2. T-019 synthetic villas (hand truth, other layer names, units, rotation, mirror, Arabic / English).
+3. Two or more further real villas (owner, Q-05: architectural drawings exist; no structural). Each becomes its own
+   subfolder of "Urban BOQ private data". Until they arrive, every fix must pass a synthetic fixture that is not Alsenan.
+
+## Milestones (targets, not promises; the lead re-dates them when evidence says so)
+
+| # | By | Gate | Exit (measured, not claimed) |
+|---|---|---|---|
+| M1 | 2026-10-21 | 0 | Scoreboard measured on Alsenan from real files (T-001b); capability matrix merged; synthetic villas merged (T-019) |
+| M2 | 2026-10-28 | 1 | 0 silent omissions of rooms and openings on every development villa; wet vs dry correct (T-022, T-010, T-023, T-028, T-029, T-004, T-025) |
+| M3 | 2026-11-11 | 2 | Architectural ledger: blockwork (centreline T-027, heights T-013), plaster, paint, tiles, waterproofing, doors, windows at target WAPE with a verdict on every difference |
+| M4 | 2026-11-25 | 3 | Structural ledger: concrete census and rebar by bar population from schedules (T-009 split), formwork, excavation |
+| M5 | 2026-12-09 | 4 | Intake matrix: vector PDF, DWF, scanned PDF and images through the plan reader (T-003), nothing fabricated |
+| -  | owner | 5-7 | Blind benchmark, pilot, product: owner only |
+
+## Daily targets per agent
+
+| Agent (cadence) | Daily target | Quality bar |
+|---|---|---|
+| **Worker** (every 2 h, 12 runs) | >= 4 tasks to READY per day; never idle while a TODO exists | each task: general rule (no project constant), non-Alsenan hand fixture, tests at `impact` level, freeze check 0; rework rate <= 1 in 4 |
+| **Verifier** (every 3 h, 8 runs) | no READY task waits more than 6 h; scoreboard re-measured after every merge and at least once a day, **per villa** | a who-is-right verdict for every new engine-vs-reference difference; rejects any logic that only holds for Alsenan; no trade gets worse on any villa |
+| **Lead** (every 6 h, 4 runs) | board always at 5 TODO (max 1 Track B); >= 2 new tasks a day drawn from the largest scoreboard gaps (money at risk first); milestone table kept current | every task small (one run), names gate, gap, modules, acceptance; owner questions <= 5, each one sentence with options |
+| **Research scout** (daily) | <= 5 entries, at least 1 aimed at the current biggest scoreboard gap | licence and security checked; ideas only, nothing installed |
+
+Weekly (lead, Sunday run): one line per milestone in BOARD.md: on track / late (why) / done (commit); tasks merged this
+week; scoreboard trend per trade and villa.
+
+## Roles (no overlap)
+
+- **Owner**: decisions only an owner can make (measurement basis, scope, missing drawings, UNRESOLVED verdicts,
+  gates 5-7). Answers in OWNER_QUESTIONS.md or the hub chat.
+- **Lead**: chooses what is worked on and in what order, keeps the board, the milestones and the questions; never code.
+- **Worker**: builds one task per run on its own branch; never merges, never grades itself.
+- **Verifier**: the only one who merges and the only one who writes the scoreboard; judges who is right.
+- **Research scout**: finds techniques and tools for the current biggest gap; never runs downloaded code.
+
+## How the next tasks are chosen (lead)
+
+1. A merge that broke a gate (fix first).
+2. Lowest open gate.
+3. Inside a gate, money at risk: rebar, concrete, waterproofing, aluminium / windows, blockwork, then finishes.
+4. Generality: a gap seen on two villas beats a gap seen on one.
+5. Track B (product agents) gets at most one TODO slot.
+
+## Owner questions
+
+Only what no drawing, rule or evidence settles; at most 5 open; every new one also goes to the owner in the run's final
+message and push notification (lead) or through the hub chat.
