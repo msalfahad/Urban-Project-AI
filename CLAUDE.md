@@ -37,6 +37,10 @@ failing suite green. After any change under `engine/`, `tools/`, `rules/`, `know
 `PYTHONDONTWRITEBYTECODE=1 python3 -I tools/freeze_verify.py check --index research/freeze_integrity/FREEZE_BASELINE_INDEX.jsonl`
 must print `frozen artefacts differing from the index: 0`; otherwise stop and report.
 
+Interpreter: run tests and builders on Python 3.11 (`.python-version`; the agent shell's `python3` may be 3.13, where
+frozen rebuilds differ by one ulp). Once per run: `uv venv -p python3.11 .venv && uv pip install -p .venv/bin/python -r
+requirements.txt` (or `python3.11 -m venv .venv` + `.venv/bin/python -m pip install -r requirements.txt`), then use
+`.venv/bin/python` for `python3` in the commands below. `requirements.txt` lists every package the code imports.
 Targeted tests: `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/<folder or file>`. The root
 `conftest.py` fails a session that changes files under `data/` or `tests/`; tests must write only to temporary folders.
 
