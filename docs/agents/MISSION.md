@@ -26,6 +26,19 @@ owner rules: ENGINE_RIGHT, FREELANCER_RIGHT, RULE_DIFFERENCE (different measurem
 question). Only FREELANCER_RIGHT and UNRESOLVED count against the engine; ENGINE_RIGHT needs a hand calculation
 from the drawing, never the engine's own output.
 
+## One engine for every villa, not a fit to Alsenan (owner, 2026-10-18)
+
+The aim is an engine that is right on any Kuwait villa drawing, not one that reproduces Alsenan. Alsenan is one
+development case among several. So:
+- Every fix is a general rule (geometry, symbol, text, schedule or owner rule), never a project constant: no Alsenan
+  layer names, coordinates, room names, counts or thresholds tuned until its numbers match. Project-specific facts go in
+  a project fact file with their source, never in engine code.
+- Every task's acceptance needs a hand-calculated synthetic fixture that is NOT Alsenan (other layouts, layer names,
+  units, rotation, mirror, Arabic and English labels), plus the development villas (T-012) when available. A change
+  that improves Alsenan but is untested elsewhere is not done.
+- The scoreboard is kept per villa; a trade counts as improved only if no villa gets worse.
+- The verifier rejects a change whose logic only holds for Alsenan.
+
 ## Alsenan is the DEVELOPMENT villa, not a blind test
 
 The freelancer's BOQ is our development reference: we may tune against it, so it can never prove accuracy. Proof needs

@@ -17,6 +17,13 @@ Is each floor's facade measured (a) F.F.L. to the next F.F.L. (engine default to
 (c) a stated height per floor? Blocks the external facade plaster / paint area (Gate 2, after section binding T-013).
 Answer:
 
+### Q-08 Other villas for the engine (T-012; added 2026-10-18)
+To make the engine right on every villa, the agents need 2-3 more villas (AutoCAD DWG/DXF + PDF). Where can they get
+them: (a) you create the private repository msalfahad/urban-boq-private-data and upload them under dev_villas/<name>/
+(agents can read it; it never goes into the public repo), (b) a Google Drive folder you name, or (c) not now (synthetic
+villas only, T-019)? Blocks T-012, T-001b and every real-plan check beyond Alsenan.
+Answer:
+
 ## Answered
 
 ### Q-01 Plan reader: may Claude look at the drawings? (answered 2026-10-18)
