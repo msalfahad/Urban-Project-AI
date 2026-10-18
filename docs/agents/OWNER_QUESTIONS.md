@@ -1,6 +1,6 @@
 # Questions for the owner (at most 5 open; answer under "Answer:")
 
-Lead 2026-10-18 12:30: no new question; Q-06 and Q-07 still open (no owner answer yet). Lead adds questions an agent cannot decide from drawings, rules or evidence. Answered questions move to the bottom.
+Lead 2026-10-18 15:40: no new question; Q-06 and Q-07 still open (no owner answer yet). The T-019 wall-length basis finding is settled by UP-WALL-GEOM-001 (masonry run = centreline, owner-approved), so it became task T-027, not a question. Lead adds questions an agent cannot decide from drawings, rules or evidence. Answered questions move to the bottom.
 Decisions still queued behind these (from the master study `14_OWNER_DECISIONS_QUEUE.csv`): D-17 review-space wet / dry,
 WP-KITCHEN membrane scope, WP-JOINT details, WIN-REVEAL finish, STUB-LIMIT, MEAS-STD, ROOF-FIN, BLIND-AUTH.
 
