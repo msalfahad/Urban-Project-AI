@@ -22,7 +22,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1267 | pytest suites, one folder per round. |
+| `tests/` | 1268 | pytest suites, one folder per round. |
 | `tools/` | 95 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -659,7 +659,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_intake.py` | 328 | MEDIUM | 7 | ARCH INTAKE (M9 S2 / S3) - the architectural route's extra readings of a DXF, next to tools/urban_intake.py |
 | `arch_overlay.py` | 126 | MEDIUM | 1 | ARCH OVERLAY (M9 S2, S3, S4) - one SVG per plan region: the wall layers, every measured space coloured by class, the |
 | `arch_run_audit.py` | 434 | MEDIUM | 0 | ARCHITECTURAL RUN AUDIT (Phase 2B-6) - read-only checks of a finished `urban_boq_m9.py arch` run that turn the |
-| `arch_synth.py` | 631 | HIGH | 30 | SYNTHETIC ARCHITECTURAL PLANS (M9 S2) - DXF plans whose every quantity is known by construction, for the regression |
+| `arch_synth.py` | 631 | HIGH | 31 | SYNTHETIC ARCHITECTURAL PLANS (M9 S2) - DXF plans whose every quantity is known by construction, for the regression |
 | `arch_v27_explain.py` | 147 | MEDIUM | 1 | ARCH_TAKEOFF_V2.6 -> V2.7 BOQ difference explainer (Phase 2B-7): every BOQ total that differs between the two runs |
 | `audit_cad_source.py` | 155 | MEDIUM | 2 | Representation audit of an authored CAD source. No measurement. |
 | `audit_dwf_source.py` | 175 | MEDIUM | 0 | Structural audit of a DWF package. Representation only, no geometry read. |
@@ -730,7 +730,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `synthetic_villa_m6.py` | 698 | CRITICAL | 5 | SYNTHETIC VILLA M6 - completeness cases drawn onto the M2 synthetic villa, with the truth of what was drawn. |
 | `synthetic_villa_m8.py` | 211 | CRITICAL | 4 | SYNTHETIC VILLA M8 - the M6 completeness villa with the DESIGN of every scope element it draws, so that the |
 | `urban_boq_m2.py` | 603 | CRITICAL | 16 | URBAN BOQ M2 - the one-command BOQ with ROUTE G, the generic engine, on top of the frozen M1 pipeline. |
-| `urban_boq_m9.py` | 3044 | HIGH | 28 | URBAN BOQ M9 (S1) - canonical BOQ lines, room material plans and the room-by-room workbook, on top of route G. |
+| `urban_boq_m9.py` | 3061 | HIGH | 29 | URBAN BOQ M9 (S1) - canonical BOQ lines, room material plans and the room-by-room workbook, on top of route G. |
 | `urban_intake.py` | 225 | CRITICAL | 24 | URBAN INTAKE (M2) - one drawing file -> a plain, source-pointed geometry record for the generic engine. |
 | `urban_project_run.py` | 321 | CRITICAL | 1 | URBAN PROJECT RUN (M7) - one manifest per project; the blind protocol enforced by the tool, not remembered. |
 | `urban_structural_boq.py` | 602 | CRITICAL | 3 | URBAN STRUCTURAL BOQ (M1) - one command from a drawing set to a planning BOQ, an exception report, Excel and PDF. |
@@ -744,7 +744,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 
 `tools/run_pipeline.py` symbols: def bands_to_pairs (L169-178), def side_coverage (L181-206), def host_band_for (L209-224), def raster_overlap (L227-274), def tolerance_sensitivity (L287-328), class NoSpaceMap (L359-376), def load_space_map (L379-399), def run (L402-2060), def main (L2063-2118)
 
-`tools/urban_boq_m9.py` symbols: def revision_set_sha256 (L170-171), def structural_lines (L174-181), def run_rules (L184-188), def write_m9 (L191-230), def cmd_run (L233-253), def cmd_rooms (L256-262), class CompletenessFailed (L275-281), def arch_compute (L284-307), def K_value (L2354-2356), def v21_files (L2522-2595), def cmd_arch (L2722-2879), def cmd_tiles (L2893-2905), def cmd_membrane (L2908-2921), def cmd_rooms_check (L2924-2926), def cmd_rules (L2929-2935), def main (L2938-3039)
+`tools/urban_boq_m9.py` symbols: def revision_set_sha256 (L178-179), def structural_lines (L182-189), def run_rules (L192-196), def write_m9 (L199-238), def cmd_run (L241-261), def cmd_rooms (L264-270), class CompletenessFailed (L283-289), def arch_compute (L292-316), def K_value (L2371-2373), def v21_files (L2539-2612), def cmd_arch (L2739-2896), def cmd_tiles (L2910-2922), def cmd_membrane (L2925-2938), def cmd_rooms_check (L2941-2943), def cmd_rules (L2946-2952), def main (L2955-3056)
 
 ## `pipeline/` (4 modules)
 
@@ -913,6 +913,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/swimming_pool_s8_2/` | 4 |
 | `tests/swimming_pool_s8_2a/` | 2 |
 | `tests/t022_room_vocab/` | 1 |
+| `tests/t034_arch_v210/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
