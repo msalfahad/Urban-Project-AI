@@ -6,7 +6,16 @@ WP-KITCHEN membrane scope, WP-JOINT details, WIN-REVEAL finish, STUB-LIMIT, MEAS
 
 ## Open
 
-(none; next candidates from the queue above)
+### Q-06 Hand-wash spaces: wet or dry? (D-17; added 2026-10-18)
+The three basin-only hand-wash spaces on Alsenan (9.35 m2 in all; the drawing does not establish their type) are:
+(a) wet: porcelain floor, full-height wall porcelain, waterproofing, marble threshold; (b) dry: plaster, paint, skirting,
+ordinary floor porcelain; or (c) answer per space. Blocks their floor, wall and waterproofing lines (Gate 1, wet vs dry).
+Answer:
+
+### Q-07 Facade height convention (OQ-08 in research/urban_m9_n10/OWNER_DECISIONS_REGISTER.md; added 2026-10-18)
+Is each floor's facade measured (a) F.F.L. to the next F.F.L. (engine default today), (b) slab top to slab top, or
+(c) a stated height per floor? Blocks the external facade plaster / paint area (Gate 2, after section binding T-013).
+Answer:
 
 ## Answered
 
