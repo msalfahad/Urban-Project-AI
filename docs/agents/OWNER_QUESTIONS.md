@@ -78,6 +78,27 @@ Waits on: the concrete scoreboard verdicts for pool, stairs and footings (T-001b
 
 Answer:
 
+### Q-13 A toilet drawn as loose lines, or a chair against the wall? (worker 1 2026-10-18 23:40; T-010)
+
+What we found: when a room has no name, the engine calls it a bathroom if it sees a wash basin plus a toilet drawn as
+loose lines (an oval bowl touching a box on the wall). A chair of the same size with its back on the wall looks exactly
+the same in the lines, so a dry room (a lobby with a basin and a chair) would get bathroom tiles and waterproofing,
+with a review flag. Today the rule says a drawn toilet shape counts as proof; no rule says how to tell it from a chair.
+Real example: the Alsenan plan is not affected (its toilets are not drawn as loose lines; checked in Phase 2B-8), so
+the example is our test drawing: a 3.40 x 3.00 = 10.20 m2 lobby with a basin and, on the furniture layer, either a
+toilet (bowl 0.40 x 0.60 touching a 0.50 x 0.20 box on the wall) or a chair (seat 0.40 x 0.55 touching a 0.45 x 0.15
+back on the wall). Both give the lobby 10.20 m2 wet floor tile, 26.94 m2 wall tile and 10.20 m2 waterproofing.
+How to check it yourself: on any villa plan you have, look at how the toilets are drawn: a named toilet block, loose
+lines on a plumbing / sanitary layer, or loose lines on the furniture layer with no drain or soil-pipe mark.
+Choices: (a) keep as now: a toilet-shaped outline next to a basin makes the room a bathroom, flagged for a person to
+check; (b) loose lines count as a toilet only on a plumbing / sanitary layer or with a drain or soil-pipe mark next to
+it; otherwise the room stays "to be checked" with no wet and no dry quantity (a real toilet drawn on the furniture
+layer will also wait for a person); (c) you give a minimum box depth for a toilet cistern (for example 0.18 m): a
+thinner back is a chair.
+Waits on: wet or dry finishes and waterproofing of unnamed rooms with a toilet drawn as loose lines (T-010).
+
+Answer:
+
 ## Answered
 
 ### Q-11 AutoCAD DXF files for the scoreboard (T-001b; added by the worker 2026-10-18 as Q-10, renumbered by the lead)
