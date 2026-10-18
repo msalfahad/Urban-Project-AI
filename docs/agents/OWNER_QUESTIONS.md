@@ -4,6 +4,20 @@ Lead 2026-10-18 20:05 (owner session): Q-06, Q-07, Q-09 answered by the owner (s
 Decisions still queued behind these (from the master study `14_OWNER_DECISIONS_QUEUE.csv`): D-17 review-space wet / dry,
 WP-KITCHEN membrane scope, WP-JOINT details, WIN-REVEAL finish, STUB-LIMIT, MEAS-STD, ROOF-FIN, BLIND-AUTH.
 
+## No assumptions (owner, 2026-10-18; applies to every agent)
+
+Every measurement, count, quantity or classification follows the Urban rules the owner has set: the rule registry
+(`rules/`, 1.5.0), the knowledge registry, `research/urban_m9_n10/OWNER_DECISIONS_REGISTER.md` and every "Answered"
+entry in OWNER_QUESTIONS.md. Nothing else.
+- Do not assume, guess, infer a convention, borrow a value from the freelancer's workbook, or pick a default "for now".
+- If an Urban rule covers the case, cite its id in the task, the code comment or the handoff.
+- If no rule covers it, or the rule is unclear, ambiguous or conflicts with another: stop that part and ask the owner
+  at once (worker: set BLOCKED-OWNER with the question; verifier: UNRESOLVED; lead: an owner question and a line under
+  "QUESTIONS FOR OWNER" in the report to the owner's main chat). Work that needs no such rule may go on.
+- A quantity that depends on an unanswered rule stays HELD or UNSUPPORTED. It never becomes a number and never 0.
+- A question is one sentence with the options and what it blocks. Such a question is always asked, even when five
+  are already open; the lead tells the owner when the list is long.
+
 ## Owner instructions (via the owner's main Claude Code chat, 2026-10-18)
 
 The owner's main contact for the whole team is the owner's Claude Code chat (the session that built N10 and the private-data
