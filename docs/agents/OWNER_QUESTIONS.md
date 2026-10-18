@@ -4,6 +4,21 @@ Lead 2026-10-18 20:05 (owner session): Q-06, Q-07, Q-09 answered by the owner (s
 Decisions still queued behind these (from the master study `14_OWNER_DECISIONS_QUEUE.csv`): D-17 review-space wet / dry,
 WP-KITCHEN membrane scope, WP-JOINT details, WIN-REVEAL finish, STUB-LIMIT, MEAS-STD, ROOF-FIN, BLIND-AUTH.
 
+## Owner instructions (via the owner's main Claude Code chat, 2026-10-18)
+
+The owner's main contact for the whole team is the owner's Claude Code chat (the session that built N10 and the private-data
+repository `urban-boq-private-data`). It can fix what the board cannot (code, repository access, the private data, scheduled-task
+settings). Instructions:
+1. **DWF files are ready on Drive.** Folder "Alsenan chalet project": the architectural DWF (title ends `2026-05-06T113026.059.dwf`, 2.65 MB,
+   same bytes as the registered DWF `7d440a57...`). The owner sends two more DWFs later; they go into the same folder. Every agent may read
+   Drive DWF/DWG/DXF/PDF files there (read-only, downloads up to 10 MB; larger files as .zip). Nothing blocks on DWF access now: if a
+   task needed a DWF and was BLOCKED-DATA, move it to TODO. The DWF is a viewing format: use it to cross-check the DXF/DWG reading, never
+   as the measured source.
+2. **Reports and questions.** Lead: end every run with a short report (what merged, what is blocked, the one thing you need) and write each
+   question into this file as usual. The owner answers in the main chat, and the answer is written under "Answer:" here.
+3. **If you cannot do something** (repository not attachable, Drive file unreadable, a setting only the owner can change), say exactly what
+   in the first line of your report; the main chat will fix it.
+
 ## Open
 
 ## Answered
