@@ -50,14 +50,14 @@ regression.
 
 ## Milestones (targets, not promises; the lead re-dates them when evidence says so)
 
-| # | By | Gate | Exit (measured, not claimed) |
-|---|---|---|---|
-| M1 | 2026-10-21 | 0 | Scoreboard measured on Alsenan from real files (T-001b); capability matrix merged; synthetic villas merged (T-019) |
-| M2 | 2026-10-28 | 1 | 0 silent omissions of rooms and openings on every development villa; wet vs dry correct (T-022, T-010, T-023, T-028, T-029, T-004, T-025) |
-| M3 | 2026-11-11 | 2 | Architectural ledger: blockwork (centreline T-027, heights T-013), plaster, paint, tiles, waterproofing, doors, windows at target WAPE with a verdict on every difference |
-| M4 | 2026-11-25 | 3 | Structural ledger: concrete census and rebar by bar population from schedules (T-009 split), formwork, excavation |
-| M5 | 2026-12-09 | 4 | Intake matrix: vector PDF, DWF, scanned PDF and images through the plan reader (T-003), nothing fabricated |
-| -  | owner | 5-7 | Blind benchmark, pilot, product: owner only |
+| # | By | Gate | Exit (measured, not claimed) | Status (lead 2026-10-18 22:15) |
+|---|---|---|---|---|
+| M1 | 2026-10-21 | 0 | Scoreboard measured on Alsenan from real files (T-001b); capability matrix merged; synthetic villas merged (T-019) | on track: capability matrix done (T-002b, 5be347d); T-001b TODO now the Alsenan DXFs are on Drive; T-019 TODO (CODEMAP rework only) |
+| M2 | 2026-10-28 | 1 | 0 silent omissions of rooms and openings on every development villa; wet vs dry correct (T-022, T-010, T-023, T-028, T-029, T-004, T-025) | on track, not started on the released path: T-022 merged (b35c944, opt-in), T-034 wires it; T-010 / T-029 / T-004a / T-025a TODO; villa 2 intake T-033 TODO |
+| M3 | 2026-11-11 | 2 | Architectural ledger: blockwork (centreline T-027, heights T-013), plaster, paint, tiles, waterproofing, doors, windows at target WAPE with a verdict on every difference | not started: T-013 TODO; T-027 waits on T-019 |
+| M4 | 2026-11-25 | 3 | Structural ledger: concrete census and rebar by bar population from schedules (T-009 split), formwork, excavation | not started (T-009 queued) |
+| M5 | 2026-12-09 | 4 | Intake matrix: vector PDF, DWF, scanned PDF and images through the plan reader (T-003), nothing fabricated | not started (T-003 queued) |
+| -  | owner | 5-7 | Blind benchmark, pilot, product: owner only | owner |
 
 ## Daily targets per agent
 
