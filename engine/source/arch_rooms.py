@@ -378,7 +378,7 @@ def opening_marks(o, segments, arcs, unit_m):
     return {"head_lines": heads, "marks": marks, "blocks": sorted(blocks), "clear": marks == 0 and heads <= 2}
 
 
-def _faces_of(arr, sites, texts, unit_m, eps, detail=False, v27=None):
+def _faces_of(arr, sites, texts, unit_m, eps, detail=False, v27=None, word=None):
     """detail (ARCH_TAKEOFF_V2.2 only): also record each face's boundary edge by edge (engine.source.release_safety).
     v27 (ARCH_TAKEOFF_V2.7 only): the polygon follows its arc edges (arch_v27.cycle_points, sagitta <= 1 mm)."""
     faces = []
@@ -409,7 +409,7 @@ def _faces_of(arr, sites, texts, unit_m, eps, detail=False, v27=None):
                   not any(MD.point_in_poly(t["x"], t["y"], h) for h in holes)]
         words = []
         for t in inside:
-            code, _ = room_word(t["value"])
+            code, _ = (word or room_word)(t["value"])    # word: a versioned vocabulary (T-022); None is V1
             if code:
                 words.append((code, t["id"]))
         codes = sorted({c for c, _ in words})
@@ -805,7 +805,8 @@ def _zone_groups(zc, pairs, outward=frozenset()):
     return {k: find(k) for k in cell}, shared, functional
 
 
-def zone_partition(faces, items, ents, roles, unit_m, eps, texts, region_id, ops_by_id=None, detail=False, v27=None):
+def zone_partition(faces, items, ents, roles, unit_m, eps, texts, region_id, ops_by_id=None, detail=False, v27=None,
+                   word=None):
     """S5: split each MERGED face along the drawn lines that separate its labelled parts (see ZONE_*).
     -> (faces, records): the faces of the plan with each split face replaced by its zones, and one record per MERGED
     face (split or not, and why)."""
@@ -825,7 +826,7 @@ def zone_partition(faces, items, ents, roles, unit_m, eps, texts, region_id, ops
               for c in allc}
     arr = TP.build(items + list(z_item.values()), eps)
     sites = TP.sites_of(arr, "ARCH", region_id)
-    cells = _faces_of(arr, sites, texts, unit_m, eps, detail, v27=v27)
+    cells = _faces_of(arr, sites, texts, unit_m, eps, detail, v27=v27, word=word)
     _symbols(cells, ents, roles, unit_m, v27=v27)
     sides = defaultdict(set)                      # (zone source, edge) -> the cells on its two sides
     for st in sites:
@@ -899,7 +900,7 @@ def zone_partition(faces, items, ents, roles, unit_m, eps, texts, region_id, ops
     by_line = {c["id"]: c for c in allc}
     while keep:
         arr2 = TP.build(items + [z_item[k] for k in sorted(keep)], eps)
-        out = _faces_of(arr2, TP.sites_of(arr2, "ARCH", region_id), texts, unit_m, eps, detail, v27=v27)
+        out = _faces_of(arr2, TP.sites_of(arr2, "ARCH", region_id), texts, unit_m, eps, detail, v27=v27, word=word)
         _symbols(out, ents, roles, unit_m, v27=v27)
         bad = [fid for fid in plan if not _apply_zones(out, plan[fid], next(r for r in records
                                                                               if r["parent_face_id"] == fid), by_line)]
@@ -981,7 +982,7 @@ def closure_in_passage(seg, passages, unit_m, fit_m=DOOR_LEAF_FIT_M):
 
 
 def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, release_safety=False,
-           door_review=False, v27=False, v271=None, v29=False):
+           door_review=False, v27=False, v271=None, v29=False, vocab=None):
     """v27 (ARCH_TAKEOFF_V2.7 only): column rectangles of any orientation, the door's structural opening from its own
     jamb lines and arc-aware face polygons (engine.source.arch_v27); False is the V1 .. V2.6 path, unchanged.
     v271 (ARCH_TAKEOFF_V2.7.1 only, with v27): a dict - the turned columns are obstacles of the band-opening search
@@ -996,8 +997,16 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, re
     released totals by door_model), its swing's closure is dropped; a passage near an idle swing carries
     door_symbol_note; False is unchanged. v29 (ARCH_TAKEOFF_V2.9 only, D-P9-01 / D-P9-02): the jambed gaps of the
     curved wall bands are openings too (engine.source.arch_v29), closed on both wall faces by arcs; False is
-    unchanged (no opening carries "curved", so every reader of the straight records sees the earlier openings)."""
+    unchanged (no opening carries "curved", so every reader of the straight records sees the earlier openings).
+    vocab (T-022): "ROOM_VOCAB_V2" types the room labels of the faces with engine.source.room_vocab.room_word
+    (compound phrases before bare words: 'حمام سباحة' is a POOL, not a BATHROOM); None is ROOM_VOCAB_V1, unchanged."""
     eps = 0.5e-3 / unit_m
+    word = None
+    if vocab is not None:
+        from engine.source import room_vocab as RV
+        if vocab != RV.VOCAB_ID:
+            raise ValueError(f"unknown room vocabulary {vocab!r}")
+        word = RV.room_word
     wall_l = sorted(l for l, r in roles.items() if r == AP.WALL)
     col_l = {l for l, r in roles.items() if r == AP.COLUMN}
     win_l = {l for l, r in roles.items() if r == AP.WINDOW}
@@ -1152,18 +1161,21 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, re
     by_op = {o["opening_id"]: o for o in ops}
     # pass 1: every opening closed by its thresholds -> the cells of the floor
     arr = TP.build(items + [t for _, t in thr_items] + [t for _, t in cthr] + closures, eps)
-    cells = _faces_of(arr, TP.sites_of(arr, "ARCH", region_id), texts, unit_m, eps, release_safety, v27=v27rec)
+    cells = _faces_of(arr, TP.sites_of(arr, "ARCH", region_id), texts, unit_m, eps, release_safety, v27=v27rec,
+                      word=word)
     _symbols(cells, ents, roles, unit_m, v27=v27rec)
     drop, zoning = open_passages(cells, by_op)
     faces = cells
     if drop:
         # pass 2: the passages inside one room's floor are not boundaries -> the room is its whole floor
         arr = TP.build(items + [t for oid, t in thr_items + cthr if oid not in drop] + closures, eps)
-        faces = _faces_of(arr, TP.sites_of(arr, "ARCH", region_id), texts, unit_m, eps, release_safety, v27=v27rec)
+        faces = _faces_of(arr, TP.sites_of(arr, "ARCH", region_id), texts, unit_m, eps, release_safety, v27=v27rec,
+                          word=word)
         _symbols(faces, ents, roles, unit_m, v27=v27rec)
     # pass 3 (S5): a MERGED face is split only along the lines drawn inside it that separate its labelled parts
     faces, zones = zone_partition(faces, items + [t for oid, t in thr_items + cthr if oid not in drop] + closures, ents,
-                                  roles, unit_m, eps, texts, region_id, by_op, detail=release_safety, v27=v27rec)
+                                  roles, unit_m, eps, texts, region_id, by_op, detail=release_safety, v27=v27rec,
+                                  word=word)
     for o in ops:
         if o["opening_id"] in drop:
             o["inside_one_floor"] = True                     # an open passage inside one room's floor (not a boundary)
@@ -1225,7 +1237,7 @@ def spaces(ents, roles, unit_m, *, region_id="ARCH", tol="LEGACY", geom=None, re
                             "cells": len(cells), "passages_inside_one_floor": len(drop),
                             "zone_lines": sum(len(r.get("kept_lines") or ()) for r in zones)},
             **({"v27": v27rec, "column_polys": col_polys, "repairs_v27": v27rec.get("jamb_items") or []}
-               if v27 else {}), **({"v29": v29rec} if v29 else {})}
+               if v27 else {}), **({"v29": v29rec} if v29 else {}), **({"vocab": vocab} if vocab else {})}
 
 
 CAP_TOL_M = 0.03
