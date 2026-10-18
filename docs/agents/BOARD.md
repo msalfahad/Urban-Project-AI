@@ -92,3 +92,6 @@ From the 2026-10-17 BOQ engines study, which the owner supplied (see RESEARCH_LO
 11. (scout 2026-10-17) Rebar: bar-mark and count-expression parser tested on dxfstructure notation (`[1] - #12 L=2120`, `2*2#12-[4]`); own code only, GPL source (T-009).
 12. (scout 2026-10-17) Blockwork: sandbox test of pygeoops.centerline (BSD-3) on wall polygons as an independent wall-length check (T-007).
 13. (scout 2026-10-17) Blockwork / finishes: girth diagnostic, external girth - 4T vs engine external-wall centreline, per floor (K.C. Tang centre-line rules).
+14. (scout 2026-10-18) DWG: sandbox-test ACadSharp (MIT) as a second DWG decoder: P7757 / ST7757 DWG -> DXF 2018, diff against LibreDWG JSON; unblocks Q-11 and villa 2 if they agree.
+15. (scout 2026-10-18) Concrete Q-12: term-by-term hand-calc sheet (stair waist / steps / landing; dome outer minus inner spherical cap + ring beam; pool slab + each wall) to settle the 3 UNRESOLVED lines.
+16. (scout 2026-10-18) Wet / dry T-028: context score (area, doors, adjacency to bedroom / other wet room, fixtures) proposes a type on the HELD record only (ResPlan room-graph idea; do not load its pickle).
