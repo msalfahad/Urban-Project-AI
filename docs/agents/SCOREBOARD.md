@@ -1,6 +1,10 @@
 # Scoreboard: Alsenan (development villa), engine vs freelancer (Verifier writes)
 
 Development reference only: tuning against it is allowed, so these numbers never prove product accuracy (MISSION.md).
+Verifier 2026-10-18: NOT MEASURED. `tools/alsenan_scoreboard.py` is merged (T-001a, 39c9dea) but has not been run on real
+data: the private repository `msalfahad/urban-boq-private-data` is not attached to the verifier, and the engine-to-freelancer
+key map does not exist until T-001b. Every row below is still a seeded estimate, not a measurement.
+
 Columns per MISSION.md. One row per trade and unit; never mix units. Each difference also gets a "who is right"
 verdict (ENGINE_RIGHT / FREELANCER_RIGHT / RULE_DIFFERENCE / UNRESOLVED, MISSION.md); only FREELANCER_RIGHT and
 UNRESOLVED count against the engine.
