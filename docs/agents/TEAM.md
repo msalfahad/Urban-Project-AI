@@ -18,8 +18,11 @@ Schedule (UTC): worker 1 at :19, worker 2 at :39, worker 3 at :59 every hour; ve
 - No two CLAIMED tasks change the same engine file. The lead writes "Files:" in each row; a worker skips a TODO whose
   files overlap a CLAIMED row and takes the next one.
 - A run that outlasts the hour is fine: the next run of the same worker simply claims a different task.
-- Workers merge the latest working branch into their task branch before setting READY (CODEMAP regenerated with the
-  tool), so the verifier gets clean merges.
+- Workers start each task branch from the latest working branch. If the working branch moved and the task now
+  conflicts (usually docs/CODEMAP.md only), do NOT make a merge commit (the session permission check refuses merging
+  another branch into a task branch, seen 2026-10-18 on T-019): create a fresh branch from the current working branch,
+  re-apply your own task changes, regenerate CODEMAP with the tool, re-run the tests and push that branch
+  (agents/task-<id>-r2), naming it on the board.
 - Verifier: before checking a READY task, mark it "VERIFYING (verifier, UTC time)" on the board and push; another
   verifier run skips tasks marked VERIFYING less than 2 h ago.
 - Lead keeps 8-12 TODO tasks (at most 2 Track B) so no worker finds an empty board.
