@@ -9,13 +9,28 @@ plans and supervises; workers build; the verifier checks; the scout researches.
 `docs/agents/PLAN.md` (owner, 2026-10-18) sets the goal (an engine right on any villa; Alsenan is one sample), the
 milestones M1-M5 and each agent's daily target. Every agent reads it after this file and works to its row.
 
+## Parallel work (owner, 2026-10-18: no idle agents)
+
+Schedule (UTC): worker 1 at :19, worker 2 at :39, worker 3 at :59 every hour; verifier at :49 every hour; lead every
+2 h at :09; research scout daily. Rules every agent follows:
+- One task, one worker: claim it on the board (push first) before any work; a rejected push means someone else moved;
+  fetch, re-read, claim another.
+- No two CLAIMED tasks change the same engine file. The lead writes "Files:" in each row; a worker skips a TODO whose
+  files overlap a CLAIMED row and takes the next one.
+- A run that outlasts the hour is fine: the next run of the same worker simply claims a different task.
+- Workers merge the latest working branch into their task branch before setting READY (CODEMAP regenerated with the
+  tool), so the verifier gets clean merges.
+- Verifier: before checking a READY task, mark it "VERIFYING (verifier, UTC time)" on the board and push; another
+  verifier run skips tasks marked VERIFYING less than 2 h ago.
+- Lead keeps 8-12 TODO tasks (at most 2 Track B) so no worker finds an empty board.
+
 ## Chain of command
 
 ```
 Owner (answers OWNER_QUESTIONS.md, gates 5-7, final say)
-  └─ Lead planner (scheduled, every 6 h)  — plans, prioritises, supervises the team, never writes code
-       ├─ Worker (scheduled, every 2 h)      — one board task per run, on agents/task-<id>, never merges
-       ├─ Verifier (scheduled, every 3 h)    — checks every READY task, merges or rejects, keeps the scoreboard
+  └─ Lead planner (scheduled, every 2 h)  — plans, prioritises, supervises the team, never writes code
+       ├─ Workers 1-3 (each hourly, staggered) — one board task per run, on agents/task-<id>, never merges
+       ├─ Verifier (scheduled, hourly)    — checks every READY task, merges or rejects, keeps the scoreboard
        └─ Research scout (scheduled, daily)  — ideas into RESEARCH_LOG.md and the board's Ideas
 ```
 

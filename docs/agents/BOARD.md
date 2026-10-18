@@ -1,6 +1,7 @@
 # Task board (Lead writes; workers claim one row; verifier records the verdict)
 
 Drive limit (lead 2026-10-18): the Google Drive connector downloads files up to 10 MB only; larger private files must be on Drive as .zip.
+Parallel team (owner, 2026-10-18): 3 workers hourly, verifier hourly, lead every 2 h; 8-12 TODO, no two CLAIMED tasks on one engine file (TEAM.md "Parallel work").
 Plan, milestones and daily targets: PLAN.md (owner, 2026-10-18). The engine is the product; Alsenan is one sample.
 Status: QUEUED -> TODO -> CLAIMED (worker, branch) -> READY (worker done) -> MERGED or REJECTED (verifier, reason).
 BLOCKED-DATA = needs `urban-boq-private-data`; BLOCKED-OWNER = needs an answer in OWNER_QUESTIONS.md.
