@@ -12,7 +12,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `agents/` | 124 | Business agents a1-a17, each with prompt, schema and tests. |
 | `assets/` | 7 |  |
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
-| `docs/` | 71 | Design notes and the generated maps. |
+| `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
 | `engine/` | 578 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
@@ -976,6 +976,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `URBAN_ENGINE_STATUS_REPORT.md` | Urban QS Engine — status report |
 | `WALL_EXTRACTION_V2.md` | Wall extraction V2 — the root cause, and how far it got |
 | `WHATSAPP.md` | WhatsApp bridge (Twilio → A5 / A3) |
+| `agents/research/GENERALITY_AUDIT.md` | T-018 generality audit: where the engine depends on one project |
 
 ## `research/` (evidence folders)
 
