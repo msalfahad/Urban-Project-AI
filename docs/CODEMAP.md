@@ -14,7 +14,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 579 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 580 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 7 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
@@ -22,7 +22,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1267 | pytest suites, one folder per round. |
+| `tests/` | 1268 | pytest suites, one folder per round. |
 | `tools/` | 95 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (228 modules)
+## `engine/source/` (229 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -396,9 +396,9 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_evidence.py` | 263 | MEDIUM | 2 | ARCHITECTURAL EVIDENCE (M4) - what an architectural floor plan says about the ground beams under it (generic; stdlib + |
 | `arch_floor.py` | 183 | MEDIUM | 5 | FLOOR AREA RECONCILIATION (M9 S4) - every m2 of a floor plan in exactly one category, or an explicit residual. |
 | `arch_measure.py` | 1165 | HIGH | 16 | ARCHITECTURAL MEASUREMENT (M9 S2) - canonical BOQ lines per room from the spaces of arch_rooms (generic, stdlib). |
-| `arch_plan.py` | 449 | HIGH | 15 | ARCHITECTURAL PLAN READING (M9 S2) - which part of a drawing is which floor plan, and what each layer IS (generic). |
+| `arch_plan.py` | 478 | HIGH | 17 | ARCHITECTURAL PLAN READING (M9 S2) - which part of a drawing is which floor plan, and what each layer IS (generic). |
 | `arch_quantity_truth.py` | 536 | MEDIUM | 2 | ARCH_QUANTITY_TRUTH_V1 - generic architectural quantity calculators with explicit evidence states. |
-| `arch_rooms.py` | 2250 | HIGH | 29 | ARCHITECTURAL SPACES (M9 S2, S4) - rooms of one floor plan from its wall linework, on the TS01 topology (generic). |
+| `arch_rooms.py` | 2250 | HIGH | 30 | ARCHITECTURAL SPACES (M9 S2, S4) - rooms of one floor plan from its wall linework, on the TS01 topology (generic). |
 | `arch_v27.py` | 1135 | MEDIUM | 4 | ARCH_TAKEOFF_V2.7 (M9 Phase 2B-7) - the drawing-interpretation corrections proven by independent acceptance tests |
 | `arch_v28.py` | 1028 | MEDIUM | 5 | ARCHITECTURAL TAKEOFF V2.8 (M9 Phase 2B-9) - heights read from the drawing, the opening schedule, window reveals |
 | `arch_v29.py` | 809 | MEDIUM | 4 | ARCH_TAKEOFF_V2.9 (Phase N10) - curved wall openings (generic; stdlib only). Read only by ARCH_TAKEOFF_V2.9. |
@@ -447,13 +447,13 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `detail_evidence.py` | 361 | MEDIUM | 7 | DETAIL EVIDENCE (M3) - typical-detail evidence read from a drawing PDF, in one schema for machine reads (native |
 | `digests.py` | 134 | MEDIUM | 4 | URBAN-SRD-1 and URBAN-RGD-1 — identity digests, NOT reconciliation. |
 | `dimension_evidence.py` | 187 | MEDIUM | 2 | DIMENSION EVIDENCE (M9 Phase 2A P2-09a, ARCH_TAKEOFF_V2.1) - read-only: the authored dimensions of a plan, their |
-| `discovery.py` | 251 | MEDIUM | 5 | DRAWING DISCOVERY AND ADMISSION (M9 S6) - what a drawing holds and whether it may be measured, BEFORE any quantity. |
+| `discovery.py` | 260 | MEDIUM | 6 | DRAWING DISCOVERY AND ADMISSION (M9 S6) - what a drawing holds and whether it may be measured, BEFORE any quantity. |
 | `door_feasibility.py` | 619 | MEDIUM | 3 | DOOR FEASIBILITY (M9 Phase 2B-2, ARCH_TAKEOFF_V2.4 only) - for every door: what the drawing shows, what Urban |
 | `door_model.py` | 837 | HIGH | 13 | DOOR MODEL (M9 Phase 2A P2-03 / P2-04, ARCH_TAKEOFF_V2.1 only) - every drawn door swing belongs to exactly one |
 | `door_standards.py` | 599 | MEDIUM | 7 | DOOR STANDARDS AND SCENARIOS (M9 Phase 2B-1, ARCH_TAKEOFF_V2.3 only) - the owner door rules of the knowledge |
 | `door_transition.py` | 124 | MEDIUM | 4 | DOOR FINISH TRANSITION (R8.14) - where one floor finish meets another inside a door threshold, as a TRADE |
 | `drawing_inventory.py` | 280 | CRITICAL | 5 | DRAWING INVENTORY (M1) - what a DXF holds, before any quantity (generic). |
-| `drawing_model.py` | 309 | CRITICAL | 15 | DRAWING MODEL (M2) - a normalized, source-pointed model of one structural drawing set (generic, stdlib). |
+| `drawing_model.py` | 309 | CRITICAL | 16 | DRAWING MODEL (M2) - a normalized, source-pointed model of one structural drawing set (generic, stdlib). |
 | `elevation_binding.py` | 134 | CRITICAL | 2 | ELEVATION BINDING - which physical object a dimension printed on an elevation or section measures (generic). |
 | `engineering_flags.py` | 214 | MEDIUM | 6 | ENGINEERING FLAG MODEL + COMPONENT RELEASE (generic, project-independent). |
 | `entity_role_inference.py` | 1228 | MEDIUM | 2 | ENTITY ROLE INFERENCE (V1): what a drawing's linework IS, from evidence the drawing itself carries. |
@@ -580,6 +580,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `stair_measure.py` | 119 | CRITICAL | 3 | STAIR MEASURE (M4) - structural stair quantities from the drawn treads of a stair zone (generic; stdlib + |
 | `stair_riser_schedule.py` | 155 | CRITICAL | 2 | STAIR RISER SCHEDULE - riser counts from drawn lines, uniform finished risers, finished and structural levels, |
 | `stair_scenario_checks.py` | 215 | CRITICAL | 1 | STAIR SCENARIO CHECKS - what a proposed riser count implies against a printed level, how it is set out on site, |
+| `storey_vocab.py` | 140 | MEDIUM | 2 | STOREY VOCABULARY V1 (T-029) - which storey a floor-plan title names, bilingual, ordered by level (generic). |
 | `struct_n10.py` | 306 | MEDIUM | 2 | STRUCTURAL N10 (Phase N10) - formwork contact faces, excavation footprints and a reinforcement audit, read from the |
 | `structural_authority.py` | 142 | MEDIUM | 2 | SOURCE AUTHORITY MODEL (generic, project-independent). |
 | `structural_census.py` | 356 | CRITICAL | 1 | STRUCTURAL_CENSUS_V1 - source rules + occurrence census, before any reinforcement calculation. |
@@ -655,11 +656,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `alsenan_scoreboard.py` | 339 | MEDIUM | 1 | ALSENAN SCOREBOARD (task T-001a) - engine BOQ rows vs reference (freelancer) rows, scored per trade and unit as |
 | `arch_change_verify.py` | 710 | MEDIUM | 0 | BOQ CHANGE ATTRIBUTION WITH INDEPENDENT VERIFICATION (Phase 2B-8) - every BOQ total that differs between two runs of |
 | `arch_dimensions.py` | 70 | MEDIUM | 2 | ARCH DIMENSIONS (M9 Phase 2A P2-09a) - the DIMENSION entities of a plan DXF as plain records for the read-only |
-| `arch_discovery.py` | 265 | MEDIUM | 5 | ARCHITECTURAL DRAWING DISCOVERY (M9 S6) - the ezdxf side of engine.source.discovery: a source census of the whole |
+| `arch_discovery.py` | 266 | MEDIUM | 5 | ARCHITECTURAL DRAWING DISCOVERY (M9 S6) - the ezdxf side of engine.source.discovery: a source census of the whole |
 | `arch_intake.py` | 328 | MEDIUM | 7 | ARCH INTAKE (M9 S2 / S3) - the architectural route's extra readings of a DXF, next to tools/urban_intake.py |
 | `arch_overlay.py` | 126 | MEDIUM | 1 | ARCH OVERLAY (M9 S2, S3, S4) - one SVG per plan region: the wall layers, every measured space coloured by class, the |
 | `arch_run_audit.py` | 434 | MEDIUM | 0 | ARCHITECTURAL RUN AUDIT (Phase 2B-6) - read-only checks of a finished `urban_boq_m9.py arch` run that turn the |
-| `arch_synth.py` | 631 | HIGH | 30 | SYNTHETIC ARCHITECTURAL PLANS (M9 S2) - DXF plans whose every quantity is known by construction, for the regression |
+| `arch_synth.py` | 631 | HIGH | 31 | SYNTHETIC ARCHITECTURAL PLANS (M9 S2) - DXF plans whose every quantity is known by construction, for the regression |
 | `arch_v27_explain.py` | 147 | MEDIUM | 1 | ARCH_TAKEOFF_V2.6 -> V2.7 BOQ difference explainer (Phase 2B-7): every BOQ total that differs between the two runs |
 | `audit_cad_source.py` | 155 | MEDIUM | 2 | Representation audit of an authored CAD source. No measurement. |
 | `audit_dwf_source.py` | 175 | MEDIUM | 0 | Structural audit of a DWF package. Representation only, no geometry read. |
@@ -913,6 +914,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/swimming_pool_s8_2/` | 4 |
 | `tests/swimming_pool_s8_2a/` | 2 |
 | `tests/t022_room_vocab/` | 1 |
+| `tests/t029_storey_vocab/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 

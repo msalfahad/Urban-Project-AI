@@ -194,8 +194,11 @@ def legacy_tolerance_findings(unit_m):
 
 
 def region_findings(regions, *, other_frames=(), blocked_frames=(), unassigned=(), crossings=None, titles_found=0,
-                    titles_in_frames=0, paper_space_content=False, frames_from_lines=False, overrides=False):
-    """stages 2 (sheets) and 5 (floors)."""
+                    titles_in_frames=0, paper_space_content=False, frames_from_lines=False, overrides=False,
+                    held_frames=()):
+    """stages 2 (sheets) and 5 (floors). held_frames (T-029, arch_plan.plan_regions with a storey vocabulary): a frame
+    whose title reads as a plan but names no known storey - a REVIEW_REQUIRED finding that travels with the BOQ (its
+    rooms are not measured), never a silent drop."""
     sheets, floors = [], []
     if frames_from_lines:
         sheets.append(finding(REVIEW, "FRAME_DRAWN_AS_LINES", "no sheet frame is a closed polyline; the frames drawn as "
@@ -203,6 +206,12 @@ def region_findings(regions, *, other_frames=(), blocked_frames=(), unassigned=(
     for o in other_frames:
         sheets.append(finding(WARNING, "FRAME_NOT_A_FLOOR_PLAN", f"frame {o['sheet_id']}: {o['why']}",
                               sheet_id=o["sheet_id"], titles_seen=o.get("titles_seen")))
+    for h in held_frames:
+        sheets.append(finding(REVIEW, h.get("reason") or "UNRECOGNISED_FLOOR_TITLE",
+                              f"frame {h['sheet_id']}: {h.get('why') or 'plan title with no known storey'}; "
+                              f"titles {h.get('titles')}: nothing on this sheet is measured until a reviewer gives "
+                              "its storey (--region)", sheet_id=h["sheet_id"], box=h.get("box"),
+                              titles=h.get("titles"), title_text_ids=h.get("title_text_ids")))
     for b in blocked_frames:
         floors.append(finding(BLOCKED_ITEM, "REGION_CUT_CROSSES_GEOMETRY", b["why"], sheet_id=b["sheet_id"],
                               titles=b.get("titles")))

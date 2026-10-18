@@ -72,18 +72,28 @@ SPLITS = ("TITLE_MIDPOINTS", "EMPTY_BANDS")
 BAND_MIN_M = 0.5                  # S6: the narrowest empty band that separates two plans in one frame
 
 
-def plan_regions(intake, model=None, *, split="TITLE_MIDPOINTS", frames_from_lines_fallback=False):
+STOREY_VOCABS = (None, "STOREY_VOCAB_V1")
+
+
+def plan_regions(intake, model=None, *, split="TITLE_MIDPOINTS", frames_from_lines_fallback=False, storey_vocab=None):
     """-> {"regions": [...], "other_frames": [...]}. split: TITLE_MIDPOINTS (M9 S2: a frame holding several floor
     titles is cut halfway between the title anchors) or EMPTY_BANDS (S6: cut only along the empty bands between the
     drawn plans, never through drawn geometry; titles no band separates -> blocked_frames). frames_from_lines_fallback
-    (S6): when no frame holds a floor-plan title, try the frames drawn as separate lines (drawing_model's M7 option)."""
+    (S6): when no frame holds a floor-plan title, try the frames drawn as separate lines (drawing_model's M7 option).
+    storey_vocab (T-029): None reads titles with FLOOR_TITLES (ARCH_PLAN_V1, unchanged); "STOREY_VOCAB_V1" reads them
+    with engine.source.storey_vocab (more storeys and spellings, V1 ids kept) and holds every frame whose title reads
+    as a plan but names no storey: out["held_frames"] (reason UNRECOGNISED_FLOOR_TITLE), never measured, never
+    dropped."""
     if split not in SPLITS:
         raise PlanError(f"split must be one of {SPLITS}")
+    if storey_vocab not in STOREY_VOCABS:
+        raise PlanError(f"storey_vocab must be one of {STOREY_VOCABS}")
     model = model or DM.build(intake)
     unit_m = (model.get("units") or {}).get("unit_m") or intake.get("unit_m") or 0.001
-    out = _plan_regions(intake, model, split, unit_m)
+    out = _plan_regions(intake, model, split, unit_m, storey_vocab)
     if frames_from_lines_fallback and not out["regions"]:
-        alt = _plan_regions(intake, DM.build(intake, options={"frames_from_lines": True}), split, unit_m)
+        alt = _plan_regions(intake, DM.build(intake, options={"frames_from_lines": True}), split, unit_m,
+                            storey_vocab)
         if alt["regions"]:
             alt["frames_from_lines"] = True
             out = alt
@@ -168,14 +178,20 @@ def cut_crossings(intake, regions):
     return out
 
 
-def _plan_regions(intake, model, split, unit_m):
-    regions, others, blocked, unassigned = [], [], [], []
+def _plan_regions(intake, model, split, unit_m, storey_vocab=None):
+    regions, others, blocked, unassigned, held = [], [], [], [], []
+    title_of = floor_of_title
+    if storey_vocab is not None:                    # T-029: lazy, so ARCH_PLAN_V1 runs never import the vocabulary
+        from engine.source import storey_vocab as SV
+
+        def title_of(v):
+            return SV.storey_of_title(v)[:2]
     for sh in model["sheets"]:
         x0, y0, x1, y1 = sh["box"]
         titles = []
         for t in intake["texts"]:
             if x0 <= t["x"] <= x1 and y0 <= t["y"] <= y1:
-                fl, order = floor_of_title(t["value"])
+                fl, order = title_of(t["value"])
                 if fl:
                     titles.append({"floor": fl, "order": order, "x": t["x"], "y": t["y"], "height": t["height"],
                                    "text_id": t["id"]})
@@ -184,6 +200,17 @@ def _plan_regions(intake, model, split, unit_m):
         for t in titles:
             if t["floor"] not in best or t["height"] > best[t["floor"]]["height"]:
                 best[t["floor"]] = t
+        if not best and storey_vocab is not None:
+            plan_like = [t for t in intake["texts"] if x0 <= t["x"] <= x1 and y0 <= t["y"] <= y1
+                         and SV.plan_like(t["value"])]
+            if plan_like:
+                plan_like.sort(key=lambda t: (-(t.get("height") or 0.0), str(t["id"])))
+                held.append({"sheet_id": sh["sheet_id"], "box": sh["box"], "state": "HELD",
+                             "reason": SV.HELD_REASON, "titles": [t["value"] for t in plan_like[:5]],
+                             "title_text_ids": [t["id"] for t in plan_like[:5]],
+                             "why": "the frame's title reads as a plan but names no storey of " + SV.VOCAB_ID +
+                                    ": held for review, not measured and not placed on a guessed storey"})
+                continue
         if not best:
             kinds = sorted({p for t in intake["texts"] if x0 <= t["x"] <= x1 and y0 <= t["y"] <= y1
                             for p in NOT_A_PLAN if re.search(p, DM.normalize(t["value"]).upper())})
@@ -227,6 +254,8 @@ def _plan_regions(intake, model, split, unit_m):
     out = {"policy": POLICY_ID, "regions": regions, "other_frames": others, "units": model.get("units")}
     if split == "EMPTY_BANDS":
         out.update(split=split, blocked_frames=blocked, unassigned_pieces=unassigned)
+    if storey_vocab is not None:
+        out.update(storey_vocab=storey_vocab, held_frames=held)
     return out
 
 
