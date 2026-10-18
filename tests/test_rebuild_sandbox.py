@@ -6,6 +6,8 @@ optionally, from a path argument. Hand truth: the committed OUT.json is b'{"v": 
 
 from __future__ import annotations
 
+import os
+import shutil
 import subprocess
 from pathlib import Path
 
@@ -104,3 +106,26 @@ def test_a_write_that_escapes_the_copy_fails_the_test(tmp_path):
     with pytest.raises(AssertionError, match="rebuild wrote into the real tree"):
         with rebuilt_package(root, "research/pkg/build.py", "LEAK=" + str(target)):
             pass
+
+
+def test_git_true_lets_a_builder_read_history_without_copying_git(tmp_path):
+    root = make_repo(tmp_path, "1")
+    shutil.rmtree(root / ".git")
+    (root / "research" / "pkg" / "stamp.py").write_text(
+        "import subprocess\nfrom pathlib import Path\nHERE = Path(__file__).resolve().parent\nROOT = HERE.parents[1]\n"
+        "h = subprocess.run(['git', 'log', '-1', '--format=%h', '--', 'research/pkg/build.py'], cwd=ROOT,\n"
+        "                   capture_output=True, text=True).stdout.strip()\n"
+        "(HERE / 'STAMP.txt').write_text(h or 'UNCOMMITTED')\n")
+    env = {"GIT_AUTHOR_NAME": "t", "GIT_AUTHOR_EMAIL": "t@t", "GIT_COMMITTER_NAME": "t", "GIT_COMMITTER_EMAIL": "t@t",
+           "PATH": os.environ.get("PATH", ""), "HOME": str(tmp_path)}
+    for cmd in (["git", "init", "-q"], ["git", "add", "-A"], ["git", "commit", "-q", "-m", "x"]):
+        subprocess.run(cmd, cwd=root, check=True, env=env)
+    head = subprocess.run(["git", "log", "-1", "--format=%h"], cwd=root, capture_output=True, text=True,
+                          env=env).stdout.strip()
+    before = state(root)
+    with rebuilt_package(root, "research/pkg/stamp.py", git=True) as out:
+        assert (out / "STAMP.txt").read_text() == head
+        assert (out.parents[1] / ".git").is_file()
+    with rebuilt_package(root, "research/pkg/stamp.py") as out:
+        assert (out / "STAMP.txt").read_text() != head                # no history without git=True
+    assert state(root) == before

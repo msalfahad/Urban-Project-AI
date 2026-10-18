@@ -11,6 +11,8 @@ reads and writes nothing in the real tree. The test then compares the rebuilt by
 mismatch fails that one test and writes nothing. The real tree is checked (size, mtime of every file outside
 `.git` and caches) before and after the build; any change fails the test and is listed. The copy is deleted on exit.
 A builder that exits non-zero raises `subprocess.CalledProcessError`, as `subprocess.run(check=True)` did.
+`git=True` is for a builder that only reads history (e.g. `git log -1 -- <path>` for a version stamp): the copy gets a
+`.git` file pointing at the real repository's git directory. Such a builder must not run git commands that write.
 """
 
 from __future__ import annotations
@@ -59,7 +61,7 @@ def _remap(arg, root: Path, copy: Path) -> str:
 
 
 @contextmanager
-def rebuilt_package(root, builder, *args):
+def rebuilt_package(root, builder, *args, git=False):
     """Run `builder` (absolute, or relative to `root`) in a temporary copy of `root`; yield the rebuilt package dir."""
     root = Path(root)
     builder = Path(builder)
@@ -68,6 +70,8 @@ def rebuilt_package(root, builder, *args):
     with tempfile.TemporaryDirectory(prefix="urban_rebuild_") as td:
         copy = Path(td) / root.name
         shutil.copytree(root, copy, symlinks=True, ignore=shutil.ignore_patterns(*SKIP))
+        if git:
+            (copy / ".git").write_text(f"gitdir: {(root / '.git').resolve()}\n", encoding="utf-8")
         cmd = [sys.executable, "-I", str(copy / rel), *(_remap(a, root, copy) for a in args)]
         proc = subprocess.run(cmd, capture_output=True, cwd=copy)
         changed = _changes(before, _tree_state(root))
