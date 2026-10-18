@@ -32,8 +32,14 @@ regression.
 1. Alsenan (structural + architectural + freelancer BOQ per trade): Drive "Urban BOQ private data" / "Alsenan chalet
    project".
 2. T-019 synthetic villas (hand truth, other layer names, units, rotation, mirror, Arabic / English).
-3. Two or more further real villas (owner, Q-05: architectural drawings exist; no structural). Each becomes its own
-   subfolder of "Urban BOQ private data". Until they arrive, every fix must pass a synthetic fixture that is not Alsenan.
+3. Two or more further real villas (owner, 2026-10-18: plans only, no freelancer BOQ and no structural drawings). Each
+   becomes its own subfolder of "Urban BOQ private data". They have no reference BOQ, so they are scored differently:
+   - silent omissions and counts: every room, wet room, door and window the plan reader and a hand check find on the
+     drawing must appear in the engine output (measured, held or unsupported); this is fully measurable;
+   - quantities: the verifier hand-calculates a sample (at least 3 rooms and 3 walls per villa, from printed dimensions)
+     and scores the engine against it; never against the engine's own output;
+   - no regression: a change may not make any villa worse.
+   Until they arrive, every fix must pass a synthetic fixture that is not Alsenan.
 
 ## Milestones (targets, not promises; the lead re-dates them when evidence says so)
 
@@ -74,6 +80,11 @@ week; scoreboard trend per trade and villa.
 3. Inside a gate, money at risk: rebar, concrete, waterproofing, aluminium / windows, blockwork, then finishes.
 4. Generality: a gap seen on two villas beats a gap seen on one.
 5. Track B (product agents) gets at most one TODO slot.
+
+## Owner decisions so far (2026-10-18)
+
+Q-09 measured + waste + total columns on every line (T-032); Q-06 basin-only hand-wash spaces are wet (T-030);
+Q-07 facade height slab top to slab top (T-031). Full list: OWNER_QUESTIONS.md "Answered".
 
 ## Owner questions
 

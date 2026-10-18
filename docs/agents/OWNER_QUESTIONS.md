@@ -1,30 +1,33 @@
 # Questions for the owner (at most 5 open; answer under "Answer:")
 
-Lead 2026-10-18 18:25: no new question; Q-06 and Q-07 still open (no owner answer yet). Lead 2026-10-18 15:40: no new question; Q-06 and Q-07 still open (no owner answer yet). The T-019 wall-length basis finding is settled by UP-WALL-GEOM-001 (masonry run = centreline, owner-approved), so it became task T-027, not a question. Lead adds questions an agent cannot decide from drawings, rules or evidence. Answered questions move to the bottom.
+Lead 2026-10-18 20:05 (owner session): Q-06, Q-07, Q-09 answered by the owner (see Answered); no question open. Lead 2026-10-18 15:40: no new question; Q-06 and Q-07 still open (no owner answer yet). The T-019 wall-length basis finding is settled by UP-WALL-GEOM-001 (masonry run = centreline, owner-approved), so it became task T-027, not a question. Lead adds questions an agent cannot decide from drawings, rules or evidence. Answered questions move to the bottom.
 Decisions still queued behind these (from the master study `14_OWNER_DECISIONS_QUEUE.csv`): D-17 review-space wet / dry,
 WP-KITCHEN membrane scope, WP-JOINT details, WIN-REVEAL finish, STUB-LIMIT, MEAS-STD, ROOF-FIN, BLIND-AUTH.
 
 ## Open
+
+## Answered
 
 ### Q-09 Measurement basis for every BOQ line (MEAS-STD; added 2026-10-18)
 Should the engine's quantities be (a) net geometric quantities from the drawing, with waste and rounding shown in a
 separate column, (b) quantities with waste already included as the freelancer does, or (c) all three side by side
 (measured, with waste, order quantity)? Blocks how the verifier classes freelancer differences (RULE_DIFFERENCE vs
 FREELANCER_RIGHT) on every trade, from M2 onward.
-Answer:
+Answer (owner, 2026-10-18): (c). Every BOQ line shows the measured quantity, waste in its own column, and the total (measured + waste). Task T-032.
+
 
 ### Q-06 Hand-wash spaces: wet or dry? (D-17; added 2026-10-18)
 The three basin-only hand-wash spaces on Alsenan (9.35 m2 in all; the drawing does not establish their type) are:
 (a) wet: porcelain floor, full-height wall porcelain, waterproofing, marble threshold; (b) dry: plaster, paint, skirting,
 ordinary floor porcelain; or (c) answer per space. Blocks their floor, wall and waterproofing lines (Gate 1, wet vs dry).
-Answer:
+Answer (owner, 2026-10-18): (a) wet. Basin-only hand-wash spaces are wet areas: porcelain floor, full-height wall porcelain, waterproofing, marble threshold. Task T-030.
+
 
 ### Q-07 Facade height convention (OQ-08 in research/urban_m9_n10/OWNER_DECISIONS_REGISTER.md; added 2026-10-18)
 Is each floor's facade measured (a) F.F.L. to the next F.F.L. (engine default today), (b) slab top to slab top, or
 (c) a stated height per floor? Blocks the external facade plaster / paint area (Gate 2, after section binding T-013).
-Answer:
+Answer (owner, 2026-10-18): (b) slab top to slab top. Task T-031 (after T-013 section binding).
 
-## Answered
 
 ### Q-08 Other villas for the engine (T-012; answered 2026-10-18)
 To make the engine right on every villa, the agents need 2-3 more villas (AutoCAD DWG/DXF + PDF). Where can they get
