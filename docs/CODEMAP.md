@@ -12,17 +12,17 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `agents/` | 124 | Business agents a1-a17, each with prompt, schema and tests. |
 | `assets/` | 7 |  |
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
-| `docs/` | 71 | Design notes and the generated maps. |
+| `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
 | `engine/` | 578 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 7 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2288 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2290 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1264 | pytest suites, one folder per round. |
+| `tests/` | 1266 | pytest suites, one folder per round. |
 | `tools/` | 95 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -807,7 +807,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 
 | Folder | Test files |
 |---|---|
-| `tests/` | 209 |
+| `tests/` | 210 |
 | `tests/ad1_authority_decisions/` | 2 |
 | `tests/alsenan/` | 17 |
 | `tests/alsenan_arch_truth/` | 1 |
@@ -976,6 +976,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `URBAN_ENGINE_STATUS_REPORT.md` | Urban QS Engine — status report |
 | `WALL_EXTRACTION_V2.md` | Wall extraction V2 — the root cause, and how far it got |
 | `WHATSAPP.md` | WhatsApp bridge (Twilio → A5 / A3) |
+| `agents/research/GENERALITY_AUDIT.md` | T-018 generality audit: where the engine depends on one project |
 
 ## `research/` (evidence folders)
 
@@ -985,6 +986,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/a21_trace_sufficiency_01/` | 17 |
 | `research/a21_visual_qs_pilot_01/` | 16 |
 | `research/ad1_authority_decisions/` | 11 |
+| `research/agents_t002a/` | 2 |
 | `research/agents_t002b/` | 1 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |

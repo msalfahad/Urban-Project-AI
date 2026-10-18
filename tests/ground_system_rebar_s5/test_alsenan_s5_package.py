@@ -16,6 +16,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 import pytest
+from tests.rebuild_sandbox import rebuilt_package
 
 ROOT = Path(__file__).resolve().parents[2]
 PKG = ROOT / "research" / "alsenan_ground_system_rebar_s5"
@@ -69,10 +70,9 @@ def test_builder_is_blind():
 
 def test_rebuild_is_byte_identical():
     before = {k: (PKG / k).read_bytes() for k in J(PKG / "S5_FREEZE_MANIFEST.json")["outputs"]}
-    subprocess.run([sys.executable, "-I", str(PKG / "build_ground_system_rebar_s5.py")], check=True,
-                   capture_output=True, cwd=ROOT)
-    for k, v in before.items():
-        assert (PKG / k).read_bytes() == v, k
+    with rebuilt_package(ROOT, PKG / "build_ground_system_rebar_s5.py") as out:
+        for k, v in before.items():
+            assert (out / k).read_bytes() == v, k
 
 
 def test_population_and_frozen_scope(occs, summary):

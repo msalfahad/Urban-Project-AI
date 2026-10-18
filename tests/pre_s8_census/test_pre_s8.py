@@ -23,6 +23,7 @@ from pathlib import Path
 import pytest
 
 from engine.source import delta_release as DR
+from tests.rebuild_sandbox import rebuilt_package
 
 ROOT = Path(__file__).resolve().parents[2]
 PKG = ROOT / "research" / "pre_s8_structural_completeness"
@@ -344,6 +345,6 @@ def test_registry_lists_the_builder():
 def test_rebuild_is_byte_identical():
     m = J(PKG / "13_PRE_S8_FREEZE_MANIFEST.json")
     before = {k: (PKG / k).read_bytes() for k in list(m["outputs"]) + ["13_PRE_S8_FREEZE_MANIFEST.json"]}
-    subprocess.run([sys.executable, "-I", str(PKG / "build_pre_s8.py")], check=True, capture_output=True, cwd=ROOT)
-    for k, v in before.items():
-        assert (PKG / k).read_bytes() == v, k
+    with rebuilt_package(ROOT, PKG / "build_pre_s8.py") as out:
+        for k, v in before.items():
+            assert (out / k).read_bytes() == v, k

@@ -16,6 +16,7 @@ from pathlib import Path
 import pytest
 
 from engine.source import delta_correction as DC
+from tests.rebuild_sandbox import rebuilt_package
 
 ROOT = Path(__file__).resolve().parents[2]
 PKG = ROOT / "research" / "d1_1_stirrup_authority_audit"
@@ -115,10 +116,9 @@ def test_frozen_s4_s5_s6_s4_1_s6_1_s5_1_and_ad1_are_immutable(summary):
 def test_rebuild_is_byte_identical():
     before = {k: (PKG / k).read_bytes() for k in J(PKG / "D1_1_FREEZE_MANIFEST.json")["outputs"]}
     before["D1_1_FREEZE_MANIFEST.json"] = (PKG / "D1_1_FREEZE_MANIFEST.json").read_bytes()
-    subprocess.run([sys.executable, "-I", str(PKG / "build_d1_1_stirrup_audit.py")], check=True,
-                   capture_output=True, cwd=ROOT)
-    for k, v in before.items():
-        assert (PKG / k).read_bytes() == v, k
+    with rebuilt_package(ROOT, PKG / "build_d1_1_stirrup_audit.py") as out:
+        for k, v in before.items():
+            assert (out / k).read_bytes() == v, k
 
 
 def test_builder_is_blind_and_registered():

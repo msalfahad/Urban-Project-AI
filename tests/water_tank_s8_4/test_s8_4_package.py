@@ -25,6 +25,7 @@ from pathlib import Path
 import pytest
 
 from engine.source import delta_release as DR
+from tests.rebuild_sandbox import rebuilt_package
 
 ROOT = Path(__file__).resolve().parents[2]
 PKG = ROOT / "research" / "alsenan_water_tank_s8_4"
@@ -304,6 +305,6 @@ def test_cloud_and_panels_against_shapely():
 def test_rebuild_is_byte_identical():
     names = OUTPUTS + [MANIFEST.name]
     before = {o: hashlib.sha256((PKG / o).read_bytes()).hexdigest() for o in names}
-    subprocess.run([sys.executable, "-I", str(PKG / "build_s8_4.py")], check=True, cwd=ROOT, capture_output=True)
-    after = {o: hashlib.sha256((PKG / o).read_bytes()).hexdigest() for o in names}
-    assert before == after
+    with rebuilt_package(ROOT, PKG / "build_s8_4.py") as out:
+        after = {o: hashlib.sha256((out / o).read_bytes()).hexdigest() for o in names}
+        assert before == after

@@ -13,6 +13,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 import pytest
+from tests.rebuild_sandbox import rebuilt_package
 
 ROOT = Path(__file__).resolve().parents[2]
 PKG = ROOT / "research" / "alsenan_footing_rebar_s4_1"
@@ -87,10 +88,9 @@ def test_frozen_s4_baseline_is_immutable(summary):
 
 def test_rebuild_is_byte_identical():
     before = {k: (PKG / k).read_bytes() for k in J(PKG / "S4_1_FREEZE_MANIFEST.json")["outputs"]}
-    subprocess.run([sys.executable, "-I", str(PKG / "build_footing_rebar_s4_1.py")], check=True,
-                   capture_output=True, cwd=ROOT)
-    for k, v in before.items():
-        assert (PKG / k).read_bytes() == v, k
+    with rebuilt_package(ROOT, PKG / "build_footing_rebar_s4_1.py") as out:
+        for k, v in before.items():
+            assert (out / k).read_bytes() == v, k
 
 
 def test_builder_is_blind_and_registered():
