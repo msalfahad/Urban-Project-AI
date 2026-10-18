@@ -17,6 +17,7 @@ import sys
 from pathlib import Path
 
 import pytest
+from tests.rebuild_sandbox import rebuilt_package
 
 ROOT = Path(__file__).resolve().parents[2]
 PKG = ROOT / "research" / "source_recovery_delta"
@@ -262,7 +263,6 @@ def test_builder_is_registered_on_the_accurate_side():
 
 def test_rebuild_is_byte_identical():
     before = {k: (PKG / k).read_bytes() for k in BUILT}
-    subprocess.run([sys.executable, "-I", str(PKG / "build_source_recovery_delta.py")], check=True,
-                   capture_output=True, cwd=ROOT)
-    for k, v in before.items():
-        assert (PKG / k).read_bytes() == v, k
+    with rebuilt_package(ROOT, PKG / "build_source_recovery_delta.py") as out:
+        for k, v in before.items():
+            assert (out / k).read_bytes() == v, k

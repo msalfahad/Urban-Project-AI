@@ -15,6 +15,7 @@ from pathlib import Path
 import pytest
 
 from engine.source import delta_release as DR
+from tests.rebuild_sandbox import rebuilt_package
 
 ROOT = Path(__file__).resolve().parents[2]
 PKG = ROOT / "research" / "alsenan_dome_ring_s8_3"
@@ -56,5 +57,5 @@ def test_registry_declares_the_errata_builder():
 def test_rebuild_is_byte_identical():
     names = sorted(p.name for p in ER.iterdir() if p.suffix in (".csv", ".json", ".md"))
     before = {n: hashlib.sha256((ER / n).read_bytes()).hexdigest() for n in names}
-    subprocess.run([sys.executable, "-I", str(ER / "build_errata.py")], check=True, cwd=ROOT, capture_output=True)
-    assert before == {n: hashlib.sha256((ER / n).read_bytes()).hexdigest() for n in names}
+    with rebuilt_package(ROOT, ER / "build_errata.py") as out:
+        assert before == {n: hashlib.sha256((out / n).read_bytes()).hexdigest() for n in names}

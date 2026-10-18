@@ -8,6 +8,8 @@ from pathlib import Path
 
 import pytest
 
+from tests.rebuild_sandbox import rebuilt_package
+
 ROOT = Path(__file__).resolve().parents[2]
 PKG = ROOT / "research" / "christiannp_blind_process"
 OUTPUTS = ("process_log/EVIDENCE_INVENTORY.json", "intermediate_geometry/URBAN_CROSSCHECKS.json",
@@ -31,8 +33,8 @@ def _load(name, path):
 
 def test_builder_reproduces_outputs_byte_for_byte():
     before = {n: (PKG / n).read_bytes() for n in OUTPUTS}
-    _load("cnp_build", PKG / "scripts" / "build_crosschecks.py").main()
-    assert before == {n: (PKG / n).read_bytes() for n in OUTPUTS}
+    with rebuilt_package(ROOT, PKG / "scripts" / "build_crosschecks.py", git=True) as out:
+        assert before == {n: (out.parent / n).read_bytes() for n in OUTPUTS}
 
 
 def test_deliverables_present():

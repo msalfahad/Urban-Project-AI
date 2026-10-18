@@ -20,6 +20,7 @@ import pytest
 
 from engine.source import delta_release as DR
 from engine.source import provisional_estimate as PE
+from tests.rebuild_sandbox import rebuilt_package
 
 ROOT = Path(__file__).resolve().parents[2]
 PKG = ROOT / "research" / "alsenan_m1_usable_boq"
@@ -260,7 +261,7 @@ def test_workbook_if_present():
 def test_rebuild_is_byte_identical():
     m = J(MANIFEST)
     before = dict(m["outputs"])
-    subprocess.run([sys.executable, "-I", str(PKG / "build_m1.py")], check=True, capture_output=True, cwd=str(ROOT))
-    after = J(MANIFEST)["outputs"]
-    assert after == before
-    assert all(hashlib.sha256((PKG / k).read_bytes()).hexdigest() == v for k, v in after.items())
+    with rebuilt_package(ROOT, PKG / "build_m1.py") as out:
+        after = J(out / MANIFEST.name)["outputs"]
+        assert after == before
+        assert all(hashlib.sha256((out / k).read_bytes()).hexdigest() == v for k, v in after.items())

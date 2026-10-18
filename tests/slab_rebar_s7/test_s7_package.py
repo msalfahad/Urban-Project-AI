@@ -19,6 +19,7 @@ import pytest
 from engine.source import delta_release as DR
 from engine.source import slab_qto_authority as Q
 from engine.source import slab_rebar_qto as S7
+from tests.rebuild_sandbox import rebuilt_package
 
 ROOT = Path(__file__).resolve().parents[2]
 PKG = ROOT / "research" / "alsenan_slab_rebar_s7"
@@ -158,9 +159,9 @@ def test_firewall_registry_lists_s7():
 def test_rebuild_is_byte_identical():
     m = J(PKG / "12_S7_FREEZE_MANIFEST.json")
     before = {k: (PKG / k).read_bytes() for k in list(m["outputs"]) + ["12_S7_FREEZE_MANIFEST.json"]}
-    subprocess.run([sys.executable, "-I", str(PKG / "build_s7.py")], check=True, capture_output=True, cwd=ROOT)
-    for k, v in before.items():
-        assert (PKG / k).read_bytes() == v, k
+    with rebuilt_package(ROOT, PKG / "build_s7.py") as out:
+        for k, v in before.items():
+            assert (out / k).read_bytes() == v, k
 
 
 # ------------------------------------------------------------------ population (§1, §4, §28)

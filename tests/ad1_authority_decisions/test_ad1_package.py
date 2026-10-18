@@ -14,6 +14,7 @@ from pathlib import Path
 import pytest
 
 from engine.source import authority_decisions as AD
+from tests.rebuild_sandbox import rebuilt_package
 
 ROOT = Path(__file__).resolve().parents[2]
 PKG = ROOT / "research" / "ad1_authority_decisions"
@@ -96,10 +97,9 @@ def test_frozen_stages_are_immutable(summary):
 def test_rebuild_is_byte_identical():
     names = list(J(PKG / "AD1_FREEZE_MANIFEST.json")["outputs"]) + ["AD1_FREEZE_MANIFEST.json"]
     before = {k: (PKG / k).read_bytes() for k in names}
-    subprocess.run([sys.executable, "-I", str(PKG / "build_ad1_authority_decisions.py")], check=True,
-                   capture_output=True, cwd=ROOT)
-    for k, v in before.items():
-        assert (PKG / k).read_bytes() == v, k
+    with rebuilt_package(ROOT, PKG / "build_ad1_authority_decisions.py") as out:
+        for k, v in before.items():
+            assert (out / k).read_bytes() == v, k
 
 
 def test_builder_is_blind_and_registered():
