@@ -58,6 +58,26 @@ Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
 
 ## Open
 
+### Q-12 Concrete: three places where the engine and the freelancer differ (verifier 2026-10-18 22:58; T-001b)
+
+What we found: the first real concrete comparison (Alsenan) agrees on footings but the engine is well below the
+freelancer on the pool and on stairs + domes. The verifier could not yet prove from the drawing who is right.
+Real example (Drive "Alsenan chalet project", structural file "ST7757 dxf.dxf"):
+- Pool: engine walls 1.98 + floor 1.51 = 3.50 m3; freelancer 12.35 m3 (8.85 m3 more).
+- Stairs + domes: engine ground-floor stair 2.79 + two short stairs 0.90 + 0.95 + two domes 3.69 + 3.69 = 12.01 m3;
+  freelancer 21.83 m3 = a basement sub-stair 13.70 + the main stair 8.13 (9.83 m3 more).
+- Footings: engine 77.27 m3 vs freelancer 77.63 m3 only if the 7.22 m3 strip drawn at foundation level along the plot
+  edge is the freelancer's "perimeter" footing; without it the engine has 70.05 m3.
+How to check it yourself: open the structural drawing, the pool section (wall thickness, depth, floor thickness) and
+the stair sections; check whether the chalet has a basement with its own stair, and whether the strip along the plot
+edge at foundation level is a footing under the boundary wall.
+Choices: (a) the drawing shows the bigger pool / basement stair: the engine is missing concrete and gets a fix task;
+(b) the freelancer added items not on the drawing: the engine stays, the difference is the freelancer's;
+(c) the edge strip is / is not the perimeter footing: it stays in / leaves the footing line.
+Waits on: the concrete scoreboard verdicts for pool, stairs and footings (T-001b).
+
+Answer:
+
 ## Answered
 
 ### Q-11 AutoCAD DXF files for the scoreboard (T-001b; added by the worker 2026-10-18 as Q-10, renumbered by the lead)

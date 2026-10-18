@@ -5,6 +5,20 @@ Verifier 2026-10-18 (8th run, 21:40, nothing merged, working branch still b35c94
 data: the private repository `msalfahad/urban-boq-private-data` is not attached to the verifier, and the engine-to-freelancer
 key map does not exist until T-001b. Every row below is still a seeded estimate, not a measurement.
 
+Verifier 2026-10-18 (9th run, 22:58): FIRST MEASURED ROWS, PENDING MERGE. tools/alsenan_scoreboard.py via tools/alsenan_keymap.py
+(T-001b, task head 3f47ec2; the worker's script output, the concrete figures re-summed independently by the verifier from the
+engine's own lines) on ARCH_TAKEOFF_V2.9 + route G, Drive DXFs (sha = SOURCE_MANIFEST). Every gate passed, but the merge push was
+refused by the session check, so these rows are not yet on the working branch (b35c944). Who is right: 3 UNRESOLVED (Q-12).
+
+| Trade | Unit | Ref lines | Coverage | Silent omissions | Unit refused | Compared | WAPE | Signed | False pos. | Dup. | Verdicts |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| Concrete | m3 | 8 | 100.00 % | 0 | 0 | 3 | 17.03 % | -17.03 % | 0 | 0 | footing -0.37, stair+dome -9.83, pool -8.85: UNRESOLVED (Q-12); 5 lines HELD |
+| Plaster | m2 | 1 | 100.00 % | 0 | 0 | 0 | - | - | 0 | 0 | HELD (no facts file) |
+| Paint | m2 | 1 | 100.00 % | 0 | 0 | 0 | - | - | 0 | 0 | HELD |
+| Floor area | m2 | 1 | 100.00 % | 0 | 0 | 0 | - | - | 0 | 0 | HELD (3 wet / dry review sets) |
+| Doors (aluminium) | m2 | 1 | 0.00 % | 0 | 1 | 0 | - | - | 0 | 0 | unit refused (engine nr) |
+| Windows (aluminium) | m2 | 1 | 0.00 % | 0 | 1 | 0 | - | - | 0 | 0 | unit refused (engine nr) |
+
 Columns per MISSION.md. One row per trade and unit; never mix units. Each difference also gets a "who is right"
 verdict (ENGINE_RIGHT / FREELANCER_RIGHT / RULE_DIFFERENCE / UNRESOLVED, MISSION.md); only FREELANCER_RIGHT and
 UNRESOLVED count against the engine.
