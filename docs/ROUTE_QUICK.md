@@ -13,7 +13,7 @@ Details per topic: `docs/ROUTING.md`. Risk is a validation guide, never a reason
 | [doors](ROUTING.md#doors) | door, opening, doorway, threshold, leaf | `engine/source/door_standards.py`, `engine/source/door_feasibility.py` | HIGH | 20 | 4 / 1 | 0 / 3 |
 | [windows](ROUTING.md#windows) | window, glazing, sill, schedule, reveal | `engine/source/schedule_reader.py`, `engine/source/opening_census.py` | CRITICAL | 3 | 5 / 3 | 0 / 4 |
 | [finishes](ROUTING.md#finishes) | plaster, paint, tile, tiling, skirting | `engine/source/arch_measure.py`, `engine/source/wall_height.py` | HIGH | 16 | 6 / 6 | 0 / 12 |
-| [waterproofing](ROUTING.md#waterproofing) | waterproof, membrane, upturn, wet area, bathroom | `engine/source/waterproofing_system.py`, `engine/source/wp_geometry.py` | MEDIUM | 14 | 4 / 0 | 0 / 9 |
+| [waterproofing](ROUTING.md#waterproofing) | waterproof, membrane, upturn, wet area, bathroom | `engine/source/waterproofing_system.py`, `engine/source/wp_geometry.py` | HIGH | 14 | 4 / 0 | 0 / 9 |
 | [stairs](ROUTING.md#stairs) | stair, railing, riser, tread, landing | `engine/source/stair_geometry.py`, `engine/source/stair_measure.py` | CRITICAL | 13 | 1 / 0 | 1 / 14 |
 | [concrete](ROUTING.md#concrete) | concrete, slab, beam, column, footing | `engine/source/concrete_completeness.py`, `engine/source/slab_rebar_qto.py` | CRITICAL | 0 | 13 / 0 | 6 / 13 |
 | [rebar](ROUTING.md#rebar) | rebar, reinforcement, bar, steel, bbs | `engine/source/accurate_boq_rebar.py`, `engine/source/rebar_unit_mass.py` | CRITICAL | 0 | 8 / 0 | 0 / 4 |
