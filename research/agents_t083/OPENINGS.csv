@@ -1,0 +1,58 @@
+row,kind,floor,engine_id_or_element,room,plan_width_m,width_source,printed_height_m,height_source,area_m2,status,freelancer_row,freelancer_m2,diff_m2,diff_pct,verdict_proposal,note
+W01,window,GF,OP-022,stair hall,1.20,plan + SE "120",2.00,SE elevation (page 6) chain 185/200: +2.00 to +4.00,2.400,MEASURED,"شباك 1.20 x 2.00",2.400,0.000,0.0,AGREE,
+W02,window,GF,OP-019,saloon (sea side),6.3316,plan "633",,NOT_PRINTED: B-B (page 11) cuts it with no opening dimension; NW (page 8) shows the saloon in section; SW/NE/A-A print none,,HELD NO_PRINTED_HEIGHT,"شباك المسبح 6.33 x 4.30",27.219,,,UNRESOLVED,the freelancer's 4.30 is the height printed for the curved pool glazing (W03) not for this glazing
+W03,window,GF,curved pool glazing (T-077 held),master bedroom / pool,HELD,printed arc "657" (inner face of the 0.20 glazed band); glass lines 6.658-6.792; chord 4.95,4.30,NW elevation (page 8) chain 115/70/430/20 on the pool axis: +1.00 to +5.30; drawn glazing 4.95 m across = the chord between the jambs,HELD (candidate 28.251 at 6.57),HELD WIDTH_BASIS (Q-38 answer not on record),"شباك المسبح 6.57 x 4.30",28.251,,,UNRESOLVED,height now PRINTED (was unbound in T-040); width basis: OWNER_QUESTIONS Q-38 has no answer of its own (the line under it is the Q-47 answer)
+W04,window,GF,OP-004,driver,0.60,engine plan width,,NOT_PRINTED (SW page 7 draws GF windows with no dimension),,HELD NO_PRINTED_HEIGHT,"شباك حمام 0.60 x 0.80 (1 of 4)",0.480,,,UNRESOLVED,
+W05,window,GF,OP-014,bath / WC,0.60,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,"شباك حمام 0.60 x 0.80 (1 of 4)",0.480,,,UNRESOLVED,
+W06,window,GF,OP-015,bath / WC,0.60,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,"شباك حمام 0.60 x 0.80 (1 of 4)",0.480,,,UNRESOLVED,
+W07,window,GF,OP-016,bath / WC,0.60,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,"شباك حمام 0.60 x 0.80 (1 of 4)",0.480,,,UNRESOLVED,
+W08,window,GF,OP-006,kitchen,1.50,engine plan width,,NOT_PRINTED (SW page 7: drawn without dimension),,HELD NO_PRINTED_HEIGHT,"شباك 1.50 x 2.00",3.000,,,UNRESOLVED,
+W09,window,GF,OP-024,GF room,1.50,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,"شباك 1.50 x 2.00",3.000,,,UNRESOLVED,
+W10,window,GF,OP-023,GF room,1.00,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,"شباك 1.00 x 2.00",2.000,,,UNRESOLVED,
+W11,window,GF,OP-028,dewaneya (street wall 195),1.9549,plan "195",,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,"شباك 1.95 x 2.00 (1 of 2)",3.900,,,UNRESOLVED,
+W12,window,GF,OP-029,dewaneya (street wall 195),1.9549,plan "195",,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,"شباك 1.95 x 2.00 (1 of 2)",3.900,,,UNRESOLVED,
+W13,window,1F,OP-021,stair hall,1.20,plan + SE "120",2.30,SE elevation (page 6) chain 250/230/200: +6.50 to +8.80,2.760,MEASURED,"1.20 x 2.00",2.400,+0.360,+15.0,ENGINE_RIGHT,2.30 printed; freelancer used 2.00
+W14,window,1F,OP-022,master bedroom (street end),2.4498,plan; SE "245",1.60,SE elevation (page 6) chain 220/160/139 (sill +6.70; 1.60),3.920,MEASURED,"2.45 x 2.00",4.900,-0.980,-20.0,ENGINE_RIGHT,1.60 printed; freelancer used 2.00
+W15,window,1F,OP-016,living (sea side),1.5523,plan "155"; NW "155",3.10,NW elevation (page 8) chain 300 + 10 to the outer crown of the arch (Q-32 A),4.812,MEASURED,"شباك المسبح 1.55 x 3.00 (1 of 2)",4.650,+0.162,+3.5,ENGINE_RIGHT,crown 0.10 above the 3.00 printed
+W16,window,1F,OP-017,living (sea side),1.5523,plan "155"; NW "155",HELD,NW elevation: width printed; the height chain runs through W15 only; drawn the same size,HELD (candidate 4.812),HELD NO_PRINTED_HEIGHT (twin),"شباك المسبح 1.55 x 3.00 (1 of 2)",4.650,,,UNRESOLVED,RFI: confirm the twin height 3.10
+W17,window,1F,COP-001 (curved),master bedroom over the pool,3.2895,outer arc (owner Q-39 = C); NW chord "269",3.50,NW elevation (page 8) chain 20 / 305 / 45 (Q-32 A owner example),11.513,MEASURED,"شباك المسبح 3.15 x 3.00",9.450,+2.063,+21.8,RULE_DIFFERENCE,owner Q-39 C outer arc 3.29 x 3.50 = 11.51
+W18,window,1F,bath window 0.50 (T-077 held),bath (sea side),0.50,plan "50" (sheet 4) and NW "50",2.16,NW elevation (page 8) chain 84 / 216 / 230: sill +6.34 head +8.50,1.080,MEASURED (new),"شباك حمام 0.60 x 0.80 (1 of 6)",0.480,+0.600,+125.0,ENGINE_RIGHT,bound by the NW chain 99/31/60/50 = plan 109/101/50 (frames 10); width and height both printed
+W19,window,1F,OP-001,bath / laundry,0.60,engine plan width,,NOT_PRINTED (NE sheet 9: drawn without dimension),,HELD NO_PRINTED_HEIGHT,"شباك حمام 0.60 x 0.80 (1 of 6)",0.480,,,UNRESOLVED,
+W20,window,1F,OP-002,bath / laundry,0.60,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,"شباك حمام 0.60 x 0.80 (1 of 6)",0.480,,,UNRESOLVED,
+W21,window,1F,OP-013,bath / laundry,0.60,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,"شباك حمام 0.60 x 0.80 (1 of 6)",0.480,,,UNRESOLVED,
+W22,window,1F,OP-014,bath / laundry,0.60,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,"شباك حمام 0.60 x 0.80 (1 of 6)",0.480,,,UNRESOLVED,
+W23,window,1F,OP-015,bath / laundry,0.60,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,"شباك حمام 0.60 x 0.80 (1 of 6)",0.480,,,UNRESOLVED,
+W24,window,1F,OP-003,master bedroom,1.5523,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,"1.55 x 2.00",3.100,,,UNRESOLVED,
+W25,window,1F,OP-012,living,1.00,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,"شباك 1.00 x 2.00",2.000,,,UNRESOLVED,
+W26,window,2F,OP-008,stair hall (arched),1.20,plan + SE "120",HELD (PDF 1.70 to the crown),SE elevation (page 6): chain 170 / 5 / 88 / 97 from sill +10.80; on the PDF the 170 witness ends at the drawn crown (+12.50) but the DXF SE view draws the crown 0.50 above it,HELD (candidate 2.040),HELD DRAWING_CONFLICT,"1.20 x 2.00",2.400,,,UNRESOLVED,RFI-1: PDF vs DXF geometry of the same window
+W27,window,2F,OP-003,stair / roof,1.00,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,"1.00 x 2.00",2.000,,,UNRESOLVED,
+W28,window,2F,OP-004,bath,0.60,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,"شباك حمام 0.60 x 0.80",0.480,,,UNRESOLVED,
+W29,window,2F,OP-005,maid room,1.20,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,"1.20 x 2.00",2.400,,,UNRESOLVED,
+D01,door,GF,main-entrance candidate (double),dining / entrance hall (street end at the top of the entrance steps),2.00,plan "200" (sheet 3 chain 370 / 200),2.50,SE elevation (page 6) chain 85 / 250 / 55 / 45: +1.00 to +3.50 at the top of the 0.85 entrance steps,5.000,MEASURED height (AS_DRAWN area); class HELD MAIN_ENTRANCE_UNRESOLVED,none (his GF doors are 4 x 1.00 x 2.40),,,,UNRESOLVED,bound by hand: the only door at the top of the 280 wide steps from +0.15 to +1.00 on the street end; the SE view hides part of the leaf behind the porch arch
+D02,door,GF,main-entrance candidate (single 1.00),GF,1.00,engine plan width,,NOT_PRINTED,,HELD,"باب خارجي 1.00 x 2.40 (1 of 4)",2.400,,,UNRESOLVED,
+D03,door,GF,ALU released 0.90 (driver side),driver,0.90,engine jamb to jamb (owner view 1.00 Q-04),,NOT_PRINTED (SW page 7 draws it without dimension),,HELD NO_PRINTED_HEIGHT (count released),"باب خارجي 1.00 x 2.40 (1 of 4)",2.400,,,RULE_DIFFERENCE on width; height UNRESOLVED,
+D04,door,GF,class review 1.00,GF,1.00,engine plan width,,NOT_PRINTED,,HELD,"باب خارجي 1.00 x 2.40 (1 of 4)",2.400,,,UNRESOLVED,
+D05,door,GF,class unresolved 1.00,GF,1.00,engine plan width,,NOT_PRINTED,,HELD,"باب خارجي 1.00 x 2.40 (1 of 4)",2.400,,,UNRESOLVED,
+D06,door,GF,ALU width review 0.90 (frame 1.00),GF,0.90,engine plan width,,NOT_PRINTED,,HELD,none,,,,UNRESOLVED,
+D07,door,GF,PVC released (1 of 5),GF interior,engine,engine plan width,,NOT_PRINTED (B-B / A-A / NE draw interior doors without dimension),,HELD NO_PRINTED_HEIGHT,not in the aluminium workbook,,,,UNRESOLVED,
+D08,door,GF,PVC released (2 of 5),GF interior,engine,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,not in the aluminium workbook,,,,UNRESOLVED,
+D09,door,GF,PVC released (3 of 5),GF interior,engine,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,not in the aluminium workbook,,,,UNRESOLVED,
+D10,door,GF,PVC released (4 of 5),GF interior,engine,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,not in the aluminium workbook,,,,UNRESOLVED,
+D11,door,GF,PVC released (5 of 5),GF interior,engine,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,not in the aluminium workbook,,,,UNRESOLVED,
+D12,door,GF,PVC provisional 0.80 (1 of 3),GF interior,0.80,engine plan width,,NOT_PRINTED,,HELD,not in the aluminium workbook,,,,UNRESOLVED,
+D13,door,GF,PVC provisional 0.80 (2 of 3),GF interior,0.80,engine plan width,,NOT_PRINTED,,HELD,not in the aluminium workbook,,,,UNRESOLVED,
+D14,door,GF,PVC provisional 0.80 (3 of 3),GF interior,0.80,engine plan width,,NOT_PRINTED,,HELD,not in the aluminium workbook,,,,UNRESOLVED,
+D15,door,GF,loose-arc door (T-077),master bedroom to its bath,0.69-0.80,engine width range,,NOT_PRINTED,,HELD,not in the aluminium workbook,,,,UNRESOLVED,
+D16,door,1F,PVC released (1 of 8),1F interior,engine,engine plan width,,NOT_PRINTED (B-B page 11 draws four 1F doors without dimension),,HELD NO_PRINTED_HEIGHT,not in the aluminium workbook,,,,UNRESOLVED,
+D17,door,1F,PVC released (2 of 8),1F interior,engine,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,not in the aluminium workbook,,,,UNRESOLVED,
+D18,door,1F,PVC released (3 of 8),1F interior,engine,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,not in the aluminium workbook,,,,UNRESOLVED,
+D19,door,1F,PVC released (4 of 8),1F interior,engine,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,not in the aluminium workbook,,,,UNRESOLVED,
+D20,door,1F,PVC released (5 of 8),1F interior,engine,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,not in the aluminium workbook,,,,UNRESOLVED,
+D21,door,1F,PVC released (6 of 8),1F interior,engine,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,not in the aluminium workbook,,,,UNRESOLVED,
+D22,door,1F,PVC released (7 of 8),1F interior,engine,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,not in the aluminium workbook,,,,UNRESOLVED,
+D23,door,1F,PVC released (8 of 8),1F interior,engine,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,not in the aluminium workbook,,,,UNRESOLVED,
+D24,door,1F,PVC provisional 0.80,1F interior,0.80,engine plan width,,NOT_PRINTED,,HELD,not in the aluminium workbook,,,,UNRESOLVED,
+D25,door,1F,PVC provisional 1.00,1F interior,1.00,engine plan width,,NOT_PRINTED,,HELD,not in the aluminium workbook,,,,UNRESOLVED,
+D26,door,2F,ALU released 1.00,roof door,1.00,engine jamb to jamb,,NOT_PRINTED (B-B page 11 draws the 2F roof door without dimension),,HELD NO_PRINTED_HEIGHT (count released),"باب 1.00 x 2.40",2.400,,,UNRESOLVED,
+D27,door,2F,PVC released,2F interior (WC),engine,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,not in the aluminium workbook,,,,UNRESOLVED,
+D28,door,2F,PVC released,2F interior (maid room),engine,engine plan width,,NOT_PRINTED,,HELD NO_PRINTED_HEIGHT,not in the aluminium workbook,,,,UNRESOLVED,
