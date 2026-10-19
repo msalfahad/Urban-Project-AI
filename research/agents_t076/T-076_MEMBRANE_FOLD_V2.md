@@ -29,8 +29,8 @@ sha256 ab54dd55...31cc4 (same file as T-010 / T-071 / T-074).
   - `project()`: per-area rows, per-floor and project figures only as sums of the areas, held rows beside, rolls to buy
     packed for three direction sets (all along the longest wall, all across, each room on its shorter roll length):
     all three shown, none selected.
-- `tests/t076_membrane_fold/` (22 tests, all pass): owner's kitchen every number, the 3 x 3 picture, rotated 37 / 45 /
-  90 deg, mirrored, mm, collinear + repeated + closing points, L shape, U shape (band split, other start wall), slanted
+- `tests/t076_membrane_fold/` (24 tests, all pass): owner's kitchen every number, the 3 x 3 picture, rotated 37 / 45 /
+  90 deg, mirrored, mm, collinear + repeated + closing points, L shape, U shape (band split, other start wall; turned 30 deg in mm; mirrored), wedge W.C. (bare upturn triangle 0.0034 m2 by hand), slanted
   wall shortfall, strip longer than a roll, narrow room, column inside, roof with a skylight opening, pantry open
   side, typed roles / glazing / slivers / doors without id, untyped edges HELD, bad outlines HELD, project (shared door
   once, direction sets, duplicate refused). The roof-opening case caught a hand error (the full strip beyond the

@@ -254,3 +254,32 @@ def test_project_shared_door_once_and_rolls_per_direction_set():
     assert s["roll_length_used_m"] == A(20.0) and s["rolls_to_buy"] == 3 and s["rolls_if_each_area_alone"] == 3
     with pytest.raises(F.FoldError):
         F.project([k, k])
+
+
+def test_u_shape_rotated_mirrored_in_mm():
+    """the U of test_u_shape... turned 30 deg, in mm: the same strips (13.56 / 14.32 m2). Mirrored across its long
+    wall (notch at the bottom), the layout from the lower wall is the original's other-start layout (13.08 m2) and
+    vice versa: the start wall is a property of the room, not of how it was drawn, and both are always shown."""
+    U = [(0, 0), (4, 0), (4, 3), (3, 3), (3, 1), (1, 1), (1, 3), (0, 3)]
+    t = F.fold([(x * 1000.0, y * 1000.0) for x, y in turn(U, 30.0, (7.0, -2.0))], unit_m=0.001)
+    assert d(t, F.ALONG_LONG)["cut_m2"] == A(13.56) and d(t, F.ACROSS)["cut_m2"] == A(14.32)
+    m = F.fold([(x, -y) for x, y in U])
+    a = d(m, F.ALONG_LONG)
+    assert sorted([a["cut_m2"], a["other_start"]["cut_m2"]]) == A([13.08, 13.56])
+
+
+def test_wedge_room_both_wall_frames_shown():
+    """a wedge W.C. like the Alsenan core W.C.s: 2.00 x 1.50 with one corner cut by a 45 deg wall 0.50 m on each leg:
+    floor 3.00 - 0.125 = 2.875, boundary 2.0 + 1.0 + 0.5 x sqrt(2) + 1.5 + 1.5 = 6.707. The 45 deg wall is 0.707 m,
+    under the 1 m frame minimum: no second frame. Along x: the top strip's length is set by the 2.0 m wall below the
+    diagonal (sheet to x 2.20 over y up to 1.70), so the diagonal's flap lies on sheet: no bare part. Across (strips
+    along y, last band x 1.7 - 2.0, 0.60 wide, its floor reaching y 1.0 + 0.3 = 1.30, strip 1.70 m to y 1.50): the
+    flap of the diagonal (x + y from 3.00 to 3.00 + 0.20 x sqrt(2) = 3.283) beyond x 1.70 (band 2's sheet edge) and
+    y 1.50 (band 3's strip end) is bare: a right triangle with legs 3.283 - 3.20 = 0.083: 0.083^2 / 2 = 0.0034 m2."""
+    f = F.fold([(0, 0), (2.0, 0), (2.0, 1.0), (1.5, 1.5), (0, 1.5)])
+    assert f["floor_m2"] == A(2.875) and f["boundary_lm"] == A(2.0 + 1.0 + 0.5 * math.sqrt(2) + 3.0, abs=1e-4)
+    assert f["shape"] == "NON_ORTHOGONAL" and f["other_frames"] == []
+    assert d(f, F.ALONG_LONG)["upturn_shortfall_m2"] == 0.0
+    b = d(f, F.ACROSS)
+    assert widths_lengths(b) == [(1.0, 1.9), (1.0, 1.9), (0.6, 1.7)]
+    assert b["upturn_shortfall_m2"] == A((0.2 * math.sqrt(2) - 0.2) ** 2 / 2, abs=1e-4)
