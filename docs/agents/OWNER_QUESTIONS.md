@@ -162,7 +162,7 @@ rectangle (practice, not a code clause); (B) if you want the glass area itself.
 WAITS ON: the area of 4 arched windows on Alsenan (freelancer 21.15 m2 of his 116.9 m2 windows) and every arched window or
 door on later villas (T-040, the door / window area method).
 
-Answer:
+Answer: A (owner, main chat 2026-10-19 16:40). Arched window area runs to the top of the arch (enclosing rectangle), e.g. the 2.69 m master-bedroom window = 2.69 x (3.05 + 0.45) = 9.42 m2. Applies to every arched window and door; released area follows this rule.
 
 ### Q-33 Windows: are they aluminium by default, like outdoor doors? (worker 1 2026-10-19 15:40; T-040; no-assumptions question)
 
@@ -181,7 +181,7 @@ RECOMMENDATION: (A), because aluminium is the normal window material for Kuwait 
 rule (practice, not a code clause); the drawing still wins when it says otherwise.
 WAITS ON: the aluminium windows line on every villa (Alsenan freelancer 116.9 m2) (T-040, the door / window area method).
 
-Answer:
+Answer: yes (owner, main chat 2026-10-19 16:40). Windows are aluminium by default, like outdoor doors, unless the drawing says otherwise (Claude's reading of 'yes': option A).
 
 
 ### Q-34 The second-floor top roof: which outline does the engine waterproof? (verifier 2026-10-19 16:10; T-071; no-assumptions question)
@@ -207,7 +207,7 @@ drawing prints the outline and a drawing never assumed settles it (practice, not
 WAITS ON: the roof waterproofing membrane and upturn of Alsenan (about 55 m2 of the freelancer's 285 m2) and every villa
 whose top roof is drawn on no plan (T-071 follow-up, roof wiring).
 
-Answer:
+Answer: ask me later (owner, main chat 2026-10-19 16:40). Keep the second-floor top roof HELD (no number, never 0) and do not ask again until the Lead raises it at a milestone.
 
 ### Q-31 Footing F10: the drawn outline or the schedule size? (verifier 2026-10-19 15:12; moved back to Open by the Lead 16:15: it had been filed under Answered with no answer; T-065, T-042; no-assumptions question)
 
@@ -227,7 +227,7 @@ settles a conflict between two drawings; (A) is the freelancer's reading.
 WAITS ON: 1.96 - 2.28 m3 of the Alsenan footing line (freelancer footing line 77.63 m3), and the rule for a drawn
 footing outline that disagrees with its schedule row on any villa.
 
-Answer:
+Answer: C, also flag it before the final BOQ (owner, main chat 2026-10-19 16:40). His words: "you can also choose the bigger area". Claude's reading: F10 stays HELD with a request for information to the designer, and is flagged in the final BOQ report; if a provisional figure is needed for totals, the bigger area (the drawn 3.25 x 1.40 m outline, 2.275 m3) may be used, marked PROVISIONAL and flagged, never silently.
 
 ### Q-35 Wet-room upturn at the door: does the 0.20 m upturn run across the door opening? (lead 2026-10-19 16:15; T-072, T-076; no-assumptions question: two rules disagree)
 
@@ -252,7 +252,7 @@ threshold detail that a length x 0.20 line hides (practice, not a code clause). 
 follows your newest words.
 WAITS ON: the wet-area upturn line on every villa (12.80 lm on Alsenan) and the doorway part of the membrane fold (T-076).
 
-Answer:
+Answer: yes, and calculate wet area by wet area, not as a total (owner, main chat 2026-10-19 16:40). Claude's reading of 'yes': the recommendation, option C: the membrane to buy follows the owner's strip method per wet area (strips 0.20 m longer at both ends whatever is in the wall); the BOQ upturn line is walls only plus a doorway transition line per door; every figure is reported per wet area, with the total only as a sum of the areas.
 
 Worker 3 addendum (2026-10-19 16:25, T-074 hand table of all 17 Alsenan wet areas incl. the three basin-only spaces and the
 kitchen; numbers only, the options above are unchanged): full boundary 144.73 lm (freelancer 144.61 lm, +0.1 %); in it
@@ -281,7 +281,7 @@ RECOMMENDATION: (A) until you say, because opening a set that may be a blind tes
 direction is Alsenan only; if it is the renovation sample after all, answer (B) or (C).
 WAITS ON: the PDF plan reader work (gate 4) and any renovation work; nothing on Alsenan waits on it.
 
-Answer:
+Answer: ignore it (owner, main chat 2026-10-19 16:40). Nobody opens the third Drive project folder; it is not a sample and not a test.
 
 ### Q-37 The pantry next to the dining room: where does its waterproofing stop? (worker 3 2026-10-19 16:25; T-074, T-072; no-assumptions question)
 
@@ -304,7 +304,7 @@ designer drew the room to (practice, not a code clause); ask the designer for a 
 WAITS ON: the pantry row of the membrane table (13.50 m2 under A, about 19 % on top of the 72.12 m2 of wet floors) and every
 open-plan pantry or kitchen on later villas (T-072, T-074).
 
-Answer:
+Answer: waterproof the surrounding of the pantry, enough (owner, main chat 2026-10-19 16:40). Claude's reading: option A, the pantry floor is waterproofed within its printed 4.50 x 3.00 m with the upturn around it, and the open side toward the dining room listed as a threshold line; if the owner meant a smaller zone, he will say so.
 
 ## Answered
 
