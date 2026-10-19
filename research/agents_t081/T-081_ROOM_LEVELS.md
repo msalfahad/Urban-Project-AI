@@ -60,3 +60,44 @@ heights 4.00 / 3.50 m on GF and 3.70 / 3.45 m above; none of these is printed on
 * Paint on the wall band above a false ceiling: no rule (owner Q-14 note); held when it arises (not on this villa).
 * Wiring into a released method version (plaster / paint lines) is a later task; it needs a printed soffit or build-up,
   or an owner rule, before any height becomes a number on this villa.
+
+## 5. Rework (worker 3, 2026-10-19 23:10-00:30 UTC): owner answers Q-43 and Q-48 applied
+
+What changed (all additive; V1 room levels and the earlier finish-height results are unchanged when the new inputs are
+not given):
+
+* `engine/source/room_levels.py` ROOM_LEVELS_V2 (`room_levels_v2`, `doorway_reading`, `zone_of_v2`): a room with no
+  printed level takes the floor's level on a one-level floor (FLOOR_LEVEL, owner Q-43); on a split floor only from
+  what is drawn: a section / step reading with its source (DRAWN) or the levelled room it opens into through a doorway
+  where nothing is drawn across the opening besides the door symbol (OPENS_INTO, every hop recorded). Held otherwise:
+  DOORWAY_LINES_DRAWN (a line across a doorway may be a step; never read as one), DOORWAY_NOT_READ,
+  OPENS_INTO_TWO_LEVELS, NO_OPENING_TO_A_LEVELLED_ROOM, DRAWN_LEVELS_DISAGREE; an unmarked stair stays held.
+* Registry `knowledge/URBAN_ENGINEERING_KNOWLEDGE_1.8.0.json` (builder `tools/kb_build_1_8.py`, built on 1.5.0 like
+  1.7.0): UP-HGT-001 carries the owner wall height (floor-to-floor - 0.60 beam - 0.15 decor ceiling - 0.10 floor
+  finishing; printed values first; beam hold) and the Q-43 room-level steps; UP-FIN-WALL-001 the Q-48 A wet-wall tile
+  height. Not yet listed in `engine/source/knowledge.py` (claimed T-079 owns that file).
+* `engine/source/finish_height_v2.py`: opt-in `owner_rule=owner_wall_rule()` (values read from the 1.8.0 file, a typed
+  dict is refused) as rank 5 under every printed candidate; HELD FLOOR_TO_FLOOR_NOT_ESTABLISHED / BEAM_DEPTH_NOT_0_60
+  / BEAM_NOT_DRAWN_OVER_ROOM / BEAM_OVER_ROOM_NOT_CHECKED with the rule value kept as `owner_rule_height_m`
+  (diagnostic); wet rooms: wall tiles = the owner height unless a tile height is printed. The V1 0.150 allowance and
+  the 0.10 fallback stay refused inputs.
+
+Development villa (Drive P7757.dxf, V2.9 rooms, `research/agents_t081/alsenan_t081_run.py`; per room in
+`ALSENAN_ROOM_HEIGHTS_T081.csv`):
+
+| Floor | Rooms | Level printed / by rule / held | Floor-to-floor (slab to slab) | Owner wall height (diagnostic) |
+|---|---|---|---|---|
+| GF +1.00 | open dining room, its 2.8 m2 part, master bedroom | 1 / 2 OPENS_INTO (door OP-012, passage OP-003: nothing drawn across) / - | 4.50 PRINTED_DIMENSION | 3.65 m |
+| GF +0.30 | majlis, kitchen, driver room, the driver's bathroom | 3 / 1 OPENS_INTO (door OP-026) / - | HELD: split zone, no printed dimension (the +4.30 annex roof is not read as a slab) | not given |
+| GF | stair, 5 bathrooms | - / - / 6 (stair links +0.30 / +1.00; 2 bathrooms open only into an unidentified lobby, 3 have no opening in V2.9) | - | not given |
+| 1F +5.50 | 11 rooms | 1 / 10 FLOOR_LEVEL / 0 | 4.20 DERIVED_FROM_PRINTED_LEVELS | 3.35 m |
+| 2F +9.70 | 3 rooms | 1 / 2 FLOOR_LEVEL / 0 | 4.20 PROJECT_FACT (owner Q-43: +13.90 is the final floor) | 3.35 m |
+
+Room levels: 21 of 27 rooms are levelled now (6 printed, 12 FLOOR_LEVEL, 3 OPENS_INTO) where V1 levelled 6; 6 stay held
+with their reason. Every owner height is still HELD (BEAM_OVER_ROOM_NOT_CHECKED): the beams over the rooms are not read
+in this run, and worker 2's hand reading (Q-52, T-088) found no 0.60 m beam on the Alsenan slab plans, so the beam rule
+waits on the owner. Diagnostic only, gross (no door or window deducted, the 16 m2 double-height void over the GF open
+room not added): the 17 rooms with a diagnostic height give 373.88 m of V2.9 wall run on the three floors (GF 152.89 of
+it) and 944.40 m2 of wall (plaster basis: dry 726.02 + wet 218.38), against the freelancer's plaster 1 151.14 m2 and
+paint 1 191.13 m2 for the whole villa. Not comparable as a score (10 rooms held, no deductions): plaster and paint stay
+HELD, never 0.

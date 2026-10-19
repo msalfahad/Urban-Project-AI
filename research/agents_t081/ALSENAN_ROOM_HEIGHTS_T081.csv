@@ -1,0 +1,28 @@
+floor,engine_room_id,kind,codes,area_m2,level_state,level_m,floor_to_floor_m,floor_to_floor_state,height_state,owner_rule_height_m_diag,wall_lm_v29,wall_m2_diag_gross,held_reason
+GF,GF-RC99C2A,DRY,DINING+LIVING+PANTRY+RECEPTION,126.93,PRINTED,1.0,4.5,PRINTED_DIMENSION,HELD,3.65,37.087,135.37,BEAM_OVER_ROOM_NOT_CHECKED: the beams drawn over the room were not read; the owner's 0.60 m deduction holds
+GF,GF-R7512EA,DRY,MAJLIS,24.94,PRINTED,0.3,,HELD,HELD,,17.173,,FLOOR_TO_FLOOR_NOT_ESTABLISHED: no printed or sourced floor-to-floor for the room's level; the owner wall heigh
+GF,GF-R75FBAE,DRY,MASTER_BEDROOM,16.55,OPENS_INTO,1.0,4.5,PRINTED_DIMENSION,HELD,3.65,16.433,59.98,BEAM_OVER_ROOM_NOT_CHECKED: the beams drawn over the room were not read; the owner's 0.60 m deduction holds
+GF,GF-R31F8AE,STAIR,STAIR,12.47,HELD,,,HELD,HELD,,13.6,,ROOM_LEVEL_HELD: STAIR_LINKS_LEVELS
+GF,GF-RA3AD49,SERVICE,KITCHEN,9.63,PRINTED,0.3,,HELD,HELD,,13.75,,FLOOR_TO_FLOOR_NOT_ESTABLISHED: no printed or sourced floor-to-floor for the room's level; the owner wall heigh
+GF,GF-R51E127,DRY,DRIVER,7.88,PRINTED,0.3,,HELD,HELD,,12.2,,FLOOR_TO_FLOOR_NOT_ESTABLISHED: no printed or sourced floor-to-floor for the room's level; the owner wall heigh
+GF,GF-RD6F891,WET,BATHROOM,3.72,HELD,,,HELD,HELD,,7.325,,ROOM_LEVEL_HELD: NO_OPENING_TO_A_LEVELLED_ROOM
+GF,GF-RB62B55,WET,BATHROOM,3.38,HELD,,,HELD,HELD,,7.5,,ROOM_LEVEL_HELD: NO_OPENING_TO_A_LEVELLED_ROOM
+GF,GF-RC06FED,DRY,DINING+LIVING+PANTRY+RECEPTION,2.8,OPENS_INTO,1.0,4.5,PRINTED_DIMENSION,HELD,3.65,2.4,8.76,BEAM_OVER_ROOM_NOT_CHECKED: the beams drawn over the room were not read; the owner's 0.60 m deduction holds
+GF,GF-RF38DAF,WET,BATHROOM,2.68,HELD,,,HELD,HELD,,7.414,,ROOM_LEVEL_HELD: NO_OPENING_TO_A_LEVELLED_ROOM
+GF,GF-RB28769,WET,BATHROOM,2.37,HELD,,,HELD,HELD,,6.51,,ROOM_LEVEL_HELD: NO_OPENING_TO_A_LEVELLED_ROOM
+GF,GF-RDF7D28,WET,BATHROOM,2.36,HELD,,,HELD,HELD,,5.9,,ROOM_LEVEL_HELD: NO_OPENING_TO_A_LEVELLED_ROOM
+GF,GF-RFAD3C4,WET,BATHROOM,1.95,OPENS_INTO,0.3,,HELD,HELD,,5.6,,FLOOR_TO_FLOOR_NOT_ESTABLISHED: no printed or sourced floor-to-floor for the room's level; the owner wall heigh
+1F,1F-R78C367,DRY,LIVING,75.98,PRINTED,5.5,4.2,DERIVED_FROM_PRINTED_LEVELS,HELD,3.35,48.788,163.44,BEAM_OVER_ROOM_NOT_CHECKED: the beams drawn over the room were not read; the owner's 0.60 m deduction holds
+1F,1F-RB72F22,DRY,MASTER_BEDROOM,19.05,FLOOR_LEVEL,5.5,4.2,DERIVED_FROM_PRINTED_LEVELS,HELD,3.35,16.475,55.19,BEAM_OVER_ROOM_NOT_CHECKED: the beams drawn over the room were not read; the owner's 0.60 m deduction holds
+1F,1F-R3CFCFD,DRY,MASTER_BEDROOM,19.02,FLOOR_LEVEL,5.5,4.2,DERIVED_FROM_PRINTED_LEVELS,HELD,3.35,20.506,68.7,BEAM_OVER_ROOM_NOT_CHECKED: the beams drawn over the room were not read; the owner's 0.60 m deduction holds
+1F,1F-RED0D19,DRY,MASTER_BEDROOM,18.22,FLOOR_LEVEL,5.5,4.2,DERIVED_FROM_PRINTED_LEVELS,HELD,3.35,16.624,55.69,BEAM_OVER_ROOM_NOT_CHECKED: the beams drawn over the room were not read; the owner's 0.60 m deduction holds
+1F,1F-R0E919A,DRY,MASTER_BEDROOM,16.34,FLOOR_LEVEL,5.5,4.2,DERIVED_FROM_PRINTED_LEVELS,HELD,3.35,15.2,50.92,BEAM_OVER_ROOM_NOT_CHECKED: the beams drawn over the room were not read; the owner's 0.60 m deduction holds
+1F,1F-R26FA0D,WET,LAUNDRY,10.15,FLOOR_LEVEL,5.5,4.2,DERIVED_FROM_PRINTED_LEVELS,HELD,3.35,16.64,55.74,BEAM_OVER_ROOM_NOT_CHECKED: the beams drawn over the room were not read; the owner's 0.60 m deduction holds
+1F,1F-R8BDA49,WET,BATHROOM,5.02,FLOOR_LEVEL,5.5,4.2,DERIVED_FROM_PRINTED_LEVELS,HELD,3.35,8.7,29.14,BEAM_OVER_ROOM_NOT_CHECKED: the beams drawn over the room were not read; the owner's 0.60 m deduction holds
+1F,1F-R48AA46,WET,BATHROOM,5.02,FLOOR_LEVEL,5.5,4.2,DERIVED_FROM_PRINTED_LEVELS,HELD,3.35,8.7,29.14,BEAM_OVER_ROOM_NOT_CHECKED: the beams drawn over the room were not read; the owner's 0.60 m deduction holds
+1F,1F-R48CDA5,WET,BATHROOM,4.72,FLOOR_LEVEL,5.5,4.2,DERIVED_FROM_PRINTED_LEVELS,HELD,3.35,8.216,27.52,BEAM_OVER_ROOM_NOT_CHECKED: the beams drawn over the room were not read; the owner's 0.60 m deduction holds
+1F,1F-RED23B8,WET,BATHROOM,3.58,FLOOR_LEVEL,5.5,4.2,DERIVED_FROM_PRINTED_LEVELS,HELD,3.35,7.3,24.45,BEAM_OVER_ROOM_NOT_CHECKED: the beams drawn over the room were not read; the owner's 0.60 m deduction holds
+1F,1F-R52AC05,WET,BATHROOM,2.65,FLOOR_LEVEL,5.5,4.2,DERIVED_FROM_PRINTED_LEVELS,HELD,3.35,6.24,20.9,BEAM_OVER_ROOM_NOT_CHECKED: the beams drawn over the room were not read; the owner's 0.60 m deduction holds
+2F,2F-R1DB2D2,DRY,MAID,19.35,FLOOR_LEVEL,9.7,4.2,PROJECT_FACT,HELD,3.35,18.3,61.31,BEAM_OVER_ROOM_NOT_CHECKED: the beams drawn over the room were not read; the owner's 0.60 m deduction holds
+2F,2F-R4D1B62,STAIR,STAIR,18.6,PRINTED,9.7,4.2,PROJECT_FACT,HELD,3.35,19.9,66.66,BEAM_OVER_ROOM_NOT_CHECKED: the beams drawn over the room were not read; the owner's 0.60 m deduction holds
+2F,2F-RE83BED,WET,BATHROOM,5.55,FLOOR_LEVEL,9.7,4.2,PROJECT_FACT,HELD,3.35,9.4,31.49,BEAM_OVER_ROOM_NOT_CHECKED: the beams drawn over the room were not read; the owner's 0.60 m deduction holds
