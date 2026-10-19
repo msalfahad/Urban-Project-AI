@@ -1,0 +1,1092 @@
+{
+ "policy": "T062_LABEL_FACE_TRACE (diagnostic)",
+ "labels": [
+  {
+   "text_id": "AT19",
+   "code": "BATHROOM",
+   "floor": "GF",
+   "cause": "NO_ROOM",
+   "engine_boundary_face": null,
+   "stage": "UNBOUNDED_FACE: the label lies outside every closed face of the WALL / COLUMN / WINDOW arrangement (engine/source/arch_rooms.py:1082-1096 builds it from those layers only; engine/source/topology.py:594 sites_of keeps bounded faces only)",
+   "layers_that_bound_it": {
+    "2": {
+     "layer_entities": 132,
+     "face_without_closure_m2": 1.114,
+     "closures_on_face": [],
+     "boundary_roles": {
+      "OWN": 5
+     },
+     "boundary_entities_own_layer": [
+      "D2:522:0",
+      "D2:665:0",
+      "D2:666:0",
+      "D2:707:0",
+      "D2:708:0"
+     ],
+     "A_net_m2": 1.114,
+     "A_filled_m2": 1.113,
+     "circle_edges_lm": 0.0,
+     "A_perimeter_lm": {
+      "own_layer_edge": 4.235
+     },
+     "band_width_m_by_length": {
+      "0.201": 0.966,
+      "None": 3.268
+     },
+     "circles_on_face": [],
+     "B_first_line_outer_m2": 1.318,
+     "dominant_band_width_m": 0.201,
+     "B_dominant_width_outer_m2": 2.125,
+     "B_dominant_width_outer_perimeter_lm": 5.836,
+     "shapes_inside_A_m2": 0.0,
+     "labels_in_face": [
+      "AT19"
+     ]
+    },
+    "5": {
+     "layer_entities": 1327,
+     "face_without_closure_m2": 8.579,
+     "closures_on_face": [],
+     "boundary_roles": {
+      "OWN": 4
+     },
+     "boundary_entities_own_layer": [
+      "D2:183:0",
+      "D2:514:0",
+      "D2:515:0",
+      "D2:517:0"
+     ],
+     "A_net_m2": 8.579,
+     "A_filled_m2": 8.576,
+     "circle_edges_lm": 0.0,
+     "A_perimeter_lm": {
+      "own_layer_edge": 11.069
+     },
+     "band_width_m_by_length": {
+      "0.2": 11.068
+     },
+     "circles_on_face": [],
+     "B_first_line_outer_m2": 10.851,
+     "dominant_band_width_m": 0.2,
+     "B_dominant_width_outer_m2": 10.932,
+     "B_dominant_width_outer_perimeter_lm": 12.497,
+     "shapes_inside_A_m2": 0.0,
+     "labels_in_face": [
+      "AT19",
+      "AT20"
+     ]
+    }
+   }
+  },
+  {
+   "text_id": "AT20",
+   "code": "POOL",
+   "floor": "GF",
+   "cause": "NO_ROOM",
+   "engine_boundary_face": null,
+   "stage": "UNBOUNDED_FACE: the label lies outside every closed face of the WALL / COLUMN / WINDOW arrangement (engine/source/arch_rooms.py:1082-1096 builds it from those layers only; engine/source/topology.py:594 sites_of keeps bounded faces only)",
+   "layers_that_bound_it": {
+    "2": {
+     "layer_entities": 132,
+     "face_without_closure_m2": 1.067,
+     "closures_on_face": [],
+     "boundary_roles": {
+      "OWN": 3
+     },
+     "boundary_entities_own_layer": [
+      "D2:666:0",
+      "D2:707:0",
+      "D2:708:0"
+     ],
+     "A_net_m2": 1.067,
+     "A_filled_m2": 1.066,
+     "circle_edges_lm": 0.0,
+     "A_perimeter_lm": {
+      "own_layer_edge": 4.596
+     },
+     "band_width_m_by_length": {
+      "None": 4.596
+     },
+     "circles_on_face": [],
+     "B_first_line_outer_m2": 1.066,
+     "dominant_band_width_m": null,
+     "B_dominant_width_outer_m2": 1.066,
+     "B_dominant_width_outer_perimeter_lm": 4.596,
+     "shapes_inside_A_m2": 0.0,
+     "labels_in_face": [
+      "AT20"
+     ]
+    },
+    "5": {
+     "layer_entities": 1327,
+     "face_without_closure_m2": 8.579,
+     "closures_on_face": [],
+     "boundary_roles": {
+      "OWN": 4
+     },
+     "boundary_entities_own_layer": [
+      "D2:183:0",
+      "D2:514:0",
+      "D2:515:0",
+      "D2:517:0"
+     ],
+     "A_net_m2": 8.579,
+     "A_filled_m2": 8.576,
+     "circle_edges_lm": 0.0,
+     "A_perimeter_lm": {
+      "own_layer_edge": 11.069
+     },
+     "band_width_m_by_length": {
+      "0.2": 11.068
+     },
+     "circles_on_face": [],
+     "B_first_line_outer_m2": 10.851,
+     "dominant_band_width_m": 0.2,
+     "B_dominant_width_outer_m2": 10.932,
+     "B_dominant_width_outer_perimeter_lm": 12.497,
+     "shapes_inside_A_m2": 0.0,
+     "labels_in_face": [
+      "AT19",
+      "AT20"
+     ]
+    }
+   }
+  },
+  {
+   "text_id": "AT21",
+   "code": "GARDEN",
+   "floor": "GF",
+   "cause": "NO_ROOM",
+   "engine_boundary_face": null,
+   "stage": "UNBOUNDED_FACE: the label lies outside every closed face of the WALL / COLUMN / WINDOW arrangement (engine/source/arch_rooms.py:1082-1096 builds it from those layers only; engine/source/topology.py:594 sites_of keeps bounded faces only)",
+   "layers_that_bound_it": {
+    "5": {
+     "layer_entities": 1327,
+     "face_without_closure_m2": null,
+     "closures_on_face": [
+      {
+       "line": "D2:141:0",
+       "length_m": 0.232,
+       "meets": [
+        "COLUMN",
+        "COLUMN",
+        "WALL"
+       ]
+      },
+      {
+       "line": "D2:183:0",
+       "length_m": 0.232,
+       "meets": [
+        "COLUMN",
+        "WALL"
+       ]
+      },
+      {
+       "line": "D2:183:0",
+       "length_m": 0.2,
+       "meets": [
+        "OWN"
+       ]
+      },
+      {
+       "line": "D2:184:0",
+       "length_m": 0.45,
+       "meets": [
+        "OWN"
+       ]
+      }
+     ],
+     "boundary_roles": {
+      "COLUMN": 22,
+      "WALL": 52,
+      "CLOSURE": 7,
+      "OWN": 62,
+      "DOOR_THRESHOLD": 8,
+      "WINDOW_THRESHOLD": 6,
+      "PASSAGE_THRESHOLD": 1,
+      "WALL_CAP": 2
+     },
+     "boundary_entities_own_layer": [
+      "CLOSE|D2:184:0",
+      "D2:1010:0",
+      "D2:1021:0",
+      "D2:141:0",
+      "D2:142:0",
+      "D2:149:0",
+      "D2:150:0",
+      "D2:152:0",
+      "D2:153:0",
+      "D2:183:0",
+      "D2:184:0",
+      "D2:185:0",
+      "D2:186:0",
+      "D2:267:0",
+      "D2:2691:0",
+      "D2:2691:1",
+      "D2:271:0",
+      "D2:314:0",
+      "D2:314:1",
+      "D2:370:0",
+      "D2:454:0",
+      "D2:512:0",
+      "D2:513:0",
+      "D2:516:0",
+      "D2:518:0",
+      "D2:696:0",
+      "D2:777:0",
+      "D2:849:0",
+      "D2:872:0",
+      "D2:878:0",
+      "D2:880:0",
+      "D2:881:0",
+      "D2:882:0",
+      "D2:933:0",
+      "D2:945:0",
+      "D2:984:0",
+      "D2:997:0",
+      "THR|OP-004|1",
+      "THR|OP-005|1",
+      "THR|OP-006|1",
+      "THR|OP-009|1",
+      "THR|OP-013|1",
+      "THR|OP-014|1",
+      "THR|OP-015|1",
+      "THR|OP-016|1",
+      "THR|OP-022|1"
+     ],
+     "A_net_m2": 167.067,
+     "A_filled_m2": 177.299,
+     "circle_edges_lm": 0.0,
+     "A_perimeter_lm": {
+      "building": 38.012,
+      "closure": 1.595,
+      "own_layer_edge": 152.555
+     },
+     "band_width_m_by_length": {
+      "0.199": 5.497,
+      "0.2": 4.0,
+      "0.3": 2.8,
+      "None": 141.851
+     },
+     "circles_on_face": [],
+     "B_first_line_outer_m2": 168.087,
+     "dominant_band_width_m": 0.199,
+     "B_dominant_width_outer_m2": 178.808,
+     "B_dominant_width_outer_perimeter_lm": 98.548,
+     "shapes_inside_A_m2": 10.232,
+     "labels_in_face": [
+      "AT21",
+      "AT22",
+      "AT39",
+      "AT40"
+     ]
+    }
+   }
+  },
+  {
+   "text_id": "AT22",
+   "code": "GARDEN",
+   "floor": "GF",
+   "cause": "NO_ROOM",
+   "engine_boundary_face": null,
+   "stage": "UNBOUNDED_FACE: the label lies outside every closed face of the WALL / COLUMN / WINDOW arrangement (engine/source/arch_rooms.py:1082-1096 builds it from those layers only; engine/source/topology.py:594 sites_of keeps bounded faces only)",
+   "layers_that_bound_it": {
+    "5": {
+     "layer_entities": 1327,
+     "face_without_closure_m2": null,
+     "closures_on_face": [
+      {
+       "line": "D2:141:0",
+       "length_m": 0.232,
+       "meets": [
+        "COLUMN",
+        "COLUMN",
+        "WALL"
+       ]
+      },
+      {
+       "line": "D2:183:0",
+       "length_m": 0.232,
+       "meets": [
+        "COLUMN",
+        "WALL"
+       ]
+      },
+      {
+       "line": "D2:183:0",
+       "length_m": 0.2,
+       "meets": [
+        "OWN"
+       ]
+      },
+      {
+       "line": "D2:184:0",
+       "length_m": 0.45,
+       "meets": [
+        "OWN"
+       ]
+      }
+     ],
+     "boundary_roles": {
+      "COLUMN": 22,
+      "WALL": 52,
+      "CLOSURE": 7,
+      "OWN": 62,
+      "DOOR_THRESHOLD": 8,
+      "WINDOW_THRESHOLD": 6,
+      "PASSAGE_THRESHOLD": 1,
+      "WALL_CAP": 2
+     },
+     "boundary_entities_own_layer": [
+      "CLOSE|D2:184:0",
+      "D2:1010:0",
+      "D2:1021:0",
+      "D2:141:0",
+      "D2:142:0",
+      "D2:149:0",
+      "D2:150:0",
+      "D2:152:0",
+      "D2:153:0",
+      "D2:183:0",
+      "D2:184:0",
+      "D2:185:0",
+      "D2:186:0",
+      "D2:267:0",
+      "D2:2691:0",
+      "D2:2691:1",
+      "D2:271:0",
+      "D2:314:0",
+      "D2:314:1",
+      "D2:370:0",
+      "D2:454:0",
+      "D2:512:0",
+      "D2:513:0",
+      "D2:516:0",
+      "D2:518:0",
+      "D2:696:0",
+      "D2:777:0",
+      "D2:849:0",
+      "D2:872:0",
+      "D2:878:0",
+      "D2:880:0",
+      "D2:881:0",
+      "D2:882:0",
+      "D2:933:0",
+      "D2:945:0",
+      "D2:984:0",
+      "D2:997:0",
+      "THR|OP-004|1",
+      "THR|OP-005|1",
+      "THR|OP-006|1",
+      "THR|OP-009|1",
+      "THR|OP-013|1",
+      "THR|OP-014|1",
+      "THR|OP-015|1",
+      "THR|OP-016|1",
+      "THR|OP-022|1"
+     ],
+     "A_net_m2": 167.067,
+     "A_filled_m2": 177.299,
+     "circle_edges_lm": 0.0,
+     "A_perimeter_lm": {
+      "building": 38.012,
+      "closure": 1.595,
+      "own_layer_edge": 152.555
+     },
+     "band_width_m_by_length": {
+      "0.199": 5.497,
+      "0.2": 4.0,
+      "0.3": 2.8,
+      "None": 141.851
+     },
+     "circles_on_face": [],
+     "B_first_line_outer_m2": 168.087,
+     "dominant_band_width_m": 0.199,
+     "B_dominant_width_outer_m2": 178.808,
+     "B_dominant_width_outer_perimeter_lm": 98.548,
+     "shapes_inside_A_m2": 10.232,
+     "labels_in_face": [
+      "AT21",
+      "AT22",
+      "AT39",
+      "AT40"
+     ]
+    }
+   }
+  },
+  {
+   "text_id": "AT39",
+   "code": "GARDEN",
+   "floor": "GF",
+   "cause": "NO_ROOM",
+   "engine_boundary_face": null,
+   "stage": "UNBOUNDED_FACE: the label lies outside every closed face of the WALL / COLUMN / WINDOW arrangement (engine/source/arch_rooms.py:1082-1096 builds it from those layers only; engine/source/topology.py:594 sites_of keeps bounded faces only)",
+   "layers_that_bound_it": {
+    "5": {
+     "layer_entities": 1327,
+     "face_without_closure_m2": null,
+     "closures_on_face": [
+      {
+       "line": "D2:141:0",
+       "length_m": 0.232,
+       "meets": [
+        "COLUMN",
+        "COLUMN",
+        "WALL"
+       ]
+      },
+      {
+       "line": "D2:183:0",
+       "length_m": 0.232,
+       "meets": [
+        "COLUMN",
+        "WALL"
+       ]
+      },
+      {
+       "line": "D2:183:0",
+       "length_m": 0.2,
+       "meets": [
+        "OWN"
+       ]
+      },
+      {
+       "line": "D2:184:0",
+       "length_m": 0.45,
+       "meets": [
+        "OWN"
+       ]
+      }
+     ],
+     "boundary_roles": {
+      "COLUMN": 22,
+      "WALL": 52,
+      "CLOSURE": 7,
+      "OWN": 62,
+      "DOOR_THRESHOLD": 8,
+      "WINDOW_THRESHOLD": 6,
+      "PASSAGE_THRESHOLD": 1,
+      "WALL_CAP": 2
+     },
+     "boundary_entities_own_layer": [
+      "CLOSE|D2:184:0",
+      "D2:1010:0",
+      "D2:1021:0",
+      "D2:141:0",
+      "D2:142:0",
+      "D2:149:0",
+      "D2:150:0",
+      "D2:152:0",
+      "D2:153:0",
+      "D2:183:0",
+      "D2:184:0",
+      "D2:185:0",
+      "D2:186:0",
+      "D2:267:0",
+      "D2:2691:0",
+      "D2:2691:1",
+      "D2:271:0",
+      "D2:314:0",
+      "D2:314:1",
+      "D2:370:0",
+      "D2:454:0",
+      "D2:512:0",
+      "D2:513:0",
+      "D2:516:0",
+      "D2:518:0",
+      "D2:696:0",
+      "D2:777:0",
+      "D2:849:0",
+      "D2:872:0",
+      "D2:878:0",
+      "D2:880:0",
+      "D2:881:0",
+      "D2:882:0",
+      "D2:933:0",
+      "D2:945:0",
+      "D2:984:0",
+      "D2:997:0",
+      "THR|OP-004|1",
+      "THR|OP-005|1",
+      "THR|OP-006|1",
+      "THR|OP-009|1",
+      "THR|OP-013|1",
+      "THR|OP-014|1",
+      "THR|OP-015|1",
+      "THR|OP-016|1",
+      "THR|OP-022|1"
+     ],
+     "A_net_m2": 167.067,
+     "A_filled_m2": 177.299,
+     "circle_edges_lm": 0.0,
+     "A_perimeter_lm": {
+      "building": 38.012,
+      "closure": 1.595,
+      "own_layer_edge": 152.555
+     },
+     "band_width_m_by_length": {
+      "0.199": 5.497,
+      "0.2": 4.0,
+      "0.3": 2.8,
+      "None": 141.851
+     },
+     "circles_on_face": [],
+     "B_first_line_outer_m2": 168.087,
+     "dominant_band_width_m": 0.199,
+     "B_dominant_width_outer_m2": 178.808,
+     "B_dominant_width_outer_perimeter_lm": 98.548,
+     "shapes_inside_A_m2": 10.232,
+     "labels_in_face": [
+      "AT21",
+      "AT22",
+      "AT39",
+      "AT40"
+     ]
+    }
+   }
+  },
+  {
+   "text_id": "AT40",
+   "code": "GARDEN",
+   "floor": "GF",
+   "cause": "NO_ROOM",
+   "engine_boundary_face": null,
+   "stage": "UNBOUNDED_FACE: the label lies outside every closed face of the WALL / COLUMN / WINDOW arrangement (engine/source/arch_rooms.py:1082-1096 builds it from those layers only; engine/source/topology.py:594 sites_of keeps bounded faces only)",
+   "layers_that_bound_it": {
+    "5": {
+     "layer_entities": 1327,
+     "face_without_closure_m2": null,
+     "closures_on_face": [
+      {
+       "line": "D2:141:0",
+       "length_m": 0.232,
+       "meets": [
+        "COLUMN",
+        "COLUMN",
+        "WALL"
+       ]
+      },
+      {
+       "line": "D2:183:0",
+       "length_m": 0.232,
+       "meets": [
+        "COLUMN",
+        "WALL"
+       ]
+      },
+      {
+       "line": "D2:183:0",
+       "length_m": 0.2,
+       "meets": [
+        "OWN"
+       ]
+      },
+      {
+       "line": "D2:184:0",
+       "length_m": 0.45,
+       "meets": [
+        "OWN"
+       ]
+      }
+     ],
+     "boundary_roles": {
+      "COLUMN": 22,
+      "WALL": 52,
+      "CLOSURE": 7,
+      "OWN": 62,
+      "DOOR_THRESHOLD": 8,
+      "WINDOW_THRESHOLD": 6,
+      "PASSAGE_THRESHOLD": 1,
+      "WALL_CAP": 2
+     },
+     "boundary_entities_own_layer": [
+      "CLOSE|D2:184:0",
+      "D2:1010:0",
+      "D2:1021:0",
+      "D2:141:0",
+      "D2:142:0",
+      "D2:149:0",
+      "D2:150:0",
+      "D2:152:0",
+      "D2:153:0",
+      "D2:183:0",
+      "D2:184:0",
+      "D2:185:0",
+      "D2:186:0",
+      "D2:267:0",
+      "D2:2691:0",
+      "D2:2691:1",
+      "D2:271:0",
+      "D2:314:0",
+      "D2:314:1",
+      "D2:370:0",
+      "D2:454:0",
+      "D2:512:0",
+      "D2:513:0",
+      "D2:516:0",
+      "D2:518:0",
+      "D2:696:0",
+      "D2:777:0",
+      "D2:849:0",
+      "D2:872:0",
+      "D2:878:0",
+      "D2:880:0",
+      "D2:881:0",
+      "D2:882:0",
+      "D2:933:0",
+      "D2:945:0",
+      "D2:984:0",
+      "D2:997:0",
+      "THR|OP-004|1",
+      "THR|OP-005|1",
+      "THR|OP-006|1",
+      "THR|OP-009|1",
+      "THR|OP-013|1",
+      "THR|OP-014|1",
+      "THR|OP-015|1",
+      "THR|OP-016|1",
+      "THR|OP-022|1"
+     ],
+     "A_net_m2": 167.067,
+     "A_filled_m2": 177.299,
+     "circle_edges_lm": 0.0,
+     "A_perimeter_lm": {
+      "building": 38.012,
+      "closure": 1.595,
+      "own_layer_edge": 152.555
+     },
+     "band_width_m_by_length": {
+      "0.199": 5.497,
+      "0.2": 4.0,
+      "0.3": 2.8,
+      "None": 141.851
+     },
+     "circles_on_face": [],
+     "B_first_line_outer_m2": 168.087,
+     "dominant_band_width_m": 0.199,
+     "B_dominant_width_outer_m2": 178.808,
+     "B_dominant_width_outer_perimeter_lm": 98.548,
+     "shapes_inside_A_m2": 10.232,
+     "labels_in_face": [
+      "AT21",
+      "AT22",
+      "AT39",
+      "AT40"
+     ]
+    }
+   }
+  },
+  {
+   "text_id": "AT216",
+   "code": "ROOF",
+   "floor": "1F",
+   "cause": "NO_ROOM",
+   "engine_boundary_face": null,
+   "stage": "UNBOUNDED_FACE: the label lies outside every closed face of the WALL / COLUMN / WINDOW arrangement (engine/source/arch_rooms.py:1082-1096 builds it from those layers only; engine/source/topology.py:594 sites_of keeps bounded faces only)",
+   "layers_that_bound_it": {
+    "5": {
+     "layer_entities": 1313,
+     "face_without_closure_m2": 39.111,
+     "closures_on_face": [
+      {
+       "line": "D2:3035:0",
+       "length_m": 0.405,
+       "meets": [
+        "COLUMN",
+        "WALL"
+       ]
+      }
+     ],
+     "boundary_roles": {
+      "OWN": 10,
+      "WINDOW_THRESHOLD": 4,
+      "WALL": 23,
+      "CLOSURE": 1,
+      "COLUMN": 9
+     },
+     "boundary_entities_own_layer": [
+      "D2:2853:0",
+      "D2:2867:0",
+      "D2:3010:0",
+      "D2:3035:0",
+      "D2:3218:0",
+      "D2:3309:0",
+      "D2:3312:0",
+      "D2:3338:0",
+      "THR|OP-002|0",
+      "THR|OP-003|0",
+      "THR|OP-016|0",
+      "THR|OP-017|0"
+     ],
+     "A_net_m2": 32.721,
+     "A_filled_m2": 32.721,
+     "circle_edges_lm": 0.0,
+     "A_perimeter_lm": {
+      "building": 23.87,
+      "closure": 0.405,
+      "own_layer_edge": 28.665
+     },
+     "band_width_m_by_length": {
+      "0.075": 7.305,
+      "0.2": 21.36,
+      "None": 0.405
+     },
+     "circles_on_face": [],
+     "B_first_line_outer_m2": 37.541,
+     "dominant_band_width_m": 0.2,
+     "B_dominant_width_outer_m2": 38.655,
+     "B_dominant_width_outer_perimeter_lm": 54.54,
+     "shapes_inside_A_m2": 0.0,
+     "labels_in_face": [
+      "AT216"
+     ]
+    }
+   }
+  },
+  {
+   "text_id": "AT220",
+   "code": "ROOF",
+   "floor": "1F",
+   "cause": "NO_ROOM",
+   "engine_boundary_face": null,
+   "stage": "UNBOUNDED_FACE: the label lies outside every closed face of the WALL / COLUMN / WINDOW arrangement (engine/source/arch_rooms.py:1082-1096 builds it from those layers only; engine/source/topology.py:594 sites_of keeps bounded faces only)",
+   "layers_that_bound_it": {
+    "5": {
+     "layer_entities": 1313,
+     "face_without_closure_m2": 207.775,
+     "closures_on_face": [
+      {
+       "line": "D2:2869:0",
+       "length_m": 0.2,
+       "meets": [
+        "COLUMN",
+        "WALL"
+       ]
+      }
+     ],
+     "boundary_roles": {
+      "COLUMN": 4,
+      "WALL": 7,
+      "CLOSURE": 1,
+      "OWN": 10,
+      "WINDOW_THRESHOLD": 1
+     },
+     "boundary_entities_own_layer": [
+      "D2:2859:0",
+      "D2:2868:0",
+      "D2:2869:0",
+      "D2:2871:0",
+      "D2:2872:0",
+      "D2:2881:0",
+      "D2:3308:0",
+      "D2:3325:0",
+      "THR|OP-001|0"
+     ],
+     "A_net_m2": 55.56,
+     "A_filled_m2": 55.559,
+     "circle_edges_lm": 0.0,
+     "A_perimeter_lm": {
+      "building": 4.6,
+      "closure": 0.2,
+      "own_layer_edge": 30.928
+     },
+     "band_width_m_by_length": {
+      "0.1": 7.718,
+      "0.2": 21.482,
+      "0.201": 1.727,
+      "None": 0.2
+     },
+     "circles_on_face": [],
+     "B_first_line_outer_m2": 60.962,
+     "dominant_band_width_m": 0.2,
+     "B_dominant_width_outer_m2": 61.896,
+     "B_dominant_width_outer_perimeter_lm": 37.242,
+     "shapes_inside_A_m2": 0.0,
+     "labels_in_face": [
+      "AT220"
+     ]
+    }
+   }
+  },
+  {
+   "text_id": "AT225",
+   "code": "VOID",
+   "floor": "1F",
+   "cause": "NO_ROOM",
+   "engine_boundary_face": null,
+   "stage": "UNBOUNDED_FACE: the label lies outside every closed face of the WALL / COLUMN / WINDOW arrangement (engine/source/arch_rooms.py:1082-1096 builds it from those layers only; engine/source/topology.py:594 sites_of keeps bounded faces only)",
+   "layers_that_bound_it": {
+    "2": {
+     "layer_entities": 80,
+     "face_without_closure_m2": null,
+     "closures_on_face": [
+      {
+       "line": "D2:3251:0",
+       "length_m": 0.132,
+       "meets": [
+        "OWN"
+       ]
+      },
+      {
+       "line": "D2:3251:0",
+       "length_m": 0.132,
+       "meets": [
+        "OWN"
+       ]
+      }
+     ],
+     "boundary_roles": {
+      "WALL": 6,
+      "OWN": 3,
+      "CLOSURE": 2,
+      "WINDOW_THRESHOLD": 1
+     },
+     "boundary_entities_own_layer": [
+      "D2:3195:0",
+      "D2:3196:0",
+      "D2:3251:0"
+     ],
+     "A_net_m2": 2.616,
+     "A_filled_m2": 2.613,
+     "circle_edges_lm": 0.0,
+     "A_perimeter_lm": {
+      "building": 3.933,
+      "closure": 0.264,
+      "own_layer_edge": 3.673
+     },
+     "band_width_m_by_length": {
+      "0.05": 3.323,
+      "None": 0.614
+     },
+     "circles_on_face": [],
+     "B_first_line_outer_m2": 2.78,
+     "dominant_band_width_m": 0.05,
+     "B_dominant_width_outer_m2": 2.815,
+     "B_dominant_width_outer_perimeter_lm": 8.138,
+     "shapes_inside_A_m2": 0.0,
+     "labels_in_face": [
+      "AT225"
+     ]
+    },
+    "5": {
+     "layer_entities": 1313,
+     "face_without_closure_m2": 3.825,
+     "closures_on_face": [],
+     "boundary_roles": {
+      "OWN": 4
+     },
+     "boundary_entities_own_layer": [
+      "D2:12059:0",
+      "D2:12060:0",
+      "D2:3023:0",
+      "D2:3194:0"
+     ],
+     "A_net_m2": 3.825,
+     "A_filled_m2": 3.82,
+     "circle_edges_lm": 0.0,
+     "A_perimeter_lm": {
+      "own_layer_edge": 7.139
+     },
+     "band_width_m_by_length": {
+      "0.201": 2.674,
+      "0.204": 2.921,
+      "None": 1.541
+     },
+     "circles_on_face": [],
+     "B_first_line_outer_m2": 5.02,
+     "dominant_band_width_m": 0.204,
+     "B_dominant_width_outer_m2": 5.407,
+     "B_dominant_width_outer_perimeter_lm": 8.42,
+     "shapes_inside_A_m2": 0.0,
+     "labels_in_face": [
+      "AT225"
+     ]
+    }
+   }
+  },
+  {
+   "text_id": "AT379",
+   "code": "ROOF",
+   "floor": "2F",
+   "cause": "NO_ROOM",
+   "engine_boundary_face": null,
+   "stage": "UNBOUNDED_FACE: the label lies outside every closed face of the WALL / COLUMN / WINDOW arrangement (engine/source/arch_rooms.py:1082-1096 builds it from those layers only; engine/source/topology.py:594 sites_of keeps bounded faces only)",
+   "layers_that_bound_it": {
+    "5": {
+     "layer_entities": 1251,
+     "face_without_closure_m2": 370.384,
+     "closures_on_face": [
+      {
+       "line": "D2:4793:0",
+       "length_m": 0.075,
+       "meets": [
+        "WALL"
+       ]
+      }
+     ],
+     "boundary_roles": {
+      "WALL": 12,
+      "CLOSURE": 1,
+      "OWN": 15,
+      "OWN_CIRCLE": 40,
+      "COLUMN": 1,
+      "DOOR_THRESHOLD": 1
+     },
+     "boundary_entities_own_layer": [
+      "D2:4728:0",
+      "D2:4741:0",
+      "D2:4775:0",
+      "D2:4793:0",
+      "D2:4809:0"
+     ],
+     "A_net_m2": 115.814,
+     "A_filled_m2": 146.532,
+     "circle_edges_lm": 27.785,
+     "A_perimeter_lm": {
+      "building": 16.8,
+      "closure": 0.075,
+      "own_layer_edge": 48.265
+     },
+     "band_width_m_by_length": {
+      "0.125": 5.25,
+      "0.15": 5.792,
+      "0.2": 29.543,
+      "0.3": 0.237,
+      "0.4": 1.83,
+      "None": 5.688
+     },
+     "circles_on_face": [
+      {
+       "circle": "D2:4843:0",
+       "radius_m": 2.211,
+       "area_m2": 15.359
+      },
+      {
+       "circle": "D2:12083:0",
+       "radius_m": 2.211,
+       "area_m2": 15.359
+      }
+     ],
+     "B_first_line_outer_m2": 124.065,
+     "dominant_band_width_m": 0.2,
+     "B_dominant_width_outer_m2": 125.656,
+     "B_dominant_width_outer_perimeter_lm": 67.14,
+     "shapes_inside_A_m2": 30.704,
+     "labels_in_face": [
+      "AT379",
+      "AT385"
+     ]
+    }
+   }
+  },
+  {
+   "text_id": "AT385",
+   "code": "ROOF",
+   "floor": "2F",
+   "cause": "NO_ROOM",
+   "engine_boundary_face": null,
+   "stage": "UNBOUNDED_FACE: the label lies outside every closed face of the WALL / COLUMN / WINDOW arrangement (engine/source/arch_rooms.py:1082-1096 builds it from those layers only; engine/source/topology.py:594 sites_of keeps bounded faces only)",
+   "layers_that_bound_it": {
+    "5": {
+     "layer_entities": 1251,
+     "face_without_closure_m2": 370.384,
+     "closures_on_face": [
+      {
+       "line": "D2:4793:0",
+       "length_m": 0.075,
+       "meets": [
+        "WALL"
+       ]
+      }
+     ],
+     "boundary_roles": {
+      "WALL": 12,
+      "CLOSURE": 1,
+      "OWN": 15,
+      "OWN_CIRCLE": 40,
+      "COLUMN": 1,
+      "DOOR_THRESHOLD": 1
+     },
+     "boundary_entities_own_layer": [
+      "D2:4728:0",
+      "D2:4741:0",
+      "D2:4775:0",
+      "D2:4793:0",
+      "D2:4809:0"
+     ],
+     "A_net_m2": 115.814,
+     "A_filled_m2": 146.532,
+     "circle_edges_lm": 27.785,
+     "A_perimeter_lm": {
+      "building": 16.8,
+      "closure": 0.075,
+      "own_layer_edge": 48.265
+     },
+     "band_width_m_by_length": {
+      "0.125": 5.25,
+      "0.15": 5.792,
+      "0.2": 29.543,
+      "0.3": 0.237,
+      "0.4": 1.83,
+      "None": 5.688
+     },
+     "circles_on_face": [
+      {
+       "circle": "D2:4843:0",
+       "radius_m": 2.211,
+       "area_m2": 15.359
+      },
+      {
+       "circle": "D2:12083:0",
+       "radius_m": 2.211,
+       "area_m2": 15.359
+      }
+     ],
+     "B_first_line_outer_m2": 124.065,
+     "dominant_band_width_m": 0.2,
+     "B_dominant_width_outer_m2": 125.656,
+     "B_dominant_width_outer_perimeter_lm": 67.14,
+     "shapes_inside_A_m2": 30.704,
+     "labels_in_face": [
+      "AT379",
+      "AT385"
+     ]
+    }
+   }
+  }
+ ],
+ "census_summary": {
+  "policy": "URBAN_LABEL_CENSUS_V1",
+  "rule": "UP-QTY-STATUS-001",
+  "labels": 41,
+  "by_status": {
+   "MEASURED": 28,
+   "HELD": 1,
+   "UNSUPPORTED": 1,
+   "SILENT_OMISSION": 11
+  },
+  "unread_shx": 47,
+  "silent_by_cause": {
+   "NO_ROOM": 11
+  },
+  "by_floor": {
+   "1F": {
+    "UNSUPPORTED": 1,
+    "SILENT_OMISSION": 3,
+    "MEASURED": 11,
+    "UNREAD_SHX": 19
+   },
+   "2F": {
+    "SILENT_OMISSION": 2,
+    "MEASURED": 2,
+    "UNREAD_SHX": 8
+   },
+   "GF": {
+    "MEASURED": 15,
+    "SILENT_OMISSION": 6,
+    "HELD": 1,
+    "UNREAD_SHX": 20
+   }
+  }
+ }
+}
