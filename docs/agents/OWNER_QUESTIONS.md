@@ -1,6 +1,6 @@
 # Questions for the owner (at most 5 open; answer under "Answer:")
 
-Worker 1 2026-10-19 12:39: two new no-assumptions questions from the architectural sheet census (T-063): Q-26 (pool floor flat at 1.15 m or sloped), Q-27 (two or three domes). Open now: 5. Lead 2026-10-19 12:20: one new no-assumptions question Q-23 (renovation BOQ scope and retained-wall finishes, asked before the sealed test as the owner directed). Lead 2026-10-19 12:30: two more no-assumptions questions from the roof trace: Q-24 (roof waterproofing edge and domes), Q-25 (closing a parapet drafting gap). Open now: 3. Lead 2026-10-19 (owner reply): Q-22 answered A (only a pool-named space or block is the pool pump room; plain "PUMP" listed "use not stated"); no question open. Lead 2026-10-19 10:15: the owner answered Q-12, Q-13, Q-14, Q-15, Q-16, Q-17, Q-20 and Q-21 in the main chat (08:51); all eight moved to Answered with their tasks updated (T-065, T-010, T-063 / T-013, T-066, T-043, T-064, T-056, T-042). One new no-assumptions question: Q-22 (which pump room is the pool's). Open now: 1. Lead 2026-10-19 (owner reply): Q-18 answered (c) held and always visible; Q-19 answered for stairs and pools (see Answered); new Q-20 (stair waist and landings). Lead 2026-10-19 04:10: two new questions Q-18 (dome size basis) and Q-19 (may engine conventions release concrete when the drawing prints nothing); eight are open (Q-12 to Q-19): the list is long because each one stops an assumption. Q-12 now has the T-037 hand calculation (see its note). Lead 2026-10-19 02:20: three new questions Q-15 (development project 2 plans file), Q-16 (unlabelled beam span), Q-17 (typed drawing sizes in the concrete score); with Q-12, Q-13 and Q-14 six are open: the list is long because each one stops an assumption. Lead 2026-10-19 00:15: no new question; Q-12 (concrete verdicts) and Q-13 (toilet lines vs chair) open. Window / aluminium door m2 is covered by UP-OPEN-SCHED-001 and UP-DOOR-AREA-001, so it became task T-040, not a question. Lead 2026-10-18 20:05 (owner session): Q-06, Q-07, Q-09 answered by the owner (see Answered); no question open. Lead 2026-10-18 21:25: Q-10 (development project 2 DWG) answered; Q-11 answered (owner uploads the Alsenan DXFs); no question open. Lead 2026-10-18 15:40: no new question; Q-06 and Q-07 still open (no owner answer yet). The T-019 wall-length basis finding is settled by UP-WALL-GEOM-001 (masonry run = centreline, owner-approved), so it became task T-027, not a question. Lead adds questions an agent cannot decide from drawings, rules or evidence. Answered questions move to the bottom.
+Worker 2 2026-10-19 14:10: one new no-assumptions question from the foundation split (T-065): Q-28 (boundary-wall band section and its overlap with footings). Open now: 6. Worker 1 2026-10-19 12:39: two new no-assumptions questions from the architectural sheet census (T-063): Q-26 (pool floor flat at 1.15 m or sloped), Q-27 (two or three domes). Open now: 5. Lead 2026-10-19 12:20: one new no-assumptions question Q-23 (renovation BOQ scope and retained-wall finishes, asked before the sealed test as the owner directed). Lead 2026-10-19 12:30: two more no-assumptions questions from the roof trace: Q-24 (roof waterproofing edge and domes), Q-25 (closing a parapet drafting gap). Open now: 3. Lead 2026-10-19 (owner reply): Q-22 answered A (only a pool-named space or block is the pool pump room; plain "PUMP" listed "use not stated"); no question open. Lead 2026-10-19 10:15: the owner answered Q-12, Q-13, Q-14, Q-15, Q-16, Q-17, Q-20 and Q-21 in the main chat (08:51); all eight moved to Answered with their tasks updated (T-065, T-010, T-063 / T-013, T-066, T-043, T-064, T-056, T-042). One new no-assumptions question: Q-22 (which pump room is the pool's). Open now: 1. Lead 2026-10-19 (owner reply): Q-18 answered (c) held and always visible; Q-19 answered for stairs and pools (see Answered); new Q-20 (stair waist and landings). Lead 2026-10-19 04:10: two new questions Q-18 (dome size basis) and Q-19 (may engine conventions release concrete when the drawing prints nothing); eight are open (Q-12 to Q-19): the list is long because each one stops an assumption. Q-12 now has the T-037 hand calculation (see its note). Lead 2026-10-19 02:20: three new questions Q-15 (development project 2 plans file), Q-16 (unlabelled beam span), Q-17 (typed drawing sizes in the concrete score); with Q-12, Q-13 and Q-14 six are open: the list is long because each one stops an assumption. Lead 2026-10-19 00:15: no new question; Q-12 (concrete verdicts) and Q-13 (toilet lines vs chair) open. Window / aluminium door m2 is covered by UP-OPEN-SCHED-001 and UP-DOOR-AREA-001, so it became task T-040, not a question. Lead 2026-10-18 20:05 (owner session): Q-06, Q-07, Q-09 answered by the owner (see Answered); no question open. Lead 2026-10-18 21:25: Q-10 (development project 2 DWG) answered; Q-11 answered (owner uploads the Alsenan DXFs); no question open. Lead 2026-10-18 15:40: no new question; Q-06 and Q-07 still open (no owner answer yet). The T-019 wall-length basis finding is settled by UP-WALL-GEOM-001 (masonry run = centreline, owner-approved), so it became task T-027, not a question. Lead adds questions an agent cannot decide from drawings, rules or evidence. Answered questions move to the bottom.
 Decisions still queued behind these (from the master study `14_OWNER_DECISIONS_QUEUE.csv`): D-17 review-space wet / dry,
 WP-KITCHEN membrane scope, WP-JOINT details, WIN-REVEAL finish, STUB-LIMIT, MEAS-STD, ROOF-FIN, BLIND-AUTH.
 
@@ -132,6 +132,32 @@ Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
    become the rule.
 
 ## Open
+
+### Q-28 Boundary wall at foundation level: which section, and is the part inside a footing counted again? (worker 2 2026-10-19 14:10; T-065; no-assumptions question)
+
+THE PROBLEM: the foundation plan draws a closed 0.20 m concrete band all round the plot, 91.94 m on its centre line
+(2 x 31.17 + 2 x 14.80). Two drawings give it different sections, and 21.45 m of it runs through 10 isolated footings
+that reach the plot line. No Urban rule says which section wins or whether the band is counted again inside a footing.
+Today the engine keeps only 60.17 m (it loses the whole lower neighbour side) = 7.22 m3; the freelancer has 71.7 m =
+8.60 m3, both at 0.20 x 0.60.
+WHERE TO LOOK: Drive "Alsenan chalet project", "ST7757.pdf": page 2 (FOUNDATION PLAN: the hatched band on the plot
+line; along the lower neighbour side see how C/F, F15, F11, F14 and F10 run into it); page 10 (Schedule of Simple Beams,
+row "B.W": 20 x 60, 4 d16 bottom, 2 d14 top); page 14 ("TYPICAL BOUNDARY WALL" plan: GROUND BEAM (20x40), a pad
+(130x80x30) at each 20x30 column, spacing "SEE ARCH PLAN"; section A-A: lower G.B 20 wide with no depth written on an
+80 x 30 base). Page 1, note 2: the neighbour-side ground beams sit on black brick from foundation level, so the band
+under the building is real.
+THE OPTIONS:
+(A) The band is the B.W beam 0.20 x 0.60 and is not counted again inside a footing: 70.49 m x 0.12 = 8.46 m3; the
+21.45 m inside footings is listed (held) and not added.
+(B) The band is the B.W beam 0.20 x 0.60 over its full 91.94 m: 11.03 m3 (the 21.45 m inside footings, 2.57 m3,
+overlaps footing concrete).
+(C) The typical section governs: lower ground beam 0.20 x 0.40 (91.94 m gross 7.36 m3, net of footings 5.64 m3) plus
+one 1.30 x 0.80 x 0.30 pad (0.31 m3) at every boundary column, held until the designer gives the column positions.
+RECOMMENDATION: (A), and send the designer one RFI to confirm. The B.W row and the 0.20 m band are the two
+project-specific sources and they agree; the page 14 sheet is a "typical", not-to-scale detail. Counting the band
+again inside a footing would count the same concrete twice (practice, not a code clause).
+WAITS ON: the boundary-wall foundation line on Alsenan and the plot-edge member ledger the engine needs on every villa
+(T-065 follow-up).
 
 ### Q-26 Pool: is the pool floor flat at the printed 1.15 m depth, or sloped? (worker 1 2026-10-19 12:39; T-063; no-assumptions question)
 
