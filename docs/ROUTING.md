@@ -92,12 +92,12 @@ Risk **HIGH** (recommended validation L3). Ask about: room, space, zone, closure
 
 **Open first:**
 
-- `engine/source/arch_rooms.py` (2250 lines, HIGH; imported by 29 directly, 60 transitively, SHARED)
-- `engine/source/arch_plan.py` (449 lines, HIGH; imported by 15 directly, 63 transitively, SHARED)
+- `engine/source/arch_rooms.py` (2250 lines, HIGH; imported by 29 directly, 62 transitively, SHARED)
+- `engine/source/arch_plan.py` (449 lines, HIGH; imported by 15 directly, 65 transitively, SHARED)
 - `engine/source/space_model.py` (196 lines, MEDIUM; imported by 3 directly, 30 transitively)
 - `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 49 transitively)
 - `engine/source/waterproofing_system.py` (998 lines, MEDIUM; imported by 7 directly, 34 transitively)
-- `engine/source/arch_v27.py` (1135 lines, MEDIUM; imported by 4 directly, 60 transitively)
+- `engine/source/arch_v27.py` (1135 lines, MEDIUM; imported by 4 directly, 62 transitively)
 
 **Depends on:** `engine/source/drawing_model.py`, `engine/source/knowledge.py`, `engine/source/opening_census.py`, `engine/source/opening_gaps.py`, `engine/source/arch_v29.py`, `engine/source/arch_walls.py`, `engine/source/boq_line.py`, `engine/source/lintel_measure.py`, `engine/source/material_spec.py`, `engine/source/member_detection.py`
 
@@ -128,11 +128,11 @@ Risk **HIGH** (recommended validation L3). Ask about: wall, blockwork, block, ma
 
 **Open first:**
 
-- `engine/source/arch_walls.py` (236 lines, HIGH; imported by 5 directly, 60 transitively)
+- `engine/source/arch_walls.py` (236 lines, HIGH; imported by 5 directly, 62 transitively)
 - `engine/source/wall_contact_path.py` (695 lines, HIGH; imported by 21 directly, 24 transitively, SHARED)
 - `engine/source/wall_bands.py` (1036 lines, HIGH; imported by 20 directly, 50 transitively, SHARED)
-- `engine/source/arch_rooms.py` (2250 lines, HIGH; imported by 29 directly, 60 transitively, SHARED)
-- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 5 directly, 61 transitively)
+- `engine/source/arch_rooms.py` (2250 lines, HIGH; imported by 29 directly, 62 transitively, SHARED)
+- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 5 directly, 63 transitively)
 
 **Depends on:** `engine/source/arch_plan.py`, `engine/source/arch_v27.py`, `engine/source/member_detection.py`, `engine/source/release_safety.py`, `engine/source/topology.py`, `engine/source/arch_v29.py`, `engine/source/drawing_model.py`, `engine/source/geometry_role.py`, `engine/source/lintel_measure.py`, `engine/source/plane_poly.py`
 
@@ -202,9 +202,9 @@ Risk **CRITICAL** (recommended validation L4). Ask about: window, glazing, sill,
 **Open first:**
 
 - `engine/source/schedule_reader.py` (352 lines, CRITICAL, frozen; imported by 3 directly, 65 transitively)
-- `engine/source/opening_census.py` (474 lines, CRITICAL, frozen; imported by 9 directly, 105 transitively)
+- `engine/source/opening_census.py` (474 lines, CRITICAL, frozen; imported by 9 directly, 107 transitively)
 - `engine/source/schedule_grammar.py` (98 lines, CRITICAL, frozen; imported by 7 directly, 74 transitively)
-- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 5 directly, 61 transitively)
+- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 5 directly, 63 transitively)
 
 **Depends on:** `engine/source/drawing_model.py`, `engine/source/release_safety.py`
 
@@ -244,7 +244,7 @@ Risk **HIGH** (recommended validation L3). Ask about: plaster, paint, tile, tili
 - `engine/source/arch_measure.py` (1165 lines, HIGH; imported by 17 directly, 43 transitively, SHARED)
 - `engine/source/wall_height.py` (90 lines, MEDIUM; imported by 4 directly, 46 transitively)
 - `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 49 transitively)
-- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 5 directly, 61 transitively)
+- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 5 directly, 63 transitively)
 
 **Depends on:** `engine/source/arch_rooms.py`, `engine/source/knowledge.py`, `engine/source/release_safety.py`, `engine/source/arch_completeness.py`, `engine/source/arch_floor.py`, `engine/source/boq_line.py`, `engine/source/material_result.py`, `engine/source/material_spec.py`, `engine/source/membrane_layout.py`, `engine/source/plane_poly.py`
 
@@ -318,7 +318,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: stair, railing, riser,
 
 **Open first:**
 
-- `engine/source/stair_geometry.py` (336 lines, CRITICAL, frozen; imported by 6 directly, 101 transitively)
+- `engine/source/stair_geometry.py` (336 lines, CRITICAL, frozen; imported by 6 directly, 103 transitively)
 - `engine/source/stair_measure.py` (119 lines, CRITICAL, frozen; imported by 3 directly, 65 transitively)
 - `engine/source/arch_measure.py` (1165 lines, HIGH; imported by 17 directly, 43 transitively, SHARED)
 
@@ -485,7 +485,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: boq, total, release, r
 - `tools/urban_boq_m9.py` (3044 lines, HIGH; imported by 28 directly, 28 transitively, SHARED)
 - `engine/source/delta_release.py` (159 lines, CRITICAL, frozen; imported by 37 directly, 37 transitively, SHARED)
 - `engine/source/boq_line.py` (386 lines, HIGH; imported by 17 directly, 58 transitively, SHARED)
-- `engine/source/knowledge.py` (287 lines, HIGH; imported by 25 directly, 72 transitively, SHARED)
+- `engine/source/knowledge.py` (287 lines, HIGH; imported by 25 directly, 74 transitively, SHARED)
 - `engine/source/door_standards.py` (599 lines, MEDIUM; imported by 7 directly, 33 transitively)
 - `engine/source/project_rules.py` (748 lines, MEDIUM; imported by 5 directly, 36 transitively)
 
