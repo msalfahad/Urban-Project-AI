@@ -80,6 +80,21 @@ picks the next trade by gate, then by money at risk (rebar, concrete, waterproof
 5. Definition of done (study §12): real code; a hand-calculated fixture with adversarial cases (mirror, rotation,
    units, missing data); no historical regression; released / held / unsupported handled; missing never becomes 0.
 
+## Reporting results to the owner (owner, 2026-10-19; applies to every agent)
+
+The owner reads results as engineering progress, not task numbers. Every handoff, verifier verdict, lead report and scout
+answer says, in plain words and in this order:
+1. **What the engine now gives against the freelancer BOQ**: project, trade, unit, engine quantity, freelancer quantity,
+   difference in units and in %, and the change since the last report (for example "concrete 92.8 m3 vs 111.8 m3, -19.0 m3
+   (-17.0 %), was -21.4 m3"). Measured, held (why) or refused (why) is always stated; a held quantity is never shown as 0.
+2. **What improved or got worse, and why** (the cause in one sentence: a rule applied, a drawing read, a defect found).
+3. **What the team learned** (a rule, a drawing convention, a failure mode now understood) and **what is still missing**.
+4. **Which gate (0 - 4) this serves and how close the gate is to done.**
+Task ids (T-nn) and file names go only in a closing line for the team, never as the content. The Lead keeps
+docs/agents/PROGRESS.md in this form; the Verifier's SCOREBOARD.md supplies the measured numbers; workers put the
+numbers of their task in their handoff in the same terms. Nothing is estimated: a number the run did not measure is
+written "not measured".
+
 ## No assumptions (owner, 2026-10-18; applies to every agent)
 
 Every measurement, count, quantity or classification follows the Urban rules the owner has set: the rule registry
