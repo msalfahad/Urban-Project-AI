@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 595 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 596 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 8 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2345 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2349 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1298 | pytest suites, one folder per round. |
+| `tests/` | 1299 | pytest suites, one folder per round. |
 | `tools/` | 104 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (243 modules)
+## `engine/source/` (244 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -430,6 +430,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `closure_review.py` | 58 | MEDIUM | 1 | CLOSURE HUMAN REVIEW (R8.20) - a human review is versioned evidence for ONE exact closure record. |
 | `column_concrete_geometry.py` | 82 | MEDIUM | 1 | COLUMN_CONCRETE_GEOMETRY - column concrete independent of column reinforcement (generic). |
 | `column_rebar.py` | 908 | MEDIUM | 3 | COLUMN REINFORCEMENT ENGINE (generic, project-independent). |
+| `column_schedule_text_rows.py` | 485 | MEDIUM | 1 | SCHEDULE TEXT ROWS (V1) - schedule rows drawn as plain TEXT / MTEXT inside a block-attribute table, and struck-out |
 | `comparison_scope.py` | 173 | MEDIUM | 3 | COMPARISON SCOPE MAPPER (generic). |
 | `concrete_completeness.py` | 2362 | CRITICAL | 10 | CONCRETE COMPLETENESS (M6) - every structural signal of a drawing set ends in one terminal state, and every signal |
 | `concrete_curved_strips.py` | 254 | MEDIUM | 2 | CONCRETE CURVED STRIPS - wall strips drawn as concentric curved edges (bulge polylines, ARCs, CIRCLEs). |
@@ -457,7 +458,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `door_standards.py` | 671 | MEDIUM | 7 | DOOR STANDARDS AND SCENARIOS (M9 Phase 2B-1, ARCH_TAKEOFF_V2.3 only) - the owner door rules of the knowledge |
 | `door_transition.py` | 124 | MEDIUM | 4 | DOOR FINISH TRANSITION (R8.14) - where one floor finish meets another inside a door threshold, as a TRADE |
 | `drawing_inventory.py` | 280 | CRITICAL | 5 | DRAWING INVENTORY (M1) - what a DXF holds, before any quantity (generic). |
-| `drawing_model.py` | 309 | CRITICAL | 18 | DRAWING MODEL (M2) - a normalized, source-pointed model of one structural drawing set (generic, stdlib). |
+| `drawing_model.py` | 309 | CRITICAL | 19 | DRAWING MODEL (M2) - a normalized, source-pointed model of one structural drawing set (generic, stdlib). |
 | `elevation_binding.py` | 134 | CRITICAL | 2 | ELEVATION BINDING - which physical object a dimension printed on an elevation or section measures (generic). |
 | `engineering_flags.py` | 214 | MEDIUM | 6 | ENGINEERING FLAG MODEL + COMPONENT RELEASE (generic, project-independent). |
 | `entity_role_inference.py` | 1228 | MEDIUM | 2 | ENTITY ROLE INFERENCE (V1): what a drawing's linework IS, from evidence the drawing itself carries. |
@@ -565,7 +566,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rule_store.py` | 124 | HIGH | 14 | RULE STORE (M9 S1) - one versioned place the new engines read rules from (generic; stdlib only). |
 | `run_manifest.py` | 180 | MEDIUM | 6 | QTO RUN MANIFEST (R8.11): every result names the exact inputs, claims, policies and method that produced it. |
 | `schedule_grammar.py` | 98 | CRITICAL | 7 | SCHEDULE_GRAMMAR - reinforcement text grammar and schedule-cell provenance for machine-readable (attributed) |
-| `schedule_reader.py` | 352 | CRITICAL | 3 | SCHEDULE READER (M2) - structural schedules from attribute rows or text tables, without a project profile (generic). |
+| `schedule_reader.py` | 352 | CRITICAL | 5 | SCHEDULE READER (M2) - structural schedules from attribute rows or text tables, without a project profile (generic). |
 | `schedule_table.py` | 181 | MEDIUM | 3 | SCHEDULE TABLE READER (V1) - a drawn schedule (grid lines + values) as rows and cells, fail closed. |
 | `scope_quantities.py` | 1377 | CRITICAL | 4 | SCOPE QUANTITIES (M8) - the scope a completeness finding locates, measured from the drawn plan or bounded by a |
 | `section_binding.py` | 461 | MEDIUM | 1 | SECTION BINDING V1 (T-013) - bind the level bands of sections / elevations to the plan floors, and report per floor |
@@ -957,6 +958,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t061_room_label_guard/` | 1 |
 | `tests/t071_exterior_spaces/` | 2 |
 | `tests/t072_membrane_table/` | 1 |
+| `tests/t075_schedule_text_rows/` | 1 |
 | `tests/t076_membrane_fold/` | 1 |
 | `tests/t077_opening_omissions/` | 1 |
 | `tests/t078_opening_area/` | 1 |
@@ -1060,11 +1062,13 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t071/` | 4 |
 | `research/agents_t072/` | 1 |
 | `research/agents_t074/` | 3 |
+| `research/agents_t075/` | 1 |
 | `research/agents_t076/` | 3 |
 | `research/agents_t077/` | 2 |
 | `research/agents_t078/` | 2 |
 | `research/agents_t080/` | 1 |
 | `research/agents_t082/` | 1 |
+| `research/agents_t084/` | 3 |
 | `research/agents_t088/` | 2 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
