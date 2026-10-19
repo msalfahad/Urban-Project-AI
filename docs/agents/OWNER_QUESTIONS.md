@@ -169,7 +169,7 @@ THE OPTIONS:
 RECOMMENDATION: (A): it is the same wedge rule as your straight steps, applied to the drawn plan area, and it does not count the landing twice (practice, not a code clause).
 WAITS ON: main-stair winders 0.120 m3 and the 12 curved round-stair steps, on every villa with turning steps (T-056).
 
-### Q-52 Wall height for plaster and paint: the drawings have no 0.60 m beam. Which beam depth is taken off? (worker 2 2026-10-19 23:10; T-088, T-081; no-assumptions question)
+### Q-52 Wall height for plaster and paint: the drawings have no 0.60 m beam. Which beam depth is taken off? (worker 2 2026-10-19 23:00; T-088, T-081; no-assumptions question)
 
 THE PROBLEM: your rule is wall height = slab to slab - 0.60 beam - 0.15 decor ceiling - 0.10 floor finishing, and a room
 whose drawn beam is deeper or shallower than 0.60 m is held for you. On Alsenan no beam on the roof-slab plans is 0.60 m
