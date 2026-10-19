@@ -1,5 +1,6 @@
 # Questions for the owner (at most 5 open; answer under "Answer:")
 
+Worker 3 2026-10-19 21:25: two new no-assumptions questions from the stair hand table (T-084): Q-46 (main stair: section A-A and the plans draw a different number of steps, which counts) and Q-47 (is the "T 16" in the stair panels the waist and landing thickness).
 Worker 3 2026-10-19 17:30: two new no-assumptions questions from the reference-book check (T-080): Q-40 (shower walls: waterproofing higher than the 0.20 m upturn, and how high) and Q-41 (falls screed under and protection screed over the membrane: BOQ lines or not).
 Worker 2 2026-10-19 17:04: one new no-assumptions question from the door / window area piece (T-078): Q-39 (width of a window curved on plan: chord as in your Q-32 example, or the inner arc of the Urban curved-aluminium method).
 Worker 1 2026-10-19 16:43: one new no-assumptions question from the lost-window trace (T-077): Q-38 (width basis of a curved glass wall in a straight wall opening).
@@ -145,6 +146,52 @@ Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
    become the rule.
 
 ## Open
+
+### Q-46 Main stair: the section and the plans draw a different number of steps. Which one counts? (worker 3 2026-10-19 21:25; T-084, T-056; no-assumptions question: two drawings disagree)
+
+THE PROBLEM: the step height comes from the floor height divided by the number of steps, so the engine must know how many
+steps there are. On Alsenan the three drawings do not agree for the main stair on either floor:
+- Ground to first floor (+1.00 to +5.50 = 4.50 m): section A-A draws 10 + 5 turning steps + 12 = 27 steps (4.50 / 27 =
+  16.7 cm); the architectural ground-floor plan draws 10 + 4 + 11 = 25 (18.0 cm); the structural slab plan 12 + 4 + 12 = 28
+  (16.1 cm).
+- First to second floor (+5.50 to +9.70 = 4.20 m): section A-A 13 + 12 = 25 (16.8 cm, flat landing, no turning steps);
+  architectural first-floor plan 12 + 4 + 11 = 27 (15.6 cm); structural plan 12 + 1 + 11 = 24 (17.5 cm).
+Example of the effect: the straight steps of the two floors are 1.386 m3 with the section's counts (27 and 25), 1.324 m3
+with the plans' (25 and 27); the marble steps change the same way (the freelancer counts 63; the section gives 52).
+WHERE TO LOOK: Drive "Alsenan chalet project": p7757_arch_sheet10.pdf (section A-A): count the steps of each flight between
++1.00, the landing and +5.50, then +5.50 to +9.70; p7757_arch_sheet03.pdf and p7757_arch_sheet04.pdf (ground and first
+floor plans): count the step lines in the two flights of the stair hall; structural ST7757.pdf pages 4 and 5 (stair panels).
+THE OPTIONS:
+(A) The section counts (27 and 25); plans are only a check, and each difference is listed for the architect.
+Main stair steps released: 0.660 + 0.726 = 1.386 m3.
+(B) The architectural plans count (25 and 27). Steps released: 0.680 + 0.644 = 1.324 m3.
+(C) Hold the main stair steps until the architect confirms one arrangement (RFI). Nothing released.
+RECOMMENDATION: (A): the section is the only drawing that draws every step against the printed levels (on the ground
+floor its turning steps land exactly on the printed half landing); plan step lines are a set-out symbol and here even
+show more steps on the lower floor height (practice, not a code clause). Keep the RFI either way: with 12 steps in the
+upper flights the last step runs 0.20 m into beams B20 / B23 at the head.
+WAITS ON: main-stair concrete steps, marble treads / risers and riser height on every villa where section and plans differ (T-084, T-056).
+
+### Q-47 Stairs: is the "T 16" written inside the stair panels the thickness of the sloping slab and the landings? (worker 3 2026-10-19 21:25; T-084, T-056; no-assumptions question)
+
+THE PROBLEM: your Q-20 answer asks for the sloping slab (waist) and landings from the stair detail. The structural stair
+detail draws them but writes only the word "THICK" with no number. The only thickness printed in the stair areas is the
+slab tag "T 16" placed inside each stair panel on the slab plans, together with the bars "8 d16/m", which are the main
+bars of the typical stair section. Your Q-14 answer says not to apply 16 cm to stairs and landings by default, so the
+engine holds them.
+WHERE TO LOOK: Drive "Alsenan chalet project", ST7757.pdf page 16 "TYPICAL STEEL LAYOUT-STAIR SECTION" (the word THICK,
+no value); page 4 (ground floor roof slab): the main-stair panel and the round-stair panel, each with "T 16" and "8 d16/m";
+page 5 (first floor roof slab): the main-stair panel with "T 16" and "8 d16/m".
+THE OPTIONS:
+(A) "T 16" is the waist and landing thickness of every stair panel that carries it. Main stair: waists 1.20 x (3.43 +
+3.86 + 3.87 + 3.87 m sloped) x 0.16 = 2.885 m3, landings (1.20 x 1.25 + 2.50 x 1.25) x 0.16 = 0.740 m3; total 3.625 m3
+(round stair waists as well once its steps are counted).
+(B) "T 16" is the waist only; landings stay held until the designer prints them. Released 2.885 m3.
+(C) Neither: waist and landings stay held until the designer prints a thickness. Nothing released.
+RECOMMENDATION: (A): the tag sits inside the stair panel with the stair's own bars (8 d16/m, the typical stair section's
+main bars), and 16 cm is in proportion to a 1.20 m flight spanning about 3.9 m (practice, not a code clause). The
+entrance flight on the ground is not in a slab panel and stays held either way.
+WAITS ON: stair waist and landing concrete (Alsenan main stair 3.625 m3 against the freelancer's 8.131 m3 main stair) on every villa (T-084, T-056).
 
 ### Q-38 A curved glass wall set in a straight wall: which line gives its width? (worker 1 2026-10-19 16:43; T-077; no-assumptions question)
 
