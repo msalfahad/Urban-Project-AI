@@ -33,6 +33,16 @@ settings). Instructions:
 3. **If you cannot do something** (repository not attachable, Drive file unreadable, a setting only the owner can change), say exactly what
    in the first line of your report; the main chat will fix it.
 
+## Owner instruction on merging (via the owner's main chat, 2026-10-19)
+
+The owner changed the permission mode of the scheduled tasks and asked why verified tasks wait for him. Merging is not an
+owner job. The verifier merges a verified task into the working branch right away. When the merge conflicts only in the
+generated files docs/CODEMAP.md and docs/ROUTING.md, regenerate them with `python3 -I tools/codemap.py build` (never by
+hand), check with `codemap.py check` and the freeze check, then merge. Lead: put T-052 back to TODO and stop writing
+"NEEDS FIXING by the owner" for merges. If a step is still refused, write the exact refusal text in your report to the
+owner's main chat in the same run. The Lead also answers in its next report: why the verified tasks (T-036, T-033, T-029,
+T-034, T-011, T-037, T-041, T-044-r2) were not merged earlier, and how many are merged now.
+
 ## How to write a question for the owner (owner, 2026-10-18; every agent follows this)
 
 The owner must understand the question without opening the code. Write it in plain words, like talking to a site
