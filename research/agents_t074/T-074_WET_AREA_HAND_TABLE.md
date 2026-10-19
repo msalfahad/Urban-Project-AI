@@ -127,7 +127,7 @@ With every wet area present (17 of 17 on the drainage plans, 0 lost), the hand t
    doorway segment in the boundary of the room, so each of these 0.80 m segments is in TWO room boundaries: 5 x 0.80 x 2
    = 8.00 lm of the 144.73 lm (1.60 m2 of upturn), and the doorway floor piece 0.12 m2 twice (0.60 m2). The membrane is
    continuous across such a doorway, so there is nothing to turn up against; no rule says which count applies:
-   owner question Q-35. The freelancer's 144.61 lm counts full room perimeters (both sides), like today's sum.
+   owner question Q-35 (lead) with my addendum. The freelancer's 144.61 lm counts full room perimeters (both sides), like today's sum.
 2. **Open edges (no wall, no door) in a boundary: 2.156 m.** Core lobby 1.256 m (open to the stair hall) and basin
    space by the stair 0.90 m (open to the passage). UP-WP-002 v2 counts the whole boundary "including every doorway /
    threshold segment", so they are in the 144.73 lm (0.431 m2 of upturn); they are thresholds, not walls.
@@ -147,7 +147,7 @@ With every wet area present (17 of 17 on the drainage plans, 0 lost), the hand t
 
 | Area | Status | Why | What is known |
 |---|---|---|---|
-| GF pantry (تحضير / PANTRY, floor drain on the drainage plan) | HELD | wet by UP-WET-001 (pantry) and Q-30 (kitchens), but it has no wall on the dining side: printed 4.50 x 3.00 with the dining room continuing past it (sheet 3), so the outline that bounds the membrane is not drawn | printed 4.50 x 3.00 = 13.50 m2 if bounded at the printed 3.00; the freelancer has no pantry line; owner question Q-36 |
+| GF pantry (تحضير / PANTRY, floor drain on the drainage plan) | HELD | wet by UP-WET-001 (pantry) and Q-30 (kitchens), but it has no wall on the dining side: printed 4.50 x 3.00 with the dining room continuing past it (sheet 3), so the outline that bounds the membrane is not drawn | printed 4.50 x 3.00 = 13.50 m2 if bounded at the printed 3.00; the freelancer has no pantry line; owner question Q-37 |
 | 1F west roof (+4.30) | MEASURED (T-071, not wired) | Q-24: inside the parapet, like a bathroom | 55.559 m2, upturn 35.727 lm (incl. 0.200 m gap closure, Q-25) |
 | 1F south-east roof strip (+5.50) | MEASURED (T-071, not wired) | same | 32.721 m2, upturn 52.940 lm (incl. 0.405 m gap closure) |
 | 2F level roof (+9.70) with two skylight openings (Q-29) | MEASURED (T-071, not wired) | same; the two dome positions are open skylights with a 0.20 m upturn ring | 146.532 - 2 x 15.350 = 115.832 m2, upturn 92.922 lm (incl. 2 x 13.891 rings) |
@@ -174,5 +174,5 @@ outlines is the next check.
   the owner's 3 x 4 kitchen (16.28 m2, 2 rolls, 3.72 m2 offcut) and the other direction (16.32 m2), the same room rotated
   37 degrees, mirrored and in mm, the 3 x 3 bathroom (12.58 m2), an L-shape, a 0.50 m wide strip. The scratchpad copy that
   built the table gave identical strips for all 17 rooms (checked).
-- Missing: roof strip layouts (section 6); the doorway / shared-doorway count (Q-35) and the pantry (Q-36) wait on the
+- Missing: roof strip layouts (section 6); the doorway / shared-doorway count (Q-35 and its addendum) and the pantry (Q-37) wait on the
   owner; corner reinforcement and drain detailing are outside the owner's method.
