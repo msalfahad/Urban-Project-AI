@@ -14,7 +14,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 580 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 581 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 7 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
@@ -22,7 +22,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1273 | pytest suites, one folder per round. |
+| `tests/` | 1274 | pytest suites, one folder per round. |
 | `tools/` | 96 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (229 modules)
+## `engine/source/` (230 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -432,6 +432,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `column_rebar.py` | 908 | MEDIUM | 3 | COLUMN REINFORCEMENT ENGINE (generic, project-independent). |
 | `comparison_scope.py` | 173 | MEDIUM | 3 | COMPARISON SCOPE MAPPER (generic). |
 | `concrete_completeness.py` | 2362 | CRITICAL | 9 | CONCRETE COMPLETENESS (M6) - every structural signal of a drawing set ends in one terminal state, and every signal |
+| `concrete_curved_strips.py` | 254 | MEDIUM | 1 | CONCRETE CURVED STRIPS - wall strips drawn as concentric curved edges (bulge polylines, ARCs, CIRCLEs). |
 | `concrete_model.py` | 145 | MEDIUM | 1 | PHYSICAL NON-OVERLAPPING CONCRETE MODEL (V1) + STAIR CONCRETE (V1). |
 | `conservation.py` | 72 | MEDIUM | 2 | Source conservation (R8.2 §21) — nothing silently disappears. |
 | `continuous_beams.py` | 496 | CRITICAL | 3 | CONTINUOUS BEAMS (M4) - the multi-span model of a continuous-beam mark: its axis line, its supports, its spans |
@@ -440,7 +441,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `coverage_anomaly.py` | 53 | MEDIUM | 1 | Expected physical scope checks (generic internal completeness QA - no reference quantity is read). |
 | `coverage_census.py` | 140 | MEDIUM | 4 | COVERAGE CENSUS (M9 S1) - one terminal state for every BOQ family of the family master, per run (generic; stdlib). |
 | `coverage_metrics.py` | 49 | MEDIUM | 1 | Coverage metrics per trade (generic) - explain WHY a quantity is low, not only how low. |
-| `curved_member_geometry.py` | 346 | CRITICAL | 2 | CURVED MEMBER GEOMETRY - circular arcs, rings and spherical shells measured exactly (generic, stdlib). |
+| `curved_member_geometry.py` | 346 | CRITICAL | 3 | CURVED MEMBER GEOMETRY - circular arcs, rings and spherical shells measured exactly (generic, stdlib). |
 | `curved_opening.py` | 80 | MEDIUM | 2 | CURVED OPENING MEASUREMENT (V1.1) - every geometric basis of a curved (arc) glazing run is published under an |
 | `decoder_pins.py` | 108 | MEDIUM | 9 | DECODER_BINARY_PIN registry (R8 A9) — which decoder builds may support FINAL provenance. |
 | `delta_correction.py` | 154 | CRITICAL | 3 | DELTA CORRECTION (ERRATA) - an explicit correction layer over a frozen delta release (generic, stdlib only). |
@@ -916,6 +917,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/swimming_pool_s8_2/` | 4 |
 | `tests/swimming_pool_s8_2a/` | 2 |
 | `tests/t022_room_vocab/` | 1 |
+| `tests/t048_curved_strips/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
