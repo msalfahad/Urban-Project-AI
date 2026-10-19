@@ -1,6 +1,6 @@
 # T-075: column schedule rows typed as plain text, and struck-out cells (development villa + synthetic fixture)
 
-Worker 2, 2026-10-19 21:44-22:20 UTC. New reader `engine/source/column_schedule_text_rows.py` (SCHEDULE_TEXT_ROWS_V1)
+Worker 2, 2026-10-19 21:44-22:05 UTC. New reader `engine/source/column_schedule_text_rows.py` (SCHEDULE_TEXT_ROWS_V1)
 beside the frozen SCHEDULE_READER_V1; nothing frozen edited, nothing wired into route G (wiring is a new route version,
 T-079-style follow-up). Development villa (Alsenan), not an accuracy claim. Rules: UP-KB-PREC-001 (a printed value
 wins), UP-QTY-STATUS-001 (held never 0); owner answers Q-16 (exhaust the drawing), Q-19 (no usual sizes), Q-21 = C
