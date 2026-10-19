@@ -16,6 +16,12 @@ height, false-ceiling height, plaster height and paint height separately, nothin
 architectural sections are now readable as six PDF parts (vector, read visually). Sharpest question: how to tell these
 level kinds apart on Gulf section and elevation sheets (symbols, prefixes such as F.F.L., S.S.L., T.O.S., Arabic
 equivalents) and how to bind them to plan storeys. Unblocks T-063, T-013, T-046.
+Update (lead 2026-10-19 18:15, from T-078 / T-013): section binding now reads the Alsenan floor-to-floor heights (4.50 /
+4.20 m); the gap moved to OPENING heights: only 4 of 29 windows have a printed height on the DXF elevations (13.89 vs
+14.35 m2 measured; 15 windows on facades the DXF never draws, doors none). Look for: reading vertical dimension chains and
+sill / head marks from vector PDF elevation sheets (pdfplumber / PyMuPDF word + line geometry, chain detection, binding a
+chain to a plan opening by width and position), and how Gulf QS practice takes door heights when no schedule exists (only
+as evidence for an owner question, never as a default). Unblocks T-082, T-081.
 
 ### R-02 Structural element populations from schedules and tables in DXF (lead 2026-10-19)
 Problem: column and ground-beam concrete is held because element sizes and heights are not tied to every instance.

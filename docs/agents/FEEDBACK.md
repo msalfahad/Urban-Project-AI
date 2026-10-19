@@ -3,20 +3,47 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
-## Recurring causes (lead 2026-10-19 16:15)
+## Recurring causes (lead 2026-10-19 18:15)
 
-1. **Merged pieces not wired into the released run** (largest now): concrete ledger V2, wet / dry evidence, roofs on their
-   own layer are verified and merged, yet the released Alsenan run is unchanged since 8774071 (concrete 92.77 vs 111.81 m3).
-   Decision: T-079 wires the architectural pieces (after T-072 / T-076); concrete ledger wiring follows once T-073 / T-049
-   / T-056 give the held lines their members.
-2. **Openings: the engine counts pieces, the BOQ needs areas, and 2 windows are lost**: T-040 gap G1-G7. Decision: T-077
-   (lost openings, gate 1) and T-078 (areas from printed dimensions); owner Q-32, Q-33.
-3. **Rules missing or in conflict for what the drawing shows**: F10 drawn vs schedule (Q-31), arched windows (Q-32),
-   window material (Q-33), top roof on no plan (Q-34), doorway upturn (Q-35). All asked; the parts stay HELD.
-4. **Real room outlines break methods written for clean rectangles**: the membrane fold ran on 0 of 14 Alsenan wet rooms
-   (collinear points, 45 deg rooms). Decision: T-076.
-5. Resolved this run: repo code refused for workers 2 and 3 (worker 2 16:10 and worker 3 16:03 self-checks PASS on every
-   step after the owner's execution authorization 15:24); Drive parts too big (single sheets 3, 4, 9, 10 uploaded 14:57).
+1. **Merged pieces not wired into the released run** (largest): ten checked method pieces since 12:10 (concrete ledger V2,
+   wet / dry evidence, roofs, membrane table, opening guard, opening areas, section binding READY) and the released Alsenan
+   run is still the 8774071 run (concrete 92.77 vs 111.81 m3). Decision: T-079 (architectural wiring) starts once the fold
+   on real rooms (T-076) is merged; concrete wiring after T-073 / T-075 / T-049 / T-056.
+2. **Heights are the bottleneck for areas**: windows 4 of 29 have a printed height on the DXF elevations; doors none; plaster
+   and paint (1151 / 1191 m2) held for wall heights; the engine's GF level is 0.00 instead of +1.00 / +0.30. Decision: T-082
+   (heights from the PDF elevation and section sheets), T-081 (room floor levels, finish heights without assumed
+   allowances); T-013 section binding READY.
+3. **Rules missing for what the books and drawings show**: curved glazing width (Q-38, Q-39), shower tanking (Q-40),
+   screeds (Q-41), tile joints (Q-42). Asked; the parts stay HELD.
+4. **Board claims refused by the classifier**: a chained "edit + commit + push" claim was refused for workers 2 (17:41) and 3
+   (18:02), while worker 1's claim as an Edit-tool edit plus separate commit / push passed. Decision: board note "CLAIM
+   METHOD" (18:15). A board compaction by the Lead to bring BOARD.md (255 KB) under the connector's size was refused too
+   ("[Modify Shared Resources]"); not retried.
+
+## 2026-10-19 18:15 (lead run)
+
+- **T-072 membrane purchase table: PARTIAL.** Merged 7b8ccfd. 14 wet areas 62.77 vs 62.43 m2 (+0.5 %), 13 rolls provisional,
+  9 rows HELD never 0; the owner's 3 x 4 m kitchen reproduced exactly (16.28 m2, 2 rolls), but the strip fold ran on 0 of
+  14 real rooms. Decision: T-076 (already tasked) now claimable, with the owner's Q-35 C and Q-37 A answers written in.
+- **T-074 wet-area hand table: WORKED.** Merged 3d420e6. 17 areas: floor 72.122 vs 72.01 m2 (+0.16 %), boundary 144.729 vs
+  144.61 lm (+0.08 %), equal to the engine piece within 0.002; walls only 127.07 lm (the Q-35 C basis). It is the truth for
+  T-076.
+- **T-077 lost windows: WORKED.** Merged c564481. Windows 29 drawn = 27 measured + 2 HELD (was 27 with 2 silent); doors 28
+  elements, 0 silent. Width of the curved pool glazing asked (Q-38).
+- **T-078 window / door m2: PARTIAL.** Merged 5f07bf0. 4 windows 13.892 vs 14.350 m2 (-3.2 %; ENGINE_RIGHT on printed
+  2.30 / 1.60 vs his 2.00, and on the arched 1F living window 4.812 vs 4.650 under Q-32 A); 23 windows and all doors
+  HELD: 15 on facades with no DXF elevation, 5 drawn on none, doors without height. Decision: T-082 (heights from the PDF
+  elevations and section A-A); curved window width asked (Q-39).
+- **T-013 section binding: WORKED (READY, verifier next).** GF +1.00 / +0.30 split, GF floor-to-floor 4.50 m printed, 1F
+  4.20 m derived, 2F held, slab 0.16 owner rule; matches the hand census. Finding: engine GF plan level 0.00 from plot
+  marks. Decision: T-081.
+- **T-080 reference-book checks: PARTIAL (READY).** Supervisor's-eye book and waterproofing manual checked item by item
+  (40 items with rule id or NO RULE); Q-40, Q-41 asked by the worker; L-1 (tile joints) asked by the Lead as Q-42; L-2 ..
+  L-6 (movement joints, ground-slab DPM, primers / coats of a named system, wet-room FFL check, junction mesh) are scope
+  items with no engine quantity today: kept in research/agents_t080 for later, no question now. The finish-height
+  allowance 0.150 m contradicts Q-14: written into T-079 and T-081. Kuwait specification chapters not readable: owner
+  asked for parts under 6 MB.
+- **T-075 column schedule text rows: FAILED twice (no claim).** Classifier refused the chained claim; see cause 4.
 
 ## 2026-10-19 16:15 (lead run)
 
