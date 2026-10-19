@@ -169,6 +169,30 @@ THE OPTIONS:
 RECOMMENDATION: (A): it is the same wedge rule as your straight steps, applied to the drawn plan area, and it does not count the landing twice (practice, not a code clause).
 WAITS ON: main-stair winders 0.120 m3 and the 12 curved round-stair steps, on every villa with turning steps (T-056).
 
+### Q-52 Wall height for plaster and paint: the drawings have no 0.60 m beam. Which beam depth is taken off? (worker 2 2026-10-19 23:10; T-088, T-081; no-assumptions question)
+
+THE PROBLEM: your rule is wall height = slab to slab - 0.60 beam - 0.15 decor ceiling - 0.10 floor finishing, and a room
+whose drawn beam is deeper or shallower than 0.60 m is held for you. On Alsenan no beam on the roof-slab plans is 0.60 m
+deep: they are 0.40, 0.50, 0.75, 0.85 or 1.20 m (the only 0.60 m type, "B.W", is in the schedule but on no slab plan).
+So every one of the 32 rooms is held, and plaster (freelancer 1 151.14 m2) and paint (1 191.13 m2) cannot be given.
+WHERE TO LOOK: Drive "Alsenan chalet project", ST7757.pdf: the schedules of beams (depth column "H") and the GROUND,
+FIRST and SECOND FLOOR ROOF SLAB plans. Examples: the dewaneya on the ground floor is crossed by beam CB6 (20 x 75); the
+saloon by B26 (65 x 85) and B27 (90 x 85); the first-floor master bed room 500 x 365 has B18 (35 x 75) and CB11 (30 x 75)
+on its walls and only 20 x 50 beams elsewhere; the first-floor W.C. by the laundry has only 20 x 50 beams.
+THE OPTIONS (wall heights; and the five rooms with printed wall lengths, 86.3 m of wall, against the freelancer's
+299.58 m2 for the same rooms):
+(A) Always take off your standard 0.60 m, whatever is drawn: GF 3.65 m, annex (+0.30 to +4.30) 3.15 m, 1F and 2F
+    3.35 m: 282.67 m2 (-5.6 %).
+(B) Take off the deepest beam drawn at the room (on its walls or across it): mostly 0.75 m: GF 3.50, annex 3.00, 1F and
+    2F 3.20 m (saloon 3.40 m with 0.85): 269.72 m2 (-10.0 %).
+(C) Take off a beam deeper than 0.60 m only where it crosses the room's ceiling (a beam sitting on the wall line is hidden
+    in the wall), and your 0.60 m everywhere else: dewaneya 3.00 m (CB6 crosses it), saloon 3.40 m, other rooms as (A): 279.65 m2 (-6.7 %).
+RECOMMENDATION: (C): the decor ceiling must pass under a deep beam that crosses the room, so that beam sets the ceiling;
+beams on the wall line do not lower the ceiling inside the room, and your 0.60 m stays the rule elsewhere (practice, not a
+code clause). Whatever you choose, a ceiling level printed on a section or detail replaces it.
+WAITS ON: internal plaster and paint wall heights in every Alsenan room (and wall-tile heights of the wet rooms after
+your Q-48 answer) and the same rule on every villa (T-081 rework, T-088).
+
 ## Answered
 
 ### Q-48 Wet rooms are fully tiled: up to which height do the wall tiles go, and which false-ceiling depth applies? (lead 2026-10-19 22:20; owner request for the room-by-room tiling table (Q-45), Q-40 and Q-43 answers; no-assumptions question)
