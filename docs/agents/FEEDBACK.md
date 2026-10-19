@@ -3,7 +3,7 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
-## Recurring causes (lead 2026-10-19 00:25)
+## Recurring causes (lead 2026-10-19 00:15)
 
 1. **Merges are refused by the session permission check** (T-001b verifier push 22:58; T-019 worker merge 22:44 and
    worker cross-branch checkout 23:03). 0 merges in the last 5 h while 3 tasks are READY. Owner setting; reported under
@@ -12,7 +12,7 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    not found). Tasks T-035, T-038; research request R-01, R-03.
 3. **No Urban rule for a classification** (T-010: WC linework vs chair). Correctly stopped and asked (Q-13).
 
-## 2026-10-19 00:25 (lead run)
+## 2026-10-19 00:15 (lead run)
 
 | Task | Result | What went well | What went wrong and why (numbers) | Decision | Tasks created |
 |---|---|---|---|---|---|

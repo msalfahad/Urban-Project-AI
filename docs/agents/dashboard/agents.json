@@ -6,7 +6,7 @@
   "last_run": "2026-10-19T00:09:53Z",
   "result": "running",
   "working_on": "Board to 12 TODO (T-035..T-040); merges blocked by a permission, reported to you",
-  "as_of": "2026-10-19T00:30:00Z"
+  "as_of": "2026-10-19T00:15:00Z"
  },
  {
   "agent": "Worker 1",
@@ -15,7 +15,7 @@
   "last_run": "2026-10-18T23:19:23Z",
   "result": "ok",
   "working_on": "T-010 WC vs chair: blocked on owner question Q-13",
-  "as_of": "2026-10-19T00:30:00Z"
+  "as_of": "2026-10-19T00:15:00Z"
  },
  {
   "agent": "Worker 2",
@@ -24,7 +24,7 @@
   "last_run": "2026-10-18T23:39:50Z",
   "result": "ok",
   "working_on": "T-029 storey titles: delivered READY",
-  "as_of": "2026-10-19T00:30:00Z"
+  "as_of": "2026-10-19T00:15:00Z"
  },
  {
   "agent": "Worker 3",
@@ -33,7 +33,7 @@
   "last_run": "2026-10-18T23:59:50Z",
   "result": "ok",
   "working_on": "T-034 V2.10 pool not a bathroom: delivered READY",
-  "as_of": "2026-10-19T00:30:00Z"
+  "as_of": "2026-10-19T00:15:00Z"
  },
  {
   "agent": "Verifier",
@@ -42,7 +42,7 @@
   "last_run": "2026-10-18T23:49:49Z",
   "result": "ok",
   "working_on": "T-001b passed all gates; merge push refused by the permission check",
-  "as_of": "2026-10-19T00:30:00Z"
+  "as_of": "2026-10-19T00:15:00Z"
  },
  {
   "agent": "Research scout",
@@ -51,6 +51,6 @@
   "last_run": "2026-10-18T23:51:05Z",
   "result": "ok",
   "working_on": "5 findings 2026-10-18; 3 new requests R-01..R-03 for its next run",
-  "as_of": "2026-10-19T00:30:00Z"
+  "as_of": "2026-10-19T00:15:00Z"
  }
 ]

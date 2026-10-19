@@ -50,7 +50,7 @@ regression.
 
 ## Milestones (targets, not promises; the lead re-dates them when evidence says so)
 
-| # | By | Gate | Exit (measured, not claimed) | Status (lead 2026-10-19 00:25) |
+| # | By | Gate | Exit (measured, not claimed) | Status (lead 2026-10-19 00:15) |
 |---|---|---|---|---|
 | M1 | 2026-10-21 | 0 | Scoreboard measured on Alsenan from real files (T-001b); capability matrix merged; synthetic villas merged (T-019) | at risk: T-001b measured (concrete WAPE 17.03 %, 3 UNRESOLVED Q-12) and T-019 built, but neither can merge: the session permission check refuses merges (owner fix needed); capability matrix done (5be347d) |
 | M2 | 2026-10-28 | 1 | 0 silent omissions of rooms and openings on every development villa; wet vs dry correct (T-022, T-010, T-023, T-028, T-029, T-004, T-025) | at risk: T-034 (V2.10 pool not wet) and T-029 (storey titles) READY but unmerged (same merge block); T-010 waits on Q-13; T-038 basement census, T-004a, T-025a TODO; villa 2 intake T-033 TODO |
