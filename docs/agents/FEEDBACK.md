@@ -3,7 +3,35 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
-## Recurring causes (lead 2026-10-19 10:15)
+## Recurring causes (lead 2026-10-19 12:20)
+
+1. **Verified work reaching the working branch: SOLVED.** 13 verified tasks merged since 10:15 (owner session 11:02: nine;
+   verifier 12:01: four, each map conflict rebuilt with the tool). Nothing verified waits. Watch: every merge still makes the
+   next READY branch conflict in docs/CODEMAP.md; the verifier now rebuilds it itself.
+2. **Scheduled sessions refuse steps**: worker 3 could not push a claim in three runs (11:33 "[Out-of-Place Publication]",
+   then "[Modify Shared Resources]", "[Untrusted Code Integration]", "[External System Writes]"); worker 1 had one clone and two
+   command refusals but worked around them and delivered. Decision: no task is reserved for worker 3; owner asked to fix worker
+   3's permission (attach the repository as the task's source, as the owner session noted at 11:20).
+3. **Method pieces merged but not wired**: strip guard, curved strips and room-label guard are on the working branch, yet the
+   measured Alsenan run is unchanged (concrete -17.03 %). Decision: T-060 wires the two concrete pieces into one new ledger
+   version and measures Alsenan with it; the label guard follows once the wet / dry evidence (T-010) is in.
+4. **Values the drawing does not print stop quantities**: unchanged; the architectural sheet census (T-063) is the next source.
+5. **Rules missing for what the drawing shows**: renovation (no demolition or retained-wall rule, Q-23); roof waterproofing edge and domes (Q-24); drafting gaps in outlines (Q-25). Each asked before any measuring task.
+
+## 2026-10-19 12:20 (lead run)
+
+| Task | Result | What went well | What went wrong and why (numbers) | Decision | Tasks created |
+|---|---|---|---|---|---|
+| T-058 footing-edge guard | WORKED (merged 8774071) | Verifier reproduced the Alsenan band: 91.94 m = 78.54 m measured (9.425 m3) + 13.40 m held under footings (1.608 m3) vs frozen 60.17 m; depth-checked | Not wired: concrete still 92.77 vs 111.81 m3 (-17.03 %) | Wire with the curved strips and measure (member types per Q-12 from T-065) | T-060 rewritten, TODO |
+| T-061 room-label guard | WORKED (merged 362630a) | Real run: 41 labels = 30 in a room + 11 HELD (4 yard, 4 roof, 2 pool, 1 void), none lost | Not wired into a released method; roofs and pool still have no closed room | T-062 (claimed) traces why; wiring after T-010 | - |
+| T-057 r2 pool check list | WORKED (merged 15de9c4) | Only a pool-named room counts (owner Q-22 = A); Alsenan: pool pump room NOT FOUND + one "use not stated" | - | none | - |
+| T-019 synthetic villas | WORKED (merged 8094fcd) | 49 tests, hand truth, other layer names, rotation, mirror | - | Basis for the renovation pairs | T-068 |
+| T-066 project 2 conversion loss | WORKED (READY 4c9bc0b) | 27,504 lost entities (57 %) explained: 16-bit handle mask in the pinned converter (12,567 collisions) + bare *U block names (54 doors, 50 windows, 85 room tags); with the fix 48,574 / 48,576 exact; acceptance check C1-C11 with 6 adversarial self-tests | Claimed 3 min after the owner's Alsenan-first direction; finishes not measured (no DXF passes) | Verify and merge (research only); no more project 2 work; two general defects queued | T-069, T-070 |
+| T-062 roof, pool, void trace | WORKED (READY d3d5587) | Cause found for all 7 labels (outlines on a layer the room builder ignores; parapet gaps 0.075 - 0.405 m); roofs measured by hand on both edges: A 204.10 m2, B 226.21 m2 vs freelancer 285 m2 (-28.4 % / -20.6 %); synthetic fixture passes mm / m / rotated / mirrored | Handoff B total (225.947) does not equal the sum of its own roof values (226.207): verifier re-checks; no rule for the roof edge or for closing drafting gaps | Asked the owner (Q-24, Q-25); fix task held for the answers | T-071 (BLOCKED-OWNER) |
+| T-067 time-boxed sheet list | FAILED (never claimed) | - | Worker 3 could not push its claim (permission refusals, 3 runs) | Folded into T-063, which worker 1 claimed at 12:25; owner asked to fix worker 3 | - |
+| Owner renovation direction (11:21) | decided | Clear scope: Alsenan first, then one sealed renovation villa | No renovation rule exists | Readiness tasks provable without the villa; scope question asked | T-003 promoted, T-068, Q-23 |
+
+## Recurring causes (lead 2026-10-19 10:15, superseded)
 
 1. **Verified work does not reach the working branch** (9 tasks: T-029, T-034, T-011, T-033, T-036, T-037, T-041, T-044 r2,
    T-047 r2; plus T-019). Why not earlier: 22:58 - 01:20 the session check refused the verifier's merge pushes; since 02:00

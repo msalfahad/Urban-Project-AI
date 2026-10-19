@@ -3,46 +3,46 @@
   "agent": "Lead planner",
   "role": "Plans the work, keeps the board and milestones, asks you questions",
   "cadence": "every 2 h (:09)",
-  "last_run": "2026-10-19T10:10:20Z",
+  "last_run": "2026-10-19T12:17:54Z",
   "result": "running",
-  "working_on": "Owner answers Q-12 to Q-21 turned into tasks; board at 11 TODO (50-minute packages); new question Q-22 (pool pump room)",
-  "as_of": "2026-10-19T10:25:00Z"
+  "working_on": "Board at 10 TODO after 13 merges; renovation readiness (PDF plan reader, synthetic old / new villas); new questions: renovation scope (Q-23), roof waterproofing edge (Q-24), parapet gaps (Q-25)",
+  "as_of": "2026-10-19T12:33:00Z"
  },
  {
   "agent": "Worker 1",
   "role": "Builds one board task per run on its own branch",
   "cadence": "hourly :19",
-  "last_run": "2026-10-19T10:19:00Z",
+  "last_run": "2026-10-19T11:22:57Z",
   "result": "running",
-  "working_on": "Room-label guard: 11 Alsenan labels in no closed room become held records (T-061, claimed 10:20); nothing claimed 07:29-10:20",
-  "as_of": "2026-10-19T10:25:00Z"
+  "working_on": "Alsenan architectural sheets: levels per floor, pool, stairs, lift, domes (T-063, claimed 12:25); delivered the apartment conversion-loss study at 12:08 (T-066)",
+  "as_of": "2026-10-19T12:33:00Z"
  },
  {
   "agent": "Worker 2",
   "role": "Builds one board task per run on its own branch",
   "cadence": "hourly :39",
-  "last_run": "2026-10-19T09:39:33Z",
-  "result": "running",
-  "working_on": "Pool check list rework: pump room and main manholes, house pump not taken as pool pump (T-057 r2)",
-  "as_of": "2026-10-19T10:25:00Z"
+  "last_run": "2026-10-19T11:39:34Z",
+  "result": "ok",
+  "working_on": "Finished the Alsenan roof, pool and void trace: roofs 204.10 m2 inside parapets or 226.21 m2 to the outer face vs freelancer 285 m2; waits on your roof-edge answer (T-062 READY)",
+  "as_of": "2026-10-19T12:33:00Z"
  },
  {
   "agent": "Worker 3",
   "role": "Builds one board task per run on its own branch",
   "cadence": "hourly :59",
-  "last_run": "2026-10-19T10:00:13Z",
-  "result": "running",
-  "working_on": "Delivered footing-edge guard: 78.54 m measured + 13.40 m held of the 91.94 m band, engine had 60.17 m (T-058, READY)",
-  "as_of": "2026-10-19T10:25:00Z"
+  "last_run": "2026-10-19T12:00:03Z",
+  "result": "failed",
+  "working_on": "Could not push a claim in three runs (permission refusals); nothing delivered since 10:14",
+  "as_of": "2026-10-19T12:33:00Z"
  },
  {
   "agent": "Verifier",
   "role": "Checks finished tasks, merges or rejects, keeps the scoreboard",
   "cadence": "hourly :49",
-  "last_run": "2026-10-19T09:50:10Z",
+  "last_run": "2026-10-19T11:50:18Z",
   "result": "ok",
-  "working_on": "Merged room-label census; Arabic SHX decoder verified, waits on map merge; 9 verified tasks to merge (T-004a merged)",
-  "as_of": "2026-10-19T10:25:00Z"
+  "working_on": "Merged 4 (synthetic villas, pool check list, room-label guard, footing-edge guard); Alsenan concrete re-measured: 92.77 vs 111.81 m3 (-17.03 %), unchanged",
+  "as_of": "2026-10-19T12:33:00Z"
  },
  {
   "agent": "Research scout",
@@ -50,7 +50,7 @@
   "cadence": "daily 23:50 UTC",
   "last_run": "2026-10-18T23:51:05Z",
   "result": "ok",
-  "working_on": "Requests open: section levels (heights), Arabic SHX font tables, storey detection (next run 23:50 UTC)",
-  "as_of": "2026-10-19T10:25:00Z"
+  "working_on": "Next run tonight: section levels, structural schedules, old PDF vs new CAD comparison for renovation",
+  "as_of": "2026-10-19T12:33:00Z"
  }
 ]

@@ -1,6 +1,6 @@
 # Questions for the owner (at most 5 open; answer under "Answer:")
 
-Lead 2026-10-19 (owner reply): Q-22 answered A (only a pool-named space or block is the pool pump room; plain "PUMP" listed "use not stated"); no question open. Lead 2026-10-19 10:15: the owner answered Q-12, Q-13, Q-14, Q-15, Q-16, Q-17, Q-20 and Q-21 in the main chat (08:51); all eight moved to Answered with their tasks updated (T-065, T-010, T-063 / T-013, T-066, T-043, T-064, T-056, T-042). One new no-assumptions question: Q-22 (which pump room is the pool's). Open now: 1. Lead 2026-10-19 (owner reply): Q-18 answered (c) held and always visible; Q-19 answered for stairs and pools (see Answered); new Q-20 (stair waist and landings). Lead 2026-10-19 04:10: two new questions Q-18 (dome size basis) and Q-19 (may engine conventions release concrete when the drawing prints nothing); eight are open (Q-12 to Q-19): the list is long because each one stops an assumption. Q-12 now has the T-037 hand calculation (see its note). Lead 2026-10-19 02:20: three new questions Q-15 (development project 2 plans file), Q-16 (unlabelled beam span), Q-17 (typed drawing sizes in the concrete score); with Q-12, Q-13 and Q-14 six are open: the list is long because each one stops an assumption. Lead 2026-10-19 00:15: no new question; Q-12 (concrete verdicts) and Q-13 (toilet lines vs chair) open. Window / aluminium door m2 is covered by UP-OPEN-SCHED-001 and UP-DOOR-AREA-001, so it became task T-040, not a question. Lead 2026-10-18 20:05 (owner session): Q-06, Q-07, Q-09 answered by the owner (see Answered); no question open. Lead 2026-10-18 21:25: Q-10 (development project 2 DWG) answered; Q-11 answered (owner uploads the Alsenan DXFs); no question open. Lead 2026-10-18 15:40: no new question; Q-06 and Q-07 still open (no owner answer yet). The T-019 wall-length basis finding is settled by UP-WALL-GEOM-001 (masonry run = centreline, owner-approved), so it became task T-027, not a question. Lead adds questions an agent cannot decide from drawings, rules or evidence. Answered questions move to the bottom.
+Lead 2026-10-19 12:20: one new no-assumptions question Q-23 (renovation BOQ scope and retained-wall finishes, asked before the sealed test as the owner directed). Lead 2026-10-19 12:30: two more no-assumptions questions from the roof trace: Q-24 (roof waterproofing edge and domes), Q-25 (closing a parapet drafting gap). Open now: 3. Lead 2026-10-19 (owner reply): Q-22 answered A (only a pool-named space or block is the pool pump room; plain "PUMP" listed "use not stated"); no question open. Lead 2026-10-19 10:15: the owner answered Q-12, Q-13, Q-14, Q-15, Q-16, Q-17, Q-20 and Q-21 in the main chat (08:51); all eight moved to Answered with their tasks updated (T-065, T-010, T-063 / T-013, T-066, T-043, T-064, T-056, T-042). One new no-assumptions question: Q-22 (which pump room is the pool's). Open now: 1. Lead 2026-10-19 (owner reply): Q-18 answered (c) held and always visible; Q-19 answered for stairs and pools (see Answered); new Q-20 (stair waist and landings). Lead 2026-10-19 04:10: two new questions Q-18 (dome size basis) and Q-19 (may engine conventions release concrete when the drawing prints nothing); eight are open (Q-12 to Q-19): the list is long because each one stops an assumption. Q-12 now has the T-037 hand calculation (see its note). Lead 2026-10-19 02:20: three new questions Q-15 (development project 2 plans file), Q-16 (unlabelled beam span), Q-17 (typed drawing sizes in the concrete score); with Q-12, Q-13 and Q-14 six are open: the list is long because each one stops an assumption. Lead 2026-10-19 00:15: no new question; Q-12 (concrete verdicts) and Q-13 (toilet lines vs chair) open. Window / aluminium door m2 is covered by UP-OPEN-SCHED-001 and UP-DOOR-AREA-001, so it became task T-040, not a question. Lead 2026-10-18 20:05 (owner session): Q-06, Q-07, Q-09 answered by the owner (see Answered); no question open. Lead 2026-10-18 21:25: Q-10 (development project 2 DWG) answered; Q-11 answered (owner uploads the Alsenan DXFs); no question open. Lead 2026-10-18 15:40: no new question; Q-06 and Q-07 still open (no owner answer yet). The T-019 wall-length basis finding is settled by UP-WALL-GEOM-001 (masonry run = centreline, owner-approved), so it became task T-027, not a question. Lead adds questions an agent cannot decide from drawings, rules or evidence. Answered questions move to the bottom.
 Decisions still queued behind these (from the master study `14_OWNER_DECISIONS_QUEUE.csv`): D-17 review-space wet / dry,
 WP-KITCHEN membrane scope, WP-JOINT details, WIN-REVEAL finish, STUB-LIMIT, MEAS-STD, ROOF-FIN, BLIND-AUTH.
 
@@ -128,7 +128,82 @@ Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
 
 ## Open
 
-(none open)
+### Q-23 Renovation test: which items must the renovation BOQ contain, and how are retained walls finished? (lead 2026-10-19 12:20; owner direction "Alsenan first, then one sealed test"; T-068; no-assumptions question)
+
+THE PROBLEM: you asked the team to prepare for one sealed renovation villa (old building only as a PDF, new design as CAD
++ PDF) and to ask you first which items its BOQ must contain. No Urban rule covers renovation work at all (no demolition
+rule, no rule for finishing a wall that stays, no rule for a new opening cut into an old wall), so today the engine could
+only measure the new design as if it were a new build. Without your answer every demolition or retained-wall quantity
+would be a guess, so it stays HELD.
+WHERE TO LOOK: nothing to open yet (the test villa is sealed and no agent may look at it). A worked example on a
+synthetic villa: an old internal wall 4.00 m long and 3.00 m high stays; a new door 1.00 x 2.10 m is cut into it; next
+to it an old wall 3.00 m long is removed; a new wall 2.50 m long is built. Old wall faces: 4.00 x 3.00 x 2 sides =
+24.00 m2; opening 1.00 x 2.10 = 2.10 m2 per side.
+THE OPTIONS:
+(A) Full renovation BOQ with every line tagged RETAINED / DEMOLISHED / NEW: demolition lines (walls 3.00 x 3.00 =
+    9.00 m2 of block, plus the old floor and wall finishes they carried, cutting the new opening 2.10 m2), new works
+    (blocks 2.50 m new wall, plaster, paint, floor tiles wet / dry, wall tiles in wet rooms, waterproofing), and on
+    retained walls the finishes you choose in the second part below. Example: demolition 9.00 m2 + opening 2.10 m2;
+    new block 2.50 m x 3.00 m = 7.50 m2.
+(B) Only what you listed (flooring wet: floor and wall, dry floor; wall plaster; wall paint; inner and outer blocks) for
+    the NEW design, with demolition shown as a separate information list (areas and counts, not BOQ lines). Example:
+    new block 7.50 m2 in the BOQ; demolition 9.00 m2 and the opening 2.10 m2 listed for information only.
+(C) The new design measured as a new build (ignore the old building), plus an old-vs-new change list for a person to
+    price. Example: every wall of the new design gets new plaster and paint, the retained wall too.
+Second part, retained walls (choose one): (i) paint only (no new plaster) unless the drawing marks it; (ii) new plaster
+and paint on every retained wall face; (iii) as the drawing or specification says, otherwise HELD for you to decide per
+wall. Example retained wall: (i) paint 24.00 - 4.20 = 19.80 m2, no plaster; (ii) plaster and paint 19.80 m2 each;
+(iii) HELD unless a note says.
+RECOMMENDATION: A with (iii). Practice, not a code clause: a Kuwait villa renovation contract normally prices demolition,
+making good and new works as separate items, and whether an old wall is re-plastered depends on its condition, which
+only the drawings, a site note or you can say; (iii) keeps every such wall visible instead of guessed.
+Waits on: the renovation measurement capability that will be proven on synthetic old / new villas before the test
+(flooring wet / dry, plaster, paint, inner and outer blocks, demolition) (T-068 builds the test villas; the measuring
+tasks follow your answer).
+
+### Q-24 Roof waterproofing: measured inside the parapet or to its outer face, and under the domes or not? (lead 2026-10-19 12:30; T-062; no-assumptions question)
+
+THE PROBLEM: the Urban rule says roofs are waterproofed over the drawn area, but not which edge bounds that area. On
+Alsenan the roofs have a 0.20 m parapet, and two domes stand on the top roof. The two edges give different areas, and
+the engine releases no roof waterproofing until you choose. Today the engine gives NO roof line at all (the roofs are
+held, not lost); the freelancer has 285 m2 for roofs and annexes and 194 m of upturn.
+WHERE TO LOOK: Drive "Alsenan chalet project", the architectural plans (P7757 DXF or the six
+"Alsenan_Architectural_P7757_Pages_.." PDFs): the first-floor plan, the roof on the west side marked ROOF at level +4.30,
+and the second-floor plan, the roof at level +9.70 with the two domes. Measure the west roof once inside the parapet and
+once to the parapet's outer face.
+THE OPTIONS (all three Alsenan roofs together; the 2F block's own top roof is on no plan sheet and stays held):
+(A) Inside the parapet's inner face: 1F west roof 55.56 m2, 1F south-east strip 32.72 m2, 2F roof 115.81 m2 = 204.10 m2
+    (-28.4 % against 285); upturn on the inner perimeter 153.81 m.
+(B) To the parapet's outer face (A plus the 0.20 m parapet band): 61.90 + 38.66 + 125.66 = 226.21 m2 (-20.6 %).
+(C) Another edge you name (for example to the structural slab edge as drawn on the structural plan).
+Second part, the two domes on the 2F roof (2 x 15.36 = 30.70 m2 of footprint): (i) the roof membrane runs under the
+domes (A 234.80 m2, -17.6 %; B 256.91 m2, -9.9 %; upturn round the domes adds 27.78 m, total 181.59 m with A);
+(ii) the dome footprints are left out (the figures above); (iii) the domes get their own waterproofing line, separate
+from the roof.
+RECOMMENDATION: A with (ii), and the dome waterproofing as its own line when the dome detail shows it (iii). Practice,
+not a code clause: in Kuwait villas the roof membrane is laid on the slab inside the parapet and turned up the parapet's
+inner face (the upturn is measured separately), and the parapet top is a coping, not membrane; a dome cast on the slab
+sits on the roof membrane only if the detail shows it, so it should not be added by assumption.
+Waits on: roof waterproofing area and upturn on Alsenan and every villa with parapets (T-062 follow-up, T-071).
+
+### Q-25 A parapet line that stops a few centimetres short of the wall: may the engine close the gap? (lead 2026-10-19 12:30; T-062; no-assumptions question)
+
+THE PROBLEM: on Alsenan each roof parapet line stops short of the wall it should meet, so no closed roof outline exists
+and the roof cannot be measured from the drawing alone. The gaps are 0.075 m (2F roof), 0.200 m (1F west roof) and
+0.405 m (1F south-east strip). No Urban rule says whether such a drafting gap may be closed.
+WHERE TO LOOK: Drive "Alsenan chalet project", the P7757 DXF, the first- and second-floor plans: zoom to where the parapet
+line of each ROOF meets the building wall; the parapet ends just before the wall (a door-layer line sits there).
+THE OPTIONS:
+(A) Close a gap up to a set limit (for example 0.50 m) by extending the parapet line in its own direction to the wall,
+    record every closure with its length for review: all three Alsenan roofs become measurable (areas as in Q-24).
+(B) Close only gaps up to a small limit (for example 0.10 m): the 2F roof (0.075 m) is measured, the two 1F roofs stay
+    held (88.28 m2 on basis A).
+(C) Never close: every roof with a gap stays held until a person draws it closed or confirms it.
+RECOMMENDATION: A with a 0.50 m limit and every closure listed for a person to check. Practice, not a code clause: a
+parapet that ends a few centimetres before the wall is a drafting habit (the line stops at a door or a column face), not a
+gap in the real roof; a gap larger than a wall thickness could be a real opening, so the limit stays below 0.50 m and
+each closure stays visible.
+Waits on: measuring every roof, balcony and terrace outline that is drawn on a layer of its own (T-071).
 
 ## Answered
 

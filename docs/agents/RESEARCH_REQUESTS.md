@@ -39,12 +39,26 @@ X-ARAB, XARAB1B, ARB, "Arial Arabic SHX" families), glyph-number to Unicode tabl
 glyph shapes to confirm a mapping (so a code is mapped only from a source, never inferred). Unblocks T-047 follow-ups,
 T-053, T-062.
 
+### R-04 Comparing an old building (PDF only) with its new design (CAD) for a renovation BOQ (lead 2026-10-19 12:20)
+Problem: the owner's sealed test villa is a renovation: the old building exists only as a PDF, the new design as DWG / DXF
+and PDF, and the engine must say for every wall and space whether it is retained, demolished or new before it can measure
+flooring (wet / dry), plaster, paint and inner / outer blocks. Gap: the engine has no old-vs-new comparison and no plan
+reader yet (0 of these classes produced today); synthetic old / new pairs are being built (T-068). Look for: registering a
+scanned or vector PDF plan to a CAD plan (scale from printed dimensions, rotation, translation; ICP or feature matching on
+wall lines), wall-level change detection between two plan versions, demolition / new-wall drawing conventions (hatch,
+dashed lines, Arabic and English notes such as "هدم" / "يزال" / "جديد" / "TO BE DEMOLISHED"), QS practice for measuring
+renovation items in the Gulf, open-source code with a permissive licence. Unblocks T-068 follow-ups, T-003, and the
+measuring tasks that follow owner Q-23.
+
+## Answered
+
+(none yet)
+
+## Withdrawn
+
 ### R-03 Storey / sheet detection in multi-sheet villa DXF (lead 2026-10-19)
 Problem: a storey whose title the engine does not recognise is not measured. Gap: Alsenan run found GF / 1F / 2F only
 while the reference includes a basement; T-029 still holds PENTHOUSE, LEVEL nn, 12th-floor Arabic titles. Look for:
 title-block and frame detection in model-space sheets, bilingual (Arabic / English) storey naming conventions in Gulf
 drawings, level-number conventions (LEVEL 00 = ground?), tools that split one DXF into sheets. Unblocks T-038, T-039.
-
-## Answered
-
-(none yet)
+Withdrawn (lead 2026-10-19 12:20): no longer the biggest gap: Alsenan has no basement (T-038, verified from the drawings) and storey titles beyond GF / 1F / 2F are merged (980e489); slot given to R-04.
