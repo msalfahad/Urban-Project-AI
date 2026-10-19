@@ -1,0 +1,1426 @@
+[
+ {
+  "floor": "GF",
+  "room_as_printed": "WASH / مغسلة (by the dewaneya)",
+  "outline_source": "own polygonization of the wall-face lines",
+  "sanitary_drawing": "2 basins + FD",
+  "floor_m2": 3.1325,
+  "boundary_lm": 7.2,
+  "upturn_m2_at_0.20": 1.44,
+  "membrane_surface_m2": 4.5725,
+  "doorways": [
+   {
+    "block": "D315",
+    "width_m": 0.8,
+    "wall_depth_m": 0.15,
+    "shared_with_another_wet_room": true
+   }
+  ],
+  "doorway_floor_piece_m2": 0.12,
+  "strips_along_x": {
+   "span_across_m": 1.5,
+   "n": 2,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 2.5
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.7,
+     "length_m": 2.5
+    }
+   ],
+   "cut_m2": 5.0,
+   "rolls_by_area": 1,
+   "offcut_m2": 5.0,
+   "roll_length_used_m": 5.0,
+   "rolls_by_length": 1
+  },
+  "strips_along_y": {
+   "span_across_m": 2.1,
+   "n": 3,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 1.9
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 1.9
+    },
+    {
+     "width_m": 0.7,
+     "floor_cover_m": 0.4,
+     "length_m": 1.9
+    }
+   ],
+   "cut_m2": 5.13,
+   "rolls_by_area": 1,
+   "offcut_m2": 4.87,
+   "roll_length_used_m": 5.7,
+   "rolls_by_length": 1
+  },
+  "freelancer": {
+   "sheet_row": 23,
+   "floor_m2": 3.15,
+   "boundary_lm": 7.2
+  },
+  "diff_floor_m2": -0.0175,
+  "diff_floor_pct": -0.56,
+  "diff_boundary_lm": 0.0,
+  "verdict_proposal": "RULE_DIFFERENCE",
+  "hand_check": "printed 150 x 210 = 3.150; the drawn wall face steps round a 0.0175 m2 column corner (drawing wins on the outline); same boundary 7.20"
+ },
+ {
+  "floor": "GF",
+  "room_as_printed": "W.C. / مرحاض (by the dewaneya)",
+  "outline_source": "own polygonization of the wall-face lines",
+  "sanitary_drawing": "WC + basin + FD",
+  "floor_m2": 3.375,
+  "boundary_lm": 7.5,
+  "upturn_m2_at_0.20": 1.5,
+  "membrane_surface_m2": 4.875,
+  "doorways": [
+   {
+    "block": "D315",
+    "width_m": 0.8,
+    "wall_depth_m": 0.15,
+    "shared_with_another_wet_room": true
+   }
+  ],
+  "doorway_floor_piece_m2": 0.12,
+  "strips_along_x": {
+   "span_across_m": 1.5,
+   "n": 2,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 2.65
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.7,
+     "length_m": 2.65
+    }
+   ],
+   "cut_m2": 5.3,
+   "rolls_by_area": 1,
+   "offcut_m2": 4.7,
+   "roll_length_used_m": 5.3,
+   "rolls_by_length": 1
+  },
+  "strips_along_y": {
+   "span_across_m": 2.25,
+   "n": 3,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 1.9
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 1.9
+    },
+    {
+     "width_m": 0.85,
+     "floor_cover_m": 0.55,
+     "length_m": 1.9
+    }
+   ],
+   "cut_m2": 5.415,
+   "rolls_by_area": 1,
+   "offcut_m2": 4.585,
+   "roll_length_used_m": 5.7,
+   "rolls_by_length": 1
+  },
+  "freelancer": {
+   "sheet_row": 22,
+   "floor_m2": 3.37,
+   "boundary_lm": 7.5
+  },
+  "diff_floor_m2": 0.005,
+  "diff_floor_pct": 0.15,
+  "diff_boundary_lm": 0.0,
+  "verdict_proposal": "AGREE",
+  "hand_check": "printed 150 x 225 = 3.375, 2 x (1.50 + 2.25) = 7.50; freelancer rounds 3.37"
+ },
+ {
+  "floor": "GF",
+  "room_as_printed": "W.C. / مرحاض (driver)",
+  "outline_source": "own polygonization of the wall-face lines",
+  "sanitary_drawing": "WC + basin + FD",
+  "floor_m2": 1.95,
+  "boundary_lm": 5.6,
+  "upturn_m2_at_0.20": 1.12,
+  "membrane_surface_m2": 3.07,
+  "doorways": [
+   {
+    "block": "D315",
+    "width_m": 0.8,
+    "wall_depth_m": 0.15,
+    "shared_with_another_wet_room": false
+   }
+  ],
+  "doorway_floor_piece_m2": 0.12,
+  "strips_along_x": {
+   "span_across_m": 1.3,
+   "n": 2,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 1.9
+    },
+    {
+     "width_m": 0.8,
+     "floor_cover_m": 0.5,
+     "length_m": 1.9
+    }
+   ],
+   "cut_m2": 3.42,
+   "rolls_by_area": 1,
+   "offcut_m2": 6.58,
+   "roll_length_used_m": 3.8,
+   "rolls_by_length": 1
+  },
+  "strips_along_y": {
+   "span_across_m": 1.5,
+   "n": 2,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 1.7
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.7,
+     "length_m": 1.7
+    }
+   ],
+   "cut_m2": 3.4,
+   "rolls_by_area": 1,
+   "offcut_m2": 6.6,
+   "roll_length_used_m": 3.4,
+   "rolls_by_length": 1
+  },
+  "freelancer": {
+   "sheet_row": 21,
+   "floor_m2": 1.95,
+   "boundary_lm": 5.58
+  },
+  "diff_floor_m2": 0.0,
+  "diff_floor_pct": 0.0,
+  "diff_boundary_lm": 0.02,
+  "verdict_proposal": "ENGINE_RIGHT",
+  "hand_check": "printed 130 x 150 = 1.950; boundary 2 x (1.30 + 1.50) = 5.60 lm, freelancer 5.58"
+ },
+ {
+  "floor": "GF",
+  "room_as_printed": "KITCHEN / مطبخ",
+  "outline_source": "own polygonization of the wall-face lines",
+  "sanitary_drawing": "FD 4\"",
+  "floor_m2": 9.63,
+  "boundary_lm": 14.5,
+  "upturn_m2_at_0.20": 2.9,
+  "membrane_surface_m2": 12.53,
+  "doorways": [
+   {
+    "block": "D120",
+    "width_m": 1.0,
+    "wall_depth_m": 0.2,
+    "shared_with_another_wet_room": false
+   }
+  ],
+  "doorway_floor_piece_m2": 0.2,
+  "strips_along_x": {
+   "span_across_m": 2.7,
+   "n": 4,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 4.9
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 4.9
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 3.4
+    },
+    {
+     "width_m": 0.4,
+     "floor_cover_m": 0.1,
+     "length_m": 3.4
+    }
+   ],
+   "cut_m2": 14.56,
+   "rolls_by_area": 2,
+   "offcut_m2": 5.44,
+   "roll_length_used_m": 16.6,
+   "rolls_by_length": 2
+  },
+  "strips_along_y": {
+   "span_across_m": 4.5,
+   "n": 6,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 1.45
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 3.1
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 3.1
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 3.1
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 3.1
+    },
+    {
+     "width_m": 0.4,
+     "floor_cover_m": 0.1,
+     "length_m": 3.05
+    }
+   ],
+   "cut_m2": 15.07,
+   "rolls_by_area": 2,
+   "offcut_m2": 4.93,
+   "roll_length_used_m": 16.9,
+   "rolls_by_length": 2
+  },
+  "freelancer": {
+   "sheet_row": 20,
+   "floor_m2": 9.55,
+   "boundary_lm": 14.35
+  },
+  "diff_floor_m2": 0.08,
+  "diff_floor_pct": 0.84,
+  "diff_boundary_lm": 0.15,
+  "verdict_proposal": "ENGINE_RIGHT",
+  "hand_check": "printed 300 x 270 + entrance 105 x 150 = 8.100 + 1.575 = 9.675, less two drawn piers 0.05 x 0.50 and 0.05 x 0.40 = 9.630; freelancer 9.55 / 14.35 has no formula (typed)"
+ },
+ {
+  "floor": "GF",
+  "room_as_printed": "W.C. / مرحاض (stair core, 175 x 135)",
+  "outline_source": "own polygonization of the wall-face lines",
+  "sanitary_drawing": "WC + basin + FD",
+  "floor_m2": 2.3625,
+  "boundary_lm": 6.2,
+  "upturn_m2_at_0.20": 1.24,
+  "membrane_surface_m2": 3.6025,
+  "doorways": [
+   {
+    "block": "D315",
+    "width_m": 0.8,
+    "wall_depth_m": 0.15,
+    "shared_with_another_wet_room": true
+   }
+  ],
+  "doorway_floor_piece_m2": 0.12,
+  "strips_along_x": {
+   "span_across_m": 1.35,
+   "n": 2,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 2.15
+    },
+    {
+     "width_m": 0.85,
+     "floor_cover_m": 0.55,
+     "length_m": 2.15
+    }
+   ],
+   "cut_m2": 3.978,
+   "rolls_by_area": 1,
+   "offcut_m2": 6.022,
+   "roll_length_used_m": 4.3,
+   "rolls_by_length": 1
+  },
+  "strips_along_y": {
+   "span_across_m": 1.75,
+   "n": 3,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 1.75
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 1.75
+    },
+    {
+     "width_m": 0.35,
+     "floor_cover_m": 0.05,
+     "length_m": 1.75
+    }
+   ],
+   "cut_m2": 4.112,
+   "rolls_by_area": 1,
+   "offcut_m2": 5.888,
+   "roll_length_used_m": 5.25,
+   "rolls_by_length": 1
+  },
+  "freelancer": {
+   "sheet_row": 19,
+   "floor_m2": 2.36,
+   "boundary_lm": 6.2
+  },
+  "diff_floor_m2": 0.0025,
+  "diff_floor_pct": 0.11,
+  "diff_boundary_lm": 0.0,
+  "verdict_proposal": "AGREE",
+  "hand_check": "printed 175 x 135 = 2.3625"
+ },
+ {
+  "floor": "GF",
+  "room_as_printed": "basin space by the stair (110 x 135, no label)",
+  "outline_source": "hand trace of the wall-face lines (room open to a neighbour)",
+  "sanitary_drawing": "basin + FD",
+  "floor_m2": 1.485,
+  "boundary_lm": 4.9,
+  "upturn_m2_at_0.20": 0.98,
+  "membrane_surface_m2": 2.465,
+  "doorways": [
+   {
+    "block": "D315",
+    "width_m": 0.8,
+    "wall_depth_m": 0.15,
+    "shared_with_another_wet_room": true
+   }
+  ],
+  "doorway_floor_piece_m2": 0.12,
+  "strips_along_x": {
+   "span_across_m": 1.1,
+   "n": 2,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 1.75
+    },
+    {
+     "width_m": 0.6,
+     "floor_cover_m": 0.3,
+     "length_m": 1.75
+    }
+   ],
+   "cut_m2": 2.8,
+   "rolls_by_area": 1,
+   "offcut_m2": 7.2,
+   "roll_length_used_m": 3.5,
+   "rolls_by_length": 1
+  },
+  "strips_along_y": {
+   "span_across_m": 1.35,
+   "n": 2,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 1.5
+    },
+    {
+     "width_m": 0.85,
+     "floor_cover_m": 0.55,
+     "length_m": 1.5
+    }
+   ],
+   "cut_m2": 2.775,
+   "rolls_by_area": 1,
+   "offcut_m2": 7.225,
+   "roll_length_used_m": 3.0,
+   "rolls_by_length": 1
+  },
+  "freelancer": {
+   "sheet_row": 15,
+   "floor_m2": 1.7,
+   "boundary_lm": 5.3
+  },
+  "diff_floor_m2": -0.215,
+  "diff_floor_pct": -12.65,
+  "diff_boundary_lm": -0.4,
+  "verdict_proposal": "RULE_DIFFERENCE",
+  "hand_check": "printed 110 x 135 = 1.485; freelancer 1.55 x 1.10 = 1.705 takes the 0.20 m passage reveal into the room (threshold item, UP-THR-001; verifier verdict on T-010)"
+ },
+ {
+  "floor": "GF",
+  "room_as_printed": "W.C. / مرحاض (core, 289 x 167)",
+  "outline_source": "own polygonization of the wall-face lines",
+  "sanitary_drawing": "WC + FD",
+  "floor_m2": 2.6752,
+  "boundary_lm": 7.414,
+  "upturn_m2_at_0.20": 1.4828,
+  "membrane_surface_m2": 4.158,
+  "doorways": [
+   {
+    "block": "D315",
+    "width_m": 0.8,
+    "wall_depth_m": 0.15,
+    "shared_with_another_wet_room": true
+   }
+  ],
+  "doorway_floor_piece_m2": 0.12,
+  "strips_along_x": {
+   "span_across_m": 1.665,
+   "n": 3,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 2.0
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 3.287
+    },
+    {
+     "width_m": 0.265,
+     "floor_cover_m": 0,
+     "length_m": 3.287
+    }
+   ],
+   "cut_m2": 6.158,
+   "rolls_by_area": 1,
+   "offcut_m2": 3.842,
+   "roll_length_used_m": 8.574,
+   "rolls_by_length": 1
+  },
+  "strips_along_y": {
+   "span_across_m": 2.887,
+   "n": 4,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 1.644
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 2.065
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 1.587
+    },
+    {
+     "width_m": 0.587,
+     "floor_cover_m": 0.287,
+     "length_m": 0.687
+    }
+   ],
+   "cut_m2": 5.699,
+   "rolls_by_area": 1,
+   "offcut_m2": 4.301,
+   "roll_length_used_m": 5.983,
+   "rolls_by_length": 1
+  },
+  "freelancer": {
+   "sheet_row": 18,
+   "floor_m2": 2.67,
+   "boundary_lm": 7.4
+  },
+  "diff_floor_m2": 0.0052,
+  "diff_floor_pct": 0.19,
+  "diff_boundary_lm": 0.014,
+  "verdict_proposal": "AGREE",
+  "hand_check": "wedge room, shoelace on the drawn wall faces 2.675; freelancer 2.67 / 7.4"
+ },
+ {
+  "floor": "GF",
+  "room_as_printed": "W.C. / مرحاض (core, 245 x 167)",
+  "outline_source": "own polygonization of the wall-face lines",
+  "sanitary_drawing": "WC + shower + basin + FD",
+  "floor_m2": 2.3676,
+  "boundary_lm": 6.8098,
+  "upturn_m2_at_0.20": 1.362,
+  "membrane_surface_m2": 3.7296,
+  "doorways": [
+   {
+    "block": "D315",
+    "width_m": 0.8,
+    "wall_depth_m": 0.15,
+    "shared_with_another_wet_room": true
+   }
+  ],
+  "doorway_floor_piece_m2": 0.12,
+  "strips_along_x": {
+   "span_across_m": 1.697,
+   "n": 3,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 1.867
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 2.765
+    },
+    {
+     "width_m": 0.297,
+     "floor_cover_m": 0,
+     "length_m": 2.765
+    }
+   ],
+   "cut_m2": 5.453,
+   "rolls_by_area": 1,
+   "offcut_m2": 4.547,
+   "roll_length_used_m": 7.397,
+   "rolls_by_length": 1
+  },
+  "strips_along_y": {
+   "span_across_m": 2.365,
+   "n": 3,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 2.097
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 1.894
+    },
+    {
+     "width_m": 0.965,
+     "floor_cover_m": 0.665,
+     "length_m": 1.065
+    }
+   ],
+   "cut_m2": 5.019,
+   "rolls_by_area": 1,
+   "offcut_m2": 4.981,
+   "roll_length_used_m": 5.056,
+   "rolls_by_length": 1
+  },
+  "freelancer": {
+   "sheet_row": 17,
+   "floor_m2": 2.3,
+   "boundary_lm": 6.7
+  },
+  "diff_floor_m2": 0.0676,
+  "diff_floor_pct": 2.94,
+  "diff_boundary_lm": 0.1098,
+  "verdict_proposal": "ENGINE_RIGHT",
+  "hand_check": "wedge room, shoelace on the drawn wall faces 2.368 m2 / 6.810 lm; freelancer 2.30 / 6.70 (typed, no formula)"
+ },
+ {
+  "floor": "GF",
+  "room_as_printed": "Wash / مغسلة (core lobby, 2 basins)",
+  "outline_source": "hand trace of the wall-face lines (room open to a neighbour)",
+  "sanitary_drawing": "2 basins + FD",
+  "floor_m2": 4.7321,
+  "boundary_lm": 9.5002,
+  "upturn_m2_at_0.20": 1.9,
+  "membrane_surface_m2": 6.6322,
+  "doorways": [
+   {
+    "block": "D315",
+    "width_m": 0.8,
+    "wall_depth_m": 0.15,
+    "shared_with_another_wet_room": true
+   },
+   {
+    "block": "D315",
+    "width_m": 0.8,
+    "wall_depth_m": 0.15,
+    "shared_with_another_wet_room": true
+   }
+  ],
+  "doorway_floor_piece_m2": 0.24,
+  "strips_along_x": {
+   "span_across_m": 2.908,
+   "n": 4,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 2.45
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 3.126
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 2.543
+    },
+    {
+     "width_m": 0.608,
+     "floor_cover_m": 0.308,
+     "length_m": 1.016
+    }
+   ],
+   "cut_m2": 8.737,
+   "rolls_by_area": 1,
+   "offcut_m2": 1.263,
+   "roll_length_used_m": 9.135,
+   "rolls_by_length": 1
+  },
+  "strips_along_y": {
+   "span_across_m": 2.998,
+   "n": 4,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 2.045
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 2.945
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 3.308
+    },
+    {
+     "width_m": 0.698,
+     "floor_cover_m": 0.398,
+     "length_m": 1.196
+    }
+   ],
+   "cut_m2": 9.133,
+   "rolls_by_area": 1,
+   "offcut_m2": 0.867,
+   "roll_length_used_m": 9.494,
+   "rolls_by_length": 1
+  },
+  "freelancer": {
+   "sheet_row": 14,
+   "floor_m2": 4.73,
+   "boundary_lm": 9.5
+  },
+  "diff_floor_m2": 0.0021,
+  "diff_floor_pct": 0.04,
+  "diff_boundary_lm": 0.0002,
+  "verdict_proposal": "AGREE",
+  "hand_check": "10-edge outline closed on the line of the lobby wall end (1.256 m open edge, no wall): 4.732 / 9.500; freelancer 4.73 / 9.50 (his row is titled \"dewaneya wash\")"
+ },
+ {
+  "floor": "GF",
+  "room_as_printed": "BATH / حمام (master bed room)",
+  "outline_source": "hand trace of the wall-face lines (room open to a neighbour)",
+  "sanitary_drawing": "WC + basin + FD",
+  "floor_m2": 3.7173,
+  "boundary_lm": 7.6245,
+  "upturn_m2_at_0.20": 1.5249,
+  "membrane_surface_m2": 5.2422,
+  "doorways": [
+   {
+    "block": "loose lines (door layer)",
+    "width_m": 0.8,
+    "wall_depth_m": 0.15,
+    "shared_with_another_wet_room": false
+   }
+  ],
+  "doorway_floor_piece_m2": 0.12,
+  "strips_along_x": {
+   "span_across_m": 2.0,
+   "n": 3,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 2.317
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 2.5
+    },
+    {
+     "width_m": 0.6,
+     "floor_cover_m": 0.3,
+     "length_m": 2.5
+    }
+   ],
+   "cut_m2": 6.317,
+   "rolls_by_area": 1,
+   "offcut_m2": 3.683,
+   "roll_length_used_m": 7.317,
+   "rolls_by_length": 1
+  },
+  "strips_along_y": {
+   "span_across_m": 2.1,
+   "n": 3,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 2.218
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 2.4
+    },
+    {
+     "width_m": 0.7,
+     "floor_cover_m": 0.4,
+     "length_m": 2.4
+    }
+   ],
+   "cut_m2": 6.298,
+   "rolls_by_area": 1,
+   "offcut_m2": 3.702,
+   "roll_length_used_m": 7.018,
+   "rolls_by_length": 1
+  },
+  "freelancer": {
+   "sheet_row": 16,
+   "floor_m2": 3.7,
+   "boundary_lm": 7.6
+  },
+  "diff_floor_m2": 0.0173,
+  "diff_floor_pct": 0.47,
+  "diff_boundary_lm": 0.0245,
+  "verdict_proposal": "AGREE",
+  "hand_check": "2.10 x 2.00 = 4.200 less the 0.982 x 0.983 corner cut by the diagonal wall (0.483) = 3.717; freelancer 3.70 / 7.60"
+ },
+ {
+  "floor": "1F",
+  "room_as_printed": "BATH / حمام (west, upper)",
+  "outline_source": "own polygonization of the wall-face lines",
+  "sanitary_drawing": "WC + shower + basin + FD",
+  "floor_m2": 5.0225,
+  "boundary_lm": 9.0,
+  "upturn_m2_at_0.20": 1.8,
+  "membrane_surface_m2": 6.8225,
+  "doorways": [
+   {
+    "block": "D315",
+    "width_m": 0.8,
+    "wall_depth_m": 0.15,
+    "shared_with_another_wet_room": false
+   }
+  ],
+  "doorway_floor_piece_m2": 0.12,
+  "strips_along_x": {
+   "span_across_m": 2.05,
+   "n": 3,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 2.85
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 2.85
+    },
+    {
+     "width_m": 0.65,
+     "floor_cover_m": 0.35,
+     "length_m": 2.85
+    }
+   ],
+   "cut_m2": 7.553,
+   "rolls_by_area": 1,
+   "offcut_m2": 2.447,
+   "roll_length_used_m": 8.55,
+   "rolls_by_length": 1
+  },
+  "strips_along_y": {
+   "span_across_m": 2.45,
+   "n": 4,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 2.45
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 2.45
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 2.45
+    },
+    {
+     "width_m": 0.15,
+     "floor_cover_m": 0,
+     "length_m": 2.45
+    }
+   ],
+   "cut_m2": 7.718,
+   "rolls_by_area": 1,
+   "offcut_m2": 2.282,
+   "roll_length_used_m": 9.8,
+   "rolls_by_length": 1
+  },
+  "freelancer": {
+   "sheet_row": 30,
+   "floor_m2": 5.0,
+   "boundary_lm": 9.0
+  },
+  "diff_floor_m2": 0.0225,
+  "diff_floor_pct": 0.45,
+  "diff_boundary_lm": 0.0,
+  "verdict_proposal": "ENGINE_RIGHT",
+  "hand_check": "printed 245 x 205 = 5.0225 m2, 2 x (2.45 + 2.05) = 9.00 lm; freelancer 5.00"
+ },
+ {
+  "floor": "1F",
+  "room_as_printed": "BATH / حمام (west, lower)",
+  "outline_source": "own polygonization of the wall-face lines",
+  "sanitary_drawing": "WC + shower + basin + FD",
+  "floor_m2": 5.0225,
+  "boundary_lm": 9.0,
+  "upturn_m2_at_0.20": 1.8,
+  "membrane_surface_m2": 6.8225,
+  "doorways": [
+   {
+    "block": "D315",
+    "width_m": 0.8,
+    "wall_depth_m": 0.15,
+    "shared_with_another_wet_room": false
+   }
+  ],
+  "doorway_floor_piece_m2": 0.12,
+  "strips_along_x": {
+   "span_across_m": 2.05,
+   "n": 3,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 2.85
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 2.85
+    },
+    {
+     "width_m": 0.65,
+     "floor_cover_m": 0.35,
+     "length_m": 2.85
+    }
+   ],
+   "cut_m2": 7.553,
+   "rolls_by_area": 1,
+   "offcut_m2": 2.447,
+   "roll_length_used_m": 8.55,
+   "rolls_by_length": 1
+  },
+  "strips_along_y": {
+   "span_across_m": 2.45,
+   "n": 4,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 2.45
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 2.45
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 2.45
+    },
+    {
+     "width_m": 0.15,
+     "floor_cover_m": 0,
+     "length_m": 0.4
+    }
+   ],
+   "cut_m2": 7.41,
+   "rolls_by_area": 1,
+   "offcut_m2": 2.59,
+   "roll_length_used_m": 7.75,
+   "rolls_by_length": 1
+  },
+  "freelancer": {
+   "sheet_row": 31,
+   "floor_m2": 5.0,
+   "boundary_lm": 8.9
+  },
+  "diff_floor_m2": 0.0225,
+  "diff_floor_pct": 0.45,
+  "diff_boundary_lm": 0.1,
+  "verdict_proposal": "ENGINE_RIGHT",
+  "hand_check": "printed 245 x 205 = 5.0225 m2, 9.00 lm; freelancer 5.00 / 8.90"
+ },
+ {
+  "floor": "1F",
+  "room_as_printed": "LAUNDRY / غسيل",
+  "outline_source": "own polygonization of the wall-face lines",
+  "sanitary_drawing": "FD",
+  "floor_m2": 10.151,
+  "boundary_lm": 16.94,
+  "upturn_m2_at_0.20": 3.388,
+  "membrane_surface_m2": 13.539,
+  "doorways": [
+   {
+    "block": "d220",
+    "width_m": 0.9,
+    "wall_depth_m": 0.2,
+    "shared_with_another_wet_room": false
+   },
+   {
+    "block": "D315",
+    "width_m": 0.8,
+    "wall_depth_m": 0.15,
+    "shared_with_another_wet_room": true
+   }
+  ],
+  "doorway_floor_piece_m2": 0.3,
+  "strips_along_x": {
+   "span_across_m": 3.47,
+   "n": 5,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 3.4
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 3.4
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 5.4
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 3.45
+    },
+    {
+     "width_m": 0.27,
+     "floor_cover_m": 0,
+     "length_m": 3.45
+    }
+   ],
+   "cut_m2": 16.581,
+   "rolls_by_area": 2,
+   "offcut_m2": 3.419,
+   "roll_length_used_m": 19.1,
+   "rolls_by_length": 2
+  },
+  "strips_along_y": {
+   "span_across_m": 5.0,
+   "n": 6,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 2.25
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 2.25
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 3.87
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 3.87
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 1.87
+    },
+    {
+     "width_m": 0.9,
+     "floor_cover_m": 0.6,
+     "length_m": 1.82
+    }
+   ],
+   "cut_m2": 15.748,
+   "rolls_by_area": 2,
+   "offcut_m2": 4.252,
+   "roll_length_used_m": 15.93,
+   "rolls_by_length": 2
+  },
+  "freelancer": {
+   "sheet_row": 32,
+   "floor_m2": 10.0,
+   "boundary_lm": 16.85
+  },
+  "diff_floor_m2": 0.151,
+  "diff_floor_pct": 1.51,
+  "diff_boundary_lm": 0.09,
+  "verdict_proposal": "ENGINE_RIGHT",
+  "hand_check": "printed 347 x 300 and 185, the W.C. (180 x 147) cuts the corner: 1.85 x 3.00 + 1.62 x 1.05 + 1.47 x 1.20 + 1.42 x 0.80 = 5.550 + 1.701 + 1.764 + 1.136 = 10.151 m2, boundary 16.94 lm; freelancer 10.00 / 16.85 typed with no formula"
+ },
+ {
+  "floor": "1F",
+  "room_as_printed": "W.C. / مرحاض (by the laundry)",
+  "outline_source": "own polygonization of the wall-face lines",
+  "sanitary_drawing": "WC + basin + FD",
+  "floor_m2": 2.646,
+  "boundary_lm": 6.54,
+  "upturn_m2_at_0.20": 1.308,
+  "membrane_surface_m2": 3.954,
+  "doorways": [
+   {
+    "block": "D315",
+    "width_m": 0.8,
+    "wall_depth_m": 0.15,
+    "shared_with_another_wet_room": true
+   }
+  ],
+  "doorway_floor_piece_m2": 0.12,
+  "strips_along_x": {
+   "span_across_m": 1.47,
+   "n": 2,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 2.2
+    },
+    {
+     "width_m": 0.97,
+     "floor_cover_m": 0.67,
+     "length_m": 2.2
+    }
+   ],
+   "cut_m2": 4.334,
+   "rolls_by_area": 1,
+   "offcut_m2": 5.666,
+   "roll_length_used_m": 4.4,
+   "rolls_by_length": 1
+  },
+  "strips_along_y": {
+   "span_across_m": 1.8,
+   "n": 3,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 1.87
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 1.87
+    },
+    {
+     "width_m": 0.4,
+     "floor_cover_m": 0.1,
+     "length_m": 1.87
+    }
+   ],
+   "cut_m2": 4.488,
+   "rolls_by_area": 1,
+   "offcut_m2": 5.512,
+   "roll_length_used_m": 5.61,
+   "rolls_by_length": 1
+  },
+  "freelancer": {
+   "sheet_row": 29,
+   "floor_m2": 2.59,
+   "boundary_lm": 6.48
+  },
+  "diff_floor_m2": 0.056,
+  "diff_floor_pct": 2.16,
+  "diff_boundary_lm": 0.06,
+  "verdict_proposal": "ENGINE_RIGHT",
+  "hand_check": "printed 180 x 147 = 2.646, 2 x (1.80 + 1.47) = 6.54; freelancer 2.59 / 6.48 = 1.80 x 1.44 (3 cm short)"
+ },
+ {
+  "floor": "1F",
+  "room_as_printed": "BATH / حمام (by the laundry)",
+  "outline_source": "own polygonization of the wall-face lines",
+  "sanitary_drawing": "WC + basin + FD",
+  "floor_m2": 3.5775,
+  "boundary_lm": 7.6,
+  "upturn_m2_at_0.20": 1.52,
+  "membrane_surface_m2": 5.0975,
+  "doorways": [
+   {
+    "block": "D315",
+    "width_m": 0.8,
+    "wall_depth_m": 0.15,
+    "shared_with_another_wet_room": false
+   }
+  ],
+  "doorway_floor_piece_m2": 0.12,
+  "strips_along_x": {
+   "span_across_m": 1.8,
+   "n": 3,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 2.4
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 2.4
+    },
+    {
+     "width_m": 0.4,
+     "floor_cover_m": 0.1,
+     "length_m": 2.4
+    }
+   ],
+   "cut_m2": 5.76,
+   "rolls_by_area": 1,
+   "offcut_m2": 4.24,
+   "roll_length_used_m": 7.2,
+   "rolls_by_length": 1
+  },
+  "strips_along_y": {
+   "span_across_m": 2.0,
+   "n": 3,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 2.2
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 2.2
+    },
+    {
+     "width_m": 0.6,
+     "floor_cover_m": 0.3,
+     "length_m": 2.15
+    }
+   ],
+   "cut_m2": 5.69,
+   "rolls_by_area": 1,
+   "offcut_m2": 4.31,
+   "roll_length_used_m": 6.55,
+   "rolls_by_length": 1
+  },
+  "freelancer": {
+   "sheet_row": 28,
+   "floor_m2": 3.6,
+   "boundary_lm": 7.6
+  },
+  "diff_floor_m2": -0.0225,
+  "diff_floor_pct": -0.62,
+  "diff_boundary_lm": 0.0,
+  "verdict_proposal": "AGREE",
+  "hand_check": "2.00 x 1.80 less a 0.45 x 0.05 jamb = 3.5775; freelancer 3.60 rounded"
+ },
+ {
+  "floor": "1F",
+  "room_as_printed": "BATH / حمام (east, 210 x 225)",
+  "outline_source": "own polygonization of the wall-face lines",
+  "sanitary_drawing": "WC + basin + FD",
+  "floor_m2": 4.725,
+  "boundary_lm": 8.7,
+  "upturn_m2_at_0.20": 1.74,
+  "membrane_surface_m2": 6.465,
+  "doorways": [
+   {
+    "block": "D315",
+    "width_m": 0.8,
+    "wall_depth_m": 0.15,
+    "shared_with_another_wet_room": false
+   }
+  ],
+  "doorway_floor_piece_m2": 0.12,
+  "strips_along_x": {
+   "span_across_m": 2.1,
+   "n": 3,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 2.65
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 2.65
+    },
+    {
+     "width_m": 0.7,
+     "floor_cover_m": 0.4,
+     "length_m": 2.65
+    }
+   ],
+   "cut_m2": 7.155,
+   "rolls_by_area": 1,
+   "offcut_m2": 2.845,
+   "roll_length_used_m": 7.95,
+   "rolls_by_length": 1
+  },
+  "strips_along_y": {
+   "span_across_m": 2.25,
+   "n": 3,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 2.5
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 2.5
+    },
+    {
+     "width_m": 0.85,
+     "floor_cover_m": 0.55,
+     "length_m": 2.5
+    }
+   ],
+   "cut_m2": 7.125,
+   "rolls_by_area": 1,
+   "offcut_m2": 2.875,
+   "roll_length_used_m": 7.5,
+   "rolls_by_length": 1
+  },
+  "freelancer": {
+   "sheet_row": 27,
+   "floor_m2": 4.72,
+   "boundary_lm": 8.7
+  },
+  "diff_floor_m2": 0.005,
+  "diff_floor_pct": 0.11,
+  "diff_boundary_lm": 0.0,
+  "verdict_proposal": "AGREE",
+  "hand_check": "printed 210 x 225 = 4.725"
+ },
+ {
+  "floor": "2F",
+  "room_as_printed": "W.C. / مرحاض (roof floor)",
+  "outline_source": "own polygonization of the wall-face lines",
+  "sanitary_drawing": "WC + basin + shower + FD",
+  "floor_m2": 5.55,
+  "boundary_lm": 9.7,
+  "upturn_m2_at_0.20": 1.94,
+  "membrane_surface_m2": 7.49,
+  "doorways": [
+   {
+    "block": "D315",
+    "width_m": 0.8,
+    "wall_depth_m": 0.15,
+    "shared_with_another_wet_room": false
+   }
+  ],
+  "doorway_floor_piece_m2": 0.12,
+  "strips_along_x": {
+   "span_across_m": 1.85,
+   "n": 3,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 3.4
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 3.4
+    },
+    {
+     "width_m": 0.45,
+     "floor_cover_m": 0.15,
+     "length_m": 3.4
+    }
+   ],
+   "cut_m2": 8.33,
+   "rolls_by_area": 1,
+   "offcut_m2": 1.67,
+   "roll_length_used_m": 10.2,
+   "rolls_by_length": 2
+  },
+  "strips_along_y": {
+   "span_across_m": 3.0,
+   "n": 4,
+   "strips": [
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.8,
+     "length_m": 2.25
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 2.25
+    },
+    {
+     "width_m": 1.0,
+     "floor_cover_m": 0.9,
+     "length_m": 2.25
+    },
+    {
+     "width_m": 0.7,
+     "floor_cover_m": 0.4,
+     "length_m": 2.25
+    }
+   ],
+   "cut_m2": 8.325,
+   "rolls_by_area": 1,
+   "offcut_m2": 1.675,
+   "roll_length_used_m": 9.0,
+   "rolls_by_length": 1
+  },
+  "freelancer": {
+   "sheet_row": 36,
+   "floor_m2": 5.62,
+   "boundary_lm": 9.75
+  },
+  "diff_floor_m2": -0.07,
+  "diff_floor_pct": -1.25,
+  "diff_boundary_lm": -0.05,
+  "verdict_proposal": "ENGINE_RIGHT",
+  "hand_check": "printed 300 x 185 = 5.550, 2 x (3.00 + 1.85) = 9.70 (sheet 5); freelancer 5.62 / 9.75 = 3.00 x 1.875"
+ }
+]
