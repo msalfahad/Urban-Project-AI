@@ -147,6 +147,10 @@ Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
 
 ## Open
 
+(none open: Lead 2026-10-19 22:40, Q-48 and Q-49 answered by the owner in the Lead session.)
+
+## Answered
+
 ### Q-48 Wet rooms are fully tiled: up to which height do the wall tiles go, and which false-ceiling depth applies? (lead 2026-10-19 22:20; owner request for the room-by-room tiling table (Q-45), Q-40 and Q-43 answers; no-assumptions question)
 
 THE PROBLEM: you said the wet areas are fully tiled (Q-40) and gave the wall height for plaster and paint: slab to slab
@@ -170,6 +174,13 @@ not a code clause). Whichever you choose, a tile height printed on a drawing or 
 WAITS ON: wet-wall tile m2, wall adhesive bags and wall mortar per room in the room-by-room tiling table; wall tiles on
 every villa (T-086, T-081).
 
+Answer: A (owner, Lead session 2026-10-19 22:35 UTC). His words: "A, floor height minus beam minus ceiling 15cm."
+Claude's reading: wet-room wall tiles run from the floor to the underside of the decor ceiling, with the decor ceiling 0.15 m
+in every room (wet and dry): wall height = floor-to-floor - 0.60 beam - 0.15 ceiling - 0.10 floor finishing, as option A
+states: GF 3.65 m, 1F and 2F 3.35 m (about 453 m2 of wet-wall tiles on Alsenan before window deductions). The 0.15 m also
+settles the decor depth of the plaster / paint heights rule (the 0.20 m end of the range is no longer used). A tile height
+printed on a drawing or detail replaces it.
+
 ### Q-49 Membrane rolls to buy: the layout direction changes the count. Which count goes in the BOQ? (lead 2026-10-19 22:20; owner membrane purchase table requirement 14:15, Q-24 addendum (cutting plan); no-assumptions question)
 
 THE PROBLEM: your strip method (whole strips, 0.10 m laps, cut edges) is now computed on all Alsenan wet rooms and roofs.
@@ -188,7 +199,15 @@ cuts from the same plan, and choosing per room saves 2 rolls on the wet areas an
 roll, if you want one, should be your own fixed allowance, not hidden in the layout (practice, not a code clause).
 WAITS ON: the rolls-to-buy line of the membrane table for wet areas and roofs when it is wired into the released BOQ (T-079).
 
-## Answered
+Answer: A, each wet room alone (owner, Lead session 2026-10-19 22:35 UTC). His words: "A each wet room membrane alone and
+tell me how much extra i have all in a table, then send total of all membranes and how many Meters leftovers, leftovers
+will be not that much and can be used or returned. Also show cutting plan for each wet room and roofs."
+Claude's reading: rolls to buy are counted for EACH wet room and EACH roof on its own (no offcut carried from one room to
+another), each laid in the layout that needs the fewest rolls (tie: the shorter total strip length); the BOQ shows per room
+the cutting plan (every strip width x length and which roll it is cut from), the rolls, the leftover metres of full-width
+roll and the side trim; then the project total of membrane m2, rolls and leftover metres. First hand result (Lead, from
+the verified wet-area hand table): 17 wet areas 19 rolls, 117.09 m2 cut, 64.73 m left over (with the pantry 21 rolls,
+65.13 m); roofs each alone 17 + 6 + 8 = 31 rolls. File: docs/agents/research/ALSENAN_MEMBRANE_PER_WET_ROOM.csv.
 
 (Lead 2026-10-19 22:20: Q-38 .. Q-47 moved here from Open; owner answers of 20:45 - 22:55 in the main chat. Still HELD from
 them: screed thickness on roofs and balconies (Q-41), marble adhesive coverage (Q-45), expansion-joint spacing and whether

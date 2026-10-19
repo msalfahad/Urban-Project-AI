@@ -1,5 +1,16 @@
 # Lead reports to the owner's main chat (newest first, last 10 entries)
 
+## LEAD REPORT 2026-10-19 22:40 UTC (addendum: owner answers in the Lead session)
+
+- Q-48 = A: wet-room wall tiles from the floor to the underside of a 0.15 m decor ceiling (GF 3.65 m, 1F / 2F 3.35 m);
+  0.15 m is now the decor depth for plaster and paint too. Wet-wall tiles about 453 m2 on Alsenan before window deductions.
+- Q-49 = A, each wet room and roof alone. Hand result from the verified wet-area table (fewest rolls per room): 17 wet
+  areas 19 rolls of 1 x 10 m, 117.09 m2 cut, 125.27 m of strips, 64.73 m of full-width roll left over, 8.18 m2 side trim;
+  with the pantry 21 rolls, 65.13 m left. Against sharing offcuts between rooms (13 rolls) this buys 6 more rolls.
+  Roofs each alone: 17 + 6 + 8 = 31 rolls (271.95 m2 cut); their strip plan and leftover metres come from new task T-089.
+  Table with the cutting plan per wet room: docs/agents/research/ALSENAN_MEMBRANE_PER_WET_ROOM.csv.
+- No owner question open.
+
 ## LEAD REPORT 2026-10-19 22:20 UTC
 
 Repositories: Urban-Project-AI cloned (control and working branch); Drive readable (nothing new in the Alsenan folder
