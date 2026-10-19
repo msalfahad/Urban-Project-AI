@@ -146,6 +146,133 @@ Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
 
 ## Open
 
+### Q-38 A curved glass wall set in a straight wall: which line gives its width? (worker 1 2026-10-19 16:43; T-077; no-assumptions question)
+
+THE PROBLEM: the engine had lost the big curved pool glazing of the ground floor; it is now counted and held, but its width
+cannot be measured without your rule, because four lines could be "the width": the glass is drawn as four curved lines
+(6.66, 6.70, 6.75 and 6.79 m long), the architect printed "657" (6.57 m) on the inner face of the 0.20 m curved glazed
+band (printed "20"; its outer face is 6.79 m), 8 cm inside the first glass line, and the
+straight wall opening it closes is 4.95 m from jamb to jamb. The freelancer took 6.57 x 4.30 = 28.25 m2 (24 % of his
+116.9 m2 of windows).
+WHERE TO LOOK: Drive "Alsenan chalet project", p7757_arch_sheet03.pdf (ground floor plan), the curved glazing round the
+end of the pool, printed "657"; the same in "P7757 dxf.dxf" (the 657 dimension measures the curved line inside the glass,
+not one of the four glass lines).
+THE OPTIONS:
+(A) The printed 6.57 m (the architect's dimension governs): 6.57 m wide.
+(B) The outer glass line: 6.79 m wide (+0.22 m, about +0.9 m2 at 4.30 m high).
+(C) The middle of the frame (the mean of the glass lines): 6.72 m wide.
+RECOMMENDATION: (A), because a printed dimension on the project drawing ranks above a measured line, and the fabricator
+measures the frame on site anyway (practice, not a code clause); (B) if you want the largest frame line for supply.
+WAITS ON: the width (and later the m2) of curved glass walls in straight openings on Alsenan and on every later villa (T-077,
+then the door / window area method).
+
+Answer:
+
+### Q-39 A window that is curved on plan: is its area width the straight chord or the curved length? (worker 2 2026-10-19 17:04; T-078; no-assumptions question: two Urban sources disagree)
+
+THE PROBLEM: the engine now reads the height of the first-floor master-bedroom window over the pool from the drawing
+(3.05 + 0.45 = 3.50 m to the top of the arch, your Q-32 answer), but it cannot give its area, because this window is
+curved on plan and two Urban sources give different widths: your Q-32 example used the straight chord 2.69 m (the width
+the elevation shows), while the Urban method for curved aluminium (registered as "curved glazing is measured on the inner,
+smallest-radius arc") gives 2.98 m. The area stays held until you choose. It is a different window from Q-38 (the
+ground-floor pool glazing in a straight wall), but one answer can cover both.
+WHERE TO LOOK: Drive "Alsenan chalet project", "P7757 dxf.dxf" (or the architectural PDF): first floor plan, the master
+bedroom over the pool, the curved window band (inner face radius 1.935 m, outer 2.135 m); the NORTH WEST elevation shows
+the same window "269" wide (the chord), "305" + "45" high.
+THE OPTIONS (height 3.50 m in all three):
+(A) The straight chord the elevation prints: 2.69 x 3.50 = 9.42 m2 (your Q-32 example; the freelancer has 3.15 x 3.00 =
+9.45 m2).
+(B) The curved length on the inner face (the existing Urban curved-aluminium method): 2.98 x 3.50 = 10.42 m2 (+1.00 m2).
+(C) The curved length on the outer face: 3.29 x 3.50 = 11.51 m2 (+2.09 m2).
+RECOMMENDATION: (B), because the frame and the glass of a curved window are made and bought along the curve, and the
+inner face is the method Urban already uses for curved aluminium (practice, not a code clause); (A) only if your
+aluminium supplier prices curved windows on the straight opening.
+WAITS ON: the area of the curved first-floor window on Alsenan (9.42 to 11.51 m2 of the freelancer's 116.9 m2 of
+windows) and every window curved on plan on later villas (T-078, the door / window area method).
+
+Answer:
+
+### Q-40 Showers: does the waterproofing go higher up the walls of the shower than the 0.20 m upturn? (worker 3 2026-10-19 17:30; T-080 reference-book check; no-assumptions question)
+
+THE PROBLEM: your rule turns the membrane up 0.20 m on every wall of a bathroom, and that is what the engine and the
+freelancer count. The supervisor's-eye book lists, as a common leak, a membrane that stops low in the shower zone and says
+the shower height must be set in the waterproofing detail. No Urban rule gives a shower height (the shower rule in the
+rule store is only a proposal), and the Alsenan drawings print none, so the engine cannot add shower tanking without a
+number from you; today it adds nothing.
+WHERE TO LOOK: Drive "Alsenan chalet project", sanitary-7757.pdf, page 2 "FIRST FLOOR DRAINAGE PLAN": the two bathrooms
+on the west side next to the master bedroom (each printed 245 x 205 on p7757_arch_sheet04.pdf). Each has a shower zone
+drawn across the full 2.05 m width behind a screen line, with a floor drain (FD 3" / FD 4") and a mixer; the zone is about
+0.84 m and 0.74 m deep (scaled from the PDF, no printed size). Its walls: 2.05 + 2 x 0.84 = 3.73 lm and 2.05 + 2 x 0.74 =
+3.53 lm. Book: Drive "Engineering Sources - Urban Projects" / 02 Construction Books / "عين المشرف", stage 05, error 066,
+page 52.
+THE OPTIONS (per shower, extra membrane = shower wall length x (height - 0.20 m)):
+(A) No extra: 0.20 m on the shower walls like the rest of the bathroom (today's count; 0 m2 extra).
+(B) Shower walls waterproofed to a height you give once for all villas (for example, if you say 1.80 m: 3.73 x 1.60 =
+5.97 m2 and 3.53 x 1.60 = 5.65 m2 on these two showers), its own line per bathroom; a project detail with another height
+replaces it.
+(C) Shower walls to the full wall-tile height (the ceiling): the line stays held until the room heights are read from the
+sections (your Q-14 answer), then wall length x (tile height - 0.20).
+RECOMMENDATION: (B) with the height you use on site, because the shower walls are where the water hits and the book names
+this as a frequent failure, while full height (C) costs more and waits on the heights (practice, not a code clause).
+WAITS ON: the shower-tanking line of every bathroom with a shower (on Alsenan at least these two first-floor showers;
+the others are counted once the rule is set) and the membrane rolls to buy in the membrane table (T-072 / T-076).
+
+Answer:
+
+### Q-41 Screeds: are the falls screed under the membrane and the protection screed over it part of the BOQ? (worker 3 2026-10-19 17:30; T-080 reference-book check; no-assumptions question)
+
+THE PROBLEM: both books on Drive put a cement screed on each side of the membrane: a falls screed under it (made before
+waterproofing, not in the tile bedding) and a protection screed of 2-3 cm over it right after the flood test (wet areas
+and roofs). Neither the Urban rules nor the freelancer's workbook have these lines (his waterproofing sheet lists floor
+m2 and upturn lm only), and the engine has them only as "not implemented" families. Without your rule the engine
+cannot decide whether they are BOQ lines at all, nor their thickness.
+WHERE TO LOOK: Drive "Engineering Sources - Urban Projects": 02 Construction Books / "عين المشرف", stage 05, errors 065
+(page 52) and 072 (page 55), roofs error 075 (page 57); 05 Technical Training / "Waterproofing Installation Training
+Manual", pages 14, 18, 20 and 21 (protection mortar 2-3 cm). Alsenan quantities they would apply to: the 17 wet areas,
+72.12 m2 of floor (Drive "Alsenan chalet project", plans p7757_arch_sheet03 / 04 and Pages_05-06), and the roofs
+(204.11 m2 measured by the engine, 285.00 m2 in the freelancer's workbook).
+THE OPTIONS:
+(A) Two own lines in m2 (falls screed under, protection screed over) on every waterproofed floor and roof, the area equal
+to the membrane floor area (Alsenan wet areas 72.12 m2 each); the thickness from the drawing or detail, held (shown, not
+a number) when none is printed.
+(B) Only the protection screed over the membrane as its own line (72.12 m2 on Alsenan wet areas + the roofs); the falls
+are part of the tile bedding or the roof build-up.
+(C) Neither: both belong to the tiling or roofing contractor's rate; the BOQ shows a note "screeds included in the
+finish rate", 0 lines.
+RECOMMENDATION: (A), because both layers are built and paid on site and the falls screed decides whether the floor
+drains work; the area is already known from the membrane table, only the thickness waits on a detail (practice, not a
+code clause).
+WAITS ON: screed lines for wet areas and roofs on every villa (on Alsenan 72.12 m2 of wet floors and 204-285 m2 of
+roofs), and the "screed / build-up" and "roof screed to falls" families of the BOQ coverage list (T-080).
+
+Answer:
+
+### Q-42 Tiles: does the gap between tiles (the joint) change how many tiles the BOQ buys? (lead 2026-10-19 18:15; T-080 reference-book check L-1; no-assumptions question)
+
+THE PROBLEM: the supervisor's-eye book says the joint width must be set before tiling, because the layout pitch is tile +
+joint, so the number of whole and cut tiles changes with it. No Urban rule and no tile spec in the rule store gives a joint
+width (UP-CER-010 and the tile size waste rules carry none), and the Alsenan drawings print none. Today any tile count the
+engine makes from a layout silently treats the joint as zero, which is an unrecorded convention.
+WHERE TO LOOK: Drive "Engineering Sources - Urban Projects" / 02 Construction Books / "عين المشرف", stage 10, error 126
+(page 94); the Alsenan finish schedule on the architectural sheets (no joint width printed); the freelancer's tile rows in
+his workbook "الارضيات+العازل+الديكور+الرخام" (m2 with waste, no joint).
+THE OPTIONS (example: a 4.00 x 3.00 m room in 60 x 60 cm porcelain):
+(A) Tiles are bought by m2 plus your size-based waste rule; the joint is not used in the quantity (12.00 m2 + waste); a
+tile count, where shown, is m2 / tile face (33.4 -> 34 tiles before waste), labelled "joint not counted".
+(B) A joint width read from the project drawing or specification is used in the layout count (with 2 mm joints the pitch is
+0.602 m: 6.64 x 4.98 -> 7 x 5 = 35 tile positions, about 0.7 % fewer whole tiles per m2 on open floor); with none printed the
+count is HELD (the m2 line stays released).
+(C) One Urban default joint width per tile size that you give once (for example 2 mm for 60 x 60 and 120 x 60, 3 mm for wall
+tiles), used whenever the project prints none.
+RECOMMENDATION: (A), because tiles are priced and ordered by m2 with a waste allowance and a 2 - 3 mm joint changes the
+whole-tile count by under 1 % (0.6^2 / 0.602^2 = 0.993), well inside the waste (practice, not a code clause); (B) only if you
+want a cutting plan per room like your membrane strips.
+WAITS ON: the tile count (not the tile m2) of every tiled floor and wall on every villa; no Alsenan m2 figure changes.
+
+## Answered
+
+(Lead 2026-10-19 18:15: Q-31 .. Q-37 moved here from Open; owner answers of 16:40 in the main chat. Q-34 is PARKED by the owner: the top roof stays HELD and is raised again only at a milestone.)
+
 ### Q-32 Arched windows: how is their area measured? (worker 1 2026-10-19 15:40; T-040; no-assumptions question)
 
 THE PROBLEM: four Alsenan windows have a round (arched) top, and no Urban rule says whether the area runs to the top of
@@ -266,6 +393,10 @@ into the laundry: 5 x 0.80 m), which the full-boundary sum counts once in each r
 membrane runs straight through: 144.73 - 8.00 = 136.73 lm under option A), or (ii) on both sides as today. Recommendation:
 (i), there is no wall to turn up against there (practice, not a code clause).
 
+Lead reading of the addendum (2026-10-19 18:15, to be corrected by the owner if wrong): under the answer (option C) the BOQ
+upturn line is walls only, so no doorway carries an upturn, including the 5 doorways between two wet rooms; each door gets
+one doorway transition line (one per door, not one per room side); the membrane to buy follows the strip method per wet area.
+
 ### Q-36 A new project folder appeared on Drive: may the team open it, and for what? (lead 2026-10-19 16:15; owner direction "Alsenan first", Q-23; no-assumptions question)
 
 THE PROBLEM: at 15:27 UTC today a third project folder was created under "Urban BOQ private data" (next to the Alsenan
@@ -309,108 +440,6 @@ open-plan pantry or kitchen on later villas (T-072, T-074).
 
 Answer: waterproof the surrounding of the pantry, enough (owner, main chat 2026-10-19 16:40). Claude's reading: option A, the pantry floor is waterproofed within its printed 4.50 x 3.00 m with the upturn around it, and the open side toward the dining room listed as a threshold line; if the owner meant a smaller zone, he will say so.
 
-### Q-38 A curved glass wall set in a straight wall: which line gives its width? (worker 1 2026-10-19 16:43; T-077; no-assumptions question)
-
-THE PROBLEM: the engine had lost the big curved pool glazing of the ground floor; it is now counted and held, but its width
-cannot be measured without your rule, because four lines could be "the width": the glass is drawn as four curved lines
-(6.66, 6.70, 6.75 and 6.79 m long), the architect printed "657" (6.57 m) on the inner face of the 0.20 m curved glazed
-band (printed "20"; its outer face is 6.79 m), 8 cm inside the first glass line, and the
-straight wall opening it closes is 4.95 m from jamb to jamb. The freelancer took 6.57 x 4.30 = 28.25 m2 (24 % of his
-116.9 m2 of windows).
-WHERE TO LOOK: Drive "Alsenan chalet project", p7757_arch_sheet03.pdf (ground floor plan), the curved glazing round the
-end of the pool, printed "657"; the same in "P7757 dxf.dxf" (the 657 dimension measures the curved line inside the glass,
-not one of the four glass lines).
-THE OPTIONS:
-(A) The printed 6.57 m (the architect's dimension governs): 6.57 m wide.
-(B) The outer glass line: 6.79 m wide (+0.22 m, about +0.9 m2 at 4.30 m high).
-(C) The middle of the frame (the mean of the glass lines): 6.72 m wide.
-RECOMMENDATION: (A), because a printed dimension on the project drawing ranks above a measured line, and the fabricator
-measures the frame on site anyway (practice, not a code clause); (B) if you want the largest frame line for supply.
-WAITS ON: the width (and later the m2) of curved glass walls in straight openings on Alsenan and on every later villa (T-077,
-then the door / window area method).
-
-Answer:
-
-### Q-39 A window that is curved on plan: is its area width the straight chord or the curved length? (worker 2 2026-10-19 17:04; T-078; no-assumptions question: two Urban sources disagree)
-
-THE PROBLEM: the engine now reads the height of the first-floor master-bedroom window over the pool from the drawing
-(3.05 + 0.45 = 3.50 m to the top of the arch, your Q-32 answer), but it cannot give its area, because this window is
-curved on plan and two Urban sources give different widths: your Q-32 example used the straight chord 2.69 m (the width
-the elevation shows), while the Urban method for curved aluminium (registered as "curved glazing is measured on the inner,
-smallest-radius arc") gives 2.98 m. The area stays held until you choose. It is a different window from Q-38 (the
-ground-floor pool glazing in a straight wall), but one answer can cover both.
-WHERE TO LOOK: Drive "Alsenan chalet project", "P7757 dxf.dxf" (or the architectural PDF): first floor plan, the master
-bedroom over the pool, the curved window band (inner face radius 1.935 m, outer 2.135 m); the NORTH WEST elevation shows
-the same window "269" wide (the chord), "305" + "45" high.
-THE OPTIONS (height 3.50 m in all three):
-(A) The straight chord the elevation prints: 2.69 x 3.50 = 9.42 m2 (your Q-32 example; the freelancer has 3.15 x 3.00 =
-9.45 m2).
-(B) The curved length on the inner face (the existing Urban curved-aluminium method): 2.98 x 3.50 = 10.42 m2 (+1.00 m2).
-(C) The curved length on the outer face: 3.29 x 3.50 = 11.51 m2 (+2.09 m2).
-RECOMMENDATION: (B), because the frame and the glass of a curved window are made and bought along the curve, and the
-inner face is the method Urban already uses for curved aluminium (practice, not a code clause); (A) only if your
-aluminium supplier prices curved windows on the straight opening.
-WAITS ON: the area of the curved first-floor window on Alsenan (9.42 to 11.51 m2 of the freelancer's 116.9 m2 of
-windows) and every window curved on plan on later villas (T-078, the door / window area method).
-
-Answer:
-
-### Q-40 Showers: does the waterproofing go higher up the walls of the shower than the 0.20 m upturn? (worker 3 2026-10-19 17:30; T-080 reference-book check; no-assumptions question)
-
-THE PROBLEM: your rule turns the membrane up 0.20 m on every wall of a bathroom, and that is what the engine and the
-freelancer count. The supervisor's-eye book lists, as a common leak, a membrane that stops low in the shower zone and says
-the shower height must be set in the waterproofing detail. No Urban rule gives a shower height (the shower rule in the
-rule store is only a proposal), and the Alsenan drawings print none, so the engine cannot add shower tanking without a
-number from you; today it adds nothing.
-WHERE TO LOOK: Drive "Alsenan chalet project", sanitary-7757.pdf, page 2 "FIRST FLOOR DRAINAGE PLAN": the two bathrooms
-on the west side next to the master bedroom (each printed 245 x 205 on p7757_arch_sheet04.pdf). Each has a shower zone
-drawn across the full 2.05 m width behind a screen line, with a floor drain (FD 3" / FD 4") and a mixer; the zone is about
-0.84 m and 0.74 m deep (scaled from the PDF, no printed size). Its walls: 2.05 + 2 x 0.84 = 3.73 lm and 2.05 + 2 x 0.74 =
-3.53 lm. Book: Drive "Engineering Sources - Urban Projects" / 02 Construction Books / "عين المشرف", stage 05, error 066,
-page 52.
-THE OPTIONS (per shower, extra membrane = shower wall length x (height - 0.20 m)):
-(A) No extra: 0.20 m on the shower walls like the rest of the bathroom (today's count; 0 m2 extra).
-(B) Shower walls waterproofed to a height you give once for all villas (for example, if you say 1.80 m: 3.73 x 1.60 =
-5.97 m2 and 3.53 x 1.60 = 5.65 m2 on these two showers), its own line per bathroom; a project detail with another height
-replaces it.
-(C) Shower walls to the full wall-tile height (the ceiling): the line stays held until the room heights are read from the
-sections (your Q-14 answer), then wall length x (tile height - 0.20).
-RECOMMENDATION: (B) with the height you use on site, because the shower walls are where the water hits and the book names
-this as a frequent failure, while full height (C) costs more and waits on the heights (practice, not a code clause).
-WAITS ON: the shower-tanking line of every bathroom with a shower (on Alsenan at least these two first-floor showers;
-the others are counted once the rule is set) and the membrane rolls to buy in the membrane table (T-072 / T-076).
-
-Answer:
-
-### Q-41 Screeds: are the falls screed under the membrane and the protection screed over it part of the BOQ? (worker 3 2026-10-19 17:30; T-080 reference-book check; no-assumptions question)
-
-THE PROBLEM: both books on Drive put a cement screed on each side of the membrane: a falls screed under it (made before
-waterproofing, not in the tile bedding) and a protection screed of 2-3 cm over it right after the flood test (wet areas
-and roofs). Neither the Urban rules nor the freelancer's workbook have these lines (his waterproofing sheet lists floor
-m2 and upturn lm only), and the engine has them only as "not implemented" families. Without your rule the engine
-cannot decide whether they are BOQ lines at all, nor their thickness.
-WHERE TO LOOK: Drive "Engineering Sources - Urban Projects": 02 Construction Books / "عين المشرف", stage 05, errors 065
-(page 52) and 072 (page 55), roofs error 075 (page 57); 05 Technical Training / "Waterproofing Installation Training
-Manual", pages 14, 18, 20 and 21 (protection mortar 2-3 cm). Alsenan quantities they would apply to: the 17 wet areas,
-72.12 m2 of floor (Drive "Alsenan chalet project", plans p7757_arch_sheet03 / 04 and Pages_05-06), and the roofs
-(204.11 m2 measured by the engine, 285.00 m2 in the freelancer's workbook).
-THE OPTIONS:
-(A) Two own lines in m2 (falls screed under, protection screed over) on every waterproofed floor and roof, the area equal
-to the membrane floor area (Alsenan wet areas 72.12 m2 each); the thickness from the drawing or detail, held (shown, not
-a number) when none is printed.
-(B) Only the protection screed over the membrane as its own line (72.12 m2 on Alsenan wet areas + the roofs); the falls
-are part of the tile bedding or the roof build-up.
-(C) Neither: both belong to the tiling or roofing contractor's rate; the BOQ shows a note "screeds included in the
-finish rate", 0 lines.
-RECOMMENDATION: (A), because both layers are built and paid on site and the falls screed decides whether the floor
-drains work; the area is already known from the membrane table, only the thickness waits on a detail (practice, not a
-code clause).
-WAITS ON: screed lines for wet areas and roofs on every villa (on Alsenan 72.12 m2 of wet floors and 204-285 m2 of
-roofs), and the "screed / build-up" and "roof screed to falls" families of the BOQ coverage list (T-080).
-
-Answer:
-
-## Answered
 
 ### Q-29 Domes: are they concrete at all, and does the roof membrane run under them? (lead 2026-10-19 14:30; Q-24 and Q-27 answers, T-049, T-071, T-072; no-assumptions question)
 
