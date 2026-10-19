@@ -99,6 +99,21 @@ Waits on: wet or dry finishes and waterproofing of unnamed rooms with a toilet d
 
 Answer:
 
+### Q-14 Wall heights for internal plaster and paint (worker 2026-10-19 00:34; T-035)
+
+What we found: the drawings give the finished floor levels but never the slab thickness, the floor finish build-up
+(screed + tiles) or the false-ceiling depth, so the engine cannot work out how high the plaster and paint go.
+Real example: Alsenan, ground floor, the open room "dining + living / saloon + pantry + reception": its floor is at
++1.00 and the first floor at +5.50, so 5.50 - 1.00 = 4.50 m between finished floors; plaster height = 4.50 - the
+first floor's build-up - the slab thickness, and neither number is written on any sheet (architectural plans,
+elevations, sections A-A and B-B, structural sections A-A to D-D).
+How to check it yourself: open the structural drawing, sections A-A to D-D, and the architectural sections A-A and
+B-B; look for a slab thickness (e.g. "20 cm") or the floor layers; you will find only levels and bar marks.
+Choices: (a) you give, per floor (ground, first, second), the slab thickness, the floor build-up and the false-ceiling
+depth from the designer, and the engine computes the heights; (b) you give the plaster height and the paint height
+per floor directly; (c) Alsenan plaster and paint stay held (shown, not scored) until drawings print them.
+Waits on: internal plaster (25 room lines) and internal paint (11 room lines) for Alsenan (T-035).
+
 ## Answered
 
 ### Q-11 AutoCAD DXF files for the scoreboard (T-001b; added by the worker 2026-10-18 as Q-10, renumbered by the lead)
