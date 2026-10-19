@@ -1,6 +1,6 @@
 # T-077: lost windows and the unexplained door element, traced and guarded (gate 1)
 
-Worker 1, 2026-10-19 16:27-17:40 UTC. Development villa (Alsenan), not an accuracy claim. Counts, metres and entity
+Worker 1, 2026-10-19 16:27-16:55 UTC. Development villa (Alsenan), not an accuracy claim. Counts, metres and entity
 ids only: no coordinates, no images, no client names. Rules: UP-QTY-STATUS-001 (every drawn element reported once,
 never 0), UP-OPEN-SCHED-001 (no height printed -> width only, area held), UP-OPEN-CURVED-001 (curved wall bands),
 UP-QA-001 (no benchmark anchors a geometry reading: the freelancer's figures were compared only after the census).
@@ -43,11 +43,18 @@ external doors, in m2).
    of the gap (the far end is a wall corner, not a band): so neither path makes an opening and nothing was recorded.
    Printed: one arc dimension "657" on the same centre measures an arc of radius 2.25 m on another layer (6.5675 m),
    80 mm inside the innermost glazing line; it is not on a glazing line (basis ARC_AT_OTHER_RADIUS).
+   Second drawing (PDF, p7757_arch_sheet03, ground floor plan, read by eye): the curved enclosure round the pool end is
+   drawn as a 0.20 m band (printed "20" radially at the crown and at the springing) whose INNER line carries the
+   "657" arc dimension; the four glazing lines lie in the outer part of that band. So the printed 6.57 m is the inner
+   face of a 0.20 m glazed band (r 2.25 -> 2.45 m; outer face 6.79 m): the same reading as the DXF.
 2. **1F sea-side bath window (HELD, COLUMN_CUT_PIECE_UNDER_MIN_GAP).** The band gap is jamb to jamb 0.500 m
    (printed "50", dimension 11ED = 0.500 m: match), and the engine's band reader finds it (state OPENING). A column
    outline (S-COL layer) overlaps the gap end by 0.0327 m; lintel_measure._split_at_columns cuts the gap at the
    column face and keeps only pieces of at least 0.50 m (min_gap_m), so the 0.4673 m piece is dropped with no
    record (reproduced: the wrapped split returned [] for this gap; the synthetic test shows the same on the engine).
+   Second drawing (PDF, p7757_arch_sheet04, first floor plan, read by eye): the bath's sea-side wall carries the chain
+   "109 / 101 / 50 / 58" with the filled column (101) directly beside the 0.50 m window: by the print the window starts
+   at the column face; the 33 mm overlap is the DXF column outline only.
 3. **GF 0.80 m door element "without a block" (explained, HELD by the engine as before).** Its swing is a loose arc
    on the door layer (radius 0.69 m), not a block insert; T-040's census counted only blocks. It is the door between
    the master bedroom and its bathroom; the engine holds it (PROVISIONAL_NOT_RELEASED: no band opening, width range
