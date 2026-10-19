@@ -107,7 +107,7 @@ the two DXFs (lowest level printed 0.00). The freelancer's 2.40 m3 of lift walls
 heading cannot be checked: the architectural PDF on Drive is 37.5 MB, above the 10 MB the agents can read. A zipped
 copy of that PDF in the same Drive folder would let an agent read the pool depth, the stair sections and any lift.
 
-Answer:
+Answer: B, conditional on identifying the actual structural members (owner, main chat 2026-10-19). Do not assume every concrete member along the plot boundary is an isolated footing or ground beam: ST7757 page 14 shows the boundary-wall details, page 10 the beam schedule. Identify separately the boundary-wall ground beam (G.B), the boundary-wall base or footing (B.W), isolated footings and other continuous foundations or connecting beams, each with its section, length, location and purpose. Investigate the missing 31.77 m (91.94 m reported vs 60.17 m recognised) through CAD geometry and details; do not assume 91.94 m is right until independently verified. Do not force the engine to the freelancer figure. Report isolated footings, boundary-wall foundations and ground beams as separate quantities.
 
 ### Q-13 A toilet drawn as loose lines, or a chair against the wall? (worker 1 2026-10-18 23:40; T-010)
 
@@ -128,7 +128,7 @@ layer will also wait for a person); (c) you give a minimum box depth for a toile
 thinner back is a chair.
 Waits on: wet or dry finishes and waterproofing of unnamed rooms with a toilet drawn as loose lines (T-010).
 
-Answer:
+Answer: B, with the architectural room label as primary evidence (owner, 2026-10-19). P7757 says what a room is; Sanitary-7757 says where fixtures, drains and showers are. Process: identify the room from P7757, read its label and boundary, cross-reference the sanitary drawing, then decide wet or dry and apply the Urban finish and waterproofing rules. A toilet-like object in a room labelled lobby does not make it a bathroom. No label and ambiguous sanitary evidence: hold the classification. A real toilet need not show a drain in the same CAD view. Uncertain fixture recognition must never create bathroom ceramic, waterproofing or plumbing quantities. A missing fixture or drain in one drawing triggers a coordination check, not deletion of the bathroom class.
 
 ### Q-14 Wall heights for internal plaster and paint (worker 2026-10-19 00:34; T-035)
 
@@ -145,7 +145,7 @@ depth from the designer, and the engine computes the heights; (b) you give the p
 per floor directly; (c) Alsenan plaster and paint stay held (shown, not scored) until drawings print them.
 Waits on: internal plaster (25 room lines) and internal paint (11 room lines) for Alsenan (T-035).
 
-Answer:
+Answer: The structural slab is 16 cm unless a drawing or detail says otherwise (owner, 2026-10-19). Search slab plans, slab reinforcement details, sections, general notes and local slab and stair details; use 0.16 m where the drawing confirms it and the specific value where a slab or zone differs; do not apply 16 cm to stairs, balconies, depressed slabs, landings or special elements without checking their details. Distinguish ground level, FFL, slab top, soffit, floor-to-floor, clear height, false-ceiling height, plaster height and paint height. Example: FFL +1.00 and +5.50 give 4.50 m floor-to-floor; 0.16 m slab alone does not prove a 4.34 m clear height. Do not subtract an assumed floor build-up or false-ceiling depth; use elevations and sections. A false ceiling does not mean the wall above gets no plaster or paint. Per floor report: slab thickness, FFL, structural level, floor-to-floor, clear height where verified, plaster height, paint height, source drawing and detail. A missing value holds only the affected quantity.
 
 ### Q-15 Development project 2: which file holds the apartment's floor plans? (lead 2026-10-19 02:20; T-033)
 
@@ -162,7 +162,7 @@ Choices: (a) you upload that architectural DWG (or a DXF export of it, AutoCAD S
 (c) you export the -STR.dwg to DXF from AutoCAD yourself and upload it.
 Waits on: tiles, plaster, paint, floor area, wet / dry, doors and windows for development project 2 (T-033, T-003).
 
-Answer:
+Answer: A. Development project 2 (the apartment) is a completely separate project (owner, 2026-10-19). The owner can download the original DWG again, convert it to DXF and resend it. Keep separate project records and drawing registers; never mix quantities, rules, revisions, assumptions or benchmark data. Investigate why the earlier conversion reportedly lost 57 % of the content (entity types, XREFs, blocks, proxy objects, dimensions, geometric coverage) before accepting a conversion. This must not block the Alsenan BOQ.
 
 ### Q-16 A beam span with no label, in line with a labelled beam (lead 2026-10-19 02:20; T-036)
 
@@ -178,7 +178,7 @@ neighbour's size, marked "size taken from neighbour beam"; (c) take the neighbou
 the same, else hold.
 Waits on: 11 beam lines of the concrete beam total (T-036 follow-ups).
 
-Answer:
+Answer: A, but exhaust all drawing evidence before asking (owner, 2026-10-19). Read simple- and continuous-beam schedules, two- and three-span details, beam sections, reinforcement schedules, ground-beam details and structural plans. Procedure per unlabelled span: CAD geometry, floor and location, supporting columns, connected and adjacent spans, labels and schedule references, sections and reinforcement details, match to a documented beam type, continuous or separate span; assign a section only with sufficient evidence, otherwise record it unresolved. Do not copy the neighbouring depth because beams align: a continuous beam can change section between spans. Report each unresolved beam with floor, location, observed geometry, candidate sections, rejected alternatives and reason held. The same principle applies to footings, columns, slabs, stairs, pools and domes.
 
 ### Q-17 May the concrete score use sizes a person typed in from the drawings? (lead 2026-10-19 02:20; T-036)
 
@@ -196,7 +196,7 @@ value stays held; (b) no: the score shows only what the engine reads by itself, 
 (c) yes for every value in the typed file (you confirm them, including the 2.0 m founding level).
 Waits on: the concrete score for columns, necks, ground beams and blinding (T-044, T-036).
 
-Answer:
+Answer: A, approved with verification requirements (owner, 2026-10-19). A value typed in from a drawing goes into a controlled project data file with: drawing filename, number and revision, sheet or page, exact note, dimension or detail reference, units, value, applicable floors or members, verification status and reviewer or source. Status words: DRAWING-VERIFIED, OWNER-CONFIRMED, DESIGNER-CONFIRMED, INFERRED (from verified values with documented logic), ASSUMED, HELD. The engine must not claim it extracted a value automatically when it was typed in, and manually supplied answers must not inflate automated-extraction accuracy.
 
 ### Q-20 Stairs: besides the steps, how is the concrete under them (the sloping waist slab) and the landings measured? (lead 2026-10-19; Q-19 answer, T-056)
 
@@ -213,7 +213,7 @@ of a thickness you give (for example 15 cm) + landings of a thickness you give; 
 (shown, not scored) until the designer prints them.
 Waits on: stair concrete on every villa (T-056).
 
-Answer:
+Answer: C for genuinely unknown dimensions, but first read every stair detail (owner, 2026-10-19). Typical values are reference only, not Alsenan dimensions: riser 15-17 cm, tread about 30 cm, width 1.10-1.20 m. Determine the real geometry from P7757, ST7757, sections and levels: connected floors, total rise, actual riser and tread counts, uniform risers per flight, tread depth, flight width, landings, structural stair sections, waist thickness from the detail. Treads are not automatically equal to risers; landings matter. Separate step concrete, sloping waist slab, intermediate and floor landings, stair beams and supports, formwork, reinforcement, marble tread and riser finish and handrails. No double counting of slab or landing concrete. Stair finish is marble unless the drawings or approved specification say otherwise. A missing stair dimension holds only the unresolved quantity; the waist slab and landings are not dropped because a dimension was not recognised.
 
 ### Q-21 Foundations: is the printed 1.50 m depth the bottom of the footing or the bottom of the blinding under it? (lead 2026-10-19 06:15; T-044, part of OQ-13; no-assumptions question)
 
@@ -230,7 +230,7 @@ bottom of the footing: blinding below it, excavation to 1.60 m; (c) hold the nec
 scored) until the designer prints the footing level.
 Waits on: neck column concrete, excavation and backfill on every villa (T-044, T-045, T-046).
 
-Answer:
+Answer: C until the complete foundation level arrangement is verified (owner, 2026-10-19). The notes recommend excavation at least 1.50 m below the existing plot level; this does not by itself fix the founding level. The engine must understand the process, not subtract 10 cm. Distinguish: existing ground, excavation formation level, bottom and top of blinding, bottom and top of footing, column-neck start and end, finished ground and floor levels. Illustration only: formation -1.50 m with 0.10 m blinding gives footing underside -1.40 m; footing underside required at -1.50 m needs excavation to -1.60 m; neither is automatically right for Alsenan. Account for unsuitable or uneven soil needing extra excavation, approved replacement fill, compaction and blinding. Do not assume loose sand is suitable backfill, that deeper is better, or that extra fill or concrete strengthens a foundation; no change of founding level or fill material without engineering approval. Measure separately: excavation, disposal of unsuitable material, approved replacement fill, compaction, blinding concrete, footings, column necks, backfill. Do not compute the 28 column necks on an unresolved foundation datum.
 
 ## Answered
 

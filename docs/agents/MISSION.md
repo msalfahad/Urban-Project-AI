@@ -124,3 +124,24 @@ Answers are written back under "Answer:" in OWNER_QUESTIONS.md.
 Cadence: research scout daily, lead every 6 h, worker every 2 h (one task per run), verifier every 3 h.
 The verifier merges into `claude/access-permissions-setup-ii24ws` only clean merges; anything that conflicts with work
 from an owner's own Claude Code session stays READY with a note.
+
+## Owner directive: understand the drawings first (owner, main chat, 2026-10-19)
+
+Read all drawings of a project together (architectural P7757, structural ST7757, elevations, sections, sanitary, foundation,
+column, beam, slab, stair, pool and dome details, notes and schedules) as one coordinated design, before measuring.
+Precedence: 1 confirmed project drawings, details, schedules and notes; 2 owner or designer decisions that do not conflict
+with safety or regulation; 3 Urban measurement rules; 4 standard engineering practice (never silently turned into a verified
+project dimension); 5 assumptions (only when allowed, labelled, otherwise hold). A project drawing overrides a generic Urban
+rule on the same subject, never a safety requirement, and never settles a conflict between two drawings: record the conflict.
+Sequence: intake, understanding, interpretation (match each member to its schedule and section), project rule resolution,
+deterministic takeoff (agents interpret and verify, they do not invent measurements), cross-discipline checks, independent
+QA, release with source, method and status. Every quantity traces: drawing, object, detail, rule, calculation,
+verification, BOQ item. Before measuring, write a project understanding report (drawing register, geometry, structural
+system, architectural and finishing system, sanitary and drainage, project rule register, conflict register, measurement
+readiness). Project-specific rules stay inside that project; only rules proven on several projects go to the global base.
+No hard-coded fixes to match a benchmark. Prices are not needed. Safety-critical items (founding level, fill, soil) need the
+designer or geotechnical confirmation. Tests wanted: 16 cm slab vs local override; label vs misleading furniture; bathroom
+drain cross-check; boundary base vs ground beam; unlabelled beam with and without a matching section; two- and three-span
+beams; stair riser uniformity and landings; stair waist and steps without double counting; foundation datum ambiguity;
+verified typed value vs assumption; project rule over Urban default; conflicting revisions; missing CAD geometry;
+separation of projects. Each test records expected, actual and reason for any failure.
