@@ -56,6 +56,16 @@ docs/ROUTING.md with `python3 -I tools/codemap.py build`, run `codemap.py check`
 every verified task in one run, in the Lead's order, regenerating the maps after each merge, not one task per hour. If a
 step is refused, write the exact refusal text in your handoff.
 
+## Standing owner rule on merging (owner, main chat, 2026-10-19)
+
+Every Lead run gathers all verified work and merges it all: tell the verifier (and do it yourself in the owner session if
+a run is refused) to merge every verified task in one run, in the Lead's order, rebuilding docs/CODEMAP.md,
+docs/ROUTING.md and docs/RULES_INDEX.md with the tool after each merge. Nothing verified waits for the owner. Merged by
+the owner session on 2026-10-19: T-036 58468c6, T-033 a281ff4, T-037 864c28e, T-041 78c57b2, T-044-r2 02a7472,
+T-029 980e489, T-034 faad086, T-011 aadced7, T-047-r2 6def656 (working branch head 6def656; maps stale none, freeze 0;
+tests: t029, t034, t047, m9_kb and the importer folders of arch_plan.py all pass). Tasks still READY and not yet
+verified: T-058, T-061, T-057 (in progress). The verifier checks them next and merges them the same way.
+
 ## Owner instruction on task size and quality (via the owner's main chat, 2026-10-19)
 
 Give each worker a task that takes at least 50 minutes of real work, not short ones. Quality first, speed second. Lead:
