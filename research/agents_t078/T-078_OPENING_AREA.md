@@ -1,6 +1,6 @@
 # T-078: door and window areas in m2 from the plan width and a printed height (method piece, not wired)
 
-Worker 2, 2026-10-19 16:40-18:10 UTC. New files only: `engine/source/opening_area.py` (method piece, imported by no
+Worker 2, 2026-10-19 16:40-17:05 UTC. New files only: `engine/source/opening_area.py` (method piece, imported by no
 released method), `tests/t078_opening_area/` (hand villa, 23 cases), this folder (runner + this note). No frozen file,
 rule or knowledge version, key map or released quantity changed. Development villa (Alsenan), not an accuracy claim.
 Rules: UP-OPEN-SCHED-001 (width within 0.03 m; unknown height -> width released, area held), UP-DOOR-AREA-001
@@ -44,7 +44,7 @@ mapped mirrored on 2 printed widths (120, 245 = the stair stack and 1F OP-022). 
 | 1F | OP-022 master bedroom | 2.4498 | 1.60 (SE "160", rectangular) | **3.920** | 2.45 x 2.00 = 4.900 | -0.980 (-20.0 %) | ENGINE_RIGHT: 1.60 printed, he used 2.00 |
 | 1F | OP-016 living, sea side | 1.5523 | 3.10 = "300" + "10" to the arch crown (NW, arched, Q-32 A) | **4.812** | 1.55 x 3.00 = 4.650 | +0.162 (+3.5 %) | ENGINE_RIGHT proposal: the crown is printed 0.10 above the 3.00 (verifier: re-read) |
 | 1F | OP-017 living, sea side | 1.5523 | none inside its width (drawn the same size as OP-016) | HELD | 1.55 x 3.00 = 4.650 | - | NO_PRINTED_HEIGHT; same drawn size as OP-016 listed as evidence, not released |
-| 1F | COP-001 curved, master bedroom | chord 2.6917 / inner arc 2.9767 / outer arc 3.2895 | 3.50 = "305" + "45" (NW, arched): the owner's own Q-32 example | HELD (basis) | 3.15 x 3.00 = 9.450 | chord 9.421 (-0.3 %) / inner arc 10.418 (+10.2 %) | owner question: width basis of a curved window |
+| 1F | COP-001 curved, master bedroom | chord 2.6917 / inner arc 2.9767 / outer arc 3.2895 | 3.50 = "305" + "45" (NW, arched): the owner's own Q-32 example | HELD (basis) | 3.15 x 3.00 = 9.450 | chord 9.421 (-0.3 %) / inner arc 10.418 (+10.2 %) | owner Q-39: width basis of a window curved on plan |
 | 2F | OP-008 stair | 1.20 | "170" + "5" end at 0.50 m below the drawn arch crown; the "88" lies outside the window | HELD | 1.20 x 2.00 = 2.400 | - | ARCH_TOP_NOT_PRINTED (UNRESOLVED; the earlier hand reading "170 to the springing + 88 rise" does not meet the drawn arch) |
 | GF | OP-019 saloon glazing 6.33 | 6.3316 | no jamb pair at its place on NW (the "430" chain is not bound) | HELD | 6.33 x 4.30 = 27.219 | - | NOT_DRAWN_ON_THIS_ELEVATION |
 | GF | OP-023, OP-024, OP-028, OP-029 | 1.00, 1.50, 1.9549 x 2 | no jamb pair at their places on NW / SE | HELD | | - | NOT_DRAWN_ON_THIS_ELEVATION |
