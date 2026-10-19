@@ -1,5 +1,6 @@
 # Questions for the owner (at most 5 open; answer under "Answer:")
 
+Worker 3 2026-10-19 17:30: two new no-assumptions questions from the reference-book check (T-080): Q-40 (shower walls: waterproofing higher than the 0.20 m upturn, and how high) and Q-41 (falls screed under and protection screed over the membrane: BOQ lines or not).
 Worker 2 2026-10-19 17:04: one new no-assumptions question from the door / window area piece (T-078): Q-39 (width of a window curved on plan: chord as in your Q-32 example, or the inner arc of the Urban curved-aluminium method).
 Worker 1 2026-10-19 16:43: one new no-assumptions question from the lost-window trace (T-077): Q-38 (width basis of a curved glass wall in a straight wall opening).
 Lead 2026-10-19 16:15: two new no-assumptions questions: Q-35 (wet-room upturn across the door opening: your Q-30 example vs registry UP-WP-DOOR-001) and Q-36 (the new project folder on Drive: open it or not). Q-31 (footing F10) was filed under Answered with no answer: moved back to Open. Open now: 6 (Q-31 to Q-36; all no-assumptions questions, so more than 5).
@@ -351,6 +352,61 @@ inner face is the method Urban already uses for curved aluminium (practice, not 
 aluminium supplier prices curved windows on the straight opening.
 WAITS ON: the area of the curved first-floor window on Alsenan (9.42 to 11.51 m2 of the freelancer's 116.9 m2 of
 windows) and every window curved on plan on later villas (T-078, the door / window area method).
+
+Answer:
+
+### Q-40 Showers: does the waterproofing go higher up the walls of the shower than the 0.20 m upturn? (worker 3 2026-10-19 17:30; T-080 reference-book check; no-assumptions question)
+
+THE PROBLEM: your rule turns the membrane up 0.20 m on every wall of a bathroom, and that is what the engine and the
+freelancer count. The supervisor's-eye book lists, as a common leak, a membrane that stops low in the shower zone and says
+the shower height must be set in the waterproofing detail. No Urban rule gives a shower height (the shower rule in the
+rule store is only a proposal), and the Alsenan drawings print none, so the engine cannot add shower tanking without a
+number from you; today it adds nothing.
+WHERE TO LOOK: Drive "Alsenan chalet project", sanitary-7757.pdf, page 2 "FIRST FLOOR DRAINAGE PLAN": the two bathrooms
+on the west side next to the master bedroom (each printed 245 x 205 on p7757_arch_sheet04.pdf). Each has a shower zone
+drawn across the full 2.05 m width behind a screen line, with a floor drain (FD 3" / FD 4") and a mixer; the zone is about
+0.84 m and 0.74 m deep (scaled from the PDF, no printed size). Its walls: 2.05 + 2 x 0.84 = 3.73 lm and 2.05 + 2 x 0.74 =
+3.53 lm. Book: Drive "Engineering Sources - Urban Projects" / 02 Construction Books / "عين المشرف", stage 05, error 066,
+page 52.
+THE OPTIONS (per shower, extra membrane = shower wall length x (height - 0.20 m)):
+(A) No extra: 0.20 m on the shower walls like the rest of the bathroom (today's count; 0 m2 extra).
+(B) Shower walls waterproofed to a height you give once for all villas (for example, if you say 1.80 m: 3.73 x 1.60 =
+5.97 m2 and 3.53 x 1.60 = 5.65 m2 on these two showers), its own line per bathroom; a project detail with another height
+replaces it.
+(C) Shower walls to the full wall-tile height (the ceiling): the line stays held until the room heights are read from the
+sections (your Q-14 answer), then wall length x (tile height - 0.20).
+RECOMMENDATION: (B) with the height you use on site, because the shower walls are where the water hits and the book names
+this as a frequent failure, while full height (C) costs more and waits on the heights (practice, not a code clause).
+WAITS ON: the shower-tanking line of every bathroom with a shower (on Alsenan at least these two first-floor showers;
+the others are counted once the rule is set) and the membrane rolls to buy in the membrane table (T-072 / T-076).
+
+Answer:
+
+### Q-41 Screeds: are the falls screed under the membrane and the protection screed over it part of the BOQ? (worker 3 2026-10-19 17:30; T-080 reference-book check; no-assumptions question)
+
+THE PROBLEM: both books on Drive put a cement screed on each side of the membrane: a falls screed under it (made before
+waterproofing, not in the tile bedding) and a protection screed of 2-3 cm over it right after the flood test (wet areas
+and roofs). Neither the Urban rules nor the freelancer's workbook have these lines (his waterproofing sheet lists floor
+m2 and upturn lm only), and the engine has them only as "not implemented" families. Without your rule the engine
+cannot decide whether they are BOQ lines at all, nor their thickness.
+WHERE TO LOOK: Drive "Engineering Sources - Urban Projects": 02 Construction Books / "عين المشرف", stage 05, errors 065
+(page 52) and 072 (page 55), roofs error 075 (page 57); 05 Technical Training / "Waterproofing Installation Training
+Manual", pages 14, 18, 20 and 21 (protection mortar 2-3 cm). Alsenan quantities they would apply to: the 17 wet areas,
+72.12 m2 of floor (Drive "Alsenan chalet project", plans p7757_arch_sheet03 / 04 and Pages_05-06), and the roofs
+(204.11 m2 measured by the engine, 285.00 m2 in the freelancer's workbook).
+THE OPTIONS:
+(A) Two own lines in m2 (falls screed under, protection screed over) on every waterproofed floor and roof, the area equal
+to the membrane floor area (Alsenan wet areas 72.12 m2 each); the thickness from the drawing or detail, held (shown, not
+a number) when none is printed.
+(B) Only the protection screed over the membrane as its own line (72.12 m2 on Alsenan wet areas + the roofs); the falls
+are part of the tile bedding or the roof build-up.
+(C) Neither: both belong to the tiling or roofing contractor's rate; the BOQ shows a note "screeds included in the
+finish rate", 0 lines.
+RECOMMENDATION: (A), because both layers are built and paid on site and the falls screed decides whether the floor
+drains work; the area is already known from the membrane table, only the thickness waits on a detail (practice, not a
+code clause).
+WAITS ON: screed lines for wet areas and roofs on every villa (on Alsenan 72.12 m2 of wet floors and 204-285 m2 of
+roofs), and the "screed / build-up" and "roof screed to falls" families of the BOQ coverage list (T-080).
 
 Answer:
 
