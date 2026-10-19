@@ -1,6 +1,6 @@
 # T-063 (with T-067): architectural sheet census, printed levels, pool, stairs, lift and domes (development villa)
 
-Worker 1, 2026-10-19 12:25-13:40 UTC. Read-only: no engine, rule, test, fact file or quantity changed; nothing applied.
+Worker 1, 2026-10-19 12:25-12:50 UTC. Read-only: no engine, rule, test, fact file or quantity changed; nothing applied.
 Development villa (Alsenan), not an accuracy claim. Values and sheet references only: no images, no client names, no
 plot or address data. Every value is graded PRINTED (sheet, view, text), DERIVED (sum or difference of printed values,
 named), VISUAL (seen on the image, no text), NOT_PRINTED, NOT_READ (sheet not available to this run) or a conflict
@@ -91,6 +91,13 @@ Owner Q-19 sanity range 1.00 - 1.15 m: the printed 1.15 is inside it (a check, n
 | Same stair, 1F +5.50 to 2F +9.70, and 2F to roof +13.90 | same set-out ("330", "120", "125", "195" on the 2F plan, p.5) | rise 4.20 per storey PRINTED; risers NOT_PRINTED (A-A not read) |
 | Curved stair in the GF reception (GF +1.00 to 1F, void 5.87 x 4.00 above) | width "120", "157" on the GF plan (DXF) | risers, waist, landings NOT_PRINTED on the sheets read |
 | Waist slab, landing thickness, stair beams | none | NOT_PRINTED on every sheet read (B-B draws the entrance flight waist without a dimension) |
+
+Plan tread lines of the main dog-leg in P7757.dxf (each nosing drawn as a pair of 1.15 m lines 50 mm apart, one solid
+layer 5 and one dashed layer 2, pitch 0.300 m): GF plan, flight next to the outer wall 10 nosings, inner flight 11 (21);
+1F plan 12 and 11 (23). The plan gives MORE nosings on the storey with the SMALLER rise (1F 4.20 m) than on GF (4.50 m),
+so the drawn treads are a set-out symbol and do not give the riser count: risers per flight stay NOT_PRINTED until
+SECTION A-A is read. (Lesson for the engine: counting plan tread lines is not a riser count; UP-STAIR-009 needs counted
+risers from a section or a schedule.)
 
 So the owner's Q-20 order applies: steps of the entrance flight can follow UP-STAIR-009 (5 risers, 0.170 m) once its tread
 is read; every other riser count, waist and landing stays HELD until section A-A is read.
