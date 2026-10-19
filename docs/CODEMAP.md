@@ -22,8 +22,8 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1280 | pytest suites, one folder per round. |
-| `tools/` | 98 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
+| `tests/` | 1282 | pytest suites, one folder per round. |
+| `tools/` | 103 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
 
@@ -737,7 +737,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `synthetic_villa_m6.py` | 698 | CRITICAL | 5 | SYNTHETIC VILLA M6 - completeness cases drawn onto the M2 synthetic villa, with the truth of what was drawn. |
 | `synthetic_villa_m8.py` | 211 | CRITICAL | 4 | SYNTHETIC VILLA M8 - the M6 completeness villa with the DESIGN of every scope element it draws, so that the |
 | `urban_boq_m2.py` | 603 | CRITICAL | 16 | URBAN BOQ M2 - the one-command BOQ with ROUTE G, the generic engine, on top of the frozen M1 pipeline. |
-| `urban_boq_m9.py` | 3061 | HIGH | 31 | URBAN BOQ M9 (S1) - canonical BOQ lines, room material plans and the room-by-room workbook, on top of route G. |
+| `urban_boq_m9.py` | 3061 | HIGH | 32 | URBAN BOQ M9 (S1) - canonical BOQ lines, room material plans and the room-by-room workbook, on top of route G. |
 | `urban_intake.py` | 225 | CRITICAL | 25 | URBAN INTAKE (M2) - one drawing file -> a plain, source-pointed geometry record for the generic engine. |
 | `urban_project_run.py` | 321 | CRITICAL | 1 | URBAN PROJECT RUN (M7) - one manifest per project; the blind protocol enforced by the tool, not remembered. |
 | `urban_structural_boq.py` | 602 | CRITICAL | 3 | URBAN STRUCTURAL BOQ (M1) - one command from a drawing set to a planning BOQ, an exception report, Excel and PDF. |
@@ -752,6 +752,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 `tools/run_pipeline.py` symbols: def bands_to_pairs (L169-178), def side_coverage (L181-206), def host_band_for (L209-224), def raster_overlap (L227-274), def tolerance_sensitivity (L287-328), class NoSpaceMap (L359-376), def load_space_map (L379-399), def run (L402-2060), def main (L2063-2118)
 
 `tools/urban_boq_m9.py` symbols: def revision_set_sha256 (L178-179), def structural_lines (L182-189), def run_rules (L192-196), def write_m9 (L199-238), def cmd_run (L241-261), def cmd_rooms (L264-270), class CompletenessFailed (L283-289), def arch_compute (L292-316), def K_value (L2371-2373), def v21_files (L2539-2612), def cmd_arch (L2739-2896), def cmd_tiles (L2910-2922), def cmd_membrane (L2925-2938), def cmd_rooms_check (L2941-2943), def cmd_rules (L2946-2952), def main (L2955-3056)
+
+## `tools/synth_villa/` (4 modules)
+
+| Module | Lines | Risk | Imp | Purpose |
+|---|---|---|---|---|
+| `__main__.py` | 45 | MEDIUM | 0 | python3 -m tools.synth_villa OUT_DIR [--engine] [--method M]: write the T-019 first-run villas (DXF + truth JSON) |
+| `build.py` | 299 | MEDIUM | 2 | Write a synthetic villa (villas.py) as a DXF and its truth as JSON (T-019). |
+| `compare.py` | 158 | MEDIUM | 2 | Run the architectural engine on a synthetic villa and compare its output with the villa's truth (T-019). |
+| `villas.py` | 218 | MEDIUM | 3 | The three first synthetic villas of T-019 (own geometry, no client drawing). Every coordinate is in metres in the |
 
 ## `pipeline/` (4 modules)
 
@@ -920,6 +929,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/superstructure_beam_rebar_s6_1/` | 1 |
 | `tests/swimming_pool_s8_2/` | 4 |
 | `tests/swimming_pool_s8_2a/` | 2 |
+| `tests/synth_villa/` | 1 |
 | `tests/t004a_label_census/` | 1 |
 | `tests/t022_room_vocab/` | 1 |
 | `tests/t029_storey_vocab/` | 1 |
