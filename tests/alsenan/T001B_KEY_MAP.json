@@ -1,0 +1,39 @@
+{
+ "SCHEMA": "URBAN_ALSENAN_KEY_MAP_V1",
+ "task": "T-001b",
+ "purpose": "Pairs canonical engine BOQ lines (URBAN_CANONICAL_BOQ_LINE_V1, by item_code) with the freelancer's COVER_TOTAL rows of tests/alsenan/registers_b1/BENCHMARK_NORMALISED.json, one reference row per key, for tools/alsenan_scoreboard.py. Built by tools/alsenan_keymap.py. Engine item codes are general; only the reference ids are this project's.",
+ "reference_file": "tests/alsenan/registers_b1/BENCHMARK_NORMALISED.json",
+ "reference_row_kinds": ["COVER_TOTAL"],
+ "rule": "an item code answers at most one key; a key has exactly one reference row; a reference total that sums other mapped rows (e.g. total reinforced concrete) is never keyed, so nothing is counted twice; the ARCH.* geometry records of spaces, walls, thresholds and facade are never keyed (they restate measured surfaces, not BOQ items); ARCH.WINDOW is keyed because it is the engine's only window count",
+ "keys": [
+  {"key": "CONC.BLINDING", "trade": "CONCRETE", "reference_id": "RC:ورقة1:15", "item_codes": ["STR.CONC.BLINDING"]},
+  {"key": "CONC.FOOTING", "trade": "CONCRETE", "reference_id": "RC:ورقة1:17", "item_codes": ["STR.CONC.FOOTING", "STR.CONC.STRAP", "STR.CONC.BOUNDARY_WALL"],
+   "note": "freelancer subtrade FOOTINGS+STRAPS+PERIMETER; STR.CONC.BOUNDARY_WALL is the strip at FOUNDATION level read as the perimeter footing (to be confirmed by the verifier from the drawing)"},
+  {"key": "CONC.GROUND", "trade": "CONCRETE", "reference_id": "RC:ورقة1:18", "item_codes": ["STR.CONC.GROUND_BEAM", "STR.CONC.GROUND_SLAB"],
+   "note": "freelancer subtrade GROUND_SLAB+BEAMS"},
+  {"key": "CONC.COLUMN", "trade": "CONCRETE", "reference_id": "RC:ورقة1:19", "item_codes": ["STR.CONC.NECK", "STR.CONC.COLUMN"],
+   "note": "freelancer subtrade NECKS+COLUMNS+WALLS"},
+  {"key": "CONC.BEAM", "trade": "CONCRETE", "reference_id": "RC:ورقة1:20", "item_codes": ["STR.CONC.BEAM"]},
+  {"key": "CONC.SLAB", "trade": "CONCRETE", "reference_id": "RC:ورقة1:21", "item_codes": ["STR.CONC.SLAB"]},
+  {"key": "CONC.STAIR_DOME", "trade": "CONCRETE", "reference_id": "RC:ورقة1:22", "item_codes": ["STR.CONC.STAIR", "STR.CONC.DOME"],
+   "note": "freelancer subtrade STAIRS+DOMES"},
+  {"key": "CONC.POOL", "trade": "CONCRETE", "reference_id": "RC:ورقة1:23", "item_codes": ["STR.CONC.POOL"]},
+  {"key": "PLASTER.INTERNAL", "trade": "PLASTER", "reference_id": "PLS:الفاتورة:16", "item_codes": ["FIN.PLASTER"],
+   "reference_unit": "m2", "reference_unit_source": "the row's own label (label_ar 'مساح م2', label_en 'plaster m2'); the normalised record has no unit"},
+  {"key": "PAINT.INTERNAL_WALL", "trade": "PAINT", "reference_id": "PNT:الفاتورة:16", "item_codes": ["FIN.PAINT"],
+   "reference_unit": "m2", "reference_unit_source": "the row's own label (label_ar 'صبغ الحوائط م2', label_en 'wall paint m2'); the normalised record has no unit"},
+  {"key": "FLOOR.INTERNAL", "trade": "FLOOR_AREA", "reference_id": "FIN:الغلاف:15", "item_codes": ["FIN.FLOOR.PORCELAIN", "FIN.FLOOR.WET_TILE"],
+   "conditional_items": ["FIN.FLOOR.PORCELAIN [m2]", "FIN.FLOOR.WET_TILE [m2]"],
+   "note": "freelancer total floors = dry floors + wet-room floors (its ceramic sheet sums the two); a space held for wet / dry review answers this key as HELD (its floor sits in a CONDITIONAL scenario set, in no line)"},
+  {"key": "DOORS.ALUMINIUM", "trade": "DOORS", "reference_id": "ALU:الغلاف:16", "item_codes": ["DOOR.EXTERNAL.ALUMINIUM"],
+   "note": "freelancer measures aluminium doors in m2, the engine counts leaves in nr: refused as a unit mismatch, never converted"},
+  {"key": "WINDOWS.ALUMINIUM", "trade": "WINDOWS", "reference_id": "ALU:الغلاف:17", "item_codes": ["ARCH.WINDOW"],
+   "note": "freelancer measures windows in m2, the engine counts windows in nr (ARCH.WINDOW_REVEAL m2 is the reveal, not the window): refused as a unit mismatch"}
+ ],
+ "not_keyed": {
+  "RC:ورقة1:24": "total reinforced concrete: the sum of RC rows 17-23 (77.6305 + 75.09 + 39.7515 + 65.965875 + 59.8174 + 21.8328 + 12.348 = 352.436075); keyed it would count every concrete line twice",
+  "RC:ورقة1:25": "rebar tonnage: not in this task's trades",
+  "ALU:الغلاف:20": "aluminium grand total: sum of rows 16 and 17",
+  "DOOR.INTERNAL.PVC": "engine internal doors: the freelancer workbooks on Drive hold no internal door line (left UNMAPPED, a reference-set gap, not a false positive)"
+ }
+}
