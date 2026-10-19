@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 591 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 592 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 8 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2331 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2333 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1294 | pytest suites, one folder per round. |
+| `tests/` | 1295 | pytest suites, one folder per round. |
 | `tools/` | 104 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (239 modules)
+## `engine/source/` (240 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -450,7 +450,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `delta_release.py` | 159 | CRITICAL | 37 | DELTA RELEASE - a frozen accurate-rebar release plus a delta, never a rewritten historical result. |
 | `detail_evidence.py` | 361 | MEDIUM | 7 | DETAIL EVIDENCE (M3) - typical-detail evidence read from a drawing PDF, in one schema for machine reads (native |
 | `digests.py` | 134 | MEDIUM | 4 | URBAN-SRD-1 and URBAN-RGD-1 — identity digests, NOT reconciliation. |
-| `dimension_evidence.py` | 187 | MEDIUM | 2 | DIMENSION EVIDENCE (M9 Phase 2A P2-09a, ARCH_TAKEOFF_V2.1) - read-only: the authored dimensions of a plan, their |
+| `dimension_evidence.py` | 187 | MEDIUM | 3 | DIMENSION EVIDENCE (M9 Phase 2A P2-09a, ARCH_TAKEOFF_V2.1) - read-only: the authored dimensions of a plan, their |
 | `discovery.py` | 260 | MEDIUM | 6 | DRAWING DISCOVERY AND ADMISSION (M9 S6) - what a drawing holds and whether it may be measured, BEFORE any quantity. |
 | `door_feasibility.py` | 619 | MEDIUM | 3 | DOOR FEASIBILITY (M9 Phase 2B-2, ARCH_TAKEOFF_V2.4 only) - for every door: what the drawing shows, what Urban |
 | `door_model.py` | 837 | HIGH | 13 | DOOR MODEL (M9 Phase 2A P2-03 / P2-04, ARCH_TAKEOFF_V2.1 only) - every drawn door swing belongs to exactly one |
@@ -502,6 +502,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `observations.py` | 208 | HIGH | 14 | Neutral source observations — the ONE shape K1 reads. |
 | `obstacle_authority.py` | 84 | MEDIUM | 2 | OBSTACLE AUTHORITY (R8.15) - which room holes stand on PHYSICAL authority, kept apart from topology geometry. |
 | `ocr_review.py` | 133 | MEDIUM | 2 | OCR REVIEW (M4) - a second, independent reading of every OCR-derived detail-evidence record, compared value by |
+| `opening_area.py` | 525 | MEDIUM | 1 | OPENING AREA (T-078): door and window areas in m2 from the plan width and a PRINTED height. Method piece, NOT wired |
 | `opening_authority.py` | 95 | MEDIUM | 1 | OPENING AUTHORITY (V1) - existence, geometry, function, material and vertical extent of an opening are separate |
 | `opening_census.py` | 474 | CRITICAL | 9 | OPENING CENSUS - wall openings from plan wall faces, with the evidence that makes each one an opening (generic). |
 | `opening_completion.py` | 522 | MEDIUM | 1 | OPENING COMPLETION (V3) - zero-material topology closures for door openings the frozen door-closure rule leaves |
@@ -953,6 +954,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t071_exterior_spaces/` | 2 |
 | `tests/t072_membrane_table/` | 1 |
 | `tests/t077_opening_omissions/` | 1 |
+| `tests/t078_opening_area/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1052,6 +1054,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t072/` | 1 |
 | `research/agents_t074/` | 3 |
 | `research/agents_t077/` | 2 |
+| `research/agents_t078/` | 2 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |
