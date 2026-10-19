@@ -286,7 +286,7 @@ Risk **HIGH** (recommended validation L3). Ask about: waterproof, membrane, uptu
 
 - `engine/source/waterproofing_system.py` (998 lines, HIGH; imported by 10 directly, 44 transitively, SHARED)
 - `engine/source/wp_geometry.py` (317 lines, MEDIUM; imported by 8 directly, 47 transitively)
-- `engine/source/membrane_layout.py` (819 lines, HIGH; imported by 10 directly, 64 transitively, SHARED)
+- `engine/source/membrane_layout.py` (819 lines, HIGH; imported by 11 directly, 66 transitively, SHARED)
 - `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 55 transitively)
 
 **Depends on:** `engine/source/knowledge.py`, `engine/source/arch_rooms.py`, `engine/source/boq_line.py`, `engine/source/material_result.py`, `engine/source/material_spec.py`, `engine/source/plane_poly.py`, `engine/source/project_rules.py`, `engine/source/tile_layout.py`, `engine/source/wp_install.py`
