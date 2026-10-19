@@ -18,11 +18,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `integrations/` | 7 |  |
 | `knowledge/` | 7 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2291 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2292 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1269 | pytest suites, one folder per round. |
+| `tests/` | 1271 | pytest suites, one folder per round. |
 | `tools/` | 96 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -395,7 +395,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_completeness.py` | 773 | MEDIUM | 5 | ARCHITECTURAL COMPLETENESS (M9 S6, ARCH_TAKEOFF_V2) - every physical region and every eligible finish surface ends |
 | `arch_evidence.py` | 263 | MEDIUM | 2 | ARCHITECTURAL EVIDENCE (M4) - what an architectural floor plan says about the ground beams under it (generic; stdlib + |
 | `arch_floor.py` | 183 | MEDIUM | 5 | FLOOR AREA RECONCILIATION (M9 S4) - every m2 of a floor plan in exactly one category, or an explicit residual. |
-| `arch_measure.py` | 1165 | HIGH | 16 | ARCHITECTURAL MEASUREMENT (M9 S2) - canonical BOQ lines per room from the spaces of arch_rooms (generic, stdlib). |
+| `arch_measure.py` | 1165 | HIGH | 17 | ARCHITECTURAL MEASUREMENT (M9 S2) - canonical BOQ lines per room from the spaces of arch_rooms (generic, stdlib). |
 | `arch_plan.py` | 449 | HIGH | 15 | ARCHITECTURAL PLAN READING (M9 S2) - which part of a drawing is which floor plan, and what each layer IS (generic). |
 | `arch_quantity_truth.py` | 536 | MEDIUM | 2 | ARCH_QUANTITY_TRUTH_V1 - generic architectural quantity calculators with explicit evidence states. |
 | `arch_rooms.py` | 2250 | HIGH | 29 | ARCHITECTURAL SPACES (M9 S2, S4) - rooms of one floor plan from its wall linework, on the TS01 topology (generic). |
@@ -811,7 +811,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 |---|---|
 | `tests/` | 210 |
 | `tests/ad1_authority_decisions/` | 2 |
-| `tests/alsenan/` | 17 |
+| `tests/alsenan/` | 18 |
 | `tests/alsenan_arch_truth/` | 1 |
 | `tests/alsenan_control_plane/` | 3 |
 | `tests/alsenan_rebar_source_exhaustion/` | 1 |
@@ -992,6 +992,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t001b/` | 1 |
 | `research/agents_t002a/` | 2 |
 | `research/agents_t002b/` | 1 |
+| `research/agents_t035/` | 1 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |
