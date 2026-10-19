@@ -1,6 +1,7 @@
 # Scoreboard: Alsenan (development villa), engine vs freelancer (Verifier writes)
 
 Development reference only: tuning against it is allowed, so these numbers never prove product accuracy (MISSION.md).
+Verifier 2026-10-19 (18th run, 09:55): rows below still current. Merged T-004a (2622ddd): new tools/label_census.py, a read-only diagnostic imported by no engine, tool or method file, so the Alsenan run is identical by construction; not re-run. Commit measured stays b5475db. Drive read this run (architectural DXF, sha = manifest) to reproduce the T-004a census: 11 room labels lie in no room (4 GF yard / courtyard, 2 GF pool, 4 roof, 1 void), engine gaps not measured against the freelancer (follow-ups T-061, T-062). Verdict counts unchanged.
 Verifier 2026-10-19 (16th run, 07:05): rows below still current. Merged T-048 (fd0d5dd): new engine/source/concrete_curved_strips.py, imported by no engine, tool or method file, so the Alsenan run is identical by construction; not re-run. Commit measured stays b5475db. Drive read this run (structural DXF, sha = manifest) to run T-050's edge trace: the 31.77 m (3.81 m3) footing edge-strip silent omission is confirmed (to be fixed by T-058); verdict on that line stays UNRESOLVED (Q-12 c). Verdict counts unchanged.
 Verifier 2026-10-19 (14th run, 05:00): rows below still current. Merged T-038 (fa93ec2): docs only, no engine, tool or
 method file changed, so the Alsenan run is identical by construction; not re-run. Commit measured stays b5475db. Drive
