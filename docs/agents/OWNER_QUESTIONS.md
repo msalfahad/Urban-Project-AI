@@ -213,7 +213,7 @@ measures the frame on site anyway (practice, not a code clause); (B) if you want
 WAITS ON: the width (and later the m2) of curved glass walls in straight openings on Alsenan and on every later villa (T-077,
 then the door / window area method).
 
-Answer: A (owner, main chat 2026-10-19 20:45). The printed dimension governs: the curved pool glazing is 6.57 m wide.
+Answer: A (owner, main chat 2026-10-19 22:40). "T 16" is the thickness of the sloping slab (waist) and the landings of every stair panel that carries it: main stair waists 2.885 m3 + landings 0.740 m3 = 3.625 m3 (round stair waists once its steps are counted). The entrance flight, which is not in a slab panel, stays held.
 
 ### Q-39 A window that is curved on plan: is its area width the straight chord or the curved length? (worker 2 2026-10-19 17:04; T-078; no-assumptions question: two Urban sources disagree)
 
@@ -316,7 +316,7 @@ whole-tile count by under 1 % (0.6^2 / 0.602^2 = 0.993), well inside the waste (
 want a cutting plan per room like your membrane strips.
 WAITS ON: the tile count (not the tile m2) of every tiled floor and wall on every villa; no Alsenan m2 figure changes.
 
-Answer:
+Answer: joint widths given (owner, main chat 2026-10-19 22:40). His words: "1mm joints for inside, outside 1.5mm." Claude's reading: this is option C, one Urban default joint width, used whenever the project prints none: 1 mm for tiles inside the building, 1.5 mm for tiles outside (balconies, roofs, court, facade). It is not given per tile size; it applies to floors and walls alike (Claude's reading; the owner can restrict it). The m2 line stays by m2 plus the size-based waste rule; the joint enters only the tile count (layout pitch = tile + joint). A joint printed on a project drawing or specification replaces it.
 
 ### Q-43 A room with no floor level printed inside it: which floor level does it get? (worker 3 2026-10-19 19:55; T-081; no-assumptions question)
 
