@@ -50,12 +50,12 @@ regression.
 
 ## Milestones (targets, not promises; the lead re-dates them when evidence says so)
 
-| # | By | Gate | Exit (measured, not claimed) | Status (lead 2026-10-18 22:15) |
+| # | By | Gate | Exit (measured, not claimed) | Status (lead 2026-10-19 00:25) |
 |---|---|---|---|---|
-| M1 | 2026-10-21 | 0 | Scoreboard measured on Alsenan from real files (T-001b); capability matrix merged; synthetic villas merged (T-019) | on track: capability matrix done (T-002b, 5be347d); T-001b TODO now the Alsenan DXFs are on Drive; T-019 TODO (CODEMAP rework only) |
-| M2 | 2026-10-28 | 1 | 0 silent omissions of rooms and openings on every development villa; wet vs dry correct (T-022, T-010, T-023, T-028, T-029, T-004, T-025) | on track, not started on the released path: T-022 merged (b35c944, opt-in), T-034 wires it; T-010 / T-029 / T-004a / T-025a TODO; villa 2 intake T-033 TODO |
-| M3 | 2026-11-11 | 2 | Architectural ledger: blockwork (centreline T-027, heights T-013), plaster, paint, tiles, waterproofing, doors, windows at target WAPE with a verdict on every difference | not started: T-013 TODO; T-027 waits on T-019 |
-| M4 | 2026-11-25 | 3 | Structural ledger: concrete census and rebar by bar population from schedules (T-009 split), formwork, excavation | not started (T-009 queued) |
+| M1 | 2026-10-21 | 0 | Scoreboard measured on Alsenan from real files (T-001b); capability matrix merged; synthetic villas merged (T-019) | at risk: T-001b measured (concrete WAPE 17.03 %, 3 UNRESOLVED Q-12) and T-019 built, but neither can merge: the session permission check refuses merges (owner fix needed); capability matrix done (5be347d) |
+| M2 | 2026-10-28 | 1 | 0 silent omissions of rooms and openings on every development villa; wet vs dry correct (T-022, T-010, T-023, T-028, T-029, T-004, T-025) | at risk: T-034 (V2.10 pool not wet) and T-029 (storey titles) READY but unmerged (same merge block); T-010 waits on Q-13; T-038 basement census, T-004a, T-025a TODO; villa 2 intake T-033 TODO |
+| M3 | 2026-11-11 | 2 | Architectural ledger: blockwork (centreline T-027, heights T-013), plaster, paint, tiles, waterproofing, doors, windows at target WAPE with a verdict on every difference | not started: T-035 facts file (plaster / paint heights) and T-040 window / door m2 TODO; T-013 TODO; T-027 waits on T-019 merge |
+| M4 | 2026-11-25 | 3 | Structural ledger: concrete census and rebar by bar population from schedules (T-009 split), formwork, excavation | not started: T-036 held-concrete census and T-037 Q-12 hand calc TODO; T-009 queued |
 | M5 | 2026-12-09 | 4 | Intake matrix: vector PDF, DWF, scanned PDF and images through the plan reader (T-003), nothing fabricated | not started (T-003 queued) |
 | -  | owner | 5-7 | Blind benchmark, pilot, product: owner only | owner |
 
