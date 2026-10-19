@@ -254,6 +254,15 @@ WAITS ON: the wet-area upturn line on every villa (12.80 lm on Alsenan) and the 
 
 Answer:
 
+Worker 3 addendum (2026-10-19 16:25, T-074 hand table of all 17 Alsenan wet areas incl. the three basin-only spaces and the
+kitchen; numbers only, the options above are unchanged): full boundary 144.73 lm (freelancer 144.61 lm, +0.1 %); in it
+14 doorways (12 x 0.80 + 1.00 + 0.90 = 11.50 lm), 2 open edges with no wall and no door (1.26 m lobby to the stair hall,
+0.90 m basin space to the passage) and 5 doorways that lie BETWEEN TWO WET ROOMS (a W.C. opening into a hand-wash lobby or
+into the laundry: 5 x 0.80 m), which the full-boundary sum counts once in each room. Walls only: 144.73 - 15.50 - 2.16 =
+127.07 lm. Whatever you choose, please also say for the doorway between two wet rooms: (i) upturn on neither side (the
+membrane runs straight through: 144.73 - 8.00 = 136.73 lm under option A), or (ii) on both sides as today. Recommendation:
+(i), there is no wall to turn up against there (practice, not a code clause).
+
 ### Q-36 A new project folder appeared on Drive: may the team open it, and for what? (lead 2026-10-19 16:15; owner direction "Alsenan first", Q-23; no-assumptions question)
 
 THE PROBLEM: at 15:27 UTC today a third project folder was created under "Urban BOQ private data" (next to the Alsenan
@@ -271,6 +280,29 @@ counted as accuracy. Say which files are the old building and which the new desi
 RECOMMENDATION: (A) until you say, because opening a set that may be a blind test cannot be undone and your newest
 direction is Alsenan only; if it is the renovation sample after all, answer (B) or (C).
 WAITS ON: the PDF plan reader work (gate 4) and any renovation work; nothing on Alsenan waits on it.
+
+Answer:
+
+### Q-37 The pantry next to the dining room: where does its waterproofing stop? (worker 3 2026-10-19 16:25; T-074, T-072; no-assumptions question)
+
+THE PROBLEM: the ground-floor pantry is a wet area by your rules (pantry is on the wet list, kitchens are waterproofed like
+a bathroom, Q-30) and the drainage plan shows a floor drain in it, but it has no wall on the dining side: the drawing
+prints it 4.50 x 3.00 m and the dining floor continues past it, so the edge of the membrane is not drawn. The engine holds
+it (no membrane, never 0); the freelancer has no pantry waterproofing at all.
+WHERE TO LOOK: Drive "Alsenan chalet project", p7757_arch_sheet03.pdf (ground floor plan): the room "PANTRY / تحضير" at
++1.00 between the kitchen side and the DINING, printed 450 and 300; sanitary-7757.pdf, ground floor drainage plan: the
+"FDø3"" floor drain in the pantry.
+THE OPTIONS:
+(A) Waterproof the printed 4.50 x 3.00 = 13.50 m2 like a kitchen: upturn on the three walls and across the 4.50 m open
+side (2 x 3.00 + 2 x 4.50 = 15.00 lm, 3.00 m2 at 0.20 m), 2 rolls if done alone; the open side is listed as a threshold
+line.
+(B) Waterproof only a zone round the drain and the sink counter, size given by you or the designer; held until then.
+(C) No waterproofing in the pantry (dry floor, as the freelancer did); the table shows it as "not waterproofed by owner
+decision", 0 rolls.
+RECOMMENDATION: (A), because a pantry with a floor drain takes water like a kitchen and the printed 3.00 m is the line the
+designer drew the room to (practice, not a code clause); ask the designer for a step or a threshold detail at the open side.
+WAITS ON: the pantry row of the membrane table (13.50 m2 under A, about 19 % on top of the 72.12 m2 of wet floors) and every
+open-plan pantry or kitchen on later villas (T-072, T-074).
 
 Answer:
 
