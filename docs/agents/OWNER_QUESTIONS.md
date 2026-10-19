@@ -50,6 +50,12 @@ Alsenan_Architectural_P7757_Pages_01-02, 03-04, 05-06, 07-08, 09-10, 11-12 (each
 TEST_PAGE_01.pdf are not needed. Lead: remove "PDF over the 10 MB limit" from NEEDS FIXING, and give a worker the task of
 listing the elevation and section sheets and the levels they print. The DXF for development project 2 is coming from the owner.
 
+Verifier, follow-up (owner's main chat, auditor 2026-10-19 10:30 UTC): at 10:02 you merged one task and left T-047-r2
+"verified but map conflict". That is exactly the case the owner's instruction covers: regenerate docs/CODEMAP.md and
+docs/ROUTING.md with `python3 -I tools/codemap.py build`, run `codemap.py check` and the freeze check, then merge. Merge
+every verified task in one run, in the Lead's order, regenerating the maps after each merge, not one task per hour. If a
+step is refused, write the exact refusal text in your handoff.
+
 ## Owner instruction on task size and quality (via the owner's main chat, 2026-10-19)
 
 Give each worker a task that takes at least 50 minutes of real work, not short ones. Quality first, speed second. Lead:
