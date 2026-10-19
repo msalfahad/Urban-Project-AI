@@ -1,5 +1,6 @@
 # Questions for the owner (at most 5 open; answer under "Answer:")
 
+Verifier 2026-10-19 22:59: two new no-assumptions questions from the stair verdicts (T-084): Q-50 (round stair: no section, may the plan count 28 be used) and Q-51 (how turning / winder steps are measured). Open now: 2.
 Worker 3 2026-10-19 21:25: two new no-assumptions questions from the stair hand table (T-084): Q-46 (main stair: section A-A and the plans draw a different number of steps, which counts) and Q-47 (is the "T 16" in the stair panels the waist and landing thickness).
 Worker 3 2026-10-19 17:30: two new no-assumptions questions from the reference-book check (T-080): Q-40 (shower walls: waterproofing higher than the 0.20 m upturn, and how high) and Q-41 (falls screed under and protection screed over the membrane: BOQ lines or not).
 Worker 2 2026-10-19 17:04: one new no-assumptions question from the door / window area piece (T-078): Q-39 (width of a window curved on plan: chord as in your Q-32 example, or the inner arc of the Urban curved-aluminium method).
@@ -147,7 +148,26 @@ Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
 
 ## Open
 
-(none open: Lead 2026-10-19 22:40, Q-48 and Q-49 answered by the owner in the Lead session.)
+### Q-50 Round stair in the reception: no section cuts it. May the plan step count be used? (verifier 2026-10-19 22:59; T-084, T-056; no-assumptions question: your Q-46 answer says the section counts, and this stair has no section)
+
+THE PROBLEM: the riser height is the floor height divided by the number of steps. For the round stair (ground floor +1.00 to first floor +5.50 = 4.50 m) no section is drawn, so only the plans give the count: 12 curved + 11 straight + a corner landing + 5 = 28 steps (4.50 / 28 = 16.1 cm). The freelancer prices this stair ("stair 2") at 1.2 x 16.4 x 0.28 = 5.510 m3; the engine holds all of it.
+WHERE TO LOOK: Drive "Alsenan chalet project": p7757_arch_sheet03.pdf (ground floor plan, the round stair in the reception: count the step lines, widths "120" / "157"), p7757_arch_sheet04.pdf (first floor plan, arrival flight "125"); sections p7757_arch_sheet10.pdf (A-A) and the B-B sheet do not cut this stair.
+THE OPTIONS:
+(A) Use the plan count 28 when no section cuts a stair, marked "plan count, no section" and listed for the architect: straight flight 11 x 1/2 x 0.161 x 0.30 x 1.20 = 0.318 m3 and arrival flight 5 steps 0.151 m3 released (0.469 m3); the 12 curved steps wait on Q-51; waists and landing with your Q-47 "T 16" (printed in this stair's slab panel).
+(B) Hold the whole round stair until the architect sends a section (RFI). Nothing released.
+RECOMMENDATION: (A): the plan count gives 16.1 cm, inside the normal 15-17 cm range, and both the architectural and the structural plans draw the same 11-step straight flight (practice, not a code clause); keep the RFI.
+WAITS ON: round-stair concrete and marble steps (freelancer 5.510 m3) on every villa with a stair that no section cuts (T-056).
+
+### Q-51 Turning (winder) steps: how is their concrete measured? (verifier 2026-10-19 22:59; T-084, T-056; no-assumptions question: your Q-19 rule covers straight steps only)
+
+THE PROBLEM: your Q-19 rule is one step = 1/2 x riser x tread x width, for straight steps. Turning steps are triangles or tapers in plan, so "tread x width" does not exist for them. On Alsenan the main stair (ground to first floor) turns with 5 winder steps in its 1.20 x 1.20 corner (section A-A, your Q-46 answer), and the round stair has 12 curved (tapered) steps.
+WHERE TO LOOK: Drive "Alsenan chalet project", p7757_arch_sheet10.pdf (section A-A: the five dashed winder treads between +2.667 and +3.33 below the landing at +3.50) and p7757_arch_sheet03.pdf (ground floor plan: the corner of the main stair and the curved steps of the round stair).
+THE OPTIONS:
+(A) Each turning step = 1/2 x riser x its own plan area; together they are 1/2 x riser x the corner area: main stair 1/2 x 0.1667 x (1.20 x 1.20) = 0.120 m3; the round stair's curved steps the same way from their drawn plan area.
+(B) The turning steps are taken as part of the landing slab (no separate step concrete): 0 m3 extra; their marble is still counted per step.
+(C) Hold turning steps until a stair detail prints them. Nothing released.
+RECOMMENDATION: (A): it is the same wedge rule as your straight steps, applied to the drawn plan area, and it does not count the landing twice (practice, not a code clause).
+WAITS ON: main-stair winders 0.120 m3 and the 12 curved round-stair steps, on every villa with turning steps (T-056).
 
 ## Answered
 
