@@ -44,7 +44,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: cad, dwg, dxf, block, 
 
 **Depends on:** `engine/source/findings.py`, `engine/source/observations.py`, `engine/source/capability.py`, `engine/source/decoder_pins.py`, `engine/source/realised.py`, `engine/source/cad/affine.py`, `engine/source/cad/kernel_ocs.py`, `engine/source/digests.py`
 
-**Other current modules:** `affine.py`, `census.py`, `kernel_ocs.py`, `unit_evidence.py`, `cad_guards.py`, `cad_heal.py`, `cad_limit_census.py`, `cad_oracle.py`, `cad_profile.py`, `cad_text.py`, `canonical_build.py`, `canonical_input.py`, `capability.py`, `conservation.py`, `decoder_pins.py`, `realised.py`
+**Other current modules:** `affine.py`, `census.py`, `kernel_ocs.py`, `shx_arabic.py`, `unit_evidence.py`, `cad_guards.py`, `cad_heal.py`, `cad_limit_census.py`, `cad_oracle.py`, `cad_profile.py`, `cad_text.py`, `canonical_build.py`, `canonical_input.py`, `capability.py`, `conservation.py`, `decoder_pins.py`, `realised.py`
 
 **Earlier generations and tools** (check which method uses them before reuse): `engine/cad_adapter.py`, `engine/cad_source.py`, `tools/audit_cad_source.py`, `tools/dwg_adapter.py`
 
