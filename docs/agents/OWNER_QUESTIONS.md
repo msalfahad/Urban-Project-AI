@@ -143,6 +143,10 @@ Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
 ## Open
 
 
+(none open, lead 2026-10-19 14:55)
+
+## Answered
+
 ### Q-29 Domes: are they concrete at all, and does the roof membrane run under them? (lead 2026-10-19 14:30; Q-24 and Q-27 answers, T-049, T-071, T-072; no-assumptions question)
 
 THE PROBLEM: in your roof answer you wrote "doom will not be concrete", but the structural drawings detail two dome shells
@@ -168,6 +172,8 @@ shells: a membrane that ends at a dome base with an upturn is what your answer d
 separate finish is measured once, as its own item.
 WAITS ON: dome concrete lines and the roof membrane rows on Alsenan (T-049, T-071, T-072).
 
+Answer (owner, main chat, 2026-10-19 14:45 UTC), his words: "Design confirm that 3 domes are concrete and rebar from plans. but after discussing with alsenan owner he said he want them to be not concrete and use the sun light as skylight space. so it will be an open area." = a CLIENT CHANGE to the design: none of the three domes is concrete (no dome concrete, no dome rebar); each dome position is an open skylight area. Lead (applied, not the owner's words): the dome concrete lines leave the BOQ as a recorded scope change (reason CLIENT_CHANGE_DOMES_TO_SKYLIGHT, shown, never silently dropped); the freelancer's 6.78 m3 is a RULE_DIFFERENCE (design scope vs client scope); the roof membrane stops at each opening with the 0.20 m upturn round it (Q-24 answer); what closes the skylight (glazing, frame) is not specified, so it is a HELD item of its own; whether the roof slab is drawn continuous under a dome (then the opening size is not printed) is checked from the drawings and asked if so.
+
 ### Q-30 Kitchens: waterproofed like a bathroom, floor only, or not at all? (lead 2026-10-19 14:30; membrane table requirement, T-072, T-074; no-assumptions question)
 
 THE PROBLEM: your membrane-table instruction names kitchens with bathrooms and roofs, but no Urban rule covers kitchen
@@ -183,6 +189,8 @@ THE OPTIONS:
 RECOMMENDATION: (A): your instruction puts kitchens in the same list as bathrooms, and a kitchen floor with a floor
 drain and a sink takes water the same way; the bathroom rule then needs no new exception.
 WAITS ON: the kitchen rows of the membrane table and the rolls to buy (T-072, T-074).
+
+Answer (owner, main chat, 2026-10-19 14:45 UTC) = option A with his worked example, his words in short: "Waterproofing Membrane Example — Kitchen 3 m x 4 m. Roll 1 m wide x 10 m long. Overlap 10 cm. Wall upturn 20 cm, folded from the same membrane, not a separate strip. Across the 3 m width: strip 1: 1.00 - 0.20 upturn = 0.80 m floor coverage; strip 2: 1.00 - 0.10 overlap = 0.90 m; strip 3: 0.90 m; strip 4: 0.70 - 0.10 overlap - 0.20 upturn = 0.40 m; total 3.00 m. Length of each strip: 4.00 + 0.20 + 0.20 = 4.40 m. First 3 strips 3 x 1.00 x 4.40 = 13.20 m2; fourth strip 0.70 x 4.40 = 3.08 m2; total membrane cut 16.28 m2. Kitchen floor 12.00 m2; wall perimeter 14.00 lm; floor + upturn surface 14.80 m2; membrane cut including basic overlaps 16.28 m2; roll 10 m2; rolls required 2; remaining gross offcuts 3.72 m2. The wall upturn uses part of the same 1 m-wide membrane, reducing floor coverage; the 10 cm overlap also reduces it. Do not calculate membrane purchases using floor area / roll area alone. This example assumes a simple strip layout; extra corner reinforcement, drain detailing and additional manufacturer-required laps are not included." Lead (applied): kitchens are waterproofed like a bathroom; this example is the hand fixture of the membrane table (T-072) and the method of the hand table (T-074). It does not fix a rule for which way the strips run in other rooms: where direction changes the result, both are reported and the engine's cutting plan is compared, never one picked.
 
 ### Q-28 Boundary wall at foundation level: which section, and is the part inside a footing counted again? (worker 2 2026-10-19 14:10; T-065; no-assumptions question)
 
@@ -210,7 +218,7 @@ again inside a footing would count the same concrete twice (practice, not a code
 WAITS ON: the boundary-wall foundation line on Alsenan and the plot-edge member ledger the engine needs on every villa
 (T-065 follow-up).
 
-## Answered
+Answer (owner, main chat, 2026-10-19 14:45 UTC), his words: "The proposed calculation for option A is arithmetically correct: (91.94-21.45) x 0.2 x 0.6 = 8.459 m3. Option B is also arithmetically correct: 91.94 x 0.2 x 0.6 = 11.033 m3. But the critical question is whether the 21.45 m is genuinely already included in the footing concrete, and whether the 20 x 60 cm section applies to that entire beam. I would choose A provisionally, not as a released quantity, subject to the structural section and footing intersections being verified. Deducting a beam length simply because it crosses footings can also be wrong if the footing and beam occupy different elevations. The report's other boundary beam figure of 3.526 m3 relates to a 20 x 40 cm ground beam. These must be treated as potentially different structural members, not reconciled by choosing whichever figure resembles the freelancer's." = A PROVISIONAL, NOT RELEASED. Lead (applied): the band shows 8.459 m3 as PROVISIONAL (not in any total) until (1) a section or schedule proves 20 x 60 along the whole band and (2) at each footing crossing the top and bottom levels of band and footing are read from sections: only the overlapping volume is deducted, none where they sit at different elevations; the natural-ground 20 x 40 boundary beam (3.526 m3) is a separate member and is never matched to the freelancer's figure (T-073).
 
 ### Q-26 Pool: is the pool floor flat at the printed 1.15 m depth, or sloped? (worker 1 2026-10-19 12:39; T-063; no-assumptions question)
 
