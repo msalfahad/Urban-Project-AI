@@ -23,6 +23,7 @@ Schedule (UTC): worker 1 at :19, worker 2 at :39, worker 3 at :59 every hour; ve
   another branch into a task branch, seen 2026-10-18 on T-019): create a fresh branch from the current working branch,
   re-apply your own task changes, regenerate CODEMAP with the tool, re-run the tests and push that branch
   (agents/task-<id>-r2), naming it on the board.
+- Verifier merges (owner, 2026-10-19, OWNER_QUESTIONS.md "Owner instruction on merging"; copied here by the lead): merging is not an owner job. The verifier merges a verified task into the working branch right away. When the merge conflicts ONLY in the generated files docs/CODEMAP.md and docs/ROUTING.md, regenerate them with `python3 -I tools/codemap.py build` (never by hand), check with `codemap.py check` and the freeze check, then merge. No -r2 / -r3 worker rebuild is needed for a map-only conflict. If a step is refused, the exact refusal text goes on the board and into the lead report.
 - Verifier: before checking a READY task, mark it "VERIFYING (verifier, UTC time)" on the board and push; another
   verifier run skips tasks marked VERIFYING less than 2 h ago.
 - Lead keeps 8-12 TODO tasks (at most 2 Track B) so no worker finds an empty board.

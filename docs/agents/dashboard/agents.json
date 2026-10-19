@@ -3,46 +3,46 @@
   "agent": "Lead planner",
   "role": "Plans the work, keeps the board and milestones, asks you questions",
   "cadence": "every 2 h (:09)",
-  "last_run": "2026-10-19T08:10:23Z",
+  "last_run": "2026-10-19T10:10:20Z",
   "result": "running",
-  "working_on": "Board refilled to 12 TODO: T-061 room-label guard, T-062 roof/pool diagnostic, T-047/T-057 r2; merges stuck (owner)",
-  "as_of": "2026-10-19T08:20:00Z"
+  "working_on": "Owner answers Q-12 to Q-21 turned into tasks; board at 11 TODO (50-minute packages); new question Q-22 (pool pump room)",
+  "as_of": "2026-10-19T10:25:00Z"
  },
  {
   "agent": "Worker 1",
   "role": "Builds one board task per run on its own branch",
   "cadence": "hourly :19",
-  "last_run": "2026-10-19T07:24:30Z",
-  "result": "ok",
-  "working_on": "no task: 07:24 run refused cloning the working branch (released T-004a); last delivered T-047 Arabic SHX decoder",
-  "as_of": "2026-10-19T08:20:00Z"
+  "last_run": "2026-10-19T10:19:00Z",
+  "result": "running",
+  "working_on": "Room-label guard: 11 Alsenan labels in no closed room become held records (T-061, claimed 10:20); nothing claimed 07:29-10:20",
+  "as_of": "2026-10-19T10:25:00Z"
  },
  {
   "agent": "Worker 2",
   "role": "Builds one board task per run on its own branch",
   "cadence": "hourly :39",
-  "last_run": "2026-10-19T07:39:28Z",
-  "result": "ok",
-  "working_on": "T-004a room label census: delivered READY",
-  "as_of": "2026-10-19T08:20:00Z"
+  "last_run": "2026-10-19T09:39:33Z",
+  "result": "running",
+  "working_on": "Pool check list rework: pump room and main manholes, house pump not taken as pool pump (T-057 r2)",
+  "as_of": "2026-10-19T10:25:00Z"
  },
  {
   "agent": "Worker 3",
   "role": "Builds one board task per run on its own branch",
   "cadence": "hourly :59",
-  "last_run": "2026-10-19T08:00:02Z",
-  "result": "ok",
-  "working_on": "no task at 08:00 (3.5 min run); T-058 claim from 07:00 pushed nothing, back to TODO",
-  "as_of": "2026-10-19T08:20:00Z"
+  "last_run": "2026-10-19T10:00:13Z",
+  "result": "running",
+  "working_on": "Delivered footing-edge guard: 78.54 m measured + 13.40 m held of the 91.94 m band, engine had 60.17 m (T-058, READY)",
+  "as_of": "2026-10-19T10:25:00Z"
  },
  {
   "agent": "Verifier",
   "role": "Checks finished tasks, merges or rejects, keeps the scoreboard",
   "cadence": "hourly :49",
-  "last_run": "2026-10-19T07:50:31Z",
+  "last_run": "2026-10-19T09:50:10Z",
   "result": "ok",
-  "working_on": "T-047, T-057 reviewed (map conflicts, tests refused); last merge T-048",
-  "as_of": "2026-10-19T08:20:00Z"
+  "working_on": "Merged room-label census; Arabic SHX decoder verified, waits on map merge; 9 verified tasks to merge (T-004a merged)",
+  "as_of": "2026-10-19T10:25:00Z"
  },
  {
   "agent": "Research scout",
@@ -50,7 +50,7 @@
   "cadence": "daily 23:50 UTC",
   "last_run": "2026-10-18T23:51:05Z",
   "result": "ok",
-  "working_on": "R-01 to R-03 open (next run 23:50 UTC)",
-  "as_of": "2026-10-19T08:20:00Z"
+  "working_on": "Requests open: section levels (heights), Arabic SHX font tables, storey detection (next run 23:50 UTC)",
+  "as_of": "2026-10-19T10:25:00Z"
  }
 ]

@@ -10,6 +10,12 @@ heights for real plans. Gap (Alsenan, T-001b): plaster 1151.14 m2 and paint 1191
 lines HELD). Look for: methods to read level marks (+3.50, F.F.L., S.S.L., T.O.S.) and dimension chains from DXF section
 and elevation sheets and bind them to plan storeys; level-symbol detection; open-source code (permissive licence) for
 section parsing; how QS practice derives plaster height (slab soffit vs false ceiling). Unblocks T-035, T-013, T-031.
+Update (lead 2026-10-19 10:15, owner answer Q-14): the owner set the structural slab at 0.16 m unless a drawing or detail
+says otherwise and asked that each floor report ground level, FFL, structural slab top, soffit, floor-to-floor, clear
+height, false-ceiling height, plaster height and paint height separately, nothing subtracted by assumption. The
+architectural sections are now readable as six PDF parts (vector, read visually). Sharpest question: how to tell these
+level kinds apart on Gulf section and elevation sheets (symbols, prefixes such as F.F.L., S.S.L., T.O.S., Arabic
+equivalents) and how to bind them to plan storeys. Unblocks T-063, T-013, T-046.
 
 ### R-02 Structural element populations from schedules and tables in DXF (lead 2026-10-19)
 Problem: column and ground-beam concrete is held because element sizes and heights are not tied to every instance.

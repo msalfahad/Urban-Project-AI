@@ -1,6 +1,6 @@
 # Questions for the owner (at most 5 open; answer under "Answer:")
 
-Lead 2026-10-19 (owner reply): Q-18 answered (c) held and always visible; Q-19 answered for stairs and pools (see Answered); new Q-20 (stair waist and landings). Lead 2026-10-19 04:10: two new questions Q-18 (dome size basis) and Q-19 (may engine conventions release concrete when the drawing prints nothing); eight are open (Q-12 to Q-19): the list is long because each one stops an assumption. Q-12 now has the T-037 hand calculation (see its note). Lead 2026-10-19 02:20: three new questions Q-15 (development project 2 plans file), Q-16 (unlabelled beam span), Q-17 (typed drawing sizes in the concrete score); with Q-12, Q-13 and Q-14 six are open: the list is long because each one stops an assumption. Lead 2026-10-19 00:15: no new question; Q-12 (concrete verdicts) and Q-13 (toilet lines vs chair) open. Window / aluminium door m2 is covered by UP-OPEN-SCHED-001 and UP-DOOR-AREA-001, so it became task T-040, not a question. Lead 2026-10-18 20:05 (owner session): Q-06, Q-07, Q-09 answered by the owner (see Answered); no question open. Lead 2026-10-18 21:25: Q-10 (development project 2 DWG) answered; Q-11 answered (owner uploads the Alsenan DXFs); no question open. Lead 2026-10-18 15:40: no new question; Q-06 and Q-07 still open (no owner answer yet). The T-019 wall-length basis finding is settled by UP-WALL-GEOM-001 (masonry run = centreline, owner-approved), so it became task T-027, not a question. Lead adds questions an agent cannot decide from drawings, rules or evidence. Answered questions move to the bottom.
+Lead 2026-10-19 10:15: the owner answered Q-12, Q-13, Q-14, Q-15, Q-16, Q-17, Q-20 and Q-21 in the main chat (08:51); all eight moved to Answered with their tasks updated (T-065, T-010, T-063 / T-013, T-066, T-043, T-064, T-056, T-042). One new no-assumptions question: Q-22 (which pump room is the pool's). Open now: 1. Lead 2026-10-19 (owner reply): Q-18 answered (c) held and always visible; Q-19 answered for stairs and pools (see Answered); new Q-20 (stair waist and landings). Lead 2026-10-19 04:10: two new questions Q-18 (dome size basis) and Q-19 (may engine conventions release concrete when the drawing prints nothing); eight are open (Q-12 to Q-19): the list is long because each one stops an assumption. Q-12 now has the T-037 hand calculation (see its note). Lead 2026-10-19 02:20: three new questions Q-15 (development project 2 plans file), Q-16 (unlabelled beam span), Q-17 (typed drawing sizes in the concrete score); with Q-12, Q-13 and Q-14 six are open: the list is long because each one stops an assumption. Lead 2026-10-19 00:15: no new question; Q-12 (concrete verdicts) and Q-13 (toilet lines vs chair) open. Window / aluminium door m2 is covered by UP-OPEN-SCHED-001 and UP-DOOR-AREA-001, so it became task T-040, not a question. Lead 2026-10-18 20:05 (owner session): Q-06, Q-07, Q-09 answered by the owner (see Answered); no question open. Lead 2026-10-18 21:25: Q-10 (development project 2 DWG) answered; Q-11 answered (owner uploads the Alsenan DXFs); no question open. Lead 2026-10-18 15:40: no new question; Q-06 and Q-07 still open (no owner answer yet). The T-019 wall-length basis finding is settled by UP-WALL-GEOM-001 (masonry run = centreline, owner-approved), so it became task T-027, not a question. Lead adds questions an agent cannot decide from drawings, rules or evidence. Answered questions move to the bottom.
 Decisions still queued behind these (from the master study `14_OWNER_DECISIONS_QUEUE.csv`): D-17 review-space wet / dry,
 WP-KITCHEN membrane scope, WP-JOINT details, WIN-REVEAL finish, STUB-LIMIT, MEAS-STD, ROOF-FIN, BLIND-AUTH.
 
@@ -94,6 +94,30 @@ Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
    become the rule.
 
 ## Open
+
+### Q-22 Pool check: which pump room is the POOL pump room? (lead 2026-10-19 10:15; T-057; no-assumptions question)
+
+THE PROBLEM: your rule (Q-19 answer) says: whenever a villa has a pool, check for the pool pump room. Many villas also
+have a pump for the house water (ground tank and booster pump). A space or label that only says "PUMP" does not say which
+system it serves, and no Urban rule tells the engine whether such a room counts as the pool's. Nothing is measured here;
+it decides whether the pool check says FOUND or NOT FOUND.
+WHERE TO LOOK: Alsenan, architectural plans (Drive "Alsenan chalet project", the P7757 DXF or the six
+"Alsenan_Architectural_P7757_Pages_.." PDFs): search for the text "PUMP". The verifier read that label as the house water
+pump; you checked by hand that Alsenan has no pool pump room.
+THE OPTIONS:
+(A) Only a space or equipment block that names the pool counts (for example "pool pump", "pool filtration", "pool plant",
+    "balance tank", or the Arabic for pool pumps / pool filter room). A plain "PUMP" room is listed as "pump room, use not
+    stated" for a person to confirm, and the pool check shows POOL PUMP ROOM NOT FOUND. Alsenan: NOT FOUND (matches your
+    hand check), plus one "use not stated" item.
+(B) Any pump room on a villa that has a pool counts as the pool pump room. Alsenan: FOUND (contradicts your hand check).
+(C) Plain "PUMP" labels are ignored. Alsenan: NOT FOUND, but on another villa a real pool plant room labelled only
+    "PUMP" would be missed with no flag.
+RECOMMENDATION: A. Practice, not a code clause: in Kuwait villas the house water pumps (ground tank and booster) and the
+pool filtration plant are separate systems and are often in separate rooms; counting a house pump as the pool plant
+would hide a missing pool plant room, while A keeps every uncertain case visible for a person to decide.
+Waits on: the pool check list on every villa (T-057; no quantity changes).
+
+## Answered
 
 ### Q-12 Concrete: three places where the engine and the freelancer differ (verifier 2026-10-18 22:58; T-001b)
 
@@ -249,8 +273,6 @@ scored) until the designer prints the footing level.
 Waits on: neck column concrete, excavation and backfill on every villa (T-044, T-045, T-046).
 
 Answer: C until the complete foundation level arrangement is verified (owner, 2026-10-19). The notes recommend excavation at least 1.50 m below the existing plot level; this does not by itself fix the founding level. The engine must understand the process, not subtract 10 cm. Distinguish: existing ground, excavation formation level, bottom and top of blinding, bottom and top of footing, column-neck start and end, finished ground and floor levels. Illustration only: formation -1.50 m with 0.10 m blinding gives footing underside -1.40 m; footing underside required at -1.50 m needs excavation to -1.60 m; neither is automatically right for Alsenan. Account for unsuitable or uneven soil needing extra excavation, approved replacement fill, compaction and blinding. Do not assume loose sand is suitable backfill, that deeper is better, or that extra fill or concrete strengthens a foundation; no change of founding level or fill material without engineering approval. Measure separately: excavation, disposal of unsuitable material, approved replacement fill, compaction, blinding concrete, footings, column necks, backfill. Do not compute the 28 column necks on an unresolved foundation datum.
-
-## Answered
 
 ### Q-18 Dome sizes: are the printed 442 and 190 measured to the outside or the inside of the shell? (lead 2026-10-19 04:10; T-037, T-049)
 

@@ -3,7 +3,40 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
-## Recurring causes (lead 2026-10-19 08:15)
+## Recurring causes (lead 2026-10-19 10:15)
+
+1. **Verified work does not reach the working branch** (9 tasks: T-029, T-034, T-011, T-033, T-036, T-037, T-041, T-044 r2,
+   T-047 r2; plus T-019). Why not earlier: 22:58 - 01:20 the session check refused the verifier's merge pushes; since 02:00
+   merges work, but every task regenerates docs/CODEMAP.md, so each merge makes every other READY branch conflict in that
+   generated file, the verifier's own instructions say "if it conflicts, do not resolve it", the r2 rebuild route (T-052)
+   was refused (cross-branch fetch) and the verifier checks at most 2 tasks a run. Merged today: 6 (T-001b, T-035, T-025a,
+   T-038, T-048, T-004a), none of the 8 the owner listed. Decision: the owner's merge instruction (regenerate the maps
+   with the tool, then merge) is now in TEAM.md and at the top of the board with a merge order; NEEDS FIXING by the owner:
+   the verifier's scheduled instructions (step 4) still say not to resolve conflicts.
+2. **Scheduled sessions refuse steps**: this lead run's `git clone` of agents/control and a raw-file download were refused
+   ("[Untrusted Code Integration]"); a docs-only sparse clone worked. Worker 1 claimed nothing from 07:29 to 10:20 (its 09:19
+   run lasted 3.6 min with 9 claimable TODO); its instructions are the older text (private-repository clone first, no
+   parallel rule, no Drive-first). NEEDS FIXING by the owner: give worker 1 the same instructions as workers 2 and 3.
+3. **Arabic SHX text**: decoder verified (121 / 121); the second family (47 architectural room labels) is unread (R-02).
+4. **Values the drawing does not print stop quantities**: the owner answered all eight open questions (Q-12 - Q-17,
+   Q-20, Q-21); each became a task that reads the drawings first and holds what stays unprinted.
+5. **Silent loss of drawn elements**: footing edge band explained (5-point sample, not covered length) and guarded
+   (T-058 READY); room labels in no room (T-061 TODO).
+6. **Thin tasks**: owner rule 2026-10-19: one package of at least 50 minutes per worker run; slices folded (T-030 into
+   T-010, T-054 into T-016a; T-043 + Q-16 spans; T-042 + foundation levels; T-056 steps + waist + landings).
+
+## 2026-10-19 10:15 (lead run)
+
+| Task | Result | What went well | What went wrong and why (numbers) | Decision | Tasks created |
+|---|---|---|---|---|---|
+| T-004a room label census | WORKED (merged 2622ddd) | Verifier reproduced the real census on the Drive DXF: 41 labels, 28 measured, 1 held, 1 unsupported, 11 silent, 47 unread SHX | 11 labelled spaces have no line | Guard and diagnostic already tasked | (T-061, T-062 TODO) |
+| T-047 r2 Arabic SHX decoder | WORKED (verified 09:55, not merged) | L3 0 new failures; 121 of 121 Arabic SHX texts decoded on the real probe | Map-only conflict with 2622ddd (cause 1) | Verifier merges with map regeneration; no r3 | - |
+| T-058 footing-edge guard | WORKED, pending verification (READY 10:14) | 26 hand tests (20 x 10 plot 59.20 m / 7.104 m3, rotated, mirrored, mm); Alsenan band 91.94 m = 78.54 m measured (9.425 m3) + 13.40 m held (1.608 m3) vs frozen 60.17 m (7.220 m3), freelancer 71.7 m (8.604 m3); cause named | Run took 14 min (owner wants 50-minute packages); runner reads only closed outlines on two member layers; handoff says 10:45 UTC for a 10:14 commit; band still counted against Q-12 (c), which the owner has now answered | Verifier next; wiring T-060 after merge; member split T-065 | T-065 |
+| T-057 r2 pool check list | in progress (worker 2, 09:40) | - | - | Owner question for the generic pump label | Q-22 |
+| Worker 1 runs 08:19, 09:19 | FAILED (no claim) | - | No claim, no push; old instructions (its 10:19 run then claimed T-061) | Owner aligns the instructions | - |
+| Owner answers Q-12 - Q-17, Q-20, Q-21 | decided | Answers name exact sheets and procedures | - | Q-12 -> T-065; Q-13 -> T-010 TODO (+T-030); Q-14 -> T-063, T-013 note; Q-15 -> T-066; Q-16 -> T-043; Q-17 -> T-064; Q-20 -> T-056; Q-21 -> T-042, T-045 / T-046 held | T-063, T-064, T-065, T-066 |
+
+## Recurring causes (lead 2026-10-19 08:15, superseded)
 
 1. **Verified work does not reach the working branch** (worse: 8 -> 11 tasks). T-036, T-033, T-029, T-034, T-011, T-037,
    T-041, T-044-r2 verified; T-047, T-057 reviewed; T-050 rejected on the stale map only. Every task regenerates
