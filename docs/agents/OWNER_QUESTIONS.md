@@ -166,7 +166,7 @@ measures the frame on site anyway (practice, not a code clause); (B) if you want
 WAITS ON: the width (and later the m2) of curved glass walls in straight openings on Alsenan and on every later villa (T-077,
 then the door / window area method).
 
-Answer:
+Answer: A (owner, main chat 2026-10-19 20:45). The printed dimension governs: the curved pool glazing is 6.57 m wide.
 
 ### Q-39 A window that is curved on plan: is its area width the straight chord or the curved length? (worker 2 2026-10-19 17:04; T-078; no-assumptions question: two Urban sources disagree)
 
@@ -190,7 +190,7 @@ aluminium supplier prices curved windows on the straight opening.
 WAITS ON: the area of the curved first-floor window on Alsenan (9.42 to 11.51 m2 of the freelancer's 116.9 m2 of
 windows) and every window curved on plan on later villas (T-078, the door / window area method).
 
-Answer:
+Answer: C (owner, main chat 2026-10-19 20:45). The curved window over the pool is measured on the outer arc: 3.29 x 3.50 = 11.51 m2. Applies to windows curved on plan (Claude's reading: the outer-arc rule covers every window curved on plan; Q-38 stays the printed width for the glass wall in a straight opening).
 
 ### Q-40 Showers: does the waterproofing go higher up the walls of the shower than the 0.20 m upturn? (worker 3 2026-10-19 17:30; T-080 reference-book check; no-assumptions question)
 
@@ -217,7 +217,7 @@ this as a frequent failure, while full height (C) costs more and waits on the he
 WAITS ON: the shower-tanking line of every bathroom with a shower (on Alsenan at least these two first-floor showers;
 the others are counted once the rule is set) and the membrane rolls to buy in the membrane table (T-072 / T-076).
 
-Answer:
+Answer: A (owner, main chat 2026-10-19 20:45). His words: "Keep same membrane I gave instruction for, the wet area will be fully tiled, so no need to make extra waterproof." No extra shower tanking: 0.20 m upturn on all walls as in the owner's membrane method; shower walls are tiled to full height and need no extra membrane.
 
 ### Q-41 Screeds: are the falls screed under the membrane and the protection screed over it part of the BOQ? (worker 3 2026-10-19 17:30; T-080 reference-book check; no-assumptions question)
 
@@ -245,7 +245,7 @@ code clause).
 WAITS ON: screed lines for wet areas and roofs on every villa (on Alsenan 72.12 m2 of wet floors and 204-285 m2 of
 roofs), and the "screed / build-up" and "roof screed to falls" families of the BOQ coverage list (T-080).
 
-Answer:
+Answer: (owner, main chat 2026-10-19 20:45) His words: "screed or cement? depends on the space: if it is roof or balconies it is screed; bathrooms, cement is enough." Claude's reading (confirm in the next question to the owner, Q-45): roofs and balconies get a screed layer over the membrane as its own line (falls / protection); bathrooms and other wet rooms get a cement mortar bed under the tiles only (no separate screed line). Thickness is not given: HELD until the owner or a detail gives it.
 
 ### Q-42 Tiles: does the gap between tiles (the joint) change how many tiles the BOQ buys? (lead 2026-10-19 18:15; T-080 reference-book check L-1; no-assumptions question)
 
@@ -325,6 +325,29 @@ WAITS ON: the dome-ring beam concrete and rebar on Alsenan, and the skylight ope
 T-049, T-085).
 
 Answer:
+
+### Q-45 Cement and sand for floor and wall tiling, room by room: which mortar bed, mix and bag size? (owner request 2026-10-19 20:45; main chat; no-assumptions question)
+
+THE REQUEST (owner): "I need the BOQ of the total area, floors and wet-area walls and floors, room by room, with sand (m3) and cement bags needed, so I can calculate how many cement and sand I need for porcelain, marble stairs and the bartash (برطاش) for wet areas."
+THE PROBLEM: the areas are the engine's own (floor m2 and wet-wall m2 per room); the cement and sand are not: the Urban rule store has no mortar rule (no bed thickness, no mix, no bag weight, no sand volume per bag, no waste). Each of these numbers moves the cement by 20 to 100 %, so the engine must not choose them.
+WHERE TO LOOK: the room-by-room floor and wet-area figures (wet floor 72.12 m2 on 17 areas, tile floors by room, stairs from section A-A); Drive "Engineering Sources - Urban Projects" / 01 Kuwait References / the 1990 Public Works specification, chapters 09300 (floors) and 09400 (wall cladding), for the Kuwait mortar bed.
+WHAT I READ "BARTASH" AS (confirm): the cement-sand mortar bed and falls screed under the tiles of wet areas (the layer above the membrane, bathrooms/kitchens/balconies), separate from the tile adhesive.
+THE ANSWERS NEEDED (give one value each, or accept the practice values below):
+ 1. Bed thickness: floors (porcelain) __ cm; wet-area floors with falls (bartash) __ cm; marble stairs (treads, risers) __ cm; wall tiles in wet areas (mortar behind tile) __ cm.
+ 2. Mix by volume cement:sand: floors 1:__ ; bartash 1:__ ; stairs 1:__ ; walls 1:__.
+ 3. Cement bag weight: 50 kg (Kuwait standard bag) and cement per m3 of mortar for each mix, or the rule "bags per m3".
+ 4. Sand: m3 per m3 of mortar (loose volume) and waste/shrink %.
+ 5. Waste on mortar: __ %.
+PRACTICE VALUES FOR A QUICK START (my suggestion, practice not a code clause; everything labelled PROVISIONAL until you confirm): floors 5 cm bed, 1:4; wet-area bartash 4 cm average (falls), 1:4; stairs 3 cm, 1:3; wall mortar 2 cm, 1:4; bag 50 kg; 1 m3 of 1:4 mortar about 8 bags and 1.1 m3 loose sand; waste 5 %. Worked example: a 10 m2 floor at 5 cm = 0.50 m3 mortar = about 4 bags and 0.55 m3 sand.
+THE OPTIONS:
+(A) You give the numbers above; the engine reports per room: floor m2, wet floor m2, wet wall m2, mortar m3, cement bags, sand m3, then a project total, each marked with the rule source.
+(B) The practice values above are used now, every cement and sand figure marked PROVISIONAL (not released) until you confirm each value.
+(C) Only the areas now (floor m2, wet floor m2, wet wall m2 per room, stairs); cement and sand wait for your numbers.
+RECOMMENDATION: (B), so you can start ordering estimates today, with the areas released and the materials clearly provisional; replace the values in one place when you confirm them.
+WAITS ON: the cement and sand table (new task, after the room areas from the floor-finish pieces are wired). Alsenan areas that are still held (rooms with no level, tiles per room) show HELD in the table, never 0.
+
+Answer:
+
 
 ## Answered
 
