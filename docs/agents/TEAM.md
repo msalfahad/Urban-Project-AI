@@ -31,6 +31,10 @@ Schedule (UTC): worker 1 at :19, worker 2 at :39, worker 3 at :59 every hour; ve
 Owner questions and anything the owner must check (owner, 2026-10-18): plain words, a real example from the drawing
 he can check by hand, simple choices; see OWNER_QUESTIONS.md "How to write a question for the owner".
 
+## Run log: every run reports to the Lead (owner, 2026-10-19)
+
+The owner does not chase agents. At the END of every run, also a failed, refused or empty one, each agent adds one line to docs/agents/RUN_LOG.md (format and the docs-only clone fallback are at the top of that file). The Lead reads every line since its last run, acts on each problem and tells the owner only what needs him (a decision, a setting only he can change). Agents do not push-notify the owner about their own failures; a NEW owner question is still notified.
+
 ## Reporting results to the owner (owner, 2026-10-19; applies to every agent)
 
 The owner reads results as engineering progress, not task numbers. Every handoff, verifier verdict, lead report and scout
