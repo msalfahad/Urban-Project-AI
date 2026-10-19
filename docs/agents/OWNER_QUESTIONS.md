@@ -66,6 +66,11 @@ T-029 980e489, T-034 faad086, T-011 aadced7, T-047-r2 6def656 (working branch he
 tests: t029, t034, t047, m9_kb and the importer folders of arch_plan.py all pass). Tasks still READY and not yet
 verified: T-058, T-061, T-057 (in progress). The verifier checks them next and merges them the same way.
 
+## Owner requirement: membrane purchase table (owner, main chat, 2026-10-19 14:15 UTC)
+
+Owner's words: "3mx3m picture table is an example on how system calculates waterproof membrane measurements in each bathroom and tell me wach bathroom or kitchen or roof or any wet area on how many membrane needed. This way i can quickly see how many i buy." Also: the owner will NOT send a new villa (Q-23 cancelled; the sealed renovation test is withdrawn; drop the renovation-only preparation, keep the general plan reader of gate 4).
+The BOQ must therefore include a MEMBRANE TABLE like his 3 m x 3 m picture, one row per waterproofed area (every bathroom, kitchen, roof, balcony, any wet area, each with its room name and floor): net area, upturn, strips of the 1.00 m roll with the 10 cm laps, installed membrane, consumed membrane with the cut edges, cutting waste, rolls if the area were done alone; and at the end the total rolls to buy for the project (from the cutting plan, offcuts reused across areas, shown next to the rolls-if-alone sum). Areas whose wet / dry status or outline is held show HELD with the reason, never 0. The engine already computes these numbers (waterproofing_system.schedule / cutting_plan); the task is the table in the BOQ output and its test on Alsenan and on a synthetic 3 m x 3 m bathroom.
+
 ## Owner direction: Alsenan first, then one sealed test on a new villa (owner, main chat, 2026-10-19)
 
 1. Work fully on the Alsenan project now, to make the system right (every trade vs the freelancer, with verified evidence).
@@ -204,6 +209,8 @@ Waits on: the renovation measurement capability that will be proven on synthetic
 tasks follow your answer).
 
 Answer (owner, main chat, 2026-10-19 12:55 UTC), his words: "Dont worry about it later ill send you the new project." DEFERRED: no answer to the scope options now; the owner will send the new project (and the scope) later. Until then the team prepares only general capabilities proven on synthetic fixtures and Alsenan; no renovation scope is assumed, and the renovation measuring tasks wait for his answer.
+
+Answer (owner, main chat, 2026-10-19 14:15 UTC), his words: "q-23 I DONT WANT TO SEND NEW VILLAH IGNORE IT." = CANCELLED: there will be no new-villa renovation test. Ignore this question and the renovation scope; no renovation BOQ capability is needed. (This replaces the earlier "deferred" note.)
 
 ### Q-24 Roof waterproofing: measured inside the parapet or to its outer face, and under the domes or not? (lead 2026-10-19 12:30; T-062; no-assumptions question)
 
