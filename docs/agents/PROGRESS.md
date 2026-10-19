@@ -50,8 +50,11 @@ before anything is measured.
 - Arabic SHX notes can be decoded (121 of 121).
 
 ## Being worked on now
-- Checker (next run): the new concrete ledger and the footings-by-member reading; both merge if they pass.
-- Worker 3: foundation levels, column and neck heights read by hand from the structural sheets.
+- Checker (next run): the new concrete ledger, the footings-by-member reading and the column / neck reading; each merges if it passes.
+- Worker 1: wet / dry evidence for every room (architectural label first, sanitary drawing second).
+- Worker 3 finished the column / neck reading: neck-only columns (type CN) are printed but drawn as plain text, so the
+  engine holds 5 columns that do not exist and 6 necks without a size; blinding 22.16 m3 under footings (printed) vs the
+  freelancer's 47.06 m3 over the whole plot. The founding level is still not readable (section sheet too big for Drive).
 - Next free workers: your membrane purchase table (every bathroom, roof and wet area, rolls to buy) with a hand table of
   every Alsenan wet area as its proof; roofs measured on your rule; pool and dome concrete from the printed sizes; stairs
   as steps, waist and landings; foundation members at the plot edge as separate lines; beams by hand.
