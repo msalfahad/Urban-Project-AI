@@ -1,6 +1,6 @@
 # Questions for the owner (at most 5 open; answer under "Answer:")
 
-Lead 2026-10-19 00:15: no new question; Q-12 (concrete verdicts) and Q-13 (toilet lines vs chair) open. Window / aluminium door m2 is covered by UP-OPEN-SCHED-001 and UP-DOOR-AREA-001, so it became task T-040, not a question. Lead 2026-10-18 20:05 (owner session): Q-06, Q-07, Q-09 answered by the owner (see Answered); no question open. Lead 2026-10-18 21:25: Q-10 (development project 2 DWG) answered; Q-11 answered (owner uploads the Alsenan DXFs); no question open. Lead 2026-10-18 15:40: no new question; Q-06 and Q-07 still open (no owner answer yet). The T-019 wall-length basis finding is settled by UP-WALL-GEOM-001 (masonry run = centreline, owner-approved), so it became task T-027, not a question. Lead adds questions an agent cannot decide from drawings, rules or evidence. Answered questions move to the bottom.
+Lead 2026-10-19 02:20: three new questions Q-15 (development project 2 plans file), Q-16 (unlabelled beam span), Q-17 (typed drawing sizes in the concrete score); with Q-12, Q-13 and Q-14 six are open: the list is long because each one stops an assumption. Lead 2026-10-19 00:15: no new question; Q-12 (concrete verdicts) and Q-13 (toilet lines vs chair) open. Window / aluminium door m2 is covered by UP-OPEN-SCHED-001 and UP-DOOR-AREA-001, so it became task T-040, not a question. Lead 2026-10-18 20:05 (owner session): Q-06, Q-07, Q-09 answered by the owner (see Answered); no question open. Lead 2026-10-18 21:25: Q-10 (development project 2 DWG) answered; Q-11 answered (owner uploads the Alsenan DXFs); no question open. Lead 2026-10-18 15:40: no new question; Q-06 and Q-07 still open (no owner answer yet). The T-019 wall-length basis finding is settled by UP-WALL-GEOM-001 (masonry run = centreline, owner-approved), so it became task T-027, not a question. Lead adds questions an agent cannot decide from drawings, rules or evidence. Answered questions move to the bottom.
 Decisions still queued behind these (from the master study `14_OWNER_DECISIONS_QUEUE.csv`): D-17 review-space wet / dry,
 WP-KITCHEN membrane scope, WP-JOINT details, WIN-REVEAL finish, STUB-LIMIT, MEAS-STD, ROOF-FIN, BLIND-AUTH.
 
@@ -113,6 +113,59 @@ Choices: (a) you give, per floor (ground, first, second), the slab thickness, th
 depth from the designer, and the engine computes the heights; (b) you give the plaster height and the paint height
 per floor directly; (c) Alsenan plaster and paint stay held (shown, not scored) until drawings print them.
 Waits on: internal plaster (25 room lines) and internal paint (11 room lines) for Alsenan (T-035).
+
+Answer:
+
+### Q-15 Development project 2: which file holds the apartment's floor plans? (lead 2026-10-19 02:20; T-033)
+
+What we found: the DWG you uploaded for development project 2 (name ends in -STR.dwg) is a structural drawing
+(column jacketing, schedules) with the architecture only as a faint background, and converting it here loses more than
+half of its contents. The 2-page architectural PDF in the same folder says it was printed from a different DWG.
+Real example: Drive "Urban BOQ private data", development project 2 folder: the -STR.dwg has 48,576 drawing items, the
+conversion keeps 21,072 (57 % lost); it has no English room names and no title for the upper floors; the PDF's print
+stamp names another file.
+How to check it yourself: open the PDF, look at the small print stamp in a corner (the DWG file name); see whether you
+have that DWG.
+Choices: (a) you upload that architectural DWG (or a DXF export of it, AutoCAD SAVEAS DXF 2018) to the same folder;
+(b) only the -STR.dwg exists: the agents read the apartment from the PDF with the plan reader (T-003, moved earlier);
+(c) you export the -STR.dwg to DXF from AutoCAD yourself and upload it.
+Waits on: tiles, plaster, paint, floor area, wet / dry, doors and windows for development project 2 (T-033, T-003).
+
+Answer:
+
+### Q-16 A beam span with no label, in line with a labelled beam (lead 2026-10-19 02:20; T-036)
+
+What we found: on the slab plans some short beam spans carry no label but sit in a straight line with a labelled beam
+on the other side of a column or beam. No rule says which size to give them, so the engine holds them (no number).
+Real example: Alsenan, structural file "ST7757 dxf.dxf", 11 such spans (ground floor 5, first floor 2, second floor 4),
+4.67 - 6.00 m3 together, held. One of them: ground floor slab plan, a 3.0 m span drawn 0.40 m wide next to a labelled
+beam 0.75 m deep: if it took the neighbour's size, 3.0 x 0.40 x 0.75 = 0.90 m3.
+How to check it yourself: open the ground floor slab plan, find a beam line without a mark between two columns, and
+see whether the beam continuing past the column has a mark.
+Choices: (a) hold it until the designer labels it (as today; shown as "needs designer"); (b) give it the labelled
+neighbour's size, marked "size taken from neighbour beam"; (c) take the neighbour's size only when the drawn width is
+the same, else hold.
+Waits on: 11 beam lines of the concrete beam total (T-036 follow-ups).
+
+Answer:
+
+### Q-17 May the concrete score use sizes a person typed in from the drawings? (lead 2026-10-19 02:20; T-036)
+
+What we found: most held concrete (167 of 205 lines) is held only because storey heights, neck levels, the blinding
+thickness and the typical ground-beam sizes are not read by the engine itself. A file typed by a person from the printed
+drawings earlier holds them, and with it the engine releases columns, necks, ground beams and blinding. Most of its
+values are printed on the drawing, but at least one is not (the deeper founding level, 2.0 m).
+Real example: Alsenan, structural file "ST7757 dxf.dxf": with the typed file, columns 61 lines 35.29 m3, necks 10.86 m3,
+ground beams 27.37 m3 and blinding 22.16 m3 (0.10 m thick, read from the general notes) are released; without it
+they are held.
+How to check it yourself: open the structural general notes (blinding thickness) and the foundation sections (founding
+level); see which of these numbers are printed.
+Choices: (a) yes, but only values a check (task T-044) finds printed on the drawing; any line that needs an unprinted
+value stays held; (b) no: the score shows only what the engine reads by itself, the typed file is for diagnosis only;
+(c) yes for every value in the typed file (you confirm them, including the 2.0 m founding level).
+Waits on: the concrete score for columns, necks, ground beams and blinding (T-044, T-036).
+
+Answer:
 
 ## Answered
 

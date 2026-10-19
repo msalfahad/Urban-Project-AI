@@ -17,6 +17,11 @@ Gap (Alsenan, T-001b): columns 118 of 118 lines held (freelancer 39.75 m3), grou
 75.09 m3). Look for: reading column / beam schedules drawn as DXF text grids (cell detection, row / column binding),
 linking a schedule mark to every plan instance, neck-column height from foundation sections; papers or tools with
 permissive licences. Unblocks T-036 follow-ups, T-009.
+Update (lead 2026-10-19 02:20, from T-036): 167 of the 205 held concrete lines release only when storey heights, neck
+top level, founding depth, typical ground-beam sections by span band (printed as titles like `< 2.5 m (30x30)`) and the
+blinding thickness come from a person-typed profile; so the sharpest question is how to read those printed values (level
+marks, section titles, general notes) from structural DXF text reliably, in English and Arabic, cm and m. Unblocks
+T-045, T-046, T-044.
 
 ### R-03 Storey / sheet detection in multi-sheet villa DXF (lead 2026-10-19)
 Problem: a storey whose title the engine does not recognise is not measured. Gap: Alsenan run found GF / 1F / 2F only
