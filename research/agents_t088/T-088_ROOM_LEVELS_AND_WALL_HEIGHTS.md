@@ -65,7 +65,7 @@ roof-slab plans. Per room (CSV column DEEPEST_DRAWN_BEAM):
 | 0.40 | GF basin space by the stair |
 
 So, by the owner's own instruction (beam deeper or shallower than 0.60 m: hold for him), **every room is HELD**. The rule's
-0.60 m is a standard deduction that never meets a drawn 0.60 m beam here. New owner question **Q-50** (which depth to
+0.60 m is a standard deduction that never meets a drawn 0.60 m beam here. New owner question **Q-52** (which depth to
 deduct). The heights the CSV shows are the owner formula with 0.60 (GF 3.65, annex 3.15, 1F and 2F 3.35); with
 the drawn beam instead: 0.75 gives GF 3.50, annex 3.00, upper floors 3.20; 0.85 gives GF 3.40; 0.50 gives upper floors
 3.45; 0.40 gives GF 3.85.
@@ -104,21 +104,21 @@ Verdict proposals (for the verifier):
   +0.128 m (hand: 2 x (4.00 + 6.30) - 2 x 1.10 + 1.728 = 20.128 m, the printed rectangle with its drawn R1.10 corner;
   he rounds 20.0).
 - Heights, 1F / 2F: RULE_DIFFERENCE: his flat 3.40 m is not the owner's formula (3.35 m with 0.60); -1.5 %.
-- Heights, GF annex: proposal ENGINE_RIGHT once Q-50 is answered: his 3.60 m is the main house height applied to a storey
+- Heights, GF annex: proposal ENGINE_RIGHT once Q-52 is answered: his 3.60 m is the main house height applied to a storey
   printed 4.00 m high (SECTION B-B); by the owner's formula 3.15 m, -12.2 % on those two rooms (-14.22 m2). UNRESOLVED
   until then (held).
 - 1F master bed room 380 x 430: RULE_DIFFERENCE (he allocates the passage walls to the room).
 
 ## 5. Held for the owner (with the reason)
 
-1. Every room: drawn beam is not 0.60 m (0.40 / 0.50 / 0.75 / 0.85 / 1.20, table in section 3): owner question Q-50.
+1. Every room: drawn beam is not 0.60 m (0.40 / 0.50 / 0.75 / 0.85 / 1.20, table in section 3): owner question Q-52.
 2. GF W.C. 175 x 135 and the 110 x 135 basin space by the stair: level unclear (+0.30 or +1.00).
 3. Stair halls GF / 1F / 2F: walls run through the storeys; no owner rule for a stair-shaft wall height.
 4. GF reception under the 1F void: double-height walls, no owner rule.
 5. Wall lengths not printed as a closed run: GF open room, GF master bed room (curved pool wall), 1F east master bed room
    (curved glazing), 1F living area and corridor, 2F lobby: need the CAD outline (a code task, T-081 rework / V2.9 faces).
 6. Wet rooms: wall tiles to the 0.15 m decor ceiling (owner Q-48 = A), so the same heights as above; not a plaster /
-   paint line, and held on the same beam question Q-50.
+   paint line, and held on the same beam question Q-52.
 
 ## 6. What this changes and what is missing
 
