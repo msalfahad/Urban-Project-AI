@@ -1,6 +1,6 @@
 # T-040 (with T-053): doors and windows, development villa (Alsenan): m2 code gap, printed heights, opening census
 
-Worker 1, 2026-10-19 15:30-16:30 UTC. Read-only: no engine, rule, test, key map or quantity changed. Development villa,
+Worker 1, 2026-10-19 15:20-15:45 UTC. Read-only: no engine, rule, test, key map or quantity changed. Development villa,
 not an accuracy claim. Counts, widths, heights and sheet references only: no coordinates of client data, no images, no
 client names. Rules: UP-OPEN-SCHED-001, UP-DOOR-AREA-001, UP-DOOR-HGT-001, UP-DOOR-CLS-002, UP-QTY-STATUS-001,
 UP-KB-PREC-001; owner answers Q-04 (door minimum), Q-14 (heights from the drawing).
@@ -57,6 +57,9 @@ V2.9 untouched):
   printed door on the SE elevation stays at the 2.20 m owner reference).
 - G6 (arched heads): no Urban rule says how an arched-head window or glazed door is measured (rectangle to the apex,
   rectangle to the springing, or the true shape). Four Alsenan openings depend on it: asked as Q-32.
+- G7 (a straight window missed): the 1F sea-side bath (room 4.725 m2) has glazing drawn in its outer wall with a printed
+  "50", but V2.9 lists no opening for it (no window, no held record): a second SILENT_OMISSION; cause not traced in this
+  run (candidate: the gap is not read as a jambed wall-band gap). Fix task: trace it with a synthetic fixture.
 
 ## Part 2: tag census (T-053) and opening census
 
@@ -113,21 +116,22 @@ opening heights. Engine widths are the plan jamb-to-jamb widths.
 | GF | curved pool glazing, master bedroom | **none** | plan arc "657" | - | 6.57 x 4.30 | 28.251 | **SILENT_OMISSION** in the engine (G4); FREELANCER_RIGHT on existence |
 | GF | OP-004, 014, 015, 016 (driver, 3 baths) | 0.60 x 4 | none printed | HELD | 4 x 0.60 x 0.80 | 1.920 | height not printed (freelancer 0.80 unprinted) |
 | GF | OP-006 kitchen, OP-024, OP-023, OP-028, OP-029 | 1.50, 1.50, 1.00, 1.9549, 1.9549 | none printed (SW elevation: drawn, no dimension) | HELD | 1.50, 1.50, 1.00, 2 x 1.95 at 2.00 | 15.800 | widths agree within 0.005; heights not printed |
-| 1F | OP-001, 002, 013, 014, 015 (baths, laundry) | 0.60 x 5 | none printed (NE elevation: drawn, no dimension) | HELD | 6 x 0.60 x 0.80 | 2.880 | freelancer 6, engine 5: the sixth 0.60 window was not located in the plan by this run (not measured) |
+| 1F | OP-001, 002, 013, 014, 015 (baths, laundry) | 0.60 x 5 | none printed (NE elevation: drawn, no dimension) | HELD | 6 x 0.60 x 0.80 | 2.880 | freelancer 6, engine 5: the sixth is the next row |
+| 1F | bath on the sea-side terrace (engine room 4.725 m2, no window in its list) | **none** | plan: glazing drawn in the bath's outer wall, printed "50" | - | (one of the 6 x 0.60 above) | 0.480 | **SILENT_OMISSION** in the engine (no jambed band gap read); FREELANCER_RIGHT on existence; width printed 0.50 vs freelancer 0.60: ENGINE_RIGHT proposal on the width by the printed "50"; height not printed (HELD) |
 | 1F | OP-003 master bedroom, OP-012 living | 1.5523, 1.00 | none printed | HELD | 1.55 x 2.00, 1.00 x 2.00 | 5.100 | heights not printed |
 | 2F | OP-003 stair, OP-004 bath, OP-005 maid | 1.00, 0.60, 1.20 | none printed | HELD | 1.00 x 2.00, 0.60 x 0.80, 1.20 x 2.00 | 4.880 | heights not printed |
 
-Window census status (UP-QTY-STATUS-001), 30 drawn windows (27 engine + the GF curved glazing + the unlocated 1F
-sixth bath window as a freelancer claim): 27 HELD (count released, area held), **1 SILENT_OMISSION** (GF curved pool
-glazing, 6.57 m printed arc), 1 not located (1F sixth bath window: freelancer only, not measured), 0 MEASURED in m2.
+Window census status (UP-QTY-STATUS-001), 29 drawn windows (27 engine + 2 the engine does not have; freelancer 29):
+27 HELD (count released, area held), **2 SILENT_OMISSION** (GF curved pool glazing, printed arc 6.57 m; 1F sea-side
+bath window, printed 0.50 m), 0 MEASURED in m2.
 Widths, engine vs freelancer: GF 17.84 vs 24.40 m (-6.56 m = the missing 6.57 curved glazing), 1F 15.60 vs 16.05 m
-(-0.60 m one bath window, +0.14 m curved basis), 2F 4.00 vs 4.00 m.
+(-0.60 m: the missed 0.50 bath window, which the freelancer takes at 0.60; +0.14 m curved width basis), 2F 4.00 vs 4.00 m.
 
 Window m2, engine vs freelancer: engine 0 m2 released (27 held) vs freelancer 116.9 m2: not comparable. By hand from
 printed values and existing rules only, 3 windows are releasable: 9.08 m2 (2.40 + 2.76 + 3.92) against the
 freelancer's 9.70 m2 for the same three (-0.62 m2, -6.4 %); that is 7.8 % of the freelancer's window m2. 4 more
 (about 21.15 m2 of the freelancer's rows) wait on the arched-head rule (Q-32) and 2 pool glazings (55.47 m2 of his rows,
-47 % of the window total) on the curved-glazing reader (G4) and the "430" binding; the other 19 have no printed height
+47 % of the window total) on the curved-glazing reader (G4) and the "430" binding; the other 19 engine windows (and the missed 0.50 bath window) have no printed height
 on any sheet and stay HELD (owner Q-14: heights from the drawing, never a usual size).
 
 ## Hand check (accept: 3 windows, 2 doors)
@@ -157,5 +161,5 @@ A window with no printed height stays HELD (19 here), never 0 and never a usual 
 - The largest aluminium items (two GF pool glazings 6.57 / 6.33 x 4.30 = 55.47 m2, 43 % of the freelancer's 128.9 m2)
   depend on curved glazing without jambs (missed) and on binding the one printed 4.30 height.
 
-Gate 1 (no lost openings): doors 0 silent omissions of 27 symbols; windows 1 silent omission (GF curved pool glazing).
+Gate 1 (no lost openings): doors 0 silent omissions of 27 symbols; windows 2 silent omissions (GF curved pool glazing 6.57 m, 1F sea-side bath window 0.50 m).
 Gate 2 (schedules / architectural ledger): door and window m2 not emitted (G1-G6).
