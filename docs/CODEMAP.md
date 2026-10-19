@@ -14,7 +14,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 582 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 583 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 8 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
@@ -22,7 +22,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1278 | pytest suites, one folder per round. |
+| `tests/` | 1280 | pytest suites, one folder per round. |
 | `tools/` | 98 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -483,7 +483,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `ground_system_resolution.py` | 369 | MEDIUM | 1 | Ground-system source resolution (pre-S5.1): generic decisions over measured evidence, no geometry library, no kg. |
 | `independent_export.py` | 251 | MEDIUM | 2 | INDEPENDENT EXPORT ADMISSION (R8.5 follow-up) — may this DXF serve as the independent parser route? |
 | `knowledge.py` | 288 | HIGH | 26 | ENGINEERING KNOWLEDGE (M9 Phase 2B-1, ARCH_TAKEOFF_V2.3 only) - the owner rules, conflicts, question catalogue and |
-| `legacy_text.py` | 136 | CRITICAL | 2 | LEGACY CAD TEXT DECODING (V3) - Arabic written with legacy AutoCAD SHX fonts. |
+| `legacy_text.py` | 136 | CRITICAL | 3 | LEGACY CAD TEXT DECODING (V3) - Arabic written with legacy AutoCAD SHX fonts. |
 | `level_marks.py` | 144 | MEDIUM | 3 | LEVEL MARK UNIT EVIDENCE (V1) - authored level annotations of ONE elevation / section view as unit evidence. |
 | `link_geometry.py` | 96 | CRITICAL | 2 | LINK GEOMETRY - stirrup / link topology and envelope lower bounds for accurate beam reinforcement (generic). |
 | `lintel_measure.py` | 164 | MEDIUM | 7 | LINTEL MEASURE (M4) - masonry-wall openings of an architectural floor plan and the lintels a printed lintel |
@@ -629,7 +629,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 
 `engine/source/generic_route.py` symbols: def merge_conventions (L47-54), def storey_heights (L57-58), def column_boxes (L69-104), def width_modes (L121-143), def typical_gb_widths (L146-154), def detect_options (L236-248), def to_local_origin (L251-277), def detect (L280-427), def scope_scan (L462-477), def items_from (L480-1265), def rebar_completeness (L2339-2376), def policy_record (L2379-2382)
 
-## `engine/source/cad/` (7 modules)
+## `engine/source/cad/` (8 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -639,6 +639,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `kernel_ezdxf.py` | 348 | HIGH | 10 | K2 — the second, independent CAD geometry route: DXF parsed and placed by ezdxf. |
 | `kernel_ocs.py` | 109 | HIGH | 2 | OCS -> WCS for K1: an Urban-owned Arbitrary Axis Algorithm, fail-closed. |
 | `libredwg_map.py` | 489 | HIGH | 10 | D1 route: LibreDWG `dwgread` JSON -> neutral SourceEntityObservations. |
+| `shx_arabic.py` | 359 | HIGH | 1 | SHX ARABIC TEXT INTAKE - Arabic notes and labels drawn with legacy SHX fonts (TEXT, MTEXT, ATTRIB). |
 | `unit_evidence.py` | 139 | HIGH | 2 | Deterministic unit / scale EVIDENCE from a D1 (LibreDWG JSON) decode — R8.3 §16. |
 
 ## `tools/` (96 modules)
@@ -923,6 +924,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t022_room_vocab/` | 1 |
 | `tests/t029_storey_vocab/` | 1 |
 | `tests/t034_arch_v210/` | 1 |
+| `tests/t047_shx_arabic/` | 1 |
 | `tests/t048_curved_strips/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
