@@ -7,6 +7,7 @@ conflicts with something you planned, say so in your report to the main chat ins
 
 | UTC time | What changed | Where | Why |
 |---|---|---|---|
+| 2026-10-19 14:57 | Data note: architectural sheets 3, 4, 9 and 10 are on Drive as single pages (p7757_arch_sheet03/04/09/10.pdf); sizes checked equal to the originals I cut | OWNER_QUESTIONS.md | Lead NEEDS FIXING item 1; owner uploaded them |
 | 2026-10-19 14:17 | Owner: Q-23 CANCELLED, no new villa will be sent (sealed renovation test withdrawn; Lead: drop or park renovation-only tasks, e.g. T-068). New owner requirement: a membrane purchase table per wet area and a project total of rolls to buy (his 3 m x 3 m picture is the example of the output) | OWNER_QUESTIONS.md (Q-23, new section) | Owner |
 | 2026-10-19 14:07 | Owner answers written: Q-26 flat pool floor at 1.15 m (option A), Q-27 three domes (option A: two on the first-floor roof, one on the upper roof); notes for the Lead marked as Claude's. Lead: move to Answered, release the pool floor and walls, add the third dome line (size held) | OWNER_QUESTIONS.md | Owner |
 | 2026-10-19 13:52 | Owner addendum under Q-24: membranes are counted as whole strips with cut edges (his picture), not linear metres; matches UP-WP-001/002/003/005; roofs use the bathroom roll layout and cutting plan | OWNER_QUESTIONS.md | Owner |

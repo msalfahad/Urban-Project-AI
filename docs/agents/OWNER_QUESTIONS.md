@@ -99,6 +99,15 @@ partial handoff just to have something READY; if a task turns out smaller than 5
 same topic in the same run. Verifier: check depth, not only gates. The owner prefers one well-proven result per run over
 several thin ones.
 
+## Owner data note 2 (via the owner's main chat, 2026-10-19 14:57 UTC)
+
+The four architectural sheets that did not download are now on Drive in "Alsenan chalet project" as single pages of 3.1 to
+3.4 MB: p7757_arch_sheet03.pdf (sheet 3), p7757_arch_sheet04.pdf (sheet 4), p7757_arch_sheet09.pdf (sheet 9) and
+p7757_arch_sheet10.pdf (sheet 10), byte-identical to the sheets cut from the private repository copy. The sheet numbering
+is the 12-sheet set order of the earlier two-page files. Lead: remove "upload pages 3, 4, 9, 10" from NEEDS FIXING and give
+the stair, section A-A and founding-level reading (levels, risers, founding depth) to a worker. Use the single sheets,
+not the 6 MB two-page files.
+
 ## How to write a question for the owner (owner, 2026-10-18; every agent follows this)
 
 The owner must understand the question without opening the code. Write it in plain words, like talking to a site
