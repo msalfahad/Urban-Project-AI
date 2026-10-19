@@ -56,6 +56,15 @@ spaces with a basin and nothing else, add their areas. Choices: (a) wet: porcela
 waterproofing, marble threshold; (b) dry: plaster, paint, skirting, normal floor tiles; (c) you decide per space.
 Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
 
+4. **How to write every owner question (owner, 2026-10-19).** The owner opens the drawing and decides, so each question has,
+   in this order: (1) THE PROBLEM in one or two sentences: what the engine cannot decide and the exact number or element
+   involved; (2) WHERE TO LOOK: the file, sheet or page, view, layer or area to open, and what to find there; (3) THE
+   OPTIONS as A / B / C with the quantity each gives; (4) RECOMMENDATION: the option you advise and why, based on civil
+   engineering practice for Kuwait villas, Kuwait Municipality / Ministry of Public Works rules or the project's own
+   drawings. Cite a code clause only if you can name it exactly; otherwise write "practice, not a code clause". The
+   recommendation is advice: the owner answers "A", "B", "C" or "A, and ..." with comments, and only the owner's words
+   become the rule.
+
 ## Open
 
 ### Q-12 Concrete: three places where the engine and the freelancer differ (verifier 2026-10-18 22:58; T-001b)
