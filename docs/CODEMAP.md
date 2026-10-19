@@ -752,7 +752,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `synthetic_villa_m6.py` | 698 | CRITICAL | 5 | SYNTHETIC VILLA M6 - completeness cases drawn onto the M2 synthetic villa, with the truth of what was drawn. |
 | `synthetic_villa_m8.py` | 211 | CRITICAL | 5 | SYNTHETIC VILLA M8 - the M6 completeness villa with the DESIGN of every scope element it draws, so that the |
 | `urban_boq_m2.py` | 603 | CRITICAL | 17 | URBAN BOQ M2 - the one-command BOQ with ROUTE G, the generic engine, on top of the frozen M1 pipeline. |
-| `urban_boq_m9.py` | 3140 | HIGH | 33 | URBAN BOQ M9 (S1) - canonical BOQ lines, room material plans and the room-by-room workbook, on top of route G. |
+| `urban_boq_m9.py` | 3142 | HIGH | 33 | URBAN BOQ M9 (S1) - canonical BOQ lines, room material plans and the room-by-room workbook, on top of route G. |
 | `urban_intake.py` | 225 | CRITICAL | 26 | URBAN INTAKE (M2) - one drawing file -> a plain, source-pointed geometry record for the generic engine. |
 | `urban_project_run.py` | 321 | CRITICAL | 1 | URBAN PROJECT RUN (M7) - one manifest per project; the blind protocol enforced by the tool, not remembered. |
 | `urban_structural_boq.py` | 602 | CRITICAL | 3 | URBAN STRUCTURAL BOQ (M1) - one command from a drawing set to a planning BOQ, an exception report, Excel and PDF. |
@@ -766,7 +766,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 
 `tools/run_pipeline.py` symbols: def bands_to_pairs (L169-178), def side_coverage (L181-206), def host_band_for (L209-224), def raster_overlap (L227-274), def tolerance_sensitivity (L287-328), class NoSpaceMap (L359-376), def load_space_map (L379-399), def run (L402-2060), def main (L2063-2118)
 
-`tools/urban_boq_m9.py` symbols: def revision_set_sha256 (L186-187), def structural_lines (L190-197), def run_rules (L200-204), def write_m9 (L207-246), def cmd_run (L249-269), def cmd_rooms (L272-278), class CompletenessFailed (L291-297), def arch_compute (L300-329), def K_value (L2446-2448), def v21_files (L2614-2691), def cmd_arch (L2818-2975), def cmd_tiles (L2989-3001), def cmd_membrane (L3004-3017), def cmd_rooms_check (L3020-3022), def cmd_rules (L3025-3031), def main (L3034-3135)
+`tools/urban_boq_m9.py` symbols: def revision_set_sha256 (L186-187), def structural_lines (L190-197), def run_rules (L200-204), def write_m9 (L207-246), def cmd_run (L249-269), def cmd_rooms (L272-278), class CompletenessFailed (L291-297), def arch_compute (L300-329), def K_value (L2448-2450), def v21_files (L2616-2693), def cmd_arch (L2820-2977), def cmd_tiles (L2991-3003), def cmd_membrane (L3006-3019), def cmd_rooms_check (L3022-3024), def cmd_rules (L3027-3033), def main (L3036-3137)
 
 ## `tools/synth_villa/` (4 modules)
 
