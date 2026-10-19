@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 594 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 595 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 8 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2342 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2343 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1297 | pytest suites, one folder per round. |
+| `tests/` | 1298 | pytest suites, one folder per round. |
 | `tools/` | 104 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (242 modules)
+## `engine/source/` (243 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -503,13 +503,14 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `observations.py` | 208 | HIGH | 14 | Neutral source observations — the ONE shape K1 reads. |
 | `obstacle_authority.py` | 84 | MEDIUM | 2 | OBSTACLE AUTHORITY (R8.15) - which room holes stand on PHYSICAL authority, kept apart from topology geometry. |
 | `ocr_review.py` | 133 | MEDIUM | 2 | OCR REVIEW (M4) - a second, independent reading of every OCR-derived detail-evidence record, compared value by |
-| `opening_area.py` | 525 | MEDIUM | 1 | OPENING AREA (T-078): door and window areas in m2 from the plan width and a PRINTED height. Method piece, NOT wired |
+| `opening_area.py` | 525 | MEDIUM | 3 | OPENING AREA (T-078): door and window areas in m2 from the plan width and a PRINTED height. Method piece, NOT wired |
 | `opening_authority.py` | 95 | MEDIUM | 1 | OPENING AUTHORITY (V1) - existence, geometry, function, material and vertical extent of an opening are separate |
 | `opening_census.py` | 474 | CRITICAL | 9 | OPENING CENSUS - wall openings from plan wall faces, with the evidence that makes each one an opening (generic). |
 | `opening_completion.py` | 522 | MEDIUM | 1 | OPENING COMPLETION (V3) - zero-material topology closures for door openings the frozen door-closure rule leaves |
 | `opening_evidence.py` | 55 | MEDIUM | 2 | OPENING_EVIDENCE_V2 - an opening is not one status: count, width, height, area, function and material each carry |
 | `opening_facts.py` | 49 | MEDIUM | 2 | OPENING PHYSICAL CLASS FACTS (R8.17) - what ONE bound opening IS (a sliding glass door, a full-height glazed |
 | `opening_gaps.py` | 50 | MEDIUM | 5 | OPENING GAPS WITH A UNIT-RELATIVE MERGE TOLERANCE (M9 S6, ARCH_TAKEOFF_V2) - opening_census.band_gaps merges the two |
+| `opening_height_pdf.py` | 391 | MEDIUM | 1 | OPENING HEIGHT FROM A PDF (T-082): printed opening heights read from VECTOR PDF elevation and section sheets and |
 | `opening_omission_guard.py` | 497 | MEDIUM | 1 | OPENING OMISSION GUARD (T-077): every drawn window and door appears once - MEASURED by the engine, or HELD with |
 | `opening_register.py` | 143 | MEDIUM | 2 | OPENING REGISTER (RC1) - one record per physical opening occurrence, with the authority of every attribute. |
 | `opening_reveals.py` | 106 | MEDIUM | 4 | OPENING REVEAL SURFACES (R8.14) - the jambs and soffit of an opening as their own surfaces, each owned once. |
@@ -959,6 +960,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t076_membrane_fold/` | 1 |
 | `tests/t077_opening_omissions/` | 1 |
 | `tests/t078_opening_area/` | 1 |
+| `tests/t082_opening_height_pdf/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1062,6 +1064,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t077/` | 2 |
 | `research/agents_t078/` | 2 |
 | `research/agents_t080/` | 1 |
+| `research/agents_t082/` | 1 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |
