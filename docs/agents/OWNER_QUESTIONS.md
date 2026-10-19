@@ -298,6 +298,34 @@ WAITS ON: the floor level of unmarked rooms, then their plaster, paint and wall-
 
 Answer:
 
+### Q-44 Dome openings: does the ring beam round each opening stay, and with which size? (lead 2026-10-19 20:15, from worker 2's beam reading; T-043, T-049; no-assumptions question)
+
+THE PROBLEM: by your answer the domes are no longer built (open skylight areas), but the first-floor roof slab plan still
+draws a circular ring beam round each of the two structural dome openings, and the drawings give it two different sizes:
+the slab plan marks it B4, 0.20 x 0.50 m, while the dome detail draws its own ring 0.20 m wide with the depth written
+"as per architect" (drawn about 0.75 m). The detail's 442 cm dome diameter equals the plan's inner circle (4.42 m), not
+the outer one (4.82 m). No Urban rule says whether this beam stays once the dome is removed, so the engine holds it.
+WHERE TO LOOK: Drive "Alsenan chalet project", "ST7757.pdf" (or "ST7757 dxf.dxf"): the first-floor roof slab plan, the
+two circles marked B4 round the dome openings; and the dome detail sheet with 442 / 190 / 10 and its ring beam.
+By hand on the plan size: the ring lies between circles of 4.42 m and 4.82 m, centre line about 3.14 x 4.62 = 14.5 m;
+0.20 x 0.50 x 14.5 = about 1.45 m3 per opening before taking off the slab thickness it shares with the roof slab
+(two openings about 2.9 m3). The third dome on the upper roof has no structural drawing at all.
+THE OPTIONS:
+(A) The ring beam stays as the slab plan draws it (B4, 0.20 x 0.50 m) as the edge beam of each skylight opening: about
+    1.45 m3 per opening on the plan size (2 openings), with its B4 bars; the dome detail's ring is dropped with the dome.
+(B) The ring beam stays but its size waits for the designer to reissue the roof slab for the client change: both
+    openings HELD and listed (never 0) until a revised drawing prints the size.
+(C) No ring beam: the client change removes it with the dome; the opening edge is whatever the revised drawing shows,
+    HELD until then.
+RECOMMENDATION: (A), with one request to the designer to confirm: an opening of about 4.4 m in a roof slab needs an edge
+beam round it whether or not a dome sits on it, and B4 on the slab plan is the member the structural drawings already
+print for that edge; the dome detail's deeper ring was there to carry the dome shell, which is gone (practice, not a code
+clause). The third dome position (upper roof) stays HELD either way: no structural drawing.
+WAITS ON: the dome-ring beam concrete and rebar on Alsenan, and the skylight opening size in the roof membrane (T-043,
+T-049, T-085).
+
+Answer:
+
 ## Answered
 
 (Lead 2026-10-19 18:15: Q-31 .. Q-37 moved here from Open; owner answers of 16:40 in the main chat. Q-34 is PARKED by the owner: the top roof stays HELD and is raised again only at a milestone.)

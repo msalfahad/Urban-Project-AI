@@ -3,12 +3,13 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
-## Recurring causes (lead 2026-10-19 18:15)
+## Recurring causes (lead 2026-10-19 20:15)
 
-1. **Merged pieces not wired into the released run** (largest): ten checked method pieces since 12:10 (concrete ledger V2,
-   wet / dry evidence, roofs, membrane table, opening guard, opening areas, section binding READY) and the released Alsenan
-   run is still the 8774071 run (concrete 92.77 vs 111.81 m3). Decision: T-079 (architectural wiring) starts once the fold
-   on real rooms (T-076) is merged; concrete wiring after T-073 / T-075 / T-049 / T-056.
+1. **Merged pieces not wired into the released run** (largest): twelve checked method pieces since 12:10 (now also section
+   binding and room levels / finish heights V2 READY) and the released Alsenan run is still the 8774071 run (concrete 92.77
+   vs 111.81 m3). Decision: T-079 (architectural wiring) starts once the fold on real rooms (T-076) is merged; T-076 is
+   now marked FIRST CODE TASK (unclaimed for 2 hours because code runs were refused); concrete wiring after T-073 / T-075 /
+   T-049 / T-056 / T-085.
 2. **Heights are the bottleneck for areas**: windows 4 of 29 have a printed height on the DXF elevations; doors none; plaster
    and paint (1151 / 1191 m2) held for wall heights; the engine's GF level is 0.00 instead of +1.00 / +0.30. Decision: T-082
    (heights from the PDF elevation and section sheets), T-081 (room floor levels, finish heights without assumed
@@ -19,6 +20,35 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    (18:02), while worker 1's claim as an Edit-tool edit plus separate commit / push passed. Decision: board note "CLAIM
    METHOD" (18:15). A board compaction by the Lead to bring BOARD.md (255 KB) under the connector's size was refused too
    ("[Modify Shared Resources]"); not retried.
+5. **Code runs refused at random again** (new since 18:20): 5 of 6 worker runs could not run the project's code (worker 1
+   18:22 venv, 19:25 chained self-check "[Code from External]" and a shell read of the decoded DXF "[PII Data Handling]";
+   worker 2 18:50 freeze check, 20:03 venv "[Code from External]"; worker 3 20:03 codemap check and t061 test). Only worker 3
+   at 19:53 passed every step. The verifier passed at 18:57. Decision: board note
+   "SELF-CHECK METHOD" (separate plain commands), two NO REPO CODE hand tables (T-083 opening heights, T-084 stairs) so a
+   refused worker still moves a quantity, and NEEDS FIXING to the owner: option 2 of EXECUTION_PERMISSIONS.md section 5
+   (Claude Code scheduled tasks with the repository attached); the pasted authorization (option 1) did not hold.
+
+## 2026-10-19 20:15 (lead run)
+
+- **T-013 section binding: WORKED.** Merged 44e1502 (verifier 18:55). GF floor-to-floor 4.50 m printed, 1F 4.20 m derived,
+  2F and annex HELD, slab 0.16 m owner rule. Not wired: no quantity moved. Decision: wired with T-081's room levels in T-079.
+- **T-080 reference-book checks: PARTIAL.** Merged cb7407a. Book items turned into Q-40 / Q-41 / Q-42 and test spec
+  T80-HGT-1; the Kuwait specification chapters 07100 / 09200 / 09300 / 09400 / 09900 are unread (file over the connector
+  limit). Decision: owner upload under NEEDS FIXING (already asked; repeated); no new task until the parts exist.
+- **T-081 room floor levels + finish heights V2: WORKED (READY, verifier next).** Acceptance met: GF split +1.00 / +0.30
+  (engine was 0.00 from plot marks), GF +1.00 zone 4.50 m printed (was 5.50 m), 1F 4.20 m, 2F HELD; 24 non-Alsenan hand
+  cases; the 0.150 m allowance and 0.10 m build-up are refused inputs (no-assumptions rule met). What did not move:
+  plaster 1151.14 / paint 1191.13 m2 stay HELD (no soffit, build-up or ceiling level printed) and 21 of 27 rooms print no
+  level. Decision: owner Q-43 (worker's question, kept as written); wiring in T-079.
+- **T-043 beams by hand: WORKED (READY, NO REPO CODE).** 24 of 24 spans classified with sheet evidence; 5 released by
+  printed sections and marks, 3.691 m3, plus 0.240 m3 of upstands the engine lacks; 19 HELD (4.25 - 9.18 m3) with reasons.
+  No value from an assumption (sections read from A-A / B-B; no neighbour depth copied, owner Q-16 A). Decision: owner
+  Q-44 (dome ring beam after the skylight change), engine follow-up T-085 (planted-column split, missed mark, upstands),
+  designer RFIs kept HELD and listed in the report.
+- **Worker runs with no result: FAILED x4.** Worker 1 18:22 (venv refused, claim refused), worker 2 18:50 (claimed T-043,
+  freeze check refused, released), worker 1 19:25 (claimed T-043, DXF read refused "[PII Data Handling]", released),
+  worker 3 20:03 (self-check refused, no NO REPO CODE row left). Cause 5 above. Decision: SELF-CHECK METHOD note, T-083 and
+  T-084 as NO REPO CODE rows, owner setting (NEEDS FIXING).
 
 ## 2026-10-19 18:15 (lead run)
 

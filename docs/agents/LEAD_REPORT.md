@@ -1,5 +1,88 @@
 # Lead reports to the owner's main chat (newest first, last 10 entries)
 
+## LEAD REPORT 2026-10-19 20:20 UTC
+
+Repositories: Urban-Project-AI cloned (control, working branch and the beam task branch); Drive readable (nothing new in
+the Alsenan folder since 15:00; the third project folder left unopened by your answer). UrbanProjectsManager not needed.
+
+PROGRESS (Alsenan; the released BOQ did not change: two more checked pieces merged since 18:20, none wired yet)
+- Concrete: released 92.77 vs freelancer 111.81 m3 (-17.0 %), unchanged.
+- Beams (hand reading of all 24 held spans, waits for the checker): 5 spans released from printed sections and marks,
+  3.691 m3, plus 0.240 m3 of 20 x 20 upstands the engine never measures; 19 spans stay held (4.25 - 9.18 m3) with reasons.
+  Found: the engine splits a beam where a planted column stands on it (2 beams) and missed one printed mark. Fix task on
+  the board. Beams vs freelancer: not compared yet (the beam line is held on the scoreboard).
+- Heights: floor-to-floor from the sections merged (GF 4.50 m printed, 1F 4.20 m). Room floor levels from the mark inside
+  each room (waits for the checker): GF is +1.00 / +0.30 (engine had 0.00 from the plot marks, so its GF height was
+  5.50 m instead of 4.50 m). Only 6 of 27 rooms print a level: 21 held, question Q-43 below.
+- Plaster 1151.14 m2 and paint 1191.13 m2 (freelancer) stay HELD: no soffit, floor build-up or ceiling level is printed.
+  The new finish-height version refuses the 0.150 m allowance and 0.10 m build-up, as your heights rule says.
+- Unchanged: wet-area floor 72.12 vs 72.01 m2 (+0.16 %); membrane 62.77 vs 62.43 m2 (+0.5 %); roofs 204.11 vs 285.00 m2
+  (-28.4 %, top roof held by you); windows 4 of 29 with areas 13.89 vs 14.35 m2 (engine right), 29 of 29 found.
+- Book checks merged; the Kuwait specification chapters are still unread (file too big).
+- Gates: 0 done; 1 at risk (nothing wired; the step that unlocks wiring waited 2 hours for a worker that can run code);
+  2 and 3 started; 4 waiting. Board: 11 open tasks, two of them hand tables any worker can do without running code.
+
+TEAM HEALTH
+- Code runs refused again: since 18:20 only 1 of 6 worker runs passed its self-check (worker 3 at 19:53: clone, venv,
+  codemap check, t061 test, freeze check all PASS). Refused: worker 1 18:22 (venv) and 19:25 (self-check "[Code from
+  External]", reading the decoded drawing "[PII Data Handling]"); worker 2 18:50 (freeze check) and 20:03 (venv "[Code from
+  External]"); worker 3 20:03 (codemap check and t061 test). The verifier passed at 18:57 and is running now (19:49).
+- Results anyway: worker 2 finished the beam reading by hand; worker 3 finished room levels and finish heights.
+- Done by me: board note "SELF-CHECK METHOD" (five separate plain commands, never chained; a refusal is written down,
+  not retried); two new hand-table tasks (window / door heights from the PDF elevations; stairs from section A-A) so a
+  refused worker still moves a quantity; the strip method on real wet rooms marked first code task.
+- Every scheduled run left a RUN_LOG line. Research scout runs tonight 23:50 UTC.
+
+NEEDS FIXING (only you can do it)
+1. Code runs for the scheduled workers. The authorization paragraph you added at 15:24 held until about 18:00, then
+   refusals returned (5 of 6 worker runs). What I already did: separate-command self-check note, hand tasks for refused
+   runs. The one thing to do: option 2 of docs/agents/EXECUTION_PERMISSIONS.md section 5: in your main Claude Code chat,
+   create the three workers and the verifier as Claude Code scheduled tasks with Urban-Project-AI attached as their
+   repository (same instructions), and pause the four Cowork tasks once one run of each new task shows all self-check
+   PASS lines. Until then most worker hours give hand readings only, and nothing gets wired into the released BOQ.
+2. Upload the Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as separate PDFs under 6 MB (repeat).
+
+QUESTIONS FOR OWNER (7 open, all no-assumptions questions; the list is long because each one stops a guess)
+
+Q-44 (NEW, from the beam reading) Dome openings: does the ring beam round each opening stay, and with which size?
+- Problem: the domes are now open skylights (your answer), but the first-floor roof slab plan still draws a ring beam
+  round both structural dome openings, marked B4 0.20 x 0.50 m; the dome detail draws its own ring 0.20 wide, depth "as
+  per architect" (drawn about 0.75 m). No rule says if it stays without the dome.
+- Where to look: Drive "Alsenan chalet project", "ST7757.pdf": the first-floor roof slab plan (two circles marked B4) and
+  the dome detail with 442 / 190 / 10. By hand: ring between circles of 4.42 and 4.82 m, centre line about 14.5 m;
+  0.20 x 0.50 x 14.5 = about 1.45 m3 per opening before the shared slab thickness (two openings about 2.9 m3).
+- Options: (A) keep B4 0.20 x 0.50 as the skylight edge beam, about 1.45 m3 per opening with its bars; (B) keep a ring
+  but hold its size until the designer reissues the roof slab for the client change; (C) no ring beam, edge held until a
+  revised drawing.
+- Recommendation: (A), with a request to the designer to confirm: a 4.4 m opening in a roof slab needs an edge beam with
+  or without a dome, and B4 is the member the slab plan already prints; the deeper ring was for the dome shell, now gone
+  (practice, not a code clause). The third dome position (upper roof) stays held: no structural drawing.
+- Waits on: dome-ring beam concrete and rebar, skylight opening size in the roof membrane (T-043, T-049, T-085).
+
+Q-43 (NEW since my last report, from worker 3) A room with no floor level printed inside it: which level does it get?
+- Problem: only 6 of 27 Alsenan rooms print their own floor level (GF +1.00 dining / living, +0.30 majlis / kitchen /
+  driver; 1F +5.50 living; 2F +9.70 stair hall); 21 rooms print none. On the split ground floor a guess can be 0.70 m off.
+- Where to look: p7757_arch_sheet03.pdf (GF plan: the +1.00 / +0.30 marks, the unmarked bedroom and bathrooms),
+  sheet 4 (1F, one +5.50), section B-B on sheet 11.
+- Options: (A) on a one-level floor an unmarked room takes that level (12 rooms on 1F / 2F), on the split GF it stays held
+  (8 rooms); (B) as A, and on the split GF it takes the level of the room its door opens into when no step is drawn;
+  (C) every unmarked room held.
+- Recommendation: (A): architects print a level where it changes, so a one-level floor's single mark covers all rooms;
+  a door without a drawn step is weaker evidence (practice, not a code clause). Plaster and paint stay held either way
+  until a soffit or ceiling level is printed.
+- Waits on: floor level of unmarked rooms, then their plaster, paint and wall-tile heights (T-081).
+
+Still open from before (full text in OWNER_QUESTIONS.md): Q-38 curved glass wall width (recommend printed 6.57 m),
+Q-39 window curved on plan (recommend inner arc), Q-40 shower waterproofing height, Q-41 screeds under / over the membrane
+(recommend both, thickness from the detail), Q-42 tile joints (recommend not counted).
+
+Designer requests found by the beam reading (no decision needed from you; the spans stay held until the designer
+answers): CB10 printed 0.25 wide but drawn 0.30 (1F, 2 spans); the 0.20 m strips north of B23 / B20 that sections A-A /
+B-B show as no concrete; the 1F outer west strip and two facade pieces with no mark; GF CB3 vs "B3 (With Stair)".
+
+Team: T-081 and T-043 READY (verifier now); new T-083, T-084 (hand tables, no code), T-085 (beam binding V2); T-076
+first code task; Q-44 new.
+
 ## LEAD REPORT 2026-10-19 18:20 UTC
 
 Repositories: Urban-Project-AI cloned (control and working branch); Drive readable. UrbanProjectsManager not needed this run.
