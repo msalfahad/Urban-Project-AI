@@ -147,6 +147,53 @@ Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
 
 ## Open
 
+### Q-48 Wet rooms are fully tiled: up to which height do the wall tiles go, and which false-ceiling depth applies? (lead 2026-10-19 22:20; owner request for the room-by-room tiling table (Q-45), Q-40 and Q-43 answers; no-assumptions question)
+
+THE PROBLEM: you said the wet areas are fully tiled (Q-40) and gave the wall height for plaster and paint: slab to slab
+- 0.60 beam - 0.15 to 0.20 decor ceiling - 0.10 floor finishing (Q-43). No Urban rule says that the wall tiles of a wet
+room stop at the same line, or whether they run up behind the false ceiling, and your rule gives the decor ceiling as a
+range (0.15 or 0.20) without saying which rooms take which. The wet-wall m2 in your room-by-room table (and its adhesive
+and mortar) cannot be given until this is set, so it is HELD.
+WHERE TO LOOK: Drive "Alsenan chalet project", p7757_arch_sheet10.pdf (section: levels +1.00, +5.50, +9.70, +13.90) and
+the ground and first floor plans p7757_arch_sheet03.pdf / sheet04.pdf (the 17 bathrooms, W.C.s, kitchen, laundry). Wall
+length of the wet rooms by hand (wet-area hand table, boundary less the door widths): ground floor 68.25 m, first floor
+52.08 m, second floor 8.90 m. Rough sums below are before window deductions, each door taken out over its width only.
+THE OPTIONS:
+(A) Tiles to the underside of the decor ceiling, 0.15 m decor everywhere: GF 3.65 m, 1F and 2F 3.35 m:
+    68.25 x 3.65 + 52.08 x 3.35 + 8.90 x 3.35 = about 453 m2 of wet-wall tiles.
+(B) As A, but 0.20 m decor in wet rooms (services above the ceiling), 0.15 m in dry rooms: GF 3.60 m, 1F / 2F 3.30 m:
+    about 447 m2.
+(C) Tiles up behind the ceiling to the beam (no decor deduction): GF 3.80 m, 1F / 2F 3.50 m: about 473 m2.
+RECOMMENDATION: (A): tile above the false ceiling is never seen and is normally not laid; one decor depth (0.15) keeps
+plaster, paint and tile heights on one line, and a deeper ceiling can be set per room where a drawing shows it (practice,
+not a code clause). Whichever you choose, a tile height printed on a drawing or detail replaces it.
+WAITS ON: wet-wall tile m2, wall adhesive bags and wall mortar per room in the room-by-room tiling table; wall tiles on
+every villa (T-086, T-081).
+
+### Q-49 Membrane rolls to buy: the layout direction changes the count. Which count goes in the BOQ? (lead 2026-10-19 22:20; owner membrane purchase table requirement 14:15, Q-24 addendum (cutting plan); no-assumptions question)
+
+THE PROBLEM: your strip method (whole strips, 0.10 m laps, cut edges) is now computed on all Alsenan wet rooms and roofs.
+The number of 1 x 10 m rolls depends on how the strips are laid (along the long wall, across it, and from which wall the
+first strip starts). No Urban rule says which layout the purchase uses, so the engine shows all three and picks none.
+WHERE TO LOOK: Drive "Alsenan chalet project", ground and first floor plans (sheets 03 / 04) and the roof plans (PDF part
+Pages_05-06). Your own kitchen example (3 x 4 m) shows the effect: along the long wall 4 strips of 4.90 m = 2 rolls; across
+6 strips of 3.40 m = 3 rolls.
+THE OPTIONS (Alsenan, 17 wet areas without the pantry / with the pantry / the three roofs):
+(A) Each room and each roof laid the way that needs the fewest rolls, chosen room by room, with that cutting plan given to
+    the installer: 13 / 15 / 29 rolls.
+(B) One layout for the whole project, strips across the shorter span of each room: 14 / 16 / 32 rolls.
+(C) The highest count of the three layouts, as a safe purchase: 15 / 17 / 32 rolls.
+RECOMMENDATION: (A) with the cutting plan printed beside the BOQ line: the purchase only matches the site if the installer
+cuts from the same plan, and choosing per room saves 2 rolls on the wet areas and 3 on the roofs against (C); a spare
+roll, if you want one, should be your own fixed allowance, not hidden in the layout (practice, not a code clause).
+WAITS ON: the rolls-to-buy line of the membrane table for wet areas and roofs when it is wired into the released BOQ (T-079).
+
+## Answered
+
+(Lead 2026-10-19 22:20: Q-38 .. Q-47 moved here from Open; owner answers of 20:45 - 22:55 in the main chat. Still HELD from
+them: screed thickness on roofs and balconies (Q-41), marble adhesive coverage (Q-45), expansion-joint spacing and whether
+it is its own BOQ line (Q-42: the Lead asks when the roof tile count is built).)
+
 ### Q-46 Main stair: the section and the plans draw a different number of steps. Which one counts? (worker 3 2026-10-19 21:25; T-084, T-056; no-assumptions question: two drawings disagree)
 
 THE PROBLEM: the step height comes from the floor height divided by the number of steps, so the engine must know how many
@@ -399,9 +446,6 @@ WAITS ON: the cement and sand table (new task, after the room areas from the flo
 Answer: B with the owner's own thicknesses (owner, main chat 2026-10-19 21:40, with two photos: the BSCO Nite multi-purpose adhesive bag, 20 kg +-5 %, and its web description). His words: "B. but regular floor finishing needs 3-4 cm of cement mix and then tiles above. Bathrooms maybe 4-6 cm; roof depending on slope and manhole each 1 m 0.5% (check slope if correct); bathrooms 1% each meter. Between tiles and cement mix there is an adhesive, 20 kg, and see how many meters it covers: 5 m2."
 Claude's reading, recorded as owner values (all cement / sand figures stay PROVISIONAL until the owner confirms the rest): (1) cement-sand bed under the tiles: regular floors 3 to 4 cm; wet-area floors (bartash) 4 to 6 cm; roofs: thickness from the falls, 0.5 % per metre toward each drain (Claude: check on the roof plan that the drawn slope is 0.5 %); bathrooms fall 1 % per metre. Report every bed as a range (low = thin value, high = thick value), never one invented number. (2) The remaining practice values of Q-45 option B are accepted for now and marked PROVISIONAL: mix 1:4 for floors and bartash, 1:3 for stairs, 1:4 for walls; stairs 3 cm, wall mortar 2 cm; bag 50 kg; about 8 bags and 1.1 m3 loose sand per m3 of 1:4 mortar; waste 5 %. (3) Adhesive between the tile and the bed is its own line: the BSCO Nite multi-purpose adhesive bag is 20 kg (+-5 %) and covers about 5 m2 per bag (the product text: direct ceramic on walls and level floors, layer up to 3 mm, about 5 m2 per 20 kg bag); marble and natural stone use a thicker layer on the same product (text cut off in the photo, 6 mm to 3 cm): coverage per bag HELD until the owner gives it. Brand named only as the owner's example; the rule is 20 kg and 5 m2 per bag for ceramic and porcelain.
 Example for the owner (Alsenan wet floors 72.12 m2, provisional): bed 4 to 6 cm = 2.88 to 4.33 m3 of mortar = about 23 to 35 bags of cement and 3.2 to 4.8 m3 of sand before 5 % waste; adhesive 72.12 / 5 = 14.4, so 15 bags of 20 kg before waste.
-
-
-## Answered
 
 (Lead 2026-10-19 18:15: Q-31 .. Q-37 moved here from Open; owner answers of 16:40 in the main chat. Q-34 is PARKED by the owner: the top roof stays HELD and is raised again only at a milestone.)
 

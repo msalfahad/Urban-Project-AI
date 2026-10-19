@@ -23,6 +23,14 @@ sill / head marks from vector PDF elevation sheets (pdfplumber / PyMuPDF word + 
 chain to a plan opening by width and position), and how Gulf QS practice takes door heights when no schedule exists (only
 as evidence for an owner question, never as a default). Unblocks T-082, T-081.
 
+Update (lead 2026-10-19 22:20, from T-082 / verifier): the vector-PDF opening-height reader is merged, but every Alsenan
+architectural PDF sheet is a raster scan (sheet 09: one 4672 x 6624 image, 0 words, 0 vectors), so windows stay 4 of 29
+measured (13.89 vs 14.35 m2) and doors 0 of 12.0 m2. Floor-to-floor and room heights are now settled by the owner's rule.
+Sharpest question now: reading dimension numbers, level marks (+1.00, +5.50) and their dimension lines from SCANNED
+elevation and section sheets: OCR of small rotated digits (Tesseract settings, permissive alternatives), line and tick
+detection on scans (OpenCV Hough, permissive), binding a scanned chain to a plan opening by position, and how reliable each
+is (published error rates). Never fabricate a value: unread numbers stay HELD. Unblocks T-083 (as a check), T-003.
+
 ### R-02 Structural element populations from schedules and tables in DXF (lead 2026-10-19)
 Problem: column and ground-beam concrete is held because element sizes and heights are not tied to every instance.
 Gap (Alsenan, T-001b): columns 118 of 118 lines held (freelancer 39.75 m3), ground beams 61 of 84 held (freelancer

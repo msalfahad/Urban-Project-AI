@@ -3,30 +3,55 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
-## Recurring causes (lead 2026-10-19 20:15)
+## Recurring causes (lead 2026-10-19 22:20)
 
-1. **Merged pieces not wired into the released run** (largest): twelve checked method pieces since 12:10 (now also section
-   binding and room levels / finish heights V2 READY) and the released Alsenan run is still the 8774071 run (concrete 92.77
-   vs 111.81 m3). Decision: T-079 (architectural wiring) starts once the fold on real rooms (T-076) is merged; T-076 is
-   now marked FIRST CODE TASK (unclaimed for 2 hours because code runs were refused); concrete wiring after T-073 / T-075 /
-   T-049 / T-056 / T-085.
-2. **Heights are the bottleneck for areas**: windows 4 of 29 have a printed height on the DXF elevations; doors none; plaster
-   and paint (1151 / 1191 m2) held for wall heights; the engine's GF level is 0.00 instead of +1.00 / +0.30. Decision: T-082
-   (heights from the PDF elevation and section sheets), T-081 (room floor levels, finish heights without assumed
-   allowances); T-013 section binding READY.
-3. **Rules missing for what the books and drawings show**: curved glazing width (Q-38, Q-39), shower tanking (Q-40),
-   screeds (Q-41), tile joints (Q-42). Asked; the parts stay HELD.
-4. **Board claims refused by the classifier**: a chained "edit + commit + push" claim was refused for workers 2 (17:41) and 3
-   (18:02), while worker 1's claim as an Edit-tool edit plus separate commit / push passed. Decision: board note "CLAIM
-   METHOD" (18:15). A board compaction by the Lead to bring BOARD.md (255 KB) under the connector's size was refused too
-   ("[Modify Shared Resources]"); not retried.
-5. **Code runs refused at random again** (new since 18:20): 5 of 6 worker runs could not run the project's code (worker 1
-   18:22 venv, 19:25 chained self-check "[Code from External]" and a shell read of the decoded DXF "[PII Data Handling]";
-   worker 2 18:50 freeze check, 20:03 venv "[Code from External]"; worker 3 20:03 codemap check and t061 test). Only worker 3
-   at 19:53 passed every step. The verifier passed at 18:57. Decision: board note
-   "SELF-CHECK METHOD" (separate plain commands), two NO REPO CODE hand tables (T-083 opening heights, T-084 stairs) so a
-   refused worker still moves a quantity, and NEEDS FIXING to the owner: option 2 of EXECUTION_PERMISSIONS.md section 5
-   (Claude Code scheduled tasks with the repository attached); the pasted authorization (option 1) did not hold.
+1. **Merged pieces not wired into the released run** (largest): fifteen checked method pieces (now also the beam hand
+   reading, the membrane fold on real rooms and the PDF opening-height reader) and the released Alsenan run is still the
+   8774071 run (concrete 92.77 vs 111.81 m3). Decision: T-079 (wire wet areas and roofs) is TODO now and FIRST CODE TASK;
+   the rolls-to-buy line stays HELD on owner Q-49, the area lines are ruled and released.
+2. **Heights are the bottleneck for areas**: plaster 1151.14 / paint 1191.13 m2 HELD; windows 4 of 29; doors none. New
+   since 20:15: the owner gave the wall-height rule (slab to slab - 0.60 - 0.15..0.20 - 0.10) and the unmarked-room rule,
+   so plaster and paint can now be measured. Decision: T-081 rework (code) and T-088 (hand truth, NO REPO CODE).
+3. **The Alsenan PDF sheets are raster scans** (new, verifier 21:58: sheet 09 = one image, 0 words, 0 vectors): no code
+   path reads heights from them until an OCR plan reader exists (gate 4). Decision: T-083 (hand table) is the route for
+   the 23 held windows and the doors; R-01 updated for OCR of dimension text on scanned elevations.
+4. **Rules missing for what the owner asked**: wet-wall tile height and decor depth (Q-48), roll layout for purchase (Q-49),
+   expansion-joint spacing (asked when the roof tile count exists). Asked; those parts HELD.
+5. **Code runs refused for one worker**: since 20:20, workers 1 and 2 and the verifier passed every self-check step
+   (worker 1 20:50 and 21:35, worker 2 22:05, verifier 22:08); worker 3 was refused twice (21:25 clone
+   "[Untrusted Code Integration]", 22:03 venv "[Code from External]") and the verifier once (20:29). Better than 18:20 -
+   20:20 (1 of 6). Decision: two NO REPO CODE rows kept on the board (T-088, T-083) so a refused run still moves a
+   quantity; owner setting (option 2) stays under NEEDS FIXING.
+6. **A run that leaves no trace** (worker 2, run fired 20:39: claimed T-083 at 20:42, no branch, no handoff, no RUN_LOG
+   line). Decision: released; reported to the owner as a team-health item.
+7. **Wrong times in agent text**: verifier wrote 22:30 / 22:35 for a run that pushed at 22:08; the owner's main chat
+   entries are stamped about 55 minutes ahead of their commits (22:55 committed 22:01). Decision: board note (take
+   `date -u`); reported in the Lead report.
+
+## 2026-10-19 22:20 (lead run)
+
+- **T-043 beams by hand: WORKED.** Merged 6975158; verifier re-read the 5 released spans (3.691 m3) and 0.240 m3 upstands
+  on the Drive DXF. Not wired. Decision: T-085 claimable; owner Q-44 = A adds the B4 ring beam per dome opening to T-085.
+- **T-076 membrane fold V2: WORKED.** Merged 8884287. Strip method on 17 of 17 real wet areas (was 0 of 14); 33 of 34 hand
+  layouts reproduced; walls-only upturn 125.57 vs freelancer 144.61 lm (-13.2 %, RULE_DIFFERENCE by Q-35 C); rolls 13 /
+  14 / 15 by layout. Decision: T-079 TODO; the layout choice is an owner rule gap -> Q-49.
+- **T-082 opening heights from PDF: PARTIAL.** Merged 2dee954. The reader works on vector PDFs (25 hand cases), but the
+  Alsenan sheets are scans: windows still 4 of 29 (13.892 vs 14.350 m2, -3.2 %), doors 0 of 12.0 m2. Decision: T-083 hand
+  table released for any worker; R-01 updated (OCR of scanned dimension text); plan reader stays gate 4.
+- **T-081 room levels + finish heights V2: PARTIAL (REJECTED by the owner's new rule).** Room levels pass every gate;
+  finish heights refused the build-up and decor depth that the owner's 21:40 rule now sets. Decision: rework on its
+  branch (owner values as OWNER_RULE inputs, unmarked rooms by the Q-43 answer, per-room plaster / paint ranges) and
+  T-088 hand truth; wet-wall height -> Q-48.
+- **T-084 stairs by hand: PARTIAL (READY, NO REPO CODE).** Steps released 0.483 m3; main stair held on two drawing
+  conflicts, which the owner answered (Q-46 A, Q-47 A): hand main stair 5.131 vs freelancer 8.131 m3 (-36.9 %, his
+  flights 37 - 54 % longer than drawn). Decision: verifier applies the answers and merges; T-056 rewritten with them.
+- **T-075 column schedule text rows: WORKED (READY).** 5 CN column lines HELD -> NOT_PRESENT (freelancer 0, agree); 6 CN
+  necks 0.090 m2 each, height HELD (Q-21 C; freelancer 0.810 m3 at an unprinted 1.50 m, UNRESOLVED). All self-check PASS.
+  Decision: verifier checks it first; no value from an assumption.
+- **T-083 opening heights by hand: FAILED (no trace).** Claimed 20:42, nothing pushed. Decision: released to TODO.
+- **Worker 3 runs 21:25 / 22:03: PARTIAL / NO-CLAIM (refused).** 21:25 delivered T-084 by hand; 22:03 found no NO REPO
+  CODE row free and asked for one. Decision: T-088 and T-083 are NO REPO CODE rows now.
+- **T-050: CLOSED** (superseded by T-058, merged 8774071).
 
 ## 2026-10-19 20:15 (lead run)
 
