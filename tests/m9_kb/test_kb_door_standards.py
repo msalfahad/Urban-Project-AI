@@ -217,3 +217,99 @@ def test_the_superseded_part_c_reading_is_not_applied():
         r = DSTD.required_opening(cat, nominal)
         assert r["owner_required_wall_opening_m"] == pytest.approx(nominal + 0.10)       # not max(CAD, minimum)
         assert r["enlargement_m"] == pytest.approx(0.10)
+
+
+# --- knowledge registry 1.6.0 (board task T-011, owner answer Q-04 / OQ-05): DSTD.opening_record_kb16 ---------------
+# Hand truth (not from the engine): the minimum is the nominal door; wall opening = nominal + 0.10 m (internal PVC
+# 1.00 -> 1.10, bathroom PVC 0.90 -> 1.00, external aluminium 1.00 -> 1.10); a wider drawn opening keeps its size; the
+# main door as drawn. Enlargement = required wall opening - drawn opening, proposed only.
+
+def _el(w, source="BAND_GAP"):
+    return {"structural_opening_width_m": w, "structural_opening_source": source}
+
+
+@pytest.mark.parametrize("cat,cad,wall,enl,nominal,compliance", [
+    (I, 0.90, 1.10, 0.20, 1.00, "ENLARGEMENT_REQUIRED"), (I, 1.00, 1.10, 0.10, 1.00, "ENLARGEMENT_REQUIRED"),
+    (I, 1.20, 1.20, 0.00, 1.10, "MEETS_STANDARD"), (I, 1.10, 1.10, 0.00, 1.00, "MEETS_STANDARD"),
+    (B, 0.90, 1.00, 0.10, 0.90, "ENLARGEMENT_REQUIRED"), (B, 1.00, 1.00, 0.00, 0.90, "MEETS_STANDARD"),
+    (B, 1.20, 1.20, 0.00, 1.10, "MEETS_STANDARD"), (B, 0.80, 1.00, 0.20, 0.90, "ENLARGEMENT_REQUIRED"),
+    (E, 0.90, 1.10, 0.20, 1.00, "ENLARGEMENT_REQUIRED"), (E, 1.00, 1.10, 0.10, 1.00, "ENLARGEMENT_REQUIRED"),
+    (E, 1.20, 1.20, 0.00, 1.10, "MEETS_STANDARD")],
+    ids=["int-0.90", "int-1.00", "int-1.20", "int-1.10", "bath-0.90", "bath-1.00", "bath-1.20", "bath-0.80",
+         "ext-0.90", "ext-1.00", "ext-1.20"])
+def test_kb16_hand_table(cat, cad, wall, enl, nominal, compliance):
+    r = DSTD.opening_record_kb16(_el(cad), cat)
+    assert r["state"] == "ESTABLISHED" and r["knowledge"] == "1.6.0"
+    assert r["rule"]["rule_id"] == "UP-DOOR-OPEN-002" and r["rule"]["status"] == "OWNER_APPROVED"
+    assert r["as_drawn_wall_opening_m"] == cad                                  # the drawn width is kept
+    assert r["owner_required_wall_opening_m"] == pytest.approx(wall, abs=1e-9)
+    assert r["enlargement_m"] == pytest.approx(enl, abs=1e-9)
+    assert r["nominal_door_for_opening_m"] == pytest.approx(nominal, abs=1e-9)
+    assert r["compliance"] == compliance
+    assert ("OPENING_BELOW_OWNER_STANDARD" in r["flags"]) == (enl > 0)
+    # the 0.10 m is applied once: the required opening re-read meets the standard with no further enlargement
+    again = DSTD.opening_record_kb16(_el(r["owner_required_wall_opening_m"]), cat)
+    assert again["enlargement_m"] == 0.0 and again["compliance"] == "MEETS_STANDARD"
+
+
+@pytest.mark.parametrize("mm_units,angle,mirror", [(1e-3, 0.0, False), (1e-3, 30.0, True), (1.0, 123.0, False),
+                                                   (1.0, 210.0, True)],
+                         ids=["mm", "mm-rot30-mirror", "m-rot123", "m-rot210-mirror"])
+def test_kb16_width_from_rotated_mirrored_jambs_in_mm_and_m(mm_units, angle, mirror):
+    """a 0.90 m bathroom door drawn in mm or m, rotated and mirrored: the jamb-to-jamb width is 0.90 m by hand, so the
+    wall opening required is 1.00 m (+0.10 m) whatever the drawing frame."""
+    import math
+    half = 0.45 / mm_units
+    a = math.radians(angle)
+    pts = [(-half, 0.0), (half, 0.0)]
+    if mirror:
+        pts = [(-x, y) for x, y in pts]
+    pts = [(x * math.cos(a) - y * math.sin(a) + 1234.5, x * math.sin(a) + y * math.cos(a) - 98.7) for x, y in pts]
+    w = math.dist(*pts) * mm_units
+    r = DSTD.opening_record_kb16(_el(w), B)
+    assert r["owner_required_wall_opening_m"] == pytest.approx(1.00, abs=1e-6)
+    assert r["enlargement_m"] == pytest.approx(0.10, abs=1e-6)
+
+
+def test_kb16_main_door_elevator_and_unsettled_class():
+    main = DSTD.opening_record_kb16(_el(0.80), DSTD.MAIN)            # narrower than any minimum: still as drawn
+    assert main["state"] == "AS_DRAWN_ONLY" and main["owner_required_wall_opening_m"] == 0.80
+    assert main["enlargement_m"] == 0.0 and main["required_nominal_door_m"] is None
+    lift = DSTD.opening_record_kb16(_el(0.90), DSTD.ELEVATOR)
+    assert lift["state"] == "EXCLUDED" and lift["owner_required_wall_opening_m"] is None
+    rev = DSTD.opening_record_kb16(_el(0.90), DSTD.REVIEW)           # bathroom 1.00 .. internal / external 1.10
+    assert rev["state"] == "RANGE" and rev["owner_required_wall_opening_m"] == {"low": 1.0, "high": 1.1}
+    assert rev["enlargement_m"] == {"low": pytest.approx(0.10), "high": pytest.approx(0.20)}
+    assert rev["compliance"] == "NOT_ESTABLISHED" and "CLASS_NOT_SETTLED" in rev["flags"]
+    cand = DSTD.opening_record_kb16(_el(0.90), DSTD.MAIN_CAND)       # as drawn (main) .. external 1.10
+    assert cand["state"] == "RANGE" and cand["owner_required_wall_opening_m"] == {"low": 0.9, "high": 1.1}
+    wide = DSTD.opening_record_kb16(_el(1.30), DSTD.UNRESOLVED)      # wider than every minimum: one value
+    assert wide["state"] == "ESTABLISHED_FOR_EVERY_CANDIDATE" and wide["owner_required_wall_opening_m"] == 1.30
+
+
+@pytest.mark.parametrize("cat", [I, B, E, DSTD.MAIN, DSTD.MAIN_CAND, DSTD.REVIEW, DSTD.UNRESOLVED])
+def test_kb16_missing_width_is_never_zero(cat):
+    r = DSTD.opening_record_kb16(_el(None), cat)
+    assert r["state"] == "NOT_ESTABLISHED" and r["compliance"] == "NOT_ESTABLISHED"
+    assert r["owner_required_wall_opening_m"] is None and r["enlargement_m"] is None
+    assert "NO_DRAWN_WIDTH" in r["flags"]
+
+
+def test_kb16_on_the_door_floor(floor):
+    """the synthetic door-guard floor (hand truth in kb_fixtures): main D1 1.00 as drawn; the living room's 0.90 m
+    door to the outside is external aluminium -> 1.10; the 0.90 m internal doors -> 1.10; the kitchen | lobby 0.90 m
+    door of unsettled class -> 1.00 .. 1.10. The model is not changed and the active registry stays the default."""
+    model = copy.deepcopy(floor["model"])
+    before = K.version()
+    got = {}
+    for el in model["elements"]:
+        cat, _ = DSTD.door_category(el)
+        got.setdefault(cat, []).append(DSTD.opening_record_kb16(el, cat))
+    assert model == floor["model"] and K.version() == before == "1.0.0"
+    (m,) = got[DSTD.MAIN]
+    assert m["state"] == "AS_DRAWN_ONLY" and m["owner_required_wall_opening_m"] == pytest.approx(1.00)
+    (e,) = got[E]
+    assert e["owner_required_wall_opening_m"] == pytest.approx(1.10) and e["enlargement_m"] == pytest.approx(0.20)
+    assert len(got[I]) == 2 and all(r["owner_required_wall_opening_m"] == pytest.approx(1.10) for r in got[I])
+    (rv,) = got[DSTD.REVIEW]
+    assert rv["owner_required_wall_opening_m"] == {"low": 1.0, "high": 1.1}
