@@ -1,5 +1,6 @@
 # Questions for the owner (at most 5 open; answer under "Answer:")
 
+Worker 2 2026-10-19 17:04: one new no-assumptions question from the door / window area piece (T-078): Q-39 (width of a window curved on plan: chord as in your Q-32 example, or the inner arc of the Urban curved-aluminium method).
 Worker 1 2026-10-19 16:43: one new no-assumptions question from the lost-window trace (T-077): Q-38 (width basis of a curved glass wall in a straight wall opening).
 Lead 2026-10-19 16:15: two new no-assumptions questions: Q-35 (wet-room upturn across the door opening: your Q-30 example vs registry UP-WP-DOOR-001) and Q-36 (the new project folder on Drive: open it or not). Q-31 (footing F10) was filed under Answered with no answer: moved back to Open. Open now: 6 (Q-31 to Q-36; all no-assumptions questions, so more than 5).
 Worker 1 2026-10-19 15:40: two new no-assumptions questions from the door / window area check (T-040): Q-32 (arched windows: area to the arch top, to the springing, or the true shape) and Q-33 (are windows aluminium by default). Verifier 2026-10-19 15:12: one new no-assumptions question from the footing verdicts (T-065 / T-042): Q-31 (footing F10 drawn 3.25 x 1.40 vs scheduled 2.80 x 1.40). Open now: 1. Worker 2 2026-10-19 14:10: one new no-assumptions question from the foundation split (T-065): Q-28 (boundary-wall band section and its overlap with footings). Open now: 6. Worker 1 2026-10-19 12:39: two new no-assumptions questions from the architectural sheet census (T-063): Q-26 (pool floor flat at 1.15 m or sloped), Q-27 (two or three domes). Open now: 5. Lead 2026-10-19 12:20: one new no-assumptions question Q-23 (renovation BOQ scope and retained-wall finishes, asked before the sealed test as the owner directed). Lead 2026-10-19 12:30: two more no-assumptions questions from the roof trace: Q-24 (roof waterproofing edge and domes), Q-25 (closing a parapet drafting gap). Open now: 3. Lead 2026-10-19 (owner reply): Q-22 answered A (only a pool-named space or block is the pool pump room; plain "PUMP" listed "use not stated"); no question open. Lead 2026-10-19 10:15: the owner answered Q-12, Q-13, Q-14, Q-15, Q-16, Q-17, Q-20 and Q-21 in the main chat (08:51); all eight moved to Answered with their tasks updated (T-065, T-010, T-063 / T-013, T-066, T-043, T-064, T-056, T-042). One new no-assumptions question: Q-22 (which pump room is the pool's). Open now: 1. Lead 2026-10-19 (owner reply): Q-18 answered (c) held and always visible; Q-19 answered for stairs and pools (see Answered); new Q-20 (stair waist and landings). Lead 2026-10-19 04:10: two new questions Q-18 (dome size basis) and Q-19 (may engine conventions release concrete when the drawing prints nothing); eight are open (Q-12 to Q-19): the list is long because each one stops an assumption. Q-12 now has the T-037 hand calculation (see its note). Lead 2026-10-19 02:20: three new questions Q-15 (development project 2 plans file), Q-16 (unlabelled beam span), Q-17 (typed drawing sizes in the concrete score); with Q-12, Q-13 and Q-14 six are open: the list is long because each one stops an assumption. Lead 2026-10-19 00:15: no new question; Q-12 (concrete verdicts) and Q-13 (toilet lines vs chair) open. Window / aluminium door m2 is covered by UP-OPEN-SCHED-001 and UP-DOOR-AREA-001, so it became task T-040, not a question. Lead 2026-10-18 20:05 (owner session): Q-06, Q-07, Q-09 answered by the owner (see Answered); no question open. Lead 2026-10-18 21:25: Q-10 (development project 2 DWG) answered; Q-11 answered (owner uploads the Alsenan DXFs); no question open. Lead 2026-10-18 15:40: no new question; Q-06 and Q-07 still open (no owner answer yet). The T-019 wall-length basis finding is settled by UP-WALL-GEOM-001 (masonry run = centreline, owner-approved), so it became task T-027, not a question. Lead adds questions an agent cannot decide from drawings, rules or evidence. Answered questions move to the bottom.
@@ -326,6 +327,30 @@ RECOMMENDATION: (A), because a printed dimension on the project drawing ranks ab
 measures the frame on site anyway (practice, not a code clause); (B) if you want the largest frame line for supply.
 WAITS ON: the width (and later the m2) of curved glass walls in straight openings on Alsenan and on every later villa (T-077,
 then the door / window area method).
+
+Answer:
+
+### Q-39 A window that is curved on plan: is its area width the straight chord or the curved length? (worker 2 2026-10-19 17:04; T-078; no-assumptions question: two Urban sources disagree)
+
+THE PROBLEM: the engine now reads the height of the first-floor master-bedroom window over the pool from the drawing
+(3.05 + 0.45 = 3.50 m to the top of the arch, your Q-32 answer), but it cannot give its area, because this window is
+curved on plan and two Urban sources give different widths: your Q-32 example used the straight chord 2.69 m (the width
+the elevation shows), while the Urban method for curved aluminium (registered as "curved glazing is measured on the inner,
+smallest-radius arc") gives 2.98 m. The area stays held until you choose. It is a different window from Q-38 (the
+ground-floor pool glazing in a straight wall), but one answer can cover both.
+WHERE TO LOOK: Drive "Alsenan chalet project", "P7757 dxf.dxf" (or the architectural PDF): first floor plan, the master
+bedroom over the pool, the curved window band (inner face radius 1.935 m, outer 2.135 m); the NORTH WEST elevation shows
+the same window "269" wide (the chord), "305" + "45" high.
+THE OPTIONS (height 3.50 m in all three):
+(A) The straight chord the elevation prints: 2.69 x 3.50 = 9.42 m2 (your Q-32 example; the freelancer has 3.15 x 3.00 =
+9.45 m2).
+(B) The curved length on the inner face (the existing Urban curved-aluminium method): 2.98 x 3.50 = 10.42 m2 (+1.00 m2).
+(C) The curved length on the outer face: 3.29 x 3.50 = 11.51 m2 (+2.09 m2).
+RECOMMENDATION: (B), because the frame and the glass of a curved window are made and bought along the curve, and the
+inner face is the method Urban already uses for curved aluminium (practice, not a code clause); (A) only if your
+aluminium supplier prices curved windows on the straight opening.
+WAITS ON: the area of the curved first-floor window on Alsenan (9.42 to 11.51 m2 of the freelancer's 116.9 m2 of
+windows) and every window curved on plan on later villas (T-078, the door / window area method).
 
 Answer:
 
