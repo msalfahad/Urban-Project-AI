@@ -171,7 +171,7 @@ Risk **HIGH** (recommended validation L3). Ask about: door, opening, doorway, th
 
 **Depends on:** `engine/source/knowledge.py`, `engine/source/arch_rooms.py`, `engine/source/boq_line.py`, `engine/source/member_detection.py`
 
-**Other current modules:** `door_transition.py`, `lintel_measure.py`, `lintel_qto.py`, `lintel_release_audit.py`, `opening_authority.py`, `opening_census.py`, `opening_completion.py`, `opening_evidence.py`, `opening_facts.py`, `opening_gaps.py`, `opening_register.py`, `opening_reveals.py`
+**Other current modules:** `door_transition.py`, `lintel_measure.py`, `lintel_qto.py`, `lintel_release_audit.py`, `opening_area.py`, `opening_authority.py`, `opening_census.py`, `opening_completion.py`, `opening_evidence.py`, `opening_facts.py`, `opening_gaps.py`, `opening_register.py`, `opening_reveals.py`
 
 **Rules** (knowledge 1.6.0; full records in `docs/RULES_INDEX.md`): UP-DOOR-AREA-001 [OWNER_APPROVED] Door areas: as-drawn and owner-required, confirmed and assu…; UP-DOOR-CLS-001 [OWNER_APPROVED] Ordinary internal doors are PVC; UP-DOOR-CLS-002 [OWNER_APPROVED] Ordinary doors to genuine outdoor spaces are aluminium; UP-DOOR-CLS-003 [OWNER_APPROVED] Bathroom doors: PVC material, bathroom opening standard; UP-DOOR-CLS-004 [OWNER_APPROVED] The main entrance is its own door category, measured as dra…; UP-DOOR-CLS-005 [OWNER_APPROVED] Elevator entrances are not ordinary doors; UP-DOOR-CLS-006 [OWNER_APPROVED] One physical double-leaf door is one door set; UP-DOOR-DEP-001 [OWNER_APPROVED] An enlarged opening changes other trades: listed for review…; UP-DOOR-FEAS-001 [OWNER_APPROVED] Door opening feasibility: does the owner-standard door fit,…; UP-DOOR-HGT-001 [OWNER_APPROVED] Door heights: sources first, owner reference heights as lab…; UP-DOOR-MIN-001 [DEPRECATED] Minimum door opening widths (master prompt Part C section 7…; UP-DOOR-OPEN-002 [OWNER_APPROVED] Required nominal door opening and architectural wall opening; UP-DOOR-OPEN-003 [OWNER_APPROVED] Owner minimum door openings, kept apart from every measured…; UP-ELEV-SCHED-001 [OWNER_APPROVED] Separate elevator quotation schedule; UP-THR-001 [OWNER_APPROVED] Wet-room doorways take a marble threshold; other doorways c…; rule store (frozen methods): UP-ELEV-001, UP-ELEV-002, UP-ELEV-003, UP-ELEV-004, UP-ELEV-005
 
@@ -208,7 +208,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: window, glazing, sill,
 
 **Depends on:** `engine/source/drawing_model.py`, `engine/source/release_safety.py`
 
-**Other current modules:** `curved_opening.py`, `opening_authority.py`, `opening_completion.py`, `opening_evidence.py`, `opening_facts.py`, `opening_gaps.py`, `opening_register.py`, `opening_reveals.py`, `reveal_finish.py`, `reveal_physicality.py`, `schedule_table.py`
+**Other current modules:** `curved_opening.py`, `opening_area.py`, `opening_authority.py`, `opening_completion.py`, `opening_evidence.py`, `opening_facts.py`, `opening_gaps.py`, `opening_register.py`, `opening_reveals.py`, `reveal_finish.py`, `reveal_physicality.py`, `schedule_table.py`
 
 **Rules** (knowledge 1.6.0; full records in `docs/RULES_INDEX.md`): UP-OPEN-SCHED-001 [OWNER_APPROVED] The opening schedule: width, height, sill, head and class,…; UP-REF-REVEAL-001 [REFERENCE_ONLY] Reveal finishes: plaster by default (owner method, referenc…; UP-REVEAL-001 [OWNER_APPROVED] Window reveals from the measured depth to the glazing; the…
 
