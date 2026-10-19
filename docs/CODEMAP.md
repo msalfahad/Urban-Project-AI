@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 586 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 587 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 8 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2311 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2313 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1285 | pytest suites, one folder per round. |
+| `tests/` | 1286 | pytest suites, one folder per round. |
 | `tools/` | 103 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (234 modules)
+## `engine/source/` (235 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -431,10 +431,11 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `column_concrete_geometry.py` | 82 | MEDIUM | 1 | COLUMN_CONCRETE_GEOMETRY - column concrete independent of column reinforcement (generic). |
 | `column_rebar.py` | 908 | MEDIUM | 3 | COLUMN REINFORCEMENT ENGINE (generic, project-independent). |
 | `comparison_scope.py` | 173 | MEDIUM | 3 | COMPARISON SCOPE MAPPER (generic). |
-| `concrete_completeness.py` | 2362 | CRITICAL | 9 | CONCRETE COMPLETENESS (M6) - every structural signal of a drawing set ends in one terminal state, and every signal |
-| `concrete_curved_strips.py` | 254 | MEDIUM | 1 | CONCRETE CURVED STRIPS - wall strips drawn as concentric curved edges (bulge polylines, ARCs, CIRCLEs). |
+| `concrete_completeness.py` | 2362 | CRITICAL | 10 | CONCRETE COMPLETENESS (M6) - every structural signal of a drawing set ends in one terminal state, and every signal |
+| `concrete_curved_strips.py` | 254 | MEDIUM | 2 | CONCRETE CURVED STRIPS - wall strips drawn as concentric curved edges (bulge polylines, ARCs, CIRCLEs). |
+| `concrete_ledger_v2.py` | 505 | MEDIUM | 1 | CONCRETE LEDGER V2 - the frozen route-G concrete ledger with its strip measurement replaced by the strip guard and |
 | `concrete_model.py` | 145 | MEDIUM | 1 | PHYSICAL NON-OVERLAPPING CONCRETE MODEL (V1) + STAIR CONCRETE (V1). |
-| `concrete_strip_guard.py` | 506 | MEDIUM | 1 | CONCRETE STRIP GUARD - a drawn band face is never lost because a member is cast against it. |
+| `concrete_strip_guard.py` | 506 | MEDIUM | 2 | CONCRETE STRIP GUARD - a drawn band face is never lost because a member is cast against it. |
 | `conservation.py` | 72 | MEDIUM | 2 | Source conservation (R8.2 §21) — nothing silently disappears. |
 | `continuous_beams.py` | 496 | CRITICAL | 3 | CONTINUOUS BEAMS (M4) - the multi-span model of a continuous-beam mark: its axis line, its supports, its spans |
 | `corner_bead.py` | 93 | MEDIUM | 1 | CORNER BEAD GEOMETRY (V3b) - steel plaster angle beads as segments at exposed plaster edges. |
@@ -493,7 +494,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `marble_thresholds.py` | 125 | MEDIUM | 2 | MARBLE THRESHOLDS (R8.15) - a door threshold whose whole strip is a separate MARBLE_THRESHOLD trade element. |
 | `material_result.py` | 168 | MEDIUM | 7 | MATERIAL RESULT (M9 S1) - what a layout consumes, kept apart from the net BOQ quantity (generic; stdlib). |
 | `material_spec.py` | 146 | HIGH | 10 | MATERIAL SPECIFICATION (M9 S1) - what a material IS, kept apart from how much of it a room needs (generic; stdlib only). |
-| `member_detection.py` | 1143 | CRITICAL | 21 | MEMBER DETECTION (M2) - footings, columns, beams and ground beams of a NEW drawing, with no project register |
+| `member_detection.py` | 1143 | CRITICAL | 22 | MEMBER DETECTION (M2) - footings, columns, beams and ground beams of a NEW drawing, with no project register |
 | `membrane_layout.py` | 819 | MEDIUM | 9 | MEMBRANE LAYOUT (M9 S1) - exact roll plan of a RECTANGULAR wet room for one sheet membrane (generic; stdlib only). |
 | `multi_route_evidence.py` | 56 | MEDIUM | 1 | Multi-route evidence for high-impact elements (generic). |
 | `observations.py` | 208 | HIGH | 14 | Neutral source observations — the ONE shape K1 reads. |
@@ -522,7 +523,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `profile_takeoff.py` | 219 | CRITICAL | 1 | PROFILE TAKEOFF (M1) - the first quantities of a NEW project, from a person-confirmed profile (generic). |
 | `project_claims.py` | 120 | MEDIUM | 3 | PROJECT CLAIM STORE (generic schema; the claims themselves are project data). |
 | `project_rules.py` | 748 | MEDIUM | 5 | PROJECT RULES (M9 Phase 2B-2, ARCH_TAKEOFF_V2.4 only) - Level A Urban master standards (the knowledge registry |
-| `provisional_estimate.py` | 359 | CRITICAL | 19 | PROVISIONAL ESTIMATE (M1) - a planning estimate beside the verified release, never mixed into it (generic). |
+| `provisional_estimate.py` | 359 | CRITICAL | 21 | PROVISIONAL ESTIMATE (M1) - a planning estimate beside the verified release, never mixed into it (generic). |
 | `qualification.py` | 467 | MEDIUM | 3 | DECODER_QUALIFICATION (R8.4 §11-§13) — a decoder build is qualified for an ENVELOPE, never globally. |
 | `quantity_release.py` | 292 | CRITICAL | 2 | QUANTITY RELEASE (M7) - one release state per quantity item, from named evidence; engineer decisions bound to the |
 | `quantity_scenarios.py` | 167 | CRITICAL | 8 | Best-available quantity without pretending it is verified (generic). |
@@ -560,7 +561,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `schedule_grammar.py` | 98 | CRITICAL | 7 | SCHEDULE_GRAMMAR - reinforcement text grammar and schedule-cell provenance for machine-readable (attributed) |
 | `schedule_reader.py` | 352 | CRITICAL | 3 | SCHEDULE READER (M2) - structural schedules from attribute rows or text tables, without a project profile (generic). |
 | `schedule_table.py` | 181 | MEDIUM | 3 | SCHEDULE TABLE READER (V1) - a drawn schedule (grid lines + values) as rows and cells, fail closed. |
-| `scope_quantities.py` | 1377 | CRITICAL | 3 | SCOPE QUANTITIES (M8) - the scope a completeness finding locates, measured from the drawn plan or bounded by a |
+| `scope_quantities.py` | 1377 | CRITICAL | 4 | SCOPE QUANTITIES (M8) - the scope a completeness finding locates, measured from the drawn plan or bounded by a |
 | `semantic_zones.py` | 169 | MEDIUM | 4 | PHYSICAL SPACE != SEMANTIC ZONE != TRADE MEASUREMENT REGION (R8.9). |
 | `shaft_geometry.py` | 331 | CRITICAL | 1 | SHAFT GEOMETRY - lift shafts and pits: wall rings, wall pieces, openings, storeys, tie-beam triggers (generic). |
 | `shell_line_distribution.py` | 112 | CRITICAL | 1 | SHELL LINE DISTRIBUTION - how lines laid on a spherical cap add up under different layout rules (generic, stdlib). |
@@ -738,8 +739,8 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `struct_n10.py` | 73 | MEDIUM | 0 | STRUCTURAL N10 (Phase N10) - formwork faces, excavation footprints and the reinforcement audit for a route G run. |
 | `synthetic_villa.py` | 603 | CRITICAL | 10 | SYNTHETIC VILLA (M2) - structural DXF drawings generated from a design spec, with ground truth from the SPEC. |
 | `synthetic_villa_m6.py` | 698 | CRITICAL | 5 | SYNTHETIC VILLA M6 - completeness cases drawn onto the M2 synthetic villa, with the truth of what was drawn. |
-| `synthetic_villa_m8.py` | 211 | CRITICAL | 4 | SYNTHETIC VILLA M8 - the M6 completeness villa with the DESIGN of every scope element it draws, so that the |
-| `urban_boq_m2.py` | 603 | CRITICAL | 16 | URBAN BOQ M2 - the one-command BOQ with ROUTE G, the generic engine, on top of the frozen M1 pipeline. |
+| `synthetic_villa_m8.py` | 211 | CRITICAL | 5 | SYNTHETIC VILLA M8 - the M6 completeness villa with the DESIGN of every scope element it draws, so that the |
+| `urban_boq_m2.py` | 603 | CRITICAL | 17 | URBAN BOQ M2 - the one-command BOQ with ROUTE G, the generic engine, on top of the frozen M1 pipeline. |
 | `urban_boq_m9.py` | 3061 | HIGH | 32 | URBAN BOQ M9 (S1) - canonical BOQ lines, room material plans and the room-by-room workbook, on top of route G. |
 | `urban_intake.py` | 225 | CRITICAL | 25 | URBAN INTAKE (M2) - one drawing file -> a plain, source-pointed geometry record for the generic engine. |
 | `urban_project_run.py` | 321 | CRITICAL | 1 | URBAN PROJECT RUN (M7) - one manifest per project; the blind protocol enforced by the tool, not remembered. |
@@ -941,6 +942,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t048_curved_strips/` | 1 |
 | `tests/t057_pool_checklist/` | 1 |
 | `tests/t058_strip_guard/` | 1 |
+| `tests/t060_concrete_ledger_v2/` | 1 |
 | `tests/t061_room_label_guard/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
@@ -1029,6 +1031,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t041/` | 2 |
 | `research/agents_t044/` | 2 |
 | `research/agents_t058/` | 2 |
+| `research/agents_t060/` | 2 |
 | `research/agents_t062/` | 4 |
 | `research/agents_t063/` | 1 |
 | `research/agents_t066/` | 3 |

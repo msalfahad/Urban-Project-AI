@@ -37,10 +37,10 @@ Risk **CRITICAL** (recommended validation L4). Ask about: cad, dwg, dxf, block, 
 
 **Open first:**
 
-- `engine/source/cad/kernel_ezdxf.py` (348 lines, HIGH; imported by 10 directly, 77 transitively, SHARED)
+- `engine/source/cad/kernel_ezdxf.py` (348 lines, HIGH; imported by 10 directly, 78 transitively, SHARED)
 - `engine/source/cad/kernel.py` (365 lines, HIGH; imported by 17 directly, 30 transitively, SHARED)
 - `engine/source/cad/libredwg_map.py` (489 lines, HIGH; imported by 10 directly, 25 transitively, SHARED)
-- `tools/urban_intake.py` (225 lines, CRITICAL, frozen; imported by 25 directly, 68 transitively, SHARED)
+- `tools/urban_intake.py` (225 lines, CRITICAL, frozen; imported by 25 directly, 69 transitively, SHARED)
 
 **Depends on:** `engine/source/findings.py`, `engine/source/observations.py`, `engine/source/capability.py`, `engine/source/decoder_pins.py`, `engine/source/realised.py`, `engine/source/cad/affine.py`, `engine/source/cad/kernel_ocs.py`, `engine/source/digests.py`
 
@@ -67,7 +67,7 @@ Risk **HIGH** (recommended validation L3). Ask about: unit, insunits, millimet, 
 
 **Open first:**
 
-- `engine/source/frame.py` (1076 lines, HIGH; imported by 15 directly, 68 transitively, SHARED)
+- `engine/source/frame.py` (1076 lines, HIGH; imported by 15 directly, 69 transitively, SHARED)
 
 **Depends on:** `engine/source/findings.py`
 
@@ -201,9 +201,9 @@ Risk **CRITICAL** (recommended validation L4). Ask about: window, glazing, sill,
 
 **Open first:**
 
-- `engine/source/schedule_reader.py` (352 lines, CRITICAL, frozen; imported by 3 directly, 71 transitively)
-- `engine/source/opening_census.py` (474 lines, CRITICAL, frozen; imported by 9 directly, 117 transitively)
-- `engine/source/schedule_grammar.py` (98 lines, CRITICAL, frozen; imported by 7 directly, 80 transitively)
+- `engine/source/schedule_reader.py` (352 lines, CRITICAL, frozen; imported by 3 directly, 73 transitively)
+- `engine/source/opening_census.py` (474 lines, CRITICAL, frozen; imported by 9 directly, 119 transitively)
+- `engine/source/schedule_grammar.py` (98 lines, CRITICAL, frozen; imported by 7 directly, 82 transitively)
 - `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 5 directly, 72 transitively)
 
 **Depends on:** `engine/source/drawing_model.py`, `engine/source/release_safety.py`
@@ -318,8 +318,8 @@ Risk **CRITICAL** (recommended validation L4). Ask about: stair, railing, riser,
 
 **Open first:**
 
-- `engine/source/stair_geometry.py` (336 lines, CRITICAL, frozen; imported by 6 directly, 112 transitively)
-- `engine/source/stair_measure.py` (119 lines, CRITICAL, frozen; imported by 3 directly, 71 transitively)
+- `engine/source/stair_geometry.py` (336 lines, CRITICAL, frozen; imported by 6 directly, 114 transitively)
+- `engine/source/stair_measure.py` (119 lines, CRITICAL, frozen; imported by 3 directly, 73 transitively)
 - `engine/source/arch_measure.py` (1165 lines, HIGH; imported by 17 directly, 49 transitively, SHARED)
 
 **Depends on:** `engine/source/arch_completeness.py`, `engine/source/arch_floor.py`, `engine/source/arch_rooms.py`, `engine/source/arch_v28.py`, `engine/source/boq_line.py`, `engine/source/knowledge.py`, `engine/source/material_result.py`, `engine/source/material_spec.py`, `engine/source/membrane_layout.py`, `engine/source/owner_finish_scope.py`
@@ -350,7 +350,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: concrete, slab, beam, 
 
 **Open first:**
 
-- `engine/source/concrete_completeness.py` (2362 lines, CRITICAL, frozen; imported by 9 directly, 70 transitively)
+- `engine/source/concrete_completeness.py` (2362 lines, CRITICAL, frozen; imported by 10 directly, 72 transitively, SHARED)
 - `engine/source/slab_rebar_qto.py` (314 lines, CRITICAL, frozen; imported by 9 directly, 12 transitively)
 - `engine/source/footing_rebar_guard.py` (422 lines, CRITICAL, frozen; imported by 5 directly, 5 transitively)
 
