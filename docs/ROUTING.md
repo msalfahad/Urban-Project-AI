@@ -96,7 +96,7 @@ Risk **HIGH** (recommended validation L3). Ask about: room, space, zone, closure
 - `engine/source/arch_plan.py` (478 lines, HIGH; imported by 18 directly, 80 transitively, SHARED)
 - `engine/source/space_model.py` (196 lines, MEDIUM; imported by 3 directly, 36 transitively)
 - `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 55 transitively)
-- `engine/source/waterproofing_system.py` (998 lines, MEDIUM; imported by 8 directly, 42 transitively)
+- `engine/source/waterproofing_system.py` (998 lines, HIGH; imported by 10 directly, 44 transitively, SHARED)
 - `engine/source/arch_v27.py` (1135 lines, MEDIUM; imported by 5 directly, 75 transitively)
 
 **Depends on:** `engine/source/drawing_model.py`, `engine/source/knowledge.py`, `engine/source/opening_census.py`, `engine/source/opening_gaps.py`, `engine/source/arch_v29.py`, `engine/source/arch_walls.py`, `engine/source/boq_line.py`, `engine/source/lintel_measure.py`, `engine/source/material_spec.py`, `engine/source/member_detection.py`
@@ -280,13 +280,13 @@ L4 full suite + freeze check (see above)
 <a id="waterproofing"></a>
 ## Waterproofing (wet rooms, roof, membranes, upturns)
 
-Risk **MEDIUM** (recommended validation L2). Ask about: waterproof, membrane, upturn, wet area, bathroom, roof, overlap, lap, wp. Related topics: rooms, finishes, boq_output. Note: Wet-room scope comes from room classification (UP-WET) before any membrane is measured.
+Risk **HIGH** (recommended validation L3). Ask about: waterproof, membrane, upturn, wet area, bathroom, roof, overlap, lap, wp. Related topics: rooms, finishes, boq_output. Note: Wet-room scope comes from room classification (UP-WET) before any membrane is measured.
 
 **Open first:**
 
-- `engine/source/waterproofing_system.py` (998 lines, MEDIUM; imported by 8 directly, 42 transitively)
-- `engine/source/wp_geometry.py` (317 lines, MEDIUM; imported by 7 directly, 45 transitively)
-- `engine/source/membrane_layout.py` (819 lines, MEDIUM; imported by 9 directly, 60 transitively)
+- `engine/source/waterproofing_system.py` (998 lines, HIGH; imported by 10 directly, 44 transitively, SHARED)
+- `engine/source/wp_geometry.py` (317 lines, MEDIUM; imported by 8 directly, 47 transitively)
+- `engine/source/membrane_layout.py` (819 lines, HIGH; imported by 10 directly, 64 transitively, SHARED)
 - `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 55 transitively)
 
 **Depends on:** `engine/source/knowledge.py`, `engine/source/arch_rooms.py`, `engine/source/boq_line.py`, `engine/source/material_result.py`, `engine/source/material_spec.py`, `engine/source/plane_poly.py`, `engine/source/project_rules.py`, `engine/source/tile_layout.py`, `engine/source/wp_install.py`
@@ -484,10 +484,10 @@ Risk **CRITICAL** (recommended validation L4). Ask about: boq, total, release, r
 
 - `tools/urban_boq_m9.py` (3061 lines, HIGH; imported by 32 directly, 34 transitively, SHARED)
 - `engine/source/delta_release.py` (159 lines, CRITICAL, frozen; imported by 37 directly, 37 transitively, SHARED)
-- `engine/source/boq_line.py` (386 lines, HIGH; imported by 17 directly, 66 transitively, SHARED)
-- `engine/source/knowledge.py` (288 lines, HIGH; imported by 27 directly, 88 transitively, SHARED)
+- `engine/source/boq_line.py` (386 lines, HIGH; imported by 17 directly, 68 transitively, SHARED)
+- `engine/source/knowledge.py` (288 lines, HIGH; imported by 28 directly, 90 transitively, SHARED)
 - `engine/source/door_standards.py` (671 lines, MEDIUM; imported by 7 directly, 39 transitively)
-- `engine/source/project_rules.py` (748 lines, MEDIUM; imported by 5 directly, 44 transitively)
+- `engine/source/project_rules.py` (748 lines, MEDIUM; imported by 5 directly, 46 transitively)
 
 **Depends on:** `engine/source/door_model.py`, `engine/source/owner_finish_scope.py`, `engine/boq_room_workbook.py`, `engine/source/arch_completeness.py`, `engine/source/arch_floor.py`, `engine/source/arch_measure.py`, `engine/source/arch_plan.py`, `engine/source/arch_rooms.py`, `engine/source/arch_v27.py`, `engine/source/arch_v28.py`
 
