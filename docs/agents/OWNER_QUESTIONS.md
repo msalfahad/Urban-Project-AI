@@ -1,6 +1,6 @@
 # Questions for the owner (at most 5 open; answer under "Answer:")
 
-Verifier 2026-10-19 15:12: one new no-assumptions question from the footing verdicts (T-065 / T-042): Q-31 (footing F10 drawn 3.25 x 1.40 vs scheduled 2.80 x 1.40). Open now: 1. Worker 2 2026-10-19 14:10: one new no-assumptions question from the foundation split (T-065): Q-28 (boundary-wall band section and its overlap with footings). Open now: 6. Worker 1 2026-10-19 12:39: two new no-assumptions questions from the architectural sheet census (T-063): Q-26 (pool floor flat at 1.15 m or sloped), Q-27 (two or three domes). Open now: 5. Lead 2026-10-19 12:20: one new no-assumptions question Q-23 (renovation BOQ scope and retained-wall finishes, asked before the sealed test as the owner directed). Lead 2026-10-19 12:30: two more no-assumptions questions from the roof trace: Q-24 (roof waterproofing edge and domes), Q-25 (closing a parapet drafting gap). Open now: 3. Lead 2026-10-19 (owner reply): Q-22 answered A (only a pool-named space or block is the pool pump room; plain "PUMP" listed "use not stated"); no question open. Lead 2026-10-19 10:15: the owner answered Q-12, Q-13, Q-14, Q-15, Q-16, Q-17, Q-20 and Q-21 in the main chat (08:51); all eight moved to Answered with their tasks updated (T-065, T-010, T-063 / T-013, T-066, T-043, T-064, T-056, T-042). One new no-assumptions question: Q-22 (which pump room is the pool's). Open now: 1. Lead 2026-10-19 (owner reply): Q-18 answered (c) held and always visible; Q-19 answered for stairs and pools (see Answered); new Q-20 (stair waist and landings). Lead 2026-10-19 04:10: two new questions Q-18 (dome size basis) and Q-19 (may engine conventions release concrete when the drawing prints nothing); eight are open (Q-12 to Q-19): the list is long because each one stops an assumption. Q-12 now has the T-037 hand calculation (see its note). Lead 2026-10-19 02:20: three new questions Q-15 (development project 2 plans file), Q-16 (unlabelled beam span), Q-17 (typed drawing sizes in the concrete score); with Q-12, Q-13 and Q-14 six are open: the list is long because each one stops an assumption. Lead 2026-10-19 00:15: no new question; Q-12 (concrete verdicts) and Q-13 (toilet lines vs chair) open. Window / aluminium door m2 is covered by UP-OPEN-SCHED-001 and UP-DOOR-AREA-001, so it became task T-040, not a question. Lead 2026-10-18 20:05 (owner session): Q-06, Q-07, Q-09 answered by the owner (see Answered); no question open. Lead 2026-10-18 21:25: Q-10 (development project 2 DWG) answered; Q-11 answered (owner uploads the Alsenan DXFs); no question open. Lead 2026-10-18 15:40: no new question; Q-06 and Q-07 still open (no owner answer yet). The T-019 wall-length basis finding is settled by UP-WALL-GEOM-001 (masonry run = centreline, owner-approved), so it became task T-027, not a question. Lead adds questions an agent cannot decide from drawings, rules or evidence. Answered questions move to the bottom.
+Worker 1 2026-10-19 15:40: two new no-assumptions questions from the door / window area check (T-040): Q-32 (arched windows: area to the arch top, to the springing, or the true shape) and Q-33 (are windows aluminium by default). Verifier 2026-10-19 15:12: one new no-assumptions question from the footing verdicts (T-065 / T-042): Q-31 (footing F10 drawn 3.25 x 1.40 vs scheduled 2.80 x 1.40). Open now: 1. Worker 2 2026-10-19 14:10: one new no-assumptions question from the foundation split (T-065): Q-28 (boundary-wall band section and its overlap with footings). Open now: 6. Worker 1 2026-10-19 12:39: two new no-assumptions questions from the architectural sheet census (T-063): Q-26 (pool floor flat at 1.15 m or sloped), Q-27 (two or three domes). Open now: 5. Lead 2026-10-19 12:20: one new no-assumptions question Q-23 (renovation BOQ scope and retained-wall finishes, asked before the sealed test as the owner directed). Lead 2026-10-19 12:30: two more no-assumptions questions from the roof trace: Q-24 (roof waterproofing edge and domes), Q-25 (closing a parapet drafting gap). Open now: 3. Lead 2026-10-19 (owner reply): Q-22 answered A (only a pool-named space or block is the pool pump room; plain "PUMP" listed "use not stated"); no question open. Lead 2026-10-19 10:15: the owner answered Q-12, Q-13, Q-14, Q-15, Q-16, Q-17, Q-20 and Q-21 in the main chat (08:51); all eight moved to Answered with their tasks updated (T-065, T-010, T-063 / T-013, T-066, T-043, T-064, T-056, T-042). One new no-assumptions question: Q-22 (which pump room is the pool's). Open now: 1. Lead 2026-10-19 (owner reply): Q-18 answered (c) held and always visible; Q-19 answered for stairs and pools (see Answered); new Q-20 (stair waist and landings). Lead 2026-10-19 04:10: two new questions Q-18 (dome size basis) and Q-19 (may engine conventions release concrete when the drawing prints nothing); eight are open (Q-12 to Q-19): the list is long because each one stops an assumption. Q-12 now has the T-037 hand calculation (see its note). Lead 2026-10-19 02:20: three new questions Q-15 (development project 2 plans file), Q-16 (unlabelled beam span), Q-17 (typed drawing sizes in the concrete score); with Q-12, Q-13 and Q-14 six are open: the list is long because each one stops an assumption. Lead 2026-10-19 00:15: no new question; Q-12 (concrete verdicts) and Q-13 (toilet lines vs chair) open. Window / aluminium door m2 is covered by UP-OPEN-SCHED-001 and UP-DOOR-AREA-001, so it became task T-040, not a question. Lead 2026-10-18 20:05 (owner session): Q-06, Q-07, Q-09 answered by the owner (see Answered); no question open. Lead 2026-10-18 21:25: Q-10 (development project 2 DWG) answered; Q-11 answered (owner uploads the Alsenan DXFs); no question open. Lead 2026-10-18 15:40: no new question; Q-06 and Q-07 still open (no owner answer yet). The T-019 wall-length basis finding is settled by UP-WALL-GEOM-001 (masonry run = centreline, owner-approved), so it became task T-027, not a question. Lead adds questions an agent cannot decide from drawings, rules or evidence. Answered questions move to the bottom.
 Decisions still queued behind these (from the master study `14_OWNER_DECISIONS_QUEUE.csv`): D-17 review-space wet / dry,
 WP-KITCHEN membrane scope, WP-JOINT details, WIN-REVEAL finish, STUB-LIMIT, MEAS-STD, ROOF-FIN, BLIND-AUTH.
 
@@ -142,8 +142,46 @@ Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
 
 ## Open
 
+### Q-32 Arched windows: how is their area measured? (worker 1 2026-10-19 15:40; T-040; no-assumptions question)
 
-(none open, lead 2026-10-19 14:55)
+THE PROBLEM: four Alsenan windows have a round (arched) top, and no Urban rule says whether the area runs to the top of
+the arch, stops where the arch starts, or follows the true curve. Their areas stay held until you decide; the freelancer
+takes width x full height for all of them (21.15 m2 together).
+WHERE TO LOOK: Drive "Alsenan chalet project", "P7757 dxf.dxf" (or the architectural PDF): the NORTH WEST elevation, the
+big arched window of the first-floor master bedroom over the pool: printed width "269", "305" from the sill to where the
+arch starts, "45" for the arch rise; the same elevation shows the two first-floor sea-side glazed doors "155" wide with
+"300" overall and a fan-light arch; the SOUTH EAST elevation shows the second-floor stair window "120" wide, "170" to
+where the arch starts and "88" above it.
+THE OPTIONS (master-bedroom window, 2.69 m wide):
+(A) Rectangle to the top of the arch: 2.69 x (3.05 + 0.45) = 9.42 m2 (the freelancer's way: he wrote 3.15 x 3.00 = 9.45).
+(B) Rectangle to where the arch starts plus the true arch piece: 2.69 x 3.05 = 8.20 + 0.82 = 9.03 m2.
+(C) Rectangle to where the arch starts only: 2.69 x 3.05 = 8.20 m2, the arch piece listed apart (fan light).
+RECOMMENDATION: (A) for the aluminium supply, because a fabricator quotes and cuts arched frames on the enclosing
+rectangle (practice, not a code clause); (B) if you want the glass area itself.
+WAITS ON: the area of 4 arched windows on Alsenan (freelancer 21.15 m2 of his 116.9 m2 windows) and every arched window or
+door on later villas (T-040, the door / window area method).
+
+Answer:
+
+### Q-33 Windows: are they aluminium by default, like outdoor doors? (worker 1 2026-10-19 15:40; T-040; no-assumptions question)
+
+THE PROBLEM: your door rule says a door that leads outdoors is aluminium, but no rule says what a window is made of, and
+the Alsenan drawings do not write a window material anywhere. Without it the engine cannot put any window into an
+aluminium line; the freelancer puts every window (29 windows, 116.9 m2) into his aluminium sheet.
+WHERE TO LOOK: Drive "Alsenan chalet project", the architectural plans and elevations (no window note or schedule on any
+of the 12 sheets) and the freelancer's aluminium workbook (sheet "الكميات": every window row is in it).
+THE OPTIONS:
+(A) Every window in an outside wall is aluminium unless the drawing or the project file says another material: on Alsenan
+all 29 windows go to the aluminium line.
+(B) The material comes only from the drawing or the specification; with none, the window count and size are released but
+the material stays held (no aluminium line on Alsenan).
+(C) Decided per project in the project facts file.
+RECOMMENDATION: (A), because aluminium is the normal window material for Kuwait villas and it matches your outdoor-door
+rule (practice, not a code clause); the drawing still wins when it says otherwise.
+WAITS ON: the aluminium windows line on every villa (Alsenan freelancer 116.9 m2) (T-040, the door / window area method).
+
+Answer:
+
 
 ## Answered
 
