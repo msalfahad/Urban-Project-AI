@@ -296,6 +296,7 @@ clause). Note: plaster and paint heights on Alsenan stay held either way, becaus
 ceiling level is printed (your Q-14 answer); this answer decides which floor-to-floor each room uses once they are.
 WAITS ON: the floor level of unmarked rooms, then their plaster, paint and wall-tile heights, on every villa (T-081).
 
+Owner 2026-10-19 21:10: "Q-43 not clear at all." The main chat will restate it in plain words and put the owner's reply here; agents wait for that reply and keep the 21 unmarked rooms HELD.
 Answer:
 
 ### Q-44 Dome openings: does the ring beam round each opening stay, and with which size? (lead 2026-10-19 20:15, from worker 2's beam reading; T-043, T-049; no-assumptions question)
@@ -324,7 +325,7 @@ clause). The third dome position (upper roof) stays HELD either way: no structur
 WAITS ON: the dome-ring beam concrete and rebar on Alsenan, and the skylight opening size in the roof membrane (T-043,
 T-049, T-085).
 
-Answer:
+Answer: (owner, main chat 2026-10-19 21:10) His words: "yes we can around it to put waterproof membrane around and finishing, so it's a must and needed." Claude's reading: option A. The ring beam (B4 0.20 x 0.50 m) round each structural dome opening STAYS as the skylight edge beam; it is needed to carry the membrane upturn (0.20 m) and the finish round the opening. Size from the roof slab plan (B4); ask the designer to confirm; the third dome position (upper roof) stays held.
 
 ### Q-45 Cement and sand for floor and wall tiling, room by room: which mortar bed, mix and bag size? (owner request 2026-10-19 20:45; main chat; no-assumptions question)
 
