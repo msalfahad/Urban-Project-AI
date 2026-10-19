@@ -1,5 +1,6 @@
 # Questions for the owner (at most 5 open; answer under "Answer:")
 
+Lead 2026-10-19 16:15: two new no-assumptions questions: Q-35 (wet-room upturn across the door opening: your Q-30 example vs registry UP-WP-DOOR-001) and Q-36 (the new project folder on Drive: open it or not). Q-31 (footing F10) was filed under Answered with no answer: moved back to Open. Open now: 6 (Q-31 to Q-36; all no-assumptions questions, so more than 5).
 Worker 1 2026-10-19 15:40: two new no-assumptions questions from the door / window area check (T-040): Q-32 (arched windows: area to the arch top, to the springing, or the true shape) and Q-33 (are windows aluminium by default). Verifier 2026-10-19 15:12: one new no-assumptions question from the footing verdicts (T-065 / T-042): Q-31 (footing F10 drawn 3.25 x 1.40 vs scheduled 2.80 x 1.40). Open now: 1. Worker 2 2026-10-19 14:10: one new no-assumptions question from the foundation split (T-065): Q-28 (boundary-wall band section and its overlap with footings). Open now: 6. Worker 1 2026-10-19 12:39: two new no-assumptions questions from the architectural sheet census (T-063): Q-26 (pool floor flat at 1.15 m or sloped), Q-27 (two or three domes). Open now: 5. Lead 2026-10-19 12:20: one new no-assumptions question Q-23 (renovation BOQ scope and retained-wall finishes, asked before the sealed test as the owner directed). Lead 2026-10-19 12:30: two more no-assumptions questions from the roof trace: Q-24 (roof waterproofing edge and domes), Q-25 (closing a parapet drafting gap). Open now: 3. Lead 2026-10-19 (owner reply): Q-22 answered A (only a pool-named space or block is the pool pump room; plain "PUMP" listed "use not stated"); no question open. Lead 2026-10-19 10:15: the owner answered Q-12, Q-13, Q-14, Q-15, Q-16, Q-17, Q-20 and Q-21 in the main chat (08:51); all eight moved to Answered with their tasks updated (T-065, T-010, T-063 / T-013, T-066, T-043, T-064, T-056, T-042). One new no-assumptions question: Q-22 (which pump room is the pool's). Open now: 1. Lead 2026-10-19 (owner reply): Q-18 answered (c) held and always visible; Q-19 answered for stairs and pools (see Answered); new Q-20 (stair waist and landings). Lead 2026-10-19 04:10: two new questions Q-18 (dome size basis) and Q-19 (may engine conventions release concrete when the drawing prints nothing); eight are open (Q-12 to Q-19): the list is long because each one stops an assumption. Q-12 now has the T-037 hand calculation (see its note). Lead 2026-10-19 02:20: three new questions Q-15 (development project 2 plans file), Q-16 (unlabelled beam span), Q-17 (typed drawing sizes in the concrete score); with Q-12, Q-13 and Q-14 six are open: the list is long because each one stops an assumption. Lead 2026-10-19 00:15: no new question; Q-12 (concrete verdicts) and Q-13 (toilet lines vs chair) open. Window / aluminium door m2 is covered by UP-OPEN-SCHED-001 and UP-DOOR-AREA-001, so it became task T-040, not a question. Lead 2026-10-18 20:05 (owner session): Q-06, Q-07, Q-09 answered by the owner (see Answered); no question open. Lead 2026-10-18 21:25: Q-10 (development project 2 DWG) answered; Q-11 answered (owner uploads the Alsenan DXFs); no question open. Lead 2026-10-18 15:40: no new question; Q-06 and Q-07 still open (no owner answer yet). The T-019 wall-length basis finding is settled by UP-WALL-GEOM-001 (masonry run = centreline, owner-approved), so it became task T-027, not a question. Lead adds questions an agent cannot decide from drawings, rules or evidence. Answered questions move to the bottom.
 Decisions still queued behind these (from the master study `14_OWNER_DECISIONS_QUEUE.csv`): D-17 review-space wet / dry,
 WP-KITCHEN membrane scope, WP-JOINT details, WIN-REVEAL finish, STUB-LIMIT, MEAS-STD, ROOF-FIN, BLIND-AUTH.
@@ -208,9 +209,7 @@ whose top roof is drawn on no plan (T-071 follow-up, roof wiring).
 
 Answer:
 
-## Answered
-
-### Q-31 Footing F10: the drawn outline or the schedule size? (verifier 2026-10-19 15:12; T-065, T-042; no-assumptions question)
+### Q-31 Footing F10: the drawn outline or the schedule size? (verifier 2026-10-19 15:12; moved back to Open by the Lead 16:15: it had been filed under Answered with no answer; T-065, T-042; no-assumptions question)
 
 THE PROBLEM: at column C5 on the foundation plan, footing F10 is drawn as one open outline 3.25 x 1.40 m that carries
 two tags (F10 and F), while the footing schedule gives F10 as 2.80 x 1.40 x 0.50 m. The two drawings disagree by
@@ -229,6 +228,53 @@ WAITS ON: 1.96 - 2.28 m3 of the Alsenan footing line (freelancer footing line 77
 footing outline that disagrees with its schedule row on any villa.
 
 Answer:
+
+### Q-35 Wet-room upturn at the door: does the 0.20 m upturn run across the door opening? (lead 2026-10-19 16:15; T-072, T-076; no-assumptions question: two rules disagree)
+
+THE PROBLEM: your kitchen example (Q-30 answer) counts the 0.20 m upturn on the whole boundary, door opening included
+(3 x 4 m kitchen: 14.00 lm of wall, 14.80 m2 of membrane surface). The registry rule for doorways (UP-WP-DOOR-001, from
+your 2026-10-16 programme) says a doorway is never billed as door width x 0.20 m but is a transition built by detail. The
+two rules give different upturn lengths and the engine must not pick one. On Alsenan's 14 measured wet areas: upturn on
+the full boundary 123.13 lm vs the freelancer 122.61 lm (+0.4 %); walls only, doorways left out, 110.33 lm (-10.0 %); the
+difference is 12.80 lm of doorways.
+WHERE TO LOOK: the Q-30 answer below (your kitchen example); any bathroom door on the Alsenan architectural plans (Drive
+"Alsenan chalet project", P7757 DXF or PDF part 01-02); the freelancer's waterproofing rows in his workbook
+"الارضيات+العازل+الديكور+الرخام".
+THE OPTIONS:
+(A) Upturn on the full boundary, doorway included, as in your kitchen example: 123.13 lm on Alsenan; no separate doorway
+line.
+(B) Upturn on the walls only: 110.33 lm on Alsenan; each doorway becomes its own "doorway waterproofing transition" line,
+counted per door (pcs, with its width), built to the detail (UP-WP-DOOR-001).
+(C) Both, for different purposes: the membrane to BUY follows your strip method (strips cut 0.20 m longer at both ends,
+whatever sits in the wall), while the BOQ upturn line is walls only (110.33 lm) plus a doorway transition line per door.
+RECOMMENDATION: (C), because your strip method already decides how much membrane is bought, while a doorway needs a
+threshold detail that a length x 0.20 line hides (practice, not a code clause). If you want a single upturn figure, (A)
+follows your newest words.
+WAITS ON: the wet-area upturn line on every villa (12.80 lm on Alsenan) and the doorway part of the membrane fold (T-076).
+
+Answer:
+
+### Q-36 A new project folder appeared on Drive: may the team open it, and for what? (lead 2026-10-19 16:15; owner direction "Alsenan first", Q-23; no-assumptions question)
+
+THE PROBLEM: at 15:27 UTC today a third project folder was created under "Urban BOQ private data" (next to the Alsenan
+and apartment folders). It holds an earlier-approved architectural plan (PDF, 0.49 MB), an architectural + structural
+plan "2" (PDF, 4.89 MB, uploaded twice), an all-floor-plans PDF (1.29 MB) and one photo: it looks like an old building
+and its new design, i.e. a renovation set. At 14:17 you cancelled the renovation test and said no new villa will be sent,
+and your direction is Alsenan only. No board task names this folder (Drive shows its files were opened 16:03 - 16:06 UTC,
+by you or by a session). The Lead will not decide whether it is a working sample, a sealed blind test or not for the team.
+WHERE TO LOOK: Drive "Urban BOQ private data", the folder created today at 15:27 UTC.
+THE OPTIONS:
+(A) Not for the team now: no agent opens it until you say; Alsenan only continues.
+(B) A development sample: the team may read it (first for the PDF plan reader, gate 4); no freelancer comparison, nothing
+counted as accuracy. Say which files are the old building and which the new design.
+(C) A sealed blind test (owner only): no agent opens it; you run it yourself when the engine is ready.
+RECOMMENDATION: (A) until you say, because opening a set that may be a blind test cannot be undone and your newest
+direction is Alsenan only; if it is the renovation sample after all, answer (B) or (C).
+WAITS ON: the PDF plan reader work (gate 4) and any renovation work; nothing on Alsenan waits on it.
+
+Answer:
+
+## Answered
 
 ### Q-29 Domes: are they concrete at all, and does the roof membrane run under them? (lead 2026-10-19 14:30; Q-24 and Q-27 answers, T-049, T-071, T-072; no-assumptions question)
 

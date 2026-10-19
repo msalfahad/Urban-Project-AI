@@ -3,23 +3,41 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
-## Recurring causes (lead 2026-10-19 14:30)
+## Recurring causes (lead 2026-10-19 16:15)
 
-1. **Repo code refused for workers 2 and 3**: worker 2 at 14:02 again could not clone the working branch or pip-install
-   ("[Untrusted Code Integration]") and delivered by hand reading and the GitHub connector; worker 3 claimed a hand-reading
-   task at 14:00. list_triggers shows the same approval setting (auto) for all three workers and the verifier, so the
-   refusals come from the per-command auto-mode check, not a visible task setting. Decision: NO REPO CODE rows kept on the
-   board for them (T-074, T-043); owner asked to add explicit allow rules (lead report, NEEDS FIXING).
-2. **Drawn members that the engine does not see as members**: footings drawn as block inserts on another layer or as open
-   outlines (8.05 m of band wrongly measured, T-065); exterior outlines on an OTHER layer (T-062). Decision: T-073 (plot-edge
-   members) and T-071 (exterior spaces); research request R-05 asks for general member detection from inserts and open outlines.
-3. **Merged pieces not wired into the released run**: T-060 now gives one new concrete ledger version, but it is opt-in;
-   the released Alsenan run still reads concrete 92.77 vs 111.81 m3. Wiring is an owner step once the member types (Q-28)
-   and the dome basis (Q-29) are answered.
-4. **Rules missing for what the drawing shows**: band section (Q-28), domes concrete or finish (Q-29), kitchen waterproofing
-   (Q-30). Each asked; the affected lines stay HELD.
-5. **Drive parts too big for the connector**: architectural PDF parts 03-04 (6.79 MB) and 09-10 (6.37 MB) cannot be read
-   (practical limit about 6.2 MB); the stair section may be on them. Owner asked to upload single pages.
+1. **Merged pieces not wired into the released run** (largest now): concrete ledger V2, wet / dry evidence, roofs on their
+   own layer are verified and merged, yet the released Alsenan run is unchanged since 8774071 (concrete 92.77 vs 111.81 m3).
+   Decision: T-079 wires the architectural pieces (after T-072 / T-076); concrete ledger wiring follows once T-073 / T-049
+   / T-056 give the held lines their members.
+2. **Openings: the engine counts pieces, the BOQ needs areas, and 2 windows are lost**: T-040 gap G1-G7. Decision: T-077
+   (lost openings, gate 1) and T-078 (areas from printed dimensions); owner Q-32, Q-33.
+3. **Rules missing or in conflict for what the drawing shows**: F10 drawn vs schedule (Q-31), arched windows (Q-32),
+   window material (Q-33), top roof on no plan (Q-34), doorway upturn (Q-35). All asked; the parts stay HELD.
+4. **Real room outlines break methods written for clean rectangles**: the membrane fold ran on 0 of 14 Alsenan wet rooms
+   (collinear points, 45 deg rooms). Decision: T-076.
+5. Resolved this run: repo code refused for workers 2 and 3 (worker 2 16:10 and worker 3 16:03 self-checks PASS on every
+   step after the owner's execution authorization 15:24); Drive parts too big (single sheets 3, 4, 9, 10 uploaded 14:57).
+
+## 2026-10-19 16:15 (lead run)
+
+- **T-060 concrete ledger V2: WORKED.** Merged 9671133. Band 91.94 m and pool ring 2.357 m2 recovered, held per owner rules;
+  1452 of 1455 lines identical. Not wired (cause 1).
+- **T-065 foundations by member: WORKED.** Merged b09c06a. Isolated footings 64.346 m3 by hand = engine (freelancer 65.634,
+  -2.0 %, ENGINE_RIGHT on F3 counted twice); F10 conflict -> Q-31 (filed under Answered by mistake; moved back to Open).
+- **T-042 columns / necks / datum: PARTIAL.** Merged b842ec2. CN neck-only columns found (T-075 tasks it); datum not printed
+  as a full arrangement, so necks / excavation / backfill stay HELD; section A-A is now on Drive as a single sheet (T-056
+  reads it for stairs; the founding datum stays HELD as T-042 found).
+- **T-010 wet / dry evidence: WORKED.** Merged 8fcabe0. Wet floor 72.12 vs 72.01 m2 (+0.2 %, was -12.8 %), upturn 144.73 vs
+  144.61 lm, by the piece only (cause 1 -> T-079).
+- **T-071 roofs: PARTIAL.** Merged 4054509. Three plan roofs 204.11 m2 = hand (ENGINE_RIGHT), total -28.4 % vs 285.00 m2
+  because the 2F top roof is on no plan -> Q-34 (verifier). No-assumptions check: the 0.45 m parapet-end reach is an
+  engine constant, not an owner rule; gaps above it stay HELD, so no assumed value enters a quantity (noted on T-079).
+- **T-040 doors / windows: PARTIAL.** Merged 2c86de1 (research). Windows with printed heights 9.08 vs 9.70 m2 (-6.4 %,
+  ENGINE_RIGHT proposals); 19 HELD (no printed height), 4 arched on Q-32, material on Q-33; 2 windows silently lost and the
+  cause not traced (25-minute run, under the 50-minute rule). Decision: T-077, T-078.
+- **T-072 membrane purchase table: READY, PARTIAL on its face.** 14 wet areas 62.77 vs 62.43 m2 (+0.5 %), 13 rolls
+  provisional, 9 HELD rows never 0; owner's kitchen reproduced exactly; fold on 0 of 14 real rooms -> T-076; billed upturn
+  110.33 vs 122.61 lm (-10.0 %) is a rule conflict, not a result -> Q-35. Verifier checks next.
 
 ## 2026-10-19 14:30 (lead run)
 
