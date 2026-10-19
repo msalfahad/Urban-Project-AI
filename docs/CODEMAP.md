@@ -14,7 +14,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 589 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 590 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 8 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
@@ -22,7 +22,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1291 | pytest suites, one folder per round. |
+| `tests/` | 1292 | pytest suites, one folder per round. |
 | `tools/` | 103 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (237 modules)
+## `engine/source/` (238 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -400,7 +400,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_quantity_truth.py` | 536 | MEDIUM | 2 | ARCH_QUANTITY_TRUTH_V1 - generic architectural quantity calculators with explicit evidence states. |
 | `arch_rooms.py` | 2250 | HIGH | 33 | ARCHITECTURAL SPACES (M9 S2, S4) - rooms of one floor plan from its wall linework, on the TS01 topology (generic). |
 | `arch_v27.py` | 1135 | MEDIUM | 5 | ARCH_TAKEOFF_V2.7 (M9 Phase 2B-7) - the drawing-interpretation corrections proven by independent acceptance tests |
-| `arch_v28.py` | 1028 | MEDIUM | 5 | ARCHITECTURAL TAKEOFF V2.8 (M9 Phase 2B-9) - heights read from the drawing, the opening schedule, window reveals |
+| `arch_v28.py` | 1028 | MEDIUM | 7 | ARCHITECTURAL TAKEOFF V2.8 (M9 Phase 2B-9) - heights read from the drawing, the opening schedule, window reveals |
 | `arch_v29.py` | 809 | MEDIUM | 4 | ARCH_TAKEOFF_V2.9 (Phase N10) - curved wall openings (generic; stdlib only). Read only by ARCH_TAKEOFF_V2.9. |
 | `arch_walls.py` | 236 | HIGH | 5 | WALL RUNS AND THE ROOM GRAPH (M9 S3) - the walls of one floor plan by thickness, and which spaces each wall and |
 | `authority_decisions.py` | 206 | CRITICAL | 2 | AUTHORITY DECISIONS - owner authority rulings, provenance classes and facet-state errata (generic, stdlib only). |
@@ -450,7 +450,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `delta_release.py` | 159 | CRITICAL | 37 | DELTA RELEASE - a frozen accurate-rebar release plus a delta, never a rewritten historical result. |
 | `detail_evidence.py` | 361 | MEDIUM | 7 | DETAIL EVIDENCE (M3) - typical-detail evidence read from a drawing PDF, in one schema for machine reads (native |
 | `digests.py` | 134 | MEDIUM | 4 | URBAN-SRD-1 and URBAN-RGD-1 — identity digests, NOT reconciliation. |
-| `dimension_evidence.py` | 187 | MEDIUM | 2 | DIMENSION EVIDENCE (M9 Phase 2A P2-09a, ARCH_TAKEOFF_V2.1) - read-only: the authored dimensions of a plan, their |
+| `dimension_evidence.py` | 187 | MEDIUM | 3 | DIMENSION EVIDENCE (M9 Phase 2A P2-09a, ARCH_TAKEOFF_V2.1) - read-only: the authored dimensions of a plan, their |
 | `discovery.py` | 260 | MEDIUM | 6 | DRAWING DISCOVERY AND ADMISSION (M9 S6) - what a drawing holds and whether it may be measured, BEFORE any quantity. |
 | `door_feasibility.py` | 619 | MEDIUM | 3 | DOOR FEASIBILITY (M9 Phase 2B-2, ARCH_TAKEOFF_V2.4 only) - for every door: what the drawing shows, what Urban |
 | `door_model.py` | 837 | HIGH | 13 | DOOR MODEL (M9 Phase 2A P2-03 / P2-04, ARCH_TAKEOFF_V2.1 only) - every drawn door swing belongs to exactly one |
@@ -563,6 +563,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `schedule_reader.py` | 352 | CRITICAL | 3 | SCHEDULE READER (M2) - structural schedules from attribute rows or text tables, without a project profile (generic). |
 | `schedule_table.py` | 181 | MEDIUM | 3 | SCHEDULE TABLE READER (V1) - a drawn schedule (grid lines + values) as rows and cells, fail closed. |
 | `scope_quantities.py` | 1377 | CRITICAL | 4 | SCOPE QUANTITIES (M8) - the scope a completeness finding locates, measured from the drawn plan or bounded by a |
+| `section_binding.py` | 461 | MEDIUM | 1 | SECTION BINDING V1 (T-013) - bind the level bands of sections / elevations to the plan floors, and report per floor |
 | `semantic_zones.py` | 169 | MEDIUM | 4 | PHYSICAL SPACE != SEMANTIC ZONE != TRADE MEASUREMENT REGION (R8.9). |
 | `shaft_geometry.py` | 331 | CRITICAL | 1 | SHAFT GEOMETRY - lift shafts and pits: wall rings, wall pieces, openings, storeys, tie-beam triggers (generic). |
 | `shell_line_distribution.py` | 112 | CRITICAL | 1 | SHELL LINE DISTRIBUTION - how lines laid on a spherical cap add up under different layout rules (generic, stdlib). |
@@ -587,7 +588,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `stair_measure.py` | 119 | CRITICAL | 3 | STAIR MEASURE (M4) - structural stair quantities from the drawn treads of a stair zone (generic; stdlib + |
 | `stair_riser_schedule.py` | 155 | CRITICAL | 2 | STAIR RISER SCHEDULE - riser counts from drawn lines, uniform finished risers, finished and structural levels, |
 | `stair_scenario_checks.py` | 215 | CRITICAL | 1 | STAIR SCENARIO CHECKS - what a proposed riser count implies against a printed level, how it is set out on site, |
-| `storey_vocab.py` | 140 | MEDIUM | 2 | STOREY VOCABULARY V1 (T-029) - which storey a floor-plan title names, bilingual, ordered by level (generic). |
+| `storey_vocab.py` | 140 | MEDIUM | 3 | STOREY VOCABULARY V1 (T-029) - which storey a floor-plan title names, bilingual, ordered by level (generic). |
 | `struct_n10.py` | 306 | MEDIUM | 2 | STRUCTURAL N10 (Phase N10) - formwork contact faces, excavation footprints and a reinforcement audit, read from the |
 | `structural_authority.py` | 142 | MEDIUM | 2 | SOURCE AUTHORITY MODEL (generic, project-independent). |
 | `structural_census.py` | 356 | CRITICAL | 1 | STRUCTURAL_CENSUS_V1 - source rules + occurrence census, before any reinforcement calculation. |
@@ -938,6 +939,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/synth_villa/` | 1 |
 | `tests/t004a_label_census/` | 1 |
 | `tests/t010_wet_room_evidence/` | 1 |
+| `tests/t013_section_binding/` | 1 |
 | `tests/t022_room_vocab/` | 1 |
 | `tests/t029_storey_vocab/` | 1 |
 | `tests/t034_arch_v210/` | 1 |
