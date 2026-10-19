@@ -22,6 +22,10 @@ top level, founding depth, typical ground-beam sections by span band (printed as
 blinding thickness come from a person-typed profile; so the sharpest question is how to read those printed values (level
 marks, section titles, general notes) from structural DXF text reliably, in English and Arabic, cm and m. Unblocks
 T-045, T-046, T-044.
+Update (lead 2026-10-19 04:10, from T-044 / T-033): on two villas Arabic notes are drawn in SHX fonts and stored as Latin
+keyboard codes (a printed founding depth was missed this way). Look for: how Arabic SHX fonts encode text in DXF, published
+keyboard-to-Arabic maps and their variants per font, letter joining, open-source decoders (permissive licence), how to
+detect an Arabic SHX style without a project's font names. Unblocks T-047, T-044, T-049.
 
 ### R-03 Storey / sheet detection in multi-sheet villa DXF (lead 2026-10-19)
 Problem: a storey whose title the engine does not recognise is not measured. Gap: Alsenan run found GF / 1F / 2F only

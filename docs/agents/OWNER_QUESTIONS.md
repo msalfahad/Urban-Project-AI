@@ -1,6 +1,6 @@
 # Questions for the owner (at most 5 open; answer under "Answer:")
 
-Lead 2026-10-19 02:20: three new questions Q-15 (development project 2 plans file), Q-16 (unlabelled beam span), Q-17 (typed drawing sizes in the concrete score); with Q-12, Q-13 and Q-14 six are open: the list is long because each one stops an assumption. Lead 2026-10-19 00:15: no new question; Q-12 (concrete verdicts) and Q-13 (toilet lines vs chair) open. Window / aluminium door m2 is covered by UP-OPEN-SCHED-001 and UP-DOOR-AREA-001, so it became task T-040, not a question. Lead 2026-10-18 20:05 (owner session): Q-06, Q-07, Q-09 answered by the owner (see Answered); no question open. Lead 2026-10-18 21:25: Q-10 (development project 2 DWG) answered; Q-11 answered (owner uploads the Alsenan DXFs); no question open. Lead 2026-10-18 15:40: no new question; Q-06 and Q-07 still open (no owner answer yet). The T-019 wall-length basis finding is settled by UP-WALL-GEOM-001 (masonry run = centreline, owner-approved), so it became task T-027, not a question. Lead adds questions an agent cannot decide from drawings, rules or evidence. Answered questions move to the bottom.
+Lead 2026-10-19 04:10: two new questions Q-18 (dome size basis) and Q-19 (may engine conventions release concrete when the drawing prints nothing); eight are open (Q-12 to Q-19): the list is long because each one stops an assumption. Q-12 now has the T-037 hand calculation (see its note). Lead 2026-10-19 02:20: three new questions Q-15 (development project 2 plans file), Q-16 (unlabelled beam span), Q-17 (typed drawing sizes in the concrete score); with Q-12, Q-13 and Q-14 six are open: the list is long because each one stops an assumption. Lead 2026-10-19 00:15: no new question; Q-12 (concrete verdicts) and Q-13 (toilet lines vs chair) open. Window / aluminium door m2 is covered by UP-OPEN-SCHED-001 and UP-DOOR-AREA-001, so it became task T-040, not a question. Lead 2026-10-18 20:05 (owner session): Q-06, Q-07, Q-09 answered by the owner (see Answered); no question open. Lead 2026-10-18 21:25: Q-10 (development project 2 DWG) answered; Q-11 answered (owner uploads the Alsenan DXFs); no question open. Lead 2026-10-18 15:40: no new question; Q-06 and Q-07 still open (no owner answer yet). The T-019 wall-length basis finding is settled by UP-WALL-GEOM-001 (masonry run = centreline, owner-approved), so it became task T-027, not a question. Lead adds questions an agent cannot decide from drawings, rules or evidence. Answered questions move to the bottom.
 Decisions still queued behind these (from the master study `14_OWNER_DECISIONS_QUEUE.csv`): D-17 review-space wet / dry,
 WP-KITCHEN membrane scope, WP-JOINT details, WIN-REVEAL finish, STUB-LIMIT, MEAS-STD, ROOF-FIN, BLIND-AUTH.
 
@@ -75,6 +75,14 @@ Choices: (a) the drawing shows the bigger pool / basement stair: the engine is m
 (b) the freelancer added items not on the drawing: the engine stays, the difference is the freelancer's;
 (c) the edge strip is / is not the perimeter footing: it stays in / leaves the footing line.
 Waits on: the concrete scoreboard verdicts for pool, stairs and footings (T-001b).
+Lead 2026-10-19 04:10 (T-037 hand calculation, research/agents_t037/ on its branch): the drawing settles part of this.
+Pool: the pool detail prints a 0.40 m floor (the engine used 0.25) and the pool is D-shaped (the engine kept only the
+straight half): the engine is short, fix tasks T-048 / T-049; the pool depth is printed only as "as per architectural",
+so the pool line stays open until the architectural PDF can be read. Stairs + domes: there is no basement on any sheet;
+the freelancer's "basement" 13.70 m3 = entrance stair 1.41 + stair 2 5.51 + three domes 6.78; only two structural domes
+are drawn (the third is a dashed circle on the architectural plan); the stair waist and risers are not printed (see
+Q-19). Edge strip: it is the boundary-wall beam row "20x60" of the schedule on a closed band 91.94 m long; the engine
+kept 60.17 m of it (two edges lost, task T-050), the freelancer 71.7 m. Choice (c) above is still yours.
 
 Answer:
 
@@ -164,6 +172,39 @@ Choices: (a) yes, but only values a check (task T-044) finds printed on the draw
 value stays held; (b) no: the score shows only what the engine reads by itself, the typed file is for diagnosis only;
 (c) yes for every value in the typed file (you confirm them, including the 2.0 m founding level).
 Waits on: the concrete score for columns, necks, ground beams and blinding (T-044, T-036).
+
+Answer:
+
+### Q-18 Dome sizes: are the printed 442 and 190 measured to the outside or the inside of the shell? (lead 2026-10-19 04:10; T-037, T-049)
+
+What we found: the dome detail prints the dome width, its rise and the shell thickness, but not whether the width and
+rise are taken on the outer or the inner surface, and that changes the concrete. No Urban rule says which.
+Real example: Alsenan, structural drawing (Drive "Alsenan chalet project", "ST7757 dxf.dxf" and the ST7757 PDF), dome
+detail: 442 wide, 190 rise, 10 cm shell. Outer surface basis: about 2.54 m3 per dome; inner surface basis: about
+2.80 m3 per dome (two domes drawn). Today the engine uses its own rise and shell guesses: 3.69 m3 per dome.
+How to check it yourself: open the dome detail on the structural drawing and see where the 442 and 190 dimension
+lines end: on the outer line of the shell or the inner line.
+Choices: (a) outer surface: 2 x 2.54 m3; (b) inner surface: 2 x 2.80 m3; (c) hold the domes until the designer
+confirms (shown, not scored).
+Waits on: the dome part of the concrete stairs + domes line (T-049).
+
+Answer:
+
+### Q-19 When the drawing prints no size, may the engine use its own "usual villa" sizes for concrete? (lead 2026-10-19 04:10; T-037)
+
+What we found: for pools, domes and stairs the engine fills sizes the drawing does not print from its own list of usual
+villa sizes (for example pool floors 20 - 30 cm, dome shells 10 - 15 cm, stair waists 15 - 20 cm) and releases the
+concrete as a number. These sizes are not an Urban rule you approved, so under "no assumptions" they should not make a
+number without your say.
+Real example: Alsenan, structural drawing "ST7757 dxf.dxf": the ground-floor stair is released at 2.79 m3 with a waist
+the drawing never prints; the pool floor was taken as 0.25 m although the pool detail prints 0.40 m; the domes at
+3.69 m3 each from a guessed rise.
+How to check it yourself: open the stair on the ground-floor slab plan and look for a stair section or a waist
+thickness note; you will find tread lines but no section.
+Choices: (a) a printed size always wins; where nothing is printed the line is held (shown, not scored) until the
+designer gives it; (b) a printed size wins; where nothing is printed the engine may use its usual size, marked
+"usual size, not on drawing", and the line counts in the score; (c) as (b) but the line is shown and not scored.
+Waits on: pool, dome and stair concrete lines on every villa (T-049, T-037 follow-ups).
 
 Answer:
 

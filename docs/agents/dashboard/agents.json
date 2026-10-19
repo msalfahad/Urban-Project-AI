@@ -3,46 +3,46 @@
   "agent": "Lead planner",
   "role": "Plans the work, keeps the board and milestones, asks you questions",
   "cadence": "every 2 h (:09)",
-  "last_run": "2026-10-19T02:09:44Z",
+  "last_run": "2026-10-19T04:10:03Z",
   "result": "running",
-  "working_on": "T-036 follow-ups (T-041, T-042, T-044) and 3 new questions Q-15..Q-17",
-  "as_of": "2026-10-19T02:25:00Z"
+  "working_on": "T-037 / T-044 follow-ups (T-047, T-048, T-050, T-052) and owner Q-18, Q-19",
+  "as_of": "2026-10-19T04:16:50Z"
  },
  {
   "agent": "Worker 1",
   "role": "Builds one board task per run on its own branch",
   "cadence": "hourly :19",
-  "last_run": "2026-10-19T01:19:24Z",
+  "last_run": "2026-10-19T03:20:09Z",
   "result": "ok",
-  "working_on": "T-033 development project 2 CAD audit: delivered READY (lossy)",
-  "as_of": "2026-10-19T02:25:00Z"
+  "working_on": "T-037 Q-12 concrete hand calculation (Alsenan): delivered READY",
+  "as_of": "2026-10-19T04:16:50Z"
  },
  {
   "agent": "Worker 2",
   "role": "Builds one board task per run on its own branch",
   "cadence": "hourly :39",
-  "last_run": "2026-10-19T01:39:22Z",
-  "result": "running",
-  "working_on": "T-004a room and opening label census (Alsenan)",
-  "as_of": "2026-10-19T02:25:00Z"
+  "last_run": "2026-10-19T03:40:10Z",
+  "result": "ok",
+  "working_on": "T-038 missing basement census (Alsenan): delivered READY",
+  "as_of": "2026-10-19T04:16:50Z"
  },
  {
   "agent": "Worker 3",
   "role": "Builds one board task per run on its own branch",
   "cadence": "hourly :59",
-  "last_run": "2026-10-19T01:59:38Z",
-  "result": "running",
-  "working_on": "T-016a verify 10 changes V2.6 -> V2.7.1",
-  "as_of": "2026-10-19T02:25:00Z"
+  "last_run": "2026-10-19T03:59:59Z",
+  "result": "ok",
+  "working_on": "T-041 lost ground-beam band trace (Alsenan): delivered READY",
+  "as_of": "2026-10-19T04:16:50Z"
  },
  {
   "agent": "Verifier",
   "role": "Checks finished tasks, merges or rejects, keeps the scoreboard",
   "cadence": "hourly :49",
-  "last_run": "2026-10-19T01:49:50Z",
-  "result": "ok",
-  "working_on": "Merged T-001b and T-035; T-034, T-029, T-036 verified, wait on a map conflict",
-  "as_of": "2026-10-19T02:25:00Z"
+  "last_run": "2026-10-19T03:49:57Z",
+  "result": "running",
+  "working_on": "Merged T-025a (2748ffe); checking T-011",
+  "as_of": "2026-10-19T04:16:50Z"
  },
  {
   "agent": "Research scout",
@@ -51,6 +51,6 @@
   "last_run": "2026-10-18T23:51:05Z",
   "result": "ok",
   "working_on": "Requests R-01..R-03 open for its next run",
-  "as_of": "2026-10-19T02:25:00Z"
+  "as_of": "2026-10-19T04:16:50Z"
  }
 ]
