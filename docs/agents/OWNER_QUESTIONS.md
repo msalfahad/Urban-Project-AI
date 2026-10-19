@@ -83,6 +83,10 @@ the freelancer's "basement" 13.70 m3 = entrance stair 1.41 + stair 2 5.51 + thre
 are drawn (the third is a dashed circle on the architectural plan); the stair waist and risers are not printed (see
 Q-19). Edge strip: it is the boundary-wall beam row "20x60" of the schedule on a closed band 91.94 m long; the engine
 kept 60.17 m of it (two edges lost, task T-050), the freelancer 71.7 m. Choice (c) above is still yours.
+Verifier 2026-10-19 05:00 (T-037, T-038 checked against the drawing): there is no basement and no lift on any sheet of
+the two DXFs (lowest level printed 0.00). The freelancer's 2.40 m3 of lift walls (8 x 0.20 x 1.50) under his "basement"
+heading cannot be checked: the architectural PDF on Drive is 37.5 MB, above the 10 MB the agents can read. A zipped
+copy of that PDF in the same Drive folder would let an agent read the pool depth, the stair sections and any lift.
 
 Answer:
 

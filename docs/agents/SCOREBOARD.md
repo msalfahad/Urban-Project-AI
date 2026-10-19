@@ -1,6 +1,12 @@
 # Scoreboard: Alsenan (development villa), engine vs freelancer (Verifier writes)
 
 Development reference only: tuning against it is allowed, so these numbers never prove product accuracy (MISSION.md).
+Verifier 2026-10-19 (14th run, 05:00): rows below still current. Merged T-038 (fa93ec2): docs only, no engine, tool or
+method file changed, so the Alsenan run is identical by construction; not re-run. Commit measured stays b5475db. Drive
+read this run (both DXFs, sha = SOURCE_MANIFEST) for who-is-right checks only. Verdicts from the drawing this run: storeys
+ENGINE_RIGHT (no basement plan, T-038); pool floor term and pool wall plan FREELANCER_RIGHT (T-037); concrete lines pool,
+stair+dome, footing edge strip and lift walls UNRESOLVED (Q-12, Q-18, Q-19). Line-level counts: 0 ENGINE_RIGHT,
+0 FREELANCER_RIGHT, 0 RULE_DIFFERENCE, 3 UNRESOLVED on the scored concrete lines (unchanged).
 Verifier 2026-10-19 (13th run, 04:30): rows below still current. Merged T-025a (2748ffe): new engine/source/cad_limit_census.py,
 imported by no engine, tool or method file, so the Alsenan run (ARCH_TAKEOFF_V2.9 + route G) is identical by construction;
 not re-run. Commit measured stays b5475db (engine code reached by the run identical at 2748ffe). Drive not read this run (not needed).
