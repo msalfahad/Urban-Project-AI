@@ -40,7 +40,8 @@ VERSIONS = {"1.0.0": ROOT / "knowledge" / "URBAN_ENGINEERING_KNOWLEDGE_1.0.0.jso
             "1.2.0": ROOT / "knowledge" / "URBAN_ENGINEERING_KNOWLEDGE_1.2.0.json",       # ARCH_TAKEOFF_V2.7
             "1.3.0": ROOT / "knowledge" / "URBAN_ENGINEERING_KNOWLEDGE_1.3.0.json",       # ARCH_TAKEOFF_V2.7.1
             "1.4.0": ROOT / "knowledge" / "URBAN_ENGINEERING_KNOWLEDGE_1.4.0.json",       # ARCH_TAKEOFF_V2.8
-            "1.5.0": ROOT / "knowledge" / "URBAN_ENGINEERING_KNOWLEDGE_1.5.0.json"}       # ARCH_TAKEOFF_V2.9
+            "1.5.0": ROOT / "knowledge" / "URBAN_ENGINEERING_KNOWLEDGE_1.5.0.json",       # ARCH_TAKEOFF_V2.9
+            "1.6.0": ROOT / "knowledge" / "URBAN_ENGINEERING_KNOWLEDGE_1.6.0.json"}       # door minimum (T-011)
 DEFAULT_VERSION = "1.0.0"
 _ACTIVE = contextvars.ContextVar("urban_knowledge_version", default=DEFAULT_VERSION)
 POLICY_ID = "URBAN_ENGINEERING_KNOWLEDGE_V1"

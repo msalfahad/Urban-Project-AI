@@ -16,14 +16,14 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `documents/` | 5 |  |
 | `engine/` | 579 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
-| `knowledge/` | 7 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
+| `knowledge/` | 8 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
 | `research/` | 2292 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1271 | pytest suites, one folder per round. |
-| `tools/` | 96 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
+| `tests/` | 1272 | pytest suites, one folder per round. |
+| `tools/` | 97 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
 
@@ -450,7 +450,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `discovery.py` | 251 | MEDIUM | 5 | DRAWING DISCOVERY AND ADMISSION (M9 S6) - what a drawing holds and whether it may be measured, BEFORE any quantity. |
 | `door_feasibility.py` | 619 | MEDIUM | 3 | DOOR FEASIBILITY (M9 Phase 2B-2, ARCH_TAKEOFF_V2.4 only) - for every door: what the drawing shows, what Urban |
 | `door_model.py` | 837 | HIGH | 13 | DOOR MODEL (M9 Phase 2A P2-03 / P2-04, ARCH_TAKEOFF_V2.1 only) - every drawn door swing belongs to exactly one |
-| `door_standards.py` | 599 | MEDIUM | 7 | DOOR STANDARDS AND SCENARIOS (M9 Phase 2B-1, ARCH_TAKEOFF_V2.3 only) - the owner door rules of the knowledge |
+| `door_standards.py` | 671 | MEDIUM | 7 | DOOR STANDARDS AND SCENARIOS (M9 Phase 2B-1, ARCH_TAKEOFF_V2.3 only) - the owner door rules of the knowledge |
 | `door_transition.py` | 124 | MEDIUM | 4 | DOOR FINISH TRANSITION (R8.14) - where one floor finish meets another inside a door threshold, as a TRADE |
 | `drawing_inventory.py` | 280 | CRITICAL | 5 | DRAWING INVENTORY (M1) - what a DXF holds, before any quantity (generic). |
 | `drawing_model.py` | 309 | CRITICAL | 15 | DRAWING MODEL (M2) - a normalized, source-pointed model of one structural drawing set (generic, stdlib). |
@@ -480,7 +480,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `ground_system_rebar.py` | 699 | CRITICAL | 1 | GROUND_SYSTEM_REBAR (S5) - accurate ground-beam and strap-beam reinforcement, occurrence by occurrence, component |
 | `ground_system_resolution.py` | 369 | MEDIUM | 1 | Ground-system source resolution (pre-S5.1): generic decisions over measured evidence, no geometry library, no kg. |
 | `independent_export.py` | 251 | MEDIUM | 2 | INDEPENDENT EXPORT ADMISSION (R8.5 follow-up) — may this DXF serve as the independent parser route? |
-| `knowledge.py` | 287 | HIGH | 25 | ENGINEERING KNOWLEDGE (M9 Phase 2B-1, ARCH_TAKEOFF_V2.3 only) - the owner rules, conflicts, question catalogue and |
+| `knowledge.py` | 288 | HIGH | 26 | ENGINEERING KNOWLEDGE (M9 Phase 2B-1, ARCH_TAKEOFF_V2.3 only) - the owner rules, conflicts, question catalogue and |
 | `legacy_text.py` | 136 | CRITICAL | 2 | LEGACY CAD TEXT DECODING (V3) - Arabic written with legacy AutoCAD SHX fonts. |
 | `level_marks.py` | 144 | MEDIUM | 3 | LEVEL MARK UNIT EVIDENCE (V1) - authored level annotations of ONE elevation / section view as unit evidence. |
 | `link_geometry.py` | 96 | CRITICAL | 2 | LINK GEOMETRY - stirrup / link topology and envelope lower bounds for accurate beam reinforcement (generic). |
@@ -638,7 +638,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `libredwg_map.py` | 489 | HIGH | 10 | D1 route: LibreDWG `dwgread` JSON -> neutral SourceEntityObservations. |
 | `unit_evidence.py` | 139 | HIGH | 2 | Deterministic unit / scale EVIDENCE from a D1 (LibreDWG JSON) decode — R8.3 §16. |
 
-## `tools/` (94 modules)
+## `tools/` (95 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -694,6 +694,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `kb_build_1_3.py` | 197 | MEDIUM | 0 | KNOWLEDGE REGISTRY 1.3.0 BUILDER (M9 Phase 2B-8) - knowledge/URBAN_ENGINEERING_KNOWLEDGE_1.3.0.json is the frozen |
 | `kb_build_1_4.py` | 197 | MEDIUM | 0 | KNOWLEDGE REGISTRY 1.4.0 BUILDER (M9 Phase 2B-9) - knowledge/URBAN_ENGINEERING_KNOWLEDGE_1.4.0.json is the frozen |
 | `kb_build_1_5.py` | 248 | MEDIUM | 0 | KNOWLEDGE REGISTRY 1.5.0 BUILDER (M9 Phase N10) - knowledge/URBAN_ENGINEERING_KNOWLEDGE_1.5.0.json is the frozen |
+| `kb_build_1_6.py` | 126 | MEDIUM | 0 | KNOWLEDGE REGISTRY 1.6.0 BUILDER (board task T-011) - knowledge/URBAN_ENGINEERING_KNOWLEDGE_1.6.0.json is the |
 | `kb_index.py` | 178 | MEDIUM | 0 | KNOWLEDGE SOURCE INDEX (M9 Phase 2B-1) - one generated inventory of every place an owner rule, owner fact, |
 | `lineage_chain.py` | 101 | MEDIUM | 1 | §5, §6. The real 6C -> 6D -> 6E lineage, from the frozen bundles. |
 | `live_smoke.py` | 95 | MEDIUM | 0 | LIVE smoke test of every agent on real Urban Projects inputs. Cheap models for |
@@ -846,7 +847,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/m7_reliability/` | 6 |
 | `tests/m8_full_scope/` | 2 |
 | `tests/m9_foundation/` | 8 |
-| `tests/m9_kb/` | 7 |
+| `tests/m9_kb/` | 8 |
 | `tests/m9_n10/` | 6 |
 | `tests/m9_p2a/` | 6 |
 | `tests/m9_p2b0/` | 6 |

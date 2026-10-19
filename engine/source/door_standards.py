@@ -13,6 +13,10 @@ registry applied to the door model's elements, without changing any drawn dimens
                                         totals; the two scenarios are never added together
     dependency_impacts(...)          -> UP-DOOR-DEP-001: what an enlargement touches (indicative, REVIEW_REQUIRED)
     elevator_schedule(...)           -> UP-ELEV-SCHED-001: the separate elevator quotation schedule
+    opening_record_kb16(el, category) -> knowledge 1.6.0 (owner answer Q-04 / OQ-05): the nominal-door minimum,
+                                        wall opening = nominal + 0.10 m, the drawn size when wider, the main door as
+                                        drawn; held (NOT_ESTABLISHED / RANGE) without a width or a settled class.
+                                        Read by no method version yet (T-011)
 
 The CAD wall opening is the door model's structural opening (jamb to jamb; wall to wall for a provisional door). The
 frame span, the nominal leaf (swing radius) and the finished clear passage are kept apart and never substituted.
@@ -182,6 +186,74 @@ def _required_v27(rec, cad_m):
             "nominal_basis": "NOT_ESTABLISHED (the allowance is not established: UP-DOOR-OPEN-003)",
             "why": "the owner minimum on the structural opening, no allowance added; the other readings are in the "
                    "opening record", "rule": K.ref("UP-DOOR-OPEN-003"), "flags": flags}
+
+
+KB16 = "1.6.0"
+KB16_CATEGORIES = (INTERNAL, BATH, EXTERNAL)
+
+
+def opening_record_kb16(el, category):
+    """Knowledge registry 1.6.0 (owner answer Q-04 / OQ-05, UP-DOOR-OPEN-002 OWNER_APPROVED; board task T-011): the
+    owner minimum is the NOMINAL door opening and the wall opening = nominal + 0.10 m (internal PVC 1.00 -> 1.10,
+    bathroom PVC 0.90 -> 1.00 wall to wall, external aluminium 1.00 -> 1.10); a wider drawn opening keeps its drawn
+    size; the main entrance is measured as drawn (UP-DOOR-CLS-004); an elevator entrance is excluded (UP-DOOR-CLS-005).
+    A new method piece, read by no method version yet. The drawn width is never changed: the enlargement is proposed,
+    never applied to a quantity. A door with no drawn width, or of an unsettled class, is held (NOT_ESTABLISHED /
+    RANGE), never 0 and never one class's value chosen."""
+    with K.using(KB16):
+        stds = {c: K.door_standard(c) for c in KB16_CATEGORIES}
+        ref = K.ref("UP-DOOR-OPEN-002")
+    cad = el.get("structural_opening_width_m")
+    cad = None if cad is None else round(cad, 6)
+    rec = {"rule": ref, "knowledge": KB16, "category": category, "as_drawn_wall_opening_m": cad,
+           "as_drawn_source": el.get("structural_opening_source"), "required_nominal_door_m": None,
+           "architectural_wall_opening_m": None, "owner_required_wall_opening_m": None, "enlargement_m": None,
+           "nominal_door_for_opening_m": None, "nominal_basis": None, "candidates": None, "flags": []}
+    if category == ELEVATOR:
+        return dict(rec, state="EXCLUDED", compliance="NOT_APPLICABLE", review_status="NO_MODIFICATION",
+                    why="elevator entrance: the elevator schedule (UP-DOOR-CLS-005)")
+    if cad is None:
+        return dict(rec, state="NOT_ESTABLISHED", compliance="NOT_ESTABLISHED", review_status="NO_MODIFICATION",
+                    flags=["NO_DRAWN_WIDTH"], why="no CAD wall opening (the door closes no gap): held, never 0")
+    if category == MAIN:
+        return dict(rec, state="AS_DRAWN_ONLY", compliance="NOT_APPLICABLE", review_status="NO_MODIFICATION",
+                    owner_required_wall_opening_m=cad, enlargement_m=0.0,
+                    why="main entrance: measured as drawn (Q-04 answer, UP-DOOR-CLS-004); the ordinary minimum is "
+                        "never applied")
+
+    def one(c):
+        s = stds[c]
+        arch = round(s["required_wall_opening_m"], 6)
+        req = round(max(cad, arch), 6)
+        wider = cad > arch + TOL_M
+        return {"category": c, "required_nominal_door_m": s["required_nominal_door_m"],
+                "architectural_wall_opening_m": arch, "owner_required_wall_opening_m": req,
+                "enlargement_m": round(req - cad, 6),
+                "nominal_door_for_opening_m": round(cad - s["allowance_m"], 6) if wider else
+                s["required_nominal_door_m"],
+                "nominal_basis": "RULE_DERIVED (drawn opening - 0.10 m; a schedule overrides it)" if wider else
+                "OWNER_REQUIRED_NOMINAL"}
+    if category in KB16_CATEGORIES:
+        r = one(category)
+        below = r["enlargement_m"] > TOL_M
+        return dict(rec, **r, state="ESTABLISHED", compliance="ENLARGEMENT_REQUIRED" if below else "MEETS_STANDARD",
+                    review_status="MODIFICATION_PROPOSED_NOT_APPROVED" if below else "NO_MODIFICATION",
+                    flags=["OPENING_BELOW_OWNER_STANDARD"] if below else [],
+                    why="the owner minimum is the nominal door; wall opening = nominal + 0.10 m; the drawn width "
+                        "when wider (UP-DOOR-OPEN-002, Q-04)")
+    # a main-entrance candidate (as drawn, or external aluminium) or a door whose class is not settled: a range
+    cands = [one(c) for c in KB16_CATEGORIES]
+    lows = [cad] if category == MAIN_CAND else []
+    vals = lows + [r["owner_required_wall_opening_m"] for r in cands]
+    lo, hi = min(vals), max(vals)
+    return dict(rec, state="RANGE" if hi - lo > TOL_M else "ESTABLISHED_FOR_EVERY_CANDIDATE",
+                owner_required_wall_opening_m=lo if hi - lo <= TOL_M else {"low": lo, "high": hi},
+                enlargement_m=round(lo - cad, 6) if hi - lo <= TOL_M else {"low": round(lo - cad, 6),
+                                                                          "high": round(hi - cad, 6)},
+                candidates=cands, compliance="NOT_ESTABLISHED",
+                review_status="MODIFICATION_PROPOSED_NOT_APPROVED" if hi - cad > TOL_M else "NO_MODIFICATION",
+                flags=["MAIN_ENTRANCE_NOT_IDENTIFIED" if category == MAIN_CAND else "CLASS_NOT_SETTLED"],
+                why="the class decides the minimum: every candidate is kept, none is chosen")
 
 
 def door_height(category, facts):

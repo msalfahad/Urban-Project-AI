@@ -8,10 +8,10 @@ Rule files are versioned: never edit an existing version; add the next one (see 
 | Rule set | Files | Loader | Read by |
 |---|---|---|---|
 | Rule store (library + owner overlay) | `rules/owner_library/`, `rules/owner_decisions/` | `engine/source/rule_store.py` (LATEST_APPROVED = "1.5.0") | ARCH_TAKEOFF_V1 to V2.2 (frozen) |
-| Engineering knowledge registry | `knowledge/URBAN_ENGINEERING_KNOWLEDGE_<v>.json` | `engine/source/knowledge.py` (`using(version)`) | V2.3 = 1.0.0, V2.4 = 1.1.0, V2.7 = 1.2.0, V2.7.1 = 1.3.0, V2.8 = 1.4.0, V2.9 = 1.5.0 |
+| Engineering knowledge registry | `knowledge/URBAN_ENGINEERING_KNOWLEDGE_<v>.json` | `engine/source/knowledge.py` (`using(version)`) | V2.3 = 1.0.0, V2.4 = 1.1.0, V2.7 = 1.2.0, V2.7.1 = 1.3.0, V2.8 = 1.4.0, V2.9 = 1.5.0, door minimum (T-011) = 1.6.0 |
 | Methods | `tools/urban_boq_m9.py` `ARCH_METHODS` | `arch_compute(method=...)` | CLI route |
 
-## Engineering knowledge 1.5.0 (53 rules)
+## Engineering knowledge 1.6.0 (53 rules)
 
 | Rule | Version | Status | Title | Supersedes / superseded by | Code | Tests |
 |---|---|---|---|---|---|---|
@@ -29,8 +29,8 @@ Rule files are versioned: never edit an existing version; add the next one (see 
 | UP-DOOR-FEAS-001 | 1.1.0 | OWNER_APPROVED | Door opening feasibility: does the owner-standard door fit, and can the opening be enlarged | - | `engine/source/door_feasibility.py::feasibility`, `engine/source/door_feasibility.py::clearances`, `engine/source/door_feasibility.py::classify` | `tests/m9_p2b2/test_p2b2_door_feasibility.py` |
 | UP-DOOR-HGT-001 | 1.4.0 | OWNER_APPROVED | Door heights: sources first, owner reference heights as labelled fallbacks | - | `engine/source/door_standards.py::door_height`, `engine/source/door_feasibility.py::jamb_plaster_lines` | `tests/m9_kb/test_kb_door_standards.py`, `tests/m9_kb/test_kb_integration.py` |
 | UP-DOOR-MIN-001 | 1.0.0 | DEPRECATED | Minimum door opening widths (master prompt Part C section 7) - SUPERSEDED |  / UP-DOOR-OPEN-002 |  | `tests/m9_kb/test_kb_door_standards.py` |
-| UP-DOOR-OPEN-002 | 1.2.0 | REQUIRES_CONFIRMATION | Required nominal door opening and architectural wall opening | UP-DOOR-MIN-001 / UP-DOOR-OPEN-003 | `engine/source/door_standards.py::required_opening`, `engine/source/door_standards.py::door_scenarios`, `engine/source/door_feasibility.py::feasibility` | `tests/m9_kb/test_kb_door_standards.py`, `tests/m9_kb/test_kb_integration.py` |
-| UP-DOOR-OPEN-003 | 1.3.0 | OWNER_APPROVED | Owner minimum door openings, kept apart from every measured and derived door width | UP-DOOR-OPEN-002 | `engine/source/door_standards.py::opening_record_v27` | `tests/m9_p2b7/test_p2b7_doors.py`, `tests/m9_p2b8/test_p2b8_doors.py` |
+| UP-DOOR-OPEN-002 | 1.6.0 | OWNER_APPROVED | Required nominal door opening and architectural wall opening | UP-DOOR-MIN-001 / UP-DOOR-OPEN-003 | `engine/source/door_standards.py::required_opening`, `engine/source/door_standards.py::door_scenarios`, `engine/source/door_feasibility.py::feasibility` | `tests/m9_kb/test_kb_door_standards.py`, `tests/m9_kb/test_kb_integration.py` |
+| UP-DOOR-OPEN-003 | 1.6.0 | OWNER_APPROVED | Owner minimum door openings, kept apart from every measured and derived door width | UP-DOOR-OPEN-002 | `engine/source/door_standards.py::opening_record_v27`, `engine/source/door_standards.py::opening_record_kb16` | `tests/m9_kb/test_kb_door_standards.py`, `tests/m9_p2b7/test_p2b7_doors.py` |
 | UP-ELEV-SCHED-001 | 1.0.0 | OWNER_APPROVED | Separate elevator quotation schedule | - | `engine/source/door_standards.py::elevator_schedule` | `tests/m9_kb/test_kb_door_standards.py` |
 | UP-EXC-001 | 1.5.0 | REQUIRES_CONFIRMATION | Excavation footprints; the volume only with stated depth and working space | - | `engine/source/struct_n10.py::excavation` | `tests/m9_n10/test_n10_structural.py` |
 | UP-FACADE-001 | 1.5.0 | REQUIRES_CONFIRMATION | The facade is the exterior outline of the floor's wall network, F.F.L. to the next F.F.L. | - | `engine/source/arch_v29.py::facade_outlines`, `engine/source/arch_v29.py::facade_evidence`, `engine/source/arch_v29.py::facade_takeoff` | `tests/m9_n10/test_n10_facade.py` |
@@ -321,6 +321,6 @@ Proposed, not in force: UP-WP-004 (A shower takes the wet-room floor and the UP-
 ## How to change a rule
 
 1. Find the rule above: its rule set, the code that applies it and its tests.
-2. Methods V2.3+: build the next `knowledge/URBAN_ENGINEERING_KNOWLEDGE_<v>.json` from 1.5.0 (follow the latest `tools/kb_build_*.py`), register it in `VERSIONS` in `engine/source/knowledge.py`, bind it to a new method version.
+2. Methods V2.3+: build the next `knowledge/URBAN_ENGINEERING_KNOWLEDGE_<v>.json` from 1.6.0 (follow the latest `tools/kb_build_*.py`), register it in `VERSIONS` in `engine/source/knowledge.py`, bind it to a new method version.
 3. Frozen V1-V2.2 rule store: a new `rules/owner_decisions/URBAN_RULES_<next>.json` overlay, added to `VERSIONS` in `engine/source/rule_store.py`; then `python3 -I tools/m9_rules_manifest.py build` and `check`.
 4. Run the rule's tests and the freeze check; regenerate the maps (`python3 -I tools/codemap.py`).
