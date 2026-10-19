@@ -985,7 +985,9 @@ def _arch_v271(drawing, _v211_cap=None, **kw):
         # spaces it classes WET or DRY; the sanitary drawing reading is an optional project input, never guessed
         from engine.source import arch_v211 as AV
         classes = AV.wet_classes(arch["rooms"], _v211_cap, (kw.get("facts") or {}).get("sanitary_by_room"))
-        v211 = {"classes": classes, "decided": AV.decide_review(targets, classes)}
+        # the main run's capture (a scenario run below replaces the regions' entries; the plan geometry is the same,
+        # but the roofs are read from the main run's own record)
+        v211 = {"classes": classes, "decided": AV.decide_review(targets, classes), "cap": dict(_v211_cap)}
     if any(x["plausible"] for x in targets):
         for name, codes, why in REVIEW_SCENARIOS:
             try:
@@ -1014,7 +1016,7 @@ def _arch_v271(drawing, _v211_cap=None, **kw):
     if arch.get("v29") is not None:
         _v29_outputs(arch)
     if v211 is not None:
-        _v211_outputs(drawing, room_boq, arch, v211, _v211_cap, kw.get("facts"))
+        _v211_outputs(drawing, room_boq, arch, v211, v211["cap"], kw.get("facts"))
     return room_boq, arch, E
 
 
