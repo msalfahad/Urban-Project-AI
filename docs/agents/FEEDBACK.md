@@ -3,20 +3,34 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
-## Recurring causes (lead 2026-10-19 06:15)
+## Recurring causes (lead 2026-10-19 08:15)
 
-1. **Verified work does not reach the working branch.** 8 verified tasks (T-036, T-033, T-029, T-034, T-011, T-037, T-041,
-   T-044-r2) conflict only in the generated docs/CODEMAP.md; the r2 rebuild route (T-052) was refused by the session
-   permission check. Decision: not routed around; NEEDS FIXING by the owner (merge them in his session, or let the
-   verifier regenerate the maps when a merge conflicts only there). Each merge also makes the next one conflict.
-2. **Scheduled sessions refuse steps** (new): T-050 could not run its own read-only script; worker 1 (05:19) and worker 3
-   (05:59) ended in 2-4 minutes without claiming while 10 TODO were claimable. Decision: reported to the owner; every
-   task keeps "push partial work and a handoff".
-3. **Arabic SHX text is invisible** (T-044, T-033): T-047 decoder TODO; R-02.
-4. **Values the drawing does not print stop quantities** (Q-14, Q-17, Q-20, Q-21; R-01, R-02).
-5. **Silent loss inside the frozen strip builder** (T-037, T-050, T-048): a face explained by a member or a curved pair
-   drops a whole strip with no record. Decision: T-048 (curved, READY), T-058 (guard), T-060 (wiring, queued).
+1. **Verified work does not reach the working branch** (worse: 8 -> 11 tasks). T-036, T-033, T-029, T-034, T-011, T-037,
+   T-041, T-044-r2 verified; T-047, T-057 reviewed; T-050 rejected on the stale map only. Every task regenerates
+   docs/CODEMAP.md, so each merge makes every other READY branch conflict. Decision: verifier merges T-004a first (built
+   on the current head); r2 rows for the two code tasks (T-047, T-057); the docs-only ones wait. NEEDS FIXING by the
+   owner: merge them in his session, or let the verifier regenerate docs/CODEMAP.md and docs/ROUTING.md with the tool
+   when a merge conflicts only in those two generated files.
+2. **Scheduled sessions refuse steps** (now the verifier too): worker 1 07:24 refused cloning the working branch; worker 3
+   07:00 claimed T-058 and pushed nothing, its 08:00 run ended in 3.5 min; verifier 07:55 refused running task-branch
+   tests (gates b, c not run on T-047, T-057). Decision: reported to the owner (team health); claims without a push go
+   back to TODO each lead run.
+3. **Arabic SHX text is invisible** (T-044, T-033, T-004a: 47 x-arab1b room labels unread): T-047 r2; R-02 updated.
+4. **Values the drawing does not print stop quantities** (Q-14, Q-17, Q-20, Q-21; roof edge basis after T-062).
+5. **Silent loss of drawn elements** (T-037, T-050, T-048, T-004a): strips explained by a member, curved pairs, labels in
+   no closed room. Decision: T-058 (strip guard), T-060 (wiring, queued), T-061 (label guard), T-062 (diagnostic).
 6. **The 37.5 MB Alsenan architectural PDF is over the 10 MB Drive limit**: NEEDS FIXING (owner), still open.
+
+## 2026-10-19 08:15 (lead run)
+
+| Task | Result | What went well | What went wrong and why (numbers) | Decision | Tasks created |
+|---|---|---|---|---|---|
+| T-048 curved strips | WORKED (merged fd0d5dd) | 30 hand tests, verifier's own bulge check 1.947787 m2; widths never defaulted | Not wired yet | Wire after T-058 | (T-060 waits on T-058 only) |
+| T-050 footing ring edges | WORKED in substance; REJECTED gate c (map stale) | Verifier ran edge_trace.py: 31.77 m / 3.81 m3 silent loss confirmed | Docs-only r2 is cause 1 | Fix is T-058; note waits for the owner's map-merge fix | - |
+| T-047 Arabic SHX decoder | WORKED (static review; not merged) | 18 hand tests; unknown font / unmapped code HELD, never guessed | Map conflict with fd0d5dd; verifier could not run tests (cause 2) | r2 rebuild | T-047 row back to TODO (r2) |
+| T-057 pool check list | PARTIAL (static review; not merged) | 47 tests; Alsenan POOL_PUMP_ROOM_NOT_FOUND matches the owner's hand check | Any bare PUMP label (water / booster pump) would count as the pool pump room, so the Q-19 check could never report NOT_FOUND on such a villa | r2 rework: other-use pumps excluded, generic pump label HELD (owner decides), adversarial tests | T-057 row back to TODO (r2) |
+| T-004a room label census | WORKED (READY, clean on the head) | Planted omission found; 41 labels: 28 measured, 1 held, 1 unsupported | 11 labels silently lost (yards 4, pool 2, roof 4, void 1); 47 x-arab1b labels unread | Label guard; diagnostic with A / B roof areas before the owner question; pool vocab already in T-034; yard scope OQ-04 unresolved, nothing released | T-061, T-062 |
+| T-058 strip guard | FAILED (claim, no push) | - | Worker 3 07:00 run pushed no branch and no handoff | Back to TODO, same scope | - |
 
 ## 2026-10-19 06:15 (lead run)
 

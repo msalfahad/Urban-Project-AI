@@ -26,6 +26,12 @@ Update (lead 2026-10-19 04:10, from T-044 / T-033): on two villas Arabic notes a
 keyboard codes (a printed founding depth was missed this way). Look for: how Arabic SHX fonts encode text in DXF, published
 keyboard-to-Arabic maps and their variants per font, letter joining, open-source decoders (permissive licence), how to
 detect an Arabic SHX style without a project's font names. Unblocks T-047, T-044, T-049.
+Update (lead 2026-10-19 08:15, from T-004a): a second Arabic SHX family is unread: 47 room labels on the Alsenan
+architectural plans (and 72 labels counted by T-044) use x-arab1b-style fonts whose codes match none of the Arabic (101)
+keyboard maps T-047 uses. Look for: published code tables for the common Gulf / Middle East Arabic SHX fonts (ARABIC,
+X-ARAB, XARAB1B, ARB, "Arial Arabic SHX" families), glyph-number to Unicode tables, and how to read an SHX font file's
+glyph shapes to confirm a mapping (so a code is mapped only from a source, never inferred). Unblocks T-047 follow-ups,
+T-053, T-062.
 
 ### R-03 Storey / sheet detection in multi-sheet villa DXF (lead 2026-10-19)
 Problem: a storey whose title the engine does not recognise is not measured. Gap: Alsenan run found GF / 1F / 2F only
