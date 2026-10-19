@@ -269,6 +269,35 @@ whole-tile count by under 1 % (0.6^2 / 0.602^2 = 0.993), well inside the waste (
 want a cutting plan per room like your membrane strips.
 WAITS ON: the tile count (not the tile m2) of every tiled floor and wall on every villa; no Alsenan m2 figure changes.
 
+Answer:
+
+### Q-43 A room with no floor level printed inside it: which floor level does it get? (worker 3 2026-10-19 19:55; T-081; no-assumptions question)
+
+THE PROBLEM: the architect prints the floor level only in a few rooms. On Alsenan only 6 of 27 rooms carry their own
+level mark: ground floor +1.00 in the dining / living / reception room and +0.30 in the majlis, kitchen and driver room;
+first floor +5.50 only in the living room; second floor +9.70 only in the stair hall. The other 21 rooms (all bathrooms,
+the master bedroom on the ground floor, the four bedrooms and the laundry on the first floor, the maid room on the
+second floor) print nothing, so the engine cannot say from which level their wall heights start and holds them. The
+ground floor has two levels (+1.00 main house, +0.30 street side), so there a guess could be 0.70 m wrong.
+WHERE TO LOOK: Drive "Alsenan chalet project", p7757_arch_sheet03.pdf (ground floor plan): find the +1.00 and +0.30
+marks and the master bedroom and bathrooms with no mark; the first floor plan (sheet 4) with one +5.50 in the living
+room; section B-B (sheet 11) shows the two ground-floor levels.
+THE OPTIONS:
+(A) On a floor where every printed room level is the same (first floor +5.50, second floor +9.70), a room with no mark
+takes that level, labelled "floor level, not printed in the room"; on a floor with two levels (the ground floor) a room
+with no mark stays held until you or the plan reader say which level it is on. Alsenan: 12 first / second floor rooms get
+a level, 8 ground-floor rooms stay held.
+(B) As (A), and on a two-level floor a room with no mark takes the level of the room its door opens into when no step is
+drawn at that door. Alsenan: probably all 20 get a level (each one checked against the door).
+(C) Every room with no mark stays held until the drawings print a level in it. Alsenan: 21 rooms held.
+RECOMMENDATION: (A), because architects print a level only where it changes, so on a one-level floor the single printed
+level is the floor of every room, while on a split floor a door with no drawn step is weaker evidence (practice, not a code
+clause). Note: plaster and paint heights on Alsenan stay held either way, because no slab soffit, floor build-up or
+ceiling level is printed (your Q-14 answer); this answer decides which floor-to-floor each room uses once they are.
+WAITS ON: the floor level of unmarked rooms, then their plaster, paint and wall-tile heights, on every villa (T-081).
+
+Answer:
+
 ## Answered
 
 (Lead 2026-10-19 18:15: Q-31 .. Q-37 moved here from Open; owner answers of 16:40 in the main chat. Q-34 is PARKED by the owner: the top roof stays HELD and is raised again only at a milestone.)
