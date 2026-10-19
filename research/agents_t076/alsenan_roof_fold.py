@@ -19,6 +19,8 @@ def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("drawing")
     ap.add_argument("--out", required=True)
+    ap.add_argument("--dump-outlines", help="scratch file for the roof outlines in metres (for an independent check; "
+                                            "never inside the repository)")
     a = ap.parse_args(argv)
     sys.path.insert(0, str(ROOT / "research" / "agents_t071"))
     import run_alsenan as RA                                    # T-071's own capture of the V2.9 run
@@ -68,8 +70,13 @@ def main(argv=None):
                                                                          "upturn_shortfall_m2")}
                                                      for y in x["directions"]]} for x in f["other_frames"]])
             row["_area"] = r
+            row["_outline_m"] = {"outer": [(x * u, y * u) for x, y in face.exterior.coords],
+                                 "holes": [[(x * u, y * u) for x, y in h.coords] for h in face.interiors]}
             out.append(row)
     rows = [x.pop("_area") for x in out if "_area" in x]
+    outlines = [dict(x.pop("_outline_m"), region=x["region"]) for x in out if "_outline_m" in x]
+    if a.dump_outlines:
+        Path(a.dump_outlines).write_text(json.dumps(outlines), encoding="utf-8")
     proj = F.project(rows) if rows else None
     Path(a.out).write_text(json.dumps({"roofs": out, "project": proj}, indent=1, default=str), encoding="utf-8")
     for x in out:

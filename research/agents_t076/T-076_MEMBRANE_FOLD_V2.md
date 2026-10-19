@@ -47,16 +47,16 @@ Outline points before -> after cleaning; frame = angle of the longest wall; roll
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | GF | KITCHEN | 20 -> 12 | 90 | orthogonal | 9.6300 / 9.63 | 4 strips, 14.560 m2, 2 [2] | 14.56 equal | 6 strips, 15.070 m2, 2 [2] | 15.07 equal | 13.50 | OP-025 |
 | GF | Wash (core lobby, 2 basins) | 18 -> 6 | 45 | 45 deg walls | 4.7307 / 4.7321 | 3 strips, 9.548 m2, 2 [1] | 8.737 (hand used the 0 deg wall frame: engine 8.734 there) | 5 strips, 8.704 m2, 1 [1] | 9.133 (0 deg frame: engine 9.131) | 6.64 | OP-017, OP-018; open edge 1.26 |
-| GF | BATH (master bed room) | 13 -> 5 | 0 | one 45 deg wall | 3.7177 / 3.7173 | 3, 6.318, 1 [1] | 6.317 equal | 3, 6.298, 1 [1] | 6.298 equal | 6.82 | door, no id |
-| GF | W.C. (by the dewaneya) | 6 -> 4 | 90 | rectangle | 3.3750 / 3.375 | 2, 5.300, 1 [1] | equal | 3, 5.415, 1 [1] | equal | 6.70 | door, no id |
-| GF | WASH (by the dewaneya) | 10 -> 6 | 90 | orthogonal | 3.1325 / 3.1325 | 2, 5.000, 1 [1] | equal | 3, 5.130, 1 [1] | equal | 5.40 | door, no id; passage 1.00 |
+| GF | BATH (master bed room) | 13 -> 5 | 0 | one 45 deg wall | 3.7177 / 3.7173 | 3, 6.318, 1 [1] | 6.317 equal | 3, 6.298, 1 [1] | 6.298 equal | 6.82 | door element |
+| GF | W.C. (by the dewaneya) | 6 -> 4 | 90 | rectangle | 3.3750 / 3.375 | 2, 5.300, 1 [1] | equal | 3, 5.415, 1 [1] | equal | 6.70 | door element (shared with the wash) |
+| GF | WASH (by the dewaneya) | 10 -> 6 | 90 | orthogonal | 3.1325 / 3.1325 | 2, 5.000, 1 [1] | equal | 3, 5.130, 1 [1] | equal | 5.40 | door element (shared with the W.C.); opening 1.00 |
 | GF | W.C. (core, 289 x 167) | 9 -> 4 | 90 | wedge | 2.6752 / 2.6752 | 3, 6.160, 1 [1] | 6.158 equal | 4, 5.700, 1 [1] | 5.699 equal | 6.61 | OP-017 |
 | GF | W.C. (core, 245 x 167) | 13 -> 6 | 135 | wedge, at 45 deg | 2.3676 / 2.3676 | 3, 5.454, 1 [1] | 5.453 equal | 3, 5.019, 1 [1] | 5.019 equal | 6.01 | OP-018 |
-| GF | W.C. (stair core) | 14 -> 4 | 90 | rectangle | 2.3625 / 2.3625 | 2, 3.978, 1 [1] | equal | 3, 4.112, 1 [1] | equal | 5.40 | door, no id |
+| GF | W.C. (stair core) | 14 -> 4 | 90 | rectangle | 2.3625 / 2.3625 | 2, 3.978, 1 [1] | equal | 3, 4.112, 1 [1] | equal | 5.40 | door element (shared with the basin space) |
 | GF | W.C. (driver) | 6 -> 4 | 0 | rectangle | 1.9500 / 1.95 | 2, 3.420, 1 [1] | equal | 2, 3.400, 1 [1] | equal | 4.80 | OP-026 |
-| GF | basin space by the stair | 7 -> 4 | 0 | rectangle | 1.4850 / 1.485 | 2, 2.800, 1 [1] | equal | 2, 2.775, 1 [1] | equal | 3.20 | door, no id; passage 0.90 |
+| GF | basin space by the stair | 7 -> 4 | 0 | rectangle | 1.4850 / 1.485 | 2, 2.800, 1 [1] | equal | 2, 2.775, 1 [1] | equal | 3.20 | door element (shared with the stair W.C.); opening 0.90 |
 | 1F | LAUNDRY | 24 -> 10 | 90 | orthogonal | 10.1510 / 10.151 | 5, 16.568, **3** [2] | 16.581 = engine from the other wall | 6, 15.705, 2 [2] | 15.748 = engine from the other wall | 15.24 | OP-008, OP-010 |
-| 1F | BATH (west, upper) | 10 -> 4 | 90 | rectangle | 5.0225 / 5.0225 | 3, 7.553, 1 [1] | equal | 4, 7.718, 1 [1] | equal | 8.20 | door, no id |
+| 1F | BATH (west, upper) | 10 -> 4 | 90 | rectangle | 5.0225 / 5.0225 | 3, 7.553, 1 [1] | equal | 4, 7.718, 1 [1] | equal | 8.20 | door element |
 | 1F | BATH (west, lower) | 11 -> 4 | 90 | rectangle | 5.0225 / 5.0225 | 3, 7.553, 1 [1] | equal | 4, 7.718, 1 [1] | **7.41 (hand slip)** | 8.20 | OP-004 |
 | 1F | BATH (east, 210 x 225) | 13 -> 4 | 0 | rectangle | 4.7250 / 4.725 | 3, 7.155, 1 [1] | equal | 3, 7.125, 1 [1] | equal | 7.40 | OP-018; floor glazing 0.50 |
 | 1F | BATH (by the laundry) | 12 -> 6 | 0 | orthogonal | 3.5775 / 3.5775 | 3, 5.760, 1 [1] | equal | 3, 5.720, 1 [1] | 5.69 = engine from the other wall | 6.80 | OP-019 |
@@ -87,7 +87,7 @@ printed size, re-read this run on the DXF (dimensions 4500 at 0.30 m and 3000 at
 |---|---|---|---|---|
 | Wet floor, 17 areas | 72.12 m2 | 72.12 m2 | 72.01 m2 | +0.11 m2 (+0.16 %) |
 | Upturn line, walls only (Q-35 C) | 125.57 lm = 25.11 m2 | 127.07 lm | 144.61 lm (full boundary) | -19.04 lm (-13.2 %): RULE_DIFFERENCE (Q-35 C: doorways, openings and floor glazing are not wall upturns) |
-| Doorway transition lines (one per door) | 10 by opening id (3 between two wet rooms) + 6 door edges without an id (4.79 m), held: 14 - 16 | 14 doors | none (in his lm) | - |
+| Doorway transition lines (one per door) | 14 doors (10 by opening id + 4 door closures by their V2.9 door element), 5 of them between two wet rooms counted once | 14 doors, 5 between two wet rooms | none (in his lm) | - (engine = hand) |
 | Threshold lines | 3.66 m (open edge 1.26, passages 1.00 + 0.90, floor glazing 0.50) | 2.16 m | none | - |
 | Pantry (Q-37 A) | 13.50 m2, 10.50 lm walls, 4.50 m threshold | 13.50 m2 (printed) | none | not in his BOQ |
 | Membrane cut, 17 wet areas | 117.05 - 119.79 m2 by direction set | 116.95 - 118.99 m2 | not given | - |
@@ -113,10 +113,16 @@ sill (V2.9 typing): 0.60 m per bath window, upturned.
 | 1F west roof (curved edge) | 55.56 | 35.73 | 8, 73.50 m2, 8 [8]; other wall 70.44, 8 | 14, 70.17 m2, 9 [8]; other wall 72.38, 10 | 0.009 m2 | - |
 | Three roofs | 204.11 | 181.59 | rolls to buy 29 (all along), 32 (all across, lower bound 30), 30 (shorter roll length each) | | | |
 
+Independent check (second code path): T-074's hand helper `research/agents_t074/strip_layout.py` (whole-band strips,
+no holes), run in the scratchpad on the same T-071 outlines, gives exactly the engine's "other start wall" layout on
+both 1F roofs in both directions (62.499 / 48.899 / 70.437 / 72.381 m2): the two codes lay the bands from opposite
+walls. On the 2F roof it gives 194.79 / 179.48 m2 because it runs every strip over the two skylight openings; the fold
+V2 splits the strips round them (152.61 / 160.08 m2), and the strip ends 0.20 m inside the opening form its upturn.
+
 The roofs are their own membrane system (never added to the wet-area rolls). Against the freelancer's roof membrane
 285 m2 / 194 lm: unchanged UNRESOLVED (T-071), the 2F top roof (+13.90) is on no plan sheet (owner Q-34). The roof strip
 layouts have no hand table yet (T-074 did not rebuild the roof outlines): the verifier can check one by hand from the
-T-071 outline.
+T-071 outline; the code-to-code check above is not a hand check.
 
 ## Who is right (proposals for the verifier)
 
@@ -142,8 +148,10 @@ T-071 outline.
 
 - Not wired: the membrane purchase table (T-072) still reads the V2.6 fold; wiring both into a released method version
   is T-079.
-- 6 door edges carry no opening id in the V2.9 opening census (two of them are the T-074 pairs between two wet rooms):
-  the transition count stays 14 - 16, held.
+- 6 door edges carry no opening id in the V2.9 opening census (door closures); the run takes them from the V2.9 door
+  elements, whose two sides name both rooms (DOOR-GF-ab2b06fc dewaneya wash / W.C., DOOR-GF-2001e93f stair W.C. / basin
+  space, and two single-room doors): 14 doors, the same pairs as T-074. The module itself takes doors as given; a
+  wiring task (T-079) must pass the door elements too, or these 4 doors fall back to "door edge without id" (held).
 - The dewaneya wash opening OP-027 (door or open passage) and the 2F top roof (Q-34) stay UNRESOLVED; shower tanking
   above 0.20 m (Q-40) and screeds (Q-41) stay HELD (not in this piece).
 - Packing proof: the "all along" sets (wet 15 rolls, lower bound 14; roofs across 32, lower bound 30) hit the search

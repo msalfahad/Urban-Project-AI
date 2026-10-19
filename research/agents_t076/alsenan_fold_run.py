@@ -37,6 +37,12 @@ def main(argv=None):
     t010 = json.loads(Path(a.t010).read_text(encoding="utf-8"))["rows"]
     wet = {(r["floor"], r["room_id"]) for r in t010 if r["t010_class"] == "WET"}
     ops = {(o["floor"], o["opening_id"]): o for o in arch["openings"]}
+    closure_doors = {}
+    for e in arch["doors"]["elements"]:
+        if e.get("opening_id") is None:
+            for sd in e.get("sides") or ():
+                if sd.get("room_id"):
+                    closure_doors.setdefault((e["floor"], sd["room_id"]), []).append(e)
     # the waterproofing schedule's own typed ring (window-frame lines on a recognised window = its sill, V2.9); a
     # wet space outside the schedule (the three basin-only spaces) uses the room's boundary runs
     typed = {(w["floor"], w["room_id"]): w["upturn"]["by_role_lm"] for w in arch["waterproofing"]["areas"]}
@@ -45,6 +51,10 @@ def main(argv=None):
         if (r["floor"], r["room_id"]) not in wet:
             continue
         doors = [{"opening_id": d, "width_m": ops[(r["floor"], d)]["width_m"]} for d in r.get("doors") or ()]
+        # a door the opening census did not list (a door closure: leaf drawn wall to wall) is a V2.9 door element
+        # with no opening id; its two sides name the rooms, so it is one door, identified by its element id
+        doors += [{"opening_id": e["element_id"], "width_m": e["structural_opening_width_m"]}
+                  for e in closure_doors.get((r["floor"], r["room_id"]), ())]
         rl = r.get("runs_lm")
         roles = typed.get((r["floor"], r["room_id"]))
         if roles is None and rl:
