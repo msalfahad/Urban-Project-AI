@@ -196,6 +196,23 @@ Waits on: stair concrete on every villa (T-056).
 
 Answer:
 
+### Q-21 Foundations: is the printed 1.50 m depth the bottom of the footing or the bottom of the blinding under it? (lead 2026-10-19 06:15; T-044, part of OQ-13; no-assumptions question)
+
+What we found: the structural notes print a depth of 1.50 m below the plot level, but they call it the excavation level. The
+engine treats it as the underside of the footing. If the 10 cm plain-concrete blinding sits inside those 1.50 m, every
+footing is 10 cm higher and every neck column between footing and ground beam is 10 cm shorter.
+Real example: Alsenan, structural "ST7757 dxf.dxf", schedules sheet, general note 1 (in Arabic): excavation level not less
+than 1.5 m below the existing plot level; the engine uses a 10 cm blinding. 28 neck columns (10.856 m3 together)
+take their height from this level.
+How to check it yourself: open the foundation section or the schedules sheet and see whether the 1.50 m is dimensioned to
+the bottom of the footing or to the bottom of the blinding.
+Choices: (a) 1.50 m is the bottom of the blinding: footing underside at 1.40 m, necks 10 cm shorter; (b) 1.50 m is the
+bottom of the footing: blinding below it, excavation to 1.60 m; (c) hold the neck and excavation heights (shown, not
+scored) until the designer prints the footing level.
+Waits on: neck column concrete, excavation and backfill on every villa (T-044, T-045, T-046).
+
+Answer:
+
 ## Answered
 
 ### Q-18 Dome sizes: are the printed 442 and 190 measured to the outside or the inside of the shell? (lead 2026-10-19 04:10; T-037, T-049)

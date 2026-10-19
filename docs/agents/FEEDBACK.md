@@ -3,7 +3,34 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
-## Recurring causes (lead 2026-10-19 04:10)
+## Recurring causes (lead 2026-10-19 06:15)
+
+1. **Verified work does not reach the working branch.** 8 verified tasks (T-036, T-033, T-029, T-034, T-011, T-037, T-041,
+   T-044-r2) conflict only in the generated docs/CODEMAP.md; the r2 rebuild route (T-052) was refused by the session
+   permission check. Decision: not routed around; NEEDS FIXING by the owner (merge them in his session, or let the
+   verifier regenerate the maps when a merge conflicts only there). Each merge also makes the next one conflict.
+2. **Scheduled sessions refuse steps** (new): T-050 could not run its own read-only script; worker 1 (05:19) and worker 3
+   (05:59) ended in 2-4 minutes without claiming while 10 TODO were claimable. Decision: reported to the owner; every
+   task keeps "push partial work and a handoff".
+3. **Arabic SHX text is invisible** (T-044, T-033): T-047 decoder TODO; R-02.
+4. **Values the drawing does not print stop quantities** (Q-14, Q-17, Q-20, Q-21; R-01, R-02).
+5. **Silent loss inside the frozen strip builder** (T-037, T-050, T-048): a face explained by a member or a curved pair
+   drops a whole strip with no record. Decision: T-048 (curved, READY), T-058 (guard), T-060 (wiring, queued).
+6. **The 37.5 MB Alsenan architectural PDF is over the 10 MB Drive limit**: NEEDS FIXING (owner), still open.
+
+## 2026-10-19 06:15 (lead run)
+
+| Task | Result | What went well | What went wrong and why (numbers) | Decision | Tasks created |
+|---|---|---|---|---|---|
+| T-038 basement census | WORKED (merged fa93ec2) | Storeys ENGINE_RIGHT (no basement drawn) | Lift walls 2.40 m3 UNRESOLVED (no lift drawn) | Storey check queued | (T-051) |
+| T-037 Q-12 hand calculation | WORKED (verified, not merged: map conflict) | Verdicts recorded: pool floor and wall plan FREELANCER_RIGHT; pool, stair + dome, edge strip UNRESOLVED | Cannot merge (cause 1) | Owner merge | - |
+| T-044-r2 profile audit | WORKED (verified, not merged: map conflict) | SHX Arabic decoded by hand: 15 PRINTED, 1 DIFFERENT, 1 NOT_PRINTED; bucket D empty | Printed 1.50 m is an excavation level; whether the blinding sits inside it is set by no rule (28 necks, 10 cm each) | Owner question, not decided by the team | Q-21 |
+| T-041 lost ground band | WORKED (verified, not merged) | No silent omission; handle matching method | - | - | - |
+| T-048 curved strips | WORKED (READY) | 30 hand tests (D pool 1.319469 m2, round pool 3.110177 m2, rotated, mirrored, mm / m, held, ambiguous); widths never defaulted; freeze 0 | Not wired; Alsenan pool (2.358 m2 drawn) not run | Wire after merge | T-060 (queued) |
+| T-050 footing ring edges | PARTIAL (READY) | All 8 edges traced by handle: 91.94 m drawn, 60.17 m kept; drop at concrete_completeness.py:864-868 then :1274 | Script not run (session refused running repo code); 31.77 m / 3.81 m3 silently lost | Guard task; verifier runs the script | T-058 |
+| T-052 r2 rebuilds | FAILED (permission refusal) | Worker stopped cleanly and reported the exact refusal | Cross-branch fetch refused | Owner fixes; not retried | - |
+
+## Recurring causes (lead 2026-10-19 04:10, superseded)
 
 1. **Generated maps conflict on merge.** Still holds T-036, T-033, T-029, T-034 (and T-019). Clean merges work again
    (T-025a merged 2748ffe because it was built on the head). Decision: T-052 rebuilds the docs-only ones as r2 branches
@@ -19,18 +46,6 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    it: pool depth "as per architectural", stairs, lift walls). Only the owner can fix it (split under 10 MB): NEEDS FIXING.
 6. **Silent worker runs**: two runs (worker 2 01:40 on T-004a, worker 3 02:00 on T-016a) claimed and pushed nothing. Both
    tasks narrowed and back to TODO; every task text now says to push partial work and a handoff before the hour ends.
-
-## Recurring causes (lead 2026-10-19 02:20, superseded)
-
-1. **Generated maps conflict on every second merge.** After the verifier merged T-001b and T-035 at 02:00, the verified
-   T-034, T-029 and T-036 each conflict only in the generated docs/CODEMAP.md, which the verifier does not resolve.
-   The earlier block (merge pushes refused) is gone; this one is structural and needs an owner decision (merge them in
-   his session, or let the verifier regenerate generated maps on merge). Reported under NEEDS FIXING.
-2. **Values the engine does not read from the drawing stop quantities, not code.** T-035: no wall height is printed
-   (Q-14); T-036: 167 of 205 held concrete lines need storey heights, neck levels, typical ground-beam sections and
-   blinding thickness that only a person-typed profile supplies (Q-17, T-044, T-046, T-045). Research R-01, R-02.
-3. **No Urban rule for a classification.** T-010 (WC vs chair, Q-13), T-036 C10 (unlabelled beam span, Q-16). Stopped
-   and asked; nothing assumed.
 
 ## 2026-10-19 04:10 (lead run)
 
