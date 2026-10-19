@@ -43,6 +43,13 @@ hand), check with `codemap.py check` and the freeze check, then merge. Lead: put
 owner's main chat in the same run. The Lead also answers in its next report: why the verified tasks (T-036, T-033, T-029,
 T-034, T-011, T-037, T-041, T-044-r2) were not merged earlier, and how many are merged now.
 
+## Owner data note (via the owner's main chat, 2026-10-19 09:25 UTC)
+
+The architectural PDF is now on Drive in the folder "Alsenan chalet project" as six files under 10 MB, 12 sheets in all:
+Alsenan_Architectural_P7757_Pages_01-02, 03-04, 05-06, 07-08, 09-10, 11-12 (each about 6 MB). The 37.5 MB original and
+TEST_PAGE_01.pdf are not needed. Lead: remove "PDF over the 10 MB limit" from NEEDS FIXING, and give a worker the task of
+listing the elevation and section sheets and the levels they print. The DXF for development project 2 is coming from the owner.
+
 ## How to write a question for the owner (owner, 2026-10-18; every agent follows this)
 
 The owner must understand the question without opening the code. Write it in plain words, like talking to a site
