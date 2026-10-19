@@ -1,0 +1,7 @@
+{
+ "policy": "EXTERIOR_SPACES_V1 project facts (Alsenan development villa; entity handles only, no coordinates, no client data)",
+ "inner_shapes": {
+  "D2:4843:0": {"treatment": "OPENING", "source": "owner Q-29 answer 2026-10-19 14:45 (client change: every dome position is an open skylight area, no dome concrete) with Q-24 (membrane stops at the dome base, 0.20 m upturn round it); circle drawn on the second-floor plan roof (+9.70), radius printed R221"},
+  "D2:12083:0": {"treatment": "OPENING", "source": "owner Q-29 answer 2026-10-19 14:45 with Q-24, as D2:4843:0; second dome circle on the same roof, same printed radius"}
+ }
+}
