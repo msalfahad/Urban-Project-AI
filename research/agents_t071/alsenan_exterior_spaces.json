@@ -1,0 +1,1278 @@
+[
+ {
+  "region": "SH03:2F",
+  "guard_summary": {
+   "policy": "ROOM_LABEL_GUARD_V1",
+   "rule": "UP-QTY-STATUS-001",
+   "frame": "SH03:2F",
+   "room_labels": 4,
+   "in_face": 2,
+   "held": 2,
+   "held_by_reason": {
+    "ROOM_LABEL_NO_FACE": 2,
+    "ROOM_LABEL_AMBIGUOUS": 0,
+    "ROOM_LABEL_NO_POSITION": 0
+   },
+   "dropped": 0,
+   "texts_not_room_labels": 97,
+   "faces": 98,
+   "unreadable_faces": [],
+   "open_gaps": 0,
+   "unit_status": "OK"
+  },
+  "trace_summary": {
+   "policy": "EXTERIOR_SPACES_V1",
+   "frame": "SH03:2F",
+   "traced": 2,
+   "texts_passed_by": 0,
+   "by_status": {
+    "RELEASED_METHOD_PIECE": 2,
+    "PROVISIONAL": 0,
+    "HELD": 0,
+    "UNSUPPORTED": 0
+   },
+   "membrane_m2_by_code": {
+    "ROOF": 115.832
+   },
+   "roof_upturn_lm": 92.922,
+   "held_part_m2": 0,
+   "labels_counted_with_another": 1,
+   "reach_m": 0.45,
+   "rules": [
+    "UP-WP-ROOF-001",
+    "UP-WP-003",
+    "UP-QTY-STATUS-001"
+   ],
+   "owner_answers": [
+    "Q-24",
+    "Q-25",
+    "Q-29"
+   ]
+  },
+  "records": [
+   {
+    "policy": "EXTERIOR_SPACES_V1",
+    "frame": "SH03:2F",
+    "text_id": "AT379",
+    "text": "ROOF",
+    "code": "ROOF",
+    "layer": "5",
+    "status": "RELEASED_METHOD_PIECE",
+    "reason": null,
+    "membrane_m2": 115.832,
+    "upturn_lm": 92.922,
+    "upturn_m2": 18.584,
+    "held_part_m2": null,
+    "basis": "owner Q-24: like a bathroom floor (UP-WP-003): membrane inside the parapet (A) + 0.20 m upturn on parapet, walls and closures; gaps closed (Q-25)",
+    "geometry_status": "CLOSED",
+    "geometry_basis": null,
+    "same_face_layers": [
+     "5"
+    ],
+    "upturn_round_openings_lm": 27.782,
+    "held_part_reason": null,
+    "gap_cover": [
+     {
+      "from_line": "D2:4793:0",
+      "gap_m": 0.075,
+      "lap_m": 0.1,
+      "upturn_m": 0.2
+     }
+    ],
+    "candidates": {
+     "5": {
+      "A_net_m2": 115.832,
+      "A_filled_m2": 146.532,
+      "A_perimeter_lm": {
+       "building": 16.8,
+       "closure": 0.075,
+       "own_layer_edge": 48.265
+      },
+      "A_outer_perimeter_lm": 65.14,
+      "own_edge_band_m_by_length": {
+       "0.125": 5.25,
+       "0.15": 3.497,
+       "0.2": 18.87,
+       "0.3": 0.237,
+       "0.4": 1.83,
+       "none": 5.613
+      },
+      "B_review_only": {
+       "band_width_m": 0.2,
+       "area_m2": 125.662,
+       "outer_perimeter_lm": 67.14
+      },
+      "holes": [
+       {
+        "hole": 0,
+        "area_m2": 15.35,
+        "perimeter_lm": 13.891,
+        "lines": [
+         "D2:4809:0",
+         "D2:4843:0"
+        ]
+       },
+       {
+        "hole": 1,
+        "area_m2": 15.35,
+        "perimeter_lm": 13.891,
+        "lines": [
+         "D2:12083:0"
+        ]
+       }
+      ],
+      "closures": [
+       {
+        "from_line": "D2:4793:0",
+        "length_m": 0.075,
+        "meets": [
+         "WALL"
+        ],
+        "meets_lines": [
+         "D2:4744:0"
+        ]
+       }
+      ],
+      "gaps_with_opening": [],
+      "labels_in_face": [
+       "AT379",
+       "AT380",
+       "AT385",
+       "AT386",
+       "AT390:1350",
+       "AT391:1352",
+       "AT409",
+       "AT414",
+       "AT425",
+       "AT434",
+       "AT435",
+       "AT436",
+       "AT517",
+       "AT519",
+       "AT664",
+       "AT665"
+      ],
+      "inner_shapes": [
+       {
+        "hole": 0,
+        "area_m2": 15.35,
+        "perimeter_lm": 13.891,
+        "lines": [
+         "D2:4809:0",
+         "D2:4843:0"
+        ],
+        "treatment": "OPENING",
+        "basis": "project fact: owner Q-29 answer 2026-10-19 14:45 (client change: every dome position is an open skylight area, no dome concrete) with Q-24 (membrane stops at the dome base, 0.20 m upturn round it); circle drawn on the second-floor plan roof (+9.70), radius printed R221"
+       },
+       {
+        "hole": 1,
+        "area_m2": 15.35,
+        "perimeter_lm": 13.891,
+        "lines": [
+         "D2:12083:0"
+        ],
+        "treatment": "OPENING",
+        "basis": "project fact: owner Q-29 answer 2026-10-19 14:45 with Q-24, as D2:4843:0; second dome circle on the same roof, same printed radius"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "policy": "EXTERIOR_SPACES_V1",
+    "frame": "SH03:2F",
+    "text_id": "AT385",
+    "text": "ROOF",
+    "code": "ROOF",
+    "layer": "5",
+    "status": "RELEASED_METHOD_PIECE",
+    "reason": null,
+    "membrane_m2": null,
+    "upturn_lm": null,
+    "upturn_m2": null,
+    "held_part_m2": null,
+    "basis": "owner Q-24: like a bathroom floor (UP-WP-003): membrane inside the parapet (A) + 0.20 m upturn on parapet, walls and closures; gaps closed (Q-25)",
+    "geometry_status": "CLOSED",
+    "geometry_basis": null,
+    "same_face_layers": [
+     "5"
+    ],
+    "upturn_round_openings_lm": null,
+    "held_part_reason": null,
+    "gap_cover": [],
+    "counted_with": "AT379",
+    "candidates": {
+     "5": {
+      "A_net_m2": 115.832,
+      "A_filled_m2": 146.532,
+      "A_perimeter_lm": {
+       "building": 16.8,
+       "closure": 0.075,
+       "own_layer_edge": 48.265
+      },
+      "A_outer_perimeter_lm": 65.14,
+      "own_edge_band_m_by_length": {
+       "0.125": 5.25,
+       "0.15": 3.497,
+       "0.2": 18.87,
+       "0.3": 0.237,
+       "0.4": 1.83,
+       "none": 5.613
+      },
+      "B_review_only": {
+       "band_width_m": 0.2,
+       "area_m2": 125.662,
+       "outer_perimeter_lm": 67.14
+      },
+      "holes": [
+       {
+        "hole": 0,
+        "area_m2": 15.35,
+        "perimeter_lm": 13.891,
+        "lines": [
+         "D2:4809:0",
+         "D2:4843:0"
+        ]
+       },
+       {
+        "hole": 1,
+        "area_m2": 15.35,
+        "perimeter_lm": 13.891,
+        "lines": [
+         "D2:12083:0"
+        ]
+       }
+      ],
+      "closures": [
+       {
+        "from_line": "D2:4793:0",
+        "length_m": 0.075,
+        "meets": [
+         "WALL"
+        ],
+        "meets_lines": [
+         "D2:4744:0"
+        ]
+       }
+      ],
+      "gaps_with_opening": [],
+      "labels_in_face": [
+       "AT379",
+       "AT380",
+       "AT385",
+       "AT386",
+       "AT390:1350",
+       "AT391:1352",
+       "AT409",
+       "AT414",
+       "AT425",
+       "AT434",
+       "AT435",
+       "AT436",
+       "AT517",
+       "AT519",
+       "AT664",
+       "AT665"
+      ],
+      "inner_shapes": [
+       {
+        "hole": 0,
+        "area_m2": 15.35,
+        "perimeter_lm": 13.891,
+        "lines": [
+         "D2:4809:0",
+         "D2:4843:0"
+        ],
+        "treatment": "OPENING",
+        "basis": "project fact: owner Q-29 answer 2026-10-19 14:45 (client change: every dome position is an open skylight area, no dome concrete) with Q-24 (membrane stops at the dome base, 0.20 m upturn round it); circle drawn on the second-floor plan roof (+9.70), radius printed R221"
+       },
+       {
+        "hole": 1,
+        "area_m2": 15.35,
+        "perimeter_lm": 13.891,
+        "lines": [
+         "D2:12083:0"
+        ],
+        "treatment": "OPENING",
+        "basis": "project fact: owner Q-29 answer 2026-10-19 14:45 with Q-24, as D2:4843:0; second dome circle on the same roof, same printed radius"
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "layer_role_check": [
+   {
+    "wall_layer": "1",
+    "exterior_labels_enclosed": 0,
+    "room_labels_separated": 0,
+    "other_layers_separating_more_rooms": [
+     "2"
+    ],
+    "status": "OK",
+    "reason": null
+   }
+  ]
+ },
+ {
+  "region": "SH04:1F",
+  "guard_summary": {
+   "policy": "ROOM_LABEL_GUARD_V1",
+   "rule": "UP-QTY-STATUS-001",
+   "frame": "SH04:1F",
+   "room_labels": 15,
+   "in_face": 12,
+   "held": 3,
+   "held_by_reason": {
+    "ROOM_LABEL_NO_FACE": 3,
+    "ROOM_LABEL_AMBIGUOUS": 0,
+    "ROOM_LABEL_NO_POSITION": 0
+   },
+   "dropped": 0,
+   "texts_not_room_labels": 182,
+   "faces": 294,
+   "unreadable_faces": [],
+   "open_gaps": 0,
+   "unit_status": "OK"
+  },
+  "trace_summary": {
+   "policy": "EXTERIOR_SPACES_V1",
+   "frame": "SH04:1F",
+   "traced": 3,
+   "texts_passed_by": 0,
+   "by_status": {
+    "RELEASED_METHOD_PIECE": 2,
+    "PROVISIONAL": 0,
+    "HELD": 0,
+    "UNSUPPORTED": 1
+   },
+   "membrane_m2_by_code": {
+    "ROOF": 88.28
+   },
+   "roof_upturn_lm": 88.667,
+   "held_part_m2": 0,
+   "labels_counted_with_another": 0,
+   "reach_m": 0.45,
+   "rules": [
+    "UP-WP-ROOF-001",
+    "UP-WP-003",
+    "UP-QTY-STATUS-001"
+   ],
+   "owner_answers": [
+    "Q-24",
+    "Q-25",
+    "Q-29"
+   ]
+  },
+  "records": [
+   {
+    "policy": "EXTERIOR_SPACES_V1",
+    "frame": "SH04:1F",
+    "text_id": "AT216",
+    "text": "ROOF",
+    "code": "ROOF",
+    "layer": "5",
+    "status": "RELEASED_METHOD_PIECE",
+    "reason": null,
+    "membrane_m2": 32.721,
+    "upturn_lm": 52.94,
+    "upturn_m2": 10.588,
+    "held_part_m2": null,
+    "basis": "owner Q-24: like a bathroom floor (UP-WP-003): membrane inside the parapet (A) + 0.20 m upturn on parapet, walls and closures; gaps closed (Q-25)",
+    "geometry_status": "CLOSED",
+    "geometry_basis": null,
+    "same_face_layers": [
+     "5"
+    ],
+    "upturn_round_openings_lm": 0.0,
+    "held_part_reason": null,
+    "gap_cover": [
+     {
+      "from_line": "D2:3035:0",
+      "gap_m": 0.405,
+      "lap_m": 0.1,
+      "upturn_m": 0.2
+     }
+    ],
+    "candidates": {
+     "5": {
+      "A_net_m2": 32.721,
+      "A_filled_m2": 32.721,
+      "A_perimeter_lm": {
+       "building": 23.87,
+       "closure": 0.405,
+       "own_layer_edge": 28.665
+      },
+      "A_outer_perimeter_lm": 52.94,
+      "own_edge_band_m_by_length": {
+       "0.075": 7.305,
+       "0.2": 18.97,
+       "none": 5.257
+      },
+      "B_review_only": {
+       "band_width_m": 0.2,
+       "area_m2": 38.656,
+       "outer_perimeter_lm": 54.54
+      },
+      "holes": [],
+      "closures": [
+       {
+        "from_line": "D2:3035:0",
+        "length_m": 0.405,
+        "meets": [
+         "COLUMN",
+         "WALL"
+        ],
+        "meets_lines": [
+         "D2:12248:1",
+         "D2:2912:0"
+        ]
+       }
+      ],
+      "gaps_with_opening": [],
+      "labels_in_face": [
+       "AT216",
+       "AT217",
+       "AT248:D1B",
+       "AT249:D1D",
+       "AT276",
+       "AT277",
+       "AT278",
+       "AT279",
+       "AT353",
+       "AT354",
+       "AT355",
+       "AT356",
+       "AT362",
+       "AT363",
+       "AT527",
+       "AT528",
+       "AT529"
+      ],
+      "inner_shapes": []
+     }
+    }
+   },
+   {
+    "policy": "EXTERIOR_SPACES_V1",
+    "frame": "SH04:1F",
+    "text_id": "AT220",
+    "text": "ROOF",
+    "code": "ROOF",
+    "layer": "5",
+    "status": "RELEASED_METHOD_PIECE",
+    "reason": null,
+    "membrane_m2": 55.559,
+    "upturn_lm": 35.727,
+    "upturn_m2": 7.145,
+    "held_part_m2": null,
+    "basis": "owner Q-24: like a bathroom floor (UP-WP-003): membrane inside the parapet (A) + 0.20 m upturn on parapet, walls and closures; gaps closed (Q-25)",
+    "geometry_status": "CLOSED",
+    "geometry_basis": null,
+    "same_face_layers": [
+     "5"
+    ],
+    "upturn_round_openings_lm": 0.0,
+    "held_part_reason": null,
+    "gap_cover": [
+     {
+      "from_line": "D2:2869:0",
+      "gap_m": 0.2,
+      "lap_m": 0.1,
+      "upturn_m": 0.2
+     }
+    ],
+    "candidates": {
+     "5": {
+      "A_net_m2": 55.559,
+      "A_filled_m2": 55.559,
+      "A_perimeter_lm": {
+       "building": 4.6,
+       "closure": 0.2,
+       "own_layer_edge": 30.927
+      },
+      "A_outer_perimeter_lm": 35.727,
+      "own_edge_band_m_by_length": {
+       "0.1": 4.818,
+       "0.2": 0.091,
+       "0.201": 0.091,
+       "none": 0.475
+      },
+      "B_review_only": {
+       "band_width_m": 0.2,
+       "area_m2": 61.897,
+       "outer_perimeter_lm": 37.242
+      },
+      "holes": [],
+      "closures": [
+       {
+        "from_line": "D2:2869:0",
+        "length_m": 0.2,
+        "meets": [
+         "COLUMN",
+         "WALL"
+        ],
+        "meets_lines": [
+         "D2:12281:3",
+         "D2:2874:0"
+        ]
+       }
+      ],
+      "gaps_with_opening": [],
+      "labels_in_face": [
+       "AT220",
+       "AT221",
+       "AT250:D20",
+       "AT267",
+       "AT268",
+       "AT269",
+       "AT352"
+      ],
+      "inner_shapes": []
+     }
+    }
+   },
+   {
+    "policy": "EXTERIOR_SPACES_V1",
+    "frame": "SH04:1F",
+    "text_id": "AT225",
+    "text": "VOID",
+    "code": "VOID",
+    "layer": null,
+    "status": "UNSUPPORTED",
+    "reason": "VOID_OPEN_TO_BELOW",
+    "membrane_m2": null,
+    "upturn_lm": null,
+    "upturn_m2": null,
+    "held_part_m2": null,
+    "basis": "a void is open to below: excluded by rule",
+    "geometry_status": "AMBIGUOUS_BOUNDARY_LAYER",
+    "geometry_basis": "different OTHER layers close different faces round the label: ['2'] -> 2.61 m2; ['5'] -> 3.82 m2",
+    "candidates": {
+     "2": {
+      "A_net_m2": 2.613,
+      "A_filled_m2": 2.613,
+      "A_perimeter_lm": {
+       "building": 3.932,
+       "closure": 0.262,
+       "own_layer_edge": 3.673
+      },
+      "A_outer_perimeter_lm": 7.868,
+      "own_edge_band_m_by_length": {
+       "0.05": 3.059,
+       "0.273": 0.071,
+       "none": 0.543
+      },
+      "B_review_only": {
+       "band_width_m": 0.05,
+       "area_m2": 2.815,
+       "outer_perimeter_lm": 8.144
+      },
+      "holes": [],
+      "closures": [
+       {
+        "from_line": "D2:3251:0",
+        "length_m": 0.131,
+        "meets": [
+         "OWN"
+        ],
+        "meets_lines": [
+         "D2:3195:0"
+        ]
+       },
+       {
+        "from_line": "D2:3251:0",
+        "length_m": 0.131,
+        "meets": [
+         "OWN"
+        ],
+        "meets_lines": [
+         "D2:3196:0"
+        ]
+       }
+      ],
+      "gaps_with_opening": [],
+      "labels_in_face": [
+       "AT225",
+       "AT287",
+       "AT288"
+      ]
+     },
+     "5": {
+      "A_net_m2": 3.82,
+      "A_filled_m2": 3.82,
+      "A_perimeter_lm": {
+       "own_layer_edge": 7.137
+      },
+      "A_outer_perimeter_lm": 7.137,
+      "own_edge_band_m_by_length": {
+       "0.2": 0.116,
+       "0.201": 0.108,
+       "0.204": 0.108,
+       "0.207": 0.071,
+       "0.215": 0.108,
+       "0.221": 0.108,
+       "0.236": 0.108,
+       "0.244": 0.108,
+       "0.266": 0.108,
+       "0.278": 0.108,
+       "0.306": 0.108,
+       "0.321": 0.108,
+       "0.357": 0.108,
+       "0.376": 0.108,
+       "0.421": 0.108,
+       "0.445": 0.108,
+       "none": 2.885
+      },
+      "B_review_only": {
+       "band_width_m": 0.201,
+       "area_m2": 5.379,
+       "outer_perimeter_lm": 8.399
+      },
+      "holes": [],
+      "closures": [],
+      "gaps_with_opening": [],
+      "labels_in_face": [
+       "AT224",
+       "AT225",
+       "AT288",
+       "AT359"
+      ]
+     }
+    }
+   }
+  ],
+  "layer_role_check": [
+   {
+    "wall_layer": "1",
+    "exterior_labels_enclosed": 0,
+    "room_labels_separated": 0,
+    "other_layers_separating_more_rooms": [],
+    "status": "OK",
+    "reason": null
+   }
+  ]
+ },
+ {
+  "region": "SH05:GF",
+  "guard_summary": {
+   "policy": "ROOM_LABEL_GUARD_V1",
+   "rule": "UP-QTY-STATUS-001",
+   "frame": "SH05:GF",
+   "room_labels": 22,
+   "in_face": 16,
+   "held": 6,
+   "held_by_reason": {
+    "ROOM_LABEL_NO_FACE": 6,
+    "ROOM_LABEL_AMBIGUOUS": 0,
+    "ROOM_LABEL_NO_POSITION": 0
+   },
+   "dropped": 0,
+   "texts_not_room_labels": 199,
+   "faces": 349,
+   "unreadable_faces": [],
+   "open_gaps": 0,
+   "unit_status": "OK"
+  },
+  "trace_summary": {
+   "policy": "EXTERIOR_SPACES_V1",
+   "frame": "SH05:GF",
+   "traced": 6,
+   "texts_passed_by": 0,
+   "by_status": {
+    "RELEASED_METHOD_PIECE": 0,
+    "PROVISIONAL": 0,
+    "HELD": 6,
+    "UNSUPPORTED": 0
+   },
+   "membrane_m2_by_code": {},
+   "roof_upturn_lm": 0,
+   "held_part_m2": 0,
+   "labels_counted_with_another": 3,
+   "reach_m": 0.45,
+   "rules": [
+    "UP-WP-ROOF-001",
+    "UP-WP-003",
+    "UP-QTY-STATUS-001"
+   ],
+   "owner_answers": [
+    "Q-24",
+    "Q-25",
+    "Q-29"
+   ]
+  },
+  "records": [
+   {
+    "policy": "EXTERIOR_SPACES_V1",
+    "frame": "SH05:GF",
+    "text_id": "AT19",
+    "text": "حمام سباحة",
+    "code": "POOL",
+    "layer": null,
+    "status": "HELD",
+    "reason": "POOL_NO_MEMBRANE_RULE",
+    "membrane_m2": null,
+    "upturn_lm": null,
+    "upturn_m2": null,
+    "held_part_m2": null,
+    "basis": "no Urban rule makes a pool a membrane row; pool concrete is measured in the concrete ledger",
+    "geometry_status": "AMBIGUOUS_BOUNDARY_LAYER",
+    "geometry_basis": "different OTHER layers close different faces round the label: ['2'] -> 1.11 m2; ['5'] -> 8.58 m2",
+    "candidates": {
+     "2": {
+      "A_net_m2": 1.113,
+      "A_filled_m2": 1.113,
+      "A_perimeter_lm": {
+       "own_layer_edge": 4.234
+      },
+      "A_outer_perimeter_lm": 4.234,
+      "own_edge_band_m_by_length": {
+       "0.2": 0.109,
+       "0.201": 0.109,
+       "0.317": 0.084,
+       "none": 3.184
+      },
+      "B_review_only": {
+       "band_width_m": 0.201,
+       "area_m2": 2.123,
+       "outer_perimeter_lm": 5.832
+      },
+      "holes": [],
+      "closures": [],
+      "gaps_with_opening": [],
+      "labels_in_face": [
+       "AT19"
+      ]
+     },
+     "5": {
+      "A_net_m2": 8.576,
+      "A_filled_m2": 8.576,
+      "A_perimeter_lm": {
+       "own_layer_edge": 11.068
+      },
+      "A_outer_perimeter_lm": 11.068,
+      "own_edge_band_m_by_length": {
+       "0.2": 0.111,
+       "0.201": 0.111
+      },
+      "B_review_only": {
+       "band_width_m": 0.2,
+       "area_m2": 10.933,
+       "outer_perimeter_lm": 12.497
+      },
+      "holes": [],
+      "closures": [],
+      "gaps_with_opening": [],
+      "labels_in_face": [
+       "AT118",
+       "AT19",
+       "AT20",
+       "AT78"
+      ]
+     }
+    }
+   },
+   {
+    "policy": "EXTERIOR_SPACES_V1",
+    "frame": "SH05:GF",
+    "text_id": "AT20",
+    "text": "swimming pool",
+    "code": "POOL",
+    "layer": null,
+    "status": "HELD",
+    "reason": "POOL_NO_MEMBRANE_RULE",
+    "membrane_m2": null,
+    "upturn_lm": null,
+    "upturn_m2": null,
+    "held_part_m2": null,
+    "basis": "no Urban rule makes a pool a membrane row; pool concrete is measured in the concrete ledger",
+    "geometry_status": "AMBIGUOUS_BOUNDARY_LAYER",
+    "geometry_basis": "different OTHER layers close different faces round the label: ['2'] -> 1.07 m2; ['5'] -> 8.58 m2",
+    "candidates": {
+     "2": {
+      "A_net_m2": 1.066,
+      "A_filled_m2": 1.066,
+      "A_perimeter_lm": {
+       "own_layer_edge": 4.595
+      },
+      "A_outer_perimeter_lm": 4.595,
+      "own_edge_band_m_by_length": {
+       "none": 4.584
+      },
+      "B_review_only": null,
+      "holes": [],
+      "closures": [],
+      "gaps_with_opening": [],
+      "labels_in_face": [
+       "AT20"
+      ]
+     },
+     "5": {
+      "A_net_m2": 8.576,
+      "A_filled_m2": 8.576,
+      "A_perimeter_lm": {
+       "own_layer_edge": 11.068
+      },
+      "A_outer_perimeter_lm": 11.068,
+      "own_edge_band_m_by_length": {
+       "0.2": 0.111,
+       "0.201": 0.111
+      },
+      "B_review_only": {
+       "band_width_m": 0.2,
+       "area_m2": 10.933,
+       "outer_perimeter_lm": 12.497
+      },
+      "holes": [],
+      "closures": [],
+      "gaps_with_opening": [],
+      "labels_in_face": [
+       "AT118",
+       "AT19",
+       "AT20",
+       "AT78"
+      ]
+     }
+    }
+   },
+   {
+    "policy": "EXTERIOR_SPACES_V1",
+    "frame": "SH05:GF",
+    "text_id": "AT21",
+    "text": "حوش",
+    "code": "GARDEN",
+    "layer": "5",
+    "status": "HELD",
+    "reason": "EXTERIOR_SCOPE_UNRESOLVED",
+    "membrane_m2": null,
+    "upturn_lm": null,
+    "upturn_m2": null,
+    "held_part_m2": null,
+    "basis": "knowledge 1.5.0 OQ-04: exterior yard scope not decided",
+    "geometry_status": "CLOSED",
+    "geometry_basis": null,
+    "candidates": {
+     "5": {
+      "A_net_m2": 167.067,
+      "A_filled_m2": 177.299,
+      "A_perimeter_lm": {
+       "building": 38.012,
+       "closure": 0.232,
+       "own_layer_edge": 58.433
+      },
+      "A_outer_perimeter_lm": 96.676,
+      "own_edge_band_m_by_length": {
+       "0.2": 0.9,
+       "0.3": 2.8,
+       "none": 62.43
+      },
+      "B_review_only": {
+       "band_width_m": 0.3,
+       "area_m2": 184.856,
+       "outer_perimeter_lm": 99.735
+      },
+      "holes": [
+       {
+        "hole": 0,
+        "area_m2": 10.232,
+        "perimeter_lm": 12.097,
+        "lines": [
+         "D2:183:0",
+         "D2:512:0",
+         "D2:516:0",
+         "D2:518:0"
+        ]
+       }
+      ],
+      "closures": [
+       {
+        "from_line": "D2:141:0",
+        "length_m": 0.232,
+        "meets": [
+         "COLUMN",
+         "COLUMN",
+         "COLUMN",
+         "WALL",
+         "WALL"
+        ],
+        "meets_lines": [
+         "D2:12180:0",
+         "D2:12182:1",
+         "D2:12182:2",
+         "D2:140:0",
+         "D2:226:0"
+        ]
+       }
+      ],
+      "gaps_with_opening": [],
+      "labels_in_face": [
+       "AT117",
+       "AT122",
+       "AT123",
+       "AT151",
+       "AT152",
+       "AT153",
+       "AT154",
+       "AT155",
+       "AT159",
+       "AT160",
+       "AT167",
+       "AT168",
+       "AT169",
+       "AT183",
+       "AT184",
+       "AT192",
+       "AT196",
+       "AT21",
+       "AT22",
+       "AT39",
+       "AT40",
+       "AT538",
+       "AT54:394",
+       "AT61:409",
+       "AT62:40B",
+       "AT63:40D",
+       "AT76:4AE",
+       "AT77",
+       "AT79",
+       "AT96"
+      ]
+     }
+    }
+   },
+   {
+    "policy": "EXTERIOR_SPACES_V1",
+    "frame": "SH05:GF",
+    "text_id": "AT22",
+    "text": "COURT",
+    "code": "GARDEN",
+    "layer": "5",
+    "status": "HELD",
+    "reason": "EXTERIOR_SCOPE_UNRESOLVED",
+    "membrane_m2": null,
+    "upturn_lm": null,
+    "upturn_m2": null,
+    "held_part_m2": null,
+    "basis": "knowledge 1.5.0 OQ-04: exterior yard scope not decided",
+    "geometry_status": "CLOSED",
+    "geometry_basis": null,
+    "counted_with": "AT21",
+    "gap_cover": [],
+    "candidates": {
+     "5": {
+      "A_net_m2": 167.067,
+      "A_filled_m2": 177.299,
+      "A_perimeter_lm": {
+       "building": 38.012,
+       "closure": 0.232,
+       "own_layer_edge": 58.433
+      },
+      "A_outer_perimeter_lm": 96.676,
+      "own_edge_band_m_by_length": {
+       "0.2": 0.9,
+       "0.3": 2.8,
+       "none": 62.43
+      },
+      "B_review_only": {
+       "band_width_m": 0.3,
+       "area_m2": 184.856,
+       "outer_perimeter_lm": 99.735
+      },
+      "holes": [
+       {
+        "hole": 0,
+        "area_m2": 10.232,
+        "perimeter_lm": 12.097,
+        "lines": [
+         "D2:183:0",
+         "D2:512:0",
+         "D2:516:0",
+         "D2:518:0"
+        ]
+       }
+      ],
+      "closures": [
+       {
+        "from_line": "D2:141:0",
+        "length_m": 0.232,
+        "meets": [
+         "COLUMN",
+         "COLUMN",
+         "COLUMN",
+         "WALL",
+         "WALL"
+        ],
+        "meets_lines": [
+         "D2:12180:0",
+         "D2:12182:1",
+         "D2:12182:2",
+         "D2:140:0",
+         "D2:226:0"
+        ]
+       }
+      ],
+      "gaps_with_opening": [],
+      "labels_in_face": [
+       "AT117",
+       "AT122",
+       "AT123",
+       "AT151",
+       "AT152",
+       "AT153",
+       "AT154",
+       "AT155",
+       "AT159",
+       "AT160",
+       "AT167",
+       "AT168",
+       "AT169",
+       "AT183",
+       "AT184",
+       "AT192",
+       "AT196",
+       "AT21",
+       "AT22",
+       "AT39",
+       "AT40",
+       "AT538",
+       "AT54:394",
+       "AT61:409",
+       "AT62:40B",
+       "AT63:40D",
+       "AT76:4AE",
+       "AT77",
+       "AT79",
+       "AT96"
+      ]
+     }
+    }
+   },
+   {
+    "policy": "EXTERIOR_SPACES_V1",
+    "frame": "SH05:GF",
+    "text_id": "AT39",
+    "text": "حوش",
+    "code": "GARDEN",
+    "layer": "5",
+    "status": "HELD",
+    "reason": "EXTERIOR_SCOPE_UNRESOLVED",
+    "membrane_m2": null,
+    "upturn_lm": null,
+    "upturn_m2": null,
+    "held_part_m2": null,
+    "basis": "knowledge 1.5.0 OQ-04: exterior yard scope not decided",
+    "geometry_status": "CLOSED",
+    "geometry_basis": null,
+    "counted_with": "AT21",
+    "gap_cover": [],
+    "candidates": {
+     "5": {
+      "A_net_m2": 167.067,
+      "A_filled_m2": 177.299,
+      "A_perimeter_lm": {
+       "building": 38.012,
+       "closure": 0.232,
+       "own_layer_edge": 58.433
+      },
+      "A_outer_perimeter_lm": 96.676,
+      "own_edge_band_m_by_length": {
+       "0.2": 0.9,
+       "0.3": 2.8,
+       "none": 62.43
+      },
+      "B_review_only": {
+       "band_width_m": 0.3,
+       "area_m2": 184.856,
+       "outer_perimeter_lm": 99.735
+      },
+      "holes": [
+       {
+        "hole": 0,
+        "area_m2": 10.232,
+        "perimeter_lm": 12.097,
+        "lines": [
+         "D2:183:0",
+         "D2:512:0",
+         "D2:516:0",
+         "D2:518:0"
+        ]
+       }
+      ],
+      "closures": [
+       {
+        "from_line": "D2:141:0",
+        "length_m": 0.232,
+        "meets": [
+         "COLUMN",
+         "COLUMN",
+         "COLUMN",
+         "WALL",
+         "WALL"
+        ],
+        "meets_lines": [
+         "D2:12180:0",
+         "D2:12182:1",
+         "D2:12182:2",
+         "D2:140:0",
+         "D2:226:0"
+        ]
+       }
+      ],
+      "gaps_with_opening": [],
+      "labels_in_face": [
+       "AT117",
+       "AT122",
+       "AT123",
+       "AT151",
+       "AT152",
+       "AT153",
+       "AT154",
+       "AT155",
+       "AT159",
+       "AT160",
+       "AT167",
+       "AT168",
+       "AT169",
+       "AT183",
+       "AT184",
+       "AT192",
+       "AT196",
+       "AT21",
+       "AT22",
+       "AT39",
+       "AT40",
+       "AT538",
+       "AT54:394",
+       "AT61:409",
+       "AT62:40B",
+       "AT63:40D",
+       "AT76:4AE",
+       "AT77",
+       "AT79",
+       "AT96"
+      ]
+     }
+    }
+   },
+   {
+    "policy": "EXTERIOR_SPACES_V1",
+    "frame": "SH05:GF",
+    "text_id": "AT40",
+    "text": "COURT",
+    "code": "GARDEN",
+    "layer": "5",
+    "status": "HELD",
+    "reason": "EXTERIOR_SCOPE_UNRESOLVED",
+    "membrane_m2": null,
+    "upturn_lm": null,
+    "upturn_m2": null,
+    "held_part_m2": null,
+    "basis": "knowledge 1.5.0 OQ-04: exterior yard scope not decided",
+    "geometry_status": "CLOSED",
+    "geometry_basis": null,
+    "counted_with": "AT21",
+    "gap_cover": [],
+    "candidates": {
+     "5": {
+      "A_net_m2": 167.067,
+      "A_filled_m2": 177.299,
+      "A_perimeter_lm": {
+       "building": 38.012,
+       "closure": 0.232,
+       "own_layer_edge": 58.433
+      },
+      "A_outer_perimeter_lm": 96.676,
+      "own_edge_band_m_by_length": {
+       "0.2": 0.9,
+       "0.3": 2.8,
+       "none": 62.43
+      },
+      "B_review_only": {
+       "band_width_m": 0.3,
+       "area_m2": 184.856,
+       "outer_perimeter_lm": 99.735
+      },
+      "holes": [
+       {
+        "hole": 0,
+        "area_m2": 10.232,
+        "perimeter_lm": 12.097,
+        "lines": [
+         "D2:183:0",
+         "D2:512:0",
+         "D2:516:0",
+         "D2:518:0"
+        ]
+       }
+      ],
+      "closures": [
+       {
+        "from_line": "D2:141:0",
+        "length_m": 0.232,
+        "meets": [
+         "COLUMN",
+         "COLUMN",
+         "COLUMN",
+         "WALL",
+         "WALL"
+        ],
+        "meets_lines": [
+         "D2:12180:0",
+         "D2:12182:1",
+         "D2:12182:2",
+         "D2:140:0",
+         "D2:226:0"
+        ]
+       }
+      ],
+      "gaps_with_opening": [],
+      "labels_in_face": [
+       "AT117",
+       "AT122",
+       "AT123",
+       "AT151",
+       "AT152",
+       "AT153",
+       "AT154",
+       "AT155",
+       "AT159",
+       "AT160",
+       "AT167",
+       "AT168",
+       "AT169",
+       "AT183",
+       "AT184",
+       "AT192",
+       "AT196",
+       "AT21",
+       "AT22",
+       "AT39",
+       "AT40",
+       "AT538",
+       "AT54:394",
+       "AT61:409",
+       "AT62:40B",
+       "AT63:40D",
+       "AT76:4AE",
+       "AT77",
+       "AT79",
+       "AT96"
+      ]
+     }
+    }
+   }
+  ],
+  "layer_role_check": [
+   {
+    "wall_layer": "1",
+    "exterior_labels_enclosed": 0,
+    "room_labels_separated": 0,
+    "other_layers_separating_more_rooms": [
+     "2"
+    ],
+    "status": "OK",
+    "reason": null
+   }
+  ]
+ }
+]

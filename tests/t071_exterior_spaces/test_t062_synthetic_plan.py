@@ -1,4 +1,6 @@
-"""T-062 hand check of roof_trace.py on a synthetic plan (no private drawing; not Alsenan).
+"""T-062 hand check of roof_trace.py on a synthetic plan (no private drawing; not Alsenan), moved here by T-071 from
+research/agents_t062/synthetic_check.py; T-071 adds the same plan through the real ARCH_TAKEOFF_V2.9 run into
+EXTERIOR_SPACES_V1 (test_exterior_spaces_on_the_run) and the layer-role risk with no layer map.
 
 Hand truth (millimetres before the variant transform; layer names unlike any project):
   block   A-WALL shell 4.40 x 3.40 m (0.20 m walls), one closed BEDROOM inside (in a room: never traced).
@@ -18,7 +20,7 @@ Hand truth (millimetres before the variant transform; layer names unlike any pro
   missing a BALCONY label with no line drawn round it: reported with no bounding layer and no area (never 0).
 Variants: millimetres, metres, rotated 37 degrees, mirrored, rotated + mirrored in metres.
 
-Run: python research/agents_t062/synthetic_check.py  (or pytest on this file)."""
+Run: pytest on this file."""
 from __future__ import annotations
 
 import math
@@ -28,7 +30,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-for p in (str(ROOT), str(HERE)):
+for p in (str(ROOT), str(ROOT / "research" / "agents_t062"), str(ROOT / "research" / "agents_t071")):
     if p not in sys.path:
         sys.path.insert(0, p)
 
@@ -141,6 +143,54 @@ def check(name, tmp):
 def test_variants(tmp_path):
     for name in VARIANTS:
         check(name, tmp_path)
+
+
+HAND_XS = {"membrane_unlabelled_dome": 41.200 - math.pi * 0.64, "held_dome": math.pi * 0.64, "upturn": 38.40,
+           "B": 48.25 - math.pi * 0.64, "pool": 2.0 + math.pi / 2, "void": 1.5}
+
+
+def xs_check(name, tmp, roles=ROLES):
+    import run_alsenan as RA
+    rep = RA.run(plan(Path(tmp) / f"xs_{name}.dxf", **VARIANTS[name]), layer_roles=roles)
+    recs = [r for reg in rep for r in reg["records"]]
+    by = {}
+    for r in recs:
+        by.setdefault(r["code"], []).append(r)
+    return rep, by
+
+
+def test_exterior_spaces_on_the_run(tmp_path):
+    """the same synthetic plan through the real V2.9 run, the T-061 guard and EXTERIOR_SPACES_V1 (owner basis A)."""
+    for name in VARIANTS:
+        rep, by = xs_check(name, tmp_path)
+        roofs = by["ROOF"]
+        assert len(roofs) == 2 and sum(1 for r in roofs if r.get("counted_with")) == 1, name
+        r = [x for x in roofs if not x.get("counted_with")][0]
+        assert r["status"] == "RELEASED_METHOD_PIECE" and r["layer"] == "A-ROOF", (name, r["reason"], r.get("basis"))
+        assert abs(r["membrane_m2"] - HAND_XS["membrane_unlabelled_dome"]) < 0.01, (name, r["membrane_m2"])
+        assert abs(r["held_part_m2"] - HAND_XS["held_dome"]) < 0.01            # unlabelled circle: held, shown
+        assert abs(r["upturn_lm"] - HAND_XS["upturn"]) < 0.01, (name, r["upturn_lm"])
+        c = r["candidates"]["A-ROOF"]
+        assert sorted(x["length_m"] for x in c["closures"]) == [0.1, 0.1]
+        assert abs(c["B_review_only"]["area_m2"] - HAND_XS["B"]) < 0.01
+        assert by["POOL"][0]["status"] == "HELD" and abs(by["POOL"][0]["candidates"]["A-ROOF"]["A_net_m2"] - HAND_XS["pool"]) < 0.01
+        assert by["VOID"][0]["status"] == "UNSUPPORTED"
+        assert by["BALCONY"][0]["status"] == "HELD" and by["BALCONY"][0]["membrane_m2"] is None   # nothing round it
+        assert all(reg["layer_role_check"][0]["status"] == "OK" for reg in rep if reg["layer_role_check"])
+
+
+def test_layer_role_risk_with_no_layer_map(tmp_path):
+    """T-062 lesson: with no layer map the run picks the parapet layer as THE wall layer; the check must say RISK."""
+    import run_alsenan as RA
+    rep = RA.run(plan(tmp_path / "nomap.dxf"), layer_roles=None)
+    chk = [c for reg in rep for c in reg["layer_role_check"]]
+    roles_wall = [c["wall_layer"] for c in chk]
+    if roles_wall == ["A-WALL"]:                 # the run typed the real wall layer: nothing to flag
+        assert all(c["status"] == "OK" for c in chk)
+    else:
+        assert any(c["status"] == "RISK" and c["reason"] == "LAYER_ROLE_PARAPET_AS_WALL" for c in chk), chk
+        recs = [r for reg in rep for r in reg["records"]]
+        assert not any(r["status"] in ("RELEASED_METHOD_PIECE", "PROVISIONAL") for r in recs)
 
 
 if __name__ == "__main__":
