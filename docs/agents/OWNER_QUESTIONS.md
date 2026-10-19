@@ -1,6 +1,6 @@
 # Questions for the owner (at most 5 open; answer under "Answer:")
 
-Lead 2026-10-19 04:10: two new questions Q-18 (dome size basis) and Q-19 (may engine conventions release concrete when the drawing prints nothing); eight are open (Q-12 to Q-19): the list is long because each one stops an assumption. Q-12 now has the T-037 hand calculation (see its note). Lead 2026-10-19 02:20: three new questions Q-15 (development project 2 plans file), Q-16 (unlabelled beam span), Q-17 (typed drawing sizes in the concrete score); with Q-12, Q-13 and Q-14 six are open: the list is long because each one stops an assumption. Lead 2026-10-19 00:15: no new question; Q-12 (concrete verdicts) and Q-13 (toilet lines vs chair) open. Window / aluminium door m2 is covered by UP-OPEN-SCHED-001 and UP-DOOR-AREA-001, so it became task T-040, not a question. Lead 2026-10-18 20:05 (owner session): Q-06, Q-07, Q-09 answered by the owner (see Answered); no question open. Lead 2026-10-18 21:25: Q-10 (development project 2 DWG) answered; Q-11 answered (owner uploads the Alsenan DXFs); no question open. Lead 2026-10-18 15:40: no new question; Q-06 and Q-07 still open (no owner answer yet). The T-019 wall-length basis finding is settled by UP-WALL-GEOM-001 (masonry run = centreline, owner-approved), so it became task T-027, not a question. Lead adds questions an agent cannot decide from drawings, rules or evidence. Answered questions move to the bottom.
+Lead 2026-10-19 (owner reply): Q-18 answered (c) held and always visible; Q-19 answered for stairs and pools (see Answered); new Q-20 (stair waist and landings). Lead 2026-10-19 04:10: two new questions Q-18 (dome size basis) and Q-19 (may engine conventions release concrete when the drawing prints nothing); eight are open (Q-12 to Q-19): the list is long because each one stops an assumption. Q-12 now has the T-037 hand calculation (see its note). Lead 2026-10-19 02:20: three new questions Q-15 (development project 2 plans file), Q-16 (unlabelled beam span), Q-17 (typed drawing sizes in the concrete score); with Q-12, Q-13 and Q-14 six are open: the list is long because each one stops an assumption. Lead 2026-10-19 00:15: no new question; Q-12 (concrete verdicts) and Q-13 (toilet lines vs chair) open. Window / aluminium door m2 is covered by UP-OPEN-SCHED-001 and UP-DOOR-AREA-001, so it became task T-040, not a question. Lead 2026-10-18 20:05 (owner session): Q-06, Q-07, Q-09 answered by the owner (see Answered); no question open. Lead 2026-10-18 21:25: Q-10 (development project 2 DWG) answered; Q-11 answered (owner uploads the Alsenan DXFs); no question open. Lead 2026-10-18 15:40: no new question; Q-06 and Q-07 still open (no owner answer yet). The T-019 wall-length basis finding is settled by UP-WALL-GEOM-001 (masonry run = centreline, owner-approved), so it became task T-027, not a question. Lead adds questions an agent cannot decide from drawings, rules or evidence. Answered questions move to the bottom.
 Decisions still queued behind these (from the master study `14_OWNER_DECISIONS_QUEUE.csv`): D-17 review-space wet / dry,
 WP-KITCHEN membrane scope, WP-JOINT details, WIN-REVEAL finish, STUB-LIMIT, MEAS-STD, ROOF-FIN, BLIND-AUTH.
 
@@ -179,6 +179,25 @@ Waits on: the concrete score for columns, necks, ground beams and blinding (T-04
 
 Answer:
 
+### Q-20 Stairs: besides the steps, how is the concrete under them (the sloping waist slab) and the landings measured? (lead 2026-10-19; Q-19 answer, T-056)
+
+What we found: your Q-19 answer gives the concrete of the steps (one step x the number of steps). A concrete stair also has
+the sloping slab the steps sit on (the waist) and the flat landings, and the drawing prints neither thickness.
+Real example: Alsenan, ground-floor stair (structural "ST7757 dxf.dxf", ground-floor slab plan): tread lines are drawn but
+there is no stair section and no waist or landing thickness. For a 1.20 m wide flight with 10 steps of 0.30 x 0.16, the
+steps alone are 10 x 1/2 x 0.16 x 0.30 x 1.20 = 0.288 m3; a 15 cm waist under the same flight would add about
+1.20 x 3.40 (sloping length) x 0.15 = 0.61 m3.
+How to check it yourself: open the stair on the ground-floor slab plan and look for a section or a note with a waist or
+landing thickness.
+Choices: (a) count the steps only, as in your answer; waist and landings are not a separate line; (b) steps + a waist slab
+of a thickness you give (for example 15 cm) + landings of a thickness you give; (c) steps now, waist and landings held
+(shown, not scored) until the designer prints them.
+Waits on: stair concrete on every villa (T-056).
+
+Answer:
+
+## Answered
+
 ### Q-18 Dome sizes: are the printed 442 and 190 measured to the outside or the inside of the shell? (lead 2026-10-19 04:10; T-037, T-049)
 
 What we found: the dome detail prints the dome width, its rise and the shell thickness, but not whether the width and
@@ -192,7 +211,10 @@ Choices: (a) outer surface: 2 x 2.54 m3; (b) inner surface: 2 x 2.80 m3; (c) hol
 confirms (shown, not scored).
 Waits on: the dome part of the concrete stairs + domes line (T-049).
 
-Answer:
+Answer (owner, 2026-10-19, via the lead's run chat): (c) hold the domes until the designer confirms, AND keep it clearly
+visible in every report that the dome size basis is NOT resolved, so it is never hidden. So: each dome line is HELD with
+reason DOME_SIZE_BASIS_NOT_CONFIRMED (owner Q-18), listed by name in the BOQ, the scoreboard verdicts and every lead /
+hub report as an open item; it is never a number and never 0, and it is never folded into a total silently. Tasks T-049.
 
 ### Q-19 When the drawing prints no size, may the engine use its own "usual villa" sizes for concrete? (lead 2026-10-19 04:10; T-037)
 
@@ -210,9 +232,23 @@ designer gives it; (b) a printed size wins; where nothing is printed the engine 
 "usual size, not on drawing", and the line counts in the score; (c) as (b) but the line is shown and not scored.
 Waits on: pool, dome and stair concrete lines on every villa (T-049, T-037 follow-ups).
 
-Answer:
+Answer (owner, 2026-10-19, via the lead's run chat), recorded word for word in meaning:
+- STAIRS: a step is about 15 cm high x 30 cm deep x 120 cm long; the length depends on the plan, and the height depends
+  on the floor height, so it can be 16 or 16.5 cm etc. (the earlier owner example: the riser height of each floor comes
+  from that floor's height). Concrete of the steps = the concrete volume of one step x the number of steps needed.
+  Lead reading, tied to existing rules: riser height = floor-to-floor rise / counted number of risers (UP-STAIR-009,
+  owner rule addendum 2026-09-17; the 0.155-0.165 m range is a sanity check only, never a quantity); tread depth and stair
+  width are read from the plan (UP-STAIR-002: geometry from the drawing); one step = 1/2 x riser x tread x width;
+  steps concrete = one step x number of steps. What the answer does NOT cover stays HELD and is asked as Q-20: the
+  waist slab under the steps and the landings.
+- POOL (same answer): pool depth is about 1.00 m or 1.15 m: CHECK it on the drawing (the expected range is a check, not a
+  value to use); it is a normal pool, not an overflow pool. Alsenan has NO pool pump room (owner checked by hand). Rule for
+  every villa: whenever there is a pool, always check for the pool pump room, and check where the house's main manholes are.
+- A size printed on the drawing always wins (e.g. Alsenan pool floor 0.40 m printed, not the engine's 0.25), per
+  UP-KB-PREC-001. Other "usual villa sizes" (pool walls, dome rise / shell) are NOT approved by this answer: lines that rest
+  only on them stay HELD.
+Tasks: T-056 (stair steps concrete), T-057 (pool check list), T-049 (printed pool sizes; domes held, visible).
 
-## Answered
 
 ### Q-11 AutoCAD DXF files for the scoreboard (T-001b; added by the worker 2026-10-18 as Q-10, renumbered by the lead)
 The Drive folder "Alsenan chalet project" has the DWGs but not the two DXF files the engine was always run on, and P7757.dwg cannot be
