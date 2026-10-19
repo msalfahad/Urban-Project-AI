@@ -1,0 +1,1104 @@
+{
+ "task": "T-066",
+ "project": "development project 2 (separate project; never mixed with Alsenan, owner Q-15)",
+ "source": {
+  "drive_file": "development project 2 folder / the -STR.dwg",
+  "sha256": "2635cc50ab5ebc559337684fda64e2d028a6978ae2455e00b36bb4859d00d60b",
+  "bytes": 2437120,
+  "format": "AC1021"
+ },
+ "decoders": {
+  "pinned_0.13.3": {
+   "source_tarball_sha256": "83f1f6e78a744777a481ff4520e4cef3f8ac4b2c1c25671077ca12fe81e8816e",
+   "dwgread_sha256_this_build": "1dfbaa158efe553dd16797a3d59508aa23dfc046b417a1683279f3f6f209213f",
+   "dwg2dxf_sha256_this_build": "13d233968de9e4186da3a45a2915f192e0e4813d33907efa0990231dfc0236b3"
+  },
+  "diagnostic_0.13.3_patched": {
+   "change": "src/bits.c:1379 'handle->value &= 0xFFFF' -> '&= 0xFFFFFFFF' (one line); diagnostic only, never for quantities"
+  },
+  "release_0.13.4": {
+   "source_tarball_sha256": "7e153ea4dac4cbf3dc9c50b9ef7a5604e09cdd4c5520bcf8017877bbe1422cd5",
+   "dwg2dxf": "aborts: 'double free or corruption (out)', exit 134, 24,576-byte partial DXF"
+  }
+ },
+ "census": {
+  "pinned_0.13.3": {
+   "decode": {
+    "objects_total": 58343,
+    "entities_total": 48576,
+    "entities_by_space": {
+     "MODEL": 15885,
+     "PAPER_ACTIVE": 127,
+     "BLOCK": 32564
+    },
+    "entities_by_type_space": {
+     "ARC": {
+      "BLOCK": 113,
+      "MODEL": 234
+     },
+     "ATTDEF": {
+      "BLOCK": 18
+     },
+     "ATTRIB": {
+      "BLOCK": 146
+     },
+     "BLOCK": {
+      "MODEL": 1,
+      "PAPER_ACTIVE": 1,
+      "BLOCK": 1962
+     },
+     "CIRCLE": {
+      "BLOCK": 1211,
+      "MODEL": 420
+     },
+     "DIMENSION_ALIGNED": {
+      "MODEL": 22
+     },
+     "DIMENSION_DIAMETER": {
+      "MODEL": 2
+     },
+     "DIMENSION_LINEAR": {
+      "MODEL": 1565,
+      "BLOCK": 175
+     },
+     "ELLIPSE": {
+      "BLOCK": 248,
+      "MODEL": 66
+     },
+     "ENDBLK": {
+      "MODEL": 1,
+      "PAPER_ACTIVE": 1,
+      "BLOCK": 1962
+     },
+     "HATCH": {
+      "BLOCK": 1264,
+      "MODEL": 599
+     },
+     "INSERT": {
+      "BLOCK": 3627,
+      "MODEL": 670,
+      "PAPER_ACTIVE": 4
+     },
+     "LEADER": {
+      "MODEL": 195,
+      "BLOCK": 125
+     },
+     "LINE": {
+      "BLOCK": 8087,
+      "MODEL": 8882,
+      "PAPER_ACTIVE": 28
+     },
+     "LWPOLYLINE": {
+      "BLOCK": 1503,
+      "MODEL": 1329,
+      "PAPER_ACTIVE": 38
+     },
+     "MLINE": {
+      "MODEL": 31
+     },
+     "MTEXT": {
+      "BLOCK": 1764,
+      "MODEL": 2
+     },
+     "POINT": {
+      "BLOCK": 5802
+     },
+     "POLYLINE_2D": {
+      "BLOCK": 1,
+      "MODEL": 36
+     },
+     "REGION": {
+      "BLOCK": 16
+     },
+     "SEQEND": {
+      "BLOCK": 106
+     },
+     "SOLID": {
+      "BLOCK": 29,
+      "MODEL": 2
+     },
+     "TEXT": {
+      "BLOCK": 4306,
+      "MODEL": 1827,
+      "PAPER_ACTIVE": 50
+     },
+     "UNKNOWN_ENT:RTEXT": {
+      "PAPER_ACTIVE": 2
+     },
+     "VERTEX_2D": {
+      "BLOCK": 98
+     },
+     "VIEWPORT": {
+      "PAPER_ACTIVE": 3,
+      "BLOCK": 1,
+      "MODEL": 1
+     }
+    },
+    "handle_size_bytes": {
+     "1": 76,
+     "2": 142,
+     "3": 58125
+    },
+    "max_handle_value_printed": 65535,
+    "handles_3plus_bytes": 58125,
+    "colliding_values": 12567,
+    "objects_on_colliding_values": 27657,
+    "colliding_size_value_pairs": 12533,
+    "header_HANDSEED": [
+     0,
+     3,
+     32706,
+     32706
+    ],
+    "invalid_utf8_chars": 28
+   },
+   "dxf": {
+    "sections": [
+     "HEADER",
+     "CLASSES",
+     "TABLES",
+     "BLOCKS"
+    ],
+    "eof": false,
+    "max_handle": 65535,
+    "types_by_section": {
+     "BLOCKS": {
+      "BLOCK": 1386,
+      "TEXT": 2458,
+      "ENDBLK": 1242,
+      "MTEXT": 1083,
+      "HATCH": 1299,
+      "LINE": 4371,
+      "LWPOLYLINE": 1359,
+      "CIRCLE": 1263,
+      "ARC": 64,
+      "ELLIPSE": 111,
+      "REGION": 8,
+      "ATTDEF": 17,
+      "DIMENSION": 206,
+      "INSERT": 2248,
+      "POINT": 3806,
+      "LEADER": 130,
+      "ATTRIB": 7,
+      "SOLID": 13,
+      "SEQEND": 1
+     }
+    }
+   }
+  },
+  "diagnostic_0.13.3_patched": {
+   "decode": {
+    "objects_total": 58343,
+    "entities_total": 48576,
+    "entities_by_space": {
+     "MODEL": 15885,
+     "PAPER_ACTIVE": 127,
+     "BLOCK": 32564
+    },
+    "entities_by_type_space": {
+     "ARC": {
+      "BLOCK": 113,
+      "MODEL": 234
+     },
+     "ATTDEF": {
+      "BLOCK": 18
+     },
+     "ATTRIB": {
+      "BLOCK": 146
+     },
+     "BLOCK": {
+      "MODEL": 1,
+      "PAPER_ACTIVE": 1,
+      "BLOCK": 1962
+     },
+     "CIRCLE": {
+      "BLOCK": 1211,
+      "MODEL": 420
+     },
+     "DIMENSION_ALIGNED": {
+      "MODEL": 22
+     },
+     "DIMENSION_DIAMETER": {
+      "MODEL": 2
+     },
+     "DIMENSION_LINEAR": {
+      "MODEL": 1565,
+      "BLOCK": 175
+     },
+     "ELLIPSE": {
+      "BLOCK": 248,
+      "MODEL": 66
+     },
+     "ENDBLK": {
+      "MODEL": 1,
+      "PAPER_ACTIVE": 1,
+      "BLOCK": 1962
+     },
+     "HATCH": {
+      "BLOCK": 1264,
+      "MODEL": 599
+     },
+     "INSERT": {
+      "BLOCK": 3627,
+      "MODEL": 670,
+      "PAPER_ACTIVE": 4
+     },
+     "LEADER": {
+      "MODEL": 195,
+      "BLOCK": 125
+     },
+     "LINE": {
+      "BLOCK": 8087,
+      "MODEL": 8882,
+      "PAPER_ACTIVE": 28
+     },
+     "LWPOLYLINE": {
+      "BLOCK": 1503,
+      "MODEL": 1329,
+      "PAPER_ACTIVE": 38
+     },
+     "MLINE": {
+      "MODEL": 31
+     },
+     "MTEXT": {
+      "BLOCK": 1764,
+      "MODEL": 2
+     },
+     "POINT": {
+      "BLOCK": 5802
+     },
+     "POLYLINE_2D": {
+      "BLOCK": 1,
+      "MODEL": 36
+     },
+     "REGION": {
+      "BLOCK": 16
+     },
+     "SEQEND": {
+      "BLOCK": 106
+     },
+     "SOLID": {
+      "BLOCK": 29,
+      "MODEL": 2
+     },
+     "TEXT": {
+      "BLOCK": 4306,
+      "MODEL": 1827,
+      "PAPER_ACTIVE": 50
+     },
+     "UNKNOWN_ENT:RTEXT": {
+      "PAPER_ACTIVE": 2
+     },
+     "VERTEX_2D": {
+      "BLOCK": 98
+     },
+     "VIEWPORT": {
+      "PAPER_ACTIVE": 3,
+      "BLOCK": 1,
+      "MODEL": 1
+     }
+    },
+    "handle_size_bytes": {
+     "1": 76,
+     "2": 142,
+     "3": 58125
+    },
+    "max_handle_value_printed": 2326465,
+    "handles_3plus_bytes": 58125,
+    "colliding_values": 0,
+    "objects_on_colliding_values": 0,
+    "colliding_size_value_pairs": 0,
+    "header_HANDSEED": [
+     0,
+     3,
+     2326466,
+     2326466
+    ],
+    "invalid_utf8_chars": 28
+   },
+   "dxf": {
+    "sections": [
+     "HEADER",
+     "CLASSES",
+     "TABLES",
+     "BLOCKS",
+     "ENTITIES",
+     "OBJECTS",
+     "THUMBNAILIMAGE"
+    ],
+    "eof": true,
+    "max_handle": 2326466,
+    "types_by_section": {
+     "BLOCKS": {
+      "BLOCK": 1964,
+      "ENDBLK": 1964,
+      "VIEWPORT": 1,
+      "POLYLINE": 1,
+      "VERTEX": 2,
+      "SEQEND": 2,
+      "HATCH": 1264,
+      "LINE": 8087,
+      "TEXT": 4306,
+      "MTEXT": 1764,
+      "LWPOLYLINE": 1503,
+      "CIRCLE": 1211,
+      "ARC": 113,
+      "ELLIPSE": 248,
+      "REGION": 16,
+      "INSERT": 3627,
+      "POINT": 5802,
+      "SOLID": 29,
+      "ATTDEF": 18,
+      "ATTRIB": 1,
+      "DIMENSION": 175,
+      "LEADER": 125
+     },
+     "ENTITIES": {
+      "HATCH": 599,
+      "LINE": 8910,
+      "TEXT": 1877,
+      "LWPOLYLINE": 1367,
+      "DIMENSION": 1589,
+      "ARC": 234,
+      "CIRCLE": 420,
+      "INSERT": 674,
+      "ELLIPSE": 66,
+      "MLINE": 31,
+      "ATTRIB": 145,
+      "SEQEND": 104,
+      "LEADER": 195,
+      "SOLID": 2,
+      "MTEXT": 2,
+      "POLYLINE": 36,
+      "VERTEX": 96,
+      "VIEWPORT": 4
+     },
+     "OBJECTS": {
+      "DICTIONARY": 1833,
+      "ACDBDICTIONARYWDFLT": 1,
+      "ACDBPLACEHOLDER": 2,
+      "MLINESTYLE": 1,
+      "LAYOUT": 3,
+      "DICTIONARYVAR": 18,
+      "VISUALSTYLE": 25,
+      "SCALE": 33,
+      "XRECORD": 4029,
+      "ACDBSECTIONVIEWSTYLE": 2,
+      "ACDBDETAILVIEWSTYLE": 2,
+      "SORTENTSTABLE": 72,
+      "WIPEOUTVARIABLES": 1,
+      "IMAGEDEF": 1,
+      "RASTERVARIABLES": 1,
+      "BLOCKVISIBILITYGRIP": 11,
+      "BLOCKGRIPLOCATIONCOMPONENT": 389,
+      "BLOCKBASEPOINTPARAMETER": 49,
+      "ACDB_DYNAMICBLOCKPURGEPREVENTER_VERSION": 49,
+      "BLOCKROTATIONGRIP": 37,
+      "BLOCKFLIPPARAMETER": 91,
+      "BLOCKFLIPGRIP": 91,
+      "BLOCKFLIPACTION": 91,
+      "BLOCKROTATEACTION": 37,
+      "BLOCKALIGNMENTPARAMETER": 6,
+      "BLOCKALIGNMENTGRIP": 6,
+      "BLOCKLINEARGRIP": 4,
+      "BLOCKSCALEACTION": 1,
+      "CELLSTYLEMAP": 1
+     }
+    }
+   }
+  },
+  "release_0.13.4": {
+   "decode": {
+    "objects_total": 58343,
+    "entities_total": 48576,
+    "entities_by_space": {
+     "MODEL": 15885,
+     "PAPER_ACTIVE": 127,
+     "BLOCK": 32564
+    },
+    "entities_by_type_space": {
+     "ARC": {
+      "BLOCK": 113,
+      "MODEL": 234
+     },
+     "ATTDEF": {
+      "BLOCK": 18
+     },
+     "ATTRIB": {
+      "BLOCK": 146
+     },
+     "BLOCK": {
+      "MODEL": 1,
+      "PAPER_ACTIVE": 1,
+      "BLOCK": 1962
+     },
+     "CIRCLE": {
+      "BLOCK": 1211,
+      "MODEL": 420
+     },
+     "DIMENSION_ALIGNED": {
+      "MODEL": 22
+     },
+     "DIMENSION_DIAMETER": {
+      "MODEL": 2
+     },
+     "DIMENSION_LINEAR": {
+      "MODEL": 1565,
+      "BLOCK": 175
+     },
+     "ELLIPSE": {
+      "BLOCK": 248,
+      "MODEL": 66
+     },
+     "ENDBLK": {
+      "MODEL": 1,
+      "PAPER_ACTIVE": 1,
+      "BLOCK": 1962
+     },
+     "HATCH": {
+      "BLOCK": 1264,
+      "MODEL": 599
+     },
+     "INSERT": {
+      "BLOCK": 3627,
+      "MODEL": 670,
+      "PAPER_ACTIVE": 4
+     },
+     "LEADER": {
+      "MODEL": 195,
+      "BLOCK": 125
+     },
+     "LINE": {
+      "BLOCK": 8087,
+      "MODEL": 8882,
+      "PAPER_ACTIVE": 28
+     },
+     "LWPOLYLINE": {
+      "BLOCK": 1503,
+      "MODEL": 1329,
+      "PAPER_ACTIVE": 38
+     },
+     "MLINE": {
+      "MODEL": 31
+     },
+     "MTEXT": {
+      "BLOCK": 1764,
+      "MODEL": 2
+     },
+     "POINT": {
+      "BLOCK": 5802
+     },
+     "POLYLINE_2D": {
+      "BLOCK": 1,
+      "MODEL": 36
+     },
+     "REGION": {
+      "BLOCK": 16
+     },
+     "SEQEND": {
+      "BLOCK": 106
+     },
+     "SOLID": {
+      "BLOCK": 29,
+      "MODEL": 2
+     },
+     "TEXT": {
+      "BLOCK": 4306,
+      "MODEL": 1827,
+      "PAPER_ACTIVE": 50
+     },
+     "UNKNOWN_ENT:RTEXT": {
+      "PAPER_ACTIVE": 2
+     },
+     "VERTEX_2D": {
+      "BLOCK": 98
+     },
+     "VIEWPORT": {
+      "PAPER_ACTIVE": 3,
+      "BLOCK": 1,
+      "MODEL": 1
+     }
+    },
+    "handle_size_bytes": {
+     "1": 76,
+     "2": 142,
+     "3": 58125
+    },
+    "max_handle_value_printed": 2326465,
+    "handles_3plus_bytes": 58125,
+    "colliding_values": 0,
+    "objects_on_colliding_values": 0,
+    "colliding_size_value_pairs": 0,
+    "header_HANDSEED": [
+     0,
+     3,
+     2326466,
+     2326466
+    ],
+    "invalid_utf8_chars": 28
+   },
+   "dxf": {
+    "sections": [
+     "HEADER",
+     "CLASSES",
+     "TABLES"
+    ],
+    "eof": false,
+    "max_handle": 2326466,
+    "types_by_section": {}
+   }
+  }
+ },
+ "acceptance": {
+  "pinned_0.13.3": {
+   "verdict": "REFUSED",
+   "dxf_sha256": "1004090d4813a2a6563aade949df3e9bd698ab609dfeacfa3f7c0752962c20da",
+   "decode_sha256": "2d6260d49a67b8e6ddfb17b8d04555f0ea0eec1ef8e85efeec4c7be70310c59f",
+   "steps": [
+    {
+     "step": "C1 reference clean",
+     "result": "FAIL",
+     "detail": {
+      "colliding_handle_values": 12567
+     }
+    },
+    {
+     "step": "C2 structure",
+     "result": "FAIL",
+     "detail": {
+      "missing_sections": [
+       "ENTITIES",
+       "OBJECTS"
+      ],
+      "eof": false,
+      "ezdxf_readfile": "DXFStructureError: DXFStructureError: missing EOF tag."
+     }
+    },
+    {
+     "step": "C6 all entities",
+     "result": "FAIL",
+     "detail": {
+      "differences_ref_vs_dxf": {
+       "ARC": [
+        347,
+        64
+       ],
+       "ATTDEF": [
+        18,
+        17
+       ],
+       "ATTRIB": [
+        146,
+        7
+       ],
+       "BLOCK": [
+        1964,
+        1386
+       ],
+       "CIRCLE": [
+        1631,
+        1263
+       ],
+       "DIMENSION": [
+        1764,
+        206
+       ],
+       "ELLIPSE": [
+        314,
+        111
+       ],
+       "ENDBLK": [
+        1964,
+        1242
+       ],
+       "HATCH": [
+        1863,
+        1299
+       ],
+       "INSERT": [
+        4301,
+        2248
+       ],
+       "LEADER": [
+        320,
+        130
+       ],
+       "LINE": [
+        16997,
+        4371
+       ],
+       "LWPOLYLINE": [
+        2870,
+        1359
+       ],
+       "MLINE": [
+        31,
+        0
+       ],
+       "MTEXT": [
+        1766,
+        1083
+       ],
+       "POINT": [
+        5802,
+        3806
+       ],
+       "POLYLINE": [
+        37,
+        0
+       ],
+       "REGION": [
+        16,
+        8
+       ],
+       "RTEXT": [
+        2,
+        0
+       ],
+       "SEQEND": [
+        106,
+        1
+       ],
+       "SOLID": [
+        31,
+        13
+       ],
+       "TEXT": [
+        6183,
+        2458
+       ],
+       "VERTEX": [
+        98,
+        0
+       ],
+       "VIEWPORT": [
+        5,
+        0
+       ]
+      },
+      "lost": 27504
+     }
+    }
+   ],
+   "audit_fix_codes": null
+  },
+  "diagnostic_0.13.3_patched": {
+   "verdict": "REFUSED",
+   "dxf_sha256": "ffbc8ad596a809d28cf67ce72cb8d184760decbd59b1bcc216ccde534b51f323",
+   "decode_sha256": "25f5779fba3216f3ad9c334945dbb0a67d6d36e7136a4882246c72c06d4b851b",
+   "steps": [
+    {
+     "step": "C1 reference clean",
+     "result": "PASS",
+     "detail": {
+      "colliding_handle_values": 0
+     }
+    },
+    {
+     "step": "C2 structure",
+     "result": "PASS",
+     "detail": {
+      "missing_sections": [],
+      "eof": true,
+      "ezdxf_readfile": "OK"
+     }
+    },
+    {
+     "step": "C3 handles",
+     "result": "PASS",
+     "detail": {
+      "duplicate_handles": 0,
+      "max_handle": "0x237fc1",
+      "handseed": "0x237fc2"
+     }
+    },
+    {
+     "step": "C4 units",
+     "result": "PASS",
+     "detail": {
+      "dwg": 4,
+      "dxf": 4
+     }
+    },
+    {
+     "step": "C5 model space",
+     "result": "PASS",
+     "detail": {
+      "differences_ref_vs_dxf": {}
+     }
+    },
+    {
+     "step": "C6 all entities",
+     "result": "PASS",
+     "detail": {
+      "differences_ref_vs_dxf": {},
+      "held_not_convertible_paper_only": {
+       "RTEXT": 2
+      }
+     }
+    },
+    {
+     "step": "C7 block definitions",
+     "result": "PASS",
+     "detail": {
+      "dwg": 1964,
+      "dxf": 1964
+     }
+    },
+    {
+     "step": "C8 references",
+     "result": "FAIL",
+     "detail": {
+      "undefined_block_refs": 322
+     }
+    },
+    {
+     "step": "C9 layers",
+     "result": "PASS",
+     "detail": {
+      "differences_ref_vs_dxf": {}
+     }
+    },
+    {
+     "step": "C10 geometry checksum",
+     "result": "PASS",
+     "detail": {
+      "line_length_layers_differing": {},
+      "extents_equal": true
+     }
+    },
+    {
+     "step": "C11 text and dims",
+     "result": "PASS",
+     "detail": {
+      "differences_ref_vs_dxf": {}
+     }
+    }
+   ],
+   "audit_fix_codes": {
+    "INVALID_OWNER_HANDLE": 1402,
+    "UNDEFINED_BLOCK": 322
+   }
+  },
+  "diagnostic_0.13.3_patched_as_r2000": {
+   "verdict": "REFUSED",
+   "dxf_sha256": "0608140145610f3ddd2824237c903d32a2ad3c6039c9d169edef9beb2cdd81a8",
+   "decode_sha256": "25f5779fba3216f3ad9c334945dbb0a67d6d36e7136a4882246c72c06d4b851b",
+   "steps": [
+    {
+     "step": "C1 reference clean",
+     "result": "PASS",
+     "detail": {
+      "colliding_handle_values": 0
+     }
+    },
+    {
+     "step": "C2 structure",
+     "result": "FAIL",
+     "detail": {
+      "missing_sections": [],
+      "eof": true,
+      "ezdxf_readfile": "DXFStructureError: Expected DXF entity ENDBLK or SEQEND"
+     }
+    },
+    {
+     "step": "C6 all entities",
+     "result": "FAIL",
+     "detail": {
+      "differences_ref_vs_dxf": {
+       "ATTRIB": [
+        146,
+        0
+       ],
+       "CIRCLE": [
+        1631,
+        1558
+       ],
+       "DIMENSION": [
+        1764,
+        1752
+       ],
+       "HATCH": [
+        1863,
+        1789
+       ],
+       "INSERT": [
+        4301,
+        4065
+       ],
+       "LEADER": [
+        320,
+        315
+       ],
+       "LINE": [
+        16997,
+        16717
+       ],
+       "LWPOLYLINE": [
+        2870,
+        2792
+       ],
+       "MTEXT": [
+        1766,
+        1648
+       ],
+       "POINT": [
+        5802,
+        5409
+       ],
+       "RTEXT": [
+        2,
+        0
+       ],
+       "SEQEND": [
+        106,
+        0
+       ],
+       "TEXT": [
+        6183,
+        6132
+       ],
+       "VERTEX": [
+        98,
+        0
+       ]
+      },
+      "lost": 1672
+     }
+    }
+   ],
+   "audit_fix_codes": null
+  },
+  "diagnostic_0.13.3_patched_as_r2018": {
+   "verdict": "REFUSED",
+   "dxf_sha256": "4397cb9828ea982f7545a1f56c6d2c070172bb51f88dffe3e6e1a7a149c8d3a0",
+   "decode_sha256": "25f5779fba3216f3ad9c334945dbb0a67d6d36e7136a4882246c72c06d4b851b",
+   "steps": [
+    {
+     "step": "C1 reference clean",
+     "result": "PASS",
+     "detail": {
+      "colliding_handle_values": 0
+     }
+    },
+    {
+     "step": "C2 structure",
+     "result": "PASS",
+     "detail": {
+      "missing_sections": [],
+      "eof": true,
+      "ezdxf_readfile": "OK"
+     }
+    },
+    {
+     "step": "C3 handles",
+     "result": "PASS",
+     "detail": {
+      "duplicate_handles": 0,
+      "max_handle": "0x237fc1",
+      "handseed": "0x237fc2"
+     }
+    },
+    {
+     "step": "C4 units",
+     "result": "PASS",
+     "detail": {
+      "dwg": 4,
+      "dxf": 4
+     }
+    },
+    {
+     "step": "C5 model space",
+     "result": "PASS",
+     "detail": {
+      "differences_ref_vs_dxf": {}
+     }
+    },
+    {
+     "step": "C6 all entities",
+     "result": "PASS",
+     "detail": {
+      "differences_ref_vs_dxf": {},
+      "held_not_convertible_paper_only": {
+       "RTEXT": 2
+      }
+     }
+    },
+    {
+     "step": "C7 block definitions",
+     "result": "PASS",
+     "detail": {
+      "dwg": 1964,
+      "dxf": 1964
+     }
+    },
+    {
+     "step": "C8 references",
+     "result": "FAIL",
+     "detail": {
+      "undefined_block_refs": 322
+     }
+    },
+    {
+     "step": "C9 layers",
+     "result": "PASS",
+     "detail": {
+      "differences_ref_vs_dxf": {}
+     }
+    },
+    {
+     "step": "C10 geometry checksum",
+     "result": "PASS",
+     "detail": {
+      "line_length_layers_differing": {},
+      "extents_equal": true
+     }
+    },
+    {
+     "step": "C11 text and dims",
+     "result": "PASS",
+     "detail": {
+      "differences_ref_vs_dxf": {}
+     }
+    }
+   ],
+   "audit_fix_codes": {
+    "INVALID_OWNER_HANDLE": 1402,
+    "UNDEFINED_BLOCK": 322
+   }
+  },
+  "release_0.13.4": {
+   "verdict": "REFUSED",
+   "dxf_sha256": "0af324943a66752c0af8f431a319d9ac6025b9267fce9e473b2485bfac2ad73f",
+   "decode_sha256": "bf025b78af609830f95de256e58a8e3b40884b1a8452547356d2a1a37889888d",
+   "steps": [
+    {
+     "step": "C1 reference clean",
+     "result": "PASS",
+     "detail": {
+      "colliding_handle_values": 0
+     }
+    },
+    {
+     "step": "C2 structure",
+     "result": "FAIL",
+     "detail": {
+      "missing_sections": [
+       "BLOCKS",
+       "ENTITIES",
+       "OBJECTS"
+      ],
+      "eof": false,
+      "ezdxf_readfile": "DXFStructureError: DXFStructureError: missing ENDSEC tag."
+     }
+    },
+    {
+     "step": "C6 all entities",
+     "result": "FAIL",
+     "detail": {
+      "differences_ref_vs_dxf": {
+       "ARC": [
+        347,
+        0
+       ],
+       "ATTDEF": [
+        18,
+        0
+       ],
+       "ATTRIB": [
+        146,
+        0
+       ],
+       "BLOCK": [
+        1964,
+        0
+       ],
+       "CIRCLE": [
+        1631,
+        0
+       ],
+       "DIMENSION": [
+        1764,
+        0
+       ],
+       "ELLIPSE": [
+        314,
+        0
+       ],
+       "ENDBLK": [
+        1964,
+        0
+       ],
+       "HATCH": [
+        1863,
+        0
+       ],
+       "INSERT": [
+        4301,
+        0
+       ],
+       "LEADER": [
+        320,
+        0
+       ],
+       "LINE": [
+        16997,
+        0
+       ],
+       "LWPOLYLINE": [
+        2870,
+        0
+       ],
+       "MLINE": [
+        31,
+        0
+       ],
+       "MTEXT": [
+        1766,
+        0
+       ],
+       "POINT": [
+        5802,
+        0
+       ],
+       "POLYLINE": [
+        37,
+        0
+       ],
+       "REGION": [
+        16,
+        0
+       ],
+       "RTEXT": [
+        2,
+        0
+       ],
+       "SEQEND": [
+        106,
+        0
+       ],
+       "SOLID": [
+        31,
+        0
+       ],
+       "TEXT": [
+        6183,
+        0
+       ],
+       "VERTEX": [
+        98,
+        0
+       ],
+       "VIEWPORT": [
+        5,
+        0
+       ]
+      },
+      "lost": 48576
+     }
+    }
+   ],
+   "audit_fix_codes": null
+  }
+ }
+}
