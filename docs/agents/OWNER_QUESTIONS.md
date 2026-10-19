@@ -66,6 +66,23 @@ T-029 980e489, T-034 faad086, T-011 aadced7, T-047-r2 6def656 (working branch he
 tests: t029, t034, t047, m9_kb and the importer folders of arch_plan.py all pass). Tasks still READY and not yet
 verified: T-058, T-061, T-057 (in progress). The verifier checks them next and merges them the same way.
 
+## Owner direction: Alsenan first, then one sealed test on a new villa (owner, main chat, 2026-10-19)
+
+1. Work fully on the Alsenan project now, to make the system right (every trade vs the freelancer, with verified evidence).
+   Development project 2 and any new-villa work wait; do not start them. Exception: nothing.
+2. Then the owner runs a test. If the Alsenan results are correct, the owner sends one NEW VILLA as a TEST ONLY. It is a
+   RENOVATION: the OLD building exists only as a PDF; the NEW design has AutoCAD (DWG/DXF) and PDF. The owner will ask for a
+   full engineering analysis from the agents: flooring area (wet: wall and floor; dry), wall plaster, wall paint, blocks
+   for inner and outer walls, and the related items, from a study of the old building against the new one.
+3. The new villa is a SEALED test: no agent opens, studies or tunes anything to it before the owner sends it; when it comes,
+   it is used once, the method version is frozen first (see MISSION.md blind-test rules), and nothing is changed to fit
+   its result. Agents prepare only general capabilities, proven on Alsenan and on synthetic fixtures.
+4. Lead: plan the general capabilities a renovation needs, as tasks that can be proven WITHOUT the new villa (synthetic
+   old/new fixtures, Alsenan): reading an old plan that exists only as a PDF (gate 4 plan reader), classifying each wall
+   and space as retained / demolished / new by comparing old and new, flooring and finish areas split wet / dry, plaster,
+   paint, inner and outer blockwork. Put the acceptance tests on the board. If a renovation rule is missing, ask the owner
+   (no assumptions). Ask the owner before the test which items the renovation BOQ must contain.
+
 ## Owner instruction on task size and quality (via the owner's main chat, 2026-10-19)
 
 Give each worker a task that takes at least 50 minutes of real work, not short ones. Quality first, speed second. Lead:
