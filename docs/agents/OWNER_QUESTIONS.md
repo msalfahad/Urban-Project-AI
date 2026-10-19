@@ -199,6 +199,8 @@ Waits on: the renovation measurement capability that will be proven on synthetic
 (flooring wet / dry, plaster, paint, inner and outer blocks, demolition) (T-068 builds the test villas; the measuring
 tasks follow your answer).
 
+Answer (owner, main chat, 2026-10-19 12:55 UTC), his words: "Dont worry about it later ill send you the new project." DEFERRED: no answer to the scope options now; the owner will send the new project (and the scope) later. Until then the team prepares only general capabilities proven on synthetic fixtures and Alsenan; no renovation scope is assumed, and the renovation measuring tasks wait for his answer.
+
 ### Q-24 Roof waterproofing: measured inside the parapet or to its outer face, and under the domes or not? (lead 2026-10-19 12:30; T-062; no-assumptions question)
 
 THE PROBLEM: the Urban rule says roofs are waterproofed over the drawn area, but not which edge bounds that area. On
@@ -224,6 +226,9 @@ inner face (the upturn is measured separately), and the parapet top is a coping,
 sits on the roof membrane only if the detail shows it, so it should not be added by assumption.
 Waits on: roof waterproofing area and upturn on Alsenan and every villa with parapets (T-062 follow-up, T-071).
 
+Answer (owner, main chat, 2026-10-19 12:55 UTC), his words: "roof calculated as the bathrooms same way (membrane + 20cm walls upturn, in the circle dome, doom will not be concrete, (change if plan he want it fiberglass or anything visible, lets say the circle doom is high than normal slab, then we add 20cm upturn around circle to secure the waterproof."
+Claude's reading for the Lead (NOT the owner's words; confirm or ask): the roof follows the same rule as a bathroom floor (UP-WP-003: membrane over the area plus a 0.20 m upturn on the walls and parapet); the domes are not concrete, so the membrane does not run under them unless the plan shows a different dome build-up (fiberglass or another visible finish: follow the plan); a dome that stands higher than the slab gets a 0.20 m upturn round its base. Anything the drawing shows differently wins (drawing over Urban rule).
+
 ### Q-25 A parapet line that stops a few centimetres short of the wall: may the engine close the gap? (lead 2026-10-19 12:30; T-062; no-assumptions question)
 
 THE PROBLEM: on Alsenan each roof parapet line stops short of the wall it should meet, so no closed roof outline exists
@@ -242,6 +247,9 @@ parapet that ends a few centimetres before the wall is a drafting habit (the lin
 gap in the real roof; a gap larger than a wall thickness could be a real opening, so the limit stays below 0.50 m and
 each closure stays visible.
 Waits on: measuring every roof, balcony and terrace outline that is drawn on a layer of its own (T-071).
+
+Answer (owner, main chat, 2026-10-19 12:55 UTC), his words: "so there should be a overlap 10cm + 20cm upturn + the gap for the membrane."
+Claude's reading for the Lead (NOT the owner's words; confirm or ask): the drafting gap is not left open: the membrane covers it, with a 0.10 m overlap at the join and the 0.20 m upturn; the gap length is added to the measured membrane. The owner named no size limit for the gap: do not assume the 0.50 m limit of the question; list every closure with its length, and ask the owner if a gap is large enough to be a real opening.
 
 ## Answered
 
