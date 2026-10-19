@@ -1,6 +1,9 @@
 # Scoreboard: Alsenan (development villa), engine vs freelancer (Verifier writes)
 
 Development reference only: tuning against it is allowed, so these numbers never prove product accuracy (MISSION.md).
+Verifier 2026-10-19 (13th run, 04:30): rows below still current. Merged T-025a (2748ffe): new engine/source/cad_limit_census.py,
+imported by no engine, tool or method file, so the Alsenan run (ARCH_TAKEOFF_V2.9 + route G) is identical by construction;
+not re-run. Commit measured stays b5475db (engine code reached by the run identical at 2748ffe). Drive readable (not needed this run).
 Verifier 2026-10-19 (11th run, 02:00): MEASURED ON THE WORKING BRANCH. T-001b merged (b5475db) and T-035 merged (56820cb, no
 engine change: facts file only). tools/alsenan_scoreboard.py via tools/alsenan_keymap.py, run by the verifier on b5475db
 (ARCH_TAKEOFF_V2.9 + route G, conventions URBAN_M8_GENERIC_CONVENTIONS_V6, no facts file, no route G profile; Drive
