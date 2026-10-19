@@ -183,6 +183,31 @@ WAITS ON: the aluminium windows line on every villa (Alsenan freelancer 116.9 m2
 Answer:
 
 
+### Q-34 The second-floor top roof: which outline does the engine waterproof? (verifier 2026-10-19 16:10; T-071; no-assumptions question)
+
+THE PROBLEM: the engine now measures the three roofs drawn on the plans, inside the parapet as you decided (Q-24): 55.56 +
+32.72 + 115.83 = 204.11 m2 of membrane and 181.59 m of upturn. The freelancer has one roof line of 285.00 m2 (and 194.00 m
+upturn), 80.89 m2 more. The biggest missing piece is the second-floor block's own top roof (level +13.90, 0.50 m parapet on
+the elevations, the third dome on it): no plan sheet draws its outline, so the engine holds it and no Urban rule says
+where to take it from.
+WHERE TO LOOK: Drive "Alsenan chalet project", the architectural DXF (P7757_DXF_COMPRESSED.zip) or PDF: the second-floor
+plan (outer walls of the 2F block; its floor plate is 55.08 m2 outside the walls) and the elevations / section A-A
+(p7757_arch_sheet10.pdf) showing the +13.90 roof and its 0.50 m parapet; the freelancer's roof line is in his workbook
+"الارضيات+العازل+الديكور+الرخام".
+THE OPTIONS:
+(A) Take the top roof from the second-floor plan outer walls, membrane inside the parapet like the other roofs (Q-24),
+the third dome as an open skylight (Q-29): at most 55.08 m2 (less the parapet band), total at most about 259 m2; the
+remaining difference to 285.00 m2 (about 26 m2) stays to be explained.
+(B) Hold the top roof until a roof plan is supplied (RFI to the designer); the roof line stays at 204.11 m2 plus a held
+top roof.
+(C) A and B together: show A as a provisional figure (not released) until the designer confirms the outline.
+RECOMMENDATION: (C), because the top roof slab normally sits on the 2F block walls, so A is a sound estimate, but no
+drawing prints the outline and a drawing never assumed settles it (practice, not a code clause).
+WAITS ON: the roof waterproofing membrane and upturn of Alsenan (about 55 m2 of the freelancer's 285 m2) and every villa
+whose top roof is drawn on no plan (T-071 follow-up, roof wiring).
+
+Answer:
+
 ## Answered
 
 ### Q-31 Footing F10: the drawn outline or the schedule size? (verifier 2026-10-19 15:12; T-065, T-042; no-assumptions question)
