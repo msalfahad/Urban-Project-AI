@@ -37,14 +37,14 @@ Risk **CRITICAL** (recommended validation L4). Ask about: cad, dwg, dxf, block, 
 
 **Open first:**
 
-- `engine/source/cad/kernel_ezdxf.py` (348 lines, HIGH; imported by 10 directly, 70 transitively, SHARED)
+- `engine/source/cad/kernel_ezdxf.py` (348 lines, HIGH; imported by 10 directly, 71 transitively, SHARED)
 - `engine/source/cad/kernel.py` (365 lines, HIGH; imported by 17 directly, 30 transitively, SHARED)
 - `engine/source/cad/libredwg_map.py` (489 lines, HIGH; imported by 10 directly, 25 transitively, SHARED)
-- `tools/urban_intake.py` (225 lines, CRITICAL, frozen; imported by 24 directly, 61 transitively, SHARED)
+- `tools/urban_intake.py` (225 lines, CRITICAL, frozen; imported by 25 directly, 62 transitively, SHARED)
 
 **Depends on:** `engine/source/findings.py`, `engine/source/observations.py`, `engine/source/capability.py`, `engine/source/decoder_pins.py`, `engine/source/realised.py`, `engine/source/cad/affine.py`, `engine/source/cad/kernel_ocs.py`, `engine/source/digests.py`
 
-**Other current modules:** `affine.py`, `census.py`, `kernel_ocs.py`, `unit_evidence.py`, `cad_guards.py`, `cad_heal.py`, `cad_oracle.py`, `cad_profile.py`, `cad_text.py`, `canonical_build.py`, `canonical_input.py`, `capability.py`, `conservation.py`, `decoder_pins.py`, `realised.py`
+**Other current modules:** `affine.py`, `census.py`, `kernel_ocs.py`, `unit_evidence.py`, `cad_guards.py`, `cad_heal.py`, `cad_limit_census.py`, `cad_oracle.py`, `cad_profile.py`, `cad_text.py`, `canonical_build.py`, `canonical_input.py`, `capability.py`, `conservation.py`, `decoder_pins.py`, `realised.py`
 
 **Earlier generations and tools** (check which method uses them before reuse): `engine/cad_adapter.py`, `engine/cad_source.py`, `tools/audit_cad_source.py`, `tools/dwg_adapter.py`
 
