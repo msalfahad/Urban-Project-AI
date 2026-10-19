@@ -24,17 +24,17 @@ Page numbers below are the books' own printed page numbers.
 | intro | 49 | the system fails at one point, always an edge, a penetration or a drain; do not start before the falls are complete and the base is dry; do not cover before a documented flood test; do not hand over before a protection layer | no (sequence); the edge / penetration / drain list is the item list of UP-WP-004 | UP-WP-004 | agrees | none |
 | 063 | 50 | flood test shortened or skipped; ask for the record with water depth, duration and photos | no (QA) | none needed | - | none (the manual, p. 42-43, gives 10-15 cm for at least 48 h, 48-72 h; QA, not a BOQ line) |
 | 064 | 51 | membrane pierced by a later trade after the test (worst error of the stage) | no | - | - | none |
-| 065 | 52 | falls made in the tile bedding instead of a falls layer under the membrane; measure the falls layer before waterproofing | YES: a falls screed under the membrane is its own layer | NO RULE (coverage family B13-01 "screed to falls" and B3-05 "screed / build-up" are NOT_IMPLEMENTED; no rule in rules/ or knowledge 1.6.0) | - | owner question Q-40 |
-| 066 | 52 | membrane stops at the tile edge and does not rise up the wall in the shower zone; set the height in the detail and photograph it | YES: shower-zone wall tanking above the 0.20 m upturn | UP-WP-004 v1.1.0 in rules 1.5.0 is PROPOSED only ("higher tanking is separate", open Q-WP-4); knowledge UP-WP-003 gives 0.20 m on every wall | NO RULE for the shower height | owner question Q-39 |
+| 065 | 52 | falls made in the tile bedding instead of a falls layer under the membrane; measure the falls layer before waterproofing | YES: a falls screed under the membrane is its own layer | NO RULE (coverage family B13-01 "screed to falls" and B3-05 "screed / build-up" are NOT_IMPLEMENTED; no rule in rules/ or knowledge 1.6.0) | - | owner question Q-41 |
+| 066 | 52 | membrane stops at the tile edge and does not rise up the wall in the shower zone; set the height in the detail and photograph it | YES: shower-zone wall tanking above the 0.20 m upturn | UP-WP-004 v1.1.0 in rules 1.5.0 is PROPOSED only ("higher tanking is separate", open Q-WP-4); knowledge UP-WP-003 gives 0.20 m on every wall | NO RULE for the shower height | owner question Q-40 |
 | 067 | 53 | corners and wall-floor junctions without tape or reinforcement | YES (corner pieces, lm or pcs) | knowledge UP-WP-004 (corners counted from the polygon; quantity only from the system detail, else withheld and named) | agrees | test T80-WP-3 (count) |
 | 068 | 53 | drain and pipe penetrations without collars; the most frequent leak point | YES (pcs) | knowledge UP-WP-004 (FLOOR_DRAIN / PIPE_PENETRATION counted from drawn symbols); rules UP-CER-008 (drains counted) | agrees | test T80-WP-3 (count) |
 | 069 | 54 | one coat of liquid membrane instead of two crossed coats; compare consumption with the data sheet | material only (litres / kg of a liquid system) | UP-WP-MAT-001 (one procurement group per system; system BY_SPEC); no coat rule because the Urban default is a sheet membrane (MEM-URBAN-DEFAULT-1x10) | no conflict while the system is a sheet; NO RULE for a liquid system | listed for the Lead (L-4), no question now: Alsenan's system is not named |
 | 070 | 54 | membrane on a wet or dusty base; clean, dry, use the system's primer | material: primer m2 / cans | NO RULE (UP-WP-MAT-001 B_installed lists no primer) | - | listed for the Lead (L-4) |
 | 071 | 55 | products of different systems mixed | no (procurement grouping) | UP-WP-MAT-001 "incompatible membrane systems in one procurement total: never" | agrees | none |
-| 072 | 55 | no protection layer before other trades walk on it; lay it right after the flood test | YES: protection screed over the membrane | NO RULE (same families as 065) | - | owner question Q-40 |
+| 072 | 55 | no protection layer before other trades walk on it; lay it right after the flood test | YES: protection screed over the membrane | NO RULE (same families as 065) | - | owner question Q-41 |
 | 073 | 56 | bathroom floor level equal to or higher than the next space; set it lower in the levels | no quantity; a drawing check | none | - | check for the plan reader (L-5): printed FFL of each wet room vs its neighbour |
 | 074 | 56 | one drain in a large bathroom, or a drain far from the shower | no quantity (count of drains is UP-CER-008) | UP-CER-008 | - | none |
-| 075 | 57 | roof membrane with no UV protection or cover layer | YES: roof protection / cover layer | UP-WP-ROOF-001 (system by specification, PROVISIONAL); no cover-layer rule | NO RULE for the cover layer | inside owner question Q-40 (roofs) |
+| 075 | 57 | roof membrane with no UV protection or cover layer | YES: roof protection / cover layer | UP-WP-ROOF-001 (system by specification, PROVISIONAL); no cover-layer rule | NO RULE for the cover layer | inside owner question Q-41 (roofs) |
 | 076 | 57 | no map of repair locations | no | - | - | none |
 | 077 | 58 | membrane not continuous under the bathroom door threshold; water reaches the corridor floor; build an approved threshold detail | YES (doorway piece) | rules UP-WP-003 v1.1.0 (membrane continues through the doorway, door width x wall depth); knowledge UP-WP-DOOR-001 (transition by detail, withheld without one); owner Q-35 answer (option C: doorway transition line per door) | agrees | test T80-WP-2 |
 
@@ -50,7 +50,7 @@ Page numbers below are the books' own printed page numbers.
 | Rolls to buy | 41 | roll 10 x 1 = 10 m2; with a 10 cm lap on each side the useful area is 9.9 x 0.9 = 8.91 m2; rolls = (area / 8.91) x 1.1, "10 % added when estimating materials"; 872 m2 -> 107.7 -> 108 rolls; primer cans = (area / coverage per can) x 1.1 | rules UP-WP-005 (strips from the roll layout, min lap 0.10 m; NEVER a fixed waste percentage, NEVER net area / roll area as the roll count); knowledge UP-WP-LAY-001, UP-WP-MAT-001 | DIFFERS: RULE_DIFFERENCE (the owner rule governs; the 0.10 m lap itself agrees) |
 | Laps | 19, 74 | torch-on sheets: overlap 10-15 cm; repairs: at least 10 cm, and new membrane laps 25 cm onto the sound old membrane | UP-WP-002 knowledge / rules UP-WP-005 (0.10 m minimum, a larger data-sheet lap wins) | agrees (0.10 m is the lower end of the book's range) |
 | Layers | 19-21, 74 | sheet systems in two layers, the second laid across the first after 24 h; liquid bitumen in two crossed coats | MEM-URBAN-DEFAULT-1x10 is one sheet layer; layers are a system choice (UP-WP-MAT-001) | no conflict; a two-layer system doubles the installed membrane and the rolls (L-4) |
-| Protection layer | 7, 14, 18, 20, 21, 74 | cement mortar protection over the membrane, 2-3 cm ("not less than 2 cm", "= 3 cm", "average 3 cm"); vertical faces protected by a half-brick wall | NO RULE | owner question Q-40 |
+| Protection layer | 7, 14, 18, 20, 21, 74 | cement mortar protection over the membrane, 2-3 cm ("not less than 2 cm", "= 3 cm", "average 3 cm"); vertical faces protected by a half-brick wall | NO RULE | owner question Q-41 |
 | Flood test | 42-46 | 10-15 cm of water, 48-72 h; tanks full for 72 h / one week | QA only | none |
 
 ### 1c. What the manual's roll formula gives on the owner's own cases (hand calculation, for comparison only)
@@ -75,7 +75,7 @@ buys 9 rolls where the strips need at least 12.
 | 054 | 43 | damp-proof sheet under the ground slab torn or without enough overlap | YES: DPM m2 with laps | NO RULE (no ground-slab DPM rule; the 0.10 m lap rule is for waterproofing membranes) | - | listed for the Lead (L-3), not asked now: no Alsenan ground-bearing slab line is in scope of this task |
 | 055 | 44 | ground slab without contraction joints | YES: joints lm | NO RULE | - | L-3 |
 | 056 | 44 | ground-slab level not computed for all finish thicknesses: fix the final floor level first, then subtract the layers | heights (build-up) | owner Q-14 answer (never subtract an assumed build-up; use sections) | agrees in principle: the layers must come from the drawing / spec | see finding F-1 |
-| 057 | 45 | slab flatness not suitable for sensitive finishes -> an extra levelling layer not in the budget | YES: levelling screed m2 | NO RULE (B3-05 NOT_IMPLEMENTED) | - | inside Q-40 (screeds) |
+| 057 | 45 | slab flatness not suitable for sensitive finishes -> an extra levelling layer not in the budget | YES: levelling screed m2 | NO RULE (B3-05 NOT_IMPLEMENTED) | - | inside Q-41 (screeds) |
 | 123 | 92 | tiling started from a random corner without a dry layout; narrow cuts at the entrance | YES: cutting waste | rules UP-CER-010 (waste from the room layout for the selected size); knowledge UP-WP-LAY-001 for membranes | agrees | test T80-TILE-1 |
 | 124 | 93 | incomplete adhesive coverage behind tiles (worst error of stage 09) | material only | none | - | none |
 | 125 | 94 | adhesive class not matched to tile size / location | material only | none | - | none |
@@ -150,8 +150,8 @@ Data request (Kuwait specification 1990): the Drive text read stops at page 80 (
 chapters on Drive as separate PDFs under 6 MB (page ranges from the table of contents), like the single architectural
 sheets. Until then every Kuwait-specification check of this task is NOT DONE (not "agrees").
 
-Asked (OWNER_QUESTIONS.md, most money first): Q-39 shower-zone wall tanking height (every bathroom with a shower;
-Alsenan first floor: at least two shower zones of about 3.5-3.7 lm of wall each); Q-40 falls screed under and protection
+Asked (OWNER_QUESTIONS.md, most money first): Q-40 shower-zone wall tanking height (every bathroom with a shower;
+Alsenan first floor: at least two shower zones of about 3.5-3.7 lm of wall each); Q-41 falls screed under and protection
 screed over the membrane, wet areas and roofs (Alsenan: 72.12 m2 of wet floors and 204-285 m2 of roof).
 
 Not asked (drafts, lower money or no Alsenan line yet):
