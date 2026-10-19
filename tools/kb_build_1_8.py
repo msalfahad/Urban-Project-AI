@@ -65,7 +65,7 @@ ROOM_LEVEL = {
                    "levels) only from what is drawn: a section through it, drawn steps, the door sill, the room it "
                    "opens into (nothing drawn across that doorway); a room that stays unclear is HELD and listed, "
                    "never guessed",
-    "datum": "levels are measured from the outside ground 0.00 (the Alsenan court is +0.15)",
+    "datum": "levels are measured from the outside ground 0.00; a court or yard level is never a room floor level",
 }
 
 AMEND = {
