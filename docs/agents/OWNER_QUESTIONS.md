@@ -1,6 +1,6 @@
 # Questions for the owner (at most 5 open; answer under "Answer:")
 
-Lead 2026-10-19 12:20: one new no-assumptions question Q-23 (renovation BOQ scope and retained-wall finishes, asked before the sealed test as the owner directed). Lead 2026-10-19 12:30: two more no-assumptions questions from the roof trace: Q-24 (roof waterproofing edge and domes), Q-25 (closing a parapet drafting gap). Open now: 3. Lead 2026-10-19 (owner reply): Q-22 answered A (only a pool-named space or block is the pool pump room; plain "PUMP" listed "use not stated"); no question open. Lead 2026-10-19 10:15: the owner answered Q-12, Q-13, Q-14, Q-15, Q-16, Q-17, Q-20 and Q-21 in the main chat (08:51); all eight moved to Answered with their tasks updated (T-065, T-010, T-063 / T-013, T-066, T-043, T-064, T-056, T-042). One new no-assumptions question: Q-22 (which pump room is the pool's). Open now: 1. Lead 2026-10-19 (owner reply): Q-18 answered (c) held and always visible; Q-19 answered for stairs and pools (see Answered); new Q-20 (stair waist and landings). Lead 2026-10-19 04:10: two new questions Q-18 (dome size basis) and Q-19 (may engine conventions release concrete when the drawing prints nothing); eight are open (Q-12 to Q-19): the list is long because each one stops an assumption. Q-12 now has the T-037 hand calculation (see its note). Lead 2026-10-19 02:20: three new questions Q-15 (development project 2 plans file), Q-16 (unlabelled beam span), Q-17 (typed drawing sizes in the concrete score); with Q-12, Q-13 and Q-14 six are open: the list is long because each one stops an assumption. Lead 2026-10-19 00:15: no new question; Q-12 (concrete verdicts) and Q-13 (toilet lines vs chair) open. Window / aluminium door m2 is covered by UP-OPEN-SCHED-001 and UP-DOOR-AREA-001, so it became task T-040, not a question. Lead 2026-10-18 20:05 (owner session): Q-06, Q-07, Q-09 answered by the owner (see Answered); no question open. Lead 2026-10-18 21:25: Q-10 (development project 2 DWG) answered; Q-11 answered (owner uploads the Alsenan DXFs); no question open. Lead 2026-10-18 15:40: no new question; Q-06 and Q-07 still open (no owner answer yet). The T-019 wall-length basis finding is settled by UP-WALL-GEOM-001 (masonry run = centreline, owner-approved), so it became task T-027, not a question. Lead adds questions an agent cannot decide from drawings, rules or evidence. Answered questions move to the bottom.
+Worker 1 2026-10-19 12:39: two new no-assumptions questions from the architectural sheet census (T-063): Q-26 (pool floor flat at 1.15 m or sloped), Q-27 (two or three domes). Open now: 5. Lead 2026-10-19 12:20: one new no-assumptions question Q-23 (renovation BOQ scope and retained-wall finishes, asked before the sealed test as the owner directed). Lead 2026-10-19 12:30: two more no-assumptions questions from the roof trace: Q-24 (roof waterproofing edge and domes), Q-25 (closing a parapet drafting gap). Open now: 3. Lead 2026-10-19 (owner reply): Q-22 answered A (only a pool-named space or block is the pool pump room; plain "PUMP" listed "use not stated"); no question open. Lead 2026-10-19 10:15: the owner answered Q-12, Q-13, Q-14, Q-15, Q-16, Q-17, Q-20 and Q-21 in the main chat (08:51); all eight moved to Answered with their tasks updated (T-065, T-010, T-063 / T-013, T-066, T-043, T-064, T-056, T-042). One new no-assumptions question: Q-22 (which pump room is the pool's). Open now: 1. Lead 2026-10-19 (owner reply): Q-18 answered (c) held and always visible; Q-19 answered for stairs and pools (see Answered); new Q-20 (stair waist and landings). Lead 2026-10-19 04:10: two new questions Q-18 (dome size basis) and Q-19 (may engine conventions release concrete when the drawing prints nothing); eight are open (Q-12 to Q-19): the list is long because each one stops an assumption. Q-12 now has the T-037 hand calculation (see its note). Lead 2026-10-19 02:20: three new questions Q-15 (development project 2 plans file), Q-16 (unlabelled beam span), Q-17 (typed drawing sizes in the concrete score); with Q-12, Q-13 and Q-14 six are open: the list is long because each one stops an assumption. Lead 2026-10-19 00:15: no new question; Q-12 (concrete verdicts) and Q-13 (toilet lines vs chair) open. Window / aluminium door m2 is covered by UP-OPEN-SCHED-001 and UP-DOOR-AREA-001, so it became task T-040, not a question. Lead 2026-10-18 20:05 (owner session): Q-06, Q-07, Q-09 answered by the owner (see Answered); no question open. Lead 2026-10-18 21:25: Q-10 (development project 2 DWG) answered; Q-11 answered (owner uploads the Alsenan DXFs); no question open. Lead 2026-10-18 15:40: no new question; Q-06 and Q-07 still open (no owner answer yet). The T-019 wall-length basis finding is settled by UP-WALL-GEOM-001 (masonry run = centreline, owner-approved), so it became task T-027, not a question. Lead adds questions an agent cannot decide from drawings, rules or evidence. Answered questions move to the bottom.
 Decisions still queued behind these (from the master study `14_OWNER_DECISIONS_QUEUE.csv`): D-17 review-space wet / dry,
 WP-KITCHEN membrane scope, WP-JOINT details, WIN-REVEAL finish, STUB-LIMIT, MEAS-STD, ROOF-FIN, BLIND-AUTH.
 
@@ -127,6 +127,44 @@ Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
    become the rule.
 
 ## Open
+
+### Q-26 Pool: is the pool floor flat at the printed 1.15 m depth, or sloped? (worker 1 2026-10-19 12:39; T-063; no-assumptions question)
+
+THE PROBLEM: the architectural drawing prints one pool depth, 1.15 m, but the structural pool detail draws a sloped floor
+with a step and writes every depth "AS PER ARCH". So the engine cannot tell whether 1.15 m is the depth of the whole pool
+or only of the deep end, and the pool wall concrete waits on it.
+WHERE TO LOOK: Drive "Alsenan chalet project", "Alsenan_Architectural_P7757_Pages_07-08", page 8 (NORTH WEST ELEVATION):
+under the arched opening the view cuts through the pool; the dimension "115" runs from the pool rim (+0.30) to the pool
+floor (-0.85), and the floor is drawn flat. Then "ST7757 dxf.dxf" (or ST7757.pdf), "DETAIL OF SWIMMING POOL": sloped
+floor, step at one end, floor 40 cm, depths "AS PER ARCH".
+THE OPTIONS:
+(A) The floor is flat at 1.15 m: pool walls 2.358 m2 (plan) x 1.15 = 2.71 m3; with the 40 cm floor (10.94 x 0.40 =
+4.37 m3) the pool is 7.09 m3 (freelancer 12.35 m3, of which 3.48 m3 is a pump room you said does not exist).
+(B) 1.15 m is the deep end only; the shallow depth comes from the designer: the walls stay held (shown, not scored) until
+then; the floor 4.37 m3 can be released.
+(C) Hold the whole pool until the designer confirms the pool section.
+RECOMMENDATION: (B). The structural detail is the construction drawing and it clearly draws a slope; the architectural
+view is cut at one place only. Practice, not a code clause: a villa pool with a step usually has a shallow and a deep end.
+WAITS ON: pool wall concrete (and pool tiling and waterproofing heights) on Alsenan (T-063, T-049).
+
+### Q-27 Domes: two domes or three? (worker 1 2026-10-19 12:39; T-063, T-037; no-assumptions question)
+
+THE PROBLEM: the architectural drawings show three domes, the structural drawings only two. The engine cannot decide which
+drawing is right (a drawing never settles a conflict between two drawings), and the dome concrete count depends on it.
+WHERE TO LOOK: Drive "Alsenan chalet project": "Alsenan_Architectural_P7757_Pages_05-06", page 6 (SOUTH EAST ELEVATION):
+a dome on top of the second-floor block, width "441" on the parapet line (+14.40) and "215" high above it; the same dome on
+page 8 (NORTH WEST, "215") and drawn behind the cut in SECTION B-B (page 11); page 5 (2nd FLOOR PLAN) shows it as a
+dashed circle over the maid's room. Then "ST7757 dxf.dxf": the slab over the second floor is flat there (beams and mesh,
+no dome, no ring beam); only the two domes on the first-floor roof (R221) have a "DETAIL OF DOME" (442 / 190 / 10).
+THE OPTIONS:
+(A) Three domes (architecture right): a third dome line on the second-floor roof, held for its size basis like the
+others (your Q-18 answer); the structural designer must add its detail.
+(B) Two domes (structure right): the top dome is decorative or not built; no concrete line for it.
+(C) Hold the third dome as an open item (shown, not scored) until the designer confirms.
+RECOMMENDATION: (C), and ask the designer: the architect drew it on three sheets, but no slab, ring beam or detail exists
+to build it from, so neither a number nor a silent omission is safe. The freelancer counts three (3 x 22.6 m2 x 0.10 =
+6.78 m3).
+WAITS ON: dome concrete count (and roof waterproofing round the domes, Q-24) on Alsenan (T-049, T-071).
 
 ### Q-23 Renovation test: which items must the renovation BOQ contain, and how are retained walls finished? (lead 2026-10-19 12:20; owner direction "Alsenan first, then one sealed test"; T-068; no-assumptions question)
 
