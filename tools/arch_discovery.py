@@ -221,7 +221,8 @@ def admit_regions(report, E, P, C, *, split, overrides=False):
     crossings = AP.cut_crossings(E, P["regions"]) if split == "TITLE_MIDPOINTS" and not overrides else {}
     sheets, floors = DS.region_findings(
         P["regions"], other_frames=P.get("other_frames") or (), blocked_frames=P.get("blocked_frames") or (),
-        unassigned=P.get("unassigned_pieces") or (), crossings=crossings, titles_found=len(titles),
+        unassigned=P.get("unassigned_pieces") or (), held_frames=P.get("held_frames") or (),
+        crossings=crossings, titles_found=len(titles),
         titles_in_frames=len(in_frames),
         paper_space_content=paper_space_content(C), frames_from_lines=bool(P.get("frames_from_lines")),
         overrides=overrides)
