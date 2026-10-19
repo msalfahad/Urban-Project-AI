@@ -57,6 +57,12 @@ Hand checks (from the drawing, not engine output):
   ring 2.357 m2 (T-037: 2.358) = V2 straight strips 1.32 m2 (centre line 3.30 + 1.65 + 1.65 m) + curved
   pi / 2 x (1.75^2 - 1.55^2) = 1.037 m2. Frozen kept 1.24 m2 (the straight half).
 
+Second drawing (architectural DXF, ground-floor plan, read-only): the pool is drawn there as two concentric half
+circles r 1.750 / 1.550 m (layer of the pool outline, one centre) and side faces 1.55 m long from the arc ends to the
+straight wall line at y = +-1.550 / +-1.750 m: the same D as the structural ground-beam plan (curved strip
+pi / 2 x (1.75^2 - 1.55^2) = 1.037 m2 confirmed); the long straight wall is not drawn as a pool line on that plan, so
+the straight part rests on the structural drawing only.
+
 Held-under-member length differs from the T-058 probe (13.40 m, re-run this task: closed polylines only, 8 on the
 footing layer + 36 on the column layer): V2 uses the route's detected members (8 drawn footings + 9 columns along the
 band, 17 in all), which include footings the drawing draws as loose lines on the footing layer (39 LINEs there):
