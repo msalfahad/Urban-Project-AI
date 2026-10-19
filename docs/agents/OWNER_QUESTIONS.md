@@ -147,6 +147,8 @@ RECOMMENDATION: (B). The structural detail is the construction drawing and it cl
 view is cut at one place only. Practice, not a code clause: a villa pool with a step usually has a shallow and a deep end.
 WAITS ON: pool wall concrete (and pool tiling and waterproofing heights) on Alsenan (T-063, T-049).
 
+Answer (owner, main chat, 2026-10-19 14:05 UTC), his words: "flat, pool is small and cannot be sloped." = option A: the pool floor is flat at the printed depth of 1.15 m (architectural elevation: rim +0.30, floor -0.85); the structural detail's slope is not to be used. The 0.40 m floor thickness is the printed value of the structural detail. Claude's note for the Lead (not the owner's words): the structural detail still draws a slope and a step; record it as a drawing conflict resolved by the owner, and ask only if the walls' plan length or the floor area is unclear.
+
 ### Q-27 Domes: two domes or three? (worker 1 2026-10-19 12:39; T-063, T-037; no-assumptions question)
 
 THE PROBLEM: the architectural drawings show three domes, the structural drawings only two. The engine cannot decide which
@@ -165,6 +167,8 @@ RECOMMENDATION: (C), and ask the designer: the architect drew it on three sheets
 to build it from, so neither a number nor a silent omission is safe. The freelancer counts three (3 x 22.6 m2 x 0.10 =
 6.78 m3).
 WAITS ON: dome concrete count (and roof waterproofing round the domes, Q-24) on Alsenan (T-049, T-071).
+
+Answer (owner, main chat, 2026-10-19 14:05 UTC), his words: "3, 2 in the roof and 1 in the upper roof." = option A: three domes, two on the first-floor roof and one on the upper (second-floor) roof. Claude's note for the Lead (not the owner's words): the third dome has no structural detail, so its size basis stays HELD per the Q-18 answer (a printed size wins; nothing printed means held, no default thickness); keep it visible as its own line, and ask the owner or the designer for its thickness and ring beam only when you reach that quantity.
 
 ### Q-23 Renovation test: which items must the renovation BOQ contain, and how are retained walls finished? (lead 2026-10-19 12:20; owner direction "Alsenan first, then one sealed test"; T-068; no-assumptions question)
 

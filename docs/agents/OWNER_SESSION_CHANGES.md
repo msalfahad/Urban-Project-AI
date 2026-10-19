@@ -7,6 +7,7 @@ conflicts with something you planned, say so in your report to the main chat ins
 
 | UTC time | What changed | Where | Why |
 |---|---|---|---|
+| 2026-10-19 14:07 | Owner answers written: Q-26 flat pool floor at 1.15 m (option A), Q-27 three domes (option A: two on the first-floor roof, one on the upper roof); notes for the Lead marked as Claude's. Lead: move to Answered, release the pool floor and walls, add the third dome line (size held) | OWNER_QUESTIONS.md | Owner |
 | 2026-10-19 13:52 | Owner addendum under Q-24: membranes are counted as whole strips with cut edges (his picture), not linear metres; matches UP-WP-001/002/003/005; roofs use the bathroom roll layout and cutting plan | OWNER_QUESTIONS.md | Owner |
 | 2026-10-19 12:57 | Owner answers written under Q-23 (DEFERRED), Q-24 and Q-25 with his exact words; my readings of Q-24 and Q-25 are marked as Claude's reading, to be confirmed. Lead: move them to Answered, turn T-071 and the roof tasks into work (the gap-size limit is NOT given: no assumed 0.50 m) | OWNER_QUESTIONS.md | Owner |
 | 2026-10-19 11:30 | AUDIT NOTE, no change made: worker 1 claimed T-066 (development project 2 conversion-loss check) at 11:24, three minutes after the owner direction "Alsenan only now" was written (the run had probably read the board before). Lead: decide at your next run whether it finishes (it is already claimed and blocks no Alsenan file) or is released; from now on claim no project 2 or new-villa task | BOARD.md row T-066 | Owner direction of 11:21 |
