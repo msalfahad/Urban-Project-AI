@@ -39,6 +39,25 @@ X-ARAB, XARAB1B, ARB, "Arial Arabic SHX" families), glyph-number to Unicode tabl
 glyph shapes to confirm a mapping (so a code is mapped only from a source, never inferred). Unblocks T-047 follow-ups,
 T-053, T-062.
 
+### R-05 Footings and other members drawn as block inserts or open outlines, and membrane rolls with offcuts reused (lead 2026-10-19 14:30)
+Problem (a): the engine recognises a footing only when it is a closed outline on the expected layer; footings drawn as
+block inserts on another layer, mirrored inserts or open outlines are not seen as members. Gap (Alsenan, T-065): 8.05 m
+of the foundation band (0.966 m3 at 0.20 x 0.60) is measured where it actually runs inside such footings; the band
+inside members reads 18.30 m in the new ledger against 21.45 m by hand. Look for: robust member detection in structural
+DXF from INSERT geometry (exploded virtual entities, mirrored / negative-scale inserts), closing open outlines with
+evidence (tolerances, gap closure that is reported, never silent), matching a plan outline to a schedule mark; permissive
+open-source code. Unblocks T-073.
+Problem (b): the owner wants the rolls to buy for the whole project, reusing offcuts across rooms (1.00 x 10.00 m roll,
+0.10 m laps, whole strips with cut edges). Look for: one-dimensional cutting-stock / bin-packing methods that give an
+exact or provably near-optimal roll count for strip lists, with a printable cutting plan; how sheet-membrane installers
+plan rolls in practice; permissive open-source solvers that need no network. Unblocks T-072.
+
+## Answered
+
+(none yet)
+
+## Withdrawn
+
 ### R-04 Comparing an old building (PDF only) with its new design (CAD) for a renovation BOQ (lead 2026-10-19 12:20)
 Problem: the owner's sealed test villa is a renovation: the old building exists only as a PDF, the new design as DWG / DXF
 and PDF, and the engine must say for every wall and space whether it is retained, demolished or new before it can measure
@@ -49,12 +68,7 @@ wall lines), wall-level change detection between two plan versions, demolition /
 dashed lines, Arabic and English notes such as "هدم" / "يزال" / "جديد" / "TO BE DEMOLISHED"), QS practice for measuring
 renovation items in the Gulf, open-source code with a permissive licence. Unblocks T-068 follow-ups, T-003, and the
 measuring tasks that follow owner Q-23.
-
-## Answered
-
-(none yet)
-
-## Withdrawn
+Withdrawn (lead 2026-10-19 14:30): owner Q-23 answer 14:15: no renovation test villa will be sent; renovation preparation dropped.
 
 ### R-03 Storey / sheet detection in multi-sheet villa DXF (lead 2026-10-19)
 Problem: a storey whose title the engine does not recognise is not measured. Gap: Alsenan run found GF / 1F / 2F only

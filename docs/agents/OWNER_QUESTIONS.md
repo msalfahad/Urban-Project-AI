@@ -133,6 +133,48 @@ Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
 
 ## Open
 
+
+### Q-29 Domes: are they concrete at all, and does the roof membrane run under them? (lead 2026-10-19 14:30; Q-24 and Q-27 answers, T-049, T-071, T-072; no-assumptions question)
+
+THE PROBLEM: in your roof answer you wrote "doom will not be concrete", but the structural drawings detail two dome shells
+(printed 442 / 190 / 10) and the freelancer counts dome concrete for all three domes (3 x 22.6 m2 x 0.10 = 6.78 m3,
+inside his stair + dome line of 21.83 m3). No Urban rule says whether a dome is concrete or a finish, nor whether the
+roof membrane stops at a dome or runs under it. Both the concrete line and the roof membrane depend on it, so the dome
+parts stay HELD until you choose.
+WHERE TO LOOK: Drive "Alsenan chalet project": "ST7757.pdf", the dome detail with 442 / 190 / 10 (the two structural
+domes on the first-floor roof); "Alsenan_Architectural_P7757_Pages_05-06", page 6 (SOUTH EAST ELEVATION): the third dome
+on the upper roof, 441 wide and 215 high, which has no structural detail. The dome footprints together are 30.70 m2 of
+the roofs (roofs inside the parapets 204.10 m2 without them).
+THE OPTIONS:
+(A) No dome is concrete (all three are a finish, for example fiberglass, measured later as their own item): no dome
+    concrete (freelancer's 6.78 m3 becomes a rule difference); the roof membrane stops at each dome base with a 0.20 m
+    upturn round it: roof membrane area 204.10 m2 plus upturns.
+(B) Follow the structural drawings: the two detailed domes are concrete shells (about 2.54 m3 each by hand on the outer
+    basis, held until you confirm the Q-18 size basis), the third (architectural only) is not concrete; membrane as in (A).
+(C) Domes are not concrete, and the roof slab under them is continuous, so the membrane runs under the dome footprints:
+    roof membrane 204.10 + 30.70 = 234.80 m2 plus the parapet upturn, a 0.20 m upturn round a dome base only where the
+    dome stands higher than the slab.
+RECOMMENDATION: (A), as your words say, with one RFI to the designer because the structural sheets still draw two
+shells: a membrane that ends at a dome base with an upturn is what your answer describes, and a dome that is a
+separate finish is measured once, as its own item.
+WAITS ON: dome concrete lines and the roof membrane rows on Alsenan (T-049, T-071, T-072).
+
+### Q-30 Kitchens: waterproofed like a bathroom, floor only, or not at all? (lead 2026-10-19 14:30; membrane table requirement, T-072, T-074; no-assumptions question)
+
+THE PROBLEM: your membrane-table instruction names kitchens with bathrooms and roofs, but no Urban rule covers kitchen
+waterproofing: the wet-room rule (full floor plus a 0.20 m upturn on the whole boundary) is written for wet rooms, and
+the registry has no kitchen line. Without your rule every kitchen row would be a guess, so kitchens show HELD in the table.
+WHERE TO LOOK: Drive "Alsenan chalet project", the architectural plans (P7757 DXF, PDF part 01-02): every room labelled
+kitchen (مطبخ). Worked example for a 4.00 x 3.00 m kitchen with one 0.90 m door.
+THE OPTIONS:
+(A) Like a bathroom: whole floor plus a 0.20 m upturn on the whole boundary, doorway included: 12.00 + 14.00 x 0.20 =
+    14.80 m2 of membrane surface.
+(B) Floor only, no upturn: 12.00 m2.
+(C) Not waterproofed: the kitchen is listed in the table as "not waterproofed" with 0 rolls by your rule.
+RECOMMENDATION: (A): your instruction puts kitchens in the same list as bathrooms, and a kitchen floor with a floor
+drain and a sink takes water the same way; the bathroom rule then needs no new exception.
+WAITS ON: the kitchen rows of the membrane table and the rolls to buy (T-072, T-074).
+
 ### Q-28 Boundary wall at foundation level: which section, and is the part inside a footing counted again? (worker 2 2026-10-19 14:10; T-065; no-assumptions question)
 
 THE PROBLEM: the foundation plan draws a closed 0.20 m concrete band all round the plot, 91.94 m on its centre line
@@ -159,6 +201,8 @@ again inside a footing would count the same concrete twice (practice, not a code
 WAITS ON: the boundary-wall foundation line on Alsenan and the plot-edge member ledger the engine needs on every villa
 (T-065 follow-up).
 
+## Answered
+
 ### Q-26 Pool: is the pool floor flat at the printed 1.15 m depth, or sloped? (worker 1 2026-10-19 12:39; T-063; no-assumptions question)
 
 THE PROBLEM: the architectural drawing prints one pool depth, 1.15 m, but the structural pool detail draws a sloped floor
@@ -179,6 +223,7 @@ view is cut at one place only. Practice, not a code clause: a villa pool with a 
 WAITS ON: pool wall concrete (and pool tiling and waterproofing heights) on Alsenan (T-063, T-049).
 
 Answer (owner, main chat, 2026-10-19 14:05 UTC), his words: "flat, pool is small and cannot be sloped." = option A: the pool floor is flat at the printed depth of 1.15 m (architectural elevation: rim +0.30, floor -0.85); the structural detail's slope is not to be used. The 0.40 m floor thickness is the printed value of the structural detail. Claude's note for the Lead (not the owner's words): the structural detail still draws a slope and a step; record it as a drawing conflict resolved by the owner, and ask only if the walls' plan length or the floor area is unclear.
+Lead 2026-10-19 14:30 (applied): pool and dome concrete task unblocked (T-049); dome concrete itself waits on Q-29.
 
 ### Q-27 Domes: two domes or three? (worker 1 2026-10-19 12:39; T-063, T-037; no-assumptions question)
 
@@ -200,6 +245,7 @@ to build it from, so neither a number nor a silent omission is safe. The freelan
 WAITS ON: dome concrete count (and roof waterproofing round the domes, Q-24) on Alsenan (T-049, T-071).
 
 Answer (owner, main chat, 2026-10-19 14:05 UTC), his words: "3, 2 in the roof and 1 in the upper roof." = option A: three domes, two on the first-floor roof and one on the upper (second-floor) roof. Claude's note for the Lead (not the owner's words): the third dome has no structural detail, so its size basis stays HELD per the Q-18 answer (a printed size wins; nothing printed means held, no default thickness); keep it visible as its own line, and ask the owner or the designer for its thickness and ring beam only when you reach that quantity.
+Lead 2026-10-19 14:30 (applied): pool and dome concrete task unblocked (T-049); dome concrete itself waits on Q-29.
 
 ### Q-23 Renovation test: which items must the renovation BOQ contain, and how are retained walls finished? (lead 2026-10-19 12:20; owner direction "Alsenan first, then one sealed test"; T-068; no-assumptions question)
 
@@ -237,6 +283,7 @@ tasks follow your answer).
 Answer (owner, main chat, 2026-10-19 12:55 UTC), his words: "Dont worry about it later ill send you the new project." DEFERRED: no answer to the scope options now; the owner will send the new project (and the scope) later. Until then the team prepares only general capabilities proven on synthetic fixtures and Alsenan; no renovation scope is assumed, and the renovation measuring tasks wait for his answer.
 
 Answer (owner, main chat, 2026-10-19 14:15 UTC), his words: "q-23 I DONT WANT TO SEND NEW VILLAH IGNORE IT." = CANCELLED: there will be no new-villa renovation test. Ignore this question and the renovation scope; no renovation BOQ capability is needed. (This replaces the earlier "deferred" note.)
+Lead 2026-10-19 14:30 (applied): renovation pairs task cancelled; the PDF plan reader stays a general gate-4 task.
 
 ### Q-24 Roof waterproofing: measured inside the parapet or to its outer face, and under the domes or not? (lead 2026-10-19 12:30; T-062; no-assumptions question)
 
@@ -266,6 +313,7 @@ Waits on: roof waterproofing area and upturn on Alsenan and every villa with par
 Answer (owner, main chat, 2026-10-19 12:55 UTC), his words: "roof calculated as the bathrooms same way (membrane + 20cm walls upturn, in the circle dome, doom will not be concrete, (change if plan he want it fiberglass or anything visible, lets say the circle doom is high than normal slab, then we add 20cm upturn around circle to secure the waterproof."
 Owner addendum (main chat, 2026-10-19 13:50 UTC), his words: "calculating it should be full membranes and the edges to cut and not like skirting porcelain calculation linear m. Overlapping membrane is for example 10m length by 1m width. it will be 1m and overlap of 10cm overlapped between the next 1m." He also sent a picture of a 3 m x 3 m bathroom: roll 1.00 m x 10.00 m, strips of 1.00 m with a 10 cm overlap between neighbouring strips, a 20 cm upturn on the walls all round, material counted as whole strips with the edges cut. This matches UP-WP-001 (roll 1.00 x 10.00 m), UP-WP-002 (0.10 m lap between strips), UP-WP-003 (0.20 m upturn) and UP-WP-005 (material from the roll layout, never a flat rate or a linear-metre rate): roofs, domes' bases and every other membrane area use the same roll layout and cutting plan as a bathroom, never length x 0.20. Open point for the owner: the picture's table (3 strips x 3.20 m = 9.60 m2, 1 roll) does not visibly include the 20 cm upturn on all four walls or the effect of the two 10 cm laps on the width covered; the Lead should use the engine's layout as the reference and ask the owner only if he wants the table reproduced exactly.
 Claude's reading for the Lead (NOT the owner's words; confirm or ask): the roof follows the same rule as a bathroom floor (UP-WP-003: membrane over the area plus a 0.20 m upturn on the walls and parapet); the domes are not concrete, so the membrane does not run under them unless the plan shows a different dome build-up (fiberglass or another visible finish: follow the plan); a dome that stands higher than the slab gets a 0.20 m upturn round its base. Anything the drawing shows differently wins (drawing over Urban rule).
+Lead 2026-10-19 14:30 (applied, NOT the owner's words): roofs are measured like a bathroom floor: membrane over the area inside the parapet plus the 0.20 m upturn on the parapet and walls, as whole strips with 0.10 m laps (T-071, T-072). The dome part (concrete or not, membrane under the footprints or not) was not settled by the words "doom will not be concrete" against structural drawings that detail two dome shells: asked as Q-29; held until then.
 
 ### Q-25 A parapet line that stops a few centimetres short of the wall: may the engine close the gap? (lead 2026-10-19 12:30; T-062; no-assumptions question)
 
@@ -288,8 +336,7 @@ Waits on: measuring every roof, balcony and terrace outline that is drawn on a l
 
 Answer (owner, main chat, 2026-10-19 12:55 UTC), his words: "so there should be a overlap 10cm + 20cm upturn + the gap for the membrane."
 Claude's reading for the Lead (NOT the owner's words; confirm or ask): the drafting gap is not left open: the membrane covers it, with a 0.10 m overlap at the join and the 0.20 m upturn; the gap length is added to the measured membrane. The owner named no size limit for the gap: do not assume the 0.50 m limit of the question; list every closure with its length, and ask the owner if a gap is large enough to be a real opening.
-
-## Answered
+Lead 2026-10-19 14:30 (applied): every gap is closed by the membrane and listed with its length; a gap with an opening element drawn on it is not closed and is reported (T-071).
 
 ### Q-22 Pool check: which pump room is the POOL pump room? (lead 2026-10-19 10:15; T-057; no-assumptions question)
 
