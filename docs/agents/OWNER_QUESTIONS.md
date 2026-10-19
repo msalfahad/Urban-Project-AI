@@ -50,6 +50,17 @@ Alsenan_Architectural_P7757_Pages_01-02, 03-04, 05-06, 07-08, 09-10, 11-12 (each
 TEST_PAGE_01.pdf are not needed. Lead: remove "PDF over the 10 MB limit" from NEEDS FIXING, and give a worker the task of
 listing the elevation and section sheets and the levels they print. The DXF for development project 2 is coming from the owner.
 
+## Owner instruction on task size and quality (via the owner's main chat, 2026-10-19)
+
+Give each worker a task that takes at least 50 minutes of real work, not short ones. Quality first, speed second. Lead:
+merge small slices that touch the same files or the same quantity into one work package (build, hand-calculated
+fixture that is not Alsenan, adversarial cases, validation at the level `impact` says, freeze check, handoff with engine vs
+freelancer figures). Do not split a task only to finish faster. Workers: use the whole run to finish the package properly
+(read every relevant detail, cross-check against a second drawing, test the edge cases); never end a run early with a
+partial handoff just to have something READY; if a task turns out smaller than 50 minutes, take the next related item of the
+same topic in the same run. Verifier: check depth, not only gates. The owner prefers one well-proven result per run over
+several thin ones.
+
 ## How to write a question for the owner (owner, 2026-10-18; every agent follows this)
 
 The owner must understand the question without opening the code. Write it in plain words, like talking to a site

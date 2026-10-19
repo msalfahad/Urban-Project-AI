@@ -45,6 +45,17 @@ docs/agents/PROGRESS.md in this form; the Verifier's SCOREBOARD.md supplies the 
 numbers of their task in their handoff in the same terms. Nothing is estimated: a number the run did not measure is
 written "not measured".
 
+## Task size and quality (owner, 2026-10-19)
+
+Give each worker a task that takes at least 50 minutes of real work, not short ones. Quality first, speed second. Lead:
+merge small slices that touch the same files or the same quantity into one work package (build, hand-calculated
+fixture that is not Alsenan, adversarial cases, validation at the level `impact` says, freeze check, handoff with engine vs
+freelancer figures). Do not split a task only to finish faster. Workers: use the whole run to finish the package properly
+(read every relevant detail, cross-check against a second drawing, test the edge cases); never end a run early with a
+partial handoff just to have something READY; if a task turns out smaller than 50 minutes, take the next related item of the
+same topic in the same run. Verifier: check depth, not only gates. The owner prefers one well-proven result per run over
+several thin ones.
+
 ## Chain of command
 
 ```
