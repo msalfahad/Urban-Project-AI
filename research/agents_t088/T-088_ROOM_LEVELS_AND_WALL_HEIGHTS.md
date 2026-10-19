@@ -13,8 +13,8 @@ S-COL.BON in both) match by a pure translation per floor, so each room was laid 
 over it (overlay pictures in the scratchpad only).
 
 Rules applied and nothing else: owner Q-43 answer and heights rule (2026-10-19 21:40): wall height for plaster and paint =
-floor-to-floor (slab to slab, from the level marks) - 0.60 beam - 0.15 (base) / 0.20 (other end) decor ceiling - 0.10 floor
-finishing; a room whose drawn beam is deeper or shallower than 0.60 m is HELD for the owner; an unmarked room takes its
+floor-to-floor (slab to slab, from the level marks) - 0.60 beam - 0.15 decor ceiling (owner Q-48 = A, 22:40: 0.15 m
+everywhere, no range) - 0.10 floor finishing; a room whose drawn beam is deeper or shallower than 0.60 m is HELD for the owner; an unmarked room takes its
 floor's level on a one-level floor, on the split GF only from what is drawn, else HELD. Q-14 (distinguish floor-to-floor
 from wall height), Q-06 (basin-only spaces are wet), Q-30 (kitchens wet), UP-WET-001 / UP-FIN-PAINT-001 (wet rooms: full
 height porcelain, no plaster / paint line), UP-HGT-001 (drawing first), UP-QTY-STATUS-001 (held, never 0).
@@ -28,8 +28,9 @@ height porcelain, no plaster / paint line), UP-HGT-001 (drawing first), UP-QTY-S
 | 1F | +5.50 | +9.70 | **4.20** | A-A and B-B "420"; +5.50 printed in the living area and corridor |
 | 2F | +9.70 | +13.90 (top roof) | **4.20** | A-A "420" +9.70 to +13.90; +9.70 printed in the stair lobby and on both 1F roofs |
 
-The annex storey is 4.00 m, not the main house's 4.50 m: its walls get 3.15 / 3.10 m by the owner's formula, not 3.65 / 3.60.
+The annex storey is 4.00 m, not the main house's 4.50 m: its walls get 3.15 m by the owner's formula, not 3.65 m.
 Neither section draws a beam below a slab or a false ceiling: the wall heights below come only from the owner's rule.
+Wall heights by the rule (0.60 beam, 0.15 decor): GF main 3.65 m, GF annex 3.15 m, 1F 3.35 m, 2F 3.35 m.
 
 ## 2. Room levels (32 drawn rooms)
 
@@ -65,9 +66,9 @@ roof-slab plans. Per room (CSV column DEEPEST_DRAWN_BEAM):
 
 So, by the owner's own instruction (beam deeper or shallower than 0.60 m: hold for him), **every room is HELD**. The rule's
 0.60 m is a standard deduction that never meets a drawn 0.60 m beam here. New owner question **Q-50** (which depth to
-deduct). The heights the CSV shows are the owner formula with 0.60 (3.65 / 3.60, annex 3.15 / 3.10, 1F and 2F
-3.35 / 3.30); with the drawn beam instead: 0.75 gives 3.50 / 3.45, annex 3.00 / 2.95, upper floors 3.20 / 3.15; 0.85 gives
-3.40 / 3.35; 0.50 gives upper floors 3.45 / 3.40.
+deduct). The heights the CSV shows are the owner formula with 0.60 (GF 3.65, annex 3.15, 1F and 2F 3.35); with
+the drawn beam instead: 0.75 gives GF 3.50, annex 3.00, upper floors 3.20; 0.85 gives GF 3.40; 0.50 gives upper floors
+3.45; 0.40 gives GF 3.85.
 
 ## 4. Wall lengths and plaster / paint against the freelancer (diagnostic; nothing released)
 
@@ -76,15 +77,15 @@ uses one flat height per floor (GF 3.60 including the annex, 1F 3.40, living 3.5
 Lengths were read from the printed dimensions; openings are NOT deducted (no opening height is printed on the plans:
 gross figures; the freelancer deducts 58.25 m2 of openings from 1 209.39 m2 gross).
 
-| Floor | Dry room (printed length) | Hand m2: rule with 0.60 (0.15 / 0.20) | with the drawn 0.75 beam | Freelancer | Difference (0.60, base) |
+| Floor | Dry room (printed length) | Hand m2: rule with 0.60 beam (decor 0.15) | with the drawn 0.75 beam | Freelancer | Difference (0.60 rule) |
 |---|---|---|---|---|---|
-| GF annex | dewaneya 20.128 m (400 x 630 printed, corner arc R1.10 CAD) | 63.40 / 62.40 | 60.38 / 59.38 | 20.0 x 3.60 = 72.00 | -8.60 m2 (-11.9 %) |
-| GF annex | driver 12.50 m (175 x 450) | 39.38 / 38.75 | 37.50 / 36.88 | 12.5 x 3.60 = 45.00 | -5.63 m2 (-12.5 %) |
-| 1F | master bed room 17.50 m (425 x 450) | 58.63 / 57.75 | 56.00 / 55.13 | 17.5 x 3.40 = 59.50 | -0.88 m2 (-1.5 %) |
-| 1F | master bed room 17.30 m (500 x 365) | 57.96 / 57.09 | 55.36 / 54.50 | 17.3 x 3.40 = 58.82 | -0.87 m2 (-1.5 %) |
-| 2F | maid room 18.90 m (300 x 645) | 63.32 / 62.37 | 60.48 / 59.54 | 18.9 x 3.40 = 64.26 | -0.95 m2 (-1.5 %) |
-| **5 matched rooms** | 86.328 m vs his 86.20 m (+0.128 m, +0.15 %) | **282.67 / 278.36** | **269.72 / 265.41** | **299.58** | **-16.91 m2 (-5.6 %); -21.22 (-7.1 %) with 0.20; -29.86 (-10.0 %) / -34.17 (-11.4 %) with 0.75** |
-| 1F | master bed room 380 x 430: 16.20 m (room rectangle) | 54.27 / 53.46 | 51.84 / 51.03 | 22.3 x 3.40 = 75.82 (adds the two 3.05 m walls of the 1.47 m passage) | not comparable (allocation) |
+| GF annex | dewaneya 20.128 m (400 x 630 printed, corner arc R1.10 CAD) | 63.40 | 60.38 | 20.0 x 3.60 = 72.00 | -8.60 m2 (-11.9 %) |
+| GF annex | driver 12.50 m (175 x 450) | 39.38 | 37.50 | 12.5 x 3.60 = 45.00 | -5.63 m2 (-12.5 %) |
+| 1F | master bed room 17.50 m (425 x 450) | 58.63 | 56.00 | 17.5 x 3.40 = 59.50 | -0.88 m2 (-1.5 %) |
+| 1F | master bed room 17.30 m (500 x 365) | 57.96 | 55.36 | 17.3 x 3.40 = 58.82 | -0.87 m2 (-1.5 %) |
+| 2F | maid room 18.90 m (300 x 645) | 63.32 | 60.48 | 18.9 x 3.40 = 64.26 | -0.95 m2 (-1.5 %) |
+| **5 matched rooms** | 86.328 m vs his 86.20 m (+0.128 m, +0.15 %) | **282.67** | **269.72** | **299.58** | **-16.91 m2 (-5.6 %); with the 0.75 beam -29.86 m2 (-10.0 %)** |
+| 1F | master bed room 380 x 430: 16.20 m (room rectangle) | 54.27 | 51.84 | 22.3 x 3.40 = 75.82 (adds the two 3.05 m walls of the 1.47 m passage) | not comparable (allocation) |
 
 Per floor, what stays HELD (never 0), with the freelancer's figure for that part:
 - **GF** (freelancer 452.88 m2): open room 195.30 (beam 0.85 crossing, reception double height, no closed printed run),
@@ -95,16 +96,16 @@ Per floor, what stays HELD (never 0), with the freelancer's figure for that part
 - **2F** (94.86 m2): stair lobby 30.60 (stair, beam 1.20).
 - Stair core 204.42, door reveals 15.96 (UP-FIN-PLASTER-001, frame detail), opening deductions -58.25: not measured here.
 - Project: internal plaster HELD vs 1 151.14 m2, internal paint HELD vs 1 191.13 m2 (paint adds his 39.99 m2 of stair
-  soffits). What this table can measure today is 6 dry rooms, 102.53 m of printed wall, 336.94 m2 at the owner's base
-  formula (0.60 / 0.15), against his matching rows 375.40 m2 (31 % of his 1 209.39 m2 gross plaster rows).
+  soffits). What this table can measure today is 6 dry rooms, 102.53 m of printed wall, 336.94 m2 at the owner's
+  formula (0.60 beam, 0.15 decor), against his matching rows 375.40 m2 (31 % of his 1 209.39 m2 gross plaster rows).
 
 Verdict proposals (for the verifier):
 - Lengths: driver, both 1F master bed rooms and the maid room AGREE (identical printed lengths); dewaneya ENGINE_RIGHT
   +0.128 m (hand: 2 x (4.00 + 6.30) - 2 x 1.10 + 1.728 = 20.128 m, the printed rectangle with its drawn R1.10 corner;
   he rounds 20.0).
-- Heights, 1F / 2F: RULE_DIFFERENCE: his flat 3.40 m is not the owner's formula (3.35 / 3.30 with 0.60); -1.5 % / -2.9 %.
+- Heights, 1F / 2F: RULE_DIFFERENCE: his flat 3.40 m is not the owner's formula (3.35 m with 0.60); -1.5 %.
 - Heights, GF annex: proposal ENGINE_RIGHT once Q-50 is answered: his 3.60 m is the main house height applied to a storey
-  printed 4.00 m high (SECTION B-B); by the owner's formula 3.15 / 3.10 m, -12.2 % / -13.6 % on those two rooms. UNRESOLVED
+  printed 4.00 m high (SECTION B-B); by the owner's formula 3.15 m, -12.2 % on those two rooms (-14.22 m2). UNRESOLVED
   until then (held).
 - 1F master bed room 380 x 430: RULE_DIFFERENCE (he allocates the passage walls to the room).
 
@@ -116,7 +117,8 @@ Verdict proposals (for the verifier):
 4. GF reception under the 1F void: double-height walls, no owner rule.
 5. Wall lengths not printed as a closed run: GF open room, GF master bed room (curved pool wall), 1F east master bed room
    (curved glazing), 1F living area and corridor, 2F lobby: need the CAD outline (a code task, T-081 rework / V2.9 faces).
-6. Wet rooms: their wall-tile height waits on Q-48 (not a plaster / paint line).
+6. Wet rooms: wall tiles to the 0.15 m decor ceiling (owner Q-48 = A), so the same heights as above; not a plaster /
+   paint line, and held on the same beam question Q-50.
 
 ## 6. What this changes and what is missing
 
