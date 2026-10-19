@@ -14,7 +14,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 581 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 582 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 7 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
@@ -22,7 +22,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1275 | pytest suites, one folder per round. |
+| `tests/` | 1276 | pytest suites, one folder per round. |
 | `tools/` | 97 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (230 modules)
+## `engine/source/` (231 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -545,11 +545,12 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `robust_geometry.py` | 324 | HIGH | 10 | ROBUST GEOMETRY (M9 Phase 2A, ARCH_TAKEOFF_V2.1 only) - the reviewed robust predicate at the three band-path |
 | `role_authority.py` | 493 | HIGH | 17 | ROLE AUTHORITY (R8.9): a role CANDIDATE is not a role AUTHORITY. |
 | `room_boq.py` | 270 | MEDIUM | 2 | ROOM BOQ (M9 S1) - canonical lines and material results per room from a ROOM SCHEDULE (generic; stdlib only). |
+| `room_label_guard.py` | 245 | MEDIUM | 1 | ROOM LABEL GUARD (T-061): a room label that sits in no closed room face is HELD, never silently lost. |
 | `room_matrix.py` | 100 | MEDIUM | 1 | ROOM QUANTITY MATRIX (RC1) - room-by-room VIEW of trade rows, with proof that the rooms add up. |
 | `room_slice.py` | 165 | MEDIUM | 1 | ROOM SLICE (M2) - architectural rooms from wall line work: floor area, perimeter, skirting and wet-room |
 | `room_topology.py` | 461 | HIGH | 33 | TS01 - ROOM / SPACE TOPOLOGY METHOD on CANONICAL_MEASUREMENT_INPUT (R8.8, SHADOW). |
 | `room_topology_v3.py` | 231 | HIGH | 1 | TS01 V3 - the frozen TS01 room topology (room_topology) with two injection points, nothing else changed: |
-| `room_vocab.py` | 121 | MEDIUM | 2 | ROOM VOCABULARY V2 (T-022) - a room label's type, compound phrases before bare words (generic, bilingual). |
+| `room_vocab.py` | 121 | MEDIUM | 3 | ROOM VOCABULARY V2 (T-022) - a room label's type, compound phrases before bare words (generic, bilingual). |
 | `rough_rebar_sanity.py` | 227 | MEDIUM | 6 | ROUGH_REBAR_SUMMARY - the Urban estimating / sanity product (generic). |
 | `rule_promotion.py` | 68 | MEDIUM | 1 | GENERIC-RULE PROMOTION (generic). |
 | `rule_store.py` | 124 | HIGH | 13 | RULE STORE (M9 S1) - one versioned place the new engines read rules from (generic; stdlib only). |
@@ -920,6 +921,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t004a_label_census/` | 1 |
 | `tests/t022_room_vocab/` | 1 |
 | `tests/t048_curved_strips/` | 1 |
+| `tests/t061_room_label_guard/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
