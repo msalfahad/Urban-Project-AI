@@ -132,17 +132,18 @@ concrete lines identical). This run changed no engine line.
 
 | Line | Engine now | Freelancer | Effect of this census |
 |---|---|---|---|
-| Pool concrete, m3 | 3.495 (half outline, 0.25 / 1.6 conventions) | 12.348 (incl. pump room 3.480 the owner says does not exist, step 0.228) | Printed basis now: floor 10.936 m2 x 0.40 = 4.374 (T-037) + walls 2.358 m2 x 1.15 = **2.712** (wall height = inner depth, the floor term already covers the plan under the walls) = **7.086 m3** if C-2 is decided "flat floor at 1.15" (owner question Q-23). Against the freelancer's pool without the pump room (8.868): -1.782 m3 (-20.1 %); his wall height 1.8 is not printed. Not applied |
+| Pool concrete, m3 | 3.495 (half outline, 0.25 / 1.6 conventions) | 12.348 (incl. pump room 3.480 the owner says does not exist, step 0.228) | Printed basis now: floor 10.936 m2 x 0.40 = 4.374 (T-037) + walls 2.358 m2 x 1.15 = **2.712** (wall height = inner depth, the floor term already covers the plan under the walls) = **7.086 m3** if C-2 is decided "flat floor at 1.15" (owner question Q-26). Against the freelancer's pool without the pump room (8.868): -1.782 m3 (-20.1 %); his wall height 1.8 is not printed. Not applied |
 | Stairs concrete, m3 | 4.635 (conventions) | 15.052 | Entrance flight: 5 risers, 0.170 m riser printed by levels; everything else HELD until A-A is read |
-| Domes, m3 | 7.372 (conventions, 2 domes) | 6.780 (3 domes) | stays HELD (Q-18); count conflict C-1 asked (Q-24) |
+| Domes, m3 | 7.372 (conventions, 2 domes) | 6.780 (3 domes) | stays HELD (Q-18); count conflict C-1 asked (Q-27) |
 | Lift walls, m3 | none | 2.400 | shaft found (8.00 m centreline matches); pit depth not printed: UNRESOLVED |
 | Internal plaster, m2 | HELD | 1 151.14 | still HELD: no clear height, soffit, false ceiling or build-up printed (2F interval 4.20 is now known, not a wall height) |
 | Internal paint, m2 | HELD | 1 191.13 | still HELD (same) |
 
-## 9. Owner questions raised (OWNER_QUESTIONS.md Q-23, Q-24, Q-25)
+## 9. Owner questions raised (OWNER_QUESTIONS.md Q-26, Q-27)
 
-Q-23 pool floor flat at 1.15 or sloped (C-2); Q-24 is there a third dome on the 2F roof (C-1); Q-25 is the "20" at the
-1F floor band the slab thickness (C-5).
+Q-26 pool floor flat at 1.15 or sloped (C-2); Q-27 is there a third dome on the 2F roof (C-1). C-5 (is the "20" at the
+1F floor band the slab thickness) and C-6 are left to the lead: they block no quantity today (plaster and paint are held
+for missing clear heights anyway; slab concrete comes from the structural route).
 
 ## 10. For the lead
 
