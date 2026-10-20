@@ -2,7 +2,7 @@
 
 usage: python3 -I build_dashboard_data.py <docs/agents dir> <out dir> [<board commit>]
 
-Reads BOARD.md, PLAN.md, SCOREBOARD.md and OWNER_QUESTIONS.md; writes tasks.json, milestones.json, targets.json,
+Reads BOARD.md (and BOARD_ARCHIVE.md), PLAN.md, SCOREBOARD.md and OWNER_QUESTIONS.md; writes tasks.json, milestones.json, targets.json,
 owner_questions.json. Stdlib only. Nothing here is estimated: a value the board does not state is written as null.
 The agents table (agents.json) and refresh.json are written by the refresher from list_triggers and the clock.
 """
@@ -48,7 +48,10 @@ def agent_of(status, branch):
 
 # ---- tasks ------------------------------------------------------------------------------------------------------
 tasks = []
-for line in (SRC / "BOARD.md").read_text().splitlines():
+BOARD_LINES = (SRC / "BOARD.md").read_text().splitlines()
+if (SRC / "BOARD_ARCHIVE.md").exists():  # closed rows moved out of BOARD.md by the Lead (2026-10-20)
+    BOARD_LINES += (SRC / "BOARD_ARCHIVE.md").read_text().splitlines()
+for line in BOARD_LINES:
     if not re.match(r"\|\s*T-\d", line):
         continue
     c = cells(line)

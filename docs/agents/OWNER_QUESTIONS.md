@@ -1,5 +1,6 @@
 # Questions for the owner (at most 5 open; answer under "Answer:")
 
+Lead 2026-10-20 08:20: three new no-assumptions questions: Q-60 (blockwork: the height a block wall is measured to; block m2 held until answered), Q-61 (16 held Alsenan beam pieces the drawings contradict or leave unmarked: hold, provisional bigger reading, or your ruling) and Q-62 (the last riser of a flight inside the arrival slab: stair, slab or both; 0.163 m3; proposed by worker 3). Open now: 13 (Q-50 to Q-62), all no-assumption questions.
 Worker 1 2026-10-20 05:05: one new no-assumptions question from the tile count (T-087): Q-59 (offcut reuse inside a room when counting tiles to buy).
 Worker 3 2026-10-20 00:14: one new no-assumptions question from the room-by-room finishing table (T-086): Q-53 (cement bags and sand per m3 of the 1:3 stair mortar). Open now: 4 (Q-50 to Q-53).
 Verifier 2026-10-19 22:59: two new no-assumptions questions from the stair verdicts (T-084): Q-50 (round stair: no section, may the plan count 28 be used) and Q-51 (how turning / winder steps are measured). Open now: 2.
@@ -347,6 +348,76 @@ THE OPTIONS:
 RECOMMENDATION: (B) with 20 cm: tilers cut the second edge piece from the first one's offcut as normal practice, and the
 result lands near the waste the trade expects; (A) buys a whole tile for every edge sliver (practice, not a code clause).
 WAITS ON: the tile count (tiles and boxes to buy) of every tiled floor on every villa; the m2 BOQ lines do not change.
+
+### Q-60 Blockwork: up to which height is a block wall measured? (lead 2026-10-20 08:20; T-027, T-103; no-assumptions question: the masonry height rule is still "requires confirmation", and your plaster height answer stops at the decor ceiling, not at the beam)
+
+THE PROBLEM: the team is now measuring blockwork (block walls) on Alsenan for the first time; the wall metres can be
+measured from the plan, but block m2 = metres x height, and no confirmed Urban rule gives the height of a block wall.
+Your 2026-10-19 21:40 rule is for plaster and paint (slab to slab - 0.60 beam - decor ceiling - floor finishing); blocks
+are laid from the floor slab up to the underside of the beam or slab above, so that rule does not fit them. Until you
+answer, every block m2 and m3 is HELD (the metres are given).
+WHERE TO LOOK: Drive "Alsenan chalet project", ST7757.pdf: the beam schedules (depth column "H") and the GROUND and FIRST
+FLOOR ROOF SLAB plans (which beam runs over which wall); p7757_arch_sheet03.pdf: the ground-floor walls; p7757_arch_sheet10.pdf:
+the section with the level marks (ground floor slab to first floor slab 4.50 m, first to second 4.20 m, your answer).
+Example: a 0.20 m ground-floor wall under a 20 x 75 beam, and a wall under the 0.16 m slab with no beam over it.
+THE OPTIONS (ground floor, per 10 m of 0.20 m wall):
+(A) Each wall to the underside of what sits on it: slab to slab minus the beam depth above that wall from the schedule,
+    or minus the 0.16 m slab where no beam runs over it: under a 20 x 75 beam 4.50 - 0.75 = 3.75 m -> 37.5 m2; under slab
+    only 4.50 - 0.16 = 4.34 m -> 43.4 m2.
+(B) One height per floor, like your plaster rule but without decor and finishing: slab to slab - 0.60 m: GF 3.90 m ->
+    39.0 m2 per 10 m everywhere; 1F 3.60 m.
+(C) Slab to slab minus the slab only, beams not deducted: GF 4.34 m -> 43.4 m2 per 10 m everywhere; 1F 4.04 m.
+RECOMMENDATION: (A): the beam is concrete and is already in the concrete quantity, so the block stops under it; counting
+blocks through the beam counts the same space twice (practice, not a code clause). A wall whose beam above is not drawn or
+not in the schedule stays HELD under (A). Parapets and garden walls would take their height from the printed section only.
+WAITS ON: block wall m2 and m3 per thickness and floor on Alsenan (the metres come first) and the same rule on every villa
+(T-027, T-103).
+
+### Q-61 Beam pieces the structural drawings contradict or leave unmarked (designer questions): hold them, or count the bigger reading as provisional? (lead 2026-10-20 08:20, from worker 2's hand reading of every held beam span and worker 1's concrete ledger; T-043, T-097; no-assumptions question: your Q-31 answer settled one footing, not beams)
+
+THE PROBLEM: after the beam fixes, the engine gives Alsenan beams 68.84 m3 against the freelancer's 65.97 m3, but 18 beam
+pieces are still held because the drawings contradict themselves or give no mark, so the beam line cannot be compared.
+Two of them are settled by printed sections (a task is on that, 1.91 m3). The rest need a designer's answer or your ruling:
+WHERE TO LOOK: Drive "Alsenan chalet project", ST7757.pdf, FIRST and GROUND FLOOR ROOF SLAB plans and the beam schedules:
+(1) 1F CB10, two spans: printed 0.25 x 0.50 in the schedule, drawn 0.30 wide (its mirror CB13 is printed 0.30 = drawn):
+    0.744 or 0.893 m3; (2) GF CB3 span 2, also labelled "B3 (With Stair)": 0.212 - 0.610 m3; (3) the two 1F dome-ring
+    pieces where the plan (B4 20 x 50) and the dome detail (20 wide, depth "AS PER ARCH") disagree, and the ring piece
+    round the GF void with no mark: 0.316 - 0.527 m3; (4) six spans past a column with no label (2F x4, 1F x1, GF B24
+    east): 1.00 - 2.44 m3; (5) the 0.20 m strips north of B23 (1F) and B20 (GF), whose own sections A-A / B-B show no
+    concrete there: 0.56 - 1.69 m3; (6) the 1F west outer strip, the 1F south-east box and the strip outside CB12: 1.41 -
+    3.02 m3. Together 4.25 - 9.18 m3 (beams: freelancer 65.97 m3).
+THE OPTIONS:
+(A) Hold every piece and list it in the BOQ as a question to the designer (visible, never 0); the beam line is compared
+    without them and shows the 4.25 - 9.18 m3 range beside it.
+(B) As your Q-31 footing answer: hold and ask the designer, and where a figure is needed count the bigger reading marked
+    PROVISIONAL: +9.18 m3 provisional (beams about 78.0 m3 with it).
+(C) You rule piece by piece now (for example: printed schedule width wins for CB10 = 0.744; the strips with no concrete in
+    their own section are not beams; the rest held).
+RECOMMENDATION: (A) for pieces (2), (4) and (6), which have no mark at all, and (C) for (1) and (5): the printed schedule
+row is the designer's stated size, and a section that cuts through a strip and shows no concrete is the drawing's own
+answer (practice, not a code clause); (3) follows your Q-44 answer (the ring stays) with the plan's printed B4 size.
+Whatever you choose, the engine keeps every piece visible.
+WAITS ON: the comparison of the Alsenan beam line (concrete, the largest concrete key) and the rule for unmarked or
+contradicting beam pieces on every villa (T-097 follow-ups, T-101).
+
+### Q-62 Stairs: the last riser of each flight sits inside the slab or landing it arrives on. Counted in the stair, in the slab, or both? (lead 2026-10-20 08:20, from worker 3's stair concrete piece; T-056, T-084; no-assumptions question: your Q-20 answer says no concrete counted twice, while the figures of your Q-46 / Q-47 answers include that piece in the stair)
+
+THE PROBLEM: each flight's sloping waist slab ends inside the thickness of the floor slab or landing it arrives on, so a
+small wedge (the last riser and its waist) is inside concrete that the slab or landing line also counts. On Alsenan this is
+at most 0.163 m3 over four flight ends: main stair 0.030 + 0.030, entrance flight 0.071, lobby flight 0.032. Today the
+engine shows it as a check and does not deduct it, because two of your answers point different ways.
+WHERE TO LOOK: Drive "Alsenan chalet project", ST7757.pdf, the stair section A-A and the stair panels marked "T 16" on the
+slab plans: where the top flight meets the first-floor slab (+4.50) and the landing at +3.50, the last riser is drawn inside
+the 0.16 m slab.
+THE OPTIONS:
+(A) Measure each flight up to the face of the slab or landing it arrives on (the wedge is not in the stair): main stair
+    5.011 -> 4.951 m3; all stairs together -0.163 m3.
+(B) Keep the stair as in your Q-46 / Q-47 answers (5.011 m3) and take the wedge out of the slab or landing line instead.
+(C) Count it in both (no deduction): today's figures, 0.163 m3 counted twice.
+RECOMMENDATION: (A): the floor slab and landings are measured over their full area anyway, so the flight stops at their
+face; this keeps your no-double-counting rule and changes only the stair line (practice, not a code clause).
+WAITS ON: the Alsenan stair concrete lines (main stair 5.011 vs freelancer 8.131 m3) and the same rule on every villa (T-056
+wiring).
 
 ## Answered
 

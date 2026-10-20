@@ -25,6 +25,16 @@ size), band / trapezoid decomposition of rectilinear and curved outlines so ever
 or named as a patch, how roofing and tanking take-off software or practitioners lay out sheet membranes round steps,
 openings and splayed corners, and test-case generators for such outlines. Unblocks T-096 (step upturn fix), T-098.
 
+### R-08 Masonry wall centreline metres from double-line CAD walls (lead 2026-10-20 08:20)
+Problem: blockwork is billed on the wall CENTRELINE per thickness including corners, T-junctions and wall ends (owner rule
+UP-WALL-GEOM-001), but the engine's wall run follows a face band, which leaves corners and ends out. Gap: synthetic villa
+SV-A 44.4 m face run vs 46.2 m hand centreline (-3.9 %); Alsenan blockwork never measured, an old estimate about 140 m
+short (-36.5 %). Look for: robust ways to turn pairs of parallel wall lines (and hatched wall polygons) in DXF into a
+centreline graph with junctions (medial axis / straight skeleton of the wall polygon, wall-pair matching with thickness
+classes, open-source floor-plan vectorisation code that outputs wall centrelines), how they treat columns inside a wall
+line, curved walls, walls meeting at odd angles and gaps at openings, and how QS take-off tools report blockwork per
+thickness; licence and maturity for each. Unblocks T-027 (engine piece) and checks T-103 (hand metres).
+
 ## Answered
 
 ### R-01 Floor and ceiling heights from Kuwait villa section drawings (lead 2026-10-19)

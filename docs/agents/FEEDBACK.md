@@ -3,23 +3,62 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
-## Recurring causes (lead 2026-10-20 06:20)
+## Recurring causes (lead 2026-10-20 08:20)
 
-1. **Merged pieces not wired into the released run** (smaller): the membrane rolls are now released (ARCH_TAKEOFF_V2.11),
-   but the beam fix, the tile count, the typed-values file and room levels / wall heights are still read by no released
-   method; concrete stays 92.77 vs 111.81 m3. Decision: T-097 wires the beam fix into a concrete ledger; T-095 (plaster /
-   paint) after T-096 and the owner's height answers.
-2. **An engine count equal to a hand count is not proof when both share a blind spot** (new): T-089 and T-093 matched the
-   Lead's roof table 31 = 31, yet both left the 2F parapet-step upturn uncovered; only an independent full strip plan
-   (T-094) found it. Decision: hand-truth tasks must lay every strip themselves and list every uncovered piece (T-098 for
-   wet rooms); the verifier compares coverage residuals, not only counts; R-07 to the scout.
-3. **Offcut reuse inside one room has no rule** (new, two trades): membrane (Q-58, 1 roll on this villa) and tiles (Q-59,
-   15 - 20 % of tiles). Decision: both asked; affected counts HELD with both values shown.
-4. **Execution refusals mid-run** (smaller): every run since 04:20 left a log line; refusals now hit single steps (the
-   verifier's freeze check and merge at 06:05, worker 2's chained claim at 04:45). Decision: claim method restated on the
-   board (three separate commands); verifier order T-094, T-064; owner setting still under NEEDS FIXING.
-5. **Heights, finishes and ceilings still need rules**: Q-52, Q-54, Q-55, Q-56, Q-57 open (plaster 1151.14 / paint
-   1191.13 m2 held).
+1. **Merged pieces not wired into the released run** (still the main reason released numbers do not move): beam fix,
+   typed drawing values, plot-edge members, tile count, room levels / wall heights are merged but read by no released
+   method; released concrete 92.77 vs 111.81 m3 unchanged since 2026-10-19. Decision: wiring chain T-097 (READY) ->
+   T-101 (typed values, queued); plaster / paint T-095 after T-096 and the owner's height answers.
+2. **A new ledger version inherits the holds of the one under it**: T-097 V3 carries the V2 holds (footing band Q-28 A
+   provisional, pool), so its compared concrete shrinks to stairs + domes (12.01 vs 21.83 m3) and its released total over
+   all keys drops 236.27 -> 229.57 m3 while beams rise +4.02 m3. Decision: every ledger handoff states released and held
+   m3 per key against the RELEASED route, not only against the previous ledger; T-101 checks it.
+3. **Drawings that contradict themselves block whole lines** (new, structural): 18 beam pieces (4.25 - 9.18 m3) keep the
+   beam line uncompared. Decision: printed section cuts first (T-102), the rest to the owner (Q-61).
+4. **Execution refusals at random** (unchanged): since 06:20, 3 of 6 code runs refused (worker 2 07:06 venv, 07:43 clone;
+   verifier 07:58 install), one worker run left no line (worker 1 06:19). Decision: three READY tasks ordered for the next
+   verifier run with execution; BOARD.md cut from 375 KB to 80 KB so a refused run can still claim or log through the
+   connector; owner setting still under NEEDS FIXING.
+5. **Trades never started**: blockwork (old estimate about 140 m short, -36.5 %) and blinding (22.16 vs 47.06 m3) had no
+   task. Decision: T-027 + T-103 (blockwork, heights Q-60), T-100 (blinding by hand).
+6. **Offcut reuse and heights still need rules**: Q-52 to Q-59 open (membrane 1 roll, tiles 15 - 20 %, plaster 1151.14 /
+   paint 1191.13 m2 held).
+
+## 2026-10-20 08:20 (lead run)
+
+- **T-056 stair concrete V1: WORKED on the worker's evidence (READY 3b8c549 at 08:13 after an 11-minute run; not
+  verified).** Main stair 5.011 m3 = hand T-084 (steps 1.386 + waists 2.885 + landings 0.740) vs freelancer 8.131 (-38.4 %);
+  entrance steps 0.357 vs 1.411 (waist HELD, not printed); round stair all HELD (Q-50 / Q-51); 15 named held lines, none 0;
+  15 synthetic tests + L2 stairs. No-assumption check: passes; the worker found a rule conflict (last-riser wedge inside the
+  arrival slab, 0.163 m3) and held it. Decision: owner Q-62; verifier fourth with a depth check (short run); wiring must
+  replace the frozen S8.7 0.517 m3, not add to it (noted for the wiring task).
+- **T-096 step-upturn fix, ARCH_TAKEOFF_V2.12: WORKED on the worker's evidence (READY 77e89d7, NOT VERIFIED: verifier
+  07:58 refused).** 2F roof residual 0.84 -> 0 m2 with a 4.60 m upturn strip (= hand T-094 exactly); 2F roof rolls released
+  17 -> HELD 17 / 18 under Q-58; 1F roofs 8 / 6 and wet 19 unchanged; 1 of 578 BOQ lines changed; 17 hand tests, L4 0 new
+  failures, freeze 0. No-assumption check: passes (own-leftover piece held on the open question, not assumed). Decision:
+  verifier checks it first; T-104 (wall frames) queued on top of it.
+- **T-098 wet-room cutting plans by hand: WORKED (READY 017701c, not verified; CODEMAP not rebuilt).** 17 areas 19 rolls =
+  released 19; strip 122.50 vs 122.99 m (-0.4 %); every unreached piece explained (45 deg corner triangles 0.0034 m2);
+  one general gap: a wedge W.C. laid in its 45 deg frame needs 0.50 m less strip (same roll). Pantry with Q-37 A: 21 rolls
+  with it. Decision: verifier second (rebuild the map with the tool); T-104 queued for the frame selection.
+- **T-097 concrete ledger V3 (beam binding wired): PARTIAL (READY 8691838, not verified).** Beams released 64.82 -> 68.84
+  vs freelancer 65.97 m3 (-1.7 % -> +4.4 %), +4.018 m3 each line by hand (T-085's +4.30 counted 0.281 twice); held beam
+  spans 24 -> 18, so the beam key stays HELD; V3 inherits V2 holds (compared concrete only stairs + domes 12.01 vs 21.83 m3;
+  released over all keys 236.27 -> 229.57 m3); 24 tests, L3 801 with the 7 known failures. No-assumption check: passes
+  (unprinted upstand heights held, owner Q-44 A cited for rings). Decision: verifier third; T-102 (section cuts, 1.91 m3),
+  owner Q-61 (the other 16 pieces, 4.25 - 9.18 m3 with them), T-101 queued (typed values on top of V3).
+- **T-094 roof cutting plans by hand: WORKED (MERGED 027a168).** Hand truth 8 / 6 / 18 rolls; verifier re-checked the CSV.
+- **T-064 typed drawing values file: WORKED (MERGED 8ceeeb2), not wired.** Decision: T-100 hand truth for blinding and
+  columns first, then T-101.
+- **T-073 plot-edge foundation members: WORKED (MERGED c874c7b), not wired.** Straps 3.390 vs freelancer 3.3925 m3
+  (-0.07 %, ENGINE_RIGHT by the verifier on the Drive DXF); band 70.49 m free + 13.50 in footings + 7.95 in open outlines;
+  natural-ground beam 3.526 vs 7.560 m3 (not explained yet). Decision: the NG beam difference goes into T-100's member
+  list (blinding under it) and the ledger follow-up.
+- **Worker 2 07:43: FAILED (NO-CLAIM, clone refused "[Untrusted Code Integration]").** Could not edit the 369 KB board
+  through the connector. Decision: board cut to 80 KB (closed rows to BOARD_ARCHIVE.md); T-091 stays first NO REPO CODE
+  row of gate 2.
+- **Worker 1 06:19 run: no RUN_LOG line, no claim, no push** (the 07:20 run worked normally). Decision: reported in team
+  health; nothing lost on the board.
 
 ## 2026-10-20 06:20 (lead run)
 

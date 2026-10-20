@@ -1,5 +1,87 @@
 # Lead reports to the owner's main chat (newest first, last 10 entries)
 
+## LEAD REPORT 2026-10-20 08:20 UTC
+
+Repositories: Urban-Project-AI cloned (control; working branch head c874c7b, only checker merges since 06:20, no
+owner-session commits); Drive readable (nothing new in the Alsenan folder). UrbanProjectsManager not needed this run.
+
+PROGRESS (Alsenan)
+- Waterproofing: the fix for the uncovered parapet-step upturn on the second-floor roof is built (new method version,
+  waits for the checker): the 0.84 m2 is now covered by a 4.60 m strip, that roof's count is shown as 17 or 18 rolls until
+  you answer the trim question, and only 1 of 578 BOQ lines changes. The hand plan of every wet room confirms 19 rolls
+  (strips 122.50 vs 122.99 m, -0.4 %; 21 rolls with the pantry). Roof area still 204.11 vs 285.00 m2 (-28.4 %).
+- Concrete: the beam fix is now read by a new concrete ledger (waits for the checker): beams 68.84 vs freelancer 65.97 m3
+  (was 64.82, -1.7 %; now +4.4 % on the released part), +4.018 m3 each checked by hand (the earlier +4.30 counted one ring
+  piece twice). The beam line is still not compared: 18 pieces are held (4.25 - 9.18 m3). Two are settled by printed
+  sections (1.91 m3, tasked); the other 16 are drawing contradictions or unmarked pieces: asked you (Q-61). Released
+  concrete unchanged at 92.77 vs 111.81 m3 (-17.0 %).
+- Checker confirmed foundation straps 3.390 vs freelancer 3.3925 m3 (-0.07 %, engine right); not yet in the released run.
+- Started this run: blockwork, never measured so far (old estimate about 140 m short, -36.5 %): wall metres per floor and
+  thickness by hand and in code; block m2 needs your height answer (Q-60). Blinding: values read off the drawings give
+  22.16 m3 against the freelancer's 47.06 m3 (-52.9 %), the largest concrete difference left: hand reading tasked.
+- Stairs (new piece, waits for the checker, built in 11 minutes at 08:13): main stair 5.011 m3 in code = the hand-checked
+  figure (freelancer 8.131, -38.4 %), entrance steps 0.357 vs 1.411 m3 (its sloping slab is not printed: held), round
+  stair held on your answers; 15 held lines named, none 0.
+- Still held: plaster 1151.14 / paint 1191.13 m2 (your beam, annex, door-height, ceiling answers), tile counts (no printed
+  tile size), stairs round / winder (your answers).
+- Learned: a new ledger version carries the holds of the one beneath it, so its total can drop while one item rises
+  (229.57 vs 236.27 m3 over all concrete items); each ledger is now judged against the released run.
+- Gates: 0 done; 1 at risk (roof count fix waits for the checker and Q-58); 2 started (blockwork now on); 3 started; 4 started.
+
+TEAM HEALTH
+- Code runs that PASSED all five self-check steps since 06:20: worker 1 07:50 (beam ledger), worker 3 07:52 (membrane
+  fix), verifier 06:57 (merged three).
+- Refused: worker 2 07:06 (environment: "[Code from External]"; it still delivered the wet-room hand plans), worker 2 07:43
+  (clone: "[Untrusted Code Integration]", nothing claimed, the board too big to edit through the connector), verifier
+  07:58 (install and map check: "[Code from External]"; three tasks wait). Worker 1's 06:19 run left no log line and no
+  push. Done by me: BOARD.md cut from 375 KB to 80 KB (closed rows to BOARD_ARCHIVE.md, the dashboard reads both) so a
+  refused run can claim and log through the connector; verifier order set (membrane fix, wet-room plans, beam ledger);
+  four hand tasks on the board for refused runs. Worker 3 08:14 (self-check PASS): stair concrete delivered. Scout next run 23:50 UTC
+  (new request: wall centrelines from double-line walls).
+
+QUESTIONS FOR OWNER (13 open, all no-assumption questions; Q-50 to Q-59 are in earlier entries and OWNER_QUESTIONS.md)
+1. NEW Q-60 Blockwork: up to which height is a block wall measured? Problem: block m2 = metres x height, and no confirmed
+   Urban rule gives the height (your 21:40 rule is for plaster and stops at the decor ceiling, blocks go up to the beam or
+   slab). Where: Drive Alsenan, ST7757.pdf beam schedules (column H) and the GF / 1F roof slab plans; p7757_arch_sheet03.pdf
+   (GF walls); p7757_arch_sheet10.pdf (levels: 4.50 m GF to 1F, 4.20 m 1F to 2F). Options per 10 m of 0.20 m GF wall:
+   (A) each wall to the underside of what sits on it: under a 20 x 75 beam 4.50 - 0.75 = 3.75 m -> 37.5 m2, under slab only
+   4.50 - 0.16 = 4.34 m -> 43.4 m2; (B) one height per floor, slab to slab - 0.60 m: GF 3.90 m -> 39.0 m2 (1F 3.60 m);
+   (C) slab to slab minus the slab only: GF 4.34 m -> 43.4 m2 everywhere (1F 4.04 m). Recommendation: A (the beam is concrete
+   and already counted, so the block stops under it; practice, not a code clause); a wall whose beam above is not drawn
+   stays held; parapets from the printed section only.
+2. NEW Q-61 Beam pieces the structural drawings contradict or leave unmarked: hold, or count the bigger reading as
+   provisional? Problem: beams 68.84 vs freelancer 65.97 m3, but 16 pieces (besides 2 settled by sections) are held, so the
+   beam line cannot be compared. Where: Drive Alsenan, ST7757.pdf, GF and 1F roof slab plans and beam schedules:
+   (1) 1F CB10, schedule 0.25 x 0.50 but drawn 0.30 wide: 0.744 or 0.893 m3; (2) GF CB3 span 2 also labelled "B3 (With
+   Stair)": 0.212 - 0.610; (3) two 1F dome-ring pieces (plan B4 20 x 50 vs dome detail) and the GF void ring piece:
+   0.316 - 0.527; (4) six spans past a column with no label: 1.00 - 2.44; (5) the 0.20 m strips north of B23 / B20 whose own
+   sections show no concrete: 0.56 - 1.69; (6) 1F west outer strip, SE box, strip outside CB12: 1.41 - 3.02; together
+   4.25 - 9.18 m3. Options: (A) hold all and list them as designer questions in the BOQ (visible, never 0), beam line
+   compared without them; (B) as your footing F10 answer: hold, but count the bigger reading as PROVISIONAL where a figure
+   is needed (+9.18 m3, beams about 78.0); (C) you rule piece by piece. Recommendation: A for (2), (4), (6) (no mark at
+   all); C for (1) printed schedule width 0.744 and (5) not beams (their own section shows no concrete); (3) the plan's
+   printed B4 size under your Q-44 answer (practice, not a code clause).
+3. NEW Q-62 Stairs: the last riser of each flight sits inside the slab or landing it arrives on: in the stair, in the
+   slab, or both? Problem: your Q-20 answer says no concrete is counted twice, but the stair figures of your Q-46 / Q-47
+   answers include that wedge, which the slab line also counts: at most 0.163 m3 on Alsenan (main stair 0.030 + 0.030,
+   entrance 0.071, lobby 0.032). Where: Drive Alsenan, ST7757.pdf, section A-A and the "T 16" stair panels, where the top
+   flight meets the +4.50 slab and the +3.50 landing. Options: (A) each flight up to the face of the slab or landing it
+   arrives on: main stair 5.011 -> 4.951 m3, all stairs -0.163; (B) keep the stair at 5.011 and take the wedge out of the
+   slab / landing line; (C) count it in both (today, 0.163 m3 twice). Recommendation: A (slabs and landings are measured
+   full anyway, so the flight stops at their face; practice, not a code clause).
+Note: the open list is long (13); every one stops an assumption.
+
+NEEDS FIXING (only you can do it)
+1. Code runs are still refused at random (3 of 6 since 06:20, one run silent). Already done: board shrunk so refused runs
+   can still claim and log, hand tasks for refused runs, verifier order. The one thing to do: option 2 of
+   docs/agents/EXECUTION_PERMISSIONS.md section 5 (run the four coding agents as Claude Code scheduled tasks with
+   Urban-Project-AI attached), and check each task's settings for automatic approval.
+2. Upload the Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as separate PDFs under 6 MB (repeat).
+
+Team line: MERGED T-094, T-064, T-073 (06:55); READY T-096, T-098, T-097, T-056 (verifier in that order; T-056 depth check);
+new TODO T-099, T-100, T-102, T-103, promoted T-027, T-016a (T-023, T-028 folded into T-099); queued T-101, T-104; Q-60,
+Q-61, Q-62 new; R-08 new; 10 TODO (1 Track B); BOARD_ARCHIVE.md created.
+
 ## LEAD REPORT 2026-10-20 06:20 UTC
 
 Repositories: Urban-Project-AI cloned (control; working branch head cb4a66f, only checker merges since 04:20, no
@@ -64,7 +146,6 @@ NEEDS FIXING (only you can do it)
 
 Team line: MERGED T-089, T-093, T-087, T-085; READY T-094 (verify first), T-064, T-073; new T-096 (first code task), T-097,
 T-098; T-095 after T-096; Q-58 rewritten, Q-59 relayed; R-07 new; 8 TODO (1 Track B).
-
 ## LEAD REPORT 2026-10-20 04:20 UTC
 
 Repositories: Urban-Project-AI cloned (control; working branch head 2fb9553, no owner-session commits since 02:10);
@@ -114,7 +195,6 @@ NEEDS FIXING (only you can do it)
 2. Upload the Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as separate PDFs under 6 MB (repeat).
 
 Team line: T-089 READY (verify first, depth check), T-093 CLAIMED worker 1; Q-58 new; 10 TODO (1 Track B); no merges.
-
 ## LEAD REPORT 2026-10-20 02:10 UTC
 
 Repositories: Urban-Project-AI cloned (control and working branch, head 2fb9553; no owner-session commits since 00:30);
@@ -171,7 +251,6 @@ NEEDS FIXING (only you can do it)
 
 Team line: merged T-081 r2, T-086, T-090; T-079 REJECTED -> T-093 (first code task); new T-094 (NO REPO CODE), T-095
 (queued); T-091 widened (Q-56); Q-56, Q-57 new; 12 TODO (1 Track B).
-
 ## LEAD REPORT 2026-10-20 00:30 UTC
 
 Repositories: Urban-Project-AI cloned (control and working branch, no owner-session commits since 21:00); Drive readable
@@ -233,7 +312,6 @@ NEEDS FIXING (only you can do it)
 2. Upload the Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as separate PDFs under 6 MB (repeat).
 
 Team line: merged T-075, T-084, T-083, T-088; READY T-079, T-081 r2; T-086 READY; new T-090, T-091, T-092; Q-54, Q-55 (Q-53 by worker 3).
-
 ## LEAD REPORT 2026-10-19 22:40 UTC (addendum: owner answers in the Lead session)
 
 - Q-48 = A: wet-room wall tiles from the floor to the underside of a 0.15 m decor ceiling (GF 3.65 m, 1F / 2F 3.35 m);
@@ -244,7 +322,6 @@ Team line: merged T-075, T-084, T-083, T-088; READY T-079, T-081 r2; T-086 READY
   Roofs each alone: 17 + 6 + 8 = 31 rolls (271.95 m2 cut); their strip plan and leftover metres come from new task T-089.
   Table with the cutting plan per wet room: docs/agents/research/ALSENAN_MEMBRANE_PER_WET_ROOM.csv.
 - No owner question open.
-
 ## LEAD REPORT 2026-10-19 22:20 UTC
 
 Repositories: Urban-Project-AI cloned (control and working branch); Drive readable (nothing new in the Alsenan folder
@@ -328,7 +405,6 @@ coverage; expansion-joint spacing and whether it is its own line (asked when the
 
 Team: MERGED T-043, T-076, T-082; READY T-075, T-084; T-081 rework TODO; new T-086, T-087, T-088; T-083 released; T-050
 closed; T-079 first code task; Q-48, Q-49 new.
-
 ## LEAD REPORT 2026-10-19 20:20 UTC
 
 Repositories: Urban-Project-AI cloned (control, working branch and the beam task branch); Drive readable (nothing new in
@@ -411,7 +487,6 @@ B-B show as no concrete; the 1F outer west strip and two facade pieces with no m
 
 Team: T-081 and T-043 READY (verifier now); new T-083, T-084 (hand tables, no code), T-085 (beam binding V2); T-076
 first code task; Q-44 new.
-
 ## LEAD REPORT 2026-10-19 18:20 UTC
 
 Repositories: Urban-Project-AI cloned (control and working branch); Drive readable. UrbanProjectsManager not needed this run.
@@ -506,7 +581,6 @@ NEEDS FIXING (only you can do it)
   download limit.
 
 Team line: merged T-072, T-074, T-077, T-078; READY T-013, T-080; new T-081, T-082; owner answers Q-31..Q-37 recorded; Q-42 new.
-
 ## LEAD REPORT 2026-10-19 16:20 UTC
 
 Repositories: Urban-Project-AI cloned (control and working branch); Drive readable. UrbanProjectsManager not needed this run.
