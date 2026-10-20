@@ -400,7 +400,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_quantity_truth.py` | 536 | MEDIUM | 2 | ARCH_QUANTITY_TRUTH_V1 - generic architectural quantity calculators with explicit evidence states. |
 | `arch_rooms.py` | 2250 | HIGH | 35 | ARCHITECTURAL SPACES (M9 S2, S4) - rooms of one floor plan from its wall linework, on the TS01 topology (generic). |
 | `arch_v211.py` | 659 | MEDIUM | 5 | ARCH_TAKEOFF_V2.11 (board task T-079): ARCH_TAKEOFF_V2.10 + the verified waterproofing pieces wired into a method. |
-| `arch_v212.py` | 272 | MEDIUM | 2 | ARCH_TAKEOFF_V2.12 (board task T-096): ARCH_TAKEOFF_V2.11 + complete membrane coverage (MEMBRANE_FOLD_V3). |
+| `arch_v212.py` | 273 | MEDIUM | 2 | ARCH_TAKEOFF_V2.12 (board task T-096): ARCH_TAKEOFF_V2.11 + complete membrane coverage (MEMBRANE_FOLD_V3). |
 | `arch_v27.py` | 1135 | MEDIUM | 5 | ARCH_TAKEOFF_V2.7 (M9 Phase 2B-7) - the drawing-interpretation corrections proven by independent acceptance tests |
 | `arch_v28.py` | 1028 | MEDIUM | 9 | ARCHITECTURAL TAKEOFF V2.8 (M9 Phase 2B-9) - heights read from the drawing, the opening schedule, window reveals |
 | `arch_v29.py` | 809 | MEDIUM | 4 | ARCH_TAKEOFF_V2.9 (Phase N10) - curved wall openings (generic; stdlib only). Read only by ARCH_TAKEOFF_V2.9. |
