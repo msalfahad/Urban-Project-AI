@@ -424,6 +424,8 @@ no material silent omissions.
 
 ## Contradictions and links to existing rules (main-chat audit, 2026-10-20)
 
+**WITHDRAWN by the owner's correction (2026-10-20 12:15 UTC).** The table below was the main chat's audit and was WRONG on X1, X3 and X5: it demoted owner methods without the owner's confirmation. The owner's correction: his earlier answers are his deliberate MANUAL BOQ METHOD and are preserved exactly. Q-43 / Q-48 wall-height formula, Q-45 values incl. waste 5 %, and every other owner method keep their applicability and priority. The engine must support BOTH an OWNER MANUAL METHOD result and a DRAWING-DERIVED result, show both, explain the difference, and say which basis applies. No agent may act on X1, X3 or X5. The owner is reviewing a reconciliation proposal; until he confirms, nothing changes in what is released, and no frozen method is touched.
+
 | # | Point | Existing rule or state | Effect |
 |---|---|---|---|
 | X1 | Q-52 says the height formula is an approximation | Owner 2026-10-19 (Q-43): plaster / paint wall = slab to slab - 0.60 beam - 0.15 / 0.20 decor - 0.10 floor (GF 3.65, 1F / 2F 3.35); Q-48 uses the same heights for wet-room wall tile | **Superseded as a release rule.** The values become a fallback and cross-check only. Every piece that releases per-room wall heights from the common formula (room levels / finish-height work) returns to per-room geometry; Q-48 wet-wall tile heights follow the same per-room method |
