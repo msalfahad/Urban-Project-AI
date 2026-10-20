@@ -4,6 +4,10 @@ At most 3 open. Each: the problem in one sentence, the measured gap, what to loo
 
 ## Open
 
+(none: R-01, R-02, R-05 answered 2026-10-20)
+
+## Answered
+
 ### R-01 Floor and ceiling heights from Kuwait villa section drawings (lead 2026-10-19)
 Problem: plaster and paint cannot be released without per-floor wall heights, and the engine has no bound section
 heights for real plans. Gap (Alsenan, T-001b): plaster 1151.14 m2 and paint 1191.13 m2 reference, 0 compared (29 and 13
@@ -30,6 +34,7 @@ Sharpest question now: reading dimension numbers, level marks (+1.00, +5.50) and
 elevation and section sheets: OCR of small rotated digits (Tesseract settings, permissive alternatives), line and tick
 detection on scans (OpenCV Hough, permissive), binding a scanned chain to a plan opening by position, and how reliable each
 is (published error rates). Never fabricate a value: unread numbers stay HELD. Unblocks T-083 (as a check), T-003.
+Answered (scout 2026-10-20 00:00 UTC): RESEARCH_LOG.md "2026-10-20 (scout run 00:00 UTC)", "Answer to R-01".
 
 ### R-02 Structural element populations from schedules and tables in DXF (lead 2026-10-19)
 Problem: column and ground-beam concrete is held because element sizes and heights are not tied to every instance.
@@ -52,6 +57,7 @@ keyboard maps T-047 uses. Look for: published code tables for the common Gulf / 
 X-ARAB, XARAB1B, ARB, "Arial Arabic SHX" families), glyph-number to Unicode tables, and how to read an SHX font file's
 glyph shapes to confirm a mapping (so a code is mapped only from a source, never inferred). Unblocks T-047 follow-ups,
 T-053, T-062.
+Answered (scout 2026-10-20 00:00 UTC): RESEARCH_LOG.md "2026-10-20 (scout run 00:00 UTC)", "Answer to R-02".
 
 ### R-05 Footings and other members drawn as block inserts or open outlines, and membrane rolls with offcuts reused (lead 2026-10-19 14:30)
 Problem (a): the engine recognises a footing only when it is a closed outline on the expected layer; footings drawn as
@@ -65,10 +71,8 @@ Problem (b): the owner wants the rolls to buy for the whole project, reusing off
 0.10 m laps, whole strips with cut edges). Look for: one-dimensional cutting-stock / bin-packing methods that give an
 exact or provably near-optimal roll count for strip lists, with a printable cutting plan; how sheet-membrane installers
 plan rolls in practice; permissive open-source solvers that need no network. Unblocks T-072.
+Answered (scout 2026-10-20 00:00 UTC): RESEARCH_LOG.md "2026-10-20 (scout run 00:00 UTC)", "Answer to R-05".
 
-## Answered
-
-(none yet)
 
 ## Withdrawn
 
