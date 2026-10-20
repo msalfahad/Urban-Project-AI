@@ -1,0 +1,10 @@
+piece,printed dimensions (p7757_arch_sheet04.pdf; 1st.FLOOR PLAN 1:100),grade,area m2,sum shown,note
+1F-L1 living area by its printed size (gross),480 x 520,PRINTED,24.960,4.80 x 5.20,520 runs from the bedroom wall face to the sea-side wall and includes the 1.20 strip in front of the two bedrooms
+1F-L2 arriving straight flight of the round stair inside the living rectangle (deducted from L1),width 7.02 - 5.87 = 1.15 (chains 587 + 480 = 702 + 365 = 10.67); length 240,DERIVED,-2.760,1.15 x 2.40,the flight also prints 125 (1.25 x 2.40 = 3.00 m2); 125 + 365 = 4.90 does not close on 480: CONFLICT C-1 (the CAD 125 dimension overruns the 480 and 365 end points by 0.05 m each: stringer outside to outside)
+1F-L net living floor,L1 + L2,DERIVED,22.200,24.96 - 2.76,with the 125 reading: 21.96 m2 (difference 0.24 m2 held under C-1)
+1F-C1 corridor strip along the void (in front of the two bedrooms and the lift),587 x 120,PRINTED,7.044,5.87 x 1.20,north of the void; floor at +5.50 (printed in the corridor)
+1F-C2 main dog-leg stair arrival landing,(120 + 10 + 120) x 195,PRINTED,4.875,2.50 x 1.95,the floor from the top step of the main stair to the bedroom wall; +5.50 printed on it
+1F-C3 connector between landing and strip (under and beside the lift),depths 125 and 240 printed; lengths 1.15 / 0.85 / 1.67 from CAD end points only,CAD (not printed),4.796,1.15 x 1.25 + 0.85 x 1.20 + 1.67 x 1.40,not released: two of the three lengths are CAD end-point readings; the sanitary sheets say dimensions are not to be scaled
+sum of printed pieces L + C1 + C2,,DERIVED,34.119,22.200 + 7.044 + 4.875,
+sum with C3,,CAD,38.915,34.119 + 4.796,freelancer living row 38.96 m2: -0.045 m2 (-0.1 %)
+engine V2.9 face (T-086),,engine,44.870,,44.87 - 38.915 = 5.955 m2 more than the hand pieces; the 1.47 x 3.05 = 4.48 m2 passage (T-086 / T-088) is the likely part; not hand-checked
