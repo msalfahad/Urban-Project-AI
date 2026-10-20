@@ -117,6 +117,26 @@ line, with its role and length. This means the window-threshold edge and the unr
 "held in the bounded skirting line". The acceptance test is `gross - sum(deductions) = net` on every skirting line of
 the T-019 villas and Alsenan, with 0 quantity change.
 
+## Same run, next item of the same topic: V2.8 -> V2.9 (head start on T-016b, not claimed)
+
+This was done because the owner's task-size rule says to take the next related item. With the same set-up
+(Mode A, S2, `--layer-roles`), the verifier reproduces the N10 report exactly: **20 differences: 5 VERIFIED,
+14 EXPLAINED_UNVERIFIED, 1 CONTRADICTED.** By hand:
+
+| Line(s) | Engine V2.9 | Hand reading | Verdict proposal |
+|---|---|---|---|
+| 2F ARCH.FACADE_RUN | 29.800 m | The outline is a rectangle with outer faces at x -234945.2 / -226845.2 and y -798593.5 / -791793.5 (mm): 8.100 x 6.800 m, plate 55.08 m2, perimeter 2 x (8.1 + 6.8) = **29.800**. Drawn on layer 1: west 5.60 + east 6.80 + south 7.10 + north 5.30 = 24.80 m of wall face. The openings close the rest: west 1.20 (a layer-5 line), south 1.00 (door), north 2.80 (layer 5) = 5.00 m, which equals the engine's opening widths (1.0 + 1.0 + 0.6 + 1.2 + 1.2). | VERIFIED (hand = tool) |
+| 1F ARCH.FACADE_RUN (the CONTRADICTED one) | 63.168865 m | The outer face is at x -175222.5 (wall line B60 / B61; outside is +x, checked by point-in-plate). A 500 mm wall gap (y -797101.2 ... -796601.2) holds a window frame (layer W, x -175422.5 ... -175302.5) in the inner 120 mm only. The outer 80 mm is open, but the face line runs straight across it (line C35, layer 5, at x -175222.5). The engine's ring steps 80 mm in, runs 467.3 mm along the frame, and steps 80 mm out. Closed at the face line: 63.168865 - 2 x 0.080 = **63.008865 m**; the reader gives 63.008863. | CONTRADICTED confirmed. Engine +0.160 m (+0.25 %), defect D-N10-01; still the same in the released V2.11 (63.168865). Hand truth for T-014. |
+| GF ARCH.FACADE_RUN | 98.886694 m | **Partly checked.** The ring re-adds from its own roles: wall 60.308951 + column 7.643333 + cap 0.198333 + window 6.994659 + 16 openings 23.741418 = 98.886694. At the north end of the curved glazed bay (glazing radius 2.330 m, centre about 0.33 m outside the wall line), the ring goes round an 80 x 50 mm pocket: column side 50 mm, wall face 80 mm, then 50 mm down to the glazing frame end. This is the D-N10-01 pattern; closed across at y -792043.54 it is 0.10 m shorter. The bay's south end has no pocket. The other 150 edges were not read by hand. | UNRESOLVED. 98.787 m if the D-N10-01 convention (close at the face line) also applies to this pocket; the reader's own outline is incomplete there (D-N10-02, T-015). |
+| ARCH.FACADE + FIN.EXT.FINISH, 3 floors (6 lines) | HELD | The plan level marks print F.F.L.: GF +1.00, 1F +5.50, 2F +9.70 (layer LEVEL). One section band (layer 5) prints +0.15 / +0.30 / +1.00 / +4.30 / +5.50, with no +9.70 and no parapet top. Owner Q-07 says the facade height runs slab top to slab top, and F.F.L. is not a slab top. No exterior finish is printed. | Holds are right: missing stays missing. The hold text "next floor's F.F.L. not in a section" is out of date against Q-07; T-031 replaces it. |
+| ARCH.WALL_PANEL / WALL_VOLUME, 3 floors (6 lines) | HELD | No T.O.S. or beam soffit is printed for the masonry height; owner Q-60 is open. | Holds are right |
+| ARCH.WINDOW_REVEAL, curved opening COP-001 | HELD | The sill is not drawn, so the reveal strip's floor or wall status is unknown. | Hold is right |
+| 1F curved window count, plaster, paint, skirting (4 lines) | VERIFIED by the tool | not re-done by hand | unchanged |
+
+So V2.8 -> V2.9 has 13 held lines whose holds are right, 1 run verified by hand (2F), 1 contradiction confirmed
+with a hand number (1F, +0.160 m) and 1 run left UNRESOLVED (GF, 0.10 m pocket found, the rest not hand-read). This
+does not close T-016b. The Lead decides whether this counts toward it.
+
 ## What is not covered
 
 - This checks the record's geometry and arithmetic, not the conventions:
