@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 612 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 613 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2411 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2413 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1318 | pytest suites, one folder per round. |
+| `tests/` | 1320 | pytest suites, one folder per round. |
 | `tools/` | 106 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (260 modules)
+## `engine/source/` (261 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -588,6 +588,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `semantic_zones.py` | 169 | MEDIUM | 4 | PHYSICAL SPACE != SEMANTIC ZONE != TRADE MEASUREMENT REGION (R8.9). |
 | `shaft_geometry.py` | 331 | CRITICAL | 1 | SHAFT GEOMETRY - lift shafts and pits: wall rings, wall pieces, openings, storeys, tie-beam triggers (generic). |
 | `shell_line_distribution.py` | 112 | CRITICAL | 1 | SHELL LINE DISTRIBUTION - how lines laid on a spherical cap add up under different layout rules (generic, stdlib). |
+| `skirting_deduction_audit.py` | 240 | MEDIUM | 1 | SKIRTING DEDUCTION AUDIT (T-106): every released skirting line must re-add from its own trail. |
 | `slab_engine.py` | 652 | CRITICAL | 5 | SLAB ENGINE (M2) - slab panels, openings, thickness and uncovered cells of one plan sheet (generic, stdlib). |
 | `slab_layered_mesh.py` | 243 | CRITICAL | 1 | SLAB LAYERED MESH - plan callouts, thickness tags and top / bottom rate meshes on straight-edged slab panels (generic). |
 | `slab_opening_reconciliation.py` | 69 | MEDIUM | 1 | SLAB_OPENING_RECONCILIATION (generic): gross outline - openings = net plate, every removed m2 has an opening ID. |
@@ -769,7 +770,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `synthetic_villa_m6.py` | 698 | CRITICAL | 5 | SYNTHETIC VILLA M6 - completeness cases drawn onto the M2 synthetic villa, with the truth of what was drawn. |
 | `synthetic_villa_m8.py` | 211 | CRITICAL | 5 | SYNTHETIC VILLA M8 - the M6 completeness villa with the DESIGN of every scope element it draws, so that the |
 | `urban_boq_m2.py` | 603 | CRITICAL | 17 | URBAN BOQ M2 - the one-command BOQ with ROUTE G, the generic engine, on top of the frozen M1 pipeline. |
-| `urban_boq_m9.py` | 3170 | HIGH | 34 | URBAN BOQ M9 (S1) - canonical BOQ lines, room material plans and the room-by-room workbook, on top of route G. |
+| `urban_boq_m9.py` | 3170 | HIGH | 35 | URBAN BOQ M9 (S1) - canonical BOQ lines, room material plans and the room-by-room workbook, on top of route G. |
 | `urban_intake.py` | 225 | CRITICAL | 27 | URBAN INTAKE (M2) - one drawing file -> a plain, source-pointed geometry record for the generic engine. |
 | `urban_project_run.py` | 321 | CRITICAL | 1 | URBAN PROJECT RUN (M7) - one manifest per project; the blind protocol enforced by the tool, not remembered. |
 | `urban_structural_boq.py` | 602 | CRITICAL | 3 | URBAN STRUCTURAL BOQ (M1) - one command from a drawing set to a planning BOQ, an exception report, Excel and PDF. |
@@ -790,9 +791,9 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
 | `__main__.py` | 45 | MEDIUM | 0 | python3 -m tools.synth_villa OUT_DIR [--engine] [--method M]: write the T-019 first-run villas (DXF + truth JSON) |
-| `build.py` | 299 | MEDIUM | 4 | Write a synthetic villa (villas.py) as a DXF and its truth as JSON (T-019). |
+| `build.py` | 299 | MEDIUM | 5 | Write a synthetic villa (villas.py) as a DXF and its truth as JSON (T-019). |
 | `compare.py` | 158 | MEDIUM | 4 | Run the architectural engine on a synthetic villa and compare its output with the villa's truth (T-019). |
-| `villas.py` | 218 | MEDIUM | 5 | The three first synthetic villas of T-019 (own geometry, no client drawing). Every coordinate is in metres in the |
+| `villas.py` | 218 | MEDIUM | 6 | The three first synthetic villas of T-019 (own geometry, no client drawing). Every coordinate is in metres in the |
 
 ## `pipeline/` (4 modules)
 
@@ -994,6 +995,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t096_step_upturn/` | 1 |
 | `tests/t099_room_census_guard/` | 1 |
 | `tests/t104_wall_frames/` | 1 |
+| `tests/t106_skirting_audit/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1124,6 +1126,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t100/` | 3 |
 | `research/agents_t103/` | 3 |
 | `research/agents_t104/` | 2 |
+| `research/agents_t106/` | 2 |
 | `research/agents_t113/` | 4 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
