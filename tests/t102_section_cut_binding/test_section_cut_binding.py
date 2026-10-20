@@ -31,7 +31,6 @@ the sections printed in mm (DIMLFAC 0.25): every state and volume identical.
 
 from __future__ import annotations
 
-import math
 import sys
 from pathlib import Path
 
