@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 618 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 619 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2459 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2463 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1326 | pytest suites, one folder per round. |
+| `tests/` | 1328 | pytest suites, one folder per round. |
 | `tools/` | 106 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (266 modules)
+## `engine/source/` (267 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -609,6 +609,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `space_model.py` | 196 | MEDIUM | 3 | SPACE CONNECTIVITY MODEL (M9 Phase 2B-1, ARCH_TAKEOFF_V2.3 only) - every space a node with independently supported |
 | `special_column_components.py` | 245 | CRITICAL | 1 | SPECIAL COLUMN COMPONENTS - turned (twisted), dead and planted columns (generic). |
 | `stair_fit_checks.py` | 95 | CRITICAL | 1 | STAIR FIT CHECKS - whether a riser arrangement fits its plan and section: run ends, clearances to a beam band, |
+| `stair_flight_once_v1.py` | 313 | MEDIUM | 1 | STAIR FLIGHT ONCE V1 - each stair flight is measured on ONE storey: a flight drawn again on the plan above is listed, |
 | `stair_floor_residue.py` | 371 | MEDIUM | 1 | STAIR FLOOR RESIDUE V1 - the floor finish of a room face that holds stair flights, a stair well or a stair opening. |
 | `stair_generic.py` | 65 | MEDIUM | 1 | STAIR (M2, generic, light) - one straight flight from a floor-to-floor rise and a COUNTED riser number: geometry, |
 | `stair_geometry.py` | 336 | CRITICAL | 6 | STAIR GEOMETRY - stair flights, landings and winders from drawn treads and stated levels (generic). |
@@ -1006,6 +1007,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t120_membrane_release_v213/` | 1 |
 | `tests/t124_membrane_offcut_once/` | 1 |
 | `tests/t126_route_g_scope/` | 1 |
+| `tests/t135_stair_flight_once/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1151,6 +1153,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t124/` | 3 |
 | `research/agents_t126/` | 2 |
 | `research/agents_t129/` | 4 |
+| `research/agents_t135/` | 4 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |
