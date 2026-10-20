@@ -246,6 +246,7 @@ floor up, and finishing it with the stair keeps the top nosing and the landing i
 step; under B the two floors of one stair would be finished differently.
 Waits on: second-floor floor tiles and stair marble (the tiling table; the stair ledger T-111); arrival landings inside a
 named lobby on every villa.
+Answer: A, CONDITIONAL. Treat the 4.875 m2 second-floor main-stair arrival as marble IF the drawing geometry establishes that it is part of the main stair landing. Candidate lobby porcelain 3.900 m2; candidate total stair marble 49.240 m2. Verify the actual polygon and confirm there is no double counting; if the geometry does not support this classification, keep it HELD. (owner in the main chat, 2026-10-20 20:10 UTC; docs/agents/OWNER_MANAGEMENT_DECISION_2026-10-20.md)
 
 Earlier note: Q-64, Q-65 and Q-66 answered by the owner 2026-10-20 16:23 (moved to Answered by the Lead 18:20). Q-67, Q-68, Q-69 new (Lead 18:20).
 
