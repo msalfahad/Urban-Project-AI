@@ -200,4 +200,7 @@ OTHER_REBAR_AWARE = (
     # Phase N10: the structural formwork / excavation module audits route G's reinforcement rows (unit mass vs
     # d^2/162, each row's derivation, no ratio labelled as measured); stdlib only, writes no reinforcement quantity
     "engine/source/struct_n10.py",
+    # T-131: the V3.0 candidate names the STR.REBAR lines of a re-measured strap only to LIST them as downstream
+    # (unchanged, outside the candidate); it writes no reinforcement quantity and applies no ratio
+    "engine/source/arch_v30.py",
 )

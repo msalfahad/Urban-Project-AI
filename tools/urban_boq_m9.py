@@ -179,6 +179,14 @@ ARCH_POLICY_ID_V213 = "URBAN_BOQ_T120_ARCH_V2_13"
 V213_KNOWLEDGE = V212_KNOWLEDGE
 V271_FAMILY = (V271, V28, V29, V210, V211, V212, V213)
 V27_FAMILY = (V27, V271, V28, V29, V210, V211, V212, V213)
+# T-131: ARCH_TAKEOFF_V3.0 = ONE opt-in BOQ candidate (engine.source.arch_v30): the run is ARCH_TAKEOFF_V2.13 exactly
+# (its outputs unchanged) + route G, then the checker-verified pieces (straps, open-air passage walls, stair floor
+# residue; the V2.13 membrane lines as they are) change only their named lines in the V3_0_* files; every other line
+# is the base line. Not in ARCH_METHODS (no earlier method or check sees it); not the released default (owner
+# 2026-10-20 section 2); rollback = run ARCH_TAKEOFF_V2.9.
+V30 = "ARCH_TAKEOFF_V3.0"
+ARCH_POLICY_ID_V30 = "URBAN_BOQ_T131_ARCH_V3_0"
+CANDIDATE_METHODS = (V30,)
 M9_DIR = "m9"
 CREATED = datetime(2026, 1, 1)
 
@@ -2871,6 +2879,11 @@ def _blocked(out, report, conversions, *, code, what, extra=None):
 def cmd_arch(a):
     from engine.source import discovery as DS
     facts = json.loads(Path(a.facts).read_text(encoding="utf-8")) if a.facts else None
+    v30 = a.method == V30                     # T-131: the candidate runs ARCH_TAKEOFF_V2.13 exactly, then integrates
+    if v30:
+        a.method = V213
+    elif getattr(a, "v30_decisions", None) or getattr(a, "v30_released", None):
+        raise SystemExit("--v30-decisions / --v30-released need --method ARCH_TAKEOFF_V3.0")
     decisions = None
     if getattr(a, "decisions", None):
         if a.method not in (V23, V24, V25, V26, V27, V271, V28, V29, V210, V211, V212, V213):
@@ -2936,14 +2949,19 @@ def cmd_arch(a):
             report = DS.new_report(inputs_rec, method=a.method)
             DS.set_stage(report, "0_intake", pre)
             raise DS.AdmissionBlocked(report)
-        room, arch, E = arch_compute(plan, method=a.method, facts=facts, layer_roles=roles or None,
-                                     reference_areas=refs, project_id=a.project, strict=a.strict_admission,
-                                     units=a.units, region_specs=a.region, accept_xrefs=tuple(a.accept_missing_xref or ()),
-                                     extra_documents=[d for d in (inputs_rec if admit else ()) if d["role"] != "plan"],
-                                     admission_findings=pre, **({"decisions": decisions} if decisions else {}),
-                                     **({"project_rules": project_rules} if project_rules is not None else {}),
-                                     **({"independent_checks": independent_checks} if independent_checks is not None
-                                        else {}))
+        from contextlib import nullcontext
+        if v30:
+            from engine.source import arch_v30 as A30
+        with (A30.capture() if v30 else nullcontext()) as v30cap:      # T-131: read-only captures for the pieces
+            room, arch, E = arch_compute(plan, method=a.method, facts=facts, layer_roles=roles or None,
+                                         reference_areas=refs, project_id=a.project, strict=a.strict_admission,
+                                         units=a.units, region_specs=a.region,
+                                         accept_xrefs=tuple(a.accept_missing_xref or ()),
+                                         extra_documents=[d for d in (inputs_rec if admit else ()) if d["role"] != "plan"],
+                                         admission_findings=pre, **({"decisions": decisions} if decisions else {}),
+                                         **({"project_rules": project_rules} if project_rules is not None else {}),
+                                         **({"independent_checks": independent_checks} if independent_checks is not None
+                                            else {}))
     except DS.AdmissionBlocked as ex:
         return _blocked(out, ex.report, conversions, code=DS.EXIT_ADMISSION_BLOCKED, what="ADMISSION_BLOCKED")
     except CompletenessFailed as ex:
@@ -2973,6 +2991,7 @@ def cmd_arch(a):
         arch["rules_sheet"]["invalidation"] = inv
         arch["run"]["v2_4"]["rules_sheet"]["invalidation"] = inv["state"]
     s_lines, cov, conv = (), None, None
+    R = None
     if structural:
         # the structural drawing through the unchanged route G (its own outputs in OUT/structural), its lines into the
         # same room-by-room workbook (STRUCTURAL sheet; reinforcement stays its own line family, never a ratio)
@@ -3015,6 +3034,25 @@ def cmd_arch(a):
         written = res["files"] + (["URBAN_ROOM_BOQ.xlsx"] if "xlsx" in res else []) + svgs
         (out / V24_MANIFEST).write_text(_j(_v24_manifest(out, written, arch)), encoding="utf-8")
         svgs.append(V24_MANIFEST)
+    v30rec = None
+    if v30:
+        # T-131: ARCH_TAKEOFF_V3.0 candidate files beside the unchanged V2.13 outputs (engine.source.arch_v30)
+        base_lines = list(s_lines) + room["lines"]
+        dec = A30.load_decisions(json.loads(Path(a.v30_decisions).read_text(encoding="utf-8"))
+                                 if getattr(a, "v30_decisions", None) else None, room["project_id"])
+        released = None
+        if getattr(a, "v30_released", None):
+            released = json.loads(Path(a.v30_released).read_text(encoding="utf-8"))
+            released = released["lines"] if isinstance(released, dict) else released
+        ch_s, log_s = A30.strap_changes(R, structural, base_lines)
+        ch_p, log_p = A30.passage_changes(v30cap, base_lines, arch["rooms"], arch["regions"], dec)
+        ch_f, log_f = A30.stair_changes(room, arch, E)
+        names, ident, _led = A30.write(out, base_lines, ch_s + ch_p + ch_f, [log_s, log_p, log_f], dec,
+                                       {"plan": Path(plan).name, "structural": Path(structural).name if structural
+                                        else None, "released_lines": Path(a.v30_released).name
+                                        if getattr(a, "v30_released", None) else None}, released)
+        svgs += names
+        v30rec = {"method": V30, "base": V213, "released_default": False, "identity": ident}
     ev = Counter(ln["evidence_state"] for ln in room["lines"])
     print(json.dumps({"method": a.method, "regions": [{"floor": r["floor"], "state": r["stage_state"],
                                                         "rooms": r.get("space_counts"), "lines": r.get("lines"),
@@ -3024,7 +3062,7 @@ def cmd_arch(a):
                       "unresolved": len(room["unresolved"]), "coverage": CS.summary(rows)["by_run_state"],
                       "outputs": res["files"] + (["URBAN_ROOM_BOQ.xlsx"] if "xlsx" in res else []) + svgs,
                       **({"admission": {k: v for k, v in (arch["discovery"].get("gates") or {}).items() if k != "rule"}}
-                         if admit else {})}, indent=1))
+                         if admit else {}), **({"candidate": v30rec} if v30rec else {})}, indent=1))
     return 0
 
 
@@ -3147,7 +3185,7 @@ def main(argv=None):
     p.add_argument("--drawings", nargs=1, required=True,
                    help="one architectural plan DXF (a DWG goes through tools/dwg_adapter.py: an external converter)")
     p.add_argument("--out", required=True)
-    p.add_argument("--method", required=True, choices=ARCH_METHODS,
+    p.add_argument("--method", required=True, choices=ARCH_METHODS + CANDIDATE_METHODS,
                    help="the versioned architectural takeoff method (no default: the route is opt-in until validated); "
                         "ARCH_TAKEOFF_V2 (S6) adds the drawing admission, unit-relative tolerances, empty-band plan "
                         "regions and the completeness gates (exit 2: admission blocked, 3: completeness failed)")
@@ -3173,6 +3211,10 @@ def main(argv=None):
     p.add_argument("--as-of", default=datetime.now().strftime("%Y-%m-%d"), help="with --structural: report date")
     p.add_argument("--no-m9-xlsx", action="store_true")
     p.add_argument("--no-svg", action="store_true")
+    p.add_argument("--v30-decisions", help="ARCH_TAKEOFF_V3.0: project decisions (URBAN_V30_PROJECT_DECISIONS_V1) "
+                                           "binding an owner answer with its condition check (e.g. Q-67 A)")
+    p.add_argument("--v30-released", help="ARCH_TAKEOFF_V3.0: BOQ_LINES.json of the released ARCH_TAKEOFF_V2.9 run "
+                                          "on the same drawings (the ledger's 'before released' column)")
     # S6: the drawing admission (always on for ARCH_TAKEOFF_V2) and its reviewer inputs (recorded, never defaulted)
     p.add_argument("--strict-admission", action="store_true",
                    help="ARCH_TAKEOFF_V1 behind the S6 drawing admission: a fatal finding stops the run with exit 2 and "
