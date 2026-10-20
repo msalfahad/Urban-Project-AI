@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 601 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 602 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2369 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2373 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1304 | pytest suites, one folder per round. |
+| `tests/` | 1305 | pytest suites, one folder per round. |
 | `tools/` | 106 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (249 modules)
+## `engine/source/` (250 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -527,7 +527,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `physical_measurement_state.py` | 87 | MEDIUM | 1 | Three independent state axes for every quantity (generic). |
 | `physical_wall_faces.py` | 80 | MEDIUM | 1 | PHYSICAL_WALL_FACE_REGISTER - wall faces exist before any finish decision (generic). |
 | `planar_shadow_topology.py` | 334 | CRITICAL | 1 | PLANAR_SHADOW_TOPOLOGY_V1 - an independent planar-graph route for validating physical spaces (Route B). |
-| `plane_poly.py` | 167 | HIGH | 10 | PLANE POLYGONS (M9 S2) - the small set of exact planar operations the polygon layouts need (generic; stdlib only). |
+| `plane_poly.py` | 167 | HIGH | 11 | PLANE POLYGONS (M9 S2) - the small set of exact planar operations the polygon layouts need (generic; stdlib only). |
 | `pool_checklist.py` | 302 | MEDIUM | 1 | POOL CHECK LIST V1 (T-057) - for every villa with a pool: is a pool pump room drawn, where are the main manholes, |
 | `pool_qto.py` | 589 | CRITICAL | 3 | SWIMMING POOL QTO - source-controlled concrete and reinforcement quantities for a pool shell (generic). |
 | `population_conservation.py` | 88 | MEDIUM | 4 | PHYSICAL_POPULATION_CONSERVATION (generic). |
@@ -614,7 +614,8 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `terminal_ledger.py` | 58 | MEDIUM | 2 | TERMINAL_OBJECT_LEDGER - every admitted quantity-bearing object ends in exactly one terminal record. |
 | `text_role.py` | 173 | MEDIUM | 9 | TEXT ROLE AUTHORITY (R8.9): a text is not a room identity merely because it lies inside a polygon. |
 | `text_role_v3.py` | 124 | MEDIUM | 1 | TEXT ROLE V3 - text_role (TEXT_ROLE_POLICY_V2) with tag families scoped to the SOURCE revision. |
-| `tile_layout.py` | 440 | MEDIUM | 7 | TILE LAYOUT (M9 S1) - exact cutting plan of a RECTANGULAR surface for one tile size (generic; stdlib only). |
+| `tile_count.py` | 301 | MEDIUM | 1 | TILE COUNT (T-087) - tiles to buy per room from a laid grid, with the owner's joint widths (generic, every villa). |
+| `tile_layout.py` | 440 | MEDIUM | 8 | TILE LAYOUT (M9 S1) - exact cutting plan of a RECTANGULAR surface for one tile size (generic; stdlib only). |
 | `topology.py` | 1244 | CRITICAL | 39 | ROOM / SPACE TOPOLOGY (R8.8): certified planar sites from positively admitted boundary geometry. |
 | `topology_closures.py` | 197 | HIGH | 30 | ZERO-MATERIAL TOPOLOGY CLOSURES (R8.11). |
 | `topology_crosscheck.py` | 234 | HIGH | 6 | TOPOLOGY CROSS-CHECK (R8.8 addendum): an independent GEOS reconstruction of TS01's straight-edged sites. |
@@ -973,6 +974,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t081_room_levels/` | 2 |
 | `tests/t082_opening_height_pdf/` | 1 |
 | `tests/t086_finish_materials/` | 1 |
+| `tests/t087_tile_count/` | 1 |
 | `tests/t089_cutting_plan/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
@@ -1084,6 +1086,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t083/` | 2 |
 | `research/agents_t084/` | 3 |
 | `research/agents_t086/` | 4 |
+| `research/agents_t087/` | 4 |
 | `research/agents_t088/` | 2 |
 | `research/agents_t089/` | 4 |
 | `research/agents_t090/` | 3 |
