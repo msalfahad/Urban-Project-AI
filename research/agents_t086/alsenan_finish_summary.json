@@ -1,0 +1,1819 @@
+{
+ "method": "FINISH_MATERIALS_TABLE_V1",
+ "per_kind": {
+  "WET_FLOOR": {
+   "area_m2": 85.6217,
+   "mortar_m3_low": 3.596111,
+   "mortar_m3_high": 5.394168,
+   "cement_bags_low": 28.768888,
+   "cement_bags_high": 43.153344,
+   "sand_m3_low": 3.955725,
+   "sand_m3_high": 5.933587,
+   "adhesive_bags": 17.12434,
+   "rows": 18,
+   "held_rows": [],
+   "not_in_sum": {},
+   "cement_bags_to_buy_low": 29,
+   "cement_bags_to_buy_high": 44,
+   "adhesive_bags_to_buy": 18
+  },
+  "DRY_FLOOR": {
+   "area_m2": 200.754872,
+   "mortar_m3_low": 6.323779,
+   "mortar_m3_high": 8.431705,
+   "cement_bags_low": 50.590232,
+   "cement_bags_high": 67.45364,
+   "sand_m3_low": 6.956156,
+   "sand_m3_high": 9.274876,
+   "adhesive_bags": 40.150974,
+   "rows": 18,
+   "held_rows": [
+    "DF-1F-RFFE7AF",
+    "DF-GF-OPEN",
+    "DF-GF-R31F8AE",
+    "DF-GF-R7B7A5D",
+    "DF-GF-RF002DC"
+   ],
+   "not_in_sum": {
+    "area_m2": [
+     "DF-GF-OPEN",
+     "DF-GF-R31F8AE",
+     "DF-GF-RF002DC",
+     "DF-GF-R7B7A5D",
+     "DF-1F-RFFE7AF"
+    ],
+    "mortar_m3_low": [
+     "DF-GF-OPEN",
+     "DF-GF-R31F8AE",
+     "DF-GF-RF002DC",
+     "DF-GF-R7B7A5D",
+     "DF-1F-RFFE7AF"
+    ],
+    "mortar_m3_high": [
+     "DF-GF-OPEN",
+     "DF-GF-R31F8AE",
+     "DF-GF-RF002DC",
+     "DF-GF-R7B7A5D",
+     "DF-1F-RFFE7AF"
+    ],
+    "cement_bags_low": [
+     "DF-GF-OPEN",
+     "DF-GF-R31F8AE",
+     "DF-GF-RF002DC",
+     "DF-GF-R7B7A5D",
+     "DF-1F-RFFE7AF"
+    ],
+    "cement_bags_high": [
+     "DF-GF-OPEN",
+     "DF-GF-R31F8AE",
+     "DF-GF-RF002DC",
+     "DF-GF-R7B7A5D",
+     "DF-1F-RFFE7AF"
+    ],
+    "sand_m3_low": [
+     "DF-GF-OPEN",
+     "DF-GF-R31F8AE",
+     "DF-GF-RF002DC",
+     "DF-GF-R7B7A5D",
+     "DF-1F-RFFE7AF"
+    ],
+    "sand_m3_high": [
+     "DF-GF-OPEN",
+     "DF-GF-R31F8AE",
+     "DF-GF-RF002DC",
+     "DF-GF-R7B7A5D",
+     "DF-1F-RFFE7AF"
+    ],
+    "adhesive_bags": [
+     "DF-GF-OPEN",
+     "DF-GF-R31F8AE",
+     "DF-GF-RF002DC",
+     "DF-GF-R7B7A5D",
+     "DF-1F-RFFE7AF"
+    ]
+   },
+   "cement_bags_to_buy_low": 51,
+   "cement_bags_to_buy_high": 68,
+   "adhesive_bags_to_buy": 41
+  },
+  "WET_WALL": {
+   "area_m2": null,
+   "mortar_m3_low": null,
+   "mortar_m3_high": null,
+   "cement_bags_low": null,
+   "cement_bags_high": null,
+   "sand_m3_low": null,
+   "sand_m3_high": null,
+   "adhesive_bags": null,
+   "rows": 18,
+   "held_rows": [
+    "WW-1F-02",
+    "WW-1F-03",
+    "WW-1F-07",
+    "WW-1F-08",
+    "WW-1F-09",
+    "WW-1F-12",
+    "WW-2F-02",
+    "WW-GF-02",
+    "WW-GF-03",
+    "WW-GF-05",
+    "WW-GF-06",
+    "WW-GF-07",
+    "WW-GF-10",
+    "WW-GF-11",
+    "WW-GF-12",
+    "WW-GF-13",
+    "WW-GF-14",
+    "WW-GF-16"
+   ],
+   "not_in_sum": {
+    "area_m2": [
+     "WW-GF-02",
+     "WW-GF-03",
+     "WW-GF-05",
+     "WW-GF-06",
+     "WW-GF-10",
+     "WW-GF-11",
+     "WW-GF-12",
+     "WW-GF-13",
+     "WW-GF-14",
+     "WW-GF-16",
+     "WW-1F-02",
+     "WW-1F-03",
+     "WW-1F-07",
+     "WW-1F-08",
+     "WW-1F-09",
+     "WW-1F-12",
+     "WW-2F-02",
+     "WW-GF-07"
+    ],
+    "mortar_m3_low": [
+     "WW-GF-02",
+     "WW-GF-03",
+     "WW-GF-05",
+     "WW-GF-06",
+     "WW-GF-10",
+     "WW-GF-11",
+     "WW-GF-12",
+     "WW-GF-13",
+     "WW-GF-14",
+     "WW-GF-16",
+     "WW-1F-02",
+     "WW-1F-03",
+     "WW-1F-07",
+     "WW-1F-08",
+     "WW-1F-09",
+     "WW-1F-12",
+     "WW-2F-02",
+     "WW-GF-07"
+    ],
+    "mortar_m3_high": [
+     "WW-GF-02",
+     "WW-GF-03",
+     "WW-GF-05",
+     "WW-GF-06",
+     "WW-GF-10",
+     "WW-GF-11",
+     "WW-GF-12",
+     "WW-GF-13",
+     "WW-GF-14",
+     "WW-GF-16",
+     "WW-1F-02",
+     "WW-1F-03",
+     "WW-1F-07",
+     "WW-1F-08",
+     "WW-1F-09",
+     "WW-1F-12",
+     "WW-2F-02",
+     "WW-GF-07"
+    ],
+    "cement_bags_low": [
+     "WW-GF-02",
+     "WW-GF-03",
+     "WW-GF-05",
+     "WW-GF-06",
+     "WW-GF-10",
+     "WW-GF-11",
+     "WW-GF-12",
+     "WW-GF-13",
+     "WW-GF-14",
+     "WW-GF-16",
+     "WW-1F-02",
+     "WW-1F-03",
+     "WW-1F-07",
+     "WW-1F-08",
+     "WW-1F-09",
+     "WW-1F-12",
+     "WW-2F-02",
+     "WW-GF-07"
+    ],
+    "cement_bags_high": [
+     "WW-GF-02",
+     "WW-GF-03",
+     "WW-GF-05",
+     "WW-GF-06",
+     "WW-GF-10",
+     "WW-GF-11",
+     "WW-GF-12",
+     "WW-GF-13",
+     "WW-GF-14",
+     "WW-GF-16",
+     "WW-1F-02",
+     "WW-1F-03",
+     "WW-1F-07",
+     "WW-1F-08",
+     "WW-1F-09",
+     "WW-1F-12",
+     "WW-2F-02",
+     "WW-GF-07"
+    ],
+    "sand_m3_low": [
+     "WW-GF-02",
+     "WW-GF-03",
+     "WW-GF-05",
+     "WW-GF-06",
+     "WW-GF-10",
+     "WW-GF-11",
+     "WW-GF-12",
+     "WW-GF-13",
+     "WW-GF-14",
+     "WW-GF-16",
+     "WW-1F-02",
+     "WW-1F-03",
+     "WW-1F-07",
+     "WW-1F-08",
+     "WW-1F-09",
+     "WW-1F-12",
+     "WW-2F-02",
+     "WW-GF-07"
+    ],
+    "sand_m3_high": [
+     "WW-GF-02",
+     "WW-GF-03",
+     "WW-GF-05",
+     "WW-GF-06",
+     "WW-GF-10",
+     "WW-GF-11",
+     "WW-GF-12",
+     "WW-GF-13",
+     "WW-GF-14",
+     "WW-GF-16",
+     "WW-1F-02",
+     "WW-1F-03",
+     "WW-1F-07",
+     "WW-1F-08",
+     "WW-1F-09",
+     "WW-1F-12",
+     "WW-2F-02",
+     "WW-GF-07"
+    ],
+    "adhesive_bags": [
+     "WW-GF-02",
+     "WW-GF-03",
+     "WW-GF-05",
+     "WW-GF-06",
+     "WW-GF-10",
+     "WW-GF-11",
+     "WW-GF-12",
+     "WW-GF-13",
+     "WW-GF-14",
+     "WW-GF-16",
+     "WW-1F-02",
+     "WW-1F-03",
+     "WW-1F-07",
+     "WW-1F-08",
+     "WW-1F-09",
+     "WW-1F-12",
+     "WW-2F-02",
+     "WW-GF-07"
+    ]
+   },
+   "cement_bags_to_buy_low": null,
+   "cement_bags_to_buy_high": null,
+   "adhesive_bags_to_buy": null
+  },
+  "STAIR_FLIGHT": {
+   "area_m2": 34.86,
+   "mortar_m3_low": 1.09809,
+   "mortar_m3_high": 1.09809,
+   "cement_bags_low": null,
+   "cement_bags_high": null,
+   "sand_m3_low": null,
+   "sand_m3_high": null,
+   "adhesive_bags": null,
+   "rows": 10,
+   "held_rows": [
+    "ST-MS1-T",
+    "ST-RS-A",
+    "ST-RS-C",
+    "ST-RS-S"
+   ],
+   "not_in_sum": {
+    "area_m2": [
+     "ST-MS1-T",
+     "ST-RS-C",
+     "ST-RS-S",
+     "ST-RS-A"
+    ],
+    "mortar_m3_low": [
+     "ST-MS1-T",
+     "ST-RS-C",
+     "ST-RS-S",
+     "ST-RS-A"
+    ],
+    "mortar_m3_high": [
+     "ST-MS1-T",
+     "ST-RS-C",
+     "ST-RS-S",
+     "ST-RS-A"
+    ],
+    "cement_bags_low": [
+     "ST-E1",
+     "ST-D1",
+     "ST-MS1-L",
+     "ST-MS1-U",
+     "ST-MS2-L",
+     "ST-MS2-U",
+     "ST-MS1-T",
+     "ST-RS-C",
+     "ST-RS-S",
+     "ST-RS-A"
+    ],
+    "cement_bags_high": [
+     "ST-E1",
+     "ST-D1",
+     "ST-MS1-L",
+     "ST-MS1-U",
+     "ST-MS2-L",
+     "ST-MS2-U",
+     "ST-MS1-T",
+     "ST-RS-C",
+     "ST-RS-S",
+     "ST-RS-A"
+    ],
+    "sand_m3_low": [
+     "ST-E1",
+     "ST-D1",
+     "ST-MS1-L",
+     "ST-MS1-U",
+     "ST-MS2-L",
+     "ST-MS2-U",
+     "ST-MS1-T",
+     "ST-RS-C",
+     "ST-RS-S",
+     "ST-RS-A"
+    ],
+    "sand_m3_high": [
+     "ST-E1",
+     "ST-D1",
+     "ST-MS1-L",
+     "ST-MS1-U",
+     "ST-MS2-L",
+     "ST-MS2-U",
+     "ST-MS1-T",
+     "ST-RS-C",
+     "ST-RS-S",
+     "ST-RS-A"
+    ],
+    "adhesive_bags": [
+     "ST-E1",
+     "ST-D1",
+     "ST-MS1-L",
+     "ST-MS1-U",
+     "ST-MS2-L",
+     "ST-MS2-U",
+     "ST-MS1-T",
+     "ST-RS-C",
+     "ST-RS-S",
+     "ST-RS-A"
+    ]
+   },
+   "cement_bags_to_buy_low": null,
+   "cement_bags_to_buy_high": null,
+   "adhesive_bags_to_buy": null
+  },
+  "STAIR_LANDING": {
+   "area_m2": 4.625,
+   "mortar_m3_low": 0.145688,
+   "mortar_m3_high": 0.145688,
+   "cement_bags_low": null,
+   "cement_bags_high": null,
+   "sand_m3_low": null,
+   "sand_m3_high": null,
+   "adhesive_bags": null,
+   "rows": 3,
+   "held_rows": [
+    "ST-RS-LD"
+   ],
+   "not_in_sum": {
+    "area_m2": [
+     "ST-RS-LD"
+    ],
+    "mortar_m3_low": [
+     "ST-RS-LD"
+    ],
+    "mortar_m3_high": [
+     "ST-RS-LD"
+    ],
+    "cement_bags_low": [
+     "ST-MS1-LD",
+     "ST-MS2-LD",
+     "ST-RS-LD"
+    ],
+    "cement_bags_high": [
+     "ST-MS1-LD",
+     "ST-MS2-LD",
+     "ST-RS-LD"
+    ],
+    "sand_m3_low": [
+     "ST-MS1-LD",
+     "ST-MS2-LD",
+     "ST-RS-LD"
+    ],
+    "sand_m3_high": [
+     "ST-MS1-LD",
+     "ST-MS2-LD",
+     "ST-RS-LD"
+    ],
+    "adhesive_bags": [
+     "ST-MS1-LD",
+     "ST-MS2-LD",
+     "ST-RS-LD"
+    ]
+   },
+   "cement_bags_to_buy_low": null,
+   "cement_bags_to_buy_high": null,
+   "adhesive_bags_to_buy": null
+  },
+  "ROOF": {
+   "area_m2": 204.112,
+   "mortar_m3_low": null,
+   "mortar_m3_high": null,
+   "cement_bags_low": null,
+   "cement_bags_high": null,
+   "sand_m3_low": null,
+   "sand_m3_high": null,
+   "adhesive_bags": null,
+   "rows": 3,
+   "held_rows": [
+    "RF-SH05:GF"
+   ],
+   "not_in_sum": {
+    "area_m2": [
+     "RF-SH05:GF"
+    ],
+    "mortar_m3_low": [
+     "RF-SH03:2F",
+     "RF-SH04:1F",
+     "RF-SH05:GF"
+    ],
+    "mortar_m3_high": [
+     "RF-SH03:2F",
+     "RF-SH04:1F",
+     "RF-SH05:GF"
+    ],
+    "cement_bags_low": [
+     "RF-SH03:2F",
+     "RF-SH04:1F",
+     "RF-SH05:GF"
+    ],
+    "cement_bags_high": [
+     "RF-SH03:2F",
+     "RF-SH04:1F",
+     "RF-SH05:GF"
+    ],
+    "sand_m3_low": [
+     "RF-SH03:2F",
+     "RF-SH04:1F",
+     "RF-SH05:GF"
+    ],
+    "sand_m3_high": [
+     "RF-SH03:2F",
+     "RF-SH04:1F",
+     "RF-SH05:GF"
+    ],
+    "adhesive_bags": [
+     "RF-SH03:2F",
+     "RF-SH04:1F",
+     "RF-SH05:GF"
+    ]
+   },
+   "cement_bags_to_buy_low": null,
+   "cement_bags_to_buy_high": null,
+   "adhesive_bags_to_buy": null
+  }
+ },
+ "per_floor": {
+  "GF": {
+   "area_m2": 125.446172,
+   "mortar_m3_low": 4.465289,
+   "mortar_m3_high": 6.05807,
+   "cement_bags_low": 30.006952,
+   "cement_bags_high": 42.7492,
+   "sand_m3_low": 4.125957,
+   "sand_m3_high": 5.878017,
+   "adhesive_bags": 20.553234,
+   "rows": 39,
+   "held_rows": [
+    "DF-GF-OPEN",
+    "DF-GF-R31F8AE",
+    "DF-GF-R7B7A5D",
+    "DF-GF-RF002DC",
+    "ST-MS1-T",
+    "ST-RS-C",
+    "ST-RS-LD",
+    "ST-RS-S",
+    "WW-GF-02",
+    "WW-GF-03",
+    "WW-GF-05",
+    "WW-GF-06",
+    "WW-GF-07",
+    "WW-GF-10",
+    "WW-GF-11",
+    "WW-GF-12",
+    "WW-GF-13",
+    "WW-GF-14",
+    "WW-GF-16"
+   ],
+   "not_in_sum": {
+    "area_m2": [
+     "DF-GF-OPEN",
+     "DF-GF-R31F8AE",
+     "DF-GF-RF002DC",
+     "DF-GF-R7B7A5D",
+     "WW-GF-02",
+     "WW-GF-03",
+     "WW-GF-05",
+     "WW-GF-06",
+     "WW-GF-10",
+     "WW-GF-11",
+     "WW-GF-12",
+     "WW-GF-13",
+     "WW-GF-14",
+     "WW-GF-16",
+     "WW-GF-07",
+     "ST-MS1-T",
+     "ST-RS-C",
+     "ST-RS-S",
+     "ST-RS-LD"
+    ],
+    "mortar_m3_low": [
+     "DF-GF-OPEN",
+     "DF-GF-R31F8AE",
+     "DF-GF-RF002DC",
+     "DF-GF-R7B7A5D",
+     "WW-GF-02",
+     "WW-GF-03",
+     "WW-GF-05",
+     "WW-GF-06",
+     "WW-GF-10",
+     "WW-GF-11",
+     "WW-GF-12",
+     "WW-GF-13",
+     "WW-GF-14",
+     "WW-GF-16",
+     "WW-GF-07",
+     "ST-MS1-T",
+     "ST-RS-C",
+     "ST-RS-S",
+     "ST-RS-LD"
+    ],
+    "mortar_m3_high": [
+     "DF-GF-OPEN",
+     "DF-GF-R31F8AE",
+     "DF-GF-RF002DC",
+     "DF-GF-R7B7A5D",
+     "WW-GF-02",
+     "WW-GF-03",
+     "WW-GF-05",
+     "WW-GF-06",
+     "WW-GF-10",
+     "WW-GF-11",
+     "WW-GF-12",
+     "WW-GF-13",
+     "WW-GF-14",
+     "WW-GF-16",
+     "WW-GF-07",
+     "ST-MS1-T",
+     "ST-RS-C",
+     "ST-RS-S",
+     "ST-RS-LD"
+    ],
+    "cement_bags_low": [
+     "DF-GF-OPEN",
+     "DF-GF-R31F8AE",
+     "DF-GF-RF002DC",
+     "DF-GF-R7B7A5D",
+     "WW-GF-02",
+     "WW-GF-03",
+     "WW-GF-05",
+     "WW-GF-06",
+     "WW-GF-10",
+     "WW-GF-11",
+     "WW-GF-12",
+     "WW-GF-13",
+     "WW-GF-14",
+     "WW-GF-16",
+     "WW-GF-07",
+     "ST-E1",
+     "ST-D1",
+     "ST-MS1-L",
+     "ST-MS1-U",
+     "ST-MS1-LD",
+     "ST-MS1-T",
+     "ST-RS-C",
+     "ST-RS-S",
+     "ST-RS-LD"
+    ],
+    "cement_bags_high": [
+     "DF-GF-OPEN",
+     "DF-GF-R31F8AE",
+     "DF-GF-RF002DC",
+     "DF-GF-R7B7A5D",
+     "WW-GF-02",
+     "WW-GF-03",
+     "WW-GF-05",
+     "WW-GF-06",
+     "WW-GF-10",
+     "WW-GF-11",
+     "WW-GF-12",
+     "WW-GF-13",
+     "WW-GF-14",
+     "WW-GF-16",
+     "WW-GF-07",
+     "ST-E1",
+     "ST-D1",
+     "ST-MS1-L",
+     "ST-MS1-U",
+     "ST-MS1-LD",
+     "ST-MS1-T",
+     "ST-RS-C",
+     "ST-RS-S",
+     "ST-RS-LD"
+    ],
+    "sand_m3_low": [
+     "DF-GF-OPEN",
+     "DF-GF-R31F8AE",
+     "DF-GF-RF002DC",
+     "DF-GF-R7B7A5D",
+     "WW-GF-02",
+     "WW-GF-03",
+     "WW-GF-05",
+     "WW-GF-06",
+     "WW-GF-10",
+     "WW-GF-11",
+     "WW-GF-12",
+     "WW-GF-13",
+     "WW-GF-14",
+     "WW-GF-16",
+     "WW-GF-07",
+     "ST-E1",
+     "ST-D1",
+     "ST-MS1-L",
+     "ST-MS1-U",
+     "ST-MS1-LD",
+     "ST-MS1-T",
+     "ST-RS-C",
+     "ST-RS-S",
+     "ST-RS-LD"
+    ],
+    "sand_m3_high": [
+     "DF-GF-OPEN",
+     "DF-GF-R31F8AE",
+     "DF-GF-RF002DC",
+     "DF-GF-R7B7A5D",
+     "WW-GF-02",
+     "WW-GF-03",
+     "WW-GF-05",
+     "WW-GF-06",
+     "WW-GF-10",
+     "WW-GF-11",
+     "WW-GF-12",
+     "WW-GF-13",
+     "WW-GF-14",
+     "WW-GF-16",
+     "WW-GF-07",
+     "ST-E1",
+     "ST-D1",
+     "ST-MS1-L",
+     "ST-MS1-U",
+     "ST-MS1-LD",
+     "ST-MS1-T",
+     "ST-RS-C",
+     "ST-RS-S",
+     "ST-RS-LD"
+    ],
+    "adhesive_bags": [
+     "DF-GF-OPEN",
+     "DF-GF-R31F8AE",
+     "DF-GF-RF002DC",
+     "DF-GF-R7B7A5D",
+     "WW-GF-02",
+     "WW-GF-03",
+     "WW-GF-05",
+     "WW-GF-06",
+     "WW-GF-10",
+     "WW-GF-11",
+     "WW-GF-12",
+     "WW-GF-13",
+     "WW-GF-14",
+     "WW-GF-16",
+     "WW-GF-07",
+     "ST-E1",
+     "ST-D1",
+     "ST-MS1-L",
+     "ST-MS1-U",
+     "ST-MS1-LD",
+     "ST-MS1-T",
+     "ST-RS-C",
+     "ST-RS-S",
+     "ST-RS-LD"
+    ]
+   },
+   "cement_bags_to_buy_low": 31,
+   "cement_bags_to_buy_high": 43,
+   "adhesive_bags_to_buy": 21
+  },
+  "1F": {
+   "area_m2": 166.210399,
+   "mortar_m3_low": 5.562646,
+   "mortar_m3_high": 7.458421,
+   "cement_bags_low": 40.266304,
+   "cement_bags_high": 55.432504,
+   "sand_m3_low": 5.536617,
+   "sand_m3_high": 7.62197,
+   "adhesive_bags": 29.88108,
+   "rows": 23,
+   "held_rows": [
+    "DF-1F-RFFE7AF",
+    "ST-RS-A",
+    "WW-1F-02",
+    "WW-1F-03",
+    "WW-1F-07",
+    "WW-1F-08",
+    "WW-1F-09",
+    "WW-1F-12"
+   ],
+   "not_in_sum": {
+    "area_m2": [
+     "DF-1F-RFFE7AF",
+     "WW-1F-02",
+     "WW-1F-03",
+     "WW-1F-07",
+     "WW-1F-08",
+     "WW-1F-09",
+     "WW-1F-12",
+     "ST-RS-A"
+    ],
+    "mortar_m3_low": [
+     "DF-1F-RFFE7AF",
+     "WW-1F-02",
+     "WW-1F-03",
+     "WW-1F-07",
+     "WW-1F-08",
+     "WW-1F-09",
+     "WW-1F-12",
+     "ST-RS-A"
+    ],
+    "mortar_m3_high": [
+     "DF-1F-RFFE7AF",
+     "WW-1F-02",
+     "WW-1F-03",
+     "WW-1F-07",
+     "WW-1F-08",
+     "WW-1F-09",
+     "WW-1F-12",
+     "ST-RS-A"
+    ],
+    "cement_bags_low": [
+     "DF-1F-RFFE7AF",
+     "WW-1F-02",
+     "WW-1F-03",
+     "WW-1F-07",
+     "WW-1F-08",
+     "WW-1F-09",
+     "WW-1F-12",
+     "ST-MS2-L",
+     "ST-MS2-U",
+     "ST-MS2-LD",
+     "ST-RS-A"
+    ],
+    "cement_bags_high": [
+     "DF-1F-RFFE7AF",
+     "WW-1F-02",
+     "WW-1F-03",
+     "WW-1F-07",
+     "WW-1F-08",
+     "WW-1F-09",
+     "WW-1F-12",
+     "ST-MS2-L",
+     "ST-MS2-U",
+     "ST-MS2-LD",
+     "ST-RS-A"
+    ],
+    "sand_m3_low": [
+     "DF-1F-RFFE7AF",
+     "WW-1F-02",
+     "WW-1F-03",
+     "WW-1F-07",
+     "WW-1F-08",
+     "WW-1F-09",
+     "WW-1F-12",
+     "ST-MS2-L",
+     "ST-MS2-U",
+     "ST-MS2-LD",
+     "ST-RS-A"
+    ],
+    "sand_m3_high": [
+     "DF-1F-RFFE7AF",
+     "WW-1F-02",
+     "WW-1F-03",
+     "WW-1F-07",
+     "WW-1F-08",
+     "WW-1F-09",
+     "WW-1F-12",
+     "ST-MS2-L",
+     "ST-MS2-U",
+     "ST-MS2-LD",
+     "ST-RS-A"
+    ],
+    "adhesive_bags": [
+     "DF-1F-RFFE7AF",
+     "WW-1F-02",
+     "WW-1F-03",
+     "WW-1F-07",
+     "WW-1F-08",
+     "WW-1F-09",
+     "WW-1F-12",
+     "ST-MS2-L",
+     "ST-MS2-U",
+     "ST-MS2-LD",
+     "ST-RS-A"
+    ]
+   },
+   "cement_bags_to_buy_low": 41,
+   "cement_bags_to_buy_high": 56,
+   "adhesive_bags_to_buy": 30
+  },
+  "2F": {
+   "area_m2": 34.205001,
+   "mortar_m3_low": 1.135733,
+   "mortar_m3_high": 1.55316,
+   "cement_bags_low": 9.085864,
+   "cement_bags_high": 12.42528,
+   "sand_m3_low": 1.249307,
+   "sand_m3_high": 1.708476,
+   "adhesive_bags": 6.841,
+   "rows": 5,
+   "held_rows": [
+    "WW-2F-02"
+   ],
+   "not_in_sum": {
+    "area_m2": [
+     "WW-2F-02"
+    ],
+    "mortar_m3_low": [
+     "WW-2F-02"
+    ],
+    "mortar_m3_high": [
+     "WW-2F-02"
+    ],
+    "cement_bags_low": [
+     "WW-2F-02"
+    ],
+    "cement_bags_high": [
+     "WW-2F-02"
+    ],
+    "sand_m3_low": [
+     "WW-2F-02"
+    ],
+    "sand_m3_high": [
+     "WW-2F-02"
+    ],
+    "adhesive_bags": [
+     "WW-2F-02"
+    ]
+   },
+   "cement_bags_to_buy_low": 10,
+   "cement_bags_to_buy_high": 13,
+   "adhesive_bags_to_buy": 7
+  },
+  "ROOF": {
+   "area_m2": 204.112,
+   "mortar_m3_low": null,
+   "mortar_m3_high": null,
+   "cement_bags_low": null,
+   "cement_bags_high": null,
+   "sand_m3_low": null,
+   "sand_m3_high": null,
+   "adhesive_bags": null,
+   "rows": 3,
+   "held_rows": [
+    "RF-SH05:GF"
+   ],
+   "not_in_sum": {
+    "area_m2": [
+     "RF-SH05:GF"
+    ],
+    "mortar_m3_low": [
+     "RF-SH03:2F",
+     "RF-SH04:1F",
+     "RF-SH05:GF"
+    ],
+    "mortar_m3_high": [
+     "RF-SH03:2F",
+     "RF-SH04:1F",
+     "RF-SH05:GF"
+    ],
+    "cement_bags_low": [
+     "RF-SH03:2F",
+     "RF-SH04:1F",
+     "RF-SH05:GF"
+    ],
+    "cement_bags_high": [
+     "RF-SH03:2F",
+     "RF-SH04:1F",
+     "RF-SH05:GF"
+    ],
+    "sand_m3_low": [
+     "RF-SH03:2F",
+     "RF-SH04:1F",
+     "RF-SH05:GF"
+    ],
+    "sand_m3_high": [
+     "RF-SH03:2F",
+     "RF-SH04:1F",
+     "RF-SH05:GF"
+    ],
+    "adhesive_bags": [
+     "RF-SH03:2F",
+     "RF-SH04:1F",
+     "RF-SH05:GF"
+    ]
+   },
+   "cement_bags_to_buy_low": null,
+   "cement_bags_to_buy_high": null,
+   "adhesive_bags_to_buy": null
+  }
+ },
+ "project": {
+  "area_m2": 529.973572,
+  "mortar_m3_low": 11.163668,
+  "mortar_m3_high": 15.069651,
+  "cement_bags_low": 79.35912,
+  "cement_bags_high": 110.606984,
+  "sand_m3_low": 10.911881,
+  "sand_m3_high": 15.208463,
+  "adhesive_bags": 57.275314,
+  "rows": 70,
+  "held_rows": [
+   "DF-1F-RFFE7AF",
+   "DF-GF-OPEN",
+   "DF-GF-R31F8AE",
+   "DF-GF-R7B7A5D",
+   "DF-GF-RF002DC",
+   "RF-SH05:GF",
+   "ST-MS1-T",
+   "ST-RS-A",
+   "ST-RS-C",
+   "ST-RS-LD",
+   "ST-RS-S",
+   "WW-1F-02",
+   "WW-1F-03",
+   "WW-1F-07",
+   "WW-1F-08",
+   "WW-1F-09",
+   "WW-1F-12",
+   "WW-2F-02",
+   "WW-GF-02",
+   "WW-GF-03",
+   "WW-GF-05",
+   "WW-GF-06",
+   "WW-GF-07",
+   "WW-GF-10",
+   "WW-GF-11",
+   "WW-GF-12",
+   "WW-GF-13",
+   "WW-GF-14",
+   "WW-GF-16"
+  ],
+  "not_in_sum": {
+   "area_m2": [
+    "DF-GF-OPEN",
+    "DF-GF-R31F8AE",
+    "DF-GF-RF002DC",
+    "DF-GF-R7B7A5D",
+    "DF-1F-RFFE7AF",
+    "WW-GF-02",
+    "WW-GF-03",
+    "WW-GF-05",
+    "WW-GF-06",
+    "WW-GF-10",
+    "WW-GF-11",
+    "WW-GF-12",
+    "WW-GF-13",
+    "WW-GF-14",
+    "WW-GF-16",
+    "WW-1F-02",
+    "WW-1F-03",
+    "WW-1F-07",
+    "WW-1F-08",
+    "WW-1F-09",
+    "WW-1F-12",
+    "WW-2F-02",
+    "WW-GF-07",
+    "ST-MS1-T",
+    "ST-RS-C",
+    "ST-RS-S",
+    "ST-RS-A",
+    "ST-RS-LD",
+    "RF-SH05:GF"
+   ],
+   "mortar_m3_low": [
+    "DF-GF-OPEN",
+    "DF-GF-R31F8AE",
+    "DF-GF-RF002DC",
+    "DF-GF-R7B7A5D",
+    "DF-1F-RFFE7AF",
+    "WW-GF-02",
+    "WW-GF-03",
+    "WW-GF-05",
+    "WW-GF-06",
+    "WW-GF-10",
+    "WW-GF-11",
+    "WW-GF-12",
+    "WW-GF-13",
+    "WW-GF-14",
+    "WW-GF-16",
+    "WW-1F-02",
+    "WW-1F-03",
+    "WW-1F-07",
+    "WW-1F-08",
+    "WW-1F-09",
+    "WW-1F-12",
+    "WW-2F-02",
+    "WW-GF-07",
+    "ST-MS1-T",
+    "ST-RS-C",
+    "ST-RS-S",
+    "ST-RS-A",
+    "ST-RS-LD",
+    "RF-SH03:2F",
+    "RF-SH04:1F",
+    "RF-SH05:GF"
+   ],
+   "mortar_m3_high": [
+    "DF-GF-OPEN",
+    "DF-GF-R31F8AE",
+    "DF-GF-RF002DC",
+    "DF-GF-R7B7A5D",
+    "DF-1F-RFFE7AF",
+    "WW-GF-02",
+    "WW-GF-03",
+    "WW-GF-05",
+    "WW-GF-06",
+    "WW-GF-10",
+    "WW-GF-11",
+    "WW-GF-12",
+    "WW-GF-13",
+    "WW-GF-14",
+    "WW-GF-16",
+    "WW-1F-02",
+    "WW-1F-03",
+    "WW-1F-07",
+    "WW-1F-08",
+    "WW-1F-09",
+    "WW-1F-12",
+    "WW-2F-02",
+    "WW-GF-07",
+    "ST-MS1-T",
+    "ST-RS-C",
+    "ST-RS-S",
+    "ST-RS-A",
+    "ST-RS-LD",
+    "RF-SH03:2F",
+    "RF-SH04:1F",
+    "RF-SH05:GF"
+   ],
+   "cement_bags_low": [
+    "DF-GF-OPEN",
+    "DF-GF-R31F8AE",
+    "DF-GF-RF002DC",
+    "DF-GF-R7B7A5D",
+    "DF-1F-RFFE7AF",
+    "WW-GF-02",
+    "WW-GF-03",
+    "WW-GF-05",
+    "WW-GF-06",
+    "WW-GF-10",
+    "WW-GF-11",
+    "WW-GF-12",
+    "WW-GF-13",
+    "WW-GF-14",
+    "WW-GF-16",
+    "WW-1F-02",
+    "WW-1F-03",
+    "WW-1F-07",
+    "WW-1F-08",
+    "WW-1F-09",
+    "WW-1F-12",
+    "WW-2F-02",
+    "WW-GF-07",
+    "ST-E1",
+    "ST-D1",
+    "ST-MS1-L",
+    "ST-MS1-U",
+    "ST-MS2-L",
+    "ST-MS2-U",
+    "ST-MS1-LD",
+    "ST-MS2-LD",
+    "ST-MS1-T",
+    "ST-RS-C",
+    "ST-RS-S",
+    "ST-RS-A",
+    "ST-RS-LD",
+    "RF-SH03:2F",
+    "RF-SH04:1F",
+    "RF-SH05:GF"
+   ],
+   "cement_bags_high": [
+    "DF-GF-OPEN",
+    "DF-GF-R31F8AE",
+    "DF-GF-RF002DC",
+    "DF-GF-R7B7A5D",
+    "DF-1F-RFFE7AF",
+    "WW-GF-02",
+    "WW-GF-03",
+    "WW-GF-05",
+    "WW-GF-06",
+    "WW-GF-10",
+    "WW-GF-11",
+    "WW-GF-12",
+    "WW-GF-13",
+    "WW-GF-14",
+    "WW-GF-16",
+    "WW-1F-02",
+    "WW-1F-03",
+    "WW-1F-07",
+    "WW-1F-08",
+    "WW-1F-09",
+    "WW-1F-12",
+    "WW-2F-02",
+    "WW-GF-07",
+    "ST-E1",
+    "ST-D1",
+    "ST-MS1-L",
+    "ST-MS1-U",
+    "ST-MS2-L",
+    "ST-MS2-U",
+    "ST-MS1-LD",
+    "ST-MS2-LD",
+    "ST-MS1-T",
+    "ST-RS-C",
+    "ST-RS-S",
+    "ST-RS-A",
+    "ST-RS-LD",
+    "RF-SH03:2F",
+    "RF-SH04:1F",
+    "RF-SH05:GF"
+   ],
+   "sand_m3_low": [
+    "DF-GF-OPEN",
+    "DF-GF-R31F8AE",
+    "DF-GF-RF002DC",
+    "DF-GF-R7B7A5D",
+    "DF-1F-RFFE7AF",
+    "WW-GF-02",
+    "WW-GF-03",
+    "WW-GF-05",
+    "WW-GF-06",
+    "WW-GF-10",
+    "WW-GF-11",
+    "WW-GF-12",
+    "WW-GF-13",
+    "WW-GF-14",
+    "WW-GF-16",
+    "WW-1F-02",
+    "WW-1F-03",
+    "WW-1F-07",
+    "WW-1F-08",
+    "WW-1F-09",
+    "WW-1F-12",
+    "WW-2F-02",
+    "WW-GF-07",
+    "ST-E1",
+    "ST-D1",
+    "ST-MS1-L",
+    "ST-MS1-U",
+    "ST-MS2-L",
+    "ST-MS2-U",
+    "ST-MS1-LD",
+    "ST-MS2-LD",
+    "ST-MS1-T",
+    "ST-RS-C",
+    "ST-RS-S",
+    "ST-RS-A",
+    "ST-RS-LD",
+    "RF-SH03:2F",
+    "RF-SH04:1F",
+    "RF-SH05:GF"
+   ],
+   "sand_m3_high": [
+    "DF-GF-OPEN",
+    "DF-GF-R31F8AE",
+    "DF-GF-RF002DC",
+    "DF-GF-R7B7A5D",
+    "DF-1F-RFFE7AF",
+    "WW-GF-02",
+    "WW-GF-03",
+    "WW-GF-05",
+    "WW-GF-06",
+    "WW-GF-10",
+    "WW-GF-11",
+    "WW-GF-12",
+    "WW-GF-13",
+    "WW-GF-14",
+    "WW-GF-16",
+    "WW-1F-02",
+    "WW-1F-03",
+    "WW-1F-07",
+    "WW-1F-08",
+    "WW-1F-09",
+    "WW-1F-12",
+    "WW-2F-02",
+    "WW-GF-07",
+    "ST-E1",
+    "ST-D1",
+    "ST-MS1-L",
+    "ST-MS1-U",
+    "ST-MS2-L",
+    "ST-MS2-U",
+    "ST-MS1-LD",
+    "ST-MS2-LD",
+    "ST-MS1-T",
+    "ST-RS-C",
+    "ST-RS-S",
+    "ST-RS-A",
+    "ST-RS-LD",
+    "RF-SH03:2F",
+    "RF-SH04:1F",
+    "RF-SH05:GF"
+   ],
+   "adhesive_bags": [
+    "DF-GF-OPEN",
+    "DF-GF-R31F8AE",
+    "DF-GF-RF002DC",
+    "DF-GF-R7B7A5D",
+    "DF-1F-RFFE7AF",
+    "WW-GF-02",
+    "WW-GF-03",
+    "WW-GF-05",
+    "WW-GF-06",
+    "WW-GF-10",
+    "WW-GF-11",
+    "WW-GF-12",
+    "WW-GF-13",
+    "WW-GF-14",
+    "WW-GF-16",
+    "WW-1F-02",
+    "WW-1F-03",
+    "WW-1F-07",
+    "WW-1F-08",
+    "WW-1F-09",
+    "WW-1F-12",
+    "WW-2F-02",
+    "WW-GF-07",
+    "ST-E1",
+    "ST-D1",
+    "ST-MS1-L",
+    "ST-MS1-U",
+    "ST-MS2-L",
+    "ST-MS2-U",
+    "ST-MS1-LD",
+    "ST-MS2-LD",
+    "ST-MS1-T",
+    "ST-RS-C",
+    "ST-RS-S",
+    "ST-RS-A",
+    "ST-RS-LD",
+    "RF-SH03:2F",
+    "RF-SH04:1F",
+    "RF-SH05:GF"
+   ]
+  },
+  "cement_bags_to_buy_low": 80,
+  "cement_bags_to_buy_high": 111,
+  "adhesive_bags_to_buy": 58
+ },
+ "compare": {
+  "dry_rooms": [
+   {
+    "id": "DF-GF-R7512EA",
+    "engine_m2": 24.940332,
+    "status": "RELEASED",
+    "candidate_m2": null,
+    "freelancer_row": 16,
+    "freelancer_m2": 24.84,
+    "diff_m2": 0.1,
+    "diff_pct": 0.4
+   },
+   {
+    "id": "DF-GF-R75FBAE",
+    "engine_m2": 16.54964,
+    "status": "RELEASED",
+    "candidate_m2": null,
+    "freelancer_row": 14,
+    "freelancer_m2": 16.66,
+    "diff_m2": -0.11,
+    "diff_pct": -0.66
+   },
+   {
+    "id": "DF-GF-R51E127",
+    "engine_m2": 7.875,
+    "status": "RELEASED",
+    "candidate_m2": null,
+    "freelancer_row": 17,
+    "freelancer_m2": 7.87,
+    "diff_m2": 0.005,
+    "diff_pct": 0.06
+   },
+   {
+    "id": "DF-1F-R78C367",
+    "engine_m2": 44.869353,
+    "status": "RELEASED",
+    "candidate_m2": null,
+    "freelancer_row": 21,
+    "freelancer_m2": 38.96,
+    "diff_m2": 5.909,
+    "diff_pct": 15.17
+   },
+   {
+    "id": "DF-1F-RB72F22",
+    "engine_m2": 19.05,
+    "status": "RELEASED",
+    "candidate_m2": null,
+    "freelancer_row": 25,
+    "freelancer_m2": 19.0,
+    "diff_m2": 0.05,
+    "diff_pct": 0.26
+   },
+   {
+    "id": "DF-1F-R3CFCFD",
+    "engine_m2": 19.016545,
+    "status": "RELEASED",
+    "candidate_m2": null,
+    "freelancer_row": 23,
+    "freelancer_m2": 19.46,
+    "diff_m2": -0.443,
+    "diff_pct": -2.28
+   },
+   {
+    "id": "DF-1F-RED0D19",
+    "engine_m2": 18.215001,
+    "status": "RELEASED",
+    "candidate_m2": null,
+    "freelancer_row": 24,
+    "freelancer_m2": 18.25,
+    "diff_m2": -0.035,
+    "diff_pct": -0.19
+   },
+   {
+    "id": "DF-1F-R0E919A",
+    "engine_m2": 16.34,
+    "status": "RELEASED",
+    "candidate_m2": null,
+    "freelancer_row": 22,
+    "freelancer_m2": 17.29,
+    "diff_m2": -0.95,
+    "diff_pct": -5.49
+   },
+   {
+    "id": "DF-2F-R1DB2D2",
+    "engine_m2": 19.350001,
+    "status": "RELEASED",
+    "candidate_m2": null,
+    "freelancer_row": 28,
+    "freelancer_m2": 19.58,
+    "diff_m2": -0.23,
+    "diff_pct": -1.17
+   },
+   {
+    "id": "DF-GF-OPEN",
+    "engine_m2": null,
+    "status": "HELD",
+    "candidate_m2": 108.033285,
+    "freelancer_row": 13,
+    "freelancer_m2": 137.5,
+    "diff_m2": null,
+    "diff_pct": null
+   },
+   {
+    "id": "DF-2F-LOBBY",
+    "engine_m2": 8.775,
+    "status": "RELEASED",
+    "candidate_m2": null,
+    "freelancer_row": 29,
+    "freelancer_m2": 7.7,
+    "diff_m2": 1.075,
+    "diff_pct": 13.96
+   }
+  ],
+  "totals": {
+   "dry_matched_rooms": 10,
+   "dry_matched_engine_m2": 194.981,
+   "dry_matched_freelancer_m2": 189.61,
+   "dry_matched_diff_pct": 2.83,
+   "dry_released_m2": 200.754872,
+   "freelancer_dry_m2": 337.57,
+   "wet_17_engine_m2": 72.1217,
+   "freelancer_wet_m2": 72.01,
+   "wet_17_diff_pct": 0.16,
+   "wet_with_pantry_m2": 85.6217,
+   "wet_wall_released_m2": null,
+   "wet_wall_candidate_m2_before_windows": 403.015,
+   "wet_wall_candidate_rooms": 15,
+   "freelancer_wet_walls_m2": 433.83
+  },
+  "face_census": [
+   {
+    "face": "GF-RC99C2A",
+    "floor": "GF",
+    "codes": [
+     "DINING",
+     "LIVING",
+     "PANTRY",
+     "RECEPTION"
+    ],
+    "class": "MIXED",
+    "m2": 126.928,
+    "in_table": "row DF-GF-OPEN (open-plan zone, HELD)"
+   },
+   {
+    "face": "GF-R7512EA",
+    "floor": "GF",
+    "codes": [
+     "MAJLIS"
+    ],
+    "class": "ROOM",
+    "m2": 24.94,
+    "in_table": "row DF-GF-R7512EA"
+   },
+   {
+    "face": "GF-R75FBAE",
+    "floor": "GF",
+    "codes": [
+     "MASTER_BEDROOM"
+    ],
+    "class": "ROOM",
+    "m2": 16.55,
+    "in_table": "row DF-GF-R75FBAE"
+   },
+   {
+    "face": "GF-R31F8AE",
+    "floor": "GF",
+    "codes": [
+     "STAIR"
+    ],
+    "class": "ROOM",
+    "m2": 12.475,
+    "in_table": "row DF-GF-R31F8AE"
+   },
+   {
+    "face": "GF-RA3AD49",
+    "floor": "GF",
+    "codes": [
+     "KITCHEN"
+    ],
+    "class": "ROOM",
+    "m2": 9.63,
+    "in_table": "a wet-area row WF-* (T-074 hand table, matched by floor and area +-0.02 m2)"
+   },
+   {
+    "face": "GF-R9A05AA",
+    "floor": "GF",
+    "codes": [
+     "GARDEN"
+    ],
+    "class": "ROOM",
+    "m2": 9.101,
+    "in_table": "excluded: exterior court / garden (outside the building finishes; not in the freelancer's tile rows)"
+   },
+   {
+    "face": "GF-R51E127",
+    "floor": "GF",
+    "codes": [
+     "DRIVER"
+    ],
+    "class": "ROOM",
+    "m2": 7.875,
+    "in_table": "row DF-GF-R51E127"
+   },
+   {
+    "face": "GF-RFD4E1D",
+    "floor": "GF",
+    "codes": [
+     "DINING",
+     "GARDEN",
+     "LIVING",
+     "PANTRY",
+     "RECEPTION"
+    ],
+    "class": "MERGED",
+    "m2": 4.885,
+    "in_table": "excluded: zone shared with its parent face (V2.9 MERGED; counted with the parent)"
+   },
+   {
+    "face": "GF-RDBD4F9",
+    "floor": "GF",
+    "codes": [],
+    "class": "UNLABELLED",
+    "m2": 4.731,
+    "in_table": "a wet-area row WF-* (T-074 hand table, matched by floor and area +-0.02 m2)"
+   },
+   {
+    "face": "GF-RD6F891",
+    "floor": "GF",
+    "codes": [
+     "BATHROOM"
+    ],
+    "class": "ROOM",
+    "m2": 3.718,
+    "in_table": "a wet-area row WF-* (T-074 hand table, matched by floor and area +-0.02 m2)"
+   },
+   {
+    "face": "GF-RF002DC",
+    "floor": "GF",
+    "codes": [],
+    "class": "UNLABELLED",
+    "m2": 3.6,
+    "in_table": "row DF-GF-RF002DC"
+   },
+   {
+    "face": "GF-RB62B55",
+    "floor": "GF",
+    "codes": [
+     "BATHROOM"
+    ],
+    "class": "ROOM",
+    "m2": 3.375,
+    "in_table": "a wet-area row WF-* (T-074 hand table, matched by floor and area +-0.02 m2)"
+   },
+   {
+    "face": "GF-R89E756",
+    "floor": "GF",
+    "codes": [
+     "SHAFT"
+    ],
+    "class": "ROOM",
+    "m2": 3.24,
+    "in_table": "excluded: service shaft (no floor finish)"
+   },
+   {
+    "face": "GF-R8496F0",
+    "floor": "GF",
+    "codes": [],
+    "class": "UNLABELLED",
+    "m2": 3.132,
+    "in_table": "a wet-area row WF-* (T-074 hand table, matched by floor and area +-0.02 m2)"
+   },
+   {
+    "face": "GF-RC06FED",
+    "floor": "GF",
+    "codes": [
+     "DINING",
+     "LIVING",
+     "PANTRY",
+     "RECEPTION"
+    ],
+    "class": "MIXED",
+    "m2": 2.8,
+    "in_table": "row DF-GF-OPEN (open-plan zone, HELD)"
+   },
+   {
+    "face": "GF-RF38DAF",
+    "floor": "GF",
+    "codes": [
+     "BATHROOM"
+    ],
+    "class": "ROOM",
+    "m2": 2.675,
+    "in_table": "a wet-area row WF-* (T-074 hand table, matched by floor and area +-0.02 m2)"
+   },
+   {
+    "face": "GF-RB28769",
+    "floor": "GF",
+    "codes": [
+     "BATHROOM"
+    ],
+    "class": "ROOM",
+    "m2": 2.368,
+    "in_table": "a wet-area row WF-* (T-074 hand table, matched by floor and area +-0.02 m2)"
+   },
+   {
+    "face": "GF-RDF7D28",
+    "floor": "GF",
+    "codes": [
+     "BATHROOM"
+    ],
+    "class": "ROOM",
+    "m2": 2.362,
+    "in_table": "a wet-area row WF-* (T-074 hand table, matched by floor and area +-0.02 m2)"
+   },
+   {
+    "face": "GF-RFAD3C4",
+    "floor": "GF",
+    "codes": [
+     "BATHROOM"
+    ],
+    "class": "ROOM",
+    "m2": 1.95,
+    "in_table": "a wet-area row WF-* (T-074 hand table, matched by floor and area +-0.02 m2)"
+   },
+   {
+    "face": "GF-R7B7A5D",
+    "floor": "GF",
+    "codes": [],
+    "class": "UNLABELLED",
+    "m2": 1.56,
+    "in_table": "row DF-GF-R7B7A5D"
+   },
+   {
+    "face": "GF-RD36087",
+    "floor": "GF",
+    "codes": [],
+    "class": "UNLABELLED",
+    "m2": 1.485,
+    "in_table": "a wet-area row WF-* (T-074 hand table, matched by floor and area +-0.02 m2)"
+   },
+   {
+    "face": "1F-R78C367",
+    "floor": "1F",
+    "codes": [
+     "LIVING"
+    ],
+    "class": "ROOM",
+    "m2": 75.983,
+    "in_table": "row DF-1F-R78C367"
+   },
+   {
+    "face": "1F-RB72F22",
+    "floor": "1F",
+    "codes": [
+     "MASTER_BEDROOM"
+    ],
+    "class": "ROOM",
+    "m2": 19.05,
+    "in_table": "row DF-1F-RB72F22"
+   },
+   {
+    "face": "1F-R3CFCFD",
+    "floor": "1F",
+    "codes": [
+     "MASTER_BEDROOM"
+    ],
+    "class": "ROOM",
+    "m2": 19.017,
+    "in_table": "row DF-1F-R3CFCFD"
+   },
+   {
+    "face": "1F-RED0D19",
+    "floor": "1F",
+    "codes": [
+     "MASTER_BEDROOM"
+    ],
+    "class": "ROOM",
+    "m2": 18.215,
+    "in_table": "row DF-1F-RED0D19"
+   },
+   {
+    "face": "1F-R0E919A",
+    "floor": "1F",
+    "codes": [
+     "MASTER_BEDROOM"
+    ],
+    "class": "ROOM",
+    "m2": 16.34,
+    "in_table": "row DF-1F-R0E919A"
+   },
+   {
+    "face": "1F-R26FA0D",
+    "floor": "1F",
+    "codes": [
+     "LAUNDRY"
+    ],
+    "class": "ROOM",
+    "m2": 10.151,
+    "in_table": "a wet-area row WF-* (T-074 hand table, matched by floor and area +-0.02 m2)"
+   },
+   {
+    "face": "1F-R8BDA49",
+    "floor": "1F",
+    "codes": [
+     "BATHROOM"
+    ],
+    "class": "ROOM",
+    "m2": 5.022,
+    "in_table": "a wet-area row WF-* (T-074 hand table, matched by floor and area +-0.02 m2)"
+   },
+   {
+    "face": "1F-R48AA46",
+    "floor": "1F",
+    "codes": [
+     "BATHROOM"
+    ],
+    "class": "ROOM",
+    "m2": 5.022,
+    "in_table": "a wet-area row WF-* (T-074 hand table, matched by floor and area +-0.02 m2)"
+   },
+   {
+    "face": "1F-R48CDA5",
+    "floor": "1F",
+    "codes": [
+     "BATHROOM"
+    ],
+    "class": "ROOM",
+    "m2": 4.725,
+    "in_table": "a wet-area row WF-* (T-074 hand table, matched by floor and area +-0.02 m2)"
+   },
+   {
+    "face": "1F-RED23B8",
+    "floor": "1F",
+    "codes": [
+     "BATHROOM"
+    ],
+    "class": "ROOM",
+    "m2": 3.578,
+    "in_table": "a wet-area row WF-* (T-074 hand table, matched by floor and area +-0.02 m2)"
+   },
+   {
+    "face": "1F-RCCB686",
+    "floor": "1F",
+    "codes": [
+     "SHAFT"
+    ],
+    "class": "ROOM",
+    "m2": 3.24,
+    "in_table": "excluded: service shaft (no floor finish)"
+   },
+   {
+    "face": "1F-RFFE7AF",
+    "floor": "1F",
+    "codes": [],
+    "class": "UNLABELLED",
+    "m2": 2.97,
+    "in_table": "row DF-1F-RFFE7AF"
+   },
+   {
+    "face": "1F-R52AC05",
+    "floor": "1F",
+    "codes": [
+     "BATHROOM"
+    ],
+    "class": "ROOM",
+    "m2": 2.646,
+    "in_table": "a wet-area row WF-* (T-074 hand table, matched by floor and area +-0.02 m2)"
+   },
+   {
+    "face": "2F-R1DB2D2",
+    "floor": "2F",
+    "codes": [
+     "MAID"
+    ],
+    "class": "ROOM",
+    "m2": 19.35,
+    "in_table": "row DF-2F-R1DB2D2"
+   },
+   {
+    "face": "2F-R4D1B62",
+    "floor": "2F",
+    "codes": [
+     "STAIR"
+    ],
+    "class": "ROOM",
+    "m2": 18.6,
+    "in_table": "row DF-2F-LOBBY (printed 450 x 195); the rest of the face is the stair well"
+   },
+   {
+    "face": "2F-RE83BED",
+    "floor": "2F",
+    "codes": [
+     "BATHROOM"
+    ],
+    "class": "ROOM",
+    "m2": 5.55,
+    "in_table": "a wet-area row WF-* (T-074 hand table, matched by floor and area +-0.02 m2)"
+   },
+   {
+    "face": "2F-R2BDCEE",
+    "floor": "2F",
+    "codes": [
+     "SHAFT"
+    ],
+    "class": "ROOM",
+    "m2": 3.24,
+    "in_table": "excluded: service shaft (no floor finish)"
+   }
+  ],
+  "faces_not_in_table": []
+ }
+}
