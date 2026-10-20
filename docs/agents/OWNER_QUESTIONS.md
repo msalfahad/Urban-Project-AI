@@ -173,6 +173,8 @@ window reveal, the same way the first-floor recess was closed at the face line; 
 would count them twice.
 Waits on: the ground-floor facade run (exterior plaster and paint length) on every villa with a frame set back beside a
 column (T-109, T-014).
+Answer: B, CONDITIONAL. Use the straight facade measurement 105.787 m if the additional 0.10 m is return faces already measured under the window / glass reveal finish; never double-count them in both the facade run and the reveal quantities. Verify the actual CAD geometry and confirm the 0.05 m column projection and 0.08 m recess are assigned to the correct finish items. Keep the 105.887 m geometric perimeter as an audit comparison. General rule: physical wall perimeter vs billable main facade finish vs separate reveal quantities, one consistent convention. (owner in the main chat, 2026-10-20 16:23 UTC; full text: docs/agents/OWNER_RECONCILIATION_2026-10-20.md)
+
 
 ### Q-65 Roof parapets and the street-side fence: white or black block? (worker 2 2026-10-20 14:45; T-107, T-108; no-assumptions question: your 10:45 fallback names outer and inner walls, not parapets or fences)
 
@@ -193,6 +195,8 @@ block is what you said engineering offices choose to save load; a boundary fence
 in the ground, where cement block is the usual choice, and the structural note already makes the neighbour fence black,
 so the whole fence stays one material.
 Waits on: block type, block count and adhesive / mortar of the parapets and the street fence (T-107, T-108).
+Answer: C, with provisional alternatives. Do not choose white or black for lightness or because the neighbour fence is black. First check whether 'white' / 'black' are different block products, densities or materials or only colour; parapets may have structural, loading, stability and waterproofing requirements colour cannot settle; the neighbour fence specification does not govern the street fence. Keep the geometry: roof parapets 104.25 lm (subject to verification); street fence 8.20 lm overall = 5.70 solid + 2.50 gate. Request material and construction details from the designer; provisional alternatives may be calculated for comparison; the final material classification stays HELD until confirmed. (owner in the main chat, 2026-10-20 16:23 UTC; full text: docs/agents/OWNER_RECONCILIATION_2026-10-20.md)
+
 
 ### Q-66 First-floor main-stair landing (4.875 m2): porcelain floor or marble with the stair? (lead 2026-10-20 14:20, from worker 2's trace of the first-floor living floor; T-113, T-116; no-assumptions question: two of your rules disagree)
 
@@ -214,6 +218,8 @@ the first-floor arrival area to be floor (A), the stair rule will say so for arr
 Waits on: first-floor floor tiles and stair marble (T-116, the floor-area fix; the tiling table).
 
 Earlier note: None open (lead 2026-10-20 12:20). Q-50 to Q-63 were answered by the owner on 2026-10-20 (OWNER_DIRECTIVE_2026-10-20.md, and the owner's 12:15 correction in OWNER_SESSION_CHANGES.md: his earlier answers are his manual BOQ method and are preserved; the engine shows the owner-method and the drawing-derived results side by side). A reconciliation proposal is with the owner in his main chat; the team does not duplicate it as a question.
+Answer: B. Marble for the 4.875 m2 main-stair landing (his rule: stair finishes are marble); never also porcelain. Candidate quantities 1F porcelain 33.713 m2, stair marble 44.365 m2, subject to verifying the landing was previously counted exactly once and the other category totals are right. Keep the landing a separate measured element classified marble; do not merge its geometry into the stair flight. (owner in the main chat, 2026-10-20 16:23 UTC; full text: docs/agents/OWNER_RECONCILIATION_2026-10-20.md)
+
 
 ## Answered
 ### Q-50 Round stair in the reception: no section cuts it. May the plan step count be used? (verifier 2026-10-19 22:59; T-084, T-056; no-assumptions question: your Q-46 answer says the section counts, and this stair has no section)
