@@ -252,6 +252,49 @@ freelancer without your word (practice, not a code clause).
 WAITS ON: door m2 on Alsenan (all doors except the main entrance) and on every villa without a door schedule (T-091, the
 door / window area method).
 
+### Q-56 First-floor living room: does the corridor / stair landing in front of it get floor tiles, and in which line? (lead 2026-10-20 02:10, from the verifier's UNRESOLVED verdict on the room-by-room tiling table; T-086, T-091; no-assumptions question)
+
+THE PROBLEM: on the first floor the drawing has no wall between the living room and the corridor / stair landing (level
++5.50), so the engine measures them as one floor: 44.87 m2 of porcelain. The freelancer has 38.96 m2 for the living room
+and no row at all for the corridor / landing, so about 5.91 m2 of finished floor is in nobody's line. No Urban rule says
+whether a landing in front of a stair is porcelain like the room or marble like the stair.
+WHERE TO LOOK: Drive "Alsenan chalet project", p7757_arch_sheet04.pdf (first floor plan): the living room, the open void
+and the main stair; the corridor / landing is the floor between the top step and the living room. Measure the living room
+by its printed dimensions and what is left up to the top step is the landing.
+THE OPTIONS:
+(A) Porcelain for the whole area, as two rows: living room by its printed size and corridor / landing as its own row
+    (total 44.87 m2 porcelain, nothing left out).
+(B) Living room porcelain by its printed size; the corridor / landing in marble with the stair (porcelain about 38.96 m2,
+    about 5.91 m2 added to the stair marble, now 39.49 m2).
+(C) As the freelancer: living room only (38.96 m2); the corridor / landing not in the BOQ.
+RECOMMENDATION: (A), unless the finishing notes on the sheets (being listed now) print marble at the landing, in which
+case (B): a floor between rooms takes the finish of the room it opens into, and leaving it out (C) means 5.91 m2 of tiles
+and their mortar are never bought (practice, not a code clause).
+WAITS ON: first-floor floor tiles, mortar, cement and sand on the room-by-room tiling table, and the same corridor / landing
+case on every villa with an open stair hall (T-086 wiring, T-091).
+
+### Q-57 Ceilings: are plaster and paint measured on ceilings, and which ceilings? (lead 2026-10-20 02:10, from worker 3's per-room plaster / paint hand table; T-090, T-095; no-assumptions question: no Urban rule covers a finish ON a ceiling)
+
+THE PROBLEM: the Urban rules give the ceiling AREA (finish "by specification") but say nothing about plastering or
+painting a ceiling, so every ceiling finish is held. The freelancer paints the decor (false) ceilings: rooms 337.57 m2 +
+wet rooms 72.01 m2 + cove-light strips 28.29 + 14.46 m2 = 452.33 m2. Your Q-48 answer puts a 0.15 m decor ceiling in the
+rooms, including the wet rooms.
+WHERE TO LOOK: Drive "Alsenan chalet project", p7757_arch_sheet03.pdf / sheet04.pdf (room sizes) and the sections on
+page 11 and sheet 10 (no ceiling plan or ceiling finish is printed). Example: the 6 closed dry rooms with printed sizes
+have 105.88 m2 of ceiling (diwaniya 4.00 x 6.30 less a 0.26 m2 rounded corner = 24.94; driver room 7.875; the others
+19.125, 18.25, 16.34 and the maid room 19.35).
+THE OPTIONS (6 rooms / whole villa):
+(A) Paint on every decor ceiling, wet rooms included, area = room floor area; no plaster on a decor ceiling; cove-light
+    strips only where a detail prints them (6 rooms 105.88 m2 paint, 0 plaster; whole villa = the internal floor area, 385.63 m2 by the
+    engine piece vs his 409.58 m2 of floor, before strips).
+(B) As A, but wet rooms get a moisture-resistant ceiling with no paint line (6 rooms 105.88 m2; wet rooms 72.01 m2 not
+    painted).
+(C) Plaster and paint the concrete slab soffit as well as painting the decor ceiling (6 rooms 105.88 m2 plaster + 105.88
+    m2 paint).
+RECOMMENDATION: (A): a gypsum decor ceiling is finished with paint, not cement plaster, and your 0.15 m decor depth already
+says every room has one; the cove strips need a printed detail before they are counted (practice, not a code clause).
+WAITS ON: ceiling plaster / paint lines on Alsenan and every villa; the plaster / paint wiring (T-095).
+
 ## Answered
 
 ### Q-48 Wet rooms are fully tiled: up to which height do the wall tiles go, and which false-ceiling depth applies? (lead 2026-10-19 22:20; owner request for the room-by-room tiling table (Q-45), Q-40 and Q-43 answers; no-assumptions question)

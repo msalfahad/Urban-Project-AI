@@ -1,5 +1,62 @@
 # Lead reports to the owner's main chat (newest first, last 10 entries)
 
+## LEAD REPORT 2026-10-20 02:10 UTC
+
+Repositories: Urban-Project-AI cloned (control and working branch, head 2fb9553; no owner-session commits since 00:30);
+Drive readable (nothing new in the Alsenan folder). UrbanProjectsManager not needed this run.
+
+PROGRESS (Alsenan; the released BOQ did not change: three more checked pieces merged, none wired)
+- Concrete: released 92.77 vs freelancer 111.81 m3 (-17.0 %), unchanged.
+- Waterproofing wiring: sent back by the checker. Right: wet floor 72.12 vs 72.01 m2 (+0.16 %, reproduced on the drawing),
+  roofs 204.11 m2 (3 plan roofs). Wrong: it still held the rolls although you answered "each room alone" (hand: 19 rolls
+  for 17 wet areas, 21 with the pantry, 31 for the roofs), and the top roof you parked vanished instead of showing as held
+  (the roof total hides about 80.9 m2). The fix is the first task on the board.
+- Room levels with your wall-height rule (merged): 21 of 27 rooms levelled (was 6); GF 3.65 m, 1F / 2F 3.35 m.
+- Room-by-room tiling table (merged): 10 dry rooms 194.98 vs 189.61 m2 (+2.83 %; the first-floor living room holds a
+  corridor / landing he has in no row: asked below); stairs 39.49 m2 marble; cement 80 - 111 bags, sand 10.91 - 15.21 m3,
+  adhesive 58 bags (PROVISIONAL).
+- Plaster / paint per room by hand (merged): 6 closed dry rooms 336.94 / 321.56 / 331.49 m2 by your three beam options vs
+  his 375.40 (-10.2 / -14.3 / -11.7 %); he deducts openings at half, your rule the full opening (rule difference).
+  Project plaster 1151.14 / paint 1191.13 m2 still held (beam, annex, door-height and now ceiling answers).
+- Learned: an answered question must be named in every rework row (the wiring was built from the row text written before
+  your answer); a parked quantity must show as held, never disappear.
+- Gates: 0 done; 1 at risk (wiring back for rework); 2 and 3 started; 4 started.
+
+TEAM HEALTH
+- Verifier 01:49: all five self-check steps PASS; merged three, rejected one with evidence.
+- Worker 1 01:25: clone refused "[Untrusted Code Integration]", claim push refused "[External System Writes]"; no work.
+- Worker 2 01:39 (3 min) and worker 3 01:59 (4 min): no RUN_LOG line, no claim, nothing pushed. Done by me: two hand tasks
+  stay free for refused runs (printed-notes census; new roof cutting plans by hand); rework first for code-capable runs.
+- So only the verifier really ran code since 00:30. Scout: next run 23:50 UTC.
+
+QUESTIONS FOR OWNER (8 open, all no-assumption questions; the list is long because each one stops an assumption; Q-50 to
+Q-55 are in the 00:30 entry below and in OWNER_QUESTIONS.md)
+1. NEW Q-56 First-floor living room: corridor / stair landing floor. Problem: no wall separates the living room from the
+   corridor / landing at +5.50, so the engine measures one floor of 44.87 m2 porcelain; the freelancer has 38.96 m2 for
+   the living room and no row for the landing (about 5.91 m2 in nobody's line); no rule says porcelain or marble. Where:
+   Drive Alsenan, p7757_arch_sheet04.pdf (first floor), the living room, void and main stair; landing = floor between the
+   top step and the living room. Options: (A) porcelain, two rows (living by printed size + landing), total 44.87 m2;
+   (B) living porcelain, landing marble with the stair (+5.91 m2 to the 39.49 m2 stair marble); (C) as the freelancer,
+   landing not in the BOQ. Recommendation: A, or B if the printed finishing notes show marble at the landing (practice,
+   not a code clause: a floor between rooms takes the finish of the room it opens into; C leaves tiles unbought).
+2. NEW Q-57 Ceilings: plaster / paint on ceilings. Problem: the rules give the ceiling area only; the freelancer paints
+   452.33 m2 of decor ceilings (rooms 337.57 + wet rooms 72.01 + cove strips 42.75). Where: sheets 03 / 04 room sizes;
+   page 11 and sheet 10 sections (no ceiling finish printed); 6 closed dry rooms = 105.88 m2 of ceiling. Options: (A)
+   paint every decor ceiling incl. wet rooms, no plaster, cove strips only where a detail prints them (6 rooms 105.88 m2
+   paint); (B) as A without paint in wet rooms; (C) plaster and paint the slab soffit as well (105.88 + 105.88 m2).
+   Recommendation: A (gypsum decor ceilings are painted, not plastered; your 0.15 m decor depth puts one in every room;
+   practice, not a code clause).
+
+NEEDS FIXING (only you can do it)
+1. Code runs for the scheduled workers: three of three worker runs since 00:30 did nothing (one refused, two ended in
+   3 - 4 minutes without a log line). Already done: hand tasks for refused runs, fresh-branch route, separate-command
+   self-check. The one thing to do: option 2 of docs/agents/EXECUTION_PERMISSIONS.md section 5 (Claude Code scheduled
+   tasks with Urban-Project-AI attached; pause the Cowork ones after one clean run each).
+2. Upload the Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as separate PDFs under 6 MB (repeat).
+
+Team line: merged T-081 r2, T-086, T-090; T-079 REJECTED -> T-093 (first code task); new T-094 (NO REPO CODE), T-095
+(queued); T-091 widened (Q-56); Q-56, Q-57 new; 12 TODO (1 Track B).
+
 ## LEAD REPORT 2026-10-20 00:30 UTC
 
 Repositories: Urban-Project-AI cloned (control and working branch, no owner-session commits since 21:00); Drive readable

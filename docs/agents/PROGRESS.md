@@ -1,20 +1,20 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-20 00:30 UTC (Lead). Previous version: 2026-10-19 22:20 UTC.
+Last update: 2026-10-20 02:10 UTC (Lead). Previous version: 2026-10-20 00:30 UTC.
 
 ## Where we are on the five gates
 | Gate | In plain words | Due | Done so far | State |
 |---|---|---|---|---|
 | 0 | Measure the engine against the freelancer on a real villa; synthetic test villas | 21 Oct | done: Alsenan measured on the newest code, capability matrix, synthetic villas with hand truth; the apartment waits by your order | done for Alsenan |
-| 1 | No room, door or window missed; wet and dry rooms right (floor area, tiles, waterproofing) | 28 Oct | wet / dry within 0.2 % on Alsenan; the membrane strip method now runs on all 17 real wet areas; roofs on your rule; 29 of 29 windows accounted for; room floor levels read from the mark in each room. Your wall-height and unmarked-room answers turn the held levels and heights into work now. Still open: none of it is wired into the released BOQ; the wiring step is built and waits for the checker, whose code run was refused at 00:20 | at risk (wiring built, not yet checked) |
-| 2 | Blockwork, plaster, paint, tiles, waterproofing, doors, windows within target | 11 Nov | membrane table and fold, 17 wet areas, window areas for 4 windows, floor-to-floor heights, book checks merged; plaster / paint measurable now by your height rule (rework on the board); room-by-room tiling table with cement, sand and adhesive, and tile counts with your joints, on the board | started |
-| 3 | Structural: concrete census, rebar from schedules, formwork, excavation | 25 Nov | concrete ledger, footings by member, columns / necks merged (not in the released BOQ); 24 held beam spans read by hand and merged; neck-only columns read from the schedule (waits for the checker); stairs by hand (waits for the checker, your step-count and slab-thickness answers apply) | started |
+| 1 | No room, door or window missed; wet and dry rooms right (floor area, tiles, waterproofing) | 28 Oct | wet / dry within 0.2 % on Alsenan; the membrane strip method now runs on all 17 real wet areas; roofs on your rule; 29 of 29 windows accounted for; room floor levels read from the mark in each room. Your wall-height and unmarked-room answers turn the held levels and heights into work now. Still open: none of it is wired into the released BOQ; the checker sent the wiring back at 02:25 for two faults (the roll count must follow your 'each room alone' answer; the top roof must show as held, not vanish); the fix is first on the board | at risk (wiring back for rework) |
+| 2 | Blockwork, plaster, paint, tiles, waterproofing, doors, windows within target | 11 Nov | membrane table and fold, window areas for 6 windows by hand, room levels with your wall-height rule, the room-by-room tiling table (cement, sand, adhesive) and plaster / paint per room under each beam option all merged; plaster / paint wait on your beam, annex, door-height and ceiling answers; tile counts and cutting plans on the board | started |
+| 3 | Structural: concrete census, rebar from schedules, formwork, excavation | 25 Nov | concrete ledger, footings by member, columns / necks merged (not in the released BOQ); 24 held beam spans read by hand and merged; neck-only columns read from the schedule and stairs by hand (main stair 5.011 vs 8.131 m3) merged; round stair and turning steps wait on your answers | started |
 | 4 | Read scanned and PDF plans | 9 Dec | the vector-PDF height reader is merged, but the Alsenan PDF sheets are scans; a scan reader that releases a number only when its dimension chain adds up exactly is now on the board | started (one task) |
 
 ## Engine vs freelancer BOQ: Alsenan Chalet (released run, commit 8774071; the released numbers did not change this run)
-Four more checked pieces were merged since 22:20 (neck-only columns, stairs by hand, opening heights by hand, room levels
-and wall heights by hand). Two code pieces (wet-area / roof wiring, room levels) wait for the checker. None is wired yet.
+Three more checked pieces were merged since 00:30 (room levels with your wall-height rule, the room-by-room tiling
+table, plaster / paint per room by hand). The wet-area / roof wiring was sent back for two faults. None is wired yet.
 "piece" = a merged, checked method piece run on the real drawing; "hand" = a reading of the drawing.
 | Trade | Unit | Engine | Freelancer | Difference | Change since last report | Target | State |
 |---|---|---|---|---|---|---|---|
@@ -28,8 +28,8 @@ and wall heights by hand). Two code pieces (wet-area / roof wiring, room levels)
 | Domes | m3 | none (your answer: not concrete) | 6.78 | rule difference | none | - | settled |
 | Wet-area waterproofing floor, 17 areas (piece + hand) | m2 | 72.12 | 72.01 | +0.11 (+0.16 %) | none | within 3 % | not yet in the released BOQ (wiring is first on the board) |
 | Wet-area upturn, walls only (piece) | lm | 125.57 (your doorway answer) | 144.61 (full boundary) | rule difference | now from the strip method on real rooms (hand 127.07) | within 3 % | full boundary 144.73 = his 144.61 (+0.08 %) |
-| Wet-area membrane rolls to buy (piece) | rolls | 13 / 14 / 15 by layout (with the pantry 15 / 16 / 17) | not given | - | new | exact | which layout is bought: asked you |
-| Roof waterproofing membrane (piece) | m2 | 204.11 (3 roofs drawn on plans); 29 / 30 / 32 rolls by layout | 285.00 | -80.89 (-28.4 %) | none | within 3 % | top roof HELD by your answer |
+| Wet-area membrane rolls to buy (hand, your answer: each room alone) | rolls | 19 for 17 wet areas (21 with the pantry), 64.73 m left over | not given | - | was 13 - 15 by layout, before your answer | exact | the engine version that releases this was sent back (it still held the rolls); fix first on the board |
+| Roof waterproofing membrane (piece) | m2 | 204.11 (3 roofs drawn on plans); 31 rolls each roof alone (17 + 6 + 8) | 285.00 | -80.89 (-28.4 %) | none | within 3 % | top roof HELD by your answer; the checker found the engine drops it silently instead of showing it held: being fixed |
 | Roof upturn (piece) | lm | 181.59 | 194.00 | -12.41 (-6.4 %) | none | within 3 % | same cause |
 | Windows with a printed height, 6 of 29 (hand, merged) | m2 | 26.485 | 24.280 | +2.205 (+9.1 %) | was 4 of 29, 13.892 vs 14.350 | exact | engine right on 4 printed heights, 1 rule difference (curved window, your answer); 23 HELD (scans); the curved pool glazing is 6.57 m wide by your answer, height 4.30 m |
 | Windows counted | pcs | 29 (27 measured + 2 held) | 29 | 0 | none | exact | - |
@@ -39,8 +39,11 @@ and wall heights by hand). Two code pieces (wet-area / roof wiring, room levels)
 | Rebar | t | not re-measured | 44.19 (earlier) | earlier estimate 26.24 t (-40.6 %) | none | within 3 % | not started |
 | Blockwork | m | not re-measured | - | earlier estimate about 140 m short (-36.5 %) | none | within 3 % | gate 2 |
 | Wall tile | m2 | not measured; wet walls about 447 - 473 m2 by hand depending on your tile-height answer | - | - | new estimate range (hand) | within 3 % | tile height asked you |
-| Plaster | m2 | held | 1151.14 | - | none | within 3 % | no 0.60 m beam is drawn (beams 0.40 - 1.20 m): asked you which depth; 5 rooms with printed lengths give 282.67 vs his 299.58 m2 (-5.6 %) with your 0.60 m |
-| Paint | m2 | held | 1191.13 | - | none | within 3 % | same; annex rooms also wait on their slab height (asked) |
+| Plaster | m2 | held | 1151.14 | - | none | within 3 % | waits on your beam-depth, annex and door-height answers; 6 closed dry rooms by hand: 336.94 (0.60 m always) / 321.56 (deepest beam) / 331.49 (deep beam where it crosses) vs his 375.40 m2 (-10.2 / -14.3 / -11.7 %); he deducts openings at half, your rule takes the full opening |
+| Paint | m2 | held | 1191.13 | - | none | within 3 % | same walls as plaster; ceilings have no rule yet (he paints 452.33 m2 of decor ceilings): asked you |
+| Dry-room floor tiles, 10 rooms (piece, merged) | m2 | 194.98 | 189.61 | +5.37 (+2.83 %) | new | within 1 - 2 % | first-floor living 44.87 vs 38.96 holds the corridor / landing he has in no row: asked you; second-floor lobby 8.775 vs 7.70 engine right (printed 4.50 x 1.95) |
+| Stair marble (piece, merged) | m2 | 39.49 | not compared | - | new | exact | turning steps and round stair held (your answers pending) |
+| Tiling materials (piece, PROVISIONAL) | bags / m3 | cement 80 - 111 bags, sand 10.91 - 15.21 m3, adhesive 58 bags of 20 kg | not given | - | new | - | provisional by your answer; stair bed held on the 1:3 question |
 | Floor area | m2 | held | not compared | - | none | within 1 - 2 % | 11 labelled spaces held instead of lost; room-by-room table on the board |
 
 ## Engine vs freelancer BOQ: development project 2 (apartment)
@@ -65,36 +68,37 @@ Not measured, and paused by your order (Alsenan first).
   printed anywhere.
 
 ## Being worked on now
-- Checker (next run with code allowed): the wiring of wet-area and roof waterproofing into the released BOQ (first), then
-  room floor levels with your unmarked-room answer.
-- Worker 3 delivered the room-by-room tiling table (waits for the checker): wet floors 72.12 vs 72.01 m2 (+0.16 %), 10 dry
-  rooms 194.98 vs 189.61 m2 (+2.83 %), stairs 39.49 m2 of marble; provisional cement 80 - 111 bags, sand 10.91 - 15.21 m3,
-  adhesive 58 bags; wet walls held on the beam question.
-- Free for workers whose code runs pass: beam fixes with the dome-opening ring beam, tile counts with your joints,
-  membrane cutting plans per room and roof, plot-edge foundation members, stairs and pool in code, the data file for typed
-  drawing values, a scan reader that releases a number only when its chain adds up.
-- Free for workers whose code runs are refused: plaster / paint per room under each beam-depth option (ready the hour you
-  answer), and a list of every printed finishing note, tile size and door height on the Alsenan sheets.
+- Free for workers whose code runs pass, first: fix the wet-area / roof wiring (rolls each room alone: 19 wet, 31 roofs;
+  the top roof shown as held), then membrane cutting plans per room and roof, tile counts with your joints, beam fixes
+  with the dome-opening ring beam, the scan reader with a chain-sum check, plot-edge foundation members, stairs and pool
+  in code, the data file for typed drawing values.
+- Free for workers whose code runs are refused: the roof cutting plans by hand (strips, rolls and leftover metres per
+  roof), and the list of every printed finishing note, tile size and door height, now with the first-floor living room
+  split from its landing by printed sizes.
+- Queued: plaster and paint into the released BOQ, as soon as you answer the beam, annex, door-height and ceiling questions.
+- Checker: merged three pieces at 02:00 and sent the wiring back; next run takes whatever comes READY.
 - Research scout (next run 23:50 UTC): Arabic and English notes on scanned plans.
 
 ## What is missing
-- The checker's code run (refused at 00:20): the wiring and the room levels wait for it.
+- The wet-area / roof wiring fix (first on the board): until it merges, no waterproofing quantity is in the released BOQ.
 - Opening heights for 23 windows (scans) and all doors but the main entrance (not printed: asked).
-- The beam depth for your wall-height rule (asked) and the annex slab height (asked).
+- The beam depth for your wall-height rule, the annex slab height and a ceiling rule (asked).
 - Screed thickness on roofs and balconies; marble adhesive coverage; expansion-joint spacing (asked later).
 - The second-floor top roof outline (held by your answer).
 - The Kuwait specification chapters on waterproofing, floors, wall tiles and paint (file too big: parts needed).
 
 ## Waiting for the owner
-- NEW: wall height under real beams: always 0.60 m (282.67 m2 on 5 rooms), the deepest beam at the room (269.72), or a
-  deep beam only where it crosses the ceiling (279.65) (recommendation: the last one).
-- NEW: annex rooms (+0.30 to +4.30): read 4.00 m slab to slab like the other floors (wall 3.15 m), or hold until a roof
-  detail (recommendation: 4.00 m).
-- NEW: door height when none is printed: hold and ask the architect now, and give us your standard height for next time.
-- NEW: stair marble bed 1:3: about 10 bags and 1.0 m3 sand per m3 (recommendation; about 13 bags for Alsenan stairs), the
-  1:4 figures, or your own.
-- NEW: round stair with no section: use the plan count of 28 steps (recommendation) or hold.
-- NEW: turning steps: half riser x their plan area (0.120 m3 on the main stair, recommendation), part of the landing, or hold.
-- Setting: run the four coding agents as Claude Code scheduled tasks with the repository attached (the checker and one
-  worker were refused again tonight).
+- NEW: first-floor living room: the corridor / stair landing in front of it (about 5.91 m2) is in no freelancer row:
+  porcelain as its own row (recommendation), marble with the stair, or left out.
+- NEW: ceilings: paint every decor ceiling, no plaster (recommendation; 105.88 m2 on the 6 closed dry rooms), the same but
+  no paint in wet rooms, or plaster and paint the slab soffit too.
+- Wall height under real beams: always 0.60 m, the deepest beam at the room, or a deep beam only where it crosses the
+  ceiling (recommendation: the last one; 6 rooms 336.94 / 321.56 / 331.49 m2 vs his 375.40).
+- Annex rooms (+0.30 to +4.30): 4.00 m slab to slab (recommendation) or hold.
+- Door height when none is printed: hold and ask the architect now, and give us your standard height for next time.
+- Stair marble bed 1:3: about 10 bags and 1.0 m3 sand per m3 (recommendation), the 1:4 figures, or your own.
+- Round stair with no section: use the plan count of 28 steps (recommendation) or hold.
+- Turning steps: half riser x their plan area (0.120 m3 on the main stair, recommendation), part of the landing, or hold.
+- Setting: run the four coding agents as Claude Code scheduled tasks with the repository attached (worker 1 was refused
+  again at 01:25; workers 2 and 3 ended their 01:39 / 01:59 runs in 3 - 4 minutes without a log line).
 - Upload the Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as separate PDFs under 6 MB.
