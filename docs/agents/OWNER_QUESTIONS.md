@@ -155,6 +155,12 @@ Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
 
 ## Open
 
+No question open (Lead 2026-10-20 20:10). Q-67, Q-68, Q-69 (answered 18:50) and Q-70 (answered 20:10, owner management decision) moved to Answered; their tasks: Q-67 -> T-123 / T-131 / T-127, Q-68 -> T-127, Q-69 -> T-125 / T-108, Q-70 -> T-129. From now on genuine owner decisions go in ONE daily package (owner management decision §10).
+
+Earlier note: Q-64, Q-65 and Q-66 answered by the owner 2026-10-20 16:23 (moved to Answered by the Lead 18:20). Q-67, Q-68, Q-69 new (Lead 18:20).
+
+## Answered
+
 ### Q-67 The ground-floor side passage between the annex and the house: outside or inside? (lead 2026-10-20 18:20, from worker 2's census of slabs over outside air; T-109, T-121, T-123; no-assumptions question: UP-SPACE-002 makes an unlabelled space with a doorless opening POSSIBLY_EXTERIOR until a project decision binds it)
 
 THE PROBLEM: the 1.20 x 4.70 m passage (5.64 m2) at court level +0.15 between the annex and the house has no room name, no
@@ -247,10 +253,6 @@ step; under B the two floors of one stair would be finished differently.
 Waits on: second-floor floor tiles and stair marble (the tiling table; the stair ledger T-111); arrival landings inside a
 named lobby on every villa.
 Answer: A, CONDITIONAL. Treat the 4.875 m2 second-floor main-stair arrival as marble IF the drawing geometry establishes that it is part of the main stair landing. Candidate lobby porcelain 3.900 m2; candidate total stair marble 49.240 m2. Verify the actual polygon and confirm there is no double counting; if the geometry does not support this classification, keep it HELD. (owner in the main chat, 2026-10-20 20:10 UTC; docs/agents/OWNER_MANAGEMENT_DECISION_2026-10-20.md)
-
-Earlier note: Q-64, Q-65 and Q-66 answered by the owner 2026-10-20 16:23 (moved to Answered by the Lead 18:20). Q-67, Q-68, Q-69 new (Lead 18:20).
-
-## Answered
 
 ### Q-64 A small notch where a window frame meets a column: does the facade run go round it or straight across? (verifier 2026-10-20 13:25; T-016b, T-014, T-109; no-assumptions question)
 

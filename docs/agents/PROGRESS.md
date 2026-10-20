@@ -1,7 +1,7 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-20 18:20 UTC (Lead). Previous version: 2026-10-20 16:20 UTC.
+Last update: 2026-10-20 20:10 UTC (Lead). Previous version: 2026-10-20 18:20 UTC.
 
 ## Where we are on the five gates
 | Gate | In plain words | Due | Done so far | State |
@@ -13,9 +13,10 @@ Last update: 2026-10-20 18:20 UTC (Lead). Previous version: 2026-10-20 16:20 UTC
 | 4 | Read scanned and PDF plans | 9 Dec | the vector-PDF height reader is merged, but the Alsenan PDF sheets are scans; a scan reader that releases a number only when its dimension chain adds up exactly is now on the board | started (one task) |
 
 ## Engine vs freelancer BOQ: Alsenan Chalet (released concrete run, commit 8774071, unchanged; waterproofing released in ARCH_TAKEOFF_V2.11)
-Since 16:20 the checker merged the stair-opening fix, the passage-wall fix and the wall-by-wall blockwork check; the
-membrane release version and the census of ceilings over outside air wait for it. None is wired, no released number
-changed. Your 17:54 instruction: candidates stay apart from verified and released quantities.
+Since 18:20 the checker merged the membrane purchase version as an opt-in candidate (2F roof 17 rolls re-placed by the
+checker itself, pantry 2, wet 21) and sent the ceilings census back (pool-court void 3.689, not 4.373 m2). Three hand
+results wait for it (landing / porcelain, facade passage condition, offcut-once audit). No released number changed. Your
+20:10 decision: verified pieces now flow into ONE opt-in candidate (V3.0); the released default stays until you switch it.
 "piece" = a merged, checked method piece run on the real drawing; "hand" = a reading of the drawing.
 | Trade | Unit | Engine | Freelancer | Difference | Change since last report | Target | State |
 |---|---|---|---|---|---|---|---|
@@ -40,7 +41,7 @@ changed. Your 17:54 instruction: candidates stay apart from verified and release
 | Floor-to-floor heights (piece) | m | GF 4.50, 1F 4.20, 2F 4.20 (your answer: +9.70 to +13.90) | not in his BOQ | - | 2F now given by you | exact | - |
 | Plaster / paint wall height (your rule) | m | your manual method: GF 3.65 (3.60), 1F and 2F 3.35 (3.30); drawing-derived per room: not measured yet | not in his BOQ | - | your correction: both methods shown side by side | exact | per-room table with both heights on the board |
 | Facade run (pieces merged, not wired) | m | 1F 63.009 (released 63.169); GF released 98.887, merged piece 105.887 = hand (geometric perimeter); billable by your Q-64 B 105.787, reveal returns 0.100 apart | no run row (he prices exterior plaster per elevation) | 1F -0.160 (-0.25 %) = hand; GF engine -7.000 (-6.6 %) vs hand | NEW: GF fix checked and merged; the passage is roofed full length by the slab plans: outside or inside asked you (98.887 if inside) | exact | GF: the open-air side passage walls were missing; new finding: the first floor covers 4.08 m2 of that passage (soffit and slab over outside air measured nowhere: census on the board); a 0.10 m notch at the pool glass asked you (105.787 or 105.887) |
-| Ceilings over outside air (hand, waits for the checker) | m2 | 45.632 CALCULATED (porch 19.181, side passage 5.640, pool court 14.020 net of the void, roof-slab edges 6.791); finish HELD | 19.154 (pool ceiling only) | pool court +5.134 (+36.6 %) over hand; 31.612 m2 in neither BOQ | new row | exact | finish asked you; the concrete above them is already in the slab lines (5.304 m3) |
+| Ceilings over outside air (hand, sent back by the checker) | m2 | 46.316 per the checker (porch 19.181, side passage 5.640, pool court 14.704 = 18.393 less the drawn opening 3.689, roof-slab edges 6.791); finish HELD (your Q-68 C: search the specification first, A only as provisional) | 19.154 (pool ceiling only) | pool court +4.450 (+30.3 %) over the checker's net; 31.612 m2 in neither BOQ | was 45.632 / pool 14.020: the void deducted was the engine's own face, not the drawn opening | exact | rework on the board: pool-court gross by hand from printed dimensions, finish evidence per place |
 | Rebar | t | not re-measured | 44.19 (earlier) | earlier estimate 26.24 t (-40.6 %) | none | within 3 % | not started |
 | Blockwork wall metres (hand, merged; code piece run on Alsenan, merged: 149.42 / 118.20 / 39.60, not ready to wire) | m | GF 143.16, 1F 120.75, 2F 39.78 (hand) | 134.28, 120.31, 39.10 | +8.88 (+6.6 %), +0.44 (+0.4 %), +0.68 (+1.7 %) | NEW: every wall typed: white 141.31 m and black 136.00 m by your fallback (ASSUMED), black 57.54 m by the structural note, 125.35 m held (parapets, street fence: asked you; sea-side 7.00 m) | within 3 % | GF over target: explained wall by wall, the two glass walls (12.05 m) are the whole gap: asked you; 3 walls drawn 0.15 hold a column the notes say must be built at column thickness (designer); he gives no block type on any row; a below-ground black block run (2 x 31.17 m) is in neither BOQ |
 | Skirting (released run, audited by a merged-pending piece) | m | gross 262.56; certain net 185.52 (212.65 with held window edges) | 282.85 (gross, no door deduction) | gross -20.29 (-7.2 %) | new row | within 3 % | rule difference: your rule deducts doors, he does not; all 28 engine nets right, 17.04 m of window-frame credit not listed on the lines (listing fix queued) |
@@ -114,15 +115,23 @@ Not measured, and paused by your order (Alsenan first).
   proven count is being re-checked piece by piece.
 
 ## Being worked on now
-- Checker (running since 17:49): the membrane release version on the drawing (2F roof 17 or 18, pantry 2, wet 21), then the
-  ceilings over outside air (passage 5.64 and pool court 14.02 m2 re-measured).
-- Workers (next runs; free tasks in this order): first-floor living and the landing room by room with polygons (porcelain
-  33.58 .. 34.10, marble 44.37 m2); GF facade perimeter 105.887 / billable 105.787 / reveal returns 0.100 m and the passage
-  roof; the offcut audit of every roll count; the corrected wall run; then beams member by member (65.97 m3 his), stairs
-  flight by flight, columns to the deepest beam (34.45 hand vs 28.55 his m3), beam spans from sections, the beam / stair
-  rework, pool and dome sizes.
-- Queued: block m2 / counts (after the corrected wall run and the beam register), skirting listing, mortar from the mix,
-  plaster / paint wiring (after you confirm the reconciliation), typed values into the ledger, scan reader.
+- Checker (next run 20:49; its 18:49 and 19:49 runs left nothing): three hand results in this order: first-floor living
+  porcelain 33.594 .. 33.711 m2 with the landing marble once (4.875); the GF side passage shown open to outside air on the
+  drawings (perimeter 105.887 m, billable 105.787 m once a reveal line holds the 0.100 m); every roll count re-checked so
+  each leftover is used once (all released and proven counts valid). Then its own new task: a scoreboard per trade and unit
+  with the independently verified share and the held share shown as unknown.
+- Integration (worker 3's lane): build the ONE opt-in candidate V3.0 from the pieces the checker already merged (straps
+  3.390 m3, GF facade passage walls, first-floor stair residue range, the membrane version), every changed line with before
+  / after, drawing reference, both methods and the checker's evidence; then refresh the coverage registry. Worker 3 is
+  finishing the beam member register by hand first (beams 68.84 released vs his 65.97 m3, 18 pieces held).
+- Structural (worker 1's lane): blinding by member (footings 15.179 m3 ready, ground beams and straps held) and the 5
+  columns no upper slab plan draws (-2.268 m3); columns to the deepest beam at each column (34.45 hand vs 28.55 his m3);
+  stairs flight by flight; the beam / stair rework.
+- Architecture and finishes (worker 2's lane): pool-court soffit by hand and the soffit finish search; the second-floor
+  stair arrival (your Q-70 A: marble only if the geometry shows it is the landing; stair marble 49.240 m2 candidate);
+  plaster and paint room by room by both methods; the corrected wall run with your five lengths (Q-69 B).
+- Queued: block m2 / counts, skirting listing, mortar from the mix, typed values, scan reader; element register (design
+  written, code after V3.0).
 - Research scout (next run 23:50 UTC): Arabic / English notes on scans; proving strip coverage; wall centrelines.
 
 ## What is missing
@@ -136,19 +145,13 @@ Not measured, and paused by your order (Alsenan first).
 - The Kuwait specification chapters on waterproofing, floors, wall tiles and paint (file too big: parts needed).
 
 ## Waiting for the owner
-- NEW (Q-67): the GF side passage (5.64 m2, roofed full length, one open mouth to the court): outside or inside?
-  Recommendation: outside, like the entrance porch (facade 105.887 / 105.787 m; 98.887 if inside).
-- NEW (Q-68): ceilings over outside air, 45.632 m2: exterior plaster + paint, decor ceiling, or hold? Recommendation:
-  exterior plaster and paint; the pool court net of its void (14.020, not his 19.154).
-- NEW (Q-69): two almost all-glass GF wall lines (12.05 m): in the blockwork run as walls with an opening, or out?
-  Recommendation: in the run (GF 143.16 m), the glass deducted in the block m2 (out: 131.88 m).
-- Answered today and applied: Q-64 (billable 105.787 m, perimeter 105.887 kept), Q-65 (parapets / fence held, find what
-  white / black mean), Q-66 (landing marble, once).
-- Your confirmation of the reconciliation proposal in your main chat (your manual method beside the drawing method); until
-  then nothing released changes.
-- Designer requests to forward when you choose: DESIGNER_CLARIFICATIONS.md (sea-side fence, CB10, CB3 / B3, unlabelled beams,
-  annex +4.30, door schedule, round stair, ceilings, tile sizes, block above the neighbour beams, walls holding columns, and
-  new: the foot of the east stair flight, blinding past the plot line and under straps, column C8 size).
-- Setting: run the coding agents as Claude Code scheduled tasks with the repository attached (refusals continue: one worker
-  run left no log line, one could not write its files to a branch).
-- Upload the Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as separate PDFs under 6 MB.
+- No question open: Q-67 (passage outside if the drawings confirm it: they do, the checker re-reads it), Q-68 (soffit
+  finish from the specification, A provisional), Q-69 (physical block length beside the 143.16 m manual run) and Q-70
+  (2F arrival marble if it is the landing) are answered and on the board. New decisions will come as one daily package.
+- Setting (P-01): finish Test B and approve the repo-attached configuration; until then runs keep ending silently (the
+  checker twice since 18:49, worker 3 once).
+- Your confirmation of the reconciliation proposal (manual and drawing methods side by side); until then nothing released
+  changes.
+- Designer requests to forward when you choose: DESIGNER_CLARIFICATIONS.md.
+- Upload the Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as separate PDFs under 6 MB (also needed for
+  the soffit finish under your Q-68 C).

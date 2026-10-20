@@ -45,3 +45,20 @@
 | P-14 | owner | authorise the formal held-out evaluation (sealed URBAN_BLIND_V2 or Qortuba) or provide an independent QS villa |
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
+
+## Status (Lead, 2026-10-20 20:10; re-estimated each run from what merged and was verified)
+
+| Plan | Board | State | Note |
+|---|---|---|---|
+| P-01 | owner + auditor | in progress | Test B and the main config not yet confirmed by the owner. Run reliability is still the critical risk: the verifier's 18:49 and 19:49 runs left no line, so 3 READY pieces wait |
+| P-02 | T-130 (lane I) | TODO | |
+| P-03 | T-131 (lane I) | TODO, top of the board | skeleton = V2.13 + merged straps, facade passage walls (range until T-123 is verified), stair residue range; waiting pieces join as V3.0.x |
+| P-04 | T-132 (verifier) | TODO | verifier only |
+| P-05 | T-126 (lane S) | TODO | heights stay with T-119 |
+| P-06 | T-128 (lane A) | TODO | |
+| P-07 | T-125 then T-108 (lane A) | T-125 TODO; T-108 queued after T-125 and T-110 | Q-69 B: physical block length, not the architectural run |
+| P-08 | T-009 (queued) | not started | promote when lane S has room after T-126 / T-119 |
+| P-09 | ELEMENT_REGISTER.md (design v0 written) | design done, code after T-131 | |
+
+Day-7 target (2026-10-27): needs T-131 merged and one V3.0 line re-measured by the checker. Today no improvement has
+gone through V3.0 (it does not exist yet). On track only if the verifier runs again at the next slots.

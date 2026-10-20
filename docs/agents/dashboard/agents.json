@@ -3,46 +3,46 @@
   "agent": "Lead planner",
   "role": "Plans the work, keeps the board and milestones, asks you questions",
   "cadence": "every 2 h (:09)",
-  "last_run": "2026-10-20T18:11:00Z",
+  "last_run": "2026-10-20T20:10:29Z",
   "result": "running",
-  "working_on": "Recorded 3 merges (stair openings, passage walls, wall run check); 4 new tasks; 3 new questions to you: side passage outside or inside, ceilings over outside air, glass walls in the block run",
-  "as_of": "2026-10-20T18:25:00Z"
+  "working_on": "Engineering & delivery manager: board split into lanes S / A / I; V3.0 integration candidate, coverage registry, blinding / undrawn columns put at the top; element register design; Q-67..Q-70 closed, no question open",
+  "as_of": "2026-10-20T20:17:22Z"
  },
  {
   "agent": "Worker 1",
   "role": "Builds one board task per run on its own branch",
   "cadence": "hourly :19",
-  "last_run": "2026-10-20T17:19:51Z",
-  "result": "failed",
-  "working_on": "16:19 and 17:19 runs ended after about 5 minutes with no log line and no commit (cause not known); last delivered: GF facade passage walls 105.887 m (T-109)",
-  "as_of": "2026-10-20T18:25:00Z"
+  "last_run": "2026-10-20T19:19:22Z",
+  "result": "ok",
+  "working_on": "Structural lane. Delivered: GF facade 105.887 m perimeter, Q-67 condition met on the drawings, passage roofed 5.640 m2 (T-123, waits for the checker)",
+  "as_of": "2026-10-20T20:17:22Z"
  },
  {
   "agent": "Worker 2",
   "role": "Builds one board task per run on its own branch",
   "cadence": "hourly :39",
-  "last_run": "2026-10-20T17:39:45Z",
+  "last_run": "2026-10-20T19:39:31Z",
   "result": "ok",
-  "working_on": "Delivered: ceilings over outside air, 5 places 45.632 m2 by hand; concrete above them already counted (T-121)",
-  "as_of": "2026-10-20T18:25:00Z"
+  "working_on": "Architecture / finishes lane. Delivered: membrane offcut booked once, every Alsenan roll count valid (T-124, waits for the checker)",
+  "as_of": "2026-10-20T20:17:22Z"
  },
  {
   "agent": "Worker 3",
   "role": "Builds one board task per run on its own branch",
   "cadence": "hourly :59",
-  "last_run": "2026-10-20T17:59:18Z",
-  "result": "failed",
-  "working_on": "17:59 run ended after 6 minutes with no log line (cause not known); last delivered: membrane release version (2F roof 17, pantry 2), drawing run left to the checker (T-120)",
-  "as_of": "2026-10-20T18:25:00Z"
+  "last_run": "2026-10-20T19:59:59Z",
+  "result": "running",
+  "working_on": "Beam member register by hand (beams 68.84 released vs 65.97 m3 freelancer, 18 pieces held) (T-110); then integration lane: V3.0 candidate",
+  "as_of": "2026-10-20T20:17:22Z"
  },
  {
   "agent": "Verifier",
   "role": "Checks finished tasks, merges or rejects, keeps the scoreboard",
   "cadence": "hourly :49",
-  "last_run": "2026-10-20T17:49:37Z",
-  "result": "running",
-  "working_on": "16:49 run merged stair openings, passage walls and the wall-run check (no log line); next: membrane release version on the drawing, ceilings over outside air",
-  "as_of": "2026-10-20T18:25:00Z"
+  "last_run": "2026-10-20T19:49:56Z",
+  "result": "failed",
+  "working_on": "18:49 and 19:49 runs left no log line and no commit (cause not known); 3 tasks wait: 1F landing / porcelain, GF facade passage, offcut audit",
+  "as_of": "2026-10-20T20:17:22Z"
  },
  {
   "agent": "Research scout",
@@ -50,7 +50,7 @@
   "cadence": "daily 23:50 UTC",
   "last_run": "2026-10-19T23:51:17Z",
   "result": "ok",
-  "working_on": "Open: Arabic / English notes on scans, strip coverage proof, wall centrelines",
-  "as_of": "2026-10-20T18:25:00Z"
+  "working_on": "Open requests: Arabic / English notes on scanned plans, proving strip coverage, wall centrelines from double-line walls",
+  "as_of": "2026-10-20T20:17:22Z"
  }
 ]
