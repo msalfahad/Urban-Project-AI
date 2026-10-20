@@ -43,6 +43,7 @@ VISIBLE in the BOQ, never 0. Workers add rows (next free D- number) with the evi
 | M-04 | Expansion joints on roofs (spacing, BOQ line) | owner Q-42 correction leaves spacing open | HELD; ask the owner when roof tile counts are built | Q-42 |
 | M-05 | Substructure black block under the neighbour-side ground beams (note of D-11) | neither the T-103 hand table (superstructure) nor the freelancer (no row below ground) has it | 2 x 31.17 m centreline (building south line incl. the 1.40 m passage; north fence line); height: fence line PROVISIONAL >= 0.70 m (minimum excavation 1.50 m - two 0.40 ground beams, boundary-wall detail page 14), building line HELD (footing levels) | D-11; T-107, T-108 |
 | M-06 | Three unlabelled GF spaces 8.13 m2 (renumbered from a second M-05 by the Lead 14:20) | T-099 census; T-016b reads two of them as the outdoor side passage (exterior paving) | HELD | T-099, T-016b |
+| M-07 | Exterior soffit and the 1F slab over the GF open-air side passage: 4.08 of 5.64 m2 under a 1F bathroom and a master-bedroom corner (Lead 16:20, from T-109) | no soffit line; slab inclusion in the concrete ledger not checked; finish not printed | NOT MEASURED; census of every slab over open air is T-121; soffit finish HELD (no Urban rule) | T-109, T-121 |
 
 ## 3. Status mapping (directive 2.2; frozen outputs are not renamed)
 

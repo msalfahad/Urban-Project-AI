@@ -1,21 +1,21 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-20 14:20 UTC (Lead). Previous version: 2026-10-20 12:20 UTC.
+Last update: 2026-10-20 16:20 UTC (Lead). Previous version: 2026-10-20 14:20 UTC.
 
 ## Where we are on the five gates
 | Gate | In plain words | Due | Done so far | State |
 |---|---|---|---|---|
 | 0 | Measure the engine against the freelancer on a real villa; synthetic test villas | 21 Oct | done: Alsenan measured on the newest code, capability matrix, synthetic villas with hand truth; the apartment waits by your order | done for Alsenan |
-| 1 | No room, door or window missed; wet and dry rooms right (floor area, tiles, waterproofing) | 28 Oct | wet / dry within 0.2 % on Alsenan; 29 of 29 windows accounted for; room levels from the marks; membrane rolls released (each room / roof alone); rooms-that-vanish guard and two hand checks of 24 older engine changes merged (22 right). NEW: the checker read the drawing and confirmed the ground-floor facade run misses the 1.20 m open-air side passage (engine 98.887 vs 105.887 m, -6.6 %): fix on the board. The first-floor living gap is traced to 0.0001 m2 (engine 44.869 vs 38.588 m2: stair openings and stair well counted as floor, plus a small engine defect on winder steps 0.296 m2): fix on the board | on track |
+| 1 | No room, door or window missed; wet and dry rooms right (floor area, tiles, waterproofing) | 28 Oct | wet / dry within 0.2 % on Alsenan; 29 of 29 windows accounted for; room levels from the marks; membrane rolls released (each room / roof alone); rooms-that-vanish guard and two hand checks of 24 older engine changes merged (22 right). NEW: the checker read the drawing and confirmed the ground-floor facade run misses the 1.20 m open-air side passage (engine 98.887 vs 105.887 m, -6.6 %): fix now built (= hand), waiting for the checker. The first-floor living gap is traced to 0.0001 m2 (engine 44.869 vs 38.588 m2: stair openings and stair well counted as floor, plus a small engine defect on winder steps 0.296 m2): fix now built (38.459 .. 38.979 m2 vs hand 38.588 .. 38.990), waiting for the checker | on track |
 | 2 | Blockwork, plaster, paint, tiles, waterproofing, doors, windows within target | 11 Nov | membrane table, fold, cutting plan, strips along a room's own wall (wedge W.C. 5.95 -> 5.45 m = hand), window areas for 6 windows, room levels, tiling table, plaster / paint per room by hand, tile count, blockwork metres by hand and the centreline code piece merged. NEW: every wall typed white / black from the structural notes and your fallback (no architectural sheet names a block type); skirting: all 28 nets right, 17.04 m of deductions not listed (fix queued). Next: the code vs hand wall by wall, walls that hold columns, block m2 / m3 by your height rule, wall heights by both methods (being worked) | started |
 | 3 | Structural: concrete census, rebar from schedules, formwork, excavation | 25 Nov | concrete ledger, footings, columns / necks, beams and stairs by hand, beam fix, typed drawing values, plot-edge members merged. NEW: blinding and columns by hand merged: the freelancer's blinding is a plate under the whole plot that no drawing shows; the engine counts 5 columns the upper slab plans do not draw. Next: columns to the deepest beam at each column (your existing rule), beam register, stairs flight by flight, beam / stair rework. Released concrete still 92.77 vs 111.81 m3 | started |
 | 4 | Read scanned and PDF plans | 9 Dec | the vector-PDF height reader is merged, but the Alsenan PDF sheets are scans; a scan reader that releases a number only when its dimension chain adds up exactly is now on the board | started (one task) |
 
 ## Engine vs freelancer BOQ: Alsenan Chalet (released concrete run, commit 8774071, unchanged; waterproofing released in ARCH_TAKEOFF_V2.11)
-Since 12:20 the checker merged the 14-change hand check, the facade-gap piece, the blockwork centreline piece, the membrane
-wall-frame piece, the blinding / columns hand table and the first-floor living trace: none is wired, no released number
-changed.
+Since 14:20 the checker merged the skirting audit, the wall heights by both methods and the second-floor roof proof with
+the pantry plan; two general fixes are built and wait for the checker (passage walls, stair openings out of room floors).
+None is wired, no released number changed.
 "piece" = a merged, checked method piece run on the real drawing; "hand" = a reading of the drawing.
 | Trade | Unit | Engine | Freelancer | Difference | Change since last report | Target | State |
 |---|---|---|---|---|---|---|---|
@@ -31,22 +31,22 @@ changed.
 | Domes | m3 | none (your answer: not concrete) | 6.78 | rule difference | none | - | settled |
 | Wet-area waterproofing floor, 17 areas (piece + hand) | m2 | 72.12 | 72.01 | +0.11 (+0.16 %) | none | within 3 % | not yet in the released BOQ (wiring is first on the board) |
 | Wet-area upturn, walls only (piece) | lm | 125.57 (your doorway answer) | 144.61 (full boundary) | rule difference | now from the strip method on real rooms (hand 127.07) | within 3 % | full boundary 144.73 = his 144.61 (+0.08 %) |
-| Wet-area membrane rolls to buy (released, your answer: each room alone) | rolls | 19 for 17 wet areas; 122.99 m of strips, 67.01 m left over | not given | not comparable | hand plan of every wet room merged: 19 = 19, strips 122.50 m (-0.4 %); with the pantry 21 rolls | exact | the only general gap: a wedge W.C. laid along its 45 deg wall saves 0.50 m of strip (same roll); now on the board |
-| Roof waterproofing membrane (released) | m2 | 204.11 (3 roofs drawn on plans) + the second-floor top roof as a HELD line (your answer); rolls 8 + 6 released, 2F roof HELD 17 or 18; by hand 32 (8 + 6 + 18) | 285.00 | -80.89 (-28.4 %) | fix merged: 2F roof covered completely, its count shown as 17 or 18 until you answer; 1 of 578 BOQ lines changed | within 3 % | 17 only if the 4.60 m parapet piece may come from that roof's own 0.70 m side trim (asked you) |
+| Wet-area membrane rolls to buy (released, your answer: each room alone) | rolls | 19 for 17 wet areas; 122.99 m of strips, 67.01 m left over | not given | not comparable | NEW: pantry cutting plan by hand merged: 2 rolls, so 21 with the pantry (your answer: waterproof it); release version on the board | exact | the only general gap: a wedge W.C. laid along its 45 deg wall saves 0.50 m of strip (same roll); now on the board |
+| Roof waterproofing membrane (released) | m2 | 204.11 (3 roofs drawn on plans) + the second-floor top roof as a HELD line (your answer); rolls 8 + 6 released, 2F roof HELD 17 or 18; by hand 32 (8 + 6 + 18) | 285.00 | -80.89 (-28.4 %) | fix merged: 2F roof covered completely, its count shown as 17 or 18 until you answer; 1 of 578 BOQ lines changed | within 3 % | NEW: proven by hand and re-measured by the checker: with your answer (trim from the same roof) the 2F roof needs 17 rolls (strips stop at the opening edge, 16 flap pieces from its own roll ends; strict layout 18). Release version on the board; it stays opt-in until you confirm the reconciliation |
 | Roof upturn (released) | lm | 181.59 | 194.00 | -12.41 (-6.4 %) | now released | within 3 % | top roof held (your answer) |
 | Windows with a printed height, 6 of 29 (hand, merged) | m2 | 26.485 | 24.280 | +2.205 (+9.1 %) | was 4 of 29, 13.892 vs 14.350 | exact | engine right on 4 printed heights, 1 rule difference (curved window, your answer); 23 HELD (scans); the curved pool glazing is 6.57 m wide by your answer, height 4.30 m |
 | Windows counted | pcs | 29 (27 measured + 2 held) | 29 | 0 | none | exact | - |
 | Doors, windows (aluminium) | m2 | windows 26.49 of 116.9; doors: main entrance 2.00 x 2.50 = 5.00 only | 116.9 / 12.0 | not comparable yet | windows from 13.89 | exact | no other door height is printed: asked you |
 | Floor-to-floor heights (piece) | m | GF 4.50, 1F 4.20, 2F 4.20 (your answer: +9.70 to +13.90) | not in his BOQ | - | 2F now given by you | exact | - |
 | Plaster / paint wall height (your rule) | m | your manual method: GF 3.65 (3.60), 1F and 2F 3.35 (3.30); drawing-derived per room: not measured yet | not in his BOQ | - | your correction: both methods shown side by side | exact | per-room table with both heights on the board |
-| Facade run (pieces merged, not wired) | m | 1F 63.009 (released 63.169); GF released 98.887, hand 105.887 | no run row (he prices exterior plaster per elevation) | 1F -0.160 (-0.25 %) = hand; GF engine -7.000 (-6.6 %) vs hand | GF settled by the checker from the drawing | exact | GF: the open-air side passage walls are missing (fix on the board); a 0.10 m notch at the pool glass asked you (105.787 or 105.887) |
+| Facade run (pieces merged, not wired) | m | 1F 63.009 (released 63.169); GF released 98.887, new piece 105.887 = hand (waits for the checker) | no run row (he prices exterior plaster per elevation) | 1F -0.160 (-0.25 %) = hand; GF engine -7.000 (-6.6 %) vs hand | NEW: GF fix built (+7.000 m = hand), not yet checked | exact | GF: the open-air side passage walls were missing; new finding: the first floor covers 4.08 m2 of that passage (soffit and slab over outside air measured nowhere: census on the board); a 0.10 m notch at the pool glass asked you (105.787 or 105.887) |
 | Rebar | t | not re-measured | 44.19 (earlier) | earlier estimate 26.24 t (-40.6 %) | none | within 3 % | not started |
 | Blockwork wall metres (hand, merged; centreline code piece merged, not run on Alsenan yet) | m | GF 143.16, 1F 120.75, 2F 39.78 (hand) | 134.28, 120.31, 39.10 | +8.88 (+6.6 %), +0.44 (+0.4 %), +0.68 (+1.7 %) | NEW: every wall typed: white 141.31 m and black 136.00 m by your fallback (ASSUMED), black 57.54 m by the structural note, 125.35 m held (parapets, street fence: asked you; sea-side 7.00 m) | within 3 % | GF over target, explained wall by wall next; 3 walls drawn 0.15 hold a column the notes say must be built at column thickness (designer); he gives no block type on any row; a below-ground black block run (2 x 31.17 m) is in neither BOQ |
 | Skirting (released run, audited by a merged-pending piece) | m | gross 262.56; certain net 185.52 (212.65 with held window edges) | 282.85 (gross, no door deduction) | gross -20.29 (-7.2 %) | new row | within 3 % | rule difference: your rule deducts doors, he does not; all 28 engine nets right, 17.04 m of window-frame credit not listed on the lines (listing fix queued) |
 | Wall tile | m2 | not measured; wet walls about 447 - 473 m2 by hand depending on your tile-height answer | - | - | new estimate range (hand) | within 3 % | tile height asked you |
 | Plaster | m2 | held | 1151.14 | - | none | within 3 % | waits on your beam-depth, annex and door-height answers; 6 closed dry rooms by hand: 336.94 (0.60 m always) / 321.56 (deepest beam) / 331.49 (deep beam where it crosses) vs his 375.40 m2 (-10.2 / -14.3 / -11.7 %); he deducts openings at half, your rule takes the full opening |
 | Paint | m2 | held | 1191.13 | - | none | within 3 % | same walls as plaster; ceilings have no rule yet (he paints 452.33 m2 of decor ceilings): asked you |
-| Dry-room floor tiles, 10 rooms (piece, merged) | m2 | 194.98 | 189.61 | +5.37 (+2.83 %) | cause traced | within 1 - 2 % | first-floor living 44.869 vs hand 38.588 (38.990 if the foot of the east flight is landing) vs his 38.96: the engine counts the round-stair opening (2.10), the stair well (2.53) and the round-stair quarter landing (1.35) as floor, and loses 0.30 on winder steps; fix on the board. Landing finish: asked you (your two rules differ). Second-floor lobby 8.775 vs 7.70 engine right |
+| Dry-room floor tiles, 10 rooms (piece, merged) | m2 | 194.98 | 189.61 | +5.37 (+2.83 %) | NEW: fix built: 1F living 38.459 .. 38.979 (HELD range) vs hand 38.588 .. 38.990, waits for the checker | within 1 - 2 % | first-floor living 44.869 vs hand 38.588 (38.990 if the foot of the east flight is landing) vs his 38.96: the engine counts the round-stair opening (2.10), the stair well (2.53) and the round-stair quarter landing (1.35) as floor, and loses 0.30 on winder steps; fix on the board. Landing finish: asked you (your two rules differ). Second-floor lobby 8.775 vs 7.70 engine right |
 | Floor tile count per room (piece, merged) | tiles | held in all 25 floor rooms: no tile size printed on any Alsenan sheet; for 60x60 on 23 rooms 697 tiles without offcut reuse (+21 % over net m2) or 611 with reuse in the same room (+6 %) | not given | not comparable | new | exact | tile size per room and offcut reuse asked you |
 | Stair marble (piece, merged) | m2 | 39.49 (treads, risers, landings) | 295.44, of which 151.80 is the court paving counted a second time; stairs and landings alone 143.64 | not comparable: his step rows are metres added to m2 | NEW: his double count found in his own formulas | exact | turning steps and round stair held (your answers pending) |
 | Tiling materials (piece, PROVISIONAL) | bags / m3 | cement 80 - 111 bags, sand 10.91 - 15.21 m3, adhesive 58 bags of 20 kg | not given | - | new | - | provisional by your answer; stair bed held on the 1:3 question |
@@ -100,22 +100,28 @@ Not measured, and paused by your order (Alsenan first).
 - A room's floor area can include the stair opening and stair well inside it: on the first floor that is 4.6 m2 of the
   6.3 m2 the engine gives too much.
 
+- The second-floor roof needs 17 rolls under your trim answer only if the strips stop at the opening edge and the step
+  band is covered by flap pieces from that roof's own roll ends; a layout that looks the same with full strips needs 18.
+- An open-air passage can sit partly under the floor above: on Alsenan 4.08 m2 of the side passage is roofed by a
+  first-floor bathroom and bedroom, an exterior ceiling and a slab over outside air that no BOQ line measures yet.
+
 ## Being worked on now
-- All three workers delivered this window (skirting audit, block types, wall heights by both methods) and are free for the
-  next tasks. Wall heights: on 4 dry rooms your method gives 234.17 vs his 258.40 m2 (-9.4 %; same walls -1.5 %); the
-  drawing heights stay held (no ceiling level printed); in four rooms your line meets a deeper beam (GF open room 0.10 m
-  into the 0.85 m beams; wash lobby, a 1F bed room and the dewaneya exactly at the beam soffit).
-- Checker (running now): merged the blinding / columns table and the first-floor living trace; next the skirting audit and
-  the block-type reading (judged as hand evidence: its files could not be written to a branch).
-- Free, hand work allowed: beams member by member; stairs flight by flight; columns to the deepest beam at each column;
-  2F roof trim proof and pantry cutting plan; blockwork code vs hand wall by wall plus walls that hold columns.
-- Free, code: stair openings and stair wells out of room floors (first-floor living); open-air passage walls in the
-  ground-floor facade run; beam / stair rework; beam spans from printed section cuts; pool and dome sizes from the details.
-- Queued: block m2 / counts (after the beam register), skirting listing (after the audit merges), mortar from the mix and
-  plaster / paint wiring (after you confirm the reconciliation), typed values into the ledger (after the rework), scan reader.
+- Worker 3: blockwork, the code's wall run on Alsenan against the hand table wall by wall (GF 143.16 / 1F 120.75 / 2F
+  39.78 m vs his 134.28 / 120.31 / 39.10 m), the three 0.15 m walls that hold columns, and the block-type evidence files.
+- Workers 1 and 2 (next runs): free tasks are the membrane release version (2F roof 17 + pantry 2, wet areas 21), the
+  soffit / slab-over-open-air census (from the 4.08 m2 passage finding), beams member by member (65.97 m3 his), stairs
+  flight by flight, columns to the deepest beam (34.45 hand vs 28.55 his m3), beam spans from printed sections, the
+  beam / stair rework, pool and dome sizes.
+- Checker: two fixes wait for a run that may execute code: stair openings out of room floors (1F living 44.87 -> about
+  38.5 - 39.0 m2) then the passage walls (GF facade 98.89 -> 105.89 m). Its 15:49 run was refused the environment.
+- Queued: block m2 / counts (after the wall-by-wall check and the beam register), skirting listing (after the membrane
+  version), mortar from the mix and plaster / paint wiring (after you confirm the reconciliation), typed values into the
+  ledger (after the rework), scan reader.
 - Research scout (next run 23:50 UTC): Arabic / English notes on scans; proving strip coverage; wall centrelines.
 
 ## What is missing
+- Soffits and slabs over outside air (first found: 4.08 m2 of the GF side passage under the first floor): census on the
+  board; the soffit finish has no rule yet, one question to you will follow with the total.
 - Beam ledger and stair concrete back from rework; 16 beam pieces the drawings contradict or leave unmarked (designer list).
 - Columns by the deepest-beam rule (table on the board); the engine's 5 undrawn columns removed when the ledger is rewired.
 - Blockwork: the code on Alsenan, the walls that hold columns, block m2 / m3; parapet and street-fence block type (asked).
