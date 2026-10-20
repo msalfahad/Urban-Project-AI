@@ -6,7 +6,7 @@ wrapper (the T-085 harness), so the bands, marks, marks proposed along a line an
 Every section letter on every slab sheet is then bound by the new piece.
 
 Usage (Python 3.11 venv, repo root):
-  python -I research/agents_t102/alsenan_t102.py <structural.dxf> <conventions.json> <out.json>
+  python -I research/agents_t102/alsenan_t102.py <structural.dxf> <conventions.json> <out.json> [--profile P.json]
 out.json: per sheet, per letter: state, reason, span id, printed size, unit, volume, crossed span ids / widths /
 marks. No drawing coordinates, no texts other than marks."""
 from __future__ import annotations
@@ -41,13 +41,18 @@ def _capture():
 
 def main(argv=None):
     argv = list(sys.argv[1:] if argv is None else argv)
+    prof = None
+    if "--profile" in argv:                             # e.g. the committed route G profile (M4 basis)
+        i = argv.index("--profile")
+        prof = argv[i + 1]
+        del argv[i:i + 2]
     dxf, conv, out_path = argv[:3]
     import ezdxf
     from tools import urban_boq_m2 as M2
     from tools import urban_intake as UI
     calls, orig = _capture()
     try:
-        R = M2.compute([dxf], conventions=conv, profile=None, route="G", completeness=True)
+        R = M2.compute([dxf], conventions=conv, profile=prof, route="G", completeness=True)
     finally:
         MD.split_at_supports, MD.bind_marks = orig
     D = R["generic"]["D"]

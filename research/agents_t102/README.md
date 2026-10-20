@@ -33,13 +33,23 @@ the route's own bands, marks and net plan areas are captured by a pass-through w
 |---|---|---|---|---|---|---|---|
 | 1F roof slab (SH04) | B-B | BAND0031.1, B23 west span, 0.45 drawn | 45 / 75 cm (DIMLFAC 0.025 = 1:4 x cm) | B23 45 x 75 = printed | 3.000 m | **1.0125** | RELEASED, DRAWING-VERIFIED |
 | GF roof slab (SH06) | A-A | BAND0043.1, B20 west span, 0.40 drawn | 40 / 75 cm | B20 40 x 75 = printed | 3.000 m | **0.900** | RELEASED, DRAWING-VERIFIED |
-| GF roof slab | C-C | crosses CB1 (BAND0041.2, 0.35, printed mark, already released 1.339) | 55 + rounded top R 20 = 75; width NOT printed | CB1 35 x 75 | - | - | HELD: outline not rectilinear (rounded projection edge); no change, CB1 is released by its own mark |
-| GF roof slab | D-D | three cut lines lettered D: two cross CB1 (0.35), one crosses B24 (0.50) | 55 + R 20, width not printed, drawn 0.348 | - | - | - | HELD: CUT_AMBIGUOUS; the B24 line cannot be this profile (drawn 0.348 vs 0.50): designer D-30; no change (CB1, B24 released by marks) |
+| GF roof slab | C-C | crosses CB1 (BAND0041.2, 0.35, printed mark, already released 1.339) | 55 + 20 = 75 deep, arched top (both top corners rounded); width NOT printed; bars 'AS PER SCH.' | CB1 35 x 75 (depth agrees) | - | - | HELD: outline not rectilinear; no change, CB1 is released by its own mark |
+| GF roof slab | D-D | three cut lines lettered D: two cross CB1 (0.35), one (vertical, NE corner) crosses B24 (0.50) | 55 + 20 = 75 deep, one top corner rounded (20), width not printed, drawn 0.348 | - | - | - | HELD: CUT_AMBIGUOUS; the B24 line cannot be this profile (drawn 0.348 vs 0.50): designer D-30; no change (CB1, B24 released by marks) |
 | Ground-beam plan (SH08) | "C" | column-type texts 'C' near ground-beam lines read as letters | - | - | - | - | HELD: CUT_AMBIGUOUS, no SECTION C-C on that sheet: nothing bound (a guard case, not a section) |
 
 Also listed (not bound): B-B crosses BAND0013 (0.20, the strip north of B23, unbound) and BAND0019 (B6, 0.25, released
 by its mark); A-A crosses BAND0031 (0.20 strip north of B20, unbound). Upstands from the same sections: 0.20 x 0.20 x
 3.000 = 0.120 m3 each (B-B, A-A), listed apart (they are T-085's lines, not this task's).
+
+### Second basis and second drawing
+
+- Route G on the M4 basis (conventions V3 + the committed profile `research/urban_engine_m4_correctness/profile_st7757_m4.json`,
+  `--profile`): identical states and volumes for all five letters.
+- Drive "Alsenan chalet project" / ST7757.pdf (raster): page 5 (FIRST FLOOR ROOF SLAB) prints SECTION B-B 45 (25 + 20) x 75 with
+  a 20 x 20 upstand, 11 dia 18 top and bottom, 3 dia 18 in the upstand; page 4 (GROUND FLOOR ROOF SLAB) prints SECTION A-A
+  40 (20 + 20) x 75, the same bars, and SECTION C-C / D-D 55 + 20 with rounded tops and 'AS PER SCH.'; the east edge of
+  page 4 shows the three D cut marks (two across CB1, one down through the B24 corner) and the C mark at the void. Same
+  as the DXF.
 
 ### Hand check on the drawing (scratchpad DXF, mm)
 
@@ -73,9 +83,9 @@ by its mark); A-A crosses BAND0031 (0.20 strip north of B20, unbound). Upstands 
 
 ## Held items and what is missing
 
-- C-C / D-D: the only sections with a rounded top edge (R 20 cm projection); no printed width, so the profile reader
-  (rectilinear only) holds them; the 0.0086 m2 per section the rounded corner removes is not measured anywhere (D-26 /
-  projections). Designer D-30: three cut lines carry the letter D, one of them through B24 (0.50) which the D-D outline
+- C-C / D-D: the only sections with a rounded top (C-C arched, D-D one corner of 20); no printed width, so the profile
+  reader (rectilinear only) holds them; the concrete the rounding removes from CB1 is not measured anywhere (CB1 is
+  released as a full 0.35 x 0.75 rectangle; a few thousandths of a m3 per metre, not quantified here). Designer D-30: three cut lines carry the letter D, one of them through B24 (0.50) which the D-D outline
   (drawn 0.348) cannot be.
 - The 0.20 strips north of B20 / B23 stay HELD (Q-61 C(5)): the sections draw only the beam outline.
 - Not in scope (task row): CB10, CB3, the ring segments, unlabelled spans without a section, the 0.20 strips.
