@@ -1,0 +1,462 @@
+[
+ {
+  "room_id": "GF-RC99C2A",
+  "floor": "GF",
+  "item": "FIN.FLOOR.PORCELAIN",
+  "engine_net_m2": 118.733284,
+  "scope": "LOWEST_STOREY_NOT_ASSESSED",
+  "status": "RELEASED",
+  "residue_low_m2": 118.733392,
+  "residue_high_m2": 118.733392,
+  "change_low_m2": 0.0001
+ },
+ {
+  "room_id": "GF-R7512EA",
+  "floor": "GF",
+  "item": "FIN.FLOOR.PORCELAIN",
+  "engine_net_m2": 24.940332,
+  "scope": "NO_STAIR_NO_VOID",
+  "status": "RELEASED",
+  "residue_low_m2": 24.940332,
+  "residue_high_m2": 24.940332,
+  "change_low_m2": 0.0
+ },
+ {
+  "room_id": "GF-R75FBAE",
+  "floor": "GF",
+  "item": "FIN.FLOOR.PORCELAIN",
+  "engine_net_m2": 16.54964,
+  "scope": "NO_STAIR_NO_VOID",
+  "status": "RELEASED",
+  "residue_low_m2": 16.54964,
+  "residue_high_m2": 16.54964,
+  "change_low_m2": 0.0
+ },
+ {
+  "room_id": "GF-RA3AD49",
+  "floor": "GF",
+  "item": "FIN.FLOOR.PORCELAIN",
+  "engine_net_m2": 9.630001,
+  "scope": "NO_STAIR_NO_VOID",
+  "status": "RELEASED",
+  "residue_low_m2": 9.630001,
+  "residue_high_m2": 9.630001,
+  "change_low_m2": 0.0
+ },
+ {
+  "room_id": "GF-R51E127",
+  "floor": "GF",
+  "item": "FIN.FLOOR.PORCELAIN",
+  "engine_net_m2": 7.875,
+  "scope": "NO_STAIR_NO_VOID",
+  "status": "RELEASED",
+  "residue_low_m2": 7.875,
+  "residue_high_m2": 7.875,
+  "change_low_m2": 0.0
+ },
+ {
+  "room_id": "GF-RD6F891",
+  "floor": "GF",
+  "item": "FIN.FLOOR.WET_TILE",
+  "engine_net_m2": 3.717683,
+  "scope": "NO_STAIR_NO_VOID",
+  "status": "RELEASED",
+  "residue_low_m2": 3.717683,
+  "residue_high_m2": 3.717683,
+  "change_low_m2": 0.0
+ },
+ {
+  "room_id": "GF-RB62B55",
+  "floor": "GF",
+  "item": "FIN.FLOOR.WET_TILE",
+  "engine_net_m2": 3.375,
+  "scope": "NO_STAIR_NO_VOID",
+  "status": "RELEASED",
+  "residue_low_m2": 3.375,
+  "residue_high_m2": 3.375,
+  "change_low_m2": 0.0
+ },
+ {
+  "room_id": "GF-RC06FED",
+  "floor": "GF",
+  "item": "FIN.FLOOR.PORCELAIN",
+  "engine_net_m2": 2.800001,
+  "scope": "NO_STAIR_NO_VOID",
+  "status": "RELEASED",
+  "residue_low_m2": 2.800001,
+  "residue_high_m2": 2.800001,
+  "change_low_m2": 0.0
+ },
+ {
+  "room_id": "GF-RF38DAF",
+  "floor": "GF",
+  "item": "FIN.FLOOR.WET_TILE",
+  "engine_net_m2": 2.675221,
+  "scope": "NO_STAIR_NO_VOID",
+  "status": "RELEASED",
+  "residue_low_m2": 2.675221,
+  "residue_high_m2": 2.675221,
+  "change_low_m2": 0.0
+ },
+ {
+  "room_id": "GF-RB28769",
+  "floor": "GF",
+  "item": "FIN.FLOOR.WET_TILE",
+  "engine_net_m2": 2.36761,
+  "scope": "NO_STAIR_NO_VOID",
+  "status": "RELEASED",
+  "residue_low_m2": 2.36761,
+  "residue_high_m2": 2.36761,
+  "change_low_m2": 0.0
+ },
+ {
+  "room_id": "GF-RDF7D28",
+  "floor": "GF",
+  "item": "FIN.FLOOR.WET_TILE",
+  "engine_net_m2": 2.3625,
+  "scope": "NO_STAIR_NO_VOID",
+  "status": "RELEASED",
+  "residue_low_m2": 2.3625,
+  "residue_high_m2": 2.3625,
+  "change_low_m2": 0.0
+ },
+ {
+  "room_id": "GF-RFAD3C4",
+  "floor": "GF",
+  "item": "FIN.FLOOR.WET_TILE",
+  "engine_net_m2": 1.95,
+  "scope": "NO_STAIR_NO_VOID",
+  "status": "RELEASED",
+  "residue_low_m2": 1.95,
+  "residue_high_m2": 1.95,
+  "change_low_m2": 0.0
+ },
+ {
+  "room_id": "1F-R78C367",
+  "floor": "1F",
+  "item": "FIN.FLOOR.PORCELAIN",
+  "engine_net_m2": 44.869353,
+  "scope": "STAIR_PASSES_THROUGH_SLAB",
+  "status": "HELD_RANGE",
+  "residue_low_m2": 38.458536,
+  "residue_high_m2": 38.978536,
+  "change_low_m2": -6.4108,
+  "detail": {
+   "face_m2": 75.983,
+   "void_m2": 16.005,
+   "stair_flights_m2": 8.690682,
+   "stair_below_seen_m2": 6.714185,
+   "treads_quad_sum_m2": 17.574974,
+   "treads_counted_once_m2": 17.517536,
+   "void_residue_m2": 2.034669,
+   "stair_footprint_m2": 3.55993,
+   "held_m2": 0.52,
+   "floor_before_residue_m2": 44.573135,
+   "conservation": {
+    "face_m2": 75.983002,
+    "free_floor_ledger_m2": 44.573135,
+    "free_floor_geometry_m2": 44.573006,
+    "state": "BALANCED"
+   }
+  },
+  "pieces": [
+   {
+    "piece": "FOOT:SITE-a95bf979baf4cfae:F3:start",
+    "category": "STAIR_FOOT_UNSETTLED",
+    "status": "HELD",
+    "m2": 0.4025,
+    "bounding_rect_m": null,
+    "dims_m": [
+     1.15,
+     0.35
+    ]
+   },
+   {
+    "piece": "R14",
+    "category": "SIDE_ELEMENT_UNSETTLED",
+    "status": "HELD",
+    "m2": 0.1175,
+    "bounding_rect_m": [
+     0.05,
+     2.35
+    ],
+    "dims_m": null
+   },
+   {
+    "piece": "R01",
+    "category": "VOID_RESIDUE",
+    "status": "DEDUCTED",
+    "m2": 1.437249,
+    "bounding_rect_m": [
+     1.2,
+     2.7599
+    ],
+    "dims_m": null
+   },
+   {
+    "piece": "R02",
+    "category": "VOID_RESIDUE",
+    "status": "DEDUCTED",
+    "m2": 0.59742,
+    "bounding_rect_m": [
+     2.85,
+     5.87
+    ],
+    "dims_m": null
+   },
+   {
+    "piece": "R03",
+    "category": "STAIR_FOOTPRINT",
+    "status": "DEDUCTED",
+    "m2": 2.119832,
+    "bounding_rect_m": [
+     2.3682,
+     4.7427
+    ],
+    "dims_m": null
+   },
+   {
+    "piece": "R04",
+    "category": "STAIR_FOOTPRINT",
+    "status": "DEDUCTED",
+    "m2": 1.352454,
+    "bounding_rect_m": [
+     1.15,
+     1.2
+    ],
+    "dims_m": null
+   },
+   {
+    "piece": "R05",
+    "category": "STAIR_FOOTPRINT",
+    "status": "DEDUCTED",
+    "m2": 0.0575,
+    "bounding_rect_m": [
+     0.05,
+     1.15
+    ],
+    "dims_m": null
+   },
+   {
+    "piece": "R06",
+    "category": "STAIR_FOOTPRINT",
+    "status": "DEDUCTED",
+    "m2": 0.021884,
+    "bounding_rect_m": [
+     0.0345,
+     1.1497
+    ],
+    "dims_m": null
+   },
+   {
+    "piece": "R07",
+    "category": "STAIR_FOOTPRINT",
+    "status": "DEDUCTED",
+    "m2": 0.001783,
+    "bounding_rect_m": [
+     0.0072,
+     0.3666
+    ],
+    "dims_m": null
+   },
+   {
+    "piece": "R08",
+    "category": "STAIR_FOOTPRINT",
+    "status": "DEDUCTED",
+    "m2": 0.001092,
+    "bounding_rect_m": [
+     0.0053,
+     0.297
+    ],
+    "dims_m": null
+   },
+   {
+    "piece": "R09",
+    "category": "STAIR_FOOTPRINT",
+    "status": "DEDUCTED",
+    "m2": 0.00109,
+    "bounding_rect_m": [
+     0.0053,
+     0.2972
+    ],
+    "dims_m": null
+   },
+   {
+    "piece": "R10",
+    "category": "STAIR_FOOTPRINT",
+    "status": "DEDUCTED",
+    "m2": 0.001082,
+    "bounding_rect_m": [
+     0.0058,
+     0.3071
+    ],
+    "dims_m": null
+   },
+   {
+    "piece": "R11",
+    "category": "STAIR_FOOTPRINT",
+    "status": "DEDUCTED",
+    "m2": 0.001082,
+    "bounding_rect_m": [
+     0.0049,
+     0.2934
+    ],
+    "dims_m": null
+   },
+   {
+    "piece": "R12",
+    "category": "STAIR_FOOTPRINT",
+    "status": "DEDUCTED",
+    "m2": 0.001066,
+    "bounding_rect_m": [
+     0.0057,
+     0.3034
+    ],
+    "dims_m": null
+   },
+   {
+    "piece": "R13",
+    "category": "STAIR_FOOTPRINT",
+    "status": "DEDUCTED",
+    "m2": 0.001065,
+    "bounding_rect_m": [
+     0.0058,
+     0.3063
+    ],
+    "dims_m": null
+   }
+  ]
+ },
+ {
+  "room_id": "1F-RB72F22",
+  "floor": "1F",
+  "item": "FIN.FLOOR.PORCELAIN",
+  "engine_net_m2": 19.05,
+  "scope": "NO_STAIR_NO_VOID",
+  "status": "RELEASED",
+  "residue_low_m2": 19.05,
+  "residue_high_m2": 19.05,
+  "change_low_m2": 0.0
+ },
+ {
+  "room_id": "1F-R3CFCFD",
+  "floor": "1F",
+  "item": "FIN.FLOOR.PORCELAIN",
+  "engine_net_m2": 19.016545,
+  "scope": "NO_STAIR_NO_VOID",
+  "status": "RELEASED",
+  "residue_low_m2": 19.016545,
+  "residue_high_m2": 19.016545,
+  "change_low_m2": 0.0
+ },
+ {
+  "room_id": "1F-RED0D19",
+  "floor": "1F",
+  "item": "FIN.FLOOR.PORCELAIN",
+  "engine_net_m2": 18.215001,
+  "scope": "NO_STAIR_NO_VOID",
+  "status": "RELEASED",
+  "residue_low_m2": 18.215001,
+  "residue_high_m2": 18.215001,
+  "change_low_m2": 0.0
+ },
+ {
+  "room_id": "1F-R0E919A",
+  "floor": "1F",
+  "item": "FIN.FLOOR.PORCELAIN",
+  "engine_net_m2": 16.34,
+  "scope": "NO_STAIR_NO_VOID",
+  "status": "RELEASED",
+  "residue_low_m2": 16.34,
+  "residue_high_m2": 16.34,
+  "change_low_m2": 0.0
+ },
+ {
+  "room_id": "1F-R26FA0D",
+  "floor": "1F",
+  "item": "FIN.FLOOR.WET_TILE",
+  "engine_net_m2": 10.151,
+  "scope": "NO_STAIR_NO_VOID",
+  "status": "RELEASED",
+  "residue_low_m2": 10.151,
+  "residue_high_m2": 10.151,
+  "change_low_m2": 0.0
+ },
+ {
+  "room_id": "1F-R8BDA49",
+  "floor": "1F",
+  "item": "FIN.FLOOR.WET_TILE",
+  "engine_net_m2": 5.0225,
+  "scope": "NO_STAIR_NO_VOID",
+  "status": "RELEASED",
+  "residue_low_m2": 5.0225,
+  "residue_high_m2": 5.0225,
+  "change_low_m2": 0.0
+ },
+ {
+  "room_id": "1F-R48AA46",
+  "floor": "1F",
+  "item": "FIN.FLOOR.WET_TILE",
+  "engine_net_m2": 5.0225,
+  "scope": "NO_STAIR_NO_VOID",
+  "status": "RELEASED",
+  "residue_low_m2": 5.0225,
+  "residue_high_m2": 5.0225,
+  "change_low_m2": 0.0
+ },
+ {
+  "room_id": "1F-R48CDA5",
+  "floor": "1F",
+  "item": "FIN.FLOOR.WET_TILE",
+  "engine_net_m2": 4.725,
+  "scope": "NO_STAIR_NO_VOID",
+  "status": "RELEASED",
+  "residue_low_m2": 4.725,
+  "residue_high_m2": 4.725,
+  "change_low_m2": 0.0
+ },
+ {
+  "room_id": "1F-RED23B8",
+  "floor": "1F",
+  "item": "FIN.FLOOR.WET_TILE",
+  "engine_net_m2": 3.5775,
+  "scope": "NO_STAIR_NO_VOID",
+  "status": "RELEASED",
+  "residue_low_m2": 3.5775,
+  "residue_high_m2": 3.5775,
+  "change_low_m2": 0.0
+ },
+ {
+  "room_id": "1F-R52AC05",
+  "floor": "1F",
+  "item": "FIN.FLOOR.WET_TILE",
+  "engine_net_m2": 2.646,
+  "scope": "NO_STAIR_NO_VOID",
+  "status": "RELEASED",
+  "residue_low_m2": 2.646,
+  "residue_high_m2": 2.646,
+  "change_low_m2": 0.0
+ },
+ {
+  "room_id": "2F-R1DB2D2",
+  "floor": "2F",
+  "item": "FIN.FLOOR.PORCELAIN",
+  "engine_net_m2": 19.350001,
+  "scope": "NO_STAIR_NO_VOID",
+  "status": "RELEASED",
+  "residue_low_m2": 19.350001,
+  "residue_high_m2": 19.350001,
+  "change_low_m2": 0.0
+ },
+ {
+  "room_id": "2F-RE83BED",
+  "floor": "2F",
+  "item": "FIN.FLOOR.WET_TILE",
+  "engine_net_m2": 5.55,
+  "scope": "NO_STAIR_NO_VOID",
+  "status": "RELEASED",
+  "residue_low_m2": 5.55,
+  "residue_high_m2": 5.55,
+  "change_low_m2": 0.0
+ }
+]
