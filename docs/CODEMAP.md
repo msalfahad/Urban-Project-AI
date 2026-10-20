@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 602 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 603 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2373 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2375 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1305 | pytest suites, one folder per round. |
+| `tests/` | 1307 | pytest suites, one folder per round. |
 | `tools/` | 106 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (250 modules)
+## `engine/source/` (251 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -408,6 +408,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `bar_shapes.py` | 67 | MEDIUM | 3 | BAR SHAPES (M2) - developed bar lengths by shape, diameter-aware bends and hooks (generic, stdlib). |
 | `bbs_optimiser.py` | 114 | MEDIUM | 3 | BBS OPTIMISER (V3b) - bar hooks / bends by a recorded code method and deterministic cutting on stock lengths. |
 | `beam_binding.py` | 509 | MEDIUM | 1 | BEAM TAG -> PLAN BAND BINDING (V2) - type identity from the tag, section from the tag's OWN schedule namespace, |
+| `beam_binding_v2.py` | 635 | MEDIUM | 1 | BEAM BINDING V2 (T-085) - three corrections to how slab-plan beam bands are cut, bound and completed, as a NEW |
 | `beam_occurrence_recovery.py` | 118 | MEDIUM | 1 | BEAM_OCCURRENCE_RECOVERY (generic): every beam tag and every structural face band gets a terminal record. |
 | `beam_rebar_readiness.py` | 582 | MEDIUM | 3 | BEAM_REBAR_READINESS (pre-S6) - the safe occurrence / detail / component input layer for superstructure beam rebar |
 | `benchmark_firewall.py` | 149 | MEDIUM | 1 | BENCHMARK FIREWALL (V1) - prove what a measurement run did NOT read. |
@@ -499,7 +500,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `marble_thresholds.py` | 125 | MEDIUM | 2 | MARBLE THRESHOLDS (R8.15) - a door threshold whose whole strip is a separate MARBLE_THRESHOLD trade element. |
 | `material_result.py` | 168 | MEDIUM | 7 | MATERIAL RESULT (M9 S1) - what a layout consumes, kept apart from the net BOQ quantity (generic; stdlib). |
 | `material_spec.py` | 146 | HIGH | 10 | MATERIAL SPECIFICATION (M9 S1) - what a material IS, kept apart from how much of it a room needs (generic; stdlib only). |
-| `member_detection.py` | 1143 | CRITICAL | 22 | MEMBER DETECTION (M2) - footings, columns, beams and ground beams of a NEW drawing, with no project register |
+| `member_detection.py` | 1143 | CRITICAL | 24 | MEMBER DETECTION (M2) - footings, columns, beams and ground beams of a NEW drawing, with no project register |
 | `membrane_cutting_plan.py` | 399 | MEDIUM | 1 | MEMBRANE CUTTING PLAN V1 (task T-089, opt-in; no released method or quantity changed) - per wet room and per roof, |
 | `membrane_fold_v2.py` | 488 | MEDIUM | 5 | MEMBRANE FOLD V2 (task T-076, opt-in; no released method or quantity changed) - the owner's strip method for the |
 | `membrane_layout.py` | 819 | HIGH | 13 | MEMBRANE LAYOUT (M9 S1) - exact roll plan of a RECTANGULAR wet room for one sheet membrane (generic; stdlib only). |
@@ -973,6 +974,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t079_arch_v211/` | 1 |
 | `tests/t081_room_levels/` | 2 |
 | `tests/t082_opening_height_pdf/` | 1 |
+| `tests/t085_beam_binding/` | 1 |
 | `tests/t086_finish_materials/` | 1 |
 | `tests/t087_tile_count/` | 1 |
 | `tests/t089_cutting_plan/` | 1 |
@@ -1085,6 +1087,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t082/` | 1 |
 | `research/agents_t083/` | 2 |
 | `research/agents_t084/` | 3 |
+| `research/agents_t085/` | 2 |
 | `research/agents_t086/` | 4 |
 | `research/agents_t087/` | 4 |
 | `research/agents_t088/` | 2 |
