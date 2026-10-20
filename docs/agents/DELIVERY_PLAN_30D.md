@@ -46,19 +46,19 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-20 20:10; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-20 22:15; re-estimated each run from what merged and was verified)
 
 | Plan | Board | State | Note |
 |---|---|---|---|
-| P-01 | owner + auditor | in progress | Test B and the main config not yet confirmed by the owner. Run reliability is still the critical risk: the verifier's 18:49 and 19:49 runs left no line, so 3 READY pieces wait |
-| P-02 | T-130 (lane I) | TODO | |
-| P-03 | T-131 (lane I) | TODO, top of the board | skeleton = V2.13 + merged straps, facade passage walls (range until T-123 is verified), stair residue range; waiting pieces join as V3.0.x |
-| P-04 | T-132 (verifier) | TODO | verifier only |
-| P-05 | T-126 (lane S) | TODO | heights stay with T-119 |
+| P-01 | owner + auditor | in progress, at risk | Test B and the main config not confirmed. Slots fired 20:19-21:59: 6 of 8 worker / verifier runs closed with STARTED + SUCCESS; worker 2 21:39 left nothing, worker 3 21:59 left a STARTED line only |
+| P-02 | T-130 (lane I) | TODO | unclaimed: worker 3's 21:59 run ended silently |
+| P-03 | T-131 (lane I) READY 33f1da2; T-133 (V3.0.1) TODO | READY for the checker | skeleton: straps 3.781 -> 3.390 m3, GF facade 98.887 -> 105.887 lm (Q-67 A), 1F porcelain range 38.459 .. 38.979; 1519 of 1528 lines byte-identical; L4 396 = 396. V3.0.1 adds the merged landing / arrival (Q-66 B, Q-70 A), columns -2.268 m3 and blinding 15.179 + held |
+| P-04 | T-132 (verifier) | TODO | verifier only; run it on V3.0 once T-131 merges |
+| P-05 | T-126 MERGED cd34bd0 | done as a piece; wiring in T-133 | checker re-measured the footing blinding union itself (151.794 m2 x 0.10 = 15.179 m3); columns -2.268 m3 |
 | P-06 | T-128 (lane A) | TODO | |
-| P-07 | T-125 then T-108 (lane A) | T-125 TODO; T-108 queued after T-125 and T-110 | Q-69 B: physical block length, not the architectural run |
-| P-08 | T-009 (queued) | not started | promote when lane S has room after T-126 / T-119 |
-| P-09 | ELEMENT_REGISTER.md (design v0 written) | design done, code after T-131 | |
+| P-07 | T-125 then T-108 (lane A) | T-125 TODO | |
+| P-08 | T-136 (lane S, first slice of T-009) | TODO, waits for T-105 to merge | footings by bar population first |
+| P-09 | T-134 (lane I) | TODO, waits for T-131 | design v0 in ELEMENT_REGISTER.md |
 
-Day-7 target (2026-10-27): needs T-131 merged and one V3.0 line re-measured by the checker. Today no improvement has
-gone through V3.0 (it does not exist yet). On track only if the verifier runs again at the next slots.
+Day-7 target (2026-10-27): ON TRACK IF the checker merges T-131 and re-measures 3 of its lines in one of its next runs; the
+skeleton is the first improvement that can go through the integrated pipeline (straps -0.07 % against the freelancer).
