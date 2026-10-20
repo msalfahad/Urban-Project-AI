@@ -1,0 +1,221 @@
+floor,area_id,layout,rolls_q58_a,roll,entry,id,what,width_m,length_m,x0_m,y0_m,from
+GF,GF-RA3AD49,frame 90.00 deg / strips at 180.00 deg / first strip on the opposite wall,2,1,PIECE,S1.1,MAIN,1.0,3.1,0.0,0.0,ROLL
+GF,GF-RA3AD49,frame 90.00 deg / strips at 180.00 deg / first strip on the opposite wall,2,1,PIECE,S2.1,MAIN,1.0,3.1,3.1,0.0,ROLL
+GF,GF-RA3AD49,frame 90.00 deg / strips at 180.00 deg / first strip on the opposite wall,2,1,PIECE,S3.1,MAIN,1.0,3.1,6.2,0.0,ROLL
+GF,GF-RA3AD49,frame 90.00 deg / strips at 180.00 deg / first strip on the opposite wall,2,2,PIECE,S4.1,MAIN,1.0,3.1,0.0,0.0,ROLL
+GF,GF-RA3AD49,frame 90.00 deg / strips at 180.00 deg / first strip on the opposite wall,2,2,PIECE,S5.1,MAIN,1.0,1.45,3.1,0.0,ROLL
+GF,GF-RA3AD49,frame 90.00 deg / strips at 180.00 deg / first strip on the opposite wall,2,2,PIECE,S6.1,MAIN,0.4,1.45,4.55,0.0,ROLL
+GF,GF-RA3AD49,frame 90.00 deg / strips at 180.00 deg / first strip on the opposite wall,2,1,LEFTOVER,,ROLL_END,1.0,0.7,,,
+GF,GF-RA3AD49,frame 90.00 deg / strips at 180.00 deg / first strip on the opposite wall,2,2,LEFTOVER,,ROLL_END,1.0,4.0,,,
+GF,GF-RA3AD49,frame 90.00 deg / strips at 180.00 deg / first strip on the opposite wall,2,2,LEFTOVER,,SIDE_TRIM,0.6,1.45,,,
+GF,GF-RDBD4F9,frame 45.00 deg / strips at 135.00 deg / first strip on the opposite wall,1,1,PIECE,S3.1,MAIN,1.0,2.446594,0.0,0.0,ROLL
+GF,GF-RDBD4F9,frame 45.00 deg / strips at 135.00 deg / first strip on the opposite wall,1,1,PIECE,S2.1,MAIN,1.0,2.081824,2.446594,0.0,ROLL
+GF,GF-RDBD4F9,frame 45.00 deg / strips at 135.00 deg / first strip on the opposite wall,1,1,PIECE,S4.1,MAIN,1.0,1.911365,4.528418,0.0,ROLL
+GF,GF-RDBD4F9,frame 45.00 deg / strips at 135.00 deg / first strip on the opposite wall,1,1,PIECE,S1.1,MAIN,1.0,1.722533,6.439783,0.0,ROLL
+GF,GF-RDBD4F9,frame 45.00 deg / strips at 135.00 deg / first strip on the opposite wall,1,1,PIECE,S5.1,MAIN,0.314339,0.428678,8.162316,0.0,ROLL
+GF,GF-RDBD4F9,frame 45.00 deg / strips at 135.00 deg / first strip on the opposite wall,1,1,PIECE,P2.1,OUTLINE_CORNER_PATCH,0.082843,0.165685,8.162316,0.314339,OWN_SIDE_TRIM of S5.1 (0.6857 x 0.4287)
+GF,GF-RDBD4F9,frame 45.00 deg / strips at 135.00 deg / first strip on the opposite wall,1,1,PIECE,P5.1,OUTLINE_CORNER_PATCH,0.165685,0.082843,8.162316,0.397182,OWN_SIDE_TRIM of S5.1 (0.6028 x 0.1657)
+GF,GF-RDBD4F9,frame 45.00 deg / strips at 135.00 deg / first strip on the opposite wall,1,1,PIECE,P1.1,OUTLINE_CORNER_PATCH,0.082843,0.082843,8.162316,0.562867,OWN_SIDE_TRIM of S5.1 (0.4371 x 0.0828)
+GF,GF-RDBD4F9,frame 45.00 deg / strips at 135.00 deg / first strip on the opposite wall,1,1,PIECE,P3.1,OUTLINE_CORNER_PATCH,0.082843,0.082843,8.162316,0.64571,OWN_SIDE_TRIM of S5.1 (0.3543 x 0.0828)
+GF,GF-RDBD4F9,frame 45.00 deg / strips at 135.00 deg / first strip on the opposite wall,1,1,PIECE,P4.1,OUTLINE_CORNER_PATCH,0.082843,0.082843,8.162316,0.728553,OWN_SIDE_TRIM of S5.1 (0.2714 x 0.0828)
+GF,GF-RDBD4F9,frame 45.00 deg / strips at 135.00 deg / first strip on the opposite wall,1,1,LEFTOVER,,ROLL_END,1.0,1.409,,,
+GF,GF-RDBD4F9,frame 45.00 deg / strips at 135.00 deg / first strip on the opposite wall,1,1,LEFTOVER,,SIDE_TRIM,0.6857,0.263,,,
+GF,GF-RDBD4F9,frame 45.00 deg / strips at 135.00 deg / first strip on the opposite wall,1,1,LEFTOVER,,SIDE_TRIM,0.6028,0.0828,,,
+GF,GF-RDBD4F9,frame 45.00 deg / strips at 135.00 deg / first strip on the opposite wall,1,1,LEFTOVER,,SIDE_TRIM,0.1886,0.0828,,,
+GF,GF-RD6F891,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,1,1,PIECE,S1.1,MAIN,1.0,2.4,0.0,0.0,ROLL
+GF,GF-RD6F891,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,1,1,PIECE,S2.1,MAIN,1.0,2.4,2.4,0.0,ROLL
+GF,GF-RD6F891,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,1,1,PIECE,S3.1,MAIN,0.7,1.817842,4.8,0.0,ROLL
+GF,GF-RD6F891,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,1,1,PIECE,P1.1,OUTLINE_CORNER_PATCH,0.082843,0.082843,4.8,0.7,OWN_SIDE_TRIM of S3.1 (0.3 x 1.8178)
+GF,GF-RD6F891,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,1,1,LEFTOVER,,ROLL_END,1.0,3.3822,,,
+GF,GF-RD6F891,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,1,1,LEFTOVER,,SIDE_TRIM,0.3,1.735,,,
+GF,GF-RD6F891,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,1,1,LEFTOVER,,SIDE_TRIM,0.2172,0.0828,,,
+GF,GF-RB62B55,frame 90.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,PIECE,S1.1,MAIN,1.0,2.65,0.0,0.0,ROLL
+GF,GF-RB62B55,frame 90.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,PIECE,S2.1,MAIN,1.0,2.65,2.65,0.0,ROLL
+GF,GF-RB62B55,frame 90.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,LEFTOVER,,ROLL_END,1.0,4.7,,,
+GF,GF-R8496F0,frame 90.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,PIECE,S1.1,MAIN,1.0,2.5,0.0,0.0,ROLL
+GF,GF-R8496F0,frame 90.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,PIECE,S2.1,MAIN,1.0,2.5,2.5,0.0,ROLL
+GF,GF-R8496F0,frame 90.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,LEFTOVER,,ROLL_END,1.0,5.0,,,
+GF,GF-RF38DAF,frame 135.00 deg / strips at 45.00 deg / first strip on the lower wall,1,1,PIECE,S1.1,MAIN,1.0,2.44161,0.0,0.0,ROLL
+GF,GF-RF38DAF,frame 135.00 deg / strips at 45.00 deg / first strip on the lower wall,1,1,PIECE,S2.1,MAIN,1.0,1.955244,2.44161,0.0,ROLL
+GF,GF-RF38DAF,frame 135.00 deg / strips at 45.00 deg / first strip on the lower wall,1,1,PIECE,S3.1,MAIN,0.955244,1.055244,4.396854,0.0,ROLL
+GF,GF-RF38DAF,frame 135.00 deg / strips at 45.00 deg / first strip on the lower wall,1,1,PIECE,P4.1,OUTLINE_CORNER_PATCH,0.282843,0.282843,5.452098,0.0,OWN_ROLL_END of roll 1 (1.0 x 4.5479)
+GF,GF-RF38DAF,frame 135.00 deg / strips at 45.00 deg / first strip on the lower wall,1,1,PIECE,P1.1,OUTLINE_CORNER_PATCH,0.165685,0.082843,5.452098,0.282843,OWN_ROLL_END of roll 1 (0.7172 x 0.2828)
+GF,GF-RF38DAF,frame 135.00 deg / strips at 45.00 deg / first strip on the lower wall,1,1,PIECE,P2.1,OUTLINE_CORNER_PATCH,0.082843,0.082843,5.452098,0.448528,OWN_ROLL_END of roll 1 (0.5515 x 0.0828)
+GF,GF-RF38DAF,frame 135.00 deg / strips at 45.00 deg / first strip on the lower wall,1,1,PIECE,P3.1,OUTLINE_CORNER_PATCH,0.082843,0.082843,5.452098,0.531371,OWN_ROLL_END of roll 1 (0.4686 x 0.0828)
+GF,GF-RF38DAF,frame 135.00 deg / strips at 45.00 deg / first strip on the lower wall,1,1,LEFTOVER,,ROLL_END,1.0,4.2651,,,
+GF,GF-RF38DAF,frame 135.00 deg / strips at 45.00 deg / first strip on the lower wall,1,1,LEFTOVER,,ROLL_END,0.7172,0.2,,,
+GF,GF-RF38DAF,frame 135.00 deg / strips at 45.00 deg / first strip on the lower wall,1,1,LEFTOVER,,ROLL_END,0.3858,0.0828,,,
+GF,GF-RF38DAF,frame 135.00 deg / strips at 45.00 deg / first strip on the lower wall,1,1,LEFTOVER,,SIDE_TRIM,0.0448,1.0552,,,
+GF,GF-RB28769,frame 135.00 deg / strips at 45.00 deg / first strip on the lower wall,1,1,PIECE,S1.1,MAIN,1.0,2.097478,0.0,0.0,ROLL
+GF,GF-RB28769,frame 135.00 deg / strips at 45.00 deg / first strip on the lower wall,1,1,PIECE,S2.1,MAIN,1.0,1.893955,2.097478,0.0,ROLL
+GF,GF-RB28769,frame 135.00 deg / strips at 45.00 deg / first strip on the lower wall,1,1,PIECE,S3.1,MAIN,0.964666,1.064666,3.991433,0.0,ROLL
+GF,GF-RB28769,frame 135.00 deg / strips at 45.00 deg / first strip on the lower wall,1,1,PIECE,P1.1,OUTLINE_CORNER_PATCH,0.282843,0.282843,5.056099,0.0,OWN_ROLL_END of roll 1 (1.0 x 4.9439)
+GF,GF-RB28769,frame 135.00 deg / strips at 45.00 deg / first strip on the lower wall,1,1,PIECE,P4.1,OUTLINE_CORNER_PATCH,0.165685,0.082843,5.056099,0.282843,OWN_ROLL_END of roll 1 (0.7172 x 0.2828)
+GF,GF-RB28769,frame 135.00 deg / strips at 45.00 deg / first strip on the lower wall,1,1,PIECE,P2.1,OUTLINE_CORNER_PATCH,0.082843,0.082843,5.056099,0.448528,OWN_ROLL_END of roll 1 (0.5515 x 0.0828)
+GF,GF-RB28769,frame 135.00 deg / strips at 45.00 deg / first strip on the lower wall,1,1,PIECE,P3.1,OUTLINE_CORNER_PATCH,0.082843,0.082843,5.056099,0.531371,OWN_ROLL_END of roll 1 (0.4686 x 0.0828)
+GF,GF-RB28769,frame 135.00 deg / strips at 45.00 deg / first strip on the lower wall,1,1,LEFTOVER,,ROLL_END,1.0,4.6611,,,
+GF,GF-RB28769,frame 135.00 deg / strips at 45.00 deg / first strip on the lower wall,1,1,LEFTOVER,,ROLL_END,0.7172,0.2,,,
+GF,GF-RB28769,frame 135.00 deg / strips at 45.00 deg / first strip on the lower wall,1,1,LEFTOVER,,ROLL_END,0.3858,0.0828,,,
+GF,GF-RB28769,frame 135.00 deg / strips at 45.00 deg / first strip on the lower wall,1,1,LEFTOVER,,SIDE_TRIM,0.0353,1.0647,,,
+GF,GF-RDF7D28,frame 90.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,PIECE,S1.1,MAIN,1.0,2.15,0.0,0.0,ROLL
+GF,GF-RDF7D28,frame 90.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,PIECE,S2.1,MAIN,0.85,2.15,2.15,0.0,ROLL
+GF,GF-RDF7D28,frame 90.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,LEFTOVER,,ROLL_END,1.0,5.7,,,
+GF,GF-RDF7D28,frame 90.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,LEFTOVER,,SIDE_TRIM,0.15,2.15,,,
+GF,GF-RFAD3C4,frame 0.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,PIECE,S1.1,MAIN,1.0,1.7,0.0,0.0,ROLL
+GF,GF-RFAD3C4,frame 0.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,PIECE,S2.1,MAIN,1.0,1.7,1.7,0.0,ROLL
+GF,GF-RFAD3C4,frame 0.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,LEFTOVER,,ROLL_END,1.0,6.6,,,
+GF,GF-RD36087,frame 0.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,PIECE,S1.1,MAIN,1.0,1.5,0.0,0.0,ROLL
+GF,GF-RD36087,frame 0.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,PIECE,S2.1,MAIN,0.85,1.5,1.5,0.0,ROLL
+GF,GF-RD36087,frame 0.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,LEFTOVER,,ROLL_END,1.0,7.0,,,
+GF,GF-RD36087,frame 0.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,LEFTOVER,,SIDE_TRIM,0.15,1.5,,,
+1F,1F-R26FA0D,frame 90.00 deg / strips at 0.00 deg / first strip on the opposite wall,2,1,PIECE,S3.1,MAIN,1.0,3.87,0.0,0.0,ROLL
+1F,1F-R26FA0D,frame 90.00 deg / strips at 0.00 deg / first strip on the opposite wall,2,1,PIECE,S4.1,MAIN,1.0,3.87,3.87,0.0,ROLL
+1F,1F-R26FA0D,frame 90.00 deg / strips at 0.00 deg / first strip on the opposite wall,2,1,PIECE,S1.1,MAIN,1.0,2.25,7.74,0.0,ROLL
+1F,1F-R26FA0D,frame 90.00 deg / strips at 0.00 deg / first strip on the opposite wall,2,2,PIECE,S2.1,MAIN,1.0,2.25,0.0,0.0,ROLL
+1F,1F-R26FA0D,frame 90.00 deg / strips at 0.00 deg / first strip on the opposite wall,2,2,PIECE,S5.1,MAIN,1.0,1.87,2.25,0.0,ROLL
+1F,1F-R26FA0D,frame 90.00 deg / strips at 0.00 deg / first strip on the opposite wall,2,2,PIECE,S6.1,MAIN,0.9,1.82,4.12,0.0,ROLL
+1F,1F-R26FA0D,frame 90.00 deg / strips at 0.00 deg / first strip on the opposite wall,2,1,LEFTOVER,,ROLL_END,1.0,0.01,,,
+1F,1F-R26FA0D,frame 90.00 deg / strips at 0.00 deg / first strip on the opposite wall,2,2,LEFTOVER,,ROLL_END,1.0,4.06,,,
+1F,1F-R26FA0D,frame 90.00 deg / strips at 0.00 deg / first strip on the opposite wall,2,2,LEFTOVER,,SIDE_TRIM,0.1,1.82,,,
+1F,1F-R8BDA49,frame 90.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,PIECE,S1.1,MAIN,1.0,2.85,0.0,0.0,ROLL
+1F,1F-R8BDA49,frame 90.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,PIECE,S2.1,MAIN,1.0,2.85,2.85,0.0,ROLL
+1F,1F-R8BDA49,frame 90.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,PIECE,S3.1,MAIN,0.65,2.85,5.7,0.0,ROLL
+1F,1F-R8BDA49,frame 90.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,LEFTOVER,,ROLL_END,1.0,1.45,,,
+1F,1F-R8BDA49,frame 90.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,LEFTOVER,,SIDE_TRIM,0.35,2.85,,,
+1F,1F-R48AA46,frame 90.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,PIECE,S1.1,MAIN,1.0,2.85,0.0,0.0,ROLL
+1F,1F-R48AA46,frame 90.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,PIECE,S2.1,MAIN,1.0,2.85,2.85,0.0,ROLL
+1F,1F-R48AA46,frame 90.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,PIECE,S3.1,MAIN,0.65,2.85,5.7,0.0,ROLL
+1F,1F-R48AA46,frame 90.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,LEFTOVER,,ROLL_END,1.0,1.45,,,
+1F,1F-R48AA46,frame 90.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,LEFTOVER,,SIDE_TRIM,0.35,2.85,,,
+1F,1F-R48CDA5,frame 0.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,PIECE,S1.1,MAIN,1.0,2.5,0.0,0.0,ROLL
+1F,1F-R48CDA5,frame 0.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,PIECE,S2.1,MAIN,1.0,2.5,2.5,0.0,ROLL
+1F,1F-R48CDA5,frame 0.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,PIECE,S3.1,MAIN,0.85,2.5,5.0,0.0,ROLL
+1F,1F-R48CDA5,frame 0.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,LEFTOVER,,ROLL_END,1.0,2.5,,,
+1F,1F-R48CDA5,frame 0.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,LEFTOVER,,SIDE_TRIM,0.15,2.5,,,
+1F,1F-RED23B8,frame 0.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,PIECE,S1.1,MAIN,1.0,2.2,0.0,0.0,ROLL
+1F,1F-RED23B8,frame 0.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,PIECE,S2.1,MAIN,1.0,2.2,2.2,0.0,ROLL
+1F,1F-RED23B8,frame 0.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,PIECE,S3.1,MAIN,0.6,2.2,4.4,0.0,ROLL
+1F,1F-RED23B8,frame 0.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,LEFTOVER,,ROLL_END,1.0,3.4,,,
+1F,1F-RED23B8,frame 0.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,LEFTOVER,,SIDE_TRIM,0.4,2.2,,,
+1F,1F-R52AC05,frame 90.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,PIECE,S1.1,MAIN,1.0,2.2,0.0,0.0,ROLL
+1F,1F-R52AC05,frame 90.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,PIECE,S2.1,MAIN,0.97,2.2,2.2,0.0,ROLL
+1F,1F-R52AC05,frame 90.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,LEFTOVER,,ROLL_END,1.0,5.6,,,
+1F,1F-R52AC05,frame 90.00 deg / strips at 90.00 deg / first strip on the lower wall,1,1,LEFTOVER,,SIDE_TRIM,0.03,2.2,,,
+2F,2F-RE83BED,frame 90.00 deg / strips at 180.00 deg / first strip on the lower wall,1,1,PIECE,S1.1,MAIN,1.0,2.25,0.0,0.0,ROLL
+2F,2F-RE83BED,frame 90.00 deg / strips at 180.00 deg / first strip on the lower wall,1,1,PIECE,S2.1,MAIN,1.0,2.25,2.25,0.0,ROLL
+2F,2F-RE83BED,frame 90.00 deg / strips at 180.00 deg / first strip on the lower wall,1,1,PIECE,S3.1,MAIN,1.0,2.25,4.5,0.0,ROLL
+2F,2F-RE83BED,frame 90.00 deg / strips at 180.00 deg / first strip on the lower wall,1,1,PIECE,S4.1,MAIN,0.7,2.25,6.75,0.0,ROLL
+2F,2F-RE83BED,frame 90.00 deg / strips at 180.00 deg / first strip on the lower wall,1,1,LEFTOVER,,ROLL_END,1.0,1.0,,,
+2F,2F-RE83BED,frame 90.00 deg / strips at 180.00 deg / first strip on the lower wall,1,1,LEFTOVER,,SIDE_TRIM,0.3,2.25,,,
+GF,GF-RC99C2A,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,2,1,PIECE,S1.1,MAIN,1.0,4.9,0.0,0.0,ROLL
+GF,GF-RC99C2A,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,2,1,PIECE,S2.1,MAIN,1.0,4.9,4.9,0.0,ROLL
+GF,GF-RC99C2A,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,2,2,PIECE,S3.1,MAIN,1.0,4.9,0.0,0.0,ROLL
+GF,GF-RC99C2A,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,2,2,PIECE,S4.1,MAIN,0.7,4.9,4.9,0.0,ROLL
+GF,GF-RC99C2A,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,2,1,LEFTOVER,,ROLL_END,1.0,0.2,,,
+GF,GF-RC99C2A,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,2,2,LEFTOVER,,ROLL_END,1.0,0.2,,,
+GF,GF-RC99C2A,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,2,2,LEFTOVER,,SIDE_TRIM,0.3,4.9,,,
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,1,PIECE,S1.1,MAIN,1.0,10.0,0.0,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,2,PIECE,S1.2,MAIN,1.0,9.37,0.0,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,2,PIECE,S9.1,MAIN,1.0,0.549475,9.37,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,3,PIECE,S2.1,MAIN,1.0,10.0,0.0,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,4,PIECE,S2.2,MAIN,1.0,9.37,0.0,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,4,PIECE,S11.1,MAIN,1.0,0.549063,9.37,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,5,PIECE,S19.1,MAIN,1.0,6.97,0.0,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,5,PIECE,S5.1,MAIN,1.0,1.48765,6.97,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,5,PIECE,S3.1,MAIN,1.0,1.486995,8.45765,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,6,PIECE,S4.1,MAIN,1.0,10.0,0.0,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,7,PIECE,S16.1,MAIN,1.0,6.97,0.0,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,7,PIECE,S4.2,MAIN,1.0,2.700262,6.97,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,7,PIECE,P2.1,OPENING_UPTURN_PATCH,0.118,0.27736,9.670262,0.0,OWN_ROLL_END of roll 7 (1.0 x 0.3297)
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,7,PIECE,P6.1,OPENING_UPTURN_PATCH,0.117991,0.277344,9.670262,0.118,OWN_ROLL_END of roll 7 (0.882 x 0.2774)
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,7,PIECE,P3.1,OPENING_UPTURN_PATCH,0.117717,0.276288,9.670262,0.235991,OWN_ROLL_END of roll 7 (0.764 x 0.2773)
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,7,PIECE,P7.1,OPENING_UPTURN_PATCH,0.117717,0.276288,9.670262,0.353708,OWN_ROLL_END of roll 7 (0.6463 x 0.2763)
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,7,PIECE,P4.1,OPENING_UPTURN_PATCH,0.049953,0.027872,9.947622,0.0,OWN_ROLL_END of roll 7 (1.0 x 0.0524)
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,7,PIECE,P8.1,OPENING_UPTURN_PATCH,0.049903,0.027801,9.947622,0.049953,OWN_ROLL_END of roll 7 (0.95 x 0.0279)
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,7,PIECE,P5.1,OPENING_UPTURN_PATCH,0.048858,0.027243,9.947622,0.099856,OWN_ROLL_END of roll 7 (0.9001 x 0.0278)
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,7,PIECE,P1.1,OPENING_UPTURN_PATCH,0.048787,0.027206,9.947622,0.148714,OWN_ROLL_END of roll 7 (0.8513 x 0.0272)
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,8,PIECE,S21.1,MAIN,1.0,6.97,0.0,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,8,PIECE,S7.2,MAIN,1.0,1.008691,6.97,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,8,PIECE,S6.1,MAIN,1.0,0.641825,7.978691,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,9,PIECE,S7.1,MAIN,1.0,10.0,0.0,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,10,PIECE,S20.1,MAIN,1.0,6.97,0.0,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,10,PIECE,S14.1,MAIN,1.0,1.194581,6.97,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,10,PIECE,S12.1,MAIN,1.0,1.19382,8.164581,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,10,PIECE,S8.1,MAIN,1.0,0.641229,9.358401,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,11,PIECE,S10.1,MAIN,1.0,10.0,0.0,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,12,PIECE,S18.1,MAIN,1.0,6.97,0.0,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,12,PIECE,S13.2,MAIN,1.0,2.114126,6.97,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,12,PIECE,S10.2,MAIN,1.0,0.824138,9.084126,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,13,PIECE,S13.1,MAIN,1.0,10.0,0.0,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,14,PIECE,S15.1,MAIN,1.0,4.6,0.0,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,14,PIECE,S17.1,MAIN,1.0,4.6,4.6,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,15,PIECE,S22.1,MAIN,1.0,6.97,0.0,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,16,PIECE,S23.1,MAIN,1.0,6.97,0.0,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,17,PIECE,S24.1,MAIN,0.3,6.97,0.0,0.0,ROLL
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,17,PIECE,U25.1,UPTURN_ONLY_STRIP,0.3,4.6,0.0,0.3,OWN_SIDE_TRIM of S24.1 (0.7 x 6.97)
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,2,LEFTOVER,,ROLL_END,1.0,0.0805,,,
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,4,LEFTOVER,,ROLL_END,1.0,0.0809,,,
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,5,LEFTOVER,,ROLL_END,1.0,0.0554,,,
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,7,LEFTOVER,,ROLL_END,0.5286,0.2763,,,
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,7,LEFTOVER,,ROLL_END,0.8025,0.0272,,,
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,7,LEFTOVER,,ROLL_END,1.0,0.0245,,,
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,7,LEFTOVER,,ROLL_END,0.764,0.0011,,,
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,7,LEFTOVER,,ROLL_END,0.9001,0.0006,,,
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,7,LEFTOVER,,ROLL_END,0.95,0.0001,,,
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,8,LEFTOVER,,ROLL_END,1.0,1.3795,,,
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,10,LEFTOVER,,ROLL_END,1.0,0.0004,,,
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,12,LEFTOVER,,ROLL_END,1.0,0.0917,,,
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,14,LEFTOVER,,ROLL_END,1.0,0.8,,,
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,15,LEFTOVER,,ROLL_END,1.0,3.03,,,
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,16,LEFTOVER,,ROLL_END,1.0,3.03,,,
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,17,LEFTOVER,,ROLL_END,1.0,3.03,,,
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,17,LEFTOVER,,SIDE_TRIM,0.4,4.6,,,
+2F,SH03:2F:AT379,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,17,17,LEFTOVER,,SIDE_TRIM,0.7,2.37,,,
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,1,PIECE,S1.1,MAIN,1.0,7.9,0.0,0.0,ROLL
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,1,PIECE,S3.1,MAIN,1.0,1.7,7.9,0.0,ROLL
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,2,PIECE,S2.1,MAIN,1.0,7.9,0.0,0.0,ROLL
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,2,PIECE,S4.1,MAIN,1.0,1.7,7.9,0.0,ROLL
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,3,PIECE,S5.1,MAIN,1.0,1.7,0.0,0.0,ROLL
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,3,PIECE,S6.1,MAIN,1.0,1.7,1.7,0.0,ROLL
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,3,PIECE,S7.1,MAIN,1.0,1.7,3.4,0.0,ROLL
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,3,PIECE,S8.1,MAIN,1.0,1.7,5.1,0.0,ROLL
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,3,PIECE,S9.1,MAIN,1.0,1.7,6.8,0.0,ROLL
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,4,PIECE,S10.1,MAIN,1.0,1.7,0.0,0.0,ROLL
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,4,PIECE,S11.1,MAIN,1.0,1.7,1.7,0.0,ROLL
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,4,PIECE,S12.1,MAIN,1.0,1.7,3.4,0.0,ROLL
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,4,PIECE,S13.1,MAIN,1.0,1.7,5.1,0.0,ROLL
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,4,PIECE,S14.1,MAIN,1.0,1.7,6.8,0.0,ROLL
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,5,PIECE,S15.1,MAIN,1.0,1.7,0.0,0.0,ROLL
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,5,PIECE,S16.1,MAIN,1.0,1.7,1.7,0.0,ROLL
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,5,PIECE,S17.1,MAIN,1.0,1.7,3.4,0.0,ROLL
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,5,PIECE,S18.1,MAIN,1.0,1.7,5.1,0.0,ROLL
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,5,PIECE,S19.1,MAIN,1.0,1.7,6.8,0.0,ROLL
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,6,PIECE,S20.1,MAIN,1.0,1.7,0.0,0.0,ROLL
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,6,PIECE,S21.1,MAIN,1.0,1.7,1.7,0.0,ROLL
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,6,PIECE,S22.1,MAIN,0.47,1.7,3.4,0.0,ROLL
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,1,LEFTOVER,,ROLL_END,1.0,0.4,,,
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,2,LEFTOVER,,ROLL_END,1.0,0.4,,,
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,3,LEFTOVER,,ROLL_END,1.0,1.5,,,
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,4,LEFTOVER,,ROLL_END,1.0,1.5,,,
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,5,LEFTOVER,,ROLL_END,1.0,1.5,,,
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,6,LEFTOVER,,ROLL_END,1.0,4.9,,,
+1F,SH04:1F:AT216,frame 0.00 deg / strips at 90.00 deg / first strip on the opposite wall,6,6,LEFTOVER,,SIDE_TRIM,0.53,1.7,,,
+1F,SH04:1F:AT220,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,8,1,PIECE,S1.1,MAIN,1.0,10.0,0.0,0.0,ROLL
+1F,SH04:1F:AT220,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,8,2,PIECE,S1.2,MAIN,1.0,2.3,0.0,0.0,ROLL
+1F,SH04:1F:AT220,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,8,2,PIECE,S2.2,MAIN,1.0,2.3,2.3,0.0,ROLL
+1F,SH04:1F:AT220,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,8,2,PIECE,S5.2,MAIN,1.0,0.9,4.6,0.0,ROLL
+1F,SH04:1F:AT220,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,8,2,PIECE,S6.2,MAIN,1.0,0.9,5.5,0.0,ROLL
+1F,SH04:1F:AT220,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,8,3,PIECE,S2.1,MAIN,1.0,10.0,0.0,0.0,ROLL
+1F,SH04:1F:AT220,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,8,4,PIECE,S3.1,MAIN,1.0,10.0,0.0,0.0,ROLL
+1F,SH04:1F:AT220,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,8,5,PIECE,S7.1,MAIN,1.0,4.395058,0.0,0.0,ROLL
+1F,SH04:1F:AT220,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,8,5,PIECE,S8.1,MAIN,0.4,3.756829,4.395058,0.0,ROLL
+1F,SH04:1F:AT220,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,8,5,PIECE,S3.2,MAIN,1.0,0.9,8.151887,0.0,ROLL
+1F,SH04:1F:AT220,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,8,5,PIECE,S4.2,MAIN,1.0,0.9,9.051887,0.0,ROLL
+1F,SH04:1F:AT220,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,8,5,PIECE,P1.1,OUTLINE_CORNER_PATCH,0.120742,0.172405,4.395058,0.4,OWN_SIDE_TRIM of S8.1 (0.6 x 3.7568)
+1F,SH04:1F:AT220,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,8,6,PIECE,S4.1,MAIN,1.0,10.0,0.0,0.0,ROLL
+1F,SH04:1F:AT220,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,8,7,PIECE,S5.1,MAIN,1.0,10.0,0.0,0.0,ROLL
+1F,SH04:1F:AT220,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,8,8,PIECE,S6.1,MAIN,1.0,10.0,0.0,0.0,ROLL
+1F,SH04:1F:AT220,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,8,2,LEFTOVER,,ROLL_END,1.0,3.6,,,
+1F,SH04:1F:AT220,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,8,5,LEFTOVER,,ROLL_END,1.0,0.0481,,,
+1F,SH04:1F:AT220,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,8,5,LEFTOVER,,SIDE_TRIM,0.6,3.5844,,,
+1F,SH04:1F:AT220,frame 0.00 deg / strips at 0.00 deg / first strip on the lower wall,8,5,LEFTOVER,,SIDE_TRIM,0.4793,0.1724,,,
