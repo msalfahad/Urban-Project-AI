@@ -97,6 +97,21 @@ Row matching: 57 of 102 single freelancer lengths match a piece of ours between 
 5.85, the lift 1.80 / 1.80 / 1.20 / 0.70 / 2.70 on every floor, 1F south 3.80 / 6.70 / 2.65 / 3.30). He measures the
 same pieces we measure between columns; the totals differ where he took a different piece, basis or thickness.
 
+## Junction census (for block m3 later and for the engine piece)
+
+Centreline metres carry each T stem to the centreline of the wall it meets, so a block m3 = metres x t x height would
+count the stem's last t_through / 2 twice. Counted on the hand runs (L corners carry no overlap, both legs end on the
+crossing point):
+
+| Floor | T stems (stem t / through t: count) | Stem overlap to deduct for m3, m of 0.20 stem / m of 0.15 stem | L and end-to-end nodes |
+|---|---|---|---|
+| GF | 0.20/0.20: 4, 0.20/0.15: 1, 0.15/0.20: 10, 0.15/0.15: 6 | 0.475 / 1.450 | 20 |
+| 1F | 0.20/0.20: 3, 0.20/0.15: 1, 0.15/0.20: 9, 0.15/0.15: 8 | 0.375 / 1.500 | 13 |
+| 2F | 0.20/0.20: 3, 0.20/0.15: 1, 0.15/0.20: 1 | 0.375 / 0.100 | 6 |
+
+These are not deducted from the metres (UP-WALL-GEOM-001 counts the run to the node); they are listed so the m3 step
+(after owner Q-60) and the comparison with face-to-face lengths can use them.
+
 ## Who is right: proposals per difference (for the verifier)
 
 1. GF external, freelancer 8.28 m less. (a) The saloon facade line (GF-W11, 7.70 m, of which 6.33 glazing and 0.70
