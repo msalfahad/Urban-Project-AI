@@ -13,10 +13,12 @@ membrane (docs/agents/OWNER_QUESTIONS.md, answered 2026-10-18 / 19), as read by 
               UP-WP-ROOF-001 (1.7.0): a roof is measured like a bathroom floor inside the parapet (Q-24 A (ii)); every
                              drafting gap is closed by the membrane and listed, no size limit given (Q-25); no dome is
                              concrete, each dome position is an open skylight with a 0.20 m upturn round it (Q-29); the
-                             top roof that no plan draws stays held (Q-34, parked)
+                             top roof that no plan draws stays held (Q-34, parked): a held line, never silent (T-093)
               UP-WP-LAY-001  (1.7.0): the owner's strip method (Q-30 worked example; Q-24 addendum): whole strips with
-                             0.10 m laps and cut edges, never area / roll area; the layout used for the purchase is
-                             NOT ruled (Q-49 open): every layout's count is shown, none selected, the rolls line held
+                             0.10 m laps and cut edges, never area / roll area; the purchase (Q-49 A, T-093): each
+                             wet area and each roof alone, the layout (2 directions x 2 start walls) with the fewest
+                             whole rolls, tie the shorter strip length; cutting plan and leftover metres per area;
+                             the project total is the sum of the areas
     1.5.0 and 1.6.0 are unchanged. 1.7.0 is built on 1.5.0 (the registry of ARCH_TAKEOFF_V2.9 / V2.10), NOT on 1.6.0:
     the door-minimum answer of 1.6.0 is read by no method yet (T-055 wires it), so ARCH_TAKEOFF_V2.11 changes no door
     quantity. Its rule records (UP-DOOR-OPEN-002 / 003) are those of 1.5.0 here.
@@ -34,7 +36,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "knowledge" / "URBAN_ENGINEERING_KNOWLEDGE_1.5.0.json"
 OUT = ROOT / "knowledge" / "URBAN_ENGINEERING_KNOWLEDGE_1.7.0.json"
-D = "2026-10-19"
+D = "2026-10-20"
 Q = "docs/agents/OWNER_QUESTIONS.md"
 T = "tests/t079_arch_v211/test_arch_v211.py::"
 CODE = "engine/source/arch_v211.py::"
@@ -71,22 +73,28 @@ AMEND = {
                             "and listed with its length; no size limit given (owner 2026-10-19 12:55)",
                     "Q-29": "client change: no dome is concrete; each dome position is an open skylight area with a "
                             "0.20 m upturn round it (owner 2026-10-19 14:45)",
-                    "Q-34": "parked: the top roof drawn on no plan stays HELD (no number, never 0) (owner 16:40)"},
+                    "Q-34": "parked: the top roof drawn on no plan stays HELD (no number, never 0) (owner 16:40); "
+                            "it is a held line of its own (the uppermost storey plan with rooms has no plan above "
+                            "it), never left out of the roof lines (T-093)"},
         "state_1_7_0": "a roof released by EXTERIOR_SPACES_V1 (one closing layer, every gap closed) is SOURCE_DERIVED "
                        "(owner Q-24); a balcony stays PROVISIONAL (this rule, not changed by the answers)",
-        "code": [CODE + "roof_lines"],
+        "code": [CODE + "roof_lines", CODE + "top_roofs", CODE + "top_roof_lines"],
         "tests": [T + "test_roof_with_skylight_released_like_a_bathroom",
-                  T + "test_roof_without_closing_layer_is_held_never_zero"],
+                  T + "test_roof_without_closing_layer_is_held_never_zero",
+                  T + "test_top_roofs_storey_order_and_roof_plans"],
     },
     "UP-WP-LAY-001": {
         "answers": {"Q-30": "the owner's worked example: strip 1 = W - 0.20 of floor, next strips W - 0.10, the last "
                             "cut to remaining + 0.10 + 0.20; strip length = floor + 0.20 + 0.20; rolls from the strips "
                             "(16.28 m2 cut, 2 rolls for a 3 x 4 m kitchen), never floor area / roll area",
                     "Q-24 addendum": "full membranes, the edges cut; 1.00 x 10.00 m roll, 0.10 m lap between strips",
-                    "Q-49": "OPEN: which layout the purchase uses is not ruled; every layout's count is shown, none "
-                            "is selected and the rolls line is HELD (lead 2026-10-19 22:20)"},
-        "code": [CODE + "membrane_table", CODE + "rolls_lines"],
-        "tests": [T + "test_rolls_line_held_with_every_layout_count",
+                    "Q-49": "A: each wet area and each roof alone (no offcut carried to another area), laid in the "
+                            "layout that needs the fewest whole rolls (two strip directions x two start walls; tie: "
+                            "the shorter total strip length); per area the cutting plan, the rolls and the leftover "
+                            "metres; the project total and leftover as the sums of the areas (owner 2026-10-19 "
+                            "22:35)"},
+        "code": [CODE + "purchase", CODE + "membrane_table", CODE + "rolls_lines"],
+        "tests": [T + "test_rolls_each_area_alone_fewest_rolls_with_cutting_plan",
                   T + "test_membrane_table_owner_kitchen_example"],
     },
 }
@@ -104,7 +112,7 @@ def build():
         r.update(logic=lg, effective_version="1.7.0", code=r["code"] + a["code"], tests=r["tests"] + a["tests"],
                  history=r["history"] + [{"version": "1.7.0", "date": D,
                                           "change": "owner answers " + ", ".join(sorted(a["answers"])) + " (" + Q +
-                                                    ") recorded for ARCH_TAKEOFF_V2.11 (T-079)"}])
+                                                    ") recorded for ARCH_TAKEOFF_V2.11 (T-079, T-093)"}])
     reg.update(version="1.7.0", effective=D,
                base={"version": "1.5.0", "sha256": hashlib.sha256(base_bytes).hexdigest()},
                consumed_by=["ARCH_TAKEOFF_V2.11 (tools/urban_boq_m9.py, engine/source/arch_v211.py)"],

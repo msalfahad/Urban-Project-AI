@@ -19,18 +19,27 @@ other V2.10 quantity is unchanged):
    FIN.WP.ROOF                    m2, each roof inside its parapet (EXTERIOR_SPACES_V1, T-071; Q-24, Q-25, Q-29);
                                    a roof the drawing does not close is HELD with its reason
    FIN.WP.ROOF_UPTURN             lm, the 0.20 m upturn on the roof boundary and round each skylight opening
-   FIN.WP.MEMBRANE_ROLLS          pcs per membrane system, HELD (owner Q-49 open: the purchase layout is not ruled):
-                                   the range of the three layout counts, every count shown, none selected
+   FIN.WP.MEMBRANE_ROLLS          pcs per wet area and per roof, each ALONE (owner Q-49 A, T-093): of the four
+                                   layouts (two strip directions x two start walls) the one with the fewest whole
+                                   1.00 x 10.00 m rolls (tie: the shorter total strip length, then the smaller cut
+                                   m2, then the listed order), with its cutting plan (every strip, which roll it is
+                                   cut from), the leftover metres of full-width roll and the side trim; no offcut is
+                                   carried from one area to another; the project total is the sum of the areas
+                                   (the membrane table); a held area or roof has a held rolls line, never 0
    FIN.WP.FLOOR (held)            a space whose wet label shares a face with a dry one (no drawn wet-zone edge): HELD
+   top roof (held, T-093)         the uppermost storey plan that has rooms has no plan drawn above it, so its roof
+                                   outline is on no plan: FIN.WP.ROOF, FIN.WP.ROOF_UPTURN and FIN.WP.MEMBRANE_ROLLS
+                                   BLOCKED_RFI (UP-WP-ROOF-001, owner Q-34 parked), no number, never 0
    The V2.10 wet-area lines (floor m2, walls-only upturn m2, doorway continuation) are not touched: on the areas V2.10
    measured they already equal the fold's floor and walls-only upturn (Q-35 C).
 
-Never: a held area or roof as 0, rolls from net area / roll area, one strip layout picked, a roof outline assumed, a
-gap limit assumed (the search reach is the engine's existing wall-thickness limit, arch_rooms.THIN_LIMIT_M).
+Never: a held area or roof as 0, rolls from net area / roll area, an offcut shared between areas, a roof outline
+assumed, a gap limit assumed (the search reach is the engine's existing wall-thickness limit, arch_rooms.THIN_LIMIT_M).
 Project-agnostic: no layer, room or project name is coded."""
 
 from __future__ import annotations
 
+import math
 from collections import Counter
 from contextlib import contextmanager
 
@@ -47,14 +56,16 @@ ITEMS = {
     "FIN.WP.ROOF_UPTURN": ("Roof waterproofing upturn 0.20 m (parapet, walls, skylight openings)",
                            "رفعة عازل السطح 20 سم", "WATERPROOFING"),
     "FIN.WP.BALCONY": ("Balcony / terrace waterproofing membrane", "عازل البلكونة / التراس", "WATERPROOFING"),
-    "FIN.WP.MEMBRANE_ROLLS": ("Waterproofing membrane rolls to buy (1.00 x 10.00 m), per membrane system",
+    "FIN.WP.MEMBRANE_ROLLS": ("Waterproofing membrane rolls to buy (1.00 x 10.00 m), each area alone",
                               "لفات العازل المطلوب شراؤها", "WATERPROOFING"),
     "FIN.WP.FLOOR": ("Wet-room floor waterproofing", "عازل أرضيات الحمامات", "WATERPROOFING"),
 }
 SYSTEMS = ("WET_AREAS", "ROOFS")
-Q49 = ("OWNER_QUESTION Q-49 (UP-WP-LAY-001): the strip layout the purchase uses is not ruled; the count of every "
-       "layout is shown (each room on its shorter roll length / all strips across the longest wall / all along it), "
-       "none is selected")
+Q49_A = ("owner Q-49 A (2026-10-19 22:35; UP-WP-LAY-001): each wet area and each roof alone, laid in the layout "
+         "(two strip directions x two start walls) that needs the fewest whole rolls; tie: the shorter total strip "
+         "length, then the smaller cut m2, then the listed order; no offcut carried to another area")
+START_LOWER, START_OPPOSITE = "LOWER_EDGE_OF_ROOM_FRAME", "OPPOSITE_EDGE_OF_ROOM_FRAME"
+Q34 = ("ROOF_NOT_DRAWN_ON_ANY_PLAN (UP-WP-ROOF-001, owner Q-34 parked: held, no number, never 0)")
 
 
 # ------------------------------------------------------------------------------------------------ capture
@@ -247,29 +258,206 @@ def roof_records(cap, floor_of, facts=None):
                 a = F.area(floor=row["floor"], room_id=f"{rid}:{rec.get('text_id')}", polygon=list(face.exterior.coords),
                            holes=[list(h.coords) for h in face.interiors], unit_m=c["unit_m"],
                            name=rec["code"])
-                a.update(system="ROOFS" if rec["code"] == "ROOF" else "BALCONIES")
+                a.update(system="ROOFS" if rec["code"] == "ROOF" else "BALCONIES",
+                         line_room_id=f"{row['floor']}-{rec['code']}-{rec.get('text_id')}")   # = roof_lines' room id
                 row["fold"] = a
             out.append(row)
     return out
 
 
-def membrane_table(wet, roofs):
-    """the owner's membrane purchase table: per system the per-area rows and MEMBRANE_FOLD_V2.project (sums of the
-    areas; rolls packed for every direction set, none selected)."""
+def _splice(Ls, L, lap):
+    """the pieces of one strip of length Ls cut from rolls of length L (a longer strip is spliced with the end lap,
+    exactly as MEMBRANE_FOLD_V2.strips does)."""
+    if Ls <= L + 1e-9:
+        return [round(Ls, 6)]
+    k = math.ceil((Ls - L) / (L - lap) - 1e-9) + 1
+    return [round(x, 6) for x in [L] * (k - 1) + [Ls - (k - 1) * (L - lap)]]
+
+
+def layouts(fold):
+    """the four layouts MEMBRANE_FOLD_V2 computes for one area: each strip direction laid from the lower and from the
+    opposite wall of the room frame. -> [{direction, start, strips [(width, length)], rolls_if_alone,
+    roll_length_used_m, cut_m2, upturn_shortfall_m2}] in the listed order (along-lower, along-opposite, across-lower,
+    across-opposite)."""
+    out = []
+    for o in fold["directions"]:
+        out.append({"direction": o["direction"], "start": START_LOWER,
+                    "strips": [(s["width_m"], s["length_m"]) for s in o["strip_list"]],
+                    **{k: o[k] for k in ("rolls_if_alone", "roll_length_used_m", "cut_m2", "upturn_shortfall_m2")}})
+        h = o["other_start"]
+        out.append({"direction": o["direction"], "start": START_OPPOSITE, "strips": [tuple(x) for x in h["strip_list"]],
+                    **{k: h[k] for k in ("rolls_if_alone", "roll_length_used_m", "cut_m2", "upturn_shortfall_m2")}})
+    return out
+
+
+def purchase(fold):
+    """owner Q-49 A for one area alone: the layout with the fewest whole rolls (tie: shorter total strip length, then
+    smaller cut m2, then the listed order), its cutting plan (each roll: the strips cut from it and the metres left),
+    the leftover metres of full-width roll (rolls x roll length - strip length) and the side trim (strip length x roll
+    width - cut m2). The cutting plan is packed again from the chosen strips and must give the fold's own count."""
+    from engine.source import membrane_layout as ML
+    sp = fold["spec"]
+    W, L, lap = sp["roll_width_m"], sp["roll_length_m"], sp["lap_m"]
+    cands = layouts(fold)
+    order = {id(c): i for i, c in enumerate(cands)}
+    best = min(cands, key=lambda c: (c["rolls_if_alone"], round(c["roll_length_used_m"], 4), round(c["cut_m2"], 4),
+                                     order[id(c)]))
+    pieces = []
+    for i, (w, ln) in enumerate(best["strips"], 1):
+        ps = _splice(ln, L, lap)
+        for j, x in enumerate(ps, 1):
+            pieces.append({"strip": i, "piece": j, "of": len(ps), "width_m": w, "length_m": x})
+    bins, packing = ML.pack_rolls([x["length_m"] for x in pieces], L)
+    if len(bins) != best["rolls_if_alone"]:
+        raise ValueError(f"cutting plan gives {len(bins)} rolls, the fold {best['rolls_if_alone']}")
+    used = sum(x["length_m"] for x in pieces)
+    if abs(used - best["roll_length_used_m"]) > 1e-3:
+        raise ValueError("the chosen strips do not add up to the fold's roll length")
+    plan = []
+    for k, b in enumerate(sorted(bins, key=lambda b: min(b)), 1):
+        cut = [pieces[i] for i in sorted(b, key=lambda i: (-pieces[i]["length_m"], i))]
+        u = sum(x["length_m"] for x in cut)
+        plan.append({"roll": k, "pieces": [dict(x) for x in cut], "used_m": round(u, 4), "left_m": round(L - u, 4)})
+    rolls = len(bins)
+    flags = []
+    leftover = rolls * L - used
+    patch = None
+    if best["upturn_shortfall_m2"]:
+        # the upturn the chosen strips do not reach (a slanted wall) is shown in m2, never patched by an assumed piece;
+        # the check says only whether this area's own leftover of full-width roll holds at least that area of sheet
+        # (laps of a patch are by detail and not counted)
+        flags.append("CHOSEN_LAYOUT_UPTURN_SHORTFALL")
+        patch = {"uncovered_m2": best["upturn_shortfall_m2"], "leftover_sheet_m2": round(leftover * W, 4),
+                 "leftover_holds_it": leftover * W + 1e-9 >= best["upturn_shortfall_m2"],
+                 "note": "patch pieces by detail, cut from this area's leftover when it holds them; laps not counted"}
+        if not patch["leftover_holds_it"]:
+            flags.append("UPTURN_SHORTFALL_EXCEEDS_LEFTOVER")
+    if any(c["rolls_if_alone"] < rolls for fr in fold.get("other_frames") or () for c in fr["directions"]):
+        flags.append("ANOTHER_WALL_FRAME_NEEDS_FEWER_ROLLS")       # shown, never selected (not one of the four)
+    if not packing.get("proven", True):
+        flags.append("PACKING_NOT_PROVEN_MINIMAL")
+    return {"rule": Q49_A, "direction": best["direction"], "start": best["start"], "strips": len(best["strips"]),
+            "rolls": rolls, "strip_length_m": round(used, 4), "cut_m2": round(best["cut_m2"], 4),
+            "leftover_m": round(leftover, 4), "side_trim_m2": round(used * W - best["cut_m2"], 4),
+            "upturn_shortfall_m2": best["upturn_shortfall_m2"], "shortfall_check": patch, "cutting_plan": plan,
+            "roll": {"width_m": W, "length_m": L, "lap_m": lap},
+            "layouts": [{k: c[k] for k in ("direction", "start", "rolls_if_alone", "roll_length_used_m", "cut_m2",
+                                           "upturn_shortfall_m2")} for c in cands], "flags": flags}
+
+
+PURCHASE_COLUMNS = ("system", "floor", "room_id", "name", "state", "floor_m2", "layout", "strips", "cutting_plan",
+                    "rolls", "strip_length_m", "cut_m2", "leftover_m", "side_trim_m2", "reason")
+
+
+def purchase_rows(table):
+    """the owner's purchase table, one row per wet area / roof (each alone, Q-49 A), each held area with its reason
+    (rolls empty, never 0), then one total row per system (the sum of the areas; never a total across systems)."""
+    out = []
+    for name in SYSTEMS:
+        st = table["systems"].get(name) or {}
+        for r in st.get("rows") or ():
+            p = r.get("purchase")
+            if p is None:
+                continue
+            plan = " | ".join(f"roll {x['roll']}: " + " + ".join(f"{q['width_m']:.2f}x{q['length_m']:.2f}"
+                                                                   for q in x["pieces"]) + f", {x['left_m']:.2f} m left"
+                              for x in p["cutting_plan"])
+            out.append({"system": name, "floor": r["floor"], "room_id": r["room_id"], "name": r.get("name"),
+                        "state": "RELEASED", "floor_m2": r["floor_m2"], "layout": f"{p['direction']} / {p['start']}",
+                        "strips": p["strips"], "cutting_plan": plan, "rolls": p["rolls"],
+                        "strip_length_m": p["strip_length_m"], "cut_m2": p["cut_m2"], "leftover_m": p["leftover_m"],
+                        "side_trim_m2": p["side_trim_m2"], "reason": ";".join(p["flags"])})
+        for h in st.get("held") or ():
+            out.append({"system": name, "floor": h["floor"], "room_id": h["room_id"], "name": h["name"],
+                        "state": "HELD", "reason": h["reason"]})
+        t = st.get("purchase_total")
+        if t:
+            out.append({"system": name, "room_id": "TOTAL", "state": "SUM_OF_AREAS" if t["complete"] else
+                        "SUM_OF_RELEASED_AREAS_HELD_EXCLUDED", "rolls": t["rolls_to_buy"],
+                        "strip_length_m": t["strip_length_m"], "cut_m2": t["cut_m2"], "leftover_m": t["leftover_m"],
+                        "side_trim_m2": t["side_trim_m2"], "reason": t["note"]})
+    return out
+
+
+def top_roofs(arch):
+    """the roof over the uppermost storey plan: when that plan has rooms, no plan is drawn above it, so its roof
+    outline is on no plan (a plan's roof labels are roofs BELOW it). -> [{floor, region, level_m,
+    floor_above_level_m, rooms, plate_m2}] (one or none). A plan region with no level and no known floor order is
+    not placed: then nothing is claimed. Project-agnostic: the storey order is the bound level, else the floor-title
+    order of arch_plan.FLOOR_TITLES."""
+    from engine.source import arch_plan as AP
+    regs = arch.get("regions") or ()
+    order = {fl: o for fl, o, _p in AP.FLOOR_TITLES}
+    if not regs:
+        return []
+    if all(r.get("level_m") is not None for r in regs):
+        key = lambda r: (r["level_m"], order.get(r["floor"], -1))
+    elif all(r["floor"] in order for r in regs):
+        key = lambda r: order[r["floor"]]
+    else:
+        return []
+    top = max(regs, key=key)
+    peers = [r for r in regs if key(r) == key(top)]
+    if len(peers) > 1:                                   # two plans at the top level: which one is the top is unknown
+        return []
+    rooms = [r["room_id"] for r in arch.get("rooms") or () if r.get("region_id") == top["region_id"]
+             and r["class"] == "ROOM"]
+    if not rooms:                                        # a roof plan with no rooms draws its roofs itself
+        return []
+    return [{"floor": top["floor"], "region": top["region_id"], "level_m": top.get("level_m"),
+             "floor_above_level_m": top.get("floor_above_level_m"), "rooms": sorted(rooms),
+             "plate_m2": (top.get("plate") or {}).get("largest_m2")}]
+
+
+def membrane_table(wet, roofs, held=(), top=()):
+    """the owner's membrane purchase table: per system the per-area rows, the purchase of each area alone (owner Q-49
+    A) and its project total as the sum of the areas, the held areas named with their reason (never 0), and, for
+    information only, MEMBRANE_FOLD_V2.project (offcuts shared between areas: NOT the purchase)."""
     from engine.source import membrane_fold_v2 as F
     systems = {}
-    for name, rows in (("WET_AREAS", wet), ("ROOFS", [r["fold"] for r in roofs if r["fold"] is not None and
-                                                      r["code"] == "ROOF"])):
-        systems[name] = {"rows": [_table_row(x) for x in rows], "project": F.project(rows) if rows else None}
-    return {"policy": F.METHOD_ID, "systems": systems,
+    roof_rows = [r["fold"] for r in roofs if r["fold"] is not None and r["code"] == "ROOF"]
+    held_by = {"WET_AREAS": [{"floor": h["floor"], "room_id": h["room_id"], "name": "/".join(h["codes"]),
+                              "reason": h["reason"]} for h in held],
+               "ROOFS": [{"floor": r["floor"], "room_id": f"{r['floor']}-ROOF-{r['text_id']}", "name": "ROOF",
+                          "reason": r["reason"]} for r in roofs
+                         if r["code"] == "ROOF" and r["membrane_m2"] is None and not r.get("counted_with")]
+               + [{"floor": t["floor"], "room_id": f"{t['floor']}-ROOF-TOP", "name": "top roof", "reason": Q34}
+                  for t in top]}
+    for name, rows in (("WET_AREAS", wet), ("ROOFS", roof_rows)):
+        out_rows, buy, hl = [], [], list(held_by[name])
+        for x in rows:
+            tr = _table_row(x)
+            if x.get("fold") is not None:
+                tr["purchase"] = purchase(x["fold"])
+                buy.append(tr)
+            else:
+                hl.append({"floor": x["floor"], "room_id": x["room_id"], "name": x.get("name"),
+                           "reason": x.get("reason")})
+            out_rows.append(tr)
+        total = None
+        if buy:
+            total = {"areas": len(buy), "rolls_to_buy": sum(r["purchase"]["rolls"] for r in buy),
+                     "cut_m2": round(sum(r["purchase"]["cut_m2"] for r in buy), 4),
+                     "strip_length_m": round(sum(r["purchase"]["strip_length_m"] for r in buy), 4),
+                     "leftover_m": round(sum(r["purchase"]["leftover_m"] for r in buy), 4),
+                     "side_trim_m2": round(sum(r["purchase"]["side_trim_m2"] for r in buy), 4),
+                     "held_areas": len(hl), "complete": not hl,
+                     "note": "sum of the areas, each alone (owner Q-49 A)" + (
+                         "; held areas are not in the sum (each has its held rolls line)" if hl else "")}
+        systems[name] = {"rows": out_rows, "held": hl, "purchase_total": total,
+                         "project": F.project(rows) if rows else None,
+                         "project_note": "MEMBRANE_FOLD_V2.project packs offcuts across areas: information only, "
+                                         "not the purchase (owner Q-49 A: each area alone)"}
+    return {"policy": F.METHOD_ID, "purchase_rule": Q49_A, "systems": systems,
             "never": ["a total across membrane systems (UP-WP-MAT-001)", "a held area as 0",
-                      "one layout selected (owner Q-49 open)", "rolls from net area / roll area (UP-WP-001)"]}
+                      "an offcut carried from one area to another (owner Q-49 A)",
+                      "rolls from net area / roll area (UP-WP-001)"]}
 
 
 def _table_row(x):
     f = x.get("fold")
     base = {"system": x.get("system"), "floor": x["floor"], "room_id": x["room_id"], "name": x.get("name"),
-            "state": x["state"]}
+            "state": x["state"], "line_room_id": x.get("line_room_id") or x["room_id"]}
     if f is None:
         return dict(base, reason=x.get("reason"))
     ln = x["lines"]
@@ -377,24 +565,57 @@ def roof_lines(ctx, roofs):
     return out
 
 
-def rolls_lines(ctx, table):
-    """one HELD rolls line per membrane system: the range of the three layout counts (owner Q-49 open)."""
+def rolls_lines(ctx, table, names=None):
+    """owner Q-49 A: one FIN.WP.MEMBRANE_ROLLS line per wet area and per roof, each alone (the purchase of the table
+    row: rolls, cutting plan, leftover metres); one BLOCKED_RFI line per held area or roof (no number, never 0)."""
     out = []
     for name in SYSTEMS:
-        p = (table["systems"].get(name) or {}).get("project")
-        if not p or not p["areas"]:
-            continue
-        sets = p["direction_sets"]
-        counts = {k: v["rolls_to_buy"] for k, v in sets.items()}
-        lo, hi = min(counts.values()), max(counts.values())
-        out.append(_line(ctx, item_code="FIN.WP.MEMBRANE_ROLLS", unit="pcs", floor=None, room_id=f"PROJECT-{name}",
-                         element="wp_rolls_to_buy", ev="BOUNDED_EXPOSURE",
-                         formula="the strips of every area of the system packed into whole 1.00 x 10.00 m rolls by "
-                                 "length (UP-WP-001, owner Q-30 / Q-24 addendum); one count per layout",
-                         inputs={"system": name, "areas": p["areas"], "held_areas": p["held"], "by_layout": sets,
-                                 "selected": None}, rule_id="UP-WP-LAY-001",
-                         bounded={"low": lo, "high": hi, "basis": Q49},
-                         rfi={"question": Q49, "unlocks": f"PROJECT-{name}"}))
+        st = table["systems"].get(name) or {}
+        for r in st.get("rows") or ():
+            p = r.get("purchase")
+            if p is None:
+                continue
+            rid = r["line_room_id"]
+            nm = (names or {}).get((r["floor"], r["room_id"])) or {}
+            out.append(_line(ctx, item_code="FIN.WP.MEMBRANE_ROLLS", unit="pcs", floor=r["floor"], room_id=rid,
+                             element="wp_rolls_to_buy", ev="SOURCE_DERIVED", net=p["rolls"],
+                             formula="this area alone: of the four layouts (2 directions x 2 start walls) the one "
+                                     "with the fewest whole 1.00 x 10.00 m rolls, tie the shorter strip length (owner "
+                                     "Q-49 A); strips by the owner's method (Q-30, Q-24 addendum), packed by length "
+                                     "into whole rolls (UP-WP-001), never area / roll area",
+                             inputs={"system": name, "direction": p["direction"], "start": p["start"],
+                                     "strips": p["strips"], "strip_length_m": p["strip_length_m"],
+                                     "cut_m2": p["cut_m2"], "leftover_m": p["leftover_m"],
+                                     "side_trim_m2": p["side_trim_m2"], "cutting_plan": p["cutting_plan"],
+                                     "layouts": p["layouts"], "flags": p["flags"]},
+                             rule_id="UP-WP-LAY-001", name_en=nm.get("name_en"), name_ar=nm.get("name_ar")))
+        for h in st.get("held") or ():
+            q = (f"{h['reason']}: the area's outline is not established, so its membrane rolls are not counted "
+                 "(owner Q-49 A counts each area alone; this one is held, not 0)")
+            out.append(_line(ctx, item_code="FIN.WP.MEMBRANE_ROLLS", unit="pcs", floor=h["floor"],
+                             room_id=h["room_id"], element="wp_rolls_to_buy", ev="BLOCKED_RFI",
+                             formula="this area alone (owner Q-49 A)", inputs={"system": name, "name": h["name"]},
+                             rule_id="UP-WP-LAY-001", rfi={"question": q, "unlocks": h["room_id"]}))
+    return out
+
+
+def top_roof_lines(ctx, top):
+    """FIN.WP.ROOF, FIN.WP.ROOF_UPTURN held for the roof that no plan draws (owner Q-34 parked). Its rolls line is
+    written by rolls_lines from the table's held rows."""
+    out = []
+    for t in top:
+        rid = f"{t['floor']}-ROOF-TOP"
+        q = (f"{Q34}: storey {t['floor']} (level {t['level_m']}) is the uppermost plan and has rooms; no plan is drawn "
+             "above it, so its roof outline (and parapet) is on no plan; the designer's roof plan unlocks it")
+        inp = {"storey": t["floor"], "region": t["region"], "storey_level_m": t["level_m"],
+               "level_above_m": t["floor_above_level_m"], "rooms_below": t["rooms"],
+               "storey_plate_outside_walls_m2": t["plate_m2"],
+               "note": "the storey plate is shown for information; it is not the roof area (no outline drawn)"}
+        for item, unit, el in (("FIN.WP.ROOF", "m2", "wp_membrane"), ("FIN.WP.ROOF_UPTURN", "lm", "wp_upturn")):
+            out.append(_line(ctx, item_code=item, unit=unit, floor=t["floor"], room_id=rid, element=el,
+                             ev="BLOCKED_RFI", formula="membrane inside the parapet (owner Q-24): outline not drawn",
+                             inputs=inp, rule_id="UP-WP-ROOF-001", rfi={"question": q, "unlocks": rid},
+                             name_en="Top roof (no plan)", name_ar=None))
     return out
 
 
@@ -422,7 +643,10 @@ def summary(classes, decided, wet, flags, held, roofs, table, lines):
             "wet_schedule_flags": flags, "wet_zones_held": [h["room_id"] for h in held],
             "roofs": [{k: r[k] for k in ("floor", "code", "status", "reason", "membrane_m2", "upturn_lm",
                                          "counted_with")} for r in roofs],
-            "tables": {k: (v["project"] or {}).get("direction_sets") for k, v in table["systems"].items()},
+            "purchase": {k: {"total": v["purchase_total"], "held": [h["room_id"] for h in v["held"]]}
+                         for k, v in table["systems"].items()},
+            "offcuts_shared_information_only": {k: (v["project"] or {}).get("direction_sets")
+                                                for k, v in table["systems"].items()},
             "lines_added": dict(Counter(f"{ln['item_code']} [{ln['evidence_state']}]" for ln in lines))}
 
 
@@ -430,5 +654,5 @@ def policy_record():
     return {"method": METHOD, "policy": POLICY_ID, "knowledge": KNOWLEDGE,
             "pieces": ["WET_ROOM_EVIDENCE_V1 (T-010)", "EXTERIOR_SPACES_V1 (T-071)", "MEMBRANE_FOLD_V2 (T-076)"],
             "owner_answers": ["Q-06 a", "Q-13 B", "Q-24", "Q-25", "Q-29", "Q-30 A", "Q-34 parked", "Q-35 C",
-                              "Q-37 A", "Q-40 A"],
-            "open": ["Q-49 (rolls layout)"], "items": sorted(ITEMS)}
+                              "Q-37 A", "Q-40 A", "Q-49 A"],
+            "purchase_rule": Q49_A, "open": [], "items": sorted(ITEMS)}

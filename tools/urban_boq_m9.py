@@ -1035,10 +1035,13 @@ def _v211_outputs(drawing, room_boq, arch, v211, cap, facts):
     held = AV.held_wet(arch, classes)
     roofs = AV.roof_records(cap, {r["region_id"]: r["floor"] for r in arch["regions"]},
                             (facts or {}).get("exterior_spaces"))
-    table = AV.membrane_table(wet, roofs)
+    top = AV.top_roofs(arch)                          # T-093: the roof no plan draws (owner Q-34 parked) -> held
+    table = AV.membrane_table(wet, roofs, held, top)  # T-093: rolls per area alone (owner Q-49 A)
     existing = {((ln.get("location") or {}).get("room_id"), ln["item_code"]) for ln in room_boq["lines"]}
+    names = {(x["floor"], x["room_id"]): {"name_en": x.get("name_en"), "name_ar": x.get("name_ar")} for x in wet}
     added = (AV.door_transition_lines(ctx, wet, lambda x: {"name_en": x.get("name_en"), "name_ar": x.get("name_ar")})
-             + AV.roof_lines(ctx, roofs) + AV.rolls_lines(ctx, table) + AV.held_wet_lines(ctx, held, existing))
+             + AV.roof_lines(ctx, roofs) + AV.top_roof_lines(ctx, top) + AV.rolls_lines(ctx, table, names)
+             + AV.held_wet_lines(ctx, held, existing))
     ids = {ln["line_id"] for ln in room_boq["lines"]}
     if any(ln["line_id"] in ids for ln in added) or len({ln["line_id"] for ln in added}) != len(added):
         raise ValueError("ARCH_TAKEOFF_V2.11: an added line repeats an existing line id")
@@ -1054,7 +1057,7 @@ def _v211_outputs(drawing, room_boq, arch, v211, cap, facts):
     arch["release_report"] = _release_report(room_boq["lines"], sets, arch.get("owner_questions"))
     arch["v211"] = {"policy": AV.policy_record(), "classes": classes, "decided": decided, "membrane_table": table,
                     "roofs": [{k: v for k, v in r.items() if k != "fold"} for r in roofs], "wet_schedule_flags": flags,
-                    "wet_zones_held": held, "summary": AV.summary(classes, decided, wet, flags, held, roofs, table,
+                    "wet_zones_held": held, "top_roofs_held": top, "summary": AV.summary(classes, decided, wet, flags, held, roofs, table,
                                                                   added)}
     run.update(policy=ARCH_POLICY_ID_V211)
     run["v2_11"] = {"knowledge": V211_KNOWLEDGE, "summary": arch["v211"]["summary"],
@@ -2685,7 +2688,11 @@ def v21_files(arch):
         if arch.get("v211") is not None:                       # T-079: ARCH_TAKEOFF_V2.11 membrane table
             files["MEMBRANE_TABLE_V2_11.json"] = _j({"run": run, "membrane_table": arch["v211"]["membrane_table"],
                                                      "roofs": arch["v211"]["roofs"],
-                                                     "wet_zones_held": arch["v211"]["wet_zones_held"]})
+                                                     "wet_zones_held": arch["v211"]["wet_zones_held"],
+                                                     "top_roofs_held": arch["v211"]["top_roofs_held"]})
+            from engine.source import arch_v211 as AV
+            files["MEMBRANE_PURCHASE_V2_11.csv"] = _csv(AV.purchase_rows(arch["v211"]["membrane_table"]),
+                                                        AV.PURCHASE_COLUMNS)
         files["DOOR_FEASIBILITY.json"] = _j({"run": run, "doors": arch["door_feasibility"]})
         files["DOOR_FEASIBILITY.csv"] = _csv(DF.csv_rows(arch["door_feasibility"]), DF.CSV_COLUMNS)
         files["APPROVALS_REQUIRED.json"] = _j({"run": run, "approvals": arch["approvals"]})
