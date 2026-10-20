@@ -1,0 +1,155 @@
+floor,workbook_row,section,his_length_m,his_height_m,his_label,matched_run,our_piece_m,diff_m,match
+GF,14,external,3.55,4,,GF-W10,3.55,+0.000,EXACT
+GF,15,external,3.55,4,,,,,UNMATCHED
+GF,16,external,3.47,4,,GF-W10,3.47,+0.000,EXACT
+GF,17,external,2.5,4,,GF-W06,2.5,+0.000,EXACT
+GF,18,external,1.3,4,,GF-W01,1.3,+0.000,EXACT
+GF,19,external,6.35,4,,GF-W01,6.35,+0.000,EXACT
+GF,20,external,5.75,4,,GF-W01,5.745,-0.005,EXACT
+GF,21,external,3.08,4,,GF-W01,3.075,-0.005,EXACT
+GF,22,external,5.75,4,,,,,UNMATCHED
+GF,23,external,5.45,4,,GF-W00,5.45,+0.000,EXACT
+GF,24,external,6.1,4,,GF-W18,6.1,+0.000,EXACT
+GF,25,external,2.5,4,,GF-W10,2.5,+0.000,EXACT
+GF,26,external,2.55,4,,,,,UNMATCHED
+GF,27,external,5.85,3.5,,GF-W04,5.85,+0.000,EXACT
+GF,28,external,1.3,3.5,,,,,UNMATCHED
+GF,29,external,2.3,3.5,,GF-W17,2.3,+0.000,EXACT
+GF,30,external,4.45,3.5,,GF-W00,4.45,+0.000,EXACT
+GF,31,external,1.9,3.5,,GF-W05,1.9,+0.000,EXACT
+GF,32,external,3.2,3.5,,,,,UNMATCHED
+GF,33,external,1.4,3.5,,GF-W17,1.4,+0.000,EXACT
+GF,34,external,0.8,3.5,,,,,UNMATCHED
+GF,35,external,2.75,3.5,,,,,UNMATCHED
+GF,36,external,2.7,3.5,,GF-W15,2.7,+0.000,EXACT
+GF,133,internal 15 cm,2.15,4,,GF-W19,2.175,+0.025,CLOSE
+GF,134,internal 15 cm,2.5,4,,,,,UNMATCHED
+GF,135,internal 15 cm,2.65,4,,GF-W34,2.612,-0.038,CLOSE
+GF,136,internal 15 cm,1.5,4,,GF-W23,1.5,+0.000,EXACT
+GF,137,internal 15 cm,3,4,,GF-W32,3.006,+0.006,EXACT
+GF,138,internal 15 cm,1.3,4,,,,,UNMATCHED
+GF,139,internal 15 cm,1.26,4,,GF-W29,1.224,-0.036,CLOSE
+GF,139,internal 15 cm,1.26,4,,,,,UNMATCHED
+GF,140,internal 15 cm,1,4,,GF-W21,1.024,+0.024,CLOSE
+GF,141,internal 15 cm,0.96,4,,,,,UNMATCHED
+GF,142,internal 15 cm,1.9,4,,,,,UNMATCHED
+GF,143,internal 15 cm,5,4,,,,,UNMATCHED
+GF,144,internal 15 cm,2.9,4,,,,,UNMATCHED
+GF,145,internal 15 cm,1.35,4,,GF-W31,1.385,+0.035,CLOSE
+GF,146,internal 15 cm,2.65,4,,,,,UNMATCHED
+GF,147,internal 15 cm,4.45,3.5,,,,,UNMATCHED
+GF,147,internal 15 cm,4.45,3.5,,,,,UNMATCHED
+GF,147,internal 15 cm,4.45,3.5,,,,,UNMATCHED
+GF,148,internal 15 cm,1.5,3.5,,GF-W30,1.525,+0.025,CLOSE
+GF,149,internal 15 cm,1.3,3.25,,,,,UNMATCHED
+GF,203,internal 20 cm,1.8,4,,GF-W08,1.8,+0.000,EXACT
+GF,203,internal 20 cm,1.8,4,,GF-W09,1.8,+0.000,EXACT
+GF,204,internal 20 cm,1.2,4,,GF-W14,1.2,+0.000,EXACT
+GF,205,internal 20 cm,0.7,4,,GF-W13,0.7,+0.000,EXACT
+GF,206,internal 20 cm,2.7,4,,GF-W14,2.7,+0.000,EXACT
+1F,63,external,3.55,3.7,,1F-W10,3.55,+0.000,EXACT
+1F,64,external,3.55,3.7,,,,,UNMATCHED
+1F,65,external,3.47,3.7,,1F-W10,3.47,+0.000,EXACT
+1F,66,external,2.5,3.7,,1F-W10,2.5,+0.000,EXACT
+1F,67,external,5.2,3.7,,,,,UNMATCHED
+1F,68,external,5.3,3.7,,,,,UNMATCHED
+1F,69,external,3.3,3.7,,1F-W06,3.3,+0.000,EXACT
+1F,70,external,2.65,3.7,,1F-W06,2.65,+0.000,EXACT
+1F,71,external,6.7,3.7,,1F-W06,6.708,+0.008,EXACT
+1F,72,external,3.8,3.7,,1F-W06,3.812,+0.012,CLOSE
+1F,73,external,4.02,3.45,,1F-W05,4.0,-0.020,CLOSE
+1F,74,external,4.08,3.45,,,,,UNMATCHED
+1F,75,external,3.35,3.45,,1F-W10,3.35,+0.000,EXACT
+1F,76,external,0.8,3.45,,1F-W01,0.825,+0.025,CLOSE
+1F,77,external,2.7,3.45,,1F-W04,2.7,+0.000,EXACT
+1F,154,internal 15 cm,1.8,3.7,,1F-W18,1.8,+0.000,EXACT
+1F,155,internal 15 cm,1.47,3.7,,,,,UNMATCHED
+1F,155,internal 15 cm,1.47,3.7,,,,,UNMATCHED
+1F,156,internal 15 cm,1.8,3.7,,,,,UNMATCHED
+1F,156,internal 15 cm,1.8,3.7,,,,,UNMATCHED
+1F,157,internal 15 cm,2,3.7,,1F-W19,1.975,-0.025,CLOSE
+1F,158,internal 15 cm,1.65,3.7,,,,,UNMATCHED
+1F,159,internal 15 cm,4.3,3.7,,,,,UNMATCHED
+1F,160,internal 15 cm,3.5,3.7,,1F-W23,3.5,+0.000,EXACT
+1F,161,internal 15 cm,3.8,3.7,,1F-W12,3.8,+0.000,EXACT
+1F,162,internal 15 cm,1.75,3.7,,,,,UNMATCHED
+1F,163,internal 15 cm,4,3.7,,,,,UNMATCHED
+1F,163,internal 15 cm,4,3.7,,,,,UNMATCHED
+1F,164,internal 15 cm,2.1,3.7,,,,,UNMATCHED
+1F,165,internal 15 cm,5,3.7,,,,,UNMATCHED
+1F,166,internal 15 cm,3.65,3.7,,,,,UNMATCHED
+1F,167,internal 15 cm,3.4,3.7,,,,,UNMATCHED
+1F,168,internal 15 cm,3.1,3.7,,,,,UNMATCHED
+1F,169,internal 15 cm,2.45,3.7,,1F-W15,2.425,-0.025,CLOSE
+1F,170,internal 15 cm,2.05,3.7,,,,,UNMATCHED
+1F,170,internal 15 cm,2.05,3.7,,,,,UNMATCHED
+1F,208,internal 20 cm,1.8,3.7,,1F-W07,1.8,+0.000,EXACT
+1F,208,internal 20 cm,1.8,3.7,,1F-W09,1.8,+0.000,EXACT
+1F,209,internal 20 cm,1.2,3.7,,1F-W03,1.2,+0.000,EXACT
+1F,210,internal 20 cm,0.7,3.7,,1F-W02,0.7,+0.000,EXACT
+1F,211,internal 20 cm,2.7,3.7,,1F-W03,2.7,+0.000,EXACT
+2F,101,external,2.5,3.45,,2F-W02,2.5,+0.000,EXACT
+2F,102,external,3.47,3.45,,2F-W02,3.47,+0.000,EXACT
+2F,103,external,1.15,3.45,,,,,UNMATCHED
+2F,104,external,6.8,3.45,,,,,UNMATCHED
+2F,105,external,8.18,3.45,,,,,UNMATCHED
+2F,106,external,3.1,3.45,,,,,UNMATCHED
+2F,107,external,2.7,3.45,,2F-W07,2.7,+0.000,EXACT
+2F,176,internal 15 cm,3,3.7,,,,,UNMATCHED
+2F,213,internal 20 cm,1.8,3.7,,2F-W00,1.8,+0.000,EXACT
+2F,213,internal 20 cm,1.8,3.7,,2F-W01,1.8,+0.000,EXACT
+2F,214,internal 20 cm,1.2,3.7,,2F-W06,1.2,+0.000,EXACT
+2F,215,internal 20 cm,0.7,3.7,,,,,UNMATCHED
+2F,216,internal 20 cm,2.7,3.7,,2F-W06,2.7,+0.000,EXACT
+GF,,"(our piece, no freelancer row within 0.06 m)",,,,GF-W02,1.65,,OURS_ONLY
+GF,,"(our piece, no freelancer row within 0.06 m)",,,,GF-W03,2.65,,OURS_ONLY
+GF,,"(our piece, no freelancer row within 0.06 m)",,,,GF-W07,1.1,,OURS_ONLY
+GF,,"(our piece, no freelancer row within 0.06 m)",,,,GF-W08,2.6,,OURS_ONLY
+GF,,"(our piece, no freelancer row within 0.06 m)",,,,GF-W10,3.35,,OURS_ONLY
+GF,,"(our piece, no freelancer row within 0.06 m)",,,,GF-W11,7.0,,OURS_ONLY
+GF,,"(our piece, no freelancer row within 0.06 m)",,,,GF-W12,0.45,,OURS_ONLY
+GF,,"(our piece, no freelancer row within 0.06 m)",,,,GF-W15,4.4,,OURS_ONLY
+GF,,"(our piece, no freelancer row within 0.06 m)",,,,GF-W16,4.45,,OURS_ONLY
+GF,,"(our piece, no freelancer row within 0.06 m)",,,,GF-W20,1.068,,OURS_ONLY
+GF,,"(our piece, no freelancer row within 0.06 m)",,,,GF-W22,3.169,,OURS_ONLY
+GF,,"(our piece, no freelancer row within 0.06 m)",,,,GF-W24,4.7,,OURS_ONLY
+GF,,"(our piece, no freelancer row within 0.06 m)",,,,GF-W25,4.6,,OURS_ONLY
+GF,,"(our piece, no freelancer row within 0.06 m)",,,,GF-W26,4.55,,OURS_ONLY
+GF,,"(our piece, no freelancer row within 0.06 m)",,,,GF-W27,1.65,,OURS_ONLY
+GF,,"(our piece, no freelancer row within 0.06 m)",,,,GF-W28,3.764,,OURS_ONLY
+GF,,"(our piece, no freelancer row within 0.06 m)",,,,GF-W28,1.763,,OURS_ONLY
+GF,,"(our piece, no freelancer row within 0.06 m)",,,,GF-W33,1.473,,OURS_ONLY
+GF,,"(our piece, no freelancer row within 0.06 m)",,,,GF-W35,1.885,,OURS_ONLY
+GF,,"(our piece, no freelancer row within 0.06 m)",,,,GF-W36,0.5,,OURS_ONLY
+1F,,"(our piece, no freelancer row within 0.06 m)",,,,1F-W00,5.625,,OURS_ONLY
+1F,,"(our piece, no freelancer row within 0.06 m)",,,,1F-W00,1.0,,OURS_ONLY
+1F,,"(our piece, no freelancer row within 0.06 m)",,,,1F-W04,0.9,,OURS_ONLY
+1F,,"(our piece, no freelancer row within 0.06 m)",,,,1F-W05,2.3,,OURS_ONLY
+1F,,"(our piece, no freelancer row within 0.06 m)",,,,1F-W07,1.495,,OURS_ONLY
+1F,,"(our piece, no freelancer row within 0.06 m)",,,,1F-W08,2.9,,OURS_ONLY
+1F,,"(our piece, no freelancer row within 0.06 m)",,,,1F-W08,0.7,,OURS_ONLY
+1F,,"(our piece, no freelancer row within 0.06 m)",,,,1F-W11,4.425,,OURS_ONLY
+1F,,"(our piece, no freelancer row within 0.06 m)",,,,1F-W13,8.325,,OURS_ONLY
+1F,,"(our piece, no freelancer row within 0.06 m)",,,,1F-W14,0.45,,OURS_ONLY
+1F,,"(our piece, no freelancer row within 0.06 m)",,,,1F-W16,5.57,,OURS_ONLY
+1F,,"(our piece, no freelancer row within 0.06 m)",,,,1F-W17,2.25,,OURS_ONLY
+1F,,"(our piece, no freelancer row within 0.06 m)",,,,1F-W18,3.475,,OURS_ONLY
+1F,,"(our piece, no freelancer row within 0.06 m)",,,,1F-W20,6.275,,OURS_ONLY
+1F,,"(our piece, no freelancer row within 0.06 m)",,,,1F-W21,1.975,,OURS_ONLY
+1F,,"(our piece, no freelancer row within 0.06 m)",,,,1F-W22,5.175,,OURS_ONLY
+1F,,"(our piece, no freelancer row within 0.06 m)",,,,1F-W23,3.0,,OURS_ONLY
+1F,,"(our piece, no freelancer row within 0.06 m)",,,,1F-W24,2.625,,OURS_ONLY
+1F,,"(our piece, no freelancer row within 0.06 m)",,,,1F-W25,3.672,,OURS_ONLY
+2F,,"(our piece, no freelancer row within 0.06 m)",,,,2F-W02,1.03,,OURS_ONLY
+2F,,"(our piece, no freelancer row within 0.06 m)",,,,2F-W03,7.9,,OURS_ONLY
+2F,,"(our piece, no freelancer row within 0.06 m)",,,,2F-W04,1.707,,OURS_ONLY
+2F,,"(our piece, no freelancer row within 0.06 m)",,,,2F-W04,4.518,,OURS_ONLY
+2F,,"(our piece, no freelancer row within 0.06 m)",,,,2F-W05,1.325,,OURS_ONLY
+2F,,"(our piece, no freelancer row within 0.06 m)",,,,2F-W05,1.0,,OURS_ONLY
+2F,,"(our piece, no freelancer row within 0.06 m)",,,,2F-W07,3.025,,OURS_ONLY
+2F,,"(our piece, no freelancer row within 0.06 m)",,,,2F-W08,3.1,,OURS_ONLY
+1F,78,external,7.5,5.5,projections,,,,UNMATCHED: projection band 7.50 x 5.50 m2 has no wall run on the plans (elevation feature); not a block wall run in this table
+GF,150,internal 15 cm,37.2,2.0,fence,F-GF (3 rows),46.370,+9.170,TOTAL ONLY: our fence centreline 46.37 m (north 31.17 + street side 8.20 incl. 2.50 gate + sea side 7.00 incl. 1.00 gate) drawn 0.20; his 37.20 = north outer 31.37 + street side solid 5.80 (printed 580); he has no sea-side fence row
+1F,172,internal 15 cm,66.0,1.0,parapet,P-GF-ROOF (9 rows),59.313,-6.687,TOTAL ONLY: our ground-roof parapet centreline 59.31 m drawn 0.20 thick (his 0.15)
+2F,177,internal 15 cm,42.85,1.8,parapet,P-1F-ROOF (5 rows),49.240,+6.390,TOTAL ONLY: our first-roof parapet 44.94 m measured + 4.30 m held thickness = 49.24 m drawn 0.20 thick
+2F,178,internal 15 cm,29.8,1.0,parapet,P-2F-ROOF,,,HELD on our side: top roof parapet not drawn in plan; his 29.80 = outer perimeter 2 x (8.10 + 6.80) of the printed block outline
