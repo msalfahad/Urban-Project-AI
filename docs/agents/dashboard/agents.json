@@ -3,46 +3,46 @@
   "agent": "Lead planner",
   "role": "Plans the work, keeps the board and milestones, asks you questions",
   "cadence": "every 2 h (:09)",
-  "last_run": "2026-10-20T12:15:32Z",
+  "last_run": "2026-10-20T14:13:21Z",
   "result": "running",
-  "working_on": "Your 13 answers and 12:15 correction recorded (decision register, designer list); six new tasks from them: beams member by member, stairs flight by flight, wall heights by both methods, 1F living gap, 2F roof trim proof + pantry, blockwork code vs hand",
-  "as_of": "2026-10-20T12:30:00Z"
+  "working_on": "Six results closed: blinding / columns and 1F living traced (merged), skirting and block types in; new tasks: stair voids out of room floors, passage walls, columns to the deepest beam, blockwork code vs hand; asked you Q-66 (1F stair landing finish)",
+  "as_of": "2026-10-20T14:20:48Z"
  },
  {
   "agent": "Worker 1",
   "role": "Builds one board task per run on its own branch",
   "cadence": "hourly :19",
-  "last_run": "2026-10-20T11:20:34Z",
+  "last_run": "2026-10-20T13:21:44Z",
   "result": "ok",
-  "working_on": "Delivered: 14 engine changes checked by hand, 12 right; ground-floor facade run may miss a 1.20 m open passage (98.887 vs 105.787 m) (T-016b)",
-  "as_of": "2026-10-20T12:30:00Z"
+  "working_on": "Delivered: skirting audit, all 28 nets right, 17.04 m of window-frame credit not listed; engine gross 262.56 vs his 282.85 m (-7.2 %, rule difference) (T-106)",
+  "as_of": "2026-10-20T14:20:48Z"
  },
  {
   "agent": "Worker 2",
   "role": "Builds one board task per run on its own branch",
   "cadence": "hourly :39",
-  "last_run": "2026-10-20T11:39:35Z",
+  "last_run": "2026-10-20T13:39:42Z",
   "result": "ok",
-  "working_on": "Delivered: facade gaps at undetected windows, 1F run 63.169 -> 63.009 m = hand (T-014); its 10:39 run left no log line",
-  "as_of": "2026-10-20T12:30:00Z"
+  "working_on": "Delivered by hand: block type of all 93 wall runs (white 141.31 / black 136.00 ASSUMED, black 57.54 by the note, 125.35 m held); freeze check and branch write refused, board-only (T-107)",
+  "as_of": "2026-10-20T14:20:48Z"
  },
  {
   "agent": "Worker 3",
   "role": "Builds one board task per run on its own branch",
   "cadence": "hourly :59",
-  "last_run": "2026-10-20T12:00:11Z",
-  "result": "running",
-  "working_on": "Delivered: membrane strips in every wall frame, wedge W.C. 5.95 -> 5.45 m = hand, 19 wet rolls unchanged (T-104); its 10:59 run left no log line",
-  "as_of": "2026-10-20T12:30:00Z"
+  "last_run": "2026-10-20T13:59:32Z",
+  "result": "ok",
+  "working_on": "Delivered: wall heights of 32 rooms by the owner method and the drawings; 4 dry rooms 234.17 vs his 258.40 m2 (-9.4 %), drawing heights held (no ceiling plane printed); 6 designer points (T-112)",
+  "as_of": "2026-10-20T14:20:48Z"
  },
  {
   "agent": "Verifier",
   "role": "Checks finished tasks, merges or rejects, keeps the scoreboard",
   "cadence": "hourly :49",
-  "last_run": "2026-10-20T11:50:22Z",
-  "result": "failed",
-  "working_on": "11:53 run refused code execution (static review only); at 11:36 merged rooms guard, two hand checks, notes census and blockwork metres; next: 14-change check, facade gaps, blockwork centreline",
-  "as_of": "2026-10-20T12:30:00Z"
+  "last_run": "2026-10-20T13:49:36Z",
+  "result": "running",
+  "working_on": "Merged blinding / columns by hand and the 1F living trace (head c1f0467); before that 4 pieces incl. the GF passage verdict (engine -7.000 m, -6.6 %)",
+  "as_of": "2026-10-20T14:20:48Z"
  },
  {
   "agent": "Research scout",
@@ -50,7 +50,7 @@
   "cadence": "daily 23:50 UTC",
   "last_run": "2026-10-19T23:51:17Z",
   "result": "ok",
-  "working_on": "Open requests: Arabic notes on scanned plans, proving strip coverage, wall centrelines from double-line walls",
-  "as_of": "2026-10-20T12:30:00Z"
+  "working_on": "Answered heights from sections, schedule populations, block-insert footings; open: notes on scans, strip coverage proof, wall centrelines",
+  "as_of": "2026-10-20T14:20:48Z"
  }
 ]

@@ -194,6 +194,25 @@ in the ground, where cement block is the usual choice, and the structural note a
 so the whole fence stays one material.
 Waits on: block type, block count and adhesive / mortar of the parapets and the street fence (T-107, T-108).
 
+### Q-66 First-floor main-stair landing (4.875 m2): porcelain floor or marble with the stair? (lead 2026-10-20 14:20, from worker 2's trace of the first-floor living floor; T-113, T-116; no-assumptions question: two of your rules disagree)
+
+THE PROBLEM: your Q-56 answer keeps the first-floor living area in four separate rows (living 22.20, corridor 7.04, main-stair
+landing 4.875, connector 4.469 m2) with the landing in porcelain marked PROVISIONAL. Your standing stair rule (UP-STAIR-005,
+owner-approved) says a stair landing is marble and is never also porcelain floor. The engine cannot follow both, so the landing
+finish is held. Only the finish is in question; the 4.875 m2 of geometry is settled (5.278 m2 if the 0.4025 m2 foot of the east
+flight is landing, a designer point D-13).
+WHERE TO LOOK: Drive "Alsenan chalet project", p7757_arch_sheet04.pdf (first floor plan): the main dog-leg stair, the landing
+where it arrives on the first floor in front of the living room, between the last tread line and the corridor by the void.
+THE OPTIONS:
+(A) Porcelain, a separate floor row, as recorded from your Q-56 answer: first-floor porcelain rows 38.588 m2, stair marble
+unchanged (39.49 m2).
+(B) Marble with the stair, by your stair rule: first-floor porcelain 33.713 m2, stair marble 39.49 + 4.875 = 44.365 m2.
+(C) Hold the finish of this landing (area shown, finish HELD) until the finish schedule exists.
+RECOMMENDATION: B. Your own owner-approved stair rule names the landing marble, and a landing finished with its stair keeps
+the marble nosing and the landing in one material without a joint at the top step; practice, not a code clause. If you meant
+the first-floor arrival area to be floor (A), the stair rule will say so for arrival landings on every villa.
+Waits on: first-floor floor tiles and stair marble (T-116, the floor-area fix; the tiling table).
+
 Earlier note: None open (lead 2026-10-20 12:20). Q-50 to Q-63 were answered by the owner on 2026-10-20 (OWNER_DIRECTIVE_2026-10-20.md, and the owner's 12:15 correction in OWNER_SESSION_CHANGES.md: his earlier answers are his manual BOQ method and are preserved; the engine shows the owner-method and the drawing-derived results side by side). A reconciliation proposal is with the owner in his main chat; the team does not duplicate it as a question.
 
 ## Answered

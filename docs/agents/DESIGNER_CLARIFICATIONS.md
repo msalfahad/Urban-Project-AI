@@ -21,6 +21,16 @@ VISIBLE in the BOQ, never 0. Workers add rows (next free D- number) with the evi
 | D-10 | Tile sizes and floor finishes | none printed on any sheet | finish schedule | areas measured, counts HELD | T-091; owner Q-59 |
 | D-11 | Neighbour-side ground beams: black block "above and below, built from foundation level" (structural set page 1, notes box, note 2) | the note does not say how far "above" reaches | only up to the GF slab, or the whole GF wall on the neighbour boundary (26.37 m, GF-W00 / GF-W01) and the full north fence (31.17 m) | BLACK PROVISIONAL on those rows (owner rule: office notes override the fallback) | worker 2, T-107 |
 | D-12 | Walls that contain columns (structural set page 8, recommendation 20: built at the column thickness) | architectural plans draw and print 0.15 for three runs with a column inside (GF-W28, 1F-W18, 1F-W23), and 0.20 for GF walls round 0.25-wide columns C3-C11 (column schedule page 9) | build at column thickness or as drawn, run by run | thickness as drawn, flagged CONFLICT; block m3 of these runs CONFLICT | worker 2, T-107 |
+| D-13 | Foot of the east main-stair flight on 1F, 0.4025 m2 | the 1F plan leaves it between the last tread line and the landing; no section dimension settles it | tread or landing (1F living / landing floor 38.588 or 38.990 m2) | range 38.588 .. 38.990 m2, HELD between the two | worker 2 T-113; T-116 |
+| D-14 | Footing blinding at the 8 footings drawn on the plot line | structural set p.13 prints blinding 10 cm past each face; these footings sit on the plot line | does the blinding project beyond the plot line or stop at it | 0.189 m3 HELD (15.179 m3 footing blinding otherwise released-ready) | worker 1 T-100 |
+| D-15 | Blinding under foundation straps | p.13 prints blinding under footings and the four ground-beam sections, none under straps | blinding under straps or not | 0.913 m3 HELD, visible | worker 1 T-100 |
+| D-16 | Column C8 | plan prints 30X80 (dimensioned 70 + 10); column schedule 30 x 90 | which size is the structure | CONFLICT, both volumes | worker 1 T-100; T-119 |
+| D-17 | Annex roof +4.30 | section B-B puts +4.30 on top of one undivided ~0.23 m band; plans print roof terraces at finished levels; drainage prints 1 % falls on that roof | structural slab top of the annex roof and the roof build-up (falls screed, insulation, protection) | drawing-derived annex heights HELD (owner Q-54 B) | worker 3 T-112 (DCR-1); refines D-06 |
+| D-18 | GF master bed room pool-side glazing W03 | head printed +5.30, above beam B8 (0.75 m) drawn on the same line (soffit at most +4.75) | beam upturned / moved, or a lower glazing head | CONFLICT | worker 3 T-112 (DCR-2) |
+| D-19 | 1F east master bed room window W17 | crown +9.20 against CB12 (0.75 m) near the void | beam position and depth on that wall | CONFLICT to check | worker 3 T-112 (DCR-3) |
+| D-20 | 1F-roof dome openings (open skylights, owner Q-29 / Q-44) | the west opening (4.42 m) lies over the 1F west master bed room and part of its two baths, their partition under it; the east one over the living area | ceiling and wall treatment under each opening (glazing at slab, at drum top +11.00, or a closed ceiling) and how the partition ends | HELD | worker 3 T-112 (DCR-4) |
+| D-21 | 2F maid room dome | architecture draws a dome over the room; the structural slab is flat with no opening or ring | is there an opening and dome here | CONFLICT | worker 3 T-112 (DCR-5) |
+| D-22 | Ceiling levels and floor build-up (all floors) | no reflected ceiling plan, no ceiling level, no build-up printed | ceiling levels per room and floor build-up per floor | every drawing-derived plaster / paint height HELD | worker 3 T-112; refines D-09 |
 
 ## 2. Missing-scope register (unknown is never zero)
 
@@ -31,7 +41,7 @@ VISIBLE in the BOQ, never 0. Workers add rows (next free D- number) with the evi
 | M-03 | Second-floor top roof outline (membrane) | owner answer: held | HELD line | Q-34 |
 | M-04 | Expansion joints on roofs (spacing, BOQ line) | owner Q-42 correction leaves spacing open | HELD; ask the owner when roof tile counts are built | Q-42 |
 | M-05 | Substructure black block under the neighbour-side ground beams (note of D-11) | neither the T-103 hand table (superstructure) nor the freelancer (no row below ground) has it | 2 x 31.17 m centreline (building south line incl. the 1.40 m passage; north fence line); height: fence line PROVISIONAL >= 0.70 m (minimum excavation 1.50 m - two 0.40 ground beams, boundary-wall detail page 14), building line HELD (footing levels) | D-11; T-107, T-108 |
-| M-05 | Three unlabelled GF spaces 8.13 m2 | T-099 census; T-016b reads two of them as the outdoor side passage (exterior paving) | HELD | T-099, T-016b |
+| M-06 | Three unlabelled GF spaces 8.13 m2 (renumbered from a second M-05 by the Lead 14:20) | T-099 census; T-016b reads two of them as the outdoor side passage (exterior paving) | HELD | T-099, T-016b |
 
 ## 3. Status mapping (directive 2.2; frozen outputs are not renamed)
 
