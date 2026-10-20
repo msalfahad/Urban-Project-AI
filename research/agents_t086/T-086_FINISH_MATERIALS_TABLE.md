@@ -1,6 +1,6 @@
 # T-086: room-by-room finishing table with mortar, cement, sand and adhesive (owner request, Q-45)
 
-Worker 3, 2026-10-20 00:02-01:10 UTC. Gate 2 (architectural coverage: floors, wet areas, tiles). Development villa
+Worker 3, 2026-10-20 00:02-00:14 UTC. Gate 2 (architectural coverage: floors, wet areas, tiles). Development villa
 (Alsenan) only; NOT an accuracy claim. New method piece `engine/source/finish_materials_table.py`
 (FINISH_MATERIALS_TABLE_V1), read by no released method: no released quantity changed.
 
