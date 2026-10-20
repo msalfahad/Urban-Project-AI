@@ -100,8 +100,7 @@ Not measured, and paused by your order (Alsenan first).
   passage from the drawing), the blockwork centreline code, the membrane wall frames.
 - Free, hand work allowed (from your answers): beams member by member with conflict records; stairs flight by flight with
   the overlap ledger; wall heights per room by your method and by the drawings; the 5.95 m2 first-floor living gap; proof
-  of the 2F roof trim piece and the pantry cutting plan; blockwork code vs hand wall by wall plus block type per wall;
-
+  of the 2F roof trim piece and the pantry cutting plan; blockwork code vs hand wall by wall plus block type per wall.
 - Free, code: beam / stair rework (one guard declaration each), beam spans settled by printed section cuts (1.91 m3),
   skirting deductions that do not add back (17.04 m), pool and dome sizes from the printed details.
 - Queued: block m2 / counts (after wall types and beams), facade passage walls (after the checker's verdict), mortar from
