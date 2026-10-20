@@ -44,7 +44,13 @@ wash lobby (B11) and the pantry (B27). Under option B the 0.50 m beams RAISE eig
 
 Lengths from printed dimensions only (T-088, re-checked: the five rectangles below were found on the architectural DXF
 as dimension entities whose measured value equals the printed number, with wall-face linework on all four sides of each
-at the dimensioned coordinates, 49-120 % of each side covered; the gaps are the openings).
+at the dimensioned coordinates, 49-120 % of each side covered; the gaps are the openings). The same automatic check
+(two perpendicular printed dimensions of the room's sizes on the same floor, wall-face lines on all four sides) found 9
+wet rooms too (GF 150 x 210, 150 x 225, 130 x 150, 175 x 135; 1F both 245 x 205, 147 x 180, 210 x 225; 2F 300 x 185) and
+the 1F master bed room 380 x 430; it did NOT find the GF basin space 110 x 135 as a closed rectangle (it is open to its
+passage on one side), so its 4.90 m is an upper bound (the room is held on its level anyway). 15 of the 23 rooms with a
+length are DXF-confirmed; the other 8 are the 7 T-074 hand traces (kitchen, two core wedges, wash lobby, master bath,
+laundry, bath by the laundry) and the open basin space.
 
 | Room | Printed length | Freelancer | A | B | C | Freelancer m2 | A vs him |
 |---|---|---|---|---|---|---|---|
