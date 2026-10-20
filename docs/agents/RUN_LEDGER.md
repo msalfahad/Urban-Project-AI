@@ -20,7 +20,7 @@ A silent run is never counted as a success. The owner's main chat (the auditor) 
   the cause (approval card, timeout, environment, other) are **NOT KNOWN**. They are not assumed.
 - Each agent's start-of-run line (proposed below) is what will make the cause visible.
 
-## 2026-10-20, 10:00 to 18:30 UTC (code-running agents)
+## 2026-10-20, 10:00 to 19:30 UTC (code-running agents)
 
 | Slot (UTC) | Agent | Status | Evidence |
 |---|---|---|---|
@@ -54,20 +54,24 @@ A silent run is never counted as a success. The owner's main chat (the auditor) 
 | 16:59 | Worker 3 | BLOCKED | logged 17:48; self-check passed, but the Drive zip decode was refused [Untrusted Code Integration]; Alsenan figure NOT run |
 | 17:19 | Worker 1 | INCOMPLETE | the scheduled run ended SUCCEEDED after 4 min 55 s (17:19:51 to 17:24:46), but left no line and no commit; cause NOT KNOWN |
 | 17:39 | Worker 2 | SUCCESS | ran 17:39:45 to 18:07:22, logged 18:08; self-check clone / venv / codemap / t061 / freeze all PASS; T-121 READY (soffits over outside air 45.632 m2 CALCULATED, finish HELD) |
-| 17:49 | Verifier | (running) | last-run record still PENDING at 18:30; it merged T-120 at 18:25 (L4 full suite, freeze 0) but has not yet written a RUN_LOG line |
+| 17:49 | Verifier | SUCCESS | logged 18:34; self-check clone / venv / codemap / t061 / freeze all PASS and Drive zip decode PASS; merged the waterproofing candidate (opt-in), rejected the soffit census (pool-court void drawn 3.689 m2, not 4.373) |
 | 17:59 | Worker 3 | INCOMPLETE | the scheduled run ended SUCCEEDED after 6 min 2 s (17:59:18 to 18:05:21), no line, no commit; cause NOT KNOWN |
 | 18:19 | Worker 1 | INCOMPLETE | the scheduled run ended SUCCEEDED after 5 min 25 s (18:19:44 to 18:25:09), no line, no commit; cause NOT KNOWN |
+| 18:39 | Worker 2 | SUCCESS | ran 18:39:15 to 18:58:29, logged 19:10; self-check all PASS; stair-landing task READY |
+| 18:49 | Verifier | INCOMPLETE | the scheduled run ended SUCCEEDED after 2 min 19 s (18:49:29 to 18:51:48), no line, no commit; old prompt (no STARTED step yet); cause NOT KNOWN |
+| 18:59 | Worker 3 | INCOMPLETE | fired 19:00:12 on the OLD prompt (the STARTED step was added 19:03), ended SUCCEEDED after 3 min 54 s, no line, no commit; cause NOT KNOWN |
+| 19:19 | Worker 1 | (running) | first run on the new prompt: STARTED line written 19:19 (session_018Tn7unPaYqWhJToKU7qnNc), claimed the facade task 19:22 |
 
-**Totals, 32 finished slots (to 18:30):**
+**Totals, 36 finished slots (to 19:30):**
 
 | Status | Runs | Share |
 |---|---|---|
-| SUCCESS | 15 | 47 % |
-| BLOCKED | 6 | 19 % |
+| SUCCESS | 17 | 47 % |
+| BLOCKED | 6 | 17 % |
 | FAILED | 1 | 3 % |
-| INCOMPLETE | 10 | 31 % |
+| INCOMPLETE | 12 | 33 % |
 
-The verifier finished 7 runs: 4 SUCCESS, 2 BLOCKED, 1 INCOMPLETE.
+The verifier finished 9 runs: 5 SUCCESS, 2 BLOCKED, 2 INCOMPLETE.
 
 **Pattern (auditor 18:30).** Worker 1 left nothing in its last three runs (16:19, 17:19, 18:19). Each of the last three
 silent worker runs that the last-run record can still show (worker 1 17:19 and 18:19, worker 3 17:59) ended as SUCCEEDED
