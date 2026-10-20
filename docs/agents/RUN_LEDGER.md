@@ -20,7 +20,7 @@ A silent run is never counted as a success. The owner's main chat (the auditor) 
   the cause (approval card, timeout, environment, other) are **NOT KNOWN**. They are not assumed.
 - Each agent's start-of-run line (proposed below) is what will make the cause visible.
 
-## 2026-10-20, 10:00 to 17:50 UTC (code-running agents)
+## 2026-10-20, 10:00 to 18:30 UTC (code-running agents)
 
 | Slot (UTC) | Agent | Status | Evidence |
 |---|---|---|---|
@@ -50,22 +50,29 @@ A silent run is never counted as a success. The owner's main chat (the auditor) 
 | 15:59 | Worker 3 | SUCCESS | logged 16:55 |
 | 16:19 | Worker 1 | INCOMPLETE | no line, no commit |
 | 16:39 | Worker 2 | INCOMPLETE | no line, no commit |
-| 16:49 | Verifier | INCOMPLETE | no line, no commit |
+| 16:49 | Verifier | INCOMPLETE | no RUN_LOG line and no board write, but it merged T-116, T-109 and T-117 to the working branch (merge commits; Lead 18:25 marked the rows MERGED from them) |
 | 16:59 | Worker 3 | BLOCKED | logged 17:48; self-check passed, but the Drive zip decode was refused [Untrusted Code Integration]; Alsenan figure NOT run |
 | 17:19 | Worker 1 | INCOMPLETE | the scheduled run ended SUCCEEDED after 4 min 55 s (17:19:51 to 17:24:46), but left no line and no commit; cause NOT KNOWN |
-| 17:39 | Worker 2 | (running) | session status WORKING at 17:52 |
-| 17:49 | Verifier | (running) | last-run record PENDING |
+| 17:39 | Worker 2 | SUCCESS | ran 17:39:45 to 18:07:22, logged 18:08; self-check clone / venv / codemap / t061 / freeze all PASS; T-121 READY (soffits over outside air 45.632 m2 CALCULATED, finish HELD) |
+| 17:49 | Verifier | (running) | last-run record still PENDING at 18:30; it merged T-120 at 18:25 (L4 full suite, freeze 0) but has not yet written a RUN_LOG line |
+| 17:59 | Worker 3 | INCOMPLETE | the scheduled run ended SUCCEEDED after 6 min 2 s (17:59:18 to 18:05:21), no line, no commit; cause NOT KNOWN |
+| 18:19 | Worker 1 | INCOMPLETE | the scheduled run ended SUCCEEDED after 5 min 25 s (18:19:44 to 18:25:09), no line, no commit; cause NOT KNOWN |
 
-**Totals, 29 finished slots:**
+**Totals, 32 finished slots (to 18:30):**
 
 | Status | Runs | Share |
 |---|---|---|
-| SUCCESS | 14 | 48 % |
-| BLOCKED | 6 | 21 % |
+| SUCCESS | 15 | 47 % |
+| BLOCKED | 6 | 19 % |
 | FAILED | 1 | 3 % |
-| INCOMPLETE | 8 | 28 % |
+| INCOMPLETE | 10 | 31 % |
 
 The verifier finished 7 runs: 4 SUCCESS, 2 BLOCKED, 1 INCOMPLETE.
+
+**Pattern (auditor 18:30).** Worker 1 left nothing in its last three runs (16:19, 17:19, 18:19). Each of the last three
+silent worker runs that the last-run record can still show (worker 1 17:19 and 18:19, worker 3 17:59) ended as SUCCEEDED
+after 5 to 6 minutes, with no RUN_LOG line, no claim and no commit. A run that ends normally that early, without writing
+its line, stops before step 2 (claim) and step 10 (log). The cause is NOT KNOWN without the start-of-run line below.
 
 ## Refused commands (today, from RUN_LOG; exact refusal reasons)
 
