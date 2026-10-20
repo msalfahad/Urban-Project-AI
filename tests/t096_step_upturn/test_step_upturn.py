@@ -166,7 +166,7 @@ def test_count_that_depends_on_q58_is_held_bounded_never_zero():
     kit.update(system="WET_AREAS", name_en="Kitchen", name_ar=None)
     t = AV.membrane_table([kit], [{"fold": row, "code": "ROOF", "floor": "RF", "membrane_m2": 1.0}])
     roofs = t["systems"]["ROOFS"]
-    assert roofs["purchase_total"]["rolls_to_buy"] == 0 and roofs["purchase_total"]["complete"] is False
+    assert roofs["purchase_total"]["rolls_to_buy"] is None and roofs["purchase_total"]["complete"] is False
     assert (roofs["purchase_total"]["rolls_with_q58_held_low"], roofs["purchase_total"]["rolls_with_q58_held_high"]) == (5, 6)
     assert roofs["held_q58"] == [{"floor": "RF", "room_id": "R1", "name": "ROOF", "rolls_bounded": {"low": 5, "high": 6}}]
     lines = AV.rolls_lines(CTX, t)

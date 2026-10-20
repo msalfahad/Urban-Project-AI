@@ -143,7 +143,8 @@ def membrane_table(wet, roofs, held=(), top=()):
         if buy or q58:
             low = sum(r["purchase"]["rolls"] for r in buy) + sum(r["purchase"]["rolls_bounded"]["low"] for r in q58)
             high = sum(r["purchase"]["rolls"] for r in buy) + sum(r["purchase"]["rolls_bounded"]["high"] for r in q58)
-            total = {"areas": len(buy), "rolls_to_buy": sum(r["purchase"]["rolls"] for r in buy),
+            # a system whose every computed area waits on Q-58 has no released sum: None, never 0
+            total = {"areas": len(buy), "rolls_to_buy": sum(r["purchase"]["rolls"] for r in buy) if buy else None,
                      "cut_m2": round(sum(r["purchase"]["cut_m2"] for r in buy), 4),
                      "strip_length_m": round(sum(r["purchase"]["strip_length_m"] for r in buy), 4),
                      "leftover_m": round(sum(r["purchase"]["leftover_m"] for r in buy), 4),
