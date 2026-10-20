@@ -88,7 +88,7 @@ def test_hand_truth():
     assert WASH_M2 == pytest.approx(17.92, abs=1e-9)
     i = M9.ARCH_METHODS.index(M9.V210)
     assert M9.ARCH_METHODS[i - 1] == M9.V29                       # every earlier method still listed, in order
-    assert M9.ARCH_METHODS[i + 1:] == (M9.V211,)                  # T-079: the only later method is ARCH_TAKEOFF_V2.11
+    assert M9.ARCH_METHODS[i + 1:] == (M9.V211, M9.V212)          # T-079 / T-096: the only later methods, in order
 
 
 @pytest.mark.parametrize("mirror,quarter_turns,metres", [(False, 0, False), (True, 0, False), (False, 1, False),
