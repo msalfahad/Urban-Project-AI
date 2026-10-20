@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 616 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 617 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2433 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2435 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1324 | pytest suites, one folder per round. |
+| `tests/` | 1325 | pytest suites, one folder per round. |
 | `tools/` | 106 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (264 modules)
+## `engine/source/` (265 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -483,7 +483,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `footprint_authority.py` | 93 | MEDIUM | 2 | OBJECT FOOTPRINT AUTHORITY (RC1; V2 at RC1 final) - may a trade measure through the objects that stand on a site? |
 | `frame.py` | 1076 | HIGH | 15 | UNIT_CONTEXT + REGION_MEASUREMENT_TRANSFORM + MEASUREMENT_FRAME (R8.3). |
 | `freeze_schema.py` | 76 | MEDIUM | 5 | FREEZE SCHEMA (RC1 final) - every identity field of a freeze record is a real identity or says why not. |
-| `generic_route.py` | 2440 | CRITICAL | 18 | GENERIC ROUTE (M2) - a structural drawing set -> concrete and reinforcement items, with NO project register |
+| `generic_route.py` | 2440 | CRITICAL | 19 | GENERIC ROUTE (M2) - a structural drawing set -> concrete and reinforcement items, with NO project register |
 | `geometry_role.py` | 342 | HIGH | 19 | GEOMETRY ROLE ADMISSION (R8.8): what a canonical part IS, before any room topology is built. |
 | `graphic_evidence.py` | 153 | CRITICAL | 5 | GRAPHIC EVIDENCE POLICY - what a drawn detail may and may not contribute to an accurate reinforcement quantity. |
 | `ground_beam_network.py` | 497 | MEDIUM | 4 | Ground-beam physical network: paired faces -> bands -> support-to-support spans (generic, accurate-side). |
@@ -505,7 +505,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `masonry_centreline.py` | 461 | MEDIUM | 1 | MASONRY CENTRELINE RUN (T-027, MASONRY_CENTRELINE_V1) - the masonry run of one floor per wall thickness, measured |
 | `material_result.py` | 168 | MEDIUM | 7 | MATERIAL RESULT (M9 S1) - what a layout consumes, kept apart from the net BOQ quantity (generic; stdlib). |
 | `material_spec.py` | 146 | HIGH | 10 | MATERIAL SPECIFICATION (M9 S1) - what a material IS, kept apart from how much of it a room needs (generic; stdlib only). |
-| `member_detection.py` | 1143 | CRITICAL | 24 | MEMBER DETECTION (M2) - footings, columns, beams and ground beams of a NEW drawing, with no project register |
+| `member_detection.py` | 1143 | CRITICAL | 25 | MEMBER DETECTION (M2) - footings, columns, beams and ground beams of a NEW drawing, with no project register |
 | `membrane_cutting_plan.py` | 399 | MEDIUM | 1 | MEMBRANE CUTTING PLAN V1 (task T-089, opt-in; no released method or quantity changed) - per wet room and per roof, |
 | `membrane_cutting_plan_v2.py` | 179 | MEDIUM | 6 | MEMBRANE CUTTING PLAN V2 (task T-096; read by ARCH_TAKEOFF_V2.12) - the installer's cutting plan of one wet room or |
 | `membrane_fold_v2.py` | 488 | HIGH | 11 | MEMBRANE FOLD V2 (task T-076, opt-in; no released method or quantity changed) - the owner's strip method for the |
@@ -545,7 +545,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `project_claims.py` | 120 | MEDIUM | 3 | PROJECT CLAIM STORE (generic schema; the claims themselves are project data). |
 | `project_data_file.py` | 337 | MEDIUM | 2 | PROJECT DATA FILE V1 (task T-064; not wired into any released method; no quantity changed) - the controlled file |
 | `project_rules.py` | 748 | MEDIUM | 5 | PROJECT RULES (M9 Phase 2B-2, ARCH_TAKEOFF_V2.4 only) - Level A Urban master standards (the knowledge registry |
-| `provisional_estimate.py` | 359 | CRITICAL | 21 | PROVISIONAL ESTIMATE (M1) - a planning estimate beside the verified release, never mixed into it (generic). |
+| `provisional_estimate.py` | 359 | CRITICAL | 23 | PROVISIONAL ESTIMATE (M1) - a planning estimate beside the verified release, never mixed into it (generic). |
 | `qualification.py` | 467 | MEDIUM | 3 | DECODER_QUALIFICATION (R8.4 §11-§13) — a decoder build is qualified for an ENVELOPE, never globally. |
 | `quantity_release.py` | 292 | CRITICAL | 2 | QUANTITY RELEASE (M7) - one release state per quantity item, from named evidence; engineer decisions bound to the |
 | `quantity_scenarios.py` | 167 | CRITICAL | 8 | Best-available quantity without pretending it is verified (generic). |
@@ -579,6 +579,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `room_topology_v3.py` | 231 | HIGH | 1 | TS01 V3 - the frozen TS01 room topology (room_topology) with two injection points, nothing else changed: |
 | `room_vocab.py` | 121 | MEDIUM | 8 | ROOM VOCABULARY V2 (T-022) - a room label's type, compound phrases before bare words (generic, bilingual). |
 | `rough_rebar_sanity.py` | 227 | MEDIUM | 6 | ROUGH_REBAR_SUMMARY - the Urban estimating / sanity product (generic). |
+| `route_g_scope_v1.py` | 509 | MEDIUM | 1 | ROUTE G SCOPE V1 - which route-G column occurrences and blinding layers are drawn, member family by member family |
 | `rule_promotion.py` | 68 | MEDIUM | 1 | GENERIC-RULE PROMOTION (generic). |
 | `rule_store.py` | 124 | HIGH | 14 | RULE STORE (M9 S1) - one versioned place the new engines read rules from (generic; stdlib only). |
 | `run_manifest.py` | 180 | MEDIUM | 6 | QTO RUN MANIFEST (R8.11): every result names the exact inputs, claims, policies and method that produced it. |
@@ -1002,6 +1003,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t109_facade_passage/` | 1 |
 | `tests/t116_stair_floor_residue/` | 1 |
 | `tests/t120_membrane_release_v213/` | 1 |
+| `tests/t126_route_g_scope/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
 
@@ -1141,6 +1143,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t116/` | 3 |
 | `research/agents_t117/` | 7 |
 | `research/agents_t120/` | 2 |
+| `research/agents_t126/` | 2 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
 | `research/alsenan_column_rebar_s3_1/` | 15 |
