@@ -153,6 +153,9 @@ Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
 
 ## Open
 
+None open (lead 2026-10-20 12:20). Q-50 to Q-63 were answered by the owner on 2026-10-20 (OWNER_DIRECTIVE_2026-10-20.md, and the owner's 12:15 correction in OWNER_SESSION_CHANGES.md: his earlier answers are his manual BOQ method and are preserved; the engine shows the owner-method and the drawing-derived results side by side). A reconciliation proposal is with the owner in his main chat; the team does not duplicate it as a question.
+
+## Answered
 ### Q-50 Round stair in the reception: no section cuts it. May the plan step count be used? (verifier 2026-10-19 22:59; T-084, T-056; no-assumptions question: your Q-46 answer says the section counts, and this stair has no section)
 
 THE PROBLEM: the riser height is the floor height divided by the number of steps. For the round stair (ground floor +1.00 to first floor +5.50 = 4.50 m) no section is drawn, so only the plans give the count: 12 curved + 11 straight + a corner landing + 5 = 28 steps (4.50 / 28 = 16.1 cm). The freelancer prices this stair ("stair 2") at 1.2 x 16.4 x 0.28 = 5.510 m3; the engine holds all of it.
@@ -474,8 +477,6 @@ RECOMMENDATION: (C): the plan draws the band but no sheet gives its material or 
 wall with a railing instead of a full block fence (practice, not a code clause); a drawing conflict is recorded, not guessed.
 WAITS ON: fence blockwork metres and m2 on Alsenan (hand table done; engine masonry piece T-027).
 Answer: C, HOLD and request design clarification. A visible unresolved BOQ element 'Sea-side boundary element, 7.00 m overall' (6.00 solid + 1.00 gate, subject to drawing check, 0.20 m drawn) with unknowns: material, height, structure, foundation, finishes, railing / glazing, gate. Request clarification from the architect; it goes into the missing-scope register. Unknown is not zero. (owner directive in the main chat, 2026-10-20 12:02 UTC; full reasoning and required method: docs/agents/OWNER_DIRECTIVE_2026-10-20.md)
-
-## Answered
 
 ### Q-48 Wet rooms are fully tiled: up to which height do the wall tiles go, and which false-ceiling depth applies? (lead 2026-10-19 22:20; owner request for the room-by-room tiling table (Q-45), Q-40 and Q-43 answers; no-assumptions question)
 
