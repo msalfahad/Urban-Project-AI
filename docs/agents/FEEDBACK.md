@@ -3,12 +3,17 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
-## Recurring causes (lead 2026-10-20 08:20)
+## Recurring causes (lead 2026-10-20 10:20)
 
 1. **Merged pieces not wired into the released run** (still the main reason released numbers do not move): beam fix,
    typed drawing values, plot-edge members, tile count, room levels / wall heights are merged but read by no released
-   method; released concrete 92.77 vs 111.81 m3 unchanged since 2026-10-19. Decision: wiring chain T-097 (READY) ->
-   T-101 (typed values, queued); plaster / paint T-095 after T-096 and the owner's height answers.
+   method; released concrete 92.77 vs 111.81 m3 unchanged since 2026-10-19. Decision: wiring chain T-105 (carries the
+   rejected T-097 ledger V3 and T-056 stairs) -> T-101 (typed values, queued); plaster / paint T-095 after the owner's
+   height answers (T-096 now merged).
+7. **New modules trip whole-repo guard tests that the task's own tests do not run** (new 10:20): T-097 and T-056 both
+   passed their own and L2 / L3 tests but each failed the rebar-firewall declaration test in the L4 suite (any engine
+   module mentioning rebar / reinforcement must be declared). Decision: T-105 fixes both; every new-module task row from
+   now on adds "run tests/structural_comparison_engine/test_rebar_product_firewall.py" to its acceptance check.
 2. **A new ledger version inherits the holds of the one under it**: T-097 V3 carries the V2 holds (footing band Q-28 A
    provisional, pool), so its compared concrete shrinks to stairs + domes (12.01 vs 21.83 m3) and its released total over
    all keys drops 236.27 -> 229.57 m3 while beams rise +4.02 m3. Decision: every ledger handoff states released and held
@@ -23,6 +28,38 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    task. Decision: T-027 + T-103 (blockwork, heights Q-60), T-100 (blinding by hand).
 6. **Offcut reuse and heights still need rules**: Q-52 to Q-59 open (membrane 1 roll, tiles 15 - 20 %, plaster 1151.14 /
    paint 1191.13 m2 held).
+
+## 2026-10-20 10:20 (lead run)
+
+- **T-096 membrane step-upturn fix (ARCH_TAKEOFF_V2.12): WORKED, MERGED 54bd6a4.** Verifier re-ran V2.11 vs V2.12 on the
+  Drive DXF: 1 of 578 lines changed, 2F roof rolls 17 released -> HELD 17 / 18 (Q-58), wet 19 and 1F roofs 8 + 6
+  unchanged. No-assumption check: passes. Decision: T-104 (wall frames) promoted to TODO on top of it.
+- **T-098 wet-room cutting plans by hand: WORKED, MERGED 42123d8.** 19 rolls = engine; strip 122.50 vs 122.99 m (-0.4 %).
+  Decision: none beyond T-104 (already tasked).
+- **T-097 concrete ledger V3: FAILED the L4 gate (REJECTED).** Content as handed off (beams 68.84 vs freelancer 65.97 m3
+  on the released part, 18 pieces held) but the new module trips the rebar-firewall declaration test. Cause: whole-repo
+  guard not in the task's test set. Decision: rework T-105 (with T-056, same registry file); T-101 now after T-105.
+- **T-056 stair concrete V1: FAILED the L4 gate (REJECTED), quantities confirmed.** Verifier's own hand calculation =
+  main stair 5.011 m3 (freelancer 8.131, -38.4 %, RULE_DIFFERENCE). Same firewall cause. Decision: T-105, with a depth
+  re-check of 3 acceptance cases (the original run took 11 minutes).
+- **T-099 rooms that vanish (ROOM_CENSUS_GUARD_V1): WORKED on the worker's evidence (READY b631855, not verified).** 741
+  faces each reported once; 0 Alsenan labelled faces under 1 m2 (freelancer's smallest rows 1.70 wet / 7.70 dry m2, so
+  none lost there either); 3 unlabelled rooms 8.13 m2 HELD; hand-wash spaces 9.348 m2 typed wet vs freelancer 9.58 m2
+  (-2.4 %). Learned: any face under about 0.81 m2 is typed WALL before the SLIVER test, so a labelled 0.80 m2 W.C. was
+  invisible; now held. No-assumption check: passes. Decision: verifier first.
+- **T-016a 10 old changes V2.6 -> V2.7.1: WORKED (READY 5ccb73b).** All 10 are one door record (1F OP-010, jamb span
+  0.800 m), all VERIFIED by hand, ENGINE_RIGHT. New defect found: 20 of 28 V2.11 skirting lines list deductions that do
+  not add back (17.035 m unexplained). Decision: T-106 (skirting deduction audit); T-016b (the 14 V2.8 -> V2.9 changes)
+  with the worker's head start; T-014 promoted for the 1F facade +0.160 m and the GF 0.10 m pocket.
+- **T-091 printed finishing-notes census: WORKED (READY b1dbb49).** Every sheet read (Pages_03-04 refused by the Drive
+  connector as too large; the single sheets used): 0 printed tile sizes, finishes, skirting, ceilings, joints or door
+  schedules; 1 door height. Findings: roof falls printed 1 % (owner said 0.5 %: told the owner, drawing precedence
+  applies, no number moves); the freelancer's stair marble 295.44 m2 contains the 151.80 m2 court twice (his own
+  formulas: stairs and landings alone 143.64 m2, and his step rows are metres added to m2); the freelancer's 1F living
+  38.96 m2 = living 22.20 + corridor 7.04 + landing 4.88 + connector 4.80 (38.92). Decision: Q-56 rewritten with the
+  printed pieces; Q-55 given the "not to scale" fact; the engine's extra 5.95 m2 on 1F to be traced in the T-086 wiring.
+- **Runs with no RUN_LOG line**: worker 3 08:59 and worker 2 09:39 (2 min). Same pattern as the overnight silent runs
+  (a run that stops on a permission card and times out). Decision: reported under NEEDS FIXING (owner setting), not new.
 
 ## 2026-10-20 08:20 (lead run)
 

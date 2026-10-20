@@ -253,25 +253,35 @@ and give us your standard height under (A) or (B) so the next villa does not wai
 freelancer without your word (practice, not a code clause).
 WAITS ON: door m2 on Alsenan (all doors except the main entrance) and on every villa without a door schedule (T-091, the
 door / window area method).
+NEW FACT (lead 2026-10-20 10:20, from worker 1's census of every printed note): the census is done: the whole Alsenan set
+prints one door height (main entrance 2.00 x 2.50) and no door schedule, and the sanitary sheets print "THE BUILDER TO
+WORK WITH STATED DIMENSIONS NOT TO SCALE DRAWING", so the doors drawn on the sections cannot be scaled either. This
+supports option C (hold, and ask the architect); the freelancer's 2.40 m is printed nowhere.
 
 ### Q-56 First-floor living room: does the corridor / stair landing in front of it get floor tiles, and in which line? (lead 2026-10-20 02:10, from the verifier's UNRESOLVED verdict on the room-by-room tiling table; T-086, T-091; no-assumptions question)
 
-THE PROBLEM: on the first floor the drawing has no wall between the living room and the corridor / stair landing (level
-+5.50), so the engine measures them as one floor: 44.87 m2 of porcelain. The freelancer has 38.96 m2 for the living room
-and no row at all for the corridor / landing, so about 5.91 m2 of finished floor is in nobody's line. No Urban rule says
-whether a landing in front of a stair is porcelain like the room or marble like the stair.
-WHERE TO LOOK: Drive "Alsenan chalet project", p7757_arch_sheet04.pdf (first floor plan): the living room, the open void
-and the main stair; the corridor / landing is the floor between the top step and the living room. Measure the living room
-by its printed dimensions and what is left up to the top step is the landing.
+REWRITTEN by the lead 2026-10-20 10:20 from worker 1's reading of the printed sizes (the earlier text assumed the
+freelancer's 38.96 m2 was the living room alone; it is not).
+THE PROBLEM: on the first floor no wall separates the living room from the corridor along the void and the main-stair
+landing (+5.50), so the engine measures one open floor of 44.87 m2 porcelain. The freelancer has one "living" row of
+38.96 m2. By the printed sizes that row already holds the corridor and the landing: living room 4.80 x 5.20 = 24.96 m2
+less the arriving round-stair flight 1.15 x 2.40 = 2.76 m2 -> 22.20 m2; corridor strip along the void 5.87 x 1.20 =
+7.04 m2; main-stair arrival landing 2.50 x 1.95 = 4.88 m2; a connector beside the lift about 4.80 m2 (read from the CAD
+only, not printed); together 38.92 m2, 0.04 m2 from his 38.96. No sheet prints a finish for any of these pieces (the
+census of every printed note found none). The engine's extra 5.95 m2 (44.87 - 38.92) is not traced yet (probably the
+1.47 x 3.05 = 4.48 m2 passage to the middle bedroom), so it stays UNRESOLVED until traced.
+WHERE TO LOOK: Drive "Alsenan chalet project", p7757_arch_sheet04.pdf (first floor plan): the living room (480 x 520),
+the void, the corridor strip (587 x 120) and the main stair's top landing ((120 + 10 + 120) x 195); the piece beside the
+lift has its depths printed (125 and 240) but not its length.
 THE OPTIONS:
-(A) Porcelain for the whole area, as two rows: living room by its printed size and corridor / landing as its own row
-    (total 44.87 m2 porcelain, nothing left out).
-(B) Living room porcelain by its printed size; the corridor / landing in marble with the stair (porcelain about 38.96 m2,
-    about 5.91 m2 added to the stair marble, now 39.49 m2).
-(C) As the freelancer: living room only (38.96 m2); the corridor / landing not in the BOQ.
-RECOMMENDATION: (A), unless the finishing notes on the sheets (being listed now) print marble at the landing, in which
-case (B): a floor between rooms takes the finish of the room it opens into, and leaving it out (C) means 5.91 m2 of tiles
-and their mortar are never bought (practice, not a code clause).
+(A) All porcelain, each piece as its own row: living 22.20 + corridor 7.04 + landing 4.88 + connector 4.80 (held as
+    provisional until its length is printed or you confirm it) = 38.92 m2, the same total as the freelancer.
+(B) Living, corridor and connector porcelain (34.04 m2); the landing 4.88 m2 in marble with the stair (stair marble
+    39.49 -> 44.37 m2).
+(C) One porcelain row for the whole open area, as the freelancer (38.92 m2 by the printed pieces), no split.
+RECOMMENDATION: (A): the same finish and total as the freelancer, but each piece in its own row, so a later change of
+finish (marble at the landing) moves one row only; (B) only if the architect specifies marble at the landing (practice,
+not a code clause).
 WAITS ON: first-floor floor tiles, mortar, cement and sand on the room-by-room tiling table, and the same corridor / landing
 case on every villa with an open stair hall (T-086 wiring, T-091).
 
@@ -738,6 +748,7 @@ WAITS ON: the cement and sand table (new task, after the room areas from the flo
 
 Answer: B with the owner's own thicknesses (owner, main chat 2026-10-19 21:40, with two photos: the BSCO Nite multi-purpose adhesive bag, 20 kg +-5 %, and its web description). His words: "B. but regular floor finishing needs 3-4 cm of cement mix and then tiles above. Bathrooms maybe 4-6 cm; roof depending on slope and manhole each 1 m 0.5% (check slope if correct); bathrooms 1% each meter. Between tiles and cement mix there is an adhesive, 20 kg, and see how many meters it covers: 5 m2."
 Claude's reading, recorded as owner values (all cement / sand figures stay PROVISIONAL until the owner confirms the rest): (1) cement-sand bed under the tiles: regular floors 3 to 4 cm; wet-area floors (bartash) 4 to 6 cm; roofs: thickness from the falls, 0.5 % per metre toward each drain (Claude: check on the roof plan that the drawn slope is 0.5 %); bathrooms fall 1 % per metre. Report every bed as a range (low = thin value, high = thick value), never one invented number. (2) The remaining practice values of Q-45 option B are accepted for now and marked PROVISIONAL: mix 1:4 for floors and bartash, 1:3 for stairs, 1:4 for walls; stairs 3 cm, wall mortar 2 cm; bag 50 kg; about 8 bags and 1.1 m3 loose sand per m3 of 1:4 mortar; waste 5 %. (3) Adhesive between the tile and the bed is its own line: the BSCO Nite multi-purpose adhesive bag is 20 kg (+-5 %) and covers about 5 m2 per bag (the product text: direct ceramic on walls and level floors, layer up to 3 mm, about 5 m2 per 20 kg bag); marble and natural stone use a thicker layer on the same product (text cut off in the photo, 6 mm to 3 cm): coverage per bag HELD until the owner gives it. Brand named only as the owner's example; the rule is 20 kg and 5 m2 per bag for ceramic and porcelain.
+Slope check done (lead 2026-10-20 10:20, from worker 1's census of every printed note): the Alsenan sanitary drainage sheets print "SLOPE 1%" on the first-floor roof (+9.70, four arrows, one to each rain-water pipe), on the annex roof (+4.30) and on the sea-side terrace strips (+5.50); no sheet prints 0.5 %. Under the MISSION.md precedence (confirmed project drawings first), the Alsenan roof falls are taken as 1 % and the owner's 0.5 % applies where a drawing prints no slope; the owner is told in the Lead report and may overrule. No number moves today: the roof bed thickness is still HELD (Q-41 / Q-45, falls not built yet).
 Example for the owner (Alsenan wet floors 72.12 m2, provisional): bed 4 to 6 cm = 2.88 to 4.33 m3 of mortar = about 23 to 35 bags of cement and 3.2 to 4.8 m3 of sand before 5 % waste; adhesive 72.12 / 5 = 14.4, so 15 bags of 20 kg before waste.
 
 (Lead 2026-10-19 18:15: Q-31 .. Q-37 moved here from Open; owner answers of 16:40 in the main chat. Q-34 is PARKED by the owner: the top roof stays HELD and is raised again only at a milestone.)

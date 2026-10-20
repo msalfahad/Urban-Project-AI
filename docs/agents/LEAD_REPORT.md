@@ -1,5 +1,59 @@
 # Lead reports to the owner's main chat (newest first, last 10 entries)
 
+## LEAD REPORT 2026-10-20 10:20 UTC
+
+Repositories: Urban-Project-AI cloned (control; working branch head 42123d8, only checker merges since 08:20, no
+owner-session commits); Drive readable (nothing new since 06:00). UrbanProjectsManager not needed this run.
+
+PROGRESS (Alsenan; released concrete still 92.77 vs freelancer 111.81 m3, -17.0 %, unchanged)
+- Waterproofing: the parapet-step fix is merged. The second-floor roof (0.84 m2 of upturn that had no strip) is now fully
+  covered by a 4.60 m strip; its roll count changes from 17 released to HELD "17 or 18" until you answer the offcut
+  question; 1F roofs 8 + 6 and the 17 wet areas 19 rolls unchanged (19 rolls confirmed by a hand plan of every wet room,
+  strips 122.50 vs engine 122.99 m, -0.4 %). Roof membrane 204.11 vs 285.00 m2 (-28.4 %) unchanged (top roof held).
+- Concrete: the checker sent back two pieces for the same small fault (each new module mentions reinforcement and is not
+  declared in a repository-wide guard test): the beam ledger (beams 68.84 vs 65.97 m3, +4.4 %, on the released part; 18
+  pieces held, so not compared) and stair concrete (main stair 5.011 vs 8.131 m3, -38.4 %; the checker's own hand
+  calculation gives 5.011, so the difference is his longer flights). Both are reworked together as one package; numbers
+  do not change.
+- Rooms: the guard for rooms that vanish is built (waits for the checker): 0 Alsenan rooms lost (no labelled room under
+  1 m2 here or in his BOQ), 3 unlabelled rooms 8.13 m2 HELD; hand-wash spaces 9.35 vs his 9.58 m2 (-2.4 %).
+- Finishes: every Alsenan sheet was read for printed notes: no tile size, floor finish, skirting, ceiling or door schedule
+  anywhere; one door height (main entrance 2.50 m); the sanitary sheets say "not to scale". The freelancer's stair marble
+  295.44 m2 counts the 151.80 m2 court a second time (his own formulas; stairs and landings alone 143.64 m2).
+- Checks: ten older engine changes re-measured by hand from the drawing: all ten right. That check found 17.04 m of
+  skirting deductions in 20 of 28 lines that are not listed, now a task.
+- Learned: a new piece can pass all its own tests and still fail a repository-wide guard; every new piece now runs it.
+- Gates: gate 1 on track (two merges, two READY); gate 2 started (blockwork metres by hand running now); gate 3 started
+  (rework package on the board); gate 4 one task.
+
+TEAM HEALTH: every logged run since 08:20 passed its self-check (clone, venv, codemap, t061 test, freeze), so workers 1,
+2, 3 and the checker could run code; single chained commands were refused a few times and redone as separate steps. Two
+worker runs left no log line (worker 3 at 08:59, worker 2 at 09:39, 2 minutes): the same pattern as the overnight silent
+runs (a run stopped on a permission card). Nothing for you beyond the setting already listed. Research scout ran 23:51,
+next 23:50.
+
+QUESTIONS FOR OWNER
+No new question this run (13 open, Q-50 .. Q-62, all no-assumption questions; the list is long).
+- CHANGED, please re-read Q-56 (first-floor living room): the earlier text was wrong. By the printed sizes on
+  p7757_arch_sheet04.pdf the freelancer's 38.96 m2 is not the living room alone: living 4.80 x 5.20 = 24.96 less the round
+  stair's arriving flight 2.76 = 22.20, corridor along the void 5.87 x 1.20 = 7.04, main-stair landing 2.50 x 1.95 = 4.88,
+  connector by the lift about 4.80 (CAD only) = 38.92 m2. Options: (A) all porcelain, each piece its own row, 38.92 m2
+  (recommended: same as him, but a later finish change moves one row); (B) landing 4.88 m2 in marble with the stair,
+  porcelain 34.04 m2; (C) one porcelain row as he has.
+- FOR YOUR INFORMATION (Q-45 slope check you asked for): the drainage sheets print "SLOPE 1%" on the first-floor roof, the
+  annex roof and the terrace strips, not 0.5 %. For Alsenan the drawing is followed (1 %), your 0.5 % where no slope is
+  printed. Tell us only if you meant 0.5 % for every roof.
+
+NEEDS FIXING
+- Unchanged: run the coding agents as Claude Code scheduled tasks with the repository attached, and check each task for
+  automatic approval; a run that stops on a permission card times out with no log line (two runs this morning). Tried:
+  the claim method is three separate commands, the board is 80 KB so a connector run can still log.
+- Unchanged: upload the Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as separate PDFs under 6 MB.
+
+For the team: MERGED T-096, T-098; REJECTED T-097, T-056 -> rework T-105; READY T-099, T-016a, T-091 (verifier order);
+CLAIMED T-103 (worker 3); new TODO T-105, T-016b, T-106, T-014 (T-015 folded in), T-104 promoted; T-101 after T-105;
+11 TODO (1 Track B).
+
 ## LEAD REPORT 2026-10-20 08:20 UTC
 
 Repositories: Urban-Project-AI cloned (control; working branch head c874c7b, only checker merges since 06:20, no
@@ -581,79 +635,3 @@ NEEDS FIXING (only you can do it)
   download limit.
 
 Team line: merged T-072, T-074, T-077, T-078; READY T-013, T-080; new T-081, T-082; owner answers Q-31..Q-37 recorded; Q-42 new.
-## LEAD REPORT 2026-10-19 16:20 UTC
-
-Repositories: Urban-Project-AI cloned (control and working branch); Drive readable. UrbanProjectsManager not needed this run.
-
-PROGRESS (Alsenan; the released BOQ did not change: six checked pieces were merged since 14:30 but none is wired yet)
-- Concrete: released 92.77 vs freelancer 111.81 m3 (-17.0 %), unchanged. Isolated footings by hand 64.35 vs 65.63 m3
-  (-2.0 %, engine right: the freelancer counts one footing twice). Footing F10 drawn 3.25 m vs scheduled 2.80 m is held
-  on your answer. Neck-only columns found in the schedule as plain text (5 columns the engine wrongly holds).
-- Wet-area waterproofing floor (checked piece): 72.12 vs 72.01 m2 (+0.2 %; was -12.8 %). The membrane purchase table
-  (waits for the checker): 14 wet areas 62.77 vs 62.43 m2 (+0.5 %), 13 rolls to buy, provisional; 9 rows held, never 0.
-  Your 3 x 4 m kitchen is reproduced exactly (16.28 m2 cut, 2 rolls), but on the real Alsenan rooms the strip method ran
-  on none of 14 (extra points on straight walls, two rooms at 45 degrees): a fix is on the board.
-- Upturn: 123.13 lm on the full boundary (+0.4 % vs 122.61) or 110.33 lm on walls only (-10.0 %): your kitchen example and
-  the registry doorway rule disagree: question Q-35 below.
-- Roofs (checked piece): 204.11 vs 285.00 m2 (-28.4 %), upturn 181.59 vs 194.00 lm (-6.4 %); the three plan roofs equal
-  the hand figure; the second-floor top roof is drawn on no plan (Q-34).
-- Windows: only 3 of 29 have a printed height: 9.08 vs 9.70 m2 (-6.4 %, the drawing prints 1.60 / 2.30 where the
-  freelancer used 2.00). The engine gives windows and doors as pieces only, so aluminium (12.0 + 116.9 m2) is not yet
-  comparable; 2 windows are lost (curved pool glazing 6.57 m, a 0.50 m bath window): fix task on the board (gate 1).
-- Gates: 0 done; 1 at risk (2 lost windows, pieces not wired); 2 and 3 started; 4 waiting.
-- Next on the board (12 open tasks): lost windows; window and door areas from printed dimensions; membrane strips on real
-  rooms; plot-edge foundation members; stairs from section A-A; pool from printed sizes; column schedule text rows;
-  reading the supervisor's-eye book and the Kuwait specification chapters (waterproofing, floors, wall tiles, paint) as
-  you asked; then wiring the wet-area, roof and membrane pieces into the released BOQ and re-measuring.
-
-TEAM HEALTH
-- All agents that ran since your 15:24 execution authorization could run code: verifier (16:10) PASS on clone, venv,
-  codemap check, t061 test, freeze check; worker 2 (16:10) PASS on all five; worker 3 (16:03 claim) PASS on all five.
-  Worker 1's last run (15:20) started before the change; its self-check shows from its 16:19 run.
-- Verifier merged six tasks and pushed them itself (no more "[Merge Without Review]").
-- Worker 2 had one command refused ("[Code from External]", a chained command); it did not retry and worked on.
-- Every scheduled run since 13:30 left a RUN_LOG line. Research scout runs tonight.
-- Fixed by me: Q-31 (footing F10) had been filed under "Answered" with no answer; moved back to Open.
-
-QUESTIONS FOR OWNER (6 open, all no-assumptions questions; the list is long, the two new ones first)
-
-Q-35 (NEW) Wet-room upturn at the door: does the 0.20 m upturn run across the door opening?
-- Problem: your kitchen example counts the upturn on the whole boundary, door included (14.00 lm, 14.80 m2). The registry
-  doorway rule UP-WP-DOOR-001 (your 2026-10-16 programme) says a doorway is never billed as width x 0.20 m but is a
-  transition built by detail. On Alsenan's 14 wet areas: full boundary 123.13 lm (+0.4 % vs freelancer 122.61), walls only
-  110.33 lm (-10.0 %); 12.80 lm of doorways.
-- Where: your Q-30 kitchen answer; any Alsenan bathroom door (P7757 DXF / PDF part 01-02); the freelancer's
-  waterproofing rows in his floors / waterproofing workbook.
-- (A) Full boundary, doorway included: 123.13 lm, no separate doorway line.
-- (B) Walls only 110.33 lm, plus a doorway transition line per door (pcs, with width), built to the detail.
-- (C) Both: membrane to BUY follows your strip method (strips 0.20 m longer at both ends whatever is in the wall); the BOQ
-  upturn line is walls only plus a doorway transition line per door.
-- Recommendation: (C): your strip method already fixes the purchase, and a doorway needs a threshold detail that a
-  length x 0.20 line hides (practice, not a code clause). For a single figure, (A) follows your newest words.
-
-Q-36 (NEW) A new project folder appeared on Drive: may the team open it, and for what?
-- Problem: at 15:27 UTC a third project folder was created under "Urban BOQ private data": an earlier-approved
-  architectural plan, an architectural + structural plan "2" (uploaded twice), an all-floor-plans PDF and a photo; it
-  looks like an old building and its new design. At 14:17 you cancelled the renovation test and said no new villa will
-  come. No task names this folder (Drive shows its files were opened 16:03 - 16:06, by you or by a session). I will not
-  decide whether it is a sample, a sealed blind test or not for the team.
-- (A) Not for the team now; nobody opens it until you say. (B) Development sample for the PDF plan reader (say which files
-  are old and new); no accuracy counted. (C) Sealed blind test: nobody opens it; you run it later.
-- Recommendation: (A) until you say: opening a possible blind test cannot be undone and your direction is Alsenan only.
-
-Still open (asked earlier today, full text in OWNER_QUESTIONS.md):
-- Q-31 Footing F10 drawn 3.25 x 1.40 vs scheduled 2.80 x 1.40: (A) schedule 2.176 m3 with the F pad, (B) drawn 2.275 m3,
-  (C) hold + RFI (recommended).
-- Q-32 Arched windows: (A) to the arch top 9.42 m2 on the big window (recommended for aluminium supply), (B) true shape
-  9.03, (C) to where the arch starts 8.20 + fan light apart.
-- Q-33 Windows aluminium by default: (A) yes unless the drawing says otherwise (recommended), (B) only when drawn, (C) per
-  project file.
-- Q-34 Second-floor top roof on no plan: (A) from the 2F outer walls (at most 55.08 m2), (B) hold for the designer,
-  (C) A as a provisional figure until confirmed (recommended).
-
-NEEDS FIXING
-- Nothing only you can do this run. (The execution settings now work for every agent that ran; the single-page sheets
-  are being used.)
-
-Team ids: merged T-060, T-065, T-042, T-010, T-071, T-040; READY T-072; CLAIMED T-074; new T-076, T-077, T-078, T-080
-(TODO), T-079 (queued); T-073 released; Q-31 reopened; Q-35, Q-36 new.

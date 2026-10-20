@@ -3,46 +3,46 @@
   "agent": "Lead planner",
   "role": "Plans the work, keeps the board and milestones, asks you questions",
   "cadence": "every 2 h (:09)",
-  "last_run": "2026-10-20T08:10:34Z",
+  "last_run": "2026-10-20T10:10:21Z",
   "result": "running",
-  "working_on": "Board cut to 80 KB for refused runs; blockwork and blinding started; asked you about block wall height and 16 held beam pieces",
-  "as_of": "2026-10-20T08:22:00Z"
+  "working_on": "Beam ledger and stair concrete sent back for one guard-test declaration each: one rework package; skirting, facade-gap and old-change checks added; living-room question rewritten from the printed sizes",
+  "as_of": "2026-10-20T10:25:00Z"
  },
  {
   "agent": "Worker 1",
   "role": "Builds one board task per run on its own branch",
   "cadence": "hourly :19",
-  "last_run": "2026-10-20T07:20:24Z",
+  "last_run": "2026-10-20T09:20:02Z",
   "result": "ok",
-  "working_on": "Delivered the beam fix in a new concrete ledger: beams 68.84 vs freelancer 65.97 m3 (released part), 18 pieces still held; waits for the checker (T-097)",
-  "as_of": "2026-10-20T08:22:00Z"
+  "working_on": "Delivered: ten older engine changes all right by hand (one door record); found 17.04 m of skirting deductions that do not add back (T-016a); before that the census of printed finishing notes (T-091)",
+  "as_of": "2026-10-20T10:25:00Z"
  },
  {
   "agent": "Worker 2",
   "role": "Builds one board task per run on its own branch",
   "cadence": "hourly :39",
-  "last_run": "2026-10-20T07:39:53Z",
+  "last_run": "2026-10-20T09:39:50Z",
   "result": "failed",
-  "working_on": "07:43 run refused cloning the repository, nothing claimed; 07:06 delivered the wet-room cutting plans by hand (19 rolls confirmed, T-098)",
-  "as_of": "2026-10-20T08:22:00Z"
+  "working_on": "Last delivered: guard for rooms that vanish, 0 Alsenan rooms lost, 3 unlabelled rooms 8.13 m2 held (T-099); the 09:39 run left no log line",
+  "as_of": "2026-10-20T10:25:00Z"
  },
  {
   "agent": "Worker 3",
   "role": "Builds one board task per run on its own branch",
   "cadence": "hourly :59",
-  "last_run": "2026-10-20T07:59:36Z",
-  "result": "ok",
-  "working_on": "Delivered stair concrete in code: main stair 5.011 m3 = hand figure vs freelancer 8.131 m3; waits for the checker (T-056)",
-  "as_of": "2026-10-20T08:22:00Z"
+  "last_run": "2026-10-20T10:00:03Z",
+  "result": "running",
+  "working_on": "Blockwork wall metres by hand per floor and thickness on Alsenan (T-103)",
+  "as_of": "2026-10-20T10:25:00Z"
  },
  {
   "agent": "Verifier",
   "role": "Checks finished tasks, merges or rejects, keeps the scoreboard",
   "cadence": "hourly :49",
-  "last_run": "2026-10-20T07:50:10Z",
-  "result": "failed",
-  "working_on": "07:58 code run refused: membrane fix, wet-room hand plans and beam ledger wait for it; merged roof hand plans, typed values and plot-edge members at 06:55",
-  "as_of": "2026-10-20T08:22:00Z"
+  "last_run": "2026-10-20T09:49:52Z",
+  "result": "running",
+  "working_on": "Merged the parapet-step membrane fix and wet-room hand plans; sent back beam ledger and stair concrete; next: rooms that vanish, old changes, printed notes census",
+  "as_of": "2026-10-20T10:25:00Z"
  },
  {
   "agent": "Research scout",
@@ -50,7 +50,7 @@
   "cadence": "daily 23:50 UTC",
   "last_run": "2026-10-19T23:51:17Z",
   "result": "ok",
-  "working_on": "Answered scan dimension reading, schedules and membrane rolls; open: Arabic notes on scans, strip coverage proof, wall centrelines",
-  "as_of": "2026-10-20T08:22:00Z"
+  "working_on": "Open requests: Arabic / English notes on scans, proving strip coverage, wall centrelines from double-line walls",
+  "as_of": "2026-10-20T10:25:00Z"
  }
 ]
