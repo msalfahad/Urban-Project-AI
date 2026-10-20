@@ -1,0 +1,15 @@
+floor,flight,kind,treads,tread_m2,step_lm,released_reading,over,over_treads,outline_shift_m,state,storey,counted_tread_m2,counted_step_lm,held_high_m2,held_high_lm,evidence,reasons
+GF,SITE-735e111dcf9b22c8:F1,RADIAL,12,4.094413,13.7964,SINGLE,,,,COUNTED,GF,4.094413,13.7964,,,lies over no flight of the plan below: released reading kept,
+GF,SITE-735e111dcf9b22c8:F2,STRAIGHT,6,2.07,6.9,SINGLE,,,,COUNTED,GF,2.07,6.9,,,lies over no flight of the plan below: released reading kept,
+GF,SITE-735e111dcf9b22c8:F3,STRAIGHT,3,1.035,3.45,SINGLE,,,,COUNTED,GF,1.035,3.45,,,lies over no flight of the plan below: released reading kept,
+GF,SITE-735e111dcf9b22c8:F4,STRAIGHT,3,1.035,3.45,SINGLE,,,,COUNTED,GF,1.035,3.45,,,lies over no flight of the plan below: released reading kept,
+GF,SITE-3759f2457b22cb4a:F1,STRAIGHT,7,2.415,8.05,SINGLE,,,,COUNTED,GF,2.415,8.05,,,"PRINTED_END_LEVEL +1.00, +0.30 above this floor +0.00",
+GF,SITE-3759f2457b22cb4a:F2,STRAIGHT,3,1.035,3.45,SINGLE,,,,COUNTED,GF,1.035,3.45,,,PRINTED_END_LEVEL +0.30 above this floor +0.00,
+1F,SITE-a95bf979baf4cfae:F1,RADIAL,12,4.094413,13.7964,SEEN_THROUGH_VOID,,,,SEEN_THROUGH_VOID,GF,,,,,"released SEEN_THROUGH_VOID: exposure, measured on the plan below (unchanged)",
+1F,SITE-a95bf979baf4cfae:F2,STRAIGHT,11,3.795,12.65,STACKED,SITE-3759f2457b22cb4a:F1,7,0.65,COUNTED,1F,3.795,12.65,,,"STAIR_DRAWN_IN_SLAB_ABOVE (not located) and the flight differs from the one below: another flight in the same place, rising from this floor: structural 'FIRST FLOOR ROOF SLAB' plan: 6 stair-panel lines, 1 '(With Stair)' tags, 48 slab-opening lines",
+1F,SITE-a95bf979baf4cfae:F3,STRAIGHT,10,3.45,11.5,STACKED,SITE-3759f2457b22cb4a:F2,3,2.1,COUNTED,1F,3.45,11.5,,,"STAIR_DRAWN_IN_SLAB_ABOVE (not located) and the flight differs from the one below: another flight in the same place, rising from this floor: structural 'FIRST FLOOR ROOF SLAB' plan: 6 stair-panel lines, 1 '(With Stair)' tags, 48 slab-opening lines",
+1F,SITE-a95bf979baf4cfae:F4,STRAIGHT,10,3.45,11.5,SEEN_THROUGH_VOID,,,,SEEN_THROUGH_VOID,GF,,,,,"released SEEN_THROUGH_VOID: exposure, measured on the plan below (unchanged)",
+1F,SITE-a95bf979baf4cfae:F5,RADIAL,4,1.495,4.7815,SINGLE,,,,COUNTED,1F,1.495,4.7815,,,lies over no flight of the plan below: released reading kept,
+1F,SITE-a95bf979baf4cfae:F6,STRAIGHT,4,1.38,4.6,SEEN_THROUGH_VOID,,,,SEEN_THROUGH_VOID,GF,,,,,"released SEEN_THROUGH_VOID: exposure, measured on the plan below (unchanged)",
+2F,SITE-d7254c68fd33723d:F1,STRAIGHT,10,3.45,11.5,STACKED,SITE-a95bf979baf4cfae:F2,11,0.3,HELD,1F,,,3.45,11.5,"SLAB_ABOVE_DRAWS_NO_STAIR: structural 'SECOND FLOOR ROOF SLAB' plan: 0 stair-panel lines, 0 '(With Stair)' tags, 0 slab-opening lines","STEP_COUNT_DIFFERS: 10 treads here, 11 on 1F | OUTLINE_SHIFT 0.300 m > 0.01 m"
+2F,SITE-d7254c68fd33723d:F2,STRAIGHT,10,3.45,11.5,STACKED,SITE-a95bf979baf4cfae:F3,10,0.0,SEEN_ABOVE,1F,0.0,0.0,,,"SLAB_ABOVE_DRAWS_NO_STAIR: structural 'SECOND FLOOR ROOF SLAB' plan: 0 stair-panel lines, 0 '(With Stair)' tags, 0 slab-opening lines | same flight as SITE-a95bf979baf4cfae:F3 of 1F: 10 treads, outline within 0.0000 m",
