@@ -1,5 +1,6 @@
 # Questions for the owner (at most 5 open; answer under "Answer:")
 
+Worker 2 2026-10-20 14:45: one new no-assumptions question from the block-type reading (T-107): Q-65 (roof parapets and the street-side fence: white or black block). Open now: 2 (Q-64, Q-65).
 Verifier 2026-10-20 13:25: one new no-assumptions question from the facade verdicts (T-016b / T-014): Q-64 (a 0.08 x 0.05 m notch where the pool glazing frame meets a column: facade run round it or straight across; 0.10 m). Open now: 1.
 Verifier 2026-10-20 11:35: one new no-assumptions question from the blockwork hand table (T-103): Q-63 (a 7.00 m sea-side wall band on the ground-floor plan that the fence drawing does not show: block fence or not). Open now: 13 (Q-50 to Q-63 without Q-60, which the owner answered at 10:45 and the Lead still has to move to Answered).
 
@@ -172,6 +173,26 @@ window reveal, the same way the first-floor recess was closed at the face line; 
 would count them twice.
 Waits on: the ground-floor facade run (exterior plaster and paint length) on every villa with a frame set back beside a
 column (T-109, T-014).
+
+### Q-65 Roof parapets and the street-side fence: white or black block? (worker 2 2026-10-20 14:45; T-107, T-108; no-assumptions question: your 10:45 fallback names outer and inner walls, not parapets or fences)
+
+THE PROBLEM: no architectural sheet says white or black block anywhere, so the building walls follow your fallback (outer
+white, inner black; marked ASSUMED). The structural notes make the neighbour-side ground-beam walls black, which covers the
+north (neighbour) fence. That leaves 104.25 m of roof parapet (ground roof 59.31 m, first roof 44.94 m, plus 4.30 m whose
+thickness is still held) and 8.20 m of street-side fence (5.70 m solid + 2.50 m gate) with no rule for the material.
+WHERE TO LOOK: Drive "Alsenan chalet project", ST7757.pdf page 14: TYPICAL DETAIL OF PARAPET SECTION ("Brick Wall" on a
+0.30 m concrete upstand with a concrete coping) and TYPICAL BOUNDARY WALL ("Brick Wall" between two 20 x 40 ground beams,
+20 x 30 columns above): neither names the colour. The 1F plan (p7757_arch_sheet04.pdf) shows the ground-roof parapets, the
+2F plan (Pages_05-06, page 5) the first-roof parapets, page 12 the street fence (580 + 250 gate).
+THE OPTIONS:
+(A) Both are "outer walls": parapets white, street fence white (104.25 m + 8.20 m white).
+(B) Parapets white, street fence black like the neighbour fence (104.25 m white, 8.20 m black).
+(C) Hold both materials until the designer says (lengths shown, block counts HELD).
+RECOMMENDATION: B. Practice for Kuwait villas, not a code clause: parapets sit on the roof slab, where the lighter white
+block is what you said engineering offices choose to save load; a boundary fence stands on its own ground beam, partly
+in the ground, where cement block is the usual choice, and the structural note already makes the neighbour fence black,
+so the whole fence stays one material.
+Waits on: block type, block count and adhesive / mortar of the parapets and the street fence (T-107, T-108).
 
 Earlier note: None open (lead 2026-10-20 12:20). Q-50 to Q-63 were answered by the owner on 2026-10-20 (OWNER_DIRECTIVE_2026-10-20.md, and the owner's 12:15 correction in OWNER_SESSION_CHANGES.md: his earlier answers are his manual BOQ method and are preserved; the engine shows the owner-method and the drawing-derived results side by side). A reconciliation proposal is with the owner in his main chat; the team does not duplicate it as a question.
 

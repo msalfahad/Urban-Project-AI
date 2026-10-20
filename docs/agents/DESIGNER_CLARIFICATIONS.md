@@ -19,6 +19,8 @@ VISIBLE in the BOQ, never 0. Workers add rows (next free D- number) with the evi
 | D-08 | Round reception stair | no section cuts it | section / riser count / landing levels | straight flights CALCULATED after check, curved HELD | owner Q-50; T-111 |
 | D-09 | Ceilings | no ceiling layout, no cove detail | ceiling types, levels, coves | HELD | owner Q-57; T-112 |
 | D-10 | Tile sizes and floor finishes | none printed on any sheet | finish schedule | areas measured, counts HELD | T-091; owner Q-59 |
+| D-11 | Neighbour-side ground beams: black block "above and below, built from foundation level" (structural set page 1, notes box, note 2) | the note does not say how far "above" reaches | only up to the GF slab, or the whole GF wall on the neighbour boundary (26.37 m, GF-W00 / GF-W01) and the full north fence (31.17 m) | BLACK PROVISIONAL on those rows (owner rule: office notes override the fallback) | worker 2, T-107 |
+| D-12 | Walls that contain columns (structural set page 8, recommendation 20: built at the column thickness) | architectural plans draw and print 0.15 for three runs with a column inside (GF-W28, 1F-W18, 1F-W23), and 0.20 for GF walls round 0.25-wide columns C3-C11 (column schedule page 9) | build at column thickness or as drawn, run by run | thickness as drawn, flagged CONFLICT; block m3 of these runs CONFLICT | worker 2, T-107 |
 
 ## 2. Missing-scope register (unknown is never zero)
 
@@ -28,6 +30,7 @@ VISIBLE in the BOQ, never 0. Workers add rows (next free D- number) with the evi
 | M-02 | Unlabelled beam spans (6) | no label | HELD candidate volumes | D-04 |
 | M-03 | Second-floor top roof outline (membrane) | owner answer: held | HELD line | Q-34 |
 | M-04 | Expansion joints on roofs (spacing, BOQ line) | owner Q-42 correction leaves spacing open | HELD; ask the owner when roof tile counts are built | Q-42 |
+| M-05 | Substructure black block under the neighbour-side ground beams (note of D-11) | neither the T-103 hand table (superstructure) nor the freelancer (no row below ground) has it | 2 x 31.17 m centreline (building south line incl. the 1.40 m passage; north fence line); height: fence line PROVISIONAL >= 0.70 m (minimum excavation 1.50 m - two 0.40 ground beams, boundary-wall detail page 14), building line HELD (footing levels) | D-11; T-107, T-108 |
 | M-05 | Three unlabelled GF spaces 8.13 m2 | T-099 census; T-016b reads two of them as the outdoor side passage (exterior paving) | HELD | T-099, T-016b |
 
 ## 3. Status mapping (directive 2.2; frozen outputs are not renamed)
