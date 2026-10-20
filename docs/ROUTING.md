@@ -92,16 +92,16 @@ Risk **HIGH** (recommended validation L3). Ask about: room, space, zone, closure
 
 **Open first:**
 
-- `engine/source/arch_rooms.py` (2250 lines, HIGH; imported by 33 directly, 75 transitively, SHARED)
-- `engine/source/arch_plan.py` (478 lines, HIGH; imported by 18 directly, 82 transitively, SHARED)
+- `engine/source/arch_rooms.py` (2250 lines, HIGH; imported by 34 directly, 78 transitively, SHARED)
+- `engine/source/arch_plan.py` (478 lines, HIGH; imported by 18 directly, 85 transitively, SHARED)
 - `engine/source/space_model.py` (196 lines, MEDIUM; imported by 3 directly, 36 transitively)
 - `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 55 transitively)
 - `engine/source/waterproofing_system.py` (998 lines, HIGH; imported by 10 directly, 44 transitively, SHARED)
-- `engine/source/arch_v27.py` (1135 lines, MEDIUM; imported by 5 directly, 75 transitively)
+- `engine/source/arch_v27.py` (1135 lines, MEDIUM; imported by 5 directly, 78 transitively)
 
 **Depends on:** `engine/source/drawing_model.py`, `engine/source/knowledge.py`, `engine/source/opening_census.py`, `engine/source/opening_gaps.py`, `engine/source/arch_v29.py`, `engine/source/arch_walls.py`, `engine/source/boq_line.py`, `engine/source/lintel_measure.py`, `engine/source/material_spec.py`, `engine/source/member_detection.py`
 
-**Other current modules:** `closure_release.py`, `closure_review.py`, `robust_geometry.py`, `room_boq.py`, `room_label_guard.py`, `room_matrix.py`, `room_slice.py`, `room_topology.py`, `room_topology_v3.py`, `room_vocab.py`, `semantic_zones.py`, `topology.py`, `topology_closures.py`, `topology_crosscheck.py`, `topology_digest.py`, `topology_policy.py`
+**Other current modules:** `closure_release.py`, `closure_review.py`, `robust_geometry.py`, `room_boq.py`, `room_label_guard.py`, `room_levels.py`, `room_matrix.py`, `room_slice.py`, `room_topology.py`, `room_topology_v3.py`, `room_vocab.py`, `semantic_zones.py`, `topology.py`, `topology_closures.py`, `topology_crosscheck.py`, `topology_digest.py`, `topology_policy.py`
 
 **Rules** (knowledge 1.6.0; full records in `docs/RULES_INDEX.md`): PS-REF-001 [PROJECT_SPECIFIC] Reference project: a service corridor connecting separate b…; UP-SPACE-001 [OWNER_APPROVED] Interior / exterior status from enclosure and connectivity,…; UP-SPACE-002 [OWNER_APPROVED] Project-specific space decisions bind one space and are nev…; UP-WET-001 [OWNER_APPROVED] Owner wet areas and their finish scope; UP-WET-002 [OWNER_APPROVED] Wet-room evidence: a wash basin alone does not make a space…; rule store (frozen methods): UP-PANTRY-001, UP-PANTRY-002, UP-PANTRY-003, UP-PANTRY-004, UP-VOCAB-001, UP-VOCAB-002, UP-VOCAB-003, UP-VOCAB-004, UP-VOCAB-005
 
@@ -128,11 +128,11 @@ Risk **HIGH** (recommended validation L3). Ask about: wall, blockwork, block, ma
 
 **Open first:**
 
-- `engine/source/arch_walls.py` (236 lines, HIGH; imported by 5 directly, 75 transitively)
+- `engine/source/arch_walls.py` (236 lines, HIGH; imported by 5 directly, 78 transitively)
 - `engine/source/wall_contact_path.py` (695 lines, HIGH; imported by 21 directly, 24 transitively, SHARED)
 - `engine/source/wall_bands.py` (1036 lines, HIGH; imported by 20 directly, 50 transitively, SHARED)
-- `engine/source/arch_rooms.py` (2250 lines, HIGH; imported by 33 directly, 75 transitively, SHARED)
-- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 7 directly, 78 transitively)
+- `engine/source/arch_rooms.py` (2250 lines, HIGH; imported by 34 directly, 78 transitively, SHARED)
+- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 9 directly, 82 transitively)
 
 **Depends on:** `engine/source/arch_plan.py`, `engine/source/arch_v27.py`, `engine/source/member_detection.py`, `engine/source/release_safety.py`, `engine/source/topology.py`, `engine/source/arch_v29.py`, `engine/source/drawing_model.py`, `engine/source/geometry_role.py`, `engine/source/lintel_measure.py`, `engine/source/plane_poly.py`
 
@@ -202,9 +202,9 @@ Risk **CRITICAL** (recommended validation L4). Ask about: window, glazing, sill,
 **Open first:**
 
 - `engine/source/schedule_reader.py` (352 lines, CRITICAL, frozen; imported by 5 directly, 75 transitively)
-- `engine/source/opening_census.py` (474 lines, CRITICAL, frozen; imported by 9 directly, 126 transitively)
+- `engine/source/opening_census.py` (474 lines, CRITICAL, frozen; imported by 9 directly, 129 transitively)
 - `engine/source/schedule_grammar.py` (98 lines, CRITICAL, frozen; imported by 7 directly, 84 transitively)
-- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 7 directly, 78 transitively)
+- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 9 directly, 82 transitively)
 
 **Depends on:** `engine/source/drawing_model.py`, `engine/source/release_safety.py`
 
@@ -244,11 +244,11 @@ Risk **HIGH** (recommended validation L3). Ask about: plaster, paint, tile, tili
 - `engine/source/arch_measure.py` (1165 lines, HIGH; imported by 17 directly, 49 transitively, SHARED)
 - `engine/source/wall_height.py` (90 lines, MEDIUM; imported by 4 directly, 52 transitively)
 - `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 55 transitively)
-- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 7 directly, 78 transitively)
+- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 9 directly, 82 transitively)
 
 **Depends on:** `engine/source/arch_rooms.py`, `engine/source/knowledge.py`, `engine/source/release_safety.py`, `engine/source/arch_completeness.py`, `engine/source/arch_floor.py`, `engine/source/boq_line.py`, `engine/source/material_result.py`, `engine/source/material_spec.py`, `engine/source/membrane_layout.py`, `engine/source/plane_poly.py`
 
-**Other current modules:** `arch_v29.py`, `exposed_finish.py`, `finish_height.py`, `finish_height_v3.py`, `physical_measurement_state.py`, `surface_ledger.py`, `tile_layout.py`
+**Other current modules:** `arch_v29.py`, `exposed_finish.py`, `finish_height.py`, `finish_height_v2.py`, `finish_height_v3.py`, `physical_measurement_state.py`, `surface_ledger.py`, `tile_layout.py`
 
 **Rules** (knowledge 1.6.0; full records in `docs/RULES_INDEX.md`): UP-CEIL-001 [OWNER_APPROVED] Ceilings: actual eligible surfaces only; UP-FIN-PAINT-001 [OWNER_APPROVED] No paint over full-height porcelain; one finish per face; UP-FIN-PLASTER-001 [OWNER_APPROVED] Door jamb and head plaster is measured from geometry; UP-FIN-WALL-001 [OWNER_APPROVED] Full-height wall porcelain in wet areas; UP-HGT-001 [OWNER_APPROVED] Heights are read from the drawing, by an evidence hierarchy…; UP-SKIRT-001 [OWNER_APPROVED] Conventional skirting on eligible dry-room wall boundaries; rule store (frozen methods): UP-CER-001, UP-CER-002, UP-CER-003, UP-CER-004, UP-CER-005, UP-CER-006, UP-CER-007, UP-CER-008, UP-CER-009, UP-CER-010
 
@@ -318,7 +318,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: stair, railing, riser,
 
 **Open first:**
 
-- `engine/source/stair_geometry.py` (336 lines, CRITICAL, frozen; imported by 6 directly, 118 transitively)
+- `engine/source/stair_geometry.py` (336 lines, CRITICAL, frozen; imported by 6 directly, 121 transitively)
 - `engine/source/stair_measure.py` (119 lines, CRITICAL, frozen; imported by 3 directly, 73 transitively)
 - `engine/source/arch_measure.py` (1165 lines, HIGH; imported by 17 directly, 49 transitively, SHARED)
 
@@ -485,7 +485,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: boq, total, release, r
 - `tools/urban_boq_m9.py` (3061 lines, HIGH; imported by 32 directly, 34 transitively, SHARED)
 - `engine/source/delta_release.py` (159 lines, CRITICAL, frozen; imported by 37 directly, 37 transitively, SHARED)
 - `engine/source/boq_line.py` (386 lines, HIGH; imported by 17 directly, 68 transitively, SHARED)
-- `engine/source/knowledge.py` (288 lines, HIGH; imported by 28 directly, 90 transitively, SHARED)
+- `engine/source/knowledge.py` (288 lines, HIGH; imported by 28 directly, 93 transitively, SHARED)
 - `engine/source/door_standards.py` (671 lines, MEDIUM; imported by 7 directly, 39 transitively)
 - `engine/source/project_rules.py` (748 lines, MEDIUM; imported by 5 directly, 46 transitively)
 
