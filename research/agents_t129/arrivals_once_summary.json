@@ -1,0 +1,451 @@
+{
+ "face_2F_m2": 18.6,
+ "rows_2F_m2": {
+  "AL-2F": 4.875,
+  "LB-2F": 2.5,
+  "H-FS-2F": 0.4025,
+  "O-2F": 10.8225,
+  "Z-2F": 0.0
+ },
+ "rows_2F_sum_m2": 18.6,
+ "pairwise_overlap_2F_m2": 0.0,
+ "arrival_drawn_reading": {
+  "printed_m2": 4.875,
+  "edge_strip_beyond_drawn_line_y1.90_m2": 0.0675,
+  "drawn_body_m2": 4.8075,
+  "drawn_line_y1.90_layer5": [
+   [
+    0.0,
+    1.35,
+    "D2:5002:0"
+   ]
+  ],
+  "drawn_line_y1.95_layer5": [
+   [
+    0.0,
+    1.3,
+    "D2:5003:0"
+   ]
+  ],
+  "east_lane_first_drawn_nosing": [
+   [
+    1.35,
+    2.5,
+    "D2:4998:0"
+   ],
+   [
+    1.35,
+    2.5,
+    "D2:4997:0"
+   ]
+  ]
+ },
+ "printed_dimensions_found": {
+  "450 (south wall, x 0 .. 4.50)": 1,
+  "195 (inside the stair width, y 0 .. 1.95)": 1,
+  "330 (same chain, y 1.95 .. 5.25)": 1,
+  "120 (same chain, y 5.25 .. 6.45)": 1,
+  "125 (beyond the stair width, y 0 .. 1.25)": 1,
+  "250 (stair width)": 1,
+  "645 (stair compartment)": 1
+ },
+ "walk_line_arrow_tips_local": [
+  [
+   0.575,
+   4.95
+  ],
+  [
+   1.925,
+   2.0
+  ]
+ ],
+ "texts_in_arrival_and_lobby_area": [
+  {
+   "value": "+9.70",
+   "layer": "LEVEL",
+   "kind": "TEXT",
+   "local": [
+    1.432,
+    0.995
+   ]
+  },
+  {
+   "value": "180",
+   "layer": "4",
+   "kind": "MTEXT",
+   "local": [
+    3.6,
+    1.885
+   ]
+  },
+  {
+   "value": "125",
+   "layer": "4",
+   "kind": "MTEXT",
+   "local": [
+    3.112,
+    0.625
+   ]
+  },
+  {
+   "value": "195",
+   "layer": "4",
+   "kind": "MTEXT",
+   "local": [
+    0.863,
+    0.975
+   ]
+  },
+  {
+   "value": "450",
+   "layer": "4",
+   "kind": "MTEXT",
+   "local": [
+    2.25,
+    0.316
+   ]
+  },
+  {
+   "value": "20",
+   "layer": "4",
+   "kind": "MTEXT",
+   "local": [
+    2.927,
+    1.556
+   ]
+  },
+  {
+   "value": "8",
+   "layer": "4",
+   "kind": "MTEXT",
+   "local": [
+    0.094,
+    1.14
+   ]
+  }
+ ],
+ "flights_2F_local": [
+  {
+   "id": "F1",
+   "x0": 0.0,
+   "x1": 1.15,
+   "y0": 2.25,
+   "y1": 5.25,
+   "treads": 11,
+   "going_m": 0.3,
+   "width_m": 1.15,
+   "stacked_over": {
+    "floor": "1F",
+    "flight_id": "SITE-a95bf979baf4cfae:F2",
+    "overlap": 1.0,
+    "alignment": "column grid: 7 of 9 columns coincide",
+    "reading": "STACKED"
+   }
+  },
+  {
+   "id": "F2",
+   "x0": 1.35,
+   "x1": 2.5,
+   "y0": 2.3,
+   "y1": 5.3,
+   "treads": 11,
+   "going_m": 0.3,
+   "width_m": 1.15,
+   "stacked_over": {
+    "floor": "1F",
+    "flight_id": "SITE-a95bf979baf4cfae:F3",
+    "overlap": 1.0,
+    "alignment": "column grid: 7 of 9 columns coincide",
+    "reading": "STACKED"
+   }
+  }
+ ],
+ "stacking_1F_landing_onto_2F": {
+  "plan_offset_dx_m": -44.852655,
+  "symmetric_difference_with_2F_landing_m2": 0.0
+ },
+ "printed_450x195_rectangle": {
+  "m2": 8.775,
+  "inside_face_m2": 7.375,
+  "outside_face_m2": 1.4,
+  "of_which_shaft_m2": 0.9,
+  "of_which_wall_column_m2": 0.5
+ },
+ "finish_table_DF-2F-LOBBY_m2": 8.775,
+ "first_floor_categories_m2": {
+  "MARBLE_LANDING": 4.865,
+  "PORCELAIN": 33.5933,
+  "HELD": 0.52,
+  "VOID": 16.005,
+  "STAIR_TREADS": 15.4047,
+  "VOID_RESIDUE": 2.0347,
+  "STAIR_FOOTPRINT": 3.56,
+  "CHECK": 0.0
+ },
+ "first_floor_landing_drawn_m2": 4.865,
+ "stair_marble": {
+  "finish_table_released_rows": [
+   [
+    "ST-E1",
+    "entrance flight (+0.15 to +1.00)",
+    6.58
+   ],
+   [
+    "ST-D1",
+    "hall down to the +0.30 lobby",
+    2.28
+   ],
+   [
+    "ST-MS1-L",
+    "main stair GF-1F lower flight (A-A: 10)",
+    5.6
+   ],
+   [
+    "ST-MS1-U",
+    "main stair GF-1F upper flight (A-A: 12)",
+    6.72
+   ],
+   [
+    "ST-MS2-L",
+    "main stair 1F-2F lower flight (A-A: 12 + closing riser)",
+    6.9408
+   ],
+   [
+    "ST-MS2-U",
+    "main stair 1F-2F upper flight (A-A: 12)",
+    6.7392
+   ],
+   [
+    "ST-MS1-LD",
+    "main stair GF-1F landing (printed 120 x 125)",
+    1.5
+   ],
+   [
+    "ST-MS2-LD",
+    "main stair 1F-2F half landing (printed 250 x 125)",
+    3.125
+   ]
+  ],
+  "finish_table_held_rows": [
+   [
+    "ST-MS1-T",
+    "Main stair GF -> 1F winder turn",
+    "WINDER_GEOMETRY_NOT_ESTABLISHED (5 winders on A-A; owner Q-51 open)"
+   ],
+   [
+    "ST-RS-C",
+    "Round stair in the reception (curved part) curved flight",
+    "RISERS_NOT_COUNTED_ON_A_SECTION + TAPERED_TREAD (owner Q-50, Q-51 open)"
+   ],
+   [
+    "ST-RS-S",
+    "Round stair straight flight straight flight",
+    "RISERS_NOT_COUNTED_ON_A_SECTION (owner Q-50 open)"
+   ],
+   [
+    "ST-RS-A",
+    "Round stair arrival flight short flight",
+    "RISERS_NOT_COUNTED_ON_A_SECTION (owner Q-50 open)"
+   ],
+   [
+    "ST-RS-LD",
+    "round stair corner landing ",
+    "corner landing size not printed (T-084 RS-A)"
+   ]
+  ],
+  "released_sum_m2": 39.485,
+  "plus_1F_arrival_Q66B_m2": 4.875,
+  "plus_2F_arrival_Q70A_m2": 4.875,
+  "total_m2": 49.235
+ },
+ "engine_v29_stair_lines_1F_2F": [
+  {
+   "item": "FIN.MARBLE.TREAD",
+   "floor": "1F",
+   "flight": "F1",
+   "measured_net": null,
+   "bounded": [
+    0.0,
+    4.094413
+   ],
+   "treads": 12,
+   "approval": "MACHINE_ONLY"
+  },
+  {
+   "item": "FIN.STAIR.STEP_LM",
+   "floor": "1F",
+   "flight": "F1",
+   "measured_net": null,
+   "bounded": [
+    0.0,
+    13.7964
+   ],
+   "treads": 12,
+   "approval": "MACHINE_ONLY"
+  },
+  {
+   "item": "FIN.MARBLE.TREAD",
+   "floor": "1F",
+   "flight": "F2",
+   "measured_net": 3.795,
+   "bounded": null,
+   "treads": 11,
+   "approval": "MACHINE_ONLY"
+  },
+  {
+   "item": "FIN.STAIR.STEP_LM",
+   "floor": "1F",
+   "flight": "F2",
+   "measured_net": 12.65,
+   "bounded": null,
+   "treads": 11,
+   "approval": "MACHINE_ONLY"
+  },
+  {
+   "item": "FIN.MARBLE.TREAD",
+   "floor": "1F",
+   "flight": "F3",
+   "measured_net": 3.45,
+   "bounded": null,
+   "treads": 10,
+   "approval": "MACHINE_ONLY"
+  },
+  {
+   "item": "FIN.STAIR.STEP_LM",
+   "floor": "1F",
+   "flight": "F3",
+   "measured_net": 11.5,
+   "bounded": null,
+   "treads": 10,
+   "approval": "MACHINE_ONLY"
+  },
+  {
+   "item": "FIN.MARBLE.TREAD",
+   "floor": "1F",
+   "flight": "F4",
+   "measured_net": null,
+   "bounded": [
+    0.0,
+    3.45
+   ],
+   "treads": 10,
+   "approval": "MACHINE_ONLY"
+  },
+  {
+   "item": "FIN.STAIR.STEP_LM",
+   "floor": "1F",
+   "flight": "F4",
+   "measured_net": null,
+   "bounded": [
+    0.0,
+    11.5
+   ],
+   "treads": 10,
+   "approval": "MACHINE_ONLY"
+  },
+  {
+   "item": "FIN.MARBLE.TREAD",
+   "floor": "1F",
+   "flight": "F5",
+   "measured_net": 1.495,
+   "bounded": null,
+   "treads": 4,
+   "approval": "MACHINE_ONLY"
+  },
+  {
+   "item": "FIN.STAIR.STEP_LM",
+   "floor": "1F",
+   "flight": "F5",
+   "measured_net": 4.7815,
+   "bounded": null,
+   "treads": 4,
+   "approval": "MACHINE_ONLY"
+  },
+  {
+   "item": "FIN.MARBLE.TREAD",
+   "floor": "1F",
+   "flight": "F6",
+   "measured_net": null,
+   "bounded": [
+    0.0,
+    1.38
+   ],
+   "treads": 4,
+   "approval": "MACHINE_ONLY"
+  },
+  {
+   "item": "FIN.STAIR.STEP_LM",
+   "floor": "1F",
+   "flight": "F6",
+   "measured_net": null,
+   "bounded": [
+    0.0,
+    4.6
+   ],
+   "treads": 4,
+   "approval": "MACHINE_ONLY"
+  },
+  {
+   "item": "FIN.MARBLE.TREAD",
+   "floor": "2F",
+   "flight": "F1",
+   "measured_net": 3.45,
+   "bounded": null,
+   "treads": 10,
+   "approval": "MACHINE_ONLY"
+  },
+  {
+   "item": "FIN.STAIR.STEP_LM",
+   "floor": "2F",
+   "flight": "F1",
+   "measured_net": 11.5,
+   "bounded": null,
+   "treads": 10,
+   "approval": "MACHINE_ONLY"
+  },
+  {
+   "item": "FIN.MARBLE.TREAD",
+   "floor": "2F",
+   "flight": "F2",
+   "measured_net": 3.45,
+   "bounded": null,
+   "treads": 10,
+   "approval": "MACHINE_ONLY"
+  },
+  {
+   "item": "FIN.STAIR.STEP_LM",
+   "floor": "2F",
+   "flight": "F2",
+   "measured_net": 11.5,
+   "bounded": null,
+   "treads": 10,
+   "approval": "MACHINE_ONLY"
+  },
+  {
+   "item": "FIN.MARBLE.LANDING",
+   "floor": "2F",
+   "flight": "",
+   "measured_net": null,
+   "bounded": [
+    0.0,
+    11.725001
+   ],
+   "treads": null,
+   "approval": "MACHINE_ONLY"
+  }
+ ],
+ "engine_cross_plan_1F_2F": [
+  [
+   "F1",
+   "F2",
+   "STACKED"
+  ],
+  [
+   "F2",
+   "F3",
+   "STACKED"
+  ]
+ ],
+ "engine_2F_duplicate_tread_m2": 6.9,
+ "engine_2F_duplicate_step_lm": 23.0
+}
