@@ -201,9 +201,9 @@ Risk **CRITICAL** (recommended validation L4). Ask about: window, glazing, sill,
 
 **Open first:**
 
-- `engine/source/schedule_reader.py` (352 lines, CRITICAL, frozen; imported by 5 directly, 81 transitively)
-- `engine/source/opening_census.py` (474 lines, CRITICAL, frozen; imported by 9 directly, 148 transitively)
-- `engine/source/schedule_grammar.py` (98 lines, CRITICAL, frozen; imported by 7 directly, 90 transitively)
+- `engine/source/schedule_reader.py` (352 lines, CRITICAL, frozen; imported by 5 directly, 83 transitively)
+- `engine/source/opening_census.py` (474 lines, CRITICAL, frozen; imported by 9 directly, 150 transitively)
+- `engine/source/schedule_grammar.py` (98 lines, CRITICAL, frozen; imported by 7 directly, 92 transitively)
 - `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 9 directly, 101 transitively)
 
 **Depends on:** `engine/source/drawing_model.py`, `engine/source/release_safety.py`
@@ -319,8 +319,8 @@ Risk **CRITICAL** (recommended validation L4). Ask about: stair, railing, riser,
 
 **Open first:**
 
-- `engine/source/stair_geometry.py` (336 lines, CRITICAL, frozen; imported by 6 directly, 140 transitively)
-- `engine/source/stair_measure.py` (119 lines, CRITICAL, frozen; imported by 3 directly, 79 transitively)
+- `engine/source/stair_geometry.py` (336 lines, CRITICAL, frozen; imported by 6 directly, 142 transitively)
+- `engine/source/stair_measure.py` (119 lines, CRITICAL, frozen; imported by 3 directly, 81 transitively)
 - `engine/source/arch_measure.py` (1165 lines, HIGH; imported by 19 directly, 57 transitively, SHARED)
 
 **Depends on:** `engine/source/arch_completeness.py`, `engine/source/arch_floor.py`, `engine/source/arch_rooms.py`, `engine/source/arch_v28.py`, `engine/source/boq_line.py`, `engine/source/knowledge.py`, `engine/source/material_result.py`, `engine/source/material_spec.py`, `engine/source/membrane_layout.py`, `engine/source/owner_finish_scope.py`
@@ -351,7 +351,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: concrete, slab, beam, 
 
 **Open first:**
 
-- `engine/source/concrete_completeness.py` (2362 lines, CRITICAL, frozen; imported by 10 directly, 78 transitively, SHARED)
+- `engine/source/concrete_completeness.py` (2362 lines, CRITICAL, frozen; imported by 10 directly, 80 transitively, SHARED)
 - `engine/source/slab_rebar_qto.py` (314 lines, CRITICAL, frozen; imported by 9 directly, 12 transitively)
 - `engine/source/footing_rebar_guard.py` (422 lines, CRITICAL, frozen; imported by 5 directly, 5 transitively)
 
