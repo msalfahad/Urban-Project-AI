@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 603 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 604 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2375 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2380 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1307 | pytest suites, one folder per round. |
+| `tests/` | 1309 | pytest suites, one folder per round. |
 | `tools/` | 106 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (251 modules)
+## `engine/source/` (252 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -534,6 +534,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `population_conservation.py` | 88 | MEDIUM | 4 | PHYSICAL_POPULATION_CONSERVATION (generic). |
 | `profile_takeoff.py` | 219 | CRITICAL | 1 | PROFILE TAKEOFF (M1) - the first quantities of a NEW project, from a person-confirmed profile (generic). |
 | `project_claims.py` | 120 | MEDIUM | 3 | PROJECT CLAIM STORE (generic schema; the claims themselves are project data). |
+| `project_data_file.py` | 337 | MEDIUM | 1 | PROJECT DATA FILE V1 (task T-064; not wired into any released method; no quantity changed) - the controlled file |
 | `project_rules.py` | 748 | MEDIUM | 5 | PROJECT RULES (M9 Phase 2B-2, ARCH_TAKEOFF_V2.4 only) - Level A Urban master standards (the knowledge registry |
 | `provisional_estimate.py` | 359 | CRITICAL | 21 | PROVISIONAL ESTIMATE (M1) - a planning estimate beside the verified release, never mixed into it (generic). |
 | `qualification.py` | 467 | MEDIUM | 3 | DECODER_QUALIFICATION (R8.4 §11-§13) — a decoder build is qualified for an ENVELOPE, never globally. |
@@ -965,6 +966,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t058_strip_guard/` | 1 |
 | `tests/t060_concrete_ledger_v2/` | 1 |
 | `tests/t061_room_label_guard/` | 1 |
+| `tests/t064_project_data_file/` | 1 |
 | `tests/t071_exterior_spaces/` | 2 |
 | `tests/t072_membrane_table/` | 1 |
 | `tests/t075_schedule_text_rows/` | 1 |
@@ -1072,6 +1074,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t060/` | 2 |
 | `research/agents_t062/` | 3 |
 | `research/agents_t063/` | 1 |
+| `research/agents_t064/` | 4 |
 | `research/agents_t065/` | 3 |
 | `research/agents_t066/` | 3 |
 | `research/agents_t071/` | 4 |
@@ -1157,7 +1160,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/structural_engine_s2/` | 6 |
 | `research/urban_engine_m2_generalization/` | 85 |
 | `research/urban_engine_m3_recovery/` | 56 |
-| `research/urban_engine_m4_correctness/` | 88 |
+| `research/urban_engine_m4_correctness/` | 89 |
 | `research/urban_engine_m5_concrete_reconciliation/` | 60 |
 | `research/urban_engine_m6_completeness/` | 30 |
 | `research/urban_engine_m7_reliability/` | 45 |
