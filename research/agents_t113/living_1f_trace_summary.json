@@ -1,0 +1,41 @@
+{
+ "room": "1F-R78C367",
+ "engine_line_m2": 44.869353,
+ "engine_gross_m2": 75.983002,
+ "engine_deductions": [
+  {
+   "what": "stair treads drawn inside the room (marble: UP-STAIR-005, never also porcelain)",
+   "m2": 8.336981
+  },
+  {
+   "what": "the outlined void inside the face (open to below: never floor finish)",
+   "m2": 16.005
+  },
+  {
+   "what": "a flight of the plan below seen through the opening (no floor at this level; the stair is counted once, on the plan below)",
+   "m2": 6.771668
+  }
+ ],
+ "exact_floor_after_void_and_treads_m2": 44.5731,
+ "engine_minus_exact_m2": 0.2962,
+ "tread_clip_differences": [
+  {
+   "flight": "F5",
+   "quad": 2,
+   "engine_clip_m2": 0.1545,
+   "exact_m2": 0.349,
+   "non_convex_m2": 0.00271
+  },
+  {
+   "flight": "F5",
+   "quad": 3,
+   "engine_clip_m2": 0.2078,
+   "exact_m2": 0.3671,
+   "non_convex_m2": 0.00209
+  }
+ ],
+ "face_outside_the_regions_m2": 0.0,
+ "hand_total_m2": 38.588,
+ "freelancer_one_row_m2": 38.96,
+ "engine_minus_hand_m2": 6.2814
+}
