@@ -67,7 +67,7 @@ ARCH_POLICY_ID_V2 = "URBAN_BOQ_M9_S6_ARCH_V2"
 ARCH_METHODS = ("ARCH_TAKEOFF_V1", "ARCH_TAKEOFF_V2", "ARCH_TAKEOFF_V2.1", "ARCH_TAKEOFF_V2.2", "ARCH_TAKEOFF_V2.3",
                 "ARCH_TAKEOFF_V2.4", "ARCH_TAKEOFF_V2.5", "ARCH_TAKEOFF_V2.6", "ARCH_TAKEOFF_V2.7", "ARCH_TAKEOFF_V2.7.1",
                 "ARCH_TAKEOFF_V2.8", "ARCH_TAKEOFF_V2.9", "ARCH_TAKEOFF_V2.10",
-                "ARCH_TAKEOFF_V2.11", "ARCH_TAKEOFF_V2.12")
+                "ARCH_TAKEOFF_V2.11", "ARCH_TAKEOFF_V2.12", "ARCH_TAKEOFF_V2.13")
 # S6: ARCH_TAKEOFF_V2 = V1 + drawing admission (stop, exit 2, no BOQ on a fatal finding) + unit-relative geometric
 # tolerances + plan regions cut only along empty bands + floor-category and finish-surface completeness. V1 is
 # unchanged; --strict-admission puts the same admission in front of V1 (its outputs are V1's own).
@@ -170,8 +170,15 @@ V211_KNOWLEDGE = "1.7.0"
 V212 = "ARCH_TAKEOFF_V2.12"
 ARCH_POLICY_ID_V212 = "URBAN_BOQ_T096_ARCH_V2_12"
 V212_KNOWLEDGE = V211_KNOWLEDGE
-V271_FAMILY = (V271, V28, V29, V210, V211, V212)
-V27_FAMILY = (V27, V271, V28, V29, V210, V211, V212)
+# T-120: ARCH_TAKEOFF_V2.13 = ARCH_TAKEOFF_V2.12 + owner Q-58 A (conditional) released only on a proven physical cutting
+# plan (engine.source.arch_v213.prove_q58_a), and a held open-plan wet zone (owner Q-37 A) measured from its printed size
+# typed into the project data file (owner Q-17 A). Same registry 1.7.0. Opt-in only, not the released default (owner
+# 2026-10-20 12:15): V2.12 and every earlier method run exactly as before.
+V213 = "ARCH_TAKEOFF_V2.13"
+ARCH_POLICY_ID_V213 = "URBAN_BOQ_T120_ARCH_V2_13"
+V213_KNOWLEDGE = V212_KNOWLEDGE
+V271_FAMILY = (V271, V28, V29, V210, V211, V212, V213)
+V27_FAMILY = (V27, V271, V28, V29, V210, V211, V212, V213)
 M9_DIR = "m9"
 CREATED = datetime(2026, 1, 1)
 
@@ -314,15 +321,15 @@ def arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_are
               project_id=project_id, intake=intake, strict=strict, units=units, region_specs=region_specs,
               accept_xrefs=accept_xrefs, extra_documents=extra_documents, admission_findings=admission_findings,
               decisions=decisions)
-    if independent_checks is not None and method not in (V25, V26, V27, V271, V28, V29, V210, V211, V212):
+    if independent_checks is not None and method not in (V25, V26, V27, V271, V28, V29, V210, V211, V212, V213):
         raise SystemExit("--independent-checks (URBAN_INDEPENDENT_CHECKS_V1) needs --method ARCH_TAKEOFF_V2.5, "
                          "ARCH_TAKEOFF_V2.6, ARCH_TAKEOFF_V2.7 or ARCH_TAKEOFF_V2.7.1")
-    if method in (V24, V25, V26, V27, V271, V28, V29, V210, V211, V212):
+    if method in (V24, V25, V26, V27, V271, V28, V29, V210, V211, V212, V213):
         from engine.source import knowledge as K
         with K.using({V27: V27_KNOWLEDGE, V271: V271_KNOWLEDGE, V28: V28_KNOWLEDGE, V29: V29_KNOWLEDGE,
-                      V210: V210_KNOWLEDGE, V211: V211_KNOWLEDGE, V212: V212_KNOWLEDGE}.get(method, "1.1.0")):
-            ic = {"independent_checks": independent_checks} if method in (V25, V26, V27, V271, V28, V29, V210, V211, V212) else {}
-            if method in (V211, V212):
+                      V210: V210_KNOWLEDGE, V211: V211_KNOWLEDGE, V212: V212_KNOWLEDGE, V213: V213_KNOWLEDGE}.get(method, "1.1.0")):
+            ic = {"independent_checks": independent_checks} if method in (V25, V26, V27, V271, V28, V29, V210, V211, V212, V213) else {}
+            if method in (V211, V212, V213):
                 # T-079: ARCH_TAKEOFF_V2.11 reads what each plan region's room builder saw (engine.source.arch_v211)
                 from engine.source import arch_v211 as AV
                 with AV.capture() as cap:
@@ -354,18 +361,18 @@ def _arch_compute(drawing, *, method, facts=None, layer_roles=None, reference_ar
     from tools import urban_intake as UI
     if method not in ARCH_METHODS:
         raise SystemExit(f"--method must be one of {ARCH_METHODS} (the architectural route is behind a versioned flag)")
-    v29 = method in (V29, V210, V211, V212)                               # ARCH_TAKEOFF_V2.8 plus the Phase N10 corrections
-    v210 = method in (V210, V211, V212)                             # T-034: V2.9 plus the ROOM_VOCAB_V2 room names
-    v28 = method in (V28, V29, V210, V211, V212)                          # ARCH_TAKEOFF_V2.7.1 plus the Phase 2B-9 heights / walls
+    v29 = method in (V29, V210, V211, V212, V213)                               # ARCH_TAKEOFF_V2.8 plus the Phase N10 corrections
+    v210 = method in (V210, V211, V212, V213)                             # T-034: V2.9 plus the ROOM_VOCAB_V2 room names
+    v28 = method in (V28, V29, V210, V211, V212, V213)                          # ARCH_TAKEOFF_V2.7.1 plus the Phase 2B-9 heights / walls
     v271 = method in V271_FAMILY                              # ARCH_TAKEOFF_V2.7 plus the Phase 2B-8 hardening
-    v27 = method in (V27, V271, V28, V29, V210, V211, V212)                          # ARCH_TAKEOFF_V2.6 plus the Phase 2B-7 corrections
-    v26 = method in (V26, V27, V271, V28, V29, V210, V211, V212)                     # ARCH_TAKEOFF_V2.5 plus the installation layer
-    v25 = method in (V25, V26, V27, V271, V28, V29, V210, V211, V212)                # ARCH_TAKEOFF_V2.4 plus the proven corrections
-    v24 = method in (V24, V25, V26, V27, V271, V28, V29, V210, V211, V212)           # V2.3 plus the registry 1.1.0 and the project rules
-    v23 = method in (V23, V24, V25, V26, V27, V271, V28, V29, V210, V211, V212)      # V2.3 is V2.2 plus the knowledge registry
-    v22 = method in (V22, V23, V24, V25, V26, V27, V271, V28, V29, V210, V211, V212) # V2.2 is V2.1 plus the Phase 2B-0 corrections
-    v21 = method in (V21, V22, V23, V24, V25, V26, V27, V271, V28, V29, V210, V211, V212)
-    v2 = method in (V2, V21, V22, V23, V24, V25, V26, V27, V271, V28, V29, V210, V211, V212)  # V2.1 is V2 plus the Phase 2A additions
+    v27 = method in (V27, V271, V28, V29, V210, V211, V212, V213)                          # ARCH_TAKEOFF_V2.6 plus the Phase 2B-7 corrections
+    v26 = method in (V26, V27, V271, V28, V29, V210, V211, V212, V213)                     # ARCH_TAKEOFF_V2.5 plus the installation layer
+    v25 = method in (V25, V26, V27, V271, V28, V29, V210, V211, V212, V213)                # ARCH_TAKEOFF_V2.4 plus the proven corrections
+    v24 = method in (V24, V25, V26, V27, V271, V28, V29, V210, V211, V212, V213)           # V2.3 plus the registry 1.1.0 and the project rules
+    v23 = method in (V23, V24, V25, V26, V27, V271, V28, V29, V210, V211, V212, V213)      # V2.3 is V2.2 plus the knowledge registry
+    v22 = method in (V22, V23, V24, V25, V26, V27, V271, V28, V29, V210, V211, V212, V213) # V2.2 is V2.1 plus the Phase 2B-0 corrections
+    v21 = method in (V21, V22, V23, V24, V25, V26, V27, V271, V28, V29, V210, V211, V212, V213)
+    v2 = method in (V2, V21, V22, V23, V24, V25, V26, V27, V271, V28, V29, V210, V211, V212, V213)  # V2.1 is V2 plus the Phase 2A additions
     admit = v2 or strict
     if not admit and (units or region_specs or accept_xrefs):
         raise SystemExit("--units / --region / --accept-missing-xref are reviewer inputs of the admission: use them "
@@ -1035,14 +1042,21 @@ def _v211_outputs(drawing, room_boq, arch, v211, cap, facts):
     from engine.source import arch_v211 as AV
     path = Path(drawing)
     run = arch["run"]
-    v212 = run.get("method") == V212
+    v213 = run.get("method") == V213
+    v212 = run.get("method") == V212 or v213
     if v212:                                          # T-096: ARCH_TAKEOFF_V2.12 = V2.11 with MEMBRANE_FOLD_V3
         from engine.source import arch_v212 as AV
+    if v213:                                          # T-120: V2.13 = V2.12 + Q-58 A proof + typed wet zones
+        from engine.source import arch_v213 as AV
     ctx = {"project_id": run["project_id"], "revision_set_sha256": run["revision_set_sha256"],
            "documents": [{"file": path.name, "sha256": hashlib.sha256(path.read_bytes()).hexdigest()}]}
     classes, decided = v211["classes"], v211["decided"]
     wet, flags = AV.wet_rows(arch, classes)
     held = AV.held_wet(arch, classes)
+    zones, zlog = [], []
+    if v213:                                          # T-120: a held wet zone with its printed size typed (Q-37 A, Q-17 A)
+        zones, held, zlog = AV.typed_zones(held, (facts or {}).get("project_data"), run["project_id"])
+        wet = wet + zones
     roofs = AV.roof_records(cap, {r["region_id"]: r["floor"] for r in arch["regions"]},
                             (facts or {}).get("exterior_spaces"))
     top = AV.top_roofs(arch)                          # T-093: the roof no plan draws (owner Q-34 parked) -> held
@@ -1051,7 +1065,7 @@ def _v211_outputs(drawing, room_boq, arch, v211, cap, facts):
     names = {(x["floor"], x["room_id"]): {"name_en": x.get("name_en"), "name_ar": x.get("name_ar")} for x in wet}
     added = (AV.door_transition_lines(ctx, wet, lambda x: {"name_en": x.get("name_en"), "name_ar": x.get("name_ar")})
              + AV.roof_lines(ctx, roofs) + AV.top_roof_lines(ctx, top) + AV.rolls_lines(ctx, table, names)
-             + AV.held_wet_lines(ctx, held, existing))
+             + AV.held_wet_lines(ctx, held, existing) + (AV.zone_lines(ctx, zones) if v213 else []))
     ids = {ln["line_id"] for ln in room_boq["lines"]}
     if any(ln["line_id"] in ids for ln in added) or len({ln["line_id"] for ln in added}) != len(added):
         raise ValueError("ARCH_TAKEOFF_V2.11: an added line repeats an existing line id")
@@ -1068,7 +1082,14 @@ def _v211_outputs(drawing, room_boq, arch, v211, cap, facts):
     arch["v211"] = {"policy": AV.policy_record(), "classes": classes, "decided": decided, "membrane_table": table,
                     "roofs": [{k: v for k, v in r.items() if k != "fold"} for r in roofs], "wet_schedule_flags": flags,
                     "wet_zones_held": held, "top_roofs_held": top, "summary": AV.summary(classes, decided, wet, flags, held, roofs, table,
-                                                                  added)}
+                                                                  added, *([zlog] if v213 else []))}
+    if v213:
+        arch["v211"]["typed_wet_zones"] = zlog
+        run.update(policy=ARCH_POLICY_ID_V213)
+        run["v2_13"] = {"knowledge": V213_KNOWLEDGE, "summary": arch["v211"]["summary"],
+                        "release_report": arch["release_report"]["conservation"], "released_default": False}
+        run["policies"]["arch_v213"] = AV.policy_record()
+        return
     if v212:
         run.update(policy=ARCH_POLICY_ID_V212)
         run["v2_12"] = {"knowledge": V212_KNOWLEDGE, "summary": arch["v211"]["summary"],
@@ -1389,7 +1410,7 @@ def _v29_outputs(arch):
     run.update(policy=ARCH_POLICY_ID_V29)
     run["v2_9"] = {"corrections": list(V29_CORRECTIONS), "knowledge": V29_KNOWLEDGE, "summary": arch["v29"]["summary"]}
     run["policies"]["arch_v29"] = arch["v29"]["policy"]
-    if run.get("method") in (V210, V211, V212):                      # T-034: ARCH_TAKEOFF_V2.10 (V2.11 builds on it)
+    if run.get("method") in (V210, V211, V212, V213):                      # T-034: ARCH_TAKEOFF_V2.10 (V2.11 builds on it)
         run.update(policy=ARCH_POLICY_ID_V210)
         run["v2_10"] = {"room_vocabulary": V210_VOCAB, "knowledge": V210_KNOWLEDGE,
                         "corrections": ["D-V210-01 room names (T-022, engine.source.room_vocab): compound phrases "
@@ -2451,7 +2472,7 @@ def _v24_manifest(out, names, arch):
                        V27: "URBAN_OUTPUT_MANIFEST_V2_7", V271: "URBAN_OUTPUT_MANIFEST_V2_7_1",
                        V28: "URBAN_OUTPUT_MANIFEST_V2_8", V29: "URBAN_OUTPUT_MANIFEST_V2_9",
                        V210: "URBAN_OUTPUT_MANIFEST_V2_10", V211: "URBAN_OUTPUT_MANIFEST_V2_11",
-                       V212: "URBAN_OUTPUT_MANIFEST_V2_12"}.get(
+                       V212: "URBAN_OUTPUT_MANIFEST_V2_12", V213: "URBAN_OUTPUT_MANIFEST_V2_13"}.get(
                 arch["run"]["method"], "URBAN_OUTPUT_MANIFEST_V2_4"),
             "method": arch["run"]["method"],
             "rules_sheet": {"schema": sh["schema"], "rules_sha256": sh["rules_sha256"],
@@ -2703,12 +2724,14 @@ def v21_files(arch):
         files["WATERPROOFING_SCHEDULE.csv"] = _csv([_wp_row(r) for r in wp["areas"]], WP_COLUMNS)
         files["MEMBRANE_CUTTING_PLAN.json"] = _j({"run": run, "systems": wp["systems"]})
         if arch.get("v211") is not None:                       # T-079: ARCH_TAKEOFF_V2.11 membrane table
-            sfx = "V2_12" if run.get("method") == V212 else "V2_11"   # T-096: V2.12 writes its own files
+            sfx = {V212: "V2_12", V213: "V2_13"}.get(run.get("method"), "V2_11")   # T-096 / T-120: own files
             files[f"MEMBRANE_TABLE_{sfx}.json"] = _j({"run": run, "membrane_table": arch["v211"]["membrane_table"],
                                                      "roofs": arch["v211"]["roofs"],
                                                      "wet_zones_held": arch["v211"]["wet_zones_held"],
                                                      "top_roofs_held": arch["v211"]["top_roofs_held"]})
-            if sfx == "V2_12":
+            if sfx == "V2_13":
+                from engine.source import arch_v213 as AV
+            elif sfx == "V2_12":
                 from engine.source import arch_v212 as AV
             else:
                 from engine.source import arch_v211 as AV
@@ -2850,7 +2873,7 @@ def cmd_arch(a):
     facts = json.loads(Path(a.facts).read_text(encoding="utf-8")) if a.facts else None
     decisions = None
     if getattr(a, "decisions", None):
-        if a.method not in (V23, V24, V25, V26, V27, V271, V28, V29, V210, V211, V212):
+        if a.method not in (V23, V24, V25, V26, V27, V271, V28, V29, V210, V211, V212, V213):
             raise SystemExit("--decisions (project decisions, URBAN_PROJECT_DECISIONS_V1) needs --method "
                              "ARCH_TAKEOFF_V2.3, ARCH_TAKEOFF_V2.4, ARCH_TAKEOFF_V2.5, ARCH_TAKEOFF_V2.6, "
                              "ARCH_TAKEOFF_V2.7 or ARCH_TAKEOFF_V2.7.1")
@@ -2859,13 +2882,13 @@ def cmd_arch(a):
             raise SystemExit("--decisions: schema must be URBAN_PROJECT_DECISIONS_V1")
     project_rules = None
     if getattr(a, "project_rules", None):
-        if a.method not in (V24, V25, V26, V27, V271, V28, V29, V210, V211, V212):
+        if a.method not in (V24, V25, V26, V27, V271, V28, V29, V210, V211, V212, V213):
             raise SystemExit("--project-rules (URBAN_PROJECT_RULES_V1) needs --method ARCH_TAKEOFF_V2.4, "
                              "ARCH_TAKEOFF_V2.5, ARCH_TAKEOFF_V2.6, ARCH_TAKEOFF_V2.7 or ARCH_TAKEOFF_V2.7.1")
         project_rules = json.loads(Path(a.project_rules).read_text(encoding="utf-8"))
     independent_checks = None
     if getattr(a, "independent_checks", None):
-        if a.method not in (V25, V26, V27, V271, V28, V29, V210, V211, V212):
+        if a.method not in (V25, V26, V27, V271, V28, V29, V210, V211, V212, V213):
             raise SystemExit("--independent-checks (URBAN_INDEPENDENT_CHECKS_V1) needs --method ARCH_TAKEOFF_V2.5, "
                              "ARCH_TAKEOFF_V2.6, ARCH_TAKEOFF_V2.7 or ARCH_TAKEOFF_V2.7.1")
         independent_checks = json.loads(Path(a.independent_checks).read_text(encoding="utf-8"))
@@ -2873,7 +2896,7 @@ def cmd_arch(a):
     refs = {k: float(v) for k, v in _kv(a.reference_areas, "--reference-areas").items()}
     out = Path(a.out)
     conversions = []
-    v2 = a.method in (V2, V21, V22, V23, V24, V25, V26, V27, V271, V28, V29, V210, V211, V212)
+    v2 = a.method in (V2, V21, V22, V23, V24, V25, V26, V27, V271, V28, V29, V210, V211, V212, V213)
     admit = v2 or a.strict_admission
     if not admit and (a.units or a.region or a.accept_missing_xref):
         raise SystemExit("--units / --region / --accept-missing-xref are reviewer inputs of the admission: use them "
