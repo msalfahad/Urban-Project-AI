@@ -1,0 +1,589 @@
+"""T-130 builder (kept outside the repository): writes rules/coverage/BOQ_FAMILY_MASTER_1.1.0.json from
+(1) the 1.0.0 file (codes, names, units, source_needed, next_slice copied unchanged),
+(2) the per-family audit below (status, evidence file:line / merge commit / verifier run, readers, missing, V3.0),
+(3) the development-villa run summaries made by summ.py on the runs of this task (engine values only).
+Every file:line is checked to exist; every commit is checked with git. Usage:
+    python3 -I build_master.py <repo> <runs_dir>
+"""
+import json, subprocess, sys
+from pathlib import Path
+
+REPO, RUNS = Path(sys.argv[1]), Path(sys.argv[2])
+sys.path.insert(0, str(Path(__file__).parent))
+import summ  # noqa: E402
+
+HEAD = subprocess.check_output(["git", "-C", str(REPO), "rev-parse", "--short=7", "HEAD"], text=True).strip()
+OLD = json.loads((REPO / "rules/coverage/BOQ_FAMILY_MASTER_1.0.0.json").read_text(encoding="utf-8"))
+
+REL = "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6)"
+V30 = "ARCH_TAKEOFF_V3.0 (agents/task-T-131 33f1da2, READY, not merged)"
+
+# ---------------------------------------------------------------- per-family audit
+# c: capability 1.1.0; ev: evidence (file:line refs and commits); rd: released reads; cand: opt-in readers;
+# miss: what is missing; v3: in V3.0 yes/no; plan: task ids planned to change it in V3.0.x; codes: item codes whose
+# lines the development-villa summary reports (released run, then candidate run)
+A = {}
+
+
+def f(code, c, ev, rd, cand, miss, v3, plan=(), codes=(), cand_codes=None, note=None):
+    A[code] = dict(c=c, ev=ev, rd=rd, cand=cand, miss=miss, v3=v3, plan=list(plan), codes=list(codes),
+                   cand_codes=list(cand_codes if cand_codes is not None else codes), note=note)
+
+
+NONE_EMITTED = "no method emits a line of this family: no item code for it in engine/source/boq_line.py:46-110 and " \
+               "none in the item codes seen in the released and candidate runs (run_evidence.item_codes_seen)"
+for c in ("B1-01", "B1-02", "B1-03", "B1-04", "B1-05", "B1-07"):
+    f(c, "NOT_IMPLEMENTED", [NONE_EMITTED], "none", "none", "site works are not measured by any route", "no")
+f("B1-06", "BLOCKED_BY_SOURCE", [NONE_EMITTED], "none", "none", "needs a site investigation", "no")
+
+f("B2-01", "PARTIAL",
+  ["engine/source/arch_rooms.py:984 spaces() builds the room register of every plan region in the released arch route",
+   "engine/source/arch_measure.py:92 room_id(floor, face_id): stable room id on every line",
+   "tools/urban_boq_m9.py:246 ARCH_ROOMS.json written by every arch run (not a BOQ line)",
+   "commit 677c740 (T-099 room census guard, verifier run 37): 0 rooms lost on the development villa, 3 unlabelled "
+   "rooms HELD; engine/source/room_census_guard.py:186 census() is read by no method",
+   "commit 362630a (T-061 room label guard): engine/source/room_label_guard.py:171 guard() is read only by the "
+   "opt-in methods (engine/source/arch_v211.py:232)",
+   "commit b35c944 (T-022 ROOM_VOCAB_V2): read by ARCH_TAKEOFF_V2.10 and later only"],
+  "ARCH_TAKEOFF_V2.9: register file ARCH_ROOMS.json, room ids on every line; no BOQ line of its own",
+  "ARCH_TAKEOFF_V2.10 .. V2.13 (room vocabulary V2, label guard from V2.11)",
+  "no BOQ line (a register, not a quantity); unlabelled rooms held; the census guard is not wired", "yes",
+  note="1.0.0 named TS01 / room_slice (tests); the register now runs in the released arch route")
+f("B2-02", "PARTIAL",
+  ["engine/source/arch_measure.py:381 the room's clear floor area is the net of its floor-finish line",
+   "engine/source/arch_measure.py:323 a space without a finish kind gets ARCH.SPACE / ARCH.EXTERIOR with its area",
+   "commit c1f0467 (T-113, verifier run 40): first-floor living released 44.869 m2 vs hand 38.588 m2 (+16.3 %), "
+   "HAND_RIGHT: the stair void residue stays in the room face",
+   "commit 5592692 (T-116 STAIR_FLOOR_RESIDUE_V1): engine/source/stair_floor_residue.py:142 face_residue(), read by "
+   "no released method; wired in ARCH_TAKEOFF_V3.0 (T-131)"],
+  "ARCH_TAKEOFF_V2.9: on FIN.FLOOR.PORCELAIN / FIN.FLOOR.WET_TILE / ARCH.SPACE lines",
+  "ARCH_TAKEOFF_V3.0 stair-residue piece (READY)",
+  "a stair footprint or void inside a room face is not deducted in the released method (verifier-confirmed)", "yes",
+  plan=("T-133",), codes=("FIN.FLOOR.PORCELAIN", "FIN.FLOOR.WET_TILE", "ARCH.SPACE"),
+  note="no census map entry for B2-02 (engine/source/coverage_census.py:23-40): a run always reports it NOT_RUN")
+f("B2-03", "PARTIAL",
+  ["engine/source/arch_floor.py:108 reconcile(): gross floor plate per floor with three balance checks",
+   "engine/source/arch_floor.py:156 gross_floor_plate_m2",
+   "tools/urban_boq_m9.py:252 ARCH_FLOOR_AREAS.json written by every arch run"],
+  "ARCH_TAKEOFF_V2.9: ARCH_FLOOR_AREAS.json (file, not a BOQ line)", "same in every later method",
+  "no BOQ line; no independent check of the plates; no census map entry", "yes",
+  note="development villa released run: gross floor plate GF 284.1465, 1F 209.8017, 2F 55.08 m2, every floor's three "
+       "checks BALANCED (ARCH_FLOOR_AREAS.json of the released run)")
+f("B2-04", "IMPLEMENTED_NOT_INTEGRATED",
+  ["engine/source/arch_v213.py:223 typed_zones(): an open-plan wet zone measured from its printed size typed in "
+   "the project data file (owner Q-37 A, Q-17 A)",
+   "commit 2264938 (T-120 ARCH_TAKEOFF_V2.13, verifier run 44): pantry 4.50 x 3.00 m = 13.50 m2, 2 rolls, re-checked",
+   "commit 8c23eea (T-114, verifier run 41): pantry cutting plan by hand"],
+  "none (ARCH_TAKEOFF_V2.9 holds the zone)", "ARCH_TAKEOFF_V2.13 (opt-in)",
+  "a zone needs its printed size typed by a reviewer; not in the released method", "yes")
+f("B2-05", "PARTIAL",
+  ["engine/source/arch_floor.py:65 split_face(): voids and stair treads split out of a face in the released route",
+   "engine/source/arch_measure.py:434 FIN.CEILING over a void",
+   "commit c1f0467 (T-113, verifier run 40): a stair void residue left inside the first-floor living face (+6.281 m2)",
+   "commit 5592692 (T-116): stair_floor_residue.py read by no released method"],
+  "ARCH_TAKEOFF_V2.9 (floor-area categories VOID / STAIR_FLIGHTS in ARCH_FLOOR_AREAS.json)",
+  "ARCH_TAKEOFF_V3.0 stair-residue piece (READY)",
+  "void residues inside room faces (verifier-confirmed defect); double heights not measured as a line", "yes",
+  plan=("T-133",))
+
+f("B3-01", "PARTIAL",
+  ["engine/source/arch_measure.py:381 FIN.FLOOR.PORCELAIN per dry room",
+   "commit c1f0467 (T-113, verifier run 40): first-floor living +16.3 % HAND_RIGHT (stair void residue)",
+   "commit 4ae3a68 (T-122, verifier run 45): first-floor porcelain 33.594 .. 33.711 m2 under owner Q-66 B (research)"],
+  "ARCH_TAKEOFF_V2.9: FIN.FLOOR.PORCELAIN", "ARCH_TAKEOFF_V3.0 stair-residue piece (READY)",
+  "rooms with a stair void / landing inside them (verifier-confirmed); no printed tile size, so the tile count "
+  "(engine/source/tile_count.py, commit 8de2a21) holds every room", "yes", plan=("T-133",),
+  codes=("FIN.FLOOR.PORCELAIN",))
+f("B3-02", "PARTIAL",
+  ["engine/source/arch_measure.py:381 FIN.FLOOR.WET_TILE per wet room",
+   "commit 8fcabe0 (T-010 wet / dry from the room label and fixtures, verifier run 22): read by ARCH_TAKEOFF_V2.11 "
+   "and later only (engine/source/arch_v211.py:105 wet_classes)"],
+  "ARCH_TAKEOFF_V2.9: FIN.FLOOR.WET_TILE (wet rooms merged into dry zones where the label is ambiguous)",
+  "ARCH_TAKEOFF_V2.11 .. V2.13 (wet / dry evidence)",
+  "the released method misses wet rooms that only the fixtures identify", "yes", codes=("FIN.FLOOR.WET_TILE",))
+f("B3-03", "IMPLEMENTED_NOT_INTEGRATED",
+  ["engine/source/marble_thresholds.py exists (research engine, read by no method)",
+   "commit 4ae3a68 (T-122, verifier run 45): first-floor landing marble 4.875 m2 by hand (research only)"],
+  "none", "none", "no marble floor line except stair landings (B7-04)", "no", plan=("T-133",))
+f("B3-04", "PARTIAL",
+  ["engine/source/owner_finish_scope.py:136 the wet-area doorway marble threshold (owner scope, knowledge 1.0.0+)",
+   "engine/source/surface_ledger.py:115 the threshold row of a door"],
+  "ARCH_TAKEOFF_V2.9: FIN.MARBLE.THRESHOLD", "same in every later method",
+  "census gap: FIN.MARBLE.THRESHOLD is not mapped to B3-04 (engine/source/coverage_census.py:23-40)", "yes",
+  codes=("FIN.MARBLE.THRESHOLD",))
+f("B3-05", "IMPLEMENTED_NOT_INTEGRATED",
+  ["engine/source/finish_materials_table.py:1 the cement-sand bed under tiles as a range (owner Q-45), roof / balcony "
+   "screed HELD (owner Q-41, thickness not given)",
+   "commit 6002856 (T-086, verifier run 30): new files only, read by no method"],
+  "none", "none", "no BOQ line; screed thickness on roofs not given (Q-41)", "no")
+f("B3-06", "PARTIAL",
+  ["engine/source/arch_measure.py:506-557 FIN.SKIRTING per room (released, bounded or held)",
+   "commit a51bdca (T-106 skirting deduction audit, verifier run 40): all released nets right; 20 of 28 lines do "
+   "not list 17.035 m of deductions; engine/source/skirting_deduction_audit.py:196 audit() read by no method"],
+  "ARCH_TAKEOFF_V2.9: FIN.SKIRTING", "none",
+  "listed deductions do not add back on 20 lines (T-118 queued); door closures without a door id", "yes",
+  codes=("FIN.SKIRTING",))
+f("B3-07", "IMPLEMENTED_NOT_INTEGRATED",
+  ["engine/source/trade_strips.py exists (research engine, read by no method)",
+   "the released route emits ARCH.THRESHOLD doorway strips (engine/source/surface_ledger.py:78) as BLOCKED_RFI "
+   "(owner decision Q-S6-1 open): geometry, not a profile line"],
+  "none (ARCH.THRESHOLD strips held)", "none", "no profile / transition-strip line", "no")
+
+f("B4-01", "PARTIAL",
+  ["engine/source/arch_measure.py:639-681 FIN.WALL.TILE in the wall-finish loop of every wet room",
+   "commit a703655 (T-112, verifier run 40): wall heights by the owner method and from the drawing (research)"],
+  "ARCH_TAKEOFF_V2.9: FIN.WALL.TILE (every line BLOCKED_RFI without an established height)", "same",
+  "height not established (owner Q-48 A / Q-52): every development-villa line held", "yes", codes=("FIN.WALL.TILE",))
+f("B4-02", "NOT_IMPLEMENTED", [NONE_EMITTED], "none", "none", "kitchen / laundry tiled zones not measured", "no")
+f("B4-03", "PARTIAL",
+  ["engine/source/arch_measure.py:639-681 FIN.PLASTER per room face",
+   "engine/source/arch_measure.py:195 _wall_finish_rs(): net from the room's own boundary",
+   "commit d52b5dd (T-081-r2 room levels V2 + finish height V2, verifier run 30): engine/source/finish_height_v2.py:173 "
+   "room_heights() read by no method",
+   "commit a703655 (T-112, verifier run 40): owner method 234.17 m2 on 4 verified dry rooms (research)"],
+  "ARCH_TAKEOFF_V2.9: FIN.PLASTER", "none",
+  "most walls held without an established height; the owner manual method is not wired", "yes",
+  codes=("FIN.PLASTER",))
+f("B4-04", "PARTIAL",
+  ["tools/urban_boq_m9.py:1260 _v29_facade(): facade outline run per floor and area (UP-FACADE-001)",
+   "tools/urban_boq_m9.py:2704 FACADE.json",
+   "commit 5476226 (T-014 facade gap closure, verifier run 39): engine/source/facade_gap_closure.py read only by "
+   "engine/source/facade_passage_walls.py",
+   "commit 4fddf74 (T-109 passage walls) + 6699bb6 (T-123, verifier run 45): ground-floor run 98.887 -> 105.887 m "
+   "(hand right), wired in ARCH_TAKEOFF_V3.0"],
+  "ARCH_TAKEOFF_V2.9: ARCH.FACADE_RUN (lm), ARCH.FACADE (m2), FIN.EXT.FINISH (held without a specification)",
+  "ARCH_TAKEOFF_V3.0 passage piece (READY)",
+  "the external finish is held without a stated specification; facade m2 held", "yes", plan=("T-133",),
+  codes=("ARCH.FACADE_RUN", "ARCH.FACADE", "FIN.EXT.FINISH"))
+f("B4-05", "NOT_IMPLEMENTED", [NONE_EMITTED], "none", "none", "spatter dash not measured", "no")
+f("B4-06", "PARTIAL",
+  ["engine/source/arch_measure.py:639-681 FIN.PAINT per room face",
+   "engine/source/surface_ledger.py:155 in wet rooms paint only above the tile"],
+  "ARCH_TAKEOFF_V2.9: FIN.PAINT", "none",
+  "every development-villa paint line held (height) or not applicable (wet rooms tiled full height)", "yes",
+  codes=("FIN.PAINT",))
+f("B4-07", "PARTIAL",
+  ["tools/urban_boq_m9.py:1260 _v29_facade(): FIN.EXT.FINISH line per floor, held without a specification"],
+  "ARCH_TAKEOFF_V2.9: FIN.EXT.FINISH (held)", "ARCH_TAKEOFF_V3.0 passage piece (READY, run length only)",
+  "no specification read; the line is always held", "yes", plan=("T-133",), codes=("FIN.EXT.FINISH",))
+f("B4-08", "NOT_IMPLEMENTED",
+  [NONE_EMITTED + "; engine/source/arch_v28.py:766 ARCH.WINDOW_REVEAL is the window strip as geometry (floor / sill "
+   "status), not a reveal or return finish line"],
+  "none", "none", "reveals and returns not measured as a finish", "no")
+f("B4-09", "IMPLEMENTED_NOT_INTEGRATED", ["engine/source/corner_bead.py exists (research engine, read by no method)"],
+  "none", "none", "not in any method", "no")
+f("B4-10", "IMPLEMENTED_NOT_INTEGRATED", ["engine/finishes_rules.py exists (idle arithmetic, read by no method)"],
+  "none", "none", "not in any method", "no")
+f("B4-11", "NOT_IMPLEMENTED", [NONE_EMITTED], "none", "none", "cladding not measured", "no")
+
+f("B5-01", "PARTIAL",
+  ["engine/source/arch_measure.py:418 FIN.CEILING per room (physical ceiling area, no material)",
+   "engine/source/arch_measure.py:337 stairwell ceiling; :434 ceiling over a void",
+   "defect O-P8-02 (by design): every ceiling line is PROVISIONAL, the ceiling type is not in a plan"],
+  "ARCH_TAKEOFF_V2.9: FIN.CEILING", "same",
+  "ceiling material / type (BLOCKED_BY_SOURCE: RCP); ceilings over outside air (owner Q-68)", "yes",
+  codes=("FIN.CEILING",), note="1.0.0 said NOT_IMPLEMENTED; the released run quantifies it")
+for c, src in (("B5-02", "RCP, spec"), ("B5-03", "RCP"), ("B5-04", "RCP, sections"), ("B5-05", "RCP")):
+    f(c, "BLOCKED_BY_SOURCE", [NONE_EMITTED], "none", "none", f"needs {src}", "no")
+
+f("B6-01", "PARTIAL",
+  ["engine/source/arch_measure.py:698-755 one pcs line per jambed opening (ARCH.DOOR / WINDOW / PASSAGE)",
+   "tools/urban_boq_m9.py:2575 _v21_doors(): door counts replaced by the owner door classes",
+   "engine/source/arch_v29.py:277 curved_openings(): curved wall openings read as openings",
+   "commit c564481 (T-077 opening omission guard), 2dee954 (T-082 heights from vector PDF elevations): read by no "
+   "released method"],
+  "ARCH_TAKEOFF_V2.9: ARCH.WINDOW, ARCH.PASSAGE, DOOR.* (ARCH.DOOR replaced by the door classes)", "same",
+  "opening heights and m2 (B6-02..04)", "yes",
+  codes=("ARCH.DOOR", "ARCH.WINDOW", "ARCH.PASSAGE", "DOOR.INTERNAL.PVC", "DOOR.EXTERNAL.ALUMINIUM",
+         "DOOR.MAIN_ENTRANCE"))
+f("B6-02", "PARTIAL",
+  ["engine/source/door_model.py:54 DOOR.INTERNAL.PVC class (owner door classes 2026-10-13)",
+   "tools/urban_boq_m9.py:2575 _v21_doors() releases the class count",
+   "commit 5f07bf0 (T-078 door / window m2 from printed dimensions): engine/source/opening_area.py:304 measure() "
+   "read only by engine/source/opening_height_pdf.py, by no method"],
+  "ARCH_TAKEOFF_V2.9: DOOR.INTERNAL.PVC (pcs)", "same",
+  "door m2 not released (no printed height wired); census gap: DOOR.* are counted under B6-01 only", "yes",
+  codes=("DOOR.INTERNAL.PVC",), note="1.0.0 said NOT_IMPLEMENTED; the released run counts the class")
+f("B6-03", "PARTIAL",
+  ["engine/source/door_model.py:54 DOOR.EXTERNAL.ALUMINIUM / DOOR.MAIN_ENTRANCE classes",
+   "tools/urban_boq_m9.py:2575 _v21_doors()"],
+  "ARCH_TAKEOFF_V2.9: DOOR.EXTERNAL.ALUMINIUM, DOOR.MAIN_ENTRANCE (pcs)", "same",
+  "steel doors not a class; m2 not released; census gap as B6-02", "yes",
+  codes=("DOOR.EXTERNAL.ALUMINIUM", "DOOR.MAIN_ENTRANCE"))
+f("B6-04", "PARTIAL",
+  ["engine/source/arch_measure.py:698 ARCH.WINDOW count",
+   "engine/source/arch_v28.py:766 window strip from the opening schedule (width, height, sill)",
+   "engine/source/arch_v29.py:277 curved glazing as openings",
+   "commit 5f07bf0 (T-078): window m2 from printed dimensions, read by no method"],
+  "ARCH_TAKEOFF_V2.9: ARCH.WINDOW (pcs)", "same",
+  "window m2 not released (the freelancer's m2 line is unit-refused); census gap as B6-02", "yes",
+  codes=("ARCH.WINDOW",))
+f("B6-05", "NOT_IMPLEMENTED", [NONE_EMITTED], "none", "none", "shutters not measured", "no")
+f("B6-06", "EXPERIMENTAL", ["engine/elevator_marble.py exists (round 6 research, read by no method)"],
+  "none", "none", "not in any method", "no")
+f("B6-07", "EXPERIMENTAL", ["engine/elevator_marble.py exists (round 6 research, read by no method)"],
+  "none", "none", "not in any method", "no")
+
+f("B7-01", "PARTIAL",
+  ["engine/source/arch_measure.py:876 _stair_lines() per drawn flight; :930 FIN.STAIR.FLIGHT",
+   "engine/source/arch_measure.py:829 _seen_below(): a flight seen below the cut is not measured again",
+   "commit 1513f1d (T-129, verifier run 46): the first -> second floor lower flight is counted again on the second-"
+   "floor plan (+3.45 m2 tread marble, +11.5 lm steps)"],
+  "ARCH_TAKEOFF_V2.9: FIN.STAIR.FLIGHT (held) and the stair finish lines", "none",
+  "a flight drawn on two plans counted twice (verifier-confirmed); flight length held", "yes", plan=("T-135",),
+  codes=("FIN.STAIR.FLIGHT",))
+f("B7-02", "PARTIAL",
+  ["engine/source/arch_measure.py:899 FIN.MARBLE.TREAD from the tread polygons",
+   "commit 1513f1d (T-129, verifier run 46): +3.45 m2 counted twice on the second floor"],
+  "ARCH_TAKEOFF_V2.9: FIN.MARBLE.TREAD", "none", "double-counted flight; round stair held (owner Q-50)", "yes",
+  plan=("T-135",), codes=("FIN.MARBLE.TREAD",), note="1.0.0 said EXPERIMENTAL; the released run quantifies it")
+f("B7-03", "PARTIAL",
+  ["engine/source/arch_measure.py:922 / :950 FIN.MARBLE.RISER (UP-STAIR-003), held without the tread thickness"],
+  "ARCH_TAKEOFF_V2.9: FIN.MARBLE.RISER (held)", "none", "tread marble thickness not given: every line held", "yes",
+  codes=("FIN.MARBLE.RISER",))
+f("B7-04", "PARTIAL",
+  ["engine/source/arch_measure.py:965 _landing(): FIN.MARBLE.LANDING as a bounded range",
+   "commit 4ae3a68 (T-122) and 1513f1d (T-129): landings by hand, counted once (research, verifier runs 45 / 46)"],
+  "ARCH_TAKEOFF_V2.9: FIN.MARBLE.LANDING (bounded)", "none",
+  "landing polygons not settled (owner Q-66 B, Q-70 A); the hand result is not wired", "yes", plan=("T-133",),
+  codes=("FIN.MARBLE.LANDING",))
+f("B7-05", "EXPERIMENTAL", ["engine/stair_assembly.py exists (NOSING_LENGTH, research, read by no method)"],
+  "none", "none", "not in any method", "no")
+f("B7-06", "PARTIAL",
+  ["engine/source/arch_measure.py:902 FIN.STAIR.STEP_LM: sum of the physical step widths (owner Q-19)"],
+  "ARCH_TAKEOFF_V2.9: FIN.STAIR.STEP_LM", "none", "same double count as B7-02 (T-129)", "yes", plan=("T-135",),
+  codes=("FIN.STAIR.STEP_LM",))
+f("B7-07", "IMPLEMENTED_NOT_INTEGRATED", ["engine/finishes_rules.py exists (zigzag skirting, idle arithmetic)"],
+  "none", "none", "not in any method", "no")
+f("B7-08", "IMPLEMENTED_NOT_INTEGRATED", ["engine/finishes_rules.py exists (sloped skirting, idle)"],
+  "none", "none", "not in any method", "no")
+f("B7-09", "PARTIAL",
+  ["engine/source/arch_measure.py:938-954 FIN.RAILING per open side: sqrt(plan path^2 + rise^2) (UP-STAIR-012)"],
+  "ARCH_TAKEOFF_V2.9: FIN.RAILING (held)", "none", "open sides not established: every development-villa line held",
+  "yes", codes=("FIN.RAILING",), note="1.0.0 said NOT_IMPLEMENTED; the released route emits the line (held)")
+f("B7-10", "NOT_IMPLEMENTED",
+  ["FIN.HANDRAIL is defined (engine/source/boq_line.py:91) but no module emits it (grep of engine/ and tools/)"],
+  "none", "none", "not measured", "no")
+f("B7-11", "BLOCKED_BY_SOURCE", [NONE_EMITTED], "none", "none", "needs a specification", "no")
+f("B7-12", "PARTIAL",
+  ["engine/source/generic_route.py:1921 _stair_items(); :1995 STAIRS concrete in route G",
+   "docs/agents SCOREBOARD (verifier, released run): stair + dome concrete compared line UNRESOLVED (owner Q-12)",
+   "agents/task-T-105 7975663 READY (stair concrete V1 + ledger V3 rework), not merged; round stair HELD (owner Q-50 / "
+   "Q-51)"],
+  REL + ": STR.CONC.STAIR", "none",
+  "flight-by-flight stair concrete not wired (T-105 READY); round stair and winders held", "yes",
+  plan=("T-105", "T-133"), codes=("STR.CONC.STAIR",),
+  note="1.0.0 said INTEGRATED_AND_TESTED; lowered: the stair line is UNRESOLVED on the development villa and the "
+       "stair piece that replaces it is not merged")
+f("B7-13", "NOT_IMPLEMENTED",
+  [NONE_EMITTED + "; engine/source/stair_geometry.py INCLINED_WAIST_SURFACE_AREA is structural geometry, not a trade"],
+  "none", "none", "no formwork trade", "no")
+f("B7-14", "BLOCKED_BY_SOURCE", ["route G gives stair concrete without a bar model (coverage census B11-03)"],
+  "none", "none", "needs bar details", "no")
+
+f("B8-01", "PARTIAL",
+  ["engine/source/arch_measure.py:560 FIN.WP.FLOOR per wet room",
+   "engine/source/waterproofing_system.py:284 areas_from_floor() (ARCH_TAKEOFF_V2.4+ system)",
+   "commit 8fcabe0 (T-010, verifier run 22): wet / dry evidence 72.12 m2 vs the released 62.773 m2 (wet rooms "
+   "merged into dry zones in the released method)",
+   "commit 9f14742 (T-093 ARCH_TAKEOFF_V2.11, verifier run 32); commit 2264938 (V2.13, verifier run 44: 85.62 m2 "
+   "with the typed pantry zone)"],
+  "ARCH_TAKEOFF_V2.9: FIN.WP.FLOOR", "ARCH_TAKEOFF_V2.11 .. V2.13",
+  "the released method misses wet rooms identified by fixtures (verifier-confirmed)", "yes",
+  codes=("FIN.WP.FLOOR",), note="1.0.0 said IMPLEMENTED_NOT_INTEGRATED; the released route emits the line")
+f("B8-02", "PARTIAL",
+  ["engine/source/arch_measure.py:571 / :602 FIN.WP.DOORWAY per doorway",
+   "engine/source/surface_ledger.py:134 FIN.WP.DOORWAY_TRANSITION by detail (bounded until the detail is chosen)",
+   "engine/source/arch_v211.py:494 door_transition_lines(): one transition per door (opt-in)"],
+  "ARCH_TAKEOFF_V2.9: FIN.WP.DOORWAY, FIN.WP.DOORWAY_TRANSITION (bounded)", "ARCH_TAKEOFF_V2.11 .. V2.13",
+  "doorway detail not chosen: transitions bounded", "yes",
+  codes=("FIN.WP.DOORWAY", "FIN.WP.DOORWAY_TRANSITION"),
+  cand_codes=("FIN.WP.DOORWAY", "FIN.WP.DOORWAY_TRANSITION", "FIN.WP.DOORWAY_TRANSITION_NR"))
+f("B8-03", "PARTIAL",
+  ["engine/source/waterproofing_system.py:905-910 FIN.WP.WALL_UPTURN on eligible wall boundaries (UP-WP-002)",
+   "engine/source/surface_ledger.py:142 the V2.4+ ledger replaces FIN.WP.UPTURN by FIN.WP.WALL_UPTURN",
+   "engine/source/arch_measure.py:615 FIN.WP.UPTURN (ARCH_TAKEOFF_V1 .. V2.3 path only)"],
+  "ARCH_TAKEOFF_V2.9: FIN.WP.WALL_UPTURN", "ARCH_TAKEOFF_V2.11 .. V2.13",
+  "census gap: B8-03 maps to FIN.WP.UPTURN only (engine/source/coverage_census.py:31), so the released run reports "
+  "it NOT_FOUND_IN_SOURCE although 14 wall-upturn lines are released", "yes",
+  codes=("FIN.WP.WALL_UPTURN", "FIN.WP.UPTURN"),
+  note="1.0.0 text '7 conflicting implementations (C01)': the released route uses one (waterproofing_system); the "
+       "membrane fold versions V2..V5 lay strips, they do not re-measure the upturn area")
+f("B8-04", "NOT_IMPLEMENTED", [NONE_EMITTED], "none", "none", "shower extents and tanking height not read", "no")
+f("B8-05", "IMPLEMENTED_NOT_INTEGRATED",
+  ["engine/source/arch_v211.py:568 rolls_lines(): FIN.WP.MEMBRANE_ROLLS per wet area / roof (owner Q-49 A strips)",
+   "engine/source/arch_v213.py:86 prove_q58_a(); :413 rolls_lines()",
+   "commit 9f14742 (T-093 V2.11, verifier run 32: wet areas 19 rolls = hand); 54bd6a4 (T-096 V2.12, run 35); "
+   "2264938 (T-120 V2.13, run 44: second-floor roof 17 rolls under Q-58 A, placement re-checked); f47ae01 (T-124 "
+   "MEMBRANE_FOLD_V5, read by no method)",
+   "engine/source/membrane_layout.py:1 exact roll plan per rectangular wet room in the released route; "
+   "engine/source/coverage_census.py:108 it is a procurement view, never a BOQ "
+   "line (coverage census)"],
+  "ARCH_TAKEOFF_V2.9: procurement roll view only (no BOQ line)", "ARCH_TAKEOFF_V2.11 .. V2.13",
+  "the owner strip method's roll lines are opt-in only; MEMBRANE_FOLD_V5 not wired", "yes", plan=("T-133",),
+  codes=(), cand_codes=("FIN.WP.MEMBRANE_ROLLS",),
+  note="1.0.0 said NOT_IMPLEMENTED (single factor)")
+f("B8-06", "IMPLEMENTED_NOT_INTEGRATED",
+  ["engine/source/arch_v211.py:227 roof_records(); :527 roof_lines(): FIN.WP.ROOF inside the parapet + "
+   "FIN.WP.ROOF_UPTURN",
+   "commit 4054509 (T-071 exterior spaces, verifier 2026-10-19); 9f14742 (V2.11, verifier run 32)"],
+  "none (ARCH_TAKEOFF_V2.9 has no roof waterproofing line)", "ARCH_TAKEOFF_V2.11 .. V2.13",
+  "opt-in only; the top roof is held", "yes", codes=(),
+  cand_codes=("FIN.WP.ROOF", "FIN.WP.ROOF_UPTURN"))
+f("B8-07", "NOT_IMPLEMENTED", [NONE_EMITTED], "none", "none", "terraces / planters not measured", "no")
+f("B8-08", "NOT_IMPLEMENTED", [NONE_EMITTED], "none", "none", "below-grade waterproofing not measured", "no")
+f("B8-09", "BLOCKED_BY_SOURCE", [NONE_EMITTED], "none", "none", "needs details", "no")
+
+f("B9-01", "PARTIAL",
+  ["engine/source/arch_measure.py:789 _wall_lines(): ARCH.WALL_RUN by thickness (PROVISIONAL); :811 MAS.BLOCK held",
+   "tools/urban_boq_m9.py:1158 _v29_masonry(): ARCH.WALL_PANEL m2 / ARCH.WALL_VOLUME m3 from height evidence",
+   "commit 2dc1657 (T-027 masonry centreline, verifier run 39) and bc21314 (T-117 vs hand): "
+   "engine/source/masonry_centreline.py:212 measure() read by no method",
+   "commit 79bd397 (T-103 wall metres by hand, verifier run 37)"],
+  "ARCH_TAKEOFF_V2.9: ARCH.WALL_RUN, ARCH.WALL_PANEL, ARCH.WALL_VOLUME, MAS.BLOCK", "none",
+  "panel m2 / m3 held (owner Q-60 height not wired); block type per wall (Q-65); census gap: B9-01 maps to MAS.BLOCK "
+  "only", "yes", plan=("T-125", "T-108"),
+  codes=("ARCH.WALL_RUN", "ARCH.WALL_PANEL", "ARCH.WALL_VOLUME", "MAS.BLOCK"),
+  note="1.0.0 said EXPERIMENTAL (qs_core.masonry research)")
+f("B9-02", "INTEGRATED_AND_TESTED",
+  ["engine/source/generic_route.py:2030 _lintel_items(); :2061 LINTELS concrete in route G"],
+  REL + ": STR.CONC.LINTEL", "none",
+  "development villa: no lintel evidence found (census NOT_FOUND_IN_SOURCE, not proof of absence)", "yes",
+  codes=("STR.CONC.LINTEL",))
+f("B9-03", "NOT_IMPLEMENTED", [NONE_EMITTED], "none", "none", "mesh at joints not measured", "no")
+f("B9-04", "NOT_IMPLEMENTED",
+  [NONE_EMITTED + "; block mortar from the mix is QUEUED (T-115); finish_materials_table.py covers tile beds only"],
+  "none", "none", "block mortar / glue not measured", "no")
+f("B9-05", "PARTIAL", ["M8 parapet bound (RC 0..high) in route G family coverage (PARAPETS, B10-12)"],
+  "none as a block line", "none", "block parapets not measured (owner Q-65 block type)", "no")
+
+f("B10-01", "PARTIAL",
+  ["engine/source/generic_route.py:1374 _blinding_items(); :1448 PLAIN_CONCRETE in route G",
+   "commit 5fe31ca (T-100 by hand, verifier run 40): blinding scope by member family differs from route G",
+   "commit cd34bd0 (T-126 route G scope V1, verifier run 46): engine/source/route_g_scope_v1.py:276 "
+   "blinding_scope() read by no method (opt-in: 15.179 m3 released + held)"],
+  REL + ": STR.CONC.BLINDING", "none",
+  "development villa: one bounded line only; the member-family scope piece is not wired", "yes", plan=("T-133",),
+  codes=("STR.CONC.BLINDING",),
+  note="1.0.0 said INTEGRATED_AND_TESTED; lowered on the verifier's T-100 / T-126 findings")
+f("B10-02", "INTEGRATED_AND_TESTED",
+  ["engine/source/generic_route.py:509 FOOTINGS concrete in route G",
+   "commit 8774071 (T-058 strip guard) and 9671133 (T-060 ledger V2): footing band pieces read by no method"],
+  REL + ": STR.CONC.FOOTING", "none",
+  "footing edge band held (owner Q-28) in the unwired ledger; compared line UNRESOLVED (owner Q-12)", "yes",
+  codes=("STR.CONC.FOOTING",))
+f("B10-03", "PARTIAL", ["engine/source/generic_route.py:1268 _neck_items(); :1295 necks (FOUNDATION COLUMNS)"],
+  REL + ": STR.CONC.NECK", "none", "neck height bounded from printed levels", "yes", codes=("STR.CONC.NECK",))
+f("B10-04", "PARTIAL",
+  ["engine/source/generic_route.py:160 _straps(); :769 GROUND_BEAMS in route G",
+   "commit c874c7b (T-073 plot-edge members, verifier run 33): straps 3.390 m3 measured, ENGINE_RIGHT; wired in "
+   "ARCH_TAKEOFF_V3.0 (T-131)"],
+  REL + ": STR.CONC.STRAP, STR.CONC.GROUND_BEAM", "ARCH_TAKEOFF_V3.0 strap piece (READY)",
+  "every development-villa ground-beam line bounded; band held (owner Q-28)", "yes",
+  codes=("STR.CONC.STRAP", "STR.CONC.GROUND_BEAM"),
+  note="1.0.0 said INTEGRATED_AND_TESTED; lowered: the released route releases no ground-beam quantity on the "
+       "development villa")
+f("B10-05", "PARTIAL", ["engine/source/generic_route.py:1095-1214 GROUND_SLAB / SLABS in route G"],
+  REL + ": STR.CONC.GROUND_SLAB", "none", "two pieces bounded", "yes", codes=("STR.CONC.GROUND_SLAB",))
+f("B10-06", "PARTIAL",
+  ["engine/source/generic_route.py:689 COLUMNS concrete in route G",
+   "commit 5fe31ca (T-100, verifier run 40): columns at the full storey interval 34.446 m3 vs 36.711 m3 from the typed "
+   "values: 5 columns no upper slab plan draws (HAND_RIGHT)",
+   "commit b87f4d6 (T-075 column schedule text rows), 8ceeeb2 (T-064 project data file), cd34bd0 (T-126 "
+   "column_scope, engine/source/route_g_scope_v1.py:161): read by no released method"],
+  REL + ": STR.CONC.COLUMN", "none",
+  "every development-villa column line BLOCKED_RFI (no machine-read section); typed values not wired", "yes",
+  plan=("T-133", "T-119"), codes=("STR.CONC.COLUMN",),
+  note="1.0.0 said INTEGRATED_AND_TESTED; lowered: no column quantity is released on the development villa and the "
+       "verifier found phantom columns in the typed path")
+f("B10-07", "PARTIAL",
+  ["engine/source/generic_route.py:856 BEAMS concrete in route G",
+   "commit cb4a66f (T-085 beam binding V2, verifier run 32): about +4.30 m3 of beam concrete once wired; read by "
+   "no method",
+   "commit 575df66 (T-110 beam member register, verifier run 45, research); owner Q-61 C member by member",
+   "agents/task-T-105 7975663 READY (concrete ledger V3), not merged"],
+  REL + ": STR.CONC.BEAM", "none", "24 spans bounded; beam binding V2 / ledger V3 not wired", "yes",
+  plan=("T-105", "T-102", "T-133"), codes=("STR.CONC.BEAM",),
+  note="1.0.0 said INTEGRATED_AND_TESTED; lowered: spans held and a verified binding correction not wired")
+f("B10-08", "INTEGRATED_AND_TESTED", ["engine/source/generic_route.py:1095-1214 SLABS concrete in route G"],
+  REL + ": STR.CONC.SLAB", "none", "one piece bounded", "yes", codes=("STR.CONC.SLAB",))
+f("B10-09", "PARTIAL", ["route G DOMES family (engine/source/boq_line.py:113 ROUTE_G_FAMILY)"],
+  REL + ": STR.CONC.DOME", "none", "stair + dome compared concrete line UNRESOLVED on the development villa (owner Q-12)", "yes", codes=("STR.CONC.DOME",))
+f("B10-10", "PARTIAL",
+  ["route G POOL / WATER_TANK / LIFT families (engine/source/boq_line.py:113)",
+   "commit 15de9c4 (T-057 pool check list), fd0d5dd (T-048 curved pool strips): read by no released method"],
+  REL + ": STR.CONC.POOL, STR.CONC.TANK, STR.CONC.LIFT", "none",
+  "pool compared line UNRESOLVED (owner Q-12); pool floor term FREELANCER_RIGHT (verifier 2026-10-19)", "yes",
+  codes=("STR.CONC.POOL", "STR.CONC.TANK", "STR.CONC.LIFT"))
+f("B10-11", "PARTIAL", ["route G BOUNDARY_WALL family (engine/source/boq_line.py:113)",
+                        "commit c874c7b (T-073): plot-edge members separated from the band (piece)"],
+  REL + ": STR.CONC.BOUNDARY_WALL", "none", "fence / boundary split not settled (owner Q-28)", "yes",
+  codes=("STR.CONC.BOUNDARY_WALL",))
+f("B10-12", "PARTIAL", ["route G PARAPETS family coverage: BOUNDED_NOT_MEASURED (exposure range only)"],
+  REL + ": family coverage PARAPETS (bounded)", "none", "RC parapets not measured", "yes",
+  codes=("STR.CONC.PARAPET",))
+f("B10-13", "NOT_IMPLEMENTED", [NONE_EMITTED + " (no FORMWORK trade)"], "none", "none", "formwork not measured", "no")
+
+f("B11-01", "PARTIAL",
+  ["route G bar models: engine/source/generic_route.py:1838 footings, :1779 ground beams, :2251 beams, :2297 slabs",
+   "STR.REBAR from engine/source/boq_line.py:327"],
+  REL + ": STR.REBAR (PROVISIONAL bar models)", "none",
+  "rebar by bar population not built (T-136 first slice); 30 lines held", "yes", plan=("T-136",),
+  codes=("STR.REBAR",))
+f("B11-02", "PARTIAL", ["engine/source/bbs_optimiser.py exists (route G, partial)"],
+  "none as a BOQ line", "none", "no bar-mark schedule output", "no")
+f("B11-03", "BLOCKED_BY_SOURCE",
+  ["coverage census of the released run: MISSING_DATA, concrete lines of these families carry no bar model"],
+  "none", "none", "needs bar details", "no")
+f("B11-04", "IMPLEMENTED_NOT_INTEGRATED", ["URBAN-REBAR-NET-AND-PROCUREMENT@v1 (research)"],
+  "none", "none", "not in any method", "no")
+
+f("B12-01", "EXPERIMENTAL",
+  ["engine/sanitary_source.py exists (research); the fixture reading feeds only the wet / dry evidence of "
+   "ARCH_TAKEOFF_V2.11+ (engine/source/arch_v211.py:105), never a fixture count line"],
+  "none", "none", "no fixture count line", "no")
+for c, src in (("B12-02", "MEP plans"), ("B12-03", "electrical plans"), ("B12-04", "HVAC plans"),
+               ("B12-05", "LV plans")):
+    f(c, "BLOCKED_BY_SOURCE", [NONE_EMITTED], "none", "none", f"needs {src}", "no")
+f("B13-01", "NOT_IMPLEMENTED",
+  [NONE_EMITTED + "; roof screed held in engine/source/finish_materials_table.py (owner Q-41, thickness not given)"],
+  "none", "none", "roof build-up not measured", "no")
+f("B13-02", "NOT_IMPLEMENTED", [NONE_EMITTED], "none", "none", "paving not measured", "no")
+f("B13-03", "BLOCKED_BY_SOURCE", [NONE_EMITTED], "none", "none", "needs a landscape plan", "no")
+f("B13-04", "NOT_IMPLEMENTED", [NONE_EMITTED], "none", "none", "fencing not measured", "no")
+for c, src in (("B13-05", "details"), ("B13-06", "interior drawings"), ("B13-07", "details")):
+    f(c, "BLOCKED_BY_SOURCE", [NONE_EMITTED], "none", "none", f"needs {src}", "no")
+
+# ---------------------------------------------------------------- checks of the evidence
+import re  # noqa: E402
+
+REF = re.compile(r"((?:engine|tools|tests|research|rules|knowledge)/[\w/.]+\.(?:py|json|md))(?::(\d+)(?:-(\d+))?)?")
+COMMIT = re.compile(r"\b(?:commit|merged|merge)\s+([0-9a-f]{7})\b|\b([0-9a-f]{7}) \(T-")
+
+
+def check_refs(text):
+    bad = []
+    for m in REF.finditer(text):
+        p = REPO / m.group(1)
+        if not p.exists():
+            bad.append(m.group(0))
+            continue
+        if m.group(2):
+            n = len(p.read_text(encoding="utf-8").splitlines())
+            if int(m.group(3) or m.group(2)) > n:
+                bad.append(m.group(0))
+    for m in re.finditer(r"\b([0-9a-f]{7})\b", text):
+        h = m.group(1)
+        if h.isdigit():
+            continue
+        r = subprocess.run(["git", "-C", str(REPO), "cat-file", "-t", h], capture_output=True, text=True)
+        if r.returncode and h != "33f1da2" and h != "7975663":
+            bad.append(h)
+    return bad
+
+
+def run_codes(run):
+    return summ.summ(run)
+
+
+rel = run_codes(RUNS / "v29")
+cand = run_codes(RUNS / "facts" / "V2.13")
+
+
+def snap(o, codes):
+    out = []
+    for k in codes:
+        x = o.get(k)
+        if not x:
+            continue
+        u = ",".join(sorted(x["unit"]))
+        out.append({"item_code": k, "unit": u, "lines": x["n"], "released_lines": x["rel"],
+                    "released_qty": round(x["rel_qty"], 3), "held_lines": x["held"],
+                    "held_bounded_low": round(x["lo"], 3) if x["bounded"] else None,
+                    "held_bounded_high": round(x["hi"], 3) if x["bounded"] else None,
+                    "not_applicable_lines": x["excl"]})
+    return out
+
+
+fams, bad = [], {}
+for old in OLD["families"]:
+    a = A[old["code"]]
+    b = check_refs(" ".join(a["ev"]) + " " + (a["note"] or "") + " " + a["miss"])
+    if b:
+        bad[old["code"]] = b
+    c0, c1 = old["capability"], a["c"]
+    order = OLD["capability_states"]
+    rank = {s: i for i, s in enumerate(order)}
+    change = "UNCHANGED" if c0 == c1 else ("RAISED" if rank[c1] < rank[c0] else "LOWERED")
+    rec = {k: old[k] for k in ("code", "group", "item_en", "item_ar", "unit")}
+    rec.update({
+        "capability": c1, "capability_1_0_0": c0, "capability_change": change,
+        "implementation": old["implementation"] if change == "UNCHANGED" and a["rd"] == "none" else a["rd"],
+        "source_needed": old["source_needed"], "next_slice": old["next_slice"],
+        "evidence": a["ev"], "released_method_reads": a["rd"], "opt_in_readers": a["cand"],
+        "missing": a["miss"],
+        "in_v3_0_candidate": a["v3"], "v3_0_planned_tasks": a["plan"],
+        "development_villa": {"released_run": snap(rel, a["codes"]),
+                              "candidate_run_v2_13": snap(cand, a["cand_codes"])}})
+    if a["note"]:
+        rec["note"] = a["note"]
+    if change != "UNCHANGED" and not any(REF.search(e) or re.search(r"\b[0-9a-f]{7}\b", e) for e in a["ev"]):
+        bad.setdefault(old["code"], []).append("status changed without a file:line or commit")
+    fams.append(rec)
+assert len(fams) == 99 and set(A) == {x["code"] for x in OLD["families"]}, "family set"
+if bad:
+    print(json.dumps(bad, indent=1))
+    sys.exit(1)
+
+seen_rel = sorted(rel)
+seen_cand = sorted(cand)
+doc = {
+    "master": OLD["master"], "version": "1.1.0", "supersedes": "1.0.0 (kept unchanged on disk)",
+    "source": f"re-derived from the code of claude/access-permissions-setup-ii24ws at {HEAD} and from runs of that "
+              "code (task T-130, plan P-02); 1.0.0 was the M9A read-only audit of 8177ccf",
+    "loaded_by": "nothing yet: engine/source/rule_store.py:104 and engine/source/coverage_census.py still read 1.0.0, so "
+                 "no run, census or quantity changes with this file; adopting it is a census version of its own",
+    "capability_states": OLD["capability_states"],
+    "capability_definitions": {
+        "INTEGRATED_AND_TESTED": "the released configuration emits BOQ lines of the family from tested code, and no "
+                                 "verifier-confirmed open defect or unwired verified correction touches that path",
+        "PARTIAL": "the released configuration emits lines (or a run file) of the family, but part of the scope is "
+                   "missing, always held on a known input, or a verifier-confirmed defect / unwired verified "
+                   "correction is open",
+        "IMPLEMENTED_NOT_INTEGRATED": "merged, tested code measures the family, but only an opt-in method or a "
+                                      "standalone piece reads it; the released configuration does not",
+        "EXPERIMENTAL": "research code only (round / P7757 engines), read by no method",
+        "BLOCKED_BY_SOURCE": "needs documents the engine does not read",
+        "NOT_IMPLEMENTED": "no code measures the family"},
+    "released_configuration": REL + " (the scored configuration of docs/agents/SCOREBOARD.md; ARCH_METHODS has no "
+                              "default, tools/urban_boq_m9.py:67; the owner switches the released default)",
+    "v3_0_candidate": V30 + ": ARCH_TAKEOFF_V2.13 + route G + checker-verified pieces (straps T-073, passage walls "
+                      "T-109 / T-123, stair floor residue T-116); 'in_v3_0_candidate' = the family's lines are "
+                      "produced by that candidate; 'v3_0_planned_tasks' = board tasks that change them next",
+    "run_evidence": {
+        "engine_commit": HEAD, "python": "3.11 (project venv from requirements.txt)",
+        "inputs": "the development villa's architectural and structural DXF from the private Drive folder (read-only, "
+                  "never in this repository): sha256 ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4 "
+                  "and 9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079 (= SOURCE_MANIFEST)",
+        "released_run": "tools/urban_boq_m9.py arch --method ARCH_TAKEOFF_V2.9 --structural <ST> --conventions "
+                        "engine/profiles/URBAN_M8_GENERIC_CONVENTIONS_V6.json, no facts file: exit 0, 1455 lines, "
+                        "BOQ_LINES.csv sha256 b96185d468524743e600f1992d4e4b2028193ff4a379961bc5686c9662f8c115",
+        "candidate_run_v2_13": "arch_compute(method ARCH_TAKEOFF_V2.13) with the project inputs of "
+                               "the T-120 runner in research/agents_t120/ (fixture reading, exterior spaces, pantry "
+                               "4.50 x 3.00 m typed record): 579 lines, architectural only",
+        "released_qty": "sum of measured_net over lines in MEASURED / SOURCE_DERIVED / PROVISIONAL; held lines carry "
+                        "no quantity (bounded low / high summed where the line gives a range); missing is never 0",
+        "item_codes_seen": {"released_run": seen_rel, "candidate_run_v2_13": seen_cand}},
+    "census_gaps": [
+        "B8-03: engine/source/coverage_census.py:31 maps FIN.WP.UPTURN only; the V2.4+ methods emit FIN.WP.WALL_UPTURN",
+        "B6-02 / B6-03 / B6-04: DOOR.* and ARCH.WINDOW are counted under B6-01 only (coverage_census.py:35-36)",
+        "B9-01: maps MAS.BLOCK only; ARCH.WALL_RUN / WALL_PANEL / WALL_VOLUME are not counted",
+        "B3-04: FIN.MARBLE.THRESHOLD is not mapped; B2-02 / B2-03 have no entry (always NOT_RUN)",
+        "B5-01, B7-02, B7-06, B8-05: the 1.0.0 capability under-states what the census itself reports QUANTIFIED"],
+    "families": fams,
+}
+out = REPO / "rules/coverage/BOQ_FAMILY_MASTER_1.1.0.json"
+out.write_text(json.dumps(doc, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+from collections import Counter  # noqa: E402
+print(Counter(x["capability"] for x in fams), Counter(x["capability_change"] for x in fams),
+      Counter(x["in_v3_0_candidate"] for x in fams))
