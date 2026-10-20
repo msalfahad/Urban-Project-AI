@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 610 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 611 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2400 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2402 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1315 | pytest suites, one folder per round. |
+| `tests/` | 1316 | pytest suites, one folder per round. |
 | `tools/` | 106 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,7 +387,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (258 modules)
+## `engine/source/` (259 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
@@ -500,6 +500,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `lintel_qto.py` | 218 | CRITICAL | 4 | LINTEL QTO - schedule binding, lintel geometry, bar lengths and counts for masonry-wall lintels (generic). |
 | `lintel_release_audit.py` | 151 | HIGH | 1 | LINTEL RELEASE AUDIT - whether a released lintel's bearing, end supports and measurement have authority (generic). |
 | `marble_thresholds.py` | 125 | MEDIUM | 2 | MARBLE THRESHOLDS (R8.15) - a door threshold whose whole strip is a separate MARBLE_THRESHOLD trade element. |
+| `masonry_centreline.py` | 461 | MEDIUM | 1 | MASONRY CENTRELINE RUN (T-027, MASONRY_CENTRELINE_V1) - the masonry run of one floor per wall thickness, measured |
 | `material_result.py` | 168 | MEDIUM | 7 | MATERIAL RESULT (M9 S1) - what a layout consumes, kept apart from the net BOQ quantity (generic; stdlib). |
 | `material_spec.py` | 146 | HIGH | 10 | MATERIAL SPECIFICATION (M9 S1) - what a material IS, kept apart from how much of it a room needs (generic; stdlib only). |
 | `member_detection.py` | 1143 | CRITICAL | 24 | MEMBER DETECTION (M2) - footings, columns, beams and ground beams of a NEW drawing, with no project register |
@@ -788,9 +789,9 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
 | `__main__.py` | 45 | MEDIUM | 0 | python3 -m tools.synth_villa OUT_DIR [--engine] [--method M]: write the T-019 first-run villas (DXF + truth JSON) |
-| `build.py` | 299 | MEDIUM | 3 | Write a synthetic villa (villas.py) as a DXF and its truth as JSON (T-019). |
-| `compare.py` | 158 | MEDIUM | 3 | Run the architectural engine on a synthetic villa and compare its output with the villa's truth (T-019). |
-| `villas.py` | 218 | MEDIUM | 4 | The three first synthetic villas of T-019 (own geometry, no client drawing). Every coordinate is in metres in the |
+| `build.py` | 299 | MEDIUM | 4 | Write a synthetic villa (villas.py) as a DXF and its truth as JSON (T-019). |
+| `compare.py` | 158 | MEDIUM | 4 | Run the architectural engine on a synthetic villa and compare its output with the villa's truth (T-019). |
+| `villas.py` | 218 | MEDIUM | 5 | The three first synthetic villas of T-019 (own geometry, no client drawing). Every coordinate is in metres in the |
 
 ## `pipeline/` (4 modules)
 
@@ -965,6 +966,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t013_section_binding/` | 1 |
 | `tests/t014_facade_gaps/` | 1 |
 | `tests/t022_room_vocab/` | 1 |
+| `tests/t027_masonry_centreline/` | 1 |
 | `tests/t029_storey_vocab/` | 1 |
 | `tests/t034_arch_v210/` | 1 |
 | `tests/t047_shx_arabic/` | 1 |
@@ -1073,6 +1075,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t014/` | 2 |
 | `research/agents_t016a/` | 1 |
 | `research/agents_t016b/` | 2 |
+| `research/agents_t027/` | 2 |
 | `research/agents_t033/` | 1 |
 | `research/agents_t035/` | 1 |
 | `research/agents_t036/` | 1 |
