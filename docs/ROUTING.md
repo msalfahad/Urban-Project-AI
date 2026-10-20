@@ -319,13 +319,13 @@ Risk **CRITICAL** (recommended validation L4). Ask about: stair, railing, riser,
 
 **Open first:**
 
-- `engine/source/stair_geometry.py` (336 lines, CRITICAL, frozen; imported by 6 directly, 123 transitively)
+- `engine/source/stair_geometry.py` (336 lines, CRITICAL, frozen; imported by 7 directly, 125 transitively)
 - `engine/source/stair_measure.py` (119 lines, CRITICAL, frozen; imported by 3 directly, 74 transitively)
 - `engine/source/arch_measure.py` (1165 lines, HIGH; imported by 17 directly, 50 transitively, SHARED)
 
 **Depends on:** `engine/source/arch_completeness.py`, `engine/source/arch_floor.py`, `engine/source/arch_rooms.py`, `engine/source/arch_v28.py`, `engine/source/boq_line.py`, `engine/source/knowledge.py`, `engine/source/material_result.py`, `engine/source/material_spec.py`, `engine/source/membrane_layout.py`, `engine/source/owner_finish_scope.py`
 
-**Other current modules:** `stair_fit_checks.py`, `stair_generic.py`, `stair_riser_schedule.py`, `stair_scenario_checks.py`
+**Other current modules:** `stair_fit_checks.py`, `stair_generic.py`, `stair_riser_schedule.py`, `stair_scenario_checks.py`, `stair_steps_concrete.py`
 
 **Earlier generations and tools** (check which method uses them before reuse): `engine/stair_assembly.py`, `engine/stair_completeness.py`
 
