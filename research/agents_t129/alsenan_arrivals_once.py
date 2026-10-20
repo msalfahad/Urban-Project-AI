@@ -16,7 +16,7 @@ What it does (no engine or tools file is changed; research output only):
     4. the stair-marble ledger: the finish table's stair rows (research/agents_t086/ALSENAN_FINISH_TABLE.csv) plus the
        two arrival landings, with the treads a flight row counts beyond its goings shown as a possible double count;
     5. the released ARCH_TAKEOFF_V2.9 lines: tread marble and step lm of the second-floor plan against the
-       first-floor lines of the same physical flights (the engine's own cross-plan record calls them STACKED).
+       first-floor lines of the flights the engine pairs them with (its cross-plan record calls them STACKED).
 Usage (Python 3.11; the drawing stays outside the clone):
     python3 -I research/agents_t129/alsenan_arrivals_once.py --dxf <P7757.dxf> --v29 <v29.pkl> \
         --rows-1f <T-122 LIVING_1F_ROWS_Q66B.csv> --out <dir>
@@ -360,7 +360,7 @@ def run(dxf_path, v29_path, rows_1f_path, out):
                          "released_sum_m2": base, "plus_1F_arrival_Q66B_m2": 4.875, "plus_2F_arrival_Q70A_m2": 4.875,
                          "total_m2": marble_q70a},
         "engine_v29_stair_lines_1F_2F": eng, "engine_cross_plan_1F_2F": pairs,
-        "engine_2F_duplicate_tread_m2": dup_tread, "engine_2F_duplicate_step_lm": dup_lm,
+        "engine_2F_tread_m2_on_flights_paired_with_1F": dup_tread, "engine_2F_step_lm_on_flights_paired_with_1F": dup_lm,
     }
     (out / "arrivals_once_summary.json").write_text(json.dumps(summary, indent=1, ensure_ascii=False), encoding="utf-8")
     print(json.dumps(summary, indent=1, ensure_ascii=False))

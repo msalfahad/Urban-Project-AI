@@ -21,7 +21,7 @@ across the stair, y north into the stair).
 | 1F arrival landing (Q-66 B, T-122) | in living 38.96 (porcelain) | in living 44.869 (porcelain) | 4.875 | 4.865 | MEASURED (T-122) |
 | 1F porcelain (T-122) | 38.96 | 44.869 | 33.713 | 33.594 .. 33.711 HELD range | unchanged by this run |
 | Stair marble, finish table + 2 arrivals | 295.44 all stairs (main stair landings 6.2) | - | **49.235** (39.485 + 4.875 + 4.875) | - | sum CONFIRMED; once-only **48.515 .. 49.235 HELD** (section 5) |
-| Engine tread marble / steps of the 1F -> 2F stair drawn again on the 2F plan | - | **6.90 m2 + 23.0 lm counted twice** | 0 | 0 | ENGINE DEFECT (section 6) |
+| Engine tread marble / steps of the 1F -> 2F lower flight drawn again on the 2F plan | - | **3.45 m2 + 11.5 lm counted twice** (6.90 + 23.0 under the second plan reading) | 0 | 0 | ENGINE DEFECT (section 6) |
 
 Owner candidates of Q-70 A, checked: lobby porcelain 3.900 -> **2.500** (the 8.775 it starts from holds 1.400 m2 of wall,
 column and shaft); stair marble 49.240 -> **49.235** (39.49 was 39.485 rounded) as a sum of lines, of which up to 0.72 m2
@@ -96,11 +96,15 @@ printed 4.875, as T-122 did on the first floor.
   (y 1.95 .. 2.00) is landing beyond the printed 195. Both marble; neither porcelain. The 11th tread is already inside
   flight row ST-MS2-U (12 treads counted, section 5). Status CALCULATED, quantity added to any line: 0.
 - 1F (D-13, T-122): same position and size. One correction of T-122's evidence: the walk line on the 1F plan is the
-  first-to-second-floor path, so its arrowhead at y 7.15 marks the arrival at +9.70 (the 2F arrival above), not the edge of
-  the +5.50 floor. At +5.50 the east lane receives the ground-to-first-floor upper flight (ST-MS1-U, 12 risers), whose
-  plan run is not drawn on the 1F plan. The strip lies inside the stair width and inside the printed 330 run, so it is
-  marble in every reading and must never be added to the 4.875 landing (that would count it twice with the flight row).
-  Quantity added to any line: 0; the tread / landing label stays HELD with designer D-13 and the flight ledger T-111.
+  first-to-second-floor path (it starts on the landing in the west lane), so its arrowhead at y 7.15 marks that stair's
+  arrival at +9.70, one storey up, not the edge of the +5.50 floor. At +5.50 the east lane receives the ground-to-first
+  floor upper flight (ST-MS1-U, 12 risers by section A-A). The 1F plan cuts the stair with a break line in the west lane
+  only; by the usual plan convention the east-lane treads (10 drawn goings, y 7.45 .. 10.45) and the winders north of
+  10.45 are that ground-to-first flight seen below the cut, and 11 goings from 10.45 end at 7.15: the same geometry as on
+  the second floor (0.345 the 11th tread, 0.0575 landing). This reading is practice, not a printed note, so the label
+  stays HELD (designer D-13, flight ledger T-111). In every reading the strip lies inside the stair width and the printed
+  330 run: marble, never porcelain, and never to be added to the 4.875 landing (that would count it twice with the flight
+  row). Quantity added to any line: 0.
 
 ## 5. Stair marble ledger, once-only check (m2)
 
@@ -129,19 +133,26 @@ Not checked here: the ground-to-first-floor flights against the stair-hall chain
 
 ## 6. Engine defect found: the second-floor plan's flights are counted as new flights
 
-ARCH_TAKEOFF_V2.9 measures, for the stair face on the second floor, FIN.MARBLE.TREAD 3.45 + 3.45 = **6.90 m2** and
-FIN.STAIR.STEP_LM 11.5 + 11.5 = **23.0 lm** (MACHINE_ONLY, measured, not held) for flights F1 / F2 of the 2F plan. Its own
-cross-plan record pairs them with first-floor flights F2 / F3 (overlap 1.0) and reads them "STACKED" (a new flight of the
-next storey), because no void mark is near them (engine/source/arch_rooms.py `cross_plan_flights`, docstring at the
-STACKED reading). But no flight rises above the second floor (section 2: solid T 18 roof slab over the compartment, no cut
-line on the 2F plan, section A-A ends at +9.70): they are the first-to-second-floor flights seen from above, already
-measured on the first floor (3.795 + 3.45 m2, 12.65 + 11.5 lm). Effect on the released V2.9 run: tread marble over by
-6.90 m2 and step length over by 23.0 lm for this stair (owner rule UP-STAIR-008: "a step drawn on two plans is one step").
-The 2F landing line (HELD 0 .. 11.725 upper bound) also spans this opening. Proposal for the Lead (new task, code): on the
-top storey of a stacked core, a flight whose stacked partner on the storey below arrives at this storey's level, with no
-cut line on the upper plan and no flight continuing above, is SEEN (counted once, on the lower plan), not STACKED;
-fixture with a two- and a three-storey stacked core (mirror, rotation, mm / m). Verdict proposal: HAND_RIGHT (one stair),
-engine double count.
+ARCH_TAKEOFF_V2.9 measures, for the stair face on the second floor, FIN.MARBLE.TREAD 3.45 + 3.45 = 6.90 m2 and
+FIN.STAIR.STEP_LM 11.5 + 11.5 = 23.0 lm (MACHINE_ONLY, measured, not held) for flights F1 (west lane) / F2 (east lane)
+of the 2F plan. Its own cross-plan record pairs them with first-floor flights F2 / F3 (overlap 1.0) and reads them
+"STACKED" (a new flight of the next storey), because no void mark is near them (engine/source/arch_rooms.py
+`cross_plan_flights`, the STACKED reading). But no flight rises above the second floor (section 2: solid T 18 roof slab
+over the compartment, no cut line on the 2F plan, section A-A's counts end at +9.70): every flight on the 2F plan is a
+flight of the storey below seen from above.
+- **Certain duplicate: 2F F1 = 1F F2**, the first-to-second-floor lower flight (west lane; both end at the same north
+  edge, y -793.194 world = 2F local 5.25; on the 1F plan it starts at the landing edge and is the 1F's own flight, 3.795 m2,
+  12.65 lm). Released V2.9 over-count: **+3.45 m2 tread marble, +11.5 lm steps** (owner rule UP-STAIR-008: "a step drawn
+  on two plans is one step").
+- **2F F2 (east lane)** is the first-to-second-floor upper flight. Whether it is a duplicate depends on what the 1F plan's
+  east lane shows: by the plan convention (section 4) it is the ground-to-first-floor upper flight below the cut, and then
+  2F F2 is the only measurement of the upper flight (not a duplicate); if the 1F east lane were the upper flight drawn
+  above the cut, 2F F2 would also be a duplicate (+3.45 m2, +11.5 lm more) and the ground-to-first upper flight would be
+  missing. Which one is for the flight-by-flight ledger (T-111).
+The 2F landing line (HELD 0 .. 11.725 upper bound) spans the same opening. Proposal for the Lead (new task, code): on the
+top storey of a stacked core (no flight continuing above, no cut line on the upper plan), a flight paired with a flight
+of the storey below is SEEN (counted once, on the lower plan), not STACKED; fixture with a two- and a three-storey stacked
+core (mirror, rotation, mm / m). Verdict proposal: HAND_RIGHT (one stair), engine over-count 3.45 m2 / 11.5 lm certain.
 
 ## 7. D-23 (1F, 0.05 x 2.35 element beside the round-stair flight): new evidence, still HELD
 
@@ -167,7 +178,8 @@ landing and the foot strip are HELD (None, never 0) and the stair stays whole in
 - 2F floor in front of the stair 7.375 vs freelancer 7.70 (+0.325, +4.4 %): UNRESOLVED (his row is not traceable).
 - Stair marble 49.235 (sum of lines) CONFIRMED; once-only 48.515 .. 49.235 HELD (flight rows vs printed run, T-111).
 - D-13 / H-FS-2F: marble in every reading, 0 m2 to add; D-23 HELD (new evidence).
-- Engine 2F tread marble 6.90 m2 / steps 23.0 lm: engine double count, HAND_RIGHT.
+- Engine 2F tread marble / steps: the 1F -> 2F lower flight counted on both plans, +3.45 m2 / +11.5 lm certain
+  (+6.90 / +23.0 under the second reading of the 1F east lane): engine over-count, HAND_RIGHT.
 
 ## 10. What is missing
 
