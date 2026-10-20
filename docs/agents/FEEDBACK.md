@@ -3,21 +3,44 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
-## Recurring causes (lead 2026-10-20 04:20)
+## Recurring causes (lead 2026-10-20 06:20)
 
-1. **Merged pieces not wired into the released run** (largest, unchanged): the released Alsenan run is still 8774071
-   (concrete 92.77 vs 111.81 m3). The wiring fix (T-093) is being built by worker 1 since 03:20; the cutting plan
-   (T-089) waits for a code-capable verifier run. Decision: verifier order T-089 then T-093; T-095 after both.
-2. **Runs that leave no trace** (worse): since 02:15, four of the five finished worker runs wrote no RUN_LOG line and
-   claimed nothing (worker 1 02:19, worker 2 02:39, worker 3 02:59 and 03:59, each 3 - 13 min); the verifier passed
-   every code step at 02:26 and was refused venv / codemap at 03:50. The two runs that did work (worker 2 03:39, worker 1
-   03:19) passed every self-check step. Decision: no board change can fix a run that ends before its first write; the
-   owner setting (EXECUTION_PERMISSIONS.md section 5 option 2) stays under NEEDS FIXING; two NO REPO CODE rows stay free.
-3. **Rule gaps found by finishing a method** (new, from T-089): straight strips cannot reach dome-opening upturns and
-   slanted corners (1.15 m2 on the 2F roof); no rule says where those patches come from. Decision: owner Q-58; patches
-   reported in m2, outside the roll count, until answered.
-4. **Heights, finishes and ceilings still need rules**: Q-52, Q-54, Q-55, Q-56, Q-57 open (plaster 1151.14 / paint
+1. **Merged pieces not wired into the released run** (smaller): the membrane rolls are now released (ARCH_TAKEOFF_V2.11),
+   but the beam fix, the tile count, the typed-values file and room levels / wall heights are still read by no released
+   method; concrete stays 92.77 vs 111.81 m3. Decision: T-097 wires the beam fix into a concrete ledger; T-095 (plaster /
+   paint) after T-096 and the owner's height answers.
+2. **An engine count equal to a hand count is not proof when both share a blind spot** (new): T-089 and T-093 matched the
+   Lead's roof table 31 = 31, yet both left the 2F parapet-step upturn uncovered; only an independent full strip plan
+   (T-094) found it. Decision: hand-truth tasks must lay every strip themselves and list every uncovered piece (T-098 for
+   wet rooms); the verifier compares coverage residuals, not only counts; R-07 to the scout.
+3. **Offcut reuse inside one room has no rule** (new, two trades): membrane (Q-58, 1 roll on this villa) and tiles (Q-59,
+   15 - 20 % of tiles). Decision: both asked; affected counts HELD with both values shown.
+4. **Execution refusals mid-run** (smaller): every run since 04:20 left a log line; refusals now hit single steps (the
+   verifier's freeze check and merge at 06:05, worker 2's chained claim at 04:45). Decision: claim method restated on the
+   board (three separate commands); verifier order T-094, T-064; owner setting still under NEEDS FIXING.
+5. **Heights, finishes and ceilings still need rules**: Q-52, Q-54, Q-55, Q-56, Q-57 open (plaster 1151.14 / paint
    1191.13 m2 held).
+
+## 2026-10-20 06:20 (lead run)
+
+- **T-093 membrane rolls released, top roof held line: WORKED (MERGED 9f14742).** Wet 19 rolls = hand 19, roofs 31
+  released, 2F top roof now a held line beside 204.11 m2 (-28.4 % vs 285.00); L4 0 new failures. No-assumption check:
+  its own handoff flagged that the 2F roof's fully covering layouts need 18 rolls and took 17 "within its own leftover",
+  i.e. it assumed a patch may come from leftover (no rule). Decision: T-096 holds that count under Q-58.
+- **T-089 membrane cutting plan V1: PARTIAL (MERGED 64e3ea7).** Counts and lower bounds right where its strips cover the
+  outline; wrong cause named for the 0.84 m2 ("slanted corners"). Decision: fixed in T-096 (new version), Q-58 corrected.
+- **T-087 tile count with the owner joints: WORKED as a method (MERGED 8de2a21), PARTIAL on Alsenan.** 20 hand tests;
+  every Alsenan room HELD (0 printed tile sizes in 276 DXF texts); offcut reuse moves 60x60 from 697 to 611 tiles.
+  Decision: Q-59 (worker 1) relayed; T-091 census looks for printed sizes on the scans.
+- **T-085 beam binding V2: WORKED (MERGED cb4a66f), not wired.** B26 3.905 / B27 3.787 m3 single spans, B7 0.255 = hand,
+  upstands 0.240 = hand, ring beams 0.755 + 0.900 (Q-44 A); about +4.30 m3 once wired; 38 tests, L3 381 passed.
+  Decision: T-097 wires it into concrete ledger V3 and measures the 24 hand spans.
+- **T-094 roof cutting plans by hand: WORKED (READY ee35a2a, not merged: verifier's freeze check and merge refused).**
+  1F west 8 = 8, 1F south-east 6 = 6, 2F 18 vs engine 17 (proven minimum 18), outlines checked on the DXF and the printed
+  dimensions; found a released-count defect. Decision: verifier merges it first; fix T-096; Q-58 rewritten.
+- **T-064 typed-values data file: WORKED on its own evidence (READY 8ab8d95, not yet verified).** 13 DRAWING-VERIFIED,
+  1 INFERRED, 3 HELD; of 167 held concrete lines 66 (58.866 m3) rest only on drawing-verified values (blinding 22.155 vs
+  47.055 m3, UNRESOLVED), 88 (44.438 m3) stay held. Decision: verifier second; wiring after T-097 merges.
 
 ## 2026-10-20 04:20 (lead run)
 

@@ -296,27 +296,36 @@ RECOMMENDATION: (A): a gypsum decor ceiling is finished with paint, not cement p
 says every room has one; the cove strips need a printed detail before they are counted (practice, not a code clause).
 WAITS ON: ceiling plaster / paint lines on Alsenan and every villa; the plaster / paint wiring (T-095).
 
-### Q-58 Membrane patches the straight strips cannot reach (dome openings, slanted corners): cut from the same roof's leftover, or bought extra? (lead 2026-10-20 04:20, from worker 2's membrane cutting plan; T-089, T-093; no-assumptions question: your Q-49 answer says each room / roof alone, but no Urban rule says where these small patches come from)
+### Q-58 Membrane pieces the straight strips do not reach (a parapet step on the second-floor roof, the dome openings, small wet-room corners): cut from the same roof's / room's own leftover or side trim, or taken from a new roll? (lead 2026-10-20 04:20; REWRITTEN by the lead 2026-10-20 06:20 after worker 1's hand cutting plan of the roofs; T-089, T-093, T-094, T-096; no-assumptions question: your Q-49 answer says each room / roof alone, but no Urban rule says whether a piece may be cut from that room's own offcut)
 
-THE PROBLEM: the cutting plan lays straight 1 m strips. Round the two dome openings on the second-floor roof the 0.20 m
-upturn is 27.78 m long = 5.56 m2; 5.24 m2 folds up from the strips, 0.31 m2 must be cut as separate small pieces. At the
-slanted (45 deg) parapet corners the strips miss another 0.84 m2 on the same roof (and 0.003 - 0.010 m2 in four ground-floor
-wet areas, 0.009 m2 on the first-floor west roof). These patches are now shown in m2 but in no roll count.
-WHERE TO LOOK: Drive "Alsenan chalet project", Alsenan_Architectural_P7757_Pages_05-06 (roof plans): the second-floor
-roof, its two dome openings and the slanted parapet corners. The same roof's plan uses 17 rolls and leaves 11.91 m of
-full-width roll (= 11.91 m2) over; the patches need about 0.31 + 0.84 = 1.15 m2.
-THE OPTIONS:
-(A) Cut the patches from the SAME roof's (or room's) own leftover; no extra roll. Roofs stay 17 + 6 + 8 = 31 rolls, wet
-    areas 19 (21 with the pantry); 2F roof leftover 11.91 -> about 10.76 m. If a room's own leftover is too short, one
-    more roll for that room.
-(B) Buy one extra roll for every roof / room that needs patches, never cut from leftover: 2F roof 18, roofs 32; the four
-    wet areas +4 rolls (23 with the pantry) for patches under 0.01 m2 each.
-(C) No membrane patches: the openings and slanted corners take a ready-made accessory (pre-formed collar / corner piece)
-    as a separate line counted per opening and per corner (2 dome collars + the slanted corners); rolls unchanged.
-RECOMMENDATION: (A): upturn patches and corner pieces are normally cut on site from the offcut of the same roof; your
-"each alone" answer forbids sharing offcuts between rooms, not inside one room, and (B) buys whole rolls for a few
-hundred cm2 (practice, not a code clause).
-WAITS ON: the released roll counts per roof and wet area and the printed cutting plan (T-093 wiring, T-089 cutting plan).
+CORRECTION: the first text of this question (04:20) said 0.84 m2 of the second-floor roof was "slanted 45 deg corners".
+Worker 1 re-laid every roof by hand and the checker confirmed it from the code: that roof has no slanted corner. The 0.84
+m2 is the 0.20 m upturn of a straight 4.20 m parapet (the north side of the roof's 4.20 x 2.10 west part), which runs the
+same way as the strips; the engine lays no strip there (that is an engine fault, now the first code task). Covering it
+needs one more piece 4.60 m long (4.20 + 2 x 0.20).
+THE PROBLEM: on the second-floor roof the rolls bought depend on where that 4.60 m piece comes from. No full-width
+leftover is long enough (the longest left on a roll is 3.03 m), but the narrow last strip of the same roof leaves a side
+trim 0.70 m wide x 6.97 m long, from which a 4.60 m piece of the upturn could be cut. The same choice applies to the
+small pieces round the two dome openings (upturn 27.78 m long = 5.56 m2; about 0.31 m2 is not reached by the strips) and
+to tiny corners in four ground-floor wet areas (0.003 - 0.010 m2 each, within each room's own leftover).
+WHERE TO LOOK: Drive "Alsenan chalet project", Alsenan_Architectural_P7757_Pages_05-06 (second-floor roof plan): the west
+part of the roof (printed 129 + 442 + 139 = 710 across), its north parapet, and the two dome openings (R221).
+THE OPTIONS (Alsenan roofs, each roof alone as you answered; the 2F top roof stays held under Q-34):
+(A) A piece or patch may be cut from the SAME roof's (or room's) own leftover or side trim when one of the right size
+    exists there; a new roll only when none does. Never carried to another roof or room. 2F roof 17 rolls, roofs
+    17 + 6 + 8 = 31; wet areas 19 (21 with the pantry).
+(B) Every piece is cut from a roll as a full-width strip; trims and offcuts are not reused. 2F roof 18 rolls (proven
+    minimum), roofs 32; wet areas 19 (the tiny corners are reached by extending the room's own strips; to be confirmed by
+    the wet-room hand plan).
+(C) Pieces round openings and corners are not membrane cut on site but a ready-made collar / corner accessory, its own
+    BOQ line per opening and corner (2 dome collars); the 4.60 m parapet piece is then as in (B): 2F roof 18, roofs 32.
+RECOMMENDATION: (A): cutting an upturn piece or patch from the same roof's own trim is normal site practice, and your
+"each alone" answer forbids sharing offcuts between rooms or roofs, not inside one; the 0.70 m trim is wide enough for a
+0.20 m upturn with its laps (practice, not a code clause). Choose (B) if you want the BOQ to buy without counting on
+trims: it adds one roll on this villa.
+UNTIL YOU ANSWER: the second-floor roof's roll count is HELD and shown as 17 or 18 (never 0); the other roofs and the wet
+areas stay released.
+WAITS ON: the released roll count of the 2F roof and the project total of roof rolls (31 or 32).
 
 ### Q-59 Tiles to buy: may the offcut of a cut tile be used for another cut piece in the same room? (worker 1 2026-10-20 05:05; T-087 tile count; no-assumptions question: your Q-42 answer gives the joint, no Urban rule says whether offcuts are reused, and it moves the tile count far more than the joint does)
 

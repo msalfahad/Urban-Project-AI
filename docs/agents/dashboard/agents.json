@@ -1,8 +1,56 @@
 [
- {"agent": "Lead planner", "role": "Plans the work, keeps the board and milestones, asks you questions", "cadence": "every 2 h (:09)", "last_run": "2026-10-20T04:09:50Z", "result": "running", "working_on": "Queued the membrane cutting plan for the checker; asked you how the small membrane patches at dome openings and slanted roof corners are bought", "as_of": "2026-10-20T04:22:00Z"},
- {"agent": "Worker 1", "role": "Builds one board task per run on its own branch", "cadence": "hourly :19", "last_run": "2026-10-20T03:19:27Z", "result": "running", "working_on": "Waterproofing wiring fix: rolls each room alone (19 wet, 31 roofs) and the top roof shown as held (T-093)", "as_of": "2026-10-20T04:22:00Z"},
- {"agent": "Worker 2", "role": "Builds one board task per run on its own branch", "cadence": "hourly :39", "last_run": "2026-10-20T03:39:25Z", "result": "ok", "working_on": "Delivered the membrane cutting plan: 19 wet-area and 31 roof rolls, equal to the hand table, strips 1.8 % shorter; waits for the checker (T-089)", "as_of": "2026-10-20T04:22:00Z"},
- {"agent": "Worker 3", "role": "Builds one board task per run on its own branch", "cadence": "hourly :59", "last_run": "2026-10-20T03:59:19Z", "result": "failed", "working_on": "Last two runs (02:59, 03:59) ended in about 5 minutes with no log line and no claim; last delivery: plaster / paint per room by hand, merged (T-090)", "as_of": "2026-10-20T04:22:00Z"},
- {"agent": "Verifier", "role": "Checks finished tasks, merges or rejects, keeps the scoreboard", "cadence": "hourly :49", "last_run": "2026-10-20T03:50:03Z", "result": "failed", "working_on": "Could not check the membrane cutting plan: its code run was refused at 03:50 (passed at 02:26); takes it first next run", "as_of": "2026-10-20T04:22:00Z"},
- {"agent": "Research scout", "role": "Finds techniques and tools for the biggest gap", "cadence": "daily 23:50 UTC", "last_run": "2026-10-19T23:51:17Z", "result": "ok", "working_on": "Next: Arabic and English notes on scanned plans", "as_of": "2026-10-20T04:22:00Z"}
+ {
+  "agent": "Lead planner",
+  "role": "Plans the work, keeps the board and milestones, asks you questions",
+  "cadence": "every 2 h (:09)",
+  "last_run": "2026-10-20T06:14:58Z",
+  "result": "running",
+  "working_on": "Tasked the membrane fix for parapet steps (2F roof 17 vs 18 rolls) and the beam fix into the concrete ledger; rewrote the membrane-pieces question",
+  "as_of": "2026-10-20T06:25:00Z"
+ },
+ {
+  "agent": "Worker 1",
+  "role": "Builds one board task per run on its own branch",
+  "cadence": "hourly :19",
+  "last_run": "2026-10-20T05:19:19Z",
+  "result": "ok",
+  "working_on": "Delivered the roof membrane cutting plans by hand: 8 + 6 + 18 = 32 rolls, found the 2F roof one roll short in the engine; waits for the checker (T-094)",
+  "as_of": "2026-10-20T06:25:00Z"
+ },
+ {
+  "agent": "Worker 2",
+  "role": "Builds one board task per run on its own branch",
+  "cadence": "hourly :39",
+  "last_run": "2026-10-20T05:39:23Z",
+  "result": "ok",
+  "working_on": "Delivered the typed-values data file for concrete: 66 held lines / 58.87 m3 rest only on drawing values; waits for the checker (T-064)",
+  "as_of": "2026-10-20T06:25:00Z"
+ },
+ {
+  "agent": "Worker 3",
+  "role": "Builds one board task per run on its own branch",
+  "cadence": "hourly :59",
+  "last_run": "2026-10-20T05:59:43Z",
+  "result": "ok",
+  "working_on": "Delivered plot-edge foundation members (straps 3.390 vs 3.3925 m3, boundary beam 3.526 vs 7.560 m3); waits for the checker (T-073)",
+  "as_of": "2026-10-20T06:25:00Z"
+ },
+ {
+  "agent": "Verifier",
+  "role": "Checks finished tasks, merges or rejects, keeps the scoreboard",
+  "cadence": "hourly :49",
+  "last_run": "2026-10-20T05:50:18Z",
+  "result": "failed",
+  "working_on": "Confirmed the 2F roof membrane defect from the code but could not merge the roof hand plans: freeze check and merge refused at 06:05; next: roof hand plans, then the data file",
+  "as_of": "2026-10-20T06:25:00Z"
+ },
+ {
+  "agent": "Research scout",
+  "role": "Finds techniques and tools for the biggest gap",
+  "cadence": "daily 23:50 UTC",
+  "last_run": "2026-10-19T23:51:17Z",
+  "result": "ok",
+  "working_on": "Next: Arabic and English notes on scanned plans; proving a membrane strip layout covers every piece",
+  "as_of": "2026-10-20T06:25:00Z"
+ }
 ]

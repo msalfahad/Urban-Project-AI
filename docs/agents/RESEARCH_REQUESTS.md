@@ -15,6 +15,16 @@ architectural or engineering drawings, how to find note boxes and room tags on a
 a misread note (e.g. two engines must agree; a size must match a known tile format printed elsewhere on the set).
 Unblocks T-091 (as a check of the hand census), T-092, T-003.
 
+### R-07 Proving that a strip layout covers every piece of a membrane outline (lead 2026-10-20 06:20)
+Problem: the engine lays 1.00 m membrane strips with 0.10 m laps over a room or roof outline widened by its 0.20 m
+upturn, and its rule for where a strip goes missed the upturn of an outline step whose edge runs the same way as the
+strips. Gap: Alsenan second-floor roof 0.84 m2 uncovered (4.20 x 0.20 m), released 17 rolls vs 18 by hand; dome-opening
+upturn about 0.31 m2 left to patches; 0.003 - 0.010 m2 in four wet rooms. Look for: exact coverage checks of a polygon by
+axis-aligned strips (polygon difference with exact or robust arithmetic, e.g. shapely 2 set operations with a stated grid
+size), band / trapezoid decomposition of rectilinear and curved outlines so every residual piece is assigned to a strip
+or named as a patch, how roofing and tanking take-off software or practitioners lay out sheet membranes round steps,
+openings and splayed corners, and test-case generators for such outlines. Unblocks T-096 (step upturn fix), T-098.
+
 ## Answered
 
 ### R-01 Floor and ceiling heights from Kuwait villa section drawings (lead 2026-10-19)
