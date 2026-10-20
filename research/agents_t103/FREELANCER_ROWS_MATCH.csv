@@ -149,7 +149,7 @@ GF,,"(our piece, no freelancer row within 0.06 m)",,,,GF-W36,0.5,,OURS_ONLY
 2F,,"(our piece, no freelancer row within 0.06 m)",,,,2F-W07,3.025,,OURS_ONLY
 2F,,"(our piece, no freelancer row within 0.06 m)",,,,2F-W08,3.1,,OURS_ONLY
 1F,78,external,7.5,5.5,projections,,,,UNMATCHED: projection band 7.50 x 5.50 m2 has no wall run on the plans (elevation feature); not a block wall run in this table
-GF,150,internal 15 cm,37.2,2.0,fence,,,,UNMATCHED: fence is on the fence plan (PDF page 12) and drawn 0.20 on the plans; not measured in this table
+GF,150,internal 15 cm,37.2,2.0,fence,F-GF (3 rows),46.370,+9.170,TOTAL ONLY: our fence centreline 46.37 m (north 31.17 + street side 8.20 incl. 2.50 gate + sea side 7.00 incl. 1.00 gate) drawn 0.20; his 37.20 = north outer 31.37 + street side solid 5.80 (printed 580); he has no sea-side fence row
 1F,172,internal 15 cm,66.0,1.0,parapet,P-GF-ROOF (9 rows),59.313,-6.687,TOTAL ONLY: our ground-roof parapet centreline 59.31 m drawn 0.20 thick (his 0.15)
 2F,177,internal 15 cm,42.85,1.8,parapet,P-1F-ROOF (5 rows),49.240,+6.390,TOTAL ONLY: our first-roof parapet 44.94 m measured + 4.30 m held thickness = 49.24 m drawn 0.20 thick
 2F,178,internal 15 cm,29.8,1.0,parapet,P-2F-ROOF,,,HELD on our side: top roof parapet not drawn in plan; his 29.80 = outer perimeter 2 x (8.10 + 6.80) of the printed block outline

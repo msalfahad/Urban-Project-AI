@@ -2,7 +2,7 @@ row_id,floor,zone,group,thickness_m,shape,gross_centreline_m,columns_in_line_m,g
 GF-W00,GF,GF annex,EXTERNAL,0.200,horizontal,10.600,0.700,9.900,,9.900,5.450 + 4.450,MEASURED,ext row 23 5.45; ext row 30 4.45,
 GF-W01,GF,GF main,EXTERNAL,0.200,horizontal,19.170,2.700,16.470,,16.470,3.075 + 5.745 + 6.350 + 1.300,MEASURED,ext row 18 1.3; ext row 19 6.35; ext row 20 5.75; ext row 21 3.08,
 GF-W02,GF,GF annex,INTERNAL,0.200,horizontal,1.650,0.000,1.650,,1.650,1.650,MEASURED,,
-GF-W03,GF,GF main,INTERNAL,0.200,horizontal,2.650,0.000,2.650,,2.650,2.650,MEASURED,,free-standing between two columns under the stair void; ends at column faces
+GF-W03,GF,GF main,INTERNAL,0.200,horizontal,2.650,0.000,2.650,,2.650,2.650,MEASURED,,"between two columns under the reception stair, faces the internal garden strip (printed GARDEN, 150); ends at column faces"
 GF-W04,GF,GF annex,EXTERNAL,0.200,horizontal,6.425,0.575,5.850,0.750 + 0.900 + 1.500,2.700,5.850,MEASURED,ext row 27 5.85,
 GF-W05,GF,GF main,EXTERNAL,0.200,horizontal,3.000,1.100,1.900,1.000,0.900,1.900,MEASURED,ext row 31 1.9,
 GF-W06,GF,GF annex,EXTERNAL,0.200,horizontal,3.000,0.500,2.500,1.000,1.500,2.500,MEASURED,ext row 17 2.5,
@@ -81,13 +81,16 @@ P-GF-ROOF,1F plan,1F plan,PARAPET,0.200,annex corner arc r 1.20,1.885,0.000,1.88
 P-GF-ROOF,1F plan,1F plan,PARAPET,0.200,arc tail,0.600,0.000,0.600,,0.600,,MEASURED,,
 P-GF-ROOF,1F plan,1F plan,PARAPET,0.200,annex north edge east part,6.100,0.000,6.100,,6.100,,MEASURED,,drawn band ends 0.20 m before the first-floor wall face
 P-GF-ROOF,1F plan,1F plan,PARAPET,0.200,step between annex roof and main ground roof,1.400,0.000,1.400,,1.400,,MEASURED,,
-P-GF-ROOF,1F plan,1F plan,PARAPET,0.200,east edge,7.700,0.000,7.700,,7.700,,MEASURED,,
+P-GF-ROOF,1F plan,1F plan,PARAPET,0.200,east edge,7.700,0.000,7.700,,7.700,,MEASURED,,"a 0.05 m double line 6.13 m long runs inside the band (railing on the parapet, not block)"
 P-GF-ROOF,1F plan,1F plan,PARAPET,0.200,north-east return,0.957,0.000,0.957,,0.957,,MEASURED,,drawn 0.957 m; the first-floor wall face is 1.40 m from the east parapet centreline
 P-1F-ROOF,2F plan,2F plan,PARAPET,0.200,south edge,19.070,0.000,19.070,,19.070,,MEASURED,,
 P-1F-ROOF,2F plan,2F plan,PARAPET,0.200,east edge,11.800,0.000,11.800,,11.800,,MEASURED,,small notch at the south-east corner ignored (0.10 m outward jog)
 P-1F-ROOF,2F plan,2F plan,PARAPET,0.200,north edge east of the second-floor block,6.770,0.000,6.770,,6.770,,MEASURED,,
 P-1F-ROOF,2F plan,2F plan,PARAPET,0.200,west edge,7.300,0.000,7.300,,7.300,,MEASURED,,
 P-1F-ROOF,2F plan,2F plan,PARAPET,,north-west edge to the second-floor block face,4.300,0.000,4.300,,4.300,,HELD THICKNESS,,"HELD THICKNESS: lines 0.20 / 0.40 apart, the band sits 0.20 m north of the wall line below"
+F-GF,GF site,GF site,FENCE,0.200,"north fence (plot side, full plot length)",31.170,0.000,31.170,,31.170,,MEASURED,,outer face 31.37 m = printed plot length; 0.20 band on the parapet / fence layer; material and height from the fence section (page 12) not re-read here
+F-GF,GF site,GF site,FENCE,0.200,"street-side fence, plot corner to the annex",8.200,0.000,8.200,2.500,5.700,,MEASURED,,gate 2.50 m drawn on the gate layer; solid 5.70 m; the fence plan (page 12) prints 580 + 250; 0.20 band on the parapet / fence layer; material and height from the fence section (page 12) not re-read here
+F-GF,GF site,GF site,FENCE,0.200,"sea-side fence, plot corner to the column at the house",7.000,0.000,7.000,1.000,6.000,,MEASURED,,"gate 1.00 m (inner face broken, swing line); piers drawn on the door layer; not on the fence plan (page 12 shows the street side only); 0.20 band on the parapet / fence layer; material and height from the fence section (page 12) not re-read here"
 P-2F-ROOF,2F roof +13.90,2F roof +13.90,PARAPET,,top roof of the second-floor block,,0.000,,,,,HELD NOT_IN_PLAN,,"no roof plan; elevations print the 0.50 parapet +13.90 to +14.40; block outline 8.10 x 6.80 (area plan) -> outer perimeter 29.80 m; centreline needs the parapet thickness, not drawn"
 
 TOTAL,zone,,group,thickness_m,runs,gross_centreline_m,columns_in_line_m,gross_minus_columns_m,opening_gap_widths_m,solid_m,,,,
@@ -106,3 +109,4 @@ TOTAL,GF annex,,INTERNAL,0.200,1,1.650,0.000,1.650,0.000,1.650,,,,
 TOTAL,GF main,,EXTERNAL,0.200,9,65.040,8.650,56.390,20.682,35.708,,,,
 TOTAL,GF main,,INTERNAL,0.150,11,25.257,1.071,24.186,4.375,19.811,,,,
 TOTAL,GF main,,INTERNAL,0.200,5,16.550,3.050,13.500,3.100,10.400,,,,
+TOTAL,GF site,,FENCE,0.200,3,46.370,0.000,46.370,3.500,42.870,,,,

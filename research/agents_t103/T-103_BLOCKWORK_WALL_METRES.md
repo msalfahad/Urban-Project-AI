@@ -33,8 +33,8 @@ UP-QTY-STATUS-001 (held, never 0).
 5. Every run was checked on an overlay of the plan; free ends, near-nodes (under 0.15 m) and curved walls were read
    line by line. Curved walls: concentric arc pairs, length on the centreline radius.
 
-Acceptance: every wall run of the three plans is one row of WALLS_BY_FLOOR_THICKNESS.csv (35 GF + 3 manual, 26 1F,
-9 2F; the shortest is 0.55 m), totals per floor, zone and thickness at its foot; every freelancer row is in
+Acceptance: every wall run of the three plans is one row of WALLS_BY_FLOOR_THICKNESS.csv (35 GF + 3 read by hand + 2 held, 26 1F,
+9 2F, 14 parapet and 3 fence rows; the shortest is 0.55 m), totals per floor, zone and thickness at its foot; every freelancer row is in
 FREELANCER_ROWS_MATCH.csv as EXACT (within 0.01 m), CLOSE (within 0.06 m), UNMATCHED or TOTAL ONLY.
 
 ## Second-drawing check (scanned GF plan, sheet 03) against the DXF
@@ -48,6 +48,15 @@ FREELANCER_ROWS_MATCH.csv as EXACT (within 0.01 m), CLOSE (within 0.06 m), UNMAT
 | lift | 180 x 180 | inner faces 1.80 x 1.80 | yes |
 | saloon glazing | 633 | wall-line gap 6.332 m | yes |
 | wall marks | "20", "15" | bands 0.200 / 0.150 | yes |
+| annex WC / kitchen wall | "20" | GF-W02 faces 0.200 apart | yes |
+| annex WC 130 x 150, driver 450 x 175, kitchen 300 / 270 / 450 | as printed | inner faces 1.30 x 1.50, 1.75 | yes |
+| 1F sheet (p7757_arch_sheet04.pdf): partitions "15", outer walls "20" | as printed | bands 0.150 / 0.200 | yes |
+| 1F sea-side bay, printed chord | 306 | inner-face chord of the r 1.935 arc at the wall ends about 3.06 m | yes |
+| 2F plan (Pages_05-06, page 5): maid room chain 15 + 645 + 20 | 0.15 neighbour-side wall, 6.45 inner | 2F-W03 faces 0.150 apart, inner 6.45 m | yes |
+| 2F plan: first-roof edge at the sea-side neighbour corner | "30" | parapet band 0.20 on the DXF | NO: printed 0.30 there (corner only, read on one corner); kept 0.20 in the table, verifier to re-read |
+
+Reception wall GF-W03 (0.20, 2.65 m between two columns): the scanned GF plan shows it as the wall between the
+reception stair and the internal garden strip (printed GARDEN, 150); no thickness mark on it.
 
 One conflict (already on record from T-083, owner Q-38): the pool-side bedroom glass is a straight 0.20 band 4.95 m
 long in the DXF and a curved wall printed "657" on the PDF (GF-W37 below carries it; only 0.10 m of it is block).
@@ -76,7 +85,7 @@ as m2, so his length / his height = his length). Heights are not compared (owner
 | First-roof parapets (on the 2F plan) | 0.20 drawn (4.30 m thickness held) | 44.94 + 4.30 held | 0 | 49.24 | 42.85 (15 cm, h 1.80) | -6.39 m |
 | Ground + first roof parapets together | | 108.55 | | 108.55 | 108.85 | +0.30 m (+0.3 %) |
 | Second-floor top roof parapet (+13.90 to +14.40) | not drawn | HELD (no roof plan) | | HELD | 29.80 (= 2 x (8.10 + 6.80) outer) | not compared |
-| Fence | | not measured here (fence plan, page 12) | | | 37.20 x 2.00 (15 cm) | not compared |
+| Fence (GF plan, 0.20 band on the parapet / fence layer) | 0.20 drawn | 46.37 (gates 2.50 + 1.00 inside) | 0 | 46.37 | 37.20 x 2.00 (15 cm) | -9.17 m |
 
 Held (never 0): GF-H01, a 0.40 m band on the wall layer west of the stair hall, 1.50 m with a 0.80 m column inside
 (0.40 is no block family here, material not printed); GF-H02, a 0.20 x 0.90 outline on the furniture / stair layer at
@@ -105,13 +114,19 @@ same pieces we measure between columns; the totals differ where he took a differ
 3. 1F: all walls agree within 0.44 m (0.4 %); partitions 57.05 vs 57.14 m. No verdict needed beyond the 0.20 split
    (as 2).
 4. 2F external +1.05 m: he takes the block's outer dimensions 6.80 and 8.18 for two sides (area plan 8.10 x 6.80), we
-   take centrelines (7.90, 6.625 less columns): RULE_DIFFERENCE (UP-WALL-GEOM-001 centreline). The 2F south wall is drawn
-   0.15 (faces 0.150 apart), not 0.20: ENGINE_RIGHT on thickness, to be confirmed on the 2F scanned sheet.
+   take centrelines (7.90, 6.625 less columns): RULE_DIFFERENCE (UP-WALL-GEOM-001 centreline). The 2F neighbour-side wall is drawn
+   0.15 (faces 0.150 apart) and printed "15" on the scanned 2F plan, not 0.20: ENGINE_RIGHT on thickness.
 5. Parapets: ground + first roof together agree within 0.30 m (108.55 vs 108.85), but he splits them 66.00 / 42.85
    where the plans give 59.31 / 49.24: RULE_DIFFERENCE in allocation (UNRESOLVED which roof the 6.4-6.7 m belongs to).
-   Thickness: every parapet band on the plans is 0.20 m apart, he books them under 15 cm: ENGINE_RIGHT on the drawing
-   (proposal; the verifier re-reads one band).
-6. Top-roof parapet 29.80 m (his) = the outer perimeter of the printed 8.10 x 6.80 block; the centreline needs the
+   Thickness: every parapet band on the DXF plans is 0.20 m apart, he books them under 15 cm: ENGINE_RIGHT on the drawing
+   (proposal); but the scanned 2F plan prints "30" at one first-roof corner: UNRESOLVED there until the verifier re-reads
+   the first-roof edge marks.
+6. Fence -9.17 m: his 37.20 m = the north fence outer face 31.37 (printed plot length) + the street-side solid part
+   5.80 (fence plan prints 580 + 250 gate); our centreline is north 31.17 + street side 8.20 (2.50 gate inside) + a
+   sea-side fence 7.00 m (1.00 gate) that the GF plan draws as a 0.20 band and for which he has no row: proposal
+   UNRESOLVED (the sea-side fence is not on the fence plan, page 12 shows the street side only; its material and height
+   are not printed on the plan), RULE_DIFFERENCE for outer face vs centreline (0.20 m) and gate not deducted (2.50 m).
+7. Top-roof parapet 29.80 m (his) = the outer perimeter of the printed 8.10 x 6.80 block; the centreline needs the
    parapet thickness, which no plan draws: HELD, not a difference.
 
 ## What was learned, what is missing
@@ -125,7 +140,8 @@ same pieces we measure between columns; the totals differ where he took a differ
 - For T-027 (engine piece): accept against this table per floor and thickness (gross centreline, columns, gross minus
   columns), the curved annex corner (r 1.20, 1.885 m), the 1F concave bay (r 2.035, 103.4 deg, 3.672 m with 3.136 m
   glazing), the 0.15 / 0.20 thickness change in one wall line (1F stair west wall), and the held 0.40 band.
-- Missing: fence (fence plan, page 12) not measured; the 2F and 1F scanned sheets were not re-read (sheet 04 and pages
-  05-06); block m2 / m3 wait on owner Q-60; printed opening widths are in T-083, our gap widths are drawn widths.
+- Missing: the fence section (page 12, height 215 + 50 per T-063) not re-read for material; the 2F scanned plan
+  (pages 05-06) not re-read for the 0.15 south wall; block m2 / m3 wait on owner Q-60; printed opening widths are in
+  T-083, our gap widths are drawn widths; the east ground-roof parapet carries a 0.05 m railing line (not block).
 - Verifier: re-measure the 2F plan's 0.20 walls (4 external-and-core runs: north 7.90, east 6.625, west 6.625, lift
   2 x 2.00 and stair 5.20 / 3.425) on the Drive DXF.
