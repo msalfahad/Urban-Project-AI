@@ -1,0 +1,254 @@
+area,plan,row,strip,installed_width_m,length_m,across_from_m,across_to_m,along_from_m,along_to_m,piece,piece_length_m,roll,roll_from_m,roll_to_m,source,value,note
+2F roof,P0-B,PLAN,,,,,,,,,,,,,,18,strict T-094 layout: strips reach the opening flap; every piece from a roll (Q-58 B)
+2F roof,P0-B,STRIP_PIECE,S1,1.0,19.27,-0.2,0.8,-0.2,19.07,1,10.0,1,0.0,10.0,roll,,
+2F roof,P0-B,STRIP_PIECE,S1,1.0,19.27,-0.2,0.8,-0.2,19.07,2,9.37,7,0.0,9.37,roll,,
+2F roof,P0-B,STRIP_PIECE,S2,1.0,19.27,0.7,1.7,-0.2,19.07,1,10.0,2,0.0,10.0,roll,,
+2F roof,P0-B,STRIP_PIECE,S2,1.0,19.27,0.7,1.7,-0.2,19.07,2,9.37,8,0.0,9.37,roll,,
+2F roof,P0-B,STRIP_PIECE,S3,1.0,1.762,1.6,2.6,-0.2,1.562,1,1.762,10,0.0,1.762,roll,,
+2F roof,P0-B,STRIP_PIECE,S4,1.0,13.149,1.6,2.6,2.86,16.01,1,10.0,3,0.0,10.0,roll,,
+2F roof,P0-B,STRIP_PIECE,S4,1.0,13.149,1.6,2.6,2.86,16.01,2,3.249,18,0.0,3.249,roll,,
+2F roof,P0-B,STRIP_PIECE,S5,1.0,1.762,1.6,2.6,17.308,19.07,1,1.762,11,0.0,1.762,roll,,
+2F roof,P0-B,STRIP_PIECE,S6,1.0,0.668,2.5,3.5,-0.2,0.468,1,0.668,13,0.0,0.668,roll,,
+2F roof,P0-B,STRIP_PIECE,S7,1.0,10.962,2.5,3.5,3.954,14.916,1,10.0,4,0.0,10.0,roll,,
+2F roof,P0-B,STRIP_PIECE,S7,1.0,10.962,2.5,3.5,3.954,14.916,2,1.062,10,1.762,2.824,roll,,
+2F roof,P0-B,STRIP_PIECE,S8,1.0,0.668,2.5,3.5,18.402,19.07,1,0.668,13,0.668,1.336,roll,,
+2F roof,P0-B,STRIP_PIECE,S9,1.0,0.564,3.4,4.4,-0.2,0.364,1,0.564,7,9.37,9.934,roll,,
+2F roof,P0-B,STRIP_PIECE,S10,1.0,10.755,3.4,4.4,4.058,14.812,1,10.0,5,0.0,10.0,roll,,
+2F roof,P0-B,STRIP_PIECE,S10,1.0,10.755,3.4,4.4,4.058,14.812,2,0.855,11,1.762,2.617,roll,,
+2F roof,P0-B,STRIP_PIECE,S11,1.0,0.564,3.4,4.4,18.506,19.07,1,0.564,8,9.37,9.934,roll,,
+2F roof,P0-B,STRIP_PIECE,S12,1.0,1.331,4.3,5.3,-0.2,1.131,1,1.331,12,0.0,1.331,roll,,
+2F roof,P0-B,STRIP_PIECE,S13,1.0,12.288,4.3,5.3,3.291,15.579,1,10.0,6,0.0,10.0,roll,,
+2F roof,P0-B,STRIP_PIECE,S13,1.0,12.288,4.3,5.3,3.291,15.579,2,2.388,9,0.0,2.388,roll,,
+2F roof,P0-B,STRIP_PIECE,S14,1.0,1.331,4.3,5.3,17.739,19.07,1,1.331,12,1.331,2.662,roll,,
+2F roof,P0-B,STRIP_PIECE,S15,1.0,4.6,5.2,6.2,-0.2,4.4,1,4.6,17,0.0,4.6,roll,,
+2F roof,P0-B,STRIP_PIECE,S16,1.0,6.97,5.2,6.2,12.1,19.07,1,6.97,9,2.388,9.358,roll,,
+2F roof,P0-B,STRIP_PIECE,S17,1.0,4.6,6.1,7.1,-0.2,4.4,1,4.6,17,4.6,9.2,roll,,
+2F roof,P0-B,STRIP_PIECE,S18,1.0,6.97,6.1,7.1,12.1,19.07,1,6.97,10,2.824,9.794,roll,,
+2F roof,P0-B,STRIP_PIECE,S19,0.3,4.6,7.0,7.3,-0.2,4.4,1,4.6,18,3.249,7.849,roll,,
+2F roof,P0-B,STRIP_PIECE,S20,1.0,6.97,7.0,8.0,12.1,19.07,1,6.97,11,2.617,9.587,roll,,
+2F roof,P0-B,STRIP_PIECE,S21,1.0,6.97,7.9,8.9,12.1,19.07,1,6.97,12,2.662,9.632,roll,,
+2F roof,P0-B,STRIP_PIECE,S22,1.0,6.97,8.8,9.8,12.1,19.07,1,6.97,13,1.336,8.306,roll,,
+2F roof,P0-B,STRIP_PIECE,S23,1.0,6.97,9.7,10.7,12.1,19.07,1,6.97,14,0.0,6.97,roll,,
+2F roof,P0-B,STRIP_PIECE,S24,1.0,6.97,10.6,11.6,12.1,19.07,1,6.97,15,0.0,6.97,roll,,
+2F roof,P0-B,STRIP_PIECE,S25,0.3,6.97,11.5,11.8,12.1,19.07,1,6.97,16,0.0,6.97,roll,,
+2F roof,P0-B,ROLL,,,,,,,,,,1,0,10.0,,0.0,full-width roll end left (m)
+2F roof,P0-B,ROLL,,,,,,,,,,2,0,10.0,,0.0,full-width roll end left (m)
+2F roof,P0-B,ROLL,,,,,,,,,,3,0,10.0,,0.0,full-width roll end left (m)
+2F roof,P0-B,ROLL,,,,,,,,,,4,0,10.0,,0.0,full-width roll end left (m)
+2F roof,P0-B,ROLL,,,,,,,,,,5,0,10.0,,0.0,full-width roll end left (m)
+2F roof,P0-B,ROLL,,,,,,,,,,6,0,10.0,,0.0,full-width roll end left (m)
+2F roof,P0-B,ROLL,,,,,,,,,,7,0,9.934,,0.066,full-width roll end left (m)
+2F roof,P0-B,ROLL,,,,,,,,,,8,0,9.934,,0.066,full-width roll end left (m)
+2F roof,P0-B,ROLL,,,,,,,,,,9,0,9.358,,0.642,full-width roll end left (m)
+2F roof,P0-B,ROLL,,,,,,,,,,10,0,9.794,,0.206,full-width roll end left (m)
+2F roof,P0-B,ROLL,,,,,,,,,,11,0,9.587,,0.413,full-width roll end left (m)
+2F roof,P0-B,ROLL,,,,,,,,,,12,0,9.632,,0.368,full-width roll end left (m)
+2F roof,P0-B,ROLL,,,,,,,,,,13,0,8.306,,1.694,full-width roll end left (m)
+2F roof,P0-B,ROLL,,,,,,,,,,14,0,6.97,,3.03,full-width roll end left (m)
+2F roof,P0-B,ROLL,,,,,,,,,,15,0,6.97,,3.03,full-width roll end left (m)
+2F roof,P0-B,ROLL,,,,,,,,,,16,0,6.97,,3.03,full-width roll end left (m)
+2F roof,P0-B,ROLL,,,,,,,,,,17,0,9.2,,0.8,full-width roll end left (m)
+2F roof,P0-B,ROLL,,,,,,,,,,18,0,7.849,,2.151,full-width roll end left (m)
+2F roof,P0-A,PLAN,,,,,,,,,,,,,,17,strips stop at the opening edge; 16 flap pieces and S19 from this roof's offcuts (Q-58 A)
+2F roof,P0-A,STRIP_PIECE,S1,1.0,19.27,-0.2,0.8,-0.2,19.07,1,10.0,1,0.0,10.0,roll,,
+2F roof,P0-A,STRIP_PIECE,S1,1.0,19.27,-0.2,0.8,-0.2,19.07,2,9.37,7,0.0,9.37,roll,,
+2F roof,P0-A,STRIP_PIECE,S2,1.0,19.27,0.7,1.7,-0.2,19.07,1,10.0,2,0.0,10.0,roll,,
+2F roof,P0-A,STRIP_PIECE,S2,1.0,19.27,0.7,1.7,-0.2,19.07,2,9.37,8,0.0,9.37,roll,,
+2F roof,P0-A,STRIP_PIECE,S3,1.0,1.286,1.6,2.6,-0.2,1.086,1,1.286,10,0.0,1.286,roll,,
+2F roof,P0-A,STRIP_PIECE,S4,1.0,12.197,1.6,2.6,3.336,15.534,1,10.0,3,0.0,10.0,roll,,
+2F roof,P0-A,STRIP_PIECE,S4,1.0,12.197,1.6,2.6,3.336,15.534,2,2.297,9,0.0,2.297,roll,,
+2F roof,P0-A,STRIP_PIECE,S5,1.0,1.286,1.6,2.6,17.784,19.07,1,1.286,11,0.0,1.286,roll,,
+2F roof,P0-A,STRIP_PIECE,S6,1.0,0.441,2.5,3.5,-0.2,0.241,1,0.441,8,9.37,9.811,roll,,
+2F roof,P0-A,STRIP_PIECE,S7,1.0,10.507,2.5,3.5,4.181,14.689,1,10.0,4,0.0,10.0,roll,,
+2F roof,P0-A,STRIP_PIECE,S7,1.0,10.507,2.5,3.5,4.181,14.689,2,0.607,7,9.37,9.977,roll,,
+2F roof,P0-A,STRIP_PIECE,S8,1.0,0.441,2.5,3.5,18.629,19.07,1,0.441,9,2.297,2.738,roll,,
+2F roof,P0-A,STRIP_PIECE,S9,1.0,0.348,3.4,4.4,-0.2,0.148,1,0.348,12,0.0,0.348,roll,,
+2F roof,P0-A,STRIP_PIECE,S10,1.0,10.323,3.4,4.4,4.274,14.596,1,10.0,5,0.0,10.0,roll,,
+2F roof,P0-A,STRIP_PIECE,S10,1.0,10.323,3.4,4.4,4.274,14.596,2,0.423,11,1.286,1.709,roll,,
+2F roof,P0-A,STRIP_PIECE,S11,1.0,0.348,3.4,4.4,18.722,19.07,1,0.348,12,0.348,0.696,roll,,
+2F roof,P0-A,STRIP_PIECE,S12,1.0,0.993,4.3,5.3,-0.2,0.793,1,0.993,11,1.709,2.702,roll,,
+2F roof,P0-A,STRIP_PIECE,S13,1.0,11.612,4.3,5.3,3.629,15.241,1,10.0,6,0.0,10.0,roll,,
+2F roof,P0-A,STRIP_PIECE,S13,1.0,11.612,4.3,5.3,3.629,15.241,2,1.712,10,1.286,2.998,roll,,
+2F roof,P0-A,STRIP_PIECE,S14,1.0,0.993,4.3,5.3,18.077,19.07,1,0.993,12,0.696,1.689,roll,,
+2F roof,P0-A,STRIP_PIECE,S15,1.0,4.6,5.2,6.2,-0.2,4.4,1,4.6,17,0.0,4.6,roll,,
+2F roof,P0-A,STRIP_PIECE,S16,1.0,6.97,5.2,6.2,12.1,19.07,1,6.97,9,2.738,9.708,roll,,
+2F roof,P0-A,STRIP_PIECE,S17,1.0,4.6,6.1,7.1,-0.2,4.4,1,4.6,17,4.6,9.2,roll,,
+2F roof,P0-A,STRIP_PIECE,S18,1.0,6.97,6.1,7.1,12.1,19.07,1,6.97,10,2.998,9.968,roll,,
+2F roof,P0-A,STRIP_PIECE,S19,0.3,4.6,7.0,7.3,-0.2,4.4,1,4.6,,,,side trim of S25,,trim 0.70 x 6.97
+2F roof,P0-A,STRIP_PIECE,S20,1.0,6.97,7.0,8.0,12.1,19.07,1,6.97,11,2.702,9.672,roll,,
+2F roof,P0-A,STRIP_PIECE,S21,1.0,6.97,7.9,8.9,12.1,19.07,1,6.97,12,1.689,8.659,roll,,
+2F roof,P0-A,STRIP_PIECE,S22,1.0,6.97,8.8,9.8,12.1,19.07,1,6.97,13,0.0,6.97,roll,,
+2F roof,P0-A,STRIP_PIECE,S23,1.0,6.97,9.7,10.7,12.1,19.07,1,6.97,14,0.0,6.97,roll,,
+2F roof,P0-A,STRIP_PIECE,S24,1.0,6.97,10.6,11.6,12.1,19.07,1,6.97,15,0.0,6.97,roll,,
+2F roof,P0-A,STRIP_PIECE,S25,0.3,6.97,11.5,11.8,12.1,19.07,1,6.97,16,0.0,6.97,roll,,
+2F roof,P0-A,ROLL,,,,,,,,,,1,0,10.0,,0.0,full-width roll end left (m)
+2F roof,P0-A,ROLL,,,,,,,,,,2,0,10.0,,0.0,full-width roll end left (m)
+2F roof,P0-A,ROLL,,,,,,,,,,3,0,10.0,,0.0,full-width roll end left (m)
+2F roof,P0-A,ROLL,,,,,,,,,,4,0,10.0,,0.0,full-width roll end left (m)
+2F roof,P0-A,ROLL,,,,,,,,,,5,0,10.0,,0.0,full-width roll end left (m)
+2F roof,P0-A,ROLL,,,,,,,,,,6,0,10.0,,0.0,full-width roll end left (m)
+2F roof,P0-A,ROLL,,,,,,,,,,7,0,9.977,,0.023,full-width roll end left (m)
+2F roof,P0-A,ROLL,,,,,,,,,,8,0,9.811,,0.189,full-width roll end left (m)
+2F roof,P0-A,ROLL,,,,,,,,,,9,0,9.708,,0.292,full-width roll end left (m)
+2F roof,P0-A,ROLL,,,,,,,,,,10,0,9.968,,0.032,full-width roll end left (m)
+2F roof,P0-A,ROLL,,,,,,,,,,11,0,9.672,,0.328,full-width roll end left (m)
+2F roof,P0-A,ROLL,,,,,,,,,,12,0,8.659,,1.341,full-width roll end left (m)
+2F roof,P0-A,ROLL,,,,,,,,,,13,0,6.97,,3.03,full-width roll end left (m)
+2F roof,P0-A,ROLL,,,,,,,,,,14,0,6.97,,3.03,full-width roll end left (m)
+2F roof,P0-A,ROLL,,,,,,,,,,15,0,6.97,,3.03,full-width roll end left (m)
+2F roof,P0-A,ROLL,,,,,,,,,,16,0,6.97,,3.03,full-width roll end left (m)
+2F roof,P0-A,ROLL,,,,,,,,,,17,0,9.2,,0.8,full-width roll end left (m)
+2F roof,P0-A,FLAP_PIECE,,,,3.5,4.3,4.098,4.274,,,,,,roll end of this roof,0.0698,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P0-A,FLAP_PIECE,,,,5.03,5.2,3.434,3.629,,,,,,roll end of this roof,0.0159,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P0-A,FLAP_PIECE,,,,5.03,5.2,0.793,0.988,,,,,,roll end of this roof,0.0159,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P0-A,FLAP_PIECE,,,,3.5,4.3,0.148,0.324,,,,,,roll end of this roof,0.0698,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P0-A,FLAP_PIECE,,,,2.6,3.2,0.241,0.468,,,,,,roll end of this roof,0.0572,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P0-A,FLAP_PIECE,,,,1.7,1.937,1.086,1.562,,,,,,roll end of this roof,0.05,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P0-A,FLAP_PIECE,,,,1.7,1.937,2.86,3.336,,,,,,roll end of this roof,0.05,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P0-A,FLAP_PIECE,,,,2.6,3.2,3.954,4.181,,,,,,roll end of this roof,0.0572,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P0-A,FLAP_PIECE,,,,3.5,4.3,18.546,18.722,,,,,,roll end of this roof,0.0698,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P0-A,FLAP_PIECE,,,,5.03,5.2,17.882,18.077,,,,,,roll end of this roof,0.0159,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P0-A,FLAP_PIECE,,,,5.03,5.2,15.241,15.436,,,,,,roll end of this roof,0.0159,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P0-A,FLAP_PIECE,,,,3.5,4.3,14.596,14.772,,,,,,roll end of this roof,0.0698,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P0-A,FLAP_PIECE,,,,2.6,3.2,14.689,14.916,,,,,,roll end of this roof,0.0572,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P0-A,FLAP_PIECE,,,,1.7,1.937,15.534,16.01,,,,,,roll end of this roof,0.05,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P0-A,FLAP_PIECE,,,,1.7,1.937,17.308,17.784,,,,,,roll end of this roof,0.05,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P0-A,FLAP_PIECE,,,,2.6,3.2,18.402,18.629,,,,,,roll end of this roof,0.0572,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-A,PLAN,,,,,,,,,,,,,,17,"as P0-A, first strip cut to 0.95 m so no side seam lies in the last 0.10 m before a parapet foot (recommended)"
+2F roof,P05-A,STRIP_PIECE,S1,0.95,19.27,-0.2,0.75,-0.2,19.07,1,10.0,1,0.0,10.0,roll,,
+2F roof,P05-A,STRIP_PIECE,S1,0.95,19.27,-0.2,0.75,-0.2,19.07,2,9.37,7,0.0,9.37,roll,,
+2F roof,P05-A,STRIP_PIECE,S2,1.0,19.27,0.65,1.65,-0.2,19.07,1,10.0,2,0.0,10.0,roll,,
+2F roof,P05-A,STRIP_PIECE,S2,1.0,19.27,0.65,1.65,-0.2,19.07,2,9.37,8,0.0,9.37,roll,,
+2F roof,P05-A,STRIP_PIECE,S3,1.0,1.375,1.55,2.55,-0.2,1.175,1,1.375,10,0.0,1.375,roll,,
+2F roof,P05-A,STRIP_PIECE,S4,1.0,12.376,1.55,2.55,3.247,15.623,1,10.0,3,0.0,10.0,roll,,
+2F roof,P05-A,STRIP_PIECE,S4,1.0,12.376,1.55,2.55,3.247,15.623,2,2.476,9,0.0,2.476,roll,,
+2F roof,P05-A,STRIP_PIECE,S5,1.0,1.375,1.55,2.55,17.695,19.07,1,1.375,11,0.0,1.375,roll,,
+2F roof,P05-A,STRIP_PIECE,S6,1.0,0.467,2.45,3.45,-0.2,0.267,1,0.467,7,9.37,9.837,roll,,
+2F roof,P05-A,STRIP_PIECE,S7,1.0,10.56,2.45,3.45,4.155,14.715,1,10.0,4,0.0,10.0,roll,,
+2F roof,P05-A,STRIP_PIECE,S7,1.0,10.56,2.45,3.45,4.155,14.715,2,0.66,11,1.375,2.035,roll,,
+2F roof,P05-A,STRIP_PIECE,S8,1.0,0.467,2.45,3.45,18.603,19.07,1,0.467,8,9.37,9.837,roll,,
+2F roof,P05-A,STRIP_PIECE,S9,1.0,0.33,3.35,4.35,-0.2,0.13,1,0.33,12,0.0,0.33,roll,,
+2F roof,P05-A,STRIP_PIECE,S10,1.0,10.285,3.35,4.35,4.292,14.578,1,10.0,5,0.0,10.0,roll,,
+2F roof,P05-A,STRIP_PIECE,S10,1.0,10.285,3.35,4.35,4.292,14.578,2,0.385,9,2.476,2.861,roll,,
+2F roof,P05-A,STRIP_PIECE,S11,1.0,0.33,3.35,4.35,18.74,19.07,1,0.33,12,0.33,0.66,roll,,
+2F roof,P05-A,STRIP_PIECE,S12,1.0,0.935,4.25,5.25,-0.2,0.735,1,0.935,11,2.035,2.97,roll,,
+2F roof,P05-A,STRIP_PIECE,S13,1.0,11.496,4.25,5.25,3.687,15.183,1,10.0,6,0.0,10.0,roll,,
+2F roof,P05-A,STRIP_PIECE,S13,1.0,11.496,4.25,5.25,3.687,15.183,2,1.596,10,1.375,2.971,roll,,
+2F roof,P05-A,STRIP_PIECE,S14,1.0,0.935,4.25,5.25,18.135,19.07,1,0.935,12,0.66,1.595,roll,,
+2F roof,P05-A,STRIP_PIECE,S15,1.0,4.6,5.15,6.15,-0.2,4.4,1,4.6,17,0.0,4.6,roll,,
+2F roof,P05-A,STRIP_PIECE,S16,1.0,6.97,5.15,6.15,12.1,19.07,1,6.97,9,2.861,9.831,roll,,
+2F roof,P05-A,STRIP_PIECE,S17,1.0,4.6,6.05,7.05,-0.2,4.4,1,4.6,17,4.6,9.2,roll,,
+2F roof,P05-A,STRIP_PIECE,S18,1.0,6.97,6.05,7.05,12.1,19.07,1,6.97,10,2.971,9.941,roll,,
+2F roof,P05-A,STRIP_PIECE,S19,0.35,4.6,6.95,7.3,-0.2,4.4,1,4.6,,,,side trim of S25,,trim 0.65 x 6.97
+2F roof,P05-A,STRIP_PIECE,S20,1.0,6.97,6.95,7.95,12.1,19.07,1,6.97,11,2.97,9.94,roll,,
+2F roof,P05-A,STRIP_PIECE,S21,1.0,6.97,7.85,8.85,12.1,19.07,1,6.97,12,1.595,8.565,roll,,
+2F roof,P05-A,STRIP_PIECE,S22,1.0,6.97,8.75,9.75,12.1,19.07,1,6.97,13,0.0,6.97,roll,,
+2F roof,P05-A,STRIP_PIECE,S23,1.0,6.97,9.65,10.65,12.1,19.07,1,6.97,14,0.0,6.97,roll,,
+2F roof,P05-A,STRIP_PIECE,S24,1.0,6.97,10.55,11.55,12.1,19.07,1,6.97,15,0.0,6.97,roll,,
+2F roof,P05-A,STRIP_PIECE,S25,0.35,6.97,11.45,11.8,12.1,19.07,1,6.97,16,0.0,6.97,roll,,
+2F roof,P05-A,ROLL,,,,,,,,,,1,0,10.0,,0.0,full-width roll end left (m)
+2F roof,P05-A,ROLL,,,,,,,,,,2,0,10.0,,0.0,full-width roll end left (m)
+2F roof,P05-A,ROLL,,,,,,,,,,3,0,10.0,,0.0,full-width roll end left (m)
+2F roof,P05-A,ROLL,,,,,,,,,,4,0,10.0,,0.0,full-width roll end left (m)
+2F roof,P05-A,ROLL,,,,,,,,,,5,0,10.0,,0.0,full-width roll end left (m)
+2F roof,P05-A,ROLL,,,,,,,,,,6,0,10.0,,0.0,full-width roll end left (m)
+2F roof,P05-A,ROLL,,,,,,,,,,7,0,9.837,,0.163,full-width roll end left (m)
+2F roof,P05-A,ROLL,,,,,,,,,,8,0,9.837,,0.163,full-width roll end left (m)
+2F roof,P05-A,ROLL,,,,,,,,,,9,0,9.831,,0.169,full-width roll end left (m)
+2F roof,P05-A,ROLL,,,,,,,,,,10,0,9.941,,0.059,full-width roll end left (m)
+2F roof,P05-A,ROLL,,,,,,,,,,11,0,9.94,,0.06,full-width roll end left (m)
+2F roof,P05-A,ROLL,,,,,,,,,,12,0,8.565,,1.435,full-width roll end left (m)
+2F roof,P05-A,ROLL,,,,,,,,,,13,0,6.97,,3.03,full-width roll end left (m)
+2F roof,P05-A,ROLL,,,,,,,,,,14,0,6.97,,3.03,full-width roll end left (m)
+2F roof,P05-A,ROLL,,,,,,,,,,15,0,6.97,,3.03,full-width roll end left (m)
+2F roof,P05-A,ROLL,,,,,,,,,,16,0,6.97,,3.03,full-width roll end left (m)
+2F roof,P05-A,ROLL,,,,,,,,,,17,0,9.2,,0.8,full-width roll end left (m)
+2F roof,P05-A,FLAP_PIECE,,,,3.45,4.25,4.115,4.292,,,,,,roll end of this roof,0.0792,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-A,FLAP_PIECE,,,,4.97,5.15,3.497,3.687,,,,,,roll end of this roof,0.0164,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-A,FLAP_PIECE,,,,4.97,5.15,0.735,0.926,,,,,,roll end of this roof,0.0164,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-A,FLAP_PIECE,,,,3.45,4.25,0.13,0.307,,,,,,roll end of this roof,0.0792,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-A,FLAP_PIECE,,,,2.55,3.088,0.267,0.498,,,,,,roll end of this roof,0.0538,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-A,FLAP_PIECE,,,,1.65,1.88,1.175,1.733,,,,,,roll end of this roof,0.0549,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-A,FLAP_PIECE,,,,1.65,1.88,2.689,3.247,,,,,,roll end of this roof,0.0549,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-A,FLAP_PIECE,,,,2.55,3.088,3.924,4.155,,,,,,roll end of this roof,0.0538,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-A,FLAP_PIECE,,,,3.45,4.25,18.563,18.74,,,,,,roll end of this roof,0.0792,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-A,FLAP_PIECE,,,,4.97,5.15,17.944,18.135,,,,,,roll end of this roof,0.0164,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-A,FLAP_PIECE,,,,4.97,5.15,15.183,15.373,,,,,,roll end of this roof,0.0164,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-A,FLAP_PIECE,,,,3.45,4.25,14.578,14.755,,,,,,roll end of this roof,0.0792,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-A,FLAP_PIECE,,,,2.55,3.088,14.715,14.946,,,,,,roll end of this roof,0.0538,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-A,FLAP_PIECE,,,,1.65,1.88,15.623,16.181,,,,,,roll end of this roof,0.0549,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-A,FLAP_PIECE,,,,1.65,1.88,17.137,17.695,,,,,,roll end of this roof,0.0549,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-A,FLAP_PIECE,,,,2.55,3.088,18.372,18.603,,,,,,roll end of this roof,0.0538,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-B,PLAN,,,,,,,,,,,,,,18,"as P05-A, every piece from a roll (Q-58 B)"
+2F roof,P05-B,STRIP_PIECE,S1,0.95,19.27,-0.2,0.75,-0.2,19.07,1,10.0,1,0.0,10.0,roll,,
+2F roof,P05-B,STRIP_PIECE,S1,0.95,19.27,-0.2,0.75,-0.2,19.07,2,9.37,7,0.0,9.37,roll,,
+2F roof,P05-B,STRIP_PIECE,S2,1.0,19.27,0.65,1.65,-0.2,19.07,1,10.0,2,0.0,10.0,roll,,
+2F roof,P05-B,STRIP_PIECE,S2,1.0,19.27,0.65,1.65,-0.2,19.07,2,9.37,8,0.0,9.37,roll,,
+2F roof,P05-B,STRIP_PIECE,S3,1.0,1.375,1.55,2.55,-0.2,1.175,1,1.375,10,0.0,1.375,roll,,
+2F roof,P05-B,STRIP_PIECE,S4,1.0,12.376,1.55,2.55,3.247,15.623,1,10.0,3,0.0,10.0,roll,,
+2F roof,P05-B,STRIP_PIECE,S4,1.0,12.376,1.55,2.55,3.247,15.623,2,2.476,9,0.0,2.476,roll,,
+2F roof,P05-B,STRIP_PIECE,S5,1.0,1.375,1.55,2.55,17.695,19.07,1,1.375,11,0.0,1.375,roll,,
+2F roof,P05-B,STRIP_PIECE,S6,1.0,0.467,2.45,3.45,-0.2,0.267,1,0.467,7,9.37,9.837,roll,,
+2F roof,P05-B,STRIP_PIECE,S7,1.0,10.56,2.45,3.45,4.155,14.715,1,10.0,4,0.0,10.0,roll,,
+2F roof,P05-B,STRIP_PIECE,S7,1.0,10.56,2.45,3.45,4.155,14.715,2,0.66,11,1.375,2.035,roll,,
+2F roof,P05-B,STRIP_PIECE,S8,1.0,0.467,2.45,3.45,18.603,19.07,1,0.467,8,9.37,9.837,roll,,
+2F roof,P05-B,STRIP_PIECE,S9,1.0,0.33,3.35,4.35,-0.2,0.13,1,0.33,12,0.0,0.33,roll,,
+2F roof,P05-B,STRIP_PIECE,S10,1.0,10.285,3.35,4.35,4.292,14.578,1,10.0,5,0.0,10.0,roll,,
+2F roof,P05-B,STRIP_PIECE,S10,1.0,10.285,3.35,4.35,4.292,14.578,2,0.385,9,2.476,2.861,roll,,
+2F roof,P05-B,STRIP_PIECE,S11,1.0,0.33,3.35,4.35,18.74,19.07,1,0.33,12,0.33,0.66,roll,,
+2F roof,P05-B,STRIP_PIECE,S12,1.0,0.935,4.25,5.25,-0.2,0.735,1,0.935,11,2.035,2.97,roll,,
+2F roof,P05-B,STRIP_PIECE,S13,1.0,11.496,4.25,5.25,3.687,15.183,1,10.0,6,0.0,10.0,roll,,
+2F roof,P05-B,STRIP_PIECE,S13,1.0,11.496,4.25,5.25,3.687,15.183,2,1.596,10,1.375,2.971,roll,,
+2F roof,P05-B,STRIP_PIECE,S14,1.0,0.935,4.25,5.25,18.135,19.07,1,0.935,12,0.66,1.595,roll,,
+2F roof,P05-B,STRIP_PIECE,S15,1.0,4.6,5.15,6.15,-0.2,4.4,1,4.6,17,0.0,4.6,roll,,
+2F roof,P05-B,STRIP_PIECE,S16,1.0,6.97,5.15,6.15,12.1,19.07,1,6.97,9,2.861,9.831,roll,,
+2F roof,P05-B,STRIP_PIECE,S17,1.0,4.6,6.05,7.05,-0.2,4.4,1,4.6,17,4.6,9.2,roll,,
+2F roof,P05-B,STRIP_PIECE,S18,1.0,6.97,6.05,7.05,12.1,19.07,1,6.97,10,2.971,9.941,roll,,
+2F roof,P05-B,STRIP_PIECE,S19,0.35,4.6,6.95,7.3,-0.2,4.4,1,4.6,18,0.0,4.6,roll,,
+2F roof,P05-B,STRIP_PIECE,S20,1.0,6.97,6.95,7.95,12.1,19.07,1,6.97,11,2.97,9.94,roll,,
+2F roof,P05-B,STRIP_PIECE,S21,1.0,6.97,7.85,8.85,12.1,19.07,1,6.97,12,1.595,8.565,roll,,
+2F roof,P05-B,STRIP_PIECE,S22,1.0,6.97,8.75,9.75,12.1,19.07,1,6.97,13,0.0,6.97,roll,,
+2F roof,P05-B,STRIP_PIECE,S23,1.0,6.97,9.65,10.65,12.1,19.07,1,6.97,14,0.0,6.97,roll,,
+2F roof,P05-B,STRIP_PIECE,S24,1.0,6.97,10.55,11.55,12.1,19.07,1,6.97,15,0.0,6.97,roll,,
+2F roof,P05-B,STRIP_PIECE,S25,0.35,6.97,11.45,11.8,12.1,19.07,1,6.97,16,0.0,6.97,roll,,
+2F roof,P05-B,ROLL,,,,,,,,,,1,0,10.0,,0.0,full-width roll end left (m)
+2F roof,P05-B,ROLL,,,,,,,,,,2,0,10.0,,0.0,full-width roll end left (m)
+2F roof,P05-B,ROLL,,,,,,,,,,3,0,10.0,,0.0,full-width roll end left (m)
+2F roof,P05-B,ROLL,,,,,,,,,,4,0,10.0,,0.0,full-width roll end left (m)
+2F roof,P05-B,ROLL,,,,,,,,,,5,0,10.0,,0.0,full-width roll end left (m)
+2F roof,P05-B,ROLL,,,,,,,,,,6,0,10.0,,0.0,full-width roll end left (m)
+2F roof,P05-B,ROLL,,,,,,,,,,7,0,9.837,,0.163,full-width roll end left (m)
+2F roof,P05-B,ROLL,,,,,,,,,,8,0,9.837,,0.163,full-width roll end left (m)
+2F roof,P05-B,ROLL,,,,,,,,,,9,0,9.831,,0.169,full-width roll end left (m)
+2F roof,P05-B,ROLL,,,,,,,,,,10,0,9.941,,0.059,full-width roll end left (m)
+2F roof,P05-B,ROLL,,,,,,,,,,11,0,9.94,,0.06,full-width roll end left (m)
+2F roof,P05-B,ROLL,,,,,,,,,,12,0,8.565,,1.435,full-width roll end left (m)
+2F roof,P05-B,ROLL,,,,,,,,,,13,0,6.97,,3.03,full-width roll end left (m)
+2F roof,P05-B,ROLL,,,,,,,,,,14,0,6.97,,3.03,full-width roll end left (m)
+2F roof,P05-B,ROLL,,,,,,,,,,15,0,6.97,,3.03,full-width roll end left (m)
+2F roof,P05-B,ROLL,,,,,,,,,,16,0,6.97,,3.03,full-width roll end left (m)
+2F roof,P05-B,ROLL,,,,,,,,,,17,0,9.2,,0.8,full-width roll end left (m)
+2F roof,P05-B,ROLL,,,,,,,,,,18,0,4.6,,5.4,full-width roll end left (m)
+2F roof,P05-B,FLAP_PIECE,,,,3.45,4.25,4.115,4.292,,,,,,roll,0.0792,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-B,FLAP_PIECE,,,,4.97,5.15,3.497,3.687,,,,,,roll,0.0164,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-B,FLAP_PIECE,,,,4.97,5.15,0.735,0.926,,,,,,roll,0.0164,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-B,FLAP_PIECE,,,,3.45,4.25,0.13,0.307,,,,,,roll,0.0792,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-B,FLAP_PIECE,,,,2.55,3.088,0.267,0.498,,,,,,roll,0.0538,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-B,FLAP_PIECE,,,,1.65,1.88,1.175,1.733,,,,,,roll,0.0549,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-B,FLAP_PIECE,,,,1.65,1.88,2.689,3.247,,,,,,roll,0.0549,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-B,FLAP_PIECE,,,,2.55,3.088,3.924,4.155,,,,,,roll,0.0538,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-B,FLAP_PIECE,,,,3.45,4.25,18.563,18.74,,,,,,roll,0.0792,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-B,FLAP_PIECE,,,,4.97,5.15,17.944,18.135,,,,,,roll,0.0164,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-B,FLAP_PIECE,,,,4.97,5.15,15.183,15.373,,,,,,roll,0.0164,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-B,FLAP_PIECE,,,,3.45,4.25,14.578,14.755,,,,,,roll,0.0792,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-B,FLAP_PIECE,,,,2.55,3.088,14.715,14.946,,,,,,roll,0.0538,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-B,FLAP_PIECE,,,,1.65,1.88,15.623,16.181,,,,,,roll,0.0549,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-B,FLAP_PIECE,,,,1.65,1.88,17.137,17.695,,,,,,roll,0.0549,opening flap piece net m2; cut with 0.10 m laps
+2F roof,P05-B,FLAP_PIECE,,,,2.55,3.088,18.372,18.603,,,,,,roll,0.0538,opening flap piece net m2; cut with 0.10 m laps
+GF pantry,ALONG_4.50,STRIP_PIECE,S1,1.0,4.9,0.0,1.0,0.0,4.9,1,4.9,1,0.0,4.9,roll,,strips along the 4.50 m walls; across measured from the west wall widened 0.20 m
+GF pantry,ALONG_4.50,STRIP_PIECE,S2,1.0,4.9,0.9,1.9,0.0,4.9,1,4.9,1,4.9,9.8,roll,,strips along the 4.50 m walls; across measured from the west wall widened 0.20 m
+GF pantry,ALONG_4.50,STRIP_PIECE,S3,1.0,4.9,1.8,2.8,0.0,4.9,1,4.9,2,0.0,4.9,roll,,strips along the 4.50 m walls; across measured from the west wall widened 0.20 m
+GF pantry,ALONG_4.50,STRIP_PIECE,S4,0.7,4.9,2.7,3.4,0.0,4.9,1,4.9,2,4.9,9.8,roll,,strips along the 4.50 m walls; across measured from the west wall widened 0.20 m
+GF pantry,ALONG_4.50,ROLL,,,,,,,,,,1,0,9.8,,0.2,full-width roll end left (m)
+GF pantry,ALONG_4.50,ROLL,,,,,,,,,,2,0,9.8,,0.2,full-width roll end left (m)
+GF pantry,ACROSS_3.00,PLAN,,,,,,,,,,,,,,3,6 strips x 3.40 m (last 0.40 wide) = 20.40 m; 2 per roll -> 3 rolls (not chosen)
