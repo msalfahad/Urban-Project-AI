@@ -1,5 +1,7 @@
 # Questions for the owner (at most 5 open; answer under "Answer:")
 
+Verifier 2026-10-20 11:35: one new no-assumptions question from the blockwork hand table (T-103): Q-63 (a 7.00 m sea-side wall band on the ground-floor plan that the fence drawing does not show: block fence or not). Open now: 13 (Q-50 to Q-63 without Q-60, which the owner answered at 10:45 and the Lead still has to move to Answered).
+
 Lead 2026-10-20 08:20: three new no-assumptions questions: Q-60 (blockwork: the height a block wall is measured to; block m2 held until answered), Q-61 (16 held Alsenan beam pieces the drawings contradict or leave unmarked: hold, provisional bigger reading, or your ruling) and Q-62 (the last riser of a flight inside the arrival slab: stair, slab or both; 0.163 m3; proposed by worker 3). Open now: 13 (Q-50 to Q-62), all no-assumption questions.
 Worker 1 2026-10-20 05:05: one new no-assumptions question from the tile count (T-087): Q-59 (offcut reuse inside a room when counting tiles to buy).
 Worker 3 2026-10-20 00:14: one new no-assumptions question from the room-by-room finishing table (T-086): Q-53 (cement bags and sand per m3 of the 1:3 stair mortar). Open now: 4 (Q-50 to Q-53).
@@ -430,6 +432,24 @@ RECOMMENDATION: (A): the floor slab and landings are measured over their full ar
 face; this keeps your no-double-counting rule and changes only the stair line (practice, not a code clause).
 WAITS ON: the Alsenan stair concrete lines (main stair 5.011 vs freelancer 8.131 m3) and the same rule on every villa (T-056
 wiring).
+
+### Q-63 Sea-side fence: the ground-floor plan draws a 7.00 m wall on the sea side that the fence drawing does not show. Is it a block fence in the blockwork? (verifier 2026-10-20 11:35; T-103, T-027; no-assumptions question: the drawings disagree and no Urban rule covers it)
+
+THE PROBLEM: the ground-floor plan draws a 0.20 m wall band along the sea side of the plot, 7.00 m long on its centreline
+with a 1.00 m gate inside it (6.00 m solid). The fence drawing (page 12) shows only the street side, and no sheet prints this
+wall's material or height. The freelancer's fence row is 37.20 m x 2.00 m (north side 31.37 + street side 5.80) and has no
+sea-side line. The engine cannot decide whether this is block fence, so its metres are not in any blockwork line.
+WHERE TO LOOK: Drive "Alsenan chalet project", p7757_arch_sheet03.pdf (GROUND FLOOR PLAN): the plot edge on the SEA VIEW side;
+Alsenan_Architectural_P7757_Pages_11-12, page 12 (FENCE PLAN / ELEVATION / SECTION): only the street side is drawn.
+THE OPTIONS:
+(A) It is a block fence like the others: 7.00 m of 0.20 m fence wall (6.00 m solid after the 1.00 m gate), height from the
+    fence section on page 12 (2.15 + 0.50 m), added to the fence blockwork.
+(B) It is not block (railing, glass or another material): no blockwork line; listed as an item the drawings do not define.
+(C) Hold it and ask the designer for the sea-side fence detail; until then it stays HELD with its 7.00 m.
+RECOMMENDATION: (C): the plan draws the band but no sheet gives its material or height, and sea-side plots often take a low
+wall with a railing instead of a full block fence (practice, not a code clause); a drawing conflict is recorded, not guessed.
+WAITS ON: fence blockwork metres and m2 on Alsenan (hand table done; engine masonry piece T-027).
+Answer:
 
 ## Answered
 
