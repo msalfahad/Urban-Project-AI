@@ -35,23 +35,27 @@ route G with the V6 conventions and the typed profile (run B, T-036 / T-044), co
 | necks (FOUNDATION) | 10.855 | 10.855 | 0 | as route (heights held downstream, Q-21 C) | - | - |
 | blinding released | 22.155 | **15.179** | -6.976 (moved to HELD) | 25 footings | 15.179 | 47.055 (one plate) |
 | blinding footing in conflict | (in 22.155: 0.480) | HELD 0.480 .. 0.590 | | Q-31 C | HELD 0.480 .. 0.590 | in his plate |
-| blinding ground beams | (in 22.155) | HELD 5.724 .. 9.487 | | Q-21 C | HELD 5.534 .. 9.691 | in his plate |
+| blinding ground beams | (in 22.155) | HELD 5.724 .. 9.423 | | Q-21 C | HELD 5.534 .. 9.691 | in his plate |
 | blinding straps | (in 22.155) | HELD 0.772 | | designer request | HELD 0.913 | in his plate |
-| blinding total range | 22.155 | 22.155 .. 26.029 | | | 20.713 .. 26.373 | 47.055 |
+| blinding total range | 22.155 | 22.155 .. 25.964 | | | 20.713 .. 26.373 | 47.055 |
 
 Columns: the scope pass finds exactly the five pieces T-100 found by hand (sheet = the roof-slab plan of that storey;
 nearest drawn outline 1.48 / 9.43 / 8.54 / 7.05 / 7.11 m): 1F C3 0.20 x 0.50 x 4.20 = 0.420; 2F C3, C3, C5 0.420 each,
 C8 0.20 x 0.70 x 4.20 = 0.588; together 2.268. Every other unbound mark (C3 / C5 / C8 / C10 / C / C1 / C2 on the
 storeys their plans draw) is anchored on the foundation plan to within 0.07 m of an outline on each plan, and the one
 mark with no foundation outline (C11, GF only) is released by its printed section 0.25 x 1.10 drawn on the GF plan.
+Second drawing: ST7757.pdf p.6 (second-floor roof slab, rendered at 60 / 250 dpi) covers only the water-tank /
+stair core between the neighbour-side beams B15 and B7; the four 2F NOT_PRESENT pieces stand at about 12.6 m and
+24.3 - 24.5 m from the street line, outside that core, and the C3 the piece keeps on 2F (about 17.0 m) is inside it.
 Engine vs freelancer columns: 36.714 vs 28.547 (+28.6 %) before, 34.446 vs 28.547 (+5.899, +20.7 %) after; the rest
 is the height basis (full storey interval vs his interval - 0.75; rule URBAN-COLUMN-HEIGHT-TO-CONTROLLING-MEMBER@v1,
 task T-119) and his count slips (T-100 section 4).
 
 Blinding: released 15.179 = hand 15.179 to the m2 (151.794 m2, FN / F9 overlap 0.336 m2 once). The ground-beam
-range differs from the hand range by +0.190 (low, +3.4 %) and -0.204 (high, -2.1 %): engine strips use route G's
-net plan + 2p x clear length (the length basis GB_LENGTH_BASIS is a second hold on this line) and do not deduct the
-neck footprints that pierce the beam layer (hand -5.37 m2); straps 0.772 vs hand 0.913 (engine strap lengths 3.27 /
+range differs from the hand range by +0.190 (low, +3.4 %) and -0.268 (high, -2.8 %): route G's beam bands stop at the
+column faces, so the neck footprints the hand reading deducts (-5.37 m2 from the gross strips) are already outside
+the engine strips except their 0.10 m projections (0.649 m2, taken out of the own-layer reading); the rest is the
+length basis (GB_LENGTH_BASIS, a second hold on this line) and the curved beams; straps 0.772 vs hand 0.913 (engine strap lengths 3.27 /
 5.70 / 2.26 m against the hand clear lengths 3.259 / 4.55 / 2.294 m: the SB1 length differs; not traced here).
 
 ## Two methods side by side (owner management decision section 5)
@@ -74,12 +78,12 @@ neck footprints that pierce the beam layer (hand -5.37 m2); straps 0.772 vs hand
 
 ## Tests
 
-`tests/t126_route_g_scope/` (synthetic villa SV-SCOPE, not a client project; 28 tests): every expected value is a hand
+`tests/t126_route_g_scope/` (synthetic villa SV-SCOPE, not a client project; 33 tests): every expected value is a hand
 calculation in the module docstring; the same villa in mm, mirrored, rotated 90 degrees, in metres and mirrored +
 rotated + metres; an ambiguous anchor, an anchor that a bound column already owns, a mark with no anchor and no
 printed section (HELD), a storey with no slab plan (HELD), a route-held piece (unchanged), a route-absent piece
 (listed), a planted column (untouched), two footings with overlapping projections, a two-label footing (HELD with its
-range), crossing beams, a strap, unregistered plans, missing blinding thickness (no number), the detail choice given
+range), crossing beams, a neck outline inside a beam strip (own layer only, 5 frames), a strap, unregistered plans, missing blinding thickness (no number), the detail choice given
 (each reading released), no column plan (foundation occurrences checked), inputs not mutated, no project constants.
 
 ## What is missing

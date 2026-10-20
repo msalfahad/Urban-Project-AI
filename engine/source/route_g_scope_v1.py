@@ -358,13 +358,31 @@ def blinding_scope(R, items=None, *, beam_detail=None, strap_blinding_printed=Fa
     uF = _union(F_all)
     uFb = _union(F_all + Sb)
     beam_low = ((uFb - uF) * u * u + fb) * t              # merged with the footing layer below
-    beam_high = (_union(Sb) * u * u + fb) * t             # its own layer (crossings once)
+    # its own layer at beam level: crossings once, and the column / neck outlines the ground-beam plan draws inside
+    # the strips taken out (the neck passes down through that layer to its footing)
+    C = []
+    for rec in _sheets(D, "GROUND_BEAM_PLAN"):
+        sid = rec["sheet"]["sheet_id"]
+        if state != "REGISTERED" or sid not in shift:
+            continue
+        dx, dy = shift[sid]
+        seen = []
+        for c in list(rec.get("column_boxes", [])) + list(rec.get("column_presence", [])):
+            c = (c[0] + dx, c[1] + dy, c[2] + dx, c[3] + dy)
+            if any(max(abs(c[i] - k[i]) for i in range(4)) * u <= 0.01 for k in seen):
+                continue
+            seen.append(c)
+            C.append([(c[0], c[1]), (c[2], c[1]), (c[2], c[3]), (c[0], c[3])])
+    uSb = _union(Sb)
+    footprints = (uSb + _union(C) - _union(Sb + C)) * u * u if C else 0.0
+    beam_high = ((uSb * u * u - footprints) + fb) * t
     strap_low = ((_union(F_all + Sb + Ss) - uFb) * u * u + fs) * t
     strap_high = (_union(Ss) * u * u + fs) * t
     if under == "FOOTINGS_AND_GROUND_BEAMS" and nb:
         r = {"family": "GROUND_BEAM", "members": nb, "free_strips": sum(1 for b, band, sid in beams
                                                                          if band is None and not b.get("polygon")),
-             "low_merged_m3": _r(beam_low), "high_own_layer_m3": _r(beam_high)}
+             "low_merged_m3": _r(beam_low), "high_own_layer_m3": _r(beam_high),
+             "column_footprints_in_strips_m2": _r(footprints)}
         if beam_detail == "OWN_LAYER":
             r.update(status="RELEASED", m3=_r(beam_high), reason="detail choice given: beam blinding its own layer")
         elif beam_detail == "MERGED_WITH_FOOTING":

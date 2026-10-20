@@ -402,3 +402,15 @@ def test_without_a_column_plan_the_foundation_occurrences_are_checked():
     P = by_piece(SC.measure(R))
     assert P[("COL:FND:CA@208000,2000", "GF")]["status"] == "RELEASED"
     assert P[("COL:FND:CA@208000,2000", "1F")]["status"] == "NOT_PRESENT"
+
+
+@pytest.mark.parametrize("name", sorted(FRAMES))
+def test_neck_inside_a_beam_strip_is_taken_out_of_the_own_layer(name):
+    """a column outline drawn on the ground-beam plan at (5000, 3000), 0.30 x 0.30, inside beam 2's strip: the own
+    layer loses 0.09 m2 -> (4.32 - 0.09) x 0.075 = 0.31725; the merged reading (route G's) is unchanged 0.270"""
+    fr = FRAMES[name]
+    R, _ = villa(fr)
+    R["generic"]["D"]["sheets"]["GB"]["column_boxes"].append(fr.cbox("GB", 5000, 3000, 300, 300))
+    g = next(r for r in SC.measure(R)["blinding"]["records"] if r["family"] == "GROUND_BEAM")
+    assert g["column_footprints_in_strips_m2"] == A(0.09, abs=1e-6)
+    assert g["exposure_m3"] == [A(0.27, abs=1e-6), A(0.31725, abs=1e-6)]
