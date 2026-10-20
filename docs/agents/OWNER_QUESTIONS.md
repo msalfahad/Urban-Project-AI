@@ -222,6 +222,29 @@ the block quantity is the same as B wherever no block is drawn above or below th
 the glazing; B would need a new rule for "how much glass makes a line not a wall".
 Waits on: ground-floor blockwork run and block m2 (T-125, T-108).
 
+### Q-70 Second-floor stair arrival (4.875 m2 inside the printed 4.50 x 1.95 stair lobby): marble like the first-floor landing, or porcelain with the lobby? (worker 2 2026-10-20 19:05; T-122; no-assumptions question: your Q-66 B answer covers the first-floor landing, and the second-floor area is printed as a named lobby)
+
+THE PROBLEM: the main stair is stacked. On the first floor you ruled the 2.50 x 1.95 m arrival landing marble, once, as its
+own element (Q-66 B). On the second floor the same stair (the same 2.50 m width) arrives in front of the room printed as the
+stair lobby "450 x 195", which the finish table counts whole as porcelain, 8.775 m2. 2.50 x 1.95 = 4.875 m2 of that lobby is
+the same arrival area as the first-floor landing directly below it (the 2F flights start 0.30 / 0.35 m beyond its 195 edge,
+as on the first floor). Your stair rule says landings are marble, but this one sits inside a printed, named lobby, so the
+team cannot tell which of your two rules governs it.
+WHERE TO LOOK: Drive "Alsenan chalet project", Alsenan_Architectural_P7757_Pages_05-06 (page 5, second floor plan: the stair lobby 450 x 195
+in front of the main stair) and p7757_arch_sheet04.pdf (first floor plan: the landing 120 + 10 + 120 by 195, +5.50, which you
+ruled marble).
+THE OPTIONS:
+(A) Marble, as on the first floor: the 2.50 x 1.95 arrival area is a stair landing element in marble (4.875 m2); the lobby
+porcelain row becomes 8.775 - 4.875 = 3.900 m2; stair marble 44.365 -> 49.240 m2. The same rule on every villa: the area in
+front of a flight, the stair's width by the printed landing depth, is marble even inside a named lobby.
+(B) Porcelain, the whole printed lobby 8.775 m2 as today; marble only for landings that are not part of a named room.
+(C) Hold the 4.875 m2 finish until the finish schedule or the designer says.
+RECOMMENDATION: A. Practice, not a code clause: it is the same element as the first-floor landing you ruled marble, one
+floor up, and finishing it with the stair keeps the top nosing and the landing in one material with no joint at the last
+step; under B the two floors of one stair would be finished differently.
+Waits on: second-floor floor tiles and stair marble (the tiling table; the stair ledger T-111); arrival landings inside a
+named lobby on every villa.
+
 Earlier note: Q-64, Q-65 and Q-66 answered by the owner 2026-10-20 16:23 (moved to Answered by the Lead 18:20). Q-67, Q-68, Q-69 new (Lead 18:20).
 
 ## Answered
