@@ -1,5 +1,6 @@
 # Questions for the owner (at most 5 open; answer under "Answer:")
 
+Worker 1 2026-10-20 05:05: one new no-assumptions question from the tile count (T-087): Q-59 (offcut reuse inside a room when counting tiles to buy).
 Worker 3 2026-10-20 00:14: one new no-assumptions question from the room-by-room finishing table (T-086): Q-53 (cement bags and sand per m3 of the 1:3 stair mortar). Open now: 4 (Q-50 to Q-53).
 Verifier 2026-10-19 22:59: two new no-assumptions questions from the stair verdicts (T-084): Q-50 (round stair: no section, may the plan count 28 be used) and Q-51 (how turning / winder steps are measured). Open now: 2.
 Worker 3 2026-10-19 21:25: two new no-assumptions questions from the stair hand table (T-084): Q-46 (main stair: section A-A and the plans draw a different number of steps, which counts) and Q-47 (is the "T 16" in the stair panels the waist and landing thickness).
@@ -316,6 +317,27 @@ RECOMMENDATION: (A): upturn patches and corner pieces are normally cut on site f
 "each alone" answer forbids sharing offcuts between rooms, not inside one room, and (B) buys whole rolls for a few
 hundred cm2 (practice, not a code clause).
 WAITS ON: the released roll counts per roof and wet area and the printed cutting plan (T-093 wiring, T-089 cutting plan).
+
+### Q-59 Tiles to buy: may the offcut of a cut tile be used for another cut piece in the same room? (worker 1 2026-10-20 05:05; T-087 tile count; no-assumptions question: your Q-42 answer gives the joint, no Urban rule says whether offcuts are reused, and it moves the tile count far more than the joint does)
+
+THE PROBLEM: the engine now lays every floor tile per room with your joints (1 mm inside, 2 mm roofs / outside) and shows
+every layout. Each cut piece at a wall either takes a NEW tile, or is cut from the leftover of a tile already cut in the same
+room. No Urban rule says which, and it changes the purchase by 15 - 20 %: on 23 Alsenan rooms (206.91 m2, outlines equal
+to their floor lines) the fewest-tiles layouts need 697 tiles of 60x60 without reuse (+21 % over the net m2) but 611 with
+reuse (+6 %); 120x60: 378 (+32 %) vs 317 (+10 %); 160x80: 218 (+35 %) vs 185 (+14 %). Example: a 1.50 x 1.30 m W.C. in
+60x60 = 9 tiles without reuse, 6 with. Today every tile count stays HELD until you answer (and until a tile size is given:
+no Alsenan drawing prints one).
+WHERE TO LOOK: Drive "Alsenan chalet project", ground floor plan (p7757_arch_sheet03), the small W.C. rooms; the per-room
+table is research/agents_t087/ALSENAN_TILE_COUNT.csv on branch agents/task-T-087.
+THE OPTIONS:
+(A) No reuse: every cut piece takes a new tile (the safe upper bound: 60x60 +21 %, 160x80 +35 % over the net m2).
+(B) Reuse inside the same room only (never carried to another room, like your Q-49 membrane answer), when the leftover is at
+    least a size you give (for example 20 cm on its short side; 10 cm gives the same Alsenan totals): 60x60 +6 %, 120x60
+    +10 %, 160x80 +14 %.
+(C) No layout count: tiles are bought by m2 plus your size waste rule only, the count is m2 / tile face.
+RECOMMENDATION: (B) with 20 cm: tilers cut the second edge piece from the first one's offcut as normal practice, and the
+result lands near the waste the trade expects; (A) buys a whole tile for every edge sliver (practice, not a code clause).
+WAITS ON: the tile count (tiles and boxes to buy) of every tiled floor on every villa; the m2 BOQ lines do not change.
 
 ## Answered
 
