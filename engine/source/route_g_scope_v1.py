@@ -28,8 +28,9 @@ Rules (no assumptions, owner answers):
                          Q-31 C) or held keeps its blinding HELD with the candidate range;
             GROUND_BEAM  HELD as a range while the footing-detail choice is open (owner Q-21 C: the founding level
                          decides which typical footing detail governs): low = beam strips merged with the footing
-                         layer, high = beam strips as their own layer (crossings once);
-            STRAP        HELD while no strap section prints a blinding (designer request), with its range.
+                         layer, high = beam strips as their own layer (crossings once, the column outlines the
+                         ground-beam plan draws inside the strips taken out);
+            STRAP        HELD while no strap section prints a blinding (designer request), as the merged strip.
   Every record ends RELEASED, HELD (exposure range, blocker) or NOT_PRESENT; missing never becomes 0
   (UP-QTY-STATUS-001). Nothing here names a project, a sheet, a layer, a mark or a coordinate.
 
