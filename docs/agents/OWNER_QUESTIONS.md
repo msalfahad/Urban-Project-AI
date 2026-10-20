@@ -162,6 +162,8 @@ THE OPTIONS:
 (B) Hold the whole round stair until the architect sends a section (RFI). Nothing released.
 RECOMMENDATION: (A): the plan count gives 16.1 cm, inside the normal 15-17 cm range, and both the architectural and the structural plans draw the same 11-step straight flight (practice, not a code clause); keep the RFI.
 WAITS ON: round-stair concrete and marble steps (freelancer 5.510 m3) on every villa with a stair that no section cuts (T-056).
+Answer: A, CONDITIONAL. Use the stair reconstructed from the architectural + structural plans when no section exists, labelled 'reconstructed, no section'. 4.50 / 28 = 16.07 cm is arithmetic, but visible treads are not risers: check whether the arrival floor is the last tread, whether the corner landing adds a rise, and whether 12 curved + 11 straight + 5 are distinct and agree on both plans. Reconstruct flight by flight (levels, risers, treads, width, waist, landing, structural reference). Straight flights CALCULATED once verified; curved parts HELD; 0.469 m3 must be independently checked before release; never release the whole stair before waist, landing and curved geometry are supported. (owner directive in the main chat, 2026-10-20 12:02 UTC; full reasoning and required method: docs/agents/OWNER_DIRECTIVE_2026-10-20.md)
+
 
 ### Q-51 Turning (winder) steps: how is their concrete measured? (verifier 2026-10-19 22:59; T-084, T-056; no-assumptions question: your Q-19 rule covers straight steps only)
 
@@ -173,6 +175,8 @@ THE OPTIONS:
 (C) Hold turning steps until a stair detail prints them. Nothing released.
 RECOMMENDATION: (A): it is the same wedge rule as your straight steps, applied to the drawn plan area, and it does not count the landing twice (practice, not a code clause).
 WAITS ON: main-stair winders 0.120 m3 and the 12 curved round-stair steps, on every villa with turning steps (T-056).
+Answer: A, CONDITIONAL. Each winder / curved step = 0.5 x riser x its own DRAWN plan area where the wedge-over-uniform-waist geometry holds; 0.120 m3 is valid only if 1.44 m2 is the real combined area of the five steps (the corner may hold a landing or void). Curved: CAD boundary per step, area, riser, wedge, waist and landings separately, remove intersections; solids or integration for non-standard geometry. Unknown area or waist -> HELD. (owner directive in the main chat, 2026-10-20 12:02 UTC; full reasoning and required method: docs/agents/OWNER_DIRECTIVE_2026-10-20.md)
+
 
 ### Q-52 Wall height for plaster and paint: the drawings have no 0.60 m beam. Which beam depth is taken off? (worker 2 2026-10-19 23:00; T-088, T-081; no-assumptions question)
 
@@ -197,6 +201,8 @@ beams on the wall line do not lower the ceiling inside the room, and your 0.60 m
 code clause). Whatever you choose, a ceiling level printed on a section or detail replaces it.
 WAITS ON: internal plaster and paint wall heights in every Alsenan room (and wall-tile heights of the wet rooms after
 your Q-48 answer) and the same rule on every villa (T-081 rework, T-088).
+Answer: C, MODIFIED. No automatic 0.60 m and no 'deepest beam in the room'; the slab-to-slab - beam - decor - floor formula was an approximation and never overrides the drawings. Per room: levels, finished floor and build-up, slab underside, beams that intersect the room and project below the intended ceiling plane, architectural ceiling / section details, gypsum drops and bulkheads; wall PLASTER height and wall PAINT height computed separately. Unknown finished ceiling -> PROVISIONAL or HELD. Never release the 32 rooms on a common height. (owner directive in the main chat, 2026-10-20 12:02 UTC; full reasoning and required method: docs/agents/OWNER_DIRECTIVE_2026-10-20.md)
+
 
 ### Q-53 Stair marble bed (1:3 mortar): how many cement bags and how much sand per m3? (worker 3 2026-10-20 00:14; T-086; no-assumptions question: your Q-45 values give bags and sand for the 1:4 mix only)
 
@@ -215,6 +221,8 @@ THE OPTIONS:
 RECOMMENDATION: (A): a 1:3 mortar has about a quarter more cement than 1:4, so 10 bags per m3 keeps the stair purchase
 on the safe side; replace it with your supplier's figure when you have one (practice, not a code clause).
 WAITS ON: cement bags and sand for every stair (marble treads, risers, landings) in the finishing table, on every villa.
+Answer: C, CALCULATED PROVISIONAL RATE. Derive from the mix: per 1.00 m3 finished 1:3 mortar, dry factor 1.33, cement 1440 kg/m3, 50 kg bag -> cement 0.3325 m3 = 478.8 kg = about 9.6 bags, sand about 1.00 m3 (about 10 bags + 1.00 m3 for preliminary purchasing). Not universal constants. Keep mortar volume, theoretical cement, theoretical sand, purchasing allowance and supplier / approved mix separate. Never use the 1:4 rate for 1:3; no waste without a named source or owner-approved allowance. (owner directive in the main chat, 2026-10-20 12:02 UTC; full reasoning and required method: docs/agents/OWNER_DIRECTIVE_2026-10-20.md)
+
 
 ### Q-54 Annex rooms on the ground floor (+0.30): what is their slab-to-slab height for the wall-height rule? (lead 2026-10-20 00:30, from worker 3 and worker 2; T-081, T-088, T-090; no-assumptions question: two workers read it differently)
 
@@ -235,6 +243,8 @@ slab to slab for the other floors, so (A) is consistent and needs no guess (prac
 choose, a slab level printed on a roof detail replaces it.
 WAITS ON: plaster, paint and wall-tile heights of the four annex rooms on Alsenan (and any villa with a split level)
 (T-081, T-090).
+Answer: B, HOLD until the level datum is verified. 4.30 - 0.30 = 4.00 m does not establish slab to slab: +4.30 may be the slab top, finished roof, waterproofing, screed or another datum. Inspect section B-B and roof details, cross-check slab thickness, roof build-up, elevations, door / window heights; release only if the documents clearly make +4.30 the structural slab, else HOLD and request clarification. A level mark needs a known physical reference. (owner directive in the main chat, 2026-10-20 12:02 UTC; full reasoning and required method: docs/agents/OWNER_DIRECTIVE_2026-10-20.md)
+
 
 ### Q-55 Doors: when no drawing prints a door height, which height does the BOQ take? (lead 2026-10-20 00:30, from worker 1's hand table of every printed opening height; T-083, T-091; no-assumptions question)
 
@@ -259,6 +269,8 @@ NEW FACT (lead 2026-10-20 10:20, from worker 1's census of every printed note): 
 prints one door height (main entrance 2.00 x 2.50) and no door schedule, and the sanitary sheets print "THE BUILDER TO
 WORK WITH STATED DIMENSIONS NOT TO SCALE DRAWING", so the doors drawn on the sections cannot be scaled either. This
 supports option C (hold, and ask the architect); the freelancer's 2.40 m is printed nowhere.
+Answer: C for the final Alsenan dimensions, existing owner fallback kept. Urban fallback: internal door 2.20 m, ASSUMED, only when the drawings are silent (not a Kuwait standard). Main entrance 2.00 x 2.50 printed -> 2.50 governs. Other doors: search plans, schedules, elevations, sections, details by type and mark; if none: request the door schedule, 2.20 m only for a provisional quantity marked ASSUMED, measured width kept, never the freelancer's 2.40 m without evidence. (owner directive in the main chat, 2026-10-20 12:02 UTC; full reasoning and required method: docs/agents/OWNER_DIRECTIVE_2026-10-20.md)
+
 
 ### Q-56 First-floor living room: does the corridor / stair landing in front of it get floor tiles, and in which line? (lead 2026-10-20 02:10, from the verifier's UNRESOLVED verdict on the room-by-room tiling table; T-086, T-091; no-assumptions question)
 
@@ -286,6 +298,8 @@ finish (marble at the landing) moves one row only; (B) only if the architect spe
 not a code clause).
 WAITS ON: first-floor floor tiles, mortar, cement and sand on the room-by-room tiling table, and the same corridor / landing
 case on every villa with an open stair hall (T-086 wiring, T-091).
+Answer: A, CONDITIONAL. Separate rows: living 22.20 + corridor by the void 7.04 + main-stair landing 4.88 + connector by the lift 4.80 = 38.92 m2 (freelancer 38.96, engine 44.87). Investigate the 5.95 m2 (overlaps, wrong boundaries, stair openings counted, double circulation, lift voids, connector geometry, classification, adjacent areas). Porcelain PROVISIONAL unless documented; if the landing becomes marble, move it without changing geometry. Geometry and finish are separate data; never merge spaces to match a contractor. (owner directive in the main chat, 2026-10-20 12:02 UTC; full reasoning and required method: docs/agents/OWNER_DIRECTIVE_2026-10-20.md)
+
 
 ### Q-57 Ceilings: are plaster and paint measured on ceilings, and which ceilings? (lead 2026-10-20 02:10, from worker 3's per-room plaster / paint hand table; T-090, T-095; no-assumptions question: no Urban rule covers a finish ON a ceiling)
 
@@ -308,6 +322,8 @@ THE OPTIONS (6 rooms / whole villa):
 RECOMMENDATION: (A): a gypsum decor ceiling is finished with paint, not cement plaster, and your 0.15 m decor depth already
 says every room has one; the cove strips need a printed detail before they are counted (practice, not a code clause).
 WAITS ON: ceiling plaster / paint lines on Alsenan and every villa; the plaster / paint wiring (T-095).
+Answer: A, MODIFIED. Gypsum decor ceilings take a finishing + paint system, no cement plaster; ceiling paint is not blindly the floor area. Measure separately: horizontal gypsum, moisture-resistant gypsum where specified, other boards, vertical bulkhead faces, cove returns and drops, actual paintable surfaces, concrete ceiling plaster only where specifically required. Moisture-resistant board may still be painted (board and paint system are separate). Freelancer 337.57 + 72.01 + 42.75 = 452.33 m2 is comparison only; the 42.75 m2 of cove needs geometry or an approved detail. (owner directive in the main chat, 2026-10-20 12:02 UTC; full reasoning and required method: docs/agents/OWNER_DIRECTIVE_2026-10-20.md)
+
 
 ### Q-58 Membrane pieces the straight strips do not reach (a parapet step on the second-floor roof, the dome openings, small wet-room corners): cut from the same roof's / room's own leftover or side trim, or taken from a new roll? (lead 2026-10-20 04:20; REWRITTEN by the lead 2026-10-20 06:20 after worker 1's hand cutting plan of the roofs; T-089, T-093, T-094, T-096; no-assumptions question: your Q-49 answer says each room / roof alone, but no Urban rule says whether a piece may be cut from that room's own offcut)
 
@@ -339,6 +355,8 @@ trims: it adds one roll on this villa.
 UNTIL YOU ANSWER: the second-floor roof's roll count is HELD and shown as 17 or 18 (never 0); the other roofs and the wet
 areas stay released.
 WAITS ON: the released roll count of the 2F roof and the project total of roof rolls (31 or 32).
+Answer: A, CONDITIONAL. Suitable offcuts may be reused within the same roof or room. System: roll 1.00 x 10.00 m, overlap 0.10 m, upturn 0.20 m folded from the same strip. Physical strip layouts, never net area / 10. Before approving 17 rolls on the 2F roof, PROVE the 0.70 x 6.97 m leftover covers the 4.60 m parapet-step detail (width, length, overlap, upturn geometry, corners and terminations, seam arrangement, whether patches are allowed there); area alone is no proof. Report net area, strip count / dimensions, gross cut area, overlap, corner detailing, rolls, reusable offcuts, unusable waste; purchasing separate from installed BOQ. (owner directive in the main chat, 2026-10-20 12:02 UTC; full reasoning and required method: docs/agents/OWNER_DIRECTIVE_2026-10-20.md)
+
 
 ### Q-59 Tiles to buy: may the offcut of a cut tile be used for another cut piece in the same room? (worker 1 2026-10-20 05:05; T-087 tile count; no-assumptions question: your Q-42 answer gives the joint, no Urban rule says whether offcuts are reused, and it moves the tile count far more than the joint does)
 
@@ -360,6 +378,8 @@ THE OPTIONS:
 RECOMMENDATION: (B) with 20 cm: tilers cut the second edge piece from the first one's offcut as normal practice, and the
 result lands near the waste the trade expects; (A) buys a whole tile for every edge sliver (practice, not a code clause).
 WAITS ON: the tile count (tiles and boxes to buy) of every tiled floor on every villa; the m2 BOQ lines do not change.
+Answer: B, MODIFIED. Reuse of suitable offcuts within the same room, but NO universal 20 cm minimum: a piece is usable only if it meets another position's dimensions, cutting loss, orientation, pattern / veining, edge finish, minimum size, appearance and installer / manufacturer limits. Per room and tile size report net area, tile size, joint, layout, full, cut, reused offcuts, unusable offcuts, OPTIMISED purchase and CONSERVATIVE purchase; optimised is not guaranteed field performance. No tile size -> never invent one: area reported, count HELD. (owner directive in the main chat, 2026-10-20 12:02 UTC; full reasoning and required method: docs/agents/OWNER_DIRECTIVE_2026-10-20.md)
+
 
 ### Q-60 Blockwork: up to which height is a block wall measured? (lead 2026-10-20 08:20; T-027, T-103; no-assumptions question: the masonry height rule is still "requires confirmation", and your plaster height answer stops at the decor ceiling, not at the beam)
 
@@ -413,6 +433,8 @@ answer (practice, not a code clause); (3) follows your Q-44 answer (the ring sta
 Whatever you choose, the engine keeps every piece visible.
 WAITS ON: the comparison of the Alsenan beam line (concrete, the largest concrete key) and the rule for unmarked or
 contradicting beam pieces on every villa (T-097 follow-ups, T-101).
+Answer: C, member by member. (1) CB10 schedule 0.25 x 0.50 vs drawn 0.30: HOLD AS CONFLICT (structural width, finish, drafting error or other element?), reconcile section and schedule, do not pick the schedule just because it is printed. (2) GF CB3 / 'B3 (with stair)': HOLD, never duplicate concrete. (3) Dome / void rings: B4 only where the element is identified as B4, otherwise hold. (4) Six unlabelled spans: HOLD, keep location, length and candidate volume, never omit. (5) Strips north of B23 / B20: exclude only if the sections conclusively show no concrete beam, else unresolved. (6) West outer strip, SE box, CB12 outer strip: HOLD and investigate. Each member: id, floor / location, type, geometry, governing section, schedule ref, volume, evidence status, conflict record. Never take the largest volume to be conservative. (owner directive in the main chat, 2026-10-20 12:02 UTC; full reasoning and required method: docs/agents/OWNER_DIRECTIVE_2026-10-20.md)
+
 
 ### Q-62 Stairs: the last riser of each flight sits inside the slab or landing it arrives on. Counted in the stair, in the slab, or both? (lead 2026-10-20 08:20, from worker 3's stair concrete piece; T-056, T-084; no-assumptions question: your Q-20 answer says no concrete counted twice, while the figures of your Q-46 / Q-47 answers include that piece in the stair)
 
@@ -432,6 +454,8 @@ RECOMMENDATION: (A): the floor slab and landings are measured over their full ar
 face; this keeps your no-double-counting rule and changes only the stair line (practice, not a code clause).
 WAITS ON: the Alsenan stair concrete lines (main stair 5.011 vs freelancer 8.131 m3) and the same rule on every villa (T-056
 wiring).
+Answer: A, CONDITIONAL. Same concrete measured once: main stair 5.011 - 0.060 = 4.951 m3, 0.163 m3 over all stairs, accepted only after the intersection geometry is verified: model flight and slab / landing, compute the 3-D intersection, assign it to the slab / landing, deduct from the stair, keep the deduction in the ledger. No double count at stair-landing, beam-slab, column-beam, footing-ground-beam junctions; never deduct plan overlaps unless the volumes intersect in 3-D; one convention for the whole project. (owner directive in the main chat, 2026-10-20 12:02 UTC; full reasoning and required method: docs/agents/OWNER_DIRECTIVE_2026-10-20.md)
+
 
 ### Q-63 Sea-side fence: the ground-floor plan draws a 7.00 m wall on the sea side that the fence drawing does not show. Is it a block fence in the blockwork? (verifier 2026-10-20 11:35; T-103, T-027; no-assumptions question: the drawings disagree and no Urban rule covers it)
 
@@ -449,7 +473,7 @@ THE OPTIONS:
 RECOMMENDATION: (C): the plan draws the band but no sheet gives its material or height, and sea-side plots often take a low
 wall with a railing instead of a full block fence (practice, not a code clause); a drawing conflict is recorded, not guessed.
 WAITS ON: fence blockwork metres and m2 on Alsenan (hand table done; engine masonry piece T-027).
-Answer:
+Answer: C, HOLD and request design clarification. A visible unresolved BOQ element 'Sea-side boundary element, 7.00 m overall' (6.00 solid + 1.00 gate, subject to drawing check, 0.20 m drawn) with unknowns: material, height, structure, foundation, finishes, railing / glazing, gate. Request clarification from the architect; it goes into the missing-scope register. Unknown is not zero. (owner directive in the main chat, 2026-10-20 12:02 UTC; full reasoning and required method: docs/agents/OWNER_DIRECTIVE_2026-10-20.md)
 
 ## Answered
 
