@@ -34,6 +34,33 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-20 18:20 (lead run)
+
+- **T-116 stair openings and wells out of room floors: WORKED (MERGED 559269, verifier 16:49 run).** Candidate 1F living
+  porcelain 38.459 .. 38.979 m2 (hand 38.588 .. 38.990, freelancer 38.96 inside) vs released 44.869. Not wired. Your Q-66
+  B (16:23) makes the 4.875 m2 landing marble, once: porcelain 33.584 .. 34.104, stair marble 44.365. Decision: T-122 (room
+  rows with polygons, landing counted exactly once across floor, marble and void lines; your 17:54 condition), NO REPO CODE.
+- **T-109 passage walls in the GF facade run: WORKED, then CONTRADICTED IN PART (MERGED 4fddf74).** Piece 105.887 m = hand;
+  but T-121 reads the slab plans: the 1.556 m2 T-109 called "open to the sky" lies under the GF roof slab, so the passage
+  is roofed full length with one open mouth; by T-109's own rule 5 the run would be HELD 98.887 .. 105.887. Is the passage
+  outside? Your UP-SPACE-002 makes such a space POSSIBLY_EXTERIOR until a project decision: owner Q-67. Decision: T-123
+  (perimeter 105.887 / billable 105.787 / reveal returns 0.100 apart per your Q-64 B and 17:54 (3); passage roof re-read).
+- **T-117 wall run vs hand, run by run: WORKED (MERGED bc21314).** Engine 149.42 / 118.20 / 39.60 vs hand 143.16 / 120.75 /
+  39.78 m: GF +4.4 % hides +16.63 m of bands across open floor and passage mouths and -10.37 m of misses; the piece is not
+  ready to wire. Glazed lines 12.05 m are the whole GF hand-vs-freelancer gap. Decision: T-125 (MASONRY_CENTRELINE_V2) +
+  owner Q-69 (glass lines in the run?); D-12 walls with columns stay CONFLICT for the designer.
+- **T-120 membrane release version V2.13: PARTIAL (READY 17:46).** 33 tests, L4 no new failure, but Alsenan NOT run (Drive
+  zip decode refused "[Untrusted Code Integration]"). Found: MEMBRANE_FOLD_V3's Q-58 A count can use one leftover twice.
+  Decision: verifier runs the Alsenan script; stays a candidate (owner 17:54 (5)); T-124 audits every Q-58 A count
+  (wet 19 / 21, roofs 8 + 6, 2F 17) for a leftover booked twice and builds a fold that books each leftover once.
+- **T-121 slabs over outside air: WORKED by hand, pending verification (READY 18:07).** 5 places 45.632 m2 CALCULATED, the
+  concrete above them is in the slab lines (5.304 m3, no omission); 31.612 m2 in neither BOQ; freelancer pool ceiling
+  19.154 vs 14.020 net (+36.6 %, UNRESOLVED). Decision: owner Q-68 (soffit finish), verifier re-measures passage + pool court.
+- **Team: 4 INCOMPLETE runs in this window (worker 1 16:19 and 17:19, worker 2 16:39, worker 3 17:59: 5-6 minutes, no line,
+  no commit) and one silent verifier run that merged 3 tasks (16:49) without its board / log write.** Cause NOT KNOWN (no
+  transcript). Decision: board rows corrected from the merge commits; the STARTED-line proposal of RUN_LEDGER.md (it
+  changes agent instructions) needs your approval; NEEDS FIXING.
+
 ## 2026-10-20 16:20 (lead run)
 
 - **T-114 2F roof trim proof and pantry cutting plan: WORKED (MERGED 8c23eea, verifier re-measured the roof on the DXF).**
@@ -96,40 +123,4 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
   fallback values marked ASSUMED, parapets / fence held and asked (Q-65): passes. Decision: T-117 (part 1, D-12 thickness
   conflicts, and the evidence files).
 
-## 2026-10-20 12:20 (lead run)
-
-- **T-103 blockwork metres by hand: WORKED, MERGED 79bd397.** Hand centreline minus columns GF 143.16 / 1F 120.75 /
-  2F 39.78 m vs freelancer 134.28 / 120.31 / 39.10 m = +6.6 / +0.4 / +1.7 % (the handoff gave -6.2 / -0.4 / -1.7 %, the
-  opposite sign; corrected on the row, auditor 10:29). Parapets 108.55 vs 108.85 m; fence 46.37 vs 37.20 m (no sea-side
-  row in his BOQ). No-assumption check: passes (block m2 / m3 HELD on Q-60, now answered A). Decision: T-107 (engine piece
-  vs this table, block type per wall from the notes), T-108 queued (block m2 / m3 / counts).
-- **T-099, T-016a, T-091: WORKED, MERGED 677c740 / aee6803 / 6319aca** (classified at 10:20; verifier reproduced the
-  census and the OP-010 reading on the Drive DXF). Decision: none new.
-- **T-027 masonry centreline piece: PARTIAL (READY 1c9cb52, NOT VERIFIED).** Synthetic villas = hand (SV-A 54.60 m vs
-  the V2.9 face run 44.40, -18.7 %); Alsenan metres not measured: the DXF decode was refused "[PII Data Handling]".
-  Cause: one refused step, not the method. Decision: the Alsenan acceptance line moves to T-107 (TODO, with a hand
-  fallback); the verifier judges the piece on its fixtures.
-- **T-016b V2.8 -> V2.9, 14 changes by hand: WORKED (READY 98cf0ec, NOT VERIFIED).** 12 VERIFIED, 2 CONTRADICTED: GF
-  facade run engine 98.887 vs hand 105.787 m (-6.5 %: a 1.20 m open-air side passage at +0.15 is bridged, +7.000 m;
-  a reveal pocket -0.100 m) and the 1F curved-window hold reason (sill on the 1F floor; source trail cites another
-  window). Decision: verifier settles the passage first; T-109 queued; trail defect in Later.
-- **T-014 facade gaps (FACADE_GAP_CLOSURE_V1): PARTIAL (READY 0ecef42, NOT VERIFIED).** 1F 63.169 -> 63.009 m
-  (-0.160 m, -0.25 %) = hand = independent reader; 39 tests. But it disagrees with T-016b on the GF: its reader
-  "establishes" 98.887 m and keeps the 0.10 m pocket, where T-016b's hand reading gives 105.787 m and -0.100 m. Cause:
-  both readers walk the same drawn lines, so they share the passage blind spot (directive Part 4 (6)). Decision: the
-  question is put on both rows for the verifier, who reads sheet 03 himself; no owner question (a drawing reading).
-- **T-104 membrane strips in every wall frame (MEMBRANE_FOLD_V4): WORKED on the worker's evidence (READY 17f27d6,
-  not verified).** Wedge W.C. 5.95 -> 5.45 m = hand; 17 wet areas 19 rolls unchanged, 122.55 m (hand 122.50); 2F roof
-  HELD 17 / 18 unchanged; a V3 patch-sizing tail (+1 roll in one unused layout) corrected inside V4. Decision: verifier
-  after the other three; wiring with the next ARCH_TAKEOFF version.
-- **Verifier 11:53: FAILED to execute** (codemap check, pytest, freeze check refused "[Code from External]"; static review
-  only). Second refused verifier run of three today. Decision: the three READY pieces are ordered for its next run; all
-  six new TODO tasks allow hand work so refused runs still produce evidence.
-- **Owner directive (Q-50..Q-63) and 12:15 correction.** Decision: questions moved to Answered; DECISION_REGISTER.md and
-  DESIGNER_CLARIFICATIONS.md (designer list, missing scope, status mapping) written; new tasks T-110 to T-114 by the
-  directive's priority, each naming its answer; T-095 and T-115 wait for the owner's reconciliation; nothing released
-  changes.
-
-Recurring cause 8 (new, 12:20): two readers agreeing is not proof when they walk the same lines (T-014 vs T-016b on the
-GF facade). Decision: when a hand reading contradicts an "independent" code reader, the verifier reads the drawing itself
-before either merges.
+(Older entries trimmed by the Lead 18:20; the last 20 are kept.)

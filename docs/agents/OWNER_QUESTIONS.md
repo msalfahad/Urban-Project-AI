@@ -155,6 +155,77 @@ Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
 
 ## Open
 
+### Q-67 The ground-floor side passage between the annex and the house: outside or inside? (lead 2026-10-20 18:20, from worker 2's census of slabs over outside air; T-109, T-121, T-123; no-assumptions question: UP-SPACE-002 makes an unlabelled space with a doorless opening POSSIBLY_EXTERIOR until a project decision binds it)
+
+THE PROBLEM: the 1.20 x 4.70 m passage (5.64 m2) at court level +0.15 between the annex and the house has no room name, no
+door at its mouth, two house windows and the annex W.C. door on it. Until now the team read it as open air (part open to
+the sky). Worker 2 now reads the slab plans: the first floor covers 4.08 m2 of it (a bathroom and a bedroom corner) and the
+ground-floor roof slab the other 1.56 m2 (a slab panel runs to the boundary beam), so the passage is roofed over its whole
+length and open only at its court-side mouth (the checker re-measures this in its next run). Your Urban rule UP-SPACE-002
+says such a space is "possibly exterior" until a project decision says which. The answer moves the ground-floor facade
+run by 7.00 m and decides whether its walls get exterior or interior plaster and paint and whether its 5.64 m2 ceiling is
+an exterior soffit.
+WHERE TO LOOK: Drive "Alsenan chalet project", p7757_arch_sheet03.pdf (ground floor plan, the narrow strip between the annex
+W.C. and the house, printed +0.15); p7757_arch_sheet04.pdf (first floor plan, the bathroom over it); ST7757.pdf, the
+ground-floor roof-slab plan (the panel between the annex and the boundary beam).
+THE OPTIONS:
+(A) Outside: a covered outdoor passage like the entrance porch. Facade run 105.887 m geometric / 105.787 m billable (your
+Q-64 B); its 9.40 m of walls get exterior plaster and paint; its 5.64 m2 ceiling joins the exterior soffits (Q-68).
+(B) Inside: an internal corridor. Facade run 98.887 m (as released); its walls get internal plaster and paint at your
+manual height; its floor and ceiling go with the interior rooms.
+(C) Hold: the facade run stays the range 98.887 .. 105.887 m and the passage finishes stay HELD until the designer says.
+RECOMMENDATION: A. Practice, not a code clause: the passage is at court level, not floor level (+0.15 against +1.00 / +0.30
+inside), it has no door at its mouth, and house windows and an annex door open onto it, which an internal corridor would
+not have; the entrance porch under the master bedroom (19.18 m2) is already treated as outside on the same reasoning.
+Waits on: the ground-floor facade run and exterior plaster / paint on every villa with a roofed side passage (T-109, T-123);
+the passage soffit (T-121, Q-68).
+
+### Q-68 Ceilings over outside air (porch, side passage, pool court, roof-slab edges, 45.63 m2): which finish? (lead 2026-10-20 18:20, from worker 2's census; T-121; no-assumptions question: no Urban rule names a soffit finish)
+
+THE PROBLEM: five places on Alsenan have a slab over outside air, measured by hand from the drawn slab faces (CALCULATED):
+entrance porch 19.181 m2 (under the 1F master bedroom), side passage 5.640 m2 (if Q-67 says outside), pool court 14.020 m2
+(18.393 gross less the printed VOID 4.373), first-floor roof-slab edges beyond the walls 6.791 m2 (east 4.374, west /
+north band 2.417): 45.632 m2 in all. Their concrete is already in the engine's slab lines (5.304 m3, no omission). No sheet
+prints a finish, insulation or drip for them, and no Urban rule says how a soffit is finished, so the area is HELD. The
+freelancer has one row, "ceiling above the swimming pool" 2 x 3.14 x 3.05 = 19.154 m2 (vs 14.020 net / 18.393 gross),
+and nothing for the porch, passage or eaves (31.612 m2 in neither BOQ).
+WHERE TO LOOK: Drive "Alsenan chalet project", p7757_arch_sheet03.pdf (GF plan: entrance porch, side passage, pool court
+with the printed VOID) and p7757_arch_sheet04.pdf (1F plan: the rooms above them); ST7757.pdf, the 1F roof-slab plan (the
+slab edges past CB12 and the west / north band).
+THE OPTIONS:
+(A) Exterior plaster and exterior paint, like the facade: 45.632 m2 plaster + 45.632 m2 paint (39.992 if Q-67 says inside).
+(B) A decor (gypsum) ceiling with paint, like the interior rooms: 45.632 m2 decor + paint (the slab edges 6.791 m2 would
+still need exterior plaster and paint: they are drip edges, not ceilings).
+(C) Hold the finish, area shown, until the designer gives a finish schedule (a designer request is filed).
+For every option the pool-court area is measured net of the printed void (14.020 m2), never the freelancer's 19.154.
+RECOMMENDATION: A. Practice, not a code clause: a ceiling open to sea air and rain spray is usually cement-plastered and
+painted with the exterior paint; gypsum decor boards are an interior product and sag or stain outdoors; the slab edges
+belong with the facade in any case.
+Waits on: exterior plaster and paint (soffit lines) on every villa with a porch, a covered passage or a cantilever (T-121).
+
+### Q-69 Almost all-glass wall lines (the saloon glass and the curved pool glass, 12.05 m): in the blockwork run or not? (lead 2026-10-20 18:20, from worker 3's wall-by-wall check; T-117, T-125, T-108; no-assumptions question: UP-WALL-GEOM-001 keeps openings in the run, but no rule says whether a glass wall is a wall with an opening)
+
+THE PROBLEM: two ground-floor lines are drawn as a 0.20 m wall band filled almost entirely with glazing: the saloon facade
+line (7.00 m, 6.33 m of it glazing) and the curved glass beside the pool (5.05 m, 4.95 m glazing, 0.10 m block). The hand
+table keeps both in the wall run (as walls whose openings stay in the run, your UP-WALL-GEOM-001); the engine's new wall
+piece keeps the first and drops the second; the freelancer has neither. This one choice is the whole difference between
+the hand table and the freelancer on the ground floor (+12.05 m of +8.88 m; the rest is -3.77 m of unpaired pieces).
+WHERE TO LOOK: Drive "Alsenan chalet project", p7757_arch_sheet03.pdf (ground floor plan: the saloon front towards the
+court, and the curved glass wall beside the pool); the elevations on Pages_07-08 for any block drawn under or over the glass.
+THE OPTIONS:
+(A) In the run, as walls with an opening (your UP-WALL-GEOM-001): GF run 143.16 m; the glass is deducted later in the block
+m2, so only the solid pieces and any block drawn above or below the glass become block.
+(B) Out of the run: only the solid pieces (0.67 + 0.10 m) are block: GF run 131.88 m.
+(C) Hold both lines (12.05 m) until the elevations or the designer show what is built above and below the glass.
+RECOMMENDATION: A. It keeps your existing run rule unchanged for every villa (an opening of any size stays in the run), and
+the block quantity is the same as B wherever no block is drawn above or below the glass, because the m2 deduction removes
+the glazing; B would need a new rule for "how much glass makes a line not a wall".
+Waits on: ground-floor blockwork run and block m2 (T-125, T-108).
+
+Earlier note: Q-64, Q-65 and Q-66 answered by the owner 2026-10-20 16:23 (moved to Answered by the Lead 18:20). Q-67, Q-68, Q-69 new (Lead 18:20).
+
+## Answered
+
 ### Q-64 A small notch where a window frame meets a column: does the facade run go round it or straight across? (verifier 2026-10-20 13:25; T-016b, T-014, T-109; no-assumptions question)
 
 THE PROBLEM: on the ground floor, at the north end of the curved glass beside the pool, the glass frame stops 0.08 m
@@ -217,11 +288,6 @@ the marble nosing and the landing in one material without a joint at the top ste
 the first-floor arrival area to be floor (A), the stair rule will say so for arrival landings on every villa.
 Waits on: first-floor floor tiles and stair marble (T-116, the floor-area fix; the tiling table).
 
-Earlier note: None open (lead 2026-10-20 12:20). Q-50 to Q-63 were answered by the owner on 2026-10-20 (OWNER_DIRECTIVE_2026-10-20.md, and the owner's 12:15 correction in OWNER_SESSION_CHANGES.md: his earlier answers are his manual BOQ method and are preserved; the engine shows the owner-method and the drawing-derived results side by side). A reconciliation proposal is with the owner in his main chat; the team does not duplicate it as a question.
-Answer: B. Marble for the 4.875 m2 main-stair landing (his rule: stair finishes are marble); never also porcelain. Candidate quantities 1F porcelain 33.713 m2, stair marble 44.365 m2, subject to verifying the landing was previously counted exactly once and the other category totals are right. Keep the landing a separate measured element classified marble; do not merge its geometry into the stair flight. (owner in the main chat, 2026-10-20 16:23 UTC; full text: docs/agents/OWNER_RECONCILIATION_2026-10-20.md)
-
-
-## Answered
 ### Q-50 Round stair in the reception: no section cuts it. May the plan step count be used? (verifier 2026-10-19 22:59; T-084, T-056; no-assumptions question: your Q-46 answer says the section counts, and this stair has no section)
 
 THE PROBLEM: the riser height is the floor height divided by the number of steps. For the round stair (ground floor +1.00 to first floor +5.50 = 4.50 m) no section is drawn, so only the plans give the count: 12 curved + 11 straight + a corner landing + 5 = 28 steps (4.50 / 28 = 16.1 cm). The freelancer prices this stair ("stair 2") at 1.2 x 16.4 x 0.28 = 5.510 m3; the engine holds all of it.

@@ -1,5 +1,89 @@
 # Lead reports to the owner's main chat (newest first, last 10 entries)
 
+## LEAD REPORT 2026-10-20 18:25 UTC
+
+Repositories: Urban-Project-AI cloned (control cd07a8b); working branch head bc21314 (checker merges only, no owner-session
+commits since 16:20). Drive readable, no new files. UrbanProjectsManager not needed this run.
+
+PROGRESS (Alsenan; released concrete still 92.77 vs freelancer 111.81 m3, -17.0 %; no released number moved; per your 17:54
+instruction every figure below is a candidate or a hand check, kept apart from released quantities)
+- Floor area, first-floor living: the stair-opening fix is CHECKED AND MERGED (candidate 38.459 .. 38.979 m2 vs hand 38.588 ..
+  38.990, his 38.96 inside; released still 44.869). Under your Q-66 B the 4.875 m2 landing goes to marble once: porcelain
+  33.584 .. 34.104, stair marble 44.365 m2. A room-by-room table with polygons proving the landing is counted once is next.
+- GF facade run: the passage-wall fix is CHECKED AND MERGED (perimeter 105.887 m = hand; billable by your Q-64 B 105.787 m,
+  reveal returns 0.100 m to be reported apart, with the CAD check of which finish line holds them). New: the slab plans
+  put the last 1.56 m2 of the side passage under the ground-floor roof slab, so the passage is roofed full length with one
+  open mouth; whether it is outside at all is your Urban rule's "possibly exterior" case: asked below (98.887 m if inside).
+- Ceilings over outside air (hand, waits for the checker): porch 19.181, side passage 5.640, pool court 14.020 (net of the
+  printed void), roof-slab edges 6.791 = 45.632 m2; the concrete above them is already in the slab lines (5.304 m3, no
+  omission); his only row is the pool ceiling 19.154 m2 (+36.6 % over the net hand); 31.612 m2 are in neither BOQ. Finish
+  has no rule: asked below.
+- Blockwork: the code wall run checked against the hand table wall by wall (merged): GF 149.42 / 1F 118.20 / 2F 39.60 m vs
+  hand 143.16 / 120.75 / 39.78 (+4.4 / -2.1 / -0.4 %) vs his 134.28 / 120.31 / 39.10. The GF closeness is false: +16.63 m of
+  runs across open floor and passage mouths hide -10.37 m of missed doorways; a corrected run is on the board. The two
+  glass walls (12.05 m) are the whole GF gap between hand and freelancer: asked below.
+- Waterproofing: the membrane release version (2F roof 17, pantry 2, wet areas 21) is built and tested but was NOT run on
+  the drawing (decode refused); it stays a candidate. Its worker found that one fold method can book the same offcut twice;
+  every proven roll count (wet 19 / 21, roofs 8 + 6, 2F roof 17) is now audited piece by piece before any is called verified.
+- Learned: a near-equal total can hide large opposite errors (wall run); slab plans, not the architectural plan, decide
+  which outside spaces are roofed; a roll count must book each leftover once.
+- Gates: gate 1 on track (both fixes merged, two of your answers being applied, one new question); gate 2 started
+  (candidates waiting for the checker, corrected wall run next); gate 3 started (beams, stairs, columns by hand still free).
+
+TEAM HEALTH (runs since 16:20)
+- Code ran fully: worker 3 16:59 (all five self-check steps PASS; only the Drive zip decode refused "[Untrusted Code
+  Integration]", so its drawing run was left to the checker), worker 2 17:39 (all PASS, delivered the ceiling census).
+- Checker 16:49: merged three tasks (stair openings, passage walls, wall-run check) but wrote no board update and no log
+  line; I recorded the merges on the board from its merge commits. Its 17:49 run is still running.
+- No log line and no commit (INCOMPLETE, about 5-6 minutes each, cause NOT KNOWN): worker 1 16:19 and 17:19, worker 2 16:39,
+  worker 3 17:59. Four silent runs in two hours. What I did: board kept full (11 free tasks, 4 of them hand-only so a refused
+  run can still deliver), rows fixed; I cannot see their transcripts.
+
+QUESTIONS FOR OWNER (3 new; none other open)
+Q-67 The GF side passage between the annex and the house: outside or inside?
+  Problem: the 1.20 x 4.70 m passage (5.64 m2, court level +0.15, no name, no door at its mouth, two house windows and the
+  annex W.C. door on it) is roofed over its whole length (4.08 m2 by the first floor, 1.56 m2 by the GF roof slab) and open
+  only at its court-side mouth. Your UP-SPACE-002 calls such a space "possibly exterior" until a project decision says which.
+  Where: Drive "Alsenan chalet project", p7757_arch_sheet03.pdf (GF plan, strip between the annex W.C. and the house),
+  p7757_arch_sheet04.pdf (the bathroom over it), ST7757.pdf GF roof-slab plan (panel to the boundary beam).
+  Options: (A) outside, a covered passage like the entrance porch: facade 105.887 m perimeter / 105.787 m billable, its 9.40 m
+  of walls exterior plaster and paint, its ceiling an exterior soffit; (B) inside, an internal corridor: facade 98.887 m, walls
+  internal plaster / paint; (C) hold the range 98.887 .. 105.887 m until the designer says.
+  Recommendation: A. It is at court level, has no door at its mouth, and house windows and a door open onto it, which an
+  internal corridor would not have; the entrance porch under the master bedroom is already treated as outside (practice).
+Q-68 Ceilings over outside air (45.632 m2): which finish?
+  Problem: porch 19.181, side passage 5.640 (if outside), pool court 14.020 (18.393 less the printed void 4.373), roof-slab
+  edges 6.791 m2; no sheet prints a finish, insulation or drip and no Urban rule covers a soffit. His only row: pool ceiling
+  19.154 m2.
+  Where: p7757_arch_sheet03.pdf (porch, passage, pool court with the void), p7757_arch_sheet04.pdf (rooms above), ST7757.pdf
+  1F roof-slab plan (edges past CB12, west / north band).
+  Options: (A) exterior plaster + exterior paint like the facade, 45.632 m2 each (39.992 if Q-67 says inside); (B) decor
+  (gypsum) ceiling + paint like the rooms, with the 6.791 m2 slab edges still exterior plaster / paint; (C) hold the finish
+  until the designer gives a schedule. In every option the pool court is net of the void (14.020), not 19.154.
+  Recommendation: A. A ceiling open to sea air and spray is usually cement-plastered and exterior-painted; gypsum boards
+  are an interior product; the slab edges belong to the facade anyway (practice).
+Q-69 Two almost all-glass GF wall lines (12.05 m): in the blockwork run or not?
+  Problem: the saloon front (7.00 m, 6.33 m glazing) and the curved pool glass (5.05 m, 4.95 m glazing, 0.10 m block) are
+  drawn as 0.20 m wall bands filled with glass. The hand table keeps both (your UP-WALL-GEOM-001 keeps openings in the run),
+  the code keeps one, he keeps neither; this alone is +12.05 of the +8.88 m GF difference (the rest -3.77 m unpaired pieces).
+  Where: p7757_arch_sheet03.pdf (saloon front to the court; curved glass by the pool); elevations on Pages_07-08 for any
+  block above or below the glass.
+  Options: (A) in the run as walls with an opening: GF 143.16 m, the glass deducted in the block m2; (B) out of the run,
+  only the solid 0.67 + 0.10 m: GF 131.88 m; (C) hold both lines until the elevations or the designer show what is built.
+  Recommendation: A. It keeps your run rule the same on every villa, and gives the same block m2 as B wherever no block is
+  drawn above or below the glass; B needs a new rule for how much glass makes a line not a wall.
+
+NEEDS FIXING
+- Silent runs: 4 of 7 worker runs since 16:20 left nothing (about 5 minutes each) and the checker's 16:49 run merged without
+  writing its log. Already tried: authorization paragraphs, hand-only rows, split commands, board fixes from commits. Two
+  things only you can do: (1) approve the STARTED-line change proposed in RUN_LEDGER.md (each agent writes a start line
+  before its self-check, so a stopped run shows how far it got; it changes agent instructions, so I need your word);
+  (2) run the four coding agents as Claude Code scheduled tasks with only Urban-Project-AI attached (RUN_LEDGER.md option a).
+- Kuwait specification chapters as PDFs under 6 MB: deferred by you (books later), kept here only as a reminder.
+
+Team line: MERGED T-116, T-109, T-117 (verifier 16:49, board rows written by the Lead); READY T-120, T-121 (verify in that
+order); new TODO T-122, T-123, T-124, T-125; owner Q-64..Q-66 to Answered, new Q-67, Q-68, Q-69; 11 TODO (1 Track B).
+
 ## LEAD REPORT 2026-10-20 16:20 UTC
 
 Repositories: Urban-Project-AI cloned (control 51f8516); working branch head 8c23eea (checker merges only, no
@@ -560,13 +644,3 @@ NEEDS FIXING (only you can do it)
 2. Upload the Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as separate PDFs under 6 MB (repeat).
 
 Team line: merged T-075, T-084, T-083, T-088; READY T-079, T-081 r2; T-086 READY; new T-090, T-091, T-092; Q-54, Q-55 (Q-53 by worker 3).
-## LEAD REPORT 2026-10-19 22:40 UTC (addendum: owner answers in the Lead session)
-
-- Q-48 = A: wet-room wall tiles from the floor to the underside of a 0.15 m decor ceiling (GF 3.65 m, 1F / 2F 3.35 m);
-  0.15 m is now the decor depth for plaster and paint too. Wet-wall tiles about 453 m2 on Alsenan before window deductions.
-- Q-49 = A, each wet room and roof alone. Hand result from the verified wet-area table (fewest rolls per room): 17 wet
-  areas 19 rolls of 1 x 10 m, 117.09 m2 cut, 125.27 m of strips, 64.73 m of full-width roll left over, 8.18 m2 side trim;
-  with the pantry 21 rolls, 65.13 m left. Against sharing offcuts between rooms (13 rolls) this buys 6 more rolls.
-  Roofs each alone: 17 + 6 + 8 = 31 rolls (271.95 m2 cut); their strip plan and leftover metres come from new task T-089.
-  Table with the cutting plan per wet room: docs/agents/research/ALSENAN_MEMBRANE_PER_WET_ROOM.csv.
-- No owner question open.
