@@ -1,0 +1,56 @@
+{
+ "rooms": 25,
+ "table": {
+  "rooms": 25,
+  "released": 0,
+  "held": 25,
+  "held_by_reason": {
+   "TILE_SIZE_NOT_GIVEN": 25
+  },
+  "tiles_to_buy_released_rooms": null,
+  "complete": false
+ },
+ "floor_lines_m2": 370.5117,
+ "candidate_rooms": 23,
+ "candidate_net_m2": 206.9134,
+ "candidate_held_rooms": [
+  "GF-RC99C2A",
+  "1F-R78C367"
+ ],
+ "candidates": {
+  "60x60": {
+   "tiles_fewest": 697,
+   "tiles_most": 723,
+   "bought_m2_fewest": 250.92,
+   "over_net_pct_fewest": 21.27,
+   "over_net_pct_most": 25.79,
+   "reuse20_tiles_fewest": 611,
+   "reuse20_over_net_pct": 6.31
+  },
+  "120x60": {
+   "tiles_fewest": 378,
+   "tiles_most": 428,
+   "bought_m2_fewest": 272.16,
+   "over_net_pct_fewest": 31.53,
+   "over_net_pct_most": 48.93,
+   "reuse20_tiles_fewest": 317,
+   "reuse20_over_net_pct": 10.31
+  },
+  "160x80": {
+   "tiles_fewest": 218,
+   "tiles_most": 258,
+   "bought_m2_fewest": 279.04,
+   "over_net_pct_fewest": 34.86,
+   "over_net_pct_most": 59.6,
+   "reuse20_tiles_fewest": 185,
+   "reuse20_over_net_pct": 14.44
+  }
+ },
+ "census": {
+  "texts_read": 276,
+  "tile_size_notes": 0,
+  "other_size_texts": 0,
+  "rows": [],
+  "joint_texts": []
+ }
+}
