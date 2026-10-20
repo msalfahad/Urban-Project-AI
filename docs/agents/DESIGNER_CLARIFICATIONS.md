@@ -31,6 +31,7 @@ VISIBLE in the BOQ, never 0. Workers add rows (next free D- number) with the evi
 | D-20 | 1F-roof dome openings (open skylights, owner Q-29 / Q-44) | the west opening (4.42 m) lies over the 1F west master bed room and part of its two baths, their partition under it; the east one over the living area | ceiling and wall treatment under each opening (glazing at slab, at drum top +11.00, or a closed ceiling) and how the partition ends | HELD | worker 3 T-112 (DCR-4) |
 | D-21 | 2F maid room dome | architecture draws a dome over the room; the structural slab is flat with no opening or ring | is there an opening and dome here | CONFLICT | worker 3 T-112 (DCR-5) |
 | D-22 | Ceiling levels and floor build-up (all floors) | no reflected ceiling plan, no ceiling level, no build-up printed | ceiling levels per room and floor build-up per floor | every drawing-derived plaster / paint height HELD | worker 3 T-112; refines D-09 |
+| D-23 | Closed 0.05 m element beside the arriving flight of the round reception stair on 1F (0.05 x 2.35 = 0.1175 m2) | the 1F plan draws two parallel lines 0.05 apart along the flight's outer side, closed at the arrival end, on the stair's layer, outside the printed 115 stair box but inside the printed living 480 | what it is (balustrade, upstand, stringer) and whether the floor finish runs under it | range: 1F living floor 38.459 .. 38.979 m2 HELD between (0.1175 of it this element, 0.4025 D-13) | worker 3 T-116 |
 
 ## 2. Missing-scope register (unknown is never zero)
 
