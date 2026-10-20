@@ -5,6 +5,79 @@ Daily target (PLAN.md, owner 2026-10-18): at most 5 entries, at least one aimed 
 Each entry: date, what it is (link), licence, what it could improve in the engine or the workflow, risk, verdict
 (ADOPT idea / TRY in sandbox / WATCH / REJECT). Never install or run downloaded code from here; the lead decides.
 
+## 2026-10-20 (scout run 23:55 UTC): 3 requests answered (R-06, R-07, R-08), 1 new finding
+
+Private repo urban-boq-private-data could not be attached (no add_repo / list_repos tool in this session); Drive "Alsenan
+chalet project" listed (names and formats only: xlsx / xls BOQ sheets), so this is not a failure. Nothing installed or run.
+
+### Answer to R-06: Arabic + English notes and room tags on SCANNED villa plans
+
+| What (link) | Licence / commercial safety | Maturity | Security | Gap it helps | Verdict |
+|---|---|---|---|---|---|
+| [Tesseract Arabic data `ara`](https://pkgs.alpinelinux.org/package/v3.21/community/x86_64/tesseract-ocr-data-ara) (distro package of tessdata, 5.5.0, 1.6 MiB) | Apache-2.0 (permissive, safe) | Mature, in every Linux distro | Data file only, no code; needs an image change (apt `tesseract-ocr-ara`), which agents may not do | Second language for the existing Tesseract; `eng+ara` on one note box | ADOPT-IDEA (Lead / owner adds the package to the image) |
+| [KITAB-Bench](https://arxiv.org/html/2502.14949v2) (MBZUAI, ACL Findings 2025; 8,809 samples, 9 domains; [scores page](https://www.codesota.com/ocr/benchmark/kitab-bench)) | Paper CC BY 4.0; dataset licence not stated | Peer-reviewed benchmark | Read-only facts | Sets expectations: Arabic OCR CER / WER Tesseract **0.54 / 0.84**, EasyOCR 0.58 / 0.89, PaddleOCR 0.79 / 1.02, Surya 4.95; Gemini-2.0-Flash 0.13 / 0.32, GPT-4o 0.31 / 0.55 | ADOPT-IDEA: free reading of Arabic notes by any permissive engine is NOT reliable enough to release a quantity; only closed-vocabulary matching is |
+| [PaddleOCR PP-OCRv5 multilingual](https://www.paddleocr.ai/v3.5.0/version3.x/algorithm/PP-OCRv5/PP-OCRv5_multi_languages.html): `arabic_PP-OCRv5_mobile_rec` 81.27 % line accuracy on Paddle's own 2,676-image set (+22.83 pts over v3; [model list](https://www.paddleocr.ai/v3.5.0/version3.x/model_list.html) still shows v3 at 73.55 %); community fine-tune [arabic_PP-OCRv6_small_rec](https://huggingface.co/medyas/arabic_PP-OCRv6_small_rec) CER 10.2 % (patsocr) / 13.5 % (isippt) but 50.3 % on historical scans | Apache-2.0 (permissive); community model is one person's account | 3.x active; community model new | Paddle `.pdparams` training weights are pickle-based: use only the inference export (`inference.json` / `.pdiparams`); native code | Second, independent engine for the two-engine agreement check | TRY-IN-SANDBOX (official v5 model only, inference export) |
+| [Moreno-García, Elyan, Jayne 2017, text / graphics segmentation heuristics for complex engineering drawings](https://rgu-repository.worktribe.com/OutputFile/845553) (EANN 2017, CCIS 744) | Paper; method only, no code | Cited method | none (own code) | Finding note boxes before OCR: remove frame (edges + connected components), strip long lines by directional dilation, then classic connected-component text grouping; text-detection precision rose 0.37 -> 0.91 at recall 0.98 (Fletcher-Kasturi) once lines were removed | ADOPT-IDEA |
+
+Recommended next step (task for the Lead, "Scanned-note reader, check-only", unblocks T-091 as a check, T-092, T-003):
+(1) on one Alsenan raster plan sheet, remove frame and long lines (OpenCV, already permissive), group small connected
+components into text blocks, keep blocks inside closed rectangles (note boxes) and blocks inside room outlines (tags);
+(2) read each block twice: Tesseract `eng` for digits / Latin (and `eng+ara` once the `ara` data is in the image), and a
+second engine (PaddleOCR v5 inference export, sandbox) or a vision model as evidence only (idea 21); (3) release a value
+only if both readings agree after normalising digits (Arabic-Indic to Latin, `x` / `×` / `*`) AND it matches a closed
+list: tile formats (60x60, 120x60, 160x80 ... from the finishing schedule or the quantity-takeoff skill), room names from a
+fixed Arabic / English lexicon by edit distance <= 1, door heights in a 2.00-2.40 m band; (4) anything else stays HELD
+with the crop saved for a person. Score against the T-091 hand census: report per-field agreement, never fill a gap from OCR
+alone. Expectation from KITAB-Bench: Arabic words will mostly fail the agreement test; digits and tile sizes should pass.
+
+### Answer to R-07: proving that a strip layout covers every piece of a membrane outline
+
+| What (link) | Licence / commercial safety | Maturity | Security | Gap it helps | Verdict |
+|---|---|---|---|---|---|
+| [shapely 2 `difference(..., grid_size=)`](https://shapely.readthedocs.io/en/2.0.1/reference/shapely.difference.html) + [`set_precision`](https://shapely.readthedocs.io/en/2.1.2/reference/shapely.set_precision.html); GEOS OverlayNG snap-rounding, [PostGIS note](https://www.postgis.net/development/docs/internals/precision-tolerance/): result vertices are guaranteed on the grid; repeatable only if inputs are already on the grid | BSD-3 (shapely) / LGPL-2.1 (GEOS, dynamically linked) — safe | Very mature; grid_size needs GEOS >= 3.9 | Native GEOS, no network | Exact coverage proof: `R = difference(set_precision(outline, 0.001), union_all(strips), grid_size=0.001)`; every polygon in R is either a named patch or a bug; 0.84 m2 step-upturn miss becomes a failing test | ADOPT-IDEA |
+| [physdes `rpolygon_cut`](https://physdes-py.readthedocs.io/en/latest/_modules/physdes/rpolygon_cut.html) (Wai-Shing Luk): recursive cut of a rectilinear polygon into convex rectilinear pieces at concave vertices | Licence not shown on the page: unknown | Small academic library | Pure Python | Idea only: cut at every concave vertex so each step edge starts its own band | WATCH (write own band split; do not copy) |
+| [ARDEX WeldTec installation sheet](https://www.ardex.co.nz/wp-content/uploads/2019/01/Ardex-WeldTec-Membranes-Installation-Sheet.pdf) (TPO sheet, not torch-on): upstand min 150 mm; external corner: 100 mm flashing first, main sheet cut at 45 deg, corner point covered with detail tape; internal corners filleted and taped; welded lap 150 mm, end laps butted with 100 mm cover strip | Vendor document (facts only) | Current product sheet | n/a | Practice: corners and steps are closed by separate flashing / detail pieces, so "patch" is a legitimate, countable line, never a silent residue | ADOPT-IDEA (patch lines priced and counted) |
+
+Recommended next step (task for the Lead, T-096 / T-098): (1) band decomposition: take every coordinate of the unfolded
+outline (body + 0.20 m upturns, after unfolding each step edge) on the axis PERPENDICULAR to the strips; between two
+consecutive coordinates the outline cross-section is a fixed set of intervals; (2) lay strips across the full
+perpendicular range at 0.90 m effective pitch, and give each strip the length of the PROJECTION of `outline ∩ strip
+rectangle` onto the strip axis (union over its whole 1.00 m width, not the cross-section at its centre or edge: a step edge
+parallel to the strips lies inside one strip's width and is missed when the length is read at one line, which matches the
+4.20 x 0.20 m miss); (3) prove with the grid_size difference above (grid 1 mm) and fail the test on any residue that is not
+a declared patch; curved outlines (dome opening): chord polygon with sagitta <= 1 mm, residue named as patch pieces with
+area; (4) test generator (own code): random rectilinear outlines as unions of axis-aligned rectangles on a 0.05 m grid,
+plus fixed cases: step parallel to strips, step across strips, notch, L / U / T, hole, 45 deg splay, outline narrower than
+one strip; property: residue area == 0 (or all residue is declared patch) and strip count >= ceil(perpendicular extent /
+0.90). Roll count then goes to the existing cutting plan (idea 20).
+
+### Answer to R-08: blockwork centreline metres from double-line CAD walls
+
+| What (link) | Licence / commercial safety | Maturity | Security | Gap it helps | Verdict |
+|---|---|---|---|---|---|
+| [Domínguez, García, Feito 2012, "Semiautomatic detection of floor topology from CAD architectural drawings"](https://investigacion.ujaen.es/documentos/5f1ce1ab29995265e44db696?lang=en) (Computer-Aided Design 44(5) 367-378, doi 10.1016/j.cad.2011.12.009) and the [thesis](https://rujapre.ujaen.es/bitstreams/f4d91eb2-e821-4e52-a084-cf0eec77a7e2/download) (Domínguez Martín, Jaén 2014): Wall Adjacency Graph: pairs of "wall-prone" parallel close lines become graph edges, segments split per overlap layout, generalised WAG for 3+ parallel lines and for arc pairs (curved walls), junctions closed by clustering wall end vertices and growing centre lines until they intersect; openings anchored from door / window INSERT bounding boxes; columns on their own layer leave holes that must be bridged | Paper / thesis: method only, no code | Cited reference method (2012) | none (own code) | The standard global method for line-pair walls; the thesis notes local rule methods overfit and break on drawing defects | ADOPT-IDEA |
+| [ladybug-geometry-polyskel](https://pypi.org/project/ladybug-geometry-polyskel) 1.7.55 (2026-09-16): straight skeleton (Felkel-Obdržálek) for wall polygons | **AGPL-3.0**: not safe for a private commercial product | Active | Pure Python | Would give a skeleton centreline of wall polygons | REJECT (licence) |
+| [CGAL Straight_skeleton_2](https://www.cgal.org/license.html): geometric packages are mostly GPL, commercial licence from GeometryFactory | GPL / paid | Very mature | Native C++ | Same | REJECT (licence, cost) |
+| NRM2 / ANZSMM practice: "walling is measured on the centre line" ([GCU NRM2 notes](https://edshare.gcu.ac.uk/3991/2/index.html)), thickness stated in each description ([Deakin ANZSMM chapter](https://deakin.pressbooks.pub/buildingmeasurementapproaches/chapter/6-3-anzsmm-rules-related-to-measurement-of-masonry-works-and-sample-descriptions/), CC BY-NC: cite, do not copy); wall shorter than 4x thickness is a pier (linear m); openings measured gross then adjusted | Facts only | Standard practice | n/a | Report blockwork per thickness class on the centre line, piers separately | ADOPT-IDEA |
+
+Recommended next step (task for the Lead, T-027 follow-up, check for T-103): (1) pair wall lines by thickness class
+(parallel within 0.5 deg, offset equal to a known class 0.10 / 0.15 / 0.20 / 0.25 m +- 5 mm, overlap of projections > 0),
+take the MIDLINE of each pair over the overlap (exact for parallel pairs, no skeleton needed); (2) bridge gaps at openings
+when a door / window INSERT or a column outline lies in the gap and both sides have the same class (report each bridge);
+(3) close junctions WAG-style: snap midline ends within one thickness, extend to the intersection of centre lines (L: both
+legs to the crossing; T: stem to the main wall's centre line; X: both through), so corners and ends are counted; (4) an
+exact independent check per thickness class: wall polygon area / t = Σ centreline length − (t/2 per T-stem) − (t per X)
+(mitred L corners need no correction), equal within 1 mm per wall, which proves no corner or end was dropped (SV-A: 44.4 m
+face run vs 46.2 m hand must close to the hand figure through this identity); pygeoops.centerline (BSD-3, logged
+2026-10-17) stays the second, independent check on odd angles and arcs; (5) report metres per thickness, piers (< 4 t) as
+linear items, bridges and unpaired lines as HELD with location.
+
+### New findings
+
+| Date | What (link) | Licence | Could improve | Risk | Verdict |
+|---|---|---|---|---|---|
+| 2026-10-20 | [IfcOpenShell `ifcmcp`](https://dev.glassvision.dedyn.io/Glassvision/IfcOpenShell/src/tag/bonsai-0.8.6-alpha2608231326/src/ifcmcp) (`pip install ifcopenshell-mcp`, stdio MCP inside the upstream IfcOpenShell tree): keeps an IFC model in memory; `ifc_quantify` runs ifc5d QTO (IFC4 / IFC4X3 base quantities: volume, area, length, count, weight), `ifc_cost`, `ifc_plot` 2D drawings, `ifc_validate` | LGPL-3.0+ (usable as a separate process; keep it out of the engine's own code) | If a client ever sends IFC, a ready QTO cross-check for concrete / blockwork volumes; also a way to build synthetic test villas as IFC and plot them to drawings | No version / release status shown; native ifcopenshell; `ifc_edit` mutates models | WATCH |
+
 ## 2026-10-20 (scout run 00:00 UTC): 3 requests answered (R-01, R-02, R-05), 2 new findings
 
 Private repo urban-boq-private-data could not be attached (no add_repo / list_repos tool in this session); Drive "Alsenan

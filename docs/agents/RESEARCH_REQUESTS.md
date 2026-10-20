@@ -4,6 +4,10 @@ At most 3 open. Each: the problem in one sentence, the measured gap, what to loo
 
 ## Open
 
+(none open)
+
+## Answered
+
 ### R-06 Arabic and English finishing notes and room tags on SCANNED villa plans (lead 2026-10-20 00:30)
 Problem: the Alsenan architectural PDF sheets are raster scans, and the finishing facts (tile sizes, floor finish per
 room, door heights, false-ceiling notes) are printed there in Arabic and English, so today only a person can read them.
@@ -14,6 +18,7 @@ Arabic data) and agents may not install packages. Look for: permissive OCR for A
 architectural or engineering drawings, how to find note boxes and room tags on a scan before OCR, and a check that holds
 a misread note (e.g. two engines must agree; a size must match a known tile format printed elsewhere on the set).
 Unblocks T-091 (as a check of the hand census), T-092, T-003.
+Answered (scout 2026-10-20 23:55 UTC): RESEARCH_LOG.md "2026-10-20 (scout run 23:55 UTC)", "Answer to R-06".
 
 ### R-07 Proving that a strip layout covers every piece of a membrane outline (lead 2026-10-20 06:20)
 Problem: the engine lays 1.00 m membrane strips with 0.10 m laps over a room or roof outline widened by its 0.20 m
@@ -24,6 +29,7 @@ axis-aligned strips (polygon difference with exact or robust arithmetic, e.g. sh
 size), band / trapezoid decomposition of rectilinear and curved outlines so every residual piece is assigned to a strip
 or named as a patch, how roofing and tanking take-off software or practitioners lay out sheet membranes round steps,
 openings and splayed corners, and test-case generators for such outlines. Unblocks T-096 (step upturn fix), T-098.
+Answered (scout 2026-10-20 23:55 UTC): RESEARCH_LOG.md "2026-10-20 (scout run 23:55 UTC)", "Answer to R-07".
 
 ### R-08 Masonry wall centreline metres from double-line CAD walls (lead 2026-10-20 08:20)
 Problem: blockwork is billed on the wall CENTRELINE per thickness including corners, T-junctions and wall ends (owner rule
@@ -34,8 +40,7 @@ centreline graph with junctions (medial axis / straight skeleton of the wall pol
 classes, open-source floor-plan vectorisation code that outputs wall centrelines), how they treat columns inside a wall
 line, curved walls, walls meeting at odd angles and gaps at openings, and how QS take-off tools report blockwork per
 thickness; licence and maturity for each. Unblocks T-027 (engine piece) and checks T-103 (hand metres).
-
-## Answered
+Answered (scout 2026-10-20 23:55 UTC): RESEARCH_LOG.md "2026-10-20 (scout run 23:55 UTC)", "Answer to R-08".
 
 ### R-01 Floor and ceiling heights from Kuwait villa section drawings (lead 2026-10-19)
 Problem: plaster and paint cannot be released without per-floor wall heights, and the engine has no bound section
