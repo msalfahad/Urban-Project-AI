@@ -1,6 +1,6 @@
 # Questions for the owner (at most 5 open; answer under "Answer:")
 
-Worker 3 2026-10-20 01:05: one new no-assumptions question from the room-by-room finishing table (T-086): Q-53 (cement bags and sand per m3 of the 1:3 stair mortar). Open now: 4 (Q-50 to Q-53).
+Worker 3 2026-10-20 00:14: one new no-assumptions question from the room-by-room finishing table (T-086): Q-53 (cement bags and sand per m3 of the 1:3 stair mortar). Open now: 4 (Q-50 to Q-53).
 Verifier 2026-10-19 22:59: two new no-assumptions questions from the stair verdicts (T-084): Q-50 (round stair: no section, may the plan count 28 be used) and Q-51 (how turning / winder steps are measured). Open now: 2.
 Worker 3 2026-10-19 21:25: two new no-assumptions questions from the stair hand table (T-084): Q-46 (main stair: section A-A and the plans draw a different number of steps, which counts) and Q-47 (is the "T 16" in the stair panels the waist and landing thickness).
 Worker 3 2026-10-19 17:30: two new no-assumptions questions from the reference-book check (T-080): Q-40 (shower walls: waterproofing higher than the 0.20 m upturn, and how high) and Q-41 (falls screed under and protection screed over the membrane: BOQ lines or not).
@@ -194,7 +194,7 @@ code clause). Whatever you choose, a ceiling level printed on a section or detai
 WAITS ON: internal plaster and paint wall heights in every Alsenan room (and wall-tile heights of the wet rooms after
 your Q-48 answer) and the same rule on every villa (T-081 rework, T-088).
 
-### Q-53 Stair marble bed (1:3 mortar): how many cement bags and how much sand per m3? (worker 3 2026-10-20 01:05; T-086; no-assumptions question: your Q-45 values give bags and sand for the 1:4 mix only)
+### Q-53 Stair marble bed (1:3 mortar): how many cement bags and how much sand per m3? (worker 3 2026-10-20 00:14; T-086; no-assumptions question: your Q-45 values give bags and sand for the 1:4 mix only)
 
 THE PROBLEM: your Q-45 answer sets the stair bed at 3 cm in a 1:3 mix, but the bag and sand figures you accepted (about 8
 bags of 50 kg and 1.1 m3 of loose sand per m3) are for 1:4 mortar. A 1:3 mix is richer, so the 1:4 figures would
