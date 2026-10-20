@@ -3,30 +3,56 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
-## Recurring causes (lead 2026-10-19 22:20)
+## Recurring causes (lead 2026-10-20 00:30)
 
-1. **Merged pieces not wired into the released run** (largest): fifteen checked method pieces (now also the beam hand
-   reading, the membrane fold on real rooms and the PDF opening-height reader) and the released Alsenan run is still the
-   8774071 run (concrete 92.77 vs 111.81 m3). Decision: T-079 (wire wet areas and roofs) is TODO now and FIRST CODE TASK;
-   the rolls-to-buy line stays HELD on owner Q-49, the area lines are ruled and released.
-2. **Heights are the bottleneck for areas**: plaster 1151.14 / paint 1191.13 m2 HELD; windows 4 of 29; doors none. New
-   since 20:15: the owner gave the wall-height rule (slab to slab - 0.60 - 0.15..0.20 - 0.10) and the unmarked-room rule,
-   so plaster and paint can now be measured. Decision: T-081 rework (code) and T-088 (hand truth, NO REPO CODE).
-3. **The Alsenan PDF sheets are raster scans** (new, verifier 21:58: sheet 09 = one image, 0 words, 0 vectors): no code
-   path reads heights from them until an OCR plan reader exists (gate 4). Decision: T-083 (hand table) is the route for
-   the 23 held windows and the doors; R-01 updated for OCR of dimension text on scanned elevations.
-4. **Rules missing for what the owner asked**: wet-wall tile height and decor depth (Q-48), roll layout for purchase (Q-49),
-   expansion-joint spacing (asked when the roof tile count exists). Asked; those parts HELD.
-5. **Code runs refused for one worker**: since 20:20, workers 1 and 2 and the verifier passed every self-check step
-   (worker 1 20:50 and 21:35, worker 2 22:05, verifier 22:08); worker 3 was refused twice (21:25 clone
-   "[Untrusted Code Integration]", 22:03 venv "[Code from External]") and the verifier once (20:29). Better than 18:20 -
-   20:20 (1 of 6). Decision: two NO REPO CODE rows kept on the board (T-088, T-083) so a refused run still moves a
-   quantity; owner setting (option 2) stays under NEEDS FIXING.
-6. **A run that leaves no trace** (worker 2, run fired 20:39: claimed T-083 at 20:42, no branch, no handoff, no RUN_LOG
-   line). Decision: released; reported to the owner as a team-health item.
-7. **Wrong times in agent text**: verifier wrote 22:30 / 22:35 for a run that pushed at 22:08; the owner's main chat
-   entries are stamped about 55 minutes ahead of their commits (22:55 committed 22:01). Decision: board note (take
-   `date -u`); reported in the Lead report.
+1. **Merged pieces not wired into the released run** (largest, unchanged): seventeen checked pieces and hand tables, and
+   the released Alsenan run is still 8774071 (concrete 92.77 vs 111.81 m3). The wiring of wet areas and roofs (V2.11) is
+   READY but not verified because the verifier's execution was refused at 00:20. Decision: verifier checks it first at
+   its next run with execution; owner setting (option 2) stays under NEEDS FIXING.
+2. **Heights still the bottleneck**: plaster 1151.14 / paint 1191.13 m2 HELD on Q-52 (no 0.60 m beam drawn) and now Q-54
+   (annex slab); 23 of 29 windows (scans) and all doors but one (no printed height: Q-55). Decision: T-090 (per-room hand
+   table under each option, ready the hour the owner answers), T-091 (printed-notes census), T-092 (scan reader with a
+   chain-sum check, from R-01).
+3. **Stairs need two more rules**: round stair with no section (Q-50), turning steps (Q-51). Asked by the verifier.
+4. **Execution refused, intermittently, for any agent**: since 22:40, worker 1 (23:37 / 23:38) and worker 3 (23:44,
+   00:02) passed every self-check step; worker 2 (23:47, venv) and the verifier (00:20, venv + freeze tool) were refused
+   "[Code from External]". Worker 3 had a merge refused "[Untrusted Code Integration]" and used a fresh -r2 branch (the
+   TEAM.md route; it works). Decision: two more NO REPO CODE rows (T-090, T-091) so a refused worker still moves a
+   quantity; the verifier's manual sha256 freeze check is noted but does not replace the tool for code tasks.
+5. **Record slips**: the Q-38 answer carried the Q-47 text (worker 1 could not find the answer). Decision: corrected from
+   OWNER_SESSION_CHANGES.md; owner-answer records are now checked against that log each Lead run.
+
+## 2026-10-20 00:30 (lead run)
+
+- **T-083 opening heights by hand: PARTIAL (MERGED ce74b98).** Windows with printed heights 6 of 29 (was 4): 26.485 vs
+  freelancer 24.280 m2 (+9.1 %); W13, W14, W15, W18 ENGINE_RIGHT on the printed heights, W17 RULE_DIFFERENCE (Q-39 C); a
+  1F bath window printed 0.50 x 2.16 where he takes 0.60 x 0.80. Held: 23 windows (scans give no height), the curved pool
+  glazing width (answered by Q-38 A, record fixed: 6.57 m), the 2F stair window (PDF / DXF conflict), every door but the
+  main entrance. Decision: owner Q-55 (door height), T-091 (notes census), T-092 (scan reader, check-only).
+- **T-088 room levels and wall heights by hand: PARTIAL (MERGED 41f7da7).** 30 of 32 room levels read; floor-to-floor GF 4.50,
+  annex 4.00, 1F / 2F 4.20 from sections A-A and B-B; but no 0.60 m beam on any slab plan, so every room held: plaster and
+  paint stay HELD. The 5 rooms with printed lengths give 282.67 m2 by option A vs freelancer 299.58 m2 (-5.6 %).
+  Decision: owner Q-52 (asked by worker 2), owner Q-54 (annex), hand table T-090 for all rooms under each option.
+- **T-084 stairs by hand: PARTIAL (MERGED ad1eb36).** With Q-46 A / Q-47 A the main stair is 5.011 m3 by hand (steps
+  1.386 + waists 2.885 + landings 0.740) vs freelancer 8.131 m3 (-38.4 %); winders 0.120 m3 and the round stair
+  (freelancer 5.510 m3) UNRESOLVED. Decision: owner Q-50 / Q-51 (verifier), T-056 updated to reproduce 5.011 m3.
+- **T-075 schedule text rows: WORKED (MERGED b87f4d6).** 5 CN column lines held -> not present (freelancer 0, agree);
+  6 necks 0.540 m2 section agree; height held (Q-21 C). Not wired. Decision: wiring with the concrete ledger later (gate 3).
+- **T-079 wet areas / roofs wiring (V2.11): READY, NOT VERIFIED.** Worker 1: wet floor membrane 72.12 vs 72.01 m2
+  (+0.16 %), upturn walls only 125.57 vs 144.61 lm (-13.2 %, rule difference), roofs 204.11 vs 285.00 m2 (-28.4 %, top roof
+  held), rolls held on Q-49 at the time; L4 = base failures + 2 fixed. Decision: verifier first item next run.
+- **T-081 r2 room levels V2: READY, NOT VERIFIED.** 21 of 27 rooms levelled (was 6); owner heights in registry 1.8.0 as
+  diagnostics; annex held (no slab read). Decision: verifier after T-079; annex -> Q-54.
+- **Scout answers R-01, R-02, R-05 (00:02): used.** R-01 -> T-092 (scan reader with an exact chain-sum check; Tesseract
+  CLI already in the image, no OpenCV). R-05 -> notes on T-089 (FFD + L1 lower-bound proof, no OR-Tools install) and T-073
+  (virtual_entities, edgeminer at 1e-6 m only; larger gaps HELD, no Urban gap rule). R-02 (SHX glyph sheet): not tasked
+  now: it needs the client's own font file and no Alsenan quantity is blocked by an unread label today; revisit if one is.
+- **T-086 room-by-room finishing table: PARTIAL (READY 00:14, worker 3).** Wet floors 72.12 vs 72.01 m2 (+0.16 %) + pantry
+  13.50 m2; 10 dry rooms 194.98 vs 189.61 m2 (+2.83 %); open-plan room and wet walls HELD (Q-52; wall candidate 403.02 vs
+  433.83 m2); stairs 39.49 m2 marble; PROVISIONAL materials (owner Q-45): mortar 11.16 - 15.07 m3, cement 80 - 111 bags,
+  sand 10.91 - 15.21 m3, adhesive 58 bags. Stair cement / sand held correctly: no 1:3 figures -> owner Q-53 (worker 3).
+  Decision: verifier third after T-079 and T-081 r2; wet walls released when Q-52 is answered.
+- **Worker 2 run 23:40: NO-CLAIM (execution refused, no NO REPO CODE row free).** Decision: T-090 and T-091 added.
 
 ## 2026-10-19 22:20 (lead run)
 
@@ -130,27 +156,3 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
 | T-042 columns, necks, ground cell, foundation datum (hand reading) | PARTIAL (READY f826c38, 21-minute run) | Found that the column type CN is printed (neck 0.30 x 0.30, no column above ground) but drawn as plain text, so the engine drops it: 5 held CN 'columns' should be no line (freelancer 0), 6 CN necks get 0.090 m2; under every footing 10 cm plain concrete + membrane + 5 cm screed is printed; blinding 22.155 vs freelancer 47.055 m3 (-52.9 %, freelancer covers the whole plot) | Section A-A part could not be downloaded (6.37 MB, connector limit), so the founding datum stays unread; necks UNRESOLVED (engine 10.856 released + 8 held vs freelancer 8.805 m3); run far shorter than the 50-minute package | Verifier checks depth; engine fix for schedule rows drawn as text; owner asked again for single-page uploads | T-075 |
 | Owner answers Q-23..Q-27 (main chat 12:55 - 14:15) | applied | Roof = bathroom rule (inside parapet + 0.20 m upturn, whole strips, 0.10 m laps); gaps covered by membrane; pool flat at 1.15 m; three domes; renovation test cancelled | "domes will not be concrete" conflicts with two structural dome shells and the freelancer's 6.78 m3: asked Q-29 | T-071, T-049 unblocked; T-068 cancelled; T-003 queued | - |
 | Owner requirement: membrane purchase table | tasked | Engine already has the schedule and cutting plan | Kitchens have no waterproofing rule: asked Q-30 | Engine table + Alsenan hand truth | T-072, T-074 |
-
-## 2026-10-19 12:20 (lead run)
-
-| Task | Result | What went well | What went wrong and why (numbers) | Decision | Tasks created |
-|---|---|---|---|---|---|
-| T-058 footing-edge guard | WORKED (merged 8774071) | Verifier reproduced the Alsenan band: 91.94 m = 78.54 m measured (9.425 m3) + 13.40 m held under footings (1.608 m3) vs frozen 60.17 m; depth-checked | Not wired: concrete still 92.77 vs 111.81 m3 (-17.03 %) | Wire with the curved strips and measure (member types per Q-12 from T-065) | T-060 rewritten, TODO |
-| T-061 room-label guard | WORKED (merged 362630a) | Real run: 41 labels = 30 in a room + 11 HELD (4 yard, 4 roof, 2 pool, 1 void), none lost | Not wired into a released method; roofs and pool still have no closed room | T-062 (claimed) traces why; wiring after T-010 | - |
-| T-057 r2 pool check list | WORKED (merged 15de9c4) | Only a pool-named room counts (owner Q-22 = A); Alsenan: pool pump room NOT FOUND + one "use not stated" | - | none | - |
-| T-019 synthetic villas | WORKED (merged 8094fcd) | 49 tests, hand truth, other layer names, rotation, mirror | - | Basis for the renovation pairs | T-068 |
-| T-066 project 2 conversion loss | WORKED (READY 4c9bc0b) | 27,504 lost entities (57 %) explained: 16-bit handle mask in the pinned converter (12,567 collisions) + bare *U block names (54 doors, 50 windows, 85 room tags); with the fix 48,574 / 48,576 exact; acceptance check C1-C11 with 6 adversarial self-tests | Claimed 3 min after the owner's Alsenan-first direction; finishes not measured (no DXF passes) | Verify and merge (research only); no more project 2 work; two general defects queued | T-069, T-070 |
-| T-062 roof, pool, void trace | WORKED (READY d3d5587) | Cause found for all 7 labels (outlines on a layer the room builder ignores; parapet gaps 0.075 - 0.405 m); roofs measured by hand on both edges: A 204.10 m2, B 226.21 m2 vs freelancer 285 m2 (-28.4 % / -20.6 %); synthetic fixture passes mm / m / rotated / mirrored | Handoff B total (225.947) does not equal the sum of its own roof values (226.207): verifier re-checks; no rule for the roof edge or for closing drafting gaps | Asked the owner (Q-24, Q-25); fix task held for the answers | T-071 (BLOCKED-OWNER) |
-| T-067 time-boxed sheet list | FAILED (never claimed) | - | Worker 3 could not push its claim (permission refusals, 3 runs) | Folded into T-063, which worker 1 claimed at 12:25; owner asked to fix worker 3 | - |
-| Owner renovation direction (11:21) | decided | Clear scope: Alsenan first, then one sealed renovation villa | No renovation rule exists | Readiness tasks provable without the villa; scope question asked | T-003 promoted, T-068, Q-23 |
-
-## 2026-10-19 10:15 (lead run)
-
-| Task | Result | What went well | What went wrong and why (numbers) | Decision | Tasks created |
-|---|---|---|---|---|---|
-| T-004a room label census | WORKED (merged 2622ddd) | Verifier reproduced the real census on the Drive DXF: 41 labels, 28 measured, 1 held, 1 unsupported, 11 silent, 47 unread SHX | 11 labelled spaces have no line | Guard and diagnostic already tasked | (T-061, T-062 TODO) |
-| T-047 r2 Arabic SHX decoder | WORKED (verified 09:55, not merged) | L3 0 new failures; 121 of 121 Arabic SHX texts decoded on the real probe | Map-only conflict with 2622ddd (cause 1) | Verifier merges with map regeneration; no r3 | - |
-| T-058 footing-edge guard | WORKED, pending verification (READY 10:14) | 26 hand tests (20 x 10 plot 59.20 m / 7.104 m3, rotated, mirrored, mm); Alsenan band 91.94 m = 78.54 m measured (9.425 m3) + 13.40 m held (1.608 m3) vs frozen 60.17 m (7.220 m3), freelancer 71.7 m (8.604 m3); cause named | Run took 14 min (owner wants 50-minute packages); runner reads only closed outlines on two member layers; handoff says 10:45 UTC for a 10:14 commit; band still counted against Q-12 (c), which the owner has now answered | Verifier next; wiring T-060 after merge; member split T-065 | T-065 |
-| T-057 r2 pool check list | in progress (worker 2, 09:40) | - | - | Owner question for the generic pump label | Q-22 |
-| Worker 1 runs 08:19, 09:19 | FAILED (no claim) | - | No claim, no push; old instructions (its 10:19 run then claimed T-061) | Owner aligns the instructions | - |
-| Owner answers Q-12 - Q-17, Q-20, Q-21 | decided | Answers name exact sheets and procedures | - | Q-12 -> T-065; Q-13 -> T-010 TODO (+T-030); Q-14 -> T-063, T-013 note; Q-15 -> T-066; Q-16 -> T-043; Q-17 -> T-064; Q-20 -> T-056; Q-21 -> T-042, T-045 / T-046 held | T-063, T-064, T-065, T-066 |

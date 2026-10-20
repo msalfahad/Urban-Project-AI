@@ -1,5 +1,67 @@
 # Lead reports to the owner's main chat (newest first, last 10 entries)
 
+## LEAD REPORT 2026-10-20 00:30 UTC
+
+Repositories: Urban-Project-AI cloned (control and working branch, no owner-session commits since 21:00); Drive readable
+(nothing new in the Alsenan folder). UrbanProjectsManager not needed this run.
+
+PROGRESS (Alsenan; the released BOQ did not change: four more checked pieces merged, none wired)
+- Concrete: released 92.77 vs freelancer 111.81 m3 (-17.0 %), unchanged.
+- Stairs (checked, merged): main stair 5.011 m3 by hand with your step-count and "T 16" answers vs his 8.131 m3 (-38.4 %;
+  was 5.131, the checker recounted the steps). Round stair (his 5.510 m3) and turning steps: two questions below.
+- Neck-only columns (merged): 5 column lines "not present" (he has 0, agree); 6 necks 0.30 x 0.30, height held.
+- Windows with a printed height (hand, merged): 6 of 29, 26.485 vs his 24.280 m2 (+9.1 %; was 4 of 29, -3.2 %); engine
+  right on the printed heights, one rule difference (curved window, your answer). 23 held (the PDF sheets are scans).
+  The curved pool glazing is 6.57 m wide by your answer (its record had been overwritten by another answer: fixed).
+- Doors: only the main entrance prints a height (2.00 x 2.50 = 5.00 m2); his 12.0 m2 uses 2.40 m, printed nowhere: asked.
+- Plaster 1151.14 / paint 1191.13 m2 still held: no beam on the slab plans is 0.60 m deep (0.40 - 1.20 m), so your rule
+  needs a choice (asked by worker 2); on the 5 rooms with printed lengths your 0.60 m gives 282.67 vs his 299.58 m2 (-5.6 %).
+- Room-by-room tiling table (waits for the checker): wet floors 72.12 vs 72.01 m2, 10 dry rooms 194.98 vs 189.61 m2
+  (+2.83 %), stairs 39.49 m2 marble; cement 80 - 111 bags, sand 10.91 - 15.21 m3, adhesive 58 bags (PROVISIONAL).
+- Waterproofing wiring into a released version is built (wet floor 72.12 vs 72.01 m2, +0.16 %; roofs 204.11 vs 285.00 m2)
+  and waits for the checker, whose code run was refused at 00:20.
+- Gates: 0 done; 1 at risk (wiring built, not checked); 2 and 3 started; 4 started (scan reader with an exact chain-sum
+  check, from the scout's answer).
+
+TEAM HEALTH (every run since 22:40 left its RUN_LOG line)
+- Code ran fully for worker 1 (23:19 run) and worker 3 (23:00 and 00:00 runs). Refused "[Code from External]": worker 2
+  (23:40 run, venv; it claimed nothing because no hand task was free) and the verifier (23:49 run, venv and freeze tool; it
+  merged the two hand tables and left the two code tasks READY). Worker 3 had a merge refused "[Untrusted Code
+  Integration]" and used a fresh branch (works). Done by me: two new hand tasks for refused runs (plaster / paint per room
+  under each beam option; every printed finishing note, tile size and door height), checker told to take the wiring first.
+- Scout ran 23:51: answered three requests; its answers became a scan-reader task and notes on the cutting-plan and
+  foundation tasks; one new request (Arabic notes on scans).
+
+QUESTIONS FOR OWNER (6 open, all no-assumption questions; full text in OWNER_QUESTIONS.md; the list is long because
+each one stops an assumption)
+1. NEW Q-54 Annex rooms (+0.30): slab-to-slab height for your wall-height rule. Problem: section B-B prints "400" from the
+   annex floor +0.30 to its roof +4.30; one worker used 4.00 m (wall 3.15 m), another held it because +4.30 is a ROOF mark
+   (more build-up than a floor). Where: Drive Alsenan, Architectural Pages 11-12, page 11 (section B-B); sheet 03 (the four
+   +0.30 rooms: majlis, kitchen, driver room, its bathroom). Options: (A) 4.00 m like the other floors, wall 3.15 m; (B) hold
+   until a roof detail prints the slab; (C) your own value. Recommendation: A (same chain of level marks your rule already
+   uses for the other floors; practice, not a code clause).
+2. NEW Q-55 Door height when none is printed. Problem: only the main entrance prints a height (2.50 m); the freelancer takes
+   2.40 m, printed nowhere; your Q-04 gives widths only. Where: sheets 03, 04 (doors with widths only), 09 and the sections.
+   Options (one 1.00 m door): (A) your standard, e.g. 2.10 m = 2.10 m2; (B) 2.40 m = 2.40 m2; (C) hold and ask the architect
+   for a door schedule. Recommendation: C for Alsenan now, and give us your standard (A or B) for the next villa.
+3. Q-53 (worker 3, 00:14) stair marble bed 1:3 mortar: (A) about 10 bags of 50 kg and 1.0 m3 sand per m3 (Alsenan stairs
+   1.24 m3 of mortar: buy 13 bags, 1.24 m3 sand), (B) the 1:4 figures (10 bags, 1.37 m3), (C) your own. Recommendation A.
+4. Q-52 (worker 2, 23:00) beam depth for the wall height: (A) always 0.60 m (5 rooms 282.67 m2, -5.6 %), (B) deepest beam at
+   the room (269.72, -10.0 %), (C) a deeper beam only where it crosses the ceiling (279.65, -6.7 %). Recommendation C.
+5. Q-50 (verifier, 22:59) round stair with no section: (A) plan count 28 steps (16.1 cm risers; 0.469 m3 of straight steps
+   released), (B) hold for a section. Recommendation A.
+6. Q-51 (verifier, 22:59) turning steps: (A) half riser x their plan area (main stair 0.120 m3), (B) part of the landing
+   (0 extra), (C) hold. Recommendation A.
+
+NEEDS FIXING (only you can do it)
+1. Code runs for the scheduled checker and workers (refused again tonight for the checker and worker 2). Already done:
+   separate-command self-check, hand tasks for refused runs, fresh-branch route for refused merges. The one thing to do:
+   option 2 of docs/agents/EXECUTION_PERMISSIONS.md section 5 (Claude Code scheduled tasks with Urban-Project-AI attached;
+   pause the Cowork ones after one clean run each).
+2. Upload the Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as separate PDFs under 6 MB (repeat).
+
+Team line: merged T-075, T-084, T-083, T-088; READY T-079, T-081 r2; T-086 READY; new T-090, T-091, T-092; Q-54, Q-55 (Q-53 by worker 3).
+
 ## LEAD REPORT 2026-10-19 22:40 UTC (addendum: owner answers in the Lead session)
 
 - Q-48 = A: wet-room wall tiles from the floor to the underside of a 0.15 m decor ceiling (GF 3.65 m, 1F / 2F 3.35 m);

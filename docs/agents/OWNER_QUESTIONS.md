@@ -212,6 +212,46 @@ RECOMMENDATION: (A): a 1:3 mortar has about a quarter more cement than 1:4, so 1
 on the safe side; replace it with your supplier's figure when you have one (practice, not a code clause).
 WAITS ON: cement bags and sand for every stair (marble treads, risers, landings) in the finishing table, on every villa.
 
+### Q-54 Annex rooms on the ground floor (+0.30): what is their slab-to-slab height for the wall-height rule? (lead 2026-10-20 00:30, from worker 3 and worker 2; T-081, T-088, T-090; no-assumptions question: two workers read it differently)
+
+THE PROBLEM: your wall-height rule starts from the slab-to-slab height read from the level marks (GF +1.00 to +5.50 =
+4.50 m; 1F and 2F 4.20 m). The ground-floor annex (majlis, kitchen, driver room and its bathroom) sits at +0.30 and its
+roof is marked +4.30. One worker took +0.30 to +4.30 = 4.00 m as slab to slab (wall 4.00 - 0.60 - 0.15 - 0.10 = 3.15 m);
+the other held it, because +4.30 is a ROOF mark and a roof carries more build-up (insulation, screed to falls) than a
+floor, so +4.30 may be the finished roof and not the slab. The freelancer uses 3.60 m in these rooms.
+WHERE TO LOOK: Drive "Alsenan chalet project", Alsenan_Architectural_P7757_Pages_11-12.pdf, page 11 (SECTION B-B): the
+vertical chain prints "400" between +0.30 and +4.30, the same way it prints "450" and "420" for the other floors; and
+p7757_arch_sheet03.pdf (ground floor plan): the four annex rooms marked +0.30.
+THE OPTIONS (wall height of the four annex rooms):
+(A) Read +0.30 to +4.30 = 4.00 m as slab to slab, like the other floors: wall height 3.15 m (with your 0.60 m beam).
+(B) +4.30 is the finished roof: hold the annex walls until a roof detail prints the slab level or the roof build-up.
+(C) Use another value you give for this zone.
+RECOMMENDATION: (A): section B-B dimensions the annex with the same chain of level marks that your rule already uses as
+slab to slab for the other floors, so (A) is consistent and needs no guess (practice, not a code clause). Whatever you
+choose, a slab level printed on a roof detail replaces it.
+WAITS ON: plaster, paint and wall-tile heights of the four annex rooms on Alsenan (and any villa with a split level)
+(T-081, T-090).
+
+### Q-55 Doors: when no drawing prints a door height, which height does the BOQ take? (lead 2026-10-20 00:30, from worker 1's hand table of every printed opening height; T-083, T-091; no-assumptions question)
+
+THE PROBLEM: door area needs a height. On Alsenan only the ground-floor main entrance prints one (2.00 x 2.50 = 5.00 m2);
+no plan, elevation, section or schedule prints the height of any other door. The freelancer prices his door lines at
+2.40 m high, which no sheet prints (his doors 12.0 m2). Your Q-04 answer gives door WIDTHS (1.00 m opening = 1.10 m wall
+to wall; bathroom 0.90 = 1.00 m) but no height, so every other door is held.
+WHERE TO LOOK: Drive "Alsenan chalet project", p7757_arch_sheet03.pdf and p7757_arch_sheet04.pdf (doors drawn with
+widths only), the elevations in p7757_arch_sheet09.pdf and the sections (sheet 10, page 11): no door height printed
+except the main entrance.
+THE OPTIONS (example: one ordinary 1.00 m door):
+(A) Your company standard height for doors that print none (for example 2.10 m: 1.00 x 2.10 = 2.10 m2), recorded as an
+    Urban rule like Q-04, and listed as "owner standard, not printed".
+(B) 2.40 m (1.00 x 2.40 = 2.40 m2), the freelancer's height, as your standard.
+(C) Hold every door without a printed height and send the architect a request for a door schedule.
+RECOMMENDATION: (C) for Alsenan now (a request to the architect costs nothing and doors are priced per piece and size),
+and give us your standard height under (A) or (B) so the next villa does not wait; we will never take 2.40 m from the
+freelancer without your word (practice, not a code clause).
+WAITS ON: door m2 on Alsenan (all doors except the main entrance) and on every villa without a door schedule (T-091, the
+door / window area method).
+
 ## Answered
 
 ### Q-48 Wet rooms are fully tiled: up to which height do the wall tiles go, and which false-ceiling depth applies? (lead 2026-10-19 22:20; owner request for the room-by-room tiling table (Q-45), Q-40 and Q-43 answers; no-assumptions question)
@@ -342,7 +382,11 @@ measures the frame on site anyway (practice, not a code clause); (B) if you want
 WAITS ON: the width (and later the m2) of curved glass walls in straight openings on Alsenan and on every later villa (T-077,
 then the door / window area method).
 
-Answer: A (owner, main chat 2026-10-19 22:40). "T 16" is the thickness of the sloping slab (waist) and the landings of every stair panel that carries it: main stair waists 2.885 m3 + landings 0.740 m3 = 3.625 m3 (round stair waists once its steps are counted). The entrance flight, which is not in a slab panel, stays held.
+Answer: A, the printed 6.57 m (owner, main chat 2026-10-19 20:50, recorded in OWNER_SESSION_CHANGES.md: "Q-38 A (printed
+6.57 m)"). Lead 2026-10-20 00:30: this record carried the Q-47 text by a copy slip; corrected from the owner-session log.
+The curved GF pool glazing width is 6.57 m (worker 1 asked at 23:37; its height 4.30 m is bound in the T-083 hand table).
+
+(Text below was pasted here by mistake and belongs to Q-47; kept unchanged for the record:) "T 16" is the thickness of the sloping slab (waist) and the landings of every stair panel that carries it: main stair waists 2.885 m3 + landings 0.740 m3 = 3.625 m3 (round stair waists once its steps are counted). The entrance flight, which is not in a slab panel, stays held.
 
 ### Q-39 A window that is curved on plan: is its area width the straight chord or the curved length? (worker 2 2026-10-19 17:04; T-078; no-assumptions question: two Urban sources disagree)
 

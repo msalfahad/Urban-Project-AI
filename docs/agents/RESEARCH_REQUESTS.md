@@ -4,7 +4,16 @@ At most 3 open. Each: the problem in one sentence, the measured gap, what to loo
 
 ## Open
 
-(none: R-01, R-02, R-05 answered 2026-10-20)
+### R-06 Arabic and English finishing notes and room tags on SCANNED villa plans (lead 2026-10-20 00:30)
+Problem: the Alsenan architectural PDF sheets are raster scans, and the finishing facts (tile sizes, floor finish per
+room, door heights, false-ceiling notes) are printed there in Arabic and English, so today only a person can read them.
+Gap: 23 of 29 window heights and all but one door height held; tile size per room not known (tile counts HELD); plaster
+1151.14 / paint 1191.13 m2 held partly for want of printed ceiling notes. The image has Tesseract with English only (no
+Arabic data) and agents may not install packages. Look for: permissive OCR for Arabic + English mixed technical text on
+200-300 dpi scans (Tesseract ara data licence and accuracy, PaddleOCR Arabic models, others), published accuracy on
+architectural or engineering drawings, how to find note boxes and room tags on a scan before OCR, and a check that holds
+a misread note (e.g. two engines must agree; a size must match a known tile format printed elsewhere on the set).
+Unblocks T-091 (as a check of the hand census), T-092, T-003.
 
 ## Answered
 
