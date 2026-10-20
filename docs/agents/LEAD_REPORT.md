@@ -1,5 +1,55 @@
 # Lead reports to the owner's main chat (newest first, last 10 entries)
 
+## LEAD REPORT 2026-10-20 04:20 UTC
+
+Repositories: Urban-Project-AI cloned (control; working branch head 2fb9553, no owner-session commits since 02:10);
+Drive readable (nothing new in the Alsenan folder). UrbanProjectsManager not needed this run.
+
+PROGRESS (Alsenan; the released BOQ did not change: nothing merged since 02:10)
+- Concrete: released 92.77 vs freelancer 111.81 m3 (-17.0 %), unchanged.
+- Membrane purchase (your "each room alone" answer), now built in the engine, waiting for the checker: 17 wet areas 19
+  rolls = hand 19 (21 with the pantry); strips 122.99 vs 125.27 m by hand (-1.8 %, same rolls: in 4 rooms the engine
+  starts from the other wall, e.g. ground-floor kitchen 15.30 vs 16.60 m); 67.01 m of roll left over; roofs 17 + 6 + 8 =
+  31 = hand, 25.76 m left over; each count proven minimal by a lower bound; top roof held by your answer. The freelancer
+  has no roll lines (not comparable). One gap with no rule: the small patches at the dome openings and slanted corners
+  (asked below).
+- Waterproofing wiring fix (rolls released, top roof shown as held): being built by worker 1 since 03:20.
+- Still held: plaster 1151.14 / paint 1191.13 m2 (beam, annex, door-height, ceiling answers), 1F landing floor.
+- Learned: finishing a method exposes the next rule gap (the patches); the engine's per-room search beats the hand table
+  on strip length without changing what is bought.
+- Gates: 0 done; 1 at risk (wiring fix in progress, cutting plan waits for the checker); 2 and 3 started; 4 started.
+
+TEAM HEALTH
+- Worker 2 03:39: all five self-check steps PASS; delivered the cutting plan in 13 minutes (the checker will look at depth).
+- Worker 1 03:19: claimed and pushed its branch; still running at 04:10 (no log line yet; normal for a long task).
+- Verifier 02:26 PASS (merged three); 02:52 nothing to check; 03:50 venv and codemap refused "[Untrusted Code
+  Integration]" / "[Code from External]", so the cutting plan waits. Done by me: it is first in the verifier's order with
+  a hand re-check of one room and one roof.
+- No log line, no claim: worker 1 02:19, worker 2 02:39, worker 3 02:59 and 03:59 (3 - 13 minutes each). Four of the five
+  finished worker runs since 02:10 left nothing. Nothing on the board can fix a run that ends before its first write.
+- Scout: next run 23:50 UTC.
+
+QUESTIONS FOR OWNER (9 open, all no-assumption questions; Q-50 to Q-57 are in the earlier entries and OWNER_QUESTIONS.md)
+1. NEW Q-58 Membrane patches the straight strips cannot reach. Problem: round the two dome openings on the second-floor
+   roof the 0.20 m upturn is 27.78 m = 5.56 m2; 5.24 m2 folds up from the strips, 0.31 m2 must be cut as small pieces;
+   the slanted (45 deg) parapet corners miss another 0.84 m2 (tiny bits, under 0.01 m2 each, in four ground-floor wet
+   areas and the first-floor west roof). No rule says where these come from; they are in no roll count now. Where: Drive
+   Alsenan, Alsenan_Architectural_P7757_Pages_05-06, the second-floor roof, its two domes and slanted corners; that roof
+   uses 17 rolls and leaves 11.91 m (11.91 m2) of roll over. Options: (A) cut them from the same roof's / room's own
+   leftover, no extra roll: roofs stay 31, wet areas 19 (21); (B) one extra roll per roof / room that needs patches: roofs
+   32, wet areas 23 with the pantry; (C) a ready-made collar / corner piece as its own line per opening and corner, rolls
+   unchanged. Recommendation: A (patches are normally cut on site from the same roof's offcut; your "each alone" answer
+   forbids sharing offcuts between rooms, not inside one; practice, not a code clause).
+
+NEEDS FIXING (only you can do it)
+1. Code runs for the scheduled agents: four of five finished worker runs since 02:10 left no log line, and the verifier
+   was refused at 03:50 after passing at 02:26. Already done: hand tasks for refused runs, verifier order set, separate-
+   command self-check. The one thing to do: option 2 of docs/agents/EXECUTION_PERMISSIONS.md section 5 (Claude Code
+   scheduled tasks with Urban-Project-AI attached; pause the Cowork ones after one clean run each).
+2. Upload the Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as separate PDFs under 6 MB (repeat).
+
+Team line: T-089 READY (verify first, depth check), T-093 CLAIMED worker 1; Q-58 new; 10 TODO (1 Track B); no merges.
+
 ## LEAD REPORT 2026-10-20 02:10 UTC
 
 Repositories: Urban-Project-AI cloned (control and working branch, head 2fb9553; no owner-session commits since 00:30);

@@ -1,7 +1,7 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-20 02:10 UTC (Lead). Previous version: 2026-10-20 00:30 UTC.
+Last update: 2026-10-20 04:20 UTC (Lead). Previous version: 2026-10-20 02:10 UTC.
 
 ## Where we are on the five gates
 | Gate | In plain words | Due | Done so far | State |
@@ -13,8 +13,8 @@ Last update: 2026-10-20 02:10 UTC (Lead). Previous version: 2026-10-20 00:30 UTC
 | 4 | Read scanned and PDF plans | 9 Dec | the vector-PDF height reader is merged, but the Alsenan PDF sheets are scans; a scan reader that releases a number only when its dimension chain adds up exactly is now on the board | started (one task) |
 
 ## Engine vs freelancer BOQ: Alsenan Chalet (released run, commit 8774071; the released numbers did not change this run)
-Three more checked pieces were merged since 00:30 (room levels with your wall-height rule, the room-by-room tiling
-table, plaster / paint per room by hand). The wet-area / roof wiring was sent back for two faults. None is wired yet.
+Nothing merged since 02:10. The membrane cutting plan (rolls, strips and leftover per wet room and roof, each alone)
+is built and waits for the checker, whose code run was refused at 03:50; the wet-area / roof wiring fix is being built.
 "piece" = a merged, checked method piece run on the real drawing; "hand" = a reading of the drawing.
 | Trade | Unit | Engine | Freelancer | Difference | Change since last report | Target | State |
 |---|---|---|---|---|---|---|---|
@@ -28,8 +28,8 @@ table, plaster / paint per room by hand). The wet-area / roof wiring was sent ba
 | Domes | m3 | none (your answer: not concrete) | 6.78 | rule difference | none | - | settled |
 | Wet-area waterproofing floor, 17 areas (piece + hand) | m2 | 72.12 | 72.01 | +0.11 (+0.16 %) | none | within 3 % | not yet in the released BOQ (wiring is first on the board) |
 | Wet-area upturn, walls only (piece) | lm | 125.57 (your doorway answer) | 144.61 (full boundary) | rule difference | now from the strip method on real rooms (hand 127.07) | within 3 % | full boundary 144.73 = his 144.61 (+0.08 %) |
-| Wet-area membrane rolls to buy (hand, your answer: each room alone) | rolls | 19 for 17 wet areas (21 with the pantry), 64.73 m left over | not given | - | was 13 - 15 by layout, before your answer | exact | the engine version that releases this was sent back (it still held the rolls); fix first on the board |
-| Roof waterproofing membrane (piece) | m2 | 204.11 (3 roofs drawn on plans); 31 rolls each roof alone (17 + 6 + 8) | 285.00 | -80.89 (-28.4 %) | none | within 3 % | top roof HELD by your answer; the checker found the engine drops it silently instead of showing it held: being fixed |
+| Wet-area membrane rolls to buy (hand, your answer: each room alone) | rolls | 19 for 17 wet areas (21 with the pantry); engine cutting plan 19 = hand, 122.99 m of strips vs 125.27 by hand (-1.8 %, same rolls, a better start wall in 4 rooms), 67.01 m left over | not given | not comparable | engine plan now equals the hand count (not yet checked) | exact | wiring fix being built; patches at dome openings / slanted corners (1.15 m2 on the 2F roof) asked you |
+| Roof waterproofing membrane (piece) | m2 | 204.11 (3 roofs drawn on plans); 31 rolls each roof alone (17 + 6 + 8), engine cutting plan 31 = hand, 25.76 m left over | 285.00 | -80.89 (-28.4 %) | none | within 3 % | top roof HELD by your answer; the checker found the engine drops it silently instead of showing it held: being fixed |
 | Roof upturn (piece) | lm | 181.59 | 194.00 | -12.41 (-6.4 %) | none | within 3 % | same cause |
 | Windows with a printed height, 6 of 29 (hand, merged) | m2 | 26.485 | 24.280 | +2.205 (+9.1 %) | was 4 of 29, 13.892 vs 14.350 | exact | engine right on 4 printed heights, 1 rule difference (curved window, your answer); 23 HELD (scans); the curved pool glazing is 6.57 m wide by your answer, height 4.30 m |
 | Windows counted | pcs | 29 (27 measured + 2 held) | 29 | 0 | none | exact | - |
@@ -68,15 +68,15 @@ Not measured, and paused by your order (Alsenan first).
   printed anywhere.
 
 ## Being worked on now
-- Free for workers whose code runs pass, first: fix the wet-area / roof wiring (rolls each room alone: 19 wet, 31 roofs;
-  the top roof shown as held), then membrane cutting plans per room and roof, tile counts with your joints, beam fixes
-  with the dome-opening ring beam, the scan reader with a chain-sum check, plot-edge foundation members, stairs and pool
-  in code, the data file for typed drawing values.
-- Free for workers whose code runs are refused: the roof cutting plans by hand (strips, rolls and leftover metres per
-  roof), and the list of every printed finishing note, tile size and door height, now with the first-floor living room
-  split from its landing by printed sizes.
-- Queued: plaster and paint into the released BOQ, as soon as you answer the beam, annex, door-height and ceiling questions.
-- Checker: merged three pieces at 02:00 and sent the wiring back; next run takes whatever comes READY.
+- Worker 1 (since 03:20, its code runs passed): the wet-area / roof wiring fix: rolls released each room alone (19 wet,
+  21 with the pantry, 31 roofs) and the top roof shown as held, not dropped.
+- Waiting for the checker: the membrane cutting plan per room and roof (19 = 19 and 31 = 31 rolls against the hand
+  table, strips 1.8 % shorter by a better start wall); the checker's code run was refused at 03:50, so it waits.
+- Free for workers whose code runs pass: tile counts with your joints, beam fixes with the dome-opening ring beam, the
+  scan reader with a chain-sum check, plot-edge foundation members, stairs and pool in code, the typed-values data file.
+- Free for workers whose code runs are refused: the roof cutting plans by hand, and the list of every printed finishing
+  note, tile size and door height (first-floor living room split from its landing by printed sizes).
+- Queued: plaster and paint into the released BOQ, after the wiring fix and your beam, annex, door-height, ceiling answers.
 - Research scout (next run 23:50 UTC): Arabic and English notes on scanned plans.
 
 ## What is missing
@@ -88,9 +88,12 @@ Not measured, and paused by your order (Alsenan first).
 - The Kuwait specification chapters on waterproofing, floors, wall tiles and paint (file too big: parts needed).
 
 ## Waiting for the owner
-- NEW: first-floor living room: the corridor / stair landing in front of it (about 5.91 m2) is in no freelancer row:
+- NEW: membrane patches at the two dome openings and the slanted roof corners (about 1.15 m2 on the second-floor
+  roof): cut from the same roof's leftover, no extra roll (recommendation; roofs stay 31 rolls), one extra roll per roof
+  / room (roofs 32), or a ready-made collar / corner piece as its own line.
+- First-floor living room: the corridor / stair landing in front of it (about 5.91 m2) is in no freelancer row:
   porcelain as its own row (recommendation), marble with the stair, or left out.
-- NEW: ceilings: paint every decor ceiling, no plaster (recommendation; 105.88 m2 on the 6 closed dry rooms), the same but
+- Ceilings: paint every decor ceiling, no plaster (recommendation; 105.88 m2 on the 6 closed dry rooms), the same but
   no paint in wet rooms, or plaster and paint the slab soffit too.
 - Wall height under real beams: always 0.60 m, the deepest beam at the room, or a deep beam only where it crosses the
   ceiling (recommendation: the last one; 6 rooms 336.94 / 321.56 / 331.49 m2 vs his 375.40).
@@ -99,6 +102,6 @@ Not measured, and paused by your order (Alsenan first).
 - Stair marble bed 1:3: about 10 bags and 1.0 m3 sand per m3 (recommendation), the 1:4 figures, or your own.
 - Round stair with no section: use the plan count of 28 steps (recommendation) or hold.
 - Turning steps: half riser x their plan area (0.120 m3 on the main stair, recommendation), part of the landing, or hold.
-- Setting: run the four coding agents as Claude Code scheduled tasks with the repository attached (worker 1 was refused
-  again at 01:25; workers 2 and 3 ended their 01:39 / 01:59 runs in 3 - 4 minutes without a log line).
+- Setting: run the four coding agents as Claude Code scheduled tasks with the repository attached (since 02:15: four of the
+  five finished worker runs left no log line; the checker was refused its code run at 03:50 after passing at 02:26).
 - Upload the Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as separate PDFs under 6 MB.

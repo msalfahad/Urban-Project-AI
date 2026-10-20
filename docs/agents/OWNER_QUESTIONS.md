@@ -295,6 +295,28 @@ RECOMMENDATION: (A): a gypsum decor ceiling is finished with paint, not cement p
 says every room has one; the cove strips need a printed detail before they are counted (practice, not a code clause).
 WAITS ON: ceiling plaster / paint lines on Alsenan and every villa; the plaster / paint wiring (T-095).
 
+### Q-58 Membrane patches the straight strips cannot reach (dome openings, slanted corners): cut from the same roof's leftover, or bought extra? (lead 2026-10-20 04:20, from worker 2's membrane cutting plan; T-089, T-093; no-assumptions question: your Q-49 answer says each room / roof alone, but no Urban rule says where these small patches come from)
+
+THE PROBLEM: the cutting plan lays straight 1 m strips. Round the two dome openings on the second-floor roof the 0.20 m
+upturn is 27.78 m long = 5.56 m2; 5.24 m2 folds up from the strips, 0.31 m2 must be cut as separate small pieces. At the
+slanted (45 deg) parapet corners the strips miss another 0.84 m2 on the same roof (and 0.003 - 0.010 m2 in four ground-floor
+wet areas, 0.009 m2 on the first-floor west roof). These patches are now shown in m2 but in no roll count.
+WHERE TO LOOK: Drive "Alsenan chalet project", Alsenan_Architectural_P7757_Pages_05-06 (roof plans): the second-floor
+roof, its two dome openings and the slanted parapet corners. The same roof's plan uses 17 rolls and leaves 11.91 m of
+full-width roll (= 11.91 m2) over; the patches need about 0.31 + 0.84 = 1.15 m2.
+THE OPTIONS:
+(A) Cut the patches from the SAME roof's (or room's) own leftover; no extra roll. Roofs stay 17 + 6 + 8 = 31 rolls, wet
+    areas 19 (21 with the pantry); 2F roof leftover 11.91 -> about 10.76 m. If a room's own leftover is too short, one
+    more roll for that room.
+(B) Buy one extra roll for every roof / room that needs patches, never cut from leftover: 2F roof 18, roofs 32; the four
+    wet areas +4 rolls (23 with the pantry) for patches under 0.01 m2 each.
+(C) No membrane patches: the openings and slanted corners take a ready-made accessory (pre-formed collar / corner piece)
+    as a separate line counted per opening and per corner (2 dome collars + the slanted corners); rolls unchanged.
+RECOMMENDATION: (A): upturn patches and corner pieces are normally cut on site from the offcut of the same roof; your
+"each alone" answer forbids sharing offcuts between rooms, not inside one room, and (B) buys whole rolls for a few
+hundred cm2 (practice, not a code clause).
+WAITS ON: the released roll counts per roof and wet area and the printed cutting plan (T-093 wiring, T-089 cutting plan).
+
 ## Answered
 
 ### Q-48 Wet rooms are fully tiled: up to which height do the wall tiles go, and which false-ceiling depth applies? (lead 2026-10-19 22:20; owner request for the room-by-room tiling table (Q-45), Q-40 and Q-43 answers; no-assumptions question)

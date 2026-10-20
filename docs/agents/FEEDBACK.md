@@ -3,23 +3,34 @@
 Lead writes after every run (owner, 2026-10-18). WORKED = met its acceptance check; PARTIAL = some parts held, refused
 or only partly compared; FAILED = did not deliver. Recurring causes decide the next tasks and RESEARCH_REQUESTS.md.
 
-## Recurring causes (lead 2026-10-20 02:10)
+## Recurring causes (lead 2026-10-20 04:20)
 
-1. **Merged pieces not wired into the released run** (largest, unchanged): twenty checked pieces and hand tables merged,
-   the released Alsenan run is still 8774071 (concrete 92.77 vs 111.81 m3). The wiring of wet areas and roofs came back
-   REJECTED on two owner-answer faults (rolls still held although Q-49 = A; no held line for the top roof). Decision:
-   T-093 rework first for every code-capable worker; T-095 queued to wire plaster / paint once its questions are answered.
-2. **An owner answer not carried into code** (new, from T-079): the worker built against the board text written before
-   Q-49 was answered. Decision: every rework / wiring row now lists the owner answers it must apply (T-093, T-095), and
-   the verifier's gate d checks them against OWNER_QUESTIONS "Answered".
-3. **Silent omission by an owner hold** (new, from T-079): a quantity the owner parked (Q-34 top roof) disappeared from
-   the output instead of showing as held. Decision: T-093 adds a generic held roof line (storey with no roof plan above).
-4. **Heights and finishes still need rules**: plaster 1151.14 / paint 1191.13 m2 held on Q-52, Q-54, Q-55; ceilings have
-   no rule at all (new Q-57); the 1F corridor / landing floor has no line (new Q-56).
-5. **Execution refused, intermittently**: since 00:30 worker 1 (01:25) was refused the clone and the claim push; worker 2
-   (01:39, 3 min) and worker 3 (01:59, 4 min) ended without a RUN_LOG line; the verifier (01:49) passed every step and
-   merged three tasks. Decision: two NO REPO CODE rows stay free (T-091, new T-094); owner setting option 2 stays under
-   NEEDS FIXING.
+1. **Merged pieces not wired into the released run** (largest, unchanged): the released Alsenan run is still 8774071
+   (concrete 92.77 vs 111.81 m3). The wiring fix (T-093) is being built by worker 1 since 03:20; the cutting plan
+   (T-089) waits for a code-capable verifier run. Decision: verifier order T-089 then T-093; T-095 after both.
+2. **Runs that leave no trace** (worse): since 02:15, four of the five finished worker runs wrote no RUN_LOG line and
+   claimed nothing (worker 1 02:19, worker 2 02:39, worker 3 02:59 and 03:59, each 3 - 13 min); the verifier passed
+   every code step at 02:26 and was refused venv / codemap at 03:50. The two runs that did work (worker 2 03:39, worker 1
+   03:19) passed every self-check step. Decision: no board change can fix a run that ends before its first write; the
+   owner setting (EXECUTION_PERMISSIONS.md section 5 option 2) stays under NEEDS FIXING; two NO REPO CODE rows stay free.
+3. **Rule gaps found by finishing a method** (new, from T-089): straight strips cannot reach dome-opening upturns and
+   slanted corners (1.15 m2 on the 2F roof); no rule says where those patches come from. Decision: owner Q-58; patches
+   reported in m2, outside the roll count, until answered.
+4. **Heights, finishes and ceilings still need rules**: Q-52, Q-54, Q-55, Q-56, Q-57 open (plaster 1151.14 / paint
+   1191.13 m2 held).
+
+## 2026-10-20 04:20 (lead run)
+
+- **T-089 membrane cutting plan per wet room and roof: WORKED on its own evidence, NOT YET VERIFIED (READY b8738a5).**
+  Alsenan 17 wet areas 19 rolls = hand 19; strips 122.99 vs 125.27 m (-1.8 %: same rolls, the opposite start wall in 4
+  rooms, e.g. GF kitchen 15.30 vs 16.60 m, ENGINE_RIGHT proposal); pantry 2 = 2; roofs 17 + 6 + 8 = 31 = 31, 25.76 m
+  left over; top roof HELD (Q-34); each count with a lower-bound proof (scout R-05). 22 hand tests not Alsenan. Freelancer
+  has no roll lines: not comparable. No-assumption check: lap and roll are rule inputs (UP-WP-002), Q-49 A applied; the
+  patch pieces were left out of the count and named as unruled: correct. Concern: 13-minute run for a new module with 22
+  tests and an SVG output (depth check). Decision: verifier first on the next code-capable run with a hand re-derivation;
+  owner Q-58 for the patches. No new task (cause already tasked: wiring T-093, T-095).
+- **T-093 wiring rework: in progress (worker 1, claimed 03:20, branch pushed 9ead6fd, run still open at 04:10).** No
+  decision until its handoff.
 
 ## 2026-10-20 02:10 (lead run)
 
