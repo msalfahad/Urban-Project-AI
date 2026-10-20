@@ -1,0 +1,18 @@
+floor,engine_piece,hand_rows,t_drawn_m,t_by_note_s2_m,engine_run_m,hand_run_m,status
+1F,FL0002-FL0003,1F-W06,0.200,0.250,16.470,16.470,CONFLICT (designer D-12): drawn 0.200 vs column width 0.25; never chosen
+1F,FL0020-FL0021,1F-W08,0.200,0.250,3.600,3.600,CONFLICT (designer D-12): drawn 0.200 vs column width 0.25; never chosen
+1F,FL0030-FL0031,1F-W10,0.200,0.250,12.870,12.870,CONFLICT (designer D-12): drawn 0.200 vs column width 0.25; never chosen
+1F,FL0046-FL0047,1F-W18,0.150,0.200,5.200,5.275,CONFLICT (designer D-12): drawn 0.150 vs column width 0.20; never chosen
+1F,FL0059-FL0061,1F-W02,0.200,0.250,0.700,0.700,CONFLICT (designer D-12): drawn 0.200 vs column width 0.25; never chosen
+1F,FL0074-FL0075,1F-W23,0.150,0.250,5.520,6.500,CONFLICT (designer D-12): drawn 0.150 vs column width 0.25; never chosen
+1F,FL0074-FL0076,1F-W04,0.200,0.250,3.600,3.600,CONFLICT (designer D-12): drawn 0.200 vs column width 0.25; never chosen
+2F,FL0035-FL0036,2F-W07,0.200,0.250,5.725,5.725,CONFLICT (designer D-12): drawn 0.200 vs column width 0.25; never chosen
+GF,FL0001-FL0002,GF-W00 + GF-W01,0.200,0.250,27.670,26.370,CONFLICT (designer D-12): drawn 0.200 vs column width 0.25; never chosen
+GF,FL0007-FL0008,GF-W02 + GF-W03,0.200,0.250,16.520,4.300,CONFLICT (designer D-12): drawn 0.200 vs column width 0.25; never chosen
+GF,FL0017-FL0018,GF-W04 + GF-W05,0.200,0.250,8.950,7.750,CONFLICT (designer D-12): drawn 0.200 vs column width 0.25; never chosen
+GF,FL0023-FL0024,GF-W07,0.200,0.250,1.100,1.100,CONFLICT (designer D-12): drawn 0.200 vs column width 0.25; never chosen
+GF,FL0030-FL0031,GF-W28,0.150,0.250,5.527,5.527,CONFLICT (designer D-12): drawn 0.150 vs column width 0.25; never chosen
+GF,FL0041-FL0042,GF-W10,0.200,0.250,12.870,12.870,CONFLICT (designer D-12): drawn 0.200 vs column width 0.25; never chosen
+GF,FL0068-FL0069,GF-W13,0.200,0.250,0.700,0.750,CONFLICT (designer D-12): drawn 0.200 vs column width 0.25; never chosen
+GF,FL0078-FL0079,GF-W15,0.200,0.250,7.100,7.100,CONFLICT (designer D-12): drawn 0.200 vs column width 0.25; never chosen
+GF,FL0083-FL0084,GF-W17,0.200,0.250,3.600,3.700,CONFLICT (designer D-12): drawn 0.200 vs column width 0.25; never chosen
