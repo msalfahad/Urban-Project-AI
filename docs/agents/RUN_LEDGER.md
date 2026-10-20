@@ -120,7 +120,12 @@ repository. Today's scheduled sessions attach two (Urban-Project-AI and UrbanPro
   app-shape tasks).
 - (b) Stop agents adding UrbanProjectsManager by default, then test whether a settings file is honoured. Not yet tested.
 
-## Proposed fix for INCOMPLETE runs (not applied; it changes agent instructions)
+## Start-of-run line (APPROVED by the owner 18:45; added to the five agent prompts 18:50)
+
+Unclosed-run rule (owner): a STARTED line with no final line from the same agent and run is an UNCLOSED run, counted
+INCOMPLETE. The scheduler's "succeeded" never makes it a success.
+
+Original proposal:
 
 At the start of every run, before the self-check, each agent writes:
 

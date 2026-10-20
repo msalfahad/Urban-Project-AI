@@ -178,7 +178,7 @@ RECOMMENDATION: A. Practice, not a code clause: the passage is at court level, n
 inside), it has no door at its mouth, and house windows and an annex door open onto it, which an internal corridor would
 not have; the entrance porch under the master bedroom (19.18 m2) is already treated as outside on the same reasoning.
 Waits on: the ground-floor facade run and exterior plaster / paint on every villa with a roofed side passage (T-109, T-123);
-the passage soffit (T-121, Q-68).
+Answer: A, CONDITIONAL. External open-air passage IF the current architectural drawings confirm it is open to outside air without enclosing doors or glazing: passage-facing walls exterior, exterior plaster and paint measured separately, the 5.64 m2 slab underside an exterior soffit, the actual passage boundary in the exterior facade measurement. Keep 105.887 m geometric perimeter vs 105.787 m billable distinct; reconcile the 0.100 m with Q-64's notch and reveal treatment. Do NOT hard-code an additional 7.00 m: correct the wall-boundary interpretation. If the drawings do not establish it is external, keep it PROVISIONAL and request designer confirmation. (owner in the main chat, 2026-10-20 18:45 UTC; full text: docs/agents/OWNER_RESPONSE_2026-10-20_1845.md)
 
 ### Q-68 Ceilings over outside air (porch, side passage, pool court, roof-slab edges, 45.63 m2): which finish? (lead 2026-10-20 18:20, from worker 2's census; T-121; no-assumptions question: no Urban rule names a soffit finish)
 
@@ -202,6 +202,7 @@ RECOMMENDATION: A. Practice, not a code clause: a ceiling open to sea air and ra
 painted with the exterior paint; gypsum decor boards are an interior product and sag or stain outdoors; the slab edges
 belong with the facade in any case.
 Waits on: exterior plaster and paint (soffit lines) on every villa with a porch, a covered passage or a cantilever (T-121).
+Answer: C, with option A as the PROVISIONAL estimating method. Keep 45.632 m2 as a candidate exterior-soffit area subject to geometry verification (pool soffit 14.020 m2 net of the void; other soffits and slab edges 31.612 m2). Do not assume cement plaster and paint just because it is outside: search details, elevations, finishing notes and specifications; specified exterior plaster / paint -> classify so; a specified exterior suspended ceiling -> measure separately; never apply interior gypsum board to exterior exposure. Finish classification HELD until established. Reconcile the pool soffit against the freelancer's 19.154 m2 before release. (owner in the main chat, 2026-10-20 18:45 UTC; full text: docs/agents/OWNER_RESPONSE_2026-10-20_1845.md)
 
 ### Q-69 Almost all-glass wall lines (the saloon glass and the curved pool glass, 12.05 m): in the blockwork run or not? (lead 2026-10-20 18:20, from worker 3's wall-by-wall check; T-117, T-125, T-108; no-assumptions question: UP-WALL-GEOM-001 keeps openings in the run, but no rule says whether a glass wall is a wall with an opening)
 
@@ -221,6 +222,7 @@ RECOMMENDATION: A. It keeps your existing run rule unchanged for every villa (an
 the block quantity is the same as B wherever no block is drawn above or below the glass, because the m2 deduction removes
 the glazing; B would need a new rule for "how much glass makes a line not a wall".
 Waits on: ground-floor blockwork run and block m2 (T-125, T-108).
+Answer: B, CONDITIONAL, with the owner's original wall-run method preserved. Distinguish (1) architectural wall-run length, (2) physical blockwork length, (3) glass / aluminium opening length, (4) masonry above / below the glazing, (5) net blockwork area after deductions. Full glazing spans are not solid blockwork; use the actual solid masonry. Keep 143.16 m as the owner-manual geometric comparison; 131.88 m physical blockwork is a CANDIDATE subject to verification of every pier, spandrel, parapet and masonry above / below the glass; never drop real masonry because glass occupies part of the elevation; never count masonry in two segments; not enough elevation information -> HOLD the affected net block area. IMPORTANT: correct this question's arithmetic first (12.05 - 3.77 = 8.28, not 8.88) and show a complete wall-by-wall ledger reconciling 143.16 and 131.88 m. (owner in the main chat, 2026-10-20 18:45 UTC; full text: docs/agents/OWNER_RESPONSE_2026-10-20_1845.md)
 
 ### Q-70 Second-floor stair arrival (4.875 m2 inside the printed 4.50 x 1.95 stair lobby): marble like the first-floor landing, or porcelain with the lobby? (worker 2 2026-10-20 19:05; T-122; no-assumptions question: your Q-66 B answer covers the first-floor landing, and the second-floor area is printed as a named lobby)
 
