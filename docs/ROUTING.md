@@ -37,10 +37,10 @@ Risk **CRITICAL** (recommended validation L4). Ask about: cad, dwg, dxf, block, 
 
 **Open first:**
 
-- `engine/source/cad/kernel_ezdxf.py` (348 lines, HIGH; imported by 10 directly, 80 transitively, SHARED)
+- `engine/source/cad/kernel_ezdxf.py` (348 lines, HIGH; imported by 10 directly, 81 transitively, SHARED)
 - `engine/source/cad/kernel.py` (365 lines, HIGH; imported by 17 directly, 30 transitively, SHARED)
 - `engine/source/cad/libredwg_map.py` (489 lines, HIGH; imported by 10 directly, 25 transitively, SHARED)
-- `tools/urban_intake.py` (225 lines, CRITICAL, frozen; imported by 26 directly, 71 transitively, SHARED)
+- `tools/urban_intake.py` (225 lines, CRITICAL, frozen; imported by 26 directly, 72 transitively, SHARED)
 
 **Depends on:** `engine/source/findings.py`, `engine/source/observations.py`, `engine/source/capability.py`, `engine/source/decoder_pins.py`, `engine/source/realised.py`, `engine/source/cad/affine.py`, `engine/source/cad/kernel_ocs.py`, `engine/source/digests.py`
 
@@ -67,7 +67,7 @@ Risk **HIGH** (recommended validation L3). Ask about: unit, insunits, millimet, 
 
 **Open first:**
 
-- `engine/source/frame.py` (1076 lines, HIGH; imported by 15 directly, 69 transitively, SHARED)
+- `engine/source/frame.py` (1076 lines, HIGH; imported by 15 directly, 70 transitively, SHARED)
 
 **Depends on:** `engine/source/findings.py`
 
@@ -92,18 +92,18 @@ Risk **HIGH** (recommended validation L3). Ask about: room, space, zone, closure
 
 **Open first:**
 
-- `engine/source/arch_rooms.py` (2250 lines, HIGH; imported by 34 directly, 78 transitively, SHARED)
-- `engine/source/arch_plan.py` (478 lines, HIGH; imported by 18 directly, 85 transitively, SHARED)
-- `engine/source/space_model.py` (196 lines, MEDIUM; imported by 3 directly, 36 transitively)
-- `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 55 transitively)
-- `engine/source/waterproofing_system.py` (998 lines, HIGH; imported by 10 directly, 44 transitively, SHARED)
-- `engine/source/arch_v27.py` (1135 lines, MEDIUM; imported by 5 directly, 78 transitively)
+- `engine/source/arch_rooms.py` (2250 lines, HIGH; imported by 35 directly, 80 transitively, SHARED)
+- `engine/source/arch_plan.py` (478 lines, HIGH; imported by 19 directly, 87 transitively, SHARED)
+- `engine/source/space_model.py` (196 lines, MEDIUM; imported by 3 directly, 37 transitively)
+- `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 56 transitively)
+- `engine/source/waterproofing_system.py` (998 lines, HIGH; imported by 10 directly, 46 transitively, SHARED)
+- `engine/source/arch_v211.py` (659 lines, MEDIUM; imported by 2 directly, 36 transitively)
 
-**Depends on:** `engine/source/drawing_model.py`, `engine/source/knowledge.py`, `engine/source/opening_census.py`, `engine/source/opening_gaps.py`, `engine/source/arch_v29.py`, `engine/source/arch_walls.py`, `engine/source/boq_line.py`, `engine/source/lintel_measure.py`, `engine/source/material_spec.py`, `engine/source/member_detection.py`
+**Depends on:** `engine/source/knowledge.py`, `engine/source/boq_line.py`, `engine/source/drawing_model.py`, `engine/source/membrane_layout.py`, `engine/source/topology.py`, `engine/source/arch_v27.py`, `engine/source/arch_v29.py`, `engine/source/exterior_spaces.py`, `engine/source/lintel_measure.py`, `engine/source/material_spec.py`
 
 **Other current modules:** `closure_release.py`, `closure_review.py`, `robust_geometry.py`, `room_boq.py`, `room_label_guard.py`, `room_levels.py`, `room_matrix.py`, `room_slice.py`, `room_topology.py`, `room_topology_v3.py`, `room_vocab.py`, `semantic_zones.py`, `topology.py`, `topology_closures.py`, `topology_crosscheck.py`, `topology_digest.py`, `topology_policy.py`
 
-**Rules** (knowledge 1.6.0; full records in `docs/RULES_INDEX.md`): PS-REF-001 [PROJECT_SPECIFIC] Reference project: a service corridor connecting separate b…; UP-SPACE-001 [OWNER_APPROVED] Interior / exterior status from enclosure and connectivity,…; UP-SPACE-002 [OWNER_APPROVED] Project-specific space decisions bind one space and are nev…; UP-WET-001 [OWNER_APPROVED] Owner wet areas and their finish scope; UP-WET-002 [OWNER_APPROVED] Wet-room evidence: a wash basin alone does not make a space…; rule store (frozen methods): UP-PANTRY-001, UP-PANTRY-002, UP-PANTRY-003, UP-PANTRY-004, UP-VOCAB-001, UP-VOCAB-002, UP-VOCAB-003, UP-VOCAB-004, UP-VOCAB-005
+**Rules** (knowledge 1.7.0; full records in `docs/RULES_INDEX.md`): PS-REF-001 [PROJECT_SPECIFIC] Reference project: a service corridor connecting separate b…; UP-SPACE-001 [OWNER_APPROVED] Interior / exterior status from enclosure and connectivity,…; UP-SPACE-002 [OWNER_APPROVED] Project-specific space decisions bind one space and are nev…; UP-WET-001 [OWNER_APPROVED] Owner wet areas and their finish scope; UP-WET-002 [OWNER_APPROVED] Wet-room evidence: a wash basin alone does not make a space…; rule store (frozen methods): UP-PANTRY-001, UP-PANTRY-002, UP-PANTRY-003, UP-PANTRY-004, UP-VOCAB-001, UP-VOCAB-002, UP-VOCAB-003, UP-VOCAB-004, UP-VOCAB-005
 
 **BOQ capability** (exact registry statuses): EXPERIMENTAL 2, IMPLEMENTED_NOT_INTEGRATED 3. Only INTEGRATED_AND_TESTED counts as supported; a module or a synthetic test is not real-villa validation.
 
@@ -128,17 +128,17 @@ Risk **HIGH** (recommended validation L3). Ask about: wall, blockwork, block, ma
 
 **Open first:**
 
-- `engine/source/arch_walls.py` (236 lines, HIGH; imported by 5 directly, 78 transitively)
+- `engine/source/arch_walls.py` (236 lines, HIGH; imported by 5 directly, 80 transitively)
 - `engine/source/wall_contact_path.py` (695 lines, HIGH; imported by 21 directly, 24 transitively, SHARED)
 - `engine/source/wall_bands.py` (1036 lines, HIGH; imported by 20 directly, 50 transitively, SHARED)
-- `engine/source/arch_rooms.py` (2250 lines, HIGH; imported by 34 directly, 78 transitively, SHARED)
-- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 9 directly, 82 transitively)
+- `engine/source/arch_rooms.py` (2250 lines, HIGH; imported by 35 directly, 80 transitively, SHARED)
+- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 9 directly, 84 transitively)
 
 **Depends on:** `engine/source/arch_plan.py`, `engine/source/arch_v27.py`, `engine/source/member_detection.py`, `engine/source/release_safety.py`, `engine/source/topology.py`, `engine/source/arch_v29.py`, `engine/source/drawing_model.py`, `engine/source/geometry_role.py`, `engine/source/lintel_measure.py`, `engine/source/plane_poly.py`
 
 **Other current modules:** `arch_v29.py`, `curved_member_geometry.py`, `physical_wall_faces.py`, `wall_band_reconciliation.py`, `wall_faces.py`, `wall_faces_v2.py`, `wall_height.py`
 
-**Rules** (knowledge 1.6.0; full records in `docs/RULES_INDEX.md`): UP-COL-ORIENT-001 [OWNER_APPROVED] A column turned off the drawing axes is a jamb and a wall i…; UP-REF-COLUMN-001 [REFERENCE_ONLY] Exposed column faces follow the room treatment (owner metho…; UP-WALL-GEOM-001 [OWNER_APPROVED] Wall geometry per face; short returns and curved stubs are…
+**Rules** (knowledge 1.7.0; full records in `docs/RULES_INDEX.md`): UP-COL-ORIENT-001 [OWNER_APPROVED] A column turned off the drawing axes is a jamb and a wall i…; UP-REF-COLUMN-001 [REFERENCE_ONLY] Exposed column faces follow the room treatment (owner metho…; UP-WALL-GEOM-001 [OWNER_APPROVED] Wall geometry per face; short returns and curved stubs are…
 
 **BOQ capability** (exact registry statuses): INTEGRATED_AND_TESTED 1, PARTIAL 1, EXPERIMENTAL 3, IMPLEMENTED_NOT_INTEGRATED 5, NOT_IMPLEMENTED 6. Only INTEGRATED_AND_TESTED counts as supported; a module or a synthetic test is not real-villa validation.
 
@@ -164,16 +164,16 @@ Risk **HIGH** (recommended validation L3). Ask about: door, opening, doorway, th
 
 **Open first:**
 
-- `engine/source/door_standards.py` (671 lines, MEDIUM; imported by 7 directly, 39 transitively)
-- `engine/source/door_feasibility.py` (619 lines, MEDIUM; imported by 3 directly, 36 transitively)
-- `engine/source/door_model.py` (837 lines, HIGH; imported by 13 directly, 41 transitively, SHARED)
-- `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 55 transitively)
+- `engine/source/door_standards.py` (671 lines, MEDIUM; imported by 7 directly, 40 transitively)
+- `engine/source/door_feasibility.py` (619 lines, MEDIUM; imported by 3 directly, 37 transitively)
+- `engine/source/door_model.py` (837 lines, HIGH; imported by 13 directly, 42 transitively, SHARED)
+- `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 56 transitively)
 
 **Depends on:** `engine/source/knowledge.py`, `engine/source/arch_rooms.py`, `engine/source/boq_line.py`, `engine/source/member_detection.py`
 
 **Other current modules:** `door_transition.py`, `lintel_measure.py`, `lintel_qto.py`, `lintel_release_audit.py`, `opening_area.py`, `opening_authority.py`, `opening_census.py`, `opening_completion.py`, `opening_evidence.py`, `opening_facts.py`, `opening_gaps.py`, `opening_height_pdf.py`, `opening_omission_guard.py`, `opening_register.py`, `opening_reveals.py`
 
-**Rules** (knowledge 1.6.0; full records in `docs/RULES_INDEX.md`): UP-DOOR-AREA-001 [OWNER_APPROVED] Door areas: as-drawn and owner-required, confirmed and assu…; UP-DOOR-CLS-001 [OWNER_APPROVED] Ordinary internal doors are PVC; UP-DOOR-CLS-002 [OWNER_APPROVED] Ordinary doors to genuine outdoor spaces are aluminium; UP-DOOR-CLS-003 [OWNER_APPROVED] Bathroom doors: PVC material, bathroom opening standard; UP-DOOR-CLS-004 [OWNER_APPROVED] The main entrance is its own door category, measured as dra…; UP-DOOR-CLS-005 [OWNER_APPROVED] Elevator entrances are not ordinary doors; UP-DOOR-CLS-006 [OWNER_APPROVED] One physical double-leaf door is one door set; UP-DOOR-DEP-001 [OWNER_APPROVED] An enlarged opening changes other trades: listed for review…; UP-DOOR-FEAS-001 [OWNER_APPROVED] Door opening feasibility: does the owner-standard door fit,…; UP-DOOR-HGT-001 [OWNER_APPROVED] Door heights: sources first, owner reference heights as lab…; UP-DOOR-MIN-001 [DEPRECATED] Minimum door opening widths (master prompt Part C section 7…; UP-DOOR-OPEN-002 [OWNER_APPROVED] Required nominal door opening and architectural wall opening; UP-DOOR-OPEN-003 [OWNER_APPROVED] Owner minimum door openings, kept apart from every measured…; UP-ELEV-SCHED-001 [OWNER_APPROVED] Separate elevator quotation schedule; UP-THR-001 [OWNER_APPROVED] Wet-room doorways take a marble threshold; other doorways c…; rule store (frozen methods): UP-ELEV-001, UP-ELEV-002, UP-ELEV-003, UP-ELEV-004, UP-ELEV-005
+**Rules** (knowledge 1.7.0; full records in `docs/RULES_INDEX.md`): UP-DOOR-AREA-001 [OWNER_APPROVED] Door areas: as-drawn and owner-required, confirmed and assu…; UP-DOOR-CLS-001 [OWNER_APPROVED] Ordinary internal doors are PVC; UP-DOOR-CLS-002 [OWNER_APPROVED] Ordinary doors to genuine outdoor spaces are aluminium; UP-DOOR-CLS-003 [OWNER_APPROVED] Bathroom doors: PVC material, bathroom opening standard; UP-DOOR-CLS-004 [OWNER_APPROVED] The main entrance is its own door category, measured as dra…; UP-DOOR-CLS-005 [OWNER_APPROVED] Elevator entrances are not ordinary doors; UP-DOOR-CLS-006 [OWNER_APPROVED] One physical double-leaf door is one door set; UP-DOOR-DEP-001 [OWNER_APPROVED] An enlarged opening changes other trades: listed for review…; UP-DOOR-FEAS-001 [OWNER_APPROVED] Door opening feasibility: does the owner-standard door fit,…; UP-DOOR-HGT-001 [OWNER_APPROVED] Door heights: sources first, owner reference heights as lab…; UP-DOOR-MIN-001 [DEPRECATED] Minimum door opening widths (master prompt Part C section 7…; UP-DOOR-OPEN-002 [REQUIRES_CONFIRMATION] Required nominal door opening and architectural wall opening; UP-DOOR-OPEN-003 [OWNER_APPROVED] Owner minimum door openings, kept apart from every measured…; UP-ELEV-SCHED-001 [OWNER_APPROVED] Separate elevator quotation schedule; UP-THR-001 [OWNER_APPROVED] Wet-room doorways take a marble threshold; other doorways c…; rule store (frozen methods): UP-ELEV-001, UP-ELEV-002, UP-ELEV-003, UP-ELEV-004, UP-ELEV-005
 
 **BOQ capability** (exact registry statuses): PARTIAL 1, NOT_IMPLEMENTED 2. Only INTEGRATED_AND_TESTED counts as supported; a module or a synthetic test is not real-villa validation.
 
@@ -201,16 +201,16 @@ Risk **CRITICAL** (recommended validation L4). Ask about: window, glazing, sill,
 
 **Open first:**
 
-- `engine/source/schedule_reader.py` (352 lines, CRITICAL, frozen; imported by 5 directly, 75 transitively)
-- `engine/source/opening_census.py` (474 lines, CRITICAL, frozen; imported by 9 directly, 129 transitively)
-- `engine/source/schedule_grammar.py` (98 lines, CRITICAL, frozen; imported by 7 directly, 84 transitively)
-- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 9 directly, 82 transitively)
+- `engine/source/schedule_reader.py` (352 lines, CRITICAL, frozen; imported by 5 directly, 76 transitively)
+- `engine/source/opening_census.py` (474 lines, CRITICAL, frozen; imported by 9 directly, 131 transitively)
+- `engine/source/schedule_grammar.py` (98 lines, CRITICAL, frozen; imported by 7 directly, 85 transitively)
+- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 9 directly, 84 transitively)
 
 **Depends on:** `engine/source/drawing_model.py`, `engine/source/release_safety.py`
 
 **Other current modules:** `curved_opening.py`, `opening_area.py`, `opening_authority.py`, `opening_completion.py`, `opening_evidence.py`, `opening_facts.py`, `opening_gaps.py`, `opening_height_pdf.py`, `opening_omission_guard.py`, `opening_register.py`, `opening_reveals.py`, `reveal_finish.py`, `reveal_physicality.py`, `schedule_table.py`
 
-**Rules** (knowledge 1.6.0; full records in `docs/RULES_INDEX.md`): UP-OPEN-SCHED-001 [OWNER_APPROVED] The opening schedule: width, height, sill, head and class,…; UP-REF-REVEAL-001 [REFERENCE_ONLY] Reveal finishes: plaster by default (owner method, referenc…; UP-REVEAL-001 [OWNER_APPROVED] Window reveals from the measured depth to the glazing; the…
+**Rules** (knowledge 1.7.0; full records in `docs/RULES_INDEX.md`): UP-OPEN-SCHED-001 [OWNER_APPROVED] The opening schedule: width, height, sill, head and class,…; UP-REF-REVEAL-001 [REFERENCE_ONLY] Reveal finishes: plaster by default (owner method, referenc…; UP-REVEAL-001 [OWNER_APPROVED] Window reveals from the measured depth to the glazing; the…
 
 **BOQ capability** (exact registry statuses): EXPERIMENTAL 2, NOT_IMPLEMENTED 2. Only INTEGRATED_AND_TESTED counts as supported; a module or a synthetic test is not real-villa validation.
 
@@ -241,16 +241,16 @@ Risk **HIGH** (recommended validation L3). Ask about: plaster, paint, tile, tili
 
 **Open first:**
 
-- `engine/source/arch_measure.py` (1165 lines, HIGH; imported by 17 directly, 49 transitively, SHARED)
-- `engine/source/wall_height.py` (90 lines, MEDIUM; imported by 4 directly, 52 transitively)
-- `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 55 transitively)
-- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 9 directly, 82 transitively)
+- `engine/source/arch_measure.py` (1165 lines, HIGH; imported by 17 directly, 50 transitively, SHARED)
+- `engine/source/wall_height.py` (90 lines, MEDIUM; imported by 4 directly, 53 transitively)
+- `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 56 transitively)
+- `engine/source/arch_v28.py` (1028 lines, MEDIUM; imported by 9 directly, 84 transitively)
 
 **Depends on:** `engine/source/arch_rooms.py`, `engine/source/knowledge.py`, `engine/source/release_safety.py`, `engine/source/arch_completeness.py`, `engine/source/arch_floor.py`, `engine/source/boq_line.py`, `engine/source/material_result.py`, `engine/source/material_spec.py`, `engine/source/membrane_layout.py`, `engine/source/plane_poly.py`
 
 **Other current modules:** `arch_v29.py`, `exposed_finish.py`, `finish_height.py`, `finish_height_v2.py`, `finish_height_v3.py`, `physical_measurement_state.py`, `surface_ledger.py`, `tile_layout.py`
 
-**Rules** (knowledge 1.6.0; full records in `docs/RULES_INDEX.md`): UP-CEIL-001 [OWNER_APPROVED] Ceilings: actual eligible surfaces only; UP-FIN-PAINT-001 [OWNER_APPROVED] No paint over full-height porcelain; one finish per face; UP-FIN-PLASTER-001 [OWNER_APPROVED] Door jamb and head plaster is measured from geometry; UP-FIN-WALL-001 [OWNER_APPROVED] Full-height wall porcelain in wet areas; UP-HGT-001 [OWNER_APPROVED] Heights are read from the drawing, by an evidence hierarchy…; UP-SKIRT-001 [OWNER_APPROVED] Conventional skirting on eligible dry-room wall boundaries; rule store (frozen methods): UP-CER-001, UP-CER-002, UP-CER-003, UP-CER-004, UP-CER-005, UP-CER-006, UP-CER-007, UP-CER-008, UP-CER-009, UP-CER-010
+**Rules** (knowledge 1.7.0; full records in `docs/RULES_INDEX.md`): UP-CEIL-001 [OWNER_APPROVED] Ceilings: actual eligible surfaces only; UP-FIN-PAINT-001 [OWNER_APPROVED] No paint over full-height porcelain; one finish per face; UP-FIN-PLASTER-001 [OWNER_APPROVED] Door jamb and head plaster is measured from geometry; UP-FIN-WALL-001 [OWNER_APPROVED] Full-height wall porcelain in wet areas; UP-HGT-001 [OWNER_APPROVED] Heights are read from the drawing, by an evidence hierarchy…; UP-SKIRT-001 [OWNER_APPROVED] Conventional skirting on eligible dry-room wall boundaries; rule store (frozen methods): UP-CER-001, UP-CER-002, UP-CER-003, UP-CER-004, UP-CER-005, UP-CER-006, UP-CER-007, UP-CER-008, UP-CER-009, UP-CER-010
 
 **BOQ capability** (exact registry statuses): IMPLEMENTED_NOT_INTEGRATED 6, BLOCKED_BY_SOURCE 4, NOT_IMPLEMENTED 2. Only INTEGRATED_AND_TESTED counts as supported; a module or a synthetic test is not real-villa validation.
 
@@ -284,20 +284,21 @@ Risk **HIGH** (recommended validation L3). Ask about: waterproof, membrane, uptu
 
 **Open first:**
 
-- `engine/source/waterproofing_system.py` (998 lines, HIGH; imported by 10 directly, 44 transitively, SHARED)
-- `engine/source/wp_geometry.py` (317 lines, MEDIUM; imported by 8 directly, 47 transitively)
-- `engine/source/membrane_layout.py` (819 lines, HIGH; imported by 12 directly, 68 transitively, SHARED)
-- `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 55 transitively)
+- `engine/source/waterproofing_system.py` (998 lines, HIGH; imported by 10 directly, 46 transitively, SHARED)
+- `engine/source/wp_geometry.py` (317 lines, MEDIUM; imported by 8 directly, 49 transitively)
+- `engine/source/membrane_layout.py` (819 lines, HIGH; imported by 13 directly, 70 transitively, SHARED)
+- `engine/source/arch_v211.py` (659 lines, MEDIUM; imported by 2 directly, 36 transitively)
+- `engine/source/owner_finish_scope.py` (262 lines, MEDIUM; imported by 9 directly, 56 transitively)
 
-**Depends on:** `engine/source/knowledge.py`, `engine/source/arch_rooms.py`, `engine/source/boq_line.py`, `engine/source/material_result.py`, `engine/source/material_spec.py`, `engine/source/plane_poly.py`, `engine/source/project_rules.py`, `engine/source/tile_layout.py`, `engine/source/wp_install.py`
+**Depends on:** `engine/source/knowledge.py`, `engine/source/arch_rooms.py`, `engine/source/boq_line.py`, `engine/source/arch_plan.py`, `engine/source/exterior_spaces.py`, `engine/source/material_result.py`, `engine/source/material_spec.py`, `engine/source/membrane_fold_v2.py`, `engine/source/plane_poly.py`, `engine/source/project_rules.py`
 
 **Other current modules:** `waterproofing.py`, `waterproofing_policy.py`, `wp_install.py`
 
-**Rules** (knowledge 1.6.0; full records in `docs/RULES_INDEX.md`): UP-WP-001 [OWNER_APPROVED] Waterproofing membrane roll: 1.00 m x 10.00 m (10.00 m2 gro…; UP-WP-002 [OWNER_APPROVED] Membrane overlap 0.10 m at the joints between adjacent stri…; UP-WP-003 [OWNER_APPROVED] Waterproofing upturn 0.20 m along eligible wall boundaries; UP-WP-004 [OWNER_APPROVED] Penetrations, corners and other interruptions: counted from…; UP-WP-DOOR-001 [OWNER_APPROVED] Doorway waterproofing transitions are modelled on their own; UP-WP-LAY-001 [OWNER_APPROVED] Deterministic membrane layout and cutting plan from the are…; UP-WP-MAT-001 [OWNER_APPROVED] Three waterproofing quantities kept apart: net area, instal…; UP-WP-ROOF-001 [OWNER_APPROVED] Roofs and balconies are waterproofed under the default scope; UP-WP-UPTURN-015 [DEPRECATED] The earlier general waterproofing upturn of 0.15 m - SUPERS…; rule store (frozen methods): UP-WP-001, UP-WP-002, UP-WP-003, UP-WP-004, UP-WP-005
+**Rules** (knowledge 1.7.0; full records in `docs/RULES_INDEX.md`): UP-WP-001 [OWNER_APPROVED] Waterproofing membrane roll: 1.00 m x 10.00 m (10.00 m2 gro…; UP-WP-002 [OWNER_APPROVED] Membrane overlap 0.10 m at the joints between adjacent stri…; UP-WP-003 [OWNER_APPROVED] Waterproofing upturn 0.20 m along eligible wall boundaries; UP-WP-004 [OWNER_APPROVED] Penetrations, corners and other interruptions: counted from…; UP-WP-DOOR-001 [OWNER_APPROVED] Doorway waterproofing transitions are modelled on their own; UP-WP-LAY-001 [OWNER_APPROVED] Deterministic membrane layout and cutting plan from the are…; UP-WP-MAT-001 [OWNER_APPROVED] Three waterproofing quantities kept apart: net area, instal…; UP-WP-ROOF-001 [OWNER_APPROVED] Roofs and balconies are waterproofed under the default scope; UP-WP-UPTURN-015 [DEPRECATED] The earlier general waterproofing upturn of 0.15 m - SUPERS…; rule store (frozen methods): UP-WP-001, UP-WP-002, UP-WP-003, UP-WP-004, UP-WP-005
 
 **BOQ capability** (exact registry statuses): IMPLEMENTED_NOT_INTEGRATED 4, BLOCKED_BY_SOURCE 1, NOT_IMPLEMENTED 4. Only INTEGRATED_AND_TESTED counts as supported; a module or a synthetic test is not real-villa validation.
 
-**Validation:** L1 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_kb/test_kb_finish_scope.py tests/m9_kb/test_kb_wp5.py tests/m9_p2b2/test_p2b2_registry.py tests/m9_p2b2/test_p2b2_waterproofing.py`
+**Validation:** L1 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_kb/test_kb_finish_scope.py tests/m9_kb/test_kb_wp5.py tests/m9_p2b2/test_p2b2_registry.py tests/m9_p2b2/test_p2b2_waterproofing.py tests/t079_arch_v211/test_arch_v211.py`
 L2 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b2 tests/m9_s5`
 L3 `PYTHONDONTWRITEBYTECODE=1 python3 -m pytest -p no:cacheprovider -q tests/m9_p2b2 tests/m9_s5 tests/m9_s6 tests/m9_p2b0 tests/m9_p2a tests/m9_p2b5 tests/m9_kb tests/m9_p2b3` + freeze check
 L4 full suite + freeze check (see above)
@@ -318,9 +319,9 @@ Risk **CRITICAL** (recommended validation L4). Ask about: stair, railing, riser,
 
 **Open first:**
 
-- `engine/source/stair_geometry.py` (336 lines, CRITICAL, frozen; imported by 6 directly, 121 transitively)
-- `engine/source/stair_measure.py` (119 lines, CRITICAL, frozen; imported by 3 directly, 73 transitively)
-- `engine/source/arch_measure.py` (1165 lines, HIGH; imported by 17 directly, 49 transitively, SHARED)
+- `engine/source/stair_geometry.py` (336 lines, CRITICAL, frozen; imported by 6 directly, 123 transitively)
+- `engine/source/stair_measure.py` (119 lines, CRITICAL, frozen; imported by 3 directly, 74 transitively)
+- `engine/source/arch_measure.py` (1165 lines, HIGH; imported by 17 directly, 50 transitively, SHARED)
 
 **Depends on:** `engine/source/arch_completeness.py`, `engine/source/arch_floor.py`, `engine/source/arch_rooms.py`, `engine/source/arch_v28.py`, `engine/source/boq_line.py`, `engine/source/knowledge.py`, `engine/source/material_result.py`, `engine/source/material_spec.py`, `engine/source/membrane_layout.py`, `engine/source/owner_finish_scope.py`
 
@@ -328,7 +329,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: stair, railing, riser,
 
 **Earlier generations and tools** (check which method uses them before reuse): `engine/stair_assembly.py`, `engine/stair_completeness.py`
 
-**Rules** (knowledge 1.6.0; full records in `docs/RULES_INDEX.md`): ; rule store (frozen methods): UP-STAIR-001, UP-STAIR-002, UP-STAIR-003, UP-STAIR-004, UP-STAIR-005, UP-STAIR-006, UP-STAIR-007, UP-STAIR-008, UP-STAIR-009, UP-STAIR-010, UP-STAIR-011, UP-STAIR-012, UP-STAIR-013
+**Rules** (knowledge 1.7.0; full records in `docs/RULES_INDEX.md`): ; rule store (frozen methods): UP-STAIR-001, UP-STAIR-002, UP-STAIR-003, UP-STAIR-004, UP-STAIR-005, UP-STAIR-006, UP-STAIR-007, UP-STAIR-008, UP-STAIR-009, UP-STAIR-010, UP-STAIR-011, UP-STAIR-012, UP-STAIR-013
 
 **BOQ capability** (exact registry statuses): INTEGRATED_AND_TESTED 1, PARTIAL 1, EXPERIMENTAL 5, IMPLEMENTED_NOT_INTEGRATED 2, BLOCKED_BY_SOURCE 2, NOT_IMPLEMENTED 3. Only INTEGRATED_AND_TESTED counts as supported; a module or a synthetic test is not real-villa validation.
 
@@ -350,7 +351,7 @@ Risk **CRITICAL** (recommended validation L4). Ask about: concrete, slab, beam, 
 
 **Open first:**
 
-- `engine/source/concrete_completeness.py` (2362 lines, CRITICAL, frozen; imported by 10 directly, 72 transitively, SHARED)
+- `engine/source/concrete_completeness.py` (2362 lines, CRITICAL, frozen; imported by 10 directly, 73 transitively, SHARED)
 - `engine/source/slab_rebar_qto.py` (314 lines, CRITICAL, frozen; imported by 9 directly, 12 transitively)
 - `engine/source/footing_rebar_guard.py` (422 lines, CRITICAL, frozen; imported by 5 directly, 5 transitively)
 
@@ -482,20 +483,20 @@ Risk **CRITICAL** (recommended validation L4). Ask about: boq, total, release, r
 
 **Open first:**
 
-- `tools/urban_boq_m9.py` (3061 lines, HIGH; imported by 32 directly, 34 transitively, SHARED)
+- `tools/urban_boq_m9.py` (3149 lines, HIGH; imported by 33 directly, 35 transitively, SHARED)
 - `engine/source/delta_release.py` (159 lines, CRITICAL, frozen; imported by 37 directly, 37 transitively, SHARED)
-- `engine/source/boq_line.py` (386 lines, HIGH; imported by 17 directly, 68 transitively, SHARED)
-- `engine/source/knowledge.py` (288 lines, HIGH; imported by 28 directly, 93 transitively, SHARED)
-- `engine/source/door_standards.py` (671 lines, MEDIUM; imported by 7 directly, 39 transitively)
-- `engine/source/project_rules.py` (748 lines, MEDIUM; imported by 5 directly, 46 transitively)
+- `engine/source/boq_line.py` (386 lines, HIGH; imported by 18 directly, 70 transitively, SHARED)
+- `engine/source/knowledge.py` (289 lines, HIGH; imported by 30 directly, 95 transitively, SHARED)
+- `engine/source/door_standards.py` (671 lines, MEDIUM; imported by 7 directly, 40 transitively)
+- `engine/source/project_rules.py` (748 lines, MEDIUM; imported by 5 directly, 48 transitively)
 
-**Depends on:** `engine/source/door_model.py`, `engine/source/owner_finish_scope.py`, `engine/boq_room_workbook.py`, `engine/source/arch_completeness.py`, `engine/source/arch_floor.py`, `engine/source/arch_measure.py`, `engine/source/arch_plan.py`, `engine/source/arch_rooms.py`, `engine/source/arch_v27.py`, `engine/source/arch_v28.py`
+**Depends on:** `engine/source/door_model.py`, `engine/source/owner_finish_scope.py`, `engine/boq_room_workbook.py`, `engine/source/arch_completeness.py`, `engine/source/arch_floor.py`, `engine/source/arch_measure.py`, `engine/source/arch_plan.py`, `engine/source/arch_rooms.py`, `engine/source/arch_v211.py`, `engine/source/arch_v27.py`
 
 **Other current modules:** `boq_canonical.py`, `boq_evidence.py`, `boq_reconcile.py`, `boq_report.py`, `quantity_release.py`, `release_model.py`, `release_model_v2.py`, `release_safety.py`
 
 **Earlier generations and tools** (check which method uses them before reuse): `engine/reporting_v3/book.py`, `engine/reporting_v3/pdf.py`, `engine/reporting_v3/readback.py`, `engine/reporting_v3/units.py`, `engine/reporting_v3/workbooks.py`, `engine/reporting_v3/workbooks_v3b.py`
 
-**Rules** (knowledge 1.6.0; full records in `docs/RULES_INDEX.md`): UP-KB-PREC-001 [OWNER_APPROVED] Source authority hierarchy, and as-drawn kept apart from ow…; UP-KB-QUES-001 [OWNER_APPROVED] Question policy: what may be asked of the owner; UP-QTY-STATUS-001 [OWNER_APPROVED] Every BOQ line reported once: confirmed, conditional, held…; UP-REVIEW-001 [OWNER_APPROVED] Review spaces: release only what every plausible classifica…; UP-RULES-001 [OWNER_APPROVED] Two rule levels: Urban master standards (A) and project-spe…; rule store (frozen methods): UP-GEN-001, UP-GEN-002, UP-GEN-003, UP-GEN-004, UP-QA-001, UP-QA-002
+**Rules** (knowledge 1.7.0; full records in `docs/RULES_INDEX.md`): UP-KB-PREC-001 [OWNER_APPROVED] Source authority hierarchy, and as-drawn kept apart from ow…; UP-KB-QUES-001 [OWNER_APPROVED] Question policy: what may be asked of the owner; UP-QTY-STATUS-001 [OWNER_APPROVED] Every BOQ line reported once: confirmed, conditional, held…; UP-REVIEW-001 [OWNER_APPROVED] Review spaces: release only what every plausible classifica…; UP-RULES-001 [OWNER_APPROVED] Two rule levels: Urban master standards (A) and project-spe…; rule store (frozen methods): UP-GEN-001, UP-GEN-002, UP-GEN-003, UP-GEN-004, UP-QA-001, UP-QA-002
 
 **BOQ capability** (exact registry statuses): BLOCKED_BY_SOURCE 4, NOT_IMPLEMENTED 3. Only INTEGRATED_AND_TESTED counts as supported; a module or a synthetic test is not real-villa validation.
 
