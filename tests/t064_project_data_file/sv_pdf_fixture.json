@@ -1,0 +1,100 @@
+{
+ "schema": "URBAN_PROJECT_DATA_FILE_V1",
+ "project": "SV-PDF synthetic two-storey villa (not a client project)",
+ "notes": "Hand fixture for T-064: one record of each status, values typed in m, cm and mm.",
+ "records": [
+  {
+   "key": "STOREY_HEIGHT_GF",
+   "project": "SV-PDF synthetic two-storey villa (not a client project)",
+   "kind": "number", "unit": "cm", "value": 360,
+   "status": "DRAWING-VERIFIED",
+   "drawing_file": "SV-A-101.dxf", "drawing_number": "SV-A-101", "revision": "B", "sheet": "section 1-1",
+   "reference": "dimension text '360' between level marks +0.50 and +4.10",
+   "applies_to": {"floors": ["GF"], "members": ["COLUMN", "WALL"]},
+   "reviewer_or_source": "worker 2 hand reading, synthetic",
+   "entered_by": "TYPED"
+  },
+  {
+   "key": "SLAB_THICKNESS",
+   "project": "SV-PDF synthetic two-storey villa (not a client project)",
+   "kind": "number", "unit": "mm", "value": 150,
+   "status": "DESIGNER-CONFIRMED",
+   "drawing_file": "SV-S-201.dxf", "drawing_number": "SV-S-201", "revision": "no revision printed (title block has none)", "sheet": "1F slab plan",
+   "reference": "general note 4: 'all slabs 150 mm unless noted'",
+   "applies_to": {"floors": ["ALL"], "members": ["SLAB"]},
+   "reviewer_or_source": "designer letter SV-DL-03 (synthetic)",
+   "entered_by": "TYPED"
+  },
+  {
+   "key": "BLINDING_THICKNESS",
+   "project": "SV-PDF synthetic two-storey villa (not a client project)",
+   "kind": "number", "unit": "m", "value": 0.10,
+   "status": "OWNER-CONFIRMED",
+   "drawing_file": "SV-S-202.dxf", "drawing_number": "SV-S-202", "revision": "A", "sheet": "footing details",
+   "reference": "detail F-1 draws the plain-concrete layer without a dimension; owner confirmed 10 cm",
+   "applies_to": {"members": ["FOOTING"]},
+   "reviewer_or_source": "owner answer SQ-1 (synthetic)",
+   "entered_by": "TYPED"
+  },
+  {
+   "key": "BLINDING_PROJECTION",
+   "project": "SV-PDF synthetic two-storey villa (not a client project)",
+   "kind": "number", "unit": "cm", "value": 10,
+   "status": "DRAWING-VERIFIED",
+   "drawing_file": "SV-S-202.dxf", "drawing_number": "SV-S-202", "revision": "A", "sheet": "footing details",
+   "reference": "detail F-1 dimension chain '10 | L x W | 10'",
+   "applies_to": {"members": ["FOOTING"]},
+   "reviewer_or_source": "worker 2 hand reading, synthetic",
+   "entered_by": "TYPED"
+  },
+  {
+   "key": "CLEAR_HEIGHT_GF",
+   "project": "SV-PDF synthetic two-storey villa (not a client project)",
+   "kind": "number", "unit": "m", "value": 3.45,
+   "status": "INFERRED",
+   "drawing_file": "SV-A-101.dxf", "drawing_number": "SV-A-101", "revision": "B", "sheet": "section 1-1",
+   "reference": "no clear height printed; derived",
+   "applies_to": {"floors": ["GF"], "members": ["WALL"]},
+   "reviewer_or_source": "worker 2, from the two cited records",
+   "entered_by": "TYPED",
+   "logic": "clear height = floor-to-floor 3.60 m (STOREY_HEIGHT_GF) - slab 0.15 m (SLAB_THICKNESS) = 3.45 m; no false ceiling on this synthetic section",
+   "inferred_from": ["STOREY_HEIGHT_GF", "SLAB_THICKNESS"]
+  },
+  {
+   "key": "NECK_TOP_LEVEL",
+   "project": "SV-PDF synthetic two-storey villa (not a client project)",
+   "kind": "number", "unit": "m", "value": 0.50,
+   "status": "ASSUMED",
+   "drawing_file": "SV-S-202.dxf", "drawing_number": "SV-S-202", "revision": "A", "sheet": "footing details",
+   "reference": "no neck top printed; typed as the GF level by assumption",
+   "applies_to": {"members": ["NECK"]},
+   "reviewer_or_source": "worker 2 assumption, synthetic",
+   "entered_by": "TYPED"
+  },
+  {
+   "key": "FOUNDING_DEPTH",
+   "project": "SV-PDF synthetic two-storey villa (not a client project)",
+   "kind": "number", "unit": "m", "value": 1.50,
+   "status": "HELD",
+   "drawing_file": "SV-S-202.dxf", "drawing_number": "SV-S-202", "revision": "A", "sheet": "general notes",
+   "reference": "note 1: 'excavation not less than 1.50 m below plot level'",
+   "applies_to": {"members": ["FOOTING", "NECK"]},
+   "reviewer_or_source": "worker 2 hand reading, synthetic",
+   "entered_by": "TYPED",
+   "hold_reason": "the note prints an excavation level, not the footing underside"
+  },
+  {
+   "key": "GB_SECTION_CLASS",
+   "project": "SV-PDF synthetic two-storey villa (not a client project)",
+   "kind": "table", "unit": "none",
+   "value": [{"max_span_m": 3.0, "W": 0.25, "H": 0.40}, {"max_span_m": null, "W": 0.25, "H": 0.55}],
+   "status": "DRAWING-VERIFIED",
+   "drawing_file": "SV-S-202.dxf", "drawing_number": "SV-S-202", "revision": "A", "sheet": "typical details",
+   "reference": "titles 'GB < 3 m (25x40)' and 'GB > 3 m (25x55)'",
+   "applies_to": {"members": ["GROUND_BEAM"]},
+   "reviewer_or_source": "worker 2 hand reading, synthetic",
+   "entered_by": "TYPED",
+   "conditions": ["without concentrated load"]
+  }
+ ]
+}

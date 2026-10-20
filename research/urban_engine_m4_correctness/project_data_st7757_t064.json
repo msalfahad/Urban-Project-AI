@@ -1,0 +1,539 @@
+{
+ "schema": "URBAN_PROJECT_DATA_FILE_V1",
+ "project": "P7757 / ST7757 development villa (route G profile ST7757_M4)",
+ "notes": "T-064 conversion of profile_st7757_m4.json (17 keys; the profile itself is unchanged). Every value was TYPED by a person or agent from the printed drawings; none is automatic extraction.",
+ "records": [
+  {
+   "key": "STOREY_HEIGHT_GF",
+   "project": "P7757 / ST7757 development villa (route G profile ST7757_M4)",
+   "kind": "number",
+   "unit": "m",
+   "value": 4.5,
+   "status": "DRAWING-VERIFIED",
+   "drawing_file": "P7757.dxf in P7757_DXF_COMPRESSED.zip (sha256 ab54dd55...31cc4)",
+   "drawing_number": "P7757",
+   "revision": "no revision text in the DXF (664 texts searched)",
+   "sheet": "GF and 1F plans (LEVEL layer); NW elevation",
+   "reference": "level texts '+1.00' (GF plan) and '+5.50' (1F plan): 5.50 - 1.00 = 4.50 m floor to floor; elevation dimension '4500' (and '5500' to +5.50 from 0.00); ST7757 SH08 also prints '+1.00'",
+   "applies_to": {
+    "floors": [
+     "GF"
+    ],
+    "members": [
+     "COLUMN",
+     "STAIR"
+    ]
+   },
+   "reviewer_or_source": "T-044 r2 audit (worker, 2026-10-19), re-checked by worker 2 T-064 (2026-10-20)",
+   "entered_by": "TYPED",
+   "notes": "profile source 'VE-AA-09' is not a sheet title in either DXF; the value rests on the level texts"
+  },
+  {
+   "key": "STOREY_HEIGHT_1F",
+   "project": "P7757 / ST7757 development villa (route G profile ST7757_M4)",
+   "kind": "number",
+   "unit": "m",
+   "value": 4.2,
+   "status": "DRAWING-VERIFIED",
+   "drawing_file": "P7757.dxf in P7757_DXF_COMPRESSED.zip (sha256 ab54dd55...31cc4)",
+   "drawing_number": "P7757",
+   "revision": "no revision text in the DXF (664 texts searched)",
+   "sheet": "1F and 2F plans (LEVEL layer); SE / NW elevations",
+   "reference": "level texts '+5.50' (1F plan) and '+9.70' (2F plan; ST7757 SH02 '+9.70' twice): 9.70 - 5.50 = 4.20 m; elevation chain '8700' = 4500 + 4200",
+   "applies_to": {
+    "floors": [
+     "1F"
+    ],
+    "members": [
+     "COLUMN",
+     "STAIR"
+    ]
+   },
+   "reviewer_or_source": "T-044 r2 audit (worker, 2026-10-19), re-checked by worker 2 T-064 (2026-10-20)",
+   "entered_by": "TYPED"
+  },
+  {
+   "key": "STOREY_HEIGHT_2F",
+   "project": "P7757 / ST7757 development villa (route G profile ST7757_M4)",
+   "kind": "number",
+   "unit": "m",
+   "value": 4.2,
+   "status": "DRAWING-VERIFIED",
+   "drawing_file": "P7757.dxf in P7757_DXF_COMPRESSED.zip (sha256 ab54dd55...31cc4)",
+   "drawing_number": "P7757",
+   "revision": "no revision text in the DXF (664 texts searched)",
+   "sheet": "SE and NW elevations (vertical dimension chain)",
+   "reference": "chain '1000 / 8700 / 4200 / 500' = '14400' overall: 4200 is the top storey under the 500 parapet",
+   "applies_to": {
+    "floors": [
+     "2F"
+    ],
+    "members": [
+     "COLUMN",
+     "STAIR"
+    ]
+   },
+   "reviewer_or_source": "T-044 r2 audit (worker, 2026-10-19), re-checked by worker 2 T-064 (2026-10-20)",
+   "entered_by": "TYPED",
+   "notes": "no '+13.90' level text in either DXF; the value rests on the printed elevation chain only"
+  },
+  {
+   "key": "GB_TYPICAL_SECTIONS",
+   "project": "P7757 / ST7757 development villa (route G profile ST7757_M4)",
+   "kind": "table",
+   "unit": "none",
+   "value": [
+    {
+     "max_span_m": 2.5,
+     "W": 0.3,
+     "H": 0.3
+    },
+    {
+     "max_span_m": 5.0,
+     "W": 0.3,
+     "H": 0.4
+    },
+    {
+     "max_span_m": null,
+     "W": 0.3,
+     "H": 0.6
+    }
+   ],
+   "status": "DRAWING-VERIFIED",
+   "drawing_file": "ST7757.pdf (sha256 74da1523...337e3)",
+   "drawing_number": "ST7757",
+   "revision": "no revision printed (title block: SCALE / DATE May 06, 2026 / FILE NO ST - 7757)",
+   "sheet": "PDF p.13 (details; not in the DXF)",
+   "reference": "titles 'Ground Beams. Less than 2.5m length' 30x30, 'Ground Beams. Less than 5m length without concentrated load' 30x40, 'Ground Beams. More than 5m length without concentrated load' 30x60",
+   "applies_to": {
+    "floors": [
+     "GROUND"
+    ],
+    "members": [
+     "GROUND_BEAM"
+    ]
+   },
+   "reviewer_or_source": "T-044 r2 audit (worker, 2026-10-19), re-checked by worker 2 T-064 (2026-10-20)",
+   "entered_by": "TYPED",
+   "conditions": [
+    "without concentrated load (printed on the 30x40 and 30x60 titles): a ground beam carrying a point load (e.g. a planted column) has no printed typical section",
+    "the exact 2.5 m / 5.0 m band edges are a reading of 'less than' / 'more than'"
+   ]
+  },
+  {
+   "key": "FOUNDING_DEPTH_M",
+   "project": "P7757 / ST7757 development villa (route G profile ST7757_M4)",
+   "kind": "number",
+   "unit": "m",
+   "value": 1.5,
+   "status": "HELD",
+   "drawing_file": "ST7757 dxf.dxf (sha256 9f9d1179...38079)",
+   "drawing_number": "ST7757",
+   "revision": "no revision text in the DXF (2 630 texts searched)",
+   "sheet": "SH11 schedules sheet (= PDF p.9), boxed note 1 under the soil table",
+   "reference": "S-ARAB SHX note decoded (T-044 r2): 'excavation level not less than 1.5 m below the existing plot ground level'; TEXT '1.5' on S-TEXT.SCH (re-found 2026-10-20)",
+   "applies_to": {
+    "members": [
+     "FOOTING",
+     "NECK",
+     "EXCAVATION"
+    ]
+   },
+   "reviewer_or_source": "T-044 r2 audit (worker, 2026-10-19), re-checked by worker 2 T-064 (2026-10-20); owner answer Q-21 = C (2026-10-19)",
+   "entered_by": "TYPED",
+   "hold_reason": "owner Q-21 = C: the note prints the EXCAVATION formation level (a minimum), not the footing underside; founding datum unresolved until the complete foundation level arrangement is verified; the 28 necks are not computed on it",
+   "alternatives": [
+    {
+     "value": 2.0,
+     "unit": "m",
+     "status": "NOT_PRINTED",
+     "note": "profile planning upper bound (OQ-13), printed nowhere"
+    }
+   ]
+  },
+  {
+   "key": "GF_FLOOR_LEVEL_M",
+   "project": "P7757 / ST7757 development villa (route G profile ST7757_M4)",
+   "kind": "number",
+   "unit": "m",
+   "value": 1.0,
+   "status": "DRAWING-VERIFIED",
+   "drawing_file": "ST7757 dxf.dxf (sha256 9f9d1179...38079)",
+   "drawing_number": "ST7757",
+   "revision": "no revision text in the DXF (2 630 texts searched)",
+   "sheet": "SH08 ground-beam plan (LEVEL layer); P7757 GF plan",
+   "reference": "level text '+1.00' (5 on ST7757 SH08, 4 on the P7757 GF plan, 1 on an elevation)",
+   "applies_to": {
+    "floors": [
+     "GF",
+     "GROUND"
+    ],
+    "members": [
+     "ALL"
+    ]
+   },
+   "reviewer_or_source": "T-044 r2 audit (worker, 2026-10-19), re-checked by worker 2 T-064 (2026-10-20)",
+   "entered_by": "TYPED"
+  },
+  {
+   "key": "NECK_TOP_LEVEL_M",
+   "project": "P7757 / ST7757 development villa (route G profile ST7757_M4)",
+   "kind": "number",
+   "unit": "m",
+   "value": 1.0,
+   "status": "INFERRED",
+   "drawing_file": "ST7757.pdf (sha256 74da1523...337e3)",
+   "drawing_number": "ST7757",
+   "revision": "no revision printed (title block: SCALE / DATE May 06, 2026 / FILE NO ST - 7757)",
+   "sheet": "PDF p.13 typical footing and exterior ground-beam details",
+   "reference": "no neck-top level is printed; the GF level '+1.00' is printed (GF_FLOOR_LEVEL_M)",
+   "applies_to": {
+    "members": [
+     "NECK"
+    ]
+   },
+   "reviewer_or_source": "T-044 r2 audit (worker, 2026-10-19), re-checked by worker 2 T-064 (2026-10-20)",
+   "entered_by": "TYPED",
+   "logic": "the p.13 'Ground Beams. for exterior walls' detail runs its top to 'Ground Floor slab level' and the footing details carry the column bars from the footing up through the upper ground beam: the neck ends where the GF column starts, at the GF slab level +1.00 (GF_FLOOR_LEVEL_M); a reading of the details, not a printed neck level",
+   "inferred_from": [
+    "GF_FLOOR_LEVEL_M",
+    "GB_EXTERIOR_DETAIL"
+   ],
+   "notes": "every neck stays HELD anyway: it also needs FOUNDING_DEPTH_M (HELD, Q-21 C)"
+  },
+  {
+   "key": "OUTER_GROUND_LEVEL_M",
+   "project": "P7757 / ST7757 development villa (route G profile ST7757_M4)",
+   "kind": "number",
+   "unit": "m",
+   "value": 0.0,
+   "status": "DRAWING-VERIFIED",
+   "drawing_file": "ST7757 dxf.dxf (sha256 9f9d1179...38079)",
+   "drawing_number": "ST7757",
+   "revision": "no revision text in the DXF (2 630 texts searched)",
+   "sheet": "SH08 ground-beam plan, levels outside the building",
+   "reference": "'%%p0.00' (6 texts, block LEL) and '+0.15' (6 texts)",
+   "applies_to": {
+    "floors": [
+     "GROUND"
+    ],
+    "members": [
+     "GROUND_BEAM",
+     "STAIR"
+    ]
+   },
+   "reviewer_or_source": "T-044 r2 audit (worker, 2026-10-19), re-checked by worker 2 T-064 (2026-10-20)",
+   "entered_by": "TYPED",
+   "alternatives": [
+    {
+     "value": 0.15,
+     "unit": "m",
+     "status": "DRAWING-VERIFIED",
+     "note": "'+0.15' printed at other positions outside the building; which level applies to a member is bound by its position, not decided by this record"
+    },
+    {
+     "value": 0.3,
+     "unit": "m",
+     "status": "PRINTED_ELSEWHERE",
+     "note": "P7757 GF plan prints '+0.30' (annex floor level; not an outer ground level)"
+    }
+   ]
+  },
+  {
+   "key": "GB_EXTERIOR_DETAIL",
+   "project": "P7757 / ST7757 development villa (route G profile ST7757_M4)",
+   "kind": "choice",
+   "unit": "none",
+   "value": "P13_EXTERIOR_WALLS",
+   "status": "DRAWING-VERIFIED",
+   "drawing_file": "ST7757.pdf (sha256 74da1523...337e3)",
+   "drawing_number": "ST7757",
+   "revision": "no revision printed (title block: SCALE / DATE May 06, 2026 / FILE NO ST - 7757)",
+   "sheet": "PDF p.13 (details; not in the DXF)",
+   "reference": "'Ground Beams. for exterior walls': width '30', depth 'FOLLOW ARCH.', from 'Ground Floor slab level' to 'Outer Normal ground level'",
+   "applies_to": {
+    "floors": [
+     "GROUND"
+    ],
+    "members": [
+     "GROUND_BEAM"
+    ]
+   },
+   "reviewer_or_source": "T-044 r2 audit (worker, 2026-10-19), re-checked by worker 2 T-064 (2026-10-20)",
+   "entered_by": "TYPED",
+   "conditions": [
+    "W = 0.30 m printed; depth follows the architectural levels (GF_FLOOR_LEVEL_M, OUTER_GROUND_LEVEL_M)",
+    "ST7757 SH12 SHX note: exterior ground beams on the neighbour side are cast on and under black block built up from foundation level (a build-up this single detail does not separate)"
+   ]
+  },
+  {
+   "key": "BLINDING_THICKNESS_M",
+   "project": "P7757 / ST7757 development villa (route G profile ST7757_M4)",
+   "kind": "number",
+   "unit": "m",
+   "value": 0.1,
+   "status": "DRAWING-VERIFIED",
+   "drawing_file": "ST7757.pdf (sha256 74da1523...337e3)",
+   "drawing_number": "ST7757",
+   "revision": "no revision printed (title block: SCALE / DATE May 06, 2026 / FILE NO ST - 7757)",
+   "sheet": "PDF p.13 (details; not in the DXF)",
+   "reference": "'10cm Plain con.' under both 'TYP. DETAIL OF ISOLATED FOOTING.' details; '10' dimensioned under all four ground-beam sections",
+   "applies_to": {
+    "members": [
+     "FOOTING",
+     "GROUND_BEAM",
+     "BLINDING"
+    ]
+   },
+   "reviewer_or_source": "T-044 r2 audit (worker, 2026-10-19), re-checked by worker 2 T-064 (2026-10-20)",
+   "entered_by": "TYPED",
+   "notes": "the 5 cm screed and the membrane above it are separate works, not blinding"
+  },
+  {
+   "key": "BLINDING_UNDER",
+   "project": "P7757 / ST7757 development villa (route G profile ST7757_M4)",
+   "kind": "choice",
+   "unit": "none",
+   "value": "FOOTINGS_AND_GROUND_BEAMS",
+   "status": "DRAWING-VERIFIED",
+   "drawing_file": "ST7757.pdf (sha256 74da1523...337e3)",
+   "drawing_number": "ST7757",
+   "revision": "no revision printed (title block: SCALE / DATE May 06, 2026 / FILE NO ST - 7757)",
+   "sheet": "PDF p.13 (details; not in the DXF)",
+   "reference": "the plain-concrete layer is drawn and dimensioned under both footing details and all four ground-beam sections",
+   "applies_to": {
+    "members": [
+     "BLINDING"
+    ]
+   },
+   "reviewer_or_source": "T-044 r2 audit (worker, 2026-10-19), re-checked by worker 2 T-064 (2026-10-20)",
+   "entered_by": "TYPED"
+  },
+  {
+   "key": "CB_SUPPORT_BAR_EXTENT_FRAC",
+   "project": "P7757 / ST7757 development villa (route G profile ST7757_M4)",
+   "kind": "number",
+   "unit": "fraction",
+   "value": 0.22,
+   "status": "HELD",
+   "drawing_file": "ST7757 dxf.dxf (sha256 9f9d1179...38079)",
+   "drawing_number": "ST7757",
+   "revision": "no revision text in the DXF (2 630 texts searched)",
+   "sheet": "SH03, SH05, SH07 continuous-beam typical details (S-DIM.SCH)",
+   "reference": "dimension overrides '0.22 Ln', '0.22 Ln1', '0.22 Ln2' and '0.3 Ln2' (one per detail)",
+   "applies_to": {
+    "members": [
+     "CONTINUOUS_BEAM_REBAR"
+    ]
+   },
+   "reviewer_or_source": "T-044 r2 audit (worker, 2026-10-19), re-checked by worker 2 T-064 (2026-10-20)",
+   "entered_by": "TYPED",
+   "hold_reason": "T-044 class DIFFERENT: a second extent '0.3 Ln2' is printed beside 0.22; which bars take which extent is not settled (rebar only; no concrete line uses it)"
+  },
+  {
+   "key": "CB_SUPPORT_BAR_SPAN_BASIS",
+   "project": "P7757 / ST7757 development villa (route G profile ST7757_M4)",
+   "kind": "choice",
+   "unit": "none",
+   "value": "AXIS",
+   "status": "HELD",
+   "drawing_file": "ST7757 dxf.dxf (sha256 9f9d1179...38079)",
+   "drawing_number": "ST7757",
+   "revision": "no revision text in the DXF (2 630 texts searched)",
+   "sheet": "SH03, SH05, SH07 continuous-beam typical details",
+   "reference": "'Ln' / 'Ln1' / 'Ln2' dimensions carry no axis or face note",
+   "applies_to": {
+    "members": [
+     "CONTINUOUS_BEAM_REBAR"
+    ]
+   },
+   "reviewer_or_source": "T-044 r2 audit (worker, 2026-10-19), re-checked by worker 2 T-064 (2026-10-20)",
+   "entered_by": "TYPED",
+   "hold_reason": "T-044 class NOT_PRINTED: axis-to-axis is a reading of where the dimension lines end (rebar only; no concrete line uses it)"
+  },
+  {
+   "key": "CB_BOTTOM_EXTENSION_M",
+   "project": "P7757 / ST7757 development villa (route G profile ST7757_M4)",
+   "kind": "number",
+   "unit": "m",
+   "value": 0.075,
+   "status": "DRAWING-VERIFIED",
+   "drawing_file": "ST7757 dxf.dxf (sha256 9f9d1179...38079)",
+   "drawing_number": "ST7757",
+   "revision": "no revision text in the DXF (2 630 texts searched)",
+   "sheet": "SH03 (2), SH05 (2), SH07 (4) continuous-beam typical details",
+   "reference": "dimension override '7.5cm' at the bottom bar ends past the interior support",
+   "applies_to": {
+    "members": [
+     "CONTINUOUS_BEAM_REBAR"
+    ]
+   },
+   "reviewer_or_source": "T-044 r2 audit (worker, 2026-10-19), re-checked by worker 2 T-064 (2026-10-20)",
+   "entered_by": "TYPED"
+  },
+  {
+   "key": "SLAB_PROJECT_DEFAULT_THICKNESS_M",
+   "project": "P7757 / ST7757 development villa (route G profile ST7757_M4)",
+   "kind": "number",
+   "unit": "m",
+   "value": 0.16,
+   "status": "DRAWING-VERIFIED",
+   "drawing_file": "ST7757 dxf.dxf (sha256 9f9d1179...38079)",
+   "drawing_number": "ST7757",
+   "revision": "no revision text in the DXF (2 630 texts searched)",
+   "sheet": "SH12 columns and axes sheet, S-NOTE (SHX Arabic)",
+   "reference": "decoded (T-044 r2): 'all slabs to be cast 16 cm thick unless stated otherwise' (text '16' in the note, re-found 2026-10-20); also ST7757 PDF p.8 general note 18 and p.1 note",
+   "applies_to": {
+    "floors": [
+     "GF",
+     "1F",
+     "2F"
+    ],
+    "members": [
+     "SLAB"
+    ]
+   },
+   "reviewer_or_source": "T-044 r2 audit (worker, 2026-10-19), re-checked by worker 2 T-064 (2026-10-20); owner answer Q-14 (2026-10-19)",
+   "entered_by": "TYPED",
+   "conditions": [
+    "owner Q-14: 0.16 m only where no slab, zone or detail prints its own value (the two 2F panels tagged 'T 18' keep 18 cm); never applied to stairs, balconies, depressed slabs, landings or special elements without checking their details"
+   ]
+  },
+  {
+   "key": "BLINDING_PROJECTION_M",
+   "project": "P7757 / ST7757 development villa (route G profile ST7757_M4)",
+   "kind": "number",
+   "unit": "m",
+   "value": 0.1,
+   "status": "DRAWING-VERIFIED",
+   "drawing_file": "ST7757.pdf (sha256 74da1523...337e3)",
+   "drawing_number": "ST7757",
+   "revision": "no revision printed (title block: SCALE / DATE May 06, 2026 / FILE NO ST - 7757)",
+   "sheet": "PDF p.13 (details; not in the DXF)",
+   "reference": "'10 | 30 | 10' under each ground-beam section; '10' each side of 'L x W' on the second footing detail",
+   "applies_to": {
+    "members": [
+     "FOOTING",
+     "GROUND_BEAM",
+     "BLINDING"
+    ]
+   },
+   "reviewer_or_source": "T-044 r2 audit (worker, 2026-10-19), re-checked by worker 2 T-064 (2026-10-20)",
+   "entered_by": "TYPED"
+  },
+  {
+   "key": "LINTEL_SCHEDULE",
+   "project": "P7757 / ST7757 development villa (route G profile ST7757_M4)",
+   "kind": "table",
+   "unit": "none",
+   "value": [
+    {
+     "row_id": "L1",
+     "lo": 0,
+     "hi": 100,
+     "D_m": 0.2,
+     "bottom": [
+      2,
+      12
+     ],
+     "top": [
+      2,
+      10
+     ],
+     "stirrup_rate": [
+      5,
+      8
+     ]
+    },
+    {
+     "row_id": "L2",
+     "lo": 101,
+     "hi": 200,
+     "D_m": 0.2,
+     "bottom": [
+      2,
+      14
+     ],
+     "top": [
+      2,
+      12
+     ],
+     "stirrup_rate": [
+      5,
+      8
+     ]
+    },
+    {
+     "row_id": "L3",
+     "lo": 201,
+     "hi": 300,
+     "D_m": 0.3,
+     "bottom": [
+      3,
+      16
+     ],
+     "top": [
+      3,
+      14
+     ],
+     "stirrup_rate": [
+      5,
+      8
+     ]
+    },
+    {
+     "row_id": "L4",
+     "lo": 301,
+     "hi": 500,
+     "D_m": 0.4,
+     "bottom": [
+      3,
+      18
+     ],
+     "top": [
+      3,
+      14
+     ],
+     "stirrup_rate": [
+      5,
+      8
+     ]
+    },
+    {
+     "row_id": "L5",
+     "lo": 501,
+     "hi": 750,
+     "D_m": 0.55,
+     "bottom": [
+      4,
+      18
+     ],
+     "top": [
+      3,
+      14
+     ],
+     "stirrup_rate": [
+      5,
+      8
+     ]
+    }
+   ],
+   "status": "DRAWING-VERIFIED",
+   "drawing_file": "ST7757.pdf (sha256 74da1523...337e3)",
+   "drawing_number": "ST7757",
+   "revision": "no revision printed (title block: SCALE / DATE May 06, 2026 / FILE NO ST - 7757)",
+   "sheet": "PDF p.13 'LINTEL SCHEDULE' (not in the DXF)",
+   "reference": "0-100 B x 20 2Ø12 / 2Ø10; 101-200 B x 20 2Ø14 / 2Ø12; 201-300 B x 30 3Ø16 / 3Ø14; 301-500 B x 40 3Ø18 / 3Ø14; 501-750 B x 55 4Ø18 / 3Ø14; stirrups 5Ø8/M; B = width of the block wall",
+   "applies_to": {
+    "members": [
+     "LINTEL"
+    ]
+   },
+   "reviewer_or_source": "T-044 r2 audit (worker, 2026-10-19), re-checked by worker 2 T-064 (2026-10-20)",
+   "entered_by": "TYPED",
+   "conditions": [
+    "bounds inclusive as printed; a width between two bands is a schedule gap, never rounded"
+   ]
+  }
+ ]
+}
