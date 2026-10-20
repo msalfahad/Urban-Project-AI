@@ -13,6 +13,7 @@ If the full clone of the repository is refused, retry once with a docs-only clon
 `git sparse-checkout set docs/agents`; if that is refused too, use the GitHub connector. Fetch and rebase if the push is rejected.
 
 ## Entries
+- 2026-10-20 23:02 UTC | Worker 2 | SUCCESS (OK) | T-135 READY 8b8036b (lane A) | STAIR_FLIGHT_ONCE_V1 (not wired): Alsenan stair tread marble 27.324 -> 20.424 m2 counted + 0..3.450 held, steps 91.028 -> 68.028 + 0..11.500 lm; the 2F east-lane copy of 1F F3 removed (2F roof slab draws no stair: ENGINE_RIGHT, V2.9 counted it twice), 2F west lane HELD (10 vs 11 treads); 1F flights stay counted. Learned: printed levels on Alsenan give only floor levels at the stair, so the slab-above sheet is the deciding evidence. | self-check: clone PASS, venv PASS, codemap check PASS, pytest t061 PASS, freeze PASS (0); problem: none
 - 2026-10-20 23:00 UTC | Worker 3 | STARTED | run session_01Pqh5ZK3R8fBCoQbo3RoRdD | repo msalfahad/Urban-Project-AI, branch agents/control | task state: none yet | self-check pending
 - 2026-10-20 22:51 UTC | Verifier | STARTED | run session_0131oDJuaQsRZgF7swDeFino | repo msalfahad/Urban-Project-AI, branch agents/control | task state: READY T-131, T-105 | self-check pending
 - 2026-10-20 22:40 UTC | Worker 2 | STARTED | run session_01SJvUy6bsmAzVRvpg3Ux5zs | repo msalfahad/Urban-Project-AI, branch agents/control | task state: none yet | self-check pending
