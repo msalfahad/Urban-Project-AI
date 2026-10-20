@@ -1,0 +1,70 @@
+floor,engine_piece,t_m,engine_ends,local_start_m,local_end_m,engine_columns_cut_m,engine_run_m,hand_rows,hand_run_m,diff_m,cause,verdict_proposal
+GF,FL0001-FL0002,0.2,FREE_END/L,0.270 0.000,31.070 0.000,3.230,27.670,GF-W00 + GF-W01,26.370,+1.300,BAND_ACROSS_PASSAGE_MOUTH: the band runs 1.20 m across the south mouth of the open-air side passage (x 10.70-11.90 local; both lines there are on a non-wall layer) plus 0.10 m of the passage wall line,HAND_RIGHT
+GF,FL0007-FL0008,0.2,T_STEM/FREE_END,7.800 1.500,25.370 1.500,1.050,16.520,GF-W02 + GF-W03,4.300,+12.220,"BAND_ACROSS_OPEN_FLOOR: one band from the annex W.C. wall (x 7.80) to the reception garden wall (x 25.37) on y 1.50: 1.00 m + 11.22 m with no wall face on any side, no opening (side passage, garden strip); only 4.30 m of the 16.52 m is wall",HAND_RIGHT
+GF,FL0010-FL0011,0.15,FREE_END/T_STEM,5.124 2.425,5.750 2.425,0.000,0.626,GF-W27,1.650,-1.024,DOORWAY_AT_FREE_END: the 0.80 door between the wall end (x 5.12) and the 0.15 wall x 4.175 is not in the run (OPENING_GAP joins only two collinear bands) 0.874 m; T piece 0.15,HAND_RIGHT (0.874) / ENGINE_RIGHT (0.150)
+GF,FL0017-FL0018,0.2,L/L,4.300 4.700,14.900 4.700,1.850,8.950,GF-W04 + GF-W05,7.750,+1.200,"BAND_ACROSS_PASSAGE_MOUTH: the band runs 1.20 m across the north mouth of the side passage (x 10.70-11.90, no wall face, no opening)",HAND_RIGHT
+GF,FL0020-FL0021,0.2,L/FREE_END,0.100 6.500,3.000 6.500,0.500,2.500,GF-W06,2.500,+0.000,,EQUAL
+GF,FL0023-FL0024,0.2,L/L,29.270 7.700,31.070 7.700,0.900,1.100,GF-W07,1.100,+0.000,,EQUAL
+GF,FL0025-FL0026,0.2,T_STEM/L,15.100 8.100,19.600 8.100,0.300,4.300,GF-W08,4.400,-0.100,"JUNCTION: the hand table runs a T stem to the through-wall centreline (the T piece counted twice); the piece stops it on the through-wall face (T piece once, in the wall that runs through)",ENGINE_RIGHT
+GF,FL0028-FL0029,0.4,FREE_END/T_STEM,13.500 8.700,14.900 8.700,0.800,0.600,GF-H01,HELD (GF-H01),,"0.40 BAND: released by the piece as family 0.40 (0.60 m); the hand table HOLDS it (0.40 is no block family on this drawing, material not printed); outside the 0.15 / 0.20 totals",HAND_RIGHT on status (HELD)
+GF,FL0030-FL0031,0.15,FREE_END/FREE_END,21.056 9.125,27.583 9.125,1.000,5.527,GF-W28,5.527,+0.000,,EQUAL
+GF,FL0032-FL0033,0.2,T_STEM/L,17.800 10.100,19.600 10.100,0.100,1.800,GF-W09,1.800,+0.000,,EQUAL
+GF,FL0038-FL0039,0.15,FREE_END/T_STEM,18.650 11.375,19.150 11.375,0.000,0.500,GF-W29,1.224,-0.724,DOORWAY_AT_FREE_END: the W.C. door between the wall end and the next wall is not in the run; T piece 0.075,HAND_RIGHT (0.649) / ENGINE_RIGHT (0.075)
+GF,FL0041-FL0042,0.2,L/FREE_END,15.100 13.300,29.270 13.300,1.400,12.870,GF-W10,12.870,+0.000,,EQUAL
+GF,FL0046-FL0047,0.15,HELD/FREE_END,21.947 10.215,22.835 11.103,0.000,1.256,GF-W33,1.473,-0.217,45 DEG JUNCTION: one end HELD by the piece (max 0.137 m listed) and the other cut square at the drawn end,UNRESOLVED (piece HELD)
+GF,FL0048-FL0049,0.15,HELD/FREE_END,19.797 10.147,21.810 12.160,0.005,2.842,GF-W32,3.005,-0.163,45 DEG JUNCTION: one end HELD (max 0.278 m listed),UNRESOLVED (piece HELD)
+GF,FL0055-FL0056,0.2,L/L,31.170 0.100,31.170 7.600,0.700,7.000,GF-W11,7.000,+0.000,,EQUAL
+GF,FL0057-FL0058,0.2,L/FREE_END,29.170 7.800,29.170 8.250,0.100,0.450,GF-W12,0.450,+0.000,,EQUAL
+GF,FL0059-FL0060,0.15,FREE_END/T_STEM,24.175 11.200,24.175 13.200,0.000,2.000,GF-W19,2.175,-0.175,"JUNCTION: the hand table runs a T stem to the through-wall centreline (the T piece counted twice); the piece stops it on the through-wall face (T piece once, in the wall that runs through)",ENGINE_RIGHT
+GF,FL0063-FL0064,0.15,T_STEM/T_STEM,21.925 9.200,21.925 13.200,0.000,4.000,GF-W20 + GF-W21,2.092,+1.908,"BAND_ACROSS_OPEN_FLOOR: the two 0.15 stubs on x 21.925 (bottom 1.05 m, top 1.00 m) joined across the 1.96 m inside the wedge-shaped W.C. pair (diagonal walls only, no face on x 21.925)",HAND_RIGHT
+GF,FL0068-FL0069,0.2,L/HELD,19.700 8.200,19.700 10.000,1.200,0.700,GF-W13,0.750,-0.050,corner end HELD by the piece (max 0.20 m listed),UNRESOLVED (piece HELD)
+GF,FL0070-FL0072,0.15,T_STEM/FREE_END,19.225 10.200,19.225 13.087,0.000,2.887,GF-W22,3.168,-0.281,"JUNCTION: the hand table runs a T stem to the through-wall centreline (the T piece counted twice); the piece stops it on the through-wall face (T piece once, in the wall that runs through); top end cut at 13.087 where the diagonal W.C. wall meets it",ENGINE_RIGHT (0.100) / UNRESOLVED (0.181)
+GF,FL0076-FL0077,0.2,T_STEM/T_STEM,17.700 8.200,17.700 13.200,1.100,3.900,GF-W14,3.900,+0.000,,EQUAL
+GF,FL0078-FL0079,0.2,L/L,15.000 4.800,15.000 13.200,1.500,7.100,GF-W15,7.100,+0.000,,EQUAL
+GF,FL0081-FL0082,0.2,T_STEM/T_STEM,12.000 0.100,12.000 4.600,0.050,4.450,GF-W16,4.450,+0.000,,EQUAL
+GF,FL0083-FL0084,0.2,T_STEM/T_STEM,10.600 0.100,10.600 4.600,0.900,3.600,GF-W17,3.700,-0.100,"JUNCTION: the hand table runs a T stem to the through-wall centreline (the T piece counted twice); the piece stops it on the through-wall face (T piece once, in the wall that runs through)",ENGINE_RIGHT
+GF,FL0086-FL0087,0.15,T_STEM/T_STEM,9.375 0.100,9.375 1.400,0.000,1.300,GF-W23,1.500,-0.200,"JUNCTION: the hand table runs a T stem to the through-wall centreline (the T piece counted twice); the piece stops it on the through-wall face (T piece once, in the wall that runs through)",ENGINE_RIGHT
+GF,FL0089-FL0090,0.15,T_STEM/T_STEM,7.725 0.100,7.725 4.600,0.000,4.500,GF-W24,4.700,-0.200,"JUNCTION: the hand table runs a T stem to the through-wall centreline (the T piece counted twice); the piece stops it on the through-wall face (T piece once, in the wall that runs through)",ENGINE_RIGHT
+GF,FL0092-FL0093,0.15,T_STEM/T_STEM,5.825 0.100,5.825 4.600,0.000,4.500,GF-W25,4.600,-0.100,"JUNCTION: the hand table runs a T stem to the through-wall centreline (the T piece counted twice); the piece stops it on the through-wall face (T piece once, in the wall that runs through)",ENGINE_RIGHT
+GF,FL0094-FL0096,0.2,L/FREE_END,4.200 4.800,4.200 5.300,0.100,0.500,GF-W36,0.500,+0.000,,EQUAL
+GF,FL0095-FL0096,0.15,T_STEM/FREE_END,4.175 0.100,4.175 4.600,0.050,4.450,GF-W26,4.550,-0.100,"JUNCTION: the hand table runs a T stem to the through-wall centreline (the T piece counted twice); the piece stops it on the through-wall face (T piece once, in the wall that runs through)",ENGINE_RIGHT
+GF,FL0097-FL0098,0.2,FREE_END/L,0.000 0.100,0.000 6.400,0.300,6.100,GF-W18,6.100,+0.000,,EQUAL
+GF,FL0100-FL0101,0.15,FREE_END/HELD,22.851 11.225,21.947 12.129,0.000,1.279,GF-W31,1.385,-0.106,45 DEG JUNCTION: one end HELD (max 0.137 m listed),UNRESOLVED (piece HELD)
+GF,FL0102-FL0103,0.15,T_STEM/FREE_END,21.018 11.475,19.353 13.140,0.000,2.355,GF-W34,2.611,-0.256,45 DEG JUNCTION: both ends cut square at the drawn ends (0.256 m short of the hand centreline lengths),UNRESOLVED
+GF,ARCBAND|D2:269:0|D2:270:0,0.2,CURVED/CURVED,4.200 5.300,3.000 6.500,0.000,1.885,GF-W35,1.885,-0.000,,EQUAL
+GF,-,0.150,,,,,not measured (no band),GF-W30,1.525,-1.525,"NOT_IN_RUN: the 0.30 m stub from the wedge corner and the 0.797 m door beside it form no band (stub under the 0.30 m band rule, door at a free end)",HAND_RIGHT
+GF,-,0.200,,,,,not measured (no band),GF-W37,5.050,-5.050,NO_BAND: the pool-side line is drawn as a 0.20 band filled with glazing (4.95 m chord; the PDF prints a curved glass wall); 0.10 m of it is block,ENGINE_RIGHT on run (glass screen) / HAND_RIGHT (0.10 m solid)
+GF,-,0.200,,,,,not measured (no band),GF-H02,HELD (GF-H02),,HELD in the hand table (0.20 x 0.90 outline on the stair layer); not on the wall layer,EQUAL (neither measures it)
+1F,FL0002-FL0003,0.2,L/L,0.100 0.000,18.970 0.000,2.600,16.470,1F-W06,16.470,+0.000,,EQUAL
+1F,FL0006-FL0007,0.15,T_STEM/T_STEM,0.100 2.625,4.350 2.625,0.000,4.250,1F-W11,4.425,-0.175,"JUNCTION: the hand table runs a T stem to the through-wall centreline (the T piece counted twice); the piece stops it on the through-wall face (T piece once, in the wall that runs through)",ENGINE_RIGHT
+1F,FL0011-FL0012,0.15,FREE_END/L,5.589 5.175,8.150 5.175,0.000,2.636,1F-W12,3.800,-1.164,DOORWAY_AT_FREE_END: the 1.00 doorway between the wall end (x 5.589) and the 0.15 wall x 4.425 is not in the run 1.089 m; T piece 0.075,HAND_RIGHT (1.089) / ENGINE_RIGHT (0.075)
+1F,FL0013-FL0014,0.15,L/T_STEM,10.820 5.375,18.970 5.375,0.000,8.225,1F-W13,8.325,-0.100,"JUNCTION: the hand table runs a T stem to the through-wall centreline (the T piece counted twice); the piece stops it on the through-wall face (T piece once, in the wall that runs through)",ENGINE_RIGHT
+1F,FL0016-FL0018,0.2,L/T_STEM,7.200 6.600,10.670 6.600,0.350,3.220,1F-W07,3.295,-0.075,"JUNCTION: the hand table runs a T stem to the through-wall centreline (the T piece counted twice); the piece stops it on the through-wall face (T piece once, in the wall that runs through)",ENGINE_RIGHT
+1F,FL0020-FL0021,0.2,L/L,0.100 7.300,4.300 7.300,0.800,3.600,1F-W08,3.600,+0.000,,EQUAL
+1F,FL0022-FL0023,0.15,T_STEM/FREE_END,14.770 7.625,18.836 7.625,0.050,4.016,1F-W14 + 1F-W15,2.875,+1.141,OPEN_DOORWAY_IN_HAND: the 1.375 m doorless opening between the two pieces (x 15.27-16.645) is in the piece's run and in neither hand row (the T-103 basis keeps openings in the run); east end stops at the mitred cap of the curved bay (0.234 m),ENGINE_RIGHT (1.375) / UNRESOLVED (0.234)
+1F,FL0024-FL0025,0.2,T_STEM/L,7.200 8.600,9.000 8.600,0.100,1.800,1F-W09,1.800,+0.000,,EQUAL
+1F,FL0027-FL0028,0.15,T_STEM/T_STEM,9.200 9.825,14.620 9.825,0.000,5.420,1F-W16,5.570,-0.150,"JUNCTION: the hand table runs a T stem to the through-wall centreline (the T piece counted twice); the piece stops it on the through-wall face (T piece once, in the wall that runs through) (and the L corner given to the vertical x 9.125)",ENGINE_RIGHT
+1F,FL0030-FL0031,0.2,L/L,4.500 11.800,18.970 11.800,1.800,12.870,1F-W10,12.870,+0.000,,EQUAL
+1F,FL0041-FL0042,0.2,L/L,19.070 0.100,19.070 11.700,1.150,10.650,1F-W00 + 1F-W01 + 1F-W25,11.173,-0.523,"CURVED_BAY_AS_CHORD: the east band runs straight across the concave curved bay (glazing on the chord line, y 7.67-10.73) instead of the 3.673 m arc wall; the arc becomes a 0.169 m curved stub",HAND_RIGHT
+1F,1F-STUB-001,0.2,CURVED/CURVED,19.035 10.749,18.911 10.634,0.000,0.169,,0.000,,curved stub of the bay (counted with FL0041),
+1F,FL0043-FL0044,0.15,T_STEM/T_STEM,16.645 5.450,16.645 7.550,0.000,2.100,1F-W17,2.250,-0.150,"JUNCTION: the hand table runs a T stem to the through-wall centreline (the T piece counted twice); the piece stops it on the through-wall face (T piece once, in the wall that runs through)",ENGINE_RIGHT
+1F,FL0046-FL0047,0.15,T_STEM/T_STEM,14.695 5.450,14.695 11.700,1.050,5.200,1F-W18,5.275,-0.075,"JUNCTION: the hand table runs a T stem to the through-wall centreline (the T piece counted twice); the piece stops it on the through-wall face (T piece once, in the wall that runs through)",ENGINE_RIGHT
+1F,FL0050-FL0051,0.15,T_STEM/T_STEM,12.895 9.900,12.895 11.700,0.000,1.800,1F-W19,1.975,-0.175,"JUNCTION: the hand table runs a T stem to the through-wall centreline (the T piece counted twice); the piece stops it on the through-wall face (T piece once, in the wall that runs through)",ENGINE_RIGHT
+1F,FL0054-FL0055,0.15,L/T_STEM,10.745 5.450,10.745 11.700,0.050,6.275,1F-W20,6.275,+0.000,,EQUAL
+1F,FL0059-FL0060,0.15,T_STEM/T_STEM,9.125 9.750,9.125 11.700,0.000,1.950,1F-W21,1.975,-0.025,"JUNCTION: the hand table runs a T stem to the through-wall centreline (the T piece counted twice); the piece stops it on the through-wall face (T piece once, in the wall that runs through) (L corner held by this wall)",ENGINE_RIGHT
+1F,FL0059-FL0061,0.2,T_STEM/L,9.100 6.700,9.100 8.500,1.200,0.700,1F-W02,0.700,+0.000,,EQUAL
+1F,FL0063-FL0065,0.15,T_STEM/L,8.225 0.100,8.225 5.100,0.000,5.075,1F-W22,5.175,-0.100,"JUNCTION: the hand table runs a T stem to the through-wall centreline (the T piece counted twice); the piece stops it on the through-wall face (T piece once, in the wall that runs through)",ENGINE_RIGHT
+1F,FL0068-FL0070,0.2,L/T_STEM,7.100 6.700,7.100 11.700,1.200,3.900,1F-W03,3.900,+0.000,,EQUAL
+1F,FL0074-FL0075,0.15,FREE_END/FREE_END,4.425 0.980,4.425 7.200,0.700,5.520,1F-W23,6.500,-0.980,DOORWAY_AT_FREE_END: the door between the wall end (y 0.98) and the south wall is not in the run 0.88 m; T piece 0.10,HAND_RIGHT (0.880) / ENGINE_RIGHT (0.100)
+1F,FL0074-FL0076,0.2,L/L,4.400 7.400,4.400 11.700,0.900,3.600,1F-W04,3.600,+0.000,,EQUAL
+1F,FL0078-FL0079,0.15,T_STEM/T_STEM,2.225 0.100,2.225 2.550,0.000,2.450,1F-W24,2.625,-0.175,"JUNCTION: the hand table runs a T stem to the through-wall centreline (the T piece counted twice); the piece stops it on the through-wall face (T piece once, in the wall that runs through)",ENGINE_RIGHT
+1F,FL0082-FL0083,0.2,L/L,0.000 0.100,0.000 7.200,1.000,6.300,1F-W05,6.300,+0.000,,EQUAL
+2F,FL0002-FL0003,0.15,L/L,0.100 0.000,7.800 0.000,0.000,7.900,2F-W03,7.900,+0.000,,EQUAL
+2F,FL0004-FL0005,0.2,L/T_STEM,2.800 1.425,4.600 1.425,0.100,1.800,2F-W00,1.800,+0.000,,EQUAL
+2F,FL0006-FL0007,0.2,T_STEM/L,2.800 3.425,4.600 3.425,0.100,1.800,2F-W01,1.800,+0.000,,EQUAL
+2F,FL0010-FL0011,0.2,L/L,0.100 6.625,7.800 6.625,0.900,7.000,2F-W02,7.000,+0.000,,EQUAL
+2F,FL0020-FL0021,0.2,L/L,7.900 0.075,7.900 6.525,0.400,6.225,2F-W04,6.225,+0.000,,EQUAL
+2F,FL0024-FL0025,0.15,FREE_END/T_STEM,4.725 3.525,4.725 6.525,0.000,3.000,2F-W08,3.100,-0.100,"JUNCTION: the hand table runs a T stem to the through-wall centreline (the T piece counted twice); the piece stops it on the through-wall face (T piece once, in the wall that runs through)",ENGINE_RIGHT
+2F,FL0024-FL0026,0.2,T_STEM/L,4.700 0.075,4.700 3.325,1.100,2.250,2F-W05,2.325,-0.075,"JUNCTION: the hand table runs a T stem to the through-wall centreline (the T piece counted twice); the piece stops it on the through-wall face (T piece once, in the wall that runs through)",ENGINE_RIGHT
+2F,FL0031-FL0032,0.2,L/T_STEM,2.700 1.525,2.700 6.525,1.200,3.900,2F-W06,3.900,+0.000,,EQUAL
+2F,FL0035-FL0036,0.2,L/L,0.000 0.075,0.000 6.525,0.900,5.725,2F-W07,5.725,+0.000,,EQUAL

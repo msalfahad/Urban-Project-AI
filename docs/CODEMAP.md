@@ -14,15 +14,15 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `data/` | 19 | Registries (owner facts, project rules, trades) and trade rules. Large run data is gitignored. |
 | `docs/` | 72 | Design notes and the generated maps. |
 | `documents/` | 5 |  |
-| `engine/` | 614 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
+| `engine/` | 616 | Quantity engine. `engine/source/` is the current CAD-to-BOQ pipeline; the rest is earlier rounds and shared services. |
 | `integrations/` | 7 |  |
 | `knowledge/` | 10 | Engineering knowledge registry: the rules read by ARCH_TAKEOFF_V2.3 and later. |
 | `pipeline/` | 5 | Project creation and end-to-end orchestration. |
-| `research/` | 2419 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
+| `research/` | 2432 | Per-phase reports, proofs, defect registers and freeze baselines: the evidence behind decisions. |
 | `rules/` | 7 | Rule store read by methods V1-V2.2 (library 1.4.0 + owner overlay 1.5.0), materials, BOQ families, method registers. |
 | `runs/` | 7 |  |
 | `social/` | 4 |  |
-| `tests/` | 1321 | pytest suites, one folder per round. |
+| `tests/` | 1324 | pytest suites, one folder per round. |
 | `tools/` | 106 | Command-line entry points: intake, takeoff routes (`urban_boq_m*.py`), exports, freeze and manifest checks, this map. |
 
 ## `engine/` (254 modules)
@@ -387,14 +387,14 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `workbooks.py` | 242 | MEDIUM | 0 | REPORTING V3 - workbook layouts (generic over a BOQ_LINES model). |
 | `workbooks_v3b.py` | 308 | MEDIUM | 0 | REPORTING V3b - workbook layouts over the two-view line model (TECHNICAL_QTO / COMMERCIAL_BOQ). |
 
-## `engine/source/` (262 modules)
+## `engine/source/` (264 modules)
 
 | Module | Lines | Risk | Imp | Purpose |
 |---|---|---|---|---|
 | `accurate_boq_rebar.py` | 256 | CRITICAL | 17 | ACCURATE_BOQ_REBAR - the official reinforcement takeoff (generic). |
 | `arch_completeness.py` | 773 | MEDIUM | 5 | ARCHITECTURAL COMPLETENESS (M9 S6, ARCH_TAKEOFF_V2) - every physical region and every eligible finish surface ends |
 | `arch_evidence.py` | 263 | MEDIUM | 2 | ARCHITECTURAL EVIDENCE (M4) - what an architectural floor plan says about the ground beams under it (generic; stdlib + |
-| `arch_floor.py` | 183 | MEDIUM | 5 | FLOOR AREA RECONCILIATION (M9 S4) - every m2 of a floor plan in exactly one category, or an explicit residual. |
+| `arch_floor.py` | 183 | MEDIUM | 6 | FLOOR AREA RECONCILIATION (M9 S4) - every m2 of a floor plan in exactly one category, or an explicit residual. |
 | `arch_measure.py` | 1165 | HIGH | 19 | ARCHITECTURAL MEASUREMENT (M9 S2) - canonical BOQ lines per room from the spaces of arch_rooms (generic, stdlib). |
 | `arch_plan.py` | 478 | HIGH | 19 | ARCHITECTURAL PLAN READING (M9 S2) - which part of a drawing is which floor plan, and what each layer IS (generic). |
 | `arch_quantity_truth.py` | 536 | MEDIUM | 2 | ARCH_QUANTITY_TRUTH_V1 - generic architectural quantity calculators with explicit evidence states. |
@@ -404,7 +404,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `arch_v213.py` | 502 | MEDIUM | 2 | ARCH_TAKEOFF_V2.13 (board task T-120; opt-in, NOT the released default): ARCH_TAKEOFF_V2.12 + two membrane purchase |
 | `arch_v27.py` | 1135 | MEDIUM | 5 | ARCH_TAKEOFF_V2.7 (M9 Phase 2B-7) - the drawing-interpretation corrections proven by independent acceptance tests |
 | `arch_v28.py` | 1028 | MEDIUM | 9 | ARCHITECTURAL TAKEOFF V2.8 (M9 Phase 2B-9) - heights read from the drawing, the opening schedule, window reveals |
-| `arch_v29.py` | 809 | MEDIUM | 5 | ARCH_TAKEOFF_V2.9 (Phase N10) - curved wall openings (generic; stdlib only). Read only by ARCH_TAKEOFF_V2.9. |
+| `arch_v29.py` | 809 | MEDIUM | 6 | ARCH_TAKEOFF_V2.9 (Phase N10) - curved wall openings (generic; stdlib only). Read only by ARCH_TAKEOFF_V2.9. |
 | `arch_walls.py` | 236 | HIGH | 5 | WALL RUNS AND THE ROOM GRAPH (M9 S3) - the walls of one floor plan by thickness, and which spaces each wall and |
 | `authority_decisions.py` | 206 | CRITICAL | 2 | AUTHORITY DECISIONS - owner authority rulings, provenance classes and facet-state errata (generic, stdlib only). |
 | `bar_shapes.py` | 67 | MEDIUM | 3 | BAR SHAPES (M2) - developed bar lengths by shape, diameter-aware bends and hooks (generic, stdlib). |
@@ -469,7 +469,8 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `evidence_ladder.py` | 116 | MEDIUM | 4 | Explicit fallback ladders per fact type (generic). |
 | `exposed_finish.py` | 108 | MEDIUM | 3 | EXPOSED OBJECT FACE FINISH (R8.19) - finish on COLUMN / DUCT (built obstacle) faces only where the face is PHYSICALLY |
 | `exterior_spaces.py` | 616 | MEDIUM | 3 | EXTERIOR SPACES (T-071): roofs, balconies, pools, voids and gardens drawn on a layer of their own, measured round |
-| `facade_gap_closure.py` | 466 | MEDIUM | 1 | FACADE_GAP_CLOSURE_V1 (T-014, defects D-N10-01 and D-N10-02): where the facade outline meets a window, close it on |
+| `facade_gap_closure.py` | 466 | MEDIUM | 2 | FACADE_GAP_CLOSURE_V1 (T-014, defects D-N10-01 and D-N10-02): where the facade outline meets a window, close it on |
+| `facade_passage_walls.py` | 374 | MEDIUM | 1 | FACADE_PASSAGE_WALLS_V1 (T-109): the walls of an open-air passage are exterior faces; the passage mouth is not a |
 | `family_coverage.py` | 143 | CRITICAL | 5 | FAMILY COVERAGE (M3) - one record per structural family outside the core six, stating what the generic route |
 | `findings.py` | 216 | HIGH | 27 | Source findings — what the source engine could not establish, said out loud. |
 | `finish_height.py` | 100 | MEDIUM | 4 | ARCHITECTURAL FINISH HEIGHT ENGINE (V1) - blockwork, plaster, paint and wall-tile heights are four separate |
@@ -606,6 +607,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `space_model.py` | 196 | MEDIUM | 3 | SPACE CONNECTIVITY MODEL (M9 Phase 2B-1, ARCH_TAKEOFF_V2.3 only) - every space a node with independently supported |
 | `special_column_components.py` | 245 | CRITICAL | 1 | SPECIAL COLUMN COMPONENTS - turned (twisted), dead and planted columns (generic). |
 | `stair_fit_checks.py` | 95 | CRITICAL | 1 | STAIR FIT CHECKS - whether a riser arrangement fits its plan and section: run ends, clearances to a beam band, |
+| `stair_floor_residue.py` | 371 | MEDIUM | 1 | STAIR FLOOR RESIDUE V1 - the floor finish of a room face that holds stair flights, a stair well or a stair opening. |
 | `stair_generic.py` | 65 | MEDIUM | 1 | STAIR (M2, generic, light) - one straight flight from a floor-to-floor rise and a COUNTED riser number: geometry, |
 | `stair_geometry.py` | 336 | CRITICAL | 6 | STAIR GEOMETRY - stair flights, landings and winders from drawn treads and stated levels (generic). |
 | `stair_measure.py` | 119 | CRITICAL | 3 | STAIR MEASURE (M4) - structural stair quantities from the drawn treads of a stair zone (generic; stdlib + |
@@ -628,7 +630,7 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `text_role_v3.py` | 124 | MEDIUM | 1 | TEXT ROLE V3 - text_role (TEXT_ROLE_POLICY_V2) with tag families scoped to the SOURCE revision. |
 | `tile_count.py` | 301 | MEDIUM | 1 | TILE COUNT (T-087) - tiles to buy per room from a laid grid, with the owner's joint widths (generic, every villa). |
 | `tile_layout.py` | 440 | MEDIUM | 8 | TILE LAYOUT (M9 S1) - exact cutting plan of a RECTANGULAR surface for one tile size (generic; stdlib only). |
-| `topology.py` | 1244 | CRITICAL | 40 | ROOM / SPACE TOPOLOGY (R8.8): certified planar sites from positively admitted boundary geometry. |
+| `topology.py` | 1244 | CRITICAL | 41 | ROOM / SPACE TOPOLOGY (R8.8): certified planar sites from positively admitted boundary geometry. |
 | `topology_closures.py` | 197 | HIGH | 30 | ZERO-MATERIAL TOPOLOGY CLOSURES (R8.11). |
 | `topology_crosscheck.py` | 234 | HIGH | 6 | TOPOLOGY CROSS-CHECK (R8.8 addendum): an independent GEOS reconstruction of TS01's straight-edged sites. |
 | `topology_digest.py` | 79 | HIGH | 1 | TOPOLOGY RESULT DIGEST (RC1 final) - one sha256 over the certified topology OUTPUT of a run. |
@@ -997,6 +999,8 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `tests/t099_room_census_guard/` | 1 |
 | `tests/t104_wall_frames/` | 1 |
 | `tests/t106_skirting_audit/` | 1 |
+| `tests/t109_facade_passage/` | 1 |
+| `tests/t116_stair_floor_residue/` | 1 |
 | `tests/t120_membrane_release_v213/` | 1 |
 | `tests/water_tank_s8_4/` | 3 |
 | `tests/zz_freeze_integrity/` | 2 |
@@ -1129,9 +1133,13 @@ HIGH shared or geometry/units/release, MEDIUM engine logic. `Imp` = modules impo
 | `research/agents_t103/` | 3 |
 | `research/agents_t104/` | 2 |
 | `research/agents_t106/` | 2 |
+| `research/agents_t107/` | 1 |
+| `research/agents_t109/` | 2 |
 | `research/agents_t112/` | 3 |
 | `research/agents_t113/` | 4 |
 | `research/agents_t114/` | 2 |
+| `research/agents_t116/` | 3 |
+| `research/agents_t117/` | 7 |
 | `research/agents_t120/` | 1 |
 | `research/alsenan_arch_truth_05/` | 28 |
 | `research/alsenan_column_rebar_s3/` | 17 |
