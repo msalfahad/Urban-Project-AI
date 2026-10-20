@@ -1,5 +1,6 @@
 # Questions for the owner (at most 5 open; answer under "Answer:")
 
+Worker 3 2026-10-20 01:05: one new no-assumptions question from the room-by-room finishing table (T-086): Q-53 (cement bags and sand per m3 of the 1:3 stair mortar). Open now: 4 (Q-50 to Q-53).
 Verifier 2026-10-19 22:59: two new no-assumptions questions from the stair verdicts (T-084): Q-50 (round stair: no section, may the plan count 28 be used) and Q-51 (how turning / winder steps are measured). Open now: 2.
 Worker 3 2026-10-19 21:25: two new no-assumptions questions from the stair hand table (T-084): Q-46 (main stair: section A-A and the plans draw a different number of steps, which counts) and Q-47 (is the "T 16" in the stair panels the waist and landing thickness).
 Worker 3 2026-10-19 17:30: two new no-assumptions questions from the reference-book check (T-080): Q-40 (shower walls: waterproofing higher than the 0.20 m upturn, and how high) and Q-41 (falls screed under and protection screed over the membrane: BOQ lines or not).
@@ -192,6 +193,24 @@ beams on the wall line do not lower the ceiling inside the room, and your 0.60 m
 code clause). Whatever you choose, a ceiling level printed on a section or detail replaces it.
 WAITS ON: internal plaster and paint wall heights in every Alsenan room (and wall-tile heights of the wet rooms after
 your Q-48 answer) and the same rule on every villa (T-081 rework, T-088).
+
+### Q-53 Stair marble bed (1:3 mortar): how many cement bags and how much sand per m3? (worker 3 2026-10-20 01:05; T-086; no-assumptions question: your Q-45 values give bags and sand for the 1:4 mix only)
+
+THE PROBLEM: your Q-45 answer sets the stair bed at 3 cm in a 1:3 mix, but the bag and sand figures you accepted (about 8
+bags of 50 kg and 1.1 m3 of loose sand per m3) are for 1:4 mortar. A 1:3 mix is richer, so the 1:4 figures would
+under-buy cement. The engine therefore gives the stair mortar volume but holds its cement and sand.
+WHERE TO LOOK: the room-by-room finishing table (research/agents_t086/T-086_FINISH_MATERIALS_TABLE.md). Alsenan stairs
+released so far (owner Q-46 A, section A-A counts): entrance flight 5 steps x 2.80 m, the 4-step flight down to the +0.30
+lobby, the main stair's four straight flights and two landings: 39.49 m2 of marble, 39.49 x 0.03 x 1.05 = 1.24 m3 of 1:3
+mortar.
+THE OPTIONS:
+(A) Practice values for 1:3: about 10 bags of 50 kg cement and 1.0 m3 of loose sand per m3 of mortar (PROVISIONAL like
+    the 1:4 ones): Alsenan stairs about 12.4 bags (buy 13) and 1.24 m3 of sand.
+(B) Use the 1:4 figures for the stairs too (8 bags, 1.1 m3): about 9.9 bags (buy 10) and 1.37 m3 of sand.
+(C) Your own figures for 1:3 (bags and sand per m3).
+RECOMMENDATION: (A): a 1:3 mortar has about a quarter more cement than 1:4, so 10 bags per m3 keeps the stair purchase
+on the safe side; replace it with your supplier's figure when you have one (practice, not a code clause).
+WAITS ON: cement bags and sand for every stair (marble treads, risers, landings) in the finishing table, on every villa.
 
 ## Answered
 
