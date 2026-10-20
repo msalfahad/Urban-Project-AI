@@ -83,6 +83,20 @@ Not an Alsenan quantity in Mode A: kitchen, laundry and the W.C.s are skirted on
 set the wall tile to 2.40 m < 3.00 m clear (UP-CER-004). With the Alsenan facts file they are NOT_APPLICABLE (owner
 wet scope, full-height porcelain), which matches the freelancer, who has no skirting in any wet room.
 
+## Door and passage deductions room by room (next item of the same topic)
+
+The door deduction re-adds in every line, but it is one summed entry ("door / passage openings"). Set against the
+opening records that name each room (ARCH_OPENINGS rooms), 9 rooms deduct more door length than their own doors:
+the extra is in every case a door CLOSURE (a door symbol drawn across a doorway face, `door_closures` on the room),
+which deducts its edge but has no opening id: GF master bedroom 1.80 = OP-012 1.00 + 1 closure 0.80 (its en-suite
+door, a D315 0.80 block); 1F living 4.70 = 3.70 (four doors) + 1 closure 1.00; one 1F master bedroom 1.80 = 2
+closures 1.00 + 0.80 and no opening at all; six W.C.s / small spaces 0.80 or 0.797 = 1 closure each (D315 0.80;
+0.797 m is a 0.80 door whose edge meets the face 3 mm short). Widths agree with the drawn blocks, so no net is
+wrong; the trail cannot name these doors. Passages are open doorway faces; OP-003 (11.22 m) is one long open
+side shared by several faces (the GF open plan's 10.82 m passage run = OP-011 1.00 + 9.82 of OP-003; its second
+face 2.50; the court, lobby and unnamed faces carry 2.40 - 3.80 m each), so a passage width is not the same as the length on one room's boundary. Fix proposal (same output version as
+below): list each door and closure by id / handle with its length on this boundary.
+
 ## Engine vs freelancer (Alsenan facts file; the released owner-scope reading)
 
 The freelancer's skirting row (floors workbook, "ceramic" sheet) is 282.85 lm = the sum of 12 dry-room gross
