@@ -1,0 +1,60 @@
+storey,id,mark,zone,schedule_section_m,height_m_floor_to_floor,m3_at_floor_to_floor,m2_section,status,note,drawn_outline_if_different
+GF,GF-01,C,annex (+0.30),0.2x0.5,4.5,0.45,0.1,HELD,annex zone (+0.30 GF level): GF column height waits on owner Q-54,drawn 0.2x0.4
+GF,GF-02,C,annex (+0.30),0.2x0.5,4.5,0.45,0.1,HELD,annex zone (+0.30 GF level): GF column height waits on owner Q-54,drawn 0.2x0.4
+GF,GF-03,C,annex (+0.30),0.2x0.5,4.5,0.45,0.1,HELD,annex zone (+0.30 GF level): GF column height waits on owner Q-54,drawn 0.2x0.4
+GF,GF-04,C,main,0.2x0.5,4.5,0.45,0.1,RELEASABLE,,drawn 0.2x0.4
+GF,GF-05,C,main,0.2x0.5,4.5,0.45,0.1,RELEASABLE,,drawn 0.2x0.4
+GF,GF-06,C1,lift core,0.2x0.5,4.5,0.45,0.1,RELEASABLE,,
+GF,GF-07,C10,main,0.25x0.7,4.5,0.7875,0.175,RELEASABLE,,
+GF,GF-08,C11,main,0.25x1.1,4.5,1.2375,0.275,RELEASABLE,,
+GF,GF-09,C11,main,0.25x1.1,4.5,1.2375,0.275,RELEASABLE,,
+GF,GF-10,C2,main,0.2x0.5,4.5,0.45,0.1,RELEASABLE,,
+GF,GF-11,C2,lift core,0.2x0.5,4.5,0.45,0.1,RELEASABLE,,
+GF,GF-12,C2,main,0.2x0.5,4.5,0.45,0.1,RELEASABLE,,
+GF,GF-13,C2,lift core,0.2x0.5,4.5,0.45,0.1,RELEASABLE,,
+GF,GF-14,C3,annex (+0.30),0.25x0.5,4.5,0.5625,0.125,HELD,annex zone (+0.30 GF level): GF column height waits on owner Q-54,
+GF,GF-15,C3,annex (+0.30),0.25x0.5,4.5,0.5625,0.125,HELD,annex zone (+0.30 GF level): GF column height waits on owner Q-54,drawn 0.2x0.4
+GF,GF-16,C3,annex (+0.30),0.25x0.5,4.5,0.5625,0.125,HELD,annex zone (+0.30 GF level): GF column height waits on owner Q-54,
+GF,GF-17,C3,main,0.25x0.5,4.5,0.5625,0.125,RELEASABLE,,
+GF,GF-18,C3,main,0.25x0.5,4.5,0.5625,0.125,RELEASABLE,,
+GF,GF-19,C3,main,0.25x0.5,4.5,0.5625,0.125,RELEASABLE,,drawn 0.2x0.5
+GF,GF-20,C4,main,0.25x0.5,4.5,0.5625,0.125,RELEASABLE,,
+GF,GF-21,C4,main,0.25x0.5,4.5,0.5625,0.125,RELEASABLE,,
+GF,GF-22,C5,annex (+0.30),0.25x0.6,4.5,0.675,0.15,HELD,annex zone (+0.30 GF level): GF column height waits on owner Q-54,
+GF,GF-23,C5,main,0.25x0.6,4.5,0.675,0.15,RELEASABLE,,
+GF,GF-24,C5,main,0.25x0.6,4.5,0.675,0.15,RELEASABLE,,
+GF,GF-25,C6,main,0.25x0.7,4.5,0.7875,0.175,RELEASABLE,,
+GF,GF-26,C7,main,0.25x0.8,4.5,0.9,0.2,RELEASABLE,,
+GF,GF-27,C8,main,0.25x0.9,4.5,1.0125,0.225,HELD,"column plan prints 30X80 at this C8, schedule C8 = 30 x 90 (foundation band): conflict",drawn 0.25x0.8
+GF,GF-28,C8,main,0.25x0.9,4.5,1.0125,0.225,RELEASABLE,,drawn 0.2x0.9
+GF,GF-29,C9,lift core,0.25x1,4.5,1.125,0.25,RELEASABLE,,
+GF,GF-30,C9,main,0.25x1,4.5,1.125,0.25,RELEASABLE,,drawn 0.2x1
+1F,1F-31,C1,lift core,0.2x0.5,4.2,0.42,0.1,RELEASABLE,,
+1F,1F-32,C2,main,0.2x0.5,4.2,0.42,0.1,RELEASABLE,,
+1F,1F-33,C2,lift core,0.2x0.5,4.2,0.42,0.1,RELEASABLE,,
+1F,1F-34,C2,main,0.2x0.5,4.2,0.42,0.1,RELEASABLE,,
+1F,1F-35,C2,lift core,0.2x0.5,4.2,0.42,0.1,RELEASABLE,,
+1F,1F-36,C3,annex (+0.30),0.2x0.5,4.2,0.42,0.1,RELEASABLE,,
+1F,1F-37,C3,main,0.2x0.5,4.2,0.42,0.1,RELEASABLE,,drawn 0.25x0.5
+1F,1F-38,C4,main,0.2x0.5,4.2,0.42,0.1,RELEASABLE,,drawn 0.25x0.5
+1F,1F-39,C4,main,0.2x0.5,4.2,0.42,0.1,RELEASABLE,,drawn 0.25x0.5
+1F,1F-40,C5,annex (+0.30),0.2x0.5,4.2,0.42,0.1,RELEASABLE,,drawn 0.2x0.6
+1F,1F-41,C5,main,0.2x0.5,4.2,0.42,0.1,RELEASABLE,,drawn 0.25x0.6
+1F,1F-42,C5,main,0.2x0.5,4.2,0.42,0.1,RELEASABLE,,drawn 0.25x0.6
+1F,1F-43,C6,main,0.2x0.6,4.2,0.504,0.12,RELEASABLE,,drawn 0.25x0.7
+1F,1F-44,C7,main,0.2x0.8,4.2,0.672,0.16,RELEASABLE,,drawn 0.25x0.8
+1F,1F-45,C8,main,0.2x0.9,4.2,0.756,0.18,HELD,"column plan prints 30X80 at this C8, schedule C8 = 30 x 90 (foundation band): conflict",drawn 0.25x0.8
+1F,1F-46,C8,main,0.2x0.9,4.2,0.756,0.18,RELEASABLE,,
+1F,1F-47,C9,lift core,0.2x0.9,4.2,0.756,0.18,RELEASABLE,,drawn 0.25x1
+1F,1F-48,C9,main,0.2x0.9,4.2,0.756,0.18,RELEASABLE,,drawn 0.2x1
+2F,2F-49,C1,lift core,0.2x0.5,4.2,0.42,0.1,RELEASABLE,,
+2F,2F-50,C2,main,0.2x0.5,4.2,0.42,0.1,RELEASABLE,,
+2F,2F-51,C2,lift core,0.2x0.5,4.2,0.42,0.1,RELEASABLE,,
+2F,2F-52,C2,main,0.2x0.5,4.2,0.42,0.1,RELEASABLE,,
+2F,2F-53,C2,lift core,0.2x0.5,4.2,0.42,0.1,RELEASABLE,,
+2F,2F-54,C3,main,0.2x0.5,4.2,0.42,0.1,RELEASABLE,,drawn 0.25x0.5
+2F,2F-55,C5,main,0.2x0.5,4.2,0.42,0.1,RELEASABLE,,drawn 0.2x0.6
+2F,2F-56,C9,lift core,0.2x0.7,4.2,0.588,0.14,RELEASABLE,,
+1F,1F-57,P.C 20x70,main,0.2x0.7,4.2,0.588,0.14,RELEASABLE,"planted column, size printed beside it on the slab plan below",
+1F,1F-58,P.C 20x50,main,0.2x0.5,4.2,0.42,0.1,RELEASABLE,"planted column, size printed beside it on the slab plan below",
+2F,2F-59,P.C 20x50,main,0.2x0.5,4.2,0.42,0.1,RELEASABLE,"planted column, size printed beside it on the slab plan below",
