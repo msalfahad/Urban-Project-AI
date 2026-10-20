@@ -1,5 +1,6 @@
 # Questions for the owner (at most 5 open; answer under "Answer:")
 
+Verifier 2026-10-20 13:25: one new no-assumptions question from the facade verdicts (T-016b / T-014): Q-64 (a 0.08 x 0.05 m notch where the pool glazing frame meets a column: facade run round it or straight across; 0.10 m). Open now: 1.
 Verifier 2026-10-20 11:35: one new no-assumptions question from the blockwork hand table (T-103): Q-63 (a 7.00 m sea-side wall band on the ground-floor plan that the fence drawing does not show: block fence or not). Open now: 13 (Q-50 to Q-63 without Q-60, which the owner answered at 10:45 and the Lead still has to move to Answered).
 
 Lead 2026-10-20 08:20: three new no-assumptions questions: Q-60 (blockwork: the height a block wall is measured to; block m2 held until answered), Q-61 (16 held Alsenan beam pieces the drawings contradict or leave unmarked: hold, provisional bigger reading, or your ruling) and Q-62 (the last riser of a flight inside the arrival slab: stair, slab or both; 0.163 m3; proposed by worker 3). Open now: 13 (Q-50 to Q-62), all no-assumption questions.
@@ -153,7 +154,26 @@ Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
 
 ## Open
 
-None open (lead 2026-10-20 12:20). Q-50 to Q-63 were answered by the owner on 2026-10-20 (OWNER_DIRECTIVE_2026-10-20.md, and the owner's 12:15 correction in OWNER_SESSION_CHANGES.md: his earlier answers are his manual BOQ method and are preserved; the engine shows the owner-method and the drawing-derived results side by side). A reconciliation proposal is with the owner in his main chat; the team does not duplicate it as a question.
+### Q-64 A small notch where a window frame meets a column: does the facade run go round it or straight across? (verifier 2026-10-20 13:25; T-016b, T-014, T-109; no-assumptions question)
+
+THE PROBLEM: on the ground floor, at the north end of the curved glass beside the pool, the glass frame stops 0.08 m
+short of a column, and the column stands 0.05 m out from the wall face. The facade run either goes round the small notch
+(0.05 + 0.08 + 0.05 = 0.18 m) or straight across it (0.08 m): 0.10 m on the ground-floor run. Two workers read the same
+drawn lines and disagree (one calls it a real outside corner, the other part of the window reveal, like the first-floor
+window recess already closed at the face line), and no Urban rule says which.
+WHERE TO LOOK: Drive "Alsenan chalet project", P7757_DXF_COMPRESSED.zip (the architectural DXF), ground floor plan: the
+curved glass wall beside the pool, zoom to its north end where the glass frame meets the column.
+THE OPTIONS:
+(A) Go round the notch: ground-floor facade run 105.887 m (with the side passage added, T-016b).
+(B) Close it straight at the column face, as a window reveal: 105.787 m (-0.10 m).
+(C) Hold the run as a range 105.787 .. 105.887 m wherever such a notch occurs.
+RECOMMENDATION: B. Practice, not a code clause: the faces inside the 0.08 m strip beside the frame are finished with the
+window reveal, the same way the first-floor recess was closed at the face line; counting them again in the facade run
+would count them twice.
+Waits on: the ground-floor facade run (exterior plaster and paint length) on every villa with a frame set back beside a
+column (T-109, T-014).
+
+Earlier note: None open (lead 2026-10-20 12:20). Q-50 to Q-63 were answered by the owner on 2026-10-20 (OWNER_DIRECTIVE_2026-10-20.md, and the owner's 12:15 correction in OWNER_SESSION_CHANGES.md: his earlier answers are his manual BOQ method and are preserved; the engine shows the owner-method and the drawing-derived results side by side). A reconciliation proposal is with the owner in his main chat; the team does not duplicate it as a question.
 
 ## Answered
 ### Q-50 Round stair in the reception: no section cuts it. May the plan step count be used? (verifier 2026-10-19 22:59; T-084, T-056; no-assumptions question: your Q-46 answer says the section counts, and this stair has no section)
