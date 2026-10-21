@@ -213,4 +213,7 @@ OTHER_REBAR_AWARE = (
     # T-133: the V3.0.1 extension names REINFORCEMENT only to leave the steel lines of a column piece unchanged and
     # LIST them as downstream STALE (outside the candidate); it writes no reinforcement quantity and applies no ratio
     "engine/source/arch_v301.py",
+    # T-134: the element register v0 links STR.REBAR lines to the concrete element whose geometry they read (ids and
+    # states only); it writes no reinforcement quantity and applies no ratio
+    "engine/source/element_register_v0.py",
 )
