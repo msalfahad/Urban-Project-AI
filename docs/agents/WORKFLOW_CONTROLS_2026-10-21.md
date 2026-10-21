@@ -101,3 +101,26 @@ Order: Worker 1 -> Checker -> Worker 3 -> Lead -> Worker 2 -> Dashboard. The Sco
 agent moves only after the previous one shows a successful unattended run with a STARTED line and a final status line
 on the board. Each agent's prompt is updated to these controls when it migrates. The main chat records each migration
 in OWNER_SESSION_CHANGES.md and reports failures to the owner.
+
+## 8. Project photos as evidence (owner, main chat, 2026-10-21 22:55)
+
+Owner: "from now on I'll try to always send photos of the project, so that you can assign an agent to look at the photos
+to give details and align what's in the plan with the photos." No new agent: photo review is a normal board task.
+
+- WHERE: the owner puts photos on Drive in the project's folder (preferably a "Photos" subfolder, named by area or
+  elevation when he can). Drive stays READ-ONLY. Photos are private client data: they are never copied into the
+  repository, its commits, branches, tests, board text or any dashboard; the board refers to a photo only by its Drive
+  folder and file title and DESCRIBES what it shows.
+- WHO: the Lead, each run, searches the project's Drive folder for photos created since its last run; for each new batch
+  it adds one PHOTO REVIEW task (lane A, or lane S when the photos show structure), backlog-permitted. A worker does the
+  review; the Checker verifies it under Gate A (re-looks at the photos the task cites).
+- WHAT a photo review delivers: per photo, what it shows (element, location, orientation), and a table photo -> plan
+  element (element register id where one exists) with one of: AGREES with the drawing; DIFFERS (what, where, how much it
+  could change which BOQ line); NOT IN THE DRAWING (an element the photo shows that the drawings do not); NOT VISIBLE.
+  It names the BOQ lines each finding affects, with units.
+- WHAT a photo may and may not do: a photo corroborates or questions the drawings; it never produces a quantity on its
+  own and never silently changes one (dimensions are not scaled off photos). Drawing-first still governs (UP-STAIR-002,
+  MISSION.md). A DIFFERS or NOT IN THE DRAWING finding that affects a quantity makes that line HELD with the finding as
+  its cause, and goes to the owner (via the main chat's daily package) or the designer list, never guessed. Evidence
+  statuses stay those of section 5; a photo is recorded as supporting evidence beside the status, not as a new status.
+- The owner's photos of 2026-10-21 (domes): the first photo review; the owner says the chalet has no domes.
