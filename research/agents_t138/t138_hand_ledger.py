@@ -29,6 +29,23 @@ def kgm(d_mm):
 
 COVER_M = 0.070  # ST7757.pdf p.8 general note 22: 7 cm in concrete against soil (worded "not less than")
 STIRRUP_D = 8
+# ST7757.pdf p.8 general note 9 (r2): lap length of the bars ("Development Length") not less than 70 x bar diameter in
+# tension zones and 40 x bar diameter in compression zones. Which zone a ground-beam / strap bar end or splice is in is
+# not printed, so every lap / development length is a 40 d .. 70 d RANGE and stays HELD (never a practice value).
+DEV_K = (40, 70)
+STOCK_M = 12.0  # URBAN-REBAR-NET-AND-PROCUREMENT@v1 parameters.stock_length_m
+
+
+def band_of(oid):
+    """band key of a span occurrence id: GSO-<band>-<n> -> <band>."""
+    return oid[4:].rsplit("-", 1)[0]
+
+
+def dev_range_kg(bars, ends=1):
+    """kg of one development / lap length on every bar of a set, at 40 d and at 70 d (note 9)."""
+    lo = sum(n * DEV_K[0] * d / 1000.0 * kgm(d) for _, n, d in bars) * ends
+    hi = sum(n * DEV_K[1] * d / 1000.0 * kgm(d) for _, n, d in bars) * ends
+    return lo, hi
 
 # ---- p.13 ground-beam sections (count notation = released; spacing notation = Q-71) --------------------------------
 # longitudinal sets as printed: (name, count, dia)
@@ -188,6 +205,8 @@ def run(write=True):
     T = {"rel": 0.0, "held_lo": 0.0, "held_hi": 0.0, "s5": 0.0, "stir_A": 0.0, "stir_B": 0.0, "stir_C": 0.0,
          "stir_n_A": 0, "stir_n_B": 0, "stir_unq": 0, "through": 0.0, "gb_rel": 0.0, "sb_rel": 0.0}
     agree = differ = notm = 0
+    SPAN = {}
+    bar_end_rows = {}
     for oid in sorted(HAND):
         r = s5[oid]
         ent = HAND[oid]
@@ -223,6 +242,8 @@ def run(write=True):
         if L is None:
             status, why = "HELD", "bar run not established (S5 BLOCKED, not re-measured)"
         det = defined[0] if defined else None
+        SPAN[oid] = {"spans": spans, "L": L, "defined": defined, "cands": cands, "released": released,
+                     "status": status}
         if L is not None and det:
             for name, n, d in DETAILS[det]["bars"]:
                 kg = n * L * kgm(d)
@@ -276,12 +297,13 @@ def run(write=True):
         if "EXT" in cands:
             rows.append({"member": oid, "family": "GROUND_BEAM", "component": "SIDE 2 T12 @ 300", "count": "",
                          "dia_mm": 12, "length_m": "", "kg": "", "held_kg": "", "status": "HELD (unquantified): "
-                         "depth FOLLOW ARCH not printed; spacing count Q-71", "detail": "/".join(cands),
-                         "length_basis": "", "note": ""})
-        rows.append({"member": oid, "family": "GROUND_BEAM", "component": "BAR ENDS (development / hooks)",
+                         "depth FOLLOW ARCH not printed; spacing count Q-71; p.8 note 21 adds side bars 2 / 3 / 4 "
+                         "T12 by beam width only where the depth is over 60 cm (width-to-count key not printed)",
+                         "detail": "/".join(cands), "length_basis": "", "note": ""})
+        bar_end_rows[oid] = len(rows)
+        rows.append({"member": oid, "family": "GROUND_BEAM", "component": "BAR ENDS (development 40d..70d, note 9)",
                      "count": "", "dia_mm": "", "length_m": "", "kg": "", "held_kg": "",
-                     "status": "HELD (unquantified): no ground-beam anchorage detail", "detail": "", "length_basis": "",
-                     "note": why})
+                     "status": "", "detail": "", "length_basis": "", "note": why})
     for band, col, ln, det in THROUGH:
         for name, n, d in DETAILS[det]["bars"]:
             rows.append({"member": f"through {col} ({band})", "family": "GROUND_BEAM", "component": name, "count": n,
@@ -291,6 +313,55 @@ def run(write=True):
         T["through"] += per_metre(det) * ln
         T["rel"] += per_metre(det) * ln
         T["gb_rel"] += per_metre(det) * ln
+    # ---- r2: bar-end development (note 9, 40 d .. 70 d, HELD) and the procurement laps of runs over 12 m stock ---------
+    through_bands = {b for b, _, _, _ in THROUGH}
+    T.update(dev_rel_lo=0.0, dev_rel_hi=0.0, dev_held_lo=0.0, dev_held_hi=0.0, dev_unq=0, proc_lo=0.0, proc_hi=0.0)
+    by_band = {}
+    for oid in sorted(SPAN):
+        by_band.setdefault(band_of(oid), []).append(oid)
+    for band, oids in by_band.items():
+        oids = sorted(oids, key=lambda o: int(o.rsplit("-", 1)[1]))
+        for k, oid in enumerate(oids):
+            sp = SPAN[oid]
+            r = rows[bar_end_rows[oid]]
+            if band in through_bands:
+                ends = (1 if k == 0 else 0) + (1 if k == len(oids) - 1 else 0)
+                where = "run ends only (bars continue through the interior columns, p.13)"
+            else:
+                ends = 2 * len(sp["spans"]) if sp["spans"] else 2
+                where = f"{ends} ends: bars stop at every support of this span" + (
+                    " and at the column the span is cut by" if sp["spans"] and len(sp["spans"]) > 1 else "")
+            if not sp["defined"] or sp["L"] is None or len(sp["defined"]) != len(sp["cands"]):
+                T["dev_unq"] += 1
+                r.update(count=f"{ends} ends", status="HELD (unquantified): bars of the span not established "
+                         "(candidate with no project detail or run not re-measured); bend / hook shape D-36")
+                continue
+            lo = min(dev_range_kg(DETAILS[c]["bars"], ends)[0] for c in sp["defined"])
+            hi = max(dev_range_kg(DETAILS[c]["bars"], ends)[1] for c in sp["defined"])
+            key = "dev_rel" if sp["released"] else "dev_held"
+            T[key + "_lo"] += lo
+            T[key + "_hi"] += hi
+            r.update(count=f"{ends} ends", held_kg=f"{lo:.3f} .. {hi:.3f}" if ends else "0",
+                     status="HELD: development length 40 d (compression) .. 70 d (tension), ST7757 p.8 note 9, zone "
+                            "not printed; bend / hook shape at the end not detailed (D-36)"
+                            + ("" if sp["released"] else "; the span's own bars are HELD"),
+                     length_basis=where)
+        if band in through_bands:
+            run_len = sum(sum(SPAN[o]["spans"]) for o in oids) + sum(ln for b, _, ln, _ in THROUGH if b == band)
+            laps = math.ceil(round(run_len / STOCK_M, 9)) - 1
+            if laps > 0:
+                det = "EXT"
+                lo, hi = dev_range_kg(DETAILS[det]["bars"], laps)
+                T["proc_lo"] += lo
+                T["proc_hi"] += hi
+                nb = sum(n for _, n, _ in DETAILS[det]["bars"])
+                rows.append({"member": f"band {band} continuous run", "family": "GROUND_BEAM",
+                             "component": "PROCUREMENT_WEIGHT_INCL_LAPS (laps only)", "count":
+                             f"{nb} bars x {laps} lap", "dia_mm": 16, "length_m": round(run_len, 3), "kg": "",
+                             "held_kg": f"{lo:.3f} .. {hi:.3f}", "status": "HELD: procurement, not net; run over the "
+                             f"{STOCK_M:g} m stock -> {laps} lap per bar, lap 40 d .. 70 d (p.8 note 9, zone not "
+                             "printed); net weight unchanged", "detail": det, "length_basis":
+                             "spans + interior columns of the continuous released run", "note": ""})
     # straps
     sb_rows = {}
     for mark, s in STRAPS.items():
@@ -324,6 +395,19 @@ def run(write=True):
                      "length_basis": "drawn strap band", "note": ""})
         T.setdefault("sb_ext", 0.0)
         T["sb_ext"] += ekg
+        sbars = [("TOP", r0["top"][0], r0["top"][1]), ("BOTTOM", r0["bottom"][0], r0["bottom"][1])]
+        dlo, dhi = dev_range_kg(sbars, 2)
+        k = "sb_dev_held" if conflict else "sb_dev_rel"
+        T[k + "_lo"] = T.get(k + "_lo", 0.0) + dlo
+        T[k + "_hi"] = T.get(k + "_hi", 0.0) + dhi
+        per_end = max(DEV_K[1] * d / 1000.0 for _, _, d in sbars)
+        rows.append({"member": mark, "family": "STRAP_BEAM", "component": "BAR ENDS (development 40d..70d, note 9)",
+                     "count": "2 ends", "dia_mm": "", "length_m": "", "kg": "", "held_kg": f"{dlo:.3f} .. {dhi:.3f}",
+                     "status": "HELD: development into the footings 40 d .. 70 d (ST7757 p.8 note 9, zone not "
+                               "printed); bend / hook shape not detailed (D-36)",
+                     "detail": "", "length_basis": "past each footing face", "note":
+                     f"cross-check: drawn band runs {ext / 2:.3f} m past each face after cover; 70 d of the largest "
+                     f"bar = {per_end:.3f} m ({'fits' if ext / 2 >= per_end - 1e-9 else 'does NOT fit'})"})
         qa, qb, qc = q71(L, r0["links_per_m"], per_metre=True)
         core = link_core(r0["b"], r0["h"])
         T["stir_n_A"] += qa
@@ -360,6 +444,14 @@ def fixture():
     return round(a, 3), round(L, 3), round(b, 3), (qa, qb, round(qc, 3)), (sa, sb_, round(sc, 3))
 
 
+def fixture_r2():
+    """r2 fixture (non-Alsenan): strap A's 8 T16 developed at both ends, 40 d .. 70 d: 2 x 8 x 0.64 .. 1.12 x 1.580247 =
+    16.182 .. 28.318 kg; laps of continuous runs: 12.00 m -> 0, 12.01 m -> 1, 25.0 m -> 2, 24.0 m -> 1 (exact multiple)."""
+    lo, hi = dev_range_kg([("TOP", 4, 16), ("BOTTOM", 4, 16)], 2)
+    laps = [math.ceil(round(x / STOCK_M, 9)) - 1 for x in (12.0, 12.01, 25.0, 24.0)]
+    return round(lo, 3), round(hi, 3), laps
+
+
 if __name__ == "__main__":
     T, rows, sb = run()
     f = fixture()
@@ -370,7 +462,15 @@ if __name__ == "__main__":
     print(f"HELD longitudinal range kg {T['held_lo']:.2f} .. {T['held_hi']:.2f} (+ unquantified candidates)")
     print(f"HELD links: count A {T['stir_n_A']} / B {T['stir_n_B']}; core-path kg A {T['stir_A']:.2f} / B "
           f"{T['stir_B']:.2f} / C {T['stir_C']:.2f} (where the depth is printed); {T['stir_unq']} spans unquantified")
-    print(f"HELD strap bars over footings 0 .. {T['sb_ext']:.2f} kg")
+    print(f"HELD strap bars over footings 0 .. {T['sb_ext']:.2f} kg (drawn band, information only)")
+    print(f"HELD development 40d..70d (note 9): ends of released GB bars {T['dev_rel_lo']:.2f} .. "
+          f"{T['dev_rel_hi']:.2f}; ends of held GB bars {T['dev_held_lo']:.2f} .. {T['dev_held_hi']:.2f}; "
+          f"{T['dev_unq']} spans unquantified; released straps {T['sb_dev_rel_lo']:.2f} .. {T['sb_dev_rel_hi']:.2f}; "
+          f"SB2 {T['sb_dev_held_lo']:.2f} .. {T['sb_dev_held_hi']:.2f}")
+    print(f"HELD procurement laps (runs over {STOCK_M:g} m, PROCUREMENT_WEIGHT_INCL_LAPS) {T['proc_lo']:.2f} .. "
+          f"{T['proc_hi']:.2f} kg; net released stays {T['rel']:.2f}")
     print(f"frozen S5 known: ground beams {T['s5']:.2f}, straps {T['s5_sb']:.2f}")
     print("straps:", {k: (round(v[0], 3), None if v[1] is None else round(v[1], 3)) for k, v in sb.items()})
-    print("fixture:", f)
+    f2 = fixture_r2()
+    assert f2 == (16.182, 28.318, [0, 1, 2, 1]), f2
+    print("fixture:", f, "r2:", f2)
