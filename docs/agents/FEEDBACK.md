@@ -34,6 +34,33 @@ or only partly compared; FAILED = did not deliver. Recurring causes decide the n
    commit. Decision: board-only handoffs are verified as hand evidence (the verifier re-reads the cited notes), and the
    next task on the topic writes the files (T-117); a run with no line stays a NEEDS FIXING item for the owner's setting.
 
+## 2026-10-21 04:10 (lead run)
+
+- **T-131 r2 ARCH_TAKEOFF_V3.0 skeleton**: WORKED. MERGED b1a6d6d (02:30): 217 differing lines = 217 ledger rows, 1333
+  byte-identical; candidate straps 3.390 vs 3.3925 m3 (-0.07 %). Decision: T-133 / T-134 claimable now; T-142 queued.
+- **T-136 footing steel**: PARTIAL (by design). MERGED 6d532c5; 874.86 kg released, 2.74 .. 2.84 t HELD on Q-71
+  (checker re-measured F2 76.73 / F6 92.05 kg). Decision: wiring in T-142; Q-71 stays today's owner package.
+- **T-102 beam section cuts**: WORKED (recorded 02:10). MERGED a606124.
+- **T-130 coverage registry 1.1.0**: FAILED the exactness gate. 3 families called NOT_IMPLEMENTED have merged, tested
+  code (excavation, formwork, balcony membrane); lintels and slabs INTEGRATED without hand evidence. Cause: status
+  derived from released-run output only, not from a code search. Decision: T-130 r2 with a test that no NOT_IMPLEMENTED
+  family has an emitting module; T-140 waits for it.
+- **T-137 membrane coverage proof**: WORKED. MERGED 18913db; checker hand cases 0.2500 / 0.52 m2 residues = prover.
+  Learned: R-07's strip bound overstates by one; internal corners double-need 0.2066 / 0.4514 m2 (already counted as
+  corner pieces). Decision: attach as evidence in T-142.
+- **T-111 stairs ledger**: WORKED. MERGED c0e8443; main stair 5.011 -> 4.920 (owner basis) / 4.746 (drawn) vs 8.131 m3,
+  ENGINE_RIGHT; found the slab under the winders in no line (0.230 .. 0.250, HELD). Gaps: roof-slab lines vs T 16
+  landings not traced. Decision: stair figures into T-133 (g); landing trace added to T-139.
+- **T-127 pool-court soffit**: WORKED. MERGED 5315d48; 12.834 m2 net = checker; five places 44.446 m2; freelancer pool
+  ceiling 19.154 (+49.2 %) ENGINE_RIGHT; finish HELD (no note anywhere, Q-68 C). Decision: area lines in T-142.
+- **T-138 ground-beam / strap steel**: PARTIAL -> REJECTED (no-assumptions gate). 1,479.86 kg confirmed; laps / development
+  "HELD, no detail" although ST p.8 note 9 prints 70 d / 40 d; no procurement for runs > 12 m (18.57 m). Cause: the
+  general notes page was not read for laps. Decision: T-138 r2 (range 40 d .. 70 d HELD, procurement line), then T-141
+  (span splitter V2: three S5 defects, +3.7 % on released spans); R-10 to the scout.
+- Recurring: silent runs (5 of 9 slots left no line, 2-4 min each; worker 3 three in a row, likely nothing claimable
+  in lane I while T-133 / T-134 still read "waits for T-131"). Decision: lane I made claimable; owner setting stays
+  under NEEDS FIXING.
+
 ## 2026-10-21 02:10 (lead run)
 
 - **T-102 beam spans settled by printed section cuts**: WORKED. MERGED a606124 (verifier run started 01:49). Beam

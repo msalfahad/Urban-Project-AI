@@ -1,5 +1,50 @@
 # Lead reports to the owner's main chat (newest first, last 10 entries)
 
+## LEAD REPORT 2026-10-21 04:20 UTC
+
+Repositories: Urban-Project-AI cloned (agents/control, full clone); working branch head 5315d48 (six verifier merges
+since 02:10, no owner-session commits). Drive readable, no new project files. UrbanProjectsManager not needed this run.
+
+PROGRESS (Alsenan; released concrete still 92.77 vs freelancer 111.81 m3, -17.0 %; no released number moved)
+- The V3.0 candidate is merged (opt-in): every one of the 217 lines that differ from the released method carries its
+  before / after row, the other 1333 lines are identical; straps in it 3.390 vs his 3.3925 m3 (-0.07 %). This opens the
+  wiring of every checked piece (columns -2.268 m3, blinding, landing / arrival once, beams, stairs): day-7 on track.
+- Checked and merged: stairs flight by flight, main stair 4.920 m3 (your method) / 4.746 (drawn) vs his 8.131 (-39.5 %,
+  engine right: his 5.3 m flights are on no drawing); pool-court soffit 12.834 vs his 19.154 m2 (+49.2 % his side, engine
+  right), all soffits over outside air 44.446 m2, finish held (no note on any sheet); footing steel 0.875 t released
+  + 2.74 .. 2.84 t held on Q-71; membrane: 688 strip layouts proven to leave no bare surface, roll counts unchanged.
+- Sent back: ground-beam and strap steel (1.480 t net confirmed by the checker, but the 40 d / 70 d lap and development
+  lengths printed in the structural general notes were not used and bars over 12 m stock had no procurement line); the
+  coverage registry (three families called "not implemented" have merged code). Both reworks are first in their lanes.
+- Learned: on an unmarked ground-beam plan the span length picks the section, so the old splitter's three missed
+  columns change the bars, not only the length (+3.7 % on released spans): a new splitter task is on the board.
+- Missing: slab under the main-stair winders (0.23 .. 0.25 m3, in no line, held); plaster / paint both methods, block
+  m2 and blocks per type (gate 2); slabs panel by panel and column heights by hand (gate 3).
+
+TEAM HEALTH (slots 02:19 - 03:59 and my 02:09 run)
+- Code ran fully (STARTED + SUCCESS, five self-check steps PASS): worker 2 02:39, worker 1 03:19, verifier 03:49 (its
+  t061 test was refused twice "[Code from External]" and then ran); Lead 02:09.
+- INCOMPLETE, no line at all (cause NOT KNOWN; 2-4 min where the scheduler shows it): worker 1 02:19, verifier 02:49,
+  worker 3 02:59 and 03:59, worker 2 03:39. 4 of 9 slots = 44 % (was 56 %, target 90 %).
+- What I did: worker 3 has not closed a run since 01:45, and its integration lane had nothing claimable (the two wiring
+  rows still said "waits for V3.0"): both are now marked claimable, with the registry rework first; every lane holds
+  3-4 TODO; the scout has a new request on laps and stock lengths.
+
+QUESTIONS FOR OWNER
+No new question this run. Still open: Q-71 (footing bars printed "per metre": A 2,742.51 kg, B 2,836.40 kg recommended,
+C 2,797.81 kg for the five footings), asked at 02:15 as today's package. The laps in the steel rework need no question:
+the structural notes print them; the zone is not printed, so they go in as a held 40 d .. 70 d range.
+
+NEEDS FIXING
+- Run reliability (P-01, 44 %): the same fix is yours: run Test B yourself and approve the repo-attached configuration.
+  Tried: lane stocking, claimable rows for every lane, NO REPO CODE rows for refused runs.
+- Kuwait specification chapters (07100, 09200, 09300, 09400, 09900) as PDFs under 6 MB (soffit finish, Q-68 C).
+- Designer requests to forward when you choose: D-33 .. D-38 (ground beams / straps), D-31, D-32 and earlier in
+  DESIGNER_CLARIFICATIONS.md.
+
+Team ids: MERGED T-131 r2, T-102, T-136, T-137, T-111, T-127; REJECTED -> TODO r2 T-130, T-138; claimable T-133, T-134;
+new T-141 (S), T-142 (I, queued after T-133), T-143 (A); R-10; Q-71 open.
+
 ## LEAD REPORT 2026-10-21 02:15 UTC
 
 Repositories: Urban-Project-AI cloned (agents/control); working branch head a606124 (one verifier merge since 00:15, no
@@ -519,86 +564,3 @@ NEEDS FIXING
 For the team: MERGED T-096, T-098; REJECTED T-097, T-056 -> rework T-105; READY T-099, T-016a, T-091 (verifier order);
 CLAIMED T-103 (worker 3); new TODO T-105, T-016b, T-106, T-014 (T-015 folded in), T-104 promoted; T-101 after T-105;
 11 TODO (1 Track B).
-
-## LEAD REPORT 2026-10-20 08:20 UTC
-
-Repositories: Urban-Project-AI cloned (control; working branch head c874c7b, only checker merges since 06:20, no
-owner-session commits); Drive readable (nothing new in the Alsenan folder). UrbanProjectsManager not needed this run.
-
-PROGRESS (Alsenan)
-- Waterproofing: the fix for the uncovered parapet-step upturn on the second-floor roof is built (new method version,
-  waits for the checker): the 0.84 m2 is now covered by a 4.60 m strip, that roof's count is shown as 17 or 18 rolls until
-  you answer the trim question, and only 1 of 578 BOQ lines changes. The hand plan of every wet room confirms 19 rolls
-  (strips 122.50 vs 122.99 m, -0.4 %; 21 rolls with the pantry). Roof area still 204.11 vs 285.00 m2 (-28.4 %).
-- Concrete: the beam fix is now read by a new concrete ledger (waits for the checker): beams 68.84 vs freelancer 65.97 m3
-  (was 64.82, -1.7 %; now +4.4 % on the released part), +4.018 m3 each checked by hand (the earlier +4.30 counted one ring
-  piece twice). The beam line is still not compared: 18 pieces are held (4.25 - 9.18 m3). Two are settled by printed
-  sections (1.91 m3, tasked); the other 16 are drawing contradictions or unmarked pieces: asked you (Q-61). Released
-  concrete unchanged at 92.77 vs 111.81 m3 (-17.0 %).
-- Checker confirmed foundation straps 3.390 vs freelancer 3.3925 m3 (-0.07 %, engine right); not yet in the released run.
-- Started this run: blockwork, never measured so far (old estimate about 140 m short, -36.5 %): wall metres per floor and
-  thickness by hand and in code; block m2 needs your height answer (Q-60). Blinding: values read off the drawings give
-  22.16 m3 against the freelancer's 47.06 m3 (-52.9 %), the largest concrete difference left: hand reading tasked.
-- Stairs (new piece, waits for the checker, built in 11 minutes at 08:13): main stair 5.011 m3 in code = the hand-checked
-  figure (freelancer 8.131, -38.4 %), entrance steps 0.357 vs 1.411 m3 (its sloping slab is not printed: held), round
-  stair held on your answers; 15 held lines named, none 0.
-- Still held: plaster 1151.14 / paint 1191.13 m2 (your beam, annex, door-height, ceiling answers), tile counts (no printed
-  tile size), stairs round / winder (your answers).
-- Learned: a new ledger version carries the holds of the one beneath it, so its total can drop while one item rises
-  (229.57 vs 236.27 m3 over all concrete items); each ledger is now judged against the released run.
-- Gates: 0 done; 1 at risk (roof count fix waits for the checker and Q-58); 2 started (blockwork now on); 3 started; 4 started.
-
-TEAM HEALTH
-- Code runs that PASSED all five self-check steps since 06:20: worker 1 07:50 (beam ledger), worker 3 07:52 (membrane
-  fix), verifier 06:57 (merged three).
-- Refused: worker 2 07:06 (environment: "[Code from External]"; it still delivered the wet-room hand plans), worker 2 07:43
-  (clone: "[Untrusted Code Integration]", nothing claimed, the board too big to edit through the connector), verifier
-  07:58 (install and map check: "[Code from External]"; three tasks wait). Worker 1's 06:19 run left no log line and no
-  push. Done by me: BOARD.md cut from 375 KB to 80 KB (closed rows to BOARD_ARCHIVE.md, the dashboard reads both) so a
-  refused run can claim and log through the connector; verifier order set (membrane fix, wet-room plans, beam ledger);
-  four hand tasks on the board for refused runs. Worker 3 08:14 (self-check PASS): stair concrete delivered. Scout next run 23:50 UTC
-  (new request: wall centrelines from double-line walls).
-
-QUESTIONS FOR OWNER (13 open, all no-assumption questions; Q-50 to Q-59 are in earlier entries and OWNER_QUESTIONS.md)
-1. NEW Q-60 Blockwork: up to which height is a block wall measured? Problem: block m2 = metres x height, and no confirmed
-   Urban rule gives the height (your 21:40 rule is for plaster and stops at the decor ceiling, blocks go up to the beam or
-   slab). Where: Drive Alsenan, ST7757.pdf beam schedules (column H) and the GF / 1F roof slab plans; p7757_arch_sheet03.pdf
-   (GF walls); p7757_arch_sheet10.pdf (levels: 4.50 m GF to 1F, 4.20 m 1F to 2F). Options per 10 m of 0.20 m GF wall:
-   (A) each wall to the underside of what sits on it: under a 20 x 75 beam 4.50 - 0.75 = 3.75 m -> 37.5 m2, under slab only
-   4.50 - 0.16 = 4.34 m -> 43.4 m2; (B) one height per floor, slab to slab - 0.60 m: GF 3.90 m -> 39.0 m2 (1F 3.60 m);
-   (C) slab to slab minus the slab only: GF 4.34 m -> 43.4 m2 everywhere (1F 4.04 m). Recommendation: A (the beam is concrete
-   and already counted, so the block stops under it; practice, not a code clause); a wall whose beam above is not drawn
-   stays held; parapets from the printed section only.
-2. NEW Q-61 Beam pieces the structural drawings contradict or leave unmarked: hold, or count the bigger reading as
-   provisional? Problem: beams 68.84 vs freelancer 65.97 m3, but 16 pieces (besides 2 settled by sections) are held, so the
-   beam line cannot be compared. Where: Drive Alsenan, ST7757.pdf, GF and 1F roof slab plans and beam schedules:
-   (1) 1F CB10, schedule 0.25 x 0.50 but drawn 0.30 wide: 0.744 or 0.893 m3; (2) GF CB3 span 2 also labelled "B3 (With
-   Stair)": 0.212 - 0.610; (3) two 1F dome-ring pieces (plan B4 20 x 50 vs dome detail) and the GF void ring piece:
-   0.316 - 0.527; (4) six spans past a column with no label: 1.00 - 2.44; (5) the 0.20 m strips north of B23 / B20 whose own
-   sections show no concrete: 0.56 - 1.69; (6) 1F west outer strip, SE box, strip outside CB12: 1.41 - 3.02; together
-   4.25 - 9.18 m3. Options: (A) hold all and list them as designer questions in the BOQ (visible, never 0), beam line
-   compared without them; (B) as your footing F10 answer: hold, but count the bigger reading as PROVISIONAL where a figure
-   is needed (+9.18 m3, beams about 78.0); (C) you rule piece by piece. Recommendation: A for (2), (4), (6) (no mark at
-   all); C for (1) printed schedule width 0.744 and (5) not beams (their own section shows no concrete); (3) the plan's
-   printed B4 size under your Q-44 answer (practice, not a code clause).
-3. NEW Q-62 Stairs: the last riser of each flight sits inside the slab or landing it arrives on: in the stair, in the
-   slab, or both? Problem: your Q-20 answer says no concrete is counted twice, but the stair figures of your Q-46 / Q-47
-   answers include that wedge, which the slab line also counts: at most 0.163 m3 on Alsenan (main stair 0.030 + 0.030,
-   entrance 0.071, lobby 0.032). Where: Drive Alsenan, ST7757.pdf, section A-A and the "T 16" stair panels, where the top
-   flight meets the +4.50 slab and the +3.50 landing. Options: (A) each flight up to the face of the slab or landing it
-   arrives on: main stair 5.011 -> 4.951 m3, all stairs -0.163; (B) keep the stair at 5.011 and take the wedge out of the
-   slab / landing line; (C) count it in both (today, 0.163 m3 twice). Recommendation: A (slabs and landings are measured
-   full anyway, so the flight stops at their face; practice, not a code clause).
-Note: the open list is long (13); every one stops an assumption.
-
-NEEDS FIXING (only you can do it)
-1. Code runs are still refused at random (3 of 6 since 06:20, one run silent). Already done: board shrunk so refused runs
-   can still claim and log, hand tasks for refused runs, verifier order. The one thing to do: option 2 of
-   docs/agents/EXECUTION_PERMISSIONS.md section 5 (run the four coding agents as Claude Code scheduled tasks with
-   Urban-Project-AI attached), and check each task's settings for automatic approval.
-2. Upload the Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as separate PDFs under 6 MB (repeat).
-
-Team line: MERGED T-094, T-064, T-073 (06:55); READY T-096, T-098, T-097, T-056 (verifier in that order; T-056 depth check);
-new TODO T-099, T-100, T-102, T-103, promoted T-027, T-016a (T-023, T-028 folded into T-099); queued T-101, T-104; Q-60,
-Q-61, Q-62 new; R-08 new; 10 TODO (1 Track B); BOARD_ARCHIVE.md created.
-

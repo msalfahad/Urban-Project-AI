@@ -15,6 +15,17 @@ practice turn 'T d @ s' into a bar count (end bars, first bar at cover or at s/2
 implies when its notes are silent; test cases (tables with merged and empty cells). Unblocks T-136 (footing steel), then
 T-009 (columns, beams).
 
+### R-10 Laps, development lengths and stock-length splicing in a bar schedule when the drawing gives only a rule (lead 2026-10-21 04:10)
+Problem: the ground-beam / strap steel ledger was sent back because the structural general notes print only "development
+length >= 70 d (tension) / 40 d (compression)" and the drawing does not say which bar is in which zone; continuous bars
+run up to 18.57 m against 12 m stock. Gap: 1,479.86 kg net confirmed by the checker, but the procurement weight (laps at
+splices, development at ends) is missing on every run over 12 m, and route G once carried 4,101.77 kg provisional
+ground-beam steel with practice anchorage. Look for: how BS 8666 / ACI 315 / bar-bending-schedule tools compute laps
+and splice counts for runs longer than stock (splice positions, staggering, minimum lap when the zone is unknown),
+how estimators report a lap RANGE when tension / compression zones are not printed, permissive code that splits runs
+into stock lengths with laps, and test cases. Unblocks T-138 r2 (ground beams and straps), T-141 (span splitter) and the
+footing / slab steel lines in V3.0.2.
+
 ## Answered
 
 ### R-06 Arabic and English finishing notes and room tags on SCANNED villa plans (lead 2026-10-20 00:30)
