@@ -16,6 +16,12 @@ New file `rules/coverage/BOQ_FAMILY_MASTER_1.1.0.json`; `1.0.0` untouched. Nothi
 4. Vocabulary kept (six states); definitions written into the file. INTEGRATED_AND_TESTED now also requires that no
    verifier-confirmed defect or unwired verified correction touches the released path.
 
+The rule store admits only files its manifest lists (tests/m9_kb/test_kb_registry.py
+`test_the_rule_store_gains_no_file`; the full suite caught this on the first commit): 1.1.0 is registered as an AUTHORED
+file (`tools/m9_rules_manifest.py:31`, one tuple entry) and `rules/RULES_MANIFEST.json` rebuilt with
+`tools/m9_rules_manifest.py build` (only the new entry is added; copies, exports and rule-set digests unchanged).
+Regenerating 1.1.0 therefore needs the same manifest rebuild.
+
 Builder: `build_master.py` (checks every file:line exists and every commit with git; exits 1 otherwise); run
 summaries: `summ.py`; candidate runs: `run_facts.py`. They need the Drive DXFs in a scratch folder; nothing from Drive
 is in the repository.
