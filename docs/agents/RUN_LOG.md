@@ -16,6 +16,7 @@ Older entries: docs/agents/archive/ (the main chat archives entries older than a
 
 ## Entries
 
+- 2026-10-21 12:13 UTC | Lead | STARTED | run session_01CuxXJvR1gzY3Hk6WsTRmL1 | repo msalfahad/Urban-Project-AI, branch agents/control | task state: board | report pending
 - 2026-10-21 12:07 UTC | Worker 2 | SUCCESS | T-147 READY 14709c9 | run unknown. Alsenan ceilings by room (Q-57 A mod): horizontal decor 388.14 vs freelancer 409.58 m2 (-5.2 %); the GF light well 23.24 + stair strips 2.45 he ceils, 1F dome openings 29.07 HELD, 1F void ceiling he omits; owner-method bulkhead faces 32.78 m2, drawing-derived 175.76 PROVISIONAL, 58.11 m held (Q-61 C); wet board, coves, drops HELD. No owner question. | self-check clone PASS, venv PASS, codemap check PASS (stale none), t061 PASS (20), freeze PASS (0); problem: none
 - 2026-10-21 11:40 UTC | Worker 2 | STARTED | run unknown | repo msalfahad/Urban-Project-AI, branch agents/control | task state: none yet | self-check pending
 - 2026-10-21T10:49Z | CONFIG TEST B | BLOCKED | agents/config-candidate | 1 PASS, 2 PASS, 3 PASS, 4 PASS, 5 FAIL (clone blocked; push --dry-run HEAD:main ran, nothing pushed) | clone: 'Permission for this action was denied by the Claude Code auto mode classifier. Reason: [Untrusted Code Integration].'; push dry-run: none (not refused; session started on claude/config-test-b-wy8ptp so the branch's .claude/settings.json deny rules and SessionStart hook were not loaded)
