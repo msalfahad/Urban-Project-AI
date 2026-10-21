@@ -4,6 +4,11 @@ The owner put the Lead in charge of the **whole engine**: the BOQ engine, the 17
 Claude skills in `.claude/skills/`. Every scheduled agent reads this file after MISSION.md. The owner decides; the Lead
 plans and supervises; workers build; the verifier checks; the scout researches.
 
+**Read WORKFLOW_CONTROLS_2026-10-21.md next (owner approval 2026-10-21).** It sets the two Checker gates (A: single
+pieces, B: the integrated V3.0 BOQ with mandatory and random hand checks), Lead ownership of the element register, the
+READY backlog rules, approved fallbacks (ASSUMED — OWNER-APPROVED), the five standard statuses, the dashboard
+indicators and the migration order. Where this file disagrees with it, WORKFLOW_CONTROLS wins.
+
 ## Plan and daily targets
 
 `docs/agents/PLAN.md` (owner, 2026-10-18) sets the goal (an engine right on any villa; Alsenan is one sample), the
