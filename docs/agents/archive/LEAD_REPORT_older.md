@@ -1,3 +1,59 @@
+## LEAD REPORT 2026-10-21 06:30 UTC
+
+Repositories: Urban-Project-AI cloned (agents/control, full clone); working branch head 0dec24c (one verifier merge since
+04:10, no owner-session commits). Drive readable, no new project files. UrbanProjectsManager not needed this run.
+
+PROGRESS (Alsenan; released concrete still 92.77 vs freelancer 111.81 m3, -17.0 %; no released number moved)
+- Checked and merged: ground-beam and strap steel 1.480 t net (unchanged), now with the lap / development rule printed in
+  the structural notes as a HELD range 0.647 .. 1.195 t and stock-length splices 0.018 .. 0.032 t (the drawing does not
+  say which bars are in tension, so a range, not a guess); his 5.8 t is a lump, not comparable.
+- Built by hand, waiting for the checker (06:49): suspended slabs, 62 panels: 60.280 m3 vs engine 60.966 (+1.1 %) vs his
+  59.817 (+0.8 %); every panel agrees with an engine face to 0.002 m2, the engine's extra 0.686 m3 is 13 faces that are
+  not slab; the held 2.740 m3 face is the west dome opening and its ring, not slab.
+- Plaster / paint by both methods for every room (gate 2): your method GF 391.17 / 1F 375.03 / 2F 107.92 m2; the
+  drawing-derived heights are 0.44 .. 0.54 m higher everywhere (your 0.60 m beam allowance vs the 0.16 m slab), whole
+  house 1,150.62 .. 1,177.59 vs his 1,209.39 m2 gross (-4.9 .. -2.6 %); wet-wall tile 483.44 vs his 433.83 m2 (+11.4 %,
+  his is one flat 3.00 m figure). Nets wait on 18 window heights and arch heads.
+- Learned: every room under a roof has the annex's level problem (roof slab level and build-up not printed); crossing
+  beams make bulkheads, a ceiling item; a slab face should be released only with slab evidence.
+- Added: window heights from elevations and sections (to measure the nets), ceilings room by room under your Q-57 answer
+  (a category with no quantity yet), the slab leftovers (a beam span with a 0.296 m3 register gap, sunken-slab edges),
+  and "slab only with slab evidence" queued for the candidate. Designer requests D-39 (roof levels and build-up), D-40
+  (ceiling levels, floor build-up), D-41 (sunken-slab drops).
+
+TEAM HEALTH (slots 04:09 - 05:49)
+- Code ran fully (STARTED + SUCCESS, five self-check steps PASS): worker 1 04:19 and 05:19, verifier 04:49; Lead 04:09.
+- Worker 3 05:00 SUCCESS but without code: clone of the working branch, venv, codemap, t061 and freeze check refused
+  "Permission for this action was denied by the Claude Code auto mode classifier. Reason: [Code from External]."; it
+  correctly took a hand-only task. Its 06:00 run passed the self-check and is on the registry rework.
+- INCOMPLETE, no line at all (cause NOT KNOWN): worker 2 04:39; verifier 05:49 (fired 05:50, ended 05:54, while two
+  results waited for it). 5 of 7 finished slots = 71 % (was 44 %, target 90 %).
+- What I did: nothing on the board explains the two silent runs (both had work available); the 06:49 checker run has
+  both results first in its queue. Every lane holds 3 TODO.
+
+QUESTIONS FOR OWNER
+NEW Q-72 (added to today's package with Q-71; no-assumptions question; work continues with the drawing-derived value).
+THE PROBLEM: your manual plaster / paint height formula is written for rooms (beam allowance, decor ceiling, floor
+finish); the main stair shaft runs through all three storeys with no slab, beam or ceiling between them, and no rule or
+answer covers it, so its owner-method column is HELD. Wall faces: GF 11.94 m, 1F 13.38 m, 2F 14.25 m.
+WHERE TO LOOK: Drive "Alsenan chalet project", p7757_arch_sheet03.pdf / sheet04.pdf (GF / 1F plans, the stair rectangle
+with windows W01 and W13), the 2F plan, section A-A on p7757_arch_sheet10.pdf.
+THE OPTIONS (gross m2, whole shaft): (A) your room heights per storey 3.65 / 3.35 / 3.35 m: 136.14; (B) full storey
+height where no ceiling exists (GF 4.50, 1F 4.20) and the drawing height under the roof (3.79 .. 3.89, provisional until
+the roof level is known): 163.93 .. 165.35; (C) full height for GF and 1F, your 3.35 m at the top: 157.66.
+RECOMMENDATION: B: inside a shaft there is no slab band, beam or decor ceiling between storeys, so the room deductions
+do not physically occur except under the roof; landing-slab edges are deducted separately, not by lowering the height.
+Still open: Q-71 (footing bars printed per metre: A 2,742.51 / B 2,836.40 recommended / C 2,797.81 kg for five footings).
+
+NEEDS FIXING
+- Run reliability (P-01, 71 %): the fix is yours: run Test B yourself and approve the repo-attached configuration.
+  Tried: lane stocking, claimable rows in every lane, hand-only rows for refused runs.
+- Kuwait specification chapters (07100, 09200, 09300, 09400, 09900) as PDFs under 6 MB (soffit and ceiling finishes).
+- Designer requests to forward when you choose: D-39 .. D-41 new, D-31 .. D-38 and earlier in DESIGNER_CLARIFICATIONS.md.
+
+Team ids: MERGED T-138 r2; READY T-139, T-128; CLAIMED T-130 r2, T-125; new T-144 (A), T-145 (S), T-147 (A), T-146 (I,
+queued); Q-72 new, Q-71 open; D-39 .. D-41.
+
 ## LEAD REPORT 2026-10-21 04:20 UTC
 
 Repositories: Urban-Project-AI cloned (agents/control, full clone); working branch head 5315d48 (six verifier merges

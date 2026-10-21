@@ -46,11 +46,11 @@
 
 Re-estimate after each week from what actually merged into V3.0 and was verified.
 
-## Status (Lead, 2026-10-21 12:20; re-estimated each run from what merged and was verified)
+## Status (Lead, 2026-10-21 16:20; re-estimated each run from what merged and was verified)
 
 | Plan | Board | State | Note |
 |---|---|---|---|
-| P-01 | owner + auditor | in progress, AT RISK (the critical path) | Test B ran 10:23 / 10:49 on agents/config-candidate (53468f6): BLOCKED on step 5; main config not approved. Since 08:20: SUCCESS worker 1 08:19 and 10:21, worker 2 09:40 and 11:40; no record at all: checker 09:50 and 11:50 (also 05:49, 06:49, 07:49), worker 3 10:59; worker 3 08:00 BLOCKED (push refused). 4 of 7 slots = 57 % vs 90 % |
+| P-01 | owner + auditor | in progress, AT RISK (the critical path) | main config APPROVED and on main (53468f6, 11:45); case fix 1c559a8 (15:30) after the checker 13:55 and worker 1 14:27 were BLOCKED by it. Worker 1 repo-attached from 16:19; checker 15:51 is the first old-prompt run after the fix; migration order worker 1 -> checker -> worker 3 -> Lead -> worker 2 -> dashboard (this Lead run already used the attached checkout and wrapper without refusal). Slots 12:00-16:00: SUCCESS worker 3 13:00 and 15:02 (15:02 hand only), worker 2 13:40 and 15:41; BLOCKED checker 13:55, worker 1 14:27: 4 of 6 = 67 % vs 90 % |
 | P-02 | T-130 r2 (lane I) | READY bead4db, first in the checker queue | census T-140 after it |
 | P-03 | T-131 MERGED b1a6d6d; T-133 (V3.0.1) READY ec14d8b PARTIAL; T-142, T-146, T-151 QUEUED | skeleton DONE; first extension waiting for the checker | the checker must run V3.0.1 on the drawings itself |
 | P-04 | T-132 (verifier) | TODO, not started | candidate WAPE 54.65 % on 2 concrete lines, released 17.03 % on 3 (unchanged) |
@@ -58,11 +58,13 @@ Re-estimate after each week from what actually merged into V3.0 and was verified
 | P-06 | T-128, T-144 READY (lane A) | hand results waiting for the checker | drawing-derived dry net incl. shaft 976.22 .. 1,080.33 vs 1,151.14 m2; owner method on Q-72 for the shaft; 23 openings on D-45 |
 | P-07 | T-125, T-143 READY; T-108 QUEUED | gross measured, waiting for the checker | net on owner Q-73, black count on Q-75 |
 | P-08 | T-136, T-138 r2 MERGED; T-141, T-148 READY; T-149 (beams), T-152 (slabs) TODO | footings, ground beams, columns DONE as hand pieces; beams and slabs next | links / per-metre counts on Q-71 (now also columns 0.78 .. 0.83 t) |
-| P-09 | T-134 (lane I) | TODO (worker 3 has delivered nothing since 07:37) | first in lane I |
+| P-09 | T-134 (lane I) READY 7053291; Lead rulings in ELEMENT_REGISTER.md | v0 code waiting for the checker | 1,504 of 1,530 V3.0 lines linked; 6 CONFLICT elements released by convention; 1F arrival landing has no outline (T-133b) |
+| (Gate B tooling) | T-156 (lane I) TODO, backlog-permitted | new | the checker's automated diff and random-line pick for every integration package |
 | P-11 | T-147 READY (ceilings); T-150 (doors, windows) TODO | started ahead of week 3 | ceilings 388.14 vs 409.58 m2 (-5.2 %) |
-| (gate 1) | T-153 TODO | floor area room by room, 11 held spaces | |
+| (gate 1) | T-153 READY; T-157 TODO | floor area room by room: interior 376.86 .. 376.98 m2, dry like for like -0.12 %, 11 held spaces now exterior with area | V2.9 defect: side passage counted inside; outside finishes on OQ-04; garden band D-48 |
 | (gate 3 check) | T-139, T-145, T-119 READY | slabs, slab leftovers and columns by hand waiting for the checker | slabs 60.280 vs 59.817; beams 65.060 vs 65.97; columns 28.816 .. 28.979 vs 28.547 m3 |
 
 Day-7 target (2026-10-27): AT RISK on the checker only. The engineering for it (V3.0.1: columns -2.268 m3, blinding split
-into released and held lines) has been READY since 07:37; the checker has merged nothing since 05:07. If it merges
-V3.0.1 by 2026-10-24 the target holds; every extra day without the checker costs one day of the 6 days left.
+into released and held lines) has been READY since 07:37; the checker has merged nothing since 05:05. V3.0.1 is first in
+the checker's run 1 as a Gate B integration package. If it merges by 2026-10-24 the target holds; every extra day without
+the checker costs one day of the 6 days left.

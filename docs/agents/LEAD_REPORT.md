@@ -1,5 +1,70 @@
 # Lead reports to the owner's main chat (newest first, last 10 entries)
 
+## LEAD REPORT 2026-10-21 16:20 UTC
+
+Repositories: this Lead run used the attached Urban-Project-AI checkout (main 1c559a8) and the wrapper: setup, board log
+and board commit all worked, no refusal. Working branch head still 0dec24c (no merge, no owner-session commit since
+05:05). Drive not needed this run (no BLOCKED-DATA task). UrbanProjectsManager not needed.
+
+PROGRESS (Alsenan; released concrete still 92.77 vs freelancer 111.81 m3, -17.0 %; no released or measured number changed)
+- Floor area room by room, all 41 labels, none silent (gate 1): inside floor 376.86 .. 376.98 m2. Wet 85.62 vs his 72.01 m2:
+  the +13.61 is the pantry, wet by your Q-37 answer; the other 17 wet areas agree to +0.16 %. Dry like for like 337.18 vs
+  337.57 m2 (-0.12 %) once his garden band, stair treads and landings are put back. Found: the released method counts the
+  open side passage (about 5.2 m2) as inside floor. The 11 spaces held until now are outside areas with measured area:
+  courts 167.714 m2 against his yard 151.80 (scope question below); garden band 13.986 m2 conflicts (labelled garden,
+  drawn enclosed and roofed): sent to the designer, not to you.
+- Pool-court soffit fully reconciled: hand 12.834 m2 against the CAD basis 14.704 re-adds to 0.0000 m2. The CAD basis
+  holds two opening heads (1.104 m2), a glazing reveal (0.561) and wall tops (0.276) that belong to other lines, so only
+  12.834 may feed the ceiling; the two court-wall openings are recorded by no engine version (added to the doors and
+  windows task). His 19.154 m2 stays engine-right.
+- Footing bars per metre (your Q-71), by an independent recount: "/m" is drawing-confirmed as bars per metre; how a rate
+  becomes whole bars is printed nowhere; A / B / C reproduce exactly (2,742.51 / 2,836.40 / 2,797.81 kg). Option A spaces
+  bars wider than printed in all 20 rows. The earlier recommendation for B is withdrawn: facts only, you choose.
+- Element register v0 built (code): 1,504 of 1,530 candidate lines linked to stable element ids, no double finish, no double
+  concrete. It shows 6 elements (a footing 1.960 m3, 5 beams 5.022 m3 + 685 kg steel) released by a route convention no rule
+  of yours names: the checker decides; if no rule backs it, the candidate holds them.
+- Learned: a CAD area can silently contain surfaces of other trades; a room-by-room floor table is the fastest way to find
+  released-method scope errors.
+- Gates: gate 1 and gate 2 gained hand truths; none moved, because nothing was checked or merged (16 results wait).
+
+TEAM HEALTH (slots 12:30 - 16:20)
+- Code ran fully: worker 3 13:00 (element register), worker 2 13:40 and 15:41 (all self-checks PASS).
+- BLOCKED by the setup name-case bug: checker 13:55 and worker 1 14:27 (exact text: `AGENT_ENV FAIL: origin is not
+  msalfahad/Urban-Project-AI: https://github.com/msalfahad/urban-project-ai`). Worker 3 15:02 hit it too and correctly did a
+  hand-only task (no venv, t061 not run). Your main chat fixed it on main at 15:30; this run confirms the fix works.
+- No silent run in this window. 4 of 6 slots SUCCESS = 67 % (was 57 %; target 90 %).
+- Checker 15:51 is still running (first run after the fix); worker 1's 16:19 is its first repo-attached run (your main
+  chat checks it at 16:55).
+- What I did: applied your workflow controls: every READY row tagged with its delay cause (all CHECKER-RUNS, the candidate
+  also EVIDENCE); checker queue for 4 runs with both gates, the candidate extension as the first Gate B package and floor
+  area (gate 1) in run 1; only beam steel, doors / windows and a new Gate B tool task may add to the queue; element register
+  rulings for 14 elements touched by the waiting tasks; designer D-48.
+
+QUESTIONS FOR OWNER
+No new question id. One existing question re-asked with numbers, added to today's package (Q-71 .. Q-75):
+OQ-04 Outside areas: does the BOQ include finishes for the courts, porch, pool deck and side passage, beyond waterproofing?
+- Problem: the outside areas are now measured (courts 167.714 m2 = west court 138.761 incl. porch 19.181, north strip
+  21.348, pool deck 7.605; side passage 5.640 m2 if open to the air under your Q-67 A), but no rule says whether their
+  finishes are in this BOQ; all outside finishes are HELD and his yard line 151.80 m2 cannot be compared.
+- Where to look: Drive "Alsenan chalet project", GF plan (p7757_arch_sheet03.pdf): west court with porch, north strip, pool
+  deck; the freelancer workbook, yard row.
+- Options: (A) all outside finishes in the BOQ, one line per surface, 173.354 m2, material from the designer (held until
+  then); (B) none (landscape / by others), areas as information only; (C) porch and pool deck only, 26.786 m2.
+- Recommendation: A, material held on the designer: he already prices a yard, so B would make the two BOQs cover different
+  scope; A lets the 15.91 m2 difference be explained area by area. No code clause cited.
+- Still open in the package: Q-71 (now facts only, no recommendation), Q-72, Q-73, Q-74, Q-75.
+
+NEEDS FIXING
+- Nothing new needs a setting from you this run. If the checker's 15:51 run leaves no final line again, the next step is
+  moving the checker to the repo-attached way (your migration order, after worker 1's 16:19 run shows clean).
+- Still waiting: Kuwait specification chapters (07100, 09200, 09300, 09400, 09900) as PDFs under 6 MB.
+- Designer requests to forward when you choose: new D-48 (garden band and side passage: open or roofed, planter or floor);
+  D-45 .. D-47.
+
+Team ids: READY 16 (checker order run 1: T-130 r2, T-133 Gate B, T-153, T-139 + T-145; run 2: T-119, T-141, T-148, T-134;
+run 3: T-155, T-125, T-143, T-128; run 4: T-144, T-147, T-154); backlog-permitted TODO T-149 (S), T-150 (A), T-156 (I, new);
+TODO not permitted T-152 (S), T-157 (A, new); T-140 waits for T-130; D-48; OQ-04 re-asked.
+
 ## LEAD REPORT 2026-10-21 12:20 UTC
 
 Repositories: Urban-Project-AI cloned in full (agents/control); working branch head still 0dec24c (no merge and no
@@ -136,58 +201,3 @@ NEEDS FIXING
 Team ids: READY T-130 r2, T-133, T-139, T-119, T-141, T-125, T-128, T-143 (checker order); T-134 back to TODO; new
 T-148 (S); Q-73 .. Q-75 new; D-42 .. D-44; R-11 new.
 
-## LEAD REPORT 2026-10-21 06:30 UTC
-
-Repositories: Urban-Project-AI cloned (agents/control, full clone); working branch head 0dec24c (one verifier merge since
-04:10, no owner-session commits). Drive readable, no new project files. UrbanProjectsManager not needed this run.
-
-PROGRESS (Alsenan; released concrete still 92.77 vs freelancer 111.81 m3, -17.0 %; no released number moved)
-- Checked and merged: ground-beam and strap steel 1.480 t net (unchanged), now with the lap / development rule printed in
-  the structural notes as a HELD range 0.647 .. 1.195 t and stock-length splices 0.018 .. 0.032 t (the drawing does not
-  say which bars are in tension, so a range, not a guess); his 5.8 t is a lump, not comparable.
-- Built by hand, waiting for the checker (06:49): suspended slabs, 62 panels: 60.280 m3 vs engine 60.966 (+1.1 %) vs his
-  59.817 (+0.8 %); every panel agrees with an engine face to 0.002 m2, the engine's extra 0.686 m3 is 13 faces that are
-  not slab; the held 2.740 m3 face is the west dome opening and its ring, not slab.
-- Plaster / paint by both methods for every room (gate 2): your method GF 391.17 / 1F 375.03 / 2F 107.92 m2; the
-  drawing-derived heights are 0.44 .. 0.54 m higher everywhere (your 0.60 m beam allowance vs the 0.16 m slab), whole
-  house 1,150.62 .. 1,177.59 vs his 1,209.39 m2 gross (-4.9 .. -2.6 %); wet-wall tile 483.44 vs his 433.83 m2 (+11.4 %,
-  his is one flat 3.00 m figure). Nets wait on 18 window heights and arch heads.
-- Learned: every room under a roof has the annex's level problem (roof slab level and build-up not printed); crossing
-  beams make bulkheads, a ceiling item; a slab face should be released only with slab evidence.
-- Added: window heights from elevations and sections (to measure the nets), ceilings room by room under your Q-57 answer
-  (a category with no quantity yet), the slab leftovers (a beam span with a 0.296 m3 register gap, sunken-slab edges),
-  and "slab only with slab evidence" queued for the candidate. Designer requests D-39 (roof levels and build-up), D-40
-  (ceiling levels, floor build-up), D-41 (sunken-slab drops).
-
-TEAM HEALTH (slots 04:09 - 05:49)
-- Code ran fully (STARTED + SUCCESS, five self-check steps PASS): worker 1 04:19 and 05:19, verifier 04:49; Lead 04:09.
-- Worker 3 05:00 SUCCESS but without code: clone of the working branch, venv, codemap, t061 and freeze check refused
-  "Permission for this action was denied by the Claude Code auto mode classifier. Reason: [Code from External]."; it
-  correctly took a hand-only task. Its 06:00 run passed the self-check and is on the registry rework.
-- INCOMPLETE, no line at all (cause NOT KNOWN): worker 2 04:39; verifier 05:49 (fired 05:50, ended 05:54, while two
-  results waited for it). 5 of 7 finished slots = 71 % (was 44 %, target 90 %).
-- What I did: nothing on the board explains the two silent runs (both had work available); the 06:49 checker run has
-  both results first in its queue. Every lane holds 3 TODO.
-
-QUESTIONS FOR OWNER
-NEW Q-72 (added to today's package with Q-71; no-assumptions question; work continues with the drawing-derived value).
-THE PROBLEM: your manual plaster / paint height formula is written for rooms (beam allowance, decor ceiling, floor
-finish); the main stair shaft runs through all three storeys with no slab, beam or ceiling between them, and no rule or
-answer covers it, so its owner-method column is HELD. Wall faces: GF 11.94 m, 1F 13.38 m, 2F 14.25 m.
-WHERE TO LOOK: Drive "Alsenan chalet project", p7757_arch_sheet03.pdf / sheet04.pdf (GF / 1F plans, the stair rectangle
-with windows W01 and W13), the 2F plan, section A-A on p7757_arch_sheet10.pdf.
-THE OPTIONS (gross m2, whole shaft): (A) your room heights per storey 3.65 / 3.35 / 3.35 m: 136.14; (B) full storey
-height where no ceiling exists (GF 4.50, 1F 4.20) and the drawing height under the roof (3.79 .. 3.89, provisional until
-the roof level is known): 163.93 .. 165.35; (C) full height for GF and 1F, your 3.35 m at the top: 157.66.
-RECOMMENDATION: B: inside a shaft there is no slab band, beam or decor ceiling between storeys, so the room deductions
-do not physically occur except under the roof; landing-slab edges are deducted separately, not by lowering the height.
-Still open: Q-71 (footing bars printed per metre: A 2,742.51 / B 2,836.40 recommended / C 2,797.81 kg for five footings).
-
-NEEDS FIXING
-- Run reliability (P-01, 71 %): the fix is yours: run Test B yourself and approve the repo-attached configuration.
-  Tried: lane stocking, claimable rows in every lane, hand-only rows for refused runs.
-- Kuwait specification chapters (07100, 09200, 09300, 09400, 09900) as PDFs under 6 MB (soffit and ceiling finishes).
-- Designer requests to forward when you choose: D-39 .. D-41 new, D-31 .. D-38 and earlier in DESIGNER_CLARIFICATIONS.md.
-
-Team ids: MERGED T-138 r2; READY T-139, T-128; CLAIMED T-130 r2, T-125; new T-144 (A), T-145 (S), T-147 (A), T-146 (I,
-queued); Q-72 new, Q-71 open; D-39 .. D-41.

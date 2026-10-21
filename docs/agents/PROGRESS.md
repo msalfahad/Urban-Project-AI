@@ -1,7 +1,8 @@
 # Progress toward the goal (owner-facing; the Lead rewrites this every run)
 
 Plain words, no task numbers. Measured numbers come from SCOREBOARD.md; anything not measured says so.
-Last update: 2026-10-21 12:20 UTC (Lead). Previous version: 2026-10-21 08:20 UTC.
+Last update: 2026-10-21 16:20 UTC (Lead). Previous version: 2026-10-21 12:20 UTC. No measured number changed since
+12:20 (nothing checked or merged); the new hand results below wait for the checker.
 
 ## Where we are on the five gates
 | Gate | In plain words | Due | Done so far | State |
@@ -64,6 +65,11 @@ range). No released number changed; the released default stays until you switch 
 Not measured, and paused by your order (Alsenan first).
 
 ## What the team has learned so far
+- (21 Oct, 16:20) A CAD census area can contain surfaces that belong to other trades: the pool-court soffit's 14.704 m2
+  CAD basis holds opening heads (1.104 m2), a glazing reveal (0.561) and wall tops (0.276) below the slab, so only the
+  hand 12.834 m2 may feed the ceiling line. Floor area room by room shows the engine's dry floor is right like for like
+  (-0.12 % against the freelancer) once his garden band, stair treads and landings are put back, and that the released
+  method counts the open side passage as an inside floor.
 - (21 Oct, 12:20) A dimension chain must close on its printed total before a part of it is trusted (three window sills were misread that way); the frozen structural route can release steel as verified from a duplicated schedule row, so every released bar line needs its printed row; ceilings differ from the freelancer mainly where he ceils the light well and skips the double-height void, not in the rooms.
 - (21 Oct, 08:20) The column rule moves 5.467 m3 out of the column line, but it is not lost: it is exactly the joints
   (4.264) and the column heads (1.203), which no beam or slab line holds yet, so they must become their own lines. Block
@@ -143,17 +149,18 @@ Not measured, and paused by your order (Alsenan first).
   development lengths, so a steel ledger is not complete until it has read them.
 
 ## Being worked on now
-- Checker (next run 13:49): twelve results wait, in this order: the coverage registry, the first candidate extension
-  (it must run it on the drawings itself), the slabs with the slab leftovers, the columns by hand, the ground-beam
-  splitter, column steel, the wall run version 2, the block area, plaster / paint by both methods, window heights,
-  ceilings. It has left no record since 05:07 (see Waiting for the owner).
-- Integration (worker 3): the element register (stable ids for rooms, walls, openings, membrane zones, footings and
-  columns, linked to BOQ lines); then footing steel, membrane evidence, slab faces and column / ground-beam steel into
-  the candidate as the checker merges them. Its 10:59 run left no record.
-- Structural (worker 1): NEW beam steel by bar population from the beam schedule (every beam span), then slab steel
-  panel by panel; both keep the link and bar counts held on your Q-71.
-- Architecture and finishes (worker 2): NEW doors and windows as BOQ lines (count, type, size, m2 per type and floor),
-  then floor area room by room with the 11 held spaces settled or held by cause (gate 1).
+- Checker (running since 15:51, its first run after the setup fix): sixteen results wait, now in four runs: (1) the
+  coverage registry, the first candidate extension (checked as a whole integrated BOQ: automated diff, every large or
+  moved line by hand, 2 random lines), floor area room by room (gate 1), slabs with the slab leftovers; (2) columns,
+  ground beams, column steel, the element register; (3) footing bars per metre, wall run version 2, block area,
+  plaster / paint by both methods; (4) window heights, ceilings, the pool-court soffit. Nothing merged since 05:05.
+- Integration (worker 3): NEW the checker's tool for the integrated BOQ (line-by-line before / after table, the 2 % / 5 %
+  flags and the reproducible random-line pick), while the coverage census waits for the registry to be merged.
+- Structural (worker 1): beam steel by bar population from the beam schedule (allowed despite the queue: steel is the
+  largest money at risk); slab steel after it. Links and per-metre bars stay held on your Q-71.
+- Architecture and finishes (worker 2): doors and windows as BOQ lines (allowed despite the queue: a missing category),
+  including the two pool-court wall openings that no engine version records; then the outside areas (garden band, side
+  passage, courts) classified from the sections once the queue is down to 3.
 - Research scout (next run 24 Oct 23:50 UTC, now twice a week): open requests on footing schedules from CAD tables,
   laps in bar schedules, and the measurement-standard clauses behind the block-opening and strap-length questions.
 
@@ -173,18 +180,23 @@ Not measured, and paused by your order (Alsenan first).
 
 ## Waiting for the owner
 - Still open, one package (all no-assumptions questions; work continues, only the affected quantity is held): Q-71 bars
-  printed per metre (A 2,742.51, B 2,836.40 recommended, C 2,797.81 kg for five footings; it now also decides column links
-  781 .. 829 kg and the beam and slab bar counts; NEW evidence: three project-only statements of 6 Oct the team did not
-  use, please say whether they are your rule); Q-72 stair shaft (A 136.14, B 163.93 .. 165.35 recommended, C 157.66 m2);
+  printed per metre (A 2,742.51, B 2,836.40, C 2,797.81 kg for five footings; no recommendation any more, drawing facts
+  only: "/m" is bars per metre, the whole-bar rule is printed nowhere, A spaces bars wider than printed in all 20 rows;
+  it also decides column links 781 .. 829 kg and the beam and slab bar counts; three project-only statements of 6 Oct the
+  team did not use: please say whether they are your rule); NEW in the package: the outside areas (existing question
+  OQ-04): are court / porch / passage / pool-deck finishes in the BOQ (A all, 173.354 m2, material from the designer,
+  recommended; B none; C porch and deck only, 26.786 m2)? The freelancer prices a yard of 151.80 m2 against 167.714 m2
+  measured; Q-72 stair shaft (A 136.14, B 163.93 .. 165.35 recommended, C 157.66 m2);
   Q-73 openings in block walls (A deduct every opening, recommended; B over 0.50 m2 only; C none, gross 955.63 m2);
   Q-74 oblique strap length (A along the axis 2.293 / 3.258 m, recommended; B projected; C centre to centre); Q-75 black
   block size (A 40 x 20 module, 12.5 per m2, recommended; B another size; C count held).
-- Setting (P-01): finish Test B and approve the repo-attached configuration. The checker has left no record since
-  05:07 (runs 05:49, 06:49, 07:49, 09:50, 11:50; the last one ended after about 2 minutes) and worker 3's 10:59 run
-  left none either; twelve results wait and nothing can reach the candidate until they are checked.
+- Setting (P-01): done by your main chat (repo-attached configuration on main, case fix 15:30); the checker's 15:51 run
+  is the first test of it. If that run again leaves no final record, the checker's migration to the repo-attached way
+  (as worker 1 now runs) is the next step; sixteen results wait.
 - Your confirmation of the reconciliation proposal (manual and drawing methods side by side); until then nothing released
   changes.
-- Designer requests to forward when you choose: DESIGNER_CLARIFICATIONS.md (new D-45 window schedule, D-46 planted-column
-  bars, D-47 wet-room ceiling boards and drops; earlier D-39 .. D-44).
+- Designer requests to forward when you choose: DESIGNER_CLARIFICATIONS.md (new D-48 garden band and side passage: open
+  or roofed, planter or floor; D-45 window schedule, D-46 planted-column bars, D-47 wet-room ceiling boards and drops;
+  earlier D-39 .. D-44).
 - Upload the Kuwait specification chapters 07100, 09200, 09300, 09400, 09900 as separate PDFs under 6 MB (also needed for
   the wet-room ceiling board and the soffit finish under your Q-68 C).
