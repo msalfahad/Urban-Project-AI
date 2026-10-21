@@ -1,6 +1,7 @@
 # T-119 Alsenan columns column by column to the controlling member, with the joints (NO REPO CODE)
 
-Worker 1 (structural lane S), 2026-10-21. Development villa, not an accuracy claim. Nothing is wired and no released
+Worker 1 (structural lane S), 2026-10-21; **r2 rework 2026-10-21 18:25 UTC** (verifier rejection 18:40, gate f; what
+changed is in section 0). Development villa, not an accuracy claim. Nothing is wired and no released
 quantity changes: a checked piece for the V3.0 candidate (lane I). Rules: URBAN-COLUMN-HEIGHT-TO-CONTROLLING-MEMBER@v1
 (column concrete height = structural storey interval - depth of the deepest member framing into THAT column, slab t when
 none; never a global depth), URBAN-NON-OVERLAPPING-SLAB-BEAM-MODEL@v1 (joint = column area x (D_ctrl - t)),
@@ -20,6 +21,35 @@ W/dump.json W && python -I ../agents_t110/scripts/bands.py ../urban_engine_m4_co
 python -I ../agents_t139/slab_faces.py <ST.dxf> W/faces.json && python -I column_ledger.py W
 ../agents_t110/BEAM_MEMBER_REGISTER.csv <T-139 PANELS.csv> O && python -I summarise.py O/COLUMNS_TO_CONTROLLING_MEMBER.csv
 O/ledger_summary.json`. Re-run this session from the committed scripts: byte-identical CSV and summary.
+r2: the r1 chain was re-run first on the Drive DXF (sha256 9f9d1179 re-checked) and gave the r1 CSV byte for byte; then
+`python -I framing_recheck.py <ST.dxf> W/bands.json ../agents_t110/BEAM_MEMBER_REGISTER.csv
+COLUMNS_TO_CONTROLLING_MEMBER.csv O/framing_recheck.json` (and `--selftest`, synthetic non-Alsenan cases).
+
+## 0. r2: what changed after the verifier's rejection (and nothing else)
+
+| Item | r1 | r2 | Evidence |
+|---|---|---|---|
+| 2F C2 (COL-2F-50) and 2F C3 (COL-2F-52) at the water tank | CALCULATED 3.00 m on the downstand reading of B15 20x120 | **HELD, range 3.00 .. 3.80 m**, column 0.300 .. 0.380 m3 each, joint 0.022 .. 0.102 / 0.022 .. 0.104 m3 (designer D-44) | WORKFLOW_CONTROLS section 4: no approved fallback, no section printing the side of the slab B15 sits on (ST p.6 prints only "B15" and the schedule 20 x 120) -> HELD, both readings kept |
+| COL-1F-41 (1F C9) framing list | B7, B1, B18 | **B7, B1, B18, B19 40x75** (BM-1F-025) | ST p.5 draws B19 sloping from this column's east face to 1F C9 at B4 / B5; DXF edges of B19 end on the east face (framing_recheck.py); its route G overlay band stops 0.072 m short of the face, which is why the r1 3 cm band search missed it. D_ctrl stays 0.75, quantities unchanged |
+| All 59 columns re-checked for missed (oblique / sloping) members | band search only | **second, independent search from the DXF beam edges** that end on each column outline (framing_recheck.py) | 6 more edge groups found, none is a beam (table below); no other column changes |
+| Status vocabulary | CALCULATED / HELD / CONFLICT | **WORKFLOW_CONTROLS section 5**: `status` DRAWING-CONFIRMED or HELD, `hold_cause`, `release` = NOT RELEASED | CALCULATED -> DRAWING-CONFIRMED (drawing-read, by the written rule, not yet independently VERIFIED); CONFLICT (C8, D-16) -> HELD with hold_cause CONFLICT_SECTION_D16 |
+
+**Upstand reading of B15, by the rule (correction to r1 finding 4 and to the D-44 text):** if B15 stands up as the tank
+wall it hangs nothing below the slab, so the deepest member framing into these two columns is **B3 20x40** (p.6 draws B3
+along the north edge of the tank into C2 and under the tank into C3), not the slab: height 4.20 - 0.40 = **3.80 m**, not
+4.02 m. The r1 "+0.204 m3 if upstand" (and the D-44 register line that quotes it) is superseded: the upstand reading adds
+2 x 0.10 x 0.80 = **+0.160 m3** to the column line. The verifier's "3.00 .. 4.02" would hold only if no other member framed
+in. A partly hung B15 lies inside the same range.
+
+Edge groups the DXF re-check found that are not in a framing list, each read on the sheet (none is a beam):
+
+| Column | Face, direction | What it is on the sheet |
+|---|---|---|
+| COL-1F-41 1F C9 | E, 5 deg | **B19 40x75**, oblique (added, see above) |
+| COL-GF-07 GF C1, COL-1F-37 1F C1 | N / W, 180 deg | stair tread lines (layer of the stair steps, 0.30 m apart, ending on the B2 / column face of the flight next to "T 16"); no beam mark, no schedule row |
+| COL-GF-16 GF C (annex) | N, 90 deg | one slab boundary line (outer edge to the street), no parallel pair, no mark: slab edge, not a beam; the column is HELD (Q-54 B) anyway |
+| COL-GF-22 GF C5 | W, 90 deg | 0.10 m double line across the main stair landing (runs 38.05 -> 42.00 m and crosses a second one), starts on the CB3 north face, no mark, not in the T-110 register, not a route G band: not a framing beam on any print; listed for the stair task. Column already HELD (CB3 / B3 With Stair) |
+| COL-1F-43 1F C8 | E, 0 deg | the rounded box outside CB12 (BM-1F-037, D-26), already in the held list of this column |
 
 ## 1. Result in engineering terms (column concrete above the necks, m3)
 
@@ -27,10 +57,12 @@ O/ledger_summary.json`. Re-run this session from the committed scripts: byte-ide
 |---|---|---|---|---|---|---|---|
 | GF (p.4) | 30 | **16.900 .. 16.994** | 15 cols 8.875 | 2.572 | 20.247 (-3.347 .. -3.253, -16.5 %) | 20.250 | 17.438 (-0.538 .. -0.444, -3.1 .. -2.5 %) |
 | 1F (p.5) | 20 (18 + 2 P.C) | **8.609 .. 8.678** | 13 cols 5.419 | 1.212 | 10.668 (-2.059 .. -1.990, -19.3 %) | 10.248 | 7.728 (+0.881 .. +0.950, +11.4 .. +12.3 %) |
-| 2F (p.6) | 9 (8 + 1 P.C) | **3.307** | 5 cols 1.750 | 0.481 .. 0.487 | 5.796 (-2.489, -42.9 %) | 3.948 | 3.381 (-0.074, -2.2 %) |
-| **Total** | **59** | **28.816 .. 28.979** | 33 cols **16.044** | **4.264 .. 4.270** | **36.711 (-7.895 .. -7.732, -21.5 .. -21.1 %)** | 34.446 (-15.9 .. -16.3 %) | **28.547 (+0.269 .. +0.432, +0.9 .. +1.5 %)** |
+| 2F (p.6) | 9 (8 + 1 P.C) | **3.307 .. 3.467** (r1 3.307) | 4 cols 1.450 (r1 5 cols 1.750) | 0.321 .. 0.487 | 5.796 (-2.489 .. -2.329, -42.9 .. -40.2 %) | 3.948 | 3.381 (-0.074 .. +0.086, -2.2 .. +2.5 %) |
+| **Total** | **59** | **28.816 .. 29.139** (r1 28.816 .. 28.979) | 32 cols **15.744** (r1 33 cols 16.044) | **4.104 .. 4.270** | **36.711 (-7.895 .. -7.572, -21.5 .. -20.6 %)** | 34.446 (-16.3 .. -15.4 %) | **28.547 (+0.269 .. +0.592, +0.9 .. +2.1 %)** |
 
-The range is only the C8 section conflict (30X80 on p.1 vs 90 in the schedule, two columns). Re-add checks pass
+(Column "of which CALCULATED" = r2 status DRAWING-CONFIRMED.) The range is the C8 section conflict (30X80 on p.1 vs 90
+in the schedule, two columns, 0.163 m3) and, from r2, the B15 upstand / downstand reading at the tank (two 2F columns,
+0.160 m3; D-44). Re-add checks pass
 (summarise.py asserts): per column height = interval - D_ctrl, column m3 = A x height, and column + joint + A x t =
 A x interval for every column with one slab thickness; storey totals re-add to the total; 59 = 33 + 11 + 6 + 7 + 2.
 
@@ -44,10 +76,12 @@ Where the hand differs from the engine and the freelancer, in m3 (total; the per
 | height basis: freelancer's uniform 0.75 vs the column's own D_ctrl, sum of A x (0.75 - D_ctrl) | - | +0.443 |
 | his count / size slips (T-100: GF C1 2 / C2 6 / C9 3 / C11 1 vs drawn 1 / 4 / 2 / 2, 1F no C6, 2F C9 0.90) | - | -0.011 |
 | C8 section conflict, low reading 30X80 | -0.163 .. 0 | -0.163 .. 0 |
-| **total** | **-7.895 .. -7.732** | **+0.269 .. +0.432** |
+| r2: B15 at the tank, upstand reading (B3 0.40 controls instead of B15 1.20; D-44) | 0 .. +0.160 | 0 .. +0.160 |
+| **total** | **-7.895 .. -7.572** | **+0.269 .. +0.592** |
 
 Concrete is moved, not saved: column (rule) 28.979 + joints 4.264 + column heads inside the slab A x t 1.203 = 34.446 =
-the drawn columns at the full interval (GF 20.250 / 1F 10.248 / 2F 3.948). Under the rule the joint is its own line
+the drawn columns at the full interval (GF 20.250 / 1F 10.248 / 2F 3.948), at the downstand reading of B15; at the
+upstand reading 0.160 m3 moves from the joint line back to the column line (joints 4.104 .. 4.110), the total is the same. Under the rule the joint is its own line
 (non-overlapping model) and the head belongs to the slab plate. **For lane I**: the beam register (T-110) measures beams
 B x clear length x D between column faces and the T-139 slab panels stop at beam and column faces, so neither holds the
 joint or the head; switching the column line to this rule without adding the joint line (4.264 m3) and the head
@@ -81,20 +115,26 @@ Hand checks of three columns (verifier: re-measure these):
 | Column | Section (p.9) | Framing (p.4-6, p.10) | D_ctrl | Height | Column m3 | Joint m3 |
 |---|---|---|---|---|---|---|
 | COL-GF-19 C11 D.C (dead column, p.4) | 0.25 x 1.10 = 0.275 | B1 20x40, B27 90x85 (B27 starts on it, p.4) | 0.85 | 4.50 - 0.85 = 3.65 | 1.0038 | 0.275 x 0.69 = 0.1898 |
-| COL-2F-50 C2 (NW corner of the tank) | 0.20 x 0.50 = 0.10 | B3 20x40, B15 20x120 | 1.20 | 4.20 - 1.20 = 3.00 | 0.300 | 0.10 x (1.20 - 0.18) = 0.102 |
-| COL-1F-41 C9 | 0.20 x 0.90 = 0.18 | B7 20x75, B1 20x40, B18 35x75 | 0.75 | 4.20 - 0.75 = 3.45 | 0.621 | 0.18 x 0.59 = 0.1062 |
+| COL-2F-50 C2 (NW corner of the tank) **HELD r2** | 0.20 x 0.50 = 0.10 | B3 20x40, B15 20x120 (side of slab not printed, D-44) | 0.40 .. 1.20 | 4.20 - 1.20 = 3.00 .. 4.20 - 0.40 = 3.80 | 0.300 .. 0.380 | 0.10 x (0.40 - 0.18) = 0.022 .. 0.10 x (1.20 - 0.18) = 0.102 |
+| COL-1F-41 C9 | 0.20 x 0.90 = 0.18 | B7 20x75, B1 20x40, B18 35x75, **B19 40x75 (r2)** | 0.75 | 4.20 - 0.75 = 3.45 | 0.621 | 0.18 x 0.59 = 0.1062 |
+
+Checker re-measures of r1 (18:40): COL-GF-19 3.65 m 1.0038 m3 joint 0.1898 (0.0 %), COL-1F-41 3.45 m 0.621 m3 (0.0 %);
+both unchanged in r2.
 
 ## 3. Status of the 59 columns
 
-| Status | n | Column m3 | Joint m3 | What holds it |
-|---|---|---|---|---|
-| CALCULATED | 33 | 16.044 | 2.360 .. 2.364 | nothing |
-| HELD, framing member held, D_ctrl NOT changed by it | 11 | 5.337 | 0.764 .. 0.766 | CB2 x3 / B21 width conflicts, B24 east span (cand B24 0.75), CB3 / B3 With Stair, 1F unlabelled B2 piece (cand 0.40), 2F four unlabelled pieces (cand <= the calculated D) |
-| HELD, framing member whose depth is not printed | 6 | 3.008 (upper value: deeper -> shorter) | 0.446 | GF C7 (BM-GF-058 strip north of B20), 1F C7 (BM-1F-033), 1F C8 (BM-1F-037 box), 1F C5 / C3 on CB10 (BM-1F-034 strip), 1F P.C 20x50 (BM-1F-038 strip): projections of designer D-26 |
-| HELD, storey interval (Q-54 B, annex +0.30 / roof +4.30) | 7 | 3.125 (at 4.50) | 0.455 | GF C x3, C3 x3, C5 in the annex zone; C5 / C3 on the CB5 line also carry the main roof (CB5, B1, B5) and the annex beam CB6: two roof levels on one column |
-| CONFLICT, section (C8 30X80 on p.1 vs schedule 90; designer D-16) | 2 | 1.302 .. 1.465 | 0.239 | GF and 1F C8 at the lower neighbour side |
+Status (WORKFLOW_CONTROLS section 5; every row release NOT RELEASED):
 
-The 11 "D_ctrl not changed" columns are held only because the task holds every column that a held member frames into;
+| Status / hold_cause | n | Column m3 | Joint m3 | What holds it |
+|---|---|---|---|---|
+| DRAWING-CONFIRMED | 32 | 15.744 | 2.258 .. 2.262 | nothing (drawing-read by the written rule; not yet VERIFIED) |
+| HELD, UPSTAND_DOWNSTAND_D44 (r2) | 2 | 0.600 .. 0.760 | 0.044 .. 0.206 | B15 20x120 at the tank, side of the slab not printed (designer D-44); COL-2F-52 also has the unlabelled BM-2F-016 |
+| HELD, FRAMING_MEMBER_HELD_D_SETTLED | 10 | 5.037 | 0.662 | CB2 x3 / B21 width conflicts, B24 east span (cand B24 0.75), CB3 / B3 With Stair, 1F unlabelled B2 piece (cand 0.40), 2F three unlabelled pieces BM-2F-015 / -017 / -018 (cand <= the calculated D; the fourth, BM-2F-016, is on COL-2F-52, now in the D-44 row) |
+| HELD, FRAMING_MEMBER_HELD_D_OPEN (framing member whose depth is not printed) | 6 | 3.008 (upper value: deeper -> shorter) | 0.446 | GF C7 (BM-GF-058 strip north of B20), 1F C7 (BM-1F-033), 1F C8 (BM-1F-037 box), 1F C5 / C3 on CB10 (BM-1F-034 strip), 1F P.C 20x50 (BM-1F-038 strip): projections of designer D-26 |
+| HELD, LEVEL_Q54B (storey interval: annex +0.30 / roof +4.30) | 7 | 3.125 (at 4.50) | 0.455 | GF C x3, C3 x3, C5 in the annex zone; C5 / C3 on the CB5 line also carry the main roof (CB5, B1, B5) and the annex beam CB6: two roof levels on one column |
+| HELD, CONFLICT_SECTION_D16 (C8 30X80 on p.1 vs schedule 90) | 2 | 1.302 .. 1.465 | 0.239 | GF and 1F C8 at the lower neighbour side |
+
+(r1 had 11 "D_ctrl not changed" columns 5.337 m3: COL-2F-52 moved to the D-44 row in r2.) The 10 "D_ctrl not changed" columns are held only because the task holds every column that a held member frames into;
 their height does not depend on the held member (5.337 m3). Release of these is a Lead / owner call, not made here.
 
 ## 4. Findings
@@ -108,9 +148,8 @@ their height does not depend on the held member (5.337 m3). Release of these is 
 3. **Turn and dead columns** (p.4 legend): GF C9 and C8 turn at the GF roof (1F outline rotated 90 deg); GF C11 at the
    D.C stops at the GF roof (no 1F row in p.9). The engine's presence test (T-126) already handles both.
 4. **B15 20x120 at the tank** (p.10; top bars 6 ø 18 > bottom 4 ø 16): no section on the structural set shows whether it
-   hangs below the slab or stands up as the tank wall. Read as printed (schedule depth below the slab top, the reading
-   of every other beam): 2F C2 and C3 get 3.00 m. If the designer confirms an upstand, both become 4.20 - 0.18 = 4.02 m
-   (+0.204 m3). Observation for the Lead (designer request), not a hold under any written rule.
+   hangs below the slab or stands up as the tank wall. r2: both readings kept and the two columns HELD (designer D-44):
+   downstand 3.00 m, upstand 3.80 m (B3 20x40 then controls; r1's 4.02 m / +0.204 m3 ignored B3 and is withdrawn).
 5. **Drawn column outlines that differ from the schedule** (no printed size on any slab-plan outline): GF C x5 drawn
    0.20 x 0.40 (schedule 20 x 50), GF C3 x2 drawn 0.20 wide; 1F C3 / C4 / C5 / C6 / C7 drawn at the GF width 0.25 and
    1F C9 drawn 1.00 long (schedule 20 wide, C9 90 long); 2F C5 / C3 drawn 0.60 / 0.25; P.C 20x50 drawn 0.20 x 0.40 on
@@ -137,7 +176,11 @@ their height does not depend on the held member (5.337 m3). Release of these is 
   ground slab and the suspended floors would shift GF heights; not printed, not assumed.
 - Column bottom at GF taken at the GF level (+1.00) for every non-annex column, as T-100 / T-064; the necks below are
   T-100 / Q-21 C (held). Columns next to the +0.15 courts (pool court, sea side) stand on the same ground beams.
-- Joint t comes from T-139 PANELS.csv (READY, not yet merged); the three 0.16 / 0.18 corners keep a range.
+- Joint t comes from T-139 PANELS.csv (REJECTED 16:45 for two text fixes only, panel values checked); the three
+  0.16 / 0.18 corners keep a range.
+- r2: the DXF re-check reads beam edges that END on a column; a member that runs continuously past a column face is found
+  only by the band search (as in r1). The 0.10 m double line across the GF main stair landing (COL-GF-22) is not a beam on
+  any print; it is left to the stair / landing work.
 - Beam depths are the p.10 schedule H as carried in the T-110 register; continuous-beam depths (CB rows) are the
   register's (printed continuous schedule, not re-read this run).
 - Engine figures are quoted (T-100 / T-044 run B line table; T-126 scope table), not re-run.
