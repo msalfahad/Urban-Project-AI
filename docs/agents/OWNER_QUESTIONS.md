@@ -155,6 +155,28 @@ Waits on: floor, wall and waterproofing quantities of these spaces (T-030)."
 
 ## Open
 
+### Q-71 Footing bars printed "per metre" (for example "9 ø 14/m"): how many bars does the BOQ count across a footing? (worker 1 2026-10-21 00:38; T-136; no-assumptions question: the Urban rebar rule says kg = count x length x kg/m but gives no count for bars printed per metre or at a spacing)
+
+THE PROBLEM: five footings print their bars per metre, not as a count. "9 bars per metre" over a footing side gives a
+fractional number (34.74 bars), and the three usual ways to turn it into whole bars give different steel. Today the
+engine holds all five footings' bar steel, 2,742.51 .. 2,836.40 kg (bottom layer 1,606.07 .. 1,655.56 kg), because no
+Urban rule picks one. The 19 footings printed with a count ("8 ø 12") are released, 874.86 kg.
+WHERE TO LOOK: Drive "Alsenan chalet project", ST7757.pdf page 9, "Schedule of Footings", rows F8, F12, F13, F14 and FF
+(top and bottom rows, "6 ø 14/m", "9 ø 14/m", "9 ø 16/m" ...); page 8 note 22 (cover 7 cm against soil). Real example,
+F8 bottom short bars "9 ø 14/m", footing 400 x 360 cm: each bar 3.60 - 0.07 - 0.07 = 3.46 m; they are spread along
+4.00 - 0.07 - 0.07 = 3.86 m; 9 x 3.86 = 34.74 bars.
+THE OPTIONS:
+(A) Round up inside the covers: 35 bars (146.52 kg for this row); all five footings 2,742.51 kg.
+(B) As (A) plus one, so a bar sits at both edges (spacing count + 1): 36 bars (150.70 kg); all five 2,836.40 kg.
+(C) Rate x the full footing side, kept fractional: 9 x 4.00 = 36.0 bars (150.70 kg); all five 2,797.81 kg (what the
+route's provisional line does today, but with its 5 cm cover).
+RECOMMENDATION: B. Practice, not a code clause: a bar is placed at each edge of the mesh, so the number of bars is the
+spaces plus one, rounded up; it is how a steel fixer cuts and counts, and the same rule then serves every villa for
+"/m" and "@ spacing" notation in footings, slabs and ground beams. Difference A to B: 93.89 kg (3.4 %) on Alsenan.
+WAITS ON: footing steel of F8, F12, F13, F14, FF (2.74 .. 2.84 t, the largest held footing steel); every bar printed per
+metre or at a spacing on any villa (T-136, then T-009). The top layer of these footings also waits on a designer
+detail for its bar ends (not drawn); that is a drawing request, not this question.
+
 No question open (Lead 2026-10-20 20:10). Q-67, Q-68, Q-69 (answered 18:50) and Q-70 (answered 20:10, owner management decision) moved to Answered; their tasks: Q-67 -> T-123 / T-131 / T-127, Q-68 -> T-127, Q-69 -> T-125 / T-108, Q-70 -> T-129. From now on genuine owner decisions go in ONE daily package (owner management decision §10).
 
 Earlier note: Q-64, Q-65 and Q-66 answered by the owner 2026-10-20 16:23 (moved to Answered by the Lead 18:20). Q-67, Q-68, Q-69 new (Lead 18:20).
