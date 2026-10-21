@@ -240,6 +240,7 @@ def test_synthetic_villas_equal_the_hand_centreline(tmp_path, vid, var):
 def test_not_wired():
     """a new piece: no method imports it, so no released quantity moves."""
     hits = [p for p in (ROOT / "tools").rglob("*.py") if "masonry_centreline" in p.read_text(encoding="utf-8")]
-    hits += [p for p in (ROOT / "engine").rglob("*.py")
-             if p.name != "masonry_centreline.py" and "masonry_centreline" in p.read_text(encoding="utf-8")]
+    hits += [p for p in (ROOT / "engine").rglob("*.py")             # T-125: its V2 piece reuses V1 and is itself
+             if p.name not in ("masonry_centreline.py", "masonry_centreline_v2.py")     # not wired (t125 checks it)
+             and "masonry_centreline" in p.read_text(encoding="utf-8")]
     assert hits == []
