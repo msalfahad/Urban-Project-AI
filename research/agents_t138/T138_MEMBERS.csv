@@ -1,0 +1,312 @@
+member,family,component,count,dia_mm,length_m,kg,held_kg,status,detail,length_basis,note
+GSO-107-7CE-1,GROUND_BEAM,TOP,3,16,0.364,1.726,,RELEASED (lower bound),EXT,hand face to face,7DF face y44248 -> column 17BD y44612
+GSO-107-7CE-1,GROUND_BEAM,BOTTOM,6,16,0.364,3.451,,RELEASED (lower bound),EXT,hand face to face,
+GSO-107-7CE-1,GROUND_BEAM,STIRRUP T8 @ 150,A 3 / B 4 / C 2.43,8,,,,HELD: count Q-71; link path needs the depth (FOLLOW ARCH); hooks not printed,EXT,clear span,
+GSO-107-7CE-1,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT,,
+GSO-107-7CE-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-109-7CB-1,GROUND_BEAM,TOP,3,16,8.8,,41.719,HELD,CONC/EXT/LT5M,hand face to face,"7D0 face y36648 -> column 228 y41048; 228 y41748 -> column 234 y46148 (column 228, 0.30 x 0.70, sits on the band: missed by S5, which runs 9.50 across it) [length class GT5M -> LT5M]"
+GSO-109-7CB-1,GROUND_BEAM,BOTTOM,6,16,8.8,,83.437,HELD,CONC/EXT/LT5M,hand face to face,
+GSO-109-7CB-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,CONC/EXT/LT5M,,
+GSO-109-7CB-1,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,CONC/EXT/LT5M,,
+GSO-109-7CB-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,3 candidates: concentrated-load case has no project detail; exterior / interior not resolved; + a candidate with no project detail (unquantified)
+GSO-109-7CB-2,GROUND_BEAM,TOP,3,16,2.7,12.8,,RELEASED (lower bound),EXT,hand face to face,column 234 y46648 -> column 1DC y49348
+GSO-109-7CB-2,GROUND_BEAM,BOTTOM,6,16,2.7,25.6,,RELEASED (lower bound),EXT,hand face to face,
+GSO-109-7CB-2,GROUND_BEAM,STIRRUP T8 @ 150,A 18 / B 19 / C 18.00,8,,,,HELD: count Q-71; link path needs the depth (FOLLOW ARCH); hooks not printed,EXT,clear span,
+GSO-109-7CB-2,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT,,
+GSO-109-7CB-2,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-10A-7C9-1,GROUND_BEAM,TOP,3,16,4.3,20.385,,RELEASED (lower bound),EXT,hand face to face,column 218 y36648 -> column 220 y40948
+GSO-10A-7C9-1,GROUND_BEAM,BOTTOM,6,16,4.3,40.77,,RELEASED (lower bound),EXT,hand face to face,
+GSO-10A-7C9-1,GROUND_BEAM,STIRRUP T8 @ 150,A 29 / B 30 / C 28.67,8,,,,HELD: count Q-71; link path needs the depth (FOLLOW ARCH); hooks not printed,EXT,clear span,
+GSO-10A-7C9-1,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT,,
+GSO-10A-7C9-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-10B-7D1-1,GROUND_BEAM,TOP,3,16,1.2,,5.689,HELD,EXT/LT2_5M/LT5M,hand face to face,7D4 face y36648 -> column 22C y37848
+GSO-10B-7D1-1,GROUND_BEAM,BOTTOM,6,16,1.2,,11.378,HELD,EXT/LT2_5M/LT5M,hand face to face,
+GSO-10B-7D1-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,EXT/LT2_5M/LT5M,,
+GSO-10B-7D1-1,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT/LT2_5M/LT5M,,
+GSO-10B-7D1-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,3 candidates: exterior / interior not resolved; <2.5 m and <5 m titles both hold
+GSO-10B-7D1-2,GROUND_BEAM,TOP,3,16,2.3,10.904,,RELEASED (lower bound),EXT,hand face to face,column 22C y38348 -> column 223 y40648
+GSO-10B-7D1-2,GROUND_BEAM,BOTTOM,6,16,2.3,21.807,,RELEASED (lower bound),EXT,hand face to face,
+GSO-10B-7D1-2,GROUND_BEAM,STIRRUP T8 @ 150,A 16 / B 17 / C 15.33,8,,,,HELD: count Q-71; link path needs the depth (FOLLOW ARCH); hooks not printed,EXT,clear span,
+GSO-10B-7D1-2,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT,,
+GSO-10B-7D1-2,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-114-115-7DF-1,GROUND_BEAM,TOP,3,16,2.325,,11.022,HELD,EXT/LT2_5M/LT5M,hand face to face,7E8 face x107663 -> column 238 x109988 [length class LT5M -> LT2_5M/LT5M]
+GSO-114-115-7DF-1,GROUND_BEAM,BOTTOM,6,16,2.325,,22.044,HELD,EXT/LT2_5M/LT5M,hand face to face,
+GSO-114-115-7DF-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,EXT/LT2_5M/LT5M,,
+GSO-114-115-7DF-1,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT/LT2_5M/LT5M,,
+GSO-114-115-7DF-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,2 candidates: exterior / interior not resolved;
+GSO-114-115-7DF-2,GROUND_BEAM,TOP,3,16,1.0,4.741,,RELEASED (lower bound),EXT,hand face to face,column 238 x110888 -> column 1FC x111888
+GSO-114-115-7DF-2,GROUND_BEAM,BOTTOM,6,16,1.0,9.481,,RELEASED (lower bound),EXT,hand face to face,
+GSO-114-115-7DF-2,GROUND_BEAM,STIRRUP T8 @ 150,A 7 / B 8 / C 6.67,8,,,,HELD: count Q-71; link path needs the depth (FOLLOW ARCH); hooks not printed,EXT,clear span,
+GSO-114-115-7DF-2,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT,,
+GSO-114-115-7DF-2,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-136-7D5-1,GROUND_BEAM,TOP,3,16,6.0,,28.444,HELD,EXT,hand face to face,column 207 y36648 -> column 204 y42648
+GSO-136-7D5-1,GROUND_BEAM,BOTTOM,6,16,6.0,,56.889,HELD,EXT,hand face to face,
+GSO-136-7D5-1,GROUND_BEAM,STIRRUP T8 @ 150,A 40 / B 41 / C 40.00,8,,,,HELD: count Q-71; link path needs the depth (FOLLOW ARCH); hooks not printed,EXT,clear span,
+GSO-136-7D5-1,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT,,
+GSO-136-7D5-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,candidate details differ: EXT
+GSO-137-138-1,GROUND_BEAM,TOP,3,16,2.4,11.378,,RELEASED (lower bound),EXT,hand face to face,column 204 x81118 -> column 214 x83518
+GSO-137-138-1,GROUND_BEAM,BOTTOM,6,16,2.4,22.756,,RELEASED (lower bound),EXT,hand face to face,
+GSO-137-138-1,GROUND_BEAM,STIRRUP T8 @ 150,A 16 / B 17 / C 16.00,8,,,,HELD: count Q-71; link path needs the depth (FOLLOW ARCH); hooks not printed,EXT,clear span,
+GSO-137-138-1,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT,,
+GSO-137-138-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-13C-7D9-1,GROUND_BEAM,TOP,3,14,1.45,5.263,,RELEASED (lower bound),LT2_5M/LT5M,hand face to face,13E face x85218 -> 13F face x86668
+GSO-13C-7D9-1,GROUND_BEAM,BOTTOM_ROW_1,3,14,1.45,5.263,,RELEASED (lower bound),LT2_5M/LT5M,hand face to face,
+GSO-13C-7D9-1,GROUND_BEAM,BOTTOM_ROW_2,3,14,1.45,5.263,,RELEASED (lower bound),LT2_5M/LT5M,hand face to face,
+GSO-13C-7D9-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,LT2_5M/LT5M,,
+GSO-13C-7D9-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-13D-7D2-1,GROUND_BEAM,TOP,3,16,5.8,27.496,,RELEASED (lower bound),EXT,hand face to face,column 211 x85518 -> column 223 x91318
+GSO-13D-7D2-1,GROUND_BEAM,BOTTOM,6,16,5.8,54.993,,RELEASED (lower bound),EXT,hand face to face,
+GSO-13D-7D2-1,GROUND_BEAM,STIRRUP T8 @ 150,A 39 / B 40 / C 38.67,8,,,,HELD: count Q-71; link path needs the depth (FOLLOW ARCH); hooks not printed,EXT,clear span,
+GSO-13D-7D2-1,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT,,
+GSO-13D-7D2-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-13E-7D6-1,GROUND_BEAM,TOP,3,14,4.8,,17.422,HELD,CONC/LT2_5M/LT5M,hand face to face,"7D4 face y36648 -> column 211 y40948; 211 y41248 -> arc 139/13A y41748 (column 211 overlaps the band 0.20 of 0.30: missed by S5, which runs 5.10 across it) [length class GT5M -> LT2_5M/LT5M]"
+GSO-13E-7D6-1,GROUND_BEAM,BOTTOM_ROW_1,3,14,4.8,,17.422,HELD,CONC/LT2_5M/LT5M,hand face to face,
+GSO-13E-7D6-1,GROUND_BEAM,BOTTOM_ROW_2,3,14,4.8,,17.422,HELD,CONC/LT2_5M/LT5M,hand face to face,
+GSO-13E-7D6-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,CONC/LT2_5M/LT5M,,
+GSO-13E-7D6-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,2 candidates: concentrated-load case has no project detail; + a candidate with no project detail (unquantified)
+GSO-13F-7D3-1,GROUND_BEAM,TOP,3,14,4.3,,15.607,HELD,CONC/LT5M,hand face to face,column 20B y36648 -> 7D2 face y40948
+GSO-13F-7D3-1,GROUND_BEAM,BOTTOM_ROW_1,3,14,4.3,,15.607,HELD,CONC/LT5M,hand face to face,
+GSO-13F-7D3-1,GROUND_BEAM,BOTTOM_ROW_2,3,14,4.3,,15.607,HELD,CONC/LT5M,hand face to face,
+GSO-13F-7D3-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,CONC/LT5M,,
+GSO-13F-7D3-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,2 candidates: concentrated-load case has no project detail; + a candidate with no project detail (unquantified)
+GSO-140-7D7-1,GROUND_BEAM,TOP,3,14,4.3,,15.607,HELD,CONC/LT5M,hand face to face,7D4 face y36648 -> 7D2 face y40948
+GSO-140-7D7-1,GROUND_BEAM,BOTTOM_ROW_1,3,14,4.3,,15.607,HELD,CONC/LT5M,hand face to face,
+GSO-140-7D7-1,GROUND_BEAM,BOTTOM_ROW_2,3,14,4.3,,15.607,HELD,CONC/LT5M,hand face to face,
+GSO-140-7D7-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,CONC/LT5M,,
+GSO-140-7D7-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,2 candidates: concentrated-load case has no project detail; + a candidate with no project detail (unquantified)
+GSO-141-7DA-1,GROUND_BEAM,TOP,3,14,1.2,4.356,,RELEASED (lower bound),LT2_5M/LT5M,hand face to face,7D4 face y36648 -> 142 face y37848
+GSO-141-7DA-1,GROUND_BEAM,BOTTOM_ROW_1,3,14,1.2,4.356,,RELEASED (lower bound),LT2_5M/LT5M,hand face to face,
+GSO-141-7DA-1,GROUND_BEAM,BOTTOM_ROW_2,3,14,1.2,4.356,,RELEASED (lower bound),LT2_5M/LT5M,hand face to face,
+GSO-141-7DA-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,LT2_5M/LT5M,,
+GSO-141-7DA-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-142-7D8-1,GROUND_BEAM,TOP,3,14,2.45,8.893,,RELEASED (lower bound),LT2_5M/LT5M,hand face to face,7D7 face x88868 -> column 22C x91318
+GSO-142-7D8-1,GROUND_BEAM,BOTTOM_ROW_1,3,14,2.45,8.893,,RELEASED (lower bound),LT2_5M/LT5M,hand face to face,
+GSO-142-7D8-1,GROUND_BEAM,BOTTOM_ROW_2,3,14,2.45,8.893,,RELEASED (lower bound),LT2_5M/LT5M,hand face to face,
+GSO-142-7D8-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,LT2_5M/LT5M,,
+GSO-142-7D8-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-145-7CA-1,GROUND_BEAM,TOP,3,16,0.4,,1.896,HELD,EXT/LT2_5M/LT5M,S5 carried (not re-measured),S5 cuts 0.40 + 2.30; the plan gives column 220 x93918 -> column 228 x95818 = 1.900 through junction 178/7DB (x94418..94718): 0.500 + 1.100 if the junction is a node
+GSO-145-7CA-1,GROUND_BEAM,BOTTOM,6,16,0.4,,3.793,HELD,EXT/LT2_5M/LT5M,S5 carried (not re-measured),
+GSO-145-7CA-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,EXT/LT2_5M/LT5M,,
+GSO-145-7CA-1,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT/LT2_5M/LT5M,,
+GSO-145-7CA-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,3 candidates: exterior / interior not resolved; <2.5 m and <5 m titles both hold
+GSO-145-7CA-2,GROUND_BEAM,TOP,3,16,2.3,,10.904,HELD,EXT/LT2_5M/LT5M,S5 carried (not re-measured),see 145-7CA-1
+GSO-145-7CA-2,GROUND_BEAM,BOTTOM,6,16,2.3,,21.807,HELD,EXT/LT2_5M/LT5M,S5 carried (not re-measured),
+GSO-145-7CA-2,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,EXT/LT2_5M/LT5M,,
+GSO-145-7CA-2,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT/LT2_5M/LT5M,,
+GSO-145-7CA-2,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,3 candidates: exterior / interior not resolved; <2.5 m and <5 m titles both hold
+GSO-15C-7CC-1,GROUND_BEAM,TOP,3,14,2.4,8.711,,RELEASED (lower bound),LT2_5M/LT5M,hand face to face,7CB face x96118 -> column 1F2 x98518
+GSO-15C-7CC-1,GROUND_BEAM,BOTTOM_ROW_1,3,14,2.4,8.711,,RELEASED (lower bound),LT2_5M/LT5M,hand face to face,
+GSO-15C-7CC-1,GROUND_BEAM,BOTTOM_ROW_2,3,14,2.4,8.711,,RELEASED (lower bound),LT2_5M/LT5M,hand face to face,
+GSO-15C-7CC-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,LT2_5M/LT5M,,
+GSO-15C-7CC-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-15D-7C8-1,GROUND_BEAM,TOP,3,14,1.9,6.896,,RELEASED (lower bound),LT2_5M/LT5M,hand face to face,"footing F12 face y47648 (foundation plan, shifted 38724.4 in x) -> 7C3 face y49548"
+GSO-15D-7C8-1,GROUND_BEAM,BOTTOM_ROW_1,3,14,1.9,6.896,,RELEASED (lower bound),LT2_5M/LT5M,hand face to face,
+GSO-15D-7C8-1,GROUND_BEAM,BOTTOM_ROW_2,3,14,1.9,6.896,,RELEASED (lower bound),LT2_5M/LT5M,hand face to face,
+GSO-15D-7C8-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,LT2_5M/LT5M,,
+GSO-15D-7C8-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-15E-15F-1,GROUND_BEAM,TOP,3,14,2.7,,9.8,HELD,CONC/LT5M,hand face to face,column 1F5 y46648 -> column 1E0 y49348
+GSO-15E-15F-1,GROUND_BEAM,BOTTOM_ROW_1,3,14,2.7,,9.8,HELD,CONC/LT5M,hand face to face,
+GSO-15E-15F-1,GROUND_BEAM,BOTTOM_ROW_2,3,14,2.7,,9.8,HELD,CONC/LT5M,hand face to face,
+GSO-15E-15F-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,CONC/LT5M,,
+GSO-15E-15F-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,2 candidates: concentrated-load case has no project detail; + a candidate with no project detail (unquantified)
+GSO-16F-7FF-1,GROUND_BEAM,TOP,3,14,1.25,4.537,,RELEASED (lower bound),LT2_5M/LT5M,hand face to face,15E face x98818 -> 15D face x100068
+GSO-16F-7FF-1,GROUND_BEAM,BOTTOM_ROW_1,3,14,1.25,4.537,,RELEASED (lower bound),LT2_5M/LT5M,hand face to face,
+GSO-16F-7FF-1,GROUND_BEAM,BOTTOM_ROW_2,3,14,1.25,4.537,,RELEASED (lower bound),LT2_5M/LT5M,hand face to face,
+GSO-16F-7FF-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,LT2_5M/LT5M,,
+GSO-16F-7FF-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-170-7C3-1,GROUND_BEAM,TOP,3,16,5.77,27.354,,RELEASED (lower bound),EXT,hand face to face,"column 1DC x96118 -> column 1E0 x98518; 1E0 x98818 -> column 1E4 x102188 (column 1E0, 0.30 x 0.50 = C2 on F2, sits on the band: missed by S5, which runs 6.22 across it)"
+GSO-170-7C3-1,GROUND_BEAM,BOTTOM,6,16,5.77,54.708,,RELEASED (lower bound),EXT,hand face to face,
+GSO-170-7C3-1,GROUND_BEAM,STIRRUP T8 @ 150,A 39 / B 41 / C 38.47,8,,,,HELD: count Q-71; link path needs the depth (FOLLOW ARCH); hooks not printed,EXT,clear span,
+GSO-170-7C3-1,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT,,
+GSO-170-7C3-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-170-7C3-2,GROUND_BEAM,TOP,3,16,3.35,15.881,,RELEASED (lower bound),EXT,hand face to face,column 1E4 x102788 -> column 241 x106138
+GSO-170-7C3-2,GROUND_BEAM,BOTTOM,6,16,3.35,31.763,,RELEASED (lower bound),EXT,hand face to face,
+GSO-170-7C3-2,GROUND_BEAM,STIRRUP T8 @ 150,A 23 / B 24 / C 22.33,8,,,,HELD: count Q-71; link path needs the depth (FOLLOW ARCH); hooks not printed,EXT,clear span,
+GSO-170-7C3-2,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT,,
+GSO-170-7C3-2,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-170-7C3-3,GROUND_BEAM,TOP,3,16,3.25,15.407,,RELEASED (lower bound),EXT,hand face to face,column 241 x106638 -> column 17C0 x109888
+GSO-170-7C3-3,GROUND_BEAM,BOTTOM,6,16,3.25,30.815,,RELEASED (lower bound),EXT,hand face to face,
+GSO-170-7C3-3,GROUND_BEAM,STIRRUP T8 @ 150,A 22 / B 23 / C 21.67,8,,,,HELD: count Q-71; link path needs the depth (FOLLOW ARCH); hooks not printed,EXT,clear span,
+GSO-170-7C3-3,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT,,
+GSO-170-7C3-3,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-175-7DE-1,GROUND_BEAM,TOP,3,14,3.75,,13.611,HELD,CONC/LT5M,hand face to face,7CD face y45798 -> 7C3 face y49548
+GSO-175-7DE-1,GROUND_BEAM,BOTTOM_ROW_1,3,14,3.75,,13.611,HELD,CONC/LT5M,hand face to face,
+GSO-175-7DE-1,GROUND_BEAM,BOTTOM_ROW_2,3,14,3.75,,13.611,HELD,CONC/LT5M,hand face to face,
+GSO-175-7DE-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,CONC/LT5M,,
+GSO-175-7DE-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,2 candidates: concentrated-load case has no project detail; + a candidate with no project detail (unquantified)
+GSO-176-7E6-1,GROUND_BEAM,TOP,3,14,3.75,,13.611,HELD,CONC/LT5M,hand face to face,7CD face y45798 -> 7C3 face y49548
+GSO-176-7E6-1,GROUND_BEAM,BOTTOM_ROW_1,3,14,3.75,,13.611,HELD,CONC/LT5M,hand face to face,
+GSO-176-7E6-1,GROUND_BEAM,BOTTOM_ROW_2,3,14,3.75,,13.611,HELD,CONC/LT5M,hand face to face,
+GSO-176-7E6-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,CONC/LT5M,,
+GSO-176-7E6-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,2 candidates: concentrated-load case has no project detail; + a candidate with no project detail (unquantified)
+GSO-177-7CD-1,GROUND_BEAM,TOP,3,14,4.97,,18.039,HELD,CONC/LT5M,hand face to face,column 1EC x100768 -> column 245 x105738 (the frozen 5.32 puts it over 5 m; face to face it is under 5 m) [length class GT5M -> LT5M]
+GSO-177-7CD-1,GROUND_BEAM,BOTTOM_ROW_1,3,14,4.97,,18.039,HELD,CONC/LT5M,hand face to face,
+GSO-177-7CD-1,GROUND_BEAM,BOTTOM_ROW_2,3,14,4.97,,18.039,HELD,CONC/LT5M,hand face to face,
+GSO-177-7CD-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,CONC/LT5M,,
+GSO-177-7CD-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,2 candidates: concentrated-load case has no project detail; + a candidate with no project detail (unquantified)
+GSO-177-7CD-2,GROUND_BEAM,LONGITUDINAL,,,,,,HELD (unquantified),LT2_5M/LT5M,S5 carried (not re-measured),"column 245 -> arc 157/158: arc end, not re-measured"
+GSO-177-7CD-2,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,LT2_5M/LT5M,,
+GSO-177-7CD-2,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,"bar run not established (S5 BLOCKED, not re-measured)"
+GSO-178-7DB-1,GROUND_BEAM,TOP,3,16,3.8,,18.015,HELD,EXT/LT5M,hand face to face,145 face y41248 -> column 230 y45048
+GSO-178-7DB-1,GROUND_BEAM,BOTTOM,6,16,3.8,,36.03,HELD,EXT/LT5M,hand face to face,
+GSO-178-7DB-1,GROUND_BEAM,STIRRUP T8 @ 150,A 26 / B 27 / C 25.33,8,,,,HELD: count Q-71; link path needs the depth (FOLLOW ARCH); hooks not printed,EXT/LT5M,clear span,
+GSO-178-7DB-1,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT/LT5M,,
+GSO-178-7DB-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,2 candidates: exterior / interior not resolved;
+GSO-17B-7E5-1,GROUND_BEAM,TOP,3,14,1.2,4.356,,RELEASED (lower bound),LT2_5M/LT5M,hand face to face,7D0 face y36648 -> 184 face / column 23C y37848
+GSO-17B-7E5-1,GROUND_BEAM,BOTTOM_ROW_1,3,14,1.2,4.356,,RELEASED (lower bound),LT2_5M/LT5M,hand face to face,
+GSO-17B-7E5-1,GROUND_BEAM,BOTTOM_ROW_2,3,14,1.2,4.356,,RELEASED (lower bound),LT2_5M/LT5M,hand face to face,
+GSO-17B-7E5-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,LT2_5M/LT5M,,
+GSO-17B-7E5-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-17C-7E3-1,GROUND_BEAM,TOP,3,14,1.928,6.998,,RELEASED (lower bound),LT2_5M/LT5M,hand face to face,7E2 face y41220 -> footing F12 face y43148 (foundation plan)
+GSO-17C-7E3-1,GROUND_BEAM,BOTTOM_ROW_1,3,14,1.928,6.998,,RELEASED (lower bound),LT2_5M/LT5M,hand face to face,
+GSO-17C-7E3-1,GROUND_BEAM,BOTTOM_ROW_2,3,14,1.928,6.998,,RELEASED (lower bound),LT2_5M/LT5M,hand face to face,
+GSO-17C-7E3-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,LT2_5M/LT5M,,
+GSO-17C-7E3-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-17D-7E4-1,GROUND_BEAM,TOP,3,14,4.272,,15.506,HELD,CONC/LT5M,hand face to face,7D0 face y36648 -> 7E1 face y40920
+GSO-17D-7E4-1,GROUND_BEAM,BOTTOM_ROW_1,3,14,4.272,,15.506,HELD,CONC/LT5M,hand face to face,
+GSO-17D-7E4-1,GROUND_BEAM,BOTTOM_ROW_2,3,14,4.272,,15.506,HELD,CONC/LT5M,hand face to face,
+GSO-17D-7E4-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,CONC/LT5M,,
+GSO-17D-7E4-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,2 candidates: concentrated-load case has no project detail; + a candidate with no project detail (unquantified)
+GSO-17E-17F-1,GROUND_BEAM,LONGITUDINAL,,,,,,HELD (unquantified),CONC/LT5M,S5 carried (not re-measured),oblique band: not re-measured
+GSO-17E-17F-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,CONC/LT5M,,
+GSO-17E-17F-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,"bar run not established (S5 BLOCKED, not re-measured)"
+GSO-180-181-1,GROUND_BEAM,LONGITUDINAL,,,,,,HELD (unquantified),LT2_5M/LT5M,S5 carried (not re-measured),oblique band: not re-measured
+GSO-180-181-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,LT2_5M/LT5M,,
+GSO-180-181-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,"bar run not established (S5 BLOCKED, not re-measured)"
+GSO-180D-180E-1,GROUND_BEAM,TOP,3,16,2.1,,9.956,HELD,EXT/LT2_5M/LT5M,hand face to face,176 face x102918 -> 175 face x105018
+GSO-180D-180E-1,GROUND_BEAM,BOTTOM,6,16,2.1,,19.911,HELD,EXT/LT2_5M/LT5M,hand face to face,
+GSO-180D-180E-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,EXT/LT2_5M/LT5M,,
+GSO-180D-180E-1,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT/LT2_5M/LT5M,,
+GSO-180D-180E-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,3 candidates: exterior / interior not resolved; <2.5 m and <5 m titles both hold
+GSO-1811-1812-1,GROUND_BEAM,LONGITUDINAL,,,,,,HELD (unquantified),EXT/LT2_5M/LT5M,S5 carried (not re-measured),east end on the plot boundary: not re-measured
+GSO-1811-1812-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,EXT/LT2_5M/LT5M,,
+GSO-1811-1812-1,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT/LT2_5M/LT5M,,
+GSO-1811-1812-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,"bar run not established (S5 BLOCKED, not re-measured)"
+GSO-182-183-1,GROUND_BEAM,LONGITUDINAL,,,,,,HELD (unquantified),LT2_5M/LT5M,S5 carried (not re-measured),oblique band: not re-measured
+GSO-182-183-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,LT2_5M/LT5M,,
+GSO-182-183-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,"bar run not established (S5 BLOCKED, not re-measured)"
+GSO-184-7CF-1,GROUND_BEAM,TOP,3,14,3.02,,10.961,HELD,CONC/LT5M,hand face to face,17D face x99818 -> column 24D x102838
+GSO-184-7CF-1,GROUND_BEAM,BOTTOM_ROW_1,3,14,3.02,,10.961,HELD,CONC/LT5M,hand face to face,
+GSO-184-7CF-1,GROUND_BEAM,BOTTOM_ROW_2,3,14,3.02,,10.961,HELD,CONC/LT5M,hand face to face,
+GSO-184-7CF-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,CONC/LT5M,,
+GSO-184-7CF-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,2 candidates: concentrated-load case has no project detail; + a candidate with no project detail (unquantified)
+GSO-184-7CF-2,GROUND_BEAM,TOP,3,14,2.65,9.619,,RELEASED (lower bound),LT5M,hand face to face,column 24D x103638 -> column 23C x106288
+GSO-184-7CF-2,GROUND_BEAM,BOTTOM_ROW_1,3,14,2.65,9.619,,RELEASED (lower bound),LT5M,hand face to face,
+GSO-184-7CF-2,GROUND_BEAM,BOTTOM_ROW_2,3,14,2.65,9.619,,RELEASED (lower bound),LT5M,hand face to face,
+GSO-184-7CF-2,GROUND_BEAM,STIRRUP T8 @ 150,A 18 / B 19 / C 17.67,8,0.808,,5.746 / 6.065 / 5.639,HELD: count Q-71; hooks not printed,LT5M,clear span,
+GSO-184-7CF-2,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-184-7CF-3,GROUND_BEAM,TOP,3,16,5.0,,23.704,HELD,CONC/GT5M/LT5M,hand face to face,column 23C x106888 -> 7E0 face x111888 (exactly 5.00: neither 'more than' nor 'less than' 5 m on the face-to-face basis) [length class GT5M -> GT5M/LT5M]
+GSO-184-7CF-3,GROUND_BEAM,BOTTOM_ROW_1,3,16,5.0,,23.704,HELD,CONC/GT5M/LT5M,hand face to face,
+GSO-184-7CF-3,GROUND_BEAM,BOTTOM_ROW_2,3,16,5.0,,23.704,HELD,CONC/GT5M/LT5M,hand face to face,
+GSO-184-7CF-3,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,CONC/GT5M/LT5M,,
+GSO-184-7CF-3,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,2 candidates: concentrated-load case has no project detail; + a candidate with no project detail (unquantified)
+GSO-185-7C7-1,GROUND_BEAM,TOP,3,16,0.6,2.844,,RELEASED (lower bound),EXT,hand face to face,column 230 x95218 -> 109 face x95818
+GSO-185-7C7-1,GROUND_BEAM,BOTTOM,6,16,0.6,5.689,,RELEASED (lower bound),EXT,hand face to face,
+GSO-185-7C7-1,GROUND_BEAM,STIRRUP T8 @ 150,A 4 / B 5 / C 4.00,8,,,,HELD: count Q-71; link path needs the depth (FOLLOW ARCH); hooks not printed,EXT,clear span,
+GSO-185-7C7-1,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT,,
+GSO-185-7C7-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-7D0-FC-1,GROUND_BEAM,TOP,3,16,2.975,14.104,,RELEASED (lower bound),EXT,hand face to face,column 218 x93318 -> column 249 x96293
+GSO-7D0-FC-1,GROUND_BEAM,BOTTOM,6,16,2.975,28.207,,RELEASED (lower bound),EXT,hand face to face,
+GSO-7D0-FC-1,GROUND_BEAM,STIRRUP T8 @ 150,A 20 / B 21 / C 19.83,8,,,,HELD: count Q-71; link path needs the depth (FOLLOW ARCH); hooks not printed,EXT,clear span,
+GSO-7D0-FC-1,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT,,
+GSO-7D0-FC-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-7D0-FC-2,GROUND_BEAM,TOP,3,16,5.745,27.236,,RELEASED (lower bound),EXT,hand face to face,column 249 x97393 -> column 251 x103138
+GSO-7D0-FC-2,GROUND_BEAM,BOTTOM,6,16,5.745,54.471,,RELEASED (lower bound),EXT,hand face to face,
+GSO-7D0-FC-2,GROUND_BEAM,STIRRUP T8 @ 150,A 39 / B 40 / C 38.30,8,,,,HELD: count Q-71; link path needs the depth (FOLLOW ARCH); hooks not printed,EXT,clear span,
+GSO-7D0-FC-2,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT,,
+GSO-7D0-FC-2,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-7D0-FC-3,GROUND_BEAM,TOP,3,16,6.35,30.104,,RELEASED (lower bound),EXT,hand face to face,column 251 x103638 -> column 255 x109988
+GSO-7D0-FC-3,GROUND_BEAM,BOTTOM,6,16,6.35,60.207,,RELEASED (lower bound),EXT,hand face to face,
+GSO-7D0-FC-3,GROUND_BEAM,STIRRUP T8 @ 150,A 43 / B 44 / C 42.33,8,,,,HELD: count Q-71; link path needs the depth (FOLLOW ARCH); hooks not printed,EXT,clear span,
+GSO-7D0-FC-3,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT,,
+GSO-7D0-FC-3,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-7D0-FC-4,GROUND_BEAM,TOP,3,16,1.2,5.689,,RELEASED (lower bound),EXT,hand face to face,column 255 x110688 -> column 200 x111888
+GSO-7D0-FC-4,GROUND_BEAM,BOTTOM,6,16,1.2,11.378,,RELEASED (lower bound),EXT,hand face to face,
+GSO-7D0-FC-4,GROUND_BEAM,STIRRUP T8 @ 150,A 8 / B 9 / C 8.00,8,,,,HELD: count Q-71; link path needs the depth (FOLLOW ARCH); hooks not printed,EXT,clear span,
+GSO-7D0-FC-4,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT,,
+GSO-7D0-FC-4,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-7D4-F8-1,GROUND_BEAM,TOP,3,16,5.45,25.837,,RELEASED (lower bound),EXT,hand face to face,column 207 x81218 -> column 20B x86668
+GSO-7D4-F8-1,GROUND_BEAM,BOTTOM,6,16,5.45,51.674,,RELEASED (lower bound),EXT,hand face to face,
+GSO-7D4-F8-1,GROUND_BEAM,STIRRUP T8 @ 150,A 37 / B 38 / C 36.33,8,,,,HELD: count Q-71; link path needs the depth (FOLLOW ARCH); hooks not printed,EXT,clear span,
+GSO-7D4-F8-1,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT,,
+GSO-7D4-F8-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-7D4-F8-2,GROUND_BEAM,TOP,3,16,4.25,20.148,,RELEASED (lower bound),EXT,hand face to face,column 20B x87068 -> 7D1 face x91318
+GSO-7D4-F8-2,GROUND_BEAM,BOTTOM,6,16,4.25,40.296,,RELEASED (lower bound),EXT,hand face to face,
+GSO-7D4-F8-2,GROUND_BEAM,STIRRUP T8 @ 150,A 29 / B 30 / C 28.33,8,,,,HELD: count Q-71; link path needs the depth (FOLLOW ARCH); hooks not printed,EXT,clear span,
+GSO-7D4-F8-2,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT,,
+GSO-7D4-F8-2,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-7DC-7DD-1,GROUND_BEAM,TOP,3,14,3.525,,12.794,HELD,CONC/LT5M,hand face to face,column 24D y38148 -> column 7F5 y41673
+GSO-7DC-7DD-1,GROUND_BEAM,BOTTOM_ROW_1,3,14,3.525,,12.794,HELD,CONC/LT5M,hand face to face,
+GSO-7DC-7DD-1,GROUND_BEAM,BOTTOM_ROW_2,3,14,3.525,,12.794,HELD,CONC/LT5M,hand face to face,
+GSO-7DC-7DD-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,CONC/LT5M,,
+GSO-7DC-7DD-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,2 candidates: concentrated-load case has no project detail; + a candidate with no project detail (unquantified)
+GSO-7DC-7DD-2,GROUND_BEAM,TOP,3,14,3.525,12.794,,RELEASED (lower bound),LT5M,hand face to face,column 7F5 y41973 -> 177 face y45498
+GSO-7DC-7DD-2,GROUND_BEAM,BOTTOM_ROW_1,3,14,3.525,12.794,,RELEASED (lower bound),LT5M,hand face to face,
+GSO-7DC-7DD-2,GROUND_BEAM,BOTTOM_ROW_2,3,14,3.525,12.794,,RELEASED (lower bound),LT5M,hand face to face,
+GSO-7DC-7DD-2,GROUND_BEAM,STIRRUP T8 @ 150,A 24 / B 25 / C 23.50,8,0.808,,7.661 / 7.980 / 7.501,HELD: count Q-71; hooks not printed,LT5M,clear span,
+GSO-7DC-7DD-2,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-7E0-FD-1,GROUND_BEAM,TOP,3,16,3.35,,15.881,HELD,EXT,hand face to face,column 200 y36848 -> column 809 y40198
+GSO-7E0-FD-1,GROUND_BEAM,BOTTOM,6,16,3.35,,31.763,HELD,EXT,hand face to face,
+GSO-7E0-FD-1,GROUND_BEAM,STIRRUP T8 @ 150,A 23 / B 24 / C 22.33,8,,,,HELD: count Q-71; link path needs the depth (FOLLOW ARCH); hooks not printed,EXT,clear span,
+GSO-7E0-FD-1,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT,,
+GSO-7E0-FD-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,candidate details differ: EXT
+GSO-7E0-FD-2,GROUND_BEAM,TOP,3,16,3.25,15.407,,RELEASED (lower bound),EXT,hand face to face,column 809 y40498 -> column 1FC y43748
+GSO-7E0-FD-2,GROUND_BEAM,BOTTOM,6,16,3.25,30.815,,RELEASED (lower bound),EXT,hand face to face,
+GSO-7E0-FD-2,GROUND_BEAM,STIRRUP T8 @ 150,A 22 / B 23 / C 21.67,8,,,,HELD: count Q-71; link path needs the depth (FOLLOW ARCH); hooks not printed,EXT,clear span,
+GSO-7E0-FD-2,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT,,
+GSO-7E0-FD-2,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-7E1-7E2-1,GROUND_BEAM,TOP,3,16,6.72,,31.858,HELD,CONC/GT5M,hand face to face,column 228 x96118 -> 7DC face x102838
+GSO-7E1-7E2-1,GROUND_BEAM,BOTTOM_ROW_1,3,16,6.72,,31.858,HELD,CONC/GT5M,hand face to face,
+GSO-7E1-7E2-1,GROUND_BEAM,BOTTOM_ROW_2,3,16,6.72,,31.858,HELD,CONC/GT5M,hand face to face,
+GSO-7E1-7E2-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,CONC/GT5M,,
+GSO-7E1-7E2-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,2 candidates: concentrated-load case has no project detail; + a candidate with no project detail (unquantified)
+GSO-7E7-7E8-1,GROUND_BEAM,TOP,3,14,3.525,12.794,,RELEASED (lower bound),LT5M,hand face to face,7CF face y38148 -> column 7ED y41673
+GSO-7E7-7E8-1,GROUND_BEAM,BOTTOM_ROW_1,3,14,3.525,12.794,,RELEASED (lower bound),LT5M,hand face to face,
+GSO-7E7-7E8-1,GROUND_BEAM,BOTTOM_ROW_2,3,14,3.525,12.794,,RELEASED (lower bound),LT5M,hand face to face,
+GSO-7E7-7E8-1,GROUND_BEAM,STIRRUP T8 @ 150,A 24 / B 25 / C 23.50,8,0.808,,7.661 / 7.980 / 7.501,HELD: count Q-71; hooks not printed,LT5M,clear span,
+GSO-7E7-7E8-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-7E7-7E8-2,GROUND_BEAM,TOP,3,14,3.525,,12.794,HELD,CONC/LT5M,hand face to face,column 7ED y41973 -> 177 face y45498
+GSO-7E7-7E8-2,GROUND_BEAM,BOTTOM_ROW_1,3,14,3.525,,12.794,HELD,CONC/LT5M,hand face to face,
+GSO-7E7-7E8-2,GROUND_BEAM,BOTTOM_ROW_2,3,14,3.525,,12.794,HELD,CONC/LT5M,hand face to face,
+GSO-7E7-7E8-2,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,CONC/LT5M,,
+GSO-7E7-7E8-2,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,2 candidates: concentrated-load case has no project detail; + a candidate with no project detail (unquantified)
+GSO-7E9-7EA-1,GROUND_BEAM,TOP,3,14,4.225,15.335,,RELEASED (lower bound),LT5M,hand face to face,column 7F5 x103138 -> column 7ED x107363
+GSO-7E9-7EA-1,GROUND_BEAM,BOTTOM_ROW_1,3,14,4.225,15.335,,RELEASED (lower bound),LT5M,hand face to face,
+GSO-7E9-7EA-1,GROUND_BEAM,BOTTOM_ROW_2,3,14,4.225,15.335,,RELEASED (lower bound),LT5M,hand face to face,
+GSO-7E9-7EA-1,GROUND_BEAM,STIRRUP T8 @ 150,A 29 / B 30 / C 28.17,8,0.808,,9.257 / 9.576 / 8.991,HELD: count Q-71; hooks not printed,LT5M,clear span,
+GSO-7E9-7EA-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-A-139-13A-1,GROUND_BEAM,TOP,3,16,1.731,8.206,,RELEASED (lower bound),EXT,S5 carried (not re-measured),arc band: not re-measured
+GSO-A-139-13A-1,GROUND_BEAM,BOTTOM,6,16,1.731,16.412,,RELEASED (lower bound),EXT,S5 carried (not re-measured),
+GSO-A-139-13A-1,GROUND_BEAM,STIRRUP T8 @ 150,A 12 / B 13 / C 11.54,8,,,,HELD: count Q-71; link path needs the depth (FOLLOW ARCH); hooks not printed,EXT,clear span,
+GSO-A-139-13A-1,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT,,
+GSO-A-139-13A-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,
+GSO-A-157-158-1,GROUND_BEAM,LONGITUDINAL,,,,,,HELD (unquantified),EXT,S5 carried (not re-measured),arc band: not re-measured
+GSO-A-157-158-1,GROUND_BEAM,STIRRUP,,,,,,HELD (unquantified): candidate links differ or are not printed,EXT,,
+GSO-A-157-158-1,GROUND_BEAM,SIDE 2 T12 @ 300,,12,,,,HELD (unquantified): depth FOLLOW ARCH not printed; spacing count Q-71,EXT,,
+GSO-A-157-158-1,GROUND_BEAM,BAR ENDS (development / hooks),,,,,,HELD (unquantified): no ground-beam anchorage detail,,,"bar run not established (S5 BLOCKED, not re-measured)"
+through column 249 (7D0-FC),GROUND_BEAM,TOP,3,16,1.1,5.215,,"RELEASED (bar through an interior column, p.13)",EXT,column along the band,
+through column 249 (7D0-FC),GROUND_BEAM,BOTTOM,6,16,1.1,10.43,,"RELEASED (bar through an interior column, p.13)",EXT,column along the band,
+through column 251 (7D0-FC),GROUND_BEAM,TOP,3,16,0.5,2.37,,"RELEASED (bar through an interior column, p.13)",EXT,column along the band,
+through column 251 (7D0-FC),GROUND_BEAM,BOTTOM,6,16,0.5,4.741,,"RELEASED (bar through an interior column, p.13)",EXT,column along the band,
+through column 255 (7D0-FC),GROUND_BEAM,TOP,3,16,0.7,3.319,,"RELEASED (bar through an interior column, p.13)",EXT,column along the band,
+through column 255 (7D0-FC),GROUND_BEAM,BOTTOM,6,16,0.7,6.637,,"RELEASED (bar through an interior column, p.13)",EXT,column along the band,
+through column 1E0 (170-7C3),GROUND_BEAM,TOP,3,16,0.3,1.422,,"RELEASED (bar through an interior column, p.13)",EXT,column along the band,
+through column 1E0 (170-7C3),GROUND_BEAM,BOTTOM,6,16,0.3,2.844,,"RELEASED (bar through an interior column, p.13)",EXT,column along the band,
+through column 1E4 (170-7C3),GROUND_BEAM,TOP,3,16,0.6,2.844,,"RELEASED (bar through an interior column, p.13)",EXT,column along the band,
+through column 1E4 (170-7C3),GROUND_BEAM,BOTTOM,6,16,0.6,5.689,,"RELEASED (bar through an interior column, p.13)",EXT,column along the band,
+through column 241 (170-7C3),GROUND_BEAM,TOP,3,16,0.5,2.37,,"RELEASED (bar through an interior column, p.13)",EXT,column along the band,
+through column 241 (170-7C3),GROUND_BEAM,BOTTOM,6,16,0.5,4.741,,"RELEASED (bar through an interior column, p.13)",EXT,column along the band,
+through column 20B (7D4-F8),GROUND_BEAM,TOP,3,16,0.4,1.896,,"RELEASED (bar through an interior column, p.13)",EXT,column along the band,
+through column 20B (7D4-F8),GROUND_BEAM,BOTTOM,6,16,0.4,3.793,,"RELEASED (bar through an interior column, p.13)",EXT,column along the band,
+SB1,STRAP_BEAM,TOP,13,18,4.55,118.3,,RELEASED (lower bound),70 x 50,clear between footing faces,vertical edges 1689 / 1B1C: F10 face y37748 -> F8 face y42298 = 4.550
+SB1,STRAP_BEAM,BOTTOM,7,16,4.55,50.331,,RELEASED (lower bound),70 x 50,clear between footing faces,
+SB1,STRAP_BEAM,BARS OVER THE FOOTINGS,,,2.66,,"0 .. 98.584 (drawn band less 2 x 70 mm, information only)",HELD: bar ends not detailed,,drawn strap band,
+SB1,STRAP_BEAM,STIRRUP 8 T8 / m,A 37 / B 38 / C 36.40,8,1.808,,26.428 / 27.142 / 25.999,HELD: count Q-71; outer link only (inner legs not drawn); hooks not printed,,clear span,
+SB2,STRAP_BEAM,TOP,20,18,2.293,,91.72,"HELD (drawing-resolved candidate, verifier to confirm)",100 x 50,clear between footing faces,"edges 1B08 / 1B09 (u_y 0.9813): F11 face y37848 -> F6 face y40098, 2250 / 0.9813 = 2.293; both footing outlines are drawn broken exactly where the strap edges cross"
+SB2,STRAP_BEAM,BOTTOM,10,16,2.293,,36.235,"HELD (drawing-resolved candidate, verifier to confirm)",100 x 50,clear between footing faces,
+SB2,STRAP_BEAM,BARS OVER THE FOOTINGS,,,2.672,,"0 .. 149.104 (drawn band less 2 x 70 mm, information only)",HELD: bar ends not detailed,,drawn strap band,
+SB2,STRAP_BEAM,STIRRUP 10 T8 / m,A 23 / B 24 / C 22.93,8,2.408,,21.880 / 22.831 / 21.814,HELD: count Q-71; outer link only (inner legs not drawn); hooks not printed,,clear span,
+SB3,STRAP_BEAM,TOP,5,18,3.258,32.58,,RELEASED (lower bound),50 x 40,clear between footing faces,"edges 1B26 / 1B27 (u_y 0.9361): F15 face y37348 -> F3 face y40398, 3050 / 0.9361 = 3.258"
+SB3,STRAP_BEAM,BOTTOM,5,16,3.258,25.742,,RELEASED (lower bound),50 x 40,clear between footing faces,
+SB3,STRAP_BEAM,BARS OVER THE FOOTINGS,,,1.298,,"0 .. 23.236 (drawn band less 2 x 70 mm, information only)",HELD: bar ends not detailed,,drawn strap band,
+SB3,STRAP_BEAM,STIRRUP 7 T8 / m,A 23 / B 24 / C 22.81,8,1.208,,10.976 / 11.454 / 10.884,HELD: count Q-71; outer link only (inner legs not drawn); hooks not printed,,clear span,
