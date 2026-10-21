@@ -2,7 +2,7 @@
  "master": "URBAN_BOQ_FAMILY_MASTER",
  "version": "1.1.0",
  "supersedes": "1.0.0 (kept unchanged on disk)",
- "source": "re-derived from the code of claude/access-permissions-setup-ii24ws at 1513f1d and from runs of that code (task T-130, plan P-02); 1.0.0 was the M9A read-only audit of 8177ccf",
+ "source": "re-derived from the code of claude/access-permissions-setup-ii24ws at 663ff37 and from runs of that code (task T-130, plan P-02); 1.0.0 was the M9A read-only audit of 8177ccf",
  "loaded_by": "nothing yet: engine/source/rule_store.py:104 and engine/source/coverage_census.py still read 1.0.0, so no run, census or quantity changes with this file; adopting it is a census version of its own",
  "capability_states": [
   "INTEGRATED_AND_TESTED",
@@ -23,7 +23,7 @@
  "released_configuration": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6) (the scored configuration of docs/agents/SCOREBOARD.md; ARCH_METHODS has no default, tools/urban_boq_m9.py:67; the owner switches the released default)",
  "v3_0_candidate": "ARCH_TAKEOFF_V3.0 (agents/task-T-131 33f1da2, READY, not merged): ARCH_TAKEOFF_V2.13 + route G + checker-verified pieces (straps T-073, passage walls T-109 / T-123, stair floor residue T-116); 'in_v3_0_candidate' = the family's lines are produced by that candidate; 'v3_0_planned_tasks' = board tasks that change them next",
  "run_evidence": {
-  "engine_commit": "1513f1d",
+  "engine_commit": "1513f1d (both runs); the later merges e74c182 (T-105) and 05e2eab (T-135) add modules read by no method, so the runs are unchanged by construction",
   "python": "3.11 (project venv from requirements.txt)",
   "inputs": "the development villa's architectural and structural DXF from the private Drive folder (read-only, never in this repository): sha256 ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4 and 9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079 (= SOURCE_MANIFEST)",
   "released_run": "tools/urban_boq_m9.py arch --method ARCH_TAKEOFF_V2.9 --structural <ST> --conventions engine/profiles/URBAN_M8_GENERIC_CONVENTIONS_V6.json, no facts file: exit 0, 1455 lines, BOQ_LINES.csv sha256 b96185d468524743e600f1992d4e4b2028193ff4a379961bc5686c9662f8c115",
@@ -1770,14 +1770,15 @@
    "evidence": [
     "engine/source/arch_measure.py:876 _stair_lines() per drawn flight; :930 FIN.STAIR.FLIGHT",
     "engine/source/arch_measure.py:829 _seen_below(): a flight seen below the cut is not measured again",
-    "commit 1513f1d (T-129, verifier run 46): the first -> second floor lower flight is counted again on the second-floor plan (+3.45 m2 tread marble, +11.5 lm steps)"
+    "commit 1513f1d (T-129, verifier run 46): the first -> second floor lower flight is counted again on the second-floor plan (+3.45 m2 tread marble, +11.5 lm steps)",
+    "commit 05e2eab (T-135 STAIR_FLIGHT_ONCE_V1, verifier merge): engine/source/stair_flight_once_v1.py:180 flights_once() measures each flight once; read by no method"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.STAIR.FLIGHT (held) and the stair finish lines",
    "opt_in_readers": "none",
    "missing": "a flight drawn on two plans counted twice (verifier-confirmed); flight length held",
    "in_v3_0_candidate": "yes",
    "v3_0_planned_tasks": [
-    "T-135"
+    "T-133"
    ],
    "development_villa": {
     "released_run": [
@@ -1822,14 +1823,15 @@
    "next_slice": "S3",
    "evidence": [
     "engine/source/arch_measure.py:899 FIN.MARBLE.TREAD from the tread polygons",
-    "commit 1513f1d (T-129, verifier run 46): +3.45 m2 counted twice on the second floor"
+    "commit 1513f1d (T-129, verifier run 46): +3.45 m2 counted twice on the second floor",
+    "commit 05e2eab (T-135 STAIR_FLIGHT_ONCE_V1): engine/source/stair_flight_once_v1.py:180, read by no method"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.MARBLE.TREAD",
    "opt_in_readers": "none",
    "missing": "double-counted flight; round stair held (owner Q-50)",
    "in_v3_0_candidate": "yes",
    "v3_0_planned_tasks": [
-    "T-135"
+    "T-133"
    ],
    "development_villa": {
     "released_run": [
@@ -2000,14 +2002,15 @@
    "source_needed": "unique steps",
    "next_slice": "S3",
    "evidence": [
-    "engine/source/arch_measure.py:902 FIN.STAIR.STEP_LM: sum of the physical step widths (owner Q-19)"
+    "engine/source/arch_measure.py:902 FIN.STAIR.STEP_LM: sum of the physical step widths (owner Q-19)",
+    "commit 05e2eab (T-135 STAIR_FLIGHT_ONCE_V1): engine/source/stair_flight_once_v1.py:180, read by no method"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9: FIN.STAIR.STEP_LM",
    "opt_in_readers": "none",
    "missing": "same double count as B7-02 (T-129)",
    "in_v3_0_candidate": "yes",
    "v3_0_planned_tasks": [
-    "T-135"
+    "T-133"
    ],
    "development_villa": {
     "released_run": [
@@ -2203,14 +2206,13 @@
    "evidence": [
     "engine/source/generic_route.py:1921 _stair_items(); :1995 STAIRS concrete in route G",
     "docs/agents SCOREBOARD (verifier, released run): stair + dome concrete compared line UNRESOLVED (owner Q-12)",
-    "agents/task-T-105 7975663 READY (stair concrete V1 + ledger V3 rework), not merged; round stair HELD (owner Q-50 / Q-51)"
+    "commit e74c182 (T-105 with T-056 STAIR_CONCRETE_V1, verifier merge): engine/source/stair_steps_concrete.py:399 measure_all() gives stair concrete flight by flight; read by no method; round stair HELD (owner Q-50 / Q-51)"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.STAIR",
    "opt_in_readers": "none",
-   "missing": "flight-by-flight stair concrete not wired (T-105 READY); round stair and winders held",
+   "missing": "flight-by-flight stair concrete merged but not wired; round stair and winders held",
    "in_v3_0_candidate": "yes",
    "v3_0_planned_tasks": [
-    "T-105",
     "T-133"
    ],
    "development_villa": {
@@ -2229,7 +2231,7 @@
     ],
     "candidate_run_v2_13": []
    },
-   "note": "1.0.0 said INTEGRATED_AND_TESTED; lowered: the stair line is UNRESOLVED on the development villa and the stair piece that replaces it is not merged"
+   "note": "1.0.0 said INTEGRATED_AND_TESTED; lowered: the stair line is UNRESOLVED on the development villa and the stair piece that replaces it is not wired"
   },
   {
    "code": "B7-13",
@@ -3147,16 +3149,15 @@
     "engine/source/generic_route.py:856 BEAMS concrete in route G",
     "commit cb4a66f (T-085 beam binding V2, verifier run 32): about +4.30 m3 of beam concrete once wired; read by no method",
     "commit 575df66 (T-110 beam member register, verifier run 45, research); owner Q-61 C member by member",
-    "agents/task-T-105 7975663 READY (concrete ledger V3), not merged"
+    "commit e74c182 (T-105 with T-097 CONCRETE_LEDGER_V3, verifier merge): engine/source/concrete_ledger_v3.py:418 measure() / :501 apply() bind the held spans; read by no released method"
    ],
    "released_method_reads": "ARCH_TAKEOFF_V2.9 + route G (conventions URBAN_M8_GENERIC_CONVENTIONS_V6): STR.CONC.BEAM",
    "opt_in_readers": "none",
-   "missing": "24 spans bounded; beam binding V2 / ledger V3 not wired",
+   "missing": "24 spans bounded; beam binding V2 / concrete ledger V3 merged but not wired",
    "in_v3_0_candidate": "yes",
    "v3_0_planned_tasks": [
-    "T-105",
-    "T-102",
-    "T-133"
+    "T-133",
+    "T-102"
    ],
    "development_villa": {
     "released_run": [

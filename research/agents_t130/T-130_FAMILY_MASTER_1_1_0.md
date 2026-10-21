@@ -6,7 +6,7 @@ New file `rules/coverage/BOQ_FAMILY_MASTER_1.1.0.json`; `1.0.0` untouched. Nothi
 ## How each status was derived
 
 1. Released configuration = the scored one: `ARCH_TAKEOFF_V2.9` + route G, conventions V6, no facts file. Run on the
-   development villa's Drive DXFs (sha256 = SOURCE_MANIFEST) at working head 1513f1d: exit 0, 1455 lines,
+   development villa's Drive DXFs (sha256 = SOURCE_MANIFEST) at working head 1513f1d (the later merges T-105 / T-135 add modules read by no method): exit 0, 1455 lines,
    `BOQ_LINES.csv` sha256 b96185d4..., the same line count the verifier scored.
 2. Candidate = `ARCH_TAKEOFF_V2.13` with the T-120 project inputs (fixture reading, exterior spaces, pantry
    4.50 x 3.00 m typed): 579 architectural lines; wet-area floor membrane 85.621 m2 (= verifier run 44, 85.62).
@@ -48,10 +48,10 @@ Raised to IMPLEMENTED_NOT_INTEGRATED (opt-in only): pantry wet zone (V2.13), til
 table), membrane rolls (V2.11 .. V2.13: 52 rolls released, 1 held in the candidate run).
 
 Lowered (verifier evidence; the code is unchanged, the 1.0.0 claim was too strong):
-stair concrete (compared line UNRESOLVED, flight piece T-105 not merged), blinding (only one bounded line; T-100 / T-126
+stair concrete (compared line UNRESOLVED; the flight piece, merged with T-105 as e74c182, is read by no method), blinding (only one bounded line; T-100 / T-126
 scope), straps / ground beams (all 59 ground-beam lines bounded; T-073 strap correction not wired), columns (all 82
 lines BLOCKED_RFI; T-100 phantom columns in the typed path), beams (24 spans bounded; T-085 binding correction about
-+4.30 m3 not wired).
++4.30 m3 and concrete ledger V3 (e74c182) not wired).
 
 ## Census gaps found (coverage_census.py, not changed here)
 

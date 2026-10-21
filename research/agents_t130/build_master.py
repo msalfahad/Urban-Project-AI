@@ -228,15 +228,18 @@ f("B7-01", "PARTIAL",
   ["engine/source/arch_measure.py:876 _stair_lines() per drawn flight; :930 FIN.STAIR.FLIGHT",
    "engine/source/arch_measure.py:829 _seen_below(): a flight seen below the cut is not measured again",
    "commit 1513f1d (T-129, verifier run 46): the first -> second floor lower flight is counted again on the second-"
-   "floor plan (+3.45 m2 tread marble, +11.5 lm steps)"],
+   "floor plan (+3.45 m2 tread marble, +11.5 lm steps)",
+   "commit 05e2eab (T-135 STAIR_FLIGHT_ONCE_V1, verifier merge): engine/source/stair_flight_once_v1.py:180 "
+   "flights_once() measures each flight once; read by no method"],
   "ARCH_TAKEOFF_V2.9: FIN.STAIR.FLIGHT (held) and the stair finish lines", "none",
-  "a flight drawn on two plans counted twice (verifier-confirmed); flight length held", "yes", plan=("T-135",),
+  "a flight drawn on two plans counted twice (verifier-confirmed); flight length held", "yes", plan=("T-133",),
   codes=("FIN.STAIR.FLIGHT",))
 f("B7-02", "PARTIAL",
   ["engine/source/arch_measure.py:899 FIN.MARBLE.TREAD from the tread polygons",
-   "commit 1513f1d (T-129, verifier run 46): +3.45 m2 counted twice on the second floor"],
+   "commit 1513f1d (T-129, verifier run 46): +3.45 m2 counted twice on the second floor",
+   "commit 05e2eab (T-135 STAIR_FLIGHT_ONCE_V1): engine/source/stair_flight_once_v1.py:180, read by no method"],
   "ARCH_TAKEOFF_V2.9: FIN.MARBLE.TREAD", "none", "double-counted flight; round stair held (owner Q-50)", "yes",
-  plan=("T-135",), codes=("FIN.MARBLE.TREAD",), note="1.0.0 said EXPERIMENTAL; the released run quantifies it")
+  plan=("T-133",), codes=("FIN.MARBLE.TREAD",), note="1.0.0 said EXPERIMENTAL; the released run quantifies it")
 f("B7-03", "PARTIAL",
   ["engine/source/arch_measure.py:922 / :950 FIN.MARBLE.RISER (UP-STAIR-003), held without the tread thickness"],
   "ARCH_TAKEOFF_V2.9: FIN.MARBLE.RISER (held)", "none", "tread marble thickness not given: every line held", "yes",
@@ -250,8 +253,9 @@ f("B7-04", "PARTIAL",
 f("B7-05", "EXPERIMENTAL", ["engine/stair_assembly.py exists (NOSING_LENGTH, research, read by no method)"],
   "none", "none", "not in any method", "no")
 f("B7-06", "PARTIAL",
-  ["engine/source/arch_measure.py:902 FIN.STAIR.STEP_LM: sum of the physical step widths (owner Q-19)"],
-  "ARCH_TAKEOFF_V2.9: FIN.STAIR.STEP_LM", "none", "same double count as B7-02 (T-129)", "yes", plan=("T-135",),
+  ["engine/source/arch_measure.py:902 FIN.STAIR.STEP_LM: sum of the physical step widths (owner Q-19)",
+   "commit 05e2eab (T-135 STAIR_FLIGHT_ONCE_V1): engine/source/stair_flight_once_v1.py:180, read by no method"],
+  "ARCH_TAKEOFF_V2.9: FIN.STAIR.STEP_LM", "none", "same double count as B7-02 (T-129)", "yes", plan=("T-133",),
   codes=("FIN.STAIR.STEP_LM",))
 f("B7-07", "IMPLEMENTED_NOT_INTEGRATED", ["engine/finishes_rules.py exists (zigzag skirting, idle arithmetic)"],
   "none", "none", "not in any method", "no")
@@ -268,13 +272,13 @@ f("B7-11", "BLOCKED_BY_SOURCE", [NONE_EMITTED], "none", "none", "needs a specifi
 f("B7-12", "PARTIAL",
   ["engine/source/generic_route.py:1921 _stair_items(); :1995 STAIRS concrete in route G",
    "docs/agents SCOREBOARD (verifier, released run): stair + dome concrete compared line UNRESOLVED (owner Q-12)",
-   "agents/task-T-105 7975663 READY (stair concrete V1 + ledger V3 rework), not merged; round stair HELD (owner Q-50 / "
-   "Q-51)"],
+   "commit e74c182 (T-105 with T-056 STAIR_CONCRETE_V1, verifier merge): engine/source/stair_steps_concrete.py:399 "
+   "measure_all() gives stair concrete flight by flight; read by no method; round stair HELD (owner Q-50 / Q-51)"],
   REL + ": STR.CONC.STAIR", "none",
-  "flight-by-flight stair concrete not wired (T-105 READY); round stair and winders held", "yes",
-  plan=("T-105", "T-133"), codes=("STR.CONC.STAIR",),
+  "flight-by-flight stair concrete merged but not wired; round stair and winders held", "yes",
+  plan=("T-133",), codes=("STR.CONC.STAIR",),
   note="1.0.0 said INTEGRATED_AND_TESTED; lowered: the stair line is UNRESOLVED on the development villa and the "
-       "stair piece that replaces it is not merged")
+       "stair piece that replaces it is not wired")
 f("B7-13", "NOT_IMPLEMENTED",
   [NONE_EMITTED + "; engine/source/stair_geometry.py INCLINED_WAIST_SURFACE_AREA is structural geometry, not a trade"],
   "none", "none", "no formwork trade", "no")
@@ -401,9 +405,10 @@ f("B10-07", "PARTIAL",
    "commit cb4a66f (T-085 beam binding V2, verifier run 32): about +4.30 m3 of beam concrete once wired; read by "
    "no method",
    "commit 575df66 (T-110 beam member register, verifier run 45, research); owner Q-61 C member by member",
-   "agents/task-T-105 7975663 READY (concrete ledger V3), not merged"],
-  REL + ": STR.CONC.BEAM", "none", "24 spans bounded; beam binding V2 / ledger V3 not wired", "yes",
-  plan=("T-105", "T-102", "T-133"), codes=("STR.CONC.BEAM",),
+   "commit e74c182 (T-105 with T-097 CONCRETE_LEDGER_V3, verifier merge): engine/source/concrete_ledger_v3.py:418 "
+   "measure() / :501 apply() bind the held spans; read by no released method"],
+  REL + ": STR.CONC.BEAM", "none", "24 spans bounded; beam binding V2 / concrete ledger V3 merged but not wired", "yes",
+  plan=("T-133", "T-102"), codes=("STR.CONC.BEAM",),
   note="1.0.0 said INTEGRATED_AND_TESTED; lowered: spans held and a verified binding correction not wired")
 f("B10-08", "INTEGRATED_AND_TESTED", ["engine/source/generic_route.py:1095-1214 SLABS concrete in route G"],
   REL + ": STR.CONC.SLAB", "none", "one piece bounded", "yes", codes=("STR.CONC.SLAB",))
@@ -561,7 +566,7 @@ doc = {
                       "T-109 / T-123, stair floor residue T-116); 'in_v3_0_candidate' = the family's lines are "
                       "produced by that candidate; 'v3_0_planned_tasks' = board tasks that change them next",
     "run_evidence": {
-        "engine_commit": HEAD, "python": "3.11 (project venv from requirements.txt)",
+        "engine_commit": "1513f1d (both runs); the later merges e74c182 (T-105) and 05e2eab (T-135) add modules read by no method, so the runs are unchanged by construction", "python": "3.11 (project venv from requirements.txt)",
         "inputs": "the development villa's architectural and structural DXF from the private Drive folder (read-only, "
                   "never in this repository): sha256 ab54dd554c31fe4a6a63ff773dc6d034159a736c7dd78158483b473a4ed31cc4 "
                   "and 9f9d1179a5d2a6635f9b412915a72184b7db1ff7729f4ab39a72dc3391738079 (= SOURCE_MANIFEST)",
