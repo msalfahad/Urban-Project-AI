@@ -1,0 +1,80 @@
+ROOM_ROW,ROOM,OPENING,KIND,FACE_WIDTH_M,SILL_M,HEAD_OR_CROWN_M,STATUS,SOURCE
+GF-01,dewaneya,D120,door,1.0,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+GF-01,dewaneya,arch to wash,arch,1.0,,,HELD,"HELD: arch head not printed; sections draw it without dimension; not to scale (sanitary NOTES, T-091 F2)"
+GF-01,dewaneya,W11,window,1.95,,,HELD,HELD: no head / sill printed on any sheet
+GF-01,dewaneya,W12,window,1.95,,,HELD,HELD: no head / sill printed on any sheet
+GF-02,wash by the dewaneya,arch to dewaneya,arch,1.0,,,HELD,"HELD: arch head not printed; sections draw it without dimension; not to scale (sanitary NOTES, T-091 F2)"
+GF-02,wash by the dewaneya,D315,door,0.8,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+GF-03,W.C. by the dewaneya,D315,door,0.8,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+GF-04,driver room,d220,door,0.9,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+GF-04,driver room,D315,door,0.8,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+GF-04,driver room,W04,window,0.6,,,HELD,HELD: no head / sill printed on any sheet
+GF-05,driver W.C.,D315,door,0.8,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+GF-06,kitchen,D120,door,1.0,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+GF-06,kitchen,W08,window,1.5,,,HELD,HELD: no head / sill printed on any sheet
+GF-07,pantry (open side 4.46 m not a wall),D120,door,1.0,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+GF-07,pantry (open side 4.46 m not a wall),W09,window,1.5,,,HELD,HELD: no head / sill printed on any sheet
+GF-07,pantry (open side 4.46 m not a wall),W10,window,1.0,,,HELD,HELD: no head / sill printed on any sheet
+GF-08,open room: dining / entrance / reception / saloon,D01 main entrance,door,2.0,0.0,2.5,PRINTED,"SE elevation (Pages_05-06 p.6 scan, and DXF SE frame): chain 85 / 250 from +0.15: +1.00 to +3.50 (DXF 850 / 2500)"
+GF-08,open room: dining / entrance / reception / saloon,D120 to stair hall,door,1.0,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+GF-08,open room: dining / entrance / reception / saloon,D115 to master bed,door,1.0,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+GF-08,open room: dining / entrance / reception / saloon,W02 saloon glazing,window,6.33,,,HELD,HELD: no head / sill printed on any sheet
+GF-08,open room: dining / entrance / reception / saloon,other glazing (plan),window,0.93,,,HELD,HELD: no head / sill printed on any sheet
+GF-15,master bed room,D115,door,1.0,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+GF-15,master bed room,"bath door (loose arc, D15)",door,0.68,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+GF-15,master bed room,W03 pool-side glazing (face share),window,3.96,0.0,4.3,PRINTED,"NW elevation (Pages_07-08 p.8 scan, and DXF NW frame): chain 115 / 70 / 430 / 20 on the pool axis, +1.00 to +5.30; DXF 4300 from +1.00. Width basis Q-38 A (printed 6.57) answered; this face carries 3.96 m of it (T-128 trace)"
+GF-16,bath of the master bed room,bath door,door,0.8,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+GF-16,bath of the master bed room,W05-07,window,0.6,,,HELD,HELD: no head / sill printed on any sheet
+GF-10,W.C. 175 x 135 by the stair,D315,door,0.8,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+GF-10,W.C. 175 x 135 by the stair,W05-07,window,0.6,,,HELD,HELD: no head / sill printed on any sheet
+GF-12,W.C. core wedge A,D315,door,0.8,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+GF-12,W.C. core wedge A,W05-07,window,0.6,,,HELD,HELD: no head / sill printed on any sheet
+GF-13,W.C. core wedge B,D315,door,0.8,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+GF-14,"wash lobby, 2 basins (open side 1.21 m)",D315,door,0.8,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+GF-14,"wash lobby, 2 basins (open side 1.21 m)",D315,door,0.8,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+GF-11,basin space 110 x 135 + stair passage,D315 W.C.,door,0.8,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+GF-11,basin space 110 x 135 + stair passage,D120 to open room,door,1.0,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+1F-01,master bed room west 425 x 450,D115,door,1.0,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+1F-01,master bed room west 425 x 450,D315,door,0.8,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+1F-01,master bed room west 425 x 450,W14,window,2.45,1.4,3.0,PRINTED (CORRECTED),"SE elevation (Pages_05-06 p.6 scan, and DXF SE frame): GF-side chain 85 / 250 / 55 / 65 / 220 / 160 / 139 / 104 / 193 / 155 from +0.15 = +6.90 to +8.50; DXF 2201.4 / 1598.6 (+6.90 / +8.50). T-083 / T-128 read the 4th part as 45 (sill +6.70, head 2.80): the chain only closes on the printed 14.40 top with 65"
+1F-04,master bed room 500 x 365,D115,door,1.0,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+1F-04,master bed room 500 x 365,D315,door,0.8,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+1F-04,master bed room 500 x 365,W24,window,1.55,,,HELD,HELD: no head / sill printed on any sheet
+1F-10,master bed room 380 x 430,D215,door,0.9,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+1F-10,master bed room 380 x 430,arch120 to the dressing passage,arch,1.0,,,HELD,"HELD: arch head not printed; sections draw it without dimension; not to scale (sanitary NOTES, T-091 F2)"
+1F-11,master bed room east (curved W17),D215,door,0.9,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+1F-11,master bed room east (curved W17),D315,door,0.8,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+1F-11,master bed room east (curved W17),W17 (inner face),window,3.32,0.0,3.5,PRINTED (CORRECTED),"NW elevation (Pages_07-08 p.8 scan, and DXF NW frame): chain 115 / 70 / 430 / 20 / 305 / 45: the ""20"" is the slab band between the pool glazing head +5.30 and the 1F floor +5.50, so W17 runs +5.50 to +9.00 (DXF 3050.5 + 454.3 from y(+5.50)). T-128 took sill 0.20 / crown 3.70"
+1F-07,laundry,d220,door,0.9,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+1F-07,laundry,D315,door,0.8,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+1F-07,laundry,W19-23,window,0.6,,,HELD,HELD: no head / sill printed on any sheet
+1F-08,W.C. 147 x 180,D315,door,0.8,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+1F-08,W.C. 147 x 180,W19-23,window,0.6,,,HELD,HELD: no head / sill printed on any sheet
+1F-02,bath west upper 245 x 205,D315,door,0.8,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+1F-02,bath west upper 245 x 205,W19-23,window,0.6,,,HELD,HELD: no head / sill printed on any sheet
+1F-03,bath west lower 245 x 205,D315,door,0.8,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+1F-03,bath west lower 245 x 205,W19-23,window,0.6,,,HELD,HELD: no head / sill printed on any sheet
+1F-12,bath east 210 x 225,D315,door,0.8,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+1F-12,bath east 210 x 225,W18,window,0.5,0.84,3.0,PRINTED,"NW elevation (Pages_07-08 p.8 scan, and DXF NW frame): chain 84 / 216 / 230: +6.34 to +8.50 (DXF 839.3 / 2160.7)"
+1F-09,bath by the laundry 200 x 180,D315,door,0.8,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+1F-09,bath by the laundry 200 x 180,W19-23,window,0.6,,,HELD,HELD: no head / sill printed on any sheet
+1F-13,living area + corridor + landing + connector (open zone),D215,door,0.9,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+1F-13,living area + corridor + landing + connector (open zone),D215,door,0.9,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+1F-13,living area + corridor + landing + connector (open zone),d220,door,0.9,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+1F-13,living area + corridor + landing + connector (open zone),D115,door,1.0,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+1F-13,living area + corridor + landing + connector (open zone),W15,window,1.55,0.0,3.1,PRINTED,"NW elevation (Pages_07-08 p.8 scan, and DXF NW frame): chain 300 + 10 starts ON the +5.50 floor line (DXF 3000 from y(+5.50), jamb feet of both twins at +5.50); crown +8.60 (Q-32 A). T-128 had the sill ""not printed"""
+1F-13,living area + corridor + landing + connector (open zone),W16 (twin of W15),window,1.55,0.0,3.1,INFERRED,"NW elevation (Pages_07-08 p.8 scan, and DXF NW frame): width ""155"" printed; no height chain through it; DXF jamb feet, springing and frame levels identical to W15 (same 9 level values). Q-17 INFERRED: candidate only, not released (RFI-3 stands)"
+2F-03,maid room 300 x 645,d220,door,0.9,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+2F-03,maid room 300 x 645,D315,door,0.8,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+2F-03,maid room 300 x 645,W29,window,1.2,,,HELD,HELD: no head / sill printed on any sheet
+2F-02,W.C. 300 x 185,D315,door,0.8,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+2F-02,W.C. 300 x 185,W28,window,0.6,,,HELD,HELD: no head / sill printed on any sheet
+2F-01,2F stair lobby (outside the shaft),D26 roof door,door,1.0,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+2F-01,2F stair lobby (outside the shaft),d220,door,0.9,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+ST-GF,"stair shaft, GF part",D120 north door,door,1.0,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+ST-GF,"stair shaft, GF part",W01,window,1.2,1.0,3.0,PRINTED,"SE elevation (Pages_05-06 p.6 scan, and DXF SE frame): chain 185 / 200 from +0.15: +2.00 to +4.00 (DXF 1850 / 2000)"
+ST-1F,"stair shaft, 1F part",D115 to bed room,door,1.0,0.0,2.2,ASSUMED,"ASSUMED (Q-55 C: 2.20 m, drawings silent)"
+ST-1F,"stair shaft, 1F part",W13,window,1.2,1.0,3.3,PRINTED,"SE elevation (Pages_05-06 p.6 scan, and DXF SE frame): chain 250 / 230: +6.50 to +8.80 (DXF 2500 / 2300)"
+ST-1F,"stair shaft, 1F part",north window,window,1.0,,,HELD,HELD: no head / sill printed on any sheet
+ST-2F,"stair shaft, 2F part (to the roof)",W26 arched,window,1.2,1.1,2.8,PRINTED (RFI-1 closed),"SE elevation (Pages_05-06 p.6 scan, and DXF SE frame): chain 200 / 170 from +8.80: sill +10.80, crown +12.50. DXF SE: opening jambs 1.20 apart (layer 1), opening arch apex +12.50 (= end of the printed 170); the 12.55 / 12.95 / 13.00 arcs are the surround mouldings, which T-078 read as the crown. Freelancer also 1.20 x 1.70"
+ST-2F,"stair shaft, 2F part (to the roof)",W27,window,1.0,,,HELD,HELD: no head / sill printed on any sheet
