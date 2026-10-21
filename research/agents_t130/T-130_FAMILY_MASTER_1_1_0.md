@@ -105,7 +105,7 @@ too.
 Fresh branch `agents/task-T-130-r3` from working head 8a22eec (T-133 V3.0.1, T-141, T-145, T-148, T-153 merged since
 r2) with the r2 files re-applied; maps and the rules manifest rebuilt with the tools.
 
-Changes 1.0.0 -> 1.1.0 r3: 33 raised, 8 lowered (footings added), 58 unchanged; in V3.0 / V3.0.1: 48 yes, 51 no.
+Counts (also in the file: capability_counts, capability_change_counts, in_v3_0_candidate_counts, tested to equal the families): changes 1.0.0 -> 1.1.0 r3: 33 raised, 8 lowered (footings added), 58 unchanged; in V3.0 / V3.0.1: 48 yes, 51 no.
 
 | Verifier item | r3 |
 |---|---|

@@ -848,6 +848,10 @@ doc = {
         "B8-07: the released balcony membrane is FIN.WP.FLOOR 'exterior wp_floor', counted under B8-01; "
         "FIN.WP.BALCONY (V2.11+) is not mapped",
         "B1-02 / B10-13: the N10 tool writes no BOQ line, so a run always reports them NOT_IMPLEMENTED"],
+    "capability_counts": {k: sum(1 for x in fams if x["capability"] == k) for k in OLD["capability_states"]},
+    "capability_change_counts": {k: sum(1 for x in fams if x["capability_change"] == k)
+                                 for k in ("RAISED", "LOWERED", "UNCHANGED")},
+    "in_v3_0_candidate_counts": {k: sum(1 for x in fams if x["in_v3_0_candidate"] == k) for k in ("yes", "no")},
     "families": fams,
 }
 top_bad = check_refs(" ".join(doc["census_gaps"] + [doc["loaded_by"], doc["released_configuration"]]

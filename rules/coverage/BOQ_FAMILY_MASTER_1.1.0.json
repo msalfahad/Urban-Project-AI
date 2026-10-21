@@ -2,7 +2,7 @@
  "master": "URBAN_BOQ_FAMILY_MASTER",
  "version": "1.1.0",
  "supersedes": "1.0.0 (kept unchanged on disk)",
- "source": "re-derived from the code of claude/access-permissions-setup-ii24ws at 8a22eec and from runs of that code (task T-130, plan P-02); 1.0.0 was the M9A read-only audit of 8177ccf",
+ "source": "re-derived from the code of claude/access-permissions-setup-ii24ws at 57aab30 and from runs of that code (task T-130, plan P-02); 1.0.0 was the M9A read-only audit of 8177ccf",
  "loaded_by": "nothing yet: engine/source/rule_store.py:104 _load() (rule_store.family_master()) and engine/source/coverage_census.py still read 1.0.0, so no run, census or quantity changes with this file; adopting it is a census version of its own",
  "capability_states": [
   "INTEGRATED_AND_TESTED",
@@ -141,6 +141,23 @@
   "B8-07: the released balcony membrane is FIN.WP.FLOOR 'exterior wp_floor', counted under B8-01; FIN.WP.BALCONY (V2.11+) is not mapped",
   "B1-02 / B10-13: the N10 tool writes no BOQ line, so a run always reports them NOT_IMPLEMENTED"
  ],
+ "capability_counts": {
+  "INTEGRATED_AND_TESTED": 0,
+  "PARTIAL": 47,
+  "IMPLEMENTED_NOT_INTEGRATED": 13,
+  "EXPERIMENTAL": 4,
+  "BLOCKED_BY_SOURCE": 17,
+  "NOT_IMPLEMENTED": 18
+ },
+ "capability_change_counts": {
+  "RAISED": 33,
+  "LOWERED": 8,
+  "UNCHANGED": 58
+ },
+ "in_v3_0_candidate_counts": {
+  "yes": 48,
+  "no": 51
+ },
  "families": [
   {
    "code": "B1-01",

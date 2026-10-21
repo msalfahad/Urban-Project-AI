@@ -339,3 +339,13 @@ def test_no_plan_names_a_merged_integration_task(new):
     """T-133 (V3.0.1) is merged: a piece it left waiting is named from its WAITING table, never planned on it"""
     for f in new["families"]:
         assert "T-133" not in f["v3_0_planned_tasks"], f["code"]
+
+
+def test_the_counts_in_the_file_equal_the_families(new):
+    fam = new["families"]
+    assert new["capability_counts"] == {k: sum(1 for f in fam if f["capability"] == k) for k in new["capability_states"]}
+    assert new["capability_change_counts"] == {k: sum(1 for f in fam if f["capability_change"] == k)
+                                               for k in ("RAISED", "LOWERED", "UNCHANGED")}
+    assert new["in_v3_0_candidate_counts"] == {k: sum(1 for f in fam if f["in_v3_0_candidate"] == k)
+                                               for k in ("yes", "no")}
+    assert sum(new["capability_counts"].values()) == 99
