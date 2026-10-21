@@ -216,4 +216,7 @@ OTHER_REBAR_AWARE = (
     # T-134: the element register v0 links STR.REBAR lines to the concrete element whose geometry they read (ids and
     # states only); it writes no reinforcement quantity and applies no ratio
     "engine/source/element_register_v0.py",
+    # T-140: the coverage census V2 names STR.REBAR / reinforcement only to report which families' steel is missing
+    # (MISSING_DATA, as census V1); it writes no reinforcement quantity and applies no ratio
+    "engine/source/coverage_census_v2.py",
 )
