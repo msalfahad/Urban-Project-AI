@@ -1,0 +1,27 @@
+mark,status,held_reason,route_g_kg,released_kg,held_low_kg,held_high_kg,count_reading_A_kg,count_reading_B_kg,count_reading_C_kg,held_unquantified,boxed_printed
+(two marks),HELD,TWO_MARKS_ONE_FOOTING: route G found one footing labelled with two types (Q-31 C),0.0,0,0.0,0.0,0,0,0,ALL,
+F,RELEASED,,9.956,9.422,0.0,0.0,0,0,0,BOXED(printed '3+4'),3+4
+F,RELEASED,,9.956,9.422,0.0,0.0,0,0,0,BOXED(printed '3+4'),3+4
+F,RELEASED,,9.956,9.422,0.0,0.0,0,0,0,BOXED(printed '3+4'),3+4
+F,RELEASED,,9.956,9.422,0.0,0.0,0,0,0,BOXED(printed '3+4'),3+4
+F11,RELEASED,,111.793,109.566,0.0,0.0,0,0,0,BOXED(printed '3+8'),3+8
+F12,HELD,,721.195,0,696.05,716.474,696.05,716.474,713.193,,
+F13,HELD,,421.589,0,408.888,426.8,408.888,426.8,415.931,,
+F14,HELD,,442.27,0,422.828,439.33,422.828,439.33,437.116,,
+F15,RELEASED,,24.089,23.271,0.0,0.0,0,0,0,BOXED(printed '3+4'),3+4
+F2,RELEASED,,39.289,38.364,0.0,0.0,0,0,0,BOXED(printed '3+4'),3+4
+F2,RELEASED,,39.289,38.364,0.0,0.0,0,0,0,BOXED(printed '3+4'),3+4
+F3,RELEASED,,19.911,19.342,0.0,0.0,0,0,0,BOXED(printed '3+4'),3+4
+F3,RELEASED,,19.911,19.342,0.0,0.0,0,0,0,BOXED(printed '3+4'),3+4
+F4,RELEASED,,62.133,60.889,0.0,0.0,0,0,0,BOXED(printed '3+4'),3+4
+F4,RELEASED,,62.133,60.889,0.0,0.0,0,0,0,BOXED(printed '3+4'),3+4
+F5,RELEASED,,80.0,78.507,0.0,0.0,0,0,0,BOXED(printed '3+4'),3+4
+F5,RELEASED,,80.0,78.507,0.0,0.0,0,0,0,BOXED(printed '3+4'),3+4
+F6,RELEASED,,93.689,92.053,0.0,0.0,0,0,0,BOXED(printed '3+5'),3+5
+F8,HELD,,508.874,0,494.501,512.213,494.501,512.213,503.357,,
+F9,RELEASED,,183.901,181.385,0.0,0.0,0,0,0,BOXED(printed '3+8'),3+8
+FF,HELD,,734.819,0,720.24,741.582,720.24,741.582,728.213,,
+FN,HELD,"OUTLINE_CLIPPED: the drawn outline is not the schedule rectangle (it is cut where it meets a neighbour), so where the schedule bars run is not drawn",12.8,0,0.0,0.0,0,0,0,BOTTOM_SHORT BOTTOM_LONG BOXED(printed ''),
+FN,RELEASED,,12.8,12.231,0.0,0.0,0,0,0,BOXED(printed ''),
+FN,RELEASED,,12.8,12.231,0.0,0.0,0,0,0,BOXED(printed ''),
+FN,RELEASED,,12.8,12.231,0.0,0.0,0,0,0,BOXED(printed ''),
