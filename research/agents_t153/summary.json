@@ -1,0 +1,71 @@
+{
+ "task": "T-153",
+ "rows": 49,
+ "totals": {
+  "GF": {
+   "dry_porcelain_low": 157.398,
+   "dry_porcelain_high": 157.398,
+   "doorway_strips": 4.474,
+   "wet_tiled": 48.927,
+   "interior_floor_low": 210.799,
+   "interior_floor_high": 210.799,
+   "held_interior_m2": {
+    "GF-H01": 13.986,
+    "GF-H02": 1.373
+   },
+   "stair_marble_listed": 20.669,
+   "exterior_measured": 167.714,
+   "freelancer_dry": 197.33,
+   "freelancer_wet": 35.48
+  },
+  "1F": {
+   "dry_porcelain_low": 106.216,
+   "dry_porcelain_high": 106.333,
+   "doorway_strips": 0.77,
+   "wet_tiled": 31.145,
+   "interior_floor_low": 138.131,
+   "interior_floor_high": 138.248,
+   "held_interior_m2": {
+    "1F-H01": 2.97
+   },
+   "stair_marble_listed": 4.865,
+   "exterior_measured": 88.28,
+   "freelancer_dry": 112.96,
+   "freelancer_wet": 30.91
+  },
+  "2F": {
+   "dry_porcelain_low": 21.85,
+   "dry_porcelain_high": 21.85,
+   "doorway_strips": 0.53,
+   "wet_tiled": 5.55,
+   "interior_floor_low": 27.93,
+   "interior_floor_high": 27.93,
+   "held_interior_m2": {},
+   "stair_marble_listed": 4.875,
+   "exterior_measured": 115.832,
+   "freelancer_dry": 27.28,
+   "freelancer_wet": 5.62
+  }
+ },
+ "readd": {
+  "wet17_m2": 72.1217,
+  "wet17_merged": 72.122,
+  "wet17_diff": -0.0003,
+  "wet_with_pantry": 85.6217,
+  "T086_wet_with_pantry": 85.62,
+  "ten_dry_old_m2": 194.981,
+  "ten_dry_now_low": 177.431,
+  "ten_dry_now_high": 177.548,
+  "ten_dry_change": [
+   -17.55,
+   -17.433
+  ],
+  "explained_by": {
+   "1F landing to marble (Q-66 B)": 4.865,
+   "1F held strips D-13 + D-23": 0.52,
+   "1F treads / stair footprint the released line kept (T-116)": 5.8904,
+   "2F arrival to marble (Q-70 A)": 4.875,
+   "2F wall inside the printed 450 x 195 (T-129)": 1.4
+  }
+ }
+}
