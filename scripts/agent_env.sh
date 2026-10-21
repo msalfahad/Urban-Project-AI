@@ -209,7 +209,11 @@ cmd_decode() {
   [[ -f "$src" ]] || die "no such file: $src"
   [[ "$name" =~ ^[A-Za-z0-9][A-Za-z0-9._-]*$ ]] || die "NAME must be a plain file name"
   mkdir -p "$PRIVATE" && chmod 700 "$PRIVATE"
-  base64 -d "$src" > "$PRIVATE/$name" || die "base64 decode failed"
+  # The Drive connector saves large downloads as JSON ({"content": <base64>, ...}); accept both forms.
+  python3 -I -c 'import base64,json,sys
+raw=open(sys.argv[1],"rb").read()
+if raw.lstrip()[:1]==b"{": raw=json.loads(raw)["content"].encode()
+open(sys.argv[2],"wb").write(base64.b64decode(raw))' "$src" "$PRIVATE/$name" || die "base64 decode failed"
   if [[ "$name" == *.zip ]]; then
     local entries dest="$PRIVATE/${name%.zip}"
     entries="$(unzip -Z1 "$PRIVATE/$name")" || die "not a zip archive"

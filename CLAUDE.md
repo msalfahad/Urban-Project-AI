@@ -32,7 +32,8 @@ pre-approved command:
   write path. `log` puts one line at the top of `## Entries` in RUN_LOG.md and pushes; `commit` commits the edited
   files under `docs/agents/` (anything else is refused) and pushes `agents/control`, rebasing once if rejected.
 
-Git work happens in the worktrees with `git -C .work/<tree> ...`, against `origin` only: commits, `git pull --rebase`,
+Read and search files with the built-in Read / Grep / Glob tools, not shell `cat` / `grep` (the session check may refuse
+those). Git work happens in the worktrees with `git -C .work/<tree> ...`, against `origin` only: commits, `git pull --rebase`,
 and normal pushes of `agents/control` (board files under `docs/agents/` only) and of the agent's own `agents/task-<ID>`
 branch. The Verifier alone also pushes a verified merge to `claude/access-permissions-setup-ii24ws`.
 
