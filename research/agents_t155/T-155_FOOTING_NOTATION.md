@@ -19,8 +19,11 @@ run. This task changes no engine file; the only code is the stand-alone research
 | Each of the 5 marks occurs once on the foundation plan; plan outline equals the schedule L x W for all 5 (layer S-FOOTINGS, closed 4-vertex outlines, axis-aligned, plan in mm) | p.2 foundation plan / DXF |
 | Cover 7 cm "not less than", concrete against soil (2.5 cm in columns, slabs, beams) | p.8 general note 22 |
 | Bottom bars straight, short bars drawn as the dots of a section along L, long bars as the line; a bar dot at both ends of the section | p.13 "TYP. DETAIL OF ISOLATED FOOTING" (two variants) |
-| FF is the lift footing (remark cell on p.9); its two layers are drawn closed: top and bottom bars joined by vertical legs at both edges, edge bars at all four corners, "AS PER SCH." | p.14 "DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT)" |
-| F8, F12, F13, F14: no two-layer section anywhere in the set | pages 1-16 checked |
+| Both typical details also draw a bar labelled **"Boxed bars."**: it runs along the top of the footing just under the top face and turns down at BOTH edges, its legs running down the side faces to the level of the bottom mesh (closed cage outline); no dimension is printed for its run, its legs, its count or its diameter | p.13, both variants (the "WITH OUT BASEMENT, level difference more than 2.5 m" one on the left and the plain one on the right) |
+| The schedule has a **BOXED** column between LONG BARS and REMARKS. Single-layer (count) rows print `3+n` there (`3+4`, `3+5`, `3+6`, `3+8`), with no diameter glyph and no unit; FN's cell is blank; in the 5 two-layer rows the BOXED column holds the layer labels `TOP` / `BOT`, not a count | p.9; DXF blocks `FT` (attribute BOXED, template default `3+-`) and `FTB` (attributes BOXED-T / BOXED-B = TOP / BOT), as already recorded in research/source_recovery_delta (E-DXF-01) |
+| A closed-cage section symbol is drawn in the REMARKS column for **F12, F13, F14 and FF** (not for F8): a closed rectangle with 4 bar dots along its top and 4 along its bottom, i.e. top and bottom layers joined at both edges. It is a schematic (the same 4 + 4 dots in all four rows, whatever the printed rates), not a bar count. FF's remark adds "قاعدة مصعد" (lift footing) | p.9; DXF layer S-REIN.D, 4 closed 4-vertex LWPOLYLINEs + 8 hatched dots each, inside the REMARKS column (x between its two border lines), one per row F12 / F13 / F14 / FF; none in the F8 row |
+| FF is the lift footing; it also has its own full section: top and bottom bars joined by vertical legs at both edges, edge bars at all four corners, "AS PER SCH." | p.14 "DETAIL OF LIFT WITH ISOLATED FOOTING (WITHOUT BASEMENT)" |
+| Two-layer footings drawn closed: F12, F13, F14 (p.9 symbol) and FF (p.9 symbol + p.14 section). **F8** is the only two-layer row with no box symbol and no own section; whether the p.13 "Boxed bars" detail applies to its top layer is not printed | pages 1-16 checked (r2 correction: the first issue said "no two-layer section anywhere" for F8 / F12 / F13 / F14 and "FF the only two-layer footing drawn", which is wrong for F12 / F13 / F14) |
 
 ## 2. Callouts as printed
 
@@ -47,13 +50,29 @@ p.9; Q-71 quotes the F8 cells.
    gives is (inside side) / (count - 1). Under R1 that spacing is WIDER than the printed 1/r in 20 of 20 cells
    (example F8 bottom short: 11.35 cm against 100/9 = 11.11 cm), i.e. fewer bars per metre than printed. Under R2 it
    is at or below 1/r in 20 of 20 cells. R3 is not a whole number of bars in 15 of 20 cells.
+5. **Bar ends (r2, for Q-71's "top layer waits on a designer detail"): what is drawn and what is not.**
+   - Drawn: the closed-cage symbol on p.9 for F12, F13, F14 and FF says their top and bottom layers are joined at both
+     edges; the p.13 "Boxed bars" callout draws such a bar turned down at both edges to the bottom mesh; FF has the full
+     p.14 section with legs. So for these four the top-bar ends are NOT "not drawn": they are drawn as turned-down legs.
+   - Not printed: the leg length (no dimension on p.9, p.13 or p.14; geometrically the legs would follow the footing
+     depth H less covers, but that is a reading, not a printed dimension), any lap, whether the legs belong to the top
+     bars or to separate U bars, and whether the bottom bars turn up. Leg steel stays HELD.
+   - F8: no symbol, no own section; its top-bar ends remain undrawn. HELD.
+   - The `3+n` cells of the single-layer rows: no legend, note or section defines them (no diameter, no unit; the
+     typical detail does not label a count). Neither "3 bars + n bars", nor a bar mark, nor a count per edge is
+     printed, so the meaning of `3+n` is UNKNOWN and the boxed bars of those 12 footings are HELD (they are not part
+     of this task's five rows; research/pre_s8_structural_completeness already lists BOXED as BLOCKED_SEMANTICS and warns of a possible double count
+     with the column starters if it is ever released as starter bars).
+   None of this changes the straight-core counts of section 4 or the mapping to A / B / C: it bears only on the
+   bar-end steel that Q-71 already says is held whatever the owner answers.
 
 ## 4. Count per footing and direction (method; numbers in the private CSV)
 
 Bar length = the other side - 2 x 0.07 m (note 22; no assumed cover). Short bars (length W - 0.14) are spread along
 L, long bars (length L - 0.14) along W. kg/m = d^2/162. Readings: R1 = ceil(r x (side - 0.14)); R2 = R1 + 1; R3 = r x
-side (fractional). Top-layer bar ends: F8, F12, F13, F14 not drawn (straight core only, HELD for the ends); FF drawn
-closed with legs on p.14 but the leg / lap length is not dimensioned (straight core shown, legs HELD).
+side (fractional). Top-layer bar ends (r2 corrected, section 3.5): F12, F13, F14 and FF drawn closed, turned down at
+both edges (p.9 symbol, p.13 "Boxed bars", p.14 for FF), leg / lap length not dimensioned: straight core counted, legs
+HELD; F8 ends not drawn: straight core counted, ends HELD.
 
 Totals, all five footings, one occurrence each (kg, net, straight bars):
 
@@ -99,5 +118,16 @@ the verified evidence: `/m` = bars per metre (drawing-confirmed by contrast), wh
 three readings reproduce A / B / C, and the spacing fact of section 3.4.
 
 Learned: the same `/m` question decides the column ties, lintel stirrups, slab bars and lift-pit walls of this set
-(Q-71 "ALSO WAITS ON"), and the lift detail p.14 is the only drawn two-layer footing section (bar ends of FF top
-layer: legs drawn, length not dimensioned; designer request for the other four).
+(Q-71 "ALSO WAITS ON"). Bar ends (r2 corrected): F12, F13, F14 and FF are drawn closed on p.9 (box symbol in REMARKS)
+and the p.13 typical details call out "Boxed bars" turned down at both edges; FF also has the p.14 section. No leg
+length is dimensioned anywhere, so leg steel is HELD for all four; F8 has no symbol and no section (ends HELD). The
+designer request is therefore for the leg / lap dimension of the boxed bars (all footings) and the meaning of the
+`3+n` BOXED cells, not for a missing top-bar detail.
+
+## 8. Rework r2 (worker 1, 2026-10-21, after the Checker's 20:50 rejection)
+
+Changed only the drawing evidence on bar ends (sections 1, 3.5, 4, 7): added the p.9 BOXED column and the closed-cage
+symbol of F12 / F13 / F14 / FF (read on the PDF at 300 dpi and confirmed in the DXF, sha prefix 9f9d1179: REMARKS
+column, layer S-REIN.D, none in the F8 row) and the p.13 "Boxed bars" callout; corrected the three wrong statements.
+Leg length and the meaning of `3+n` stay HELD / UNKNOWN (nothing printed). No count, length, kg, reading or mapping
+changed; the tool is unchanged and its `--check` still passes.
